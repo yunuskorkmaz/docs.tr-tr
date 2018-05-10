@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
-Windows Communication Foundation (WCF) uygulama modeli, herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
+Windows Communication Foundation (WCF) uygulama modeli, herhangi bir dağıtılmış uygulama iletişimi gereksinimleriyle büyük bölümü çözmek için tasarlanmıştır. Ancak her zaman varsayılan uygulama modeli ve sistem tarafından sağlanan uygulamaları desteklemez senaryolar vardır. WCF genişletilebilirlik modeli, tüm uygulama modeli değiştirme noktasına bile her düzeyde sistem davranışını değiştirmek sağlayarak özel senaryoları desteklemek için tasarlanmıştır. Bu konu, çeşitli alanlarda uzantısının özetler ve noktalarını her hakkında daha fazla bilgi için.  
   
 ## <a name="areas-to-extend"></a>Genişletmek için alanları  
  Genişletebilirsiniz:  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) uygulama modeli, herhangi bir dağıtılm
 -   Ana bilgisayar çalışma zamanı. Bu kanal ve uygulama çalışma zamanı barındırma uygulama etki alanına ilişki genişletir.  
   
 ### <a name="extending-the-application-runtime"></a>Uygulama çalışma zamanı genişletme  
- İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar için karşılık gelen bir kanal hedefleyen iletileri ve uygulama için hedeflenen iletileri arasında fark yoktur. Kanal iletileri gibi güvenli bir konuşma oluşturma ya da güvenilir bir oturumu bazı kanal ilgili işlevlerini destekler. Bu iletiler uygulama çalışma zamanı için kullanılabilir değil; uygulama katmanı söz konusu önce işlenir.  
+ WCF uygulamalarda, uygulama için hedeflenen için karşılık gelen bir kanal hedefleyen iletileri ve iletileri arasında fark yoktur. Kanal iletileri gibi güvenli bir konuşma oluşturma ya da güvenilir bir oturumu bazı kanal ilgili işlevlerini destekler. Bu iletiler uygulama çalışma zamanı için kullanılabilir değil; uygulama katmanı söz konusu önce işlenir.  
   
  Bir istemci için hedefleyen veri ya da siz veya müşteriniz oluşturduğu hizmeti işlemi uygulama iletileri içerir. Bu iletiler, uygulama düzeyi uzantı sistemi gereksinimlerinize bağlı olarak, ileti ya da nesne formunda için kullanılabilir.  
   

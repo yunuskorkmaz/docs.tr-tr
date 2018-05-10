@@ -2,11 +2,11 @@
 title: Hizmet İşlemi Hatalarını İzleme
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Hizmet İşlemi Hatalarını İzleme
 Bir uygulama için çözümleme izleme etkinleştirilirse, Olay Görüntüleyicisi'nde hizmet hataları kolayca izlenebilir.  Bu konuda, bir hizmet işlemi başarısız olur ve belirlemek nasıl hatasına neden oldu belirleme gösterilir.  
@@ -17,7 +17,7 @@ Bir uygulama için çözümleme izleme etkinleştirilirse, Olay Görüntüleyici
   
 2.  Çözümleme izleme etkinleştirmediyseniz genişletin **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar** . Seçin **Görünüm**, **Göster Analitik ve hata ayıklama günlüklerini**. Sağ **analitik** seçip **günlüğü etkinleştir**. Hizmet işlemi başarısız olduktan sonra izleri görüntülenebilir böylece Olay Görüntüleyicisi'ni kapatmayın.  
   
-3.  Ardından, oluşturulan örnek açmak [başlangıç Öğreticisi](../../../../../docs/framework/wcf/getting-started-tutorial.md) içinde [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] çalıştırmalısınız Not [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] yönetici olarak böylece hizmet oluşturulabilir. Varsa [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yüklü örnekleri açabilirsiniz [Başlarken](../../../../../docs/framework/wcf/samples/getting-started-sample.md), öğreticide oluşturulan projeyi içerir.  
+3.  Ardından, oluşturulan örnek açmak [başlangıç Öğreticisi](../../../../../docs/framework/wcf/getting-started-tutorial.md) içinde [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] çalıştırmalısınız Not [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] yönetici olarak böylece hizmet oluşturulabilir. Yüklü WCF örnekleri varsa açabilirsiniz [Başlarken](../../../../../docs/framework/wcf/samples/getting-started-sample.md), öğreticide oluşturulan projeyi içerir.  
   
 4.  Sunucu projesi Program.cs dosyasında aşağıdaki kod satırını başlangıcına ekleyin `Divide` yönteminde `CalculatorService` sınıfı:  
   

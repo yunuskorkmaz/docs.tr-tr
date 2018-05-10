@@ -2,25 +2,25 @@
 title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 671857b0ace2e18f0dac7fd8033a20f3af889c8b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Bu örnek, ASP.NET yollar kullanılarak bir Windows Communication Foundation (WCF) REST hizmeti barındırma gösterilmiştir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo kendini barındıran bir sürümünü gösterir ve hizmet uygulaması derinlemesine anlatılmaktadır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmeti bir kaynak-yönelimli/REST şekilde müşteriler koleksiyonu kullanıma sunar. Olduğu gibi SOAP tabanlı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet, hizmet .svc dosyasını kullanarak ASP.NET barındırılan. Hizmeti için URL .svc bulundurmak gerektirdiğinden ancak, bu HTTP senaryoları için tercih edilen çoğunlukla değildir. Ayrıca, hizmet kitaplığı birlikte .svc dosya dağıtılması gerekir. Bu örnekte gösterildiği gibi ASP.NET yolları kullanarak hizmet barındırma tarafından sınırlamalara önlenebilir.  
+ WCF hizmeti bir kaynak-yönelimli/REST şekilde müşteriler koleksiyonu kullanıma sunar. Yalnızca bir SOAP tabanlı WCF hizmeti gibi hizmet .svc dosyasını kullanarak ASP.NET barındırılabilir. Hizmeti için URL .svc bulundurmak gerektirdiğinden ancak, bu HTTP senaryoları için tercih edilen çoğunlukla değildir. Ayrıca, hizmet kitaplığı birlikte .svc dosya dağıtılması gerekir. Bu örnekte gösterildiği gibi ASP.NET yolları kullanarak hizmet barındırma tarafından sınırlamalara önlenebilir.  
   
  Örnek ASP.NET hizmetinde ekleyerek barındıran bir <xref:System.ServiceModel.Activation.ServiceRoute> Global.asax dosyasındaki. <xref:System.ServiceModel.Activation.ServiceRoute> ('Service' Bu durumda), hizmet türünü belirtir. hizmeti için kullanacağınız hizmet ana bilgisayar üreteci türü (<xref:System.ServiceModel.Activation.WebServiceHostFactory> bu durumda) ve hizmet adresini temel HTTP ('~ / müşterilerin bu durumda).  
   
- Buna ek olarak, örnek ekler Web.config içeren <xref:System.Web.Routing.UrlRoutingModule> (ASP.NET yollara açmak için) ve hizmet için yapılandırmayı içerir. Özellikle, yapılandırma yapılandırır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan hizmet <xref:System.ServiceModel.Description.WebHttpEndpoint> olan <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ayarını `true`. Sonuç olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapıyı oluşturur otomatik bir HTML tabanlı yardım sayfasına `http://localhost/Customers/help` sağlayan HTTP oluşturmak hakkında bilgi, nasıl bir örneği hizmeti ve hizmetin HTTP yanıtı – örneği için erişim istekleri Müşteri ayrıntıları XML ve JSON temsil edilir.  
+ Buna ek olarak, örnek ekler Web.config içeren <xref:System.Web.Routing.UrlRoutingModule> (ASP.NET yollara açmak için) ve hizmet için yapılandırmayı içerir. Özellikle, yapılandırma WCF Hizmeti ile bir varsayılan yapılandırır <xref:System.ServiceModel.Description.WebHttpEndpoint> olan <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> ayarını `true`. Sonuç olarak, otomatik bir HTML tabanlı yardım sayfasına WCF altyapıyı oluşturur `http://localhost/Customers/help` sağlayan HTTP oluşturmak hakkında bilgi, nasıl bir örneği hizmeti ve hizmetin HTTP yanıtı – örneği için erişim istekleri müşteri Ayrıntılar XML ve JSON temsil edilir.  
   
  Müşteri koleksiyonu gösterme (ve daha genel olarak, herhangi bir kaynağa) bu şekilde URI'ler ve HTTP kullanmanın tek bir yolla bir hizmetiyle etkileşim bir istemcinin verir `GET`, `PUT`, `DELETE` ve `POST`.  
   
- İstemci projesindeki program.cs gösteren böyle bir istemci nasıl olabilir kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bu yalnızca bir erişmek için yolu olduğuna dikkat edin bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Diğer .NET Framework sınıfları gibi kullanarak hizmete erişmek mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal fabrikası ve <xref:System.Net.WebClient>. SDK'sındaki diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) ile iletişim kurmak için bu sınıfları kullanmayı gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ İstemci projesindeki program.cs gösteren böyle bir istemci nasıl olabilir kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bu bir WCF Hizmeti erişmenin tek yolu olduğuna dikkat edin. WCF kanal fabrikası gibi diğer .NET Framework sınıfları kullanarak hizmete erişmek mümkündür ve <xref:System.Net.WebClient>. SDK'sındaki diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) bu sınıfların bir WCF Hizmeti ile iletişim için nasıl kullanılacağını gösterir.  
   
  Bu örnek 3 projelerin oluşur:  
   

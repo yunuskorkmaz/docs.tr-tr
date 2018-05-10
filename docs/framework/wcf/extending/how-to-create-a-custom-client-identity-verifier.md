@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma
 *Kimlik* özelliği Windows Communication Foundation (WCF) önceden hizmet beklenen kimliğini belirtmek bir istemci sağlar. Sunucu istemciye kendi kimliğini doğrular her kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-implement-the-trygetidentity-method"></a>TryGetIdentity yöntemi uygulamak için  
   
-1.  Uygulama <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> örneği olup olmadığını belirleyen yöntemi <xref:System.ServiceModel.EndpointIdentity> sınıfı istemci tarafından döndürülen. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Altyapı çağırır uygulanması `TryGetIdentity` ilk iletiden hizmetin kimliğini alma yöntemi. Ardından, altyapı çağırır `CheckAccess` döndürülen uygulamasıyla `EndpointIdentity` ve <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+1.  Uygulama <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> örneği olup olmadığını belirleyen yöntemi <xref:System.ServiceModel.EndpointIdentity> sınıfı istemci tarafından döndürülen. WCF altyapı uygulanması çağırır `TryGetIdentity` ilk iletiden hizmetin kimliğini alma yöntemi. Ardından, altyapı çağırır `CheckAccess` döndürülen uygulamasıyla `EndpointIdentity` ve <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 2.  İçinde `TryGetIdentity` put yöntemi, aşağıdaki kod:  
   

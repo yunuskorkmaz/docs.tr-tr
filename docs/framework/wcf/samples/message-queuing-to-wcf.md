@@ -2,11 +2,11 @@
 title: Windows Communication Foundation'a İleti Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation'a İleti Kuyruğa Alma
 Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisi nasıl gönderebilirsiniz gösterir. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ kuyruk adı, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 > [!NOTE]
->  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için localhost kullanır. Sıra yönergeleri adresleme her MSMQ biçim adı için adres msmq.formatname düzenini izler.  
+>  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için localhost kullanır. Sıra yönergeleri adresleme her MSMQ biçim adı için adres msmq.formatname düzenini izler.  
   
 ```xml  
 <appSettings>  

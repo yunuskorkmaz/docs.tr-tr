@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-wcf-programming"></a>Temel WCF Programlama
 Bu bölümde Windows Communication Foundation (WCF) uygulamaları oluşturmak için ilgili temel bilgileri gösterir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Tasarlama, oluşturma ve dağıtma yaşam döngüsü açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ve istemci uygulamaları.  
+ Tasarlama, derleme ve WCF hizmeti ve istemci uygulamalarını dağıtma yaşam döngüsü açıklar.  
   
  [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Tasarım ve bir hizmet sözleşmesini uygulama, bir ileti değişim deseni seçin, hatalı sözleşme ve diğer temel Hizmetleri yönlerini belirtin açıklar.  
   
  [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)  
- Nasıl yapılandırılacağını açıklar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sözleşme gereksinimlerini destekler, yerel çalışma zamanı davranışını özelleştirmek ve hizmet yayımlama için adresini belirtin.  
+ Sözleşme gereksinimlerini destekler, yerel çalışma zamanı davranışını özelleştirmek ve hizmet yayımlama için adresini belirtmek için bir WCF hizmetinin nasıl yapılandırılacağı açıklanmaktadır.  
   
  [Barındırma Hizmetleri](../../../docs/framework/wcf/hosting-services.md)  
  Barındırma hizmetleri uygulamada temellerini açıklar.  
   
  [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
- Meta veri hizmetlerinden elde etmek için içine Dönüştür açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci kodu, tanıtıcı güvenlik sorunları ve derleme, yapılandırma ve ana bilgisayar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci.  
+ Meta veri Hizmetler'den, WCF istemci koda dönüştürmek, güvenlik sorunlarını gidermek ve yapı, yapılandırmak ve bir WCF istemcisi barındırmak açıklar.  
   
  [Genişletilebilirliğe Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Nasıl genişletileceğini açıklar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] özel çözümler oluşturmak için.  
+ Özel çözümler oluşturmak için WCF genişletileceğini açıklar.  
   
  [WCF Sorun Giderme Hızlı Başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Gerçekleşen en yaygın sorunları, bunları çözmek için yapabilirsiniz ve sorun hakkında daha fazla bilgi bulmak nereden bazıları açıklanmaktadır.  

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde kendi bitiş noktalarından oluşur. Her <xref:System.ServiceModel.Description.ServiceEndpoint> içeren bir <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>ve bir <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Hangi işlemleri kullanılabilir sözleşme belirtir. Bağlama hizmetiyle iletişim kurma ve hizmet nerede bulacağını adresini belirtir. Her uç noktası benzersiz bir adres olmalıdır. Uç nokta adresi tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> hizmetinin adresini gösteren bir Tekdüzen Kaynak Tanımlayıcısı (URI) içeren sınıf bir <xref:System.ServiceModel.EndpointAddress.Identity%2A>, hizmet güvenlik kimliğini ve isteğe bağlı bir topluluğu gösterir <xref:System.ServiceModel.EndpointAddress.Headers%2A>. İsteğe bağlı üstbilgi tanımlamak veya uç noktasıyla etkileşim için adresleme daha ayrıntılı bilgi sağlar. Örneğin, üstbilgileri gelen iletiyi işlemeye nasıl, burada uç nokta bir yanıt iletisi göndermesi gerekir veya birden çok örneği kullanılamadığında belirli bir kullanıcıdan gelen iletiyi işlemek için kullanılacak bir hizmetin hangi örneğinin gösterebilir.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Bir uç nokta adresi tanımı  
- İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bir <xref:System.ServiceModel.EndpointAddress> bir uç nokta başvurusu (EPR) WS adresleme standardında tanımlanan modeller.  
+ Wcf'de, bir <xref:System.ServiceModel.EndpointAddress> bir uç nokta başvurusu (EPR) WS adresleme standardında tanımlanan modeller.  
   
  Çoğu taşıma için URI adresi dört bölümden oluşur. Örneğin, bu URI "http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" aşağıdaki dört bölümden oluşur:  
   
@@ -29,11 +29,11 @@ Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde ke
   
 -   Yol: /mathservice.svc/secureEndpoint  
   
- Her bitiş noktası başvurusu fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir EPR modelin parçası olur. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu başvuru parametreleri örnekleri olarak Modellenen <xref:System.ServiceModel.Channels.AddressHeader> sınıfı.  
+ Her bitiş noktası başvurusu fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir EPR modelin parçası olur. Örnekleri olarak Modellenen WCF, bu başvuru parametreleri <xref:System.ServiceModel.Channels.AddressHeader> sınıfı.  
   
  Kod kullanarak imperatively ya da bildirimli olarak yapılandırma yoluyla bir hizmet uç noktası adresi belirtilebilir. Bağlamalar ve dağıtılmış bir hizmet için adresleri hizmet geliştirildiği sırada kullanılan olanlardan genellikle farklı olduğu için uç noktalar kodda tanımlama genellikle pratik değildir. Genellikle, kod yerine Yapılandırması kullanılarak hizmet uç noktaları tanımlamak daha pratik olur. Bağlama tutulması ve kod dışında bilgisine derlenir ve uygulamayı yeniden dağıtmak zorunda kalmadan değiştirmek için bunları sağlar. Uç nokta yok kod veya yapılandırma belirttiyseniz, çalışma zamanı hizmeti tarafından uygulanan her sözleşme için temel her adresinde bir varsayılan uç nokta ekler.  
   
- Bir hizmet için uç nokta adresleri belirtmek için iki yolla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Taban adresi sağlayabilir veya hizmetle ilişkilendirilmiş her uç noktası için mutlak bir adres belirtebilirsiniz <xref:System.ServiceModel.ServiceHost> bir hizmetin ve ardından bu temel göre tanımlanan bu hizmeti ile ilişkili her uç nokta için bir adres belirtin adresi. Bu yordamların her biri, yapılandırma ve kodun içerisinde bir hizmeti için uç nokta adresleri belirtmek için kullanabilirsiniz. Göreli bir Adres belirtmezseniz, hizmetin taban adresi kullanır. Ayrıca bir hizmet için birden çok taban adresi olabilir ancak her hizmetin her aktarım için yalnızca bir taban adresi izin verilir. Her biri farklı bir bağlama ile yapılandırılan birden çok uç nokta varsa adresleri benzersiz olmalıdır. Aynı kullanan uç ancak farklı sözleşmeleri bağlama aynı adres kullanabilirsiniz.  
+ WCF'de bir hizmeti için uç nokta adresleri belirtmek için iki yolu vardır. Taban adresi sağlayabilir veya hizmetle ilişkilendirilmiş her uç noktası için mutlak bir adres belirtebilirsiniz <xref:System.ServiceModel.ServiceHost> bir hizmetin ve ardından bu temel göre tanımlanan bu hizmeti ile ilişkili her uç nokta için bir adres belirtin adresi. Bu yordamların her biri, yapılandırma ve kodun içerisinde bir hizmeti için uç nokta adresleri belirtmek için kullanabilirsiniz. Göreli bir Adres belirtmezseniz, hizmetin taban adresi kullanır. Ayrıca bir hizmet için birden çok taban adresi olabilir ancak her hizmetin her aktarım için yalnızca bir taban adresi izin verilir. Her biri farklı bir bağlama ile yapılandırılan birden çok uç nokta varsa adresleri benzersiz olmalıdır. Aynı kullanan uç ancak farklı sözleşmeleri bağlama aynı adres kullanabilirsiniz.  
   
  IIS ile barındırdığında değil yönettiğiniz <xref:System.ServiceModel.ServiceHost> kendiniz örneği. Temel adres, her zaman IIS'de barındırdığında hizmeti .svc dosyasında belirtilen adrestir. Bu nedenle, göreli uç nokta adresleri IIS tarafından barındırılan hizmet uç noktaları için kullanmanız gerekir. Tam uç noktası adresi biri hizmet dağıtımı hatalara yol açabilir. Daha fazla bilgi için bkz: [Internet Information Services-Hosted WCF Hizmeti dağıtma](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

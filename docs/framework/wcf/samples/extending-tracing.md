@@ -2,11 +2,11 @@
 title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>İzlemeyi Genişletme
 Bu örnek, Windows Communication Foundation (WCF) izleme özelliği, istemci ve hizmet kodu etkinliği kullanıcı tarafından tanımlanan izlemeleri yazarak genişletmek gösterilmiştir. Bu izleme etkinlikleri oluşturmak ve izlemeleri iş mantıksal birimler halinde gruplandırmak kullanıcının sağlar. Aktarımları (içinde aynı uç noktası) etkinlikleri ve yayma (uç noktalar arasında) ilişkilendirmek mümkündür. Bu örnekte, hem istemci hem de hizmet için izleme etkinleştirilir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ Bu örnek, Windows Communication Foundation (WCF) izleme özelliği, istemci ve 
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>İzleme ve Etkinlik yayma  
- Kullanıcı tanımlı Etkinlik izleme sağlayan kendi aktarımları ve yayma ile çalışma, correlate etkinliklerin mantıksal birimler Grup izlemeleri için izleme etkinliklerine oluşturmak ve performans maliyetini azaltmak kullanıcı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izleme (örneğin, disk alanı maliyeti bir günlük dosyası).  
+ Kullanıcı tanımlı Etkinlik izleme kendi iş mantıksal birimler Grup izlemeleri için izleme etkinliklerine oluşturmak, etkinlikleri aktarımları ve yayma ile ilişkilendirmek ve WCF izleme (örneğin, disk alanının maliyet performans maliyetini azaltmak olanak tanır. bir günlük dosyası).  
   
 ### <a name="adding-custom-sources"></a>Özel kaynakları ekleme  
  Kullanıcı tanımlı izlemeleri için hem istemci hem de hizmet kod eklenebilir. İzleme kaynakları istemci veya hizmet yapılandırması dosyalara izin kaydedilir ve görüntülenen bu özel izlemeleri için ekleme [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Aşağıdaki kod adlı bir kullanıcı tarafından tanımlanan izleme kaynağı eklemeyi gösterir `ServerCalculatorTraceSource` yapılandırma dosyasına.  
@@ -67,7 +67,7 @@ Bu örnek, Windows Communication Foundation (WCF) izleme özelliği, istemci ve 
 ```  
   
 ### <a name="correlating-activities"></a>Bağıntı etkinlikleri  
- Doğrudan uç noktalar arasında etkinliklerini ilişkilendirmek için `propagateActivity` özniteliği ayarlanmalıdır `true` içinde `System.ServiceModel` izleme kaynağı. Ayrıca, oluşturulmak olmadan izlemeleri yayılmasına [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] etkinliklerini, etkinlik ServiceModel izleme kapalı olmalıdır. Bu, aşağıdaki kod örneğinde görülebilir.  
+ Doğrudan uç noktalar arasında etkinliklerini ilişkilendirmek için `propagateActivity` özniteliği ayarlanmalıdır `true` içinde `System.ServiceModel` izleme kaynağı. Ayrıca, WCF etkinlikleri geçmeden izlemeleri yaymak için ServiceModel Etkinlik izleme kapatılması gerekir. Bu, aşağıdaki kod örneğinde görülebilir.  
   
 > [!NOTE]
 >  ServiceModel etkinliği izleme devre dışı kapatma değil tarafından belirtilen izleme düzeyi sahip aynı `switchValue` özelliği ayarlamak kapalı.  
@@ -85,7 +85,7 @@ Bu örnek, Windows Communication Foundation (WCF) izleme özelliği, istemci ve 
 ```  
   
 ### <a name="lessening-performance-cost"></a>Lessening performans maliyeti  
- Ayarı `ActivityTracing` içinde kapalı `System.ServiceModel` izleme kaynağı yalnızca kullanıcı tanımlı Etkinlik izleme, herhangi bir dahil ServiceModel etkinlik izlemeleri içeren bir izleme dosyası oluşturur. Bu, çok daha küçük boyutu bir günlük dosyasında sonuçlanır. Ancak, ilişkilendirmek için Fırsat [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izlemeler işlenirken kaybolur.  
+ Ayarı `ActivityTracing` içinde kapalı `System.ServiceModel` izleme kaynağı yalnızca kullanıcı tanımlı Etkinlik izleme, herhangi bir dahil ServiceModel etkinlik izlemeleri içeren bir izleme dosyası oluşturur. Bu, çok daha küçük boyutu bir günlük dosyasında sonuçlanır. Ancak, izlemeleri işleme WCF ilişkilendirmek için Fırsat kaybolur.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   

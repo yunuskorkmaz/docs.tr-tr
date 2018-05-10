@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
 Windows Communication Foundation (WCF) Windows Olay Günlüğü'nde iç olayları izler.  
   
 ## <a name="viewing-event-logs"></a>Olay günlüklerini görüntüleme  
- Olay günlüğü varsayılan olarak otomatik olarak etkinleştirilir ve devre dışı bırakmak için bir mekanizma yoktur. Tarafından kaydedilen olayları [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu aracı başlatmak için tıklatın **Başlat**, tıklatın **Denetim Masası**, çift **Yönetimsel Araçlar**, çift tıklayın ve ardından **Olay Görüntüleyicisi'ni**.  
+ Olay günlüğü varsayılan olarak otomatik olarak etkinleştirilir ve devre dışı bırakmak için bir mekanizma yoktur. WCF tarafından günlüğe kaydedilen olayları Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu aracı başlatmak için tıklatın **Başlat**, tıklatın **Denetim Masası**, çift **Yönetimsel Araçlar**, çift tıklayın ve ardından **Olay Görüntüleyicisi'ni**.  
   
 ### <a name="application-event-log"></a>Uygulama olay günlüğü  
- **Uygulama olay günlüğü** tarafından oluşturulan olayları çoğunu içeren [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Çoğu girişleri, belirli bir özellik için uygulama başlatma başarısız olduğunu gösterir. Örnekler:  
+ **Uygulama olay günlüğü** WCF tarafından oluşturulan olayları çoğunu içerir. Çoğu girişleri, belirli bir özellik için uygulama başlatma başarısız olduğunu gösterir. Örnekler:  
   
--   İleti günlüğe kaydetme/izleme: [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme ve iletileri günlüğe kaydetme başarısız olduğunda olay günlüğüne bir olay yazar. Bununla birlikte, her izleme hatası bir olay tetikler. Olay günlüğü izlemeleri hatalarıyla tamamen doldurulmuş önlemek için [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] böyle bir olay için bir 10 dakikalık Kararma süresi uygular. Bu olması durumunda gelir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme hatası değil bunu şekilde yeniden en az 10 dakika için olay günlüğüne yazar.  
+-   İleti günlüğe kaydetme/izleme: izleme ve iletileri günlüğe kaydetme başarısız olduğunda WCF, bir olay olay günlüğüne yazar. Bununla birlikte, her izleme hatası bir olay tetikler. Olay günlüğü izlemeleri hatalarıyla tamamen doldurulmuş önlemek için böyle bir olay için bir 10 dakikalık Kararma süresi WCF uygular. Bu WCF izleme hatası olay günlüğüne yazar, bu nedenle yeniden en az 10 dakika için yapacağınız değil anlamına gelir.  
   
 -   Dinleyici paylaşılan: WCF TCP bağlantı noktası Paylaşımı hizmeti başlatmak başarısız olduğunda bir olayı günlüğe kaydeder.  
   

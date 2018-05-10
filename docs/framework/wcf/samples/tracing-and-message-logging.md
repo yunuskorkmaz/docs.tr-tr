@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
 Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta elde edilen izlemeleri ve ileti günlüklerini kullanarak görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta e
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="tracing"></a>İzleme  
- Windows Communication Foundation (WCF) kullanan tanımlanan izleme mekanizmasını <xref:System.Diagnostics> ad alanı. Bu izleme modelde izleme verilerini uygulamalarını uygulamak izleme kaynaklar tarafından oluşturulur. Her kaynak adına göre tanımlanır. İzleme dinleyicileri bilgilerini almak istediği izleme kaynakları için izleme tüketicileri oluşturun. İzleme verilerini almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu iki hizmetin için aşağıdaki kodu ekleyerek yapılabilir veya istemcinin yapılandırma dosyası hizmet modeli izleme kaynağı ayarlayarak `switchValue`:  
+ Windows Communication Foundation (WCF) kullanan tanımlanan izleme mekanizmasını <xref:System.Diagnostics> ad alanı. Bu izleme modelde izleme verilerini uygulamalarını uygulamak izleme kaynaklar tarafından oluşturulur. Her kaynak adına göre tanımlanır. İzleme dinleyicileri bilgilerini almak istediği izleme kaynakları için izleme tüketicileri oluşturun. İzleme verilerini almak için izleme kaynağı için bir dinleyici oluşturmanız gerekir. WCF'de, bu hizmet modeli izleme kaynağı ayarlayarak hizmetin veya istemcinin yapılandırma dosyasına aşağıdaki kodu ekleyerek yapılabilir `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir. Sonuçta e
   
 -   Etkinlikler aktarımları ve yayma ile ilişkilendirilmesi.  
   
--   Performans maliyetini azaltmak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izleme (örneğin, disk alanı maliyeti bir günlük dosyası).  
+-   WCF izleme (örneğin, bir günlük dosyası disk alanı maliyetini) performans maliyetini azaltmak.  
   
  Kullanıcı tanımlı Etkinlik izleme hakkında daha fazla bilgi için lütfen bkz [genişletme izleme](../../../../docs/framework/wcf/samples/extending-tracing.md) örnek.  
   
 ## <a name="message-logging"></a>İleti Günlüğe Kaydetme  
- İleti günlüğe kaydetme etkinleştirilebilir, hem istemci hem de hizmet herhangi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. İleti günlüğe kaydetme etkinleştirmek için istemci veya hizmet için aşağıdaki kodu eklemeniz gerekir:  
+ İleti günlüğe kaydetme, hem istemci hem de hizmet herhangi bir WCF uygulaması etkinleştirilebilir. İleti günlüğe kaydetme etkinleştirmek için istemci veya hizmet için aşağıdaki kodu eklemeniz gerekir:  
   
 ```xml  
 <configuration>  

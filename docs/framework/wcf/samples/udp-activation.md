@@ -2,11 +2,11 @@
 title: UDP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP Etkinleştirme
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Bunu genişletir [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows İşlem Etkinleştirme Hizmeti (WAS) kullanarak işlem etkinleştirmeyi desteklemek için örnek.  
@@ -20,7 +20,7 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
 -   UDP özel taşıma iletileri alan (WAS tarafından etkinleştirilen bir çalışan işlemde barındırılan) bir hizmet.  
   
 ## <a name="udp-protocol-activator"></a>UDP protokolünü Etkinleştirici  
- UDP protokolünü Etkinleştirici arasında bir köprü olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Aktarım katmanında UDP protokolü aracılığıyla veri iletişimi sağlar. İki ana işlevi vardır:  
+ UDP protokolünü Etkinleştirici WCF istemcisini ve WCF hizmeti arasında bir köprü ' dir. Aktarım katmanında UDP protokolü aracılığıyla veri iletişimi sağlar. İki ana işlevi vardır:  
   
 -   Dinleyici Bağdaştırıcısı (hangi işlemleri gelen iletilere yanıt olarak etkinleştirmek için WAS ile güvenliktir LA), OLUŞTU.  
   
@@ -55,7 +55,7 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
  UDP protokolünü dinleyicisi UDP uç noktada sanal uygulama adına dinler Protokolü Etkinleştirici içinde bir modüldür. Sınıfında uygulanır `UdpSocketListener`. Uç nokta olarak temsil edilir `IPEndpoint` Protokolü bağlama site için hangi bağlantı noktası numarasını ayıklanan için.  
   
 ### <a name="control-service"></a>Denetim Hizmeti  
- Bu örnekte, kullandığımız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Etkinleştirici ve WAS çalışan işlem arasında iletişim kurmak için. Etkinleştirici bulunduğu hizmet denetimi hizmeti adı verilir.  
+ Bu örnekte, WCF Etkinleştirici ve WAS çalışan işlem arasında iletişim kurmak için kullanırız. Etkinleştirici bulunduğu hizmet denetimi hizmeti adı verilir.  
   
 ## <a name="protocol-handlers"></a>Protokol işleyici  
  Dinleyici Bağdaştırıcısı çağrıları sonra `WebhostOpenListenerChannelInstance`, onu başlatılmadıysa WAS İşlem Yöneticisi'ni çalışan işlemi başlatır. Çalışan işlemi içinde uygulama Yöneticisi daha sonra UDP işlem protokol işleyici (PPH) söz konusu bir istekle yükler `ListenerChannelId`. Kapatır çağrılarında PPH `IAdphManager`.`StartAppDomainProtocolListenerChannel` UDP AppDomain protokol işleyici (ADPH) başlatmak için.  

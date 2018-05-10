@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma
-Windows Communication Foundation (WCF) kimlik modeli altyapısı talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan, isteğe bağlı olarak özel yetkilendirme ilkesi tarafından işlenen ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext> , sonra incelenmesi yetkilendirme kararları vermek için. Özel bir ilke, uygulama tarafından beklenen talep gelen belirteçleri talepleri dönüştürmek için kullanılabilir. Bu şekilde, uygulama katmanı tarafından sunulan farklı taleplerdeki ayrıntıları yalıtılmış farklı belirteç türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekler. Bu konu, özel yetkilendirme ilkesi uygulama ve hizmet tarafından kullanılan ilkeleri koleksiyonunu o ilke eklemek nasıl gösterir.  
+Windows Communication Foundation (WCF) kimlik modeli altyapısı talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan, isteğe bağlı olarak özel yetkilendirme ilkesi tarafından işlenen ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext> , sonra incelenmesi yetkilendirme kararları vermek için. Özel bir ilke, uygulama tarafından beklenen talep gelen belirteçleri talepleri dönüştürmek için kullanılabilir. Bu şekilde, uygulama katmanı WCF destekler farklı belirteç türleri tarafından sunulan farklı taleplerdeki ayrıntıları yalıtımlı. Bu konu, özel yetkilendirme ilkesi uygulama ve hizmet tarafından kullanılan ilkeleri koleksiyonunu o ilke eklemek nasıl gösterir.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Özel yetkilendirme ilkesi uygulamak için  
   

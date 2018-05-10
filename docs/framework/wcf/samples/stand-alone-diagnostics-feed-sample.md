@@ -2,16 +2,16 @@
 title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
 Bu örnek nasıl dağıtım Windows Communication Foundation (WCF) için akış RSS/Atom oluşturulacağını gösterir. Bu nesne modeli temelleri ve Windows Communication Foundation (WCF) hizmetini üzerinde ayarlamak nasıl gösteren temel bir "Hello World" programıdır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir özel veri türü döndüren hizmet işlemleri dağıtım akışlarını modeller <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Örneklerini <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> RSS 2.0 ve Atom 1.0 biçimleri akışa seri hale getirebilir. Aşağıdaki örnek kod kullanılan sözleşme gösterir.  
+ WCF özel veri türü döndüren hizmet işlemleri dağıtım akışlarını modeller <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Örneklerini <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> RSS 2.0 ve Atom 1.0 biçimleri akışa seri hale getirebilir. Aşağıdaki örnek kod kullanılan sözleşme gösterir.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ Bu örnek nasıl dağıtım Windows Communication Foundation (WCF) için akış 
     }  
 ```  
   
- `GetProcesses` İşlemi açıklama ile <xref:System.ServiceModel.Web.WebGetAttribute> denetimine nasıl sağlayan öznitelik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlemleri hizmet ve gönderilen iletileri biçimini belirtmek için HTTP GET istekleri gönderir.  
+ `GetProcesses` İşlemi açıklama ile <xref:System.ServiceModel.Web.WebGetAttribute> WCF HTTP GET nasıl dağıtır denetlemenize olanak sağlayan öznitelik istekleri işlemleri hizmet ve gönderilen iletileri biçimini belirtin.  
   
- Gibi herhangi bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, dağıtım akışlarını olabilir kendi kendine yönetilen bir uygulamada barındırılan. Dağıtım Hizmetleri gerektiren belirli bir bağlama ( <xref:System.ServiceModel.WebHttpBinding>) ve belirli uç noktası davranışı ( <xref:System.ServiceModel.Description.WebHttpBehavior>) düzgün çalışabilmesi için. Yeni <xref:System.ServiceModel.Web.WebServiceHost> sınıfı, belirli bir yapılandırma olmadan böyle uç noktaları oluşturmak için uygun bir API sağlar.  
+ Herhangi bir WCF hizmeti gibi kendi kendine yönetilen bir uygulamada bulunan dağıtım akışlarını olabilir. Dağıtım Hizmetleri gerektiren belirli bir bağlama ( <xref:System.ServiceModel.WebHttpBinding>) ve belirli uç noktası davranışı ( <xref:System.ServiceModel.Description.WebHttpBehavior>) düzgün çalışabilmesi için. Yeni <xref:System.ServiceModel.Web.WebServiceHost> sınıfı, belirli bir yapılandırma olmadan böyle uç noktaları oluşturmak için uygun bir API sağlar.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

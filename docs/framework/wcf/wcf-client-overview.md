@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 1aa540d084e9b11cc7a355db02047705f55ea4be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamalarının ne, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini sağlama açıklanmaktadır.  
   
 ## <a name="using-wcf-client-objects"></a>WCF istemci nesnelerini kullanma  
- Bir istemci uygulaması kullanan bir yönetilen uygulamayı olan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] başka bir uygulamayla iletişim kurmak için istemci. İçin bir istemci uygulaması oluşturmak için bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti aşağıdakileri gerektirir:  
+ Bir WCF istemcisi başka bir uygulama ile iletişim kurmak için kullandığı bir yönetilen uygulamayı bir istemci uygulamasıdır. Bir istemci oluşturmak için aşağıdaki adımları uygulama için bir WCF Hizmeti gerektirir:  
   
 1.  Hizmet sözleşmesi, bağlamaları ve hizmet uç noktası için adres bilgilerini edinin.  
   
-2.  Oluşturma bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bu bilgileri kullanarak istemci.  
+2.  Bu bilgileri kullanarak bir WCF istemcisi oluşturma.  
   
 3.  Operations çağırın.  
   
-4.  Kapat [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi.  
+4.  WCF istemci nesnesini kapatın.  
   
  Aşağıdaki bölümlerde bu adımları ele almaktadır ve kısa tanıtımlar aşağıdaki sorunlar için sağlayın:  
   
@@ -40,26 +40,26 @@ Bu bölümde, istemci uygulamalarının ne, yapılandırma, oluşturma ve bir Wi
 -   İstemci kanalları kullanarak Hizmetleri çağrılıyor.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Hizmet sözleşmesi, bağlamaları ve adresleri alın  
- İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], yönetilen öznitelikler, arabirimleri ve yöntemleri kullanarak hizmetler ve istemcileri modeli sözleşmeler. Bir istemci uygulamasında hizmetine bağlanmak için hizmet sözleşmesi için türü bilgileri edinmeniz gerekir. Genellikle, kullanarak bunu [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), hangi hizmetinden meta verileri indirir, tercih ettiğiniz dilde yönetilen kaynak kodu dosyasına dönüştürür ve bir istemci oluşturur yapılandırmak için kullanabileceğiniz uygulama yapılandırma dosyası, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi. Örneğin, oluşturma bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çağırmak için istemci nesne bir `MyCalculatorService`, ve bu hizmet için meta veriler yayımlanma bildiğiniz `http://computerName/MyCalculatorService/Service.svc?wsdl`, aşağıdaki kod örneğinde elde etmek için Svcutil.exe kullanma gösterilmektedir sonra bir `ClientCode.vb` Yönetilen kodda sözleşme hizmet içeren dosya.  
+ WCF'de, hizmetler ve istemcileri yönetilen öznitelikler, arabirimleri ve yöntemleri kullanarak sözleşmeler model. Bir istemci uygulamasında hizmetine bağlanmak için hizmet sözleşmesi için türü bilgileri edinmeniz gerekir. Genellikle, kullanarak bunu [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), hangi hizmetinden meta verileri indirir, tercih ettiğiniz dilde yönetilen kaynak kodu dosyasına dönüştürür ve bir istemci oluşturur WCF istemci nesnesi yapılandırmak için kullanabileceğiniz uygulama yapılandırma dosyası. Örneğin, çağırmak için WCF istemci nesne oluşturmak bir `MyCalculatorService`, ve bu hizmet için meta veriler yayımlanma bildiğiniz `http://computerName/MyCalculatorService/Service.svc?wsdl`, aşağıdaki kod örneğinde elde etmek için Svcutil.exe kullanma gösterilmektedir sonra bir `ClientCode.vb` dosya Yönetilen kodda hizmet sözleşmesini içerir.  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- İstemci uygulaması veya istemci uygulaması oluşturmak için kullanabileceğiniz başka bir derlemeyi ya da bu sözleşme kodu derleyebilirsiniz bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi. Yapılandırma dosyası doğru hizmete bağlanmak için istemci nesne yapılandırmak için kullanabilirsiniz.  
+ İstemci uygulaması veya istemci uygulaması bir WCF istemcisi nesnesi oluşturmak için kullanabileceğiniz başka bir derlemeyi ya da bu sözleşme kodu derleyebilirsiniz. Yapılandırma dosyası doğru hizmete bağlanmak için istemci nesne yapılandırmak için kullanabilirsiniz.  
   
  Bu işlem bir örnek için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Sözleşmeleri hakkında daha ayrıntılı bilgi için bkz: [sözleşmeleri](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 ## <a name="create-a-wcf-client-object"></a>Bir WCF istemcisi nesnesi oluşturun  
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnedir temsil eden bir yerel bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet istemci uzak hizmetiyle iletişim kurmak için kullanabileceğiniz bir biçimde. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] İstemci türleri uygulayan hedef hizmet sözleşme oluşturun ve yapılandırın, ardından istemci nesnesi hizmet işlemleri doğrudan çağırmak için kullanabilmek için. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Yöntemi çağırır iletilere, hizmete gönderir, yanıtı dinler ve bu değerleri döndürür zaman dönüştürür çalıştırmak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi dönüş değerleri olarak veya `out` veya `ref` parametreleri.  
+ Bir WCF istemcisi istemci uzak hizmetiyle iletişim kurmak için kullanabileceğiniz bir formda bir WCF hizmeti temsil eden yerel bir nesnedir. WCF istemci türleri uygulayan hedef hizmet sözleşme oluşturun ve yapılandırın, ardından istemci nesnesi hizmet işlemleri doğrudan çağırmak için kullanabilmek için. Çalışma zamanı WCF yöntem çağrılarını iletilere dönüştürür, hizmetine gönderir, yanıtı dinler ve bu değerleri dönüş değerleri için WCF istemci nesnesi döndürür ya da `out` veya `ref` parametreleri.  
   
- Aynı zamanda [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ile bağlanmak ve hizmetlerini kullanmak için istemci kanal nesneleri. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ WCF istemci kanal nesneleri, bağlanın ve hizmetlerini kullanmak için de kullanabilirsiniz. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 #### <a name="creating-a-new-wcf-object"></a>Yeni bir WCF nesnesi oluşturma  
  Kullanımını göstermek için bir <xref:System.ServiceModel.ClientBase%601> sınıfı, bir hizmet uygulamasından aşağıdaki basit hizmet sözleşmesi oluşturuldu varsayalım.  
   
 > [!NOTE]
->  Oluşturmak için Visual Studio kullanıyorsanız, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci, nesneleri yüklenir otomatik olarak nesne tarayıcısı, hizmet başvurusu projenize ekleyin.  
+>  WCF istemcisi oluşturmak için Visual Studio kullanıyorsanız, projeniz için bir hizmet Başvurusu Ekle nesneleri otomatik olarak nesne tarayıcısı yüklenir.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
@@ -69,10 +69,10 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Bu sınıf oluşturucular birini kullanarak yerel bir nesne olarak oluşturulan, yapılandırılmış ve türünde bir hizmete bağlanmak için kullanılan `ISampleService`.  
   
- Oluşturduğunuz önerilir, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci ilk olarak, nesne kullanmak ve tek try/catch bloğu içinde kapatın. Kullanılamaz `using` deyimi (`Using` Visual Basic'te) belirli hata modları durumlar maskeleyebilir olduğundan. Daha fazla bilgi için aşağıdaki bölümlere bakın yanı [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ İlk olarak, WCF istemci nesnesi oluşturun ve daha sonra kullanmak ve tek try/catch bloğu içinde kapatın, önerilir. Kullanılamaz `using` deyimi (`Using` Visual Basic'te) belirli hata modları durumlar maskeleyebilir olduğundan. Daha fazla bilgi için aşağıdaki bölümlere bakın yanı [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Sözleşmeler, bağlamaları ve adresleri  
- Oluşturabilmeniz için önce bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi, istemci nesnesi yapılandırmanız gerekir. Özellikle, bir hizmet olmalıdır *endpoint* kullanmak için. Bir uç nokta bir hizmet sözleşmesini, bağlama ve adresi birleşimidir. (Uç noktaları hakkında daha fazla bilgi için bkz: [uç noktalar: adresler, bağlamalar ve sözleşmeler](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Genellikle, bu bilgileri bulunan [ \<uç noktası >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) gibi Svcutil.exe araç oluşturur ve istemci oluşturduğunuzda otomatik olarak yüklenen bir istemci uygulama yapılandırma dosyası öğesi nesne. Her ikisi de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci türlerini Ayrıca bu bilgileri programlı olarak belirtmenizi sağlayan aşırı vardır.  
+ WCF istemci nesnesi oluşturmadan önce istemci nesnesi yapılandırmanız gerekir. Özellikle, bir hizmet olmalıdır *endpoint* kullanmak için. Bir uç nokta bir hizmet sözleşmesini, bağlama ve adresi birleşimidir. (Uç noktaları hakkında daha fazla bilgi için bkz: [uç noktalar: adresler, bağlamalar ve sözleşmeler](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Genellikle, bu bilgileri bulunan [ \<uç noktası >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) gibi Svcutil.exe araç oluşturur ve istemci oluşturduğunuzda otomatik olarak yüklenen bir istemci uygulama yapılandırma dosyası öğesi nesne. Her iki WCF istemci türü Ayrıca bu bilgileri programlı olarak belirtmenizi sağlayan aşırı vardır.  
   
  Örneğin, üretilen yapılandırma dosyası için bir `ISampleService` önceki kullanılan örnekler aşağıdaki uç nokta bilgileri içerir.  
   
@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Bu yapılandırma dosyasını hedef uç nokta içinde belirtir `<client>` öğesi. Birden çok hedef uç noktaları kullanma hakkında daha fazla bilgi için bkz: <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> oluşturucular.  
   
 ## <a name="calling-operations"></a>Arama işlemleri  
- Oluşturulan istemci nesnesi yüklü ve yapılandırılmış, bir try/catch bloğu Oluştur sonra yerel ve Kapat nesne varsa, yaptığınız aynı şekilde işlemlerini çağırma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi. İstemci uygulaması ilk işlemi çağırdığında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] otomatik olarak açılır arka plandaki kanal ve nesneyi geri dönüştürüldüğünde temel kanal kapatılır. (Alternatif olarak, aynı zamanda açıkça açabilir ve kanal öncesinde veya diğer işlemlerin çağırma sonra kapatın.)  
+ Sonra oluşturulan istemci nesnesi yüklü ve yapılandırılmış, bir try/catch bloğu Oluştur nesne yerel olsaydı, yaptığınız aynı şekilde işlemlerini çağırma ve WCF istemci nesnesi kapatın. İstemci uygulaması ilk işlemi aradığında, WCF otomatik olarak temel kanal açar ve nesneyi geri dönüştürüldüğünde temel kanal kapatılır. (Alternatif olarak, aynı zamanda açıkça açabilir ve kanal öncesinde veya diğer işlemlerin çağırma sonra kapatın.)  
   
  Örneğin, aşağıdaki hizmet sözleşmesi varsa:  
   
@@ -126,7 +126,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Oluşturarak işlemler çağırabilir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi ve aşağıdaki kod örneğinde gösterdiği gibi kendi yöntemleri çağırma. Unutmayın açma, arama ve kapanmasını [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi tek try/catch bloğu içinde gerçekleşir. Daha fazla bilgi için bkz: [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) ve [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ WCF istemci nesnesi oluşturarak işlemler çağırabilir ve aşağıdaki kod örneği kendi yöntemleri çağırma gösterir. Not: açılış, arama ve WCF istemci nesnesi kapanmasını tek try/catch bloğu içinde oluşur. Daha fazla bilgi için bkz: [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) ve [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -136,7 +136,7 @@ End Interface
 ## <a name="configuring-and-securing-clients"></a>Yapılandırma ve istemcileri güvenli hale getirme  
  Program aracılığıyla istemci oluşturucular ve özellikleri kullanarak bu bilgileri de yükleyebilirsiniz rağmen hedef uç nokta bilgileri istemci veya kanal nesneden, genellikle bir yapılandırma dosyası için gerekli yükleme ile bir istemci yapılandırma başlatır. Ancak, belirli istemci davranışını etkinleştirmek için ek yapılandırma adımları gerekir ve birçok güvenlik senaryoları.  
   
- Örneğin, hizmet sözleşmeleri için güvenlik gereksinimlerinin hizmet sözleşmesi arabiriminde bildirilir ve Svcutil.exe bir yapılandırma dosyası oluşturduysanız, bu dosya genellikle hizmet güvenlik gereksinimlerini destekleme kapasitesine sahip bir bağlama içerir. Bazı durumlarda, ancak daha fazla güvenlik yapılandırması, istemci kimlik bilgileri yapılandırma gibi gerekli olabilir. Bir güvenlik yapılandırması hakkında tam bilgi için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemciler, bkz: [istemcileri güvenli hale getirme](../../../docs/framework/wcf/securing-clients.md).  
+ Örneğin, hizmet sözleşmeleri için güvenlik gereksinimlerinin hizmet sözleşmesi arabiriminde bildirilir ve Svcutil.exe bir yapılandırma dosyası oluşturduysanız, bu dosya genellikle hizmet güvenlik gereksinimlerini destekleme kapasitesine sahip bir bağlama içerir. Bazı durumlarda, ancak daha fazla güvenlik yapılandırması, istemci kimlik bilgileri yapılandırma gibi gerekli olabilir. WCF istemcileri için güvenlik yapılandırması hakkında tam bilgi için bkz: [istemcileri güvenli hale getirme](../../../docs/framework/wcf/securing-clients.md).  
   
  Ayrıca, bazı özel değişiklikler özel çalışma zamanı davranışlar gibi istemci uygulamalarını etkinleştirilebilir. Özel istemci davranışını yapılandırma hakkında daha fazla bilgi için bkz: [istemci davranışlarını yapılandırma](../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -147,11 +147,11 @@ End Interface
   
 -   Bir geri çağırma sözleşme sınıfı uygulayın.  
   
--   Geri çağırma sözleşmesi uygulama sınıfının bir örneği oluşturun ve oluşturmak için kullanın <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> için geçirdiğiniz nesne [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci Oluşturucusu.  
+-   Geri çağırma sözleşmesi uygulama sınıfının bir örneği oluşturun ve oluşturmak için kullanın <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF istemci oluşturucuya geçirdiğiniz nesne.  
   
 -   İşlem çağırma ve işlem geri çağırmaları işlemek.  
   
- Çift yönlü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnelerini geri çağırmalar, geri çağırma hizmetinin yapılandırmasını dahil olmak üzere desteklemek için gerekli işlevselliği kullanıma özel nonduplex dekiler gibi çalışır.  
+ Çift yönlü WCF istemci nesneleri işlevinin geri çağırma hizmetinin yapılandırmasını dahil olmak üzere geri çağırmalar desteklemek için gerekli işlevselliği kullanıma durumla nonduplex dekiler gibi.  
   
  Örneğin, özelliklerini kullanarak geri çağırma nesnesi çalışma zamanı davranışı çeşitli yönlerini kontrol edebilir <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> geri çağırma Sınıf özniteliği. Başka bir örneği kullanımıdır <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> geri çağırma nesnesi arama hizmetleri özel durum bilgilerini dönün etkinleştirmek için sınıf. Daha fazla bilgi için bkz: [çift yönlü Hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md). Tam bir örnek için bkz: [çift yönlü](../../../docs/framework/wcf/samples/duplex.md).  
   
@@ -168,7 +168,7 @@ End Interface
  Nasıl operations tamamen istemci Geliştirici kadar çağrılmaz. Yönetilen kodda belirtildiğinde zaman uyumlu veya zaman uyumsuz yöntemleri işlemi yapmak iletileri eşlenebilir olmasıdır. İşlemlerini zaman uyumsuz olarak çağırır bir istemci oluşturmak istiyorsanız, bu nedenle, Svcutil.exe zaman uyumsuz istemci kodu kullanarak oluşturmak için kullanabileceğiniz `/async` seçeneği. Daha fazla bilgi için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF istemci kanalı kullanılarak arama hizmetleri  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci türlerini genişletme <xref:System.ServiceModel.ClientBase%601>, kendisi türer <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> temeldeki kanal sistemi kullanıma sunmak için arabirim. Hedef hizmet sözleşmesine kullanarak Hizmetleri çağırabileceği <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfı. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ WCF istemci türlerini genişletme <xref:System.ServiceModel.ClientBase%601>, kendisi türer <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> temeldeki kanal sistemi kullanıma sunmak için arabirim. Hedef hizmet sözleşmesine kullanarak Hizmetleri çağırabileceği <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfı. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

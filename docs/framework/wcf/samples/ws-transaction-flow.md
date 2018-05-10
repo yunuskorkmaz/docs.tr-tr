@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek bir istemci Eşgüdümlü işlem kullanımını gösterir ve işlem için istemci ve sunucu seçenekleri WS-Atomic işlem veya OleTransactions protokolü kullanarak akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygulayan ancak kullanımını göstermek için işlemleri öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için numaralandırması. Akışlı işlem kapsamı içinde istenen işlem günlüğünü veritabanına yazılır ve Eşgüdümlü istemci işlemi tamamlanana kadar - istemci işlemi tamamlanmazsa devam ederse Web hizmeti işlemi sağlar veritabanı için uygun güncelleştirmeleri iletilmez.  
@@ -231,7 +231,7 @@ Press <ENTER> to terminate the service.
     > [!NOTE]
     >  Çapraz makine yapılandırması için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi etkinleştirin ve WCF işlemleri ağ desteğini etkinleştirmek için Windows SDK'sı WsatConfig.exe aracını kullanın. Bkz: [WS-Atomic işlem desteğini yapılandırma](http://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe ayarlama hakkında bilgi için.  
   
- Aynı bilgisayarda veya farklı bilgisayarlarda örneği çalıştırmak isteyip Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirmek ve etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işlemleri Ağ desteği.  
+ Aynı bilgisayarda veya farklı bilgisayarlarda örneği çalıştırmak isteyip Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirmek ve WCF işlemleri ağ desteğini etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örnek çalıştırılmasını desteklemek üzere yapılandırmak için  
   

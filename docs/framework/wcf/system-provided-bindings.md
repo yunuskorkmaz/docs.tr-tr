@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar
 Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç nokta konuşurken kullanmak için iletişim mekanizması belirtin. Bir bağlama aşağıdaki öğeleri içerir:  
@@ -30,7 +30,7 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
 >  Verilerin güvenliği sürece başka bir şekilde devre dışı güvenlik sahip veya hiçbir zaman çift yönlü sözleşmeler güvenlik desteklemeyen bağlamalarla kullanın.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
- Aşağıdaki bağlamaları ile birlikte gelen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Aşağıdaki bağlamaları WCF ile birlikte.  
   
 |Bağlama|Yapılandırma öğesi|Açıklama|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç n
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Güvenli ve birlikte çalışabilir, bağlama verimli bir şekilde kimlik doğrulaması ve kullanıcılara yetki vermek için bir Federasyon olan kuruluşların WS-Federasyon protokolünü destekler.|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış bir bağlama ikili kodlama varsayılan olarak kullanılır.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|HTTP veya WebSocket Hizmetleri kullanma için tasarlanmış güvenli bağlama ikili kodlama varsayılan olarak kullanılır.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Güvenli ve en iyi duruma getirilmiş bağlama arasında makineler arası iletişim için uygun [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Makine üzerindeki arasındaki iletişim için uygun bir güvenli, güvenilir ve en iyi duruma getirilmiş bağlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Arasında makineler arası iletişim için uygun bir sıralı bağlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Güvenli ve en iyi duruma getirilmiş bağlama WCF uygulamalar arasında makineler arası iletişim için uygundur.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Makine üzerindeki WCF uygulamaları arasındaki iletişim için uygun bir güvenli, güvenilir ve en iyi duruma getirilmiş bağlama.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Sıraya alınan bir bağlama WCF uygulamalar arasında makineler arası iletişim için uygundur.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Birden fazla makine iletişimi sağlayan bir bağlama.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<MsmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Bir bağlama arasında makineler arası iletişim için uygun olan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulama ve var olan Message Queuing uygulamaları.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<MsmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|WCF uygulaması ve var olan Message Queuing uygulamalar arasında makineler arası iletişim için uygun bir bağlama.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Bağlam değişimi için kullanılacak HTTP tanımlama bilgilerini sağlayan Web Hizmetleri WS-temel profil uyumluluğunu ile iletişim kurmak için uygun bir bağlama.|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Güvenli ve en iyi duruma getirilmiş bağlama arasında makineler arası iletişim için uygun [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bağlam değişimi için kullanılacak SOAP üstbilgileri sağlayan uygulamalar.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Uç noktaları için yapılandırmak için kullanılan bir bağlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web Hizmetleri SOAP iletilerine yerine HTTP istekleri aracılığıyla sunulur.|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Güvenli ve en iyi duruma getirilmiş WCF uygulamaları arasındaki makineler arası iletişim için uygun bağlama, bağlam değişimi için kullanılacak SOAP üstbilgileri sağlar.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP iletilerine yerine HTTP istekleri aracılığıyla kullanıma sunulan WCF Web hizmeti için uç noktalar yapılandırmak için kullanılan bir bağlama.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Güvenli ve |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Çok sayıda basit iletileri çok sayıda istemci için aynı anda gönderirken kullanmak için bir bağlama.|  
   
  Aşağıdaki tabloda her bir sistem tarafından sağlanan bağlamalar özellikleri gösterilmektedir. Bağlamaları tablo sütunları bulunur; Özellikler satırları listelenen ve ikinci bir tabloda açıklanmaktadır. Aşağıdaki tabloda kullanılan bağlama kısaltmalar için bir anahtar sağlar. Bir bağlama seçmek için gereksinim duyduğunuz satır özelliklerin tümü, hangi sütunun karşılayan belirler.  

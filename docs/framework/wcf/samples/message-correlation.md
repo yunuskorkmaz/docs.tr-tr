@@ -2,11 +2,11 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisi nasıl gönderebilir ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- Özel bir istemci hizmetin kullandığı `OrderResponseClient` MSMQ ileti kuyruğuna göndermek için. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulaması olduğundan ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu senaryoda Svcutil.exe aracını kullanarak bir proxy şekilde oluşturamıyoruz.  
+ Özel bir istemci hizmetin kullandığı `OrderResponseClient` MSMQ ileti kuyruğuna göndermek için. Alan ve iletiyi işleyen uygulama MSMQ uygulama ve WCF uygulaması olduğundan, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu senaryoda Svcutil.exe aracını kullanarak bir proxy şekilde oluşturamıyoruz.  
   
- Özel proxy temelde tüm aynıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan uygulamalar `msmqIntegrationBinding` iletileri göndermek için bağlama. Diğer proxy'leri, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
+ Özel proxy temelde kullanan tüm WCF uygulamaları için aynıdır `msmqIntegrationBinding` iletileri göndermek için bağlama. Diğer proxy'leri, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  Sırası yanıtlarını alındığı MSMQ sırası, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 > [!NOTE]
->  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için "localhost" kullanır. Doğru oluşturulmamış biçim adı MSMQ yönergelerine göre URI msmq.formatname izler.  
+>  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için "localhost" kullanır. Doğru oluşturulmamış biçim adı MSMQ yönergelerine göre URI msmq.formatname izler.  
   
 ```xml  
 <appSettings>  

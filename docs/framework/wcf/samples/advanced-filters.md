@@ -2,14 +2,14 @@
 title: Gelişmiş Filtreler
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: 75106bb203391d18c46fdf03d3bb2624ceec834e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-filters"></a>Gelişmiş Filtreler
-Bu örnek bir Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştırır bileşeni. Bu örnek standart uyum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yönlendirme hizmeti kullanarak iletişim kurmak için hesap makinesi örnek. Bu örnek ileti filtreleri ve İleti Filtresi tabloları kullanılarak içerik tabanlı yönlendirme mantığını tanımlamak üzere nasıl gösterir.  
+Bu örnek bir Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnek ileti filtreleri ve İleti Filtresi tabloları kullanılarak içerik tabanlı yönlendirme mantığını tanımlamak üzere nasıl gösterir.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  

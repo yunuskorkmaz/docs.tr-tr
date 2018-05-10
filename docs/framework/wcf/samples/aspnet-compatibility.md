@@ -2,11 +2,11 @@
 title: ASP.NET Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Uyumluluğu
 Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modunda Windows Communication Foundation (WCF). Çalışan hizmetleri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu katılmak tam olarak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama kanal ve yapabilirsiniz kullanımı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dosya/URL yetkilendirmesi, oturum durumu gibi özellikleri ve <xref:System.Web.HttpContext> sınıfı. <xref:System.Web.HttpContext> Sınıfı, tanımlama bilgileri, oturumlar ve diğer erişmesine olanak tanır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] özellikleri. Bu mod HTTP aktarımını bağlamaları kullanın ve hizmet IIS'de barındırılması gerekir gerektirir.  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  Hizmet kullandığı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] her istemci oturumu için sonucunu depolamak için oturumu. Bu hizmet için birden fazla çağrı boyunca her istemci için çalışan sonuç korumak hizmet sağlar.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturum durumu ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oturumları olan çok farklı işlemler.  Bkz: [oturum](../../../../docs/framework/wcf/samples/session.md) hakkında ayrıntılı bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oturumları.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturum durumu ve WCF oturumları çok farklı noktalardır.  Bkz: [oturum](../../../../docs/framework/wcf/samples/session.md) WCF oturumları hakkındaki ayrıntılar için.  
   
  Hizmet intimate bir bağımlılığı olduğundan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturum durumu ve gerektirir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] düzgün çalışması için uyumluluk modunda. Bu gereksinimleri uygulayarak bildirimli olarak ifade edilir `AspNetCompatibilityRequirements` özniteliği.  
   

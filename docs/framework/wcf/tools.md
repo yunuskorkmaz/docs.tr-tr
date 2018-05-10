@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation Araçları
-Microsoft Windows Communication Foundation (WCF) araçları oluşturmak, dağıtmak ve yönetmek kolaylaştırmak için tasarlanmıştır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar. Bu bölümde araçları hakkında ayrıntılı bilgiler içerir. Araçlar desteklenmediğini unutmayın.  
+Microsoft Windows Communication Foundation (WCF) araçları oluşturmak, dağıtmak ve WCF uygulamalarını yönetmek kolaylaştırmak için tasarlanmıştır. Bu bölümde araçları hakkında ayrıntılı bilgiler içerir. Araçlar desteklenmediğini unutmayın.  
   
  Tüm araçlar komut satırından çalıştırabilirsiniz.  
   
@@ -29,7 +29,7 @@ Microsoft Windows Communication Foundation (WCF) araçları oluşturmak, dağıt
 |[WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Bir komut satırı aracını kullanarak temel WS-AtomicTransaction destek ayarları yapılandırır.|  
 |[WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Bir MMC ek bileşenini kullanarak temel WS-AtomicTransaction destek ayarlarını yapılandırır.|  
 |[WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Bir Windows iş akışı hizmeti kaydeder.|  
-|[WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Ana bilgisayar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kitaplıkları (*.dll) dosyalarında bulunan Hizmetleri|  
+|[WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Konaklar WCF hizmetleri kitaplıkları (*.dll) dosya içeriyor.|  
 |[WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Rastgele türler giriş parametreleri sağlayan bir GUI aracı, hizmet ve hizmet yanıtı geri gönderir görünümü için giriş gönderin.|  
 |[Önce Anlaşma Aracı](../../../docs/framework/wcf/contract-first-tool.md)|Visual Studio XSD veri sözleşmelerinden kodu sınıfları oluşturur görev oluşturun.|  
   

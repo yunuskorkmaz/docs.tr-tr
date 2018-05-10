@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>Yönergeler ve En İyi Yöntemler
 Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak için yönergeler sağlayan konuları içerir.  
@@ -22,7 +22,7 @@ Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak iç
  Nasıl ve ne zaman açıklar gelecekteki sürümlerinde oluşturulduğunda bozmadığını veri sözleşmeleri oluşturmak için.  
   
  [Hizmet Sürümü Oluşturma](../../../docs/framework/wcf/service-versioning.md)  
- Sürüm oluşturma göz önünde bulundurun açıklanmaktadır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Dağıtımdan sonra Hizmetleri (ve bunların kullanıma uç noktaları) gerekebilir, örneğin değiştirilmesi, yetecek kadar iş gereksinimlerini veya BT gereksinimleri, değiştirme veya sorunlarını gidermek için. Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır.  
+ Sürüm oluşturma WCF'de göz önünde bulundurun açıklanmaktadır. Dağıtımdan sonra Hizmetleri (ve bunların kullanıma uç noktaları) gerekebilir, örneğin değiştirilmesi, yetecek kadar iş gereksinimlerini veya BT gereksinimleri, değiştirme veya sorunlarını gidermek için. Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır.  
   
  [Yük Dengeleme](../../../docs/framework/wcf/load-balancing.md)  
  Yük Dengeleyici ile bir Web grubu için yönergeleri listeler.  

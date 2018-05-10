@@ -2,11 +2,11 @@
 title: 'Özel İleti Kodlayıcı: Özel Metin Kodlayıcı'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Özel İleti Kodlayıcı: Özel Metin Kodlayıcı
 Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti Kodlayıcı uygulamak gösterilmiştir.  
@@ -20,7 +20,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti K
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> , [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yalnızca UTF-8, UTF-16 ve büyük Endean Unicode Kodlamalar destekler. Özel metin ileti Kodlayıcı bu örnekte, tüm platform tarafından desteklenen karakter kodlaması birlikte çalışabilirlik için gerekli olabilecek destekler. Örnek bir istemci konsol program (.exe), Internet Information Services (IIS) ve bir metin ileti Kodlayıcı kitaplığı (.dll) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemleri kullanıma sunan arabirim (eklemek, çıkarma, çarpma ve bölme). İstemci eş zamanlı istekleri verilen matematik işlemi ve sonuç ile hizmet yanıtları yapar. Hem istemci hem de hizmet kullanır `CustomTextMessageEncoder` varsayılan yerine <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Yalnızca UTF-8, UTF-16 ve büyük Endean Unicode Kodlamalar WCF destekler. Özel metin ileti Kodlayıcı bu örnekte, tüm platform tarafından desteklenen karakter kodlaması birlikte çalışabilirlik için gerekli olabilecek destekler. Örnek bir istemci konsol program (.exe), Internet Information Services (IIS) ve bir metin ileti Kodlayıcı kitaplığı (.dll) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemleri kullanıma sunan arabirim (eklemek, çıkarma, çarpma ve bölme). İstemci eş zamanlı istekleri verilen matematik işlemi ve sonuç ile hizmet yanıtları yapar. Hem istemci hem de hizmet kullanır `CustomTextMessageEncoder` varsayılan yerine <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
  Özel Kodlayıcı uygulama ileti Kodlayıcı Fabrika, ileti Kodlayıcı, bağlama öğesi ve yapılandırma işleyicisi kodlama bir ileti oluşur ve aşağıda gösterilmektedir:  
   
@@ -47,7 +47,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti K
 4.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>İleti Kodlayıcı Fabrika ve ileti kodlayıcı  
- Zaman <xref:System.ServiceModel.ServiceHost> veya istemci kanal açıldığında, tasarım zamanı bileşeni `CustomTextMessageBindingElement` oluşturur `CustomTextMessageEncoderFactory`. Üreteç oluşturur `CustomTextMessageEncoder`. İleti Kodlayıcı hem akış modunda ve arabellekli modu çalışır. Kullandığı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> okumak ve iletileri sırasıyla yazmak için. En iyi duruma getirilmiş XML okuyucuları ve yazıcıları, aksine [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] destekleyen yalnızca UTF-8, UTF-16 ve büyük Endean Unicode bu okuyucular ve yazıcılarının destek tüm desteklenen platform kodlama.  
+ Zaman <xref:System.ServiceModel.ServiceHost> veya istemci kanal açıldığında, tasarım zamanı bileşeni `CustomTextMessageBindingElement` oluşturur `CustomTextMessageEncoderFactory`. Üreteç oluşturur `CustomTextMessageEncoder`. İleti Kodlayıcı hem akış modunda ve arabellekli modu çalışır. Kullandığı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> okumak ve iletileri sırasıyla yazmak için. En iyi duruma getirilmiş XML okuyucuları ve yalnızca UTF-8, UTF-16 ve büyük Endean Unicode desteği yazıcıları WCF aksine bu okuyucuları ve yazıcıları tüm desteklenen platform kodlamayı destekler.  
   
  Aşağıdaki kod örneğinde CustomTextMessageEncoder gösterir.  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>İleti kodlama bağlama öğesi  
- Bağlama öğeleri yapılandırmasına izin ver [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı yığını. Özel ileti Kodlayıcı kullanmak için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, bir bağlama öğesi gereklidir, çalışma zamanı yığınında uygun düzeyde uygun ayarlarla ileti Kodlayıcı üreteci oluşturur.  
+ Bağlama öğeleri WCF çalışma zamanı yığınının yapılandırılmasına olanak sağlar. Bir WCF uygulamaya özel ileti Kodlayıcı kullanmak için bir bağlama öğesi gereklidir, çalışma zamanı yığınında uygun düzeyde uygun ayarlarla ileti Kodlayıcı üreteci oluşturur.  
   
- `CustomTextMessageBindingElement` Türetilen <xref:System.ServiceModel.Channels.BindingElement> temel sınıfı ve devraldığı <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> sınıfı. Bu diğer sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlama öğesi kodlama bir ileti olduğu bu bağlama öğesi tanımak için bileşenleri. Uygulaması <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> uygun ayarlarla eşleşen ileti Kodlayıcı Fabrika örneğini döndürür.  
+ `CustomTextMessageBindingElement` Türetilen <xref:System.ServiceModel.Channels.BindingElement> temel sınıfı ve devraldığı <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> sınıfı. Bu ileti kodlama bağlama öğesi olduğu bu bağlama öğesi tanımak WCF bileşenlerle sağlar. Uygulaması <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> uygun ayarlarla eşleşen ileti Kodlayıcı Fabrika örneğini döndürür.  
   
- `CustomTextMessageBindingElement` Ayarlarını gösteren `MessageVersion`, `ContentType`, ve `Encoding` özellikleri aracılığıyla. Kodlayıcı Soap11Addressing ve Soap12Addressing1 sürümlerini destekler. Soap11Addressing1 varsayılandır. Varsayılan değer olan `ContentType` "text/xml". `Encoding` Özelliği istenen karakter kodlamasını değerini ayarlamanıza olanak sağlar. Örnek istemci hem de hizmet kullanan ISO 8859-1 (Latin1) karakter kodlamasını, tarafından desteklenmeyen <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> , [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ `CustomTextMessageBindingElement` Ayarlarını gösteren `MessageVersion`, `ContentType`, ve `Encoding` özellikleri aracılığıyla. Kodlayıcı Soap11Addressing ve Soap12Addressing1 sürümlerini destekler. Soap11Addressing1 varsayılandır. Varsayılan değer olan `ContentType` "text/xml". `Encoding` Özelliği istenen karakter kodlamasını değerini ayarlamanıza olanak sağlar. Örnek istemci hem de hizmet kullanan ISO 8859-1 (Latin1) karakter kodlamasını, tarafından desteklenmeyen <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF.  
   
  Aşağıdaki kod özel metin ileti Kodlayıcısı kullanarak bağlama programlı olarak oluşturulacağını gösterir.  
   

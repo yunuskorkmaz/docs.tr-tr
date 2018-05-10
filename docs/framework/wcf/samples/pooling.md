@@ -2,11 +2,11 @@
 title: Biriktirme
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pooling"></a>Biriktirme
 Bu örnek, nesne havuzu desteklemek için Windows Communication Foundation (WCF) genişletmek gösterilmiştir. Örnek sözdizimsel olarak ve anlam olarak benzer bir öznitelik oluşturmak nasıl gösterir `ObjectPoolingAttribute` Kurumsal Hizmetler işlevselliğini özniteliği. Nesne havuzu çarpıcı artırma uygulamanın performans sağlayabilir. Ancak, doğru kullanılmıyorsa ters etkisi olabilir. Nesne havuzu kapsamlı başlatma gerektiren sık kullanılan nesnelerini yeniden yükünü azaltmanıza yardımcı olur. Havuza alınmış bir nesne üzerinde bir yöntem çağrısı bir önemli tamamlamak için gereken süre, en büyük havuz boyutu sınırına hemen sonra ancak, nesne havuzu ek istekler kuyruğa atılıyor. Bu nedenle bir zaman aşımı özel durum atma tarafından bazı nesne oluşturma isteklere hizmet başarısız olabilir.  
@@ -14,14 +14,14 @@ Bu örnek, nesne havuzu desteklemek için Windows Communication Foundation (WCF)
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
- Oluşturmanın ilk adımı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uzantısıdır genişletilebilirlik noktasını kullanmak üzere karar vermek için.  
+ WCF uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasını kullanmak üzere karar vermektir.  
   
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] terimi *dağıtıcısı* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve giden bir Bu yöntemden dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvurur İleti. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti her bitiş noktasıyla ilgili bir dağıtıcı oluşturur. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu istemciyle ilişkili sözleşme çift yönlü sözleşme ise, istemci bir dağıtıcı kullanması gerekir.  
+ WCF'de terimi *dağıtıcısı* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve Giden iletiye Bu yöntemden dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvuruyor. Bir WCF hizmeti bir dağıtıcı her bitiş noktasıyla ilgili oluşturur. Bu istemciyle ilişkili sözleşme çift yönlü sözleşme ise bir WCF istemcisi bir dağıtıcı kullanmanız gerekir.  
   
  Kanal ve uç nokta dağıtıcıları kanal sunar- ve dağıtıcı davranışını denetleyen çeşitli özellikler gösterme tarafından sözleşme genelinde genişletilebilirlik. <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> Özelliği de inceleme, değiştirme veya dağıtma işlemi özelleştirmek olanak sağlar. Bu örnek odaklanır <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> hizmet sınıfının örnekleri sağlayan bir nesneye işaret etmiyor özelliği.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], dağıtıcı kullanarak hizmet sınıfı örneği oluşturur bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, hangi uygulayan <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimi. Bu arabirim üç yöntem vardır:  
+ WCF'de, dağıtıcı kullanarak hizmet sınıfı örneği oluşturur. bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, hangi uygulayan <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimi. Bu arabirim üç yöntem vardır:  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Bir ileti geldiğinde dağıtıcısı çağrıları <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> iletiyi işlemek için hizmet sınıfının bir örneğini oluşturmak için yöntemi. Bu yönteme çağrıları sıklığını tarafından belirlenen <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Örneğin, varsa <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği ayarlanmış <xref:System.ServiceModel.InstanceContextMode.PerCall> hizmet sınıfının yeni bir örneğini, bunu ulaşan her iletiyi işlemek için oluşturulan <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> bir ileti ulaştığında çağrılır.  
   
@@ -100,7 +100,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  Bu örnek özel bir öznitelik kullanır. Zaman <xref:System.ServiceModel.ServiceHost> oluşturulan hizmetin tür tanımında kullanılan öznitelikler inceler ve kullanılabilir davranışları hizmet açıklaması 's davranışları koleksiyonuna ekler.  
   
- Arabirim <xref:System.ServiceModel.Description.IServiceBehavior> üç yöntem--içerdiği <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> Yöntemi davranışı hizmete uygulanabilir emin olmak için kullanılır. Bu örnekte, uygulama hizmeti ile yapılandırılmamış sağlar <xref:System.ServiceModel.InstanceContextMode.Single>. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> Yöntemi hizmetin bağlamalar yapılandırmak için kullanılır. Bu senaryoda gerekli değildir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> Hizmetin dağıtıcıları yapılandırmak için kullanılır. Bu yöntem tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. Aşağıdaki parametreleri, bu yönteme geçirilen:  
+ Arabirim <xref:System.ServiceModel.Description.IServiceBehavior> üç yöntem--içerdiği <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>, ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> Yöntemi davranışı hizmete uygulanabilir emin olmak için kullanılır. Bu örnekte, uygulama hizmeti ile yapılandırılmamış sağlar <xref:System.ServiceModel.InstanceContextMode.Single>. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> Yöntemi hizmetin bağlamalar yapılandırmak için kullanılır. Bu senaryoda gerekli değildir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> Hizmetin dağıtıcıları yapılandırmak için kullanılır. Bu yöntem WCF tarafından çağrılır zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. Aşağıdaki parametreleri, bu yönteme geçirilen:  
   
 -   `Description`: Bu bağımsız değişken tüm hizmet hizmet açıklamasını sağlar. Bu hizmetin uç noktaları, sözleşmeler, bağlamaları ve diğer verileri hakkında açıklama verilerini incelemek için kullanılabilir.  
   
@@ -177,7 +177,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Ek olarak bir <xref:System.ServiceModel.Description.IServiceBehavior> uygulama <xref:System.EnterpriseServices.ObjectPoolingAttribute> sınıfı öznitelik bağımsız değişkenleri kullanarak nesne havuzu özelleştirmek için birkaç üye sahiptir. Bu üyeleri dahil <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A>, ve <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>, .NET Enterprise Hizmetleri tarafından sağlanan özellik kümesi havuzu nesne eşleşecek şekilde.  
   
- Davranış havuzu nesne artık eklenebilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni oluşturulan özel hizmet uygulamasıyla yorumlama tarafından hizmet `ObjectPooling` özniteliği.  
+ Davranış havuzu nesne artık bir WCF hizmetine yeni oluşturulan özel hizmet uygulamasıyla yorumlama tarafından eklenebilir `ObjectPooling` özniteliği.  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      

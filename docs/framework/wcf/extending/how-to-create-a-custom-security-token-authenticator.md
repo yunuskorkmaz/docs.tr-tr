@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma
 Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci manager ile tümleştirerek gösterilmektedir. Bir güvenlik belirteci kimlik doğrulayıcı gelen ileti ile sağlanan bir güvenlik belirteci içeriğini doğrular. Doğrulama başarılı olursa, Doğrulayıcı koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> , değerlendirildiğinde, örnekler talep kümesini döndürür.  
@@ -33,7 +33,7 @@ Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir 
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Önceki kod Yetkilendirme İlkeleri koleksiyonunu döndürür <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> yöntemi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu arabirimin ortak bir uygulama sağlamaz. Aşağıdaki yordamda, kendi gereksinimlerinizi için bunu gösterilmiştir.  
+ Önceki kod Yetkilendirme İlkeleri koleksiyonunu döndürür <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> yöntemi. WCF ortak bir uygulama bu arabirimin sağlamaz. Aşağıdaki yordamda, kendi gereksinimlerinizi için bunu gösterilmiştir.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Bir özel yetkilendirme ilkesi oluşturmak için  
   
@@ -43,7 +43,7 @@ Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir 
   
 3.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> özelliği salt okunur. Bu özellik, bir veren belirtecinden elde edilen talep kümelerinin döndürmesi gerekir. Bu veren belirteç veya belirteç içerikleri doğrulamak için sorumlu olduğu bir yetki veren karşılık gelmelidir. Aşağıdaki örnek, önceki yordamda oluşturduğunuz özel güvenlik belirteci kimlik doğrulayıcı öğesinden bu sınıfa geçirilen verenin talep kullanır. Özel güvenlik belirteci kimlik doğrulayıcı sistem tarafından sağlanan talep kümesi kullanır (tarafından döndürülen <xref:System.IdentityModel.Claims.ClaimSet.System%2A> özelliği) kullanıcıadı Belirteç Verenin temsil etmek için.  
   
-4.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> yöntemi. Bu yöntem örneği doldurur <xref:System.IdentityModel.Policy.EvaluationContext> gelen güvenlik belirteci içeriğine göre taleplerle sınıfı (bağımsız değişken olarak geçirilen). Yöntem `true` zaman onu yapılır ile değerlendirme. Bu yöntemi uygulaması değerlendirme bağlam için ek bilgiler sağlayan diğer yetkilendirme ilkeleri varlığına bağımlıdır zaman durumlarda geri dönebilirsiniz `false` gerekli bilgiler yoksa, değerlendirme bağlamında henüz. Bu durumda, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu Yetkilendirme İlkeleri en az biri değerlendirme bağlamı değiştirilirse gelen ileti için oluşturulan tüm diğer yetkilendirme ilkeleri değerlendirdikten sonra yöntemi çağırır.  
+4.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> yöntemi. Bu yöntem örneği doldurur <xref:System.IdentityModel.Policy.EvaluationContext> gelen güvenlik belirteci içeriğine göre taleplerle sınıfı (bağımsız değişken olarak geçirilen). Yöntem `true` zaman onu yapılır ile değerlendirme. Bu yöntemi uygulaması değerlendirme bağlam için ek bilgiler sağlayan diğer yetkilendirme ilkeleri varlığına bağımlıdır zaman durumlarda geri dönebilirsiniz `false` gerekli bilgiler yoksa, değerlendirme bağlamında henüz. Bu durumda, WCF, bu Yetkilendirme İlkeleri en az biri değerlendirme bağlamı değiştirilirse gelen ileti için oluşturulan tüm diğer yetkilendirme ilkeleri değerlendirdikten sonra yöntemi çağırır.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

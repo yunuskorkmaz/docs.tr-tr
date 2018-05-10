@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e8abbf8c5f9b0696d90ccbee94c5d8f4dd8b1ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Tanımlama
 Temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevler ilk budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
- Oluştururken bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti, ilk görev, bir hizmet sözleşmesini tanımlamak için. Hizmet sözleşmesi hangi işlemleri belirtir hizmet destekler. Bir işlem, bir Web hizmeti yöntemi düşünülebilir. Sözleşmeler, C++, C# veya Visual Basic (VB) arabirimi tanımlamasıyla oluşturulur. Arabirimdeki her yöntem belirli hizmet işlemine karşılık gelir. Her arabirimde <xref:System.ServiceModel.ServiceContractAttribute> uygulanan ve her işlem olmalıdır <xref:System.ServiceModel.OperationContractAttribute> özniteliğinin. Bir yöntemi varsa içeren bir arabirim içinde <xref:System.ServiceModel.ServiceContractAttribute> özniteliği yok <xref:System.ServiceModel.OperationContractAttribute> özniteliği yöntemi hizmeti tarafından gösterilmez.  
+ Bir WCF Hizmeti oluştururken, ilk görevi bir hizmet sözleşmesini tanımlamaktır. Hizmet sözleşmesi hangi işlemleri belirtir hizmet destekler. Bir işlem, bir Web hizmeti yöntemi düşünülebilir. Sözleşmeler, C++, C# veya Visual Basic (VB) arabirimi tanımlamasıyla oluşturulur. Arabirimdeki her yöntem belirli hizmet işlemine karşılık gelir. Her arabirimde <xref:System.ServiceModel.ServiceContractAttribute> uygulanan ve her işlem olmalıdır <xref:System.ServiceModel.OperationContractAttribute> özniteliğinin. Bir yöntemi varsa içeren bir arabirim içinde <xref:System.ServiceModel.ServiceContractAttribute> özniteliği yok <xref:System.ServiceModel.OperationContractAttribute> özniteliği yöntemi hizmeti tarafından gösterilmez.  
   
  Bu görev için kullanılan kod, aşağıdaki yordamın örnekte sağlanır.  
   

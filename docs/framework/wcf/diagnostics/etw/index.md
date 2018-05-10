@@ -6,18 +6,18 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: a0e3e3d27283e588b161e2209c5a682558d18f79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 210418b8a8765a1fc59658e9df57c92ce087c95f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW ile Çözümleme İzleme
-Windows Communication Foundation (WCF) çözümleme izleme yürütülmesi sırasında tanılama bilgileri yakalamak için bir yol sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Çözümleme izleme olayları yayılan anahtar noktalarında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , sorun giderme izin vermek için yığın [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir üretim ortamında Hizmetleri. Analitik izlemeyi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmetleri barındıran bir ürün sunucusunun performansı üzerinde en az etki olan [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Hizmetleri bu olayları olay izleme için Windows (ETW) oturumuna çok verimli bir şekilde gösterilen gibi.  
+Windows Communication Foundation (WCF) çözümleme izleme bir WCF Hizmeti yürütülmesi sırasında tanılama bilgileri yakalamak için bir yol sunar. WCF hizmetleri bir üretim ortamında sorun giderme izin vermek için WCF yığınında anahtar noktalarda WCF analiz izleme olaylarını gösterilen. Çözümleme izleme WCF hizmetleri için bir ürün sunucusunun performansı üzerinde en az etki barındıran sahip [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF hizmetleri bu olayları olay izleme için Windows (ETW) oturumuna çok verimli bir şekilde gösterilen gibi.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Analitik İzlemeye Genel Bakış](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- Anlatılmaktadır nasıl [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] çözümleme izleme çalışır [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
+ İçinde WCF analiz izleme nasıl çalıştığı açıklanır [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
   
  [Analitik İzlemeyi Dinamik Olarak Etkinleştirme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
  Etkinleştirmek veya kullanarak dinamik olarak ETW İzleme devre dışı bırakma açıklanır.  

@@ -2,24 +2,24 @@
 title: Contract2
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: d7af8df46fabcb96a8f7015e360ee2617b7273a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract"></a>Daralma
 Bu bölüm, Windows Communication Foundation (WCF) sözleşmeleri gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Anlaşmaları](../../../../docs/framework/wcf/samples/data-contracts.md)  
- Veri sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF'de veri sözleşmeleri gösterir.  
   
  [İleti Anlaşmaları](../../../../docs/framework/wcf/samples/message-contracts.md)  
- İleti sözleşmeleri gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF'de ileti sözleşmeleri gösterir.  
   
  [Hizmet Sözleşmeleri](../../../../docs/framework/wcf/samples/service-contracts.md)  
- Hizmet sözleşmelerinde gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ WCF'de Hizmet sözleşmeleri gösterir.  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  Kullanarak seri hale getirme ve seri durumdan çıkarma işlemleri nasıl özelleştirilebilir gösteren <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.  

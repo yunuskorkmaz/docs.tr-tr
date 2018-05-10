@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sağlar ve hizmet davranışı verileri yerine dağıtım noktasında tasarım zamanında. Bu konu, birincil teknikleri özetler.  
   
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetidir yapılandırılabilir kullanarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. XML öğeleri barındıran Internet Information Services (IIS) sitesi için Web.config dosyasının en yaygın olarak eklenen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin. Ayrıca, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hızlı bir şekilde bir hizmeti için en temel özellikleri seçmenize olanak birkaç sistem tarafından sağlanan öğeleri içerir. İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma gereksinimleri. Herhangi bir sağlamazsanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma çalışma zamanı belirli bir hizmet için bazı standart uç noktaları ve varsayılan bağlama/davranışı hizmetinizi otomatik olarak yapılandırır. Uygulamada, yazma yapılandırma programlama önemli bir parçası olan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.  
+ Bir WCF Hizmeti yapılandırılabilir kullanmaktır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin. Ayrıca, WCF hızlı bir şekilde bir hizmeti için en temel özellikleri seçmenize olanak birkaç sistem tarafından sağlanan öğeleri içerir. İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma belirtmezseniz, çalışma zamanı bazı standart uç noktaları ve varsayılan bağlama/davranışı otomatik olarak hizmetinizi yapılandırır. Bir ana uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
   
  Daha fazla bilgi için bkz: [hizmetler için bağlamaları yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Öğeleri listesini en sık kullanılan için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
@@ -21,7 +21,7 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
 >  Bir hizmeti iki farklı sürümü dağıtıldığı yan yana senaryoları dağıtırken, yapılandırma dosyalarını başvurulan derlemelerin kısmi adını belirtmek gereklidir. Bu yapılandırma dosyası, bir hizmetin tüm sürümleri arasında paylaşılır ve altında .NET Framework'ün farklı sürümlerini çalıştıran kaynaklanır.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config ve App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] System.Configuration yapılandırma sistemini kullanan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF kullanan System.Configuration yapılandırma sistemi [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Visual Studio'da bir hizmeti yapılandırma sırasında bir Web.config dosyası ya da bir App.config dosyası ayarlarını belirtmek için kullanın. Yapılandırma dosyasının adını seçimi hizmeti için seçtiğiniz barındırma ortamı tarafından belirlenir. Hizmetinizi barındırmak için IIS kullanıyorsanız, bir Web.config dosyası kullanın. Herhangi bir barındırma ortamı kullanıyorsanız, bir App.config dosyası kullanın.  
   
@@ -115,7 +115,7 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
  [\<davranışı >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Bağlama ve davranış yapılandırmalarını kullanma  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırmaları başvuru sistemi yapılandırmayla uç noktalar arasında paylaşmak kolaylaştırır. Yapılandırma değerlerini bir bitiş noktasına doğrudan atamak yerine, bağlama ile ilgili yapılandırma değerlerini gruplandırılmıştır `bindingConfiguration` öğelerinde `<binding>` bölümü. Bağlama yapılandırması, bir bağlama ayarlarını adlandırılmış grubudur. Uç noktalar sonra başvuru `bindingConfiguration` ada göre.  
+ WCF yapılandırmaları başvuru sistemi yapılandırmayla uç noktalar arasında paylaşmak kolaylaştırır. Yapılandırma değerlerini bir bitiş noktasına doğrudan atamak yerine, bağlama ile ilgili yapılandırma değerlerini gruplandırılmıştır `bindingConfiguration` öğelerinde `<binding>` bölümü. Bağlama yapılandırması, bir bağlama ayarlarını adlandırılmış grubudur. Uç noktalar sonra başvuru `bindingConfiguration` ada göre.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

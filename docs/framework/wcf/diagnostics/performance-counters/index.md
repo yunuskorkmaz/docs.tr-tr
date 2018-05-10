@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d9e6b83a78967193c4cb0343f6c77560354a837
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Windows Communication Foundation (WCF) çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir.  
   
 ## <a name="enabling-performance-counters"></a>Performans sayaçları etkinleştirme  
- İçin performans sayaçları etkinleştirebilirsiniz bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] app.config yapılandırma dosyası aracılığıyla hizmet [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] gibi hizmet:  
+ WCF Hizmeti app.config yapılandırma dosyası aracılığıyla şu şekilde bir WCF hizmeti için performans sayaçları etkinleştirebilirsiniz:  
   
 ```xml  
 <configuration>  
@@ -32,9 +32,9 @@ Windows Communication Foundation (WCF) çok sayıda uygulamanızın performansı
   
 -   Kapalı: ServiceModel * performans sayaçları devre dışı bırakıldı.  
   
- Tüm performans sayaçlarını etkinleştirmek istiyorsanız, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] uygulamalar, yapılandırma ayarlarını Machine.config dosyasındaki yerleştirebilirsiniz.  Lütfen bakın **performans sayaçları için bellek boyutu artırmayı** bölümünde aşağıdaki performans sayaçları için yeterli bellek makinenizde yapılandırma hakkında daha fazla bilgi için.  
+ Tüm WCF uygulamaları için performans sayaçları etkinleştirmek istiyorsanız, yapılandırma ayarlarını Machine.config dosyasındaki yerleştirebilirsiniz.  Lütfen bakın **performans sayaçları için bellek boyutu artırmayı** bölümünde aşağıdaki performans sayaçları için yeterli bellek makinenizde yapılandırma hakkında daha fazla bilgi için.  
   
- Kullanırsanız [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] özel işlem invokers gibi genişletilebilirlik noktaları, ayrıca kendi performans sayaçlarını yayması. Genişletilebilirlik noktanız uygulamak, bunun nedeni, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] varsayılan yolda standart performans sayacı verilerini artık yayabilir. El ile performans sayacı desteği uygulamaz, beklediğiniz performans sayacı verilerini göremeyebilirsiniz.  
+ Özel işlem invokers gibi WCF genişletilebilirlik noktaları kullanıyorsa, kendi performans sayaçlarını yayması. Genişletilebilirlik noktanız uygularsanız, WCF artık varsayılan yolda standart performans sayacı verilerini yayabilir olmasıdır. El ile performans sayacı desteği uygulamaz, beklediğiniz performans sayacı verilerini göremeyebilirsiniz.  
   
  Performans sayaçları, kodunuzda şu şekilde etkinleştirebilirsiniz,  
   
@@ -56,11 +56,11 @@ config.Save();
 >  Performans sayacı örnekleri son iletileri uç nokta gönderici tarafından işlenen önce yayınlanan. Bu performans verileri için birkaç iletileri yakalanan değil neden olabilir.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Performans sayaçları için bellek boyutunu artırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kullanır, performans sayacı kategorileri için paylaşılan bellek ayırın.  
+ WCF kendi performans sayacı kategorileri için ayrı bir paylaşılan bellek kullanır.  
   
- Varsayılan olarak, ayrı bir paylaşılan bellek bir üç aylık dönem için genel performans sayacı bellek boyutu ayarlanır. Varsayılan genel performans sayacı bellek 524.288 bayttır. Bu nedenle, üç [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] performans sayacı kategorileri yaklaşık 128 KB her varsayılan boyutuna sahip. Çalışma zamanı özelliklerine bağlı olarak [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] uygulamaları bir makineye performans sayacı bellek tükendi. Bu gerçekleştiğinde, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir hata uygulama olay günlüğüne yazar. Bir performans sayacı yüklenmedi ve özel durum girdisini içeriyor hata içeriğini durumlarını "System.InvalidOperationException: özel sayaçlar dosya görünümdür, bellek yetersiz." Hata düzeyinde izleme etkinleştirilirse, bu hata Ayrıca izlenen. Performans sayacı bellek biterse, çalışmaya devam eder, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] performans sayaçları etkinleştirilmiş uygulamalarla performans düşüşüne neden. Makinenin yöneticisiyseniz, herhangi bir anda var olabilen performans sayaçları en fazla sayısını desteklemek için yeterli bellek ayıramadı şekilde yapılandırmanız gerekir.  
+ Varsayılan olarak, ayrı bir paylaşılan bellek bir üç aylık dönem için genel performans sayacı bellek boyutu ayarlanır. Varsayılan genel performans sayacı bellek 524.288 bayttır. Bu nedenle, üç WCF performans sayacı kategorisi yaklaşık 128 KB her varsayılan boyutuna sahip. WCF uygulamaları bir makineye çalışma zamanı özelliklerine bağlı olarak, performans sayacı belleği tükendi. Bu durumda, WCF hata uygulama olay günlüğüne yazar. Bir performans sayacı yüklenmedi ve özel durum girdisini içeriyor hata içeriğini durumlarını "System.InvalidOperationException: özel sayaçlar dosya görünümdür, bellek yetersiz." Hata düzeyinde izleme etkinleştirilirse, bu hata Ayrıca izlenen. Performans sayacı bellek biterse, etkin performans sayaçları ile WCF uygulamaları çalıştırmaya devam performans düşüşüne neden olabilir. Makinenin yöneticisiyseniz, herhangi bir anda var olabilen performans sayaçları en fazla sayısını desteklemek için yeterli bellek ayıramadı şekilde yapılandırmanız gerekir.  
   
- İçin performans sayacı bellek miktarını değiştirebilirsiniz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kayıt defterinde kategoriler. Bunu yapmak için adlı yeni bir DWORD değeri eklemeniz gerekir `FileMappingSize` için üç aşağıdaki konumlardan ve bayt istenilen değere ayarlayın. Böylece bu değişiklikleri yürürlüğe alınır makinenizi yeniden başlatın.  
+ Kayıt defterinde WCF kategorileri için performans sayacı bellek miktarını değiştirebilirsiniz. Bunu yapmak için adlı yeni bir DWORD değeri eklemeniz gerekir `FileMappingSize` için üç aşağıdaki konumlardan ve bayt istenilen değere ayarlayın. Böylece bu değişiklikleri yürürlüğe alınır makinenizi yeniden başlatın.  
   
 -   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
@@ -123,7 +123,7 @@ ServiceName@ServiceBaseAddress
 >  Bir sözleşmede yinelenen işlem adları varsa, her iki işlemleri için yalnızca bir örnekleri alın.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>WCF performans sayaçları programlama  
- Böylece erişebilmeniz için birkaç dosyaları SDK yükleme klasöründe yüklü [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] performans sayaçları programlı olarak. Bu dosyalar aşağıda listelenmiştir.  
+ WCF performans sayaçları program aracılığıyla erişebilmesi için birkaç dosya SDK yükleme klasörüne yüklenir. Bu dosyalar aşağıda listelenmiştir.  
   
 -   _ServiceModelEndpointPerfCounters.vrg  
   

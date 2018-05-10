@@ -2,17 +2,17 @@
 title: Aktarma
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Aktarma
 Bu konu Windows Communication Foundation (WCF) Etkinlik izleme modelindeki aktarımı açıklar.  
   
 ## <a name="transfer-definition"></a>Aktarım tanımı  
- Etkinlikler arasında aktarımları uç noktaları içindeki ilgili etkinlikleri olaylar arasında nedensel ilişkileri temsil eder. Denetim bu etkinlikler arasında Örneğin, etkinlik sınırları geçmeden bir yöntem çağrısı akar olduğunda iki etkinlik aktarımları ile ilişkilidir. İçinde [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], bayt hizmeti üzerinde dinleme etkinlik ileti nesnesi oluşturulduğu için bayt alma etkinlik aktarılır gelen olduğunda. Uçtan uca izleme senaryoları ve bunların ilgili etkinliği ve tasarım izleme listesi için bkz: [uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Etkinlikler arasında aktarımları uç noktaları içindeki ilgili etkinlikleri olaylar arasında nedensel ilişkileri temsil eder. Denetim bu etkinlikler arasında Örneğin, etkinlik sınırları geçmeden bir yöntem çağrısı akar olduğunda iki etkinlik aktarımları ile ilişkilidir. Bayt hizmette gelen olduğunda WCF içinde dinleme adresindeki etkinlik ileti nesnesi oluşturulduğu için bayt alma etkinlik aktarılır. Uçtan uca izleme senaryoları ve bunların ilgili etkinliği ve tasarım izleme listesi için bkz: [uçtan uca izleme senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Aktarım izlemeleri yaymak üzere kullanmak `ActivityTracing` izleme kaynağında aşağıdaki yapılandırma kodda gösterildiği şekilde ayarlama.  
   

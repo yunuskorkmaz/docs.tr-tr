@@ -2,18 +2,18 @@
 title: Windows için WCF Hizmetleri ve Etkinlik İzleme
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Windows için WCF Hizmetleri ve Etkinlik İzleme
-Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, olay izleme için Windows (ETW) yayma için nasıl kullanılacağını gösterir. Analitik izlemeleri anahtar noktalarında yayılan olaylardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , sorun giderme izin yığın [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] üretim ortamında Hizmetleri.  
+Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, olay izleme için Windows (ETW) yayma için nasıl kullanılacağını gösterir. Analitik izlemeleri, WCF hizmetleri üretim ortamında sorun giderme sağlayan anahtar noktalarda WCF yığınında gösterilen olaylardır.  
   
- Analitik izlemede [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri, izleme açılabilir bir üretim ortamında performansı üzerinde en az etkiyle. Bu izlemeler olayları ETW oturumuna olarak gösterilen.  
+ WCF hizmetlerinde çözümleme izleme, izleme bir üretim ortamında performansı üzerinde en az etkiyle açılabilir. Bu izlemeler olayları ETW oturumuna olarak gösterilen.  
   
- Bu örnek temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hangi olayların hizmetinden Olay Görüntüleyicisi kullanılarak görüntülenebilir olay günlüğü için gösterilen hizmeti. Olayları dinler adanmış bir ETW oturumu başlatmak mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Örnek olayları Olay Görüntüleyicisi'ni kullanarak okunabilir ikili bir dosyada depolar adanmış bir ETW oturum oluşturmak için bir komut dosyası içerir.  
+ Bu örnek, olayları Olay Görüntüleyicisi kullanılarak görüntülenebilir olay günlüğü için hizmetinden yayılan temel bir WCF hizmeti içerir. WCF hizmetinden gelen olayları dinler adanmış bir ETW oturumu başlatmak mümkündür. Örnek olayları Olay Görüntüleyicisi'ni kullanarak okunabilir ikili bir dosyada depolar adanmış bir ETW oturum oluşturmak için bir komut dosyası içerir.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
@@ -27,17 +27,17 @@ Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, 
   
      Varsayılan olarak, hizmet başlatır bağlantı 1378 isteklerini dinleme (http://localhost:1378/Calculator.svc).  
   
-4.  Çalıştırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemcisi (WcfTestClient.exe).  
+4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Test istemcisi (WcfTestClient.exe) bulunduğu \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > \Common7\IDE\ WcfTestClient.exe (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF test istemcisi (WcfTestClient.exe) bulunan \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > \Common7\IDE\ WcfTestClient.exe (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemci, hizmet seçerek eklemek **dosya**ve ardından **Hizmet Ekle**.  
+5.  WCF test istemcisi içinde hizmet seçerek eklemek **dosya**ve ardından **Hizmet Ekle**.  
   
      Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, http://localhost:1378/Calculator.svc değeridir.  
   
 6.  Olay Görüntüleyicisi'ni uygulamasını açın.  
   
-     Hizmet çağrılırken önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğü olaylarını izleme alanından yayınlaması için dinleme yaptığından emin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+     Hizmet çağrılırken önce Olay Görüntüleyicisi'ni başlatın ve WCF hizmetinden gösterilen olayları izlemek için olay günlüğüne dinlediğinden emin olun.  
   
 7.  Gelen **Başlat** menüsünde, select **Yönetimsel Araçlar**ve ardından **Olay Görüntüleyicisi'ni**.  Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
   
@@ -51,7 +51,7 @@ Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, 
   
 #### <a name="to-test-the-service"></a>Hizmeti sınamak için  
   
-1.  Dönmek [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çift tıklayın ve test istemcisi `Divide` ve Payda 0 belirtin varsayılan değerleri koruyun.  
+1.  Çift tıklayın ve geçiş WCF test istemcisi geri `Divide` ve Payda 0 belirtin varsayılan değerleri koruyun.  
   
      Paydanın 0 ise, hizmet bir hata oluşturur.  
   

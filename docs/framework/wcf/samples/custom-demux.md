@@ -2,11 +2,11 @@
 title: Özel Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>Özel Demux
 Böylece Windows Communication Foundation (WCF) kullanan hizmetleri nasıl MSMQ ileti üstbilgilerini farklı hizmet işlemleri eşlenebilir. Bu örneği gösterir <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> örnekte gösterildiği gibi bir hizmet işlemi kullanmaya sınırlı değildir [ Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) ve [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnekleri.  
@@ -108,7 +108,7 @@ public static void Main()
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir.  
   
 > [!NOTE]
->  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için localhost kullanır. Düzeni izleyen bir yönergeleri adresleme MSMQ biçim adı göre düzgün biçimlendirilmiş sıra adresidir.  
+>  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için localhost kullanır. Düzeni izleyen bir yönergeleri adresleme MSMQ biçim adı göre düzgün biçimlendirilmiş sıra adresidir.  
   
 ```xml  
 <appSettings>  

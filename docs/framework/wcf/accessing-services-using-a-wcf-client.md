@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
-Bir hizmeti oluşturduktan sonra sonraki adıma oluşturmaktır bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy. Bir istemci uygulaması kullanan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetiyle iletişim kurmak için istemci proxy. İstemci uygulamaları genellikle oluşturmak için bir hizmetin meta verileri içe aktarma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetini çağırmak için kullanılan istemci kodu.  
+Bir hizmeti oluşturduktan sonra sonraki adım bir WCF istemcisi proxy oluşturmaktır. Bir istemci uygulaması WCF istemci proxy hizmeti ile iletişim kurmak için kullanır. İstemci uygulamaları genellikle hizmetini çağırmak için kullanılan WCF istemci kodu oluşturmak üzere bir hizmetin meta veri içeri aktarın.  
   
- Oluşturmak için temel adımlar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci aşağıdakileri içerir:  
+ Bir WCF istemcisi oluşturmak için temel adımlar şunlardır:  
   
 1.  Hizmet koduna derleyin.  
   
-2.  Oluştur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci proxy.  
+2.  WCF istemci proxy oluşturur.  
   
 3.  WCF istemci proxy örneği oluşturur.  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- Sonuç içeren bir kod dosyasıdır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci uygulamanın hizmetini çağırmak için kullanabileceği istemci kodu.  
+ Sonuç istemci uygulamanın hizmetini çağırmak için kullanabileceği WCF istemci kodu içeren bir kod dosyasıdır.  
   
  Aracı, yapılandırma dosyaları oluşturmak için de kullanabilirsiniz.  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- Visual Studio'da hizmet Başvurusu Ekle ve ServiceModel meta veri yardımcı programı aracı oluşturur aşağıdaki [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci sınıfı. Genel sınıf devralır <xref:System.ServiceModel.ClientBase%601> sınıfı ve uygulayan `ICalculator` arabirimi. Araç ayrıca oluşturur `ICalculator` arabirimi (burada gösterilmiyor).  
+ Visual Studio'da hizmet Başvurusu Ekle ve ServiceModel meta veri yardımcı programı aracı aşağıdaki WCF istemci sınıfı oluşturur. Genel sınıf devralır <xref:System.ServiceModel.ClientBase%601> sınıfı ve uygulayan `ICalculator` arabirimi. Araç ayrıca oluşturur `ICalculator` arabirimi (burada gösterilmiyor).  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>WCF istemcisi kullanarak  
- Kullanılacak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemcisi, bir örneğini oluşturmak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci ve ardından aşağıdaki kodda gösterildiği gibi yöntemlerini çağırın.  
+ WCF istemcisini kullanmak için bir WCF istemcisi örneği oluşturun ve sonra aşağıdaki kodda gösterildiği gibi kendi yöntemlerini çağırın.  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>Bir istemci tarafından oluşturulan özel durumları hata ayıklama  
- Tarafından oluşturulan birçok özel durumlar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci hizmeti bir özel durum neden. Bu, bazı örnekler şunlardır:  
+ Bir WCF istemcisi tarafından oluşturulan birçok özel durumları hizmetteki bir özel durum nedeniyle. Bu, bazı örnekler şunlardır:  
   
 -   <xref:System.Net.Sockets.SocketException>: Varolan bir bağlantıyı zorla uzak ana bilgisayar tarafından kapatıldı.  
   

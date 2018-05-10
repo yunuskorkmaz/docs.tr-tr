@@ -2,22 +2,22 @@
 title: SAML Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>SAML Belirteç Sağlayıcı
-Bu örnek, özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiştir. Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı birlikte verilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
+Bu örnek, özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiştir. Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF de gelir ile bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
   
 -   Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.  
   
--   Kullanıcı ayrıntılarını geldiğinde sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci framework kimlik bilgilerini kullanır.  
+-   Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntılarını sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.  
   
 -   Özel belirteç oluşturuluyorsa.  
   
- Bu örnek dışında alınan bir SAML belirtecine sağlayan özel bir belirteç sağlayıcısı oluşturmak nasıl göstermektedir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanılacak istemci framework.  
+ Bu örnek kullanılacak WCF istemci framework dışında alınan bir SAML belirtecine sağlayan özel bir belirteç sağlayıcısını nasıl oluşturulacağını gösterir.  
   
  Özetlemek için bu örnek şunlar gösterilmektedir:  
   
@@ -25,7 +25,7 @@ Bu örnek, özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiş
   
 -   Nasıl bir SAML belirtecine için özel istemci kimlik bilgileri geçirilebilir.  
   
--   SAML belirteci için nasıl sağlandığını [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci framework.  
+-   SAML belirteci WCF istemci framework nasıl sağlanmaktadır.  
   
 -   Sunucu sunucunun X.509 sertifikası kullanarak istemci tarafından kimlik doğrulamasının nasıl.  
   
@@ -110,7 +110,7 @@ Bu örnek, özel bir istemci SAML belirteç sağlayıcı uygulamak gösterilmiş
 </system.serviceModel>  
 ```  
   
- Aşağıdaki adımlar, özel bir SAML belirteç sağlayıcı geliştirmek ve ile tümleştirmek nasıl gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: güvenlik framework:  
+ Aşağıdaki adımlar, özel bir SAML belirteç sağlayıcı geliştirmek ve WCF ile tümleştirmek nasıl gösterir: güvenlik framework:  
   
 1.  Özel bir SAML belirteç sağlayıcı yazma.  
   

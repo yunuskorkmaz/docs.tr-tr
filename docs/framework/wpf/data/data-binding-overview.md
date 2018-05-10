@@ -1,13 +1,6 @@
 ---
-title: "Veri Bağlamaya Genel Bakış"
-ms.custom: 
+title: Veri Bağlamaya Genel Bakış
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>gibi s <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> tek veri öğelerinin esnek stil veya veri öğeleri koleksiyonlarının etkinleştirmek için yerleşik işlevselliğe sahiptir. Sıralama, filtre ve Grup görünümleri, veriler üzerinde oluşturulabilir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynakları biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>gibi s <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> tek veri öğelerinin esnek stil veya veri öğeleri koleksiyonlarının etkinleştirmek için yerleşik işlevselliğe sahiptir. Sıralama, filtre ve Grup görünümleri, veriler üzerinde oluşturulabilir.  
   
  Veri bağlama işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geleneksel modeller, çok çeşitli kendiliğinden veri bağlama, esnek destek özellikleri dahil olmak üzere çeşitli avantajları vardır [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] verileri ve iş temiz ayrılması gösterimi mantığından [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Target özelliği, bir bağımlılık özelliği olmalıdır. Çoğu <xref:System.Windows.UIElement> özelliklerdir bağımlılık özellikleri ve salt okunur olanlar dışında çoğu bağımlılık özelliği varsayılan olarak veri bağlamayı destekler. (Yalnızca <xref:System.Windows.DependencyObject> bağımlılık özellikleri ve tüm türleri tanımlayabilirsiniz <xref:System.Windows.UIElement>s türetilen <xref:System.Windows.DependencyObject>.)  
   
--   Şekilde belirtilmedi ancak, özel bir duruma bağlama kaynak nesnesi sınırlı değil unutulmamalıdır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]veri bağlamayı destekleyen veri biçiminde [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Bazı örnekler sağlamak için bağlama kaynağınız olabilir bir <xref:System.Windows.UIElement>, herhangi bir liste nesnesi bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ile ilişkili nesne [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] veri veya Web Hizmetleri veya içeren bir XmlNode, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Şekilde belirtilmedi ancak, özel bir duruma bağlama kaynak nesnesi sınırlı değil unutulmamalıdır [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesnesi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlamayı destekleyen veri biçiminde [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Bazı örnekler sağlamak için bağlama kaynağınız olabilir bir <xref:System.Windows.UIElement>, herhangi bir liste nesnesi bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ile ilişkili nesne [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] veri veya Web Hizmetleri veya içeren bir XmlNode, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Diğer salt okunur [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] konular, bunu bir bağlama kurarken bir bağlama hedef bağlıyorsanız unutmamak *için* bağlama kaynağı. Örneğin, bazı temel görüntülüyorsanız [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verileri bir <xref:System.Windows.Controls.ListBox> veri bağlama kullanarak, bağlama, <xref:System.Windows.Controls.ListBox> için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri.  
   
@@ -94,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  ![Veri bağlama veri akışı](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>bağlama hedef özelliğini otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak hedef özelliğindeki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama bağlanan denetim dolaylı olarak salt okunur ise uygundur. Örneği için borsa gibi bir kaynağı bağlayın veya belki de hedef özelliği bir tablo veri bağlama arka plan rengini gibi değişiklikler yapmak için sağlanan denetim arayüzüne sahip. Target özelliği değişiklikler izlemeye gerek ise kullanarak <xref:System.Windows.Data.BindingMode.OneWay> bağlama modu önler yükü <xref:System.Windows.Data.BindingMode.TwoWay> bağlama modu.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> bağlama hedef özelliğini otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak hedef özelliğindeki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama bağlanan denetim dolaylı olarak salt okunur ise uygundur. Örneği için borsa gibi bir kaynağı bağlayın veya belki de hedef özelliği bir tablo veri bağlama arka plan rengini gibi değişiklikler yapmak için sağlanan denetim arayüzüne sahip. Target özelliği değişiklikler izlemeye gerek ise kullanarak <xref:System.Windows.Data.BindingMode.OneWay> bağlama modu önler yükü <xref:System.Windows.Data.BindingMode.TwoWay> bağlama modu.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>Bağlama kaynak özelliğin veya diğer otomatik olarak güncelleştirmek için target özelliği değişikliklere neden olur. Bu tür bir bağlama düzenlenebilir formlar veya diğer tamamen etkileşimli için uygun olan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları. Özelliklerin çoğu <xref:System.Windows.Data.BindingMode.OneWay> bağlama, ancak bazı bağımlılık özellikleri (genellikle gibi kullanıcı düzenlenebilir denetimlerin özelliklerini <xref:System.Windows.Controls.TextBox.Text%2A> özelliği <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> özelliği <xref:System.Windows.Controls.CheckBox>) içinvarsayılan<xref:System.Windows.Data.BindingMode.TwoWay> bağlama. Bağımlılık özelliği tek veya çift yönlü varsayılan olarak olup olmadığını belirlemek için programlı bir yolunu kullanarak özelliğin özellik meta verilerini almak için olan <xref:System.Windows.DependencyProperty.GetMetadata%2A> ve Boolean değeri denetleyin <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> özelliği.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> Bağlama kaynak özelliğin veya diğer otomatik olarak güncelleştirmek için target özelliği değişikliklere neden olur. Bu tür bir bağlama düzenlenebilir formlar veya diğer tamamen etkileşimli için uygun olan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] senaryoları. Özelliklerin çoğu <xref:System.Windows.Data.BindingMode.OneWay> bağlama, ancak bazı bağımlılık özellikleri (genellikle gibi kullanıcı düzenlenebilir denetimlerin özelliklerini <xref:System.Windows.Controls.TextBox.Text%2A> özelliği <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> özelliği <xref:System.Windows.Controls.CheckBox>) içinvarsayılan<xref:System.Windows.Data.BindingMode.TwoWay> bağlama. Bağımlılık özelliği tek veya çift yönlü varsayılan olarak olup olmadığını belirlemek için programlı bir yolunu kullanarak özelliğin özellik meta verilerini almak için olan <xref:System.Windows.DependencyProperty.GetMetadata%2A> ve Boolean değeri denetleyin <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> özelliği.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>tersidir <xref:System.Windows.Data.BindingMode.OneWay> hedef özelliği değiştiğinde bağlama; bu kaynak özelliğini güncelleştirir. Bir örnek senaryo olduğundan yalnızca kaynak değerini yeniden değerlendirmeniz gerektiğinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> tersidir <xref:System.Windows.Data.BindingMode.OneWay> hedef özelliği değiştiğinde bağlama; bu kaynak özelliğini güncelleştirir. Bir örnek senaryo olduğundan yalnızca kaynak değerini yeniden değerlendirmeniz gerektiğinde [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
 -   Görüldüğü değil olduğu <xref:System.Windows.Data.BindingMode.OneTime> bağlama, hedef özelliği başlatmak kaynak özelliği neden olur, ancak sonraki değişiklikler yayılmaz. Bu, veri bağlamı bir değişiklik ya da veri bağlam değişiklikleri nesnesinde uğradığında, sonra bu değişiklik hedef özelliğinde yansıtılır değil anlamına gelir. Burada da geçerli durumunun anlık görüntü kullanmak uygun olan ya da verileri gerçekten statik verileri kullanıyorsanız, bu tür bir bağlama uygundur. Bu tür bir bağlama de hedef özelliğinizi kaynak özelliğinden bazı değerle başlatmak ve veri bağlamı önceden bilinmiyor istiyorsanız yararlıdır. Bu temelde daha basit biçimidir <xref:System.Windows.Data.BindingMode.OneWay> bağlaması burada kaynak değer değişmez durumlarda daha iyi performans sağlar.  
   
@@ -125,8 +113,8 @@ ms.lasthandoff: 12/22/2017
 |UpdateSourceTrigger değeri|Kaynak değerin güncelleştirildiğinde|TextBox için Örnek senaryo|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |Deactivate (için varsayılan <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|Ne zaman TextBox denetimi odağı kaybettiğinde|A <xref:System.Windows.Controls.TextBox> Doğrulama mantığı ile ilişkili olan (veri doğrulama bölümüne bakın)|  
-|PropertyChanged|Yazdığınız gibi<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>sohbet odası penceresindeki denetimleri|  
-|Açık|Uygulama çağırdığında<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>(yalnızca kullanıcı gönder düğmesine tıkladığında kaynak değerlerini güncelleştirir) düzenlenebilir bir forma denetimlerinde|  
+|PropertyChanged|Yazdığınız gibi <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> sohbet odası penceresindeki denetimleri|  
+|Açık|Uygulama çağırdığında <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> (yalnızca kullanıcı gönder düğmesine tıkladığında kaynak değerlerini güncelleştirir) düzenlenebilir bir forma denetimlerinde|  
   
  Bir örnek için bkz: [zaman TextBox metni kaynak güncelleştirmelerini denetlemek](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).  
   
@@ -236,7 +224,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="how-to-implement-collections"></a>Koleksiyonlar nasıl uygulanır  
  Uygulayan herhangi bir koleksiyonu listeleme <xref:System.Collections.IEnumerable> arabirimi. Ancak, dinamik bağlamaları eklemeleri ya da silme işlemleri koleksiyondaki güncelleştirecek şekilde ayarlamak için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] toplama otomatik olarak uygulamalıdır <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi. Bu arabirim temel alınan koleksiyon her değiştiğinde oluşturulması gereken olayı sunar.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sağlar <xref:System.Collections.ObjectModel.ObservableCollection%601> sunan veri koleksiyonunun yerleşik bir uygulamasıdır sınıfı <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi. Tam veri değerlerini aktarmak kaynak nesnelerden hedefleri desteklemek için her nesne koleksiyonunuzdaki bağlanabilir özellikleri destekler de uygulamanız gerekir Not <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlar <xref:System.Collections.ObjectModel.ObservableCollection%601> sunan veri koleksiyonunun yerleşik bir uygulamasıdır sınıfı <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi. Tam veri değerlerini aktarmak kaynak nesnelerden hedefleri desteklemek için her nesne koleksiyonunuzdaki bağlanabilir özellikleri destekler de uygulamanız gerekir Not <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
  Kendi koleksiyonunuzu uygulamadan önce kullanmayı <xref:System.Collections.ObjectModel.ObservableCollection%601> veya gibi mevcut koleksiyonu birini sınıfları <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>, ve <xref:System.ComponentModel.BindingList%601>, diğer birçok arasında. Gelişmiş bir senaryo varsa ve kendi koleksiyonunuzu uygulamak isterseniz, kullanmayı <xref:System.Collections.IList>, dizini ve bu nedenle en iyi performansı tarafından erişilebilecek nesnelerin genel olmayan koleksiyonu sağlar.  
   
@@ -269,7 +257,7 @@ ms.lasthandoff: 12/22/2017
   
 |Kaynak koleksiyon türü|Koleksiyon görünüm türü|Notlar|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|Temel bir iç türü<xref:System.Windows.Data.CollectionView>|Öğeleri gruplandırma yapamazsınız.|  
+|<xref:System.Collections.IEnumerable>|Temel bir iç türü <xref:System.Windows.Data.CollectionView>|Öğeleri gruplandırma yapamazsınız.|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|Hızlı.|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- A <xref:System.Windows.Controls.ValidationRule> nesnesi bir özellik değerinin geçerli olup olmadığını denetler. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Aşağıdaki iki tür yerleşik olan <xref:System.Windows.Controls.ValidationRule> nesneler:  
+ A <xref:System.Windows.Controls.ValidationRule> nesnesi bir özellik değerinin geçerli olup olmadığını denetler. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aşağıdaki iki tür yerleşik olan <xref:System.Windows.Controls.ValidationRule> nesneler:  
   
 -   A <xref:System.Windows.Controls.ExceptionValidationRule> bağlama kaynak özelliği güncelleştirme sırasında oluşturulan özel durumları olup olmadığını denetler. Önceki örnekte, `StartPrice` integer türündedir. Kullanıcı bir tamsayıya dönüştürülemiyor bir değer girdiğinde, bağlama geçersiz olarak işaretlenmesine neden olan bir özel durum atılır. Ayar için alternatif bir sözdizimi <xref:System.Windows.Controls.ExceptionValidationRule> açıkça ayarlamaktır <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> özelliğine `true` üzerinde <xref:System.Windows.Data.Binding> veya <xref:System.Windows.Data.MultiBinding> nesnesi.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16bdbf3aa2403a3af603b24df90391d36660dbd4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma
 Bu konu, yeni belirteç türleri sahip bir özel güvenlik belirteci sağlayıcı oluşturma ve sağlayıcı özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir.  
@@ -42,7 +42,7 @@ Bu konu, yeni belirteç türleri sahip bir özel güvenlik belirteci sağlayıc�
   
 2.  Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> değil zaten geçersiz kılınırsa yöntemi.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Yöntemi örneği döndürmek için sorumlu <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfı için uygun <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> yöntemi tarafından geçirilen parametre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security çerçevesi. (Önceki yordamda oluşturduğunuz) özel bir güvenlik belirteci sağlayıcı uygulaması döndürmek için yöntemini değiştirme zaman yöntemi çağrıldığında bir uygun güvenlik belirteci parametresiyle. Güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Yöntemi örneği döndürmek için sorumlu <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfı için uygun <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametre WCF güvenlik çerçevesi tarafından yönteme geçirilen. (Önceki yordamda oluşturduğunuz) özel bir güvenlik belirteci sağlayıcı uygulaması döndürmek için yöntemini değiştirme zaman yöntemi çağrıldığında bir uygun güvenlik belirteci parametresiyle. Güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz: [izlenecek yol: özel istemci oluşturma ve hizmet kimlik bilgilerini](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Temel, özel güvenlik belirteci sağlayıcı döndürülecek etkinleştirmek için yöntemi Özel mantık ekleme <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametresi. Aşağıdaki örnek, belirteç gereksinimlerin karşılanması durumunda özel güvenlik belirteci sağlayıcı döndürür. Gereksinimleri, bir X.509 güvenlik belirteci ve (belirteç ileti çıktı için kullanıldığını) ileti yönü içerir. Tüm diğer durumlarda, diğer güvenlik belirteci gereksinimleri için sistem tarafından sağlanan davranışı sağlamak için temel sınıf kod çağırır.  
   

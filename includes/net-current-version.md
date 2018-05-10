@@ -1,1 +1,1 @@
-.NET framework 4.7.1
+.NET framework 4.7.2

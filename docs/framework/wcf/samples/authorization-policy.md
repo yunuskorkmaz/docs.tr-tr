@@ -2,11 +2,11 @@
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3744afb20c06e1ca85b91dadde6549d87ac89337
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 Bu örnek, bir özel talep yetkilendirme ilkesini ve ilişkili özel hizmet Yetkilendirme Yöneticisi uygulama gösterilmiştir. Bu, belirli hakları çağıran hizmet işlemlerine ve erişim denetimleri öncesinde talep tabanlı erişim denetimlerini hizmeti yapar verir durumunda faydalı olur. Bu örnek talep sonlandırılmış kümesini karşı bir erişim denetimi yapmak için işlem yanı sıra talep ekleme işlemini gösterir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Varsayılan olarak `wsHttpBinding` bağlama, bir kullanıcı adı ve istemci tarafından sağlanan parola kullanılan oturum açmak için geçerli bir Windows NT hesabı. Bu örnek, bir özel kullanmaya gösterilmiştir <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` istemci kimlik doğrulaması için. Ayrıca bu örnek, bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması istemci göstermektedir. Bu örnek uygulaması gösterir <xref:System.IdentityModel.Policy.IAuthorizationPolicy> ve <xref:System.ServiceModel.ServiceAuthorizationManager>, bunları aralarında hizmetinin belirli kullanıcılar için belirli yöntemler için erişim verin. Bu örnek dayanır [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md), ancak talep dönüştürmeyi öncesinde gerçekleştirmek nasıl gösteren <xref:System.ServiceModel.ServiceAuthorizationManager> çağrılan.  
@@ -496,6 +496,6 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 1.  Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın. Bu sunucu ve istemci sertifikaları sertifika deposundan kaldırır.  
   
 > [!NOTE]
->  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bilgisayarlar arasında sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikalar kullanmak, Currentuser'a - yüklü hizmet sertifikalarını temizlediğinizden emin WCF örnekleri çalıştırırsanız TrustedPeople depolar. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

@@ -2,11 +2,11 @@
 title: İleti Kimlik Bilgileri ile WS Aktarma
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>İleti Kimlik Bilgileri ile WS Aktarma
 Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taşıma güvenliği kullanımını göstermektedir. Bu örnekte `wsHttpBinding` bağlama.  
@@ -60,7 +60,7 @@ public string GetCallerIdentity()
   
  Belirtilen adres https:// düzenini kullanır. Güvenlik modu bağlama yapılandırması ayarlar `TransportWithMessageCredential`. Aynı güvenlik modu hizmetin Web.config dosyasında belirtilmesi gerekir.  
   
- Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
+ Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir https erişmeye çalıştığınızda bir güvenlik uyarısı görünür: gibi adres https://localhost/servicemodelsamples/service.svc, tarayıcınızdan. Bir test sertifikası yerinde çalışmak için WCF istemcisini izin vermek için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Bu kod, eşlik eden sınıfı değil ve gerekli üretim sertifikalar kullanıldığında.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   

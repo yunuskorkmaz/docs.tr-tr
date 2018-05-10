@@ -2,11 +2,11 @@
 title: HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar
 Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı eşzamanlı istek/yanıt senaryoları için HTTP, TCP kullanan bir tek iş parçacıklı istemci ile açıklanır. Bkz: [zaman uyumsuz HTTP, TCP veya Named-Pipe kullanan senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) çok iş parçacıklı istekleri hakkında daha fazla bilgi için.  
@@ -54,7 +54,7 @@ Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı eşzamanlı
  Önceki senaryoda tek fark, bir SOAP hatası iletisi bir yanıt iletisi döndürülür. Varsa `propagateActivity` = `true`, etkinlik kimliği istek iletisinin SOAP hata iletisi eklenir.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Zaman uyumlu hatasız tek yönlü  
- İlk senaryo ile tek fark, hiçbir ileti sunucuya döndürülür. HTTP tabanlı protokolleri, bir durum için (geçerli veya hata) hala istemciye döndürülür. HTTP parçası olan bir istek-yanıt semantiği ile tek protokoldür olmasıdır [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] protokol yığını. TCP işleme gizli olduğu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], onay istemciye gönderilir.  
+ İlk senaryo ile tek fark, hiçbir ileti sunucuya döndürülür. HTTP tabanlı protokolleri, bir durum için (geçerli veya hata) hala istemciye döndürülür. HTTP WCF protokol yığını parçası olan bir istek-yanıt semantiği ile tek protokoldür olmasıdır. WCF TCP işleme gizli olduğu için onay istemciye gönderilir.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Zaman uyumlu hatalarla tek yönlü  
  İleti işlenirken bir hata meydana gelirse (Q veya sonrasını), bildirim istemciye döndürülür. Bu, "Zaman uyumlu One-Way olmadan hataları" senaryo ile aynıdır. Bir hata iletisi almak istiyorsanız, tek yönlü bir senaryo kullanmamanız gerekir.  

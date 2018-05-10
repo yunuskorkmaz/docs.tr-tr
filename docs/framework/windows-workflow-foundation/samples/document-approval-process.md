@@ -2,11 +2,11 @@
 title: Belge onay işlemi
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Belge onay işlemi
 Bu örnek birlikte Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin kullanımını gösterir. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması onay için belge gönderme ve belgeleri onaylayabilirsiniz. Onay Yöneticisi uygulamanın istemciler arasındaki iletişimi kolaylaştırmak için ve onay işlemi kurallarını zorunlu tutmak için bulunmaktadır. Onay, onay çeşitli türlerde yürütebilir bir iş akışı işlemidir. Etkinlikleri tek bir onay, çekirdek onay (onaylayanlar kümesi yüzdesi) ve çekirdek ve bir sırada tek onay oluşan bir karmaşık onay işlemi almak için mevcut.  
@@ -29,7 +29,7 @@ Bu örnek birlikte Windows Workflow Foundation (WF) ve Windows Communication Fou
   
 1.  Bir istemci, bir kullanıcının onay işlemi sistemde olması için abone olur.  
   
-2.  A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcinin gönderdiği için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] onay Yöneticisi uygulaması tarafından barındırılan hizmeti.  
+2.  Onay Yöneticisi uygulaması tarafından barındırılan bir WCF hizmeti bir WCF istemcisi gönderir.  
   
 3.  Benzersiz bir kullanıcı kimliği istemciye döndürülür. İstemci onayı işlemlerde şimdi katılabilirsiniz.  
   
@@ -47,19 +47,19 @@ Bu örnek birlikte Windows Workflow Foundation (WF) ve Windows Communication Fou
   
 10. Bir istemci, bir onay isteği alır ve herhangi bir noktada isteğine zamanında yanıt.  
   
-11. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci üzerinde barındırılan hizmeti, bir onay isteği onayı manager uygulamasından alabilir.  
+11. İstemci üzerinde barındırılan bir WCF hizmeti bir onay isteği onayı manager uygulamasından alabilir.  
   
 12. Belge bilgilerini gözden geçirme için istemcide sunulur.  
   
 13. Kullanıcı onaylayabilir veya belgeyi reddeder.  
   
-14. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, bir onay yanıtı onay Yöneticisi uygulamaya geri göndermek için kullanılır.  
+14. Bir WCF istemcisi, bir onay yanıtı onay Yöneticisi uygulamaya geri göndermek için kullanılır.  
   
  Onay Yöneticisi uygulamanın açısından bakıldığında, onay işlemini işlevleri gibi:  
   
 1.  Bir istemci onay işlemi sisteme katılmak ister.  
   
-2.  A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] onay Yöneticisi hizmeti isteği onaylama işlemi sisteminin bir parçası olarak alır.  
+2.  Onay Yöneticisi bir WCF hizmeti isteği onaylama işlemi sisteminin bir parçası olarak alır.  
   
 3.  Benzersiz bir kimliği istemci için oluşturulur. Kullanıcı bilgilerini bir veritabanında depolanır.  
   

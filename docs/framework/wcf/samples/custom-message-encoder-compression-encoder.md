@@ -2,11 +2,11 @@
 title: 'Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 087bec47787c0a28eb30346904c8b876136b3eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformu kullanarak özel bir kodlayıcı uygulamak gösterilmiştir.  
@@ -24,9 +24,9 @@ Bu örnek, Windows Communication Foundation (WCF) platformu kullanarak özel bir
  Bu örnek, bir istemci konsol program (.exe), kendini barındıran hizmet konsol program (.exe) ve sıkıştırma ileti Kodlayıcı kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ISampleServer` temel dize işlemleri Yankı kullanıma sunan arabirim (`Echo` ve `BigEcho`). İstemci eş zamanlı istekleri belirli bir işlemi ve hizmet yanıt istemciye ileti tekrarlayarak hale getirir. İstemci ve hizmet etkinliği konsol pencerelerinde görünür olur. Bu örnek amacı, özel bir kodlayıcı yazma ve bir iletinin hat üzerinde sıkıştırma etkisini tanıtmak nasıl göstermektir. İleti boyutu, işlem süresi veya her ikisini hesaplamak için sıkıştırma ileti Kodlayıcı araçları ekleyebilirsiniz.  
   
 > [!NOTE]
->  .NET Framework 4'te Otomatik açılması üzerinde etkinleştirilmiş bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sunucu (GZip veya Deflate gibi bir algoritmayla oluşturulan) sıkıştırılmış bir yanıt gönderiyorsa istemci. Internet Information Server (IIS) Web barındırılan hizmet ise, IIS sıkıştırılmış yanıt gönderme hizmeti için yapılandırılabilir. Bu örnek, sıkıştırma ve açma hem istemci hem de hizmet yapmak için gereksinim olması veya hizmet kendiliğinden barındırılır kullanılabilir.  
+>  Sunucu (GZip veya Deflate gibi bir algoritmayla oluşturulan) sıkıştırılmış bir yanıt gönderiyorsa, .NET Framework 4'te bir WCF istemcisi otomatik açılması etkinleştirildi. Internet Information Server (IIS) Web barındırılan hizmet ise, IIS sıkıştırılmış yanıt gönderme hizmeti için yapılandırılabilir. Bu örnek, sıkıştırma ve açma hem istemci hem de hizmet yapmak için gereksinim olması veya hizmet kendiliğinden barındırılır kullanılabilir.  
   
- Örnek nasıl oluşturulacağı ve bir özel ileti Kodlayıcı içine tümleştirmeyi gösterir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. GZipEncoder.dll Kitaplığı hem istemci hem de hizmet ile dağıtılır. Bu örnek ayrıca iletileri sıkıştırma etkisini gösterir. GZipEncoder.dll kodda şunlar gösterilmektedir:  
+ Örnek nasıl oluşturulacağı ve bir WCF uygulamaya özel ileti Kodlayıcı tümleştirmek gösterir. GZipEncoder.dll Kitaplığı hem istemci hem de hizmet ile dağıtılır. Bu örnek ayrıca iletileri sıkıştırma etkisini gösterir. GZipEncoder.dll kodda şunlar gösterilmektedir:  
   
 -   Özel Kodlayıcı ve Kodlayıcı Fabrika oluşturma.  
   
@@ -56,13 +56,13 @@ Bu örnek, Windows Communication Foundation (WCF) platformu kullanarak özel bir
   
 5.  Kodlayıcı katman üreteci uygulanır. Yalnızca Kodlayıcı üreteci için özel Kodlayıcı herkese açık şekilde sunulmalıdır. Üretecini bağlama öğesi tarafından döndürülen zaman <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulur. İleti kodlayıcılar arabelleğe alınan veya akış modunda çalışır. Bu örnek arabellekli modu ve akış modu gösterir.  
   
- Her bir modu için yok bir eşlik eden `ReadMessage` ve `WriteMessage` Özet yöntemi `MessageEncoder` sınıfı. Kodlama işi çoğunu bu yöntemler gerçekleşir. Örnek var olan metin ve ikili ileti kodlayıcılar sarmalar. Bu örnek okuma ve yazma işlemini iletilerinin hat gösterimine iç kodlayıcıya temsilci ve sıkıştırmak veya sonuçları sıkıştırmasını açmak sıkıştırma Kodlayıcısı olanak sağlar. İleti kodlama için ardışık düzen yok olduğundan, bu, birden çok kodlayıcılar kullanarak yalnızca modelidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. İleti sıkıştırması sonra sonuçta elde edilen ileti işlemek için kanal yığın yığınının yukarı geçirilir. Sıkıştırma sırasında elde edilen sıkıştırılmış iletisi sağlanan akış doğrudan yazılmıştır.  
+ Her bir modu için yok bir eşlik eden `ReadMessage` ve `WriteMessage` Özet yöntemi `MessageEncoder` sınıfı. Kodlama işi çoğunu bu yöntemler gerçekleşir. Örnek var olan metin ve ikili ileti kodlayıcılar sarmalar. Bu örnek okuma ve yazma işlemini iletilerinin hat gösterimine iç kodlayıcıya temsilci ve sıkıştırmak veya sonuçları sıkıştırmasını açmak sıkıştırma Kodlayıcısı olanak sağlar. İleti kodlama için ardışık düzen yok olduğundan, bu WCF'de birden çok kodlayıcılar kullanarak yalnızca modelidir. İleti sıkıştırması sonra sonuçta elde edilen ileti işlemek için kanal yığın yığınının yukarı geçirilir. Sıkıştırma sırasında elde edilen sıkıştırılmış iletisi sağlanan akış doğrudan yazılmıştır.  
   
  Bu örnek yardımcı yöntemler kullanır (`CompressBuffer` ve `DecompressBuffer`) kullanmak akışlara arabellekleri dönüştürme gerçekleştirmek için `GZipStream` sınıfı.  
   
  Arabelleğe alınan `ReadMessage` ve `WriteMessage` sınıflarının kullanımı `BufferManager` sınıfı. Kodlayıcı yalnızca Kodlayıcı Fabrika erişilebilir. Özet `MessageEncoderFactory` SAX adlı bir özellik `Encoder` geçerli Kodlayıcı ve adlı bir yöntem erişim için `CreateSessionEncoder` oturumları destekleyen bir kodlayıcı oluşturma için. Bu tür bir kodlayıcı burada kanal oturumları destekler, sıralanır ve güvenilir bir senaryoda kullanılabilir. Bu senaryoda her oturum için kablo yazılan veriler, iyileştirme sağlar. Bu değil istenirse, temel yöntemi aşırı yüklenmiş değil. `Encoder` Özelliği oturum daha az Kodlayıcı ve varsayılan uygulaması erişim için bir mekanizma sağlar `CreateSessionEncoder` yöntemi özelliğinin değerini döndürür. Sıkıştırma, sağlamak için var olan bir kodlayıcı örnek sarmalar çünkü `MessageEncoderFactory` uygulama kabul bir `MessageEncoderFactory` , iç Kodlayıcı üretecini temsil eder.  
   
- Kodlayıcı ve Kodlayıcı Fabrika tanımlanır, ile kullanılabilmesi için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve hizmet. Ancak, bu kodlayıcılar kanal yığına eklenmesi gerekir. Sınıflardan türetilemeyeceğini <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ChannelFactory%601> sınıfları ve geçersiz kılma `OnInitialize` bu Kodlayıcı Fabrika el ile eklemek için yöntemleri. Özel bağlama öğesi aracılığıyla Kodlayıcı Fabrika ayrıca getirebilir.  
+ Kodlayıcı ve Kodlayıcı Fabrika tanımlanan, bir WCF istemcisi ve hizmeti ile kullanılabilir. Ancak, bu kodlayıcılar kanal yığına eklenmesi gerekir. Sınıflardan türetilemeyeceğini <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ChannelFactory%601> sınıfları ve geçersiz kılma `OnInitialize` bu Kodlayıcı Fabrika el ile eklemek için yöntemleri. Özel bağlama öğesi aracılığıyla Kodlayıcı Fabrika ayrıca getirebilir.  
   
  Yeni bir özel bağlama öğesi oluşturmak için öğesinden bir sınıf türetin <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Ancak, çeşitli bağlama öğeleri vardır. Özel bağlama öğesi bağlama öğesi kodlama ileti olarak tanındığından emin olmak için aynı zamanda uygulamanız gereken <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Yeni bir ileti Kodlayıcı factory oluşturmak için bir yöntemi gösterir (`CreateMessageEncoderFactory`), eşleşen ileti Kodlayıcı Fabrika örneği döndürülecek uygulanmadı. Ayrıca, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> adresleme sürüm belirtmek üzere bir özelliğe sahiptir. Bu örnek varolan kodlayıcılar sarmalar olduğundan, örnek uygulama ayrıca bağlama öğeleri varolan Kodlayıcı sarmalar ve parametre olarak oluşturucuya bağlama öğesi bir iç Kodlayıcı alır ve bir özelliği üzerinden kullanıma sunar. Aşağıdaki örnek kod uygulamasını gösterir `GZipMessageEncodingBindingElement` sınıfı.  
   

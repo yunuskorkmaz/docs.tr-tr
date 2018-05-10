@@ -2,14 +2,14 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
-Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan Windows Communication Foundation (WCF) biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler için oluştururken seçilir olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
+Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan Windows Communication Foundation (WCF) biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler olmayan WCF hizmetleri için oluştururken, seçili.  
   
  Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
   

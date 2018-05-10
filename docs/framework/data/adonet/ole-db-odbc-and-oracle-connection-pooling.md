@@ -2,11 +2,11 @@
 title: OLE DB, ODBC ve Oracle bağlantı havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle bağlantı havuzu
 Bağlantı havuzu önemli ölçüde performans ve ölçeklenebilirlik, uygulamanızın geliştirebilirsiniz. Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu anlatılmaktadır.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Bağlantı için .NET Framework veri sağlayıcısı için ODBC havuzu ODBC sürücüsü, bağlantı için kullanılan ve ODBC için .NET Framework veri sağlayıcısı tarafından etkilenmez Yöneticisi tarafından yönetilir.  
   
  Etkinleştirmek veya bağlantı havuzu devre dışı bırakmak için açık **ODBC Veri Kaynağı Yöneticisi** Denetim Masası'ndaki Yönetimsel Araçlar klasöründeki. **Bağlantı havuzu** sekme bağlantı yüklü her ODBC sürücüsü için parametreleri havuzu belirtmenize olanak sağlar. Bağlantı havuzu değişiklikleri belirli bir ODBC sürücü için o ODBC sürücüsü kullanan tüm uygulamalar etkileyeceğini unutmayın.  
-  
- ODBC bağlantı havuzu ile ilgili daha fazla bilgi için bkz: [bilgisi: sık sorulan sorular hakkında ODBC bağlantı havuzu](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Bağlantı için OracleClient havuzu  
  Oracle için .NET Framework veri sağlayıcısı ADO.NET istemci uygulamanız için otomatik olarak bağlantı havuzu sağlar. Bağlantı havuzu davranışını denetlemek için çeşitli bağlantı dizesi değiştiricileri de sağlayabilirsiniz (Bu konunun ilerleyen bölümlerinde "Denetleme bağlantı havuzu ile bağlantı dizesi anahtar sözcükler" konusuna bakın).  

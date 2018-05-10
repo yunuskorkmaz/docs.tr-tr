@@ -2,11 +2,11 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek bir Windows Communication Foundation (WCF) uygulamaya özel bir belirteç uygulamasını ekleneceği gösterilmektedir. Örnek kullanan bir `CreditCardToken` hizmete istemci kredi kartı bilgilerini güvenli bir şekilde geçirilecek. Belirteç WS güvenliği ileti üstbilgisinde geçirilir ve imzalanır ve ileti gövdesi ve diğer ileti üstbilgilerini yanı sıra simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, burada yerleşik belirteçleri yetersiz olduğu durumlarda yararlıdır. Bu örnek, bir özel güvenlik belirteci yerleşik belirteçleri birini kullanmak yerine bir hizmet sağlamak üzere gösterilmiştir. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -20,7 +20,7 @@ Bu örnek bir Windows Communication Foundation (WCF) uygulamaya özel bir belirt
   
 -   Nasıl hizmeti kullanmak ve bir özel güvenlik belirteci doğrulanamıyor.  
   
--   Nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servis kodu özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.  
+-   Nasıl WCF Hizmeti kodu özel güvenlik belirteci dahil olmak üzere alınan güvenlik belirteçleri hakkında bilgi edinebilirsiniz.  
   
 -   Nasıl sunucu X.509 sertifikasının ileti şifreleme ve imza için kullanılan simetrik anahtarı korumak için kullanılır.  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Özel güvenlik belirteci uygulama  
- Bir özel güvenlik belirteci etkinleştirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bir nesne temsili özel güvenlik belirteci oluşturun. Bu gösterim örnek sahip `CreditCardToken` sınıfı. Nesne temsili tüm ilgili güvenlik belirteci bilgilerini tutan ve güvenlik belirtecinde yer alan güvenlik anahtarları listesini sağlamak üzere sorumludur. Bu durumda, kredi kartı güvenlik belirteci tüm güvenlik anahtarı içermiyor.  
+ WCF'de bir özel güvenlik belirteci etkinleştirmek için özel güvenlik belirteci bir nesne temsili oluşturun. Bu gösterim örnek sahip `CreditCardToken` sınıfı. Nesne temsili tüm ilgili güvenlik belirteci bilgilerini tutan ve güvenlik belirtecinde yer alan güvenlik anahtarları listesini sağlamak üzere sorumludur. Bu durumda, kredi kartı güvenlik belirteci tüm güvenlik anahtarı içermiyor.  
   
- Ne kablo üzerinden iletilmesi özel bir belirteç etkinleştirmek için yapılır ve gerekir tarafından tüketilen sonraki bölümde açıklandığı bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktası.  
+ Sonraki bölümde ne kablo üzerinden iletilmesi özel bir belirteç etkinleştirmek için yapılır ve gerekir WCF Bitiş noktası tarafından tüketilen açıklar.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Özel kredi kartı için ve iletisi belirteci alma  
- Güvenlik belirteci serileştiricileri içinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletisi XML'den güvenlik belirteçlerinin bir nesne temsili oluşturma ve güvenlik belirteçlerinin XML form oluşturma sorumludur. Aynı zamanda okuma ve yazma güvenlik belirteçleri işaret eden anahtar tanımlayıcıları gibi diğer işlevleri sorumlu olan, ancak bu örnek yalnızca güvenlik belirteci ile ilgili işlevleri kullanır. Özel bir etkinleştirmek için belirteç, kendi güvenlik belirteci seri hale getirici uygulamalıdır. Bu örnekte `CreditCardSecurityTokenSerializer` bu amaç için sınıf.  
+ Wcf'de güvenlik belirteci serileştiricileri iletisi XML'den güvenlik belirteçlerinin bir nesne temsili oluşturma ve güvenlik belirteçlerinin XML form oluşturma sorumludur. Aynı zamanda okuma ve yazma güvenlik belirteçleri işaret eden anahtar tanımlayıcıları gibi diğer işlevleri sorumlu olan, ancak bu örnek yalnızca güvenlik belirteci ile ilgili işlevleri kullanır. Özel bir etkinleştirmek için belirteç, kendi güvenlik belirteci seri hale getirici uygulamalıdır. Bu örnekte `CreditCardSecurityTokenSerializer` bu amaç için sınıf.  
   
  Hizmet özel seri hale getirici özel belirteç XML formunu okur ve özel belirteç nesne gösterimini oluşturur.  
   

@@ -2,11 +2,11 @@
 title: Özel Kanal Dağıtıcı
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı
 Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağını gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web ana bilgisayar ortamında özel kanal dağıtıcı oluşturma. Kanal dağıtıcı etkileşimde <xref:System.ServiceModel.Channels.IChannelListener> kanal yığından Kanallar ve alır iletileri kabul etmesini. Bu örnek ayrıca kullanarak bir Web ana bilgisayar ortamının kanal yığınında yapı göstermek için temel bir örnek sağlar <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -22,13 +22,13 @@ Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağ
  Dağıtıcı ilk kanal dinleyicisi açar ve bir singleton yanıt kanalına kabul eder. Kanal ile sonsuz bir döngüde iletileri (istek) göndermek başlar. Her istek için bir yanıt iletisi oluşturur ve istemciye geri gönderir.  
   
 ## <a name="creating-a-response-message"></a>Bir yanıt iletisi oluşturma  
- İleti işleme türünü uygulanır `MyServiceManager`. İçinde `HandleRequest` yöntemi, `Action` iletinin üstbilgisi isteği desteklenip desteklenmediğini görmek için önce denetlenir. Bir SOAP eylemi önceden tanımlanmış "http://tempuri.org/HelloWorld/Hello" ileti filtreleme sağlamak için tanımlanmış. Bu hizmet sözleşmesi kavram olarak benzerdir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uyarlamasını <xref:System.ServiceModel.ServiceHost>.  
+ İleti işleme türünü uygulanır `MyServiceManager`. İçinde `HandleRequest` yöntemi, `Action` iletinin üstbilgisi isteği desteklenip desteklenmediğini görmek için önce denetlenir. Bir SOAP eylemi önceden tanımlanmış "http://tempuri.org/HelloWorld/Hello" ileti filtreleme sağlamak için tanımlanmış. Bu WCF uygulamasında hizmet sözleşmesi kavram benzer <xref:System.ServiceModel.ServiceHost>.  
   
  Doğru SOAP eylemi çalışması için örnek istenen ileti verileri alır ve ne de görülen için benzer isteğine karşılık gelen bir yanıt oluşturur <xref:System.ServiceModel.ServiceHost> durumda.  
   
  HTTP GET fiili özel olarak doğru derlenmiş görmek için bir tarayıcı hizmetinden gözatması özel bir HTML ileti bu konuda, servis talebi döndürerek işlenir. SOAP eylemi eşleşmiyorsa, bir hata gönderme isteği desteklenmiyor göstermek için ileti geri.  
   
- Bu örnek istemci Normal'dir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetinden gelen herhangi bir şey varsaymaz istemci. Bu nedenle, hizmeti özel bir normal alma eşleşecek şekilde tasarlanmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.ServiceHost> uygulaması. Sonuç olarak, yalnızca bir hizmet sözleşmesini istemcide gereklidir.  
+ Bu örnek hizmetinden gelen herhangi bir şey varsaymaz normal bir WCF istemcisi istemcidir. Bu nedenle, hizmeti özel normal bir WCF alma eşleşecek şekilde tasarlanmıştır<xref:System.ServiceModel.ServiceHost> uygulaması. Sonuç olarak, yalnızca bir hizmet sözleşmesini istemcide gereklidir.  
   
 ## <a name="using-the-sample"></a>Örnek kullanma  
  İstemci uygulaması doğrudan çalıştırmak, şu çıkışı üretir.  

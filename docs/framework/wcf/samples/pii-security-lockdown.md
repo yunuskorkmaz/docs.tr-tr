@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
 Bu örnek, bir Windows Communication Foundation (WCF) hizmetiyle güvenlikle ilgili çeşitli özelliklerini denetlemek gösterilmiştir:  
@@ -29,11 +29,11 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmetiyle güvenlikle ilg
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Tartışma  
- Bu özelliklerin her biri ayrı ayrı veya birlikte bir hizmetin güvenlik denetim konuları için olabilir. Bu güvenliğini sağlamak için eksiksiz bir kılavuz değildir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Bu özelliklerin her biri ayrı ayrı veya birlikte bir hizmetin güvenlik denetim konuları için olabilir. Bu bir WCF Hizmeti güvenli hale getirme için eksiksiz bir kılavuz değildir.  
   
  .NET Framework yapılandırma dosyalarını veritabanlarına bağlanmak için bağlantı dizelerini gibi hassas bilgiler içerebilir. Paylaşılan ve Web barındırılan senaryolarda yapılandırma dosyasının içinde bulunan veriler için günlük görüntüleme dayanıklı olmasını sağlamak için bir hizmet yapılandırma dosyasında bu bilgileri şifrelemek için istenebilir. .NET framework 2.0 ve sonraki Windows veri koruma uygulama programlama arabirimi (DPAPI) veya RSA şifreleme sağlayıcısı kullanarak yapılandırma dosyasını bölümlerini şifreleme olanağı vardır. DPAPI veya RSA kullanarak aspnet_regiis.exe bir yapılandırma dosyası seçme bölümlerini şifreleyebilirsiniz.  
   
- Web barındırılan senaryolarda hizmetler diğer hizmetlere dizinlerde olması mümkündür. Varsayılan yapılandırma değerlerini belirlemek için anlamsal üst dizinindeki yapılandırma değerleri geçersiz kılmak için iç içe geçmiş dizinlerdeki yapılandırma dosyaları sağlar. Belirli durumlarda bu çeşitli nedenlerle için istenmeyen olabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iç içe geçmiş bir hizmet kullanarak çalıştırıldığında yapılandırma değerlerini, böylece yapılandırma iç içe geçmiş kilitleme özel durumları oluşturur hizmet yapılandırma destekler yapılandırma değerleri geçersiz.  
+ Web barındırılan senaryolarda hizmetler diğer hizmetlere dizinlerde olması mümkündür. Varsayılan yapılandırma değerlerini belirlemek için anlamsal üst dizinindeki yapılandırma değerleri geçersiz kılmak için iç içe geçmiş dizinlerdeki yapılandırma dosyaları sağlar. Belirli durumlarda bu çeşitli nedenlerle için istenmeyen olabilir. İç içe geçmiş bir hizmet kullanarak çalıştırıldığında yapılandırma değerlerini, böylece yapılandırma iç içe geçmiş kilitleme özel durumları oluşturur WCF hizmeti yapılandırma destekler yapılandırma değerleri geçersiz.  
   
  Bu örnek, bilinen kişisel bilgilerin (PII) kullanıcı adı ve parola gibi izleme ve ileti günlüklerinde günlük denetim gösterilmiştir. Belirli durumlarda PII günlüğe bir uygulamada hata ayıklama önemli olabilir ancak varsayılan olarak bilinen PII günlüğünü devre dışıdır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ayrıca, bu örnek, ileti izleme ve kaydetme kullanır. Daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek.  
   

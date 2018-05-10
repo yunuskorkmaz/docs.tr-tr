@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtarı
 Bu konu, bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) güvenlik Framework'e sağlayıcı tümleştirme gösterir. Sertifika kullanma hakkında daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Güvenlik framework açıklandığı gibi yeni güvenlik belirteci türleri tanıtmak için bir yöntem sunar [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Var olan sistem tarafından sağlanan belirteç türleri değiştirmek için özel bir belirteç kullanmak da mümkündür.  
+ WCF güvenlik framework açıklandığı gibi yeni güvenlik belirteci türleri tanıtmak için bir yol sağlar [nasıl yapılır: özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Var olan sistem tarafından sağlanan belirteç türleri değiştirmek için özel bir belirteç kullanmak da mümkündür.  
   
  Bu konuda, sistem tarafından sağlanan X.509 güvenlik belirteci, sertifika özel anahtarı için farklı bir uygulama sağlayan özel bir X.509 belirteci ile değiştirilir. Bu, burada gerçek özel anahtarı varsayılan Windows şifreleme sağlayıcısı'den farklı bir şifreleme sağlayıcısı sağladığı senaryolarda kullanışlıdır. Bir alternatif bir şifreleme sağlayıcısı, tüm özel anahtar ilgili şifreleme işlemlerini gerçekleştirir ve özel anahtarlar, böylece sistem güvenliğini geliştirme bellekte depolamaz bir donanım güvenlik modülü örnektir.  
   
@@ -32,9 +32,9 @@ Bu konu, bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan 
   
 2.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> özelliği salt okunur. Bu özellik, sertifikanın ortak/özel anahtar çifti gerçek anahtar boyutu döndürür.  
   
-3.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> yöntemi. Bu yöntem tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sertifikanın özel anahtarı ile simetrik anahtarın şifresini çözmek için güvenlik çerçevesi. (Anahtar önceden sertifikanın ortak anahtar ile şifrelenmiş.)  
+3.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> yöntemi. Bu yöntem, sertifikanın özel anahtarı ile simetrik anahtarın şifresini çözmek için WCF security çerçevesi tarafından çağrılır. (Anahtar önceden sertifikanın ortak anahtar ile şifrelenmiş.)  
   
-4.  Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> yöntemi. Bu yöntem tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir örneği elde etmek için güvenlik framework <xref:System.Security.Cryptography.AsymmetricAlgorithm> metoduna geçirilen parametreler bağlı olarak sertifikanın özel veya ortak anahtar şifreleme sağlayıcısını temsil eden sınıf.  
+4.  Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> yöntemi. Bu yöntem bir örneği elde etmek için WCF güvenlik çerçevesi tarafından çağrılır <xref:System.Security.Cryptography.AsymmetricAlgorithm> metoduna geçirilen parametreler bağlı olarak sertifikanın özel veya ortak anahtar şifreleme sağlayıcısını temsil eden sınıf.  
   
 5.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> yöntemi. Farklı bir uygulama olarak, bu yöntemi geçersiz kılın <xref:System.Security.Cryptography.HashAlgorithm> sınıfı gereklidir.  
   
@@ -45,7 +45,7 @@ Bu konu, bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan 
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- Aşağıdaki yordamda, önceki yordamda ile oluşturulan özel X.509 asimetrik güvenlik anahtar uygulamanız tümleştirmek gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan X.509 güvenlik belirteci değiştirmek için güvenlik çerçevesi.  
+ Aşağıdaki yordam sistem tarafından sağlanan X.509 güvenlik değiştirmek için önceki yordamda WCF güvenlik framework ile oluşturulan özel X.509 asimetrik güvenlik anahtar uygulamanızı tümleştirmenize belirteci gösterilmektedir.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Sistem tarafından sağlanan X.509 güvenlik belirteci bir özel X.509 asimetrik anahtar sahip güvenlik belirteci değiştirmek için  
   

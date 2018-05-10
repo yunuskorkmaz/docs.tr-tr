@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği türü belirler olduğu bir hizmette kimlik Ayarla gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` özniteliği Windows.  
@@ -30,9 +30,9 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
 > [!NOTE]
 >  Windows kimlik bilgisi türü anlaşma olmadan kullanmak için hizmetin kullanıcı hesabının Active Directory etki alanı ile kayıtlı SPN erişiminiz olmalıdır. Bunu aşağıdaki yöntemlerle yapabilirsiniz:  
   
--   NetworkService veya LocalSystem hesabı, hizmetinizi çalıştırmak için kullanın. Bu hesapların makine Active Directory etki alanına katıldığında, kurulur SPN makine erişiminiz olduğundan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygun SPN öğe içinde hizmet uç noktası hizmetin meta veriler (WSDL) otomatik olarak oluşturur.  
+-   NetworkService veya LocalSystem hesabı, hizmetinizi çalıştırmak için kullanın. Bu hesapların makine Active Directory etki alanına katıldığında, kurulur SPN makine erişiminiz olduğundan WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta veriler (WSDL) otomatik olarak oluşturur.  
   
--   Hizmetinizi çalıştırmak için rasgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, Setspn.exe yardımcı programı aracını kullanarak yapabilirsiniz, etki alanı hesabı için bir SPN kurun. Hizmet hesabı SPN'yi oluşturduktan sonra yapılandırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bu SPN hizmetin istemcileri meta verilerini (WSDL) aracılığıyla yayımlamak için. Bu uç noktası kimlik gösterilen uç noktası için bir uygulama yapılandırma dosyası veya kod aracılığıyla ya da ayarlayarak yapılır.  
+-   Hizmetinizi çalıştırmak için rasgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, Setspn.exe yardımcı programı aracını kullanarak yapabilirsiniz, etki alanı hesabı için bir SPN kurun. Hizmet hesabı için SPN oluşturduğunuzda, bu SPN hizmetin istemcileri meta verilerini (WSDL) aracılığıyla yayımlamak için WCF yapılandırın. Bu uç noktası kimlik gösterilen uç noktası için bir uygulama yapılandırma dosyası veya kod aracılığıyla ya da ayarlayarak yapılır.  
   
  SPN'ler hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz: [Kerberos teknik Eki'ni Windows için](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -59,7 +59,7 @@ Genellikle, bir istemci kimlik bilgisi türü seçimi hizmet metaveri kimliği t
   
   
 ### <a name="setting-identity-programmatically"></a>Kimlik programlı olarak ayarlama  
- Çünkü, bir kimlik açıkça belirtmek, hizmet yok. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] otomatik olarak belirler. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gerekli olursa bir uç nokta üzerinde bir kimlik belirtmenize olanak tanır. Aşağıdaki kod, belirli bir DNS kimlik ile yeni bir hizmet uç noktası ekler.  
+ WCF formu otomatik olarak belirlediğinden hizmetiniz bir kimlik açıkça belirtmek yok. Ancak, WCF bir noktadaki bir kimlik belirtmek gerekirse sağlar. Aşağıdaki kod, belirli bir DNS kimlik ile yeni bir hizmet uç noktası ekler.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

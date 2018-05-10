@@ -1,28 +1,16 @@
 ---
-title: "XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama"
-ms.custom: 
+title: XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 XAML düğümü akışı tasarım kavramı XAML okuyucuları ve .NET Framework XAML hizmetlerinde uygulandığı şekilde XAML yazıcılarının temel alır. XAML düğümü akışı XAML düğüm kümesinin kavramsallaştırılması ' dir. Bu kavramsallaştırılması, XAML işlemci XAML düğüm ilişkilerde yapısını aynı anda anlatılmaktadır. Herhangi bir zamanda yalnızca bir geçerli kaydı veya geçerli konumu bir açık XAML düğümü akışı var ve yalnızca bilgi kullanılabilir o konumdan API pek çok görünüşünün rapor. XAML düğümü akışı geçerli düğümünde bir nesne, bir üye ya da bir değer olacak şekilde açıklanabilir. XAML düğümü akışı XAML düşünerek XAML okuyucuları XAML yazıcılarının ile iletişim kurabilmesini ve görüntülemek, etkileşimde veya bir yükleme yolu veya kaydetme sırasında XAML düğüm akış içeriğini değiştirmek bir programı etkinleştirmek XAML içerir yolu işlemi. XAML okuyucu ve yazıcı API tasarım ve XAML düğüm akış kavram önceki ilgili okuyucu ve yazıcı tasarımları ve kavramları, benzer gibi [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ve <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Bu konu, XAML düğüm akış kavramları açıklar ve XAML Beyanları XAML düğüm düzeyinde etkileşimde yordamları yazma biçimini açıklar.  
@@ -31,7 +19,7 @@ XAML düğümü akışı tasarım kavramı XAML okuyucuları ve .NET Framework X
 ## <a name="loading-xaml-into-a-xaml-reader"></a>XAML XAML okuyucuya yükleniyor  
  Temel <xref:System.Xaml.XamlReader> sınıfı bir XAML okuyucuya ilk XAML yüklenmesi için belirli bir teknik bildirme değil. Bunun yerine, türetilmiş bir sınıf bildirir ve genel özellikleri ve giriş kaynağına kısıtlamaları XAML için de dahil olmak üzere, bir yükleme teknik uygular. Örneğin, bir <xref:System.Xaml.XamlObjectReader> kök veya temel temsil eden tek bir nesnenin giriş kaynağından başlayarak bir nesne grafiğinin okur. <xref:System.Xaml.XamlObjectReader> Bir nesne grafiğinin XAML düğüm akıştan üretir.  
   
- En belirgin .NET Framework XAML hizmetlerinde – tanımlanan <xref:System.Xaml.XamlReader> sınıfıdır <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader>ilk XAML gibi bir metin dosyasına bir akış veya dosya yolu aracılığıyla doğrudan veya dolaylı olarak ilgili okuyucusu sınıf aracılığıyla yükleme ya da yükler <xref:System.IO.TextReader>. <xref:System.Xaml.XamlReader> , Onu yüklendikten sonra XAML giriş kaynağı tamamen içeren olarak düşünülebilir. Ancak, <xref:System.Xaml.XamlReader> temel API, böylece okuyucu XAML tek bir düğüm ile etkileşim tasarlanmıştır. İlk yüklendiğinde, karşılaştığınız ilk tek düğümlü XAML ve onun başlangıç nesnesinden köküdür.  
+ En belirgin .NET Framework XAML hizmetlerinde – tanımlanan <xref:System.Xaml.XamlReader> sınıfıdır <xref:System.Xaml.XamlXmlReader>. <xref:System.Xaml.XamlXmlReader> ilk XAML gibi bir metin dosyasına bir akış veya dosya yolu aracılığıyla doğrudan veya dolaylı olarak ilgili okuyucusu sınıf aracılığıyla yükleme ya da yükler <xref:System.IO.TextReader>. <xref:System.Xaml.XamlReader> , Onu yüklendikten sonra XAML giriş kaynağı tamamen içeren olarak düşünülebilir. Ancak, <xref:System.Xaml.XamlReader> temel API, böylece okuyucu XAML tek bir düğüm ile etkileşim tasarlanmıştır. İlk yüklendiğinde, karşılaştığınız ilk tek düğümlü XAML ve onun başlangıç nesnesinden köküdür.  
   
 ### <a name="the-xaml-node-stream-concept"></a>XAML düğümü akışı kavramı  
  Genellikle daha DOM, ağaç benzetimini veya XML tabanlı teknolojiler erişme doğrultusunda yaklaşım sorgu tabanlı biliyorsanız, XAML düğümü akışı canlandırmanın yararlı bir yolu aşağıdaki gibidir. Yüklenen XAML bir DOM veya burada olası her düğüm tüm genişletilmiş ve doğrusal olarak sunulan bir ağaç olduğunu düşünün. Düğümleri arasında ilerlemek gibi "" veya "" bir DOM ilgilendirebilecek düzeylerinden çapraz geçiş yapan, ancak bu level kavramları bir düğüm akış ilgili olmadığından XAML düğümü akışı izleme açıkça korumaz. Düğümü akışı için "geçerli" konumu olsa da, diğer bölümleri akışın başvuru olarak kendiniz depoladığınız sürece, her geçerli düğüm konumu dışında düğümü akışı görünümü dışında yönüdür.  
@@ -112,20 +100,20 @@ while (xxr.Read()) {
   
 |XAML biçimlendirme|Sonuçta elde edilen XAML düğümü akışı|  
 |-----------------|--------------------------------|  
-|`<Party`|`Namespace`düğümü için`Party`|  
-|`xmlns="PartyXamlNamespace">`|`StartObject`düğümü için`Party`|  
-|`<Party.Favors>`|`StartMember`düğümü için`Party.Favors`|  
-||`StartObject`düğümü için örtük`FavorCollection`|  
-||`StartMember`düğümü için örtük `FavorCollection` öğelerini özelliği.|  
-|`<Balloon`|`StartObject`düğümü için`Balloon`|  
-|`Color="Red"`|`StartMember`düğümü için`Color`<br /><br /> `Value`öznitelik değeri dizesi için düğüm`"Red"`<br /><br /> `EndMember`için`Color`|  
-|`HasHelium="True"`|`StartMember`düğümü için`HasHelium`<br /><br /> `Value`öznitelik değeri dizesi için düğüm`"True"`<br /><br /> `EndMember`için`HasHelium`|  
-|`>`|`EndObject`için`Balloon`|  
-|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject`düğümü için`NoiseMaker`<br /><br /> `StartMember`düğümü için`_Initialization`<br /><br /> `Value`düğümü için başlatma değer dizesi`"Loudest"`<br /><br /> `EndMember`düğümü için`_Initialization`<br /><br /> `EndObject`için`NoiseMaker`|  
-||`EndMember`düğümü için örtük `FavorCollection` öğelerini özelliği.|  
-||`EndObject`düğümü için örtük`FavorCollection`|  
-|`</Party.Favors>`|`EndMember`için`Favors`|  
-|`</Party>`|`EndObject`için`Party`|  
+|`<Party`|`Namespace` düğümü için `Party`|  
+|`xmlns="PartyXamlNamespace">`|`StartObject` düğümü için `Party`|  
+|`<Party.Favors>`|`StartMember` düğümü için `Party.Favors`|  
+||`StartObject` düğümü için örtük `FavorCollection`|  
+||`StartMember` düğümü için örtük `FavorCollection` öğelerini özelliği.|  
+|`<Balloon`|`StartObject` düğümü için `Balloon`|  
+|`Color="Red"`|`StartMember` düğümü için `Color`<br /><br /> `Value` öznitelik değeri dizesi için düğüm `"Red"`<br /><br /> `EndMember` için `Color`|  
+|`HasHelium="True"`|`StartMember` düğümü için `HasHelium`<br /><br /> `Value` öznitelik değeri dizesi için düğüm `"True"`<br /><br /> `EndMember` için `HasHelium`|  
+|`>`|`EndObject` için `Balloon`|  
+|`<NoiseMaker>Loudest</NoiseMaker>`|`StartObject` düğümü için `NoiseMaker`<br /><br /> `StartMember` düğümü için `_Initialization`<br /><br /> `Value` düğümü için başlatma değer dizesi `"Loudest"`<br /><br /> `EndMember` düğümü için `_Initialization`<br /><br /> `EndObject` için `NoiseMaker`|  
+||`EndMember` düğümü için örtük `FavorCollection` öğelerini özelliği.|  
+||`EndObject` düğümü için örtük `FavorCollection`|  
+|`</Party.Favors>`|`EndMember` için `Favors`|  
+|`</Party>`|`EndObject` için `Party`|  
   
  XAML düğümü akışı aşağıdaki davranışı kullanabilirsiniz:  
   
@@ -139,7 +127,7 @@ while (xxr.Read()) {
   
 -   A `Value` düğümü değerini temsil eder; hiçbir "EndValue" yoktur. Yalnızca izlenebilir bir `EndMember`.  
   
-    -   XAML başlatma metin nesnesinin yapım tarafından kullanılan bir nesne değeri yapısında oluşmaz. Bunun yerine, adlı bir üye için ayrılmış üye düğüm `_Initialization` oluşturulur. ve o üyesi düğümü başlatma değer dizesi içerir. Varsa, `_Initialization` her zaman ilk olduğu `StartMember`. `_Initialization`Bazı XAML Hizmetleri Beyanları dil XAML isim alanı XAML ile içinde açıklamak için nitelenmemiş olması `_Initialization` türleri yedekleme içinde tanımlanmış bir özellik değil.  
+    -   XAML başlatma metin nesnesinin yapım tarafından kullanılan bir nesne değeri yapısında oluşmaz. Bunun yerine, adlı bir üye için ayrılmış üye düğüm `_Initialization` oluşturulur. ve o üyesi düğümü başlatma değer dizesi içerir. Varsa, `_Initialization` her zaman ilk olduğu `StartMember`. `_Initialization` Bazı XAML Hizmetleri Beyanları dil XAML isim alanı XAML ile içinde açıklamak için nitelenmemiş olması `_Initialization` türleri yedekleme içinde tanımlanmış bir özellik değil.  
   
     -   Bir üye değeri birleşimini değerinin bir özniteliğini temsil eder. Sonunda olabilir değer Dönüştürücüsü bu değer işleme katılan ve düz bir dize değeridir. Ancak, bu düğüm akış XAML nesne yazıcısı işleyene kadar değerlendirilmez. XAML nesne yazıcısı gerekli XAML şema içeriği, türü sistem eşlemesi ve değer dönüştürmeleri için gereken diğer destek sahiptir.  
   
@@ -174,20 +162,20 @@ public class GameBoard {
   
  XAML düğümü akışı bu kullanım için metin gösterimi aşağıdaki gibi ifade:  
   
- `StartObject`ile <xref:System.Xaml.XamlType> temsil eden`GameBoard`  
+ `StartObject` ile <xref:System.Xaml.XamlType> temsil eden `GameBoard`  
   
- `StartMember`ile <xref:System.Xaml.XamlMember> temsil eden`BoardSize`  
+ `StartMember` ile <xref:System.Xaml.XamlMember> temsil eden `BoardSize`  
   
- `Value`bir metin dizesiyle düğümü "`8x8`"  
+ `Value` bir metin dizesiyle düğümü "`8x8`"  
   
- `EndMember`eşleşir`BoardSize`  
+ `EndMember` Eşleşme `BoardSize`  
   
- `EndObject`eşleşir`GameBoard`  
+ `EndObject` Eşleşme `GameBoard`  
   
  Bu düğüm akış türü dönüştürücü örneği yok olduğuna dikkat edin. Ancak çağırarak tür dönüştürücü bilgi edinebilirsiniz <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> üzerinde <xref:System.Xaml.XamlMember> için `BoardSize`. Geçerli bir XAML şema içeriği varsa, ayrıca dönüştürücü yöntemleri bir örnekten elde ederek çağırabilirsiniz <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>.  
   
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML düğümü akışı biçimlendirme uzantıları  
- Biçimlendirme uzantısı kullanımı XAML düğüm akış nesneyi biçimlendirme uzantısı örneğin temsil ettiği üyesi içinde nesne düğümü olarak bildirilir. Bu nedenle bir türü dönüştürücü kullanımı olan ve daha fazla bilgi taşıyan çok biçimlendirme uzantısı kullanımı daha açıkça düğüm akış gösterim sunulur. <xref:System.Xaml.XamlMember>Kullanım situational olduğundan ve her olası biçimlendirme durumda değişir bilgileri, herhangi bir şey biçimlendirme uzantısı hakkında istiyordu değil; tür dönüştürücüleri ile olduğu gibi ayrılmış ve tür veya üye başına kapalı değil.  
+ Biçimlendirme uzantısı kullanımı XAML düğüm akış nesneyi biçimlendirme uzantısı örneğin temsil ettiği üyesi içinde nesne düğümü olarak bildirilir. Bu nedenle bir türü dönüştürücü kullanımı olan ve daha fazla bilgi taşıyan çok biçimlendirme uzantısı kullanımı daha açıkça düğüm akış gösterim sunulur. <xref:System.Xaml.XamlMember> Kullanım situational olduğundan ve her olası biçimlendirme durumda değişir bilgileri, herhangi bir şey biçimlendirme uzantısı hakkında istiyordu değil; tür dönüştürücüleri ile olduğu gibi ayrılmış ve tür veya üye başına kapalı değil.  
   
  Biçimlendirme uzantısı kullanımı (genellikle söz konusu olduğu) XAML metin biçimlendirme özniteliği formunda yapıldığı olsa bile biçimlendirme uzantıları düğüm akış gösterimi nesne düğümleri olarak bir durumdur. Bir açık nesne öğesi form kullanılan biçimlendirme uzantısı kullanımları aynı şekilde işlenir.  
   
@@ -197,7 +185,7 @@ public class GameBoard {
   
  Adlandırılmış parametre kullanımı için her adlandırılmış parametre adının düğüm akış üye düğümü olarak temsil edilir. İç içe geçmiş biçimlendirme uzantısı kullanımı olabileceğinden üye değerleri dizeler, değildir.  
   
- `ProvideValue`biçimlendirmeden uzantısı henüz çağrılır. Ancak, bir XAML okuyucu ve XAML yazıcı bağlanıyorsanız çağrılır böylece `WriteEndObject` düğümü akışta incelediğinizde biçimlendirme uzantısı düğümde çağrılır. Bu nedenle, genellikle aynı XAML şema içeriği yükleme yolunda Nesne grafiği oluşturmak için kullanılacak şekilde kullanılabilir gerekir. Aksi takdirde `ProvideValue` beklenen services kullanılabilir olmadığından herhangi biçimlendirmeden istisnalar burada uzantı atabilirsiniz.  
+ `ProvideValue` biçimlendirmeden uzantısı henüz çağrılır. Ancak, bir XAML okuyucu ve XAML yazıcı bağlanıyorsanız çağrılır böylece `WriteEndObject` düğümü akışta incelediğinizde biçimlendirme uzantısı düğümde çağrılır. Bu nedenle, genellikle aynı XAML şema içeriği yükleme yolunda Nesne grafiği oluşturmak için kullanılacak şekilde kullanılabilir gerekir. Aksi takdirde `ProvideValue` beklenen services kullanılabilir olmadığından herhangi biçimlendirmeden istisnalar burada uzantı atabilirsiniz.  
   
 <a name="xaml_and_xml_languagedefined_members_in_the_xaml_node_stream"></a>   
 ## <a name="xaml-and-xml-language-defined-members-in-the-xaml-node-stream"></a>XAML ve XML dili tarafından tanımlanan üyelerinde XAML düğümü akışı  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **Bilinmeyen içerik:** bu üye düğüm adı `_UnknownContent`. NET olarak söylemek olan bir <xref:System.Xaml.XamlDirective>, ve XAML dili XAML ad uzayı tanımlanır. Bu yönerge, burada XAML kaynak içeriği XAML nesne öğesi içeriyor ancak hiçbir içerik özelliği şu anda kullanılabilir XAML şema içeriği altında belirlenebilir durumlarda sentinel kullanılır. Bu durumda adlı üyeleri için denetleyerek bir XAML düğüm akış tespit edebilirsiniz `_UnknownContent`. Başka bir eylemi bir yükleme yolu XAML düğüm akış varsayılan alınmışsa <xref:System.Xaml.XamlObjectWriter> denenen oluşturur `WriteEndObject` karşılaştığında, `_UnknownContent` üye herhangi bir nesne üzerinde. Varsayılan <xref:System.Xaml.XamlXmlWriter> değil throw ve üye örtük olarak değerlendirir. Statik bir varlık için alabilirsiniz `_UnknownContent` gelen <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
--   **Bir koleksiyon özelliği:**XAML için genellikle kullanılan bir koleksiyon sınıfı destekleyen CLR türünü ayrılmış bir koleksiyon öğelerini tutan özelliği adlı olsa da, bu özellik türü yedekleme önce XAML tür sistemi bilinmemektedir çözünürlüğü. Bunun yerine, XAML düğümü akışı tanıtır bir `Items` yer tutucu XAML türü koleksiyonunun bir üyesi olarak. Bu yönerge, .NET Framework XAML hizmetlerinde uygulamasında adı düğümü akışı üye olduğu `_Items`. Bu yönerge için bir sabit elde edilebilir <xref:System.Xaml.XamlLanguage.Items%2A>.  
+-   **Bir koleksiyon özelliği:** XAML için genellikle kullanılan bir koleksiyon sınıfı destekleyen CLR türünü ayrılmış bir koleksiyon öğelerini tutan özelliği adlı olsa da, bu özellik türü yedekleme önce XAML tür sistemi bilinmemektedir çözünürlüğü. Bunun yerine, XAML düğümü akışı tanıtır bir `Items` yer tutucu XAML türü koleksiyonunun bir üyesi olarak. Bu yönerge, .NET Framework XAML hizmetlerinde uygulamasında adı düğümü akışı üye olduğu `_Items`. Bu yönerge için bir sabit elde edilebilir <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      XAML düğümü akışı parseable olmaması için kapatma öğeleri öğeleri özelliğiyle içerebilir yedekleme türü çözümlemesi ve XAML şema içeriği dayalı unutmayın. Örneğin,  
   
@@ -223,10 +211,10 @@ public class GameBoard {
  Belirli yönergeleri, özellikle daha fazla bilgi için bir nesne bir nesne öğesinden oluşturulmasını sağlamak üzere tasarlanmıştır. Bu yönergeleri: `Initialization`, `PositionalParameters`, `TypeArguments`, `FactoryMethod`, `Arguments`. .NET Framework XAML Hizmetleri XAML okuyucuları nesnenin aşağıdaki düğümü akışı ilk üyeleri olarak bu yönergeleri yerleştirmek girişimi `StartObject`, sonraki bölümde açıklanan nedeniyle.  
   
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter davranış ve düğüm sırası  
- `StartObject`için bir <xref:System.Xaml.XamlObjectWriter> mutlaka hemen nesne örneğini oluşturmak için sinyal XAML nesne yazıcısı için değil. XAML ek giriş sahip bir nesne başlatmak ve ilk nesne ve ancak bundan sonra ayarı özellikleri oluşturmak için varsayılan bir oluşturucu tamamen çağırma üzerinde kalmamanız olanaklı kılan birkaç dil özellikleri içerir. Bu özellikler şunlardır: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; başlatma metin; [x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); konumsal biçimlendirme uzantısı parametrelerinin; Fabrika yöntemleri ve ilişkili [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) düğümleri (XAML 2009). Bu durumların her birinde gecikme gerçek nesne oluşturması ve düğüm akış kaldırılmasında çünkü XAML nesne yazıcısı özellikle bir yapım olmayan başlangıç üyesi karşılaşıldığında gerçekte örneği oluşturma bir davranışı üzerinde güvenebilirsiniz Bu nesne türü için yönergesi.  
+ `StartObject` için bir <xref:System.Xaml.XamlObjectWriter> mutlaka hemen nesne örneğini oluşturmak için sinyal XAML nesne yazıcısı için değil. XAML ek giriş sahip bir nesne başlatmak ve ilk nesne ve ancak bundan sonra ayarı özellikleri oluşturmak için varsayılan bir oluşturucu tamamen çağırma üzerinde kalmamanız olanaklı kılan birkaç dil özellikleri içerir. Bu özellikler şunlardır: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; başlatma metin; [x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); konumsal biçimlendirme uzantısı parametrelerinin; Fabrika yöntemleri ve ilişkili [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) düğümleri (XAML 2009). Bu durumların her birinde gecikme gerçek nesne oluşturması ve düğüm akış kaldırılmasında çünkü XAML nesne yazıcısı özellikle bir yapım olmayan başlangıç üyesi karşılaşıldığında gerçekte örneği oluşturma bir davranışı üzerinde güvenebilirsiniz Bu nesne türü için yönergesi.  
   
 ### <a name="getobject"></a>GetObject  
- `GetObject`Yeni bir nesne oluşturmak yerine bir XAML nesne yazıcısı yerine nesnenin içeren özelliğinin değeri nereden bir XAML düğümü temsil eder. Tipik bir durumda olduğu bir `GetObject` düğümü karşılaştı içeren özellik yedekleme türü nesne modelinde salt okunur kasıtlı olarak XAML düğümü akışı bir koleksiyon nesnesi veya bir sözlük nesnesi için olur. Bu senaryoda, koleksiyon veya sözlük genellikle oluşturulur ve (genellikle boş) başlatıldı sahip olan bir türde başlatma mantığı tarafından.  
+ `GetObject` Yeni bir nesne oluşturmak yerine bir XAML nesne yazıcısı yerine nesnenin içeren özelliğinin değeri nereden bir XAML düğümü temsil eder. Tipik bir durumda olduğu bir `GetObject` düğümü karşılaştı içeren özellik yedekleme türü nesne modelinde salt okunur kasıtlı olarak XAML düğümü akışı bir koleksiyon nesnesi veya bir sözlük nesnesi için olur. Bu senaryoda, koleksiyon veya sözlük genellikle oluşturulur ve (genellikle boş) başlatıldı sahip olan bir türde başlatma mantığı tarafından.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Xaml.XamlObjectReader>  

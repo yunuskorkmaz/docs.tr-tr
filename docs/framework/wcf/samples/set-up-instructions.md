@@ -5,21 +5,21 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb23281d94bbd1edc66b0a3b9caafca62304487
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-up-instructions"></a>Kurulum Yönergeleri
 Bu konular, bir Windows Communication Foundation (WCF) hizmetini çalıştırmak için gereken Services'i ayarlamak nasıl açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
- Ayarlama adımlarını özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri.  
+ WCF örnekleri adımlarını özetler.  
   
  [Güvenlik Duvarı Yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
- İzin vermek için Windows Güvenlik duvarını ayarlama için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri için işlevi.  
+ WCF hizmetleri çalışmaya izin vermek için Windows Güvenlik duvarını ayarlama için gereken adımlar açıklanır.  
   
  [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  ISS kurmak için gereken adımlar açıklanır.  
@@ -31,10 +31,10 @@ Bu konular, bir Windows Communication Foundation (WCF) hizmetini çalıştırmak
  Bir sanal dizin oluşturmak için gereken adımlar açıklanır.  
   
  [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- Derleme için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri.  
+ WCF örnekleri oluşturmak için gereken adımları özetler.  
   
  [Windows Communication Foundation Örneklerini Çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- Çalıştırmak için gereken adımları özetler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri aynı makine üzerindeki ve makinelerde.  
+ Aynı makine üzerindeki ve makinelerde WCF örnekleri çalıştırmak için gereken adımları özetler.  
   
  [Eşler arası Hizmetleri etkinleştirme](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  Windows Eşler-bileşeni, eşler arası ileti Hizmetleri için yerleşik bir çözümleyici yüklemek için gereken adımları özetler.  

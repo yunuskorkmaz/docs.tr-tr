@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Kullanıcı Tanımlı Bağlamalar Oluşturma
 Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:  
@@ -26,9 +26,9 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
   
  Protokol bağlama öğeleri – iletileri hareket üst düzey işlem adımları bu öğeleri temsil eder. Kanallar ve dinleyiciler Bu bağlama öğeleri tarafından oluşturulan eklemek, kaldırmak veya ileti içeriği değiştirmek için. Belirtilen bağlama Protokolü bağlama öğeleri, her içinden devralma rastgele sayıda olabilir <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) dahil olmak üzere, çeşitli protokol bağlama öğeleri içerir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Kodlama bağlama öğesi – hattaki iletim için bir ileti arasındaki bir kodlama dönüşümleri hazır bu öğeleri temsil eder. Tipik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamaları tam olarak bir kodlama bağlama öğesi içerir. Bağlama öğeleri kodlama örnekler <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bir kodlama bağlama öğesi için bir bağlama belirtilmezse, kodlama varsayılan kullanılır. Taşıma HTTP ve ikili Aksi takdirde varsayılan metin olur.  
+ Kodlama bağlama öğesi – hattaki iletim için bir ileti arasındaki bir kodlama dönüşümleri hazır bu öğeleri temsil eder. Tipik WCF bağlamaları tam olarak bir kodlama bağlama öğesi içerir. Bağlama öğeleri kodlama örnekler <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Bir kodlama bağlama öğesi için bir bağlama belirtilmezse, kodlama varsayılan kullanılır. Taşıma HTTP ve ikili Aksi takdirde varsayılan metin olur.  
   
- Aktarım bağlama öğesi – bu öğeleri Aktarım Protokolü bir kodlama iletisi iletimini temsil eder. Tipik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bağlamaları dahil olduğu devraldığı tam olarak bir aktarım bağlama öğesi <xref:System.ServiceModel.Channels.TransportBindingElement>. Bağlama öğeleri taşıma örneklerindendir <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>ve <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Aktarım bağlama öğesi – bu öğeleri Aktarım Protokolü bir kodlama iletisi iletimini temsil eder. Tipik WCF bağlamaları dahil olduğu devraldığı tam olarak bir aktarım bağlama öğesi <xref:System.ServiceModel.Channels.TransportBindingElement>. Bağlama öğeleri taşıma örneklerindendir <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement>ve <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Yeni bağlamalar oluştururken, eklenen bağlama öğeleri sıralama önemlidir. Her zaman bağlama öğeleri aşağıdaki sırayla ekleyin:  
   
@@ -41,10 +41,10 @@ Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardı
 |Kodlama|İkili, MTOM, özel bir metin|Evet*|  
 |Taşıma|TCP ve adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Evet|  
   
- * Bir kodlama belirtilmezse, bir kodlama her bağlama için gerekli olduğu için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir varsayılan sizin için kodlama ekler. Text/XML ve ikili HTTP ve HTTPS aktarımları için aksi varsayılandır.  
+ * Bir kodlama belirtilmezse, bir kodlama her bağlama için gerekli olduğu için bir varsayılan sizin için kodlama WCF ekler. Text/XML ve ikili HTTP ve HTTPS aktarımları için aksi varsayılandır.  
   
 ## <a name="creating-a-new-binding-element"></a>Yeni bir bağlama öğesi oluşturma  
- Türetilen türler yanı sıra <xref:System.ServiceModel.Channels.BindingElement> tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], kendi bağlama öğeleri oluşturabilirsiniz. Bu bağlamaları yığınını oluşturulur yolu ve içinde kendi oluşturarak Git bileşenleri özelleştirmenize olanak tanır <xref:System.ServiceModel.Channels.BindingElement> yığınında bir diğer sistem tarafından sağlanan türleri ile birleştirilebilen.  
+ Türetilen türler yanı sıra <xref:System.ServiceModel.Channels.BindingElement> kendi bağlama öğeleri oluşturabileceğiniz WCF tarafından sağlanan olan. Bu bağlamaları yığınını oluşturulur yolu ve içinde kendi oluşturarak Git bileşenleri özelleştirmenize olanak tanır <xref:System.ServiceModel.Channels.BindingElement> yığınında bir diğer sistem tarafından sağlanan türleri ile birleştirilebilen.  
   
  Örneğin, uygulama, bir `LoggingBindingElement` ileti bir veritabanında oturum olanağı sağlar, kanal yığınındaki taşıma kanalı yukarıda yerleştirmelisiniz. Bu durumda, uygulama bir özel oluşan bağlama oluşturur `LoggingBindingElement` ile `TcpTransportBindingElement`, aşağıdaki örnekte olduğu gibi.  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  En azından bir kullanıcı tarafından tanımlanan bağlama uygulamalıdır <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> yöntemi ve <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özelliği.  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Yöntem yeni bir <xref:System.ServiceModel.Channels.BindingElementCollection> bağlamaya ait bağlama öğelerini içerir. Koleksiyon sipariş edilir ve protokolü bağlama öğeleri ilk içermelidir, aktarım bağlama öğesi tarafından izlenen kodlama bağlama öğesi arkasından. Kullanırken [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan bağlama öğeleri kuralları içinde belirtilen sıralama bağlama öğesi uymalıdır [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md). Bu koleksiyonun hiç kullanıcı tanımlı bağlama sınıfı içinde başvurulan nesneler başvuruda bulunmalıdır; Sonuç olarak, bağlama yazarlar döndürmelidir bir `Clone()` , <xref:System.ServiceModel.Channels.BindingElementCollection> her çağrıda <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> Yöntem yeni bir <xref:System.ServiceModel.Channels.BindingElementCollection> bağlamaya ait bağlama öğelerini içerir. Koleksiyon sipariş edilir ve protokolü bağlama öğeleri ilk içermelidir, aktarım bağlama öğesi tarafından izlenen kodlama bağlama öğesi arkasından. WCF sistem tarafından sağlanan bağlama öğeleri kullanırken, kural içinde belirtilen sıralama bağlama öğesi izlemelisiniz [özel bağlamaları](../../../../docs/framework/wcf/extending/custom-bindings.md). Bu koleksiyonun hiç kullanıcı tanımlı bağlama sınıfı içinde başvurulan nesneler başvuruda bulunmalıdır; Sonuç olarak, bağlama yazarlar döndürmelidir bir `Clone()` , <xref:System.ServiceModel.Channels.BindingElementCollection> her çağrıda <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
  <xref:System.ServiceModel.Channels.Binding.Scheme%2A> Özelliği, bağlama kullanımda Aktarım Protokolü için URI şeması'ı temsil eder. Örneğin, *WSHttpBinding* ve *NetTcpBinding* döndürmek "http" ve "net.tcp" kendi ilgili <xref:System.ServiceModel.Channels.Binding.Scheme%2A> özellikleri.  
   

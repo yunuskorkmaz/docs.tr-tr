@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
 SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen bir yolla bir hizmete bir istemciden hata koşulu bilgi hizmet aktarın. Bu konuda, özel hata içeriği tanımlamak ve hangi işlemleri geri dönebilirsiniz belirlemek nasıl ve ne zaman anlatılmaktadır. Bir hizmet veya çift yönlü istemci, bu hataları nasıl gönderebilir ve bir istemci veya hizmet uygulaması bu hatalarını nasıl işlediği hakkında daha fazla bilgi için bkz: [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Windows Communication Foundation (WCF) uygulamalarında işleme hatası genel bakış için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -27,7 +27,7 @@ SOAP hatalarının istemciye ve çift yönlü durumda, birlikte çalışabilen b
 3.  Böylece bunlar throw belirli SOAP hataları WSDL istemcilere sunulan işlemlerinizin işaretleyin.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>İstemciler hakkında bilmeniz gereken hata koşulları tanımlama  
- SOAP, belirli bir işlem için hata bilgilerinin yürütmek genel olarak açıklanan iletileri hatalarıdır. WSDL diğer işlem iletileri ile birlikte açıklanan olduğundan, istemciler bilmeniz ve, bu nedenle, bir işlem çağrılırken, bu tür hataları işlemek bekler. Ancak çünkü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri hangi hata koşulları yönetilen kod hataları dönüştürülecek olan ve istemciye döndürülen hata koşulları ve hizmetinizden hatalar ayrı fırsatı sağlar karar yönetilen kodda yazılır bir istemciyi sahip resmi hata konuşma.  
+ SOAP, belirli bir işlem için hata bilgilerinin yürütmek genel olarak açıklanan iletileri hatalarıdır. WSDL diğer işlem iletileri ile birlikte açıklanan olduğundan, istemciler bilmeniz ve, bu nedenle, bir işlem çağrılırken, bu tür hataları işlemek bekler. Ancak WCF hizmetleri hangi hata koşulları yönetilen kod hataları dönüştürülecek olan ve istemciye döndürülen hata koşulları ve hatalar hizmetinizde resmi hatadan ayrı fırsatı sağlar karar yönetilen kodda yazılır Konuşma ile bir istemci sahip.  
   
  Örneğin, aşağıdaki kod örneği iki tamsayı alan ve başka bir tamsayı döndüren bir işlemi gösterir. Hatalı sözleşme tasarlarken hangi hata koşulları için istemcinizi önemli belirlemeniz gerekir böylece birden fazla özel Burada, durum. Bu durumda, hizmet algılaması gerekir <xref:System.DivideByZeroException?displayProperty=nameWithType> özel durum.  
   
@@ -84,7 +84,7 @@ End Class
   
  SOAP standart göre bir hataya sahip bir `Action`, `Code`ve bir `Reason`. `Action` Tarafından denetlenen <xref:System.ServiceModel.FaultContractAttribute.Action%2A> özelliği. <xref:System.ServiceModel.FaultException.Code%2A> Özelliği ve <xref:System.ServiceModel.FaultException.Reason%2A> özelliği olan iki özelliklerini <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> genel üst sınıfı sınıfı <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>. `Code` Özelliği içeren bir <xref:System.ServiceModel.FaultCode.SubCode%2A> üye.  
   
- Olmayan hataları oluşturan Hizmetleri erişirken, belirli sınırlamalarla mevcut. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Şema açıklayan ve veri sözleşmeleri ile uyumlu olan ayrıntı türleri yalnızca hataları destekler. Örneğin, yukarıda söz edildiği gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] XML öznitelikleri ayrıntı türlerini kullanın arıza ya da birden fazla üst düzey öğe ayrıntı bölümündeki hataları desteklemiyor.  
+ Olmayan hataları oluşturan Hizmetleri erişirken, belirli sınırlamalarla mevcut. Yalnızca hataları ayrıntı türleriyle şemasını tanımlayan WCF destekler ve veri sözleşmeleri ile uyumludur. Örneğin, yukarıda belirtildiği gibi WCF XML öznitelikleri ayrıntı türlerini kullanın arıza ya da birden fazla üst düzey öğe ayrıntı bölümündeki hataları desteklemez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.FaultContractAttribute>  

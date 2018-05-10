@@ -2,11 +2,11 @@
 title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konuda, Windows Communication Foundation (WCF) sorunları ayarlama ile ilgili sorunları giderme açıklanmaktadır.  
@@ -61,12 +61,12 @@ Bu konuda, Windows Communication Foundation (WCF) sorunları ayarlama ile ilgili
  [WorkFlow hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ veya %windir%\Microsoft.NET\framework64\v3.5\ bulunabilir  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Düzgün IIS'yi .NET Framework 3.5 yükledikten sonra WCF/WF Webhost için yapılandırın  
- Zaman [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] yükleme başarısız olursa ek yapılandırmak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-ilgili IIS yapılandırma ayarlarını, yükleme günlüğünde bir hatayı günlüğe kaydeder ve devam eder. Gerekli yapılandırma ayarları eksik olduğundan WorkflowServices uygulamaları çalıştırmak için her türlü girişim başarısız olur. Örneğin, xoml veya kuralları hizmeti yüklemesi başarısız olabilir.  
+ Zaman [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] yükleme başarısız olursa ek WCF ilişkili IIS yapılandırma ayarlarını yapılandırmak, yükleme günlüğünde bir hatayı günlüğe kaydeder ve devam eder. Gerekli yapılandırma ayarları eksik olduğundan WorkflowServices uygulamaları çalıştırmak için her türlü girişim başarısız olur. Örneğin, xoml veya kuralları hizmeti yüklemesi başarısız olabilir.  
   
  Geçici çözüm için bu sorun, kullanım [WorkFlow hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) ile `/c` IIS komut dosyası eşlemeleri makinede doğru şekilde yapılandırmak için anahtar. [WorkFlow hizmet Kayıt Aracı (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) %windir%\Microsoft.NET\framework\v3.5\ veya %windir%\Microsoft.NET\framework64\v3.5\ bulunabilir  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Türü 'System.ServiceModel.Activation.HttpModule' derlemesinden yükleyemedi ' System.ServiceModel, sürüm 3.0.0.0, kültür = neutral, PublicKeyToken = b77a5c561934e089 '  
- Bu hata oluşur [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yüklenir ve ardından [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] HTTP etkinleştirmesi etkindir. Aşağıdaki komut satırı ile içinde çalıştırmak bu sorunu çözmek için [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] komut istemi:  
+ Bu hata oluşur [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] yüklenir ve WCF HTTP etkinleştirmesi sonra etkinleştirilir. Aşağıdaki komut satırı ile içinde çalıştırmak bu sorunu çözmek için [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] komut istemi:  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

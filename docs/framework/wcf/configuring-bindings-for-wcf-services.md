@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
 Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici kararları erteleneceği istersiniz. Örneğin, genellikle bir hizmet adresi ya da Tekdüzen Kaynak Tanımlayıcısı (URI) ne olacağını önceden bilmesinin yolu yoktur. Sabit bir adresi kodlama yerine, bir hizmet oluşturduktan sonra bunu yapmak için yönetici izin vermek için tercih edilir. Bu esneklik yapılandırma aracılığıyla gerçekleştirilir.  
@@ -39,9 +39,9 @@ Bir uygulama oluştururken, genellikle uygulama dağıtımdan sonra yönetici ka
   
  Örneğin, belirten [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi belirten HTTP taşıma olarak bir uç noktası için kullanılacak. Bu kullanılan kablo uç noktası Bu uç nokta kullanarak hizmet açıldığında çalışma zamanında ayarlama için.  
   
- Bağlamalar iki tür vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamaları yararlı birleşimlerini ortak senaryolarda kullanılır öğeleri içerir. Önceden tanımlanmış bağlama listesi türleri için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sağlar, bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Önceden tanımlanmış bağlama koleksiyonu bir hizmet uygulaması gereken özellikleri doğru birleşimini varsa, uygulamanın gereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. Özel bağlama hakkında daha fazla bilgi için bkz: [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Bağlamalar iki tür vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamaları yararlı birleşimlerini ortak senaryolarda kullanılır öğeleri içerir. WCF sağlayan önceden tanımlanmış bağlama türlerinin listesi için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md). Önceden tanımlanmış bağlama koleksiyonu bir hizmet uygulaması gereken özellikleri doğru birleşimini varsa, uygulamanın gereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. Özel bağlama hakkında daha fazla bilgi için bkz: [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- Aşağıdaki dört örnekler ayarlamak için kullanılan en yaygın bağlama yapılandırmaları göstermek bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet.  
+ Aşağıdaki dört örnekler bir WCF hizmet ayarlamak için kullanılan en yaygın bağlama yapılandırmaları gösterir.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Bağlama türü kullanmak için bir uç nokta belirtme  
  İlk örnek bir adresi, bir sözleşme ve bağlama ile yapılandırılan bir uç noktası belirtmek nasıl gösterilmektedir.  

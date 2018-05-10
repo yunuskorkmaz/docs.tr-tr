@@ -2,11 +2,11 @@
 title: Dayanıklı Çift Yönlü
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Dayanıklı Çift Yönlü
 Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir. Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir. İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.  
@@ -41,7 +41,7 @@ Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF)
 >  Bu örnek tarafından kullanılan bağlama güvenli değildir. Uygulamanızı dağıtırken, uygulamanızın güvenlik gereksinimlerine bağlı olarak, bağlama yapılandırmanız gerekir.  
   
 > [!NOTE]
->  Bu örnekte kullanılan sıraları işlem değildir. Nasıl ayarlanacağını gösteren bir örnek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti değişimleri işlem kuyrukları kullanma, bkz: [MSMQ etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md) örnek.  
+>  Bu örnekte kullanılan sıraları işlem değildir. İşlem sıraları kullanarak WCF ileti alışverişleri ayarlamak üzere nasıl oluşturulduğunu gösteren bir örnek için bkz: [MSMQ etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md) örnek.  
   
  İçin Service2.xamlx service1.xamlx tarafından gönderilen ileti Service2.xamlx ve özel bağlama adresiyle yapılandırılmış bir istemci uç noktası kullanarak, önceden tanımlanmış gönderilir. Geri Service2.xamlx aramasından Service1.xamlx için adresi Service1.xamlx tarafından gönderilen geri çağırma içeriğinden alınır için açıkça yapılandırılmış hiçbir adresiyle bir istemci uç noktası kullanılarak gönderilir. Aşağıdaki kod örneği, istemci uç noktaları tanımlar.  
   

@@ -2,16 +2,16 @@
 title: İzleme
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: a0c3e5591280247cab97b6597a42ca496c9654d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f427425b1bbf19ecd8b30fb1498634a7a3d5fa9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing"></a>İzleme
 Windows Communication Foundation (WCF) uygulama izleme ve tanılama verilerini hata izleme ve çözümleme sağlar. Bir uygulamanın nasıl davrandığını veya neden hataları anlamak için izleme yerine bir hata ayıklayıcısı kullanabilirsiniz. Hataları ve işleme bir uçtan uca deneyim sağlamak üzere bileşenler genelinde ilişkilendirebilirsiniz.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Aşağıdaki Tanılama izleme verilerini çıkarır:  
+ WCF aşağıdaki tanılama izleme verilerini çıkarır:  
   
 -   İşlem kilometre taşları gibi işlem çağrıları uygulamalarının tüm bileşenleri arasında izlemelerini özel durumlar, uyarılar ve diğer önemli bir işleme olayları code."  
   
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) uygulama izleme ve tanılama verilerini h
   
  [İzleme Başvuruları](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
- Bu konu tarafından oluşturulan tüm izlemeleri listeler [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Bu konu, WCF tarafından oluşturulan tüm izlemeleri listeler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

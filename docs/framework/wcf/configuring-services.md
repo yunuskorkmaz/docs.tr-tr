@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services"></a>Hizmetleri Yapılandırma
 Tasarlanmış ve hizmet sözleşmesini uygulanmış sonra hizmetiniz yapılandırmaya hazırsınız demektir. Burada tanımlayın ve hizmetinizi burada bulunabilir, taşıma ve iletileri ve gerektirdiği güvenlik türünü göndermek ve almak için kullandığı ileti kodlama adresini belirtme dahil olmak üzere istemcilere nasıl kullanıma sunulan özelleştirme budur.  
   
- Yapılandırma burada kullanılan gibi imperatively kodda veya tanımlama ve belirtme, uç nokta adresleri, kullanılan aktarımları ve kendi güvenlik düzenleri gibi bir hizmet çeşitli yönlerini özelleştirme bir yapılandırma dosyası kullanarak tüm yöntemleri içerir. Uygulamada, yazma yapılandırma programlama önemli bir parçası olan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar.  
+ Yapılandırma burada kullanılan gibi imperatively kodda veya tanımlama ve belirtme, uç nokta adresleri, kullanılan aktarımları ve kendi güvenlik düzenleri gibi bir hizmet çeşitli yönlerini özelleştirme bir yapılandırma dosyası kullanarak tüm yöntemleri içerir. Bir ana uygulamada, yazma yapılandırmadır WCF uygulamalarını programlama parçası.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)  
- İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma gereksinimleri. Herhangi bir belirtmezseniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çalışma zamanı belirli bir hizmet yapılandırmasını varsayılan uç noktalar, bağlamaları ve davranışları hizmetinizi otomatik olarak yapılandırır.  
+ İle başlayarak [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF, WCF yapılandırma gereksinimleri kolaylaştıran yeni bir varsayılan yapılandırma modeli ile birlikte gelir. Belirli bir hizmet için herhangi bir WCF yapılandırma belirtmezseniz, çalışma zamanı varsayılan uç noktalar, bağlamaları ve davranışları ile otomatik olarak hizmetinizi yapılandırır.  
   
  [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) hizmetini yapılandırılabilir kullanmaktır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. XML öğeleri barındıran Internet Information Services (IIS) sitesi için Web.config dosyasının en yaygın olarak eklenen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin.  
+ Windows Communication Foundation (WCF) hizmetini yapılandırılabilir kullanmaktır [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırma teknolojisi. En yaygın olarak, XML öğeleri bir WCF hizmetini barındıran Internet Information Services (IIS) sitesi için Web.config dosyasına eklenir. Öğeleri, uç nokta adresleri (hizmetiyle iletişim kurmak için kullanılan gerçek adresleri) gibi ayrıntılarını değiştirmek bir makine Makineli temelinde izin verin.  
   
  [Bağlamalar](../../../docs/framework/wcf/bindings.md)  
- Ayrıca, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hızlı bir şekilde nasıl bir istemci ve hizmet, aktarımları gibi güvenlik, iletişim için en temel özelliklerini seçmenize olanak tanır ve ileti Kodlamalar bağlamaları formunda birkaç sistem tarafından sağlanan ortak yapılandırmaları içerir kullanılır.  
+ Ayrıca, WCF en temel özellikleri nasıl bir istemci ve hizmet iletişim kurmak için aktarımları, güvenlik ve Kodlamalar kullanılan ileti gibi hızlı bir şekilde seçmenize olanak bağlamaları biçiminde birkaç sistem tarafından sağlanan ortak yapılandırmaları içerir.  
   
  [Uç Noktalar](../../../docs/framework/wcf/endpoints.md)  
- İle tüm iletişimin bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] servis oluşur aracılığıyla *uç noktaları* hizmetinin. Uç noktaları sözleşme, bağlamaları belirtilen yapılandırma bilgilerini ve hizmet nerede bulacağını veya hizmeti hakkında bilgi almak nereye belirtmek adresleri içerir.  
+ Tüm WCF Hizmeti ile aracılığıyla iletişimin *uç noktaları* hizmetinin. Uç noktaları sözleşme, bağlamaları belirtilen yapılandırma bilgilerini ve hizmet nerede bulacağını veya hizmeti hakkında bilgi almak nereye belirtmek adresleri içerir.  
   
  [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)  
- Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve mevcut güvenlik mekanizmaları, gizlilik, bütünlük, kimlik doğrulama ve yetkilendirme herhangi bir hizmet uygulayabilirsiniz. Ayrıca, güvenlik başarı ve başarısızlık için de denetleyebilirsiniz.  
+ WCF kullanarak ve mevcut güvenlik mekanizmaları gizliliğini, bütünlüğünü, kimlik doğrulama ve yetkilendirme herhangi bir hizmet uygulamasına uygulayabilirsiniz. Ayrıca, güvenlik başarı ve başarısızlık için de denetleyebilirsiniz.  
   
  [WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Birlikte çalışabilir hizmetler ve istemcileri herhangi bir platform veya işletim sistemi ile bir hizmeti dağıtma gereksinimleri WS özetlenen-ı temel Profil 1.1 belirtimini.  

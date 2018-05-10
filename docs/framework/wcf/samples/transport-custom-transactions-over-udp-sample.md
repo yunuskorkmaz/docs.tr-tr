@@ -2,11 +2,11 @@
 title: 'Taşıma: UDP üzerinden Özel İşlemler Örneği'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Taşıma: UDP üzerinden Özel İşlemler Örneği
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF) örnek[taşıma genişletilebilirliği](../../../../docs/framework/wcf/samples/transport-extensibility.md). Özel işlem akışını desteklemek üzere UDP taşıma örnek genişletir ve kullanımını gösteren <xref:System.ServiceModel.Channels.TransactionMessageProperty> özelliği.  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` ileti varlıkla geçerli işlem için yayma belirteci birleştirme ve bir arabelleğe yerleştirmek için yeni işlevler içeren bir yardımcı yöntemdir.  
   
- İşlem akışını hangi hizmet işlemleri gerektiren istemci uygulaması özel işlem akışı taşıma için bilmeniz gerekir ve bu bilgileri geçirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Aktarım katmanı kullanıcı hareketi iletmek için bir mekanizma olmalıdır. Bu örnekte "[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ileti denetçiler" Bu bilgileri almak için. Çağrılan Burada, uygulandığı istemci ileti denetçisi `TransactionFlowInspector`, aşağıdaki görevleri gerçekleştirir:  
+ İşlem akışını hangi hizmet işlemleri gerektiren istemci uygulaması özel işlem akışı taşıma için bilmeniz gerekir ve bu bilgiler için WCF geçirmek için. Aktarım katmanı kullanıcı hareketi iletmek için bir mekanizma olmalıdır. Bu örnek, "WCF ileti denetçileri" kullanmaktadır. Bu bilgiler elde edilir. Çağrılan Burada, uygulandığı istemci ileti denetçisi `TransactionFlowInspector`, aşağıdaki görevleri gerçekleştirir:  
   
 -   Bir işlem için belirli bir ileti eylemi aktarılan olup olmadığını belirler (Bu gerçekleşir `IsTxFlowRequiredForThisOperation()`).  
   

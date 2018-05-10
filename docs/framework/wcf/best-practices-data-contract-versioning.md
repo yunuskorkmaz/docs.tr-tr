@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için konulara bakın [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
  Bu, yeni bir veri üye ekleme gibi bile en yaygın sürüm senaryo, belirli bir şema ile sorunsuz bir şekilde uygulanamayacağını anlamına gelir. Bir veri sözleşmesine (yeni bir veri üyesi, örneğin) daha yeni sürümleri eski Şeması'nı kullanarak doğrulamaz.  
   
- Ancak, kesin şema uyumluluk gerekli değil birçok senaryo vardır. Platformlar dahil olmak üzere, birçok Web Hizmetleri [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve oluşturulan XML Web Hizmetleri ASP.NET kullanarak değil şema doğrulaması varsayılan olarak gerçekleştirmek ve bu nedenle şema tarafından açıklanmayan ekstra öğeler tolerans. Bu tür platformları ile çalışırken, çok sayıda sürüm oluşturma senaryoları uygulamak daha kolaydır.  
+ Ancak, kesin şema uyumluluk gerekli değil birçok senaryo vardır. ASP.NET kullanılarak oluşturulan WCF ve XML Web Hizmetleri dahil olmak üzere birçok Web Hizmetleri platformda değil şema doğrulaması varsayılan olarak gerçekleştirmek ve bu nedenle şema tarafından açıklanmayan ekstra öğeler tolerans. Bu tür platformları ile çalışırken, çok sayıda sürüm oluşturma senaryoları uygulamak daha kolaydır.  
   
  Bu nedenle, var olan iki veri kümesi sözleşme sürüm oluşturma yönergelerini: Burada kesin şema geçerlilik önemlidir ve başka ayarlayın senaryoları için olmadığında senaryolar için ayarlayın.  
   
@@ -36,7 +36,7 @@ Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için 
   
  En iyi yöntemleri daha fazla bilgi için bkz: [hizmet sürümü oluşturma](../../../docs/framework/wcf/service-versioning.md).  
   
- Bazen, uygulamanız tarafından gönderilen iletiler için kesin şema uyumluluğu güvence altına almalıdır ancak kesinlikle şeması uyumlu olacak şekilde gelen iletileri bağlı olamaz. Bu durumda, gelen iletiyi gereksiz veriler içerebilir tehlike yoktur. Yabancı değerler depolanabilir ve tarafından döndürülen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ve böylece gönderilen şema geçersiz iletilerinde sonuçlanır. Bu sorunu önlemek için gidiş özelliği kapatılması. Bunu yapmanın iki yolu vardır.  
+ Bazen, uygulamanız tarafından gönderilen iletiler için kesin şema uyumluluğu güvence altına almalıdır ancak kesinlikle şeması uyumlu olacak şekilde gelen iletileri bağlı olamaz. Bu durumda, gelen iletiyi gereksiz veriler içerebilir tehlike yoktur. Yabancı değerler depolanabilir ve WCF tarafından döndürülen ve böylece gönderilen şema geçersiz iletilerinde sonuçlanır. Bu sorunu önlemek için gidiş özelliği kapatılması. Bunu yapmanın iki yolu vardır.  
   
 -   Uygulamayan <xref:System.Runtime.Serialization.IExtensibleDataObject> türlerinizi hiçbirinde arabirimi.  
   

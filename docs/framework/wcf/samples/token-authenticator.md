@@ -2,11 +2,11 @@
 title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. Belirteç kimlik doğrulayıcı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için kendi kendine tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama kullanılır.  
@@ -23,11 +23,11 @@ Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir. 
   
 -   Sunucu özel belirteç kimlik doğrulayıcı kullanarak istemci kimlik bilgilerini nasıl doğrulayabilirsiniz.  
   
--   Nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servis kodu özel belirteç kimlik doğrulayıcı oturum bağlar.  
+-   WCF Hizmeti kodunu nasıl oturum özel belirteç kimlik doğrulayıcı bağlar.  
   
 -   Sunucu, sunucunun X.509 sertifikası kullanılarak doğrulanabilir nasıl.  
   
- Bu örnek ayrıca nasıl çağıranının kimliğini erişilebilir gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sonra özel belirteç kimlik doğrulama işlemi.  
+ Bu örnek ayrıca nasıl çağıranının kimliğini özel belirteç kimlik doğrulama işleminden sonra WCF erişilebilir gösterilir.  
   
  Hizmet App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim için tek bir uç noktasını kullanıma sunar. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Bağlama ile standart bir yapılandırılmış `wsHttpBinding`, güvenlik modu iletiye - varsayılan modu ayarlandığında `wsHttpBinding`. Bu örnek standart ayarlar `wsHttpBinding` istemci kullanıcı adı kimlik doğrulaması kullanmak için. Hizmetini kullanarak sertifika hizmetini de yapılandırır `serviceCredentials` davranışı. `securityCredentials` Davranış bir hizmet sertifikası belirtmenize olanak sağlar. Bir hizmet sertifikası, hizmetin kimliğini doğrulamak ve ileti koruma sağlamak için bir istemci tarafından kullanılır. Aşağıdaki yapılandırma aşağıdaki Kurulum yönergelerde açıklandığı gibi örnek Kurulum sırasında yüklenen localhost sertifika başvurur.  
   

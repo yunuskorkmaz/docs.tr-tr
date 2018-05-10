@@ -2,21 +2,21 @@
 title: İstemci
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>İstemci
 Bu bölüm, Windows Communication Foundation (WCF) istemci uygulamaları gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İstemci Birlikte Çalışabilirliği](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- Arasında birlikte çalışabilirlik gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve diğer teknolojiler.  
+ WCF ve diğer teknolojiler arasında birlikte çalışabilirlik gösterir.  
   
  [Adres Üst Bilgileri](../../../../docs/framework/wcf/samples/address-headers.md)  
- Kullanarak bir hizmet istemcilerin başvuru parametreleri nasıl geçirebilirsiniz gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ İstemcileri WCF kullanarak bir hizmet için başvuru parametreleri nasıl geçirebilirsiniz gösterir.  
   
  [Kanal Fabrikası](../../../../docs/framework/wcf/samples/channel-factory.md)  
  Bir istemci uygulaması bir kanal ile nasıl oluşturabileceğinizi gösterir <xref:System.ServiceModel.ChannelFactory> oluşturulan bir istemci yerine sınıfı.  

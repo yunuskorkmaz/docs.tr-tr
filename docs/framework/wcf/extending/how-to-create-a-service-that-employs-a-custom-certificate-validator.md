@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma
 Bu konu, nasıl özel bir sertifika Doğrulayıcı uygulanacağını ve varsayılan sertifika doğrulama mantığı ile özel bir sertifika Doğrulayıcı değiştirmek için istemci veya hizmet kimlik bilgilerini yapılandırmak nasıl gösterir.  
   
- X.509 sertifikası, bir istemci veya hizmetin kimliğini doğrulamak için kullanılırsa, varsayılan olarak Windows Communication Foundation (WCF) Crypto API ve Windows sertifika deposunda sertifikayı doğrulamak için ve güvenilir olduğundan emin olmak için kullanır. Bazen yerleşik sertifika doğrulama işlevi yeterli değildir ve değiştirilmesi gerekir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel bir sertifika Doğrulayıcı eklemek kullanıcıların sağlayarak doğrulama mantığını değiştirmek için kolay bir yol sağlar. Özel bir sertifika Doğrulayıcı belirtilirse, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yerleşik sertifika doğrulama mantığını kullanmaz, ancak bunun yerine özel doğrulayıcısındaki kullanır.  
+ X.509 sertifikası, bir istemci veya hizmetin kimliğini doğrulamak için kullanılırsa, varsayılan olarak Windows Communication Foundation (WCF) Crypto API ve Windows sertifika deposunda sertifikayı doğrulamak için ve güvenilir olduğundan emin olmak için kullanır. Bazen yerleşik sertifika doğrulama işlevi yeterli değildir ve değiştirilmesi gerekir. WCF özel bir sertifika Doğrulayıcı eklemek kullanıcıların sağlayarak doğrulama mantığını değiştirmek için kolay bir yol sağlar. Özel bir sertifika Doğrulayıcı belirtilirse, WCF yerleşik sertifika doğrulama mantığını kullanmaz, ancak bunun yerine özel doğrulayıcısındaki kullanır.  
   
 ## <a name="procedures"></a>Yordamlar  
   

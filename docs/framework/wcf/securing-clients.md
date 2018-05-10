@@ -6,17 +6,17 @@ helpviewer_keywords:
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 Windows Communication Foundation (WCF) hizmetini istemcileri için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamanız gerekir. Bir istemci, bu nedenle, güvenli hale getirme işlemi basittir: bir istemciyi derlemek ve (yayımlanırsa) hizmetinden alınan meta veriler kullanın. Meta veriler istemcisinin nasıl yapılandırılacağını belirtir. Hizmet istemci kimlik bilgileri sağlamanız gerektiriyorsa, gereksinime uyan bir kimlik bilgisi edinmeniz gerekir. Bu konuda daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz: [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Güvenlik hizmeti belirtir  
- Varsayılan olarak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bağlamaları etkin güvenlik özellikleri vardır. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>.) Bu nedenle, hizmetin kullanarak oluşturduysanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], kimlik doğrulaması, gizliliği ve bütünlük sağlamak için güvenlik uygulamak büyük bir olasılığı yüksektir. Bu durumda, hizmeti sağlayan meta verileri hangi güvenli bir iletişim kanalı kurulamadı gerektirdiğini gösterir. Hizmet meta verileri tüm güvenlik gereksinimleriniz içermiyorsa, güvenlik, bir düzeni gibi Güvenli Yuva Katmanı (SSL) HTTP üzerinden bir hizmete koymak için yolu yoktur. Ancak, hizmet bir kimlik bilgisi sağlamak istemci gerektiriyorsa, istemci hizmete kendi kimliğini doğrulamak için kullanacağınız gerçek kimlik bilgisi istemci geliştirici, dağıtıcı veya yönetici sağlamalısınız.  
+ Varsayılan olarak, WCF bağlamaları etkin güvenlik özellikleri vardır. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>.) Bu nedenle hizmet WCF kullanılarak oluşturulduysa, kimlik doğrulaması, gizliliği ve bütünlük sağlamak için güvenlik uygulamak büyük bir fırsat yok. Bu durumda, hizmeti sağlayan meta verileri hangi güvenli bir iletişim kanalı kurulamadı gerektirdiğini gösterir. Hizmet meta verileri tüm güvenlik gereksinimleriniz içermiyorsa, güvenlik, bir düzeni gibi Güvenli Yuva Katmanı (SSL) HTTP üzerinden bir hizmete koymak için yolu yoktur. Ancak, hizmet bir kimlik bilgisi sağlamak istemci gerektiriyorsa, istemci hizmete kendi kimliğini doğrulamak için kullanacağınız gerçek kimlik bilgisi istemci geliştirici, dağıtıcı veya yönetici sağlamalısınız.  
   
 ## <a name="obtaining-metadata"></a>Meta veri alma  
  Bir istemci oluştururken ilk adımı istemci iletişim hizmet için meta verileri elde edilir. Bu iki yolla yapılabilir. Hizmet meta veri değişimi (MEX) uç noktası yayımlar veya meta verilerini HTTP veya HTTPS üzerinden yapar, ilk olarak, meta verileri kullanarak indirebilirsiniz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), hangi oluşturur hem de bir istemci ve bunun yanı sıra bir yapılandırma dosyası için kod dosyaları. (Aracını kullanma hakkında daha fazla bilgi için bkz: [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Hizmet MEX bitiş noktası yayımlamaz ve ayrıca meta verilerini kullanılabilir HTTP veya HTTPS üzerinden yapmaz, güvenlik gereksinimleri ve meta verileri tanımlayan belgelerine hizmeti oluşturan başvurmanız gerekir.  

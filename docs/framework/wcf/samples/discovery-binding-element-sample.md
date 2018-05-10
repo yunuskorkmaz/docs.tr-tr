@@ -2,20 +2,20 @@
 title: Keşif Bağlama Öğesi Örneği
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Keşif Bağlama Öğesi Örneği
 Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanılacak gösterilmiştir. Bu özellik, bir keşif istemcisi kanalını programlama modeli çok sezgisel hale getirme, mevcut istemci kanal yığınına eklemek için geliştiricilere sağlar. İlişkili kanalı açıldığında hizmetinin adresini bulma kullanılarak çözümlenir. Bu örnek aşağıdaki projeleri oluşur:  
   
--   **CalculatorService**: bir bulunabilirlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+-   **CalculatorService**: bulunabilirlik bir WCF hizmeti.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aramak ve CalculatorService çağırmak için keşif istemcisi kanalını kullanan istemci uygulaması.  
+-   **CalculatorClient**: bir WCF istemcisi keşif istemcisi kanalını aramak ve CalculatorService çağırmak için kullanan bir uygulama.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aramak ve CalculatorService çağırmak için dinamik bir uç noktası kullanan istemci uygulaması.  
+-   **DynamicCalculatorClient**: bir WCF istemcisi aramak ve CalculatorService çağırmak için dinamik bir uç noktası kullanan bir uygulama.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  

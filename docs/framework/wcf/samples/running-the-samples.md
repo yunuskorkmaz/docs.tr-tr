@@ -2,11 +2,11 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
 Windows Communication Foundation (WCF) örnekleri tek makineli veya makine bazındaki yapılandırmasında çalıştırabilirsiniz. Sağlanan gibi örnekleri tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek ait yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda bir örneği aynı makineye ve çapraz makine yapılandırmalarını çalıştırma açıklanmaktadır. Internet Information Services (IIS) ve kendi kendini barındıran örnekleri barındırılan hizmetler için adımları Çeşitlemeler olduğuna dikkat edin. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF) örnekleri tek makineli veya makine bazı
  Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], IIS'de barındırılan değil örnekleri bir dinleyici Http.sys ile kaydetmek için yükseltilmiş ayrıcalıklar gerektirir. Httpcfg.exe hizmetinin altında çalıştığı hesabın ile hizmetin dinleme adreslerini kaydetmek için kullanın ya da yönetici ayrıcalıklarıyla çalışan bir komut isteminden hizmeti başlatın.  
   
 > [!NOTE]
->  Derleme veya herhangi birini çalıştıran önce [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri, gerçekleştirilen mutlaka [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  Derleme veya herhangi bir WCF örnekleri çalıştırmadan önce gerçekleştirilen mutlaka [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aynı makinede örneği çalıştırmak için  
   

@@ -2,11 +2,11 @@
 title: İş akışı izlemeyi yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>İş akışı izlemeyi yapılandırma
 Bir iş akışı üç şekilde çalıştırabilirsiniz:  
@@ -46,7 +46,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>İzleme iş akışı hizmeti yapılandırma  
- Bir iş akışı olarak kullanıma sunulabilecek bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti barındırılan olduğunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmet ana bilgisayarı. <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir iş akışı tabanlı hizmet için özelleştirilmiş bir .NET ServiceHost uygulama işlemidir. Bu bölümde, izleme için yapılandırmak açıklanmaktadır bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti çalışır durumda <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bir Web.config dosyası (bir Web barındırılan hizmeti) veya bir App.config dosyası (bir konsol uygulaması gibi tek başına bir uygulamadaki barındırılan hizmeti) yoluyla bir hizmet davranışı belirterek veya bu kod aracılığıyla bir izleme özgü davranış ekleyerek yapılandırıldığı <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> hizmet ana bilgisayarı koleksiyonu.  
+ Bir iş akışı içinde barındırılan bir WCF hizmeti olarak verilebilen <xref:System.ServiceModel.Activities.WorkflowServiceHost> hizmet ana bilgisayarı. <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir iş akışı tabanlı hizmet için özelleştirilmiş bir .NET ServiceHost uygulama işlemidir. Bu bölümde, izleme için yapılandırmak açıklanmaktadır bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı hizmeti çalışır durumda <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bir Web.config dosyası (bir Web barındırılan hizmeti) veya bir App.config dosyası (bir konsol uygulaması gibi tek başına bir uygulamadaki barındırılan hizmeti) yoluyla bir hizmet davranışı belirterek veya bu kod aracılığıyla bir izleme özgü davranış ekleyerek yapılandırıldığı <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> hizmet ana bilgisayarı koleksiyonu.  
   
  Bir iş akışı hizmeti barındırılan için <xref:System.ServiceModel.WorkflowServiceHost>, ekleyebileceğiniz <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <`behavior`> öğesi aşağıdaki örnekte gösterildiği gibi bir yapılandırma dosyası.  
   

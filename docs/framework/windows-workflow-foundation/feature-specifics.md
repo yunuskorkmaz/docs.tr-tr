@@ -2,17 +2,17 @@
 title: Windows Workflow Foundation özelliğini özellikleri
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özelliğini özellikleri
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] bir dizi özellik Windows Workflow Foundation ekler. Bu belge yeni özelliklerini açıklar ve içinde bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  
   
 ## <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri  
- Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) göndermek ve almak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] akışınızı gelen iletileri.  <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikler WSDL yalnızca standart gibi açık bir Windows Communication Foundation (WCF) hizmet işlemi oluşturmak için kullanılan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] web hizmetleri.  <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF için benzer bir web hizmeti kullanmak için kullanılan <xref:System.ServiceModel.ChannelFactory>; bir **hizmet Başvurusu Ekle** deneyimi mevcut da Workflow Foundation için önceden yapılandırılmış etkinliklerini oluşturur.  
+ Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.ReceiveReply>) iş akışından WCF ileti alıp göndermek için kullanılır.  <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri, yalnızca standart WCF web Hizmetleri gibi WSDL kullanıma sunulan bir Windows Communication Foundation (WCF) hizmet işlemi oluşturmak için kullanılır.  <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF için benzer bir web hizmeti kullanmak için kullanılan <xref:System.ServiceModel.ChannelFactory>; bir **hizmet Başvurusu Ekle** deneyimi mevcut da Workflow Foundation için önceden yapılandırılmış etkinliklerini oluşturur.  
   
 ### <a name="getting-started-with-messaging-activities"></a>Mesajlaşma etkinlikleri ile çalışmaya başlama  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/04/2018
  A `BestPriceFinder` belirli bir rota için en iyi bilet fiyat bulmak için birden çok uçak hizmetlerine hizmetini çağırır.  Bu senaryoyu uygulamaya fiyat durdurmanız, Fiyatlar arka uç hizmetlerinden almak ve en iyi fiyat fiyat istekle yanıtlamak için ileti etkinlikleri kullanmanızı gerektirir.  Bu ayrıca diğer out-of-box etkinlikler en iyi fiyat hesaplanırken için iş mantığını oluşturmaya kullanmanızı gerektirir.  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- <xref:System.ServiceModel.WorkflowServiceHost> Birden çok örneği destekler out-of-box iş akışı ana bilgisayar yapılandırması ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (iş akışları barındırılması için Mesajlaşma kullanmak için gerekli olmayan rağmen) ileti.  Ayrıca Kalıcılık, izleme ve bir dizi hizmet davranışları örneği denetimi ile tümleştirilir.  Olduğu gibi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]'s <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> bir WinForms/konsol/WPF uygulaması veya Windows hizmeti otomatik olarak barındırılan veya (.xamlx dosyası olarak) web barındırılan IIS veya WAS.  
+ <xref:System.ServiceModel.WorkflowServiceHost> (İş akışları barındırılması için Mesajlaşma kullanmak için gerekli olmasa da) destekleyen birden çok örneği, yapılandırma ve WCF ileti out-of-box iş akışı ana bilgisayardır.  Ayrıca Kalıcılık, izleme ve bir dizi hizmet davranışları örneği denetimi ile tümleştirilir.  WCF'ın ' olduğu gibi <xref:System.ServiceModel.ServiceHost>, <xref:System.ServiceModel.WorkflowServiceHost> bir WinForms/konsol/WPF uygulaması veya Windows hizmeti otomatik olarak barındırılan veya (.xamlx dosyası olarak) web barındırılan IIS veya WAS.  
   
 ### <a name="getting-started-with-workflow-service-host"></a>İş akışı hizmeti ana bilgisayarı ile çalışmaya başlama  
   
--   Visual Studio 2010'da, oluşturma bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iş akışı hizmeti uygulaması proje: kullanmak için bu proje ayarlanacaktır <xref:System.ServiceModel.WorkflowServiceHost> bir web barındırma ortamında.  
+-   Visual Studio 2010'da bir WCF iş akışı hizmeti uygulaması projesi oluşturma: kullanmak için bu proje ayarlanacaktır <xref:System.ServiceModel.WorkflowServiceHost> bir web barındırma ortamında.  
   
 -   İleti sistemi olmayan bir iş akışı barındırmak için özel bir ekleme <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> iletisini temel alarak örneği oluşturur.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/04/2018
  Bir sipariş işleme iş akışı, yeni sıra oluşturma ve işlemde varolan siparişleri güncelleştirme işlemek için kullanılır.  Bu senaryoyu uygulamaya duyar, iş akışında barındırmak <xref:System.ServiceModel.WorkflowServiceHost> ve mesajlaşma etkinlikleri kullanın.  Dayalı bağıntı gerektirecek `orderId` güncelleştirmeleri doğru iş akışına yapılır emin olmak için.  
   
 ## <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özellikleri bulmak için sabit sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], size yardımcı üzerinde odaklanmıştır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanıcıların aşağıdaki özelliklerle hizmetlerini yapılandırın:  
+ WCF yapılandırma şeması karmaşıktır ve kullanıcıların çoğu ile özellikleri bulmak için sabit sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], biz WCF kullanıcıların aşağıdaki özelliklerle hizmetlerini yapılandırmasına yardımcı odaklanmıştır:  
   
 -   Açık hizmet başına yapılandırması kaldırılıyor. Herhangi bir yapılandırmazsanız \<hizmet > hizmetinizi ve hizmetiniz için öğeleri program aracılığıyla herhangi bir uç nokta tanımlayan değil, ardından uç noktalar kümesi otomatik olarak hizmetiniz bir sözleşme ve hizmeti temel adresi başına eklenir hizmetiniz tarafından uygulanır.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Standart uç noktaları, sabit bir veya daha fazla uç noktası özellikleri (adresi, bağlama ve Sözleşme) için değerleri ve özel özellikleri tanımlamaya izin yeniden kullanılabilir önceden yapılandırılmış uç tanımlayın.  
   
--   Son olarak, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Merkezi Yönetimi yapmanıza izin verir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci yapılandırması, yapılandırma seçtikten veya uygulama etki alanı yükleme zamanını sonra değiştirilen senaryolarda kullanışlıdır.  
+-   Son olarak, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırması, yapılandırma seçtikten veya uygulama etki alanı yükleme zamanını sonra değiştirilen senaryolarda yararlı Merkezi Yönetimi yapmanıza izin verir.  
   
 ### <a name="getting-started"></a>Başlarken  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="simplified-configuration-scenarios"></a>Basitleştirilmiş yapılandırma senaryoları  
   
--   Kullanmaya başlamak bir deneyimli ASMX Geliştirici istediği [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Ancak, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çok karmaşık görünüyor! Bir yapılandırma dosyasında yazma gerekir bu bilgileri nedir? .NET 4'te bir yapılandırma dosyası hiç olmayacak şekilde bile karar verebilirsiniz.  
+-   WCF'ı kullanmaya başlamak bir deneyimli ASMX Geliştirici istemektedir. Ancak, WCF çok karmaşık görünüyor! Bir yapılandırma dosyasında yazma gerekir bu bilgileri nedir? .NET 4'te bir yapılandırma dosyası hiç olmayacak şekilde bile karar verebilirsiniz.  
   
 -   WCF hizmetlerini var olan bir dizi yapılandırmak ve korumak oldukça zor. Yapılandırma dosyası touch son derece tehlikeli XML kodunu satırlık binlerce vardır. Yardım daha kolay yönetilebilir bir şey için bu kodu miktarını azaltmak için gereklidir.  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2018
  Bir kullanıcı için giriş sorulması gerekiyor. Normal koşullar altında Geliştirici gibi bir yöntem çağrısı kullanmak istediğiniz <xref:System.Console.ReadLine%2A> bir kullanıcı giriş için istemek için. Bu kurulum ile kullanıcı bir şey girene kadar program bekler sorunudur. Bu senaryoda, bir zaman aşımı engelleme etkinliğini engellemesini kaldırmak için gereklidir. Yaygın bir senaryo belirli bir süre içinde tamamlanması için bir görev gerektirir biridir. Engelleme etkinliğini aşımından Burada çekme değeri çok ekler bir senaryodur.  
   
 ## <a name="wcf-routing-service"></a>WCF yönlendirme hizmeti  
- Yönlendirme hizmeti genel yazılım nasıl denetlemenizi sağlayan yönlendirici olacak şekilde tasarlanmıştır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]iletileri istemciler ve hizmetler arasında akış.  Yönlendirme hizmeti, hizmetlerinizi, istemcilerden ayırırsınız yapılandırmaları açısından çok özgürlüğü sağlar, destekleyebilir ve hizmetlerinizi barındırmak nasıl değerlendirirken sahip esnekliği sağlar.  .NET 3. 5'da, istemciler ve hizmetler sıkı şekilde bağlı; bir istemci tüm konuşun için gereken ve nerede bulunduğu hizmetleri hakkında bilmeniz gerekiyordu. Ayrıca, .net WCF Framework 3.5 vardı aşağıdaki sınırlamalar:  
+ Yönlendirme hizmeti, bir genel yazılım WCFmessages istemciler ve hizmetler arasında nasıl gerçekleştiğini denetlemek izin veren yönlendirici olacak şekilde tasarlanmıştır.  Yönlendirme hizmeti, hizmetlerinizi, istemcilerden ayırırsınız yapılandırmaları açısından çok özgürlüğü sağlar, destekleyebilir ve hizmetlerinizi barındırmak nasıl değerlendirirken sahip esnekliği sağlar.  .NET 3. 5'da, istemciler ve hizmetler sıkı şekilde bağlı; bir istemci tüm konuşun için gereken ve nerede bulunduğu hizmetleri hakkında bilmeniz gerekiyordu. Ayrıca, .net WCF Framework 3.5 vardı aşağıdaki sınırlamalar:  
   
 -   Bu mantık istemciyi sabit kodlanmış olması gerekiyordu gibi hata işleme karmaşıktı.  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/04/2018
 -   İstemci hatası veya hizmetleri kullanılamama karşı daha sağlam olması için etkinleştirilebilir.  
   
 ## <a name="wcf-discovery"></a>WCF Keşfetme  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bulma, bulma mekanizmasından uygulama altyapınıza eklemenizi sağlayan bir framework teknolojisidir. Hizmetinizi bulunabilmesini sağlamak için bunu kullanın ve Hizmetleri aramak için istemcileri yapılandırın. İstemciler artık sabit olması bitiş noktası ile kodlanmış, uygulama daha sağlam ve hataya dayanıklı hale gerekir. Bulma, uygulamanıza otomatik yapılandırma özellikleri oluşturmak için mükemmel bir platformdur.  
+ WCF bulma, bulma mekanizmasından uygulama altyapınıza eklemenizi sağlayan bir framework teknolojisidir. Hizmetinizi bulunabilmesini sağlamak için bunu kullanın ve Hizmetleri aramak için istemcileri yapılandırın. İstemciler artık sabit olması bitiş noktası ile kodlanmış, uygulama daha sağlam ve hataya dayanıklı hale gerekir. Bulma, uygulamanıza otomatik yapılandırma özellikleri oluşturmak için mükemmel bir platformdur.  
   
  Ürün üstünde WS-bulma standart yerleşik olarak bulunur. Birlikte çalışabilir, genişletilebilir ve genel olarak tasarlanmıştır. Ürün iki çalışma modunu destekler:  
   

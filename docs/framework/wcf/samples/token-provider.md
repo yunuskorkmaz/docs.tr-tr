@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
-Bu örnek, özel bir belirteç sağlayıcısını uygulamak gösterilmiştir. Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı birlikte verilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
+Bu örnek, özel bir belirteç sağlayıcısını uygulamak gösterilmiştir. Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgileri sağladığını için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF de gelir ile bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
   
 -   Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.  
   
--   Kullanıcı ayrıntılarını geldiğinde sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci framework kimlik bilgilerini kullanır.  
+-   Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntılarını sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.  
   
 -   Özel belirteç oluşturuluyorsa.  
   
@@ -108,7 +108,7 @@ Bu örnek, özel bir belirteç sağlayıcısını uygulamak gösterilmiştir. Bi
 </system.serviceModel>  
 ```  
   
- Aşağıdaki adımlar, özel bir belirteç sağlayıcısı geliştirmek ve ile tümleştirmek nasıl gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security çerçevesi:  
+ Aşağıdaki adımlar, özel bir belirteç sağlayıcısı geliştirmek ve WCF güvenlik framework ile tümleştirmek nasıl gösterir:  
   
 1.  Özel bir belirteç sağlayıcısı yazma.  
   

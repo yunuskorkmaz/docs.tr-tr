@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu, ileti günlüğe kaydetme tarafından oluşturulan olayları yanı sıra ileti günlüklerini de sağlanmaktadır hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
@@ -16,7 +16,7 @@ Bu konu, ileti günlüğe kaydetme tarafından oluşturulan olayları yanı sır
 ## <a name="security-concerns"></a>Güvenlik sorunları  
   
 ### <a name="logging-sensitive-information"></a>Hassas bilgileri günlüğe kaydetme  
- Windows Communication Foundation (WCF) uygulamaya özgü üstbilgi ve gövde herhangi bir veri değiştirmez. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca uygulamaya özgü üstbilgileri veya gövde verileri kişisel bilgilerin izlemez.  
+ Windows Communication Foundation (WCF) uygulamaya özgü üstbilgi ve gövde herhangi bir veri değiştirmez. WCF uygulamaya özgü üstbilgileri veya gövde verileri kişisel bilgilerin de izlemez.  
   
  İleti günlüğe kaydetme etkinleştirildiğinde, uygulamaya özgü üstbilgiler, sorgu dize gibi kişisel bilgilerinizi; ve kredi kartı numarası gibi bilgileri gövde, günlüklerde görünür hale gelebilir. Erişim denetimini yapılandırma ve günlük dosyaları uygulama için uygulama dağıtıcı sorumludur. Bu tür bilgilerin görünür olmasını istemiyorsanız günlüğü devre dışı bırakın veya günlükleri paylaşmak istiyorsanız verilerin bir kısmını filtre gerekir.  
   

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Hizmet Kanal Düzeyi Programlama
 Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmadan yazmak açıklar <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve onun ilişkili nesne modeli.  
@@ -28,7 +28,7 @@ Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmad
 5.  Tüm kanal nesneleri kapatın.  
   
 #### <a name="creating-a-binding"></a>Bağlama oluşturma  
- İleti alma ve dinleme ilk adımı, bir bağlama oluşturuyor. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doğrudan bunlardan birini örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları birlikte verilir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  
+ İleti alma ve dinleme ilk adımı, bir bağlama oluşturuyor. WCF doğrudan bunlardan birini örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları ile birlikte gelir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  
   
  Aşağıdaki kod örneği bir örneğini oluşturur <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> ve ekleyen bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> bağlama kanal yığını oluşturmak için kullanılan öğelerinin bir koleksiyonu olan, öğeler koleksiyonuna. Bu örnekte, yalnızca öğe koleksiyonunu sahip olduğundan <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, yalnızca HTTP taşıma kanalı elde edilen kanal yığınına sahiptir.  
   

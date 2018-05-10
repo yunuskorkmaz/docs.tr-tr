@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 4990f14178551d9dccaca0f2899d8dbc4416cdc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-wcf"></a>WCF'yi Genişletme
 Windows Communication Foundation (WCF), değiştirmek ve tam olarak denetlemek için çalışma zamanı bileşenleri genişletmek ve hizmet tabanlı uygulamalar genişletmek sağlar. Bu bölümdeki konular, genişletilebilirlik mimarisi hakkında ayrıntılı gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -26,10 +26,10 @@ Windows Communication Foundation (WCF), değiştirmek ve tam olarak denetlemek i
  Kanal katmanını hizmet modeli katmanını altında bulunur ve exchange istemcileri ve Hizmetleri arasındaki iletilerinin sorumludur. Kanal uzantıları güvenlik gibi yeni protokol işlevselliği uygulayabilirsiniz. Kanal uzantıları SOAP iletilerine taşımak için yeni bir ağ aktarımı uygulama gibi işlevlerini de taşıma.  
   
  [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
- Güvenlik [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarımı güvenliğini (bütünlüğü, gizlilik ve kimlik doğrulaması) erişim denetimi (yetkilendirme) oluşur ve denetim. Bulunan sınıflar `IdentityModel` ad alanı tarafından kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] erişim denetimi için. Güvenlik mimarisini anlama, özel erişim denetimi sistemlerine uyum sağlamak için özel talep türleri oluşturmanıza olanak sağlar.  
+ WCF güvenliğinde oluşur aktarımını erişim denetimi (yetkilendirme) ve Denetim güvenliği (bütünlüğü, gizlilik ve kimlik doğrulaması). Bulunan sınıflar `IdentityModel` ad alanı için erişim denetimi WCF tarafından kullanılır. Güvenlik mimarisini anlama, özel erişim denetimi sistemlerine uyum sağlamak için özel talep türleri oluşturmanıza olanak sağlar.  
   
  [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Meta veri sistemi grubudur sınıflar ve arabirimler hizmet tabanlı uygulamalar uygulamak için gereken meta verileri temsil eder. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimleri yapılandırın.  
+ WCF Meta veri sistemi, sınıflar ve hizmet tabanlı uygulamalar uygulamak için gereken meta verileri temsil eden arabirimler grubudur. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimleri yapılandırın.  
   
  [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Kodlayıcılar ve serileştiricileri verileri bir biçimden diğerine çevir. Bu bölümdeki konular, özel gereksinimleri karşılamak için sağlanan sınıflarını genişletmek nasıl ele almaktadır.  

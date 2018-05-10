@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation Uç Noktaları
-Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişimin *uç noktaları* hizmetinin. Uç noktaları, istemcilerin erişim işlevine sağlar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sunar.  
+Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişimin *uç noktaları* hizmetinin. Uç noktaları istemciler için bir WCF hizmeti sunan işlevlere erişimi sağlar.  
   
  Bir uç nokta oluşturma hakkında bir genel bakış için bkz: [uç noktası oluşturma genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Her uç nokta içerir:  
   
@@ -34,7 +34,7 @@ Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişi
  Bir uç nokta yapısını tanımlar ve varsayılan uç noktalar, bağlamaları ve davranışları kullanmak için çalışma zamanı tarafından sağlanan nasıl bir uç nokta yapılandırması ve kodda, nasıl tanımlanacağı de özetler.  
   
  [Uç Nokta Adresi Belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- Açıklar nasıl ile iletişim bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet bitiş noktalarından oluşur.  
+ Bir WCF Hizmeti ile iletişim uç noktaları yoluyla nasıl gerçekleştiğini açıklar.  
   
  [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Hizmet uç noktası yapılandırması oluşturmak gösterilmiştir.  

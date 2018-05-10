@@ -2,17 +2,17 @@
 title: Hiyerarşik Yapılandırma Modeli
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Hiyerarşik Yapılandırma Modeli
 Bu örnek, hizmetler için yapılandırma dosyalarını hiyerarşisini uygulamak gösterilmiştir. Aynı zamanda, nasıl bağlamaları, hizmet davranışları ve uç nokta davranışları hiyerarşide daha yüksek bir düzeyinden devralınan gösterir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Özellikler geliştirilen için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içinde [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] hiyerarşik yapılandırma modeli iyileştirme. Hiyerarşik yapılandırma modeli örneği olacaktır Machine.config tarafından tanımlanan bir Rootweb.config -> Web.config ->. İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], bu bağlamalar ve yapılandırma hiyerarşideki üst düzey tanımlanan davranışları hizmetlerinize hiçbir açık yapılandırmasıyla eklenir. Bu örnek nasıl bilgisayar veya uygulama düzeyinde tanımlanan yapılandırma öğeleri güvenmek, hizmet yapılandırmasını basitleştirmek olası olduğunu gösterir.  
+ Özellikler geliştirilen içinde WCF için [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] hiyerarşik yapılandırma modeli iyileştirme. Hiyerarşik yapılandırma modeli örneği olacaktır Machine.config tarafından tanımlanan bir Rootweb.config -> Web.config ->. İçinde [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], bu bağlamalar ve yapılandırma hiyerarşideki üst düzey tanımlanan davranışları hizmetlerinize hiçbir açık yapılandırmasıyla eklenir. Bu örnek nasıl bilgisayar veya uygulama düzeyinde tanımlanan yapılandırma öğeleri güvenmek, hizmet yapılandırmasını basitleştirmek olası olduğunu gösterir.  
   
  Bu örnek dokuz Hizmetleri, üç düzeyde hiyerarşi içinde tanımlı oluşur. `Service1` kök dizininde ' dir. `Service2` ve `Service3` varsayılan öğelerinden devralır `Service1`. `Service4`, `Service5`, `Service6` ve `Service7` varsayılan öğeleri devralma hiyerarşisi, üçüncü bir düzeyde tanımlanan `Service3`. Son olarak `Service10` ve `Service11` dördüncü hiyerarşisini düzeyi şunlardır.  
   

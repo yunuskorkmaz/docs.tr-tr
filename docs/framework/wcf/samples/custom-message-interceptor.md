@@ -2,11 +2,11 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir. Özellikle, kanal fabrikaları ve çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri izlemesine kanal dinleyicileri oluşturur özel bağlama öğesi uygulamak nasıl gösterir. Örnek, bir istemci ve bu özel oluşturucuları kullanımını gösteren sunucu de içerir.  
@@ -25,7 +25,7 @@ Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir. Öze
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Örnek kanal Çerçevesi'ni kullanıp aşağıdaki Windows Communication Foundation (WCF) özel bir katmanlı kanal oluşturmak için önerilen yordamı açıklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en iyi uygulamalar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
+ Örnek kanal Çerçevesi'ni kullanıp WCF en iyi uygulamaları izleyerek Windows Communication Foundation (WCF) özel bir katmanlı kanal oluşturmak için önerilen yordamı açıklar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
   
 1.  Kanal şekillerin kanal fabrikası ve kanal dinleyicisi destekleyecek karar verebilirsiniz.  
   

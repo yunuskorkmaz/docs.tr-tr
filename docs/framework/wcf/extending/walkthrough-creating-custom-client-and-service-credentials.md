@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ba6d2016a36809910561543a531dd4d44aac9b9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
 Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve uygulama kodu özel kimlik bilgilerini kullanmayı gösterir.  
@@ -23,12 +23,12 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
  Hem <xref:System.ServiceModel.Description.ClientCredentials> ve <xref:System.ServiceModel.Description.ServiceCredentials> sınıfları devral Özet <xref:System.ServiceModel.Security.SecurityCredentialsManager> döndürmek için sözleşmesini tanımlayan sınıfı <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
- Kimlik bilgileri sınıfları ve nasıl bunların içine sığması hakkında daha fazla bilgi için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik mimarisi bkz [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Kimlik bilgileri sınıfları ve bunlar WCF güvenlik mimariye nasıl uyduğunu hakkında daha fazla bilgi için bkz: [güvenlik mimarisi](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
- Sağlanan varsayılan uygulamaları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan kimlik bilgisi türlerini destekler ve bu kimlik bilgileri türlerde işleyebilen belirteci Yöneticisi güvenlik oluşturun.  
+ WCF'de sağlanan varsayılan uygulamaları sistem tarafından sağlanan kimlik bilgisi türlerini destekler ve bu kimlik bilgileri türlerde işleyebilen belirteci Yöneticisi güvenlik oluşturun.  
   
 ## <a name="reasons-to-customize"></a>Özelleştirme için nedenleri  
- İstemci veya hizmet kimlik bilgisi sınıfları özelleştirmek için birden çok neden vardır. Varsayılan değeri değiştirmek için en önemli gereksinimdir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan kimlik bilgisi türlerini, özellikle aşağıdaki nedenlerle işleme açısından güvenliği davranışını:  
+ İstemci veya hizmet kimlik bilgisi sınıfları özelleştirmek için birden çok neden vardır. Öncelikle sistem tarafından sağlanan kimlik bilgisi türlerini, özellikle aşağıdaki nedenlerle işleme açısından varsayılan WCF güvenliği davranışını değiştirmek için gereksinimdir:  
   
 -   Diğer genişletilebilirlik noktaları kullanarak mümkün olmayan değişir.  
   
@@ -39,7 +39,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
  Bu konu, nasıl uygulanacağı özel istemci ve hizmet kimlik bilgileri ve bunların uygulama kodundan nasıl kullanılacağını açıklar.  
   
 ## <a name="first-in-a-series"></a>Bir dizinin ilk  
- Özel kimlik bilgileri sınıfı oluşturma yalnızca ilk adım, kimlik bilgileri özelleştirme nedenini değiştirmek için açık olduğundan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sağlama kimlik bilgileri, güvenlik belirteci seri hale getirme veya kimlik doğrulaması ile ilgili davranışı. Bu bölümdeki diğer konulara özel serileştiricileri ve Doğrulayıcı nasıl oluşturulacağını açıklar. Bu konuda, özel kimlik bilgileri sınıfı oluşturma ilk serideki konudur. Sonraki Eylemler (özel serileştiricileri ve Doğrulayıcı oluşturma), özel kimlik bilgileri yalnızca oluşturduktan sonra yapılabilir. Bu konu yapı ek konular şunlardır:  
+ Kimlik bilgileri özelleştirme nedeni kimlik bilgileri sağlama, güvenlik belirteci seri hale getirme veya kimlik doğrulaması ile ilgili WCF davranışını değiştirmek için bir özel kimlik bilgileri sınıfı oluşturma yalnızca ilk adımı olduğundan. Bu bölümdeki diğer konulara özel serileştiricileri ve Doğrulayıcı nasıl oluşturulacağını açıklar. Bu konuda, özel kimlik bilgileri sınıfı oluşturma ilk serideki konudur. Sonraki Eylemler (özel serileştiricileri ve Doğrulayıcı oluşturma), özel kimlik bilgileri yalnızca oluşturduktan sonra yapılabilir. Bu konu yapı ek konular şunlardır:  
   
 -   [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
@@ -55,7 +55,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
 2.  İsteğe bağlı. Yeni yöntemleri veya yeni kimlik bilgisi türlerinin özellikleri ekleyin. Yeni kimlik bilgisi türlerinin eklemezseniz, bu adımı atlayın. Aşağıdaki örnek, bir `CreditCardNumber` özelliği.  
   
-3.  Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Bu yöntem otomatik olarak çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel istemci kimlik bilgisi kullanıldığında güvenlik altyapısı. Bu yöntem oluşturma ve uygulaması örneğini döndüren sorumludur <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfı.  
+3.  Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Özel istemci kimlik bilgisi kullanıldığında, bu yöntem WCF güvenlik altyapısı tarafından otomatik olarak çağrılır. Bu yöntem oluşturma ve uygulaması örneğini döndüren sorumludur <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfı.  
   
     > [!IMPORTANT]
     >  Bu dikkate almak önemlidir <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> özel bir güvenlik belirteci yöneticisi oluşturmak için yöntem geçersiz. Güvenlik belirteci yöneticisi türetilen <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, türetilmiş bir özel güvenlik belirteci sağlayıcısı döndürmelidir <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, gerçek güvenlik belirteci oluşturulamadı. Güvenlik belirteçleri oluşturmak için bu deseni uygulamazsanız uygulamanızı yanlış çalışabilir zaman <xref:System.ServiceModel.ChannelFactory> nesneleri önbelleğe alınır (Bu varsayılan davranışı WCF istemci proxy'leri için), bir ayrıcalık yükseltme saldırısı, büyük olasılıkla sonuç. Özel kimlik bilgisi nesnesinin bir parçası olarak önbelleğe <xref:System.ServiceModel.ChannelFactory>. Ancak, özel <xref:System.IdentityModel.Selectors.SecurityTokenManager> belirteci oluşturma mantığı yerleştirilir sürece, bir güvenlik tehdidi azaltır her çağırma oluşturulan <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
@@ -89,7 +89,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
   
- Önceki yordamda uygulama kodu üzerinden istemci kimlik bilgilerini kullanmayı gösterir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uygulama yapılandırma dosyası kullanarak kimlik bilgilerini de yapılandırılabilir. Uygulama Yapılandırması'nı kullanarak genellikle, kaynak, yeniden derlenmesi ve yeniden dağıtım değiştirmek zorunda kalmadan uygulama parametreleri değiştirilmesini sağladığından kodlamak için tercih edilir.  
+ Önceki yordamda uygulama kodu üzerinden istemci kimlik bilgilerini kullanmayı gösterir. WCF kimlik bilgilerini de uygulama yapılandırma dosyası kullanarak yapılandırılabilir. Uygulama Yapılandırması'nı kullanarak genellikle, kaynak, yeniden derlenmesi ve yeniden dağıtım değiştirmek zorunda kalmadan uygulama parametreleri değiştirilmesini sağladığından kodlamak için tercih edilir.  
   
  Sonraki yordam desteklemek için özel kimlik bilgileri yapılandırmasını açıklar.  
   
@@ -108,7 +108,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- Yapılandırma işleyici sınıf olduktan sonra onu içine tümleştirilebilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma framework. Sonraki yordamda gösterildiği gibi istemci uç noktası davranışı öğelerinde kullanılacak özel istemci kimlik bilgileri sağlar.  
+ Yapılandırma işleyici sınıf olduktan sonra WCF yapılandırma Framework'e tümleştirilebilir. Sonraki yordamda gösterildiği gibi istemci uç noktası davranışı öğelerinde kullanılacak özel istemci kimlik bilgileri sağlar.  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Kimlik bilgilerini yapılandırma işleyicisi uygulama yapılandırmasında kaydolun ve özel bir istemci kullanmak için  
   
@@ -146,7 +146,7 @@ Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve 
   
 2.  İsteğe bağlı. Eklenmekte olan kimlik bilgisi için yeni değerleri API'leri sağlamak için yeni özellikler ekleyin. Yeni kimlik bilgileri değerlerini eklemezseniz, bu adımı atlayın. Aşağıdaki örnek, bir `AdditionalCertificate` özelliği.  
   
-3.  Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Bu yöntem otomatik olarak çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] özel istemci kimlik bilgisi kullanıldığında altyapı. Yöntem oluşturma ve uygulaması örneğini döndüren sorumludur <xref:System.IdentityModel.Selectors.SecurityTokenManager> (sonraki yordamda açıklanan) sınıfı.  
+3.  Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Özel istemci kimlik bilgisi kullanıldığında, bu yöntem WCF altyapısı tarafından otomatik olarak çağrılır. Yöntem oluşturma ve uygulaması örneğini döndüren sorumludur <xref:System.IdentityModel.Selectors.SecurityTokenManager> (sonraki yordamda açıklanan) sınıfı.  
   
 4.  İsteğe bağlı. Geçersiz kılma <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> yöntemi. Bu, yalnızca özel istemci kimlik bilgileri kullanımla yeni özellikleri veya iç alanlar ekleyerek, gereklidir.  
   

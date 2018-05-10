@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a4b4dc79b0f0dad661d99fae6377d1c86b673b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
 SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete hata koşulu bilgi hizmet birlikte çalışabilir bir şekilde aktarın. Genellikle bir hizmet özel hata içeriği tanımlar ve hangi işlemleri geri dönebilirsiniz belirtir. (Daha fazla bilgi için bkz: [tanımlama ve belirtme hataları](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Bu konuda ele alınmıştır nasıl bir hizmet ya da çift yönlü istemci bu hataları karşılık gelen hata koşulu oluştu ne zaman ve bir istemci nasıl gönderebilir veya hizmet uygulaması bu hataları işleme. Windows Communication Foundation (WCF) uygulamalarında işleme hatası genel bakış için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -25,26 +25,26 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
  [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
  [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
- İletmek için `GreetingFault` hata bilgilerini istemciye uygun hata durumunu yakalamak ve yeni bir throw <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> türü `GreetingFault` yeni bir `GreetingFault` nesnesi aşağıdaki kod örneğinde olduğu gibi bağımsız değişkeni olarak. İstemci ise bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci uygulaması karşılaştığı bu türünün olduğu yönetilen bir özel durum <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> türü `GreetingFault`.  
+ İletmek için `GreetingFault` hata bilgilerini istemciye uygun hata durumunu yakalamak ve yeni bir throw <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> türü `GreetingFault` yeni bir `GreetingFault` nesnesi aşağıdaki kod örneğinde olduğu gibi bağımsız değişkeni olarak. İstemci bir WCF istemcisi uygulama ise, bu tür olduğu yönetilen bir özel durum karşılaştığı <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> türü `GreetingFault`.  
   
  [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
 ### <a name="sending-undeclared-faults"></a>Bildirilmemiş hataları gönderme  
- Bildirilmemiş hataları gönderme hızla tanılamak ve sorunları hata ayıklamak çok kullanışlı olabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar, ancak bir hata ayıklama aracı olarak kendi yararlılığını sınırlıdır. Daha fazla genel olarak, ne zaman, hata ayıklama önerilir, kullandığınız <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği. Bu değeri true olarak ayarlayın, istemciler bu tür hataları olarak karşılaşıyorsunuz <xref:System.ServiceModel.FaultException%601> özel durum türü <xref:System.ServiceModel.ExceptionDetail>.  
+ Gönderilirken açıklanmamış hataları hızla tanılamak ve hata ayıklama aracı sınırlı olduğu gibi WCF uygulamaları, ancak kendi yararlılığını sorunlarında hata ayıklamak çok kullanışlı olabilir. Daha fazla genel olarak, ne zaman, hata ayıklama önerilir, kullandığınız <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliği. Bu değeri true olarak ayarlayın, istemciler bu tür hataları olarak karşılaşıyorsunuz <xref:System.ServiceModel.FaultException%601> özel durum türü <xref:System.ServiceModel.ExceptionDetail>.  
   
 > [!IMPORTANT]
->  Yönetilen özel durumlar iç uygulama bilgileri kullanıma sunabileceğinden ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` izin verebilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kişisel dahil olmak üzere iç hizmet işlemi özel durumlar hakkında bilgi edinmek için istemciler Kişisel ya da diğer hassas bilgiler.  
+>  Yönetilen özel durumlar iç uygulama bilgileri kullanıma sunabileceğinden ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` kişisel dahil olmak üzere iç hizmet işlemi özel durumlar hakkında bilgi edinmek için WCF istemcileri izin verebilirsiniz Kişisel ya da diğer hassas bilgiler.  
 >   
->  Bu nedenle, ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` yalnızca geçici olarak bir hizmet uygulaması hata ayıklama bir yolu olarak önerilir. İşlenmemiş döndüren bir yöntem yönetilen özel durumları bu şekilde ek olarak, WSDL sözleşmesi içermiyor <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler, bilinmeyen bir SOAP hatası olasılığını beklediğiniz gerekir (döndürülen [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemcileri olarak <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesneler) hata ayıklama bilgilerini düzgün şekilde alınamadı.  
+>  Bu nedenle, ayarı <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> için `true` yalnızca geçici olarak bir hizmet uygulaması hata ayıklama bir yolu olarak önerilir. İşlenmemiş döndüren bir yöntem yönetilen özel durumları bu şekilde ek olarak, WSDL sözleşmesi içermiyor <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler, bilinmeyen bir SOAP hatası olasılığını beklediğiniz gerekir (WCF istemcilere döndürülen <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesneleri) hata ayıklama bilgileri düzgün bir şekilde elde edilir.  
   
- Bildirilmemiş bir SOAP hatası göndermek için throw bir <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesne (diğer bir deyişle, değil genel tür <xref:System.ServiceModel.FaultException%601>) ve dize oluşturucuya geçirin. Bu maruz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci uygulamaları bir atılmış olarak <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> dize olduğu kullanılabilir çağırarak özel durum <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> yöntemi.  
+ Bildirilmemiş bir SOAP hatası göndermek için throw bir <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> nesne (diğer bir deyişle, değil genel tür <xref:System.ServiceModel.FaultException%601>) ve dize oluşturucuya geçirin. Bu bir atılmış olarak WCF istemci uygulamaları için sunulan <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> dize olduğu kullanılabilir çağırarak özel durum <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> yöntemi.  
   
 > [!NOTE]
 >  Dize türünde bir SOAP hatası bildirme ve bu, hizmet olarak throw bir <xref:System.ServiceModel.FaultException%601> tür parametresi olduğu bir <xref:System.String?displayProperty=nameWithType> dize değeri atandığı <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> özelliği ve kullanılamaz <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-faults"></a>Hata işleme  
- İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemciler, istemci uygulamalarının ilgi iletişim sırasında oluşan SOAP hataları yönetilen özel durumlar olarak gerçekleşti. Kullanarak uygulamalar programlarından yürütülmesi sırasında oluşan birçok özel durumlarını varken [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci programlama modeli iletişim sonucu olarak aşağıdaki iki türlerde özel durumları işleme olasıdır.  
+ WCF istemcileri istemci uygulamaları ilgi iletişim sırasında oluşan SOAP hataları yönetilen özel durumlar olarak oluşturulur. Herhangi bir program yürütülmesi sırasında oluşan çok sayıda özel durumlarını olsa da, WCF istemci programlama modelini kullanan uygulamalar iletişim sonucu olarak aşağıdaki iki türlerde özel durumları işleme bekleyebilirsiniz.  
   
 -   <xref:System.TimeoutException>  
   
@@ -61,7 +61,7 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
  <xref:System.ServiceModel.FaultException%601> özel durumlar istemcide işlemi sözleşmede belirtilen bir arıza yanıt iki yönlü bir işlem olarak alındığında (diğer bir deyişle, bir yöntemle bir <xref:System.ServiceModel.OperationContractAttribute> ile öznitelik <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> kümesine `false`).  
   
 > [!NOTE]
->  Zaman bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true` istemci bu bildirilmemiş karşılaştığında <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler bu belirli bir arıza catch veya işlemek için catch bloğu içinde hata <xref:System.ServiceModel.FaultException>.  
+>  Bir WCF Hizmeti olduğunda <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true` istemci bu bildirilmemiş karşılaştığında <xref:System.ServiceModel.FaultException%601> türü <xref:System.ServiceModel.ExceptionDetail>. İstemciler bu belirli bir arıza catch veya işlemek için catch bloğu içinde hata <xref:System.ServiceModel.FaultException>.  
   
  Genellikle, yalnızca <xref:System.ServiceModel.FaultException%601>, <xref:System.TimeoutException>, ve <xref:System.ServiceModel.CommunicationException> istisnaları istemciler ve hizmetler için ilgi.  
   
@@ -74,13 +74,13 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
  Tek bir işlemle belirtilen hataları herhangi bir sayıda döndürebilir unutmayın. Her hata benzersiz türü ve ayrı ayrı ele alınması gerekir.  
   
 ### <a name="handle-exceptions-when-closing-the-channel"></a>Kanal kapatılırken özel durumları işleme  
- Yukarıdaki açıklama çoğunu sahip başka bir deyişle, uygulama iletileri işleme aşamasında gönderilen hatalarıyla istemci uygulaması işlemleri çağırdığında açıkça istemci tarafından gönderilen iletileri yapmak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi.  
+ Yukarıdaki açıklama çoğunu sahip başka bir deyişle, uygulama iletileri işleme aşamasında gönderilen hatalarıyla istemci uygulaması WCF istemci nesnesi üzerinde işlem çağırdığında açıkça istemci tarafından gönderilen iletileri yapmak.  
   
- Bile yerel nesneleriyle nesne atma yükseltmek ya da geri dönüştürme işlemi sırasında oluşan özel durumlar maske. Kullandığınızda benzer bir şey oluşabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesneleri. Operations çağırdığınızda iletileri kurulan bir bağlantı gönderiyor. Bağlantı düzgün bir şekilde kapatılamaz veya zaten kapatılmış, tüm işlemleri düzgün döndürülen olsa bile kanal kapatma özel durumları atabilirsiniz.  
+ Bile yerel nesneleriyle nesne atma yükseltmek ya da geri dönüştürme işlemi sırasında oluşan özel durumlar maske. Şuna benzer bir WCF istemcisi nesneleri kullandığınızda ortaya çıkabilir. Operations çağırdığınızda iletileri kurulan bir bağlantı gönderiyor. Bağlantı düzgün bir şekilde kapatılamaz veya zaten kapatılmış, tüm işlemleri düzgün döndürülen olsa bile kanal kapatma özel durumları atabilirsiniz.  
   
  Genellikle, istemci nesnesi kanalları aşağıdaki yollardan biriyle kapalı:  
   
--   Zaman [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci nesnesi dönüştürülmeden.  
+-   WCF istemci nesnesi zaman dönüştürülmeden.  
   
 -   İstemci uygulaması çağırdığında <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
@@ -98,7 +98,7 @@ SOAP hatalarının istemciye ve durumda çift yönlü bir istemciden bir hizmete
  Aşağıdaki kod örneğinde bildirilen hata ve bildirilmemiş bir hataya dahil olmak üzere bir temel istemci uygulamasında SOAP hataya özel durumları işleme gösterir.  
   
 > [!NOTE]
->  Bu örnek kod kullanmayan `using` oluşturun. Kanallar kapatma özel durumları throw çünkü uygulamaları oluşturmanız önerilir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ilk ve sonra istemci, kullanım ve Kapat [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aynı try bloğundaki istemci. Ayrıntılar için bkz [WCF istemcisi genel bakış](../../../docs/framework/wcf/wcf-client-overview.md) ve [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+>  Bu örnek kod kullanmayan `using` oluşturun. Kanallar kapatma özel durumları throw çünkü bir WCF istemcisi ilk ve ardından açık kullanımı uygulamalar oluşturun ve Kapat aynı WCF istemcisi deneyin blok önerilir. Ayrıntılar için bkz [WCF istemcisi genel bakış](../../../docs/framework/wcf/wcf-client-overview.md) ve [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  

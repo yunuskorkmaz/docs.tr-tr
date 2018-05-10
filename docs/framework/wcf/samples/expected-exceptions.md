@@ -2,11 +2,11 @@
 title: Beklenen Özel Durumlar
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Beklenen Özel Durumlar
 Bu örnek, bir türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak gösterilmiştir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
@@ -16,9 +16,9 @@ Bu örnek, bir türü belirlenmiş istemci kullanırken beklenen özel durumlar�
   
  Bu örnek yakalama gösterir ve programları düzeltmek iki beklenen özel durum türleri işleme gerekir işlemek: `TimeoutException` ve `CommunicationException`.  
   
- Windows Communication Foundation (WCF) istemci iletişimi yöntemlerden oluşturulan beklenen veya beklenmeyen özel durumlardır. Beklenmeyen özel durumları içerecek yıkıcı hataları gibi `OutOfMemoryException` ve programlama hataları `ArgumentNullException` veya `InvalidOperationException`. Genellikle beklenmeyen hataları, bu nedenle genellikle, değil catch bunları çağrılırken işlemek için kullanışlı bir yolu yoktur bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci iletişim yönteminin.  
+ Windows Communication Foundation (WCF) istemci iletişimi yöntemlerden oluşturulan beklenen veya beklenmeyen özel durumlardır. Beklenmeyen özel durumları içerecek yıkıcı hataları gibi `OutOfMemoryException` ve programlama hataları `ArgumentNullException` veya `InvalidOperationException`. Genellikle beklenmeyen hataları, bu nedenle genellikle, bunları bir WCF istemci iletişim yönteminin çağrılırken catch değil işlemek için kullanışlı bir yolu yoktur.  
   
- Özel durumlar iletişim yöntemleri beklenen bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemcisini içeren `TimeoutException`, `CommunicationException`, ve herhangi bir türetilmiş sınıf `CommunicationException`. Bunlar güvenli bir şekilde durduruluyor tarafından işlenebilir iletişimi sırasında bir sorun gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci ve bir iletişim hatası raporlama. Herhangi bir uygulamada dış etkenler bu hataların neden olabileceğinden, doğru uygulamaları bu özel durumları yakalamak ve bunlar ortaya çıktığında kurtarın.  
+ Bir WCF istemcisi iletişimi yöntemlere özel durumlar dahil beklenen `TimeoutException`, `CommunicationException`, ve herhangi bir türetilmiş sınıf `CommunicationException`. Bunlar, WCF istemcisini durduruluyor ve bir iletişim hatası raporlama güvenli bir şekilde işlenebilir iletişimi sırasında bir sorun gösterir. Herhangi bir uygulamada dış etkenler bu hataların neden olabileceğinden, doğru uygulamaları bu özel durumları yakalamak ve bunlar ortaya çıktığında kurtarın.  
   
  Birkaç türetilmiş sınıfları vardır `CommunicationException` , bir istemci atabilirsiniz. Bazı durumlarda, uygulamaların da özel işleme yapın, ancak diğer kişilerin olarak işlenmesine izin vermek için bunlardan bazıları catch bir `CommunicationException`. Bu ayrıntılı özel durum türü ilk yakalama ve ardından Yakalama gerçekleştirilebilir `CommunicationException` bir sonraki catch yan tümcesinde.  
   

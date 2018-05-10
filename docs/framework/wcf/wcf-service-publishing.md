@@ -2,19 +2,19 @@
 title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
-Windows Communication Foundation (WCF) hizmetini yayımlama yardımcı olur, İleri aşamalara tarafından sağlanan erken geliştirme ortamı'ndan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı ve [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemciye, aslında bir üretim uygulamasını dağıtma Test amacıyla ortamı. Son dağıtım plana kullanmadan önce Windows Communication Foundation (WCF) hizmetini yayımlama doğrulamak için kullanabileceğiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet doğru şekilde gerçekleştirir ve yayımlanmaya hazır. Ayrıca dağıtmayı seçebilirsiniz, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet test etmek için çeşitli hedef konumlara kitaplıkları.  
+Windows Communication Foundation (WCF) hizmetini yayımlama, İleri aşamalara gerçekte test amacıyla bir üretim ortamında uygulamayı dağıtmak için WCF hizmet ana bilgisayarı ve WCF Test istemcisi tarafından sağlanan erken geliştirme ortamından yardımcı olur. Son dağıtım plana kullanmadan önce Windows Communication Foundation (WCF) hizmetini yayımlama, WCF hizmeti doğru bir şekilde gerçekleştirir ve yayımlanmaya hazır olduğunu doğrulamak için kullanabilirsiniz. Test etmek için çeşitli hedef konumlara WCF Hizmeti Kitaplıklarınızı dağıtmayı seçebilirsiniz.  
   
 ## <a name="supported-services-and-target-locations"></a>Desteklenen hizmetler ve hedef konumları  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet yayımlama destekleyen yayımlama [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kümesinden oluşturulan Hizmetleri [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplık şablonları ve aşağıdakiler dahil, karşılık gelen öğe şablonları:  
+ WCF hizmet yayımlama WCF Hizmeti kitaplık şablonları ve şunlardır bunların karşılık gelen öğe şablonları kümesinden oluşturulan yayımlama WCF hizmetleri destekler:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Öğe şablonu şablonla hizmet kitaplığı.  
+-   WCF hizmet kitaplığı şablonu öğesi şablonla.  
   
 -   Dağıtım Hizmeti kitaplığı.  
   
@@ -43,31 +43,31 @@ Windows Communication Foundation (WCF) hizmetini yayımlama yardımcı olur, İl
   
  Kullanabileceğiniz **Yayımla** derleme, yapılandırma ve hedef konumuna proje tanımlanan tüm hizmetler için .svc dosyasını kopyalamak isteyip istemediğinizi belirtin ve hedef konumda mevcut dosyaların üzerine yazabilirsiniz.  
   
- Uygulamanızı yerel IIS dağıtmak isterseniz IIS kurulumu için ilgili hatalarla karşılaşabilirsiniz. IIS düzgün yüklendiğinden emin olun. "Köprü" yazabilirsinizhttp://localhost" http://localhost", tarayıcı ve onay mi IIS varsayılan sayfa başlanan bir uyarıdır.  Bazı durumlarda, sorunları da ASP.NET tarafından kaynaklanıyor olabilir veya [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] IIS'de hatalı kayıt. Visual Studio komut istemi açın ve ASP.NET kayıt sorunlarını gidermek için "aspnet_regiis.exe - ir" komutunu çalıştırın veya düzeltme WCF kayıt sorunları için "ServiceModelReg.exe – ia" komutunu çalıştırın.  
+ Uygulamanızı yerel IIS dağıtmak isterseniz IIS kurulumu için ilgili hatalarla karşılaşabilirsiniz. IIS düzgün yüklendiğinden emin olun. "Köprü" yazabilirsinizhttp://localhost" http://localhost", tarayıcı ve onay mi IIS varsayılan sayfa başlanan bir uyarıdır.  Bazı durumlarda sorunlar Ayrıca, IIS'de ASP.NET veya WCF hatalı kayıt kaynaklanıyor olabilir. Visual Studio komut istemi açın ve ASP.NET kayıt sorunlarını gidermek için "aspnet_regiis.exe - ir" komutunu çalıştırın veya düzeltme WCF kayıt sorunları için "ServiceModelReg.exe – ia" komutunu çalıştırın.  
   
 ## <a name="files-generated-for-publishing"></a>Yayımlama için oluşturulan dosyalar  
- Önce bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet Kitaplığı Web barındırılan olabilir, aracı tarafından oluşturulan aşağıdaki dosyaları: derleme dosyalarını, Web.config dosyasında ve .svc dosya. Tüm dosyalar, hedef konuma kopyalanır. Hizmet sonra yayımlanır.  
+ Web barındırılan bir WCF Hizmeti kitaplığı kullanılabilmesi için öncelikle aşağıdaki dosyaları aracı tarafından oluşturulan: derleme dosyalarını, Web.config dosyasında ve .svc dosya. Tüm dosyalar, hedef konuma kopyalanır. Hizmet sonra yayımlanır.  
   
 ### <a name="assembly-files"></a>Derleme dosyaları  
- Yayımladığınızda bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bu aracı kullanarak hizmet, hizmet otomatik olarak ilk oluşturulur ve derleme dosyalarını oluşturma işleminden sonra hizmet projede oluşturulur.  
+ Bir WCF Hizmeti yayımladığınızda, bu aracı kullanarak hizmet otomatik olarak ilk oluşturulur ve derleme dosyalarını oluşturma işleminden sonra hizmet projede oluşturulur.  
   
 ### <a name="svc-file"></a>. SVC dosyası  
- Yayımlama işlemi *.svc dosyası her biri için oluşturur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] veya değil, bir sürüm doğruluğundan emin olmak için dosyanın var olup olmadığını hizmet. Svc dosyaları iki farklı tür vardır: biri [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplığı ve dağıtım hizmeti kitaplığı ve başka bir sıralı ve Durum makinesi iş akışı hizmeti kitaplığı. Oluşturulan \*.svc dosya hedef konumu kök klasörüne kopyalanır.  
+ Sürüm doğruluğundan emin olmak için veya değil, dosyanın var olup olmadığını yayımlama işlemi her bir WCF hizmeti için bir *.svc dosyası oluşturur. Svc dosyaları iki farklı tür vardır: bir WCF Hizmeti kitaplık ve dağıtım hizmeti kitaplığı ve başka bir sıralı ve Durum makinesi iş akışı hizmeti kitaplığı. Oluşturulan \*.svc dosya hedef konumu kök klasörüne kopyalanır.  
   
 ### <a name="webconfig-file"></a>Web.config dosyası  
  Bir hizmet projesi belirli hedef konuma yayımlanan her seferinde bir Web.config dosyası oluşturulur.  
   
- Oluşturulan Web.config dosyası Web barındırma ve App.config için içeriği için yararlı olan Web bölümleri içerir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aşağıdaki değişiklikleri hizmet kitaplığı:  
+ Oluşturulan Web.config dosyası Web barındırma ve App.config içerik WCF Hizmeti kitaplığı aşağıdaki değişiklikleri için yararlı olan Web bölümleri içerir:  
   
 -   Temel adres dışlandı.  
   
 -   Ayarlarında `<diagnostics>` öğesi, hedef platformu izleme ayarlarını korumak için dışlanır.  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>IIS WCF hizmetleri HTTP olmayan bağlamaları ile yayımlama  
- Daha sonra yayımlayabilirsiniz veya IIS7.0 kullanıyorsanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] IIS HTTP olmayan bağlamalar hizmetleriyle. Bazı öncesi yapılandırmalar yapmanız gerekir. Daha fazla bilgi için lütfen konuları Bkz [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ IIS7.0 kullanıyorsanız veya daha sonra IIS HTTP olmayan bağlamalarla WCF hizmetlerine yayımlayabilirsiniz. Bazı öncesi yapılandırmalar yapmanız gerekir. Daha fazla bilgi için lütfen konuları Bkz [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 ## <a name="security"></a>Güvenlik  
- IIS Yönetici hesabında çalıştıran gerektirdiğinden yayımlama yerel IIS Yönetici ayrıcalığı gerektirir. Yönetici ayrıcalığı olmayan bir kullanıcı açarsa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet yayımlama, IIS bir hedef konum olarak kullanılabilir değil. Dosya sistemi veya FTP sitesi için yayımlama yönetici ayrıcalığı çalışır.  
+ IIS Yönetici hesabında çalıştıran gerektirdiğinden yayımlama yerel IIS Yönetici ayrıcalığı gerektirir. Yönetici ayrıcalığı olmayan bir kullanıcı WCF hizmet yayımlama açılırsa, IIS bir hedef konum olarak kullanılamaz. Dosya sistemi veya FTP sitesi için yayımlama yönetici ayrıcalığı çalışır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)  

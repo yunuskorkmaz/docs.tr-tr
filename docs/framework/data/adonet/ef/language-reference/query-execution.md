@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="query-execution"></a>Sorgu Yürütme
 Bir kullanıcı tarafından bir LINQ Sorgu oluşturulduktan sonra bir komut ağacındaki dönüştürülür. Bir komut ağacındaki bir Entity Framework ile uyumlu bir sorgu gösterimidir. Komut ağacı veri kaynağında sonra yürütülür. Sorgu yürütme sırasında kullanılan ifadeleri sonuç materialization dahil olmak üzere tüm sorgu ifadeleri (diğer bir deyişle, tüm bileşenleri sorgunun) değerlendirilir.  
@@ -17,7 +17,10 @@ Bir kullanıcı tarafından bir LINQ Sorgu oluşturulduktan sonra bir komut ağa
  Hangi noktası sorgu ifadeleri yürütülen adresindeki farklılık gösterebilir. Sorgu değişkeni oluşturulmaz üzerinden, sorgu değişkeni yinelendiğinde LINQ sorgularını her zaman yürütülür. Bu adlı *yürütme ertelenmiş*. Ayrıca, sorgu sonuçları önbelleğe alma işlemi için yararlı olan hemen yürütmek için bir sorgu zorlayabilirsiniz. Bu, bu konunun ilerleyen bölümlerinde açıklanan.  
   
  Bir LINQ to Entities sorgusunda yürütüldüğünde, bazı sorgu ifadelerinde sunucu üzerinde çalıştırılan ve bazı bölümleri istemci üzerinde yerel olarak yürütülen. Sunucuda sorgu yürütülmeden önce istemci tarafı bir ifadenin değerlendirmesine gerçekleşir. İstemcide bir ifadenin, sorgu ifadesinde için bu değerlendirme sonucu yerine ve sorgu sonra sunucu üzerinde çalıştırılabilir. Sorgu veri kaynağı üzerinde çalıştırıldığı için veri kaynağı yapılandırması istemci belirtilen davranışı geçersiz kılar. Örneğin, null değer işleme ve sayısal duyarlık sunucu ayarlarını bağlıdır. Sunucuda sorgu yürütme sırasında karşılaşılan özel durumlar doğrudan kadar istemci geçirilir.  
-  
+ 
+> [!TIP]
+> Sorgu işleçleri, hızlı bir şekilde bir işlecin yürütme davranışını tanımlamanıza olanak tanır, tablo biçiminde kullanışlı bir özeti için bkz: [Sınıflandırma, standart sorgu işleçleri şekilde, yürütme (C#) tarafından](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+
 ## <a name="deferred-query-execution"></a>Ertelenmiş sorgu yürütme  
  Değerleri dizisi döndüren bir sorgu, sorgu değişkeni hiçbir zaman sorgu sonuçlarını tutar ve yalnızca sorgu komutları depolar. Sorgunun içinde üzerinden sorgu değişkeni yinelendiğinde kadar ertelenmiş bir `foreach` veya `For Each` döngü. Bu olarak bilinir *yürütme ertelenmiş*; diğer bir deyişle, sorgu yürütme süre sorgu oluşturulan sonra oluşur. Bu sorgu için istediğiniz kadar sık yürütebilir anlamına gelir. Örneğin, diğer uygulamalar tarafından güncelleştirilmiş bir veritabanı varsa, bu yararlıdır. Uygulamanızda güncelleştirilmiş bilgileri her zaman döndürme en son bilgiler almak ve sorguyu tekrar tekrar yürütmek için bir sorgu oluşturabilirsiniz.  
   

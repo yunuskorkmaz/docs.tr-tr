@@ -2,11 +2,11 @@
 title: Adres Üstbilgileri
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>Adres Üstbilgileri
 Adres üstbilgileri örnek istemciler Windows Communication Foundation (WCF) kullanarak bir hizmet için başvuru parametreleri nasıl geçirebilirsiniz gösterir.  
@@ -14,9 +14,9 @@ Adres üstbilgileri örnek istemciler Windows Communication Foundation (WCF) kul
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
- WS-adresleme belirtimi bir uç nokta başvuru kavramı belirli bir Web Hizmeti uç noktası adresi için bir yol olarak tanımlar. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uç nokta başvuruları Modellenen kullanarak `EndpointAddress` sınıfı - `EndpointAddress` adres alanının türü `ServiceEndpoint` sınıfı.  
+ WS-adresleme belirtimi bir uç nokta başvuru kavramı belirli bir Web Hizmeti uç noktası adresi için bir yol olarak tanımlar. Kullanarak uç nokta başvuruları Modellenen WCF içinde `EndpointAddress` sınıfı - `EndpointAddress` adres alanının türü `ServiceEndpoint` sınıfı.  
   
- Uç nokta başvuru modeli her başvuru fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir parçasıdır. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bu başvuru parametreleri örnekleri olarak Modellenen `AddressHeader` sınıfı.  
+ Uç nokta başvuru modeli her başvuru fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir parçasıdır. Örnekleri olarak Modellenen WCF, bu başvuru parametreleri `AddressHeader` sınıfı.  
   
  Bu örnekte, istemci başvuru parametresi ekler `EndpointAddress` istemci uç noktası. Hizmet için bu başvuru parametresi arar ve onun "Hello" hizmet işlemi mantığında değerini kullanır.  
   

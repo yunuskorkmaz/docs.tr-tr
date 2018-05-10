@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemlerini çağırma anlatılmaktadır.  
   
- Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. Windows Communication Foundation (WCF) hizmetlerini ve istemciler katılmak düzeylerinde sağlayan iki ayrı uygulama zaman uyumsuz işlem çağrılarında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] verimliliği en üst düzeye çıkarmak için daha fazla esneklik dengeli karşı uygulamalar Etkileşim.  
+ Yöntem çağrısının çalışırken yararlı iş yapmadan devam etmek uygulama sağladığından birçok uygulamaları yöntemleri zaman uyumsuz olarak çağırır. Windows Communication Foundation (WCF) hizmetlerini ve istemcilerin zaman uyumsuz işlem çağrıları düzeylerinde WCF uygulamaları karşı etkileşim dengeli verimliliği en üst düzeye çıkarmak için daha fazla esneklik sağlayan iki ayrı uygulama katılabilir .  
   
 ## <a name="types-of-asynchronous-operations"></a>Zaman uyumsuz işlemleri türleri  
- Tüm hizmet sözleşmelerinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Hayır parametre türleri önemli ve dönüş değerleri, kullanma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti ile istemci arasında belirli ileti değişim deseni belirtmek için öznitelikler. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] otomatik olarak uygun hizmet işlemi için gelen ve giden iletileri yönlendiren veya istemci kodu çalıştırıyor.  
+ Tüm hizmet olsun parametre türü WCF içinde sözleşmeler ve dönüş değerleri, WCF öznitelikleri hizmeti ile istemci arasında belirli ileti değişim deseni belirtmek için kullanın. WCF gelen ve giden iletileri uygun hizmet işlemi ya da çalışan istemci kodu otomatik olarak yönlendirir.  
   
  İstemci, yalnızca belirli bir işlem için ileti değişim deseni belirtir hizmet sözleşmesini sahip olur. Temel alınan ileti değişim deseni gözlenir sürece istemciler Geliştirici tercih ettikleri, herhangi bir programlama modeli sunabilir. Belirtilen ileti deseni gözlenir sürece bu nedenle, çok, hizmetleri işlemleri herhangi bir biçimde uygulayabilirsiniz.  
   
- Hizmet bağımsızlığı sözleşme herhangi birinden hizmet veya istemci uygulaması sağlayan zaman uyumsuz yürütme aşağıdaki biçimlerden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar:  
+ Hizmet sözleşmesi bağımsızlığı hizmet veya istemci uygulamadan WCF uygulamaları zaman uyumsuz yürütme aşağıdaki biçimlerden sağlar:  
   
 -   İstemcilerin zaman uyumsuz olarak zaman uyumlu ileti exchange kullanarak istek/yanıt işlemleri çağırabilirsiniz.  
   
@@ -147,7 +147,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  <xref:System.ServiceModel.OperationContractAttribute> Özniteliği yalnızca uygulanan `BeginDoWork` yöntemi. Adlı bir WSDL işleminde ortaya çıkan sözleşmeyi var `DoWork`.  
   
 ### <a name="client-side-asynchronous-invocations"></a>İstemci tarafı zaman uyumsuz çağrıları  
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci uygulamasının daha önce açıklanan üç zaman uyumsuz çağırma modellerinden herhangi biri kullanabilirsiniz  
+ Bir WCF istemci uygulamasının daha önce açıklanan üç zaman uyumsuz çağırma modellerinden herhangi biri kullanabilirsiniz  
   
  Görev tabanlı modeli kullanılırken, yalnızca aşağıdaki kod parçacığında gösterildiği gibi bekleme anahtar kullanarak işlemini çağırın.  
   
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Bu yapıldığında, Svcutil.exe oluşturan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci sınıfı olay altyapısıyla uygulamak ve yanıtını alma ve uygun eylemi gerçekleştirin olay işleyici atamak çağıran uygulama sağlar. Tam bir örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Bu yapıldığında, Svcutil.exe WCF istemci sınıfı uygulamak ve yanıtını alma ve uygun eylemi gerçekleştirin olay işleyici atamak çağrı yapan uygulamanın sağlayan olay alt yapısı oluşturur. Tam bir örnek için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
- Olay tabanlı zaman uyumsuz modeli, ancak yalnızca kullanılabilir [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Ayrıca, bile desteklenmez [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] zaman bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci kanalı kullanılarak tarafından oluşturulan bir <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. İle [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci kanal nesneleri, kullanmalısınız <xref:System.IAsyncResult?displayProperty=nameWithType> nesneleri işlemlerinizin zaman uyumsuz olarak çağırma. Bu yaklaşımı kullanmak için belirtmek **/async** komut seçeneğiyle [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), aşağıdaki örnekte olduğu gibi.  
+ Olay tabanlı zaman uyumsuz modeli, ancak yalnızca kullanılabilir [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Ayrıca, bile desteklenmez [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] bir WCF istemcisi kanalını oluşturulduğunda kullanarak bir <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. WCF istemci kanalı nesneleriyle kullanmalısınız <xref:System.IAsyncResult?displayProperty=nameWithType> nesneleri işlemlerinizin zaman uyumsuz olarak çağırma. Bu yaklaşımı kullanmak için belirtmek **/async** komut seçeneğiyle [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), aşağıdaki örnekte olduğu gibi.  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

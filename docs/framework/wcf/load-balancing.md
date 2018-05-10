@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>YükDengeleme
-Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak için bir bunları bir yük dengeli sunucu grubunda dağıtarak ölçeklendirmek için yoludur. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamalar, donanım tabanlı Yük Dengeleme cihazları yanı sıra, standart Yük Dengeleme yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere teknikler kullanılarak Yük Dengeleme olabilir.  
+Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak için bir bunları bir yük dengeli sunucu grubunda dağıtarak ölçeklendirmek için yoludur. WCF uygulamaları teknikler, yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere standart dengelemesini yanı sıra donanım tabanlı Yük Dengeleme cihazları kullanılarak Yük Dengeleme olabilir.  
   
- Aşağıdaki bölümlerde Yük Dengeleme konuları ele [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çeşitli sistem tarafından sağlanan bağlamalar kullanılarak oluşturulan uygulamalar.  
+ Aşağıdaki bölümlerde, Yük Dengeleme çeşitli sistem tarafından sağlanan bağlamalar kullanılarak oluşturulan WCF uygulamalar için konuları açıklanmaktadır.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Yük Dengeleme ile temel HTTP bağlama  
- Yük Dengelemesi, açısından [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kullanarak iletişim kuran uygulamaları <xref:System.ServiceModel.BasicHttpBinding> HTTP ortak başka türlerde ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) daha hiç farklı değildir. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Bu bağlamayı kullanan kanallar kendiliğinden durum bilgisiz ve kanal kapandığında kendi bağlantılarını sonlandırılacak. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
+ Yük Dengeleme, kullanarak iletişim kuran WCF uygulamaları perspektifinden <xref:System.ServiceModel.BasicHttpBinding> HTTP ortak başka türlerde ağ trafiği (statik HTML içeriğini, ASP.NET sayfaları veya ASMX Web Hizmetleri) daha hiç farklı değildir. Bu bağlamayı kullanan WCF kanalları kendiliğinden durum bilgisiz ve kanal kapandığında kendi bağlantılarını sonlandırılacak. Bu nedenle, <xref:System.ServiceModel.BasicHttpBinding> teknikleri de var olan HTTP Yük Dengeleme ile çalışır.  
   
  Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> iletileri ile bir bağlantı HTTP üstbilgisi gönderir bir `Keep-Alive` bunları destekleyen hizmetler kalıcı bağlantı için istemcileri etkinleştirir değeri. Bu yapılandırma, bağlantıları aynı sunucuya sonraki ileti göndermek için yeniden kullanılabilir daha önce kurulmuş olduğundan Gelişmiş üretimi sunar. Ancak, bağlantı yeniden istemcilerin hepsini bir kez deneme yük dengeleme verimliliğini azaltır yük dengeli grubu içindeki belirli bir sunucuya kesinlikle ilişkili hale gelmesine neden olabilir. Bu davranış istenmeyen, ise HTTP `Keep-Alive` kullanarak sunucu üzerinde devre dışı bırakılabilir <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliği ile bir <xref:System.ServiceModel.Channels.CustomBinding> veya kullanıcı tanımlı <xref:System.ServiceModel.Channels.Binding>. Aşağıdaki örnek Yapılandırması'nı kullanarak bunu kullanmayı gösterir.  
   

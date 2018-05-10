@@ -2,11 +2,11 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adı Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6.0 gibi COM tabanlı geliştirme ortamlara Web services tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows Script Host istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmeti bir hesaplama hizmetidir ve COM istemcisi matematik işlemleri çağırır — ekleme, çıkarma, çarpma ve bölme — hizmet üzerinde. İstemci etkinliği ileti kutusu pencerelerinde görünür olur.  
@@ -99,7 +99,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu bir COM istemcisi ile iletişim kurmak için yazılan ad kullanarak COM çağrıları yapma gösterir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Kullanımı COM rağmen istemci uygulamasında, yalnızca Web hizmeti çağrıları hizmet ile iletişim oluşur.  
+ İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu bir WCF Hizmeti ile iletişim kurmak için yazılan ad kullanarak COM çağrıları yapma COM istemcisi gösterir. Kullanımı COM rağmen istemci uygulamasında, yalnızca Web hizmeti çağrıları hizmet ile iletişim oluşur.  
   
 ## <a name="wsdl-contract"></a>WSDL sözleşme  
  Ad WSDL sözleşme ile kullanmak için istemci kitaplığı kayıt gerekli değil ancak hizmet WSDL sözleşmesini hizmeti WSDL uç noktasına erişmek için bir tarayıcı kullanarak gibi bir bant dışı mekanizması aracılığıyla alınması gerekir. Ad, daha sonra bu sözleşme, yürütme esnasında erişebilirsiniz.  
@@ -135,7 +135,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   Ad alanı sözleşmenin ve adını. WSDL birden fazla sözleşme içerebileceğinden bu kimliği gereklidir.  
   
     > [!NOTE]
-    >  Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmetleri her ad alanı için ayrı bir WSDL dosyalarını oluşturmak, kullanın. Bunlar WSDL içe aktarma yapı kullanımı ile bağlanır. Tek bir WSDL tanımı ad beklediği için bu örnekte gösterildiği gibi hizmet ya da tek bir ad alanı kullanmalısınız veya ayrı dosyalarını el ile birleştirilmesi gerekir.  
+    >  Varsayılan olarak, her ad alanı için ayrı WSDL dosyası WCF hizmetleri oluşturmak, kullanın. Bunlar WSDL içe aktarma yapı kullanımı ile bağlanır. Tek bir WSDL tanımı ad beklediği için bu örnekte gösterildiği gibi hizmet ya da tek bir ad alanı kullanmalısınız veya ayrı dosyalarını el ile birleştirilmesi gerekir.  
   
  Hizmet adının proxy örneğiyle oluşturulmamalıdır istemci uygulaması, karşılık gelen hizmet işlemlerini çağırma hizmet bilinen adı altyapısında sonuçları proxy yöntemleri çağırabilir.  
   
@@ -144,7 +144,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu ad ile iletişim kurmak için bir WSDL sözleşmeyle kullanarak COM çağrıları yapma COM istemcisi gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu ad, bir WCF Hizmeti ile iletişim kurmak için WSDL sözleşmeyle kullanarak COM aramaları yapmadan COM istemcisi gösterir.  
   
 ## <a name="metadata-exchange-contract"></a>Meta veri değişimi sözleşme  
  WSDL sözleşme olarak bilinen ad MEX sözleşme ile kullanmak için istemci kayıt gerekli değil. Hizmet sözleşmesini meta veri değişimi iç kullanımı aracılığıyla yürütme zamanında alınır.  
@@ -179,7 +179,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu ad ile iletişim kurmak için MEX sözleşmeyle kullanarak COM çağrıları yapma COM istemcisi gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ İşlem yanıtı örneği çalıştırdığınızda, Windows Script Host ileti kutusu penceresinde görüntülenir. Bu ad, bir WCF Hizmeti ile iletişim kurmak için MEX sözleşmeyle kullanarak COM aramaları yapmadan COM istemcisi gösterir.  
   
 #### <a name="to-set-up-and-build-the-sample"></a>Ayarlamak ve örneği oluşturmak için  
   

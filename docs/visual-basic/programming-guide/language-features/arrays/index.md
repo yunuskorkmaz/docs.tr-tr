@@ -1,11 +1,6 @@
 ---
 title: Visual Basic'de Diziler
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 Bir dizi olarak ifade edilmektedir değerler kümesidir *öğeleri*, mantıksal olarak ilgili diğer için. Örneğin, bir dizi dilbilgisi Okul içinde her düzeyde öğrencinin sayısının oluşabilir; Dizideki her öğe tek bir düzeyde öğrencinin sayısıdır. Benzer şekilde, bir dizi bir sınıf için öğrencinin dereceleri oluşur; her dizinin tek bir düzeyde öğedir.    
@@ -165,7 +159,7 @@ Tek boyutlu diziler için yapabildiğiniz gibi çok boyutlu bir diziye iç içe 
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- Aşağıdaki örnek kullanarak çok boyutlu bir diziye tekrarlanan bir [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) deyimi. <xref:System.Array.GetUpperBound%2A> Yöntemi boyut belirten bir parametre vardır. `GetUpperBound(0)`ilk boyut, en yüksek dizinini döndürür ve `GetUpperBound(1)` ikinci boyutu en yüksek dizinini döndürür.
+ Aşağıdaki örnek kullanarak çok boyutlu bir diziye tekrarlanan bir [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) deyimi. <xref:System.Array.GetUpperBound%2A> Yöntemi boyut belirten bir parametre vardır. `GetUpperBound(0)` ilk boyut, en yüksek dizinini döndürür ve `GetUpperBound(1)` ikinci boyutu en yüksek dizinini döndürür.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -325,10 +319,10 @@ Bu durumda kaynak diziler tüm küçük olduğundan, biz her yeni bir dizi öğe
 |[Visual Basic'de dizi boyutları](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|Rank ve boyutları dizilerde açıklanmaktadır.|  
 |[Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)|Dizilerle ilk değerleri doldurmak açıklar.|  
 |[Nasıl yapılır: Visual Basic'te bir dizi sıralama](../../../../visual-basic/programming-guide/language-features/arrays/how-to-sort-an-array.md)|Dizi öğelerini alfabetik olarak sıralamak gösterilmiştir.|  
-|[Nasıl yapılır: bir diziyi başka diziye atama](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|Kuralları ve bir dizi başka bir dizi değişkenine atamak için adımlar açıklanmaktadır.|  
-|[Dizilerle ilgili sorun giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Dizilerle çalışırken ortaya bazı yaygın sorunlar ele alınmaktadır.|  
+|[Nasıl yapılır: Bir Diziyi Başka Diziye Atama](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|Kuralları ve bir dizi başka bir dizi değişkenine atamak için adımlar açıklanmaktadır.|  
+|[Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Dizilerle çalışırken ortaya bazı yaygın sorunlar ele alınmaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Array?displayProperty=nameWithType>  
- [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [ReDim deyimi](../../../../visual-basic/language-reference/statements/redim-statement.md)
+ [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [ReDim Deyimi](../../../../visual-basic/language-reference/statements/redim-statement.md)

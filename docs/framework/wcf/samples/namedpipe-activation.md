@@ -2,11 +2,11 @@
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 Bu örnek adları Kanallar üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows İşlem Etkinleştirme Hizmeti (WAS) kullanan bir hizmet barındırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve gerektirir [!INCLUDE[wv](../../../../includes/wv-md.md)] çalıştırmak için.  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 2.  Gerçekleştirilen olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-     Ayrıca, yüklemelisiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP olmayan etkinleştirme bileşenleri:  
+     Ayrıca, WCF HTTP olmayan etkinleştirme bileşenleri yüklemeniz gerekir:  
   
     1.  Gelen **Başlat** menüsünde seçin **Denetim Masası**.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
 Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntılarını belirtin nesneleridir. Daha açık belirtmek gerekirse bağlamaları taşımaları, bağlantı biçimlerini (ileti kodlama) ve ilgili uç noktası veya istemci kanalı protokolleri ayrıntılarını tanımlayarak istemci veya hizmet çalışma zamanı oluşturmak için kullanılan yapılandırma bilgilerini içerir. Çalışan bir Windows Communication Foundation (WCF) hizmet oluşturmak için bir bağlama hizmetindeki her uç nokta gerektiriyor. Bu konuda ne bağlamaları, nasıl tanımlanır ve belirli bir bağlama için bir uç nokta nasıl belirtilen açıklanmaktadır.  
@@ -26,15 +26,15 @@ Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntı
  İleti kodlama, örneğin, text/XML, ikili veya ileti iletim en iyi duruma getirme mekanizmasını (iletileri bayt akışları hattaki olarak nasıl temsil edildiğini belirleyen MTOM), belirler.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] çoğu uygulama gereksinimleri ve senaryolarını kapsamak üzere tasarlanmış sistem tarafından sağlanan bağlamaları kümesi içerir. Aşağıdaki sınıflar sistem tarafından sağlanan bağlamalar bazı örnekleri temsil eder:  
+ WCF çoğu uygulama gereksinimleri ve senaryolarını kapsamak üzere tasarlanmış sistem tarafından sağlanan bağlamaları kümesi içerir. Aşağıdaki sınıflar sistem tarafından sağlanan bağlamalar bazı örnekleri temsil eder:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: WS uyumlu Web hizmetlerine bağlanmak için uygun bağlama bir HTTP protokolü-ı temel Profil 1.1 belirtimini (örneğin, [ASMX] ASP.NET Web Hizmetleri-services tabanlı).  
   
 -   <xref:System.ServiceModel.WSHttpBinding>: Web'e uygun Uç noktalara bağlanmak için uygun bağlama bir HTTP protokol belirtimleri protokolleri Hizmetleri.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Diğer bağlanmak için .NET ikili kodlama ve kanal taşıma adlı Windows ile birlikte teknolojileri çerçeveleme kullandığı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bitiş noktaları aynı makine üzerindeki.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Diğer WCF Bitiş noktaları aynı makineye bağlanmak için .NET ikili kodlama ve kanal taşıma adlı Windows ile birlikte teknolojileri çerçeveleme kullanır.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Kullandığı .NET ikili kodlama ve teknolojileri iletisi oluşturmak için Queuing (MSMQ olarak da bilinir) ile birlikte çerçeveleme kuyruğa ileti diğer bağlantılarla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uç noktaları.  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Diğer WCF uç noktaları ile kuyruğa alınan iletinin bağlantılar oluşturmak için .NET ikili kodlama ve Message Queuing (MSMQ olarak da bilinir) ile birlikte teknolojileri çerçeveleme kullanır.  
   
  Açıklamalarını, sistem tarafından sağlanan bağlamalar tam bir listesi için bkz: [System-Provided bağlamaları](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Bağlamaları bir bitiş noktasına bağlanmak için gereken iletişim ayrıntı
 2.  Bu bağlamayı kullanan bir uç nokta oluşturun.  
   
 ## <a name="code-and-configuration"></a>Kod ve yapılandırma  
- Tanımlayın veya kod veya yapılandırma aracılığıyla bağlamaları yapılandırın. Bu iki yaklaşım, örneğin, bir sistem tarafından sağlanan kullanıp kullanmadığınızı veya kullanılabilir bağlama türünü bağımsız <xref:System.ServiceModel.Channels.CustomBinding> bağlama. Derlediğinizde genel olarak, kod kullanarak, bir bağlama tanımı üzerinde tam denetim sağlar. Yapılandırma, diğer yandan kullanarak sağlayan bir sistem yöneticisi veya kullanıcısı bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet veya istemci bağlamaları parametrelerini değiştirin. Bu esneklik genellikle belirli bir makine gereksinimlerini tahmin etmek ve koşullar, ağ yolu olduğundan tercih edilir. bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamasıdır dağıtılacak. Koddan bağlayıcı (ve adresleme) bilgi ayırarak yeniden derleyin veya uygulamayı yeniden dağıtmak zorunda kalmadan bağlama ayrıntıları değiştirmek Yöneticiler sağlar. Bağlama kodda tanımlanmış olması durumunda, yapılandırma dosyasında yapılan tüm yapılandırma temelli tanımları üzerine yazılacağını unutmayın. Bu yaklaşım örnekler için aşağıdaki konulara bakın:  
+ Tanımlayın veya kod veya yapılandırma aracılığıyla bağlamaları yapılandırın. Bu iki yaklaşım, örneğin, bir sistem tarafından sağlanan kullanıp kullanmadığınızı veya kullanılabilir bağlama türünü bağımsız <xref:System.ServiceModel.Channels.CustomBinding> bağlama. Derlediğinizde genel olarak, kod kullanarak, bir bağlama tanımı üzerinde tam denetim sağlar. Yapılandırma, kullanma diğer yandan, bir sistem yöneticisi veya bir WCF hizmeti veya bağlamaları parametreleri değiştirmek için istemci kullanıcı sağlar. Belirli bir makine gereksinimlerini tahmin etmek ve içine dağıtılacak bir WCF uygulaması'nın koşulları ağ mümkün olduğundan bu esneklik genellikle iyi bir şeydir. Koddan bağlayıcı (ve adresleme) bilgi ayırarak yeniden derleyin veya uygulamayı yeniden dağıtmak zorunda kalmadan bağlama ayrıntıları değiştirmek Yöneticiler sağlar. Bağlama kodda tanımlanmış olması durumunda, yapılandırma dosyasında yapılan tüm yapılandırma temelli tanımları üzerine yazılacağını unutmayın. Bu yaklaşım örnekler için aşağıdaki konulara bakın:  
   
 -   [Nasıl yapılır: yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) kod içinde bir bağlaması oluşturma bir örnek sağlar.  
   

@@ -2,11 +2,11 @@
 title: Uygulamanızda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uygulamanızda Sorun Giderme için İzleme Kullanma
 Bu bölüm nasıl izleme uygulamanızda sorun giderme için kullanabileceğiniz açıklayan çeşitli konuları içerir.  
@@ -19,13 +19,13 @@ Bu bölüm nasıl izleme uygulamanızda sorun giderme için kullanabileceğiniz 
  Hizmet izleme Görüntüleyicisi aracı görüntülemek, bağıntılı ve izleme verileri çözümlemek için nasıl kullanabileceğinizi açıklar.  
   
  [Önemli İzlemeler](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Önemli izlemeler tarafından gösterilen listesini [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Önemli izlemeler WCF tarafından gösterilen listesi.  
   
  [İstemcide Hata Ayıklama](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  İstemcilerin uygulamanızda hata ayıklama olanak sağlar.  
   
  [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- E2E için kullanılan izlemeleri açıklar [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] senaryolarında, örneğin, zaman uyumlu wsHttp istek-yanıt ve zaman uyumsuz TCP tek yönlü istekleri.  
+ Örneğin E2E WCF senaryoları için kullanılan izlemeleri, zaman uyumlu wsHttp istek-yanıt ve zaman uyumsuz TCP tek yönlü isteklerini açıklar.  
   
  [Kullanıcı Kodu İzlemeleri Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Tanılama amaçla ve WCF izlemeleri ile bağıntı daha sonra kullanılmak üzere izleme verileri proaktif olarak oluşturabilmesi için program aracılığıyla içinde kullanıcı kodu izleri yayma açıklar.  

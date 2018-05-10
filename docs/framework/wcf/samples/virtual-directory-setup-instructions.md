@@ -2,11 +2,11 @@
 title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
 Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörüne eşlenmiş servicemodelsamples adlı ortak bir sanal dizini paylaşmak üzere tasarlanmıştır.  
@@ -35,12 +35,12 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
 7.  **Tamam**'ı tıklatın. Web uygulaması şimdi WCF örnekleri oluşturulur.  
   
     > [!NOTE]
-    >  Bu görevi yalnızca bir kez, çünkü gerçekleştirilmesi gereken tüm [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri aynı servicemodelsamples Web uygulaması kullanın.  
+    >  Tüm WCF örnekleri aynı servicemodelsamples Web uygulaması kullandığından bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
   
     > [!NOTE]
     >  Bu belge, amacıyla terimi `virtual directory` ile çalışır `Web application`.  
   
-     Sanal dizin oluşturmaya ek olarak, özelliklerini etkinleştirmek için de ayarlamalısınız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalıştırmak için hizmetleri. Ayrıntılar için aşağıya bakın.  
+     Sanal dizin oluşturmaya ek olarak, WCF hizmetlerini çalışacak şekilde etkinleştirmek için özellikleri de ayarlamanız gerekir. Ayrıntılar için aşağıya bakın.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>IIS 5.1 veya 6.0 bir sanal dizin oluşturmak için  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
 4.  Sihirbazı'nda yazın `servicemodelsamples` oluşturmakta olduğunuz sanal dizin için diğer ad olarak.  
   
-5.  Yolun % SystemDrive%\inetpub\wwwroot\servicemodelsamples ayarlayın. Çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri hizmeti yürütülebilir dosyaları yapılandırıldığında bu konuma kopyalayın.  
+5.  Yolun % SystemDrive%\inetpub\wwwroot\servicemodelsamples ayarlayın. WCF örnekleri çoğu hizmeti yürütülebilir dosyaları yapılandırıldığında bu konuma kopyalayın.  
   
 6.  **İleri**'ye tıklayın.  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
 8.  Tıklatın **sonraki**ve ardından **son** Sihirbazı tamamlayın.  
   
     > [!NOTE]
-    >  Bu görevi yalnızca bir kez çünkü gerçekleştirilmesi gereken tüm [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnekleri aynı servicemodelsamples sanal dizini kullanır.  
+    >  Tüm WCF örnekleri aynı servicemodelsamples sanal dizin kullandığından bu görevi yalnızca bir kez gerçekleştirilmesi gerekir.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Ek sanal dizin özellikleri IIS 7.0 veya 7.5 ayarlamak için  
   

@@ -2,11 +2,11 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dc8cc2a3c6d9178f6507c87ae512a8929bd1380
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak gösterilmiştir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırdığı bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satınalma siparişi durumunu izlemek için konsola çıkarır.  
@@ -19,11 +19,11 @@ Bu örnek, bir iletiyi kuyruktan okunur uygulamaların Windows İşlem Etkinleş
 >   
 >  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  Bu dizin mevcut değilse, Windows Communication Foundation (WCF) köprü için Git "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm indirmek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, Windows Communication Foundation (WCF) köprü için Git "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" ve Windows Workflow Foundation (WF) örnekleri [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] tüm WCF indirmeyi ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows İşlem Etkinleştirme Hizmeti (WAS), yeni bir işlem etkinleştirme mekanizmasıdır için [!INCLUDE[lserver](../../../../includes/lserver-md.md)], daha önce yalnızca HTTP tabanlı uygulamalara HTTP olmayan protokolleri kullanan uygulamalar için kullanılabilen IIS benzeri özellikleri sağlar. Windows Communication Foundation (WCF) tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için Dinleyici Bağdaştırıcısı arabirimi kullanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]TCP, Adlandırılmış Kanallar ve MSMQ gibi. HTTP olmayan protokolleri isteklerini almak için işlevselliği SMSvcHost.exe içinde çalışan yönetilen Windows Hizmetleri tarafından barındırılır.  
+ Windows İşlem Etkinleştirme Hizmeti (WAS), yeni bir işlem etkinleştirme mekanizmasıdır için [!INCLUDE[lserver](../../../../includes/lserver-md.md)], daha önce yalnızca HTTP tabanlı uygulamalara HTTP olmayan protokolleri kullanan uygulamalar için kullanılabilen IIS benzeri özellikleri sağlar. Windows Communication Foundation (WCF) Dinleyici Bağdaştırıcısı arabirimi TCP, Adlandırılmış Kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletmek için kullanır. HTTP olmayan protokolleri isteklerini almak için işlevselliği SMSvcHost.exe içinde çalışan yönetilen Windows Hizmetleri tarafından barındırılır.  
   
  Sıradaki iletileri göre sıraya alınan uygulamaları Net.Msmq Dinleyici Bağdaştırıcısı hizmeti (NetMsmqActivator) etkinleştirir.  
   
@@ -83,7 +83,7 @@ public class OrderProcessorService : IOrderProcessor
  MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir. Hizmeti için uç noktaya yapılandırma dosyası System.serviceModel bölümünde tanımlanır.  
   
 > [!NOTE]
->  MSMQ sırası ad ve uç nokta adresi biraz farklı adresleme yöntemini kullanın. MSMQ kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Uç noktası adresi bir net.msmq belirtir: şeması, "localhost" yerel bilgisayarda ve eğik, yolunu kullanır. Uzak bilgisayarda bulunan bir sıradan okumak için Değiştir "." ve "localhost" uzak bilgisayar adı.  
+>  MSMQ sırası ad ve uç nokta adresi biraz farklı adresleme yöntemini kullanın. MSMQ kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi bir net.msmq belirtir: şeması, "localhost" yerel bilgisayarda ve eğik, yolunu kullanır. Uzak bilgisayarda bulunan bir sıradan okumak için Değiştir "." ve "localhost" uzak bilgisayar adı.  
   
  Sınıfın adını .svc dosyasıyla WAS hizmeti kodunda barındırmak için kullanılır.  
   
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 1.  Emin [!INCLUDE[iisver](../../../../includes/iisver-md.md)] WAS etkinleştirme için gerekli olduğundan, yüklenir.  
   
-2.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ayrıca, yüklemelisiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP olmayan etkinleştirme bileşenleri:  
+2.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ayrıca, WCF HTTP olmayan etkinleştirme bileşenleri yüklemeniz gerekir:  
   
     1.  Gelen **Başlat** menüsünde seçin **Denetim Masası**.  
   

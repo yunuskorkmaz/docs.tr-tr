@@ -2,19 +2,19 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
-Windows Communication Foundation (WCF) çalışma zamanında bir hizmetin denetleme veri sunan bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Yönetim Araçları (WMI) sağlayıcısı.  
+Windows Communication Foundation (WCF) İnceleme verilerini WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden çalışma zamanında bir hizmet sunar.  
   
 ## <a name="enabling-wmi"></a>WMI etkinleştirme  
  WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz: [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
   
- Bir WMI sağlayıcısı WBEM uyumlu arabirimi aracılığıyla çalışma zamanında izleme kullanıma sunan bir bileşenidir. Öznitelik/değer çiftine sahip WMI nesneler kümesinden oluşur. Çiftleri basit türler sayısı olabilir. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
+ Bir WMI sağlayıcısı WBEM uyumlu arabirimi aracılığıyla çalışma zamanında izleme kullanıma sunan bir bileşenidir. Öznitelik/değer çiftine sahip WMI nesneler kümesinden oluşur. Çiftleri basit türler sayısı olabilir. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. WCF hizmetleri adresler, bağlamalar, davranışları ve dinleyicileri gibi özniteliklerini kullanır.  
   
  Uygulama yapılandırma dosyasında yerleşik WMI Sağlayıcısı'nın etkin hale getirilebilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma.  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) çalışma zamanında bir hizmetin denetl
   
  Bilmeniz gereken olması durumunda hiçbir ileti günlük kaydı izleme dinleyicileri ileti günlüğe kaydetme veya Hayır için `System.ServiceModel` izleme dinleyicileri izleme için yapılandırma dosyasında belirtilen, değişiklikleri WMI tarafından kabul edilen olsa bile, değişikliklerin hiçbiri yürürlüğe, alınır. Düzgün ilgili dinleyicileri ayarlama hakkında daha fazla bilgi için bkz: [yapılandırma ileti günlüğe kaydetme](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) ve [yapılandırma izleme](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Uygulama başladığında yapılandırması tarafından belirtilen diğer tüm izleme kaynakları izleme düzeyini etkilidir ve değiştirilemez.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] kullanıma sunan bir `GetOperationCounterInstanceName` komut dosyası için yöntem. Bir işlem adıyla sağlarsanız, bu yöntem bir performans sayacı örneği adını döndürür. Ancak, giriş doğrulamaz. Bu nedenle, yanlış işlem adı sağlarsanız, yanlış sayaç adı döndürülür.  
+ WCF kullanıma sunan bir `GetOperationCounterInstanceName` komut dosyası için yöntem. Bir işlem adıyla sağlarsanız, bu yöntem bir performans sayacı örneği adını döndürür. Ancak, giriş doğrulamaz. Bu nedenle, yanlış işlem adı sağlarsanız, yanlış sayaç adı döndürülür.  
   
- `OutgoingChannel` Özelliği `Service` örneği başka bir hizmete bağlanmak için bir hizmet tarafından açılmış kanalları saymak değil [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hedef hizmeti istemciye oluşturulmadı içinde `Service` yöntemi.  
+ `OutgoingChannel` Özelliği `Service` örneği başka bir hizmete bağlanmak için bir hizmet tarafından içinde hedef hizmet için WCF istemcisini oluşturulmamışsa açılan kanalları saymak değil `Service` yöntemi.  
   
  **Uyarı** WMI yalnızca destekleyen bir <xref:System.TimeSpan> 3 adede kadar ondalık ayırıcıların değeri. Örneğin, hizmetiniz için özelliklerinden biri ayarlarsa <xref:System.TimeSpan.MaxValue>, değeri 3 ondalık WMI aracılığıyla görüntülendiğinde noktadan sonra kesilir.  
   
 ## <a name="security"></a>Güvenlik  
- Çünkü [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI sağlayıcısı, bir ortamda Hizmetleri bulma sayesinde, kendisine erişim verilmesi için çok dikkatli olmanız gerekir. Varsayılan yalnızca yönetici erişimi hafifletin, ortamınızda hassas bilgilere erişimi daha az güvenilir tarafların izin verebilir. Uzak WMI erişim izinlerini çözmek, özellikle saldırıları taşmasını ortaya çıkabilir. Bir işlem tarafından aşırı WMI istekleri yayılan, kendi performans düşebilir.  
+ WCF WMI sağlayıcısı bir ortamda bulma hizmetleri sağladığından, bu erişim verilmesi için dikkatli olmalıdır. Varsayılan yalnızca yönetici erişimi hafifletin, ortamınızda hassas bilgilere erişimi daha az güvenilir tarafların izin verebilir. Uzak WMI erişim izinlerini çözmek, özellikle saldırıları taşmasını ortaya çıkabilir. Bir işlem tarafından aşırı WMI istekleri yayılan, kendi performans düşebilir.  
   
  Ayrıca, MOF dosyası için erişim izinlerini hafifletin, daha az güvenilen taraf WMI davranışını denetlemek ve WMI şemasını yüklenen nesneler alter. Örneğin, alanlar kritik verileri Yöneticisi'nden gizli bilgiler veya dosyasına eklenen doldurmak veya özel durumlara neden alanları şekilde kaldırılabilir.  
   
- Varsayılan olarak, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI sağlayıcısı verir "yürütme yöntemi", "Sağlayıcı yazma" ya Administrator "hesabı etkinleştir" izinlerini ve ASP.NET, yerel hizmet ve ağ hizmeti için "hesabı etkinleştir" izni. Özellikle, üzerinde olmayan[!INCLUDE[wv](../../../../../includes/wv-md.md)] platformları, ASP.NET hesabını okuyun WMI ServiceModel ad alanına erişimi. Belirli bir kullanıcı grubuna Bu ayrıcalıkları vermek istemiyorsanız (varsayılan olarak devre dışıdır) WMI sağlayıcısı devre dışı bırakmak veya erişimi belirli bir kullanıcı grubu için devre dışı bırakın.  
+ "Yürütme yöntemi", varsayılan olarak, WCF WMI sağlayıcısı verir "Sağlayıcı yazma" ya Administrator "hesabı etkinleştir" izinlerini ve ASP.NET, yerel hizmet ve ağ hizmeti için "hesabı etkinleştir" izni. Özellikle, üzerinde olmayan[!INCLUDE[wv](../../../../../includes/wv-md.md)] platformları, ASP.NET hesabını okuyun WMI ServiceModel ad alanına erişimi. Belirli bir kullanıcı grubuna Bu ayrıcalıkları vermek istemiyorsanız (varsayılan olarak devre dışıdır) WMI sağlayıcısı devre dışı bırakmak veya erişimi belirli bir kullanıcı grubu için devre dışı bırakın.  
   
  WMI aracılığıyla yapılandırma etkinleştirmeye çalıştığınızda, ayrıca, WMI yetersiz kullanıcı ayrıcalıkların yetersizliği etkinleştirilmemiş olabilir. Ancak, hiçbir olay bu hatayı kaydetmek için olay günlüğüne yazılır.  
   
@@ -149,7 +149,7 @@ Whoami /user
  Bu geçerli kullanıcının SID sağlar, ancak bu yöntem, üzerinde herhangi bir kullanıcı SID almak için kullanılamaz. SID almak için başka bir yöntem kullanmaktır [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) öğesinden aracı [Windows 2000 Kaynak Seti Araçları yönetim görevleri için](http://go.microsoft.com/fwlink/?LinkId=178660). Bu aracı (yerel veya etki alanı) iki kullanıcı SID'si karşılaştırır ve bir yan etkisi komut satırına iki SID'ler yazdırır. Daha fazla bilgi için bkz: [iyi bilinen SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI nesne örneklerini erişme  
- Erişmeniz gerekiyorsa [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI örnekleri uzak makinede paket gizliliği erişmek için kullandığınız araçları etkinleştirmeniz gerekir. Aşağıdaki bölümde bu elde etmek WMI CIM Studio, Windows Yönetim Araçları Sınayıcısı, yanı sıra .NET SDK 2.0 kullanarak açıklar.  
+ Uzak makinedeki WCF WMI örnekleri erişmeniz gerekiyorsa, paket gizliliği erişmek için kullandığınız araçları etkinleştirmeniz gerekir. Aşağıdaki bölümde bu elde etmek WMI CIM Studio, Windows Yönetim Araçları Sınayıcısı, yanı sıra .NET SDK 2.0 kullanarak açıklar.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Yüklediyseniz [WMI Yönetimsel Araçlar](http://go.microsoft.com/fwlink/?LinkId=95185), WMI CIM Studio erişim WMI örnekleri için kullanabilirsiniz. Aşağıdaki klasörde araçlardır  

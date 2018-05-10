@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir.  
@@ -37,7 +37,7 @@ Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa
  Bu örneği çalıştırmak için IIS hem hizmet hem de istemci makinelere MSMQ yanı sıra yüklenmesi gerekir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- Örnek gönderme gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ HTTP üzerinden kullanarak sıradaki iletiler. Bu, SRMP Mesajlaşma olarak da adlandırılır. Ne zaman bir Sıraya alınan iletinin gönderildiği, MSMQ alıcı sıra yöneticisine TCP veya HTTP taşıması üzerinden gönderme makine aktarımları iletileri üzerinde. SRMP seçerek kullanıcı HTTP seçimi sıra aktarımı için bir taşıma olarak gösterir. SRMP güvenli HTTPS kullanımını etkinleştirir.  
+ WCF gönderme örnek gösterir MSMQ HTTP üzerinden kullanarak sıradaki iletiler. Bu, SRMP Mesajlaşma olarak da adlandırılır. Ne zaman bir Sıraya alınan iletinin gönderildiği, MSMQ alıcı sıra yöneticisine TCP veya HTTP taşıması üzerinden gönderme makine aktarımları iletileri üzerinde. SRMP seçerek kullanıcı HTTP seçimi sıra aktarımı için bir taşıma olarak gösterir. SRMP güvenli HTTPS kullanımını etkinleştirir.  
   
 ## <a name="example"></a>Örnek  
  Örnek kod hizmetteki örnek üzerinde temel alır. Nasıl kuyruğa ileti gönderme ve SRMP kullanarak kuyruktan ileti alma yerel protokolünü kullanarak ileti gönderme ve alma ile aynı olur.  

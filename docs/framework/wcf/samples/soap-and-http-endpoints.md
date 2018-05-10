@@ -2,24 +2,24 @@
 title: SOAP ve HTTP Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP ve HTTP Uç Noktaları
-Bu örnek, RPC tabanlı bir hizmete uygulamak ve SOAP biçiminde kullanıma sunmak gösterilmiştir ve "düz eski XML" (POX) biçimlendirme kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web programlama modeli. Bkz: [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) hizmeti için HTTP bağlama hakkında daha fazla ayrıntı için örnek. Bu örnek SOAP ve farklı bağlamalar kullanılarak HTTP üzerinden aynı hizmeti gösterme ilgilidir ayrıntıları odaklanır.  
+Bu örnek, RPC tabanlı bir hizmete uygulamak ve SOAP hem WCF Web programlama modeli kullanarak "Düz eski XML" (POX) biçiminde kullanıma gösterilmiştir. Bkz: [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) hizmeti için HTTP bağlama hakkında daha fazla ayrıntı için örnek. Bu örnek SOAP ve farklı bağlamalar kullanılarak HTTP üzerinden aynı hizmeti gösterme ilgilidir ayrıntıları odaklanır.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- SOAP ve HTTP üzerinden RPC hizmeti gösterme kullanarak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ SOAP ve WCF kullanarak HTTP üzerinden RPC hizmeti gösterme.  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek iki bileşenden oluşur: içeren bir Web uygulaması projesi (hizmeti) bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti ve SOAP ve HTTP bağlantılarını kullanarak hizmet işlemlerini çağıran bir konsol uygulaması (istemci).  
+ Bu örnek iki bileşenden oluşur: bir WCF hizmeti ve SOAP ve HTTP bağlantılarını kullanarak hizmet işlemlerini çağıran bir konsol uygulaması (istemci) içeren bir Web uygulaması projesi (hizmeti).  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmet sunan 2 operations –`GetData` ve `PutData` – giriş olarak geçirilen dize echo. Hizmet işlemleri ile Açıklama <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>. Bu öznitelikler, bu işlemlerin HTTP projeksiyon denetler. İle ek olarak, açıklama <xref:System.ServiceModel.OperationContractAttribute>, bunları SOAP bağlamaları açığa çıkarılması sağlar. Hizmetin `PutData` yöntemi atar bir <xref:System.ServiceModel.Web.WebFaultException>, geri HTTP durum kodu kullanarak HTTP üzerinden gönderilir ve bir SOAP hatası olarak SOAP üzerinden geri gönderilir.  
+ 2 operations – WCF hizmeti sunan`GetData` ve `PutData` – giriş olarak geçirilen dize echo. Hizmet işlemleri ile Açıklama <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>. Bu öznitelikler, bu işlemlerin HTTP projeksiyon denetler. İle ek olarak, açıklama <xref:System.ServiceModel.OperationContractAttribute>, bunları SOAP bağlamaları açığa çıkarılması sağlar. Hizmetin `PutData` yöntemi atar bir <xref:System.ServiceModel.Web.WebFaultException>, geri HTTP durum kodu kullanarak HTTP üzerinden gönderilir ve bir SOAP hatası olarak SOAP üzerinden geri gönderilir.  
   
- Web.config dosyasını yapılandırır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti 3 uç noktaları ile:  
+ Web.config dosyasını 3 uç ile WCF hizmeti yapılandırır:  
   
 -   SOAP tabanlı istemcilerine erişmek için hizmet meta verilerini kullanıma sunan ~/service.svc/mex uç noktası.  
   

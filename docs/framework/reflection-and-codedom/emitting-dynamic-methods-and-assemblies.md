@@ -9,11 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d5085b846a10fe86a87e19738e1b159e300c5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Dinamik Yöntemleri ve Derlemeleri Yayma
 Bu bölümde bir yönetilen türlerinde açıklar <xref:System.Reflection.Emit> derleyici veya meta veri ve Microsoft Ara dili (MSIL çalışma zamanında ve isteğe bağlı olarak) yaymak üzere aracı izin ad alanı oluşturmak disk üzerinde bir taşınabilir yürütülebilir (PE) dosyası. Komut dosyası motorları ve derleyicileri bu ad alanı birincil kullanıcıları olan. Bu bölümde, işlev tarafından sağlanan <xref:System.Reflection.Emit> ad alanı yansıma yayma adlandırılır.  
@@ -45,7 +45,7 @@ Yansıma kullanarak dinamik derlemeleri oluşturulmasıyla ilgili sorunları yay
 Nasıl basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı dinamik yöntemi yürütüleceği gösterilmektedir.
 
 [Nasıl yapılır: yansıma ile genel tür tanımlama yayma](how-to-define-a-generic-type-with-reflection-emit.md)   
-İki tür parametreleri ile basit bir genel tür oluşturma, tür parametreleri sınıfı, arabirimi ve özel kısıtlamalar uygulamak nasıl ve parametre türleri olarak sınıfının tür parametreleri kullanan ve dönüş türleri memers oluşturulacağını gösterir.
+İki tür parametreleri ile basit bir genel tür oluşturma, parametre türleri olarak sınıfının tür parametreleri kullanan ve dönüş türleri üyeleri oluşturma ve tür parametreleri sınıfı, arabirimi ve özel kısıtlamalar uygulamak nasıl gösterir.
 
 [Nasıl yapılır: yansıma ile genel yöntem tanımlama yayma](how-to-define-a-generic-method-with-reflection-emit.md)   
 Oluşturma, yayma ve basit bir genel yöntem çağırma gösterir.

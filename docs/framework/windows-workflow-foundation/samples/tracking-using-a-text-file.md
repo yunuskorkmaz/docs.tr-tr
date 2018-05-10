@@ -2,11 +2,11 @@
 title: Bir metin dosyası kullanarak izleme
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>Bir metin dosyası kullanarak izleme
 Bu örnek, bir özel izleme katılımcı oluşturarak izleme Windows Workflow Foundation (WF) genişletmek gösterilmiştir. İzleme katılımcıları yayılan gibi çalışma zamanını şuradan izleme kayıtları aldığınız .NET Framework sınıflarıdır. Hangi hedef senaryonuz için gerekli izleme olayları taşıma için bir izleme katılımcı oluşturabilirsiniz. Örneğin, (Windows için olay izleme) ETW İzleme katılımcı parçası olarak sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Bu örnekte izleme katılımcı kayıtları XML biçiminde bir metin dosyasına yazar.  
@@ -17,7 +17,7 @@ Bu örnek, bir özel izleme katılımcı oluşturarak izleme Windows Workflow Fo
 |örneği|Açıklama|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> metin dosyası izleme katılımcı yapılandırmak için kullanılan yapılandırma bölümü tanımlamak için kullanılır. Bu, kullanıcıların standart .NET Framework yapılandırma dosyalarını kullanarak günlük dosyası hedef belirtmesine izin verir.|  
-|`TextFileTrackingBehavior`|Davranışlarının [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanıcıların çalışma zamanına uzantıları eklemesine izin verin. Hizmet başlatıldığında bu davranış izleme katılımcı hizmete ekler.|  
+|`TextFileTrackingBehavior`|WCF davranışlarının kullanıcıların çalışma zamanına uzantıları eklemesine izin verin. Hizmet başlatıldığında bu davranış izleme katılımcı hizmete ekler.|  
 |`TextFileTrackingParticipant`|Çalışma zamanında izleme katılımcıları alır ve bunları bir günlük dosyasına XML olarak depolayan izleme katılımcı.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Davranış uzantı öğeleri yapılandırması  

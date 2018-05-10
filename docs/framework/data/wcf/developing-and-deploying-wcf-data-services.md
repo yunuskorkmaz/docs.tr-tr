@@ -7,11 +7,11 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca0f78239e6e259ec5bd75e9f93af5c3a4b7adf1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Geliştirme ve WCF Veri Hizmetleri dağıtma
 Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Hakkında daha fazla temel bilgiler için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bkz: [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) ve [genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -75,7 +75,7 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
 -   HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini denetlemenizi sağlayarak veri hizmetinde hata ayıklarken size epey yardımcı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.  
   
--   Veri hizmetinde hata ayıklarken, veri hizmetinden bir hatayla ilgili olarak normal çalışmaya göre daha fazla bilgi almak isteyebilirsiniz. Ek hata bilgileri ayarlayarak veri hizmetinden veri alma <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfınaöznitelikte`true`. Post daha fazla bilgi için bkz: [hata ayıklama WCF Veri Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=201868). İzleme de etkinleştirebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP Mesajlaşma katmanda yükseltilmiş özel durumlarını görüntülemek için. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+-   Veri hizmetinde hata ayıklarken, veri hizmetinden bir hatayla ilgili olarak normal çalışmaya göre daha fazla bilgi almak isteyebilirsiniz. Ek hata bilgileri ayarlayarak veri hizmetinden veri alma <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> özelliğinde <xref:System.Data.Services.DataServiceConfiguration> için `true` ayarlayarak <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliği <xref:System.ServiceModel.Description.ServiceDebugBehavior> verihizmetisınıfınaöznitelikte`true`. Post daha fazla bilgi için bkz: [hata ayıklama WCF Veri Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=201868). WCF HTTP Mesajlaşma katmanda yükseltilmiş özel durumlarını görüntülemek için izleme de etkinleştirebilirsiniz. Daha fazla bilgi için bkz: [yapılandırma izleme](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Veri Hizmeti genellikle olarak geliştirilen bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama projesi, ancak da oluşturabilir, veri hizmeti olarak bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio'da Web sitesi projesi. İki proje türleri arasındaki farklar hakkında daha fazla bilgi için bkz: [NIB: Visual Studio'da Web sitesi projeleri ile Web uygulaması projelerine](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
@@ -116,7 +116,7 @@ Bu konuda geliştirme ve dağıtma hakkında bilgi verilmektedir [!INCLUDE[ssAst
   
 -   Kullanan bir veri hizmeti dağıttığınızda [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bir SQL Server veritabanına erişmek için sağlayıcı veri yapılarını, verileri yaymak gerekebilir veya ikisi verilerinizi ile dağıtım hizmet. Visual Studio hedef veritabanında bunun için komut dosyalarını (.sql dosyaları) otomatik olarak oluşturabilir ve bu komut dosyaları Web dağıtımı paketi dahil edilebilir bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: bir veritabanı ile bir Web uygulaması projesi dağıtma](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). İçin bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web sitesi, bunu yapabilirsiniz kullanarak **veritabanı Yayımlama Sihirbazı'nı** Visual Studio. Daha fazla bilgi için bkz: [veritabanı Yayımlama Sihirbazı'nı kullanarak bir veritabanı dağıtma](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
--   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel içeren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulaması, Windows Server'da çalışan IIS dağıtılmış bir veri hizmeti izlemek için Windows Server AppFabric kullanabilirsiniz. Post veri hizmeti izlemek için Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz: [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
+-   Çünkü [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] temel bir WCF uygulaması içeren Windows Server AppFabric, IIS Windows Server'da çalışan dağıtılmış bir veri hizmeti izlemek için kullanabilirsiniz. Post veri hizmeti izlemek için Windows Server AppFabric kullanma hakkında daha fazla bilgi için bkz: [izleme WCF Veri Hizmetleri ile Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

@@ -3,11 +3,11 @@ title: Desen eşleştirme C# Kılavuzu
 description: C# ' ifadelerin eşleşen kalıbı hakkında bilgi edinin
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 7bdb41085a1a110f5a097ad3fa2cb645237fcefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme #
 
@@ -45,7 +45,7 @@ Bu güncelleştirilmiş sürüm `is` ifade değişkeni testleri hem uygun türde
 
 Desen eşleştirme ifadeler için dil kuralları bir eşleşme ifadesi sonuçlarını kötüye önlemenize yardımcı olur. Değişkenleri yukarıdaki örnekte `s`, `c`, ve `r` yalnızca kapsamındaki ve ilgili desen eşleşme ifadeleri olduğunda kesinlikle atanan `true` sonuçları. Başka bir konumda ya da değişken kullanmayı denerseniz, kodunuzu derleyici hataları oluşturur.
 
-Ayrıntılı kapsam ile başlayarak, bu kuralların her ikisi de inceleyelim. Değişkeni `c` kapsamında olup yalnızca `else` ilk dalı `if` deyimi. Değişkeni `s` yöntemi kapsamında yer `ComputeArea`. Çünkü her dalı bir `if` deyimi değişkenleri için ayrı bir kapsam oluşturur. Ancak, `if` deyimi kendisini desteklemez. İçinde bildirilen değişkenlerin anlamına `if` deyimi aynı kapsamı olan `if` deyimi (Bu durumda yöntemi.) Bu davranış desen eşleştirme için özel değildir ancak değişken kapsamlar için tanımlanmış bir davranıştır ve `if` ve `else` deyimleri.
+Ayrıntılı kapsam ile başlayarak, bu kuralların her ikisi de inceleyelim. Değişkeni `c` kapsamında olup yalnızca `else` ilk dalı `if` deyimi. Değişkeni `s` yöntemi kapsamında yer `ComputeAreaModernIs`. Çünkü her dalı bir `if` deyimi değişkenleri için ayrı bir kapsam oluşturur. Ancak, `if` deyimi kendisini desteklemez. İçinde bildirilen değişkenlerin anlamına `if` deyimi aynı kapsamı olan `if` deyimi (Bu durumda yöntemi.) Bu davranış desen eşleştirme için özel değildir ancak değişken kapsamlar için tanımlanmış bir davranıştır ve `if` ve `else` deyimleri.
 
 Değişkenleri `c` ve `s` ne zaman atanmış olan ilgili `if` deyimleri true nedeniyle kesinlikle atanan zaman true mekanizması.
 

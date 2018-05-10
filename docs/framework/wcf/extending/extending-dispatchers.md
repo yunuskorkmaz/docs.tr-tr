@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 653b22adb5ed53c9c3eb44db598ad5d1c50ff1a9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem çağrılarına uygulama kodundaki içine çevirme ve sonuçları çağırana geri göndermek için dağıtıcıları sorumludur. Dağıtıcı uzantıları bu işleme değiştirmenize izin verin.  İnceleme veya iletileri veya parametreleri içeriğini değiştirme ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlamak şekilde değiştirebilirsiniz.  
@@ -16,7 +16,7 @@ Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem ça
  Bu konuda nasıl kullanılacağını açıklar <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları bir Windows Communication Foundation (WCF) hizmet uygulaması bir dağıtıcı varsayılan yürütme davranışını değiştirmek için müdahale veya iletileri, parametreleri değiştirin veya döndürmek için değerleri önce veya sonra gönderme veya kanal katmandan alınıyor. Eşdeğer istemci çalışma zamanı ileti işleme hakkında daha fazla bilgi için bkz: [genişletme istemcileri](../../../../docs/framework/wcf/extending/extending-clients.md). Rol anlamak için <xref:System.ServiceModel.IExtensibleObject%601> türleri çeşitli çalışma zamanı özelleştirme nesneleri arasında paylaşılan durumu erişirken yürütebilir, bkz: [genişletilebilen nesneler](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Dağıtıcıları  
- Hizmet modeli katmanını geliştiricinin programlama modeli ve yaygın olarak kanal katmanını adlı temel alınan ileti exchange arasında dönüştürme gerçekleştirir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal ve uç nokta dağıtıcıları (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ve <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>sırasıyla) ve hizmet bileşenlerinin iletileri, işlemi gönderme ve çağırma ve yanıt işleme alma, yeni kanallar kabul etmek için sorumludur. Dağıtıcı nesneleri alıcı nesneleridir, ancak geri çağırma sözleşme çift yönlü hizmetler uygulamalarında da dağıtıcısı nesnelerine denetleme, değişiklik ya da uzantı için açın.  
+ Hizmet modeli katmanını geliştiricinin programlama modeli ve yaygın olarak kanal katmanını adlı temel alınan ileti exchange arasında dönüştürme gerçekleştirir. WCF kanalı ve uç nokta dağıtıcıları (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ve <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>sırasıyla) ve hizmet bileşenlerinin iletileri, işlemi gönderme ve çağırma ve yanıt işleme alma, yeni kanallar kabul etmek için sorumludur. Dağıtıcı nesneleri alıcı nesneleridir, ancak geri çağırma sözleşme çift yönlü hizmetler uygulamalarında da dağıtıcısı nesnelerine denetleme, değişiklik ya da uzantı için açın.  
   
  Kanal dağıtıcı (ve yardımcı <xref:System.ServiceModel.Channels.IChannelListener>) alt kanal dışında iletileri çeker ve bunların ilgili uç nokta dağıtıcıları iletileri geçirir. Her uç nokta dağıtıcıya sahip bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime> iletileri uygun yönlendiren <xref:System.ServiceModel.Dispatcher.DispatchOperation>, yöntemi çağırma işlemi uygulayan için sorumlu olduğu. Çeşitli isteğe bağlıdır ve gerekli uzantısı sınıfları yol boyunca çağrılır. Bu konu, bu bilgilerin nasıl bir araya getireceğinizi ve nasıl özelliklerini değiştirmek ve temel işlevselliğini genişletmek için kendi kodunuzu takılır açıklar.  
   
@@ -45,7 +45,7 @@ Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem ça
   
 -   Özel ileti dönüşümleri. Kullanıcılar belirli Dönüşümleri (örneğin, sürüm oluşturma) çalışma zamanı iletisinde uygulayabilirsiniz. Bu, yeniden ileti dinleyiciyi arabirimleri ile gerçekleştirilebilir.  
   
--   Özel veri modeli. Kullanıcılar, varsayılan olarak desteklenenler dışındaki bir veri seri hale getirme modelde olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (yani, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>ve raw iletileri). Bu uygulama tarafından ileti biçimlendirici arabirimleri yapılabilir. Bir örnek için bkz: [işlem biçimlendirici ve işlem Seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+-   Özel veri modeli. Kullanıcılar, WCF'de varsayılan desteklenenler dışındaki bir veri seri hale getirme modelde olabilir (yani, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>ve raw iletileri). Bu uygulama tarafından ileti biçimlendirici arabirimleri yapılabilir. Bir örnek için bkz: [işlem biçimlendirici ve işlem Seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
 -   Özel parametre doğrulaması. Kullanıcılar, yazılı parametreleri (XML aksine) geçerli olduğunu zorunlu kılabilir. Bu yapılabilir parametre denetçisi arabirimleri kullanarak.  
   
@@ -60,9 +60,9 @@ Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem ça
 -   Özel yetkilendirme davranışlar. Kullanıcılar, sözleşme veya işlemi çalışma zamanı parça genişletme ve güvenlik denetimleri iletide belirteçleri göre ekleyerek özel erişim denetimi uygulayabilirsiniz. Bu ileti kesici veya parametre dinleyiciyi arabirimleri kullanılarak gerçekleştirilebilir. Örnekler için bkz: [güvenlik genişletilebilirliği](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
-    >  Güvenlik özellikleri değiştirilmesine güvenliğini tehlikeye olanağına sahip olduğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar, kesinlikle önerilir güvenlikle ilgili değişiklikler dikkatli gerçekleştirmek ve test baştan sona dağıtımdan önce.  
+    >  Güvenlik özellikleri değiştirme WCF uygulamaları güvenliğini tehlikeye olanağına sahip olduğundan, güvenlikle ilgili değişiklikler dikkatli gerçekleştirmek ve dağıtımdan önce sınamanız kesinlikle önerilir.  
   
--   Özel WCF çalışma zamanı doğrulayıcıları. Hizmetleri, sözleşmeler ve bağlamaları ilişkilendirilebilmesi için kuruluş düzeyi ilkelerini zorlamak için inceleyin özel doğrulayıcıları yükleyebilirsiniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. (Örneğin, [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+-   Özel WCF çalışma zamanı doğrulayıcıları. Hizmetleri, sözleşmeler ve bağlamaları WCF uygulamaları göre kuruluş düzeyinde ilkelerini zorlamak için inceleyin özel doğrulayıcıları yükleyebilirsiniz. (Örneğin, [nasıl yapılır: Lock aşağı Enterprise uç noktalarını](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime sınıfını kullanma  
  Kullanım <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfı bir hizmet veya tek tek uç nokta varsayılan davranışını değiştirmek için ya da birini veya her ikisini aşağıdaki hizmet işlemleri (veya istemci işlemleri çift yönlü bir istemci söz konusu olduğunda) için özel değişiklikler uygulayan nesneler eklemek için:  

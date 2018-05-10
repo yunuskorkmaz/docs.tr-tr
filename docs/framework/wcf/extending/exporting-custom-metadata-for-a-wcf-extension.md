@@ -2,11 +2,11 @@
 title: WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
 Windows Communication Foundation (WCF) meta veri dışarı aktarma hizmeti uç noktalarını tanımlayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Özel meta verileri, sistem tarafından sağlanan meta verileri vericiler veremiyor XML öğelerden oluşur. Genellikle, bu kullanıcı tarafından tanımlanan davranışları ve bağlama öğeleri ve özellikleri ve bağlamalar ve sözleşmeler gereksinimleriyle ilgili ilke onaylamalarını özel WSDL öğeleri içerir.  
@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF) meta veri dışarı aktarma hizmeti uç n
  Bu bölümde özel WSDL veya ilke onaylamalarını dışa aktarma açıklar ve dışarı aktarma işlemi kendisini odaklanmak değil. Meta veriler özel ya da sistem oluşturulmuş olmasına bakılmaksızın meta verileri alma ve verme türlerini kullanma hakkında daha fazla bilgi için bkz: [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Meta verileri kullanarak yayımlandığında <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> incelenir ve XSD ve--ilke onaylamalarını dahil olmak üzere--WSDL üretilen tüm sözleşmeler ve bağlamaları için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan özniteliklerini ve bağlamaları kullanarak destekleyebilir. Ancak, doğru olarak verilebilir önce özel davranışı öznitelikleri veya bağlama öğeleri desteği gerektirir.  
+ Meta verileri kullanarak yayımlandığında <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> incelenir ve XSD ve--ilke onaylamalarını dahil olmak üzere--WSDL tüm sözleşmeler ve WCF sistem tarafından sağlanan özniteliklerini ve bağlamaları kullanarak destekleyebilir bağlamaları için oluşturulur. Ancak, doğru olarak verilebilir önce özel davranışı öznitelikleri veya bağlama öğeleri desteği gerektirir.  
   
  Bu bölümde açıklanmaktadır:  
   

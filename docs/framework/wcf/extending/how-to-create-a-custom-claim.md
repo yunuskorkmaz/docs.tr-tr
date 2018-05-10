@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Beyan Oluşturma
-Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak için bir dizi yerleşik talep türleri ve yardımcı işlevleri haklarıyla sağlar <xref:System.IdentityModel.Claims.Claim> bu türleri ve hakları ile örnekleri. Bu yerleşik talepler bulunan model bilgisi için tasarlanmış kimlik bilgisi istemcisinde türleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan olarak destekler. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar özel talep gerektirebilir. Bir talep talep türünü, talep geçerli olduğu için kaynak ve sağ diğer bir deyişle sürülen bu kaynak oluşur. Bu konuda bir özel talep oluşturmayı açıklar.  
+Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak için bir dizi yerleşik talep türleri ve yardımcı işlevleri haklarıyla sağlar <xref:System.IdentityModel.Claims.Claim> bu türleri ve hakları ile örnekleri. Bu yerleşik talepler varsayılan olarak, WCF destekleyen istemci kimlik bilgisi türlerinde bulunan model bilgisi için tasarlanmıştır. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar özel talep gerektirebilir. Bir talep talep türünü, talep geçerli olduğu için kaynak ve sağ diğer bir deyişle sürülen bu kaynak oluşur. Bu konuda bir özel talep oluşturmayı açıklar.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Temel veri türüne göre özel bir talep oluşturmak için  
   
@@ -20,15 +20,15 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
   
     1.  Talep türü için benzersiz bir değer karar verin.  
   
-         Talep türü benzersiz bir dize tanımlayıcısı değil. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. Tarafından tanımlanan talep türleri listesini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
+         Talep türü benzersiz bir dize tanımlayıcısı değil. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin listesi için bkz: <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
   
     2.  Basit veri türü ve kaynak için değer seçin.  
   
-         Bir kaynak bir nesnedir. Kaynak CLR türü bir primitive gibi olabilir <xref:System.String> veya <xref:System.Int32>, veya serializable bir tür. Talep tarafından çeşitli noktalarında serileştirilir çünkü kaynak CLR türü seri hale getirilebilir, olmalıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. İlkel türler seri hale getirilebilir.  
+         Bir kaynak bir nesnedir. Kaynak CLR türü bir primitive gibi olabilir <xref:System.String> veya <xref:System.Int32>, veya serializable bir tür. WCF tarafından serileştirilmiş talep çeşitli noktalarda, çünkü kaynak CLR türü seri hale getirilebilir, olması gerekir. İlkel türler seri hale getirilebilir.  
   
-    3.  Tarafından tanımlanan bir hak seçin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] veya özel bir hak için benzersiz bir değer.  
+    3.  WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir hak seçin.  
   
-         Bir hak benzersiz bir dize tanımlayıcısı değil. Tarafından tanımlanan haklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
+         Bir hak benzersiz bir dize tanımlayıcısı değil. WCF tarafından tanımlanan haklar tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
   
          Hakkını kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır.  
   
@@ -43,11 +43,11 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
   
     1.  Talep türü için benzersiz bir değer karar verin.  
   
-         Talep türü benzersiz bir dize tanımlayıcısı değil. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. Tarafından tanımlanan talep türleri listesini [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], bkz: <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
+         Talep türü benzersiz bir dize tanımlayıcısı değil. Talep türü için kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin listesi için bkz: <xref:System.IdentityModel.Claims.ClaimTypes> sınıfı.  
   
     2.  Seçin veya kaynak için serileştirilebilir bir basit olmayan türünü tanımlayın.  
   
-         Bir kaynak bir nesnedir. Talep tarafından çeşitli noktalarında serileştirilir çünkü kaynak CLR türü seri hale getirilebilir, olmalıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. İlkel türler zaten seri hale getirilebilir.  
+         Bir kaynak bir nesnedir. WCF tarafından serileştirilmiş talep çeşitli noktalarda, çünkü kaynak CLR türü seri hale getirilebilir, olması gerekir. İlkel türler zaten seri hale getirilebilir.  
   
          Yeni bir tür tanımlandığında, uygulama <xref:System.Runtime.Serialization.DataContractAttribute> sınıfa. Ayrıca uygulama <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği talep bir parçası olarak serileştirilmesi gereken yeni türü tüm üyeleri.  
   
@@ -56,9 +56,9 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  Tarafından tanımlanan bir hak seçin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] veya özel bir hak için benzersiz bir değer.  
+    3.  WCF veya özel bir hak için benzersiz bir değer tarafından tanımlanan bir hak seçin.  
   
-         Bir hak benzersiz bir dize tanımlayıcısı değil. Tarafından tanımlanan haklar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
+         Bir hak benzersiz bir dize tanımlayıcısı değil. WCF tarafından tanımlanan haklar tanımlanan <xref:System.IdentityModel.Claims.Rights> sınıfı.  
   
          Hakkını kullanılan dize tanımlayıcı benzersiz olduğundan emin olun özel talep tasarımcının sorumluluğundadır.  
   

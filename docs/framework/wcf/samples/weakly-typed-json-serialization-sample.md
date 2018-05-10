@@ -2,16 +2,16 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 294c00bd18b5fabba5baa20770fd593031a98994
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde geri bir kullanıcı tanımlı tür seri durumdan serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemci kullanılabilir olması gerekir. Genellikle Bunu başarmak için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tanımlı türler uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu düzenek de JavaScript nesne gösterimi (JSON) nesneleriyle çalışırken konu başlığı altında açıklandığı gibi geçerlidir [nasıl yapılır: seri hale getirmek ve seri durumdan JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
- Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmetini veya istemci bir hizmet veya Geliştirici denetimi dışında olan istemci tarafından oluşturulan JSON nesnelerinin erişmeniz gerekir. Daha fazla Web Hizmetleri, JSON API'leri genel olarak kullanıma sunmak gibi için pratik olabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştirici, rastgele JSON nesneleri seri durumdan çıkarılacak içine yerel kullanıcı tanımlı türler oluşturmak için. Bu örnek sağlayan bir mekanizma sağlar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] geliştiricilerin kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle çalışma. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesnelerin içine bir JSON nesnesi seri durumdan çıkarır türü olmadığından derleme zamanında bilinir.  
+ Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmetini veya istemci bir hizmet veya Geliştirici denetimi dışında olan istemci tarafından oluşturulan JSON nesnelerinin erişmeniz gerekir. Daha fazla Web Hizmetleri, JSON API'leri genel olarak kullanıma sunmak gibi rastgele JSON nesneleri seri durumdan çıkarılacak içine yerel kullanıcı tanımlı türler oluşturmak WCF Geliştirici pratik olabilir. Bu örnek WCF geliştiricilerinin kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle çalışmak bir mekanizma sağlar. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesnelerin içine bir JSON nesnesi seri durumdan çıkarır türü olmadığından derleme zamanında bilinir.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -22,7 +22,7 @@ Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde ge
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Bu nesne seri durumdan bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci aşağıdaki kullanıcı tanımlı türler uygulaması gerekiyor.  
+ Bu nesne seri durumdan çıkarılacak bir WCF istemcisi aşağıdaki kullanıcı tanımlı türler uygulamalıdır.  
   
 ```  
 [DataContract]  

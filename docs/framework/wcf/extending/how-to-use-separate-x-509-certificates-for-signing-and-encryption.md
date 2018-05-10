@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl Yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma
 Bu konu, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere yapılandırma gösterilmektedir.  
   
- İmzalama ve şifreleme için kullanılacak ayrı sertifikaların etkinleştirmek için özel bir istemci veya hizmet kimlik bilgilerini (veya her ikisi de) çünkü oluşturulmalıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] birden çok istemci veya hizmet sertifikaları ayarlamak için bir API sağlamaz. Ayrıca, birden çok sertifika bilgileri kullanmasına ve bir uygun güvenlik belirteci sağlayıcısı oluşturmak için anahtar kullanım ve ileti yönünü belirtilen belirteci yöneticisi sağlanmalıdır güvenlik.  
+ WCF birden çok istemci veya hizmet sertifikaları ayarlamak için bir API sağlamadığından imzalama ve şifreleme için kullanılacak ayrı sertifikaların etkinleştirmek için özel bir istemci veya hizmet kimlik bilgilerini (veya her ikisi de) oluşturulması gerekir. Ayrıca, birden çok sertifika bilgileri kullanmasına ve bir uygun güvenlik belirteci sağlayıcısı oluşturmak için anahtar kullanım ve ileti yönünü belirtilen belirteci yöneticisi sağlanmalıdır güvenlik.  
   
  Aşağıdaki diyagramda kullanılan ana sınıflarını gösterir, sınıfları bunlar (bir yukarı ok tarafından gösterilen), devralınan ve dönüş türleri belirli yöntemleri ve özellikleri.  
   

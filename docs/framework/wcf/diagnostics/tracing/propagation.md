@@ -2,11 +2,11 @@
 title: Yayma
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>Yayma
 Bu konu Windows Communication Foundation (WCF) izleme modelindeki Etkinlik yayma açıklar.  
@@ -20,7 +20,7 @@ Bu konu Windows Communication Foundation (WCF) izleme modelindeki Etkinlik yayma
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Etkinlik yayma neden olan yapılandırılabilir bir özelliği olan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] TLS üzerinde etkinlik kimliği içeren giden iletiler için bir başlık eklemek için. Bu sunucu tarafında sonraki izlemeleri üzerinde dahil ederek, istemci ve sunucu etkinlikleri ilişkilendirebilirsiniz.  
+ Etkinlik yayma TLS üzerinde etkinlik kimliği içeren giden iletiler için bir başlık eklemek WCF neden olan yapılandırılabilir bir özelliktir. Bu sunucu tarafında sonraki izlemeleri üzerinde dahil ederek, istemci ve sunucu etkinlikleri ilişkilendirebilirsiniz.  
   
 ## <a name="propagation-definition"></a>Yayma tanımı  
  Aşağıdaki koşulların tümü uygularsanız etkinlik M'ın gAId etkinlik N yayılır.  

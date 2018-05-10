@@ -2,11 +2,11 @@
 title: Windows Communication Foundation'dan İleti Kuyruğuna
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation'dan İleti Kuyruğuna
 Bu örnek, bir Windows Communication Foundation (WCF) uygulaması bir Message Queuing (MSMQ) uygulamaya ileti nasıl gönderebilirsiniz gösterir. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır. Hizmet ve istemci aynı anda çalışıyor olması gerekmez.  
@@ -95,9 +95,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- İstemci bir özel istemci sıralı MSMQ ileti kuyruğuna göndermek için kullanır. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulaması olduğundan ve bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu nedenle, bu senaryoda Svcutil.exe aracını kullanarak bir proxy oluşturamıyoruz.  
+ İstemci bir özel istemci sıralı MSMQ ileti kuyruğuna göndermek için kullanır. Alan ve iletiyi işleyen uygulama MSMQ uygulama ve WCF uygulaması olduğundan, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu nedenle, bu senaryoda Svcutil.exe aracını kullanarak bir proxy oluşturamıyoruz.  
   
- Özel istemci temelde tüm aynıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanan uygulamalar `MsmqIntegration` iletileri göndermek için bağlama. Diğer istemcilerden farklı olarak, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
+ Özel istemci temelde kullanan tüm WCF uygulamaları için aynıdır `MsmqIntegration` iletileri göndermek için bağlama. Diğer istemcilerden farklı olarak, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  

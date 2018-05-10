@@ -2,11 +2,11 @@
 title: Performans Sayaçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>Performans Sayaçlarını Kullanma
 Bu örnek, Windows Communication Foundation (WCF) performans sayaçları erişmek nasıl ve kullanıcı tanımlı performans sayaçları oluşturma gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçları erişme
   
  Bu görev ayrıca yapılabilir kullanarak [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Performans sayaçları etkin olduğunda, tüm paketi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performans sayaçları, hizmet için etkinleştirildi. .NET Framework, üç düzeyde performans verilerini otomatik olarak bulundurur: `ServiceModelService`, `ServiceModelEndpoint` ve `ServiceModelOperation`. Bu düzeylerin her birinde, performans sayaçları "Çağrıları", "Çağrıları saniyede" ve "Güvenlik çağrıları yetkilendirilmedi" gibi sahiptir.  
+ Performans sayaçları etkin olduğunda, tüm paketi WCF performans sayaçları için hizmet etkinleştirilir. .NET Framework, üç düzeyde performans verilerini otomatik olarak bulundurur: `ServiceModelService`, `ServiceModelEndpoint` ve `ServiceModelOperation`. Bu düzeylerin her birinde, performans sayaçları "Çağrıları", "Çağrıları saniyede" ve "Güvenlik çağrıları yetkilendirilmedi" gibi sahiptir.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   
@@ -47,10 +47,10 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçları erişme
   
 2.  Bunları seçerek ve Delete tuşuna basarak listelenen performans sayaçlarını kaldırın.  
   
-3.  Ekle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Grafik bölmesi sağ tıklatıp seçerek sayaçları **Sayaç Ekle**. İçinde **Sayaç Ekle** iletişim kutusunda **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 veya ServiceModelService 3.0.0.0** performans nesnesi açılır liste kutusu. Listeden görüntülemek istediğiniz sayaçları seçin.  
+3.  WCF sayaçları Grafik bölmesi sağ tıklayıp seçerek eklemek **Sayaç Ekle**. İçinde **Sayaç Ekle** iletişim kutusunda **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 veya ServiceModelService 3.0.0.0** performans nesnesi açılır liste kutusu. Listeden görüntülemek istediğiniz sayaçları seçin.  
   
     > [!NOTE]
-    >  Vardır hiçbir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsa bir hizmet için performans sayaçları yok [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bilgisayarda çalışan hizmetler.  
+    >  Bilgisayarda çalışan hiçbir WCF hizmetleri varsa bir hizmet için hiçbir WCF performans sayaçları vardır.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Sayaçları etkinleştirmek için yapılandırma Düzenleyicisi'ni kullanmak için  
   

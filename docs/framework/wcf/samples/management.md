@@ -2,21 +2,21 @@
 title: Yönetim
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 6c5f4bf2c371e88dc29d19ef36889493d3aff56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="management"></a>Yönetim
 Bu bölüm, Windows Communication Foundation (WCF) yönetim gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF Hizmetleri ve Windows için Olay İzleme](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Çözümleme izleme de kullanımı gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] olayları, olay izleme için Windows (ETW) verebilmelidir.  
+ Çözümleme izleme içinde WCF olayları, olay izleme için Windows (ETW) yayma için nasıl kullanılacağını gösterir.  
   
  [WCF Analiz İzleme](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Analitik akışının içine kendi izleme olayları izler ekleneceği gösterilmektedir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ETW Yazar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ WCF ETW Yazar analitik izlemeleri akışa kendi izleme olaylarını ekleneceği gösterilmektedir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Döngüsel İzleme](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Döngüsel arabellek İzleme dinleyicisi uyarlamasını gösterir.  
@@ -25,13 +25,13 @@ Bu bölüm, Windows Communication Foundation (WCF) yönetim gösteren örnekleri
  Olay izleme için Windows (ETW) kullanarak uçtan uca (E2E) izleme uygulamak gösterilmiştir.  
   
  [İzlemeyi Genişletme](../../../../docs/framework/wcf/samples/extending-tracing.md)  
- Nasıl genişletileceğini gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yazarak izleme özelliği.  
+ WCF izleme özelliği, istemci ve hizmet kodu etkinliği kullanıcı tarafından tanımlanan izlemeleri yazarak genişletmek gösterilmiştir.  
   
  [PII Güvenlik Kilidi](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
- Güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ Bir WCF Hizmeti güvenlikle ilgili çeşitli özelliklerini denetlemek gösterilmiştir.  
   
  [Performans Sayaçlarını Kullanma](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
- Nasıl erişileceği gösterilmektedir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] performans sayaçları ve kullanıcı tanımlı performans sayaçları oluşturma.  
+ WCF performans sayaçları erişmek nasıl ve kullanıcı tanımlı performans sayaçları oluşturulacağını gösterir.  
   
  [İleti İzleme ve Kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  
  İleti izleme ve kaydetme etkinleştirmek gösterilmiştir.  
@@ -40,4 +40,4 @@ Bu bölüm, Windows Communication Foundation (WCF) yönetim gösteren örnekleri
  Özel bir davranış belirli ölçütlere uyan emin olmak için bir makinede hizmetleri doğrulamak için nasıl kullanılacağını gösterir.  
   
  [WMI Sağlayıcısı](../../../../docs/framework/wcf/samples/wmi-provider.md)  
- Veri toplamaya gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında WCF Hizmetleri'nden veri toplamak üzere gösterilmiştir.

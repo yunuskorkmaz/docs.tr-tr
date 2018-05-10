@@ -2,16 +2,16 @@
 title: JSON ve XML ile AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1973be48457d3164bec6b8df236c07f5bfa6b897
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON ve XML ile AJAX Hizmeti Örneği
 Bu örnek, JavaScript nesne gösterimi (JSON) veya XML veri döndüren bir zaman uyumsuz JavaScript ve XML (AJAX) bir hizmet oluşturmak için Windows Communication Foundation (WCF) kullanımı gösterilmiştir. Bir AJAX hizmeti bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebilirsiniz. Bu örnek derlemeler [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
   
- Diğer AJAX örnekleri farklı olarak, bu örnek, ASP.NET AJAX kullanmaz ve <xref:System.Web.UI.ScriptManager> denetim. Bazı ek yapılandırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX Hizmetleri, JavaScript aracılığıyla herhangi bir HTML sayfadan erişilebilir ve bu senaryo burada gösterilir. Kullanarak bir örnek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET AJAX ile bkz [AJAX örnekleri](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ Diğer AJAX örnekleri farklı olarak, bu örnek, ASP.NET AJAX kullanmaz ve <xref:System.Web.UI.ScriptManager> denetim. Bazı ek yapılandırma WCF AJAX Hizmetleri herhangi bir HTML sayfasında JavaScript aracılığıyla erişilebilen ve bu senaryo burada gösterilir. WCF ile ASP.NET AJAX kullanılarak bir örnek için bkz: [AJAX örnekleri](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  Bu örnek, JSON ve XML arasında bir işlem yanıt türünü geçiş gösterilmektedir. Bu işlevsellik, olup hizmet ASP.NET AJAX veya bir HTML/JavaScript istemci sayfası tarafından erişilebilmesi için yapılandırılan bağımsız olarak kullanılabilir.  
   
@@ -39,7 +39,7 @@ Bu örnek, JavaScript nesne gösterimi (JSON) veya XML veri döndüren bir zaman
   
  Varsayılan verilerin biçimlendirilmesi için <xref:System.ServiceModel.Description.WebHttpEndpoint> , varsayılan veri biçimi sırasında XML'dir <xref:System.ServiceModel.Description.WebScriptEndpoint> JSON. Daha fazla bilgi için bkz: [ASP.NET olmadan WCF AJAX hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
- Aşağıdaki örnek hizmetinde bir standarttır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti iki işlem ile. İki işlem gerektiren <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> Gövde stili <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> özel öznitelikleri `webHttp` davranışı ve şifrelemeyle JSON/XML veri biçimi anahtarı vardır.  
+ Aşağıdaki örnekte iki işlem ile standart bir WCF Hizmeti hizmetidir. İki işlem gerektiren <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> Gövde stili <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> özel öznitelikleri `webHttp` davranışı ve şifrelemeyle JSON/XML veri biçimi anahtarı vardır.  
 
 ```csharp
 [OperationContract]  
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- Her iki durumda da, karmaşık bir tür işlemler geri bildirdiğine dikkat edin `MathResult`, bir standart olduğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] veri sözleşme türü.  
+ Her iki durumda da, karmaşık bir tür işlemler geri bildirdiğine dikkat edin `MathResult`, standart bir WCF veri sözleşmesi türü değil.  
   
  İstemci Web sayfası XmlAjaxClientPage.htm kullanıcı tıkladığında, önceki iki işlemlerden birini çağırır JavaScript kodu içeren **(dönüş JSON) hesaplamayı** veya **hesaplamayı (dönüş XML)**  sayfasında düğmeler. Hizmetini çağırmak için kodu JSON gövdesi oluşturur ve HTTP POST kullanarak gönderir. İstek el ile aksine, JavaScript'te oluşturulduğunda [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek ve ASP.NET AJAX kullanılarak diğer örnekleri.  
 

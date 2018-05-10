@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: e1133194fe925bca4fb79d8adc1975a2063450f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9625400b855492ead12a5a2f1fa74f10164f6cdd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme
 Windows Communication Foundation (WCF) kullanarak, hizmet istemci hizmete kimlik doğrulamasının nasıl belirtebilirsiniz. Örneğin, bir hizmeti bir sertifikayla istemcinin kimliğinin doğrulanmasını koşabilirsiniz.  
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) kullanarak, hizmet istemci hizmete kimlik
   
 1.  Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kod ve Yapılandırma hizmeti oluşturmak için.  
   
-2.  Bir örneğini oluşturmak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci kullanılarak oluşturulan kod.  
+2.  Oluşturulan kod kullanarak WCF istemci örneği oluşturun.  
   
 3.  Set istemci sınıfı üzerinde <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği <xref:System.ServiceModel.ClientBase%601> uygun bir değere sınıfı. Bu örnek, bir X.509 sertifikası kullanarak özelliği ayarlar <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> sınıfı.  
   

@@ -2,11 +2,11 @@
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 494a0665f5bad2c7da3998cf77ced79314ca2f36
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulaması içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer yandan hataları hizmet sınırları boyunca gibi istemci (veya tersi) sunucusundan iletişim kurmak için kullanılır. Hataları yanı sıra, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP taşıma (bir arıza geri gönderilecek bitiş noktası yoktur) bir var olmayan uç nokta URL'si iletişim kurmak için durum kodları 404 gibi kullanır. Özel kanal yazarları için kılavuzluk üç bölüm, bu belgede oluşur. İlk bölümde, ne zaman ve nasıl tanımlamak ve özel durumlar oluşturma yönergeler sağlanmaktadır. İkinci bölümde oluşturma ve hatalarını tüketen etrafında yönergeler sağlanmaktadır. Üçüncü bölüm özel kanal kullanıcı çalışan uygulamalarda sorun gidermede yardımcı olmak için izleme bilgilerini sağlamayı açıklar.  
@@ -15,7 +15,7 @@ ms.lasthandoff: 05/04/2018
  Bir özel durum atma zaman göz önünde bulundurmanız gereken iki nokta vardır: önce kullanıcıların özel durumu uygun şekilde tepki gösterebilmesi doğru kod yazmanıza olanak veren bir türde olması gerekir. İkinci olarak, nelerin yanlış gittiğini anlamak için kullanıcıyı, hata etkisi ve nasıl düzeltileceği için yeterli bilgi sağlamak vardır. Aşağıdaki bölümlerde, özel durum türleri ve Windows Communication Foundation (WCF) kanalları iletileri geçici rehberlik sağlar. Özel durumlar belge için tasarım yönergeleri .NET özel durumları genel yönergeler bulunmaktadır.  
   
 ### <a name="exception-types"></a>Özel Durum Türleri  
- Kanalları tarafından oluşturulan tüm özel durumları ya da olmalıdır bir <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, veya türetilmiş bir tür <xref:System.ServiceModel.CommunicationException>. (Özel durumlar gibi <xref:System.ObjectDisposedException> de, ancak yalnızca çağıran kodu kanal kötüye kullanımını göstermek için durum oluşturulabilir. Bir kanal doğru kullandıysanız, yalnızca belirli özel durumlar oluşturma gerekir.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] öğesinden türetilen yedi özel durum türleri sağlar <xref:System.ServiceModel.CommunicationException> ve kanalları tarafından kullanılmak üzere tasarlanmıştır. Diğer vardır <xref:System.ServiceModel.CommunicationException>-sisteminin diğer bölümleriyle tarafından kullanılmak üzere tasarlanmış özel durumlar türetilmiş. Bu özel durum türleri şunlardır:  
+ Kanalları tarafından oluşturulan tüm özel durumları ya da olmalıdır bir <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, veya türetilmiş bir tür <xref:System.ServiceModel.CommunicationException>. (Özel durumlar gibi <xref:System.ObjectDisposedException> de, ancak yalnızca çağıran kodu kanal kötüye kullanımını göstermek için durum oluşturulabilir. Bir kanal doğru kullandıysanız, yalnızca belirli özel durumlar oluşturma gerekir.) Öğesinden türetilen yedi özel durum türü WCF sunar <xref:System.ServiceModel.CommunicationException> ve kanalları tarafından kullanılmak üzere tasarlanmıştır. Diğer vardır <xref:System.ServiceModel.CommunicationException>-sisteminin diğer bölümleriyle tarafından kullanılmak üzere tasarlanmış özel durumlar türetilmiş. Bu özel durum türleri şunlardır:  
   
 |Özel durum türü|Açıklama|İç özel duruma içeriği|Kurtarma stratejisi|  
 |--------------------|-------------|-----------------------------|-----------------------|  
@@ -131,7 +131,7 @@ public class FaultConverter
 }  
 ```  
   
- Özel hatalar oluşturan her bir kanala uygulamalıdır `FaultConverter` ve çağrısından döndürün `GetProperty<FaultConverter>`. Özel `OnTryCreateFaultMessage` uygulama için bir hata özel durum Dönüştür veya temsilci iç kanalın için `FaultConverter`. Kanal aktarım ise özel durum Dönüştür veya temsilci kodlayıcıya 's `FaultConverter` veya varsayılan `FaultConverter` sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] . Varsayılan `FaultConverter` WS adresleme ve SOAP tarafından belirtilen hata iletileri için karşılık gelen hataları dönüştürür. İşte bir örnek `OnTryCreateFaultMessage` uygulaması.  
+ Özel hatalar oluşturan her bir kanala uygulamalıdır `FaultConverter` ve çağrısından döndürün `GetProperty<FaultConverter>`. Özel `OnTryCreateFaultMessage` uygulama için bir hata özel durum Dönüştür veya temsilci iç kanalın için `FaultConverter`. Kanal aktarım ise özel durum Dönüştür veya temsilci kodlayıcıya 's `FaultConverter` veya varsayılan `FaultConverter` WCF'de sağlanan. Varsayılan `FaultConverter` WS adresleme ve SOAP tarafından belirtilen hata iletileri için karşılık gelen hataları dönüştürür. İşte bir örnek `OnTryCreateFaultMessage` uygulaması.  
   
 ```  
 public override bool OnTryCreateFaultMessage(Exception exception,   
@@ -186,7 +186,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3.  Yığındaki tek bir katmanında yönlendirilmiş hataları, örneğin hataları WS-RM sıra numarası hataları gibi çalışır.  
   
- Kategori 1. Genellikle WS adresleme ve SOAP hataları hatalarıdır. Temel `FaultConverter` sınıfı tarafından sağlanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hata iletileri için karşılık gelen dönüştürür hataları belirtilen WS adresleme ve SOAP tarafından bu özel durumlar dönüştürmeyi gerekmez şekilde kendiniz.  
+ Kategori 1. Genellikle WS adresleme ve SOAP hataları hatalarıdır. Temel `FaultConverter` bu özel durumlar dönüştürmeyi gerekmez şekilde WCF tarafından hata iletileri için karşılık gelen dönüştürür hataları WS adresleme ve SOAP tarafından kendiniz belirtilen sağlanan sınıfı.  
   
  Kategori 2. Bir katman tamamen katmana ilgilidir ileti bilgilerini tüketen değil ileti bir özellik ekler hataları oluşur. Daha yüksek bir katman daha fazla bilgi iletisi işleyemedi ileti özelliği sorduğunda hataları daha sonra algılanabilir. Bu tür kanalları uygulamalıdır `GetProperty` daha önce doğru hataya geri göndermek daha yüksek katman etkinleştirmek için belirtilen. Bu TransactionMessageProperty örneğidir. Bu özellik tamamen (Dağıtılmış İşlem Düzenleyicisi (DTC) başvurarak gerektirebilir Bunun yapılması. üstbilgisindeki tüm verilere doğrulamadan iletiye eklenir  
   
@@ -285,7 +285,7 @@ public override bool OnTryCreateException(
  Farklı kurtarma senaryoları gereken belirli hata koşulları için türetilmiş bir sınıf tanımlama göz önünde bulundurun `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand işleme  
- SOAP gereken bir üstbilgi alıcı tarafından anlaşılmadı sinyal genel bir hata tanımlar. Bu hata olarak bilinen `mustUnderstand` hata. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], hiçbir zaman özel kanallar oluşturmak `mustUnderstand` hataları. Bunun yerine, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en üstünde bulunan dağıtıcısı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletişim yığını kontrol eder, MustUndestand işaretlenen tüm üstbilgileri = true temel yığını tarafından anlaşılan. Herhangi bir anlaşılmayan, bir `mustUnderstand` arıza bu noktada oluşturulur. (Kullanıcı bunu kapatmak seçebilir `mustUnderstand` işleme ve tüm ileti üstbilgilerini almak uygulamaya sahip. Uygulama in that Case gerçekleştirmek için sorumlu olduğu `mustUnderstand` işleme.) Oluşturulan hata MustUnderstand ile tüm üstbilgileri adlarını içeren bir NotUnderstood üstbilgisi içerir = değil anladım true.  
+ SOAP gereken bir üstbilgi alıcı tarafından anlaşılmadı sinyal genel bir hata tanımlar. Bu hata olarak bilinen `mustUnderstand` hata. WCF'de, hiçbir zaman özel kanallar oluşturmak `mustUnderstand` hataları. Bunun yerine, WCF iletişimi yığının üst kısmında bulunur, WCF dağıtıcısı, bakar MustUndestand işaretlenen tüm üstbilgileri = true temel yığını tarafından anlaşılan. Herhangi bir anlaşılmayan, bir `mustUnderstand` arıza bu noktada oluşturulur. (Kullanıcı bunu kapatmak seçebilir `mustUnderstand` işleme ve tüm ileti üstbilgilerini almak uygulamaya sahip. Uygulama in that Case gerçekleştirmek için sorumlu olduğu `mustUnderstand` işleme.) Oluşturulan hata MustUnderstand ile tüm üstbilgileri adlarını içeren bir NotUnderstood üstbilgisi içerir = değil anladım true.  
   
  Protokol kanal MustUnderstand sahip özel bir üstbilgi gönderirse = true ve alan bir `mustUnderstand` arıza, gerekir, şekil bu hataya, gönderilen üstbilgisi son olup. İki üye vardır `MessageFault` bunun için yararlı sınıfı:  
   
@@ -310,14 +310,14 @@ public class MessageFault
   
 -   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, yazılması için izleme bilgilerin kaynağına ait olduğu <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, gelen izlenecek bilgileri almanızı somut dinleyiciler için Özet temel sınıf olan <xref:System.Diagnostics.TraceSource> ve bir dinleyici özgü hedefine çıktı. Örneğin, <xref:System.Diagnostics.XmlWriterTraceListener> çıkışları izleme bilgileri bir XML dosyası. Son olarak, <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, izleme ayrıntı denetim uygulama kullanıcının izin verir ve genellikle yapılandırmasında belirtilen.  
   
--   Temel bileşenlerine ek olarak, kullandığınız [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) görüntülemek ve arama için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] izlemeleri. Araç özellikle tarafından oluşturulan izleme dosyaları için tasarlanmış [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ve kullanılarak yazılan <xref:System.Diagnostics.XmlWriterTraceListener>. Aşağıdaki şekilde çeşitli bileşenler izleme katılan gösterilmektedir.  
+-   Temel bileşenlerine ek olarak, kullandığınız [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) görüntülemek ve WCF aramak için izler. Aracı, WCF tarafından oluşturulan ve kullanılarak yazılan özellikle izleme dosyaları için tasarlanmıştır <xref:System.Diagnostics.XmlWriterTraceListener>. Aşağıdaki şekilde çeşitli bileşenler izleme katılan gösterilmektedir.  
   
  ![Özel durumlar ve hataları işleme](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>Bir özel kanaldan izleme  
  Özel kanal çalışan uygulama bir hata ayıklayıcısı eklemeniz mümkün değilse, sorunları tanılamalarına yardımcı olmak için izleme iletilerini çıkışı yazmanız gerekir. Bu iki üst düzey görevler içerir: örnekleme bir <xref:System.Diagnostics.TraceSource> ve izlemelerini yazmak için kendi yöntemleri çağırma.  
   
- Başlatılırken bir <xref:System.Diagnostics.TraceSource>, belirttiğiniz dize kaynak adı haline gelir. Bu ad, izleme kaynağı (etkinleştir/devre dışı bırak/kümesi izleme düzeyini) yapılandırmak için kullanılır. Ayrıca, kendi çıktı izlemede görünür. Özel kanal izleme bilgilerini nereden geldiğini anlamak okuyucular izleme çıktısını yardımcı olmak için bir benzersiz kaynak adı kullanmanız gerekir. İzleme kaynağı adı olarak bilgilerinin yazma derlemenin adını kullanarak yaygın bir uygulamadır. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System.ServiceModel System.ServiceModel derlemesinden yazılan bilgi izleme kaynak olarak kullanır.  
+ Başlatılırken bir <xref:System.Diagnostics.TraceSource>, belirttiğiniz dize kaynak adı haline gelir. Bu ad, izleme kaynağı (etkinleştir/devre dışı bırak/kümesi izleme düzeyini) yapılandırmak için kullanılır. Ayrıca, kendi çıktı izlemede görünür. Özel kanal izleme bilgilerini nereden geldiğini anlamak okuyucular izleme çıktısını yardımcı olmak için bir benzersiz kaynak adı kullanmanız gerekir. İzleme kaynağı adı olarak bilgilerinin yazma derlemenin adını kullanarak yaygın bir uygulamadır. Örneğin, WCF System.ServiceModel derlemesinden yazılan bilgi için izleme kaynağı olarak System.ServiceModel kullanır.  
   
  İzleme kaynağı oluşturduktan sonra arama kendi <xref:System.Diagnostics.TraceSource.TraceData%2A>, <xref:System.Diagnostics.TraceSource.TraceEvent%2A>, veya <xref:System.Diagnostics.TraceSource.TraceInformation%2A> izleme dinleyicileri izleme girişler yazmak için yöntemleri. Her izleme giriş için yazma, tanımlanan olay türleri biri olarak olay türünü sınıflandırmak için ihtiyacınız <xref:System.Diagnostics.TraceEventType>. Bu sınıflandırma ve izleme düzeyi ayarı yapılandırmasında izleme girişi dinleyicisi çıkış olup olmadığını belirler. Örneğin, yapılandırma için izleme düzeyi ayarını `Warning` sağlayan `Warning`, `Error` ve `Critical` yazılacak girişleri ancak blokları bilgiler ve ayrıntılı girişleri izleme. İzleme kaynağı başlatmasını ve bilgi düzeyindeki bir giriş çıkışı yazma örnek aşağıda verilmiştir:  
   
@@ -402,4 +402,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] İzleme görüntüleyicisini anlar şeması `TraceRecord` daha önce gösterilen öğesi ve kendi alt öğelerini verileri ayıklar ve tablo biçiminde görüntüler. Kanalınızı Bu şemayı yapılandırılmış uygulama verilerini izlerken veri okuma Svctraceviewer.exe kullanıcıların yardımcı olmak için kullanmanız gerekir.
+ WCF izleme görüntüleyicisini şeması anlar `TraceRecord` daha önce gösterilen öğesi ve kendi alt öğelerini verileri ayıklar ve tablo biçiminde görüntüler. Kanalınızı Bu şemayı yapılandırılmış uygulama verilerini izlerken veri okuma Svctraceviewer.exe kullanıcıların yardımcı olmak için kullanmanız gerekir.

@@ -2,14 +2,14 @@
 title: ServiceHostFactory Kullanarak Barındırmayı Genişletme
 ms.date: 03/30/2017
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e553fe161ffc5b50850d916cf1cef6b38dd5c1a9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>ServiceHostFactory Kullanarak Barındırmayı Genişletme
-Standart <xref:System.ServiceModel.ServiceHost> Windows Communication Foundation (WCF) hizmetlerini barındıran için API, içinde bir genişletilebilirlik noktasıdır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mimarisi. Kullanıcılar kendi ana bilgisayar sınıftan türetilen <xref:System.ServiceModel.ServiceHost>, genellikle geçersiz kılmak için <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> kullanmak için <xref:System.ServiceModel.Description.ServiceDescription> imperatively varsayılan uç noktaları eklemek veya hizmet açmadan önce davranışları değiştirmek için.  
+Standart <xref:System.ServiceModel.ServiceHost> Windows Communication Foundation (WCF) hizmetlerini barındıran için API WCF mimarisinde bir genişletilebilirlik noktasıdır. Kullanıcılar kendi ana bilgisayar sınıftan türetilen <xref:System.ServiceModel.ServiceHost>, genellikle geçersiz kılmak için <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> kullanmak için <xref:System.ServiceModel.Description.ServiceDescription> imperatively varsayılan uç noktaları eklemek veya hizmet açmadan önce davranışları değiştirmek için.  
   
  Kendini barındırma ortamında bir özel Oluştur gerekmez <xref:System.ServiceModel.ServiceHost> ana bilgisayarı başlatır kodu yazın ve ardından çağırın çünkü <xref:System.ServiceModel.ICommunicationObject.Open> Bu örneği sonra üzerinde. Bu iki adımları arasında istediğiniz yapabilirsiniz. Örneğin, yeni bir ekleyebilirsiniz <xref:System.ServiceModel.Description.IServiceBehavior>:  
   
@@ -57,7 +57,7 @@ public static void Main()
   
  Bu özel kullanmayı hemen göze erişilebilir <xref:System.ServiceModel.ServiceHost> gelen Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) içinde. Barındırma ortamı bir örneği olduğundan bu ortamlarda kendini barındırma ortamı farklı <xref:System.ServiceModel.ServiceHost> uygulama adına. IIS ve WAS'ta barındırma altyapı özel hakkında hiçbir şey bilmez <xref:System.ServiceModel.ServiceHost> türevi.  
   
- <xref:System.ServiceModel.Activation.ServiceHostFactory> Özel erişme bu sorunu çözmek için tasarlanmıştır <xref:System.ServiceModel.ServiceHost> gelen IIS ya da WAS içinde. Özel bir ana bilgisayar olduğundan türetilmiş <xref:System.ServiceModel.ServiceHost> dinamik olarak yapılandırılır ve potansiyel olarak çeşitli türlerde barındırma ortamı hiçbir zaman onu doğrudan başlatır. Bunun yerine, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yöneltme barındırma ortamı ve hizmetin somut türü arasında katmanı sağlamak için Fabrika desen kullanır. Aksi takdirde söyleyin sürece, bir varsayılan uygulaması kullanır <xref:System.ServiceModel.Activation.ServiceHostFactory> örneği döndürür <xref:System.ServiceModel.ServiceHost>. Ancak Fabrika uygulamanızda CLR türü adını belirterek türetilmiş ana bilgisayarınız döndürür kendi Fabrika de sağlayabilirsiniz @ServiceHost yönergesi.  
+ <xref:System.ServiceModel.Activation.ServiceHostFactory> Özel erişme bu sorunu çözmek için tasarlanmıştır <xref:System.ServiceModel.ServiceHost> gelen IIS ya da WAS içinde. Özel bir ana bilgisayar olduğundan türetilmiş <xref:System.ServiceModel.ServiceHost> dinamik olarak yapılandırılır ve potansiyel olarak çeşitli türlerde barındırma ortamı hiçbir zaman onu doğrudan başlatır. Bunun yerine, WCF yöneltme barındırma ortamı ve hizmetin somut türü arasında katmanı sağlamak için Fabrika desen kullanır. Aksi takdirde söyleyin sürece, bir varsayılan uygulaması kullanır <xref:System.ServiceModel.Activation.ServiceHostFactory> örneği döndürür <xref:System.ServiceModel.ServiceHost>. Ancak Fabrika uygulamanızda CLR türü adını belirterek türetilmiş ana bilgisayarınız döndürür kendi Fabrika de sağlayabilirsiniz @ServiceHost yönergesi.  
   
  Amaç, temel durumlarda, kendi Fabrika uygulama düz iletme alıştırma olması gerektiğini ' dir. Örneğin, özel bir işte <xref:System.ServiceModel.Activation.ServiceHostFactory> türetilmiş döndüren <xref:System.ServiceModel.ServiceHost>:  
   
@@ -79,4 +79,4 @@ public class DerivedFactory : ServiceHostFactory
   
  Varken teknik sınır için istediğiniz yapmayı <xref:System.ServiceModel.ServiceHost> döndürmek, <xref:System.ServiceModel.Activation.ServiceHostFactory.CreateServiceHost%2A>, Fabrika uygulamaları olabildiğince basit tutmak öneririz. Çok sayıda özel mantık varsa, yeniden kullanılabilir olması için bu mantığı, ana bilgisayar yerine içinde Fabrika yerleştirilecek daha iyidir.  
   
- Burada belirtilen barındırma API bir daha fazla katmana yoktur. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Ayrıca <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, içinden <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türetilir. Bu, kendi özelleştirilmiş oluşturmaları ile meta veri sistem büyük bölümlerini burada takas gerekir daha Gelişmiş senaryolar için mevcut.
+ Burada belirtilen barındırma API bir daha fazla katmana yoktur. WCF de sahip <xref:System.ServiceModel.ServiceHostBase> ve <xref:System.ServiceModel.Activation.ServiceHostFactoryBase>, içinden <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.Activation.ServiceHostFactory> sırasıyla türetilir. Bu, kendi özelleştirilmiş oluşturmaları ile meta veri sistem büyük bölümlerini burada takas gerekir daha Gelişmiş senaryolar için mevcut.

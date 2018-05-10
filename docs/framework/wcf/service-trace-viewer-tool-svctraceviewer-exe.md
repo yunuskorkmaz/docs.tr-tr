@@ -2,14 +2,14 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
-Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı tarafından oluşturulan tanılama izlemeleri çözümlemenize yardımcı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece, tanılama, onarım doğrulayın ve izleme iletilerini günlüğüne filtrelemek için bir yöntem sunar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet sorunları.  
+Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve Tanılama, onarma ve WCF hizmeti sorunları doğrulayın izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
   
 ## <a name="configuring-tracing"></a>İzlemeyi Yapılandırma  
  Tanılama izlemeleri uygulamanızın işlemi neler olduğunu gösteren bilgiler sağlar. Adından da anlaşılacağı gibi işlemleri kendi kaynaktan hedef ve Ara noktaları da üzerinden izleyebilirsiniz.  
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Açma ve WCF izleme dosyalarını görüntüleme  
  Hizmet izleme görüntüleyicisini üç dosya türlerini destekler:  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Dosya (.svcLog) izleme  
+-   WCF dosya (.svcLog) izleme  
   
 -   Dosya (.etl) izleme olayı  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
   
 ##### <a name="to-open-a-trace-file"></a>Bir izleme dosyasını açmak için  
   
-1.  Gitmek için bir komut penceresi kullanarak hizmet izleme Görüntüleyicisi'ni başlatın, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yükleme konumunu (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) ve ardından türü `SvcTraceViewer.exe`.  
+1.  WCF yükleme konumuna (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) gidin ve ardından türü için bir komut penceresi kullanarak hizmet izleme görüntüleyicisini Başlat `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Hizmet izleme Görüntüleyicisi aracı iki dosya türleriyle ilişkilendirebilirsiniz: .svclog ve .stvproj. Komut satırında iki parametre kaydetmek ve dosya uzantılarını kaydını kaldırmak için kullanabilirsiniz.  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
 >  İzleme günlük dosyasını 200 MB'den daha büyük yük önerilmez. Bu boyuttan daha büyük bir dosyayı yüklemeye çalışırsanız, yükleme işlemi, bilgisayar kaynağına bağlı olarak uzun bir süre devam edebilir. Hizmet izleme Görüntüleyicisi aracı uzun süredir yanıt verebilir durumda olmayabilir veya makinenizin bellek tüketebilir. Bu durumu önlemek için kısmi yükleme yapılandırmanız önerilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için "Yükleme büyük izleme dosyaları" bölümüne bakın.  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Olay izleme ve koyu izleme  
- İzleyicinin yerel etkinlik izleme biçimlendirmek biçimidir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yayar. Görüntüleyici bunları görüntülemeden önce farklı bir biçimde yayılan izlemeleri dönüştürülmesi gerekir. Şu anda, etkinlik izleme biçimi ek olarak olay izleme ve koyu izleme Görüntüleyicisi'ni destekler.  
+ İzleyicinin yerel biçimi WCF gösterdiği Etkinlik izleme biçimidir. Görüntüleyici bunları görüntülemeden önce farklı bir biçimde yayılan izlemeleri dönüştürülmesi gerekir. Şu anda, etkinlik izleme biçimi ek olarak olay izleme ve koyu izleme Görüntüleyicisi'ni destekler.  
   
  Etkinlik izlemeleri içermeyen bir dosyayı açtığınızda, Görüntüleyici dosya dönüştürmeye çalışır. Dönüştürülen izleme verilerini içeren dosyanın konumunu ve adını belirtmeniz gerekir. Veri dönüştürülen Görüntüleyici yeni dosyanın içeriğini görüntüler.  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
 -   İçinde **proje** sekmesi, projeye dosyaları ekleyebilirsiniz.  
   
 ### <a name="viewing-wcf-traces"></a>WCF izlemeleri görüntüleme  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Etkinlik izleme biçimi kullanarak izlemeleri yayar. Etkinlik izleme modelinde, tek tek izlemeleri etkinliklerde amaçlarına göre gruplandırılır. Mantıksal denetim akışı etkinlikleri aktarılır. Örneğin, bir uygulamanın yaşam süresi sırasında birçok "iletisi gönder etkinliği" görünür ve kaybolur. İzlemeleri ve etkinlikleri ve hizmet izleme görüntüleyicisini kullanıcı arabiriminin çok görüntüleme hakkında daha fazla bilgi için bkz: [bağıntılı izlemeleri görüntüleme ve sorun giderme için hizmet izleme görüntüleyicisini kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF Etkinlik izleme biçimi kullanarak izlemeleri yayar. Etkinlik izleme modelinde, tek tek izlemeleri etkinliklerde amaçlarına göre gruplandırılır. Mantıksal denetim akışı etkinlikleri aktarılır. Örneğin, bir uygulamanın yaşam süresi sırasında birçok "iletisi gönder etkinliği" görünür ve kaybolur. İzlemeleri ve etkinlikleri ve hizmet izleme görüntüleyicisini kullanıcı arabiriminin çok görüntüleme hakkında daha fazla bilgi için bkz: [bağıntılı izlemeleri görüntüleme ve sorun giderme için hizmet izleme görüntüleyicisini kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Farklı görünümleri değiştirme  
  Hizmet izleme görüntüleyicisini aşağıdaki farklı görünümleri sağlar. Görüntüleyicisi'nin sol bölmesinde sekmelerinde olarak görüntülenir ve ayrıca erişilebilen **Görünüm** menüsü.  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
   
 -   Filtre araç önceden tanımlanmış ve özel filtreler erişim sağlar. Aracılığıyla etkinleştirilebilir **Görünüm** menüsü.  
   
--   Önceden tanımlanmış filtre görüntüleyicisinin seçmeli olarak bölümlerini filtrelemek için kullanılabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izlemeleri. Varsayılan olarak, tüm altyapı izlemeleri geçmesine izin verecek şekilde ayarlanır. Bu filtre ayarlarını tanımlanan **filtre seçenekleri** altında alt menüsünde **Görünüm** menüsü.  
+-   Önceden tanımlanmış filtre Görüntüleyici'nin, seçmeli olarak WCF izlemeleri bölümlerini filtrelemek için kullanılabilir. Varsayılan olarak, tüm altyapı izlemeleri geçmesine izin verecek şekilde ayarlanır. Bu filtre ayarlarını tanımlanan **filtre seçenekleri** altında alt menüsünde **Görünüm** menüsü.  
   
 -   Özel XPath filtreler kullanıcılara filtreleme üzerinde Tam Denetim verin. İçinde tanımlanabilir **özel filtre** altında **Görünüm** menüsü.  
   
@@ -237,7 +237,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
  **Temizle** düğme tüm izlemeleri geçmesine izin vermek için önceden tanımlanmış ve özel filtreler sıfırlar.  
   
 #### <a name="filter-options"></a>Filtre Seçenekleri  
- Görüntüleyici otomatik olarak kaldırabilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] görünümünden izlemeleri. Belirli alanlarında tarafından gösterilen izlemeleri seçici olarak silebilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], örneğin, işlem kaldırma izlemeleri görünümden ilgili.  
+ Görüntüleyici otomatik olarak WCF izlemeleri görünümden kaldırın. WCF özel alanlara göre yayılan izlemeleri seçici olarak silebilirsiniz, örneğin, işlem kaldırma izlemeleri görünümden ilgili.  
   
  Bu filtre ayarlarını tanımlanan **filtre seçenekleri** altında alt menüsünde **Görünüm** menüsü.  
   
@@ -347,7 +347,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
 -   Adım geri: Kullanmak **etkinlik** menüsü veya "F9" tuşuna basın. Ok tuşu "yedekleme" izleme bölmesinde kullanabilirsiniz.  
   
 > [!NOTE]
->  Bu, farklı bir işlemde veya hatta farklı bir bilgisayar üzerinde gerçekleşen bir etkinliğin için sürebilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iletilerini etkinlik makineler span kimlikleri taşıyan.  
+>  WCF iletileri etkinlik makineler span kimlikleri taşıyabilir çünkü bu, farklı bir işlemde veya hatta farklı bir bilgisayar üzerinde gerçekleşen bir etkinliğin alabilir.  
   
 #### <a name="follow-transfer"></a>Aktarım izleyin  
  Aktarım izlemeleri izleme dosyasında özel izlemeleri ' dir. Bir etkinlik için başka bir etkinlik aktarım izleme tarafından aktarabilir. Örneğin, "Etkinliği A", "Etkinliği B" aktarabilir. Böyle bir durumda, "Etkinliği A" ile ": etkinlik" adı ve aktarım simgesinde aktarım izleme yoktur. Bu aktarım izleme iki izlemeleri arasında bir bağlantıdır. "Etkinliği B" da olabilir geri "etkinliği için bir" aktarmak üzere etkinlik sonunda aktarım izleme. Bu işlev çağrıları programlarda benzer: A, B döndürür sonra B çağırır.  
@@ -417,9 +417,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Günlük izleme iletisi: olan izleme zaman yayılan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ileti ileti günlüğe kaydetme özelliği tarafından günlüğe zaman `System.ServiceModel.MessageLogging` izleme kaynağını etkindir. Bu izleme tıklatarak iletisi görüntülenir. Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend, TransportReceive ve tarafından da belirtilebilir ServiceLevelReceiveRequest `messageSource` ileti günlüğü izleme özniteliği.|  
-|![Alınan izleme iletisi](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Alınan izleme iletisi: olan izleme zaman yayılan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iletisi alındığında, varsa `System.ServiceModel` izleme kaynağını bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli olan **grafik** görünümü.|  
-|![Gönderilen izleme iletisi](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Gönderilen izleme iletisi: olan izleme zaman yayılan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , iletinin gönderildiği `System.ServiceModel` izleme kaynağını bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli olan **grafik** görünümü.|  
+|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Günlük izleme iletisi: bir WCF ileti ileti günlüğe kaydetme özelliği tarafından günlüğe kaydedildiğinde yayılan izleme zaman `System.ServiceModel.MessageLogging` izleme kaynağını etkindir. Bu izleme tıklatarak iletisi görüntülenir. Bir ileti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend, TransportReceive ve tarafından da belirtilebilir ServiceLevelReceiveRequest `messageSource` ileti günlüğü izleme özniteliği.|  
+|![Alınan izleme iletisi](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Alınan izleme iletisi: bir WCF ileti alındığında, gösterilen izleme `System.ServiceModel` izleme kaynağını bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli olan **grafik** görünümü.|  
+|![Gönderilen izleme iletisi](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Gönderilen izleme iletisi: varsa bir WCF ileti gönderildiğinde yayılan izleme `System.ServiceModel` izleme kaynağını bilgi veya ayrıntı düzeyinde etkinleştirilir. Bu izleme iletisi bağıntı oku etkinliğini görüntülemek için gerekli olan **grafik** görünümü.|  
   
 ### <a name="activities"></a>Etkinlikler  
   
@@ -432,11 +432,11 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı t
   
 |Simge|Açıklama|  
 |----------|-----------------|  
-|![Ortam etkinlik](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Ortam etkinliği: oluşturur, açan veya kapatan bir etkinlik bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ana bilgisayar veya istemci. Bu aşamaları sırasında oluşmuş hatalar bu etkinlikte görünecektir.|  
+|![Ortam etkinlik](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Ortam etkinliği: oluşturur, açar veya bir WCF konak veya istemci kapatır bir etkinlik. Bu aşamaları sırasında oluşmuş hatalar bu etkinlikte görünecektir.|  
 |![Etkinlik dinleme](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Etkinlik dinleme: izlemeleri günlüklerini bir etkinlik için bir dinleyici ilgili. Bu etkinliği içinde biz dinleyicisi bilgileri ve bağlantı isteklerini görüntüleyebilirsiniz.|  
 |![Alma bayt etkinliğinin](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Bayt etkinlik alırsınız: tüm izlemeleri grupları bir etkinlik ilgili iki uç noktalar arasında bir bağlantı gelen bayt alma ile. Bu etkinlik, http.sys gibi etkinlik kimliği yayma aktarım etkinliklerle bağıntı gereklidir. Bu etkinlik, bağlantı hatalarını iptalleri gibi görünür.|  
-|![İleti etkinliği işlemek](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İleti etkinliği işlemek: izlemeleri grupları bir etkinlik ilgili oluşturmak için bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ileti. Bu etkinlikte hataları nedeniyle hatalı zarf veya hatalı bir ileti görünür. Bu etkinliği içinde biz bir etkinlik kimliği bir çağrıyı yapandan yayıldığı görmek için ileti üstbilgilerini inceleyebilirsiniz. Biz işlem eylem aktivitesi (sonraki simgesi) aktardığınızda bu true ise, biz bu etkinliğe çağıran ve çağrılan'ın izlemeleri arasında bağıntı yayılan etkinlik kimliği atayabilirsiniz.|  
-|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Eylem etkinlik işlem: tüm izlemeleri grupları bir etkinlik ilgili bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] iki uç isteği. Varsa `propagateActivity` ayarlanır `true` yapılandırmasındaki her iki uç noktalarda doğrudan bağıntı için bir etkinlik her iki uç noktalar tüm izlemeleri birleştirilir. Bu tür etkinlik aktarım ya da işlem, kullanıcı kodu sınırına genişletme güvenlik nedeniyle hatalar içeren ve (bir yanıt varsa) geri.|  
+|![İleti etkinliği işlemek](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İleti etkinliği işlemek: izlemeleri grupları bir etkinlik ilgili bir WCF ileti oluşturmak için. Bu etkinlikte hataları nedeniyle hatalı zarf veya hatalı bir ileti görünür. Bu etkinliği içinde biz bir etkinlik kimliği bir çağrıyı yapandan yayıldığı görmek için ileti üstbilgilerini inceleyebilirsiniz. Biz işlem eylem aktivitesi (sonraki simgesi) aktardığınızda bu true ise, biz bu etkinliğe çağıran ve çağrılan'ın izlemeleri arasında bağıntı yayılan etkinlik kimliği atayabilirsiniz.|  
+|![Günlük izleme iletisi](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Eylem etkinlik işlem: tüm izlemeleri grupları bir etkinlik iki uç noktalar arasında bir WCF isteğine ilgili. Varsa `propagateActivity` ayarlanır `true` yapılandırmasındaki her iki uç noktalarda doğrudan bağıntı için bir etkinlik her iki uç noktalar tüm izlemeleri birleştirilir. Bu tür etkinlik aktarım ya da işlem, kullanıcı kodu sınırına genişletme güvenlik nedeniyle hatalar içeren ve (bir yanıt varsa) geri.|  
 |![İleti etkinliği işlemek](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Kullanıcı kodu etkinliği yürütmek: kullanıcı kodu grupları bir etkinlik bir isteği işlemek için izler.|  
   
 ## <a name="troubleshooting"></a>Sorun giderme  

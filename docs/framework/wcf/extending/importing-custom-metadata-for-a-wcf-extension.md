@@ -2,21 +2,21 @@
 title: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e2bd7c0ce1fd4a8154a0d6d9650487197d98d8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
-Windows Communication Foundation (WCF) meta veri içeri aktarma kendi meta verilerini bir hizmeti veya bileşen parçalarından soyut bir temsili oluşturma işlemidir. Örneğin, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> WSDL örneklerden belge için bir hizmet. Hizmet meta verilerde almak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> sınıf WS-Policy yararlanmak alma meta veri biçimleri mantığı almak için destek uygulama [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Windows Communication Foundation (WCF) meta veri içeri aktarma kendi meta verilerini bir hizmeti veya bileşen parçalarından soyut bir temsili oluşturma işlemidir. Örneğin, WCF aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> WSDL örneklerden belge için bir hizmet. WCF'de hizmet meta verilerini almak için uygulaması kullanın <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> WS-Policy yararlanmak alma meta veri biçimleri WCF mantığında almak için sınıf uygulama desteği.  
   
  Özel meta verileri, sistem tarafından sağlanan meta verileri ımporters alamıyor XML öğelerden oluşur. Genellikle, bu özel WSDL uzantıları ve özel ilke onaylamalarını içerir.  
   
  Bu bölüm, özel WSDL uzantıları ve ilke onaylamalarını içe aktarmayı açıklar. İçeri aktarma işlemi kendisini odak değil. Meta veriler özel ya da sistem desteklenen olmasına bakılmaksızın meta verileri alma ve verme türlerini kullanma hakkında daha fazla bilgi için bkz: [aktarma ve içeri aktarma meta verileri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf ile birlikte gelen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. <xref:System.ServiceModel.Description.WsdlImporter> Türü içinde paketlendi ekli ilkeleriyle WSDL meta verileri içe aktaran bir <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> nesnesi. İlke onaylamalarını ve varsayılan ımporters tanımadığınız WSDL uzantıları herhangi bir kayıtlı özel ilkeyi ve WSDL ımporters içeri aktarmak için geçirilir. Genellikle, ımporters alınan sözleşme değiştirmek için ya da kullanıcı tanımlı bağlama öğeleri desteklemek için uygulanır.  
+ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türü uygulamasıdır <xref:System.ServiceModel.Description.MetadataImporter> soyut WCF ile dahil sınıfı. <xref:System.ServiceModel.Description.WsdlImporter> Türü içinde paketlendi ekli ilkeleriyle WSDL meta verileri içe aktaran bir <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> nesnesi. İlke onaylamalarını ve varsayılan ımporters tanımadığınız WSDL uzantıları herhangi bir kayıtlı özel ilkeyi ve WSDL ımporters içeri aktarmak için geçirilir. Genellikle, ımporters alınan sözleşme değiştirmek için ya da kullanıcı tanımlı bağlama öğeleri desteklemek için uygulanır.  
   
  Bu bölümde açıklanmaktadır:  
   

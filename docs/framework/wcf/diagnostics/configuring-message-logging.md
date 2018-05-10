@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
 Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandırabileceğiniz açıklanmaktadır.  
@@ -66,7 +66,7 @@ Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandı
   
  Giden iletiler için günlüğe kaydetme hemen ileti kullanıcı kodu ayrıldığında sonra ve ileti kablo göründükten hemen önce gerçekleşir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iki farklı düzeylerde, hizmet ve aktarım iletilerini günlüğe kaydeder. Hatalı biçimlendirilmiş iletileri da günlüğe kaydedilir. Üç kategoride birbirinden bağımsızdır ve yapılandırmada ayrı olarak etkinleştirilebilir.  
+ WCF iki farklı düzeylerde, hizmet ve aktarım iletilerini günlüğe kaydeder. Hatalı biçimlendirilmiş iletileri da günlüğe kaydedilir. Üç kategoride birbirinden bağımsızdır ve yapılandırmada ayrı olarak etkinleştirilebilir.  
   
  Ayarlayarak günlük düzeyini denetleyebilirsiniz `logMessagesAtServiceLevel`, `logMalformedMessages`, ve `logMessagesAtTransportLevel` özniteliklerini `messageLogging` öğesi.  
   
@@ -77,7 +77,7 @@ Bu konuda, ileti günlüğe kaydetme farklı senaryolar için nasıl yapılandı
  Bu katmanda günlüğe kaydedilen iletileri kodlanmış veya için veya taşıma hattaki sonra kodunu çözdü hazırsınız demektir. Filtreler tanımladıysanız, filtrelerle eşleşen iletileri günlüğe kaydedilir. Aksi takdirde, Aktarım katmanı tüm iletileri günlüğe kaydedilir. Tüm altyapı iletileri güvenilir Mesajlaşma iletileri de dahil olmak üzere bu katmanda günlüğe kaydedilir. Akış iletilerde yalnızca üstbilgileri günlüğe kaydedilir. Ayrıca, güvenli iletiler IF dışında bu düzeyde HTTPS kullanılan gibi güvenli bir taşıma şifrelenmiş olarak kaydedilir.  
   
 ### <a name="malformed-level"></a>Hatalı biçimlendirilmiş düzeyi  
- Hatalı biçimlendirilmiş iletiler olan tarafından reddedilen iletiler [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] işleminin herhangi bir aşamada yığını. Hatalı biçimlendirilmiş iletileri olarak kaydediliyor-olduğu: bunu uygun olmayan XML vb. ile olmaları durumunda şifrelenmiş. `maxSizeOfMessageToLog` CDATA olarak kaydedilen iletinin boyutunu tanımlanır. Varsayılan olarak, `maxSizeOfMessageToLog` 256 K eşittir. Bu öznitelik hakkında daha fazla bilgi için diğer seçenekleri bölümüne bakın.  
+ Hatalı biçimlendirilmiş iletileri WCF yığını tarafından işleme herhangi bir aşamasında reddedilen iletiler ' dir. Hatalı biçimlendirilmiş iletileri olarak kaydediliyor-olduğu: bunu uygun olmayan XML vb. ile olmaları durumunda şifrelenmiş. `maxSizeOfMessageToLog` CDATA olarak kaydedilen iletinin boyutunu tanımlanır. Varsayılan olarak, `maxSizeOfMessageToLog` 256 K eşittir. Bu öznitelik hakkında daha fazla bilgi için diğer seçenekleri bölümüne bakın.  
   
 ### <a name="other-options"></a>Diğer seçenekleri  
  Günlüğe kaydetme düzeylerini yanı sıra kullanıcı aşağıdaki seçenekleri belirtebilirsiniz:  

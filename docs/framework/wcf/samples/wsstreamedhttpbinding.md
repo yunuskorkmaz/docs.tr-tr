@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Örnek, HTTP taşıma kullanıldığında akış senaryoları desteklemek üzere tasarlanmış bir bağlama oluşturun gösterilmiştir.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Yapılandırma desteği ekleme  
   
-     Taşıma yapılandırma yoluyla kullanıma sunmak için iki daha fazla sınıf örneği uygulayan —`WSStreamedHttpBindingConfigurationElement` ve `WSStreamedHttpBindingSection`. Sınıf `WSStreamedHttpBindingSection` olan bir <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> kullanıma sunan `WSStreamedHttpBinding` için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yapılandırma sistemi. Uygulama toplu temsilci için `WSStreamedHttpBindingConfigurationElement`, den türetilen <xref:System.ServiceModel.Configuration.StandardBindingElement>. Sınıf `WSStreamedHttpBindingConfigurationElement` özelliklerine karşılık gelen özelliklere sahip `WSStreamedHttpBinding`ve her yapılandırma öğesi için bir bağlama eşlemek için işlevleri.  
+     Taşıma yapılandırma yoluyla kullanıma sunmak için iki daha fazla sınıf örneği uygulayan —`WSStreamedHttpBindingConfigurationElement` ve `WSStreamedHttpBindingSection`. Sınıf `WSStreamedHttpBindingSection` olan bir <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> kullanıma sunan `WSStreamedHttpBinding` WCF yapılandırma sistemi. Uygulama toplu temsilci için `WSStreamedHttpBindingConfigurationElement`, den türetilen <xref:System.ServiceModel.Configuration.StandardBindingElement>. Sınıf `WSStreamedHttpBindingConfigurationElement` özelliklerine karşılık gelen özelliklere sahip `WSStreamedHttpBinding`ve her yapılandırma öğesi için bir bağlama eşlemek için işlevleri.  
   
      İşleyici, aşağıdaki bölümde hizmetin yapılandırma dosyasına ekleyerek yapılandırma sistemi ile kaydedin.  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding örnek istemcisi  
- Hizmetini kullanarak ile kullanılan etkileşim kurmak için istemci `WSStreamedHttpBinding` istemci alt dizininde bulunur. Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS adresi tarayıcınızda gibi erişmeye çalıştığınızda bir güvenlik uyarısı görüntüler https://localhost/servicemodelsamples/service.svc. İzin vermek için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci, yerinde bir test sertifikası ile çalışmak için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Kod ve eşlik eden sınıfı üretim sertifikaları kullanırken gerekli değildir.  
+ Hizmetini kullanarak ile kullanılan etkileşim kurmak için istemci `WSStreamedHttpBinding` istemci alt dizininde bulunur. Bu örnekte kullanılan sertifikanın Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS adresi tarayıcınızda gibi erişmeye çalıştığınızda bir güvenlik uyarısı görüntüler https://localhost/servicemodelsamples/service.svc. Bir test sertifikası yerinde çalışmak için WCF istemcisini izin vermek için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklendi. Kod ve eşlik eden sınıfı üretim sertifikaları kullanırken gerekli değildir.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

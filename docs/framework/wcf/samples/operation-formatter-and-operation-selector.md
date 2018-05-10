@@ -2,14 +2,14 @@
 title: İşlem Biçimlendirici ve İşlem Seçici
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
-Bu örnek ileti verilerin ne öğesinden farklı bir biçimde izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktaları'nın nasıl kullanılabileceğini gösteren [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bekliyor. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] biçimlendiricileri beklediğiniz altında dahil edilecek yöntem parametreleri `soap:body` öğesi. Örnek, bunun yerine bir HTTP GET sorgu dizesi parametre verilerini ayrıştırır ve bu verileri kullanarak yöntemlerini çağıran bir özel işlem biçimlendirici uygulamak gösterilmiştir.  
+Bu örnek ileti verilerin ne WCF bekliyor öğesinden farklı bir biçimde izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktaları'nın nasıl kullanılabileceğini gösterir. Varsayılan olarak, WCF biçimlendiricileri altında dahil edilecek yöntem parametreleri beklediğiniz `soap:body` öğesi. Örnek, bunun yerine bir HTTP GET sorgu dizesi parametre verilerini ayrıştırır ve bu verileri kullanarak yöntemlerini çağıran bir özel işlem biçimlendirici uygulamak gösterilmiştir.  
   
  Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bunu gösterir nasıl eklenir, çıkarma, Çarp, bölme iletileri, HTTP GET istemci-sunucu istekleri için kullanılacak değiştirilebilir ve POX ile HTTP POST için sunucudan istemciye yanıt iletileri.  
   
@@ -29,7 +29,7 @@ Bu örnek ileti verilerin ne öğesinden farklı bir biçimde izin vermek için 
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="key-concepts"></a>Temel Kavramlar  
- `QueryStringFormatter` -İşlemini biçimlendiricisi bileşenidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] parametresi nesnelerinin bir dizisi ve bir iletisine parametre nesnelerinin bir dizisi için bir ileti dönüştürme sorumlu. Bu istemciyi kullanarak yapılır <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirimi ve ile sunucuya <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> arabirimi. Gelen istek ve yanıt iletileri almak kullanıcıların bu arabirimleri sağlamak `Serialize` ve `Deserialize` yöntemleri.  
+ `QueryStringFormatter` -İşlemini biçimlendiricisi parametre nesnelerinin bir dizisi ve bir iletisine parametre nesnelerinin bir dizisi için bir ileti dönüştürme sorumludur WCF bileşenidir. Bu istemciyi kullanarak yapılır <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirimi ve ile sunucuya <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> arabirimi. Gelen istek ve yanıt iletileri almak kullanıcıların bu arabirimleri sağlamak `Serialize` ve `Deserialize` yöntemleri.  
   
  Bu örnekte `QueryStringFormatter` hem de bu arabirimlerini uygular ve istemci ve sunucu üzerinde uygulanır.  
   
@@ -59,10 +59,10 @@ Bu örnek ileti verilerin ne öğesinden farklı bir biçimde izin vermek için 
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> Ayarlanır <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> uygulaması.  
   
- Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir tam eşleşme adresi filtresi kullanır. Uç noktası davranışı olmasını adresi Filtresi ayrıca değişiklikler filtre eşleşen bir önek, URI gelen ileti üzerinde parametre veri içeren bir sorgu dizesi tarafından izlenen bir işlemi ad soneki içerir. Kullandığı [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> bu amaç için.  
+ Varsayılan olarak, bir tam eşleşme adresi filtresi WCF kullanır. Uç noktası davranışı olmasını adresi Filtresi ayrıca değişiklikler filtre eşleşen bir önek, URI gelen ileti üzerinde parametre veri içeren bir sorgu dizesi tarafından izlenen bir işlemi ad soneki içerir. WCF kullanan<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> bu amaç için.  
   
 ### <a name="installing-operation-formatters"></a>Yükleme işlemi biçimlendiricileri  
- Biçimlendiricileri belirtin işlemi davranışları benzersizdir. Bu tür bir davranış her zaman gerekli işlemini biçimlendiricisi oluşturmak her işlem için varsayılan olarak uygulanır. Ancak, bu davranışların gibi başka bir işlem davranışı arar; Bunlar herhangi bir öznitelik tarafından tanımlanabilen değildir. Değiştirme davranışı yüklemek için uygulama tarafından yüklenen belirli biçimlendirici davranışları aramanız gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] varsayılan türü Yükleyicisi ve değiştirmek veya varsayılan davranışı sonra çalıştırmak için uyumlu bir davranış ekleyin.  
+ Biçimlendiricileri belirtin işlemi davranışları benzersizdir. Bu tür bir davranış her zaman gerekli işlemini biçimlendiricisi oluşturmak her işlem için varsayılan olarak uygulanır. Ancak, bu davranışların gibi başka bir işlem davranışı arar; Bunlar herhangi bir öznitelik tarafından tanımlanabilen değildir. Değiştirme davranışı yüklemek için uygulama varsayılan ve ya da WCF türü yükleyicisi tarafından yüklenen belirli biçimlendirici davranışları değiştirmek için bakın veya varsayılan davranışı sonra çalıştırmak için uyumlu bir davranış ekleyin.  
   
  Bu işlemi biçimlendiricileri davranışları önce arama program aracılığıyla ayarlanabilir <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> veya varsayılan sonra yürütülen bir işlem davranışı belirterek. Ancak, bunu kolayca bir uç noktası davranışı tarafından ayarlanamaz (ve bu nedenle yapılandırmaya göre) davranış modeli davranışları değiştirin veya aksi halde açıklama ağaç değiştirmek bir davranış izin vermediğinden.  
   

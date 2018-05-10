@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
 Bu konu, taşıma güvenliği Windows etki alanında bulunan ve aynı etki alanındaki istemciler tarafından çağrılan bir Windows Communication Foundation (WCF) hizmetini etkinleştirmek gösterilmiştir. Bu senaryo hakkında daha fazla bilgi için bkz: [Windows kimlik doğrulama ile taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
@@ -75,7 +75,7 @@ Bu konu, taşıma güvenliği Windows etki alanında bulunan ve aynı etki alan�
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Kod ile bir istemci bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kodu oluşturmak için SvcUtil.exe aracını kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri ile iletişim kurmak için sahip olmasını sağlar sınıfı bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfı, hangi uygular `ICalculator` servis kodunu uyumluluğunu etkinleştirme arabirimi.  
+1.  Hizmet meta verilerinden proxy kodu oluşturmak için SvcUtil.exe aracını kullanın. Daha fazla bilgi için bkz: [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> sınıfı her istemci gerekli Oluşturucular, yöntemleri ve özellikleri bir WCF Hizmeti ile iletişim kurmak için sahip olmasını sağlar. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfı, hangi uygular `ICalculator` servis kodunu uyumluluğunu etkinleştirme arabirimi.  
   
 2.  Bu yordamın kodu başında eklenir `Main` istemci programı yöntemi.  
   

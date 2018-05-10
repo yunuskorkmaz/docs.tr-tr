@@ -2,11 +2,11 @@
 title: Özel WSDL Yayımı
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b75aa2269d9c21a6f6d7f579d3c0b6f547a92332
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
 Bu örnek gösterilmektedir nasıl yapılır:  
@@ -230,7 +230,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Özel içeri Aktarıcı belirtilen sonra [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] meta veri sistemini yükleyen özel içeri Aktarıcı hiçbir <xref:System.ServiceModel.Description.WsdlImporter> bu amaçla oluşturulmuş. Bu örnekte <xref:System.ServiceModel.Description.MetadataExchangeClient> meta veri indirmek için <xref:System.ServiceModel.Description.WsdlImporter> bir örnek oluşturur, özel içeri Aktarıcı kullanarak meta verileri almak için düzgün şekilde yapılandırılmış ve <xref:System.ServiceModel.Description.ServiceContractGenerator> hem Visual Basic değiştirilmiş sözleşme bilgileri derlemek için ve IntelliSense desteklemek için Visual Studio'da kullanılan veya XML belgeleri derlenmiş C# istemci kodu.  
+ Özel içeri Aktarıcı belirtilen sonra WCF Meta verileri sistem özel içeri Aktarıcı hiçbir yükler <xref:System.ServiceModel.Description.WsdlImporter> bu amaçla oluşturulmuş. Bu örnekte <xref:System.ServiceModel.Description.MetadataExchangeClient> meta veri indirmek için <xref:System.ServiceModel.Description.WsdlImporter> bir örnek oluşturur, özel içeri Aktarıcı kullanarak meta verileri almak için düzgün şekilde yapılandırılmış ve <xref:System.ServiceModel.Description.ServiceContractGenerator> hem Visual Basic değiştirilmiş sözleşme bilgileri derlemek için ve IntelliSense desteklemek için Visual Studio'da kullanılan veya XML belgeleri derlenmiş C# istemci kodu.  
   
 ```  
 /// From WSDL Documentation:  

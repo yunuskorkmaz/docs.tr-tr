@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir türü seri durumdan çıkarılmış veya meta veri içine tahmini serileştirilir değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Burada bir yedek kullanılabilir bazı senaryolar türü, alanları ve özellikleri ile işaretlenmemiş için bir veri sözleşmesi belirtilmemiş olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği ya da kullanıcılar şema Çeşitlemeler dinamik olarak oluşturmak istediğiniz.  
@@ -133,7 +133,7 @@ Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir öze
  Yöntem şema dışarı ve içeri aktarma başında çağrılır. Bu yöntem, dışarı veya içeri aktarılan şemasında kullanılan özel veri türleri döndürür. Yöntemine geçirilen bir <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametresi), türleri koleksiyonu. Yöntemi, bu koleksiyona ek bilinen türleri eklemeniz gerekir. Bilinen özel veri türleri seri hale getirme ve seri durumdan çıkarma özel verileri kullanarak etkinleştirmek için gerekli olan <xref:System.Runtime.Serialization.DataContractSerializer>. Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Bir yedek uygulama  
- Veri sözleşmesi yedek içinde kullanmak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], birkaç özel yordamları izlemeniz gerekir.  
+ Veri sözleşmesi yedek WCF içinde kullanmak için birkaç özel yordamları izlemelisiniz.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Serileştirme ve seri durumundan çıkarma için bir yedek kullanmak için  
  Kullanım <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirme ve seri durumdan çıkarma veri yedeği ile gerçekleştirmek için. <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından oluşturulan <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Yedek de belirtilmesi gerekir.  
@@ -174,7 +174,7 @@ Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir öze
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta veri dışarı aktarma için bir yedek kullanmak için  
- Varsayılan olarak meta verilerini dışa aktarırken, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir hizmet için WSDL ve XSD şema oluşturulması gerekiyor. Yedek veri sözleşme türleri için oluşturma XSD şema sorumlu bileşenine eklenmesi gerekir <xref:System.Runtime.Serialization.XsdDataContractExporter>. Bunu yapmak için kullanın ya da uygulayan bir davranış <xref:System.ServiceModel.Description.IWsdlExportExtension> değiştirmek için <xref:System.ServiceModel.Description.WsdlExporter>, veya doğrudan değiştirmek <xref:System.ServiceModel.Description.WsdlExporter> meta verilerini dışa aktarmak için kullanılır.  
+ Varsayılan meta veri hizmeti için WCF verirken, WSDL ve XSD şema oluşturulması gerekiyor. Yedek veri sözleşme türleri için oluşturma XSD şema sorumlu bileşenine eklenmesi gerekir <xref:System.Runtime.Serialization.XsdDataContractExporter>. Bunu yapmak için kullanın ya da uygulayan bir davranış <xref:System.ServiceModel.Description.IWsdlExportExtension> değiştirmek için <xref:System.ServiceModel.Description.WsdlExporter>, veya doğrudan değiştirmek <xref:System.ServiceModel.Description.WsdlExporter> meta verilerini dışa aktarmak için kullanılır.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta veri dışarı aktarma için bir yedek kullanmak için  
   

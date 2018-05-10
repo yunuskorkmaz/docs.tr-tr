@@ -2,11 +2,11 @@
 title: Özel Akış Yükseltmeleri
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
 İstemci ve sunucu arasındaki bayt sürekli bir akış üzerinde akış odaklı taşımaları TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesnesi. Bir akış yükseltme istemci kanal yığına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalının diğer ucundaki sorar. Özgün değiştirme akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="security-upgrades"></a>Güvenlik yükseltmeleri  
  Bir güvenlik yükseltmesi ekleme, genel akış yükseltme işlemi özelleştirilmiş bir sürümüdür.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaten Akış Güvenliği yükseltmek için iki bağlama öğeleri sağlar. Aktarım düzeyinde güvenlik yapılandırmasını yalıtılan <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> hangi yapılandırılabilir ve özel bağlama için eklendi. Bu bağlama öğelerini genişletmek <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> yükseltme sağlayıcıları istemci ve sunucu akış derlemeler sınıfı. Bu bağlama öğeleri Uzman güvenlik akış olmayan yükseltme sağlayıcısı sınıfları oluşturma yöntemleri sahip `public`, bu iki için tüm yapmanız gereken durumda bağlamaya bağlama öğesi eklemek için.  
+ WCF Akış Güvenliği yükseltmek için iki bağlama öğeleri zaten sağlar. Aktarım düzeyinde güvenlik yapılandırmasını yalıtılan <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> hangi yapılandırılabilir ve özel bağlama için eklendi. Bu bağlama öğelerini genişletmek <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> yükseltme sağlayıcıları istemci ve sunucu akış derlemeler sınıfı. Bu bağlama öğeleri Uzman güvenlik akış olmayan yükseltme sağlayıcısı sınıfları oluşturma yöntemleri sahip `public`, bu iki için tüm yapmanız gereken durumda bağlamaya bağlama öğesi eklemek için.  
   
  Yukarıdaki iki bağlama öğeleri tarafından üç güvenlikle ilgili karşılanmadı güvenlik senaryoları için `abstract` sınıfları yukarıdaki Başlatıcı, acceptor ve sağlayıcı temel sınıflardan türetilmiş:  
   

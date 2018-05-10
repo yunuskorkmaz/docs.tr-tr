@@ -2,21 +2,21 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
-Bu örnek, Windows Communication Foundation (WCF) ETW Yazar analitik izlemeleri akışa kendi izleme olaylarını eklemek gösterilmiştir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performanslı cezası ödeme olmadan Hizmetleri içine görünürlük elde kolaylaştırmak için yöneliktir. Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri ile tümleştirmenize yazma olayları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri.  
+Bu örnek, Windows Communication Foundation (WCF) ETW Yazar analitik izlemeleri akışa kendi izleme olaylarını eklemek gösterilmiştir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performanslı cezası ödeme olmadan Hizmetleri içine görünürlük elde kolaylaştırmak için yöneliktir. Bu örnek nasıl kullanılacağını göstermektedir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirmek yazma olayları.  
   
  Hakkında daha fazla bilgi için <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri, bkz: <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Windows olay izleme hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>EventProvider atma  
- Bu örnekte <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfı, hangi uygulayan <xref:System.IDisposable?displayProperty=nameWithType>. İzlemeyi uygularken bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti, bunu kullanabilir, büyük olasılıkla <xref:System.Diagnostics.Eventing.EventProvider>ait hizmet ömrü için kaynaklar. Bu örnek hiçbir zaman bu nedenle ve Okunabilirlik için kaydırılmış siler. <xref:System.Diagnostics.Eventing.EventProvider>. Herhangi bir nedenden dolayı hizmetiniz farklı varsa, izleme ve gereksinimleri bu kaynağını atma gerekir ve bu örnek yönetilmeyen kaynaklarını atma yönelik en iyi uygulamaları uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları atma hakkında daha fazla bilgi için bkz: [Dispose yöntemi uygulama](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ Bu örnekte <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfı, hangi uygulayan <xref:System.IDisposable?displayProperty=nameWithType>. Bir WCF hizmeti için izlemeyi uygularken, kullanabileceğiniz olası <xref:System.Diagnostics.Eventing.EventProvider>ait hizmet ömrü için kaynaklar. Bu örnek hiçbir zaman bu nedenle ve Okunabilirlik için kaydırılmış siler. <xref:System.Diagnostics.Eventing.EventProvider>. Herhangi bir nedenden dolayı hizmetiniz farklı varsa, izleme ve gereksinimleri bu kaynağını atma gerekir ve bu örnek yönetilmeyen kaynaklarını atma yönelik en iyi uygulamaları uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları atma hakkında daha fazla bilgi için bkz: [Dispose yöntemi uygulama](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma vs. Web barındırma  
  İçin Web barındırılan hizmetleri, WCF'ın analitik izlemeleri izleri yayma hizmeti tanımlamak için kullanılan "HostReference" adlı bir alan sağlar. Bu modelde, Genişletilebilir kullanıcı izlemeleri katılabilir ve bu örnek Bunun yapılması için en iyi uygulamaları gösterir. Bir Web ana bilgisayarı biçimi başvuru kanal '&#124;' karakteri gerçekte görünür kaynaklanan dize aşağıdakilerden herhangi biri olabilir:  
@@ -29,10 +29,10 @@ Bu örnek, Windows Communication Foundation (WCF) ETW Yazar analitik izlemeleri 
   
      \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Kendini barındıran Hizmetleri için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]'s analitik izlemeleri "HostReference" alanını doldurmak değil. `WCFUserEventProvider` Sınıfı bu örnekteki davranır tutarlı bir kendi kendini barındıran hizmet tarafından kullanıldığında.  
+ Kendini barındıran Hizmetleri için WCF'ın analitik izlemeleri "HostReference" alanını doldurmayın. `WCFUserEventProvider` Sınıfı bu örnekteki davranır tutarlı bir kendi kendini barındıran hizmet tarafından kullanıldığında.  
   
 ## <a name="custom-event-details"></a>Özel olay ayrıntıları  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]kişinin ETW Olay sağlayıcısı bildirimini tanımlar tarafından gösterilen için tasarlanmış üç olayları [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yazarların hizmet kod içinde hizmet. Aşağıdaki tabloda, üç olayları dökümünü gösterir.  
+ WCF'ın ETW Olay sağlayıcısı bildirimi hizmeti kodundaki WCF Hizmeti yazarlar tarafından gösterilen için tasarlanmış üç olayları tanımlar. Aşağıdaki tabloda, üç olayları dökümünü gösterir.  
   
 |Olay|Açıklama|Olay Kimliği|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ Bu örnek, Windows Communication Foundation (WCF) ETW Yazar analitik izlemeleri 
   
      Web tarayıcısında tıklatın **Calculator.svc**. Hizmet için WSDL belgenin URI tarayıcıda görüntülenmesi gerekir. Bu URI kopyalayın.  
   
-4.  Çalıştırma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemcisi (WcfTestClient.exe).  
+4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Test istemcisi (WcfTestClient.exe) bulunduğu \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > \Common7\IDE\ WcfTestClient.exe (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
+     WCF test istemcisi (WcfTestClient.exe) bulunan \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini > \Common7\IDE\ WcfTestClient.exe (varsayılan [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yükleme dizini olan C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test istemci, hizmet seçerek eklemek **dosya**ve ardından **Hizmet Ekle**.  
+5.  WCF test istemcisi içinde hizmet seçerek eklemek **dosya**ve ardından **Hizmet Ekle**.  
   
      Uç nokta adresi giriş kutusuna ekleyin.  
   
@@ -64,7 +64,7 @@ Bu örnek, Windows Communication Foundation (WCF) ETW Yazar analitik izlemeleri 
   
 7.  Olay Görüntüleyicisi'ni uygulamasını açın.  
   
-     Hizmet çağrılırken önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğü olaylarını izleme alanından yayınlaması için dinleme yaptığından emin [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+     Hizmet çağrılırken önce Olay Görüntüleyicisi'ni başlatın ve WCF hizmetinden gösterilen olayları izlemek için olay günlüğüne dinlediğinden emin olun.  
   
 8.  Gelen **Başlat** menüsünde, select **Yönetimsel Araçlar**ve ardından **Olay Görüntüleyicisi'ni**. Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
   

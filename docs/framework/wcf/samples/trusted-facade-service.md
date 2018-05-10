@@ -2,11 +2,11 @@
 title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
 Bu senaryo örneği başka bir Windows Communication Foundation (WCF) kullanarak bir hizmetten Arayanın kimlik bilgileri akış yapmayı gösteren güvenlik altyapısı.  
@@ -21,7 +21,7 @@ Bu senaryo örneği başka bir Windows Communication Foundation (WCF) kullanarak
   
 -   Hesaplayıcı arka uç hizmeti  
   
- Cephesi hizmet isteği doğrulanırken ve arayan kimlik doğrulaması için sorumludur. Başarılı kimlik doğrulama ve doğrulama sonra iç ağ çevre ağından denetimli iletişim kanalını kullanarak arka uç hizmeti isteği iletir. Bu bilgiler, işleme, arka uç hizmetine kullanabilmesi iletilen isteğin bir parçası olarak cephesi hizmeti arayanın kimliği hakkındaki bilgileri içerir. Arayanın Kimliği kullanılarak aktarılan bir `Username` güvenlik belirteci ileti içine `Security` üstbilgi. Örnek kullanır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aktarmak ve bu bilgileri ayıklamak için güvenlik altyapısı `Security` üstbilgi.  
+ Cephesi hizmet isteği doğrulanırken ve arayan kimlik doğrulaması için sorumludur. Başarılı kimlik doğrulama ve doğrulama sonra iç ağ çevre ağından denetimli iletişim kanalını kullanarak arka uç hizmeti isteği iletir. Bu bilgiler, işleme, arka uç hizmetine kullanabilmesi iletilen isteğin bir parçası olarak cephesi hizmeti arayanın kimliği hakkındaki bilgileri içerir. Arayanın Kimliği kullanılarak aktarılan bir `Username` güvenlik belirteci ileti içine `Security` üstbilgi. Örnek, iletme ve bu bilgileri ayıklamak için WCF güvenlik altyapısı kullanır. `Security` üstbilgi.  
   
 > [!IMPORTANT]
 >  Arka uç hizmetine arayan kimliğini doğrulamak için cephesi hizmet güvenir. Bu nedenle, arka uç hizmetine çağıran yeniden kimlik doğrulama kullanmaz; iletilen istek cephesi hizmeti tarafından sağlanan kimlik bilgilerini kullanır. Bu güven ilişkisinin bozulması nedeniyle, arka uç hizmetine yönlendirilmiş ileti güvenilir bir kaynaktan - bu durumda, cephesi hizmet geldiğinden emin olmak için cephesi hizmetinde kimlik doğrulaması gerekir.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) bağlama öğesi ilk arayanın kullanıcıadı iletim ve ayıklama mvc'deki. [ \<WindowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) ve [ \<Connectionpoolsettings >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) cephesi ve arka uç hizmetlerinin kimlik doğrulaması dikkatli ve ileti koruma.  
   
- İstek iletmek için cephesi hizmet uygulaması ilk arayanın kullanıcı adı sağlamanız gerekir böylece [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik altyapısı bu yönlendirilmiş ileti yerleştirebilirsiniz. İlk arayanın adı ayarlayarak cephesi hizmet uygulamasında sağlanır `ClientCredentials` istemci proxy örneği özellikte cephesi hizmet arka uç hizmeti ile iletişim için kullanır.  
+ İstek iletmek için cephesi hizmet uygulaması, WCF güvenlik altyapı bu yönlendirilmiş ileti koyabilirsiniz şekilde ilk arayanın kullanıcı adı sağlamalısınız. İlk arayanın adı ayarlayarak cephesi hizmet uygulamasında sağlanır `ClientCredentials` istemci proxy örneği özellikte cephesi hizmet arka uç hizmeti ile iletişim için kullanır.  
   
  Aşağıdaki kodda gösterildiği nasıl `GetCallerIdentity` yöntemi cephesi hizmette uygulanır. Diğer yöntemleri aynı düzeni kullanın.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Önceki kodda gösterildiği gibi parola ayarlanmamış `ClientCredentials` özelliği, yalnızca kullanıcı adı olarak ayarlanmış. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] güvenlik altyapısı tam olarak bu senaryoda gerekli olduğu bir kullanıcı adı güvenlik belirteci parolasız bu durumda, oluşturur.  
+ Önceki kodda gösterildiği gibi parola ayarlanmamış `ClientCredentials` özelliği, yalnızca kullanıcı adı olarak ayarlanmış. WCF güvenlik altyapısı tam olarak bu senaryoda gerekli olduğu bir kullanıcı adı güvenlik belirteci parolasız bu durumda, oluşturur.  
   
- Arka uç hizmeti kullanıcıadı güvenlik belirtecinde yer alan bilgileri kimliğinin doğrulanması gerekir. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] belirtilen parola kullanılarak bir Windows hesabı kullanıcı eşlemek girişimlerini güvenlik. Bu durumda, sağlanan parola yoktur ve arka uç hizmetine kimlik doğrulaması cephesi hizmeti tarafından zaten gerçekleştirildiği için kullanıcı kimlik doğrulaması için gerekli değildir. Bu işlev uygulamak için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], özel bir `UserNamePasswordValidator` , yalnızca bir kullanıcı adı belirteç belirtilir ve herhangi bir ek kimlik doğrulaması gerçekleştirmez zorlayan sağlanır.  
+ Arka uç hizmeti kullanıcıadı güvenlik belirtecinde yer alan bilgileri kimliğinin doğrulanması gerekir. Varsayılan olarak, WCF güvenlik belirtilen parola kullanılarak bir Windows hesabı kullanıcı eşlemeyi dener. Bu durumda, sağlanan parola yoktur ve arka uç hizmetine kimlik doğrulaması cephesi hizmeti tarafından zaten gerçekleştirildiği için kullanıcı kimlik doğrulaması için gerekli değildir. Bu işlevsellik, WCF, özel bir uygulamak için `UserNamePasswordValidator` , yalnızca bir kullanıcı adı belirteç belirtilir ve herhangi bir ek kimlik doğrulaması gerçekleştirmez zorlayan sağlanır.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Cephesi hizmeti hesap bilgileri kullanılarak elde `ServiceSecurityContext.Current.WindowsIdentity` özelliği. İlk çağıran hakkında bilgi arka uç hizmeti kullandığı erişmek için `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` özelliği. Görünüyor bir `Identity` talep türü ile `Name`. Bu talep tarafından otomatik olarak oluşturulan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içinde yer alan bilgileri güvenlik altyapısından `Username` güvenlik belirteci.  
+ Cephesi hizmeti hesap bilgileri kullanılarak elde `ServiceSecurityContext.Current.WindowsIdentity` özelliği. İlk çağıran hakkında bilgi arka uç hizmeti kullandığı erişmek için `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` özelliği. Görünüyor bir `Identity` talep türü ile `Name`. Bu talep WCF güvenlik altyapısı içinde yer alan bilgileri tarafından otomatik olarak oluşturulan `Username` güvenlik belirteci.  
   
 ## <a name="running-the-sample"></a>Örnek çalışıyor  
  Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın. Hizmetleri kapatılmaya için cephesi ve arka uç hizmet Konsolu pencerelerinde ENTER tuşuna basabilirsiniz.  

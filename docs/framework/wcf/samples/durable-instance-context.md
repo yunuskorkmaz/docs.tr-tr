@@ -2,11 +2,11 @@
 title: Dayanıklı Örnek Bağlamı
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 Bu örnek, dayanıklı örnek bağlamı etkinleştirmek için Windows Communication Foundation (WCF) çalışma zamanı özelleştirmek gösterilmiştir. SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır. Ancak, özel depolama mekanizmaları erişmek için bir yol da sağlar.  
@@ -14,7 +14,7 @@ Bu örnek, dayanıklı örnek bağlamı etkinleştirmek için Windows Communicat
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
- Bu örnek kanal katmanını ve, hizmet modeli katmanını genişletme içerir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Bu nedenle uygulama ayrıntılarını geçmeden önce temel kavramları anlamanız gereklidir.  
+ Bu örnek, kanal katmanını ve WCF hizmet modeli katmanını genişletme içerir. Bu nedenle uygulama ayrıntılarını geçmeden önce temel kavramları anlamanız gereklidir.  
   
  Dayanıklı örnek bağlamı gerçek dünya senaryolarında genellikle bulunabilir. Alışveriş sepeti uygulaması, örneğin, yarı yarıya aracılığıyla alışveriş duraklatma ve başka bir günde devam etmek için yüklemeyebilir. Biz alışveriş sepeti sonraki gün ziyaret ettiğinizde böylece bizim özgün bağlamı geri yüklendi. Biz değilken alışveriş sepeti uygulaması (sunucu) alışveriş sepeti örneği korumaz dikkate almak önemlidir. Bunun yerine, durumu sağlam bir ortamdan devam ederse ve geri yüklenen bağlamı için yeni bir örnek oluşturulurken kullanır. Bu nedenle aynı bağlam için hizmet verebilir hizmet örneği önceki örneği ile aynı değil (diğer bir deyişle, aynı bellek adresi yok).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Bu kanal uygulamaları daha sonra eklenen [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal çalışma zamanı tarafından `DurableInstanceContextBindingElement` sınıfı ve `DurableInstanceContextBindingElementSection` uygun şekilde sınıfı. Bkz: [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanal bağlama öğeleri ve bağlama öğesi bölümleri hakkında daha fazla ayrıntı için örnek belgeleri.  
+ Bu kanal uygulamaları WCF kanalı çalışma zamanı tarafından sonra eklenir `DurableInstanceContextBindingElement` sınıfı ve `DurableInstanceContextBindingElementSection` uygun şekilde sınıfı. Bkz: [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) kanal bağlama öğeleri ve bağlama öğesi bölümleri hakkında daha fazla ayrıntı için örnek belgeleri.  
   
 ## <a name="service-model-layer-extensions"></a>Hizmet modeli katmanını uzantıları  
  İçerik kimliği kanal katmanını seyahat, hizmet davranışı örneklemesi özelleştirmek için uygulanabilir. Bu örnekte, bir Depolama Yöneticisi'ni yüklemek ve bilgisayara veya kalıcı depoya durumunu kaydetmek için kullanılır. Daha önce açıklandığı gibi bu örnek, yedekleme deposu olarak SQL Server 2005'in kullandığı Depolama Yöneticisi sağlar. Ancak, aynı zamanda bu uzantı için özel depolama mekanizmaları eklemek mümkündür. Ortak bir arabirim Bunu yapmak için tüm depolama yöneticileri tarafından uygulanmalıdır bildirildi.  
@@ -228,9 +228,9 @@ else
   
  Okumak ve kalıcı depolama biriminden örnekleri yazmak için gerekli altyapıyı uygulanır. Şimdi hizmet davranışını değiştirmek için gerekli adımları alınması gerekir.  
   
- Bu işlem ilk adım olarak geçerli InstanceContext kanal katmanını gelen bağlam Kimliğini kaydetmek sahibiz. InstanceContext arasında bağlantı gibi davranır bir çalışma zamanı bileşeni olan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dağıtıcısı ve hizmet örneği. Ek durum ve hizmet örneğine davranışı sağlamak için kullanılabilir. Süre sonuyla iletişiminde bağlam Kimliğini yalnızca ilk iletinin gönderildiği için gereklidir.  
+ Bu işlem ilk adım olarak geçerli InstanceContext kanal katmanını gelen bağlam Kimliğini kaydetmek sahibiz. InstanceContext WCF dağıtıcı ve hizmet örneği arasındaki bağlantıyı görevi gören bir çalışma zamanı bileşenidir. Ek durum ve hizmet örneğine davranışı sağlamak için kullanılabilir. Süre sonuyla iletişiminde bağlam Kimliğini yalnızca ilk iletinin gönderildiği için gereklidir.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Yeni durum ve Genişletilebilir nesne modeli kullanarak davranışı ekleyerek kendi InstanceContext çalışma zamanı bileşeni genişletme sağlar. Genişletilebilir object deseni kullanılan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için. Genişletilebilir nesne modelinde - IExtensibleObject üç arabirimi olan\<T >, IExtension\<T > ve IExtensionCollection\<T >:  
+ WCF yeni durumunu ve Genişletilebilir nesne modeli kullanarak davranışını ekleyerek kendi InstanceContext çalışma zamanı bileşeni genişletme sağlar. Genişletilebilir object deseni WCF'de ya da mevcut çalışma zamanı sınıflarını yeni işlevselliği ile genişletmek veya yeni durumu özellik için bir nesne eklemek için kullanılır. Genişletilebilir nesne modelinde - IExtensibleObject üç arabirimi olan\<T >, IExtension\<T > ve IExtensionCollection\<T >:  
   
 -   IExtensibleObject\<T > arabirimini işlevleriyle özelleştirme uzantılarına izin ver nesneler tarafından gerçekleştirilir.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  İçerik kimliği okuma daha önce açıklandığı gibi `Properties` koleksiyonu `Message` sınıfı ve uzantı sınıfı oluşturucuya geçirilen. Bu, tutarlı bir şekilde katmanlar arasında bilgi nasıl değiştirilebilir gösterir.  
   
- Önemli bir sonraki adım, hizmet örneği oluşturma işlemini geçersiz kılma. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Özel örneklemesi davranışları uygulama ve IInstanceProvider arabirimini kullanarak çalışma zamanı kadar takma sağlar. Yeni `InstanceProvider` sınıfı, bu işlemi yapmak için uygulanır. Oluşturucuda örneği Sağlayıcısı'ndan beklenen hizmet türünü kabul edilir. Daha sonra bu yeni örnekleri oluşturmak için kullanılır. İçinde `GetInstance` uygulama Depolama Yöneticisi örneği oluşturulur kalıcı bir örneğin aranıyor. Döndürürse `null` hizmet türü yeni bir örneğini örneği ve yapana.  
+ Önemli bir sonraki adım, hizmet örneği oluşturma işlemini geçersiz kılma. WCF özel örneklemesi davranışları uygulama ve IInstanceProvider arabirimini kullanarak çalışma zamanı kadar takma sağlar. Yeni `InstanceProvider` sınıfı, bu işlemi yapmak için uygulanır. Oluşturucuda örneği Sağlayıcısı'ndan beklenen hizmet türünü kabul edilir. Daha sonra bu yeni örnekleri oluşturmak için kullanılır. İçinde `GetInstance` uygulama Depolama Yöneticisi örneği oluşturulur kalıcı bir örneğin aranıyor. Döndürürse `null` hizmet türü yeni bir örneğini örneği ve yapana.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  Şu ana kadar Özet olarak, bu örnek özel kablo protokolü özel bağlam kimliği exchange için etkinleştirilmiş bir kanal üretilen ve aynı zamanda örnekleri kalıcı depolama biriminden yüklemek için davranış depolamasına varsayılan üzerine yazar.  
   
- Ne sol, hizmet örneği kalıcı depolama alanına kaydetmek için bir yoldur. Daha önce açıklandığı gibi zaten var. durumunda kaydetmek için gerekli işlevselliği bir `IStorageManager` uygulaması. Biz şimdi bu ile tümleştirmeniz gerekir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı. Başka bir öznitelik gerekli olan hizmet uygulaması sınıfı yöntemleri için geçerlidir. Bu öznitelik hizmet örneğinin durumunu değiştirme yöntemleri uygulanması gerekiyor.  
+ Ne sol, hizmet örneği kalıcı depolama alanına kaydetmek için bir yoldur. Daha önce açıklandığı gibi zaten var. durumunda kaydetmek için gerekli işlevselliği bir `IStorageManager` uygulaması. Biz şimdi bu WCF çalışma zamanı ile tümleştirmeniz gerekir. Başka bir öznitelik gerekli olan hizmet uygulaması sınıfı yöntemleri için geçerlidir. Bu öznitelik hizmet örneğinin durumunu değiştirme yöntemleri uygulanması gerekiyor.  
   
- `SaveStateAttribute` Sınıfı bu işlev uygular. Ayrıca uygulayan `IOperationBehavior` değiştirmek için sınıf [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] her bir işlemin çalışma zamanı. Bir yöntem bu özniteliği ile işaretlendiğinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] çalışma zamanı çağırır `ApplyBehavior` yöntemi uygun sırasında `DispatchOperation` oluşturulmuyor. Bu yöntem uygulamasında tek satırlık bir kod yoktur:  
+ `SaveStateAttribute` Sınıfı bu işlev uygular. Ayrıca uygulayan `IOperationBehavior` her işlem için WCF çalışma zamanı değiştirmek için sınıf. Bir yöntem bu özniteliği ile işaretlendiğinde, WCF çalışma zamanı çağırır `ApplyBehavior` yöntemi uygun sırasında `DispatchOperation` oluşturulmuyor. Bu yöntem uygulamasında tek satırlık bir kod yoktur:  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -373,7 +373,7 @@ return result;
 ```  
   
 ## <a name="using-the-extension"></a>Uzantı kullanma  
- Kanal katman ve hizmet modeli katmanını uzantıları bitti hem de artık kullanılabilir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulamalar. Özel bağlama kullanma kanal yığına kanal eklemek ve uygun özniteliklere sahip hizmet uygulaması sınıfları işaretlemek hizmetler sahiptir.  
+ Kanal katman ve hizmet modeli katmanını uzantıları bitti hem WCF uygulamaları artık kullanılabilir. Özel bağlama kullanma kanal yığına kanal eklemek ve uygun özniteliklere sahip hizmet uygulaması sınıfları işaretlemek hizmetler sahiptir.  
   
 ```  
 [DurableInstanceContext]  

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
 Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows Communication Foundation (WCF) istemci ve hizmet uygulamalarının çalışma zamanı davranışını değiştirme özel uzantıları ekleyin ve varsayılan davranışı değiştirmek etkinleştirin. Bu konu, davranış arabirimleri, bunların nasıl uygulanacağını ve bunları hizmet açıklamasında (bir hizmet uygulaması) veya uç noktası (istemci uygulamasında) programlı olarak veya bir yapılandırma dosyasında nasıl ekleneceğini açıklar. Sistem tarafından sağlanan davranışları kullanma hakkında daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Davranışlar  
- Davranış türleri hizmet veya hizmet uç noktası açıklama nesneleri eklenir (hizmet veya istemci, sırasıyla) bu nesneler yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılmadan önce bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti veya bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamaları ve adresler tarafından oluşturulan çalışma zamanı değiştirme yöntemleri erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
+ Davranış türleri hizmet veya hizmet uç noktası açıklama nesneleri eklenir (hizmet veya istemci, sırasıyla) önce bu nesneleri bir WCF hizmeti veya bir WCF istemcisi yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılır. Ardından çalışma zamanı özellikleri ve Sözleşme, bağlamaları ve adresler tarafından oluşturulan çalışma zamanı değiştirme yöntemleri erişebilir çalışma zamanı oluşturma işlemi sırasında bu davranışların çağrıldığında.  
   
 ### <a name="behavior-methods"></a>Davranış yöntemleri  
  Tüm davranışları sahip bir `AddBindingParameters` yöntemi, bir `ApplyDispatchBehavior` yöntemi, bir `Validate` yöntemi ve bir `ApplyClientBehavior` yöntemi bir özel durum ile: çünkü <xref:System.ServiceModel.Description.IServiceBehavior> yürütülemiyor bir istemcinin, onu uygulamayan `ApplyClientBehavior`.  
@@ -33,9 +33,9 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
 > [!NOTE]
 >  Çalışma zamanı özellikleri ve bir istemci yürütme davranışını değiştirmek için kullanabileceğiniz uzantı türleri tartışma için bkz [genişletme istemcileri](../../../../docs/framework/wcf/extending/extending-clients.md). Çalışma zamanı özellikleri ve bir hizmet dağıtıcısı yürütme davranışını değiştirmek için kullanabileceğiniz uzantı türleri tartışma için bkz [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
   
- Çoğu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kullanıcıların değil etkileşim çalışma zamanı ile doğrudan; çekirdek modeli yapıları uç noktaları, sözleşmeler, bağlamaları, adresleri ve sınıfları veya yapılandırma dosyalarında davranışları davranışı öznitelikleri gibi programlama kullanın. Bu yapıları oluşturan *açıklama ağaç*, bir hizmetini desteklemek için bir çalışma zamanı oluşturmak için tam belirtimi olduğu veya istemci tarafından açıklama ağaç açıklanmaktadır.  
+ Çoğu WCF kullanıcıların çalışma zamanı ile doğrudan etkileşim değil; Bunun yerine çekirdek modeli yapıları uç noktaları, sözleşmeler, bağlamaları, adresleri ve sınıfları veya yapılandırma dosyalarında davranışları davranışı öznitelikleri gibi programlama kullanın. Bu yapıları oluşturan *açıklama ağaç*, bir hizmetini desteklemek için bir çalışma zamanı oluşturmak için tam belirtimi olduğu veya istemci tarafından açıklama ağaç açıklanmaktadır.  
   
- Davranışlarının dört tür vardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ WCF davranışlarının dört tür vardır:  
   
 -   Hizmet davranışları (<xref:System.ServiceModel.Description.IServiceBehavior> türleri) dahil olmak üzere tüm hizmet çalışma zamanı özelleştirmenin <xref:System.ServiceModel.ServiceHostBase>.  
   
@@ -64,24 +64,24 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
   
 3.  Özel bir uygulama <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> yapılandırma genişletir. Bu uygulama yapılandırma dosyaları hizmet davranışından kullanımını etkinleştirir.  
   
- Hizmet davranışları örnekleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dahil <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
+ WCF hizmet davranışları örneklerindendir <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı.  
   
 #### <a name="contract-behaviors"></a>Sözleşme davranışları  
  Sözleşme uygulamak davranışları <xref:System.ServiceModel.Description.IContractBehavior> arabirim, hem istemci hem de hizmet çalışma zamanı arasında bir sözleşme genişletmek için kullanılır.  
   
- Sözleşme davranışları sözleşmeye eklenmesi için iki mekanizma vardır.  İlk mekanizma sözleşme arabirimi kullanılacak özel bir öznitelik oluşturmaktır. Ne zaman bir sözleşme arabirimi geçirilir çok ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] arabirimi özniteliklerinde inceler. Tüm öznitelikleri uygulamalarıdır ise <xref:System.ServiceModel.Description.IContractBehavior>, bu üzerinde davranışları koleksiyonuna eklenen <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> bu arabirim için oluşturulmuş.  
+ Sözleşme davranışları sözleşmeye eklenmesi için iki mekanizma vardır.  İlk mekanizma sözleşme arabirimi kullanılacak özel bir öznitelik oluşturmaktır. Ne zaman bir sözleşme arabirimi geçirilir çok ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601>, WCF arabirimi özniteliklerinde inceler. Tüm öznitelikleri uygulamalarıdır ise <xref:System.ServiceModel.Description.IContractBehavior>, bu üzerinde davranışları koleksiyonuna eklenen <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> bu arabirim için oluşturulmuş.  
   
  Ayrıca uygulayabilirsiniz <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> özel sözleşme davranışı öznitelikte. Bu durumda, davranışı uygulandığında aşağıdaki gibidir:  
   
- •A sözleşme arabirimi. Bu durumda, herhangi bir uç nokta içindeki bu türdeki tüm sözleşmeleri davranış uygulanır ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] değerini yoksayar <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> özelliği.  
+ •A sözleşme arabirimi. Bu durumda, herhangi bir uç nokta içindeki bu türdeki tüm sözleşmeleri davranış uygulanır ve WCF yoksayar değerini <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> özelliği.  
   
  •A hizmet sınıfı. Bu durumda, yalnızca biri sözleşmedir değerini Uç noktalara davranışı uygulanır <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
   
- •A geri çağırma sınıfı. Bu durumda, çift yönlü istemcinin uç noktasına davranış uygulanır ve [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] değerini yoksayar <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
+ •A geri çağırma sınıfı. Bu durumda, çift yönlü istemcinin uç noktasına davranış uygulanır ve WCF yoksayar değerini <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> özelliği.  
   
  Davranış davranışları koleksiyona eklemek için ikinci mekanizmasıdır bir <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Sözleşme davranışlarının örnekleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dahil <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> özniteliği. Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
+ WCF sözleşmesi davranışlarının örneklerindendir <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> özniteliği. Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
   
 #### <a name="endpoint-behaviors"></a>Uç nokta davranışları  
  Uygulama uç noktası davranışları <xref:System.ServiceModel.Description.IEndpointBehavior>, olarak değiştirmeniz tüm hizmet veya belirli bir uç noktası için çalışma süresi istemci birincil sistemdir.  
@@ -97,11 +97,11 @@ Davranışları inceleme ve hizmet yapılandırmasını doğrulamak veya Windows
 #### <a name="operation-behaviors"></a>İşlemi davranışları  
  Uygulama işlemi davranışları <xref:System.ServiceModel.Description.IOperationBehavior> arabirim, her işlem için hem istemci hem de hizmet çalışma zamanı genişletmek için kullanılır.  
   
- İşlem için işlem davranışları eklemek için iki mekanizma vardır. İlk mekanizma üzerindeki işlemi modeller yöntem kullanılacak özel bir öznitelik oluşturmaktır. Bir işlem eklendiğinde ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] herhangi ekler <xref:System.ServiceModel.Description.IOperationBehavior> öznitelikleri davranışları koleksiyona <xref:System.ServiceModel.Description.OperationDescription> bu işlem için oluşturulmuş.  
+ İşlem için işlem davranışları eklemek için iki mekanizma vardır. İlk mekanizma üzerindeki işlemi modeller yöntem kullanılacak özel bir öznitelik oluşturmaktır. Bir işlem eklendiğinde ya da bir <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory>, WCF ekler herhangi <xref:System.ServiceModel.Description.IOperationBehavior> öznitelikleri davranışları koleksiyona <xref:System.ServiceModel.Description.OperationDescription> bu işlem için oluşturulmuş.  
   
  İkinci bir oluşturulan üzerinde davranışları koleksiyonuna doğrudan davranışı ekleyerek mekanizmasıdır <xref:System.ServiceModel.Description.OperationDescription>.  
   
- İşlemi davranışlarının örnekleri [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dahil <xref:System.ServiceModel.OperationBehaviorAttribute> ve <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ WCF işlemi davranışlarının örneklerindendir <xref:System.ServiceModel.OperationBehaviorAttribute> ve <xref:System.ServiceModel.TransactionFlowAttribute>.  
   
  Daha fazla bilgi ve bir örnek için başvuru konusuna bakın.  
   

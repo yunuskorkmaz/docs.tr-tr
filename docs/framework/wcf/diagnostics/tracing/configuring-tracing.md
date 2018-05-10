@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyleri, kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak üzere izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicileri ayarlama açıklanmaktadır.  
@@ -25,11 +25,11 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
   
 -   Windows hata olaylarını izleme özelliği düzgün olduğunda. Bkz: [olay günlüğü](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] İzleme üstünde oluşturulan <xref:System.Diagnostics>. İzlemeyi kullanmak için yapılandırma dosyası veya kod izleme kaynakları tanımlamanız gerekir. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] her biri için bir izleme kaynağını tanımlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] derleme. `System.ServiceModel` İzleme kaynağıdır en genel [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme kaynağını ve kayıtları arasında kilometre taşları işleme [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] iletişimi yığınından kullanıcı kodu girme/bırakmak için Aktarım girme ve çıkılıyor. `System.ServiceModel.MessageLogging` İzleme kaynağını sistem üzerinden akan tüm iletileri kaydeder.  
+ WCF izleme üstünde oluşturulan <xref:System.Diagnostics>. İzlemeyi kullanmak için yapılandırma dosyası veya kod izleme kaynakları tanımlamanız gerekir. WCF her WCF derlemesi için bir izleme kaynağı tanımlar. `System.ServiceModel` İzleme kaynağı en genel WCF izleme kaynağı ve WCF iletişimi yığınından kullanıcı kodu girme/bırakmak için Aktarım girme ve bırakarak arasında işleme kilometre taşları kaydeder. `System.ServiceModel.MessageLogging` İzleme kaynağını sistem üzerinden akan tüm iletileri kaydeder.  
   
- İzleme varsayılan olarak etkin değildir. İzlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmak ve yapılandırmada dışında "Kapalı" Seçili izleme kaynağı için izleme düzeyi; Aksi takdirde, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] herhangi izlemeleri oluşturmaz. Dinleyici belirtmezseniz, izleme otomatik olarak devre dışı bırakıldı. Dinleyici tanımlı, ancak hiçbir düzeyi belirtilen düzeyi "Kapalı için" hiçbir izleme yayınlanır anlamı varsayılan olarak ayarlanır.  
+ İzleme varsayılan olarak etkin değildir. İzlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmak ve yapılandırmada dışında "Kapalı" Seçili izleme kaynağı için izleme düzeyi; Aksi durumda, WCF herhangi izlemeleri oluşturmaz. Dinleyici belirtmezseniz, izleme otomatik olarak devre dışı bırakıldı. Dinleyici tanımlı, ancak hiçbir düzeyi belirtilen düzeyi "Kapalı için" hiçbir izleme yayınlanır anlamı varsayılan olarak ayarlanır.  
   
- Kullanırsanız [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] özel işlem invokers gibi genişletilebilirlik noktaları kendi izleri yayma. Genişletilebilirlik noktanız uygulamak, bunun nedeni, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] artık varsayılan yolda standart izleri yayma. Verme izlemeler tarafından el ile izleme desteği uygulamaz, beklediğiniz izlemeleri göremeyebilirsiniz.  
+ Özel işlem invokers gibi WCF genişletilebilirlik noktaları kullanıyorsa, kendi izleri yayma. Bu durum, bir genişletilebilirlik noktası uygularsanız, WCF artık varsayılan yolda standart izleri yayma çünkü. Verme izlemeler tarafından el ile izleme desteği uygulamaz, beklediğiniz izlemeleri göremeyebilirsiniz.  
   
  Uygulama yapılandırma dosyasını düzenleyerek izlemeyi yapılandırabilirsiniz — her iki Web.config Web barındırılan uygulamalar veya Appname.exe.config kendini barındıran uygulamalar için. Aşağıdakiler, bu tür düzenleme bir örnektir. Bu ayarlar hakkında daha fazla bilgi için "Yapılandırma izleme dinleyicileri için tüketen izlemeleri" bölümüne bakın.  
   
@@ -52,12 +52,12 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
 ```  
   
 > [!NOTE]
->  Yapılandırma dosyasını düzenlemek için bir [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] hizmet Visual Studio projesi, uygulamanın yapılandırma dosyasına sağ tıklayın — ya da Web.config Web barındırılan uygulamalar veya kendi kendini barındıran uygulamada Appname.exe.config  **Çözüm Gezgini**. Ardından **WCF yapılandırmasını Düzenle** bağlam menüsü öğesini. Bu başlatır [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), yapılandırma ayarlarını değiştirmenizi sağlayan [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] bir grafik kullanıcı arabirimini kullanarak hizmetleri.  
+>  Bir WCF Hizmeti projesini Visual Studio'da yapılandırma dosyasını düzenlemek için uygulamanın yapılandırma dosyasını sağ tıklatın — ya da Web.config Web barındırılan uygulamalar veya kendi kendini barındıran uygulamada Appname.exe.config **Çözüm Gezgini** . Ardından **WCF yapılandırmasını Düzenle** bağlam menüsü öğesini. Bu başlatır [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), bir grafik kullanıcı arabirimini kullanarak WCF hizmetleri için yapılandırma ayarlarını değiştirmenizi sağlar.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>İzlemeler yaymak üzere izleme kaynaklarını yapılandırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] İzleme kaynağı her derlemesi için tanımlar. Bir derlemenin içinde oluşturulan izlemeleri, bu kaynak için tanımlanan dinleyicileri tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
+ WCF her derleme için bir izleme kaynağı tanımlar. Bir derlemenin içinde oluşturulan izlemeleri, bu kaynak için tanımlanan dinleyicileri tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
   
--   System.ServiceModel: tüm aşamalarında günlüklerini [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] işleme yapılandırma salt okunur olduğunda, bir ileti taşımasına işlenir, kullanıcı kodu ve benzeri işleme, güvenlik bir ileti gönderilir.  
+-   System.ServiceModel: WCF işleme, her aşamanın tamamı oturum yapılandırmasını okuma, bir ileti taşımasına işlenir, kullanıcı kodu ve benzeri işleme, güvenlik bir ileti gönderilir.  
   
 -   System.ServiceModel.MessageLogging: sistem üzerinden akan tüm iletileri günlüğe kaydeder.  
   
@@ -135,7 +135,7 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
  Kullanıcı tanımlı izleme kaynakları oluşturma hakkında daha fazla bilgi için bkz: [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>İzleme dinleyicileri izlemeleri kullanmak için yapılandırma  
- Çalışma zamanında [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] akışları izleme verileri işleyen dinleyicileri verileri. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] birçok önceden tanımlı dinleyiciler için sağlar <xref:System.Diagnostics>, çıktı için kullandıkları biçiminde farklı. Özel dinleyicisi türleri de ekleyebilirsiniz.  
+ Çalışma zamanında WCF verileri işleyen dinleyicileri izleme veri akışları. WCF için birçok önceden tanımlı dinleyiciler sağlar <xref:System.Diagnostics>, çıktı için kullandıkları biçiminde farklı. Özel dinleyicisi türleri de ekleyebilirsiniz.  
   
  Kullanabileceğiniz `add` adını ve kullanmak istediğiniz İzleme dinleyicisi türünü belirtmek için. Bizim örnek yapılandırma biz dinleyicisi adlı `traceListener` ve standart .NET Framework İzleme dinleyicisi eklenir (`System.Diagnostics.XmlWriterTraceListener`) istiyoruz kullanılacak türü. İzleme dinleyicileri her kaynağı için herhangi bir sayıda ekleyebilirsiniz. Dosya İzle İzleme dinleyicisi yayar, yapılandırma dosyasında çıktı dosya konumunu ve adını belirtmeniz gerekir. Bu ayarlayarak yapılır `initializeData` bu dinleyici dosyasının adı. Bir dosya adı belirtmezseniz, rasgele bir dosya adı kullanılan dinleyicisi türüne göre oluşturulur. Varsa <xref:System.Diagnostics.XmlWriterTraceListener> olan kullanıldığında, bir dosya adı uzantısı ile oluşturulur. Özel bir dinleyici uygularsanız, bu öznitelik bir dosya adı dışında başlatma veri almak için kullanabilirsiniz. Örneğin, bu öznitelik için bir veritabanı tanımlayıcı belirtebilirsiniz.  
   
@@ -169,13 +169,13 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve kümesi izleme düzeyle
  `activityTracing` İçin belirtilen değer `switchValue` özniteliği etkinlik sınırları ve uç noktaları içinde aktarımları için izlemeleri yayar etkinlik izlemeyi etkinleştirmek için kullanılır.  
   
 > [!NOTE]
->  Belirli genişletilebilirlik özellikleri kullandığınızda [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], get bir <xref:System.NullReferenceException> Etkinlik izleme etkin olduğunda. Bu sorunu gidermek için uygulamanızın yapılandırma dosyasını denetleyin ve emin `switchValue` izleme kaynağınız ayarlanmazsa özniteliğinin `activityTracing`.  
+>  WCF'de belirli genişletilebilirlik özellikleri kullandığınızda alabilirsiniz bir <xref:System.NullReferenceException> Etkinlik izleme etkin olduğunda. Bu sorunu gidermek için uygulamanızın yapılandırma dosyasını denetleyin ve emin `switchValue` izleme kaynağınız ayarlanmazsa özniteliğinin `activityTracing`.  
   
  `propagateActivity` Öznitelik, etkinlik ileti Exchange'de katılmak diğer uç noktalar olarak yayıldığı olup olmadığını gösterir. Bu değer ayarlayarak `true`, iki uç nokta tarafından oluşturulan izleme dosyaları alabilir ve nasıl başka bir uç noktada izlemeleri kümesi için bir uç noktada izlemeleri kümesi aktarılan inceleyin.  
   
  Etkinlik izleme ve yayma hakkında daha fazla bilgi için bkz: [yayma](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Her ikisi de `propagateActivity` ve `ActivityTracing` Boole değerleri System.ServiceModel TraceSource uygulayın. `ActivityTracing` Değeri herhangi bir izleme kaynağını için de geçerlidir dahil olmak üzere [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] veya kullanıcı tanımlı olanlar.  
+ Her ikisi de `propagateActivity` ve `ActivityTracing` Boole değerleri System.ServiceModel TraceSource uygulayın. `ActivityTracing` Değeri WCF veya kullanıcı tanımlı olanlar da dahil olmak üzere tüm izleme kaynağı için de geçerlidir.  
   
  Kullanamazsınız `propagateActivity` özniteliği kullanıcı tanımlı izleme kaynakları ile. Kullanıcı kodu etkinlik kimliği yayma için ServiceModel ayarlamayın emin olun `ActivityTracing`, ServiceModel yaşamaya sırasında `propagateActivity` özniteliği kümesine `true`.  
   

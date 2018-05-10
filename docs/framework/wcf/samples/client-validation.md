@@ -2,11 +2,11 @@
 title: İstemci Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e34ca8e1bb14f610e363c02eaeb94b7fa5e27c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-validation"></a>İstemci Doğrulaması
 Hizmetleri sık otomatik oluşturma ve istemci proxy türlerinin yapılandırılmasını etkinleştirmek için meta veri yayımlama. Hizmet güvenilir olmadığı durumlarda, istemci uygulamaları meta verileri istemci uygulama ilkesi güvenlik işlemleri, hizmet sözleşmesini türü ile ilgili vb. uyduğunu doğrulamalıdır. Aşağıdaki örnek, bir istemci bu hizmet uç noktası güvenli olduğundan emin olmak için hizmet uç noktası doğrulama uç noktası davranışı yazma gösterilmiştir.  
@@ -60,7 +60,7 @@ Hizmetleri sık otomatik oluşturma ve istemci proxy türlerinin yapılandırıl
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bilgisayarlar arasında sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikalar kullanmak, Currentuser'a - yüklü hizmet sertifikalarını temizlediğinizden emin WCF örnekleri çalıştırırsanız TrustedPeople depolar. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)

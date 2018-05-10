@@ -2,11 +2,11 @@
 title: Gelişmiş Biçim Seçimi
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>Gelişmiş Biçim Seçimi
 Bu örnek, yeni giden yanıt formatları desteklemek için Windows Communication Foundation (WCF) REST programlama modelini gösterilmiştir. Ayrıca, örnek bir görünüm stili programlama modeli nasıl uygulanabilir gösteren bir XHTML sayfası olarak yanıt dönmesini T4 şablon kullanır.  
@@ -18,7 +18,7 @@ Bu örnek, yeni giden yanıt formatları desteklemek için Windows Communication
   
  Hizmet tarafından döndürülen yanıt biçimi öncelikle tarafından belirlenen bir `format` sorgu dizesi parametresi ve ikinci isteği ile sağlanan bir HTTP kabul üstbilgisi tarafından. Varsa değerini `format` sorgu dizesi parametresidir önceki biçimlerinden birini ve ardından o biçiminde bir yanıt döndürdü. Varsa `format` sorgu dizesi mevcut değil ve hizmet isteği kabul etme üstbilgi öğeleri dolaşır ve ilk içerik hizmetini destekleyen türü biçimini döndürür.  
   
- Dönüş işlemi belirtmeye değer türüdür. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST programlama modeli yalnızca yerel bir işlem başka bir tür döndüren zaman XML ve JSON yanıt biçimlerini destekleyen <xref:System.ServiceModel.Channels.Message>. Ancak, kullanırken <xref:System.ServiceModel.Channels.Message> dönüş türü olarak Geliştirici iletinin içeriğinin nasıl biçimlendirilmiş üzerinde tam denetim sahiptir.  
+ Dönüş işlemi belirtmeye değer türüdür. Bir işlem başka bir tür döndüren XML ve JSON yanıt formatları WCF REST programlama modeli yalnızca yerel olarak destekler <xref:System.ServiceModel.Channels.Message>. Ancak, kullanırken <xref:System.ServiceModel.Channels.Message> dönüş türü olarak Geliştirici iletinin içeriğinin nasıl biçimlendirilmiş üzerinde tam denetim sahiptir.  
   
  Örnek kullanır <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> ve <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> dizelerin listesi XML, JSON ve ATOM iletilere sırasıyla serileştirmek için yöntemleri. Jpeg yanıt biçimi için <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> yöntemi kullanılır ve görüntü akışa kaydedilir. XHTML yanıt <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> .tt dosyası ve bir otomatik olarak oluşturulan .cs dosyası oluşan bir önceden işlenmiş T4 şablon ile birlikte kullanılır. .Tt dosya değişkenlerini içeren bir şablon biçiminde bir yanıt yazma ve yapıları denetlemek bir geliştirici sağlar. T4 hakkında daha fazla bilgi için bkz: [oluşturma yapıları tarafından kullanarak metin şablonlarını](http://go.microsoft.com/fwlink/?LinkId=166023).  
   

@@ -2,19 +2,19 @@
 title: Etkinlik
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>Etkinlik
 Bu konu Windows Communication Foundation (WCF) izleme modelindeki etkinlik izlemeleri açıklar. Etkinlikler hata kapsamını daraltmak kullanıcı Yardımı birimleri işliyor. Aynı etkinlik içindeki oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan bir işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde izlemeleri hem işlem hem de ileti şifre çözme hatası görünür.  
   
 ## <a name="configuring-activity-tracing"></a>Etkinlik izlemeyi yapılandırma  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] uygulamaları işlemek için önceden tanımlanmış etkinlikleri sağlar (bkz [etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Etkinlikler de program aracılığıyla ve grup kullanıcı izlemeleri tanımlayabilirsiniz. Daha fazla bilgi için bkz: [kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ WCF uygulamaları işlemek için önceden tanımlanmış etkinlikleri sağlar (bkz [etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Etkinlikler de program aracılığıyla ve grup kullanıcı izlemeleri tanımlayabilirsiniz. Daha fazla bilgi için bkz: [kullanıcı kodu izleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Çalışma zamanında etkinlik izlemeleri yaymak üzere kullanmak `ActivityTracing` ayarını `System.ServiceModel` izleme kaynağı veya diğer [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ya da aşağıdaki yapılandırma kodda gösterildiği gibi özel izleme kaynakları.  
+ Çalışma zamanında etkinlik izlemeleri yaymak üzere kullanmak `ActivityTracing` ayarını `System.ServiceModel` izleme kaynağı veya diğer WCF veya özel izleme kaynakları, aşağıdaki yapılandırma kodda gösterildiği gibi.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Bir etkinlik sisteminin ya da desteklenebilirlik yönetici anlamlı olabilen bir işleme sınırını gösterir.  
   
--   Her [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] yöntemi, istemci ve sunucu üzerinde yeni bir etkinlik başlayarak, sonra bir (İş tamamlandıktan sonra) sınırlanan yeni etkinlik bitiş ve ortam etkinlik döndürüyor.  
+-   Her WCF yöntemi, istemci ve sunucu üzerinde yeni bir etkinlik başlayarak, sonra bir (İş tamamlandıktan sonra) sınırlıdır yeni etkinlik bitiş ve ortam etkinlik döndürüyor.  
   
 -   Bağlantıları dinlemeyi veya iletileri için bekleyen gibi uzun (sürekli) çalıştıran etkinlikler tarafından karşılık gelen Başlat/Durdur işaretleyicileri gösterilir.  
   

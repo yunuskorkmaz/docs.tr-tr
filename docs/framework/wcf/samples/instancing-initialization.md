@@ -2,11 +2,11 @@
 title: Başlatmayı Örneklendirme
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
 Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.md) bir arabirim tanımlayarak örnek `IObjectControl`, etkinleştirme ve devre dışı bırakmadan nesneyi başlatma özelleştirir. İstemci, nesne havuza geri dönün ve, nesne havuzuna döndürmeyen yöntemleri çağırır.  
@@ -15,12 +15,12 @@ Bu örnek genişletir [toplama](../../../../docs/framework/wcf/samples/pooling.m
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
   
 ## <a name="extensibility-points"></a>Genişletilebilirlik noktaları  
- Bir Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasını kullanmak üzere karar vermektir. İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], terimi *EndpointDispatcher* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve o yöntemin dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvurduğu bir Giden ileti. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmeti her bitiş noktasıyla ilgili bir EndpointDispatcher oluşturur.  
+ Bir Windows Communication Foundation (WCF) uzantısı oluşturmanın ilk adımı, genişletilebilirlik noktasını kullanmak üzere karar vermektir. Wcf'de, terimi *EndpointDispatcher* sorumlu kullanıcının hizmet üzerinde yöntem çağrılarına gelen iletileri dönüştürme ve Giden iletiye Bu yöntemden dönüş değerleri dönüştürme için bir çalışma zamanı bileşeni başvurur . Bir WCF hizmeti bir EndpointDispatcher her bitiş noktasıyla ilgili oluşturur.  
   
  Uç nokta genişletilebilirlik kapsamı (alınan veya hizmet tarafından gönderilen tüm iletiler için) kullanarak EndpointDispatcher sunar <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> sınıfı. Bu sınıf EndpointDispatcher davranışını denetleyen çeşitli özellikleri özelleştirmenizi sağlar. Bu örnek odaklanır <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> hizmet sınıfının örnekleri sağlayan bir nesneye işaret etmiyor özelliği.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- İçinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], EndpointDispatcher uygulayan bir örnek sağlayıcısı kullanarak bir hizmet sınıfın örneklerini oluşturur <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimi. Bu arabirim, yalnızca iki yöntemi vardır:  
+ WCF'de, EndpointDispatcher uygulayan bir örnek sağlayıcısı kullanarak bir hizmet sınıfı örneklerini oluşturur <xref:System.ServiceModel.Dispatcher.IInstanceProvider> arabirimi. Bu arabirim, yalnızca iki yöntemi vardır:  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Bir ileti geldiğinde, dağıtıcı çağrıları <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> iletiyi işlemek için hizmet sınıfının bir örneğini oluşturmak için yöntemi. Bu yönteme çağrıları sıklığını tarafından belirlenen <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği ayarlanmış <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, hizmet sınıfının yeni bir örneğini, bunu ulaşan her iletiyi işlemek için oluşturulan <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> bir ileti ulaştığında çağrılır.  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  Bu örnek özel bir öznitelik kullanır. Zaman <xref:System.ServiceModel.ServiceHost> olan oluşturulan, hizmetin tür tanımında kullanılan öznitelikler inceler ve kullanılabilir davranışları hizmet açıklaması 's davranışları koleksiyonuna ekler.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntemleri tarafından çağrılır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem yalnızca çok Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırmak için sorumludur. Aşağıdaki parametreleri içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntemlerin WCF tarafından çağrılması zaman <xref:System.ServiceModel.ServiceHost> başlatıldığını. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem yalnızca çok Gelişmiş senaryolarda gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırmak için sorumludur. Aşağıdaki parametreleri içine geçirilir <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Bu parametre, tüm hizmet hizmet açıklamasını sağlar. Bu hizmetin uç noktaları, sözleşmeler, bağlamaları ve hizmeti ile ilişkili diğer veri hakkında açıklama verilerini incelemek için kullanılabilir.  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Ek olarak bir <xref:System.ServiceModel.Description.IServiceBehavior> uygulama `ObjectPoolingAttribute` sınıfı öznitelik bağımsız değişkenleri kullanarak nesne havuzu özelleştirmek için birkaç üye sahiptir. Bu üyeleri dahil `MaxSize`, `MinSize`, `Enabled` ve `CreationTimeout`, .NET Enterprise Hizmetleri tarafından sağlanan özellik kümesi havuzu nesne eşleşecek şekilde.  
   
- Davranış havuzu nesne artık eklenebilir bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] yeni oluşturulan özel hizmet uygulamasıyla yorumlama tarafından hizmet `ObjectPooling` özniteliği.  
+ Davranış havuzu nesne artık bir WCF hizmetine yeni oluşturulan özel hizmet uygulamasıyla yorumlama tarafından eklenebilir `ObjectPooling` özniteliği.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

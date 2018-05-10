@@ -1,31 +1,20 @@
 ---
-title: "PLINQ'te Hızlandırmayı Anlama"
-ms.custom: 
+title: PLINQ'te Hızlandırmayı Anlama
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
 PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcileri yürüterek nesneleri sorgularında LINQ yürütme hızlandırmak olmaktır. Kaynak koleksiyondaki her öğe işleme bağımsız duruma sahip olmayan paylaşılan arasında tek tek temsilcileri söz konusu olduğunda PLINQ en iyi şekilde çalışır. Bu tür işlemler LINQ nesneleri ve PLINQ için ortak olan ve genellikle denir "*delightfully paralel*" bunlar kendilerini kolayca üzerinde birden çok iş parçacıklarını zamanlama için ödünç vermek için. Ancak, tüm sorguları tamamen delightfully paralel işlemleri oluşur; Çoğu durumda, bir sorgu, ya da paralel birkaç ölçeklendirin olamaz veya paralel yürütme yavaş bazı işleçleri içerir. Ve tamamen delightfully paralel bile sorgular ile PLINQ gerekir hala veri kaynağı bölüm ve iş parçacığı üzerinde çalışması zamanlamak ve sorgu tamamlandığında genellikle birleştirme sonuçları. Bu işlemler paralelleştirme hesaplama maliyetine ekleyin; paralelleştirme ekleme, bu maliyetlerini adlı *yükünü*. PLINQ sorgusunda en iyi performansı elde etmek için delightfully paralel bölümleri en üst düzeye çıkarmak ve ek yükü gerektiren bölümleri en aza indirmek için belirtilir. Bu makale, hala doğru sonuçlar verir sırasında olabildiğince etkili PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  

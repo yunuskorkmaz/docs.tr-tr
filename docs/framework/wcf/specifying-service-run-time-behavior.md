@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 38035230cf4f5e411f7ec769a169528ada130749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61a81e342a16bd298cbebef2dc733b5ec631839c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
 Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)) ve hizmet sözleşmesini uygulanan ([hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)) işlemi davranışını yapılandırabilirsiniz Hizmet çalışma zamanı. Bu konu, sistem tarafından sağlanan hizmet ve işlem davranışları açıklar ve yeni davranışlar oluşturma hakkında daha fazla bilgi bulmak nerede tanımlar. Bazı davranışları öznitelik olarak uygulanır, ancak çoğu uygulama yapılandırma dosyası kullanılarak uygulanır veya program aracılığıyla. Hizmet uygulamanızın yapılandırma hakkında daha fazla bilgi için bkz: [Hizmetleri'ni Yapılandırma](../../../docs/framework/wcf/configuring-services.md).  
@@ -21,7 +21,7 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> Ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> özniteliklerin en yaygın olarak yararlı davranışları ve sunmaya en sık istenen işlemi özellikleri. Öznitelikleri olduklarından, hizmet veya işlem uygulaması için geçerlidir. Diğer davranışları gibi <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, program aracılığıyla kullanabilirsiniz ancak genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır.  
   
- Bu konu genel bir bakış sağlar <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> öznitelikleri, hangi davranışları çalışabilir, çeşitli kapsamlar açıklar ve çoğu sistem tarafından sağlanan davranışları ilgilendirebilecek çeşitli kapsamlar en hızlı bir açıklaması verilmiştir için ilgilendiğiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] geliştiriciler.  
+ Bu konu genel bir bakış sağlar <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> öznitelikleri, hangi davranışları çalışabilir, çeşitli kapsamlar açıklar ve çoğu sistem tarafından sağlanan davranışları ilgilendirebilecek çeşitli kapsamlar en hızlı bir açıklaması verilmiştir WCF geliştiricileri ilgilendiren.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute ve OperationBehaviorAttribute  
  En önemli davranışları olan <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> denetlemek için kullanabileceğiniz öznitelikleri:  
@@ -76,13 +76,13 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
 ### <a name="service-behaviors"></a>Hizmet davranışları  
  Aşağıdaki hizmetleri üzerinde çalışır.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Uygulanan bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet çalıştırılabilir olup olmadığını belirtmek için hizmet [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uyumluluk modunda.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bu hizmetin çalıştırılabilir olup olmadığını belirtmek için bir WCF Hizmeti uygulanan [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uyumluluk modunda.  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmet istemci talep nasıl yetkilendirir denetler.  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>. Bir hizmeti kimlik bilgileri yapılandırır. Bu sınıf, bir X.509 sertifikası gibi hizmet kimlik bilgilerini belirtmek için kullanın.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Hata ayıklamayı etkinleştirir ve Yardım için bilgi özellikleri bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Yardımcı bir WCF hizmeti için bilgi özellikleri ve hata ayıklama sağlar.  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Hizmet meta verilerini ve ilişkili bilgileri yayımlanmasını denetler.  
   
@@ -95,13 +95,13 @@ Bir hizmet sözleşmesini tasarladıktan sonra ([Hizmet sözleşmeleri tasarlama
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Bir geri çağırma hizmet uygulaması bir çift yönlü istemci uygulamasında yapılandırır.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Hizmeti için hata ayıklamayı etkinleştirir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] geri çağırma nesnesi.  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Hizmet için bir WCF geri çağırma nesnesi hata ayıklamasını etkinleştirir.  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>. Yanı sıra istemci ve hizmet kimlik bilgilerini yapılandırmak kullanılacak istemcide kimlik bilgisi kimlik doğrulama ayarları hizmet verir.  
   
 -   <xref:System.ServiceModel.Description.ClientViaBehavior>. Taşıma kanalı oluşturulmalıdır Tekdüzen Kaynak Tanımlayıcısı (URI) belirtmek için istemciler tarafından kullanılır.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Bildirir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] devre dışı bırakmak için `MustUnderstand` işleme.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Devre dışı bırakmak için WCF bildirir `MustUnderstand` işleme.  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Bir zaman uyumlu çalışma zamanı bildirir alma işleminin kanalları.  
   

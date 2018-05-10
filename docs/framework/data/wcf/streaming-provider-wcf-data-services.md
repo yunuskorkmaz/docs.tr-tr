@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve ses akışları, görüntüler, belge dosyaları veya diğer ikili medya türleri temsil edebilir. Bir veya daha fazla ikili özelliklerinin bir varlık veri modeli içerir, bu ikili veri akışı yanıt girişi içinde base-64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme performansını etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlık bağımsız ikili veri almak için bir mekanizma tanımlar. Bu, bir veya daha fazla veri akışlara varlıktan ikili veri ayırarak gerçekleştirilir.  
@@ -79,12 +79,12 @@ Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve s
  Veri hizmeti oluşturma hakkında genel bilgi için bkz: [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Barındırma ortamında büyük ikili akışlar etkinleştirme  
- Bir veri hizmeti oluşturduğunuzda bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak için kullanılır. Varsayılan olarak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP iletileri yalnızca 65 K bayt boyutu sınırlar. Büyük ikili veri akışı için ve veri hizmeti kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve akışlar aktarımı için kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdakileri ekleyin `<configuration />` uygulamanın Web.config dosyasının öğesi:  
+ Bir veri hizmeti oluşturduğunuzda bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak için kullanılır. Varsayılan olarak, WCF HTTP iletileri yalnızca 65 K bayt boyutu sınırlar. Büyük ikili veri akışı için ve veri hizmeti kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve akışlar aktarımı için kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdakileri ekleyin `<configuration />` uygulamanın Web.config dosyasının öğesi:  
   
   
   
 > [!NOTE]
->  Kullanmalısınız bir <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> istek ve yanıt iletilerinde ikili veri akışı ve tarafından arabelleğe değil emin olmak için aktarım modu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  Kullanmalısınız bir <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> aktarım modu istek ve yanıt iletilerinde ikili veri akışı ve WCF tarafından arabelleğe değil olduğundan emin olun.  
   
  Daha fazla bilgi için bkz: [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) ve [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

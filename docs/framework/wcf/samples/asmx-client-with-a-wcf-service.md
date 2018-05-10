@@ -2,14 +2,14 @@
 title: WCF Hizmeti ile ASMX İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF Hizmeti ile ASMX İstemcisi
-Bu örnek, Windows Communication Foundation (WCF) kullanarak bir hizmet oluşturmak ve ardından hizmet olmayan bir erişmek gösterilmiştir[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASMX istemcisi gibi istemci.  
+Bu örnek, Windows Communication Foundation (WCF) kullanarak bir hizmet oluşturmak ve bir ASMX istemcisi gibi bir WCF olmayan istemciden hizmete erişmek gösterilmiştir.  
   
 > [!NOTE]
 >  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> Ve <xref:System.Xml.Serialization.XmlSerializer> bir XML temsili CLR Türleri eşleyin. <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML temsili XmlSerializer farklı yorumlar. Olmayan[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Wsdl.exe gibi proxy oluşturucuları XmlSerializer kullanıldığında daha kullanışlı bir arabirim oluşturur. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Uygulanan `ICalculator` XmlSerializer CLR türlerini XML'e eşlemek için kullanıldığından emin olmak için arabirim. Hizmet uygulaması hesaplar ve uygun sonucunu döndürür.  
+ <xref:System.Runtime.Serialization.DataContractSerializer> Ve <xref:System.Xml.Serialization.XmlSerializer> bir XML temsili CLR Türleri eşleyin. <xref:System.Runtime.Serialization.DataContractSerializer> Bazı XML temsili XmlSerializer farklı yorumlar. XmlSerializer kullanıldığında Wsdl.exe gibi olmayan WCF proxy oluşturucuları daha kullanışlı bir arabirim oluşturur. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Uygulanan `ICalculator` XmlSerializer CLR türlerini XML'e eşlemek için kullanıldığından emin olmak için arabirim. Hizmet uygulaması hesaplar ve uygun sonucunu döndürür.  
   
  Hizmet yapılandırma dosyasında (Web.config) kullanılarak tanımlanmış hizmet ile iletişim için tek bir uç noktasını kullanıma sunar. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Hizmet Internet Information Services (IIS) ana bilgisayar tarafından sağlanan temel adresindeki uç noktasını kullanıma sunar. `binding` Özniteliği WS ile uyumlu SOAP 1.1 kullanarak HTTP iletişimi sağlayan basicHttpBinding ayarlanmış-ı BasicProfile aşağıdaki örnek yapılandırmada gösterildiği gibi 1.1.  
   
@@ -49,7 +49,7 @@ public interface ICalculator
 </services>  
 ```  
   
- ASMX istemcisi ile iletişim kurar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (Wsdl.exe) tarafından oluşturulan belirtilmiş bir proxy kullanarak hizmet. Yazılı proxy dosya generatedClient.cs içinde yer alır. WSDL yardımcı programı, belirtilen hizmet için meta verilerini alır ve iletişim kurmak için bir istemci tarafından kullanılmak üzere yazılmış bir proxy oluşturur. Varsayılan olarak, herhangi bir meta veri framework göstermiyor. Proxy oluşturmak için gereken meta verilerini kullanıma sunmak için eklemelisiniz bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ve kendi `httpGetEnabled` özniteliğini `True` aşağıdaki yapılandırmada gösterildiği gibi.  
+ ASMX istemcisi Web Hizmetleri Açıklama Dili (WSDL) yardımcı programı (Wsdl.exe) tarafından oluşturulan belirtilmiş bir proxy kullanarak WCF Hizmeti ile iletişim kurar. Yazılı proxy dosya generatedClient.cs içinde yer alır. WSDL yardımcı programı, belirtilen hizmet için meta verilerini alır ve iletişim kurmak için bir istemci tarafından kullanılmak üzere yazılmış bir proxy oluşturur. Varsayılan olarak, herhangi bir meta veri framework göstermiyor. Proxy oluşturmak için gereken meta verilerini kullanıma sunmak için eklemelisiniz bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ve kendi `httpGetEnabled` özniteliğini `True` aşağıdaki yapılandırmada gösterildiği gibi.  
   
 ```xml  
 <behaviors>  

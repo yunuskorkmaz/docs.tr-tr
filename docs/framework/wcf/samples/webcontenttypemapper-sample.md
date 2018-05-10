@@ -2,18 +2,18 @@
 title: WebContentTypeMapper Örneği
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89f13599e23f3e60ae4d9bc973debc436f46c147
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Örneği
 Bu örnek, Windows Communication Foundation (WCF) ileti gövdesi biçimleri için yeni içerik türlerine eşlemek gösterilmiştir.  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> Öğesi takılan sağlayan Web ileti Kodlayıcı içinde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] JSON, XML veya aynı uç noktada ham ikili iletileri almak için. Kodlayıcı HTTP content-type, isteğin bakarak ileti gövdesinin biçimi belirler. Bu örnek tanıtır <xref:System.ServiceModel.Channels.WebContentTypeMapper> kullanıcının içerik türü ve gövde biçimi arasında eşleme denetlemesine olanak sağlayan sınıf.  
+ <xref:System.ServiceModel.Description.WebHttpEndpoint> Öğesi takıldığı JSON, XML veya aynı uç noktada ham ikili iletileri almak WCF sağlayan Web ileti Kodlayıcı. Kodlayıcı HTTP content-type, isteğin bakarak ileti gövdesinin biçimi belirler. Bu örnek tanıtır <xref:System.ServiceModel.Channels.WebContentTypeMapper> kullanıcının içerik türü ve gövde biçimi arasında eşleme denetlemesine olanak sağlayan sınıf.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik türleri için varsayılan eşlemeleri kümesi sağlar. Örneğin, `application/json` eşler için JSON ve `text/xml` XML eşler. Ham ikili biçime JSON veya XML eşlenmemiş herhangi bir içerik türüne eşlenir.  
+ WCF içerik türleri için varsayılan eşlemeleri kümesi sağlar. Örneğin, `application/json` eşler için JSON ve `text/xml` XML eşler. Ham ikili biçime JSON veya XML eşlenmemiş herhangi bir içerik türüne eşlenir.  
   
  Bazı senaryolarda (örneğin, anında iletme stili API), istemci tarafından döndürülen içerik türü hizmet Geliştirici denetlemez. Örneğin, istemcilerin JSON olarak döndürebilir `text/javascript` yerine `application/json`. Bu durumda, hizmet Geliştirici türeyen bir tür sağlamalısınız <xref:System.ServiceModel.Channels.WebContentTypeMapper> belirtilen içerik türü aşağıdaki örnek kodda gösterildiği gibi doğru şekilde işlemek için.  
   

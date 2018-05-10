@@ -2,21 +2,21 @@
 title: LINQ-SQL örneği
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: a5c84dab941a50ddd5edb065004343cc304fd0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="linq-to-sql-sample"></a>LINQ-SQL örneği
 Bu örnek, SQL Server veritabanlarını tablolardan SQL sorgu varlıklara LINQ kullanmak için bir etkinlik oluşturmak gösterilmiştir.  
   
 > [!IMPORTANT]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Örnekleri zaten yüklenmiş olabilir, makinenizde. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  WCF örnekleri makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Bu dizin mevcut değilse, bu sayfanın üstündeki örnek bağlantıya tıklayın. Bu bağlantıyı indirir ve tüm yükler Not [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ve [!INCLUDE[infocard](../../../../includes/infocard-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse, bu sayfanın üstündeki örnek bağlantıya tıklayın. Bu bağlantıyı indirir ve tüm yükler Not [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, ve [!INCLUDE[infocard](../../../../includes/infocard-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   

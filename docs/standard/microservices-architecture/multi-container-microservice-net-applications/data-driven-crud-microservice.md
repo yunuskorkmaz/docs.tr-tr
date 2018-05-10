@@ -1,21 +1,14 @@
 ---
 title: Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir basit veri güdümlü CRUD mikro hizmet oluşturma
-keywords: Docker, mikro, ASP.NET, kapsayıcı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
-ms.translationtype: MT
+ms.openlocfilehash: 1186ad41fa1a6befcfcc4fa1f547605bb69e68bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 

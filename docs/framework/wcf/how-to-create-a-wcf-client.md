@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma
 Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevleri dördüncü budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
- Bu konu, meta verilerini almak açıklar bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oluşturmak için kullanın ve hizmeti bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmete erişim proxy. Bu görev, Visual Studio tarafından sağlanan hizmet Başvurusu Ekle işlevini kullanarak tamamlanır. Bu araç hizmetin MEX uç noktasından meta verileri alır ve yönetilen kaynak kodu dosyasının oluşturur istemci proxy dilinde (C# varsayılan olarak) seçtiniz. İstemci proxy oluşturma, yanı sıra aracı ayrıca oluşturur veya kendi uç noktaları birinde hizmetine bağlanmak için istemci uygulaması sağlayan istemci yapılandırma dosyası güncelleştirir.  
+ Bu konuda bir WCF hizmetinden meta verilerini almak ve hizmete erişmek için bir WCF proxy oluşturmak için nasıl kullanılacağını açıklar. Bu görev, Visual Studio tarafından sağlanan hizmet Başvurusu Ekle işlevini kullanarak tamamlanır. Bu araç hizmetin MEX uç noktasından meta verileri alır ve yönetilen kaynak kodu dosyasının oluşturur istemci proxy dilinde (C# varsayılan olarak) seçtiniz. İstemci proxy oluşturma, yanı sıra aracı ayrıca oluşturur veya kendi uç noktaları birinde hizmetine bağlanmak için istemci uygulaması sağlayan istemci yapılandırma dosyası güncelleştirir.  
   
 > [!NOTE]
 >  Aynı zamanda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) proxy sınıfı ve Visual Studio içinde hizmet Başvurusu Ekle kullanmak yerine yapılandırması oluşturmak için aracı.  
   
 > [!WARNING]
->  Çağrılırken bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] öğesinden bir sınıf kitaplığı projesinde hizmet [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] otomatik olarak bir proxy ve ilişkili yapılandırma dosyası oluşturmak için hizmet Başvurusu Ekle özelliğini kullanabilirsiniz.  Yapılandırma dosyası sınıf kitaplığı proje tarafından kullanılmaz. Sınıf kitaplığı çağıracak yürütülebilir dosyası için app.config dosyasına oluşturulan yapılandırma dosyasında ayarları eklemeniz gerekir.  
+>  Bir WCF hizmeti bir sınıf kitaplığı projesinde çağrılırken [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] otomatik olarak bir proxy ve ilişkili yapılandırma dosyası oluşturmak için hizmet Başvurusu Ekle özelliğini kullanabilirsiniz.  Yapılandırma dosyası sınıf kitaplığı proje tarafından kullanılmaz. Sınıf kitaplığı çağıracak yürütülebilir dosyası için app.config dosyasına oluşturulan yapılandırma dosyasında ayarları eklemeniz gerekir.  
   
  İstemci uygulaması hizmetiyle iletişim kurmak için oluşturulan proxy sınıfını kullanır. Bu yordamda açıklanan [nasıl yapılır: bir istemci kullanın](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

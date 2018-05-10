@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)
-Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını değiştirmek Windows Communication Foundation (WCF) hizmetini yapılandırma Düzenleyicisi (SvcConfigEditor.exe) sağlayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bir grafik kullanıcı arabirimini kullanarak hizmetleri. Bu araçla ayarlarını yönetebilirsiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bağlamaları, davranışları, hizmetleri ve XML yapılandırma dosyalarını doğrudan düzenlemek zorunda kalmadan tanılama.  
+Yöneticiler ve geliştiriciler oluşturmak ve bir grafik kullanıcı arabirimini kullanarak WCF hizmetleri için yapılandırma ayarlarını değiştirmek Windows Communication Foundation (WCF) hizmetini yapılandırma Düzenleyicisi (SvcConfigEditor.exe) sağlar. Bu aracı kullanarak doğrudan XML yapılandırma dosyalarını düzenlemek zorunda kalmadan WCF bağlamaları, davranışları, hizmetleri ve tanılama ayarlarını yönetebilirsiniz.  
   
  Hizmet yapılandırma Düzenleyicisi C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin klasöründe bulunabilir.  
   
 ## <a name="the-wcf-configuration-editor"></a>WCF yapılandırma Düzenleyicisi  
- Hizmet yapılandırma Düzenleyicisi yapılandırmada tüm adımlarda size yol gösterir bir sihirbaz ile birlikte gelen bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet veya istemci. Sihirbazı doğrudan yerine Düzenleyicisi'ni kullanmak için kesinlikle önerilir.  
+ Hizmet yapılandırma Düzenleyicisi bir WCF hizmeti veya istemci yapılandırmada tüm adımlarda size yol gösterir bir sihirbaz ile birlikte gelir. Sihirbazı doğrudan yerine Düzenleyicisi'ni kullanmak için kesinlikle önerilir.  
   
- Standart System.Configuration şemasıyla uyumlu bazı yapılandırma dosyaları zaten varsa, bağlamaları, davranışı, hizmetleri ve kullanıcı arabirimi ile tanılama için belirli ayarları yönetebilirsiniz. Hizmet yapılandırma Düzenleyicisi, varolan ayarları yönetmenize olanak tanır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma dosyaları yürütülebilir dosyaları, COM + hizmetlerinin ve Web barındırılan hizmetleri yanı sıra. Bir Web barındırılan hizmet ile hizmet yapılandırma Düzenleyicisi, her iki hizmet 's kendi açarken yapılandırması ve üst düzey düğüm devralınan yapılandırmaları bölümlerini gösterilir.  
+ Standart System.Configuration şemasıyla uyumlu bazı yapılandırma dosyaları zaten varsa, bağlamaları, davranışı, hizmetleri ve kullanıcı arabirimi ile tanılama için belirli ayarları yönetebilirsiniz. Hizmet yapılandırma Düzenleyicisi, var olan WCF yapılandırma dosyalarını yanı sıra yürütülebilir dosyaları, COM + hizmetlerinin ve Web barındırılan hizmetleri ayarlarını yönetmek sağlar. Bir Web barındırılan hizmet ile hizmet yapılandırma Düzenleyicisi, her iki hizmet 's kendi açarken yapılandırması ve üst düzey düğüm devralınan yapılandırmaları bölümlerini gösterilir.  
   
- Çünkü [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma ayarları içinde bulunur `<system.serviceModel>` Düzenleyicisi yapılandırma dosyasının yalnızca bu öğenin içeriğini üzerinde çalışır ve diğer öğeleri aynı dosyada erişmez. Var olan yapılandırma dosyalarını doğrudan gidebilirsiniz veya, bir hizmet, sanal dizin veya COM + hizmet içeren bütünleştirilmiş seçebilirsiniz. Düzenleyici, belirli bir hizmet için yapılandırma dosyasını yükler ve yeni öğeler eklemek veya iç içe geçmiş var olan öğeleri düzenleyebilir olanak tanır. `<system.serviceModel>` yapılandırma dosyasının.  
+ WCF yapılandırma ayarlarını bulunduğundan `<system.serviceModel>` Düzenleyicisi yapılandırma dosyasının yalnızca bu öğenin içeriğini üzerinde çalışır ve diğer öğeleri aynı dosyada erişmez. Var olan yapılandırma dosyalarını doğrudan gidebilirsiniz veya, bir hizmet, sanal dizin veya COM + hizmet içeren bütünleştirilmiş seçebilirsiniz. Düzenleyici, belirli bir hizmet için yapılandırma dosyasını yükler ve yeni öğeler eklemek veya iç içe geçmiş var olan öğeleri düzenleyebilir olanak tanır. `<system.serviceModel>` yapılandırma dosyasının.  
   
  Düzenleyici, IntelliSense destekler ve şema uyumluluk zorlar. Sonuçta çıktı yapılandırma dosyası şeması ile uyumlu olmasını ve sözdizimsel olarak doğru veri değerleri garanti edilmez. Ancak, Düzenleyicisi yapılandırma dosyası anlamsal olarak geçerli garanti değil. Diğer bir deyişle, düzenleyici yapılandırma dosyası yapılandırır hizmeti ile çalışabilirsiniz garanti etmez.  
   
@@ -45,7 +45,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- Hizmet yapılandırma Düzenleyicisi'ni başlattıktan sonra kullanabileceğiniz **açık dosyaya** hizmeti veya derleme yönetmek istediğiniz göz atmak için menüsü. Yapılandırma dosyaları açabilir, doğrudan göz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ Hizmetleri ve Web barındırılan hizmetleri için açık yapılandırma dosyaları.  
+ Hizmet yapılandırma Düzenleyicisi'ni başlattıktan sonra kullanabileceğiniz **açık dosyaya** hizmeti veya derleme yönetmek istediğiniz göz atmak için menüsü. Dosyaları doğrudan, WCF /COM+ Hizmetleri için göz atın ve Web barındırılan hizmetler için yapılandırma dosyalarını açmak yapılandırma açabilirsiniz.  
   
  Hizmet yapılandırma Düzenleyicisi'nin kullanıcı arabirimi, aşağıdaki alana ayrılır:  
   
@@ -57,7 +57,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
   
 ### <a name="opening-a-configuration-file"></a>Bir yapılandırma dosyası açma  
   
-1.  Gitmek için bir komut penceresi kullanarak hizmet yapılandırma Düzenleyicisi'ni başlatın, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yükleme konumu ve ardından türü `SvcConfigEditor.exe`.  
+1.  WCF yükleme konumuna gidin ve ardından türü için bir komut penceresi kullanarak hizmet yapılandırma Düzenleyicisi'ni başlatın `SvcConfigEditor.exe`.  
   
 2.  Gelen **dosya** menüsünde, select **açık** ve yönetmek istediğiniz dosya türünü tıklatın.  
   
@@ -208,7 +208,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
 3.  Düzenlemek istediğiniz bağlama öğesi uzantısı seçin. Öğenin ayarları, bunlar burada düzenlenebilir sağ bölmede görüntülenir.  
   
 ### <a name="diagnostics"></a>Tanılamalar  
- **Tanılama** düğümü tüm tanılama ayarlarını yapılandırma dosyasında görüntüler. Performans sayaçları Aç veya Kapat, etkinleştirmek veya Windows Yönetim Araçları (WMI) devre dışı bırakmak, yapılandırma sağlar [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izleme ve yapılandırma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ileti günlüğe kaydetme. Ayarlarında **tanılama** düğümü karşılık <`system.diagnostics`> bölümünde ve `<diagnostics>` bölümüne `<system.serviceModel>` yapılandırma dosyası.  
+ **Tanılama** düğümü tüm tanılama ayarlarını yapılandırma dosyasında görüntüler. Performans sayaçları Aç veya Kapat, etkinleştirme veya Windows Yönetim Araçları (WMI) devre dışı bırakmak, WCF izlemeyi yapılandırmak ve WCF ileti günlüğe kaydetme yapılandırma sağlar. Ayarlarında **tanılama** düğümü karşılık <`system.diagnostics`> bölümünde ve `<diagnostics>` bölümüne `<system.serviceModel>` yapılandırma dosyası.  
   
  Tıkladığınızda **tanılama** düğümü görüntülemek veya üzerinde tanılama görevleri **Özet sayfası** içinde **ayrıntı bölmesinde**.  
   
@@ -225,18 +225,18 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
 2.  WMI sağlayıcısı etkinleştirmek için **etkinleştirme WMI sağlayıcısı** bağlantı.  
   
 #### <a name="enabling-wcf-tracing"></a>WCF izlemeyi etkinleştirme  
- Oluşturabileceğiniz bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izleme standart özellikler dosyasıyla veya özel izleme dosyası oluşturma.  
+ Özel izleme dosyasını oluştururken ya da standart özelliklere sahip bir WCF izleme dosyası oluşturun.  
   
 1.  Tıklatın **tanılama** düğümü.  
   
 2.  Tıklatın **izlemeyi etkinleştirmek**.  
   
-3.  Tıklatın **izleme düzeyi** bağlantı için izleme düzeyini ayarlayın. Altı izleme düzeyi vardır: kapalı, kritik, hata, uyarı, bilgi ve ayrıntılı. **Etkinlik izleme** ve **yayılması etkinlik** seçeneğini kullanacak şekilde etkinleştirin [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Etkinlik izleme özelliği.  
+3.  Tıklatın **izleme düzeyi** bağlantı için izleme düzeyini ayarlayın. Altı izleme düzeyi vardır: kapalı, kritik, hata, uyarı, bilgi ve ayrıntılı. **Etkinlik izleme** ve **yayılması etkinlik** seçeneği WCF Etkinlik izleme özelliğini kullanmak etkinleştirin.  
   
 4.  İzleme dosyası ve seçeneklerini belirtmek için İzleme dinleyicisi adını tıklatın.  
   
 #### <a name="enabling-wcf-logging"></a>WCF günlüğünü etkinleştirme  
- Oluşturabileceğiniz bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izleme standart özellikler dosyasıyla veya özel izleme dosyası oluşturma.  
+ Özel izleme dosyasını oluştururken ya da standart özelliklere sahip bir WCF izleme dosyası oluşturun.  
   
 1.  Tıklatın **tanılama** düğümü.  
   
@@ -316,7 +316,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
  Bu bölümde, bağlama türü http, tcp, MSMQ veya protokolü adres düzenleri ve olası bağlamaları arasında tanımlanan eşleme aracılığıyla net.pipe gibi farklı protokoller için varsayılan ayarlamanızı sağlar. Yeni eşlemeler diğer protokoller için de ekleyebilirsiniz.  
   
 #### <a name="extensions"></a>Uzantıları  
- Kullanılmak üzere yeni uzantılar, bağlama öğesi uzantıları, standart endpoint uzantıları ve davranış uzantıları bağlama kaydedilebilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma. Ad/tür çiftleri uzantılarıdır. Uzantı türü uygulayan ancak adı yapılandırmada uzantısının adını tanımlar. Dört tür uzantılar şunlardır:  
+ Yeni bağlama uzantıları, bağlama öğesi uzantıları, standart endpoint uzantıları ve davranış uzantıları WCF yapılandırmasında kullanılması için kaydedilebilir. Ad/tür çiftleri uzantılarıdır. Uzantı türü uygulayan ancak adı yapılandırmada uzantısının adını tanımlar. Dört tür uzantılar şunlardır:  
   
 -   Bağlama uzantıları tüm bağlama türünü tanımlayın. Örnek: `basicHttpBinding`.  
   
@@ -326,7 +326,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
   
 -   Öğenin bir davranış davranışı öğesi uzantılarını tanımlayın. Örnek: `clientVia`.  
   
- Yapılandırmada kayıtlı uzantıları gibi diğer kullanılabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aynı türde bileşen.  
+ Yapılandırmada kayıtlı uzantıları diğer WCF bileşenleri aynı türde gibi kullanılabilir.  
   
 ##### <a name="adding-a-new-extension"></a>Yeni bir uzantı ekleme  
  Gelişmiş düğümlerin uzantısı düğümlerden birini seçin:  
@@ -343,11 +343,11 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
  Bu bölümde, barındırma ortamı hizmeti örnek oluşturma ayarlarını tanımlamanızı sağlar.  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>Sihirbazı'nı kullanarak bir yapılandırma dosyası oluşturma  
- Yeni bir yapılandırma dosyası oluşturmak için bir yolu, yeni hizmet öğesi Sihirbazı'nı kullanmaktır. Sihirbaz yüklü hizmet türlerini ve diğer öğeleri ile uyumlu bulur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bilgisayarda COM + ve Web barındırılan sanal dizinleri dahil olmak üzere ve çok daha verimli yapılandırması oluşturma yapmalarına yükler.  
+ Yeni bir yapılandırma dosyası oluşturmak için bir yolu, yeni hizmet öğesi Sihirbazı'nı kullanmaktır. Sihirbaz yüklü hizmet türlerini ve diğer öğeleri COM + ve Web barındırılan sanal dizinler de dahil olmak üzere bilgisayarda WCF ile uyumlu bulur ve çok daha verimli yapılandırması oluşturma yapmalarına yükler.  
   
 #### <a name="creating-a-configuration-file"></a>Bir yapılandırma dosyası oluşturma  
   
-1.  Gitmek için bir komut penceresi kullanarak hizmet yapılandırma Düzenleyicisi'ni başlatın, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yükleme konumu ve ardından türü `SvcConfigEditor.exe`.  
+1.  WCF yükleme konumuna gidin ve ardından türü için bir komut penceresi kullanarak hizmet yapılandırma Düzenleyicisi'ni başlatın `SvcConfigEditor.exe`.  
   
 2.  Gelen **dosya** menüsünde, select **açık** tıklatıp **yürütülebilir**, **COM + hizmet**, veya **WebHosted hizmet**oluşturmak istediğiniz yapılandırma dosyasının türüne bağlı olarak.  
   
@@ -370,7 +370,7 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
   
 2.  İlk sayfa ağacından COM + uygulamasını seçin. COM + uygulaması ağacında bulamazsanız, Bileşen Hizmetleri yüklenir ve Genel Derleme Önbelleği'ne (GAC) kayıtlı olduğunu doğrulayın.  
   
-3.  Sonraki sayfaya olarak kullanıma sunmak istediğiniz hangi yöntemlerini seçin [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri. COM + uygulaması'deki tüm desteklenen yöntemleri görüntülenir ve varsayılan olarak seçilidir.  
+3.  Sonraki sayfada, WCF hizmetleri kullanıma sunmak istediğiniz hangi yöntemlerini seçin. COM + uygulaması'deki tüm desteklenen yöntemleri görüntülenir ve varsayılan olarak seçilidir.  
   
 4.  Barındırma için bir yöntem seçin.  
   
@@ -390,6 +390,6 @@ Yöneticiler ve geliştiriciler oluşturmak ve yapılandırma ayarlarını deği
     >  Doğrudan da açın ve COM sözleşmeleri içeren bir yapılandırma dosyasını düzenleyin.  
   
 ## <a name="security"></a>Güvenlik  
- Yapılandırma Düzenleyicisi tarafından oluşturulan bir hizmet yapılandırma dosyası güvenli olması garanti edilmez. Lütfen [güvenlik](../../../docs/framework/wcf/feature-details/security.md) nasıl güvenli hale getirmek öğrenmek için belgeleri, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri.  
+ Yapılandırma Düzenleyicisi tarafından oluşturulan bir hizmet yapılandırma dosyası güvenli olması garanti edilmez. Lütfen [güvenlik](../../../docs/framework/wcf/feature-details/security.md) , WCF hizmetleri güvenli hale getirmek nasıl öğrenmek için belgeleri.  
   
- Ayrıca, yapılandırma Düzenleyicisi'ni yalnızca okuma ve yazma geçerli kullanılabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yapılandırma öğeleri. Aracı şeması uyumlu, kullanıcı tanımlı öğeleri yok sayar. Bu yapılandırma öğelerinden dosya veya bilinen üzerindeki etkilerini belirlemek kaldırmak da denemez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] öğeleri. Bu öğeleri uygulama veya sistem için bir tehdit teşkil olup olmadığını belirlemek kullanıcının sorumluluğundadır.
+ Ayrıca, yapılandırma Düzenleyicisi'ni okuyup geçerli WCF yapılandırma öğeleri yazmak için yalnızca kullanılabilir. Aracı şeması uyumlu, kullanıcı tanımlı öğeleri yok sayar. Ayrıca bu öğeleri yapılandırmasından dosya veya bilinen WCF öğelerde etkilerini belirlemek Kaldır denemez. Bu öğeleri uygulama veya sistem için bir tehdit teşkil olup olmadığını belirlemek kullanıcının sorumluluğundadır.

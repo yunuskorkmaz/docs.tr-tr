@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: d320b3dc0a82db06efb496db7313dea901178148
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d68e3132224a7b60720fe7c293b9eee14e3fbd5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
 Çözümleme izleme içinde [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] yüksek performans ve düşük ayrıntı izleme özelliği olay izleme için Windows (ETW üstünde) ayarlayın. ETW çekirdek izleme işlemlerinin ek yükünü önemli ölçüde azaltan düzeyinde çalışır. Verimli bir şekilde kullanıcı ve çekirdek modu olaylarını arabelleğe alır ve dinamik günlüğü etkinleştirme hizmet yeniden başlatıldığında gerek kalmadan sağlar. Sonraki günlükleri yayılan ve alınan olay izleme verileri mevcut değil.  
   
  ETW hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Uygulama, analiz etmek için Windows Sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra [!INCLUDE[wv](../../../../../includes/wv-md.md)] ve [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] ek günlükleri uygulama ve hizmet günlükleri en üst düzey düğümü altında sunulan. Belirli bir uygulama veya sistem genelinde etkileyebilir (örneğin, güvenlik olay günlüğüne kaydedebilir olayların türünü) genel olayları yerine belirli bileşeni için olayları depolamak için bu yeni günlükler amacı budur. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] birleştirir ve günlüğe karşılık gelen [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] izleme olayları [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ileti günlüklerini ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] kayıtları uygulamalar ve hizmet günlükleri izleme.  
+ Uygulama, analiz etmek için Windows Sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra [!INCLUDE[wv](../../../../../includes/wv-md.md)] ve [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] ek günlükleri uygulama ve hizmet günlükleri en üst düzey düğümü altında sunulan. Belirli bir uygulama veya sistem genelinde etkileyebilir (örneğin, güvenlik olay günlüğüne kaydedebilir olayların türünü) genel olayları yerine belirli bileşeni için olayları depolamak için bu yeni günlükler amacı budur. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] birleştirir ve olayların günlüğe kaydedilmesini WCF izleme, WCF ileti günlükleri, karşılık gelen ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] kayıtları uygulamalar ve hizmet günlükleri izleme.  
   
 ## <a name="concepts-and-capabilities"></a>Kavramları ve Özellikler  
- Aşağıdaki kavramlar ve yetenekleri uygulamak [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analitik izleme.  
+ Aşağıdaki kavramlar ve yetenekleri WCF analiz izleme için geçerlidir.  
   
 ### <a name="enabling-wcf-diagnostics-settings"></a>WCF tanılama ayarlarını etkinleştirme  
  WCF tanılama içindeki etkin \<system.serviceModel >\<Tanılama > yapılandırma bölümü.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="channels"></a>Kanallar  
  ETW kanalları kullanarak belirli bir hedef kitleye doğrudan izleme olayları için yazılım bileşenleri sağlar. Örneğin, bir kanala sistem yöneticileri için olaylar ve olaylar, uygulama geliştiricilerin bakımı hakkında başka bir kanala gönderebilirsiniz. Kanallar adlı ve tüketicilerin Olay Görüntüleyicisi'ni kullanarak bir kanalın olayları görüntüleyebilmesi için Windows ile kayıtlı.  
   
- Çözümleme izleme özelliğini [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] Microsoft-Windows-uygulama-Server-uygulamalar kanala yazar. Bu kanal sağlığını izlemek istediğiniz kullanıcılar için özellikle tasarlanmış [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] üretimde Hizmetleri. Birçok sistem durumu izleme kullanılan olayların ayarlayın ve sorun giderme senaryoları küçük tanımlar.  
+ WCF'de çözümleme izleme özelliğini [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] Microsoft-Windows-uygulama-Server-uygulamalar kanala yazar. Bu kanal, WCF hizmetleri üretimde sağlığını izlemek için isteyen kullanıcılar için özel olarak tasarlanmıştır. Birçok sistem durumu izleme kullanılan olayların ayarlayın ve sorun giderme senaryoları küçük tanımlar.  
   
  Windows için olay izleme bildirim iletileri düzgün olay günlüğü'nde çözülür biçimde etkinleştirmek için komut satırında ServiceModelReg aracı şu şekilde kullanın:  
   

@@ -2,14 +2,14 @@
 title: Köprü Oluşturma ve Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>Köprü Oluşturma ve Hata İşleme
-Bu örnek, bir istemci ile farklı bağlamaları kullanan bir hizmeti arasındaki iletişimi köprüleme Windows Communication Foundation (WCF) yönlendirme hizmeti nasıl kullanıldığını gösterir. Bu örnek ayrıca yedekleme Hizmeti'nin yük devretme senaryoları için nasıl kullanılacağını gösterir. Yönlendirme hizmeti bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştırır bileşeni. Bu örnek standart uyum [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hesaplayıcı yönlendirme hizmeti kullanarak iletişim kurmak için örnek.  
+Bu örnek, bir istemci ile farklı bağlamaları kullanan bir hizmeti arasındaki iletişimi köprüleme Windows Communication Foundation (WCF) yönlendirme hizmeti nasıl kullanıldığını gösterir. Bu örnek ayrıca yedekleme Hizmeti'nin yük devretme senaryoları için nasıl kullanılacağını gösterir. Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  

@@ -1,21 +1,14 @@
 ---
-title: "Uygulama okuma/CQRS mikro hizmet sorguları"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Uygulama okuma/CQRS mikro hizmet sorguları"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: Uygulama okuma/CQRS mikro hizmet sorguları
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Uygulama okuma/CQRS mikro hizmet sorguları
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>Uygulama okuma/CQRS mikro hizmet sorguları
 
@@ -198,11 +191,11 @@ ViewModel türleri artı döndürülebilecek olası HTTP durum kodları temel ba
 
 -   **Julie Lerman. Veri noktaları - Dapper, Entity Framework ve karma uygulamalar (MSDN Mag. makalesi)**
 
-    *https://msdn.microsoft.com/Magazine/mt703432.aspx*
+    *https://msdn.microsoft.com/magazine/mt703432.aspx*
 
 -   **Swagger kullanan ASP.NET Core Web API Yardım Sayfaları**
 
-    *https://docs.microsoft.com/ASPNET/Core/Tutorials/Web-api-Help-Pages-using-swagger?Tabs=Visual-Studio*
+    *https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*
 
 >[!div class="step-by-step"]
 [Önceki] (eshoponcontainers-cqrs-bbb-microservice.md) [sonraki] (bbb-yönelimli-microservice.md)

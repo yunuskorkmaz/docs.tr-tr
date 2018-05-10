@@ -2,17 +2,17 @@
 title: BindingElement Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
-Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, kanalda kullanarak etkinleştirmek için en düşük gereksinim ele alınmıştır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], geliştirilmesi bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda ele alınmıştır WCF, geliştirilmesi, kanal kullanarak etkinleştirmek için en düşük gereksinim bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Oluşturma bir <xref:System.ServiceModel.Channels.BindingElement> kanalınızı kullanmayı geliştiricilerinin için bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uygulama. <xref:System.ServiceModel.Channels.BindingElement> nesneleri, gelen kullanılabilir <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> bağlanmak için sınıf bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanalınızı kesin türü bilgilerinin kalmadan kanalınızı uygulamaya.  
+ Oluşturma bir <xref:System.ServiceModel.Channels.BindingElement> WCF uygulamada kullanmak için geliştiricileri, kanal sağlar. <xref:System.ServiceModel.Channels.BindingElement> nesneleri, gelen kullanılabilir <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> kanalınızı kesin türü bilgilerinin gerek kalmadan, kanal bir WCF uygulamaya bağlanmak için sınıf.  
   
  Bir kez bir <xref:System.ServiceModel.Channels.BindingElement> bırakıldı oluşturulan, kalan kanal geliştirme adımları açıklanan izleyerek, gereksinimlerinize bağlı olarak daha fazla işlevsellik etkinleştirebilirsiniz [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

@@ -2,11 +2,11 @@
 title: Özel Hizmet Konağı
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>Özel Hizmet Konağı
 Bu örnek özel bir türevi kullanımı gösterilmiştir <xref:System.ServiceModel.ServiceHost> hizmet çalışma zamanı davranışını değiştirmek için sınıf. Bu yaklaşım, hizmetleri, çok sayıda yaygın bir şekilde yapılandırmak için yeniden kullanılabilir bir alternatif sağlar. Örnek de nasıl kullanılacağı ortaya <xref:System.ServiceModel.Activation.ServiceHostFactory> Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) barındırma ortamında özel ServiceHost kullanılacak sınıfı.  
@@ -121,7 +121,7 @@ host.Open();
  Yalnızca varsayılan olarak kullansaydık bizim Özel konak hizmetin uç nokta yapılandırması uygulama yapılandırma dosyasından hala okur. <xref:System.ServiceModel.ServiceHost> hizmet barındırmak için sınıf. Meta veri yayımlama bizim Özel konağın içinde etkinleştirmek için mantığı eklediğimiz olduğundan, ancak biz artık açıkça meta veri yayımlama davranışı yapılandırmasında etkinleştirmeniz gerekir. Bu yaklaşım, birkaç hizmetleri içeren bir uygulama oluşturma ve bunların her birini meta veri yayımlama aynı yapılandırma öğeleri tekrar tekrar yazmak zorunda kalmadan etkinleştirmek istiyorsanız, farklı bir avantajı vardır.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS veya WAS özel ServiceHost kullanma  
- Uygulama kodunuz oluşturmak ve hizmet ana bilgisayar örneği açmak için sorumlu olduğu için bir özel hizmet ana bilgisayar kendini barındırma senaryolarında kullanarak, basittir. IIS veya barındırma ortamı, ancak WAS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı dinamik olarak gelen iletilere yanıt olarak hizmetinizin ana bilgisayar örneği. Özel hizmet ana de bu barındırma ortamında kullanılabilir, ancak bazı ek kod bir ServiceHostFactory biçiminde gerektirir. Aşağıdaki kod bir türevi gösterir <xref:System.ServiceModel.Activation.ServiceHostFactory> bizim Özel örneklerini döndüren `SelfDescribingServiceHost`.  
+ Uygulama kodunuz oluşturmak ve hizmet ana bilgisayar örneği açmak için sorumlu olduğu için bir özel hizmet ana bilgisayar kendini barındırma senaryolarında kullanarak, basittir. Bununla birlikte, IIS ya da barındırma ortamı WAS WCF altyapı dinamik olarak gelen iletilere yanıt olarak hizmetinizin konak örnekleme. Özel hizmet ana de bu barındırma ortamında kullanılabilir, ancak bazı ek kod bir ServiceHostFactory biçiminde gerektirir. Aşağıdaki kod bir türevi gösterir <xref:System.ServiceModel.Activation.ServiceHostFactory> bizim Özel örneklerini döndüren `SelfDescribingServiceHost`.  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- Burada ek ekledik `Factory` özniteliğini `@ServiceHost` CLR yönerge ve geçirilen özniteliğinin değeri bizim Özel Fabrika adını yazın. IIS ya da WAS bu hizmet için bir ileti aldığında [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı barındırma ilk ServiceHostFactory örneği oluşturur ve ardından çağırarak hizmeti konak örneği `ServiceHostFactory.CreateServiceHost()`.  
+ Burada ek ekledik `Factory` özniteliğini `@ServiceHost` CLR yönerge ve geçirilen özniteliğinin değeri bizim Özel Fabrika adını yazın. IIS ya da WAS bu hizmet için bir ileti aldığında, WCF barındırma altyapı ilk ServiceHostFactory örneği oluşturur ve ardından çağırarak hizmeti konak örneği `ServiceHostFactory.CreateServiceHost()`.  
   
 ## <a name="running-the-sample"></a>Örnek çalışıyor  
  Bu örnek bir tam olarak işlevsel istemci ve hizmet uygulaması sunmasına karşın, örnek bir hizmetin çalışma zamanı davranışı özel konak. yoluyla değiştirmek için aşağıdaki adımları uygulayın nasıl göstermek üzere noktasıdır:  

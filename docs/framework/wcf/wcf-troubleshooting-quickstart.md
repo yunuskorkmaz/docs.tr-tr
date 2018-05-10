@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda müşteriler içine geliştirme WCF istemcileri ve Hizmetleri sırasında çalıştırdığınız bilinen sorunlar sayısını listeler. İçine çalıştırdığınız sorunu bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve özel durumlar hakkında ayrıntılı bilgi almak hizmet içinde gerçekleşen. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Gibi tek yönlü görünür ve yanıt hiçbir veri içerdiğinde istek-yanıt işlemleri kabaca aynı hızda döndürür. Ne oluyor?  
- Bir işlem bir yolu olduğunu belirten yalnızca işlem sözleşmesi bir giriş iletisi kabul eder ve bir çıktı iletisi döndürmüyor anlamına gelir. İçinde [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tüm istemci çağrılarını giden veri kablo için yazılmış veya bir özel durum döndürür. Tek yönlü işlemler aynı şekilde çalışır ve hizmet bulunması veya hizmet ağdan verileri kabul etmek için hazır değil bloke atabilirsiniz. Genellikle, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bu istemci istek-yanıt; daha hızlı döndüren tek yönlü çağrıları sonuçlanır ancak istek-yanıt işlemlerinin yanı sıra tek yönlü işlemler giden verilerin ağ üzerinden gönderilmesi yavaşlatır herhangi bir koşul yavaşlatır. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md) ve [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Bir işlem bir yolu olduğunu belirten yalnızca işlem sözleşmesi bir giriş iletisi kabul eder ve bir çıktı iletisi döndürmüyor anlamına gelir. WCF'de, tüm istemci çağrılarını giden veri kablo için yazılmış veya bir özel durum döndürür. Tek yönlü işlemler aynı şekilde çalışır ve hizmet bulunması veya hizmet ağdan verileri kabul etmek için hazır değil bloke atabilirsiniz. Genellikle WCF, bu istemci istek-yanıt daha hızlı döndüren tek yönlü çağrıları sonuçlanır; ancak giden verilerin ağ üzerinden gönderme yavaşlatır herhangi bir koşul istek-yanıt işlemlerinin yanı sıra tek yönlü işlemler yavaşlatır. Daha fazla bilgi için bkz: [One-Way Hizmetleri](../../../docs/framework/wcf/feature-details/one-way-services.md) ve [bir WCF istemcisi kullanarak hizmetlere erişme](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Bir X.509 sertifikası ile Hizmetim kullanıyorum ve bir System.Security.Cryptography.CryptographicException alın. Ne oluyor?  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>My izleme araçlarından birini kullanıyorum ve bir EndpointNotFoundException alın. Ne oluyor?  
- Sistem tarafından sağlanan değil bir izleme aracı kullanıyorsanız [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] izleme mekanizması ve alırsınız bir <xref:System.ServiceModel.EndpointNotFoundException> belirten bir adres filtresi uyuşmazlığı oluştu, kullanmanız gereken <xref:System.ServiceModel.Description.ClientViaBehavior> izleme iletilerini yönlendirmek için sınıfı yardımcı programı ve bu ileti hizmet adresine yönlendirmek yardımcı programı. <xref:System.ServiceModel.Description.ClientViaBehavior> Sınıfı değiştirir `Via` ayrı olarak alıcıdan ultimate, sonraki ağ adresini belirtmek için adresleme üstbilgi belirtilen tarafından `To` adresleme üstbilgi. Bunu yaparken kurmak için kullanılan uç nokta adresi ancak değiştirmeyin `To` değeri.  
+ Sistem tarafından sağlanan WCF izleme mekanizması olmayan bir izleme aracı kullanıyorsanız ve aldığınız bir <xref:System.ServiceModel.EndpointNotFoundException> belirten bir adres filtresi uyuşmazlığı oluştu, kullanmanız gereken <xref:System.ServiceModel.Description.ClientViaBehavior> izleme yardımcı programı iletileri yönlendirmek için sınıf ve Bu ileti hizmet adresine yönlendirmek yardımcı program vardır. <xref:System.ServiceModel.Description.ClientViaBehavior> Sınıfı değiştirir `Via` ayrı olarak alıcıdan ultimate, sonraki ağ adresini belirtmek için adresleme üstbilgi belirtilen tarafından `To` adresleme üstbilgi. Bunu yaparken kurmak için kullanılan uç nokta adresi ancak değiştirmeyin `To` değeri.  
   
  Aşağıdaki kod örneğinde bir örnek istemci yapılandırma dosyası gösterir.  
   

@@ -2,11 +2,11 @@
 title: MSMQ 4.0'da Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0'da Zehirli İleti İşleme
 Bu örnek, bir hizmet olarak işleme zehir iletisi gerçekleştirmek gösterilmiştir. Bu örnek dayanır [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding`. Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Zehirli ileti kuyruktan iletileri işleme  
  Zehirli ileti hizmeti son zehirli ileti kuyruktan iletileri okur ve onları işler.  
   
- Zehirli ileti sıradaki iletiler zehir iletisi hizmet uç noktasından farklı olabilir iletisi işliyor hizmetine gönderilen iletiler ' dir. Bu nedenle, ne zaman zehir iletisi hizmeti okur iletileri sıradan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal katmanını uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak zehir iletisi hizmeti tarafından alınan. İleti için farklı bir uç noktası ele olsa bile iletisini almaya devam etmek için biz eklemelisiniz bir `ServiceBehavior` eşleştirme ölçütü olduğu için ileti ele herhangi bir hizmet uç nokta eşleşecek şekilde filtre adreslere. Bu, başarılı bir şekilde zehirli ileti kuyruğundan okumak iletileri işlemek için gereklidir.  
+ Zehirli ileti sıradaki iletiler zehir iletisi hizmet uç noktasından farklı olabilir iletisi işliyor hizmetine gönderilen iletiler ' dir. Bu nedenle, zehirli ileti hizmeti kuyruktan iletileri okuduğunda WCF kanalı katman uyuşmazlığı uç noktalarını bulur ve ileti göndermez. Bu durumda, ileti hizmeti işlem sırasını ele ancak zehir iletisi hizmeti tarafından alınan. İleti için farklı bir uç noktası ele olsa bile iletisini almaya devam etmek için biz eklemelisiniz bir `ServiceBehavior` eşleştirme ölçütü olduğu için ileti ele herhangi bir hizmet uç nokta eşleşecek şekilde filtre adreslere. Bu, başarılı bir şekilde zehirli ileti kuyruğundan okumak iletileri işlemek için gereklidir.  
   
  Zehir iletisi hizmet uygulaması kendi hizmet uygulaması çok benzer. Sözleşme uygular ve siparişleri işler. Kod örneği aşağıdaki gibidir.  
 

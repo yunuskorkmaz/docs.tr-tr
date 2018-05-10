@@ -2,11 +2,11 @@
 title: 'İstemci: Kanal Fabrikaları ve Kanallar'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
 Bu konu, kanal fabrikaları ve kanallar oluşturulmasını açıklar.  
@@ -19,7 +19,7 @@ Kanal fabrikası kanalları oluşturur.
   
  Kapatıldığında, henüz kapatılmamış oluşturuldukları kanalları kapatma kanal fabrikaları sorumludur. Bir kanal dinleyicisi kapatıldığında, yalnızca yeni kanallar ancak iletileri almaya devam edebilmesi için varolan kanalları açmak bırakır kabul durdurduğu olduğundan model burada asimetrik olduğunu unutmayın.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Bu işlem için temel sınıfı Yardımcıları sağlar. (Bu konuda tartışılan kanal yardımcı sınıfları diyagramı için bkz: [kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
+ WCF bu işlem için temel sınıfı Yardımcıları sağlar. (Bu konuda tartışılan kanal yardımcı sınıfları diyagramı için bkz: [kanal modeli genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md).)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> Uygulayan sınıf <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda açıklanan durum makinesinin zorlar [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

@@ -2,11 +2,11 @@
 title: Otomatik Biçim Seçimi
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-format-selection"></a>Otomatik Biçim Seçimi
 Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek Windows Communication Foundation (WCF) REST biçimini işlemi kodda açıkça ayarlamak nasıl yanı sıra, model programlama ile gösterilmiştir.  
@@ -14,9 +14,9 @@ Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek Windows Commun
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
  Örnek hizmete istek yaptığında istemci kodu ile birlikte bir servis oluşur. Tek bir HTTP hizmeti destekler `GET` işlemi (`EchoWithGet`) ve tek bir HTTP `POST` işlemi (`EchoWithPost`). İki işlem bir dize beklediğiniz ve sonra yanıtta dize döndürür. İle `GET` işlemi, dize URI sorgu dizesi parametresi sağlanır. İle `POST` işlemi, dize XML serileştirilmiş istek gövdesinde sağlanır. Hizmet XML veya JSON, kesinlik temelli Biçim Seçimi özellikleri ve yeni Otomatik Biçim Seçimi kullanılarak yanıtları döndürün yapabiliyor [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
   
- Aşağıdaki örnekte, App.config dosyası kullanarak Otomatik Biçim Seçimi etkinleştirilir. Varsayılan Web HTTP uç `automaticFormatSelectionEnabled` öznitelik değerini verildiği `true`. Etkin, otomatik biçim seçimi ile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı isteğin HTTP kabul edin veya Content-Type üstbilgisi verilen en uygun yanıt biçimi (XML veya JSON) seçer. Geliştirici herhangi bir ek kod veya yapılandırma ayarı dışında sağlamak için gerekli olmayan `automaticFormatSelectionEnabled` özniteliğini `true` yeni bu özelliği kullanmak için. Program.cs istemci kodda iki gönderdiği istekleri `GET` ve `POST` "application/xml" veya "application/json" olarak belirtilen HTTP kabul başlık hizmetiyle ve hizmet işlemleri, bir yanıt döndürür ilgili biçimi.  
+ Aşağıdaki örnekte, App.config dosyası kullanarak Otomatik Biçim Seçimi etkinleştirilir. Varsayılan Web HTTP uç `automaticFormatSelectionEnabled` öznitelik değerini verildiği `true`. Etkin otomatik biçim seçimi ile WCF altyapı isteğin HTTP kabul edin veya Content-Type üstbilgisi verilen en uygun yanıt biçimi (XML veya JSON) seçer. Geliştirici herhangi bir ek kod veya yapılandırma ayarı dışında sağlamak için gerekli olmayan `automaticFormatSelectionEnabled` özniteliğini `true` yeni bu özelliği kullanmak için. Program.cs istemci kodda iki gönderdiği istekleri `GET` ve `POST` "application/xml" veya "application/json" olarak belirtilen HTTP kabul başlık hizmetiyle ve hizmet işlemleri, bir yanıt döndürür ilgili biçimi.  
   
- Ayrıca, `GET` işlemi, kesinlik temelli Biçim Seçimi kullanılır. `GET` İşlemi için bir isteğe bağlı denetimlerini `format` sorgu dizesi parametresi ve varsa, yanıt biçimi ayarlar <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> özelliği. Yanıt biçimi bu şekilde imperatively ayarını geçersiz kılar gerçekleştirilir Otomatik Biçim Seçimi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı.  
+ Ayrıca, `GET` işlemi, kesinlik temelli Biçim Seçimi kullanılır. `GET` İşlemi için bir isteğe bağlı denetimlerini `format` sorgu dizesi parametresi ve varsa, yanıt biçimi ayarlar <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> özelliği. Bu şekilde yanıt biçimi imperatively ayarı WCF altyapısı tarafından yapılan otomatik biçim seçimi geçersiz kılar.  
   
  Kendini barındıran hizmet ve bir konsol uygulaması içinde çalıştırılan bir istemciyi, örnek oluşur. Konsol uygulaması çalışırken, istemci hizmete istek yaptığında ve konsol penceresine yanıtlardan bilgileri yazar.  
   

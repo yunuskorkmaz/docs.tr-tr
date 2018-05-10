@@ -2,11 +2,11 @@
 title: Destek Belirteçleri
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="supporting-tokens"></a>Destek Belirteçleri
 Destek belirteçleri örnek WS güvenliği kullanan bir ileti için ek belirteçler ekleneceği gösterilmektedir. Örnek, bir kullanıcı adı güvenlik belirteci yanı sıra bir X.509 ikili güvenlik belirteci ekler. Belirtecin bir WS-güvenlik ileti üstbilgisinde istemciden hizmete geçirilir ve iletisinin bir parçası alıcısı X.509 sertifikası elinde kanıtlamak için X.509 güvenlik belirteci ile ilişkili özel anahtara sahip imzalanır. Kimlik doğrulaması veya gönderen yetkilendirmek için bir ileti ile ilişkili birden fazla talep olan bir gereksinimi olduğunda bu durumda yararlıdır. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```  
   
 ## <a name="running-the-sample"></a>Örnek çalışıyor  
- Örneği çalıştırdığınızda, istemci önce kullanıcı adı ve parola için kullanıcı adı belirteci girmenizi ister. Çünkü, sistem hesabı için doğru değerleri sağladığınızdan emin olun [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sistem tarafından sağlanan kimlik içine kullanıcı adı belirteç sağlanan değerler hizmette eşler. Bundan sonra istemci hizmetinden gelen yanıt görüntüler. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, istemci önce kullanıcı adı ve parola için kullanıcı adı belirteci girmenizi ister. WCF hizmetine sistem tarafından sağlanan kimlik içine kullanıcı adı belirteç sağlanan değerler eşlendiğinden, sistem hesabı için doğru değerleri sağladığınızdan emin olun. Bundan sonra istemci hizmetinden gelen yanıt görüntüler. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
   
 ## <a name="setup-batch-file"></a>Toplu iş dosyası Kurulumu  
  Bu örnekle dahil Setup.bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren Internet Information Services (IIS) barındırılan uygulamayı çalıştırmayı ilgili sertifikalarla sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası makinelerde çalışması için ya da barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.  
@@ -464,6 +464,6 @@ iisreset
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
   
 > [!NOTE]
->  Bu komut dosyası, bu örnek makine genelinde çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Çalıştırırsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] makine genelinde sertifikaları kullanma örnekleri Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Bu komut dosyası, bu örnek makine genelinde çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Makine genelinde sertifikaları kullanan WCF örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

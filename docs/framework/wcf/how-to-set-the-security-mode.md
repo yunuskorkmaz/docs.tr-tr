@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c08fba0e4a74eafab00e75977a9f756c1b1cfa
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Nasıl yapılır: Güvenlik Modunu Ayarlama
 Windows Communication Foundation (WCF) güvenlik üzerinde en önceden tanımlanmış bağlamaları bulunan üç genel güvenlik modu vardır: Aktarım, iletisi ve "ileti kimlik bilgileri ile taşıma." İki ek modları için iki bağlamaları belirli: "yalnızca Aktarım-credential" modu bulunan <xref:System.ServiceModel.BasicHttpBinding>ve bulunan "İki" modu <xref:System.ServiceModel.NetMsmqBinding>. Ancak, bu konuda üç genel güvenlik modlarını yoğunlaşır: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, ve <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Önceden tanımlanmış her bağlama tüm bu modlarını desteklediğini unutmayın. Bu konuda moduyla ayarlar <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> sınıfları ve modunu hem program aracılığıyla ve yapılandırma yoluyla nasıl ayarlanacağını gösterir.  
   
- Daha fazla bilgi için bkz: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] güvenlik, bkz: [güvenliğine genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md), [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md), ve [güvenli hale getirme hizmetler ve istemcileri](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Aktarım modu ve ileti hakkında daha fazla bilgi için bkz: [taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md) ve [ileti güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Daha fazla bilgi için bkz: WCF güvenliği, bkz: [güvenliğine genel bakış](../../../docs/framework/wcf/feature-details/security-overview.md), [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md), ve [güvenli hale getirme hizmetler ve istemcileri](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Aktarım modu ve ileti hakkında daha fazla bilgi için bkz: [taşıma güvenliği](../../../docs/framework/wcf/feature-details/transport-security.md) ve [ileti güvenliği](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Kod içinde kullanılan güvenlik modunu ayarlamak için  
   

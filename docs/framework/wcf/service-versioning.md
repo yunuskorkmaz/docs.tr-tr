@@ -2,11 +2,11 @@
 title: Hizmet Sürümü Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: efff9778f1cbe2ee5d97912ada0193c4e8ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra Hizmetleri (ve bunların kullanıma uç noktaları) çeşitli değişen işletme gereksinimlerine göre bilgi teknolojisi gereksinimleri gibi nedenlerle, değiştirilecek veya diğer gidermenin gerekebilir sorunları. Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır. Bu konu, Windows Communication Foundation (WCF) sürüm göz önünde bulundurun açıklanmaktadır.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
   
  Hizmet sözleşmeleri için Uyumluluk anlamına gelir yeni işlem hizmeti tarafından sunulan eklenebilir, ancak mevcut işlemleri kaldırılamıyor veya anlamsal olarak değiştirildi.  
   
- Veri sözleşmeleri için Uyumluluk tanımları eklenen yeni şema türü anlamına gelir ancak yolları bölme varolan şema türü tanımları değiştirilemez. Yeni değişiklikler veri üyeleri kaldırma veya kendi veri türü incompatibly değiştirme içerebilir. Bu özellik, istemcilerin bozmadan kendi sözleşmeleri sürümü değiştirmede bazı enlem hizmet sağlar. Sonraki iki bölümde bölünemez ve için yapılan önemli değişiklikler açıklayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] veri ve hizmet sözleşmeleri.  
+ Veri sözleşmeleri için Uyumluluk tanımları eklenen yeni şema türü anlamına gelir ancak yolları bölme varolan şema türü tanımları değiştirilemez. Yeni değişiklikler veri üyeleri kaldırma veya kendi veri türü incompatibly değiştirme içerebilir. Bu özellik, istemcilerin bozmadan kendi sözleşmeleri sürümü değiştirmede bazı enlem hizmet sağlar. Sonraki iki bölümde WCF verilerde yapılan ve sözleşmeleri hizmet bölünemez ve yeni değişiklikler açıklanmaktadır.  
   
 ## <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma  
  Bu bölüm veri sürüm oluşturma kullanırken ilgilenir <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.DataContractAttribute> sınıfları.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="lax-versioning"></a>Belirsiz sürüm oluşturma  
  Birçok diğer senaryolarda, hizmet geliştirici, yeni, isteğe bağlı bir üye veri sözleşmesi ekleme mevcut istemcilerin sonu olmayan varsayabilirsiniz. Bu, mevcut istemciler şema doğrulaması gerçekleştirmiyorsanız olup araştırmak Hizmet Geliştirici gerektirir ve bilinmeyen veri üyelerini yoksay. Bu senaryolarda, bölünemez şekilde yeni üye eklemek için veri sözleşmesi özelliklerden yararlanmak mümkündür. Sürüm oluşturma için veri sözleşmesi özellikleri zaten hizmet ilk sürüm için kullanıldıysa service geliştirici bu güvenle varsayabilirsiniz.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ASP.NET Web Hizmetleri ve birçok diğer Web hizmeti yığınları desteği *belirsiz sürüm*: başka bir deyişle, bunlar yeni bilinmeyen veri üyeleri için özel durumlar alınan verileri oluşturmayın.  
+ WCF, ASP.NET Web Hizmetleri ve diğer birçok Web hizmeti yığınları desteği *belirsiz sürüm*: başka bir deyişle, bunlar yeni bilinmeyen veri üyeleri için özel durumlar alınan verileri oluşturmayın.  
   
  Yeni bir üye ekleme mevcut istemcilerin kesintiye uğrar değil, yanlışlıkla düşünüyorsanız kolaydır. Tüm istemcilerin belirsiz sürüm işleyebilir, katı sürüm oluşturma yönergelerini kullanın ve veri önerilir değilseniz olarak değişmez sözleşme.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="message-contract-versioning"></a>İleti sözleşmesi sürümü oluşturma  
  İleti sözleşmesi sürümü oluşturma için yönergeler sürüm veri sözleşmelerine çok benzer. Katı sürüm gerekiyorsa, ileti gövdesi değiştirilmemesi ancak bunun yerine benzersiz bir tam adı ile yeni bir ileti sözleşmesi oluşturun. Belirsiz sürüm kullanabileceğiniz biliyorsanız, yeni ileti gövdesi bölümleri ekleyebilir ancak değil değiştirmek veya var olanları kaldırın. Bu kılavuz, hem tam uygular ve ileti sözleşmeleri Sarmalanan.  
   
- İleti üstbilgilerini, her zaman katı sürüm kullanımda olsa bile eklenebilir. MustUnderstand bayrağı sürüm etkileyebilir. Sürüm oluşturma genel olarak, model üstbilgilerinde için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] SOAP belirtimi içinde açıklandığı gibi.  
+ İleti üstbilgilerini, her zaman katı sürüm kullanımda olsa bile eklenebilir. MustUnderstand bayrağı sürüm etkileyebilir. Genel olarak, sürüm oluşturma için WCF üstbilgilerinde SOAP belirtimi içinde açıklandığı gibi modelidir.  
   
 ## <a name="service-contract-versioning"></a>Hizmet sözleşmesi sürümü oluşturma  
  Benzer şekilde veri sözleşmesi sürümü oluşturma, hizmet sözleşmesi sürümü oluşturma da ekleme, değiştirme ve kaldırma işlemlerini içerir.  
@@ -118,7 +118,7 @@ ms.lasthandoff: 05/04/2018
  Bir hizmet sözleşmesinde açıklanan hatalarının listesini, kapsamlı sayılmaz. Herhangi bir anda bir işlem, sözleşmede açıklanmayan hataları döndürebilir. Bu yüzden sözleşmede açıklanan hataları kümesini değiştirme yeni olarak kabul edilmez. Örneğin, yeni bir arıza sözleşme kullanmaya ekleme <xref:System.ServiceModel.FaultContractAttribute> veya varolan bir hataya sözleşmeden kaldırma.  
   
 ### <a name="service-contract-libraries"></a>Hizmet sözleşmesi kitaplıkları  
- Kuruluşlar, burada bir sözleşme merkezi bir depoya yayımlanır ve bu depoyu sözleşmelerinden hizmet Implementers uygulamak sözleşmeleri kitaplıklarının olabilir. Bu durumda, bir hizmet sözleşmesini depoya yayımladığınızda, kimin uyguladıktan Hizmetleri oluşturur üzerinde denetiminiz yoktur. Bu nedenle, etkili bir şekilde değişmez işleme yayımlandıktan sonra hizmet sözleşmesini değiştiremiyor. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] destekler varolan sözleşmeleri genişleten yeni bir sözleşme oluşturmak için kullanılan devralma sözleşme. Bu özelliği kullanmak için eski hizmet sözleşmesi arabirimden devralan yeni bir hizmet sözleşme arabirimi tanımlayın, sonra yeni arabirim yöntemleri ekleyin. Ardından, yeni sözleşme uygulamak ve yeni sözleşme kullanmak için "versionOld" uç nokta tanımı değiştirmek için eski sözleşme uygulayan hizmeti de değiştirin. "VersionOld" istemcilere uç nokta olarak sunan "versionOld" Sözleşme görünmeye devam edecek; "versionNew" istemcilere endpoint "versionNew" Sözleşme kullanıma sunmak için görüntülenir.  
+ Kuruluşlar, burada bir sözleşme merkezi bir depoya yayımlanır ve bu depoyu sözleşmelerinden hizmet Implementers uygulamak sözleşmeleri kitaplıklarının olabilir. Bu durumda, bir hizmet sözleşmesini depoya yayımladığınızda, kimin uyguladıktan Hizmetleri oluşturur üzerinde denetiminiz yoktur. Bu nedenle, etkili bir şekilde değişmez işleme yayımlandıktan sonra hizmet sözleşmesini değiştiremiyor. WCF varolan sözleşmeleri genişleten yeni bir sözleşme oluşturmak için kullanılan sözleşme devralma destekler. Bu özelliği kullanmak için eski hizmet sözleşmesi arabirimden devralan yeni bir hizmet sözleşme arabirimi tanımlayın, sonra yeni arabirim yöntemleri ekleyin. Ardından, yeni sözleşme uygulamak ve yeni sözleşme kullanmak için "versionOld" uç nokta tanımı değiştirmek için eski sözleşme uygulayan hizmeti de değiştirin. "VersionOld" istemcilere uç nokta olarak sunan "versionOld" Sözleşme görünmeye devam edecek; "versionNew" istemcilere endpoint "versionNew" Sözleşme kullanıma sunmak için görüntülenir.  
   
 ## <a name="address-and-binding-versioning"></a>Adres ve bağlama sürüm oluşturma  
  İstemcileri yeni uç nokta adresi dinamik olarak bulma veya bağlama yeteneğine sahip olmadığınız sürece uç noktası adresi ve bağlama değişiklikler değişiklikleri ayırırsınız. Bu özelliği uygulamak için bir kayıt defterine Evrensel bulma açıklama ve tümleştirme (UDDI) ve UDDI çağırma olduğu bir istemci bir uç nokta ile iletişim kurmaya çalışır ve, başarısızlık durumunda, iyi bilinen UDDI sorgular düzeni kullanarak mekanizmadır Geçerli uç nokta meta veriler için kayıt defteri. İstemci ardından adresi ve bu meta verilerden bağlama bitiş noktası ile iletişim kurmak için kullanır. Bu iletişim başarılı olursa, istemci gelecekte kullanım için adres ve bağlama bilgilerini önbelleğe alır.  

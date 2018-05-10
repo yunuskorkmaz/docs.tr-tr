@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: dbee1fecda66dc377513bdf8cae4645f009b6384
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>İstemci Çalışma Zamanı Davranışını Belirtme
 Windows Communication Foundation (WCF) hizmetlerini gibi Windows Communication Foundation (WCF) istemcileri, istemci uygulaması uyacak şekilde çalışma zamanı davranışını değiştirmek için yapılandırılabilir. Üç öznitelikler, istemci çalışma zamanı davranışını belirtmek için kullanılabilir. Çift yönlü istemci geri araması nesneleri kullanabileceğiniz <xref:System.ServiceModel.CallbackBehaviorAttribute> ve <xref:System.ServiceModel.Description.CallbackDebugBehavior> kendi çalışma zamanı davranışını değiştirmek için öznitelikler. Başka bir öznitelik <xref:System.ServiceModel.Description.ClientViaBehavior>, hemen ağ hedef mantıksal hedef ayırmak için kullanılır. Ayrıca, çift yönlü istemci geri araması türlerine bazı hizmet tarafı davranışları kullanabilirsiniz. Daha fazla bilgi için bkz: [hizmet çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF) hizmetlerini gibi Windows Communication F
   
 -   Denetimli senaryolar hata ayıklama yaptığınız yalnızca.  
   
- Aşağıdaki kod örneğinde bir istemci bildirir yapılandırma dosyası gösterir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] yönetilen özel durum bilgilerini bir istemciden geri çağırma nesnesi SOAP iletilerinde dönün.  
+ Aşağıdaki kod örneği, bir istemci yönetilen özel durum bilgileri bir istemciden geri çağırma nesnesi SOAP iletilerini döndürmek için WCF bildirir yapılandırma dosyası gösterir.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  

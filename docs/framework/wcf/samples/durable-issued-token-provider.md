@@ -2,21 +2,21 @@
 title: Dayanıklı Verilen Belirteç Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Dayanıklı Verilen Belirteç Sağlayıcısı
 Bu örnek, verilen belirteç sağlayıcısı özel bir istemci uygulaması gösterilmiştir.  
   
 ## <a name="discussion"></a>Tartışma  
- Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ile birlikte bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
+ Bir belirteç sağlayıcısı Windows Communication Foundation (WCF) güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece güvenlik altyapısı ileti güvenliğini sağlayabilirsiniz sorunları kimlik bilgileri gerekli. WCF ile birlikte gelen bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcılarını aşağıdaki durumlarda yararlı olur:  
   
 -   Yerleşik belirteç sağlayıcısı ile çalışamaz bir kimlik bilgisi deposu varsa.  
   
--   Kullanıcı ayrıntılarını geldiğinde sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci kimlik bilgilerini kullanır.  
+-   Kullanıcı için WCF istemci kimlik bilgileri kullandığında ayrıntılarını sağladığında kimlik bilgilerini noktadan dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.  
   
 -   Özel belirteç oluşturuluyorsa.  
   
@@ -26,7 +26,7 @@ Bu örnek, verilen belirteç sağlayıcısı özel bir istemci uygulaması göst
   
 -   Nasıl bir istemci bir özel belirteç sağlayıcısı ile yapılandırılabilir.  
   
--   Verilen belirteçler önbelleğe ve sağlanan nasıl [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] istemci.  
+-   Verilen belirteçler önbelleğe ve WCF istemcisi sağlanan nasıl.  
   
 -   Sunucu sunucunun X.509 sertifikası kullanarak istemci tarafından kimlik doğrulamasının nasıl.  
   
@@ -109,7 +109,7 @@ Bu örnek, verilen belirteç sağlayıcısı özel bir istemci uygulaması göst
  Güvenlik belirteci hizmeti standart wsHttpBinding kullanarak tek bir uç noktasını kullanıma sunar. Güvenlik belirteci hizmeti belirteçleri istemcilerden isteğine yanıt verir ve bir Windows hesabı kullanarak istemci kimlik doğrulaması sağlanan bir talep verilen belirteç olarak istemcinin kullanıcı adını içeren bir belirteç verir. Güvenlik belirteci hizmeti işaretlerini belirtecin CN ile ilişkili özel anahtarı kullanarak belirteci oluşturma bir parçası olarak STS sertifikası =. Ayrıca, bir simetrik anahtar oluşturur ve CN ile ilişkilendirilmiş ortak anahtar kullanarak şifreler localhost sertifika =. Belirteç istemciye göndermeden, güvenlik belirteci hizmeti simetrik anahtar da döndürür. İstemci hesaplayıcı hizmete verilen belirteç gösterir ve onu simetrik anahtar bu anahtarla ileti imzalayarak bilir kanıtlar.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Özel istemci kimlik bilgileri ve belirteç sağlayıcı  
- Aşağıdaki adımları verilen belirteçler önbellekleri özel bir belirteç sağlayıcısı geliştirmek ve ile tümleştirmek nasıl Göster [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: güvenlik.  
+ Aşağıdaki adımları verilen belirteçler önbellekleri özel bir belirteç sağlayıcısı geliştirmek ve WCF ile tümleştirmek nasıl göster: güvenlik.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Özel bir belirteç sağlayıcısı geliştirmek için  
   

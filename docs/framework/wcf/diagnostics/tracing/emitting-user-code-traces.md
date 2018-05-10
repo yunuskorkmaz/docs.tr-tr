@@ -2,11 +2,11 @@
 title: Kullanıcı Kodu İzleri Yayma
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 Windows Communication Foundation (WCF) tarafından oluşturulan izleme verileri toplamak için yapılandırma izlemeyi etkinleştirmeye ek olarak, ayrıca program aracılığıyla içinde kullanıcı kodu izleri yayma. Bu şekilde, tanılama amaç için daha sonra tekrar kullanmanıza izleme verileri önceden oluşturabilirsiniz. Bu konuda, bunu yapmak nasıl ele alınmıştır.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Ayarlarsanız `propagateActivity` özniteliğini `true` için `System.ServiceModel` hem istemci hem de hizmet yapılandırmasında izleme kaynak dosyaları, istemci tanımlanmış olanla aynı etkinliğinde ekleme isteği gerçekleştiği için işleme hizmetidir. Hizmet kendi etkinlikleri ve aktarımları tanımlıyorsa, hizmet izlemeleri istemci yayıldığı etkinliğinde görünmez. Bunun yerine, aktarım izlemeleri Kimliğine istemci tarafından yayılır etkinliğine tarafından bağıntılı bir etkinlikte görünür.  
   
 > [!NOTE]
->  Varsa `propagateActivity` özniteliği `true` hem istemci hem de hizmet üzerinde hizmet işlemi kapsamında ortam etkinlik belirlediği [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+>  Varsa `propagateActivity` özniteliği `true` hem istemci hem de hizmet üzerinde hizmet işlemi kapsamında ortam etkinlik WCF tarafından ayarlanır.  
   
- Bir etkinlik tarafından kapsamdaki ayarlanıp ayarlanmadığını denetlemek için aşağıdaki kodu kullanabilirsiniz [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Bir etkinlik kapsamda WCF tarafından ayarlanıp ayarlanmadığını denetlemek için aşağıdaki kodu kullanabilirsiniz.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Oluşturma zamanı (sol paneli) tarafından etkinliklerin listesini ve bunların
  ![Kullanıcı yaymak üzere izleme Görüntüleyicisi'ni kullanarak&#45;kod izlemeleri](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Hata bağıntı grafik görünümü  
   
- Önceki izlemelerini almak için ayarlarız `ActivityTracing` kullanıcı izleme kaynakları için ve `propagateActivity=true` için `System.ServiceModel` izleme kaynağı. Biz ayarlanmamış `ActivityTracing` için `System.ServiceModel` kullanıcı kodunu aktivite yayma kullanıcı kodu etkinleştirmek için izleme kaynağı. (ServiceModel Etkinlik izleme etkin olduğunda, istemcinin tanımlanan etkinlik kimliği bu süreç boyunca tüm hizmet kullanıcı kodu dağıtılmaz; Aktarımları, ancak, istemci ve hizmet kullanıcı kodu etkinlikleri Ara ilişkilendirmek [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] etkinlikler.)  
+ Önceki izlemelerini almak için ayarlarız `ActivityTracing` kullanıcı izleme kaynakları için ve `propagateActivity=true` için `System.ServiceModel` izleme kaynağı. Biz ayarlanmamış `ActivityTracing` için `System.ServiceModel` kullanıcı kodunu aktivite yayma kullanıcı kodu etkinleştirmek için izleme kaynağı. (ServiceModel Etkinlik izleme etkin olduğunda, istemcinin tanımlanan etkinlik kimliği bu süreç boyunca tüm hizmet kullanıcı kodu dağıtılmaz; Aktarımları, ancak, istemci ve hizmet kullanıcı kodu etkinlikleri Ara WCF etkinliklerini ilişkilendirmek.)  
   
  Etkinlikleri tanımlama ve etkinlik kimliği yayma bize uç noktalar arasında doğrudan hata bağıntı gerçekleştirmesini sağlar. Bu şekilde, biz hata kök nedenini daha hızlı bir şekilde bulabilir.  
   

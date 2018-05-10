@@ -2,11 +2,11 @@
 title: Bir İleti Değişim Deseni seçin
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
 Özel bir taşıma yazma ilk adımı, karar vermektir *ileti exchange desenleri* (veya MEPs) geliştirme kanalı gereklidir. Bu konuda seçenekleri açıklar ve çeşitli gereksinimleri açıklanır. Bu ilk bölümünde açıklanan kanal geliştirme görev listesindeki bir görevdir [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 >  UDP kendiliğinden yangın olduğundan ve protokolü unuttunuz UDP taşıma için desteklenen tek MEP veri birimi, ' dir.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Oturumlar ve Sessionful kanalları  
- Ağ dünyada bağlantı yönelimli protokolleri (örneğin, TCP) ve bağlantı daha az protokolleri (örneğin, UDP) vardır. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bir bağlantı gibi mantıksal soyutlama anlamına gelir terim oturumu kullanır. Süre sonuyla WCF protokolleri bağlantı odaklı ağ protokolleri benzer ve oturumsuz WCF protokolleri bağlantı daha az ağ protokolleri benzer.  
+ Ağ dünyada bağlantı yönelimli protokolleri (örneğin, TCP) ve bağlantı daha az protokolleri (örneğin, UDP) vardır. WCF bağlantısı benzeri mantıksal soyutlama anlamına gelir terim oturumu kullanır. Süre sonuyla WCF protokolleri bağlantı odaklı ağ protokolleri benzer ve oturumsuz WCF protokolleri bağlantı daha az ağ protokolleri benzer.  
   
  Kanal nesne modelinde, her mantıksal oturum süre sonuyla kanal örneği bildirimleri. Bu nedenle istemci tarafından oluşturulan ve hizmette kabul her yeni oturumun her tarafında yeni bir süre sonuyla kanal karşılık gelir. Aşağıdaki diyagramda gösterildiği, oturumsuz kanalları yapısını üst ve alt, süre sonuyla kanalları yapısı.  
   

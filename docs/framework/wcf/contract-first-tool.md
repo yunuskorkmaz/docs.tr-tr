@@ -2,11 +2,11 @@
 title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri genellikle varolan Hizmetleri'nden oluşturulması gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşmesi sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut Hizmetleri'nden. Önce anlaşma aracı kullanmak için XML şeması tanım dosyası (XSD) yerel olarak yüklenmelidir; Aracı, HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.  
@@ -58,7 +58,7 @@ Hizmet sözleşmeleri genellikle varolan Hizmetleri'nden oluşturulması gerekir
  Yukarıdaki hizmet sözleşmesini projeye eklemek için projesine sağ tıklatın ve **yeni Ekle...** . Şema tanımı Şablonları iletişim WCF bölmesinden seçin ve SampleContract.xsd yeni dosya adı. Yukarıdaki kodu kopyalayıp yeni dosya kodu görünüme yapıştırın.  
   
 ## <a name="configuring-contract-first-options"></a>Önce anlaşma seçeneklerini yapılandırma  
- Önce anlaşma seçenekleri özellikler menüsünde yapılandırılabilir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projesi. Önce anlaşma geliştirme etkinleştirmek için seçin **etkinleştirmek XSD türü tanım dili olarak** onay kutusunu proje penceresinin WCF sayfasındaki.  
+ Önce anlaşma seçenekleri WCF proje özelliklerini menüsünde yapılandırılabilir. Önce anlaşma geliştirme etkinleştirmek için seçin **etkinleştirmek XSD türü tanım dili olarak** onay kutusunu proje penceresinin WCF sayfasındaki.  
   
  ![WCF proje seçenekleri gösteren sözleşme&#45;ilk](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

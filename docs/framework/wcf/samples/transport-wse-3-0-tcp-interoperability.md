@@ -2,14 +2,14 @@
 title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
-WSE 3.0 TCP birlikte çalışabilirlik taşıma örneği, TCP çift yönlü oturum özel bir Windows Communication Foundation (WCF) taşıma olarak uygulamak gösterilmiştir. Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar, bu özel nasıl oluşturulacağını gösterir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] taşıma:  
+WSE 3.0 TCP birlikte çalışabilirlik taşıma örneği, TCP çift yönlü oturum özel bir Windows Communication Foundation (WCF) taşıma olarak uygulamak gösterilmiştir. Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma nasıl oluşturulacağını gösterir:  
   
 1.  Bir TCP yuvası ile başlayarak, istemci ve sunucu uygulamaları oluşturma <xref:System.ServiceModel.Channels.IDuplexSessionChannel> , DIME çerçeveleme ileti sınırlarını tanımlamak için kullanın.  
   
@@ -128,7 +128,7 @@ WSE 3.0 TCP birlikte çalışabilirlik taşıma örneği, TCP çift yönlü otur
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- İki sınamaları oluşur: WSE 3.0 WSDL oluşturulan kod kullanarak bir türü belirlenmiş istemci ayarlayan bir sınama. İkinci test kullanan [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hem istemci hem de sunucunun kanal API'lerini doğrudan üstünde iletiler göndererek olarak.  
+ İki sınamaları oluşur: WSE 3.0 WSDL oluşturulan kod kullanarak bir türü belirlenmiş istemci ayarlayan bir sınama. İkinci test API'leri kanal en üstünde iletiler göndererek hem istemci hem de sunucu olarak WCF kullanır.  
   
  Örnek çalıştırırken aşağıdaki çıkış beklenir.  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  StockService projesini başlangıç projesi olarak ayarlayın.  
   
-    3.  StockService.cs StockService proje ve yorum out [ilke] özniteliğini açmak `StockService` sınıfı. Bu güvenlik örnekten devre dışı bırakır. Sırada [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WSE 3.0 güvenli uç noktaları çalışabilirler, güvenlik üzerinde özel TCP taşıma odaklanmış Bu örnek tutmak için devre dışıdır.  
+    3.  StockService.cs StockService proje ve yorum out [ilke] özniteliğini açmak `StockService` sınıfı. Bu güvenlik örnekten devre dışı bırakır. WCF WSE 3.0 güvenli uç ile çalışabilirler olsa da, güvenlik üzerinde özel TCP taşıma odaklanmış Bu örnek tutmak için devre dışı bırakılır.  
   
     4.  Başlatmak için F5 tuşuna basın `TcpSyncStockService`. Yeni bir konsol penceresi hizmetini başlatır.  
   

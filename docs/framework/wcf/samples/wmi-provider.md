@@ -2,18 +2,18 @@
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
-Bu örnek içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) Hizmetleri'nden veri toplamak üzere gösterilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  
+Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) Hizmetleri'nden veri toplamak üzere gösterilmiştir. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  
   
  WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz: [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WMI sağlayıcısı, izleme çalışma zamanında bir WBEM uyumlu arabirimi aracılığıyla kullanıma sunan bir bileşen uygular. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adresler, bağlamalar, davranışları ve dinleyicileri gibi hizmetleri özniteliklerini kullanır.  
+ WCF WMI sağlayıcısı, izleme çalışma zamanında bir WBEM uyumlu arabirimi aracılığıyla kullanıma sunan bir bileşen uygular. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. WCF hizmetleri adresler, bağlamalar, davranışları ve dinleyicileri gibi özniteliklerini kullanır.  
   
  Yerleşik WMI sağlayıcısı, uygulama yapılandırma dosyasında etkinleştirilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma:  
   
@@ -35,7 +35,7 @@ Bu örnek içinde yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını
   
  Bu örnek iki Java betiklerini kullanır: biri özellikleri ve kullanıcı tanımlı WMI verilerini görüntülemek için ikinci bazılarını yanı sıra bilgisayar üzerinde çalışan hizmetleri numaralandırılacak. Betik WMI sağlayıcısına bir bağlantı açar, verileri ayrıştırır ve toplanan verileri görüntüler.  
   
- Çalışan bir örneğini oluşturmak için örnek Başlat bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet. Hizmet çalışırken, komut istemine aşağıdaki komutu kullanarak her Java betiği çalıştırın:  
+ Bir WCF hizmeti çalışan bir örneğini oluşturmak için örnek başlatın. Hizmet çalışırken, komut istemine aşağıdaki komutu kullanarak her Java betiği çalıştırın:  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  Çıkış bilgisayar üzerinde çalışan tek bir hizmet olduğunu gösterir. Hizmet uygulayan bir uç noktasını kullanıma sunar `ICalculator` sözleşme. Bitiş noktası tarafından uygulanan davranış ayarları ve bağlama Mesajlaşma yığınının ayrı ayrı öğeler toplamı olarak listelenir.  
   
- WMI, Yönetim Araçları'nı gösterme için sınırlı değildir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] altyapı. Uygulamanın kendi etki alanına özgü veri öğeleri aynı mekanizma getirebilir. WMI, denetleme ve bir Web hizmeti denetimi için birleşik bir mekanizmadır.  
+ WMI WCF altyapısının Yönetim Araçları'nı gösterme için sınırlı değildir. Uygulamanın kendi etki alanına özgü veri öğeleri aynı mekanizma getirebilir. WMI, denetleme ve bir Web hizmeti denetimi için birleşik bir mekanizmadır.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Yüklediyseniz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET yükledikten sonra "%WINDIR%\ çalıştırmanız gerekebilir Microsoft.Net\Framework\v3.0\Windows iletişim Foundation\servicemodelreg.exe "- r - WMI nesnelerini yayınlamak için ASPNET hesabı izin vermek için x.  
+    >  WCF ASP.NET yükledikten sonra yüklerseniz, "%WINDIR%\ çalıştırmanız gerekebilir Microsoft.Net\Framework\v3.0\Windows iletişim Foundation\servicemodelreg.exe "- r - WMI nesnelerini yayınlamak için ASPNET hesabı izin vermek için x.  
   
 5.  WMI aracılığıyla komutları kullanarak ortaya örnek verileri görüntüleyin: `cscript EnumerateServices.js` veya `cscript EnumerateCustomObjects.js`.  
   

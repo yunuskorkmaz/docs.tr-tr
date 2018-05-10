@@ -2,11 +2,11 @@
 title: ASP.NET Önbelleğe Alma Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Önbelleğe Alma Tümleştirmesi
 Bu örnek, ASP.NET çıktı önbelleğine WCF WEB HTTP programlama modeli kullanan gösterilmiştir. Lütfen bakın [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) kendini barındıran sürümü derinliği hizmet uygulamasında ele bu senaryo için örnek. Bu konu ASP.NET çıktı önbelleği tümleştirme özelliğini odaklanır.  
@@ -28,7 +28,7 @@ Bu örnek, ASP.NET çıktı önbelleğine WCF WEB HTTP programlama modeli kullan
   
  Örnek hizmet projesinin adını da dosyasındaki hem `GetCustomer` ve `GetCustomers` işlemleri ile işaretlenmiş <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, önbellek profili adı "CacheFor60Seconds" sağlar. Hizmet projesinin Web.config dosyasında önbellek profili "CacheFor60Seconds" altında sağlanır <`caching`> öğesi <`system.web`>. Bu önbellek profili değeri için `duration` özniteliktir "60", bu profil ile ilişkili ASP.NET çıktı önbelleği 60 saniye boyunca önbelleğe alınan yanıtları şekilde. Ayrıca, bu önbellek profili için `varmByParam` özniteliği ayarlanmış "için farklı değerler bunu istekleriyle biçim" `format` sorgu dizesi parametresi ayrı olarak önbelleğe yanıtlarını sahip. Son olarak, önbellek profilinin `varyByHeader` özniteliği, "Kabul et" ayarlanmışsa, farklı Accept üstbilgi değerlerini istekleriyle yanıtlarını ayrı olarak önbelleğe alacak şekilde.  
   
- İstemci projesindeki program.cs gösteren böyle bir istemci nasıl olabilir kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bu bir WCF Hizmeti erişmenin tek yolu olduğuna dikkat edin. Diğer .NET Framework sınıfları gibi kullanarak hizmete erişmek mümkündür [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanal fabrikası ve <xref:System.Net.WebClient>. SDK'sındaki diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) bu sınıfların ile iletişim kurmak için nasıl kullanılacağını gösteren bir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hizmet.  
+ İstemci projesindeki program.cs gösteren böyle bir istemci nasıl olabilir kullanılarak yazılan <xref:System.Net.HttpWebRequest>. Bu bir WCF Hizmeti erişmenin tek yolu olduğuna dikkat edin. WCF kanal fabrikası gibi diğer .NET Framework sınıfları kullanarak hizmete erişmek mümkündür ve <xref:System.Net.WebClient>. SDK'sındaki diğer örnekleri (gibi [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) örnek ve [Otomatik Biçim Seçimi](../../../../docs/framework/wcf/samples/automatic-format-selection.md) örnek) bu sınıfların bir WCF Hizmeti ile iletişim için nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
  Örnek üç projelerin oluşur:  

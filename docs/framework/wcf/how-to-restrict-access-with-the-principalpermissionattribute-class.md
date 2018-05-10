@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
 Bir Windows etki alanına bilgisayar üzerindeki kaynaklara erişimi denetleme temel güvenlik bir görevdir. Örneğin, yalnızca belirli kullanıcılar bordro bilgileri gibi hassas verileri görüntüleyebilir olmalıdır. Bu konuda, yoğun tarafından bir yöntemi kullanıcının önceden tanımlanmış bir gruba ait erişimini kısıtlamak açıklanmaktadır. Çalışma örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -76,7 +76,7 @@ Bir Windows etki alanına bilgisayar üzerindeki kaynaklara erişimi denetleme t
     </behaviors>  
     ```  
   
-     Bu değeri ayarlamak `UseAspNetRoles` belirten `Name` özelliği `PrincipalPermissionAttribute` dize karşılaştırmasının gerçekleştirmek için kullanılır. Bir sertifika kullanıldığında bir istemci kimlik bilgileri olarak varsayılan olarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sertifika ortak adı ve parmak izi istemcinin birincil kimlik için benzersiz bir değer oluşturmak için noktalı virgül ile art arda ekler. İle `UseAspNetRoles` olarak ayarla `PrincipalPermissionMode` hizmette bu birincil kimlik değer ile karşılaştırılır `Name` kullanıcının erişim haklarını belirlemek için özellik değeri.  
+     Bu değeri ayarlamak `UseAspNetRoles` belirten `Name` özelliği `PrincipalPermissionAttribute` dize karşılaştırmasının gerçekleştirmek için kullanılır. Bir sertifika bir istemci kimlik bilgileri olarak kullanıldığında, varsayılan olarak WCF sertifika ortak adı ve parmak izi istemcinin birincil kimlik için benzersiz bir değer oluşturmak için noktalı virgül ile birleştirir. İle `UseAspNetRoles` olarak ayarla `PrincipalPermissionMode` hizmette bu birincil kimlik değer ile karşılaştırılır `Name` kullanıcının erişim haklarını belirlemek için özellik değeri.  
   
      Alternatif olarak, kendi kendini barındıran hizmet oluşturulurken kümesinin <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> aşağıdaki kodda gösterildiği gibi kodu özelliğinde:  
   

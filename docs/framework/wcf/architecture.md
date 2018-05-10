@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation Mimarisi
 Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisi ana katmanları gösterilmektedir.  
@@ -24,7 +24,7 @@ Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisi ana katman
  İlkeleri ve bağlamaları hizmeti ile iletişim kurmak için gerekli koşulları iznine.  Örneğin, bağlama (en az) kullanılan aktarım (örneğin, HTTP veya TCP) ve bir kodlama belirtmeniz gerekir. Güvenlik gereksinimleri ve hizmeti ile iletişim kurmak için karşılanması gereken diğer koşulları ilkelerdir.  
   
 ### <a name="service-runtime"></a>Hizmet çalışma zamanı  
- Hizmet çalışma zamanı katman yalnızca hizmet gerçek işleminde ortaya davranışları hizmet başka bir deyişle, çalışma zamanı davranışlarını içerir. İsteğe bağlı hizmeti için önceden belirlenmiş bir sınır büyürse işlenen kaç iletileri denetimleri kısıtlama, hangi değiştirilebilir. Bir iç hata hizmette, örneğin, hangi bilgilerin istemciye iletilen denetleyerek oluştuğunda neler bir hata davranışını belirtir. (Çok fazla bilgisi kötü niyetli bir kullanıcı bir saldırı takma içinde bir avantajı verebilirsiniz.) Meta veri davranışını yöneten olup olmadığını ve nasıl meta verileri dış dünya için kullanılabilir yapılır. Örnek davranışını belirten hizmetin kaç örneğini çalıştırma (örneğin, bir singleton tüm iletileri işlemek için yalnızca bir örneğini belirtir). Bir hata oluşursa işlem davranışı geri uygulaması yapılan işlemler alınmasını sağlar. Gönderme davranıştır bir ileti tarafından nasıl işleneceğini denetim [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] altyapı.  
+ Hizmet çalışma zamanı katman yalnızca hizmet gerçek işleminde ortaya davranışları hizmet başka bir deyişle, çalışma zamanı davranışlarını içerir. İsteğe bağlı hizmeti için önceden belirlenmiş bir sınır büyürse işlenen kaç iletileri denetimleri kısıtlama, hangi değiştirilebilir. Bir iç hata hizmette, örneğin, hangi bilgilerin istemciye iletilen denetleyerek oluştuğunda neler bir hata davranışını belirtir. (Çok fazla bilgisi kötü niyetli bir kullanıcı bir saldırı takma içinde bir avantajı verebilirsiniz.) Meta veri davranışını yöneten olup olmadığını ve nasıl meta verileri dış dünya için kullanılabilir yapılır. Örnek davranışını belirten hizmetin kaç örneğini çalıştırma (örneğin, bir singleton tüm iletileri işlemek için yalnızca bir örneğini belirtir). Bir hata oluşursa işlem davranışı geri uygulaması yapılan işlemler alınmasını sağlar. Gönderme, bir ileti WCF altyapısı tarafından nasıl işleneceğini denetim davranıştır.  
   
  Genişletilebilirlik çalışma zamanı işlemleri özelleştirmesini sağlar. Örneğin, ileti denetleme bir iletinin bölümünü incelemek için tesis ve parametre filtreleme ileti üstbilgilerinde hareket filtreleri dayanan gerçekleşmesi önceden belirlenmiş eylemleri etkinleştirir.  
   
@@ -42,7 +42,7 @@ Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisi ana katman
 ### <a name="hosting-and-activation"></a>Barındırma ve etkinleştirme  
  En son şekliyle, bir hizmet bir programdır. Diğer programları gibi bir hizmet bir yürütülebilir dosya içinde çalıştırmanız gerekir. Bu olarak bilinen bir *kendi kendini barındıran* hizmet.  
   
- Hizmetleri de olabilir *barındırılan*, veya IIS ya da Windows Etkinleştirme Hizmeti (WAS) gibi bir dış aracı tarafından yönetilen bir yürütülebilir dosyayı çalıştırın. WAS etkinleştirir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WAS çalıştıran bir bilgisayara dağıtıldığında otomatik olarak etkinleştirilecek uygulamalar. Hizmetleri, yürütülebilir dosyalar (.exe dosyaları) da bir el ile çalıştırılabilir. Bir hizmet ayrıca otomatik olarak bir Windows hizmeti olarak çalıştırılabilir. COM + bileşenleri de barındırılması olarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri.  
+ Hizmetleri de olabilir *barındırılan*, veya IIS ya da Windows Etkinleştirme Hizmeti (WAS) gibi bir dış aracı tarafından yönetilen bir yürütülebilir dosyayı çalıştırın. Çalıştıran bir bilgisayara dağıtıldığında otomatik olarak etkinleştirilecek etkinleştirir WCF uygulamaları SAHİPTİ. Hizmetleri, yürütülebilir dosyalar (.exe dosyaları) da bir el ile çalıştırılabilir. Bir hizmet ayrıca otomatik olarak bir Windows hizmeti olarak çalıştırılabilir. COM + bileşenleri de WCF hizmetleri barındırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)  

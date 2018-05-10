@@ -2,44 +2,44 @@
 title: WCF Hizmet Konağı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1e258015adc34edd4a109f3bc5a32b4bf6f0296
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
-Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual Studio hata ayıklayıcısı (F5) otomatik olarak ana bilgisayar ve uygulamış olan bir hizmeti test başlatma olanak sağlar. Hizmetini kullanarak sınayabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi (WcfTestClient.exe) ya da kendi istemci bulmak ve olası hataları düzeltmek için.  
+Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual Studio hata ayıklayıcısı (F5) otomatik olarak ana bilgisayar ve uygulamış olan bir hizmeti test başlatma olanak sağlar. Ardından hizmetini bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet ana bilgisayarı numaralandırır Hizmetleri'nde bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti projesi, projenin yapılandırmayı yükler ve bulduğu her hizmet için bir konak başlatır. Aracı, Visual Studio ile tümleştirilmiş [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet şablonu ve projenizin hatalarını ayıklama başladığında çağrılır.  
+ WCF hizmet konağı bir WCF Hizmeti projesini Hizmetleri'nde numaralandırır, projenin yapılandırmayı yükler ve bulduğu her hizmet için bir konak başlatır. Araç Visual Studio'ya WCF Hizmeti şablonu aracılığıyla tümleşiktir ve projenizin hatalarını ayıklama başladığında çağrılır.  
   
- Kullanarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet konağı barındırabilir bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet (içinde bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplığı projesi) ek kod yazma veya belirli bir ana bilgisayara geliştirme sırasında gerçekleştirmeden olmadan.  
+ WCF hizmet ana bilgisayarı kullanarak ek kod yazma veya belirli bir ana bilgisayara geliştirme sırasında gerçekleştirmeden olmadan bir WCF Hizmeti (bir WCF Hizmeti kitaplığı projesi) barındırabilir.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet ana bilgisayarı, kısmi güven desteklemez. Kullanmak istiyorsanız bir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kısmi güven, hizmeti kullanmayın [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmetinizi oluşturmak için Visual Studio'da hizmet kitaplığı proje şablonu. Bunun yerine, yeni Web sitesi seçerek Visual Studio'da oluşturma [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , bir Web hizmeti barındırabilir Hizmet Web sitesi şablonu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kısmi güven desteklenir.  
+>  WCF hizmet ana bilgisayarı, kısmi güven desteklemez. Kısmi güven bir WCF hizmetini kullanmak istiyorsanız, WCF Hizmeti kitaplığı proje şablonu Visual Studio'da hizmet oluşturmak için kullanmayın. Bunun yerine, WCF kısmi güven desteklenen bir Web hizmeti barındırabilir WCF Hizmeti Web sitesi şablonu seçerek Visual Studio'da yeni Web sitesi oluşturun.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF hizmet ana bilgisayar tarafından barındırılan proje türleri  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet ana bilgisayarı, aşağıdaki barındırabilir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplığı proje türleri: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet kitaplığı, sıralı iş akışı hizmeti kitaplığı, Durum makinesi iş akışı hizmeti kitaplığı ve dağıtım hizmeti kitaplığı. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet ana bilgisayarı ayrıca bir hizmet kitaplığını kullanarak proje eklenebilir bu hizmetlerin konak **Öğe Ekle** işlevselliği. Bu içerir [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmet, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmet.  
+ WCF hizmet ana bilgisayarı, aşağıdaki WCF Hizmeti kitaplığı proje türleri barındırabilir: WCF Hizmeti kitaplığı, sıralı iş akışı hizmeti kitaplığı, Durum makinesi iş akışı hizmeti kitaplığı ve dağıtım hizmeti kitaplığı. WCF hizmet ana bilgisayarı ayrıca bir hizmet kitaplığını kullanarak proje eklenebilir bu hizmetlerin konak **Öğe Ekle** işlevselliği. Bu, WCF hizmeti, WF Durum makinesi hizmeti, WF sıralı hizmetini, XAML WF Durum makinesi hizmeti ve XAML WF sıralı hizmetini kapsar.  
   
  Size, ancak, aracı bir ana bilgisayar yapılandırma yardımcı olacak değil, unutmamalısınız. Bu görev için App.config dosyasını el ile düzenlemeniz gerekir. Araç ayrıca kullanıcı tanımlı yapılandırma dosyalarını doğrulamaz.  
   
 > [!CAUTION]
->  Kullanılamaz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet konağı barındırmak için hizmetleri bir üretim ortamında, bu amaçla mühendislik değil olarak.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmet ana bilgisayarı, güvenilirlik, güvenlik ve yönetilebilirlik gereksinimleri böyle bir ortamın desteklemez. Bunun yerine, üstün güvenilirliğe ve İzleme özelliklerini sağlar ve barındırma hizmetleri için tercih edilen çözüm beri IIS kullanın. Geliştirme hizmetlerinizin tamamlandıktan sonra hizmetleri geçirmelisiniz [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] IIS hizmeti ana bilgisayarı.  
+>  Bu amaçla mühendislik değil olarak WCF hizmet konağı hizmetlerini barındırmak için bir üretim ortamında kullanmamalısınız.  WCF hizmet ana bilgisayarı, güvenilirlik, güvenlik ve yönetilebilirlik gereksinimleri böyle bir ortamın desteklemez. Bunun yerine, üstün güvenilirliğe ve İzleme özelliklerini sağlar ve barındırma hizmetleri için tercih edilen çözüm beri IIS kullanın. Geliştirme, hizmetlerin tamamlandıktan sonra IIS WCF hizmet ana bilgisayardan Hizmetleri geçirmeniz gerekir.  
   
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>WCF hizmet konağı Visual Studio içinde kullanma senaryoları  
- Aşağıdaki tabloda, tüm parametreleri listeler **komut satırı bağımsız değişkenleri** projenize sağ tıklayarak bulunabilir iletişim kutusu, **Çözüm Gezgini** seçerekVisualStudio**Özellikleri**, ardından seçerek **hata ayıklama** sekmesi ve tıklayarak **başlangıç projesi**. Bu parametreler yapılandırmada yararlı [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı.  
+ Aşağıdaki tabloda, tüm parametreleri listeler **komut satırı bağımsız değişkenleri** projenize sağ tıklayarak bulunabilir iletişim kutusu, **Çözüm Gezgini** seçerekVisualStudio**Özellikleri**, ardından seçerek **hata ayıklama** sekmesi ve tıklayarak **başlangıç projesi**. Bu parametreler, WCF hizmet ana bilgisayarı yapılandırmada faydalıdır.  
   
 |Parametre|Açıklama|  
 |---------------|-------------|  
-|`/client`|Barındırılan hizmetlere sonra çalışacak bir yürütülebilir dosya yolunu belirtir. isteğe bağlı bir parametre. Bu başlatır [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test barındırma aşağıdaki istemci.|  
+|`/client`|Barındırılan hizmetlere sonra çalışacak bir yürütülebilir dosya yolunu belirtir. isteğe bağlı bir parametre. Bu WCF Test İstemcisi başlatır aşağıdaki barındırma.|  
 |`/clientArg`|Özel istemci uygulamaya geçirilen bağımsız değişken olarak bir dize belirtin.|  
 |`/?`|Yardım metni görüntüler.|  
   
 #### <a name="using-wcf-test-client"></a>WCF Test İstemcisi kullanma  
- Yeni bir oluşturduktan sonra [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet projesi ve hata ayıklayıcı başlatmak için F5 tuşuna basarak [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı başlatır barındırma projenizde bulduğu tüm hizmetleri. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test istemcisi otomatik olarak açar ve yapılandırma dosyasında tanımlanmış hizmet uç noktaları listesini görüntüler. Ana penceresinden parametreleri test edin ve hizmetinizi çağırma.  
+ Yeni bir WCF Hizmeti projesi oluşturun ve hata ayıklayıcısı başlatmak için F5 tuşuna basarak sonra barındırma projenizde bulduğu tüm hizmetleri WCF hizmet ana bilgisayarı başlatır. WCF Test istemcisi otomatik olarak açar ve yapılandırma dosyasında tanımlanmış hizmet uç noktaları listesini görüntüler. Ana penceresinden parametreleri test edin ve hizmetinizi çağırma.  
   
- Emin olmak için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test İstemcisi kullanıldığında, projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hataayıklama**sekmesi. Tıklatın **başlangıç projesi** ve aşağıdaki olarak göründüğünden emin olun **komut satırı bağımsız değişkenleri** iletişim kutusu.  
+ WCF Test İstemcisi kullanıldığından emin olmak için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesi. Tıklatın **başlangıç projesi** ve aşağıdaki olarak göründüğünden emin olun **komut satırı bağımsız değişkenleri** iletişim kutusu.  
   
  `/client:WcfTestClient.exe`  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual 
   
  `/client:"path/CustomClient.exe"`  
   
- Hizmeti yeniden başlatmak için F5 tuşuna bastığınızda [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı hata ayıklayıcı başlattığında, özel istemci otomatik olarak başlar.  
+ Hizmeti yeniden başlatmak için F5 tuşuna bastığınızda, hata ayıklayıcı başlattığında WCF hizmet ana bilgisayarı özel istemci otomatik olarak başlar.  
   
  Aynı zamanda `/clientArg:` parametresini kullanarak aşağıdaki örnekte gösterildiği gibi özel istemci uygulamaya geçirilen bağımsız değişken olarak bir dize belirtin.  
   
@@ -59,19 +59,19 @@ Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual 
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>Hiçbir istemci belirtme  
- Hiçbir istemci sonra kullanılacak belirtmek için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet barındırma, projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip  **Hata ayıklama** sekmesi. Tıklatın **başlangıç projesi** bırakıp **komut satırı bağımsız değişkenleri** iletişim kutusu boş.  
+ Hiçbir istemci WCF Hizmeti barındırma sonra kullanılacak belirtmek için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hataayıklama** sekmesi. Tıklatın **başlangıç projesi** bırakıp **komut satırı bağımsız değişkenleri** iletişim kutusu boş.  
   
 #### <a name="using-a-custom-host"></a>Özel bir ana bilgisayar kullanarak  
  Özel bir ana bilgisayar kullanmak için projenize sağ **Çözüm Gezgini** Visual Studio'da seçin **özellikleri**seçeneğini belirleyip **hata ayıklama** sekmesi. Tıklatın **Başlat Dış Program** ve özel ana bilgisayar için tam yolunu girin. Aynı zamanda **komut satırı bağımsız değişkenleri** ana bilgisayara geçirilecek bağımsız değişkenler belirtmek için iletişim kutusu.  
   
 ## <a name="wcf-service-host-user-interface"></a>WCF hizmet ana kullanıcı arabirimi  
- Başlangıçta çağırma zaman [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (tuşlarına basarak Visual Studio içinde F5), hizmet konağı **WCF hizmet konağı** penceresi otomatik olarak açılır. Zaman [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet ana bilgisayarı çalıştığından, bildirim alanında programın simgesi görünür. Açmak için simgesini çift **WCF hizmet konağı** penceresi  
+ Ne zaman, başlangıçta çağırma WCF hizmet Konağı (Visual Studio içinde F5'e basarak), **WCF hizmet konağı** penceresi otomatik olarak açılır. WCF hizmet konağı çalışırken programın simgesi bildirim alanında görüntülenir. Açmak için simgesini çift **WCF hizmet konağı** penceresi  
   
- Barındırma hizmeti sırasında hatalar ortaya çıktığında [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ilgili bilgileri görüntülemek için hizmet ana bilgisayarı iletişim kutusu açılır.  
+ Barındırma hizmeti sırasında hatalar oluştuğunda, ilgili bilgileri görüntülemek için WCF hizmet konağı iletişim kutusu açılır.  
   
  **WCF hizmet konağı** ana penceresi iki menüleri içerir:  
   
--   **Dosya**: içeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır ancak Hizmetleri barındırılması devam eder. Tıkladığınızda **çıkış**, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmeti ana bilgisayarı ayrıca kapatıldı. Bu aynı zamanda barındırılan tüm hizmetleri durdurur.  
+-   **Dosya**: içeren **Kapat** ve **çıkış** komutları. Tıkladığınızda **Kapat**, **WCF hizmet konağı** iletişim kutusu kapanır ancak Hizmetleri barındırılması devam eder. Tıkladığınızda **çıkış**, WCF hizmet ana bilgisayarı ayrıca kapatıldı. Bu aynı zamanda barındırılan tüm hizmetleri durdurur.  
   
 -   **Yardım**: içeren **hakkında** sürüm bilgilerini içeren komutu. Ayrıca içerdiği **yardımcı** Yardım dosyasını açabilirsiniz komutu.  
   
@@ -88,18 +88,18 @@ Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual 
 -   İkinci alanı **ek bilgi**. Belirli bir hizmet satırı seçildiğinde hizmet durumunun ayrıntılı bir açıklama görüntüler **hizmet** alan. Hata durumundaysa, tam hata iletisi ekranda görüntüleyebilirsiniz.  
   
 ## <a name="stopping-wcf-service-host"></a>WCF hizmet ana bilgisayarı durduruluyor  
- Bilgisayarı Kapat [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aşağıdaki dört farklı şekilde hizmet ana bilgisayarı:  
+ WCF hizmet konağı aşağıdaki dört yollarla kapatabilirsiniz:  
   
 -   Visual Studio'da hata ayıklama oturumu durdurun.  
   
 -   Seçin **çıkış** gelen **dosya** menüde **WCF hizmet konağı** penceresi.  
   
--   Seçin **çıkış** bağlam menüsünden [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sistem bildirim alanında hizmet ana bilgisayarı Tepsi simgesi.  
+-   Seçin **çıkış** WCF hizmet konağı Tepsi simgesi sistem bildirim alanında bağlam menüsünden.  
   
--   Çıkış [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Test kullanılmakta ise, istemci.  
+-   Kullanılmakta ise, WCF Test İstemcisi çıkın.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Hizmet ana bilgisayarı yönetici ayrıcalığı kullanma  
- Geliştirmek için yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hizmetleri, bir ACL (erişim denetim listesi) için ad alanı oluşturulur "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL hangi makineye oturum açmış etkileşimli kullanıcıların tümünü içerir (UI) ayarlanır. Yöneticiler eklemek veya bu ACL'den kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL kullanıcıların kullanmasını sağlayan [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hizmet otomatik yönetici ayrıcalıklarını verme olmadan Konağı (wcfSvcHost.exe).  
+ WCF hizmetlerini geliştirmek yönetici ayrıcalığı olmayan kullanıcıların etkinleştirmek için bir ACL (erişim denetim listesi) ad alanı için oluşturulan "http://+:8731/Design_Time_Addresses" Visual Studio yüklemesi sırasında. ACL hangi makineye oturum açmış etkileşimli kullanıcıların tümünü içerir (UI) ayarlanır. Yöneticiler eklemek veya bu ACL'den kaldırmasına veya ek bağlantı noktalarını açın. Bu ACL kullanıcıların yönetici ayrıcalıklarını verme olmadan WCF hizmeti otomatik ana bilgisayarı (wcfSvcHost.exe) kullanmasını sağlar.  
   
  Erişim netsh.exe aracını kullanarak değiştirebilirsiniz [!INCLUDE[wv](../../../includes/wv-md.md)] yükseltilmiş yönetici hesabı altında. Netsh.exe kullanmaya ilişkin bir örnek verilmiştir.  
   

@@ -2,38 +2,38 @@
 title: Özel Kodlayıcılar
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae3904af83452dd76723abb78a7a06fdb0f798cc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-encoders"></a>Özel Kodlayıcılar
 Bu konu özel kodlayıcılar oluşturulacağını açıklar.  
   
- Windows Communication Foundation (WCF) kullandığınız bir *bağlama* uç noktaları arasında bir ağ üzerinden veri aktarımı nasıl belirtmek için. Bir dizi oluşan bir bağlama yapılır *bağlama öğeleri*. İsteğe bağlı Protokolü bağlama öğeleri gibi güvenlik, gerekli bir bağlama içerir *ileti Kodlayıcı* bağlama öğesi ve gerekli aktarım bağlama öğesi. İleti Kodlayıcı bağlama öğesi kodlama bir ileti gösterilir. Üç ileti kodlayıcılar dahil edilmiştir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: ikili, ileti iletim en iyi duruma getirme mekanizmasını (MTOM) ve metin.  
+ Windows Communication Foundation (WCF) kullandığınız bir *bağlama* uç noktaları arasında bir ağ üzerinden veri aktarımı nasıl belirtmek için. Bir dizi oluşan bir bağlama yapılır *bağlama öğeleri*. İsteğe bağlı Protokolü bağlama öğeleri gibi güvenlik, gerekli bir bağlama içerir *ileti Kodlayıcı* bağlama öğesi ve gerekli aktarım bağlama öğesi. İleti Kodlayıcı bağlama öğesi kodlama bir ileti gösterilir. Üç ileti kodlayıcılar içinde WCF eklenir: ikili, ileti iletim en iyi duruma getirme mekanizmasını (MTOM) ve metin.  
   
  Kodlama bağlama öğesi serileştiren bir giden bir ileti <xref:System.ServiceModel.Channels.Message> ve taşıma için geçirir veya taşımadan serileştirilmiş formun bir ileti alır ve protokol katmanında varsa veya uygulamaya geçirir, yüklü değilse.  
   
  İleti kodlayıcılar dönüştürme <xref:System.ServiceModel.Channels.Message> örnekleri hat gösterimine gelen ve giden. Kodlayıcılar kanal yığınındaki taşıma katmanının bir defada olarak açıklanan rağmen Aktarım katmanı içinde bulundukları. Taşımalar (örneğin HTTP) ileti aktarma standart gereksinimlerine göre biçimlendirin. Kodlayıcılar (örneğin metin Xml), yalnızca ileti kodlayın.  
   
- Bir önceden var olan istemci veya sunucu bağlanırken belirli ileti kodlama kullanma hakkında bir seçenek olmayabilir. Ancak, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Hizmetleri yapılabilir birden çok uç nokta, her biri farklı ileti Kodlayıcı üzerinden erişilebilir. Tek bir kodlayıcı hedef kitle hizmetiniz için kapsamaz, birden çok Uç noktalara hizmetinizi gösterme göz önünde bulundurun. İstemci uygulamaları sonra bunlar için en iyisidir uç noktası seçebilirsiniz. Birden çok uç noktalarını kullanarak diğer bağlama öğeleriyle farklı ileti kodlayıcılar avantajları birleştirmek sağlar.  
+ Bir önceden var olan istemci veya sunucu bağlanırken belirli ileti kodlama kullanma hakkında bir seçenek olmayabilir. Ancak, WCF hizmetleri birden çok uç nokta, her biri farklı ileti Kodlayıcı üzerinden erişilebilir hale getirilebilir. Tek bir kodlayıcı hedef kitle hizmetiniz için kapsamaz, birden çok Uç noktalara hizmetinizi gösterme göz önünde bulundurun. İstemci uygulamaları sonra bunlar için en iyisidir uç noktası seçebilirsiniz. Birden çok uç noktalarını kullanarak diğer bağlama öğeleriyle farklı ileti kodlayıcılar avantajları birleştirmek sağlar.  
   
 ## <a name="system-provided-encoders"></a>Sistem tarafından sağlanan kodlayıcılar  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en yaygın uygulama senaryolarını kapsamak üzere tasarlanmış birçok sistem tarafından sağlanan bağlamaları sağlar. Her bu bağlamaların bir aktarım, ileti Kodlayıcı ve diğer seçenekleri (örneğin, güvenlik) birleştirir. Bu konuda nasıl genişletileceğini açıklar `Text`, `Binary`, ve `MTOM` iletisi içinde yer alan kodlayıcılar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], veya kendi özel Kodlayıcı oluşturun. Metin ileti Kodlayıcı hem bir düz XML kodlama yanı sıra SOAP Kodlamalar destekler. Metin ileti Kodlayıcı düz XML kodlama modunu metin tabanlı SOAP kodlamadan ayırt etmek için POX ("düz eski XML") Kodlayıcı adı verilir.  
+ WCF en yaygın uygulama senaryolarını kapsamak üzere tasarlanmış birçok sistem tarafından sağlanan bağlamaları sağlar. Her bu bağlamaların bir aktarım, ileti Kodlayıcı ve diğer seçenekleri (örneğin, güvenlik) birleştirir. Bu konuda nasıl genişletileceğini açıklar `Text`, `Binary`, ve `MTOM` iletisi içinde WCF dahil edilen ya da kendi özel Kodlayıcı oluşturan kodlayıcılar. Metin ileti Kodlayıcı hem bir düz XML kodlama yanı sıra SOAP Kodlamalar destekler. Metin ileti Kodlayıcı düz XML kodlama modunu metin tabanlı SOAP kodlamadan ayırt etmek için POX ("düz eski XML") Kodlayıcı adı verilir.  
   
  Sistem tarafından sağlanan bağlamaları ile sağlanan bağlama öğeleri birleşimlerini hakkında daha fazla bilgi için karşılık gelen bölümüne bakın [taşıma seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Sistem tarafından sağlanan kodlayıcılar ile çalışma  
  Bir kodlama türetilmiş bir sınıf kullanarak bir bağlama eklenir <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aşağıdaki türden türetilmiş bağlama öğeleri sağlar <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama için sağlayabilen sınıfı:  
+ WCF sağlayan aşağıdaki türden türetilmiş bağlama öğeleri <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> metin, ikili ve ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama için sağlayabilen sınıfı:  
   
 -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: En birlikte çalışabilir, ancak XML iletileri için az verimli Kodlayıcı. Genellikle Web hizmeti veya Web hizmeti istemcisi metinsel XML anlayabilirsiniz. Ancak, büyük metin olarak ikili veri blokları iletmek etkili değildir.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir bağlama öğesi ve sürüm oluşturma ikili tabanlı XML iletileri için kullanılan ileti temsil eder. Bu kodlama seçeneklerini, ancak en az çalışabilen en etkili yoldur yalnızca tarafından desteklenmediği için [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uç noktaları.  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: Karakter kodlamasını belirtir bağlama öğesi ve sürüm oluşturma ikili tabanlı XML iletileri için kullanılan ileti temsil eder. Bu kodlama seçeneklerini, ancak en az çalışabilen en etkili yoldur yalnızca WCF uç noktaları tarafından desteklenmediği için.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturma ve karakter kodlamasını belirtir bağlama öğesi temsil eder. MTOM, ikili dosya verilerini iletmek için verimli bir teknolojisidir [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] iletileri. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında dengelemek çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır ancak bunları olarak ileterek büyük ikili veri blokları en iyi duruma getirir-metne dönüştürme olmadan, ise.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>: bir ileti iletim en iyi duruma getirme mekanizmasını (MTOM) kodlama kullanılarak bir ileti için kullanılan ileti sürüm oluşturma ve karakter kodlamasını belirtir bağlama öğesi temsil eder. MTOM WCF iletilerindeki ikili veri iletmek için verimli bir teknolojidir. MTOM Kodlayıcısı verimliliği ve birlikte çalışabilirlik arasında dengelemek çalışır. MTOM kodlama çoğu XML metin biçiminde aktarır ancak bunları olarak ileterek büyük ikili veri blokları en iyi duruma getirir-metne dönüştürme olmadan, ise.  
   
  Bir ikili, MTOM veya metin bağlama öğesi oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory>. Bir ikili, MTOM veya metin üreteci oluşturur <xref:System.ServiceModel.Channels.MessageEncoderFactory> örneği. Genellikle, yalnızca tek bir örneği yoktur. Ancak oturumları kullandıysanız, farklı bir kodlayıcı her oturuma sağlanabilir. İkili kodlama sağlar (bkz. XML altyapı) dinamik sözlük koordine etmek için bu kullanın.  
   
@@ -56,14 +56,14 @@ Bu konu özel kodlayıcılar oluşturulacağını açıklar.
   
  Dizeleri iletiye iç tarafından eklenen `AddSessionInformationToMessage` yöntemi. Dizeleri, kendi uzunluğunda önekli ileti önüne UTF-8 olarak ekler. Tüm sözlük üst bilgisi sonra kendi veri uzunluğu olan öneki. Tersine çevirme işlemi bir iç tarafından gerçekleştirilen `ExtractSessionInformationFromMessage` yöntemi.  
   
- Dinamik sözlük anahtarları işleme ek olarak, arabelleğe alınan süre sonuyla iletileri benzersiz bir şekilde alınır. Belge üzerinde bir okuyucu oluşturma ve işlemeyi yerine ikili kodlama dahili kullanım `MessagePatterns` ikili akış deconstruct sınıfı. Çoğu iletileri tarafından oluşturulan, belirli bir sipariş görünmesini üstbilgileri belirli kümesine sahip olur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Desen sistem parçalayın bunu beklediği üzerinde temel ileti keser. Başarılı olursa, başlatır bir <xref:System.ServiceModel.Channels.MessageHeaders> XML Ayrıştırma olmadan nesnesi. Aksi durumda, standart yöntemi geri döner.  
+ Dinamik sözlük anahtarları işleme ek olarak, arabelleğe alınan süre sonuyla iletileri benzersiz bir şekilde alınır. Belge üzerinde bir okuyucu oluşturma ve işlemeyi yerine ikili kodlama dahili kullanım `MessagePatterns` ikili akış deconstruct sınıfı. Çoğu iletileri WCF tarafından oluşturulan, belirli bir sipariş görünmesini üstbilgileri belirli kümesine sahip olur. Desen sistem parçalayın bunu beklediği üzerinde temel ileti keser. Başarılı olursa, başlatır bir <xref:System.ServiceModel.Channels.MessageHeaders> XML Ayrıştırma olmadan nesnesi. Aksi durumda, standart yöntemi geri döner.  
   
 ### <a name="mtom-encoding"></a>MTOM Kodlama  
  <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> Sınıfı adlı bir ek yapılandırma özelliği vardır <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`. MaxBufferSize % 2A >. Bu, bir üst sınır ne kadar veri bir ileti okuma işlemi sırasında arabellek etmesine izin verilen üzerinde yerleştirir. XML bilgi ayarlayın (bilgi) veya diğer MIME bölümleri, tek bir iletiye tüm MIME bölümleri yeniden birleştirmek için arabelleğe gerekebilir.  
   
  HTTP ile düzgün çalışması için bazı iç API'ler iç MTOM ileti Kodlayıcı sınıfı sağlar `GetContentType` (olduğu de dahili) ve `WriteMessage`, ortak ve geçersiz kılınabilir. Daha fazla iletişim MIME Üstbilgileri değerleriyle HTTP üstbilgileri değerleri kabul emin olmak üzere yapılmalıdır.  
   
- MTOM ileti Kodlayıcı düzenlenmemeli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]metin okuyucu kullanıcının ve metin Kodlayıcı benzer. İkisi arasındaki temel fark ikili veya "İkili büyük nesneler" (BLOB) büyük parçalarını iyileştirir bunları ileti baytlarının katıştırılmış önce 64 tabanlı kodlama için değil dönüştürmektir. Bunun yerine, bu BLOB'lar ayıklanan ve başvurulan MIME ek olarak tutulur.  
+ Dahili olarak, MTOM ileti Kodlayıcı WCF'ın metin okuyucu kullanır ve metin Kodlayıcı benzer. İkisi arasındaki temel fark ikili veya "İkili büyük nesneler" (BLOB) büyük parçalarını iyileştirir bunları ileti baytlarının katıştırılmış önce 64 tabanlı kodlama için değil dönüştürmektir. Bunun yerine, bu BLOB'lar ayıklanan ve başvurulan MIME ek olarak tutulur.  
   
 ## <a name="writing-your-own-encoder"></a>Kendi Kodlayıcı yazma  
  Kendi özel ileti Kodlayıcı uygulamak için aşağıdaki soyut taban sınıfları özel uygulamaları sağlamanız gerekir:  
@@ -88,7 +88,7 @@ Bu konu özel kodlayıcılar oluşturulacağını açıklar.
   
  Özel bağlanma <xref:System.ServiceModel.Channels.MessageEncoderFactory> hizmet veya istemci geçersiz kılarak yapılandırmak için kullanılan bağlama öğesi yığınına <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> yöntemi bu üretecin bir örneğini döndürür.  
   
- İle sağlanan iki örnek vardır [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] örnek kod ile bu işlem gösterilmektedir: [özel ileti Kodlayıcı: özel metin Kodlayıcı](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) ve [özel ileti Kodlayıcı: sıkıştırma Kodlayıcısı](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Bu işlem örnek kodu göstermeye WCF ile sağlanan iki örnek vardır: [özel ileti Kodlayıcı: özel metin Kodlayıcı](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) ve [özel ileti Kodlayıcı: sıkıştırma Kodlayıcısı](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  

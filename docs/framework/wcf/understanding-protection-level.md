@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 `ProtectionLevel` Özelliği bulundu birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özelliği bir ileti bölümü (veya tam) nasıl korumalı denetler. Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `ProtectionLevel` Ayarlamak için geliştiriciye için bir yoldur *düşük düzeyde* , bağlama uymanız gerekir. Bir hizmet dağıtıldığında, yapılandırmada belirtilen gerçek bağlama olabilir veya düşük düzeyde desteklemeyebilir. Örneğin, varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> sınıfı (zaman etkinleştirilebilir rağmen) güvenlik sağlamıyorsa. Bu nedenle, hiçbir ayarı dışında olan sözleşme ile kullanarak `None` bir özel durum oluşturulmasına neden olur.  
   
--   Hizmet gerektiriyorsa en düşük `ProtectionLevel` için tüm iletileri `Sign`, bir istemci (belki de olmayan bir tarafından oluşturulan[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] teknolojisi) şifrelemek ve (olan birden çok gereken en düşük) tüm iletileri oturum. Bu durumda, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] istemci daha az yapmıştır çünkü bir özel durum değil. Ancak, unutmayın, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] uygulamaları (Hizmetleri veya istemciler) ileti bölümü mümkünse aşırı güvenliğini sağlamaz, ancak en düşük düzeyi ile uyumlu. Kullanırken ayrıca `Transport` daha ayrıntılı bir düzeyde güvenli kendiliğinden alamıyor çünkü güvenlik modu olarak taşıma ileti akışı aşırı güvenli.  
+-   Hizmet gerektiriyorsa en düşük `ProtectionLevel` için tüm iletileri `Sign`, (belki de bir WCF olmayan teknoloji tarafından oluşturulan) bir istemci şifrelemek ve tüm iletileri imzalamak (birden çok gereken en düşük olduğu). Bu durumda, WCF, istemci en düşük düzeyde birden fazla yapmıştır olduğundan, bir özel durum oluşturmayacaksa. Ancak, WCF uygulamaları (Hizmetleri veya istemciler) bir ileti bölümü mümkünse aşırı güvenliğini sağlamaz ancak en düşük düzeyi ile uyumlu unutmayın. Kullanırken ayrıca `Transport` daha ayrıntılı bir düzeyde güvenli kendiliğinden alamıyor çünkü güvenlik modu olarak taşıma ileti akışı aşırı güvenli.  
   
 -   Ayarlarsanız `ProtectionLevel` açıkça ya da için `Sign` veya `EncryptAndSign`bir özel durum veya güvenliği etkinleştirilmiş bir bağlama sonra kullanmanız gerekir.  
   
