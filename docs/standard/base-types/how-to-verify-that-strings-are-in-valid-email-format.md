@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama"
-ms.custom: 
+title: 'Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
@@ -69,7 +58,7 @@ Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak 
 |`(?("")("".+?(?<!\\)""@)`|İlk karakteri bir tırnak işareti ise, en az bir oluşumu bir bitiş tırnak işareti herhangi bir karakterin ardından bir başlangıç tırnağından eşleşmesi. Bitiş tırnağından ters eğik çizgi karakteriyle gelmemelidir (\\). `(?<!` Sıfır Genişlik negatif geriye ilerleme onaylama başlangıcıdır. Dize duymanıza neden bir at işareti (@).|  
 |<code>&#124;(([0-9a-z]</code>|İlk karakteri bir tırnak işareti yoksa, alfasayısal bir karakter gelen eşleşen bir-z veya A-Z (karşılaştırma büyük/küçük harfe duyarsız) veya sayısal bir karakterle 0 ile 9 arasında.|  
 |`(\.(?!\.))`|Sonraki karakteri bir nokta ise, aynı. Bir süre değilse, devam sonraki karaktere bakın ve eşleşme devam edin. `(?!\.)` bir e-posta adresi yerel bölümünde görünmesini art arda iki nokta engelleyen bir sıfır Genişlik negatif ileri yönlü onayı ifade eder.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Sonraki karakteri bir süre değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{} &#124; ~.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Sonraki karakteri bir süre değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{}&#124;~.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|(Süre olmayan veya karakter sayısını biri tarafından izlenen bir dönemi) değişim deseni sıfır veya daha çok kez aynı.|  
 |`@`|Eşleşme @ karakteri.|  
 |`(?<=[0-9a-z])`|Karakter önceyse eşleşme devam A ile Z, A'dan Z'ye veya 0-9 arası karakterdir. `(?<=[0-9a-z])` Yapı Sıfır Genişlik pozitif geriye ilerleme onaylama tanımlar.|  

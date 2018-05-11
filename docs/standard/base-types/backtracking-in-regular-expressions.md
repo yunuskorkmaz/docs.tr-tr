@@ -1,13 +1,7 @@
 ---
 title: Normal İfadelerde Geri Dönüş
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,18 +16,13 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a> Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür, bir eşleşme için arama yapın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -49,7 +38,7 @@ ms.lasthandoff: 03/23/2018
   
 -   [İç içe geçmiş isteğe bağlı nicelik ile geri dönüş](#backtracking_with_nested_optional_quantifiers)  
   
--   [Controlling Backtracking](#controlling_backtracking)  
+-   [Geri dönüş denetleme](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Geri İzleme Olmadan Doğrusal Karşılaştırma  
@@ -66,11 +55,11 @@ ms.lasthandoff: 03/23/2018
 |---------------|-------------------------|------------------------|------------|  
 |1.|e|"needing a reed" (dizin 0)|Eşleşme yok.|  
 |2|e|"eeding a reed" (dizin 1)|Olası eşleşme.|  
-|3|e{2}|"eding a reed" (dizin 2)|Olası eşleşme.|  
+|3|E{2}|"eding a reed" (dizin 2)|Olası eşleşme.|  
 |4|\w|"al gerekli" (dizin 3)|Olası eşleşme.|  
 |5|\b|"ing a reed" (dizin 4)|Olası eşleşme başarısız olur.|  
 |6|e|"eding a reed" (dizin 2)|Olası eşleşme.|  
-|7|e{2}|"al gerekli" (dizin 3)|Olası eşleşme başarısız olur.|  
+|7|E{2}|"al gerekli" (dizin 3)|Olası eşleşme başarısız olur.|  
 |8|e|"al gerekli" (dizin 3)|Eşleme başarısız olur.|  
 |9|e|"ing a reed" (dizin 4)|Eşleşme yok.|  
 |10|e|"ng a reed" (dizin 5)|Eşleşme yok.|  
@@ -80,7 +69,7 @@ ms.lasthandoff: 03/23/2018
 |14|e|"reed" (dizini 9)|Eşleşme yok.|  
 |15|e|"reed" (dizini 10)|Eşleşme yok|  
 |16|e|"eed" (dizin 11)|Olası eşleşme.|  
-|17|e{2}|"ed" (dizin 12)|Olası eşleşme.|  
+|17|E{2}|"ed" (dizin 12)|Olası eşleşme.|  
 |18|\w|"d" (dizin 13)|Olası eşleşme.|  
 |19|\b|"" (dizin 14)|Eşleşme.|  
   

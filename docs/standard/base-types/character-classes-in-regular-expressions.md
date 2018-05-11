@@ -1,13 +1,7 @@
 ---
 title: Normal İfadelerdeki Karakter Sınıfları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
-ms.translationtype: HT
+ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  
@@ -58,7 +47,7 @@ ms.lasthandoff: 04/18/2018
  .NET karakter sınıfı çıkarma ifadeleri, başka bir karakter sınıftan bir karakter sınıfı hariç sonucu olarak bir karakter kümesi tanımlamanıza olanak sağlayan destekler. Daha fazla bilgi için bkz: [karakter sınıfı çıkarma](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Karakter karakterlerle kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) word karakteri eşleştirmek için veya [\p {}](#CategoryOrBlock) Unicode kategorisine eşleşecek şekilde Bel <xref:System.Globalization.CharUnicodeInfo> karakter hakkında bilgi sağlamak için sınıfı Kategoriler.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standart, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], esas alan [Unicode standart, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Karakter karakterlerle kategoriye göre gibi eşleşen sınıfları [\w](#WordCharacter) word karakteri eşleştirmek için veya [\p{} ](#CategoryOrBlock) Unicode kategorisine eşleşecek şekilde Bel <xref:System.Globalization.CharUnicodeInfo> bilgi sağlamak için sınıfı karakter kategorileri hakkında.  İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], karakter kategorileri temel [Unicode standart, sürüm 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] aracılığıyla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], esas alan [Unicode standart, sürüm 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Pozitif Karakter Grubu: [ ]  
@@ -189,7 +178,7 @@ ms.lasthandoff: 04/18/2018
  [Başa dön](#Top)  
   
 <a name="CategoryOrBlock"></a>   
-## <a name="unicode-category-or-unicode-block-p"></a>Unicode Kategorisi veya Unicode Bloğu: \p{}  
+## <a name="unicode-category-or-unicode-block-p"></a>Unicode kategori veya Unicode blok: \p{}  
  Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakterin büyük harfe olabilir (tarafından temsil edilen `Lu` kategori), ondalık bir sayı ( `Nd` kategori), bir matematik simge ( `Sm` kategori), veya bir paragraf ayırıcı ( `Zl` kategori). Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  
@@ -220,7 +209,7 @@ ms.lasthandoff: 04/18/2018
  [Başa dön](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## <a name="negative-unicode-category-or-unicode-block-p"></a>Negatif Unicode Kategorisi veya Unicode Bloğu: \P{}  
+## <a name="negative-unicode-category-or-unicode-block-p"></a>Negatif Unicode kategori veya Unicode blok: \P{}  
  Unicode standardı her karakteri genel bir kategoriye atar. Örneğin, belirli bir karakterin büyük harfe olabilir (tarafından temsil edilen `Lu` kategori), ondalık bir sayı ( `Nd` kategori), bir matematik simge ( `Sm` kategori), veya bir paragraf ayırıcı ( `Zl` kategori). Unicode standardındaki belirli karakter kümeleri ayrıca birbirini izleyen kod noktalarının belirli bir aralığını veya bloğunu kaplar. Örneğin, temel Latin karakter kümesi \u0000 ile \u007F arasındayken, Arapça karakter kümesi \u0600 ile \u06FF arasındadır.  
   
  Normal ifade yapısı  

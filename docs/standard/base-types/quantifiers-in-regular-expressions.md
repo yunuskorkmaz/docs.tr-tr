@@ -1,13 +1,7 @@
 ---
-title: "Normal İfadelerdeki Miktar Belirleyiciler"
-ms.custom: 
+title: Normal İfadelerdeki Miktar Belirleyiciler
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Belirleyiciler
 Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğinin bulunması bir eşleşme için giriş bulunmalıdır belirtin.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik listeler.  
@@ -41,9 +30,9 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`*`|`*?`|Sıfır veya daha fazla kez eşleşir.|  
 |`+`|`+?`|Bir veya birden çok kez eşleşir.|  
 |`?`|`??`|Sıfır veya bir kez eşleşir.|  
-|`{` *n* `}`|`{` *n* `}?`|Tam olarak eşleştiğinden  *n*  kez.|  
-|`{` *n* `,}`|`{` *n* `,}?`|En az eşleşen  *n*  kez.|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Gelen eşleşen  *n*  için *m* kez.|  
+|`{` *N* `}`|`{` *N* `}?`|Tam olarak eşleştiğinden *n* kez.|  
+|`{` *N* `,}`|`{` *N* `,}?`|En az eşleşen *n* kez.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Gelen eşleşen *n* için *m* kez.|  
   
  Miktarları `n` ve `m` tamsayı sabittir. Normalde, nicelik doyumsuz; Bunlar, mümkün olduğunca belirli modelleri sayıda oluşumları eşleştirilecek normal ifade altyapısı neden. Sonuna ekleme `?` bir niceleyici karakter kılar yavaş; mümkün olduğunca en az yinelenme eşleştirilecek normal ifade alt neden olur. Doyumsuz ve yavaş miktar belirleyiciler arasındaki farkı tam bir açıklaması için bkz [Greedy ve yavaş miktar belirleyiciler](#Greedy) bu konuda daha sonra.  
   
@@ -107,7 +96,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-exactly-n-times-n"></a>Tam olarak n kez eşleşen: {n}  
- `{`  *n*  `}` Niceleyici önceki öğesi tam olarak eşleşen  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
+ `{` *n* `}` niceleyici önceki öğesi tam olarak eşleşen *n* zaman, nerede *n* herhangi bir tamsayıdır. `{`*n* `}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{` *n*`}?`.  
   
  Örneğin, normal ifade `\b\d+\,\d{3}\b` word sınır tarafından izlenen üç ondalık basamak ve ardından bir veya daha fazla ondalık basamak arkasından bir word sınır eşleştirmeye çalışır. Aşağıdaki örnek, bu normal ifade gösterilmektedir.  
   
@@ -125,7 +114,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Bir sözcük sınırında bit.|  
   
 ### <a name="match-at-least-n-times-n"></a>En az n kez eşleşen: {n}  
- `{`  *n*  `,}` Niceleyici eşleşen önceki öğesi en az  *n*  zaman, nerede  *n* herhangi bir tamsayıdır. `{`*n*`,}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `}?`.  
+ `{` *n* `,}` niceleyici eşleşen önceki öğesi en az *n* zaman, nerede *n* herhangi bir tamsayıdır. `{`*n* `,}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{` *n*`}?`.  
   
  Örneğin, normal ifade `\b\d{2,}\b\D+` en az iki basamak ardından word sınır ve sayı olmayan karakter ve ardından word sınır eşleştirmeye çalışır. Aşağıdaki örnek, bu normal ifade gösterilmektedir. Tümcecik eşleştirilecek normal ifade başarısız `"7 days"` tek bir ondalık basamak içeriyor, ancak başarılı bir şekilde tümcecikleri eşleşen çünkü `"10 weeks and 300 years"`.  
   
@@ -142,7 +131,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\D+`|En az bir olmayan ondalık basamak eşleşir.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>N ve m zamanları arasında eşleştirme: {n, m}  
- `{`  *n*  `,` *m* `}` niceleyici eşleşen önceki öğesi en az  *n*  kez en çok *m* zaman, nerede  *n*  ve *m* tamsayı olduğunu. `{`*n*`,`*m* `}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{`  *n*  `,` *m*`}?`.  
+ `{` *n*`,`*m* `}` niceleyici eşleşen önceki öğesi en az *n* kez ancak hiçbir birden fazla *m*  zaman, nerede *n* ve *m* tamsayı olduğunu. `{`*n*`,`*m* `}` yavaş olan eşdeğerdir doyumsuz niceleyici olan `{` *n*`,`*m* `}?`.  
   
  Aşağıdaki örnekte, normal ifade `(00\s){2,4}` iki ve dört oluşumları iki arasında bir boşluk bırakarak sıfır basamak eşleştirmeye çalışır. Giriş dizesi'nın son kısmı bu deseni beş kez içerdiğini unutmayın yerine en fazla dört. Ancak, bu alt dizeyi (kadar boşluk ve sıfır beşinci çiftinin) yalnızca ilk bölümü normal ifade deseni eşleştirir.  
   
@@ -195,7 +184,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\(??`|Sıfır veya bir geçişi parantez ile eşleşir.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>N kez (yavaş eşleşme) tam olarak eşleşen: {n}?  
- `{`  *n*  `}?` Niceleyici önceki öğesi tam olarak eşleşen `n` zaman, nerede  *n*  herhangi bir tamsayıdır. Doyumsuz nicelik, yavaş karşılık gelen olan `{`  *n*  `}+`.  
+ `{` *n* `}?` niceleyici önceki öğesi tam olarak eşleşen `n` zaman, nerede *n* herhangi bir tamsayıdır. Doyumsuz nicelik, yavaş karşılık gelen olan `{` *n*`}+`.  
   
  Aşağıdaki örnekte, normal ifade `\b(\w{3,}?\.){2}?\w{3,}?\b` bir Web sitesi adresi tanımlamak için kullanılır. Bu "www.microsoft.com" ve "msdn.microsoft.com" eşleştirir ancak "numaralı" veya "mycompany.com" eşleşmiyor unutmayın.  
   
@@ -212,12 +201,12 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
 |`\b`|Son bir word sınırında eşleşmiyor.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>En az n kez eşleşen (yavaş eşleşme): {n}?  
- `{`  *n*  `,}?` Niceleyici eşleşen önceki öğesi en az `n` zaman, nerede  *n*  olarak ancak gibi birkaç kez herhangi bir tamsayı değil olası. Doyumsuz nicelik, yavaş karşılık gelen olan `{`  *n*  `,}`.  
+ `{` *n* `,}?` niceleyici eşleşen önceki öğesi en az `n` zaman, nerede *n* mümkün olduğunca ancak gibi birkaç kez herhangi bir tamsayı değil. Doyumsuz nicelik, yavaş karşılık gelen olan `{` *n*`,}`.  
   
- Örneğin bkz `{`  *n*  `}?` niceleyici bir çizim için önceki bölümdeki. Bu örnekte normal ifade kullanan `{`  *n*  `,}` ardından bir noktayla en az üç karakterden uzun bir dize eşleşmesi için niceleyici.  
+ Örneğin bkz `{` *n* `}?` niceleyici bir çizim için önceki bölümdeki. Bu örnekte normal ifade kullanan `{` *n* `,}` ardından bir noktayla en az üç karakterden uzun bir dize eşleşmesi için niceleyici.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>N ve m (yavaş eşleşme) saatleri arasında eşleşme: {n, m}?  
- `{`  *n*  `,` *m* `}?` niceleyici eşleşir önceki arasında `n` ve `m` zaman, nerede  *n*  ve *m* tamsayılar, mümkün olduğunca ancak gibi birkaç kez olur. Doyumsuz nicelik, yavaş karşılık gelen olan `{`  *n*  `,` *m*`}`.  
+ `{` *n*`,`*m* `}?` niceleyici eşleşir önceki arasında `n` ve `m` zaman, nerede *n* ve *m* tamsayılar, mümkün olduğunca ancak gibi birkaç kez olur. Doyumsuz nicelik, yavaş karşılık gelen olan `{` *n*`,`*m*`}`.  
   
  Aşağıdaki örnekte, normal ifade `\b[A-Z](\w*\s+){1,10}?[.!?]` arasında bir ve on sözcükler içeren tümceler eşleşir. Giriş dizesi 18 sözcükler içeren bir cümle hariç tüm cümlelerde eşleşir.  
   
@@ -261,7 +250,7 @@ Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğin
  Çoğu durumda, aynı eşleşmeleri doyumsuz ve yavaş miktar belirleyiciler Normal ifadelerle döndür. Joker karakterle kullanıldığında bunlar en yaygın olarak farklı sonuçlar döndürür (`.`) meta karakteri, herhangi bir karakter ile eşleşir.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Miktar belirleyiciler ve boş eşleşiyor  
- Miktar belirleyiciler `*`, `+`, ve `{`  *n*  `,` *m* `}` ve yavaş dekiler sonra boş bir hiçbir zaman tekrarlayın. en az sayıda yakalamaları bulduğunuz sırada eşleşmiyor. Bu kural, olası grup yakalamaları maksimum sayısı sonsuz olduğunda boş alt eşleşmeleri ya da sonsuz yanına sonsuz döngüler girişini nicelik engeller.  
+ Miktar belirleyiciler `*`, `+`, ve `{` *n*`,`*m* `}` ve boş bir eşledikten sonra ne zaman yavaş dekiler hiçbir zaman yineleyin en düşük yakalamaları sayısı bulundu. Bu kural, olası grup yakalamaları maksimum sayısı sonsuz olduğunda boş alt eşleşmeleri ya da sonsuz yanına sonsuz döngüler girişini nicelik engeller.  
   
  Örneğin, aşağıdaki kod bir çağrı sonucunu gösterir <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> normal ifade deseni yöntemiyle `(a?)*`, sıfır veya daha fazla kez sıfır veya bir "a" karakter eşleşir. Tek bir yakalama Grup her "a" olarak yakalamalarına Not hem de <xref:System.String.Empty?displayProperty=nameWithType>, ancak bu ilk boş eşleşme yinelenen durdurmak niceleyici neden olduğundan ikinci boş eşleşme olduğunu.  
   
