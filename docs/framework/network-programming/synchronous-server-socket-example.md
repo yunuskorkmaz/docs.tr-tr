@@ -12,11 +12,11 @@ ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6e5ec4bc17a1bbfa6de4e5640e51c90210e56799
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5dc8ed718402a128add375cc1adfb6d17713e8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="synchronous-server-socket-example"></a>Zaman uyumlu Server yuva örneği
 Aşağıdaki örnek programı istemcilerinden gelen bağlantı istekleri alan sunucu oluşturur. Bir istemciden bir bağlantı beklerken sunucu uygulaması yürütülmesini askıya alınmış şekilde sunucusu zaman uyumlu bir yuvası ile kurulur. Uygulama istemciden bir dize alır, konsolda dizesini görüntüler ve istemciye geri dize görüntülemektedir. İstemci, dizeden dize içermelidir "\<EOF >" iletisinin sonuna sinyal.  
@@ -63,7 +63,6 @@ Public Class SynchronousSocketListener
   
             ' An incoming connection needs to be processed.  
             While True  
-                bytes = New Byte(1024) {}  
                 Dim bytesRec As Integer = handler.Receive(bytes)  
                 data += Encoding.ASCII.GetString(bytes, 0, bytesRec)  
                 If data.IndexOf("<EOF>") > -1 Then  
@@ -124,7 +123,6 @@ public class SynchronousSocketListener {
   
                 // An incoming connection needs to be processed.  
                 while (true) {  
-                    bytes = new byte[1024];  
                     int bytesRec = handler.Receive(bytes);  
                     data += Encoding.ASCII.GetString(bytes,0,bytesRec);  
                     if (data.IndexOf("<EOF>") > -1) {  

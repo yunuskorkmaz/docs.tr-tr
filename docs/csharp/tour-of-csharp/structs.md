@@ -3,11 +3,11 @@ title: C# yapılar - C# dili turu
 description: C# temelleri yapılar adlı türleri, değer öğrenin
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dca21fe5c5f3f97bc067eb79229a608e89c0fcda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>Yapılar
 
@@ -23,7 +23,7 @@ Yapı noktası yapmak için kullanılan bir alternatiftir.
 
 Şimdi, yalnızca bir nesne örneği — bir dizi — ve `Point` saklı satır içi dizideki örnekleridir.
 
-Yapı oluşturucuları yeni işleciyle çağrılır, ancak bu bellek göstermez tahsis edilir. Dinamik bir nesne ayırma ve kendisine bir başvuru döndürme, yerine bir yapı Oluşturucu yalnızca yapısı değeri kendisini (genellikle geçici bir konuma yığında) döndürür ve bu değer daha sonra gerektiğinde kopyalanır.
+Yapı Oluşturucuları ile çağrılır `new` işleci, ancak değil kapsıyor bu bellek tahsis edilir. Dinamik bir nesne ayırma ve kendisine bir başvuru döndürme, yerine bir yapı Oluşturucu yalnızca yapısı değeri kendisini (genellikle geçici bir konuma yığında) döndürür ve bu değer daha sonra gerektiğinde kopyalanır.
 
 Sınıflar ile aynı nesneye başvurmak iki değişken için olası ve böylece olası bir değişkeni tarafından başvurulan nesne etkilemek için bir değişken üzerinde işlemler için. Yapılar, her değişkenleri veri kendi kopyasına sahip ve bir diğer etkileyen işlemler için kullanılamaz. Örneğin, aşağıdaki kod parçası tarafından üretilen çıkış noktası bir sınıf veya yapı olduğuna bağlıdır.
 

@@ -9,11 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 55ccabaea4fcb7716378d92964030f7025202e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="event-c-reference"></a>event (C# Başvurusu)
 `event` Anahtar sözcüğü bir yayımcı sınıfı bir olayı bildirmek için kullanılır.  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bildirme ve kullandığı bir olayı gösterilmektedir <xref:System.EventHandler> temel temsilci türü. Ayrıca genel kullanmayı gösterir tam kod örneği için <xref:System.EventHandler%601> temsilci türü ve bir olaya abone ve bir olay işleyicisi yöntemi oluşturma, bkz: [nasıl yapılır: yayımlama olayları için .NET Framework yönergeleriyle bu Uydur](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
  Yalnızca gelen sınıf veya yapı içinde çağrılabilir çok noktaya yayın temsilci özel bir tür (yayımcı sınıfı) burada bildirilen olaylardır. Diğer sınıflar ya da yapının olaya abone olursanız, yayımcı sınıfı olayını olduğunda olay işleyicisi yöntemleriyle çağrılır. Daha fazla bilgi ve kod örnekleri için bkz: [olayları](../../../csharp/programming-guide/events/index.md) ve [Temsilciler](../../../csharp/programming-guide/delegates/index.md).  
   

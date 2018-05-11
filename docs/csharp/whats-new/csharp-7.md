@@ -3,11 +3,11 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: C# dili gelecek sürümünde 7 gelen yeni özelliklere genel bakış alın.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 440784edfb93d613f1427be2152cd92ae5566e3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>C# 7. 0'yenilikler nelerdir?
 
@@ -84,7 +84,7 @@ Alanları doğrulanmazsa ve kendi yöntemleri tanımlanamıyor
 > Diziler C# 7.0 önce kullanılabilir, ancak verimsiz ve hiçbir dil desteği vardı.
 > Bu başlığın öğeleri yalnızca olarak başvurulan geliyordu `Item1`, `Item2` ve benzeri. C# 7.0 yeni, daha verimli tanımlama grubu türlerini kullanarak bir tanımlama grubu alanlarının anlamsal adlarını etkinleştirir diziler için dil desteği sunar.
 
-Her üye bir değere atayarak bir tanımlama grubu oluşturabilirsiniz:
+Her üye için bir değer atayarak bir tanımlama grubu oluşturabilirsiniz:
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -129,7 +129,7 @@ Bir yönteminden döndürülen bir tanımlama grubu üyeleri gitmeniz istediğin
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-Bir tanımlama grubu atayarak tek tek alanların ayıklayabilirsiniz bir `Point`:
+Tek tek alanların atayarak ayıklayabilirsiniz bir `Point` bir tanımlama grubu için:
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

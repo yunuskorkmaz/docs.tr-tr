@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
@@ -43,8 +43,8 @@ C# Kılavuzu'nda çeşitli bölümler vardır. Sırayla okuyabilir veya en doğr
 * [C# Turu](tour-of-csharp/index.md)
   * Bu bölümde dil genel bir bakış sağlar. C# programları ve dil özelliklerini oluşturan öğeler kapsar. C# sözdizimi öğeleri ve ana C# dili konuları tartışmalar küçük örnekleri gösterilir.
 
-* [En son özellikleri](whats-new/index.md)
-  * Dilde yeni özellikler hakkında bilgi edinin. C# etkileşimli (C# ' ın REPL) ve .NET derleyici Platform SDK'sı gibi yeni araçlar hakkında bilgi edinin. Bu bölümde, dil nasıl gelişen ve nasıl yeni araçları daha üretken yapabileceğiniz gösterir.
+* [C# Yenilikleri](whats-new/index.md)
+  * En son dil sürümlerde eklenen yeni özellikler ve C# dili geçmişini genel bilgiler sağlanmıştır.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)

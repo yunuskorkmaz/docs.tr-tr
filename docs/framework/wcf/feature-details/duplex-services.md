@@ -1,15 +1,15 @@
 ---
 title: Çift Yönlü Hizmetler
-ms.date: 03/30/2017
+ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: afe72b01fe3ec38cc34b0a7ff4d28ff714cf3dd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 Çift yönlü hizmet sözleşmesi, her iki uç nokta ileti diğer bağımsız olarak gönderebilirsiniz bir ileti değişim deseni değil. Çift yönlü bir hizmet, bu nedenle, olay benzeri davranışı sağlama geri istemci uç noktaya iletileri gönderebilir. Çift yönlü iletişimi bir istemci bir hizmetine bağlanır ve hizmet üzerinde hizmet istemciye iletiler gönderebilir bir kanal sağlar oluşur. Çift yönlü hizmetler olay benzeri davranışını yalnızca bir oturumunda çalıştığını unutmayın.  
@@ -52,14 +52,19 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- Aşağıdaki örnek kod istemci belirtmek uç nokta adresi kodda gösterilmiştir.  
+ Aşağıdaki örnek kod istemci belirtmek uç nokta adresi programlı olarak gösterilmiştir.
   
-```  
+```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
 EndpointAddress endptadr = new EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server");  
 binding.ClientBaseAddress = new Uri("http://localhost:8000/DuplexTestUsingCode/Client/");  
 ```  
-  
+```vb
+Dim binding As New WSDualHttpBinding()
+Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/Server")
+binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
+```
+
  Aşağıdaki örnek kod istemci belirtmek uç nokta adresi yapılandırmasında gösterilmiştir.  
   
 ```xml  

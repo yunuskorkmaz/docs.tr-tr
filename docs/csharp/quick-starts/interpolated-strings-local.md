@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 5af7cf1d0f541661acb23ec2cad4bada5d9e03e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation"></a>Dize ilişkilendirme
 
@@ -169,4 +169,4 @@ Dize ilişkilendirme quickstart tamamladınız.
 
 İle devam edebilirsiniz [listesinde koleksiyonu](arrays-and-collections.md) kendi geliştirme ortamında hızlı başlangıç.
 
-Dize ilişkilendirme hakkında daha fazla bilgi [dize ilişkilendirme](../language-reference/tokens/interpolated.md) C# Başvurusu'nda başlığı.
+Daha fazla bilgi için bkz: [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu ve [dize ilişkilendirme C#](../tutorials/string-interpolation.md) Öğreticisi.

@@ -3,12 +3,12 @@ title: İlişkisel veritabanlarınızı azure'a geçirme
 description: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize | İlişkisel veritabanlarınızı azure'a geçirme
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: efc558115d184ed53a963eab2acdd847a12dbb3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı azure'a geçirme
 
@@ -22,11 +22,11 @@ Azure, doğrudan Iaas VM'ler için (saf yükseltme ve shift) veritabanı sunucul
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL veritabanı yönetilen örneğine geçirmek ne zaman
 
-Çoğu durumda, yönetilen Azure SQL veritabanı örneği için Azure verilerinizi geçirdiğinizde dikkate alınması gereken, en iyi seçenek olacaktır. SQL Server veritabanlarını geçirme ve neredeyse uygulamanızı yeniden düzenlenmesine veya veri veya veri erişim kodu için değişiklik gerekmez % 100 güvence ihtiyacınız varsa, Azure SQL veritabanı'nın yönetilen örneği özelliğini seçin.
+Çoğu durumda, yönetilen Azure SQL veritabanı örneği için Azure verilerinizi geçirdiğinizde dikkate alınması gereken, en iyi seçenek olacaktır. SQL Server veritabanlarını geçirme ve neredeyse uygulamanızı rearchitect veya veri veya veri erişim kodu için değişiklik gerekmez % 100 güvence ihtiyacınız varsa, Azure SQL veritabanı'nın yönetilen örneği özelliğini seçin.
 
 SQL Server örnek düzeyinde işlevselliği için ek gereksinimler veya standart bir Azure SQL veritabanına (tek veritabanı modeli) sağlanan özellikler ötesinde yalıtım gereksinimleri varsa, yönetilen azure SQL veritabanı örneği en iyi seçenektir. Bu sonuncu en PaaS yönelik bir seçenektir ancak, geleneksel SQL server'ın aynı özellikleri sunmaz. Geçiş frictions yüzey.
 
-Örneğin, derin Yatırımlar örnek düzeyinde SQL Server özellikleri yaptığı bir kuruluş yönetilen SQL örneğine geçirme yararlanabileceğini. Örnek düzeyinde SQL Server özellikleri örnekleri SQL ortak dil çalışma zamanı (CLR) tümleştirmesini, SQL Server Aracısı içerir ve veritabanları arası sorgulama. Bu özellikler için destek standart Azure SQL veritabanı (tek veritabanı modeli) kullanılamaz.
+Örneğin, derin Yatırımlar örnek düzeyinde SQL Server özellikleri yaptığı bir kuruluş yönetilen SQL örneğine geçirme yararlanabileceğini. Örnek düzeyinde SQL Server özellikleri örnekleri SQL ortak dil çalışma zamanı (CLR) tümleştirmesini, SQL Server Aracısı içerir ve veritabanları arası sorgulama. Bu özellikler için destek standart Azure SQL veritabanı (tek veritabanı modeli) kullanılamıyor.
 
 Bir kuruluş içinde yüksek oranda düzenlenen endüstri çalışır ve hangi güvenlik amacıyla yalıtımı sağlamak gereken SQL örneğini yönetilen modeli seçme de yararlanabilir.
 
@@ -56,9 +56,9 @@ Yönetilen örneği SQL Server kullanıyorsanız ve bunların ağ güvenliği bu
 
 Belirtildiği gibi standart Azure SQL veritabanı tam olarak yönetilen, ilişkisel DBaaS gereklidir. SQL veritabanı üretim veritabanları, milyonlarca 38 veri merkezleri, dünya genelinde şu anda yönetir. Çok çeşitli uygulamaları ve yürüten bir küresel ölçekli gelişmiş veri işleme gerektiren en veri kullanımı yoğun, görev açısından kritik uygulamalar için basit işlem verilerini yönetmesini iş yükleri, destekler.
 
-Fiyatlandırma tam PaaS özellikleri nedeniyle ve daha iyi- ve sonuçta maliyetini düşürür-o kullanan temel, standart SQL veritabanları ve hiçbir ek örnek özellik bir uygulamanız varsa "varsayılan olarak tercih ettiğiniz" standart Azure SQL veritabanına taşımanız gerekir. SQL Server özellikleri SQL CLR tümleştirme, SQL Server Agent ve veritabanları arası sorgulama gibi standart Azure SQL veritabanı'nda desteklenmez. Bu özellikleri yalnızca Azure SQL veritabanı örneği yönetilen modelde kullanılamaz.
+Tam PaaS özellikleri nedeniyle, daha iyi fiyatlandırma- ve sonuçta maliyetini düşürür-o kullanan temel, standart SQL veritabanları ve hiçbir ek örnek özellik bir uygulamanız varsa "varsayılan olarak tercih ettiğiniz" standart Azure SQL veritabanına taşımanız gerekir. SQL Server özellikleri SQL CLR tümleştirme, SQL Server Agent ve veritabanları arası sorgulama gibi standart Azure SQL veritabanı'nda desteklenmez. Bu özellikleri yalnızca Azure SQL veritabanı örneği yönetilen modelde kullanılamaz.
 
-Azure SQL veritabanı, uygulama geliştiricileri için tasarlanmış yalnızca akıllı bulut veritabanı hizmetidir. Bu ayrıca üzerinde-çok müşterili uygulamalar verimli bir şekilde sunmanıza yardımcı olması için kapalı kalma süresi, çalışma sırasında ölçeklendirilebilen yalnızca bulut veritabanı hizmetidir. Sonuç olarak, Azure SQL veritabanı yenilik için daha fazla zaman bırakır ve pazara zamanınızı hızlandırır. Güvenli uygulamalar oluşturma ve tercih ettiğiniz platformlar ve diller kullanarak SQL veritabanına bağlanın.
+Azure SQL veritabanı, uygulama geliştiricileri için tasarlanmış yalnızca akıllı bulut veritabanı hizmetidir. Bu ayrıca üzerinde-çok müşterili uygulamalar verimli bir şekilde sunmanıza yardımcı olması için kapalı kalma süresi, çalışma sırasında ölçeklendirilebilen yalnızca bulut veritabanı hizmetidir. Sonuç olarak, Azure SQL veritabanı yenilik için daha fazla zaman bırakır ve pazara zamanınızı hızlandırır. Güvenli uygulamalar oluşturmak ve tercih ettiğiniz platformlar ve diller kullanarak SQL veritabanına bağlanın.
 
 Azure SQL veritabanı aşağıdaki avantajları sunar:
 
@@ -76,13 +76,13 @@ Azure SQL veritabanı aşağıdaki avantajları sunar:
 
 - Karma ve geçiş dahil olmak üzere SQL Server 2016 ile uyumluluk
 
-Standart Azure SQL veritabanı için PaaS Azure SQL veritabanı yönetilen örneği yakındır. Yönetilen bir buluttan daha fazla avantajları elde edersiniz olduğundan, mümkünse, kullanmayı denemeniz gerekir. Ancak, Azure SQL veritabanı normal gelen önemli bazı farklar vardır ve şirket içi SQL Server örnekleri. Buluta geçiş planlarken, mevcut uygulamanızın veritabanı gereksinimleri ve kurumsal gereksinimleri ve ilkeleri bağlı olarak, en iyi seçenek olmayabilir.
+Standart Azure SQL veritabanı için PaaS Azure SQL veritabanı yönetilen örneği yakındır. Yönetilen bir buluttan daha fazla avantajları elde edersiniz çünkü standart Azure SQL veritabanı tercih eder. Ancak, Azure SQL veritabanı normal gelen önemli bazı farklar vardır ve şirket içi SQL Server örnekleri. Buluta geçiş planlarken, mevcut uygulamanızın veritabanı gereksinimleri ve kurumsal gereksinimleri ve ilkeleri bağlı olarak, en iyi seçenek olmayabilir.
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Bir VM'yi (Iaas), özgün RDBMS taşımak ne zaman
 
 Geçiş seçenekleri Azure VM temelinde çalıştırılan benzer bir sunucu için Oracle, IBM DB2, MySQL, PostgreSQL veya SQL Server dahil olmak üzere, özgün ilişkisel veritabanı yönetim sistemine (RDBMS) taşımak için biridir. Tüm küçük değişiklikler ya da herhangi bir değişiklik olan buluta hızlı geçiş gerektiren uygulamalarınız varsa, Iaas bulutta doğrudan geçiş Orta bir seçenek olabilir. Tüm bulutun avantajlarından yararlanmak için en iyi yolu olmayabilir ancak büyük olasılıkla hızlı başlangıç yoludur.
 
-Şu anda, Microsoft Azure kadar destekler [331 farklı veritabanı sunucuları](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) Iaas VM'ler dağıtılabilir. Bunlar, SQL Server, Oracle, MySQL, PostgreSQL ve IBM DB2 gibi popüler RDBMSes ve MongoDB, Cassandra, DataStax, MariaDB ve Cloudera gibi diğer birçok NoSQL veritabanı içerir.
+Şu anda, Microsoft Azure kadar destekler [331 farklı veritabanı sunucuları](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) Iaas VM'ler dağıtılabilir. Bunlar, SQL Server, Oracle, MySQL, PostgreSQL ve IBM DB2 gibi popüler RDBMS ve MongoDB, Cassandra, DataStax, MariaDB ve Cloudera gibi diğer birçok NoSQL veritabanı içerir.
 
 > [!NOTE]
 > Taşıma rağmen bir Azure VM, RDBMS (Iaas olduğundan) verilerinizi buluta geçirmek için en hızlı yolu olabilir, bu yaklaşım BT ekipleriniz (Veritabanı yöneticileri ve BT uzmanlarının) önemli bir yatırım gerektirir. Kurumsal takımlar ayarlamak ve yüksek kullanılabilirlik, olağanüstü durum kurtarma ve SQL Server için düzeltme eki uygulama yönetmek gerekir. Bu bağlamda tam yönetici haklarına sahip bir özelleştirilmiş ortamını da gerekir.
@@ -127,4 +127,4 @@ Azure veritabanı geçiş hizmetini kullanarak veritabanlarını geçirme konusu
 
 >[!div class="step-by-step"]
 [Önceki](lift-and-shift-existing-apps-azure-iaas.md)
-[sonraki](lift-and-shift-existing-apps-devops/index.md)
+[sonraki](modernize-existing-apps-to-cloud-optimized/index.md)

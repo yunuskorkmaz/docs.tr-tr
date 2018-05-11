@@ -3,12 +3,12 @@ title: .NET Core Linux önkoşulları
 description: Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux makinelerde .NET Core uygulamaları çalıştırmak için .NET Core bağımlılıkları.
 author: jralexander
 ms.author: johalex
-ms.date: 04/19/2018
-ms.openlocfilehash: a116d2455ec9b2a49f81daae3eb4834c15482891
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/08/2018
+ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -33,7 +33,7 @@ NET çekirdek 2.x, aşağıdaki Linux 64-bit desteklenir (`x86_64` veya `amd64`)
 * Oracle Linux 7
 * Fedora 27, 26
 * Debian 9 8,7 veya sonraki sürümleri
-* Ubuntu 17.10, 16.04, 14.04
+* Ubuntu 18.04, 17.10, 16.04, 14.04
 * Linux Naneli 18, 17
 * openSUSE 42.3 veya sonraki sürümler
 * SUSE Enterprise Linux (SLES) 12 Service Pack 2 veya sonraki sürümü
@@ -142,24 +142,29 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 **.NET core 2.0**
 
-|Çalışma zamanları / SDK'ları          |Ubuntu 17.10  |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
-|-------------------------|--------------|----------------------------|----------------------------|
-|.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
-|.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
-|.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
-|.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|Çalışma zamanları / SDK'ları          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
+|-------------------------|----------------|----------------|----------------------------|----------------------------|
+|.NET çekirdeği çalışma zamanı 2.0.7  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
+|.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|.NET core SDK 2.1.105    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
+|.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|.NET core SDK 2.0.0      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.0)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.0)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.0)          |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.0)            |
 
 **.NET core 2.1**
 
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-|Çalışma zamanları / SDK'ları                  |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
-|---------------------------------|----------------|----------------------------|----------------------------|
-|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
-|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
-|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
-|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
+|Çalışma zamanları / SDK'ları                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
+|---------------------------------|----------------|----------------|----------------------------|----------------------------|
+|.NET çalışma zamanı 2.1.0-rc1 çekirdek      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-rc1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-rc1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-rc1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-rc1)            |
+|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|.NET SDK 2.1.300-rc1 çekirdek  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-rc1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-rc1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-rc1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-rc1)            |
+|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)            |
+|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
@@ -198,10 +203,13 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|.NET çekirdeği çalışma zamanı 2.0.7  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|.NET core SDK 2.1.105    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
+|.NET core SDK 2.0.0      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.0)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.0)   |
 
 **.NET core 2.1**
 
@@ -210,8 +218,10 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
+|.NET çalışma zamanı 2.1.0-rc1 çekirdek      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-rc1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-rc1)   |
 |.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
 |.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|.NET SDK 2.1.300-rc1 çekirdek        |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-rc1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-rc1)        |
 |.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
 |.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
@@ -249,8 +259,10 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 
 |Çalışma zamanları / SDK'ları          |Fedora 26 veya üzeri |Fedora 25 veya önceki |
 |-------------------------|-------------------|----------------------|
+|.NET çekirdeği çalışma zamanı 2.0.7  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |.NET çekirdeği çalışma zamanı 2.0.6  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |.NET çekirdeği çalışma zamanı 2.0.5  |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|.NET core SDK 2.1.105    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |.NET core SDK 2.1.103    |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |.NET core SDK 2.0.3      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
 
@@ -259,12 +271,14 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
-|Çalışma zamanları / SDK'ları                  |Fedora 26 veya üzeri |Fedora 25 veya önceki |
+|Çalışma zamanları / SDK'ları                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
-|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
-|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
-|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
-|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
+|.NET çalışma zamanı 2.1.0-rc1 çekirdek      |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-rc1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-rc1)           |
+|.NET çalışma zamanı 2.1.0-preview2 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview2)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)           |
+|.NET çalışma zamanı 2.1.0-preview1 çekirdek |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
+|.NET SDK 2.1.300-rc1 çekirdek        |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-rc1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-rc1)           |
+|.NET SDK 2.1.300-preview2 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-preview2)       |[Yükleme bağlantı](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2))           |
+|.NET SDK 2.1.300-preview1 çekirdek   |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
@@ -303,18 +317,23 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 
 **.NET core 2.0**
 
+* .NET çekirdeği çalışma zamanı 2.0.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * .NET çekirdeği çalışma zamanı 2.0.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * .NET çekirdeği çalışma zamanı 2.0.5 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET core SDK 2.1.105 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
 * .NET core SDK 2.1.103 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
 * .NET core SDK 2.0.3 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
+* .NET core SDK 2.0.0 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.0)
  
 **.NET core 2.1**
 
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview/).
 
+* .NET çekirdeği çalışma zamanı 2.1.0-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-rc1)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-rc1)
 * .NET core SDK 2.1.300-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
 * .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
 
@@ -347,18 +366,46 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 
 **.NET core 2.0**
 
+**SUSE Linux Enterprise Server**
+
+* .NET çekirdeği çalışma zamanı 2.0.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
+* .NET çekirdeği çalışma zamanı 2.0.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
+* .NET çekirdeği çalışma zamanı 2.0.5 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
+* .NET core SDK 2.1.105 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
+* .NET core SDK 2.1.103 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
+* .NET core SDK 2.0.3 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
+* .NET core SDK 2.0.0 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.0)
+
+**openSUSE**
+
+* .NET çekirdeği çalışma zamanı 2.0.7 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
 * .NET çekirdeği çalışma zamanı 2.0.6 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
 * .NET çekirdeği çalışma zamanı 2.0.5 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
+* .NET core SDK 2.1.105 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.105)
 * .NET core SDK 2.1.103 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)
 * .NET core SDK 2.0.3 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)
+* .NET core SDK 2.0.0 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.0)
  
 **.NET core 2.1**
 
 >[!IMPORTANT]
 > .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
 
+**SUSE Linux Enterprise Server**
+
+* .NET çekirdeği çalışma zamanı 2.1.0-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-rc1)
+* .NET çekirdeği çalışma zamanı 2.1.0-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview2)
+* .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-rc1)
+* .NET core SDK 2.1.300-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview2)
+* .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview1)
+
+**openSUSE**
+
+* .NET çekirdeği çalışma zamanı 2.1.0-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-rc1)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
 * .NET çekirdeği çalışma zamanı 2.1.0-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
+* .NET core SDK 2.1.300-rc1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-rc1)
 * .NET core SDK 2.1.300-preview2 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
 * .NET core SDK 2.1.300-preview1 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
 

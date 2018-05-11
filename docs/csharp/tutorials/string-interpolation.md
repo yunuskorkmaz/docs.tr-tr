@@ -1,119 +1,113 @@
 ---
-title: Dize ilişkilendirme - C#
-description: C# 6'dizesi ilişkilendirme nasıl çalıştığını öğrenin
-author: mgroves
-ms.date: 03/06/2017
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: 5b807429d05fcf59f4bb55c4d2429daa17835fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+title: C# dize ilişkilendirme
+description: Dize ilişkilendirme ile C# sonuç dizesine biçimlendirilmiş ifade sonuçlarında öğrenin.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 3e463ceb0902658107280559b7fb57849beb8153
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
 
-Dize ilişkilendirme bir dize yer tutucuları bir dize değişkeni değeriyle değiştirilir yoludur. Bunu yapmanın yolu olan C# 6'dan önce <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu Tamam çalışır, ancak numaralı yer tutucuları kullandığından, okumak daha zor ve daha ayrıntılı olabilir.
+Bu öğretici nasıl kullanılacağını gösterir [dize ilişkilendirme](../language-reference/tokens/interpolated.md) biçimlendirmek ve bir sonuç dizesinde ifade sonuçları dahil edin. Örnekler, temel C# kavramları ve .NET türü biçimlendirme bildiğinizi varsayar. Dize ilişkilendirme veya .NET türü biçimlendirme yeniyseniz, kullanıma [etkileşimli dize ilişkilendirme quickstart](../quick-starts/interpolated-strings.yml) ilk. Biçimlendirme .NET türleri hakkında daha fazla bilgi için bkz: [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) konu.
 
-Diğer programlama dilleri dize ilişkilendirme dilinde yerleşik bir süre beklendiğinden. Örneğin, PHP ile:
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>Giriş
 
-C# 6'da, son olarak bu dize ilişkilendirme stilini sunuyoruz. Kullanabileceğiniz bir `$` önce değişkenleri/ifadeleri değerlerine için alternatif belirtmek için bir dize.
+[Dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği üstünde oluşturulan [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) özellik ve sonucu dize biçimlendirilmiş ifade sonuçları dahil etmek daha okunabilir ve kullanışlı bir sözdizimi sağlar.
 
-## <a name="prerequisites"></a>Önkoşullar
-.NET core çalışmasına, makine ayarlamanız gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası.
-Bu uygulama, Windows, Ubuntu Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz. Sık kullanılan Kod Düzenleyicisi'ni yüklemeniz gerekir. Kullanım aşağıda açıklamaları [Visual Studio Code](https://code.visualstudio.com/) platform Düzenleyicisi arası bir açık kaynak olduğu. Ancak, tanımanız ne olursa olsun araçları kullanabilirsiniz.
+Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle başına `$` simgesi. Ara değerli bir dize bir değer döndüren herhangi bir geçerli C# ifadeler eklenebilir. Aşağıdaki örnekte, bir ifadenin hemen sonucunu bir dizeye dönüştürülür ve bir sonuç dizesinde yer:
 
-## <a name="create-the-application"></a>Uygulama oluşturma
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Tüm Araçlar yüklediniz, yeni bir .NET Core uygulaması oluşturun. Komut satırı Oluşturucu kullanmak için projeniz için bir dizin gibi oluşturun `interpolated`ve sık kullanılan kabuğuna şu komutu çalıştırın:
+Yukarıda gösterildiği örnek olarak, köşeli parantez ile kapsayan tarafından Ara değerli bir dize bir ifade içerir:
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-Bu komut, bir proje dosyası ile bir temel .NET Core projesi oluşturur *interpolated.csproj*ve kaynak kodu dosyasının *Program.cs*. Yürütme gerekecek `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.
+Derleme zamanında Ara değerli bir dize genellikle dönüştürülür bir <xref:System.String.Format%2A?displayProperty=nameWithType> yöntem çağrısı. Tüm özelliklerine yapar [bileşik biçimlendirme dize](../../standard/base-types/composite-formatting.md) özelliği de ara değerli dizeler ile kullanmak için de kullanılabilir.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Ara değerli bir ifade için bir biçim dizesi belirtme
 
-Programı çalıştırmak üzere kullanmadan `dotnet run`. "Hello, World" çıkışı konsola görmeniz gerekir.
-
-
-
-## <a name="intro-to-string-interpolation"></a>İlişkilendirme dize giriş
-
-İle <xref:System.String.Format%2A?displayProperty=nameWithType>, "yer tutucuları" dizesini izleyen bağımsız değişkenleri tarafından değiştirilen bir dize belirtin. Örneğin:
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-Bu, "adımın Matt Groves olduğu" çıkarır.
-
-C# 6 kullanmak yerine, `String.Format`, Ara değerli bir dize ile başlayan tanımladığınız `$` sembol ve sonra doğrudan dizesindeki değişkenleri kullanma. Örneğin:
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-Yalnızca değişkenleri kullanmanız gerekmez. Köşeli ayraçlar içindeki herhangi bir ifade kullanabilirsiniz. Örneğin:
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-Hangi çıktı:
+Ara değerli ifadesi iki nokta ile izleyerek ifade sonucunun türü tarafından desteklenen bir biçim dizesini belirtin (":") ve biçim dizesi:
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>Dize ilişkilendirme nasıl çalışır?
+Aşağıdaki örnekte, tarih ve saat veya sayısal sonuçlar üretmek ifadeler için standart ve özel biçim dizeleri belirtmek gösterilmektedir:
 
-Arka planda Bu dize ilişkilendirme sözdizimi veri dönüştürülür `String.Format` derleyici tarafından. Bu nedenle, yapabileceğiniz [aynı türde öğe işiniz önce ile `String.Format` ](../../standard/base-types/formatting-types.md).
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-Örneğin, doldurma ve sayısal biçimlendirme ekleyebilirsiniz:
+Daha fazla bilgi için bkz: [biçim dizesi bileşen](../../standard/base-types/composite-formatting.md#format-string-component) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu. Bu bölüm .NET temel türleri tarafından desteklenen standart ve özel biçim dizeleri açıklayan konulara bağlantılar sağlar.
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>Alan genişliği ve hizalamasını biçimlendirilmiş Ara değerli ifadesinin denetleme
 
-Yukarıdaki gibi bir çıktı:
+Ara değerli ifade virgül ile izleyerek en düşük alan genişliği ve biçimlendirilmiş ifade sonucu hizalamasını belirtin (",") ve sabit ifade:
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-Bir değişken adı bulunmazsa, derleme zamanı hatası oluşturulur.
+Varsa *hizalama* değer pozitif, sağa hizalı biçimlendirilmiş ifade sonucu; negatifse, sola hizalı.
 
-Örneğin:
+Hizalama ve bir biçim dizesi belirtmeniz gerekiyorsa, hizalama bileşeniyle başlatın:
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-Bu derleme, hataları alırsınız:
- 
-* `Cannot use local variable 'adj' before it is declared` - `adj` değildi değişkeni bildirilen kadar *sonra* Ara değerli dize.
-* `The name 'otheranimal' does not exist in the current context` -bir değişken adı verilen `otheranimal` hiçbir zaman bile bildirildi
+Aşağıdaki örnek hizalamayı belirtme gösterir ve kullandığı kanal karakterler ("|") metin alanları sınırlandırmak için:
 
-## <a name="localization-and-internationalization"></a>Yerelleştirme ve uluslararası hale getirme
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-Ara değerli bir dize destekleyen <xref:System.IFormattable?displayProperty=nameWithType> ve <xref:System.FormattableString?displayProperty=nameWithType>, hangi uygulamalar için yararlı olabilir.
+Örnek olarak biçimlendirilmiş ifade sonucunun uzunluğu aşması durumunda çıkış gösterir, alan genişliği belirtilen *hizalama* değeri yoksayılır.
 
-Varsayılan olarak, geçerli kültürü Ara değerli bir dize kullanır. Farklı bir kültür kullanmak için Ara değerli bir dize olarak cast `IFormattable`. Örneğin:
+Daha fazla bilgi için bkz: [hizalama bileşen](../../standard/base-types/composite-formatting.md#alignment-component) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu.
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>Ara değerli bir dize çıkış sıraları kullanma
 
-## <a name="conclusion"></a>Sonuç 
+Ara değerli dizeler kullanılabilir tüm kaçış sıraları sıradan dize değişmez değerleri destekler. Daha fazla bilgi için bkz: [dize kaçış sıraları](../programming-guide/strings/index.md#string-escape-sequences).
 
-Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz. Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle bazı uyarılar için daha gelişmiş kullanır. Daha fazla bilgi için bkz: [dize ilişkilendirme](../../csharp//language-reference/tokens/interpolated.md) konu.
+Kaçış dizileri tam anlamıyla yorumlamak için kullanılan kullanan bir [verbatim](../language-reference/tokens/verbatim.md) dize sabit değeri. Harfi harfine Ara değerli bir dize ile başlayan `$` karakter arkasından `@` karakter.
+
+Bir küme parantezi dahil etmek için "{" veya "}", bir sonuç dizesinde iki küme ayraçları kullanmak "{{" veya "}}". Daha fazla bilgi için bkz: [kaçış ayraçlar](../../standard/base-types/composite-formatting.md#escaping-braces) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu.
+
+Aşağıdaki örnek, sonuç dizesinde kaşlı ayraç içeren ve verbatim Ara değerli dizesi oluşturmak gösterilmektedir:
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>Üçlü koşullu bir işleç kullanma `?:` Ara değerli deyimde
+
+İki nokta üst üste olarak (":") kullanmak için bir ara değerli ifade sahip bir öğe içinde özel bir anlamı yoktur bir [koşullu işleç](../language-reference/operators/conditional-operator.md) aşağıdaki örnekte gösterildiği gibi parantez içine bir ifadede:
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Kültüre özgü Sonuç dizesini dize ilişkilendirme oluşturma
+
+Varsayılan olarak, Ara değerli bir dize tarafından tanımlanan geçerli kültür kullanır <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> tüm biçimlendirme işlemleri için özellik. Ara değerli bir dize olarak örtük dönüştürme kullanmak bir <xref:System.FormattableString?displayProperty=nameWithType> örneği ve arama kendi <xref:System.FormattableString.ToString(System.IFormatProvider)> bir kültüre özgü sonuç dizesi oluşturmak için yöntem. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+Örnekte gösterildiği gibi kullanabilirsiniz <xref:System.FormattableString> çeşitli kültürler için birden çok sonuç dizelerini oluşturmak için örnek.
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Sabit kültür kullanarak bir sonuç dize oluşturma
+
+İle birlikte <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> yöntemi statik kullanabilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> Ara değerli bir dize için bir sonuç dizeye çözümlemek için yöntemi <xref:System.Globalization.CultureInfo.InvariantCulture>. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>Sonuç
+
+Bu öğretici dize ilişkilendirme kullanımı genel senaryolar açıklanmaktadır. Dize ilişkilendirme hakkında daha fazla bilgi için bkz: [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu. Biçimlendirme .NET türleri hakkında daha fazla bilgi için bkz: [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) ve [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) Konular.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[Dizeler](../programming-guide/strings/index.md)  

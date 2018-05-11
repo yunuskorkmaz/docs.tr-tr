@@ -10,24 +10,25 @@ helpviewer_keywords:
 - $ language element [C#]
 - string interpolation [C#]
 - interpolated string [C#]
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: c6915e49c442c80459dae85ac2598a0fa5ed3182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 7a2e281dfecdb7baeaeb58ad68232bcd7d371595
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
-`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *Ara değerli dize*. Ara değerli bir dize içeren bir şablon dize gibi görünüyor *Ara değerli ifadeleri*. Ara değerli dize Sonuç dizesini çözümlendiğinde Ara değerli ifadelerle öğeleri ifade sonuçları dize gösterimlerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde kullanılabilir.
+`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *Ara değerli dize*. Ara değerli bir dize içerebilecek bir değişmez dize değeri olan *Ara değerli ifadeleri*. Ara değerli dize Sonuç dizesini çözümlendiğinde Ara değerli ifadelerle öğeleri ifade sonuçları dize gösterimlerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde dil kullanılabilir.
 
 Dize ilişkilendirme daha biçimlendirilmiş dizeler oluşturmak için daha okunabilir ve kullanışlı bir sözdizimi sağlar bir [bileşik biçimlendirme dize](../../../standard/base-types/composite-formatting.md) özelliği. Aşağıdaki örnek, aynı çıktı oluşturmak için her iki özellik kullanır:
 
 [!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
-> [!NOTE]
-> Arasında herhangi bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması, derleme zamanı hatasına neden olur.
+## <a name="structure-of-an-interpolated-string"></a>Ara değerli bir dize yapısı
+
+Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle başına `$` simgesi. Arasında herhangi bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması, derleme zamanı hatasına neden olur.
 
 Ara değerli bir ifadenin bir öğesiyle yapısı aşağıdaki gibidir:
 
@@ -39,17 +40,19 @@ Köşeli parantezler içindeki öğeler isteğe bağlıdır. Aşağıdaki tablo 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`interpolatedExpression`|Biçimlendirilecek bir sonuç almak için değerlendirilecek olan ifade. Dize gösterimini `null` sonuç <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`interpolatedExpression`|Biçimlendirilmiş olması için bir sonuç üreten ifade. Dize gösterimini `null` sonuç <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Sabit ifade değeri Ara değerli ifadenin sonucu dize gösterimini en az karakter sayısını tanımlar. Pozitif, sağa hizalı dize gösterimi; negatifse, sola hizalı. Daha fazla bilgi için bkz: [hizalama bileşen](../../../standard/base-types/composite-formatting.md#alignment-component).|
-|`formatString`|İfade sonucunun türü tarafından desteklenen standart veya özel biçim dizesi. Daha fazla bilgi için bkz: [biçim dizesi bileşen](../../../standard/base-types/composite-formatting.md#format-string-component).|
+|`formatString`|İfade sonucunun türü tarafından desteklenen bir biçim dizesi. Daha fazla bilgi için bkz: [biçim dizesi bileşen](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 Aşağıdaki örnek, yukarıda açıklanan biçimlendirme isteğe bağlı bileşenler kullanır:
 
 [!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
-Bir küme parantezi içerecek şekilde ("{" veya "}") iki küme ayraçları Ara değerli bir dize üretilen metinde kullanmak "{{" veya "}}". Daha fazla bilgi için bkz: [kaçış ayraçlar](../../../standard/base-types/composite-formatting.md#escaping-braces).
+## <a name="special-characters"></a>Özel karakterler
 
-Noktalı virgül (;) özel bir anlamı kullanmak için bir ara değerli ifade öğesi var. gibi bir [koşullu işleç](../operators/conditional-operator.md) Ara değerli bir ifadede bu ifadesi parantez içine alın.
+Bir küme parantezi dahil etmek için "{" veya "}", iki küme ayraçları Ara değerli bir dize tarafından üretilen metin kullanma "{{" veya "}}". Daha fazla bilgi için bkz: [kaçış ayraçlar](../../../standard/base-types/composite-formatting.md#escaping-braces).
+
+İki nokta üst üste olarak (":") kullanmak için bir ara değerli ifade öğesinde özel bir anlamı yoktur bir [koşullu işleç](../operators/conditional-operator.md) Ara değerli bir ifadede bu ifadesi parantez içine alın.
 
 Aşağıdaki örnekte, ayraç sonuç dizeye dahil etme ve Ara değerli bir ifadede koşullu bir işleç kullanma gösterilmektedir:
 
@@ -60,6 +63,8 @@ Harfi harfine dizeler Kullan'ı değiştirilmiş `$` karakter arkasından `@` ka
 > [!NOTE]
 > `$` Belirteci önce görünmelidir `@` verbatim Ara değerli dize belirteci.
 
+## <a name="implicit-conversions-and-specifying-iformatprovider-implementation"></a>Örtük dönüşümler ve belirterek `IFormatProvider` uygulama
+
 Ara değerli bir dizeden üç örtük dönüşümler vardır:
 
 1. Ara değerli bir dizeye dönüştürme bir <xref:System.String> Ara değerli ifade ile Ara değerli dize çözümlemesi sonucu örneği öğelerini sonuçları düzgün biçimlendirilmiş dize gösterimlerini ile değiştiriliyor. Bu dönüştürme geçerli kültürü kullanır.
@@ -67,8 +72,10 @@ Ara değerli bir dizeden üç örtük dönüşümler vardır:
 1. Ara değerli bir dizeye dönüştürme bir <xref:System.FormattableString> boyunca bileşik biçim dizesi Biçimlendirilecek ifade sonuçlarla temsil eden örneği. Kültüre özgü ile birden çok sonuç dizesi oluşturmak için tek bir içerik sağlayan <xref:System.FormattableString> örneği. Yapmak için aşağıdaki yöntemlerden birini arayın:
 
       - A <xref:System.FormattableString.ToString> için bir sonuç dize üreten aşırı <xref:System.Globalization.CultureInfo.CurrentCulture>.
-      - A <xref:System.FormattableString.Invariant%2A> için bir sonuç dize üreten yöntem <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Bir <xref:System.FormattableString.Invariant%2A> için bir sonuç dize üreten yöntem <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - A <xref:System.FormattableString.ToString(System.IFormatProvider)> belirtilen kültür için bir sonuç dize üreten yöntem.
+
+    Aynı zamanda <xref:System.FormattableString.ToString(System.IFormatProvider)> , kullanıcı tanımlı bir uygulama sunmak amacıyla yöntemi <xref:System.IFormatProvider> özel biçimlendirmeyi destekler arabirimi. Daha fazla bilgi için bkz: [özel biçimlendirme ICustomFormatter ile](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter).
 
 1. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanızı sağlayan örnek dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği.
 
@@ -76,14 +83,16 @@ Aşağıdaki örnek, örtük dönüştürmeye kullanır <xref:System.Formattable
 
 [!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
-Dize ilişkilendirme yeniyseniz, denetleme [dize ilişkilendirme C#](../../quick-starts/interpolated-strings.yml) hızlı başlangıç. Daha fazla örnek için bkz: [dize ilişkilendirme Öğreticisi](../../tutorials/string-interpolation.md).
+## <a name="additional-resources"></a>Ek kaynaklar
+
+Dize ilişkilendirme yeni istiyorsanız bkz [dize ilişkilendirme C#](../../quick-starts/interpolated-strings.yml) hızlı başlangıç. Daha fazla örnek için bkz: [dize ilişkilendirme C#](../../tutorials/string-interpolation.md) Öğreticisi.
 
 ## <a name="see-also"></a>Ayrıca bkz.  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  [Bileşik biçimlendirme](../../../standard/base-types/composite-formatting.md)  
- [Dizeler](../../../csharp/programming-guide/strings/index.md)  
- [C# Özel Karakterleri](../../../csharp/language-reference/tokens/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
+ [Dizeler](../../programming-guide/strings/index.md)  
+ [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+ [C# Özel Karakterleri](index.md)  
+ [C# başvurusu](../index.md)  

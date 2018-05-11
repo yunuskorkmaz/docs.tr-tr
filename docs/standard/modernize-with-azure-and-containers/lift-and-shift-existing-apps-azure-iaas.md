@@ -1,22 +1,22 @@
 ---
-title: Kaldırın ve mevcut uygulamalar Azure Iaas kaydırma
+title: Kaldırın ve mevcut .NET uygulamalarını Azure Iaas (bulut altyapı hazır) kaydırma
 description: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b844373d4ea995b553d9a32ea51997fd664064bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 458b1bd1fc9fc24ce43d0926655fe0767aabc43c
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="lift-and-shift-existing-apps-azure-iaas"></a>Kaldırın ve mevcut uygulamalar Azure Iaas kaydırma
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Kaldırın ve mevcut .NET uygulamalarını Azure Iaas (bulut altyapı hazır) kaydırma
 
 > Görme: şirket içi yatırım ve toplam maliyeti donanım azaltın ve yeniden barındırma bakım, ağ yalnızca mevcut uygulamalarınızı bulutta bir ilk adım.
 
 İçine alma önce *nasıl* mevcut uygulamalarınızı Azure altyapı (ıaas) platformu olarak geçirmek için nedenleri çözümlemek önemli olduğunu *neden* doğrudan Iaas geçirmek istediğiniz Azure'da. Bu modernization olgunluk düzeyde aslında geçerli, şirket içi altyapınızı kullanmaya devam edebilirsiniz yerine bulutta VM'ler kullanmaya başlamak için senaryodur.
 
-Analiz etmek için başka bir nokta *neden* saf Iaas bulutuna daha gelişmiş yönetilen Azure hizmetlerinde yalnızca eklemek yerine geçirmek isteyebilirsiniz. Hangi durumlarda olabilir belirlemek gereken Iaas ilk başta gerektirir.
+Analiz etmek için başka bir nokta *neden* saf Iaas bulutuna daha gelişmiş yönetilen Azure hizmetlerinde yalnızca eklemek yerine geçirmek isteyebilirsiniz. Hangi durumlarda olabilir belirlemek Iaas ilk başta gerektirir.
 
 Şekil 2-1'de modernization olgunluk düzeyleri bulut altyapısı çapında kullanılmaya hazır uygulamalar yerleştirir:
 
@@ -30,17 +30,17 @@ Maliyet azaltması elde etmek için bile, ilk bir Iaas düzeyinde buluta geçirm
 
 Buluta uygulamalarınızı geçmeye karar yaptıktan sonra neden, Iaas yerine PaaS basitçe, olduğu gibi daha gelişmiş seçenekler Iaas ortam tercih edebileceğiniz ana nedeni daha tanıdık gelecektir. Geçerli için benzer bir ortama taşıma, bir alt öğrenme olmasını sağlayan en hızlı yolu buluta eğrisi, şirket içi ortamı sunar.
 
-Ancak, en hızlı yolu buluta alma, uygulamalarınızı bulutta çalışan sahip gelen çoğu avantajı elde anlamına gelmez. Herhangi bir kuruluştaki zaten sunulan bulut DevOps hazır ve PaaS (bulut Hızlandırılmış) olgunluk düzeyleri bulut taşınan en önemli avantajlarını elde edersiniz.
+Ancak, en hızlı yolu buluta alma, uygulamalarınızı bulutta çalışan sahip gelen çoğu avantajı elde anlamına gelmez. Herhangi bir kuruluştaki önceden sunulan bulut optimize ve bulut-yerel olgunluk düzeylerinde bulut taşınan en önemli avantajlarını elde edersiniz.
 
-Ayrıca korumalı uygulamaları modernize ve gelecekte zaten bulutta bile Iaas üzerinde çalışırken yeniden düzenlenmesine daha kolay olur. Uygulama veri geçişi zaten elde kısmen doğru olmasıdır. Ayrıca, kuruluşunuz bulutta çalışmak için gerekli niteliklere kazanılan ve bir "bulut kültürün." işletim için shift yapılan
+Ayrıca korumalı uygulamaları modernize ve bunlar zaten bulutta bile Iaas üzerinde çalışırken gelecekte rearchitect daha kolay olur. Uygulama veri geçişi zaten kazanmıştır. Ayrıca, kuruluşunuz bulutta çalışmak için gerekli niteliklere kazanılan ve bir "bulut kültürün." işletim için shift yapılan
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Ne zaman yerine bir Iaas PaaS için geçirmek için
 
-Sonraki bölümlerde PaaS platformları ve Hizmetleri çoğunlukla göre bulut DevOps çapında kullanılmaya hazır uygulamalar açıklanmaktadır. Bu uygulamaları buluta geçiş çoğu avantajları verin.
+Sonraki bölümlerde PaaS platformları ve Hizmetleri çoğunlukla göre bulut iyileştirilmiş uygulamalar açıklanmaktadır. Bu uygulamaları buluta geçiş çoğu avantajları verin. 
 
-Amacınız yalnızca uygulamalarınız buluta taşımak için ilk olarak, Azure App Service'te çalıştırmak için önemli değişiklik gerektiren uygulamalarınız belirlemek. Bu uygulamaları ilk adayları olmalıdır.
+Amacınız yalnızca uygulamalarınız buluta taşımak için ilk olarak, Azure App Service'te çalıştırmak için önemli değişiklik gerek duymaz mevcut uygulamaları belirlemek. Bu uygulamalar için ilk aday olmalıdır Bulutla optimize edilmiş. 
 
-İstemiyorsanız veya hala Windows kapsayıcıları ve/veya Azure Service Fabric veya Kubernetes gibi orchestrators taşıyamazsınız, düz VM'ler (Iaas) kullanırsınız sonra henüz, ardından durumdur.
+Uygulama hizmeti veya Azure Service Fabric gibi orchestrators geçirmek gibi basit düz VM'ler (Iaas) için daha sonra uygulamalar için hala Windows kapsayıcıları ve PaaS taşınamıyor. 
 
 Ancak, doğru yapılandırma, güvenliği ve VM'ler koruyarak daha fazla zaman ve Azure'da PaaS hizmetleri kullanmaya kıyasla BT uzmanlık gerektirdiğini unutmayın. Azure sanal makineleri düşünüyorsanız, düzeltme eki, güncelleştirme ve VM ortamınızı yönetmek için gerekli devam eden bakım çaba dikkate almanız emin olun. Azure sanal makinelerin Iaas şeklindedir.
 

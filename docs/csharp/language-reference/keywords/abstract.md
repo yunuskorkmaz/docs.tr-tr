@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 40b374bff392cfebc6a9d889e3859d912aa9fb69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
 `abstract` Değiştiricisi değiştirilen bir şey yok veya eksik bir uygulaması olduğunu gösterir. Soyut değiştiricisi sınıfları, yöntemleri, özellikleri, dizin oluşturucular ve olayları ile kullanılabilir. Kullanım `abstract` bir sınıfı diğer sınıfların temel sınıf yalnızca olması amaçlanmıştır belirtmek için bir sınıf bildirimindeki değiştiricisi. Özet olarak işaretlenmiş ya da bir Özet sınıfta dahil üyeleri soyut sınıftan türeyen sınıflar tarafından uygulanmalıdır.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
     public abstract void MyMethod();  
     ```  
   
-     Uygulama bir yöntemi tarafından sağlanan [geçersiz kılma](../../../csharp/language-reference/keywords/override.md), soyut olmayan sınıfı üyesi olduğu.  
+     Uygulama yöntemi tarafından sağlanan [geçersiz kılma](../../../csharp/language-reference/keywords/override.md), soyut olmayan sınıfı üyesi olduğu.  
   
 -   Kullanmak için bir hata olduğunu [statik](../../../csharp/language-reference/keywords/static.md) veya [sanal](../../../csharp/language-reference/keywords/virtual.md) değiştiricileri bir Özet yöntem bildirimi.  
   

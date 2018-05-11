@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarları altında olduğunda barındırılan (inetmgr.exe Aracı'nı kullanarak) IIS içinde yapılandırılabilir. Bir WCF Hizmeti kendini barındıran ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -19,7 +19,7 @@ WCF hizmetleri ve istemcilerin HTTP ve HTTPS iletişim kurabilir. HTTP/HTTPS aya
   
  Çalıştırırken [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe aracını kullanın. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Bu araç otomatik olarak yükler. Çalıştırırken [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aracı indirebilirsiniz [Windows XP Service Pack 2 Destek Araçları](http://go.microsoft.com/fwlink/?LinkId=88606). Daha fazla bilgi için bkz: [Httpcfg genel bakış](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Çalıştırırken [!INCLUDE[wv](../../../../includes/wv-md.md)]veya Windows 7, yapılandırdığınız bu ayarlar Netsh.exe aracıyla.  
+ Çalıştırırken [!INCLUDE[wv](../../../../includes/wv-md.md)] veya Windows 7, yapılandırdığınız bu ayarlar Netsh.exe aracıyla.  
   
 ## <a name="configuring-namespace-reservations"></a>Namespace ayırmaları yapılandırma  
  Namespace ayırma HTTP URL ad alanı bir kısmı rights kullanıcıların belirli bir gruba atar. Bir ayırma kullanıcılarla ad alanı bu kısmı üzerinde dinleme hizmetler oluşturma hakkı verir. Ayırmalar ayırma ayırma yolun tüm alt yolları kapsanmakta anlamına gelir, URL ön ekleri. Namespace ayırmaları joker karakter kullanmanın iki yolu izin verir. HTTP Sunucusu API belgelerine açıklar [joker karakterler içeren ad alanı talep arasında çözümleme sırasını](http://go.microsoft.com/fwlink/?LinkId=94841).  

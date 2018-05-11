@@ -4,11 +4,11 @@ description: .NET core bir modüler, yüksek performanslı .NET Windows, Linux v
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -31,14 +31,14 @@ En iyi aşağıdaki özelliklere .NET Core tanımlayın:
 
 - A [.NET çalışma zamanı](https://github.com/dotnet/coreclr), bir tür sistemi, derleme yüklenirken, atık toplayıcı, yerel birlikte çalışabilirliği ve diğer temel hizmetleri sağlar. 
 - Bir dizi [framework kitaplıkları](https://github.com/dotnet/corefx), temel veri türleri, uygulama birleşim türleri ve temel yardımcı programlarını sağlar. 
-- A [SDK Araçları kümesi](https://github.com/dotnet/cli) ve [dil derleyicileri](https://github.com/dotnet/roslyn) bulunan temel geliştirici deneyimi etkinleştirmek [.NET Core SDK](sdk.md).
+- A [SDK Araçları kümesi](https://github.com/dotnet/cli) ve dil derleyicileri ([Roslyn](https://github.com/dotnet/roslyn) ve [F #](https://github.com/microsoft/visualfsharp)) bulunan temel geliştirici deneyimi etkinleştirmek [.NET Core SDK](sdk.md).
 - .NET Core uygulamaları başlatmak için kullanılan 'dotnet' uygulama ana bilgisayarı. Çalışma zamanı seçer çalışma zamanı barındırır, bir derlemeyi yükleme ilke sağlar ve uygulamasını başlatır. Aynı ana kadar aynı şekilde SDK Araçları başlatmak için de kullanılır.
 
 ### <a name="languages"></a>Diller
 
 C#, Visual Basic ve F # dilleri, uygulamalar ve kitaplıklar için .NET Core yazmak için kullanılabilir. Derleyicileri .NET Core üzerinde .NET Core için herhangi bir yere geliştirmenizi etkinleştirme onu çalışır çalıştırın. Genel olarak, size derleyicileri doğrudan, dolaylı olarak SDK araçları kullanarak ancak kullanmaz.
 
-C#, Visual Basic ve F # derleyicileri ve .NET Core araçları veya çeşitli metin düzenleyiciler ve IDE, Visual Studio dahil olmak üzere tümleşik [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve bir seçenek olarak .NET Core geliştirme yapma VIM, Sık kullanılan ortam ve işletim sistemi kodlama. Bu tümleştirme, kısmen iyi çok kişi tarafından sağlanan [OmniSharp proje](http://www.omnisharp.net/).
+C#, Visual Basic ve F # derleyicileri ve .NET Core araçları veya çeşitli metin düzenleyiciler ve IDE, Visual Studio dahil olmak üzere tümleşik [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve bir seçenek olarak .NET Core geliştirme yapma VIM, Sık kullanılan ortam ve işletim sistemi kodlama. Bu tümleştirme, kısmen iyi çok kişi tarafından sağlanan [OmniSharp proje](http://www.omnisharp.net/) ve [Ionide](http://ionide.io).
 
 ### <a name="net-apis-and-compatibility"></a>.NET API'ları ve uyumluluk
 

@@ -1,14 +1,14 @@
 ---
 title: İzlenecek yollar ve teknik başlatılan özeti
-description: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize | izlenecek yollar ve teknik başlatılan özeti
+description: Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize | İzlenecek yollar ve teknik başlatılan özeti
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b41fe9e8b492b1348cc5615f6254d5fd3ddebf25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 27de9d1c5475855a22f2d8a3518982605277f6d9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlatılan özeti
 
@@ -22,9 +22,11 @@ Aşağıdaki get-started izlenecek kaldırın ve kapsayıcılar kullanarak kayd�
 
 Her biri aşağıdaki izlenecek github'da kullanılabilir olan yeni örnek eShopLegacy ve eShopModernizing uygulamaları kullanır [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
 
-- **Elektronik Mağaza eski uygulamaları turu**
+- **Elektronik Mağaza eski uygulamalara (modernize için temel) turu**
 
-- **Var olan .NET uygulamalarınız Windows kapsayıcılarla containerize**
+- **Mevcut ASP.NET web uygulamalarınızı (WebForms & MVC) ile Windows kapsayıcıları containerize**
+
+- **Windows kapsayıcılarla mevcut WCF hizmetlerini (N katmanlı uygulamalar) containerize**
 
 - **Azure VM'ler kapsayıcıları tabanlı Windows uygulamanızı dağıtma**
 
@@ -32,59 +34,61 @@ Her biri aşağıdaki izlenecek github'da kullanılabilir olan yeni örnek eShop
 
 - **Azure Service Fabric Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma**
 
+
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Gözden geçirme 1: Elektronik Mağaza eski uygulamaları turu
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
 
 Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+[eShopModernizing wiki izlenecek yollar](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+
 
 ### <a name="overview"></a>Genel Bakış
 
-Bu kılavuzda, iki örnek eski uygulamalar ilk uyarlamasını keşfedebilirsiniz. Her iki örnek uygulamaları tek yapılı bir mimariye sahip ve klasik ASP.NET kullanılarak oluşturulmuş. ASP.NET ile tabanlı bir uygulamayı 4.x MVC; İkinci uygulama ASP.NET 4.x Web Forms üzerinde temel alır. Her iki uygulamada bulunan [eShopModernizing GitHub deposuna](https://github.com/dotnet-architecture/eShopModernizing).
+Bu kılavuzda, üç örnek eski uygulamalar ilk uyarlamasını keşfedebilirsiniz. İlk iki örnek web uygulamaları tek yapılı bir mimariye sahip ve klasik ASP.NET kullanılarak oluşturulmuş. ASP.NET ile tabanlı bir uygulamayı 4.x MVC; İkinci uygulama ASP.NET 4.x Web Forms üzerinde temel alır. İstemci WinForms uygulama ve sunucu tarafı tarafından oluşturulan 3 katmanlı uygulama üçüncü uygulamadır [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) hizmet.
 
-Her iki örnek uygulamaları containerize, benzer şekilde, Klasik containerize [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) bir masaüstü uygulaması olarak kullanılması (WCF) uygulama. Bir örnek için bkz: [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Bu uygulamalar kullanılabilir [eShopModernizing GitHub deposuna](https://github.com/dotnet-architecture/eShopModernizing).
 
 ### <a name="goals"></a>Hedefleri
 
 Asıl amacı, bu kılavuzda yalnızca bu uygulamalarla ve kendi kod ve yapılandırma hakkında bilgi edinmek için ' dir. Böylece oluşturmak ve test amacıyla SQL veritabanı kullanmadan sahte veriler kullanmak uygulamaları yapılandırabilirsiniz. Bu isteğe bağlı yapılandırma bağımlılık ekleme, ayrılmış bir biçimde temel alır.
 
-### <a name="scenario"></a>Senaryo
+### <a name="scenario-1-aspnet-web-apps"></a>Senaryo 1: ASP.NET Web uygulamaları
 
-Şekil 5-1 özgün eski uygulamaları basit bir senaryo gösterir.
+Aşağıdaki şekilde özgün eski ASP.NET web uygulamaları basit bir senaryo gösterilmektedir.
 
-> ![Basit mimarisi senaryo özgün eski uygulamalar](./media/image5-1.png)
+> ![Özgün eski ASP.NET web uygulamalarının basit mimarisi senaryosu](./media/image5-1.png)
 >
-> **Şekil 5-1.** Basit mimarisi senaryo özgün eski uygulamalar
 
-Bir iş etki alanı açısından bakıldığında, hem uygulamalar aynı katalog yönetimi özellikleri sunar. Elektronik Mağaza Kurumsal ekibi üyelerinin uygulamayı görüntülemek ve ürün kataloğu düzenlemek için kullanırsınız. Şekil 5-2 ilk uygulama ekran görüntüleri gösterir.
+Bir iş etki alanı açısından bakıldığında, hem uygulamalar aynı katalog yönetimi özellikleri sunar. Elektronik Mağaza Kurumsal ekibi üyelerinin uygulamayı görüntülemek ve ürün kataloğu düzenlemek için kullanırsınız. 
+
+Sonraki şekilde, ilk uygulama ekran görüntüleri gösterir.
 
 ![ASP.NET MVC ve ASP.NET Web Forms uygulamaları (varolan eski teknolojileri)](./media/image5-2.png)
 
-> **Şekil 5-2.** ASP.NET MVC ve ASP.NET Web Forms uygulamaları (varolan eski teknolojileri)
+Bağımlılıklar ASP.NET 4.x veya önceki sürümleri (veya MVC için Web formları için) anlamına gelir kodu tam olarak ASP.NET Core MVC kullanarak yeniden yazılmıştır sürece bu uygulamaları .NET Core üzerinde çalışmaz. 
 
-Gözat ve Katalog girişleri değiştirmek için kullanılan web uygulamaları şunlardır. Her iki uygulamalar aynı iş/işlevsel özellikleri sunmak olgu yalnızca karşılaştırma amacıyla kullanılır. ASP.NET MVC ve ASP.NET Web Forms çerçeveler kullanılarak oluşturulmuş olan uygulamalar için benzer bir modernization işlem görebilirsiniz.
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Senaryo 2: WCF hizmeti ve WinForms istemci uygulaması (3 katmanlı uygulama)
 
-Bağımlılıklar ASP.NET 4.x veya önceki sürümleri (veya MVC için Web formları için) anlamına gelir kodu tam olarak ASP.NET Core MVC kullanarak yeniden yazılmıştır sürece bu uygulamaları .NET Core üzerinde çalışmaz. Bu yeniden düzenlenmesine veya kodu yeniden istemediğiniz yaparsanız, mevcut uygulamaları containerize ve hala aynı .NET teknolojileri ve aynı kodu kullan olduğunu noktası gösterir. Bu eski kod için herhangi bir değişiklik yapılmadan kapsayıcılarında gibi uygulamaları nasıl çalıştırabileceğiniz görebilirsiniz.
+Aşağıdaki şekilde özgün 3 katmanlı eski uygulamayı basit bir senaryo gösterilmektedir.
+
+> ![Bir WCF Hizmeti özgün eski 3 katmanlı uygulama ve bir WinForms istemci uygulaması basit mimarisi senaryosu](./media/image5-1.5.png)
+>
 
 ### <a name="benefits"></a>Yararları
 
-Bu kılavuzda yararları basit: yalnızca bağımlılık ekleme temel kod ve uygulama yapılandırma hakkında bilgi edinin. Ardından, containerize ve birden çok ortamlar için gelecekte dağıtırken Bu yaklaşımda deneyebilirsiniz.
+Bu kılavuzda yararları basit: yalnızca ilk uygulamaları ve kod ile hakkında bilgi edinin.
 
 ### <a name="next-steps"></a>Sonraki adımlar
 
 Bu içerik daha kapsamlı GitHub Wiki'de keşfedin:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+  - [ASP.NET MVC taban tur ve Web Forms "eski" uygulamalar](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+  - [Temel WCF hizmeti ve WinForms (Katman 3) "eski" uygulama turu](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>İzlenecek yol: 2: var olan .NET uygulamalarınız Windows kapsayıcılarla Containerize
-
-### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
-
-Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ### <a name="overview"></a>Genel Bakış
 
@@ -102,13 +106,20 @@ Bu kılavuzun amacı, var olan bir .NET Framework uygulamasını containerizing 
 
 Bu kılavuz Docker yaklaşım için Visual Studio 2017 araçları odaklanır, ancak diğer iki yaklaşım Dockerfiles kullanarak in regard to oldukça benzer.
 
-### <a name="scenario"></a>Senaryo
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Senaryo 1: Kapsayıcılı ASP.NET web uygulamaları
 
-Şekil 5-3 kapsayıcılı Elektronik Mağaza eski uygulamaları senaryosu gösterilmektedir.
+Aşağıdaki şekilde kapsayıcılı Elektronik Mağaza eski web apps uygulamaları senaryosu gösterilmektedir.
 
-> ![Bir geliştirme ortamı kapsayıcılı uygulamalarda Basitleştirilmiş mimarisi diyagramı](./media/image5-3.png)
+> ![ASP.NET uygulamaları geliştirme ortamında kapsayıcılı Basitleştirilmiş mimarisi diyagramı](./media/image5-3.png)
 >
-> **Şekil 5-3.** Bir geliştirme ortamı kapsayıcılı uygulamalarda Basitleştirilmiş mimarisi diyagramı
+
+
+### <a name="scenario-2-containerized-wcf-service"></a>Senaryo 2: Kapsayıcılı WCF Hizmeti
+
+Aşağıdaki şekilde kapsayıcılı WCF Hizmeti ile 3 katmanlı uygulama senaryosu gösterilmektedir. 
+
+> ![Basitleştirilmiş bir geliştirme ortamı kapsayıcılı WCF hizmeti mimarisi diyagramı](./media/image5-3.5.png)
+>
 
 ### <a name="benefits"></a>Yararları
 
@@ -122,15 +133,18 @@ Kapsayıcılı uygulamaları daha düz genişleme eğri de vardır. Kapsayıcıl
 
 ### <a name="next-steps"></a>Sonraki adımlar
 
-Bu içerik daha kapsamlı GitHub Wiki'de keşfedin: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+Bu içerik daha kapsamlı GitHub Wiki'de keşfedin:
+
+  - [.NET Framework web uygulamalarını Windows kapsayıcıları ve Docker ile containerize nasıl](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+  - [Bir WCF hizmetine Docker desteği ekleme](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
+
+
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>İzlenecek yol: 3: kapsayıcıları tabanlı Windows uygulamanızı Azure VM'ler için dağıtma
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
 
-Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>Genel Bakış
 
@@ -178,7 +192,46 @@ Bu içerik daha kapsamlı GitHub Wiki'de keşfedin:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>İzlenecek yol: 4: Azure kapsayıcı Hizmeti'nde Kubernetes Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>İzlenecek yol: 4: Azure kapsayıcı örnekleri (ACI) Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma
+
+### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
+
+Tam teknik Kılavuzu eShopModernizing GitHub deposuna wiki kullanılabilir:
+
+[Uygulamaları dağıtma ACI (Azure kapsayıcı örnekleri)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+
+### <a name="overview"></a>Genel Bakış
+
+[Azure kapsayıcı örnekleri (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/) kapsayıcıları tek tek örneklerini dağıtabileceğiniz kapsayıcıları dev/test/hazırlama ortamına sahip olmak için en hızlı yoludur.
+
+### <a name="goals"></a>Hedefleri
+
+Bu kılavuzda Windows kapsayıcıları Azure kapsayıcı örnekleri (ACI) ve ACI eShopModernizing uygulamalarını nasıl dağıtabileceğini dağıtırken ana senaryo gösterir.
+
+### <a name="scenarios"></a>Senaryolar
+
+Tek veya tüm uygulamaların (MVC uygulama, WebForms uygulaması veya WCF Hizmeti) dağıtmak gibi ACI eShopModernizing uygulamaları dağıtma hakkında Çeşitlemeler olabilir. Aşağıda gösterilen aşağıdaki senaryoda, ASP.NET MVC uygulaması artı ikisinin dağıtılan SQL Server kapsayıcı kapsayıcıları (Azure kapsayıcı örnekleri) ACI görebilirsiniz.
+
+![Geliştirme ortamından ACI için dağıtma](./media/image5-3.5.6.png)
+
+### <a name="benefits"></a>Yararları
+
+Azure kapsayıcı örnekleri oluşturmak ve sanal makineler sağlamak veya bir üst düzey hizmet benimsemeyi zorunda kalmadan, azure'da Docker kapsayıcıları yönetmek kolay hale getirir. ACI ile doğrudan Azure Windows kapsayıcısında dağıtabilir ve (Windows kapsayıcı görüntünün hazır Docker hub'a veya Azure kapsayıcı gibi Docker defterinde olması koşuluyla, bir tam etki alanı adı (FQDN) ile Internet'e birkaç saniye içinde kullanıma sunma Kayıt defteri).
+
+### <a name="considerations"></a>Dikkat Edilecekler
+
+Tam ya da .NET Framework ile Windows kapsayıcıları dağıtma / ASP.NET veya SQL Server Azure kapsayıcı örnekleri (ACI) içine Docker görüntü olduğu normal bir Docker ana bilgisayar (örneğin, Windows Server 2016 Windows kapsayıcılarla) dağıtma olarak oldukça hızlı değil her zaman (Docker kayıt defterinden çekilen) indirilir ve kendi docker ana (kalıcı olarak çevrimiçi koruma daha ucuz ancak SQL kapsayıcı görüntüsünü (15.1 GB) ve ASP.NET kapsayıcı görüntüsünü (13.9 GB) boyutunu önemli ölçüde büyük Windows Server 2016 ile azure'da Windows kapsayıcıları VM), diğer yandan, üretim dağıtımları için harika seçenekleri olan Kubernetes Azure (AKS/ACS) veya Azure Service Fabric gibi tüm orchestrator gerekeceğinden buraya değil.
+
+Ana sonuç, Azure kapsayıcı örnekleri CI/CD ardışık düzen ve geliştirme ve Test senaryoları için çok ilgi çekici bir seçenek kullanmaktır.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Bu içerik daha kapsamlı GitHub Wiki'de keşfedin: 
+
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+
+
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>5 izlenecek yol: Kubernetes Azure kapsayıcı hizmetinde kapsayıcıları tabanlı Windows uygulamalarınızı dağıtma
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
 
@@ -238,7 +291,7 @@ Kubernetes ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmek
 
 Bu içerik daha kapsamlı GitHub Wiki'de keşfedin: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 5: Azure Service Fabric Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 6: Azure Service Fabric Windows kapsayıcıları tabanlı uygulamalarınızı dağıtma
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirliği
 
