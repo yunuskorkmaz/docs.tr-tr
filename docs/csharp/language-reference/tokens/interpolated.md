@@ -12,15 +12,15 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 7a2e281dfecdb7baeaeb58ad68232bcd7d371595
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
-ms.translationtype: HT
+ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
-`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *Ara değerli dize*. Ara değerli bir dize içerebilecek bir değişmez dize değeri olan *Ara değerli ifadeleri*. Ara değerli dize Sonuç dizesini çözümlendiğinde Ara değerli ifadelerle öğeleri ifade sonuçları dize gösterimlerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde dil kullanılabilir.
+`$` Özel karakter tanımlayan bir dize sabit değeri olarak bir *Ara değerli dize*. Ara değerli bir dize içerebilecek bir değişmez dize değeri olan *Ara değerli ifadeleri*. Ara değerli bir dize sonucu dizeye çözümlendiğinde Ara değerli ifadelerle öğeleri ifade sonuçları dize gösterimlerini tarafından değiştirilir. Bu özellik, C# 6 ve sonraki sürümlerinde dil kullanılabilir.
 
 Dize ilişkilendirme daha biçimlendirilmiş dizeler oluşturmak için daha okunabilir ve kullanışlı bir sözdizimi sağlar bir [bileşik biçimlendirme dize](../../../standard/base-types/composite-formatting.md) özelliği. Aşağıdaki örnek, aynı çıktı oluşturmak için her iki özellik kullanır:
 
@@ -28,7 +28,7 @@ Dize ilişkilendirme daha biçimlendirilmiş dizeler oluşturmak için daha okun
 
 ## <a name="structure-of-an-interpolated-string"></a>Ara değerli bir dize yapısı
 
-Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle başına `$` simgesi. Arasında herhangi bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması, derleme zamanı hatasına neden olur.
+Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle başına `$` simgesi. Arasında herhangi bir boşluk olamaz `$` ve `"` bir değişmez dize değeri başlatır. Bunun yapılması, derleme zamanı hatasına neden olur.
 
 Ara değerli bir ifadenin bir öğesiyle yapısı aşağıdaki gibidir:
 
@@ -36,7 +36,7 @@ Ara değerli bir ifadenin bir öğesiyle yapısı aşağıdaki gibidir:
 {<interpolatedExpression>[,<alignment>][:<formatString>]}
 ```
 
-Köşeli parantezler içindeki öğeler isteğe bağlıdır. Aşağıdaki tablo her öğeyi açıklar.
+Köşeli parantezler içindeki öğeler isteğe bağlıdır. Aşağıdaki tabloda her öğesi açıklar:
 
 |Öğe|Açıklama|
 |-------------|-----------------|
@@ -54,11 +54,11 @@ Bir küme parantezi dahil etmek için "{" veya "}", iki küme ayraçları Ara de
 
 İki nokta üst üste olarak (":") kullanmak için bir ara değerli ifade öğesinde özel bir anlamı yoktur bir [koşullu işleç](../operators/conditional-operator.md) Ara değerli bir ifadede bu ifadesi parantez içine alın.
 
-Aşağıdaki örnekte, ayraç sonuç dizeye dahil etme ve Ara değerli bir ifadede koşullu bir işleç kullanma gösterilmektedir:
+Aşağıdaki örnek, sonuç dizesinde ayraç ekleme ve Ara değerli bir ifadede koşullu bir işleç kullanmayı gösterir:
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Harfi harfine dizeler Kullan'ı değiştirilmiş `$` karakter arkasından `@` karakter. Harfi harfine dizeler hakkında daha fazla bilgi için bkz: [dize](../keywords/string.md) konu.
+Harfi harfine Ara değerli bir dize ile başlayan `$` karakter arkasından `@` karakter. Harfi harfine dizeler hakkında daha fazla bilgi için bkz: [dize](../keywords/string.md) ve [verbatim tanımlayıcı](verbatim.md) Konular.
 
 > [!NOTE]
 > `$` Belirteci önce görünmelidir `@` verbatim Ara değerli dize belirteci.

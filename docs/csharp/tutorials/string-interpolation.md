@@ -1,13 +1,13 @@
 ---
 title: C# dize ilişkilendirme
-description: Dize ilişkilendirme ile C# sonuç dizesine biçimlendirilmiş ifade sonuçlarında öğrenin.
+description: Dize ilişkilendirme ile C# sonuç dizesinde biçimlendirilmiş ifade sonuçlarında öğrenin.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 3e463ceb0902658107280559b7fb57849beb8153
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
-ms.translationtype: HT
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# dize ilişkilendirme #
 
@@ -23,7 +23,7 @@ Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle
 
 [!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-Yukarıda gösterildiği örnek olarak, köşeli parantez ile kapsayan tarafından Ara değerli bir dize bir ifade içerir:
+Örnekte gösterildiği gibi bir ifade bir ara değerli dizesi içinde köşeli parantez ile kapsayan tarafından şunlardır:
 
 ```
 {<interpolatedExpression>}
@@ -97,7 +97,7 @@ Varsayılan olarak, Ara değerli bir dize tarafından tanımlanan geçerli kült
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Sabit kültür kullanarak bir sonuç dize oluşturma
 
-İle birlikte <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> yöntemi statik kullanabilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> Ara değerli bir dize için bir sonuç dizeye çözümlemek için yöntemi <xref:System.Globalization.CultureInfo.InvariantCulture>. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
+İle birlikte <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> yöntemi statik kullanabilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> Ara değerli bir dize için bir sonuç dize çözümlemek için yöntemi <xref:System.Globalization.CultureInfo.InvariantCulture>. Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 
