@@ -2,11 +2,11 @@
 title: Değerler (F#)
 description: 'F # değerleri belirli bir türe sahip miktarları nasıl olduğunu öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>Değerler
 
@@ -20,6 +20,7 @@ Terim *bağlama* bir adı bir tanımıyla ilişkilendirme anlamına gelir. `let`
 
 Bir değerin türü tanımı algılanır. Bir tam sayı veya kayan nokta sayısı gibi basit bir tür için türü sabit türünden belirlenir. Bu nedenle, önceki örnekte türü derleyici oluşturur `b` olmasını `unsigned int`, türü derleyici oluşturur ancak `a` olmasını `int`. Bir işlev değerin türü, işlev gövdesi dönüş değerden belirlenir. İşlev değer türleri hakkında daha fazla bilgi için bkz: [işlevler](../functions/index.md). Değişmez değer türleri hakkında daha fazla bilgi için bkz: [değişmez değerleri](../literals.md).
 
+Derleyici, varsayılan olarak kullanılmayan bağlamaları hakkında tanılama kesmez. Bu iletiler almayı etkinleştirme 1182 proje dosyası veya derleyici çağrılırken, uyarı (bkz `--warnon` altında [derleyici seçenekleri](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Değişmez neden?
 Değişmez değerler bir programın yürütme seyri değiştirilemez değerlerdir. C++, Visual Basic veya C# gibi diller için kullandıysanız, şaşırtıcı F # primacy bir program yürütülmesi sırasında yeni değerler atanabilir değişkenleri yerine değişmez değerler üzerinden geçirir olduğunu görebilirsiniz. Sabit veri işlevsel programlama önemli bir öğedir. Birden çok iş parçacıklı bir ortamda, birçok farklı iş parçacıkları tarafından değiştirilebilecek paylaşılan değişebilir yönetmek zor değişkenlerdir. Ayrıca, değişebilir değişkenlerle, bazen başka bir işleve geçirildiğinde bir değişken değişebilir varsa söyleyin zor olabilir.
@@ -35,6 +36,8 @@ Anahtar sözcüğünü kullanabilirsiniz `mutable` değiştirilebilir bir deği�
 Kullanarak bir başlangıç değeri değişebilir bir değişkene atayabilirsiniz `let` anahtar ile aynı şekilde bir değer tanımlamanız. Ancak, daha sonra yeni değerleri değişebilir değişkenlere kullanarak atayabilirsiniz olduğunu farktır `<-` aşağıdaki örnekteki gibi işleci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+İşaretli değerleri `mutable` için otomatik olarak yükseltilebilir `'a ref` kapatma tarafından yakalanan, kapanışlar, gibi oluşturmasına formlar dahil `seq` oluşturucular. Bu meydana geldiğinde bildirim almak istiyorsanız, uyarı etkinleştirin 3180 proje dosyası veya derleyicisini çağırma.
     
 ## <a name="related-topics"></a>İlgili Konular
 

@@ -22,7 +22,7 @@ Bulmak için iki farklı yolla **.NET derleyici Platform SDK** içinde **Visual 
 1. Çalıştırma **Visual Studio yükleyicisi** 
 1. Seçin **değiştirme** 
 1. Seçin **bileşenleri tek tek** sekmesi 
-1. Onay kutusunu için **.NET derleyici Platform SDK**. Bu son altında bulabilirsiniz **derleyicileri, yapı araçları ve çalışma zamanları** bölümü.
+1. Onay kutusunu için **.NET derleyici Platform SDK**. Üst altında bulabilirsiniz **derleyicileri, yapı araçları ve çalışma zamanları** bölümü.
 
 İsteğe bağlı olarak, ayrıca istediğiniz **DGML Düzenleyicisi** Görselleştirici grafikleri görüntülemek için:
 

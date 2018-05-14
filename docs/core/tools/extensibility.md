@@ -4,11 +4,11 @@ description: Komut satırı arabirimi (CLI) araçları nasıl genişletebileceğ
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 9f1d90b15d70b25c6dfeab5dd013bb9756b37a3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçlarını genişletilebilirlik modeli
 
@@ -20,15 +20,15 @@ CLI araçlarını üç temel şekilde genişletilebilir:
 
 1. [Proje başına temelinde NuGet paketleri](#per-project-based-extensibility)
 
-  Proje başına araçları projenin bağlamı içinde yer alır, ancak geri yükleme aracılığıyla kolay yükleme sağlarlar.
+   Proje başına araçları projenin bağlamı içinde yer alır, ancak geri yükleme aracılığıyla kolay yükleme sağlarlar.
 
 2. [Özel hedefler NuGet paketleri](#custom-targets)
 
-  Özel hedefleri kolayca özel görevlerle derleme işlemini genişletme olanak sağlar.
+   Özel hedefleri kolayca özel görevlerle derleme işlemini genişletme olanak sağlar.
 
 3. [Sistem yolu](#path-based-extensibility)
 
-  YOL tabanlı araçlar, tek bir makinede kullanılabilen genel, çapraz proje araçları için iyidir.
+   YOL tabanlı araçlar, tek bir makinede kullanılabilen genel, çapraz proje araçları için iyidir.
 
 Yukarıda özetlenen üç genişletilebilirlik mekanizması özel değildir. Biri veya tümü, kullanabilirsiniz veya bir birleşimi. Hangisinin seçmek için büyük ölçüde uzantısı ile elde etmek için çalıştığınız hedef bağlıdır.
 

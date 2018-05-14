@@ -12,14 +12,16 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 8dde37c41ccd0b172bc9cd08abebec7777861f1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. ve? [] null-conditional işleçleri (C# ve Visual Basic)
-Null üye erişimi gerçekleştirmeden önce test etmek için kullanılan (`?.`) veya dizin (`?[]`) işlemi.  Bu işleçleri özellikle veri yapılara azalan düzen için null işlemek için daha az kod denetler yazmanıza yardımcı olur.  
+Üye erişimi gerçekleştirmeden önce sol işleneni null değerini sınar (`?.`) veya dizin (`?[]`) döndürür; işlem `null` sol işleneni değerlendirilirse `null`. 
+
+Bu işleçleri özellikle veri yapılara azalan düzen için null işlemek için daha az kod denetler yazmanıza yardımcı olur.  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -33,7 +35,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Null koşul işleçleri short-circuiting.  Koşullu üye erişimi ve dizin işlemi zinciri tek bir işlemde null değeri döndürülürse, rest zincirinin yürütme durdurur.  Aşağıdaki örnekte, `E` varsa yürütmez `A`, `B`, veya `C` null olarak değerlendirir.
+ Null-conditional işleçleri short-circuiting.  Koşullu üye erişimi ve dizin işlemi zinciri tek bir işlemde null değeri döndürülürse, rest zincirinin yürütme durdurur.  Aşağıdaki örnekte, `E` varsa yürütmez `A`, `B`, veya `C` null olarak değerlendirir.
   
 ```csharp
 A?.B?.C?.Do(E);
@@ -45,7 +47,7 @@ A?.B?.C?.Do(E);
 A?.B?.C?(E);
 ```  
   
- Null koşul üyesi erişim için başka bir kullanım temsilciler çok daha az kod ile iş parçacığı açısından güvenli şekilde çalıştırır.  Eski şekilde aşağıdaki gibi bir kod gerektirir:  
+ Başka bir kullanım null-conditional üye erişimi için çok az kod ile iş parçacığı açısından güvenli şekilde temsilciler çalıştırır.  Eski şekilde aşağıdaki gibi bir kod gerektirir:  
   
 ```csharp  
 var handler = this.PropertyChanged;  
@@ -62,16 +64,14 @@ If handler IsNot Nothing
  Yeni yol çok daha kolaydır:  
   
 ```csharp
-PropertyChanged?.Invoke(e)  
+PropertyChanged?.Invoke(…)  
 ```  
 
 ```vb
-PropertyChanged?.Invoke(e)
+PropertyChanged?.Invoke(…)
 ```  
   
- Derleyici değerlendirmek için kod oluşturur çünkü iş parçacığı yeni yoludur `PropertyChanged` sonucu geçici bir değişkende tutma yalnızca bir kez.  
-  
- Açıkça çağırmanız gerekir `Invoke` yöntemi hiçbir null-conditional temsilci çağırma sözdizimi olduğundan `PropertyChanged?(e)`.  
+ Derleyici değerlendirmek için kod oluşturur çünkü iş parçacığı yeni yoludur `PropertyChanged` sonucu geçici bir değişkende tutma yalnızca bir kez. Açıkça çağırmanız gerekir `Invoke` yöntemi hiçbir null-conditional temsilci çağırma sözdizimi olduğundan `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Dil belirtimleri  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -82,5 +82,4 @@ PropertyChanged?.Invoke(e)
  [?? (null birleşim işleci)](null-conditional-operator.md)  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)  
  [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

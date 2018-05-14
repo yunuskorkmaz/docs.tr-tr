@@ -2,11 +2,11 @@
 title: Başvuru Hücreleri (F#)
 description: 'F # başvuru hücreleri değişebilir değerleri başvuru semantiği ile oluşturmanıza olanak sağlaması depolama konumları ne olduğunu öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>Başvuru Hücreleri
 
@@ -81,6 +81,9 @@ Başvuruya göre geçirme hakkında daha fazla bilgi için bkz: [parametreler ve
 >[!NOTE]
 C# programcıları C# ' ta göründüğünden bu ref farklı F # içinde çalıştığını bilmeniz. C# ' ta aksine Örneğin, bir bağımsız değişken geçirdiğinizde ref kullanımını aynı etkiye F #'ta yok.
 
+>[!NOTE]
+`mutable` değişkenleri otomatik olarak tanıtılması için `'a ref` tarafından kapatma; yakalanan olup [değerleri](values/index.md).
+
 ## <a name="consuming-c-ref-returns"></a>C# tüketme `ref` döndürür
 
 F # 4.1 ile başlayarak, size tüketebileceği `ref` C# ' de oluşturulan döndürür.  Bu tür bir çağrının sonucu olan bir `byref<_>` işaretçi.
@@ -132,3 +135,5 @@ let f (x: byref<int>) = &x
 [Parametreler ve Bağımsız Değişkenler](parameters-and-arguments.md)
 
 [Simge ve İşleç Başvurusu](symbol-and-operator-reference/index.md)
+
+[Değerler](values/index.md)

@@ -2,11 +2,11 @@
 title: Ayrılmış Birleşimler (F#)
 description: 'F # kullanmayı öğrenin birleşimler.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -16,14 +16,16 @@ Ayrılmış birleşimler, bir dizi adlandırılmış durumlarda, büyük olasıl
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Ayrılmış birleşimler diğer dillerde birleşim türlerini benzer ancak bazı farklılıklar vardır. Olarak bir birleşim türü c++ veya Visual Basic değişken türü değerinde depolanan verileri Düzeltilmemiş; Bu seçeneklerden biri veya birkaçı farklı olabilir. Bu diğer dillerdeki birleşimler, Bununla birlikte, her bir olası seçenek verilir bir *servis talebi tanımlayıcısı*. Bu tür nesneler olabilir değerleri çeşitli olası türleri için adları büyük/küçük harfe tanımlayıcılardır; değerleri isteğe bağlıdır. Değerler mevcut değilse, bir numaralandırma durumu eşdeğer bir durumdur. Değerleri varsa, her değer ya da belirtilen bir tür ya da aynı veya farklı türdeki birden çok alan toplayan bir tanımlama grubu tek bir değer olabilir. F # 3.1, itibariyle tek bir alanı bir ad verin, ancak diğer alanlar aynı durumda adlı olsa bile isteğe bağlı adıdır.
+Ayrılmış birleşimler diğer dillerde birleşim türlerini benzer ancak bazı farklılıklar vardır. Olarak bir birleşim türü c++ veya Visual Basic değişken türü değerinde depolanan verileri Düzeltilmemiş; Bu seçeneklerden biri veya birkaçı farklı olabilir. Bu diğer dillerdeki birleşimler, Bununla birlikte, her bir olası seçenek verilir bir *servis talebi tanımlayıcısı*. Bu tür nesneler olabilir değerleri çeşitli olası türleri için adları büyük/küçük harfe tanımlayıcılardır; değerleri isteğe bağlıdır. Değerler mevcut değilse, bir numaralandırma durumu eşdeğer bir durumdur. Değerleri varsa, her değer ya da belirtilen bir tür ya da aynı veya farklı türdeki birden çok alan toplayan bir tanımlama grubu tek bir değer olabilir. Tek bir alanı bir ad verin, ancak diğer alanlar aynı durumda adlı olsa bile isteğe bağlı adıdır.
+
+Ayrılmış birleşimler için erişilebilirlik varsayılanları `public`.
 
 Örneğin, bir şekil türü aşağıdaki bildirimi göz önünde bulundurun.
 
