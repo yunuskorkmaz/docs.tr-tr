@@ -1,29 +1,17 @@
 ---
 title: '&lt;endpointExtensions&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47aad13591e3a35433cafea3e49fff7fa6e7b7c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c80b9edb2da9368c0f53be7068d638b045ac19c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltendpointextensionsgt"></a><span data-ttu-id="12d75-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="12d75-102">&lt;endpointExtensions&gt;</span></span>
-<span data-ttu-id="12d75-103">Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç noktası kaydeder veya uygulama yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="12d75-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="12d75-104">Kullanarak standart bir uç noktası bu koleksiyona ekleyebileceğiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği uç nokta türü öğenin yanı sıra `name` öznitelik standart uç nokta adına.</span><span class="sxs-lookup"><span data-stu-id="12d75-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
+# <a name="ltendpointextensionsgt"></a><span data-ttu-id="2b855-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="2b855-102">&lt;endpointExtensions&gt;</span></span>
+<span data-ttu-id="2b855-103">Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç noktası kaydeder veya uygulama yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="2b855-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="2b855-104">Kullanarak standart bir uç noktası bu koleksiyona ekleyebileceğiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği uç nokta türü öğenin yanı sıra `name` öznitelik standart uç nokta adına.</span><span class="sxs-lookup"><span data-stu-id="2b855-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
   
- <span data-ttu-id="12d75-105">Aşağıdaki örnek kullanır `add` öğenin yanı sıra `name` için standart bir uç noktası eklemek için öznitelik `<endpointExtensions>` yapılandırma dosyasının.</span><span class="sxs-lookup"><span data-stu-id="12d75-105">The following example uses the `add` element, as well as the `name` attribute to add a standard endpoint to the `<endpointExtensions>` section of the configuration file.</span></span>  
+ <span data-ttu-id="2b855-105">Aşağıdaki örnek kullanır `add` öğenin yanı sıra `name` için standart bir uç noktası eklemek için öznitelik `<endpointExtensions>` yapılandırma dosyasının.</span><span class="sxs-lookup"><span data-stu-id="2b855-105">The following example uses the `add` element, as well as the `name` attribute to add a standard endpoint to the `<endpointExtensions>` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="12d75-106">Standart uç nokta kaydedildikten sonra aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="12d75-106">After the standard endpoint has been registered, you can use it as shown in the following example.</span></span> <span data-ttu-id="12d75-107">İçinde [ \<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi, `kind` özniteliği belirtir, kayıtlı standart uç nokta türü `<endpointExtensions>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="12d75-107">In the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element, the `kind` attribute specifies the standard endpoint type that has been registered in the `<endpointExtensions>` section.</span></span> <span data-ttu-id="12d75-108">`endpointConfiguration` Özniteliği aynı olacaktır `name` standart uç yapılandırma öğesinin özniteliği `<standardEndpoints>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="12d75-108">The `endpointConfiguration` attribute will be identical to the `name` attribute of the configuration element of the standard endpoint in the `<standardEndpoints>` section.</span></span>  
+ <span data-ttu-id="2b855-106">Standart uç nokta kaydedildikten sonra aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2b855-106">After the standard endpoint has been registered, you can use it as shown in the following example.</span></span> <span data-ttu-id="2b855-107">İçinde [ \<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi, `kind` özniteliği belirtir, kayıtlı standart uç nokta türü `<endpointExtensions>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="2b855-107">In the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element, the `kind` attribute specifies the standard endpoint type that has been registered in the `<endpointExtensions>` section.</span></span> <span data-ttu-id="2b855-108">`endpointConfiguration` Özniteliği aynı olacaktır `name` standart uç yapılandırma öğesinin özniteliği `<standardEndpoints>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="2b855-108">The `endpointConfiguration` attribute will be identical to the `name` attribute of the configuration element of the standard endpoint in the `<standardEndpoints>` section.</span></span>  
   
 ```xml  
 <system.serviceModel>  

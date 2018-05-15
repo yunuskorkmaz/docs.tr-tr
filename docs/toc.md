@@ -1109,4 +1109,15 @@
 
 <!-- End of VB Content -->
 
+<!-- ML.NET Content -->
+# [ML.NET Kılavuzu](machine-learning/index.md)
+## [Öğreticiler](machine-learning/tutorials/index.md)
+### [Yaklaşım Analizi (Sınıflandırma)](machine-learning/tutorials/sentiment-analysis.md)
+### [Taksi Ücreti Göstergesi (Gerileme)](machine-learning/tutorials/taxi-fare.md)
+## [Kaynaklar](machine-learning/resources/index.md)
+### [Machine Learning Sözlüğü](machine-learning/resources/glossary.md)
+### [Machine Learning Temel Bilgileri](machine-learning/resources/basics.md)
+
+<!-- End ML.NET Content -->
+
 # [Örnekler ve Öğreticiler](samples-and-tutorials/index.md)

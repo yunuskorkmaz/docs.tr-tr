@@ -1,37 +1,27 @@
 ---
 title: '&lt;customTrackingQuery&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d4427ad1b45ceade29b8859d30eba746a70a27d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ddf19ed75d50f3cd5f20de8b0e2dfcdd5ea82b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcustomtrackingquerygt"></a><span data-ttu-id="293cb-102">&lt;customTrackingQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="293cb-102">&lt;customTrackingQuery&gt;</span></span>
-<span data-ttu-id="293cb-103">Kod etkinliklerinizi tanımladığınız olayları izlemek için kullanılan sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="293cb-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="293cb-104">Sorgu için özel izleme kayıtları abone olmak izleme katılımcı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="293cb-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
+# <a name="ltcustomtrackingquerygt"></a><span data-ttu-id="0476f-102">&lt;customTrackingQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="0476f-102">&lt;customTrackingQuery&gt;</span></span>
+<span data-ttu-id="0476f-103">Kod etkinliklerinizi tanımladığınız olayları izlemek için kullanılan sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="0476f-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="0476f-104">Sorgu için özel izleme kayıtları abone olmak izleme katılımcı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="0476f-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
   
- <span data-ttu-id="293cb-105">Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="293cb-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="0476f-105">Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="0476f-105">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="293cb-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="293cb-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="293cb-107">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="293cb-107">\<tracking></span></span>  
-<span data-ttu-id="293cb-108">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="293cb-108">\<trackingProfile></span></span>  
-<span data-ttu-id="293cb-109">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="293cb-109">\<workflow></span></span>  
-<span data-ttu-id="293cb-110">\<customTrackingQueries ></span><span class="sxs-lookup"><span data-stu-id="293cb-110">\<customTrackingQueries></span></span>  
-<span data-ttu-id="293cb-111">\<customTrackingQuery ></span><span class="sxs-lookup"><span data-stu-id="293cb-111">\<customTrackingQuery></span></span>  
+<span data-ttu-id="0476f-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="0476f-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="0476f-107">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="0476f-107">\<tracking></span></span>  
+<span data-ttu-id="0476f-108">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="0476f-108">\<trackingProfile></span></span>  
+<span data-ttu-id="0476f-109">\<İş akışı ></span><span class="sxs-lookup"><span data-stu-id="0476f-109">\<workflow></span></span>  
+<span data-ttu-id="0476f-110">\<customTrackingQueries ></span><span class="sxs-lookup"><span data-stu-id="0476f-110">\<customTrackingQueries></span></span>  
+<span data-ttu-id="0476f-111">\<customTrackingQuery ></span><span class="sxs-lookup"><span data-stu-id="0476f-111">\<customTrackingQuery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="293cb-112">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="293cb-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0476f-112">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0476f-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -46,27 +36,27 @@ ms.lasthandoff: 12/22/2017
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="293cb-113">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="293cb-113">Attributes and Elements</span></span>  
- <span data-ttu-id="293cb-114">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="293cb-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0476f-113">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="0476f-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="0476f-114">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0476f-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="293cb-115">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="293cb-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0476f-115">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="0476f-115">Attributes</span></span>  
   
-|<span data-ttu-id="293cb-116">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="293cb-116">Attribute</span></span>|<span data-ttu-id="293cb-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="293cb-117">Description</span></span>|  
+|<span data-ttu-id="0476f-116">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="0476f-116">Attribute</span></span>|<span data-ttu-id="0476f-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0476f-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="293cb-118">activityName</span><span class="sxs-lookup"><span data-stu-id="293cb-118">activityName</span></span>|<span data-ttu-id="293cb-119">İzleme kaydı oluşturulan etkinliğin adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="293cb-119">A string that specifies the name of the activity that generated the tracking record.</span></span>|  
-|<span data-ttu-id="293cb-120">name</span><span class="sxs-lookup"><span data-stu-id="293cb-120">name</span></span>|<span data-ttu-id="293cb-121">Yayılan özel izleme kaydın adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="293cb-121">A string that specifies the name of the custom tracking record that is emitted.</span></span>|  
+|<span data-ttu-id="0476f-118">activityName</span><span class="sxs-lookup"><span data-stu-id="0476f-118">activityName</span></span>|<span data-ttu-id="0476f-119">İzleme kaydı oluşturulan etkinliğin adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="0476f-119">A string that specifies the name of the activity that generated the tracking record.</span></span>|  
+|<span data-ttu-id="0476f-120">name</span><span class="sxs-lookup"><span data-stu-id="0476f-120">name</span></span>|<span data-ttu-id="0476f-121">Yayılan özel izleme kaydın adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="0476f-121">A string that specifies the name of the custom tracking record that is emitted.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="293cb-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="293cb-122">Child Elements</span></span>  
- <span data-ttu-id="293cb-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="293cb-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0476f-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="0476f-122">Child Elements</span></span>  
+ <span data-ttu-id="0476f-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="0476f-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="293cb-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="293cb-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0476f-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="0476f-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="293cb-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="293cb-125">Element</span></span>|<span data-ttu-id="293cb-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="293cb-126">Description</span></span>|  
+|<span data-ttu-id="0476f-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="0476f-125">Element</span></span>|<span data-ttu-id="0476f-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0476f-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="293cb-127">\<customTrackingQuery ></span><span class="sxs-lookup"><span data-stu-id="293cb-127">\<customTrackingQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|<span data-ttu-id="293cb-128">Kod etkinliklerinizi tanımladığınız olayları izlemek için kullanılan bir sorgu.</span><span class="sxs-lookup"><span data-stu-id="293cb-128">A query that is used to track events that you define in your code activities.</span></span>|  
+|[<span data-ttu-id="0476f-127">\<customTrackingQuery ></span><span class="sxs-lookup"><span data-stu-id="0476f-127">\<customTrackingQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|<span data-ttu-id="0476f-128">Kod etkinliklerinizi tanımladığınız olayları izlemek için kullanılan bir sorgu.</span><span class="sxs-lookup"><span data-stu-id="0476f-128">A query that is used to track events that you define in your code activities.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="293cb-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="293cb-129">See Also</span></span>  
- <span data-ttu-id="293cb-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="293cb-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="293cb-131"><xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="293cb-131"><xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType></span></span>         
- [<span data-ttu-id="293cb-132">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="293cb-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="293cb-133">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="293cb-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="0476f-129">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0476f-129">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>         
+ [<span data-ttu-id="0476f-130">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="0476f-130">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="0476f-131">İzleme Profilleri</span><span class="sxs-lookup"><span data-stu-id="0476f-131">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

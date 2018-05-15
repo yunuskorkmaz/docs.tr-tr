@@ -87,7 +87,6 @@
 ## [Nasıl yapılır: Ad Alanı Ön Eklerini Denetleme (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Varsayılan Ad Alanlarının Kapsamı](scope-of-default-namespaces.md)
 ## [Genel Ad Alanları ile Çalışma (LINQ to XML)](working-with-global-namespaces-linq-to-xml.md)
-## [Ad Alanları (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Nasıl yapılır: Ad Alanlarında XML Üzerinde Sorgu Yazma](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [XML Ağaçlarını Serileştirme](serializing-xml-trees.md)

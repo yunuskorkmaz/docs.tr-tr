@@ -1,27 +1,15 @@
 ---
-title: "&lt;Uzantıları&gt;"
-ms.custom: 
+title: '&lt;Uzantıları&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13d79a52690f8262b08c8510e1f78b7efbf3adab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f25c5f99eafe0f87123d8c8c3f5c182220e8c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="cba72-102">&lt;Uzantıları&gt;</span><span class="sxs-lookup"><span data-stu-id="cba72-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="cba72-103">Bu yapılandırma öğesi, standart bulunabilirlik meta verilerin yanı sıra (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanması için özel meta veriler içeren XML öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="cba72-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="cba72-104">Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="cba72-104">The following is an example of using this configuration element.</span></span>  
+# <a name="ltextensionsgt"></a><span data-ttu-id="77fa4-102">&lt;Uzantıları&gt;</span><span class="sxs-lookup"><span data-stu-id="77fa4-102">&lt;extensions&gt;</span></span>
+<span data-ttu-id="77fa4-103">Bu yapılandırma öğesi, standart bulunabilirlik meta verilerin yanı sıra (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanması için özel meta veriler içeren XML öğe koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="77fa4-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="77fa4-104">Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="77fa4-104">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>  
@@ -56,5 +44,5 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cba72-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cba72-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="77fa4-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="77fa4-105">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

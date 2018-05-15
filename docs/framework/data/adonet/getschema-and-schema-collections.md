@@ -1,38 +1,26 @@
 ---
-title: "GetSchema ve şeması koleksiyonları"
-ms.custom: 
+title: GetSchema ve şeması koleksiyonları
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c622dde5e73c84c3b317ffc2652c79632be89e2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="getschema-and-schema-collections"></a><span data-ttu-id="02b29-102">GetSchema ve şeması koleksiyonları</span><span class="sxs-lookup"><span data-stu-id="02b29-102">GetSchema and Schema Collections</span></span>
-<span data-ttu-id="02b29-103">**Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulayan sınıflar bir **GetSchema** şu anda bağlı olduğu, veritabanında ilgili şema bilgileri almak için kullanılan yöntem ve döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="02b29-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="02b29-104">**GetSchema** dönmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan bir aşırı yüklenmiş yöntemin bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="02b29-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="d68a2-102">GetSchema ve şeması koleksiyonları</span><span class="sxs-lookup"><span data-stu-id="d68a2-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="d68a2-103">**Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulayan sınıflar bir **GetSchema** şu anda bağlı olduğu, veritabanında ilgili şema bilgileri almak için kullanılan yöntem ve döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="d68a2-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="d68a2-104">**GetSchema** dönmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan bir aşırı yüklenmiş yöntemin bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="d68a2-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## <a name="specifying-the-schema-collections"></a><span data-ttu-id="02b29-105">Şema koleksiyonları belirtme</span><span class="sxs-lookup"><span data-stu-id="02b29-105">Specifying the Schema Collections</span></span>  
- <span data-ttu-id="02b29-106">İlk isteğe bağlı parametresi **GetSchema** bir dize olarak belirtilen bir koleksiyon adını bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="02b29-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="02b29-107">Şema koleksiyonların iki tür vardır: tüm sağlayıcılar için ortak olan ortak şeması koleksiyonları ve her sağlayıcıya özgü belirli şeması koleksiyonları.</span><span class="sxs-lookup"><span data-stu-id="02b29-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="d68a2-105">Şema koleksiyonları belirtme</span><span class="sxs-lookup"><span data-stu-id="d68a2-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="d68a2-106">İlk isteğe bağlı parametresi **GetSchema** bir dize olarak belirtilen bir koleksiyon adını bir yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="d68a2-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="d68a2-107">Şema koleksiyonların iki tür vardır: tüm sağlayıcılar için ortak olan ortak şeması koleksiyonları ve her sağlayıcıya özgü belirli şeması koleksiyonları.</span><span class="sxs-lookup"><span data-stu-id="d68a2-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- <span data-ttu-id="02b29-108">Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections".</span><span class="sxs-lookup"><span data-stu-id="02b29-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="02b29-109">Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren.</span><span class="sxs-lookup"><span data-stu-id="02b29-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
+ <span data-ttu-id="d68a2-108">Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections".</span><span class="sxs-lookup"><span data-stu-id="d68a2-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="d68a2-109">Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren.</span><span class="sxs-lookup"><span data-stu-id="d68a2-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="02b29-110">Şema koleksiyonları örnek alma</span><span class="sxs-lookup"><span data-stu-id="02b29-110">Retrieving Schema Collections Example</span></span>  
- <span data-ttu-id="02b29-111">Aşağıdaki örnekler nasıl kullanılacağını gösteren <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server için .NET Framework veri sağlayıcısı yöntemi <xref:System.Data.SqlClient.SqlConnection> şema tüm içinde yer alan tabloları hakkında bilgi almak için sınıf **AdventureWorks**örnek veritabanı:</span><span class="sxs-lookup"><span data-stu-id="02b29-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="d68a2-110">Şema koleksiyonları örnek alma</span><span class="sxs-lookup"><span data-stu-id="d68a2-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="d68a2-111">Aşağıdaki örnekler nasıl kullanılacağını gösteren <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server için .NET Framework veri sağlayıcısı yöntemi <xref:System.Data.SqlClient.SqlConnection> şema tüm içinde yer alan tabloları hakkında bilgi almak için sınıf **AdventureWorks**örnek veritabanı:</span><span class="sxs-lookup"><span data-stu-id="d68a2-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -115,6 +103,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="02b29-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="02b29-112">See Also</span></span>  
- [<span data-ttu-id="02b29-113">Veritabanı Şema Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="02b29-113">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [<span data-ttu-id="02b29-114">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="02b29-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d68a2-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d68a2-112">See Also</span></span>  
+ [<span data-ttu-id="d68a2-113">Veritabanı Şema Bilgilerini Alma</span><span class="sxs-lookup"><span data-stu-id="d68a2-113">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [<span data-ttu-id="d68a2-114">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="d68a2-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

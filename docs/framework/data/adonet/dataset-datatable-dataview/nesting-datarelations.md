@@ -1,34 +1,22 @@
 ---
-title: "İç içe geçme DataRelations"
-ms.custom: 
+title: İç içe geçme DataRelations
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c057e836e8903fc2f5cb28f74858be97d2ffcc14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="nesting-datarelations"></a><span data-ttu-id="53987-102">İç içe geçme DataRelations</span><span class="sxs-lookup"><span data-stu-id="53987-102">Nesting DataRelations</span></span>
-<span data-ttu-id="53987-103">İlişkisel bir veri içinde gösterimini tek tek tablolar birbirine bir sütun veya sütun kümesini kullanarak ilişkili satırları içerir.</span><span class="sxs-lookup"><span data-stu-id="53987-103">In a relational representation of data, individual tables contain rows that are related to one another using a column or set of columns.</span></span> <span data-ttu-id="53987-104">ADO.NET <xref:System.Data.DataSet>, tablolar arasında ilişki kullanılarak uygulanan bir <xref:System.Data.DataRelation>.</span><span class="sxs-lookup"><span data-stu-id="53987-104">In the ADO.NET <xref:System.Data.DataSet>, the relationship between tables is implemented using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="53987-105">Oluştururken bir **DataRelation**, sütun üst alt ilişkilerinde yalnızca ilişkisi yönetilir.</span><span class="sxs-lookup"><span data-stu-id="53987-105">When you create a **DataRelation**, the parent-child relationships of the columns are managed only through the relation.</span></span> <span data-ttu-id="53987-106">Tablolar ve sütunlar ayrı varlıklardır.</span><span class="sxs-lookup"><span data-stu-id="53987-106">The tables and columns are separate entities.</span></span> <span data-ttu-id="53987-107">XML sağlayan veri hiyerarşik gösterimini üst alt ilişkilerinde iç içe geçmiş alt öğeleri içeren üst öğeler tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="53987-107">In the hierarchical representation of data that XML provides, the parent-child relationships are represented by parent elements that contain nested child elements.</span></span>  
+# <a name="nesting-datarelations"></a><span data-ttu-id="ac293-102">İç içe geçme DataRelations</span><span class="sxs-lookup"><span data-stu-id="ac293-102">Nesting DataRelations</span></span>
+<span data-ttu-id="ac293-103">İlişkisel bir veri içinde gösterimini tek tek tablolar birbirine bir sütun veya sütun kümesini kullanarak ilişkili satırları içerir.</span><span class="sxs-lookup"><span data-stu-id="ac293-103">In a relational representation of data, individual tables contain rows that are related to one another using a column or set of columns.</span></span> <span data-ttu-id="ac293-104">ADO.NET <xref:System.Data.DataSet>, tablolar arasında ilişki kullanılarak uygulanan bir <xref:System.Data.DataRelation>.</span><span class="sxs-lookup"><span data-stu-id="ac293-104">In the ADO.NET <xref:System.Data.DataSet>, the relationship between tables is implemented using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="ac293-105">Oluştururken bir **DataRelation**, sütun üst alt ilişkilerinde yalnızca ilişkisi yönetilir.</span><span class="sxs-lookup"><span data-stu-id="ac293-105">When you create a **DataRelation**, the parent-child relationships of the columns are managed only through the relation.</span></span> <span data-ttu-id="ac293-106">Tablolar ve sütunlar ayrı varlıklardır.</span><span class="sxs-lookup"><span data-stu-id="ac293-106">The tables and columns are separate entities.</span></span> <span data-ttu-id="ac293-107">XML sağlayan veri hiyerarşik gösterimini üst alt ilişkilerinde iç içe geçmiş alt öğeleri içeren üst öğeler tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="ac293-107">In the hierarchical representation of data that XML provides, the parent-child relationships are represented by parent elements that contain nested child elements.</span></span>  
   
- <span data-ttu-id="53987-108">İç içe alt nesnelerin kolaylaştırmak için bir **DataSet** ile eşitlenen bir <xref:System.Xml.XmlDataDocument> veya XML verileri kullanarak olarak yazılmış **WriteXml**, **DataRelation** kullanıma sunan bir **iç içe** özelliği.</span><span class="sxs-lookup"><span data-stu-id="53987-108">To facilitate the nesting of child objects when a **DataSet** is synchronized with an <xref:System.Xml.XmlDataDocument> or written as XML data using **WriteXml**, the **DataRelation** exposes a **Nested** property.</span></span> <span data-ttu-id="53987-109">Ayarı **iç içe** özelliği bir **DataRelation** için **true** alt satır XML verileri olarak yazılırken üst sütun içinde iç içe ilişkisinin neden olan veya eşitlenmiş bir **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="53987-109">Setting the **Nested** property of a **DataRelation** to **true** causes the child rows of the relation to be nested within the parent column when written as XML data or synchronized with an **XmlDataDocument**.</span></span> <span data-ttu-id="53987-110">**İç içe** özelliği **DataRelation** olan **yanlış**, varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="53987-110">The **Nested** property of the **DataRelation** is **false**, by default.</span></span>  
+ <span data-ttu-id="ac293-108">İç içe alt nesnelerin kolaylaştırmak için bir **DataSet** ile eşitlenen bir <xref:System.Xml.XmlDataDocument> veya XML verileri kullanarak olarak yazılmış **WriteXml**, **DataRelation** kullanıma sunan bir **iç içe** özelliği.</span><span class="sxs-lookup"><span data-stu-id="ac293-108">To facilitate the nesting of child objects when a **DataSet** is synchronized with an <xref:System.Xml.XmlDataDocument> or written as XML data using **WriteXml**, the **DataRelation** exposes a **Nested** property.</span></span> <span data-ttu-id="ac293-109">Ayarı **iç içe** özelliği bir **DataRelation** için **true** alt satır XML verileri olarak yazılırken üst sütun içinde iç içe ilişkisinin neden olan veya eşitlenmiş bir **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="ac293-109">Setting the **Nested** property of a **DataRelation** to **true** causes the child rows of the relation to be nested within the parent column when written as XML data or synchronized with an **XmlDataDocument**.</span></span> <span data-ttu-id="ac293-110">**İç içe** özelliği **DataRelation** olan **yanlış**, varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="ac293-110">The **Nested** property of the **DataRelation** is **false**, by default.</span></span>  
   
- <span data-ttu-id="53987-111">Örneğin, aşağıdakileri göz önünde bulundurun **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="53987-111">For example, consider the following **DataSet**.</span></span>  
+ <span data-ttu-id="ac293-111">Örneğin, aşağıdakileri göz önünde bulundurun **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="ac293-111">For example, consider the following **DataSet**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -70,9 +58,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- <span data-ttu-id="53987-112">Çünkü **iç içe** özelliği **DataRelation** nesne ayarlı değil **true** bu **DataSet**, bağımlı nesneler iç içe değil üst öğeler içinde olduğunda bu **DataSet** XML verileri olarak temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="53987-112">Because the **Nested** property of the **DataRelation** object is not set to **true** for this **DataSet**, the child objects are not nested within the parent elements when this **DataSet** is represented as XML data.</span></span> <span data-ttu-id="53987-113">XML gösterimini dönüştürme bir **DataSet** içeren ilgili **DataSet**olmayan iç içe geçmiş veri ilişkileri s yavaş performans neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="53987-113">Transforming the XML representation of a **DataSet** that contains related **DataSet**s with non-nested data relations can cause slow performance.</span></span> <span data-ttu-id="53987-114">Veri ilişkileri içe öneririz.</span><span class="sxs-lookup"><span data-stu-id="53987-114">We recommend that you nest the data relations.</span></span> <span data-ttu-id="53987-115">Bunu yapmak için ayarlayın **iç içe** özelliğine **doğru**.</span><span class="sxs-lookup"><span data-stu-id="53987-115">To do this, set the **Nested** property to **true**.</span></span> <span data-ttu-id="53987-116">Ardından kod bulun ve verileri dönüştürmek için yukarıdan aşağıya doğru hiyerarşik XPath sorgu ifadeleri kullanan XSLT stil sayfası yazın.</span><span class="sxs-lookup"><span data-stu-id="53987-116">Then write code in the XSLT style sheet that uses top-down hierarchical XPath query expressions to locate and transform the data.</span></span>  
+ <span data-ttu-id="ac293-112">Çünkü **iç içe** özelliği **DataRelation** nesne ayarlı değil **true** bu **DataSet**, bağımlı nesneler iç içe değil üst öğeler içinde olduğunda bu **DataSet** XML verileri olarak temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="ac293-112">Because the **Nested** property of the **DataRelation** object is not set to **true** for this **DataSet**, the child objects are not nested within the parent elements when this **DataSet** is represented as XML data.</span></span> <span data-ttu-id="ac293-113">XML gösterimini dönüştürme bir **DataSet** içeren ilgili **DataSet**olmayan iç içe geçmiş veri ilişkileri s yavaş performans neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="ac293-113">Transforming the XML representation of a **DataSet** that contains related **DataSet**s with non-nested data relations can cause slow performance.</span></span> <span data-ttu-id="ac293-114">Veri ilişkileri içe öneririz.</span><span class="sxs-lookup"><span data-stu-id="ac293-114">We recommend that you nest the data relations.</span></span> <span data-ttu-id="ac293-115">Bunu yapmak için ayarlayın **iç içe** özelliğine **doğru**.</span><span class="sxs-lookup"><span data-stu-id="ac293-115">To do this, set the **Nested** property to **true**.</span></span> <span data-ttu-id="ac293-116">Ardından kod bulun ve verileri dönüştürmek için yukarıdan aşağıya doğru hiyerarşik XPath sorgu ifadeleri kullanan XSLT stil sayfası yazın.</span><span class="sxs-lookup"><span data-stu-id="ac293-116">Then write code in the XSLT style sheet that uses top-down hierarchical XPath query expressions to locate and transform the data.</span></span>  
   
- <span data-ttu-id="53987-117">Aşağıdaki kod örneğinde arama sonuç gösterir **WriteXml** üzerinde **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="53987-117">The following code example shows the result from calling **WriteXml** on the **DataSet**.</span></span>  
+ <span data-ttu-id="ac293-117">Aşağıdaki kod örneğinde arama sonuç gösterir **WriteXml** üzerinde **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="ac293-117">The following code example shows the result from calling **WriteXml** on the **DataSet**.</span></span>  
   
 ```xml  
 <CustomerOrders>  
@@ -102,7 +90,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- <span data-ttu-id="53987-118">Unutmayın **müşteriler** öğesi ve **siparişleri** öğeleri Eşdüzey öğeleri olarak gösterilir.</span><span class="sxs-lookup"><span data-stu-id="53987-118">Note that the **Customers** element and the **Orders** elements are shown as sibling elements.</span></span> <span data-ttu-id="53987-119">İsterseniz **siparişleri** kendi ilgili üst öğeler alt öğesi olarak görüntülenmesini öğeleri **iç içe** özelliği **DataRelation** içinayarlanmışolmasıgerekir**doğru** ve aşağıdaki eklemeniz:</span><span class="sxs-lookup"><span data-stu-id="53987-119">If you wanted the **Orders** elements to show up as children of their respective parent elements, the **Nested** property of the **DataRelation** would need to be set to **true** and you would add the following:</span></span>  
+ <span data-ttu-id="ac293-118">Unutmayın **müşteriler** öğesi ve **siparişleri** öğeleri Eşdüzey öğeleri olarak gösterilir.</span><span class="sxs-lookup"><span data-stu-id="ac293-118">Note that the **Customers** element and the **Orders** elements are shown as sibling elements.</span></span> <span data-ttu-id="ac293-119">İsterseniz **siparişleri** kendi ilgili üst öğeler alt öğesi olarak görüntülenmesini öğeleri **iç içe** özelliği **DataRelation** içinayarlanmışolmasıgerekir**doğru** ve aşağıdaki eklemeniz:</span><span class="sxs-lookup"><span data-stu-id="ac293-119">If you wanted the **Orders** elements to show up as children of their respective parent elements, the **Nested** property of the **DataRelation** would need to be set to **true** and you would add the following:</span></span>  
   
 ```vb  
 customerOrders.Nested = True  
@@ -112,7 +100,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- <span data-ttu-id="53987-120">Aşağıdaki kod sonuçta çıktı gibi görünür gösterir ile **siparişleri** öğeleri, ilgili üst öğelerini içinde iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="53987-120">The following code shows what the resulting output would look like, with the **Orders** elements nested within their respective parent elements.</span></span>  
+ <span data-ttu-id="ac293-120">Aşağıdaki kod sonuçta çıktı gibi görünür gösterir ile **siparişleri** öğeleri, ilgili üst öğelerini içinde iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="ac293-120">The following code shows what the resulting output would look like, with the **Orders** elements nested within their respective parent elements.</span></span>  
   
 ```xml  
 <CustomerOrders>  
@@ -142,8 +130,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="53987-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="53987-121">See Also</span></span>  
- [<span data-ttu-id="53987-122">DataSet içinde XML kullanma</span><span class="sxs-lookup"><span data-stu-id="53987-122">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [<span data-ttu-id="53987-123">DataRelations Ekleme</span><span class="sxs-lookup"><span data-stu-id="53987-123">Adding DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
- [<span data-ttu-id="53987-124">DataSets, DataTables ve DataViews</span><span class="sxs-lookup"><span data-stu-id="53987-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="53987-125">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="53987-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="ac293-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ac293-121">See Also</span></span>  
+ [<span data-ttu-id="ac293-122">DataSet içinde XML kullanma</span><span class="sxs-lookup"><span data-stu-id="ac293-122">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="ac293-123">DataRelations Ekleme</span><span class="sxs-lookup"><span data-stu-id="ac293-123">Adding DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [<span data-ttu-id="ac293-124">DataSets, DataTables ve DataViews</span><span class="sxs-lookup"><span data-stu-id="ac293-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="ac293-125">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="ac293-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

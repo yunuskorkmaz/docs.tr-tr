@@ -1,14 +1,6 @@
 ---
-title: "&lt;providerOption&gt; öğesi"
-ms.custom: 
+title: '&lt;providerOption&gt; öğesi'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - provideroption
 helpviewer_keywords:
@@ -16,28 +8,25 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa3410cc2c8812c59528676bfad6cd7e887c5f73
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltprovideroptiongt-element"></a><span data-ttu-id="79ef8-102">&lt;providerOption&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-102">&lt;providerOption&gt; Element</span></span>
-<span data-ttu-id="79ef8-103">Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-103">Specifies the compiler version attributes for a language provider.</span></span>  
+# <a name="ltprovideroptiongt-element"></a><span data-ttu-id="f5e7d-102">&lt;providerOption&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-102">&lt;providerOption&gt; Element</span></span>
+<span data-ttu-id="f5e7d-103">Derleyici sürüm öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-103">Specifies the compiler version attributes for a language provider.</span></span>  
   
- <span data-ttu-id="79ef8-104">\<yapılandırma öğesi ></span><span class="sxs-lookup"><span data-stu-id="79ef8-104">\<configuration Element></span></span>  
-<span data-ttu-id="79ef8-105">\<system.codedom Element></span><span class="sxs-lookup"><span data-stu-id="79ef8-105">\<system.codedom Element></span></span>  
-<span data-ttu-id="79ef8-106">\<compilers Element></span><span class="sxs-lookup"><span data-stu-id="79ef8-106">\<compilers Element></span></span>  
-<span data-ttu-id="79ef8-107">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-107">\<compiler> Element</span></span>  
-<span data-ttu-id="79ef8-108">\<providerOption > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-108">\<providerOption> Element</span></span>  
+ <span data-ttu-id="f5e7d-104">\<yapılandırma öğesi ></span><span class="sxs-lookup"><span data-stu-id="f5e7d-104">\<configuration Element></span></span>  
+<span data-ttu-id="f5e7d-105">\<system.codedom Element></span><span class="sxs-lookup"><span data-stu-id="f5e7d-105">\<system.codedom Element></span></span>  
+<span data-ttu-id="f5e7d-106">\<compilers öğesi ></span><span class="sxs-lookup"><span data-stu-id="f5e7d-106">\<compilers Element></span></span>  
+<span data-ttu-id="f5e7d-107">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-107">\<compiler> Element</span></span>  
+<span data-ttu-id="f5e7d-108">\<providerOption > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-108">\<providerOption> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79ef8-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="79ef8-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5e7d-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-109">Syntax</span></span>  
   
 ```xml  
 <providerOption  
@@ -46,39 +35,39 @@ ms.lasthandoff: 01/19/2018
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="79ef8-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="79ef8-110">Attributes and Elements</span></span>  
- <span data-ttu-id="79ef8-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="79ef8-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f5e7d-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5e7d-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f5e7d-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="79ef8-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="79ef8-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f5e7d-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="f5e7d-112">Attributes</span></span>  
   
-|<span data-ttu-id="79ef8-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="79ef8-113">Attribute</span></span>|<span data-ttu-id="79ef8-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="79ef8-114">Description</span></span>|  
+|<span data-ttu-id="f5e7d-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="f5e7d-113">Attribute</span></span>|<span data-ttu-id="f5e7d-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f5e7d-114">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="79ef8-115">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="79ef8-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="79ef8-116">Seçeneğin adı belirtir; Örneğin, "CompilerVersion".</span><span class="sxs-lookup"><span data-stu-id="79ef8-116">Specifies the name of the option; for example, "CompilerVersion".</span></span>|  
-|`value`|<span data-ttu-id="79ef8-117">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="79ef8-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="79ef8-118">Seçeneği için bir değer belirtir; Örneğin, "v3.5".</span><span class="sxs-lookup"><span data-stu-id="79ef8-118">Specifies the value for the option; for example, "v3.5".</span></span>|  
+|`name`|<span data-ttu-id="f5e7d-115">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="f5e7d-116">Seçeneğin adı belirtir; Örneğin, "CompilerVersion".</span><span class="sxs-lookup"><span data-stu-id="f5e7d-116">Specifies the name of the option; for example, "CompilerVersion".</span></span>|  
+|`value`|<span data-ttu-id="f5e7d-117">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="f5e7d-118">Seçeneği için bir değer belirtir; Örneğin, "v3.5".</span><span class="sxs-lookup"><span data-stu-id="f5e7d-118">Specifies the value for the option; for example, "v3.5".</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="79ef8-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="79ef8-119">Child Elements</span></span>  
- <span data-ttu-id="79ef8-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="79ef8-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f5e7d-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5e7d-119">Child Elements</span></span>  
+ <span data-ttu-id="f5e7d-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="79ef8-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="79ef8-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f5e7d-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="f5e7d-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="79ef8-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="79ef8-122">Element</span></span>|<span data-ttu-id="79ef8-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="79ef8-123">Description</span></span>|  
+|<span data-ttu-id="f5e7d-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="f5e7d-122">Element</span></span>|<span data-ttu-id="f5e7d-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f5e7d-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="79ef8-124">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-124">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="79ef8-125">Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="79ef8-125">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
-|[<span data-ttu-id="79ef8-126">\<system.codedom> Element</span><span class="sxs-lookup"><span data-stu-id="79ef8-126">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="79ef8-127">Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-127">Specifies compiler configuration settings for available language providers.</span></span>|  
-|[<span data-ttu-id="79ef8-128">\<derleyicileri > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-128">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="79ef8-129">Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilgi içeren `<compiler>` öğeleri.</span><span class="sxs-lookup"><span data-stu-id="79ef8-129">Container for compiler configuration elements; contains zero or more `<compiler>` elements.</span></span>|  
-|[<span data-ttu-id="79ef8-130">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-130">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="79ef8-131">Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-131">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="f5e7d-124">\<Yapılandırma > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-124">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="f5e7d-125">Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-125">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="f5e7d-126">\<System.codeDom > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-126">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="f5e7d-127">Kullanılabilir dil sağlayıcıları için derleyici yapılandırma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-127">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="f5e7d-128">\<derleyicileri > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-128">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="f5e7d-129">Compiler configuration öğeleri için kapsayıcı; sıfır veya daha fazla bilgi içeren `<compiler>` öğeleri.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-129">Container for compiler configuration elements; contains zero or more `<compiler>` elements.</span></span>|  
+|[<span data-ttu-id="f5e7d-130">\<Derleyici > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-130">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="f5e7d-131">Compiler configuration öznitelikleri için dil sağlayıcısı belirtir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-131">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="79ef8-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="79ef8-132">Remarks</span></span>  
- <span data-ttu-id="79ef8-133">.NET Framework sürüm 3.5, kod belge nesne modeli (CodeDOM) kod sağlayıcıları sağlayıcıya özel seçenekleri kullanarak destekleyebilir `<providerOption>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="79ef8-133">In the .NET Framework version 3.5, Code Document Object Model (CodeDOM) code providers can support provider-specific options by using the `<providerOption>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5e7d-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f5e7d-132">Remarks</span></span>  
+ <span data-ttu-id="f5e7d-133">.NET Framework sürüm 3.5, kod belge nesne modeli (CodeDOM) kod sağlayıcıları sağlayıcıya özel seçenekleri kullanarak destekleyebilir `<providerOption>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-133">In the .NET Framework version 3.5, Code Document Object Model (CodeDOM) code providers can support provider-specific options by using the `<providerOption>` element.</span></span>  
   
- <span data-ttu-id="79ef8-134">.NET Framework 3.5 güncelleştirilmiş .NET Framework 2.0 bütünleştirilmiş kodları bulunur ve yeni türlerini içeren yeni sürüm 3.5 derlemeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="79ef8-134">The .NET Framework 3.5 includes updated .NET Framework 2.0 assemblies and provides new version 3.5 assemblies that contain new types.</span></span> <span data-ttu-id="79ef8-135">Microsoft C# ve Visual Basic kodu sağlayıcıları .NET Framework 2.0 derlemelerde içeriyor ancak sürüm 3.5 derleyicileri desteklemek üzere güncelleştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-135">The Microsoft C# and Visual Basic code providers are contained in .NET Framework 2.0 assemblies but have been updated to support version 3.5 compilers.</span></span> <span data-ttu-id="79ef8-136">Varsayılan olarak, güncelleştirilmiş kod sağlayıcıları sürüm 2.0 derleyicileri için kod oluşturur.</span><span class="sxs-lookup"><span data-stu-id="79ef8-136">By default, the updated code providers generate code for version 2.0 compilers.</span></span> <span data-ttu-id="79ef8-137">Kullanabileceğiniz `<providerOption>` öğesi 3.5 hedef derleyici sürüm olarak değiştirin.</span><span class="sxs-lookup"><span data-stu-id="79ef8-137">You can use the `<providerOption>` element to change the target compiler version to 3.5.</span></span> <span data-ttu-id="79ef8-138">Bunu yapmak için "CompilerVersion" belirtme `name` özniteliği ve için "v3.5" `value` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="79ef8-138">To do this, specify "CompilerVersion" for the `name` attribute and "v3.5" for the `value` attribute.</span></span> <span data-ttu-id="79ef8-139">Küçük bir "v" sürüm numarasıyla gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-139">You must precede the version number with a lower-case "v".</span></span>  
+ <span data-ttu-id="f5e7d-134">.NET Framework 3.5 güncelleştirilmiş .NET Framework 2.0 bütünleştirilmiş kodları bulunur ve yeni türlerini içeren yeni sürüm 3.5 derlemeleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-134">The .NET Framework 3.5 includes updated .NET Framework 2.0 assemblies and provides new version 3.5 assemblies that contain new types.</span></span> <span data-ttu-id="f5e7d-135">Microsoft C# ve Visual Basic kodu sağlayıcıları .NET Framework 2.0 derlemelerde içeriyor ancak sürüm 3.5 derleyicileri desteklemek üzere güncelleştirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-135">The Microsoft C# and Visual Basic code providers are contained in .NET Framework 2.0 assemblies but have been updated to support version 3.5 compilers.</span></span> <span data-ttu-id="f5e7d-136">Varsayılan olarak, güncelleştirilmiş kod sağlayıcıları sürüm 2.0 derleyicileri için kod oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-136">By default, the updated code providers generate code for version 2.0 compilers.</span></span> <span data-ttu-id="f5e7d-137">Kullanabileceğiniz `<providerOption>` öğesi 3.5 hedef derleyici sürüm olarak değiştirin.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-137">You can use the `<providerOption>` element to change the target compiler version to 3.5.</span></span> <span data-ttu-id="f5e7d-138">Bunu yapmak için "CompilerVersion" belirtme `name` özniteliği ve için "v3.5" `value` özniteliği.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-138">To do this, specify "CompilerVersion" for the `name` attribute and "v3.5" for the `value` attribute.</span></span> <span data-ttu-id="f5e7d-139">Küçük bir "v" sürüm numarasıyla gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-139">You must precede the version number with a lower-case "v".</span></span>  
   
- <span data-ttu-id="79ef8-140">Sürüm belirtimi genel ekleyerek yapabileceğiniz `<providerOption>` .NET Framework 2.0 Machine.config veya kök Web.config dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="79ef8-140">You can make the version specification global by adding the `<providerOption>` element to the .NET Framework 2.0 Machine.config or root Web.config file.</span></span> <span data-ttu-id="79ef8-141">Machine.config dosyasındaki 3.5 için varsayılan derleyici sürümü güncelleştirirseniz, uygulama başına temelinde 2.0 dön kullanarak değiştirebilirsiniz `<providerOption>` uygulama yapılandırma dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="79ef8-141">If you update the default compiler version to 3.5 in the Machine.config file, you can change it back to 2.0 on a per-application basis by using the `<providerOption>` element in the application configuration file.</span></span>  
+ <span data-ttu-id="f5e7d-140">Sürüm belirtimi genel ekleyerek yapabileceğiniz `<providerOption>` .NET Framework 2.0 Machine.config veya kök Web.config dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-140">You can make the version specification global by adding the `<providerOption>` element to the .NET Framework 2.0 Machine.config or root Web.config file.</span></span> <span data-ttu-id="f5e7d-141">Machine.config dosyasındaki 3.5 için varsayılan derleyici sürümü güncelleştirirseniz, uygulama başına temelinde 2.0 dön kullanarak değiştirebilirsiniz `<providerOption>` uygulama yapılandırma dosyasında öğesi.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-141">If you update the default compiler version to 3.5 in the Machine.config file, you can change it back to 2.0 on a per-application basis by using the `<providerOption>` element in the application configuration file.</span></span>  
   
- <span data-ttu-id="79ef8-142">CodeDOM kodu sağlayıcısı Implementers alan oluşturucu sağlayarak özel seçenekleri işlenebilecek bir `providerOptions` türünde parametresi <xref:System.Collections.Generic.IDictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="79ef8-142">CodeDOM code provider implementers can process custom options by providing a constructor that takes a `providerOptions` parameter of type <xref:System.Collections.Generic.IDictionary%602>.</span></span>  
+ <span data-ttu-id="f5e7d-142">CodeDOM kodu sağlayıcısı Implementers alan oluşturucu sağlayarak özel seçenekleri işlenebilecek bir `providerOptions` türünde parametresi <xref:System.Collections.Generic.IDictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-142">CodeDOM code provider implementers can process custom options by providing a constructor that takes a `providerOptions` parameter of type <xref:System.Collections.Generic.IDictionary%602>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="79ef8-143">Örnek</span><span class="sxs-lookup"><span data-stu-id="79ef8-143">Example</span></span>  
- <span data-ttu-id="79ef8-144">Aşağıdaki örnek, C# kod sağlayıcının 3.5 sürümünün kullanılacağını belirtin gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="79ef8-144">The following example demonstrates how to specify that version 3.5 of the C# code provider should be used.</span></span>  
+## <a name="example"></a><span data-ttu-id="f5e7d-143">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5e7d-143">Example</span></span>  
+ <span data-ttu-id="f5e7d-144">Aşağıdaki örnek, C# kod sağlayıcının 3.5 sürümünün kullanılacağını belirtin gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-144">The following example demonstrates how to specify that version 3.5 of the C# code provider should be used.</span></span>  
   
 ```xml  
 <configuration>  
@@ -102,10 +91,10 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="79ef8-145">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="79ef8-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f5e7d-145">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f5e7d-145">See Also</span></span>  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [<span data-ttu-id="79ef8-146">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="79ef8-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="79ef8-147">\<derleyicileri > öğesi</span><span class="sxs-lookup"><span data-stu-id="79ef8-147">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
- [<span data-ttu-id="79ef8-148">Tam Olarak Nitelenmiş Tür Adlarını Belirtme</span><span class="sxs-lookup"><span data-stu-id="79ef8-148">Specifying Fully Qualified Type Names</span></span>](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [<span data-ttu-id="79ef8-149">compiler Ögesi (ASP.NET Ayarlar Şeması) derleyicileri</span><span class="sxs-lookup"><span data-stu-id="79ef8-149">compiler Element for compilers for compilation (ASP.NET Settings Schema)</span></span>](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [<span data-ttu-id="f5e7d-146">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="f5e7d-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="f5e7d-147">\<derleyicileri > öğesi</span><span class="sxs-lookup"><span data-stu-id="f5e7d-147">\<compilers> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [<span data-ttu-id="f5e7d-148">Tam Olarak Nitelenmiş Tür Adlarını Belirtme</span><span class="sxs-lookup"><span data-stu-id="f5e7d-148">Specifying Fully Qualified Type Names</span></span>](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
+ [<span data-ttu-id="f5e7d-149">compiler Ögesi (ASP.NET Ayarlar Şeması) derleyicileri</span><span class="sxs-lookup"><span data-stu-id="f5e7d-149">compiler Element for compilers for compilation (ASP.NET Settings Schema)</span></span>](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

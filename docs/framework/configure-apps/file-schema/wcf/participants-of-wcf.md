@@ -1,69 +1,57 @@
 ---
-title: "WCF &lt;katılımcıları&gt;"
-ms.custom: 
+title: WCF &lt;katılımcıları&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 881ee8486d7939e743613fb8a0261a4fcfe7499f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093ed0ed51c068fe0a999dc5f7b7a3adec39ae77
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltparticipantsgt-of-wcf"></a><span data-ttu-id="307cf-102">WCF &lt;katılımcıları&gt;</span><span class="sxs-lookup"><span data-stu-id="307cf-102">&lt;participants&gt; of WCF</span></span>
-<span data-ttu-id="307cf-103">Çalışma zamanı ' doğrudan gösterilmesini izleme kayıtları dinleme ve yapılandırılmış olan herhangi bir şekilde işleyen katılımcıları izleme listesini yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="307cf-103">Configure a list of tracking participants that listen to the tracking records being emitted from the runtime directly and process them in whatever way they are configured.</span></span> <span data-ttu-id="307cf-104">Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.</span><span class="sxs-lookup"><span data-stu-id="307cf-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
+# <a name="ltparticipantsgt-of-wcf"></a><span data-ttu-id="4e733-102">WCF &lt;katılımcıları&gt;</span><span class="sxs-lookup"><span data-stu-id="4e733-102">&lt;participants&gt; of WCF</span></span>
+<span data-ttu-id="4e733-103">Çalışma zamanı ' doğrudan gösterilmesini izleme kayıtları dinleme ve yapılandırılmış olan herhangi bir şekilde işleyen katılımcıları izleme listesini yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="4e733-103">Configure a list of tracking participants that listen to the tracking records being emitted from the runtime directly and process them in whatever way they are configured.</span></span> <span data-ttu-id="4e733-104">Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.</span><span class="sxs-lookup"><span data-stu-id="4e733-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- <span data-ttu-id="307cf-105">İş akışı izleme ve izleme katılımcıları daha fazla bilgi için bkz: [izleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme katılımcıları](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span><span class="sxs-lookup"><span data-stu-id="307cf-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
+ <span data-ttu-id="4e733-105">İş akışı izleme ve izleme katılımcıları daha fazla bilgi için bkz: [izleme ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme katılımcıları](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span><span class="sxs-lookup"><span data-stu-id="4e733-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
- <span data-ttu-id="307cf-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="307cf-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="307cf-107">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="307cf-107">\<tracking></span></span>  
-<span data-ttu-id="307cf-108">\<Katılımcıları ></span><span class="sxs-lookup"><span data-stu-id="307cf-108">\<participants></span></span>  
+ <span data-ttu-id="4e733-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="4e733-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="4e733-107">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="4e733-107">\<tracking></span></span>  
+<span data-ttu-id="4e733-108">\<Katılımcıları ></span><span class="sxs-lookup"><span data-stu-id="4e733-108">\<participants></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="307cf-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="307cf-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e733-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4e733-109">Syntax</span></span>  
   
 ```xml
    <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>   
 ```
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="307cf-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="307cf-110">Attributes and Elements</span></span>  
- <span data-ttu-id="307cf-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="307cf-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4e733-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e733-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4e733-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4e733-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="307cf-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="307cf-112">Attributes</span></span>  
- <span data-ttu-id="307cf-113">Yok.</span><span class="sxs-lookup"><span data-stu-id="307cf-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4e733-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4e733-112">Attributes</span></span>  
+ <span data-ttu-id="4e733-113">Yok.</span><span class="sxs-lookup"><span data-stu-id="4e733-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="307cf-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="307cf-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4e733-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e733-114">Child Elements</span></span>  
   
-|<span data-ttu-id="307cf-115">Öğe</span><span class="sxs-lookup"><span data-stu-id="307cf-115">Element</span></span>|<span data-ttu-id="307cf-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="307cf-116">Description</span></span>|  
+|<span data-ttu-id="4e733-115">Öğe</span><span class="sxs-lookup"><span data-stu-id="4e733-115">Element</span></span>|<span data-ttu-id="4e733-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e733-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="307cf-117">\<ekleme ></span><span class="sxs-lookup"><span data-stu-id="307cf-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|<span data-ttu-id="307cf-118">İzleme katılımcı ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="307cf-118">Contains settings for a tracking participant.</span></span>|  
+|[<span data-ttu-id="4e733-117">\<ekleme ></span><span class="sxs-lookup"><span data-stu-id="4e733-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|<span data-ttu-id="4e733-118">İzleme katılımcı ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="4e733-118">Contains settings for a tracking participant.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="307cf-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="307cf-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4e733-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e733-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="307cf-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="307cf-120">Element</span></span>|<span data-ttu-id="307cf-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="307cf-121">Description</span></span>|  
+|<span data-ttu-id="4e733-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="4e733-120">Element</span></span>|<span data-ttu-id="4e733-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e733-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="307cf-122">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="307cf-122">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="307cf-123">Bir iş akışı hizmeti izleme ayarlarını tanımlamak için yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="307cf-123">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
+|[<span data-ttu-id="4e733-122">\<İzleme ></span><span class="sxs-lookup"><span data-stu-id="4e733-122">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="4e733-123">Bir iş akışı hizmeti izleme ayarlarını tanımlamak için yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="4e733-123">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="307cf-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="307cf-124">Remarks</span></span>  
- <span data-ttu-id="307cf-125">İzleme katılımcıları iş akışını yayılan izleme verilerini almak için kullanılan ve farklı ortamları depolar.</span><span class="sxs-lookup"><span data-stu-id="307cf-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="307cf-126">Benzer şekilde, tüm kayıtları içinde izleme katılımcı de yapılabilir izleme üzerinde işlem sonrası.</span><span class="sxs-lookup"><span data-stu-id="307cf-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e733-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4e733-124">Remarks</span></span>  
+ <span data-ttu-id="4e733-125">İzleme katılımcıları iş akışını yayılan izleme verilerini almak için kullanılan ve farklı ortamları depolar.</span><span class="sxs-lookup"><span data-stu-id="4e733-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="4e733-126">Benzer şekilde, tüm kayıtları içinde izleme katılımcı de yapılabilir izleme üzerinde işlem sonrası.</span><span class="sxs-lookup"><span data-stu-id="4e733-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- <span data-ttu-id="307cf-127">Birden çok izleme katılımcıları izleme olaylarını aynı anda kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="307cf-127">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="307cf-128">Her izleme katılımcı farklı izleme profili ile ilişkilendirilebilir.</span><span class="sxs-lookup"><span data-stu-id="307cf-128">Each tracking participant can be associated with a different tracking profile.</span></span>  
+ <span data-ttu-id="4e733-127">Birden çok izleme katılımcıları izleme olaylarını aynı anda kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="4e733-127">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="4e733-128">Her izleme katılımcı farklı izleme profili ile ilişkilendirilebilir.</span><span class="sxs-lookup"><span data-stu-id="4e733-128">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- <span data-ttu-id="307cf-129">Standart izleme katılımcı hangi izleme kayıtları ETW oturumuna Yazar sağlanır.</span><span class="sxs-lookup"><span data-stu-id="307cf-129">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="307cf-130">Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranış ekleyerek yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="307cf-130">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="307cf-131">Bir ETW etkinleştirme, izleme katılımcı olmasını kayıtları izleme Olay Görüntüleyicisi görüntülenemez sağlar.</span><span class="sxs-lookup"><span data-stu-id="307cf-131">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="307cf-132">Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="307cf-132">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
+ <span data-ttu-id="4e733-129">Standart izleme katılımcı hangi izleme kayıtları ETW oturumuna Yazar sağlanır.</span><span class="sxs-lookup"><span data-stu-id="4e733-129">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="4e733-130">Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranış ekleyerek yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="4e733-130">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="4e733-131">Bir ETW etkinleştirme, izleme katılımcı olmasını kayıtları izleme Olay Görüntüleyicisi görüntülenemez sağlar.</span><span class="sxs-lookup"><span data-stu-id="4e733-131">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="4e733-132">Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4e733-132">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="307cf-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="307cf-133">Example</span></span>  
- <span data-ttu-id="307cf-134">Aşağıdaki yapılandırma örnek Web.config dosyasında yapılandırılan standart ETW İzleme katılımcı gösterir.</span><span class="sxs-lookup"><span data-stu-id="307cf-134">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e733-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="4e733-133">Example</span></span>  
+ <span data-ttu-id="4e733-134">Aşağıdaki yapılandırma örnek Web.config dosyasında yapılandırılan standart ETW İzleme katılımcı gösterir.</span><span class="sxs-lookup"><span data-stu-id="4e733-134">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="307cf-135">ETW İzleme katılımcı için ETW İzleme kayıtları yazmak için kullandığı sağlayıcı kimliği tanımlanan `<diagnostics>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="307cf-135">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the `<diagnostics>` section.</span></span> <span data-ttu-id="307cf-136">İzleme katılımcı için abone oldu izleme kayıtları belirtmek için ilişkili bir profil var.</span><span class="sxs-lookup"><span data-stu-id="307cf-136">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="307cf-137">Bu tarafından tanımlanan `profileName` özniteliği `<add>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="307cf-137">This is defined by the `profileName` attribute of the `<add>` element.</span></span> <span data-ttu-id="307cf-138">Bunlar tanımlandıktan sonra izleme katılımcı eklenen `<etwTracking>` hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="307cf-138">Once these are defined, the Tracking Participant is added to the `<etwTracking>` service behavior.</span></span> <span data-ttu-id="307cf-139">Böylece izleme kayıtlarını alır başlamadan bu iş akışı örneğinin uzantıları için seçilen izleme katılımcıları ekler.</span><span class="sxs-lookup"><span data-stu-id="307cf-139">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="4e733-135">ETW İzleme katılımcı için ETW İzleme kayıtları yazmak için kullandığı sağlayıcı kimliği tanımlanan `<diagnostics>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="4e733-135">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the `<diagnostics>` section.</span></span> <span data-ttu-id="4e733-136">İzleme katılımcı için abone oldu izleme kayıtları belirtmek için ilişkili bir profil var.</span><span class="sxs-lookup"><span data-stu-id="4e733-136">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="4e733-137">Bu tarafından tanımlanan `profileName` özniteliği `<add>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="4e733-137">This is defined by the `profileName` attribute of the `<add>` element.</span></span> <span data-ttu-id="4e733-138">Bunlar tanımlandıktan sonra izleme katılımcı eklenen `<etwTracking>` hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="4e733-138">Once these are defined, the Tracking Participant is added to the `<etwTracking>` service behavior.</span></span> <span data-ttu-id="4e733-139">Böylece izleme kayıtlarını alır başlamadan bu iş akışı örneğinin uzantıları için seçilen izleme katılımcıları ekler.</span><span class="sxs-lookup"><span data-stu-id="4e733-139">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>   
@@ -90,8 +78,8 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="307cf-140">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="307cf-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4e733-140">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4e733-140">See Also</span></span>  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
  <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- [<span data-ttu-id="307cf-141">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="307cf-141">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="307cf-142">İzleme Katılımcıları</span><span class="sxs-lookup"><span data-stu-id="307cf-142">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+ [<span data-ttu-id="4e733-141">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="4e733-141">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="4e733-142">İzleme Katılımcıları</span><span class="sxs-lookup"><span data-stu-id="4e733-142">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

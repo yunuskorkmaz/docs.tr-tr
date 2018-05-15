@@ -1,125 +1,113 @@
 ---
-title: Dize ilişkilendirme - C#
-description: C# 6'dizesi ilişkilendirme nasıl çalıştığını öğrenin
-keywords: .NET, .NET core, C#, dize
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: C# dize ilişkilendirme
+description: Dize ilişkilendirme ile C# sonuç dizesinde biçimlendirilmiş ifade sonuçlarında öğrenin.
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="string-interpolation-in-c"></a><span data-ttu-id="85e89-104">C# dize ilişkilendirme</span><span class="sxs-lookup"><span data-stu-id="85e89-104">String Interpolation in C#</span></span> #
+# <a name="string-interpolation-in-c"></a><span data-ttu-id="4524a-103">C# dize ilişkilendirme</span><span class="sxs-lookup"><span data-stu-id="4524a-103">String interpolation in C#</span></span> #
 
-<span data-ttu-id="85e89-105">Dize ilişkilendirme bir dize yer tutucuları bir dize değişkeni değeriyle değiştirilir yoludur.</span><span class="sxs-lookup"><span data-stu-id="85e89-105">String Interpolation is the way that placeholders in a string are replaced by the value of a string variable.</span></span> <span data-ttu-id="85e89-106">Bunu yapmanın yolu olan C# 6'dan önce <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="85e89-106">Before C# 6, the way to do this is with <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="85e89-107">Bu Tamam çalışır, ancak numaralı yer tutucuları kullandığından, okumak daha zor ve daha ayrıntılı olabilir.</span><span class="sxs-lookup"><span data-stu-id="85e89-107">This works okay, but since it uses numbered placeholders, it can be harder to read and more verbose.</span></span>
+<span data-ttu-id="4524a-104">Bu öğretici nasıl kullanılacağını gösterir [dize ilişkilendirme](../language-reference/tokens/interpolated.md) biçimlendirmek ve bir sonuç dizesinde ifade sonuçları dahil edin.</span><span class="sxs-lookup"><span data-stu-id="4524a-104">This tutorial shows you how to use [string interpolation](../language-reference/tokens/interpolated.md) to format and include expression results in a result string.</span></span> <span data-ttu-id="4524a-105">Örnekler, temel C# kavramları ve .NET türü biçimlendirme bildiğinizi varsayar.</span><span class="sxs-lookup"><span data-stu-id="4524a-105">The examples assume that you are familiar with basic C# concepts and .NET type formatting.</span></span> <span data-ttu-id="4524a-106">Dize ilişkilendirme veya .NET türü biçimlendirme yeniyseniz, kullanıma [etkileşimli dize ilişkilendirme quickstart](../quick-starts/interpolated-strings.yml) ilk.</span><span class="sxs-lookup"><span data-stu-id="4524a-106">If you are new to string interpolation or .NET type formatting, check out the [interactive string interpolation quickstart](../quick-starts/interpolated-strings.yml) first.</span></span> <span data-ttu-id="4524a-107">Biçimlendirme .NET türleri hakkında daha fazla bilgi için bkz: [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) konu.</span><span class="sxs-lookup"><span data-stu-id="4524a-107">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) topic.</span></span>
 
-<span data-ttu-id="85e89-108">Diğer programlama dilleri dize ilişkilendirme dilinde yerleşik bir süre beklendiğinden.</span><span class="sxs-lookup"><span data-stu-id="85e89-108">Other programming languages have had string interpolation built into the language for a while.</span></span> <span data-ttu-id="85e89-109">Örneğin, PHP ile:</span><span class="sxs-lookup"><span data-stu-id="85e89-109">For instance, in PHP:</span></span>
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a><span data-ttu-id="4524a-108">Giriş</span><span class="sxs-lookup"><span data-stu-id="4524a-108">Introduction</span></span>
 
-<span data-ttu-id="85e89-110">C# 6'da, son olarak bu dize ilişkilendirme stilini sunuyoruz.</span><span class="sxs-lookup"><span data-stu-id="85e89-110">In C# 6, we finally have that style of string interpolation.</span></span> <span data-ttu-id="85e89-111">Kullanabileceğiniz bir `$` önce değişkenleri/ifadeleri değerlerine için alternatif belirtmek için bir dize.</span><span class="sxs-lookup"><span data-stu-id="85e89-111">You can use a `$` before a string to indicate that it should substitute variables/expressions for their values.</span></span>
+<span data-ttu-id="4524a-109">[Dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği üstünde oluşturulan [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) özellik ve sonucu dize biçimlendirilmiş ifade sonuçları dahil etmek daha okunabilir ve kullanışlı bir sözdizimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="4524a-109">The [string interpolation](../language-reference/tokens/interpolated.md) feature is built on top of the [composite formatting](../../standard/base-types/composite-formatting.md) feature and provides a more readable and convenient syntax to include formatted expression results in a result string.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="85e89-112">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="85e89-112">Prerequisites</span></span>
-<span data-ttu-id="85e89-113">.NET core çalışmasına, makine ayarlamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="85e89-113">You’ll need to set up your machine to run .NET core.</span></span> <span data-ttu-id="85e89-114">Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası.</span><span class="sxs-lookup"><span data-stu-id="85e89-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
-<span data-ttu-id="85e89-115">Bu uygulama, Windows, Ubuntu Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="85e89-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="85e89-116">Sık kullanılan Kod Düzenleyicisi'ni yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="85e89-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="85e89-117">Kullanım aşağıda açıklamaları [Visual Studio Code](https://code.visualstudio.com/) platform Düzenleyicisi arası bir açık kaynak olduğu.</span><span class="sxs-lookup"><span data-stu-id="85e89-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="85e89-118">Ancak, tanımanız ne olursa olsun araçları kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="85e89-118">However, you can use whatever tools you are comfortable with.</span></span>
+<span data-ttu-id="4524a-110">Bir dize olarak ara değerli bir dize sabit değeri tanımlamak için kendisiyle başına `$` simgesi.</span><span class="sxs-lookup"><span data-stu-id="4524a-110">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="4524a-111">Ara değerli bir dize bir değer döndüren herhangi bir geçerli C# ifadeler eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="4524a-111">You can embed any valid C# expression that returns a value in an interpolated string.</span></span> <span data-ttu-id="4524a-112">Aşağıdaki örnekte, bir ifadenin hemen sonucunu bir dizeye dönüştürülür ve bir sonuç dizesinde yer:</span><span class="sxs-lookup"><span data-stu-id="4524a-112">In the following example, as soon as an expression is evaluated, its result is converted into a string and included in a result string:</span></span>
 
-## <a name="create-the-application"></a><span data-ttu-id="85e89-119">Uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="85e89-119">Create the Application</span></span>
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-<span data-ttu-id="85e89-120">Tüm Araçlar yüklediniz, yeni bir .NET Core uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="85e89-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="85e89-121">Komut satırı Oluşturucu kullanmak için projeniz için bir dizin gibi oluşturun `interpolated`ve sık kullanılan kabuğuna şu komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="85e89-121">To use the command line generator, create a directory for your project, such as `interpolated`, and execute the following command in your favorite shell:</span></span>
+<span data-ttu-id="4524a-113">Örnekte gösterildiği gibi bir ifade bir ara değerli dizesi içinde köşeli parantez ile kapsayan tarafından şunlardır:</span><span class="sxs-lookup"><span data-stu-id="4524a-113">As the example shows, you include an expression in an interpolated string by enclosing it with braces:</span></span>
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-<span data-ttu-id="85e89-122">Bu komut, bir proje dosyası ile bir temel .NET Core projesi oluşturur *interpolated.csproj*ve kaynak kodu dosyasının *Program.cs*.</span><span class="sxs-lookup"><span data-stu-id="85e89-122">This command creates a barebones .NET Core project with a project file, *interpolated.csproj*, and a source code file, *Program.cs*.</span></span> <span data-ttu-id="85e89-123">Yürütme gerekecek `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="85e89-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
+<span data-ttu-id="4524a-114">Derleme zamanında Ara değerli bir dize genellikle dönüştürülür bir <xref:System.String.Format%2A?displayProperty=nameWithType> yöntem çağrısı.</span><span class="sxs-lookup"><span data-stu-id="4524a-114">At compile time, an interpolated string is typically transformed into a <xref:System.String.Format%2A?displayProperty=nameWithType> method call.</span></span> <span data-ttu-id="4524a-115">Tüm özelliklerine yapar [bileşik biçimlendirme dize](../../standard/base-types/composite-formatting.md) özelliği de ara değerli dizeler ile kullanmak için de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4524a-115">That makes all the capabilities of the [string composite formatting](../../standard/base-types/composite-formatting.md) feature available to you to use with interpolated strings as well.</span></span>
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a><span data-ttu-id="4524a-116">Ara değerli bir ifade için bir biçim dizesi belirtme</span><span class="sxs-lookup"><span data-stu-id="4524a-116">How to specify a format string for an interpolated expression</span></span>
 
-<span data-ttu-id="85e89-124">Programı çalıştırmak üzere kullanmadan `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="85e89-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="85e89-125">"Hello, World" çıkışı konsola görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="85e89-125">You should see "Hello, World" output to the console.</span></span>
-
-
-
-## <a name="intro-to-string-interpolation"></a><span data-ttu-id="85e89-126">İlişkilendirme dize giriş</span><span class="sxs-lookup"><span data-stu-id="85e89-126">Intro to String Interpolation</span></span>
-
-<span data-ttu-id="85e89-127">İle <xref:System.String.Format%2A?displayProperty=nameWithType>, "yer tutucuları" dizesini izleyen bağımsız değişkenleri tarafından değiştirilen bir dize belirtin.</span><span class="sxs-lookup"><span data-stu-id="85e89-127">With <xref:System.String.Format%2A?displayProperty=nameWithType>, you specify "placeholders" in a string that are replaced by the arguments following the string.</span></span> <span data-ttu-id="85e89-128">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="85e89-128">For instance:</span></span>
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-<span data-ttu-id="85e89-129">Bu, "adımın Matt Groves olduğu" çıkarır.</span><span class="sxs-lookup"><span data-stu-id="85e89-129">That will output "My name is Matt Groves".</span></span>
-
-<span data-ttu-id="85e89-130">C# 6 kullanmak yerine, `String.Format`, Ara değerli bir dize ile başlayan tanımladığınız `$` sembol ve sonra doğrudan dizesindeki değişkenleri kullanma.</span><span class="sxs-lookup"><span data-stu-id="85e89-130">In C# 6, instead of using `String.Format`, you define an interpolated string by prepending it with the `$` symbol, and then using the variables directly in the string.</span></span> <span data-ttu-id="85e89-131">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="85e89-131">For instance:</span></span>
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-<span data-ttu-id="85e89-132">Yalnızca değişkenleri kullanmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="85e89-132">You don't have to use just variables.</span></span> <span data-ttu-id="85e89-133">Köşeli ayraçlar içindeki herhangi bir ifade kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="85e89-133">You can use any expression within the brackets.</span></span> <span data-ttu-id="85e89-134">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="85e89-134">For instance:</span></span>
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-<span data-ttu-id="85e89-135">Hangi çıktı:</span><span class="sxs-lookup"><span data-stu-id="85e89-135">Which would output:</span></span>
+<span data-ttu-id="4524a-117">Ara değerli ifadesi iki nokta ile izleyerek ifade sonucunun türü tarafından desteklenen bir biçim dizesini belirtin (":") ve biçim dizesi:</span><span class="sxs-lookup"><span data-stu-id="4524a-117">You specify a format string that is supported by the type of the expression result by following the interpolated expression with a colon (":") and the format string:</span></span>
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a><span data-ttu-id="85e89-136">Dize ilişkilendirme nasıl çalışır?</span><span class="sxs-lookup"><span data-stu-id="85e89-136">How string interpolation works</span></span>
+<span data-ttu-id="4524a-118">Aşağıdaki örnekte, tarih ve saat veya sayısal sonuçlar üretmek ifadeler için standart ve özel biçim dizeleri belirtmek gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="4524a-118">The following example shows how to specify standard and custom format strings for expressions that produce date and time or numeric results:</span></span>
 
-<span data-ttu-id="85e89-137">Arka planda Bu dize ilişkilendirme sözdizimi veri dönüştürülür `String.Format` derleyici tarafından.</span><span class="sxs-lookup"><span data-stu-id="85e89-137">Behind the scenes, this string interpolation syntax is translated into `String.Format` by the compiler.</span></span> <span data-ttu-id="85e89-138">Bu nedenle, yapabileceğiniz [aynı türde öğe işiniz önce ile `String.Format` ](../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="85e89-138">So, you can do the [same type of stuff you've done before with `String.Format`](../../standard/base-types/formatting-types.md).</span></span>
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-<span data-ttu-id="85e89-139">Örneğin, doldurma ve sayısal biçimlendirme ekleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="85e89-139">For instance, you can add padding and numeric formatting:</span></span>
+<span data-ttu-id="4524a-119">Daha fazla bilgi için bkz: [biçim dizesi bileşen](../../standard/base-types/composite-formatting.md#format-string-component) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu.</span><span class="sxs-lookup"><span data-stu-id="4524a-119">For more information, see the [Format String Component](../../standard/base-types/composite-formatting.md#format-string-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span> <span data-ttu-id="4524a-120">Bu bölüm .NET temel türleri tarafından desteklenen standart ve özel biçim dizeleri açıklayan konulara bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="4524a-120">That section provides links to the topics that describe standard and custom format strings supported by .NET base types.</span></span>
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a><span data-ttu-id="4524a-121">Alan genişliği ve hizalamasını biçimlendirilmiş Ara değerli ifadesinin denetleme</span><span class="sxs-lookup"><span data-stu-id="4524a-121">How to control the field width and alignment of the formatted interpolated expression</span></span>
 
-<span data-ttu-id="85e89-140">Yukarıdaki gibi bir çıktı:</span><span class="sxs-lookup"><span data-stu-id="85e89-140">The above would output something like:</span></span>
+<span data-ttu-id="4524a-122">Ara değerli ifade virgül ile izleyerek en düşük alan genişliği ve biçimlendirilmiş ifade sonucu hizalamasını belirtin (",") ve sabit ifade:</span><span class="sxs-lookup"><span data-stu-id="4524a-122">You specify the minimum field width and the alignment of the formatted expression result by following the interpolated expression with a comma (",") and the constant expression:</span></span>
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-<span data-ttu-id="85e89-141">Bir değişken adı bulunmazsa, derleme zamanı hatası oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="85e89-141">If a variable name is not found, then a compile-time error is generated.</span></span>
+<span data-ttu-id="4524a-123">Varsa *hizalama* değer pozitif, sağa hizalı biçimlendirilmiş ifade sonucu; negatifse, sola hizalı.</span><span class="sxs-lookup"><span data-stu-id="4524a-123">If the *alignment* value is positive, the formatted expression result is right-aligned; if negative, it's left-aligned.</span></span>
 
-<span data-ttu-id="85e89-142">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="85e89-142">For instance:</span></span>
+<span data-ttu-id="4524a-124">Hizalama ve bir biçim dizesi belirtmeniz gerekiyorsa, hizalama bileşeniyle başlatın:</span><span class="sxs-lookup"><span data-stu-id="4524a-124">If you need to specify both alignment and a format string, start with the alignment component:</span></span>
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-<span data-ttu-id="85e89-143">Bu derleme, hataları alırsınız:</span><span class="sxs-lookup"><span data-stu-id="85e89-143">If you compile this, you get errors:</span></span>
- 
-* <span data-ttu-id="85e89-144">`Cannot use local variable 'adj' before it is declared` - `adj` değildi değişkeni bildirilen kadar *sonra* Ara değerli dize.</span><span class="sxs-lookup"><span data-stu-id="85e89-144">`Cannot use local variable 'adj' before it is declared` - the `adj` variable wasn't declared until *after* the interpolated string.</span></span>
-* <span data-ttu-id="85e89-145">`The name 'otheranimal' does not exist in the current context` -bir değişken adı verilen `otheranimal` hiçbir zaman bile bildirildi</span><span class="sxs-lookup"><span data-stu-id="85e89-145">`The name 'otheranimal' does not exist in the current context` - a variable called `otheranimal` was never even declared</span></span>
+<span data-ttu-id="4524a-125">Aşağıdaki örnek hizalamayı belirtme gösterir ve kullandığı kanal karakterler ("|") metin alanları sınırlandırmak için:</span><span class="sxs-lookup"><span data-stu-id="4524a-125">The following example shows how to specify alignment and uses pipe characters ("|") to delimit text fields:</span></span>
 
-## <a name="localization-and-internationalization"></a><span data-ttu-id="85e89-146">Yerelleştirme ve uluslararası hale getirme</span><span class="sxs-lookup"><span data-stu-id="85e89-146">Localization and Internationalization</span></span>
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-<span data-ttu-id="85e89-147">Ara değerli bir dize destekleyen <xref:System.IFormattable?displayProperty=nameWithType> ve <xref:System.FormattableString?displayProperty=nameWithType>, hangi uygulamalar için yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="85e89-147">An interpolated string supports <xref:System.IFormattable?displayProperty=nameWithType> and <xref:System.FormattableString?displayProperty=nameWithType>, which can be useful for internationalization.</span></span>
+<span data-ttu-id="4524a-126">Örnek olarak biçimlendirilmiş ifade sonucunun uzunluğu aşması durumunda çıkış gösterir, alan genişliği belirtilen *hizalama* değeri yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="4524a-126">As the example output shows, if the length of the formatted expression result exceeds specified field width, the *alignment* value is ignored.</span></span>
 
-<span data-ttu-id="85e89-148">Varsayılan olarak, geçerli kültürü Ara değerli bir dize kullanır.</span><span class="sxs-lookup"><span data-stu-id="85e89-148">By default, an interpolated string uses the current culture.</span></span> <span data-ttu-id="85e89-149">Farklı bir kültür kullanmak için Ara değerli bir dize olarak cast `IFormattable`.</span><span class="sxs-lookup"><span data-stu-id="85e89-149">To use a different culture, cast an interpolated string as `IFormattable`.</span></span> <span data-ttu-id="85e89-150">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="85e89-150">For instance:</span></span>
+<span data-ttu-id="4524a-127">Daha fazla bilgi için bkz: [hizalama bileşen](../../standard/base-types/composite-formatting.md#alignment-component) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu.</span><span class="sxs-lookup"><span data-stu-id="4524a-127">For more information, see the [Alignment Component](../../standard/base-types/composite-formatting.md#alignment-component) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a><span data-ttu-id="4524a-128">Ara değerli bir dize çıkış sıraları kullanma</span><span class="sxs-lookup"><span data-stu-id="4524a-128">How to use escape sequences in an interpolated string</span></span>
 
-## <a name="conclusion"></a><span data-ttu-id="85e89-151">Sonuç</span><span class="sxs-lookup"><span data-stu-id="85e89-151">Conclusion</span></span> 
+<span data-ttu-id="4524a-129">Ara değerli dizeler kullanılabilir tüm kaçış sıraları sıradan dize değişmez değerleri destekler.</span><span class="sxs-lookup"><span data-stu-id="4524a-129">Interpolated strings support all escape sequences that can be used in ordinary string literals.</span></span> <span data-ttu-id="4524a-130">Daha fazla bilgi için bkz: [dize kaçış sıraları](../programming-guide/strings/index.md#string-escape-sequences).</span><span class="sxs-lookup"><span data-stu-id="4524a-130">For more information, see [String escape sequences](../programming-guide/strings/index.md#string-escape-sequences).</span></span>
 
-<span data-ttu-id="85e89-152">Bu öğreticide, dize ilişkilendirme özelliklerinin C# 6'ın nasıl kullanılacağını öğrendiniz.</span><span class="sxs-lookup"><span data-stu-id="85e89-152">In this tutorial, you learned how to use string interpolation features of C# 6.</span></span> <span data-ttu-id="85e89-153">Temel yazma basit daha kısa bir yol olduğu `String.Format` ifadelerle bazı uyarılar için daha gelişmiş kullanır.</span><span class="sxs-lookup"><span data-stu-id="85e89-153">It's basically a more concise way of writing simple `String.Format` statements, with some caveats for more advanced uses.</span></span> <span data-ttu-id="85e89-154">Daha fazla bilgi için bkz: [dize ilişkilendirme](../../csharp//language-reference/tokens/interpolated.md) konu.</span><span class="sxs-lookup"><span data-stu-id="85e89-154">For more information, see the [String interpolation](../../csharp//language-reference/tokens/interpolated.md) topic.</span></span>
+<span data-ttu-id="4524a-131">Kaçış dizileri tam anlamıyla yorumlamak için kullanılan kullanan bir [verbatim](../language-reference/tokens/verbatim.md) dize sabit değeri.</span><span class="sxs-lookup"><span data-stu-id="4524a-131">To interpret escape sequences literally, use a [verbatim](../language-reference/tokens/verbatim.md) string literal.</span></span> <span data-ttu-id="4524a-132">Harfi harfine Ara değerli bir dize ile başlayan `$` karakter arkasından `@` karakter.</span><span class="sxs-lookup"><span data-stu-id="4524a-132">A verbatim interpolated string starts with the `$` character followed by the `@` character.</span></span>
+
+<span data-ttu-id="4524a-133">Bir küme parantezi dahil etmek için "{" veya "}", bir sonuç dizesinde iki küme ayraçları kullanmak "{{" veya "}}".</span><span class="sxs-lookup"><span data-stu-id="4524a-133">To include a brace, "{" or "}", in a result string, use two braces, "{{" or "}}".</span></span> <span data-ttu-id="4524a-134">Daha fazla bilgi için bkz: [kaçış ayraçlar](../../standard/base-types/composite-formatting.md#escaping-braces) bölümünü [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) konu.</span><span class="sxs-lookup"><span data-stu-id="4524a-134">For more information, see the [Escaping Braces](../../standard/base-types/composite-formatting.md#escaping-braces) section of the [Composite Formatting](../../standard/base-types/composite-formatting.md) topic.</span></span>
+
+<span data-ttu-id="4524a-135">Aşağıdaki örnek, sonuç dizesinde kaşlı ayraç içeren ve verbatim Ara değerli dizesi oluşturmak gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="4524a-135">The following example shows how to include braces in a result string and construct a verbatim interpolated string:</span></span>
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a><span data-ttu-id="4524a-136">Üçlü koşullu bir işleç kullanma `?:` Ara değerli deyimde</span><span class="sxs-lookup"><span data-stu-id="4524a-136">How to use a ternary conditional operator `?:` in an interpolated expression</span></span>
+
+<span data-ttu-id="4524a-137">İki nokta üst üste olarak (":") kullanmak için bir ara değerli ifade sahip bir öğe içinde özel bir anlamı yoktur bir [koşullu işleç](../language-reference/operators/conditional-operator.md) aşağıdaki örnekte gösterildiği gibi parantez içine bir ifadede:</span><span class="sxs-lookup"><span data-stu-id="4524a-137">As the colon (":") has special meaning in an item with an interpolated expression, in order to use a [conditional operator](../language-reference/operators/conditional-operator.md) in an expression, enclose it in parentheses, as the following example shows:</span></span>
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a><span data-ttu-id="4524a-138">Kültüre özgü Sonuç dizesini dize ilişkilendirme oluşturma</span><span class="sxs-lookup"><span data-stu-id="4524a-138">How to create a culture-specific result string with string interpolation</span></span>
+
+<span data-ttu-id="4524a-139">Varsayılan olarak, Ara değerli bir dize tarafından tanımlanan geçerli kültür kullanır <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> tüm biçimlendirme işlemleri için özellik.</span><span class="sxs-lookup"><span data-stu-id="4524a-139">By default, an interpolated string uses the current culture defined by the <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> property for all formatting operations.</span></span> <span data-ttu-id="4524a-140">Ara değerli bir dize olarak örtük dönüştürme kullanmak bir <xref:System.FormattableString?displayProperty=nameWithType> örneği ve arama kendi <xref:System.FormattableString.ToString(System.IFormatProvider)> bir kültüre özgü sonuç dizesi oluşturmak için yöntem.</span><span class="sxs-lookup"><span data-stu-id="4524a-140">Use implicit conversion of an interpolated string to a <xref:System.FormattableString?displayProperty=nameWithType> instance and call its <xref:System.FormattableString.ToString(System.IFormatProvider)> method to create a culture-specific result string.</span></span> <span data-ttu-id="4524a-141">Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="4524a-141">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+<span data-ttu-id="4524a-142">Örnekte gösterildiği gibi kullanabilirsiniz <xref:System.FormattableString> çeşitli kültürler için birden çok sonuç dizelerini oluşturmak için örnek.</span><span class="sxs-lookup"><span data-stu-id="4524a-142">As the example shows, you can use one <xref:System.FormattableString> instance to generate multiple result strings for various cultures.</span></span>
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a><span data-ttu-id="4524a-143">Sabit kültür kullanarak bir sonuç dize oluşturma</span><span class="sxs-lookup"><span data-stu-id="4524a-143">How to create a result string using the invariant culture</span></span>
+
+<span data-ttu-id="4524a-144">İle birlikte <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> yöntemi statik kullanabilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> Ara değerli bir dize için bir sonuç dize çözümlemek için yöntemi <xref:System.Globalization.CultureInfo.InvariantCulture>.</span><span class="sxs-lookup"><span data-stu-id="4524a-144">Along with the <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> method, you can use the static <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> method to resolve an interpolated string to a result string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.</span></span> <span data-ttu-id="4524a-145">Aşağıdaki örnek, bunun nasıl yapılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="4524a-145">The following example shows how to do that:</span></span>
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a><span data-ttu-id="4524a-146">Sonuç</span><span class="sxs-lookup"><span data-stu-id="4524a-146">Conclusion</span></span>
+
+<span data-ttu-id="4524a-147">Bu öğretici dize ilişkilendirme kullanımı genel senaryolar açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4524a-147">This tutorial describes common scenarios of string interpolation usage.</span></span> <span data-ttu-id="4524a-148">Dize ilişkilendirme hakkında daha fazla bilgi için bkz: [dize ilişkilendirme](../language-reference/tokens/interpolated.md) konu.</span><span class="sxs-lookup"><span data-stu-id="4524a-148">For more information about string interpolation, see the [String interpolation](../language-reference/tokens/interpolated.md) topic.</span></span> <span data-ttu-id="4524a-149">Biçimlendirme .NET türleri hakkında daha fazla bilgi için bkz: [.NET biçimlendirme türleri](../../standard/base-types/formatting-types.md) ve [bileşik biçimlendirme](../../standard/base-types/composite-formatting.md) Konular.</span><span class="sxs-lookup"><span data-stu-id="4524a-149">For more information about formatting types in .NET, see the [Formatting Types in .NET](../../standard/base-types/formatting-types.md) and [Composite formatting](../../standard/base-types/composite-formatting.md) topics.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="4524a-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4524a-150">See also</span></span>
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[<span data-ttu-id="4524a-151">Dizeler</span><span class="sxs-lookup"><span data-stu-id="4524a-151">Strings</span></span>](../programming-guide/strings/index.md)  
