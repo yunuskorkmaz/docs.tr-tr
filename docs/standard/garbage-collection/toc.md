@@ -4,6 +4,7 @@
 ### [IDisposable Uygulayan Nesneler Kullanma](using-objects.md)
 ## [Atık Toplama](index.md)
 ### [Atık Toplamanın Temelleri](fundamentals.md)
+### [Büyük Nesne Yığını](large-object-heap.md)
 ### [Atık Toplama ve Performans](performance.md)
 ### [Uyarılmış Koleksiyonlar](induced.md)
 ### [Gecikme Modları](latency.md)
