@@ -1,1 +1,0 @@
-<span data-ttu-id="d0864-101">Görüntü Renk Yönetimi (ICM)</span><span class="sxs-lookup"><span data-stu-id="d0864-101">Image Color Management (ICM)</span></span>

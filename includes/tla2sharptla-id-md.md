@@ -1,1 +1,0 @@
- <span data-ttu-id="d7fc6-101">Kimlik</span><span class="sxs-lookup"><span data-stu-id="d7fc6-101">ID</span></span> 

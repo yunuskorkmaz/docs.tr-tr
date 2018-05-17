@@ -1,1 +1,0 @@
-<span data-ttu-id="2b437-101">Gelişmiş Şifreleme Standardı (AES)</span><span class="sxs-lookup"><span data-stu-id="2b437-101">Advanced Encryption Standard (AES)</span></span>

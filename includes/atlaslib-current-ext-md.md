@@ -1,1 +1,0 @@
-<span data-ttu-id="a20ac-101">Microsoft Ajax Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="a20ac-101">Microsoft Ajax Library</span></span>

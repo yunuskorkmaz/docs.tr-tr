@@ -1,1 +1,0 @@
-<span data-ttu-id="6e05f-101">Genişletilebilir Hak Biçimlendirme Dili (XrML)</span><span class="sxs-lookup"><span data-stu-id="6e05f-101">Extensible Rights Markup Language (XrML)</span></span>

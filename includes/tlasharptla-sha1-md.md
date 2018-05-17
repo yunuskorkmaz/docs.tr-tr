@@ -1,1 +1,0 @@
-<span data-ttu-id="1b18d-101">Güvenli Karma Algoritması sürüm 1.0 (SHA1)</span><span class="sxs-lookup"><span data-stu-id="1b18d-101">Secure Hash Algorithm version 1.0 (SHA1)</span></span>

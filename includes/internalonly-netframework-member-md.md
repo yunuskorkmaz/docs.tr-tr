@@ -1,1 +1,0 @@
-<span data-ttu-id="010aa-101">Bu üye, .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="010aa-101">This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

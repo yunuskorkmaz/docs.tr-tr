@@ -1,1 +1,0 @@
-<span data-ttu-id="c99ee-101">ADO.NET için Microsoft Eşitleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="c99ee-101">Microsoft Synchronization Services for ADO.NET</span></span>

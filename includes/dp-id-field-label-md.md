@@ -1,1 +1,0 @@
-<span data-ttu-id="323b5-101">Bağımlılık özelliği tanımlayıcı alanı:</span><span class="sxs-lookup"><span data-stu-id="323b5-101">Dependency property identifier field:</span></span>
