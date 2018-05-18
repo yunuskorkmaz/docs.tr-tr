@@ -8,11 +8,11 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 1930d6c50c176ae1765bdb41af2c7484fb908328
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Nasıl yapılır: okuma yazma özellikleri (C# programlama Kılavuzu) bildirme ve kullanma
 Özellikler, ortak veri üyeleri nesnenin verileri korumasız, denetlenmeyen ve doğrulanmamış erişimle gelen riskleri olmadan kolaylık sağlar. Bu aracılığıyla gerçekleştirilir *erişimciler*: atayın ve temel alınan veri üyeden değerleri almak özel yöntemler. [Ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimci atanması, veri üyelerin sağlar ve [almak](../../../csharp/language-reference/keywords/get.md) erişimci veri üyesi değerlerini alır.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
  Ayrı varsa `set` ve `get` yöntemleri özellikleri model kullanıldı, eşdeğer kod şuna benzeyebilir:  
   
-```  
+```csharp  
 person.SetAge(person.GetAge() + 1);   
 ```  
   

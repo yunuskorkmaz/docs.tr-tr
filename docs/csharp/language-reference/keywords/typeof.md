@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: be79fa4f2cfb1119a50201bf6c18a144726f2f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="typeof-c-reference"></a>typeof (C# Başvurusu)
 Elde etmek için kullanılan `System.Type` nesne türü için. A `typeof` ifade aşağıdaki formu alır:  
   
-```  
+```csharp  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
  Çalışma zamanı tür ifade elde etmek için .NET Framework yöntemini kullanabilirsiniz <xref:System.Object.GetType%2A>, aşağıdaki örnekte olduğu gibi:  
   
-```  
+```csharp  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
@@ -32,7 +32,7 @@ System.Type type = i.GetType();
   
  `typeof` İşleci açık genel türler üzerinde de kullanılabilir. Birden fazla tür parametresi türleriyle virgül uygun sayıda belirtiminde olması gerekir. Aşağıdaki örnek, bir yöntemin dönüş türünü genel olup olmadığını belirlemek gösterilmiştir <xref:System.Collections.Generic.IEnumerable%601>. Yöntem MethodInfo türünün bir örneği olduğunu varsayın:  
   
-```  
+```csharp  
 string s = method.ReturnType.GetInterface  
     (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
 ```  

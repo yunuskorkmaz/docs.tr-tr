@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte (C# Başvurusu)
 
@@ -45,27 +45,27 @@ Aşağıda bazı örnekler gösterilmektedir.
   
  Örtük olarak sabit olmayan sayısal türler için daha büyük depolama boyutunu dönüştürülemiyor `byte`. Tam sayı türleri depolama boyutları hakkında daha fazla bilgi için bkz: [tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md). Örneğin, aşağıdaki iki göz önünde bulundurun `byte` değişkenleri `x` ve `y`:  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  Atama işlecinin sağ taraftaki aritmetik ifade değerlendiren çünkü aşağıdaki atama deyimi bir derleme hatası üretecektir `int` varsayılan olarak.  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  Bu sorunu gidermek için bir atama kullanın:  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  Ancak, hedef değişkeni depolama boyutu ile aynı veya daha büyük bir depolama boyutu sahip olduğu aşağıdaki deyimleri kullanmak için mümkündür:  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  Ayrıca, kayan nokta türleri için örtük dönüştürme yok yok `byte`. Örneğin, bir açık atama kullanılmadığı sürece aşağıdaki ifadeyi derleyici hatası oluşturur:  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  Aşırı yüklenmiş yöntemleri çağrılırken bir cast kullanılması gerekir. Örneğin, aşağıdaki aşırı kullanan yöntemleri düşünün `byte` ve [int](../../../csharp/language-reference/keywords/int.md) Parametreler:  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  Kullanarak `byte` cast garanti doğru türde, örneğin çağrıldığından emin:  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  

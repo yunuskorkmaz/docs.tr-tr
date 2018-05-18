@@ -2,11 +2,11 @@
 title: Yapılar (F#)
 description: 'F # yapısı hakkında genellikle bir compact nesne türü öğrenin küçük miktarda veri ve basit davranışı türleriyle için bir sınıf daha verimlidir.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 728533e24dcfae219ae5ab3d410389e95fcfaee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="structures"></a>Yapılar
 
@@ -18,13 +18,13 @@ A *yapısı* küçük miktarda veri ve basit davranışı türleri için bir sı
 [ attributes ]
 type [accessibility-modifier] type-name =
     struct
-        type-definition-elements
+        type-definition-elements-and-members
     end
 // or
 [ attributes ]
 [<StructAttribute>]
 type [accessibility-modifier] type-name =
-    type-definition-elements
+    type-definition-elements-and-members
 ```
 
 ## <a name="remarks"></a>Açıklamalar
@@ -32,7 +32,7 @@ Yapıları olan *değer türleri*, doğrudan yığında veya olarak kullanıldı
 
 Önceki sözdiziminde iki form gösterilmektedir. İlk basit sözdizimi değil, ancak yine de sık kullandığınızda, çünkü kullanılır `struct` ve `end` anahtar sözcüklerini atlayın `StructAttribute` ikinci biçiminde görünür öznitelik. Kısaltma `StructAttribute` henüz için `Struct`.
 
-*Tür tanımı öğeleri* önceki sözdiziminde üye bildirimler ve tanımlar temsil eder. Yapıları oluşturucular ve kesilebilir ve değişmez alanları olabilir ve bunlar üyeleri ve arabirim uygulamaları bildirebilirsiniz. Daha fazla bilgi için bkz: [üyeleri](members/index.md).
+*Tür-tanımı-öğeleri-ve-üyeleri* üye bildirimler ve tanımlar önceki sözdiziminde temsil eder. Yapıları oluşturucular ve kesilebilir ve değişmez alanları olabilir ve bunlar üyeleri ve arabirim uygulamaları bildirebilirsiniz. Daha fazla bilgi için bkz: [üyeleri](members/index.md).
 
 Yapıları devralma katılamaz, içeremez `let` veya `do` bağlamalar ve yinelemeli olarak (kendi türü başvuru başvuru hücreleri içerebilse) kendi türünde alanlar içeremez.
 

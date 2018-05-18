@@ -3,11 +3,11 @@ title: LINQ ile çalışma
 description: Bu öğretici LINQ sıralarıyla oluşturmak, kullanım için yöntemleri LINQ sorguları yazma ve istekli ve geç değerlendirme arasında ayrım öğretir.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -200,7 +200,7 @@ Console.WriteLine(times);
 
 ## <a name="optimizations"></a>En iyi duruma getirme
 
-Oluşturulan kadarki örnek yürüten bir *karışık olarak*, burada üst ve alt kartları her çalıştırmada aynı kalır. Bir değiştirin ve çalıştırın olalım bir *karışık çıkışı*, burada tüm 52 kartları konumunu değiştirme. Bir çıkış karışık için ilk kartı böylece alt yarısında deste Interleave deste ilk kart olur. Üst yarısındaki son kartı altındaki kartı hale anlamına gelir. Yalnızca tek bir çizgi değişiklik olmasıdır. Deste üst ve alt yarısının sırasını değiştirmek için karışık çağrısı güncelleştirin:
+Oluşturulan kadarki örnek yürüten bir *karışık çıkışı*, burada üst ve alt kartları her çalıştırmada aynı kalır. Bir değiştirin ve çalıştırın olalım bir *karışık olarak*burada tüm 52 kartları konumunu değiştirin. İçinde bir karışık için ilk kartı böylece alt yarısında deste Interleave deste ilk kart olur. Üst yarısındaki son kartı altındaki kartı hale anlamına gelir. Yalnızca tek bir çizgi değişiklik olmasıdır. Deste üst ve alt yarısının sırasını değiştirmek için karışık çağrısı güncelleştirin:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Bir sorgu her eriştiğinde oturum yok dikkat edin. Yalnızca özgün sorgu oluşturduğunuzda, oturum açın. Program hala çalıştırmak için uzun bir zaman alır, ancak artık neden görebilirsiniz. Çalıştırırsanız açık günlük ile dış çalıştıran sabırdan karışık, geri iç karışık için geçin. Geç değerlendirme etkileri hala görürsünüz. Tek çalıştırmada tüm değer ve seri oluşturma gibi 2592 sorguları yürütür.
+Bir sorgu her eriştiğinde oturum yok dikkat edin. Yalnızca özgün sorgu oluşturduğunuzda, oturum açın. Program hala çalıştırmak için uzun bir zaman alır, ancak artık neden görebilirsiniz. Çalıştırırsanız açık günlük ile iç çalıştıran sabırdan karışık, geri dış karışık için geçin. Geç değerlendirme etkileri hala görürsünüz. Tek çalıştırmada tüm değer ve seri oluşturma gibi 2592 sorguları yürütür.
 
 Bu yürütmeleri önlemek için bu programı güncelleştirmek için kolay bir yolu yoktur. LINQ yöntemlerdir `ToArray()` ve `ToList()` , sorguyu çalıştırmak neden ve sonuçları bir dizi veya bir liste, sırasıyla depolamak. Bu yöntemler bir sorgu veri sonuçlarını önbelleğe yerine kaynak sorguyu yeniden çalıştırmak için kullanın.  Ekleme çağrısıyla kartı deste oluşturmak sorgularını `ToArray()` ve sorguyu yeniden çalıştırın:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Yeniden çalıştırın ve iç karışık aşağıya doğru 30 sorgudur. Dış karışık ile yeniden çalıştırın ve benzer geliştirmeleri görürsünüz. (Bunu şimdi 162 sorguları yürüten).
+Yeniden çalıştırın ve dış karışık aşağıya doğru 30 sorgudur. İç karışık ile yeniden çalıştırın ve benzer geliştirmeleri görürsünüz. (Bunu şimdi 162 sorguları yürüten).
 
 Bu örnekte, tüm sorguları isteğini önleyebiliriz çalışması gerektiğini göz önünde tarafından hatalı yorumlayan yok. Bu örnek, geç değerlendirme performans sorunlar neden olduğu kullanım örnekleri vurgulamak için tasarlanmıştır. Her yeni deste düzenlenmesi önceki düzenlemeden diğerine oluşturulduğundan olmasıdır. Geç değerlendirme kullanılması anlamına gelir her yeni deste yapılandırma bile yerleşik kod yürütmek özgün deste yerleşik `startingDeck`. Bu, büyük miktarda ek iş neden olur. 
 
@@ -324,4 +324,4 @@ Derleme ve yeniden çalıştırın. Çıktı biraz temizleyici ve kod biraz daha
 
 Bu örnek, LINQ kullanılan yöntemlerin bazıları gösterdi, kodu LINQ ile kolayca kullanılacak kendi yöntemleri oluşturmak nasıl etkinleştirildi. Bu ayrıca, yavaş ve istekli değerlendirme karar performans üzerinde olabilir etkisi arasındaki farkları gösterilmiştir.
 
-Bir bit hakkında bir magician'ın tekniği de öğrendiniz. Burada, her kartı deste taşır kontrol sağladığından magicians faro karışık kullanın. Bazı ipuçlarını magician deste en üstünde bir kart yerleştirin bir izleyici üyenin ve burada bu kartı gider bilerek birkaç kez seçimdeki. Belirli bir yolla deste ayarlamak diğer İllüzyonları gerektirir. Bir magician eli gerçekleştirmeden önce deste ayarlar. Ardından aynen 5 kez iç karışık kullanarak deste karışık. Aşama üzerinde aynen rastgele deste gibi göründüğünü göster, 3 kez daha karışık ve tam olarak nasıl istediği ayarlamak deste sahip.
+Bir bit hakkında bir magician'ın tekniği de öğrendiniz. Burada, her kartı deste taşır kontrol sağladığından magicians faro karışık kullanın. Bazı ipuçlarını magician deste en üstünde bir kart yerleştirin bir izleyici üyenin ve burada bu kartı gider bilerek birkaç kez seçimdeki. Belirli bir yolla deste ayarlamak diğer İllüzyonları gerektirir. Bir magician eli gerçekleştirmeden önce deste ayarlar. Ardından aynen 5 kez bir dış karışık kullanarak deste karışık. Aşama üzerinde aynen rastgele deste gibi göründüğünü göster, 3 kez daha karışık ve tam olarak nasıl istediği ayarlamak deste sahip.

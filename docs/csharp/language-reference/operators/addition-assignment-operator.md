@@ -7,11 +7,11 @@ helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: 90967dcdccfb71995ac83e0dd52ea7bd86f136be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcd56acad8e2b08585e5ae60f1c3cf8183b5664a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>+= İşleci (C# Başvurusu)
 Toplama atama işleci.  
@@ -19,13 +19,13 @@ Toplama atama işleci.
 ## <a name="remarks"></a>Açıklamalar  
  Bir ifade kullanılarak `+=` atama işleci gibi  
   
-```  
+```csharp  
 x += y  
 ```  
   
  eşdeğerdir  
   
-```  
+```csharp  
 x = x + y  
 ```  
   

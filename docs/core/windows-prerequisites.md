@@ -3,12 +3,12 @@ title: .NET Core Windows için Önkoşullar
 description: Windows üzerinde gereken bağımlılıkları geliştirmek ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/14/2018
+ms.openlocfilehash: f27070c08755e5b650e32e01011bb7bac669c82d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>.NET Core Windows için Önkoşullar
 
@@ -28,11 +28,11 @@ Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağıml�
 * Windows Server 2008 R2 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 SP1 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2012 R2 (tam sunucu veya Sunucu Çekirdeği)
-* Windows Server 2016 (tam sunucu, Sunucu Çekirdeği veya Nano Server)
+* Windows Server 2016 veya sonraki sürümleri (tam sunucu, Sunucu Çekirdeği veya Nano Server)
 
 Bkz: [.NET Core 2.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için desteklenen işletim sistemleri 2.x.
 
-Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri.
+Bkz: [.NET Core 1.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri.
 
 ## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
 
@@ -46,7 +46,13 @@ Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com
 * .NET Core yoluyla yükleme bir *.zip* dosyası. Bu yapı/CI/CD sunucuları içerebilir.
 
 > [!NOTE]
-> *Windows 8.1 ve önceki sürümleri veya Windows Server 2012 R2 ve önceki sürümleri için:* Windows yüklemenizi güncel olduğundan ve içerir emin olun [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) yüklenebileceği Windows Update aracılığıyla. Bu güncelleştirmenin yüklü yoksa, aşağıdaki gibi bir .NET Core uygulamasını başlatma sırasında bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **Windows 8.1 ve önceki sürümleri veya Windows Server 2012 R2 ve önceki sürümleri için:**
+>
+> Windows yüklemenizi güncel olduğundan ve içerir emin olun [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), yüklenebileceği Windows Update aracılığıyla. Bu güncelleştirmenin yüklü yoksa, .NET Core uygulama başlattığında aşağıdaki gibi bir hata görürsünüz: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **Windows 7 veya Windows Server 2008 R2 için:**
+>
+> KB2999226 ek olarak, aynı zamanda sahip olduğunuzdan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu güncelleştirmenin yüklü yoksa, bir .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 önkoşulları
 
@@ -96,6 +102,6 @@ Visual Studio'da .NET Core 1.x uygulamaları geliştirmek için [yükleyip Visua
 >
 > * Üzerinde **yardımcı** menüsünde seçin **Microsoft Visual Studio hakkında**.
 > * İçinde **Microsoft Visual Studio hakkında** iletişim kutusunda, sürüm numarasını doğrulayın.
->   * .NET Core 2.1 Preview 1 uygulamalar, Visual Studio 2017 sürüm 15,6 için Önizleme 6 veya üstünü.
+>   * .NET Core 2.1 RC uygulamalar için Visual Studio 2017 15.7 veya daha yüksek bir sürümü.
 >   * .NET Core 2.0 uygulamalar için Visual Studio 2017 15.3 veya daha yüksek bir sürümü.
 >   * .NET Core 1.x uygulamalar için Visual Studio 2017 15.0 veya daha yüksek bir sürümü.

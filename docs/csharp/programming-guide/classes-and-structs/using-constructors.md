@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Zaman bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan kurucusu çağrılır. Oluşturucular sınıfta veya yapı aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatma.  
@@ -29,7 +29,7 @@ Zaman bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya
   
  Oluşturucuları için [yapısı](../../../csharp/language-reference/keywords/struct.md) türleri sınıf Oluşturucular, benzer ancak `structs` bir derleyici tarafından otomatik olarak sağlandığından açık varsayılan bir oluşturucu içeremez. Bu oluşturucu, her bir alan başlatır `struct` varsayılan değerlere. Daha fazla bilgi için bkz: [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Ancak, bu varsayılan kurucu yalnızca, çağrılan `struct` ile örneği `new`. Örneğin, bu kod için varsayılan oluşturucu kullanır <xref:System.Int32>, böylece tamsayı başlatıldığını garanti:  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  

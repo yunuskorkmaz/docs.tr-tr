@@ -8,11 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>|| İşleci (C# Başvurusu)
 Koşullu-OR işleci (`||`) bir mantıksal-OR, gerçekleştirir, `bool` işlenen. İlk işlenen değerlendirilirse `true`, ikinci işlenen hesaplanan değil. İlk işlenen değerlendirilirse `false`, ikinci işleci veya ifadesi bir bütün olarak değerlendiren olup olmadığını belirler `true` veya `false`.  
@@ -20,13 +20,13 @@ Koşullu-OR işleci (`||`) bir mantıksal-OR, gerçekleştirir, `bool` işlenen.
 ## <a name="remarks"></a>Açıklamalar  
  İşlemi  
   
-```  
+```csharp  
 x || y  
 ```  
   
  işlemine karşılık gelir  
   
-```  
+```csharp  
 x | y  
 ```  
   

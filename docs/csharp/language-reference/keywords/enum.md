@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="enum-c-reference"></a>enum (C# Başvurusu)
 `enum` Anahtar sözcüğü bir numaralandırma, numaralandırıcı listesi adlı adlandırılmış sabitler kümesinden oluşur farklı bir tür bildirmek için kullanılır.  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
   
  Varsayılan olarak, ilk Numaralandırıcı 0 değerine sahip ve art arda gelen her Numaralandırıcı değerinin 1 ile artar. Örneğin, aşağıdaki numaralandırma içinde `Sat` olan `0`, `Sun` olan `1`, `Mon` olan `2`, vb.  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Numaralandırmalar başlatıcıları varsayılan değerleri geçersiz kılmak için aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz.  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +34,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  Her numaralandırma türü, herhangi bir tam sayı türü olabilecek bir temel türünde dışında [char](../../../csharp/language-reference/keywords/char.md). Temel alınan tür numaralandırma öğelerinin varsayılan [int](../../../csharp/language-reference/keywords/int.md). Başka bir tam sayı türü, bir numaralandırma gibi bildirmek için [bayt](../../../csharp/language-reference/keywords/byte.md), aşağıdaki örnekte gösterildiği gibi türü, izlemelidir tanımlayıcı sonra iki nokta kullanın.  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  Temel alınan tür, ne kadar depolama alanı için her Numaralandırıcı ayrılan belirtir. Ancak, bir açık atama dönüştürmek gerekli olan `enum` türü olarak bir tam sayı tür. Örneğin, aşağıdaki deyim Numaralandırıcı atar `Sun` türünde bir değişken için [int](../../../csharp/language-reference/keywords/int.md) dönüştürmek için bir atama kullanarak `enum` için `int`.  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   
