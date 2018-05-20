@@ -4,19 +4,19 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: aa6720430a1d93d7eacb098962c09efad09a179f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>parametresi değiştiricisi (C# Başvurusu)
 
-`in` Anahtar sözcüğü başvuruya göre geçirilecek bağımsız değişkenler neden olur. Benzer; [ref](ref.md) veya [çıkışı](out-parameter-modifier.md) anahtar sözcüklerini dışındaki `in` bağımsız değişkenleri ancak çağrılan yöntemi tarafından değiştirilemez `ref` bağımsız değişkenleri değiştirilmiş, `out` bağımsız değişkenleri çağıran tarafından değiştirilmesi gerekir ve bu değişiklik observable arama bağlamında.
+`in` Anahtar sözcüğü başvuruya göre geçirilecek bağımsız değişkenler neden olur. Benzer; [ref](ref.md) veya [çıkışı](out-parameter-modifier.md) anahtar sözcüklerini dışındaki `in` bağımsız değişkenleri çağrılan yöntemi tarafından değiştirilemez. Oysa `ref` bağımsız değişkenleri değiştirilmiş, `out` bağımsız değişkenleri çağıran tarafından değiştirilmesi gerekir ve bu değişiklik observable arama bağlamında olan.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
-Önceki örnekte gösterilmiştir `in` değiştiricisi genellikle gereksiz çağrı sitede. Yalnızca yöntemi bildiriminde de gereklidir.
+Önceki örnekte gösteren `in` değiştiricisi genellikle gereksiz çağrı sitede. Yalnızca yöntemi bildiriminde de gereklidir.
 
 > [!NOTE] 
 > `in` Anahtar sözcüğü de kullanılabilir bir genel tür parametresi tür parametresi, bir parçası olarak karşıtıdır olduğunu belirtmek için bir `foreach` deyimi, veya bir parçası olarak bir `join` yan tümcesinde bir LINQ Sorgu. Kullanımı hakkında daha fazla bilgi için `in` anahtar sözcüğü bu bağlamlarında bkz [içinde](in.md), tüm bu kullanımlar için bağlantılar sağlar.
@@ -47,9 +47,9 @@ class InOverloads
 
 ## <a name="overload-resolution-rules"></a>Çözümleme kurallarını aşırı yükleme
 
-Değeriyle yöntemleriyle aşırı çözümleme kurallarını anlama `in` gerekçesi anlama aracılığıyla bağımsız değişkenleri `in` bağımsız değişkenler. Yöntemlerini kullanarak tanımlama `in` parametreleri olan bir olası performans en iyi duruma getirme. Bazı `struct` tür bağımsız değişkenleri boyutu büyük ve yöntemleri sıkı döngüler veya kritik kod yolları çağrıldığında, bu yapıları kopyalama maliyetini önemlidir. Yöntemleri bildirmek `in` çağrılan yöntemin bağımsız durumunu değiştirmez çünkü bağımsız değişkenleri başvuruya göre güvenle geçirilebilir olduğunu belirtmek üzere parametreler. Bu bağımsız değişkenleri başvuruya göre geçirme (büyük olasılıkla) pahalı kopyası engeller. 
+Değeriyle yöntemleriyle aşırı çözümleme kurallarını anlama `in` gerekçesi anlama tarafından bağımsız değişkenleri `in` bağımsız değişkenler. Yöntemlerini kullanarak tanımlama `in` parametreleri olan bir olası performans en iyi duruma getirme. Bazı `struct` tür bağımsız değişkenleri boyutu büyük ve yöntemleri sıkı döngüler veya kritik kod yolları çağrıldığında, bu yapıları kopyalama maliyetini önemlidir. Yöntemleri bildirmek `in` çağrılan yöntemin bağımsız durumunu değiştirmez çünkü bağımsız değişkenleri başvuruya göre güvenle geçirilebilir olduğunu belirtmek üzere parametreler. Bu bağımsız değişkenleri başvuruya göre geçirme (büyük olasılıkla) pahalı kopyası engeller. 
 
-Belirtme `in` çağrısında değişkenlerine site genellikle isteğe bağlıdır. Bağımsız değişkenleri değere göre geçirme ile başvuru kullanarak geçirme arasındaki anlamsal fark yoktur `in` değiştiricisi. `in` Çağrısı sitede değiştiricisi olduğundan isteğe bağlı bağımsız değişkeninin değeri değişebilir belirtmek gerekmez. Açıkça eklemeniz `in` bağımsız değişkeni emin olmak için arama sitedeki değiştirici olmayan değere göre başvuruya göre geçirilir. Açıkça kullanarak `in` iki etkilere sahiptir:
+Belirtme `in` çağrısında bağımsız değişkenler için site genellikle isteğe bağlıdır. Bağımsız değişkenleri değere göre geçirme ile başvuru kullanarak geçirme arasındaki anlamsal fark yoktur `in` değiştiricisi. `in` Çağrısı sitede değiştiricisi olduğundan isteğe bağlı bağımsız değişkeninin değeri değişebilir belirtmek gerekmez. Açıkça eklemeniz `in` bağımsız değişkeni emin olmak için arama sitedeki değiştirici olmayan değere göre başvuruya göre geçirilir. Açıkça kullanarak `in` aşağıdaki iki etkilere sahiptir:
 
 İlk olarak, belirtme `in` çağrısı site eşleşen ile tanımlanmış bir yöntem seçmek için derleyici zorlar `in` parametresi. Aksi durumda, yalnızca içinde varken, iki yöntemleri farklı olduğunda `in`, değeriyle aşırı daha iyi bir eşleşmedir.
 

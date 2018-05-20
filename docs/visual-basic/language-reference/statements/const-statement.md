@@ -1,16 +1,16 @@
 ---
 title: Const Deyimi (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const Deyimi (Visual Basic)
 Bildirir ve bir veya daha fazla sabitleri tanımlar.  
@@ -27,7 +27,7 @@ Const constantlist
  İsteğe bağlı. İçin tüm sabit uygulamak özniteliklerin listesi, bu deyim içinde bildirildi. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç ("`<`"ve"`>`").  
   
  `accessmodifier`  
- İsteğe bağlı. Hangi kod bu sabitleri erişebileceğini belirtmek için bunu kullanın. Olabilir [ortak](../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, veya [özel](../../../visual-basic/language-reference/modifiers/private.md).  
+ İsteğe bağlı. Hangi kod bu sabitleri erişebileceğini belirtmek için bunu kullanın. Olabilir [ortak](../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md), [Protected Friend](../modifiers/protected-friend.md), [özel](../../../visual-basic/language-reference/modifiers/private.md), veya [Korumalı özel](../../language-reference/modifiers/private-protected.md).
   
  `Shadows`  
  İsteğe bağlı. Redeclare ve bir programlama öğesi bir taban sınıf içinde gizlemek için bunu kullanın. Bkz: [gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md).  

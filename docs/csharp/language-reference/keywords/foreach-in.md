@@ -9,14 +9,15 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
-`foreach` Deyimi bir dizi veya uygulayan bir nesne koleksiyonu her öğe için bir grup katıştırılmış ifadeler yineler <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. `foreach` Deyimi istiyor, ancak öğe eklemek veya beklenmeyen yan etkileri önlemek için kaynak koleksiyondan kaldırmak için kullanılamaz bilgileri almak için koleksiyon yinelemek için kullanılır. Gerekirse eklemek veya kaynak koleksiyondan öğeleri, kullanmak bir [için](for.md) döngü.
+
+`foreach` Deyimi bir dizi veya uygulayan bir nesne koleksiyonu her öğe için bir grup katıştırılmış ifadeler yineler <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. [Foreach deyimi](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) istiyor, ancak öğe eklemek veya beklenmeyen yan etkileri önlemek için kaynak koleksiyondan kaldırmak için kullanılamaz bilgileri almak için koleksiyon yinelemek için kullanılır. Gerekirse eklemek veya kaynak koleksiyondan öğeleri, kullanmak bir [için](for.md) döngü.
   
  Katıştırılmış ifadeler dizisi ya da koleksiyonu her öğe için yürütme devam edin. Koleksiyondaki tüm öğeler için yineleme tamamladıktan sonra sonraki deyimi aşağıdaki denetimi aktarılır `foreach` bloğu.
   
@@ -31,7 +32,8 @@ ms.lasthandoff: 05/04/2018
  [Nasıl yapılır: foreach ile Koleksiyon Sınıfına Erişme](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod üç örnekler gösterilmektedir.
+
+Aşağıdaki kod üç örnekler gösterilmektedir:
 
 > [!TIP]
 > Sözdizimiyle denemek ve kullanım örneğine daha benzer farklı kullanımları denemek için örnekler değiştirebilirsiniz. Kodu çalıştırmak için "Çalıştır" tuşlarına basın, sonra düzenleme ve basın "yeniden çalıştır".
@@ -49,9 +51,12 @@ ms.lasthandoff: 05/04/2018
 [!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
  
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
+
+[Foreach deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
 
 [C# başvurusu](../index.md)
 

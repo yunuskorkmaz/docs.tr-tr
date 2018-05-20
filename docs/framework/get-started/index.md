@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -70,7 +70,7 @@ Bir geliştirici değilseniz, uygulamalarınızı oluşturmak için .NET Framewo
 
 2. Dil veya uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen dilleri seçin. Dilleri sayısı dahil olmak üzere, kullanılabilir [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F #](../../fsharp/index.md)ve C + +/ CLI Microsoft'tan. (.NET Framework aynılarını için uygulamalar geliştirmenize olanak tanıyan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](http://go.microsoft.com/fwlink/?LinkId=199862).)
 
-3. Seçin ve geliştirme yükleyin ve, uygulamalarınızı oluşturmak için kullanılacak ortamı seçili programlama dili veya dilleri destekler. .NET Framework uygulamaları için Microsoft tümleşik geliştirme ortamı (IDE) [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532). Sürümleri bir süre içinde kullanılabilir.
+3. Seçin ve geliştirme yükleyin ve, uygulamalarınızı oluşturmak için kullanılacak ortamı seçili programlama dili veya dilleri destekler. .NET Framework uygulamaları için Microsoft tümleşik geliştirme ortamı (IDE) [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Sürümleri bir süre içinde kullanılabilir.
 
 .NET Framework hedefleyen uygulamaları geliştirme hakkında daha fazla bilgi için bkz: [geliştirme Kılavuzu](../../../docs/framework/development-guide.md).
 

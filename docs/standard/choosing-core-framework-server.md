@@ -4,11 +4,11 @@ description: Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluş
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 1bed9bd2ed709907323123ad6658bbf0503ff1fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -93,8 +93,6 @@ Bazı .NET Framework teknolojiler .NET Core kullanılamaz. Bunlardan bazıları 
 * WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerini kullanmak için WCF sunucu şu anda yalnızca .NET Framework kullanılabilir uygulamasıdır. Bu senaryo, .NET Core için geçerli planının bir parçası değil, ancak gelecek için kabul.
 
 * İş akışı ile ilgili hizmetlerin: Windows Workflow Foundation (WF), (WCF + tek bir hizmette WF) iş akışı hizmetleri ve WCF Veri Hizmetleri (eski adıyla "ADO.NET Veri Hizmetleri"), yalnızca .NET Framework kullanılabilir.  WCF + WF/WF/WCF Veri Hizmetleri için .NET Core getirmek için plan yok.
-
-* Windows Presentation Foundation (WPF) ve Windows Forms: WPF ve Windows Forms uygulamaları bulunan ve yalnızca .NET Framework. .NET Core bağlantı noktasına plan yok.
 
 * Dil desteği: Visual Basic ve F # şu anda desteklenen .NET Core, ancak tüm proje türleri için değil. Desteklenen proje şablonları listesi için bkz: [dotnet yeni şablonu seçeneklerini](../core/tools/dotnet-new.md#arguments).
 

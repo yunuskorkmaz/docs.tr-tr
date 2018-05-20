@@ -2,11 +2,11 @@
 title: 'F # kodlama kuralları'
 description: 'Genel kurallar ve deyimleri F # kodu yazarken öğrenin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-coding-conventions"></a>F # kodlama kuralları
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 Satır sonu topolojik katmanları, sonradan alfasayısal olarak sıralanan her bir katman ile ayıran unutmayın. Bu düzgün bir şekilde kod yanlışlıkla değerleri gölgeleme olmadan düzenler.
@@ -318,7 +316,7 @@ Gibi türleri `Result<'Success, 'Error>` burada iç içe değil ve F # isteğe b
 
 ## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve programlama noktası boş
 
-F # kısmi uygulama ve bu nedenle, program için çeşitli şekillerde noktası Serbest stilde destekler. Bu kodu yeniden kullanma içinde bir modül veya herhangi bir şeyin uygulama için yararlı olabilir, ancak genellikle bir genel olarak kullanıma sunmak değil. Genel olarak, noktası serbest programlama virtue içinde ve kendisinin değil ve ciddi bir bilişsel engel stilde immersed değil kişiler için ekleyebilirsiniz. Noktası serbest programlama F # için iyi eğitilmiş matematikçi temel olmakla birlikte, lambda hesaplama ile tanıdık olmayan kişiler için zor olabilir.
+F # kısmi uygulama ve bu nedenle, program için çeşitli şekillerde noktası Serbest stilde destekler. Bu kodu yeniden kullanma içinde bir modül veya herhangi bir şeyin uygulama için yararlı olabilir, ancak genellikle bir genel olarak kullanıma sunmak değil. Genel olarak, noktası serbest programlama virtue içinde ve kendisinin değil ve ciddi bir bilişsel engel stilde immersed değil kişiler için ekleyebilirsiniz.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama ve ortak API'leri currying kullanmayın
 

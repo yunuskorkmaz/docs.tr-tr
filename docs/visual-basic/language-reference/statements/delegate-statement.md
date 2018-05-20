@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
 Bir temsilci bildirmek için kullanılır. Bir temsilci başvurduğu bir başvuru türü olan bir `Shared` yöntemi türü veya örnek yöntemi nesnenin. Parametre ve dönüş türleri eşleşen herhangi bir yordam, bu temsilci sınıfının bir örneğini oluşturmak için kullanılabilir. Yordam sonra yoluyla temsilci örnek daha sonra çağrılabilir.  
@@ -28,7 +28,7 @@ Bir temsilci bildirmek için kullanılır. Bir temsilci başvurduğu bir başvur
 |Terim|Tanım|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu temsilciye uygulamak öznitelikler listesi. Birden çok öznitelik virgülle ayrılır. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç ("`<`"ve"`>`").|  
-|`accessmodifier`|İsteğe bağlı. Hangi kod temsilci erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md). Temsilci bildirir öğesi erişebilmeniz için herhangi bir kod da erişebilirsiniz.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md). Yalnızca kodunu temsilcinin sınıf veya türetilmiş bir sınıf içinde erişebilir.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md). Yalnızca aynı bütünleştirilmiş kod içinde kod temsilci erişebilir.<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md). Yalnızca kod temsilci bildirir öğesi içinde erişebilir.<br /><br /> Belirleyebileceğiniz `Protected Friend` temsilcinin sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kodundan erişim sağlamak için.|  
+|`accessmodifier`|İsteğe bağlı. Hangi kod temsilci erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> - [Ortak](../../../visual-basic/language-reference/modifiers/public.md). Temsilci bildirir öğesi erişebilmeniz için herhangi bir kod da erişebilirsiniz.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md). Yalnızca kodunu temsilcinin sınıf veya türetilmiş bir sınıf içinde erişebilir.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md). Yalnızca aynı bütünleştirilmiş kod içinde kod temsilci erişebilir.<br />- [Özel](../../../visual-basic/language-reference/modifiers/private.md). Yalnızca kod temsilci bildirir öğesi içinde erişebilir.<br /><br /> - [Arkadaş korumalı](../../language-reference/modifiers/protected-friend.md) yalnızca içine temsilcinin sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kodda temsilci erişebilir. <br />- [Özel korumalı](../../language-reference/modifiers/private-protected.md) yalnızca temsilcinin sınıfı içinde veya türetilmiş bir sınıf aynı bütünleştirilmiş kod temsilci erişebilir. |  
 |`Shadows`|İsteğe bağlı. Bu temsilci redeclares ve bir aynı adlı programlama öğesi ya da bir taban sınıf içinde aşırı yüklenmiş öğelerin gizler gösterir. Bildirilen öğe herhangi bir tür başka herhangi bir tür ile gölge.<br /><br /> Gölgeli bir öğe, dışında gölgeleme öğesi erişilemez olduğu gelen shadows türetilmiş sınıf içinde kullanılamaz. Örneğin, varsa bir `Private` öğesi shadows erişim izni yok kod bir temel sınıf öğesi `Private` öğe temel sınıf öğesi yerine erişir.|  
 |`Sub`|İsteğe bağlı, ancak ya da `Sub` veya `Function` görünmesi gerekir. Bu yordam bir temsilci olarak bildirir `Sub` bir değer döndürmüyor yordamı.|  
 |`Function`|İsteğe bağlı, ancak ya da `Sub` veya `Function` görünmesi gerekir. Bu yordam bir temsilci olarak bildirir `Function` yordamı bir değer döndürür.|  

@@ -3,11 +3,11 @@ title: Temsilciler için ortak desenler
 description: Temsilciler kodunuzda güçlü bileşeniniz arasında Kaçın kullanmayı için ortak desenler hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Temsilciler için ortak desenler
 
@@ -27,7 +27,7 @@ Bu, yalnızca değerinden 10 sayılara dizisini filtreler.
 Prototip yerdir yöntemi için:
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 Bu örnek LINQ parçası olan tüm yöntemleri ile yinelenir. Tüm temsilcileri belirli sorgu yönetir kodu güvenirler. Bu API tasarım deseni öğrenin ve anlamak için çok güçlü bir adrestir.

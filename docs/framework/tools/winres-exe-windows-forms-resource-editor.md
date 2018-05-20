@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Windows Forms Kaynak Düzenleyici)
-ms.date: 03/30/2017
+ms.date: 05/21/2018
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,17 +12,20 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Forms Kaynak Düzenleyici)
 Windows Formları Kaynak Düzenleyicisi Winres.exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Windows Formları kullanıcı arabirimi (UI) kaynaklarını yerelleştirmesine yardımcı olan görsel bir düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz: [masaüstü uygulamalarında kaynakları](../../../docs/framework/resources/index.md).  
   
  Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
+> [!IMPORTANT]
+> Yalnızca yükleyeceğini ve güvenilir kaynaklardan kullanım .resx dosyaları. ResX dosyaları yürütülebilir kod içerebilir ve güvenlik görüş açısından yürütülebilir bir dosyanın (.exe) değerlendirilmelidir.
+
  Komut satırına şunu yazın:  
   
 ## <a name="syntax"></a>Sözdizimi  

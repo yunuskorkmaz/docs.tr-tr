@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon suite geliştiricilerin ve tasarımcıların görsel olarak ilgi çekici efektler oluşturmak ve kendi ürün için tutarlı bir görünüm oluşturmak için izin özellikleri (stiller, şablonlar, tetikleyiciler ve film şeritleri) bakın. Geliştiriciler ve/veya tasarımcıları bir uygulama tarafından uygulama temelinde yaygın görünümünü özelleştirebilirsiniz rağmen güçlü bir stil ve şablon modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasını izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  ![ListView stilde](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- Bu basit fotoğraf örnek, bir görsel olarak ilgi çekici kullanıcı deneyimi oluşturmak için stil ve şablon kullanır. İki örnek sahip <xref:System.Windows.Controls.TextBlock> öğeleri ve <xref:System.Windows.Controls.ListBox> görüntüleri bir listeye bağlı denetim. Tam bir örnek için bkz: [stil ve şablon örnek giriş](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ Bu basit fotoğraf örnek, bir görsel olarak ilgi çekici kullanıcı deneyimi oluşturmak için stil ve şablon kullanır. İki örnek sahip <xref:System.Windows.Controls.TextBlock> öğeleri ve <xref:System.Windows.Controls.ListBox> görüntüleri bir listeye bağlı denetim. Tam bir örnek için bkz: [stil ve şablon örnek giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Stil temelleri  

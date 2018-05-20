@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
 Bir veya daha fazla bildirilen programlama öğeleri dahil tüm kapsanan türleri içinde bildirim bağlamları içinde yalnızca erişilebilir olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir programlama öğesi özel işlevsellikten temsil eder veya gizli verileri içeriyorsa, genellikle mümkün olduğunca kesinlikle erişimi sınırlamak istiyorsunuz. En fazla kısıtlama, yalnızca modül, sınıf veya erişmek için tanımlayan yapısı sağlayarak elde edin. Bu şekilde bir öğeyi erişimi sınırlamak için ile bildirebilir `Private`.  
-  
+
+> [!NOTE]
+> Aynı zamanda [özel korumalı](private-protected.md) üyesi erişilebilir bir sınıftaki ve türetilmiş sınıflarının içeren derlemesinde bulunan yapar erişim değiştiricisi.
+
 ## <a name="rules"></a>Kurallar  
-  
+
 -   **Bildirim bağlamı.** Kullanabileceğiniz `Private` yalnızca modülü düzeyinde. Bu bildirimi bağlamının anlamına gelir bir `Private` öğesi bir modül, sınıf veya yapı olması ve kaynak dosyasını, ad alanı, arabirim veya yordam olamaz.  
   
 ## <a name="behavior"></a>Davranış  
@@ -59,7 +62,8 @@ Bir veya daha fazla bildirilen programlama öğeleri dahil tüm kapsanan türler
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Özel korumalı](./private-protected.md)   
+ [Arkadaş korumalı](./protected-friend.md)[erişim düzeyini Visual Basic'te    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

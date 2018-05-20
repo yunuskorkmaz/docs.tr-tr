@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
 Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütünleştirilmiş kodun içinde yalnızca üzerinden erişilebilir olduğunu belirtir.  
@@ -27,9 +27,10 @@ Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütü
  `Friend` erişim, genellikle bir uygulama programlama öğeleri için tercih edilen düzeyi ve `Friend` varsayılan erişim bir arabirim, bir modül, bir sınıf veya bir yapı düzeyinde gerçekleşir.  
   
  Kullanabileceğiniz `Friend` modül, arabirim veya ad alanı düzeyinde yalnızca. Bu nedenle, bildirimi bağlamı için bir `Friend` kaynak dosyasını, bir ad alanı, bir arabirim, bir modül, bir sınıf veya bir yapı öğesi olması gerekir; bir yordam olamaz.  
-  
- Kullanabileceğiniz `Friend` değiştirici ile birlikte [korumalı](../../../visual-basic/language-reference/modifiers/protected.md) aynı bildiriminde değiştiricisi. Bu birleşim her ikisi de confers `Friend` erişim ve bildirilen öğelerde aynı bütünleştirilmiş kodda, kendi sınıfından ve türetilmiş sınıflarından herhangi bir yerindeki erişilebilir olması için Korumalı Erişim. Belirleyebileceğiniz `Protected Friend` sınıfları üyeleri yalnızca üzerinde.  
-  
+
+> [!NOTE]
+> Aynı zamanda [Protected Friend](protected-friend.md) sınıf üyesine bir sınıftaki, türetilen sınıflar ve sınıf tanımlanır aynı bütünleştirilmiş erişilebilir hale getirir erişim değiştiricisi. Kendi sınıfı içinde ve aynı bütünleştirilmiş kodda türetilmiş sınıflardan üyeden erişimi kısıtlamak için kullandığınız [özel korumalı](private-protected.md) erişim değiştiricisi.
+
  Bir karşılaştırması `Friend` ve diğer değiştiricileri erişmek için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ Bir veya daha fazla bildirilen programlama öğeleri bildirimleri içeren bütü
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Özel korumalı](./private-protected.md)   
+ [Korumalı Friend](./protected-friend.md)   
  [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada gruplandırma tarafından kendi özel türler oluşturmanızı sağlayan bir yapıdır. Şeması gibi bir sınıftır. Veri ve türü davranışını tanımlar. Sınıf static olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği kapsamının dışında tüm başvuruları oluncaya kadar bellekte kalır. O anda CLR, atık toplama için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamıyor ve istemci kodu yalnızca erişebileceği sınıfı aracılığıyla. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -83,10 +83,9 @@ Nesne oluşturulduğunda, bellek yönetilen yığında ayrılan ve yalnızca bir
   
  Sınıf tanımları farklı kaynak dosyalar arasında bölünebilir. Daha fazla bilgi için bkz: [kısmi sınıflar ve yöntemler](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
-## <a name="description"></a>Açıklama  
- Aşağıdaki örnekte, tek bir alan, bir yöntem ve bir oluşturucu adlı özel bir yöntem içeren ortak bir sınıf tanımlanır. Daha fazla bilgi için bkz: [oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md). Sınıfının sonra ile örneği `new` anahtar sözcüğü.  
-  
 ## <a name="example"></a>Örnek  
+ Aşağıdaki örnek içeren genel bir sınıf tanımlayan bir [otomatik uygulanan özelliği](auto-implemented-properties.md), yöntemi ve bir oluşturucu adlı özel bir yöntem. Daha fazla bilgi için bkz: [özellikleri](properties.md), [yöntemleri](methods.md), ve [oluşturucular](constructors.md) Konular. Sınıfın örnekleri, ile örneği oluşturulmadan `new` anahtar sözcüğü.  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  

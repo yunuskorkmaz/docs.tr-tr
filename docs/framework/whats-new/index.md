@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -49,7 +49,7 @@ Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştiril
 
 .NET Framework 4.7.2 Windows 10, Windows 8.1, Windows 7 SP1 ve Windows Server 2008 R2 SP1 ile başlayarak karşılık gelen sunucu platformları yüklenebilir. .NET Framework 4.7.2 web yükleyicisi veya çevrimdışı yükleyici kullanarak yükleyebilirsiniz. Çoğu kullanıcı için önerilen yol, web yükleyicisi kullanmaktır.
 
-.NET Framework 4.7.2 Visual Studio 2012'de veya yükleyerek daha sonra hedef [4.7.2 .NET Framework Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=863261). 
+.NET Framework 4.7.2 Visual Studio 2012'de veya yükleyerek daha sonra hedef [4.7.2 .NET Framework Geliştirici paketi](http://go.microsoft.com/fwlink/?LinkId=874338). 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 yenilikler
 
@@ -599,7 +599,7 @@ WPF API'leri yazdırma <xref:System.Printing.PrintQueue?displayProperty=nameWith
 
 - [Karakter kategorileri](#Strings)
 
-- [Belirttiğiniz Bu, bir WSDL içe aktarma sırasında [ doğrudan ](#Crypto462) veya  talep türü koleksiyonları doğrudan kullanmak yerine.](#Crypto462)
+- [Şifreleme](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -706,7 +706,7 @@ public interface ISessionStateModule : IHttpModule {
  Unicode 6.0 karakter kategorilerden Unicode 7.0 değişiklikler için bkz: [Unicode standart, sürüm 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) Unicode Konsorsiyumu Web sitesindeki. Değişiklikler için Unicode 7.0 Unicode 8.0 için bkz: [Unicode standart, sürüm 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) Unicode Konsorsiyumu Web sitesindeki.
 
 <a name="Crypto462"></a> 
-### <a name="cryptography"></a>Belirttiğiniz Bu, bir WSDL içe aktarma sırasında  doğrudan  veya  talep türü koleksiyonları doğrudan kullanmak yerine.
+### <a name="cryptography"></a>Şifreleme
 
  **X509 desteği içeren FIPS 186 3 DSA sertifikaları**
 
@@ -1031,7 +1031,7 @@ Daha fazla bilgi için <xref:System.TimeZoneInfo> yapısı ve saat dilimi düzel
 ## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 yenilikler
  [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
 
-- [Belirttiğiniz Bu, bir WSDL içe aktarma sırasında [ doğrudan ](#Crypto) veya  talep türü koleksiyonları doğrudan kullanmak yerine.](#Crypto)
+- [Şifreleme](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 

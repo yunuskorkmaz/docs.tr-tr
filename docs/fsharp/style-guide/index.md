@@ -2,11 +2,11 @@
 title: 'F # Stil Kılavuzu'
 description: 'İyi F # kodu beş ilkeleri hakkında bilgi edinin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>F # Stil Kılavuzu
 
@@ -40,8 +40,8 @@ Aşağıdaki ilkeleri özellikle zaman içinde değişir sistemlerinde F # kod y
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[F # biçimlendirme yönergeleri](formatting.md) okumak kolayca böylece kodu biçimlendirmek konusunda rehberlik sağlar.
+[F # kod biçimlendirme yönergeleri](formatting.md) okumak kolayca böylece kodu biçimlendirmek konusunda rehberlik sağlar.
 
 [F # kodlama kuralları](conventions.md) F # uzun vadeli büyük F # sürdürülmesine yardımcı olacak deyimleri programlama olarak kullanılabilecek kod temeli için rehberlik sağlar.
 
-[F # bileşen tasarım yönergeleri](component-design-guidelines.md) F # gibi bileşenleri kitaplıkları yazma Kılavuzu kapsamlı bir kümesidir.
+[F # bileşen tasarım yönergeleri](component-design-guidelines.md) F # gibi bileşenleri kitaplıkları yazma için yönergeler sağlar.

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f0c9e0ff5881695cc9426610056677d6053376a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1198249afe6933342aea1a05515e6766603ab147
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir listesi için bkz: [C# derleyici seçenekleri listelenen kategoriye göre](listed-by-category.md).  
@@ -27,7 +27,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |[-baseaddress](baseaddress-compiler-option.md)|Oluşturulacak kitaplığın temel adresini belirtir.|  
 |[-bugreport](bugreport-compiler-option.md)|'Hata raporu' dosyası oluşturur. -Errorreport ile kullandıysanız, bu dosyayı herhangi çökmesi bilgi ile birlikte gönderilir: istemi veya - errorreport: gönderin.|  
 |[-checked](checked-compiler-option.md)|Derleyicinin taşma denetimleri oluşturmasına neden olur.|  
-|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritması belirtin.  Desteklenen değerler: SHA1 (varsayılan) veya SHA256.|  
+|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplamak için algoritmasını belirtir.  Desteklenen değerler: SHA1 (varsayılan) veya SHA256.|  
 |[-codepage](codepage-compiler-option.md)|Kaynak dosyalar açılırken kullanılacak kod sayfasını belirtir.|  
 |[-debug](debug-compiler-option.md)|Hata ayıklama bilgisi yayar.|  
 |[-define](define-compiler-option.md)|Koşullu derleme simgelerini tanımlar.|  
@@ -42,13 +42,13 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |-artan|Artımlı derlemeyi [eski] sağlar.|  
 |[-keycontainer](keycontainer-compiler-option.md)|Güçlü ad anahtar kapsayıcısı belirtir.|  
 |[-keyfile](keyfile-compiler-option.md)|Güçlü ad anahtar dosyası belirtir.|  
-|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümü modu belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 veya son |  
+|[-langversion:\<dize >](langversion-compiler-option.md)|Dil sürümü belirtir: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ya da son |  
 |[-lib](lib-compiler-option.md)|Ek başvurular için aranacak dizinlerde belirtir.|  
 |[-link](link-compiler-option.md)|COM türü bilgileri, belirtilen derlemelerde proje kullanılabilmesini sağlar.|  
 |[-linkresource](linkresource-compiler-option.md)|Belirtilen kaynak bu derlemeye bağlar.|  
 |[-main](main-compiler-option.md)|Giriş noktası içeren türünü belirtir (diğer tüm giriş noktalarını yoksayar).|  
 |[-moduleassemblyname](moduleassemblyname-compiler-option.md)|Ortak olmayan türlere bir .netmodule erişebileceği bir derleme belirtir.|  
-|-modulename:\<dize >|Kaynak modülünün adını belirtin|  
+|-modulename:\<dize >|Kaynak modül adını belirtir.|  
 |[-noconfig](noconfig-compiler-option.md)|Otomatik derleyiciye CSC içerir. RSP dosyası.|  
 |[-nologo](nologo-compiler-option.md)|Derleyici telif hakkı iletisi gizler.|  
 |[-nostdlib](nostdlib-compiler-option.md)|Başvuru standart kitaplığı (mscorlib.dll) için derleyiciye.|  
@@ -65,7 +65,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |[-refout](refout-compiler-option.md)|Bir referans derlemesini birincil derlemesinin yanı sıra oluşturur.|  
 |[-refonly](refonly-compiler-option.md)|Bir referans derlemesini birincil derlemesi yerine oluşturur.|  
 |[-resource](resource-compiler-option.md)|Belirtilen kaynak katıştırır.|  
-|-ruleset:\<dosyası >|Belirli Tanılama'yı devre dışı bırakan bir ruleset belirtin.|  
+|-ruleset:\<dosyası >|Belirli Tanılama'yı devre dışı bırakan bir ruleset dosyayı belirtir.|  
 |[-subsystemversion](subsystemversion-compiler-option.md)|En düşük sürüm yürütülebilir dosyasını kullanabilirsiniz alt sisteminin belirtir.|  
 |[-target](target-compiler-option.md)|Dört seçenekten birini kullanarak çıktı dosyası biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-hedef: Modül](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|  
 |[-unsafe](unsafe-compiler-option.md)|Verir [güvensiz](../../../csharp/language-reference/keywords/unsafe.md) kodu.|  

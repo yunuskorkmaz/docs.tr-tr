@@ -1,6 +1,6 @@
 ---
 title: Event Deyimi
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -58,7 +58,7 @@ End Event
 |Bölümü|Açıklama|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu olay için geçerli öznitelikler listesi. Birden çok öznitelik virgülle ayrılır. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç ("`<`"ve"`>`").|  
-|`accessmodifier`|İsteğe bağlı. Hangi kod olay erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)— bunu bildirir öğesi erişebilmeniz için herhangi bir kod erişim.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)— kod sınıfı veya türetilmiş bir sınıf içinde erişebildiğinizi yalnızca.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)— yalnızca aynı bütünleştirilmiş kodda, erişebilir.<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)— bunu bildirir öğesi yalnızca bir kodda erişebilirsiniz.<br /><br /> Belirleyebileceğiniz `Protected Friend` olay sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kodda erişimini etkinleştirmek için.|  
+|`accessmodifier`|İsteğe bağlı. Hangi kod olay erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)— bunu bildirir öğesi erişebilmeniz için herhangi bir kod erişim.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)— kod sınıfı veya türetilmiş bir sınıf içinde erişebildiğinizi yalnızca.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)— yalnızca aynı bütünleştirilmiş kodda, erişebilir.<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)— bunu bildirir öğesi yalnızca bir kodda erişebilirsiniz.<br /> -   [Arkadaş korumalı](../../language-reference/modifiers/protected-friend.md)-yalnızca olay sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kodda, erişebilir. <br />- [Özel korumalı](../../language-reference/modifiers/private-protected.md)-yalnızca olay sınıfı veya türetilmiş bir sınıf aynı bütünleştirilmiş kodda, erişebilir.|  
 |`Shared`|İsteğe bağlı. Bu olay belirli bir sınıf veya yapı örneği ile ilişkili değil belirtir.|  
 |`Shadows`|İsteğe bağlı. Bu olay redeclares ve bir aynı adlı programlama öğesi ya da bir taban sınıf içinde aşırı yüklenmiş öğelerin gizler gösterir. Bildirilen öğe herhangi bir tür başka herhangi bir tür ile gölge.<br /><br /> Gölgeli bir öğe, dışında gölgeleme öğesi erişilemez olduğu gelen shadows türetilmiş sınıf içinde kullanılamaz. Örneğin, varsa bir `Private` öğesi shadows erişim izni yok kod bir temel sınıf öğesi `Private` öğe temel sınıf öğesi yerine erişir.|  
 |`eventname`|Gerekli. Olayın adı; Standart değişken adlandırma kuralları izler.|  

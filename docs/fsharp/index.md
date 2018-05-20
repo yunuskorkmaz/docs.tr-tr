@@ -3,11 +3,11 @@ title: F# Kılavuzu
 description: 'Bu kılavuz çeşitli öğrenim malzemelerini F #, .NET çalıştıran işlevsel bir programlama dili için genel bir bakış sağlar.'
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>F# Kılavuzu
 
@@ -49,6 +49,8 @@ F # kendi merkezinde üretkenlik hakkındadır. F # için araç desteği her yer
 [F # .NET Core CLI ile başlayın](get-started/get-started-command-line.md) komut satırı araçları kullanmak istiyorsanız.
 
 [F # ve Xamarin kullanmaya başlama](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) mobil programlama ile F # için.
+
+[F # Azure dizüstü bilgisayarlar için](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) F #'de bir ücretsiz, barındırılan Jupyter not defteri öğrenme için bir öğreticidir.
 
 ## <a name="references"></a>Referanslar
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir listesi için bkz: [C# derleyici seçenekleri listelenen alfabetik olarak](listed-alphabetically.md).  
@@ -30,12 +30,12 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-doc](doc-compiler-option.md)|İşlenen belge açıklamaları yazılacak olduğu bir XML dosyası belirtir.|  
 |[-out](out-compiler-option.md)|Çıkış dosyasını belirtir.|  
 |[-pdb](pdb-compiler-option.md)|.Pdb dosyasının konumu ve dosya adını belirtir.|  
-|[-platform](platform-compiler-option.md)|Çıktı platformunu belirtin.|  
-|[-preferreduilang](preferreduilang-compiler-option.md)|Derleyici çıktısı için bir dil belirtin.|  
+|[-platform](platform-compiler-option.md)|Çıktı platformunu belirtir.|  
+|[-preferreduilang](preferreduilang-compiler-option.md)|Derleyici çıktısı için bir dil belirtir.|  
 |[-refout](refout-compiler-option.md)|Bir referans derlemesini birincil derlemesinin yanı sıra oluşturur.|  
 |[-refonly](refonly-compiler-option.md)|Bir referans derlemesini birincil derlemesi yerine oluşturur.|  
 |[-target](target-compiler-option.md)|Beş seçenekten birini kullanarak çıktı dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-target: module ](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), veya [-target: winmdobj](target-winmdobj-compiler-option.md).|  
-|-modulename:\<dize >|Kaynak modülünün adını belirtin|  
+|-modulename:\<dize >|Kaynak modül adını belirtir.|  
   
 ### <a name="net-framework-assemblies"></a>.NET framework derlemeleri  
   
@@ -91,7 +91,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-codepage](codepage-compiler-option.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanmak üzere kod sayfasını belirtir.|  
 |[-Yardım](help-compiler-option.md)|Stdout derleyici seçenekleri listeler.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Yürütülebilir dosya adres boşluğu düzeni rastgele seçimini (ASLR) desteklediğini belirtir.|  
-|[-langversion](langversion-compiler-option.md)|Dil sürümü modu belirtin: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 veya son |  
+|[-langversion](langversion-compiler-option.md)|Dil sürümü belirtir: varsayılan, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ya da son |  
 |[-main](main-compiler-option.md)|Konumunu belirten **ana** yöntemi.|  
 |[-noconfig](noconfig-compiler-option.md)|Csc.rsp ile derleme değil derleyiciye.|  
 |[-nologo](nologo-compiler-option.md)|Derleyici başlık bilgilerini gizler.|  
@@ -100,7 +100,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-unsafe](unsafe-compiler-option.md)|Kullanan kodu derlemesini etkinleştirir [güvensiz](../../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğü.|  
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 kodlaması kullanarak derleyici çıkışı görüntülenir.|  
 |-Paralel [+&#124;-]|Eş zamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  
-|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplama algoritması belirtin.  Desteklenen değerler: SHA1 (varsayılan) veya SHA256.|  
+|-checksumalgorithm:\<algoritma >|PDB içinde depolanan kaynak dosya sağlama toplamı hesaplamak için algoritmasını belirtir.  Desteklenen değerler: SHA1 (varsayılan) veya SHA256.|  
   
 ## <a name="obsolete-options"></a>Artık kullanılmayan seçenekleri  
   

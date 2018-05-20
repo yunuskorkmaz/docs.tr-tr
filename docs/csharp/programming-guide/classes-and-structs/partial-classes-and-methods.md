@@ -6,11 +6,11 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 97d0f23177fae68792034c33366e57a445d62217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d257846821f14a377c505099e38971dd5d8a297a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md), bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) veya iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosya türü veya yöntemi tanımının bir bölüm içerir ve uygulamanın derlendiğinde tüm bölümleri birleştirilir.  
@@ -131,7 +131,7 @@ Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-referen
   
  Kısmi yöntem bildirimi iki bölümden oluşur: tanımı ve uygulama. Bunlar, ayrı bir parçalı sınıf bölümlerini ya da aynı bölümü olabilir. Hiçbir uygulama bildirimi yok sonra derleyici hemen her iki tanımlama en iyi duruma getirir ve yöntemine yönelik tüm çağrılar bildirimi.  
   
-```  
+```csharp  
 // Definition in file1.cs  
 partial void onNameChanged();  
   

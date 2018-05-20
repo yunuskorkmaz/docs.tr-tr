@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri veri sunumu özelleştirme desteklemek için yerleşik işlevselliğe sahiptir. Bu konuda ilk nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.DataTemplate> ve Özel mantık ve hiyerarşik veri görüntüsünü desteği göre şablonları seçimi gibi diğer veri şablon özellikleri sunar.  
@@ -132,7 +132,8 @@ WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Ne bir DataTemplate ait?  
- Önceki örnekte, biz tetikleyici içinde yerleştirilen <xref:System.Windows.DataTemplate> kullanarak <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> özellik. <xref:System.Windows.Setter> Tetikleyicisi bir öğenin bir özelliğin değerini ayarlar ( <xref:System.Windows.Controls.Border> öğesi) içinde olduğunu <xref:System.Windows.DataTemplate>. Ancak, özellikleri, `Setters` ile ilgili bir kaygınız içinde geçerli olan öğeler özelliklerinin <xref:System.Windows.DataTemplate>, kullanarak özelliklerini ayarlamak daha uygun olabilir bir <xref:System.Windows.Style> olan için <xref:System.Windows.Controls.ListBoxItem> sınıfı (varsa bağlama denetimi bir <xref:System.Windows.Controls.ListBox>). İstiyorsanız, örneğin, <xref:System.Windows.Trigger> animasyon için <xref:System.Windows.UIElement.Opacity%2A> değeri öğenin fare bir öğeye üzerindeyken içinde tetikleyicilerini tanımlayın bir <xref:System.Windows.Controls.ListBoxItem> stili. Bir örnek için bkz: [stil ve şablon örnek giriş](http://go.microsoft.com/fwlink/?LinkID=160010).  
+
+Önceki örnekte, biz tetikleyici içinde yerleştirilen <xref:System.Windows.DataTemplate> kullanarak <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> özellik. <xref:System.Windows.Setter> Tetikleyicisi bir öğenin bir özelliğin değerini ayarlar ( <xref:System.Windows.Controls.Border> öğesi) içinde olduğunu <xref:System.Windows.DataTemplate>. Ancak, özellikleri, `Setters` ile ilgili bir kaygınız içinde geçerli olan öğeler özelliklerinin <xref:System.Windows.DataTemplate>, kullanarak özelliklerini ayarlamak daha uygun olabilir bir <xref:System.Windows.Style> olan için <xref:System.Windows.Controls.ListBoxItem> sınıfı (varsa bağlama denetimi bir <xref:System.Windows.Controls.ListBox>). İstiyorsanız, örneğin, <xref:System.Windows.Trigger> animasyon için <xref:System.Windows.UIElement.Opacity%2A> değeri öğenin fare bir öğeye üzerindeyken içinde tetikleyicilerini tanımlayın bir <xref:System.Windows.Controls.ListBoxItem> stili. Bir örnek için bkz: [stil ve şablon örnek giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  Genel olarak, aklınızda <xref:System.Windows.DataTemplate> her oluşturulan uygulanan <xref:System.Windows.Controls.ListBoxItem> (gerçekte nasıl ve nerede uygulandığı hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> sayfası.). <xref:System.Windows.DataTemplate> Yalnızca sunu ve veri nesneleri görünümünü endişelidir. Çoğu durumda, tüm diğer yönlerini sunu hangi öğe gibi görünüyor gibi seçildiğinde veya nasıl <xref:System.Windows.Controls.ListBox> yerleştirir öğeleri ait olmayan tanımında bir <xref:System.Windows.DataTemplate>. Bir örnek için bkz: [stil ve şablon bir ItemsControl](#DataTemplating_ItemsControl) bölümü.  
   
@@ -164,9 +165,9 @@ WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik
  Şablon seçici, yerinde ile <xref:System.Windows.Controls.ListBox> şimdi aşağıdaki gibi görünür:  
   
  ![Veri şablon örnek ekran görüntüsü](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- Bu örnekte bizim tartışma sonlanır. Tam bir örnek için bkz: [veri şablon örneği giriş](http://go.microsoft.com/fwlink/?LinkID=160009).  
-  
+
+Bu örnekte bizim tartışma sonlanır. Tam bir örnek için bkz: [veri şablon örneği giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>Stil ve şablon bir ItemsControl  
  Olsa bile <xref:System.Windows.Controls.ItemsControl> kullanabileceğiniz yalnızca denetim türü değil bir <xref:System.Windows.DataTemplate> bağlamak için çok yaygın bir senaryo alttadır, bir <xref:System.Windows.Controls.ItemsControl> bir koleksiyon. İçinde [ne ait bir DataTemplate içinde](#what_belongs_in_datatemplate) biz ele bölümü tanımı, <xref:System.Windows.DataTemplate> yalnızca veri sunumu ilgilenen olmalıdır. Ne zaman kullanmak uygun değil bilmek için bir <xref:System.Windows.DataTemplate> tarafından sağlanan farklı stil ve şablon özelliklerini anlamak önemlidir <xref:System.Windows.Controls.ItemsControl>. Aşağıdaki örnek, bu özelliklerin her biri işlevini göstermek için tasarlanmıştır. <xref:System.Windows.Controls.ItemsControl> Bu örnekte, aynı bağlı `Tasks` önceki örnekte olduğu gibi koleksiyonu. Tanıtım için bildirilen tüm satır içi amacıyla, stilleri ve şablonları Bu örnekte sahip.  
