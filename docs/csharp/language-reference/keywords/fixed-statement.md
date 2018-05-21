@@ -6,15 +6,15 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: decf906efeebf1723b4c5d6f0c75ba57affe9a98
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
-`fixed` Deyimi taşınabilir bir değişken yerini değiştirme atık toplayıcı engeller. `fixed` Deyimi izin yalnızca bir [güvensiz](unsafe.md) bağlamı. `Fixed` oluşturmak için de kullanılabilir [sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+`fixed` Deyimi taşınabilir bir değişken yerini değiştirme atık toplayıcı engeller. `fixed` Deyimi izin yalnızca bir [güvensiz](unsafe.md) bağlamı. `fixed` oluşturmak için de kullanılabilir [sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 `fixed` Deyimi ayarlar bir işaretçi bir yönetilen değişken ve "PIN" için değişken deyimin yürütülmesi sırasında. İşaretçileri taşınabilir yönetilen değişkenlere yalnızca yararlı bir `fixed` bağlamı. Olmadan bir `fixed` bağlamı, atık toplama taşımanızı değişkenleri beklenmedik şekilde. C# Derleyici yalnızca bir işaretçi yönetilen bir değişkene atayın olanak sağlayan bir `fixed` deyimi.
 
@@ -24,11 +24,11 @@ Bir dizi, bir dize, bir sabit boyutlu arabellek veya değişkenin adresini kulla
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-C# ile 7.3, başlangıç `fixed` deyimi çalışır dizileri, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenleri ötesinde ek türlerinde. Adlı bir yöntem uygulayan herhangi bir türü `DangerousGetPinnableReference` sabitlenmiş. `DangerousGetPinnableReference` Döndürmelidir bir `ref` değişken olarak bir yönetilmeyen tür. Üzerinde konusuna [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md) daha fazla bilgi için. .NET türleri <xref:System.Span%601?displayProperty=nameWithType> ve <xref:System.ReadonlySpan%601?displayProperty=nameWithType> .NET Core 2.0 olun sunulan sabitlenmiş ve bu desenini kullanın. Bu aşağıdaki örnekte gösterilmiştir:
+C# ile 7.3, başlangıç `fixed` deyimi çalışır dizileri, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenleri ötesinde ek türlerinde. Adlı bir yöntem uygulayan herhangi bir türü `DangerousGetPinnableReference` sabitlenmiş. `DangerousGetPinnableReference` Döndürmelidir bir `ref` değişken olarak bir yönetilmeyen tür. Üzerinde konusuna [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md) daha fazla bilgi için. .NET türleri <xref:System.Span%601?displayProperty=nameWithType> ve <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .NET Core 2.0 olun sunulan sabitlenmiş ve bu desenini kullanın. Bu aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Bu desen alması gereken türlerini oluşturduysanız bkz <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> düzeni uygulama örneği için.
+Bu desen alması gereken türleri oluşturuyorsanız, bkz: <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> düzeni uygulama örneği için.
 
 Aynı türde olmaları durumunda bir deyimde birden çok işaretçileri başlatılabilir:
 
