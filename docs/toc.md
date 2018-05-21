@@ -287,7 +287,7 @@
 ### [.NET Core CLI Kullanmaya Başlayın](fsharp/get-started/get-started-command-line.md)
 
 ## [F# stil kılavuzu](fsharp/style-guide/index.md)
-### [F# kod Biçimlendirme Yönergeleri](fsharp/style-guide/formatting.md)
+### [F# biçimlendirme yönergeleri](fsharp/style-guide/formatting.md)
 ### [F# kodlama kuralları](fsharp/style-guide/conventions.md)
 ### [F# bileşen tasarımı yönergeleri](fsharp/style-guide/component-design-guidelines.md)
 

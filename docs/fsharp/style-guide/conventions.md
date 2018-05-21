@@ -2,11 +2,11 @@
 title: 'F # kodlama kuralları'
 description: 'Genel kurallar ve deyimleri F # kodu yazarken öğrenin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
-ms.translationtype: HT
+ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-coding-conventions"></a>F # kodlama kuralları
 
@@ -152,7 +152,9 @@ Bir değer başlatılırken bir veritabanı veya diğer uzak kaynak bağlamına 
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -160,7 +162,9 @@ module MyApi =
 
 Sık kötü bir fikir birkaç nedeni budur:
 
-İlk olarak, API paylaşılan durum sayfalarında kolaylaştırır. Örneğin, birden çok çağıran iş parçacığı erişmeye çalışıyor olabilirsiniz `dep3` değer (ve iş parçacığı açısından güvenli değil). İkincisi, uygulama yapılandırması codebase iter. Bu, daha büyük olarak kullanılabilecek kod temeli için etmek zordur.
+Uygulama yapılandırması ile codebase içine ilk olarak, gönderilen `dep1` ve `dep2`. Bu, daha büyük olarak kullanılabilecek kod temeli etmek zordur.
+
+İkinci, statik olarak başlatılmış veri bileşeniniz kendisini birden çok iş parçacığı kullanacaksa, iş parçacığı güvenli olmayan değerleri içermemelidir. Bu açıkça tarafından ihlal `dep3`.
 
 Son olarak, modülü başlatma tüm derleme birimi için bir statik oluşturucuya derler. Bu modüldeki olanak sağlayan sınır değeri başlatılmasında herhangi bir hata meydana gelirse, olarak bildirimleri bir `TypeInitializationException` , ardından önbelleğe alınma uygulamanın tüm yaşam süresi. Bu tanılama zor olabilir. Genellikle hakkında neden deneyebilirsiniz bir iç özel duruma yoktur, ancak ardından yoksa, hiçbir kök nedeni nedir söyleyen yoktur.
 
