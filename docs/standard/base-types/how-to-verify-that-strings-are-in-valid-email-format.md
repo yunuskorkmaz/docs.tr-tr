@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
+
+> [!NOTE]
+>  Kullanmanızı öneririz <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> sınıfı bir dize geçerli e-posta adresi biçiminde olup olmadığını denetleyin. Bunu yapmak için e-posta adresi dizeye geçirmek <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> oluşturur sınıfı oluşturucusu bir <xref:System.FormatException> tanınmayan bir biçim dizesine sahipse.  
   
 ## <a name="example"></a>Örnek  
  Örnek tanımlayan bir `IsValidEmail` döndürür yöntemi `true` dizesi geçerli bir eposta adresi içeriyorsa ve `false` desteklemez ancak başka bir eylemi alır.  
@@ -67,9 +70,6 @@ Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak 
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|@ İzleyen karakterin eşleşen bir alfasayısal karakter, A-z, bir değerle bir açılış ayracı değilse, a-z veya 0-9, bir tire sıfır veya daha çok tekrarı tarafından izlenen ve ardından sıfır veya bir alfasayısal bir karakterle değeri, A-Z, a-z veya 0-9 , ardından bir noktayla. Bu desen bir veya daha çok sayıda Tekrarlanmış ve ardından üst düzey etki alanı adı olmalıdır.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Üst düzey etki alanı ad başlamalı ve bitmelidir alfasayısal bir karakterle (a-z, A-Z ve 0-9). Ayrıca sıfır ya da olan 22 ASCII karakterleri içerebilir alfasayısal veya kısa çizgi.|  
 |`$`|Son dizenin sonunda eşleşmiyor.|  
-  
-> [!NOTE]
->  Kullanabileceğiniz bir e-posta adresini doğrulamak için normal bir ifade kullanmak yerine, <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> sınıfı. Geçişi e-posta adresine bir e-posta adresi geçerli olup olmadığını belirlemek için <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> sınıfı oluşturucusu.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  `IsValidEmail` Ve `DomainMapper` yöntemleri normal ifade yardımcı program yöntemleri kitaplıkta dahil edilebilir ya da bunlar özel statik veya örnek uygulama sınıfı yöntemleri olarak dahil edilebilir.  

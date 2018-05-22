@@ -1,17 +1,12 @@
 ---
 title: İşleç Aşırı Yüklemesi (F#)
 description: 'Aritmetik işleçler bir sınıf veya kayıt türü ve F # içinde genel düzeyde aşırı yüklemeyi öğrenin.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: HT
+ms.openlocfilehash: fc9b7311aa746fd758930365972a187ffdfff0d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-overloading"></a>İşleç Aşırı Yüklemesi
 
@@ -46,7 +41,7 @@ Tüm standart işleçleri aşırı yüklenebilir, ancak belirli karakter diziler
 
 Kullandığınız tam karakter dizisi bağlı olarak, belirli bir öncelik ve birleşim operatörünüze sahip olur. Birleşim sağdan sola veya sağa ya da bırakılabilir ve parantezler olmadan sırası aynı öncelik düzeyine operatörleri görünür olduğunda kullanılır.
 
-İşleç karakter `.` Örneğin, gibiişleçlerinoluşturmakaynıöncelikvebirleşimsıradançarpmaolaraksahipçarpmakendisürümünütanımlamakistiyorsanız,böyleceönceliği,etkilemez.`.*`.
+İşleç karakter `.` Örneğin, gibiişleçlerinoluşturmakaynıöncelikvebirleşimsıradançarpmaolaraksahipçarpmakendisürümünütanımlamakistiyorsanız,böyleceönceliği,etkilemez `.*`.
 
 Yalnızca işleçleri `?` ve `?<-` ile başlayabilir `?`.
 

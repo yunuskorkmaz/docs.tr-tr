@@ -1,31 +1,17 @@
 ---
 title: Yol Biçimlendirme Sözdizimi
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
 - XAML [WPF], attribute usage
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 86901f357c43dc7c0c1402bf313e674603eaccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak, bu konuda yolunu belirtmek için kullanabileceğiniz güçlü ve karmaşık Mini dili ayrıntılı olarak açıklanmaktadır. geometri kullanarak daha sıkı şekilde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -53,20 +39,20 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
 ### <a name="a-note-about-white-space"></a>Boşluk hakkında bir Not  
  Kısaltma amacıyla, tek bir boşluk izleyen sözdizimi bölümlerinde gösterilen, ancak birden fazla boşlukları da tek bir boşluk gösterilen her yerde kabul edilir.  
   
- İki sayı gerçekte bir virgül veya boşluk ile ayrılmış olması gerekmez, ancak sonuç dizesini anlaşılır olduğunda bu yalnızca yapılabilir. Örneğin, `2.3` gerçekte iki sayıdır: "2." Ve ". 3". Benzer şekilde, `2-3` "2" ve "-3" olur. Alanları komutlardan, önce veya sonra ya da gerekli değildir.  
+ İki sayı gerçekte bir virgül veya boşluk ile ayrılmış olması gerekmez, ancak sonuç dizesini anlaşılır olduğunda bu yalnızca yapılabilir. Örneğin, `2..3` gerçekte iki sayıdır: "2." Ve ". 3". Benzer şekilde, `2-3` "2" ve "-3" olur. Alanları komutlardan, önce veya sonra ya da gerekli değildir.  
   
 ### <a name="syntax"></a>Sözdizimi  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Öznitelik kullanım sözdizimi için bir <xref:System.Windows.Media.StreamGeometry> isteğe oluşur <xref:System.Windows.Media.FillRule> değer ve bir veya daha fazla açıklamaları şekil.  
   
 |StreamGeometry XAML öznitelik kullanımı|  
 |-----------------------------------------|  
-|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
+|`<` *Nesne* *özelliği* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Öznitelik kullanım sözdizimi için bir <xref:System.Windows.Media.PathFigureCollection> bir veya daha fazla şekil açıklamalarını oluşur.  
   
 |PathFigureCollection XAML öznitelik kullanımı|  
 |-----------------------------------------------|  
-|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
+|`<` *Nesne* *özelliği* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -101,7 +87,7 @@ Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../..
   
 |Sözdizimi|  
 |------------|  
-|`L` *endPoint*<br /><br /> - veya -<br /><br /> `l` *endPoint*|  
+|`L` *uç noktası*<br /><br /> - veya -<br /><br /> `l` *uç noktası*|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -133,11 +119,11 @@ Büyük harf `H` belirten `x` mutlak bir değer; olan küçük harf `h` belirten
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Y koordinatını satırının bitiş noktası.|  
+|*Y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Y koordinatını satırının bitiş noktası.|  
 
 Büyük harf `V` belirten `y` mutlak bir değer; olan küçük harf `v` belirten `y` önceki noktasına bir uzaklık ya da (yoksa 0,0).  
     
-### <a name="cubic-bezier-curve-command"></a>Cubic Bezier Curve Command  
+### <a name="cubic-bezier-curve-command"></a>Küp Bezier eğrisi komutu  
  İki belirtilen denetim noktalarını kullanarak güncel nokta ve belirtilen bitiş noktası arasında bir küp Bezier eğrisi oluşturur (`controlPoint`1 ve `controlPoint`2). `C 100,200 200,400 300,200` Geçerli bir eğri komutu örneğidir.  
   
 |Sözdizimi|  
@@ -150,7 +136,7 @@ Büyük harf `V` belirten `y` mutlak bir değer; olan küçük harf `v` belirten
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Eğriyi bitiş tanjantını belirleyen eğrinin ikinci denetim noktası.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Noktası çizilen eğri.|  
   
-### <a name="quadratic-bezier-curve-command"></a>Quadratic Bezier Curve Command  
+### <a name="quadratic-bezier-curve-command"></a>İkinci dereceden Bezier eğrisi komutu  
  Belirtilen denetim noktasını kullanarak güncel nokta ve belirtilen bitiş noktası arasında ikinci dereceden Bezier eğrisi oluşturur (`controlPoint`). `q 100,200 300,200` Geçerli bir ikinci dereceden Bezier eğrisi komutu örneğidir.  
   
 |Sözdizimi|  
