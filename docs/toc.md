@@ -285,7 +285,12 @@
 ### [Mac için Visual Studio Kullanmaya Başlayın](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Visual Studio Code ve Ionide Kullanmaya Başlayın](fsharp/get-started/get-started-vscode.md)
 ### [.NET Core CLI Kullanmaya Başlayın](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [F# stil kılavuzu](fsharp/style-guide/index.md)
+### [F# kod Biçimlendirme Yönergeleri](fsharp/style-guide/formatting.md)
+### [F# kodlama kuralları](fsharp/style-guide/conventions.md)
+### [F# bileşen tasarımı yönergeleri](fsharp/style-guide/component-design-guidelines.md)
+
 ## Öğreticiler
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Tür Sağlayıcıları](fsharp/tutorials/type-providers/index.md)
