@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b1e54aa8a9751a01e8856a3e9e71d63b55772f2c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 <a name="introduction"></a>Bu makalede, anahtar yeni özellikler ve geliştirmeler .NET Framework'ün aşağıdaki sürümlerinde özetlenmektedir:  
@@ -657,8 +657,6 @@ End Class
 | Ad                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme, 1 ile 10 arasında olmalıdır. | Seçeneğinden être oluşturan diğer 1 la Not et 10. |
-
- Bu dosya daha sonra yapabilirsiniz
 
  Ayrıca, veri ek açıklaması yerelleştirme genişletilebilir. Geliştiriciler Tak kendi dize yerelleştiriciye sağlayıcısında uygulayarak <xref:System.Web.Globalization.IStringLocalizerProvider> yerelleştirme dize yere dışında bir kaynak dosyasında depolamak için arabirim.
 
@@ -1488,7 +1486,7 @@ SqlClient artık otomatik olarak daha hızlı bağlantıları bir AlwaysOn Kulla
 
 - **Kod sayfası kodlaması için destek**
 
-      [!INCLUDE[net_core](../../../includes/net-core-md.md)] primarily supports the Unicode encodings and by default provides limited support for code page encodings. You can add support for code page encodings available in the .NET Framework but unsupported in [!INCLUDE[net_core](../../../includes/net-core-md.md)] by registering code page encodings with the <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> method. For more information, see <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] öncelikle Unicode Kodlamalar destekler ve varsayılan kod sayfası kodlamaları için sınırlı destek sağlar. Kod sayfası Kodlamalar içinde desteklenmeyen ancak .NET Framework'teki kullanılabilir için destek ekleyebilmesi [!INCLUDE[net_core](../../../includes/net-core-md.md)] kod sayfası Kodlamalar ile kaydetme tarafından <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 

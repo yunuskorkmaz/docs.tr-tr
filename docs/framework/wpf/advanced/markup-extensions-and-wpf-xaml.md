@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sınıfı nesne modeli de dahil olmak üzere XAML, biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve XAML Hizmetleri .NET uygulaması genel özelliğidir. Bu konuda özellikle kullanımda WPF XAML işaretleme uzantılarına ayrıntılarını verir.  
@@ -64,7 +64,7 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
   
 -   `RelativeSource` ait kaynak bilgileri sağlayan bir <xref:System.Windows.Data.Binding> birkaç olası çalışma zamanı nesne ağacına ilişkilerde gezinme. Bu, çok kullanım şablonlarında oluşturulan veya çevresindeki nesne ağacının hakkında tam bilgi olmadan kod oluşturulan bağlamaları için özel kaynak sağlar. Ayrıntılar için bkz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding` Şablon kullanacağınız sınıfının nesne modeli tanımlanan özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak bir denetim şablonu sağlar. Diğer bir deyişle, şablon tanımının içinde özelliği şablon uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stil oluşturma](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` Şablon kullanacağınız sınıfının nesne modeli tanımlanan özelliklerinden gelen şablonlu özellikleri için değerleri kullanmak bir denetim şablonu sağlar. Diğer bir deyişle, şablon tanımının içinde özelliği şablon uygulandıktan sonra yalnızca var olan bir bağlam erişebilirsiniz. Ayrıntılar için bkz [TemplateBinding biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pratik kullanımı hakkında daha fazla bilgi için `TemplateBinding`, bkz: [ControlTemplates örneği ile stil oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` göreceli olarak gelişmiş bir görüntü senaryoyu destekler. Ayrıntılar için bkz [ColorConvertedBitmap biçimlendirme uzantısı](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   

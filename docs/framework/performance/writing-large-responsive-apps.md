@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uygulamaları büyük .NET Framework uygulamaları veya performansını iyileştirmek için ipuçları verilmektedir. C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma bu ipuçlarını gelir ve bu makale, C# Derleyici birkaç gerçek örneklerinden içermektedir.  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Bu kod türünü değiştirir `cachedResult` için `Task<SyntaxTree>` ve kullanan bir `async` özgün kod tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` Şimdi kullanan [null birleştirmesi işleci](~/docs/csharp/language-reference/operators/null-conditional-operator.md) dönmek için `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kodu normal olarak.  Await anlamına gelir kullanmıyor olduğunda `GetSyntaxTreeUncachedAsync()` döndürür kendi <xref:System.Threading.Tasks.Task> nesnesi, `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Şimdi, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>, bu nedenle hiçbir ayırmaları önbelleğe alınmış bir sonuç yok.  
+ Bu kod türünü değiştirir `cachedResult` için `Task<SyntaxTree>` ve kullanan bir `async` özgün kod tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` Şimdi kullanan [null birleştirmesi işleci](../../csharp/language-reference/operators/null-coalescing-operator.md) dönmek için `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kodu normal olarak.  Await anlamına gelir kullanmıyor olduğunda `GetSyntaxTreeUncachedAsync()` döndürür kendi <xref:System.Threading.Tasks.Task> nesnesi, `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Şimdi, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>, bu nedenle hiçbir ayırmaları önbelleğe alınmış bir sonuç yok.  
   
 ### <a name="additional-considerations"></a>Ek hususlar  
  Büyük uygulamalar ya da çok miktarda veri işleyen uygulamalar olası sorunlar hakkında daha fazla birkaç noktalar şunlardır.  

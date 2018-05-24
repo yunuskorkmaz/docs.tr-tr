@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML Dosyasını İşleme (C# Programlama Kılavuzu)
 Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kimlik dizesi oluşturur. (Kodunuzu etiketi hakkında daha fazla bilgi için bkz: [belge açıklamaları için önerilen etiketler](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Kimlik dizesi, yapı benzersiz olarak tanımlar. XML dosyasını işleme programları kimlik dizesi belgelere uygulandığı karşılık gelen .NET Framework meta verileri/yansıma öğe tanımlamak için kullanabilirsiniz.  
@@ -40,7 +40,7 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
   
     -   İç türleri (örneğin, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF dizisi. ve ELEMENT_TYPE_VOID) karşılık gelen tam tür tam adı olarak temsil edilir. Örneğin, System.Int32 veya System.TypedReference.  
   
-    -   ELEMENT_TYPE_PTR olarak temsil edilir bir ' *' değiştirilmiş türü aşağıdaki.  
+    -   ELEMENT_TYPE_PTR olarak temsil edilir bir '\*' değiştirilmiş türü aşağıdaki.  
   
     -   ELEMENT_TYPE_BYREF olarak temsil edilir bir '\@' değiştirilmiş türü aşağıdaki.  
   
@@ -68,11 +68,11 @@ Derleyici kodunuzda belgeleri oluşturmak için etiketli her yapı için bir kim
   
 -   Dönüştürme işleçleri yalnızca (op_Implicit ve op_Explicit), yönteminin dönüş değeri olarak kodlanmış bir ' ~' dönüş türü, yukarıda kodlanmış olarak izlemelidir.  
   
--   Genel türler için türünün adı geri değer çizgilerinin ve ardından genel tür parametre sayısını belirten bir sayı tarafından izlenir.  Örneğin,  
+-   Genel türler için türünün adı bir backtick ve ardından genel tür parametre sayısını belirten bir sayı tarafından izlenir. Örneğin:
   
      ``<member name="T:SampleClass`2">`` etiket olarak tanımlanan bir tür için `public class SampleClass<T, U>`.  
   
-     Geri çizgilerine ile başlayan sayılar olarak belirtilen parametre olarak genel türler alma yöntemlerinin için genel tür parametreleri (örneğin \`0, 1').  Genel tür parametreleri için sıfır tabanlı bir dizi gösterimi gösteren her bir sayı.  
+     Backticks ile başlayan sayılar olarak belirtilen parametre olarak genel türler alma yöntemlerinin için genel tür parametreleri (örneğin \`0,\`1). Genel tür parametreleri için sıfır tabanlı bir dizi gösterimi gösteren her bir sayı.  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki örnekler nasıl kimliği için bir sınıf dizeleri ve üyeleri oluşturulur:  

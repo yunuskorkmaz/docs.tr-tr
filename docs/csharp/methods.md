@@ -3,13 +3,13 @@ title: Yöntemler - C# Kılavuzu
 description: Yöntem, yöntem parametreleri ve dönüş değerleri yöntemi genel bakış
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="methods"></a>Yöntemler #
 
@@ -80,7 +80,7 @@ Konumsal iki bağımsız değişken'ı kullanarak bir yöntem çağırabileceği
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>Devralınan ve geçersiz kılınan yöntemleri ##
+ ## <a name="inherited-and-overridden-methods"></a>Devralınan ve geçersiz kılınan yöntemleri ##
 
 Açıkça bir türde tanımlanan üyeleri ek olarak, bir türü, taban sınıflarından tanımlanan üyeleri devralır. Yönetilen tür sistemi içindeki tüm türler doğrudan veya dolaylı olarak devralınmalıdır beri <xref:System.Object> sınıfı, tüm türleri devral, bu grubun üyeleri gibi <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, ve <xref:System.Object.ToString>. Aşağıdaki örnek tanımlayan bir `Person` sınıfı, iki başlatır `Person` nesneleri ve çağırır `Person.Equals` iki nesnenin eşit olup olmadığını belirlemek için yöntemi. `Equals` Yöntemi, ancak tanımlı değil de `Person` sınıf; kaynağından devralındı <xref:System.Object>.
 
@@ -258,7 +258,7 @@ Bir yöntem ile işaretlerseniz [zaman uyumsuz](language-reference/keywords/asyn
 > [!NOTE]
 > Bir zaman uyumsuz yöntem henüz tamamlanmadı ilk awaited nesne bulduğu veya zaman uyumsuz yönteminin sonuna alır çağırana döndürür hangisi önce gerçekleşir.
 
-Zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya `void`. `void` Türü öncelikle olay işleyicileri tanımlamak için kullanılan dönüş burada bir `void` dönüş türü gerekli. Döndüren bir zaman uyumsuz yöntem `void` beklemenin olamaz, ve void döndüren bir yöntem arayan yöntemi atar özel durumlarını yakalama olamaz. C# yayımlandığında, 7.0, bir zaman uyumsuz yöntem izin vermek için bu kısıtlama kolaylaştırır [herhangi bir görev benzeri türü döndürülecek](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Zaman uyumsuz yöntem dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, veya `void`. `void` Türü öncelikle olay işleyicileri tanımlamak için kullanılan dönüş burada bir `void` dönüş türü gerekli. Döndüren bir zaman uyumsuz yöntem `void` beklemenin olamaz, ve void döndüren bir yöntem arayan yöntemi atar özel durumlarını yakalama olamaz. C# 7. 0'dan başlayarak, bir zaman uyumsuz yöntem olabilir [herhangi bir görev benzeri dönüş türü](./whats-new/csharp-7.md#generalized-async-return-types).
 
 Aşağıdaki örnekte, `DelayAsync` bir tamsayı döndürür bir dönüş ifadesi olan bir zaman uyumsuz bir yöntemdir. Bir zaman uyumsuz yöntem olduğu için yöntemi bildiriminden dönüş türüne sahip olmalıdır `Task<int>`. Dönüş türü olduğundan `Task<int>`, değerlendirmesi `await` ifadesinde `DoSomethingAsync` aşağıdaki gibi bir tamsayı üreten `int result = await delayTask` deyimini gösterir.
 

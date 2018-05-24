@@ -2,11 +2,11 @@
 title: 'F # kodlama kuralları'
 description: 'Genel kurallar ve deyimleri F # kodu yazarken öğrenin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>F # kodlama kuralları
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 F #'ta bildirimleri sırası önemlidir, dahil olmak üzere `open` deyimleri. C#, budur burada etkisini `using` ve `using static` dosyasında bu deyimlerinin sıralamasını bağımsızdır.
 
-Bir kapsam içine açılan öğeleri gölge çünkü F #'ta başkalarının zaten var. Bu sipariş yani `open` deyimleri kod anlamını alter. Sonuç olarak, sıralama alfasayısal olarak (veya pseudorandomly) genellikle önerilmez, beklediğiniz farklı bir davranış oluşturmak ekleyin.
+F #'ta bir kapsam içine açılan öğeleri zaten mevcut başkalarının gölge. Bu sipariş yani `open` deyimleri kod anlamını alter. Sonuç olarak, tüm sıralama herhangi rastgele `open` deyimleri (örneğin, alfasayısal olarak) genellikle önerilmez, bekleyebilirsiniz farklı bir davranış oluşturmak ekleyin.
 
 Bunun yerine, bunları sıralama öneririz [topologically](https://en.wikipedia.org/wiki/Topological_sorting); diğer bir deyişle, sipariş, `open` hangi sırayla deyimlerinde _katmanları_ sisteminizi tanımlanır. İçindeki farklı topolojik katmanları sıralama alfasayısal yapılması da dikkate.
 

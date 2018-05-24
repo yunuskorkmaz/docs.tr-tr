@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 319a4df6f52768cf256c0ad92ca65607b99ce32c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="throw-c-reference"></a>throw (C# Başvurusu)
 Program yürütme sırasında bir özel durum geçişi işaret eder.  
@@ -52,7 +52,7 @@ C# 7.0 ile başlayan `throw` bir deyim yanı sıra bir ifade kullanılabilir. Bu
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
-- [null birleşim işlecinin](../operators/null-conditional-operator.md). Aşağıdaki örnekte, bir `throw` ifadesi null birleşim işlecinin ile dize için atanmışsa bir özel durum için kullanılan bir `Name` özelliği `null`.
+- [null birleşim işlecinin](../operators/null-coalescing-operator.md). Aşağıdaki örnekte, bir `throw` ifadesi null birleşim işlecinin ile dize için atanmışsa bir özel durum için kullanılan bir `Name` özelliği `null`.
  
    [!code-csharp[csrefKeyword#5](../../../../samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
  

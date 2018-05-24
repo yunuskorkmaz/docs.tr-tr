@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla olan *işlenenler* bir deyim veya ifade. Artış işleci gibi tek bir işlenen alır işleçleri (`++`) veya `new`, denir *birli* işleçler. Aritmetik işleçler gibi iki işlenen alır işleçleri (`+`,`-`,`*`,`/`), denir *ikili* işleçler. Bir işleç, koşullu işleç (`?:`), üç işlenen alır ve C# tek Üçlü işleci.  
@@ -114,7 +114,7 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |Mantıksal VEYA|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Tamsayı bitwise VEYA, boolean mantıksal VEYA|  
 |Koşullu VE|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Yalnızca x doğruysa y değerlendirilir|  
 |Koşullu VEYA|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Yalnızca x yanlışsa y değerlendirilir|  
-|Null birleşim|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|  
+|Null birleşim|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|  
 |Koşullu|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|x doğruysa Y olarak değerlendirilir, x yanlışsa z olarak değerlendirilir|  
   
  **Atama ve anonim işleçleri**  

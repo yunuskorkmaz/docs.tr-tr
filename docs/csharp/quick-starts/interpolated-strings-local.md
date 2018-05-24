@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: a4e8434b3e7f945ad002984ad7861c0e103c0cf2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="string-interpolation"></a>Dize ilişkilendirme
 
@@ -48,13 +48,13 @@ Diğer veri türlerine sahip birkaç daha fazla dize ilişkilendirme örnek dene
 
 Önceki bölümde dize ilişkilendirme içinde başka bir dize eklemek için kullanılır. Ara değerli ifade sonucu herhangi bir veri türü yine de olabilir. Şimdi Ara değerli bir dize çeşitli veri türlerinin değerlerini içerir.
 
-Aşağıdaki örnekte, ilk olarak, bir özel veri türü tanımlarız `Vegetable` olan `Name` [özelliği](../properties.md) ve `ToString` yöntemi. İstemci kodu dize gösterimini almak için bu yöntemi kullanmak bir `Vegetable` örneği. Örnekte `Vegetable.ToString` yöntemi değerini döndürür `Name` konumunda başlatılan özelliği `Vegetable` Oluşturucusu:
+Aşağıdaki örnekte, ilk olarak, tanımlarız bir [sınıfı](../programming-guide/classes-and-structs/classes.md) veri türü `Vegetable` olan `Name` [özelliği](../properties.md) ve `ToString` [yöntemi](../methods.md), hangi [geçersiz kılmaları](../language-reference/keywords/override.md) davranışını <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. [ `public` Erişim değiştiricisi](../language-reference/keywords/public.md) bu yöntem dize gösterimini almak için herhangi bir istemci kod için kullanılabilir hale getirir bir `Vegetable` örneği. Örnekte `Vegetable.ToString` yöntemi değerini döndürür `Name` konumunda başlatılan özelliği `Vegetable` [Oluşturucusu](../programming-guide/classes-and-structs/constructors.md):
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Örneği oluşturuyoruz `Vegetable` kullanarak türü `new` anahtar sözcüğü ve Oluşturucusu name parametresi sağlanarak `Vegetable`:
+Biz örneği oluşturup `Vegetable` kullanarak sınıfı [ `new` anahtar sözcüğü](../language-reference/keywords/new-operator.md) ve Oluşturucusu name parametresi sağlanarak `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

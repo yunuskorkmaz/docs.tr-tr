@@ -3,11 +3,11 @@ title: Sınıfları Öğreticisi - C# yerel quickstarts giriş
 description: İlk C# programınızı oluşturma ve nesne yönelimli kavramlarını inceleyin
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="introduction-to-classes"></a>Giriş sınıfları
 
@@ -72,7 +72,7 @@ namespace classes
 
 Geçmeden önce temel aldık bir bakalım.  `namespace` Bildirimi kodunuzu mantıksal olarak düzenlemek için bir yol sağlar. Bir ad alanındaki tüm kod gireceğiniz şekilde bu hızlı başlangıç göreceli olarak azdır. 
 
-`public class BankAccount` sınıf veya türünü tanımlar oluşturmakta olduğunuz. İçindeki tüm öğeler `{` ve `}` sınıfı izleyen bildirimi sınıfı davranışını tanımlar. Beş vardır ***üyeleri*** , `BankAccount` sınıfı. İlk üç olan ***özellikleri***. Özellikler veri öğeleri ve doğrulama veya diğer kurallar zorlar kodu olabilir. Son iki olan ***yöntemleri***. Yöntemleri bu SPN'i tek bir işlev kodu taşlarıdır. Her bir üyesinden adlarını okuma yeterli bilgi veya sınıfı ne yapacağını anlamak için başka bir geliştirici sağlamalıdır.
+`public class BankAccount` sınıf veya türünü tanımlar oluşturmakta olduğunuz. İçindeki tüm öğeler `{` ve `}` sınıfı izleyen bildirimi sınıfı davranışını tanımlar. Beş vardır ***üyeleri*** , `BankAccount` sınıfı. İlk üç olan ***özellikleri***. Özellikler veri öğeleri ve doğrulama veya diğer kurallar zorlar kodu olabilir. Son iki olan ***yöntemleri***. Tek bir işlevi gerçekleştiren kod blokları yöntemleridir. Her bir üyesinden adlarını okuma yeterli bilgi veya sınıfı ne yapacağını anlamak için başka bir geliştirici sağlamalıdır.
 
 ## <a name="open-a-new-account"></a>Yeni bir hesap açın
 

@@ -231,8 +231,8 @@
 ### [Demetler](csharp/tuples.md)
 ### [Demetleri ve diğer türleri ayrıştırma](csharp/deconstruct.md)
 ### [Arabirimler](csharp/programming-guide/interfaces/index.md)
-#### [Yöntemler](csharp/methods.md)
-#### [Lambda İfadeleri](csharp/lambda-expressions.md)
+### [Yöntemler](csharp/methods.md)
+### [Lambda İfadeleri](csharp/lambda-expressions.md)
 ### [Özellikler](csharp/properties.md)
 ### [Dizin Oluşturucular](csharp/indexers.md)
 ### [Atılanlar](csharp/discards.md)
@@ -287,7 +287,7 @@
 ### [.NET Core CLI Kullanmaya Başlayın](fsharp/get-started/get-started-command-line.md)
 
 ## [F# stil kılavuzu](fsharp/style-guide/index.md)
-### [F# biçimlendirme yönergeleri](fsharp/style-guide/formatting.md)
+### [F# kod Biçimlendirme Yönergeleri](fsharp/style-guide/formatting.md)
 ### [F# kodlama kuralları](fsharp/style-guide/conventions.md)
 ### [F# bileşen tasarımı yönergeleri](fsharp/style-guide/component-design-guidelines.md)
 

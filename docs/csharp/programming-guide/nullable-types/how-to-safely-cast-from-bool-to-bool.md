@@ -5,16 +5,16 @@ helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e04e34abd477730f9dd01486ec6bddcde4943edc
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Nasıl yapılır: bool? Değerinden bool Değerine Güvenli bir Şekilde Atama (C# Programlama Kılavuzu)
 `bool?` Boş değer atanabilir tür üç farklı değerler içerebilir: `true`, `false`, ve `null`. Bu nedenle, `bool?` türü ile gibi koşulları kullanılamaz `if`, `for`, veya `while`. Örneğin, aşağıdaki kod derleyici hatasına neden olur.  
   
-```  
+```csharp  
 bool? b = null;  
 if (b) // Error CS0266.  
 {  
@@ -45,4 +45,4 @@ if((bool)test) //now this cast is safe
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Değişmez Değer Anahtar Sözcükleri](../../../csharp/language-reference/keywords/literal-keywords.md)  
  [Boş Değer Atanabilir Tipler](../../../csharp/programming-guide/nullable-types/index.md)  
- [?? İşleç](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [?? İşleç](../../../csharp/language-reference/operators/null-coalescing-operator.md)

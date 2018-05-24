@@ -3,11 +3,11 @@ title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'deki yeni özelliklerin öğrenin
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikler nelerdir?
 
@@ -351,7 +351,7 @@ Eklemek için uygulama ayrıntılarını `await` içinde destek `catch` ve `fina
 
 Bu özellik ilişkilendirilebilir kapsayıcıları ne birkaç sürümleri için dizisi kapsayıcıları için yerinde bırakıldı için benzer bir sözdizimi kullanılarak başlatılabilir anlamına gelir.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Uzantı `Add` koleksiyon başlatıcıları yöntemleri
+## <a name="extension-add-methods-in-collection-initializers"></a>Uzantı `Add` koleksiyon başlatıcıları yöntemleri
 
 Kullanma yeteneğini koleksiyonu başlatma kolaylaştırır başka bir özellik olan bir *genişletme yöntemi* için `Add` yöntemi. Bu özellik, Visual Basic ile eşlik için eklenmiştir. 
 
@@ -370,10 +370,7 @@ Artık, ancak yalnızca eşleyen bir genişletme yöntemi oluşturursanız `Add`
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-Bu özellik ile yapmakta olduğunuz hangi yöntemi adlı bir yöntem bir koleksiyona öğe ekler eşlemektir `Add` bir genişletme yöntemi oluşturarak: 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+Bu özellik ile yapmakta olduğunuz hangi yöntemi adlı bir yöntem bir koleksiyona öğe ekler eşlemektir `Add` bir genişletme yöntemi oluşturarak.
 
 ## <a name="improved-overload-resolution"></a>Geliştirilmiş aşırı yükleme çözümü
 

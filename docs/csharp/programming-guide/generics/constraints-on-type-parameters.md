@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür parametreleri (C# programlama Kılavuzu) kısıtlamaları
 
@@ -18,7 +18,7 @@ Kısıtlamaları derleyici tür bağımsız değişkeni olmalıdır özellikleri
 
 |Kısıtlama|Açıklama|
 |----------------|-----------------|
-|`where T: struct`|Tür bağımsız değişkeni bir değer türü olmalıdır. Herhangi bir değer türü dışında <xref:System.Nullable> belirtilebilir. Daha fazla bilgi için bkz: [kullanarak boş değer atanabilir türler](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Tür bağımsız değişkeni bir değer türü olmalıdır. Herhangi bir değer türü dışında <xref:System.Nullable> belirtilebilir. Daha fazla bilgi için bkz: [kullanarak boş değer atanabilir türler](../nullable-types/using-nullable-types.md).|
 |`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu sınırlama herhangi sınıfı, arabirim, temsilci veya dizi türü için de geçerlidir.|
 |`where T : unmanaged`|Tür bağımsız değişkeni bir başvuru türü olmalıdır ve iç içe geçme herhangi bir düzeyde herhangi bir başvuru türü üye içermemelidir.|
 |`where T : new()`|Tür bağımsız değişkeni genel bir parametresiz oluşturucuya sahip olmalıdır. Diğer kısıtlamalar ile birlikte kullanıldığında `new()` kısıtlaması son belirtilmelidir.|

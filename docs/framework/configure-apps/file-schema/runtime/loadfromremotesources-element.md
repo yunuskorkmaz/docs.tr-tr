@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; öğesi
 Uzak kaynaklardan derlemeler tam güven verilip verilmeyeceğini belirtir.  
@@ -69,7 +69,7 @@ Uzak kaynaklardan derlemeler tam güven verilip verilmeyeceğini belirtir.
   
  `enabled` Yalnızca kod erişim güvenliği (CAS) devre dışı bırakıldığında bu öğe etkilidir için öznitelik. Varsayılan olarak, CAS ilkesini devre dışı durumda [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ve sonraki sürümler. Ayarlarsanız `enabled` için `true`, uzak uygulamalarını tam güven verilmiştir.  
   
- Varsa `<loadFromRemoteSources>``enabled` ayarlanmazsa `true`, aşağıdaki koşullar altında bir özel durum:  
+ Varsa `<loadFromRemoteSources>` `enabled` ayarlanmazsa `true`, aşağıdaki koşullar altında bir özel durum:  
   
 -   Korumalı alan geçerli etki alanının içinde davranışını öğesinden farklı bir davranıştır [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Bu, CA ilke devre dışı bırakılması ve korumalı olmaması için geçerli etki alanı gerektirir.  
   

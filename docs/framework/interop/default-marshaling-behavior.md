@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed306098852e93d43a4055fd1d9b8cf97a01766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- Değerleri ve platform başvurular sıralama için kullanılan aynı kuralları çağrıları çağırma COM arabirimleri aracılığıyla sıralama sırasında kullanılır. Örneğin, bir örneği olduğunda `Point` değer türü, COM .NET Framework'teki geçirilen `Point` değeri geçirilir. Varsa `Point` değer türü başvurusu, bir işaretçi olarak geçirilir bir `Point` yığında geçirilir. Birlikte çalışma Sıralayıcı yöneltme daha yüksek düzeyde desteklemez (**noktası \* \*** ) her iki yönde.  
+ Değerleri ve platform başvurular sıralama için kullanılan aynı kuralları çağrıları çağırma COM arabirimleri aracılığıyla sıralama sırasında kullanılır. Örneğin, bir örneği olduğunda `Point` değer türü, COM .NET Framework'teki geçirilen `Point` değeri geçirilir. Varsa `Point` değer türü başvurusu, bir işaretçi olarak geçirilir bir `Point` yığında geçirilir. Birlikte çalışma Sıralayıcı yöneltme daha yüksek düzeyde desteklemez (**noktası** \* \*) her iki yönde.  
   
 > [!NOTE]
 >  Yapıları sahip <xref:System.Runtime.InteropServices.LayoutKind> numaralandırma değeri ayarlamak **Explicit** verilen tür kitaplığı açık bir düzen express yapılamıyor çünkü COM birlikte çalışma içinde kullanılamaz.  

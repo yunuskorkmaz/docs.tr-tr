@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. ve? [] null-conditional işleçleri (C# ve Visual Basic)
 Üye erişimi gerçekleştirmeden önce sol işleneni null değerini sınar (`?.`) veya dizin (`?[]`) döndürür; işlem `null` sol işleneni değerlendirilirse `null`. 
@@ -79,7 +79,7 @@ PropertyChanged?.Invoke(…)
  Daha fazla bilgi için bkz: [Visual Basic dil başvurusu](../../../visual-basic/language-reference/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [?? (null birleşim işleci)](null-conditional-operator.md)  
+ [?? (null birleşim işleci)](null-coalescing-operator.md)  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

@@ -3,11 +3,11 @@ title: Dal ve döngüler Öğreticisi - C# yerel quickstarts
 description: Bu hızlı başlangıcı dallar ve döngüler hakkında koşullu dal ve art arda deyimlerini yürütmek için döngüler destekler dili sözdizimi keşfetmek için C# kod yazın.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 711cc9b40284076d28b5003935bbbbb77dc36664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="branches-and-loops"></a>Dal ve döngüler
 
@@ -39,7 +39,7 @@ int b = 3;
 Tür `dotnet run` yeniden. Yanıt 10'dan az olduğundan, hiçbir şey yazdırılır. **Koşulu** olduğunuz test değer false. Olası dallarını birini yalnızca yazdıktan çünkü yürütmek için herhangi bir kod olmayan bir `if` deyimi: true dal.
 
 > [!TIP]
-> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Yakından hata çıkış ve hata oluşturulan kod bakın. Compler hata genellikle sorun bulmanıza yardımcı olabilir.
+> C# (veya herhangi bir programlama dili) keşfetmenizde kodu yazarken hataları hale getireceğiz. Derleyici bulun ve hataları raporlar. Yakından hata çıkış ve hata oluşturulan kod bakın. Derleyici Hatası genellikle sorun bulmanıza yardımcı olabilir.
 
 Bu ilk örnek gücünü gösterir `if` ve Boolean türleri. A *Boolean* iki değerlerden birine sahip bir değişken: `true` veya `false`. C# özel türünü tanımlayan `bool` Boolean değişkenleri için. `if` Deyimi denetler değerini bir `bool`. Değer olduğunda `true`, aşağıdaki deyim `if` yürütür. Aksi takdirde atlanır.
 

@@ -4,11 +4,11 @@ description: Dotnet yayımlama komutu .NET Core projenizi bir dizine yayımlar.
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8509f1a721c0b4b4c05d68e0f98f9b856bcc5a8e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="dotnet-publish"></a>DotNet yayımlama
 
@@ -89,7 +89,7 @@ Proje Proje başvuruları yoksayar ve yalnızca kök proje geri yükler.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Çıktı dizini yolunu belirtir. Belirtilmezse, varsayılan olarak *./bin/[configuration]/[framework]/* framework bağımlı dağıtım için veya *./bin/[configuration]/[framework]/[runtime]* kendi içinde bulunan bir dağıtım için.
+Çıktı dizini yolunu belirtir. Belirtilmezse, varsayılan olarak *./bin/[configuration]/[framework]/publish/* framework bağımlı dağıtım için veya *./bin/[configuration]/[framework]/[runtime]/publish/* için bir kendi içinde bulunan dağıtım.
 Göreli bir yol sağlanırsa, oluşturulan çıktı dizini proje dosya konumu, geçerli çalışma dizini için görelidir.
 
 `--self-contained`
@@ -128,7 +128,7 @@ Bir veya birkaç belirtir [hedef bildirimleri](../deploying/runtime-store.md) uy
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Çıktı dizini yolunu belirtir. Belirtilmezse, varsayılan olarak *./bin/[configuration]/[framework]/* framework bağımlı dağıtım için veya *./bin/[configuration]/[framework]/[runtime]* kendi içinde bulunan bir dağıtım için.
+Çıktı dizini yolunu belirtir. Belirtilmezse, varsayılan olarak *./bin/[configuration]/[framework]/publish/* framework bağımlı dağıtım için veya *./bin/[configuration]/[framework]/[runtime]/publish/* için bir kendi içinde bulunan dağıtım.
 Göreli bir yol sağlanırsa, oluşturulan çıktı dizini proje dosya konumu, geçerli çalışma dizini için görelidir.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`

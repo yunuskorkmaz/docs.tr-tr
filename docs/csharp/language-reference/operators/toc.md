@@ -39,5 +39,5 @@
 ## [<<= İşleci](left-shift-assignment-operator.md)
 ## [>>= İşleci](right-shift-assignment-operator.md)
 ## [-> İşleci](dereference-operator.md)
-## [?? İşleç](null-conditional-operator.md)
+## [?? İşleç](null-coalescing-operator.md)
 ## [=> İşleci](lambda-operator.md)
