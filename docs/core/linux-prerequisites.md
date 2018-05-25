@@ -4,11 +4,11 @@ description: Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux 
 author: jralexander
 ms.author: johalex
 ms.date: 05/08/2018
-ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -65,29 +65,36 @@ Aşağıdaki örnekler olacak şekilde tasarlanmıştır. Tam sürümünü ve ad
 
 Ubuntu dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
-* libunwind8
 * liblttng ust0
 * libcurl3
 * libssl1.0.0
-* libuuid1
 * libkrb5-3
 * zlib1g
 * libicu52 (için 14.x)
 * libicu55 (için 16.x)
 * libicu57 (için 17.x)
+* libicu60 (için 18.x)
+
+Sürümleri için .NET Core 2.1'den önceki aşağıdaki bağımlılıkları da gereklidir:
+
+* libunwind8
+* libuuid1
 
 ### <a name="centos"></a>CentOS
 
 CentOS dağıtımları yüklü aşağıdaki kitaplıkları gerektirir:
 
-* libunwind
 * lttng hakkınızın
 * libcurl
 * openssl kitaplıklar
-* libuuid
 * krb5 kitaplıklar
 * libicu
 * Zlib
+
+Sürümleri için .NET Core 2.1'den önceki aşağıdaki bağımlılıkları da gereklidir:
+
+* libunwind
+* libuuid
 
 Bağımlılıklar hakkında daha fazla bilgi için bkz: [Self-contained Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 

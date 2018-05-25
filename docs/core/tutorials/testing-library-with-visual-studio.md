@@ -7,11 +7,11 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 24d0f1366a8e4309bbfb5b548af7407de50eaf76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 içinde bir sınıf kitaplığı .NET Core ile test etme
 
@@ -24,12 +24,12 @@ Birim testi projesi oluşturmak için aşağıdakileri yapın:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. İçinde **Çözüm Gezgini**, bağlam menüsünü açın **ClassLibraryProjects** çözüm düğümüne ve select **Ekle** > **yeni proje**.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual C#** düğümü. Ardından **.NET Core** düğümünü ve ardından **birim testi projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "StringLibraryTest" projesinin adı girin. Seçin **Tamam** birim testi projesi oluşturmak için.
+1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual C#** düğümü. Ardından **.NET Core** düğümünü ve ardından **mstest'i Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "StringLibraryTest" projesinin adı girin. Seçin **Tamam** birim testi projesi oluşturmak için.
 
    ![Yeni Proje iletişim kutusu ekleme](./media/testing-library-with-visual-studio/testproject.png)
 
    > [!NOTE]  
-   > Birim testi projesi yanı sıra .NET Core xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
+   > Mstest'i Test projesinde ek olarak, .NET Core xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
 
 1. Visual Studio projesi oluşturur ve açılır *UnitTest1.cs* kod penceresinde dosya.
 
@@ -53,12 +53,12 @@ Birim testi projesi oluşturmak için aşağıdakileri yapın:
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. İçinde **Çözüm Gezgini**, bağlam menüsünü açın **ClassLibraryProjects** çözüm düğümüne ve select **Ekle** > **yeni proje**.
 
-1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümü. Ardından **.NET Core** düğümünü ve ardından **birim testi projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "StringLibraryTest" projesinin adı girin. Seçin **Tamam** birim testi projesi oluşturmak için.
+1. İçinde **Yeni Proje Ekle** iletişim kutusunda **Visual Basic** düğümü. Ardından **.NET Core** düğümünü ve ardından **mstest'i Test projesi (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "StringLibraryTest" projesinin adı girin. Seçin **Tamam** birim testi projesi oluşturmak için.
 
    ![Yeni Proje iletişim kutusu ekleme](./media/testing-library-with-visual-studio/vb-testproject.png)
 
    > [!NOTE]  
-   > Birim testi projesi yanı sıra .NET Core xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
+   > Mstest'i Test projesinde ek olarak, .NET Core xUnit test projesi oluşturmak için Visual Studio kullanabilirsiniz.
 
 1. Visual Studio projesi oluşturur ve açılır *UnitTest1.vb* kod penceresinde dosya.
 
