@@ -1,14 +1,6 @@
 ---
-title: "DLL İşlevleri için bir Sınıf Oluşturma"
-ms.custom: 
+title: DLL İşlevleri için bir Sınıf Oluşturma
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM interop, DLL functions
 - unmanaged functions
@@ -18,37 +10,33 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed5ef9b7aaad3405ff31ff45ee8d0b22f56f51d7
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="creating-a-class-to-hold-dll-functions"></a><span data-ttu-id="50222-102">DLL İşlevleri için bir Sınıf Oluşturma</span><span class="sxs-lookup"><span data-stu-id="50222-102">Creating a Class to Hold DLL Functions</span></span>
-<span data-ttu-id="50222-103">Sık kullanılan DLL işlevini yönetilen sınıfında kaydırma platform işlevleri kapsülleyen etkili bir yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="50222-103">Wrapping a frequently used DLL function in a managed class is an effective approach to encapsulate platform functionality.</span></span> <span data-ttu-id="50222-104">Her durumda bunun için zorunlu olmasa da bir sınıf sarmalayıcı DLL işlevlerini tanımlama uygun olduğundan sağlama zahmetli ve hatalara eğilimli olabilir.</span><span class="sxs-lookup"><span data-stu-id="50222-104">Although it is not mandatory to do so in every case, providing a class wrapper is convenient because defining DLL functions can be cumbersome and error-prone.</span></span> <span data-ttu-id="50222-105">Visual Basic veya C# programlama yapıyorsanız sınıfta veya Visual Basic modülü DLL işlevleri bildirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="50222-105">If you are programming in Visual Basic or C#, you must declare DLL functions within a class or Visual Basic module.</span></span>  
+# <a name="creating-a-class-to-hold-dll-functions"></a><span data-ttu-id="fd5e5-102">DLL İşlevleri için bir Sınıf Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fd5e5-102">Creating a Class to Hold DLL Functions</span></span>
+<span data-ttu-id="fd5e5-103">Sık kullanılan DLL işlevini yönetilen sınıfında kaydırma platform işlevleri kapsülleyen etkili bir yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-103">Wrapping a frequently used DLL function in a managed class is an effective approach to encapsulate platform functionality.</span></span> <span data-ttu-id="fd5e5-104">Her durumda bunun için zorunlu olmasa da bir sınıf sarmalayıcı DLL işlevlerini tanımlama uygun olduğundan sağlama zahmetli ve hatalara eğilimli olabilir.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-104">Although it is not mandatory to do so in every case, providing a class wrapper is convenient because defining DLL functions can be cumbersome and error-prone.</span></span> <span data-ttu-id="fd5e5-105">Visual Basic veya C# programlama yapıyorsanız sınıfta veya Visual Basic modülü DLL işlevleri bildirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-105">If you are programming in Visual Basic or C#, you must declare DLL functions within a class or Visual Basic module.</span></span>  
   
- <span data-ttu-id="50222-106">Bir sınıf içinde aramak istediğiniz her DLL işlevi için statik bir yöntemi tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="50222-106">Within a class, you define a static method for each DLL function you want to call.</span></span> <span data-ttu-id="50222-107">Tanımı karakter kümesini veya yöntem bağımsız değişkenleri geçirme kullanılan çağırma gibi ek bilgileri içerebilir; Bu bilgileri kaldırarak, varsayılan ayarları seçin.</span><span class="sxs-lookup"><span data-stu-id="50222-107">The definition can include additional information, such as the character set or the calling convention used in passing method arguments; by omitting this information, you select the default settings.</span></span> <span data-ttu-id="50222-108">Bildirim seçenekleri ve varsayılan ayarlarına tam listesi için bkz: [yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="50222-108">For a complete list of declaration options and their default settings, see [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
+ <span data-ttu-id="fd5e5-106">Bir sınıf içinde aramak istediğiniz her DLL işlevi için statik bir yöntemi tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-106">Within a class, you define a static method for each DLL function you want to call.</span></span> <span data-ttu-id="fd5e5-107">Tanımı karakter kümesini veya yöntem bağımsız değişkenleri geçirme kullanılan çağırma gibi ek bilgileri içerebilir; Bu bilgileri kaldırarak, varsayılan ayarları seçin.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-107">The definition can include additional information, such as the character set or the calling convention used in passing method arguments; by omitting this information, you select the default settings.</span></span> <span data-ttu-id="fd5e5-108">Bildirim seçenekleri ve varsayılan ayarlarına tam listesi için bkz: [yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span><span class="sxs-lookup"><span data-stu-id="fd5e5-108">For a complete list of declaration options and their default settings, see [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).</span></span>  
   
- <span data-ttu-id="50222-109">Başka bir sınıf üzerinde statik yöntemlerini çağıran gibi Sarmalanan sonra sınıfında yöntemleri çağırabilir.</span><span class="sxs-lookup"><span data-stu-id="50222-109">Once wrapped, you can call the methods on the class as you call static methods on any other class.</span></span> <span data-ttu-id="50222-110">Platform çağırma tanıtıcıları arka plandaki işlevi otomatik olarak verilmiş.</span><span class="sxs-lookup"><span data-stu-id="50222-110">Platform invoke handles the underlying exported function automatically.</span></span>  
+ <span data-ttu-id="fd5e5-109">Başka bir sınıf üzerinde statik yöntemlerini çağıran gibi Sarmalanan sonra sınıfında yöntemleri çağırabilir.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-109">Once wrapped, you can call the methods on the class as you call static methods on any other class.</span></span> <span data-ttu-id="fd5e5-110">Platform çağırma tanıtıcıları arka plandaki işlevi otomatik olarak verilmiş.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-110">Platform invoke handles the underlying exported function automatically.</span></span>  
   
- <span data-ttu-id="50222-111">Platform için bir yönetilen sınıf tasarlama çağırdığınızda, sınıflar ve DLL işlevleri arasındaki ilişkileri göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="50222-111">When designing a managed class for platform invoke, consider the relationships between classes and DLL functions.</span></span> <span data-ttu-id="50222-112">Örneğin, şunları yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="50222-112">For example, you can:</span></span>  
+ <span data-ttu-id="fd5e5-111">Platform için bir yönetilen sınıf tasarlama çağırdığınızda, sınıflar ve DLL işlevleri arasındaki ilişkileri göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-111">When designing a managed class for platform invoke, consider the relationships between classes and DLL functions.</span></span> <span data-ttu-id="fd5e5-112">Örneğin, şunları yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="fd5e5-112">For example, you can:</span></span>  
   
--   <span data-ttu-id="50222-113">Varolan bir sınıfa içinde DLL işlevleri bildirme.</span><span class="sxs-lookup"><span data-stu-id="50222-113">Declare DLL functions within an existing class.</span></span>  
+-   <span data-ttu-id="fd5e5-113">Varolan bir sınıfa içinde DLL işlevleri bildirme.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-113">Declare DLL functions within an existing class.</span></span>  
   
--   <span data-ttu-id="50222-114">Yalıtılmış ve kolay bulmak işlevleri tutma her DLL işlevi için tek bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="50222-114">Create an individual class for each DLL function, keeping functions isolated and easy to find.</span></span>  
+-   <span data-ttu-id="fd5e5-114">Yalıtılmış ve kolay bulmak işlevleri tutma her DLL işlevi için tek bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-114">Create an individual class for each DLL function, keeping functions isolated and easy to find.</span></span>  
   
--   <span data-ttu-id="50222-115">Mantıksal gruplar oluşturmak ve ek yükü azaltmak için ilgili DLL işlevleri kümesi için bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="50222-115">Create one class for a set of related DLL functions to form logical groupings and reduce overhead.</span></span>  
+-   <span data-ttu-id="fd5e5-115">Mantıksal gruplar oluşturmak ve ek yükü azaltmak için ilgili DLL işlevleri kümesi için bir sınıf oluşturun.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-115">Create one class for a set of related DLL functions to form logical groupings and reduce overhead.</span></span>  
   
- <span data-ttu-id="50222-116">Sınıf ve yöntemlerinden yazarken Lütfen adı verebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="50222-116">You can name the class and its methods as you please.</span></span> <span data-ttu-id="50222-117">Örnekler için nasıl oluşturulacağını gösterir. Platformuyla kullanılacak bildirimleri NET tabanlı çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="50222-117">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="fd5e5-116">Sınıf ve yöntemlerinden yazarken Lütfen adı verebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-116">You can name the class and its methods as you please.</span></span> <span data-ttu-id="fd5e5-117">Örnekler için nasıl oluşturulacağını gösterir. Platformuyla kullanılacak bildirimleri NET tabanlı çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="fd5e5-117">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50222-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50222-118">See Also</span></span>  
- [<span data-ttu-id="50222-119">Yönetilmeyen DLL İşlevlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="50222-119">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [<span data-ttu-id="50222-120">DLL'lerde İşlevleri Tanımlama</span><span class="sxs-lookup"><span data-stu-id="50222-120">Identifying Functions in DLLs</span></span>](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [<span data-ttu-id="50222-121">Yönetilen Kodda Prototipler Oluşturma</span><span class="sxs-lookup"><span data-stu-id="50222-121">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [<span data-ttu-id="50222-122">DLL İşlevini Çağırma</span><span class="sxs-lookup"><span data-stu-id="50222-122">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="fd5e5-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fd5e5-118">See Also</span></span>  
+ [<span data-ttu-id="fd5e5-119">Yönetilmeyen DLL İşlevlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="fd5e5-119">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [<span data-ttu-id="fd5e5-120">DLL'lerde İşlevleri Tanımlama</span><span class="sxs-lookup"><span data-stu-id="fd5e5-120">Identifying Functions in DLLs</span></span>](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [<span data-ttu-id="fd5e5-121">Yönetilen Kodda Prototipler Oluşturma</span><span class="sxs-lookup"><span data-stu-id="fd5e5-121">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="fd5e5-122">DLL İşlevini Çağırma</span><span class="sxs-lookup"><span data-stu-id="fd5e5-122">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
