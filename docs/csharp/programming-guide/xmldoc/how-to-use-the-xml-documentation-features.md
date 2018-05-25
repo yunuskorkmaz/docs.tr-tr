@@ -5,69 +5,72 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Nasıl yapılır: XML Belgeleri Özelliklerini Kullanma (C# Programlama Kılavuzu)
 Aşağıdaki örnek belgelenmiştir bir tür temel bir bakış sağlar.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **Bu .xml dosyası ile Yukarıdaki örnek kod oluşturuldu.**  
-**\<? xml version = "1.0"? >**  
-**\<Belge >**  
- **\<derleme >**  
- **\<adı > xmlsample \< /name >**  
- **\</Assembly >**  
- **\<üyeleri >**  
- **\<üye adı "T:SomeClass" = >**  
- **\<Özet >**  
- **Sınıf düzeyinde Özet belgelerine buraya ekleyin.  \< /Özet >**  
- **\<Açıklamalar >**  
- **Bir tür veya üye uzun açıklamaları ilişkilendirilebilir.**  
- **Açıklamalar etiketi aracılığıyla \< /remarks >**  
- **\</Member >**  
- **\<üye name="F:SomeClass.m_Name" >**  
- **\<Özet >**  
- **Name özelliği için depolama \< /Özet >**  
- **\</Member >**  
- **\<üye adı "M:SomeClass. #ctor" = >**  
- **\<Özet > sınıfı oluşturucusu.  \< /Özet >**  
- **\</Member >**  
- **\<üye name="M:SomeClass.SomeMethod(System.String)" >**  
- **\<Özet >**  
- **SomeMethod açıklaması.  \< /Özet >**  
- **\<param name = "s" > s parametresi açıklamasını buraya\</param >**  
- **\<SeeAlso cref="T:System.String" >**  
- **Bir tür veya üye başvurmak için herhangi bir etiket cref özniteliği kullanabilirsiniz**  
- **ve derleyici başvurusu var olup olmadığını denetleyin. \</seealso >**  
- **\</Member >**  
- **\<üye name="M:SomeClass.SomeOtherMethod" >**  
- **\<Özet >**  
- **Diğer bir yöntem.  \< /Özet >**  
- **\<döndürür >**  
- **Dönüş sonuçları döndürür etiketi açıklanmaktadır.  \< /verir >**  
- **\<SeeAlso cref="M:SomeClass.SomeMethod(System.String)" >**  
- **Belirli bir yöntemi başvurmak için cref özniteliği kullanımına dikkat edin \</seealso >**  
- **\</Member >**  
- **\<üye name="M:SomeClass.Main(System.String[])" >**  
- **\<Özet >**  
- **Uygulama için giriş noktası.**  
- **\</ Özet >**  
- **\<param name = "bağımsız değişken" > bir komut satırı bağımsız değişkenleri listesi\</param >**  
- **\</Member >**  
- **\<üye name="P:SomeClass.Name" >**  
- **\<Özet >**  
- **Name özelliği  \< /Özet >**  
- **\<Değer >**  
- **Bir değer etiketi özellik değeri tanımlamak için kullanılan \< /value >**  
- **\</Member >**  
- **\</Members >**  
-**\</ doc >**   
+
+Örneğin, aşağıdaki içeriğe sahip bir .xml dosyası oluşturur:
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Örnek derlemek için aşağıdaki komutu yazın:  
   
@@ -80,7 +83,7 @@ Aşağıdaki örnek belgelenmiştir bir tür temel bir bakış sağlar.
   
 -   Belge doğru biçimlendirilmiş XML. Doğru biçimlendirilmiş XML değil, bir uyarı oluşturulur ve belge dosyası bir hatayla karşılaşıldı belirten bir açıklama içerir.  
   
--   Geliştiriciler kendi etiketleri kümesi oluşturmak boş. Önerilen etiketler (daha fazla bilgi bölümüne bakın) birtakım yoktur. Önerilen etiketler bazıları özel anlamlara sahiptir:  
+-   Geliştiriciler kendi etiketleri kümesi oluşturmak boş. Önerilen etiketler birtakım yoktur (bkz [etiketleri belge açıklamaları için önerilen](recommended-tags-for-documentation-comments.md)). Önerilen etiketler bazıları özel anlamlara sahiptir:  
   
     -   \<Param > etiketi parametrelerini tanımlamak için kullanılır. Kullandıysanız, derleyici parametresi var olduğundan ve tüm parametreleri belgelerinde açıklanan doğrulayın. Doğrulama başarısız olursa derleyici bir uyarı verir.  
   

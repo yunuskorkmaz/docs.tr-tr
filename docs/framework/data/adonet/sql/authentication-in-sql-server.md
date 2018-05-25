@@ -1,12 +1,12 @@
 ---
 title: SQL Server kimlik doğrulaması
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8fc6f17cd008fe24e041c52b4e5ee8fd4d261f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server kimlik doğrulaması
 SQL Server iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.  
@@ -16,7 +16,7 @@ SQL Server iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma m
 -   Karma mod hem Windows hem SQL Server kimlik doğrulamasını destekler. Kullanıcı adı ve parola çiftleri SQL Server'ın içinde saklanır.  
   
 > [!IMPORTANT]
->  Mümkün olduğunda Windows kimlik doğrulaması kullanmanızı öneririz. Windows kimlik doğrulaması şifrelenmiş iletileri bir dizi SQL Server'da kullanıcıların kimliklerini doğrulamak için kullanır. SQL Server oturumları kullanıldığında, SQL Server oturum açma adları ve parolalar daha az güvenli hale getirir ağ üzerinden iletilir.  
+>  Mümkün olduğunda Windows kimlik doğrulaması kullanmanızı öneririz. Windows kimlik doğrulaması şifrelenmiş iletileri bir dizi SQL Server'da kullanıcıların kimliklerini doğrulamak için kullanır. SQL Server oturumları kullanıldığında, SQL Server oturum açma adları ve şifrelenmiş parolalar daha az güvenli hale getirir ağ üzerinden iletilir.  
   
  Windows kimlik doğrulaması, kullanıcıların zaten Windows'da oturum ve ayrı olarak SQL Server'da oturum gerekmez. Aşağıdaki `SqlConnection.ConnectionString` gerek kalmadan Windows kimlik doğrulaması belirtir bir kullanıcı adı veya parola.  
   

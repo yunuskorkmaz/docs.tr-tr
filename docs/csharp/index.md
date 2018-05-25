@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 15c10d8891e87ab241104e6aa760c221e8b9e249
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-guide"></a>C# Kılavuzu
 
@@ -61,7 +61,7 @@ C# Kılavuzu'nda çeşitli bölümler vardır. Sırayla okuyabilir veya en doğr
   * Bu bölüm, C# dili hakkında başvuru bilgileri içerir. Bu yazıda sözdizimi ve C# semantiği anlamanıza yardımcı olur. Ayrıca, türleri, işleçler, öznitelikler, önişlemci yönergeleri, derleyici anahtarları, derleyici hataları ve derleyici uyarıları başvuru bilgileri içerir.
 
 * [C# dil belirtimi](../csharp/language-reference/language-specification/index.md)
-  * Microsoft Word biçimindeki C# Belirtimleri'nin en son sürümüne bağlar.
+  * C# dil belirtimi en son sürümlerini bağlantılar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

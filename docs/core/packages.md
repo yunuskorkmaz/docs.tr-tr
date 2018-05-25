@@ -4,11 +4,11 @@ description: Paketler, metapackages ve çerçeveleri terminolojisi öğrenin.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paketler, metapackages ve çerçeveleri
 
@@ -96,9 +96,10 @@ Anahtar .NET Core metapackages şunlardır:
 
 İlişki ikinci bölümü varlık seçimdir. Paketler birden çok çerçeveyi varlıklarının içerebilir. Paketler ve/veya metapackages kümesine başvuru verildiğinde, framework hangi varlık, örneğin seçilmelidir belirlemek için gereken `net46` veya `netstandard1.3`. Doğru varlık seçmek önemlidir. Örneğin, bir `net46` varlık büyük olasılıkla .NET Framework 4.0 veya .NET Core 1.0 ile uyumlu değil.
 
-![Paket tabanlı çerçeve oluşturma](./media/packages/package-framework.png)
 
-Yukarıdaki resimde bu ilişkiyi görebilirsiniz. *API* hedefler ve tanımlar *framework*. *Framework* için kullanılan *varlık seçimi*. *Varlık* API sağlar.
+Aşağıdaki resimde bu ilişkide görebilirsiniz. *API* hedefler ve tanımlar *framework*. *Framework* için kullanılan *varlık seçimi*. *Varlık* API sağlar.
+
+![Paket tabanlı çerçeve oluşturma](./media/packages/package-framework.png)
 
 .NET Core ile kullanılan iki birincil paket tabanlı çerçeveler şunlardır:
 

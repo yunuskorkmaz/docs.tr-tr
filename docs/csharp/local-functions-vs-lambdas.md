@@ -3,11 +3,11 @@ title: Lambda ifadeleri ve yerel işlevler
 description: Lambda ifadeleri daha iyi bir seçim yerel işlevler neden olabilecek bilgi edinin.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 5280605a7101a5b89c062fcf736909173bebf78c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Lambda ifadeleri karşılaştırma yerel işlevler
 
@@ -26,7 +26,7 @@ Yerel işlevler adlara sahip. Lambda ifadeleri değişkenler için atanan anonim
 Yerel işlevler lambda ifadeleri daha kesin atamaya ilişkin farklı kuralları vardır. Yerel işlev bildirimi kapsamında olduğu herhangi bir kod konumdan başvurulabilir. Bunu erişileceği (veya lambda ifadesi başvuran delgate adlı önce.) bir lambda ifadesi bir temsilci değişkenine atanan gerekir Lambda ifadesi kullanarak sürüm bildirme gerekir ve lambda ifadesi başlatma Uyarısı `nthFactorial` kendisini tanımlayan önce. Bunu yapmazsanız sonuçlanıyor başvuran bir derleme zamanı hatası `nthFactorial` atayarak önce.
 Bu farklılıklar, yinelemeli algoritmalar yerel işlevler kullanılarak oluşturmak kolaydır anlamına gelir. Bildirme ve kendi kendini çağıran yerel bir işlev tanımlayın. Lambda ifadeleri gerekir bildirilen ve aynı lambda ifadesi başvuruda bulunan bir gövde yeniden atandığında kullanılabilmesi için öncelikle bir varsayılan değer atanmış.
 
-Kesin atama kurallarının yerel işlevi veya lamdba ifade tarafından yakalanan tüm değişkenleri de etkiler. Yerel işlevler ve lambda ifadesi kuralları yerel işlevi veya lambda ifadesi bir temsilciye dönüştürüldüğünde yakalanan değişkenlerin kesinlikle bir noktada atanan talep. Bunlar bildirirken lambda ifadeleri temsilcileri dönüştürülür farktır. Yerel işlevler yalnızca bir temsilci olarak kullanıldığında temsilciler dönüştürülür. Yerel bir işlev bildirme ve yalnızca gibi bir yöntemini çağırarak başvuru, bir temsilci dönüştürülmez. Bu kural, yerel bir işlev kapsayan kapsamı uygun bir konumda bildirmek sağlar. Tüm return deyimlerinde sonra yerel işlevler üst yöntemi sonunda bildirmek için yaygın bir durumdur.
+Kesin atama kurallarının yerel işlevi veya lambda ifadesi tarafından yakalanan tüm değişkenleri de etkiler. Yerel işlevler ve lambda ifadesi kuralları yerel işlevi veya lambda ifadesi bir temsilciye dönüştürüldüğünde yakalanan değişkenlerin kesinlikle bir noktada atanan talep. Bunlar bildirirken lambda ifadeleri temsilcileri dönüştürülür farktır. Yerel işlevler yalnızca bir temsilci olarak kullanıldığında temsilciler dönüştürülür. Yerel bir işlev bildirme ve yalnızca gibi bir yöntemini çağırarak başvuru, bir temsilci dönüştürülmez. Bu kural, yerel bir işlev kapsayan kapsamı uygun bir konumda bildirmek sağlar. Tüm return deyimlerinde sonra yerel işlevler üst yöntemi sonunda bildirmek için yaygın bir durumdur.
 
 Üçüncü derleyici kesinlikle yakalanan değişkenleri çevreleyen kapsamdaki atamak yerel işlevler sağlayan statik çözümleme gerçekleştirebilirsiniz. Bu örneği göz önünde bulundurun:
 

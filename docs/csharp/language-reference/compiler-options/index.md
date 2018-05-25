@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>C# Derleyici Seçenekleri
 Derleyici yürütülebilir dosyanın (.exe) dosyaları, dinamik bağlantı kitaplıkları (.dll) veya kod modülleri üretir (.netmodule).  
@@ -24,16 +24,16 @@ Derleyici yürütülebilir dosyanın (.exe) dosyaları, dinamik bağlantı kitap
  Visual Studio'da, web.config dosyasında derleyici seçeneklerini ayarlayın. Daha fazla bilgi için bkz: [ \<derleyici > öğesi](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [csc.exe Kullanarak Komut Satırı Derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [csc.exe Kullanarak Komut Satırı Derleme](command-line-building-with-csc-exe.md)  
  Visual C# uygulamasını komut satırından oluşturma hakkında bilgi.  
   
- [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Komut satırı derlemeleri etkinleştirmek için vsvars32.bat çalıştırmak için adımları sağlar.  
   
- [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](listed-by-category.md)  
  Derleyici Seçenekleri Kategorik bir listesi.  
   
- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Alfabetik Listelenmiş C# Derleyici Seçenekleri](listed-alphabetically.md)  
  Derleyici seçenekleri alfabetik bir listesi.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

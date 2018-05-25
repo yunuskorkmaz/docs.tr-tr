@@ -1,12 +1,12 @@
 ---
 title: Bağlantı dizesi sözdizimi
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği. .NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.  
@@ -112,11 +112,11 @@ Ayrıca ayarlayabilirsiniz <xref:System.Data.SqlClient.SqlConnectionStringBuilde
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Hayır|Yok|Hayır (varsayılan)|Yoksayıldı|Şifreleme oluşur.|  
 |Hayır|Yok|Evet|Hayır (varsayılan)|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
-|Hayır|Yok|Evet|Evet|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
-|Evet|Hayır|Yoksayıldı|Yoksayıldı|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
-|Evet|Evet|Hayır (varsayılan)|Yoksayıldı|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
-|Evet|Evet|Evet|Hayır (varsayılan)|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
-|Evet|Evet|Evet|Evet|Yalnızca bağlantı denemesi başarısız doğrulanabilen sunucu sertifikası, aksi takdirde ise şifreleme oluşur.|  
+|Hayır|Yok|Evet|Evet|Şifreleme her zaman oluşur, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
+|Evet|Hayır|Yoksayıldı|Yoksayıldı|Yalnızca doğrulanabilir sunucu sertifikası ise şifrelemenin gerçekleştiği; Aksi takdirde, bağlantı girişimi başarısız olur.|  
+|Evet|Evet|Hayır (varsayılan)|Yoksayıldı|Şifreleme her zaman oluşur, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
+|Evet|Evet|Evet|Hayır (varsayılan)|Yalnızca doğrulanabilir sunucu sertifikası ise şifrelemenin gerçekleştiği; Aksi takdirde, bağlantı girişimi başarısız olur.|  
+|Evet|Evet|Evet|Evet|Şifreleme her zaman oluşur, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
   
  Daha fazla bilgi için bkz: [kullanarak şifreleme olmadan doğrulama](http://go.microsoft.com/fwlink/?LinkId=120500) SQL Server Books Online.  
   

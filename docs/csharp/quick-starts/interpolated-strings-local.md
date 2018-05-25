@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: a4e8434b3e7f945ad002984ad7861c0e103c0cf2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="string-interpolation"></a>Dize ilişkilendirme
 
@@ -93,7 +93,7 @@ Unutmayın Ara değerli ifade `item` Ara değerli dizesinde çözümler sonuç d
 
 - Ara değerli ifade değerlendirilirse `null`, boş bir dize ("", veya <xref:System.String.Empty?displayProperty=nameWithType>) kullanılır.
 
-- Ara değerli ifadesini değerlendiremedi değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulanması güncelleştirerek test `Vegetable.ToString` yöntemi. Hatta değil uygulayabilir `ToString` her C# veri türü bu yöntem bazı uygulaması olduğundan yöntemi. Test için açıklama tanımı `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini put `//` önüne). Çıktıda varsayılan davranışı olan tam olarak nitelenmiş tür adıyla ("Vegetable" Bu örnekte), "eggplant" dizesi değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` bir numaralandırma türü için yöntemidir numaralandırma tanımı sırasında kullanılan bir değeri dize gösterimini dönün.
+- Ara değerli ifadesini değerlendiremedi değil, `null`, genellikle `ToString` sonuç türü yöntemi çağrılır. Bu uygulanması güncelleştirerek test `Vegetable.ToString` yöntemi. Hatta uygulamak gerekmeyebilir `ToString` her türü bu yöntem bazı uygulaması olduğundan yöntemi. Bunu test etmek için açıklama tanımı `Vegetable.ToString` örnekte yöntemi (Bunu yapmak için bir açıklama simgesini put `//`, onu önünde). Çıktıda varsayılan davranışı olan tam olarak nitelenmiş tür adıyla ("Vegetable" Bu örnekte), "eggplant" dizesi değiştirilir, <xref:System.Object.ToString?displayProperty=nameWithType> yöntemi. Varsayılan davranışını `ToString` bir numaralandırma değeri için yöntemidir değeri dize gösterimini dönün.
 
 Bu örnek çıkışı, tarih (eggplant fiyat saniyede değiştirmez) çok kesin ve Fiyat değerini para birimi göstermez. Sonraki bölümde, dize ifadesi sonuçları gösterimlerini biçimini kontrol ederek bu sorunları gidermeye yönelik bilgi edineceksiniz.
 
