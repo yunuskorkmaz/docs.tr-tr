@@ -2,11 +2,11 @@
 title: Kayıtlar (F#)
 description: 'F # kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit toplamalar nasıl temsil öğrenin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5bd1f76937bf5839b7da5cae7dea578747ec9b99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="records"></a>Kayıtlar
 
@@ -16,15 +16,15 @@ Kayıtları üyeleri isteğe bağlı olarak adlandırılmış değerler basit to
 
 ```fsharp
 [ attributes ]
-type [accessibility-modifier] typename = {
-    [ mutable ] label1 : type1;
-    [ mutable ] label2 : type2;
-    ...
-}
+type [accessibility-modifier] typename =
+    { [ mutable ] label1 : type1;
+      [ mutable ] label2 : type2;
+      ... }
     [ member-list ]
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 Önceki sözdiziminde *typename* kayıt türünün adı *label1* ve *label2* adları olarak adlandırılan değerlerin *etiketleri*, ve *type1* ve *type2* bu değerleri türleridir. *üye listesi* üye türü için isteğe bağlı bir listedir.  Kullanabileceğiniz `[<Struct>]` bir başvuru türü olan bir kaydı yerine bir yapı kaydı oluşturmak için öznitelik.
 
 Bazı örnekler verilmiştir.
@@ -48,6 +48,7 @@ En son bildirilen etiketleri olanlar daha önce bildirilen bir türe önceliklid
 Yöntemleri, yalnızca sınıf türleri için kayıt türleri için tanımlanabilir.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Kayıt ifadeler kullanarak kayıtları oluşturma
+
 Kayıtları kayıtta tanımlı etiketleri kullanarak başlatabilirsiniz. Bu bir ifade olarak adlandırılır bir *kayıt ifade*. Kayıt deyimi alın ve noktalı virgül ayırıcı olarak kullanmak için ayraç kullanın.
 
 Aşağıdaki örnek, bir kayıt oluşturmak gösterilmiştir.
@@ -77,20 +78,19 @@ DefaultValue özniteliği kaydı alanlarla kullanmayın. Daha iyi bir kayıt ba�
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
 type MyRecord =
-{
-    field1 : int
-    field2 : int
-}
+    { Field1 : int
+      Field2 : int }
 
-let defaultRecord1 = { field1 = 0; field2 = 0 }
-let defaultRecord2 = { field1 = 1; field2 = 25 }
+let defaultRecord1 = { Field1 = 0; Field2 = 0 }
+let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 
 // Use the with keyword to populate only a few chosen fields
 // and leave the rest with default values.
-let rr3 = { defaultRecord1 with field2 = 42 }
+let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
 ## <a name="pattern-matching-with-records"></a>Desen eşleştirme kayıtlarıyla
+
 Kayıtları desen eşleştirme ile kullanılabilir. Bazı alanlar açıkça belirtmek ve bir eşleşme oluştuğunda atanacak diğer alanlar için değişkenleri sağlayın. Aşağıdaki kod örneği bunu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
@@ -104,17 +104,25 @@ Point is at (10.000000, 0.000000, -1.000000).
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Kayıtlar ve sınıflar arasındaki farklar
+
 Kayıt alanları otomatik olarak bir özellik olarak sunulan ve oluşturmada kullanılan ve kayıtların kopyalama sınıflardan farklılık gösterir. Kayıt oluşturma da sınıfı yapım farklıdır. Bir kayıt türü bir oluşturucu tanımlanamıyor. Bunun yerine, bu konuda açıklanan yapım sözdizimi geçerlidir. Sınıfları Oluşturucusu parametreleri, alanları ve özellikleri arasında doğrudan hiçbir ilişki sahiptir.
 
 Birleşim ve yapı türleri gibi kayıtları yapısal eşitlik semantiklerine sahip. Sınıfları sahip referans eşitlik semantiği. Aşağıdaki kod örneğinde bu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
+Bu kod çıkışı aşağıdaki gibidir:
+
+```
+The records are equal.
+```
+
 Sınıfları içeren aynı kodu yazarsanız, iki sınıf nesnelerine çünkü iki değer yığında iki nesneleri temsil eder ve yalnızca adresleri karşılaştırıldığında eşit olacaktır (sınıf türü geçersiz kılmadıkça `System.Object.Equals` yöntemi).
 
 Eşitlik kayıtları için referans olursa öznitelik Ekle `[<ReferenceEquality>]` kaydı üstünde.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
+
 [F# Türleri](fsharp-types.md)
 
 [Sınıflar](classes.md)

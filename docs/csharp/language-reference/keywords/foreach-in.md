@@ -1,6 +1,6 @@
 ---
 title: foreach, in (C# Başvurusu)
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,43 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
 
-`foreach` Deyimi bir dizi veya uygulayan bir nesne koleksiyonu her öğe için bir grup katıştırılmış ifadeler yineler <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. [Foreach deyimi](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) istiyor, ancak öğe eklemek veya beklenmeyen yan etkileri önlemek için kaynak koleksiyondan kaldırmak için kullanılamaz bilgileri almak için koleksiyon yinelemek için kullanılır. Gerekirse eklemek veya kaynak koleksiyondan öğeleri, kullanmak bir [için](for.md) döngü.
-  
- Katıştırılmış ifadeler dizisi ya da koleksiyonu her öğe için yürütme devam edin. Koleksiyondaki tüm öğeler için yineleme tamamladıktan sonra sonraki deyimi aşağıdaki denetimi aktarılır `foreach` bloğu.
-  
- Bir oranda noktası içinde `foreach` bloğu kullanarak döngü dışında bölünebilir [sonu](break.md) anahtar sözcüğü ya da kullanarak adım döngüsünde sonraki yinelemeye [devam](continue.md) anahtar sözcüğü.
+`foreach` Deyimini uygulayan türünün bir örneği bir deyim veya her öğe için deyimleri bloğu yürütür <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. `foreach` Deyimi bu türlerde sınırlı değildir ve aşağıdaki koşulları karşılayan herhangi bir türde bir örneğine uygulanabilir:
 
- A `foreach` döngü ayrıca çıkıldı tarafından [goto](goto.md), [dönmek](return.md), veya [throw](throw.md) deyimleri.
+- Parametresiz ortak olan `GetEnumerator` yöntemi, dönüş türü olan sınıf, yapı veya arabirim türü
+- dönüş türü `GetEnumerator` yöntemi ortak olan `Current` özelliği ve parametresiz ortak `MoveNext` yöntemi, dönüş türü olan <xref:System.Boolean>.
 
- Hakkında daha fazla bilgi için `foreach` anahtar sözcüğü ve kodu örnekleri, aşağıdaki konulara bakın:  
+Bir oranda noktası içinde `foreach` deyimi bloğu, bölün dışında döngü kullanarak [sonu](break.md) anahtar sözcüğü ya da kullanarak adım döngüsünde sonraki yinelemeye [devam](continue.md) anahtar sözcüğü. Ayrıca çıkabilirsiniz bir `foreach` tarafından döngü [goto](goto.md), [dönmek](return.md), veya [throw](throw.md) deyimleri.
 
- [Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a>Örnekler
 
- [Nasıl yapılır: foreach ile Koleksiyon Sınıfına Erişme](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a>Örnek
+Aşağıdaki örnek kullanımını gösterir `foreach` örneği deyimiyle <xref:System.Collections.Generic.List%601> uygulayan tür <xref:System.Collections.Generic.IEnumerable%601> arabirimi:
 
-Aşağıdaki kod üç örnekler gösterilmektedir:
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> Sözdizimiyle denemek ve kullanım örneğine daha benzer farklı kullanımları denemek için örnekler değiştirebilirsiniz. Kodu çalıştırmak için "Çalıştır" tuşlarına basın, sonra düzenleme ve basın "yeniden çalıştır".
+Sonraki örnek kullanır `foreach` örneği deyimiyle <xref:System.Span%601?displayProperty=nameWithType> arabirimlerden uygulamaz türü:
 
--   Tipik bir `foreach` dizisi içeriğini görüntüler döngüsü
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   bir [için](../../../csharp/language-reference/keywords/for.md) aynı şeyi yapar döngüsü
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   bir `foreach` dizideki öğelerin sayısını tutar döngüsü
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Foreach deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[C# başvurusu](../index.md)
-
-[C# Programlama Kılavuzu](../../programming-guide/index.md)
-
-[C# Anahtar Sözcükleri](index.md)
-
-[Yineleme Deyimleri](iteration-statements.md)
-
-[for](for.md)
+[Foreach deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[for](for.md)  
+[Yineleme Deyimleri](iteration-statements.md)  
+[C# Anahtar Sözcükleri](index.md)  
+[C# başvurusu](../index.md)  
+[C# Programlama Kılavuzu](../../programming-guide/index.md)  
