@@ -47,7 +47,6 @@
 ## [Nesne ve Koleksiyon Başlatıcıları](object-and-collection-initializers.md)
 ### [Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesneleri Başlatma](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Nasıl yapılır: Koleksiyon Başlatıcısı ile bir Sözlük Başlatma](how-to-initialize-a-dictionary-with-a-collection-initializer.md)
-## [Nasıl yapılır: foreach ile Koleksiyon Sınıfına Erişme](how-to-access-a-collection-class-with-foreach.md)
 ## [İç içe Geçmiş Türler](nested-types.md)
 ## [Parçalı Sınıflar ve Yöntemler](partial-classes-and-methods.md)
 ## [Anonim Tipler](anonymous-types.md)
