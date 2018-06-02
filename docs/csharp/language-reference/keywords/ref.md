@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8b36f94e9476b857066c292feb9e77e9c2199b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696400"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -124,9 +125,10 @@ Ne zaman çağıran depolar tarafından döndürülen değer `GetBookByTitle` y�
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Parametreleri Geçirme](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca bkz.  
+ [Değer türleri ile başvuru semantiği](../../reference-semantics-with-value-types.md)  
+ [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)  
+ [Yöntem Parametreleri](method-parameters.md)  
+ [C# başvurusu](../index.md)  
+ [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+ [C# Anahtar Sözcükleri](index.md)

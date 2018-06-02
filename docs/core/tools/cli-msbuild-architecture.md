@@ -3,11 +3,12 @@ title: .NET core komut satırı araçları mimarisi
 description: Katman ve son sürümlerde nelerin değiştiğini tooling .NET Core hakkında bilgi edinin.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696549"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core araçları değişiklikleri üst düzey genel bakış
 
@@ -66,4 +67,5 @@ Bu komut, bir uygulamayı yayımlama bir `pub` "Yayın" Yapılandırması'nı ku
 
 Bu kural için önemli özel durumdur `new` ve `run` bunlar MSBuild hedefleri olarak henüz geliştirilmemiştir gibi komutları.
 
-<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<a name="dotnet-restore-note"></a>  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

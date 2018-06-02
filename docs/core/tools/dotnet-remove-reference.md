@@ -3,12 +3,13 @@ title: DotNet Kaldır başvuru command - .NET Core CLI
 description: Dotnet Kaldır başvuru komutu proje için proje başvuruları kaldırmak için uygun bir seçenek sağlar.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 209f1ad62221e8a80efa161354a2c074d74b7c5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696237"
 ---
 # <a name="dotnet-remove-reference"></a>DotNet Kaldır başvurusu
 
@@ -34,7 +35,7 @@ Hedef proje dosyası. Belirtilmezse, komut için geçerli dizin arar.
 
 `PROJECT_REFERENCES`
 
-Proje projesine (kaldırmak için P2P başvuruları. Bir veya birden çok proje belirtebilirsiniz. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı Terminal üzerinde desteklenir.
+Kaldırmak için proje proje (P2P) başvuruyor. Bir veya birden çok proje belirtebilirsiniz. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı Terminal üzerinde desteklenir.
 
 ## <a name="options"></a>Seçenekler
 

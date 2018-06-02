@@ -4,11 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Etki 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697202"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 Bir olayı oluşturmak istediğinizde, bu olay toplama toplama kök varlık herhangi bir yöntemi sırasında koddan eklemeniz yeterlidir.
 
-Aşağıdaki kod, parçası [eShopOnContainers agregate kök sipariş](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), bir örnek gösterilmektedir:
+Aşağıdaki kod, parçası [eShopOnContainers toplama kök sipariş](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), bir örnek gösterilmektedir:
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -339,8 +340,8 @@ Belirtildiği gibi açıkça yan etkileri etki alanınızda değişiklikleri uyg
 -   **Jimmy Bogard. Daha iyi bir etki alanı olayları düzeni**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Etkin Toplama tasarımı Bölüm II: Toplamalar iş birlikte yapma**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_makaleleri/Vernon\_2011\_2. pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. Etkin Toplama tasarımı Bölüm II: Yapma toplamalar iş birlikte**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Etki alanınızı güçlendirme: etki alanı olayları**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *

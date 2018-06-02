@@ -3,12 +3,13 @@ title: DotNet .NET Core CLI command - derleme
 description: Dotnet bir proje ve tüm bağımlılıkları komutu derlemeleri oluşturun.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697137"
 ---
 # <a name="dotnet-build"></a>DotNet derleme
 
@@ -40,15 +41,15 @@ dotnet build [-h|--help]
 
 Proje NuGet kitaplıklarından gibi üçüncü taraf bağımlılıkları varsa, NuGet önbellekten çözülmüş ve projenin yerleşik çıktı ile kullanılamaz. Unutmayın, ürün alanıyla `dotnet build` çalıştırmak için başka bir makineye aktarılması hazır değil. Bu .NET Framework'ün aksine hangi binada yürütülebilir bir proje (uygulama) herhangi bir makinede runnable bir çıktı üretir, .NET Framework yüklü olduğu davranıştır. .NET Core benzer bir deneyim sağlamak için kullanmanız gereken [dotnet yayımlama](dotnet-publish.md) komutu. Daha fazla bilgi için bkz: [.NET Core uygulama dağıtımı](../deploying/index.md).
 
-Yapı gerektirir *project.assets.json* uygulamanızın bağımlılıkları listeler dosya. Dosyanın ne zaman oluşturulur [ `dotnet restore` ](dotnet-restore.md) yürütülür. Varlıklar dosyayı yerinde hangi hatalar sonuçları başvuru derlemeleri araç çözümlenemiyor. .NET Core 1.x, explicitily için gereken SDK çalıştırmak ile `dotnet restore` çalıştırmadan önce `dotnet build`. .NET Core 2.0 SDK ile başlayan `dotnet restore` çalıştırdığınızda implicitily çalıştıran `dotnet build`. Yapı komutu çalıştırırken örtük geri yükleme devre dışı bırakmak istiyorsanız, geçirebilirsiniz `--no-restore` seçeneği.
+Yapı gerektirir *project.assets.json* uygulamanızın bağımlılıkları listeler dosya. Dosyanın ne zaman oluşturulur [ `dotnet restore` ](dotnet-restore.md) yürütülür. Varlıklar dosyayı yerinde hangi hatalar sonuçları başvuru derlemeleri araç çözümlenemiyor. .NET Core ile 1.x SDK, gerekli açıkça çalıştırmak `dotnet restore` çalıştırmadan önce `dotnet build`. .NET Core 2.0 SDK ile başlayan `dotnet restore` çalıştırdığınızda örtük olarak çalışır `dotnet build`. Yapı komutu çalıştırırken örtük geri yükleme devre dışı bırakmak istiyorsanız, geçirebilirsiniz `--no-restore` seçeneği.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build` MSBuild Projesi derlemek için kullanır; Bu nedenle, paralel ve artımlı derlemelerini destekler. Başvurmak [artımlı derlemeler](/visualstudio/msbuild/incremental-builds) daha fazla bilgi için.
+`dotnet build` MSBuild Projesi derlemek için kullanır, paralel ve artımlı destekler şekilde oluşturur. Daha fazla bilgi için bkz: [artımlı derlemeler](/visualstudio/msbuild/incremental-builds).
 
-Kendi seçenekleri yanı sıra `dotnet build` komutu kabul MSBuild seçenekleri gibi `/p` özelliklerini ayarlamak için veya `/l` Günlükçü tanımlamak için. Bu seçenekler hakkında daha fazla bilgi [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). 
+Kendi seçenekleri yanı sıra `dotnet build` komutu kabul MSBuild seçenekleri gibi `/p` özelliklerini ayarlamak için veya `/l` Günlükçü tanımlamak için. Bu seçenekler hakkında daha fazla bilgi için bkz: [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference).
 
-Proje yürütülebilir olup olmamasına göre belirlenir. `<OutputType>` proje dosyası bir özellik. Aşağıdaki örnek, yürütülebilir kod oluşturacak olan bir projeyi gösterir:
+Proje yürütülebilir olup olmamasına göre belirlenir. `<OutputType>` proje dosyası bir özellik. Aşağıdaki örnek yürütülebilir kod üreten bir proje gösterilmiştir:
 
 ```xml
 <PropertyGroup>
@@ -56,7 +57,7 @@ Proje yürütülebilir olup olmamasına göre belirlenir. `<OutputType>` proje d
 </PropertyGroup>
 ```
 
-Bir kitaplık üretmek için atlayın `<OutputType>` özelliği. Ana yerleşik çıktıda bir kitaplık için IL DLL giriş noktaları içermiyor ve yürütülemez farktır. 
+Bir kitaplık üretmek için atlayın `<OutputType>` özelliği. Ana yerleşik çıktıda bir kitaplık için IL DLL giriş noktaları içermiyor ve yürütülemez farktır.
 
 ## <a name="arguments"></a>Arguments
 
@@ -78,7 +79,7 @@ Derleme yapılandırması tanımlar. Varsayılan değer `Debug` şeklindedir.
 
 `--force`
 
- Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu silme ile eşdeğerdir *project.assets.json* dosya.
+Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ Komutu için kısa bir Yardım yazdırır.
 
 `--no-dependencies`
 
-Proje Proje (P2P) başvuruları yoksayar ve yalnızca oluşturmak için belirtilen kök proje oluşturur.
+Proje Proje (P2P) başvuruları yoksayar ve yalnızca belirtilen kök proje oluşturur.
 
 `--no-incremental`
 
-Yapı Artımlı derleme için güvensiz olarak işaretler. Bu Artımlı derlemeyi devre dışı bırakır ve temiz bir yeniden oluşturma, projenin bağımlılık grafiğinin zorlar.
+Yapı Artımlı derleme için güvensiz olarak işaretler. Bu bayrak Artımlı derlemeyi devre dışı bırakır ve temiz bir yeniden oluşturma, projenin bağımlılık grafiğinin zorlar.
 
 `--no-restore`
 
-Derleme sırasında örtük bir geri yükleme gerçekleştirmez.
+Derleme sırasında örtük bir geri yükleme yürütmez.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ Komutu için kısa bir Yardım yazdırır.
 
 `--no-dependencies`
 
-Proje Proje (P2P) başvuruları yoksayar ve yalnızca oluşturmak için belirtilen kök proje oluşturur.
+Proje Proje (P2P) başvuruları yoksayar ve yalnızca belirtilen kök proje oluşturur.
 
 `--no-incremental`
 
-Yapı Artımlı derleme için güvensiz olarak işaretler. Bu Artımlı derlemeyi devre dışı bırakır ve temiz bir yeniden oluşturma, projenin bağımlılık grafiğinin zorlar.
+Yapı Artımlı derleme için güvensiz olarak işaretler. Bu bayrak Artımlı derlemeyi devre dışı bırakır ve temiz bir yeniden oluşturma, projenin bağımlılık grafiğinin zorlar.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

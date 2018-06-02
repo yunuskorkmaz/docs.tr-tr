@@ -2,11 +2,12 @@
 title: İfade ağaçları (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696955"
 ---
 # <a name="expression-trees-visual-basic"></a>İfade ağaçları (Visual Basic)
 İfade ağaçları her düğüm olduğu bir ifade, örneğin bir ağaç benzeri veri yapısı, bir yöntem çağrısı veya bir ikili işlem kodu gibi temsil eden `x < y`.  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Daha fazla bilgi için bkz: [oluşturma dinamik yöntemler ifade ağaçları Visual Studio 2010 ile](http://go.microsoft.com/fwlink/p/?LinkId=169513), Visual Studio'nun daha yeni sürümleri da geçerli.
+Daha fazla bilgi için bkz: [oluşturma dinamik yöntemler ifade ağaçları Visual Studio 2010 ile](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010), Visual Studio'nun daha yeni sürümleri da geçerli.
   
 ## <a name="parsing-expression-trees"></a>İfade ağaçları ayrıştırma  
  Aşağıdaki kod örneğinde nasıl ifade ağaç, gösterilmektedir temsil eden lambda ifadesi `Function(num) num < 5` , bölümlere ayrılmış.  

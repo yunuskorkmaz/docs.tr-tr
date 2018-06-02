@@ -3,11 +3,12 @@ title: C# - C# Kılavuzu geçmişi
 description: Ne dil görünüm erken sürümlerde düşüncelerinizi ve nasıl itibaren gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696981"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -53,7 +54,7 @@ Dil özelliklerinin tam bot gerçekte .NET Framework sürüm 3.5 gelecektir rağ
 
 Baktýðýmýzda, bu özelliklerin çoğunu kaçınılmaz ve inseparable gibi görünüyor. Bunların tümü birlikte stratejik uygun. Bu genellikle C# sürümün geliştirilen müthiş özelliği sorgu ifadesi olarak da bilinen dil ile tümleşik sorgu (LINQ) olan düşünüldüğü.
 
-Daha fazla nuanced görünüm bağlı LINQ oluşturulan temel olarak ifade tress, lambda ifadeleri ve anonim türler inceler. Ancak, her iki durumda da, C# 3.0 devrim niteliğinde bir kavram sunulur. C# 3.0 başlamış C# nesne yönelimli karma kapatma için önlemlerini / işlevsel dili.
+Daha fazla nuanced görünüm bağlı LINQ oluşturulan temel olarak ifade ağaçları, lambda ifadeleri ve anonim türler inceler. Ancak, her iki durumda da, C# 3.0 devrim niteliğinde bir kavram sunulur. C# 3.0 başlamış C# nesne yönelimli karma kapatma için önlemlerini / işlevsel dili.
 
 Özellikle, artık SQL stili, başka şeylerin koleksiyonlar üzerinde işlem gerçekleştirmek için bildirim temelli sorgular yazabilirsiniz. Yazma yerine bir `for` tamsayı listesi ortalamayı hesaplamak için döngü, artık, olabildiğince basit bir şekilde yapabilirsiniz, olarak `list.Average()`. Sorgu ifadeleri ve genişletme yöntemleri birleşimi tamsayılar listesini tüm çok daha akıllı onayınızı ancak gibi görünmesi yapılan.
 
@@ -98,7 +99,7 @@ Ancak `async` ve `await` bu sürümü gerçek yıldız şunlardır. 2012'de bu �
 - [Null yayılması](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Dize ilişkilendirme](../language-reference/tokens/interpolated.md)
 - [nameof işleci](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Sözlük Başlatıcı](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [Dizin başlatıcıları](csharp-6.md#index-initializers)
 
 Bu özelliklerin her biri kendi sağ ilginç olacaktır. Ancak onları tamamen bakarsanız, ilginç bir desen görürsünüz. Bu sürümde, C# dili Demirbaş kod daha kısa ve okunabilir hale ortadan. Bu nedenle için fanlar temiz, basit kod, bu dil sürümü büyük kazanım oluştu.
 

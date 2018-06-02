@@ -3,13 +3,14 @@ title: .NET API Çözümleyicisi
 description: .NET API Çözümleyicisi kullanım dışı API ve platform uyumluluğu sorunları algılamak nasıl yardımcı olabileceğini öğrenin.
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696890"
 ---
 # <a name="net-api-analyzer"></a>.NET API Çözümleyicisi
 
@@ -70,11 +71,11 @@ Genel gizleme, projeler arasında tutarlılığı API kullanımı için önerile
 
 ## <a name="discovering-cross-platform-issues"></a>Platformlar arası sorunları bulma
 
-Benzer şekilde kullanım dışı API'leri, platformlar arası olmayan tüm API'leri Çözümleyicisi tanımlar. Örneğin, <xref:System.Console.WindowWidth?displayProperty=nameWithType> Windows ancak Linux ve macOS çalışır. Tanılama kimliği gösterilen **hata listesi** penceresi. Sağ tıklayarak bu uyarı gizleyebilirsiniz ve seçerek **hızlı Eylemler ve yapan yeniden düzenlemeler**. Burada iki seçeneğiniz kullanımdan durumlarda aksine (kullanım dışı üye kullanmaya devam et ve Uyarıları bastırma ya da hiç kullanmayabilirsiniz), burada yalnızca belirli platformlar için kodunuzu geliştiriyorsanız, diğer tüm platformlar için tüm uyarıları sizin gizleyebilirsiniz kodunuzu çalıştırmayı planlayın. Bunu yapmak için proje dosyanızı düzenleyin ve eklemek yeterlidir `PlatformCompatIgnore` yok sayılacak tüm platformlar listeler özelliği. Kabul edilen değerler şunlardır: `Linux`, `MacOSX`, ve `Windows`.
+Benzer şekilde kullanım dışı API'leri, platformlar arası olmayan tüm API'leri Çözümleyicisi tanımlar. Örneğin, <xref:System.Console.WindowWidth?displayProperty=nameWithType> Windows ancak Linux ve macOS çalışır. Tanılama kimliği gösterilen **hata listesi** penceresi. Sağ tıklayarak bu uyarı gizleyebilirsiniz ve seçerek **hızlı Eylemler ve yapan yeniden düzenlemeler**. Burada iki seçeneğiniz kullanımdan durumlarda aksine (kullanım dışı üye kullanmaya devam et ve Uyarıları bastırma ya da hiç kullanmayabilirsiniz), burada yalnızca belirli platformlar için kodunuzu geliştiriyorsanız, diğer tüm platformlar için tüm uyarıları sizin gizleyebilirsiniz kodunuzu çalıştırmayı planlayın. Bunu yapmak için proje dosyanızı düzenleyin ve eklemek yeterlidir `PlatformCompatIgnore` yok sayılacak tüm platformlar listeler özelliği. Kabul edilen değerler şunlardır: `Linux`, `macOS`, ve `Windows`.
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 

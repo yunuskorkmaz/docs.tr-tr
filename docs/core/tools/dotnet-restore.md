@@ -3,12 +3,13 @@ title: DotNet restore komutu - .NET Core CLI
 description: Bağımlılıklar ve projeye özgü araçları dotnet restore komutu ile geri yüklemeyi öğrenin.
 author: mairaw
 ms.author: mairaw
-ms.date: 11/30/2017
-ms.openlocfilehash: 6f8aaa2060ab7e6b2e9b99ce4d35588c2bf54d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: fcfa3f2f7133c3add2b02823937dd26fce690453
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696591"
 ---
 # <a name="dotnet-restore"></a>DotNet geri yükleme
 
@@ -21,30 +22,28 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Özet
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Açıklama
 
-`dotnet restore` Komutu proje dosyasında belirtilen projeye özel araçlar yanı sıra bağımlılıkları geri yüklemek için NuGet kullanır. Varsayılan olarak, bağımlılıklar ve araçları geri paralel olarak gerçekleştirilir.
+`dotnet restore` Komutu proje dosyasında belirtilen projeye özel araçlar yanı sıra bağımlılıkları geri yüklemek için NuGet kullanır. Varsayılan olarak, bağımlılıklar ve araçları geri paralel olarak yürütülen.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Bağımlılıkları geri yüklemek için NuGet paketleri bulunduğu akışları gerekir. Akışları aracılığıyla genellikle sağlanan *NuGet.config* yapılandırma dosyası. CLI araçlarını yüklendiğinde varsayılan yapılandırma dosyası sağlanır. Kendi oluşturarak ek akışları belirttiğiniz *NuGet.config* proje dizininde dosya. Ayrıca, bir komut isteminde çağrı başına ek akışları belirtin.
 
-Bağımlılıklar için geri yüklenen paketler geri yükleme işlemini kullanarak sırasında yerleştirildiği belirtin `--packages` bağımsız değişkeni. Belirtilmezse, varsayılan NuGet paketi önbelleği, içinde bulunan kullanılıp kullanılmadığını `.nuget/packages` tüm işletim sistemlerinde kullanıcının giriş dizini, dizin (örneğin, */home/kullanıcı1* Linux'ta veya *C:\Users\user1*  Windows'da).
+Bağımlılıklar için geri yüklenen paketler geri yükleme işlemini kullanarak sırasında yerleştirildiği belirtin `--packages` bağımsız değişkeni. Belirtilmezse, varsayılan NuGet paketi önbelleği, içinde bulunan kullanılıp kullanılmadığını `.nuget/packages` tüm işletim sistemlerinde kullanıcının giriş dizini, dizin. Örneğin, */home/kullanıcı1* Linux'ta veya *C:\Users\user1* Windows.
 
 Projeye özgü araçları için `dotnet restore` önce aracı paketlenmiştir ve proje dosyasında belirtildiği gibi aracın bağımlılıkları geri sürdürüleceği paketini yükler.
 
@@ -56,14 +55,15 @@ Davranışını `dotnet restore` komut ayarlarında bazıları tarafından etkil
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
+- [`dotnet build server`](dotnet-build-server.md)
 - [`dotnet run`](dotnet-run.md)
 - [`dotnet test`](dotnet-test.md)
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Çoğu durumda, artık açıkça kullanmanız gerekebilir `dotnet restore` komutu. 
+Çoğu durumda, artık açıkça kullanmanız gerekebilir `dotnet restore` komutu.
 
-Bazı durumlarda, kullanışsız için `dotnet restore` örtük olarak çalıştırmak için. Örneğin, yapı sistemleri gibi bazı otomatik sistemleri çağırmanız gerekir `dotnet restore` açıkça ağ kullanımını kontrol edebilirsiniz böylece geri yükleme meydana geldiğinde denetlemek için. Önlemek için `dotnet restore` kullanabileceğiniz örtük olarak çalıştırılmasını `--no-restore` örtük geri yükleme devre dışı bırakmak için aşağıdaki komutlardan birini anahtarıyla.
+Bazı durumlarda, çalıştırmak kullanışsız olabilir `dotnet restore` örtük olarak. Örneğin, yapı sistemleri gibi bazı otomatik sistemleri çağırmanız gerekir `dotnet restore` açıkça ağ kullanımını kontrol edebilirsiniz böylece geri yükleme meydana geldiğinde denetlemek için. Önlemek için `dotnet restore` kullanabileceğiniz örtük olarak çalıştırılmasını `--no-restore` örtük geri yükleme devre dışı bırakmak için aşağıdaki komutlardan birini bayrağıyla.
 
 ## <a name="arguments"></a>Arguments
 
@@ -85,7 +85,7 @@ Paralel olarak birden çok proje geri yükleme devre dışı bırakır.
 
 `--force`
 
-Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu silme ile eşdeğerdir *project.assets.json* dosya.
+Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
 
 `-h|--help`
 
@@ -113,7 +113,7 @@ Paket geri yüklemesi için bir çalışma zamanı belirtir. Bu çalışma zaman
 
 `-s|--source <SOURCE>`
 
-Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu belirtilen kaynakları tüm geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
+Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağını belirtir. Bu ayarı tüm belirtilen kaynakları geçersiz kılmaları *NuGet.config* dosyaları. Bu seçeneği birden çok kez belirterek birden çok kaynak sağlanabilir.
 
 `--verbosity <LEVEL>`
 

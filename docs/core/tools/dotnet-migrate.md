@@ -3,12 +3,13 @@ title: DotNet command - .NET Core CLI geçirme
 description: Dotnet geçirmek komutu bir proje ve tüm bağımlılıkları geçirir.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: bdc1da5c1b70fdceac0170b2f002059a66ca5880
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697111"
 ---
 # <a name="dotnet-migrate"></a>DotNet geçirme
 
@@ -20,24 +21,27 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Özet
 
-`dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file] [-s|--skip-project-references] [-r|--report-file] [--format-report-file-json] [--skip-backup] [-h|--help]`
+```
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
+dotnet migrate [-h|--help]
+```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet migrate` Komutu geçerli bir önizleme 2 geçirir *project.json*-geçerli bir .NET Core SDK 1.0 projesine temel *csproj* projesi. 
+`dotnet migrate` Komutu geçerli bir önizleme 2 geçirir *project.json*-geçerli bir .NET Core SDK 1.0 projesine temel *csproj* projesi.
 
-Varsayılan olarak, kök proje ve kök projeyi içeren tüm proje başvuruları komutu geçirir. Bu davranış kullanarak devre dışı `--skip-project-references` çalışma zamanında seçeneği. 
+Varsayılan olarak, kök proje ve kök projeyi içeren tüm proje başvuruları komutu geçirir. Bu davranış kullanarak devre dışı `--skip-project-references` çalışma zamanında seçeneği.
 
-Geçiş aşağıdakilere gerçekleştirilir:
+Geçiş aşağıdaki varlıklar üzerinde gerçekleştirilebilir:
 
 * Belirterek tek bir proje *project.json* geçirmek için dosya.
 * Tüm belirtilen dizinlerin *global.json* dosya yolunu geçirerek *global.json* dosya.
 * A *solution.sln* geçirildikten burada çözümde başvurulan projeleri dosya.
-* Bilgisayardaki tüm alt dizinler verilen dizin yinelemeli olarak.
+* Belirtilen dizin yinelemeli olarak tüm Altdizinler üzerinde.
 
 `dotnet migrate` Komutu tutar geçirilen *project.json* içindeki dosya bir `backup` dizin yoksa, onu oluşturan dizin. Kullanılarak bu davranışı geçersiz `--skip-backup` seçeneği.
 
-Varsayılan olarak, geçiş işlemi için standart çıkış (STDOUT) geçiş işleminin durumunu çıkarır. Kullanırsanız `--report-file <REPORT_FILE>` seçeneği, çıktı dosyasına kaydedilir belirtin. 
+Varsayılan olarak, geçiş işlemi için standart çıkış (STDOUT) geçiş işleminin durumunu çıkarır. Kullanırsanız `--report-file <REPORT_FILE>` seçeneği, çıktı dosyasına kaydedilir belirtin.
 
 `dotnet migrate` Komutu yalnızca geçerli Önizleme 2 destekler *project.json*-tabanlı projelerine. Bunu DNX veya Preview 1 geçirmek için kullanamazsınız, yani *project.json*-tabanlı projelerine MSBuild/csproj projelerine doğrudan. İlk proje Önizleme 2'ye el ile geçiş yapmanız *project.json*-tabanlı proje ve ardından `dotnet migrate` proje geçirmek için komutu.
 
@@ -48,17 +52,33 @@ Varsayılan olarak, geçiş işlemi için standart çıkış (STDOUT) geçiş i�
 Yolu şunlardan biri:
 
 * bir *project.json* geçirmek için dosya.
-* bir *global.json* dosyayı, belirtilen klasörler geçiş yapacağınız *global.json*.
-* bir *solution.sln* dosyası çözümde başvurulan projeleri geçirirsiniz.
-* geçirmek için bir dizin özyinelemeli olarak ara içinde *project.json* geçirmek için dosyaları.
+* bir *global.json* dosya: Belirtilen klasörleri *global.json* geçirilir.
+* bir *solution.sln* dosya: çözümde başvurulan projeleri geçirilir.
+* geçirmek için bir dizin: özyinelemeli olarak arar *project.json* dosyaları içinde belirtilen dizin geçirmek için.
 
 Varsayılan olarak hiçbir şey belirtilmişse, geçerli dizin.
 
 ## <a name="options"></a>Seçenekler
 
+`--format-report-file-json <REPORT_FILE>`
+
+Geçiş rapor çıktı dosyası kullanıcı yerine JSON iletileri olarak.
+
 `-h|--help`
 
 Komutu için kısa bir Yardım yazdırır.
+
+`-r|--report-file <REPORT_FILE>`
+
+Çıktı geçiş rapor Konsolu ek olarak bir dosya için.
+
+`-s|--skip-project-references [Debug|Release]`
+
+Proje geçirme Atla başvurur. Varsayılan olarak, proje başvuruları geçirilen yinelemeli olarak gelir.
+
+`--skip-backup`
+
+Taşıma atla *project.json*, *global.json*, ve  *\*artık.xproj* için bir `backup` başarılı geçişten sonra dizin.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
@@ -71,22 +91,6 @@ Geçirilen uygulamada başvurulan sdk paketi sürümü. Varsayılan SDK'ın sür
 `-x|--xproj-file <FILE>`
 
 Kullanılacak xproj dosya yolu. Proje dizininde birden fazla xproj olduğunda gereklidir.
-
-`-s|--skip-project-references [Debug|Release]`
-
-Proje geçirme Atla başvurur. Varsayılan olarak, proje başvuruları geçirilen yinelemeli olarak gelir.
-
-`-r|--report-file <REPORT_FILE>`
-
-Çıktı geçiş rapor Konsolu ek olarak bir dosya için.
-
-`--format-report-file-json <REPORT_FILE>`
-
-Geçiş rapor çıktı dosyası kullanıcı yerine JSON iletileri olarak.
-
-`--skip-backup`
-
-Taşıma atla *project.json*, *global.json*, ve  *\*artık.xproj* için bir `backup` başarılı geçişten sonra dizin.
 
 ## <a name="examples"></a>Örnekler
 

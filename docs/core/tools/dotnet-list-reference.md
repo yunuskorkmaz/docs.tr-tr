@@ -3,12 +3,13 @@ title: DotNet listesi başvuru command - .NET Core CLI
 description: Dotnet listesi başvuru komutu listesi proje için proje başvuruları için uygun bir seçenek sağlar.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 24cb1124fc3f8707afe727e6a73d35d5dde39937
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697189"
 ---
 # <a name="dotnet-list-reference"></a>DotNet listesi başvurusu
 
@@ -16,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="name"></a>Ad
 
-`dotnet list reference` -Projeyi project başvurular listelenmektedir.
+`dotnet list reference` -Proje Proje başvurular listelenmektedir.
 
 ## <a name="synopsis"></a>Özet
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 `PROJECT`
 
-Başvuruları listelemek için kullanılacak proje dosyasını belirtir. Belirtilmezse, komut bir proje dosyası için geçerli dizini arayın.
+Başvuruları listelemek için kullanılacak proje dosyasını belirtir. Belirtilmezse, komut bir proje dosyası için geçerli dizini arar.
 
 ## <a name="options"></a>Seçenekler
 

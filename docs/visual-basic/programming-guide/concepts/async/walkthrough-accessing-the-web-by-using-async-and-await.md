@@ -2,11 +2,12 @@
 title: "İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696513"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)
 Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha kolay ve sezgisel yazabilirsiniz. Zaman uyumlu kod gibi görünüyor zaman uyumsuz kod yazın ve daha zor geri arama işlevleri ve zaman uyumsuz kod genellikle kapsar devamlılıklar işlemek derleyici sağlayabilirsiniz.  
@@ -15,7 +16,7 @@ Zaman uyumsuz ve bekleme özelliklerini kullanarak zaman uyumsuz programlar daha
   
  Bu kılavuzda Web sitelerinin bir listesiyle bayt sayısını toplar zaman uyumlu bir Windows Presentation Foundation (WPF) uygulama başlar. İzlenecek yol sonra yeni özellikleri kullanarak zaman uyumsuz çözümünü uygulamaya dönüştürür.  
   
- Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebilirsiniz "zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme" den [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Uygulamaları kendiniz yapılandırmak istemiyorsanız, indirebilirsiniz "zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme" den [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Bu kılavuzda, aşağıdaki görevleri tamamlayın:  
   
@@ -673,7 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Zaman uyumsuz örnek: Web gözden geçirme (C# ve Visual Basic) erişme](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  

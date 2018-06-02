@@ -3,12 +3,13 @@ title: DotNet paketi command - .NET Core CLI
 description: Dotnet paketi komut .NET Core projeniz için NuGet paketleri oluşturur.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696825"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Özet
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ dotnet pack [-h|--help]
 
 Paketlenmiş projenizin NuGet bağımlılıkları eklenir *.nuspec* düzgün bulunmaları dosya çözülmüş paketi yüklendiğinde. Proje Proje başvuruları projesi içinde paketlenmiş değil. Şu anda proje proje bağımlılıkları varsa, her proje bir paket olması gerekir.
 
-Varsayılan olarak, `dotnet pack` projeyi ilk oluşturur. Bu davranışı önlemek isterseniz, geçirmek `--no-build` seçeneği. Bu genellikle burada kodu daha önce oluşturulmuş bildiğiniz sürekli tümleştirme (CI) yapı senaryolarda kullanışlıdır.
+Varsayılan olarak, `dotnet pack` projeyi ilk oluşturur. Bu davranışı önlemek isterseniz, geçirmek `--no-build` seçeneği. Bu seçenek genellikle burada kodu daha önce oluşturulmuş bildiğiniz sürekli tümleştirme (CI) yapı senaryolarda kullanışlıdır.
 
 MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işleminin komutu. Daha fazla bilgi için bkz: [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm nasıl MSBuild /p anahtarını birkaç farklı senaryo için kullanılacağını gösterir.
 
@@ -51,7 +51,7 @@ MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işleminin komutu. Da
 
 `PROJECT`
 
-Paketi projesi. Her iki yolu olan bir [csproj dosya](csproj.md) veya bir dizin. Atlanırsa, geçerli dizine varsayılan olarak belirlenir.
+Paketi projesi. Her iki yolu olan bir [csproj dosya](csproj.md) veya bir dizin. Belirtilmezse, geçerli dizine varsayılan olur.
 
 ## <a name="options"></a>Seçenekler
 
@@ -61,7 +61,9 @@ Paketi projesi. Her iki yolu olan bir [csproj dosya](csproj.md) veya bir dizin. 
 
 Derleme yapılandırması tanımlar. Varsayılan değer `Debug` şeklindedir.
 
-`--force` Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu silme ile eşdeğerdir *project.assets.json* dosya.
+`--force`
+
+Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ Simgeler oluşturur `nupkg`.
 
 `--no-build`
 
-Paketleme önce projeyi derleme değil.
+Paketleme önce projeyi derleme değil. Ayrıca örtük ayarlar `--no-restore` bayrağı.
 
 `--no-dependencies`
 
@@ -85,13 +87,13 @@ Proje Proje başvuruları yoksayar ve yalnızca kök proje geri yükler.
 
 `--no-restore`
 
-Örtük bir geri yükleme komutu çalıştırırken gerçekleştirmez.
+Örtük bir geri yükleme komutu çalıştırırken yürütmez.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Belirtilen dizinde yerleşik paketleri yerleştirir.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 Paketler için geri yüklemek için hedef çalışma zamanı belirtir. Çalışma zamanı tanımlayıcıları (RID) bir listesi için bkz: [RID katalog](../rid-catalog.md).
 

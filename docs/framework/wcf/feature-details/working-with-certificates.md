@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697124"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar yaygın olarak istemciler ve sunucular kimlik doğrulaması, şifrelemek ve iletileri dijital olarak imzalamak için kullanılır. Bu konuda kısaca X.509 dijital sertifika özelliklerini ve bunların içinde WCF nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak ortak görevleri gerçekleştirmek nasıl göstermek veya bu kavramları daha ayrıntılı biçimde açıklayan konulara bağlantılar içerir.  
   
- Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952)WCF görüyor talep yetkilendirme hakkında daha fazla bilgi için [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz: [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) sistemi dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanılarak bir elektronik işlemde taraf her. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifikası gibi verileri içeren alanlar kümesi *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlık) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türlerine ayrılır: kimlik ve sağa. X.509 hakkında daha fazla bilgi için bkz: sertifikalar [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952). Talep ve WCF yetkilendirme hakkında daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz: [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
- Bir birincil sertifikanın başkalarına sertifika sahibinin kimliğini doğrulamak için işlevdir. Bir sertifikayı içeren *ortak anahtar* sahibi özel anahtarı tutarken sahibinin. Ortak anahtar sertifika sahibinin gönderilen iletileri şifrelemek için kullanılabilir. Sahibi özel anahtar erişimi yalnızca sahibi bu iletilerin şifresini çözebilir yalnızca bunu.  
+ Başkalarına sertifika sahibinin kimliğini doğrulamak için bir sertifika birincil işlevi olduğu. Bir sertifikayı içeren *ortak anahtar* sahibi özel anahtarı tutarken sahibinin. Ortak anahtar sertifika sahibinin gönderilen iletileri şifrelemek için kullanılabilir. Sahibi özel anahtar erişimi yalnızca sahibi bu iletilerin şifresini çözebilir yalnızca bunu.  
   
  Sertifika bir üçüncü taraf veren sertifikalarının görülür bir sertifika yetkilisi tarafından verilmelidir. Bir Windows etki alanında bir sertifika yetkilisi dahil etki alanındaki bilgisayarların sertifika vermek için kullanılabilir.  
   
@@ -56,7 +57,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, her bir sertifika sertifika veren CA için burada bağlı olduğu bir hiyerarşideki oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın sertifika sonra CA'ın yedeği sertifika veren CA bağlantılar. Kök CA'ın sertifikasını ulaşılana kadar bu işlem yinelenir. Doğası gereği güvenilir kök CA'ın sertifika yok.  
   
- Bir varlık olarak da adlandırılan bu hiyerarşi, bağlı olan kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift sonra tıklatarak MMC ek bileşenini kullanarak görüntüleyebilirsiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri alma hakkında daha fazla bilgi için bkz: [nasıl yapılır: sertifika yetkilisi sertifika zinciri kullanılan imzaları doğrulamak için belirtmek](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Bir varlık olarak da adlandırılan bu hiyerarşiyi temel bağlı olarak kimlik doğrulaması için kullanılan dijital sertifikalar bir *güven zinciri*. Tüm sertifika zincirinin herhangi bir sertifikayı çift sonra tıklatarak MMC ek bileşenini kullanarak görüntüleyebilirsiniz **sertifika yolu** sekmesi. Sertifika yetkilisi için sertifika zincirleri alma hakkında daha fazla bilgi için bkz: [nasıl yapılır: sertifika yetkilisi sertifika zinciri kullanılan imzaları doğrulamak için belirtmek](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Tüm veren sertifikayı güvenilir kök yetkilisi sertifika deposunda yerleştirme tarafından güvenilen bir kök yetkilisi belirlenebilir.  

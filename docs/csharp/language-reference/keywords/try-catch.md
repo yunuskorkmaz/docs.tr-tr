@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696445"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
 Try-catch deyimi oluşan bir `try` blok izlenen bir veya daha fazla tarafından `catch` yan tümceleri farklı özel durumlar için işleyiciler belirleyin.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  Birden fazla özel kullanmak da mümkündür `catch` yan tümcesinde aynı try-catch deyimi. Bu durumda, sırasını `catch` yan tümceleri önemlidir çünkü `catch` yan tümceleri sırayla inceledi. Daha fazla özel durum daha az yayına önce yakalar. Böylece daha sonra bir blok hiç üst sınırına, catch blokları siparişi derleyici bir hata oluşturur.  
   
- Kullanarak `catch` bağımsız değişkenleri olan istediğiniz işlemek için özel durumlar için filtre uygulamak için bir yolu.  Daha fazla uygulayacağınıza karar vermek için özel durum inceler bir koşul ifadesi de kullanabilirsiniz.  Koşul ifadesi false değeri döndürülürse, bir işleyici aramaya devam eder.  
+ Kullanarak `catch` bağımsız değişkenleri olan istediğiniz işlemek için özel durumlar için filtre uygulamak için bir yolu.  Daha fazla uygulayacağınıza karar vermek için özel durum inceler bir özel durum filtresi de kullanabilirsiniz.  Özel Durum Filtresi false değeri döndürülürse, bir işleyici aramaya devam eder.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Özel durum filtreleri yakalama ve filtreleri yaralanmadığı türde yığını bıraktığınızdan (aşağıda anlatıldığı) yeniden atma tercih edilir.  Bir sonraki işleyici yığın dökümleri, burada özel durum ilk olarak, bunu işlenemezse yalnızca en son yer yerine geldiğini görebilirsiniz.  Özel durum filtre ifadeleri yaygın kullanımı günlüğü.  Her zaman, bunları işlemek ve yeniden oluşturulması gerekmeden ilerledikçe özel durumları günlüğe kaydetmek bir oturum için de çıkarır false değerini döndürür koşul işlev oluşturabilirsiniz.  
+ Özel durum filtreleri yakalama ve filtreleri yaralanmadığı türde yığını bıraktığınızdan (aşağıda anlatıldığı) yeniden atma tercih edilir.  Bir sonraki işleyici yığın dökümleri, burada özel durum ilk olarak, bunu işlenemezse yalnızca en son yer yerine geldiğini görebilirsiniz.  Özel durum filtre ifadeleri yaygın kullanımı günlüğü.  Her zaman, bunları işlemek ve yeniden oluşturulması gerekmeden ilerledikçe özel durumları günlüğe kaydetmek bir oturum için de çıkarır false verir bir filtre oluşturabilirsiniz.  
   
  A [throw](../../../csharp/language-reference/keywords/throw.md) deyimi içinde kullanılabilir bir `catch` tarafından yakalanan özel durum yeniden throw blok `catch` deyimi. Aşağıdaki örnekte kaynak bilgilerini ayıklar bir <xref:System.IO.IOException> özel durum ve ardından üst yöntemi özel durum oluşturur.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> Genellikle temiz bir şekilde (aynı zamanda bu belgenin önceki bölümlerinde açıklandığı gibi yığın değiştirme değil) benzer bir sonuç almak için bir özel durum filtresi kullanmak da mümkündür. Aşağıdaki örnek, önceki örnek olarak çağıranlar için benzer bir davranışı vardır. İşlev oluşturur `InvalidCastException` çağırana geri zaman `e.Data` olan `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Gelen içinde bir `try` engellemek, okuduğunuzu bildirilen değişkenlerini Başlat. Aksi takdirde, bloğun yürütme tamamlanmadan önce bir özel durum meydana gelebilir. Örneğin, aşağıdaki kod örneğinde, değişkenin içinde `n` içinde başlatılan `try` bloğu. Bu değişken dışında kullanma girişimi `try` engelleyin `Write(n)` deyimi derleyici hatası üretir.  
   
 ```csharp  

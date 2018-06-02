@@ -3,12 +3,13 @@ title: DotNet Yardım komut - .NET Core CLI
 description: Belirtilen komut için çevrimiçi belgeleri ayrıntılı dotnet Yardım komut gösterir.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/17/2017
-ms.openlocfilehash: 846ca15fa40a4cf9e1bd18c14cbcd9aef5cab97d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: ed152717e32ffb294f5d5bd8e5eb74d55e33e506
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696604"
 ---
 # <a name="dotnet-help-reference"></a>DotNet Yardım başvurusu
 

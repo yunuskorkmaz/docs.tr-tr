@@ -3,12 +3,13 @@ title: DotNet Paketi komutu - .NET Core CLI ekleme
 description: "'Dotnet add paket' komutunu bir NuGet paketi başvuru bir proje eklemek için uygun bir seçenek sağlar."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696305"
 ---
 # <a name="dotnet-add-package"></a>DotNet paket ekleme
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Özet
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Açıklama
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 Örneğin, ekleme `Newtonsoft.Json` için *ToDo.csproj* aşağıdaki örneğe benzer bir çıktı üretir:
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ Eklenecek paket başvuru.
 
 Komutu için kısa bir Yardım yazdırır.
 
-`-v|--version <VERSION>`
-
-Paketin sürümü.
-
 `-f|--framework <FRAMEWORK>`
 
 Yalnızca belirli bir hedeflerken bir paket başvuru ekler [framework](../../standard/frameworks.md).
@@ -74,13 +71,17 @@ Yalnızca belirli bir hedeflerken bir paket başvuru ekler [framework](../../sta
 
 Bir geri yükleme Önizleme ve uyumluluk denetimi yapmadan paket başvuru ekler.
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+Paket için belirtilen dizin geri yükler.
+
 `-s|--source <SOURCE>`
 
 Geri yükleme işlemi sırasında belirli bir NuGet paketi kaynak kullanır.
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-Paket için belirtilen dizin geri yükler.
+Paketin sürümü.
 
 ## <a name="examples"></a>Örnekler
 
