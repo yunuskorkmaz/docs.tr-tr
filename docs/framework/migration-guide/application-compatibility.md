@@ -8,11 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b75429d0de69c60e7c24551bf1d9218e74d0c5ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31d14a8ef6a4b17eea1b9160e811bb92946d775b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728647"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework'te Uygulama Uyumluluğu
 
@@ -25,7 +26,7 @@ Her uygulama belirli bir sürümü tarafından belirtilen .NET Framework'ün hed
 * Hedef Framework'ü bir proje dosyasında belirtme.
 * Uygulama bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute> kaynak koduna.
 
-Ne hedeflenen daha yeni bir sürümü üzerinde çalışırken, .NET Framework hedeflenen sürümün taklit etmek üzere quirked davranışı kullanır. Diğer bir deyişle, uygulama Framework sürümü çalıştırın, ancak eski sürümünde çalışıyorsa gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunları çoğunu bu quirking modeli aracılığıyla azalır.
+Ne hedeflenen daha yeni bir sürümü üzerinde çalışırken, .NET Framework hedeflenen sürümün taklit etmek üzere quirked davranışı kullanır. Diğer bir deyişle, uygulama Framework sürümü çalıştırın, ancak eski sürümünde çalışıyorsa gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunları çoğunu bu quirking modeli aracılığıyla azalır. .NET Framework sürümünü, bir uygulama hedefleri girişi bütünleştirilmiş kodun çalışan uygulama etki alanı için hedef sürümü tarafından belirlenir. Tüm ek derlemeler uygulama etki alanı hedefleyen, .NET Framework sürümü yüklü. Örneğin, yürütülebilir olması durumunda çalıştırılabilir hedefleri çerçevedir, tüm derlemelerde AppDomain altında çalışacağı uyumluluk modu.
 
 ## <a name="runtime-changes"></a>{1&gt;Çalışma zamanı değişiklikleri&lt;1}
 

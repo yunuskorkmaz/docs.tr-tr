@@ -2,11 +2,12 @@
 title: ADO.NET uygulamalarının güvenliğini sağlama
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 5e4363ada4ebdb94801378bc61139f68085b462d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728608"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET uygulamalarının güvenliğini sağlama
 Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulama değil gibi ortak kodlama Tuzaklar önleme içerir. Verilere erişen bir uygulama birçok olası bir saldırganın alınamıyor, değiştirmek veya hassas verilere zarar yararlanabilir hata noktalarını sahiptir. Bu nedenle, güvenlik, uygulamanızın son dağıtım ve devam eden bakım tasarım aşamasında modelleme tehdit işleminden tüm yönlerini anlamak önemlidir.  
@@ -39,7 +40,7 @@ Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulam
  Entity Framework uygulamaları için güvenliği açıklar.  
   
  [Güvenlik](../../../../docs/standard/security/index.md)  
- .NET Framework güvenliği tüm yönleriyle açıklayan konulara bağlantılar içerir.  
+ .NET ve güvenlik tüm yönlerini açıklayan konulara bağlantılar içerir.  
   
  [Güvenlik araçları](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Güvenlik İlkesi'ni yönetme ve güvenliğini sağlamak için .NET framework Araçları'nı tıklatın.  

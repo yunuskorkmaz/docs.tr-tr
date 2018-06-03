@@ -3,14 +3,15 @@ title: Hedef Çerçeve
 description: .NET Core uygulamaları ve kitaplıklar için bir hedef çerçeveyi hakkında bilgi edinin.
 author: richlander
 ms.author: mairaw
-ms.date: 04/16/2018
+ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728322"
 ---
 # <a name="target-frameworks"></a>Hedef Çerçeve
 
@@ -31,7 +32,7 @@ Aşağıdaki tabloda en yaygın hedef çerçeve, nasıl başvurulan ve hangi sü
 | Hedef çerçevesi      | En son <br/> Kararlı sürümü | Hedef Framework ad (TFM) | Uygulanmadı <br/> .NET standart sürüm |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET standart         | 2,0                         | netstandard2.0                 | Yok                                     |
-| .NET core uygulama | 2,0                         | netcoreapp2.0                  | 2,0                                     |
+| .NET Core             | 2.1                         | netcoreapp2.1                  | 2,0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2,0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Desteklenen hedef framework sürümleri

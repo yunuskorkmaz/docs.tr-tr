@@ -4,11 +4,12 @@ description: Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluş
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728725"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -65,7 +66,7 @@ Farklı sürümlerini .NET bağımlılıkları olan uygulamalar yüklemek için 
 
 ## <a name="when-to-choose-net-framework"></a>.NET Framework seçmek ne zaman
 
-.NET core yeni uygulamalar ve uygulama düzenleri için önemli avantajlar sunar. Ancak, .NET Framework birçok varolan senaryoları ve bu nedenle doğal seçimi kadar devam eder. .NET Framework tüm sunucu uygulamaları için .NET Core tarafından değiştirilen değil.
+.NET core yeni uygulamalar ve uygulama düzenleri için önemli avantajlar sunar. Ancak, .NET Framework birçok varolan senaryoları için doğal seçimi kadar devam eder ve bu nedenle .NET Framework tarafından .NET Core tüm sunucu uygulamaları için değiştirilir değil.
 
 ### <a name="current-net-framework-applications"></a>Geçerli .NET Framework uygulamaları
 

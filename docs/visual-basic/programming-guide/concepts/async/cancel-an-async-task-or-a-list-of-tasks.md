@@ -2,11 +2,12 @@
 title: Zaman uyumsuz görevi veya görev (Visual Basic) listesi iptal etme
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 74f0c1c4653709497cb264aac18b49f4fee4eefa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728673"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz görevi veya görev (Visual Basic) listesi iptal etme
 Zaman uyumsuz uygulama tamamlanmasını beklemek istemiyorsanız, iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekler izleyerek bir Web sitesi içeriğini ya da Web sitelerinin bir listesini indirir bir uygulamaya iptal düğmesi ekleyebilirsiniz.  
@@ -20,7 +21,7 @@ Zaman uyumsuz uygulama tamamlanmasını beklemek istemiyorsanız, iptal etmek i�
  İlk örnek ilişkilendirir **iptal** tek indirme görev düğme. Uygulama içeriği indirirken düğmesini seçerseniz, indirme iptal edildi.  
   
 ### <a name="downloading-the-example"></a>Örnek indirme  
- Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046) ve ardından aşağıdaki adımları izleyin.  
+ Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve ardından aşağıdaki adımları izleyin.  
   
 1.  İndirdiğiniz dosyanın sıkıştırmasını ve Visual Studio'yu başlatın.  
   
@@ -138,7 +139,7 @@ Zaman uyumsuz uygulama tamamlanmasını beklemek istemiyorsanız, iptal etmek i�
  Aynı ilişkilendirerek birçok görevleri iptal etmek için önceki örnekte genişletebilirsiniz `CancellationTokenSource` her görev örneği. Seçerseniz **iptal** düğmesi, henüz tam olmayan tüm görevler iptal.  
   
 ### <a name="downloading-the-example"></a>Örnek indirme  
- Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046) ve ardından aşağıdaki adımları izleyin.  
+ Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve ardından aşağıdaki adımları izleyin.  
   
 1.  İndirdiğiniz dosyanın sıkıştırmasını ve Visual Studio'yu başlatın.  
   
@@ -249,7 +250,7 @@ Zaman uyumsuz uygulama tamamlanmasını beklemek istemiyorsanız, iptal etmek i�
 ##  <a name="BKMK_CompleteExamples"></a> Tam örnekleri  
  Aşağıdaki bölümler her önceki örnekler için kod içerir. İçin bir başvuru eklemeniz gerekir fark <xref:System.Net.Http>.  
   
- Projelerden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Projelerden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ### <a name="cancel-a-task-example"></a>Bir görev örneği iptal et  
  Aşağıdaki kod, tek bir görevi iptal eder örneğin tam MainWindow.xaml.vb dosyasıdır.  
@@ -458,4 +459,4 @@ End Class
  <xref:System.Threading.CancellationToken>  
  [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Async uygulamanızda (Visual Basic) hassas ayar yapma](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -2,11 +2,12 @@
 title: 'Nasıl yapılır: Async kullanarak birden çok Web isteğini paralel hale ve Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728449"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Nasıl yapılır: Async kullanarak birden çok Web isteğini paralel hale ve Await (Visual Basic)
 Bir zaman uyumsuz yönteminde oluşturuldukları görevleri başlatılır. [Bekleme](../../../../visual-basic/language-reference/operators/await-operator.md) işleci, burada işleme devam edemiyor görevi tamamlanana kadar yöntemi bir noktada göreve uygulanır. Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklemenin.  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  Aynı anda birden çok görevi başlatan başka bir örnek için bkz: [nasıl yapılır: Task.WhenAll kullanarak (Visual Basic) tarafından zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Bu örnekte kodunu indirebilirsiniz [Geliştirici kod örnekleri](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Bu örnekte kodunu indirebilirsiniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Projeyi ayarlamak için  
   

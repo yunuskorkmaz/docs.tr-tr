@@ -1,17 +1,18 @@
 ---
 title: .NET Framework Sürümleri ve Bağımlılıkları
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728621"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework Sürümleri ve Bağımlılıkları
 Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel sınıf kitaplıklarını ve diğer yönetilen kitaplıkları içerir. Bu konu, sürüme göre .NET Framework'ün temel özellikleri açıklar, temel CLR sürümleri ve ilişkili geliştirme ortamları hakkında bilgi sağlar ve Windows işletim sistemi tarafından yüklenen sürümleri tanımlar.  
@@ -44,9 +45,13 @@ Her bir .NET Framework sürümü ortak dil çalışma zamanını (CLR), temel s�
 |2,0|2,0|-Genel türler<br />-ASP.NET eklemeler<br />-   [Daha fazla...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 SP1<br />✓ 2008 SP2<br />✓ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|-ASP.NET ve ADO.NET güncelleştirir<br />---Yan yana yürütme<br />-   [Daha fazla...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|.NET Framework ilk sürümü.|Visual Studio .NET|-|-|Bkz: [yönergeleri](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-  
- Genel olarak, kullandığınız bir uygulama belirli bir sürüme bağlı olabileceği veya o sürüm kaldırılırsa bozulabileceği için bilgisayarınıza yüklü olan .NET Framework sürümlerinden hiçbirini kaldırmamanız gerekir. .NET Framework'ün birden çok sürümünü aynı anda tek bir bilgisayara yükleyebilirsiniz. Başka bir deyişle, .NET Framework önceki sürümlerini kaldırmanız gerek kalmadan yükleyebilirsiniz. Daha fazla bilgi için bkz: [Başlarken](../../../docs/framework/get-started/index.md).  
-  
+
+**Notlar**
+
+<sup>\*</sup>&nbsp;&nbsp;.NET Framework bu işletim sistemi üzerinden etkinleştirilmiş olmalıdır [Denetim Masası'nı (Windows) veya Sunucu Yöneticisi'ni (Windows Server için)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+
+ Genel olarak, kullandığınız bir uygulama belirli bir sürüme bağlı olabileceği veya o sürüm kaldırılırsa bozulabileceği için bilgisayarınıza yüklü olan .NET Framework sürümlerinden hiçbirini kaldırmamanız gerekir. .NET Framework'ün birden çok sürümünü aynı anda tek bir bilgisayara yükleyebilirsiniz. Başka bir deyişle, .NET Framework önceki sürümlerini kaldırmanız gerek kalmadan yükleyebilirsiniz. Daha fazla bilgi için bkz: [Başlarken](../../../docs/framework/get-started/index.md).
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>4.5 ve sonraki sürümleri için hedefleme ve çalışan .NET Framework uygulamaları  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Değiştiren bir yerinde güncelleştirmesidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] , bilgisayarınızdaki ve benzer şekilde, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 ve 4.7.1 olan yerinde güncelleştirmeleri [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], yani aynı çalışma zamanı sürümü kullanın ancak derleme sürümlerini güncelleştirilir ve yeni türleri ve üyeleri içerir. Bu güncelleştirmeler birini yükledikten sonra [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 veya .NET Framework 4.7 uygulamalar yeniden derlenmek gerek kalmadan çalışmaya devam edecek. Ancak tersi doğru değildir. .NET Framework'ün sonraki bir sürümünü hedefleyen .NET Framework'ün daha eski bir sürümünde çalışan uygulamalar önermiyoruz. Bir uygulama hedefleri çalıştırmak gibi önermiyoruz [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] üzerinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aşağıdaki kurallar uygulanır:  
   

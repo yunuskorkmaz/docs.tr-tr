@@ -3,13 +3,13 @@ title: DotNet nuget anında iletme komutu - .NET Core CLI
 description: Dotnet nuget anında iletme komutu sunucuya bir paket gönderir ve onu yayımlar.
 author: karann-msft
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: c835b1b9d44b9ed12dc0ea4568414a83c926ae4f
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/01/2018
+ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34696500"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728582"
 ---
 # <a name="dotnet-nuget-push"></a>DotNet nuget gönderme
 
@@ -77,7 +77,7 @@ Simgeler anında değil (varsa bile).
 
 `--no-service-endpoint`
 
-"V2/api/paketler" kaynak URL'sini append değil.
+"V2/api/paketi" kaynak URL'sini append değil.
 
 `-s|--source <SOURCE>`
 

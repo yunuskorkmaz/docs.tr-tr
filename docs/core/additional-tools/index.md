@@ -5,11 +5,12 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: 578d42e5a0a11ae76410289142d47c8d65abe7aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a842224a76962a9d6db820149a75f1255204e9b7
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728569"
 ---
 # <a name="net-core-additional-tools"></a>.NET core ek araçlar
 
@@ -17,7 +18,11 @@ Bu bölümde destekleyen ve ek olarak .NET çekirdek işlevselliğini genişlete
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web hizmeti başvuru aracı](wcf-web-service-reference-guide.md)
 
-WCF Web hizmeti başvuru içinde ilk kez yapılan bir Visual Studio bağlı hizmeti sağlayıcısıdır [Visual Studio 2017 sürüm 15,5](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes#WCFTools). Bu araç, bir web hizmeti geçerli çözümdeki bir ağ konumu veya WSDL dosya meta verileri alır ve web erişmek için kullanabileceğiniz Windows Communication Foundation (WCF) istemci proxy kodu içeren bir .NET Core uyumlu kaynak dosyası oluşturur hizmet.
+WCF (Windows Communication Foundation) Web hizmeti, ilk kez içinde yapılan bir Visual Studio bağlı hizmet sağlayıcısı başvurudur [Visual Studio 2017 sürüm 15,5](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes#WCFTools). Bu araç, bir web hizmeti geçerli çözümdeki bir ağ konumu veya WSDL dosya meta verileri alır ve .NET Core, web hizmeti işlemleri erişmek için kullanabileceğiniz yöntemleri ile WCF proxy sınıfı tanımlayan ile uyumlu bir kaynak dosyası oluşturur.
+
+## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet svcutil aracı](dotnet-svcutil-guide.md)
+
+WCF (Windows Communication Foundation) dotnet svcutil aracı, bir ağ konumu üzerinde bir web hizmetinden veya WSDL dosya meta verileri alır ve .NET Core, WCF proxy sınıfı yöntemleri tanımlama ile uyumlu bir kaynak dosyası oluşturur bir .NET Core CLI araçtır web hizmeti işlemleri erişmek için kullanabileceğiniz. **Dotnet svcutil** araçtır için alternatif bir seçenek [ **WCF Web hizmeti başvuru** ](/dotnet/core/additional-tools/wcf-web-service-reference-guide) Visual Studio, Visual Studio ile hangi ilk sevk hizmet sağlayıcısı bağlı 2017 v15.5. **Dotnet svcutil** aracı .NET Core CLI aracı olarak, Linux, macOS ve Windows üzerinde kullanılabilir çapraz platform eklentisidir.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML Serileştirici Oluşturucusu](xml-serializer-generator.md)
 

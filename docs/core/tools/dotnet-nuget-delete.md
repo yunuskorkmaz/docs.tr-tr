@@ -3,13 +3,13 @@ title: DotNet nuget command - .NET Core CLI Sil
 description: Dotnet nuget delete komutu siler veya sunucunun paketinden unlists.
 author: karann-msft
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: a56ddaba72f8e1a76db810231e64993c657e908e
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/01/2018
+ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34697248"
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728420"
 ---
 # <a name="dotnet-nuget-delete"></a>DotNet nuget Sil
 
@@ -71,7 +71,7 @@ Komutu için kısa bir Yardım yazdırır.
 
 Sunucu için API anahtarı.
 
-` --no-service-endpoint` "V2/api/paketler" kaynak URL'sini append değil.
+`--no-service-endpoint` "V2/api/paketi" kaynak URL'sini append değil.
 
 `--non-interactive`
 

@@ -2,11 +2,12 @@
 title: (Visual Basic) zaman uyumsuz programlarda denetim akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 2de9c00e5094a1c40e64bdf5215157867372be8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728511"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) zaman uyumsuz programlarda denetim akışı
 Yazma ve kullanarak zaman uyumsuz programlar daha kolay korumak `Async` ve `Await` anahtar sözcükler. Programınızı nasıl çalıştığını anlamak yoktur, ancak, sonuçlar beklenmedik. Bu konu izlemeler her zaman bir yönteminden denetimi başka hangi bilgileri taşır göstermek için bir basit zaman uyumsuz program aracılığıyla denetim akışı aktarılır.  
@@ -97,7 +98,7 @@ Length of the downloaded string: 33946.
 >  Örneği çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınızda yüklü olmalıdır.  
   
 ### <a name="download-the-program"></a>Programı indir  
- Uygulama için bu konudan indirebilirsiniz [zaman uyumsuz örnek: zaman uyumsuz programlarda denetim akışı](http://go.microsoft.com/fwlink/?LinkId=255285). Aşağıdaki adımları açın ve programı çalıştırın.  
+ Uygulama için bu konudan indirebilirsiniz [zaman uyumsuz örnek: zaman uyumsuz programlarda denetim akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımları açın ve programı çalıştırın.  
   
 1.  İndirilen dosyanın sıkıştırmasını açın ve ardından Visual Studio'yu başlatın.  
   
@@ -361,4 +362,4 @@ Dim contentLength As Integer = Await getLengthTask
  [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
  [İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Zaman uyumsuz örnek: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Zaman uyumsuz örnek: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

@@ -2,11 +2,12 @@
 title: Bir süre (Visual Basic) sonra zaman uyumsuz görevleri iptal etme
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 1be9f976c68db41526aea2fbf250ecd8c4e9521e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f91fffd9bfcd66833ca3233251914868bf3b84de
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728699"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Bir süre (Visual Basic) sonra zaman uyumsuz görevleri iptal etme
 Kullanarak zaman uyumsuz işlemi bir süre sonra iptal edebilirsiniz <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> işlemin tamamlanmasını beklemek istemiyorsanız yöntemi. Bu yöntem tarafından belirlenen süre içinde tam olmayan herhangi bir ilişkili görevi iptali zamanlar `CancelAfter` ifade.  
@@ -17,7 +18,7 @@ Kullanarak zaman uyumsuz işlemi bir süre sonra iptal edebilirsiniz <xref:Syste
 >  Örnekleri çalıştırmak için Visual Studio 2012 veya sonraki sürümünü ve .NET Framework 4.5 olmalıdır veya sonraki bir sürümü bilgisayarınızda yüklü.  
   
 ## <a name="downloading-the-example"></a>Örnek indirme  
- Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046) ve ardından aşağıdaki adımları izleyin.  
+ Tam Windows Presentation Foundation (WPF) projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve ardından aşağıdaki adımları izleyin.  
   
 1.  İndirdiğiniz dosyanın sıkıştırmasını ve Visual Studio'yu başlatın.  
   
@@ -87,7 +88,7 @@ Downloads canceled.
   
  İçin bir başvuru eklemeniz gerekir fark <xref:System.Net.Http>.  
   
- Projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Projeden indirebilirsiniz [zaman uyumsuz örnek: ince ayar uygulamanız](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -193,4 +194,4 @@ End Class
  [İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Zaman uyumsuz görevi veya görev (Visual Basic) listesi iptal etme](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
  [Async uygulamanızda (Visual Basic) hassas ayar yapma](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
- [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Zaman uyumsuz örnek: İnce uygulamanızı ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
