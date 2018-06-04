@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728686"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
 Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değerlerini ve konumlarına dize.  
@@ -43,9 +44,9 @@ Aşağıdaki örnek giriş dizesi arar ve görüntüler tüm href = "..." değer
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
 |`=`|Eşittir işareti ile aynı.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Aşağıdakilerden birini yakalanan bir gruba sonucu atamadan eşleştir:<br /> <ul><li><p>Tırnak işareti veya tırnak işareti veya kesme işareti, bir tırnak işareti veya kesme işareti gelmelidir dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı ve ardından kesme işareti. Adlı grup `1` bu modelinde eklenmiştir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` bu modelinde eklenmiştir.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Aşağıdakilerden birini yakalanan bir gruba sonucu atamadan eşleştir:<br /> <ul><li><p>Tırnak işareti veya tırnak işareti veya kesme işareti, bir tırnak işareti veya kesme işareti gelmelidir dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı ve ardından kesme işareti. Adlı grup `1` bu modelinde eklenmiştir.</p></li><li><p>Bir veya daha fazla boşluk olmayan karakter. Adlı grup `1` bu modelinde eklenmiştir.</p></li></ul>|  
 |`(?<1>[^"']*)`|Tırnak işareti veya kesme işareti dışındaki herhangi bir karakter, sıfır veya daha fazla tekrarı adlı yakalama grubuna atayın `1`.|  
-|`"(?<1>\S+)`|Bir veya daha fazla boşluk olmayan karakter adlı yakalama grubuna atayın `1`.|  
+|`(?<1>\S+)`|Bir veya daha fazla boşluk olmayan karakter adlı yakalama grubuna atayın `1`.|  
   
 ## <a name="match-result-class"></a>Sonuç Sınıfını Eşleştirme  
  Arama sonuçlarını depolanmış <xref:System.Text.RegularExpressions.Match> aramada ayıklanan tüm alt dizeler erişim sağlayan sınıf. Bunu çağırması, ayrıca Aranmakta dize ve kullanılan, normal ifade hatırlıyor <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> başka bir arama burada sonuncu sona erdi başlangıç yapmak için yöntemi.  
