@@ -5,208 +5,208 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
 ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34696318"
 ---
-# <a name="dotnet-run"></a><span data-ttu-id="60d93-103">dotnet çalıştırın</span><span class="sxs-lookup"><span data-stu-id="60d93-103">dotnet run</span></span>
+# <a name="dotnet-run"></a><span data-ttu-id="76fb7-103">dotnet çalıştırın</span><span class="sxs-lookup"><span data-stu-id="76fb7-103">dotnet run</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="60d93-104">Ad</span><span class="sxs-lookup"><span data-stu-id="60d93-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="76fb7-104">Ad</span><span class="sxs-lookup"><span data-stu-id="76fb7-104">Name</span></span>
 
-<span data-ttu-id="60d93-105">`dotnet run` -Kaynak kodu herhangi bir açık derleme veya başlatma komutları olmadan çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="60d93-105">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
+<span data-ttu-id="76fb7-105">`dotnet run` -Kaynak kodu herhangi bir açık derleme veya başlatma komutları olmadan çalıştırır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-105">`dotnet run` - Runs source code without any explicit compile or launch commands.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="60d93-106">Özet</span><span class="sxs-lookup"><span data-stu-id="60d93-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="76fb7-106">Özet</span><span class="sxs-lookup"><span data-stu-id="76fb7-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="60d93-107">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="60d93-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="76fb7-107">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="76fb7-107">.NET Core 2.1</span></span>](#tab/netcore21)
 ```
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="60d93-108">.NET core 2.0</span><span class="sxs-lookup"><span data-stu-id="60d93-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="76fb7-108">.NET core 2.0</span><span class="sxs-lookup"><span data-stu-id="76fb7-108">.NET Core 2.0</span></span>](#tab/netcore20)
 ```
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="60d93-109">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="60d93-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="76fb7-109">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="76fb7-109">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="60d93-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="60d93-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="76fb7-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="76fb7-110">Description</span></span>
 
-<span data-ttu-id="60d93-111">`dotnet run` Komutu bir komut ile kaynak koddan uygulamanızı çalıştırmak için uygun bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-111">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="60d93-112">Komut satırından hızlı yinelemeli geliştirme için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="60d93-112">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="60d93-113">Komut bağlıdır [ `dotnet build` ](dotnet-build.md) kodu oluşturmak için komutu.</span><span class="sxs-lookup"><span data-stu-id="60d93-113">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="60d93-114">Derleme için tüm gereksinimleri, gibi proje geri yüklenmelidir ilk olarak, geçerli `dotnet run` de.</span><span class="sxs-lookup"><span data-stu-id="60d93-114">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
+<span data-ttu-id="76fb7-111">`dotnet run` Komutu bir komut ile kaynak koddan uygulamanızı çalıştırmak için uygun bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-111">The `dotnet run` command provides a convenient option to run your application from the source code with one command.</span></span> <span data-ttu-id="76fb7-112">Komut satırından hızlı yinelemeli geliştirme için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-112">It's useful for fast iterative development from the command line.</span></span> <span data-ttu-id="76fb7-113">Komut bağlıdır [ `dotnet build` ](dotnet-build.md) kodu oluşturmak için komutu.</span><span class="sxs-lookup"><span data-stu-id="76fb7-113">The command depends on the [`dotnet build`](dotnet-build.md) command to build the code.</span></span> <span data-ttu-id="76fb7-114">Derleme için tüm gereksinimleri, gibi proje geri yüklenmelidir ilk olarak, geçerli `dotnet run` de.</span><span class="sxs-lookup"><span data-stu-id="76fb7-114">Any requirements for the build, such as that the project must be restored first, apply to `dotnet run` as well.</span></span>
 
-<span data-ttu-id="60d93-115">Çıkış dosyaları olan varsayılan konumuna yazılır `bin/<configuration>/<target>`.</span><span class="sxs-lookup"><span data-stu-id="60d93-115">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="60d93-116">Örneğin, varsa bir `netcoreapp1.0` uygulama ve Çalıştır `dotnet run`, çıktı yerleştirilir `bin/Debug/netcoreapp1.0`.</span><span class="sxs-lookup"><span data-stu-id="60d93-116">For example if you have a `netcoreapp1.0` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp1.0`.</span></span> <span data-ttu-id="60d93-117">Gerektiğinde dosyalarının üzerine yazılır.</span><span class="sxs-lookup"><span data-stu-id="60d93-117">Files are overwritten as needed.</span></span> <span data-ttu-id="60d93-118">Geçici dosyalar yerleştirilir `obj` dizin.</span><span class="sxs-lookup"><span data-stu-id="60d93-118">Temporary files are placed in the `obj` directory.</span></span>
+<span data-ttu-id="76fb7-115">Çıkış dosyaları olan varsayılan konumuna yazılır `bin/<configuration>/<target>`.</span><span class="sxs-lookup"><span data-stu-id="76fb7-115">Output files are written into the default location, which is `bin/<configuration>/<target>`.</span></span> <span data-ttu-id="76fb7-116">Örneğin, varsa bir `netcoreapp1.0` uygulama ve Çalıştır `dotnet run`, çıktı yerleştirilir `bin/Debug/netcoreapp1.0`.</span><span class="sxs-lookup"><span data-stu-id="76fb7-116">For example if you have a `netcoreapp1.0` application and you run `dotnet run`, the output is placed in `bin/Debug/netcoreapp1.0`.</span></span> <span data-ttu-id="76fb7-117">Gerektiğinde dosyalarının üzerine yazılır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-117">Files are overwritten as needed.</span></span> <span data-ttu-id="76fb7-118">Geçici dosyalar yerleştirilir `obj` dizin.</span><span class="sxs-lookup"><span data-stu-id="76fb7-118">Temporary files are placed in the `obj` directory.</span></span>
 
-<span data-ttu-id="60d93-119">Projenin birden çok çerçeveyi belirtiyorsa, yürütme `dotnet run` sürece hatayla sonuçlanır `-f|--framework <FRAMEWORK>` seçeneği framework belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="60d93-119">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
+<span data-ttu-id="76fb7-119">Projenin birden çok çerçeveyi belirtiyorsa, yürütme `dotnet run` sürece hatayla sonuçlanır `-f|--framework <FRAMEWORK>` seçeneği framework belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-119">If the project specifies multiple frameworks, executing `dotnet run` results in an error unless the `-f|--framework <FRAMEWORK>` option is used to specify the framework.</span></span>
 
-<span data-ttu-id="60d93-120">`dotnet run` Komutu derlemeler oluşturulan değil projeler bağlamında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="60d93-120">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="60d93-121">Bunun yerine bir framework bağımlı uygulamayı DLL çalıştırmak çalışıyorsanız, kullanmalısınız [dotnet](dotnet.md) olmadan bir komutu.</span><span class="sxs-lookup"><span data-stu-id="60d93-121">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="60d93-122">Örneğin, çalıştırmak için `myapp.dll`, kullanın:</span><span class="sxs-lookup"><span data-stu-id="60d93-122">For example, to run `myapp.dll`, use:</span></span>
+<span data-ttu-id="76fb7-120">`dotnet run` Komutu derlemeler oluşturulan değil projeler bağlamında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-120">The `dotnet run` command is used in the context of projects, not built assemblies.</span></span> <span data-ttu-id="76fb7-121">Bunun yerine bir framework bağımlı uygulamayı DLL çalıştırmak çalışıyorsanız, kullanmalısınız [dotnet](dotnet.md) olmadan bir komutu.</span><span class="sxs-lookup"><span data-stu-id="76fb7-121">If you're trying to run a framework-dependent application DLL instead, you must use [dotnet](dotnet.md) without a command.</span></span> <span data-ttu-id="76fb7-122">Örneğin, çalıştırmak için `myapp.dll`, kullanın:</span><span class="sxs-lookup"><span data-stu-id="76fb7-122">For example, to run `myapp.dll`, use:</span></span>
 
 ```console
 dotnet myapp.dll
 ```
 
-<span data-ttu-id="60d93-123">Daha fazla bilgi için `dotnet` sürücüsü bkz [.NET Core komut satırı araçları (CLI)](index.md) konu.</span><span class="sxs-lookup"><span data-stu-id="60d93-123">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
+<span data-ttu-id="76fb7-123">Daha fazla bilgi için `dotnet` sürücüsü bkz [.NET Core komut satırı araçları (CLI)](index.md) konu.</span><span class="sxs-lookup"><span data-stu-id="76fb7-123">For more information on the `dotnet` driver, see the [.NET Core Command Line Tools (CLI)](index.md) topic.</span></span>
 
-<span data-ttu-id="60d93-124">Uygulamayı çalıştırmak için `dotnet run` komutu NuGet önbelleğinden paylaşılan çalışma zamanı dışında Uygulama bağımlılıklarını giderir.</span><span class="sxs-lookup"><span data-stu-id="60d93-124">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="60d93-125">Önbelleğe alınan bağımlılıkları kullandığından, onu kullanmak önerilmez `dotnet run` üretimde uygulamaları çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="60d93-125">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="60d93-126">Bunun yerine, [bir dağıtım oluşturmak](../deploying/index.md) kullanarak [ `dotnet publish` ](dotnet-publish.md) komut ve yayımlanan çıkış dağıtın.</span><span class="sxs-lookup"><span data-stu-id="60d93-126">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
+<span data-ttu-id="76fb7-124">Uygulamayı çalıştırmak için `dotnet run` komutu NuGet önbelleğinden paylaşılan çalışma zamanı dışında Uygulama bağımlılıklarını giderir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-124">To run the application, the `dotnet run` command resolves the dependencies of the application that are outside of the shared runtime from the NuGet cache.</span></span> <span data-ttu-id="76fb7-125">Önbelleğe alınan bağımlılıkları kullandığından, onu kullanmak önerilmez `dotnet run` üretimde uygulamaları çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="76fb7-125">Because it uses cached dependencies, it's not recommended to use `dotnet run` to run applications in production.</span></span> <span data-ttu-id="76fb7-126">Bunun yerine, [bir dağıtım oluşturmak](../deploying/index.md) kullanarak [ `dotnet publish` ](dotnet-publish.md) komut ve yayımlanan çıkış dağıtın.</span><span class="sxs-lookup"><span data-stu-id="76fb7-126">Instead, [create a deployment](../deploying/index.md) using the [`dotnet publish`](dotnet-publish.md) command and deploy the published output.</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="options"></a><span data-ttu-id="60d93-127">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="60d93-127">Options</span></span>
+## <a name="options"></a><span data-ttu-id="76fb7-127">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="76fb7-127">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="60d93-128">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="60d93-128">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="76fb7-128">.NET core 2.1</span><span class="sxs-lookup"><span data-stu-id="76fb7-128">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `--`
 
-<span data-ttu-id="60d93-129">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="60d93-129">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="60d93-130">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="60d93-130">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="76fb7-129">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="76fb7-129">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="76fb7-130">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-130">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="60d93-131">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-131">Defines the build configuration.</span></span> <span data-ttu-id="60d93-132">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="60d93-132">The default value is `Debug`.</span></span>
+<span data-ttu-id="76fb7-131">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-131">Defines the build configuration.</span></span> <span data-ttu-id="76fb7-132">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-132">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="60d93-133">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="60d93-133">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="60d93-134">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="60d93-134">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="76fb7-133">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="76fb7-133">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="76fb7-134">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-134">The framework must be specified in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="60d93-135">Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-135">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="60d93-136">Bu bayrak belirten aynıdır silme *project.assets.json* dosya.</span><span class="sxs-lookup"><span data-stu-id="60d93-136">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="76fb7-135">Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-135">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="76fb7-136">Bu bayrak belirten aynıdır silme *project.assets.json* dosya.</span><span class="sxs-lookup"><span data-stu-id="76fb7-136">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="60d93-137">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="60d93-137">Prints out a short help for the command.</span></span>
+<span data-ttu-id="76fb7-137">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-137">Prints out a short help for the command.</span></span>
 
 `--launch-profile <NAME>`
 
-<span data-ttu-id="60d93-138">Başlatma adını profil (varsa) uygulama başlatılırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="60d93-138">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="60d93-139">Başlatma profilleri tanımlanmış *launchSettings.json* dosya ve genellikle adlı `Development`, `Staging`, ve `Production`.</span><span class="sxs-lookup"><span data-stu-id="60d93-139">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="60d93-140">Daha fazla bilgi için bkz: [birden çok ortamlarıyla çalışma](/aspnet/core/fundamentals/environments).</span><span class="sxs-lookup"><span data-stu-id="60d93-140">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+<span data-ttu-id="76fb7-138">Başlatma adını profil (varsa) uygulama başlatılırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="76fb7-138">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="76fb7-139">Başlatma profilleri tanımlanmış *launchSettings.json* dosya ve genellikle adlı `Development`, `Staging`, ve `Production`.</span><span class="sxs-lookup"><span data-stu-id="76fb7-139">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="76fb7-140">Daha fazla bilgi için bkz: [birden çok ortamlarıyla çalışma](/aspnet/core/fundamentals/environments).</span><span class="sxs-lookup"><span data-stu-id="76fb7-140">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
 
 `--no-build`
 
-<span data-ttu-id="60d93-141">Çalıştırmadan önce projeyi derlemek değil.</span><span class="sxs-lookup"><span data-stu-id="60d93-141">Doesn't build the project before running.</span></span> <span data-ttu-id="60d93-142">Ayrıca örtük ayarlar `--no-restore` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="60d93-142">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="76fb7-141">Çalıştırmadan önce projeyi derlemek değil.</span><span class="sxs-lookup"><span data-stu-id="76fb7-141">Doesn't build the project before running.</span></span> <span data-ttu-id="76fb7-142">Ayrıca örtük ayarlar `--no-restore` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="76fb7-142">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="60d93-143">Proje Proje (P2P) başvuruları içeren bir proje geri yüklerken, kök proje ve başvuru geri yükler.</span><span class="sxs-lookup"><span data-stu-id="60d93-143">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="76fb7-143">Proje Proje (P2P) başvuruları içeren bir proje geri yüklerken, kök proje ve başvuru geri yükler.</span><span class="sxs-lookup"><span data-stu-id="76fb7-143">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--no-launch-profile`
 
-<span data-ttu-id="60d93-144">Kullanmaya çalıştığınızda değil *launchSettings.json* uygulamayı yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="60d93-144">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+<span data-ttu-id="76fb7-144">Kullanmaya çalıştığınızda değil *launchSettings.json* uygulamayı yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="76fb7-144">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="60d93-145">Örtük bir geri yükleme komutu çalıştırırken yürütmez.</span><span class="sxs-lookup"><span data-stu-id="60d93-145">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="76fb7-145">Örtük bir geri yükleme komutu çalıştırırken yürütmez.</span><span class="sxs-lookup"><span data-stu-id="76fb7-145">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-p|--project <PATH>`
 
-<span data-ttu-id="60d93-146">(Klasör adı veya tam yolu) çalıştırmak için proje dosyasının yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="60d93-146">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="60d93-147">Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="60d93-147">If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="76fb7-146">(Klasör adı veya tam yolu) çalıştırmak için proje dosyasının yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-146">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="76fb7-147">Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="76fb7-147">If not specified, it defaults to the current directory.</span></span>
 
 `--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="60d93-148">Paketler için geri yüklemek için hedef çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="60d93-148">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="60d93-149">Çalışma zamanı tanımlayıcıları (RID) bir listesi için bkz: [RID katalog](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="60d93-149">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="76fb7-148">Paketler için geri yüklemek için hedef çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-148">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="76fb7-149">Çalışma zamanı tanımlayıcıları (RID) bir listesi için bkz: [RID katalog](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="76fb7-149">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="60d93-150">Komutun ayrıntı düzeyi ayarlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-150">Sets the verbosity level of the command.</span></span> <span data-ttu-id="60d93-151">İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="60d93-151">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="76fb7-150">Komutun ayrıntı düzeyi ayarlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-150">Sets the verbosity level of the command.</span></span> <span data-ttu-id="76fb7-151">İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="76fb7-151">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="60d93-152">.NET core 2.0</span><span class="sxs-lookup"><span data-stu-id="60d93-152">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="76fb7-152">.NET core 2.0</span><span class="sxs-lookup"><span data-stu-id="76fb7-152">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `--`
 
-<span data-ttu-id="60d93-153">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="60d93-153">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="60d93-154">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="60d93-154">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="76fb7-153">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="76fb7-153">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="76fb7-154">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-154">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="60d93-155">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-155">Defines the build configuration.</span></span> <span data-ttu-id="60d93-156">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="60d93-156">The default value is `Debug`.</span></span>
+<span data-ttu-id="76fb7-155">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-155">Defines the build configuration.</span></span> <span data-ttu-id="76fb7-156">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-156">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="60d93-157">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="60d93-157">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="60d93-158">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="60d93-158">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="76fb7-157">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="76fb7-157">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="76fb7-158">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-158">The framework must be specified in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="60d93-159">Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-159">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="60d93-160">Bu bayrak belirten aynıdır silme *project.assets.json* dosya.</span><span class="sxs-lookup"><span data-stu-id="60d93-160">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="76fb7-159">Son geri yükleme başarılı olsa bile çözümlenmesi için tüm bağımlılıkları zorlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-159">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="76fb7-160">Bu bayrak belirten aynıdır silme *project.assets.json* dosya.</span><span class="sxs-lookup"><span data-stu-id="76fb7-160">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="60d93-161">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="60d93-161">Prints out a short help for the command.</span></span>
+<span data-ttu-id="76fb7-161">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-161">Prints out a short help for the command.</span></span>
 
 `--launch-profile <NAME>`
 
-<span data-ttu-id="60d93-162">Başlatma adını profil (varsa) uygulama başlatılırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="60d93-162">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="60d93-163">Başlatma profilleri tanımlanmış *launchSettings.json* dosya ve genellikle adlı `Development`, `Staging`, ve `Production`.</span><span class="sxs-lookup"><span data-stu-id="60d93-163">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="60d93-164">Daha fazla bilgi için bkz: [birden çok ortamlarıyla çalışma](/aspnet/core/fundamentals/environments).</span><span class="sxs-lookup"><span data-stu-id="60d93-164">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
+<span data-ttu-id="76fb7-162">Başlatma adını profil (varsa) uygulama başlatılırken kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="76fb7-162">The name of the launch profile (if any) to use when launching the application.</span></span> <span data-ttu-id="76fb7-163">Başlatma profilleri tanımlanmış *launchSettings.json* dosya ve genellikle adlı `Development`, `Staging`, ve `Production`.</span><span class="sxs-lookup"><span data-stu-id="76fb7-163">Launch profiles are defined in the *launchSettings.json* file and are typically called `Development`, `Staging`, and `Production`.</span></span> <span data-ttu-id="76fb7-164">Daha fazla bilgi için bkz: [birden çok ortamlarıyla çalışma](/aspnet/core/fundamentals/environments).</span><span class="sxs-lookup"><span data-stu-id="76fb7-164">For more information, see [Working with multiple environments](/aspnet/core/fundamentals/environments).</span></span>
 
 `--no-build`
 
-<span data-ttu-id="60d93-165">Çalıştırmadan önce projeyi derlemek değil.</span><span class="sxs-lookup"><span data-stu-id="60d93-165">Doesn't build the project before running.</span></span> <span data-ttu-id="60d93-166">Ayrıca örtük ayarlar `--no-restore` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="60d93-166">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="76fb7-165">Çalıştırmadan önce projeyi derlemek değil.</span><span class="sxs-lookup"><span data-stu-id="76fb7-165">Doesn't build the project before running.</span></span> <span data-ttu-id="76fb7-166">Ayrıca örtük ayarlar `--no-restore` bayrağı.</span><span class="sxs-lookup"><span data-stu-id="76fb7-166">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="60d93-167">Proje Proje (P2P) başvuruları içeren bir proje geri yüklerken, kök proje ve başvuru geri yükler.</span><span class="sxs-lookup"><span data-stu-id="60d93-167">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
+<span data-ttu-id="76fb7-167">Proje Proje (P2P) başvuruları içeren bir proje geri yüklerken, kök proje ve başvuru geri yükler.</span><span class="sxs-lookup"><span data-stu-id="76fb7-167">When restoring a project with project-to-project (P2P) references, restores the root project and not the references.</span></span>
 
 `--no-launch-profile`
 
-<span data-ttu-id="60d93-168">Kullanmaya çalıştığınızda değil *launchSettings.json* uygulamayı yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="60d93-168">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
+<span data-ttu-id="76fb7-168">Kullanmaya çalıştığınızda değil *launchSettings.json* uygulamayı yapılandırmak için.</span><span class="sxs-lookup"><span data-stu-id="76fb7-168">Doesn't try to use *launchSettings.json* to configure the application.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="60d93-169">Örtük bir geri yükleme komutu çalıştırırken yürütmez.</span><span class="sxs-lookup"><span data-stu-id="60d93-169">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="76fb7-169">Örtük bir geri yükleme komutu çalıştırırken yürütmez.</span><span class="sxs-lookup"><span data-stu-id="76fb7-169">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-p|--project <PATH>`
 
-<span data-ttu-id="60d93-170">(Klasör adı veya tam yolu) çalıştırmak için proje dosyasının yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="60d93-170">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="60d93-171">Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="60d93-171">If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="76fb7-170">(Klasör adı veya tam yolu) çalıştırmak için proje dosyasının yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-170">Specifies the path of the project file to run (folder name or full path).</span></span> <span data-ttu-id="76fb7-171">Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="76fb7-171">If not specified, it defaults to the current directory.</span></span>
 
 `--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="60d93-172">Paketler için geri yüklemek için hedef çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="60d93-172">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="60d93-173">Çalışma zamanı tanımlayıcıları (RID) bir listesi için bkz: [RID katalog](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="60d93-173">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="76fb7-172">Paketler için geri yüklemek için hedef çalışma zamanı belirtir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-172">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="76fb7-173">Çalışma zamanı tanımlayıcıları (RID) bir listesi için bkz: [RID katalog](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="76fb7-173">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="60d93-174">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="60d93-174">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="76fb7-174">.NET core 1.x</span><span class="sxs-lookup"><span data-stu-id="76fb7-174">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `--`
 
-<span data-ttu-id="60d93-175">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="60d93-175">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="60d93-176">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="60d93-176">All arguments after this delimiter are passed to the application run.</span></span>
+<span data-ttu-id="76fb7-175">Bağımsız değişkenleri sınırlandırır `dotnet run` gelen çalıştırılan uygulama için bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="76fb7-175">Delimits arguments to `dotnet run` from arguments for the application being run.</span></span> <span data-ttu-id="76fb7-176">Tüm bağımsız değişkenler bu sınırlayıcı sonra Çalıştırma uygulaması geçirilir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-176">All arguments after this delimiter are passed to the application run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="60d93-177">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="60d93-177">Defines the build configuration.</span></span> <span data-ttu-id="60d93-178">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="60d93-178">The default value is `Debug`.</span></span>
+<span data-ttu-id="76fb7-177">Derleme yapılandırması tanımlar.</span><span class="sxs-lookup"><span data-stu-id="76fb7-177">Defines the build configuration.</span></span> <span data-ttu-id="76fb7-178">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-178">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="60d93-179">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="60d93-179">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="60d93-180">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="60d93-180">The framework must be specified in the project file.</span></span>
+<span data-ttu-id="76fb7-179">Derlemeler ve belirtilen kullanarak uygulamayı çalıştıran [framework](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="76fb7-179">Builds and runs the app using the specified [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="76fb7-180">Proje dosyasında framework belirtilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-180">The framework must be specified in the project file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="60d93-181">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="60d93-181">Prints out a short help for the command.</span></span>
+<span data-ttu-id="76fb7-181">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="76fb7-181">Prints out a short help for the command.</span></span>
 
 `-p|--project <PATH/PROJECT.csproj>`
 
-<span data-ttu-id="60d93-182">Proje dosyasının adını ve yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="60d93-182">Specifies the path and name of the project file.</span></span> <span data-ttu-id="60d93-183">(NOTA bakın.) Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="60d93-183">(See the NOTE.) If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="76fb7-182">Proje dosyasının adını ve yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="76fb7-182">Specifies the path and name of the project file.</span></span> <span data-ttu-id="76fb7-183">(NOTA bakın.) Belirtilmezse, geçerli dizine varsayılan olur.</span><span class="sxs-lookup"><span data-stu-id="76fb7-183">(See the NOTE.) If not specified, it defaults to the current directory.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="60d93-184">Proje dosyası ile adını ve yolunu kullanın `-p|--project` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="60d93-184">Use the path and name of the project file with the `-p|--project` option.</span></span> <span data-ttu-id="60d93-185">.NET Core SDK ile bir klasör yolu sağlayan CLI'teki bir gerileme engeller 1.x.</span><span class="sxs-lookup"><span data-stu-id="60d93-185">A regression in the CLI prevents providing a folder path with .NET Core SDK 1.x.</span></span> <span data-ttu-id="60d93-186">Bu sorun hakkında daha fazla bilgi için bkz: [-p, çalıştırmak dotnet değil (dotnet/CLI #5992) proje Başlat](https://github.com/dotnet/cli/issues/5992).</span><span class="sxs-lookup"><span data-stu-id="60d93-186">For more information about this issue, see [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).</span></span>
+> <span data-ttu-id="76fb7-184">Proje dosyası ile adını ve yolunu kullanın `-p|--project` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="76fb7-184">Use the path and name of the project file with the `-p|--project` option.</span></span> <span data-ttu-id="76fb7-185">.NET Core SDK ile bir klasör yolu sağlayan CLI'teki bir gerileme engeller 1.x.</span><span class="sxs-lookup"><span data-stu-id="76fb7-185">A regression in the CLI prevents providing a folder path with .NET Core SDK 1.x.</span></span> <span data-ttu-id="76fb7-186">Bu sorun hakkında daha fazla bilgi için bkz: [-p, çalıştırmak dotnet değil (dotnet/CLI #5992) proje Başlat](https://github.com/dotnet/cli/issues/5992).</span><span class="sxs-lookup"><span data-stu-id="76fb7-186">For more information about this issue, see [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="60d93-187">Örnekler</span><span class="sxs-lookup"><span data-stu-id="60d93-187">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="76fb7-187">Örnekler</span><span class="sxs-lookup"><span data-stu-id="76fb7-187">Examples</span></span>
 
-<span data-ttu-id="60d93-188">Proje geçerli dizinde çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="60d93-188">Run the project in the current directory:</span></span>
+<span data-ttu-id="76fb7-188">Proje geçerli dizinde çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="76fb7-188">Run the project in the current directory:</span></span>
 
 `dotnet run`
 
-<span data-ttu-id="60d93-189">Belirtilen proje çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="60d93-189">Run the specified project:</span></span>
+<span data-ttu-id="76fb7-189">Belirtilen proje çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="76fb7-189">Run the specified project:</span></span>
 
 `dotnet run --project /projects/proj1/proj1.csproj`
 
-<span data-ttu-id="60d93-190">Geçerli dizinde projeyi çalıştırın ( `--help` bağımsız değişkeni Bu örnekte geçirilir uygulamaya beri `--` bağımsız değişkeninin değeri kullanılır):</span><span class="sxs-lookup"><span data-stu-id="60d93-190">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the `--` argument is used):</span></span>
+<span data-ttu-id="76fb7-190">Geçerli dizinde projeyi çalıştırın ( `--help` bağımsız değişkeni Bu örnekte geçirilir uygulamaya beri `--` bağımsız değişkeninin değeri kullanılır):</span><span class="sxs-lookup"><span data-stu-id="76fb7-190">Run the project in the current directory (the `--help` argument in this example is passed to the application, since the `--` argument is used):</span></span>
 
 `dotnet run --configuration Release -- --help`
 
-<span data-ttu-id="60d93-191">Bağımlılıklar ve geçerli dizinde proje için araçları çıkış ve projeyi çalıştırın en az gösteren yalnızca geri yükleme: (.NET Core SDK 2.0 ve sonraki sürümler):</span><span class="sxs-lookup"><span data-stu-id="60d93-191">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
+<span data-ttu-id="76fb7-191">Bağımlılıklar ve geçerli dizinde proje için araçları çıkış ve projeyi çalıştırın en az gösteren yalnızca geri yükleme: (.NET Core SDK 2.0 ve sonraki sürümler):</span><span class="sxs-lookup"><span data-stu-id="76fb7-191">Restore dependencies and tools for the project in the current directory only showing minimal output and then run the project: (.NET Core SDK 2.0 and later versions):</span></span>
 
 `dotnet run --verbosity m`
