@@ -4,17 +4,18 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | DDD m
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805480"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>DDD mikro hizmet eShopOnContainers içinde uygulanan CQRS ve CQS yaklaşımlar
 
 Sıralama mikro hizmet eShopOnContainers başvuru uygulama tasarımını CQRS kurallara göre temel alır. Ancak, yalnızca sorguları komutları ayırmak ve hem eylemleri için aynı veritabanını kullanarak basit bir yaklaşım kullanır.
 
-Bu düzenlere ve burada önemli olan nokta sorguların ıdempotent olduğundan olduğu: bir sistem, sistem durumu sorgu kaç kez değişmez olsun işlem mantığı "yazma" farklı "Okuma" veri modelinden bile kullanabilirsiniz Sıralama mikro aynı veritabanını kullanıyor olsa da etki alanı model. Bu nedenle bu bir Basitleştirilmiş CQRS yaklaşımdır.
+Bu düzenlere ve burada önemli olan nokta sorguların ıdempotent olduğundan olduğu: bir sistem sorgu kaç kez olsun, bu sistem durumu değişmez. Etki alanı modeli, işlem mantığı "Yazar daha" sıralama mikro aynı veritabanını kullanıyor olsa da hatta farklı "Okuma" veri modelini kullanabilirsiniz. Bu nedenle bu bir Basitleştirilmiş CQRS yaklaşımdır.
 
 Diğer taraftan, işlemleri ve veri güncelleştirmelerini tetiklemek, komutları sistem durumunu değiştirin. Komutları ile ne zaman dikkatli olmanız gerekir. ilgilenme karmaşıklık ve sürekli değişen iş kuralları. Bu yerdir bir daha iyi Modellenen sistem olacak şekilde DDD teknikleri uygulamak istiyor.
 

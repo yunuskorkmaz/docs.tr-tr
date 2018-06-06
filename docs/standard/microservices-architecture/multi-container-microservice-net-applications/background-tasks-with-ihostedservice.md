@@ -4,11 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb6d412ee91ab8d2c97a4917f23ee914e3fb9068
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805574"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Mikro IHostedService ve BackgroundService sınıfı ile arka plan görevlerini uygulama
 
@@ -26,7 +27,7 @@ Arasında yapılan fark Not `WebHost` ve `Host`. A `WebHost` (sınıfı uygulama
 
 A `Host` (sınıfı uygulama temel `IHost`), ancak, .NET Core 2.1 içinde yeni bir şeydir. Temel olarak, bir `Host` ile sahip daha benzer bir altyapı sahip olmanızı sağlar `WebHost` (bağımlılık ekleme, barındırılan hizmetleri, vb.), ancak bu durumda, yalnızca basit ve daha açık bir işlem, MVC için ilgili herhangi bir şeyin barındırmasını istiyorsanız , Web API veya HTTP sunucusu özellikleri.
 
-Bu nedenle, seçebileceğiniz ve ya da barındırılan hizmetler ve başka bir şey işlemek için yalnızca barındırmak için yapılan mikro IHost ile özel bir ana bilgisayar işlemi oluşturmak `IHostedServices`, veya alternatevely mevcut bir ASP.NET Core genişletme `WebHost` , mevcut bir ASP.NET çekirdek Web API veya MVC uygulaması gibi. 
+Bu nedenle, seçebileceğiniz ve ya da barındırılan hizmetler ve başka bir şey işlemek için yalnızca barındırmak için yapılan mikro IHost ile özel bir ana bilgisayar işlemi oluşturmak `IHostedServices`, veya alternatif olarak, mevcut bir ASP.NET Core genişletebilirsiniz `WebHost` , mevcut bir ASP.NET çekirdek Web API veya MVC uygulaması gibi. 
 
 Her iki yaklaşımın Artıları ve eksileri iş ve ölçeklenebilirlik gereksinimlerinize bağlı olarak vardır. Arka plan görevleri hiçbir şey varsa, alt çizgi temelde olan HTTP kullanması gereken (IWebHost) ve IHost, kullanılabilir olduğunda .NET Core 2.1 ile yapmak için.
 
@@ -99,7 +100,7 @@ Bir geliştirici olarak durdurma eylemi veya hizmetlerinizi işlenmesinden sorum
 
 Şimdi sıfırdan özel barındırılan hizmet sınıfı oluşturmak ve uygulamak `IHostedService`gibi .NET Core 2.0 kullanırken yapmanız gerekir. 
 
-Bununla birlikte, çoğu arka plan görevleri iptal belirteçleri yönetimi ve diğer tipical işlemler in regard to benzer gereksinimleri gerekeceğinden, .NET Core 2.1, BackgroundService adlı türetilemeyeceğini çok kullanışlı bir Özet temel sınıf sağlama.
+Bununla birlikte, çoğu arka plan görevleri iptal belirteçleri yönetimi ve diğer normal işlemler in regard to benzer gereksinimleri gerekeceğinden, .NET Core 2.1, BackgroundService adlı türetilemeyeceğini çok kullanışlı bir Özet temel sınıf sağlama.
 
 Bu sınıf, arka plan görevi ayarlamanız için gereken ana iş sağlar. Okuma ve yazma gerek kalmaması Bu sınıf .NET Core 2.1 Kitaplığı'nda gelecektir unutmayın.
 
@@ -193,7 +194,7 @@ public class GracePeriodManagerService : BackgroundService
             {
                 _logger.LogDebug($"GracePeriod task doing background work.");
 
-                // This eShopOnContainers method is quering a database table 
+                // This eShopOnContainers method is querying a database table 
                 // and publishing events into the Event Bus (RabbitMS / ServiceBus)
                 CheckConfirmedGracePeriodOrders();
 
@@ -211,7 +212,7 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-Bu belirli durumda eShopOnContainers için quering görmek bir veritabanı tablosu siparişleri belirli bir durumu ve değişiklikleri uygularken, olay veri yolu (underneath bu olabilir aracılığıyla tümleştirme olaylarını yayımlama olan uygulama yöntemini yürütüyor RabbitMQ veya Azure Service Bus kullanarak). 
+EShopOnContainers için belirli bu durumda, belirli bir durumu siparişleri arayan bir veritabanı tablosu sorgulanırken bir uygulama yöntemi yürütme ve değişiklikleri uygularken, olay veri yolu (underneath bu olabilir aracılığıyla tümleştirme olaylarını yayımlama RabbitMQ veya Azure Service Bus kullanarak). 
 
 Elbette, başka iş arka plan görevi, bunun yerine çalıştırabilir.
 

@@ -11,11 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4641ce8509e3111a11ed803d36194d5a301bce
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805717"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
 Bir dizi standart işleci davranışını tanımlamak Visual Basic deyimi bir işleç yordamı olduğu (gibi `*`, `<>`, veya `And`) bir sınıf veya yapı tanımladığınız. Bu da adlandırılır *İşleç aşırı yüklemesi*.  
@@ -43,7 +44,7 @@ Bir dizi standart işleci davranışını tanımlamak Visual Basic deyimi bir i�
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bir işleç yordamı bildirme söz dizimi aşağıdaki gibidir:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *operand1*`[,`*operand2* `]) As` *veri türü*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *operand1*`[,`*operand2* `]) As` *veri türü*  
   
  `' Statements of the operator procedure.`  
   
@@ -67,7 +68,7 @@ Bir dizi standart işleci davranışını tanımlamak Visual Basic deyimi bir i�
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı çizimi  
  Aşağıdaki yapısını imzalı 128-bit tamsayı değeri bağlı sırası yüksek ve düşük düzey parçaları olarak depolar. Tanımladığı `+` iki eklemek için işleci `veryLong` değerleri ve bir kaynaklanan oluşturmak `veryLong` değeri.  
@@ -78,7 +79,7 @@ Bir dizi standart işleci davranışını tanımlamak Visual Basic deyimi bir i�
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yordamlar](./index.md)  

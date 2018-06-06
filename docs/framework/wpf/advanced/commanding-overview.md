@@ -13,11 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0801b3d2a0e34c1ac28569a164e140010ba36ab7
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805678"
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a> Kumanda bir giriş mekanizmasıdır içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] giriş cihaz giriş'den fazla anlamsal düzeyde işlenmesini sağlar. Komut örneklerindendir **kopya**, **Kes**, ve **Yapıştır** işlemleri birçok uygulama üzerinde bulunamadı.  
@@ -180,7 +181,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="creating-custom-commands"></a>Özel komutlar oluşturma  
  Komut kitaplığı sınıflarının komutlar gereksinimlerinizi karşılamazsa, kendi komutları oluşturabilirsiniz.  Özel bir komut oluşturmak için iki yolu vardır.  Sıfırdan başlamak ve uygulamak için ilk olduğu <xref:System.Windows.Input.ICommand> arabirimi.  Diğer bir yol daha genel yaklaşım ise oluşturmak için bir <xref:System.Windows.Input.RoutedCommand> veya <xref:System.Windows.Input.RoutedUICommand>.  
   
- Özel oluşturma örneği <xref:System.Windows.Input.RoutedCommand>, bkz: [özel bağlayan örneği oluşturma](http://go.microsoft.com/fwlink/?LinkID=159980).  
+ Özel oluşturma örneği <xref:System.Windows.Input.RoutedCommand>, bkz: [özel bağlayan örneği oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Input.RoutedCommand>  
@@ -191,4 +192,4 @@ ms.lasthandoff: 05/04/2018
  [Yönlendirilmiş Olaylara Genel Bakış](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [ICommandSource Uygulama](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
  [Nasıl yapılır: bir MenuItem komut ekleme](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Özel bağlayan örneği oluşturma](http://go.microsoft.com/fwlink/?LinkID=159980)
+ [Özel bağlayan örneği oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -5,11 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629d08b60330125a7bb491a58499b5e2bc7d2091
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805691"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
 Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak koda derlenmiş şifrelenmemiş bir bağlantı dizeleri kullanılarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Bağlantı dizesi hiç değişirse, ayrıca, uygulamanızı yeniden derlenmesi gerekiyor. Bu nedenlerle, bir uygulama yapılandırma dosyasında bağlantı dizeleri depolamanızı öneririz.  
@@ -135,8 +136,8 @@ Uygulamanızın kodda bağlantı dizelerini katıştırma Güvenlik Açıkları 
   
 |Sağlayıcı|Açıklama|  
 |--------------|-----------------|  
-|<!--zz<xref:System.Configuration.RSAProtectedConfigurationProvider>-->`System.Configuration.RSAProtectedConfigurationProvider`|Şifrelemek ve verilerin şifresini çözmek için RSA şifreleme algoritması kullanır. RSA algoritması, ortak anahtar şifreleme ve dijital imzalar için kullanılabilir. İki farklı anahtarlara nedeniyledir "ortak anahtarı" ya da değiştirip asimetrik şifreleme olarak da bilinir değil. Kullanabileceğiniz [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) Web.config dosyasında bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için. Dosyayı işlediğinde, ASP.NET yapılandırma dosyasının şifresini çözer. ASP.NET uygulaması kimliğinin şifrelemek ve şifrelenmiş bölümlerindeki şifreyi çözmek için kullanılan şifreleme anahtarını okuma erişimi olmalıdır.|  
-|<!--zz<xref:System.Configuration.DPAPIProtectedConfigurationProvider>-->`System.Configuration.DPAPIProtectedConfigurationProvider`|Yapılandırma bölümleri şifrelemek için Windows Data Protection API (DPAPI) kullanır. Windows yerleşik Şifreleme Hizmetleri kullanır ve makine özgü veya kullanıcı hesabı özel koruma için yapılandırılabilir. Makine özgü koruma bilgi paylaşmak için gereken aynı sunucuda birden çok uygulama için yararlıdır. Kullanıcı hesabı özel koruma, paylaşılan bir barındırma ortamı gibi belirli kullanıcı kimliği ile çalışan hizmetler ile kullanılabilir. Her uygulama dosyaları ve veritabanları gibi kaynaklara erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Şifrelemek ve verilerin şifresini çözmek için RSA şifreleme algoritması kullanır. RSA algoritması, ortak anahtar şifreleme ve dijital imzalar için kullanılabilir. İki farklı anahtarlara nedeniyledir "ortak anahtarı" ya da değiştirip asimetrik şifreleme olarak da bilinir değil. Kullanabileceğiniz [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) Web.config dosyasında bölümleri şifrelemek ve şifreleme anahtarlarını yönetmek için. Dosyayı işlediğinde, ASP.NET yapılandırma dosyasının şifresini çözer. ASP.NET uygulaması kimliğinin şifrelemek ve şifrelenmiş bölümlerindeki şifreyi çözmek için kullanılan şifreleme anahtarını okuma erişimi olmalıdır.|  
+|<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Yapılandırma bölümleri şifrelemek için Windows Data Protection API (DPAPI) kullanır. Windows yerleşik Şifreleme Hizmetleri kullanır ve makine özgü veya kullanıcı hesabı özel koruma için yapılandırılabilir. Makine özgü koruma bilgi paylaşmak için gereken aynı sunucuda birden çok uygulama için yararlıdır. Kullanıcı hesabı özel koruma, paylaşılan bir barındırma ortamı gibi belirli kullanıcı kimliği ile çalışan hizmetler ile kullanılabilir. Her uygulama dosyaları ve veritabanları gibi kaynaklara erişimi kısıtlayan ayrı bir kimlik altında çalışır.|  
   
  Her iki sağlayıcıları veri güçlü şifreleme sunar. Ancak, bir Web grubu gibi yalnızca birden çok sunucuda aynı şifrelenmiş yapılandırma dosyası kullanmak planlama, `RsaProtectedConfigurationProvider` , verileri şifrelemek ve başka bir sunucuda almak için kullanılan şifreleme anahtarlarını vermenize olanak sağlar. Daha fazla bilgi için bkz: [alma ve verme korumalı yapılandırma RSA anahtar kapsayıcıları](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
   

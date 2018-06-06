@@ -4,12 +4,12 @@ description: Dotnet komutu (.NET Core CLI araçlarını genel sürücüsü) ve k
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 6e9f37dbbf94d56266a7b424601845d4429b4a04
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
-ms.translationtype: HT
+ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753545"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805665"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -248,7 +248,7 @@ Komut | İşlev
 
 ### <a name="global-tools-commands"></a>Genel Araçlar komutları
 
-[.NET core genel Araçları](global-tools.md) .NET Core SDK'sı 2.1.300 kullanılabilir strating şunlardır:
+[.NET core genel Araçları](global-tools.md) .NET Core SDK 2.1.300 başlayarak kullanılabilir:
 
 Komut | İşlev
 --- | ---

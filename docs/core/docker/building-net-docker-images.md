@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d26bd102d30c48785196322b9631e568a5002135
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
-ms.translationtype: HT
+ms.openlocfilehash: ad143b16689a7d2d858dbadc92b5099f651548cc
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697280"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805639"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
 
@@ -58,7 +58,7 @@ Birden çok uygulama aynı makinede ortak görüntüleri kullandığınızda, be
 
 Görüntü çeşitleri altında sağladığımız yukarıdaki hedeflerinize ulaşmak için [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/).
 
-* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) Bu görüntü .NET Core ve komut satırı araçları (CLI) içeren .NET Core SDK'sı içerir. Bu görüntü eşlendiği **geliştirme senaryosu**. Bu görüntü, yerel geliştirme, hata ayıklama ve birim testi için kullanın. Bu görüntü için de kullanılabilir, **yapı** senaryoları. Kullanarak `microsoft/dotnet:sdk` her zaman en son sürümünü sağlar.
+* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.1-sdk`) Bu görüntü .NET Core ve komut satırı araçları (CLI) içeren .NET Core SDK'sı içerir. Bu görüntü eşlendiği **geliştirme senaryosu**. Bu görüntü, yerel geliştirme, hata ayıklama ve birim testi için kullanın. Bu görüntü için de kullanılabilir, **yapı** senaryoları. Kullanarak `microsoft/dotnet:sdk` her zaman en son sürümünü sağlar.
 
 > [!TIP]
 > Kullanmak istediğiniz, gereksinimleriniz hakkında konusunda emin değilseniz `microsoft/dotnet:<version>-sdk` görüntü. "Gerçek" görüntüsü olarak throw kullanılmak üzere tasarlanmıştır koyma kapsayıcı (kaynak kodu bağlayın ve kapsayıcı uygulamanızı başlatmak için Başlat) ve diğer görüntüleri oluşturmak için temel görüntü olarak.
@@ -80,9 +80,9 @@ Her değişken en son sürümleri:
 
 ## <a name="samples-to-explore"></a>Keşfetmek için örnekleri
 
-* [Bu ASP.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) Docker görüntülerinizi ASP.NET Core için üretim için uygulamalar oluşturmak için en iyi yöntem desen gösterir. Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
+* [Bu ASP.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) Docker görüntülerinizi ASP.NET Core için üretim için uygulamalar oluşturmak için en iyi yöntem desen gösterir. Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
 
-* Bu .NET Core Docker örneği için en iyi yöntem deseni gösterir [üretim için .NET Core uygulamaları için Docker görüntülerinizi oluşturmak.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)
+* Bu .NET Core Docker örneği için en iyi yöntem deseni gösterir [üretim için .NET Core uygulamaları için Docker görüntülerinizi oluşturmak.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
 
 ## <a name="your-first-aspnet-core-docker-app"></a>İlk ASP.NET Core Docker uygulamanızı
 
@@ -102,9 +102,9 @@ Kullandığı [Docker çok aşama yapı özelliği](https://docs.docker.com/engi
 
 Derlemek ve çalıştırmak için aşağıdaki öğeleri yükleyin:
 
-#### <a name="net-core-20-sdk"></a>.NET core 2.0 SDK'sı
+#### <a name="net-core-21-sdk"></a>.NET core 2.1 SDK'sı
 
-* Yükleme [.NET Core SDK 2.0](https://www.microsoft.com/net/core).
+* Yükleme [.NET Core SDK 2.1](https://www.microsoft.com/net/core).
 
 * Henüz yapmadıysanız, sık kullanılan kod düzenleyicisinde yükleyin.
 
@@ -113,7 +113,7 @@ Derlemek ve çalıştırmak için aşağıdaki öğeleri yükleyin:
 
 #### <a name="installing-docker-client"></a>Docker istemcisi yükleme
 
-Yükleme [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki.
+Yükleme [Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki.
 
 Docker istemci yüklenebilir:
 
@@ -137,22 +137,26 @@ Docker istemci yüklenebilir:
 
 ### <a name="getting-the-sample-application"></a>Örnek uygulama alma
 
-Kopyalama işlemi tarafından örnek almak için en kolay yolu olan [örnekleri depo](https://github.com/dotnet/dotnet-docker-samples) git ile aşağıdaki yönergeleri kullanarak: 
+Kopyalama işlemi tarafından örnek almak için en kolay yolu olan [.NET Core Docker depo](https://github.com/dotnet/dotnet-docker) git ile aşağıdaki yönergeleri kullanarak: 
 
 ```console
-git clone https://github.com/dotnet/dotnet-docker-samples/
+git clone https://github.com/dotnet/dotnet-docker
 ```
 
-.NET Core Docker örnekleri depodan bir zip olarak (küçük) deposu de indirebilirsiniz.
+.NET Core Docker depodan bir zip olarak (küçük) deposu de indirebilirsiniz.
 
 ### <a name="run-the-aspnet-app-locally"></a>ASP.NET uygulama yerel olarak çalıştırma
 
 Biz uygulama containerize önce bir başvuru noktası için ilk uygulama yerel olarak çalıştırın.
 
-Derleme ve uygulamayı .NET Core 2.0 (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak SDK ile yerel olarak çalıştırın:
+Derleme ve uygulamayı .NET Core 2.1 (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak SDK ile yerel olarak çalıştırın:
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+cd aspnetapp // project scope
+
 dotnet run
 ```
 
@@ -163,7 +167,10 @@ Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıc�
 Derleme ve örnek (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak Linux kapsayıcıları kullanma Docker içinde çalıştırın:
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
@@ -178,7 +185,10 @@ Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıc�
 Derleme ve örnek (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak Windows kapsayıcıları kullanma Docker içinde çalıştırın:
 
 ```console
-cd aspnetapp
+cd dotnet-docker
+cd samples
+cd aspnetapp // solution scope where the dockerfile is located
+
 docker build -t aspnetapp .
 docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
@@ -236,10 +246,10 @@ dotnet published/aspnetapp.dll
 
 ### <a name="docker-images-used-in-this-sample"></a>Bu örnekte kullanılan docker görüntüleri
 
-Bu örnekte kullanılan aşağıdaki Docker yansımaları
+Aşağıdaki Docker görüntüleri Bu örnek 's dockerfile kullanılır.
 
-* `microsoft/aspnetcore-build:2.0`
-* `microsoft/aspnetcore:2.0`
+* `microsoft/dotnet:2.1-sdk`
+* `microsoft/dotnet:2.1-aspnetcore-runtime`
 
 Tebrikler! yalnızca gerekir:
 > [!div class="checklist"]

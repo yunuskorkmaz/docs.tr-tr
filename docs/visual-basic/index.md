@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805548"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic Kılavuzu
 
@@ -51,5 +52,5 @@ Visual Basic üretken tür kullanımı uyumlu ve nesne yönelimli uygulamaları 
  [Visual Studio ile Geliştirmeye Başlama](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Yardımcı konulara bağlantılar Visual Studio temel kavramları hakkında bilgi sağlar.  
   
- [.NET framework sınıf kitaplığı](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API tarayıcı](../../api/index.md)  
  Sınıfları ve arabirimleri Microsoft bulunan değer türleri kitaplığının girişe sağlar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.

@@ -12,11 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805743"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ) Visual Basic'e sorgu özellikleri ekler ve her türlü verileri çalıştığınızda basit ve güçlü özellikler sağlar. İşlenmek üzere bir veritabanına bir sorgu gönderme veya her aradığınız veri türü için farklı sorgu sözdizimi ile çalışma yerine LINQ sorgularını Visual Basic dilinin bir parçası olarak tanıtır. Veri türü ne olursa olsun birleşik bir sözdizimi kullanır.  
@@ -189,7 +190,7 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic'e sorgu özellikleri ekler ve her t
  [Nasıl yapılır: güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atayın](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>Özel Kitap Bölümleri  
- [Bölüm 17: LINQ](http://go.microsoft.com/fwlink/?LinkId=195277) içinde [Visual Basic 2008 programlama](http://go.microsoft.com/fwlink/?LinkId=195383)  
+ [Bölüm 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) içinde [Visual Basic 2008 programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

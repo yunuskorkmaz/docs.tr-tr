@@ -10,11 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 06397cf05fc4da977cfecb8e412f12766a2a342d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0f6d026714f8e933dc75dbb7c3a5e6e8e1bd795
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805454"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlemi gerçekleştiren bir kod öğedir. Değer öğeleri dahil değişkenlerinin, sabitleri, değişmez değerleri, özellikler, döndürür `Function` ve `Operator` yordamları ve ifadeler.  
@@ -61,7 +62,7 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
   
  Önceki örnekte, Visual Basic ifade işlemlerinde atama işlecinin sağ tarafında gerçekleştirir (`=`), ardından sonuç değeri değişkenine atar `x` soldaki. Bir ifade, ancak bir anlayış birleştirilebilir işleçleri sayısına pratik bir sınır yoktur [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md) beklediğiniz sonuçları aldığından emin olmak gereklidir.  
   
- Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Daha fazla bilgi ve örnekler için bkz: [İşleç aşırı yüklemesi Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İşleçler](../../../../visual-basic/language-reference/operators/index.md)  
