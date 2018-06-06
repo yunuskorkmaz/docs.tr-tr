@@ -3,13 +3,13 @@ title: DotNet command - .NET Core CLI
 description: Dotnet komutu (.NET Core CLI araçlarını genel sürücüsü) ve kullanımı hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/30/2018
-ms.openlocfilehash: 4087cbc666bb837e6048695a2ebbd6f4821b528a
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
-ms.translationtype: MT
+ms.date: 06/04/2018
+ms.openlocfilehash: 6e9f37dbbf94d56266a7b424601845d4429b4a04
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34696413"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753545"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -261,13 +261,13 @@ Komut | İşlev
 
 .NET Core SDK 2.1.300, yalnızca bir başına proje temel kullanarak kullanılabilir araçları sayısı ile başlayan `DotnetCliToolReference` artık kullanılabilir .NET Core SDK'ın bir parçası olarak. Bu araçlar içerir:
 
-| Aracı                                    | İşlev                                                     |
-| --------------------------------------- | ------------------------------------------------------------ |
-| Geliştirme sertifikaları                               | Oluşturur ve geliştirme sertifikaları yönetir.                |
-| [EF](/ef/core/miscellaneous/cli/dotnet) | Entity Framework Çekirdek komut satırı araçları.                    |
-| SQL önbellek                               | SQL Server önbellek komut satırı araçları.                         |
-| kullanıcı parolaları                            | Geliştirme kullanıcı parolaları yönetir.                            |
-| İzleme                                   | Dosyalar değiştiğinde, bir komut çalıştıran bir dosya İzleyicisi başlatır. |
+| Aracı                                              | İşlev                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| Geliştirme sertifikaları                                         | Oluşturur ve geliştirme sertifikaları yönetir.                |
+| [EF](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Çekirdek komut satırı araçları.                    |
+| SQL önbellek                                         | SQL Server önbellek komut satırı araçları.                         |
+| [kullanıcı parolaları](/aspnet/core/security/app-secrets) | Geliştirme kullanıcı parolaları yönetir.                            |
+| [İzleme](/aspnet/core/tutorials/dotnet-watch)      | Dosyalar değiştiğinde, bir komut çalıştıran bir dosya İzleyicisi başlatır. |
 
 Her aracı hakkında daha fazla bilgi için yürütme `dotnet <tool-name> --help`.
 

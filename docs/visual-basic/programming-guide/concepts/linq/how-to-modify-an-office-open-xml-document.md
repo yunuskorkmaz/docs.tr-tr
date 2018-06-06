@@ -2,16 +2,17 @@
 title: 'Nasıl yapılır: Office Açık XML belgesi (Visual Basic) değiştirme'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 97e754f37580af990b1aaa64f389de5cbce91d60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753399"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: Office Açık XML belgesi (Visual Basic) değiştirme
 Bu konuda, kaydeder Office Açık XML belge açılır ve değiştirdiği bir örnek sunulmaktadır.  
   
- Office Açık XML hakkında daha fazla bilgi için bkz: [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Office Açık XML hakkında daha fazla bilgi için bkz: [Eric Beyaz'ın blogu](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, belgede ilk paragraf öğesini bulur. Paragrafın metni alır ve ardından siler tüm metni paragrafta çalıştırır. Büyük harfe dönüştürülmüş ilk paragraf metni oluşan çalıştırmak bir yeni metin oluşturur. Open XML pakete değiştirilen XML serileştirir ve kapatılır.  

@@ -9,11 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c1588fa48631aec4e185fd8362a02505aa15e58
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753467"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanarak güvenli uygulamaları oluştururken dikkate alınması gereken en iyi uygulamaları listeleyin. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -32,9 +33,7 @@ Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanarak güv
 -   daha güçlü şifreleme algoritmaları kullanımını ve  
   
 -   X509 kullanan büyük zorluğunu iletilen kimlik bilgileri.  
-  
- Saldırıları iletme NTLM genel bakış için Git [ http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx ](http://go.microsoft.com/fwlink/?LinkId=109571).  
-  
+   
 ## <a name="always-revert-after-impersonation"></a>Kimliğe bürünme sonra her zaman geri  
  İstemcinin kimliğe bürünme özelliğini etkinleştirme API'leri kullanırken, özgün kimliğine geri dönülemiyor emin olun. Kullanırken, örneğin, <xref:System.Security.Principal.WindowsIdentity> ve <xref:System.Security.Principal.WindowsImpersonationContext>, C# kullanan `using` deyimi veya Visual Basic`Using` aşağıdaki kodda gösterildiği gibi deyimi. <xref:System.Security.Principal.WindowsImpersonationContext> Uygulayan sınıf <xref:System.IDisposable> arabirimi ve bu nedenle ortak dil çalışma zamanı (CLR) otomatik olarak özgün kimliğine geri döner kodu bırakır sonra `using` bloğu.  
   

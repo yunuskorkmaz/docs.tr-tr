@@ -2,11 +2,12 @@
 title: SQL Server'da güvenli dinamik SQL yazma
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753480"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server'da güvenli dinamik SQL yazma
 SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir kullanıcının girdiği işlemidir. Giriş doğrulamasından geçmeden doğrudan sunucuya geçirilir ve uygulama yanlışlıkla eklenen kod yürütülürse, saldırı zarar veya verilere zarar olasılığı vardır.  
@@ -63,8 +64,7 @@ SQL ekleme olarak Transact-SQL deyimi geçerli giriş yerine kötü niyetli bir 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Saklı yordamlar](http://go.microsoft.com/fwlink/?LinkId=98233) ve [SQL ekleme](http://go.microsoft.com/fwlink/?LinkId=98234) SQL Server Çevrimiçi Kitapları'nda|Konularda saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığı açıklanmaktadır.|  
-|[Yeni SQL kesilmesi saldırıları ve bunları önlemenin](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/) MSDN dergisi içinde.|Karakterler ve dizeler, SQL ekleme ve değiştirme kesilmesi saldırılarının sınırlandırmak açıklar.|  
+|[Saklı yordamlar](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](/sql/relational-databases/security/sql-injection) SQL Server Çevrimiçi Kitapları'nda|Konularda saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığı açıklanmaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

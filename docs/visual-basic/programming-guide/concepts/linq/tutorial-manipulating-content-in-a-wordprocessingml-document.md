@@ -2,16 +2,17 @@
 title: 'Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: f43f193ed637656cef98583075ae0cb35e93c337
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18008ebdf7f8d2bb3ca7abcc157109c9dc9c1ffe
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753441"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Öğretici: Düzenleme içeriği WordprocessingML belgesinde (Visual Basic)
 Bu öğretici, XML ve XML belgeleri işlemek için LINQ ve işlevsel transformational yaklaşımı uygulamak gösterilmiştir. Visual Basic örnek sorgu ve Microsoft Word tarafından kaydedilen Office Açık XML WordprocessingML belgelerde bilgiyi işleyebilir.  
   
- Daha fazla bilgi için bkz: [OpenXML Geliştirici](http://go.microsoft.com/fwlink/?LinkID=95573) Web sitesi.  
+ Daha fazla bilgi için bkz: [Eric Beyaz'ın blogu](http://www.ericwhite.com).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

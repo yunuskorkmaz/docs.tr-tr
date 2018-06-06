@@ -6,7 +6,7 @@ ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728660"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 yenilikler nelerdir?

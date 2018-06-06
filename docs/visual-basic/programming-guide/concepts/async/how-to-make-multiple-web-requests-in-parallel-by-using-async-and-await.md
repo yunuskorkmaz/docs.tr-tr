@@ -6,7 +6,7 @@ ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728449"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Nasıl yapılır: Async kullanarak birden çok Web isteğini paralel hale ve Await (Visual Basic)

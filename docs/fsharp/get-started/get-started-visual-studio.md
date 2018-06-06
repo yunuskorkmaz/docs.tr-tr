@@ -2,11 +2,12 @@
 title: 'F # Visual Studio ile çalışmaya başlama'
 description: 'F # Visual Studio ile nasıl kullanacağınızı öğrenin.'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728540"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>F # Visual Studio ile çalışmaya başlama
 
@@ -71,58 +72,6 @@ Visual Studio Sil'i yukarı konsol penceresine yazdırılan aşağıdaki görmel
 ```
 
 Tebrikler!  Visual Studio'da ilk F # projenize oluşturulan, bu işlev çağırma sonuçları bir F # işlevi yazdırılan yazılır ve bazı sonuçları görmek için projesini çalıştırın.
-
-## <a name="using-f-interactive"></a>F # Etkileşimli kullanma
-
-En iyi özelliklerini Visual F Visual Studio'da tooling # F # Etkileşimli pencere biridir.  Burada bu kodu çağırın ve sonuçları etkileşimli olarak görmek bir işlem kodu üzerinden göndermenize olanak sağlar.
-
-Kullanmaya başlamak için vurgulayın `square` kodunuzda tanımlanan işlevi.  Ardından, tutun **Alt** anahtar ve tuşuna **Enter**.  Bu kod F # Etkileşimli penceresinde yürütür.  F # Etkileşimli aşağıdakileri görünür penceresini görmeniz gerekir:
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-Bu aynı işlev imzası gösterir `square` işlevi üzerine getirildiği oluşturduğunuzda, daha önce gördüğünüzle işlevi.  Çünkü `square` olduğundan F # Etkileşimli işlemde tanımlanan şimdi farklı değerlerle çağırabilirsiniz:
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-Bu işlev çalıştırır, yeni bir ad sonucu bağlar `it`, türünü ve değerini görüntüler `it`.  Her satırın bitmesi Not `;;`.  Nasıl F # Etkileşimli işlev çağrısı bittiği bilir budur.  F # Etkileşimli'de yeni işlevler de tanımlayabilirsiniz:
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-Yukarıdaki yeni bir işlev tanımlayan `isOdd`, hangi alır bir `int` ve tek olup olmadığını görmek için denetimleri! Neler farklı girişle döndürür görmek için bu işlevi çağırabilirsiniz.  İşlev çağrıları işlevlerinde çağırabilirsiniz:
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-De kullanabilirsiniz [kanal İleri işleci](../language-reference/symbol-and-operator-reference/index.md) değeri iki işlevlerini kanalı için:
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-Kanal İleri işleci ve daha fazlası sonraki öğreticilerde ele alınmıştır.
-
-F # Etkileşimli ile neler yapabileceğinizi içine yalnızca bir bakışta budur. Daha fazla bilgi için kullanıma [etkileşimli programlama F # ile](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

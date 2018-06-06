@@ -2,16 +2,17 @@
 title: 'Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753318"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Nasıl yapılır: almak paragrafları Office Açık XML belgesinden (Visual Basic)
 Bu konuda, bir Office Açık XML belge açılır ve belgedeki paragrafları bir koleksiyonunu alır bir örnek sunulmaktadır.  
   
- Office Açık XML hakkında daha fazla bilgi için bkz: [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Office Açık XML hakkında daha fazla bilgi için bkz: [Eric Beyaz'ın blogu](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Örnek  
  Bu örnek bir Office Açık XML paketi açıldığında, Open XML paketin içinde ilişkileri belge ve stil bölümleri bulmak için kullanır. Ardından paragraf içeren anonim bir tür topluluğu yansıtma belgenin sorgular <xref:System.Xml.Linq.XElement> düğümü, her paragraf stili adını ve her paragraf metni.  

@@ -6,7 +6,7 @@ ms.openlocfilehash: a6783373f4b556694fd79401546665b09f55919d
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728511"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) zaman uyumsuz programlarda denetim akışı
