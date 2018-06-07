@@ -2,11 +2,12 @@
 title: 'F # turu'
 description: 'F # kod örnekleriyle birlikte bu tur dilde programlama önemli özelliklerinden bazıları inceleyin.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753493"
 ---
 # <a name="tour-of-f"></a>F # turu #
 
@@ -54,11 +55,11 @@ F # 4.1 itibariyle, ayrıca oluşturabileceğiniz `struct` diziler.  Bu ayrıca 
 
 ## <a name="pipelines-and-composition"></a>Ardışık Düzen ve oluşturma
 
-Yöneltme işleçleri (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) ve birleşim işleçleri (`>>` ve `<<`) F # verileri işlerken, yaygın olarak kullanılır.  Bu işleçlere esnek bir şekilde işlevlerin "ardışık" kurmanızı sağlayan işlevlerdir.  Aşağıdaki örnekte basit bir işlev ardışık düzen oluşturmak için bu işleçlere avantajlarından nasıl ele geçirebilir aracılığıyla anlatılmaktadır.
+İşleçler gibi kanal `|>` F # verileri işlerken, yaygın olarak kullanılır. Bu işleçlere esnek bir şekilde işlevlerin "ardışık" kurmanızı sağlayan işlevlerdir. Aşağıdaki örnekte nasıl basit bir işlev ardışık düzen oluşturmak için bu işleçlerinin yararlanabilirsiniz aracılığıyla yardımcı olur:
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-Yukarıdaki örnek yapılan F #'ın listesi işleme İşlevler, birinci sınıf işlevleri dahil olmak üzere, birçok özellik kullanımını ve [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments).  Bu kavramları her derin bir anlayış Gelişmiş biraz hale karşın, bu işlevler ardışık düzen oluştururken verileri işlemek için ne kadar kolay kullanılabilir açık olmalıdır.
+Yapılan önceki örnek F #'ın listesi işleme İşlevler, birinci sınıf işlevleri dahil olmak üzere, birçok özellik kullanımını ve [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments). Bu kavramları her derin bir anlayış Gelişmiş biraz hale karşın, bu işlevler ardışık düzen oluştururken verileri işlemek için ne kadar kolay kullanılabilir açık olmalıdır.
 
 ## <a name="lists-arrays-and-sequences"></a>Listeleri, dizileri ve dizileri
 
