@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ad143b16689a7d2d858dbadc92b5099f651548cc
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805639"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827345"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
 
@@ -48,7 +48,7 @@ Geliştirme, derleme ve kapsayıcılı uygulamaları çalıştıran farklı önc
     * .js ve .css dosyaları
 
 
-Eklenecek neden `dotnet publish` üretim görüntünüzü komut çıktısında olduğu tutmak için ' minimum boyut.
+Eklenecek neden `dotnet publish` üretim görüntünüzü komut çıktısında olduğu boyutuna minimum değerde tutmak için.
 
 Bazı .NET Core görüntüleri katmanları son etiket indirme oldukça basit bir işlemdir şekilde farklı etiketler arasında paylaşın. Makinenizde zaten daha eski bir sürümü varsa, bu mimarinin gerekli disk alanı azaltır.
 

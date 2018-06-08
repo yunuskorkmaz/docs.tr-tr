@@ -1,21 +1,22 @@
 ---
-title: Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma
+title: Visual Studio 2017 .NET standart kitaplığında kullanma
 description: Visual Studio 2017 ile bir sınıf kitaplığı'nda üyeleri çağrı öğrenin.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827319"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı kullanma
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Visual Studio 2017 .NET standart kitaplığında kullanma
 
-Bir sınıf kitaplığı'ndaki adımları izleyerek oluşturduktan sonra [bir Visual Studio 2017 .NET çekirdek ile C# sınıf kitaplığı oluşturma](./library-with-visual-studio.md) veya [bir Visual Basic sınıf kitaplığı ile Visual Studio 2017 .NET çekirdek oluşturma](vb-library-with-visual-studio.md), içinde test [Visual Studio 2017 içinde bir sınıf kitaplığı .NET Core ile test](testing-library-with-visual-studio.md), ve bir kitaplık sürümü oluşturulmuş, sonraki adıma arayanlara kullanılabilir hale getirmek için. Bunu iki şekilde yapabilirsiniz:
+.NET standart bir sınıf kitaplığı'ndaki adımları izleyerek oluşturduktan sonra [bir Visual Studio 2017 .NET çekirdek ile C# sınıf kitaplığı oluşturma](./library-with-visual-studio.md) veya [bir Visual Basic sınıf kitaplığı Visual Studio 2017 .NET çekirdek ile oluşturma ](vb-library-with-visual-studio.md), içinde test [Visual Studio 2017 içinde bir sınıf kitaplığı .NET Core ile test](testing-library-with-visual-studio.md), ve bir kitaplık sürümü oluşturulmuş, sonraki adıma arayanlara kullanılabilir hale getirmek için. Bunu iki şekilde yapabilirsiniz:
 
 * (Örneğin, bir bileşenin tek bir büyük uygulama ise) tek bir çözüm tarafından kullanılacak kitaplık, çözümünüz içinde bir proje olarak ekleyebilirsiniz.
 
@@ -48,7 +49,7 @@ Sınıf kitaplığı olarak aynı çözümde birim testleri dahil gibi uygulaman
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Kod kullanan [Console.WindowHeight](xref:System.Console.WindowHeight) konsol penceresinde satır sayısını belirlemek için özelliği. Her [Console.CursorTop](xref:System.Console.CursorTop) özelliği büyüktür veya konsol penceresi satır sayısına eşit, kod konsol penceresini temizler ve kullanıcı için bir ileti görüntülenir.
+   Kod kullanan `row` konsol penceresine yazılan veri satırı sayısını korumak için değişkeni. 25 eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcı için bir ileti görüntülenir.
 
    Program kullanıcının bir dize girmesini ister. Bu dize bir büyük harf karakter ile başlayıp başlamadığını gösterir. Kullanıcı, bir dize girmeden Enter tuşuna basarsa, uygulama sonlandırır ve konsol penceresi kapanır.
 
@@ -78,7 +79,7 @@ Sınıf kitaplığı olarak aynı çözümde birim testleri dahil gibi uygulaman
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Kod kullanan [Console.WindowHeight](xref:System.Console.WindowHeight) konsol penceresinde satır sayısını belirlemek için özelliği. Her [Console.CursorTop](xref:System.Console.CursorTop) özelliği büyüktür veya konsol penceresi satır sayısına eşit, kod konsol penceresini temizler ve kullanıcı için bir ileti görüntülenir.
+   Kod kullanan `row` konsol penceresine yazılan veri satırı sayısını korumak için değişkeni. 25 eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcı için bir ileti görüntülenir.
 
    Program kullanıcının bir dize girmesini ister. Bu dize bir büyük harf karakter ile başlayıp başlamadığını gösterir. Kullanıcı, bir dize girmeden Enter tuşuna basarsa, uygulama sonlandırır ve konsol penceresi kapanır.
 

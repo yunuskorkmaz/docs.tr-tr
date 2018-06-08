@@ -1,7 +1,7 @@
 ---
 title: Bağımlılık özelliklerine genel bakış
 description: WPF özellik sistemi tarafından yedeklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakışta, WPF özellik sistemi ve bağımlılık özelliği özelliklerini açıklar.
-ms.date: 03/30/2017
+ms.date: 06/06/2018
 dev_langs:
 - csharp
 - vb
@@ -14,36 +14,37 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827013"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] işlevlerini genişletmek için kullanılan hizmetleri kümesi sağlayan bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özelliği. Toplu olarak, bu hizmetler genellikle denir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Tarafından yedeklenen bir özellik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi, bir bağımlılık özelliği olarak bilinir. Bu genel bakış açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi ve bağımlılık özelliği özelliklerini. XAML ve kod varolan bağımlılık özellikleri kullanmayı içerir. Bu genel bakışta, aynı zamanda özelleştirilmiş yönlerini bağımlılık özelliği meta verileri ve özel bir sınıf içinde kendi bağımlılık özelliği yaratmayı gibi bağımlılık özellikleri sunar.
+Windows Presentation Foundation (WPF) sağlayan bir tür işlevselliğini genişletmek için kullanılan hizmetleri kümesi [özelliği](../../../standard/base-types/common-type-system.md#Properties). Topluca, bu hizmetleri genellikle WPF özellik sistemi olarak adlandırılır. WPF özellik sistemi tarafından yedeklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakışta, WPF özellik sistemi ve bağımlılık özelliği özelliklerini açıklar. XAML ve kod varolan bağımlılık özellikleri kullanmayı içerir. Bu genel bakışta, aynı zamanda özelleştirilmiş yönlerini bağımlılık özelliği meta verileri ve özel bir sınıf içinde kendi bağımlılık özelliği yaratmayı gibi bağımlılık özellikleri sunar.
 
 ## <a name="prerequisites"></a>Önkoşullar
-Bu konu bazı temel bilgiye sahip olduğunuzu varsayar [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ve nesne odaklı programlama. Bu konudaki örnekleri takip etmek için ayrıca anlamanız gereken [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Daha fazla bilgi için bkz: [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+Bu konu, .NET tür sistemi ve nesne odaklı programlama bazı temel bilgiye sahip olduğunu varsayar. Bu konudaki örnekleri takip etmek için ayrıca XAML anlamak ve WPF uygulamaların nasıl yazılacağını bilmeniz gerekir. Daha fazla bilgi için bkz: [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Bağımlılık özellikleri ve CLR Özellikleri
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], özellikleri olarak açığa genellikle [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Temel düzeyde, bu özellikleri ile doğrudan etkileşim ve hiçbir zaman bir bağımlılık özelliği olarak uygulanan biliyorsanız. Ancak, bazı veya tüm özelliklerin bir kısmı tanıdık olmanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi, böylece bu özelliklerden yararlanabilir.
+ WPF içinde özellikleri genellikle standart .NET sunulan [özellikleri](../../../standard/base-types/common-type-system.md#Properties). Temel düzeyde, bu özellikleri ile doğrudan etkileşim ve hiçbir zaman bir bağımlılık özelliği olarak uygulanan biliyorsanız. Bu özelliklerden yararlanabilmeniz ancak, bazı veya tüm WPF özellik sistemi özelliklerini tanıdık olmanız gerekir.
 
 Bağımlılık özellikleri amacı, diğer girişlerini değere göre bir özelliğin değerini hesaplamak için bir yol sağlamaktır. Bu diğer girişler içerebilir temalar ve kullanıcı tercihi gibi sistem özellikleri, veri bağlama ve animasyonları/film şeritleri, kaynakları ve stiller ya da bilinen değerleri gibi çoklu kullanım şablonları gibi tam zamanında özellik belirleme mekanizması öğe ağacındaki diğer öğelerle üst-alt ilişkisi. Ayrıca, bir bağımlılık özelliği, kendi içinde yer alan doğrulama, varsayılan değerler, diğer özellikleri değişiklikleri izlemek geri aramalar ve olası çalışma zamanı bilgilere dayanarak özellik değerlerini coerce bir sistem sağlamak üzere uygulanabilir. Türetilen sınıflar, ayrıca bağımlılık özelliği meta verileri geçersiz kılma yerine tarafından özellikleri varolan veya yeni özellikleri oluşturma gerçek uygulamayı geçersiz kılma mevcut bir özellik belirli bazı özelliklerini değiştirebilirsiniz.
 
 SDK Başvurusu'nda, bağımlılık özelliği bu özellik için yönetilen başvuru sayfasındaki bağımlılık özelliği bilgileri bölümünden varlığını tarafından hangi özelliktir tanımlayabilirsiniz. Bağımlılık özelliği bilgileri bölümüne bir bağlantı içerir <xref:System.Windows.DependencyProperty> tanımlayıcı alan bu bağımlılık özelliği için ve ayrıca bu özellik, sınıf başına geçersiz kılma bilgilerini ve diğer ayrıntılar için ayarlanan meta verileri seçeneklerinin bir listesini içerir.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Bağımlılık özellikleri, CLR özelliklerini yedekler.
-Bağımlılık özellikleri ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi bir özel alan özelliğiyle yedekleme standart deseni için alternatif bir uygulama olarak bir özellik yedekleyen bir tür sağlayarak özellik işlevselliğini genişletir. Bu tür adı <xref:System.Windows.DependencyProperty>. Tanımlayan diğer önemli tür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliği sistem <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> kaydeden ve bir bağımlılık özelliği kendi temel sınıf tanımlar.
+Bağımlılık özellikleri ve WPF özellik sistemi özellik işlevselliğini özel alan özelliğiyle yedekleme standart deseni için alternatif bir uygulama olarak bir özellik yedekleyen bir tür sağlayarak genişletir. Bu tür adı <xref:System.Windows.DependencyProperty>. WPF özellik sistemi tanımlar bir önemli tür <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> kaydeden ve bir bağımlılık özelliği kendi temel sınıf tanımlar.
 
-Bu konuda kullanılan terminolojiyi özetlemesi [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] bağımlılık özellikleri ele alırken belgeleri:
+Bağımlılık özellikleri ile kullanılan terimleri listelenmektedir:
 
 - **Bağımlılık özelliği:** tarafından yedeklenen bir özelliği bir <xref:System.Windows.DependencyProperty>.
 
-- **Bağımlılık özelliği tanımlayıcı:** A <xref:System.Windows.DependencyProperty> dönüş değeri olarak bir bağımlılık özelliği kaydederken elde ve statik sınıf üyesi olarak depolanan örneği. Bu tanımlayıcı çoğu için parametre olarak kullanılan [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] etkileşimde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi.
+- **Bağımlılık özelliği tanımlayıcı:** A <xref:System.Windows.DependencyProperty> dönüş değeri olarak bir bağımlılık özelliği kaydederken elde ve statik sınıf üyesi olarak depolanan örneği. Bu tanımlayıcı, WPF özellik sistemi ile etkileşim API'leri birçoğu için parametre olarak kullanılır.
 
-- **CLR "sarmalayıcı":** gerçek alma ve ayarlama özelliği için uygulamaları. Bu uygulamalar içindeki kullanarak bağımlılık özelliği tanımlayıcı dahil <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> çağrıları, böylece yedekleme özelliğini kullanarak için sağlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi.
+- **CLR "sarmalayıcı":** gerçek alma ve ayarlama özelliği için uygulamaları. Bu uygulamalar içindeki kullanarak bağımlılık özelliği tanımlayıcı dahil <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> çağrıları, böylece WPF özellik sistemi kullanan özellik için destek sağlama.
 
 Aşağıdaki örnek tanımlar `IsSpinning` bağımlılık özelliği ve ilişkisi gösterilmektedir <xref:System.Windows.DependencyProperty> tanımlayıcısı ile onu yedekleyen özellik.
 
@@ -56,7 +57,7 @@ Aşağıdaki örnek tanımlar `IsSpinning` bağımlılık özelliği ve ilişkis
 Kod veya XAML özellikleri ayarlayabilirsiniz.
 
 ### <a name="setting-property-values-in-xaml"></a>XAML'de özellik değerlerini ayarlama 
-Aşağıdaki XAML örnek kırmızı düğme arka plan rengini belirtir. Bu örnek bir XAML özniteliği için basit bir dize değeri olduğu türü-WPF XAML çözümleyiciye dönüştürülen bir durumu gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] türü (bir <xref:System.Windows.Media.Color>, tarafından yolu, bir <xref:System.Windows.Media.SolidColorBrush>) oluşturulan kod.
+Aşağıdaki XAML örnek kırmızı düğme arka plan rengini belirtir. Bu örnek bir XAML özniteliği için basit bir dize değeri olduğu bir WPF türü WPF XAML çözümleyiciye tarafından türe dönüştürülüp bir durumu gösterir (bir <xref:System.Windows.Media.Color>, tarafından yolu, bir <xref:System.Windows.Media.SolidColorBrush>) oluşturulan kod.
 
 [!code-xaml[PropertiesOvwSupport#MostBasicProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#mostbasicproperty)]
 
@@ -82,7 +83,7 @@ Ayrıca, özellik sistemi çağırabilirsiniz [!INCLUDE[TLA2#tla_api#plural](../
 Özellikler de XAML'de ayarlayın ve daha sonra kod, arka plan kodu üzerinden erişilebilir. Ayrıntılar için bkz [arka plan kod ve WPF XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).
 
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>Bağımlılık özelliği tarafından sağlanan özellik işlevselliği
-Bir özelliğe karşı işlevselliğini genişleten işlevselliği bir alan tarafından yedeklenen bir bağımlılık özelliği sağlar. Genellikle, her tür işlevselliği temsil eder veya belirli bir özelliği olan bütün destekleyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikler kümesi:
+Bir özelliğe karşı işlevselliğini genişleten işlevselliği bir alan tarafından yedeklenen bir bağımlılık özelliği sağlar. Genellikle, bu tür işlevselliği temsil eder veya aşağıdaki belirli özellikler destekler:
 
 - [Kaynaklar](#resources)
 
@@ -107,7 +108,7 @@ Kaynak tanımlandıktan sonra referans ve bir özellik değeri sağlamak için k
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-Bu belirli kaynak olarak başvurulan bir [DynamicResource Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (WPF XAML içinde statik veya dinamik kaynak başvurusu kullanabilirsiniz). Tarafından etkinleştirilen özellikle dinamik kaynak başvurusu kullanımı olacak şekilde dinamik kaynak başvurusu kullanmak için bir bağımlılık özelliği için ayarlamanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+Bu belirli kaynak olarak başvurulan bir [DynamicResource Biçimlendirme Uzantısı](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) (WPF XAML içinde statik veya dinamik kaynak başvurusu kullanabilirsiniz). WPF özelliği sistem tarafından etkinleştirilen özellikle dinamik kaynak başvurusu kullanımı olacak şekilde dinamik kaynak başvurusu kullanmak için bir bağımlılık özelliği için ayarlamanız gerekir. Daha fazla bilgi için bkz: [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).
 
 > [!NOTE]
 > Kaynak başka bir yerel değer ayarlarsanız, kaynak başvurusu giderilecektir yani bir yerel değer olarak kabul edilir. Daha fazla bilgi için bkz: [bağımlılık özelliği değeri önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
@@ -135,7 +136,7 @@ Aşağıdaki örnek çok basit bir stil oluşturur (hangi tanımlanması içinde
 
 Daha fazla bilgi için bkz: [stil ve şablon](../../../../docs/framework/wpf/controls/styling-and-templating.md).
 
-### <a name="animations"></a>Animasyon
+### <a name="animations"></a>Animasyonlar
 Bağımlılık özellikleri animasyon uygulanabilir. Animasyonun uygulanır ve çalışır durumda olduğunda, aksi takdirde özelliğine sahip herhangi bir değer (örneğin, yerel bir değeri) daha yüksek öncelikle animasyonlu değer çalışır.
 
 Aşağıdaki örnek canlandırır <xref:System.Windows.Controls.Control.Background%2A> üzerinde bir <xref:System.Windows.Controls.Button> özelliği (teknik olarak <xref:System.Windows.Controls.Control.Background%2A> boş belirtmek için özellik öğesi sözdizimini kullanarak animasyonlu <xref:System.Windows.Media.SolidColorBrush> olarak <xref:System.Windows.Controls.Control.Background%2A>, sonra <xref:System.Windows.Media.SolidColorBrush.Color%2A> , özelliği <xref:System.Windows.Media.SolidColorBrush> doğrudan animasyonlu özelliktir).
@@ -170,7 +171,7 @@ Daha fazla bilgi için bkz: [özellik değeri devralma](../../../../docs/framewo
 Bağımlılık özellikleri uygun alacak şekilde uygulanan özelliklere sahip özel bir denetim [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] destekler. Bir örnektir ile doğrudan ve iliştirilmiş bağımlılık özelliklerini düzenleme yeteneğini **özellikleri** penceresi. Daha fazla bilgi için bkz: [denetimine genel bakış yazma](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
 
 ## <a name="dependency-property-value-precedence"></a>Bağımlılık özelliği değeri önceliği
-Bir bağımlılık özelliğinin değeri aldığınızda, bu özellik katılan diğer özelliği tabanlı girişleri herhangi biri üzerinden ayarlanan bir değer alma olasılığı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Böylece çeşitli senaryolarda nasıl özelliklerini değerleri almak için tahmin edilebilir bir yolla etkileşebilir bağımlılık özelliği değeri önceliği bulunmaktadır.
+Bir bağımlılık özelliğinin değeri aldığınızda, büyük olasılıkla bu özellik, WPF özelliği sisteme katılan diğer özelliği tabanlı girişleri herhangi biri üzerinden ayarlanan bir değeri elde. Böylece çeşitli senaryolarda nasıl özelliklerini değerleri almak için tahmin edilebilir bir yolla etkileşebilir bağımlılık özelliği değeri önceliği bulunmaktadır.
 
 Aşağıdaki örnek göz önünde bulundurun. Örnek, tüm düğmelere uygulanan stil içerir ve bunların <xref:System.Windows.Controls.Control.Background%2A> özellikleri, ancak daha sonra da bir düğme yerel olarak ayarlanmış belirtir <xref:System.Windows.Controls.Control.Background%2A> değeri.
 
@@ -185,7 +186,7 @@ Aşağıdaki örnek göz önünde bulundurun. Örnek, tüm düğmelere uygulanan
 Genellikle, her zaman uygulamak ve hatta yerel olarak ayarlanmış saklamasını stilleri istemezsiniz tek bir öğe değerini (Aksi halde, bu stilleri veya öğeleri genel olarak kullanmak oldukça zor olacaktır). Bu nedenle, yerel olarak ayarlanmış'den daha düşük öncelikte stilleri değerlerini çalışması değeri. Bağımlılık özellikleri ve bağımlılık özelliği etkin bir değerin alınacağı yeri daha kapsamlı bir listesi için bkz: [bağımlılık özelliği değeri önceliği](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).
 
 > [!NOTE]
-> Tanımlanan bir dizi vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağımlılık özellikleri olmayan öğeler. Yalnızca en az bir özellik sistemi tarafından etkinleştirilen senaryolar desteklemesi zamanki göre ve large özellikleri bağımlılık özellikleri olarak uygulanan: veri bağlama, stil, animasyon, varsayılan değer desteği, devralma, ekli özellikler veya geçersiz kılma.
+> Bağımlılık özellikleri olmayan WPF öğelerinde tanımlanan özellikler mevcuttur. Yalnızca en az bir özellik sistemi tarafından etkinleştirilen senaryolar desteklemesi zamanki göre ve large özellikleri bağımlılık özellikleri olarak uygulanan: veri bağlama, stil, animasyon, varsayılan değer desteği, devralma, ekli özellikler veya geçersiz kılma.
 
 ## <a name="learning-more-about-dependency-properties"></a>Bağımlılık özellikleri hakkında daha fazla bilgi  
 

@@ -6,11 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827000"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
@@ -24,11 +25,11 @@ Bir dizi, bir dize, bir sabit boyutlu arabellek veya değişkenin adresini kulla
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-C# ile 7.3, başlangıç `fixed` deyimi çalışır dizileri, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenleri ötesinde ek türlerinde. Adlı bir yöntem uygulayan herhangi bir türü `DangerousGetPinnableReference` sabitlenmiş. `DangerousGetPinnableReference` Döndürmelidir bir `ref` değişken olarak bir yönetilmeyen tür. Üzerinde konusuna [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md) daha fazla bilgi için. .NET türleri <xref:System.Span%601?displayProperty=nameWithType> ve <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .NET Core 2.0 olun sunulan sabitlenmiş ve bu desenini kullanın. Bu aşağıdaki örnekte gösterilmiştir:
+C# ile 7.3, başlangıç `fixed` deyimi çalışır dizileri, dizeler, sabit boyutlu arabellekler veya yönetilmeyen değişkenleri ötesinde ek türlerinde. Adlı bir yöntem uygulayan herhangi bir türü `GetPinnableReference` sabitlenmiş. `GetPinnableReference` Döndürmelidir bir `ref` değişken olarak bir yönetilmeyen tür. Üzerinde konusuna [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md) daha fazla bilgi için. .NET türleri <xref:System.Span%601?displayProperty=nameWithType> ve <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> .NET Core 2.0 olun sunulan sabitlenmiş ve bu desenini kullanın. Bu aşağıdaki örnekte gösterilmiştir:
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Bu desen alması gereken türleri oluşturuyorsanız, bkz: <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> düzeni uygulama örneği için.
+Bu desen alması gereken türleri oluşturuyorsanız, bkz: <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> düzeni uygulama örneği için.
 
 Aynı türde olmaları durumunda bir deyimde birden çok işaretçileri başlatılabilir:
 

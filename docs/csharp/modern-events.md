@@ -3,11 +3,12 @@ title: Güncelleştirilmiş .NET Core olay düzeni
 description: Nasıl .NET Core olay deseni esnekliği geriye dönük uyumluluk sağlar ve zaman uyumsuz aboneleri ile güvenli olay işleme uygulama öğrenin.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827186"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Güncelleştirilmiş .NET Core olay düzeni
 
@@ -20,24 +21,9 @@ Herhangi bir sınıfın türetildiği için işlevselliği uygulamak için yönt
 Aslında, değişiklikler tanımlarını `FileFoundArgs` ve `SearchDirectoryArgs` böylece bunlar öğesinden türetilen değil `EventArgs`.
 Program tam olarak aynı çalışır.
 
-Aynı zamanda değişebilir `SearchDirectoryArgs` ayrıca bir daha fazla değişiklik yaparsanız, bir yapı için:
+Aynı zamanda değişebilir `SearchDirectoryArgs` bir daha fazla değişiklik yaparsanız, bir yapı için:
 
-```csharp  
-internal struct SearchDirectoryArgs  
-{  
-    internal string CurrentSearchDirectory { get; }  
-    internal int TotalDirs { get; }  
-    internal int CompletedDirs { get; }  
-    
-    internal SearchDirectoryArgs(string dir, int totalDirs, 
-        int completedDirs) : this()  
-    {  
-        CurrentSearchDirectory = dir;  
-        TotalDirs = totalDirs;  
-        CompletedDirs = completedDirs;  
-    }  
-}  
-```   
+[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
 Ek değişiklik varsayılan oluşturucu tüm alanları başlatır Oluşturucusu girmeden önce çağırmaktır. Bu ayrıca, C# kuralları, atanmış önce özellikleri Erişilmekte olduğunu raporlar.
 

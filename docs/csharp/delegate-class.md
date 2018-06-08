@@ -3,11 +3,12 @@ title: System.Delegate ve `delegate` anahtar sözcüğü
 description: .NET Framework'teki temsilcileri ve nasıl olanlar 'temsilci' anahtar sözcüğü eşleme desteği sınıfları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827306"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate ve `delegate` anahtar sözcüğü
 
@@ -77,10 +78,8 @@ Kullanmak istediğiniz geliştiriciler `List.Sort()` yöntemi ihtiyacınız olan
 Dizeleri listesini kendi uzunluğa göre sıralamak istediğinizi varsayalım. Karşılaştırma işlevinizi şöyle olabilir:
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 Yöntemi, özel bir yöntem olarak bildirilir. Bu sorun yoktur. Ortak arabirimi bir parçası olması için bu yöntemi istemeyebilirsiniz. Bir temsilciye eklendiğinde karşılaştırma yöntemi olarak hala kullanılabilir. Çağrıyı yapan kod temsilci nesnesini hedef listeye eklenen bu yöntem sahip olur ve bu temsilciyi erişebilir.

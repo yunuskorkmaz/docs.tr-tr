@@ -3,13 +3,13 @@ title: .NET Core 2.1 yenilikler nelerdir?
 description: .NET Core 2.1 içinde bulunan yeni özellikler hakkında bilgi edinin.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2018
-ms.openlocfilehash: a7e0ae3c65a18376a7648198a43f1272a2bddafd
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/06/2018
+ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696461"
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826938"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -19,12 +19,12 @@ ms.locfileid: "34696461"
 - [İleri alma](#roll-forward)
 - [Dağıtım](#deployment)
 - [Windows Uyumluluk Paketi](#windows-compatibility-pack)
-- [JIT Derleyici geliştirmeleri](#jit-compiler-improvements)
+- [JIT derleme geliştirmeleri](#jit-compiler-improvements)
 - [API değişiklikleri](#api-changes)
 
 ## <a name="tooling"></a>Araçları
 
-.NET Core 2.1.300 SDK'sı, .NET Core 2.1 ile dahil araç aşağıdaki değişiklikler ve geliştirmeler içerir:
+.NET Core 2.1 SDK (v 2.1.300), .NET Core 2.1 ile dahil araç aşağıdaki değişiklikler ve geliştirmeler içerir:
 
 ### <a name="build-performance-improvements"></a>Derleme performans geliştirmeleri
 
@@ -49,7 +49,9 @@ Yalnızca bir başına proje temel kullanarak kullanılabilir araçları sayıs�
    ```console
    dotnet watch -- --verbose build
    ```
-
+  
+   Not `--` önündeki seçeneği `--verbose` seçeneği. Doğrudan geçirilen seçenekleri sınırlandırır `dotnet watch` alt öğesi olarak geçirilen bağımsız değişken komutunu `dotnet` işlemi. Bu olmadan, `--verbose` seçeneği uygulandığı `dotnet watch` komutu, `dotnet build` komutu.
+  
    Daha fazla bilgi için bkz: [dotnet Gözcü kullanarak geliştirme ASP.NET Core uygulamaları](/aspnet/core/tutorials/dotnet-watch)
 
 - `dotnet dev-certs` oluşturur ve ASP.NET Core uygulamaları geliştirme sırasında kullanılan sertifikaları yönetir.
@@ -72,26 +74,30 @@ dotnet tool install -g dotnetsay
 
 Bir kez yüklendikten sonra aracı adı belirterek aracını komut satırından çalıştırılabilir. Daha fazla bilgi için bkz: [.NET Core genel araçlarına genel bakış](../tools/global-tools.md).
 
-### <a name="single-source-tool-management-with-the-dotnet-tool-command"></a>Tek kaynak aracı yönetimiyle `dotnet tool` komutu
+### <a name="tool-management-with-the-dotnet-tool-command"></a>Aracı yönetimi ile `dotnet tool` komutu
 
-.NET Core 2.1 tüm araçlar işlemlerini kullanmak `dotnet tool` komutu. Aşağıdaki seçenekler mevcuttur:
+.NET Core SDK 2.1 (v 2.1.300), tüm araçlar işlemlerini kullanmak `dotnet tool` komutu. Aşağıdaki seçenekler mevcuttur:
 
-- `dotnet tool install` bir aracı yüklemek için.
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) bir aracı yüklemek için.
 
-- `dotnet tool update` etkili bir şekilde güncelleştiren bir aracı kaldırıp için.
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) etkili bir şekilde güncelleştiren bir aracı kaldırıp için.
 
-- `dotnet tool list` şu anda yüklü listesinde Araçları'na gidin.
+- [`dotnet tool list`](../tools/dotnet-tool-list.md) şu anda yüklü listesinde Araçları'na gidin.
+
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) şu anda yüklü araçlarını kaldırmak için.
 
 ## <a name="roll-forward"></a>İleri alma
 
-En son sürüme otomatik olarak .NET Core 2. 0'ile başlayan tüm .NET Core uygulamaları ileriye *alt sürüm* bir sistemde yüklü. Diğer bir deyişle, bir uygulama ile oluşturulan .NET Core sürüm mevcut değilse, uygulama en son yüklenen alt sürüm karşı çalışır. Diğer bir deyişle, bir uygulamayı .NET Core 2.0 ile oluşturulmuş ve .NET Core 2.0 kendi ana bilgisayar sisteminde mevcut değil ancak .NET Core 2.1, uygulama .NET Core 2.1 ile çalışır.
+En son sürüme otomatik olarak .NET Core 2. 0'ile başlayan tüm .NET Core uygulamaları ileriye *alt sürüm* bir sistemde yüklü. 
+
+Bir uygulama ile oluşturulan .NET Core sürümü çalışma zamanında mevcut değilse .NET Core 2.0 ile başlayarak, uygulama otomatik olarak en son yüklenen karşı çalışır *alt sürüm* .NET Core. Diğer bir deyişle, .NET Core 2. 0 ile uygulamanın oluşturulmuştur ve .NET Core 2.0 konak sisteminde mevcut değil ancak .NET Core 2.1, uygulama .NET Core 2.1 ile çalışır.
 
 > [!IMPORTANT]
 > Bu İleri alma davranışını Önizleme sürümleri için geçerli değildir. Ya da ana sürümleri için geçerlidir. Örneğin, bir .NET Core 1.0 uygulaması .NET Core 2.0 veya .NET Core 2.1 ileriye olmayacaktır.
 
 Alt sürüm toplama İleri herhangi üç yolla devre dışı bırakabilirsiniz:
 
-- Ayarlama `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` ortam değişkeni 0'a eşit
+- Ayarlama `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` ortam değişkeni 0.
 
 - Aşağıdaki satırı runtimeconfig.json dosyasına ekleyin:
 
@@ -109,11 +115,11 @@ Alt sürüm toplama İleri herhangi üç yolla devre dışı bırakabilirsiniz:
 
 ### <a name="self-contained-application-servicing"></a>Kendi içinde bulunan uygulama hizmeti
 
-`dotnet publish` Şimdi bir hizmet verilen çalışma zamanı sürümü müstakil uygulamalarla yayımlar. .NET Core 2.1 SDK'sı kendi içinde bulunan bir uygulama yayımladığınızda, uygulamanız bu SDK'sı tarafından bilinen en son hizmet verilen çalışma zamanı sürümü içerir. Son SDK'sını yükselttiğinizde, en son .NET çekirdeği çalışma zamanı sürümü ile yayımlama. Bu, .NET Core 1.0 çalışma zamanları ve sonraki sürümleri için geçerlidir.
+`dotnet publish` Şimdi bir hizmet verilen çalışma zamanı sürümü müstakil uygulamalarla yayımlar. .NET Core 2.1 SDK (v 2.1.300) ile kendi içinde bulunan bir uygulama yayımladığınızda, uygulamanız bu SDK'sı tarafından bilinen en son hizmet verilen çalışma zamanı sürümü içerir. Son SDK'sını yükselttiğinizde, en son .NET çekirdeği çalışma zamanı sürümü ile yayımlama. Bu, .NET Core 1.0 çalışma zamanları ve sonraki sürümleri için geçerlidir.
 
 NuGet.org sürümlerinde çalışma zamanı müstakil yayımlama kullanır. Hizmet verilen çalışma zamanı makinenizde olması gerekmez.
 
-Farklı bir sürümü aracılığıyla belirtilmediği sürece .NET Core 2.0 SDK'yı kullanarak, kendi içinde bulunan uygulamalar .NET Core 2.0.0 çalışma zamanı ile yayımlanan `RuntimeFrameworkVersion` özelliği. Bu yeni davranış ile artık kendi başına bir uygulama için daha yüksek bir çalışma zamanı sürümü seçmek için bu özelliği ayarlamak gerekir. İleride en kolay yaklaşım .NET Core 2.1 SDK ile her zaman yayımlamaktır.
+Farklı bir sürümü aracılığıyla belirtilmediği sürece .NET Core 2.0 SDK'yı kullanarak, kendi içinde bulunan uygulamalar .NET Core 2.0.0 çalışma zamanı ile yayımlanan `RuntimeFrameworkVersion` özelliği. Bu yeni davranış ile artık kendi başına bir uygulama için daha yüksek bir çalışma zamanı sürümü seçmek için bu özelliği ayarlamak gerekir. İleride en kolay yaklaşım .NET Core 2.1 SDK (v 2.1.300) her zaman yayımlamaktır.
 
 ## <a name="windows-compatibility-pack"></a>Windows Uyumluluk Paketi
 
@@ -121,7 +127,7 @@ Farklı bir sürümü aracılığıyla belirtilmediği sürece .NET Core 2.0 SDK
 
 ## <a name="jit-compiler-improvements"></a>JIT Derleyici geliştirmeleri
 
-.NET core içerir adlı yeni bir JIT Derleyici teknoloji *katmanlı derleme* (olarak da bilinen *Uyarlamalı iyileştirme*), önemli ölçüde performansı geliştirebilir.
+.NET core içerir adlı yeni bir JIT Derleyici teknoloji *katmanlı derleme* (olarak da bilinen *Uyarlamalı iyileştirme*), önemli ölçüde performansı geliştirebilir. Katmanlı derleme, bir katılımı ayarıdır.
 
 JIT Derleyici tarafından gerçekleştirilen önemli görevlerden birini kod yürütmeyi en iyi duruma getiriyor. Az kullanılan kod yolları için ancak, çalışma zamanı iyileştirilmemiş kod çalıştırmasını harcadığı daha kodu en iyi duruma getirme daha uzun derleyici harcayabilir. Katmanlı derleme JIT derleme iki aşamada sunar:
 
@@ -129,11 +135,23 @@ JIT Derleyici tarafından gerçekleştirilen önemli görevlerden birini kod yü
 
 - A **ikinci katman**, iyileştirilmiş kodda sık gerçekleştirilen bu yöntemleri için hangi oluşturur. İkinci katmanın derlemesinin paralel Gelişmiş performans için gerçekleştirilir.
 
-Aşağıdaki ortam değişkenini ayarlayarak katmanlı derleme .NET Core 2.1 uygulama ile test edebilirsiniz:
+İki yöntemden biriyle katmanlı derleme içine tercih edebilirsiniz.
 
-```console
-COMPlus_TieredCompilation="1"
-```
+- .NET Core 2.1 SDK'yı tüm projelerde katmanlı derleme kullanmak için aşağıdaki ortam değişkeni ayarlayın:
+
+  ```console
+  COMPlus_TieredCompilation="1"
+  ```
+
+- Katmanlı derleme bir proje başına temelinde kullanılacak eklemek `<TieredCompilation>` özelliğine `<PropertyGroup>` MSBuild proje dosyası, aşağıdaki örnekte gösterildiği gibi bölümünü:
+
+   ```xml
+   <PropertyGroup>
+      <!-- other property definitions -->
+
+      <TieredCompilation>true</TieredCompilation>
+   </PropertyGroup>
+   ```
 
 ## <a name="api-changes"></a>API değişiklikleri
 
@@ -193,14 +211,18 @@ Aşağıdaki örnek kullanan bir <xref:System.Span%601> örneği dizi 10 öğele
 
 - Önceki bir uygulama ile karşılaştırıldığında önemli performans geliştirmesi.
 
-- Dağıtım ve Bakım kolaylaştıran eleme platform bağımlılıklarla.
+- Dağıtım ve Bakım kolaylaştıran eleme platform bağımlılıkları.
 
 - Tüm .NET Core platformlar genelinde tutarlı davranışı.
 
-Yuva temel alarak <xref:System.Net.Http.SocketsHttpHandler> .NET Core 2.1 varsayılan uygulamadır. Ancak, eski kullanmak için uygulamanızı yapılandırabilirsiniz <xref:System.Net.Http.HttpClientHandler> çağırarak sınıfı <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> yöntemi:
+<xref:System.Net.Http.SocketsHttpHandler> .NET Core 2.1 içinde varsayılan uygulamadır. Ancak, eski kullanmak için uygulamanızı yapılandırabilirsiniz <xref:System.Net.Http.HttpClientHandler> çağırarak sınıfı <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> yöntemi:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+```
+
+```vb
+AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
 ```
 
 Bir ortam de kullanabilirsiniz kullanarak dışında tercih değişkeni yuva göre uygulamaları <xref:System.Net.Http.SocketsHttpHandler>. Bunu yapmak için ayarlayın `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` ya da `false` veya 0.
