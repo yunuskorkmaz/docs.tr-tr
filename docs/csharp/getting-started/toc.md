@@ -5,5 +5,5 @@
 ### [Visual Studio 2017’de Merhaba Dünya uygulamanızı yayımlama](../../core/tutorials/publishing-with-visual-studio.md)
 ## [Visual Studio 2017’de C# ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/library-with-visual-studio.md)
 ### [Visual Studio 2017’de .NET Core ile bir sınıf kitaplığını test etme](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Visual Studio 2017’de .NET Core ile bir sınıf kitaplığını kullanma](../../core/tutorials/consuming-library-with-visual-studio.md)
+### [Visual Studio 2017 .NET standart kitaplığında kullanma](../../core/tutorials/consuming-library-with-visual-studio.md)
 ## [C# ve Visual Studio Code kullanmaya başlama](../../core/tutorials/with-visual-studio-code.md)
