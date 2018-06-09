@@ -3,11 +3,12 @@ title: Desen eşleştirme C# Kılavuzu
 description: C# ' ifadelerin eşleşen kalıbı hakkında bilgi edinin
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231482"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme #
 
@@ -72,7 +73,7 @@ Bu kısıtlamaları kaldırıldı ve artık yazabilirsiniz bir `switch` türü d
 Desen eşleştirme `switch` deyimini kullanan geleneksel C tarzı kullanmış olan geliştiricilere bilinen sözdizimini `switch` deyimi. Her `case` değerlendirilir ve kod giriş değişkeni eşleşen koşul altında yürütülür. Kod yürütmeyi "bir servis talebi ifadesinden sonraki geçemez"; söz dizimi `case` deyimi gerektirir, her `case` sonunda bir `break`, `return`, veya `goto`.
 
 > [!NOTE]
-> `goto` Başka bir etiket için atlamak için deyimleri yalnızca sabit düzeni için Klasik switch deyimi geçerli.
+> `goto` Başka bir etiket için atlamak için deyimleri yalnızca sabit desenini (Klasik switch deyimi) geçerlidir.
 
 Yöneten önemli yeni kurallar vardır `switch` deyimi. Değişken türü kısıtlamalar `switch` ifadesi kaldırıldı.
 Gibi herhangi türdeki `object` Bu örnekte, kullanılabilir. Case ifadeleri artık sabit değerleri için sınırlı değildir. Bu sınırlama kaldırılması anlamına gelir, yeniden sıralama `switch` bölümler, programın davranışını değişebilir.

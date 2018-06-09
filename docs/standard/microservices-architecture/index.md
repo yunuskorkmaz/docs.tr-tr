@@ -1,14 +1,15 @@
 ---
 title: .NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ön konular
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro modüler ve bağımsız olarak dağıtılabilir hizmetleridir. Docker kapsayıcıları (için Linux ve Windows), dağıtım ve hizmet ve bağımlılıklarını sonra yalıtılmış bir ortamda çalıştırmak tek bir birime paketleme sınama basitleştirin.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/06/2018
+ms.openlocfilehash: 58bb915c825cd69c68b3955573145ae6a1b1a6e4
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231427"
 ---
 ![](./media/cover.png)
 
@@ -26,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif Hakkı © Microsoft Corporation'ın 2017
+Telif Hakkı © Microsoft Corporation 2018
 
 Tüm hakları saklıdır. Bu kitap içeriğini hiçbir bölümü çoğaltılamaz veya herhangi bir biçimde veya publisher'ın yazılı izni olmadan herhangi bir yöntemle aktarılamaz.
 

@@ -2,11 +2,12 @@
 title: 'F # kod biçimlendirme yönergeleri'
 description: 'F # kod biçimlendirme yönergeleri hakkında bilgi edinin.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231519"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # kod biçimlendirme yönergeleri
 
@@ -29,6 +30,177 @@ Girinti gerekli olduğunda, boşluk, sekme değil kullanmanız gerekir. En az bi
 **Girinti başına 4 boşluk öneririz.**
 
 Bu, programların girinti öznel bir konudur belirtti. Çeşitlemeler edilir, ancak takip etmeniz gerekir ilk kural *girinti tutarlılığını*. Girinti, genel olarak kabul edilen bir stil seçin ve temelinizde sistematik olarak kullanın.
+
+## <a name="formatting-blank-lines"></a>Boş satırlar biçimlendirme
+
+* Ayrı en üst düzey işlevi ve sınıf tanımları iki boş satırlar.
+* Yöntem tanımlarını bir sınıf içinde tek bir boş çizgi ile ayrılır.
+* Ek boş satırlar (tutumlu) ilgili işlevleri grupları ayırmak için kullanılabilir. Boş satırlar ilgili one-liners (örneğin, sahte uygulamaları kümesi) arasında bir grup atlanabilir.
+* Boş satırlar işlevlerde, gerektiğinde, mantıksal bölümleri belirtmek için kullanın.
+
+## <a name="formatting-comments"></a>Açıklamalar Biçimlendirme
+
+Genellikle birden çok çift eğik çizgi açıklamaları ML stil bloğu açıklamaları tercih edilir.
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+Satır içi açıklamalar ilk harfini büyük.
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>Adlandırma kuralları
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Sınıf bağlı, ifade bağlı ve desen ilişkili değerleri ve işlevleri için camelCase kullanın
+
+Yaygın bir durumdur ve yerel değişkenleri olarak veya desen eşleşmeleri ve işlev tanımları camelCase tüm adları için kabul edilen F # stili bağlanır.
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+Sınıflardaki yerel olarak bağlı işlevleri de camelCase kullanmanız gerekir.
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Modül bağlı ortak işlevleri için camelCase kullanın
+
+Bir modül bağlı işlevi genel API'si bir parçası olduğunda, camelCase kullanmanız gerekir:
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>İç ve özel modülü sınır değerleri ve işlevleri için camelCase kullanın
+
+CamelCase aşağıdakiler de dahil olmak üzere özel modülü sınır değerleri için kullanın:
+
+* Komut dosyalarında geçici işlevler
+
+* Bir modül veya türü iç uygulamasını yapmak değerleri
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>CamelCase parametrelerini kullanın
+
+Tüm parametreleri camelCase .NET adlandırma kurallarına uygun olarak kullanmanız gerekir.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>Modüller için PascalCase kullanın
+
+Tüm modülleri (üst düzey, iç, özel, iç içe geçmiş) PascalCase kullanmanız gerekir.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Tür bildirimleri, üyeleri ve etiketler için PascalCase kullanın
+
+Sınıflar, arabirimler, yapılar, numaralandırmalar, temsilciler, kaydeder ve ayrılmış birleşimler tüm ile PascalCase adlı olmalıdır. Üye türleri ve kaydeder ve ayrılmış birleşimler için etiketleri içinde ayrıca PascalCase kullanmanız gerekir.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET için iç yapılar için PascalCase kullanın
+
+Ad alanları, özel durumlar, olaylar ve proje /`.dll` adları PascalCase de kullanmalıdır. Yalnızca bu diğer .NET dilleri gelen tüketicilere daha doğal eşitleyerek tüketim yapar, ayrıca karşılaşma olasılığı olan .NET adlandırma kuralları ile tutarlı olur.
+
+### <a name="avoid-underscores-in-names"></a>Alt çizgi adlarında kaçının
+
+Tarihsel olarak, bazı F # kitaplıkları adları alt çizgi kullandınız. Kısmen .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bu, bazı F # programcıları alt çizgi yoğun, kısmen geçmiş nedenlerle kullanın ve dayanıklılık ve saygı önemlidir da belirtti. Ancak, bunu kullanıp kullanmayacağınızı hakkında seçmesini başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
+
+Yerel, alt çizgi yaygın olduğu bileşenleriyle birlikte özel bazı durumlar içerir.
+
+### <a name="use-standard-f-operators"></a>Standart F # işleçleri kullanın
+
+Aşağıdaki işleçleri F # standart Kitaplığı'nda tanımlanır ve eşdeğerleri tanımlama yerine kullanılmalıdır. Kodunu daha okunabilir ve kullanılan deyimsel hale eğilimlidir gibi bu işleçlere kullanılması önerilir. Arka plan OCaml veya diğer işlevsel programlama dili geliştiricilere farklı deyimleri alışkın olabilir. Aşağıdaki liste, önerilen F # işleçleri özetler.
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için önek söz dizimini kullanın (`Foo<T>`) sonek sözdizimi yerine (`T Foo`)
+
+F # genel türleri adlandırma hem sonek ML stili devralır (örneğin, `int list`) yanı sıra .NET stili önek (örneğin, `list<int>`). Dört belirli türleri dışında .NET stili tercih eder:
+
+1. F # listeleri, sonek formu kullanın: `int list` yerine `list<int>`.
+2. F # seçenekleri için sonek formu kullanın: `int option` yerine `option<int>`.
+3. F # diziler için söz dizimi adı kullanmak `int[]` yerine `int array` veya `array<int>`.
+4. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
+
+Diğer tüm türleri için önek formu kullanın.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Ayrılmış birleşim bildirimleri biçimlendirme
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>Desen eşleştirme yapıları
 
-Kullanım bir `|` her bir eşleşme yan tümcesinin hiçbir girinti ile. İfade kısaysa, tek bir satır kullanabilirsiniz.
+Kullanım bir `|` her bir eşleşme yan tümcesinin hiçbir girinti ile. İfade kısaysa, her alt aynı zamanda basit ise tek bir satır kullanmayı seçebilirsiniz.
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 Sağ ok eşleşen kalıbı tarafındaki ifade çok büyükse, taşıyabilir girintili bir adımda aşağıdaki satırı `match` / `|`.
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Anonim işlev bağımsız değişkenleri, bir sonraki satırdaki ya da bir sarkan ile olabilir `fun` bağımsız değişkeni satırında:
+Aynı yönergeleri işlevi bağımsız değişken olarak lambda ifadeleri için geçerlidir. Lambda ifadesi, gövde gövdesi başka bir satır varsa bir kapsam tarafından girintili
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+Ancak, bir lambda ifadesi gövdesi birden fazla satır ise, onu ayrı bir işlevdeki Finansman göz önünde bulundurun yerine tek bir bağımsız değişken olarak bir işleve uygulanan bir çok satırlı yapısı sahip.
 
 ### <a name="formatting-infix-operators"></a>Biçimlendirme iç işleçleri
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>Boş satırlar biçimlendirme
-
-* Ayrı en üst düzey işlevi ve sınıf tanımları iki boş satırlar.
-* Yöntem tanımlarını bir sınıf içinde tek bir boş çizgi ile ayrılır.
-* Ek boş satırlar (tutumlu) ilgili işlevleri grupları ayırmak için kullanılabilir. Boş satırlar ilgili one-liners (örneğin, sahte uygulamaları kümesi) arasında bir grup atlanabilir.
-* Boş satırlar işlevlerde, gerektiğinde, mantıksal bölümleri belirtmek için kullanın.
-
-## <a name="formatting-comments"></a>Açıklamalar Biçimlendirme
-
-Genellikle birden çok çift eğik çizgi açıklamaları ML stil bloğu açıklamaları tercih edilir.
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-Satır içi açıklamalar ilk harfini büyük.
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>Adlandırma kuralları
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Sınıf bağlı, ifade bağlı ve desen ilişkili değerleri ve işlevleri için camelCase kullanın
-
-Yaygın bir durumdur ve yerel değişkenleri olarak veya desen eşleşmeleri ve işlev tanımları camelCase tüm adları için kabul edilen F # stili bağlanır.
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-Sınıflardaki yerel olarak bağlı işlevleri de camelCase kullanmanız gerekir.
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>İç ve özel modülü sınır değerleri ve işlevleri için camelCase kullanın
-
-CamelCase aşağıdakiler de dahil olmak üzere özel modülü sınır değerleri için kullanın:
-
-* Komut dosyalarında geçici işlevler
-
-* Bir modül veya türü iç uygulamasını yapmak değerleri
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>CamelCase parametrelerini kullanın
-
-Tüm parametreleri camelCase .NET adlandırma kurallarına uygun olarak kullanmanız gerekir.
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>Modüller için PascalCase kullanın
-
-Tüm modülleri (üst düzey, iç, özel, iç içe geçmiş) PascalCase kullanmanız gerekir.
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Tür bildirimleri, üyeleri ve etiketler için PascalCase kullanın
-
-Sınıflar, arabirimler, yapılar, numaralandırmalar, temsilciler, kaydeder ve ayrılmış birleşimler tüm ile PascalCase adlı olmalıdır. Üye türleri ve kaydeder ve ayrılmış birleşimler için etiketleri içinde ayrıca PascalCase kullanmanız gerekir.
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>.NET için iç yapılar için PascalCase kullanın
-
-Ad alanları, özel durumlar, olaylar ve proje /`.dll` adları PascalCase de kullanmalıdır. Yalnızca bu diğer .NET dilleri gelen tüketicilere daha doğal eşitleyerek tüketim yapar, ayrıca karşılaşma olasılığı olan .NET adlandırma kuralları ile tutarlı olur.
-
-### <a name="avoid-underscores-in-names"></a>Alt çizgi adlarında kaçının
-
-Tarihsel olarak, bazı F # kitaplıkları adları alt çizgi kullandınız. Kısmen .NET adlandırma kuralları ile çakışıyor çünkü ancak bu artık yaygın olarak, kabul edilir. Bu, bazı F # programcıları alt çizgi yoğun, kısmen geçmiş nedenlerle kullanın ve dayanıklılık ve saygı önemlidir da belirtti. Ancak, bunu kullanıp kullanmayacağınızı hakkında seçmesini başkaları tarafından stili genellikle yanıtlamadığı unutmayın.
-
-Yerel, alt çizgi yaygın olduğu bileşenleriyle birlikte özel bazı durumlar içerir.
-
-### <a name="use-standard-f-operators"></a>Standart F # işleçleri kullanın
-
-Aşağıdaki işleçleri F # standart Kitaplığı'nda tanımlanır ve eşdeğerleri tanımlama yerine kullanılmalıdır. Kodunu daha okunabilir ve kullanılan deyimsel hale eğilimlidir gibi bu işleçlere kullanılması önerilir. Arka plan OCaml veya diğer işlevsel programlama dili geliştiricilere farklı deyimleri alışkın olabilir. Aşağıdaki liste, önerilen F # işleçleri özetler.
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Genel türler için önek söz dizimini kullanın (`Foo<T>`) sonek sözdizimi yerine (`T Foo`)
-
-F # genel türleri adlandırma hem sonek ML stili devralır (örneğin, `int list`) yanı sıra .NET stili önek (örneğin, `list<int>`). Dört belirli türleri dışında .NET stili tercih eder:
-
-1. F # listeleri, sonek formu kullanın: `int list` yerine `list<int>`.
-2. F # seçenekleri için sonek formu kullanın: `int option` yerine `option<int>`.
-3. F # diziler için söz dizimi adı kullanmak `int[]` yerine `int array` veya `array<int>`.
-4. Başvuru hücreleri için kullanmak `int ref` yerine `ref<int>` veya `Ref<int>`.
-
-Diğer tüm türleri için önek formu kullanın.

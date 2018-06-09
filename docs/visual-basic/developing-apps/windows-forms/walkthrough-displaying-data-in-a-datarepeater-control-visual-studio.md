@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231521"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>İzlenecek Yol: DataRepeater Denetimindeki Verileri Görüntüleme (Visual Studio)
 Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bitiş senaryo sağlar bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
@@ -19,7 +20,7 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
 ## <a name="prerequisite"></a>Önkoşul  
  Bu kılavuz, Northwind örnek veritabanı gerektirir.  
   
- Bu veritabanı geliştirme bilgisayarınızda yoksa, buradan indirebilirsiniz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Yönergeler için bkz: [örnek veritabanları yükleme](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu veritabanı geliştirme bilgisayarınızda yoksa, Microsoft Download Center'dan gelen yükleyebilirsiniz. Yönergeler için bkz: [örnek veritabanları yükleme](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuzun ilk bölümü dört ana görevden oluşur:  
@@ -85,7 +86,7 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
   
     -   Northwind örnek veritabanıyla kurulan veri bağlantısı açılan listede kullanılabilir durumdaysa bu bağlantıya tıklayın.  
   
-         -veya-  
+         veya  
   
     -   Tıklatın **yeni bağlantı** yeni bir veri bağlantısı yapılandırmak için. Daha fazla bilgi için bkz: [yeni bağlantılar eklemek](/visualstudio/data-tools/add-new-connections).  
   

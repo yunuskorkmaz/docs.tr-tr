@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231469"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu Visual Basic hatasıyla ilgili ayrıntı sahip
 Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
   
- [Visual Basic dili](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Visual Basic dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Bir forum sorular için derleyici ve Visual Basic dili sözdizimi hakkında ve genel tartışmalar sağlar.  
   
- [Visual Basic birlikte çalışabilirlik ve yükseltme](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Visual Basic birlikte çalışabilirlik ve yükseltme](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Hakkında sorular için bir forum sağlar ve Visual Basic'e yükseltme ve birlikte çalışabilirlik özellikleri ile çalışma sorunlarını.  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
   
- [Visual Basic genel](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Visual Basic genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Hakkında sorular için bir forum sağlar ve diğer forumlarda açıklanmamaktadır Visual Basic ile yayımlar.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  

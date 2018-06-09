@@ -2,11 +2,12 @@
 title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 911b6db28f89f7a4266ef1b23246020cd0381ada
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231534"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 Bu örnek, özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir. Bu, yerleşik X.509 Sertifika doğrulama modları hiçbiri uygulama gereksinimleri için uygun olduğu durumlarda yararlıdır. Bu örnekte kendi kendine verilen sertifikaların kabul özel bir doğrulayıcı sahip bir hizmeti gösterilmektedir. İstemci, bir hizmetin kimliğini bu tür bir sertifika kullanır.  
@@ -148,7 +149,7 @@ Bu örnek, özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir. B
   
  İstemci uygulaması istemci sertifikası kullanacak şekilde ayarlar.  
   
-```  
+```csharp
 // Create a client with Certificate endpoint configuration  
 CalculatorClient client = new CalculatorClient("Certificate");  
 try  
@@ -199,7 +200,7 @@ catch (Exception e)
   
  Bu örnek özel X509CertificateValidator sertifikalarını doğrulamak için kullanır. Örnek türetilmiş CustomX509CertificateValidator uygulayan <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Belgelerine bakın <xref:System.IdentityModel.Selectors.X509CertificateValidator> daha fazla bilgi için. Bu belirli özel Doğrulayıcı örnek aşağıdaki kodda gösterildiği gibi kendi kendine verilen herhangi bir X.509 sertifikayı kabul etmek için Doğrula yöntemini uygular.  
   
-```  
+```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator  
 {  
   public override void Validate ( X509Certificate2 certificate )  
@@ -213,7 +214,7 @@ public class CustomX509CertificateValidator : X509CertificateValidator
   
  Doğrulayıcı hizmet kodunda tamamlandıktan sonra hizmet ana bilgisayarı kullanmak için Doğrulayıcı örneği hakkında bilgi sahibi olmak gerekir. Bu yapılır aşağıdaki kodu kullanarak.  
   
-```  
+```csharp
 serviceHost.Credentials.ClientCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.Custom;  
 serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValidator = new CustomX509CertificateValidator();  
 ```  
@@ -257,7 +258,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Aşağıdaki satırları Setup.bat toplu iş dosyasından kullanılacak sunucu sertifikası oluşturun. % Sunucu_adı % değişkeni sunucusunun adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost varsayılan değerdir.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -271,7 +272,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      İstemci güvenilir kişiler içine Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolar. MakeCert.exe tarafından oluşturulan sertifikaları istemci sistem tarafından dolaylı olarak güvenilmeyen olduğundan bu adım gereklidir. Bir istemci güvenilen kök sertifikasını kökü belirtilmiş bir sertifikanız zaten varsa — örneğin, bir Microsoft verilen sertifika — sunucu sertifikasına sahip istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -281,7 +282,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Sertifika Currentuser'a depolama konumu altında (Kişisel) My deposunda saklanır.  
   
-    ```  
+    ```bash  
     echo ************  
     echo Client cert setup starting  
     echo %USER_NAME%  
@@ -295,7 +296,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
      Setup.bat toplu iş dosyası aşağıdaki satırları istemci sertifikası güvenilir Kişiler deposuna kopyalayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak sunucu sistemi tarafından güvenilir değil çünkü bu adım gereklidir. Bir güvenilen kök sertifika kökü belirtilmiş bir sertifikanız zaten varsa — örneğin, bir Microsoft verilen sertifika — istemci sertifikası ile sunucu sertifika depolama doldurma, bu adım gerekli değildir.  
   
-    ```  
+    ```bash  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
