@@ -1,31 +1,32 @@
 ---
-title: .NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
-ms.date: 03/30/2017
+title: .NET uygulamaları Genelleştirme ve yerelleştirme
+ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- international applications [.NET Framework]
-- globalization [.NET Framework], encoding
+- international applications [.NET]
+- globalization [.NET], encoding
 - global applications
 - internationalization
 - world-ready applications
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c237d082a56d17b2d8493bff52dbac6faca8b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251005"
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework Uygulamalarını Genelleştirme ve Yerelleştirme
+# <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamaları Genelleştirme ve yerelleştirme
 Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dillere yerelleştirilmiş bir uygulama da dahil olmak üzere, üç adımdan oluşur: yerelleştirilebilirlik gözden geçirin Genelleştirme ve Yerelleştirme.  
   
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Bu adım kültür ve dil açısından nötr olan ve tüm kullanıcılar için yerelleştirilmiş kullanıcı arabirimleri ve bölgesel verileri destekleyen bir uygulamanın tasarlanması ve kodlanmasını içerir. Tasarım yapma ve kültüre özgü varsayımlara dayalı olmayan kararları programlama ile ilgilidir. Global uygulamalar yerelleştirilmez, ancak daha sonra bir veya birden çok dile görece kolay yerelleştirilebilecek şekilde tasarlanır ve yazılırlar.  
   
- [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
  Bu adım, bir uygulamanın kod ve tasarımının, kolayca yerelleştirilebilir olmasını sağlamak ve yerelleştirme için olası engelleri tanımlamak üzere gözden geçirilmesi ve uygulamanın yürütülebilir kodunun kaynaklarından ayrı olduğunun doğrulanması ile ilgilidir. Genelleştirme aşaması etkili olduysa, yerelleştirme incelemesi, genelleştirme sırasında yapılan tasarım ve kodlama seçimlerini onaylar. Yerelleştirilebilirlik aşaması, bir uygulamanın kaynak kodunu yerelleştirme aşamasında değiştirmek zorunda kalmamanızı sağlayacak şekilde geri kalan sorunları tanımlayabilir.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
@@ -37,24 +38,24 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
   
 -   Daha kararlı ve daha az hatası olan yerelleştirilmiş uygulamalar olarak sonuçlanır.  
   
- .NET Framework, dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamalar geliştirme için kapsamlı destek sağlar. Özellikle, .NET Framework sınıf kitaplığındaki birçok üye türü, geçerli kullanıcının kültür veya belirli bir kültürü yansıtan değerlerini döndürerek genelleştirmeye yardım eder. Ayrıca, .NET Framework, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.  
+ .NET dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamaları geliştirme için kapsamlı destek sağlar. Özellikle, birçok üyeleri .NET sınıf kitaplığı Yardım Genelleştirme kuralları geçerli kullanıcının kültür ya da belirtilen kültür yansıtacak değerleri döndürerek yazın. Ayrıca, .NET uygulama yerelleştirme sürecini kolaylaştırmak uydu derlemelerini destekler.  
   
  Ek bilgi için bkz: [Genelleştirme belgelerine](/globalization/).  
   
-## <a name="in-this-section"></a>Bu Bölümde  
+## <a name="in-this-section"></a>Bu bölümde  
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Nötr kültüre ve nötr dile sahip bir uygulama tasarlamayı ve kodlamayı da içeren, dünya çapında kullanılmaya hazır uygulama bir oluşturmanın ilk aşamasını açıklar.  
   
- [Yerelleştirilebilirlik Gözden Geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
  Yerelleştirmede potansiyel bariyerler tanımlamayı da içeren yerelleştirilmiş uygulama oluşturmanın ikinci aşamasını açıklar.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
  Özel bölgeler ve kültürler için bir uygulamanın kullanıcı arabirimini özelleştirmeyi içeren yerelleştirilmiş bir uygulama oluşturmanın son adımını açıklar.  
   
- [Kültüre Duyarsız Dize İşlemleri](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Kültür duyarlı olmayan sonuçlar elde etmek için varsayılan olarak kültüre duyarlı olan .NET Framework yöntemlerinin ve sınıflarının nasıl kullanılacağını açıklar.  
+ [Kültüre duyarsız dize işlemleri](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ .NET yöntemleri ve kültüre duyarlı sınıfları kullanmayı açıklar kültüre duyarsız sonuçları elde etmek için varsayılan olarak.  
   
- [Dünya Çapında Kullanılmaya Hazır Uygulamalar Geliştirmek için En İyi Yöntemler](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi uygulamalar](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET uygulamaları geliştirmek için izlenebilecek en iyi uygulamaları açıklar.  
   
 ## <a name="reference"></a>Başvuru  

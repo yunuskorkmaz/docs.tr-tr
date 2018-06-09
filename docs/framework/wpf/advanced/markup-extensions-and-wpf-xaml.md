@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251174"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sınıfı nesne modeli de dahil olmak üzere XAML, biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve XAML Hizmetleri .NET uygulaması genel özelliğidir. Bu konuda özellikle kullanımda WPF XAML işaretleme uzantılarına ayrıntılarını verir.  
@@ -88,7 +89,7 @@ Bu konu, kendi sözdizimi kurallarına, amaç ve bunları altını çizen sını
 -   Tek tek ayrılmış belirteçlerin herhangi eşittir işareti içermiyorsa, her belirteç oluşturucu bağımsız değişkeni olarak kabul edilir. Her Oluşturucu parametresi, bu imza ve bu imzaya göre beklenen doğru sırada beklenen türe olarak verilmelidir.  
   
     > [!NOTE]
-    >  XAML işlemci çifti bağımsız değişken sayısı eşleşen oluşturucu çağırmanız gerekir. Özel biçimlendirme uzantısı uyguluyorsanız, bu nedenle, birden çok parametre ile aynı bağımsız değişken sayısı sağlamaz. Aynı parametre sayısı ile birden fazla biçimlendirme uzantısı Oluşturucusu yolu varsa bir XAML işlemci nasıl davranacağını davranışını tanımlı değil, ancak bir XAML işlemci bu durum varsa kullanımıyla ilgili bir özel durum izni olduğunu düşündüğünüz biçimlendirme uzantısı türü tanımlar.  
+    >  XAML işlemci çifti bağımsız değişken sayısı eşleşen oluşturucu çağırmanız gerekir. Özel biçimlendirme uzantısı uyguluyorsanız, bu nedenle, aynı bağımsız değişken sayısı ile birden çok oluşturucular sağlamaz. Aynı parametre sayısı ile birden fazla biçimlendirme uzantısı Oluşturucusu yolu varsa bir XAML işlemci nasıl davranacağını davranışını tanımlı değil, ancak bir XAML işlemci bu durum varsa kullanımıyla ilgili bir özel durum izni olduğunu düşündüğünüz biçimlendirme uzantısı türü tanımlar.  
   
 -   Tek tek ayrılmış belirteçleri eşittir işareti içeren, sonra XAML işlemci biçimlendirme uzantısı için önce varsayılan oluşturucu çağırır. Ardından, her ad = değer çifti biçimlendirme uzantısı ve bu özelliğe atamak için bir değer var. özellik adı olarak yorumlanır.  
   

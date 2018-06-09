@@ -4,11 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Hedef
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0b06f64027a736ead148ea5511cf20e900b8b39a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53b279a3325ae0fb662cd91a6f7f454b765196ff
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251018"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Hedef .NET kapsayıcıları ile hangi işletim sistemi
 
@@ -28,19 +29,22 @@ Farklı Linux distro kullanmak istediğiniz veya görüntü Microsoft tarafında
 
 Görüntü adı Dockerfile dosyanızı eklediğinizde, işletim sistemi ve sürümüne bağlı olarak, aşağıdaki örneklerde olduğu gibi kullandığınız etiketi seçebilirsiniz:
 
--   Microsoft /**dotnet:2.0.0-çalışma zamanı-jessie**
+-   Microsoft /**dotnet:2.1-çalışma zamanı**
 
-        .NET Core 2.0 runtime-only on Linux
+        .NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
 
--   Microsoft /**dotnet:2.0.0-çalışma zamanı-nanoserver-1709** 
-
-        .NET Core 2.0 runtime-only on Windows Nano Server (Windows Server 2016 Fall Creators Update version 1709)
-
--   Microsoft /**aspnetcore:2.0**
+-   Microsoft /**dotnet:2.1-aspnetcore-çalışma zamanı**
     
-        .NET Core 2.0 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
+        ASP.NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
         The aspnetcore image has a few optimizations for ASP.NET Core. 
 
+-   Microsoft /**dotnet:2.1-aspnetcore-çalışma zamanı-alpine** 
+
+        .NET Core 2.1 runtime-only on Linux Alpine distro
+
+-   Microsoft /**dotnet:2.1-aspnetcore-çalışma zamanı-nanoserver-1803** 
+
+        .NET Core 2.1 runtime-only on Windows Nano Server (Windows Server version 1803)
 
 
 

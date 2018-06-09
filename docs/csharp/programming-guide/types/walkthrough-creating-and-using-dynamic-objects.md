@@ -9,11 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 4d19e5e1d36dda4212b1c8561bd63c6b98d4bf1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f315b6500e68812863da722791d257930e190602
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251148"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
@@ -36,10 +37,11 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-a-custom-dynamic-object"></a>Özel bir dinamik Nesne oluşturma  
- Bu kılavuzda oluşturduğunuz ilk proje bir metin dosyasının içeriğini arar özel bir dinamik Nesne tanımlar. Aranacak metin dinamik özellik adına göre belirtilir. Örneğin, kod çağırma durumunda belirtir `dynamicFile.Sample`, dinamik sınıf tüm "Örnek" ile başlayan satırlar dosyasından içeren bir genel dize listesi döndürür. Arama büyük/küçük harf duyarlıdır. Dinamik sınıf iki isteğe bağlı bağımsız değişkenler de destekler. İlk bağımsız değişken dinamik sınıf satırının veya herhangi bir satırda son satırın başındaki eşleşmeleri için arayacağı belirten bir arama seçeneği enum değerdir. İkinci bağımsız değişkeni, dinamik sınıf öndeki ve arama yapmadan önce her satırdan sondaki boşlukları kırpma belirtir. Örneğin, kod çağırma durumunda belirtir `dynamicFile.Sample(StringSearchOption.Contains)`, dinamik sınıf arar "Örneği için" herhangi bir satır. Kodu çağırma belirtir `dynamicFile.Sample(StringSearchOption.StartsWith, false)`, dinamik sınıf her satırın başındaki "örnek" arar ve öndeki ve sondaki boşlukları kaldırmaz. Dinamik sınıf varsayılan davranışı, her satırın başındaki bir eşleşme aramak ve öndeki ve sondaki boşlukları kaldırmak için değildir.  
+## <a name="creating-a-custom-dynamic-object"></a>Özel bir dinamik Nesne oluşturma
+
+Bu kılavuzda oluşturduğunuz ilk proje bir metin dosyasının içeriğini arar özel bir dinamik Nesne tanımlar. Aranacak metin dinamik özellik adına göre belirtilir. Örneğin, kod çağırma durumunda belirtir `dynamicFile.Sample`, dinamik sınıf tüm "Örnek" ile başlayan satırlar dosyasından içeren bir genel dize listesi döndürür. Arama büyük/küçük harf duyarlıdır. Dinamik sınıf iki isteğe bağlı bağımsız değişkenler de destekler. İlk bağımsız değişken dinamik sınıf satırının veya herhangi bir satırda son satırın başındaki eşleşmeleri için arayacağı belirten bir arama seçeneği enum değerdir. İkinci bağımsız değişkeni, dinamik sınıf öndeki ve arama yapmadan önce her satırdan sondaki boşlukları kırpma belirtir. Örneğin, kod çağırma durumunda belirtir `dynamicFile.Sample(StringSearchOption.Contains)`, dinamik sınıf arar "Örneği için" herhangi bir satır. Kodu çağırma belirtir `dynamicFile.Sample(StringSearchOption.StartsWith, false)`, dinamik sınıf her satırın başındaki "örnek" arar ve öndeki ve sondaki boşlukları kaldırmaz. Dinamik sınıf varsayılan davranışı, her satırın başındaki bir eşleşme aramak ve öndeki ve sondaki boşlukları kaldırmak için değildir.  
   
-#### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için  
+### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için  
   
 1.  Visual Studio'yu başlatın.  
   
@@ -50,48 +52,41 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
 4.  DynamicSample projesine sağ tıklayın ve fareyle **Ekle**ve ardından **sınıfı**. İçinde **adı** kutusuna `ReadOnlyFile`ve ardından **Tamam**. Yeni bir dosya ReadOnlyFile sınıfı içeren eklenir.  
   
 5.  ReadOnlyFile.cs veya ReadOnlyFile.vb dosyanın üst kısmında, içeri aktarmak için aşağıdaki kodu ekleyin <xref:System.IO?displayProperty=nameWithType> ve <xref:System.Dynamic?displayProperty=nameWithType> ad alanları.  
-  
-     [!code-csharp[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]
 
-     [!code-vb[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_1.vb)]  
-  
+    [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
+    [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
+
 6.  Özel dinamik nesnesini enum arama ölçütlerini belirlemek için kullanır. Class deyimi önce aşağıdaki enum tanımını ekleyin.  
   
-     [!code-csharp[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]
-
-     [!code-vb[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_2.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
+    [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
 7.  Class deyimi devralmak için güncelleştirme `DynamicObject` aşağıdaki kod örneğinde gösterildiği gibi sınıfı.  
   
-     [!code-csharp[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]
+    [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
+    [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-     [!code-vb[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_3.vb)]  
-  
 8.  Aşağıdaki kodu ekleyin `ReadOnlyFile` dosya yolu için özel bir alan ve için bir oluşturucu tanımlamak için sınıf `ReadOnlyFile` sınıfı.  
   
-     [!code-csharp[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_4.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
+    [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
   
 9. Aşağıdakileri ekleyin `GetPropertyValue` yönteme `ReadOnlyFile` sınıfı. `GetPropertyValue` Yöntemi alır, girdi olarak, arama ölçütünü ve dosya, arama ölçütlerini karşılayan bir metinden satırları döndürür. Tarafından sağlanan dinamik yöntemleri `ReadOnlyFile` sınıf çağrısı `GetPropertyValue` ilgili sonuçları almak için yöntem.  
   
-     [!code-csharp[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_5.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#5)]
+    [!code-vb[VbDynamicWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#5)]  
   
 10. Sonra `GetPropertyValue` yöntemi, geçersiz kılmak için aşağıdaki kodu ekleyin <xref:System.Dynamic.DynamicObject.TryGetMember%2A> yöntemi <xref:System.Dynamic.DynamicObject> sınıfı. <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Dinamik sınıf üyesi istenen ve bağımsız değişkenler belirtilmişse yöntemi çağrılır. `binder` Bağımsız değişkeni başvurulan üye hakkında bilgiler içerir ve `result` bağımsız değişkeni için belirtilen üye döndürülen sonuç başvuruyor. <xref:System.Dynamic.DynamicObject.TryGetMember%2A> Yöntemi döndüren bir Boole değeri döndürür `true` istenen üye var; Aksi takdirde döndürür `false`.  
   
-     [!code-csharp[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_6.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#6)]
+    [!code-vb[VbDynamicWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#6)]
   
 11. Sonra `TryGetMember` yöntemi, geçersiz kılmak için aşağıdaki kodu ekleyin <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> yöntemi <xref:System.Dynamic.DynamicObject> sınıfı. <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> Dinamik sınıf üyesi bağımsız değişkenlerle istendiğinde yöntemi çağrılır. `binder` Bağımsız değişkeni başvurulan üye hakkında bilgiler içerir ve `result` bağımsız değişkeni için belirtilen üye döndürülen sonuç başvuruyor. `args` Bağımsız değişkeni bir üyesine geçirilen bağımsız değişken dizisi içerir. <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> Yöntemi döndüren bir Boole değeri döndürür `true` istenen üye var; Aksi takdirde döndürür `false`.  
   
-     Özel sürümünü `TryInvokeMember` yöntemi arasında bir değer olması için ilk bağımsız değişken bekler `StringSearchOption` bir önceki adımda tanımlanan enum. `TryInvokeMember` Yöntemi bir Boole değeri olması için ikinci bağımsız değişken bekler. Bir veya iki bağımsız değişken geçerli değerler varsa, bunlar geçirilecek `GetPropertyValue` sonuçları almak için yöntem.  
+    Özel sürümünü `TryInvokeMember` yöntemi arasında bir değer olması için ilk bağımsız değişken bekler `StringSearchOption` bir önceki adımda tanımlanan enum. `TryInvokeMember` Yöntemi bir Boole değeri olması için ikinci bağımsız değişken bekler. Bir veya iki bağımsız değişken geçerli değerler varsa, bunlar geçirilecek `GetPropertyValue` sonuçları almak için yöntem.  
   
-     [!code-csharp[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_7.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#7)]
+    [!code-vb[VbDynamicWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#7)]
   
 12. Dosyayı kaydedin ve kapatın.  
   
@@ -124,9 +119,8 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
   
 2.  Aşağıdaki kod örneği oluşturmak için ana yordama ekleyin `ReadOnlyFile` TextFile1.txt dosyası için sınıf. Kod geç bağlama dinamik üyeler çağırın ve "Müşteri" dizesini içeren metin satırı almak için kullanır.  
   
-     [!code-csharp[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_8.vb)]  
+     [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
+     [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
 3.  Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşuna basın.  
   
@@ -134,7 +128,7 @@ Gereksinim duyduğunuz [IronPython](http://ironpython.net/) bu yönlendirmeyi ta
 
 Bu kılavuzda oluşturduğunuz sonraki proje IronPython dinamik dilinde yazılmış bir kitaplık erişir.
   
-#### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için  
+### <a name="to-create-a-custom-dynamic-class"></a>Özel bir dinamik sınıf oluşturmak için
   
 1.  Visual Studio'da üzerinde **dosya** menüsündeki **yeni** ve ardından **proje**.  
   
@@ -148,21 +142,18 @@ Bu kılavuzda oluşturduğunuz sonraki proje IronPython dinamik dilinde yazılm�
   
 6.  Dosyanın üst kısmında, içeri aktarmak için aşağıdaki kodu ekleyin `Microsoft.Scripting.Hosting` ve `IronPython.Hosting` IronPython kitaplıklarından ad alanları.  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_9.vb)]  
+    [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
+    [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
 7.  Main yöntemi yeni bir oluşturmak için aşağıdaki kodu ekleyin `Microsoft.Scripting.Hosting.ScriptRuntime` IronPython kitaplıklarına barındırmak için nesne. `ScriptRuntime` Nesnesi IronPython kitaplığı modülü random.py yükler.  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_10.vb)]  
+     [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
+     [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
 8.  Random.py modülü yüklenemedi koddan sonra dizisi oluşturmak için aşağıdaki kodu ekleyin. Dizi geçirilir `shuffle` rastgele dizideki sıralar random.py modülün yöntemi.  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_11.vb)]  
+     [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
+     [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]
   
 9. Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşuna basın.  
   

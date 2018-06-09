@@ -3,12 +3,13 @@ title: Ne zaman Docker kapsayıcıları için .NET Framework seçin
 description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne zaman Docker kapsayıcıları için .NET Framework seçin
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251041"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Framework seçin
 
@@ -22,15 +23,15 @@ Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core geçirmek 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Üçüncü taraf .NET kitaplıklarına veya NuGet paketlerini kullanılamaz .NET Core için kullanma
 
-Üçüncü taraf kitaplıklar hızla benimsemenin [.NET standart](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kodu sağlar. API yüzeyi ötesinde .NET standart kitaplığı 2.0 ile uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve .NET Core 2. 0 ' uygulamaları doğrudan da var olan .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Üçüncü taraf kitaplıklar hızla benimsemenin [.NET standart](../../net-standard.md), .NET Core dahil olmak üzere tüm .NET özellikleri arasında paylaşımı kodu sağlar. Standart Kitaplığı .NET 2.0 ve sonrasında, API yüzeyi uyumluluk farklı çerçeveler arasında önemli ölçüde daha büyük hale geldi ve .NET Core 2.x uygulamaları doğrudan da var olan .NET Framework kitaplıkları başvurabilir (bkz [compat Dolgu](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Ancak, bile bu olağanüstü progression ile .NET standart 2.0 ve .NET Core 2.0 itibaren olabilir durumlarda bazı NuGet paketleri çalıştırmak için Windows gerekiyor ve .NET Core desteklemeyebilir. Ardından bu paketleri, uygulamanız için kritik olan, .NET Framework Windows kapsayıcılarında kullanmanız gerekecektir.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılabilir değil .NET teknolojilerini kullanarak 
 
-Bazı .NET Framework teknolojiler .NET Core (sürüm 2.0 bu yazma itibariyle) geçerli sürümünde kullanılabilir değildir. Bazıları daha sonra .NET Core sürümlerde kullanılabilir olur (.NET Core 2.x), ancak diğer desenleri .NET Core tarafından hedeflenen ve hiçbir zaman kullanılabilir yeni uygulama için geçerli değildir.
+Bazı .NET Framework teknolojiler .NET Core (sürüm 2.1 Bu yazma itibariyle) geçerli sürümünde kullanılabilir değildir. Bazıları daha sonra .NET Core sürümlerde kullanılabilir olur (.NET Core 2.x), ancak diğer desenleri .NET Core tarafından hedeflenen ve hiçbir zaman kullanılabilir yeni uygulama için geçerli değildir.
 
-Aşağıdaki liste, .NET Core 2. 0 ' kullanılabilir değil teknolojileri çoğunu gösterir:
+Aşağıdaki liste, .NET Core 2.1 içinde kullanılabilir değil teknolojileri çoğunu gösterir:
 
 -   ASP.NET Web formları. Bu teknoloji, yalnızca .NET Framework üzerinde kullanılabilir. Şu anda ASP.NET Web Forms .NET Core getirmek için plan yok.
 
