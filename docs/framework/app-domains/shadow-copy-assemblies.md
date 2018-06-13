@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743959"
 ---
 # <a name="shadow-copying-assemblies"></a><span data-ttu-id="b2a70-102">Gölge Kopyalama Derlemeleri</span><span class="sxs-lookup"><span data-stu-id="b2a70-102">Shadow Copying Assemblies</span></span>
 <span data-ttu-id="b2a70-103">Uygulama etki alanı kaldırılması olmadan güncelleştirilmesi için bir uygulama etki alanında kullanılan etkinleştirir derlemeleri kopyalama gölge.</span><span class="sxs-lookup"><span data-stu-id="b2a70-103">Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain.</span></span> <span data-ttu-id="b2a70-104">Bu, özellikle ASP.NET siteleri gibi sürekli olarak kullanılabilir olması gereken uygulamalar için yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="b2a70-104">This is particularly useful for applications that must be available continuously, such as ASP.NET sites.</span></span>  

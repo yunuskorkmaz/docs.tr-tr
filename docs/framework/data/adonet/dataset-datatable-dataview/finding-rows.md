@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760888"
 ---
 # <a name="finding-rows"></a><span data-ttu-id="88ea7-102">Satırları bulma</span><span class="sxs-lookup"><span data-stu-id="88ea7-102">Finding Rows</span></span>
 <span data-ttu-id="88ea7-103">Satırları sıralama anahtar değerlerine göre kullanarak arayabilirsiniz <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerini <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="88ea7-103">You can search for rows according to their sort key values by using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="88ea7-104">Arama büyük/küçük harfe duyarlılık değeri **Bul** ve **FindRows** yöntemleri tarafından belirlenir **CaseSensitive** temel özellik <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="88ea7-104">The case sensitivity of search values in the **Find** and **FindRows** methods is determined by the **CaseSensitive** property of the underlying <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="88ea7-105">Arama değerleri bir sonuç dönebilmek için var olan sıralama anahtarı değerleri tamamen eşleşmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="88ea7-105">Search values must match existing sort key values in their entirety in order to return a result.</span></span>  

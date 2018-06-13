@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759770"
 ---
 # <a name="loading-a-dataset-from-xml"></a><span data-ttu-id="aa6c6-102">Bir veri kümesini XML dosyası şuradan yükleniyor</span><span class="sxs-lookup"><span data-stu-id="aa6c6-102">Loading a DataSet from XML</span></span>
 <span data-ttu-id="aa6c6-103">Bir ADO.NET içeriğini <xref:System.Data.DataSet> bir XML akışı veya belge oluşturulabilir.</span><span class="sxs-lookup"><span data-stu-id="aa6c6-103">The contents of an ADO.NET <xref:System.Data.DataSet> can be created from an XML stream or document.</span></span> <span data-ttu-id="aa6c6-104">Ayrıca, .NET Framework ile büyük esneklik hangi bilgilerin, XML'den yüklenen elinizde ve nasıl şema veya ilişkisel yapısını <xref:System.Data.DataSet> oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="aa6c6-104">In addition, with the .NET Framework you have great flexibility over what information is loaded from XML, and how the schema or relational structure of the <xref:System.Data.DataSet> is created.</span></span>  

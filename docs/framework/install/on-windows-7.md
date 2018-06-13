@@ -1,46 +1,44 @@
 ---
-title: "Windows 7 SP1'de .NET Framework'ü yüklemek"
+title: Windows 7 SP1'de .NET Framework'ü yüklemek
 ms.custom: updateeachrelease
-description: "Windows 7 SP1'de .NET Framework'ü yüklemek öğrenin."
+description: Windows 7 SP1'de .NET Framework'ü yüklemek öğrenin.
 author: rlander
 ms.author: mairaw
-keywords: ".NET framework, yükleme"
-ms.date: 10/17/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: 9056a07859b388d2fa4c1992c270eaa4788f194c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387984"
 ---
-# <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a><span data-ttu-id="254b8-104">.NET Framework Windows 7 SP1 ve Windows Server 2008 R2 yükleme</span><span class="sxs-lookup"><span data-stu-id="254b8-104">Install the .NET Framework on Windows 7 SP1 and Windows Server 2008 R2</span></span>
+# <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a><span data-ttu-id="a57d7-103">.NET Framework Windows 7 SP1 ve Windows Server 2008 R2 yükleme</span><span class="sxs-lookup"><span data-stu-id="a57d7-103">Install the .NET Framework on Windows 7 SP1 and Windows Server 2008 R2</span></span>
 
-<span data-ttu-id="254b8-105">.NET Framework Windows birçok uygulamaları çalıştırmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="254b8-105">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="254b8-106">Yüklemek için aşağıdaki yönergeleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="254b8-106">You can use the following instructions to install it.</span></span> <span data-ttu-id="254b8-107">Bir uygulamayı çalıştırmak çalışıyor ve makinenizde aşağıdaki iletişim görmesini sonra bu sayfada gelmedi.</span><span class="sxs-lookup"><span data-stu-id="254b8-107">You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.</span></span>
+<span data-ttu-id="a57d7-104">.NET Framework Windows birçok uygulamaları çalıştırmak için gereklidir.</span><span class="sxs-lookup"><span data-stu-id="a57d7-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="a57d7-105">Yüklemek için aşağıdaki yönergeleri kullanın.</span><span class="sxs-lookup"><span data-stu-id="a57d7-105">You can use the following instructions to install it.</span></span> <span data-ttu-id="a57d7-106">Bir uygulamayı çalıştırmak çalışıyor ve makinenizde aşağıdaki iletişim görmesini sonra bu sayfada gelmedi.</span><span class="sxs-lookup"><span data-stu-id="a57d7-106">You may have arrived on this page after trying to run an application and seeing the following dialog on your machine.</span></span>
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-<span data-ttu-id="254b8-109">Bu yönergeleri, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="254b8-109">These instructions will help you install the .NET Framework versions you need.</span></span> <span data-ttu-id="254b8-110">[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) en son sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="254b8-110">The [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) is the latest version.</span></span> <span data-ttu-id="254b8-111">Windows 7 ve Windows Server 2008 R2 desteklenir ve içerdiği [Windows 10 sonbaharda oluşturucuları güncelleştirme](https://www.microsoft.com/software-download/windows10) ve [Windows Server 2016 sürüm 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).</span><span class="sxs-lookup"><span data-stu-id="254b8-111">It is supported on Windows 7 and Windows Server 2008 R2 and is included with the [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) and [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).</span></span>
+<span data-ttu-id="a57d7-108">Bu yönergeleri, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="a57d7-108">These instructions will help you install the .NET Framework versions you need.</span></span> <span data-ttu-id="a57d7-109">[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) en son sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="a57d7-109">The [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) is the latest version.</span></span> <span data-ttu-id="a57d7-110">Windows 7 SP1 ve Windows Server 2008 R2 desteklenir ve içerdiği [10 Nisan 2018 Windows Update](https://www.microsoft.com/software-download/windows10).</span><span class="sxs-lookup"><span data-stu-id="a57d7-110">It is supported on Windows 7 SP1 and Windows Server 2008 R2 and is included with [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10).</span></span>
 
-## <a name="net-framework-471"></a><span data-ttu-id="254b8-112">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="254b8-112">.NET Framework 4.7.1</span></span>
+## <a name="net-framework-472"></a><span data-ttu-id="a57d7-111">.NET framework 4.7.2</span><span class="sxs-lookup"><span data-stu-id="a57d7-111">.NET Framework 4.7.2</span></span>
 
-* [<span data-ttu-id="254b8-113">.NET Framework 4.7.1 indirin</span><span class="sxs-lookup"><span data-stu-id="254b8-113">Download the .NET Framework 4.7.1</span></span>](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
+> [!div class="button"]
+[<span data-ttu-id="a57d7-112">.NET Framework 4.7.2 indirin</span><span class="sxs-lookup"><span data-stu-id="a57d7-112">Download .NET Framework 4.7.2</span></span>](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-<span data-ttu-id="254b8-114">[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) .NET Framework 4.0 veya üstü yerleşik uygulamaları çalıştırmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="254b8-114">The [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) can be used to run applications built for .NET Framework 4.0 or later.</span></span>
+<span data-ttu-id="a57d7-113">[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) .NET Framework 4.0 veya üstü yerleşik uygulamaları çalıştırmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a57d7-113">The [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) can be used to run applications built for .NET Framework 4.0 or later.</span></span>
 
-## <a name="net-framework-35"></a><span data-ttu-id="254b8-115">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="254b8-115">.NET Framework 3.5</span></span>
+## <a name="net-framework-35"></a><span data-ttu-id="a57d7-114">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="a57d7-114">.NET Framework 3.5</span></span>
 
-<span data-ttu-id="254b8-116">[.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) Windows 7 ile eklenmiştir.</span><span class="sxs-lookup"><span data-stu-id="254b8-116">The [.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) is included with Windows 7.</span></span>
+<span data-ttu-id="a57d7-115">[.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) Windows 7 ile eklenmiştir.</span><span class="sxs-lookup"><span data-stu-id="a57d7-115">The [.NET Framework 3.5](https://www.microsoft.com/en-us/download/details.aspx?id=21) is included with Windows 7.</span></span>
 
-<span data-ttu-id="254b8-117">.NET Framework 3.5, .NET Framework 1.0 için 3.5 oluşturulan uygulamaları destekler.</span><span class="sxs-lookup"><span data-stu-id="254b8-117">The .NET Framework 3.5 supports apps built for .NET Framework 1.0 through 3.5.</span></span>
+<span data-ttu-id="a57d7-116">.NET Framework 3.5, .NET Framework 1.0 için 3.5 oluşturulan uygulamaları destekler.</span><span class="sxs-lookup"><span data-stu-id="a57d7-116">The .NET Framework 3.5 supports apps built for .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="help"></a><span data-ttu-id="254b8-118">Yardım</span><span class="sxs-lookup"><span data-stu-id="254b8-118">Help</span></span>
+## <a name="help"></a><span data-ttu-id="a57d7-117">Yardım</span><span class="sxs-lookup"><span data-stu-id="a57d7-117">Help</span></span>
 
-<span data-ttu-id="254b8-119">Yapabilecekleriniz [Yardım için Microsoft'a başvurun](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) , .NET Framework'ün yüklü doğru sürümü alınamıyor.</span><span class="sxs-lookup"><span data-stu-id="254b8-119">You can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) if you cannot get the correct version of the .NET Framework installed.</span></span>
+<span data-ttu-id="a57d7-118">Yapabilecekleriniz [Yardım için Microsoft'a başvurun](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) , .NET Framework'ün yüklü doğru sürümü alınamıyor.</span><span class="sxs-lookup"><span data-stu-id="a57d7-118">You can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) if you cannot get the correct version of the .NET Framework installed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="254b8-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="254b8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a57d7-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a57d7-119">See also</span></span>
 
-<span data-ttu-id="254b8-121">[.NET Framework indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span><span class="sxs-lookup"><span data-stu-id="254b8-121">[Download the .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span></span>  
-<span data-ttu-id="254b8-122">[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md) </span><span class="sxs-lookup"><span data-stu-id="254b8-122">[Troubleshoot blocked .NET Framework installations and uninstallations](troubleshoot-blocked-installations-and-uninstallations.md) </span></span>  
-[<span data-ttu-id="254b8-123">Geliştiriciler için .NET Framework'ü yükleme</span><span class="sxs-lookup"><span data-stu-id="254b8-123">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+<span data-ttu-id="a57d7-120">[.NET Framework indirin](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span><span class="sxs-lookup"><span data-stu-id="a57d7-120">[Download the .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral) </span></span>  
+<span data-ttu-id="a57d7-121">[Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md) </span><span class="sxs-lookup"><span data-stu-id="a57d7-121">[Troubleshoot blocked .NET Framework installations and uninstallations](troubleshoot-blocked-installations-and-uninstallations.md) </span></span>  
+[<span data-ttu-id="a57d7-122">Geliştiriciler için .NET Framework'ü yükleme</span><span class="sxs-lookup"><span data-stu-id="a57d7-122">Install the .NET Framework for developers</span></span>](guide-for-developers.md)

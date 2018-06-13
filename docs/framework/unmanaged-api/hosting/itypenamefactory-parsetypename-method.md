@@ -1,14 +1,6 @@
 ---
-title: "ITypeNameFactory::ParseTypeName Yöntemi"
-ms.custom: 
+title: ITypeNameFactory::ParseTypeName Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ITypeNameFactory.ParseTypeName
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 13c9f063-371c-4911-a5e7-e1e0b88ae382
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1bb762dbf1751a32939cb1acd41e1dd2fb77ef2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adc72eb1b50369e5219798cdb99618abc5e08a00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440395"
 ---
-# <a name="itypenamefactoryparsetypename-method"></a><span data-ttu-id="50bb7-102">ITypeNameFactory::ParseTypeName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="50bb7-102">ITypeNameFactory::ParseTypeName Method</span></span>
-<span data-ttu-id="50bb7-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="50bb7-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamefactoryparsetypename-method"></a><span data-ttu-id="3e622-102">ITypeNameFactory::ParseTypeName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3e622-102">ITypeNameFactory::ParseTypeName Method</span></span>
+<span data-ttu-id="3e622-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="3e622-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50bb7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50bb7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3e622-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3e622-104">Syntax</span></span>  
   
 ```  
 HRESULT ParseTypeName (  
@@ -48,14 +37,14 @@ HRESULT ParseTypeName (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="50bb7-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="50bb7-105">Requirements</span></span>  
- <span data-ttu-id="50bb7-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50bb7-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3e622-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3e622-105">Requirements</span></span>  
+ <span data-ttu-id="3e622-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e622-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50bb7-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="50bb7-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3e622-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3e622-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="50bb7-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="50bb7-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3e622-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3e622-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="50bb7-109">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50bb7-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3e622-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e622-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50bb7-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50bb7-110">See Also</span></span>  
- [<span data-ttu-id="50bb7-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="50bb7-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3e622-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3e622-110">See Also</span></span>  
+ [<span data-ttu-id="3e622-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="3e622-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745220"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a><span data-ttu-id="b8d83-102">&lt;kaldırma&gt; öğesi için &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="b8d83-102">&lt;remove&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="b8d83-103">Bir adlandırılmış önbellek girişi kaldırır `namedCaches` bir önbellek için koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="b8d83-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  

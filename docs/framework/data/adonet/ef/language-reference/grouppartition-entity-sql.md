@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760914"
 ---
 # <a name="grouppartition-entity-sql"></a><span data-ttu-id="e53af-102">GROUPPARTITION (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="e53af-102">GROUPPARTITION (Entity SQL)</span></span>
 <span data-ttu-id="e53af-103">Toplama ilişkili olduğunu geçerli Grup bölümünün öngörülen bağımsız değişken değerleri koleksiyonunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="e53af-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="e53af-104">`GroupPartition` Toplama bir grup tabanlı toplama olduğundan ve hiçbir koleksiyon tabanlı bir biçime sahip.</span><span class="sxs-lookup"><span data-stu-id="e53af-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  

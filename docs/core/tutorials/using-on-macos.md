@@ -4,57 +4,53 @@ description: Bu belge, .NET Core Visual Studio kod kullanarak bir çözüm oluş
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
-ms.topic: get-started-article
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 18f825e75e7d32198a52a091948bc9dd064dacbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218292"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a><span data-ttu-id="add4d-103">MacOS üzerinde .NET Core'u kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="add4d-103">Getting started with .NET Core on macOS</span></span>
+# <a name="getting-started-with-net-core-on-macos"></a><span data-ttu-id="f8c0c-103">MacOS üzerinde .NET Core'u kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="f8c0c-103">Getting started with .NET Core on macOS</span></span>
 
-<span data-ttu-id="add4d-104">Bu belge macOS .NET Core çözüm oluşturmak için iş akışı ve adımları sağlar.</span><span class="sxs-lookup"><span data-stu-id="add4d-104">This document provides the steps and workflow to create a .NET Core solution for macOS.</span></span> <span data-ttu-id="add4d-105">Projeleri, birim testleri oluşturma, hata ayıklama araçlarını kullanın ve üçüncü taraf kitaplıkları aracılığıyla dahil öğrenin [NuGet](https://www.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="add4d-105">Learn how to create projects, unit tests, use the debugging tools, and incorporate third-party libraries via [NuGet](https://www.nuget.org/).</span></span>
+<span data-ttu-id="f8c0c-104">Bu belge macOS .NET Core çözüm oluşturmak için iş akışı ve adımları sağlar.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-104">This document provides the steps and workflow to create a .NET Core solution for macOS.</span></span> <span data-ttu-id="f8c0c-105">Projeleri, birim testleri oluşturma, hata ayıklama araçlarını kullanın ve üçüncü taraf kitaplıkları aracılığıyla dahil öğrenin [NuGet](https://www.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-105">Learn how to create projects, unit tests, use the debugging tools, and incorporate third-party libraries via [NuGet](https://www.nuget.org/).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="add4d-106">Bu makalede kullanan [Visual Studio Code](http://code.visualstudio.com) macOS üzerinde.</span><span class="sxs-lookup"><span data-stu-id="add4d-106">This article uses [Visual Studio Code](http://code.visualstudio.com) on macOS.</span></span>
+> <span data-ttu-id="f8c0c-106">Bu makalede kullanan [Visual Studio Code](http://code.visualstudio.com) macOS üzerinde.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-106">This article uses [Visual Studio Code](http://code.visualstudio.com) on macOS.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="add4d-107">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="add4d-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="f8c0c-107">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="f8c0c-107">Prerequisites</span></span>
 
-<span data-ttu-id="add4d-108">Yükleme [.NET Core SDK](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="add4d-108">Install the [.NET Core SDK](https://www.microsoft.com/net/core).</span></span> <span data-ttu-id="add4d-109">.NET Core SDK .NET Core framework ve çalışma zamanı en son sürümünü içerir.</span><span class="sxs-lookup"><span data-stu-id="add4d-109">The .NET Core SDK includes the latest release of the .NET Core framework and runtime.</span></span>
+<span data-ttu-id="f8c0c-108">Yükleme [.NET Core SDK](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-108">Install the [.NET Core SDK](https://www.microsoft.com/net/core).</span></span> <span data-ttu-id="f8c0c-109">.NET Core SDK .NET Core framework ve çalışma zamanı en son sürümünü içerir.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-109">The .NET Core SDK includes the latest release of the .NET Core framework and runtime.</span></span>
 
-<span data-ttu-id="add4d-110">Yükleme [Visual Studio Code](http://code.visualstudio.com).</span><span class="sxs-lookup"><span data-stu-id="add4d-110">Install [Visual Studio Code](http://code.visualstudio.com).</span></span> <span data-ttu-id="add4d-111">Bu makalede sürecinde, Visual Studio .NET Core geliştirme geliştirmek uzantıları deneyimi kodu da yükleyin.</span><span class="sxs-lookup"><span data-stu-id="add4d-111">During the course of this article, you also install Visual Studio Code extensions that improve the .NET Core development experience.</span></span>
+<span data-ttu-id="f8c0c-110">Yükleme [Visual Studio Code](http://code.visualstudio.com).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-110">Install [Visual Studio Code](http://code.visualstudio.com).</span></span> <span data-ttu-id="f8c0c-111">Bu makalede sürecinde, Visual Studio .NET Core geliştirme geliştirmek uzantıları deneyimi kodu da yükleyin.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-111">During the course of this article, you also install Visual Studio Code extensions that improve the .NET Core development experience.</span></span>
 
-<span data-ttu-id="add4d-112">Visual Studio Code açarak ve tuşuna basarak Visual Studio kod C# uzantısını yüklemeniz <kbd>F1</kbd> Visual Studio Code paletini açmak için.</span><span class="sxs-lookup"><span data-stu-id="add4d-112">Install the Visual Studio Code C# extension by opening Visual Studio Code and pressing <kbd>F1</kbd> to open the Visual Studio Code palette.</span></span> <span data-ttu-id="add4d-113">Tür **ext yüklemek** uzantılarının listesini görmek için.</span><span class="sxs-lookup"><span data-stu-id="add4d-113">Type **ext install** to see the list of extensions.</span></span> <span data-ttu-id="add4d-114">C# uzantıyı seçin.</span><span class="sxs-lookup"><span data-stu-id="add4d-114">Select the C# extension.</span></span> <span data-ttu-id="add4d-115">Uzantıyı etkinleştirmek için Visual Studio Code yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="add4d-115">Restart Visual Studio Code to activate the extension.</span></span> <span data-ttu-id="add4d-116">Daha fazla bilgi için bkz: [Visual Studio kod C# uzantısı belgelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span><span class="sxs-lookup"><span data-stu-id="add4d-116">For more information, see the [Visual Studio Code C# Extension documentation](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
+<span data-ttu-id="f8c0c-112">Visual Studio Code açarak ve tuşuna basarak Visual Studio kod C# uzantısını yüklemeniz <kbd>F1</kbd> Visual Studio Code paletini açmak için.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-112">Install the Visual Studio Code C# extension by opening Visual Studio Code and pressing <kbd>F1</kbd> to open the Visual Studio Code palette.</span></span> <span data-ttu-id="f8c0c-113">Tür **ext yüklemek** uzantılarının listesini görmek için.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-113">Type **ext install** to see the list of extensions.</span></span> <span data-ttu-id="f8c0c-114">C# uzantıyı seçin.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-114">Select the C# extension.</span></span> <span data-ttu-id="f8c0c-115">Uzantıyı etkinleştirmek için Visual Studio Code yeniden başlatın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-115">Restart Visual Studio Code to activate the extension.</span></span> <span data-ttu-id="f8c0c-116">Daha fazla bilgi için bkz: [Visual Studio kod C# uzantısı belgelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-116">For more information, see the [Visual Studio Code C# Extension documentation](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
 
-## <a name="getting-started"></a><span data-ttu-id="add4d-117">Başlarken</span><span class="sxs-lookup"><span data-stu-id="add4d-117">Getting started</span></span>
+## <a name="getting-started"></a><span data-ttu-id="f8c0c-117">Başlarken</span><span class="sxs-lookup"><span data-stu-id="f8c0c-117">Getting started</span></span>
 
-<span data-ttu-id="add4d-118">Bu öğreticide, üç projeleri oluşturma: bir kitaplık projesine testleri kitaplığı proje ve bir konsol uygulaması yapar kitaplığını kullanın.</span><span class="sxs-lookup"><span data-stu-id="add4d-118">In this tutorial, you create three projects: a library project, tests for that library project, and a console application that makes use of the library.</span></span> <span data-ttu-id="add4d-119">Yapabilecekleriniz [görüntülemek veya kaynak indirme](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) github'da dotnet/samples deposunda Bu konu için.</span><span class="sxs-lookup"><span data-stu-id="add4d-119">You can [view or download the source](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) for this topic at the dotnet/samples repository on GitHub.</span></span> <span data-ttu-id="add4d-120">Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="add4d-120">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
+<span data-ttu-id="f8c0c-118">Bu öğreticide, üç projeleri oluşturma: bir kitaplık projesine testleri kitaplığı proje ve bir konsol uygulaması yapar kitaplığını kullanın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-118">In this tutorial, you create three projects: a library project, tests for that library project, and a console application that makes use of the library.</span></span> <span data-ttu-id="f8c0c-119">Yapabilecekleriniz [görüntülemek veya kaynak indirme](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) github'da dotnet/samples deposunda Bu konu için.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-119">You can [view or download the source](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) for this topic at the dotnet/samples repository on GitHub.</span></span> <span data-ttu-id="f8c0c-120">Yükleme yönergeleri için bkz: [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-120">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-<span data-ttu-id="add4d-121">Visual Studio Code başlatın.</span><span class="sxs-lookup"><span data-stu-id="add4d-121">Start Visual Studio Code.</span></span> <span data-ttu-id="add4d-122">Tuşuna <kbd>Ctrl</kbd> + <kbd> \` </kbd> (ters tırnak veya backtick karakter) ya da seçin **Görünüm > tümleşik Terminal** katıştırılmış açmak için menüden Visual Studio Code terminale.</span><span class="sxs-lookup"><span data-stu-id="add4d-122">Press <kbd>Ctrl</kbd>+<kbd>\`</kbd> (the backquote or backtick character) or select **View > Integrated Terminal** from the menu to open an embedded terminal in Visual Studio Code.</span></span> <span data-ttu-id="add4d-123">Dış bir kabuk Gezgini ile yine de açabilirsiniz **bir komut istemi açın** komutu (**içinde Terminali açın** Mac veya Linux) dışında Visual Studio Code çalışmayı tercih ederseniz.</span><span class="sxs-lookup"><span data-stu-id="add4d-123">You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside of Visual Studio Code.</span></span>
+<span data-ttu-id="f8c0c-121">Visual Studio Code başlatın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-121">Start Visual Studio Code.</span></span> <span data-ttu-id="f8c0c-122">Tuşuna <kbd>Ctrl</kbd> + <kbd> \` </kbd> (ters tırnak veya backtick karakter) ya da seçin **Görünüm > tümleşik Terminal** katıştırılmış açmak için menüden Visual Studio Code terminale.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-122">Press <kbd>Ctrl</kbd>+<kbd>\`</kbd> (the backquote or backtick character) or select **View > Integrated Terminal** from the menu to open an embedded terminal in Visual Studio Code.</span></span> <span data-ttu-id="f8c0c-123">Dış bir kabuk Gezgini ile yine de açabilirsiniz **bir komut istemi açın** komutu (**içinde Terminali açın** Mac veya Linux) dışında Visual Studio Code çalışmayı tercih ederseniz.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-123">You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside of Visual Studio Code.</span></span>
 
-<span data-ttu-id="add4d-124">Bir veya daha fazla .NET Core projeleri için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın.</span><span class="sxs-lookup"><span data-stu-id="add4d-124">Begin by creating a solution file, which serves as a container for one or more .NET Core projects.</span></span> <span data-ttu-id="add4d-125">Terminale oluşturma bir *altın* klasörü ve klasörünü açın.</span><span class="sxs-lookup"><span data-stu-id="add4d-125">In the terminal, create a *golden* folder and open the folder.</span></span> <span data-ttu-id="add4d-126">Bu klasör çözümünüzü köküdür.</span><span class="sxs-lookup"><span data-stu-id="add4d-126">This folder is the root of your solution.</span></span> <span data-ttu-id="add4d-127">Çalıştırma [ `dotnet new` ](../tools/dotnet-new.md) yeni bir çözüm oluşturmak için komutu *golden.sln*:</span><span class="sxs-lookup"><span data-stu-id="add4d-127">Run the [`dotnet new`](../tools/dotnet-new.md) command to create a new solution, *golden.sln*:</span></span>
+<span data-ttu-id="f8c0c-124">Bir veya daha fazla .NET Core projeleri için kapsayıcı görevi gören bir çözüm dosyası oluşturarak başlayın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-124">Begin by creating a solution file, which serves as a container for one or more .NET Core projects.</span></span> <span data-ttu-id="f8c0c-125">Terminale oluşturma bir *altın* klasörü ve klasörünü açın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-125">In the terminal, create a *golden* folder and open the folder.</span></span> <span data-ttu-id="f8c0c-126">Bu klasör çözümünüzü köküdür.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-126">This folder is the root of your solution.</span></span> <span data-ttu-id="f8c0c-127">Çalıştırma [ `dotnet new` ](../tools/dotnet-new.md) yeni bir çözüm oluşturmak için komutu *golden.sln*:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-127">Run the [`dotnet new`](../tools/dotnet-new.md) command to create a new solution, *golden.sln*:</span></span>
 
 ```console
 dotnet new sln
 ```
 
-<span data-ttu-id="add4d-128">Gelen *altın* klasörü, iki dosyalar oluşturur, bir kitaplık projesi oluşturmak için aşağıdaki komutu yürütün*library.csproj* ve *Class1.cs*, içinde*Kitaplığı* klasörü:</span><span class="sxs-lookup"><span data-stu-id="add4d-128">From the *golden* folder, execute the following command to create a library project, which produces two files,*library.csproj* and *Class1.cs*, in the *library* folder:</span></span>
+<span data-ttu-id="f8c0c-128">Gelen *altın* klasörü, iki dosyalar oluşturur, bir kitaplık projesi oluşturmak için aşağıdaki komutu yürütün*library.csproj* ve *Class1.cs*, içinde*Kitaplığı* klasörü:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-128">From the *golden* folder, execute the following command to create a library project, which produces two files,*library.csproj* and *Class1.cs*, in the *library* folder:</span></span>
 
 ```console
 dotnet new classlib -o library
 ```
 
-<span data-ttu-id="add4d-129">Yürütme [ `dotnet sln` ](../tools/dotnet-sln.md) yeni oluşturulan eklemek için komutu *library.csproj* çözüme proje:</span><span class="sxs-lookup"><span data-stu-id="add4d-129">Execute the [`dotnet sln`](../tools/dotnet-sln.md) command to add the newly created *library.csproj* project to the solution:</span></span>
+<span data-ttu-id="f8c0c-129">Yürütme [ `dotnet sln` ](../tools/dotnet-sln.md) yeni oluşturulan eklemek için komutu *library.csproj* çözüme proje:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-129">Execute the [`dotnet sln`](../tools/dotnet-sln.md) command to add the newly created *library.csproj* project to the solution:</span></span>
 
 ```console
 dotnet sln add library/library.csproj
 ```
 
-<span data-ttu-id="add4d-130">*Library.csproj* dosya, aşağıdaki bilgileri içerir:</span><span class="sxs-lookup"><span data-stu-id="add4d-130">The *library.csproj* file contains the following information:</span></span>
+<span data-ttu-id="f8c0c-130">*Library.csproj* dosya, aşağıdaki bilgileri içerir:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-130">The *library.csproj* file contains the following information:</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -66,13 +62,13 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-<span data-ttu-id="add4d-131">Bizim kitaplığı yöntemleri seri hale getirmek ve nesneleri JSON biçiminde seri durumdan.</span><span class="sxs-lookup"><span data-stu-id="add4d-131">Our library methods serialize and deserialize objects in JSON format.</span></span> <span data-ttu-id="add4d-132">JSON seri hale getirme ve seri durumdan çıkarma desteklemek için bir başvuru ekleyin `Newtonsoft.Json` NuGet paketi.</span><span class="sxs-lookup"><span data-stu-id="add4d-132">To support JSON serialization and deserialization, add a reference to the `Newtonsoft.Json` NuGet package.</span></span> <span data-ttu-id="add4d-133">`dotnet add` Komut bir projesine yeni öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="add4d-133">The `dotnet add` command adds new items to a project.</span></span> <span data-ttu-id="add4d-134">NuGet paketine başvuru eklemek için kullanın [ `dotnet add package` ](../tools/dotnet-add-package.md) komut ve paketinin adını belirtin:</span><span class="sxs-lookup"><span data-stu-id="add4d-134">To add a reference to a NuGet package, use the [`dotnet add package`](../tools/dotnet-add-package.md) command and specify the name of the package:</span></span>
+<span data-ttu-id="f8c0c-131">Bizim kitaplığı yöntemleri seri hale getirmek ve nesneleri JSON biçiminde seri durumdan.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-131">Our library methods serialize and deserialize objects in JSON format.</span></span> <span data-ttu-id="f8c0c-132">JSON seri hale getirme ve seri durumdan çıkarma desteklemek için bir başvuru ekleyin `Newtonsoft.Json` NuGet paketi.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-132">To support JSON serialization and deserialization, add a reference to the `Newtonsoft.Json` NuGet package.</span></span> <span data-ttu-id="f8c0c-133">`dotnet add` Komut bir projesine yeni öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-133">The `dotnet add` command adds new items to a project.</span></span> <span data-ttu-id="f8c0c-134">NuGet paketine başvuru eklemek için kullanın [ `dotnet add package` ](../tools/dotnet-add-package.md) komut ve paketinin adını belirtin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-134">To add a reference to a NuGet package, use the [`dotnet add package`](../tools/dotnet-add-package.md) command and specify the name of the package:</span></span>
 
 ```console
 dotnet add library package Newtonsoft.Json
 ```
 
-<span data-ttu-id="add4d-135">Bu ekler `Newtonsoft.Json` ve bağımlılıklarını kitaplığı projesine.</span><span class="sxs-lookup"><span data-stu-id="add4d-135">This adds `Newtonsoft.Json` and its dependencies to the library project.</span></span> <span data-ttu-id="add4d-136">Alternatif olarak, el ile düzenleme *library.csproj* dosya ve aşağıdaki düğüm ekleyin:</span><span class="sxs-lookup"><span data-stu-id="add4d-136">Alternatively, manually edit the *library.csproj* file and add the following node:</span></span>
+<span data-ttu-id="f8c0c-135">Bu ekler `Newtonsoft.Json` ve bağımlılıklarını kitaplığı projesine.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-135">This adds `Newtonsoft.Json` and its dependencies to the library project.</span></span> <span data-ttu-id="f8c0c-136">Alternatif olarak, el ile düzenleme *library.csproj* dosya ve aşağıdaki düğüm ekleyin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-136">Alternatively, manually edit the *library.csproj* file and add the following node:</span></span>
 
 ```xml
 <ItemGroup>
@@ -80,13 +76,13 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-<span data-ttu-id="add4d-137">Yürütme [ `dotnet restore` ](../tools/dotnet-restore.md), ([nota bakın](#dotnet-restore-note)) bağımlılıkları yükler ve oluşturur bir *obj* klasöre *Kitaplığı* üç dahil olmak üzere, dosyaları bir *project.assets.json* dosyası:</span><span class="sxs-lookup"><span data-stu-id="add4d-137">Execute [`dotnet restore`](../tools/dotnet-restore.md), ([see note](#dotnet-restore-note)) which restores dependencies and creates an *obj* folder inside *library* with three files in it, including a *project.assets.json* file:</span></span>
+<span data-ttu-id="f8c0c-137">Yürütme [ `dotnet restore` ](../tools/dotnet-restore.md), ([nota bakın](#dotnet-restore-note)) bağımlılıkları yükler ve oluşturur bir *obj* klasöre *Kitaplığı* üç dahil olmak üzere, dosyaları bir *project.assets.json* dosyası:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-137">Execute [`dotnet restore`](../tools/dotnet-restore.md), ([see note](#dotnet-restore-note)) which restores dependencies and creates an *obj* folder inside *library* with three files in it, including a *project.assets.json* file:</span></span>
 
 ```console
 dotnet restore
 ```
 
-<span data-ttu-id="add4d-138">İçinde *Kitaplığı* klasörü, dosyayı yeniden adlandırın *Class1.cs* için *Thing.cs*.</span><span class="sxs-lookup"><span data-stu-id="add4d-138">In the *library* folder, rename the file *Class1.cs* to *Thing.cs*.</span></span> <span data-ttu-id="add4d-139">Kod aşağıdakiyle değiştirin:</span><span class="sxs-lookup"><span data-stu-id="add4d-139">Replace the code with the following:</span></span>
+<span data-ttu-id="f8c0c-138">İçinde *Kitaplığı* klasörü, dosyayı yeniden adlandırın *Class1.cs* için *Thing.cs*.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-138">In the *library* folder, rename the file *Class1.cs* to *Thing.cs*.</span></span> <span data-ttu-id="f8c0c-139">Kod aşağıdakiyle değiştirin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-139">Replace the code with the following:</span></span>
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -101,35 +97,35 @@ namespace Library
 }
 ```
 
-<span data-ttu-id="add4d-140">`Thing` Sınıfı içeren bir genel yöntem `Get`, iki toplamını numaraları ancak bunu toplamı bir dizeye dönüştürme ve tamsayı seri durumdan desteklemez döndürür.</span><span class="sxs-lookup"><span data-stu-id="add4d-140">The `Thing` class contains one public method, `Get`, which returns the sum of two numbers but does so by converting the sum into a string and then deserializing it into an integer.</span></span> <span data-ttu-id="add4d-141">Bu kullanır modern C# özellikleri, bir dizi gibi [ `using static` yönergeleri](../../csharp/language-reference/keywords/using-static.md), [ifade bodied üyeleri](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), ve [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="add4d-141">This makes use of a number of modern C# features, such as [`using static` directives](../../csharp/language-reference/keywords/using-static.md), [expression-bodied members](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), and [string interpolation](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+<span data-ttu-id="f8c0c-140">`Thing` Sınıfı içeren bir genel yöntem `Get`, iki toplamını numaraları ancak bunu toplamı bir dizeye dönüştürme ve tamsayı seri durumdan desteklemez döndürür.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-140">The `Thing` class contains one public method, `Get`, which returns the sum of two numbers but does so by converting the sum into a string and then deserializing it into an integer.</span></span> <span data-ttu-id="f8c0c-141">Bu kullanır modern C# özellikleri, bir dizi gibi [ `using static` yönergeleri](../../csharp/language-reference/keywords/using-static.md), [ifade bodied üyeleri](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), ve [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="f8c0c-141">This makes use of a number of modern C# features, such as [`using static` directives](../../csharp/language-reference/keywords/using-static.md), [expression-bodied members](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), and [string interpolation](../../csharp/language-reference/tokens/interpolated.md).</span></span>
 
-<span data-ttu-id="add4d-142">Kitaplıkla yapı [ `dotnet build` ](../tools/dotnet-build.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="add4d-142">Build the library with the [`dotnet build`](../tools/dotnet-build.md) command.</span></span> <span data-ttu-id="add4d-143">Bu üreten bir *library.dll* altında dosya *golden/library/bin/Debug/netstandard1.4*:</span><span class="sxs-lookup"><span data-stu-id="add4d-143">This produces a *library.dll* file under *golden/library/bin/Debug/netstandard1.4*:</span></span>
+<span data-ttu-id="f8c0c-142">Kitaplıkla yapı [ `dotnet build` ](../tools/dotnet-build.md) komutu.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-142">Build the library with the [`dotnet build`](../tools/dotnet-build.md) command.</span></span> <span data-ttu-id="f8c0c-143">Bu üreten bir *library.dll* altında dosya *golden/library/bin/Debug/netstandard1.4*:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-143">This produces a *library.dll* file under *golden/library/bin/Debug/netstandard1.4*:</span></span>
 
 ```console
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a><span data-ttu-id="add4d-144">Testi projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="add4d-144">Create the test project</span></span>
+## <a name="create-the-test-project"></a><span data-ttu-id="f8c0c-144">Testi projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="f8c0c-144">Create the test project</span></span>
 
-<span data-ttu-id="add4d-145">Kitaplık için bir test projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="add4d-145">Build a test project for the library.</span></span> <span data-ttu-id="add4d-146">Gelen *altın* klasörü, yeni bir test projesi oluşturun:</span><span class="sxs-lookup"><span data-stu-id="add4d-146">From the *golden* folder, create a new test project:</span></span>
+<span data-ttu-id="f8c0c-145">Kitaplık için bir test projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-145">Build a test project for the library.</span></span> <span data-ttu-id="f8c0c-146">Gelen *altın* klasörü, yeni bir test projesi oluşturun:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-146">From the *golden* folder, create a new test project:</span></span>
 
 ```console
 dotnet new xunit -o test-library
 ```
 
-<span data-ttu-id="add4d-147">Oluşturduğunuz test projesinin çözüme ekleyin:</span><span class="sxs-lookup"><span data-stu-id="add4d-147">Add the test project to the solution:</span></span>
+<span data-ttu-id="f8c0c-147">Oluşturduğunuz test projesinin çözüme ekleyin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-147">Add the test project to the solution:</span></span>
 
 ```console
 dotnet sln add test-library/test-library.csproj
 ```
 
-<span data-ttu-id="add4d-148">Böylece derleyici bulmak ve kitaplığı projesi kullanın, önceki bölümde oluşturduğunuz kitaplığı proje başvurusu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="add4d-148">Add a project reference the library you created in the previous section so that the compiler can find and use the library project.</span></span> <span data-ttu-id="add4d-149">Kullanım [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="add4d-149">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
+<span data-ttu-id="f8c0c-148">Böylece derleyici bulmak ve kitaplığı projesi kullanın, önceki bölümde oluşturduğunuz kitaplığı proje başvurusu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-148">Add a project reference the library you created in the previous section so that the compiler can find and use the library project.</span></span> <span data-ttu-id="f8c0c-149">Kullanım [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-149">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```console
 dotnet add test-library/test-library.csproj reference library/library.csproj
 ```
 
-<span data-ttu-id="add4d-150">Alternatif olarak, el ile düzenleme *test library.csproj* dosya ve aşağıdaki düğüm ekleyin:</span><span class="sxs-lookup"><span data-stu-id="add4d-150">Alternatively, manually edit the *test-library.csproj* file and add the following node:</span></span>
+<span data-ttu-id="f8c0c-150">Alternatif olarak, el ile düzenleme *test library.csproj* dosya ve aşağıdaki düğüm ekleyin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-150">Alternatively, manually edit the *test-library.csproj* file and add the following node:</span></span>
 
 ```xml
 <ItemGroup>
@@ -137,7 +133,7 @@ dotnet add test-library/test-library.csproj reference library/library.csproj
 </ItemGroup>
 ```
 
-<span data-ttu-id="add4d-151">Bağımlılıkları düzgün yapılandırılmadığından, kitaplık için testleri oluşturun.</span><span class="sxs-lookup"><span data-stu-id="add4d-151">Now that the dependencies have been properly configured, create the tests for your library.</span></span> <span data-ttu-id="add4d-152">Açık *UnitTest1.cs* ve içeriğini aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="add4d-152">Open *UnitTest1.cs* and replace its contents with the following code:</span></span>
+<span data-ttu-id="f8c0c-151">Bağımlılıkları düzgün yapılandırılmadığından, kitaplık için testleri oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-151">Now that the dependencies have been properly configured, create the tests for your library.</span></span> <span data-ttu-id="f8c0c-152">Açık *UnitTest1.cs* ve içeriğini aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-152">Open *UnitTest1.cs* and replace its contents with the following code:</span></span>
 
 ```csharp
 using Library;
@@ -155,73 +151,73 @@ namespace TestApp
 }
 ```
 
-<span data-ttu-id="add4d-153">Değerin 42 19 + 23 (ya da 42) eşit değil assert Not ilk oluşturduğunuzda birim testi (`Assert.NotEqual`), hangi başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="add4d-153">Note that you assert the value 42 is not equal to 19+23 (or 42) when you first create the unit test (`Assert.NotEqual`), which will fail.</span></span> <span data-ttu-id="add4d-154">Birim testleri oluşturmanın önemli bir adım, mantığını onaylamak ilk kez başarısız test oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="add4d-154">An important step in building unit tests is to create the test to fail once first to confirm its logic.</span></span>
+<span data-ttu-id="f8c0c-153">Değerin 42 19 + 23 (ya da 42) eşit değil assert Not ilk oluşturduğunuzda birim testi (`Assert.NotEqual`), hangi başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-153">Note that you assert the value 42 is not equal to 19+23 (or 42) when you first create the unit test (`Assert.NotEqual`), which will fail.</span></span> <span data-ttu-id="f8c0c-154">Birim testleri oluşturmanın önemli bir adım, mantığını onaylamak ilk kez başarısız test oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-154">An important step in building unit tests is to create the test to fail once first to confirm its logic.</span></span>
 
-<span data-ttu-id="add4d-155">Gelen *altın* klasörü, aşağıdaki komutları çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="add4d-155">From the *golden* folder, execute the following commands:</span></span>
+<span data-ttu-id="f8c0c-155">Gelen *altın* klasörü, aşağıdaki komutları çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-155">From the *golden* folder, execute the following commands:</span></span>
 
 ```console
 dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
 
-<span data-ttu-id="add4d-156">Bu komutlar bağımlılıkları geri yükleme, bunları oluşturmak ve xUnit etkinleştirmek için tüm projeleri test Çalıştırıcısı testleri çalıştırmak için özyinelemeli bulma olur.</span><span class="sxs-lookup"><span data-stu-id="add4d-156">These commands will recursively find all projects to restore dependencies, build them, and activate the xUnit test runner to run the tests.</span></span> <span data-ttu-id="add4d-157">Beklediğiniz gibi tek bir test başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="add4d-157">The single test fails, as you expect.</span></span>
+<span data-ttu-id="f8c0c-156">Bu komutlar bağımlılıkları geri yükleme, bunları oluşturmak ve xUnit etkinleştirmek için tüm projeleri test Çalıştırıcısı testleri çalıştırmak için özyinelemeli bulma olur.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-156">These commands will recursively find all projects to restore dependencies, build them, and activate the xUnit test runner to run the tests.</span></span> <span data-ttu-id="f8c0c-157">Beklediğiniz gibi tek bir test başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-157">The single test fails, as you expect.</span></span>
 
-<span data-ttu-id="add4d-158">Düzen *UnitTest1.cs* dosya ve gelen onaylama değiştirme `Assert.NotEqual` için `Assert.Equal`.</span><span class="sxs-lookup"><span data-stu-id="add4d-158">Edit the *UnitTest1.cs* file and change the assertion from `Assert.NotEqual` to `Assert.Equal`.</span></span> <span data-ttu-id="add4d-159">Aşağıdaki komutu yürütün *altın* klasör bu süre geçtikten testi yeniden çalıştırmak için:</span><span class="sxs-lookup"><span data-stu-id="add4d-159">Execute the following command from the *golden* folder to re-run the test, which passes this time:</span></span>
+<span data-ttu-id="f8c0c-158">Düzen *UnitTest1.cs* dosya ve gelen onaylama değiştirme `Assert.NotEqual` için `Assert.Equal`.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-158">Edit the *UnitTest1.cs* file and change the assertion from `Assert.NotEqual` to `Assert.Equal`.</span></span> <span data-ttu-id="f8c0c-159">Aşağıdaki komutu yürütün *altın* klasör bu süre geçtikten testi yeniden çalıştırmak için:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-159">Execute the following command from the *golden* folder to re-run the test, which passes this time:</span></span>
 
 ```console
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a><span data-ttu-id="add4d-160">Konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="add4d-160">Create the console app</span></span>
+## <a name="create-the-console-app"></a><span data-ttu-id="f8c0c-160">Konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="f8c0c-160">Create the console app</span></span>
 
-<span data-ttu-id="add4d-161">Aşağıdaki adımlar üzerinde oluşturduğunuz konsol uygulaması bir bağımlılık kitaplığı projeye daha önce oluşturduğunuz ve çalıştırıldığında, kendi kitaplığı yöntemini çağırır alır.</span><span class="sxs-lookup"><span data-stu-id="add4d-161">The console app you create over the following steps takes a dependency on the library project you created earlier and calls its library method when it runs.</span></span> <span data-ttu-id="add4d-162">Bu geliştirme desenini kullanarak, birden çok proje için yeniden kullanılabilir kitaplıkları oluşturma bakın.</span><span class="sxs-lookup"><span data-stu-id="add4d-162">Using this pattern of development, you see how to create reusable libraries for multiple projects.</span></span>
+<span data-ttu-id="f8c0c-161">Aşağıdaki adımlar üzerinde oluşturduğunuz konsol uygulaması bir bağımlılık kitaplığı projeye daha önce oluşturduğunuz ve çalıştırıldığında, kendi kitaplığı yöntemini çağırır alır.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-161">The console app you create over the following steps takes a dependency on the library project you created earlier and calls its library method when it runs.</span></span> <span data-ttu-id="f8c0c-162">Bu geliştirme desenini kullanarak, birden çok proje için yeniden kullanılabilir kitaplıkları oluşturma bakın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-162">Using this pattern of development, you see how to create reusable libraries for multiple projects.</span></span>
 
-<span data-ttu-id="add4d-163">Yeni bir konsol uygulamasından oluşturma *altın* klasörü:</span><span class="sxs-lookup"><span data-stu-id="add4d-163">Create a new console application from the *golden* folder:</span></span>
+<span data-ttu-id="f8c0c-163">Yeni bir konsol uygulamasından oluşturma *altın* klasörü:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-163">Create a new console application from the *golden* folder:</span></span>
 
 ```console
 dotnet new console -o app
 ```
 
-<span data-ttu-id="add4d-164">Konsol uygulama projesi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="add4d-164">Add the console app project to the solution:</span></span>
+<span data-ttu-id="f8c0c-164">Konsol uygulama projesi ekleyin:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-164">Add the console app project to the solution:</span></span>
 
 ```console
 dotnet sln add app/app.csproj
 ```
 
-<span data-ttu-id="add4d-165">Kitaplıkta çalıştırarak bağımlılığa yol `dotnet add reference` komutu:</span><span class="sxs-lookup"><span data-stu-id="add4d-165">Create the dependency on the library by running the `dotnet add reference` command:</span></span>
+<span data-ttu-id="f8c0c-165">Kitaplıkta çalıştırarak bağımlılığa yol `dotnet add reference` komutu:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-165">Create the dependency on the library by running the `dotnet add reference` command:</span></span>
 
 ```console
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-<span data-ttu-id="add4d-166">Çalıştırma `dotnet restore` ([bkz. Not](#dotnet-restore-note)) çözümde üç proje bağımlılıkları geri yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="add4d-166">Run `dotnet restore` ([see note](#dotnet-restore-note)) to restore the dependencies of the three projects in the solution.</span></span> <span data-ttu-id="add4d-167">Açık *Program.cs* ve içeriğini değiştirme `Main` aşağıdaki satırı yöntemiyle:</span><span class="sxs-lookup"><span data-stu-id="add4d-167">Open *Program.cs* and replace the contents of the `Main` method with the following line:</span></span>
+<span data-ttu-id="f8c0c-166">Çalıştırma `dotnet restore` ([bkz. Not](#dotnet-restore-note)) çözümde üç proje bağımlılıkları geri yüklemek için.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-166">Run `dotnet restore` ([see note](#dotnet-restore-note)) to restore the dependencies of the three projects in the solution.</span></span> <span data-ttu-id="f8c0c-167">Açık *Program.cs* ve içeriğini değiştirme `Main` aşağıdaki satırı yöntemiyle:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-167">Open *Program.cs* and replace the contents of the `Main` method with the following line:</span></span>
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
 ```
 
-<span data-ttu-id="add4d-168">İki eklemek `using` üst kısmındaki yönergeleri *Program.cs* dosyası:</span><span class="sxs-lookup"><span data-stu-id="add4d-168">Add two `using` directives to the top of the *Program.cs* file:</span></span>
+<span data-ttu-id="f8c0c-168">İki eklemek `using` üst kısmındaki yönergeleri *Program.cs* dosyası:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-168">Add two `using` directives to the top of the *Program.cs* file:</span></span>
 
 ```csharp
 using static System.Console;
 using Library;
 ```
 
-<span data-ttu-id="add4d-169">Aşağıdaki yürütme `dotnet run` yürütülebilir, where çalıştırılacak komutu `-p` için seçenek `dotnet run` ana uygulaması için projeyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="add4d-169">Execute the following `dotnet run` command to run the executable, where the `-p` option to `dotnet run` specifies the project for the main application.</span></span> <span data-ttu-id="add4d-170">Uygulama "yanıt 42 olduğu" dize oluşturur.</span><span class="sxs-lookup"><span data-stu-id="add4d-170">The app produces the string "The answer is 42".</span></span>
+<span data-ttu-id="f8c0c-169">Aşağıdaki yürütme `dotnet run` yürütülebilir, where çalıştırılacak komutu `-p` için seçenek `dotnet run` ana uygulaması için projeyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-169">Execute the following `dotnet run` command to run the executable, where the `-p` option to `dotnet run` specifies the project for the main application.</span></span> <span data-ttu-id="f8c0c-170">Uygulama "yanıt 42 olduğu" dize oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-170">The app produces the string "The answer is 42".</span></span>
 
 ```console
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a><span data-ttu-id="add4d-171">Uygulamada hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="add4d-171">Debug the application</span></span>
+## <a name="debug-the-application"></a><span data-ttu-id="f8c0c-171">Uygulamada hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="f8c0c-171">Debug the application</span></span>
 
-<span data-ttu-id="add4d-172">Konumunda bir kesme noktası belirleyerek `WriteLine` deyiminde `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="add4d-172">Set a breakpoint at the `WriteLine` statement in the `Main` method.</span></span> <span data-ttu-id="add4d-173">Her iki basarak bunu <kbd>F9</kbd> anahtar İmleç üzerinden olduğunda `WriteLine` satır veya fareyi kesme noktası ayarlamak istediğiniz sol kenar boşluğunda satırında tıklayarak.</span><span class="sxs-lookup"><span data-stu-id="add4d-173">Do this by either pressing the <kbd>F9</kbd> key when the cursor is over the `WriteLine` line or by clicking the mouse in the left margin on the line where you want to set the breakpoint.</span></span> <span data-ttu-id="add4d-174">Kırmızı bir daire kod satırı kenar görünür.</span><span class="sxs-lookup"><span data-stu-id="add4d-174">A red circle will appear in the margin next to the line of code.</span></span> <span data-ttu-id="add4d-175">Kod yürütmeyi kesme ulaşıldığında durdurur *önce* kesme çizgi yürütülür.</span><span class="sxs-lookup"><span data-stu-id="add4d-175">When the breakpoint is reached, code execution will stop *before* the breakpoint line is executed.</span></span>
+<span data-ttu-id="f8c0c-172">Konumunda bir kesme noktası belirleyerek `WriteLine` deyiminde `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-172">Set a breakpoint at the `WriteLine` statement in the `Main` method.</span></span> <span data-ttu-id="f8c0c-173">Her iki basarak bunu <kbd>F9</kbd> anahtar İmleç üzerinden olduğunda `WriteLine` satır veya fareyi kesme noktası ayarlamak istediğiniz sol kenar boşluğunda satırında tıklayarak.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-173">Do this by either pressing the <kbd>F9</kbd> key when the cursor is over the `WriteLine` line or by clicking the mouse in the left margin on the line where you want to set the breakpoint.</span></span> <span data-ttu-id="f8c0c-174">Kırmızı bir daire kod satırı kenar görünür.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-174">A red circle will appear in the margin next to the line of code.</span></span> <span data-ttu-id="f8c0c-175">Kod yürütmeyi kesme ulaşıldığında durdurur *önce* kesme çizgi yürütülür.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-175">When the breakpoint is reached, code execution will stop *before* the breakpoint line is executed.</span></span>
 
-<span data-ttu-id="add4d-176">Visual Studio Code araç çubuğunda, hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın seçme **Görünüm > hata ayıklama** menü çubuğunda veya klavye kısayolunu kullanarak <kbd>CTRL</kbd> + <kbd> SHIFT</kbd>+<kbd>D</kbd>:</span><span class="sxs-lookup"><span data-stu-id="add4d-176">Open the debugger tab by selecting the Debug icon in the Visual Studio Code toolbar, selecting **View > Debug** from the menu bar, or using the keyboard shortcut <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:</span></span>
+<span data-ttu-id="f8c0c-176">Visual Studio Code araç çubuğunda, hata ayıklama simgesini seçerek hata ayıklayıcı sekmesini açın seçme **Görünüm > hata ayıklama** menü çubuğunda veya klavye kısayolunu kullanarak <kbd>CTRL</kbd> + <kbd> SHIFT</kbd>+<kbd>D</kbd>:</span><span class="sxs-lookup"><span data-stu-id="f8c0c-176">Open the debugger tab by selecting the Debug icon in the Visual Studio Code toolbar, selecting **View > Debug** from the menu bar, or using the keyboard shortcut <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:</span></span>
 
 ![Visual Studio kod hata ayıklayıcı](./media/using-on-macos/vscodedebugger.png)
 
-<span data-ttu-id="add4d-178">Hata ayıklayıcı altında uygulamayı başlatmak için YÜRÜT düğmesine basın.</span><span class="sxs-lookup"><span data-stu-id="add4d-178">Press the Play button to start the application under the debugger.</span></span> <span data-ttu-id="add4d-179">Uygulama yürütme başlar ve burada durdurur kesme noktasına çalışır.</span><span class="sxs-lookup"><span data-stu-id="add4d-179">The app begins execution and runs to the breakpoint, where it stops.</span></span> <span data-ttu-id="add4d-180">Adımla `Get` yöntemi ve doğru bağımsız değişken geçirilen emin olun.</span><span class="sxs-lookup"><span data-stu-id="add4d-180">Step into the `Get` method and make sure that you have passed in the correct arguments.</span></span> <span data-ttu-id="add4d-181">Yanıt 42 olduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="add4d-181">Confirm that the answer is 42.</span></span>
+<span data-ttu-id="f8c0c-178">Hata ayıklayıcı altında uygulamayı başlatmak için YÜRÜT düğmesine basın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-178">Press the Play button to start the application under the debugger.</span></span> <span data-ttu-id="f8c0c-179">Uygulama yürütme başlar ve burada durdurur kesme noktasına çalışır.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-179">The app begins execution and runs to the breakpoint, where it stops.</span></span> <span data-ttu-id="f8c0c-180">Adımla `Get` yöntemi ve doğru bağımsız değişken geçirilen emin olun.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-180">Step into the `Get` method and make sure that you have passed in the correct arguments.</span></span> <span data-ttu-id="f8c0c-181">Yanıt 42 olduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="f8c0c-181">Confirm that the answer is 42.</span></span>
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

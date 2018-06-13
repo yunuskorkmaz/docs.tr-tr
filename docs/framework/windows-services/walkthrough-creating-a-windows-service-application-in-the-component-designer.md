@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520519"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a><span data-ttu-id="a8204-102">İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma</span><span class="sxs-lookup"><span data-stu-id="a8204-102">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>
 <span data-ttu-id="a8204-103">Bu makalede, bir olay günlüğü iletileri Yazar Visual Studio'da basit bir Windows hizmet uygulaması oluşturmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a8204-103">This article demonstrates how to create a simple Windows Service application in Visual Studio that writes messages to an event log.</span></span> <span data-ttu-id="a8204-104">Hizmetinizi oluşturmak için gerçekleştirdiğiniz temel adımlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="a8204-104">Here are the basic steps that you perform to create and use your service:</span></span>  

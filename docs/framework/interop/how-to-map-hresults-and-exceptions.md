@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393555"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a><span data-ttu-id="ddb74-102">Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme</span><span class="sxs-lookup"><span data-stu-id="ddb74-102">How to: Map HRESULTs and Exceptions</span></span>
 <span data-ttu-id="ddb74-103">COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor.</span><span class="sxs-lookup"><span data-stu-id="ddb74-103">COM methods report errors by returning HRESULTs; .NET methods report them by throwing exceptions.</span></span> <span data-ttu-id="ddb74-104">Çalışma zamanı iki arasında geçiş işler.</span><span class="sxs-lookup"><span data-stu-id="ddb74-104">The runtime handles the transition between the two.</span></span> <span data-ttu-id="ddb74-105">.NET Framework'teki her özel durum sınıfı bir HRESULT eşler.</span><span class="sxs-lookup"><span data-stu-id="ddb74-105">Each exception class in the .NET Framework maps to an HRESULT.</span></span>  
