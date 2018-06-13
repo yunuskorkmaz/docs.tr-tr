@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360618"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Nasıl yapılır: veri hizmeti sonuçları (WCF Veri Hizmetleri) ICollection
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri hizmeti sorgu tarafından döndürülen varlık sayısını sınırlamanıza olanak sağlar. Sayfa sınırlarını hizmeti başlatılır ve her varlık kümesi için ayrı ayrı ayarlanabilir çağrılan yöntem tanımlanır.  

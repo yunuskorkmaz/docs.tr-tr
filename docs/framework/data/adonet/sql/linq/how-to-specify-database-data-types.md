@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360673"
 ---
 # <a name="how-to-specify-database-data-types"></a>Nasıl yapılır: veritabanı veri türlerini belirtme
 Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> özelliği bir <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği bir T-SQL tablosu bildiriminde sütunu tanımlayan tam metni belirtin.  

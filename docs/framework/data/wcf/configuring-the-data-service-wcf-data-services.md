@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365144"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) yapılandırma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanıma Veri Hizmetleri oluşturabilirsiniz [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu akışlardaki verileri çeşitli veri kaynaklarındaki gelebilir. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu verileri olarak kullanıma sunmak için veri sağlayıcıları kullanır bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Bu sağlayıcıları içeren bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcı, bir yansıma sağlayıcısı ve özel veri hizmeti sağlayıcısı arabirimleri kümesi. Sağlayıcı uygulaması hizmeti veri modelini tanımlar. Daha fazla bilgi için bkz: [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540998"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser Denetimine Genel Bakış
 <xref:System.Windows.Forms.WebBrowser> Denetimi WebBrowser ActiveX denetimi için yönetilen sarmalayıcı sağlar. Yönetilen sarmalayıcı Windows Forms istemci uygulamalarınızda Web sayfaları görüntülemenizi sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.WebBrowser> Internet Explorer Web uygulamanızı veya gözatma işlevselliği çoğaltmak için denetim varsayılan Internet Explorer işlevselliği devre dışı bırakabilir ve basit bir HTML belge görüntüleyici olarak denetimi kullanın. DHTML tabanlı kullanıcı arabirimi öğeleri formunuza eklemek ve içinde barındırılan olgu gizlemek için denetimi de kullanabilirsiniz <xref:System.Windows.Forms.WebBrowser> denetim. Bu yaklaşım, tek bir uygulamada Windows Forms denetimleri ile Web denetimleri sorunsuzca birleştirin olanak tanır.  

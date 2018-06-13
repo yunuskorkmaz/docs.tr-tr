@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360196"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency ile değişiklikleri algılama
 A <xref:System.Data.SqlClient.SqlDependency> nesne ilişkilendirilebilir bir <xref:System.Data.SqlClient.SqlCommand> sorgu sonuçları ilk başta farklı algılamak için. Ayrıca bir temsilci atayabilirsiniz `OnChange` sonuçları için ilişkili bir komut değiştirdiğinizde, ateşlenir olay. İlişkilendirmeniz gerekir <xref:System.Data.SqlClient.SqlDependency> komutu yürütmeden önce komutu. `HasChanges` Özelliği <xref:System.Data.SqlClient.SqlDependency> verileri ilk alındığından beri sorgu sonuçlarını değişip değişmediğini için de kullanılabilir.  

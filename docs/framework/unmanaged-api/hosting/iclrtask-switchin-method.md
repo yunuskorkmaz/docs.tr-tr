@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438047"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn Yöntemi
 Ortak dil çalışma zamanı (CLR) bildirir, görev, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneği temsil olduğu şimdi çalıştırılabilir bir durumda.  

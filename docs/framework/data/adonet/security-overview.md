@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361945"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulama güvenliğini sağlamaya devam eden bir işlemdir. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür ortaya çıkarır tahmin etmek mümkün olduğundan, bir uygulamanın tüm saldırılarına karşı güvenli olduğu garanti edebilir noktası olacaktır. Buna karşılık, yalnızca hiç kimse olduğundan henüz bulunan (veya yayımlanmış) güvenlik açıkları sistemindeki gelmez hiçbiri mevcut veya mevcut. Yanı sıra güvenlik için proje tasarım aşamasında planlama güvenlik uygulama ömrü boyunca nasıl sürdürüleceği planlamak gerekir.  

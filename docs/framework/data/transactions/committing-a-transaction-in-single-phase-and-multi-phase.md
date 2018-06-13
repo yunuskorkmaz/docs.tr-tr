@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362824"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>İşlemi tek aşamalı ve çok aşaması Tamamlanıyor
 Bir işlem içinde kullanılan her bir kaynağın eylemlerini işlem yöneticisi (TM) tarafından düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Kaydetme kaynakları bir işlemde katılımcı olarak](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konuda ele alınmıştır bir kaynak (veya birden çok kaynak) bir işlem içinde nasıl kaydedilebilir. Bu konuda ele alınmıştır nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabilir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365845"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Veri alma ve CUD işlemleri N katmanlı uygulamalarda (LINQ-SQL)
 Bir ağ üzerinden bir istemciye müşteriler veya siparişler gibi varlık nesnesi seri hale olduğunda bu varlıkların kendi veri bağlamından ayrılır. Veri bağlamı artık kendi değişiklikler veya diğer nesnelerle ilişkilendirmelerinin izler. İstemcileri yalnızca verileri okuma sürece, bir sorun değildir. Bunu ayrıca bir yeni satırları eklemek istemcileri etkinleştirmek oldukça basittir. Uygulamanızı istemcileri güncelleştirin veya verilerini silmek mümkün gerektiriyorsa, çağırmadan önce ancak, daha sonra varlıklar için yeni bir veri bağlamı eklemeniz gerekir <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Özgün değerleriyle iyimser eşzamanlılık kontrolü kullanıyorsanız, ek olarak, ardından da veritabanını orijinal varlık ve varlık değiştirilmiş olarak sağlamak için bir yol gerekir. `Attach` Yöntemleri ayrılmış eklendikten sonra yeni bir veri bağlamına varlıklar put olanak sağlanır.  

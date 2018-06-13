@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361312"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server'da satır düzeyi izinleri verme
 Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sağlayan daha daha ayrıntılı bir düzeyde veri erişimi denetlemek için bir gereksinim yoktur. Örneğin, hastaneler veritabanı uygulaması yalnızca kendi hastalar ilgili bilgilerine erişmek için kısıtlı olacak şekilde tek tek Doktorlar gerektirebilir. Benzer gereksinim Finans, yasalar, kamu ve Askeri uygulamalar dahil olmak üzere birçok ortamlarda yoktur. Bu senaryoyu ele yardımcı olmak için SQL Server 2016 sağlayan bir [satır düzeyi güvenlik](https://msdn.microsoft.com/library/dn765131.aspx) basitleştirir ve güvenlik ilkesinde satır düzeyi erişim mantığı merkezi hale getirir özelliği. SQL Server'ın önceki sürümleri için benzer işlevselliği satır düzeyi filtreleme yürürlüğe için görünümleri kullanarak elde edilebilir.  

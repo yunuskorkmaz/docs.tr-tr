@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365195"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; &lt;ekleme&gt;
 IIS Windows Communication Foundation (WCF) uygulamasında barındırdığında uygun Internet Information Services (IIS) bağlamaları seçmek için bir mekanizma sağlar bir geçiş filtre belirten bir yapılandırma öğesi temsil eder.  

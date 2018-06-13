@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365520"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
 Herhangi bir uygulama ile etkileşim kurabilen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti temel [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış veri hizmeti döndürür. Bu birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-geniş bir aralık, Web özellikli uygulamalar Hizmetleri'nden tabanlı. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] daha zengin bir programlama deneyimi, kullandığında sağlayan istemci kitaplıklarını içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları .NET Framework veya Silverlight tabanlı uygulamalar.  

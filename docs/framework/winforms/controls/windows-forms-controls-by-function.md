@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541583"
 ---
 # <a name="windows-forms-controls-by-function"></a>İşlevlere Göre Windows Forms Denetimleri
 Windows Forms denetimleri ve işlevleri gerçekleştirmek bileşenleri sunar. Aşağıdaki tabloda Windows Forms denetimleri ve bileşenleri genel işlevi göre listelenmektedir. Ayrıca, aynı işleve hizmet eden birden çok denetim mevcut olduğunda, önerilen denetim yenisiyle denetim ilgili not ile listelenir. Ayrı bir sonraki tabloda değiştirilen denetimleri ile önerilen kendi değişikliklerini listelenir.  

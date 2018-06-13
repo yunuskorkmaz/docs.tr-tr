@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538310"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Nasıl yapılır: ToolStripControlHost ile Bir Windows Forms Denetimini Kaydırma
 <xref:System.Windows.Forms.ToolStripControlHost> rastgele Windows Forms denetimlerini kullanarak barındırma sağlamak üzere tasarlanmış <xref:System.Windows.Forms.ToolStripControlHost> Oluşturucusu veya genişletme <xref:System.Windows.Forms.ToolStripControlHost> kendisi. Denetimi genişleterek sarmalamak daha kolay <xref:System.Windows.Forms.ToolStripControlHost> ve özellikleri ve sık kullanıma yöntemleri uygulama özellikleri ve yöntemleri denetiminin kullanılır. Denetim olaylarını da getirebilir <xref:System.Windows.Forms.ToolStripControlHost> düzeyi.  

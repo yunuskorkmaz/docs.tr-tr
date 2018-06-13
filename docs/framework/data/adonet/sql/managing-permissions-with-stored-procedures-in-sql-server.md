@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361290"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Saklı yordamlar SQL Server'daki izinlerle yönetme
 Veritabanınızı geçici savunma çok satırlı oluşturma yöntemi, saklı yordam veya kullanıcı tanımlı işlevler kullanarak tüm veri erişim uygulamaktır. Tablolar gibi temel nesneler için tüm izinleri reddetme iptal etme ve saklı yordamlar Yürütme izinleri. Bu etkin bir güvenlik çevre geçici verileri ve veritabanı nesnelerini oluşturur.  

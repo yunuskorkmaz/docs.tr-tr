@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360484"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Tek tablo sorgu (LINQ-DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] İş uygulayan veri kaynaklarını sorguları <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. <xref:System.Data.DataTable> Çağırmanız gerekir böylece sınıfı ya da arabirimini uygulamıyor <xref:System.Data.DataTableExtensions.AsEnumerable%2A> kullanmak istiyorsanız, yöntem <xref:System.Data.DataTable> bir kaynak olarak `From` yan tümcesinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638720"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>Nesne mevcut değil&#39;t destek bu özelliği veya yöntemi (Visual Basic)
 Bir yöntem veya bu Otomasyon nesne için yok özellik belirttiniz.  

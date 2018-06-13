@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441419"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr Numaralandırması
 Tarafından kullanım için bir bölüm özniteliklerini belirtmek değerleri sağlayan [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.  

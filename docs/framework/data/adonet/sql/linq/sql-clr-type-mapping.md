@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365533"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL CLR türü eşlemesi
 LINQ-SQL, tercih ettiğiniz programlama dilini ifade edilen bir nesne modeli ilişkisel veritabanı veri modelinin eşler. Uygulama çalıştırıldığında LINQ-SQL dil ile tümleşik sorgu nesne modelinde SQL'e çevirir ve bunları yürütme için veritabanı gönderir. LINQ-SQL veritabanı sonuçları döndürdüğünde, geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  

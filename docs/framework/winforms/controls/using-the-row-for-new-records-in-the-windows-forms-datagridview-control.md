@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540666"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenleme için genellikle, kullanıcılarınızın veri deposuna yeni veri satırları ekleme yeteneği vermek istediğiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır olarak gösterilen sağlayarak bu işlevselliği destekler. Satır üstbilgisi içinde bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde, yeni kayıtlar için satır programla etkin olduğunda düşünmelisiniz şeylerden bazıları açıklanmaktadır.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362730"
 ---
 # <a name="large-udts"></a>Büyük atama
 Kullanıcı tanımlı türler (atama) ortak dil çalışma zamanı (CLR) nesneleri bir SQL Server veritabanında depolayarak sunucunun skaler tür sistemini genişletmek Geliştirici izin verin. Atama birden çok öğe içerebilir ve tek bir SQL Server sistem veri türü oluşur geleneksel diğer veri türleri farklı davranışlar olabilir.  

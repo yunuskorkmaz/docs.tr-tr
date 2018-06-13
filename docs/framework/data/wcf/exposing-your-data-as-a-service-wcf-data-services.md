@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363570"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Bir hizmet (WCF Veri Hizmetleri) olarak verilerinizi gösterme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Verilerinizi olarak kullanıma sunmak için hizmetleri daha kolay tanımlamak etkinleştirmek için Visual Studio ile tümleşir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Veri hizmeti oluşturma kullanıma sunan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış aşağıdaki temel adımları içerir:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365221"
 ---
 # <a name="external-mapping"></a>Dış eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyası veritabanının veri modeli ve nesne modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  

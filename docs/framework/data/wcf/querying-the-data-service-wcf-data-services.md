@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365650"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Veri Hizmeti (WCF Veri Hizmetleri) sorgulama
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak bir veri hizmeti tanıdık sorgu yürütebilir olanak tanır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dil ile tümleşik sorgu (LINQ) kullanımı dahil olmak üzere düzenleri programlama. İstemcide bir örneği olarak tanımlanan bir sorgu istemci kitaplığı çevirir <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfına bir HTTP GET isteği iletisi. Kitaplık yanıt iletisini alır ve istemci veri hizmeti sınıfları örneğine çevirir. Bu sınıf tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait.  

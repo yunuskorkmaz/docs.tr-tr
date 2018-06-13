@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364830"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamaları ve önlemenize veya aksi halde bu sorunların etkisini azaltmak için öneriler sağlar.  

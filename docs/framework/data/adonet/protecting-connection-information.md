@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363357"
 ---
 # <a name="protecting-connection-information"></a>Bağlantı bilgileri koruma
 Veri kaynağınıza erişimi korumaya yönelik en önemli hedeflerini uygulama hale getirirken biridir. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı gösterir. Bağlantı bilgilerini düz metin olarak depolanması veya tüm sisteminizin belleği riskleri kalıcı yapma. Kaynak kodunuz katıştırılmış bağlantı dizeleri kullanılarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş bir bütünleştirilmiş kodunda Microsoft Ara dili (MSIL) görüntülemek için.  

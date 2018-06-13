@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542281"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>Nasıl Yapılır: OpenFileDialog Bileşenini Kullanarak Dosyaları Açma
 <xref:System.Windows.Forms.OpenFileDialog> Bileşeni, kullanıcıların ağ üzerindeki herhangi bir bilgisayar veya bilgisayarlarını klasörleri bulun ve açmak için bir veya daha fazla dosya seçin sağlar. İletişim kutusu, iletişim kutusunda seçili kullanıcı dosyasının adını ve yolunu döndürür.  

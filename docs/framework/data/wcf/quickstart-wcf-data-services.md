@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365403"
 ---
 # <a name="quickstart-wcf-data-services"></a>Hızlı Başlangıç (WCF Veri Hizmetleri)
 Bu hızlı başlangıç öğrenmeniz yardımcı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] konular, destek görevleri bir dizi [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  

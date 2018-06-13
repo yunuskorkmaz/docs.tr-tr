@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537596"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Fare Girdisi
 Windows Forms çeşitli fare olayları ve özelleştirilmiş fare imleçleri, fare yakalama ve sürükle ve bırak davranışı için ek destek içerir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365481"
 ---
 # <a name="windows-applications-using-callbacks"></a>Geri aramalar kullanarak Windows uygulamaları
 Çoğu zaman uyumsuz işleme senaryoda, bir veritabanı işlemini başlatmak ve veritabanı işlemin tamamlanmasını beklemeden çalışan diğer işlemleri devam etmek istiyor. Ancak, birçok senaryo veritabanı işlemi sona erdikten sonra bir şey yapmak gerektirir. Örneğin, bir Windows uygulamasında yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı verirken uzun süre çalışan işlemi için bir arka plan iş parçacığı temsilci isteyebilirsiniz. Ancak, veritabanı işlemi tamamlandığında, sonuçları formu doldurmak için kullanmak istediğiniz. Bu tür senaryosu en iyi bir geri arama ile uygulanır.  

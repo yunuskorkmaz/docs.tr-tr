@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538242"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView Denetimi (Windows Forms)
 Windows Forms `TreeView` denetimi yolu dosya ve klasörleri Windows işletim sistemlerinde Windows Explorer özelliğinin sol bölmesinde görüntülenen gibi düğümü hiyerarşisini görüntüler.  

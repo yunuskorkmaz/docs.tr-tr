@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365858"
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet işlemleri (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sunucu üzerindeki yöntemleri kullanıma sunmak için veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemleri URI tarafından ele alınmıştır. Hizmet işlemleri, bir veri hizmeti iş mantığı gibi rol tabanlı güvenlik, uygulamak için doğrulama mantığını uygulamak için kullanıma sunmak etkinleştirin veya özellikleri sorgulama kullanıma sunmak için özelleştirilmiş. Hizmet işlemleri yöntemlerdir türetilen veri hizmet sınıfı eklenen <xref:System.Data.Services.DataService%601>. Tüm veri hizmeti kaynaklar gibi hizmet işlemi yöntemi için parametreler sağlayabilir. Örneğin, aşağıdaki işlemi URI hizmet (temel [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametre:  

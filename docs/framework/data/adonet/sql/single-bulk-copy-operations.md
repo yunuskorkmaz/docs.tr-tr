@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365871"
 ---
 # <a name="single-bulk-copy-operations"></a>Tek toplu kopyalama işlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmenin en kolay yaklaşım, tek bir işlemde bir veritabanında gerçekleştirmektir. Varsayılan olarak, yalıtılmış bir işlem olarak bir toplu kopyalama işlemi gerçekleştirilir: Bu çalışırken için fırsat ile geri işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  

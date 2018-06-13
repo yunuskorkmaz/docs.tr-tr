@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538385"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog Denetimi (Windows Forms)
 Windows Forms `PrintPreviewDialog` denetimidir bir belge yazdırıldığında nasıl görüneceğini görüntülemek için kullanılan bir önceden yapılandırılmış iletişim kutusu. Kendi iletişim kutusu yapılandırma yerine basit bir çözüm olarak, Windows tabanlı uygulamanızda kullanın. Denetim yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğmeler içerir.  

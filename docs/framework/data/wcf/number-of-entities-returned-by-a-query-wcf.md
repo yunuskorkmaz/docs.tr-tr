@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365005"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Nasıl yapılır: sorgu (WCF Veri Hizmetleri) tarafından döndürülen varlıkları sayısını belirlemek
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], varlık kümesi URI sorgu tarafından belirtilen bulunan varlıkların sayısını belirleyebilirsiniz. Bu sayı, sorgu sonucu birlikte ya da bir tamsayı değeri olarak eklenebilir. Daha fazla bilgi için bkz: [veri hizmeti sorgulanırken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

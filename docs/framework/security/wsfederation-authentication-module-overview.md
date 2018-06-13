@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409387"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation kimlik doğrulama Modülü'ne genel bakış
 Windows Identity Foundation (WIF) WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla ASP.NET uygulamalarında federe kimlik doğrulaması için destek içerir. Bu konu, nasıl federe kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  

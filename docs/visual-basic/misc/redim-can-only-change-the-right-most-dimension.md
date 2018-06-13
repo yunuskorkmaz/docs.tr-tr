@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641189"
 ---
 # <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39;ReDim&#39; en sağdaki boyut yalnızca değiştirebilirsiniz
 A `ReDim` deyimi çalıştı kullanmak `Preserve` son boyutu değil bir dizinin bir boyutu değiştirmek için anahtar sözcüğü. Kullanırken `Preserve`, bir dizinin yalnızca son boyutu yeniden boyutlandırabilirsiniz. Diğer tüm boyutları için mevcut dizisini için olduğu gibi aynı boyutta belirtmeniz gerekir.  

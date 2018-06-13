@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365611"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Bir işlemde katılımcı olarak kaynakları kaydetme
 Bir işlem içinde katılan her bir kaynağın eylemlerini bir işlem yöneticisi tarafından düzenlenir kaynak yöneticisi tarafından yönetilir. Düzenleme İşlem Yöneticisi aracılığıyla bir işlemde listeye aboneleri için verilen bildirimleri yoluyla yapılır.  

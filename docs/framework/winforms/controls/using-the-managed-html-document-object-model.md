@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535957"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelini Kullanma
 Yönetilen HTML belgesi nesne modeli (DOM) dayalı bir sarmalayıcı sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Internet Explorer tarafından kullanıma sunulan HTML sınıfları için. Barındırılan HTML sayfaları işlemek için bu sınıfları kullanan <xref:System.Windows.Forms.WebBrowser> denetimi veya başlangıçtan itibaren yeni sayfalar oluşturmak için.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364378"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Security
 Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerin çoğunu destekler. Böylece gereksiz özellikleri ve ağ bağlantısını varsayılan olarak kapalı olan tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  

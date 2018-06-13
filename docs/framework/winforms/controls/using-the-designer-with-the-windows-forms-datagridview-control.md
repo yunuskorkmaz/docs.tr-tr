@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539831"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows Formları DataGridView Denetimi ile Tasarımcı Kullanımı
 Visual Studio için tasarımcı desteği sağlar `DataGridView` denetimi, kod yazmadan birçok kurulum görevleri gerçekleştirmenizi sağlar. Bu görevler verileri görüntülemek için kullanılan denetim sütunları değiştirmek, bir veri kaynağına bağlama ve denetiminin temel davranış ve görünümünü ayarlama içerir.  

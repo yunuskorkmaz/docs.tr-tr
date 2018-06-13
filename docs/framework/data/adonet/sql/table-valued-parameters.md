@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365949"
 ---
 # <a name="table-valued-parameters"></a>Tablo değerli parametreleri
 Tablo değerli parametreleri birden çok gidiş dönüş veya özel bir sunucu tarafı mantığı verileri işlemek için gerek olmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir parametreli komut sunucusuna veri gönderme için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak çalıştırılan tablo değişkeni depolanmış [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

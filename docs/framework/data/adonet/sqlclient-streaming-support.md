@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364742"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient akış desteği
 Akış desteği SQL Server ile bir uygulama arasındaki (yeni [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (belgeler, görüntüler ve medya dosyaları) sunucuda yapılandırılmamış verileri destekler. Bir SQL Server veritabanı ikili büyük nesneler (BLOB) depolayabilirsiniz ancak BLOB'ları alma çok miktarda bellek kullanabilir.  

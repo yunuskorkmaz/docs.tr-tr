@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540374"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Verilerde Gezinme
 Bir Windows uygulamasında bağlamak için bir veri kaynağındaki kayıtlarını gezinmek için en kolay yolu olan bir <xref:System.Windows.Forms.BindingSource> veri kaynağı ve ardından bağlama denetimlerine bileşen <xref:System.Windows.Forms.BindingSource>. Sonra yerleşik gezinti yöntemi kullanabileceğinizi <xref:System.Windows.Forms.BindingSource> böyle bir <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> ve <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Bu yöntemleri kullanarak ayarlamak <xref:System.Windows.Forms.BindingSource.Position%2A> ve <xref:System.Windows.Forms.BindingSource.Current%2A> özelliklerini <xref:System.Windows.Forms.BindingSource> uygun şekilde. Ayrıca bir öğeyi bulur ve ayarlayarak geçerli öğesi olarak ayarla <xref:System.Windows.Forms.BindingSource.Position%2A> özelliği.  

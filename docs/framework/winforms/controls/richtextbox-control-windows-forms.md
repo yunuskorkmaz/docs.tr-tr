@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540888"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox Denetimi (Windows Forms)
 Windows Forms `RichTextBox` denetimi görüntüleme, girme ve biçimlendirme metin düzenleme için kullanılır. `RichTextBox` Denetimi her şeyi yapar <xref:System.Windows.Forms.TextBox> denetimi yapar, ancak bunu ayrıca yazı tiplerini, renk ve bağlantıları görüntüleyebilir; metin ve katıştırılmış görüntüler bir dosya; geri alma ve düzenleme işlemleri; Yinele yüklemek ve belirtilen karakterleri bulmak. `RichTextBox` Denetimi metin düzenleme sağlamak ve Microsoft Word gibi sözcük işleme uygulamaları benzer özellikleri görüntülemek için genellikle kullanılır. Gibi <xref:System.Windows.Forms.TextBox> denetimi `RichTextBox` denetim kaydırma çubukları; görüntüleyebilir ancak aksine <xref:System.Windows.Forms.TextBox> denetim, varsayılan olarak yatay ve dikey kaydırma çubukları görüntülenir ve ek scrollbar ayarlara sahip.  

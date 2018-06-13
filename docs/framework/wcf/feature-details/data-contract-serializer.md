@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488988"
 ---
 # <a name="data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici
 Windows Communication Foundation (WCF) altyapısını kullanan <xref:System.Runtime.Serialization.DataContractSerializer> sınıf varsayılan serileştirici olarak. Bu bölümdeki konular, tek başına bir serileştirici kullanmak için daha fazla ayrıntı sağlar.  

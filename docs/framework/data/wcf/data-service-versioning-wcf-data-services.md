@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365624"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Veri Hizmeti sürüm oluşturma (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri Hizmetleri oluşturun, böylece istemciler URI'ler kullanarak kaynakları, bir veri modeline bağlı olarak veri erişim sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Ayrıca hizmet işlemleri tanımını destekler. İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra bu veri hizmetleri için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimleri değiştirme gibi nedenlerle, değiştirilecek veya diğer sorunları gidermek için gerekebilir. Varolan bir veri hizmeti bir değişiklik yaptığınızda mi verilerinizi yeni bir sürümünü tanımlamak dikkate almanız gereken service ve mevcut istemci uygulamaları üzerindeki etkiyi en aza indirmek en iyi nasıl. Bu konu, ne zaman ve nasıl veri hizmeti, yeni bir sürümünü oluşturmak yönergeler sağlar. Ayrıca açıklanır nasıl [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir exchange istemcileri ve farklı sürümlerini destekler veri hizmetleri arasında işleme [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokolü.  

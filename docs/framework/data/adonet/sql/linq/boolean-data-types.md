@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361578"
 ---
 # <a name="boolean-data-types"></a>Boole veri türleri
 Davranış kısa devre değil çevrilir dışında Boole işleçleri (CLR), ortak dil çalışma zamanında beklendiği gibi çalışmayabilir. Örneğin, Visual Basic `AndAlso` işleci davranır gibi `And` işleci. C# `&&` işleci davranır gibi `&` işleci.  

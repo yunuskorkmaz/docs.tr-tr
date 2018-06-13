@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488224"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını Dışa Aktarma
 İlke onaylamalarını hizmet uç noktası gereksinimlerini ve özelliklerini açıklar. Hizmet uygulamaları özel ilke onaylamalarını hizmeti meta verilerde bitiş noktası, iletişim kurmak için kullanabileceğiniz istemci uygulamasına bağlama veya sözleşme özelleştirme bilgileri. Windows Communication Foundation (WCF) uç noktası, işlem veya özelliklerini veya iletişim kuran gereksinimleri bağlı olarak, ileti konuları WSDL bağlamalarda bağlı İlkesi ifadelerde onaylar dışarı aktarmak için kullanabilirsiniz.  

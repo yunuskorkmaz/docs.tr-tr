@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365910"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) sıralama
 Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralama ve veri satırı sıralama ölçüte göre sıralanmış dönmek için çeşitli yöntemler sağlar. Sıralama özellikleri, kendi dize tabanlı yanı sıra <xref:System.Data.DataView> kullanmanıza olanak tanır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ifadeleri sıralama ölçütleri için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri izin verir. Bu konuda kullanarak sıralama için her iki yaklaşım açıklanmaktadır <xref:System.Data.DataView>.  

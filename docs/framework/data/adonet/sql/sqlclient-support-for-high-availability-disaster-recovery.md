@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365715"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma SqlClient desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklenmiştir. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
