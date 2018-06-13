@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519687"
 ---
 # <a name="transacted-queues"></a>İşlenen sıraları
 Bu örnek, kuyruklar ve işlemleri içinde Windows Workflow Foundation (güvenilir ve ölçeklenebilir hizmetler oluşturmak için WF) tümleştirme gösterilmektedir. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` istemci iş akışında kullanarak bir işlem altında kuyruğa ileti göndermek için kullanılan <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> sunucuda kuyruktan ileti alma ve iş akışı aynı işlem altında durumunu güncelleştirmek için kullanılır.  

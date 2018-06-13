@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518838"
 ---
 # <a name="content-based-correlation"></a>İçeriğe dayalı bağıntı
 Bu örnek gösterilmektedir nasıl Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, ve <xref:System.ServiceModel.Activities.ReceiveReply>) içerik tabanlı birden çok içerik tabanlı correlations.and bağıntı ile kullanılabilir. Bu senaryoda, satın alma siparişi kimliği temel alarak bir bağıntı önce başlatılır ve başka bir bağıntı daha sonra müşteri kimliği temel alınarak oluşturulur Bu durum gösterilir ve nasıl bir <xref:System.ServiceModel.Activities.Receive> etkinlik hem mevcut bir bağıntı izleyin ve aynı gelen iletisini temel alarak yeni bir bağıntı başlatma.  

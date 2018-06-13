@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518906"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 ilke etkinlik
 Windows Workflow Foundation Policy4 etkinlik verir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow Foundation kullanılacak nesneleri [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) WF 3. 5 ' sevk kurallar altyapısı kullanarak doğrudan. Bu etkinlik kullanarak oluşturma ve WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. Windows Workflow Foundation bir parçası olarak dahil edilen WF 3.5 kurallar altyapısı hakkında daha fazla bilgi için Windows Workflow Foundation kurallar altyapısı giriş okuyun. Geçiş hakkında daha fazla bilgi için WF kuralları [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], Lütfen okuyun [Geçiş Kılavuzu](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552902"
 ---
 # <a name="progressbar"></a>ProgressBar
 A <xref:System.Windows.Controls.ProgressBar> bir işlemin ilerlemesini gösterir. <xref:System.Windows.Controls.ProgressBar> Bir işlem ilerledikçe sistem vurgulama rengiyle doldurulan bir pencere denetim oluşur.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518355"
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
 Uygulama ayarları mimarisi uygulamaları ayarları sarmalayıcı sınıfı veya tek tek özellikleri uygulanabilir birçok öznitelikleri sağlar. Bu öznitelikler çalışma zamanında uygulama ayarları altyapısı tarafından genellikle özellikle ayarları sağlayıcısı çalışan kendi özel sarmalayıcı belirtilen gereksinimlerine uyarlamak için incelenir.  

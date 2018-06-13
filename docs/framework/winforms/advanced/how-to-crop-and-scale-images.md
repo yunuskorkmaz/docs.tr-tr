@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521644"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Nasıl yapılır: Görüntü Kırpma ve Ölçeklendirme
 <xref:System.Drawing.Graphics> Sınıfı sağlar birkaç <xref:System.Drawing.Graphics.DrawImage%2A> yöntemleri, bazıları sahip kırpma ve ölçeklendirme görüntülere kullanabileceğiniz kaynak ve hedef dikdörtgen parametreler.  

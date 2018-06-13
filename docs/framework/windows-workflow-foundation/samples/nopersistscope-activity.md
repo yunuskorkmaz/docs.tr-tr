@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516445"
 ---
 # <a name="nopersistscope-activity"></a>NoPersistScope etkinliği
 Bu örnek, bir iş akışındaki serileştirilebilir olmayan ve tek kullanımlık bir durumu işlemek gösterilmiştir. Seri hale getirilemeyen durumu devam ettirmek iş akışları çalışmayın ve ayrıca atılabilir nesnelerinin iş akışında kullanıldıktan sonra Temizlenen önemli olduğunu önemlidir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519512"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'da izleme olayı içine olayları izleme
 Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti üzerinde izleme etkinleştirin ve izleme olayları, olay izleme için Windows (ETW) yayma gösterilmiştir. Örnek iş akışı kayıtları ETW İzleme yaymak üzere ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  

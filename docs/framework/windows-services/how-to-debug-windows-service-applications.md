@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518056"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama
 Bir hizmet, hizmet denetimi Yöneticisi'ni yerine içinden bağlamında çalıştırılmak gerekir Visual Studio. Bir hizmet hata ayıklama özelliği bu nedenle, diğer Visual Studio uygulama türleri hata ayıklama olarak kadar basit değildir. Bir hizmette hata ayıklamak için hizmeti başlatın ve sonra onu çalıştığı işlem bir hata ayıklayıcısı eklemeniz gerekir. Sonra tüm standart hata ayıklama işlevselliğini Visual Studio kullanarak uygulamanızı ayıklayabilirsiniz.  

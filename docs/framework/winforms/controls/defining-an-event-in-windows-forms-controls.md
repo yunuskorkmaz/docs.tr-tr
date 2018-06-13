@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524039"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Olay Tanımlama
 Özel olaylar tanımlama hakkında daha fazla bilgi için bkz [olayları](../../../../docs/standard/events/index.md). Tüm ilişkili veriler sahip olmayan bir olay tanımlarsanız, olay verileri için temel türü kullanın <xref:System.EventArgs>ve <xref:System.EventHandler> olay temsilci olarak. Yapmak için kalan tek şey bir olay üye ve korumalı bir tanımlamak için `On` *EventName* olayını yöntemi.  

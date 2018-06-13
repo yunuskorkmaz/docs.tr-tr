@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522578"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Sürükle ve Bırak İşlemleri ve Pano Desteği
 Bir dizi olay, özellikle işleyerek kullanıcı sürükle ve bırak işlemleri Windows tabanlı bir uygulama içinde etkinleştirebilirsiniz <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, ve <xref:System.Windows.Forms.Control.DragDrop> olaylar.  

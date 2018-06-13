@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520113"
 ---
 # <a name="variables-and-arguments"></a>Değişkenleri ve bağımsız değişkenler
 Windows Workflow Foundation (WF) değişkenleri verilerin depolama alanı temsil eder ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bir etkinlik bir bağımsız değişkenler kümesine sahip ve etkinlik imza yapın. Ayrıca, aktivite Geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenlerin listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifadeye kullanarak bağlanır.  

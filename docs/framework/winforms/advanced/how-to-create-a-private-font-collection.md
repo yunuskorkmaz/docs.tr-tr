@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523094"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma
 <xref:System.Drawing.Text.PrivateFontCollection> Sınıfının devraldığı <xref:System.Drawing.Text.FontCollection> soyut taban sınıfı. Kullanabileceğiniz bir <xref:System.Drawing.Text.PrivateFontCollection> uygulamanız için özellikle yazı tipleri kümesini korumak için nesne. Özel yazı tipi koleksiyonu yüklü yazı tipleri ve bunun yanı sıra bilgisayarda yüklü değil yazı tipleri içerebilir. Özel yazı tipi koleksiyonu için bir yazı tipi dosyası eklemek için arama <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> yöntemi bir <xref:System.Drawing.Text.PrivateFontCollection> nesnesi.  

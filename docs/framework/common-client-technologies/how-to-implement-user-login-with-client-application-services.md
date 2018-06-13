@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743816"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Nasıl Yapılır: İstemci Uygulama Hizmetleri ile Kullanıcı Oturum Açma Adını Uygulama
 İstemci uygulama hizmetleri varolan aracılığıyla kullanıcıları doğrulamak için kullanabileceğiniz [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmeti. Nasıl ayarlandığı hakkında bilgi için [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profil hizmet için bkz: [Microsoft Ajax ile form kimlik doğrulaması kullanarak](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522073"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya Veri Ekleme
 <xref:System.Windows.Forms.Clipboard> Sınıfı Windows işletim sistemi Pano özelliği ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici depo olarak kullanın. Örneğin, sözcük işlemci kesme ve yapıştırma işlemleri sırasında Panosu'nu kullanın. Pano, bir uygulamadan başka bir veri aktarmak için yararlıdır.  

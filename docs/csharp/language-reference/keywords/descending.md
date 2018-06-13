@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214185"
 ---
 # <a name="descending-c-reference"></a>descending (C# Başvurusu)
 `descending` Bağlamsal anahtar sözcüğü kullanılır [orderby yan tümcesinin](../../../csharp/language-reference/keywords/orderby-clause.md) sıralama düzenini büyükten çok küçük olduğunu belirtmek için sorgu ifadelerinde.  

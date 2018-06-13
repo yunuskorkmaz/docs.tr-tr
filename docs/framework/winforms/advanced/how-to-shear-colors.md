@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522453"
 ---
 # <a name="how-to-shear-colors"></a>Nasıl yapılır: Renkleri Bükme
 Yamultma artırır veya başka bir renk bileşenine orantılı bir miktar renk bileşeni azaltır. Örneğin, burada kırmızı bileşenini yarısı değerle mavi bileşeninin artırılır dönüştürme göz önünde bulundurun. Bu tür bir dönüşüm altında rengi (0.2, 0,5, 1) duruma (0,7, 0,5, 1). Yeni kırmızı 0.2 bileşendir + (1/2)(1) 0,7 =.  

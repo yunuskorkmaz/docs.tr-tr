@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522831"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Grafik Programlamaya Başlarken
 Bu bölümde kullanmaya başlamak gösterilmiştir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir Windows Forms uygulamasında. Aşağıdaki konular birkaç tamamlamak nasıl gösterir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim ve şekil ve metinler doldurma gibi görevleri.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463709"
 ---
 # <a name="3373---binarymessagedecodingstart"></a>3373 - BinaryMessageDecodingStart
 ## <a name="properties"></a>Özellikler  

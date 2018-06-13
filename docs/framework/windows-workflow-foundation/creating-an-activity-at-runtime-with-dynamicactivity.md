@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515181"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>DynamicActivity ile çalışma zamanında bir etkinlik oluşturma
 <xref:System.Activities.DynamicActivity> somut, korumalı bir public oluşturucuya sahip sınıfıdır. <xref:System.Activities.DynamicActivity> bir etkinlik DOM kullanarak çalışma zamanında etkinlik işlevleri bir araya getirmek için kullanılabilir  

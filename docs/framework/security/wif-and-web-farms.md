@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410422"
 ---
 # <a name="wif-and-web-farms"></a>WIF ve Web grupları
 Bir web grubu içinde dağıtılan bir bağlı olan taraf (RP) uygulama kaynaklarını güvenli hale getirmek için Windows Identity Foundation (WIF) kullandığınızda, WIF farklı çalıştırma RP uygulamasının örneklerini belirteçlerinden işleyebilir emin olmak için belirli adımlar uygulamanız gerekir gruptaki bilgisayarların. Bu işlem şifreleme Oturum belirteci imzaları doğrulamak içerir ve oturum belirteç şifre çözme, oturum belirteçleri önbelleğe alma ve algılama güvenlik belirteçleri yeniden.  

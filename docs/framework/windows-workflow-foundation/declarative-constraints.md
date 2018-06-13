@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517666"
 ---
 # <a name="declarative-constraints"></a>Bildirim temelli kısıtlamaları
 Bildirim temelli kısıtlamaları bir etkinlik ve diğer etkinlikler ilişkilerini için güçlü bir yöntem doğrulama sağlayın. Kısıtlamaları yazma işlemi sırasında bir etkinlik için yapılandırılmış, ancak ek kısıtlamalar iş akışı ana bilgisayar tarafından da belirtilebilir. Bu konu, etkinlik doğrulama sağlamak için bildirim temelli kısıtlamaları kullanarak genel bir bakış sağlar.  

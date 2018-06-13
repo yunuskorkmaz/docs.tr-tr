@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522207"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Görüntüler, Bit Eşlemler ve Meta Dosyaları
 `Image` Sınıftır ızgara görüntüleri (bit eşlemler) ile çalışmak için yöntemler sağlayan bir soyut taban ve vektör (meta dosyaları) görüntüler. `Bitmap` Sınıfı ve <xref:System.Drawing.Imaging.Metafile> her ikisi devral sınıfı `Image` sınıfı. `Bitmap` Sınıfını genişletir yeteneklerine `Image` yükleme, kaydetme ve ızgara görüntüleri düzenleme için ek yöntemleri sağlayarak sınıfı. <xref:System.Drawing.Imaging.Metafile> Sınıfını genişletir yeteneklerine `Image` kaydetme ve vektör görüntüleri incelemek için ek yöntemleri sağlayarak sınıfı.  

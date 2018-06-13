@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524121"
 ---
 # <a name="system-information-and-windows-forms"></a>Sistem Bilgileri ve Windows Forms
 Bazen, uygulama kodunuzda kararları için üzerinde çalıştığı bilgisayar hakkında bilgi toplamak gereklidir. Örneğin, yalnızca belirli bir ağ etki alanına bağlı olduğunda geçerlidir bir işleve sahip olabilir; Bu durumda etki alanını belirlemek ve etki alanı mevcut değilse işlevi devre dışı bırakmak için bir yol gerekir.  

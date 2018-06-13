@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519538"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: özel izleme katılımcı oluşturma
 İş akışı izleme iş akışı yürütme durumu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti sürdürülmesi ve hataları açıklayan izleme kayıtları yayar. Bu izleme kayıtları katılımcıları izleme tarafından kullanılır. Windows Workflow Foundation (WF) izleme kayıtları olay Windows için izleme (ETW) olayları olarak yazan standart izleme katılımcı içerir. Özel İzleme katılımcı Ayrıca, gereksinimlerinizi karşılamıyorsa yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalama izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri böylece kullanıcıya gösterilir.  

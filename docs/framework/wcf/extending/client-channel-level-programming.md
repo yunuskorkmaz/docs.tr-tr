@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486511"
 ---
 # <a name="client-channel-level-programming"></a>İstemci Kanal Düzeyi Programlama
 Bu konu, bir Windows Communication Foundation (WCF) istemci uygulaması kullanmadan yazmak açıklar <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> sınıfı ve onun ilişkili nesne modeli.  

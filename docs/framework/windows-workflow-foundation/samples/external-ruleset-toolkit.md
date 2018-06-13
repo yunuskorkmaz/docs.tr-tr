@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520402"
 ---
 # <a name="external-ruleset-toolkit"></a>Dış Ruleset Araç Seti
 Bir iş akışı uygulama içinde kuralları kullanıldığında, normalde derlemenin parçası kurallardır. Bazı senaryolarda, böylece yeniden oluşturma ve dağıtma iş akışı derlemesi güncelleştirilebilir ayrı olarak derlemesinden RuleSets korumak isteyebilirsiniz. Bu örnek, yönetme ve bir veritabanında RuleSets düzenlemek ve çalışma zamanında bir iş akışı bu RuleSets erişmek sağlar. Bu otomatik olarak RuleSet değişikliklerin uygulanması çalışan iş akışı örnekleri sağlar.  

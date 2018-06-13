@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516965"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>Kesinlik temelli bir hareket bir iş akışı yürütme
 Bu örnek, bir iş akışını kullanarak yürütmek gösterilmiştir <xref:System.Activities.WorkflowInvoker> altında bir <xref:System.Transactions.Transaction> kesinlik temelli C# kodundan.  

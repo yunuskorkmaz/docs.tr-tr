@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517206"
 ---
 # <a name="basic-xaml-only-service"></a>Temel XAML yalnızca hizmeti
 Bu örnek bir XAML yalnızca hizmetin nasıl oluşturulacağını gösterir. Senaryo bir araba ilgili sorunları tanılama hizmetidir. Hizmet, istemci bir dizi sorunu tanılamak için soru soran bir iş akışı olarak uygulanır. İki tür hizmet tanılama sorunları vardır (car başlatamaz veya çalışmıyor koşullandırma hava). İş Akışı Tasarımcısı'ndan istek/yanıt şablon üç Basit Hizmet işlemleri kullanıma sunmak için kullanır. IIS'de bir sanal dizin oluşturarak IIS'de barındırılan hizmet ve service1.xamlx ve Web.config dosyalarında sanal dizine kopyalama, derlenmiş kod gereklidir. Varsayılan olarak bu örnek otomatik olarak gerekli dosyaların WCF ve WF örnekleri için kurulum yönergeleri izlediğinizde oluşturulan sanal dizine kopyalar: [Windows Communication Foundation örnekleriiçinkerelikKurulumprosedürü](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Visual Studio 2010'da yapılandırıldığında.  

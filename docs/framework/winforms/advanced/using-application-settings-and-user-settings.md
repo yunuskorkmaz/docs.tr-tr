@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523848"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma
 .NET Framework 2.0 ile başlayarak, oluşturma ve uygulama yürütme oturumları arasında kalıcı değerlere erişebilir. Bu değerler olarak adlandırılan *ayarları*. Ayarları kullanıcı tercihleri gösterebilir veya değerli bilgileri uygulama kullanması gerekir. Örneğin, bir dizi uygulama renk düzenini ilgili kullanıcı tercihlerini depolamak ayarları oluşturabilirsiniz. Veya, uygulamanızın kullandığı bir veritabanını belirtir bağlantı dizesi depolayabilir. Ayarlar, her ikisi de size kod dışında ve bireysel kullanıcıların tercihleri depolamak profilleri oluşturmak için uygulamaya kritik bilgileri kalıcı sağlar.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522466"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, doğrusal gradyan rengi aynı şekilde değiştirir. Bununla birlikte, böylece Tekdüzen olmayan biçimde rengi değişir doğrusal gradyan özelleştirebilirsiniz.  

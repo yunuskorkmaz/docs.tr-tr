@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519645"
 ---
 # <a name="state-machine-workflows"></a>Durum makinesi iş akışları
 Durum makinesinin programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programları oluşturmak için kullanılabilir. Bu konu durumu makine iş akışları oluşturma genel bir bakış sağlar.  

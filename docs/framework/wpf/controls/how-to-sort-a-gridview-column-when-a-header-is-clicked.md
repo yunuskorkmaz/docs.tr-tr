@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554904"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Nasıl yapılır: Üstbilgi Tıklandığında GridView Sütununu Sıralama
 Bu örnek nasıl oluşturulacağını gösterir bir <xref:System.Windows.Controls.ListView> uygulayan denetim bir <xref:System.Windows.Controls.GridView> görüntüleme modu ve verileri, bir kullanıcı bir sütun başlığını tıkladığında içerik sıralar.  

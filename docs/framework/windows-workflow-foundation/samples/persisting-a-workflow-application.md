@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519193"
 ---
 # <a name="persisting-a-workflow-application"></a>Bir iş akışı uygulaması kalıcı yapma
 Bu örnek nasıl çalıştırılacağını gösteren bir <xref:System.Activities.WorkflowApplication>boşta gittiğinde kaldırın ve sonra yürütülmeye devam etmek için yeniden yükleyin.  

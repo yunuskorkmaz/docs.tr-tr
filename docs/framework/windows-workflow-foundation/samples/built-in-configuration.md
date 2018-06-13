@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518626"
 ---
 # <a name="built-in-configuration"></a>Yerleşik yapılandırma
 Bu örnek, kullanım ve SQL iş akışı örneği depolama yapılandırmasını gösterir. SQL iş akışı örneği deposuna bir SQL tabanlı bir örnek deposuna uygulamasıdır. Kaydetme ve yükleme durumu için ve SQL Server veya SQL Server Express veritabanından bir örnek sağlar.  

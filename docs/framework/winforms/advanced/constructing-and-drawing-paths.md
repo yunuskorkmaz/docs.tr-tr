@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520662"
 ---
 # <a name="constructing-and-drawing-paths"></a>Yollar Oluşturma ve Çizme
 Bir yolu, yönetilebilir ve tek bir birim olarak çizilen grafik temelleri (çizgiler, dikdörtgenler, eğriler, metin ve benzeri) dizisidir. Bir yol bölünebilir *rakamları* açık veya kapalı. Bir şekil birkaç temelleri içerebilir.  

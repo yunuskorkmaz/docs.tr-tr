@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524163"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider Bileşeni (Windows Forms)
 Windows Forms `HelpProvider` bileşen bir HTML Yardımı 1.x Yardım dosyası (HTML Yardım Atölyesi ile üretilen bir .chm dosyasını veya bir .htm dosyasının) ilişkilendirmek için kullanılan Windows tabanlı uygulamanızla.  

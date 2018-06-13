@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520363"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için uygulama geliştiricileri iş akışı için bir mekanizma sağlar. Bu yeni gereksinimleri, bir hata düzeltme uygulamak için veya beklenmeyen değişiklikleri uyum sağlayacak şekilde olabilir. Bu konuda sunulan dinamik güncelleştirme işlevlerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519918"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları uygulamanız farklı bir kısmi güven ortamında yerel bilgisayarınızda çalışmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve başka şeylerin yönetilmeyen API'ler kritik gibi yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları Microsoft Win32 API veya diğer güvenlik sistemi tarafından doğrulanıp doğrulanamadığını API'larını çağırma yeteneği etkiler. Güvenlik, dosya ve veri erişim dahil olmak üzere ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişim hakkında daha fazla bilgi için bkz: [daha fazla güvenli dosya ve Windows Forms veri erişimi](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz: [daha fazla Güvenli Yazdırma Windows Forms'ta](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  

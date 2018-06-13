@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516834"
 ---
 # <a name="instance-activation"></a>Örnek etkinleştirme
 SQL iş akışı örneği deposuna düzenli aralıklarla uyanır ve runnable veya activatable iş akışı örnekleri Kalıcılık veritabanında algılar iç bir görev çalıştırır. Runnable iş akışı örneği bulursa örneği etkinleştirilirken özelliğine sahip iş akışı ana bildirir. Örnek deposuna activatable iş akışı örneği bulursa, sırayla iş akışı örneği çalıştıran bir iş akışı ana etkinleştirir genel bir ana bilgisayar bildirir. Bu konudaki aşağıdaki bölümlerde ayrıntılı örneği etkinleştirme işlemi açıklanmaktadır.  

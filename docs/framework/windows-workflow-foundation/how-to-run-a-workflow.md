@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519525"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: bir iş akışını çalıştırma
 Bu konu, Windows Workflow Foundation Başlarken Öğreticisi devamıdır ve bir iş akışı ana bilgisayarı oluşturmak ve önceki tanımlanan iş akışını çalıştırmak nasıl ele [nasıl yapılır: bir iş akışı oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) konu.  

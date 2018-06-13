@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516847"
 ---
 # <a name="activity-tree-inspection"></a>Etkinlik ağaç denetleme
 Etkinlik ağaç denetleme, uygulama tarafından barındırılan iş akışları incelemek için iş akışı uygulama yazarlar tarafından kullanılır. Kullanarak <xref:System.Activities.WorkflowInspectionServices>iş akışları etkinlikler belirli alt etkinlikler için arama ve bunların özelliklerini olarak numaralandırılmış ve etkinliklerin çalışma zamanı meta verileri, belirli bir süre boyunca önbelleğe alınacağını. Bu konu genel bir bakış sağlar <xref:System.Activities.WorkflowInspectionServices> ve bir etkinlik ağacı incelemek için kullanma.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554917"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Nasıl yapılır: ListView İçindeki Seçili Öğelere Stil Eklemek için Tetikleyicileri Kullanma
 Bu örnek nasıl tanımlanacağı gösterilmektedir <xref:System.Windows.Style.Triggers%2A> için bir <xref:System.Windows.Controls.ListViewItem> denetim için bir özellik değeri, bir <xref:System.Windows.Controls.ListViewItem> değişiklikleri, <xref:System.Windows.Style> , <xref:System.Windows.Controls.ListViewItem> yanıt değişiklikler.  
