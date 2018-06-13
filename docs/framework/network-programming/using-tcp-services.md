@@ -1,12 +1,6 @@
 ---
 title: TCP Hizmetleri kullanma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,24 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5fce23d35c5c90799960a8075b610e5b7294ef66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11566182cc9d0b4f2634350868ec94a0685d996
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397175"
 ---
-# <a name="using-tcp-services"></a><span data-ttu-id="6c097-102">TCP Hizmetleri kullanma</span><span class="sxs-lookup"><span data-stu-id="6c097-102">Using TCP Services</span></span>
-<span data-ttu-id="6c097-103"><xref:System.Net.Sockets.TcpClient> Sınıfı TCP kullanarak bir Internet kaynağından veri ister.</span><span class="sxs-lookup"><span data-stu-id="6c097-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="6c097-104">Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> isteme ve TCP kullanarak veri almak için.</span><span class="sxs-lookup"><span data-stu-id="6c097-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="6c097-105">Uzak aygıt bağlantısı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.</span><span class="sxs-lookup"><span data-stu-id="6c097-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
+# <a name="using-tcp-services"></a><span data-ttu-id="44414-102">TCP Hizmetleri kullanma</span><span class="sxs-lookup"><span data-stu-id="44414-102">Using TCP Services</span></span>
+<span data-ttu-id="44414-103"><xref:System.Net.Sockets.TcpClient> Sınıfı TCP kullanarak bir Internet kaynağından veri ister.</span><span class="sxs-lookup"><span data-stu-id="44414-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="44414-104">Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> isteme ve TCP kullanarak veri almak için.</span><span class="sxs-lookup"><span data-stu-id="44414-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="44414-105">Uzak aygıt bağlantısı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.</span><span class="sxs-lookup"><span data-stu-id="44414-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
   
- <span data-ttu-id="6c097-106">TCP protokolü uzak uç noktasıyla bağlantı kurar ve veri paket göndermek ve almak için bu bağlantıyı kullanır.</span><span class="sxs-lookup"><span data-stu-id="6c097-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="6c097-107">TCP veri paketlerinin uç noktasına gönderilen ve doğru sırada geldiğinde birleştirilen emin sorumludur.</span><span class="sxs-lookup"><span data-stu-id="6c097-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
+ <span data-ttu-id="44414-106">TCP protokolü uzak uç noktasıyla bağlantı kurar ve veri paket göndermek ve almak için bu bağlantıyı kullanır.</span><span class="sxs-lookup"><span data-stu-id="44414-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="44414-107">TCP veri paketlerinin uç noktasına gönderilen ve doğru sırada geldiğinde birleştirilen emin sorumludur.</span><span class="sxs-lookup"><span data-stu-id="44414-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
   
- <span data-ttu-id="6c097-108">TCP bağlantı kurmak için gereksinim duyduğunuz hizmetini barındıran ağ aygıtı adresini bilmeniz gerekir ve hizmetin iletişim kurmak için kullandığı TCP bağlantı noktasını bilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="6c097-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="6c097-109">Internet Atanmış Numaralar Yetkilisi (IANA) (www.iana.org/assignments/port-numbers bakın) ortak Hizmetleri için bağlantı noktası numaralarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="6c097-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="6c097-110">IANA listede olmayan Hizmetleri bağlantı noktası numaraları 1024 65. 535'ı için aralığında olabilir.</span><span class="sxs-lookup"><span data-stu-id="6c097-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
+ <span data-ttu-id="44414-108">TCP bağlantı kurmak için gereksinim duyduğunuz hizmetini barındıran ağ aygıtı adresini bilmeniz gerekir ve hizmetin iletişim kurmak için kullandığı TCP bağlantı noktasını bilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="44414-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="44414-109">Internet Atanmış Numaralar Yetkilisi (IANA) (www.iana.org/assignments/port-numbers bakın) ortak Hizmetleri için bağlantı noktası numaralarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="44414-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="44414-110">IANA listede olmayan Hizmetleri bağlantı noktası numaraları 1024 65. 535'ı için aralığında olabilir.</span><span class="sxs-lookup"><span data-stu-id="44414-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- <span data-ttu-id="6c097-111">Aşağıdaki örnek, Yukarı ayarını gösterir. bir **TcpClient** numaralı TCP bağlantı noktasında 13 zaman sunucuya bağlanılamadı.</span><span class="sxs-lookup"><span data-stu-id="6c097-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
+ <span data-ttu-id="44414-111">Aşağıdaki örnek, Yukarı ayarını gösterir. bir **TcpClient** numaralı TCP bağlantı noktasında 13 zaman sunucuya bağlanılamadı.</span><span class="sxs-lookup"><span data-stu-id="44414-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
   
 ```vb  
 Imports System  
@@ -110,9 +103,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <span data-ttu-id="6c097-112"><xref:System.Net.Sockets.TcpListener>bir TCP bağlantı noktası gelen istekler için izleme ve ya da oluşturmak için kullanılan bir **yuva** veya **TcpClient** istemciye bağlantıyı yönetir.</span><span class="sxs-lookup"><span data-stu-id="6c097-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="6c097-113"><xref:System.Net.Sockets.TcpListener.Start%2A> Yöntemi etkinleştirir dinleme ve <xref:System.Net.Sockets.TcpListener.Stop%2A> yöntemi bağlantı noktası üzerinde dinleme devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="6c097-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="6c097-114"><xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> Yöntemi gelen bağlantı isteklerini kabul eder ve oluşturur bir **TcpClient** isteği işlemek üzere ve <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> yöntemi gelen bağlantı isteklerini kabul eder ve oluşturur bir **yuva**isteği işlemek üzere.</span><span class="sxs-lookup"><span data-stu-id="6c097-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
+ <span data-ttu-id="44414-112"><xref:System.Net.Sockets.TcpListener> bir TCP bağlantı noktası gelen istekler için izleme ve ya da oluşturmak için kullanılan bir **yuva** veya **TcpClient** istemciye bağlantıyı yönetir.</span><span class="sxs-lookup"><span data-stu-id="44414-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="44414-113"><xref:System.Net.Sockets.TcpListener.Start%2A> Yöntemi etkinleştirir dinleme ve <xref:System.Net.Sockets.TcpListener.Stop%2A> yöntemi bağlantı noktası üzerinde dinleme devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="44414-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="44414-114"><xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> Yöntemi gelen bağlantı isteklerini kabul eder ve oluşturur bir **TcpClient** isteği işlemek üzere ve <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> yöntemi gelen bağlantı isteklerini kabul eder ve oluşturur bir **yuva**isteği işlemek üzere.</span><span class="sxs-lookup"><span data-stu-id="44414-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
   
- <span data-ttu-id="6c097-115">Aşağıdaki örnek, bir ağ zaman sunucu kullanarak oluşturma gösterir bir **TcpListener** TCP bağlantı noktası 13 izlemek için.</span><span class="sxs-lookup"><span data-stu-id="6c097-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="6c097-116">Gelen bir bağlantı isteği kabul edildiğinde zaman sunucu geçerli tarih ve saat konak sunucusundan yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="6c097-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
+ <span data-ttu-id="44414-115">Aşağıdaki örnek, bir ağ zaman sunucu kullanarak oluşturma gösterir bir **TcpListener** TCP bağlantı noktası 13 izlemek için.</span><span class="sxs-lookup"><span data-stu-id="44414-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="44414-116">Gelen bir bağlantı isteği kabul edildiğinde zaman sunucu geçerli tarih ve saat konak sunucusundan yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="44414-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
   
 ```vb  
 Imports System  
@@ -204,5 +197,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6c097-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6c097-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="44414-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="44414-117">See Also</span></span>  
  

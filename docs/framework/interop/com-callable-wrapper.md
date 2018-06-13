@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394972"
 ---
 # <a name="com-callable-wrapper"></a><span data-ttu-id="dbfa0-102">COM Aranabilir Sarmalayıcısı</span><span class="sxs-lookup"><span data-stu-id="dbfa0-102">COM Callable Wrapper</span></span>
 <span data-ttu-id="dbfa0-103">COM istemcisi .NET nesnesi aradığında, ortak dil çalışma zamanı yönetilen nesneyi ve nesne için bir COM aranabilir sarmalayıcısı (saat) oluşturur.</span><span class="sxs-lookup"><span data-stu-id="dbfa0-103">When a COM client calls a .NET object, the common language runtime creates the managed object and a COM callable wrapper (CCW) for the object.</span></span> <span data-ttu-id="dbfa0-104">Bir .NET nesnesine başvuru için doğrudan COM istemcileri saatin tersi YÖNDE bir proxy olarak yönetilen nesne için kullanın.</span><span class="sxs-lookup"><span data-stu-id="dbfa0-104">Unable to reference a .NET object directly, COM clients use the CCW as a proxy for the managed object.</span></span>  

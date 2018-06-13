@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397396"
 ---
 # <a name="callback-functions"></a><span data-ttu-id="5e768-102">Geri Çağırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="5e768-102">Callback Functions</span></span>
 <span data-ttu-id="5e768-103">Bir geri çağırma işlevini bir görevi tamamlamak yönetilmeyen DLL işlev yardımcı olan yönetilen bir uygulama içinde kodudur.</span><span class="sxs-lookup"><span data-stu-id="5e768-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="5e768-104">Bir geri çağırma işlevi çağrıları dolaylı bir DLL işlevi aracılığıyla yönetilen bir uygulama geçirmek ve yönetilen uygulama geri.</span><span class="sxs-lookup"><span data-stu-id="5e768-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="5e768-105">Bazı platformuyla adlı birçok DLL işlevleri çağırma düzgün çalışması için yönetilen kodda bir geri çağırma işlevini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="5e768-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  

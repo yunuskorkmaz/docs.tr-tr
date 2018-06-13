@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759549"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a><span data-ttu-id="b78d3-102">Yapılandırma parametreleri ve parametre veri türleri</span><span class="sxs-lookup"><span data-stu-id="b78d3-102">Configuring Parameters and Parameter Data Types</span></span>
 <span data-ttu-id="b78d3-103">Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama sağlayan saklı yordamlar için değerleri geçirmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="b78d3-103">Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation.</span></span> <span data-ttu-id="b78d3-104">Komut metni parametre girişini yürütülebilir kod olarak değil, sabit değer olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="b78d3-104">Unlike command text, parameter input is treated as a literal value, not as executable code.</span></span> <span data-ttu-id="b78d3-105">Bu, bu sunucuda güvenlik ihlalleri güvenlik SQL deyimi içine bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı koruma yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="b78d3-105">This helps guard against "SQL injection" attacks, in which an attacker inserts a command that compromises security on the server into an SQL statement.</span></span>  
