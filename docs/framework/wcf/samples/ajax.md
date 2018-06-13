@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803433"
 ---
 # <a name="ajax"></a><span data-ttu-id="d9896-102">AJAX</span><span class="sxs-lookup"><span data-stu-id="d9896-102">AJAX</span></span>
 <span data-ttu-id="d9896-103">Bu bölüm, zaman uyumsuz JavaScript ve XML işlevselliğini göstermek örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="d9896-103">This section includes samples that demonstrate Asynchronous JavaScript and XML functionality.</span></span>  
