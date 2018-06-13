@@ -1,14 +1,6 @@
 ---
-title: "ITypeNameBuilder::AddAssemblySpec Yöntemi"
-ms.custom: 
+title: ITypeNameBuilder::AddAssemblySpec Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ITypeNameBuilder.AddAssemblySpec
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4723e553-10c6-4828-aff8-bc62385163b8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b063fafed46b6081f94dc8ffb20e47b0a7e20f95
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4019f180ad97e170bf5b0e3f2e92185a3b35ff38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440248"
 ---
-# <a name="itypenamebuilderaddassemblyspec-method"></a><span data-ttu-id="50d42-102">ITypeNameBuilder::AddAssemblySpec Yöntemi</span><span class="sxs-lookup"><span data-stu-id="50d42-102">ITypeNameBuilder::AddAssemblySpec Method</span></span>
-<span data-ttu-id="50d42-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="50d42-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddassemblyspec-method"></a><span data-ttu-id="4758a-102">ITypeNameBuilder::AddAssemblySpec Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4758a-102">ITypeNameBuilder::AddAssemblySpec Method</span></span>
+<span data-ttu-id="4758a-103">Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="4758a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50d42-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50d42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4758a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4758a-104">Syntax</span></span>  
   
 ```  
 HRESULT AddAssemblySpec (  
@@ -46,14 +35,14 @@ HRESULT AddAssemblySpec (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="50d42-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="50d42-105">Requirements</span></span>  
- <span data-ttu-id="50d42-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50d42-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4758a-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4758a-105">Requirements</span></span>  
+ <span data-ttu-id="4758a-106">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4758a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50d42-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="50d42-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4758a-107">**Başlık:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4758a-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="50d42-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="50d42-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4758a-108">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="4758a-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="50d42-109">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50d42-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4758a-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4758a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50d42-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50d42-110">See Also</span></span>  
- [<span data-ttu-id="50d42-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="50d42-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4758a-110">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4758a-110">See Also</span></span>  
+ [<span data-ttu-id="4758a-111">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="4758a-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

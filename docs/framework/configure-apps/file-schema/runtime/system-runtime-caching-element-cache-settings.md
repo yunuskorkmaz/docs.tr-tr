@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750615"
 ---
 # <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="05f76-102">&lt;System.Runtime.Caching&gt; öğesi (önbellek ayarları)</span><span class="sxs-lookup"><span data-stu-id="05f76-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
 <span data-ttu-id="05f76-103">Varsayılan bellek içi için yapılandırma sağlar <xref:System.Runtime.Caching.ObjectCache> uygulaması aracılığıyla `memoryCache` yapılandırma dosyasındaki girişi.</span><span class="sxs-lookup"><span data-stu-id="05f76-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  

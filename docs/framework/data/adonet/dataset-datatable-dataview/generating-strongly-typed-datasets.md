@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758035"
 ---
 # <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="4c974-102">Kesin türü belirtilmiş veri kümeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="4c974-102">Generating Strongly Typed DataSets</span></span>
 <span data-ttu-id="4c974-103">XML şeması tanım dili ile (XSD) standart uyumlu bir XML Şeması verildiğinde, kesin türü belirtilmiş oluşturabileceğiniz <xref:System.Data.DataSet> ile sağlanan XSD.exe'nin aracını kullanarak [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4c974-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  

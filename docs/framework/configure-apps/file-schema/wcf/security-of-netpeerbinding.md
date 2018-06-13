@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749146"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="7ee20-102">&lt;netPeerBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="7ee20-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
 <span data-ttu-id="7ee20-103">Güvenlik ayarlarını tanımlar [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), kimlik doğrulama türü de dahil olmak üzere güvenlik kullanılır ve ileti taşıması için.</span><span class="sxs-lookup"><span data-stu-id="7ee20-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  

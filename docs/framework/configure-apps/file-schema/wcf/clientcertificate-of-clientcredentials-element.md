@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750537"
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="9b880-102">&lt;clientCredentials&gt; Öğesi &lt;clientCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="9b880-102">&lt;clientCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="9b880-103">Bir hizmet için bir istemci kimlik doğrulaması için kullanılan bir X.509 sertifikası tanımlar.</span><span class="sxs-lookup"><span data-stu-id="9b880-103">Defines an X.509 certificate used to authenticate a client to a service.</span></span>  

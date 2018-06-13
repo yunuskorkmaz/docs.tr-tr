@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756078"
 ---
 # <a name="ltfaultpropagationquerygt"></a><span data-ttu-id="bea87-102">&lt;faultPropagationQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="bea87-102">&lt;faultPropagationQuery&gt;</span></span>
 <span data-ttu-id="bea87-103">İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan bir sorgu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="bea87-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="bea87-104">Bu olay bir FaultHandler bir arıza her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="bea87-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="bea87-105">İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bu tür sorgu kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="bea87-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="bea87-106">Sorgu Hatası yayma kayıtlara abone olmak izleme katılımcı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="bea87-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

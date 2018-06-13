@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760199"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="aa1be-102">SQL komut ağaçlarını - en iyi uygulamaları oluşturma</span><span class="sxs-lookup"><span data-stu-id="aa1be-102">Generating SQL from Command Trees - Best Practices</span></span>
 <span data-ttu-id="aa1be-103">Çıktı sorgu komut ağaçlarını yakından sorguları SQL'de ifade model.</span><span class="sxs-lookup"><span data-stu-id="aa1be-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="aa1be-104">Ancak, SQL bir çıkış komut ağacından oluştururken sağlayıcısı yazıcılarına ilişkin ortak bazı zorluklar mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="aa1be-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="aa1be-105">Bu konuda bu zorluklar anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="aa1be-105">This topic discusses these challenges.</span></span> <span data-ttu-id="aa1be-106">Sonraki konusundaki örnek sağlayıcısı bu güçlükleri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="aa1be-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  

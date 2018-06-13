@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750212"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a><span data-ttu-id="e2d17-102">&lt;msmqTransportSecurity&gt;</span><span class="sxs-lookup"><span data-stu-id="e2d17-102">&lt;msmqTransportSecurity&gt;</span></span>
 <span data-ttu-id="e2d17-103">Özel bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="e2d17-103">Specifies MSMQ transport security settings for a custom binding.</span></span>  

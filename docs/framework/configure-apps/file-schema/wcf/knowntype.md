@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753332"
 ---
 # <a name="ltknowntypegt"></a><span data-ttu-id="15fea-102">&lt;knownType&gt;</span><span class="sxs-lookup"><span data-stu-id="15fea-102">&lt;knownType&gt;</span></span>
 <span data-ttu-id="15fea-103">Tarafından kullanılmak üzere bir tür belirttiğinden <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarma sırasında.</span><span class="sxs-lookup"><span data-stu-id="15fea-103">Specifies a type to be used by <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="15fea-104">"Bilinen bir türe" öğesi belirttiğinden bir alan veya "bildirilen türü." özelliği tarafından döndürülen</span><span class="sxs-lookup"><span data-stu-id="15fea-104">The element specifies a "known type" that is returned by a field or property of a "declared type."</span></span> <span data-ttu-id="15fea-105">Daha fazla bilgi için bkz: [veri sözleşmesi bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="15fea-105">For more information, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
