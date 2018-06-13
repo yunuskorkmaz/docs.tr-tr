@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591943"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
 Zaman uyumsuz programlama, ikinci bir işlem çağırma ve veri iletmektir tamamlandığında, bir zaman uyumsuz işlemi çok yaygın bir sorundur. Geleneksel olarak, bu geri çağırma yöntemlerini kullanarak gerçekleştirilmedi. Görev paralel kitaplığı aynı işlevselliği tarafından sağlanan *devamlılık görevlerini*. (Yalnızca devamlılığı olarak da bilinir) bir devamlılık görevi olarak bilinen başka bir görev tarafından çağrılan bir zaman uyumsuz bir görevdir *antecedent*, antecedent sona erdiğinde.  

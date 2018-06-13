@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586630"
 ---
 # <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a>Varsayılan özellik &#39; &lt;propertyname1&gt; &#39; varsayılan özellik çakışıyor &#39; &lt;propertyname2&gt; &#39; içinde &#39; &lt;classname&gt; &#39;ve bildirilmelidir &#39;gölgeleri&#39;
 Taban sınıf içinde tanımlanmış bir özellik aynı ada sahip bir özellik bildirilmedi. Bu durumda, bu sınıfın özelliğinde temel sınıf özelliği gölge.  

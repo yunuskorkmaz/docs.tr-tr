@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584865"
 ---
 # <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>Öznitelik &#39; &lt;attributename&gt; &#39; birden çok kez uygulanamaz
 Öznitelik yalnızca bir kez uygulanabilir. `AttributeUsage` Özniteliği, özniteliğin birden çok kez uygulanabilir olup olmadığını belirler.  

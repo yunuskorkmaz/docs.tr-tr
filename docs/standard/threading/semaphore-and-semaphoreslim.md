@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591318"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor ve SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Adlandırılmış (yükleyebilecek) veya yerel semafor sınıfı temsil eder. Win32 semafor nesne çevresinde ince bir sarmalayıcı değil. Win32 semafor, kaynak havuzu erişimi denetlemek için kullanılan semaforları sayma.  

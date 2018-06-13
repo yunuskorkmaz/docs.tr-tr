@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581761"
 ---
 # <a name="security-and-user-input"></a>Güvenlik ve Kullanıcı Girdisi
 Herhangi türde bir giriş (bir Web isteği veya URL, bir Microsoft Windows Forms uygulaması ve benzeri denetimleri için giriş verileri), genellikle bu verilere doğrudan parametre olarak başka bir kod çağırmak için kullanıldığından kod olumsuz yönde etkileyebilir kullanıcı verileri. Bu durum kötü amaçlı kod kodunuzu garip parametrelerle çağırma paraleldir ve aynı önlemler yapılması gerekir. Kullanıcı girişi gerçekten zor olduğu için büyük olasılıkla güvenilmeyen veri izlemek için hiçbir yığın çerçevesi güvenli olmasını sağlamaktır.  

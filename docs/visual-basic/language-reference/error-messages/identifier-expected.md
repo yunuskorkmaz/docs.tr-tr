@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586136"
 ---
 # <a name="identifier-expected"></a>Tanımlayıcı bekleniyor
 Burada bir öğe adı bağlamı gerektiriyor tanınabilir bildirilen öğe adları değil bir programlama öğesi oluşur. Olası bir nedeni olan bir öznitelik dışında bir yerde belirtilmiş deyim başındaki.  

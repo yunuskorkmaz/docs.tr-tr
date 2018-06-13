@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597464"
 ---
 # <a name="narrowing-visual-basic"></a>Daraltma (Visual Basic)
 Belirten bir dönüşüm işleci (`CType`) bir sınıf veya yapı bazı özgün sınıf veya yapı olası değerlerini tutabilecek özellikte olmayabilecek türüne dönüştürür.  

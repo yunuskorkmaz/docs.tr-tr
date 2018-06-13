@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594389"
 ---
 # <a name="lttype1gt39lttypenamegt39-must-implement-39ltmethodnamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39; uygulamalıdır &#39; &lt;methodname&gt; &#39; arabirimi için &#39; &lt;InterfaceName&gt;&#39;
 Bir sınıf veya yapı bir arabirim talep ancak arabirim tarafından tanımlanan bir yordam uygulamıyor. Her üye arabirimin uygulanması gerekir.  

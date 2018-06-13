@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593239"
 ---
 # <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39; ve &#39;#End Region&#39; deyimleri yöntem gövdeleri/çok satırlı lambdalar içinde geçerli değildir
 `#Region` Bloğu bir sınıf, modül veya ad alanı düzeyinde bildirilmelidir. Daraltılabilir bir bölgedeki bir veya daha fazla yordamlar içerebilir, ancak bunu başlayamaz veya bitemez bir yordam içinde.  

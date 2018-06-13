@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583086"
 ---
 # <a name="foreground-and-background-threads"></a>Ön Plan ve Arka Plan İş Parçacıklarını Seçme
 Yönetilen iş parçacığı, arka plan iş parçacığı ya da bir ön plan iş parçacığı değil. Arka plan iş parçacıkları bir özel durumla ön plan iş parçacıkları aynı: arka plan iş parçacığı çalıştıran yönetilen yürütme ortamını korumaz. Tüm ön plan iş parçacıkları (.exe dosyası bir yönetilen derlemesi olduğu) yönetilen bir işlemde durdurulan sonra sistem tüm arka plan iş parçacıkları durdurur ve kapanır.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598430"
 ---
 # <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;TypeName&gt; &#39; devralınmalıdır olamaz &lt;türü&gt; &#39; &lt;basetypename&gt; &#39; taban erişimini genişlettiğinden &lt;türü&gt; derleme dışına
 Sınıfta veya arabirimde bir taban sınıftan veya arabirim ancak daha az kısıtlayıcı bir erişim düzeyi vardır.  

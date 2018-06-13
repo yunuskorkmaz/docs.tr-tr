@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581592"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma
 Bu belge nasıl kullanılacağını açıklamaktadır <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> birden fazla kaynaktan veri bulunduğunda bir işlemi gerçekleştirmek için sınıf. Ayrıca, doyumsuz olmayan mod bir veri kaynağını daha verimli bir şekilde paylaşmak birden fazla birleştirme blokları etkinleştirmek için nasıl kullanılacağını gösterir.

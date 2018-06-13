@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590032"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
 Kullanabileceğiniz bir <xref:System.Threading.Mutex> özel bir kaynağa erişim sağlamak için nesne. <xref:System.Threading.Mutex> Sınıfını kullanır daha fazla sistem kaynağı <xref:System.Threading.Monitor> sınıfı, ancak uygulama etki alanı sınırlarında sıralanmış, birden çok bekler ile kullanılabilir ve farklı işlemler iş parçacığı eşitleme için kullanılabilir. Yönetilen eşitleme mekanizmaları karşılaştırması için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

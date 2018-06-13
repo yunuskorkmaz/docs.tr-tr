@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589990"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>İşlev &#39; &lt;procedurename&gt; &#39; mevcut değil&#39;t tüm kod yolları bir değer döndürür
 İşlev '\<procedurename >' tüm kod yolları bir değer döndürmüyor. 'Return' deyimi eksik olabilir mi?  

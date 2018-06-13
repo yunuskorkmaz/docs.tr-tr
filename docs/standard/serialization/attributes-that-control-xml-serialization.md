@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585045"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML serileştirme denetim öznitelikleri
 Aşağıdaki tablodaki öznitelikleri sınıflar için geçerlidir ve sınıf üyeleri şekilde denetlemek için <xref:System.Xml.Serialization.XmlSerializer> serileştiren veya sınıfının bir örneği seri durumdan çıkarır. Bu öznitelikler XML serileştirme nasıl kontrol anlamak için bkz: [XML serileştirme kullanarak özniteliklerini denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  

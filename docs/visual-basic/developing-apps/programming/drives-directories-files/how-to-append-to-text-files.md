@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585742"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Metin Dosyalarına Ekleme
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Yöntemi belirterek bir metin dosyasına eklemek için kullanılabilir `append` parametrenin ayarlanmış `True`.  

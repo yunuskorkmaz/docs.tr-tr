@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603931"
 ---
 # <a name="argument-39per39-is-not-valid"></a>Bağımsız değişken &#39;başına&#39; geçerli değil
 Bir bağımsız değişkeni için sağlanan `Per`, hangi olmalıdır bir `Double` ile 1 aralığında ödeme dönemi belirten `NPer`, geçerli değil.  

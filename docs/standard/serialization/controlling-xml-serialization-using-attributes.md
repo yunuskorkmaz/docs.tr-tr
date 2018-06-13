@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592008"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>XML serileştirme özniteliklerini kullanarak denetleme
 Öznitelikler, nesnenin XML serileştirme kontrol etmek veya alternatif bir XML akışı sınıfları aynı kümesinden oluşturmak için kullanılabilir. Alternatif bir XML akışı oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir diğer öğe adı için bir XML akışı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  

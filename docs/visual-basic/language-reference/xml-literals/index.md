@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600772"
 ---
 # <a name="xml-literals-visual-basic"></a>XML Değişmez Değerleri (Visual Basic)
 Bu bölümdeki konular, Visual Basic'te XML değişmez değerleri sözdizimi belge. XML değişmez değer sözdizimi, kodunuzda doğrudan XML eklemenizi sağlar.  

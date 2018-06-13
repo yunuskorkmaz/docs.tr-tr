@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589466"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-a-call-to-39mybasenew39-or-39myclassnew39-no-accessible-constructor-without-parameters"></a>Bu ilk deyimi &#39;Sub New&#39; yapılan bir çağrı olmalıdır &#39;MyBase.New&#39; veya &#39;MyClass.New&#39; (No Parametreler olmadan erişilebilir yapıcı)
 Bu 'Sub New' ilk deyimi 'MyBase.New' veya 'MyClass.New' için bir çağrı olmalıdır, çünkü temel sınıfı\<basename >', '\<derivedname >' bir erişilebilir 'Sub bağımsız değişkenler olmadan çağrılabilen New' yok.  

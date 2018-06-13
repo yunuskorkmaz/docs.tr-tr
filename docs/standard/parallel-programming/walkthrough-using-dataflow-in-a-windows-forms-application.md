@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591683"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulaması'nda Görüntü işleme gerçekleştirmek veri akışı bloklarının bir ağ oluşturmak gösterilmiştir.  

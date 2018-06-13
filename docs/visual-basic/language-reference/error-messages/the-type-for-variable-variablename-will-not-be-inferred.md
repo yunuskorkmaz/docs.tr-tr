@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594289"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Değişken için tür &#39; &lt;variablename&gt; &#39; kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil
 Değişken türü '\<variablename >' kapsayan bir kapsama alanına bağlı olduğundan, çıkarılabilir olacaktır değil. Adını değiştirmek '\<variablename >', veya tam adı (örneğin, 'Me.variablename' veya 'MyBase.variablename') kullanın.  

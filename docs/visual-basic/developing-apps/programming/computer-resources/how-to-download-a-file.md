@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590737"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya İndirme
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> Yöntemi, bir uzak dosya karşıdan yüklemek ve belirli bir konuma depolamak için kullanılabilir. Varsa `ShowUI` parametrenin ayarlanmış `True`, yükleme ilerlemesini gösteren ve kullanıcıların işlemi iptal etmek bir iletişim kutusu görüntülenir. Varsayılan olarak, aynı ada sahip var olan dosyaların üzerine yazılmaz; var olan dosyaların üzerine yazmak istiyorsanız, Ayarla `overwrite` parametresi `True`.  

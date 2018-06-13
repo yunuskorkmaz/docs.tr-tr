@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592515"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme
 Bu kılavuz, Visual Basic'te dosya g/ç ile ilgili temel bilgileri tanıtılmaktadır. Listeler ve metin dosyaları bir dizinde inceler küçük bir uygulamasının nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya özniteliklerini ve içeriğindeki birinci satırın uygulama sağlar. Bilgilerini bir günlük dosyasına yazmak için bir seçenek yoktur.  

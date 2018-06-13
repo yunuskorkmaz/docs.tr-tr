@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592242"
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>DataRepeater Denetiminde Sanal Mod (Visual Studio)
 Tablo verileri büyük miktarlarda görüntülemek istediğinizde bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi ayarlayarak performansı artırabilir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> özelliğine `True` ve açıkça kendi veri kaynağı ile denetimin etkileşimi yönetme. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Denetim veri kaynağınız ile etkileşim kurmanızı ve çalışma zamanında gerektiği gibi verileri görüntülemek için işleyebilirsiniz birkaç olay sağlar.  

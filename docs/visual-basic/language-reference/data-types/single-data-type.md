@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590792"
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
 Ayrı tutma imzalı IEEE 32-bit (4-bayt) tek duyarlıklı kayan nokta sayıları değerinden - 3.4028235E + 38 arasında değişen ile - 1.401298E-45 negatif değerler ve 1.401298E-45 3.4028235E + 38 pozitif değerler için aracılığıyla. Tek duyarlıklı sayılar yaklaşık gerçek bir sayı olarak depolar.  

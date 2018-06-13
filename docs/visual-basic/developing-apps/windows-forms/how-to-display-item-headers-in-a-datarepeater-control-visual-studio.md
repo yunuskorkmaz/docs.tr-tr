@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592146"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Nasıl Yapılır: DataRepeater Denetiminde Öğe Üstbilgilerini Görüntüleme (Visual Studio)
 Öğe üstbilgisinde bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim görsel bir gösterge sağlar, bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> seçilir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği ayarlanmış <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (varsayılan), her bir öğe sola öğesi başlığı görüntülenir. Zaman <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> özelliği ayarlanmış <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, öğesi üstbilgisinde her öğenin üst kısmında görüntülenir.  

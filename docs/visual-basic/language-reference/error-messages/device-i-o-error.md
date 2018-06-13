@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585534"
 ---
 # <a name="device-io-error"></a>Cihaz G/Ç hatası
 Programınızı yazıcı veya disk sürücüsü gibi bir cihazı kullanarak bir giriş veya çıkış hata oluştu.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589015"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>İfade türü &lt;türü&gt; sorgulanabilir değil
 İfade türü \<türü > sorgulanabilir değil. Size bir derleme başvurusu ve/veya ad alanı içe aktarma için LINQ sağlayıcısı eksik değil emin olun.  

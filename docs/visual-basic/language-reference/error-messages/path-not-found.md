@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593899"
 ---
 # <a name="path-not-found"></a>Yol bulunamadı
 Bir dosya erişim veya disk erişimi işlemi sırasında işletim sistemi belirtilen yol bulamadı. Bir dosya yolu, sürücü belirtimi artı dizinleri ve dosyayı bulmak için geçmesi gereken alt dizinleri içerir. Göreli veya mutlak bir yol olabilir.  

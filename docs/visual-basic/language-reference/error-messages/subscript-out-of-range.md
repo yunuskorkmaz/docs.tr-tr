@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594273"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Alt simge aralık dışı (Visual Basic)
 Bir dizi alt simge, izin verilen aralığın dışında olduğundan geçerli değil. En düşük alt simge için boyut her zaman değerdir 0 ve en yüksek alt simge değeri tarafından döndürülen `GetUpperBound` bu boyut için yöntem.  

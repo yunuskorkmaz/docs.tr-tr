@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595267"
 ---
 # <a name="unable-to-find-required-file-39ltfilenamegt39"></a>Gerekli dosya bulunamıyor &#39; &lt;dosya adı&gt;&#39;
 Visual Studio'nun gerek duyduğu bir dosya eksik veya zarar görmüş.  

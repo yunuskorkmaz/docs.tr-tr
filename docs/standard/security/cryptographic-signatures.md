@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589811"
 ---
 # <a name="cryptographic-signatures"></a>Şifreleme İmzası
 <a name="top"></a> Şifreleme Dijital imzalar, veri bütünlüğünü sağlamak için ortak anahtar algoritmaları kullanır. Veri bir dijital imza ile oturum açtığınızda başka birinin imzasını doğrular ve verileri sizden geldiğini ve siz imzaladıktan sonra değiştirilmiş değil kanıtlayabilirsiniz. Dijital imzalar hakkında daha fazla bilgi için bkz: [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md).  

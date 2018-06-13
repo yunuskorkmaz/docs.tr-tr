@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585963"
 ---
 # <a name="cannot-create-activex-component"></a>ActiveX Bileşeni oluşturulamıyor
 Tasarım zamanında bir formunda bir ActiveX denetimi yerleştirin veya üzerindeki bir ActiveX denetimi ile bir projeye form ekleme çalışıldı, ancak ilgili bilgilerin kayıt defterinde bulunamadı.  

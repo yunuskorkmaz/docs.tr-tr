@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587390"
 ---
 # <a name="bad-file-mode"></a>Hatalı dosya modu
 Dosya içerikleri düzenleme kullanılan ifadeleri dosyanın açılmış olduğu moduna uygun olmalıdır. Olası nedenler şunlardır:  
