@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567750"
 ---
 # <a name="parsing-strings-in-net"></a>.NET dizeleri ayrıştırma
 Ayrıştırma işlemi bir .NET taban türü, temel türü içine temsil eden bir dize dönüştürür. Örneğin, bir ayrıştırma işlemi, bir dizeyi bir kayan noktalı sayı veya tarih ve saat değerine dönüştürmek için kullanılır. Ayrıştırma işlemi gerçekleştirmek için en yaygın olarak kullanılan yöntemidir `Parse` yöntemi. Ayrıştırma (bir taban türü dize gösterimine dönüştürülmesi içerir) biçimlendirme tersine çevirme işlemi olduğundan, aynı kuralları ve kuralları birçoğu uygulayın. Arabirimini uygulayan bir nesneye yalnızca biçimlendirme olarak kullanan <xref:System.IFormatProvider> arabirimini uygulayan bir nesne de kullandığı ayrıştırma kültüre duyarlı biçimlendirme bilgi sağlamak için <xref:System.IFormatProvider> bir dize gösterimi yorumlama belirlemek için arabirimi . Daha fazla bilgi için bkz: [biçimlendirme türleri](../../../docs/standard/base-types/formatting-types.md).  

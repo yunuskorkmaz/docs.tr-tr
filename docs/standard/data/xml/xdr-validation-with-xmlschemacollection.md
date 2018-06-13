@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569966"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XDR doğrulama
 Karşı doğrulama XML verileri azaltılmış (XDR) şema depolanıyorsa **XmlSchemaCollection**, ad alanı URI belirtildi şema koleksiyonuna zaman eklendi ile ilişkilidir. **XmlValidatingReader** XML belgesi ad alanı URI'si bu URI koleksiyondaki karşılık gelen şema eşler.  

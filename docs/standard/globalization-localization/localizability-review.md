@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576135"
 ---
 # <a name="localizability-review"></a>Yerelleştirilebilirlik Gözden Geçirmesi
 Yerelleştirilebilirlik gözden geçirme, dünya çapında kullanılmaya hazır uygulama geliştirmede Ara bir adımdır. Globalized uygulama yerelleştirme için hazır ve herhangi bir kod veya özel işlem gerektiren tüm yönlerini kullanıcı arabirimini tanımlar doğrular. Bu adım ayrıca yerelleştirme işlemi işlev bozuklukları uygulamanıza tanıtılacaktır değil, sağlamaya yardımcı olur. Yerelleştirilebilirlik gözden geçirmesi tarafından gerçekleştirilen tüm sorunlar ele uygulamanızı yerelleştirme için hazır olur. Yerelleştirilebilirlik gözden geçirmesi kapsamlı ise, herhangi bir kaynak kod yerelleştirme işlemi sırasında değiştirmek olmamalıdır.  

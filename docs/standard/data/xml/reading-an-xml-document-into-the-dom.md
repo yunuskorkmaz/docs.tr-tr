@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569726"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Bir XML belgesi DOM okuma
 Farklı biçimlerden belleğe XML bilgileri okuyun. Bir dize, akışı, URL, metin okuyucu veya türetilmiş bir sınıf okunabilir <xref:System.Xml.XmlReader>.  
