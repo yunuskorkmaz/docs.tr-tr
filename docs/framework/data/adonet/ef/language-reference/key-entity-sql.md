@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760563"
 ---
 # <a name="key-entity-sql"></a><span data-ttu-id="c5da3-102">ANAHTAR (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="c5da3-102">KEY (Entity SQL)</span></span>
 <span data-ttu-id="c5da3-103">Bir başvuru veya varlık ifade anahtarını ayıklar.</span><span class="sxs-lookup"><span data-stu-id="c5da3-103">Extracts the key of a reference or of an entity expression.</span></span>  

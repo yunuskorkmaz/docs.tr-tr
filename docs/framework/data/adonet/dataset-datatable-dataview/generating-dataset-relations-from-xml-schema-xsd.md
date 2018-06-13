@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758444"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="d53e3-102">DataSet ilişkileri XML Schema (XSD) oluşturma</span><span class="sxs-lookup"><span data-stu-id="d53e3-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
 <span data-ttu-id="d53e3-103">İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütun arasında bir ilişki oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d53e3-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="d53e3-104">Göstermek için üç yolu bir **DataSet** ilişkisi bir XML Şeması Tanım Dili (XSD) şeması içinde:</span><span class="sxs-lookup"><span data-stu-id="d53e3-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  

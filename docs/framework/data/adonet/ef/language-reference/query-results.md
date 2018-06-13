@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762328"
 ---
 # <a name="query-results"></a><span data-ttu-id="874eb-102">Sorgu Sonuçları</span><span class="sxs-lookup"><span data-stu-id="874eb-102">Query Results</span></span>
 <span data-ttu-id="874eb-103">Sonra bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu komut ağaçlarını dönüştürülür ve yürütülen, sorgu sonuçları genellikle aşağıdakilerden biri olarak döndürülür:</span><span class="sxs-lookup"><span data-stu-id="874eb-103">After a [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query is converted to command trees and executed, the query results are usually returned as one of the following:</span></span>  

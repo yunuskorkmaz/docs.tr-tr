@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757703"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="d46a9-102">&lt;applicationPool&gt; öğesi (Web Ayarları)</span><span class="sxs-lookup"><span data-stu-id="d46a9-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="d46a9-103">Bir ASP.NET uygulaması Tümleşik modunda çalışan işlem genelinde yönetmek için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirtir [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.</span><span class="sxs-lookup"><span data-stu-id="d46a9-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  

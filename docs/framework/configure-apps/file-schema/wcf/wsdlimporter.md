@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754908"
 ---
 # <a name="ltwsdlimportergt"></a><span data-ttu-id="30568-102">&lt;WsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="30568-102">&lt;wsdlImporter&gt;</span></span>
 <span data-ttu-id="30568-103">WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran WSDL ımporters belirtir.</span><span class="sxs-lookup"><span data-stu-id="30568-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  

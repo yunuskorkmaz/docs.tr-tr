@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760576"
 ---
 # <a name="flatten-entity-sql"></a><span data-ttu-id="799b2-102">(Varlık SQL) DÜZLEŞTİRME</span><span class="sxs-lookup"><span data-stu-id="799b2-102">FLATTEN (Entity SQL)</span></span>
 <span data-ttu-id="799b2-103">Değişkeninin bir koleksiyonlar koleksiyonu düzleştirilmiş bir koleksiyonuna dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="799b2-103">Converts a collection of collections into a flattened collection.</span></span> <span data-ttu-id="799b2-104">Yeni koleksiyon öğeleri eski koleksiyonu, ancak iç içe geçmiş yapısı olmadan aynı içerir.</span><span class="sxs-lookup"><span data-stu-id="799b2-104">The new collection contains all the same elements as the old collection, but without a nested structure.</span></span>  

@@ -1,13 +1,7 @@
 ---
 title: Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -19,53 +13,47 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6d93e449877456e415ebd4d3490a7df99280e7e5
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 26e555a158ced352c297952b56f7557cbd825cd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567308"
 ---
-# <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a><span data-ttu-id="60aef-102">Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama</span><span class="sxs-lookup"><span data-stu-id="60aef-102">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>
-<span data-ttu-id="60aef-103">Bir istemci kodu için zaman uyumsuz özellikler kullanıma sunmak için çeşitli yöntemler vardır.</span><span class="sxs-lookup"><span data-stu-id="60aef-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="60aef-104">Olay tabanlı zaman uyumsuz desen zaman uyumsuz davranışı sunmak sınıflar için önerilen yol önerir.</span><span class="sxs-lookup"><span data-stu-id="60aef-104">The Event-based Asynchronous Pattern prescribes the recommended way for classes to present asynchronous behavior.</span></span>  
+# <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a><span data-ttu-id="e9e99-102">Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama</span><span class="sxs-lookup"><span data-stu-id="e9e99-102">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="e9e99-103">Bir istemci kodu için zaman uyumsuz özellikler kullanıma sunmak için çeşitli yöntemler vardır.</span><span class="sxs-lookup"><span data-stu-id="e9e99-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="e9e99-104">Olay tabanlı zaman uyumsuz desen zaman uyumsuz davranışı sunmak sınıflar için önerilen yol önerir.</span><span class="sxs-lookup"><span data-stu-id="e9e99-104">The Event-based Asynchronous Pattern prescribes the recommended way for classes to present asynchronous behavior.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="60aef-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="60aef-105">In This Section</span></span>  
- [<span data-ttu-id="60aef-106">Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="60aef-106">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- <span data-ttu-id="60aef-107">Nasıl olay tabanlı zaman uyumsuz desen birden çok iş parçacıklı uygulamalar avantajları birçok karmaşık sorunları birden çok iş parçacıklı tasarımında yapısında gizleme çalışırken kullanılabilir hale getirir açıklar.</span><span class="sxs-lookup"><span data-stu-id="60aef-107">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e9e99-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e9e99-105">In This Section</span></span>  
+ [<span data-ttu-id="e9e99-106">Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e9e99-106">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ <span data-ttu-id="e9e99-107">Nasıl olay tabanlı zaman uyumsuz desen birden çok iş parçacıklı uygulamalar avantajları birçok karmaşık sorunları birden çok iş parçacıklı tasarımında yapısında gizleme çalışırken kullanılabilir hale getirir açıklar.</span><span class="sxs-lookup"><span data-stu-id="e9e99-107">Describes how the Event-based Asynchronous Pattern makes available the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design.</span></span>  
   
- [<span data-ttu-id="60aef-108">Olay Tabanlı Zaman Uyumsuz Deseni Uygulama</span><span class="sxs-lookup"><span data-stu-id="60aef-108">Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="60aef-109">Zaman uyumsuz özellikler olan bir sınıfı paketlemek için standartlaştırılmış biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="60aef-109">Describes the standardized way to package a class that has asynchronous features.</span></span>  
+ [<span data-ttu-id="e9e99-108">Olay Tabanlı Zaman Uyumsuz Deseni Uygulama</span><span class="sxs-lookup"><span data-stu-id="e9e99-108">Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="e9e99-109">Zaman uyumsuz özellikler olan bir sınıfı paketlemek için standartlaştırılmış biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="e9e99-109">Describes the standardized way to package a class that has asynchronous features.</span></span>  
   
- [<span data-ttu-id="60aef-110">Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler</span><span class="sxs-lookup"><span data-stu-id="60aef-110">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="60aef-111">Olay tabanlı zaman uyumsuz desen göre zaman uyumsuz özellikler gösterme gereksinimlerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="60aef-111">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="e9e99-110">Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler</span><span class="sxs-lookup"><span data-stu-id="e9e99-110">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="e9e99-111">Olay tabanlı zaman uyumsuz desen göre zaman uyumsuz özellikler gösterme gereksinimlerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="e9e99-111">Describes the requirements for exposing asynchronous features according to the Event-based Asynchronous Pattern.</span></span>  
   
- [<span data-ttu-id="60aef-112">Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme</span><span class="sxs-lookup"><span data-stu-id="60aef-112">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="60aef-113">Yerine olay tabanlı zaman uyumsuz desen uygulamak seçtiğinizde belirlemek açıklar <xref:System.IAsyncResult> düzeni.</span><span class="sxs-lookup"><span data-stu-id="60aef-113">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern.</span></span>  
+ [<span data-ttu-id="e9e99-112">Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme</span><span class="sxs-lookup"><span data-stu-id="e9e99-112">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="e9e99-113">Yerine olay tabanlı zaman uyumsuz desen uygulamak seçtiğinizde belirlemek açıklar <xref:System.IAsyncResult> düzeni.</span><span class="sxs-lookup"><span data-stu-id="e9e99-113">Describes how to determine when you should choose to implement the Event-based Asynchronous Pattern instead of the <xref:System.IAsyncResult> pattern.</span></span>  
   
- [<span data-ttu-id="60aef-114">İzlenecek yol: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama</span><span class="sxs-lookup"><span data-stu-id="60aef-114">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="60aef-115">Olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="60aef-115">Illustrates how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="60aef-116">Yardımcı sınıfları kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı altında herhangi bir uygulama modeli bileşeni düzgün çalıştığını sağlar.</span><span class="sxs-lookup"><span data-stu-id="60aef-116">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
+ [<span data-ttu-id="e9e99-114">İzlenecek yol: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama</span><span class="sxs-lookup"><span data-stu-id="e9e99-114">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="e9e99-115">Olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e9e99-115">Illustrates how to create a component that implements the Event-based Asynchronous Pattern.</span></span> <span data-ttu-id="e9e99-116">Yardımcı sınıfları kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı altında herhangi bir uygulama modeli bileşeni düzgün çalıştığını sağlar.</span><span class="sxs-lookup"><span data-stu-id="e9e99-116">It is implemented using helper classes from the <xref:System.ComponentModel?displayProperty=nameWithType> namespace, which ensures that the component works correctly under any application model.</span></span>  
   
- [<span data-ttu-id="60aef-117">Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="60aef-117">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- <span data-ttu-id="60aef-118">Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="60aef-118">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
+ [<span data-ttu-id="e9e99-117">Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="e9e99-117">How to: Use Components That Support the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ <span data-ttu-id="e9e99-118">Olay tabanlı zaman uyumsuz deseni destekleyen bir bileşeni kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="e9e99-118">Describes how to use a component that supports the Event-based Asynchronous Pattern.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="60aef-119">Başvuru</span><span class="sxs-lookup"><span data-stu-id="60aef-119">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e9e99-119">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e9e99-119">Reference</span></span>  
  <xref:System.ComponentModel.AsyncOperation>  
- <span data-ttu-id="60aef-120">Açıklar <xref:System.ComponentModel.AsyncOperation> sınıfı ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="60aef-120">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
+ <span data-ttu-id="e9e99-120">Açıklar <xref:System.ComponentModel.AsyncOperation> sınıfı ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="e9e99-120">Describes the <xref:System.ComponentModel.AsyncOperation> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.AsyncOperationManager>  
- <span data-ttu-id="60aef-121">Açıklar <xref:System.ComponentModel.AsyncOperationManager> sınıfı ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="60aef-121">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
+ <span data-ttu-id="e9e99-121">Açıklar <xref:System.ComponentModel.AsyncOperationManager> sınıfı ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="e9e99-121">Describes the <xref:System.ComponentModel.AsyncOperationManager> class and has links to all its members.</span></span>  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- <span data-ttu-id="60aef-122">Açıklar <xref:System.ComponentModel.BackgroundWorker> bileşeni ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="60aef-122">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
+ <span data-ttu-id="e9e99-122">Açıklar <xref:System.ComponentModel.BackgroundWorker> bileşeni ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="e9e99-122">Describes the <xref:System.ComponentModel.BackgroundWorker> component and has links to all its members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60aef-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="60aef-123">See Also</span></span>  
- [<span data-ttu-id="60aef-124">Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="60aef-124">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
- [<span data-ttu-id="60aef-125">Olaylar</span><span class="sxs-lookup"><span data-stu-id="60aef-125">Events</span></span>](../../../docs/standard/events/index.md)  
- [<span data-ttu-id="60aef-126">Bileşenleri çoklu iş parçacığı kullanımı</span><span class="sxs-lookup"><span data-stu-id="60aef-126">Multithreading in Components</span></span>](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [<span data-ttu-id="60aef-127">Olay Tabanlı Zaman Uyumsuz Desen (EAP)</span><span class="sxs-lookup"><span data-stu-id="60aef-127">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a><span data-ttu-id="e9e99-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e9e99-123">See Also</span></span>  
+ [<span data-ttu-id="e9e99-124">Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="e9e99-124">Managed Threading Best Practices</span></span>](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [<span data-ttu-id="e9e99-125">Olaylar</span><span class="sxs-lookup"><span data-stu-id="e9e99-125">Events</span></span>](../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="e9e99-126">Bileşenleri çoklu iş parçacığı kullanımı</span><span class="sxs-lookup"><span data-stu-id="e9e99-126">Multithreading in Components</span></span>](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [<span data-ttu-id="e9e99-127">Olay Tabanlı Zaman Uyumsuz Desen (EAP)</span><span class="sxs-lookup"><span data-stu-id="e9e99-127">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

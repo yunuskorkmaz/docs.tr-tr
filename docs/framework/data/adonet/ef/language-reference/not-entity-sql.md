@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762068"
 ---
 # <a name="-not-entity-sql"></a><span data-ttu-id="b19cf-103">!</span><span class="sxs-lookup"><span data-stu-id="b19cf-103">!</span></span> <span data-ttu-id="b19cf-104">(YOK) (Varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="b19cf-104">(NOT) (Entity SQL)</span></span>
 <span data-ttu-id="b19cf-105">Üzerindeki geçersiz kılar bir `Boolean` ifade.</span><span class="sxs-lookup"><span data-stu-id="b19cf-105">Negates a `Boolean` expression.</span></span>  

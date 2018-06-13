@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743920"
 ---
 # <a name="assembly-location"></a><span data-ttu-id="4825d-102">Derleme Konumu</span><span class="sxs-lookup"><span data-stu-id="4825d-102">Assembly Location</span></span>
 <span data-ttu-id="4825d-103">Derlemenin konumunu ortak dil çalışma zamanı, başvurulan sırasında bulabilir ve da derlemeyi diğer Derlemelerle paylaşılabilir olup olmadığını belirlemeniz olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="4825d-103">An assembly's location determines whether the common language runtime can locate it when referenced, and can also determine whether the assembly can be shared with other assemblies.</span></span> <span data-ttu-id="4825d-104">Bir derlemeyi aşağıdaki konumlarda dağıtabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="4825d-104">You can deploy an assembly in the following locations:</span></span>  

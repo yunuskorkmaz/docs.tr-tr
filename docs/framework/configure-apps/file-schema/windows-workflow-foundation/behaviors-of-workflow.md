@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767316"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="29036-102">&lt;davranışları&gt; iş akışı</span><span class="sxs-lookup"><span data-stu-id="29036-102">&lt;behaviors&gt; of workflow</span></span>
 <span data-ttu-id="29036-103">Bu öğeyi içeren **serviceBehaviors** koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="29036-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="29036-104">Koleksiyondaki her öğe iş akışı hizmetler tarafından kullanılan davranışı öğeleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="29036-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="29036-105">Her davranış öğesi kendi benzersiz tanımlanır **adı** özniteliği.</span><span class="sxs-lookup"><span data-stu-id="29036-105">Each behavior element is identified by its unique **name** attribute.</span></span>  

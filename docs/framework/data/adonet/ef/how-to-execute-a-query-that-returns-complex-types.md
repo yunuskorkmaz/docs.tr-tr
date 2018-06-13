@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760537"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a><span data-ttu-id="dc21a-102">Nasıl yapılır: karmaşık türleri döndüren bir sorgu yürütme</span><span class="sxs-lookup"><span data-stu-id="dc21a-102">How to: Execute a Query that Returns Complex Types</span></span>
 <span data-ttu-id="dc21a-103">Bu konuda nasıl yürütüleceği gösterilmektedir bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] bir karmaşık türde bir özellik, içeren türde nesne varlık döndüren sorgu.</span><span class="sxs-lookup"><span data-stu-id="dc21a-103">This topic shows how to execute an [!INCLUDE[esql](../../../../../includes/esql-md.md)] query that returns entity type objects that contain a property of a complex type.</span></span>  

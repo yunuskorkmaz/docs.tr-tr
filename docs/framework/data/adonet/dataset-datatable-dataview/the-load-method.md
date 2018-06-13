@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758314"
 ---
 # <a name="the-load-method"></a><span data-ttu-id="30694-102">Load yöntemi</span><span class="sxs-lookup"><span data-stu-id="30694-102">The Load Method</span></span>
 <span data-ttu-id="30694-103">Kullanabileceğiniz <xref:System.Data.DataTable.Load%2A> yüklemek için yöntemi bir <xref:System.Data.DataTable> bir veri kaynağından satırlarla.</span><span class="sxs-lookup"><span data-stu-id="30694-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="30694-104">Bu, en basit biçimiyle tek bir parametre kabul eder, aşırı yüklenmiş bir yöntemdir bir **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="30694-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="30694-105">Yalnızca bu formda yüklerken **DataTable** satırlarla.</span><span class="sxs-lookup"><span data-stu-id="30694-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="30694-106">İsteğe bağlı olarak, belirtebilirsiniz **LoadOption** veriler nasıl eklenir denetlemek için parametre **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="30694-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  

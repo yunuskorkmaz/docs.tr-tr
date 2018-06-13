@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759874"
 ---
 # <a name="adonet-architecture"></a><span data-ttu-id="bee76-102">ADO.NET mimarisi</span><span class="sxs-lookup"><span data-stu-id="bee76-102">ADO.NET Architecture</span></span>
 <span data-ttu-id="bee76-103">Veri işleme, geleneksel öncelikle tabanlı bağlantısı, iki katmanlı model üzerinde dayanıyordu.</span><span class="sxs-lookup"><span data-stu-id="bee76-103">Data processing has traditionally relied primarily on a connection-based, two-tier model.</span></span> <span data-ttu-id="bee76-104">Veri işleme çok katmanlı mimarileri giderek kullanır gibi kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşım için programcıları geçiliyor.</span><span class="sxs-lookup"><span data-stu-id="bee76-104">As data processing increasingly uses multi-tier architectures, programmers are switching to a disconnected approach to provide better scalability for their applications.</span></span>  

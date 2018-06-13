@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764170"
 ---
 # <a name="---comment-entity-sql"></a><span data-ttu-id="78153-102">--(Açıklama) (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="78153-102">-- (Comment) (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="78153-103"> sorguları açıklamaları içerebilir.</span><span class="sxs-lookup"><span data-stu-id="78153-103"> queries can contain comments.</span></span> <span data-ttu-id="78153-104">İki kısa çizgi (`--`) bir açıklama satırı başlatın.</span><span class="sxs-lookup"><span data-stu-id="78153-104">Two dashes (`--`) start a comment line.</span></span>  

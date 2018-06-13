@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760235"
 ---
 # <a name="handling-datatable-events"></a><span data-ttu-id="0f94e-102">DataTable olayları işleme</span><span class="sxs-lookup"><span data-stu-id="0f94e-102">Handling DataTable Events</span></span>
 <span data-ttu-id="0f94e-103"><xref:System.Data.DataTable> Nesnesi, bir uygulama tarafından işlenen olayların bir dizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="0f94e-103">The <xref:System.Data.DataTable> object provides a series of events that can be processed by an application.</span></span> <span data-ttu-id="0f94e-104">Aşağıdaki tabloda açıklanmaktadır `DataTable` olaylar.</span><span class="sxs-lookup"><span data-stu-id="0f94e-104">The following table describes `DataTable` events.</span></span>  

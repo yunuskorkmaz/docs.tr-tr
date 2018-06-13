@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749588"
 ---
 # <a name="ltbehaviorextensionsgt"></a><span data-ttu-id="534c2-102">&lt;behaviorExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="534c2-102">&lt;behaviorExtensions&gt;</span></span>
 <span data-ttu-id="534c2-103">Kullanıcı tanımlı davranış öğeleri oluşturmak kullanıcı davranışı uzantıları sağlar.</span><span class="sxs-lookup"><span data-stu-id="534c2-103">Behavior extensions enable the user to create user-defined behavior elements.</span></span> <span data-ttu-id="534c2-104">Standart Windows Communication Foundation (WCF) davranışı öğeleri yanı sıra bu öğeler kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="534c2-104">These elements can be used alongside the standard Windows Communication Foundation (WCF) behavior elements.</span></span> <span data-ttu-id="534c2-105">`behaviorExtensions` Bölümü sağlayacak şekilde yapılandırmada kullanılan öğe tanımlar.</span><span class="sxs-lookup"><span data-stu-id="534c2-105">The `behaviorExtensions` section defines the element such that it can be used in configuration.</span></span> <span data-ttu-id="534c2-106">Tipik davranış uzantısı bir örneği burada verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="534c2-106">Here is an example of a typical behavior extension.</span></span>  

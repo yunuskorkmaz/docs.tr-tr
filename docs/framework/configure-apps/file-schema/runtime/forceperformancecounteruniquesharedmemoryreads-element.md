@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754294"
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a><span data-ttu-id="a657b-102">&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="a657b-102">&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; Element</span></span>
 <span data-ttu-id="a657b-103">PerfCounter.dll CategoryOptions kayıt defteri ayarını bir .NET Framework sürüm 1.1 uygulamasında kategoriye özel paylaşılan bellek ya da genel bellek performans sayacı verilerini yüklemeye karar vermek için kullanıp kullanmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a657b-103">Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.</span></span>  

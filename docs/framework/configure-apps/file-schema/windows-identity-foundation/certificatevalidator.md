@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766900"
 ---
 # <a name="ltcertificatevalidatorgt"></a><span data-ttu-id="96b4c-102">&lt;certificateValidator&gt;</span><span class="sxs-lookup"><span data-stu-id="96b4c-102">&lt;certificateValidator&gt;</span></span>
 <span data-ttu-id="96b4c-103">Sertifika doğrulama için özel bir tür belirtir.</span><span class="sxs-lookup"><span data-stu-id="96b4c-103">Specifies a custom type for certificate validation.</span></span> <span data-ttu-id="96b4c-104">Bu tür yalnızca kullanılan `certificateValidationMode` özniteliği [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) öğesi, "Özel" olarak ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="96b4c-104">This type is used only if the `certificateValidationMode` attribute of the [\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) element is set to "Custom".</span></span>  

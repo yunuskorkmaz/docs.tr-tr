@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746767"
 ---
 # <a name="ltdynamicendpointgt"></a><span data-ttu-id="40874-102">&lt;DynamicEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="40874-102">&lt;dynamicEndpoint&gt;</span></span>
 <span data-ttu-id="40874-103">Bu yapılandırma öğesi uygulama uç noktası adresi çalışma zamanında dinamik olarak bulabilirsiniz bir istemci program olarak çalışmasını etkinleştirmek için bilgileri içeren standart bir uç nokta tanımlar.</span><span class="sxs-lookup"><span data-stu-id="40874-103">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  

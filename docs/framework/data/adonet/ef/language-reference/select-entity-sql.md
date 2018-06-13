@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765990"
 ---
 # <a name="select-entity-sql"></a><span data-ttu-id="b4ff2-102">SEÇİN (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="b4ff2-102">SELECT (Entity SQL)</span></span>
 <span data-ttu-id="b4ff2-103">Bir sorgu tarafından döndürülen öğeleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="b4ff2-103">Specifies the elements returned by a query.</span></span>  

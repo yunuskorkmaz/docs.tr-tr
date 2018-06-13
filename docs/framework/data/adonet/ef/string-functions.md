@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766484"
 ---
 # <a name="string-functions"></a><span data-ttu-id="ffb31-102">Dize İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ffb31-102">String Functions</span></span>
 <span data-ttu-id="ffb31-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı sağlar `String` giriş işlemleri işlevleri `String` ve dönüş bir `String` veya sayısal değer sonucu.</span><span class="sxs-lookup"><span data-stu-id="ffb31-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides `String` functions that perform operations on an input `String` and return a `String` or numeric value result.</span></span> <span data-ttu-id="ffb31-104">Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir.</span><span class="sxs-lookup"><span data-stu-id="ffb31-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="ffb31-105">Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.</span><span class="sxs-lookup"><span data-stu-id="ffb31-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  

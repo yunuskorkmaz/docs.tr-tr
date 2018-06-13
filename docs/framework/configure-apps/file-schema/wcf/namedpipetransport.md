@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746803"
 ---
 # <a name="ltnamedpipetransportgt"></a><span data-ttu-id="4c165-102">&lt;Connectionpoolsettings&gt;</span><span class="sxs-lookup"><span data-stu-id="4c165-102">&lt;namedPipeTransport&gt;</span></span>
 <span data-ttu-id="4c165-103">İçinde özel bağlama eklendiğinde adlandırılmış kanallar kullanarak ileti aktarılması için bir kanal neden olan bir taşıma tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c165-103">Defines a transport that causes a channel to transfer messages using named pipes when it is included in a custom binding.</span></span>  

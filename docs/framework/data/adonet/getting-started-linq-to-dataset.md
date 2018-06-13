@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765353"
 ---
 # <a name="getting-started-linq-to-dataset"></a><span data-ttu-id="59d8f-102">Başlarken (LINQ-DataSet)</span><span class="sxs-lookup"><span data-stu-id="59d8f-102">Getting Started (LINQ to DataSet)</span></span>
 <span data-ttu-id="59d8f-103">Bu bölümde programlama ile ilgili giriş bilgileri sağlanmaktadır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59d8f-103">This section provides introductory information about programming with [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span>  

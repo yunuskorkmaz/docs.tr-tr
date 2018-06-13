@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759494"
 ---
 # <a name="datasets-datatables-and-dataviews"></a><span data-ttu-id="27917-102">DataSets, DataTables ve DataViews</span><span class="sxs-lookup"><span data-stu-id="27917-102">DataSets, DataTables, and DataViews</span></span>
 <span data-ttu-id="27917-103">ADO.NET <xref:System.Data.DataSet> içerdiği veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlar veri bellekte gösterimidir.</span><span class="sxs-lookup"><span data-stu-id="27917-103">The ADO.NET <xref:System.Data.DataSet> is a memory-resident representation of data that provides a consistent relational programming model regardless of the source of the data it contains.</span></span> <span data-ttu-id="27917-104">A <xref:System.Data.DataSet> sipariş ve tablolar arasındaki ilişkileri yanı sıra, verileri sınırlamak içeren tablolar dahil olmak üzere verileri eksiksiz bir kümesini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="27917-104">A <xref:System.Data.DataSet> represents a complete set of data including the tables that contain, order, and constrain the data, as well as the relationships between the tables.</span></span>  

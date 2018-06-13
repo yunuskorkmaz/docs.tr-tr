@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745506"
 ---
 # <a name="ltdevelopmentmodegt-element"></a><span data-ttu-id="d31f0-102">&lt;developmentMode&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="d31f0-102">&lt;developmentMode&gt; Element</span></span>
 <span data-ttu-id="d31f0-103">Çalışma zamanı derlemeleri DEVPATH ortam değişkeni tarafından belirtilen dizinde arar olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="d31f0-103">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>  

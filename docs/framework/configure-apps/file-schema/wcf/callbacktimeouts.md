@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749572"
 ---
 # <a name="ltcallbacktimeoutsgt"></a><span data-ttu-id="2bd37-102">&lt;callbackTimeouts&gt;</span><span class="sxs-lookup"><span data-stu-id="2bd37-102">&lt;callbackTimeouts&gt;</span></span>
 <span data-ttu-id="2bd37-103">Çift yönlü geri çağırma sözleşme senaryo client.in sunucusundan hareketleri akan zaman aşımı değerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="2bd37-103">Specifies the timeout value when flowing transactions from server to client.in a duplex callback contract scenario.</span></span>  

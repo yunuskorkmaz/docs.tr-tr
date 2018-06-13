@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756689"
 ---
 # <a name="lttrackinggt"></a><span data-ttu-id="e8aab-102">&lt;İzleme&gt;</span><span class="sxs-lookup"><span data-stu-id="e8aab-102">&lt;tracking&gt;</span></span>
 <span data-ttu-id="e8aab-103">Bir iş akışı hizmeti izleme ayarlarını tanımlamak için yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="e8aab-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  

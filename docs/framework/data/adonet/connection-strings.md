@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757222"
 ---
 # <a name="connection-strings-in-adonet"></a><span data-ttu-id="36998-102">ADO.NET bağlantı dizeleri</span><span class="sxs-lookup"><span data-stu-id="36998-102">Connection Strings in ADO.NET</span></span>
 <span data-ttu-id="36998-103">.NET Framework 2.0 bağlantı dizeleri, yeni anahtar sözcüklerin giriş geçerli bir bağlantı dizeleri çalışma zamanında oluşturma kolaylaştırmak bağlantı dizesi Oluşturucu sınıflarına dahil olmak üzere ile çalışmak için yeni özellikler sunar.</span><span class="sxs-lookup"><span data-stu-id="36998-103">The .NET Framework 2.0 introduced new capabilities for working with connection strings, including the introduction of new keywords to the connection string builder classes, which facilitate creating valid connection strings at run time.</span></span>  

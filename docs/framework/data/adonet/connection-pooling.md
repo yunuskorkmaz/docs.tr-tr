@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755532"
 ---
 # <a name="connection-pooling"></a><span data-ttu-id="f50a8-102">Bağlantı havuzu</span><span class="sxs-lookup"><span data-stu-id="f50a8-102">Connection Pooling</span></span>
 <span data-ttu-id="f50a8-103">Bir veri kaynağına bağlanma zaman alabilir.</span><span class="sxs-lookup"><span data-stu-id="f50a8-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="f50a8-104">ADO.NET bağlantı açmayı maliyetini en aza indirmek için adında bir en iyi duruma getirme teknik kullanır *bağlantı havuzu*, tekrar tekrar açarak ve bağlantıları kapatmayı maliyeti azaltır.</span><span class="sxs-lookup"><span data-stu-id="f50a8-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="f50a8-105">Bağlantı havuzu için .NET Framework veri sağlayıcıları farklı şekilde ele alınır.</span><span class="sxs-lookup"><span data-stu-id="f50a8-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  

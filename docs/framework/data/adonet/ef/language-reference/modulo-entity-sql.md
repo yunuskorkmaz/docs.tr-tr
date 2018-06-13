@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764547"
 ---
 # <a name="modulo-entity-sql"></a><span data-ttu-id="93686-102">(Modül) (Varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="93686-102">(Modulo) (Entity SQL)</span></span>
 <span data-ttu-id="93686-103">Bir başkası tarafından ayrılmış bir ifade kalanı döndürür.</span><span class="sxs-lookup"><span data-stu-id="93686-103">Returns the remainder of one expression divided by another.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757755"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a><span data-ttu-id="13fcf-102">Yöntem temelli sorgu sözdizimi örnekler: Projeksiyon (LINQ-DataSet)</span><span class="sxs-lookup"><span data-stu-id="13fcf-102">Method-Based Query Syntax Examples: Projection (LINQ to DataSet)</span></span>
 <span data-ttu-id="13fcf-103">Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Select%2A> ve <xref:System.Linq.Enumerable.SelectMany%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> yöntemi tabanlı sorgu sözdizimini kullanarak.</span><span class="sxs-lookup"><span data-stu-id="13fcf-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet> using the method-based query syntax.</span></span>  
