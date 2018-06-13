@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807040"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a><span data-ttu-id="db4ed-102">WCF Hizmet Konağı (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="db4ed-102">WCF Service Host (WcfSvcHost.exe)</span></span>
 <span data-ttu-id="db4ed-103">Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual Studio hata ayıklayıcısı (F5) otomatik olarak ana bilgisayar ve uygulamış olan bir hizmeti test başlatma olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="db4ed-103">Windows Communication Foundation (WCF) Service Host (WcfSvcHost.exe) allows you to launch the Visual Studio debugger (F5) to automatically host and test a service you have implemented.</span></span> <span data-ttu-id="db4ed-104">Ardından hizmetini bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="db4ed-104">You can then test the service using WCF Test Client (WcfTestClient.exe), or your own client, to find and fix any potential errors.</span></span>  

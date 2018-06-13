@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806519"
 ---
 # <a name="troubleshooting-setup-issues"></a><span data-ttu-id="715ee-102">Kurulum Sorunlarını Giderme</span><span class="sxs-lookup"><span data-stu-id="715ee-102">Troubleshooting Setup Issues</span></span>
 <span data-ttu-id="715ee-103">Bu konuda, Windows Communication Foundation (WCF) sorunları ayarlama ile ilgili sorunları giderme açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="715ee-103">This topic describes how to troubleshoot Windows Communication Foundation (WCF) set up issues.</span></span>  

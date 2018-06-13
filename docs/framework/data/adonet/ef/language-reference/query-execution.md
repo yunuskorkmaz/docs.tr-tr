@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804826"
 ---
 # <a name="query-execution"></a><span data-ttu-id="11f8f-102">Sorgu Yürütme</span><span class="sxs-lookup"><span data-stu-id="11f8f-102">Query Execution</span></span>
 <span data-ttu-id="11f8f-103">Bir kullanıcı tarafından bir LINQ Sorgu oluşturulduktan sonra bir komut ağacındaki dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="11f8f-103">After a LINQ query is created by a user, it is converted to a command tree.</span></span> <span data-ttu-id="11f8f-104">Bir komut ağacındaki bir Entity Framework ile uyumlu bir sorgu gösterimidir.</span><span class="sxs-lookup"><span data-stu-id="11f8f-104">A command tree is a representation of a query that is compatible with the Entity Framework.</span></span> <span data-ttu-id="11f8f-105">Komut ağacı veri kaynağında sonra yürütülür.</span><span class="sxs-lookup"><span data-stu-id="11f8f-105">The command tree is then executed against the data source.</span></span> <span data-ttu-id="11f8f-106">Sorgu yürütme sırasında kullanılan ifadeleri sonuç materialization dahil olmak üzere tüm sorgu ifadeleri (diğer bir deyişle, tüm bileşenleri sorgunun) değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="11f8f-106">At query execution time, all query expressions (that is, all components of the query) are evaluated, including those expressions that are used in result materialization.</span></span>  

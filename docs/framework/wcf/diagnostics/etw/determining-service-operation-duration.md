@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804969"
 ---
 # <a name="determining-service-operation-duration"></a><span data-ttu-id="27eeb-102">Hizmet işlemi süresini belirleme</span><span class="sxs-lookup"><span data-stu-id="27eeb-102">Determining service operation duration</span></span>
 <span data-ttu-id="27eeb-103">Bir Windows Communication Foundation (WCF) uygulamasında çözümleme izleme etkinleştirilirse, yürütme süresi bir hizmet işlemi için olay günlüğünü inceleyerek kolayca belirlenebilir.</span><span class="sxs-lookup"><span data-stu-id="27eeb-103">If analytic tracing is enabled in a Windows Communication Foundation (WCF) application, the duration of execution for a service operation can easily be determined by examining the event log.</span></span>  <span data-ttu-id="27eeb-104">Bu konuda, bir hizmet işlemi tamamlamak için geçen süreyi belirlemek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="27eeb-104">This topic demonstrates how to determine the amount of time a service operation takes to complete.</span></span>  
