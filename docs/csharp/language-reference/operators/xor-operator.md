@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271256"
 ---
 # <a name="-operator-c-reference"></a>^ İşleci (C# Başvurusu)
 İkili `^` işleçleri tam sayı türleri için önceden tanımlanmış ve `bool`. Tam sayı türleri için `^` bitwise hesaplar işlenenleri hariç veya. İçin `bool` işlenenler, `^` mantıksal özel hesaplar- veya kendi işlenenleri; diğer bir deyişle, sonuç `true` işlenenleri tam olarak birine varsa ve yalnızca ise `true`.  

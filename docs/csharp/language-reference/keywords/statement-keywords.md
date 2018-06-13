@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269667"
 ---
 # <a name="statement-keywords-c-reference"></a>Deyim Anahtar Sözcükleri (C# Başvurusu)
 Deyimleri program yönergelerdir. Dışında aşağıdaki tabloda başvurulan konularda açıklandığı gibi deyimleri sırada yürütülür. Aşağıdaki tabloda, C# deyim anahtar sözcükleri listeler. Herhangi bir anahtar sözcük ile değil belirtilmiştir deyimler hakkında daha fazla bilgi için bkz: [deyimleri](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

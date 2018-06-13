@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434774"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup Arabirimi
 Yapılandırmak konak izin verme özellikler sağlayan bir <xref:System.AppDomain?displayProperty=nameWithType> türü çağırmadan önce [Icorruntimehost::createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) oluşturmak için yöntemi.  

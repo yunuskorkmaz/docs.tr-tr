@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437332"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale Yöntemi
 Ortak dil çalışma zamanı (CLR) ana bilgisayar (coğrafi kültür ve dil eşler) yerel ayar tanımlayıcısı şu anda yürütülen görevde değerini değiştirdi bildirir.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391374"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
 İzleme için en sık kullanılan yöntemler dinleyici çıktı yazmak için yöntemler şunlardır: **yazma**, **Writeıf**, **WriteLine**, **Writelineıf**, **Assert**, ve **başarısız**. Bu yöntemleri iki kategoriye ayrılabilir: **yazma**, **WriteLine**, ve **başarısız** tüm çıktı koşulsuz, ancak yayma **Writeıf**, **Writelineıf**, ve **Assert** Boolean koşulu test ve yazma ya da koşul değerine göre yazma. **Writeıf** ve **Writelineıf** koşul ise, çıktı yayma `true`, ve **Assert** koşul ise çıktıyı yayar `false`.  

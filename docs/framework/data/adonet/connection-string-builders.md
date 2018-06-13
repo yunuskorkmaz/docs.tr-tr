@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758483"
 ---
 # <a name="connection-string-builders"></a>Bağlantı dizesi oluşturucular
 Önceki sürümlerinde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], derleme zamanı değerleri gerçekleşmediği, birleştirilmiş dizeyi içeren bağlantı dizeleri çalışma zamanında, yanlış bir anahtar sözcüğü oluşturulan böylece denetimi bir <xref:System.ArgumentException>. Her biri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları geçerli bağlantı dizeleri zor el ile yapıldığında oluşturma yapılan bağlantı dizesi anahtar için farklı bir sözdizimi desteklenir. Bu sorunu gidermek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 sunulan her yeni bağlantı dizesi oluşturucular [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı. Her bir veri sağlayıcısı devralan bir kesin türü belirtilmiş bağlantı dizesi Oluşturucu sınıf içerir <xref:System.Data.Common.DbConnectionStringBuilder>. Aşağıdaki tabloda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları ve bunların ilişkili bir bağlantı dizesi Oluşturucu sınıfları.  

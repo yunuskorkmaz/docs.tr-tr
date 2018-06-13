@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766042"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarını şekli
 SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikleri ve sorgu komut ağaçlarını yapısını anlatılmaktadır.  

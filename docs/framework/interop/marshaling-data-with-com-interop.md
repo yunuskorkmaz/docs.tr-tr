@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388361"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM Birlikte Çalışma ile Verileri Hazırlama
 COM birlikte çalışma COM nesnelerine yönetilen COM nesneleri yönetilen koddan kullanarak hem gösterme desteği sağlar Verileri için ve COM hazırlama desteği kapsamlı ve neredeyse her zaman doğru hazırlama davranışı sağlar.  

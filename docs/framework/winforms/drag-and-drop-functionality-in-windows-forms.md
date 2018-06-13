@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539406"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms'ta Sürükle ve Bırak İşlevi
 Windows Forms bir yöntem, olayları ve sürükle ve bırak davranışı uygulayan sınıflar içerir. Bu konu Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz. [sürükle ve bırak işlemleri ve Pano desteği](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

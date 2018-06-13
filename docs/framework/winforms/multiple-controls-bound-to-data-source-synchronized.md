@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539546"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama
 Windows Forms veri bağlama ile görmemeleri çalışırken, birden çok denetimler aynı veri kaynağına bağlıdır. Bazı durumlarda, bağlı denetimlerin özelliklerini birbirine ve veri kaynağı ile eşitlenmiş kalmasını sağlamak için ek adımlar gerekebilir. Bu adımları iki durumlarda gereklidir:  

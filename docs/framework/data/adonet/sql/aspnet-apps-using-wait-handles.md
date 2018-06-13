@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356469"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Bekleme tanıtıcıları kullanarak ASP.NET uygulamaları
 Uygulamanız aynı anda yalnızca bir zaman uyumsuz işlemi işlenirken geri çağırma ve zaman uyumsuz işlemleri işlemek için yoklama modelleri faydalıdır. Bekleme modelleri birden çok zaman uyumsuz işlemleri işleme daha esnek bir yolunu sağlar. Adlı iki bekleme modeli vardır <xref:System.Threading.WaitHandle> bunları uygulamak için kullanılan yöntemleri: bekleme (tüm) modeli ve bekleme (Tümü) modeli.  

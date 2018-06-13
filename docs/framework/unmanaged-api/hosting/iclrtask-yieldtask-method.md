@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437709"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask Yöntemi
 Ortak dil çalışma zamanı (CLR) kenara görev put isteği, geçerli [Iclrtask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğini temsil eder ve işlemci zamanı diğer görevler için kullanılabilir hale getirin.  

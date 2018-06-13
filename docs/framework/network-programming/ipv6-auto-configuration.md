@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393435"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 otomatik yapılandırma
 IPv6 için önemli bir hedef düğümü Tak ve Kullan desteklemektir. Diğer bir deyişle, bir IPv6 ağında bir düğüm takın ve insan müdahalesi otomatik olarak yapılandırılması mümkün olmalıdır.  

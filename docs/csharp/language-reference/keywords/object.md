@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267928"
 ---
 # <a name="object-c-reference"></a>object (C# Başvurusu)
 `object` Türüdür için diğer ad <xref:System.Object> .NET Framework'teki. C#, tüm türleri, önceden tanımlanmış ve kullanıcı tanımlı başvuru türleri ve değer türleri birleşik türü sistemde, doğrudan veya dolaylı olarak devralınmalıdır <xref:System.Object>. Türündeki değişkenler için herhangi bir türde değerler atayabilirsiniz `object`. Ne zaman bir değişkene bir değer türü dönüştürülür nesne için söyledi olmasını *Kutulu*. Object türünde bir değişken için bir değer türü dönüştürüldüğünde, onu olarak kabul edilir *sarmalanmamış*. Daha fazla bilgi için bkz: [kutulama ve kutudan çıkarma](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273416"
 ---
 # <a name="undef-c-reference"></a>#undef (C# Başvurusu)
 `#undef` bir simge tanımlarını Kaldır olanak tanır şekilde simgenin ifade olarak kullanarak, bir [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ifade için yönerge, değerlendirecek `false`.  

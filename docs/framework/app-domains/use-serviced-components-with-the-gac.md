@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753358"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma
 Hizmet verilen bileşenleri (yönetilen kod COM + bileşenleri), Genel Derleme Önbelleği'nde moduna geçirmelisiniz. Bazı senaryolarda, Genel Derleme Önbelleği'nde olmayan hizmet verilen bileşenler Ortak dil çalışma zamanı ve COM + hizmetlerinin işleyebilir; Diğer senaryolarda yapamazlar. Aşağıdaki senaryolar bu gösterilmektedir:  

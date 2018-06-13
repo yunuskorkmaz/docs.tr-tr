@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266870"
 ---
 # <a name="into-c-reference"></a>into (C# Başvurusu)
 `into` Bağlamsal anahtar sözcüğü, sonuçlarını depolamak için geçici bir tanımlayıcı oluşturmak için kullanılabilecek bir [grup](../../../csharp/language-reference/keywords/group-clause.md), [birleştirme](../../../csharp/language-reference/keywords/join-clause.md) veya [seçin](../../../csharp/language-reference/keywords/select-clause.md) yan tümcesine yeni bir tanımlayıcısı. Bu tanımlayıcı kendisini ek sorgu komutları için bir oluşturucuyu olabilir. Kullanıldığında bir `group` veya `select` yan tümcesi, yeni tanımlayıcısı kullanımını bazen olarak adlandırılır bir *devamlılık*.  

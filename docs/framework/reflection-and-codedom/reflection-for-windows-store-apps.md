@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398797"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] başlayarak .NET Framework, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamasında kullanılmak üzere bir yansıma türü ve üye kümesini içerir. Bu türleri ve üyeleri de tam .NET Framework olarak kullanılabilir olan [.NET için Windows mağazası uygulamaları](http://go.microsoft.com/fwlink/?LinkID=225700). Bu belge, bunlar ile .NET Framework 4 ve daha önceki sürümlerdeki karşılıkları arasındaki temel farkları açıklar.  

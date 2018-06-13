@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357520"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>İşlemleri kullanarak özelleştirme saklı özel yordamları
 Yalnızca depolanmış yordamları kullanarak verilere erişim ortak bir senaryodur.  

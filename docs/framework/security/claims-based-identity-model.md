@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398901"
 ---
 # <a name="claims-based-identity-model"></a>Talep tabanlı kimlik modeli
 Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adını olabilir, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  

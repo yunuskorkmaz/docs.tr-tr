@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767160"
 ---
 # <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı, bir veritabanına bağlanma, komutları çalıştırma ve sonuçları için kullanılır. Bu sonuçlar ya da doğrudan yerleştirilen işlenir bir <xref:System.Data.DataSet> gerektiğinde kullanıcıya birden fazla kaynaktan veri ile birleştirilmiş veya katmanları arasında düğümlerde açığa çıkarılması için. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları basit, kod ve veri kaynağı arasındaki en az bir katman işlevselliği ödün vermeden performansı artırma oluşturma.  

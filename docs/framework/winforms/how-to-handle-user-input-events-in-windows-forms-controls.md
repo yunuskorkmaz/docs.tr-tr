@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538776"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Nasıl yapılır: Windows Formları Denetimlerinde Kullanıcı Girdi Olaylarını İşleme
 Bu örnek, çoğu klavye, fare, odak ve bir Windows Forms denetiminde oluşabilir doğrulama olayları nasıl ele alınacağını gösterir. Adlı metin kutusunda `TextBoxInput` odak varsa ve her olay hakkında bilgi adlı metin kutusuna yazılan olaylarını alır `TextBoxOutput` olayları yükseltilmiş sırayla. Uygulama onay kutularını, rapora hangi olayları filtrelemek için kullanılan bir dizi de içerir.  

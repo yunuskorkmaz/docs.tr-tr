@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538687"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimi İçin Varsayılan Hücre Stillerini Ayarlama
 İle <xref:System.Windows.Forms.DataGridView> denetimi, belirli sütunları ve satırları ve tüm denetim için varsayılan hücre stillerini belirtebilirsiniz. Bu varsayılan aşağı sütun düzeyi sonra satır düzeyinde sonra hücre düzeyi denetim düzeyden filtreleyin. Belirli bir varsa <xref:System.Windows.Forms.DataGridViewCellStyle> özelliği hücre düzeyinde ayarlanmamışsa, varsayılan özellik ayarı satır düzeyinde kullanılır. Özelliği de satır düzeyinde ayarlanmazsa, varsayılan sütun ayarı kullanılır. Son olarak, özellik de sütun düzeyinde varsayılan ayarlı değil, <xref:System.Windows.Forms.DataGridView> ayarı kullanılır. Bu ayar, birçok düzeyde özellik ayarları çoğaltmak olmamasına özen gösterin. Her düzey, yalnızca yukarıdaki düzeyleri farklı stilleri belirtin. Daha fazla bilgi için bkz: [Windows Forms DataGridView denetimindeki hücre stilleri](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  

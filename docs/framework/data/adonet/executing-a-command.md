@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765184"
 ---
 # <a name="executing-a-command"></a>Bir komutu yürütme
 .NET Framework ile dahil her .NET Framework veri sağlayıcısı devraldığı kendi komut nesnesi sahip <xref:System.Data.Common.DbCommand>. OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesne ODBC için .NET Framework veri sağlayıcısı içeren bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesnesi. Komutlar yürütülürken bu nesneleri çıkarır yöntemlerin her biri komut türüne göre ve dönüş değeri, aşağıdaki tabloda açıklandığı gibi istenen.  

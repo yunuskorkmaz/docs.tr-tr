@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356766"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölümde, ADO.NET, dil tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak veri erişim hakkında bilgi sağlar.  

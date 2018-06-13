@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265794"
 ---
 # <a name="set-c-reference"></a>set (C# Başvurusu)
 `set` Anahtar sözcüğü tanımlayan bir *erişimci* yöntemi bir özellik ya da özellik veya dizin oluşturucu öğesi için bir değer atar dizin oluşturucu. Daha fazla bilgi ve örnekler için bkz: [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md), [Auto-Implemented özellikleri](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), ve [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md).  

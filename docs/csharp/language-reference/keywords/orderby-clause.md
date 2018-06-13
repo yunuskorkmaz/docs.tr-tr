@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268063"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby tümcesi (C# Başvurusu)
 Bir sorgu ifadesinde `orderby` yan tümcesi döndürülen dizi veya değişkene (artan veya azalan düzende sıralanmış grup) neden olur. Birden çok anahtar, bir veya daha fazla ikincil sıralama işlemi gerçekleştirmek için belirtilebilir. Sıralama öğesi türü için varsayılan karşılaştırıcı tarafından gerçekleştirilir. Varsayılan sıralama düzeni artan. Özel bir karşılaştırıcı de belirtebilirsiniz. Ancak, yalnızca yöntemi tabanlı sözdizimini kullanarak kullanılabilir. Daha fazla bilgi için bkz: [veri sıralama](../../programming-guide/concepts/linq/sorting-data.md).  

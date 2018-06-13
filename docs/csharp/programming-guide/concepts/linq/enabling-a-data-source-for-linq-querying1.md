@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339702"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ Sorgusu için Veri Kaynağı Etkinleştirme
 Genişletmek için çeşitli yolları vardır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] içinde Sorgulanacak herhangi bir veri kaynağı etkinleştirmek için [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] düzeni. Veri kaynağı örneğin bir veri yapısı, Web hizmeti, dosya sistemi veya veritabanı olabilir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Düzeni istemcilerin bir veri kaynağı için sorgu kolaylaştırır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulama etkin olduğunda, sözdizimi ve sorgu modelini değiştirmez çünkü. Hangi yollarla [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Genişletilebilir bu veri kaynakları şunları içerir:  

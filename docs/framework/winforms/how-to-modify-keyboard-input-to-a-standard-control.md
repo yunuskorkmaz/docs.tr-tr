@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540296"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Nasıl yapılır: Standart bir Denetimde Klavye Girdisini Değiştirme
 Windows Forms kullanabilir ve klavye girişini değiştirme olanağı sağlar. Bir anahtarı kullanan diğer yöntemleri ve daha fazla ileti sırası aşağı olayları anahtar değeri almazsınız böylece anahtarı yöntemi veya olay işleyicisi içinde işlemeye başvuruyor. Bir anahtar değiştirme yöntemleri ve olay işleyicileri daha fazla ileti sırası aşağı farklı bir anahtar değer alması için bunları bir anahtarın değerini değiştirmek için ifade eder. Bu konu, bu görevlerin nasıl gerçekleştirileceğini gösterir.  

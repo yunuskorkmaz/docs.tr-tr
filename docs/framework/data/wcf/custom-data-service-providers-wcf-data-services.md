@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354965"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Özel veri hizmeti sağlayıcıları (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] geç bağlama veri türlerine bağlı bir veri modeli tanımlamanıza olanak sağlayan bir dizi sağlayıcıları içerir.  

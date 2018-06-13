@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539497"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma
 Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlar açıklanmıştır. Visual Studio'da bu yordamları için kapsamlı destek yoktur.  Ayrıca bkz. [izlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  

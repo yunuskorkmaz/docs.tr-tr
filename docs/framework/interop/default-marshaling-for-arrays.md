@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393156"
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Hazırlama
 Tamamen yönetilen kod oluşan bir uygulamada, ortak dil çalışma zamanı dizi türleri olarak In/Out parametreleri geçirir. Buna karşılık, birlikte çalışabilirlik Sıralayıcı parametreleri olduğu gibi bir dizi varsayılan olarak geçirir.  

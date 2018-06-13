@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757950"
 ---
 # <a name="adonet-overview"></a>ADO.NET genel bakış
 ADO.NET veri kaynakları SQL Server ve XML gibi ve OLE DB ve ODBC ile kullanıma sunulan veri kaynaklarına tutarlı erişimi sağlar. Veri paylaşımı tüketici uygulamaları ADO.NET bu veri kaynaklarına bağlanmak ve alabilir, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.  
