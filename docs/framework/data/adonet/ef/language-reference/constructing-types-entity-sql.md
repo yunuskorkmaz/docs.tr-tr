@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765262"
 ---
 # <a name="constructing-types-entity-sql"></a><span data-ttu-id="d674f-102">Türler (varlık SQL) oluşturma</span><span class="sxs-lookup"><span data-stu-id="d674f-102">Constructing Types (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="d674f-103"> üç tür oluşturucular sağlar: satır Oluşturucular, adlandırılmış türü oluşturucuları ve koleksiyon oluşturucular.</span><span class="sxs-lookup"><span data-stu-id="d674f-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  

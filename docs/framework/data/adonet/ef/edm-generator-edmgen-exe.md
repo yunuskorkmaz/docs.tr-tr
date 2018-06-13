@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766276"
 ---
 # <a name="edm-generator-edmgenexe"></a><span data-ttu-id="89f2f-102">EDM Oluşturucu (EdmGen.exe)</span><span class="sxs-lookup"><span data-stu-id="89f2f-102">EDM Generator (EdmGen.exe)</span></span>
 <span data-ttu-id="89f2f-103">EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracıdır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve dosyaları eşleme.</span><span class="sxs-lookup"><span data-stu-id="89f2f-103">EdmGen.exe is a command-line tool used for working with [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model and mapping files.</span></span> <span data-ttu-id="89f2f-104">Aşağıdakileri yapmak için EdmGen.exe Aracı'nı kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="89f2f-104">You can use the EdmGen.exe tool to do the following:</span></span>  
