@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587462"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework Şifreleme Modeli
 .NET Framework standart birçok şifreleme algoritması uygulamaları sağlar. Bu algoritmalar kullanın ve güvenli olası varsayılan özelliklere sahip kolaydır. Ayrıca, .NET Framework şifreleme modeli nesne devralma, akış tasarım ve yapılandırma son derece genişletilebilir.  

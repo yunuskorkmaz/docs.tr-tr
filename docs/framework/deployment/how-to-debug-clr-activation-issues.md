@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390370"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama
 Ortak dil çalışma zamanı (CLR) doğru sürümü ile çalışacak şekilde uygulamanızı alınırken sorunlarla karşılaşırsanız, görüntüleyin ve hata ayıklama CLR etkinleştirme günlüklerini. Bu günlükler, uygulamanızın beklenenden farklı bir CLR sürümü yükler veya CLR hiç yüklenmiyor bir etkinleştirme sorunun kök nedenini belirlerken çok kullanışlı olabilir. [.NET Framework başlatma hataları: kullanıcı deneyimi yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) bir uygulama için hiçbir CLR bulunduğunda deneyimi açıklanır.  

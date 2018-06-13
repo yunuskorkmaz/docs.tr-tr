@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493484"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma
 Windows Communication Foundation (WCF), bir Web uç noktası kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Web uç noktaları XML veya JSON veri gönderme, SOAP Zarfı. Bu konu, bu tür bir uç nokta kullanıma gösterilmiştir.  

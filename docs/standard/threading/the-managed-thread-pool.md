@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592424"
 ---
 # <a name="the-managed-thread-pool"></a>Yönetilen İş Parçacığı Havuzu
 <xref:System.Threading.ThreadPool> Sınıfı yerine uygulama görevlerde yoğunlaşabilirsiniz yönetim iş parçacığı sağlayan sistem tarafından yönetilen çalışan iş parçacığı havuzu ile uygulamanızı sağlar. Arka plan işlemleri gerektiren kısa görevleri varsa, yönetilen iş parçacığı havuzu birden çok iş parçacığı yararlanmak için kolay bir yoludur. Örneğin, başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oluşturabileceğiniz <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> iş parçacığı havuzu iş parçacıkları üzerinden zaman uyumsuz görevleri nesneleri.  

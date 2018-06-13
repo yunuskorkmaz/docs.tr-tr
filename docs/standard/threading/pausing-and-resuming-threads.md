@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589129"
 ---
 # <a name="pausing-and-resuming-threads"></a>İş Parçacıklarını Duraklatma ve Sürdürme
 İş parçacığı etkinliklerini eşitlemek için en yaygın blok ve yayın iş parçacığı veya kilidi nesneleri veya kod bölümlerinin yollarıdır. Bu kilitleme ve mekanizmaları engelleme hakkında daha fazla bilgi için bkz: [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

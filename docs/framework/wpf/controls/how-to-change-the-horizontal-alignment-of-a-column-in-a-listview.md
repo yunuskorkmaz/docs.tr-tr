@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553903"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Nasıl yapılır: ListView İçerisindeki Bir Sütunun Yatay Hizalamasını Değiştirme
 Varsayılan olarak, her bir sütunun içeriğini bir <xref:System.Windows.Controls.ListViewItem> sola hizalı değil. Her sütunun hizalamasını sağlayarak değiştirebileceğiniz bir <xref:System.Windows.DataTemplate> ve ayarı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> öğe içinde özellikte <xref:System.Windows.DataTemplate>. Bu konuda gösterilmektedir nasıl bir <xref:System.Windows.Controls.ListView> içeriğini varsayılan ve bir sütunda hizalamasını değiştirme hizalar bir <xref:System.Windows.Controls.ListView>.  

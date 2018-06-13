@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594773"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Deyim ad alanında geçerli değil
 Bir ad alanı düzeyinde deyimi yer alamaz. Ad alanı düzeyinde izin yalnızca bildirimleri modülü, arabirim, sınıf, temsilci, numaralandırma ve yapı bildirimleri ' dir.  

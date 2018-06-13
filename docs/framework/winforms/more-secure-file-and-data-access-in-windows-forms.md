@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541904"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  

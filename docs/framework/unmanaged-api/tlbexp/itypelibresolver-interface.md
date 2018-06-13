@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454853"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver Arabirimi
 Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), bir tür kitaplığı dosya yolunu çözümler.  

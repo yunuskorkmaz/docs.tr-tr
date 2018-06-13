@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449070"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager Arabirimi
 Ortak dil çalışma zamanı (CLR) standart işletim sistemi iş parçacığı oluşturma veya fiber işlevlerini kullanmak yerine ana bilgisayar üzerinden görevlerle çalışmaya izin yöntemleri sağlar.  

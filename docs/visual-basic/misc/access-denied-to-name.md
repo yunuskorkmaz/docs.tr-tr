@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595793"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a>Erişim reddedildi &#39; &lt;adı&gt;&#39;
 Bilgisayarınızın güvenlik izinleri yetersiz olduğundan aygıt, dosya veya disk erişilebilir değil.  

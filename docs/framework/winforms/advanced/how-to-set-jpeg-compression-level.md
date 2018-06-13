@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525250"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
 Dosya boyutu en aza indirmek ve kalitesini iyileştirmek için diske görüntüyü kaydederken bir görüntü parametreleri değiştirmek isteyebilirsiniz. Sıkıştırma düzeyini değiştirerek bir JPEG resim kalitesini ayarlayabilirsiniz. JPEG Resim kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve ona geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Initialize <xref:System.Drawing.Imaging.EncoderParameters> olan birini oluşan bir dizi nedenle nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcı ve istenen sıkıştırma düzeyi.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591813"
 ---
 # <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Değerini kopyalayarak &#39;ByRef&#39; parametresi &#39; &lt;parametername&gt; &#39; eşleşen bağımsız daraltır türünden &#39; &lt;typename1&gt; &#39; &#39; &lt;typename2&gt;&#39;
 Bir yordam, karşılık gelen parametre türüyle widens bağımsız değişkeni adı verilir ve parametre bağımsız değişkeni dönüştürme daraltma.  

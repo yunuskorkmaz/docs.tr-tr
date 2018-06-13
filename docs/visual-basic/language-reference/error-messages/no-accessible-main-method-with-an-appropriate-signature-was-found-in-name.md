@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593226"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a>Hayır erişilebilir &#39;ana&#39; uygun bir imza yöntemiyle bulundu &#39; &lt;adı&gt;&#39;
 Komut satırı uygulamaları olmalıdır bir `Sub Main` tanımlanmış. `Main` olarak bildirilmelidir `Public Shared` bir sınıf ya da olarak tanımlanmışsa `Public` modülde tanımlanmış ise.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587885"
 ---
 # <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>&#39;Satır&#39; deyimleri olan artık desteklenen (Visual Basic derleyici hatası)
 Satır deyimleri artık desteklenmiyor. Dosya g/ç işlevselliği kullanılabilir olarak `Microsoft.VisualBasic.FileSystem.LineInput` ve grafik işlevselliği kullanılabilir olarak `System.Drawing.Graphics.DrawLine`.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596843"
 ---
 # <a name="argument-39conversion39-is-not-valid"></a>Bağımsız değişken &#39;dönüştürme&#39; geçerli değil
 İçin bir değer `VbStrConv` numaralandırma için geçerli değil, büyük olasılıkla, küçük sıfır. Numaralandırma değerleri değerinden büyük veya sıfıra eşit olmalıdır.  

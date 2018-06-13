@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588307"
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a>Derleme bildirimi oluşturulurken hata oluştu: &lt;hata iletisi&gt;
 Visual Basic derleyici bir derleme bir bildirim oluşturmak için derleme bağlayıcı (Al.exe, Alink olarak da bilinir) çağırır. Bağlayıcı derlemesi oluşturma öncesi çıkması aşamasında bir hata bildirdi.  

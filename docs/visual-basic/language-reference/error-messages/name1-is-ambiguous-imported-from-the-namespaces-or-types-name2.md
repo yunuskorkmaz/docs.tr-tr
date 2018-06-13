@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593645"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;Ad1&gt; &#39; ad alanları veya türleri içeri belirsiz &#39; &lt;ad2&gt;&#39;
 Belirsiz ve bu nedenle çakışan bir adı başka bir adla sağlanmıştır. Visual Basic derleyici hiçbir çakışma çözümleme kurallarını yok; adlarını kendiniz ayırt etmek gerekir.  

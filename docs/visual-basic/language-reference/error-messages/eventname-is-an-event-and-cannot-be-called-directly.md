@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587338"
 ---
 # <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;eventname&gt; &#39; bir olaydır ve doğrudan çağrılamaz
 ' <`eventname`>' bir olaydır ve bu nedenle doğrudan çağrılamaz. Kullanım bir `RaiseEvent` deyimi bir olayı.  

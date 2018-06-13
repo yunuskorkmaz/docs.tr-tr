@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592437"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 <a name="top"></a> Internet gibi ortak ağlara varlıklar arasında güvenli iletişim için bir araç sağlamaz. Böyle ağlar üzerinden iletişimi okumak veya hatta yetkisiz üçüncü taraflar tarafından değiştirilebilir açıktır. Şifreleme görüntülenmesini verilerin korunmasına yardımcı olur, veri değiştirildi ve aksi durumda güvenli kanal iletişimi için güvenli bir yol sağlanır olup olmadığını algılamak için yöntemler sağlar. Örneğin, veri bir şifreleme algoritması kullanılarak şifrelenmiş, şifrelenmiş bir duruma gönderilmesini ve daha sonra hedeflenen taraf tarafından şifresi. Bir üçüncü taraf şifrelenmiş veriler kesişirse geçirilirse zor olacaktır.  

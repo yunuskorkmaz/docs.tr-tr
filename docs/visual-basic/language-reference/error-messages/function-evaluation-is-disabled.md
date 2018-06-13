@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587666"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Önceki bir işlev değerlendirmesi zaman aşımına uğradığından işlev değerlendirmesi devre dışı bırakıldı
 Önceki bir işlev değerlendirmesi zaman aşımına uğradığından İşlev değerlendirmesi devre dışı bırakılır. İşlev değerlendirmesi yeniden etkinleştirmek için yeniden adımını veya hata ayıklamayı yeniden başlatın.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639194"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Dosya adında belirtilen dosya geçerli bir XML dosyası değil
 Sağladığınız dosya adı geçerli bir XML dosyası değil. XML belgesinin içeriğini ve izin verilen yapısı belirtmek için bir belge türü tanımı (DTD), bir Microsoft XML verileri azaltılmış (XDR) şema veya bir XML Şeması Tanım Dili (XSD) şeması kullanabilirsiniz. XSD şemaları olan XML aynı belirtmek için tercih edilen yol [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

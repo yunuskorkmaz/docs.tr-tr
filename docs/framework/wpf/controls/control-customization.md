@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551130"
 ---
 # <a name="control-customization"></a>Denetim Özelleştirme
 Bu kategori çeşitli temel sınıfları, arabirimleri ve diğer öğeleri ve tamamen işlevsel oluşturmak için kullanılan kavramları kapsayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetim.  

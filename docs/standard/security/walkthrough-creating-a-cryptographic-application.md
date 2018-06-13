@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591970"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek Yol: Şifreleme Uygulaması Oluşturma
 Bu kılavuz, şifrelemek ve içeriğin şifresini gösterilmiştir. Kod örnekleri, bir Windows Forms uygulaması için tasarlanmıştır. Bu uygulamayı gerçek dünya senaryoları, akıllı kart kullanma gibi gösterilmemiştir. Bunun yerine, şifreleme ve şifre çözme temelleri gösterilmektedir.  

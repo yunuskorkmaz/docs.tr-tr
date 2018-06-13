@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459062"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info Metodu
 Profil Oluşturucu tarafından için bildirilen işlevi yığın çerçevesi ve bağımsız değişkeni bilgi verilmektedir [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi. Bu yöntem yalnızca sırasında çağrılabilir `FunctionEnter3WithInfo` geri çağırma.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643698"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Nasıl yapılır: iki koleksiyonları (LINQ-XML) birleştirme (Visual Basic)
 Bazen bir öğe veya öznitelik bir XML belgesi başka bir öğe veya öznitelik başvurabilir. Örneğin, [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) XML belgesi, müşterilerin listesini ve siparişleri listesini içerir. Her `Customer` öğesi içeren bir `CustomerID` özniteliği. Her `Order` öğesi içeren bir `CustomerID` öğesi. `CustomerID` Her sipariş öğesinde başvurduğu `CustomerID` bir müşteri özniteliği.  

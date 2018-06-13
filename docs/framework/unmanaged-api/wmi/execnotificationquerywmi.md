@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462422"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
 Olaylarını almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağıran olayları için döndürülen Numaralandırıcı yoklaması. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.  

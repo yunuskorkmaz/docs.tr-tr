@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391255"
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7, 4.6 ve 4.5 Geçiş Kılavuzu 
 .NET Framework'ün önceki bir sürümünü kullanarak uygulamanızı oluşturduysanız, genellikle, .NET Framework 4.5 ve kendi noktası sürümleri (4.5.1 ve 4.5.2), .NET Framework 4.6 ve onun noktası sürümleri (4.6.1 ve 4.6.2) veya .NET Framework 4.7 ve kendi noktası için yükseltebilirsiniz (4.7.1 ve 4.7.2) kolayca serbest bırakır. Projenizi Visual Studio'da açın. Projeniz Visual Studio'nun daha önceki bir sürümünde oluşturulduysa **proje Uyumluluk** iletişim kutusu otomatik olarak açılır. Visual Studio Proje yükseltme hakkında daha fazla bilgi için bkz: [bağlantı noktası, geçirme ve yükseltme Visual Studio projeleri](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) ve [Visual Studio 2017 Platform desteği ve Uyumluluk](/visualstudio/productinfo/vs2017-compatibility-vs).  

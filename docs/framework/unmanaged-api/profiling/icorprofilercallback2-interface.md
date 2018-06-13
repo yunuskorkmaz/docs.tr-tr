@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461056"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 Arabirimi
 Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olaylar meydana geldiğinde kod profil oluşturucu bildirmek için kullanılan yöntemleri sağlar. `ICorProfilerCallback2` Arabirimi uzantısıdır [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) arabirimi. Diğer bir deyişle, .NET Framework 2.0 sürümünde sunulan yeni geri aramalar sağlar.  

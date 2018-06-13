@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461815"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 Arabirimi
 Ortak dil çalışma zamanı ile (CLR) olayı izlemeyi denetlemek ve bilgi istemek için iletişim kurmak için kod profil oluşturucuları kullanma yöntemleri sağlar. `ICorProfilerInfo3` Arabirimi uzantısıdır [Icorprofilerınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) arabirimi. ' De desteklenen yeni yöntemleri sağlar [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] ve sonraki sürümler.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493048"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
 Bir hizmeti bir X.509 sertifikası ile güvenli hale getirme çoğu bağlamaları Windows Communication Foundation (WCF) kullanan temel bir tekniktir. Bu konuda bir X.509 sertifikası ile kendini barındıran hizmet yapılandırma adımları açıklanmaktadır.  

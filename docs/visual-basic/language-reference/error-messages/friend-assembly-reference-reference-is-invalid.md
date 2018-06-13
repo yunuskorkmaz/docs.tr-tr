@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587377"
 ---
 # <a name="friend-assembly-reference-ltreferencegt-is-invalid"></a>Arkadaş derleme başvurusu &lt;başvuru&gt; geçersiz
 Arkadaş derleme başvurusu \<başvuru > geçersiz. Tanımlayıcı ad imzalı derlemelerin InternalsVisibleTo bildirimlerinde bir ortak anahtar belirtmeniz gerekir.  

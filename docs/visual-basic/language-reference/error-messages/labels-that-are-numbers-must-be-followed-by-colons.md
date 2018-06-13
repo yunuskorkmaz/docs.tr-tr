@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587364"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Sayı olan etiketlerden sonra iki nokta işareti gelmelidir
 Satır numaraları etiketleri diğer tür olarak aynı kurallarına ve iki nokta içermelidir.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591385"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Verileri Panoda depolama ve (Visual Basic) panodan okuma
 Pano, metin ve resimler gibi verileri depolamak için kullanılabilir. Pano tüm etkin işlemler tarafından paylaşıldığından, bunlar arasında veri aktarmak için kullanılabilir. `My.Computer.Clipboard` Nesne kolayca panoya erişmek için okuma ve yazma olanak sağlar.  

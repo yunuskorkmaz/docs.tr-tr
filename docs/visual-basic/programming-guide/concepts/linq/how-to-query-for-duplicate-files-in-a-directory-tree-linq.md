@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643192"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: sorgu (LINQ) (Visual Basic) bir dizin ağacında yineleyen dosyalar için
 Bazen aynı ada sahip dosya birden fazla klasöründe bulunabilir. Örneğin, Visual Studio yükleme klasörü altında çeşitli klasörler Benioku.htm dosyasına sahip. Bu örnek belirtilen kök klasörü altında böyle yinelenen dosya adları için sorgulama gösterir. Oluşturma süreleri de eşleşen ve ikinci örnek büyüklüğü dosyaları sorgulama gösterir.  

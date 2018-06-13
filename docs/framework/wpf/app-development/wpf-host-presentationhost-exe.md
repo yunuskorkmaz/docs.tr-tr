@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552694"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF Konağı (PresentationHost.exe)
 Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) olan sağlayan uygulama [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uyumlu tarayıcıda barındırılan uygulamalar (de dahil olmak üzere [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] ve üzeri). Varsayılan olarak, Windows Presentation Foundation (WPF) ana bilgisayar olarak kabuğa kaydedilir ve [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] işleyicisi için tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeren içerik:  

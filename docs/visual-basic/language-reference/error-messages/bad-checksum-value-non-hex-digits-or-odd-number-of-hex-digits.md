@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589257"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Hatalı sağlama toplaması değeri, onaltılık olmayan basamaklar veya tek sayıda onaltılık basamak sayısı
 Bir sağlama toplamı değeri geçersiz onaltılık basamak içeriyor veya tek bir basamak sayısı.  

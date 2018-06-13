@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592229"
 ---
 # <a name="introducing-xml-serialization"></a>Giriş XML serileştirme
 Seri hale getirme taşımalarına taşınan bir forma bir nesne dönüştürme işlemidir. Örneğin, bir nesneyi serileştirme ve bir istemci ve sunucu arasında HTTP kullanarak Internet üzerinden aktarım. Diğer tarafta akıştan nesne seri durumdan çıkarma yeniden yapılandırır.  

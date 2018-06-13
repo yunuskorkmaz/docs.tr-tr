@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389411"
 ---
 # <a name="mitigation-product-versioning"></a>Azaltma: Ürün Sürümü Oluşturma
 İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve ürün sürümü oluşturma (.NET Framework 4, 4.5, 4.5.1 ve 4.5.2) .NET Framework'ün önceki sürümlerden daha sonra değişti.  

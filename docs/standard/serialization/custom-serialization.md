@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592112"
 ---
 # <a name="custom-serialization"></a>Özel seri hale getirme
 Özel serileştirme seri hale getirme ve seri durumdan çıkarma türü denetleme işlemidir. Seri hale getirme denetleyerek, seri hale getirmek ve seri durumdan türü çekirdek işlevselliğini çiğnemekten olmadan bir türü sürümleri arasında özelliği seri hale getirme uyumluluğundan emin olmak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümlerde serileştirme denetleme açıklanmaktadır.

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592398"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngüler sağlayabilir. Ancak, döngü parallelizing iş, sıralı kodda olarak ortak olmayan ya da hiç karşılaşılan değil sorunlara yol açabilir karmaşıklık getirir. Bu konuda paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  

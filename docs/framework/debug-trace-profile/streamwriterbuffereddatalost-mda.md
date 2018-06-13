@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389947"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir <xref:System.IO.StreamWriter> için yazılmış ancak <xref:System.IO.StreamWriter.Flush%2A> veya <xref:System.IO.StreamWriter.Close%2A> yöntemi sonradan çağrılmaz örneğini önce <xref:System.IO.StreamWriter> yok. Bu MDA etkinleştirildiğinde, çalışma zamanı herhangi bir arabelleğe alınan veri hala içinde var olup olmadığının <xref:System.IO.StreamWriter>. Arabelleğe alınan verileri mevcut değilse MDA etkinleştirilir. Çağırma <xref:System.GC.Collect%2A> ve <xref:System.GC.WaitForPendingFinalizers%2A> yöntemleri çalıştırmak için sonlandırıcılar zorlayabilirsiniz. Sonlandırıcılar, aksi halde görünen rasgele zamanlarda ve büyük olasılıkla hiç işlem Çıkışta çalışacaktır. Açıkça sonlandırıcılar etkin bu MDA ile çalışan bu tür sorunlar daha güvenilir bir şekilde oluşturmaya yardımcı olur.  

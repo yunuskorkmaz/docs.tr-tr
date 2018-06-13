@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390581"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklarken, Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulama izleme özellikleri içerecek şekilde, Araçlı uygulamalarınızla derleme gerekir **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz, **izleme** yönerge, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kod dahil edilmez.  

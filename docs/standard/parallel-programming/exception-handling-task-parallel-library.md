@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591302"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Özel Durum İşleme (Görev Paralel Kitaplığı)
 İçinde bir görevin çalıştığı kullanıcı kodu tarafından oluşturulan işlenmemiş özel durumlardan geri çağırma akışa dışında bu konunun ilerleyen bölümlerinde açıklanan belirli senaryolarda yayılır. Özel durumlar statik birini kullandığınızda yayılır veya örnek <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> veya <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` yöntemleri ve işlemek bunları çağrısında kapsayan tarafından bir `try` / `catch` deyimi. Ekli alt görevler üst bir görevdir ya da birden çok görevlerde bekleyen varsa, birden çok özel durum.  

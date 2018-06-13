@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579086"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Şema derleme için XmlSchemaSet
 Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, bir önbellek burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulandı.  

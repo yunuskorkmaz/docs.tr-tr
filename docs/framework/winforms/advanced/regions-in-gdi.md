@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524589"
 ---
 # <a name="regions-in-gdi"></a>GDI+'daki Bölgeler
 Bir bölge, bir çıktı aygıtının görüntü alanını bölümüdür. Bölgeler (tek bir dikdörtgen) basit veya karmaşık (çokgenler ve kapalı Eğriler birleşimi) olabilir. İki bölgede aşağıda gösterilmiştir: bir bir dikdörtgen oluşturulur ve başka bir yoldan oluşturulur.  
