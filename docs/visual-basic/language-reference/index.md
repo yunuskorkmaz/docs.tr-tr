@@ -1,10 +1,6 @@
 ---
 title: Visual Basic Dil Başvurusu
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic language reference
 - run-time libraries, Visual Basic
@@ -14,82 +10,80 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cc41f5d4f60b1ed5ee81128d0ab9a53728ceb65
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: a3353122d6b2cd44f0de12ef8799d71bddab6160
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602639"
 ---
-# <a name="visual-basic-language-reference"></a><span data-ttu-id="83dab-102">Visual Basic Dil Başvurusu</span><span class="sxs-lookup"><span data-stu-id="83dab-102">Visual Basic Language Reference</span></span>
-<span data-ttu-id="83dab-103">Bu bölümde Visual Basic dilinin çeşitli yönlerini için başvuru bilgileri sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
+# <a name="visual-basic-language-reference"></a><span data-ttu-id="2f7f1-102">Visual Basic Dil Başvurusu</span><span class="sxs-lookup"><span data-stu-id="2f7f1-102">Visual Basic Language Reference</span></span>
+<span data-ttu-id="2f7f1-103">Bu bölümde Visual Basic dilinin çeşitli yönlerini için başvuru bilgileri sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="83dab-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="83dab-104">In This Section</span></span>  
- [<span data-ttu-id="83dab-105">Tipografi ve Kod Kuralları</span><span class="sxs-lookup"><span data-stu-id="83dab-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- <span data-ttu-id="83dab-106">Anahtar sözcükler, yer tutucular ve diğer öğelerin dil Visual Basic belgelerinde biçimlendirilmiş şekilde özetler.</span><span class="sxs-lookup"><span data-stu-id="83dab-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2f7f1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2f7f1-104">In This Section</span></span>  
+ [<span data-ttu-id="2f7f1-105">Tipografi ve Kod Kuralları</span><span class="sxs-lookup"><span data-stu-id="2f7f1-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ <span data-ttu-id="2f7f1-106">Anahtar sözcükler, yer tutucular ve diğer öğelerin dil Visual Basic belgelerinde biçimlendirilmiş şekilde özetler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
   
- [<span data-ttu-id="83dab-107">Visual Basic Çalışma Süresi Kitaplık Üyeleri</span><span class="sxs-lookup"><span data-stu-id="83dab-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
- <span data-ttu-id="83dab-108">Sınıfları ve modüllerini listeler <xref:Microsoft.VisualBasic?displayProperty=nameWithType> kendi üye işlevleri, yöntemler, özellikler, sabitler ve numaralandırmalar için bağlantılar ile birlikte ad alanı.</span><span class="sxs-lookup"><span data-stu-id="83dab-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
+ [<span data-ttu-id="2f7f1-107">Visual Basic Çalışma Süresi Kitaplık Üyeleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ <span data-ttu-id="2f7f1-108">Sınıfları ve modüllerini listeler <xref:Microsoft.VisualBasic?displayProperty=nameWithType> kendi üye işlevleri, yöntemler, özellikler, sabitler ve numaralandırmalar için bağlantılar ile birlikte ad alanı.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
   
- [<span data-ttu-id="83dab-109">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="83dab-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
- <span data-ttu-id="83dab-110">Tüm Visual Basic anahtar sözcükleri listeler ve daha fazla bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
+ [<span data-ttu-id="2f7f1-109">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ <span data-ttu-id="2f7f1-110">Tüm Visual Basic anahtar sözcükleri listeler ve daha fazla bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
   
- [<span data-ttu-id="83dab-111">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="83dab-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="83dab-112">Visual Basic'te kullanılabilir öznitelikleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-112">Documents the attributes available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-111">Öznitelikler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2f7f1-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="2f7f1-112">Visual Basic'te kullanılabilir öznitelikleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-112">Documents the attributes available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-113">Sabitler ve Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="83dab-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
- <span data-ttu-id="83dab-114">Sabitler ve numaralandırmalar Visual Basic'te kullanılabilir belgeleri.</span><span class="sxs-lookup"><span data-stu-id="83dab-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-113">Sabitler ve Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ <span data-ttu-id="2f7f1-114">Sabitler ve numaralandırmalar Visual Basic'te kullanılabilir belgeleri.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-115">Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="83dab-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- <span data-ttu-id="83dab-116">Visual Basic'te kullanılabilen veri türleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-116">Documents the data types available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-115">Veri Türleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ <span data-ttu-id="2f7f1-116">Visual Basic'te kullanılabilen veri türleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-116">Documents the data types available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-117">Yönergeler</span><span class="sxs-lookup"><span data-stu-id="83dab-117">Directives</span></span>](../../visual-basic/language-reference/directives/directives.md)  
- <span data-ttu-id="83dab-118">Visual Basic'te kullanılabilir derleyici yönergeleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-118">Documents the compiler directives available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-117">Yönergeler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-117">Directives</span></span>](../../visual-basic/language-reference/directives/directives.md)  
+ <span data-ttu-id="2f7f1-118">Visual Basic'te kullanılabilir derleyici yönergeleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-118">Documents the compiler directives available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-119">İşlevler</span><span class="sxs-lookup"><span data-stu-id="83dab-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
- <span data-ttu-id="83dab-120">Visual Basic çalışma zamanı işlevleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-120">Documents the run-time functions available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-119">İşlevler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
+ <span data-ttu-id="2f7f1-120">Visual Basic çalışma zamanı işlevleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-120">Documents the run-time functions available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-121">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="83dab-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
- <span data-ttu-id="83dab-122">Visual Basic çalışma zamanı değiştiricileri listeler ve daha fazla bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
+ [<span data-ttu-id="2f7f1-121">Değiştiriciler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
+ <span data-ttu-id="2f7f1-122">Visual Basic çalışma zamanı değiştiricileri listeler ve daha fazla bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
   
- [<span data-ttu-id="83dab-123">Modüller</span><span class="sxs-lookup"><span data-stu-id="83dab-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
- <span data-ttu-id="83dab-124">Visual Basic ve üyeleri kullanılabilir modül belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-124">Documents the modules available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="2f7f1-123">Modüller</span><span class="sxs-lookup"><span data-stu-id="2f7f1-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
+ <span data-ttu-id="2f7f1-124">Visual Basic ve üyeleri kullanılabilir modül belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-124">Documents the modules available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="83dab-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="83dab-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
- <span data-ttu-id="83dab-126">Herhangi bir veri türünün varsayılan değeri açıklar.</span><span class="sxs-lookup"><span data-stu-id="83dab-126">Describes the default value of any data type.</span></span>  
+ [<span data-ttu-id="2f7f1-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="2f7f1-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ <span data-ttu-id="2f7f1-126">Herhangi bir veri türünün varsayılan değeri açıklar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-126">Describes the default value of any data type.</span></span>  
   
- [<span data-ttu-id="83dab-127">Nesneler</span><span class="sxs-lookup"><span data-stu-id="83dab-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
- <span data-ttu-id="83dab-128">Visual Basic ve üyeleri kullanılabilir nesneleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-128">Documents the objects available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="2f7f1-127">Nesneler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
+ <span data-ttu-id="2f7f1-128">Visual Basic ve üyeleri kullanılabilir nesneleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-128">Documents the objects available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="83dab-129">İşleçler</span><span class="sxs-lookup"><span data-stu-id="83dab-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
- <span data-ttu-id="83dab-130">Visual Basic'te kullanılabilir işleçleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-130">Documents the operators available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-129">İşleçler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
+ <span data-ttu-id="2f7f1-130">Visual Basic'te kullanılabilir işleçleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-130">Documents the operators available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-131">Özellikler</span><span class="sxs-lookup"><span data-stu-id="83dab-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
- <span data-ttu-id="83dab-132">Visual Basic'te kullanılabilen özellikleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-132">Documents the properties available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-131">Özellikler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
+ <span data-ttu-id="2f7f1-132">Visual Basic'te kullanılabilen özellikleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-132">Documents the properties available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-133">Sorgular</span><span class="sxs-lookup"><span data-stu-id="83dab-133">Queries</span></span>](../../visual-basic/language-reference/queries/queries.md)  
- <span data-ttu-id="83dab-134">Kullanma hakkında başvuru bilgileri sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzu ifadelerinde.</span><span class="sxs-lookup"><span data-stu-id="83dab-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+ [<span data-ttu-id="2f7f1-133">Sorgular</span><span class="sxs-lookup"><span data-stu-id="2f7f1-133">Queries</span></span>](../../visual-basic/language-reference/queries/queries.md)  
+ <span data-ttu-id="2f7f1-134">Kullanma hakkında başvuru bilgileri sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzu ifadelerinde.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
- [<span data-ttu-id="83dab-135">Deyimler</span><span class="sxs-lookup"><span data-stu-id="83dab-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
- <span data-ttu-id="83dab-136">Visual Basic'te kullanılabilir bildirimi ve yürütülebilir deyimleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="83dab-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
+ [<span data-ttu-id="2f7f1-135">Deyimler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="2f7f1-136">Visual Basic'te kullanılabilir bildirimi ve yürütülebilir deyimleri belgeler.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="83dab-137">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="83dab-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- <span data-ttu-id="83dab-138">IntelliSense Visual Basic Kod Düzenleyicisi'nde sağlanan belge açıklamaları açıklar.</span><span class="sxs-lookup"><span data-stu-id="83dab-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
+ [<span data-ttu-id="2f7f1-137">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ <span data-ttu-id="2f7f1-138">IntelliSense Visual Basic Kod Düzenleyicisi'nde sağlanan belge açıklamaları açıklar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
   
- [<span data-ttu-id="83dab-139">XML Eksen Özellikleri</span><span class="sxs-lookup"><span data-stu-id="83dab-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- <span data-ttu-id="83dab-140">XML kodunuzda doğrudan erişmek için XML eksen özellikleri kullanma hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
+ [<span data-ttu-id="2f7f1-139">XML Eksen Özellikleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ <span data-ttu-id="2f7f1-140">XML kodunuzda doğrudan erişmek için XML eksen özellikleri kullanma hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
   
- [<span data-ttu-id="83dab-141">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="83dab-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
- <span data-ttu-id="83dab-142">XML değişmez değerleri kodunuzda doğrudan XML içerecek şekilde kullanma hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
+ [<span data-ttu-id="2f7f1-141">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
+ <span data-ttu-id="2f7f1-142">XML değişmez değerleri kodunuzda doğrudan XML içerecek şekilde kullanma hakkında bilgi için bağlantılar sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
   
- [<span data-ttu-id="83dab-143">Hata İletileri</span><span class="sxs-lookup"><span data-stu-id="83dab-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
- <span data-ttu-id="83dab-144">Bunları işlemek Visual Basic derleyici ve çalışma zamanı hata iletileri ve Yardım bir listesi verilmektedir.</span><span class="sxs-lookup"><span data-stu-id="83dab-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
+ [<span data-ttu-id="2f7f1-143">Hata İletileri</span><span class="sxs-lookup"><span data-stu-id="2f7f1-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
+ <span data-ttu-id="2f7f1-144">Bunları işlemek Visual Basic derleyici ve çalışma zamanı hata iletileri ve Yardım bir listesi verilmektedir.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="83dab-145">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="83dab-145">Related Sections</span></span>  
- [<span data-ttu-id="83dab-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="83dab-146">Visual Basic</span></span>](../../visual-basic/index.md)  
- <span data-ttu-id="83dab-147">Visual Basic Dil tüm alanlarının kapsamlı Yardım sağlar.</span><span class="sxs-lookup"><span data-stu-id="83dab-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="2f7f1-145">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="2f7f1-145">Related Sections</span></span>  
+ [<span data-ttu-id="2f7f1-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2f7f1-146">Visual Basic</span></span>](../../visual-basic/index.md)  
+ <span data-ttu-id="2f7f1-147">Visual Basic Dil tüm alanlarının kapsamlı Yardım sağlar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
   
- [<span data-ttu-id="83dab-148">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="83dab-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
- <span data-ttu-id="83dab-149">Visual Studio tümleşik geliştirme ortamı (IDE) içinde programları derleme alternatif olarak komut satırı derleyicisi kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="83dab-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
+ [<span data-ttu-id="2f7f1-148">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="2f7f1-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="2f7f1-149">Visual Studio tümleşik geliştirme ortamı (IDE) içinde programları derleme alternatif olarak komut satırı derleyicisi kullanmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="2f7f1-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
