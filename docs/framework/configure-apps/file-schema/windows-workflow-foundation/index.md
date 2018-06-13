@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352495"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation Yapılandırma Şeması
 Windows Workflow Foundation (WF) yapılandırma öğeleri, iş akışı uygulamaları yapılandırmanıza olanak sağlar. Bir iş akışı uygulama için izleme ve izleme, bunun yanı sıra, yapılandırabilirsiniz. İzleme ve izleme hakkında daha fazla bilgi için bkz: [iş akışı izleme ve izleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). İş akışı hizmetleri için Windows Communication Foundation (WCF) yapılandırma öğeleri de kullanabilirsiniz. WCF hakkında daha fazla ayrıntı için bkz: [WCF yapılandırma şeması](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  

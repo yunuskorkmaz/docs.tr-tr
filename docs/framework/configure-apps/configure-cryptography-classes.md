@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743257"
 ---
 # <a name="configuring-cryptography-classes"></a>Şifreleme Sınıflarını Yapılandırma
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Varsayılan şifreleme algoritmaları ve .NET Framework ve uygun şekilde yazılmış uygulamalar kullanmak algoritması uygulamalarını yapılandırmak bilgisayar yöneticilerinin sağlar.  Örneğin, kendi uygulamanızda bir şifreleme algoritması, bir kuruluş bu uygulama içinde gönderilen uygulaması yerine varsayılan hale getirebilir [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Şifreleme kullanan yönetilen uygulamalar her zaman açık olarak belirli bir uygulamaya bağlamak seçebilmenize rağmen şifre yapılandırma sistemi kullanarak şifreleme nesneleri oluşturmak önerilir.  

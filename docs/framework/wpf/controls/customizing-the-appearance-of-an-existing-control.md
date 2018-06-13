@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558063"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve bir denetim görsel davranışını belirtir. Yeni bir BT vererek, denetimin görünümünü özelleştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, işlevselliğini değiştirmeden varolan bir denetim görünümünü değiştirin. Örneğin, düğmeleri uygulamanızda yerine varsayılan kare şekli yuvarlak yapabileceğiniz ancak düğmesi hala oluşturacağı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  

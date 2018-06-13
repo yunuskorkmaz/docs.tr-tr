@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756065"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
 Sertifikaları doğrulamak için belirteci işleyicileri kullanma ayarlarını denetler. Belirli bir işleyici ile kendi Doğrulayıcı yapılandırdıysanız bu ayarları geçersiz kılınır.  

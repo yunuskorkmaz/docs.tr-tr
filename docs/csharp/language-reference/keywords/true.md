@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265265"
 ---
 # <a name="true-c-reference"></a>true (C# Başvurusu)
 Aşırı yüklenmiş bir işleç veya bir hazır değer olarak kullanılır:  

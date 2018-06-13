@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558806"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a>Nasıl yapılır: BitmapSource'u Farklı bir PixelFormat'a Dönüştürme
 Bu örnek dönüştürülmesi gösterilmektedir bir <xref:System.Windows.Media.Imaging.BitmapSource> nesne (<xref:System.Windows.Media.Imaging.BitmapImage>) başka bir <xref:System.Windows.Media.PixelFormat> kullanarak bir <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  

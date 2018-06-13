@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558102"
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>Ne&#39;s WPF sürüm 4. 5'deki yenilikler
 <a name="introduction"></a> Bu konu, yeni ve geliştirilmiş özellikler hakkında bilgi içerir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  

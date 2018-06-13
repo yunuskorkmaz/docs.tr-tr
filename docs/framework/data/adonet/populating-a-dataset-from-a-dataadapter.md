@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356946"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter kümesinden doldurma
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının sağlayan veri bellekte gösterimidir. `DataSet` Tabloları, kısıtlamalar ve tablolar arasında ilişkiler içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağı, bağımsız bir `DataSet` verileri uygulamaya yerel ve birden çok veri kaynaklarından verileri içerebilir. Mevcut veri kaynakları ile etkileşim aracılığıyla denetlenir `DataAdapter`.  

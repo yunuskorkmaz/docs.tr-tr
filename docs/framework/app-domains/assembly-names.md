@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744141"
 ---
 # <a name="assembly-names"></a>Derleme Adları
 Bir derlemenin adı meta verilerinde depolanır ve önemli bir derlemenin kapsamına etkileyebilir ve bir uygulama tarafından kullanılıyor sahiptir. Tanımlayıcı adlı bir derleme derlemenin adı, kültür, ortak anahtar ve sürüm numarasını içeren tam bir adı vardır. Görünen adını ve yüklenen derlemeler için kullanarak elde edilebilir bu sık verilir <xref:System.Reflection.Assembly.FullName%2A> özelliği.  

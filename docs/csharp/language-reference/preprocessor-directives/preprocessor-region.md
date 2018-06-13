@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274975"
 ---
 # <a name="region-c-reference"></a>#region (C# Başvurusu)
 `#region` Genişlet veya daralt kullanırken kod bloğu belirtmenizi sağlar [anahat oluşturma](/visualstudio/ide/outlining) özelliği Visual Studio Kod Düzenleyicisi'nin. Uzun kod dosyalarında daraltın veya üzerinde çalışmakta olduğunuz dosya bölümüne odaklanabiliriz bir veya daha fazla bölge gizlemek uygundur. Aşağıdaki örnek, bir bölge tanımlamasına gösterilmektedir:  

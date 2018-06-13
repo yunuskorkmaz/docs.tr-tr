@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265693"
 ---
 # <a name="-operator-c-reference"></a>| İşleci (C# Başvurusu)
 İkili `|` işleçleri tam sayı türleri için önceden tanımlanmış ve `bool`. Tam sayı türleri için `|` işlenenleri Bitsel veya hesaplar. İçin `bool` işlenenler, `|` işlenenleri; ' mantıksal OR hesaplar diğer bir deyişle, sonucu olan `false` , her iki işlenen ve yalnızca, `false`.  

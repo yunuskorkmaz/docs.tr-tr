@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333264"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak giriş ve yeni bir çıkış sırası oluşturmak için birçok yolla değiştirme kaynağı sırası kullanabilirsiniz. Öğeleri sıralama ve Gruplama değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak, belki de en güçlü özelliği [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgudur yeni türleri oluşturma yeteneği. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  

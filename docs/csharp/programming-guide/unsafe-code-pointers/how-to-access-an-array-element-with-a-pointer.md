@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332045"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Nasıl yapılır: İşaretçiyle bir Dizi Öğesine Erişme (C# Programlama Kılavuzu)
 Güvenli olmayan bir bağlamda, bellekte bir öğe işaretçi öğesi erişimi kullanarak aşağıdaki örnekte gösterildiği gibi erişebilirsiniz:  
