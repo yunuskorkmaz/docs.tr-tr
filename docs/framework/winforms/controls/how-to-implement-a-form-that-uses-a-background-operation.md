@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533302"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Aşağıdaki örnek program Fibonacci numaraları hesaplar bir form oluşturur. Hesaplamanın hesaplama devam ettikçe gecikme çalıştırmak kullanıcı arabirimi çalışmaya devam etmesi için kullanıcı arabirimi iş parçacığından ayrı bir iş parçacığı üzerinde çalışır.  

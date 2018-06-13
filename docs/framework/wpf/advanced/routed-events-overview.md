@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549769"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konu yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konuda, yönlendirilmiş olaylar terimleri tanımlar, açıklar öğeleri ağacıyla yönlendirilmiş yönlendirilmiş olayları nasıl yönlendirilmiş olaylar nasıl işleneceğini özetler ve kendi özel yönlendirilmiş olaylar oluşturmak nasıl tanıtır.

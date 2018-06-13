@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550913"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FixedDocument> içeriği (gibi [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] belgeleri) numaralı bir biçimde.  

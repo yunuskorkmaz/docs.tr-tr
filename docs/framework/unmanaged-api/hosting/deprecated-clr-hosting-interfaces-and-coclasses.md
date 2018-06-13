@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429230"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Kullanım Dışı CLR Barındırma Arabirimleri ve Coclass’ları
 Bu bölümde yönetilmeyen arabirimler açıklanmaktadır konakları ortak dil çalışma zamanı (CLR) tümleştirmek için kullanabileceğiniz .NET Framework sürüm 1.0 ve 1.1 uygulamalarına. Bu arabirimleri yapılandırmak ve süreç içine çalışma zamanı yükleme bir konak için yöntemleri sağlar.  

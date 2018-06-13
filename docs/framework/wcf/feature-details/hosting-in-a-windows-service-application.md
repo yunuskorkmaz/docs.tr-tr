@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492238"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 (Daha önce Windows NT Hizmetleri bilinen) Windows hizmetleri sağlayan bir işlem modeli özellikle uzun süre çalışan yürütülebilir dosya içinde bulunmalıdır ve herhangi bir kullanıcı arabirimi biçimi gösterme uygulamalar için uygundur. Hizmet uygulaması başlangıç olanak tanıyan, hizmet denetimi yöneticisi tarafından (SCM), yönetilen bir Windows işlem ömrü durdurun ve Windows hizmeti uygulamalarını duraklatma. Bir Windows hizmet işlemi "her zaman açık" uygulamalar için uygun bir barındırma ortamı kolaylaştırarak bilgisayar başlatıldığında otomatik olarak başlayacak şekilde yapılandırabilirsiniz. Windows hizmet uygulamaları hakkında daha fazla bilgi için bkz: [Windows hizmet uygulamaları](http://go.microsoft.com/fwlink/?LinkId=89450).  

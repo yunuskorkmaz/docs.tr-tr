@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416838"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 Arabirimi
 Nesnelerin monitör kilit özelliklerini gösterir. Bu arabirim Icordebugheapvalue ve Icordebugheapvalue2 arabirimleri genişletir.  

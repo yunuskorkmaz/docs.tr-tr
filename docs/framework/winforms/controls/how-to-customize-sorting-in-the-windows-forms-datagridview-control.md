@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533422"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi sağlar Otomatik sıralama ancak gereksinimlerinize bağlı olarak, sıralama işlemi özelleştirmeniz gerekebilir. Örneğin, bir alternatif kullanıcı arabirimi (UI) oluşturmak için programlı sıralama kullanabilirsiniz. Alternatif olarak, işleyebilir <xref:System.Windows.Forms.DataGridView.SortCompare> olay veya çağrı `Sort(IComparer)` , aşırı <xref:System.Windows.Forms.DataGridView.Sort%2A> birden çok sütun sıralama gibi sıralama esneklik için yöntem.  

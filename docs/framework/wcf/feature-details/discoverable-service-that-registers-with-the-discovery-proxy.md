@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490603"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda keşif proxy'si uygulama nasıl ele dört konuların saniyedir. Önceki konusunda [nasıl yapılır: keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanmadı. Bu konuda, duyuru iletileri gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) Keşif proxy'si için kaydolun ve kendisini keşif proxy'sine kaydı için neden olur.  

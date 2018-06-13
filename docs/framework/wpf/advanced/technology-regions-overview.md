@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548850"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 ya da DirectX gibi bir uygulama içinde birden çok sunu teknolojileri kullanılıyorsa, ortak bir üst düzey penceresi içinde işleme alanlarını paylaşması gerekir. Bu konu, sunu ve WPF birlikte çalışabilirlik uygulamanız için giriş etkileyebilir sorunları açıklar.  

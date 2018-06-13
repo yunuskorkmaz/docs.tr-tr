@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537167"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown Denetimine Genel Bakış (Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> Denetimi kullanıcının bir değer ayarlamak için tıklatabileceği okları çifti ve bir metin kutusu birleşimini gibi görünüyor. Denetim görüntüler ve sabit sayısal değer seçenekler listesinden tek bir sayısal değer ayarlar. Kullanıcı artırmak ve kaç yukarı tıklayarak ve oklar, aşağı yukarı ve aşağı ok tuşlarına basarak veya bir sayı denetim metin kutusu parçası yazarak azaltın. Yukarı Ok tuşuna tıklayarak sayı en doğru taşır; AŞAĞI ok tuşunu tıklatıldığında, en düşük doğru numarası taşınır.  

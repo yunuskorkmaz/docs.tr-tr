@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489579"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma
 İstek-yanıt sözleşmesi yanıt döndüren bir yöntem belirtir. Yanıt gönderilir ve bu sözleşmenin koşulları altında isteğine bağıntılı. Yanıt yöntem olsa bile (`void` C# ' ta, veya bir `Sub` Visual Basic'te), altyapı oluşturur ve çağırana boş iletisi gönderir. Bir boş yanıt iletisini göndermeyi önlemek için işlem için tek yönlü sözleşme kullanın.  

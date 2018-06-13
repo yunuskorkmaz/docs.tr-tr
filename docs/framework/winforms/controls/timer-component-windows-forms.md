@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537856"
 ---
 # <a name="timer-component-windows-forms"></a>Süreölçer Bileşeni (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Timer> düzenli aralıklarla bir olay başlatır bir bileşenidir. Bu bileşen, bir Windows Forms ortamı için tasarlanmıştır.  

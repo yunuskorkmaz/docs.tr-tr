@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427208"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument Arabirimi
 Sembol deposu tarafından başvurulan bir belgeyi temsil eder. Bir belgeyi bir Tekdüzen Kaynak Konum Belirleyicisi (URL) ve bir belge türü GUID tarafından tanımlanır. URL'yi kullanarak nasıl depolanacağını bağımsız olarak belgeyi bulun ve belge türü GUID. Belge kaynağı simgesi deposunda depola ve bu arabirimi aracılığıyla alın.  

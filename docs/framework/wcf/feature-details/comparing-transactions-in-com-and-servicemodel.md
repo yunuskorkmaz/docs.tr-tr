@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488653"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ ve ServiceModel İşlemlerini Karşılaştırma
 Bu konuda Windows Communication Foundation (WCF) özniteliklerini kullanarak işlem bir COM + hizmet davranışını benzetmek nasıl ele alınmıştır <xref:System.ServiceModel> ad alanı sağlar.  

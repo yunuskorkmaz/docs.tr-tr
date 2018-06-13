@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549509"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden çok iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Birden çok iş parçacıklı programlar karmaşık ve hata ayıklama zor olduğundan, bunlar tek iş parçacıklı çözümleri bulunduğunda kaçınılmalıdır.  
