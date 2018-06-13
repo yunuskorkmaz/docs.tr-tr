@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755168"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="87dfc-102">&lt;System.Web&gt; öğesi (Web Ayarları)</span><span class="sxs-lookup"><span data-stu-id="87dfc-102">&lt;system.web&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="87dfc-103">ASP.NET barındırma katman işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="87dfc-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  

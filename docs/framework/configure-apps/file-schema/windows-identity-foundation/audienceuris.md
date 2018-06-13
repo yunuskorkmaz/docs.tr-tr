@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756000"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="779d7-102">&lt;AudienceUri&gt;</span><span class="sxs-lookup"><span data-stu-id="779d7-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="779d7-103">Bağlı olan taraf (RP) kabul edilebilir tanımlayıcılardır URI'ler kümesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="779d7-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="779d7-104">İzin verilen kitle URI'ler biri için kapsamındaki sürece belirteçleri kabul edilmedi.</span><span class="sxs-lookup"><span data-stu-id="779d7-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

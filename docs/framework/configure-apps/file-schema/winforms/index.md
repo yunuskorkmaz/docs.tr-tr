@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755558"
 ---
 # <a name="windows-forms-configuration-section"></a><span data-ttu-id="42918-102">Windows Forms Yapılandırma Bölümü</span><span class="sxs-lookup"><span data-stu-id="42918-102">Windows Forms Configuration Section</span></span>
 <span data-ttu-id="42918-103">Önceden tanımlanmış yapılandırma ayarları birden çok monitör desteği, yüksek DPI desteği ve diğer gibi özelleştirilmiş uygulama ayarları hakkında bilgi almak ve Windows Forms yapılandırma ayarlarını depolamak için bir Windows Forms uygulaması izin verin.</span><span class="sxs-lookup"><span data-stu-id="42918-103">Windows Forms configuration settings allow a Windows Forms app to store and retrieve information about customized application settings such as multi-monitor support, high DPI support, and other predefined configuration settings.</span></span>

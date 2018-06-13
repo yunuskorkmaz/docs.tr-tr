@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757248"
 ---
 # <a name="model-declared-function"></a><span data-ttu-id="4189b-102">Model bildirilen işlevi</span><span class="sxs-lookup"><span data-stu-id="4189b-102">model-declared function</span></span>
 <span data-ttu-id="4189b-103">A *modeli bildirilen işlevi* kavramsal modelde bildirildi, ancak bu kavramsal modelde tanımlı değil bir işlevdir.</span><span class="sxs-lookup"><span data-stu-id="4189b-103">A *model-declared function* is a function that is declared in a conceptual model, but is not defined in that conceptual model.</span></span> <span data-ttu-id="4189b-104">İşlev barındırma veya depolama ortamında tanımlanabilir.</span><span class="sxs-lookup"><span data-stu-id="4189b-104">The function might be defined in the hosting or storage environment.</span></span> <span data-ttu-id="4189b-105">Örneğin, bir model bildirilen işlevi böylece kavramsal modelde sunucu tarafı işlevselliği kullanıma sunan bir veritabanında tanımlı bir işlev eşleştirilmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="4189b-105">For example, a model-declared function might be mapped to a function that is defined in a database, thus exposing server-side functionality in the conceptual model.</span></span>  

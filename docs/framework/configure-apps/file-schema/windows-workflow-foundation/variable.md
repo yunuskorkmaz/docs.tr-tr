@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756793"
 ---
 # <a name="ltvariablegt"></a><span data-ttu-id="85faa-102">&lt;değişken&gt;</span><span class="sxs-lookup"><span data-stu-id="85faa-102">&lt;variable&gt;</span></span>
 <span data-ttu-id="85faa-103">Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="85faa-103">Represents a collection of variables associated with this activity query.</span></span>  

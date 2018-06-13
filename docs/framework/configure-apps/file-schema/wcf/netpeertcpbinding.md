@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750888"
 ---
 # <a name="ltnetpeertcpbindinggt"></a><span data-ttu-id="62965-102">&lt;netPeerTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="62965-102">&lt;netPeerTcpBinding&gt;</span></span>
 <span data-ttu-id="62965-103">Eş kanal belirli TCP ileti için bir bağlama tanımlar.</span><span class="sxs-lookup"><span data-stu-id="62965-103">Defines a binding for peer channel specific TCP messaging.</span></span>  

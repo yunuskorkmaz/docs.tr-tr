@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758977"
 ---
 # <a name="ltwsdualhttpbindinggt"></a><span data-ttu-id="b4b51-102">&lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="b4b51-102">&lt;wsDualHttpBinding&gt;</span></span>
 <span data-ttu-id="b4b51-103">Çift yönlü Hizmet sözleşmeleri veya SOAP aracılarla iletişim için uygun bir güvenli, güvenilir ve birlikte çalışabilir bağlama tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b4b51-103">Defines a secure, reliable and interoperable binding that is suitable for duplex service contracts or communication through SOAP intermediaries.</span></span>  

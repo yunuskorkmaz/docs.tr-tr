@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755896"
 ---
 # <a name="ltcustomtrackingqueriesgt"></a><span data-ttu-id="3f206-102">&lt;customTrackingQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="3f206-102">&lt;customTrackingQueries&gt;</span></span>
 <span data-ttu-id="3f206-103">Kod etkinliklerinizi tanımladığınız olayları izlemek için kullanılan sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3f206-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="3f206-104">Sorgu için özel izleme kayıtları abone olmak izleme katılımcı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="3f206-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  

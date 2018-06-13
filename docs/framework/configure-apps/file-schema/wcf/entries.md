@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746715"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="d85a7-102">&lt;Girdileri&gt;</span><span class="sxs-lookup"><span data-stu-id="d85a7-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="d85a7-103">Yönlendirme filtreleri ve ne zaman bir filtre ile eşleşen için iletileri göndermek için hedef uç noktaları arasındaki eşlemeleri içeren bir yönlendirme girişi.</span><span class="sxs-lookup"><span data-stu-id="d85a7-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  
