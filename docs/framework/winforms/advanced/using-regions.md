@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522616"
 ---
 # <a name="using-regions"></a>Bölgeleri Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Sınıfı özel bir şekil tanımlamanıza olanak verir. Şeklin satırları, çokgenler ve eğriler oluşur.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522388"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Nasıl yapılır: Bir Kalemin Rengini Ayarlama
 Bu örnek önceden var olan rengini değiştirir <xref:System.Drawing.Pen> nesnesi  

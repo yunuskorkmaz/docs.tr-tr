@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558271"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veri içeren dosyaları bağımlı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], resim, video ve ses. Windows Presentation Foundation (WPF) yapılandırma, tanımlayan ve bu tür bir uygulama verileri dosyaları adı verilen veri dosyalarını kullanmak için özel destek sağlar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  

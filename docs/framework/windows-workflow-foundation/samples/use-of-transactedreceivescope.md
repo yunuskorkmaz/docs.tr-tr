@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517312"
 ---
 # <a name="use-of-transactedreceivescope"></a>TransactedReceiveScope kullanımı
 Bu örnek kullanarak bir sunucu için bir istemciden bir işlem akışı gösterilmektedir <xref:System.Activities.Statements.TransactionScope> istemci üzerinde yeni bir işlem oluşturmak için ve bir <xref:System.ServiceModel.Activities.TransactedReceiveScope> akışlı bir işlem içeren bir ileti almak ve sunucu üzerindeki işlem ömrü kapsam için. Örnek, istemci ve sunucu rolleri dolduran iki projeden oluşan.  

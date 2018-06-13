@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568555"
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>Bir XML belgeye düğümleri ekleniyor
 Yeni düğüm ekleyerek belge değiştirebilirsiniz. Düğümleri yeni, aynı belgede, varolan oluşturulabilir veya başka bir belgeden alınabilir. Yeni düğümler oluşturma hakkında daha fazla bilgi için bkz: [yeni düğümler DOM oluşturma](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Varolan düğümleri kopyalama hakkında daha fazla bilgi için bkz: [kopyalama varolan düğümleri](../../../../docs/standard/data/xml/copy-existing-nodes.md), [kopyalama varolan düğümünden bir belgeyi başka bir](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md), veya [belge parçaları kopyalama](../../../../docs/standard/data/xml/copying-document-fragments.md).  

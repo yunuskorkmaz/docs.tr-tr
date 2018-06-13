@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560019"
 ---
 # <a name="how-to-encode-and-decode-a-jpeg-image"></a>Nasıl yapılır: Bir JPEG Görüntüsünü Kodlama ve Kodunu Çözme
 Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_jpeg](../../../../includes/tlasharptla-jpeg-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.JpegBitmapDecoder> ve <xref:System.Windows.Media.Imaging.JpegBitmapEncoder> nesneleri.  

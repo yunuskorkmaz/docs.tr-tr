@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558697"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Nasıl yapılır: 3B Modeline Birden Çok Dönüşüm Uygulama
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Media3D.RotateTransform3D> ve <xref:System.Windows.Media.Media3D.ScaleTransform3D> döndürmek ve 3B modelin ölçeğini değiştirmek için. Aşağıdaki kod bu dönüşümlerin uygulamak gösterilmiştir <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> özelliği bir <xref:System.Windows.Media.Media3D.GeometryModel3D> XAML'de.  

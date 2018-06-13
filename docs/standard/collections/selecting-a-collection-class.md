@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574939"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 Koleksiyon sınıfı dikkatli seçtiğinizden emin olun. Yanlış türde kullanarak koleksiyon kullanımınız kısıtlayabilirsiniz. Genel olarak, türlerinde kullanmaktan kaçının <xref:System.Collections> ad alanı .NET Framework sürüm 1.1 özellikle hedeflediğiniz sürece. Koleksiyonları genel ve eşzamanlı sürümleri kendi büyük tür güvenliği ve diğer geliştirmeler nedeniyle tercih edilen olacak.  

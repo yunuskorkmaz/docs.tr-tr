@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557790"
 ---
 # <a name="treeview-overview"></a>TreeView Genel Bakışı
 <xref:System.Windows.Controls.TreeView> Denetimi daraltılabilir düğümleri kullanarak hiyerarşik yapıda bilgileri görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TreeView> ve <xref:System.Windows.Controls.TreeViewItem> denetler ve bunların kullanımıyla basit örnekler sağlar.  

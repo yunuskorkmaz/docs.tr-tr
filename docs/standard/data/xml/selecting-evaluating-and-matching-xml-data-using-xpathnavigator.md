@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570672"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Seçildiğinde, Evaluating ve XML XPathNavigator kullanarak veri eşleştirme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümler seçmek için yöntemler sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> bir XPath sorgusu kullanılarak nesne, değerlendirmek ve bir XPath ifadesi sonuçlarını inceleyin ve bir düğüm olup bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne eşleşen bir verilen XPath ifadesi. Bunlar ve seçerek, değerlendirme ve eşleşen düğümler ile ilgili diğer kavramlara bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne aşağıdaki konularda açıklanmıştır.  

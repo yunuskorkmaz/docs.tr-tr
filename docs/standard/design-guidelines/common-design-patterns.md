@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570360"
 ---
 # <a name="common-design-patterns"></a>Ortak tasarım desenleri
 Çok sayıda books yazılım modelleri, düzeni diller ve desenler çok geniş konusunu adres antipatterns vardır. Bu nedenle, bu bölümde, kılavuzları ve .NET Framework API'ları tasarımında sık kullanılan desenleri çok sınırlı sayıda ilgili tartışma sağlar.  

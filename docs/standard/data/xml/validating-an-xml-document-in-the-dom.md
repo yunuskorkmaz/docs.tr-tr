@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576318"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>XML belgesi DOM içinde doğrulanıyor
 <xref:System.Xml.XmlDocument> Sınıfı varsayılan olarak XML belge nesne modeli (DOM) içinde bir XML Şeması Tanım Dili (XSD) şema veya belge türü tanımı (DTD) karşı doğrulamaz; XML yalnızca iyi biçimlendirilmiş doğrulandı.  

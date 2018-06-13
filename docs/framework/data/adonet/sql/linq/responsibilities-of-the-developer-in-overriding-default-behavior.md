@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365260"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Varsayılan davranışı geçersiz kılma, geliştirici sorumlulukları
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki gereksinimleri zorlamaz ancak davranışı, bu gereksinimleri olmayan sağlanırsa tanımlanmadı.  

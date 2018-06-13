@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560550"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Nasıl yapılır: Nesneye Birden Çok Dönüşüm Uygulama
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.TransformGroup> Grup iki veya daha fazla <xref:System.Windows.Media.Transform> nesneleri tek bileşik <xref:System.Windows.Media.Transform>.  

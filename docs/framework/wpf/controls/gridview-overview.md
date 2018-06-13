@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557688"
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
 <xref:System.Windows.Controls.GridView> Görünüm modu için görüntüleme modlarından biridir bir <xref:System.Windows.Controls.ListView> denetim. <xref:System.Windows.Controls.GridView> Sınıfı ve bunun destekleyici sınıfları siz ve kullanıcılarınız öğesi, genellikle düğmeleri etkileşimli sütun üst bilgileri olarak kullanan bir tabloda koleksiyonları görüntülemek etkinleştirin. Bu konu tanıtır <xref:System.Windows.Controls.GridView> sınıfı ve kullanımını özetler.  

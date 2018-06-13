@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520519"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma
 Bu makalede, bir olay günlüğü iletileri Yazar Visual Studio'da basit bir Windows hizmet uygulaması oluşturmak gösterilmiştir. Hizmetinizi oluşturmak için gerçekleştirdiğiniz temel adımlar şunlardır:  

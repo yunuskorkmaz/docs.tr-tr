@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569778"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 "D" kullanarak bir tamsayı baştaki sıfırlarla ekleyebilirsiniz [standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md) duyarlık Belirleyicisi ile. Tamsayı ve kayan nokta sayıları baştaki sıfırlarla kullanarak ekleyebileceğiniz bir [özel sayısal biçim dizesi](../../../docs/standard/base-types/custom-numeric-format-strings.md). Bu konu, her iki yöntem sayıyı baştaki sıfırlarla paneli için nasıl kullanılacağını gösterir.  

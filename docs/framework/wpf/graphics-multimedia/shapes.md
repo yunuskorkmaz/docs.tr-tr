@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562199"
 ---
 # <a name="shapes"></a>Şekiller
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanarak temel şekiller çizmek için destek sağlar <xref:System.Windows.Shapes.Shape> sınıfı. Şekil nesneleri türetilen <xref:System.Windows.FrameworkElement> ve bu nedenle, Düzen sistemine katılır ve basitçe kullanarak çizilebilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

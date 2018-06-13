@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557933"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer Genel Bakışı
 Bir kullanıcı arabirimi içinde içerik genellikle bilgisayar ekranın görüntü alanından daha büyüktür. <xref:System.Windows.Controls.ScrollViewer> Denetim içeriğinin kaydırma etkinleştirmek için kullanışlı bir yöntem sunar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konu tanıtır <xref:System.Windows.Controls.ScrollViewer> öğesi ve birkaç kullanım örnekleri sağlar.  

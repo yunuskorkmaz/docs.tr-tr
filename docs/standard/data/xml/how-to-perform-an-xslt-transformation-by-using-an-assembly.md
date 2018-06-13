@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569509"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: bir derlemeyi kullanarak XSLT dönüşümü gerçekleştirin
 XSLT derleyici (xsltc.exe) XSLT stil sayfaları derler ve bir derleme oluşturur. Derleme doğrudan geçirilen <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi.  

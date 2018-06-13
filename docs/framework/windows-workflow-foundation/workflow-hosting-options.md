@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516558"
 ---
 # <a name="workflow-hosting-options"></a>İş akışı barındırma seçenekleri
 Windows Workflow Foundation (WF) örnekleri çoğu bir konsol uygulamasında barındırılan iş akışlarını kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında barındırılacağı kalıcı işlemleri bir Windows hizmeti geliştirici ya da bir sunucu uygulaması tarafından gibi yazılan- [!INCLUDE[iisver](../../../includes/iisver-md.md)] veya AppFabric. Bu yaklaşım arasındaki farklar aşağıdaki gibidir.  

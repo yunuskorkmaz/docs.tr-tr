@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365689"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Açık bir CommittableTransaction kullanarak işlem uygulama
 <xref:System.Transactions.CommittableTransaction> Sınıfı kullanarak bir işlem kullanmak üzere uygulamalar için açık bir yol sağlar <xref:System.Transactions.TransactionScope> örtük olarak sınıf. Birden çok işlev çağrıları veya birden çok iş parçacığı çağrıları arasında aynı işlem kullanmak istediğiniz uygulamalar için kullanışlıdır. Farklı <xref:System.Transactions.TransactionScope> uygulama yazıcısı sınıfının gerekir özellikle çağırmak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> yürütün veya işlem iptal etmek için yöntemleri.  

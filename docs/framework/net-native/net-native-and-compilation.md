@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395534"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 Windows 8.1 uygulamaları ve.NET Framework belirli bir programlama dilinde yazılmıştır ve Ara dile (IL) derlenmiş hedef Windows Masaüstü uygulamaları. Çalışma zamanında bir yöntem ilk kez yalnızca yürütülmeden önce IL yerel makine için yerel koda derlemek için tam zamanında (JIT) derleyici sorumludur. Buna karşılık, .NET yerel araç zinciri, kaynak kodu için yerel kodu derleme zamanında dönüştürür. Bu konu, .NET Framework uygulamaları için kullanılabilir diğer derleme teknolojileriyle .NET yerel karşılaştırır ve ayrıca neden .NET ile kodda oluşan özel durumlar derlenip anlamanıza yardımcı olabilir yerel kod .NET Native'nasıl üreten bir pratik genel bakış sağlar Yerel JIT derlenmiş kodda gerçekleşmez.  

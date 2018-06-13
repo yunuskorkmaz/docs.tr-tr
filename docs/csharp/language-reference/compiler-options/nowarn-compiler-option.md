@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215491"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# Derleyici Seçenekleri)
 **- Nowarn** seçeneği bir veya daha fazla uyarı görüntülenmesini derleyici bastırmak olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  

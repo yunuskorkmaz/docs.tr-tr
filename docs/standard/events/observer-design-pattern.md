@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578136"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 Gözlemci tasarım deseni ile kaydetmek ve bir sağlayıcıdan bildirimleri almak abone sağlar. Gönderim tabanlı bildirim gerektiren her senaryo için uygundur. Deseni tanımlayan bir *sağlayıcı* (olarak da bilinen bir *konu* veya bir *observable*) ve sıfır, bir veya daha fazla *gözlemcilerin*. Sağlayıcının gözlemcilerin kaydı ve önceden tanımlı bir koşul olduğunda, olay veya durum değişikliği, sağlayıcı, tüm gözlemcilerin otomatik olarak kendi yöntemlerini çağıran biri tarafından size bildirir. oluşur. Bu yöntem çağrısı sağlayıcı gözlemcilerin için geçerli durum bilgisini de sağlayabilirsiniz. .NET Framework'teki genel uygulayarak gözlemci tasarım deseni uygulanan <xref:System.IObservable%601?displayProperty=nameWithType> ve <xref:System.IObserver%601?displayProperty=nameWithType> arabirimleri. Genel tür parametresi, bildirimi bilgi sağlayan türünü temsil eder.  

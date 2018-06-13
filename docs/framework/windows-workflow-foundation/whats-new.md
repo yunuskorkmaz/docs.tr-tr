@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518443"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Ne&#39;s Windows Workflow Foundation'deki yenilikler
 Windows Workflow Foundation (WF) [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] önceki sürümlerden birkaç geliştirme örneklerinde değiştirir. İş akışları oluşturmak, yürütme ve korumak ve yeni işlevsellik ana bilgisayarını uygulamak daha kolay. En son sürümü kullanmak için .NET 3.0 ve .NET 3.5 iş akışı uygulamalarını geçirme hakkında daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

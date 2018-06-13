@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365793"
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Bir OData hizmetini kullanan bir Windows mağazası uygulaması yazma
 Windows 8 uygulama yeni bir tür sunar: Windows mağazası uygulaması. Windows mağazası uygulamaları yepyeni bir görünümüne sahip, çeşitli aygıtlarda çalıştırın ve Windows Mağazası'üzerinde kullanılabilir hale getirilir. Bu konuda, bir OData hizmeti, özellikle NetFlix katalog OData hizmeti kullanan bir Windows mağazası uygulaması yazma açıklar. Windows mağazası uygulamaları hakkında daha fazla bilgi için lütfen okuyun [Windows mağazası uygulamaları ile çalışmaya başlama](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

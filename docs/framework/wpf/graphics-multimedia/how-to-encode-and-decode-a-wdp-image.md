@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560136"
 ---
 # <a name="how-to-encode-and-decode-a-wdp-image"></a>Nasıl yapılır: Bir WDP Görüntüsünü Kodlama ve Kodunu Çözme
 Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> ve <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> nesneleri.  
