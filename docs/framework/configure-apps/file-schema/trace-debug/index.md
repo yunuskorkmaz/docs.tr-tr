@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745272"
 ---
 # <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="212e8-102">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="212e8-102">Trace and Debug Settings Schema</span></span>
 <span data-ttu-id="212e8-103">İzleme ve hata ayıklama ayarları toplamak, depolamak ve iletileri ve izleme anahtarı ayarlandığı düzeyi rota izleme dinleyicileri belirtin.</span><span class="sxs-lookup"><span data-stu-id="212e8-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  

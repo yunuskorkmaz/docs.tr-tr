@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760745"
 ---
 # <a name="entity-sql-overview"></a><span data-ttu-id="92b41-102">Varlık SQL genel bakış</span><span class="sxs-lookup"><span data-stu-id="92b41-102">Entity SQL Overview</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="92b41-103"> kavramsal modellerde sorgu olanak tanıyan bir SQL benzeri bir dildir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="92b41-103"> is a SQL-like language that enables you to query conceptual models in the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="92b41-104">Kavramsal modeller varlıkları ve ilişkileri, verilerini temsil eden ve [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bu varlıkları ve ilişkileri SQL kullanmış olan olanlar için tanıdık bir biçimde sorgu olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="92b41-104">Conceptual models represent data as entities and relationships, and [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows you to query those entities and relationships in a format that is familiar to those who have used SQL.</span></span>  

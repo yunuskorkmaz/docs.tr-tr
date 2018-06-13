@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765431"
 ---
 # <a name="odbc-data-type-mappings"></a><span data-ttu-id="f40b9-102">ODBC veri türü eşlemeleri</span><span class="sxs-lookup"><span data-stu-id="f40b9-102">ODBC Data Type Mappings</span></span>
 <span data-ttu-id="f40b9-103">Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ODBC için .NET Framework Veri Sağlayıcısı'ndan veri türleri için türü (<xref:System.Data.Odbc>).</span><span class="sxs-lookup"><span data-stu-id="f40b9-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>).</span></span> <span data-ttu-id="f40b9-104">Yazılı erişimci yöntemleri <xref:System.Data.Odbc.OdbcDataReader> da listelenir.</span><span class="sxs-lookup"><span data-stu-id="f40b9-104">The typed accessor methods for the <xref:System.Data.Odbc.OdbcDataReader> are also listed.</span></span>  

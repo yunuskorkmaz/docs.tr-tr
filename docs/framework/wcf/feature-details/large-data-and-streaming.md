@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496568"
 ---
 # <a name="large-data-and-streaming"></a><span data-ttu-id="98bc0-102">Büyük Veriler ve Akış Yapma</span><span class="sxs-lookup"><span data-stu-id="98bc0-102">Large Data and Streaming</span></span>
 <span data-ttu-id="98bc0-103">Windows Communication Foundation (WCF) bir XML tabanlı iletişim altyapısıdır.</span><span class="sxs-lookup"><span data-stu-id="98bc0-103">Windows Communication Foundation (WCF) is an XML-based communications infrastructure.</span></span> <span data-ttu-id="98bc0-104">XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.</span><span class="sxs-lookup"><span data-stu-id="98bc0-104">Because XML data is commonly encoded in the standard text format defined in the [XML 1.0 specification](http://go.microsoft.com/fwlink/?LinkId=94838), connected systems developers and architects are typically concerned about the wire footprint (or size) of messages sent across the network, and the text-based encoding of XML poses special challenges for the efficient transfer of binary data.</span></span>  

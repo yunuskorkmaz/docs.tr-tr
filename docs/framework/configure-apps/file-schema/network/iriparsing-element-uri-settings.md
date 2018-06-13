@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743309"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="5b66d-102">&lt;iriParsing&gt; öğesi (URI ayarları)</span><span class="sxs-lookup"><span data-stu-id="5b66d-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="5b66d-103">Uluslararası kaynak tanımlayıcısı (IRI) ayrıştırma için uygulanmış olup olmadığını belirten bir <xref:System.Uri> ve kuralları ayrıştırma IRI uygulanıp.</span><span class="sxs-lookup"><span data-stu-id="5b66d-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  

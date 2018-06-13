@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749029"
 ---
 # <a name="ltresolvergt"></a><span data-ttu-id="bf69b-102">&lt;Çözümleyici&gt;</span><span class="sxs-lookup"><span data-stu-id="bf69b-102">&lt;resolver&gt;</span></span>
 <span data-ttu-id="bf69b-103">Bir eş çözümlemek için kullanılan bir eş çözümleyici kafes katılmak birkaç düğüm temsil eden bir dizi Eş düğüm adresleri kimliği kafes belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf69b-103">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745376"
 ---
 # <a name="walkthrough-using-client-application-services"></a><span data-ttu-id="bcafb-102">İzlenecek Yol: İstemci Uygulama Hizmetlerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="bcafb-102">Walkthrough: Using Client Application Services</span></span>
 <span data-ttu-id="bcafb-103">Bu konuda kullanıcıların kimliğini doğrulamak ve kullanıcı rolleri ve ayarları almak için istemci uygulama hizmetleri kullanan bir Windows uygulamasının nasıl oluşturulacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="bcafb-103">This topic describes how to create a Windows application that uses client application services to authenticate users and retrieve user roles and settings.</span></span>  

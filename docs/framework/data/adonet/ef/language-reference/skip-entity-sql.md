@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766588"
 ---
 # <a name="skip-entity-sql"></a><span data-ttu-id="f3766-102">Atla (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="f3766-102">SKIP (Entity SQL)</span></span>
 <span data-ttu-id="f3766-103">Fiziksel disk belleği ORDER BY yan tümcesinde SKIP alt yan tümcesinin kullanarak gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f3766-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="f3766-104">Atla ayrı olarak from ORDER BY yan tümcesi kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="f3766-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758938"
 ---
 # <a name="ole-db-data-type-mappings"></a><span data-ttu-id="21515-102">OLE DB veri türü eşlemeleri</span><span class="sxs-lookup"><span data-stu-id="21515-102">OLE DB Data Type Mappings</span></span>
 <span data-ttu-id="21515-103">Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ADO ve OLE DB için .NET Framework Veri Sağlayıcısı'ndan veri türleri için türü (<xref:System.Data.OleDb>).</span><span class="sxs-lookup"><span data-stu-id="21515-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ADO and OLE DB (<xref:System.Data.OleDb>).</span></span> <span data-ttu-id="21515-104">Yazılı erişimci yöntemleri <xref:System.Data.OleDb.OleDbDataReader> da listelenir.</span><span class="sxs-lookup"><span data-stu-id="21515-104">The typed accessor methods for the <xref:System.Data.OleDb.OleDbDataReader> are also listed.</span></span>  

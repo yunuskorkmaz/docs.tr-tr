@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756910"
 ---
 # <a name="ltworkflowidlegt"></a><span data-ttu-id="e505e-102">&lt;workflowIdle&gt;</span><span class="sxs-lookup"><span data-stu-id="e505e-102">&lt;workflowIdle&gt;</span></span>
 <span data-ttu-id="e505e-103">Boşta iş akışı örnekleri zaman kaldırıldı ve kalıcı denetimleri hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="e505e-103">A service behavior that controls when idle workflow instances are unloaded and persisted.</span></span>  

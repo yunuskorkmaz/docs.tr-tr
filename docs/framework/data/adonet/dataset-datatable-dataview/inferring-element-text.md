@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762721"
 ---
 # <a name="inferring-element-text"></a><span data-ttu-id="01bed-102">Öğe metni çıkarımını yapma</span><span class="sxs-lookup"><span data-stu-id="01bed-102">Inferring Element Text</span></span>
 <span data-ttu-id="01bed-103">Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğeleri gibi yeni bir sütun adıyla tabloları gibi olayla için alt öğe varsa **TableName_Text** öğe için olayla tablosuna eklenir.</span><span class="sxs-lookup"><span data-stu-id="01bed-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="01bed-104">Öğesinde bulunan metin tablosunda bir satırı eklenir ve yeni bir sütun depolanır.</span><span class="sxs-lookup"><span data-stu-id="01bed-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="01bed-105">**ColumnMapping** yeni bir sütun özelliği, ayarlanacak **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="01bed-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  

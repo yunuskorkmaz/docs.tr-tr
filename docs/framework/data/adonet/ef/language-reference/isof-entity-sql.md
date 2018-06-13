@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762146"
 ---
 # <a name="isof-entity-sql"></a><span data-ttu-id="929d8-102">ISOF (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="929d8-102">ISOF (Entity SQL)</span></span>
 <span data-ttu-id="929d8-103">İfade türü belirtilen türe veya onun alt türlerinden birini olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="929d8-103">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>  

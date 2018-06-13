@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755971"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="cfd9b-102">Bir veri kümesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="cfd9b-102">Creating a DataSet</span></span>
 <span data-ttu-id="cfd9b-103">Bir örneğini oluşturmak bir <xref:System.Data.DataSet> çağırarak <xref:System.Data.DataSet> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="cfd9b-104">İsteğe bağlı olarak bir adı bağımsız değişkenini belirtin.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-104">Optionally specify a name argument.</span></span> <span data-ttu-id="cfd9b-105">İçin bir ad belirtmezseniz, <xref:System.Data.DataSet>, adı "NewDataSet" ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763442"
 ---
 # <a name="--subtract-entity-sql"></a><span data-ttu-id="450d5-102">-(Çıkart) (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="450d5-102">- (Subtract) (Entity SQL)</span></span>
 <span data-ttu-id="450d5-103">İki sayı çıkarır.</span><span class="sxs-lookup"><span data-stu-id="450d5-103">Subtracts two numbers.</span></span>  

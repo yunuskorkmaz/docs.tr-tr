@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745025"
 ---
 # <a name="ltgcservergt-element"></a><span data-ttu-id="2afd5-102">&lt;gcServer&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="2afd5-102">&lt;gcServer&gt; Element</span></span>
 <span data-ttu-id="2afd5-103">Ortak dil çalışma zamanı sunucu çöp toplama çalışıp çalışmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="2afd5-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
