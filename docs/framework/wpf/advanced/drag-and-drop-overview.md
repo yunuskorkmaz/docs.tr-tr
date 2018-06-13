@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549470"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme aygıtı) bir veya daha fazla nesne seçmek için bu nesneleri sürükleyerek bazı istenilen bırakma hedefi üzerinden kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve bunları bırakma.  

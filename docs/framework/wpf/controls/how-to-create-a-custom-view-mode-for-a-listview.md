@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551875"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Nasıl yapılır: ListView için Özel Görünüm Modu Oluşturma
 Bu örnek özel bir oluşturulacağını gösterir <xref:System.Windows.Controls.ListView.View%2A> modu için bir <xref:System.Windows.Controls.ListView> denetim.  

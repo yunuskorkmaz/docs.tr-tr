@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549483"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda XAML sözdizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu koşulları sık bu belge, WPF belgeleri için her ikisini de geri kalanı boyunca özellikle ve XAML ya da XAML dil desteği System.Xaml düzeyinde etkinleştirilir temel XAML kavramları kullanan diğer çerçeveleri için kullanılır. Konu başlığı altında tanıtılan temel terimler bu konuda genişletir. [XAML genel bakış (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  

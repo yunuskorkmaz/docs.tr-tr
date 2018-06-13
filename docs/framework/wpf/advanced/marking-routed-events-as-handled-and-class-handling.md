@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549415"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olay işaretleyebilirsiniz. Olay işleme rota etkili bir şekilde kısaltacak. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. Sınıf işleyicisi sınıf düzeyinde sınıfının hiçbir örneği üzerinde herhangi bir örnek işleyicisini önce çağrılan bir işleyici ile belirli bir yönlendirilmiş olay işleme fırsatına sahip.  

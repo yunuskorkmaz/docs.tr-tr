@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548374"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Nasıl yapılır: Özel Denetimden Mürekkep Seçme
 Ekleyerek bir <xref:System.Windows.Ink.IncrementalLassoHitTester> özel denetim için bir kullanıcı mürekkep benzer şekilde, Serbest Şekil aracı ile seçebilmeniz için denetiminizi etkinleştirebilirsiniz <xref:System.Windows.Controls.InkCanvas> mürekkep bir Serbest Şekil ile seçer.  

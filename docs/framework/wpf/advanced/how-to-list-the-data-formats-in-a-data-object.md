@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543487"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>Nasıl yapılır: Bir Veri Nesnesi İçinde Veri Biçimlerini Listeleme
 Aşağıdaki örnekler nasıl kullanılacağını <xref:System.Windows.DataObject.GetFormats%2A> yöntemi aşırı alma bir veri nesnesi içinde kullanılabilir olan her veri biçimi belirten bir dizeler dizisi.  

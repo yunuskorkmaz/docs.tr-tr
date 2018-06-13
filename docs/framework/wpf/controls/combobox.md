@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551197"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> Denetim kullanıcılar seçeneklerin bir listesini gösterir. Listede gösterilen ve denetim genişletir ve daraltır gibi gizli. Varsayılan durumundayken yalnızca tek seçenek görüntüleme listesi daraltılmıştır. Kullanıcı seçenekleri tam listesini görmek için bir düğmeye tıklar.  

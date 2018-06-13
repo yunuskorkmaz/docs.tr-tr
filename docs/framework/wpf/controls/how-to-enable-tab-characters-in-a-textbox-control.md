@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550192"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>Nasıl yapılır: Sekme Karakterlerini TextBox Denetimi İçinde Etkinleştirme
 Bu örnekte, normal giriş olarak sekme karakterleri kabul etkinleştirmek gösterilmiştir bir <xref:System.Windows.Controls.TextBox> denetim.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544556"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Nasıl yapılır: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme
 Bu örneklerin üzerinden akış içerik öğelerinde gerçekleştirilen daha yaygın işlemlerin bazılarını göstermek **blokları** özelliği. Bu özellik eklemek ve öğeleri kaldırmak için kullanılan <xref:System.Windows.Documents.BlockCollection>. Akış içerik öğeleri bu özellik bir **blokları** özellik içerir:  

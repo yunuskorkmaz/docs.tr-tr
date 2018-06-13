@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549210"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar
 Kullanarak Direct3D9 içeriğini barındırabilirsiniz <xref:System.Windows.Interop.D3DImage> sınıfı. Direct3D9 içeriği barındırma, uygulamanızın performansını etkileyebilir. Bu konu, bir Windows Presentation Foundation (WPF) uygulamasında Direct3D9 içeriği barındırma, performansı iyileştirmek için en iyi uygulamaları açıklar. Bu en iyi uygulamaları nasıl kullanılacağı dahil <xref:System.Windows.Interop.D3DImage> ve en iyi uygulamalar Windows Vista, Windows XP kullanırken ve birden çok monitör görüntüler.  

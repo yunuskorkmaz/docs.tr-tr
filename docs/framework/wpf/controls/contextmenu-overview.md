@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552876"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu Genel Bakışı
 <xref:System.Windows.Controls.ContextMenu> Sınıf bağlamı özgü kullanarak işlevselliği kullanıma sunan bir öğeyi temsil eder <xref:System.Windows.Controls.Menu>. Genellikle, bir kullanıcı sunan <xref:System.Windows.Controls.ContextMenu> içinde [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] fare düğmesini sağ tıklanarak. Bu konu tanıtır <xref:System.Windows.Controls.ContextMenu> öğesi ve içinde kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kod.  

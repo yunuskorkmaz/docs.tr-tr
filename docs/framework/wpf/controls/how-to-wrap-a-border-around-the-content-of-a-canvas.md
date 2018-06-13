@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551797"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Nasıl yapılır: Tuval İçeriği Çevresinde Kenarlığı Kaydırma
 Bu örnek nasıl kaydırılacağını gösterir bir <xref:System.Windows.Controls.Canvas> öğesi ile bir <xref:System.Windows.Controls.Border>.  

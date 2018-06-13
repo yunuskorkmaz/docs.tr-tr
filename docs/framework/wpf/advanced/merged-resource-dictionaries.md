@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548060"
 ---
 # <a name="merged-resource-dictionaries"></a>Birleştirilmiş Kaynak Sözlükleri
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları birleştirilmiş kaynak sözlüğü özelliğini desteklemez. Bu özellik, kaynaklar bölümünü tanımlamak için bir yol sağlar. bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlenmiş dışında uygulama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulama. Kaynaklar sonra uygulamalar arasında paylaşılabilir ve ayrıca daha rahat yerelleştirme için yalıtılır.  

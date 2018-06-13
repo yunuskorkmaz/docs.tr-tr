@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548041"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat için kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan daha bakım farklı bir sıra gerekir. Diğer bölümler için sıra 17: 00 sonra kullanılamaz hale gelmesine ayarlanması, ayrıcalıklı bölümün sırası olacak şekilde ayarlanması kullanılabilir hiç uğruyor.  

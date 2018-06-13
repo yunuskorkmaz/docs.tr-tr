@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551706"
 ---
 # <a name="button"></a>Düğme
 A <xref:System.Windows.Controls.Button> denetimi fare, klavye, iğne veya başka bir giriş aygıtı ve başlatır kullanıcı girişine yanıt verir bir <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. A <xref:System.Windows.Controls.Button> temel olan [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] metin gibi basit içerik içerebilir ve resimler gibi karmaşık içerik de içerebilir bileşeni ve <xref:System.Windows.Controls.Panel> kontrol eder.  

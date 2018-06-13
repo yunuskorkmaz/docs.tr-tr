@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547885"
 ---
 # <a name="the-ink-threading-model"></a>Mürekkep İş Parçacığı Modeli
 Tablet PC mürekkep avantajları, çok yazmak gibi bir normal Kalem ve kağıt hissi olduğunu biridir.  Bunu başarmak için tablet kalem fare yapar ve kullanıcının yazmasına mürekkep işler daha çok daha yüksek bir hızda giriş verilerini toplar.  Engellenmiş duruma olduğundan uygulamanın kullanıcı arabirimini (UI) iş parçacığı kalem verisi ve mürekkep işleme toplanması için yeterli değil.  Bunu çözmek için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı mürekkep yazdığında iki ek iş parçacığı kullanır.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549730"
 ---
 # <a name="xaml-overview-wpf"></a>XAML'ye Genel Bakış (WPF)
 Bu konu, XAML dili özelliklerini açıklar ve yazmak için XAML nasıl kullanabileceğinizi gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Bu konuda özellikle tarafından uygulanan XAML açıklanmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML kendisini olduğu daha büyük bir dil kavram [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

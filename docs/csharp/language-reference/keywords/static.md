@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287273"
 ---
 # <a name="static-c-reference"></a>static (C# Başvurusu)
 Kullanım `static` türü yerine belirli bir nesneye ait statik bir üyenin bildirmek için değiştiricisi. `static` Sınıfları, alanları, yöntemler, özellikler, işleçleri, olayları ve oluşturucular ile değiştiricisi kullanılabilir, ancak dizin oluşturucular, sonlandırıcılar veya türleri sınıfları dışında kullanılamaz. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

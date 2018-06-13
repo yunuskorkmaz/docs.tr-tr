@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530809"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarları tanımlamak için kullanılabilir. Bir etiket denetiminde bir erişim anahtarı tanımladığınızda, kullanıcı ALT tuşuyla birlikte odağını sekme sırasında izleyen denetime taşıma için belirttiğiniz karakter tuşlarına basabilirsiniz. Etiketleri odak alamaz olduğundan odağını sekme sırasında bir sonraki denetime otomatik olarak taşır. Metin kutuları, birleşik giriş kutuları, liste kutuları ile veri kılavuzları erişim tuşları atamak için bu tekniği kullanabilirsiniz.  

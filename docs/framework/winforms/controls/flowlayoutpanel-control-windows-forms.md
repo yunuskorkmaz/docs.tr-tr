@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524406"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel Denetimi (Windows Forms)
 `FlowLayoutPanel` Denetimi içeriğini yatay veya dikey akış yönü düzenler. İçeriği, bir sonraki satıra veya sonraki bir sütuna sarmalamak. Alternatif olarak, içeriği yerine kırpılmış gibi sarılır.  

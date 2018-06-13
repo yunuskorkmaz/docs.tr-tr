@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549353"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalarda, olay kaynaklarına bağlı işleyicileri işleyici kaynağına eklenen dinleyici nesne birlikte yok edilmeyecek olduğunu mümkündür. Bu durum bellek sızıntıları yol açabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için ayrılmış yönetici sınıfı sağlayarak ve bu olay için dinleyiciler üzerinde arabirimi uygulama bu sorunu gidermek için kullanılan bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  

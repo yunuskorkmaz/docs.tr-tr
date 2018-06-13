@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549162"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Bağımsız uygulamalar genellikle her ikisi de görüntülediğini ana veri uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunan bir ana penceresi sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubukları ve durum çubukları gibi. Önemsiz olmayan bir uygulama Ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525581"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimindeki Sütun Yeniden Sıralamayı Etkinleştirme
 Windows Forms'ta görüntülenen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetim, kullanıcılar bazen istediğiniz belirli sütunlardaki değerleri karşılaştırmak. Özellikle kullanıcılar geri ve İleri yatay ilginizi tüm sütunları görmek için kaydırırsanız gerekir, bu yaygın denetiminde sütunları ayrılırsa bilinmelidir. Sütunları yeniden sıralamak, kullanıcılarınızın sağlayarak daha kolay sütun değerleri karşılaştırma görevini yapabilirsiniz. Sütun yeniden sıralamayı etkinleştirdiğinizde, kullanıcıların bir sütun fareyle sütun başlığını sürükleyerek yeni bir konuma taşıyabilirsiniz.  

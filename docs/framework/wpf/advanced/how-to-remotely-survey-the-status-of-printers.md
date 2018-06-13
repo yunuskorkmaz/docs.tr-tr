@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545977"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
 Orta ve büyük şirketlerin belirli bir zamanda adresindeki kağıt sıkışması veya kağıt veya bazı sorunlu durumlar dışında olan birden çok yazıcı olabilir. Yazıcı özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] yazıcıların durumlarının hızlı araştırmasını gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  

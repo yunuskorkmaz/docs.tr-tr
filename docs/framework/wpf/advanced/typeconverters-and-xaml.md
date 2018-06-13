@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549688"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, bir genel XAML dil özellik olarak dizesinden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değerleri kullanılabilmesi için sınıf örneklerinin istiyorsanız uygulamak gerekebilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı ya da her ikisini de.  

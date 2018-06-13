@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534053"
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Nasıl yapılır: Windows Forms DataGridView Hücrelerinde Denetimleri Barındırma
 <xref:System.Windows.Forms.DataGridView> Denetimi girin ve çeşitli şekillerde değerlerini düzenlemek, kullanıcılarınızın etkinleştirme birkaç sütun türleri sağlar. Ancak, bu sütun türleri veri girişi gereksinimlerinizi karşılamazsa, seçtiğiniz denetimleri konak hücrelerle kendi sütun türleri oluşturabilirsiniz. Bunu yapmak için öğesinden türetilen sınıflarını tanımlamak <xref:System.Windows.Forms.DataGridViewColumn> ve <xref:System.Windows.Forms.DataGridViewCell>. Türetilen bir sınıfı tanımlamanız gerekir <xref:System.Windows.Forms.Control> ve uygulayan <xref:System.Windows.Forms.IDataGridViewEditingControl> arabirimi.  

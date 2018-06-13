@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550104"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Nasıl yapılır: Uygulama Oturumları Arasında Uygulama Kapsamı Özelliklerini Koruma ve Geri Yükleme
 Bu örnek uygulama kapsamı özelliklerini uygulama kapatıldığında ve geri yüklemek için bir uygulama sonraki olduğunda uygulama kapsamı özelliklerini başlatma nasıl devam etmek nasıl gösterir.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549107"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı İyileştirme: 2B Grafikleri ve Görüntüleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok çeşitli 2B grafik ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konuda bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549389"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak oluşturulabilen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir dosyalar (.exe) kitaplıkları (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları ve derleme işlemindeki anahtar adımları açıklar.  

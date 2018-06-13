@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546897"
 ---
 # <a name="hosting-wpf-applications"></a>WPF Uygulamaları Barındırma
 WPF XAML tarayıcısı uygulamaları (XBAP'ler), bir Web sunucusuna dağıtılır ve tarayıcıda başlatılan zengin istemci uygulamalarıdır. WPF Konağı (PresentationHost.exe), kabuk ve XBAP ve XAML dosyaları için MIME işleyici olarak kaydedilir. Bu nedenle, bir XBAP başlatıldığında WPF konağı başlatmak için Internet Explorer bilir. Firefox kullanıcıları Firefox yanı sıra konak için XBAP etkinleştirmek Firefox eklentiler yükleyebilirsiniz. Bir XBAP diğer tarayıcılar veya tek başına uygulamaları barındırma API'leri sağlanan yerel tarayıcı WPF tarafından kullanarak barındırılabilir.  

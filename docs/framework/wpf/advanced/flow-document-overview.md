@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549743"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntülemeyi ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanan, yerine akan belgeler dinamik olarak ayarlayın ve çalışma zamanı değişkenleri pencere boyutu, aygıt çözünürlüğü ve isteğe bağlı kullanıcı tercihleri gibi temel içeriklerini yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  

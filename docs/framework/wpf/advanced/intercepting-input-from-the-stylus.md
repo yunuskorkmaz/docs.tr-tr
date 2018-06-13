@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547622"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimarisi üzerinde alt düzey denetim uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranışı uygulamak ve en iyi performans için Kalem aygıtından gelen veri akışı için bir mekanizma sağlar.  

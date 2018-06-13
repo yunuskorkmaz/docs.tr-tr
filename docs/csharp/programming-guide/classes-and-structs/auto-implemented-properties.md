@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313806"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Otomatik Uygulanan Özellikler (C# Programlama Kılavuzu)
 İlave bir mantık özellik gerektiğinde C# 3.0 ve sonraki sürümlerinde, otomatik uygulanan özellikler özellik bildirimi daha kısa hale getirir. Bunlar ayrıca nesneleri oluşturmak istemci kodu sağlar. Aşağıdaki örnekte gösterildiği gibi bir özelliği bildirme, derleyici özelliğin yalnızca erişilebilir bir özel, anonim yedekleme alanını oluşturur `get` ve `set` erişimciler.  

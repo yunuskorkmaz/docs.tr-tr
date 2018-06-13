@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534231"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Windows tabanlı uygulamalarda yazdırma için sayfa ayrıntılarını ayarlamak için kullanılan önceden yapılandırılmış iletişim kutusunu bir bileşendir. Windows tabanlı uygulamanız içinde basit bir çözüm olarak kullanıcılar yerine kendi iletişim kutusu yapılandırma sayfası tercihleri ayarlamak için kullanın. Kenarlık ve kenar boşluğu ayarlamalar, üstbilgiler ve altbilgiler ve dikey veya yatay yönlendirme ayarlamak kullanıcıların sağlayabilirsiniz. Standart Windows iletişim kutularında bağlı olarak, temel işlevleri kullanıcılara hemen alışkın olduğu uygulamalar oluşturun.  

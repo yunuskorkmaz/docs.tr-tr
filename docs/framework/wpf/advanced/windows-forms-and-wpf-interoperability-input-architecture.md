@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549065"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] her iki teknolojinin uygun klavye giriş işlemesine sahip olmasını gerektirir. Bu konu, klavye ve ileti karma uygulamalarında sorunsuz birlikte çalışabilirliği sağlamak için işleme bu teknolojilerin nasıl uygulamak açıklar.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550117"
 ---
 # <a name="navigation-how-to-topics"></a>Gezinti ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gezinti.  

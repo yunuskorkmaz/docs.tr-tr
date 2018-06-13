@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550783"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF Uygulamalarında Pencereler
 Kullanıcıların uygulamaları windows ile etkileşimde. Ana bilgisayar ve içeriği görüntülemek için bir pencere temel amacı budur. Pencerenin barındırdığı bağlı olduğunu veri türüne bir uygulama üzerinden, aşağıdakileri içeren medya, Genişletilebilir uygulama biçimlendirme dili (XAML) sayfaları, Web sayfaları, belgeler, veritabanı tabloları ve kaydeder ve sistem bilgilerini çalıştığını içerik türü.  

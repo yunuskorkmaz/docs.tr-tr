@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533562"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama
 Aşağıdaki kod örneğinde nasıl yapılandırılacağını göstermektedir bir <xref:System.Windows.Forms.DataGridView> denetim böylece herhangi bir yeri satır içinde otomatik olarak tıklatmak tüm satırı seçer ve bu nedenle, aynı anda yalnızca bir satır seçilebilir.  

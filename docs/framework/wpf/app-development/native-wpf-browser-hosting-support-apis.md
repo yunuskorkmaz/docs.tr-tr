@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550026"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Destek API'leri Barındıran Yerel WPF Tarayıcısı
 Barındırma [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] uygulamalarının Web tarayıcılarında barındırılması WPF konağı dışında kayıtlı bir etkin belge sunucusu (DocObject olarak da bilinir). [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] etkinleştirebilir doğrudan ve etkin bir belge ile tümleştirin. XBAP'ler ve gevşek XAML belgelerini Mozilla tarayıcılarda barındırmak için [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] benzer bir barındırma ortamı sağlayan NPAPI eklentisi sağlar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] etkin belgeyi sunucusu olarak [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] yapar. Ancak, diğer tarayıcılarda XBAP'ler ve XAML barındırmak için pratik en kolay yolu belgeler ve tek başına uygulamaları Internet Explorer Web tarayıcısı denetimi. Web tarayıcısı denetimi karmaşık etkin belge sunucu barındırma ortamı sağlar, ancak özelleştirmek ve bu ortamda genişletmek ve doğrudan geçerli etkin belge nesnesi ile iletişim kurmak kendi ana bilgisayarı sağlar.  

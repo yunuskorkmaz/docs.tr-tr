@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527229"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Windows Forms'ta Kullanıcı Yardımını Tümleştirme
 Windows tabanlı uygulamalar oluşturmanın gerekli, ancak genellikle gözden kaçan önemli, bir boyut Yardım sistemi aynıdır burada zamanlarında Karışıklığı önlemek için Yardım için kullanıcıların kapatma budur. Windows Forms iki farklı türde Yardım desteği, her tarafından sağlanan [HelpProvider bileşeni](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). İlk kullanıcı bir HTML veya HTML Yardım 1 Yardım dosyasına işaret eden içerir. *x* veya büyük biçimi. İkinci kısa "Bu nedir" görüntüleyebilirsiniz-üzerindeki ayrı ayrı denetimler; Yardım yazın Bu iletişim kutularında özellikle yararlıdır. Her iki tür Yardım aynı formda kullanılabilir.  

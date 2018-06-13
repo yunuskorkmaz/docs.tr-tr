@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531199"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Görüntü Görüntüleme
 Resim veya grafik veri satırında görüntüleyebilirsiniz değerlerinden biri. Genellikle, bu grafik bir çalışanın fotoğraf veya bir şirket logosu şeklinde.  

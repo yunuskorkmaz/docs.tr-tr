@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549441"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF ve Direct3D9 Birlikte Çalışması
 Bir Windows Presentation Foundation (WPF) uygulamasında Direct3D9 içeriği içerebilir. Bu konu, böylece verimli bir şekilde WPF ile birlikte çalışır Direct3D9 içeriği oluşturmayı açıklar.  
