@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519007"
 ---
 # <a name="wait-for-input-activity"></a>Giriş etkinliği bekle
 Bu örnek bir iş akışında adlandırılmış yer işaretleri oluşturulacağını gösterir. Windows Workflow Foundation (WF) bildirim temelli yer işareti oluşturmak için bir etkinlik sağlamaz. Bu nedenle, iş akışında yer işareti oluşturmak istediğinizde, oluşturduğu özel bir aktivite yazmanız gerekir. `WaitForInput` Bu örnekte tanımlanan faaliyet, kullanıcılar bir iş akışındaki bildirimli olarak yer işaretleri oluşturabilmesi için bu işlevselliği sağlar.  

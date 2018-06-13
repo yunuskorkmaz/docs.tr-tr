@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529875"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Tasarım Zamanında Windows Forms Denetimleri Geliştirme
 Denetim yazarları için .NET Framework bol miktarda denetim teknolojisi yazma sağlar. Yazarlar, artık önceden var olan denetimleri bir koleksiyon olarak davranacak bileşik denetimler tasarlamaya sınırlıdır. Devralma yoluyla önceden var olan bileşik denetimler veya önceden var olan Windows Forms denetimleri kendi denetimleri oluşturabilirsiniz. Özel boyama uygulamak kendi denetimleri de tasarlayabilirsiniz. Bu seçenekler, büyük bir bölümünü tasarımı için esneklik ve görsel bir arabirim işlevselliğini sağlar. Bu özelliklerden yararlanmak için nesne tabanlı programlama kavramları hakkında bilgi sahibi olmanız gerekir.  

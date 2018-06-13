@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513968"
 ---
 # <a name="how-to-log-information-about-services"></a>Nasıl Yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
 Varsayılan olarak, tüm Windows hizmeti projelerinin uygulama olay günlüğü ile etkileşim ve bilgi ve özel durumları yazma özelliği vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliği, bu işlev, uygulamanızda isteyip istemediğinizi belirtin. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir form, kullanabileceğiniz <xref:System.Diagnostics.EventLog> sınıfının bir örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazma bir <xref:System.Diagnostics.EventLog> bileşeni veya el ile bir kaynak kaydı.  

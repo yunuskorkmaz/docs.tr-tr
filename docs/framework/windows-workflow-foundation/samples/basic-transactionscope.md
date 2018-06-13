@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516808"
 ---
 # <a name="basic-transactionscope"></a>Temel TransactionScope
 Bu örnek dört senaryo oluşur çalıştırılan iç içe nasıl gösteren <xref:System.Activities.Statements.TransactionScope> örnekleri. İlk senaryoda Yazar yapım olanağıyla olan 3 bir taraf etkinlik iç içe geçme gösterir. Ne zaman aşımlarını dikkate ikinci ve üçüncü senaryolarını göstermek ve son senaryo gösterilmektedir <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> ayarı.  

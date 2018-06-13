@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517176"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms için Uygulama Ayarları
 Windows Forms uygulamaları ayarlarını özelliğidir oluşturmak, depolamak ve özel uygulama ve istemci üzerindeki kullanıcı tercihlerini korumak daha kolay hale getirir. Uygulama ayarları, yalnızca veritabanı bağlantı dizelerini gibi uygulama verilerini, aynı zamanda araç çubuğu konumları gibi kullanıcıya özgü verileri depolamak ve en son listeleri kullanılır.  

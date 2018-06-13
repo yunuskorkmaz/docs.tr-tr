@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517718"
 ---
 # <a name="xaml-activation"></a>XAML etkinleştirme
 Bu örnek, IIS'de bildirim temelli bir iş akışı barındırma gösterilmiştir. Örnek olarak adlandırılan bir temel iş akışıdır `EchoService` bir işleme sahip.  

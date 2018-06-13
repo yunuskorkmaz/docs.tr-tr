@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358186"
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik tabanlı eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL Server veritabanı için eşleşen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak. Bu konu, öznitelik tabanlı yaklaşım özetler.  

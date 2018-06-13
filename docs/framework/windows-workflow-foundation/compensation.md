@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519944"
 ---
 # <a name="compensation"></a>Maaş
 Windows Workflow Foundation (WF) Maaş, daha önce tamamlanmış iş bulunabilir geri alınamaz veya (aşağıdaki uygulama tarafından tanımlanan mantık) dengelendi mekanizması olduğunu izleyen bir hata oluştuğunda. Bu bölümde, iş akışlarında maaş kullanmayı açıklar.  

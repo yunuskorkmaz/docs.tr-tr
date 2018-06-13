@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514353"
 ---
 # <a name="migration-activity-in-wf"></a>WF etkinliğinde geçiş
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] sağlar <xref:System.Activities.Statements.Interop> temel alan bir iş akışındaki etkinlikten türetilen etkinlikleri yürütmek etkinlik <xref:System.Activities.Activity>. Daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) bölümü.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516769"
 ---
 # <a name="windows-workflow-overview"></a>Windows iş akışı genel bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek işlem açıklayan model olarak depolanır. İş akışı yürütme ve kısa veya uzun süre çalışan iş parçalarını bağımlı ilişkiler sırasını açıklayan bir yol sağlar. Bu iş modeli aracılığıyla baştan geçirir ve etkinlikleri, kişiler veya sistem işlevleri tarafından yürütülen.  

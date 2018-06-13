@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521595"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama
 Genellikle, sözcük işlemciler ve yazdırma ile ilgili diğer uygulamaları bir ileti bir yazdırma işi tamamlandıktan kullanıcılara görüntülenecek seçeneğini sağlar. Windows Forms'ta işleyerek bu işlevselliği sağlayabilen <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.  

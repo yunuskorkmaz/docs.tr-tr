@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397747"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamaları başlatma süresini önemli ölçüde iyileştirir. Bu geliştirme, taşınabilir, düşük güç cihazlarda ve karmaşık uygulamaları ile özellikle fark edilebilir. Bu konuda bu başlangıç geliştirme ölçmek için gereken temel izleme ile çalışmaya başlamanıza yardımcı olur.  

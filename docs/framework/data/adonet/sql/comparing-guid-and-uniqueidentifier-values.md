@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357783"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Karşılaştırma GUID ve uniqueidentifier değerleri
 SQL Server'ın genel benzersiz tanıtıcısı (GUID) veri türü tarafından temsil edilen `uniqueidentifier` 16 bayt ikili değer depolayan veri türü. İkili bir sayı GUID'dir ve kendi ana birçok sitelerde çok sayıda bilgisayar olan bir ağda benzersiz bir tanımlayıcı olarak kullanılır. GUID'ler Transact-SQL NEWID işlevini çağırarak oluşturulabilir ve dünyanın her yerinde benzersiz olması garanti edilmez. Daha fazla bilgi için "Kullanma uniqueidentifier veri" SQL Server Books Online'a bakın.  

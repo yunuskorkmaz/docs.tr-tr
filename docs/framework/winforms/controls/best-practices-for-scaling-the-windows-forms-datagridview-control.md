@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529814"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler
 <xref:System.Windows.Forms.DataGridView> Denetimi en fazla ölçeklenebilirlik sağlamak için tasarlanmıştır. Büyük miktarda veri görüntülemek gerekiyorsa, büyük miktarlarda bellek tüketerek veya kullanıcı arabirimi (UI) yanıtlama düşürmesini önlemek için bu konuda açıklanan yönergeleri izlemelisiniz. Bu konuda aşağıdaki konular açıklanmaktadır:  

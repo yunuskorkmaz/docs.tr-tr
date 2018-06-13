@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512047"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Windows Workflow Foundation veri modeli
 Windows Workflow Foundation veri modeli üç kavramlarını oluşur: değişkenleri, bağımsız değişkenleri ve ifadeler. Veri depolama değişkenleri temsil eder ve bağımsız değişkenleri içine ve dışına aktivite veri akışını temsil eder. Bağımsız değişkenler (bir değer atanır) bağlı değişkenleri başvurabilir ifadeler kullanarak.  

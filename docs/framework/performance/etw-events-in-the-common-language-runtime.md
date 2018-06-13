@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398059"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında ETW Olayları
 Ortak dil çalışma zamanı (CLR) Windows (ETW) tanı bilgilerini hata ayıklama ve profil oluşturma olayları büyük değişik için yararlı olay izleme sağlar. CLR ETW olayları Windows ETW izleme sistemi varolan profil oluşturma ve hata ayıklama ortak dil çalışma zamanı tarafından sağlanan desteği büyütmek üzere yararlanın.  

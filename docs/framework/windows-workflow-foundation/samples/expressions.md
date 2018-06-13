@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515974"
 ---
 # <a name="expressions"></a>İfadeler
 Bu örnek temel ifadeleri bir iş akışında kullanmayı gösterir. İki kurgusal bir şirkette çalışanlar için temel maaş istatistikleri hesaplar bir iş akışı oluşur. İki sınıf `Employee` ve `SalaryStats`, Employee.cs ve SalaryStats.cs tanımlanır. Bu sınıfların basit aritmetik ve dize değişkenleri özelliklerini, karmaşık türler işlemleri gösteren bir iş akışında kullanılır.  

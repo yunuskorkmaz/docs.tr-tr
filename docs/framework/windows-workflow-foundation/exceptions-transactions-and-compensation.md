@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512216"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Özel durumlar, işlemleri ve Dengeleme
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] iş akışlarında çalışma zamanı hata koşullarını işleme için birkaç farklı mekanizmaları sağlar. İş akışlarını işlemek ve düzgün bir şekilde hata koşulları kurtarmak için özel durum işleyicileri, işlemleri, iptal etme ve maaş bileşimini kullanabilirsiniz.  

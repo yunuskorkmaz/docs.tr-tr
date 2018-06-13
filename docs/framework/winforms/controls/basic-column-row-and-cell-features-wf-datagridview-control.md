@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525500"
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Temel Sütun, Satır ve Hücre Özellikleri
 Birçok temel davranışlarını `DataGridView` hücrelerini, satırları ve sütunları tek özelliklerini ayarlayarak değiştirilebilir. Bu bölümdeki konular, en yaygın olarak kullanılan bu özelliklerin bazıları açıklanmaktadır.  

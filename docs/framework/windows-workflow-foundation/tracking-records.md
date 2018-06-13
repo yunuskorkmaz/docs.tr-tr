@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520285"
 ---
 # <a name="tracking-records"></a>İzleme kayıtları
 İş akışı çalışma zamanı, bir iş akışı örneğini yürütmeyi izlemek için izleme kayıtları yaymak üzere işaretlenir.  

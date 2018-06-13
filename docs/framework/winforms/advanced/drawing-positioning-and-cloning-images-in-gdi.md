@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521657"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>GDI+'da Görüntü Çizme, Konumlandırma ve Kopyalama
 Kullanabileceğiniz <xref:System.Drawing.Bitmap> sınıfı yüklemek ve ızgara görüntüleri ve görüntülemek için kullanabileceğiniz <xref:System.Drawing.Imaging.Metafile> yüklemek ve vektör görüntüleri göstermek için sınıf. <xref:System.Drawing.Bitmap> Ve <xref:System.Drawing.Imaging.Metafile> sınıfları <xref:System.Drawing.Image> sınıfı. Vektör resim görüntülemek için örneği gerekir <xref:System.Drawing.Graphics> sınıfı ve bir <xref:System.Drawing.Imaging.Metafile>. Izgara resim görüntülemek için örneği gerekir <xref:System.Drawing.Graphics> sınıfı ve bir <xref:System.Drawing.Bitmap>. Örneğinin <xref:System.Drawing.Graphics> SAX <xref:System.Drawing.Graphics.DrawImage%2A> alır yöntemi <xref:System.Drawing.Imaging.Metafile> veya <xref:System.Drawing.Bitmap> bağımsız değişken olarak.  

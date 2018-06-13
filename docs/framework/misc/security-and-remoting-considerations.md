@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398176"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 Remoting uygulama etki alanları, işlemler veya bilgisayarlar arasında çağırma saydam ayarlamanıza olanak sağlar. Bununla birlikte, kod erişim güvenliği yığın İlerlemesi (aynı işlem uygulama etki alanları arasında geçerli) işlem veya makine sınırları çapraz olamaz.  

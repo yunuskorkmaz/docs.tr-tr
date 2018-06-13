@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358413"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Sahipliği ve SQL Server'daki kullanıcı şema ayırma
 SQL Server güvenlik çekirdek kavramı nesne sahipleri değiştirilemeyen bunları yönetme izni olmasıdır. Bir nesne sahibinden ayrıcalıkları kaldırılamıyor ve içindeki nesneleri sahipseniz kullanıcıların veritabanından bırakılamıyor.  

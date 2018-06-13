@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520646"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma
 Bu örnek oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var olan bir Windows Forms'ta görüntüler <xref:System.Windows.Forms.PictureBox> denetim.  

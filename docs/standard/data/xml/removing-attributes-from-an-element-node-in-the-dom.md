@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570577"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM öğesi düğümünde öznitelikleri kaldırılıyor
 Öznitelikleri kaldırmak için birçok yolu vardır. Bir öznitelik Koleksiyondan kaldırılacak tekniktir. Bunu yapmak için aşağıdaki adımlar gerçekleştirilir:  

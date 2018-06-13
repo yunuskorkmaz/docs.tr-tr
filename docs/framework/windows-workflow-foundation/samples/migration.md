@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513982"
 ---
 # <a name="migration"></a>Geçiş
 Bu bölümde kullanılarak yazılmış Windows Workflow Foundation (WF) içerik geçirmek nasıl gösteren örnekleri içeren [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] için [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520220"
 ---
 # <a name="tracking-events-reference"></a>İzleme olayları başvurusu
 İş akışında bir yürütme sırasında [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ömrü çeşitli aşamaları hareket ederken olayları izleme başlatır. Konak, bu olaylara abone olma ve yaşam süresi boyunca iş akışı ilerleme durumunu güncelleştirilmiş tutun. Başlatılan izleme olayları, bu bölümde ele alınmıştır.  

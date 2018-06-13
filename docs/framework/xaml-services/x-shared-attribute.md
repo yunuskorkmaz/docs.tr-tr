@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563803"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece istekleri öznitelikli kaynak için tüm istekler için aynı örneği paylaşmak yerine her istek için yeni bir örnek oluşturmak WPF kaynak alma davranışını değiştirir.  

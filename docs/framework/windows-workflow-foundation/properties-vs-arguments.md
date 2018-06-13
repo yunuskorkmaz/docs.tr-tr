@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514774"
 ---
 # <a name="properties-vs-arguments"></a>Özellikler vs. Arguments
 Etkinliğin içinde veri geçirmek için kullanılabilir birkaç seçeneğiniz vardır. Kullanmanın yanı sıra <xref:System.Activities.InArgument>, etkinlikleri de geliştirilebilir standart CLR özellikleri ya da ortak kullanarak verileri alan <xref:System.Activities.ActivityAction> özellikleri. Bu konuda uygun yöntemi türü seçme anlatılmaktadır.  

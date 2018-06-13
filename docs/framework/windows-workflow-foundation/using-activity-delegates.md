@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518958"
 ---
 # <a name="using-activity-delegates"></a>Etkinlik temsilcileri kullanma
 Etkinlik temsilciler etkinlik yazarların kullanıcılar etkinliğin etkinlik tabanlı işleyicileri sağlayabilir belirli imzaları ile geri çağırmalar etkinleştirin. İki tür etkinlik temsilciler kullanılabilir: <xref:System.Activities.ActivityAction%601> bir dönüş değeri olmayan etkinlik temsilciler tanımlamak için kullanılır ve <xref:System.Activities.ActivityFunc%601> bir dönüş değerine sahip etkinlik temsilciler tanımlamak için kullanılır.  
