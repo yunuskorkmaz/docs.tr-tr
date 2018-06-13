@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149081"
 ---
 # <a name="discriminated-unions"></a><span data-ttu-id="80f7e-103">Ayrılmış Birleşimler</span><span class="sxs-lookup"><span data-stu-id="80f7e-103">Discriminated Unions</span></span>
 
