@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502650"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Yeniden Girme
 Bu örnek, elde etmenizi ve bir hizmet uygulaması ConcurrencyMode.Reentrant kullanmanın etkileri gösterir. ConcurrencyMode.Reentrant gelir hizmetinin (veya geri çağırma) tek bir ileti belirli bir zamanda işleyen (benzer `ConcurencyMode.Single`). İş parçacığı güvenliği sağlamak için Windows Communication Foundation (WCF) kilitler `InstanceContext` böylece başka iletiler işlenebilen bir ileti işleme. Desteklemeyeceğini modu durumunda `InstanceContext` yalnızca hizmet (aşağıdaki örnekte gösterildiği gibi desteklemeyeceğini olabilir) sonraki çağrısını, böylece izin giden bir çağrı yapar önce kilidinin açık olduğundan bu geldiğinde hizmete sonraki zamanı kilidi elde etmek. Davranış göstermek için bir istemci ve hizmet iletileri birbirine çift yönlü sözleşme kullanma arasında nasıl gönderebilirsiniz örnek göstermektedir.  

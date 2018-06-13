@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537609"
 ---
 # <a name="windows-forms-controls"></a>Windows Forms Denetimleri
 Tasarım ve kullanıcı arabirimi, Windows Forms uygulamalarının değiştirme gibi eklemek, hizalayın ve denetimleri konumlandırmak gerekir. Denetimleri form nesnelerinde bulunan nesneleridir. Her tür denetimi özellikleri, yöntemleri ve belirli bir amaç için uygun hale olayları kendi kümesi vardır. Tasarımcı denetimlerinde işlemek ve denetimleri çalışma zamanında dinamik olarak eklemek için kod yazma.  

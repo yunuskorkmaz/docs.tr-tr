@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497535"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF'de Güvenlik Değerlendirmeleri
 Bu bölümdeki konular, bir Windows Communication Foundation (WCF) uygulama tasarlarken dikkate alınması gereken çeşitli güvenlikle ilgili öğeleri listeler.  

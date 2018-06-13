@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502953"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 Bu örnek güvenilir oturumlar ile taşıma güvenliği SSL kullanımını göstermektedir. Güvenilir oturumlar WS güvenilir Mesajlaşma Protokolü uygular. WS güvenliği güvenilir oturumlar oluşturma tarafından güvenli bir güvenilir oturum olabilir. Ancak bazı durumlarda, HTTP taşıma güvenliği SSL ile kullanmayı tercih edebilirsiniz.  

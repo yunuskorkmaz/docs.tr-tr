@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547491"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da varolan bağlam menüsü önceliğini görüntülemek veya ayarlayarak görüntülenen menüsünü bastırmak için ayarlamak için bir uygulamada işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğine `true` olay verisi içinde. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay verileri menü tamamen yeni bir ile değiştirmektir <xref:System.Windows.Controls.ContextMenu> nesnesi, bazen işlemi iptal ediliyor ve yeni bir açık başlatma gerektirir. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olayı olmanız gerekir arasında zamanlama sorunların farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve denetimlerin bağlam menülerini genel konumlandırma sorumlu hizmet. Bu konu, çeşitli bağlam menüsü açma senaryolarının kod tekniklerini bazıları gösterir ve zamanlama sorunu oyuna nereden geldiğini durumunu gösterir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332565"
 ---
 # <a name="sorting-data-c"></a>Veri sıralama (C#)
 Sıralama işlemi bir veya daha fazla özniteliklerini temel alarak bir sıradaki sıralar. İlk sıralama ölçütü birincil sıralama öğeleri gerçekleştirir. İkinci bir sıralama ölçütü belirterek, her birincil sıralama grup içindeki öğeleri sıralama yapabilirsiniz.  

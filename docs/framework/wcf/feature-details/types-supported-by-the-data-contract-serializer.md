@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504896"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler
 Windows Communication Foundation (WCF) kullanan <xref:System.Runtime.Serialization.DataContractSerializer> veri XML'e dönüştürecek ve XML verilerine geri dönüştürmek için kendi varsayılan seri hale getirme altyapısı olarak. <xref:System.Runtime.Serialization.DataContractSerializer> Serileştirmek için tasarlanmış *veri sözleşmesi* türleri. Ancak, bir örtük veri sözleşmesi sahip olarak düşünülebilir birçok diğer türleri, destekler. Seri hale getirilebilir türlerinin tam bir listesi verilmiştir:  
