@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647407"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>XML ad alanları (Visual Basic) ile çalışma
 Bu bölümdeki konularda açıklanmaktadır nasıl [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanları destekler.  
