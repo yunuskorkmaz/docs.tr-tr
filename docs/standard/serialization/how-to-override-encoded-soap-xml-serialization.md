@@ -1,54 +1,42 @@
 ---
-title: "Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma"
-ms.custom: 
+title: 'Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 759da973662e407313dbfd1d1d8ffb18881d154c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ce2259c482c0e8441b35b41e2303fba5d547416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585846"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="122fd-102">Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="122fd-102">How to: Override Encoded SOAP XML Serialization</span></span>
-[<span data-ttu-id="122fd-103">Kod örneği</span><span class="sxs-lookup"><span data-stu-id="122fd-103">Code Example</span></span>](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="236b3-102">Nasıl yapılır: Kodlanmış SOAP XML serileştirmesi için geçersiz kılma</span><span class="sxs-lookup"><span data-stu-id="236b3-102">How to: Override Encoded SOAP XML Serialization</span></span>
+[<span data-ttu-id="236b3-103">Kod örneği</span><span class="sxs-lookup"><span data-stu-id="236b3-103">Code Example</span></span>](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
   
- <span data-ttu-id="122fd-104">Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer.</span><span class="sxs-lookup"><span data-stu-id="122fd-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="122fd-105">Standart XML serileştirmesi için geçersiz kılma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir diğer öğe adı için bir XML akışı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span><span class="sxs-lookup"><span data-stu-id="122fd-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>  
+ <span data-ttu-id="236b3-104">Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer.</span><span class="sxs-lookup"><span data-stu-id="236b3-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="236b3-105">Standart XML serileştirmesi için geçersiz kılma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir diğer öğe adı için bir XML akışı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span><span class="sxs-lookup"><span data-stu-id="236b3-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="122fd-106">Nesneleri serileştirmek SOAP iletilerini olarak geçersiz kılmak için</span><span class="sxs-lookup"><span data-stu-id="122fd-106">To override serialization of objects as SOAP messages</span></span>  
+### <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="236b3-106">Nesneleri serileştirmek SOAP iletilerini olarak geçersiz kılmak için</span><span class="sxs-lookup"><span data-stu-id="236b3-106">To override serialization of objects as SOAP messages</span></span>  
   
-1.  <span data-ttu-id="122fd-107">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.SoapAttributeOverrides> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="122fd-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>  
+1.  <span data-ttu-id="236b3-107">Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.SoapAttributeOverrides> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="236b3-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>  
   
-2.  <span data-ttu-id="122fd-108">Oluşturma bir `SoapAttributes` serileştirilmekte olan her sınıf üyesi için.</span><span class="sxs-lookup"><span data-stu-id="122fd-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>  
+2.  <span data-ttu-id="236b3-108">Oluşturma bir `SoapAttributes` serileştirilmekte olan her sınıf üyesi için.</span><span class="sxs-lookup"><span data-stu-id="236b3-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>  
   
-3.  <span data-ttu-id="122fd-109">Bir veya daha fazla gerektiği serileştirilen üyesine XML serileştirme etkileyecek özniteliklerin örneği oluşturun.</span><span class="sxs-lookup"><span data-stu-id="122fd-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="122fd-110">Daha fazla bilgi için "Öznitelikleri, Denetim kodlanmış SOAP seri hale getirme" konusuna bakın.</span><span class="sxs-lookup"><span data-stu-id="122fd-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>  
+3.  <span data-ttu-id="236b3-109">Bir veya daha fazla gerektiği serileştirilen üyesine XML serileştirme etkileyecek özniteliklerin örneği oluşturun.</span><span class="sxs-lookup"><span data-stu-id="236b3-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="236b3-110">Daha fazla bilgi için "Öznitelikleri, Denetim kodlanmış SOAP seri hale getirme" konusuna bakın.</span><span class="sxs-lookup"><span data-stu-id="236b3-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>  
   
-4.  <span data-ttu-id="122fd-111">Uygun özelliği ayarlanmış `SoapAttributes` 3. adımda oluşturduğunuz özniteliği.</span><span class="sxs-lookup"><span data-stu-id="122fd-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>  
+4.  <span data-ttu-id="236b3-111">Uygun özelliği ayarlanmış `SoapAttributes` 3. adımda oluşturduğunuz özniteliği.</span><span class="sxs-lookup"><span data-stu-id="236b3-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>  
   
-5.  <span data-ttu-id="122fd-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="122fd-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>  
+5.  <span data-ttu-id="236b3-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="236b3-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>  
   
-6.  <span data-ttu-id="122fd-113">Oluşturma bir `XmlTypeMapping` kullanarak `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="122fd-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="122fd-114">Kullanım `SoapReflectionImporter.ImportTypeMapping` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="122fd-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>  
+6.  <span data-ttu-id="236b3-113">Oluşturma bir `XmlTypeMapping` kullanarak `SoapAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="236b3-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="236b3-114">Kullanım `SoapReflectionImporter.ImportTypeMapping` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="236b3-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>  
   
-7.  <span data-ttu-id="122fd-115">Oluşturma bir `XmlSerializer` kullanarak `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="122fd-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>  
+7.  <span data-ttu-id="236b3-115">Oluşturma bir `XmlSerializer` kullanarak `XmlTypeMapping`.</span><span class="sxs-lookup"><span data-stu-id="236b3-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>  
   
-8.  <span data-ttu-id="122fd-116">Serileştirmek veya seri durumdan nesne.</span><span class="sxs-lookup"><span data-stu-id="122fd-116">Serialize or deserialize the object.</span></span>  
+8.  <span data-ttu-id="236b3-116">Serileştirmek veya seri durumdan nesne.</span><span class="sxs-lookup"><span data-stu-id="236b3-116">Serialize or deserialize the object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="122fd-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="122fd-117">Example</span></span>  
- <span data-ttu-id="122fd-118">Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,.</span><span class="sxs-lookup"><span data-stu-id="122fd-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="122fd-119">Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip.</span><span class="sxs-lookup"><span data-stu-id="122fd-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="122fd-120">Gibi çeşitli öznitelikleri `SoapElementAttribute`, sınıf üyelerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="122fd-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="122fd-121">Ne zaman sınıfı seri hale getirilmiş ile `SerializeOriginal` yöntemi, SOAP iletisi içeriği öznitelikleri denetim.</span><span class="sxs-lookup"><span data-stu-id="122fd-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="122fd-122">Zaman `SerializeOverride` yöntemi çağrıldığında, davranışını `XmlSerializer` çeşitli öznitelikler oluşturma ve özelliklerini ayarlayarak geçersiz bir `SoapAttributes` bu özniteliklerle (hangisi uygunsa).</span><span class="sxs-lookup"><span data-stu-id="122fd-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>  
+## <a name="example"></a><span data-ttu-id="236b3-117">Örnek</span><span class="sxs-lookup"><span data-stu-id="236b3-117">Example</span></span>  
+ <span data-ttu-id="236b3-118">Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,.</span><span class="sxs-lookup"><span data-stu-id="236b3-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="236b3-119">Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip.</span><span class="sxs-lookup"><span data-stu-id="236b3-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="236b3-120">Gibi çeşitli öznitelikleri `SoapElementAttribute`, sınıf üyelerine uygulanır.</span><span class="sxs-lookup"><span data-stu-id="236b3-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="236b3-121">Ne zaman sınıfı seri hale getirilmiş ile `SerializeOriginal` yöntemi, SOAP iletisi içeriği öznitelikleri denetim.</span><span class="sxs-lookup"><span data-stu-id="236b3-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="236b3-122">Zaman `SerializeOverride` yöntemi çağrıldığında, davranışını `XmlSerializer` çeşitli öznitelikler oluşturma ve özelliklerini ayarlayarak geçersiz bir `SoapAttributes` bu özniteliklerle (hangisi uygunsa).</span><span class="sxs-lookup"><span data-stu-id="236b3-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>  
   
 ```csharp  
 using System;  
@@ -290,10 +278,10 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="122fd-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="122fd-123">See Also</span></span>  
- [<span data-ttu-id="122fd-124">XML ve SOAP Serileştirme</span><span class="sxs-lookup"><span data-stu-id="122fd-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="122fd-125">Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="122fd-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [<span data-ttu-id="122fd-126">XML Web Hizmetleri ile XML Serileştirme</span><span class="sxs-lookup"><span data-stu-id="122fd-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [<span data-ttu-id="122fd-127">Nasıl yapılır: Nesne Serileştirme</span><span class="sxs-lookup"><span data-stu-id="122fd-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="122fd-128">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="122fd-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [<span data-ttu-id="122fd-129">Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme</span><span class="sxs-lookup"><span data-stu-id="122fd-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+## <a name="see-also"></a><span data-ttu-id="236b3-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="236b3-123">See Also</span></span>  
+ [<span data-ttu-id="236b3-124">XML ve SOAP Serileştirme</span><span class="sxs-lookup"><span data-stu-id="236b3-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="236b3-125">Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="236b3-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [<span data-ttu-id="236b3-126">XML Web Hizmetleri ile XML Serileştirme</span><span class="sxs-lookup"><span data-stu-id="236b3-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [<span data-ttu-id="236b3-127">Nasıl yapılır: Nesne Serileştirme</span><span class="sxs-lookup"><span data-stu-id="236b3-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="236b3-128">Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma</span><span class="sxs-lookup"><span data-stu-id="236b3-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [<span data-ttu-id="236b3-129">Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme</span><span class="sxs-lookup"><span data-stu-id="236b3-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
