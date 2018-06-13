@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655727"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic'deki Deyimler
 Visual Basic'de deyimini tam bir yönerge ' dir. Anahtar sözcükler, işleçler, değişkenleri, sabitleri ve ifadeleri içerebilir. Her deyimi aşağıdaki kategorilerde birine ait:  

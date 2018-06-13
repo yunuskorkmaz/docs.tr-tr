@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635051"
 ---
 # <a name="method-or-data-member-not-found"></a>Yöntem veya veri üyesi bulunamadı
 Erişmeye çalıştığınız yöntem veya veri üyesi bulunamadı.  

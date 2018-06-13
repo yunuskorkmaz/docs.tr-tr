@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635912"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Dosya&#39;s Aç modu yok&#39;t geçerli bir değere ayarlayın
 Dosya Aç modu için sağlanan değer geçerli değil. Aşağıdaki tablo için geçerli değerleri gösterir <xref:Microsoft.VisualBasic.OpenMode> numaralandırması.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635690"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>Kitaplık ya da uzak işlem kitaplığının nesne türünü bağlantısı kesildi
 Uzak işlemin nesne kitaplığı veya tür kitaplığı bağlantınız kesildi.  

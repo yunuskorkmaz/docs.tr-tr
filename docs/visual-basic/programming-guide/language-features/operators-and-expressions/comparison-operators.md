@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655149"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic'de Karşılaştırma İşleçleri
 Karşılaştırma işleçleri iki ifadeye karşılaştırır ve dönüş bir `Boolean` değerlerine ilişkiyi gösteren bir değer. Sayısal değerler, dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri Karşılaştırma işleçleri vardır. Üç tür işleçleri burada açıklanmıştır.  

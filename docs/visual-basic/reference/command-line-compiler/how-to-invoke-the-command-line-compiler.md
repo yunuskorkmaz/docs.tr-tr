@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656229"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
 Komut satırına olarak da bilinen MS-DOS İstemi yürütülebilir dosyanın adını yazarak komut satırı derleyicisini çağırma. Varsayılan Windows komut istemi derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio komut istemi kullanabilir veya PATH ortam değişkeni değiştirin. Her ikisi de, herhangi bir dizinden derleyici adını yazarak derlemek izin verir.  

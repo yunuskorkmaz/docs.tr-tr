@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656262"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonim Türleri (Visual Basic)
 Visual Basic veri türü için bir sınıf tanımı yazmadan nesneleri oluşturmanıza olanak sağlaması anonim türler destekler. Bunun yerine, derleyici bir sınıf sizin için oluşturur. Sınıf kullanılabilir bir ada sahip değil, doğrudan öğesinden devralınan <xref:System.Object>ve nesne bildirme belirttiğiniz özellikler içerir. Veri türünün adı belirtilmediğinden, bu olarak adlandırılır bir *anonim tür*.  

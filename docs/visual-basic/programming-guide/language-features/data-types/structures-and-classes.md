@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654128"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
 Visual Basic yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucunda sözdizimi birleştirir. Ancak, ayrıca önemli farklılıklar vardır yapılar ve sınıflar arasında.  

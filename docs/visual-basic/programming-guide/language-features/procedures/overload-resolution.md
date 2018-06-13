@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653435"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 Visual Basic derleyici birden fazla aşırı yüklenmiş sürümlerde tanımlı bir yordam çağrısına karşılaştığında derleyici çağırmak için aşırı hangisinin karar vermeniz gerekir. Bunu aşağıdaki adımları gerçekleştirerek yapar:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651576"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma
 Dizi değişmez değer de dahil olmak üzere bir dizi değişkeni başlatma bir `New` yan tümcesi ve dizinin ilk değerleri belirtme. Türünü belirtin veya değişmez değer dizideki olayla izin verin. Ne tür çıkarımı yapılan hakkında daha fazla bilgi için "Doldurma bir dizi ile ilk değerleri" bölümüne bakın. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

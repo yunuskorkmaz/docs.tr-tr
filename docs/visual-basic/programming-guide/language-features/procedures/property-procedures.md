@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656093"
 ---
 # <a name="property-procedures-visual-basic"></a>Özellik Yordamları (Visual Basic)
 Bir özellik yordamı bir özel özellik modülü, sınıf veya yapı işlemek Visual Basic deyimleri dizisidir. Özellik yordamları olan olarak da bilinen *özellik erişimcisi*.  

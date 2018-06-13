@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803698"
 ---
 # <a name="basic-programming-lifecycle"></a>Temel Programlama Yaşam Döngüsü
 Windows Communication Foundation (WCF) uygulamaların aynı bilgisayarda Internet üzerinden veya farklı bir uygulama platformlarda olup olmadıklarını iletişim kurmasına olanak sağlar. Bu konuda bir WCF uygulaması oluşturmak için gerekli görevleri açıklanmaktadır. Çalışan bir örnek uygulama için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md).  

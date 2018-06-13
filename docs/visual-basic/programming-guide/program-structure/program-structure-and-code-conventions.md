@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654948"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Program Yapısı ve Kod Kuralları (Visual Basic)
 Bu bölümde, tipik Visual Basic program yapısı sunar, basit bir Visual Basic program, "Hello, World" sağlar ve Visual Basic kod kuralları açıklanır. Kod kuralları bir programın mantığı değil, ancak kendi fiziksel yapısı ve görünümünü odaklanan önerilerdir. Bunları aşağıdaki kodunuzu okuyun, anlamak ve bakımını kolaylaştırır. Kod kuralları, diğerleri içerebilir:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656301"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 *Kapsam* bildirilen öğesinin adını niteleme veya yoluyla kullanılabilir hale getirme olmadan başvurduğu tüm kod kümesidir bir [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Bir öğe kapsamı aşağıdaki düzeyden birine sahip olabilir:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656158"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
 Mantıksal işleçler karşılaştırmak `Boolean` ifadeleri ve return bir `Boolean` sonucu. `And`, `Or`, `AndAlso`, `OrElse`, Ve `Xor` işleçler *ikili* iki işlenen alır çünkü while `Not` işlecidir *birli* tek bir işlenen aldığından. Bu işleçlere bazıları tam sayı değerleri üzerinde bit tabanlı mantıksal işlemlerini de gerçekleştirebilirsiniz.  

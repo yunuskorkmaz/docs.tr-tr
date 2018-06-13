@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635846"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>İç hata nedeniyle bellek bilgileri elde edilemedi
 Bellek bilgileri özelliklerinden birini çağrısına `My.Computer.Info` nesnesi oluşturulamadı.  

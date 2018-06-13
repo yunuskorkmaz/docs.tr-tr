@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654209"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Sayısal Veri Türleri (Visual Basic)
 Visual Basic sağlayan birkaç *sayısal veri türleri* çeşitli sunularını numaraları işlemek için. *Tam sayı* türleri yalnızca tam (pozitif, negatif ve sıfır) sayılar, temsil eder ve *nonintegral* türleri tamsayı ve kesirli bölümleri ile numaralarını temsil eder.  

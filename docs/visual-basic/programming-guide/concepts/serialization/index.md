@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653276"
 ---
 # <a name="serialization-visual-basic"></a>Seri hale getirme (Visual Basic)
 Seri hale getirme bir nesne, nesne depolamak veya bellek, bir veritabanı veya dosya aktarmak için baytı bir akışa dönüştürme işlemidir. Asıl amacı, gerektiğinde yeniden oluşturmak için bir nesnenin durumu tasarruf etmektir. Ters işlemi seri durumdan çıkarma adı verilir.  

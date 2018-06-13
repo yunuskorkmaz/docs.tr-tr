@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651871"
 ---
 # <a name="threading-visual-basic"></a>İş parçacığı oluşturma (Visual Basic)
 İş parçacığı bir defada birden fazla işlem yapabilmesi için eşzamanlı işlem yapmak Visual Basic programınızı sağlar. Örneğin, kullanıcıdan girdi izlemek, arka plan görevleri ve eşzamanlı girdi akışları ile işlemek için iş parçacığı oluşturma kullanabilirsiniz.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656353"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama
 <xref:System.Collections.Generic.IEnumerable%601> Arabirimi değerleri bir öğe dizisi aynı anda geri dönebilirsiniz sınıflar tarafından gerçekleştirilir. Bir seferde bir öğe ile çalışması belleğe eksiksiz veri yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Sınıfları uygulayan `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorgularını.  

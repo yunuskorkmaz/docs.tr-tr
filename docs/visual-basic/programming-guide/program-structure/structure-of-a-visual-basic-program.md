@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654836"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
 Visual Basic programı standart yapı taşları oluşturulmuştur. A *çözüm* bir veya daha fazla projeleri içerir. A *proje* bir veya daha fazla derlemeleri sırayla içerebilir. Her *derleme* bir veya daha fazla kaynak dosyalarından derlenir. A *kaynak dosyası* tanımı ve uygulama sınıflar, yapılar, modüller ve sonuç olarak tüm kodunuzu içeren arabirimleri sağlar.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634904"
 ---
 # <a name="feature-not-yet-implemented"></a>Özellik henüz uygulanmadı
 Visual Basic'te şu anda uygulanmamaktadır bir özelliğe erişmek çalıştınız.  

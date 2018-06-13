@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636721"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Hedef yolu bir veya daha fazla klasörlerde yok
 Bir veya daha fazla hedef yolunda sağlanan dizin yok. Özellikle göreli bir yol sağlayarak, bu yanlış ayrıştırılmış bir yolunun bir sonucu olabilir.  

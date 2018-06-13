@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655804"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
 A *Boole ifadesi* değeri veren ifade [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` veya `False`. `Boolean` ifadeler çeşitli biçimlerde olabilir. Değerini doğrudan karşılaştırması kolayıdır bir `Boolean` için değişken bir `Boolean` değişmez değeri, aşağıdaki örnekte gösterildiği gibi.  

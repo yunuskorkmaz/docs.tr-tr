@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636747"
 ---
 # <a name="object-doesn39t-support-named-arguments"></a>Nesne mevcut değil&#39;bağımsız değişkenleri adlı t desteği
 Adlandırılmış bağımsız değişkenler, yöntemleri desteklemeyen bir nesneye erişilmeye çalışıldı.  

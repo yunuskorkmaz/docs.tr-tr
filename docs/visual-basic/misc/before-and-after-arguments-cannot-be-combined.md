@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636685"
 ---
 # <a name="39before39-and-39after39-arguments-cannot-be-combined"></a>&#39;Önce&#39; ve &#39;sonra&#39; bağımsız değişkenleri birleştirilemez
 Bir bağımsız değişken listesi hem de içeren `Before` ve `After` karşılıklı olarak birbirini dışlar bağımsız değişkenler.  
