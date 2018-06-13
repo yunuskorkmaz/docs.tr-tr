@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506907"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve bir ortak sanal dizinden çalıştırın. Bu bir kerelik Kurulum prosedürü disk üzerinde bir klasör oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.  

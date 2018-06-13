@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507103"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Bağlama ve kullanılan taşıma taşıma güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı, aktarım HTTP ve taşıma güvenliğini sağlamak için birincil mekanizmayı Güvenli Yuva Katmanı (SSL) genellikle HTTPS adlı HTTP üzerinden şeklindedir. Bu konuda, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmaları anlatılmaktadır.  

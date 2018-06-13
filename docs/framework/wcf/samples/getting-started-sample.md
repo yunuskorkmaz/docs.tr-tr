@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505775"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 Başlarken örneği tipik bir hizmet ve Windows Communication Foundation (WCF) kullanan tipik bir istemciye uygulamak üzere nasıl gösterir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  

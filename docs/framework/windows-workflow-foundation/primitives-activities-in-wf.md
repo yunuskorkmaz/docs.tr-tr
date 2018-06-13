@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513382"
 ---
 # <a name="primitives-activities-in-wf"></a>WF etkinlikleri temelleri
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yaygın görevleri gerçekleştirmek için uygun bir mekanizmaya birkaç sistem tarafından sağlanan etkinlikler sağlar.  

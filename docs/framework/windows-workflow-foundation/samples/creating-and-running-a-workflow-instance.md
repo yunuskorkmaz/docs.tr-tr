@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513692"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Oluşturma ve bir iş akışı örneği çalıştırma
 Bu örnek, bir iş akışı örneği çalıştırmak gösterilmiştir. Zaman uyumlu ve zaman uyumsuz olarak yürütülecek nasıl gösterir.  

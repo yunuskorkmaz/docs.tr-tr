@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514167"
 ---
 # <a name="bookmarks"></a>Yer işaretleri
 Bu örnek, bir dış giriş almak için bir yer işareti oluşturur özel bir etkinlik yazma gösterilmiştir. Örnek bir iş akışında özel etkinlik kullanan ve bulmak ve çalışan bir iş akışı örneğiyle ilişkili yer işaretleri sürdürmek nasıl gösterir temel konsol uygulaması da içerir. Yer işaretleri hakkında daha fazla bilgi için bkz: [yer işaretleri](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

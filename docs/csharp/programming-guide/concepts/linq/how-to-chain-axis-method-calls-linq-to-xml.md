@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333784"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Nasıl yapılır: zincir eksen yöntem çağrıları (LINQ-XML) (C#)
 Kodunuzda kullanacağınız genel bir desen bir eksen yöntemini çağırın, ardından çağrısı uzantısı yöntemi eksenleri birini ' dir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508221"
 ---
 # <a name="stream"></a>Akış
 Akış örnek akış aktarım modu iletişimi kullanımını gösterir. Hizmet akışları gönderip çeşitli işlemleri gösterir. Bu örnek kendiliğinden barındırılır. Hem istemci hem de hizmet konsol programlardır.  

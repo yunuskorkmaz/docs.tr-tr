@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506580"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 A *oturum* iki uç noktaları arasında gönderilen tüm iletiler bağıntı değil. *Örnek oluşturma* kullanıcı tanımlı bir hizmet nesneleri ve bunların ilgili ömrü denetlenmesi için başvuruyor <xref:System.ServiceModel.InstanceContext> nesneleri. *Eşzamanlılık* olan içinde çalışan iş parçacıklarının sayısını denetlemek için belirtilen terimin bir <xref:System.ServiceModel.InstanceContext> aynı anda.  

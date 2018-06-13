@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514058"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Nasıl yapılır: örnek veri özellikleri seri durumdan
 Bir kullanıcı veya iş akışı yönetici el ile kalıcı iş akışı örneğinin durumunu incelemek isteyebilirsiniz durumlar olabilir. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Aşağıdaki dört sütun sunan örnekleri tabloda bir görünüm sağlar:  

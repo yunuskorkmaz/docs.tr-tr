@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513207"
 ---
 # <a name="instance-completion-action"></a>Örnek tamamlama eylemi
 **Örneği tamamlama eylem** SQL iş akışı örneği deposunun özelliği veri ve meta veriler iş akışı örneklerinin silindiğinden olup olmadığını Kalıcılık veritabanından örnekleri tamamlandıktan sonra belirtmenize olanak sağlar. Bu özellik için izin verilen değerler **DeleteAll** ve **DeleteNothing**. Aşağıdaki listede, bu seçenekler açıklanmaktadır:  

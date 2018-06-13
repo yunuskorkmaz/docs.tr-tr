@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511855"
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Windows iş akışının kavramsal genel bakış
 Bu bölüm büyük kavramları Windows Workflow Foundation (WF) arkasında açıklayan konuların kümesi içerir.  
