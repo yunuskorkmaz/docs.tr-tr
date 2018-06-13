@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503891"
 ---
 # <a name="instancing"></a>Örnek Oluşturma
 Instancing örnek istemci isteklerine yanıt olarak bir hizmet sınıfın örnekleri nasıl oluşturulduğunu denetimleri örneklemesini davranışı ayarını gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Bu örnek yeni bir sözleşme tanımlar `ICalculatorInstance`, devralan `ICalculator`. Tarafından belirtilen sözleşme `ICalculatorInstance` hizmet örneği durumunu incelemek için üç ek işlemler sağlar. Örneklemesini ayarı değiştirerek istemci çalıştırarak davranışında değişiklik görebilirsiniz.  

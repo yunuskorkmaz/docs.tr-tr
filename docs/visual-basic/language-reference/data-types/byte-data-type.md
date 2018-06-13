@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590540"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte veri türü (Visual Basic)
 Değeri 0 ile 255 arasında imzalanmamış 8 bit (1-bayt) tamsayıları tutar.

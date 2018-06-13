@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556854"
 ---
 # <a name="graphics"></a>Grafikler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Entegre multimedya, vektör grafikleri, animasyon ve ilginç kullanıcı arabirimleri ve içerik oluşturmada geliştiricilere kolaylaşır içerik oluşturma için destek sunar.  

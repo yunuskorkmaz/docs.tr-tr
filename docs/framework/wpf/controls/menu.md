@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555795"
 ---
 # <a name="menu"></a>Menü
 A <xref:System.Windows.Controls.Menu> komutlar veya olay işleyicileri ile ilişkili öğeleri hiyerarşik organizasyonu sağlayan bir denetimdir. Her <xref:System.Windows.Controls.Menu> birden çok içerebilir <xref:System.Windows.Controls.MenuItem> kontrol eder. Her <xref:System.Windows.Controls.MenuItem> bir komutu veya çağrılacak bir `Click` olay işleyicisi. A <xref:System.Windows.Controls.MenuItem> birden çok da sahip olabilirsiniz <xref:System.Windows.Controls.MenuItem> öğeler bir alt oluşturan alt olarak.  

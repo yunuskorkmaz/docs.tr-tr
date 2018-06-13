@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499173"
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
 Windows Communication Foundation (WCF) okuma ve bunları oluşturmak yanı sıra bir hizmet uç noktasında kullanıma olanak tanıyan Atom, RSS veya diğer özel biçimler dağıtım akışlarını kolayca çalışmak için destek sağlar. Bu bölümdeki konularda ayrıntılı dağıtım için bu programlama modeli açıklanmaktadır.  

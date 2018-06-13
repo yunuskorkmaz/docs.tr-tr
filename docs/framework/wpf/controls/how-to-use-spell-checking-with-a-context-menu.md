@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553773"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Nasıl yapılır: Bağlam Menüsü ile Yazım Denetimi Kullanma
 Varsayılan olarak, bir düzenleme denetiminde yazım etkinleştirdiğinizde ister <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox>, bağlam menüsünde yazım denetimi seçenekleri Al. Kullanıcı yanlış yazılmış bir sözcük tıkladığında, örneğin, yazım önerileri ya da seçeneğini elde **Tümünü Yoksay**. Ancak, kendi özel bağlam menüsü ile varsayılan bağlam menüsünü geçersiz kıldığınızda, bu işlevsellik kaybolur ve bağlam menüsünden Yazım denetimi özelliği yeniden etkinleştirmek için kod yazmanız gerekir. Aşağıdaki örnek, bunu etkinleştirmek gösterilmiştir bir <xref:System.Windows.Controls.TextBox>.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497184"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme
 Bir hizmet için meta verileri, kötü niyetli bir kullanıcının yararlanabilirsiniz uygulamanız ile ilgili gizli bilgiler içerebilir. Hizmetinizin Tüketiciler, hizmetiniz hakkındaki meta verileri almak için güvenli bir mekanizma de gerektirebilir. Bu nedenle, bazen kullanarak güvenli bir uç noktası, meta verilerini yayımlamak gereklidir.  

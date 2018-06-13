@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460495"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 Taşınabilir alt projeleri .NET derleme programcıların tek kaynak ağaç korumak ve birden çok .NET uygulamalarında (Masaüstü, Silverlight, Windows Phone ve XBOX) hala desteklerken oluşturma sistemi etkinleştirin. Taşınabilir alt projeleri üzerinde herhangi bir .NET uygulaması kullanılabilir bir .NET framework derlemesi olan .NET taşınabilir kitaplıklara yalnızca başvuru.  

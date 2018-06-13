@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390181"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
 `invalidIUnknown` Yönetilen hata ayıklama Yardımcısı (MDA) geçersiz bir zaman etkinleştirilirse `IUnknown` işaretçi yerel koddan yönetilen koda geçirilir. `IUnknown` İçin sorgulandığında başarı döndürülecek başarısız `IUnknown` arabirimi.  

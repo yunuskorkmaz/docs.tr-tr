@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600867"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML Eksen Özellikleri (Visual Basic)
 Bu bölümdeki konular, Visual Basic'te XML eksen özellikleri söz dizimi belge. XML eksen özellikleri XML kodunuzda doğrudan erişmek kolaylaştırır.  

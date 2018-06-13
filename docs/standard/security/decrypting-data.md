@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589103"
 ---
 # <a name="decrypting-data"></a>Verilerin Şifresini Çözme
 Şifre çözme şifreleme ters işlemdir. Gizli anahtar şifreleme için anahtar ve verileri şifrelemek için kullanılan IV bilmeniz gerekir. Ortak anahtar şifrelemesi için ortak anahtarı (verileri özel anahtar kullanılarak şifrelenmiş varsa) veya özel anahtar (verileri ortak anahtar kullanılarak şifrelenmiş varsa) bilmeniz gerekir.  

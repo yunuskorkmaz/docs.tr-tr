@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500376"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 Bir istemci bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir. Web Hizmetleri, bu erişim için ek kaynaklar (örneğin, veritabanları veya diğer Web Hizmetleri) Web hizmeti iş mantığı kapsüllenir şekilde tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde bir güvenilir alt sistem işlemi gösterilmektedir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503016"
 ---
 # <a name="default-service-behavior"></a>Varsayılan Hizmet Davranışı
 Bu örnek, hizmet davranış ayarları nasıl yapılandırılabilir gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hangi uygulayan `ICalculator` hizmet sözleşme. Hizmet davranışları ve işlem davranışları kullanarak bu örnek açıkça tanımlayan <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> öznitelikleri. (Bu örnek gösterdiği gibi) yapılandırma dosyalarında veya imperatively kodu davranışları yapılandırabilirsiniz.  

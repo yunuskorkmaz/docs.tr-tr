@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498650"
 ---
 # <a name="operating-system-resources-required-by-wcf"></a>WCF Tarafından Gerektirilen İşletim Sistemi Kaynakları
 Windows Communication Foundation (WCF) işlevi için işletim sistemi tarafından sağlanan bazı kaynaklar bağlıdır. Aşağıdaki tabloda, bu kaynakları listeler.  

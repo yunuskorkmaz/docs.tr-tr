@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503216"
 ---
 # <a name="custom-find-criteria"></a>Özel Bulma Ölçütleri
 Bu örnek mantığı kullanarak özel kapsam eşleşme oluşturma ve özel bulma hizmeti uygulama gösterir. İstemciler işlevselliği eşleşen özel kapsam daraltın ve WCF bulma sistem tarafından sağlanan Bul işlevselliği üzerinde daha fazla yapı için kullanır. Bu örnek kapsayan senaryo aşağıdaki gibidir:  

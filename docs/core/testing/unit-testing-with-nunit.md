@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214412"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Birim testi C# NUnit ve .NET Core
 

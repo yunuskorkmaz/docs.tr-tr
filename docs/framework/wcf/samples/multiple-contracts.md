@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501743"
 ---
 # <a name="multiple-contracts"></a>Birden Fazla Sözleşme
 Birden fazla sözleşme örnek bir hizmette birden fazla sözleşme gerçekleştirme ve her uygulanan sözleşmeleri ile iletişim kurmak için bitiş noktalarını yapılandırmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İki sözleşmelerini tanımlamak için hizmet değiştirilmiş `ICalculator` sözleşme ve `ICalculatorSession` sözleşme.  

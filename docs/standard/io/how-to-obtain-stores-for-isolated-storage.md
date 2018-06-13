@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576688"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma
 Yalıtılmış depolamada sanal dosya sistemi veri bölme içinde kullanıma sunar. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Sınıf, çeşitli bir yalıtılmış depolamada ile etkileşim için yöntemler sağlar. Oluşturmak ve depolar, almak için <xref:System.IO.IsolatedStorage.IsolatedStorageFile> üç statik yöntemler sağlar:  

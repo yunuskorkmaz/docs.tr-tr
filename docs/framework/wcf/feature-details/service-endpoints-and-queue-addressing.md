@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504948"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda ele alınmıştır nasıl istemcileri adresi sıralarından okuma Hizmetleri ve hizmet uç noktaları sıralara nasıl eşleyin. Bir anımsatıcı, Windows Communication Foundation (WCF) uygulama dağıtımı sıraya Klasik aşağıda gösterilmektedir.  

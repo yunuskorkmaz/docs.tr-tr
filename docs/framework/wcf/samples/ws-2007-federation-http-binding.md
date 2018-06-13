@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507087"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federasyon HTTP Bağlama
 Bu örnek kullanımını gösteren <xref:System.ServiceModel.WS2007FederationHttpBinding>, WS-Trust belirtimine destek sürümünün 1.3 Federasyon senaryoları oluşturmak için kullanabileceğiniz bağlama standart.  

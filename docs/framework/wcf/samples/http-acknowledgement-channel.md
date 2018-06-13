@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502838"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP Doğrulama Kanalı
 HTTP doğrulama kanalı tek yönlü Mesajlaşma düzeni, onaylayabilir veya gelen iletileri reddetmek bir hizmet veren otomatik olarak bir bildirim alındığında göndermek yerine değişiklikleri katmanlı bir kanal örneğidir. İleti işleme, iş düzeyi garantisi yapabilirsiniz kadar HTTP doğrulama kanalı gecikme bildirim hizmete de sağlar.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557777"
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
 <xref:System.Windows.Controls.TextBox> Sınıfı, biçimlendirilmemiş metni görüntülemenizi ve düzenlemenizi sağlar. Yaygın kullanımı bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adını, telefon numarasını soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin giriş için denetimler. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve ikisi de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  

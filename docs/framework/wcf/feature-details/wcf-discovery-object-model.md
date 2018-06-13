@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509040"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Keşif Nesnesi Modeli
 WCF keşif çalışma zamanı ve bulmak ve bu hizmetleri kullanan istemciler bulunabilirlik Hizmetleri yazmanızı sağlayan birleşik bir programlama modeli sağlayan türleri kümesi oluşur.  

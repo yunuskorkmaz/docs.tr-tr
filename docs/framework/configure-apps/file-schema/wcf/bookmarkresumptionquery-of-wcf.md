@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748262"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a>WCF &lt;bookmarkResumptionQuery&gt;
 Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu temsil eder. Sorgu yer işareti sürdürme kayıtlara abone olmak izleme katılımcı gereklidir.  

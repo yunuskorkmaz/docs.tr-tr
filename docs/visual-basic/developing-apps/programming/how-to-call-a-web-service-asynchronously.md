@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589049"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma (Visual Basic)
 Bir zaman uyumsuz yöntem çağrısının sonucunu alabilmeleri Bu örnek bir Web Service'in zaman uyumsuz işleyicisi olaya işleyici iliştirir. Bu örnek DemoTemperatureService Web hizmeti kullanılan http://www.xmethods.net.  

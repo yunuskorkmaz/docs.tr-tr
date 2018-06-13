@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462448"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 Arabirimi
 Kod profil oluşturucuları ortak dil çalışma zamanı (CLR) olayı izlemeyi denetlemek için ve istek bilgileri ile iletişim kurmak için kullandığı yöntemlerini sağlar. biçimindeki telefon numarasıdır. `ICorProfilerInfo4` Arabirimi uzantısıdır diğer `ICorProfilerInfo` arabirimleri. Tam zamanında (JIT) yeniden derlenmek, eklenen desteklemek için yeni yöntemler sağlar [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498549"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, yayımlama, alınmasını ve hizmeti meta verileri kullanarak güvenlik etkilerini göz önünde bulundurun.  

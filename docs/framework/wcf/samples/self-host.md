@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502684"
 ---
 # <a name="self-host"></a>Kendini Barındırma
 Bu örnek, bir konsol uygulamasında kendini barındıran hizmet uygulamak gösterilmiştir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırma dosyası için App.config Web.config dosyasından yeniden adlandırılmış ve ana bilgisayar kullanan bir taban adresi yapılandırmak için değiştirilebilir. Statik uygulamak için hizmet kaynak kodu değiştirilmiş `Main` oluşturur ve yapılandırılmış taban adresi sağlayan bir hizmet konağı açar işlev. Hizmet uygulaması, her bir işlemin konsola çıkışını yazmak için değiştirildi. İstemci, hizmetin doğru uç noktası adresi yapılandırma dışında değiştirilmemiş olmuştur.  

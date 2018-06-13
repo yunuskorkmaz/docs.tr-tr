@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747648"
 ---
 # <a name="ltcertificatereferencegt-for-ltidentitygt"></a>&lt;kimlik&gt; için &lt;certificateReference&gt;
 X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimliğe sahip bir uç nokta bağlandığı güvenli bir Windows Communication Foundation (WCF) istemci, sunucu tarafından sunulan talepler bu kimliği oluşturmak için kullanılan kimlik talep içeren doğrular.  
