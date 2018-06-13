@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540536"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl Yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşeni, dosya sistemi göz atın ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu, kullanıcı iletişim kutusundaki seçilmiş dosyanın adını ve yolunu döndürür. Ancak, aslında dosyaları diske yazmak için kod yazmanız gerekir.  

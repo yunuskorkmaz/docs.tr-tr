@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555918"
 ---
 # <a name="how-to-use-the-image-element"></a>Nasıl yapılır: Görüntü Öğesi Kullanma
 Bu örnek görüntüleri kullanarak, bir uygulamada dahil etmek nasıl gösterir <xref:System.Windows.Controls.Image> öğesi.  

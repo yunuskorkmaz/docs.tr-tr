@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542164"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
 <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.ToolStripItem> sınıfları araç, durum ve menü öğelerini görüntülemek için esnek ve Genişletilebilir bir sistemi sağlar. Bu sınıfların tüm bulunan <xref:System.Windows.Forms> ad alanı ve bunlar tüm genellikle adlandırıldığı "ToolStrip" önekiyle (gibi <xref:System.Windows.Forms.ToolStripOverflow>) veya "Şerit" soneki (gibi <xref:System.Windows.Forms.MenuStrip>).  

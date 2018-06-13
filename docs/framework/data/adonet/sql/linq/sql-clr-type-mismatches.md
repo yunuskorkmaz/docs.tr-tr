@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365676"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL CLR türüyle eşleşmiyor
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve SQL Server arasında çeviri çoğunu otomatikleştirir. Bununla birlikte, bazı durumlarda tam çeviri engeller. Bu anahtar uyuşmazlıkları ortak dil çalışma zamanı (CLR) türleri ve SQL Server veritabanı türleri arasında aşağıdaki bölümlerde özetlenmiştir. Belirli tür eşlemeleri ve adresindeki işlevi çevirisi hakkında daha fazla ayrıntı bulabilirsiniz [SQL CLR türü eşleme](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) ve [veri türler ve işlevler](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  

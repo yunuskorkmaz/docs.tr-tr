@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540712"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip Denetimi (Windows Forms)
 <xref:System.Windows.Forms.ToolStrip> menüleri, Denetim ve kullanıcı denetimleri, Windows Forms uygulamalarında barındırabilir araç çubukları denetimleridir.  

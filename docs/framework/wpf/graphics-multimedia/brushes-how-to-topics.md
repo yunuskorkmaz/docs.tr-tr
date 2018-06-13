@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557543"
 ---
 # <a name="brushes-how-to-topics"></a>Fırçalar ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ekran içeriğini boyamak için Fırçalar.  

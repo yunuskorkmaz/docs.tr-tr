@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541891"
 ---
 # <a name="binding-markup-extension"></a>Biçimlendirme Uzantısı Bağlama
 Bir ara ifade nesnesi oluşturma ve öğesi ve kendi bağlama çalışma zamanında uygulanır veri bağlamı yorumlama verilere bağlı değeri, özellik değeri erteler.  

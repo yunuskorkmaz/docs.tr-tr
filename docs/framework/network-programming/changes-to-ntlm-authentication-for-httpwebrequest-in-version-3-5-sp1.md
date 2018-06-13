@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397916"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>NTLM kimlik doğrulaması için HttpWebRequest sürüm 3.5 SP1'deki değişiklikler
 Güvenlik değişiklikleri, .NET Framework sürüm 3.5 SP1 yapıldı ve daha sonra bir etkisi nasıl tümleşik Windows kimlik doğrulaması tarafından işlenir <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, ve ilgili System.Net ad alanındaki sınıflar. Bu değişiklikler, NTLM tabanlı Tümleşik Windows kimlik doğrulaması kullanıldığı web isteği yapmak ve yanıtları almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  

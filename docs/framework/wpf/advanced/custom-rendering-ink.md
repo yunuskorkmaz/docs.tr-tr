@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540439"
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Vuruş özelliğinin boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak verir, ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Hava fırça, Petrol boyama ve diğer birçok efekt görünümünü işlemede tarafından mürekkep görünümünü özelleştirmek isteyebilirsiniz. Windows Presentation Foundation (WPF), özel işleme mürekkep özel bir uygulama tarafından verir <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  

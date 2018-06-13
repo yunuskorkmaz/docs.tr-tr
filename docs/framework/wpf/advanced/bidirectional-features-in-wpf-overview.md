@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541930"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Tüm diğer geliştirme platformu, aksine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriğinin hızlı geliştirme desteği pek çok özellik vardır, örneğin, karma soldan sağa ve için sağa veri aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü özellikler Arapça ve kullanıcıların konuşarak İbranice gibi isteyen kullanıcılar için mükemmel bir deneyim oluşturur.  

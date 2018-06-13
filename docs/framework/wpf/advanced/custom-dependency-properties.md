@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541969"
 ---
 # <a name="custom-dependency-properties"></a>Özel Bağımlılık Özellikleri
 Bu konuda nedenleri açıklanmaktadır, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştiricileri ve bileşen yazarlar özel bağımlılık özelliği oluşturmak isteyebilirsiniz ve performansı iyileştirmek bazı uygulama seçenekleri yanı sıra uygulama adımlarını açıklar Kullanılabilirlik veya çok yönlülük özelliğinin.  

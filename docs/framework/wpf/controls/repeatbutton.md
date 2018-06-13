@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555016"
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton> Benzer bir <xref:System.Windows.Controls.Button>. Ancak, <xref:System.Windows.Controls.Primitives.RepeatButton> ne zaman denetim öğeleri sağlar ve nasıl <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı oluşur.  

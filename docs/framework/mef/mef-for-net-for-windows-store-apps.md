@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388865"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows mağazası uygulamaları için .NET için MEF
 <xref:System.Composition?displayProperty=nameWithType> ve onun alt ad alanları içeren geliştirmek için Genişletilebilir türleri [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamaları Yönetilen Genişletilebilirlik Çerçevesi (MEF) sahip. Bu ad alanları parçası olan [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] alt için [!INCLUDE[win8](../../../includes/win8-md.md)] işletim sistemi.  

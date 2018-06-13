@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539782"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Nasıl yapılır: Windows Formlarının Kenarlıklarını Değiştirme
 Windows Forms davranışı ve görünümü belirlerken aralarından seçim yapabileceğiniz çeşitli kenarlık stilleri var. Değiştirerek <xref:System.Windows.Forms.Form.FormBorderStyle%2A> özelliği, formu yeniden boyutlandırma davranışını kontrol edebilirsiniz. Ayrıca, ayarı <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ne düğmeleri üzerinde görünebilir yanı sıra başlık çubuğunu nasıl görüntüleneceğini etkiler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.FormBorderStyle>.  

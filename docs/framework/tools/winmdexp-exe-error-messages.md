@@ -164,6 +164,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407046"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
 Derleme işlem çağrıları [Winmdexp.exe (Windows çalışma zamanı meta veri verme aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** şablonunda [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], Winmdexp.exe hata iletileri görüntülenir **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektirdiği için derleme başarılı sürece, hata iletileri görünmüyor.  

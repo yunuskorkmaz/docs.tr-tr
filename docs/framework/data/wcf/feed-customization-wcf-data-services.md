@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365897"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veriyi bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] veri akışları için hem Atom hem de JavaScript nesne gösterimi (JSON) biçimini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıkları ve ilişkileri HTTP iletisinin gövdesinde bulunan bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir varsayılan varlık özellik eşlemesi varlıklarda bulunan verileri Atom öğeler arasındaki tanımlar. Daha fazla bilgi için bkz: [OData: Atom biçimi](http://go.microsoft.com/fwlink/?LinkID=185794).  

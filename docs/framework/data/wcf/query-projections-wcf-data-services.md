@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365728"
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonlar (WCF Veri Hizmetleri)
 Projeksiyon bir mekanizma sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen akıştaki veri miktarını azaltmak için. Daha fazla bilgi için bkz: [OData: Sistem sorgusu seçeneği ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  

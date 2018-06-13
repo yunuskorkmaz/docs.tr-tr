@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554761"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Nasıl yapılır: TreeView İçinde TreeViewItem Bulma
 <xref:System.Windows.Controls.TreeView> Denetimi hiyerarşik verileri görüntülemek için kullanışlı bir yol sağlar. Varsa, <xref:System.Windows.Controls.TreeView> bir veri kaynağına bağlı olduğu <xref:System.Windows.Controls.TreeView.SelectedItem%2A> özelliği, hızlı bir şekilde seçili veri nesnesini almak kolay bir yol sağlar. Temel alınan veri nesnesi ile çalışmak genellikle en iyisidir, ancak bazen verinin içeren programsal gerekebilir <xref:System.Windows.Controls.TreeViewItem>. Örneğin, program aracılığıyla genişletmeniz gerekebilir <xref:System.Windows.Controls.TreeViewItem>, veya farklı bir öğe seçin <xref:System.Windows.Controls.TreeView>.  

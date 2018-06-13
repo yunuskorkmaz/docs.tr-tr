@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388205"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Yönetilen hata ayıklama Yardımcısı (MDA) Microsoft Windows işletim sistemi yükleyici kilidi tutan bir iş parçacığında yönetilen kod yürütme girişimlerini algılar.  Bu tür bir yürütme geçersiz çünkü Kilitlenmeler ve işletim sistemi yükleyicisi tarafından başlatılmış önce dll kullanmak için yol açabilir.  

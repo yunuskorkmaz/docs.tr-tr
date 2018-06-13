@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408467"
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
 Hazırlandı [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) gibi daha yeni meta veri arabirimleri üzerinde çalışan yöntemleri bildirme tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Ayrıca, özgün Ialink arabirimi ek kullanım esnekliği sağlama yöntemleri Ialink2 bildirir.  

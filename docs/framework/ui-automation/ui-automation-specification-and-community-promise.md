@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401160"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>UI Otomasyonu Belirtimi ve Topluluk Taahhüdü
 UI Otomasyonu, son kullanıcılar için kullanıcı Arabirimi hakkında bilgi sağlar ve standart giriş dışında bir yöntem UI işlemek için ekran okuyucular gibi yardımcı teknoloji ürünlerinin etkinleştirme masaüstünde, çoğu kullanıcı arabirimi (UI) öğeleri için programlı erişim sağlar .  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527780"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Veri Biçimleri
 <xref:System.Windows.Forms.DataGridView> Denetimi hücre değerlerini ve üst sütunlarını görüntüleme veri türleri arasında otomatik dönüşüm sağlar. Metin kutusu sütunları, örneğin, tarih, saat, sayı ve numaralandırma değerlerinin dize gösterimlerini görüntüle ve veri deposu tarafından gereken türleri için kullanıcı tarafından girilen dize değerlerini Dönüştür.  

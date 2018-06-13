@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396291"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
 Bu konu ile uygulamaları geliştirirken karşılaşabileceğiniz olası sorunları gidermek nasıl açıklar [!INCLUDE[net_native](../../../includes/net-native-md.md)].  

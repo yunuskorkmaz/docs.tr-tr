@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399187"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 Kaynak dosyaları yerelleştirilmiş uygulamalarda merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeleri, resimleri ve diğer verileri görüntülemek ve kullanıcının kendi dilini veya kültür için kaynaklar kullanılamıyorsa alternatif veri sağlamak için etkinleştirin. .NET Framework bulun ve yerelleştirilmiş kaynaklar almak için bir hub ve bağlı bileşen modeli kullanır. Hub yerelleştirilemeyen yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> uygulamanın varsayılan kültürü kültürünü atamak özniteliği. Her bağlı bileşen tek bir yerelleştirilmiş kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır. Uydu derlemeleri ana derleme parçası olmadığından, kolayca güncelleştirme veya uygulama için ana derleme değiştirmeden belirli bir kültür karşılık kaynakları değiştirin.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394481"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme
 <xref:System.Lazy%601?displayProperty=nameWithType> Sınıfı geç başlatma ve nesne örneğini oluşturmada gerçekleştirme işlemlerini basitleştirir. Yavaş bir şekilde nesneleri başlatarak bunları hiçbir zaman gerekli ya da ilk erişim kadar kendi başlatma erteleyebilirsiniz hiç oluşturmak zorunda önleyebilirsiniz. Daha fazla bilgi için bkz: [geç başlatma](../../../docs/framework/performance/lazy-initialization.md).  

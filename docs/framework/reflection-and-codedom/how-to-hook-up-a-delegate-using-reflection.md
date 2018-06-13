@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397942"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
 Yük ve derlemeler çalıştırmak için yansıma kullandığınızda gibi C# dil özellikleri kullanamazsınız `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olaylarını bağlanmanıza. Aşağıdaki yordamlar nasıl yansıma yoluyla tüm gerekli türlerin alarak varolan bir yöntemi bir olaya bağlanacağını gösterir ve yansıma kullanarak dinamik bir yöntemi nasıl oluşturulacağını yayma ve olaya kadar bağlayın.  

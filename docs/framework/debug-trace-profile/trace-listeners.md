@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391765"
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
 Kullanırken **izleme**, **hata ayıklama** ve <xref:System.Diagnostics.TraceSource>, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri tarafından alınan *dinleyicileri*. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  

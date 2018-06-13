@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541492"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızı ile için standart menü sağlayabilirsiniz <xref:System.Windows.Forms.MenuStrip> denetim.  

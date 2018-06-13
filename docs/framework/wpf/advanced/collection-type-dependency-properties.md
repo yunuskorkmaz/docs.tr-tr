@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540361"
 ---
 # <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
 Bu konu, kılavuz ve nasıl özellik türü bir koleksiyon türü olduğu bir bağımlılık özelliği uygulamak önerilen modeller sağlar.  

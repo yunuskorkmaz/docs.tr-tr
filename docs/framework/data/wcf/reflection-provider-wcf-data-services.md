@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366014"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Yansıma sağlayıcısı (WCF Veri Hizmetleri)
 Bir veri modeli aracılığıyla Entity Framework verileri gösterme yanı sıra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kesinlikle bir varlık tabanlı modelde tanımlı değil veri hale getirebilir. Dönüş uygulama türleri sınıflardaki yansıma sağlayıcısı kullanıma sunan <xref:System.Linq.IQueryable%601> arabirimi. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu sınıf için bir veri modeli gerçekleştirip yansıma kullanır ve adresi tabanlı sorgular kaynaklara karşı dil ile tümleşik sorgu (LINQ) çevirebilir-gösterilen sorguları temel <xref:System.Linq.IQueryable%601> türleri.  

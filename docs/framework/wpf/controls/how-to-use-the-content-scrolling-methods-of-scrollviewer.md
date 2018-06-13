@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552772"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Nasıl yapılır: ScrollViewer'ın İçerik Kaydırma Yöntemlerini Kullanma
 Bu örnek kaydırma yöntemlerinin kullanmayı gösterir <xref:System.Windows.Controls.ScrollViewer> öğesi. Artımlı içeriğin satırı veya sayfa, kaydırma bu yöntemleri sağlayan bir <xref:System.Windows.Controls.ScrollViewer>.  

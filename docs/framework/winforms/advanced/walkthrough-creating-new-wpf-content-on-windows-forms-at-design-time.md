@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529015"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma
 Bu konu, Windows Forms tabanlı uygulamalarda kullanım için bir Windows Presentation Foundation (WPF) denetimini oluşturulacağını gösterir.  

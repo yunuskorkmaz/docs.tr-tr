@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540875"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows Forms'ta Fare Girdisi Nasıl Çalışır
 Teslim alma ve fare girişini işleme her Windows uygulaması önemli bir parçasıdır. Uygulamanızda bir eylemi gerçekleştirmek için fare olayları işlemek veya isabet testi gerçekleştirmek için fare konum bilgilerini veya diğer eylemleri kullanın. Ayrıca, fare girdisi uygulamanızda denetimlerinin işleme şekilde değiştirebilirsiniz. Bu konu, ayrıntı ve nasıl elde edilir ve fare sistem ayarlarını değiştirmek bu fare olayları açıklar. Fare ile sağlanan verileri hakkında daha fazla bilgi için olaylar ve fare olayları tıklatma sıranıza ortaya bkz [Windows Forms'ta fare olayları](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541787"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma
 Windows Forms program aracılığıyla fare ve klavye girdisi benzetimi için çeşitli seçenekler sağlar. Bu konu, bu seçenekleri genel bir bakış sağlar.  

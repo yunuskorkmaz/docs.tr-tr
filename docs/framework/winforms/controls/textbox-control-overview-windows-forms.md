@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539873"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms metin kutuları kullanıcıdan giriş almak veya metni görüntülemek için kullanılır. <xref:System.Windows.Forms.TextBox> Salt okunur ayrıca çalışabilmesine rağmen denetim düzenlenebilir metin için genellikle kullanılır. Metin kutuları birden çok satır görüntüleme, denetimin boyutunu metni kaydırma ve temel biçimlendirme ekleyin. <xref:System.Windows.Forms.TextBox> Denetimi görüntülenen veya denetime girilen metin için bir tek biçimi stili sağlar. Biçimlendirilmiş metin birden çok türde görüntülemek için kullanın <xref:System.Windows.Forms.RichTextBox> denetim. Daha fazla bilgi için bkz: [RichTextBox denetimine genel bakış](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  

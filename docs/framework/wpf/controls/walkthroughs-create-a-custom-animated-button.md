@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557114"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma
 Adından da anlaşılacağı gibi Windows Presentation Foundation (WPF) müşteriler için sunum deneyimlerini zenginleştirmek mükemmeldir. Bu izlenecek yollar, Görünüm ve davranış (animasyon dahil) düğmesinin nasıl özelleştirileceği gösterir. Bu özelleştirme yapılır, bu özel düğmeyi kolayca herhangi bir düğmeye uygulamanızda uygulayabileceğiniz bir stil ve şablon kullanarak. Aşağıdaki çizimde, oluşturacağınız özelleştirilmiş düğmesini gösterir.  

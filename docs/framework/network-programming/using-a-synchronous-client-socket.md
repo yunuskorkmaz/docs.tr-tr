@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397708"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
 Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuva uygulama programı askıya alır. Zaman uyumlu yuva ağ yoğun olarak kullanılır, işlem için uygulamalar için uygun değildir, ancak basit ağ hizmetlerine erişim için diğer uygulamalar için etkinleştirebilirsiniz.  

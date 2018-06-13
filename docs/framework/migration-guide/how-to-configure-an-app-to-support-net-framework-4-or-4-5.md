@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393708"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Nasıl yapılır: Bir Uygulamayı .NET Framework 4 veya 4.5'i Destekleyecek Şekilde Yapılandırma
 Ortak dil çalışma zamanı (CLR) barındıran tüm uygulamalar başlatmanız gerekir veya *etkinleştirme*, yönetilen kod çalıştırmak için CLR. Genellikle bir .NET Framework uygulaması üzerinde derlendiği CLR sürümünde çalışır, ancak bir uygulama yapılandırma dosyası (bazen app.config dosyası olarak da anılır) kullanarak bu davranışı masaüstü uygulamalar için değiştirebilirsiniz. Ancak bir uygulama yapılandırma dosyası Windows Mağazası uygulamaları ya da Windows Phone uygulamaları için varsayılan etkinleştirme davranışını değiştiremezsiniz. Bu makale, masaüstü uygulamanızın .NET Framework'ün başka bir sürümünde çalışmasının nasıl sağlanacağını açıklamakta ve 4 veya 4.5 sürümünün nasıl hedefleneceğine bir örnek vermektedir.  

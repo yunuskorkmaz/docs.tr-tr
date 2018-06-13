@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541160"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablo verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dize dizisi içeriğini göster isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve yüksek oranda özelleştirilebilir bir yol sağlar. Bu anlatımda doldurmak nasıl gösterilir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modunda satırların silinmesi yönetin. Varsayılan olarak, kullanıcı yeni satırlar ekleyebilirsiniz. Satır ekleme engelleyecek şekilde ayarlanmışsa <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  

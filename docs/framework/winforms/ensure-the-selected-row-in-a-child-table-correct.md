@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539896"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
 Görmemeleri ile Windows Forms veri bağlama çalışırken, verileri ne üst/alt adında veya ana/Ayrıntılar görünümü görüntülenir. Bu aynı kaynaktan veri iki denetimlerinde görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçim değiştirme değiştirmek için ikinci denetiminde gösterilen veriler neden olur. Örneğin, ilk denetim müşteriler ve ilk denetimindeki seçili müşteri siparişleri listesini ilgili ikinci bir listesini içerebilir.  

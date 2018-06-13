@@ -5,6 +5,7 @@ ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 10/18/2017
+ms.locfileid: "25864460"
 ---
 # <a name="using-f-on-azure-service-fabric"></a>F # Azure Service Fabric üzerinde kullanma
 

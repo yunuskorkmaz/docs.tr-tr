@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387526"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 `openGenericCERCall` Yönetilen hata ayıklama Yardımcısı JIT derleme veya yerel görüntü oluşturma zamanı ve en az bir genel kısıtlı yürütme bölge (CER) grafiğe kök yöntemi en genel tür değişkenlerle birlikte işleniyor uyarmak için etkinleştirildi türü değişkenleri olan bir nesne başvurusu türü.  
