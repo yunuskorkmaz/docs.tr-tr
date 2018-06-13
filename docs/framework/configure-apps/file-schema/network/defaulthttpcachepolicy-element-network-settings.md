@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741847"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="9ef4c-102">&lt;defaultHttpCachePolicy&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="9ef4c-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="9ef4c-103">HTTP önbelleğe alma etkindir ve ilke önbelleğe almayı varsayılan açıklar olup olmadığını açıklar.</span><span class="sxs-lookup"><span data-stu-id="9ef4c-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  

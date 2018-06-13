@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744281"
 ---
 # <a name="64-bit-applications"></a><span data-ttu-id="07326-102">64 bitlik Uygulamalar</span><span class="sxs-lookup"><span data-stu-id="07326-102">64-bit Applications</span></span>
 <span data-ttu-id="07326-103">Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="07326-103">When you compile an application, you can specify that it should run on a Windows 64-bit operating system either as a native application or under WOW64 (Windows 32-bit on Windows 64-bit).</span></span> <span data-ttu-id="07326-104">WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır.</span><span class="sxs-lookup"><span data-stu-id="07326-104">WOW64 is a compatibility environment that enables a 32-bit application to run on a 64-bit system.</span></span> <span data-ttu-id="07326-105">WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="07326-105">WOW64 is included in all 64-bit versions of the Windows operating system.</span></span>  
