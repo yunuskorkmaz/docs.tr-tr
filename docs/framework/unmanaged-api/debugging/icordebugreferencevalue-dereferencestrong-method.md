@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugReferenceValue::DereferenceStrong Yöntemi"
-ms.custom: 
+title: ICorDebugReferenceValue::DereferenceStrong Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugReferenceValue.DereferenceStrong
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 82a97fa2714bae48a288d0bbf69e5b84112dba54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418584"
 ---
-# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="5cb10-102">ICorDebugReferenceValue::DereferenceStrong Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5cb10-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
-<span data-ttu-id="5cb10-103">`DereferenceStrong`uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="5cb10-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="5cb10-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="5cb10-104">Do not call this method.</span></span>  
+# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="d052e-102">ICorDebugReferenceValue::DereferenceStrong Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d052e-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
+<span data-ttu-id="d052e-103">`DereferenceStrong` Uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="d052e-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="d052e-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="d052e-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cb10-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5cb10-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d052e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d052e-105">Syntax</span></span>  
   
 ```  
 HRESULT DereferenceStrong (  
@@ -46,11 +35,11 @@ HRESULT DereferenceStrong (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5cb10-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5cb10-106">Requirements</span></span>  
- <span data-ttu-id="5cb10-107">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5cb10-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d052e-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d052e-106">Requirements</span></span>  
+ <span data-ttu-id="d052e-107">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d052e-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5cb10-108">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5cb10-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d052e-108">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d052e-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5cb10-109">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5cb10-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d052e-109">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d052e-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5cb10-110">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cb10-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="d052e-110">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d052e-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
