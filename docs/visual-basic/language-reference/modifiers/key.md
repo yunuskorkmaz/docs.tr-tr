@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599850"
 ---
 # <a name="key-visual-basic"></a>Anahtar (Visual Basic)
 `Key` Anahtar sözcüğü anonim türdeki özellikleri davranışını belirtmenize olanak sağlar. Anonim tür örneği veya karma kodu değerleri hesaplama arasında eşitlik testleri anahtar özellikleri katılan gibi yalnızca özellikleri, belirleyin. Anahtar özellikleri değerleri değiştirilemez.  

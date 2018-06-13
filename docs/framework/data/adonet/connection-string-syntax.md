@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472756"
 ---
 # <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği. .NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.  

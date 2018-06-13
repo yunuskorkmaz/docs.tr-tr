@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600311"
 ---
 # <a name="argument-39access39-is-not-valid-valid-values-for-input-mode-are-39openaccessread39-and-39openaccessdefault39"></a>Bağımsız değişken &#39;erişim&#39; geçerli değil. Giriş modu için geçerli değerler &#39;OpenAccess.Read&#39; ve &#39;OpenAccess.Default&#39;
 Bir erişim değeri geçerli değil `Input` modu.  

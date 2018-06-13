@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462292"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil oluşturucular ve Windows mağazası uygulamaları
 Bu konuda, ne zaman analiz yazma tanılama araçları içinde Windows mağazası uygulaması çalıştıran yönetilen kodu hakkında düşünmek için gerekenler açıklanmaktadır.  Ayrıca, Windows mağazası uygulamaları karşı çalıştırdığınızda çalışmaya devam etmek için mevcut geliştirme araçları değiştirmek için yönergeler sağlar.  Bu bilgileri anlamak için ortak dil çalışma zamanı profil oluşturma API'si ile sahibiyseniz, zaten bu API Windows Masaüstü uygulamaları için ve karşı düzgün çalışır şimdi aracı değiştirme ilgileniyor, bir tanı aracı olarak kullandığınız en iyisidir Windows mağazası uygulamaları karşı doğru çalışması için.  

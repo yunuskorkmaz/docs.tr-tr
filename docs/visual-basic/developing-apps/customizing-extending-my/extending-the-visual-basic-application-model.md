@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591878"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 Geçersiz kılarak uygulama modeli işlevselliği ekleyebilirsiniz `Overridable` üyeleri <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı. Bu teknik uygulama modeli davranışını özelleştirmek ve uygulama başlatıldığı ve kapandıktan gibi kendi yöntem çağrıları eklemenize izin verir.  

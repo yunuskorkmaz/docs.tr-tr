@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596063"
 ---
 # <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Parametrenin türü &#39; &lt;parametername&gt; &#39; CLS uyumlu değil
 Bir yordam olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir parametresi olarak işaretlenmiş bir türüyle bildirir `<CLSCompliant(False)>`işaretlenmemiş veya uyumlu olmayan bir tür olduğundan geçerli değil.  

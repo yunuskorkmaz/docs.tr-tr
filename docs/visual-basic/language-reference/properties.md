@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599983"
 ---
 # <a name="properties-visual-basic"></a>Özellikler (Visual Basic)
 Bu sayfa, Visual Basic modülleri üyeleri özellikleri listeler. Belirli Visual Basic nesneleri üyeleri olan diğer özellikleri listelenen [nesneleri](../../visual-basic/language-reference/objects/index.md).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958214"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric Windows kapsayıcıları dağıtma zamanı
 

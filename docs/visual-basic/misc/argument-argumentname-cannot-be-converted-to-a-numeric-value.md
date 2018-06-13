@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598962"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-a-numeric-value"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; sayısal bir değere dönüştürülemez
 Dönüştürme, bir dize gibi bir değişken için sayısal bir değer Dönüştür çalışıldı.  
