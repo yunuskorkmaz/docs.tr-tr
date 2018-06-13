@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579099"
 ---
 # <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="a7fa6-102">Normal İfadelerdeki Miktar Belirleyiciler</span><span class="sxs-lookup"><span data-stu-id="a7fa6-102">Quantifiers in Regular Expressions</span></span>
 <span data-ttu-id="a7fa6-103">Miktar belirleyiciler kaç tane karakter, Grup veya karakter sınıfı örneğinin bulunması bir eşleşme için giriş bulunmalıdır belirtin.</span><span class="sxs-lookup"><span data-stu-id="a7fa6-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="a7fa6-104">Aşağıdaki tabloda .NET tarafından desteklenen nicelik listeler.</span><span class="sxs-lookup"><span data-stu-id="a7fa6-104">The following table lists the quantifiers supported by .NET.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483560"
 ---
 # <a name="client-channel-factories-and-channels"></a><span data-ttu-id="f2d96-102">İstemci: Kanal Fabrikaları ve Kanallar</span><span class="sxs-lookup"><span data-stu-id="f2d96-102">Client: Channel Factories and Channels</span></span>
 <span data-ttu-id="f2d96-103">Bu konu, kanal fabrikaları ve kanallar oluşturulmasını açıklar.</span><span class="sxs-lookup"><span data-stu-id="f2d96-103">This topic discusses the creation of channel factories and channels.</span></span>  

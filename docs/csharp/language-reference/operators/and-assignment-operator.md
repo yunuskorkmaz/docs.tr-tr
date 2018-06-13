@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172054"
 ---
 # <a name="amp-operator-c-reference"></a><span data-ttu-id="f7058-102">&amp;= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f7058-102">&amp;= Operator (C# Reference)</span></span>
 <span data-ttu-id="f7058-103">AND atama işleci.</span><span class="sxs-lookup"><span data-stu-id="f7058-103">The AND assignment operator.</span></span>  

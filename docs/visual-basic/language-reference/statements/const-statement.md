@@ -11,6 +11,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233853"
 ---
 # <a name="const-statement-visual-basic"></a><span data-ttu-id="89f3d-102">Const Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89f3d-102">Const Statement (Visual Basic)</span></span>
 <span data-ttu-id="89f3d-103">Bildirir ve bir veya daha fazla sabitleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="89f3d-103">Declares and defines one or more constants.</span></span>  
