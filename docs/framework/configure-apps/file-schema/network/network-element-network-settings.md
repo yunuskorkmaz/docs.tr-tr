@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744674"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a><span data-ttu-id="8016a-102">&lt;Ağ&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="8016a-102">&lt;network&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="8016a-103">Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçenekleri yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="8016a-103">Configures the network options for an external Simple Mail Transport Protocol (SMTP) server.</span></span>  

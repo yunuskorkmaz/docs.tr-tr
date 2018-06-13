@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744375"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a><span data-ttu-id="acaa2-102">Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma</span><span class="sxs-lookup"><span data-stu-id="acaa2-102">How to: Receive First-Chance Exception Notifications</span></span>
 <span data-ttu-id="acaa2-103"><xref:System.AppDomain.FirstChanceException> Olayı <xref:System.AppDomain> sınıfı bir özel durum bildirimi olanak sağlar, önce ortak dil çalışma zamanı özel durum işleyicileri için arama başladı.</span><span class="sxs-lookup"><span data-stu-id="acaa2-103">The <xref:System.AppDomain.FirstChanceException> event of the <xref:System.AppDomain> class lets you receive a notification that an exception has been thrown, before the common language runtime has begun searching for exception handlers.</span></span>  

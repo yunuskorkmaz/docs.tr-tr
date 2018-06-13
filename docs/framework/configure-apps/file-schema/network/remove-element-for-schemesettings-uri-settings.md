@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744167"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="6862f-102">&lt;kaldırma&gt; öğesi schemeSettings (URI ayarları) için</span><span class="sxs-lookup"><span data-stu-id="6862f-102">&lt;remove&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="6862f-103">Düzen adı için bir düzeni ayarı kaldırır.</span><span class="sxs-lookup"><span data-stu-id="6862f-103">Removes a scheme setting for a scheme name.</span></span>  

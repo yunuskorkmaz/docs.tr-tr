@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512274"
 ---
 # <a name="developing-windows-service-applications"></a><span data-ttu-id="c0a59-102">Windows Hizmet Uygulamaları Geliştirme</span><span class="sxs-lookup"><span data-stu-id="c0a59-102">Developing Windows Service Applications</span></span>
 <span data-ttu-id="c0a59-103">Microsoft Visual Studio veya Microsoft kullanılarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, kolayca oluşturabileceğiniz Hizmetleri hizmeti olarak yüklenen bir uygulama oluşturarak.</span><span class="sxs-lookup"><span data-stu-id="c0a59-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="c0a59-104">Bu tür bir uygulama bir Windows hizmeti adı verilir.</span><span class="sxs-lookup"><span data-stu-id="c0a59-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="c0a59-105">Framework özelliklerle hizmetleri oluşturmak, bunları yüklemeniz ve Başlat, durdurabilir ve davranışlarını denetleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c0a59-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  

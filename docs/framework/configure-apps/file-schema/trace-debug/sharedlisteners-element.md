@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745581"
 ---
 # <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="d5856-102">&lt;sharedListeners&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="d5856-102">&lt;sharedListeners&gt; Element</span></span>
 <span data-ttu-id="d5856-103">Herhangi bir kaynak veya trace ögesi başvurabilir dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="d5856-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="d5856-104">Bu dinleyicileri varsayılan olarak tüm izlemeleri almaz ve bu dinleyicileri çalışma zamanında almak mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="d5856-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="d5856-105">Paylaşılan dinleyiciler tanımlanan dinleyicileri kaynakları veya izlemeleri adıyla eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="d5856-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  

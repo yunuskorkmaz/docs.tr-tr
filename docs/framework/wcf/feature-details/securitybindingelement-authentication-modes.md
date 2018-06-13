@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507771"
 ---
 # <a name="securitybindingelement-authentication-modes"></a><span data-ttu-id="7c8d5-102">SecurityBindingElement Kimlik Doğrulama Modları</span><span class="sxs-lookup"><span data-stu-id="7c8d5-102">SecurityBindingElement Authentication Modes</span></span>
 <span data-ttu-id="7c8d5-103">Windows Communication Foundation (WCF) birkaç modu olarak istemciler ve hizmetler birbirine kimlik doğrulaması sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c8d5-103">Windows Communication Foundation (WCF) provides several modes by which clients and services authenticate to one another.</span></span> <span data-ttu-id="7c8d5-104">Güvenlik bağlama öğeleri bu kimlik doğrulama modları için statik yöntemler kullanarak oluşturabileceğiniz <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı veya yapılandırma yoluyla.</span><span class="sxs-lookup"><span data-stu-id="7c8d5-104">You can create security binding elements for these authentication modes by using static methods on the <xref:System.ServiceModel.Channels.SecurityBindingElement> class or through configuration.</span></span> <span data-ttu-id="7c8d5-105">Bu konuda 18 kimlik doğrulama modları kısaca açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="7c8d5-105">This topic briefly describes the 18 authentication modes.</span></span>  
