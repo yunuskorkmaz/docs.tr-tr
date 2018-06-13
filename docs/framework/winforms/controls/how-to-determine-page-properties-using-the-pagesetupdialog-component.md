@@ -1,14 +1,6 @@
 ---
 title: 'Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,32 +10,27 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 52ef02ccfe6586f89adabb30187aa48e5fe87349
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4b1acef216e4f8eca078d47a8cde87fb8f95ee0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532733"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a><span data-ttu-id="884c6-102">Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme</span><span class="sxs-lookup"><span data-stu-id="884c6-102">How to: Determine Page Properties Using the PageSetupDialog Component</span></span>
-<span data-ttu-id="884c6-103">[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) kullanıcı bir belge için bileşen sunar düzeni, sayfa boyutu ve diğer sayfa düzeni seçenekleri.</span><span class="sxs-lookup"><span data-stu-id="884c6-103">The [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) component presents layout, paper size, and other page layout choices to the user for a document.</span></span>  
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a><span data-ttu-id="3d0d7-102">Nasıl Yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme</span><span class="sxs-lookup"><span data-stu-id="3d0d7-102">How to: Determine Page Properties Using the PageSetupDialog Component</span></span>
+<span data-ttu-id="3d0d7-103">[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) kullanıcı bir belge için bileşen sunar düzeni, sayfa boyutu ve diğer sayfa düzeni seçenekleri.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-103">The [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) component presents layout, paper size, and other page layout choices to the user for a document.</span></span>  
   
- <span data-ttu-id="884c6-104">Örneği belirtmek zorunda <xref:System.Drawing.Printing.PrintDocument> sınıfı — yazdırılması belgeye budur.</span><span class="sxs-lookup"><span data-stu-id="884c6-104">You need to specify an instance of the <xref:System.Drawing.Printing.PrintDocument> class—this is the document to be printed.</span></span> <span data-ttu-id="884c6-105">Ayrıca, bu kısmen olduğu gibi kullanıcıların bilgisayarlarında, yerel olarak veya bir ağ üzerinden yüklü bir yazıcı olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşeni kullanıcıya sunulan seçimleri biçimlendirme sayfa belirler.</span><span class="sxs-lookup"><span data-stu-id="884c6-105">Additionally, users must have a printer installed on their computer, either locally or through a network, as this is partly how the <xref:System.Windows.Forms.PageSetupDialog> component determines the page formatting choices presented to the user.</span></span>  
+ <span data-ttu-id="3d0d7-104">Örneği belirtmek zorunda <xref:System.Drawing.Printing.PrintDocument> sınıfı — yazdırılması belgeye budur.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-104">You need to specify an instance of the <xref:System.Drawing.Printing.PrintDocument> class—this is the document to be printed.</span></span> <span data-ttu-id="3d0d7-105">Ayrıca, bu kısmen olduğu gibi kullanıcıların bilgisayarlarında, yerel olarak veya bir ağ üzerinden yüklü bir yazıcı olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşeni kullanıcıya sunulan seçimleri biçimlendirme sayfa belirler.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-105">Additionally, users must have a printer installed on their computer, either locally or through a network, as this is partly how the <xref:System.Windows.Forms.PageSetupDialog> component determines the page formatting choices presented to the user.</span></span>  
   
- <span data-ttu-id="884c6-106">İle çalışma önemli bir yönü <xref:System.Windows.Forms.PageSetupDialog> bileşenidir, ile nasıl etkileşim kurduğu <xref:System.Drawing.Printing.PageSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="884c6-106">An important aspect of working with the <xref:System.Windows.Forms.PageSetupDialog> component is how it interacts with the <xref:System.Drawing.Printing.PageSettings> class.</span></span> <span data-ttu-id="884c6-107"><xref:System.Drawing.Printing.PageSettings> Sınıfı, bir sayfa yazdırılabilir, sayfayı ve kenar boşluklarını boyutunu Kağıt yönlendirmesi gibi şekilde değiştiren ayarları belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="884c6-107">The <xref:System.Drawing.Printing.PageSettings> class is used to specify settings that modify the way a page will be printed, such as paper orientation, the size of the page, and the margins.</span></span> <span data-ttu-id="884c6-108">Bu ayarların her biri bir özelliği olarak temsil edilir <xref:System.Drawing.Printing.PageSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="884c6-108">Each of these settings is represented as a property of the <xref:System.Drawing.Printing.PageSettings> class.</span></span> <span data-ttu-id="884c6-109"><xref:System.Windows.Forms.PageSetupDialog> Sınıfı, belirli bir örneği için bu özellik değerlerini değiştirir <xref:System.Drawing.Printing.PageSettings> belge ile ilişkili sınıfı (ve olarak temsil edilen bir <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> özelliği).</span><span class="sxs-lookup"><span data-stu-id="884c6-109">The <xref:System.Windows.Forms.PageSetupDialog> class modifies these property values for a given instance of the <xref:System.Drawing.Printing.PageSettings> class that is associated with the document (and is represented as a <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> property).</span></span>  
+ <span data-ttu-id="3d0d7-106">İle çalışma önemli bir yönü <xref:System.Windows.Forms.PageSetupDialog> bileşenidir, ile nasıl etkileşim kurduğu <xref:System.Drawing.Printing.PageSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-106">An important aspect of working with the <xref:System.Windows.Forms.PageSetupDialog> component is how it interacts with the <xref:System.Drawing.Printing.PageSettings> class.</span></span> <span data-ttu-id="3d0d7-107"><xref:System.Drawing.Printing.PageSettings> Sınıfı, bir sayfa yazdırılabilir, sayfayı ve kenar boşluklarını boyutunu Kağıt yönlendirmesi gibi şekilde değiştiren ayarları belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-107">The <xref:System.Drawing.Printing.PageSettings> class is used to specify settings that modify the way a page will be printed, such as paper orientation, the size of the page, and the margins.</span></span> <span data-ttu-id="3d0d7-108">Bu ayarların her biri bir özelliği olarak temsil edilir <xref:System.Drawing.Printing.PageSettings> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-108">Each of these settings is represented as a property of the <xref:System.Drawing.Printing.PageSettings> class.</span></span> <span data-ttu-id="3d0d7-109"><xref:System.Windows.Forms.PageSetupDialog> Sınıfı, belirli bir örneği için bu özellik değerlerini değiştirir <xref:System.Drawing.Printing.PageSettings> belge ile ilişkili sınıfı (ve olarak temsil edilen bir <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> özelliği).</span><span class="sxs-lookup"><span data-stu-id="3d0d7-109">The <xref:System.Windows.Forms.PageSetupDialog> class modifies these property values for a given instance of the <xref:System.Drawing.Printing.PageSettings> class that is associated with the document (and is represented as a <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> property).</span></span>  
   
-### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a><span data-ttu-id="884c6-110">PageSetupDialog bileşenini kullanarak sayfa özelliklerini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="884c6-110">To set page properties using the PageSetupDialog component</span></span>  
+### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a><span data-ttu-id="3d0d7-110">PageSetupDialog bileşenini kullanarak sayfa özelliklerini ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="3d0d7-110">To set page properties using the PageSetupDialog component</span></span>  
   
-1.  <span data-ttu-id="884c6-111">Kullanmak <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="884c6-111">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.</span></span>  
+1.  <span data-ttu-id="3d0d7-111">Kullanmak <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanmak için.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-111">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog box, specifying the <xref:System.Drawing.Printing.PrintDocument> to use.</span></span>  
   
-     <span data-ttu-id="884c6-112">Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır örneği <xref:System.Windows.Forms.PageSetupDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="884c6-112">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PageSetupDialog> component.</span></span> <span data-ttu-id="884c6-113">Var olan bir belgeyi belirtilen <xref:System.Windows.Forms.PageSetupDialog.Document%2A> özelliği ve kendi <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> özelliği ayarlanmış `false`.</span><span class="sxs-lookup"><span data-stu-id="884c6-113">An existing document is specified in the <xref:System.Windows.Forms.PageSetupDialog.Document%2A> property, and its <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> property is set to `false`.</span></span>  
+     <span data-ttu-id="3d0d7-112">Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır örneği <xref:System.Windows.Forms.PageSetupDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-112">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens an instance of the <xref:System.Windows.Forms.PageSetupDialog> component.</span></span> <span data-ttu-id="3d0d7-113">Var olan bir belgeyi belirtilen <xref:System.Windows.Forms.PageSetupDialog.Document%2A> özelliği ve kendi <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> özelliği ayarlanmış `false`.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-113">An existing document is specified in the <xref:System.Windows.Forms.PageSetupDialog.Document%2A> property, and its <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> property is set to `false`.</span></span>  
   
-     <span data-ttu-id="884c6-114">Formunuz sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> adlı bileşeni `myDocument`ve bir <xref:System.Windows.Forms.PageSetupDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="884c6-114">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PageSetupDialog> component.</span></span>  
+     <span data-ttu-id="3d0d7-114">Formunuz sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Drawing.Printing.PrintDocument> adlı bileşeni `myDocument`ve bir <xref:System.Windows.Forms.PageSetupDialog> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-114">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a <xref:System.Drawing.Printing.PrintDocument> component named `myDocument`, and a <xref:System.Windows.Forms.PageSetupDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -89,7 +76,7 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-     <span data-ttu-id="884c6-115">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="884c6-115">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="3d0d7-115">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-115">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -100,7 +87,7 @@ ms.lasthandoff: 04/26/2018
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="884c6-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="884c6-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3d0d7-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3d0d7-116">See Also</span></span>  
  <xref:System.Windows.Forms.PageSetupDialog>  
- [<span data-ttu-id="884c6-117">Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="884c6-117">How to: Create Standard Windows Forms Print Jobs</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
- [<span data-ttu-id="884c6-118">PageSetupDialog bileşeni</span><span class="sxs-lookup"><span data-stu-id="884c6-118">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+ [<span data-ttu-id="3d0d7-117">Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3d0d7-117">How to: Create Standard Windows Forms Print Jobs</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ [<span data-ttu-id="3d0d7-118">PageSetupDialog bileşeni</span><span class="sxs-lookup"><span data-stu-id="3d0d7-118">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

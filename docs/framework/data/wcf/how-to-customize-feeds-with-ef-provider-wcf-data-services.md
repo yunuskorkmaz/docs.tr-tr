@@ -1,55 +1,44 @@
 ---
-title: "Nasıl yapılır: Entity Framework sağlayıcısı (WCF Veri Hizmetleri) ile akışları özelleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: Entity Framework sağlayıcısı (WCF Veri Hizmetleri) ile akışları özelleştirme'
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 276aea81716f58ed4a0d6ba8e1f8e2bcdbedb908
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bd29f6154297c2410294af14952d3d79201966ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359484"
 ---
-# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="a04ac-102">Nasıl yapılır: Entity Framework sağlayıcısı (WCF Veri Hizmetleri) ile akışları özelleştirme</span><span class="sxs-lookup"><span data-stu-id="a04ac-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="a04ac-103">bir varlığın özelliklerini AtomPub protokolünde tanımlanan kullanılmayan öğeleri eşlenebilir böylece bir veri hizmeti yanıtında Atom serileştirme özelleştirmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="a04ac-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="a04ac-104">Bu konu, Entity Framework sağlayıcısı kullanarak bir .edmx dosyasında tanımlanan bir veri modeli varlık türlerine eşleme öznitelikleri tanımlamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a04ac-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="a04ac-105">Daha fazla bilgi için bkz: [akış özelleştirme](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="a04ac-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="b7579-102">Nasıl yapılır: Entity Framework sağlayıcısı (WCF Veri Hizmetleri) ile akışları özelleştirme</span><span class="sxs-lookup"><span data-stu-id="b7579-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="b7579-103"> bir varlığın özelliklerini AtomPub protokolünde tanımlanan kullanılmayan öğeleri eşlenebilir böylece bir veri hizmeti yanıtında Atom serileştirme özelleştirmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="b7579-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="b7579-104">Bu konu, Entity Framework sağlayıcısı kullanarak bir .edmx dosyasında tanımlanan bir veri modeli varlık türlerine eşleme öznitelikleri tanımlamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b7579-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="b7579-105">Daha fazla bilgi için bkz: [akış özelleştirme](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b7579-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="a04ac-106">Bu konuda veri modeli içeriyor aracı tarafından oluşturulan .edmx dosyasının el ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="a04ac-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="a04ac-107">Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için dosyayı el ile değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a04ac-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="a04ac-108">Varlık veri modeli araçları oluşturmak .edmx dosyasının hakkında daha fazla bilgi için bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span><span class="sxs-lookup"><span data-stu-id="a04ac-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="a04ac-109">Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="a04ac-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="a04ac-110">Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="a04ac-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="b7579-106">Bu konuda veri modeli içeriyor aracı tarafından oluşturulan .edmx dosyasının el ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="b7579-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="b7579-107">Veri modeli için Uzantılar Entity Designer tarafından desteklenmediği için dosyayı el ile değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="b7579-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="b7579-108">Varlık veri modeli araçları oluşturmak .edmx dosyasının hakkında daha fazla bilgi için bkz: [.edmx dosyasının genel bakış](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span><span class="sxs-lookup"><span data-stu-id="b7579-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="b7579-109">Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="b7579-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="b7579-110">Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="b7579-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="a04ac-111">Akış özelleştirme öznitelikler eklemek için Northwind.edmx dosyasını el ile değiştirme</span><span class="sxs-lookup"><span data-stu-id="a04ac-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="b7579-111">Akış özelleştirme öznitelikler eklemek için Northwind.edmx dosyasını el ile değiştirme</span><span class="sxs-lookup"><span data-stu-id="b7579-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
   
-1.  <span data-ttu-id="a04ac-112">İçinde **Çözüm Gezgini**, sağ `Northwind.edmx` dosya ve ardından **birlikte Aç**.</span><span class="sxs-lookup"><span data-stu-id="a04ac-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
+1.  <span data-ttu-id="b7579-112">İçinde **Çözüm Gezgini**, sağ `Northwind.edmx` dosya ve ardından **birlikte Aç**.</span><span class="sxs-lookup"><span data-stu-id="b7579-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
   
-2.  <span data-ttu-id="a04ac-113">İçinde **birlikte Aç - Northwind.edmx** iletişim kutusunda **XML Düzenleyicisi**ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="a04ac-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
+2.  <span data-ttu-id="b7579-113">İçinde **birlikte Aç - Northwind.edmx** iletişim kutusunda **XML Düzenleyicisi**ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="b7579-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
   
-3.  <span data-ttu-id="a04ac-114">Bulun `ConceptualModels` öğesi ve varolan Değiştir `Customers` varlık türünü içeren öğesi ile akış özelleştirme eşleme öznitelikleri:</span><span class="sxs-lookup"><span data-stu-id="a04ac-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
+3.  <span data-ttu-id="b7579-114">Bulun `ConceptualModels` öğesi ve varolan Değiştir `Customers` varlık türünü içeren öğesi ile akış özelleştirme eşleme öznitelikleri:</span><span class="sxs-lookup"><span data-stu-id="b7579-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  <span data-ttu-id="a04ac-115">Değişiklikleri Northwind.edmx dosyasını kaydedip kapatın.</span><span class="sxs-lookup"><span data-stu-id="a04ac-115">Save changes and close the Northwind.edmx file.</span></span>  
+4.  <span data-ttu-id="b7579-115">Değişiklikleri Northwind.edmx dosyasını kaydedip kapatın.</span><span class="sxs-lookup"><span data-stu-id="b7579-115">Save changes and close the Northwind.edmx file.</span></span>  
   
-5.  <span data-ttu-id="a04ac-116">(İsteğe bağlı) Northwind.edmx dosyasını sağ tıklatın ve ardından **çalıştırmak özel araç**.</span><span class="sxs-lookup"><span data-stu-id="a04ac-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
+5.  <span data-ttu-id="b7579-116">(İsteğe bağlı) Northwind.edmx dosyasını sağ tıklatın ve ardından **çalıştırmak özel araç**.</span><span class="sxs-lookup"><span data-stu-id="b7579-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
   
-     <span data-ttu-id="a04ac-117">Gerekli nesne katmanı dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a04ac-117">This regenerates the object layer file, which may be required.</span></span>  
+     <span data-ttu-id="b7579-117">Gerekli nesne katmanı dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b7579-117">This regenerates the object layer file, which may be required.</span></span>  
   
-6.  <span data-ttu-id="a04ac-118">Projeyi yeniden derleyin.</span><span class="sxs-lookup"><span data-stu-id="a04ac-118">Recompile the project.</span></span>  
+6.  <span data-ttu-id="b7579-118">Projeyi yeniden derleyin.</span><span class="sxs-lookup"><span data-stu-id="b7579-118">Recompile the project.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a04ac-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="a04ac-119">Example</span></span>  
- <span data-ttu-id="a04ac-120">Önceki örnekte URI'sini aşağıdaki sonucu döndürür `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span><span class="sxs-lookup"><span data-stu-id="a04ac-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
+## <a name="example"></a><span data-ttu-id="b7579-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="b7579-119">Example</span></span>  
+ <span data-ttu-id="b7579-120">Önceki örnekte URI'sini aşağıdaki sonucu döndürür `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span><span class="sxs-lookup"><span data-stu-id="b7579-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## <a name="see-also"></a><span data-ttu-id="a04ac-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a04ac-121">See Also</span></span>  
- [<span data-ttu-id="a04ac-122">Entity Framework Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="a04ac-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="b7579-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b7579-121">See Also</span></span>  
+ [<span data-ttu-id="b7579-122">Entity Framework Sağlayıcısı</span><span class="sxs-lookup"><span data-stu-id="b7579-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
