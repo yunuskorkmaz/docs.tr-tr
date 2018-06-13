@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584186"
 ---
 # <a name="using-threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma
 Bu bölümdeki konular, oluşturulmasını ve yönetimini yönetilen iş parçacığı, yönetilen iş parçacığı veri geçirmek ve geri sonuçlar almak nasıl ve iş parçacıklarını yok ve işlemek nasıl ele bir <xref:System.Threading.ThreadAbortException>.  

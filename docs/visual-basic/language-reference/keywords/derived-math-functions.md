@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596814"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Türetilen Matematik İşlevleri (Visual Basic)
 Aşağıdaki tabloda iç matematik işlevlerden türetilebilir iç olmayan matematik işlevleri gösterilmektedir <xref:System.Math?displayProperty=nameWithType> nesnesi. İç matematik işlevleri ekleyerek erişebilirsiniz `Imports System.Math` dosya veya projesi.  

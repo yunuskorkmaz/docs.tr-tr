@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586760"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Sürücüleri, Dizinleri ve Dosyaları İşleme (Visual Basic)
 Visual Basic sürücüler, klasörler ve dosyalar ile işlemek için kullanabileceğiniz `My.Computer.FileSystem` daha iyi performans sağlar ve gibi geleneksel yöntemlerini kullanmayı daha kolay olan nesne, `FileOpen` ve `Write` (bunlar hala olmasına rağmen işlevleri kullanılabilir). Aşağıdaki bölümlerde bu yöntemleri ayrıntılı açıklanmaktadır.  

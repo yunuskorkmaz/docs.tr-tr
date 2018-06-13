@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637875"
 ---
 # <a name="no-mouse-is-present"></a>Fare yok
 Özelliklerinden birini `My.Computer.Mouse` nesne çağrıldı, ancak hiçbir fare veya fare bağlantı noktası yüklü bilgisayar sahiptir.  

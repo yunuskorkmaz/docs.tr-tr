@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584304"
 ---
 # <a name="barrier-net-framework"></a>Engel (.NET Framework)
 A *engel* birden çok iş parçacığı sağlayan bir kullanıcı tarafından tanımlanan eşitleme ilkel (olarak bilinen *katılımcıları*) aynı anda üzerinde bir algoritma aşamada çalışması için. Kodda engel noktası ulaşana kadar her katılımcı yürütür. Engeli iş bir aşamada sonunu temsil eder. Katılımcı engel ulaşırsa, tüm katılımcılar aynı engel ulaştınız kadar engeller. Tüm katılımcılar engel ulaştınız sonra sonrası aşaması eylem isteğe bağlı olarak çağırabilirsiniz. Diğer tüm iş parçacıklarının hala engellenirken sonrası Bu aşama eylemi eylemleri gerçekleştirmek için tek bir iş parçacığı tarafından kullanılabilir. Eylem yürütüldükten sonra katılımcıları tüm engellenmemiş.  

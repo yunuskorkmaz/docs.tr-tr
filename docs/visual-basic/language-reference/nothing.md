@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603996"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Herhangi bir veri türünün varsayılan değerini temsil eder. Referans türleri için varsayılan değerdir `null` başvuru. Değer türleri için varsayılan değer, değer türü boş değer atanabilir olmasına bağlıdır.  

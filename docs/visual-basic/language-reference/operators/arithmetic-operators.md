@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603278"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Aritmetik İşleçler (Visual Basic)
 Visual Basic'te tanımlanan aritmetik işleçler şunlardır:  

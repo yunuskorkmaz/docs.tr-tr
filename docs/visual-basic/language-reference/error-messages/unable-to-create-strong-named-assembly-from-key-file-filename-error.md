@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595052"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Tanımlayıcı adlı derleme anahtar dosyasından oluşturulamadı &#39; &lt;filename&gt;&#39;: &lt;hata&gt;
 Tanımlayıcı adlı bir derleme belirtilen anahtar dosyasından oluşturulamadı.  

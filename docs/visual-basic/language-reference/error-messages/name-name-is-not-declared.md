@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594825"
 ---
 # <a name="name-39ltnamegt39-is-not-declared"></a>Ad &#39; &lt;adı&gt; &#39; bildirilmemiş olan
 Bir deyim programlama bir öğesiyle ancak derleyici tam ada sahip bir öğe bulunamıyor.  

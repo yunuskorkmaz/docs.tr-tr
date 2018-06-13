@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582657"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Klavyeye Erişme (Visual Basic)
 `My.Computer.Keyboard` Sağlar hangi anahtarlar gibi klavye geçerli durumunu erişmek için özellikleri şu anda basılı nesne ve etkin pencereyi tuş vuruşlarını göndermek için bir yöntem sağlar.  

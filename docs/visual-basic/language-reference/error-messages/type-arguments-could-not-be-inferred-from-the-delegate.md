@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598247"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Tür bağımsız değişkenleri temsilciden gösterilemedi
 Atama deyimini kullanan `AddressOf` genel adresi atamak için yordamı bir temsilci, ancak genel yordam için herhangi bir tür bağımsız değişkeni sağlamaz.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581387"
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
 Paralel LINQ (PLINQ) nesnelere LINQ paralel bir uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçleri tam kümesi uygulayan <xref:System.Linq> ad alanı ve paralel işlemleri için ek işleçler sahiptir. PLINQ Basitlik ve LINQ sözdizimi okunabilirliğini paralel programlama güç ile birleştirir. Yalnızca kod gibi ana bilgisayar özelliklerine göre eşzamanlılık ölçüde PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  

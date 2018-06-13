@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638688"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Bazı dosya ve klasörleri özel durumları işleme sırasında neden
 Dizinler ve dosyalar özel durumlar bir işlem denendi, ancak kullanıcı gerekli izinlere sahip olduğunda neden olabilir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635194"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Bir kayıt defteri kovanı silinemiyor
 Bir kayıt defteri kovanı silme girişiminde bulunuldu. Kovanları olan üst düzey kayıt defteri anahtarları gibi `HKEY_CURRENT_USER` ve `HKEY_LOCAL_MACHINE`ve silinemez.  

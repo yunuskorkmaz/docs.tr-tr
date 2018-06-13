@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579658"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 <a name="Top"></a> Varsayılan olarak, herhangi bir normal ifade deseni değişmez değer karakter ile giriş dizesi karşılaştırması büyük küçük harfe duyarlı olduğundan, normal ifade deseni boşluk değişmez değer boşluk karakterleri ve yakalama gruplarında normal bir ifade olarak yorumlanır açıkça örtük olarak da adlandırılır. Normal ifade seçenekleri belirterek bu ve diğer birkaç varsayılan normal ifade davranışının yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen, bu seçenekleri normal ifade deseni bir parçası olarak dahil edilen satır içi olabilir ya da için sağlanabilir bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıfı oluşturucusu veya statik desen eşleştirme yöntemi olarak bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri.  

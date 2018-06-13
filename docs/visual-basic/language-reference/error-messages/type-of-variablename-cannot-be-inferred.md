@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597159"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tür &#39; &lt;variablename&gt; &#39; döngü sınırları ve adım değişken için aynı türde genişletmek değil çünkü çıkarsanamıyor
 Yazdığınız bir `For...Next` döngü içinde derleyici olamaz Infer for döngüsü denetim değişkeni için bir veri türü aşağıdaki koşulların geçerli olması için:  

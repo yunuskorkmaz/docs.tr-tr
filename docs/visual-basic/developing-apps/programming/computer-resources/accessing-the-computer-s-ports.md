@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585547"
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Bilgisayarın erişim&#39;s bağlantı noktaları (Visual Basic)
 `My.Computer.Ports` Nesnesi, bir özellik ve bilgisayar seri bağlantı noktalarına erişmek için bir yöntem sağlar.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582743"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma
 Aşağıdaki örnekte nasıl yazılacağını gösterir bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> iş parçacığı yerel değişkenleri kullanan yöntemi. Zaman bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü yürütür, kendi kaynak koleksiyonu birden çok bölümlere ayırır. Her bölüm "iş parçacığı-yerel" değişkeni kopyasını alır. (Bazı durumlarda iki bölüm aynı iş parçacığı üzerinde çalışabilir "iş parçacığı-yerel" terimi burada biraz yanlış çünkü.)  

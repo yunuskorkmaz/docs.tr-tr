@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586457"
 ---
 # <a name="identifier-is-too-long"></a>Tanımlayıcı çok uzun
 Ad veya her programlama öğe tanımlayıcı 1023 karakterle sınırlıdır. Ayrıca, bir tam ad 1023 karakteri aşamaz. Bu, tüm tanımlayıcı dizesinde anlamına gelir (`<namespace>.<...>.<namespace>.<class>.<element>`) birden fazla 1023 karakter uzunluğunda, üye erişimi işleci dahil olmak üzere olamaz (`.`) karakter.  

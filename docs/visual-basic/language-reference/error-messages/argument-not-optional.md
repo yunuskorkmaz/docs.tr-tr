@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585122"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Bağımsız değişken isteğe bağlı değil (Visual Basic)
 Sayısı ve türleri bağımsız değişkenler beklenen eşleşmelidir. Yanlış sayıda bağımsız değişken yok veya belirtilmemiş bir bağımsız değişken isteğe bağlı değil. Bunu bildirildi bağımsız değişken yalnızca kullanıcı tanımlı bir yordamı çağrısından atlanabilir `Optional` yordamı tanımı'nda.  

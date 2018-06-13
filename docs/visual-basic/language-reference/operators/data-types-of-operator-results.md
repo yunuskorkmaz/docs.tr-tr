@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605439"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>İşleç Sonuçlarının Veri Türleri (Visual Basic)
 Visual Basic işlenen veri türlerine bağlı bir işlem sonucu veri türünü belirler. Bazı durumlarda bu iki işlenen daha büyük bir aralık ile bir veri türü olabilir.  

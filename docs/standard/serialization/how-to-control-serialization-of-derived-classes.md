@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582128"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: denetim türetilen sınıfların serileştirme
 Kullanarak **XmlElementAttribute** bir XML öğesi adını değiştirmek için öznitelik nesne seri hale getirme özelleştirmek için tek yolu değil. Ayrıca varolan bir sınıftan türetilen ve bilgilendirerek XML akışı özelleştirebilirsiniz <xref:System.Xml.Serialization.XmlSerializer> yeni sınıf serileştirmek nasıl örneği.  

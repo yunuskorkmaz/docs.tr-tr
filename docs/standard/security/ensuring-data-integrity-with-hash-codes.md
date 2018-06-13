@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581579"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Karma Kodlarla Veri Bütünlüğünü Sağlama
 Bir karma değer veri benzersiz olarak tanımlayan sabit uzunlukta sayısal bir değerdir. Dijital imzalarla kullanıldıkları şekilde karma değerleri büyük miktarlarda verinin çok daha küçük sayısal değerler olarak temsil eder. Bir karma değer daha büyük bir değer imzalama değerinden daha verimli bir şekilde oturum açabilir. Karma değerler, güvenli kanal gönderilen verilerin bütünlüğünü doğrulamak için yararlıdır. Veri değiştirilmiş olup olmadığını belirlemek için gönderildiği gibi alınan verilerin karma değerini verilerin karma değerini karşılaştırılabilir.  
