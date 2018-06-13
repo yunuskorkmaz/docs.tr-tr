@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513825"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Tasarlama ve uygulama özel etkinlikler
 Özel etkinlikleri [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ya da assembling sistem tarafından sağlanan etkinliklerine bileşik etkinlikleri veya öğesinden türetilen yeni türleri oluşturma tarafından oluşturulan <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, veya <xref:System.Activities.NativeActivity>. Bu bölümde, her iki yöntemle özel etkinlikler oluşturmayı açıklar.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500242"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Nasıl yapılır: Hizmet Sözleşmelerinde Hata Bildirme
 Hata koşullarını ortaya çıktığında yönetilen kodda özel durumlar. Windows Communication Foundation (WCF) uygulamalarında hangi hata bilgilerini hizmet sözleşmesi SOAP Hataları bildirerek istemcilere döndürülen Hizmet sözleşmeleri ancak belirtin. Özel durum ve hataları arasındaki ilişkiyi genel bakış için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

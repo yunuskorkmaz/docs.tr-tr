@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513005"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF akış etkinliği
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bir iş akışındaki akışını denetlemek için çeşitli etkinlikler sağlar. Bu etkinliklerin bazıları (gibi `Switch` ve `If`) akış denetim yapıları benzer ortamları gibi Visual C#, diğerlerinin programlama uygulamak (gibi `Pick`) modeli yeni programlama yapıları.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337619"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Dizin Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Dizin oluşturucular oluşturmanıza olanak sağlayan bir söz dizimi kullanışlı olan bir [sınıfı](../../../csharp/language-reference/keywords/class.md), [yapısı](../../../csharp/language-reference/keywords/struct.md), veya [arabirimi](../../../csharp/language-reference/keywords/interface.md) istemci uygulamaları, bir dizi olarak erişebilir. Dizin oluşturucular en sık birincil amacı olan bir iç toplama veya dizi kapsülleyen türlerinde uygulanır. Örneğin, 24 saatlik bir dönemde 10 farklı saatlerinde kayıtlı olan Farenheit sıcaklık temsil eden TempRecord adlı bir sınıf olduğunu varsayalım. "Etme temsil etmek için temps" float türünde adlı bir dizi sınıf içerir ve bir <xref:System.DateTime> etme kaydedilen tarih temsil eder. Bu sınıf bir dizin oluşturucu uygulayarak istemcileri TempRecord örneğinde etme erişebilir `float temp = tr[4]` yerine olarak `float temp = tr.temps[4]`. Dizin Oluşturucu gösterimi yalnızca istemci uygulamaları için söz dizimi basitleştirir; Ayrıca sınıf ve amacı anlamak diğer geliştiriciler için daha sezgisel kılar.  

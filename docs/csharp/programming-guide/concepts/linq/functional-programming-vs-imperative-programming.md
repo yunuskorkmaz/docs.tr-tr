@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334905"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>İşlevsel Programlama vs. Kesinlik temelli programlama (C#)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel kesinlik temelli (yordam) programlama ile karşılaştırır.  

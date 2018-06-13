@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504325"
 ---
 # <a name="services-and-transactions"></a>Hizmetler ve İşlemler
 Windows Communication Foundation (WCF) uygulamaları, gelen bir işlem içinde bir istemci başlatabilir ve hizmet işlemi işlemde koordine. İstemciler bir işlem başlatır ve birkaç hizmet işlemlerini çağırma ve hizmet işlemleri kaydedilmiş veya tek bir birim olarak geri emin olun.  

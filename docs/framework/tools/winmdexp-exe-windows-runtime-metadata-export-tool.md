@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408105"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Meta veri verme aracı (Winmdexp.exe) içeren bir dosyayı bir .NET Framework modül dönüştüren [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta verileri. Ancak .NET Framework derlemeleri ve [!INCLUDE[wrt](../../../includes/wrt-md.md)] meta veri dosyaları aynı fiziksel biçimi kullanın, .NET Framework derlemeleri olarak otomatik olarak kullanılabilir olmadığını anlamına gelir meta verileri tabloların içeriğini farklılıklar vardır [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşenleri . .NET Framework modüle kapatma işlemi bir [!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen olarak adlandırılır *dışarı aktarma*. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], sonuçta ortaya çıkan Windows Meta veriler (.winmd) dosya meta verileri ve uygulama içerir.  

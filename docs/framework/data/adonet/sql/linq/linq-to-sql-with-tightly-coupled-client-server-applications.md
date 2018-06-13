@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359926"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ-SQL ile sıkı şekilde bağlı istemci-sunucu uygulamaları
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta katmanda, sunu katmanı akıllı istemcilerde sıkı şekilde bağlı ile kullanılabilir. Salt okunur veri erişimi, hiçbir iyimser eşzamanlılık denetimleri veya zaman damgalı iyimser eşzamanlılık ilgili senaryolarda yok uzaktan olmayan senaryolar ile daha çok daha karmaşık. Ancak, ne zaman bir veritabanı gerektirir iyimser eşzamanlılık denetler özgün değerleriyle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri kümelerinde bulma verileri gidiş için destek düzeyini sağlamaz. Ancak, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] orta katman herhangi bir platformda istemcileri ile veri değişimi.  

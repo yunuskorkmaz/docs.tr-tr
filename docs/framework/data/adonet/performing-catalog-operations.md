@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362070"
 ---
 # <a name="performing-catalog-operations"></a>Katalog işlemlerini gerçekleştirme
 Bir veritabanı veya CREATE TABLE veya CREATE PROCEDURE deyimi gibi katalog değiştirmek için komut yürütme oluşturma bir **komutu** uygun SQL deyimlerini kullanarak nesne ve **bağlantı** nesnesi. Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.  

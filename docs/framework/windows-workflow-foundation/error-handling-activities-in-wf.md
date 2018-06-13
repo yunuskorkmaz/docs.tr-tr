@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512391"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF etkinlikleri hata işleme
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] hata işleme ve kurtarma uygulamak için birkaç sistem tarafından sağlanan etkinlikler sağlar. Daha fazla bilgi için bkz: [özel durumları](../../../docs/framework/windows-workflow-foundation/exceptions.md).  

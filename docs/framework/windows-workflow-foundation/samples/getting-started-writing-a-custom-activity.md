@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513325"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>Alma başlatılan özel bir etkinlik yazma
 Bu örnek, basit bir özel etkinlik XAML'de tanımlamak gösterilmiştir. Etkinlik adı verilen `Rhyme`, ve kendi mantığını üç dizi <xref:System.Activities.Statements.WriteLine> etkinlikler.  

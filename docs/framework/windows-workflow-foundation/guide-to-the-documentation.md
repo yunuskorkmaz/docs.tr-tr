@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513132"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows iş akışı belgeler için kılavuz
 Bu konu, Windows Workflow Foundation belgeleri kullanma hakkında bilgiler içerir. Bağlı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerini göre gruplandırılmış önerilir.  

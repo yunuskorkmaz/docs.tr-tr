@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339585"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (C#)
 Sorguları etkili bir şekilde yazmak için tam bir sorgu işlemi tüm değişken türleri, birbirleriyle nasıl ilişkili olduğunu anlamanız gerekir. Bu ilişkileri anlarsanız, daha kolay kavrama [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] belgelerinde örnekleri ve kod. Ayrıca, değişkenleri kullanarak örtük olarak yazılan ne olacağı arka planda anlayabileceği `var`.  
