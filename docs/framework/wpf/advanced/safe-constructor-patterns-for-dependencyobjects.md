@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547348"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObjects için Güvenli Oluşturucu Desenleri
 Genellikle, sınıf oluşturucular oluşturucular türetilmiş bir sınıf için temel oluşturucular başlatma çağrılabilir olduğundan sanal yöntemler veya temsilciler gibi geri çağırmaları çağırmalıdır değil. Sanal girme verilen herhangi bir nesnenin bir tamamlanmamış başlatma durumu yapılabilir. Ancak, özellik sistemi çağırır ve geri çağırmaları dahili olarak, bağımlılık özelliği sisteminin bir parçası kullanıma sunar. Bir bağımlılık özelliği değerle ayarlamakla kadar basit bir işlem <xref:System.Windows.DependencyObject.SetValue%2A> çağrısı potansiyel olarak içeren bir geri çağırma yere belirleme. Bu nedenle, bağımlılık türünüz temel sınıf olarak kullanılıyorsa, sorunlu olabilecek bir oluşturucu gövdesi içinde özellik değerlerini ayarlarken dikkatli olmanız gerekir. Uygulama için belirli bir desene yoktur <xref:System.Windows.DependencyObject> oluşturucular ve burada belgelenen bağımlılık özelliği durumlar ve devralınmış geri çağırmalar ile belirli sorunları önler.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558128"
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows'a Genel Bakış
 Kullanıcılar, Windows Presentation Foundation (WPF) tek başına uygulamalar windows aracılığıyla etkileşim. Veri visualizes ve kullanıcıların veri ile etkileşim kurmasına olanak sağlayan içeriği barındırmak için bir pencere birincil amacı budur. Tek başına [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları kullanarak kendi windows sağlamak <xref:System.Windows.Window> sınıfı. Bu konu tanıtır <xref:System.Windows.Window> oluşturma ve tek başına uygulamaları Windows'ta yönetme temellerini kapsayan önce.  

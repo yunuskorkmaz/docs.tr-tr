@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393689"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Zaman uyumsuz istemci yuvası kullanma
 Zaman uyumsuz istemci yuvası ağ işlemlerinin tamamlanması beklenirken uygulama askıya almaz. Bunun yerine, uygulama orijinal iş parçacığı üzerinde çalışmaya devam ederken ağ bağlantısının bir iş parçacığı üzerinde işlemek için standart .NET Framework zaman uyumsuz programlama modeli kullanır. Zaman uyumsuz yuva ağ kullanımına ağırlık olun veya ağ işlemlerinin devam etmeden önce tamamlamak Bekleyemez uygulamalar için uygundur.  

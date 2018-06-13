@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394985"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Bir Proxy üzerinden Internet erişimi
 Sitenizin Internet'e erişim sağlamak için bir proxy kullanıyorsa, uygulamanızı Web ara sunucusu ile iletişim kurmak etkinleştirmek için bir proxy örneği yapılandırmanız gerekir.  

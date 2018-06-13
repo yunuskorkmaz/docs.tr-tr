@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398111"
 ---
 # <a name="method-etw-events"></a>Yöntem ETW Olayları
 <a name="top"></a> Bu olaylar yöntemlerine özgüdür bilgi toplayın. Bu olaylar yükü simge çözünürlüğü için gereklidir. Ek olarak, bu olayları bir yöntem çağrıldı sayısı gibi yararlı bilgileri sağlar.  

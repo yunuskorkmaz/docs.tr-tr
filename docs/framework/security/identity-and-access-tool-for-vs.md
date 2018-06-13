@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398615"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Kimlik ve erişim aracı Visual Studio 2012 için
 Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktadır. Bu araç aşağıdaki URL'yi indirebilirsiniz: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) veya doğrudan doğrudan uzantıları Yöneticisi'nde "kimlik" için arama tarafından Visual Studio 11 içinde.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398033"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Geç başlatma* bir nesnenin anlamına gelir oluşturulduktan ilk kullanılan kadar ertelenir. (Bu konu için koşulları *geç başlatma* ve *yavaş örneklemesi* eşanlamlıdır.) Geç Başlatma öncelikle performansı, kayıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  

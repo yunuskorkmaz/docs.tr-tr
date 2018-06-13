@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394855"
 ---
 # <a name="how-to-download-files-with-ftp"></a>Nasıl yapılır: FTP dosyaları indirme
 Bu örnek, bir FTP sunucusundan dosya indirme gösterilmektedir.  

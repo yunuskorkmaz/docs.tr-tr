@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392183"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 `nonComVisibleBaseClass` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir `QueryInterface` çağrısı yapıldığında COM aranabilir sarmalayıcısı (saat) yerel veya yönetilmeyen kodla COM görünür olmayan bir taban sınıftan türeyen bir COM-yönetilen görünür sınıfının.  `QueryInterface` Çağrısı neden yalnızca çağrı burada istekleri sınıf arabirimi veya varsayılan durumlarda etkinleştirmeyi MDA `IDispatch` COM görünür yönetilen sınıf.  MDA değil ne zaman etkin `QueryInterface` olan açık bir arabirim için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği uygulanan ve COM görünür sınıfı tarafından açıkça uygulanır.  

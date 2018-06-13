@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289158"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 Anahtar sözcükler derleyici özel anlamları önceden tanımlanmış, ayrılmış tanımlayıcılardır. İçerirler sürece bunlar programınızdaki tanımlayıcıları olarak kullanılamaz `@` öneki olarak. Örneğin, `@if` geçerli bir tanımlayıcı değil ancak `if` değil çünkü `if` bir anahtar sözcüktür.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397578"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
 Genel türler hakkında bilgi tıpkı diğer türleri hakkında bilgi elde edilir: inceleniyor tarafından bir <xref:System.Type> genel türünü temsil eden nesne. İlkeye genel bir tür listesini içeren farktır <xref:System.Type> genel tür parametreleri temsil eden nesne. Bu bölümdeki ilk yordam genel türler inceler.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555848"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
 Bu örnek, bağlama hedefinin (hedef) veya bir bağlama bağlama source (kaynak) özelliğini güncelleştirildiğinde bildirim almak için nasıl ayarlanacağını gösterir.  

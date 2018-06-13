@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553374"
 ---
 # <a name="styles-and-templates"></a>Stilleri ve Şablonları
 Windows Presentation Foundation (WPF) stil ve şablon bir uygulama, belge veya kullanıcı arabirimini (UI) Tasarımcısı görsel olarak ilgi çekici uygulamaları oluşturmaya olanak tanıyan özellikler (stiller, şablonlar, tetikleyiciler ve film şeritleri) ve için bir paketi bakın kendi ürün için özel bir görünüm üzerinde standart hale getirme.  

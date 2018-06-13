@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396798"
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
 <xref:System.Net> Sınıflarını destekleyen seçin ve doğrulamak için çeşitli yollar <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla özel özniteliklere sahip bir sunucu gerektirebilir.  

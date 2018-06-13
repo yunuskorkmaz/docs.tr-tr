@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552925"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Nasıl yapılır: RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma
 Aşağıdaki örnek, içeriği kaydetmek gösterilmiştir bir <xref:System.Windows.Controls.RichTextBox> bir dosyaya, içerik tekrar içine yük <xref:System.Windows.Controls.RichTextBox>ve içindekileri yazdırın.  

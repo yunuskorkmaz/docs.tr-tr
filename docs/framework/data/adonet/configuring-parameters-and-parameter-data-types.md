@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759549"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
 Komut nesneleri parametreleri SQL deyimlerini ya da tür denetleme ve doğrulama sağlayan saklı yordamlar için değerleri geçirmek için kullanın. Komut metni parametre girişini yürütülebilir kod olarak değil, sabit değer olarak kabul edilir. Bu, bu sunucuda güvenlik ihlalleri güvenlik SQL deyimi içine bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı koruma yardımcı olur.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397981"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
 Yansıma gibi dil derleyicileri tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve örtük geç bağlama uygulamak için JScript. Bağlama benzersiz olarak belirtilen türüne karşılık gelen bildirim (uygulama) bulma işlemidir. Bu işlem çalışma zamanında yerine derleme zamanında oluştuğunda geç bağlama adı verilir. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] örtük geç bağlama kodunuzda kullanmanıza olanak sağlar; Visual Basic derleyici yansıma nesne türü almak için kullandığı bir yardımcı yöntemini çağırır. Yardımcı yönteme geçirilen bağımsız değişkenler çalışma zamanında çağrılacak uygun yöntemi neden olur. Bu bağımsız değişkenler, yöntem, çağrılan yöntemi (dize) ve (nesnelerinin bir dizisi) çağrılan yönteme geçirilen bağımsız değişken adını çağırmak (nesne) örneği bulunur.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395953"
 ---
 # <a name="using-client-sockets"></a>İstemci yuvaları kullanma
 Konuşma aracılığıyla başlatmadan önce bir <xref:System.Net.Sockets.Socket>, uygulamanızı ve uzak aygıt veri kanalı oluşturmanız gerekir. Diğer ağ adres ailesi ve protokolleri mevcut olmasına karşın, bu örnek uzak bir hizmet için TCP/IP'yi bağlantısının nasıl oluşturulacağını gösterir.  

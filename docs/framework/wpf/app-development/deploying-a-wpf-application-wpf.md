@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548636"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları yerleşik sonra dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework birkaç dağıtım teknolojileri içerir. Dağıtmak için kullanılan dağıtım teknolojisi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldıkları sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  

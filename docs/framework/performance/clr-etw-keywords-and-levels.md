@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397068"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
 <a name="top"></a> Windows (ETW) olayları için olay izleme, kategori ve düzey göre filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtrelemeyi sağlamak; çalışma zamanı ve özeti sağlayıcıları bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  

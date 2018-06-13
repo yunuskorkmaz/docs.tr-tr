@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543712"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Nasıl yapılır: Özel Gönderilmiş Olay Oluşturma
 Olay yönlendirme desteklemek kendi özel olayınız için kaydetmeniz gerekir. bir <xref:System.Windows.RoutedEvent> kullanarak <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> yöntemi. Bu örnek özel yönlendirilmiş olay oluşturma temelleri gösterir.  

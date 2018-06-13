@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557556"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
 <a name="introduction"></a> Bu genel bakışta Gezinti topolojide tanıtılmaktadır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Örnekler ile üç ortak gezinti topolojisi daha sonra ele alınmıştır.  

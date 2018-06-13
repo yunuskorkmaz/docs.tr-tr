@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545330"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource Biçimlendirme Uzantısı
 İçin herhangi bir değer sağlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellik özniteliği tarafından tanımlanan bir kaynağa başvuru olması için bu değeri erteleniyor. Bu kaynak için arama davranışı çalışma zamanı aramasına benzer.  

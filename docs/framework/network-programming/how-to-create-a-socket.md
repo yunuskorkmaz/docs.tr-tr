@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396954"
 ---
 # <a name="how-to-create-a-socket"></a>Nasıl yapılır: bir yuva oluşturun
 Uzak aygıtlarıyla iletişim kurmak için bir yuva kullanmadan önce yuva protokolünü ve ağ adresi bilgilerini ile başlatılması gerekir. Oluşturucusu <xref:System.Net.Sockets.Socket> sınıfı Adres ailesi, yuva türü ve yuva bağlantı kurmak için kullandığı protokol türü belirtin parametreleri sahiptir.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397968"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server Programlama ve Konak Koruması Öznitelikleri
 Kod erişimi güvenliği ve ana bilgisayar kaynağı koruma için ana bilgisayarın gereksinimlerini yükleme ve yönetilen kod bir SQL Server ana yürütme yeteneğini gerektirir.  Kod erişim güvenliği gereksinimleri üç SQL Server izin kümeleri biri tarafından belirtilir: güvenli, dış erişim veya güvenli değil. Kod içinde güvenli yürütme veya dış erişim izin kümeleri gerekir kaçınmak belirli türler veya sahip üyeler <xref:System.Security.Permissions.HostProtectionAttribute> özniteliği uygulanmıştır. <xref:System.Security.Permissions.HostProtectionAttribute> Türleri veya yöntemleri, belirli bir kodu tanımlayan bir güvenilirlik garantisi içinde yapıları kadar bir güvenlik izni konak izin vermeyecek değil.  Kullanımını <xref:System.Security.Permissions.HostProtectionAttribute> konak kararlılığını korunmasına yardımcı olan bir programlama modeli zorlar.  

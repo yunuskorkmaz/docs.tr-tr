@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335529"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 A *sorgu* bir veri kaynağından veri alır bir ifadedir. Sorguları genellikle bir özel sorgu dili ifade edilir. Farklı diller, zaman içinde çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XQuery XML için geliştirilmiştir. Bu nedenle, geliştiricilerin her veri kaynağı veya desteklemesi gerekir veri biçimi türü için yeni bir sorgu dili öğrenin gerekirdi. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu nesneler her zaman çalıştığınız. XML belgeleri, SQL veritabanları, verileri sorgulamak veya dönüştürme aynı temel kodlama modelleri kullanmanıza [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonları ve başka bir biçime kendisi için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  

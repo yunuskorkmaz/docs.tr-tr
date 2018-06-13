@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561179"
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Nasıl yapılır: bir saat olduğunda bildirim alma&#39;s durum değişiklikleri
 Saatin <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> olayı oluşur, kendi <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> zaman saatin başlatıldığında veya durdurulduğunda gibi geçersiz hale gelir. Kullanarak doğrudan ile bu olay için kaydedebilirsiniz bir <xref:System.Windows.Media.Animation.Clock>, veya kullanarak kaydolabilirsiniz bir <xref:System.Windows.Media.Animation.Timeline>.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286740"
 ---
 # <a name="define-c-reference"></a>#define (C# Başvurusu)
 Kullandığınız `#define` bir simge tanımlamak için. Geçirilen ifade olarak simgenin kullandığınızda [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ifade için yönerge, değerlendirecek `true`, aşağıdaki örnekte gösterildiği gibi:  

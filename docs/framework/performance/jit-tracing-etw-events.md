@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397565"
 ---
 # <a name="jit-tracing-etw-events"></a>ETW Olaylarını JIT İzleme
 <a name="top"></a> Bu olaylar, başarı veya başarısızlık tam zamanında (JIT) satır içi kullanım ve JIT kuyruk çağrıları ilgili bilgi toplayın.  

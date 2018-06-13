@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397175"
 ---
 # <a name="using-tcp-services"></a>TCP Hizmetleri kullanma
 <xref:System.Net.Sockets.TcpClient> Sınıfı TCP kullanarak bir Internet kaynağından veri ister. Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> isteme ve TCP kullanarak veri almak için. Uzak aygıt bağlantısı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.  

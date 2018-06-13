@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560909"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Nasıl yapılır: Çizim ile bir Alanı Boyama
 Bu örnek, bir alanı çizim ile boyamak gösterilmektedir. Bir alanı çizim ile boyamak için kullandığınız bir <xref:System.Windows.Media.DrawingBrush> ve bir veya daha fazla <xref:System.Windows.Media.Drawing> nesneleri.   Aşağıdaki örnek kullanan bir <xref:System.Windows.Media.DrawingBrush> iki elips çizimi sahip bir nesne boyamak için.  

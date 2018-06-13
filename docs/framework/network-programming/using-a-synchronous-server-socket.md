@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398150"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman uyumlu Server yuva kullanma
 Bir bağlantı isteği yuvada alınana kadar zaman uyumlu server yuva uygulamanın yürütülmesini askıya alın. Zaman uyumlu server yuva ağ kullanımına ağırlık kendi işleminde uygulamalar için uygun değildir, ancak bunlar Basit Ağ uygulamaları için uygun olabilir.  

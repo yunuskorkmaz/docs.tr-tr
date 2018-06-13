@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560292"
 ---
 # <a name="how-to-seek-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Arama
 Aşağıdaki örnekte nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> yöntemi bir <xref:System.Windows.Media.Animation.Storyboard> film şeridi animasyon herhangi bir konuma gitmek için.  

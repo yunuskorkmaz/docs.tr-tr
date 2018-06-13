@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559691"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Nasıl yapılır: Viewport3D'de Tıklama Testi
 Bu örnek isabet testi de 3B görsellerinin gösterilmektedir bir <xref:System.Windows.Controls.Viewport3D>.  

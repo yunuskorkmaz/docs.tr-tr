@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393925"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
 Bu bölümdeki konular Windows (ETW) olayları için olay izleme açıklar. Her olay bir ilişkili anahtar sözcüğü ve düzeyi, hangi açıklanan [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) konu. CLR olayları için iki sağlayıcı sahiptir:  

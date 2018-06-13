@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397773"
 ---
 # <a name="reliability-best-practices"></a>Güvenilirlik En İyi Yöntemleri
 Aşağıdaki güvenilirlik kurallar SQL Server'a yerleştirilir; Ancak, bunlar da herhangi bir ana bilgisayar tabanlı sunucu uygulama için geçerlidir. SQL Server gibi sunucu kaynakları sızıntısı değil ve duruma getirilmesi değil, son derece önemlidir.  Ancak, bir nesnenin durumu değiştirir her yöntemi için geri çekme kodu yazarak yapılamaz.  Hedef geri çekme kodu her konumdaki tüm hataları kurtarır yüzde 100 güvenilir yönetilen kodu değil yazmaktır.  Çok az fırsat başarı ile zorlu bir görev olabilir.  Ortak dil çalışma zamanı (CLR), yönetilen kod için yeterince güçlü garanti kusursuz kod uygun yazma yapmak için kolayca sağlayamaz.  ASP.NET farklı olarak, SQL Server veritabanı edilemeyecek uzunlukta bir süre boyunca sürüyor olmadan geri dönüştürüldüğünde olamaz yalnızca bir işlem kullandığını unutmayın.  

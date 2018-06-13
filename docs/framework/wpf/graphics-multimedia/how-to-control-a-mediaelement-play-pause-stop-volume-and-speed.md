@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561397"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Nasıl yapılır: MediaElement (Yürüt, Duraklat, Durdur, Ses Düzeyi ve Hız) Denetimi
 Aşağıdaki örnek, medya kullanma kayıttan yürütmeyi denetlemek gösterilmiştir bir <xref:System.Windows.Controls.MediaElement>. Örnek yürütmek, duraklatmak, durdurmak ve İleri ve geri ortamda Atla yanı sıra, ses ve hız oranını ayarlamak olanak sağlayan bir basit medya oynatıcı oluşturur.  

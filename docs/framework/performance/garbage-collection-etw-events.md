@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396941"
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 <a name="top"></a> Bu olaylar çöp toplama ilgili bilgi toplayın. Tanılamada yardımcı olurlar ve hata ayıklama, atık toplama kaç kez belirleme dahil olmak üzere gerçekleştirildiyse, ne kadar bellek çöp toplama ve benzeri sırasında bırakılmış.  

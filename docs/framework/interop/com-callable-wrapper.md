@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394972"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 COM istemcisi .NET nesnesi aradığında, ortak dil çalışma zamanı yönetilen nesneyi ve nesne için bir COM aranabilir sarmalayıcısı (saat) oluşturur. Bir .NET nesnesine başvuru için doğrudan COM istemcileri saatin tersi YÖNDE bir proxy olarak yönetilen nesne için kullanın.  

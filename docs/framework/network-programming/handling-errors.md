@@ -39,6 +39,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397929"
 ---
 # <a name="handling-errors"></a>Hataları işleme
 <xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıfları throw her iki sistem özel durumları (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  

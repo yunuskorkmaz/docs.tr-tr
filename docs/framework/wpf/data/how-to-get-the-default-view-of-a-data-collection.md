@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557179"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Nasıl yapılır: Veri Koleksiyonunun Varsayılan Görünümünü Alma
 Görünümler, aynı veri koleksiyonunu sıralama, filtreleme veya gruplandırma ölçütlerine bağlı olarak farklı şekillerde görüntülenmesine izin verir. Her koleksiyon bir bağlama, kaynağı olarak bir koleksiyon belirttiğinde gerçek bağlama kaynağı olarak kullanılan bir paylaşılan varsayılan görünüme sahiptir. Bu örnek, bir koleksiyon varsayılan görünümünü elde gösterilmektedir.  

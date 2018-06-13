@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561166"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Nasıl yapılır: Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.MatrixTransform> (Taşı) çevirmek için konum uzatma ve, eğme bir <xref:System.Windows.Controls.Button>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335396"
 ---
 # <a name="projection-operations-c"></a>Projeksiyon işlemleri (C#)
 Projeksiyon genellikle daha sonra kullanılacak bu özelliklerini içeren yeni bir forma bir nesne dönüştürme işlemi ifade eder. Projeksiyon kullanarak her nesneden oluşturulmuş yeni bir türü oluşturabilirsiniz. Bir özellik proje ve matematiksel işlevi gerçekleştirebilir. Özgün nesne değiştirmeden da yansıtabilirsiniz.  

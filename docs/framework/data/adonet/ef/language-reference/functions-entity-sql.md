@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760303"
 ---
 # <a name="functions-entity-sql"></a>İşlevler (varlık SQL)
 Varlık SQL kullanıcı tanımlı işlevler, kurallı işlevlerini ve sağlayıcıya özgü işlevlerini destekler. Kullanıcı tanımlı işlevler kavramsal model veya satır sorgu içinde belirtilir. Daha fazla bilgi için bkz: [kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  

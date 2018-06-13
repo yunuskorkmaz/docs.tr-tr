@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396191"
 ---
 # <a name="internet-authentication"></a>Internet kimlik doğrulama
 <xref:System.Net> Sınıflarını istemci kimlik doğrulaması mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, NTLM, negotiate ve Kerberos kimlik doğrulaması, yanı sıra oluşturabileceğiniz özel yöntemler.  

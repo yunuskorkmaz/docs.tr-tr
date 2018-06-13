@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558115"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Görsel Katmanda Tıklama Testi
 Bu konu görsel katman tarafından sağlanan isabet sınama işlevselliğine genel bir bakış sağlar. İsabet testi desteği sağlar, geometri veya nokta değerinin işlenmiş içeriği içinde olup olmadığını belirlemek bir <xref:System.Windows.Media.Visual>, birden çok nesne seçmek için seçim dikdörtgeninin gibi kullanıcı arabirimi davranışı uygulamak olanak sağlar.  

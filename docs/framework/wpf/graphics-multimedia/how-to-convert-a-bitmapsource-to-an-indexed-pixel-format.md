@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560857"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>Nasıl yapılır: BitmapSource'u Dizinli Piksel Biçimine Dönüştürme
 Bu örnek nasıl dönüştürüleceğini gösterir bir <xref:System.Windows.Media.Imaging.BitmapSource> dizinli piksel biçimine.  

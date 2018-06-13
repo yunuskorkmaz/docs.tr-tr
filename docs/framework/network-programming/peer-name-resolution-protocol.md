@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397006"
 ---
 # <a name="peer-name-resolution-protocol"></a>Eş Adı Çözümleme Protokolü
 Eşler arası ortamlarda, eş belirli ad çözümleme sistemleri birbirlerinin ağ konumlarını (adresler, protokoller ve bağlantı noktaları) gidermek için adlarını veya diğer türlerinden birini kullanın. Geçmişte, diğer etki alanı adı sistemi (DNS) içinde eksiklikleri yanı sıra doğası gereği geçici bir bağlantı tarafından eş adı çözümleme karmaşık.  

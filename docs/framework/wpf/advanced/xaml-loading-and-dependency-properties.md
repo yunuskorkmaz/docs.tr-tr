@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547732"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML Yükleme ve Bağımlılık Özellikleri
 Geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uyarlamasını kendi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci olduğu kendiliğinden bağımlılık özelliği kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] İşlemci ikili yüklerken bu özelliği sistem yöntemleri bağımlılık özellikleri için kullanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve bağımlılık özellikleri öznitelikleri işleme. Bu özellik sarmalayıcıları etkili bir şekilde atlar. Özel bağımlılık özelliklerini uygularken, bu davranışı dikkate almalı ve, özellik sarmalayıcısı sistem yöntem özelliği dışındaki başka bir kod yerleştirmekten kaçınmalısınız <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A>.  

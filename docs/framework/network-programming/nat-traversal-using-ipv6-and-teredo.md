@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398124"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT IPv6 ve Teredo kullanarak geçişi
 Ağ adresi çevirisi (NAT) geçişi için destek sağlayan geliştirmeler yapıldı. Bu değişiklikler, IPv6 ve Teredo kullanmak için tasarlanmıştır ancak de teknolojileri tünel diğer IP uygulanabilir. Bu geliştirmeler sınıflarda etkileyen <xref:System.Net> ve ilgili ad alanları.  

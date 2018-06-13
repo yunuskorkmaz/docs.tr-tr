@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557426"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
 Bu konuda, kullanıcıların ile nasıl etkileşim kurabileceğine açıklanmaktadır <xref:System.Windows.Controls.DataGrid> klavye ve fare kullanarak denetim.  

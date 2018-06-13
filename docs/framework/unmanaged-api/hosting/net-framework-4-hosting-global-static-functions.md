@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441474"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 Barındırma Genel Statik İşlevleri
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll içinde dışarı aktarılan bir iki yöntem sunar: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  

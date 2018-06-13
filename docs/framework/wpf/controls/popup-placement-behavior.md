@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558349"
 ---
 # <a name="popup-placement-behavior"></a>Açılan Pencere Yerleştirme Davranışı
 A <xref:System.Windows.Controls.Primitives.Popup> denetimi, bir uygulama gezinen ayrı bir pencerede içeriği görüntüler. Konumunu belirtebilirsiniz bir <xref:System.Windows.Controls.Primitives.Popup> bir denetim, fare veya kullanarak ekran göre <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, ve <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> özellikleri.  Bu özellikleri konumunu belirtme esneklik için birlikte çalışan <xref:System.Windows.Controls.Primitives.Popup>.  

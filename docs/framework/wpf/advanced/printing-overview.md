@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549584"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricilerin yeni zengin bir yazdırmayı ve baskı sistem yönetimi sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazıları bu yazdırma sistemi geliştirmelerini ayrıca oluşturma geliştiricilerine kullanılabilir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaları ve kullanan geliştiriciler yönetilmeyen kodu. Bu yeni işlevsellik özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  

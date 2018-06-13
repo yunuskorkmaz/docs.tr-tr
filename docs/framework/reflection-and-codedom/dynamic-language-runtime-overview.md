@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397292"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 *Dinamik dil çalışma zamanı* (DLR) olan hizmetleri dinamik diller için bir dizi ortak dil çalışma zamanı (CLR) ekler bir çalışma zamanı ortamı. DLR, .NET Framework üzerinde çalıştırmak için ve statik olarak yazılan diller için dinamik özellik eklemek için dinamik dilleri geliştirmek kolaylaştırır.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561033"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>Nasıl yapılır: BitmapImage'a Dönüşüm Uygulama
 Bu örnek nasıl uygulanacağını gösterir bir <xref:System.Windows.Media.Transform> için bir <xref:System.Windows.Media.Imaging.BitmapImage>.  

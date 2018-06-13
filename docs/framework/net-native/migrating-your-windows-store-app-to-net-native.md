@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397786"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamaların Windows Mağazası'nda veya geliştiricinin bilgisayarda statik derleme sağlar. Bu Windows mağazası uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derleme farklıdır veya [yerel Görüntü Oluşturucu (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farkları rağmen [!INCLUDE[net_native](../../../includes/net-native-md.md)] ile uyumluluğu korumak çalışır [.NET için Windows mağazası uygulamaları](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows mağazası uygulamaları üzerinde çalışır şeyler de çalışmak [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Ancak, bazı durumlarda davranış değişiklikleri karşılaşabilirsiniz. Bu belge standart .NET için Windows mağazası uygulamaları arasındaki bu farklılıkları açıklar ve [!INCLUDE[net_native](../../../includes/net-native-md.md)] aşağıdaki alanlarda:  

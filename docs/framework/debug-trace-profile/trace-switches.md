@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397500"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
 İzleme anahtarları etkinleştir, devre dışı bırakın ve İzleme çıktısı filtrelemek etkinleştirin. Bunlar, kodunuzda var ve dışarıdan .config dosyası aracılığıyla yapılandırılabilir nesneleridir. .NET Framework sağlanan izleme anahtarları üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı, <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfların belirli izleme düzeyi için bir izleme anahtarı etkinleştirin izin verecek şekilde <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> bu düzeyin altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Anahtar devre dışı bırakırsanız, izleme iletileri görüntülenmez. Özet bu sınıfların türetilmesi (**MustInherit**) sınıf **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  

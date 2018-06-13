@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397721"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Nasıl yapılır: İstek WebRequest sınıfı kullanarak verileri
 Aşağıdaki yordam, örneğin, bir sunucudan bir kaynak istemek için kullanılan adımlar, bir Web sayfasına veya dosya açıklar. Kaynak bir URI tarafından tanımlanan gerekir.  

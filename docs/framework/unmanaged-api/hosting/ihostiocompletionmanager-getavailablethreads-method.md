@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441844"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads Metodu
 G/ç Tamamlama iş parçacıklarının, istekleri şu anda bakım değil, ana bilgisayar tarafından yönetilen iş parçacığı sayısı toplam sayısını alır.  

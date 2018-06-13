@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559532"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Nasıl yapılır: 3B Görünümü Oluşturma
 Bu örnek düz bir yaprak Döndürülmüş kağıt gibi görünen 3-b bir nesnesinin nasıl oluşturulacağını gösterir. A <xref:System.Windows.Controls.Viewport3D> aşağıdaki bileşenleri ile birlikte bu basit 3B görünümü oluşturmak için kullanılır:  

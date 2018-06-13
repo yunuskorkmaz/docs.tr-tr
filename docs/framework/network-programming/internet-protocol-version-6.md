@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397123"
 ---
 # <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
 Internet Protokolü sürüm 6 (IPv6), standart protokol ağ katmanı Internet için yeni bir paketidir. IPv6 adresi tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri şekilde ile birçok geçerli sürümü (IPv4 olarak bilinir) Internet Protokolü paketi, sorunu çözmek için tasarlanmıştır. IPv6 yeni tür uygulamaların, eşler arası ve mobil uygulamaları dahil olmak üzere etkinleştirmek için Internet özelliklerini genişletir. Geçerli IPv4 protokolünün ana sorunları şunlardır:  

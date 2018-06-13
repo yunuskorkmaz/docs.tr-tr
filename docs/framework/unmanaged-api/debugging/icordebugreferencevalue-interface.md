@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422337"
 ---
 # <a name="icordebugreferencevalue-interface1"></a>Icordebugreferencevalue Interface1
 Bir nesneye bir başvurusu olan bir değer yönetme yöntemleri sağlar. (Diğer bir deyişle, bu arabirim bir işaretçi yönetme yöntemleri sağlar.) Bu arabirim "ICorDebugValue" uygular.  
