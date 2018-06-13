@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804969"
 ---
 # <a name="determining-service-operation-duration"></a>Hizmet işlemi süresini belirleme
 Bir Windows Communication Foundation (WCF) uygulamasında çözümleme izleme etkinleştirilirse, yürütme süresi bir hizmet işlemi için olay günlüğünü inceleyerek kolayca belirlenebilir.  Bu konuda, bir hizmet işlemi tamamlamak için geçen süreyi belirlemek gösterilmiştir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805024"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek seri hale getirmek ve seri durumdan uyumlu türleri gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>. Varsayılan Windows Communication Foundation (WCF) biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı, serileştirme ve seri durumdan kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML denetleyebilmeniz Örneğin, - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçası olması gerekiyorsa bu genellikle durumdur. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak istemciler olmayan WCF hizmetleri için oluştururken, seçili.  

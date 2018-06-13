@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807040"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe), Visual Studio hata ayıklayıcısı (F5) otomatik olarak ana bilgisayar ve uygulamış olan bir hizmeti test başlatma olanak sağlar. Ardından hizmetini bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  

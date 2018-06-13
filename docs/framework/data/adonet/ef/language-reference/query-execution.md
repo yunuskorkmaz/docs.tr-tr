@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804826"
 ---
 # <a name="query-execution"></a>Sorgu Yürütme
 Bir kullanıcı tarafından bir LINQ Sorgu oluşturulduktan sonra bir komut ağacındaki dönüştürülür. Bir komut ağacındaki bir Entity Framework ile uyumlu bir sorgu gösterimidir. Komut ağacı veri kaynağında sonra yürütülür. Sorgu yürütme sırasında kullanılan ifadeleri sonuç materialization dahil olmak üzere tüm sorgu ifadeleri (diğer bir deyişle, tüm bileşenleri sorgunun) değerlendirilir.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804631"
 ---
 # <a name="bindings-and-binding-elements"></a>Bağlamalar ve Bağlama Öğeleri
 Bağlamaları olan koleksiyonları adlı özel bir yapılandırma öğelerinin *bağlama öğeleri*, hizmet çalışma zamanı tarafından bir istemci her değerlendirilir veya hizmet uç noktası oluşturulur. İçinde bir bağlaması bağlama öğelerin sırasını ve türünü, seçim ve bir uç noktanın kanal yığınında protokolü ve taşıma kanalları yığınlama sırasını belirler.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806467"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 Windows Communication Foundation (WCF) hizmetini yayımlama, İleri aşamalara gerçekte test amacıyla bir üretim ortamında uygulamayı dağıtmak için WCF hizmet ana bilgisayarı ve WCF Test istemcisi tarafından sağlanan erken geliştirme ortamından yardımcı olur. Son dağıtım plana kullanmadan önce Windows Communication Foundation (WCF) hizmetini yayımlama, WCF hizmeti doğru bir şekilde gerçekleştirir ve yayımlanmaya hazır olduğunu doğrulamak için kullanabilirsiniz. Test etmek için çeşitli hedef konumlara WCF Hizmeti Kitaplıklarınızı dağıtmayı seçebilirsiniz.  
