@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392297"
 ---
 # <a name="blittable-and-non-blittable-types"></a><span data-ttu-id="67429-102">Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler</span><span class="sxs-lookup"><span data-stu-id="67429-102">Blittable and Non-Blittable Types</span></span>
 <span data-ttu-id="67429-103">Çoğu veri türleri, yönetilen ve yönetilmeyen bellekte ortak bir gösterimi olan ve birlikte çalışma sıralayıcı tarafından özel işlem gerektirmez.</span><span class="sxs-lookup"><span data-stu-id="67429-103">Most data types have a common representation in both managed and unmanaged memory and do not require special handling by the interop marshaler.</span></span> <span data-ttu-id="67429-104">Bu tür adlı *blittable türleri* arasında geçirildiğinde bunlar dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kodu.</span><span class="sxs-lookup"><span data-stu-id="67429-104">These types are called *blittable types* because they do not require conversion when they are passed between managed and unmanaged code.</span></span>  

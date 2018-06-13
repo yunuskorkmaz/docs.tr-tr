@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389544"
 ---
 # <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="17b8c-102">Yönetilmeyen kod ile birlikte çalışma</span><span class="sxs-lookup"><span data-stu-id="17b8c-102">Interoperating with unmanaged code</span></span>
 

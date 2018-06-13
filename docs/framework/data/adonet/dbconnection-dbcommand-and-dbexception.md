@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757131"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a><span data-ttu-id="d6c70-102">DbConnection, DbCommand ve DbException</span><span class="sxs-lookup"><span data-stu-id="d6c70-102">DbConnection, DbCommand and DbException</span></span>
 <span data-ttu-id="d6c70-103">Oluşturduktan sonra bir <xref:System.Data.Common.DbProviderFactory> ve <xref:System.Data.Common.DbConnection>, sonra veri kaynağından veri almak için komutlar ve veri okuyucu ile çalışabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d6c70-103">Once you have created a <xref:System.Data.Common.DbProviderFactory> and a <xref:System.Data.Common.DbConnection>, you can then work with commands and data readers to retrieve data from the data source.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744856"
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a><span data-ttu-id="5f43b-102">&lt;appDomainManagerAssembly&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="5f43b-102">&lt;appDomainManagerAssembly&gt; Element</span></span>
 <span data-ttu-id="5f43b-103">İşlem varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi sağlar derleme belirtir.</span><span class="sxs-lookup"><span data-stu-id="5f43b-103">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>  

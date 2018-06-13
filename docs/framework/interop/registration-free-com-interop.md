@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390256"
 ---
 # <a name="registration-free-com-interop"></a><span data-ttu-id="97fb9-102">Kayıtsız COM Birlikte Çalışma</span><span class="sxs-lookup"><span data-stu-id="97fb9-102">Registration-Free COM Interop</span></span>
 <span data-ttu-id="97fb9-103">Kayıtsız COM birlikte çalışma derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="97fb9-103">Registration-free COM interop activates a component without using the Windows registry to store assembly information.</span></span> <span data-ttu-id="97fb9-104">Bir bilgisayarda bir bileşen dağıtımı sırasında kayıt yerine, Win32 stil bildirim dosyaları bağlama ve etkinleştirme hakkında bilgi içeren tasarım zamanında oluşturun.</span><span class="sxs-lookup"><span data-stu-id="97fb9-104">Instead of registering a component on a computer during deployment, you create Win32-style manifest files at design time that contain information about binding and activation.</span></span> <span data-ttu-id="97fb9-105">Bu bildirim dosyası yerine kayıt defteri anahtarları, bir nesne etkinleştirme doğrudan.</span><span class="sxs-lookup"><span data-stu-id="97fb9-105">These manifest files, rather than registry keys, direct the activation of an object.</span></span>  

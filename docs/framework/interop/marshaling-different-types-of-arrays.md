@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391462"
 ---
 # <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="9656d-102">Farklı Dizi Türlerini Hazırlama</span><span class="sxs-lookup"><span data-stu-id="9656d-102">Marshaling Different Types of Arrays</span></span>
 <span data-ttu-id="9656d-103">Bir dizi aynı türde bir veya daha fazla öğe içeriyor, yönetilen kodda bir başvuru türüdür.</span><span class="sxs-lookup"><span data-stu-id="9656d-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="9656d-104">Diziler başvuru türleri olsa da, bunlar parametreler olduğu gibi yönetilmeyen işlevlerle iletilir.</span><span class="sxs-lookup"><span data-stu-id="9656d-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="9656d-105">Bu davranış, olan olarak In/Out parametreleri yönetilen diziler yönetilen nesnelere geçirilir şekilde tutmuyor.</span><span class="sxs-lookup"><span data-stu-id="9656d-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="9656d-106">Daha fazla bilgi için bkz: [kopyalama ve sabitleme](copying-and-pinning.md).</span><span class="sxs-lookup"><span data-stu-id="9656d-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  

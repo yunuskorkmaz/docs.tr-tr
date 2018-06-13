@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392807"
 ---
 # <a name="copying-and-pinning"></a><span data-ttu-id="7b839-102">Kopyalama ve Sabitleme</span><span class="sxs-lookup"><span data-stu-id="7b839-102">Copying and Pinning</span></span>
 <span data-ttu-id="7b839-103">Verileri hazırlama, birlikte çalışabilirlik Sıralayıcı kopyalayabilir veya sıralanmış veri sabitleyin.</span><span class="sxs-lookup"><span data-stu-id="7b839-103">When marshaling data, the interop marshaler can copy or pin the data being marshaled.</span></span> <span data-ttu-id="7b839-104">Veri kopyalama verilerin bir kopyasını tek bir yerden bellek başka bir bellek konuma yerleştirir.</span><span class="sxs-lookup"><span data-stu-id="7b839-104">Copying the data places a copy of data from one memory location in another memory location.</span></span> <span data-ttu-id="7b839-105">Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirildi.</span><span class="sxs-lookup"><span data-stu-id="7b839-105">The following illustration shows the differences between copying a value type and copying a type passed by reference from managed to unmanaged memory.</span></span>  

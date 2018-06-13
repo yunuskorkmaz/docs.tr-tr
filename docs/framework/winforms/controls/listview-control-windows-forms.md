@@ -1,13 +1,6 @@
 ---
 title: ListView Denetimi (Windows Forms)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lists
 - checked list items [Windows Forms], Windows Forms controls
@@ -18,83 +11,79 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8328bc705349ffeaa78d95e95ed0955ac6faa5c3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539695"
 ---
-# <a name="listview-control-windows-forms"></a><span data-ttu-id="50919-102">ListView Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="50919-102">ListView Control (Windows Forms)</span></span>
-<span data-ttu-id="50919-103">Windows Forms `ListView` denetim simgeler ile öğeler listesini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="50919-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="50919-104">Sağ bölmede Windows Explorer gibi bir kullanıcı arabirimi oluşturmak için bir liste görünümü kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="50919-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
+# <a name="listview-control-windows-forms"></a><span data-ttu-id="9dcb5-102">ListView Denetimi (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="9dcb5-102">ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="9dcb5-103">Windows Forms `ListView` denetim simgeler ile öğeler listesini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="9dcb5-104">Sağ bölmede Windows Explorer gibi bir kullanıcı arabirimi oluşturmak için bir liste görünümü kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="50919-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="50919-105">In This Section</span></span>  
- [<span data-ttu-id="50919-106">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="50919-106">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- <span data-ttu-id="50919-107">Bu denetim ve anahtar özellikleri ve özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-107">Describes this control and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9dcb5-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9dcb5-105">In This Section</span></span>  
+ [<span data-ttu-id="9dcb5-106">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9dcb5-106">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ <span data-ttu-id="9dcb5-107">Bu denetim ve anahtar özellikleri ve özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-107">Describes this control and its key features and properties.</span></span>  
   
- [<span data-ttu-id="50919-108">Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma</span><span class="sxs-lookup"><span data-stu-id="50919-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-109">Öğeleri listesi görünümünden ekleyip açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-109">Describes how to add or remove items from a list view.</span></span>  
+ [<span data-ttu-id="9dcb5-108">Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma</span><span class="sxs-lookup"><span data-stu-id="9dcb5-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-109">Öğeleri listesi görünümünden ekleyip açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-109">Describes how to add or remove items from a list view.</span></span>  
   
- [<span data-ttu-id="50919-110">Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme</span><span class="sxs-lookup"><span data-stu-id="50919-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-111">Her liste öğesi hakkındaki bilgileri görüntülemek için sütunları oluşturmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-111">Describes how to create columns in order to display information about each list item.</span></span>  
+ [<span data-ttu-id="9dcb5-110">Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-111">Her liste öğesi hakkındaki bilgileri görüntülemek için sütunları oluşturmayı açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-111">Describes how to create columns in order to display information about each list item.</span></span>  
   
- [<span data-ttu-id="50919-112">Nasıl yapılır: Windows Forms ListView Denetimi için Simgeler Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="50919-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-113">Büyük veya küçük simgeleri görüntüleme için uygun görüntü listesi bir liste görünümü ilişkilendirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
+ [<span data-ttu-id="9dcb5-112">Nasıl yapılır: Windows Forms ListView Denetimi için Simgeler Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-113">Büyük veya küçük simgeleri görüntüleme için uygun görüntü listesi bir liste görünümü ilişkilendirmek açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
   
- [<span data-ttu-id="50919-114">Nasıl yapılır: Windows Forms ListView Denetimiyle Sütunlardaki Alt Öğeleri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="50919-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-115">Her liste öğesi hakkında bilgi görüntülemek sütunlar açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-115">Describes how to display information about each list item in columns.</span></span>  
+ [<span data-ttu-id="9dcb5-114">Nasıl yapılır: Windows Forms ListView Denetimiyle Sütunlardaki Alt Öğeleri Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-115">Her liste öğesi hakkında bilgi görüntülemek sütunlar açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-115">Describes how to display information about each list item in columns.</span></span>  
   
- [<span data-ttu-id="50919-116">Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme</span><span class="sxs-lookup"><span data-stu-id="50919-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-117">Program aracılığıyla bir öğe seçin açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-117">Describes how to programmatically select an item.</span></span>  
+ [<span data-ttu-id="9dcb5-116">Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-117">Program aracılığıyla bir öğe seçin açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-117">Describes how to programmatically select an item.</span></span>  
   
- [<span data-ttu-id="50919-118">Nasıl yapılır: Windows Forms ListView Denetimindeki Öğeleri Gruplama</span><span class="sxs-lookup"><span data-stu-id="50919-118">How to: Group Items in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-119">Kategorilere ayrılmış görüntülemek için gruplar oluşturun ve her gruba öğeleri Ata açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
+ [<span data-ttu-id="9dcb5-118">Nasıl yapılır: Windows Forms ListView Denetimindeki Öğeleri Gruplama</span><span class="sxs-lookup"><span data-stu-id="9dcb5-118">How to: Group Items in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-119">Kategorilere ayrılmış görüntülemek için gruplar oluşturun ve her gruba öğeleri Ata açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
   
- <span data-ttu-id="50919-120">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="50919-120">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="9dcb5-120">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9dcb5-120">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="50919-121">Nasıl yapılır: Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="50919-121">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-122">Her biri büyük bir simge ve birkaç satırlık metin oluşur kutucukları olarak öğeleri görüntüleme açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-122">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
+ [<span data-ttu-id="9dcb5-121">Nasıl yapılır: Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-121">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-122">Her biri büyük bir simge ve birkaç satırlık metin oluşur kutucukları olarak öğeleri görüntüleme açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-122">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
   
- <span data-ttu-id="50919-123">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="50919-123">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="9dcb5-123">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9dcb5-123">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="50919-124">Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="50919-124">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="50919-125">Kullanıcı geri bildirim ekleme işareti her fare işaretçisini konumunun bırakma konumu gösterir sürükle ve bırak işlemleri için uygulanacak açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-125">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
+ [<span data-ttu-id="9dcb5-124">Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-124">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="9dcb5-125">Kullanıcı geri bildirim ekleme işareti her fare işaretçisini konumunun bırakma konumu gösterir sürükle ve bırak işlemleri için uygulanacak açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-125">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
   
- <span data-ttu-id="50919-126">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="50919-126">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="9dcb5-126">Bu özellik yalnızca kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9dcb5-126">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="50919-127">Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme</span><span class="sxs-lookup"><span data-stu-id="50919-127">How to: Add Search Capabilities to a ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
- <span data-ttu-id="50919-128">Program aracılığıyla metin arama veya ekran koordinatları kullanarak bir öğeyi bulmak açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-128">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
+ [<span data-ttu-id="9dcb5-127">Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme</span><span class="sxs-lookup"><span data-stu-id="9dcb5-127">How to: Add Search Capabilities to a ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+ <span data-ttu-id="9dcb5-128">Program aracılığıyla metin arama veya ekran koordinatları kullanarak bir öğeyi bulmak açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-128">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
   
--   <span data-ttu-id="50919-129">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="50919-129">[How to: Enable Tile View in a Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="9dcb5-129">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9dcb5-129">[How to: Enable Tile View in a Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="50919-130">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="50919-130">[How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="9dcb5-130">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9dcb5-130">[How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="50919-131">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimine Sütunlar Ekleme](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="50919-131">[How to: Add Columns to the Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="9dcb5-131">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimine Sütunlar Ekleme](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9dcb5-131">[How to: Add Columns to the Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="50919-132">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="50919-132">[How to: Group Items in a Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="9dcb5-132">[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9dcb5-132">[How to: Group Items in a Windows Forms ListView Control Using the Designer](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))</span></span>  
   
--   <span data-ttu-id="50919-133">[İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="50919-133">[Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))</span></span>  
+-   <span data-ttu-id="9dcb5-133">[İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="9dcb5-133">[Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="50919-134">Başvuru</span><span class="sxs-lookup"><span data-stu-id="50919-134">Reference</span></span>  
- <span data-ttu-id="50919-135"><xref:System.Windows.Forms.ListView>sınıfı</span><span class="sxs-lookup"><span data-stu-id="50919-135"><xref:System.Windows.Forms.ListView> class</span></span>  
- <span data-ttu-id="50919-136">Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="50919-136">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="9dcb5-134">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9dcb5-134">Reference</span></span>  
+ <span data-ttu-id="9dcb5-135"><xref:System.Windows.Forms.ListView> sınıfı</span><span class="sxs-lookup"><span data-stu-id="9dcb5-135"><xref:System.Windows.Forms.ListView> class</span></span>  
+ <span data-ttu-id="9dcb5-136">Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-136">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="50919-137">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="50919-137">Related Sections</span></span>  
- [<span data-ttu-id="50919-138">Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="50919-138">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- <span data-ttu-id="50919-139">Herhangi bir alanlar, yöntemi veya gereksinim duyduğunuz oluşturucular eklemek için liste görünümünde bir öğe veya ağaç görünümünde bir düğüm devral açıklar.</span><span class="sxs-lookup"><span data-stu-id="50919-139">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="9dcb5-137">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="9dcb5-137">Related Sections</span></span>  
+ [<span data-ttu-id="9dcb5-138">Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="9dcb5-138">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ <span data-ttu-id="9dcb5-139">Herhangi bir alanlar, yöntemi veya gereksinim duyduğunuz oluşturucular eklemek için liste görünümünde bir öğe veya ağaç görünümünde bir düğüm devral açıklar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-139">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
   
- [<span data-ttu-id="50919-140">ImageList Bileşeni</span><span class="sxs-lookup"><span data-stu-id="50919-140">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- <span data-ttu-id="50919-141">Açıklayan bir görüntü listesi ve anahtar özellikleri ve özellikleri.</span><span class="sxs-lookup"><span data-stu-id="50919-141">Explains what an image list is and its key features and properties.</span></span>  
+ [<span data-ttu-id="9dcb5-140">ImageList Bileşeni</span><span class="sxs-lookup"><span data-stu-id="9dcb5-140">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ <span data-ttu-id="9dcb5-141">Açıklayan bir görüntü listesi ve anahtar özellikleri ve özellikleri.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-141">Explains what an image list is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="50919-142">Nasıl yapılır: Windows Forms ile Çok Bölmeli Kullanıcı Arabirimi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="50919-142">How to: Create a Multipane User Interface with Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- <span data-ttu-id="50919-143">Birden çok bölmeleri içeren bir Windows formunu yerleştirmeye ilişkin talimatlar sunar.</span><span class="sxs-lookup"><span data-stu-id="50919-143">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
+ [<span data-ttu-id="9dcb5-142">Nasıl yapılır: Windows Forms ile Çok Bölmeli Kullanıcı Arabirimi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9dcb5-142">How to: Create a Multipane User Interface with Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ <span data-ttu-id="9dcb5-143">Birden çok bölmeleri içeren bir Windows formunu yerleştirmeye ilişkin talimatlar sunar.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-143">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
   
- [<span data-ttu-id="50919-144">Windows XP özellikleri ve Windows Forms denetimleri</span><span class="sxs-lookup"><span data-stu-id="50919-144">Windows XP Features and Windows Forms Controls</span></span>](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- <span data-ttu-id="50919-145">Geçerli Windows XP özgü özelliklerden yararlanmak nasıl açıklanmaktadır <xref:System.Windows.Forms.ListView> denetim.</span><span class="sxs-lookup"><span data-stu-id="50919-145">Explains how to take advantage of Windows XP-specific features that apply to the <xref:System.Windows.Forms.ListView> control.</span></span>  
+ [<span data-ttu-id="9dcb5-144">Windows XP özellikleri ve Windows Forms denetimleri</span><span class="sxs-lookup"><span data-stu-id="9dcb5-144">Windows XP Features and Windows Forms Controls</span></span>](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ <span data-ttu-id="9dcb5-145">Geçerli Windows XP özgü özelliklerden yararlanmak nasıl açıklanmaktadır <xref:System.Windows.Forms.ListView> denetim.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-145">Explains how to take advantage of Windows XP-specific features that apply to the <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="50919-146">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50919-146">See Also</span></span>  
- [<span data-ttu-id="50919-147">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="50919-147">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9dcb5-146">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9dcb5-146">See Also</span></span>  
+ [<span data-ttu-id="9dcb5-147">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="9dcb5-147">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391322"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="5420b-102">Platform Çağırma ile Veri Hazırlama</span><span class="sxs-lookup"><span data-stu-id="5420b-102">Marshaling Data with Platform Invoke</span></span>
 <span data-ttu-id="5420b-103">Yönetilmeyen Kitaplığı'ndan dışarı aktarılan işlevleri çağırmak için bir işlev prototipi yönetilmeyen işlevi temsil eden yönetilen kodda .NET Framework uygulamasını gerektirir.</span><span class="sxs-lookup"><span data-stu-id="5420b-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="5420b-104">Platform sağlayan prototip oluşturmak için veri doğru sıralamakta çağırma, aşağıdakileri yapmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="5420b-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  

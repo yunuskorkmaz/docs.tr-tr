@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395375"
 ---
 # <a name="interop-marshaling"></a><span data-ttu-id="f478b-102">Birlikte Çalışma Hazırlama</span><span class="sxs-lookup"><span data-stu-id="f478b-102">Interop Marshaling</span></span>
 <a name="top"></a> <span data-ttu-id="f478b-103">Birlikte çalışma hazırlama veri çağrı sırasında yönetilen ve yönetilmeyen bellek arasında yöntem bağımsız değişkenleri ve dönüş değerleri nasıl geçirilir yönetir.</span><span class="sxs-lookup"><span data-stu-id="f478b-103">Interop marshaling governs how data is passed in method arguments and return values between managed and unmanaged memory during calls.</span></span> <span data-ttu-id="f478b-104">Birlikte çalışma hazırlama ortak dil çalışma zamanı 's hazırlama hizmeti tarafından gerçekleştirilen bir çalışma zamanı etkinliğidir.</span><span class="sxs-lookup"><span data-stu-id="f478b-104">Interop marshaling is a run-time activity performed by the common language runtime's marshaling service.</span></span>  

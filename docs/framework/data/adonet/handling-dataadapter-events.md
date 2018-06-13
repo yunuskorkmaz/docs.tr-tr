@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759159"
 ---
 # <a name="handling-dataadapter-events"></a><span data-ttu-id="baf3d-102">Olaylarını işleme</span><span class="sxs-lookup"><span data-stu-id="baf3d-102">Handling DataAdapter Events</span></span>
 <span data-ttu-id="baf3d-103">ADO.NET <xref:System.Data.Common.DataAdapter> veri kaynağında verilere yapılan değişiklikleri yanıt vermek için kullanabileceğiniz üç olayları gösterir.</span><span class="sxs-lookup"><span data-stu-id="baf3d-103">The ADO.NET <xref:System.Data.Common.DataAdapter> exposes three events that you can use to respond to changes made to data at the data source.</span></span> <span data-ttu-id="baf3d-104">Aşağıdaki tabloda `DataAdapter` olaylar.</span><span class="sxs-lookup"><span data-stu-id="baf3d-104">The following table shows the `DataAdapter` events.</span></span>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392402"
 ---
 # <a name="packaging-an-assembly-for-com"></a><span data-ttu-id="5ade7-102">COM için Derlemeyi Paketleme</span><span class="sxs-lookup"><span data-stu-id="5ade7-102">Packaging an Assembly for COM</span></span>
 <span data-ttu-id="5ade7-103">COM geliştiricilerin uygulamalarında eklemenizi planladıkları yönetilen türleri hakkında aşağıdaki bilgileri yararlı:</span><span class="sxs-lookup"><span data-stu-id="5ade7-103">COM developers can benefit from the following information about the managed types they plan to incorporate in their application:</span></span>  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391127"
 ---
 # <a name="marshaling-strings"></a><span data-ttu-id="be743-102">Dizeleri Hazırlama</span><span class="sxs-lookup"><span data-stu-id="be743-102">Marshaling Strings</span></span>
 <span data-ttu-id="be743-103">Platform çağırma bunları .NET Framework biçimden (Unicode) yönetilmeyen biçimi (ANSI), gerekirse dönüştürme kopyaları dizesi parametreleri.</span><span class="sxs-lookup"><span data-stu-id="be743-103">Platform invoke copies string parameters, converting them from the .NET Framework format (Unicode) to the unmanaged format (ANSI), if needed.</span></span> <span data-ttu-id="be743-104">Yönetilen dizeleri değişmez olduğundan, platform çağırma işlevi döndüğünde bunları yönetilmeyen bellekten yönetilen bellek kopyalamaz.</span><span class="sxs-lookup"><span data-stu-id="be743-104">Because managed strings are immutable, platform invoke does not copy them back from unmanaged memory to managed memory when the function returns.</span></span>  

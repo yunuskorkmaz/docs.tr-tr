@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389281"
 ---
 # <a name="how-to-implement-callback-functions"></a><span data-ttu-id="8ab83-102">Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama</span><span class="sxs-lookup"><span data-stu-id="8ab83-102">How to: Implement Callback Functions</span></span>
 <span data-ttu-id="8ab83-103">Aşağıdaki yordamı ve örnek platformu kullanılarak yönetilen bir uygulamanın nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8ab83-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="8ab83-104">Özellikle, yordam ve örnek kullanım **EnumWindows** işlev adıma windows ve yönetilen geri çağırma işlevi adlandırılmış (bir pencere tanıtıcının değerini yazdırmak için geri çağırma) listesi aracılığıyla.</span><span class="sxs-lookup"><span data-stu-id="8ab83-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  

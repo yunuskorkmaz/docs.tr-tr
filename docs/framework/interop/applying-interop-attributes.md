@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392570"
 ---
 # <a name="applying-interop-attributes"></a><span data-ttu-id="cdd14-102">Birlikte Çalışma Özniteliklerini Uygulama</span><span class="sxs-lookup"><span data-stu-id="cdd14-102">Applying Interop Attributes</span></span>
 <span data-ttu-id="cdd14-103"><xref:System.Runtime.InteropServices> Ad alanı, üç kategoride birlikte çalışmaya özgü özniteliklerin sağlar: olanlar sizin tarafınızdan tasarım zamanında uygulanan, olanlar COM birlikte çalışma Araçlar ve API'ler tarafından dönüştürme işlemi sırasında uygulanan ve bu da siz veya COM birlikte çalışma tarafından uygulanan.</span><span class="sxs-lookup"><span data-stu-id="cdd14-103">The <xref:System.Runtime.InteropServices> namespace provides three categories of interop-specific attributes: those applied by you at design time, those applied by COM interop tools and APIs during the conversion process, and those applied either by you or COM interop.</span></span>  

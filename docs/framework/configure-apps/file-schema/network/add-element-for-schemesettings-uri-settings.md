@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741860"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="f2dd6-102">&lt;ekleme&gt; öğesi schemeSettings (URI ayarları) için</span><span class="sxs-lookup"><span data-stu-id="f2dd6-102">&lt;add&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="f2dd6-103">Düzen adı için bir düzeni ayarı ekler.</span><span class="sxs-lookup"><span data-stu-id="f2dd6-103">Adds a scheme setting for a scheme name.</span></span>  

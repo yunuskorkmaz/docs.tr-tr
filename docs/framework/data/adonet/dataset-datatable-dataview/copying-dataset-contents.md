@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757300"
 ---
 # <a name="copying-dataset-contents"></a><span data-ttu-id="87f3e-102">Veri kümesi içeriği kopyalama</span><span class="sxs-lookup"><span data-stu-id="87f3e-102">Copying DataSet Contents</span></span>
 <span data-ttu-id="87f3e-103">Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece iş verilerle özgün veriler etkilenmeden veya iş verilerini bir kümeyle bir **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="87f3e-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="87f3e-104">Kopyalama işlemi sırasında bir **DataSet**, şunları yapabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="87f3e-104">When copying a **DataSet**, you can:</span></span>  

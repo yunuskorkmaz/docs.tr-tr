@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394913"
 ---
 # <a name="default-marshaling-for-strings"></a><span data-ttu-id="d9449-102">Dizeler için Varsayılan Hazırlama</span><span class="sxs-lookup"><span data-stu-id="d9449-102">Default Marshaling for Strings</span></span>
 <span data-ttu-id="d9449-103">Hem <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları, benzer hazırlama davranışı sahiptir.</span><span class="sxs-lookup"><span data-stu-id="d9449-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  

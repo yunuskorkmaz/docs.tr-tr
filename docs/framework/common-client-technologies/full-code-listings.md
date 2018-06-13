@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742029"
 ---
 # <a name="full-code-listings"></a><span data-ttu-id="c91fa-102">Tam Kod Listeleri</span><span class="sxs-lookup"><span data-stu-id="c91fa-102">Full Code Listings</span></span>
 <span data-ttu-id="c91fa-103">Bu konu, tüm kod kullanan bir uygulama için listesini içerir [düzenlemeler ve eylemsizlik](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) işlemci.</span><span class="sxs-lookup"><span data-stu-id="c91fa-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  

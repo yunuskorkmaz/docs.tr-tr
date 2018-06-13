@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392859"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a><span data-ttu-id="a73cd-102">Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="a73cd-102">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>
 <span data-ttu-id="a73cd-103">Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri olandan biraz daha karmaşık.</span><span class="sxs-lookup"><span data-stu-id="a73cd-103">Registration-free activation for .NET Framework-based components is only slightly more complicated than it is for COM components.</span></span> <span data-ttu-id="a73cd-104">Kurulum, iki bildirimleri gerektirir:</span><span class="sxs-lookup"><span data-stu-id="a73cd-104">The setup requires two manifests:</span></span>  

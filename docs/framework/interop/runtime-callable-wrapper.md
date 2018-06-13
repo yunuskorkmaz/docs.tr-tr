@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393516"
 ---
 # <a name="runtime-callable-wrapper"></a><span data-ttu-id="e3ca0-102">Çalışma Zamanı Aranabilir Sarmalayıcısı</span><span class="sxs-lookup"><span data-stu-id="e3ca0-102">Runtime Callable Wrapper</span></span>
 <span data-ttu-id="e3ca0-103">Ortak dil çalışma zamanı çalışma zamanı aranabilir sarmalayıcısı (RCW) adlı bir proxy üzerinden COM nesneleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="e3ca0-103">The common language runtime exposes COM objects through a proxy called the runtime callable wrapper (RCW).</span></span> <span data-ttu-id="e3ca0-104">RCW .NET istemcileri sıradan bir nesneye görünmesine karşın, bir .NET istemcisi ve COM nesnesi arasındaki aramaları sıralamakta kendi birincil işlevi olduğu.</span><span class="sxs-lookup"><span data-stu-id="e3ca0-104">Although the RCW appears to be an ordinary object to .NET clients, its primary function is to marshal calls between a .NET client and a COM object.</span></span>  
