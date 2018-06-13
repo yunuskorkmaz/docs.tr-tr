@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356609"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>SQL Server içinde-işleme özgü ADO.NET davranışını
 ADO.NET, bulunan dört ana işlevsel uzantıları vardır <xref:Microsoft.SqlServer.Server> özellikle işlem içi kullanım içindir ad alanı: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext>, ve <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

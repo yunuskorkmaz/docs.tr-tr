@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558661"
 ---
 # <a name="how-to-repeat-media-playback"></a>Nasıl yapılır: Medya Yürütmesini Yineleme
 Bu örnek nasıl gösterir kayıttan yürütme medyaya süresiz olarak, bu, medya sonsuz bir döngüde oynadığı şekilde ayarlayın.  

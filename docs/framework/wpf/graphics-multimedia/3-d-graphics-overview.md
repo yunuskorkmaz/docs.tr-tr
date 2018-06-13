@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558323"
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] İşlevindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] geliştiricilerin çizim, dönüştürme ve 3-b grafik işaretleme ve yordam kodunda animasyon sağlar. Geliştiriciler birleştirebilirsiniz [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] ve [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] zengin denetimleri oluşturmak, veri karmaşık çizimleri sağlayın veya kullanıcı geliştirmek için grafik deneyimi bir uygulamanın arabirimi. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] desteklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tam özellikli bir oyun geliştirme platformu sağlamak üzere tasarlanmamıştır. Bu konu genel bir bakış sağlar [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik sistemi.  

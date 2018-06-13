@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763377"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: çağrı nesne yöntemleri olarak modeli tarafından tanımlanan İşlevler
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf bir statik yöntem olarak. A *modeli tanımlı işlev* kavramsal modelde tanımlanan bir işlev değil. Konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. Model tanımlı işlevler LINQ to Entities sorgularında çağırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: sorgularda Call Model-Defined işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

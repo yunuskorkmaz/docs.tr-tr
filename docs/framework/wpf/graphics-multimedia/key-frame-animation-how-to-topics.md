@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561969"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, anahtar çerçeve animasyonları iki özellik değerlerini ve denetim ilişkilendirme birden fazla hareketli hale getirmeyi için nasıl kullanılacağını göstermektedir.  

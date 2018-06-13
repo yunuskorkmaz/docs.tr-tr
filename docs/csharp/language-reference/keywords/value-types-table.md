@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280900"
 ---
 # <a name="value-types-table-c-reference"></a>Değer Türleri Tablosu (C# Başvurusu)
 Aşağıdaki tabloda, C# değer türleri kategoriye göre listeler.  

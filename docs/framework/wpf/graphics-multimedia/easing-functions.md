@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557569"
 ---
 # <a name="easing-functions"></a>Kolaylaştırıcı İşlevler
 Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak sağlar. Örneğin, bir nesnenin gerçekçi Sıçrama veya dizinindeymiş gibi yay üzerinde davranır isteyebilirsiniz. Bu etkilerle yaklaşık için anahtar çerçeve veya From/To/By bile animasyonları kullanabilirsiniz, ancak iş önemli miktarda götürecek ve animasyon matematiksel formül kullanmaktan daha az doğru olacaktır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359695"
 ---
 # <a name="retrieving-database-schema-information"></a>Veritabanı şema bilgileri alınıyor
 Şema bilgileri veritabanından alma şema bulma işlemi ile gerçekleştirilir. Şema bulma sağlar yönetilen sağlayıcıları bulmak ve veritabanı şeması hakkında bilgi döndürür olarak da bilinen istemek uygulamalar *meta veri*, belirli bir veritabanı. Farklı veritabanı şema öğeleri tablolar, sütunlar ve saklı yordamlar gibi şema koleksiyonlarına sunulur. Her bir şema koleksiyonu şema bilgileri kullanılan sağlayıcıya özgü çeşitli içerir.  

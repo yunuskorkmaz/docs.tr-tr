@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763403"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Toplama işlevleri (SqlClient Entity Framework)
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevleri sağlar. Toplama işlevleri giriş değerleri kümesine göre hesaplamalar ve bir değer döndürür. Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir. Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  

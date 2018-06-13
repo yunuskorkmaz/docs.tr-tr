@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362633"
 ---
 # <a name="query-examples"></a>Sorgu örnekleri
 Bu bölümde Visual Basic ve C# örnekleri tipik [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgular. Geliştiriciler Visual Studio kullanarak, pek çok daha fazla örnek örnek bir çözüm içinde kullanılabilir örnekleri bölümünde bulabilirsiniz. Daha fazla bilgi için bkz: [örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

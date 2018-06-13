@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360471"
 ---
 # <a name="querying-across-relationships"></a>İlişkiler arasında sorgulama
 Diğer nesne veya koleksiyonlar, sınıf tanımları diğer nesnelerin başvurular doğrudan veritabanında yabancı anahtar ilişkileri karşılık gelir. İlişki özelliklerine erişmek ve başka bir nesneden gezinmek için noktalı gösterim kullanarak sorguladığınızda, bu ilişkileri kullanabilirsiniz. Daha karmaşık birleştirmeler ya da eşdeğer SQL bağlantılı sorgularda erişim işlemlerini çevir.  
