@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750781"
 ---
 # <a name="ltbindingextensionsgt"></a><span data-ttu-id="d2233-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="d2233-102">&lt;bindingExtensions&gt;</span></span>
 <span data-ttu-id="d2233-103">Bu bölümde bir makineden bağlama kullanıcı tanımlı bir kullanımını etkinleştirir veya uygulama yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="d2233-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="d2233-104">Kullanarak bu koleksiyona bağlama kullanıcı tanımlı bir ekleyebilirsiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği bağlama, kullanıcı tanımlı bir öğenin yanı sıra `name` kullanıcı adına özniteliği tanımlı bağlama.</span><span class="sxs-lookup"><span data-stu-id="d2233-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  

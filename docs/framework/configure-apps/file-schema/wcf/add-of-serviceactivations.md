@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745831"
 ---
 # <a name="ltaddgt-of-ltserviceactivationsgt"></a><span data-ttu-id="3fdd0-102">&lt;serviceActivations&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="3fdd0-102">&lt;add&gt; of &lt;serviceActivations&gt;</span></span>
 <span data-ttu-id="3fdd0-103">Windows Communication Foundation (WCF) hizmetini türlerinizi eşlenen sanal hizmeti etkinleştirme ayarlarını tanımlamanızı sağlar bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="3fdd0-103">A configuration element that allows you to define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="3fdd0-104">Bu WAS içinde barındırılan hizmetlere etkinleştirmek mümkün kılar / IIS .svc dosyası olmadan.</span><span class="sxs-lookup"><span data-stu-id="3fdd0-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  

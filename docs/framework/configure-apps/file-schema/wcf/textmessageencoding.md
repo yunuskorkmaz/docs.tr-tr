@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753488"
 ---
 # <a name="lttextmessageencodinggt"></a><span data-ttu-id="cfc25-102">&lt;textMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="cfc25-102">&lt;textMessageEncoding&gt;</span></span>
 <span data-ttu-id="cfc25-103">Karakter kodlama ve sürüm oluşturma metin tabanlı XML iletileri için kullanılan ileti belirtir.</span><span class="sxs-lookup"><span data-stu-id="cfc25-103">Specifies the character encoding and message versioning used for text-based XML messages.</span></span>  

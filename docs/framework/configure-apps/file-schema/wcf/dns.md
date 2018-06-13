@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746741"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="e2b70-102">&lt;DNS&gt;</span><span class="sxs-lookup"><span data-stu-id="e2b70-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="e2b70-103">Sunucu beklenen kimliğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e2b70-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="e2b70-104">Bu kimlik X509 için geçerli olduğundan sunucu sertifikasının aynı değere sahip bir DNS içeriyorsa, sertifika kimlik doğrulama modu.</span><span class="sxs-lookup"><span data-stu-id="e2b70-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="e2b70-105">SPN aynı değere sahipse, aynı zamanda Windows kimlik doğrulama modu için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="e2b70-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

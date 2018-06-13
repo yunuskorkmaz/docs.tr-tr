@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749796"
 ---
 # <a name="ltcertificategt-element"></a><span data-ttu-id="87262-102">&lt;sertifika&gt; Öğesi</span><span class="sxs-lookup"><span data-stu-id="87262-102">&lt;certificate&gt; Element</span></span>
 <span data-ttu-id="87262-103">İmzalama ve eşler arası istemcileri için iletileri şifrelemek için kullanılacak bir X.509 sertifikası belirtir.</span><span class="sxs-lookup"><span data-stu-id="87262-103">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span>  

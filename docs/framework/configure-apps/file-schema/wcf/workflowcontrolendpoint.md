@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754791"
 ---
 # <a name="ltworkflowcontrolendpointgt"></a><span data-ttu-id="0c929-102">&lt;WorkflowControlEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="0c929-102">&lt;workflowControlEndpoint&gt;</span></span>
 <span data-ttu-id="0c929-103">Bu yapılandırma öğesi iş akışı örnekleri yürütülmesini denetlemeye yönelik standart bir uç nokta tanımlar (oluşturmak, çalıştırmak, askıya almak, sonlandırma, vb.).</span><span class="sxs-lookup"><span data-stu-id="0c929-103">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  

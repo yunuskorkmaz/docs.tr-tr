@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760472"
 ---
 # <a name="adding-columns-to-a-datatable"></a><span data-ttu-id="c4c6a-102">DataTable tablosuna sütun ekleme</span><span class="sxs-lookup"><span data-stu-id="c4c6a-102">Adding Columns to a DataTable</span></span>
 <span data-ttu-id="c4c6a-103">A <xref:System.Data.DataTable> bir koleksiyonu içerir <xref:System.Data.DataColumn> tarafından başvurulan nesneler **sütunları** tablosunun özelliği.</span><span class="sxs-lookup"><span data-stu-id="c4c6a-103">A <xref:System.Data.DataTable> contains a collection of <xref:System.Data.DataColumn> objects referenced by the **Columns** property of the table.</span></span> <span data-ttu-id="c4c6a-104">Tüm kısıtlamaları birlikte sütun bu koleksiyonu şema veya tablo yapısını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c4c6a-104">This collection of columns, along with any constraints, defines the schema, or structure, of the table.</span></span>  

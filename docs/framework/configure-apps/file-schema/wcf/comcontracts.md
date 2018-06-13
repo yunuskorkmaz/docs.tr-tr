@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746416"
 ---
 # <a name="ltcomcontractsgt"></a><span data-ttu-id="6b18d-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="6b18d-102">&lt;comContracts&gt;</span></span>
 <span data-ttu-id="6b18d-103">`comContracts` Yapılandırma bölümü bir COM + tümleştirme hizmet sözleşmesini çeşitli özelliklerini belirtmenize olanak veren öğeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="6b18d-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  

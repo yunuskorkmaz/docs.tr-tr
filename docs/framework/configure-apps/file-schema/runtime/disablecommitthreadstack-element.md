@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752669"
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a><span data-ttu-id="e9677-102">&lt;disableCommitThreadStack&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="e9677-102">&lt;disableCommitThreadStack&gt; Element</span></span>
 <span data-ttu-id="e9677-103">Bir iş parçacığı başlatıldığında tam iş parçacığı yığın kaydedilmiş olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="e9677-103">Specifies whether the full thread stack is committed when a thread is started.</span></span>  

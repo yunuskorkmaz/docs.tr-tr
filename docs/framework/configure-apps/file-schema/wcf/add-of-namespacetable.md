@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748639"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a><span data-ttu-id="f5a2b-102">&lt;namespaceTable&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="f5a2b-102">&lt;add&gt; of &lt;namespaceTable&gt;</span></span>
 <span data-ttu-id="f5a2b-103">Ardından yönlendirme XPath filtreleri kullanılabilir eşleme öneki için bir ad alanı içeren bir yapılandırma öğesi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f5a2b-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  

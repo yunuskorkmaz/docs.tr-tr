@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752734"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="88cab-102">&lt;Clear&gt; öğesi webRequestModules (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="88cab-102">&lt;clear&gt; Element for webRequestModules (Network Settings)</span></span>
 <span data-ttu-id="88cab-103">Tüm kayıtlı Web isteği modülleri uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="88cab-103">Removes all registered Web request modules from the application.</span></span>  

@@ -1,28 +1,20 @@
 ---
-title: "Nasıl yapılır: (LINQ) (C#) farklı dosyalardan içerik birleştirme"
-ms.custom: 
+title: 'Nasıl yapılır: (LINQ) (C#) farklı dosyalardan içerik birleştirme'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319175"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="b4dff-102">Nasıl yapılır: (LINQ) (C#) farklı dosyalardan içerik birleştirme</span><span class="sxs-lookup"><span data-stu-id="b4dff-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
-<span data-ttu-id="b4dff-103">Bu örnek, eşleşen bir anahtarı olarak kullanılan bir ortak değer paylaşmak, virgülle ayrılmış iki dosya verileri nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="b4dff-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="b4dff-104">Bu teknik iki elektronik tablolar verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="b4dff-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="b4dff-105">Yapılandırılmış metin herhangi bir tür ile çalışmak için örnek değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b4dff-105">You can modify the example to work with any kind of structured text.</span></span>  
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="982bb-102">Nasıl yapılır: (LINQ) (C#) farklı dosyalardan içerik birleştirme</span><span class="sxs-lookup"><span data-stu-id="982bb-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+<span data-ttu-id="982bb-103">Bu örnek, eşleşen bir anahtarı olarak kullanılan bir ortak değer paylaşmak, virgülle ayrılmış iki dosya verileri nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="982bb-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="982bb-104">Bu teknik iki elektronik tablolar verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="982bb-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="982bb-105">Yapılandırılmış metin herhangi bir tür ile çalışmak için örnek değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="982bb-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="b4dff-106">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b4dff-106">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="982bb-106">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="982bb-106">To create the data files</span></span>  
   
-1.  <span data-ttu-id="b4dff-107">Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin.</span><span class="sxs-lookup"><span data-stu-id="b4dff-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="b4dff-108">Dosya, elektronik tablo verilerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b4dff-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="b4dff-109">Sütun 1 öğrencinin kimliği olduğunu ve sütun 2'den 5 test puanları.</span><span class="sxs-lookup"><span data-stu-id="b4dff-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1.  <span data-ttu-id="982bb-107">Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin.</span><span class="sxs-lookup"><span data-stu-id="982bb-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="982bb-108">Dosya, elektronik tablo verilerini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="982bb-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="982bb-109">Sütun 1 öğrencinin kimliği olduğunu ve sütun 2'den 5 test puanları.</span><span class="sxs-lookup"><span data-stu-id="982bb-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -39,7 +31,7 @@ ms.lasthandoff: 11/21/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="b4dff-110">Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin.</span><span class="sxs-lookup"><span data-stu-id="b4dff-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="b4dff-111">Öğrencinin Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyayı temsil eder</span><span class="sxs-lookup"><span data-stu-id="b4dff-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2.  <span data-ttu-id="982bb-110">Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörüne kaydedin.</span><span class="sxs-lookup"><span data-stu-id="982bb-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="982bb-111">Öğrencinin Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyayı temsil eder</span><span class="sxs-lookup"><span data-stu-id="982bb-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -56,7 +48,7 @@ ms.lasthandoff: 11/21/2017
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="b4dff-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="b4dff-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="982bb-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="982bb-112">Example</span></span>  
   
 ```csharp  
 class JoinStrings  
@@ -127,9 +119,9 @@ Zabokritski, 96, 85, 91, 60
  */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b4dff-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="b4dff-113">Compiling the Code</span></span>  
- <span data-ttu-id="b4dff-114">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="b4dff-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="982bb-113">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="982bb-113">Compiling the Code</span></span>  
+ <span data-ttu-id="982bb-114">.NET Framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru hedefleyen bir proje oluşturun ve `using` System.Linq ve System.IO ad alanları için yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="982bb-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4dff-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b4dff-115">See Also</span></span>  
- [<span data-ttu-id="b4dff-116">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="b4dff-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="b4dff-117">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="b4dff-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="982bb-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="982bb-115">See Also</span></span>  
+ [<span data-ttu-id="982bb-116">LINQ ve dizeler (C#)</span><span class="sxs-lookup"><span data-stu-id="982bb-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="982bb-117">LINQ ve dosya dizinleri (C#)</span><span class="sxs-lookup"><span data-stu-id="982bb-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

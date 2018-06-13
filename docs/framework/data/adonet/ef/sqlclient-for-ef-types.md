@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766549"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a><span data-ttu-id="70f80-102">Varlık FrameworkTypes SqlClient</span><span class="sxs-lookup"><span data-stu-id="70f80-102">SqlClient for Entity FrameworkTypes</span></span>
 <span data-ttu-id="70f80-103">SQL Server (SqlClient) sağlayıcı bildirim dosyası için .NET Framework veri sağlayıcısı sağlayıcısı ilkel türler, her bir türü için modelleri kavramsal ve depolama modeli ilkel türlerini ve yükseltme ve dönüştürme arasındaki eşlemeleri listesini içerir kavramsal ve depolama modeli ilkel türlerini arasındaki kuralları.</span><span class="sxs-lookup"><span data-stu-id="70f80-103">The .NET Framework Data Provider for SQL Server (SqlClient) provider manifest file includes the list of the provider primitive types, facets for each type, the mappings between the conceptual and storage model primitive types, and the promotion and conversion rules between the conceptual and storage model primitive types.</span></span>  

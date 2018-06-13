@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759913"
 ---
 # <a name="asynchronous-programming"></a><span data-ttu-id="ca2df-102">Zaman uyumsuz programlama</span><span class="sxs-lookup"><span data-stu-id="ca2df-102">Asynchronous Programming</span></span>
 

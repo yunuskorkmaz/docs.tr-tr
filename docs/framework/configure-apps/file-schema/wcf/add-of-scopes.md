@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745805"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a><span data-ttu-id="7e9ae-102">&lt;kapsamların&gt; &lt;eklenmesi&gt;</span><span class="sxs-lookup"><span data-stu-id="7e9ae-102">&lt;add&gt; of &lt;scopes&gt;</span></span>
 <span data-ttu-id="7e9ae-103">Özel bir kapsam sorgusu sırasında hizmet uç noktaları filtrelemede kullanılan URI ekler.</span><span class="sxs-lookup"><span data-stu-id="7e9ae-103">Adds a custom scope Uri that can be used to filter service endpoints during query.</span></span>  

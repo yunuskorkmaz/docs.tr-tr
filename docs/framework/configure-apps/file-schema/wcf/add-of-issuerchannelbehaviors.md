@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752461"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a><span data-ttu-id="df4fa-102">&lt;issuerChannelBehaviors&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="df4fa-102">&lt;add&gt; of &lt;issuerChannelBehaviors&gt;</span></span>
 <span data-ttu-id="df4fa-103">Bir STS ile iletişim kurarken kullanılacak bir uç noktası davranışı ekler.</span><span class="sxs-lookup"><span data-stu-id="df4fa-103">Adds an endpoint behavior to be used when communicating with an STS.</span></span>  

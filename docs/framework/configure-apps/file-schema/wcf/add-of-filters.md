@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754616"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a><span data-ttu-id="adc82-102">&lt;filtrelerin&gt; &lt;eklenmesi&gt;</span><span class="sxs-lookup"><span data-stu-id="adc82-102">&lt;add&gt; of &lt;filters&gt;</span></span>
 <span data-ttu-id="adc82-103">Günlüğe kaydedilecek ileti türünü belirten bir XPath filtre.</span><span class="sxs-lookup"><span data-stu-id="adc82-103">A XPath filter that specifies the kind of message to be logged.</span></span>  

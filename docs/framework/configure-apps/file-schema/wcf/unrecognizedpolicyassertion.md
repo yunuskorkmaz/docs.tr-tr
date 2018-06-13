@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766926"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="ab0f4-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="ab0f4-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="ab0f4-103">İlke onaylama belirten bir bağlama öğesi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ab0f4-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="ab0f4-104">Bu öğe hiçbir özniteliği var ve boş bir anahtar yok.</span><span class="sxs-lookup"><span data-stu-id="ab0f4-104">This element has no attribute and is present as an empty switch.</span></span>  

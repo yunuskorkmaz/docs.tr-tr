@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762429"
 ---
 # <a name="facet"></a><span data-ttu-id="eb509-102">facet</span><span class="sxs-lookup"><span data-stu-id="eb509-102">facet</span></span>
 <span data-ttu-id="eb509-103">A *modeli* bir ilkel tür özelliği tanımına ayrıntı eklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="eb509-103">A *facet* is used to add detail to a primitive type property definition.</span></span> <span data-ttu-id="eb509-104">A [özelliği](../../../../docs/framework/data/adonet/property.md) tanımını özellik türü hakkında bilgi içerir, ancak genellikle daha fazla ayrıntı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="eb509-104">A [property](../../../../docs/framework/data/adonet/property.md) definition contains information about the property type, but often more detail is necessary.</span></span> <span data-ttu-id="eb509-105">Örneğin, bir varlık türü kavramsal modelde türünde bir özellik olabilir `String` değeri ayarlanamıyor null.</span><span class="sxs-lookup"><span data-stu-id="eb509-105">For example, an entity type in a conceptual model might have a property of type `String` whose value cannot be set to null.</span></span> <span data-ttu-id="eb509-106">Modeller, bu düzeyde ayrıntı belirtmenize olanak verir.</span><span class="sxs-lookup"><span data-stu-id="eb509-106">Facets allow you to specify this level of detail.</span></span>  

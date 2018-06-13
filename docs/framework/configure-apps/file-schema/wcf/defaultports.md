@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747180"
 ---
 # <a name="ltdefaultportsgt"></a><span data-ttu-id="f2b33-102">&lt;defaultPorts&gt;</span><span class="sxs-lookup"><span data-stu-id="f2b33-102">&lt;defaultPorts&gt;</span></span>
 <span data-ttu-id="f2b33-103">İstemci uygulaması dinlediği varsayılan iletişim uç noktalarını listeleme varsayılan bağlantı noktaları koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="f2b33-103">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>  

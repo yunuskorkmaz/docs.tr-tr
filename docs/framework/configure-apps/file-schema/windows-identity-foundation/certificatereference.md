@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756845"
 ---
 # <a name="ltcertificatereferencegt"></a><span data-ttu-id="61709-102">&lt;certificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="61709-102">&lt;certificateReference&gt;</span></span>
 <span data-ttu-id="61709-103">Bul ve bir X.509 sertifikası sertifika deposunda doğrulamak için kullanılan ayarları belirtir.</span><span class="sxs-lookup"><span data-stu-id="61709-103">Specifies settings that are used to find and validate an X.509 certificate in a certificate store.</span></span>  

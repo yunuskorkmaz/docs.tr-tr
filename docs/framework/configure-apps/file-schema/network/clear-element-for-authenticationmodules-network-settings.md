@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751993"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="9eeba-102">&lt;Clear&gt; öğesi authenticationModules (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="9eeba-102">&lt;clear&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="9eeba-103">Uygulamadaki tüm kimlik doğrulama modülleri temizler.</span><span class="sxs-lookup"><span data-stu-id="9eeba-103">Clears all authentication modules from the application.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750563"
 ---
 # <a name="ltissuergt"></a><span data-ttu-id="e9cab-102">&lt;Veren&gt;</span><span class="sxs-lookup"><span data-stu-id="e9cab-102">&lt;issuer&gt;</span></span>
 <span data-ttu-id="e9cab-103">Güvenlik belirteci hizmeti (güvenlik belirteçleri veren STS) belirtir.</span><span class="sxs-lookup"><span data-stu-id="e9cab-103">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  

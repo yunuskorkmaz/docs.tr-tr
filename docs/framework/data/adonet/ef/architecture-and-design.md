@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766874"
 ---
 # <a name="architecture-and-design"></a><span data-ttu-id="24410-102">Mimari ve tasarım</span><span class="sxs-lookup"><span data-stu-id="24410-102">Architecture and Design</span></span>
 <span data-ttu-id="24410-103">SQL nesil modülünde [örnek sağlayıcı](http://go.microsoft.com/fwlink/?LinkId=180616) ziyaretçisi komut ağacı temsil eden ifade ağaç olarak uygulanır.</span><span class="sxs-lookup"><span data-stu-id="24410-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="24410-104">Nesil tek geçişte ifade ağacına yapılır.</span><span class="sxs-lookup"><span data-stu-id="24410-104">The generation is done in a single pass over the expression tree.</span></span>  

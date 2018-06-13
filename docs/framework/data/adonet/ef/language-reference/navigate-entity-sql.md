@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764742"
 ---
 # <a name="navigate-entity-sql"></a><span data-ttu-id="8f5ec-102">(Varlık SQL) gidin</span><span class="sxs-lookup"><span data-stu-id="8f5ec-102">NAVIGATE (Entity SQL)</span></span>
 <span data-ttu-id="8f5ec-103">Varlıklar arasında kurulan ilişki üzerinden gider.</span><span class="sxs-lookup"><span data-stu-id="8f5ec-103">Navigates over the relationship established between entities.</span></span>  

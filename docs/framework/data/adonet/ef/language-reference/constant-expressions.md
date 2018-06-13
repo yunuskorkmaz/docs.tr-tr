@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762523"
 ---
 # <a name="constant-expressions"></a><span data-ttu-id="e0c2a-102">Sabit ifadeleri</span><span class="sxs-lookup"><span data-stu-id="e0c2a-102">Constant Expressions</span></span>
 <span data-ttu-id="e0c2a-103">Sabit bir ifade sabit bir değer oluşur.</span><span class="sxs-lookup"><span data-stu-id="e0c2a-103">A constant expression consists of a constant value.</span></span> <span data-ttu-id="e0c2a-104">Sabit değerler doğrudan istemcide çeviri içermeyen sabit komut ağacı ifadeleri dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="e0c2a-104">Constant values are directly converted to constant command tree expressions, without any translation on the client.</span></span> <span data-ttu-id="e0c2a-105">Bu, sabit bir değer neden ifadeleri içerir.</span><span class="sxs-lookup"><span data-stu-id="e0c2a-105">This includes expressions that result in a constant value.</span></span> <span data-ttu-id="e0c2a-106">Bu nedenle, veri kaynağı davranışı sabitleri içeren tüm ifadeler için beklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="e0c2a-106">Therefore, data source behavior should be expected for all expressions involving constants.</span></span> <span data-ttu-id="e0c2a-107">Bu CLR davranışından farklıdır davranışa neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="e0c2a-107">This can result in behavior that differs from CLR behavior.</span></span>  

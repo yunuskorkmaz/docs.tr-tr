@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758418"
 ---
 # <a name="oracle-bfiles"></a><span data-ttu-id="74a95-102">Oracle BFILEs</span><span class="sxs-lookup"><span data-stu-id="74a95-102">Oracle BFILEs</span></span>
 <span data-ttu-id="74a95-103">Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıf <xref:System.Data.OracleClient.OracleType.BFile> veri türü.</span><span class="sxs-lookup"><span data-stu-id="74a95-103">The .NET Framework Data Provider for Oracle includes the <xref:System.Data.OracleClient.OracleBFile> class, which is used to work with the Oracle <xref:System.Data.OracleClient.OracleType.BFile> data type.</span></span>  

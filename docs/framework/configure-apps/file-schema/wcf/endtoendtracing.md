@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753475"
 ---
 # <a name="ltendtoendtracinggt"></a><span data-ttu-id="1d7ea-102">&lt;endToEndTracing&gt;</span><span class="sxs-lookup"><span data-stu-id="1d7ea-102">&lt;endToEndTracing&gt;</span></span>
 <span data-ttu-id="1d7ea-103">Etkinleştirme ve devre dışı uçtan uca izleme bir hizmet uygulaması çalışması sırasında farklı yönlerini olanak sağlayan bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="1d7ea-103">A configuration element that allows you to enable and disable different aspects of end-to-end tracing during the running of a service application.</span></span>  

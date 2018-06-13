@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754151"
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a><span data-ttu-id="490a6-102">&lt;baseAddresses&gt; &lt;eklemesi&gt;</span><span class="sxs-lookup"><span data-stu-id="490a6-102">&lt;add&gt; of &lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="490a6-103">Hizmet ana bilgisayar tarafından kullanılan temel adres belirten bir yapılandırma öğesi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="490a6-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  

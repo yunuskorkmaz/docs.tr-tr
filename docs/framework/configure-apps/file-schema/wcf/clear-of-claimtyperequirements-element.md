@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747131"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="e3f8d-102">&lt;claimTypeRequirements&gt; öğesi &lt;temizleme&gt;</span><span class="sxs-lookup"><span data-stu-id="e3f8d-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="e3f8d-103">Tüm talep federe kimlik bilgisi kaldırılacak türlerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e3f8d-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="e3f8d-104">Bu koleksiyon boş başlar sağlar.</span><span class="sxs-lookup"><span data-stu-id="e3f8d-104">This ensures that the collection starts empty.</span></span>  

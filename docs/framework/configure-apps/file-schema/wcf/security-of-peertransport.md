@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749848"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="35360-102">&lt;peerTransport&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="35360-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="35360-103">Kullanılan kimlik doğrulama ve ileti taşıma için kullanılan güvenlik türünü de dahil olmak üzere bir eş kanalı ile ilişkili güvenlik ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="35360-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  

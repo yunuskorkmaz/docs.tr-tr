@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759146"
 ---
 # <a name="adonet-code-examples"></a><span data-ttu-id="c0a2a-102">ADO.NET kod örnekleri</span><span class="sxs-lookup"><span data-stu-id="c0a2a-102">ADO.NET code examples</span></span>
 <span data-ttu-id="c0a2a-103">Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojilerini kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="c0a2a-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>

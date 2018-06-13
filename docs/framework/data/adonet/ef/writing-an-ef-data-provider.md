@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762640"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a><span data-ttu-id="113d6-102">Bir Entity Framework veri sağlayıcısı yazma</span><span class="sxs-lookup"><span data-stu-id="113d6-102">Writing an Entity Framework Data Provider</span></span>
 <span data-ttu-id="113d6-103">Bu bölümde nasıl yazılacağından bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL sunucusu dışında bir veri kaynağı desteklemek için sağlayıcı.</span><span class="sxs-lookup"><span data-stu-id="113d6-103">This section discusses how to write an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] provider to support a data source other than SQL Server.</span></span> <span data-ttu-id="113d6-104">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server'ı destekleyen bir sağlayıcı içerir.</span><span class="sxs-lookup"><span data-stu-id="113d6-104">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] includes a provider that supports SQL Server.</span></span>  

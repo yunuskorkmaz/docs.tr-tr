@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753748"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="c871d-102">&lt;ekleme&gt; öğesi connectionManagement (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="c871d-102">&lt;add&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="c871d-103">Bir IP adresi veya DNS adı bağlantısı Yönetim listesine ekler.</span><span class="sxs-lookup"><span data-stu-id="c871d-103">Adds an IP address or DNS name to the connection management list.</span></span>  

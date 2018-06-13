@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748067"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a><span data-ttu-id="fbea7-102">&lt;istemci&gt; &lt;uç noktası&gt;</span><span class="sxs-lookup"><span data-stu-id="fbea7-102">&lt;endpoint&gt; of &lt;client&gt;</span></span>
 <span data-ttu-id="fbea7-103">Sözleşme, bağlama ve istemciler tarafından sunucuda hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktası adresi özelliklerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="fbea7-103">Specifies contract, binding, and address properties of the channel endpoint, which is used by clients to connect to service endpoints on the server.</span></span>  

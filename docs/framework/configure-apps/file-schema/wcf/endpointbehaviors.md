@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747518"
 ---
 # <a name="ltendpointbehaviorsgt"></a><span data-ttu-id="27a61-102">&lt;endpointBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="27a61-102">&lt;endpointBehaviors&gt;</span></span>
 <span data-ttu-id="27a61-103">Bu yapılandırma bölümü belirli bir uç noktası için tanımlanmış tüm davranışları temsil eder.</span><span class="sxs-lookup"><span data-stu-id="27a61-103">This configuration section represents all the behaviors defined for a specific endpoint.</span></span> <span data-ttu-id="27a61-104">İstemci davranışlarını yapılandırma hakkında daha fazla bilgi için bkz: [istemci çalışma zamanı davranışını belirtme](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) ve [istemci davranışlarını yapılandırma](../../../../../docs/framework/wcf/configuring-client-behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="27a61-104">For more information on configuration client behaviors, see [Specifying Client Run-Time Behavior](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md) and [Configuring Client Behaviors](../../../../../docs/framework/wcf/configuring-client-behaviors.md).</span></span>  

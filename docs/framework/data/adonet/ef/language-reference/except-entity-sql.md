@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760212"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="cdfc5-102">(Varlık SQL) dışında</span><span class="sxs-lookup"><span data-stu-id="cdfc5-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="cdfc5-103">Tüm farklı değerler koleksiyonu sorgu ifadesinden de sorgu ifadesinden EXCEPT işleneni sağındaki döndürülmez EXCEPT işleneni sola döndürür.</span><span class="sxs-lookup"><span data-stu-id="cdfc5-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="cdfc5-104">Tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş türünde olması gerekir `expression`.</span><span class="sxs-lookup"><span data-stu-id="cdfc5-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

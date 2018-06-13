@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746026"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a><span data-ttu-id="df11d-102">&lt;generatePublisherEvidence&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="df11d-102">&lt;generatePublisherEvidence&gt; Element</span></span>
 <span data-ttu-id="df11d-103">Çalışma zamanı oluşturup oluşturmayacağını belirtir <xref:System.Security.Policy.Publisher> kod erişim güvenliği (CAS) için kanıt.</span><span class="sxs-lookup"><span data-stu-id="df11d-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  

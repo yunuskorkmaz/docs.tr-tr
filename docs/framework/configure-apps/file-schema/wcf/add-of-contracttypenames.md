@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750199"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a><span data-ttu-id="7a836-102">&lt;contractTypeNames&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="7a836-102">&lt;add&gt; of &lt;contractTypeNames&gt;</span></span>
 <span data-ttu-id="7a836-103">Aranan Hizmetleri ve genellikle ararken bir hizmet için kullanılan ölçüt sözleşme adını belirtir. bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="7a836-103">A configuration element that specifies the contract name of the services being searched for, and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="7a836-104">Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmeleri eşleşen yanıt gönderir.</span><span class="sxs-lookup"><span data-stu-id="7a836-104">If more than one contract name is specified, only service endpoints matching ALL contracts will reply.</span></span> <span data-ttu-id="7a836-105">Windows Communication Foundation (WCF) bir uç nokta yalnızca bir sözleşme destekleyebileceği unutmayın.</span><span class="sxs-lookup"><span data-stu-id="7a836-105">Note that in Windows Communication Foundation (WCF), an endpoint can only support one contract.</span></span>  

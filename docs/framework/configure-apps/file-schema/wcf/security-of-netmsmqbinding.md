@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750966"
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="338bd-102">&lt;netMsmqBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="338bd-102">&lt;security&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="338bd-103">MSMQ bağlama için güvenlik ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="338bd-103">Defines the security settings for a MSMQ binding.</span></span> <span data-ttu-id="338bd-104">Taşıma veya SOAP Güvenliği etkinleştirilmiş ve varsa, hangi kimlik doğrulama modu ve koruma düzeyleri kullanımda olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="338bd-104">It specifies whether transport or SOAP security is enabled and, if so, what authentication mode and protection levels are in use.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748223"
 ---
 # <a name="ltsupportedruntimegt-element"></a><span data-ttu-id="9baa2-102">&lt;supportedRuntime&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="9baa2-102">&lt;supportedRuntime&gt; Element</span></span>
 

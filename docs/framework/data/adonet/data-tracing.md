@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758509"
 ---
 # <a name="data-tracing-in-adonet"></a><span data-ttu-id="24e85-102">ADO.NET veri izleme</span><span class="sxs-lookup"><span data-stu-id="24e85-102">Data Tracing in ADO.NET</span></span>
 <span data-ttu-id="24e85-103">ADO.NET özellikleri SQL Server, Oracle, OLE DB ve ODBC yanı için ADO.NET .NET veri sağlayıcıları tarafından desteklenen yerleşik veri izleme işlevselliği <xref:System.Data.DataSet>ve SQL Server ağ protokolleri.</span><span class="sxs-lookup"><span data-stu-id="24e85-103">ADO.NET features built-in data tracing functionality that is supported by the .NET data providers for SQL Server, Oracle, OLE DB and ODBC, as well as the ADO.NET <xref:System.Data.DataSet>, and the SQL Server network protocols.</span></span>  

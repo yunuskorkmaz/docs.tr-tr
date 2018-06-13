@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762682"
 ---
 # <a name="overlaps-entity-sql"></a><span data-ttu-id="9aaef-102">ÇAKIŞMALAR (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="9aaef-102">OVERLAPS (Entity SQL)</span></span>
 <span data-ttu-id="9aaef-103">İki koleksiyon ortak öğeler sahip olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="9aaef-103">Determines whether two collections have common elements.</span></span>  

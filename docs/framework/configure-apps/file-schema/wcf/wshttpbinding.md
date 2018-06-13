@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762266"
 ---
 # <a name="ltwshttpbindinggt"></a><span data-ttu-id="41cac-102">&lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="41cac-102">&lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="41cac-103">Güvenli, güvenilir ve birlikte çalışabilir bağlama olmayan yönlü Hizmet sözleşmeleri için uygun tanımlar.</span><span class="sxs-lookup"><span data-stu-id="41cac-103">Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.</span></span> <span data-ttu-id="41cac-104">Aşağıdaki belirtimler bağlama uygular: WS güvenilir Mesajlaşma güvenilirlik ve WS-güvenlik ileti güvenliği ve kimlik doğrulama.</span><span class="sxs-lookup"><span data-stu-id="41cac-104">The binding implements the following specifications: WS-Reliable Messaging for reliability, and WS-Security for message security and authentication.</span></span> <span data-ttu-id="41cac-105">Taşıma HTTP ve ileti kodlama Text/XML kodlama.</span><span class="sxs-lookup"><span data-stu-id="41cac-105">The transport is HTTP, and message encoding is Text/XML encoding.</span></span>  

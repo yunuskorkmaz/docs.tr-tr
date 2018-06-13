@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752643"
 ---
 # <a name="ltclientgt"></a><span data-ttu-id="0e55a-102">&lt;İstemci&gt;</span><span class="sxs-lookup"><span data-stu-id="0e55a-102">&lt;client&gt;</span></span>
 <span data-ttu-id="0e55a-103">`client` Öğe, bir istemcinin bağlanabileceği bitiş noktaları listesini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="0e55a-103">The `client` element defines a list of endpoints that a client can connect to.</span></span>  

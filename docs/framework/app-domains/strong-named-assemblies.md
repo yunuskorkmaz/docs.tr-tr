@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741951"
 ---
 # <a name="strong-named-assemblies"></a><span data-ttu-id="8a24c-102">Tanımlayıcı Adlı Derlemeler</span><span class="sxs-lookup"><span data-stu-id="8a24c-102">Strong-Named Assemblies</span></span>
 <span data-ttu-id="8a24c-103">Güçlü adlandırma bütünleştirilmiş, derleme için benzersiz bir kimliği oluşturur ve derleme çakışmaları engelleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8a24c-103">Strong-naming an assembly creates a unique identity for the assembly, and can prevent assembly conflicts.</span></span>  

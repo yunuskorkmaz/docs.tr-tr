@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749822"
 ---
 # <a name="ltpeerauthenticationgt-element"></a><span data-ttu-id="51d15-102">&lt;peerAuthentication&gt; Öğesi</span><span class="sxs-lookup"><span data-stu-id="51d15-102">&lt;peerAuthentication&gt; Element</span></span>
 <span data-ttu-id="51d15-103">Eşler arası istemciler için kimlik doğrulama seçeneklerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="51d15-103">Specifies authentication options for peer-to-peer clients.</span></span>  

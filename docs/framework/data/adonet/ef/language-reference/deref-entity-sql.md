@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761486"
 ---
 # <a name="deref-entity-sql"></a><span data-ttu-id="6eabe-102">DEREF (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="6eabe-102">DEREF (Entity SQL)</span></span>
 <span data-ttu-id="6eabe-103">Bir başvuru değer ve başvuru sonucu, üretir dereferences.</span><span class="sxs-lookup"><span data-stu-id="6eabe-103">Dereferences a reference value and produces the result of that dereference.</span></span>  

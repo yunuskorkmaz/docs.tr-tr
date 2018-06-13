@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748434"
 ---
 # <a name="ltstartupgt-element"></a><span data-ttu-id="f0a4b-102">&lt;Başlangıç&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="f0a4b-102">&lt;startup&gt; Element</span></span>
 <span data-ttu-id="f0a4b-103">Ortak dil çalışma zamanı başlangıç bilgileri belirtir.</span><span class="sxs-lookup"><span data-stu-id="f0a4b-103">Specifies common language runtime startup information.</span></span>  

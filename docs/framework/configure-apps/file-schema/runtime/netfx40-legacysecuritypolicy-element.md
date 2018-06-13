@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753989"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a><span data-ttu-id="ea66a-102">&lt;NetFx40_LegacySecurityPolicy&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="ea66a-102">&lt;NetFx40_LegacySecurityPolicy&gt; Element</span></span>
 <span data-ttu-id="ea66a-103">Çalışma zamanı eski kod erişim güvenliği (CAS) ilkesi kullanıp kullanmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ea66a-103">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>  

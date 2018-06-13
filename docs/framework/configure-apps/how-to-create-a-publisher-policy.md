@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758132"
 ---
 # <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="c7510-102">Nasıl yapılır: Yayımcı İlkesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c7510-102">How to: Create a Publisher Policy</span></span>
 <span data-ttu-id="c7510-103">Derlemeleri satıcıları yükseltilmiş derleme Yayımcı ilkesi dosyasıyla dahil ederek uygulamalar derleme daha yeni bir sürümü kullanmalıdır durumu.</span><span class="sxs-lookup"><span data-stu-id="c7510-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="c7510-104">Yayımcı ilkesi dosyası derleme yeniden yönlendirme ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası olarak ile aynı biçimi kullanır.</span><span class="sxs-lookup"><span data-stu-id="c7510-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="c7510-105">Yayımcı ilkesi dosyası bütünleştirilmiş koda derlenmemiş ve genel derleme önbelleğinde yerleştirilir.</span><span class="sxs-lookup"><span data-stu-id="c7510-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  

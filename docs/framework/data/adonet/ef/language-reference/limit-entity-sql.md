@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759640"
 ---
 # <a name="limit-entity-sql"></a><span data-ttu-id="5ea92-102">SINIR (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="5ea92-102">LIMIT (Entity SQL)</span></span>
 <span data-ttu-id="5ea92-103">Fiziksel disk belleği, ORDER BY yan tümcesinde LIMIT alt yan tümcesinin kullanılarak gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="5ea92-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="5ea92-104">ORDER BY from yan tümcesi sınırı ayrı olarak kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="5ea92-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  

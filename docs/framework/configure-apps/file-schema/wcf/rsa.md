@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749936"
 ---
 # <a name="ltrsagt"></a><span data-ttu-id="4494e-102">&lt;RSA&gt;</span><span class="sxs-lookup"><span data-stu-id="4494e-102">&lt;rsa&gt;</span></span>
 <span data-ttu-id="4494e-103">Bu kimliğe sahip bir uç nokta bağlandığı güvenli bir WCF istemcisi, sunucu tarafından sunulan talepler bu kimliği oluşturmak için kullanılan RSA ortak anahtarı içeren bir talep içeren doğrular.</span><span class="sxs-lookup"><span data-stu-id="4494e-103">A secure WCF client that connects to an endpoint with this identity verifies that the claims presented by the server contain a claim that contains the RSA public key used to construct this identity.</span></span>  

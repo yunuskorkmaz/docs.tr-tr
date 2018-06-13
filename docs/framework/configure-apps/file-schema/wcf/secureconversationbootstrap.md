@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751603"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a><span data-ttu-id="a40f5-102">&lt;secureConversationBootstrap&gt;</span><span class="sxs-lookup"><span data-stu-id="a40f5-102">&lt;secureConversationBootstrap&gt;</span></span>
 <span data-ttu-id="a40f5-103">Güvenli Konuşmayla hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.</span><span class="sxs-lookup"><span data-stu-id="a40f5-103">Specifies the default values used for initiating a secure conversation service.</span></span>  

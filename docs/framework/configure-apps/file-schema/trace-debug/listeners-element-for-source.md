@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746845"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="c3860-102">&lt;dinleyicileri&gt; öğesi için &lt;kaynağı&gt;</span><span class="sxs-lookup"><span data-stu-id="c3860-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
 <span data-ttu-id="c3860-103">Ekler veya kaldırır dinleyicileri içinde <xref:System.Diagnostics.TraceSource.Listeners%2A> koleksiyonu için bir <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="c3860-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="c3860-104">Dinleyici İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.</span><span class="sxs-lookup"><span data-stu-id="c3860-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  

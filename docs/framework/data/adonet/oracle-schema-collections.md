@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766861"
 ---
 # <a name="oracle-schema-collections"></a><span data-ttu-id="208e7-102">Oracle şema koleksiyonları</span><span class="sxs-lookup"><span data-stu-id="208e7-102">Oracle Schema Collections</span></span>
 <span data-ttu-id="208e7-103">Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:</span><span class="sxs-lookup"><span data-stu-id="208e7-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  

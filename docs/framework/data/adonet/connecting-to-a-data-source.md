@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757118"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="c45c0-102">ADO.NET veri kaynağına bağlanma</span><span class="sxs-lookup"><span data-stu-id="c45c0-102">Connecting to a Data Source in ADO.NET</span></span>
 <span data-ttu-id="c45c0-103">ADO.NET kullandığınız bir **bağlantı** bağlantı dizesinde gerekli kimlik doğrulama bilgileri sağlayarak bir özel veri kaynağına bağlanmak için nesne.</span><span class="sxs-lookup"><span data-stu-id="c45c0-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="c45c0-104">**Bağlantı** kullandığınız nesne veri kaynağı türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="c45c0-104">The **Connection** object you use depends on the type of data source.</span></span>  

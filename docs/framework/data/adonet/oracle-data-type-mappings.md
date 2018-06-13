@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759627"
 ---
 # <a name="oracle-data-type-mappings"></a><span data-ttu-id="e0c81-102">Oracle veri türü eşlemeleri</span><span class="sxs-lookup"><span data-stu-id="e0c81-102">Oracle Data Type Mappings</span></span>
 <span data-ttu-id="e0c81-103">Oracle veri türlerini ve eşlemelerini için aşağıdaki tabloda listelenmektedir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="e0c81-103">The following table lists Oracle data types and their mappings to the <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  

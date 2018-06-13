@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748353"
 ---
 # <a name="ltcompositeduplexgt"></a><span data-ttu-id="791e5-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="791e5-102">&lt;compositeDuplex&gt;</span></span>
 <span data-ttu-id="791e5-103">İstemci hizmetinin istemciye ileti göndermek bir uç nokta kullanıma sunmak yükleyen kullanılan bağlama öğesi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="791e5-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  

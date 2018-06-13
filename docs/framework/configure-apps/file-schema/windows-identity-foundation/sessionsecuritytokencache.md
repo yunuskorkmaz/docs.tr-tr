@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755051"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="00c33-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="00c33-102">&lt;sessionSecurityTokenCache&gt;</span></span>
 <span data-ttu-id="00c33-103">Bir önbellek oturum belirteçleri için bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyonu ile kaydeder.</span><span class="sxs-lookup"><span data-stu-id="00c33-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  

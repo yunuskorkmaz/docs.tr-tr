@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750144"
 ---
 # <a name="ltextensionsgt-section"></a><span data-ttu-id="e8b63-102">&lt;uzantılar&gt; bölümü</span><span class="sxs-lookup"><span data-stu-id="e8b63-102">&lt;extensions&gt; section</span></span>
 <span data-ttu-id="e8b63-103">Bu yapılandırma bölümü kullanıcı tanımlı bağlamalar, davranışları ve diğer yönlerini uzantıları oluşturmak kullanıcı etkinleştirme uzantıları koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="e8b63-103">This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.</span></span>  

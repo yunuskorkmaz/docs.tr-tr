@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749445"
 ---
 # <a name="ltcommonparametersgt"></a><span data-ttu-id="55f38-102">&lt;CommonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="55f38-102">&lt;commonParameters&gt;</span></span>
 <span data-ttu-id="55f38-103">Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="55f38-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="55f38-104">Bu koleksiyon genellikle sürekli hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.</span><span class="sxs-lookup"><span data-stu-id="55f38-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  

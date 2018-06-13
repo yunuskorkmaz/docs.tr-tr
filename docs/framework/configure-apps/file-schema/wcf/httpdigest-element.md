@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748899"
 ---
 # <a name="lthttpdigestgt-element"></a><span data-ttu-id="a3b7b-102">&lt;httpDigest&gt; Öğesi</span><span class="sxs-lookup"><span data-stu-id="a3b7b-102">&lt;httpDigest&gt; Element</span></span>
 <span data-ttu-id="a3b7b-103">Bir Özet belirten bir hizmet için istemci kimlik doğrulaması yapılırken kullanılan kimlik bilgilerini yazın.</span><span class="sxs-lookup"><span data-stu-id="a3b7b-103">Specifies a digest type credential used when authenticating the client to a service.</span></span>  

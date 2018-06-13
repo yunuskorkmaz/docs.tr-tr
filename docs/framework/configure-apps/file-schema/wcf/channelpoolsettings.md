@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747242"
 ---
 # <a name="ltchannelpoolsettingsgt"></a><span data-ttu-id="f1cd4-102">&lt;channelPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="f1cd4-102">&lt;channelPoolSettings&gt;</span></span>
 <span data-ttu-id="f1cd4-103">Özel bağlama için kanal havuzu ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f1cd4-103">Specifies the channel pool settings for a custom binding.</span></span>  

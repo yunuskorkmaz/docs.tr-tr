@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762929"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="62095-102">MULTISET (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="62095-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="62095-103">Değerler listesinden bir çoklu küme örneği oluşturur.</span><span class="sxs-lookup"><span data-stu-id="62095-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="62095-104">Çok KÜMELİ Oluşturucusu tüm değerleri uyumlu bir türü olmalıdır `T`.</span><span class="sxs-lookup"><span data-stu-id="62095-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="62095-105">Boş multiset oluşturucular izin verilmiyor.</span><span class="sxs-lookup"><span data-stu-id="62095-105">Empty multiset constructors are not allowed.</span></span>  

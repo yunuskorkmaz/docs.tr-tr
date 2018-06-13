@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762461"
 ---
 # <a name="typed-datasets"></a><span data-ttu-id="86517-102">Yazılan veri kümeleri</span><span class="sxs-lookup"><span data-stu-id="86517-102">Typed DataSets</span></span>
 <span data-ttu-id="86517-103">Zayıf yazılmış değişkenlerinin değerlerini geç bağlama erişimi birlikte <xref:System.Data.DataSet> kesin türü belirtilmiş bir benzetimini verilerine erişmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="86517-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="86517-104">Tabloları ve parçası olan sütunları **DataSet** kolay adlar kullanılarak erişilebilir ve değişkenleri'kesin türü belirtilmiş.</span><span class="sxs-lookup"><span data-stu-id="86517-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  

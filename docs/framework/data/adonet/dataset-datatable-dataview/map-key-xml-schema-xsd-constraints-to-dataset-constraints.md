@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757872"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="743d6-102">Harita anahtar DataSet kısıtlamaları için XML Şeması (XSD) kısıtlamaları</span><span class="sxs-lookup"><span data-stu-id="743d6-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="743d6-103">Şemada, bir öğenin anahtar kısıtlaması belirtin veya kullanarak öznitelik **anahtar** öğesi.</span><span class="sxs-lookup"><span data-stu-id="743d6-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="743d6-104">Öğesi veya özniteliği bir anahtar kısıtlaması belirtilen şema örnek benzersiz değerlere sahip olmalıdır ve null değerler olamaz.</span><span class="sxs-lookup"><span data-stu-id="743d6-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  

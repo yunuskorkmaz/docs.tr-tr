@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752500"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="8608f-102">İleti Kodlama</span><span class="sxs-lookup"><span data-stu-id="8608f-102">Message Encoding</span></span>
 <span data-ttu-id="8608f-103">Kodlama Unicode karakter kümesini bir bayt dizisi dönüştürme işlemidir.</span><span class="sxs-lookup"><span data-stu-id="8608f-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="8608f-104">Kod çözme ters bir işlemdir.</span><span class="sxs-lookup"><span data-stu-id="8608f-104">Decoding is the reverse process.</span></span> <span data-ttu-id="8608f-105">Windows Communication Foundation (WCF) SOAP iletiler için kodlamayı üç türleri içerir: metin ve ikili ileti iletim en iyi duruma getirme mekanizmasını (MTOM).</span><span class="sxs-lookup"><span data-stu-id="8608f-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398241"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="175dc-102">Karakter Kümesi Belirtme</span><span class="sxs-lookup"><span data-stu-id="175dc-102">Specifying a Character Set</span></span>
 <span data-ttu-id="175dc-103"><xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alanı denetimleri dize sıralama ve nasıl platform çağırma bulur işlevi DLL adlarında belirler.</span><span class="sxs-lookup"><span data-stu-id="175dc-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="175dc-104">Bu konuda iki davranışları açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="175dc-104">This topic describes both behaviors.</span></span>  

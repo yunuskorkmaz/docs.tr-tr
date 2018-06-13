@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758170"
 ---
 # <a name="connection-events"></a><span data-ttu-id="de371-102">Bağlantı olayları</span><span class="sxs-lookup"><span data-stu-id="de371-102">Connection Events</span></span>
 <span data-ttu-id="de371-103">Tüm .NET Framework veri sağlayıcısı **bağlantı** bilgilendirici iletileri bir veri kaynağından veri almak veya belirlemek için kullanabileceğiniz iki olay nesneleriyle durumunu bir **bağlantı** sahip değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="de371-103">All of the .NET Framework data providers have **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed.</span></span> <span data-ttu-id="de371-104">Aşağıdaki tabloda olayların açıklanmaktadır **bağlantı** nesnesi.</span><span class="sxs-lookup"><span data-stu-id="de371-104">The following table describes the events of the **Connection** object.</span></span>  

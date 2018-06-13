@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761915"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a><span data-ttu-id="658d8-102">XML verileri olarak DataSet içeriğini yazma</span><span class="sxs-lookup"><span data-stu-id="658d8-102">Writing DataSet Contents as XML Data</span></span>
 <span data-ttu-id="658d8-103">ADO.NET bir XML temsili yazabilen bir <xref:System.Data.DataSet>, ile veya olmadan şemasına.</span><span class="sxs-lookup"><span data-stu-id="658d8-103">In ADO.NET you can write an XML representation of a <xref:System.Data.DataSet>, with or without its schema.</span></span> <span data-ttu-id="658d8-104">Şema bilgileri XML ile birlikte satır içi ise XML Şeması Tanım Dili (XSD) kullanılarak yazılır.</span><span class="sxs-lookup"><span data-stu-id="658d8-104">If schema information is included inline with the XML, it is written using the XML Schema definition language (XSD).</span></span> <span data-ttu-id="658d8-105">Tablo tanımları bir şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.</span><span class="sxs-lookup"><span data-stu-id="658d8-105">The schema contains the table definitions of the <xref:System.Data.DataSet> as well as the relation and constraint definitions.</span></span>  
