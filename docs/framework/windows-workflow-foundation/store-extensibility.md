@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517926"
 ---
 # <a name="store-extensibility"></a>Depolama genişletilebilirliği
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> kullanılabilir, uygulamaya özgü özel özellikleri yükseltmek kullanıcılara sorgulamak için Kalıcılık veritabanı örneği. Bir özellik yükseltme eylemi değeri veritabanındaki özel bir görünüm içinde kullanılabilir olacak şekilde neden olur. Bu yükseltilen özelliklerini (kullanıcı sorgularda kullanılan) Int64, GUID, dize ve tarih/saat gibi basit türler veya seri hale getirilmiş ikili türde (byte[]). olabilir  

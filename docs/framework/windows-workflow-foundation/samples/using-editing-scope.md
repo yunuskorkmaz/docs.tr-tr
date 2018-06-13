@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517397"
 ---
 # <a name="using-editing-scope"></a>Kapsamı düzenlenirken kullanma
 Bu örnek, böylece tek bir atomik biriminde geri değişiklik kümesi toplu olarak gösterilmiştir. Varsayılan olarak, bir etkinlik Tasarımcısı yazar tarafından gerçekleştirilen eylemleri otomatik olarak geri alma/yineleme sistemiyle tümleşiktir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516990"
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve bağımsız değişkeni izleme
 Bir iş akışının yürütülmesini izlerken, genellikle veri ayıklamak kullanışlıdır. Bu, bir izleme kayıt post yürütme erişirken ek bağlam sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], herhangi bir görünür değişkeni veya herhangi bir etkinlik izleme kullanarak bir iş akışı kapsamında bağımsız değişkeni ayıklayabilirsiniz. İzleme profilleri veri ayıklamak kolaylaştırır.  

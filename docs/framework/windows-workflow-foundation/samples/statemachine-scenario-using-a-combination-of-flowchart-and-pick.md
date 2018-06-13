@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517942"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Durum makinesi Akış Çizelgesi ve çekme birleşimini kullanarak senaryosu
 Bu örnek, bir birleşimini kullanarak basit kronometre senaryoları uygulayacak gösterilmiştir <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Pick> etkinlikler. Alma ve gönderme içinde çekme etkinlik kronometre olaylarını dinleyecek şekilde kullanır.  

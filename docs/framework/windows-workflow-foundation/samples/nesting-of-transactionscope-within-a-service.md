@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518275"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>TransactionScope iç içe bir hizmet kapsamındaki
 Bu örnek iki senaryoları oluşur çalıştırılan nasıl yapılacağını gösteren <xref:System.Activities.Statements.TransactionScope> bir hizmet kapsamındaki etkinlik örnekleri. İşlem kullanarak ilk kez başlatılan <xref:System.Activities.Statements.TransactionScope> istemci üzerinde yeni bir işlem oluşturmak için etkinlik ve <xref:System.ServiceModel.Activities.TransactedReceiveScope> almak ve sunucu üzerindeki işlem ömrü kapsam için. İkincil bir hizmet içinde ilk senaryoda çalıştıran <xref:System.Activities.Statements.TransactionScope> iç içe göstermek için etkinlik <xref:System.Activities.Statements.TransactionScope> hizmet içinde etkinlikler. Ne zaman aşımlarını dikkate ikinci senaryo gösterilmektedir içinde iç içe <xref:System.Activities.Statements.TransactionScope> etkinlikler.  

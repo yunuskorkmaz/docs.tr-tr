@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517273"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity taban sınıfı
 <xref:System.Activities.NativeActivity> soyut bir sınıf korumalı Oluşturucu ile ilgilidir. Gibi <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> uygulayarak kesinlik temelli davranışı yazmak için kullanılan bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Farklı <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tüm iş akışı çalışma zamanı sunulan özelliklerini erişimi <xref:System.Activities.NativeActivityContext> nesne geçirilen <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.  

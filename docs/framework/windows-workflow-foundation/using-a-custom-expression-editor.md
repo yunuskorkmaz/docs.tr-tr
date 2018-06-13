@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518583"
 ---
 # <a name="using-a-custom-expression-editor"></a>Bir özel ifade Düzenleyicisi'ni kullanarak
 Özel ifade Düzenleyicisi düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade Düzenleyicisi kullanmak isteyebilirsiniz birkaç senaryo vardır:  

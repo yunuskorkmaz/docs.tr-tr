@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517566"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Gerekli bağımsız değişkenleri ve aşırı grupları
 Böylece bazı bağımsız değişkenler için yürütme geçerli olması etkinliği bağlanması için gerekli olan etkinlikleri yapılandırılabilir. `RequiredArgument` Özniteliği bazı bağımsız değişkenler bir etkinlikte gerekli olduğunu belirtmek için kullanılır ve `OverloadGroup` özniteliği gerekli bağımsız kategorilerini gruplamak için kullanılır. Öznitelikleri kullanarak, etkinlik yazarlar basit veya karmaşık etkinlik doğrulama yapılandırmaları sağlayabilir.  

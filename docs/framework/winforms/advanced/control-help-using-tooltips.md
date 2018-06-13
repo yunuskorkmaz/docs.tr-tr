@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520571"
 ---
 # <a name="control-help-using-tooltips"></a>ToolTips Kullanarak Denetim Yardımı
 Kullanabileceğiniz <xref:System.Windows.Forms.ToolTip> kısa bir görüntülemek için bileşen özelleştirilmiş Windows Forms'ta tek denetimleri için Yardım iletisi. <xref:System.Windows.Forms.ToolTip> Bileşeni, formdaki her denetim için görüntülenen metin belirten bir özellik sağlar. İle çalışma hakkında daha fazla bilgi için <xref:System.Windows.Forms.ToolTip> bileşen bu şekilde bakın [nasıl yapılır: tasarım zamanında Windows formundaki denetimler için araç ipuçları kümesi](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Ayrıca, yapılandırabileceğiniz <xref:System.Windows.Forms.ToolTip> yani bir gecikme gösterilen önce bileşen. Daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms ToolTip bileşeninin gecikmesini değiştirme](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

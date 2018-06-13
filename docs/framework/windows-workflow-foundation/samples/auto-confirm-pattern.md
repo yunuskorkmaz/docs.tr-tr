@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515999"
 ---
 # <a name="auto-confirm-pattern"></a>Desen otomatik olarak Onayla
 Bu örnek özel bir gösteren çalıştıran üç senaryoları oluşur `AutoConfirmScope` etkinlik. İlk örnek burada ikinci ve üçüncü iç içe geçmiş içinde dört compensable etkinlikler dizisini aktarılmadığı gösterilir bir `AutoConfirmScope`. İkinci örnek aynı dördüncü yürütme sonrasında oluşan bir özel durum ile gösterilir <xref:System.Activities.Statements.CompensableActivity>. Üçüncü senaryo aynı içinde gerçekleşen bir özel durum ile gösterilir `AutoConfirmScope` saniye sonra <xref:System.Activities.Statements.CompensableActivity> tamamlar.  

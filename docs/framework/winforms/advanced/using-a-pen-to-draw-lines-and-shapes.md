@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524348"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Çizgiler ve Şekiller Çizmek için Kalem Kullanma
 Kullanım [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` çizgi dilimleri, eğriler ve şekiller anahatları çizmek için nesneleri. Bu bölümde *satır* herhangi birinde, yalnızca bir çizgi kesimi anlamına gelir belirtilmediği sürece başvuruyor. Bir kalemin rengini, genişliğini, hizalama ve o kalem ile çizilmiş çizgi stilini denetlemek için özellikleri ayarlayın.  

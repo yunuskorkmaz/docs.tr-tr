@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518819"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ Yönetilen Kodu Hakkında
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] iki boyutlu vektör grafikleri, görüntüleme ve tipografi sağlayan Windows işletim sistemi bölümüdür. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] artırır [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (grafik cihaz önceki Windows sürümlerinde bulunan arabirimi) yeni özellikler ekleyerek ve var olan özellikleri en iyi duruma getirme.  

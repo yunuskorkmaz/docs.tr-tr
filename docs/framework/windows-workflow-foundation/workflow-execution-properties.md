@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518650"
 ---
 # <a name="workflow-execution-properties"></a>İş akışı yürütme özellikleri
 İş parçacığı yerel depolaması (TLS), her iş parçacığı için yürütme bağlamı CLR tutar. Bu yürütme bağlamı ortam işlem iş parçacığı kimliği gibi bilinen iş parçacığı özellikleri yönetir ve ayrıca gibi kullanıcı tanımlı iş parçacığı özellikleri için geçerli izni yuvaları adlı.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519866"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Nasıl yapılır: özel örneği deposu oluşturma
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] içeren <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, iş akışı verilerinin sürdürülmesi için SQL Server kullanan bir örnek deposu. Uygulamanızı akışı verileri farklı bir veritabanı veya bir dosya sistemi gibi başka bir orta kalıcı hale getirmek için gerekli olduğunda özel örnek deposuna uygulayabilirsiniz. Özel örnek deposuna abstract genişletilerek oluşturulur <xref:System.Runtime.DurableInstancing.InstanceStore> sınıfı ve uygulama için gerekli yöntemleri uygulama. Özel örnek deposuna tam bir uygulama için bkz: [şirket satın alma işlemi](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) örnek.  

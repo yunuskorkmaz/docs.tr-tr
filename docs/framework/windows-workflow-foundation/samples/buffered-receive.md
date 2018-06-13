@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518717"
 ---
 # <a name="buffered-receive"></a>Arabelleğe alma
 Bu örnek, ayarlama ve Windows Workflow Foundation (WF) arabellekli alma özelliği yapılandırma gösterilmektedir. Arabelleğe alma iletilerin alındığını sırası hakkında endişelenmenize gerek olmadan bir iş akışı oluşturmak iş akışı Yazar verir. Arabellekli alma özelliği, yerel olarak iletileri arabelleğe alır ve iş akışı almaya hazır olduğunda bunları sunar.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504443"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
 Zengin destek uzantısı verilerle çalışmak için dağıtım nesnesi modeli sunar — akışı bir dağıtım mevcut olan bilgiler XML gösterimi kullanıcının ancak açıkça sınıfları tarafından gibi açığa <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>. Bu örnek uzantısı verilerle çalışmak için temel teknikleri gösterilmektedir.  

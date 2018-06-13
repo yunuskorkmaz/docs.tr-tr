@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517855"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Nasıl yapılır: Özel Etkinlik şablonu oluşturma
 Özel Etkinlik şablonları etkinlikleri, böylece kullanıcılar her etkinlik tek tek oluşturabilirsiniz ve bunların özelliklerini ve diğer ayarları yapılandırmak zorunda değilsiniz özel bileşik etkinlikler dahil olmak üzere yapılandırma özelleştirmek için kullanılan el ile. Bu özel şablonları içinde kullanılabilir hale getirilebilir **araç** üzerinde [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] veya hangi kullanıcıların sürükleyebilirsiniz bunları önceden yapılandırılmış tasarım yüzeyine bir rehosted Tasarımcısından. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] Bu tür şablonlar iyi örnekleri ile birlikte gelir: [SendAndReceiveReply şablonu Tasarımcısı](/visualstudio/workflow-designer/sendandreceivereply-template-designer) ve [ReceiveAndSendReply şablonu Tasarımcısı](/visualstudio/workflow-designer/receiveandsendreply-template-designer) içinde [Mesajlaşma etkinlik tasarımcıları](/visualstudio/workflow-designer/messaging-activity-designers) kategorisi.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358974"
 ---
 # <a name="paging-through-a-query-result"></a>Sorgu sonucu disk belleği
 Disk belleği sorgu sonucu aracılığıyla veri veya sayfalarının daha küçük alt kümeler halinde bir sorgunun sonuçlarını döndürme işlemidir. Bu küçük, yönetilmesi kolay öbekleri bir kullanıcıya sonuçları görüntülemek için yaygın bir uygulamadır.  

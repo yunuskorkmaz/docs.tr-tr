@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544787"
 ---
 # <a name="how-to-create-a-data-object"></a>Nasıl yapılır: Veri Nesnesi Oluşturma
 Aşağıdaki örnekler tarafından sağlanan oluşturucuları kullanarak bir veri nesnesi oluşturmak için çeşitli şekillerde <xref:System.Windows.DataObject> sınıfı.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533692"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Nesneleri Katmanlara Ayırma
 Karmaşık kullanıcı arabirimi oluşturma ya da birden çok belge arabirimi (MDI) formla çalışmak genellikle denetimleri ve daha karmaşık kullanıcı arabirimi (UI) oluşturmak için alt formları katman isteyeceksiniz. Taşıma ve denetimleri ve windows Grup bağlamında izlemek için bunların z düzenini yönetme. *Z düzeni* formun z ekseni (derinlik) boyunca bir form üzerinde denetimleri görsel katmanlarını değil. Pencerenin üst kısmındaki z düzenini diğer tüm windows çakışıyor. Diğer tüm windows pencerenin alt kısmındaki z düzenini çakışıyor.  
