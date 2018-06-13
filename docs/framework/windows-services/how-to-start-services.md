@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516223"
 ---
 # <a name="how-to-start-services"></a><span data-ttu-id="5ad05-102">Nasıl Yapılır: Hizmetleri Başlatma</span><span class="sxs-lookup"><span data-stu-id="5ad05-102">How to: Start Services</span></span>
 <span data-ttu-id="5ad05-103">Bir hizmeti yüklendikten sonra başlatılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5ad05-103">After a service is installed, it must be started.</span></span> <span data-ttu-id="5ad05-104">Çağrıları başlangıç <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi hizmet sınıfı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="5ad05-104">Starting calls the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method on the service class.</span></span> <span data-ttu-id="5ad05-105">Genellikle, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi hizmetin gerçekleştirecek yararlı çalışmaları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5ad05-105">Usually, the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method defines the useful work the service will perform.</span></span> <span data-ttu-id="5ad05-106">Bir hizmeti başlatıldıktan sonra el ile duraklatıldı veya durduruluncaya kadar etkin kalır.</span><span class="sxs-lookup"><span data-stu-id="5ad05-106">After a service starts, it remains active until it is manually paused or stopped.</span></span>  

@@ -1,36 +1,25 @@
 ---
-title: "Özel Bir Şifreleme Algoritması Belirtme"
-ms.custom: 
+title: Özel Bir Şifreleme Algoritması Belirtme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489234"
 ---
-# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="b16ae-102">Özel Bir Şifreleme Algoritması Belirtme</span><span class="sxs-lookup"><span data-stu-id="b16ae-102">Specifying a Custom Crypto Algorithm</span></span>
-<span data-ttu-id="b16ae-103">WCF kullanmak üzere özel bir şifreleme algoritması belirtmenize olanak verir veri şifrelemek veya dijital imzalar bilgi işlem.</span><span class="sxs-lookup"><span data-stu-id="b16ae-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="b16ae-104">Bu, aşağıdaki adımlarla gerçekleştirilir:</span><span class="sxs-lookup"><span data-stu-id="b16ae-104">This is done by the following steps:</span></span>  
+# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="51093-102">Özel Bir Şifreleme Algoritması Belirtme</span><span class="sxs-lookup"><span data-stu-id="51093-102">Specifying a Custom Crypto Algorithm</span></span>
+<span data-ttu-id="51093-103">WCF kullanmak üzere özel bir şifreleme algoritması belirtmenize olanak verir veri şifrelemek veya dijital imzalar bilgi işlem.</span><span class="sxs-lookup"><span data-stu-id="51093-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="51093-104">Bu, aşağıdaki adımlarla gerçekleştirilir:</span><span class="sxs-lookup"><span data-stu-id="51093-104">This is done by the following steps:</span></span>  
   
-1.  <span data-ttu-id="b16ae-105">Öğesinden bir sınıf türetin<xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span><span class="sxs-lookup"><span data-stu-id="b16ae-105">Derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span></span>  
+1.  <span data-ttu-id="51093-105">Öğesinden bir sınıf türetin <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span><span class="sxs-lookup"><span data-stu-id="51093-105">Derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span></span>  
   
-2.  <span data-ttu-id="b16ae-106">Algoritma kaydetme</span><span class="sxs-lookup"><span data-stu-id="b16ae-106">Register the algorithm</span></span>  
+2.  <span data-ttu-id="51093-106">Algoritma kaydetme</span><span class="sxs-lookup"><span data-stu-id="51093-106">Register the algorithm</span></span>  
   
-3.  <span data-ttu-id="b16ae-107">Bağlama ile yapılandırma <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-türetilmiş sınıf.</span><span class="sxs-lookup"><span data-stu-id="b16ae-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
+3.  <span data-ttu-id="51093-107">Bağlama ile yapılandırma <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-türetilmiş sınıf.</span><span class="sxs-lookup"><span data-stu-id="51093-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
   
-## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="b16ae-108">SecurityAlgorithmSuite bir sınıf türetin</span><span class="sxs-lookup"><span data-stu-id="b16ae-108">Derive a class from SecurityAlgorithmSuite</span></span>  
- <span data-ttu-id="b16ae-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Çeşitli güvenlik gerçekleştirme işlemleri işlerken kullanılacak algoritmayı belirtmenize olanak sağlayan bir Özet temel sınıf.</span><span class="sxs-lookup"><span data-stu-id="b16ae-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="b16ae-110">Örneğin, bir dijital imza veya iletiyi şifrelemek için bir karma hesaplama.</span><span class="sxs-lookup"><span data-stu-id="b16ae-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="b16ae-111">Aşağıdaki kod öğesinden bir sınıf türetin gösterilmektedir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span><span class="sxs-lookup"><span data-stu-id="b16ae-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="51093-108">SecurityAlgorithmSuite bir sınıf türetin</span><span class="sxs-lookup"><span data-stu-id="51093-108">Derive a class from SecurityAlgorithmSuite</span></span>  
+ <span data-ttu-id="51093-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Çeşitli güvenlik gerçekleştirme işlemleri işlerken kullanılacak algoritmayı belirtmenize olanak sağlayan bir Özet temel sınıf.</span><span class="sxs-lookup"><span data-stu-id="51093-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="51093-110">Örneğin, bir dijital imza veya iletiyi şifrelemek için bir karma hesaplama.</span><span class="sxs-lookup"><span data-stu-id="51093-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="51093-111">Aşağıdaki kod öğesinden bir sınıf türetin gösterilmektedir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span><span class="sxs-lookup"><span data-stu-id="51093-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -97,8 +86,8 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
     }  
 ```  
   
-## <a name="register-the-custom-algorithm"></a><span data-ttu-id="b16ae-112">Özel algoritması kaydetme</span><span class="sxs-lookup"><span data-stu-id="b16ae-112">Register the Custom Algorithm</span></span>  
- <span data-ttu-id="b16ae-113">Kayıt bir yapılandırma dosyası veya kesinlik temelli kod yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="b16ae-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="b16ae-114">Özel bir algoritma kaydetme bir şifreleme hizmeti sağlayıcısı uygulayan bir sınıf ve bir diğer ad arasında bir eşleme oluşturarak yapılır.</span><span class="sxs-lookup"><span data-stu-id="b16ae-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="b16ae-115">Diğer adı daha sonra algoritması WCF hizmet bağlama belirtme sırasında kullanılan bir URI eşleştirilir.</span><span class="sxs-lookup"><span data-stu-id="b16ae-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="b16ae-116">Aşağıdaki yapılandırma parçacığını nasıl özel bir algoritma yapılandırma dosyasına kaydedileceği gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="b16ae-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
+## <a name="register-the-custom-algorithm"></a><span data-ttu-id="51093-112">Özel algoritması kaydetme</span><span class="sxs-lookup"><span data-stu-id="51093-112">Register the Custom Algorithm</span></span>  
+ <span data-ttu-id="51093-113">Kayıt bir yapılandırma dosyası veya kesinlik temelli kod yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="51093-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="51093-114">Özel bir algoritma kaydetme bir şifreleme hizmeti sağlayıcısı uygulayan bir sınıf ve bir diğer ad arasında bir eşleme oluşturarak yapılır.</span><span class="sxs-lookup"><span data-stu-id="51093-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="51093-115">Diğer adı daha sonra algoritması WCF hizmet bağlama belirtme sırasında kullanılan bir URI eşleştirilir.</span><span class="sxs-lookup"><span data-stu-id="51093-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="51093-116">Aşağıdaki yapılandırma parçacığını nasıl özel bir algoritma yapılandırma dosyasına kaydedileceği gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="51093-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
   
 ```xml  
 <configuration>  
@@ -116,9 +105,9 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <span data-ttu-id="b16ae-117">Bölümü altında <`cryptoClasses`> öğesi SHA256CryptoServiceProvider ve diğer adı "SHA256CSP" arasında eşleme oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b16ae-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="b16ae-118"><`nameEntry`> Öğesi "SHA256CSP" diğer adını ve belirtilen URL'yi (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) arasındaki eşleştirmeyi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b16ae-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
+ <span data-ttu-id="51093-117">Bölümü altında <`cryptoClasses`> öğesi SHA256CryptoServiceProvider ve diğer adı "SHA256CSP" arasında eşleme oluşturur.</span><span class="sxs-lookup"><span data-stu-id="51093-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="51093-118"><`nameEntry`> Öğesi "SHA256CSP" diğer adını ve belirtilen URL'yi arasında eşleme oluşturur (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span><span class="sxs-lookup"><span data-stu-id="51093-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
   
- <span data-ttu-id="b16ae-119">Özel algoritması kodu kullanımda kaydetmek için <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b16ae-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> method.</span></span> <span data-ttu-id="b16ae-120">Bu yöntem, her iki eşlemeleri oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b16ae-120">This method creates both mappings.</span></span> <span data-ttu-id="b16ae-121">Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="b16ae-121">The following example shows how to call this method:</span></span>  
+ <span data-ttu-id="51093-119">Özel algoritması kodu kullanımda kaydetmek için <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="51093-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> method.</span></span> <span data-ttu-id="51093-120">Bu yöntem, her iki eşlemeleri oluşturur.</span><span class="sxs-lookup"><span data-stu-id="51093-120">This method creates both mappings.</span></span> <span data-ttu-id="51093-121">Aşağıdaki örnek, bu yöntemin nasıl çağrılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="51093-121">The following example shows how to call this method:</span></span>  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -126,18 +115,18 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
   
-## <a name="configure-the-binding"></a><span data-ttu-id="b16ae-122">Bağlama yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b16ae-122">Configure the Binding</span></span>  
- <span data-ttu-id="b16ae-123">Özel belirterek bağını yapılandırmak <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-aşağıdaki kod parçacığında gösterildiği gibi türetilmiş sınıf bağlama ayarları'nda:</span><span class="sxs-lookup"><span data-stu-id="b16ae-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
+## <a name="configure-the-binding"></a><span data-ttu-id="51093-122">Bağlama yapılandırma</span><span class="sxs-lookup"><span data-stu-id="51093-122">Configure the Binding</span></span>  
+ <span data-ttu-id="51093-123">Özel belirterek bağını yapılandırmak <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-aşağıdaki kod parçacığında gösterildiği gibi türetilmiş sınıf bağlama ayarları'nda:</span><span class="sxs-lookup"><span data-stu-id="51093-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- <span data-ttu-id="b16ae-124">Tam kod örneği için bkz: [WCF güvenliğinde şifreleme çevikliği](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="b16ae-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
+ <span data-ttu-id="51093-124">Tam kod örneği için bkz: [WCF güvenliğinde şifreleme çevikliği](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="51093-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b16ae-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b16ae-125">See Also</span></span>  
- [<span data-ttu-id="b16ae-126">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="b16ae-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="b16ae-127">Hizmetleri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="b16ae-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
- [<span data-ttu-id="b16ae-128">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b16ae-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="b16ae-129">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="b16ae-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="51093-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="51093-125">See Also</span></span>  
+ [<span data-ttu-id="51093-126">Hizmet ve İstemcileri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="51093-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="51093-127">Hizmetleri Güvenli Hale Getirme</span><span class="sxs-lookup"><span data-stu-id="51093-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="51093-128">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="51093-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="51093-129">Güvenlik Kavramları</span><span class="sxs-lookup"><span data-stu-id="51093-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)

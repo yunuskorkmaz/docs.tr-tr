@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513145"
 ---
 # <a name="how-to-install-and-uninstall-services"></a><span data-ttu-id="82846-102">Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma</span><span class="sxs-lookup"><span data-stu-id="82846-102">How to: Install and Uninstall Services</span></span>
 <span data-ttu-id="82846-103">Bir Windows hizmeti .NET Framework kullanarak geliştiriyorsanız InstallUtil.exe olarak adlandırılan bir komut satırı yardımcı programını kullanarak hizmet uygulamanızı hızlı bir şekilde yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="82846-103">If you’re developing a Windows Service by using the .NET Framework, you can quickly install your service application by using a command-line utility called InstallUtil.exe.</span></span> <span data-ttu-id="82846-104">Geliştiriciyseniz Windows kullanıcıları yüklemek ve kaldırmanız hizmeti yayımlamayı isteyen InstallShield kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="82846-104">If you’re a developer who wants to release a Windows Service that users can install and uninstall  you should use InstallShield.</span></span> <span data-ttu-id="82846-105">Bkz: [Windows Installer dağıtımı](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).</span><span class="sxs-lookup"><span data-stu-id="82846-105">See [Windows Installer Deployment](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).</span></span>  

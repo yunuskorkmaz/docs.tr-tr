@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742516"
 ---
 # <a name="multifile-assemblies"></a><span data-ttu-id="7f1eb-102">Birden Çok Dosya Derlemeleri</span><span class="sxs-lookup"><span data-stu-id="7f1eb-102">Multifile Assemblies</span></span>
 <span data-ttu-id="7f1eb-103">Komut satırı derleyicileri kullanarak birden çok dosya derlemeleri oluşturabilir veya [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] Visual C++ ile.</span><span class="sxs-lookup"><span data-stu-id="7f1eb-103">You can create multifile assemblies using command-line compilers or [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] with Visual C++.</span></span> <span data-ttu-id="7f1eb-104">Derleme bildirimi derlemesindeki bir dosya içermelidir.</span><span class="sxs-lookup"><span data-stu-id="7f1eb-104">One file in the assembly must contain the assembly manifest.</span></span> <span data-ttu-id="7f1eb-105">Bir uygulamayı başlatır bütünleştirilmiş bir ana veya WinMain yöntemi gibi bir giriş noktası da içermelidir.</span><span class="sxs-lookup"><span data-stu-id="7f1eb-105">An assembly that starts an application must also contain an entry point, such as a Main or WinMain method.</span></span>  
