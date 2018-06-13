@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639646"
 ---
 # <a name="too-many-dll-application-clients"></a>Çok fazla sayıda DLL uygulama istemci
 Visual Basic için dinamik bağlantı kitaplığı (DLL), yalnızca sınırlı sayıda konak uygulamalar tarafından erişim sağlayabilir. Uygulamanız ve Visual Basic hosts (bazıları, uygulamanız tarafından erişilebilir) diğer uygulamaların tümü aynı anda Visual Basic DLL erişmeye çalıştığınız.  
