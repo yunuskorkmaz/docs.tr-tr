@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761405"
 ---
 # <a name="-equals-entity-sql"></a><span data-ttu-id="f4baa-102">= (Eşittir) (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="f4baa-102">= (Equals) (Entity SQL)</span></span>
 <span data-ttu-id="f4baa-103">İki ifadeye eşitliğini karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="f4baa-103">Compares the equality of two expressions.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763634"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="bb2ad-102">İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme</span><span class="sxs-lookup"><span data-stu-id="bb2ad-102">Map Implicit Relations Between Nested Schema Elements</span></span>
 <span data-ttu-id="bb2ad-103">Bir XML Şeması Tanım Dili (XSD) şeması, karmaşık türler başka içinde iç içe geçmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="bb2ad-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="bb2ad-104">Bu durumda eşleme işlemi varsayılan eşleme uygulanır ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="bb2ad-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  

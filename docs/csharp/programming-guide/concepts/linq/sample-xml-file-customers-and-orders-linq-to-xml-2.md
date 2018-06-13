@@ -1,30 +1,22 @@
 ---
-title: "Örnek XML dosyası: Müşteriler ve siparişler (LINQ-XML)"
-ms.custom: 
+title: 'Örnek XML dosyası: Müşteriler ve siparişler (LINQ-XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f8c27350e91a71646326722881877f7d0982fdd5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2d9d197bccc3749c1874a51ea19150dd33be277c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327785"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="e9ef7-102">Örnek XML dosyası: Müşteriler ve siparişler (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="e9ef7-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
-<span data-ttu-id="e9ef7-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="e9ef7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e9ef7-104">Bu dosya, müşteriler ve siparişler içerir.</span><span class="sxs-lookup"><span data-stu-id="e9ef7-104">This file contains customers and orders.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="3c623-102">Örnek XML dosyası: Müşteriler ve siparişler (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="3c623-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="3c623-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="3c623-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="3c623-104">Bu dosya, müşteriler ve siparişler içerir.</span><span class="sxs-lookup"><span data-stu-id="3c623-104">This file contains customers and orders.</span></span>  
   
- <span data-ttu-id="e9ef7-105">Konu [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir.</span><span class="sxs-lookup"><span data-stu-id="e9ef7-105">The topic [Sample XSD File: Customers and Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="e9ef7-106">Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerini `CustomerID` özniteliği `Customer` öğesidir bir anahtarı ve arasında bir ilişki oluşturmak için `CustomerID` her öğesinde `Order` öğesi ve `CustomerID` her özniteliği `Customer` öğesi.</span><span class="sxs-lookup"><span data-stu-id="e9ef7-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
+ <span data-ttu-id="3c623-105">Konu [örnek XSD dosyası: müşteriler ve siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) bu belgeyi doğrulamak için kullanılan bir XSD içerir.</span><span class="sxs-lookup"><span data-stu-id="3c623-105">The topic [Sample XSD File: Customers and Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="3c623-106">Kullandığı `xs:key` ve `xs:keyref` , kurmak için XSD özelliklerini `CustomerID` özniteliği `Customer` öğesidir bir anahtarı ve arasında bir ilişki oluşturmak için `CustomerID` her öğesinde `Order` öğesi ve `CustomerID` her özniteliği `Customer` öğesi.</span><span class="sxs-lookup"><span data-stu-id="3c623-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- <span data-ttu-id="e9ef7-107">Bu ilişkiyi kullanarak avantajlarından yararlanmak LINQ sorguları yazma bir örnek için `Join` yan tümcesi, bkz: [nasıl yapılır: iki koleksiyonları birleştirme (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e9ef7-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="3c623-107">Bu ilişkiyi kullanarak avantajlarından yararlanmak LINQ sorguları yazma bir örnek için `Join` yan tümcesi, bkz: [nasıl yapılır: iki koleksiyonları birleştirme (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="3c623-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a><span data-ttu-id="e9ef7-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="e9ef7-108">CustomersOrders.xml</span></span>  
+## <a name="customersordersxml"></a><span data-ttu-id="3c623-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="3c623-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -442,5 +434,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9ef7-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e9ef7-109">See Also</span></span>  
- [<span data-ttu-id="e9ef7-110">Örnek XML belgeleri (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="e9ef7-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="3c623-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3c623-109">See Also</span></span>  
+ [<span data-ttu-id="3c623-110">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="3c623-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

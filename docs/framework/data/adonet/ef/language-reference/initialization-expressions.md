@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762214"
 ---
 # <a name="initialization-expressions"></a><span data-ttu-id="3a2d9-102">Başlatma ifadeleri</span><span class="sxs-lookup"><span data-stu-id="3a2d9-102">Initialization Expressions</span></span>
 <span data-ttu-id="3a2d9-103">Başlatma ifade yeni bir nesne başlatır.</span><span class="sxs-lookup"><span data-stu-id="3a2d9-103">An initialization expression initializes a new object.</span></span> <span data-ttu-id="3a2d9-104">Çoğu yeni C# 3.0 ve Visual Basic 9.0 başlatma ifadeleri de dahil olmak üzere çoğu başlatma ifadeleri desteklenir.</span><span class="sxs-lookup"><span data-stu-id="3a2d9-104">Most initialization expressions are supported, including most new C# 3.0 and Visual Basic 9.0 initialization expressions.</span></span> <span data-ttu-id="3a2d9-105">Aşağıdaki türler başlatıldı ve varlıkları sorgu için bir LINQ tarafından döndürülen:</span><span class="sxs-lookup"><span data-stu-id="3a2d9-105">The following types can be initialized and returned by a LINQ to Entities query:</span></span>  
