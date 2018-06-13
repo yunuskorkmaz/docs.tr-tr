@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754869"
 ---
 # <a name="ltusernameauthenticationgt"></a><span data-ttu-id="46ea3-102">&lt;UserNameAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="46ea3-102">&lt;userNameAuthentication&gt;</span></span>
 <span data-ttu-id="46ea3-103">Kullanıcı adı ve parolaya göre bir hizmetin kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="46ea3-103">Specifies a service's credentials based on user name and password.</span></span>  

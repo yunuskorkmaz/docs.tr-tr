@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749510"
 ---
 # <a name="ltendpointgt-element"></a><span data-ttu-id="50b62-102">&lt;uç noktası&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="50b62-102">&lt;endpoint&gt; element</span></span>
 <span data-ttu-id="50b62-103">Bağlama, sözleşme ve Hizmetleri kullanıma sunmak için kullanılan bir hizmet uç noktası adresi özelliklerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="50b62-103">Specifies binding, contract, and address properties for a service endpoint, which is used to expose services.</span></span>  

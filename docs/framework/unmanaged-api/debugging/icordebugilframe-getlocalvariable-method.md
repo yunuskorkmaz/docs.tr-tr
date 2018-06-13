@@ -1,14 +1,6 @@
 ---
 title: ICorDebugILFrame::GetLocalVariable Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugILFrame.GetLocalVariable
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9694ee2e27d8789b661abc7393a480411c2b0191
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413013"
 ---
-# <a name="icordebugilframegetlocalvariable-method"></a><span data-ttu-id="100c8-102">ICorDebugILFrame::GetLocalVariable Metodu</span><span class="sxs-lookup"><span data-stu-id="100c8-102">ICorDebugILFrame::GetLocalVariable Method</span></span>
-<span data-ttu-id="100c8-103">Bu Microsoft Ara dili (MSIL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır.</span><span class="sxs-lookup"><span data-stu-id="100c8-103">Gets the value of the specified local variable in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
+# <a name="icordebugilframegetlocalvariable-method"></a><span data-ttu-id="fc5d6-102">ICorDebugILFrame::GetLocalVariable Metodu</span><span class="sxs-lookup"><span data-stu-id="fc5d6-102">ICorDebugILFrame::GetLocalVariable Method</span></span>
+<span data-ttu-id="fc5d6-103">Bu Microsoft Ara dili (MSIL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır.</span><span class="sxs-lookup"><span data-stu-id="fc5d6-103">Gets the value of the specified local variable in this Microsoft intermediate language (MSIL) stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="100c8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="100c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc5d6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fc5d6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariable (  
@@ -47,21 +36,21 @@ HRESULT GetLocalVariable (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="100c8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="100c8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fc5d6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fc5d6-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="100c8-106">[in] Yerel değişken bu MSIL yığın çerçevesinde dizini.</span><span class="sxs-lookup"><span data-stu-id="100c8-106">[in] The index of the local variable in this MSIL stack frame.</span></span>  
+ <span data-ttu-id="fc5d6-106">[in] Yerel değişken bu MSIL yığın çerçevesinde dizini.</span><span class="sxs-lookup"><span data-stu-id="fc5d6-106">[in] The index of the local variable in this MSIL stack frame.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="100c8-107">[out] Alınan değerin temsil eden Icordebugvalue nesne adresini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="100c8-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
+ <span data-ttu-id="fc5d6-107">[out] Alınan değerin temsil eden Icordebugvalue nesne adresini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="fc5d6-107">[out] A pointer to the address of an ICorDebugValue object that represents the retrieved value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="100c8-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="100c8-108">Remarks</span></span>  
- <span data-ttu-id="100c8-109">`GetLocalVariable` MSIL yığın çerçevesi veya tam zamanında (JIT) derlenmiş çerçeve yöntemi kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="100c8-109">The `GetLocalVariable` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc5d6-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fc5d6-108">Remarks</span></span>  
+ <span data-ttu-id="fc5d6-109">`GetLocalVariable` MSIL yığın çerçevesi veya tam zamanında (JIT) derlenmiş çerçeve yöntemi kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="fc5d6-109">The `GetLocalVariable` method can be used either in an MSIL stack frame or in a just-in-time (JIT) compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="100c8-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="100c8-110">Requirements</span></span>  
- <span data-ttu-id="100c8-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="100c8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc5d6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fc5d6-110">Requirements</span></span>  
+ <span data-ttu-id="fc5d6-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc5d6-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="100c8-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="100c8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fc5d6-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc5d6-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="100c8-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="100c8-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc5d6-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc5d6-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="100c8-114">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="100c8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fc5d6-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc5d6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

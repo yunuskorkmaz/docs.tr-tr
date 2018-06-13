@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756065"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="1d660-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="1d660-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="1d660-103">Sertifikaları doğrulamak için belirteci işleyicileri kullanma ayarlarını denetler.</span><span class="sxs-lookup"><span data-stu-id="1d660-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="1d660-104">Belirli bir işleyici ile kendi Doğrulayıcı yapılandırdıysanız bu ayarları geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="1d660-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  

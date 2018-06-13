@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757053"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a><span data-ttu-id="4a91b-102">&lt;system.identityModel.services&gt;</span><span class="sxs-lookup"><span data-stu-id="4a91b-102">&lt;system.identityModel.services&gt;</span></span>
 <span data-ttu-id="4a91b-103">WS-Federasyon protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.</span><span class="sxs-lookup"><span data-stu-id="4a91b-103">Configuration section for authentication using the WS-Federation protocol.</span></span>  

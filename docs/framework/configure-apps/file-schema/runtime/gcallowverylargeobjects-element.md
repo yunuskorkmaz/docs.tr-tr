@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745233"
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a><span data-ttu-id="a782a-102">&lt;gcAllowVeryLargeObjects&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="a782a-102">&lt;gcAllowVeryLargeObjects&gt; Element</span></span>
 <span data-ttu-id="a782a-103">64-bit platformlarda toplam boyutu 2 gigabayttan (GB) büyük olan dizileri etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="a782a-103">On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.</span></span>  

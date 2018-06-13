@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747460"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="369f6-102">&lt;ekleme&gt; öğesi için &lt;anahtarları&gt;</span><span class="sxs-lookup"><span data-stu-id="369f6-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
 <span data-ttu-id="369f6-103">İzleme anahtarı ayarlandığı düzeyini belirtir.</span><span class="sxs-lookup"><span data-stu-id="369f6-103">Specifies the level where a trace switch is set.</span></span>  
