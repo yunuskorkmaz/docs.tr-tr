@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::DefineSequencePoints Yöntemi"
-ms.custom: 
+title: ISymUnmanagedWriter::DefineSequencePoints Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.DefineSequencePoints
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e1dcc427a6d034ce108ca66f71cc24b1050a72f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426942"
 ---
-# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="cffcb-102">ISymUnmanagedWriter::DefineSequencePoints Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cffcb-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
-<span data-ttu-id="cffcb-103">Geçerli yöntemi içinde sıralama noktaları grubunu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="cffcb-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="cffcb-104">Her bir başlangıç satırı ve başlangıç sütunu deyimi bir yöntem içinde başlangıcı tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="cffcb-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="cffcb-105">Her bitiş satır ve sütun bitiş deyimi bir yöntem içinde sonuna tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="cffcb-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="cffcb-106">Diziler uzaklıkları artan düzende sıralanmış.</span><span class="sxs-lookup"><span data-stu-id="cffcb-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="cffcb-107">Uzaklık her zaman yönteminin bayt cinsinden ölçülür.</span><span class="sxs-lookup"><span data-stu-id="cffcb-107">The offset is always measured from the start of the method, in bytes.</span></span>  
+# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="73fa6-102">ISymUnmanagedWriter::DefineSequencePoints Yöntemi</span><span class="sxs-lookup"><span data-stu-id="73fa6-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
+<span data-ttu-id="73fa6-103">Geçerli yöntemi içinde sıralama noktaları grubunu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="73fa6-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="73fa6-104">Her bir başlangıç satırı ve başlangıç sütunu deyimi bir yöntem içinde başlangıcı tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="73fa6-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="73fa6-105">Her bitiş satır ve sütun bitiş deyimi bir yöntem içinde sonuna tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="73fa6-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="73fa6-106">Diziler uzaklıkları artan düzende sıralanmış.</span><span class="sxs-lookup"><span data-stu-id="73fa6-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="73fa6-107">Uzaklık her zaman yönteminin bayt cinsinden ölçülür.</span><span class="sxs-lookup"><span data-stu-id="73fa6-107">The offset is always measured from the start of the method, in bytes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cffcb-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cffcb-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73fa6-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="73fa6-108">Syntax</span></span>  
   
 ```  
 HRESULT DefineSequencePoints(  
@@ -51,33 +40,33 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cffcb-109">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cffcb-109">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="73fa6-109">Parametreler</span><span class="sxs-lookup"><span data-stu-id="73fa6-109">Parameters</span></span>  
  `document`  
- <span data-ttu-id="cffcb-110">[in] Sıralama noktaları tanımlı belge nesnesi.</span><span class="sxs-lookup"><span data-stu-id="cffcb-110">[in] The document object for which the sequence points are being defined.</span></span>  
+ <span data-ttu-id="73fa6-110">[in] Sıralama noktaları tanımlı belge nesnesi.</span><span class="sxs-lookup"><span data-stu-id="73fa6-110">[in] The document object for which the sequence points are being defined.</span></span>  
   
  `spCount`  
- <span data-ttu-id="cffcb-111">[in] A `ULONG32` her birinin boyutunu gösterir, `offsets`, `lines`, `columns`, `endLines`, ve `endColumns` arabellek.</span><span class="sxs-lookup"><span data-stu-id="cffcb-111">[in] A `ULONG32` that that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
+ <span data-ttu-id="73fa6-111">[in] A `ULONG32` her birinin boyutunu gösterir, `offsets`, `lines`, `columns`, `endLines`, ve `endColumns` arabellek.</span><span class="sxs-lookup"><span data-stu-id="73fa6-111">[in] A `ULONG32` that that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
   
  `offsets`  
- <span data-ttu-id="cffcb-112">[in] Sıralama noktaları uzaklığını yöntemi başından itibaren ölçülür.</span><span class="sxs-lookup"><span data-stu-id="cffcb-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
+ <span data-ttu-id="73fa6-112">[in] Sıralama noktaları uzaklığını yöntemi başından itibaren ölçülür.</span><span class="sxs-lookup"><span data-stu-id="73fa6-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
   
  `lines`  
- <span data-ttu-id="cffcb-113">[in] Sıralama noktaları başlangıç satır sayısı.</span><span class="sxs-lookup"><span data-stu-id="cffcb-113">[in] The starting line numbers of the sequence points.</span></span>  
+ <span data-ttu-id="73fa6-113">[in] Sıralama noktaları başlangıç satır sayısı.</span><span class="sxs-lookup"><span data-stu-id="73fa6-113">[in] The starting line numbers of the sequence points.</span></span>  
   
  `columns`  
- <span data-ttu-id="cffcb-114">[in] Sıralama noktaları başlangıç sütun sayıları.</span><span class="sxs-lookup"><span data-stu-id="cffcb-114">[in] The starting column numbers of the sequence points.</span></span>  
+ <span data-ttu-id="73fa6-114">[in] Sıralama noktaları başlangıç sütun sayıları.</span><span class="sxs-lookup"><span data-stu-id="73fa6-114">[in] The starting column numbers of the sequence points.</span></span>  
   
  `endLines`  
- <span data-ttu-id="cffcb-115">[in] Sıralama noktaları bitiş satır numaralarını.</span><span class="sxs-lookup"><span data-stu-id="cffcb-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="cffcb-116">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="cffcb-116">This parameter is optional.</span></span>  
+ <span data-ttu-id="73fa6-115">[in] Sıralama noktaları bitiş satır numaralarını.</span><span class="sxs-lookup"><span data-stu-id="73fa6-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="73fa6-116">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="73fa6-116">This parameter is optional.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="cffcb-117">[in] Sıralama noktaları bitiş sütun sayıları.</span><span class="sxs-lookup"><span data-stu-id="cffcb-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="cffcb-118">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="cffcb-118">This parameter is optional.</span></span>  
+ <span data-ttu-id="73fa6-117">[in] Sıralama noktaları bitiş sütun sayıları.</span><span class="sxs-lookup"><span data-stu-id="73fa6-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="73fa6-118">Bu parametre isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="73fa6-118">This parameter is optional.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cffcb-119">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="cffcb-119">Return Value</span></span>  
- <span data-ttu-id="cffcb-120">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="cffcb-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73fa6-119">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="73fa6-119">Return Value</span></span>  
+ <span data-ttu-id="73fa6-120">Yöntem başarılı olursa S_OK; Aksi takdirde E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="73fa6-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cffcb-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cffcb-121">Requirements</span></span>  
- <span data-ttu-id="cffcb-122">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cffcb-122">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73fa6-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="73fa6-121">Requirements</span></span>  
+ <span data-ttu-id="73fa6-122">**Başlık:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73fa6-122">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cffcb-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cffcb-123">See Also</span></span>  
- [<span data-ttu-id="cffcb-124">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cffcb-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="73fa6-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="73fa6-123">See Also</span></span>  
+ [<span data-ttu-id="73fa6-124">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="73fa6-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

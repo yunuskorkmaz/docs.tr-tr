@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752357"
 ---
 # <a name="ltendpointextensionsgt"></a><span data-ttu-id="2b855-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="2b855-102">&lt;endpointExtensions&gt;</span></span>
 <span data-ttu-id="2b855-103">Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç noktası kaydeder veya uygulama yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="2b855-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="2b855-104">Kullanarak standart bir uç noktası bu koleksiyona ekleyebileceğiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği uç nokta türü öğenin yanı sıra `name` öznitelik standart uç nokta adına.</span><span class="sxs-lookup"><span data-stu-id="2b855-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  

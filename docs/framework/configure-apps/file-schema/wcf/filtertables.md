@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753420"
 ---
 # <a name="ltfiltertablesgt"></a><span data-ttu-id="d81b2-102">&lt;filterTables&gt;</span><span class="sxs-lookup"><span data-stu-id="d81b2-102">&lt;filterTables&gt;</span></span>
 <span data-ttu-id="d81b2-103">Yönlendirme filtreleri ve filtre eşleştiğinde ileti göndermek için hedef uç noktaları arasındaki eşlemeleri içeren yönlendirme tablolarını tanımlamak için yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="d81b2-103">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

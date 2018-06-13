@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Windows Formları Denetimi Tarafından Görüntülenen Metni Ayarlama"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Formları Denetimi Tarafından Görüntülenen Metni Ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,27 +21,23 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 858d1d9b80af89be3e029ce59c521fa6e4d24c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d39b0b7ccf95f0da22086a72aa2cee424d7ea8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535619"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="d4b63-102">Nasıl yapılır: Windows Formları Denetimi Tarafından Görüntülenen Metni Ayarlama</span><span class="sxs-lookup"><span data-stu-id="d4b63-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="d4b63-103">Windows Forms denetimleri genellikle denetimi birincil işlev için ilgili bazı metinleri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="d4b63-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="d4b63-104">Örneğin, bir <xref:System.Windows.Forms.Button> denetimi genellikle düğme tıklatıldığında ne gerçekleştirilen gösteren resim yazısı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="d4b63-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="d4b63-105">Tüm denetimler için ayarlama veya kullanarak metin döndürme <xref:System.Windows.Forms.Control.Text%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d4b63-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="d4b63-106">Yazı tipi kullanarak değiştirebilirsiniz <xref:System.Windows.Forms.Control.Font%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d4b63-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="d4b63-107">Tasarımcı kullanarak metin de ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d4b63-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="d4b63-108">Ayrıca bkz. [nasıl yapılır: oluşturmak erişim anahtarları için Windows Forms denetimleri kullanarak Tasarımcı](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [nasıl yapılır: Tasarımcı kullanarak bir Windows Forms denetimi görüntülenen metin ayarlamak](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [nasıl: resmi ayarlama Tarafından görüntülenen Tasarımcı kullanarak bir Windows Formları denetimi](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="d4b63-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span></span>  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="5712f-102">Nasıl yapılır: Windows Formları Denetimi Tarafından Görüntülenen Metni Ayarlama</span><span class="sxs-lookup"><span data-stu-id="5712f-102">How to: Set the Text Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="5712f-103">Windows Forms denetimleri genellikle denetimi birincil işlev için ilgili bazı metinleri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5712f-103">Windows Forms controls usually display some text that is related to the primary function of the control.</span></span> <span data-ttu-id="5712f-104">Örneğin, bir <xref:System.Windows.Forms.Button> denetimi genellikle düğme tıklatıldığında ne gerçekleştirilen gösteren resim yazısı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5712f-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed when the button is clicked.</span></span> <span data-ttu-id="5712f-105">Tüm denetimler için ayarlama veya kullanarak metin döndürme <xref:System.Windows.Forms.Control.Text%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="5712f-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="5712f-106">Yazı tipi kullanarak değiştirebilirsiniz <xref:System.Windows.Forms.Control.Font%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="5712f-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span> <span data-ttu-id="5712f-107">Tasarımcı kullanarak metin de ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5712f-107">You can also set the text using the designer.</span></span>  <span data-ttu-id="5712f-108">Ayrıca bkz. [nasıl yapılır: oluşturmak erişim anahtarları için Windows Forms denetimleri kullanarak Tasarımcı](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [nasıl yapılır: Tasarımcı kullanarak bir Windows Forms denetimi görüntülenen metin ayarlamak](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [nasıl: resmi ayarlama Tarafından görüntülenen Tasarımcı kullanarak bir Windows Formları denetimi](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="5712f-108">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).</span></span>  
   
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="d4b63-109">Program aracılığıyla bir denetimi tarafından görüntülenen metni ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d4b63-109">To set the text displayed by a control programmatically</span></span>  
+### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a><span data-ttu-id="5712f-109">Program aracılığıyla bir denetimi tarafından görüntülenen metni ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="5712f-109">To set the text displayed by a control programmatically</span></span>  
   
-1.  <span data-ttu-id="d4b63-110">Ayarlama <xref:System.Windows.Forms.Control.Text%2A> bir dize özelliği.</span><span class="sxs-lookup"><span data-stu-id="d4b63-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
+1.  <span data-ttu-id="5712f-110">Ayarlama <xref:System.Windows.Forms.Control.Text%2A> bir dize özelliği.</span><span class="sxs-lookup"><span data-stu-id="5712f-110">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>  
   
-     <span data-ttu-id="d4b63-111">Bir altı çizili erişim anahtarı oluşturmak için içerir ve işareti (&) erişim tuşu olacaktır harf önce.</span><span class="sxs-lookup"><span data-stu-id="d4b63-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
+     <span data-ttu-id="5712f-111">Bir altı çizili erişim anahtarı oluşturmak için içerir ve işareti (&) erişim tuşu olacaktır harf önce.</span><span class="sxs-lookup"><span data-stu-id="5712f-111">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>  
   
-2.  <span data-ttu-id="d4b63-112">Ayarlama <xref:System.Windows.Forms.Control.Font%2A> türünde bir nesne için özellik <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="d4b63-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
+2.  <span data-ttu-id="5712f-112">Ayarlama <xref:System.Windows.Forms.Control.Font%2A> türünde bir nesne için özellik <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="5712f-112">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>  
   
     ```vb  
     Button1.Text = "Click here to save changes"  
@@ -68,7 +57,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="d4b63-113">Çıkış karakteri, bir özel karakter normalde bunları farklı şekilde, menü öğeleri gibi yorumlar kullanıcı arabirimi öğeleri görüntülemek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d4b63-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="d4b63-114">Örneğin, aşağıdaki kod satırını okumak için menü öğesinin metin ayarlar "& bir şey için şimdi tamamen farklı":</span><span class="sxs-lookup"><span data-stu-id="d4b63-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
+    >  <span data-ttu-id="5712f-113">Çıkış karakteri, bir özel karakter normalde bunları farklı şekilde, menü öğeleri gibi yorumlar kullanıcı arabirimi öğeleri görüntülemek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5712f-113">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="5712f-114">Örneğin, aşağıdaki kod satırını okumak için menü öğesinin metin ayarlar "& bir şey için şimdi tamamen farklı":</span><span class="sxs-lookup"><span data-stu-id="5712f-114">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  
@@ -82,7 +71,7 @@ ms.lasthandoff: 12/22/2017
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d4b63-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d4b63-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5712f-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5712f-115">See Also</span></span>  
  <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="d4b63-116">Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d4b63-116">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [<span data-ttu-id="d4b63-117">Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="d4b63-117">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+ [<span data-ttu-id="5712f-116">Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5712f-116">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="5712f-117">Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme</span><span class="sxs-lookup"><span data-stu-id="5712f-117">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

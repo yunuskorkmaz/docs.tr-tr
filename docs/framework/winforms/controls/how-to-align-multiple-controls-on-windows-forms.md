@@ -1,51 +1,40 @@
 ---
-title: "Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama"
-ms.custom: 
+title: 'Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
 - Windows Forms, aligning controls
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f106189297d4334f8752f3b96ff4bf63ea6d8b41
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528596"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="1b871-102">Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama</span><span class="sxs-lookup"><span data-stu-id="1b871-102">How to: Align Multiple Controls on Windows Forms</span></span>
-<span data-ttu-id="1b871-103">Windows tabanlı uygulamanızın kullanıcı arabirimi (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını yerleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1b871-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a><span data-ttu-id="947a3-102">Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama</span><span class="sxs-lookup"><span data-stu-id="947a3-102">How to: Align Multiple Controls on Windows Forms</span></span>
+<span data-ttu-id="947a3-103">Windows tabanlı uygulamanızın kullanıcı arabirimi (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını yerleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="947a3-103">To standardize the layout of the user interface (UI) of your Windows-based application, you can position groups of controls with a single command.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1b871-104">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="1b871-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="1b871-105">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="1b871-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="1b871-106">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="1b871-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="947a3-104">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="947a3-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="947a3-105">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="947a3-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="947a3-106">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="947a3-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="1b871-107">Bir form üzerinde birden çok denetimler hizalamak için</span><span class="sxs-lookup"><span data-stu-id="1b871-107">To align multiple controls on a form</span></span>  
+### <a name="to-align-multiple-controls-on-a-form"></a><span data-ttu-id="947a3-107">Bir form üzerinde birden çok denetimler hizalamak için</span><span class="sxs-lookup"><span data-stu-id="947a3-107">To align multiple controls on a form</span></span>  
   
-1.  <span data-ttu-id="1b871-108">Yerleştirin istediğiniz denetimleri içeren formunu açmak **Windows Form Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="1b871-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
+1.  <span data-ttu-id="947a3-108">Yerleştirin istediğiniz denetimleri içeren formunu açmak **Windows Form Tasarımcısı**.</span><span class="sxs-lookup"><span data-stu-id="947a3-108">Open the form containing the controls you want to position in the **Windows Forms Designer**.</span></span>  
   
-2.  <span data-ttu-id="1b871-109">Böylece seçtiğiniz ilk denetim için diğer hizalanmalıdır birincil denetim hizalamak istediğiniz denetimleri seçin.</span><span class="sxs-lookup"><span data-stu-id="1b871-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
+2.  <span data-ttu-id="947a3-109">Böylece seçtiğiniz ilk denetim için diğer hizalanmalıdır birincil denetim hizalamak istediğiniz denetimleri seçin.</span><span class="sxs-lookup"><span data-stu-id="947a3-109">Select the controls you want to align so that the first control you select is the primary control to which the others should be aligned.</span></span>  
   
-3.  <span data-ttu-id="1b871-110">Üzerinde **biçimi** menüsündeki **Hizala**, yedi seçenekleri birini tıklatın.</span><span class="sxs-lookup"><span data-stu-id="1b871-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
+3.  <span data-ttu-id="947a3-110">Üzerinde **biçimi** menüsündeki **Hizala**, yedi seçenekleri birini tıklatın.</span><span class="sxs-lookup"><span data-stu-id="947a3-110">On the **Format** menu, point to **Align**, and then click one of the seven choices available.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b871-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="1b871-111">See Also</span></span>  
- [<span data-ttu-id="1b871-112">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="1b871-112">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- [<span data-ttu-id="1b871-113">Nasıl yapılır: Windows Forms’a Denetimler Ekleme</span><span class="sxs-lookup"><span data-stu-id="1b871-113">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [<span data-ttu-id="1b871-114">Windows Forms’da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="1b871-114">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [<span data-ttu-id="1b871-115">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="1b871-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [<span data-ttu-id="1b871-116">İşleve Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="1b871-116">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [<span data-ttu-id="1b871-117">İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="1b871-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [<span data-ttu-id="1b871-118">İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="1b871-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [<span data-ttu-id="1b871-119">İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="1b871-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [<span data-ttu-id="1b871-120">Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama</span><span class="sxs-lookup"><span data-stu-id="1b871-120">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a><span data-ttu-id="947a3-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="947a3-111">See Also</span></span>  
+ [<span data-ttu-id="947a3-112">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="947a3-112">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="947a3-113">Nasıl yapılır: Windows Forms’a Denetimler Ekleme</span><span class="sxs-lookup"><span data-stu-id="947a3-113">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="947a3-114">Windows Forms’da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="947a3-114">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="947a3-115">Windows Forms'da Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="947a3-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="947a3-116">İşleve Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="947a3-116">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [<span data-ttu-id="947a3-117">İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="947a3-117">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="947a3-118">İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="947a3-118">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="947a3-119">İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="947a3-119">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="947a3-120">Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama</span><span class="sxs-lookup"><span data-stu-id="947a3-120">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
