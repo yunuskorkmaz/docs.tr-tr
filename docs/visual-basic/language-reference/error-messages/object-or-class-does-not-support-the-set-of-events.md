@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593210"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>Nesne veya sınıf olay kümesini desteklemiyor
 Kullanmaya çalıştığınız bir `WithEvents` olayları belirtilen kümesi için bir olay kaynağı olarak çalışamaz bir bileşeni ile değişken. Örneğin, bir nesne olaylar indirilir, sonra başka bir nesne oluşturmak istediğiniz `Implements` ilk nesne. Uygulanan nesneden olayları havuzu düşünebilirsiniz karşın, bu her zaman durumda değil. `Implements` yalnızca yöntemleri ve özellikleri için bir arabirimi uygular. `WithEvents` Özel için desteklenmeyen `UserControls`, type Info yükseltmek gereken `ObjectEvent` çalışma zamanında kullanılabilir değil.  

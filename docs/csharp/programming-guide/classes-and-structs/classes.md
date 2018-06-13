@@ -11,6 +11,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312098"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 A *sınıfı* değişkenleri diğer türleri, yöntemleri ve olayları bir arada gruplandırma tarafından kendi özel türler oluşturmanızı sağlayan bir yapıdır. Şeması gibi bir sınıftır. Veri ve türü davranışını tanımlar. Sınıf static olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği kapsamının dışında tüm başvuruları oluncaya kadar bellekte kalır. O anda CLR, atık toplama için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamıyor ve istemci kodu yalnızca erişebileceği sınıfı aracılığıyla. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

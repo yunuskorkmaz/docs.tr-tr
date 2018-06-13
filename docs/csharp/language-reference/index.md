@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472509"
 ---
 # <a name="c-reference"></a>C# Başvurusu
 Bu bölümde, C# anahtar sözcükleri, işleçler, özel karakterler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları hakkında başvuru bilgileri sağlar.  

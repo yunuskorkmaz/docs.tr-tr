@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591865"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Paketleme ve özel My Uzantıları (Visual Basic) dağıtma
 Visual Basic, kendi özel dağıtmak kolay bir yol sağlar `My` Visual Studio şablonları kullanarak ad alanı uzantıları. Kendisi için bir proje şablonu oluşturuyorsanız, `My` uzantıları yeni proje türü ayrılmaz bir parçası, yalnızca kendi özel içerebilir `My` proje şablonu dışarı aktardığınızda uzantı kodu. Proje şablonları dışarı aktarma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Proje şablonları oluşturma](/visualstudio/ide/how-to-create-project-templates).  

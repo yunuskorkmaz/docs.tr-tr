@@ -23,6 +23,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457615"
 ---
 # <a name="c-operators"></a>C# İşleçleri
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirmek için hangi işlemleri belirtin simgelerdir birçok işleçleri sağlar. Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) kullanıcı tanımlı bir tür uygulandığında anlamları değiştirmek için çok sayıda işleci.  

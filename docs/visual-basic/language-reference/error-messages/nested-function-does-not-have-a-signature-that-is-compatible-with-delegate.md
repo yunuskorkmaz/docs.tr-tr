@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594477"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>İç içe geçmiş işlev temsilciyle uyumlu bir imzası yok &#39; &lt;delegateName'in&gt;&#39;
 Lambda ifadesi uyumsuz bir imzaya sahip bir temsilci atanmış durumda. Örneğin, aşağıdaki kodda temsilci `Del` iki tamsayı parametreye sahiptir.  

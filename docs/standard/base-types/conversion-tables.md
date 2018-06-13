@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571130"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET tür dönüştürme tabloları
 Bir türde bir değer eşit veya daha büyük boyutta başka bir türüne dönüştürülürken dönüştürme genişletme oluşur. Bir türde bir değer daha küçük bir boyuta sahiptir başka bir türdeki bir değere dönüştürüldüğünde daraltma dönüşümü gerçekleşir. Bu konuda tablolarda her iki tür dönüşümleri tarafından sergilenen davranışları gösterilmektedir.  

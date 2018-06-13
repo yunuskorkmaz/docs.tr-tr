@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594126"
 ---
 # <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Yöntemlerinin &#39;System.Nullable (Of T)&#39; işlenenleri olarak kullanılamaz &#39;AddressOf&#39; işleci
 Bir ifade kullanıyor `AddressOf` , bir yordamı temsil eden işleneni işleciyle <xref:System.Nullable%601> yapısı.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589860"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>İş Parçacığı Yerel Deposu: İş Parçacığı Göreli Statik Alanları ve Veri Yuvaları
 İş parçacığı ve uygulama etki alanı için benzersiz olan yönetilen iş parçacığı yerel depolaması (TLS) verileri depolamak için kullanabilirsiniz. .NET Framework kullanmanın iki yolu yönetilen TLS sağlar: iş parçacığı göreli statik alanları ve veri yuvaları.  

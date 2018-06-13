@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34456594"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Boş Değer Atanabilir Türler (C# Programlama Kılavuzu)
 Boş değer atanabilir türler örnekleridir <xref:System.Nullable%601?displayProperty=nameWithType> yapısı. Boş değer atanabilir bir tür değerleri temel alınan değer türü artı ek için doğru aralığı gösterebilir `null` değeri. Örneğin, bir `Nullable<Int32>`, okunur "Boş değer atanabilir, Int32," atanabilir herhangi bir değer -2147483648 2147483647 için ya da bu atanabilir `null` değeri. A `Nullable<bool>` değerler atanabilir [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), veya [null](../../../csharp/language-reference/keywords/null.md). Atama olanağı `null` veritabanları ve bir değer atanamaz öğeleri içeren diğer veri türleri ile ilgilenirken sayısal ve Boole türleri için özellikle yararlıdır. Örneğin, bir veritabanında bir Boole alanı değerleri depolayabilir `true` veya `false`, veya tanımsız olabilir. 

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591537"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu İş Parçacığı Kullanımı için Veri Eşitleme
 Birden çok iş parçacığı özellikleri ve yöntemleri tek bir nesnenin çağrıları yaptığınızda bu çağrıları eşitlenmiş önemlidir. Aksi halde bir iş parçacığı başka bir iş parçacığı yaptıklarını yarıda kesebilecek ve Nesne geçersiz bir durumda kalabilir. Üyeleri böyle kesintilerden korunan bir sınıf, iş parçacığı denir.  

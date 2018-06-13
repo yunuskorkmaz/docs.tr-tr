@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461405"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 Arabirimi
 Kod profil oluşturucuları ortak dil çalışma zamanı (CLR) olayı izlemeyi denetlemek için ve istek bilgileri ile iletişim kurmak için kullandığı yöntemlerini sağlar. `ICorProfilerInfo2` Arabirimi uzantısıdır [Icorprofilerınfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) arabirimi. Diğer bir deyişle, .NET Framework sürüm 2.0 ve sonraki sürümlerinde desteklenen yeni yöntemleri sağlar.  

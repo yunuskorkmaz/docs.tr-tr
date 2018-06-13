@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570559"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Msxsl: node-set() işlevi için destek
 `msxsl:node-set` İşlevi bir düğüm kümesine sonuç ağacı parçası dönüştürmenize olanak sağlar. Her zaman ortaya çıkan düğümü tek bir düğüm içerir ve ağacı kök düğümü olur.  

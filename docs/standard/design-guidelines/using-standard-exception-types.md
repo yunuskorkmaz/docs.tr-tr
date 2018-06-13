@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574601"
 ---
 # <a name="using-standard-exception-types"></a>Standart özel durum türleri kullanma
 Bu bölümde Framework ve bunların kullanım ayrıntılarını tarafından sağlanan standart özel durumlar açıklanmaktadır. Halinde kapsamlı listesidir. Lütfen .NET Framework başvuru diğer Framework özel durum türleri kullanım için belgelerine bakın.  

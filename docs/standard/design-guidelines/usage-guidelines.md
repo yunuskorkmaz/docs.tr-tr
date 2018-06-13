@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571039"
 ---
 # <a name="usage-guidelines"></a>Kullanım yönergeleri
 Bu bölümde, genel olarak erişilebilir API'leri genel türleri kullanma için yönergeler içerir. Yerleşik Framework türleri (örneğin, serileştirme özniteliklerini) ve ortak İşleç aşırı yüklemesi doğrudan kullanımı ile ilgilidir.  

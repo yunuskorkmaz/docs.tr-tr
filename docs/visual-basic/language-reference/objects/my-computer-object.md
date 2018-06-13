@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597353"
 ---
 # <a name="mycomputer-object"></a>My.Computer Nesnesi
 Ses, saatin, klavye, dosya sistemi ve benzerleri gibi bilgisayar bileşenlerini yönetmek için gereken özellikleri sağlar.  

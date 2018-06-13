@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172652"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 `virtual` Anahtar sözcüğü bir yöntemi, özelliği, dizin oluşturucu veya olay bildiriminin değiştirebilir ve türetilen bir sınıfta geçersiz kılınmak üzere izin için kullanılır. Örneğin, bu yöntem, devralınan herhangi bir sınıf tarafından geçersiz kılınabilir:  

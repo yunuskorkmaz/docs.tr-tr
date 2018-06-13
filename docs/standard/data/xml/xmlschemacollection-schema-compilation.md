@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571491"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection şema derleme
 **XmlSchemaCollection** bir önbellek ya da nerede XML verileri azaltılmış (XDR) ve XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış kitaplığı. **XmlSchemaCollection** şemaları bir dosyaya veya URL'ye erişmesini yerine bellekte önbelleğe alarak performansı artırır.  

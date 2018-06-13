@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457512"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Nasıl yapılır: bool? Değerinden bool Değerine Güvenli bir Şekilde Atama (C# Programlama Kılavuzu)
 `bool?` Boş değer atanabilir tür üç farklı değerler içerebilir: `true`, `false`, ve `null`. Bu nedenle, `bool?` türü ile gibi koşulları kullanılamaz `if`, `for`, veya `while`. Örneğin, aşağıdaki kod derleyici hatasına neden olur.  

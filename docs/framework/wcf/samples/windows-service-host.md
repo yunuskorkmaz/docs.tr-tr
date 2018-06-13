@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807973"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 Bu örnek, yönetilen bir Windows hizmetinde barındırılan bir Windows Communication Foundation (WCF) hizmetini gösterir. Windows Hizmetleri, hizmetler uygulamasını kullanarak denetlenir **Denetim Masası** ve bir sistem yeniden başlatıldıktan sonra otomatik olarak başlatılmasını yapılandırılabilir. Örnek, bir istemci programını ve bir Windows hizmeti programı oluşur. Hizmet bir .exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak için ise gerekli değildir kod barındırma.  

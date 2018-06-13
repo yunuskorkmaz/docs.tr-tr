@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572079"
 ---
 # <a name="automatic-memory-management"></a>Otomatik Bellek Yönetimi
 Otomatik bellek yönetimi, ortak dil çalışma zamanı sırasında sağladığı hizmetlerden biri [yönetilen yürütme](../../docs/standard/managed-execution-process.md). Ortak dil çalışma zamanı'nın atık toplayıcı ayırma ile bir uygulama için bellek sürümü yönetir. Geliştiriciler için bu, yönetilen uygulamalar geliştirirken bellek yönetimi görevleri gerçekleştirmek için kod yazmaya gerek olmadığı anlamına gelir. Otomatik bellek yönetimi, bir nesneyi serbest bırakmayı unutarak bir bellek sızıntısına neden olmak veya daha önce serbest bırakılmış bir nesnenin belleğine erişmeye çalışmak gibi yaygın sorunları ortadan kaldırabilir. Bu bölümde, atık toplayıcının belleği nasıl ayırdığı ve serbest bıraktığı açıklanmaktadır.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572729"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Nasıl yapılır: Olaylar Oluşturma ve Kullanma
 Bu konudaki örnekler olayları ile çalışmak nasıl gösterir. Örnek olarak verilebilir <xref:System.EventHandler> temsilci, <xref:System.EventHandler%601> temsilci ve olayları ile ve veri olmadan göstermek için özel bir temsilci.  
