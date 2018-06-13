@@ -1,46 +1,35 @@
 ---
 title: 214 - OperationCompleted
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a6287eef-023f-4816-813c-1802c82366df
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 823207f4225252d94bd8fba450eb63edd00068ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da1021b674b555b683f8f745f5a2a0073c9567e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459374"
 ---
-# <a name="214---operationcompleted"></a><span data-ttu-id="d1a61-102">214 - OperationCompleted</span><span class="sxs-lookup"><span data-stu-id="d1a61-102">214 - OperationCompleted</span></span>
-## <a name="properties"></a><span data-ttu-id="d1a61-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="d1a61-103">Properties</span></span>  
+# <a name="214---operationcompleted"></a><span data-ttu-id="cb67e-102">214 - OperationCompleted</span><span class="sxs-lookup"><span data-stu-id="cb67e-102">214 - OperationCompleted</span></span>
+## <a name="properties"></a><span data-ttu-id="cb67e-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="cb67e-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="d1a61-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="d1a61-104">ID</span></span>|<span data-ttu-id="d1a61-105">214</span><span class="sxs-lookup"><span data-stu-id="d1a61-105">214</span></span>|  
-|<span data-ttu-id="d1a61-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="d1a61-106">Keywords</span></span>|<span data-ttu-id="d1a61-107">EndToEndMonitoring, sorun giderme, ServiceModel ögesi</span><span class="sxs-lookup"><span data-stu-id="d1a61-107">HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel</span></span>|  
-|<span data-ttu-id="d1a61-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="d1a61-108">Level</span></span>|<span data-ttu-id="d1a61-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="d1a61-109">Information</span></span>|  
-|<span data-ttu-id="d1a61-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="d1a61-110">Channel</span></span>|<span data-ttu-id="d1a61-111">Microsoft Windows uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="d1a61-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="cb67e-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="cb67e-104">ID</span></span>|<span data-ttu-id="cb67e-105">214</span><span class="sxs-lookup"><span data-stu-id="cb67e-105">214</span></span>|  
+|<span data-ttu-id="cb67e-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="cb67e-106">Keywords</span></span>|<span data-ttu-id="cb67e-107">EndToEndMonitoring, sorun giderme, ServiceModel ögesi</span><span class="sxs-lookup"><span data-stu-id="cb67e-107">HealthMonitoring, EndToEndMonitoring, Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="cb67e-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="cb67e-108">Level</span></span>|<span data-ttu-id="cb67e-109">Bilgiler</span><span class="sxs-lookup"><span data-stu-id="cb67e-109">Information</span></span>|  
+|<span data-ttu-id="cb67e-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="cb67e-110">Channel</span></span>|<span data-ttu-id="cb67e-111">Microsoft Windows uygulama sunucusu-uygulamalar/analitik</span><span class="sxs-lookup"><span data-stu-id="cb67e-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="d1a61-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d1a61-112">Description</span></span>  
- <span data-ttu-id="d1a61-113">Bu olay yayılan, hizmet modelinin varsayılan `OperationInvoker` bu yöntemi bir özel durum atma bir yöntem çağrısı tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="d1a61-113">This event is emitted when the Service Model's default `OperationInvoker` has completed a call to a method without that method throwing an exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="cb67e-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cb67e-112">Description</span></span>  
+ <span data-ttu-id="cb67e-113">Bu olay yayılan, hizmet modelinin varsayılan `OperationInvoker` bu yöntemi bir özel durum atma bir yöntem çağrısı tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="cb67e-113">This event is emitted when the Service Model's default `OperationInvoker` has completed a call to a method without that method throwing an exception.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="d1a61-114">İleti</span><span class="sxs-lookup"><span data-stu-id="d1a61-114">Message</span></span>  
- <span data-ttu-id="d1a61-115">Bir OperationInvoker '%1' metodu çağrısı tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="d1a61-115">An OperationInvoker completed the call to the '%1' method.</span></span> <span data-ttu-id="d1a61-116">Yöntem çağrısı süre, '%2' ms idi.</span><span class="sxs-lookup"><span data-stu-id="d1a61-116">The method call duration was '%2' ms.</span></span>  
+## <a name="message"></a><span data-ttu-id="cb67e-114">İleti</span><span class="sxs-lookup"><span data-stu-id="cb67e-114">Message</span></span>  
+ <span data-ttu-id="cb67e-115">Bir OperationInvoker '%1' metodu çağrısı tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="cb67e-115">An OperationInvoker completed the call to the '%1' method.</span></span> <span data-ttu-id="cb67e-116">Yöntem çağrısı süre, '%2' ms idi.</span><span class="sxs-lookup"><span data-stu-id="cb67e-116">The method call duration was '%2' ms.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="d1a61-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="d1a61-117">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="cb67e-117">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="cb67e-117">Details</span></span>  
   
-|<span data-ttu-id="d1a61-118">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="d1a61-118">Data Item Name</span></span>|<span data-ttu-id="d1a61-119">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="d1a61-119">Data Item Type</span></span>|<span data-ttu-id="d1a61-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d1a61-120">Description</span></span>|  
+|<span data-ttu-id="cb67e-118">Veri öğesi adı</span><span class="sxs-lookup"><span data-stu-id="cb67e-118">Data Item Name</span></span>|<span data-ttu-id="cb67e-119">Veri öğesi türü</span><span class="sxs-lookup"><span data-stu-id="cb67e-119">Data Item Type</span></span>|<span data-ttu-id="cb67e-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cb67e-120">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="d1a61-121">Yöntem adı</span><span class="sxs-lookup"><span data-stu-id="d1a61-121">Method Name</span></span>|`xs:string`|<span data-ttu-id="d1a61-122">Tarafından çağrılan yöntemin CLR adını `OperationInvoker`.</span><span class="sxs-lookup"><span data-stu-id="d1a61-122">The CLR name of the method that was invoked by the `OperationInvoker`.</span></span>|  
-|<span data-ttu-id="d1a61-123">Süre</span><span class="sxs-lookup"><span data-stu-id="d1a61-123">Duration</span></span>|`xs:long`|<span data-ttu-id="d1a61-124">Geçen milisaniye cinsinden süre `OperationInvoker` yöntemini çağırmak için.</span><span class="sxs-lookup"><span data-stu-id="d1a61-124">The time, in milliseconds, that it took the `OperationInvoker` to invoke the method.</span></span>|  
-|<span data-ttu-id="d1a61-125">HostReference</span><span class="sxs-lookup"><span data-stu-id="d1a61-125">HostReference</span></span>|`xs:string`|<span data-ttu-id="d1a61-126">Bu alan, Web barındırılan hizmetler için Web hiyerarşi hizmetinde benzersiz olarak tanımlar.</span><span class="sxs-lookup"><span data-stu-id="d1a61-126">For web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="d1a61-127">Biçimi olarak tanımlanan ' Web sitesi adı uygulamanın sanal yolu &#124; Hizmet sanal yolu &#124; ServiceName'.</span><span class="sxs-lookup"><span data-stu-id="d1a61-127">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="d1a61-128">Örnek: ' varsayılan Web sitesi/CalculatorApplication, #124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="d1a61-128">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
-|<span data-ttu-id="d1a61-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="d1a61-129">AppDomain</span></span>|`xs:string`|<span data-ttu-id="d1a61-130">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="d1a61-130">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="cb67e-121">Yöntem adı</span><span class="sxs-lookup"><span data-stu-id="cb67e-121">Method Name</span></span>|`xs:string`|<span data-ttu-id="cb67e-122">Tarafından çağrılan yöntemin CLR adını `OperationInvoker`.</span><span class="sxs-lookup"><span data-stu-id="cb67e-122">The CLR name of the method that was invoked by the `OperationInvoker`.</span></span>|  
+|<span data-ttu-id="cb67e-123">Süre</span><span class="sxs-lookup"><span data-stu-id="cb67e-123">Duration</span></span>|`xs:long`|<span data-ttu-id="cb67e-124">Geçen milisaniye cinsinden süre `OperationInvoker` yöntemini çağırmak için.</span><span class="sxs-lookup"><span data-stu-id="cb67e-124">The time, in milliseconds, that it took the `OperationInvoker` to invoke the method.</span></span>|  
+|<span data-ttu-id="cb67e-125">HostReference</span><span class="sxs-lookup"><span data-stu-id="cb67e-125">HostReference</span></span>|`xs:string`|<span data-ttu-id="cb67e-126">Bu alan, Web barındırılan hizmetler için Web hiyerarşi hizmetinde benzersiz olarak tanımlar.</span><span class="sxs-lookup"><span data-stu-id="cb67e-126">For web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="cb67e-127">Biçimi olarak tanımlanan ' Web sitesi adı uygulamanın sanal yolu&#124;hizmet sanal yolu&#124;ServiceName'.</span><span class="sxs-lookup"><span data-stu-id="cb67e-127">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="cb67e-128">Örnek: ' varsayılan Web sitesi/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="cb67e-128">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="cb67e-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="cb67e-129">AppDomain</span></span>|`xs:string`|<span data-ttu-id="cb67e-130">AppDomain.CurrentDomain.FriendlyName tarafından döndürülen dize.</span><span class="sxs-lookup"><span data-stu-id="cb67e-130">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

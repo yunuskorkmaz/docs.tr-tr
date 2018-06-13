@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo3::GetFunctionEnter3Info Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.GetFunctionEnter3Info Method
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b7053f526d415dbaef872e37d139d25ae5ac462
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5d06988330b9ec83463165661ea5425d8563c60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459062"
 ---
-# <a name="icorprofilerinfo3getfunctionenter3info-method"></a><span data-ttu-id="c42a8-102">ICorProfilerInfo3::GetFunctionEnter3Info Metodu</span><span class="sxs-lookup"><span data-stu-id="c42a8-102">ICorProfilerInfo3::GetFunctionEnter3Info Method</span></span>
-<span data-ttu-id="c42a8-103">Profil Oluşturucu tarafından için bildirilen işlevi yığın çerçevesi ve bağımsız değişkeni bilgi verilmektedir [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="c42a8-103">Provides the stack frame and argument information of the function that is being reported to the profiler by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span> <span data-ttu-id="c42a8-104">Bu yöntem yalnızca sırasında çağrılabilir `FunctionEnter3WithInfo` geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="c42a8-104">This method can be called only during the `FunctionEnter3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctionenter3info-method"></a><span data-ttu-id="50fb7-102">ICorProfilerInfo3::GetFunctionEnter3Info Metodu</span><span class="sxs-lookup"><span data-stu-id="50fb7-102">ICorProfilerInfo3::GetFunctionEnter3Info Method</span></span>
+<span data-ttu-id="50fb7-103">Profil Oluşturucu tarafından için bildirilen işlevi yığın çerçevesi ve bağımsız değişkeni bilgi verilmektedir [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="50fb7-103">Provides the stack frame and argument information of the function that is being reported to the profiler by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span> <span data-ttu-id="50fb7-104">Bu yöntem yalnızca sırasında çağrılabilir `FunctionEnter3WithInfo` geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="50fb7-104">This method can be called only during the `FunctionEnter3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c42a8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c42a8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50fb7-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="50fb7-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionEnter3Info(  
@@ -50,38 +39,38 @@ HRESULT GetFunctionEnter3Info(
                   COR_PRF_FUNCTION_ARGUMENT_INFO *pArgumentInfo);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c42a8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c42a8-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="50fb7-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="50fb7-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="c42a8-107">[in] `FunctionID` Giriliyor işlevi.</span><span class="sxs-lookup"><span data-stu-id="c42a8-107">[in] The `FunctionID` of the function that is being entered.</span></span>  
+ <span data-ttu-id="50fb7-107">[in] `FunctionID` Giriliyor işlevi.</span><span class="sxs-lookup"><span data-stu-id="50fb7-107">[in] The `FunctionID` of the function that is being entered.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="c42a8-108">[in] Verilen yığın çerçevesi ilgili bilgileri temsil eder donuk işleci.</span><span class="sxs-lookup"><span data-stu-id="c42a8-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="c42a8-109">Profil Oluşturucu aynı sağlamalıdır `eltInfo` tarafından verilen [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="c42a8-109">The profiler should provide the same `eltInfo` that it was given by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span>  
+ <span data-ttu-id="50fb7-108">[in] Verilen yığın çerçevesi ilgili bilgileri temsil eder donuk işleci.</span><span class="sxs-lookup"><span data-stu-id="50fb7-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="50fb7-109">Profil Oluşturucu aynı sağlamalıdır `eltInfo` tarafından verilen [Functionenter3withınfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="50fb7-109">The profiler should provide the same `eltInfo` that it was given by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="c42a8-110">[out] Verilen yığın çerçevesi genel türler bilgilerini temsil eden bir donuk tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="c42a8-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="c42a8-111">Bu işleme yalnızca sırasında geçerli `FunctionEnter3WithInfo` profil oluşturucu çağırıldığı geri çağırma `GetFunctionEnter3Info` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c42a8-111">This handle is valid only during the `FunctionEnter3WithInfo` callback in which the profiler called the `GetFunctionEnter3Info` method.</span></span>  
+ <span data-ttu-id="50fb7-110">[out] Verilen yığın çerçevesi genel türler bilgilerini temsil eden bir donuk tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="50fb7-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="50fb7-111">Bu işleme yalnızca sırasında geçerli `FunctionEnter3WithInfo` profil oluşturucu çağırıldığı geri çağırma `GetFunctionEnter3Info` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="50fb7-111">This handle is valid only during the `FunctionEnter3WithInfo` callback in which the profiler called the `GetFunctionEnter3Info` method.</span></span>  
   
  `pcbArgumentInfo`  
- <span data-ttu-id="c42a8-112">[içinde out] Bayt olarak toplam boyutu için bir işaretçi, [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) yapısı (artı ek [cor_prf_functıon_argument_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) tarafındanişaretbağımsızdeğişkeniaralıklarıiçinyapıları`pArgumentInfo`).</span><span class="sxs-lookup"><span data-stu-id="c42a8-112">[in, out] A pointer to the total size, in bytes, of the [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure (plus any additional [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures for the argument ranges pointed to by `pArgumentInfo`).</span></span> <span data-ttu-id="c42a8-113">Belirtilen boyut yeterli değildir, ERROR_INSUFFICIENT_BUFFER döndürülür ve beklenen boyutu depolanan `pcbArgumentInfo`.</span><span class="sxs-lookup"><span data-stu-id="c42a8-113">If the specified size is not enough, ERROR_INSUFFICIENT_BUFFER is returned and the expected size is stored in `pcbArgumentInfo`.</span></span> <span data-ttu-id="c42a8-114">Çağrılacak `GetFunctionEnter3Info` yalnızca için beklenen değer almak için `*pcbArgumentInfo`ayarlayın `*pcbArgumentInfo`= 0 ve `pArgumentInfo`= NULL.</span><span class="sxs-lookup"><span data-stu-id="c42a8-114">To call `GetFunctionEnter3Info` just to retrieve the expected value for `*pcbArgumentInfo`, set `*pcbArgumentInfo`=0 and `pArgumentInfo`=NULL.</span></span>  
+ <span data-ttu-id="50fb7-112">[içinde out] Bayt olarak toplam boyutu için bir işaretçi, [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) yapısı (artı ek [cor_prf_functıon_argument_range](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) tarafındanişaretbağımsızdeğişkeniaralıklarıiçinyapıları`pArgumentInfo`).</span><span class="sxs-lookup"><span data-stu-id="50fb7-112">[in, out] A pointer to the total size, in bytes, of the [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure (plus any additional [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures for the argument ranges pointed to by `pArgumentInfo`).</span></span> <span data-ttu-id="50fb7-113">Belirtilen boyut yeterli değildir, ERROR_INSUFFICIENT_BUFFER döndürülür ve beklenen boyutu depolanan `pcbArgumentInfo`.</span><span class="sxs-lookup"><span data-stu-id="50fb7-113">If the specified size is not enough, ERROR_INSUFFICIENT_BUFFER is returned and the expected size is stored in `pcbArgumentInfo`.</span></span> <span data-ttu-id="50fb7-114">Çağrılacak `GetFunctionEnter3Info` yalnızca için beklenen değer almak için `*pcbArgumentInfo`ayarlayın `*pcbArgumentInfo`= 0 ve `pArgumentInfo`= NULL.</span><span class="sxs-lookup"><span data-stu-id="50fb7-114">To call `GetFunctionEnter3Info` just to retrieve the expected value for `*pcbArgumentInfo`, set `*pcbArgumentInfo`=0 and `pArgumentInfo`=NULL.</span></span>  
   
  `pArgumentInfo`  
- <span data-ttu-id="c42a8-115">[out] Bir işaretçi bir [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) işlev bağımsız değişkenleri soldan sağa sırayla bellekte konumlarını tanımlayan yapısı.</span><span class="sxs-lookup"><span data-stu-id="c42a8-115">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that describes the locations of the function's arguments in memory, in left-to-right order.</span></span>  
+ <span data-ttu-id="50fb7-115">[out] Bir işaretçi bir [cor_prf_functıon_argument_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) işlev bağımsız değişkenleri soldan sağa sırayla bellekte konumlarını tanımlayan yapısı.</span><span class="sxs-lookup"><span data-stu-id="50fb7-115">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) structure that describes the locations of the function's arguments in memory, in left-to-right order.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c42a8-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c42a8-116">Remarks</span></span>  
- <span data-ttu-id="c42a8-117">Profil Oluşturucu için yeterli alanı ayırmalısınız `COR_PRF_FUNCTION_ARGUMENT_INFO` Denetlenmekte olan ve boyutu belirtmelidir işlev yapısını `pcbArgumentInfo` parametresi.</span><span class="sxs-lookup"><span data-stu-id="c42a8-117">The profiler must allocate sufficient space for the `COR_PRF_FUNCTION_ARGUMENT_INFO` structure of the function that is being inspected, and must indicate the size in the `pcbArgumentInfo` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50fb7-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="50fb7-116">Remarks</span></span>  
+ <span data-ttu-id="50fb7-117">Profil Oluşturucu için yeterli alanı ayırmalısınız `COR_PRF_FUNCTION_ARGUMENT_INFO` Denetlenmekte olan ve boyutu belirtmelidir işlev yapısını `pcbArgumentInfo` parametresi.</span><span class="sxs-lookup"><span data-stu-id="50fb7-117">The profiler must allocate sufficient space for the `COR_PRF_FUNCTION_ARGUMENT_INFO` structure of the function that is being inspected, and must indicate the size in the `pcbArgumentInfo` parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c42a8-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c42a8-118">Requirements</span></span>  
- <span data-ttu-id="c42a8-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c42a8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50fb7-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="50fb7-118">Requirements</span></span>  
+ <span data-ttu-id="50fb7-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50fb7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c42a8-120">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c42a8-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="50fb7-120">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="50fb7-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c42a8-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c42a8-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50fb7-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50fb7-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c42a8-122">**.NET framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c42a8-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="50fb7-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50fb7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c42a8-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c42a8-123">See Also</span></span>  
- [<span data-ttu-id="c42a8-124">Functionenter3withınfo</span><span class="sxs-lookup"><span data-stu-id="c42a8-124">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- [<span data-ttu-id="c42a8-125">Functionleave3withınfo</span><span class="sxs-lookup"><span data-stu-id="c42a8-125">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- [<span data-ttu-id="c42a8-126">Functiontailcall3withınfo</span><span class="sxs-lookup"><span data-stu-id="c42a8-126">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- [<span data-ttu-id="c42a8-127">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c42a8-127">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="c42a8-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c42a8-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="c42a8-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c42a8-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="50fb7-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="50fb7-123">See Also</span></span>  
+ [<span data-ttu-id="50fb7-124">Functionenter3withınfo</span><span class="sxs-lookup"><span data-stu-id="50fb7-124">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
+ [<span data-ttu-id="50fb7-125">Functionleave3withınfo</span><span class="sxs-lookup"><span data-stu-id="50fb7-125">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
+ [<span data-ttu-id="50fb7-126">Functiontailcall3withınfo</span><span class="sxs-lookup"><span data-stu-id="50fb7-126">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
+ [<span data-ttu-id="50fb7-127">ICorProfilerInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="50fb7-127">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [<span data-ttu-id="50fb7-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="50fb7-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="50fb7-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="50fb7-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

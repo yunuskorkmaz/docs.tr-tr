@@ -1,13 +1,6 @@
 ---
-title: "Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama"
-ms.custom: 
+title: 'Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,22 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525250"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="5f537-102">Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="5f537-102">How to: Set JPEG Compression Level</span></span>
-<span data-ttu-id="5f537-103">Dosya boyutu en aza indirmek ve kalitesini iyileştirmek için diske görüntüyü kaydederken bir görüntü parametreleri değiştirmek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5f537-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="5f537-104">Sıkıştırma düzeyini değiştirerek bir JPEG resim kalitesini ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5f537-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="5f537-105">JPEG Resim kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve ona geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="5f537-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="5f537-106">Initialize <xref:System.Drawing.Imaging.EncoderParameters> olan birini oluşan bir dizi nedenle nesne <xref:System.Drawing.Imaging.EncoderParameter>.</span><span class="sxs-lookup"><span data-stu-id="5f537-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="5f537-107">Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcı ve istenen sıkıştırma düzeyi.</span><span class="sxs-lookup"><span data-stu-id="5f537-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
+# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="4186a-102">Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama</span><span class="sxs-lookup"><span data-stu-id="4186a-102">How to: Set JPEG Compression Level</span></span>
+<span data-ttu-id="4186a-103">Dosya boyutu en aza indirmek ve kalitesini iyileştirmek için diske görüntüyü kaydederken bir görüntü parametreleri değiştirmek isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4186a-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="4186a-104">Sıkıştırma düzeyini değiştirerek bir JPEG resim kalitesini ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4186a-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="4186a-105">JPEG Resim kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve ona geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="4186a-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="4186a-106">Initialize <xref:System.Drawing.Imaging.EncoderParameters> olan birini oluşan bir dizi nedenle nesne <xref:System.Drawing.Imaging.EncoderParameter>.</span><span class="sxs-lookup"><span data-stu-id="4186a-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="4186a-107">Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcı ve istenen sıkıştırma düzeyi.</span><span class="sxs-lookup"><span data-stu-id="4186a-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5f537-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f537-108">Example</span></span>  
- <span data-ttu-id="5f537-109">Aşağıdaki kod örneği oluşturur bir <xref:System.Drawing.Imaging.EncoderParameter> nesnesi ve üç JPEG görüntüleri kaydeder.</span><span class="sxs-lookup"><span data-stu-id="5f537-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="5f537-110">Her JPEG Resim farklı kalite düzeyi ile değiştirerek kaydedilir `long` geçirilen değerini <xref:System.Drawing.Imaging.EncoderParameter> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="5f537-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="5f537-111">En büyük sıkıştırma 0 kalite düzeyini karşılık gelir ve 100 kalite düzeyini en az sıkıştırma karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="5f537-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
+## <a name="example"></a><span data-ttu-id="4186a-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="4186a-108">Example</span></span>  
+ <span data-ttu-id="4186a-109">Aşağıdaki kod örneği oluşturur bir <xref:System.Drawing.Imaging.EncoderParameter> nesnesi ve üç JPEG görüntüleri kaydeder.</span><span class="sxs-lookup"><span data-stu-id="4186a-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="4186a-110">Her JPEG Resim farklı kalite düzeyi ile değiştirerek kaydedilir `long` geçirilen değerini <xref:System.Drawing.Imaging.EncoderParameter> Oluşturucusu.</span><span class="sxs-lookup"><span data-stu-id="4186a-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="4186a-111">En büyük sıkıştırma 0 kalite düzeyini karşılık gelir ve 100 kalite düzeyini en az sıkıştırma karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="4186a-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -131,16 +120,16 @@ Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo
 End Function  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5f537-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="5f537-112">Compiling the Code</span></span>  
- <span data-ttu-id="5f537-113">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="5f537-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4186a-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="4186a-112">Compiling the Code</span></span>  
+ <span data-ttu-id="4186a-113">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="4186a-113">This example requires:</span></span>  
   
--   <span data-ttu-id="5f537-114">Bir Windows Forms uygulaması.</span><span class="sxs-lookup"><span data-stu-id="5f537-114">A Windows Forms application.</span></span>  
+-   <span data-ttu-id="4186a-114">Bir Windows Forms uygulaması.</span><span class="sxs-lookup"><span data-stu-id="4186a-114">A Windows Forms application.</span></span>  
   
--   <span data-ttu-id="5f537-115">A <xref:System.Windows.Forms.PaintEventArgs>, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="5f537-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+-   <span data-ttu-id="4186a-115">A <xref:System.Windows.Forms.PaintEventArgs>, parametre olarak olduğu <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="4186a-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
--   <span data-ttu-id="5f537-116">Adlı bir görüntü dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.</span><span class="sxs-lookup"><span data-stu-id="5f537-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
+-   <span data-ttu-id="4186a-116">Adlı bir görüntü dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.</span><span class="sxs-lookup"><span data-stu-id="4186a-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f537-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5f537-117">See Also</span></span>  
- [<span data-ttu-id="5f537-118">Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme</span><span class="sxs-lookup"><span data-stu-id="5f537-118">How to: Determine the Parameters Supported by an Encoder</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [<span data-ttu-id="5f537-119">Bit Eşlem Türleri</span><span class="sxs-lookup"><span data-stu-id="5f537-119">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [<span data-ttu-id="5f537-120">Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="5f537-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="4186a-117">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4186a-117">See Also</span></span>  
+ [<span data-ttu-id="4186a-118">Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme</span><span class="sxs-lookup"><span data-stu-id="4186a-118">How to: Determine the Parameters Supported by an Encoder</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
+ [<span data-ttu-id="4186a-119">Bit Eşlem Türleri</span><span class="sxs-lookup"><span data-stu-id="4186a-119">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [<span data-ttu-id="4186a-120">Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="4186a-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

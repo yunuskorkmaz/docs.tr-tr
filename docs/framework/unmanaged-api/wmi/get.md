@@ -2,10 +2,6 @@
 title: Get işlevi (yönetilmeyen API Başvurusu)
 description: Get işlevi, belirtilen özellik değerini alır.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460154"
 ---
-# <a name="get-function"></a><span data-ttu-id="a2788-103">Get işlevi</span><span class="sxs-lookup"><span data-stu-id="a2788-103">Get function</span></span>
-<span data-ttu-id="a2788-104">Varsa belirtilen özellik değerini alır.</span><span class="sxs-lookup"><span data-stu-id="a2788-104">Retrieves the specified property value if it exists.</span></span>
+# <a name="get-function"></a><span data-ttu-id="5d558-103">Get işlevi</span><span class="sxs-lookup"><span data-stu-id="5d558-103">Get function</span></span>
+<span data-ttu-id="5d558-104">Varsa belirtilen özellik değerini alır.</span><span class="sxs-lookup"><span data-stu-id="5d558-104">Retrieves the specified property value if it exists.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="a2788-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a2788-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d558-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d558-105">Syntax</span></span>  
   
 ```  
 HRESULT Get (
@@ -48,57 +42,57 @@ HRESULT Get (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="a2788-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a2788-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="5d558-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5d558-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="a2788-107">[in] Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="a2788-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="5d558-107">[in] Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="5d558-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="a2788-108">[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.</span><span class="sxs-lookup"><span data-stu-id="a2788-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="5d558-108">[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.</span><span class="sxs-lookup"><span data-stu-id="5d558-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="a2788-109">[in] Özelliğin adı.</span><span class="sxs-lookup"><span data-stu-id="a2788-109">[in] The name of the property.</span></span>
+<span data-ttu-id="5d558-109">[in] Özelliğin adı.</span><span class="sxs-lookup"><span data-stu-id="5d558-109">[in] The name of the property.</span></span>
 
-<span data-ttu-id="a2788-110">`lFlags`[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="a2788-110">`lFlags` [in] Reserved.</span></span> <span data-ttu-id="a2788-111">Bu parametre 0 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a2788-111">This parameter must be 0.</span></span>
+<span data-ttu-id="5d558-110">`lFlags` [in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="5d558-110">`lFlags` [in] Reserved.</span></span> <span data-ttu-id="5d558-111">Bu parametre 0 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5d558-111">This parameter must be 0.</span></span>
 
-<span data-ttu-id="a2788-112">`pVal`[out] İşlev başarıyla döndürürse, değerini içeren `wszName` özelliği.</span><span class="sxs-lookup"><span data-stu-id="a2788-112">`pVal` [out] If the function returns successfully, contains the value of the `wszName` property.</span></span> <span data-ttu-id="a2788-113">`pval` Bağımsız değişkeni doğru türü ve değerine Niteleyici için atanır.</span><span class="sxs-lookup"><span data-stu-id="a2788-113">The `pval` argument is assigned the correct type and value for the qualifier.</span></span>
+<span data-ttu-id="5d558-112">`pVal` [out] İşlev başarıyla döndürürse, değerini içeren `wszName` özelliği.</span><span class="sxs-lookup"><span data-stu-id="5d558-112">`pVal` [out] If the function returns successfully, contains the value of the `wszName` property.</span></span> <span data-ttu-id="5d558-113">`pval` Bağımsız değişkeni doğru türü ve değerine Niteleyici için atanır.</span><span class="sxs-lookup"><span data-stu-id="5d558-113">The `pval` argument is assigned the correct type and value for the qualifier.</span></span>
 
-<span data-ttu-id="a2788-114">`pvtType`[out] İşlev başarıyla döndürürse, içeren bir [CIM türü sabiti](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özellik türü gösterir.</span><span class="sxs-lookup"><span data-stu-id="a2788-114">`pvtType` [out] If the function returns successfully, contains a [CIM-type constant](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) that indicates the property type.</span></span> <span data-ttu-id="a2788-115">Değerini de olabilir `null`.</span><span class="sxs-lookup"><span data-stu-id="a2788-115">Its value can also be `null`.</span></span> 
+<span data-ttu-id="5d558-114">`pvtType` [out] İşlev başarıyla döndürürse, içeren bir [CIM türü sabiti](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özellik türü gösterir.</span><span class="sxs-lookup"><span data-stu-id="5d558-114">`pvtType` [out] If the function returns successfully, contains a [CIM-type constant](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) that indicates the property type.</span></span> <span data-ttu-id="5d558-115">Değerini de olabilir `null`.</span><span class="sxs-lookup"><span data-stu-id="5d558-115">Its value can also be `null`.</span></span> 
 
-<span data-ttu-id="a2788-116">`plFlavor`[out] İşlev başarıyla döndürürse, özelliğin kaynak hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="a2788-116">`plFlavor` [out] If the function returns successfully, receives information about the origin of the property.</span></span> <span data-ttu-id="a2788-117">Değerini olabilir `null`, veya tanımlanan WBEM_FLAVOR_TYPE sabitlerden biri *WbemCli.h* üstbilgi dosyası:</span><span class="sxs-lookup"><span data-stu-id="a2788-117">Its value can be `null`, or one of the following WBEM_FLAVOR_TYPE constants defined in the *WbemCli.h* header file:</span></span> 
+<span data-ttu-id="5d558-116">`plFlavor` [out] İşlev başarıyla döndürürse, özelliğin kaynak hakkında bilgi alır.</span><span class="sxs-lookup"><span data-stu-id="5d558-116">`plFlavor` [out] If the function returns successfully, receives information about the origin of the property.</span></span> <span data-ttu-id="5d558-117">Değerini olabilir `null`, veya tanımlanan WBEM_FLAVOR_TYPE sabitlerden biri *WbemCli.h* üstbilgi dosyası:</span><span class="sxs-lookup"><span data-stu-id="5d558-117">Its value can be `null`, or one of the following WBEM_FLAVOR_TYPE constants defined in the *WbemCli.h* header file:</span></span> 
 
-|<span data-ttu-id="a2788-118">Sabit</span><span class="sxs-lookup"><span data-stu-id="a2788-118">Constant</span></span>  |<span data-ttu-id="a2788-119">Değer</span><span class="sxs-lookup"><span data-stu-id="a2788-119">Value</span></span>  |<span data-ttu-id="a2788-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a2788-120">Description</span></span>  |
+|<span data-ttu-id="5d558-118">Sabit</span><span class="sxs-lookup"><span data-stu-id="5d558-118">Constant</span></span>  |<span data-ttu-id="5d558-119">Değer</span><span class="sxs-lookup"><span data-stu-id="5d558-119">Value</span></span>  |<span data-ttu-id="5d558-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5d558-120">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | <span data-ttu-id="a2788-121">0x40</span><span class="sxs-lookup"><span data-stu-id="a2788-121">0x40</span></span> | <span data-ttu-id="a2788-122">Özelliği bir standart sistemi özelliğidir.</span><span class="sxs-lookup"><span data-stu-id="a2788-122">The property is a standard system property.</span></span> |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | <span data-ttu-id="a2788-123">0x20</span><span class="sxs-lookup"><span data-stu-id="a2788-123">0x20</span></span> | <span data-ttu-id="a2788-124">Bir sınıf için: özellik üst sınıftan devralındı.</span><span class="sxs-lookup"><span data-stu-id="a2788-124">For a class: The property is inherited from the parent class.</span></span> </br> <span data-ttu-id="a2788-125">Bir örneği için: özellik üst sınıftan devralındı ederken örneği tarafından değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="a2788-125">For an instance: The property, while inherited from the parent class, has not been modified by the instance.</span></span>  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | <span data-ttu-id="a2788-126">0</span><span class="sxs-lookup"><span data-stu-id="a2788-126">0</span></span> | <span data-ttu-id="a2788-127">Bir sınıf için: türetilmiş sınıf özellik ait.</span><span class="sxs-lookup"><span data-stu-id="a2788-127">For a class: The property belongs to the derived class.</span></span> </br> <span data-ttu-id="a2788-128">Bir örneği için: özelliğini örneği tarafından; değiştirdi diğer bir deyişle, bir değer sağlandı veya bir niteleyicisi eklenemez veya değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="a2788-128">For an instance: The property is modified by the instance; that is, a value was supplied, or a qualifier was added or modified.</span></span> |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | <span data-ttu-id="5d558-121">0x40</span><span class="sxs-lookup"><span data-stu-id="5d558-121">0x40</span></span> | <span data-ttu-id="5d558-122">Özelliği bir standart sistemi özelliğidir.</span><span class="sxs-lookup"><span data-stu-id="5d558-122">The property is a standard system property.</span></span> |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | <span data-ttu-id="5d558-123">0x20</span><span class="sxs-lookup"><span data-stu-id="5d558-123">0x20</span></span> | <span data-ttu-id="5d558-124">Bir sınıf için: özellik üst sınıftan devralındı.</span><span class="sxs-lookup"><span data-stu-id="5d558-124">For a class: The property is inherited from the parent class.</span></span> </br> <span data-ttu-id="5d558-125">Bir örneği için: özellik üst sınıftan devralındı ederken örneği tarafından değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="5d558-125">For an instance: The property, while inherited from the parent class, has not been modified by the instance.</span></span>  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | <span data-ttu-id="5d558-126">0</span><span class="sxs-lookup"><span data-stu-id="5d558-126">0</span></span> | <span data-ttu-id="5d558-127">Bir sınıf için: türetilmiş sınıf özellik ait.</span><span class="sxs-lookup"><span data-stu-id="5d558-127">For a class: The property belongs to the derived class.</span></span> </br> <span data-ttu-id="5d558-128">Bir örneği için: özelliğini örneği tarafından; değiştirdi diğer bir deyişle, bir değer sağlandı veya bir niteleyicisi eklenemez veya değiştirilemez.</span><span class="sxs-lookup"><span data-stu-id="5d558-128">For an instance: The property is modified by the instance; that is, a value was supplied, or a qualifier was added or modified.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="a2788-129">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="a2788-129">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="5d558-129">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="5d558-129">Return value</span></span>
 
-<span data-ttu-id="a2788-130">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="a2788-130">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="5d558-130">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="5d558-130">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="a2788-131">Sabit</span><span class="sxs-lookup"><span data-stu-id="a2788-131">Constant</span></span>  |<span data-ttu-id="a2788-132">Değer</span><span class="sxs-lookup"><span data-stu-id="a2788-132">Value</span></span>  |<span data-ttu-id="a2788-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a2788-133">Description</span></span>  |
+|<span data-ttu-id="5d558-131">Sabit</span><span class="sxs-lookup"><span data-stu-id="5d558-131">Constant</span></span>  |<span data-ttu-id="5d558-132">Değer</span><span class="sxs-lookup"><span data-stu-id="5d558-132">Value</span></span>  |<span data-ttu-id="5d558-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5d558-133">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="a2788-134">0x80041001</span><span class="sxs-lookup"><span data-stu-id="a2788-134">0x80041001</span></span> | <span data-ttu-id="a2788-135">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="a2788-135">There has been a general failure.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="a2788-136">0x80041008</span><span class="sxs-lookup"><span data-stu-id="a2788-136">0x80041008</span></span> | <span data-ttu-id="a2788-137">Bir veya daha fazla parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="a2788-137">One or more parameters are not valid.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="a2788-138">0x80041002</span><span class="sxs-lookup"><span data-stu-id="a2788-138">0x80041002</span></span> | <span data-ttu-id="a2788-139">Belirtilen özellik bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="a2788-139">The specified property was not found.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="a2788-140">0x80041006</span><span class="sxs-lookup"><span data-stu-id="a2788-140">0x80041006</span></span> | <span data-ttu-id="a2788-141">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="a2788-141">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="a2788-142">0</span><span class="sxs-lookup"><span data-stu-id="a2788-142">0</span></span> | <span data-ttu-id="a2788-143">İşlev çağrısı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="a2788-143">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="5d558-134">0x80041001</span><span class="sxs-lookup"><span data-stu-id="5d558-134">0x80041001</span></span> | <span data-ttu-id="5d558-135">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="5d558-135">There has been a general failure.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="5d558-136">0x80041008</span><span class="sxs-lookup"><span data-stu-id="5d558-136">0x80041008</span></span> | <span data-ttu-id="5d558-137">Bir veya daha fazla parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="5d558-137">One or more parameters are not valid.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="5d558-138">0x80041002</span><span class="sxs-lookup"><span data-stu-id="5d558-138">0x80041002</span></span> | <span data-ttu-id="5d558-139">Belirtilen özellik bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="5d558-139">The specified property was not found.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="5d558-140">0x80041006</span><span class="sxs-lookup"><span data-stu-id="5d558-140">0x80041006</span></span> | <span data-ttu-id="5d558-141">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="5d558-141">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="5d558-142">0</span><span class="sxs-lookup"><span data-stu-id="5d558-142">0</span></span> | <span data-ttu-id="5d558-143">İşlev çağrısı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="5d558-143">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="a2788-144">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a2788-144">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5d558-144">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5d558-144">Remarks</span></span>
 
-<span data-ttu-id="a2788-145">Bu işlev çağrısı sarmalar [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a2788-145">This function wraps a call to the [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="5d558-145">Bu işlev çağrısı sarmalar [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5d558-145">This function wraps a call to the [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="a2788-146">`Get` İşlevi ayrıca sistem özellikleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="a2788-146">The `Get` function can also return system properties.</span></span>
+<span data-ttu-id="5d558-146">`Get` İşlevi ayrıca sistem özellikleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="5d558-146">The `Get` function can also return system properties.</span></span>
 
-<span data-ttu-id="a2788-147">`pVal` Bağımsız değişkeni doğru türü ve değerine niteleyici ve COM için atanan [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) işlevi</span><span class="sxs-lookup"><span data-stu-id="a2788-147">The `pVal` argument is assigned the correct type and value for the qualifier and the COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) function</span></span>
+<span data-ttu-id="5d558-147">`pVal` Bağımsız değişkeni doğru türü ve değerine niteleyici ve COM için atanan [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) işlevi</span><span class="sxs-lookup"><span data-stu-id="5d558-147">The `pVal` argument is assigned the correct type and value for the qualifier and the COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) function</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a2788-148">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a2788-148">Requirements</span></span>  
- <span data-ttu-id="a2788-149">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2788-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d558-148">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d558-148">Requirements</span></span>  
+ <span data-ttu-id="5d558-149">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d558-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2788-150">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a2788-150">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="5d558-150">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="5d558-150">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="a2788-151">**.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a2788-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="5d558-151">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5d558-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2788-152">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a2788-152">See also</span></span>  
-[<span data-ttu-id="a2788-153">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="a2788-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="5d558-152">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5d558-152">See also</span></span>  
+[<span data-ttu-id="5d558-153">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5d558-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

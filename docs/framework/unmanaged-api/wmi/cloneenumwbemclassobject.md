@@ -1,11 +1,7 @@
 ---
-title: "CloneEnumWbemClassObject işlevi (yönetilmeyen API Başvurusu)"
-description: "CloneEnumWbemClassObject işlevi bir numaralandırıcı mantıksal bir kopyasını oluşturur."
+title: CloneEnumWbemClassObject işlevi (yönetilmeyen API Başvurusu)
+description: CloneEnumWbemClassObject işlevi bir numaralandırıcı mantıksal bir kopyasını oluşturur.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460612"
 ---
-# <a name="cloneenumwbemclassobject-function"></a><span data-ttu-id="53fc8-103">CloneEnumWbemClassObject işlevi</span><span class="sxs-lookup"><span data-stu-id="53fc8-103">CloneEnumWbemClassObject function</span></span>
-<span data-ttu-id="53fc8-104">Numaralandırma içindeki geçerli konumunu koruyarak bir numaralandırıcı mantıksal bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="53fc8-104">Makes a logical copy of an enumerator, retaining its current position in an enumeration.</span></span>  
+# <a name="cloneenumwbemclassobject-function"></a><span data-ttu-id="d61fc-103">CloneEnumWbemClassObject işlevi</span><span class="sxs-lookup"><span data-stu-id="d61fc-103">CloneEnumWbemClassObject function</span></span>
+<span data-ttu-id="d61fc-104">Numaralandırma içindeki geçerli konumunu koruyarak bir numaralandırıcı mantıksal bir kopyasını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d61fc-104">Makes a logical copy of an enumerator, retaining its current position in an enumeration.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="53fc8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="53fc8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d61fc-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d61fc-105">Syntax</span></span>  
   
 ```  
 HRESULT CloneEnumWbemClassObject (
@@ -48,58 +42,58 @@ HRESULT CloneEnumWbemClassObject (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="53fc8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="53fc8-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d61fc-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d61fc-106">Parameters</span></span>
 
 `ppEnum`  
-<span data-ttu-id="53fc8-107">[out] Yeni bir işaretçi alır [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="53fc8-107">[out] Receives a pointer to a new [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span></span>
+<span data-ttu-id="d61fc-107">[out] Yeni bir işaretçi alır [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="d61fc-107">[out] Receives a pointer to a new [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span></span>
 
 `authLevel`  
-<span data-ttu-id="53fc8-108">[in] Kimlik doğrulama düzeyi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-108">[in] The authorization level.</span></span>
+<span data-ttu-id="d61fc-108">[in] Kimlik doğrulama düzeyi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-108">[in] The authorization level.</span></span>
 
-<span data-ttu-id="53fc8-109">`impLevel`[in] Kimliğe bürünme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-109">`impLevel` [in] The impersonation level.</span></span>
+<span data-ttu-id="d61fc-109">`impLevel` [in] Kimliğe bürünme düzeyi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-109">`impLevel` [in] The impersonation level.</span></span>
 
 `pCurrentEnumWbemClassObject`  
-<span data-ttu-id="53fc8-110">[out] Bir işaretçi [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) kopyalanma örneği.</span><span class="sxs-lookup"><span data-stu-id="53fc8-110">[out] A pointer to the [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) instance to be cloned.</span></span>
+<span data-ttu-id="d61fc-110">[out] Bir işaretçi [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) kopyalanma örneği.</span><span class="sxs-lookup"><span data-stu-id="d61fc-110">[out] A pointer to the [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) instance to be cloned.</span></span>
 
 `strUser`   
-<span data-ttu-id="53fc8-111">[in] Kullanıcı adı.</span><span class="sxs-lookup"><span data-stu-id="53fc8-111">[in] The user name.</span></span> <span data-ttu-id="53fc8-112">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-112">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="d61fc-111">[in] Kullanıcı adı.</span><span class="sxs-lookup"><span data-stu-id="d61fc-111">[in] The user name.</span></span> <span data-ttu-id="d61fc-112">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-112">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strPassword`   
-<span data-ttu-id="53fc8-113">[in] Parola.</span><span class="sxs-lookup"><span data-stu-id="53fc8-113">[in] The password.</span></span> <span data-ttu-id="53fc8-114">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-114">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="d61fc-113">[in] Parola.</span><span class="sxs-lookup"><span data-stu-id="d61fc-113">[in] The password.</span></span> <span data-ttu-id="d61fc-114">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-114">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strAuthority`   
-<span data-ttu-id="53fc8-115">[in] Kullanıcının etki alanı adı.</span><span class="sxs-lookup"><span data-stu-id="53fc8-115">[in] The domain name of the user.</span></span> <span data-ttu-id="53fc8-116">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-116">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="d61fc-115">[in] Kullanıcının etki alanı adı.</span><span class="sxs-lookup"><span data-stu-id="d61fc-115">[in] The domain name of the user.</span></span> <span data-ttu-id="d61fc-116">Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-116">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="53fc8-117">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="53fc8-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="d61fc-117">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="d61fc-117">Return value</span></span>
 
-<span data-ttu-id="53fc8-118">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="53fc8-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="d61fc-118">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="d61fc-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="53fc8-119">Sabit</span><span class="sxs-lookup"><span data-stu-id="53fc8-119">Constant</span></span>  |<span data-ttu-id="53fc8-120">Değer</span><span class="sxs-lookup"><span data-stu-id="53fc8-120">Value</span></span>  |<span data-ttu-id="53fc8-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="53fc8-121">Description</span></span>  |
+|<span data-ttu-id="d61fc-119">Sabit</span><span class="sxs-lookup"><span data-stu-id="d61fc-119">Constant</span></span>  |<span data-ttu-id="d61fc-120">Değer</span><span class="sxs-lookup"><span data-stu-id="d61fc-120">Value</span></span>  |<span data-ttu-id="d61fc-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d61fc-121">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="53fc8-122">0x80041001</span><span class="sxs-lookup"><span data-stu-id="53fc8-122">0x80041001</span></span> | <span data-ttu-id="53fc8-123">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="53fc8-123">There has been a general failure.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="53fc8-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="53fc8-124">0x80041008</span></span> | <span data-ttu-id="53fc8-125">Bir parametre geçersiz.</span><span class="sxs-lookup"><span data-stu-id="53fc8-125">A parameter is invalid.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="53fc8-126">0x80041006</span><span class="sxs-lookup"><span data-stu-id="53fc8-126">0x80041006</span></span> | <span data-ttu-id="53fc8-127">Yeterli kullanılabilir bellek yok işlem tamamlanamadı.</span><span class="sxs-lookup"><span data-stu-id="53fc8-127">Not enough memory is available complete the operation.</span></span> |
-| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="53fc8-128">0x80041015</span><span class="sxs-lookup"><span data-stu-id="53fc8-128">0x80041015</span></span> | <span data-ttu-id="53fc8-129">Geçerli işlem ile WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="53fc8-129">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="53fc8-130">0</span><span class="sxs-lookup"><span data-stu-id="53fc8-130">0</span></span> | <span data-ttu-id="53fc8-131">İşlev çağrısı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="53fc8-131">The function call was successful.</span></span>  |
+| `WBEM_E_FAILED` | <span data-ttu-id="d61fc-122">0x80041001</span><span class="sxs-lookup"><span data-stu-id="d61fc-122">0x80041001</span></span> | <span data-ttu-id="d61fc-123">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="d61fc-123">There has been a general failure.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d61fc-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d61fc-124">0x80041008</span></span> | <span data-ttu-id="d61fc-125">Bir parametre geçersiz.</span><span class="sxs-lookup"><span data-stu-id="d61fc-125">A parameter is invalid.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="d61fc-126">0x80041006</span><span class="sxs-lookup"><span data-stu-id="d61fc-126">0x80041006</span></span> | <span data-ttu-id="d61fc-127">Yeterli kullanılabilir bellek yok işlem tamamlanamadı.</span><span class="sxs-lookup"><span data-stu-id="d61fc-127">Not enough memory is available complete the operation.</span></span> |
+| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="d61fc-128">0x80041015</span><span class="sxs-lookup"><span data-stu-id="d61fc-128">0x80041015</span></span> | <span data-ttu-id="d61fc-129">Geçerli işlem ile WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="d61fc-129">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="d61fc-130">0</span><span class="sxs-lookup"><span data-stu-id="d61fc-130">0</span></span> | <span data-ttu-id="d61fc-131">İşlev çağrısı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="d61fc-131">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="53fc8-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="53fc8-132">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d61fc-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d61fc-132">Remarks</span></span>
 
-<span data-ttu-id="53fc8-133">Bu işlev çağrısı sarmalar [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-133">This function wraps a call to the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="d61fc-133">Bu işlev çağrısı sarmalar [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-133">This function wraps a call to the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
 
-<span data-ttu-id="53fc8-134">Bu yöntem yalnızca bir "en iyi çaba" kopya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="53fc8-134">This method makes only a "best effort" copy.</span></span> <span data-ttu-id="53fc8-135">Birçok CIM Nesne dinamik yapısı nedeniyle, yeni Numaralandırıcı kaynak Numaralandırıcı aynı nesne kümesini numaralandırma olmayan mümkündür.</span><span class="sxs-lookup"><span data-stu-id="53fc8-135">Due to the dynamic nature of many CIM objects, it is possible that the new enumerator does not enumerate the same set of objects as the source enumerator.</span></span>  
+<span data-ttu-id="d61fc-134">Bu yöntem yalnızca bir "en iyi çaba" kopya oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d61fc-134">This method makes only a "best effort" copy.</span></span> <span data-ttu-id="d61fc-135">Birçok CIM Nesne dinamik yapısı nedeniyle, yeni Numaralandırıcı kaynak Numaralandırıcı aynı nesne kümesini numaralandırma olmayan mümkündür.</span><span class="sxs-lookup"><span data-stu-id="d61fc-135">Due to the dynamic nature of many CIM objects, it is possible that the new enumerator does not enumerate the same set of objects as the source enumerator.</span></span>  
 
-<span data-ttu-id="53fc8-136">İşlev çağrısı başarısız olursa, çağırarak ek hata bilgileri elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-136">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="d61fc-136">İşlev çağrısı başarısız olursa, çağırarak ek hata bilgileri elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-136">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
 
-## <a name="example"></a><span data-ttu-id="53fc8-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="53fc8-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d61fc-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="d61fc-137">Example</span></span>
 
-<span data-ttu-id="53fc8-138">Bir örnek için bkz: [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="53fc8-138">For an example, see the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="d61fc-138">Bir örnek için bkz: [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d61fc-138">For an example, see the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="53fc8-139">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="53fc8-139">Requirements</span></span>  
- <span data-ttu-id="53fc8-140">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53fc8-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d61fc-139">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d61fc-139">Requirements</span></span>  
+ <span data-ttu-id="d61fc-140">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d61fc-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53fc8-141">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="53fc8-141">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="d61fc-141">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d61fc-141">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="53fc8-142">**.NET framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="53fc8-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="d61fc-142">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d61fc-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53fc8-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="53fc8-143">See also</span></span>  
-[<span data-ttu-id="53fc8-144">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="53fc8-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="d61fc-143">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d61fc-143">See also</span></span>  
+[<span data-ttu-id="d61fc-144">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="d61fc-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

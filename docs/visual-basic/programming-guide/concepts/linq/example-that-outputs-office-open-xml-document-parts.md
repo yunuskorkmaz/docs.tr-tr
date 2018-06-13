@@ -1,30 +1,21 @@
 ---
-title: "Office Açık XML belge bölümleri (Visual Basic) çıkarır örneği"
-ms.custom: 
+title: Office Açık XML belge bölümleri (Visual Basic) çıkarır örneği
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96596c86674f5df2b9949a07adab2f313a07633d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640273"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="5f49c-102">Office Açık XML belge bölümleri (Visual Basic) çıkarır örneği</span><span class="sxs-lookup"><span data-stu-id="5f49c-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
-<span data-ttu-id="5f49c-103">Bu konuda, bir Office Açık XML belgesi Aç ve erişim içindeki bölümleri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="5f49c-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="83bb2-102">Office Açık XML belge bölümleri (Visual Basic) çıkarır örneği</span><span class="sxs-lookup"><span data-stu-id="83bb2-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="83bb2-103">Bu konuda, bir Office Açık XML belgesi Aç ve erişim içindeki bölümleri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="83bb2-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5f49c-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="5f49c-104">Example</span></span>  
- <span data-ttu-id="5f49c-105">Aşağıdaki örnek, bir Office Açık XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="5f49c-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="83bb2-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="83bb2-104">Example</span></span>  
+ <span data-ttu-id="83bb2-105">Aşağıdaki örnek, bir Office Açık XML belge açılır ve belge ve stil bölümlerini konsola yazdırır.</span><span class="sxs-lookup"><span data-stu-id="83bb2-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="5f49c-106">Bu örnek WindowsBase derlemeden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="5f49c-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="5f49c-107">Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="5f49c-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="83bb2-106">Bu örnek WindowsBase derlemeden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="83bb2-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="83bb2-107">Türlerinde kullanan <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="83bb2-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -73,5 +64,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5f49c-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="5f49c-108">See Also</span></span>  
- [<span data-ttu-id="5f49c-109">Ayrıntılar Office Açık XML WordprocessingML belgeleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5f49c-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="83bb2-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="83bb2-108">See Also</span></span>  
+ [<span data-ttu-id="83bb2-109">Ayrıntılar Office Açık XML WordprocessingML belgeleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="83bb2-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
