@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655908"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
 Bir nesne bir sınıfının bir örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevlerini genellikle yeni nesneler üzerinde gerçekleştirilmesi gerekir. Veritabanlarına bağlanma ve kayıt defteri anahtarlarının değerlerini okuma dosyaları açma ortak başlatma görevlerini içerir. Visual Basic denetimleri adlı yordamları kullanarak yeni nesnelerin başlatılması *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  

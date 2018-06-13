@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644322"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek istediğiniz. Grup nesnelerine iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturma.  

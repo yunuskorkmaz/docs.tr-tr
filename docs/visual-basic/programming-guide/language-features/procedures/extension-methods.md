@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655290"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Metotları (Visual Basic)
 Genişletme yöntemleri yeni türetilmiş bir tür oluşturmadan önceden tanımlanmış veri türlerine özel işlevsellik eklemek için geliştiricilere etkinleştirin. Genişletme yöntemleri varolan türünün bir örneği yöntemi değilmiş gibi çağrılabilir bir yöntem yazmak mümkün kılar.  

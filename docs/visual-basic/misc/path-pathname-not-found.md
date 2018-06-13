@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641363"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>Yol &#39; &lt;pathname&gt; &#39; bulunamadı
 İşletim sistemi yol belirtilen yol bir dosya erişim veya disk erişimi işlemi sırasında bulamıyor. Bir dosya yolu, sürücü belirtimi ve dizinleri ve dosyayı bulmak için geçmesi gereken alt dizinleri eklemeniz gerekir. Göreli veya mutlak bir yol olabilir.  

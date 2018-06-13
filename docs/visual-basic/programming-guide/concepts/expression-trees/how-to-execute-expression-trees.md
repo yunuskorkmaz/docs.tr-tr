@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643659"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Nasıl yapılır: ifade ağaçlarını (Visual Basic) yürütme
 Bu konuda bir ifade ağacına yürütme gösterilmiştir. Bir ifade ağacına yürütülürken bir değer döndürebilir ya da yalnızca bir yöntemi çağırma gibi bir eylem gerçekleştirebilir.  

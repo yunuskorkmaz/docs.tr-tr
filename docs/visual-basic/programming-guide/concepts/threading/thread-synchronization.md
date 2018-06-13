@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655097"
 ---
 # <a name="thread-synchronization-visual-basic"></a>İş parçacığı eşitleme (Visual Basic)
 Aşağıdaki bölümlerde, özellikleri ve kaynakları birden çok iş parçacıklı uygulamalarda erişimi eşitlemek için kullanılan sınıflar açıklanmaktadır.  

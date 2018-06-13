@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805479"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 Veri Hizmeti ikili büyük nesne veri getirebilir. Bu ikili verileri, video ve ses akışları, görüntüler, belge dosyaları veya diğer ikili medya türleri temsil edebilir. Bir veya daha fazla ikili özelliklerinin bir varlık veri modeli içerir, bu ikili veri akışı yanıt girişi içinde base-64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme performansını etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlık bağımsız ikili veri almak için bir mekanizma tanımlar. Bu, bir veya daha fazla veri akışlara varlıktan ikili veri ayırarak gerçekleştirilir.  

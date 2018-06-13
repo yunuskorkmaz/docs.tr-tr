@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457514"
 ---
 # <a name="throw-c-reference"></a>throw (C# Başvurusu)
 Program yürütme sırasında bir özel durum geçişi işaret eder.  

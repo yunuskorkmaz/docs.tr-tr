@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647738"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'de Bir StringBuilder Kullanarak Dize Oluşturma
 Bu örnek kullanarak çok sayıda küçük dizelerden uzun bir dize oluşturur <xref:System.Text.StringBuilder> sınıfı. <xref:System.Text.StringBuilder> Sınıftır daha verimlidir `&=` birçok dizeleri birleştirme işleci.  

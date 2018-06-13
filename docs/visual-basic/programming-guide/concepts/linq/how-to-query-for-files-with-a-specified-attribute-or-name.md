@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642917"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Nasıl yapılır: belirli bir öznitelik veya ad (Visual Basic) sahip dosyaları sorgulama
 Bu örnek belirtilen dosya adı uzantısını (örneğin, ".txt") sahip tüm dosyaları bulmak belirtilen dizin ağacında gösterilmiştir. Ayrıca oluşturma zamanı temel alınarak ağacında da en yeni veya eski dosya döndürmek nasıl gösterir.  

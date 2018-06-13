@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457806"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. ve? [] null-conditional işleçleri (C# ve Visual Basic)
 Üye erişimi gerçekleştirmeden önce sol işleneni null değerini sınar (`?.`) veya dizin (`?[]`) döndürür; işlem `null` sol işleneni değerlendirilirse `null`. 

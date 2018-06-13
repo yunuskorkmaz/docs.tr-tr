@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649210"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>Nasıl yapılır: XML Alt Öğelerine Erişme (Visual Basic)
 Bu örnek belirtilen ada sahip bir XML öğesi tüm XML alt öğelerine erişmek için axis özelliği bir alt kullanmayı gösterir. Özellikle, kullanan <xref:System.Xml.Linq.XElement.Value%2A> özelliğine koleksiyonda ilk öğenin değerini almak `name` alt axis özelliği döndürür. `name` Child axis özelliği alır adlı tüm alt öğeleri `phone` içinde `contact` nesnesi. Bu örnek ayrıca kullanır `phone` adlı tüm alt öğeleri erişmek için alt axis özelliği `phone` içerdiği `contact` nesnesi.  

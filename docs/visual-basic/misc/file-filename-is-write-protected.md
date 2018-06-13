@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636558"
 ---
 # <a name="file-39ltfilenamegt39-is-write-protected"></a>Dosya &#39; &lt;filename&gt; &#39; yazma korumalı
 Yazılacak çalıştığınız dosya yazma korumalı ve bu nedenle değiştirilemez.  

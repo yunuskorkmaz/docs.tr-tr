@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808773"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Nasıl yapılır: bir yansıtma (C#) türünü denetlemek
 Projeksiyon bir veri kümesi alma, filtrelemek, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Çoğu sorgu ifadeleri tahminleri gerçekleştirin. Bu bölümde gösterilen sorgu ifadeleri çoğunu değerlendirmek için <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, ancak diğer türler oluşturmak için yansıtma türünü kontrol edebilirsiniz. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  

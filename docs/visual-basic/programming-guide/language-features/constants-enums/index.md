@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646398"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic'de Sabitler ve Numaralandırmalar
 Sabitler değişmez değer yerine anlamlı adlar kullanmak için bir yoldur. Adından da anlaşılacağı gibi bir uygulama yürütme sabit kalır değerleri sabitleri depolar. Sabitler numaraları, kodunuzu daha okunabilir hale yerine anlamlı bir ad sağlamak için kullanabilirsiniz.  

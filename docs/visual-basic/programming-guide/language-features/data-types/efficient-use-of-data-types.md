@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647767"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
 Bildirilmemiş değişkenleri ve veri türü bildirilen değişkenlerin atanır `Object` veri türü. Bu, hızlı bir şekilde programları yazmak kolaylaştırır, ancak bunları daha yavaş çalışmasına neden olabilir.  

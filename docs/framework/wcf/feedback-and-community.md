@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810167"
 ---
 # <a name="feedback-and-community"></a>Geri Bildirim ve Topluluk
 Açıklamaları ve Windows Communication Foundation (WCF) hakkında endişeleriniz veriyoruz veya [!INCLUDE[infocard](../../../includes/infocard-md.md)] belgeleri. Her sayfanın SDK cümle "Microsoft'a bu konu hakkında açıklamalar gönderin." açıktır Görünümleri veya belirli konuyla ilgili öneriler göndermek için "Açıklamalar" bağlantısını tıklatın.  

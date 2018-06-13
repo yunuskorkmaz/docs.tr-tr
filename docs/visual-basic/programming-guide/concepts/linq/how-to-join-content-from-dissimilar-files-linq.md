@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643542"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: (LINQ) (Visual Basic) farklı dosyalardan içerik birleştirme
 Bu örnek, eşleşen bir anahtarı olarak kullanılan bir ortak değer paylaşmak, virgülle ayrılmış iki dosya verileri nasıl gösterir. Bu teknik iki elektronik tablolar verileri birleştirmek varsa veya bir elektronik tablo ve dosya yeni bir dosyaya başka bir biçime sahip yararlı olabilir. Yapılandırılmış metin herhangi bir tür ile çalışmak için örnek değiştirebilirsiniz.  

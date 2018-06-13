@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809894"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>WCF Hizmet Konağının Otomatik Olarak Başlatılmasını Denetleme
 Birden çok proje içeren aynı Visual Studio çözümüne başka bir projenin hata ayıklamasını yaparken bir WCF Hizmeti kitaplığı projesi için Windows Communication Foundation (WCF) Hizmet Konağı (WcfSvcHost.exe) otomatik olarak başlatılmasını yeteneğini kontrol edebilirsiniz.  
