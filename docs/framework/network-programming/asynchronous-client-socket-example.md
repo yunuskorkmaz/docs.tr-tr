@@ -1,12 +1,6 @@
 ---
-title: "Zaman uyumsuz istemcisi yuva örneği"
-ms.custom: 
+title: Zaman uyumsuz istemcisi yuva örneği
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,18 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390305"
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="469c3-102">Zaman uyumsuz istemcisi yuva örneği</span><span class="sxs-lookup"><span data-stu-id="469c3-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="469c3-103">Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="469c3-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="469c3-104">İstemci zaman uyumsuz bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya alınmadı şekilde.</span><span class="sxs-lookup"><span data-stu-id="469c3-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="469c3-105">Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.</span><span class="sxs-lookup"><span data-stu-id="469c3-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="01b97-102">Zaman uyumsuz istemcisi yuva örneği</span><span class="sxs-lookup"><span data-stu-id="01b97-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="01b97-103">Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur.</span><span class="sxs-lookup"><span data-stu-id="01b97-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="01b97-104">İstemci zaman uyumsuz bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür ancak istemci uygulamanın yürütülmesini askıya alınmadı şekilde.</span><span class="sxs-lookup"><span data-stu-id="01b97-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="01b97-105">Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.</span><span class="sxs-lookup"><span data-stu-id="01b97-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -331,7 +324,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="469c3-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="469c3-106">See Also</span></span>  
- [<span data-ttu-id="469c3-107">Zaman Uyumsuz Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="469c3-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [<span data-ttu-id="469c3-108">Zaman Uyumlu Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="469c3-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="469c3-109">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="469c3-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="01b97-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="01b97-106">See Also</span></span>  
+ [<span data-ttu-id="01b97-107">Zaman Uyumsuz Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="01b97-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [<span data-ttu-id="01b97-108">Zaman Uyumlu Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="01b97-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="01b97-109">Yuva Kod Örnekleri</span><span class="sxs-lookup"><span data-stu-id="01b97-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

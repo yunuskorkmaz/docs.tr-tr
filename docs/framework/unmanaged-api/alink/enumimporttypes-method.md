@@ -1,14 +1,6 @@
 ---
-title: "EnumImportTypes Yöntemi"
-ms.custom: 
+title: EnumImportTypes Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - EnumImportTypes
 - IALink.EnumImportTypes
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 08644816d3fa11ade5a8ebee1573e8f66d526101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90319886dfe149a3d2d76451c1a8526299cf5b89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401654"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="0d922-102">EnumImportTypes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0d922-102">EnumImportTypes Method</span></span>
-<span data-ttu-id="0d922-103">Her kapsamda her türünü numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="0d922-103">Enumerates each type in each scope.</span></span>  
+# <a name="enumimporttypes-method"></a><span data-ttu-id="f6710-102">EnumImportTypes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f6710-102">EnumImportTypes Method</span></span>
+<span data-ttu-id="f6710-103">Her kapsamda her türünü numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="f6710-103">Enumerates each type in each scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d922-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0d922-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6710-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f6710-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumImportTypes(  
@@ -49,26 +38,26 @@ HRESULT EnumImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0d922-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0d922-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f6710-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f6710-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="0d922-106">Numaralandırıcı işleci.</span><span class="sxs-lookup"><span data-stu-id="0d922-106">Handle for enumerator.</span></span>  
+ <span data-ttu-id="f6710-106">Numaralandırıcı işleci.</span><span class="sxs-lookup"><span data-stu-id="f6710-106">Handle for enumerator.</span></span>  
   
  `dwMax`  
- <span data-ttu-id="0d922-107">Alınacak türleri maksimum sayısı.</span><span class="sxs-lookup"><span data-stu-id="0d922-107">Maximum number of types to retrieve.</span></span>  
+ <span data-ttu-id="f6710-107">Alınacak türleri maksimum sayısı.</span><span class="sxs-lookup"><span data-stu-id="f6710-107">Maximum number of types to retrieve.</span></span>  
   
  `aTypeDefs`  
- <span data-ttu-id="0d922-108">Recieves yazın aşmayan belirteçleri `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="0d922-108">Recieves type tokens, not to exceed `dwMax`.</span></span>  
+ <span data-ttu-id="f6710-108">Recieves yazın aşmayan belirteçleri `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="f6710-108">Recieves type tokens, not to exceed `dwMax`.</span></span>  
   
  `pdwCount`  
- <span data-ttu-id="0d922-109">Türü gerçek sayısını alır `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="0d922-109">Receives actual number of type in `aTypeDefs`.</span></span>  
+ <span data-ttu-id="f6710-109">Türü gerçek sayısını alır `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="f6710-109">Receives actual number of type in `aTypeDefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0d922-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0d922-110">Return Value</span></span>  
- <span data-ttu-id="0d922-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="0d922-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f6710-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f6710-110">Return Value</span></span>  
+ <span data-ttu-id="f6710-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="f6710-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0d922-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0d922-112">Requirements</span></span>  
- <span data-ttu-id="0d922-113">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="0d922-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6710-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f6710-112">Requirements</span></span>  
+ <span data-ttu-id="f6710-113">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="f6710-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d922-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0d922-114">See Also</span></span>  
- [<span data-ttu-id="0d922-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0d922-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="0d922-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0d922-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="0d922-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="0d922-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="f6710-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f6710-114">See Also</span></span>  
+ [<span data-ttu-id="f6710-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6710-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="f6710-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f6710-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="f6710-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="f6710-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "Winmdexp.exe Hata İletileri"
-ms.custom: 
+title: Winmdexp.exe Hata İletileri
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WME1095
 - WME1110
@@ -164,24 +157,22 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22f556c87f676b86228fbb68f66206f3c39140cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0172f3895a0a1f444548bfbca877164815adc94a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407046"
 ---
-# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="0a5e2-102">Winmdexp.exe Hata İletileri</span><span class="sxs-lookup"><span data-stu-id="0a5e2-102">Winmdexp.exe Error Messages</span></span>
-<span data-ttu-id="0a5e2-103">Derleme işlem çağrıları [Winmdexp.exe (Windows çalışma zamanı meta veri verme aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** şablonunda [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], Winmdexp.exe hata iletileri görüntülenir **Hata listesi**.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="0a5e2-104">Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="0a5e2-105">Giriş olarak derlenmiş bir modül gerektirdiği için derleme başarılı sürece, hata iletileri görünmüyor.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="e372a-102">Winmdexp.exe Hata İletileri</span><span class="sxs-lookup"><span data-stu-id="e372a-102">Winmdexp.exe Error Messages</span></span>
+<span data-ttu-id="e372a-103">Derleme işlem çağrıları [Winmdexp.exe (Windows çalışma zamanı meta veri verme aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** şablonunda [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], Winmdexp.exe hata iletileri görüntülenir **Hata listesi**.</span><span class="sxs-lookup"><span data-stu-id="e372a-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="e372a-104">Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği.</span><span class="sxs-lookup"><span data-stu-id="e372a-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="e372a-105">Giriş olarak derlenmiş bir modül gerektirdiği için derleme başarılı sürece, hata iletileri görünmüyor.</span><span class="sxs-lookup"><span data-stu-id="e372a-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
   
- <span data-ttu-id="0a5e2-106">Hata iletileri, bunlar rapor hata koşullarını gidermek için gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar çok daha fazla bilgi gerektirir.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="0a5e2-107">Ek bilgi bulabilirsiniz [tanılama Windows çalışma zamanı bileşeni hata koşulları](http://go.microsoft.com/fwlink/p/?LinkId=251127) Windows geliştirme Merkezi'ndeki.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
+ <span data-ttu-id="e372a-106">Hata iletileri, bunlar rapor hata koşullarını gidermek için gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar çok daha fazla bilgi gerektirir.</span><span class="sxs-lookup"><span data-stu-id="e372a-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="e372a-107">Ek bilgi bulabilirsiniz [tanılama Windows çalışma zamanı bileşeni hata koşulları](http://go.microsoft.com/fwlink/p/?LinkId=251127) Windows geliştirme Merkezi'ndeki.</span><span class="sxs-lookup"><span data-stu-id="e372a-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
   
- <span data-ttu-id="0a5e2-108">Hata makalesinde ele alınmamıştır ve ileti sorunu gidermek için yeterli bilgi içermiyor düşünüyorsanız, lütfen geri bildirim bağlantısı makalesinde kullanın ve hata iletisi içerir.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="0a5e2-109">Bir hata, alternatif olarak, dosya [Microsoft Connect Web](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span><span class="sxs-lookup"><span data-stu-id="0a5e2-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="0a5e2-110">De daha fazla bilgi için bakabilirsiniz [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span><span class="sxs-lookup"><span data-stu-id="0a5e2-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
+ <span data-ttu-id="e372a-108">Hata makalesinde ele alınmamıştır ve ileti sorunu gidermek için yeterli bilgi içermiyor düşünüyorsanız, lütfen geri bildirim bağlantısı makalesinde kullanın ve hata iletisi içerir.</span><span class="sxs-lookup"><span data-stu-id="e372a-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="e372a-109">Bir hata, alternatif olarak, dosya [Microsoft Connect Web](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span><span class="sxs-lookup"><span data-stu-id="e372a-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="e372a-110">De daha fazla bilgi için bakabilirsiniz [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span><span class="sxs-lookup"><span data-stu-id="e372a-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a5e2-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0a5e2-111">See Also</span></span>  
- [<span data-ttu-id="0a5e2-112">Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)</span><span class="sxs-lookup"><span data-stu-id="0a5e2-112">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [<span data-ttu-id="0a5e2-113">Windows çalışma zamanı bileşeni hata koşulları tanılama</span><span class="sxs-lookup"><span data-stu-id="0a5e2-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+## <a name="see-also"></a><span data-ttu-id="e372a-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e372a-111">See Also</span></span>  
+ [<span data-ttu-id="e372a-112">Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)</span><span class="sxs-lookup"><span data-stu-id="e372a-112">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [<span data-ttu-id="e372a-113">Windows çalışma zamanı bileşeni hata koşulları tanılama</span><span class="sxs-lookup"><span data-stu-id="e372a-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)

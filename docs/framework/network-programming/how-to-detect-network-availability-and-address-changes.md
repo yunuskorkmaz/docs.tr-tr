@@ -1,31 +1,23 @@
 ---
-title: "Nasıl yapılır: Ağ kullanılabilirliğini algılamak ve adres değişiklikleri"
-ms.custom: 
+title: 'Nasıl yapılır: Ağ kullanılabilirliğini algılamak ve adres değişiklikleri'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6afee9ea1528d4219d32d32fff670ddbfb3033c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9056c8b2ecf18c4a57d356e7c9698984df1558eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396265"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="04f1c-102">Nasıl yapılır: Ağ kullanılabilirliğini algılamak ve adres değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="04f1c-102">How to: Detect Network Availability and Address Changes</span></span>
-<span data-ttu-id="04f1c-103">Bu örnek, bir arabirim ağ adresi değişikliklerini algılamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="04f1c-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
+# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="23dc7-102">Nasıl yapılır: Ağ kullanılabilirliğini algılamak ve adres değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="23dc7-102">How to: Detect Network Availability and Address Changes</span></span>
+<span data-ttu-id="23dc7-103">Bu örnek, bir arabirim ağ adresi değişikliklerini algılamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="23dc7-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="04f1c-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="04f1c-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="23dc7-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="23dc7-104">Example</span></span>  
   
 ```  
 using System;  
@@ -56,7 +48,7 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="04f1c-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="04f1c-105">Compiling the Code</span></span>  
- <span data-ttu-id="04f1c-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="04f1c-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="23dc7-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="23dc7-105">Compiling the Code</span></span>  
+ <span data-ttu-id="23dc7-106">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="23dc7-106">This example requires:</span></span>  
   
--   <span data-ttu-id="04f1c-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="04f1c-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="23dc7-107">Başvurular **System.Net** ad alanı.</span><span class="sxs-lookup"><span data-stu-id="23dc7-107">References to the **System.Net** namespace.</span></span>
