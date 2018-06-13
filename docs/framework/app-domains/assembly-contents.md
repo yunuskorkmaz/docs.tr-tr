@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741834"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="03c71-102">Derleme İçerikleri</span><span class="sxs-lookup"><span data-stu-id="03c71-102">Assembly Contents</span></span>
 <span data-ttu-id="03c71-103">Genel olarak, statik bir derleme dört öğeden oluşabilir:</span><span class="sxs-lookup"><span data-stu-id="03c71-103">In general, a static assembly can consist of four elements:</span></span>  

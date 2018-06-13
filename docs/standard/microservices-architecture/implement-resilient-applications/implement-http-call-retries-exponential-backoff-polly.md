@@ -1,31 +1,25 @@
 ---
-title: "HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama"
-description: "Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama"
-keywords: "Docker, mikro, ASP.NET, kapsayıcı"
+title: HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 122f617874188d3bffe689d6b3cf7d7249c59c3b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 66ac57fc824e01f96d6584ab86bb95ba1b0174a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576987"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a><span data-ttu-id="e0d9f-104">HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama</span><span class="sxs-lookup"><span data-stu-id="e0d9f-104">Implementing HTTP call retries with exponential backoff with Polly</span></span>
+# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a><span data-ttu-id="746f7-103">HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama</span><span class="sxs-lookup"><span data-stu-id="746f7-103">Implementing HTTP call retries with exponential backoff with Polly</span></span>
 
-<span data-ttu-id="e0d9f-105">Açık kaynak gibi daha gelişmiş .NET kitaplıklarına yararlanmak için yeniden deneme üstel geri alma ile için önerilen yaklaşım olan [Polly](https://github.com/App-vNext/Polly) kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-105">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open source [Polly](https://github.com/App-vNext/Polly) library.</span></span>
+<span data-ttu-id="746f7-104">Açık kaynak gibi daha gelişmiş .NET kitaplıklarına yararlanmak için yeniden deneme üstel geri alma ile için önerilen yaklaşım olan [Polly](https://github.com/App-vNext/Polly) kitaplığı.</span><span class="sxs-lookup"><span data-stu-id="746f7-104">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open source [Polly](https://github.com/App-vNext/Polly) library.</span></span>
 
-<span data-ttu-id="e0d9f-106">Polly esnekliği ve geçici hata işleme yetenekleri sağlayan bir .NET kitaplıktır.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-106">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="e0d9f-107">Bu özellikler kolayca yeniden deneme devre kesici, Bulkhead yalıtımı, zaman aşımı ve geri dönüş gibi Polly ilkelerini uygulayarak uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-107">You can implement those capabilities easily by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="e0d9f-108">Polly hedefler .NET 4.x ve .NET Standard sürüm 1.0 (hangi .NET Core destekler).</span><span class="sxs-lookup"><span data-stu-id="e0d9f-108">Polly targets .NET 4.x and the .NET Standard version 1.0 (which supports .NET Core).</span></span>
+<span data-ttu-id="746f7-105">Polly esnekliği ve geçici hata işleme yetenekleri sağlayan bir .NET kitaplıktır.</span><span class="sxs-lookup"><span data-stu-id="746f7-105">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="746f7-106">Bu özellikler kolayca yeniden deneme devre kesici, Bulkhead yalıtımı, zaman aşımı ve geri dönüş gibi Polly ilkelerini uygulayarak uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="746f7-106">You can implement those capabilities easily by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="746f7-107">Polly hedefler .NET 4.x ve .NET Standard sürüm 1.0 (hangi .NET Core destekler).</span><span class="sxs-lookup"><span data-stu-id="746f7-107">Polly targets .NET 4.x and the .NET Standard version 1.0 (which supports .NET Core).</span></span>
 
-<span data-ttu-id="e0d9f-109">Yeniden deneme ilkesi Polly içinde eShopOnContainers HTTP yeniden deneme uygularken kullanılan yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-109">The Retry policy in Polly is the approach used in eShopOnContainers when implementing HTTP retries.</span></span> <span data-ttu-id="e0d9f-110">Standart HttpClient işlevini veya Polly, kullanmak istediğiniz hangi yeniden deneme ilkesi yapılandırmasına bağlı olarak kullanarak HttpClient esnek bir sürümünü ekleme için bir arabirimi uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-110">You can implement an interface so you can inject either standard HttpClient functionality or a resilient version of HttpClient using Polly, depending on what retry policy configuration you want to use.</span></span>
+<span data-ttu-id="746f7-108">Yeniden deneme ilkesi Polly içinde eShopOnContainers HTTP yeniden deneme uygularken kullanılan yaklaşımdır.</span><span class="sxs-lookup"><span data-stu-id="746f7-108">The Retry policy in Polly is the approach used in eShopOnContainers when implementing HTTP retries.</span></span> <span data-ttu-id="746f7-109">Standart HttpClient işlevini veya Polly, kullanmak istediğiniz hangi yeniden deneme ilkesi yapılandırmasına bağlı olarak kullanarak HttpClient esnek bir sürümünü ekleme için bir arabirimi uygulayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="746f7-109">You can implement an interface so you can inject either standard HttpClient functionality or a resilient version of HttpClient using Polly, depending on what retry policy configuration you want to use.</span></span>
 
-<span data-ttu-id="e0d9f-111">Aşağıdaki örnek eShopOnContainers içinde uygulanan arabirimi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-111">The following example shows the interface implemented in eShopOnContainers.</span></span>
+<span data-ttu-id="746f7-110">Aşağıdaki örnek eShopOnContainers içinde uygulanan arabirimi gösterir.</span><span class="sxs-lookup"><span data-stu-id="746f7-110">The following example shows the interface implemented in eShopOnContainers.</span></span>
 
 ```csharp
 public interface IHttpClient
@@ -44,7 +38,7 @@ public interface IHttpClient
 }
 ```
 
-<span data-ttu-id="e0d9f-112">Geliştirme veya basit yaklaşımlardan sınama esnek bir mekanizma olarak kullanmak istemiyorsanız, standart uygulama kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-112">You can use the standard implementation if you do not want to use a resilient mechanism, as when you are developing or testing simpler approaches.</span></span> <span data-ttu-id="e0d9f-113">Aşağıdaki kod standart HttpClient uygulama izin verme isteği kimlik doğrulama belirteçleri ile isteğe bağlı bir durum olarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-113">The following code shows the standard HttpClient implementation allowing requests with authentication tokens as an optional case.</span></span>
+<span data-ttu-id="746f7-111">Geliştirme veya basit yaklaşımlardan sınama esnek bir mekanizma olarak kullanmak istemiyorsanız, standart uygulama kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="746f7-111">You can use the standard implementation if you do not want to use a resilient mechanism, as when you are developing or testing simpler approaches.</span></span> <span data-ttu-id="746f7-112">Aşağıdaki kod standart HttpClient uygulama izin verme isteği kimlik doğrulama belirteçleri ile isteğe bağlı bir durum olarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="746f7-112">The following code shows the standard HttpClient implementation allowing requests with authentication tokens as an optional case.</span></span>
 
 ```csharp
 public class StandardHttpClient : IHttpClient
@@ -79,7 +73,7 @@ public class StandardHttpClient : IHttpClient
         // Rest of the code and other Http methods ...
 ```
 
-<span data-ttu-id="e0d9f-114">Başka bir, benzer sınıfı ancak Polly kullanmak istediğiniz dayanıklı mekanizmalar uygulaması kullanmayı kod ilginç uygulamasıdır — üstel geri alma ile aşağıdaki örnekte, yeniden deneme sayısı.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-114">The interesting implementation is to code another, similar class, but using Polly to implement the resilient mechanisms you want to use—in the following example, retries with exponential backoff.</span></span>
+<span data-ttu-id="746f7-113">Başka bir, benzer sınıfı ancak Polly kullanmak istediğiniz dayanıklı mekanizmalar uygulaması kullanmayı kod ilginç uygulamasıdır — üstel geri alma ile aşağıdaki örnekte, yeniden deneme sayısı.</span><span class="sxs-lookup"><span data-stu-id="746f7-113">The interesting implementation is to code another, similar class, but using Polly to implement the resilient mechanisms you want to use—in the following example, retries with exponential backoff.</span></span>
 
 ```csharp
 public class ResilientHttpClient : IHttpClient
@@ -121,11 +115,11 @@ public class ResilientHttpClient : IHttpClient
 }
 ```
 
-<span data-ttu-id="e0d9f-115">Polly ile bir yeniden deneme ilkesi sayısıyla yeniden deneme, üstel geri alma yapılandırma ve hata günlüğü gibi bir HTTP özel durum olduğunda gerçekleştirilecek eylemleri tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-115">With Polly, you define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there is an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="e0d9f-116">Bu durumda, ilke türleri IOC kapsayıcısında kaydedilirken belirtilen sayıda deneyecek şekilde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-116">In this case, the policy is configured so it will try the number of times specified when registering the types in the IoC container.</span></span> <span data-ttu-id="e0d9f-117">Kod HttpRequest istisna algıladığında üstel geri alma yapılandırması nedeniyle, Http isteği bir katlanarak İlkesi nasıl yapılandırılmış bağlı olarak artırır zaman miktarı bekledikten sonra yeniden dener.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-117">Because of the exponential backoff configuration, whenever the code detects an HttpRequest exception, it retries the Http request after waiting an amount of time that increases exponentially depending on how the policy was configured.</span></span>
+<span data-ttu-id="746f7-114">Polly ile bir yeniden deneme ilkesi sayısıyla yeniden deneme, üstel geri alma yapılandırma ve hata günlüğü gibi bir HTTP özel durum olduğunda gerçekleştirilecek eylemleri tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="746f7-114">With Polly, you define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there is an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="746f7-115">Bu durumda, ilke türleri IOC kapsayıcısında kaydedilirken belirtilen sayıda deneyecek şekilde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="746f7-115">In this case, the policy is configured so it will try the number of times specified when registering the types in the IoC container.</span></span> <span data-ttu-id="746f7-116">Kod HttpRequest istisna algıladığında üstel geri alma yapılandırması nedeniyle, Http isteği bir katlanarak İlkesi nasıl yapılandırılmış bağlı olarak artırır zaman miktarı bekledikten sonra yeniden dener.</span><span class="sxs-lookup"><span data-stu-id="746f7-116">Because of the exponential backoff configuration, whenever the code detects an HttpRequest exception, it retries the Http request after waiting an amount of time that increases exponentially depending on how the policy was configured.</span></span>
 
-<span data-ttu-id="e0d9f-118">Önemli HttpInvoker, HTTP isteklerini bu yardımcı sınıf boyunca kılan olduğu yöntemidir.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-118">The important method is HttpInvoker, which is what makes HTTP requests throughout this utility class.</span></span> <span data-ttu-id="e0d9f-119">Yöntemi dahili olan HTTP isteği yürütür \_yeniden deneme ilkesi dikkate alır policyWrapper.ExecuteAsync.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-119">That method internally executes the HTTP request with \_policyWrapper.ExecuteAsync, which takes into account the retry policy.</span></span>
+<span data-ttu-id="746f7-117">Önemli HttpInvoker, HTTP isteklerini bu yardımcı sınıf boyunca kılan olduğu yöntemidir.</span><span class="sxs-lookup"><span data-stu-id="746f7-117">The important method is HttpInvoker, which is what makes HTTP requests throughout this utility class.</span></span> <span data-ttu-id="746f7-118">Yöntemi dahili olan HTTP isteği yürütür \_yeniden deneme ilkesi dikkate alır policyWrapper.ExecuteAsync.</span><span class="sxs-lookup"><span data-stu-id="746f7-118">That method internally executes the HTTP request with \_policyWrapper.ExecuteAsync, which takes into account the retry policy.</span></span>
 
-<span data-ttu-id="e0d9f-120">İçinde eShopOnContainers Polly ilkeleri aşağıdaki kod olduğu gibi IOC kapsayıcı türlerini kaydedilirken belirttiğiniz [MVC web uygulaması haline adresindeki](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) sınıfı.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-120">In eShopOnContainers you specify Polly policies when registering the types at the IoC container, as in the following code from the [MVC web app at the startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) class.</span></span>
+<span data-ttu-id="746f7-119">İçinde eShopOnContainers Polly ilkeleri aşağıdaki kod olduğu gibi IOC kapsayıcı türlerini kaydedilirken belirttiğiniz [MVC web uygulaması haline adresindeki](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) sınıfı.</span><span class="sxs-lookup"><span data-stu-id="746f7-119">In eShopOnContainers you specify Polly policies when registering the types at the IoC container, as in the following code from the [MVC web app at the startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) class.</span></span>
 
 ```csharp
 // Startup.cs class
@@ -144,9 +138,9 @@ else
 }
 ```
 
-<span data-ttu-id="e0d9f-121">Böylece TCP bağlantılarını verimli bir şekilde hizmeti tarafından kullanılan IHttpClient nesneleri yerine bir singleton geçici olarak olarak örneği oluşturulmadan unutmayın ve [yuvaları ile ilgili bir sorunu](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) gerçekleşmez.</span><span class="sxs-lookup"><span data-stu-id="e0d9f-121">Note that the IHttpClient objects are instantiated as singleton instead of as transient so that TCP connections are used efficiently by the service and [an issue with sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) will not occur.</span></span>
+<span data-ttu-id="746f7-120">Böylece TCP bağlantılarını verimli bir şekilde hizmeti tarafından kullanılan IHttpClient nesneleri yerine bir singleton geçici olarak olarak örneği oluşturulmadan unutmayın ve [yuvaları ile ilgili bir sorunu](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) gerçekleşmez.</span><span class="sxs-lookup"><span data-stu-id="746f7-120">Note that the IHttpClient objects are instantiated as singleton instead of as transient so that TCP connections are used efficiently by the service and [an issue with sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) will not occur.</span></span>
 
-<span data-ttu-id="e0d9f-122">Ancak önemli dayanıklılığı hakkında CreateResilientHttpClient yöntemi ResilientHttpClientFactory içinde Polly WaitAndRetryAsync İlkesi uygulama aşağıdaki kodda gösterildiği şekilde noktadır:</span><span class="sxs-lookup"><span data-stu-id="e0d9f-122">But the important point about resiliency is that you apply the Polly WaitAndRetryAsync policy within ResilientHttpClientFactory in the CreateResilientHttpClient method, as shown in the following code:</span></span>
+<span data-ttu-id="746f7-121">Ancak önemli dayanıklılığı hakkında CreateResilientHttpClient yöntemi ResilientHttpClientFactory içinde Polly WaitAndRetryAsync İlkesi uygulama aşağıdaki kodda gösterildiği şekilde noktadır:</span><span class="sxs-lookup"><span data-stu-id="746f7-121">But the important point about resiliency is that you apply the Polly WaitAndRetryAsync policy within ResilientHttpClientFactory in the CreateResilientHttpClient method, as shown in the following code:</span></span>
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -177,4 +171,4 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="e0d9f-123">[Önceki] (implement-custom-http-call-retries-exponential-backoff.md) [sonraki] (uygulama-hattı-ayırıcı-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="e0d9f-123">[Previous] (implement-custom-http-call-retries-exponential-backoff.md) [Next] (implement-circuit-breaker-pattern.md)</span></span>
+<span data-ttu-id="746f7-122">[Önceki] (implement-custom-http-call-retries-exponential-backoff.md) [sonraki] (uygulama-hattı-ayırıcı-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="746f7-122">[Previous] (implement-custom-http-call-retries-exponential-backoff.md) [Next] (implement-circuit-breaker-pattern.md)</span></span>
