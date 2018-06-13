@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747313"
 ---
 # <a name="ltdiagnosticsgt"></a><span data-ttu-id="54577-102">&lt;Tanılama&gt;</span><span class="sxs-lookup"><span data-stu-id="54577-102">&lt;diagnostics&gt;</span></span>
 <span data-ttu-id="54577-103">`diagnostics` Öğe, bir yönetici tarafından çalışma zamanı denetleme ve denetimi için kullanılan ayarları tanımlar.</span><span class="sxs-lookup"><span data-stu-id="54577-103">The `diagnostics` element defines settings that can be used by an administrator for run-time inspection and control.</span></span>  

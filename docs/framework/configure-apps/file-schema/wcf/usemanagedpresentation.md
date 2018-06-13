@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755298"
 ---
 # <a name="ltusemanagedpresentationgt"></a><span data-ttu-id="06786-102">&lt;useManagedPresentation&gt;</span><span class="sxs-lookup"><span data-stu-id="06786-102">&lt;useManagedPresentation&gt;</span></span>
 <span data-ttu-id="06786-103">CardSpace güvenlik belirteci, WS-Trust CardSpace profilini destekleyen hizmeti ile iletişim kurmak için kullanılan bir bağlama öğesi.</span><span class="sxs-lookup"><span data-stu-id="06786-103">A binding element used to communicate with a CardSpace Security Token Service that supports the CardSpace profile of WS-Trust.</span></span> <span data-ttu-id="06786-104">Bu öğe hiçbir özniteliği var ve boş bir anahtar yok.</span><span class="sxs-lookup"><span data-stu-id="06786-104">This element has no attribute and is present as an empty switch.</span></span>  
