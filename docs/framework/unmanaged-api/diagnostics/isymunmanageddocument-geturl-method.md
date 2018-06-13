@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedDocument::GetURL Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetURL
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2688c2c50181c7bac7b7ee869b4e1fa5094d0ea9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431373"
 ---
-# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="480c9-102">ISymUnmanagedDocument::GetURL Metodu</span><span class="sxs-lookup"><span data-stu-id="480c9-102">ISymUnmanagedDocument::GetURL Method</span></span>
-<span data-ttu-id="480c9-103">Bu belge için Tekdüzen Kaynak Konum Belirleyici (URL) döndürür.</span><span class="sxs-lookup"><span data-stu-id="480c9-103">Returns the uniform resource locator (URL) for this document.</span></span>  
+# <a name="isymunmanageddocumentgeturl-method"></a><span data-ttu-id="9e405-102">ISymUnmanagedDocument::GetURL Metodu</span><span class="sxs-lookup"><span data-stu-id="9e405-102">ISymUnmanagedDocument::GetURL Method</span></span>
+<span data-ttu-id="9e405-103">Bu belge için Tekdüzen Kaynak Konum Belirleyici (URL) döndürür.</span><span class="sxs-lookup"><span data-stu-id="9e405-103">Returns the uniform resource locator (URL) for this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="480c9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="480c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e405-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9e405-104">Syntax</span></span>  
   
 ```  
 HRESULT GetURL(  
@@ -47,18 +36,18 @@ HRESULT GetURL(
     [out, size_is(cchUrl), length_is(*pcchUrl)] WCHAR szUrl[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="480c9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="480c9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9e405-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9e405-105">Parameters</span></span>  
  `cchUrl`  
- <span data-ttu-id="480c9-106">[in] Karakter, boyutu, `szURL` arabellek.</span><span class="sxs-lookup"><span data-stu-id="480c9-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
+ <span data-ttu-id="9e405-106">[in] Karakter, boyutu, `szURL` arabellek.</span><span class="sxs-lookup"><span data-stu-id="9e405-106">[in] The size, in characters, of the `szURL` buffer.</span></span>  
   
  `pcchUrl`  
- <span data-ttu-id="480c9-107">[out] Bir işaretçi bir değişkene null sonlandırma dahil olmak üzere URL'yi boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="480c9-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
+ <span data-ttu-id="9e405-107">[out] Bir işaretçi bir değişkene null sonlandırma dahil olmak üzere URL'yi boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="9e405-107">[out] A pointer to a variable that receives the size of the URL, including the null termination.</span></span>  
   
  `szUrl`  
- <span data-ttu-id="480c9-108">[out] URL'sini içeren arabelleği.</span><span class="sxs-lookup"><span data-stu-id="480c9-108">[out] The buffer containing the URL.</span></span>  
+ <span data-ttu-id="9e405-108">[out] URL'sini içeren arabelleği.</span><span class="sxs-lookup"><span data-stu-id="9e405-108">[out] The buffer containing the URL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="480c9-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="480c9-109">Return Value</span></span>  
- <span data-ttu-id="480c9-110">Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="480c9-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e405-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9e405-109">Return Value</span></span>  
+ <span data-ttu-id="9e405-110">Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="9e405-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="480c9-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="480c9-111">See Also</span></span>  
- [<span data-ttu-id="480c9-112">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="480c9-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9e405-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9e405-111">See Also</span></span>  
+ [<span data-ttu-id="9e405-112">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9e405-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

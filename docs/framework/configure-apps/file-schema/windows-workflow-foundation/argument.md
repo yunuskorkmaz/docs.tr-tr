@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756325"
 ---
 # <a name="ltargumentgt"></a><span data-ttu-id="49d4c-102">&lt;Bağımsız değişken&gt;</span><span class="sxs-lookup"><span data-stu-id="49d4c-102">&lt;argument&gt;</span></span>
 <span data-ttu-id="49d4c-103">Bir etkinlik durumu sorgusu ile ilişkili bir bağımsız değişken temsil eden bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="49d4c-103">A configuration element that represents an argument associated with an activity state query.</span></span>  
