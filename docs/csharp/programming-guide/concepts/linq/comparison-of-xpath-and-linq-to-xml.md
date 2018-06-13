@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326439"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath ve LINQ-XML karşılaştırması
 XPath ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bazı benzer bir işlevsellik sağlar. Her ikisi de bu tür sonuçları öğe koleksiyonunu özniteliklerin bir koleksiyonu düğümlerinin bir koleksiyonu veya bir öğe veya öznitelik değeri olarak döndüren bir XML ağacı sorgulamak için kullanılabilir. Ancak, aynı zamanda bazı farklar vardır.  

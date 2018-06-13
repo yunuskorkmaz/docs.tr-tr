@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766640"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya içinde desteklenmeyen dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçleri birçoğu, tamsayı bağımsız değişken kabul aşırı yüklenmiş bir sürümüne sahipsiniz. Tamsayı bağımsız değişkeni sıfır tabanlı dizin üzerinde çalıştırıldığı sırada karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş LINQ standart sorgu işleçleri sürümleri desteklenmez ve bunları kullanmaya çalışırken bir özel durum oluşturur.  

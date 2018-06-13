@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764924"
 ---
 # <a name="factory-model-overview"></a>Fabrika modeline genel bakış
 ADO.NET 2.0 sunulan yeni temel sınıflarda <xref:System.Data.Common> ad alanı. Temel sınıflar soyut, bunlar doğrudan başlatılamaz anlamına gelir. İçerirler <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, ve <xref:System.Data.Common.DbDataAdapter> ve .NET Framework veri sağlayıcıları tarafından aşağıdaki gibi paylaşılan <xref:System.Data.SqlClient> ve <xref:System.Data.OleDb>. Temel sınıflar eklenmesi, yeni arabirimleri oluşturmak zorunda kalmadan .NET Framework Veri sağlayıcılarına ekleme işlevselliği basitleştirir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322019"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Nasıl yapılır: bağlama göre (C#) öğeleri bulur bir sorgu yazın
 Bazen kendi bağlamına dayalı öğeleri seçer bir sorgu yazmak zorunda kalabilirsiniz. Temel alınarak önceki veya Eşdüzey öğeleri aşağıdaki filtre uygulamak isteyebilirsiniz. Temel alınarak alt veya üst öğeleri Filtrele isteyebilirsiniz.  

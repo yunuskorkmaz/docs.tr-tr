@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315795"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
 Özel Oluşturucusu bir özel örnek Oluşturucusu ' dir. Bu genellikle yalnızca statik üyeleri içeren sınıfları kullanılır. Bir sınıf bir veya daha fazla özel oluşturucular ve ortak oluşturucu yok varsa, bu sınıfın örnekleri, diğer sınıflar (dışında iç içe geçmiş sınıflar) oluşturulamıyor. Örneğin:  

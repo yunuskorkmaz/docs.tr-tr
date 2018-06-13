@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333030"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Örnek Oluşturucuları (C# Programlama Kılavuzu)
 Örnek oluşturucuları oluşturmak ve kullandığınızda herhangi bir örnek üye değişkeni başlatmak için kullanılan [yeni](../../../csharp/language-reference/keywords/new.md) bir nesne oluşturmak için ifade bir [sınıfı](../../../csharp/language-reference/keywords/class.md). Başlatmak için bir [statik](../../../csharp/language-reference/keywords/static.md) sınıfı ya da statik olmayan sınıftaki statik değişkenler statik Oluşturucu tanımlamanız gerekir. Daha fazla bilgi için bkz: [statik oluşturucular](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

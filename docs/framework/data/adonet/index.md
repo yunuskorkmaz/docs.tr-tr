@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765444"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET veri erişim hizmetleri .NET Framework programcıları için kullanıma sınıflar kümesidir. ADO.NET, dağıtılmış, veri paylaşımı uygulamaları oluşturmak için zengin bir bileşen kümesi sağlar. İlişkisel erişimi, XML ve uygulama verileri sağlayan, .NET Framework ayrılmaz bir parçasıdır. ADO.NET geliştirme gereksinimi, ön uç veritabanı istemciler ve uygulamalar, Araçlar, dilleri veya Internet tarayıcıları tarafından kullanılan orta katman iş nesneleri oluşturulmasını da dahil olmak üzere çeşitli destekler.  

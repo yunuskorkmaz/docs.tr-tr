@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325805"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 A [statik](../../../csharp/language-reference/keywords/static.md) sınıfı, aslında bir statik olmayan sınıf ile aynı, ancak bir fark yoktur: statik sınıf örneği oluşturulamıyor. Diğer bir deyişle, kullanamazsınız [yeni](../../../csharp/language-reference/keywords/new.md) sınıfı türünde bir değişken oluşturmak için anahtar sözcüğü. Hiçbir örnek değişken olduğundan, statik sınıf üyeleri sınıf adı kullanarak erişir. Örneğin, bu sınıfı statik varsa adlı `UtilityClass` adlı ortak bir yöntemi olan `MethodA`, aşağıdaki örnekte gösterildiği gibi yöntemini çağırın:  

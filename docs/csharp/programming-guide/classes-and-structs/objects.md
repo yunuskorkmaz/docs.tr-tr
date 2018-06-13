@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324681"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Bir sınıf veya yapı türü neler yapabileceğinizi belirten şeması gibi tanımıdır. Bir nesne temelde ayrılmış ve şeması göre yapılandırılmış bellek bloğudur. Bir program aynı sınıfın birçok nesne oluşturabilir. Nesnelerin örneklerini de denir ve bir adlandırılmış değişkeninde veya bir dizi ya da koleksiyon depolanabilir. İstemci, bu değişkenleri yöntemlerini çağırın ve nesneyi genel özelliklerine erişmek için kullandığı kodu kodudur. Bir nesne yönelimli dil C# gibi tipik bir program dinamik olarak etkileşim birden çok nesnelerin oluşur.  
