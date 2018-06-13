@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149120"
 ---
 # <a name="values"></a><span data-ttu-id="2142c-103">Değerler</span><span class="sxs-lookup"><span data-stu-id="2142c-103">Values</span></span>
 

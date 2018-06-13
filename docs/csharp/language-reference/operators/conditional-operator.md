@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457222"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="793db-102">?: İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="793db-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="793db-103">Koşullu işleç (`?:`), yaygın olarak bilinen Üçlü koşullu işleç Boole ifadesi değerine bağlı olarak iki değerden birini döndürür.</span><span class="sxs-lookup"><span data-stu-id="793db-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="793db-104">Aşağıda, koşullu işlecin sözdizimi belirtilmiştir.</span><span class="sxs-lookup"><span data-stu-id="793db-104">Following is the syntax for the conditional operator.</span></span>  

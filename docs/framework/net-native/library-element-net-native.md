@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311981"
 ---
 # <a name="ltlibrarygt-element-net-native"></a><span data-ttu-id="05c47-102">&lt;Library&gt; Öğesi (.NET Yerel)</span><span class="sxs-lookup"><span data-stu-id="05c47-102">&lt;Library&gt; Element (.NET Native)</span></span>
 <span data-ttu-id="05c47-103">Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir içeren derlemenin tanımlar.</span><span class="sxs-lookup"><span data-stu-id="05c47-103">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span>  

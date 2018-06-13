@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234561"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="2b65e-102">Özel (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b65e-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="2b65e-103">Bir veya daha fazla bildirilen programlama öğeleri dahil tüm kapsanan türleri içinde bildirim bağlamları içinde yalnızca erişilebilir olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="2b65e-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

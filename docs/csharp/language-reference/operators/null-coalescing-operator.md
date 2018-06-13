@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458116"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="03599-103">??</span><span class="sxs-lookup"><span data-stu-id="03599-103">??</span></span> <span data-ttu-id="03599-104">İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="03599-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="03599-105">`??` İşleci, null birleşim işlecinin çağrılır.</span><span class="sxs-lookup"><span data-stu-id="03599-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="03599-106">İşlenen null değilse, sol taraf işlenenini döndürür; tersi durumda, sağ el işlenenini döndürür.</span><span class="sxs-lookup"><span data-stu-id="03599-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233736"
 ---
 # <a name="lthostgt"></a><span data-ttu-id="6caef-102">&lt;ana bilgisayar&gt;</span><span class="sxs-lookup"><span data-stu-id="6caef-102">&lt;host&gt;</span></span>
 <span data-ttu-id="6caef-103">Hizmet ana bilgisayarı ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6caef-103">Specifies settings for a service host.</span></span>  

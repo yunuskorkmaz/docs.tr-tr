@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312189"
 ---
 # <a name="default-marshaling-for-objects"></a><span data-ttu-id="fbee6-102">Nesneler için Varsayılan Hazırlama</span><span class="sxs-lookup"><span data-stu-id="fbee6-102">Default Marshaling for Objects</span></span>
 <span data-ttu-id="fbee6-103">Parametreler ve alanlar olarak yazılan <xref:System.Object?displayProperty=nameWithType> yönetilmeyen kod için şu türlerden biri olarak gösterilebilir:</span><span class="sxs-lookup"><span data-stu-id="fbee6-103">Parameters and fields typed as <xref:System.Object?displayProperty=nameWithType> can be exposed to unmanaged code as one of the following types:</span></span>  

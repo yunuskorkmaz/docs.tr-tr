@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171869"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="5df4d-102">private (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5df4d-102">private (C# Reference)</span></span>
 <span data-ttu-id="5df4d-103">`private` Sözcüktür üye erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="5df4d-103">The `private` keyword is a member access modifier.</span></span> 

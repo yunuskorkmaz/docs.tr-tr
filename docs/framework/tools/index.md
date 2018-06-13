@@ -14,6 +14,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312046"
 ---
 # <a name="net-framework-tools"></a><span data-ttu-id="5d9b2-102">.NET Framework Araçları</span><span class="sxs-lookup"><span data-stu-id="5d9b2-102">.NET Framework Tools</span></span>
 <span data-ttu-id="5d9b2-103">.NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.</span><span class="sxs-lookup"><span data-stu-id="5d9b2-103">The .NET Framework tools make it easier for you to create, deploy, and manage applications and components that target the .NET Framework.</span></span>  

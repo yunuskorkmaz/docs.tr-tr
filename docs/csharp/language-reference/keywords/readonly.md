@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172639"
 ---
 # <a name="readonly-c-reference"></a><span data-ttu-id="627a7-102">readonly (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="627a7-102">readonly (C# Reference)</span></span>
 <span data-ttu-id="627a7-103">`readonly` Alanları kullanabileceğiniz Değiştirici bir anahtar sözcüktür.</span><span class="sxs-lookup"><span data-stu-id="627a7-103">The `readonly` keyword is a modifier that you can use on fields.</span></span> <span data-ttu-id="627a7-104">Ne zaman alan bildirimini içeren bir `readonly` değiştiricisi, bildirimi tarafından sunulan alanlar atamalar yalnızca oluşabilir parçası olarak bildirimiyle veya oluşturucusu aynı sınıfta.</span><span class="sxs-lookup"><span data-stu-id="627a7-104">When a field declaration includes a `readonly` modifier, assignments to the fields introduced by the declaration can only occur as part of the declaration or in a constructor in the same class.</span></span>  

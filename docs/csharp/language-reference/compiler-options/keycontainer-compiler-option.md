@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472574"
 ---
 # <a name="-keycontainer-c-compiler-options"></a><span data-ttu-id="fbafe-102">-keycontainer (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="fbafe-102">-keycontainer (C# Compiler Options)</span></span>
 <span data-ttu-id="fbafe-103">Şifreleme anahtarı kapsayıcısının adını belirtir.</span><span class="sxs-lookup"><span data-stu-id="fbafe-103">Specifies the name of the cryptographic key container.</span></span>  

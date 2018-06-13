@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549398"
 ---
 # <a name="how-to-c"></a><span data-ttu-id="d2ecf-103">Nasıl yapılır (C#)</span><span class="sxs-lookup"><span data-stu-id="d2ecf-103">How to (C#)</span></span>
 
