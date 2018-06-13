@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644257"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Derlemeler ve Genel Derleme Önbelleği (Visual Basic)
 Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleştirme kapsamı ve güvenlik izinleri olan bir. NET tabanlı bir uygulama. Derlemeler bir yürütülebilir dosya (.exe) veya dinamik bağlantı kitaplığı (.dll) dosyası şeklinde ve .NET Framework'ün yapı taşlarıdır. Ortak dil çalışma zamanı tür uygulamaları haberdar olmanız gereken bilgilerle sağlarlar. Derleme türleri ve işlevlerin bir mantıksal birim oluşturur ve birlikte çalışacak biçimde oluşturulmuş kaynak koleksiyonu olarak düşünebilirsiniz.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524686"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Nasıl yapılır: Forma ToolStripContainer Ekleme
 Program aracılığıyla ekleyebilirsiniz bir <xref:System.Windows.Forms.ToolStripContainer> Windows Form için ve denetimleri ile doldurabilirsiniz.  

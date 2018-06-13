@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213265"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (C# Derleyici Seçenekleri)
 **-Utf8output** seçenek UTF-8 kodlaması kullanarak derleyici çıkışı görüntüler.  

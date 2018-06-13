@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552380"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Nasıl yapılır: Alt Öğeleri Konumlandırmak için Tuvalin Ekli Özelliklerini Kullanma
 Bu örnek, iliştirilmiş özelliklerini kullanmak gösterilmiştir <xref:System.Windows.Controls.Canvas> alt öğeleri konumlandırmak için.  

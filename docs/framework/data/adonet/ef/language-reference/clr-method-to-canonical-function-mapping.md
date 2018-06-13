@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766601"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Kurallı işlev eşlemesi için CLR yöntemi
 Entity Framework dize düzenlemesi ve matematik işlevleri gibi birçok veritabanı sistemler arasında ortak olan işlevselliğini uygulayan kurallı işlevler kümesini sağlar. Bu, çok çeşitli veritabanı sistemleri hedeflemek geliştiricilere sağlar. LINQ to Entities, gibi bir sorgulama teknolojisi gelen bunlar kurallı çağrıldığında işlevleri için kullanılan sağlayıcısı için doğru karşılık gelen depolama işlevi çevrilir. Bu veri kaynakları arasında tutarlı bir sorgu deneyimi sağlayan ortak bir formda arasında veri kaynaklarına, ifade işlev çağrılarını sağlar. Bit düzeyinde AND, OR değil ve işlenen sayısal bir tür olduğunda XOR işleçleri kurallı işlevleri de eşleniyor. Boole işlenenler, bit düzeyinde AND, OR, NOT, için ve XOR işleçleri mantıksal AND, OR değil, işlem ve bunların işlenenler XOR işlemlerini. Daha fazla bilgi için bkz: [kurallı işlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  

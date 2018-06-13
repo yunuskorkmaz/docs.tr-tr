@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766133"
 ---
 # <a name="linq-and-adonet"></a>LINQ ve ADO.NET
 Bugün, birçok iş geliştiriciler iki (veya daha fazla) programlama dilleri kullanmanız gerekir: (örneğin, Visual C# veya Visual Basic) iş mantığı ve sunu katmanı için yüksek düzey bir dil ve veritabanıyla etkileşim için bir sorgu dili (gibi [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Bu Geliştirici etkili olması için çeşitli dillerde bilgisi olmasını gerektirir ve aynı zamanda dil uyuşmazlıkları geliştirme ortamında neden olur. Örneğin, bir veritabanında bir sorgu yürütmek için veri erişim API'sini kullanan bir uygulamayı tırnak işaretleri kullanarak sorgu bir dize belirtir. Bu sorgu dizesi derleyiciye beklemediğiniz okunabilir durumdadır ve geçersiz sözdizimi veya olup sütunlara veya satırlara başvurduğu gerçekten var gibi hataları kontrol edilmez. Sorgu parametrelerini ve Hayır denetimi türü yok `IntelliSense` ya da destekler.  

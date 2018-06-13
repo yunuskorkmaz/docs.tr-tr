@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644075"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Toplama işlemleri (Visual Basic)
 Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Bir toplama işlemi örneği günlük sıcaklık değerler bir ayın eşitleyeceğini gelen ortalama günlük sıcaklık hesaplıyor.  

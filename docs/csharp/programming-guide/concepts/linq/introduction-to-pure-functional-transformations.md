@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329107"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Giriş saf işlevsel Dönüşümleri (C#)
 Bu bölümde işlevsel dönüştürmeleri, temel kavramları dahil olmak üzere tanıtır ve destekleyici dil oluşturur. İkincisi için geçiş hakkında öneriler dahil olmak üzere programlama, nesne yönelimli ve işlev dönüştürme yaklaşımları karşılaştırır. İşlev dönüştürmeleri pek çok programlama senaryolarda kullanılabilir ancak XML dönüşümü kullanılır burada somut bir örnek olarak.  

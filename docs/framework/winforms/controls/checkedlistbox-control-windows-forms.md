@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525594"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox Denetimi (Windows Forms)
 Windows Forms `CheckedListBox` denetim öğeleri listesini gibi görüntüler <xref:System.Windows.Forms.ListBox> denetlemek ve listedeki öğeleri yanındaki onay işareti de görüntüleyebilirsiniz.  

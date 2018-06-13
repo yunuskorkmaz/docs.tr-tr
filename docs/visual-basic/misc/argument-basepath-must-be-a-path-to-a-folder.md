@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602073"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>Bağımsız değişken ana yolu bir klasör için bir yol olmalıdır
 Bağımsız değişken `BasePath` bir klasörün yolunu oluşması gerekir. Dize yanlış ayrıştırma olabilir ve geçerli bir yol olarak tanınmıyor bir değer sağladığı.  

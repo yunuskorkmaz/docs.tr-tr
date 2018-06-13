@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648573"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Çağırma (Visual Basic)
 Genişletme yöntemleri, varolan bir sınıfa yöntemleri eklemenize olanak tanır. Bir genişletme yöntemi bildirilen ve kapsam içine alındıktan sonra onu genişleyen türü gibi bir örnek yöntemi çağırabilirsiniz. Uzantı metodu yazma hakkında daha fazla bilgi için bkz: [nasıl yapılır: uzantı yöntemi yazma](./how-to-write-an-extension-method.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332474"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Genel Tür Parametreleri (C# Programlama Kılavuzu)
 Genel tür veya yöntem tanımı, bir tür parametreleri bir yer tutucudur belirli türünün bir istemci olduğunda bunlar genel türünde bir değişken örneğini belirtir. Genel sınıf, gibi `GenericList<T>` listelenen [genel türlere giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md), olarak kullanılamaz-çünkü bunu gerçekten bir tür değil; bir türü şeması gibi daha fazla. Kullanılacak `GenericList<T>`, istemci kodu bildirme ve yapılandırılmış bir tür, tür bağımsız değişkeni köşeli ayraç içinde belirterek örneği. Tür bağımsız değişkeni belirli Bu sınıf için derleyici tarafından tanınan herhangi bir türü olabilir. Herhangi bir sayıda oluşturulan türü örnekleri, her biri farklı tür bağımsız değişkeni aşağıdaki gibi kullanarak oluşturulabilir:  

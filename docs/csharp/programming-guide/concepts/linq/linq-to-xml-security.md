@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335457"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ-XML güvenlik (C#)
 Bu konu LINQ-XML ile ilgili güvenlik sorunları açıklar. Ayrıca, güvenlik açıklarını Azaltıcı için bazı yönergeler sağlar.  

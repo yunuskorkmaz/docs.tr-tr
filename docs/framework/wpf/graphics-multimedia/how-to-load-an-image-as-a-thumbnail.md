@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562329"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a>Nasıl yapılır: Bir Görüntüyü Küçük Resim Olarak Yükleme
 Aşağıdaki örnekler nasıl yükleneceğini bir <xref:System.Windows.Controls.Image> uygulama belleğini korumak için bir küçük resim olarak.  

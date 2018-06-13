@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329566"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Nasıl yapılır: derleme LINQ-XML örnekleri (C#)
 Çeşitli parçacıkları ve bu belgedeki örneklerde sınıfları ve ad alanları çeşitli türlerini kullanın. C# kodu derlerken sağlamanız uygun gereken `using` yönergeleri.  

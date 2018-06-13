@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327743"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları, 2.0 sürümünde tanıtılan genel türler temel [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sorgu yazma başlamadan önce bilgisi genel türler derinlemesine gerekmez. Ancak, iki temel kavramlarını anladığınızdan isteyebilirsiniz:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213444"
 ---
 # <a name="by-c-reference"></a>by (C# Başvurusu)
 `by` Bağlamsal anahtar sözcüğü kullanılır `group` döndürülen öğeleri nasıl gruplandırılmalıdır belirtmek için bir sorgu ifadesinde yan tümcesi. Daha fazla bilgi için bkz: [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md).  

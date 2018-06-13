@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550130"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu> Görüntülemek için bir denetim sağlayan bir <xref:System.Windows.Controls.Menu> denetimi bağlamına özgü. Genellikle, <xref:System.Windows.Controls.ContextMenu> de sağlanmaktadır [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] farenin sağ düğmesiyle veya klavyenin menü düğmesi aracılığıyla.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643815"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Temsilcilerde varyans (Visual Basic)
 .NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# ve Visual Basic temsilci türleriyle eşleşen farkı desteği sunmuştur. Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler . Bu, hem genel hem de genel olmayan temsilciler içerir.  

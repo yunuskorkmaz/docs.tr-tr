@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655195"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Devralma Temelleri (Visual Basic)
 `Inherits` Deyimi adında yeni bir sınıf bildirmek için kullanılan bir *türetilmiş sınıf*, olarak bilinen varolan bir sınıfa göre bir *temel sınıfı*. Türetilen sınıflar devralır ve genişletebilir, özellikleri, yöntemleri, olayları, alanları ve taban sınıf içinde tanımlı sabitler. Aşağıdaki bölümde devralma kurallarını bazıları açıklanır ve yol sınıflarını değiştirmek için kullanabileceğiniz değiştiriciler devralır veya devralınan:  

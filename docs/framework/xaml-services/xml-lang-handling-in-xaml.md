@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562030"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML'de xml:lang İşleme
 `xml:lang` Özniteliği bir [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-XML'deki bir öğenin dil ve kültür bilgilerini bildiren tanımlı öznitelik. Bu öznitelik ile aynı anlamı XAML'de devam ederse; Ancak, bazı ek hususlar geçerlidir.  

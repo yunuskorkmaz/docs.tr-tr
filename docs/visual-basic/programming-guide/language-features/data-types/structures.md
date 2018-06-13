@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647271"
 ---
 # <a name="structures-visual-basic"></a>Yapılar (Visual Basic)
 A *yapısı* Genelleştirme Visual Basic önceki sürümleri tarafından desteklenen kullanıcı tanımlı tür (UDT) değil. Alanlara ek olarak, özellikleri, yöntemleri ve olayları yapıları getirebilir. Bir yapı bir veya daha fazla arabirimleri uygulayabilir ve her bir alan için tek tek erişim düzeyleri bildirebilirsiniz.  

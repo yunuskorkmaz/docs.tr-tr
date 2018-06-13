@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764144"
 ---
 # <a name="entity-set"></a>Varlık kümesi
 Bir *varlık kümesini* için mantıksal bir kapsayıcısıdır örnekleri bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve örnekleri bu varlık türünden türetilmiş herhangi bir türde. (Türetilmiş türler hakkında daha fazla bilgi için bkz: [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Bir satır ve ilişkisel bir veritabanındaki bir tablo arasındaki ilişki için bir varlık türünün varlık kümesi arasındaki ilişkiyi benzerdir: bir satır gibi bir varlık türü veri yapısını açıklar ve bir tablo gibi bir varlık kümesini verilen bir yapının örneklerini içerir. Bir varlık kümesini yapı modelleme veri değil; verilerin yapısını açıklamaz. Böylece bir veri deposuna eşlenen bunun yerine, bir varlık kümesini bir yapı (örneğin, ortak dil çalışma zamanı veya SQL Server veritabanı) barındıran veya depolama bir ortam için Grup varlık türü örnekleri sağlar.  

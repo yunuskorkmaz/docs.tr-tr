@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641134"
 ---
 # <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Kullanım &#39;FilePutObject&#39; yerine &#39;FilePut&#39; türünde bağımsız değişken kullanırken &#39;nesnesi&#39;
 `FilePut` Yöntemi içerir türünde bir bağımsız değişken `Object`. `FilePutObject` yerine kullanılmalıdır `FilePut` belirsizlikleri önlemek için.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524313"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> denetimi <xref:System.Windows.Forms.ListBox> denetim. Neredeyse her şeyi bir liste kutusu yapar ve listedeki öğeleri yanındaki onay işareti de görüntüleyebilirsiniz yapar. Diğer iki denetimleri arasındaki farklar, işaretli liste kutuları yalnızca desteği olan <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; ve liste kutuları yalnızca bir öğe varsa veya hiçbiri seçili denetlenebilir. Seçilen bir öğeyi formda vurgulu olarak görünür ve denetlenen bir öğe ile aynı değil unutmayın.  

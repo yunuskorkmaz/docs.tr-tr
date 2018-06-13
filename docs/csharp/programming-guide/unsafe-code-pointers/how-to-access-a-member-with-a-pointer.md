@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332208"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Nasıl yapılır: İşaretçiyle bir Üyeye Erişme (C# Programlama Kılavuzu)
 Güvenli olmayan bir içerikte bildirilmiş bir yapı üyesi erişmek için üye erişimi işleci aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz `p` gösteren bir işaretçidir bir [yapısı](../../../csharp/language-reference/keywords/struct.md) üyesi içeren `x`.  

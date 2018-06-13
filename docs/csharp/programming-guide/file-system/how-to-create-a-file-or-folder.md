@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334840"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Nasıl yapılır: Dosya ve Klasör Oluşturma (C# Programlama Kılavuzu)
 Programlı olarak bilgisayarınızda bir klasör oluşturun, bir alt klasör oluşturun alt klasöründe bir dosya oluşturun ve veri dosyasına yazma.  

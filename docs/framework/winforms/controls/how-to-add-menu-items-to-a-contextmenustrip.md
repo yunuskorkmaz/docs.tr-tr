@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524631"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Nasıl yapılır: Bir ContextMenuStrip'ne Menü Öğeleri Ekleme
 Bir seferde sadece bir menü öğesi veya çeşitli öğeleri ekleyebilirsiniz bir <xref:System.Windows.Forms.ContextMenuStrip>.  

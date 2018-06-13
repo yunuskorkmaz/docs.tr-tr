@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646558"
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic'de Denetim Akışı
 Sol düzenlenmemiş bir program baştan gelen kendi deyimleri ile devam eder. Bazı çok basit programları ile için tek yönlü Bu akış yazılabilir. Ancak, güç çoğunu ve herhangi bir programlama dili yardımcı programı denetim ifadeleri ve döngüler yürütme sırasını değiştirme olanağı gelir.  

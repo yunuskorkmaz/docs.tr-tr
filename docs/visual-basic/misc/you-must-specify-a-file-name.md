@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641020"
 ---
 # <a name="you-must-specify-a-file-name"></a>Bir dosya adı belirtmeniz gerekir
 Taşıma veya bir dosya adı sağladığını gerektiren bir dosya kopyalama gibi bir işlem denendi.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443436"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory Metodu
 Geçerli ortak dil çalışma zamanı (CLR) tutan dizinin alır. Bu yöntem yalnızca kullanım için işlem dışı hata ayıklayıcıları tarafından desteklenir. Başka bir bileşen tarafından çağrılan olursa E_NOTIMPL döndürür.  

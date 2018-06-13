@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213216"
 ---
 # <a name="c-compiler-errors"></a>C# Derleyici Hataları
 Bazı C# derleyici hataları hatayı oluşturan neden ve bazı durumlarda, açıklayan ilgili konulara sahiptir nasıl hatayı düzeltin. Yardım belirli bir hata iletisi için kullanılabilir olup olmadığını görmek için aşağıdaki adımlardan birini kullanın.  

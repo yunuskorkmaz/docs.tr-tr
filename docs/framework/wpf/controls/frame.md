@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552051"
 ---
 # <a name="frame"></a>Çerçeve
 <xref:System.Windows.Controls.Frame> Denetimi içerisinde içerik gezinmesini destekler. <xref:System.Windows.Controls.Frame> gibi bir kök öğe tarafından barındırılan <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, veya bir kök öğeye ait içerik bir ağaç içindeki bir ada.  

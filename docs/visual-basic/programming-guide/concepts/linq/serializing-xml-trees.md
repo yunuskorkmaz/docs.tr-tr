@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645349"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Biçimlendiricisi XML ağaçları (Visual Basic)
 Bir XML ağacı seri hale getirme XML ağacından XML oluşturma anlamına gelir. Bir dosyaya somut bir uyarlamasını serileştirebilen <xref:System.IO.TextWriter> sınıfı veya somut bir uygulaması için bir <xref:System.Xml.XmlWriter>.  

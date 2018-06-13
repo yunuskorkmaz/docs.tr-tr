@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525523"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri çıkışı oluşur *çerçeveleri*, ya da kendi ayrı HTML belgeleri tutabilir windows. Çerçeveler kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfasının bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  

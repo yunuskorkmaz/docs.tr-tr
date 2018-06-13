@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645882"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>Öğretici: Ertelenmiş yürütme (Visual Basic)
 Bu öğretici sorguları bir araya zincirleyebilirsiniz işleme modeli gösterir. Sorguları birlikte zincirleme işlevsel dönüşümleri yazmaya önemli bir parçasıdır. Tam olarak nasıl zincirleme sorguları iş anlamak önemlidir.  

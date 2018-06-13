@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804577"
 ---
 # <a name="jsonp"></a>JSONP
 Bu örnek, JSON ile doldurma (JSONP) WCF REST Hizmetleri'nde desteklemek gösterilmiştir. JSONP geçerli belgede oluşturma komut dosyası etiketlerini tarafından etki alanları arası komut çağırmak için kullanılan bir kuraldır. Sonuç belirtilen geri çağırma işlevi döndürülür. JSONP gibi etiketler fikir üzerinde temel `<script src="http://..." >` herhangi bir etki alanından betiklerini değerlendirilebilir ve bu etiketlerin tarafından alınan komut dosyası diğer işlevleri zaten tanımlanabilir içinde bir kapsamı içinde değerlendirilir.  

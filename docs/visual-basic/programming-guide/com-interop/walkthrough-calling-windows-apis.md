@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644361"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>İzlenecek yol: Windows API'larını Çağırma (Visual Basic)
 Windows, Windows işletim sisteminin parçası olan dinamik bağlantı kitaplıklarını (DLL'ler) apı'leridir. Bunları kendi eşdeğer yordamları yazmak zor olduğu durumlarda görevleri gerçekleştirmek için kullanın. Örneğin, Windows adlı bir işlev sağlar `FlashWindowEx` olanak tanıyan bir uygulama için başlık çubuğu açık ve koyu gri arasında alternatif olun.  

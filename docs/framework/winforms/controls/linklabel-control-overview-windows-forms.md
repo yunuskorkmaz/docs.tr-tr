@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535018"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi Web stili bağlantılar için Windows Forms uygulamaları eklemenize olanak sağlar. Kullanabileceğiniz <xref:System.Windows.Forms.LinkLabel> denetimi için kullanabileceğiniz her şeyi <xref:System.Windows.Forms.Label> için kontrol; dosya, klasör veya Web sayfası bağlantısı olarak metnin bir bölümünü de ayarlayabilirsiniz.  

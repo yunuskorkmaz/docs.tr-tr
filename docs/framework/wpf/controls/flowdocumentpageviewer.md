@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551236"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer> Denetim görüntülemek için kullanılan <xref:System.Windows.Documents.FlowDocument> sayfa başına temelinde içerik. İle karşılaştırın <xref:System.Windows.Controls.FlowDocumentScrollViewer>, sunan <xref:System.Windows.Documents.FlowDocument> kayan bir görüntüleyicide içerik.  

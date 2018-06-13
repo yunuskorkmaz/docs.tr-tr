@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331714"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Nasıl yapılır: Finally Anahtar Sözcüğünü Kullanarak Temizleme Kodu Yürütme (C# Programlama Kılavuzu)
 Amacı bir `finally` açıklamadır bir özel durum olsa bile nesneleri, dış kaynaklara bulunduran genellikle gerekli temizlenmesi hemen gerçekleşmesini sağlamak için. Bu tür temizleme bir örneği çağırma <xref:System.IO.Stream.Close%2A> üzerinde bir <xref:System.IO.FileStream> nesnesi gibi ortak dil çalışma zamanı tarafından toplanacak beklemek yerine hemen kullandıktan sonra:  

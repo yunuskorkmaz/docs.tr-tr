@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427840"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken Yöntemi
 Sembol yazıcı meta verileri yayılan gibi meta veri simgesi eşleştirilmiş bildirir. Sembol yazan eski belirtecin sembol deposu içinde saklanan istiyorsanız, yeni değer, veya depolanmış belirteciyle okuma aşamasında yeniden eşlemek karşılık gelen simge okuyucu harita kaydetmeniz gerekir ya da güncelleştirme gerekir.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525629"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları Panel Denetimi ile Denetimleri Gruplandırma
 Windows Forms <xref:System.Windows.Forms.Panel> denetimleri, diğer denetimler gruplandırmak için kullanılır. Denetimleri gruplandırma için üç nedeni vardır. Clear kullanıcı arabirimi için ilgili form öğeleri gruplandırma visual biridir; başka bir program, radyo düğmeleri örneğin gruplandırmadır; Son denetimler bir birim olarak tasarım zamanında taşımak için ' dir.  
