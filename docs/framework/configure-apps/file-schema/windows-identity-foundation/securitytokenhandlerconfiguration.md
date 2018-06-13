@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758431"
 ---
 # <a name="ltsecuritytokenhandlerconfigurationgt"></a><span data-ttu-id="990da-102">&lt;securityTokenHandlerConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="990da-102">&lt;securityTokenHandlerConfiguration&gt;</span></span>
 <span data-ttu-id="990da-103">Belirteç işleyicileri koleksiyonunu yapılandırmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="990da-103">Provides configuration for the collection of token handlers.</span></span>  

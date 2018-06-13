@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759848"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a><span data-ttu-id="00d5d-102">XML şema kısıtlamaları ve ilişkileri</span><span class="sxs-lookup"><span data-stu-id="00d5d-102">XML Schema Constraints and Relationships</span></span>
 <span data-ttu-id="00d5d-103">Bir XML Şeması Tanım Dili (XSD) şemasında, kısıtlamalar belirtebilirsiniz (benzersiz anahtar ve keyref kısıtlamaları) ve ilişkileri (kullanarak **msdata:Relationship** ek açıklama).</span><span class="sxs-lookup"><span data-stu-id="00d5d-103">In an XML Schema definition language (XSD) schema, you can specify constraints (unique, key, and keyref constraints) and relationships (using the **msdata:Relationship** annotation).</span></span> <span data-ttu-id="00d5d-104">Bu konuda, kısıtlamalar ve bir XML şemasında belirtilen ilişkiler oluşturmak için nasıl yorumlanır açıklanmaktadır <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="00d5d-104">This topic explains how the constraints and relationships specified in an XML Schema are interpreted to generate the <xref:System.Data.DataSet>.</span></span>  

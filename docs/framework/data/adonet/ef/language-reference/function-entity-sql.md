@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760680"
 ---
 # <a name="function-entity-sql"></a><span data-ttu-id="f058c-102">İŞLEVİ (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="f058c-102">FUNCTION (Entity SQL)</span></span>
 <span data-ttu-id="f058c-103">Varlık SQL sorgu komutunu kapsamında bir işlevi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="f058c-103">Defines a function in the scope of an Entity SQL query command.</span></span>  
