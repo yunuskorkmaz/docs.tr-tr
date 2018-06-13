@@ -1,68 +1,55 @@
 ---
 title: Yazdırma ile İlgili Nasıl Yapılır Konuları
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f3a00d78f6406e3f507ce91651efe5c29a5dd453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546285"
 ---
-# <a name="printing-how-to-topics"></a><span data-ttu-id="b36c2-102">Yazdırma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b36c2-102">Printing How-to Topics</span></span>
-<span data-ttu-id="b36c2-103">Bu bölümdeki konular, yazdırma kullanmayı göstermek ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.</span><span class="sxs-lookup"><span data-stu-id="b36c2-103">The topics in this section demonstrate how to use the printing and print system management features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] as well as the new [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] print path.</span></span>  
+# <a name="printing-how-to-topics"></a><span data-ttu-id="67ebf-102">Yazdırma ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="67ebf-102">Printing How-to Topics</span></span>
+<span data-ttu-id="67ebf-103">Bu bölümdeki konular, yazdırma kullanmayı göstermek ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.</span><span class="sxs-lookup"><span data-stu-id="67ebf-103">The topics in this section demonstrate how to use the printing and print system management features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] as well as the new [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] print path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b36c2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b36c2-104">In This Section</span></span>  
- [<span data-ttu-id="b36c2-105">Yazdır İletişim Kutusu Çağırma</span><span class="sxs-lookup"><span data-stu-id="b36c2-105">Invoke a Print Dialog</span></span>](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- <span data-ttu-id="b36c2-106">XAML biçimlendirme bildirmek için yönergeler bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulamasında çağırmak için kodu kullanarak.</span><span class="sxs-lookup"><span data-stu-id="b36c2-106">Instructions for XAML markup to declare a [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] print dialog object and using code to invoke the dialog from within a Windows Presentation Foundation (WPF) application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="67ebf-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="67ebf-104">In This Section</span></span>  
+ [<span data-ttu-id="67ebf-105">Yazdır İletişim Kutusu Çağırma</span><span class="sxs-lookup"><span data-stu-id="67ebf-105">Invoke a Print Dialog</span></span>](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
+ <span data-ttu-id="67ebf-106">XAML biçimlendirme bildirmek için yönergeler bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulamasında çağırmak için kodu kullanarak.</span><span class="sxs-lookup"><span data-stu-id="67ebf-106">Instructions for XAML markup to declare a [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] print dialog object and using code to invoke the dialog from within a Windows Presentation Foundation (WPF) application.</span></span>  
   
- [<span data-ttu-id="b36c2-107">Yazıcı Kopyalama</span><span class="sxs-lookup"><span data-stu-id="b36c2-107">Clone a Printer</span></span>](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
- <span data-ttu-id="b36c2-108">Var olan olarak tam olarak aynı özelliklere sahip ikinci bir yazdırma sırası yükleme hakkında yönergeler yazdırma sırası.</span><span class="sxs-lookup"><span data-stu-id="b36c2-108">Instructions for how to install a second print queue with exactly the same properties as an existing print queue.</span></span>  
+ [<span data-ttu-id="67ebf-107">Yazıcı Kopyalama</span><span class="sxs-lookup"><span data-stu-id="67ebf-107">Clone a Printer</span></span>](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
+ <span data-ttu-id="67ebf-108">Var olan olarak tam olarak aynı özelliklere sahip ikinci bir yazdırma sırası yükleme hakkında yönergeler yazdırma sırası.</span><span class="sxs-lookup"><span data-stu-id="67ebf-108">Instructions for how to install a second print queue with exactly the same properties as an existing print queue.</span></span>  
   
- [<span data-ttu-id="b36c2-109">Sorunlu Yazdırma İşini Tanımlama</span><span class="sxs-lookup"><span data-stu-id="b36c2-109">Diagnose Problematic Print Job</span></span>](../../../../docs/framework/wpf/advanced/how-to-diagnose-problematic-print-job.md)  
- <span data-ttu-id="b36c2-110">Yazdırma bir yazdırma işi tanılamak için yazdırma sıralarını ve yazdırma işlerini özelliklerini kullanma yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="b36c2-110">Instructions for using the properties of print queues and print jobs to diagnose a print job that is not printing.</span></span>  
+ [<span data-ttu-id="67ebf-109">Sorunlu Yazdırma İşini Tanımlama</span><span class="sxs-lookup"><span data-stu-id="67ebf-109">Diagnose Problematic Print Job</span></span>](../../../../docs/framework/wpf/advanced/how-to-diagnose-problematic-print-job.md)  
+ <span data-ttu-id="67ebf-110">Yazdırma bir yazdırma işi tanılamak için yazdırma sıralarını ve yazdırma işlerini özelliklerini kullanma yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="67ebf-110">Instructions for using the properties of print queues and print jobs to diagnose a print job that is not printing.</span></span>  
   
- [<span data-ttu-id="b36c2-111">Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme</span><span class="sxs-lookup"><span data-stu-id="b36c2-111">Discover Whether a Print Job Can Be Printed At This Time of Day</span></span>](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- <span data-ttu-id="b36c2-112">İşin yazdırılabilir yazdırma sıralarını ve yazdırma işlerini özelliklerini programlı olarak ne zaman günün karar vermek için kullanma yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="b36c2-112">Instructions for using the properties of print queues and print jobs to programmatically decide what times of day the job can be printed.</span></span>  
+ [<span data-ttu-id="67ebf-111">Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme</span><span class="sxs-lookup"><span data-stu-id="67ebf-111">Discover Whether a Print Job Can Be Printed At This Time of Day</span></span>](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ <span data-ttu-id="67ebf-112">İşin yazdırılabilir yazdırma sıralarını ve yazdırma işlerini özelliklerini programlı olarak ne zaman günün karar vermek için kullanma yönergeleri.</span><span class="sxs-lookup"><span data-stu-id="67ebf-112">Instructions for using the properties of print queues and print jobs to programmatically decide what times of day the job can be printed.</span></span>  
   
- [<span data-ttu-id="b36c2-113">Yazdırma Kuyruklarının Alt Kümesini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="b36c2-113">Enumerate a Subset of Print Queues</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
- <span data-ttu-id="b36c2-114">Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.</span><span class="sxs-lookup"><span data-stu-id="b36c2-114">Instructions for generating a list of printers having certain characteristics.</span></span>  
+ [<span data-ttu-id="67ebf-113">Yazdırma Kuyruklarının Alt Kümesini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="67ebf-113">Enumerate a Subset of Print Queues</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
+ <span data-ttu-id="67ebf-114">Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.</span><span class="sxs-lookup"><span data-stu-id="67ebf-114">Instructions for generating a list of printers having certain characteristics.</span></span>  
   
- [<span data-ttu-id="b36c2-115">NOTINBUILD: Nasıl yapılır: yazdırma şemasını genişletme ve yeni yazdırma sistem sınıfları oluşturma</span><span class="sxs-lookup"><span data-stu-id="b36c2-115">NOTINBUILD: How to: Extend the Print Schema and Create New Print System Classes</span></span>](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- <span data-ttu-id="b36c2-116">Yönetilen kod programcıları genişletilmiş bir tartışma özel yazdırma aygıtlarına veya yeni ya da seyrek özelliklerle yazıcılar yazdırma şemasını genişletebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b36c2-116">Extended discussion of how managed code programmers can extend the Print Schema to specialty printing devices or printers with new or uncommon features.</span></span>  
+ [<span data-ttu-id="67ebf-115">NOTINBUILD: Nasıl yapılır: yazdırma şemasını genişletme ve yeni yazdırma sistem sınıfları oluşturma</span><span class="sxs-lookup"><span data-stu-id="67ebf-115">NOTINBUILD: How to: Extend the Print Schema and Create New Print System Classes</span></span>](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ <span data-ttu-id="67ebf-116">Yönetilen kod programcıları genişletilmiş bir tartışma özel yazdırma aygıtlarına veya yeni ya da seyrek özelliklerle yazıcılar yazdırma şemasını genişletebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="67ebf-116">Extended discussion of how managed code programmers can extend the Print Schema to specialty printing devices or printers with new or uncommon features.</span></span>  
   
- [<span data-ttu-id="b36c2-117">Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma</span><span class="sxs-lookup"><span data-stu-id="b36c2-117">Get Print System Object Properties Without Reflection</span></span>](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
- <span data-ttu-id="b36c2-118">Sistemi nesnenin özelliklerini ve bunların türlerine çalışma zamanında bulma için yönergeleri yazdırın.</span><span class="sxs-lookup"><span data-stu-id="b36c2-118">Instructions for how to discover at runtime print system object's properties and their types.</span></span>  
+ [<span data-ttu-id="67ebf-117">Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma</span><span class="sxs-lookup"><span data-stu-id="67ebf-117">Get Print System Object Properties Without Reflection</span></span>](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
+ <span data-ttu-id="67ebf-118">Sistemi nesnenin özelliklerini ve bunların türlerine çalışma zamanında bulma için yönergeleri yazdırın.</span><span class="sxs-lookup"><span data-stu-id="67ebf-118">Instructions for how to discover at runtime print system object's properties and their types.</span></span>  
   
- [<span data-ttu-id="b36c2-119">Program Aracılığıyla XPS Dosyalarını Yazdırma</span><span class="sxs-lookup"><span data-stu-id="b36c2-119">Programmatically Print XPS Files</span></span>](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)  
- <span data-ttu-id="b36c2-120">Hızlı yazdırma için yönergeler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları gerek kalmadan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b36c2-120">Instructions for rapid printing of [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] files without the need for a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span>  
+ [<span data-ttu-id="67ebf-119">Program Aracılığıyla XPS Dosyalarını Yazdırma</span><span class="sxs-lookup"><span data-stu-id="67ebf-119">Programmatically Print XPS Files</span></span>](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)  
+ <span data-ttu-id="67ebf-120">Hızlı yazdırma için yönergeler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları gerek kalmadan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67ebf-120">Instructions for rapid printing of [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] files without the need for a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span>  
   
- [<span data-ttu-id="b36c2-121">Uzaktan Yazıcıların Durumunu Araştırma</span><span class="sxs-lookup"><span data-stu-id="b36c2-121">Remotely Survey the Status of Printers</span></span>](../../../../docs/framework/wpf/advanced/how-to-remotely-survey-the-status-of-printers.md)  
- <span data-ttu-id="b36c2-122">Bu kağıt sıkıştı veya başka bir sorun yaşıyor bulmak için Yazıcılar anket bir yardımcı programı oluşturmak için yönergeler.</span><span class="sxs-lookup"><span data-stu-id="b36c2-122">Instructions for creating a utility that will survey printers to discover those experiencing a paper jam or other problem.</span></span>  
+ [<span data-ttu-id="67ebf-121">Uzaktan Yazıcıların Durumunu Araştırma</span><span class="sxs-lookup"><span data-stu-id="67ebf-121">Remotely Survey the Status of Printers</span></span>](../../../../docs/framework/wpf/advanced/how-to-remotely-survey-the-status-of-printers.md)  
+ <span data-ttu-id="67ebf-122">Bu kağıt sıkıştı veya başka bir sorun yaşıyor bulmak için Yazıcılar anket bir yardımcı programı oluşturmak için yönergeler.</span><span class="sxs-lookup"><span data-stu-id="67ebf-122">Instructions for creating a utility that will survey printers to discover those experiencing a paper jam or other problem.</span></span>  
   
- [<span data-ttu-id="b36c2-123">PrintTickets'i Doğrulama ve Birleştirme</span><span class="sxs-lookup"><span data-stu-id="b36c2-123">Validate and Merge PrintTickets</span></span>](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
- <span data-ttu-id="b36c2-124">Yazdırma biletinin geçerli olduğundan ve onu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetleme yönergeler.</span><span class="sxs-lookup"><span data-stu-id="b36c2-124">Instructions for checking that a print ticket is valid and that it does not request anything that is not supported by the printer.</span></span>  
+ [<span data-ttu-id="67ebf-123">PrintTickets'i Doğrulama ve Birleştirme</span><span class="sxs-lookup"><span data-stu-id="67ebf-123">Validate and Merge PrintTickets</span></span>](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
+ <span data-ttu-id="67ebf-124">Yazdırma biletinin geçerli olduğundan ve onu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetleme yönergeler.</span><span class="sxs-lookup"><span data-stu-id="67ebf-124">Instructions for checking that a print ticket is valid and that it does not request anything that is not supported by the printer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b36c2-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b36c2-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="67ebf-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="67ebf-125">See Also</span></span>  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  
- [<span data-ttu-id="b36c2-126">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b36c2-126">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [<span data-ttu-id="b36c2-127">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="b36c2-127">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="b36c2-128">XPS</span><span class="sxs-lookup"><span data-stu-id="b36c2-128">XPS</span></span>](http://www.microsoft.com/xps)
+ [<span data-ttu-id="67ebf-126">Yazdırmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="67ebf-126">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [<span data-ttu-id="67ebf-127">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="67ebf-127">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="67ebf-128">XPS</span><span class="sxs-lookup"><span data-stu-id="67ebf-128">XPS</span></span>](http://www.microsoft.com/xps)
