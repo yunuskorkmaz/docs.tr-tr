@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549626"
 ---
 # <a name="collections-c"></a><span data-ttu-id="cffe3-102">Koleksiyonlar (C#)</span><span class="sxs-lookup"><span data-stu-id="cffe3-102">Collections (C#)</span></span>
 <span data-ttu-id="cffe3-103">Birçok uygulama için ilgili nesneleri, grupları oluşturmak ve yönetmek istediğiniz.</span><span class="sxs-lookup"><span data-stu-id="cffe3-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="cffe3-104">Grup nesnelerine iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturma.</span><span class="sxs-lookup"><span data-stu-id="cffe3-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

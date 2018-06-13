@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472393"
 ---
 # <a name="authentication-in-sql-server"></a><span data-ttu-id="d72fc-102">SQL Server kimlik doğrulaması</span><span class="sxs-lookup"><span data-stu-id="d72fc-102">Authentication in SQL Server</span></span>
 <span data-ttu-id="d72fc-103">SQL Server iki kimlik doğrulama modu, Windows kimlik doğrulama modu ve karma mod destekler.</span><span class="sxs-lookup"><span data-stu-id="d72fc-103">SQL Server supports two authentication modes, Windows authentication mode and mixed mode.</span></span>  
