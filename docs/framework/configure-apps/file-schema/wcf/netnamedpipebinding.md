@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751834"
 ---
 # <a name="ltnetnamedpipebindinggt"></a><span data-ttu-id="0a02f-102">&lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0a02f-102">&lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="0a02f-103">Güvenli, güvenilir, üzerinde-makine çapraz işlem iletişim için en iyi hale getirilmiş bir bağlama tanımlar.</span><span class="sxs-lookup"><span data-stu-id="0a02f-103">Defines a binding that is secure, reliable, optimized for on-machine cross process communication.</span></span> <span data-ttu-id="0a02f-104">Varsayılan olarak, güvenilirlik, ileti teslimi ve ikili ileti kodlama için adlandırılmış kanallar aktarımı güvenlik için taşıma güvenliği için çalışma zamanı iletişim yığını WS-ReliableMessaging ile oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0a02f-104">By default, it generates a runtime communication stack with WS-ReliableMessaging for reliability, transport security for transfer security, named pipes for message delivery, and binary message encoding.</span></span>  

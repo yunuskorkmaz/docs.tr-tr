@@ -1,14 +1,6 @@
 ---
-title: "_EFN_GetManagedObjectFieldInfo İşlevi"
-ms.custom: 
+title: _EFN_GetManagedObjectFieldInfo İşlevi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_GetManagedObjectFieldInfo
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4822cab8816e97bd1d13c36ea7b63dc9a6f679d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405252"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="372f0-102">_EFN_GetManagedObjectFieldInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="372f0-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
-<span data-ttu-id="372f0-103">Uzaklık, bir alan ve alanın değerini, sağlanan nesne işaretçisi ve alan adını kullanarak bir nesne başından alır.</span><span class="sxs-lookup"><span data-stu-id="372f0-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
+# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="8a2f8-102">_EFN_GetManagedObjectFieldInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="8a2f8-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
+<span data-ttu-id="8a2f8-103">Uzaklık, bir alan ve alanın değerini, sağlanan nesne işaretçisi ve alan adını kullanarak bir nesne başından alır.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="372f0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="372f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a2f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8a2f8-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectFieldInfo(  
@@ -49,33 +38,33 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="372f0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="372f0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8a2f8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8a2f8-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="372f0-106">[in] Hata ayıklama istemci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="372f0-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="8a2f8-106">[in] Hata ayıklama istemci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="372f0-107">[in] Bir yönetilen nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="372f0-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="8a2f8-107">[in] Bir yönetilen nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="372f0-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="372f0-108">szFieldName</span></span>  
- <span data-ttu-id="372f0-109">[in] Alan adı için bir yönetilen nesne işaretçi.</span><span class="sxs-lookup"><span data-stu-id="372f0-109">[in] A managed object pointer to the field name.</span></span>  
+ <span data-ttu-id="8a2f8-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="8a2f8-108">szFieldName</span></span>  
+ <span data-ttu-id="8a2f8-109">[in] Alan adı için bir yönetilen nesne işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-109">[in] A managed object pointer to the field name.</span></span>  
   
  `pValue`  
- <span data-ttu-id="372f0-110">[out] Alan değeri.</span><span class="sxs-lookup"><span data-stu-id="372f0-110">[out] The field value.</span></span> <span data-ttu-id="372f0-111">Bu parametre null olabilir.</span><span class="sxs-lookup"><span data-stu-id="372f0-111">This parameter can be null.</span></span>  
+ <span data-ttu-id="8a2f8-110">[out] Alan değeri.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-110">[out] The field value.</span></span> <span data-ttu-id="8a2f8-111">Bu parametre null olabilir.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-111">This parameter can be null.</span></span>  
   
  `pOffset`  
- <span data-ttu-id="372f0-112">[out] Uzaklık `objAddr` alanına.</span><span class="sxs-lookup"><span data-stu-id="372f0-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="372f0-113">Bu parametre null olabilir.</span><span class="sxs-lookup"><span data-stu-id="372f0-113">This parameter can be null.</span></span>  
+ <span data-ttu-id="8a2f8-112">[out] Uzaklık `objAddr` alanına.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="8a2f8-113">Bu parametre null olabilir.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-113">This parameter can be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="372f0-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="372f0-114">Remarks</span></span>  
- <span data-ttu-id="372f0-115">Uzaklığı 0 ise, uzaklık yazılır.</span><span class="sxs-lookup"><span data-stu-id="372f0-115">If the offset is 0, no offset is written.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a2f8-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8a2f8-114">Remarks</span></span>  
+ <span data-ttu-id="8a2f8-115">Uzaklığı 0 ise, uzaklık yazılır.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-115">If the offset is 0, no offset is written.</span></span>  
   
- <span data-ttu-id="372f0-116">Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlevi HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değeri ve 0x1000 hata kodunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="372f0-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+ <span data-ttu-id="8a2f8-116">Varsa yönetilen kod yok iş parçacığı üzerinde şu anda bağlamında, işlevi HRESULT SOS_E_NOMANAGEDCODE 0xa0 tesis değeri ve 0x1000 hata kodunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="372f0-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="372f0-117">Requirements</span></span>  
- <span data-ttu-id="372f0-118">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="372f0-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a2f8-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8a2f8-117">Requirements</span></span>  
+ <span data-ttu-id="8a2f8-118">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a2f8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="372f0-119">**Başlık:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="372f0-119">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="8a2f8-119">**Başlık:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="8a2f8-119">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="372f0-120">**.NET framework sürümü:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="372f0-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8a2f8-120">**.NET framework sürüm:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a2f8-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="372f0-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="372f0-121">See Also</span></span>  
- [<span data-ttu-id="372f0-122">Hata Ayıklama Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="372f0-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="8a2f8-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8a2f8-121">See Also</span></span>  
+ [<span data-ttu-id="8a2f8-122">Hata Ayıklama Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="8a2f8-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

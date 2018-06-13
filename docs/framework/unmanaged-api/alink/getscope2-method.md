@@ -1,14 +1,6 @@
 ---
 title: GetScope2 Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.GetScope2
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e57ce8fbe0b8e60c9f6f6295e9331c571aedf92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402151"
 ---
-# <a name="getscope2-method"></a><span data-ttu-id="355ba-102">GetScope2 Metodu</span><span class="sxs-lookup"><span data-stu-id="355ba-102">GetScope2 Method</span></span>
-<span data-ttu-id="355ba-103">Bir alma kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="355ba-103">Gets an import scope.</span></span>  
+# <a name="getscope2-method"></a><span data-ttu-id="b7513-102">GetScope2 Metodu</span><span class="sxs-lookup"><span data-stu-id="b7513-102">GetScope2 Method</span></span>
+<span data-ttu-id="b7513-103">Bir alma kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="b7513-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="355ba-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="355ba-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b7513-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7513-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScope2(  
@@ -48,26 +37,26 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="355ba-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="355ba-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b7513-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b7513-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="355ba-106">Hedef derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="355ba-106">ID of target assembly.</span></span>  
+ <span data-ttu-id="b7513-106">Hedef derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="b7513-106">ID of target assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="355ba-107">İçeri aktarılacak dosya kimliği.</span><span class="sxs-lookup"><span data-stu-id="355ba-107">ID of file from which to import.</span></span>  
+ <span data-ttu-id="b7513-107">İçeri aktarılacak dosya kimliği.</span><span class="sxs-lookup"><span data-stu-id="b7513-107">ID of file from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="355ba-108">İçeri aktarmak için sıfır tabanlı kapsamı.</span><span class="sxs-lookup"><span data-stu-id="355ba-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="b7513-108">İçeri aktarmak için sıfır tabanlı kapsamı.</span><span class="sxs-lookup"><span data-stu-id="b7513-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="355ba-109">İşaretçi alır [Imetadataımport2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) Belirtilen kapsam için arabirim.</span><span class="sxs-lookup"><span data-stu-id="355ba-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
+ <span data-ttu-id="b7513-109">İşaretçi alır [Imetadataımport2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) Belirtilen kapsam için arabirim.</span><span class="sxs-lookup"><span data-stu-id="b7513-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="355ba-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="355ba-110">Return Value</span></span>  
- <span data-ttu-id="355ba-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="355ba-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b7513-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b7513-110">Return Value</span></span>  
+ <span data-ttu-id="b7513-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="b7513-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="355ba-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="355ba-112">Requirements</span></span>  
- <span data-ttu-id="355ba-113">ALink.h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="355ba-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b7513-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7513-112">Requirements</span></span>  
+ <span data-ttu-id="b7513-113">ALink.h gerektirir.</span><span class="sxs-lookup"><span data-stu-id="b7513-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="355ba-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="355ba-114">See Also</span></span>  
- [<span data-ttu-id="355ba-115">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355ba-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="355ba-116">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="355ba-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="355ba-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="355ba-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="b7513-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b7513-114">See Also</span></span>  
+ [<span data-ttu-id="b7513-115">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7513-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="b7513-116">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b7513-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="b7513-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="b7513-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

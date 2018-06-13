@@ -1,14 +1,6 @@
 ---
 title: ICorDebugChain::GetContext Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChain.GetContext
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 26abe7ee-e578-4228-affa-01bed0dfce1b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ec212bb0de60c0cdff6b3fe26d6d4f6261d78fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401735"
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="37c6e-102">ICorDebugChain::GetContext Metodu</span><span class="sxs-lookup"><span data-stu-id="37c6e-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="37c6e-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="37c6e-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="e58d9-102">ICorDebugChain::GetContext Metodu</span><span class="sxs-lookup"><span data-stu-id="e58d9-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="e58d9-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="e58d9-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37c6e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="37c6e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e58d9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e58d9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
