@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577567"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme
 Windows Mağazası için .NET Framework uygulamaları tam .NET Framework'ün bir alt kümesidir. Windows Mağazası uygulamaları için güvenlik ve diğer gereksinimler nedeniyle, .NET Framework API'ların tam kümesini dosyaları açmak ve okumak için kullanamazsınız. Daha fazla bilgi için bkz: [.NET için Windows mağazası uygulamalarına genel bakış](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Ancak, diğer akış işleme işlemlerini için .NET Framework API'ları kullanmak isteyebilirsiniz. Bu akışlar işlemek için bu gibi bir .NET Framework akış türü arasında dönüştürme için gerekli bulabilirsiniz <xref:System.IO.MemoryStream> veya <xref:System.IO.FileStream>ve Windows çalışma zamanı akış gibi [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream ](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx), veya [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

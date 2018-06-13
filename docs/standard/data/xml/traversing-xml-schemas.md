@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575368"
 ---
 # <a name="traversing-xml-schemas"></a>XML şemaları çapraz geçiş yapma
 Şema nesne modeli (SOM) API kullanarak bir XML Şeması geçiş öğeleri, öznitelikleri ve SOM. depolanan türleri erişim sağlar Bir XML çapraz geçiş yapan SOM yüklenen şema ayrıca SOM API kullanarak bir XML şeması düzenleme ilk adımdır.  

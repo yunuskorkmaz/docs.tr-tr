@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172336"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Nasıl yapılır: okuma yazma özellikleri (C# programlama Kılavuzu) bildirme ve kullanma
 Özellikler, ortak veri üyeleri nesnenin verileri korumasız, denetlenmeyen ve doğrulanmamış erişimle gelen riskleri olmadan kolaylık sağlar. Bu aracılığıyla gerçekleştirilir *erişimciler*: atayın ve temel alınan veri üyeden değerleri almak özel yöntemler. [Ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimci atanması, veri üyelerin sağlar ve [almak](../../../csharp/language-reference/keywords/get.md) erişimci veri üyesi değerlerini alır.  

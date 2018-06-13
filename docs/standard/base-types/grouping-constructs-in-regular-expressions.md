@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579828"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
 Gruplandırma yapıları normal ifadenin alt ifadelerin tanımlamak ve bir Giriş dizesinin alt dizeler yakalayın. Aşağıdakileri yapmak için gruplandırma yapıları kullanabilirsiniz:  

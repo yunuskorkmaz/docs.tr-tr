@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649145"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Nasıl yapılır: Devralınmış Değişkeni Gizleme (Visual Basic)
 Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. Bir temel sınıf öğesi olarak aynı adı taşıyan bir değişkeni tanımlamak istiyorsanız, gizleyebilirsiniz, veya *gölge*, türetilen sınıfta değişkeniniz tanımladığınızda, temel sınıf öğesi. Bunu yaparsanız, türetilmiş sınıf kodda açıkça gölgeleme mekanizması atlar sürece değişkeniniz erişir.  

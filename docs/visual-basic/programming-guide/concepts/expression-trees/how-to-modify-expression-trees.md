@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643884"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Nasıl yapılır: ifade ağaçlarını (Visual Basic) değiştirme
 Bu konu bir ifade ağacına değiştirme gösterir. İfade ağaçları değişmez, bunlar doğrudan değiştirilemiyor anlamına gelir. Bir ifade ağacına değiştirmek için varolan bir ifade ağacına bir kopyasını oluşturun ve bir kopya oluşturduğunuzda gerekli değişiklikleri yapın. Kullanabileceğiniz <xref:System.Linq.Expressions.ExpressionVisitor> sınıfı var olan bir ifade ağacına gezme ve onu ziyaret her bir düğüm kopyalamak için.  

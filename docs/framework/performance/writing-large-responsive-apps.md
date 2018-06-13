@@ -9,6 +9,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457575"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uygulamaları büyük .NET Framework uygulamaları veya performansını iyileştirmek için ipuçları verilmektedir. C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma bu ipuçlarını gelir ve bu makale, C# Derleyici birkaç gerçek örneklerinden içermektedir.  

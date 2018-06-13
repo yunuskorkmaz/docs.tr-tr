@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649854"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
 Bir sabit değer olarak kendisi yerine bir değişkenin değeri veya 3 sayı veya dize "Hello" gibi bir ifadenin sonucu olarak ifade bir değerdir. Bir sabit bir hazır değer yerini alır ve bu aynı değer değerini değiştirebilir, bir değişken aksine program boyunca korur anlamlı bir addır.  

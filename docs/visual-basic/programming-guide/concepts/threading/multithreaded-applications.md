@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650484"
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Birden çok iş parçacıklı uygulamalar (Visual Basic)
 Visual Basic ile aynı anda birden çok görevleri uygulamaları yazabilirsiniz. Diğer görevleri bulunduran olası görevlerle olarak da bilinen bir işlem ayrı iş parçacıklarına, yürütebilir *çoklu iş parçacığı kullanımı* veya *iş parçacığı oluşturma serbest*.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457222"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 Koşullu işleç (`?:`), yaygın olarak bilinen Üçlü koşullu işleç Boole ifadesi değerine bağlı olarak iki değerden birini döndürür. Aşağıda, koşullu işlecin sözdizimi belirtilmiştir.  
