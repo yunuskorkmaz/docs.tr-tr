@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496899"
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 Windows Communication Foundation (WCF) dışarı aktarma, yayımlama, alma ve hizmet meta verileri içe aktarma için zengin bir altyapı sağlar. WCF hizmetleri meta verileri Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturabilmesi hizmetin uç ile etkileşim kurmayı açıklamak için kullanın.  

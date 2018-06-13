@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496776"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda, güvenlik ihtiyaçlarınızı için doğru bağlama seçmenize yardımcı olur.  

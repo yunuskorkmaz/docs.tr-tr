@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496818"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Bir kullanıcı adı ve parola kullanılan kimlik doğrulama için varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parolayı doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen sağlar *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı içerecek şekilde türeyen bir sınıf oluşturun <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  

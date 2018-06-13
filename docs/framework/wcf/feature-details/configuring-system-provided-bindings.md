@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496844"
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 Bağlamalar ve bir bitiş noktasına bağlanmak nasıl belirtmek için bir uç nokta konuşurken kullanmak için iletişim mekanizması belirtin. Bağlamaları nasıl Windows Communication Foundation (WCF) kanalları yedeklemek için gerekli iletişim özelliklerini sağlamak için katmanlı tanımlama öğelerden oluşur. Bağlama öğeleri üç tür içerir:  

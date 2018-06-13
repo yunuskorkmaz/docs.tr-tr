@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497951"
 ---
 # <a name="using-metadata"></a>Meta Verileri Kullanma
 Hizmet meta verilerini makine tarafından okunabilir hizmet açıklamasını içerir. Hizmet meta verilerini hizmet uç noktaları, bağlamaları, sözleşmeler, işlemleri ve iletileri açıklamalarını içerir. Hizmet meta verilerini amacıyla, bir istemci hizmeti kullanan, hizmet açıklaması uygulama ve bir istemci için bağlama dinamik olarak güncelleştirmek için otomatik olarak oluşturmasını da dahil olmak üzere çeşitli kullanabilirsiniz.  

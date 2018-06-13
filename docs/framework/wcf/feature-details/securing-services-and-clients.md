@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497418"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
 Bu bölümdeki bilgiler, güvenlik Windows Communication Foundation (WCF) programlama odaklanır. Genellikle, bu uygun bir sistem tarafından sağlanan bağlama, güvenlik öğesinin özelliklerini ayarlama ve nasıl kimlik bilgilerini kullanmak için hizmet veya istemci tarafından alınır yöneten hizmet davranışları özelliklerin ayarlanmasını seçerek içerir. Gösterildiği gibi güvenlik kullanıcıların çoğunun gereksinimlerine yönelik çoğu senaryo için bu teknikler kapak [ortak güvenlik senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Daha fazla yetenekleri senaryonuz gerektiriyorsa, önce bkz [özel bağlamalarla güvenlik özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); bir çözüm görünür, değilse bkz [genişletme güvenlik](../../../../docs/framework/wcf/extending/extending-security.md). Oluşturuyorsanız (veya ile birlikte varsa) zengin talep kullanan bir sistemi Bkz konularındaki [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

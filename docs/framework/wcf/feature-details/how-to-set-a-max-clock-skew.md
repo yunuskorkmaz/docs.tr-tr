@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496737"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama
 İki bilgisayardaki saat ayarları farklıysa zaman açısından kritik işlevler derailed. Bu olasılığını azaltmak için ayarlayabileceğiniz `MaxClockSkew` özelliğine bir <xref:System.TimeSpan>. Bu özellik üzerinde iki sınıf bulunmaktadır:  

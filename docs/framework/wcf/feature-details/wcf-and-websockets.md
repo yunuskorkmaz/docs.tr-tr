@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498533"
 ---
 # <a name="wcf-and-websockets"></a>WCF ve WebSockets
 .NET Framework 4.5, Windows Communication Foundation'da WebSockets desteği sunar.  WebSockets standart HTTP 80 ve 443 bağlantı noktalarını çift yönlü iletişimi sağlayan bir verimli, standartlara dayalı teknolojisidir. Standart HTTP bağlantı kullanımını aracılarla web üzerinden iletişim WebSockets izin verin.  WebSocket aktarımı üzerinden iletişimi desteklemek için iki yeni standart bağlamaları eklenmiştir. <xref:System.ServiceModel.NetHttpBinding> ve <xref:System.ServiceModel.NetHttpsBinding>. WebSockets özgü ayarları yapılandırılabilir <xref:System.ServiceModel.Channels.HttpTransportBindingElement> erişerek <xref:System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings%2A> özelliği.

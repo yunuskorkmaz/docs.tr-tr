@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495915"
 ---
 # <a name="endpoint-addresses"></a>Uç Noktası Adresleri
 Tüm uç bulun ve uç noktayı tanımlamak için kullanılan ilişkili bir adresi vardır. Bu adres, öncelikle bir Tekdüzen Kaynak Tanımlayıcısı (uç nokta konumunu belirten URI), oluşur. Uç nokta adresi Windows Communication Foundation (WCF) programlama modeli tarafından temsil edilen <xref:System.ServiceModel.EndpointAddress> isteğe bağlı bir içeren sınıf <xref:System.ServiceModel.EndpointAddress.Identity%2A> bitiş noktası diğer uç noktaları tarafından kimlik doğrulamasına olanak tanıyan özellik, Exchange iletileri bu adla ve isteğe bağlı bir dizi <xref:System.ServiceModel.EndpointAddress.Headers%2A> hizmete erişmek için gerekli diğer SOAP üstbilgileri tanımlayan özellikleri. İsteğe bağlı üstbilgi ek sağlar ve daha ayrıntılı tanımlamak veya hizmet uç noktası ile etkileşim kurmak için adresleme bilgi. Bir uç nokta adresi kablo WS adresleme uç noktası başvuru olarak (EPR) gösterilir.  

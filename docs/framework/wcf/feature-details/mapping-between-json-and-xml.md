@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496993"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
 Yazarları ve okuyucular üretilen <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> XML API'si JavaScript nesne gösterimi (JSON) içeriği sağlar. JSON, JavaScript nesne değişmez değerler kümesini kullanarak verileri kodlar. JSON içeriği yüklenirken okuyucular ve bu fabrikası tarafından üretilen yazarları aynı zamanda kullanılan gönderilen veya alınan kullanarak Windows Communication Foundation (WCF) uygulamaları tarafından <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> veya <xref:System.ServiceModel.WebHttpBinding>.  

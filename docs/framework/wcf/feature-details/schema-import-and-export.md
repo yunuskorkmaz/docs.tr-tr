@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497288"
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
 Windows Communication Foundation (WCF) içeren yeni bir seri hale getirme motoru <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Serileştirici kendisini yanı sıra, ilişkili şema alma ve şema verme mekanizmaları WCF içerir. *Şema* seri hale getirici üreten veya seri durumdan çıkarıcının erişebileceği XML şeklini resmi, kesin ve makine tarafından okunabilir açıklamasıdır. WCF World Wide Web Konsorsiyumu (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla yaygın olarak çalışabilir, şema gösterimi olarak kullanır.  

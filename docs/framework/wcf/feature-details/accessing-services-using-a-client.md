@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496002"
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
 İstemci uygulamaları oluşturmak gerekir, yapılandırmak ve Hizmetleri ile iletişim için WCF istemcisi veya kanal nesneleri kullanın. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu, nesneleri ve temel istemci ve kanal nesneleri oluşturmak ve bunları kullanarak söz konusu adımlar genel bakış sağlar.  

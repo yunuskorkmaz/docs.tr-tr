@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496773"
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Nasıl yapılır: IIS'de hizmet olmayan iş akışı barındırma
 İş akışı hizmetleri iş akışları IIS altında barındırılan / OLUŞTU. Başkası tarafından yazılmış bir iş akışı barındırma gerektiğinde kullanışlıdır. Örneğin, iş akışı Tasarımcısı'nı yeniden barındırma ve kullanıcılar kendi iş akışları oluşturmak izin verirseniz.  IIS'de hizmet olmayan iş akışı barındırma işlem geri dönüştürme, boşta kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme gibi özellikleri için destek sağlar. IIS barındırılan iş akışı hizmetleri içeren <xref:System.ServiceModel.Activities.Receive> etkinlikleri ve bu IIS tarafından bir ileti alındığında etkinleştirildi. Hizmet olmayan iş akışları Mesajlaşma etkinlikleri içermez ve bir ileti göndererek varsayılan olarak devre dışı bırakılamaz.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> ve iş akışı örneği oluşturmak için işlemleri içeren bir hizmet sözleşmesini tanımlama. Bu konu basit bir iş akışı oluşturma, bir istemci, iş akışını etkinleştirmek için kullanabileceğiniz bir hizmet sözleşmesini tanımlama ve öğesinden bir sınıf türetme size yol gösterecektir <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> istekleri oluşturma iş akışı için dinlemek için hizmet sözleşmesi kullanır.  

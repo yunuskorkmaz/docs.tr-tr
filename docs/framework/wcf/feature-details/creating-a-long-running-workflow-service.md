@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495713"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konu, uzun süre çalışan iş akışı hizmeti oluşturmayı açıklar. İş akışı hizmetleri uzun süre çalışan uzun bir süre için çalıştırabilirsiniz. Belirli bir noktada iş akışı için bazı ek bilgiler bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanına kalıcı ve bellekten kaldırılır. Ek bilgi kullanılabilir hale geldiğinde iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sıralama sistem uyguluyorsanız.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. Bu, istemciye bir sipariş Kimliğini döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna geçtiğinde ve SQL Server veritabanına kalıcı.  İstemci öğeyi sıralamak için sonraki ileti gönderdiğinde, iş akışı hizmeti belleğe geri yüklenmez ve sipariş işleme tamamlanır. Kod örneğinde öğe siparişe eklenmiş belirten bir dize döndürür. Kod örneği teknolojisi, ancak bunun yerine bir uzun süre çalışan iş akışı hizmetleri gösterilmektedir basit örnek gerçek dünya uygulamasının olması düşünülmemiştir. Bu konu nasıl oluşturulacağını bilmeniz varsayar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projeler ve çözümler.  

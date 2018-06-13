@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496158"
 ---
 # <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 Yönlendirme hizmeti yüksek oranda özelleştirilebilir olsa da, verimli yönlendirme mantığı yeni bir yapılandırma sıfırdan oluştururken tasarlamak için bir sınama olabilir.  Ancak, çoğu yönlendirme hizmeti yapılandırması izleyin birçok yaygın senaryolar vardır. Bu senaryolar belirli yapılandırmanızı doğrudan geçerli olmayabilir, ancak bu senaryoları işlemek için yönlendirme hizmeti nasıl yapılandırılabilir anlama, yönlendirme hizmeti anlaşılmasına yardımcı olur.  

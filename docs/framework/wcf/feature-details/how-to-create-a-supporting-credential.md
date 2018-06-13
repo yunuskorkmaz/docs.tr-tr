@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495892"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektirir bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmet istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlar bir kimlik bilgisi 18 yaş olan. İkinci kimlik bilgisinin bir *kimlik bilgisi destekleyen*. Bu konuda, bir Windows Communication Foundation (WCF) istemcisi gibi kimlik bilgilerini uygulamak açıklanmaktadır.  

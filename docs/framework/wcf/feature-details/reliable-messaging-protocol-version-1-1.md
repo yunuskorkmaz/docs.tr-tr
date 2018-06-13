@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496964"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>Güvenilir Mesajlaşma Protokolü sürüm 1.1
 Bu konu, WS-ReliableMessaging için Windows Communication Foundation (WCF) uygulama ayrıntılarını kapsar Şubat 2007 (sürüm 1.1) Protokolü HTTP aktarımı kullanarak birlikte çalışma için gerekli. WCF kısıtlamalar ve bu konuda açıklanan açıklamalar WS-ReliableMessaging belirtimiyle izler. WS-ReliableMessaging sürüm 1.1 protokolünü başlayarak uygulandığını unutmayın [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)].  

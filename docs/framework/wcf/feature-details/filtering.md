@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497249"
 ---
 # <a name="filtering"></a>Filtreleme
 Sistem filtreleme Windows Communication Foundation (WCF) iletileri eşleşmiyor ve işletimsel kararları için bildirim temelli filtreleri kullanabilirsiniz. Yapılacaklar içeren bir ileti iletinin parçası inceleyerek belirlemek için filtreleri kullanabilirsiniz. Sıraya alma işlemi, örneğin, bir ileti sıranın önünü taşınıp taşınmayacağını belirlemek için bilinen bir üstbilgi öncelik öğesinin denetlemek için XPath 1.0 sorgusu kullanabilirsiniz.  

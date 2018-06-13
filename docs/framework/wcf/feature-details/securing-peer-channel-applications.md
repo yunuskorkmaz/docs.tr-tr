@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497561"
 ---
 # <a name="securing-peer-channel-applications"></a>Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 Gibi diğer bağlamaları altında [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` sahip güvenlik varsayılan olarak etkindir ve her ikisi de taşıma ve ileti tabanlı güvenlik (veya) sunar. Bu konuda, bu iki güvenlik türleri açıklanmaktadır. Güvenlik türü bağlama belirtimi güvenlik modu etiketinde belirtilir (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  

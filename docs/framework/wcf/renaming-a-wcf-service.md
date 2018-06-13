@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498993"
 ---
 # <a name="renaming-a-wcf-service"></a>Bir WCF Hizmetini Yeniden Adlandırma
 Bu konu, Windows Communication Foundation (WCF) hizmetini nasıl yeniden adlandırabilirsiniz açıklar.  

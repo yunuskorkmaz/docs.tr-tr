@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763647"
 ---
 # <a name="namespaces-entity-sql"></a>Ad alanları (varlık SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Tür adları, varlık kümeleri, İşlevler vb. gibi genel tanımlayıcıları için ad çakışmalarını önlemek için ad alanları tanıtır. Ad alanı desteği [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ad alanı desteği benzer [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  

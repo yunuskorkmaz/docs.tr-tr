@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498585"
 ---
 # <a name="syndication-extensibility"></a>Dağıtım Genişletilebilirliği
 Dağıtım API, çeşitli biçimlerde hat yazılması dağıtılmış içerik sağlayan bir biçim Tarafsız programlama modeli sağlamak için tasarlanmıştır. Soyut veri modeli şu sınıflardan oluşur:  

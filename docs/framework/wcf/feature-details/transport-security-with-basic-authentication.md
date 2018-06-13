@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499121"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Temel Kimlik Doğrulama ile Taşıma Güvenliği
 Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve istemci gösterir. Güvenli Yuva Katmanı (SSL) için kullanılan geçerli bir X.509 sertifikası sunucu gerekir ve istemcilerin sunucu sertifikasına güvenmesi gerekir. Ayrıca, Web hizmeti, kullanılabilir bir SSL uygulaması zaten içeriyor. Daha fazla bilgi için etkinleştirme temel kimlik doğrulaması hakkında Internet Information Services (IIS) üzerinde [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  

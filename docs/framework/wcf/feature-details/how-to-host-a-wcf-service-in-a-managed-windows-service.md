@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497223"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
 Bu konu, bir Windows hizmeti tarafından barındırılan bir Windows Communication Foundation (WCF) hizmetini oluşturmak için gereken temel adımlarda özetler. Senaryo ileti etkin değil güvenli bir ortamda Internet Information Services (IIS) dışında barındırılan uzun süre çalışan WCF Hizmeti seçeneği barındırma yönetilen Windows hizmet etkinleştirilir. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.  

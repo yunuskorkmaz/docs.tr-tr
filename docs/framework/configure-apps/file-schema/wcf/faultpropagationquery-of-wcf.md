@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747365"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>WCF &lt;faultPropagationQuery&gt;
 İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan bir sorgu temsil eder.  Bu olay bir FaultHandler bir arıza her işlediğinde oluşur. İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bu tür sorgu kullanmanız gerekir. Sorgu Hatası yayma kayıtlara abone olmak izleme katılımcı gereklidir.  

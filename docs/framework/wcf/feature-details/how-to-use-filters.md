@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496357"
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
 Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlarda özetler. Bu örnekte, iletiler için bir hesap makinesi hizmetinin, regularCalc ve roundingCalc iki uygulamaları yönlendirilir. Her iki uygulamaları aynı işlemleri destekler; Ancak bir hizmet döndürmeden önce hesaplamalarının yakın tamsayı değere yuvarlar. Bir istemci uygulaması hizmetinin yuvarlama sürümü kullanılıp kullanılmayacağını belirtmek kurabilmesi gerekir; Hizmet tercih ifade, ileti iki hizmetleri arasında dengeli yoktur. Her iki Hizmetleri tarafından sunulan işlemleri şunlardır:  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496057"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
 Taşıma ve ileti kimlik bilgileri olan bir hizmeti güvenli hale getirme en iyi bir aktarım ve ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti Katmanı Güvenliği katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini, çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konuda, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımlar açıklanmıştır <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

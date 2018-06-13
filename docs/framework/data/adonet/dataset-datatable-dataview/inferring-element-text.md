@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762721"
 ---
 # <a name="inferring-element-text"></a>Öğe metni çıkarımını yapma
 Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğeleri gibi yeni bir sütun adıyla tabloları gibi olayla için alt öğe varsa **TableName_Text** öğe için olayla tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satırı eklenir ve yeni bir sütun depolanır. **ColumnMapping** yeni bir sütun özelliği, ayarlanacak **MappingType.SimpleContent**.  

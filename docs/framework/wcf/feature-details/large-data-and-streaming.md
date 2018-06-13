@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496568"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF) bir XML tabanlı iletişim altyapısıdır. XML verilerini yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](http://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemler geliştiricileri ve mimarlar genellikle açısından gönderilen iletiler kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlaması, ikili veri verimli aktarımı için özel zorluklar doğurur.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498562"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation İşlemleri Genel Bakış
 İşlemler eylemler veya tek bir bölünemez birime işlemleri yürütme kümesini gruplamak için bir yol sağlar. Bir işlem, aşağıdaki özelliklere sahip işlemleri koleksiyonudur:  

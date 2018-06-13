@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497964"
 ---
 # <a name="wcf-discovery"></a>WCF Keşfetme
 Windows Communication Foundation (WCF) hizmetlerini birlikte çalışabilir bir şekilde WS bulma protokolünü kullanarak çalışma zamanında bulunabilir etkinleştirmek için destek sağlar. WCF hizmetleri kullanılabilirliklerini bir çok noktaya yayın ileti kullanarak ağ veya bulma proxy sunucu duyurusu. İstemci uygulamaları, ağ veya bir ölçüt kümesine uyan Hizmetleri bulmak için bulma proxy sunucusu arama yapabilirsiniz. Bu bölümdeki konular, genel bir bakış sağlar ve bu özellik ayrıntılı için programlama modelini tanımlar.  

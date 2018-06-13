@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562982"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML Koleksiyonları ve Koleksiyon Türleri
 Bu konuda, bir koleksiyon desteklemek ve koleksiyon öğeleri öğesi bir üst nesne öğenin alt veya özellik öğesi oluşturmak için XAML sözdizimini desteklemek için tasarlanmıştır türleri özelliklerini tanımlamak açıklar.  
