@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172116"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="f998c-102">delegate (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f998c-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="f998c-103">Bir temsilci türü bildirimi yöntemi imza benzer.</span><span class="sxs-lookup"><span data-stu-id="f998c-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="f998c-104">Dönüş değeri ve parametreleri herhangi bir türde herhangi bir sayıda sahiptir:</span><span class="sxs-lookup"><span data-stu-id="f998c-104">It has a return value and any number of parameters of any type:</span></span>  

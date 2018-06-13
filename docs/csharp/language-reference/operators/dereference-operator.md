@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171986"
 ---
 # <a name="-gt-operator-c-reference"></a><span data-ttu-id="c5d5c-102">-&gt; İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="c5d5c-102">-&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="c5d5c-103">`->` İşleci, birleştirir işaretçi başvurusunun kaldırılmasının ve üye erişimi.</span><span class="sxs-lookup"><span data-stu-id="c5d5c-103">The `->` operator combines pointer dereferencing and member access.</span></span>  

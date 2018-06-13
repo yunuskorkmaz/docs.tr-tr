@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172129"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="12e46-102">sealed (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="12e46-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="12e46-103">Bir sınıfa uygulandığında `sealed` değiştiricisi ondan devralan diğer sınıflara engeller.</span><span class="sxs-lookup"><span data-stu-id="12e46-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="12e46-104">Aşağıdaki örnekte, sınıf `B` sınıfından devralan `A`, ancak hiçbir sınıf sınıfı devralabilirsiniz `B`.</span><span class="sxs-lookup"><span data-stu-id="12e46-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

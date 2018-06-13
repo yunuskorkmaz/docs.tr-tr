@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171812"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="cd173-102">|| İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="cd173-102">|| Operator (C# Reference)</span></span>
 <span data-ttu-id="cd173-103">Koşullu-OR işleci (`||`) bir mantıksal-OR, gerçekleştirir, `bool` işlenen.</span><span class="sxs-lookup"><span data-stu-id="cd173-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="cd173-104">İlk işlenen değerlendirilirse `true`, ikinci işlenen hesaplanan değil.</span><span class="sxs-lookup"><span data-stu-id="cd173-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="cd173-105">İlk işlenen değerlendirilirse `false`, ikinci işleci veya ifadesi bir bütün olarak değerlendiren olup olmadığını belirler `true` veya `false`.</span><span class="sxs-lookup"><span data-stu-id="cd173-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  

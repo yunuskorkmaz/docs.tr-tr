@@ -7,6 +7,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172247"
 ---
 # <a name="protected-internal-c-reference"></a><span data-ttu-id="82829-102">korumalı iç (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="82829-102">protected internal (C# Reference)</span></span>
 <span data-ttu-id="82829-103">`protected internal` Anahtar sözcüğü birleşimi olan bir üye erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="82829-103">The `protected internal` keyword combination is a member access modifier.</span></span> <span data-ttu-id="82829-104">Korumalı bir iç üye geçerli derlemesinden veya içeren sınıfından türetilen türlerden erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="82829-104">A protected internal member is accessible from the current assembly or from types that are derived from the containing class.</span></span> <span data-ttu-id="82829-105">Bir karşılaştırması `protected internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="82829-105">For a comparison of `protected internal` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

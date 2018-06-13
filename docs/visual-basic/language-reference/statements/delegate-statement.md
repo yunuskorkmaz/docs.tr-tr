@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234684"
 ---
 # <a name="delegate-statement"></a><span data-ttu-id="274b8-102">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="274b8-102">Delegate Statement</span></span>
 <span data-ttu-id="274b8-103">Bir temsilci bildirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="274b8-103">Used to declare a delegate.</span></span> <span data-ttu-id="274b8-104">Bir temsilci başvurduğu bir başvuru türü olan bir `Shared` yöntemi türü veya örnek yöntemi nesnenin.</span><span class="sxs-lookup"><span data-stu-id="274b8-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="274b8-105">Parametre ve dönüş türleri eşleşen herhangi bir yordam, bu temsilci sınıfının bir örneğini oluşturmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="274b8-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="274b8-106">Yordam sonra yoluyla temsilci örnek daha sonra çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="274b8-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  

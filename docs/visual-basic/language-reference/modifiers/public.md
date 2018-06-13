@@ -13,6 +13,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235924"
 ---
 # <a name="public-visual-basic"></a><span data-ttu-id="b0d06-102">Public (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0d06-102">Public (Visual Basic)</span></span>
 <span data-ttu-id="b0d06-103">Bir veya daha fazla bildirilen programlama öğeleri hiçbir erişim kısıtlaması olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="b0d06-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  

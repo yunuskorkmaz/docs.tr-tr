@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234471"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="ba99a-102">Structure Yapısı</span><span class="sxs-lookup"><span data-stu-id="ba99a-102">Structure Statement</span></span>
 <span data-ttu-id="ba99a-103">Bir yapı adını bildirir ve tanımını değişkenleri, özellikleri, olayları ve yapısı oluşur yordamları sunar.</span><span class="sxs-lookup"><span data-stu-id="ba99a-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  

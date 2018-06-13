@@ -8,6 +8,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172431"
 ---
 # <a name="working-with-linq"></a><span data-ttu-id="a4274-103">LINQ ile çalışma</span><span class="sxs-lookup"><span data-stu-id="a4274-103">Working with LINQ</span></span>
 

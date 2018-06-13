@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956188"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a><span data-ttu-id="9a6ec-102">İzlenecek yol: C# kullanarak bir nesneyi kalıcı kılma</span><span class="sxs-lookup"><span data-stu-id="9a6ec-102">Walkthrough: persisting an object using C#</span></span> #
 

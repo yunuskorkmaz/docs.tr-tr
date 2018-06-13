@@ -9,6 +9,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33848508"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a><span data-ttu-id="e24b0-103">Bir basit veri güdümlü CRUD mikro hizmet oluşturma</span><span class="sxs-lookup"><span data-stu-id="e24b0-103">Creating a simple data-driven CRUD microservice</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172496"
 ---
 # <a name="data-templating-overview"></a><span data-ttu-id="9da1d-102">Veri Şablonu Oluşturmaya Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9da1d-102">Data Templating Overview</span></span>
 <span data-ttu-id="9da1d-103">WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar.</span><span class="sxs-lookup"><span data-stu-id="9da1d-103">The WPF data templating model provides you with great flexibility to define the presentation of your data.</span></span> <span data-ttu-id="9da1d-104">WPF denetimleri veri sunumu özelleştirme desteklemek için yerleşik işlevselliğe sahiptir.</span><span class="sxs-lookup"><span data-stu-id="9da1d-104">WPF controls have built-in functionality to support the customization of data presentation.</span></span> <span data-ttu-id="9da1d-105">Bu konuda ilk nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.DataTemplate> ve Özel mantık ve hiyerarşik veri görüntüsünü desteği göre şablonları seçimi gibi diğer veri şablon özellikleri sunar.</span><span class="sxs-lookup"><span data-stu-id="9da1d-105">This topic first demonstrates how to define a <xref:System.Windows.DataTemplate> and then introduces other data templating features, such as the selection of templates based on custom logic and the support for the display of hierarchical data.</span></span>  
