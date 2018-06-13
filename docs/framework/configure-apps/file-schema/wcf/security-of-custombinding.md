@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752240"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a><span data-ttu-id="81dab-102">&lt;customBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="81dab-102">&lt;security&gt; of &lt;customBinding&gt;</span></span>
 <span data-ttu-id="81dab-103">Özel bağlama için güvenlik seçeneklerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="81dab-103">Specifies the security options for a custom binding.</span></span>  

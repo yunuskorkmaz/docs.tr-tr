@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751668"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="1576b-102">&lt;MsmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="1576b-102">&lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="1576b-103">MSMQ aracılığıyla yönlendirme ileti kuyruğa alma desteği sağlayan bir bağlama tanımlar.</span><span class="sxs-lookup"><span data-stu-id="1576b-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  
