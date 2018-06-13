@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533763"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formda Sesi Döngü Olarak Çalma
 Aşağıdaki kod örneğinde ses sürekli olarak yürütür. Olduğunda kodda `stopPlayingButton_Click` olay işleyicisi çalışır, durakları oynatılmakta ses. Ses çalma, hiçbir şey olmaz.  

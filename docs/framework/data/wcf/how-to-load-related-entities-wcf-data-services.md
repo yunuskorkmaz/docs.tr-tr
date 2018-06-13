@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358170"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>Nasıl yapılır: ilgili varlıklar (WCF Veri Hizmetleri) yükleme
 İlişkili varlıklarda yüklemek gerektiğinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> sınıfı. Aynı zamanda <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi <xref:System.Data.Services.Client.DataServiceQuery%601> ilgili varlıklar aynı sorgu yanıtında isteğini önleyebiliriz yüklenmesi gerektirecek şekilde.  

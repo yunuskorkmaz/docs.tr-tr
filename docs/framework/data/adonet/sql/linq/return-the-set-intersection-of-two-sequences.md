@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358790"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>İki dizinin kümesi kesişimini döndürür
 Kullanım <xref:System.Linq.Queryable.Intersect%2A> iki sıraları kümesi kesişimi işleci.  

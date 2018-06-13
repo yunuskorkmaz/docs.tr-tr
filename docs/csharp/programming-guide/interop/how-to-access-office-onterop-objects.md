@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338750"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Nasıl yapılır: Visual C# Özelliklerini Kullanarak Office Birlikte Çalışma Nesnelerine Erişim (C# Programlama Kılavuzu)
 Visual C# Office API nesnelerine erişimi basitleştiren özellikleri vardır. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, yeni özellikleri yeni bir tür olarak adlandırılan `dynamic`ve değer parametreleri değilmiş gibi COM yöntemleri başvuru parametrelere bağımsız değişkenleri geçirme özelliği.  

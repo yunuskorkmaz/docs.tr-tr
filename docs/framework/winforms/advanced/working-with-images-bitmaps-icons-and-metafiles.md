@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526842"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar `Bitmap` ızgara görüntüleri ile çalışmak için sınıf ve `Metafile` vektör görüntülerle çalışma sınıfı. `Bitmap` Ve `Metafile` sınıflarının her ikisi de devral `Image` sınıfı.  

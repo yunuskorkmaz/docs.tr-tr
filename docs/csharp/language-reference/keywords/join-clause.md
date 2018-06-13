@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289405"
 ---
 # <a name="join-clause-c-reference"></a>join tümcesi (C# Başvurusu)
 `join` Yan tümcesi nesne modelinde hiçbir doğrudan ilişkisine sahip farklı kaynak sıraları öğelerinden ilişkilendirmek için yararlıdır. Her kaynak öğelerinde eşitlik için karşılaştırılması gereken bazı değeri paylaşmak tek gereksinimdir. Örneğin, belirli bir ürünü tedarikçileri listesini ve alıcıların listesi yemek dağıtıcı olabilir. A `join` yan tümcesi, örneğin, satıcılar listesini oluşturmak için kullanılabilir ve tüm aynı olan alıcılar söz konusu ürünün belirtilen bölge.  

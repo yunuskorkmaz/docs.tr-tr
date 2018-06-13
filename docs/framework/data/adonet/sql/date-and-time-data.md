@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354874"
 ---
 # <a name="date-and-time-data"></a>Tarih ve saat verilerini
 SQL Server 2008, tarih ve saat bilgilerini işleme yeni veri türleri tanıtır. Yeni veri türleri, tarih ve saat için ayrı türleri ve büyük aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 hizmet paketi (SP) 1, SQL Server için .NET Framework veri sağlayıcısı başlatılıyor (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üstü) bu yeni özellikleri ile SqlClient kullanılacak.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536100"
 ---
 # <a name="how-to-validate-data-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Verileri Doğrulama
 Aşağıdaki kod örneğinde bir kullanıcı tarafından girilen verileri doğrulamak nasıl gösteren bir <xref:System.Windows.Forms.DataGridView> denetim. Bu örnekte, <xref:System.Windows.Forms.DataGridView> satırları doldurulur `Customers` Northwind örnek veritabanı tablosu. Zaman kullanıcı düzenlediğini hücrede `CompanyName` sütun, değeri test geçerliliğini boş değil, denetleyerek. Olay işleyicisi <xref:System.Windows.Forms.DataGridView.CellValidating> olay bulur değeri boş bir dize olduğunu <xref:System.Windows.Forms.DataGridView> kullanıcı hücrenin boş olmayan bir dize girilene kadar çıkmasını engeller.  

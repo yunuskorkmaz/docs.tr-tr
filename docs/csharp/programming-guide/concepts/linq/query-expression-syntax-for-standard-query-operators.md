@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339845"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Standart sorgu işleçleri (C#) için sorgu ifade sözdizimi
 Bazı daha sık kullanılan standart sorgu işleçleri bunları parçası olarak çağrılacak etkinleştiren C# dili anahtar sözcüğü sözdizimini adanmış bir *sorgu ifadesi*. Bir sorgu ifadesi daha sorgu ifade, farklı, daha okunabilir bir form olan kendi *yöntemi tabanlı* eşdeğer. Sorgu ifadesi yan tümceleri derleme zamanında sorgu yöntemleri çağrıları içine çevrilir.  

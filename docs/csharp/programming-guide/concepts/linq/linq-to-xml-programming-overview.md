@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339806"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>LINQ-XML programlamaya genel bakış (C#)
 Bu konular hakkında üst düzey genel bakış bilgileri sağlar. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıfları, ayrıntılı bilgiler yanı sıra en önemli sınıfların üç.  

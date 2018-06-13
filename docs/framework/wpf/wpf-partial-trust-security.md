@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566476"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a> Genel olarak, Internet uygulamaları kötü amaçlı zarar önlemek için önemli sistem kaynaklarına doğrudan erişimi olmaktan sınırlandırılmalıdır. Varsayılan olarak, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] ve istemci tarafı komut dosyası dili önemli sistem kaynaklarına erişmek mümkün değildir. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabilir çünkü kısıtlamaları benzer bir dizi uygun olmalıdır. Bu kısıtlamaları zorlamak için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hem dayanır [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ve [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (bkz [WPF güvenlik stratejisi - Platform güvenliği](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet bölgesi isteği [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Internet, yerel intranet ya da yerel bilgisayar başlatıldığında yedeklemiş izinler kümesi. Herhangi bir şey izinler kümesini değerinden ile çalışan uygulamalar, kısmi güven ile çalışan söylenir.  

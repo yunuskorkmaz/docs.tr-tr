@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535675"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme
 Şu anda seçili tarih veya saat Windows Forms'ta <xref:System.Windows.Forms.DateTimePicker> denetim belirlenir <xref:System.Windows.Forms.DateTimePicker.Value%2A> özelliği. Ayarlayabileceğiniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> denetimi görüntülenmeden önce özelliği (örneğin, tasarım zamanında veya formun <xref:System.Windows.Forms.Form.Load> olay) hangi tarih başlangıçta denetiminde seçilir belirlemek için. Varsayılan olarak, Denetim 's <xref:System.Windows.Forms.DateTimePicker.Value%2A> geçerli tarih olarak ayarlanır. Denetimin değiştirirseniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> kodda denetimi yeni ayar yansıtmak için form üzerinde otomatik olarak güncelleştirilir.  

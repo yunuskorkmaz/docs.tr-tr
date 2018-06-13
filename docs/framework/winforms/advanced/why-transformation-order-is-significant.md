@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526083"
 ---
 # <a name="why-transformation-order-is-significant"></a>Dönüştürme Sırası Neden Önemlidir
 Tek bir <xref:System.Drawing.Drawing2D.Matrix> nesnesi, tek bir dönüştürmeyi veya bir dizi dönüştürmeyi depolayabilir. İkinci bileşik dönüştürme adı verilir. Bileşik bir dönüştürme matrisi tek dönüştürmeler matrisleri çarpılarak elde edilir.  

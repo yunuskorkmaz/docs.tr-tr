@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362034"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak veri bağlama
 Oluşturulan veri nesneleri temel alan veri kaynakları oluşturabileceğiniz bir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci uygulaması. Kullanarak veri hizmetine başvuru eklediğinizde **hizmet Başvurusu Ekle** iletişim kutusunda, proje veri kaynağı ile birlikte oluşturulan istemci veri sınıflarını oluşturulur. Bir veri kaynağına veri çıkarır hizmeti her varlık kümesi için oluşturulur. Bu veri kaynağı öğeleri sürükleyerek hizmetinden alınan verileri görüntüleyen formlar oluşturabilirsiniz **veri kaynakları** tasarımcıya penceresi. Bu öğeler, veri kaynağı ile ilişkili denetimleri haline gelir. Yürütme sırasında bu veri kaynağı bir örneğine bağlanır <xref:System.Data.Services.Client.DataServiceCollection%601> veri hizmetine bir sorgu tarafından döndürülen nesnelerle doldurulur sınıfı. Daha fazla bilgi için bkz: [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363399"
 ---
 # <a name="polling-in-console-applications"></a>Konsol uygulamaları yoklama
 Zaman uyumsuz işlemleri ADO.NET başka bir iş parçacığında diğer görevler gerçekleştirirken bir iş parçacığı zaman veritabanı işlemlerini başlatmasını sağlar. Çoğu senaryoda, ancak, veritabanı işlemi tamamlanana kadar burada, uygulamanızın devam etmemelisiniz noktası ulaşırsınız. Böyle durumlarda, işlem veya tamamlanıp tamamlanmadığını belirlemek için zaman uyumsuz işlemi yoklamak kullanışlıdır.  

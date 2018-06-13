@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357867"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Toplu işlemler (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Destekler toplu işleme isteklerinin bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Daha fazla bilgi için bkz: [OData: toplu işleme](http://go.microsoft.com/fwlink/?LinkId=186075). İçinde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], kullanan her bir işlemin <xref:System.Data.Services.Client.DataServiceContext>bir sorgu yürütülürken veya değişiklikleri, veri hizmetine gönderilen ayrı bir istek sonuçlarında kaydetme gibi. İşlem kümesi için mantıksal bir kapsam korumak için açıkça işletimsel toplu tanımlayabilirsiniz. Bu toplu işlemdeki tüm işlemleri tek bir HTTP istek veri hizmeti gönderilir, server'ın otomatik olarak işlemlerini sağlar ve veri hizmetine gidiş dönüş sayısını azaltan sağlar.  

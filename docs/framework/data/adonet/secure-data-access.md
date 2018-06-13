@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362717"
 ---
 # <a name="secure-data-access"></a>Güvenli veri erişimi
 Güvenli ADO.NET kod yazmak için temel alınan veri deposunda veya veritabanı güvenlik mekanizmaları anlamak zorunda. Diğer özellikler veya uygulamanızın içerebilir bileşenleri güvenlik etkilerini göz önünde bulundurmanız gerekir.  

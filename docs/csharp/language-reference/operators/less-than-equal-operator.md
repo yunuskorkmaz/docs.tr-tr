@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271168"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;= İşleci (C# Başvurusu)
 Tüm sayısal ve numaralandırma türlerinin bir "değerinden küçük veya eşit" ilişkisel işleci tanımlama (`<=`) döndüren `true` ilk işlenen ikinci eşit veya daha az ise `false` Aksi takdirde.  

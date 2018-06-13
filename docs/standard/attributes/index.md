@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567503"
 ---
 # <a name="extending-metadata-using-attributes"></a>Öznitelikleri Kullanarak Meta Verileri Genişletme
 Ortak dil çalışma zamanı anahtar sözcük benzeri tanımlayıcı bildirimler eklemenize olanak sağlayan türleri, alanları, yöntemleri ve özellikleri gibi programlama öğelerine ek açıklama eklemek için öznitelikler çağrılır. Çalışma zamanı için kodunuzu derlerken Microsoft Ara dile (MSIL) dönüştürülür ve taşınabilir yürütülebilir (PE) dosya derleyici tarafından oluşturulan meta verilerinin yanı sıra içinde yerleştirilir. Öznitelikler, çalışma zamanı yansıma Hizmetleri kullanarak ayıklanan meta verileri içine fazladan açıklayıcı bilgiler yerleştirin olanak tanır. Öğesinden türetilen özel sınıfların örneklerini bildirirken derleyici öznitelikleri oluşturur <xref:System.Attribute?displayProperty=nameWithType>.  

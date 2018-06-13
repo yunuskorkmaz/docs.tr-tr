@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531930"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Formları GroupBox Denetimiyle Denetimleri Gruplandırma
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri, diğer denetimler gruplandırmak için kullanılır. Denetimleri gruplandırma için üç nedeni vardır:  

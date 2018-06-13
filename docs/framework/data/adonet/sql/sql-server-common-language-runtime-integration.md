@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355743"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server ortak dil çalışma zamanı tümleştirmesi
 .NET Framework ortak dil çalışma zamanı (CLR) bileşeni tümleştirme Windows için Microsoft SQL Server 2005 sunmuştur. Bu, saklı yordamlar, Tetikleyiciler, kullanıcı tanımlı türler, kullanıcı tanımlı işlevler, kullanıcı tanımlı toplamlarda ve akış tablo değerli işlevler, Microsoft Visual Basic .NET ve Microsoft dahil olmak üzere, herhangi bir .NET Framework dil kullanarak yazabildiğinizi anlamına gelir. Visual C#. <xref:Microsoft.SqlServer.Server> Ad alanı, böylece yönetilen kod ile Microsoft SQL Server ortamını etkileşim kurabilen bir dizi yeni uygulama programlama arabirimleri (API) içerir.  

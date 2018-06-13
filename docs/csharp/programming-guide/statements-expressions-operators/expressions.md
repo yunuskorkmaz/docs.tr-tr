@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339663"
 ---
 # <a name="expressions-c-programming-guide"></a>İfadeler (C# Programlama Kılavuzu)
 Bir *ifade* bir veya daha fazla işlenenler ve tek bir değer, nesne, yöntemi veya ad alanı için değerlendirilen sıfır veya daha fazla işleçleri dizisidir. Değişmez değer, bir yöntem çağrısının, bir işleç ve kendi işlenenler ifadeleri oluşabilir veya *basit bir ad*. Basit adları bir değişken, türü üyesinin, yöntem parametresi, ad alanı veya türü adı olabilir.  

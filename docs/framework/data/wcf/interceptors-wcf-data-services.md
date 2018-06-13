@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363806"
 ---
 # <a name="interceptors-wcf-data-services"></a>Dinleyiciler (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir uygulama için bir işlem Özel mantık ekleyebilmeleri istek iletilerini müdahale sağlar. Gelen iletilere verileri doğrulamak için bu özel mantık kullanabilirsiniz. Daha fazla kapsamı bir sorgu isteği gibi bir istek başına temelinde özel yetkilendirme ilkesi eklemek için kısıtlamak için de kullanabilirsiniz.  

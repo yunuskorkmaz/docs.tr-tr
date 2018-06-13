@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274956"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Nasıl yapılır: Yöntemden Sorgu Döndürme (C# Programlama Kılavuzu)
 Bu örnek bir sorgu ve dönüş değeri olarak döndürme gösterilmektedir bir `out` parametresi.  

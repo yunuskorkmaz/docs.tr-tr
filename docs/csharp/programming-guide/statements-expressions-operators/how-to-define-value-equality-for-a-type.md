@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339611"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için Değer Eşitliği Tanımlama (C# Programlama Kılavuzu)
 Sınıfta veya yapı tanımladığınızda, türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için bir anlam olup olmadığını karar. Genellikle, değer eşitliği bazı sıralama koleksiyona eklenecek nesne türü beklenirken ya da kendi birincil amacı, alan veya özellikler kümesi depolamaktır uygulayın. Tüm alanlar ve türü özelliklerinde karşılaştırması için değer eşitliği tanımınız temel ya da bir alt tanımını temel alabilir. Ancak her iki durumda da ve sınıflar ve yapılar, uygulamanızı eşdeğer beş garanti izlemelisiniz:  

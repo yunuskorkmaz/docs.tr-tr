@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356107"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ-SQL N katmanlı Web Hizmetleri
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle orta katman bir Web hizmeti gibi birbirine sıkı şekilde bağlı veri erişim katmanı (DAL) olarak kullanılmak üzere tasarlanmıştır. Sunu katmanı bir ASP.NET Web sayfasıdır sonra kullandığınız <xref:System.Web.UI.WebControls.LinqDataSource> Web kullanıcı arabirimi arasında veri aktarımını yönetmek için sunucu denetimi ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Orta katmanda. Sunu katmanı ASP.NET sayfası değilse, seri hale getirme ve seri durumundan çıkarılması veri yönetmek için bazı ek iş Orta katmanda ve sunu katmanı yapmalısınız.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362168"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve dış eşleme dosyaları doğrula
 Dış eşleme dosyaları ve değiştirmeniz .dbml dosyaları ilgili şema tanımlarını karşı doğrulanmalıdır. Bu konu, doğrulama işlemini uygulamak için Visual Studio kullanıcılarla adımları sağlar.  

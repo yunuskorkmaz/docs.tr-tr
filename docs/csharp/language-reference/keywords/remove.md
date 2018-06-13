@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269125"
 ---
 # <a name="remove-c-reference"></a>remove (C# Başvurusu)
 `remove` Bağlamsal anahtar sözcüğü gelen istemci kodu işlemleri olduğunda çağrılan bir özel olay erişimcisi tanımlamak için kullanılır, [olay](../../../csharp/language-reference/keywords/event.md). Özel bir sağlarsanız `remove` erişimci de sağlamanız bir [ekleme](../../../csharp/language-reference/keywords/add.md) erişimcisi.  

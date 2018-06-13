@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269286"
 ---
 # <a name="-operator-c-reference"></a>= İşleci (C# Başvurusu)
 Atama işleci (`=`) depolama konumu, özellik ya da kendi sol işleneni tarafından belirtilen dizin oluşturucu sağ işleneni değerini depolar ve sonuç olarak değeri döndürür. İşlenen aynı türde olması gerekir (veya sağ işleneni sol işleneni türüne örtük olarak dönüştürülebilir olmalıdır).  

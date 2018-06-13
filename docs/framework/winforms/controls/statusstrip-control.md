@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534511"
 ---
 # <a name="statusstrip-control"></a>StatusStrip Denetimi
 Windows Forms `StatusStrip` denetimi formlarında genellikle uygulamanın çeşitli durum bilgileri görüntüleyebilir, bir penceresinin en altında görüntülenen bir alanı olarak kullanılır. `StatusStrip` genellikle denetimleriniz `ToolStripStatusLabel` metin veya durumunu göstermek için simgeler görüntüleme denetimleri bunlardaki veya <xref:System.Windows.Forms.ToolStripProgressBar> , grafik bir işleminin tamamlanma durumunu görüntüler.  

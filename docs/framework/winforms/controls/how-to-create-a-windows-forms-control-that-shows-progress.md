@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531436"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma
 Aşağıdaki kod örneğinde adlı özel bir denetim gösterilir `FlashTrackBar` kullanıcı düzeyinde veya uygulama ilerlemesini göstermek için kullanılabilir. Gradyan ilerleme görsel olarak sunmak için kullanır.  

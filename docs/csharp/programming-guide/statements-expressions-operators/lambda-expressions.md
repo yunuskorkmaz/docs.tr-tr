@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340651"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda İfadeleri (C# Programlama Kılavuzu)
 Lambda ifadesi bir [anonim işlevi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) oluşturmak için kullanabileceğiniz [Temsilciler](../../../csharp/programming-guide/delegates/using-delegates.md) veya [ifade ağacına](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) türleri. Lambda ifadeleri kullanarak, bağımsız değişken yerine geçebilecek veya işlev çağrılarının değeri olarak döndürülebilecek, yerel işlevler yazabilirsiniz. Lambda ifadeleri LINQ sorgu ifadeleri yazmak için özellikle yararlıdır.  

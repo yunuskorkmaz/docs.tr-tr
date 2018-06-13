@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340118"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Öğretici: Düzenleme içeriği WordprocessingML belgesinde (C#)
 Bu öğretici, XML ve XML belgeleri işlemek için LINQ ve işlevsel transformational yaklaşımı uygulamak gösterilmiştir. C# örnekleri sorgulamak ve Microsoft Word tarafından kaydedilen Office Açık XML WordprocessingML belgelerde bilgiyi işleyebilir.  

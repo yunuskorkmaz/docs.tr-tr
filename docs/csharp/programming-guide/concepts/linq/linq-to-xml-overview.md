@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339387"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ-XML genel bakış (C#)
 XML yaygın olarak birçok bağlamlarında biçim verileri için bir yol olarak benimsemiştir. Örneğin, Web, yapılandırma dosyalarını, Microsoft Office Word dosyaları ve veritabanları XML bulabilirsiniz.  

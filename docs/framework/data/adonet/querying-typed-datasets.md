@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353491"
 ---
 # <a name="querying-typed-datasets"></a>Yazılan veri kümeleri sorgulama
 Varsa şeması <xref:System.Data.DataSet> bilinen uygulama tasarım zamanında yazılmış kullanmanızı öneririz <xref:System.Data.DataSet> kullanırken [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Yazılmış bir <xref:System.Data.DataSet> türeyen bir sınıf bir <xref:System.Data.DataSet>. Bu nedenle, tüm yöntemleri, olayları ve özelliklerini devralır bir <xref:System.Data.DataSet>. Ayrıca, yazılı <xref:System.Data.DataSet> kesin türü belirtilmiş yöntemleri, olayları ve özellikleri sağlar. Bu, tablolar ve sütunlar adıyla koleksiyon tabanlı yöntemleri kullanmak yerine erişebileceğiniz anlamına gelir. Bu sorgular daha basit ve daha okunabilir yapar. Daha fazla bilgi için bkz: [yazılan veri kümeleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  

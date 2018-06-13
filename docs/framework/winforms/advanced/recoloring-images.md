@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525960"
 ---
 # <a name="recoloring-images"></a>Görüntüleri Yeniden Renklendirme
 Yeniden renklendirme görüntü renkleri ayarlama işlemidir. Yeniden renklendirme ilişkin bazı örnekler, başka bir, başka bir renk göreli bir rengin yoğunluğunu ayarlama, parlaklığını veya tüm renkleri karşıtlığını ayarlama ve renkler için gri dönüştürme bir renk değiştiriyorsunuz.  

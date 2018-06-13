@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356521"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Nasıl yapılır: ekleme, değiştirme ve silme varlıkları (WCF Veri Hizmetleri)
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları, oluşturabilir, güncelleştirebilir ve nesnelerde eşdeğer eylemleri gerçekleştirerek bir veri hizmeti bulunan varlık verileri silme <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358435"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Birden fazla etkin sonuç kümesi (MARS)
 Birden fazla etkin sonuç kümeleri (MARS) tek bir bağlantı üzerinde birden çok toplu işlem yürütme sağlayan bir özelliktir. Önceki sürümlerde, tek bir bağlantı karşı bir seferde yalnızca tek bir toplu yürütülebilir. MARS ile birden çok toplu işlem yürütülürken işlemlerinin eş zamanlı yürütme göstermez.  

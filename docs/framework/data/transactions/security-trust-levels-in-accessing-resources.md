@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357601"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Kaynaklara erişimde güvenlik güven düzeyleri
 Bu konuda kaynak türleri sınırlı erişimi nasıl ele alınmıştır, <xref:System.Transactions> kullanıma sunar.  

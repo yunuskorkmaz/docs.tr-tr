@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361565"
 ---
 # <a name="secure-client-applications"></a>Güvenli istemci uygulamaları
 Uygulamalar genellikle tüm veri kaybına yol ya da aksi takdirde sistemi riske güvenlik açıklarından korunması gereken birçok bölümleri oluşur. Güvenli kullanıcı arabirimleri oluşturma, birçok sorunları saldırganlar veri veya sistem kaynakları erişebilmesi engelleyerek engelleyebilir.  

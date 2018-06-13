@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354400"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>Nasıl yapılır: algılamak ve çakışan gönderimlerini gidermek
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Algılama ve birden çok kullanıcı değişiklikleri veritabanına gövdesi çakışmalarını çözme için birçok kaynaklar sağlar. Daha fazla bilgi için bkz: [nasıl yapılır: yönetmek değişiklik çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  

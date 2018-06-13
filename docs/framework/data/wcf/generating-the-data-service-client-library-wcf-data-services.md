@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357757"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci kitaplığı (WCF Veri Hizmetleri) oluşturma
 Arabirimini uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [OData: hizmeti meta veri belgesi](http://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Kullandığınızda, bu aracı tarafından döndürülen meta veriler için bir başvuru eklemek için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projede akış, aşağıdaki eylemleri gerçekleştirir:  

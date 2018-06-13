@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349021"
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; &lt;ekleme&gt;
 Bir Aktarım Protokolü düzeni (örn., http, net.tcp, net.pipe, vb.) ve bir Windows Communication Foundation (WCF) bağlama arasındaki varsayılan protokolü eşlemeyi temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, WCF yapılandırılmış eşlemelerin arar ve adresine göre hangi belirli bir için kullanılacak bağlama karar verir.  

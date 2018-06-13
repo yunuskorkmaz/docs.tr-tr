@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363473"
 ---
 # <a name="diagnostic-traces"></a>Tanılama izleri
 İzlemeler uygulama yürütmesi sırasında oluşturulan belirli iletileri yayımlanmasıyla ' dir. İzleme kullanırken, toplama ve gönderilen iletileri kaydetmek için bir mekanizma olması gerekir. İzleme iletileri dinleyicileri tarafından alınır. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı budur. Dinleyicileri İzleme çıktısı günlüğü, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  

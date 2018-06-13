@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362227"
 ---
 # <a name="learning-by-walkthroughs"></a>Öğrenme tarafından izlenecek yollar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeleri, birkaç izlenecek yollar sağlar. Bu konuda (sorun giderme dahil) bazı genel izlenecek sorunları giderir ve hakkında bilgi almak için birkaç adım talimatlara bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

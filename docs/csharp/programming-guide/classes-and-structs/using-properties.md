@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339754"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler alanları ve yöntemleri yönlerini birleştirin. Bir nesne kullanıcıya bir özelliği bir alan görünüyor özelliği erişme aynı sözdizimini gerektirir. Bir sınıf uygulayan için temsil eden bir veya iki kod blokları bir özelliği olan bir [almak](../../../csharp/language-reference/keywords/get.md) erişimcisi ve/veya bir [ayarlamak](../../../csharp/language-reference/keywords/set.md) erişimcisi. Kod bloğunu `get` erişimci özelliği okunduğunda yürütüldüğünde; kodu engellemek için `set` erişimci özelliği yeni bir değer atandığında yürütüldüğünde. Bir özelliği olmadan bir `set` erişimci salt okunur değerlendirilir. Bir özelliği olmadan bir `get` erişimci salt yazılır değerlendirilir. Her iki erişimciler sahip okuma-yazma özelliği değildir.  
