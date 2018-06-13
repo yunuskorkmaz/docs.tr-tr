@@ -1,32 +1,21 @@
 ---
-title: "Hatalı Sözleşme"
-ms.custom: 
+title: Hatalı Sözleşme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bf0f615ae338d9ad52cc8c40096e7130fb111ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37b9d7e3ec2135d60215232fae114baef1b54f36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504165"
 ---
-# <a name="fault-contract"></a><span data-ttu-id="7c88f-102">Hatalı Sözleşme</span><span class="sxs-lookup"><span data-stu-id="7c88f-102">Fault Contract</span></span>
-<span data-ttu-id="7c88f-103">Hatalı sözleşme örnek, bir istemciye bir hizmetten hata bilgileri iletişim gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7c88f-103">The Fault Contract sample demonstrates how to communicate error information from a service to a client.</span></span> <span data-ttu-id="7c88f-104">Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), dahili bir özel durum bir hataya dönüştürmek için hizmetine eklenen bazı ek kod.</span><span class="sxs-lookup"><span data-stu-id="7c88f-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with some additional code added to the service to convert an internal exception to a fault.</span></span> <span data-ttu-id="7c88f-105">İstemci bir hata koşulu hizmette zorla sıfıra bölme gerçekleştirmeye çalışır.</span><span class="sxs-lookup"><span data-stu-id="7c88f-105">The client attempts to perform division by zero to force an error condition on the service.</span></span>  
+# <a name="fault-contract"></a><span data-ttu-id="df54f-102">Hatalı Sözleşme</span><span class="sxs-lookup"><span data-stu-id="df54f-102">Fault Contract</span></span>
+<span data-ttu-id="df54f-103">Hatalı sözleşme örnek, bir istemciye bir hizmetten hata bilgileri iletişim gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="df54f-103">The Fault Contract sample demonstrates how to communicate error information from a service to a client.</span></span> <span data-ttu-id="df54f-104">Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), dahili bir özel durum bir hataya dönüştürmek için hizmetine eklenen bazı ek kod.</span><span class="sxs-lookup"><span data-stu-id="df54f-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with some additional code added to the service to convert an internal exception to a fault.</span></span> <span data-ttu-id="df54f-105">İstemci bir hata koşulu hizmette zorla sıfıra bölme gerçekleştirmeye çalışır.</span><span class="sxs-lookup"><span data-stu-id="df54f-105">The client attempts to perform division by zero to force an error condition on the service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7c88f-106">Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="7c88f-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="df54f-106">Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="df54f-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="7c88f-107">Hesaplayıcı sözleşme içerecek şekilde değiştirilmiş bir <xref:System.ServiceModel.FaultContractAttribute> aşağıdaki örnek kodda gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="7c88f-107">The calculator contract has been modified to include a <xref:System.ServiceModel.FaultContractAttribute> as shown in the following sample code.</span></span>  
+ <span data-ttu-id="df54f-107">Hesaplayıcı sözleşme içerecek şekilde değiştirilmiş bir <xref:System.ServiceModel.FaultContractAttribute> aşağıdaki örnek kodda gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="df54f-107">The calculator contract has been modified to include a <xref:System.ServiceModel.FaultContractAttribute> as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="7c88f-108"><xref:System.ServiceModel.FaultContractAttribute> Öznitelik gösterir `Divide` işlemi türünde bir hata döndürebilir `MathFault`.</span><span class="sxs-lookup"><span data-stu-id="7c88f-108">The <xref:System.ServiceModel.FaultContractAttribute> attribute indicates that the `Divide` operation may return a fault of type `MathFault`.</span></span> <span data-ttu-id="7c88f-109">Bir arıza serileştirilebilir herhangi bir türde olabilir.</span><span class="sxs-lookup"><span data-stu-id="7c88f-109">A fault can be of any type that can be serialized.</span></span> <span data-ttu-id="7c88f-110">Bu durumda, `MathFault` bir veri sözleşmesi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="7c88f-110">In this case, the `MathFault` is a data contract, as follows:</span></span>  
+ <span data-ttu-id="df54f-108"><xref:System.ServiceModel.FaultContractAttribute> Öznitelik gösterir `Divide` işlemi türünde bir hata döndürebilir `MathFault`.</span><span class="sxs-lookup"><span data-stu-id="df54f-108">The <xref:System.ServiceModel.FaultContractAttribute> attribute indicates that the `Divide` operation may return a fault of type `MathFault`.</span></span> <span data-ttu-id="df54f-109">Bir arıza serileştirilebilir herhangi bir türde olabilir.</span><span class="sxs-lookup"><span data-stu-id="df54f-109">A fault can be of any type that can be serialized.</span></span> <span data-ttu-id="df54f-110">Bu durumda, `MathFault` bir veri sözleşmesi aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="df54f-110">In this case, the `MathFault` is a data contract, as follows:</span></span>  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -69,7 +58,7 @@ public class MathFault
 }  
 ```  
   
- <span data-ttu-id="7c88f-111">`Divide` Yöntemi atar bir <xref:System.ServiceModel.FaultException%601> aşağıdaki örnek kodda gösterildiği gibi özel durumu Böl olduğunda sıfır özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="7c88f-111">The `Divide` method throws a <xref:System.ServiceModel.FaultException%601> exception when a divide by zero exception occurs as shown in the following sample code.</span></span> <span data-ttu-id="7c88f-112">Bu durum istemciye gönderilen bir hata ile sonuçlanır.</span><span class="sxs-lookup"><span data-stu-id="7c88f-112">This exception results in a fault being sent to the client.</span></span>  
+ <span data-ttu-id="df54f-111">`Divide` Yöntemi atar bir <xref:System.ServiceModel.FaultException%601> aşağıdaki örnek kodda gösterildiği gibi özel durumu Böl olduğunda sıfır özel durum oluşur.</span><span class="sxs-lookup"><span data-stu-id="df54f-111">The `Divide` method throws a <xref:System.ServiceModel.FaultException%601> exception when a divide by zero exception occurs as shown in the following sample code.</span></span> <span data-ttu-id="df54f-112">Bu durum istemciye gönderilen bir hata ile sonuçlanır.</span><span class="sxs-lookup"><span data-stu-id="df54f-112">This exception results in a fault being sent to the client.</span></span>  
   
 ```  
 public int Divide(int n1, int n2)  
@@ -88,7 +77,7 @@ public int Divide(int n1, int n2)
 }  
 ```  
   
- <span data-ttu-id="7c88f-113">İstemci kodu bir hata sıfıra bölme isteyerek zorlar.</span><span class="sxs-lookup"><span data-stu-id="7c88f-113">The client code forces an error by requesting a division by zero.</span></span> <span data-ttu-id="7c88f-114">Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="7c88f-114">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="7c88f-115">Bir hata bildirilen sıfıra bölme bakın.</span><span class="sxs-lookup"><span data-stu-id="7c88f-115">You see the division by zero being reported as a fault.</span></span> <span data-ttu-id="7c88f-116">İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="7c88f-116">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="df54f-113">İstemci kodu bir hata sıfıra bölme isteyerek zorlar.</span><span class="sxs-lookup"><span data-stu-id="df54f-113">The client code forces an error by requesting a division by zero.</span></span> <span data-ttu-id="df54f-114">Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="df54f-114">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="df54f-115">Bir hata bildirilen sıfıra bölme bakın.</span><span class="sxs-lookup"><span data-stu-id="df54f-115">You see the division by zero being reported as a fault.</span></span> <span data-ttu-id="df54f-116">İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="df54f-116">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(15,3) = 18  
@@ -99,7 +88,7 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="7c88f-117">İstemci bunu uygun yakalama tarafından yapar `FaultException<MathFault>` özel durum:</span><span class="sxs-lookup"><span data-stu-id="7c88f-117">The client does this by catching the appropriate `FaultException<MathFault>` exception:</span></span>  
+ <span data-ttu-id="df54f-117">İstemci bunu uygun yakalama tarafından yapar `FaultException<MathFault>` özel durum:</span><span class="sxs-lookup"><span data-stu-id="df54f-117">The client does this by catching the appropriate `FaultException<MathFault>` exception:</span></span>  
   
 ```  
 catch (FaultException<MathFault> e)  
@@ -109,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- <span data-ttu-id="7c88f-118">Varsayılan olarak, beklenmeyen özel durum ayrıntıları istemciye hizmetinin güvenli sınır kaçış gelen hizmet uygulaması ayrıntılarını önlemek için gönderilmez.</span><span class="sxs-lookup"><span data-stu-id="7c88f-118">By default, the details of unexpected exceptions are not sent to the client to prevent details of the service implementation from escaping the secure boundary of the service.</span></span> <span data-ttu-id="7c88f-119">`FaultContract`Bir sözleşmede hataları tanımlamak ve belirli türde bir özel durum iletilmesi istemci için uygun olarak işaretlemek için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c88f-119">`FaultContract` provides a way to describe faults in a contract and mark certain types of exceptions as appropriate for transmission to the client.</span></span> <span data-ttu-id="7c88f-120">`FaultException<T>`tüketicilere hataları göndermek için çalışma zamanı mekanizma sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c88f-120">`FaultException<T>` provides the run-time mechanism for sending faults to consumers.</span></span>  
+ <span data-ttu-id="df54f-118">Varsayılan olarak, beklenmeyen özel durum ayrıntıları istemciye hizmetinin güvenli sınır kaçış gelen hizmet uygulaması ayrıntılarını önlemek için gönderilmez.</span><span class="sxs-lookup"><span data-stu-id="df54f-118">By default, the details of unexpected exceptions are not sent to the client to prevent details of the service implementation from escaping the secure boundary of the service.</span></span> <span data-ttu-id="df54f-119">`FaultContract` Bir sözleşmede hataları tanımlamak ve belirli türde bir özel durum iletilmesi istemci için uygun olarak işaretlemek için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="df54f-119">`FaultContract` provides a way to describe faults in a contract and mark certain types of exceptions as appropriate for transmission to the client.</span></span> <span data-ttu-id="df54f-120">`FaultException<T>` tüketicilere hataları göndermek için çalışma zamanı mekanizma sağlar.</span><span class="sxs-lookup"><span data-stu-id="df54f-120">`FaultException<T>` provides the run-time mechanism for sending faults to consumers.</span></span>  
   
- <span data-ttu-id="7c88f-121">Ancak, hata ayıklama sırasında iç hizmet hatası ayrıntılarını görmek kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="7c88f-121">However, it is useful to see the internal details of a service failure when debugging.</span></span> <span data-ttu-id="7c88f-122">Daha önce açıklanan güvenli davranışı devre dışı bırakmak için her sunucuda işlenmeyen bir özel durum ayrıntıları istemciye gönderilen hata bulunması belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c88f-122">To turn off the secure behavior previously described, you can indicate that the details of every unhandled exception on the server should be included in the fault that is sent to the client.</span></span> <span data-ttu-id="7c88f-123">Bu ayar gerçekleştirilir <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> için `true`.</span><span class="sxs-lookup"><span data-stu-id="7c88f-123">This is accomplished by setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> to `true`.</span></span> <span data-ttu-id="7c88f-124">Bu kod veya aşağıdaki örnekte gösterildiği gibi yapılandırmasında ya da ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c88f-124">You can either set it in code, or in configuration as shown in the following sample.</span></span>  
+ <span data-ttu-id="df54f-121">Ancak, hata ayıklama sırasında iç hizmet hatası ayrıntılarını görmek kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="df54f-121">However, it is useful to see the internal details of a service failure when debugging.</span></span> <span data-ttu-id="df54f-122">Daha önce açıklanan güvenli davranışı devre dışı bırakmak için her sunucuda işlenmeyen bir özel durum ayrıntıları istemciye gönderilen hata bulunması belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df54f-122">To turn off the secure behavior previously described, you can indicate that the details of every unhandled exception on the server should be included in the fault that is sent to the client.</span></span> <span data-ttu-id="df54f-123">Bu ayar gerçekleştirilir <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> için `true`.</span><span class="sxs-lookup"><span data-stu-id="df54f-123">This is accomplished by setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> to `true`.</span></span> <span data-ttu-id="df54f-124">Bu kod veya aşağıdaki örnekte gösterildiği gibi yapılandırmasında ya da ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="df54f-124">You can either set it in code, or in configuration as shown in the following sample.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -124,27 +113,27 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- <span data-ttu-id="7c88f-125">Ayrıca, davranışı ayarlayarak hizmeti ile ilişkilendirilmelidir `behaviorConfiguration` "CalculatorServiceBehavior" yapılandırma dosyasında hizmetin özniteliği.</span><span class="sxs-lookup"><span data-stu-id="7c88f-125">Further, the behavior must be associated with the service by setting the `behaviorConfiguration` attribute of the service in the configuration file to "CalculatorServiceBehavior".</span></span>  
+ <span data-ttu-id="df54f-125">Ayrıca, davranışı ayarlayarak hizmeti ile ilişkilendirilmelidir `behaviorConfiguration` "CalculatorServiceBehavior" yapılandırma dosyasında hizmetin özniteliği.</span><span class="sxs-lookup"><span data-stu-id="df54f-125">Further, the behavior must be associated with the service by setting the `behaviorConfiguration` attribute of the service in the configuration file to "CalculatorServiceBehavior".</span></span>  
   
- <span data-ttu-id="7c88f-126">Bu tür hataları istemcide, genel olmayan yakalamak için <xref:System.ServiceModel.FaultException> yakalanan gerekir.</span><span class="sxs-lookup"><span data-stu-id="7c88f-126">To catch such faults on the client, the non-generic <xref:System.ServiceModel.FaultException> must be caught.</span></span>  
+ <span data-ttu-id="df54f-126">Bu tür hataları istemcide, genel olmayan yakalamak için <xref:System.ServiceModel.FaultException> yakalanan gerekir.</span><span class="sxs-lookup"><span data-stu-id="df54f-126">To catch such faults on the client, the non-generic <xref:System.ServiceModel.FaultException> must be caught.</span></span>  
   
- <span data-ttu-id="7c88f-127">Bu davranış, yalnızca hata ayıklama amacıyla kullanılmalıdır ve hiçbir zaman üretimde etkinleştirilmiş olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7c88f-127">This behavior should only be used for debugging purposes and should never be enabled in production.</span></span>  
+ <span data-ttu-id="df54f-127">Bu davranış, yalnızca hata ayıklama amacıyla kullanılmalıdır ve hiçbir zaman üretimde etkinleştirilmiş olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="df54f-127">This behavior should only be used for debugging purposes and should never be enabled in production.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="7c88f-128">Ayarlamak için derleme ve örnek çalıştırın</span><span class="sxs-lookup"><span data-stu-id="7c88f-128">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="df54f-128">Ayarlamak için derleme ve örnek çalıştırın</span><span class="sxs-lookup"><span data-stu-id="df54f-128">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="7c88f-129">Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c88f-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="df54f-129">Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="df54f-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="7c88f-130">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c88f-130">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="df54f-130">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="df54f-130">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="7c88f-131">Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7c88f-131">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="df54f-131">Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="df54f-131">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="7c88f-132">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="7c88f-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7c88f-133">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="7c88f-133">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="df54f-132">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="df54f-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="df54f-133">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="df54f-133">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="7c88f-134">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="7c88f-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7c88f-135">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="7c88f-135">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="df54f-134">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="df54f-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="df54f-135">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="df54f-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a><span data-ttu-id="7c88f-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7c88f-136">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df54f-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="df54f-136">See Also</span></span>

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768781"
 ---
 # <a name="asynchronous-programming-patterns"></a><span data-ttu-id="e8ab9-102">Zaman Uyumsuz Programlama Desenleri</span><span class="sxs-lookup"><span data-stu-id="e8ab9-102">Asynchronous Programming Patterns</span></span>
 

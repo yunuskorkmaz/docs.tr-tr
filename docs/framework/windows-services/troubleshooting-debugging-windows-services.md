@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510143"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="06483-102">Sorun Giderme: Windows Hizmetlerinde Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="06483-102">Troubleshooting: Debugging Windows Services</span></span>
 <span data-ttu-id="06483-103">Windows hizmet uygulaması, hizmetiniz debug ne zaman ve **Windows Service Manager** etkileşim.</span><span class="sxs-lookup"><span data-stu-id="06483-103">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="06483-104">**Service Manager** çağırarak hizmetinizi başlatır <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi ve 30 saniye bekler <xref:System.ServiceProcess.ServiceBase.OnStart%2A> döndürülecek yöntemi.</span><span class="sxs-lookup"><span data-stu-id="06483-104">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="06483-105">Yöntemi bu sürede döndürmezse Yöneticisi hizmeti başlatılamıyor bir hata gösterir.</span><span class="sxs-lookup"><span data-stu-id="06483-105">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
