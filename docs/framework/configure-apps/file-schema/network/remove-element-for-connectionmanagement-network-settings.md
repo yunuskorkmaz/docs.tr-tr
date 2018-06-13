@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754486"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="c7c01-102">&lt;kaldırma&gt; öğesi connectionManagement (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="c7c01-102">&lt;remove&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="c7c01-103">Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.</span><span class="sxs-lookup"><span data-stu-id="c7c01-103">Removes an IP address or DNS name from the connection management list.</span></span>  

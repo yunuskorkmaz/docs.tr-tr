@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754112"
 ---
 # <a name="ltsupportportabilitygt-element"></a><span data-ttu-id="34c15-102">&lt;supportPortability&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="34c15-102">&lt;supportPortability&gt; Element</span></span>
 <span data-ttu-id="34c15-103">Bir uygulama aynı bütünleştirilmiş kodda iki farklı uygulamaları .NET Framework'ün derlemeleri uygulama taşınabilirliği amacıyla eşdeğer olarak davranır varsayılan davranışı devre dışı bırakarak başvurabilir belirtir.</span><span class="sxs-lookup"><span data-stu-id="34c15-103">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>  
