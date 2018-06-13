@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521862"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Nasıl yapılır: Çizgiler, Eğriler ve Şekillerden Şekiller Oluşturma
 Bir şekil oluşturmak için oluşturmak bir <xref:System.Drawing.Drawing2D.GraphicsPath>ve yöntemleri gibi çağrısı <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> ve <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, ilkel yolunu eklemek için.  

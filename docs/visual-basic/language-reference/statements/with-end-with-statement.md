@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604672"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With Deyimi (Visual Basic)
 Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapıyı kullanırken, yalnızca üyelerinin değerlerini okuyabilir veya yöntemleri çağırma ve kullanılan bir yapı üyelerine değerleri atamak çalışırsanız bir hata alıyorsunuz bir `With...End With` deyimi.  

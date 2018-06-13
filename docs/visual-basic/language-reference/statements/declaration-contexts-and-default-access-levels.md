@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605452"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri (Visual Basic)
 Bu konuda, hangi Visual Basic türleri içindeki diğer hangi tür bildirilebilir ve hangi kullanıcıların erişim düzeyleri için varsayılan belirtilmezse açıklanmaktadır.  

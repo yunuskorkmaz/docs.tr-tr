@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574845"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Desteklemek için özellikle tasarlanmış beş yeni koleksiyon türleri tanıtır çok iş parçacıklı ekleme ve kaldırma işlemleri. İş parçacığı güvenliği elde etmek için bu yeni tür verimli kilitleme ve kilidi serbest eşitleme mekanizmaları çeşitli kullanın. Eşitleme için bir işlem yükü ekler. Ek yük miktarı kullanılan eşitleme türü, gerçekleştirilen işlemleri türünü ve koleksiyon eşzamanlı olarak erişmeye çalıştığınız iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604269"
 ---
 # <a name="as-clause-visual-basic"></a>As Tümcesi (Visual Basic)
 Tanıtır bir `As` yan tümcesi bildirimi deyimi veya genel tür parametresi bir sınırlama listesindeki bir veri türü tanımlar.  

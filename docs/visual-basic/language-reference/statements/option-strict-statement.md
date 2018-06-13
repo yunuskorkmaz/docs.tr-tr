@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605361"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Yalnızca genişletme dönüşümleri için örtük veri türü dönüştürmelerini sınırlar, geç bağlama izin vermez ve örtük sonuçlanan yazmaya izin vermez bir `Object` türü.  

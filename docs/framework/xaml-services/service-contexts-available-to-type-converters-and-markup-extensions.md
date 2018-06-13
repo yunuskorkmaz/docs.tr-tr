@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566177"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları
 Tür dönüştürücü ve biçimlendirme uzantısı kullanımları destekleyen türler yazarları genellikle bir kullanım biçimlendirme veya Nesne grafiği yapısını çevreleyen bulunduğu hakkında bağlamsal bilgilerine sahip olması gerekir. Bilgi sağlanan nesne doğru örneği veya varolan nesneleri nesneyi grafikte nesne başvuruları yapılabilir böylece gerekli. .NET Framework XAML hizmetlerinde kullanırken gerekli olabilecek bağlamı Hizmet Arabirimleri bir dizi olarak sunulur. Türü dönüştürücü veya işaretleme uzantısı destek kodu, bir hizmet için kullanılabilir ve gelen aracılığıyla geçirilen bir hizmet sağlayıcısı bağlamı kullanarak sorgulayabilir <xref:System.Xaml.XamlObjectWriter> veya ilgili türleri. XAML şema içeriği böyle bir hizmeti üzerinden doğrudan kullanılabilir. Bu konu hizmet bağlamları bir değer dönüştürücüsü uygulamasından erişmek açıklar ve genellikle kullanılabilir hizmetleri ve kendi rolleri listeler.  

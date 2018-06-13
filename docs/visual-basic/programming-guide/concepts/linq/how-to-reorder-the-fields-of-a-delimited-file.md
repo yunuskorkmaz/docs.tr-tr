@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642056"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Nasıl yapılır: sınırlandırılmış bir dosyanın (LINQ) (Visual Basic) alanlarını yeniden sıralama
 Bir virgülle ayrılmış değer (CSV) dosyası elektronik tablo verileri veya satırları ve sütunları tarafından temsil edilen diğer tablo verileri depolamak için kullanılan bir metin dosyasıdır. Kullanarak <xref:System.String.Split%2A> alanlarını ayırmak için yöntemi sorgulamak ve LINQ kullanarak CSV dosyalarını işlemek çok kolaydır. Aslında, aynı tekniği yapılandırılmış her metin satırının bölümlerini yeniden sıralamak için kullanılabilir; CSV dosyaları için sınırlı değildir.  

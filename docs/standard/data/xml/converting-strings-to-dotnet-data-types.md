@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576585"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework veri türleri için dizeleri dönüştürme
 Bir dizeyi bir .NET Framework veri türüne dönüştürmek istiyorsanız, kullanmak **XmlConvert** uygulama gereksinimlerine uygun yöntemi. Kullanılabilir tüm dönüştürme yöntemleri listesi **XmlConvert** sınıfı için bkz: <xref:System.Xml.XmlConvert>.  

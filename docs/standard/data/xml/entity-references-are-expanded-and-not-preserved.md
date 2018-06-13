@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569538"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Genişletilmiş ve korunmaz varlık başvuruları olan
 Varlık başvurusu genişletilmiş ve temsil ettiği, metnin tarafından yerine **XmlEntityReference** düğümü oluşturulmadı. Bunun yerine, varlık bildirimi ayrıştırılır ve bildiriminde içerikten oluşturulan düğümler yerine, kopyaladığınız **XmlEntityReference**. Bu nedenle, içinde `&publisher;` örnek, `&publisher;` , ancak bunun yerine, kaydedilmez bir **XmlText** düğüm oluşturulur.  

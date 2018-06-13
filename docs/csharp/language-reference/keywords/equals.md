@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216187"
 ---
 # <a name="equals-c-reference"></a>equals (C# Başvurusu)
 `equals` Bağlamsal anahtar sözcüğü kullanılır bir `join` yan tümcesinde iki sıraları öğelerini karşılaştırmak için sorgu ifadesi. Daha fazla bilgi için bkz: [JOIN yan tümcesi](../../../csharp/language-reference/keywords/join-clause.md).  

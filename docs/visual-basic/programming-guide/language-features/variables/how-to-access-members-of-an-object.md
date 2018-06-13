@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650928"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Bir Nesnenin Üyelerine Erişme (Visual Basic)
 Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle yöntemler, özellikler, alanları ve olaylar gibi söz konusu nesne üyeleri çalışmak istediğiniz. Örneğin, bir kez oluşturduğunuz yeni bir <xref:System.Windows.Forms.Form> nesne ayarlamak isteyebilirsiniz, <xref:System.Windows.Forms.Control.Text%2A> özelliği veya çağrı kendi <xref:System.Windows.Forms.Control.Focus%2A> yöntemi.  

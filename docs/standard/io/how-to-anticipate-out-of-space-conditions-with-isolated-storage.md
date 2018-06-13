@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575586"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme
 Yalıtılmış depolama kullanan kodu kısıtlı tarafından bir [kota](../../../docs/standard/io/isolated-storage.md#quotas) , veri bölme yalıtılmış depolama dosyaları ve dizinleri mevcut en büyük boyutunu belirtir. Kota güvenlik ilkesi tarafından tanımlanır ve yöneticiler tarafından yapılandırılabilir. Veri yazma çalıştığınızda boyutu aşıldı izin verilen en fazla ise bir <xref:System.IO.IsolatedStorage.IsolatedStorageException> özel durumu oluşur ve işlem başarısız olur. Bu veri depolama alanı dolu olduğundan isteği reddedecek şekilde uygulama neden olabilecek kötü amaçlı hizmet reddi saldırılarını önlemeye yardımcı olur.  

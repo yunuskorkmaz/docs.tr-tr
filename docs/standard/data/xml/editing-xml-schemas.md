@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577221"
 ---
 # <a name="editing-xml-schemas"></a>XML şemaları düzenleme
 Bir XML şeması düzenleme şema nesne modeli (SOM) en önemli özelliklerinden biridir. Tüm SOM öncesi schema derleme özelliklerinin bir XML şeması var olan değerleri değiştirmek için kullanılabilir. XML şema değişiklikleri yansıtacak şekilde sonra derlenebileceğini.  

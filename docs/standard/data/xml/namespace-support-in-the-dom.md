@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569457"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM Namespace desteği
 XML belge nesne modeli (DOM) ad alanı tamamen uyumlu. Yalnızca ad alanı algılayan XML belgelerini desteklenir. World Wide Web Konsorsiyumu (W3C) Düzey 1 uygulamak DOM uygulamaları ad alanı kullanmayan olabilir ve DOM Düzey 2 özellikleri ad alanı algılayan belirtir. Ancak, XML DOM'ındaki tüm özelliklere ad alanı algılayan, yöntem düzey 1 veya Düzey 2 DOM öneri ise bakılmaksızın değildir.  

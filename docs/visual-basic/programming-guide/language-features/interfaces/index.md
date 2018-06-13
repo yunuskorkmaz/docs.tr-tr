@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654428"
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
 *Arabirimler* özellikleri, yöntemleri ve sınıfları uygulayabilirsiniz olayları tanımlayın. Arabirimleri, özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanıza olanak sağlar; Bu, var olan kodu tehlikeye atmadan arabirimlerinizi için geliştirilmiş uygulamaları geliştirebilirsiniz çünkü uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamaları geliştirerek herhangi bir zamanda yeni özellikleri ekleyebilirsiniz.  

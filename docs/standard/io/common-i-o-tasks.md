@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577661"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
 <xref:System.IO> Ad alanı akışları ve okuma ve yazma dizinleri, dosyaları üzerinde gerçekleştirilecek gibi çeşitli eylemler için izin birkaç sınıfları sağlar. Daha fazla bilgi için bkz: [dosya ve akış g/ç](../../../docs/standard/io/index.md).  

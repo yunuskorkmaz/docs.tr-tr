@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643789"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Nasıl yapılır: Proje bir nesne grafiğinin (Visual Basic)
 Bu konu, proje veya doldurmak, bir nesne grafiğinin XML göstermektedir.  

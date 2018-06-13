@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455879"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Tlbexp Yardımcı İşlevleri (Yönetilmeyen API Başvurusu)
 [Tür kitaplığı dışarı Aktarıcı aracı](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) TlbRef.dll adlı bir dinamik bağlantı kitaplığı (Tlbexp.exe) yükler. Bu DLL iki yardımcı işlev ve dışarı aktarma aracı derleme için tür kitaplığı dönüştürme işlemi sırasında kullanan bir arabirim içerir.  

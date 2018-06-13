@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574728"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Bir XML belgesi ad alanlarını yönetme
 XML ad alanları, özel ve önceden tanımlanmış URI ile bir XML belgesi öğe ve öznitelik adları ilişkilendirin. Bu ilişkileri oluşturmak için ad alanı URI ön eklerini tanımlayın ve XML verileri öğe ve öznitelik adları nitelemek için ön eklerin kullanın. Ad alanları öğe ve öznitelik ad çakışmaları önlemek ve öğeleri ve özniteliklerinin aynı ada sahip işlenmesini ve farklı bir şekilde doğrulandı etkinleştirin.  

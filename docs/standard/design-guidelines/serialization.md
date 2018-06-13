@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578072"
 ---
 # <a name="serialization"></a>Serileştirme
 Seri hale getirme nesneyi kullanıma kalıcı veya taşınan bir biçime dönüştürme işlemidir. Örneğin, bir nesneyi serileştirme, HTTP kullanarak ve hedef makinenin seri Internet üzerinden taşıma.  

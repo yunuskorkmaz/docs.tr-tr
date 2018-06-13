@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215777"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# Derleyici Seçenekleri)
 Bu seçenek geçerli derlemeye target: module anahtarıyla oluşturulan bir modül ekler.  

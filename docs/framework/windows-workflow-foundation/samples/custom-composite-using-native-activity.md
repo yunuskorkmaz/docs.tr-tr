@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519216"
 ---
 # <a name="custom-composite-using-native-activity"></a>Özel bileşik yerel etkinliğini kullanma
 Bu örnek nasıl yazılacağını göstermektedir bir <xref:System.Activities.NativeActivity> diğer zamanlar <xref:System.Activities.Activity> bir iş akışının yürütme akışını denetlemek için nesneleri. Bu örnek iki ortak denetim akışı, kullandığı sıra ve çalışırken, bunun nasıl yapılacağını göstermek için.  

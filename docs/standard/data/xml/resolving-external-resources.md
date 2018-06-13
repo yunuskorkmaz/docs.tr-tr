@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577113"
 ---
 # <a name="resolving-external-resources"></a>Dış kaynaklara çözme
 **XmlResolver** özelliği **XmlDocument** tarafından kullanılan **XmlDocument** satır dış belge türü gibi XML verileri içinde olmayan kaynakları bulmak için sınıfı tanımları (DTD), varlıkları ve şemaları. Bu öğeler bir ağda veya yerel bir sürücüde yer alabilir ve bir Tekdüzen Kaynak Tanımlayıcısı (URI) göre tanımlanabilir. Böylece **XmlDocument** çözmek için **EntityReference** belgede mevcuttur ve dış DTD ya da şema göre belgeyi doğrulamak düğüm.  

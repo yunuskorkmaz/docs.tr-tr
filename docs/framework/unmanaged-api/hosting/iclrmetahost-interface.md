@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436234"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost Arabirimi
 Kendi sürüm numarasına göre belirli bir sürümünü ortak dil çalışma zamanı (CLR) döndürür, tüm yüklü CLRs listesinde, belirtilen bir işlemde yüklenen tüm çalışma zamanları listesinde, bir derlemeyi derlemek, bir işlem çıkmak için kullanılan CLR sürümü Bul yöntemler sağlar bir çalışma zamanı temiz kapatma ve sorgu eski API bağlama ile.  

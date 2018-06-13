@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575381"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Açıkça geçirerek kullanılacak kültürü belirtmenize olanak veren yöntemi aşırı yüklemeleri varsayılan kültüre duyarlı dize işlemleri çoğu .NET Framework yöntemleri sunar bir <xref:System.Globalization.CultureInfo> parametresi. Bu aşırı eşlemeler sıralama kuralları ve kültüre duyarsız sonuçları garanti durumda kültürel Çeşitlemeler ortadan kaldırmak sağlar.  

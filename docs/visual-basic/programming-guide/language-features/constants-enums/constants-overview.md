@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648391"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
 Bir sabit bir sayı veya değişmez dize yerini alır anlamlı bir addır. Adından da anlaşılacağı gibi bir uygulamanın yürütmesini boyunca aynı kalır değerleri sabitleri depolar. Büyük ölçüde kodunuzun okunabilirliğini artırmak ve sabitleri kullanarak bakımını kolaylaştırır. Yeniden değerleri içeren kodda kullanın veya hatırlamak veya belirgin bir anlama sahip zor olan belirli numaralarında bağlıdır.  

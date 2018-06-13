@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647316"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Bir Numaralandırmanın Ne Zaman Kullanılacağı (Visual Basic)
 Numaralandırmalar ilgili sabitleri kümeleriyle çalışmak için kolay bir yol sunar. Numaralandırma, bir ya da `Enum`, değer kümesi için bir simgesel ad. Numaralandırmalar veri türleri olarak kabul edilir ve değişkenleri ve özellikleri ile kullanım için sabitleri kümesi oluşturmak için kullanabilirsiniz.  

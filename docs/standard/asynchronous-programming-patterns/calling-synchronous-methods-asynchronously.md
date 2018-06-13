@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575503"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma
 .NET Framework, herhangi bir yöntemini zaman uyumsuz çağırma olanak sağlar. Bunu yapmak için aramak istediğiniz yöntemi olarak bir temsilci aynı imzayla tanımlayın; Ortak dil çalışma zamanı otomatik olarak tanımlayan `BeginInvoke` ve `EndInvoke` uygun imzaları ile bu temsilci için yöntemleri.  

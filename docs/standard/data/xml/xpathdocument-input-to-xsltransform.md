@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569791"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Çok XPathDocument giriş
 <xref:System.Xml.XPath.XPathDocument> Belgelerle işlemek için salt okunur önbellek <xref:System.Xml.Xsl.XslTransform>. XML belge nesne modeli (DOM) yapısal olarak benzerdir, ancak bu yüksek oranda Genişletilebilir Stil sayfası dili için Dönüşümleri (XSLT) işleme ve üzerinde XPathiyileştirmeişlevlerkullanılarakXMLPathdili(XPath)verimodeliiçinoptimizeedilmiştir<xref:System.Xml.XPath.XPathNavigator>.  

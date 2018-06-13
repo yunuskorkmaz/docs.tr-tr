@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651229"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>İzlenecek yol: Visual Basic'de Dizeleri Şifreleme ve Şifresini Çözme
 Bu kılavuz size nasıl kullanılacağını gösterir <xref:System.Security.Cryptography.DESCryptoServiceProvider> şifrelemek ve şifreleme hizmeti sağlayıcısı (CSP) Üçlü Veri şifreleme standardı sürümünü kullanarak dizeleri şifresini çözmek için sınıfı (<xref:System.Security.Cryptography.TripleDES>) algoritması. İlk adım, 3DES algoritmasını yalıtır ve base 64 kodlu bir dize şifrelenmiş verileri depolayan bir basit sarmalayıcı sınıfı oluşturmaktır. Daha sonra bu sarmalayıcı güvenli bir şekilde bir genel olarak erişilebilir metin dosyasında özel kullanıcı verilerini depolamak için kullanılır.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575707"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel veri ve ADO.NET XML tümleştirme
 **XmlDataDocument** sınıftır türetilen bir sınıftan **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veri arasında bir köprü sağlamasıdır. Bu bir **XmlDocument** için bağlanabilir bir **DataSet** ve her iki sınıfları iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** için bağlı bir **DataSet** ilişkisel veri ile tümleştirmek XML sağlar ve her iki XML olarak veya ilişkisel bir biçimde gösterilen verilerinizi gerekmez. Her ikisini birden yapın ve verileri tek bir gösterimini kısıtlanacak değil.  

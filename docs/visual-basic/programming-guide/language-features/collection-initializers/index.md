@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654222"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 *Koleksiyon başlatıcıları* bir koleksiyon oluşturun ve başlangıç değerleri kümesi ile doldurmak sağlar kısaltılmış bir sözdizimi sağlar. Koleksiyon başlatıcıları bilinen değerler, örneğin, menü seçeneklerini veya kategorileri, bir başlangıç sayısal değerleri kümesi, statik gün veya ay adları veya gibi coğrafi konumlar gibi dizelerinin listesini listesi koleksiyondan oluştururken yararlı bir doğrulama için kullanılan durumları listesi.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219280"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Kayan Nokta Türleri Tablosu (C# Başvurusu)
 Aşağıdaki tabloda duyarlık ve kayan nokta türleri için yaklaşık aralıkları gösterir.  

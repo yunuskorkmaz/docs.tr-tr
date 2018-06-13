@@ -44,6 +44,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577312"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 .NET uygulamaları, sınıflar, arabirimler, temsilciler ve hızlandırmak ve geliştirme sürecinin en iyi duruma getirme ve sistem işlevlere erişim sağlayan değer türleri içerir. Diller arasında birlikte çalışabilirlik kolaylaştırmak için çoğu .NET türleri CLS ile uyumlu olan ve bu nedenle, derleyici ortak dil belirtimi (CLS) uyan herhangi bir programlama dili kullanılabilir.  

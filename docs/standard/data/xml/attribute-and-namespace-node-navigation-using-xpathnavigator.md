@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577026"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Özniteliği ve XPathNavigator kullanarak Namespace düğümü gezinme
 <xref:System.Xml.XPath.XPathNavigator> İlk kümesi bulundu sınıfı iki Gezinti yöntemler kümesi sağlar, [düğüm kümesi Gezinti kullanarak XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) konu gezinmek için kullanılan *düğüm kümeleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi. Bu konuda açıklanan ikinci küme gitmek için kullanılan *özniteliği ve ad alanı düğümleri* içinde bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi.  

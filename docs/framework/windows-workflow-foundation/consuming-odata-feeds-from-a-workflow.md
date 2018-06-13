@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520506"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Bir iş akışından akışları OData kullanma
 WCF Veri Hizmetleri bir bileşenidir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] temsili durum aktarımı (REST) semantiği kullanarak Web veya intranet üzerinden verileri kullanmak ve kullanıma sunmak için açık veri Protokolü (OData) kullanan hizmetler oluşturmak etkinleştirir. OData veri URI tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Bir HTTP isteği göndermek ve OData akışı işlem herhangi bir uygulama veri hizmeti döndürdüğünü bir OData tabanlı veri hizmetiyle etkileşim kurabilirsiniz. Ayrıca, WCF Veri Hizmetleri OData Akışları'kullandığında daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uygulamalar. Bu konu, bir iş akışında istemci kitaplıkları kullanılarak ve kullanılmadan bir OData tüketen genel bir bakış akışı sağlar.  

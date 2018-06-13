@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572794"
 ---
 # <a name="xml-document-creation"></a>XML belgesi oluşturma
 Bir XML belgesi oluşturmanın iki yolu vardır. Tek yönlü oluşturmaktır bir **XmlDocument** hiçbir parametre. Diğer bir yol oluşturmaktır bir **XmlDocument** ve bir XmlNameTable parametre olarak geçirin. Aşağıdaki örnek yeni bir boş oluşturulacağını gösterir **XmlDocument** hiçbir parametrelerini kullanarak.  

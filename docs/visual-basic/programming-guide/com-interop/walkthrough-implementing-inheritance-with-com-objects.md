@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644309"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)
 Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic önceki sürümlerinde oluşturulan COM nesnelerini sınıflarda. Özellikleri ve yöntemleri COM nesneleri devralınan sınıfların geçersiz kılındı gibi özellikleri olarak aşırı yüklendi ve herhangi bir taban sınıf yöntemlerini geçersiz veya aşırı yüklenmiş. COM nesneleri içinden devralma yeniden derleyin istemediğiniz varolan bir sınıf kitaplığı olduğunda yararlıdır.  
