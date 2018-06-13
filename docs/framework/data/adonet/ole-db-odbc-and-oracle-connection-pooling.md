@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803130"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a><span data-ttu-id="4887d-102">OLE DB, ODBC ve Oracle bağlantı havuzu</span><span class="sxs-lookup"><span data-stu-id="4887d-102">OLE DB, ODBC, and Oracle Connection Pooling</span></span>
 <span data-ttu-id="4887d-103">Bağlantı havuzu önemli ölçüde performans ve ölçeklenebilirlik, uygulamanızın geliştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="4887d-103">Pooling connections can significantly enhance the performance and scalability of your application.</span></span> <span data-ttu-id="4887d-104">Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4887d-104">This section discusses connection pooling for the .NET Framework data providers for OLE DB, ODBC and Oracle.</span></span>  

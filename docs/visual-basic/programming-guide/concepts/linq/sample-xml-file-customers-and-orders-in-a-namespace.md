@@ -1,27 +1,18 @@
 ---
-title: "Örnek XML dosyası: Müşteriler ve siparişler bir Namespace1 içinde"
-ms.custom: 
+title: 'Örnek XML dosyası: Müşteriler ve siparişler bir Namespace1 içinde'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b8b61c9dde25a55f9188bd6d4ceaad958c42a552
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 363da08b7185d42c464dd927bcbbf5d0af4c1899
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646358"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="a4898-102">Örnek XML dosyası: Müşteriler ve siparişler bir Namespace içinde</span><span class="sxs-lookup"><span data-stu-id="a4898-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="a4898-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="a4898-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a4898-104">Bu dosya, müşteriler ve siparişler içerir.</span><span class="sxs-lookup"><span data-stu-id="a4898-104">This file contains customers and orders.</span></span> <span data-ttu-id="a4898-105">XML ad alanında ' dir.</span><span class="sxs-lookup"><span data-stu-id="a4898-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="ff146-102">Örnek XML dosyası: Müşteriler ve siparişler bir Namespace içinde</span><span class="sxs-lookup"><span data-stu-id="ff146-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="ff146-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="ff146-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ff146-104">Bu dosya, müşteriler ve siparişler içerir.</span><span class="sxs-lookup"><span data-stu-id="ff146-104">This file contains customers and orders.</span></span> <span data-ttu-id="ff146-105">XML ad alanında ' dir.</span><span class="sxs-lookup"><span data-stu-id="ff146-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="a4898-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="a4898-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="ff146-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="ff146-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -439,5 +430,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4898-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a4898-107">See Also</span></span>  
- [<span data-ttu-id="a4898-108">Örnek XML belgeleri (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="a4898-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ff146-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ff146-107">See Also</span></span>  
+ [<span data-ttu-id="ff146-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ff146-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

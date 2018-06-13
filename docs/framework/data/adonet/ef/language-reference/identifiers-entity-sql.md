@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765886"
 ---
 # <a name="identifiers-entity-sql"></a><span data-ttu-id="2e954-102">Tanımlayıcılar (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="2e954-102">Identifiers (Entity SQL)</span></span>
 <span data-ttu-id="2e954-103">Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneler, İşlevler ve benzeri özelliklerini temsil etmek için.</span><span class="sxs-lookup"><span data-stu-id="2e954-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="2e954-104"> iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.</span><span class="sxs-lookup"><span data-stu-id="2e954-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  

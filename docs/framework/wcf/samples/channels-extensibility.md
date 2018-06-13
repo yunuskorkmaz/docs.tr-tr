@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803374"
 ---
 # <a name="channels-extensibility"></a><span data-ttu-id="6424b-102">Kanal Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="6424b-102">Channels Extensibility</span></span>
 <span data-ttu-id="6424b-103">Bu bölüm, özel kanalları gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="6424b-103">This section contains samples that demonstrate custom channels.</span></span>  

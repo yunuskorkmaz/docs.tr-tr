@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763793"
 ---
 # <a name="ampamp-and-entity-sql"></a><span data-ttu-id="93240-102">&amp;&amp; (VE) (Varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="93240-102">&amp;&amp; (AND) (Entity SQL)</span></span>
 <span data-ttu-id="93240-103">Döndürür `true` hem ifadeler `true`; Aksi halde, `false` veya `NULL`.</span><span class="sxs-lookup"><span data-stu-id="93240-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  

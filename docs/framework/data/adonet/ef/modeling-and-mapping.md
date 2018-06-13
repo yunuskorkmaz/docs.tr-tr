@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762942"
 ---
 # <a name="modeling-and-mapping"></a><span data-ttu-id="1ef9a-102">Modelleme ve eşleme</span><span class="sxs-lookup"><span data-stu-id="1ef9a-102">Modeling and Mapping</span></span>
 <span data-ttu-id="1ef9a-103">İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz kavramsal model, depolama modelindeki ve uygulamanızı en iyi iki şekilde arasında eşleme uygun.</span><span class="sxs-lookup"><span data-stu-id="1ef9a-103">In the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], you can define the conceptual model, storage model, and the mapping between the two in the way that best suits your application.</span></span> <span data-ttu-id="1ef9a-104">Varlık veri modeli araçları Visual Studio oluşturmanızı sağlayan bir. [edmx dosyası](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı veya model değiştiğinde, dosya.</span><span class="sxs-lookup"><span data-stu-id="1ef9a-104">The Entity Data Model Tools in Visual Studio allow you to create an .[edmx file](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) from a database or a graphical model and then update that file when either the database or model changes.</span></span>  

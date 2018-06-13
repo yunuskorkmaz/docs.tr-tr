@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803760"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="e8d9c-102">Güvenilir Hizmetler</span><span class="sxs-lookup"><span data-stu-id="e8d9c-102">Reliable Services</span></span>
 <span data-ttu-id="e8d9c-103">Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Communication Foundation (WCF) özellikleridir.</span><span class="sxs-lookup"><span data-stu-id="e8d9c-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="e8d9c-104">Bu konuda, WCF güvenilir Mesajlaşma özellikleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e8d9c-104">This topic explains the reliable messaging features of WCF.</span></span>  
