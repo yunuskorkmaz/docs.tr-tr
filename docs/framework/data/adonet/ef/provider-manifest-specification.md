@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767147"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="9c531-102">Sağlayıcı bildirimi belirtimi</span><span class="sxs-lookup"><span data-stu-id="9c531-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="9c531-103">Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri deposunda destekleyebilir anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9c531-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

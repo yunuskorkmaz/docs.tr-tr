@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767628"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a><span data-ttu-id="990a5-102">&lt;UdpDiscoveryEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="990a5-102">&lt;udpDiscoveryEndpoint&gt;</span></span>
 <span data-ttu-id="990a5-103">Bu yapılandırma öğesi UDP üzerinden bulma işlemleri için önceden yapılandırılmış olan standart bir uç nokta tanımlayan çok noktaya yayın bağlama.</span><span class="sxs-lookup"><span data-stu-id="990a5-103">This configuration element defines a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="990a5-104">Bu uç noktaya sabit bir sözleşme var ve iki WS bulma protokolünü sürümlerini destekler.</span><span class="sxs-lookup"><span data-stu-id="990a5-104">This endpoint has a fixed contract and supports two WS-Discovery protocol versions.</span></span> <span data-ttu-id="990a5-105">Ayrıca, sabit bir UDP bağlama ve WS-bulma belirtimleri (WS-bulma Nisan 2005 veya WS-bulma V1.1) belirtildiği gibi varsayılan bir adresi olan...</span><span class="sxs-lookup"><span data-stu-id="990a5-105">In addition, it has a fixed UDP binding and a default address as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery V1.1)..</span></span>  
