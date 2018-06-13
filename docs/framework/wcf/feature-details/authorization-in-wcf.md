@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488578"
 ---
 # <a name="authorization-in-wcf"></a>WCF'de Yetkilendirme
 Yetkilendirme access ve Hizmetleri ya da dosyalar gibi kaynaklara hakları denetleme işlemidir. Bu bölümdeki konular, çeşitli şekillerde Windows Communication Foundation (WCF) içinde bu temel görevi gerçekleştirmek nasıl gösterir.  

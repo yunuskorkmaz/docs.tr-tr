@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569967"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath veri modelini kullanarak işlem XML verileri
 <xref:System.Xml?displayProperty=nameWithType> Ad alanı sağlar XML belgeleri, parçaları, düğüm veya düğüm kümeleri bellek içi, programlı bir gösterimini kullanarak <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları.  

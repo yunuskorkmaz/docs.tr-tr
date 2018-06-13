@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476043"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 WS-AT protokolü hizmeti tanınmayan bir geçici Katılımcısı Prepared ya da yeniden yürütme bir ileti aldı. Bir hata bildirir hareketin sonucu şüpheli olduğunu katılımcı döndürüldü.  

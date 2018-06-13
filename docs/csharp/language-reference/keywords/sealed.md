@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172129"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# Başvurusu)
 Bir sınıfa uygulandığında `sealed` değiştiricisi ondan devralan diğer sınıflara engeller. Aşağıdaki örnekte, sınıf `B` sınıfından devralan `A`, ancak hiçbir sınıf sınıfı devralabilirsiniz `B`.  

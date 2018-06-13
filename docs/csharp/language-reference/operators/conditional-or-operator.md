@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171812"
 ---
 # <a name="-operator-c-reference"></a>|| İşleci (C# Başvurusu)
 Koşullu-OR işleci (`||`) bir mantıksal-OR, gerçekleştirir, `bool` işlenen. İlk işlenen değerlendirilirse `true`, ikinci işlenen hesaplanan değil. İlk işlenen değerlendirilirse `false`, ikinci işleci veya ifadesi bir bütün olarak değerlendiren olup olmadığını belirler `true` veya `false`.  

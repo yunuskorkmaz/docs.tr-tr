@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569661"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Varlık bildirimleri ve varlık başvuruları DOM okuma
 Bir varlık XML içeriği veya işaretleme yerine kullanılacak bir ad bildiren bir bildirimidir. Varlıkları iki bölümü vardır. İlk olarak, bir varlık bildirimi kullanarak değiştirme içerik için bir ad tie gerekir. Bir varlık bildirimi kullanılarak oluşturulan `<!ENTITY name "value">` bir belge türü tanımı (DTD) veya XML Şeması sözdiziminde. İkincisi, varlık bildiriminde tanımlanan adını sonradan XML'de kullanılır. XML'de kullanıldığında, bir varlık başvurusunun adı verilir. Örneğin, bir varlığın adı aşağıdaki varlık bildirimi bildirir `publisher` "Microsoft Press" içerikle ilişkili olan.  

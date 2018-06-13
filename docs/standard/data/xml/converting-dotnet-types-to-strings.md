@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568777"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>.NET Framework türleri dizeleri dönüştürme
 .NET Framework türü bir dizeye dönüştürmek istediğiniz kullanırsanız **ToString** yöntemi. **ToString** yöntemi geçirilen tür bir dize gösterimini döndürür. Aşağıdaki tabloda XML Şeması (XSD) belirtimleri eşleyen biçiminde bir dize döndürecek .NET Framework türleri listelenmektedir.  

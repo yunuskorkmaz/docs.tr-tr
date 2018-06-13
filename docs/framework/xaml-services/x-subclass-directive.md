@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566424"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass Yönergesi
 XAML biçimlendirme derleme davranışını değiştiren zaman `x:Class` de sağlanır. Temel alan bir parçalı sınıf oluşturmak yerine `x:Class`, sağlanan `x:Class` Ara bir sınıf olarak oluşturulur ve ardından, sağlanan türetilmiş sınıf temel beklenen `x:Class`.  

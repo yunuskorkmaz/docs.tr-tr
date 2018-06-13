@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569980"
 ---
 # <a name="load-data-from-a-reader"></a>Bir okuyucudan veri yükleme
 Kullanarak bir XML belgesi yüklerse <xref:System.Xml.XmlDocument.Load%2A> yöntemi ve bir parametresi bir <xref:System.Xml.XmlReader>, verileri diğer biçimlerinden davranışı karşılaştırıldığında ortaya çıkan davranış farklılıklar vardır. Okuyucu ilk durumuna ise <xref:System.Xml.XmlDocument.Load%2A> okuyucudan tüm içeriği kullanır ve XML belge nesne modeli (DOM) Okuyucudaki tüm verileri oluşturur.  

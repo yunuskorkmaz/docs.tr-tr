@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488923"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>SerializationBinder ile Seri Hale Getirme ve Seri Durumdan Çıkarmayı Denetleme
 Serileştirme sırasında bir biçimlendirici doğru türü ve sürümü bir nesne örneğini oluşturmak için gereken bilgileri iletir. Bu bilgiler genelde derleme nesnesinin adını ve tam tür adını içerir. Varsayılan olarak, seri durumdan çıkarma aynı nesne örneğini oluşturmak için bu bilgileri kullanır. Bazı kullanıcılar, hangi sınıfının seri hale getirmek ve seri durumdan çıkarma gerçekleştirme makinede özgün sınıfı olmayabilir için ya da seri durumdan kontrol gerekebilir, özgün sınıf derlemeler arasında taşınmış veya sınıf farklı bir sürümü gerekiyor. Sunucu ve istemci. Daha fazla bilgi için bkz: [seri hale getirme Bağlayıcısı kullanımı](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449176"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 Ortak dil çalışma zamanı belirtir <xref:System.Type>, bir tür değiştiricisi ya da bir meta veri türü imzada türü hakkında bilgi.  

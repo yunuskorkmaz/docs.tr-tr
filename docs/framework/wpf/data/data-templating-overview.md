@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172496"
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablon modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri veri sunumu özelleştirme desteklemek için yerleşik işlevselliğe sahiptir. Bu konuda ilk nasıl tanımlanacağı gösterilmektedir bir <xref:System.Windows.DataTemplate> ve Özel mantık ve hiyerarşik veri görüntüsünü desteği göre şablonları seçimi gibi diğer veri şablon özellikleri sunar.  

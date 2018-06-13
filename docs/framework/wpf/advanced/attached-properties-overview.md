@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542177"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli özellik, herhangi bir nesne ayarlanamaz genel özellik türü olarak kullanılmak üzere tasarlanmıştır. İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], ekli özellikler genellikle geleneksel özelliği "sarmalayıcı" olmayan bir bağımlılık özelliğinin özel biçimi tanımlanmış.  

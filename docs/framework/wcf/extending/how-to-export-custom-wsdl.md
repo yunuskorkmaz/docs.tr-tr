@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489056"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Nasıl yapılır: Özel WSDL Dışarı Aktarma
 Bu konuda, özel WSDL bilgilerini dışarı aktarmak açıklanmaktadır. Bunu yapmak için şu adlı yeni bir kod öznitelik tanımlayacaksınız `WsdlDocumentationAttribute` hizmeti tarafından oluşturulan WSDL özel bilgileri eklenir.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566502"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
 İş nesneleri özel türler tanımlamak ya da bir bağımlılık belirli çerçevesinde yok türleri, izleyebilirsiniz XAML için bazı en iyi yöntemler vardır. Bu yöntemler, .NET Framework XAML hizmetlerinde izleyin ve kendi XAML okuyucuları ve XAML yazıcıları türünüz XAML özelliklerini bulmak ve XAML tür sistemi kullanarak bir XAML düğüm akış uygun gösterimi vermek istiyorsanız. Bu konu için tür tanımları, üye tanımları ve CLR türleri veya üyeleri öznitelik atanıyor en iyi uygulamaları açıklar.  

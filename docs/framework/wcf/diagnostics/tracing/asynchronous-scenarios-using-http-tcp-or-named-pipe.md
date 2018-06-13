@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474714"
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP, TCP veya Named-Pipe Kullanan Zaman Uyumsuz Senaryolar
 Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı zaman uyumsuz istek/yanıt senaryoları için HTTP, TCP, kullanarak birden çok iş parçacıklı isteklerle açıklanır.  

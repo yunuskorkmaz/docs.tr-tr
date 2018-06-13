@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172272"
 ---
 # <a name="built-in-types-table-c-reference"></a>Yerleşik Türler Tablosu (C# Başvurusu)
 Anahtar sözcükler, önceden tanımlanmış türlerin diğer adları olan yerleşik C# türleri için aşağıdaki tabloda gösterilmektedir, <xref:System> ad alanı.  

@@ -4,11 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir b
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 1186ad41fa1a6befcfcc4fa1f547605bb69e68bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/08/2018
+ms.locfileid: "33848508"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -251,11 +252,11 @@ catalog.api:
     - "5101:80"
 ```
 
-Çözüm düzeyinde docker-compose.yml dosyaları yalnızca proje veya mikro hizmet düzeyi, ancak daha da yapılandırma dosyaları ancak docker-compose dosyalarıyla adresindeki bildirilen ortam değişkenleri geçersiz kılarsanız daha da güvenli çok daha esnektir değil değerleri, dağıtım araçlarından VSTS Docker dağıtım görevleri gibi ayarlayın. 
+Çözüm düzeyinde docker-compose.yml dosyaları yalnızca proje veya mikro hizmet düzeyinde yapılandırma dosyalarını daha esnek değildir, ancak kümeden değerlerle docker-compose dosyalara bildirilen ortam değişkenleri geçersiz kılarsanız daha da güvenli Dağıtım araçlarınızı VSTS Docker dağıtım görevleri ister. 
 
 Son olarak, bu değeri kodunuzdan yapılandırmayı kullanarak alabileceğiniz\["ConnectionString"\]ConfigureServices yöntemi bir önceki kod örneğinde gösterildiği gibi.
 
-Ancak, üretim ortamları için başka bir yolu Gezgini bağlantı dizeleri gibi parolaları depolamak nasıl isteyebilirsiniz. Genellikle, yönetilecek, seçilen orchestrator tarafından ile yapabileceğiniz gibi [Docker Swarm gizli Yönetim](https://docs.docker.com/engine/swarm/secrets/).
+Ancak, üretim ortamları için bağlantı dizelerini gibi parolaları depolamak nasıl ek yollarını incelemek isteyebilirsiniz. Genellikle, yönetilecek, seçilen orchestrator tarafından ile yapabileceğiniz gibi [Docker Swarm gizli Yönetim](https://docs.docker.com/engine/swarm/secrets/).
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API uygulama sürüm oluşturma
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473652"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 Bir düzenleyici kurtarma günlüğü girişinde bulunan bitiş noktası başvurusu geçersiz ya da uyumsuz meta veri içeriyor.  
