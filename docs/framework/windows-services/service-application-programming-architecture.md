@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516113"
 ---
 # <a name="service-application-programming-architecture"></a><span data-ttu-id="944ac-102">Hizmet Uygulaması Programlama Mimarisi</span><span class="sxs-lookup"><span data-stu-id="944ac-102">Service Application Programming Architecture</span></span>
 <span data-ttu-id="944ac-103">Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="944ac-103">Windows Service applications are based on a class that inherits from the <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="944ac-104">Bu sınıftan yöntemleri geçersiz kılmak ve bunları hizmetinizin nasıl davranacağını belirlemek işlevsellik tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="944ac-104">You override methods from this class and define functionality for them to determine how your service behaves.</span></span>  

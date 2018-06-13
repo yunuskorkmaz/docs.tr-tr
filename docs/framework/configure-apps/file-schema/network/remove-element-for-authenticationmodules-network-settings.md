@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742396"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="c8d88-102">&lt;kaldırma&gt; öğesi authenticationModules (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="c8d88-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="c8d88-103">Bir kimlik doğrulama modülü uygulamadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="c8d88-103">Removes an authentication module from the application.</span></span>  

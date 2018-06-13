@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742094"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="2820b-102">Nasıl yapılır: Uygulama Etki Alanını Boşaltma</span><span class="sxs-lookup"><span data-stu-id="2820b-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="2820b-103">Uygulama etki alanı ile işiniz bittiğinde, kullanarak unload <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2820b-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="2820b-104">**Unload** yöntemi, belirtilen uygulama etki alanı düzgün biçimde kapatır.</span><span class="sxs-lookup"><span data-stu-id="2820b-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="2820b-105">Kaldırma işlemi sırasında hiçbir yeni iş parçacıkları uygulama etki alanı erişebilir ve tüm uygulama etki alanı – özel veri yapıları serbest.</span><span class="sxs-lookup"><span data-stu-id="2820b-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742250"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a><span data-ttu-id="5443c-102">Ortak Dil Çalışma Zamanında Tür İletme</span><span class="sxs-lookup"><span data-stu-id="5443c-102">Type Forwarding in the Common Language Runtime</span></span>
 <span data-ttu-id="5443c-103">Tür iletme özgün derleme kullanan uygulamaları yeniden derlemenize gerek kalmadan başka bir derlemeye türü taşımanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="5443c-103">Type forwarding allows you to move a type to another assembly without having to recompile applications that use the original assembly.</span></span>  

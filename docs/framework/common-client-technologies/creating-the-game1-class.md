@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743738"
 ---
 # <a name="creating-the-game1-class"></a><span data-ttu-id="72ec4-102">Game1 Sınıfı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="72ec4-102">Creating the Game1 Class</span></span>
 <span data-ttu-id="72ec4-103">Game1 sınıfı türetilen tüm Microsoft XNA projelerle gibi [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) temel grafik cihaz başlatma, oyun mantığı ve kod oyunlar için XNA işleme sağlayan sınıf.</span><span class="sxs-lookup"><span data-stu-id="72ec4-103">As with all Microsoft XNA projects, the Game1 class derives from the [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) class, which provides basic graphics device initialization, game logic, and rendering code for XNA games.</span></span> <span data-ttu-id="72ec4-104">Game1 sınıfı işlerin çoğunu içinde GamePiece ve GamePieceCollection sınıfları için oldukça basittir.</span><span class="sxs-lookup"><span data-stu-id="72ec4-104">The Game1 class is fairly simple because most of the work in done in the GamePiece and GamePieceCollection classes.</span></span>  

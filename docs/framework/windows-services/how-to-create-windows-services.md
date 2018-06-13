@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517868"
 ---
 # <a name="how-to-create-windows-services"></a><span data-ttu-id="93374-102">Nasıl Yapılır: Windows Hizmetleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="93374-102">How to: Create Windows Services</span></span>
 <span data-ttu-id="93374-103">Bir hizmet oluşturduğunuzda adlı bir Visual Studio Proje şablonu kullanabilirsiniz **Windows hizmeti**.</span><span class="sxs-lookup"><span data-stu-id="93374-103">When you create a service, you can use a Visual Studio project template called **Windows Service**.</span></span> <span data-ttu-id="93374-104">Bu şablon otomatik olarak işin çoğunu sizin için uygun sınıfları ve ad alanları, hizmetleri, temel sınıfından devralma ayarlama başvurarak yapar ve birkaç yöntemleri geçersiz kılma, büyük bir olasılıkla geçersiz kılmak istiyor.</span><span class="sxs-lookup"><span data-stu-id="93374-104">This template automatically does much of the work for you by referencing the appropriate classes and namespaces, setting up the inheritance from the base class for services, and overriding several of the methods you're likely to want to override.</span></span>  

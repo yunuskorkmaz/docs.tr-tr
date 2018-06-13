@@ -1,14 +1,6 @@
 ---
 title: "Nasıl yapılır: Windows Forms'ta Grafik Yazdırma"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,28 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9c18f563cfd1ab15740ea773effefd89206eb0a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8281e1e0a3d350c3b81e26bbe59c098536ef064e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521504"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="a9d2a-102">Nasıl yapılır: Windows Forms'ta Grafik Yazdırma</span><span class="sxs-lookup"><span data-stu-id="a9d2a-102">How to: Print Graphics in Windows Forms</span></span>
-<span data-ttu-id="a9d2a-103">Sıklıkla, Windows tabanlı uygulamanızda grafik yazdırma isteyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="a9d2a-104"><xref:System.Drawing.Graphics> Sınıfı bir ekran veya yazıcı gibi bir cihaza çizim nesneleri için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
+# <a name="how-to-print-graphics-in-windows-forms"></a><span data-ttu-id="2b5fb-102">Nasıl yapılır: Windows Forms'ta Grafik Yazdırma</span><span class="sxs-lookup"><span data-stu-id="2b5fb-102">How to: Print Graphics in Windows Forms</span></span>
+<span data-ttu-id="2b5fb-103">Sıklıkla, Windows tabanlı uygulamanızda grafik yazdırma isteyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-103">Frequently, you will want to print graphics in your Windows-based application.</span></span> <span data-ttu-id="2b5fb-104"><xref:System.Drawing.Graphics> Sınıfı bir ekran veya yazıcı gibi bir cihaza çizim nesneleri için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-104">The <xref:System.Drawing.Graphics> class provides methods for drawing objects to a device, such as a screen or printer.</span></span>  
   
-### <a name="to-print-graphics"></a><span data-ttu-id="a9d2a-105">Grafik yazdırma</span><span class="sxs-lookup"><span data-stu-id="a9d2a-105">To print graphics</span></span>  
+### <a name="to-print-graphics"></a><span data-ttu-id="2b5fb-105">Grafik yazdırma</span><span class="sxs-lookup"><span data-stu-id="2b5fb-105">To print graphics</span></span>  
   
-1.  <span data-ttu-id="a9d2a-106">Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1.  <span data-ttu-id="2b5fb-106">Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <span data-ttu-id="a9d2a-107">İçinde <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisi, kullanım <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> özelliği <xref:System.Drawing.Printing.PrintPageEventArgs> ne tür bir yazdırmak için grafik yazıcıda istemek üzere sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
+2.  <span data-ttu-id="2b5fb-107">İçinde <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisi, kullanım <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> özelliği <xref:System.Drawing.Printing.PrintPageEventArgs> ne tür bir yazdırmak için grafik yazıcıda istemek üzere sınıfı.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-107">In the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler, use the <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> property of the <xref:System.Drawing.Printing.PrintPageEventArgs> class to instruct the printer on what kind of graphics to print.</span></span>  
   
-     <span data-ttu-id="a9d2a-108">Aşağıdaki kod örneğinde bir sınırlayıcı dikdörtgenini içinde mavi elips oluşturmak için kullanılan bir olay işleyicisini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="a9d2a-109">Aşağıdaki konum ve boyut dikdörtgen vardır: 100 ile başlayan 250 genişliği ve yüksekliği 250 ile 150.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
+     <span data-ttu-id="2b5fb-108">Aşağıdaki kod örneğinde bir sınırlayıcı dikdörtgenini içinde mavi elips oluşturmak için kullanılan bir olay işleyicisini gösterir.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-108">The following code example shows an event handler used to create a blue ellipse within a bounding rectangle.</span></span> <span data-ttu-id="2b5fb-109">Aşağıdaki konum ve boyut dikdörtgen vardır: 100 ile başlayan 250 genişliği ve yüksekliği 250 ile 150.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-109">The rectangle has the following location and dimensions: beginning at 100, 150 with a width of 250 and a height of 250.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -65,7 +52,7 @@ ms.lasthandoff: 04/26/2018
        }  
     ```  
   
-     <span data-ttu-id="a9d2a-110">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-110">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="2b5fb-110">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-110">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -79,7 +66,7 @@ ms.lasthandoff: 04/26/2018
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9d2a-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a9d2a-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2b5fb-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2b5fb-111">See Also</span></span>  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Brush>  
- [<span data-ttu-id="a9d2a-112">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="a9d2a-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [<span data-ttu-id="2b5fb-112">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="2b5fb-112">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

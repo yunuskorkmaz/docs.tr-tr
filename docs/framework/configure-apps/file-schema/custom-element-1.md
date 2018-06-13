@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743283"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a><span data-ttu-id="a5a8b-102">Özel öğe SingleTagSectionHandler için</span><span class="sxs-lookup"><span data-stu-id="a5a8b-102">Custom element for SingleTagSectionHandler</span></span>
 

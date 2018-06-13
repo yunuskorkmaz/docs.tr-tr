@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi"
-ms.custom: 
+title: ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueSnapshot.SetPEBytes
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ad595fa4d6d2ecd3251fd0059d9419c334d867f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411512"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="80bef-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="80bef-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="80bef-103">`SetPEBytes`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="80bef-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="80bef-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="80bef-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="28427-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="28427-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="28427-103">`SetPEBytes` Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="28427-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="28427-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="28427-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80bef-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="80bef-105">See Also</span></span>  
- [<span data-ttu-id="80bef-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="80bef-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="28427-105">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="28427-105">See Also</span></span>  
+ [<span data-ttu-id="28427-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="28427-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

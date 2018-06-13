@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764024"
 ---
 # <a name="operator-precedence-entity-sql"></a><span data-ttu-id="72c13-102">İşleç önceliği (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="72c13-102">Operator Precedence (Entity SQL)</span></span>
 <span data-ttu-id="72c13-103">Zaman bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu sahip birden çok işleç, İşleç önceliği işlemler gerçekleştirilir sırasını belirler.</span><span class="sxs-lookup"><span data-stu-id="72c13-103">When an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query has multiple operators, operator precedence determines the sequence in which the operations are performed.</span></span> <span data-ttu-id="72c13-104">Yürütme sırasını, sorgu sonucu olarak önemli ölçüde etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="72c13-104">The order of execution can significantly affect the query result.</span></span>  

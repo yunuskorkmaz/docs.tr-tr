@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767433"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="7ce55-102">&lt;claimType&gt;</span><span class="sxs-lookup"><span data-stu-id="7ce55-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="7ce55-103">Gelen güvenlik belirteçlerinin için tek bir isteğe bağlı veya gerekli talep belirtir.</span><span class="sxs-lookup"><span data-stu-id="7ce55-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  
