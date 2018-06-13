@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767485"
 ---
 # <a name="web-settings-schema"></a><span data-ttu-id="55a3e-102">Web Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="55a3e-102">Web Settings Schema</span></span>
 <span data-ttu-id="55a3e-103">Web ayarları CPU ve katman barındırma ASP.NET tarafından yönetilen işlem genelinde geçerli yürütme düzeyi ASP.NET ayarlarını belirtin.</span><span class="sxs-lookup"><span data-stu-id="55a3e-103">Web settings specify CPU and execution-level ASP.NET settings that apply to process-wide behavior managed by the ASP.NET hosting layer.</span></span> <span data-ttu-id="55a3e-104">Bu ayarlar bir ASP.NET uygulaması Web.config dosyasında belirtilen uygulama etki alanı türü ayarları farklı.</span><span class="sxs-lookup"><span data-stu-id="55a3e-104">These settings differ from application domain-type settings that are specified in the Web.config file of an ASP.NET application.</span></span>  
