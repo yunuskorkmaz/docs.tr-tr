@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360215"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Saklı yordamları kullanarak işlemleri özelleştirme
 Saklı yordamlar varsayılan davranışı geçersiz kılma için ortak bir yaklaşım temsil eder. Bu konuda Göster nasıl kullanacağınızı örneklerde yöntemi sarmalayıcıları saklı yordamları ve nasıl saklı yordamlar doğrudan çağırabilir miyim oluşturulur.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339533"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programın sürüyor Eylemler deyimlerinde ifade edilir. Ortak Eylemler değişkenleri bildirme, değerler atama, koleksiyonlar üzerinden döngü oluşturma ve verilen bir koşul bağlı olarak kod bloğu bir ya da başka bir dal oluşturma yöntemleri çağırma içerir. Deyimleri bir programda yürütülme sırasını denetim akışı veya akışını çağrılır. Denetim akışını nasıl programın çalışma zamanında aldığını giriş tepki verdiğini bağlı olarak bir program çalıştırıldığında her zaman değişebilir.  

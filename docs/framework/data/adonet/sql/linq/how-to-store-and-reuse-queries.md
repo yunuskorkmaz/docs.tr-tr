@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360144"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: depolamak ve yeniden sorgular
 Birçok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, genellikle bir kez sorgu derleme ve farklı parametrelerle birkaç kez yürütme tarafından performansını artırabilirsiniz. Örneğin, burada Şehir çalışma zamanında bir form kullanıcı tarafından belirtilen belirli bir şehir bulunan tüm müşterilerin almak bir uygulama olabilir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanımını destekleyen *sorguları derlenmiş* bu amaç için.  

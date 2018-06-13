@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340690"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Saf işlevi (C#) kullanarak yeniden düzenleme
 Önceki örnekte, aşağıdaki örnekte refactors [bir genişletme yöntemi (C#) kullanarak yeniden düzenleme](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), bu örnekte, bir paragraf metni saf statik yöntemi taşınmış bulmak için kodu saf işlevi kullanmak için `ParagraphText`.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354952"
 ---
 # <a name="how-to-make-entities-serializable"></a>Nasıl yapılır: varlıklar seri hale getirilebilir hale getirin
 Kodunuzu oluşturduğunuzda, varlıkları seri hale getirilebilir yapabilirsiniz. Sınıflar ile donatılmış <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği ve sütunlarla <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525944"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Nasıl yapılır: Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma
 Windows Forms <xref:System.Windows.Forms.TreeView> denetim depolar en üst düzey düğümlerin kendi <xref:System.Windows.Forms.TreeView.Nodes%2A> koleksiyonu. Her <xref:System.Windows.Forms.TreeNode> Ayrıca kendi sahip <xref:System.Windows.Forms.TreeNode.Nodes%2A> alt düğümlerinden depolamak için koleksiyon. Her iki koleksiyon özellikleri türlerinin <xref:System.Windows.Forms.TreeNodeCollection>, eklemenize olanak sağlayan standart koleksiyon üyeleri kaldırın ve düğüm hiyerarşisinin tek bir düzeyde düğümleri yeniden sağlar.  

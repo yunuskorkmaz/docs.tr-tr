@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354246"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Nasıl yapılır: bileşik anahtarlar sorgularda işlemek
 Bazı işleçleri, tek bir bağımsız değişken alabilir. Bağımsız değişkeniniz veritabanından birden fazla sütunu içermelidir birleşimi temsil etmek için anonim bir tür oluşturmanız gerekir.  

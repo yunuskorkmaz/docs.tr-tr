@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415070"
 ---
 # <a name="icordebuggenericvalue-interface1"></a>Icordebuggenericvalue Interface1
 "Tüm değerleri uygular Icordebugvalue" sınıfıdır. Bu arabirim, değer için Alma ve Ayarlama yöntemlerini sağlar.  

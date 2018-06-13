@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215023"
 ---
 # <a name="implicit-c-reference"></a>implicit (C# Başvurusu)
 `implicit` Anahtar sözcüğü bir örtük kullanıcı tanımlı tür dönüştürme işleci bildirmek için kullanılır. Dönüştürme veri kaybına neden değil garanti, kullanıcı tanımlı bir tür ve başka bir tür arasında örtük dönüşümler etkinleştirmek için kullanın.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357157"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Kimliği veya sayı değerlerini alma
 İlişkisel bir veritabanındaki bir birincil anahtar sütunlarının her zaman benzersiz değerler içeren bir sütun veya ' dir. Birincil anahtar değerine bilerek içerdiği satırı bulun olanak tanır. SQL Server, Oracle ve Microsoft Access/Jet gibi ilişkisel veritabanı motoru birincil anahtarlar olarak belirlenebilir sütunları otomatik olarak artırma oluşturulmasını destekler. Tabloya satır eklendikçe bu değerleri sunucu tarafından üretilir. SQL Server'daki bir sütunun kimliğini özelliğini ayarlayın, Oracle bir dizisi oluşturma ve Microsoft Access içinde bir sayı sütun oluşturun.  

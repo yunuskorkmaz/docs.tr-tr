@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526439"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak, yönetilen arabirimi değil doğrudan kullanıma üyelere erişmek gerekecektir. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişme için iki yolla inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve bir Web sayfası içinde tanımlanan VBScript işlevleri.  

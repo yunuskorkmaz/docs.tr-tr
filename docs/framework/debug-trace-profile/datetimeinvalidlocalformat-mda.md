@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357812"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 `dateTimeInvalidLocalFormat` MDA etkinleştirilirse, bir <xref:System.DateTime> yalnızca yerel için kullanılması hedeflenen bir biçimi kullanarak bir Evrensel Eşgüdümlü saate (UTC) biçimli olarak depolanan örneği <xref:System.DateTime> örnekleri. Bu MDA belirtilmemiş veya varsayılan etkinleştirilmedi <xref:System.DateTime> örnekleri.  

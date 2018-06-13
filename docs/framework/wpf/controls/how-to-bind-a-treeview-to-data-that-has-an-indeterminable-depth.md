@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554384"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Nasıl yapılır: Belirlenemeyen Derinliğe Sahip Veriyi TreeView'a Bağlama
 Bağlamak istediğiniz zamanlar olabilir bir <xref:System.Windows.Controls.TreeView> Derinliği bilinmeyen bir veri kaynağına.  Veriler çalışanların diğer çalışanlarla doğrudan rapor sahip olduğu doğal olarak burada klasörleri klasörler içerebilir, bir dosya sistemi veya bir şirketin kuruluş yapısı gibi özyinelemeli olduğunda bu durum oluşabilir.  

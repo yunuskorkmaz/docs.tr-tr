@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363655"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ-SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parçası olan [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] teknoloji ailesi. Tarafından sağlanan hizmetlerin dayanır [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] sağlayıcı modeli. Bu nedenle karıştırabilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varolan kod [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] uygulamaları ve geçerli geçirmek [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] çözümleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aşağıdaki çizimde ilişki üst düzey bir görünümünü sağlar.  

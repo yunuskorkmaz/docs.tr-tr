@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365455"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET yan yana yürütme
 Yan yana yürütme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bir uygulama birden fazla sürümünü olan bir bilgisayarda yürütmek için özelliği [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yüklü, özel olarak uygulama derlenmiş kendisi için sürüm kullanıyordur. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  

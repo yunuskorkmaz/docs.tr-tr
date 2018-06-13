@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316965"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor
 Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> hızlı bir şekilde tek bir benzersiz olarak bulmak için kod yazma eksen yöntemi adlı öğesi. Belirli bir ada sahip belirli bir alt öğesi bulmak istediğiniz durumlarda bu kullanışlı bir tekniktir. İstenen öğesine gitmek için kod yazma, ancak daha hızlı ve kolay kullanılarak kod yazmaya görülür <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  

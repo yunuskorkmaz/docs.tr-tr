@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360053"
 ---
 # <a name="remote-vs-local-execution"></a>Uzak vs. Yerel çalıştırma
 Sorgularınızın ya da uzaktan yürütme karar verebilirsiniz (diğer bir deyişle, veritabanı altyapısı veritabanında sorgu yürütür) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel önbelleğe karşı sorgu yürütülür).  

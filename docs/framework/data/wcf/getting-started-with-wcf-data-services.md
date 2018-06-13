@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359497"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Veri Hizmetleri ile çalışmaya başlama
 Bu bölümdeki konular, hızlı bir şekilde anlamanıza yardımcı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ve nasıl kullanılacağını [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma ve kullanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları temel teknolojileri açıklayarak. Bu bölüm hem kavramsal içerik içerir ve bir [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Öğreticisi.  

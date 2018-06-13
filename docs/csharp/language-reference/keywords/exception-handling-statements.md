@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213229"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Özel Durum İşleme Deyimleri (C# Başvurusu)
 C# programınız yürütülmesi sırasında ortaya çıkabilecek özel durumlar olarak bilinen anormal durumları işlemek için yerleşik destek sağlar. Bu özel durumlar denetim normal akıştaki dışında olan kod tarafından işlenir.  

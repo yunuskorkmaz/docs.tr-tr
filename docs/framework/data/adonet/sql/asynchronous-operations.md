@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352985"
 ---
 # <a name="asynchronous-operations"></a>Zaman uyumsuz işlemler
 Komut yürütmeleri gibi bazı veritabanı işlemlerini tamamlamak için önemli zaman alabilir. Böyle bir durumda, tek iş parçacıklı uygulamalar diğer işlemleri ya da gerekir komutu kendi işlemleri devam etmeden önce tamamlanmasını bekleyin. Buna karşılık, uzun süre çalışan işlemi bir arka plan iş parçacığı atamak için ön plan iş parçacığı işlemi etkin kalmasını sağlar. Bir Windows uygulaması'nda, örneğin, uzun süre çalışan işlemi için bir arka plan iş parçacığı temsilci işlemi yürütülürken yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı sağlar.  

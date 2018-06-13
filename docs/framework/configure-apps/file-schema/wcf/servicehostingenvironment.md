@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354326"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Bu öğe için belirli bir barındırma ortamı hizmeti başlatır türü tanımlar. Bu öğe boş ise, varsayılan türü kullanılır. Bu öğe yalnızca uygulama veya makine düzeyi yapılandırma dosyaları kullanılır.  

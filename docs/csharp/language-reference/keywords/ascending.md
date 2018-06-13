@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213503"
 ---
 # <a name="ascending-c-reference"></a>ascending (C# Başvurusu)
 `ascending` Bağlamsal anahtar sözcüğü kullanılır [orderby yan tümcesinin](../../../csharp/language-reference/keywords/orderby-clause.md) sıralama düzenini küçükten en büyük olduğunu belirtmek için sorgu ifadelerinde. Çünkü `ascending` varsayılan sıralama olan sipariş, bunu belirtmeniz gerekmez.  

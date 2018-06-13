@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766666"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlatır, (SQL:1999-uyumlu bir veritabanına) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimleri değişikliği komut ağacı çevirmek için sorumludur.  

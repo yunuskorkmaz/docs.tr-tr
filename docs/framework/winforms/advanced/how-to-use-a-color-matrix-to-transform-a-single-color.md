@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527410"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sağlar <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> depolamak ve görüntüleri düzenleme için sınıflar. <xref:System.Drawing.Image> ve <xref:System.Drawing.Bitmap> 32 bitlik bir sayı nesneleri depolamak her piksel rengi: 8 bit her kırmızı, yeşil, mavi ve alfa için. Dört bileşenlerinden her biri, 0-hiçbir yoğunluğu ve tam yoğunluğu temsil eden 255 temsil eden 0 ile 255 arasında bir sayıdır. Renk saydam alfa bileşeni belirtir: 0 tamamen saydamdır ve 255'tir tamamıyla opak.  

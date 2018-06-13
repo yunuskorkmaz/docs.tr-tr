@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327401"
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Nasıl yapılır: Temsilcileri Birleştirme (Çok Noktaya Yayın Temsilcileri)(C# Programlama Kılavuzu)
 Bu örnek çok noktaya yayın temsilcileri oluşturulacağını gösterir. Kullanışlı bir özelliği [temsilci](../../../csharp/language-reference/keywords/delegate.md) nesnedir kullanarak birden çok nesne bir temsilci örneğine atanabilir `+` işleci. Çok noktaya yayın temsilci atanan temsilcileri listesini içerir. Çok noktaya yayın temsilci çağrıldığında, sırayla listesinde temsilcileri çağırır. Yalnızca aynı türdeki temsilciler birleştirilebilir.  

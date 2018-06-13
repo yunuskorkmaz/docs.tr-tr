@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313576"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>ref ve out Kullanarak Dizileri Geçirme (C# Programlama Kılavuzu)
 Tüm [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri, bir `out` kullanılmadan önce bir dizi türü parametresinin atanmalıdır; diğer bir deyişle, aranan tarafından atanmalıdır. Örneğin:  

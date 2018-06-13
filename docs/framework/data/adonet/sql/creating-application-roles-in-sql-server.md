@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362533"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server uygulama rolleri oluşturma
 Uygulama rolleri veritabanı rolü veya kullanıcı yerine bir uygulama izinleri atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanmak, uygulama rolünü etkinleştirmek ve uygulamaya verilen izinler varsayalım. Uygulama rolü verilen izinler yürürlükte bağlantısı süresince değil.  

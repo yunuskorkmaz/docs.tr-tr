@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552005"
 ---
 # <a name="controls-by-category"></a>Kategoriye Göre Denetimler
 Windows Presentation Foundation (WPF) denetimleri mantıksal olarak birkaç kategoride gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım desenlerine veya işlevselliğine sahip görmenize yardımcı olarak senaryonuz için uygun denetimi seçmek için kullanılabilir.  

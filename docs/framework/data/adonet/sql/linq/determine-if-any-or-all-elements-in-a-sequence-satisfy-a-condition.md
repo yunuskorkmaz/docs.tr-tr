@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359978"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Bir dizi veya tamamını öğelerinde bir koşul karşılayıp karşılamadığını belirlemek
 <xref:System.Linq.Enumerable.All%2A> Operatörü döndürür `true` dizisindeki tüm öğeler bir koşulla eşleşmesi durumunda.  

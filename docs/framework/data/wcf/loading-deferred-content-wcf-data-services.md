@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365208"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>İçerik (WCF Veri Hizmetleri) yükleme ertelenmiş
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilişkili varlıklar, disk belleğine alınan yanıt verilerini ve gerektiğinde veri hizmetinden ikili veri akışlarını gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza ertelenmiş tür içeriği yüklemek açıklar.  

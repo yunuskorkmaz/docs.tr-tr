@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552720"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Nasıl yapılır: BetweenShowDelay Özelliğini Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> araç ipuçları hızlı bir şekilde görünmesini sağlayacak şekilde zaman özelliğinin — çok az kayıpla veya hiç gecikmeyle — zaman kullanıcı hareket fare işaretçisini bir araç ipucu doğrudan diğerine.  

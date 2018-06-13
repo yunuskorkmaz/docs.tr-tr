@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766442"
 ---
 # <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework var olan bir uygulamaya birkaç avantaj sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal model kullanma yeteneğini bu yararları önemlidir. Bu kolayca gelecekteki depolama modeli için veya uygulamaya karşılayan değişiklikleri yapmadan veri kaynağına kendisini değişiklik yapmanızı sağlar. Kullanmanın yararları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362471"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server veri türü eşlemeleri
 SQL Server ve .NET Framework farklı tür sistemlerde temel alır. Örneğin, .NET Framework <xref:System.Decimal> yapısının 28, en fazla ölçeğini kullanırken SQL Server ondalık ve sayısal veri türleri 38 maksimum ölçeğini vardır. Veri, okuma ve yazma, veri bütünlüğünü sağlamak için <xref:System.Data.SqlClient.SqlDataReader> çıkarır SQL Server'a özel yazılan nesnelerin dönüş erişimci yöntemleri <xref:System.Data.SqlTypes> .NET Framework dönüş erişimci yöntemleri yanı sıra türleri. SQL Server türleri ve .NET Framework türleri de temsil ettiği numaralandırmalara <xref:System.Data.DbType> ve <xref:System.Data.SqlDbType> belirtirken kullanabileceğiniz sınıfları <xref:System.Data.SqlClient.SqlParameter> veri türleri.  

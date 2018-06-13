@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357215"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Nasıl yapılır: DataServiceContext (WCF Veri Hizmetleri) var olan bir varlık ekleme
 Bir varlığın bir veri hizmeti zaten mevcut olduğunda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, varlık doğrudan temsil eden bir nesne eklemek tanır <xref:System.Data.Services.Client.DataServiceContext> ilk bir sorgu yürütme. Daha fazla bilgi için bkz: [veri hizmeti güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

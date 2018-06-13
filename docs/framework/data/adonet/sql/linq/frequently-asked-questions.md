@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365494"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  

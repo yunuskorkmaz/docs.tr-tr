@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360767"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime yöntemleri
 LINQ SQL sorguları kullanmak, aşağıdaki LINQ SQL desteklenen yöntem, işleçler ve özellikler için kullanılabilir. Yöntemi, işleci veya özelliği desteklenmeyen olduğunda LINQ-SQL üye SQL Server üzerinde yürütme için çeviremez. Kodunuzda bu üyeleri kullanabilir, sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilmesi önce ancak, bunlar değerlendirilmelidir.  

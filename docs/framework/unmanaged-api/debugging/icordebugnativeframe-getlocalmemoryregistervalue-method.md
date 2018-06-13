@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417595"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue Metodu
 Bir bağımsız değişken veya Düşük word ve yüksek word belirtilen YAZMAÇ ve bellek konumuna sırasıyla için bu yerel çerçeve depolandığı yerel değişken değerini alır.  

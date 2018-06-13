@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528227"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Nasıl yapılır: TreeView Düğümüne ShortCut Menüsü Ekleme
 Windows Forms <xref:System.Windows.Forms.TreeView> denetimi, bir hiyerarşi düğümlerinin, dosya ve klasörleri Windows Explorer'ın sol bölmesinde görüntülenen benzer görüntüler. Ayarlayarak <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> özelliği sağlayabileceğiniz bağlama duyarlı işlemleri kullanıcıya bunlar sağ tıklattığınızda <xref:System.Windows.Forms.TreeView> denetim. İlişkilendirerek bir <xref:System.Windows.Forms.ContextMenuStrip> tek bileşeniyle <xref:System.Windows.Forms.TreeNode> öğeleri kısayol menüsünün işlevselliği için özelleştirilmiş bir düzeyini ekleyebilirsiniz, <xref:System.Windows.Forms.TreeView> kontrol eder.  

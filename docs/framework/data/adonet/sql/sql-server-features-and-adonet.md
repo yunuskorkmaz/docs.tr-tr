@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356575"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server özellikleri ve ADO.NET
 Bu bölümdeki konular, SQL Server veritabanı uygulamaları ADO.NET kullanarak geliştirme sırasında hedeflenen ele alınmaktadır.  

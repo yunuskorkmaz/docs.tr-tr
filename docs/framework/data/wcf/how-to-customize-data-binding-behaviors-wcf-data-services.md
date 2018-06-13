@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364145"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Nasıl yapılır: veri davranışları (WCF Veri Hizmetleri) bağlama özelleştirme
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], tarafından çağrılır Özel mantık sağlayabilir <xref:System.Data.Services.Client.DataServiceCollection%601> ne zaman bir nesne eklenemez veya bağlama koleksiyonundan veya özellik değişikliği algıladığında kaldırılamaz. Bu özel mantık olarak başvurulan yöntemi olarak sağlanan <xref:System.Func%602> değerini döndüren Temsilciler `false` zaman varsayılan davranışı hala gerçekleştirilmelidir özel yöntem tamamlandığında ve `true` sonraki zaman işlenmesi Olay durdurulması gerekir.  

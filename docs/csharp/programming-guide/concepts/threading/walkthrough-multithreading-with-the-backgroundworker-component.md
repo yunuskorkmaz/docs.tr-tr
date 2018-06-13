@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339374"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>İzlenecek yol: BackgroundWorker bileşeni (C#) ile çoklu iş parçacığı kullanımı
 Bu kılavuz bir metin dosyası için bir sözcük oluşumları arar birden çok iş parçacıklı bir Windows Forms uygulamasının nasıl oluşturulacağını gösterir. Bunu gösterir:  

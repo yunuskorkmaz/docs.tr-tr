@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363269"
 ---
 # <a name="implementing-a-resource-manager"></a>Kaynak Yöneticisi uygulama
 Bir işlem içinde kullanılan her bir kaynağın eylemlerini bir işlem yöneticisi tarafından düzenlenir kaynak yöneticisi tarafından yönetilir. Kaynak yöneticileri uygulama kararlılık ve yalıtım garantisi ile sağlamak için işlem yöneticisi işbirliği içinde çalışır. Microsoft SQL Server, kalıcı ileti sıraları, bellek içi karma tabloları kaynak yöneticilerinin tüm örnekleri mevcuttur.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528609"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları
 <xref:System.Windows.Forms.DataGridView> Denetim, üç farklı modda verileri görüntüleyebilir: ilişkili, ilişkisiz ve sanal. Gereksinimlerinize göre en uygun modu seçin.  

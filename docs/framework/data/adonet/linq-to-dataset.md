@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764859"
 ---
 # <a name="linq-to-dataset"></a>LINQ - DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] daha kolay ve hızlı sorguya, önbelleğe alınan veriler üzerinde kolaylaştırır bir <xref:System.Data.DataSet> nesnesi. Özellikle, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorguları programlama dili kendisi yerine ayrı sorgu dilini kullanarak yazmak geliştiricilere etkinleştirerek sorgulama basitleştirir. Bu artık, derleme zamanı sözdizimi denetimi, statik yazarak ve IntelliSense desteği sorgularını Visual Studio tarafından sağlanan yararlanabilir Visual Studio geliştiriciler için özellikle yararlıdır.  
