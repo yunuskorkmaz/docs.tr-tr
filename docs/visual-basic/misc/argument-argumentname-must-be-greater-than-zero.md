@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598091"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; sıfırdan büyük olmalıdır
 Sıfıra eşit veya daha az olduğu için bağımsız değişken geçerli değil.  

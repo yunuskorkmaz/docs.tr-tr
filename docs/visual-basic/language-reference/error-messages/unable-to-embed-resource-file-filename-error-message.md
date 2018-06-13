@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596648"
 ---
 # <a name="unable-to-embed-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Kaynak dosyası ekleme yapılamıyor &#39; &lt;filename&gt;&#39;: &lt;hata iletisi&gt;
 Visual Basic derleyici bir derleme bir bildirim oluşturmak için derleme bağlayıcı (Al.exe, Alink olarak da bilinir) çağırır. Bağlayıcı yerel COM + kaynak dosyası doğrudan bütünleştirilmiş koda katıştırma bir hata bildirdi.  

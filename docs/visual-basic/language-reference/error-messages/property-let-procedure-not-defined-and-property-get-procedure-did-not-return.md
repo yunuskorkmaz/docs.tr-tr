@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596612"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi
 Belirli özellikler, yöntemleri ve işlemleri yalnızca uygulayabilirsiniz `Collection` nesneleri. Bir işlem veya koleksiyonlar için özel özellik belirtildi ancak nesnesi koleksiyonu değil.  
