@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171461"
 ---
 # <a name="--operator-c-reference"></a><span data-ttu-id="bce14-102">-= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="bce14-102">-= Operator (C# Reference)</span></span>
 <span data-ttu-id="bce14-103">Çıkarma atama işleci.</span><span class="sxs-lookup"><span data-stu-id="bce14-103">The subtraction assignment operator.</span></span>  
