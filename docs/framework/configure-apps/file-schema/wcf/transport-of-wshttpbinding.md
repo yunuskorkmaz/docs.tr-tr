@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767589"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="a91cf-102">&lt;wsHttpBinding&gt; &lt;taşıma&gt;</span><span class="sxs-lookup"><span data-stu-id="a91cf-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="a91cf-103">HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a91cf-103">Defines authentication settings for the HTTP transport.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765701"
 ---
 # <a name="working-with-data-providers"></a><span data-ttu-id="e9115-102">Veri sağlayıcıları ile çalışma</span><span class="sxs-lookup"><span data-stu-id="e9115-102">Working with Data Providers</span></span>
 <span data-ttu-id="e9115-103">Bu bölümdeki konular, hizmetleri ve Entity Framework tarafından desteklenen bir veri kaynağında yerel sorgu kavramsal model sorguları dönüştürmek sağlayıcıları açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e9115-103">The topics in this section describe the services and providers that transform queries against a conceptual model into native queries against a data source that is supported by the Entity Framework.</span></span>  

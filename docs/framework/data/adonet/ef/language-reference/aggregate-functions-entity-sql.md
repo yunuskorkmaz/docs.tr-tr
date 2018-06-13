@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765587"
 ---
 # <a name="aggregate-functions-entity-sql"></a><span data-ttu-id="25987-102">Toplama işlevleri (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="25987-102">Aggregate Functions (Entity SQL)</span></span>
 <span data-ttu-id="25987-103">Bir toplama skaler bir koleksiyona bir grup işleminin bir parçası olarak toplar bir dil yapıdır.</span><span class="sxs-lookup"><span data-stu-id="25987-103">An aggregate is a language construct that condenses a collection into a scalar as a part of a group operation.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="25987-104"> Toplamlar iki biçimde getirir:</span><span class="sxs-lookup"><span data-stu-id="25987-104"> aggregates come in two forms:</span></span>  

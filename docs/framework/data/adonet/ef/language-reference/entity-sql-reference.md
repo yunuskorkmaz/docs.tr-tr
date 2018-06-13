@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766741"
 ---
 # <a name="entity-sql-reference"></a><span data-ttu-id="cdd4f-102">Varlık SQL Başvurusu</span><span class="sxs-lookup"><span data-stu-id="cdd4f-102">Entity SQL Reference</span></span>
 <span data-ttu-id="cdd4f-103">Bu bölüm içerir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] başvuru konuları.</span><span class="sxs-lookup"><span data-stu-id="cdd4f-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="cdd4f-104">Bu konuda özetler ve grupları [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kategoriye göre işleçler.</span><span class="sxs-lookup"><span data-stu-id="cdd4f-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  

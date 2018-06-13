@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766666"
 ---
 # <a name="modification-sql-generation"></a><span data-ttu-id="f9a6b-102">Değişiklik SQL oluşturma</span><span class="sxs-lookup"><span data-stu-id="f9a6b-102">Modification SQL Generation</span></span>
 <span data-ttu-id="f9a6b-103">Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlatır, (SQL:1999-uyumlu bir veritabanına) sağlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="f9a6b-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="f9a6b-104">Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimleri değişikliği komut ağacı çevirmek için sorumludur.</span><span class="sxs-lookup"><span data-stu-id="f9a6b-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  

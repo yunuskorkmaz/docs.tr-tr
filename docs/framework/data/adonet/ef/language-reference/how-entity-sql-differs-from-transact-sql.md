@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766302"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a><span data-ttu-id="49869-102">Varlık SQL Transact-SQL nasıl farklıdır</span><span class="sxs-lookup"><span data-stu-id="49869-102">How Entity SQL Differs from Transact-SQL</span></span>
 <span data-ttu-id="49869-103">Bu konuda arasındaki farklar açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ve [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="49869-103">This topic describes the differences between [!INCLUDE[esql](../../../../../../includes/esql-md.md)] and [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span>  

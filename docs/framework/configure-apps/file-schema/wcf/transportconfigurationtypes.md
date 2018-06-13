@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766952"
 ---
 # <a name="lttransportconfigurationtypesgt"></a><span data-ttu-id="34373-102">&lt;transportConfigurationTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="34373-102">&lt;transportConfigurationTypes&gt;</span></span>
 <span data-ttu-id="34373-103">Belirli bir tür belirleme yapılandırma öğelerinin koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="34373-103">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="34373-104">Bu özel WAS protokoller eklemek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="34373-104">This can be used to add custom WAS protocols.</span></span>  

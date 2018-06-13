@@ -1,27 +1,19 @@
 ---
-title: "Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor"
-ms.custom: 
+title: 'Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6dc90262318f5f31c4236318f87393749295a18a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e08e07e0d32146a14b90b9d6463e6e58a233a923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316965"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="fb0fe-102">Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor</span><span class="sxs-lookup"><span data-stu-id="fb0fe-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
-<span data-ttu-id="fb0fe-103">Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> hızlı bir şekilde tek bir benzersiz olarak bulmak için kod yazma eksen yöntemi adlı öğesi.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="fb0fe-104">Belirli bir ada sahip belirli bir alt öğesi bulmak istediğiniz durumlarda bu kullanışlı bir tekniktir.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="fb0fe-105">İstenen öğesine gitmek için kod yazma, ancak daha hızlı ve kolay kullanılarak kod yazmaya görülür <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a><span data-ttu-id="bf46c-102">Nasıl yapılır: alt öğeleri yöntemi (C#) kullanarak tek bir alt öğesi bulunamıyor</span><span class="sxs-lookup"><span data-stu-id="bf46c-102">How to: Find a Single Descendant Using the Descendants Method (C#)</span></span>
+<span data-ttu-id="bf46c-103">Kullanabileceğiniz <xref:System.Xml.Linq.XContainer.Descendants%2A> hızlı bir şekilde tek bir benzersiz olarak bulmak için kod yazma eksen yöntemi adlı öğesi.</span><span class="sxs-lookup"><span data-stu-id="bf46c-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="bf46c-104">Belirli bir ada sahip belirli bir alt öğesi bulmak istediğiniz durumlarda bu kullanışlı bir tekniktir.</span><span class="sxs-lookup"><span data-stu-id="bf46c-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="bf46c-105">İstenen öğesine gitmek için kod yazma, ancak daha hızlı ve kolay kullanılarak kod yazmaya görülür <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.</span><span class="sxs-lookup"><span data-stu-id="bf46c-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fb0fe-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="fb0fe-106">Example</span></span>  
- <span data-ttu-id="fb0fe-107">Bu örnekte <xref:System.Linq.Enumerable.First%2A> standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="bf46c-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="bf46c-106">Example</span></span>  
+ <span data-ttu-id="bf46c-107">Bu örnekte <xref:System.Linq.Enumerable.First%2A> standart sorgu işleci.</span><span class="sxs-lookup"><span data-stu-id="bf46c-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -44,14 +36,14 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="fb0fe-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fb0fe-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="bf46c-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bf46c-108">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="fb0fe-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="fb0fe-109">Example</span></span>  
- <span data-ttu-id="fb0fe-110">Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="fb0fe-111">Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="fb0fe-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="bf46c-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="bf46c-109">Example</span></span>  
+ <span data-ttu-id="bf46c-110">Aşağıdaki örnek bir ad alanı XML aynı sorgu gösterir.</span><span class="sxs-lookup"><span data-stu-id="bf46c-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="bf46c-111">Daha fazla bilgi için bkz: [XML ad alanları (C#) çalışma](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="bf46c-111">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<aw:Root xmlns:aw='http://www.adventure-works.com'>  
@@ -75,11 +67,11 @@ string grandChild3 = (string)
 Console.WriteLine(grandChild3);  
 ```  
   
- <span data-ttu-id="fb0fe-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="fb0fe-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="bf46c-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bf46c-112">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fb0fe-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="fb0fe-113">See Also</span></span>  
- [<span data-ttu-id="fb0fe-114">Temel sorgu (LINQ-XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="fb0fe-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bf46c-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bf46c-113">See Also</span></span>  
+ [<span data-ttu-id="bf46c-114">Temel sorgu (LINQ-XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bf46c-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
