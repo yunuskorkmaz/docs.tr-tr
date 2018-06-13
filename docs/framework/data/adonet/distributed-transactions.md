@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766094"
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış işlemler
 Bir işlem (kaydetme) başarılı ya da başka şeylerin bir birim olarak (iptal için) başarısız ilgili görevleri kümesidir. A *dağıtılmış işlem* birkaç kaynakları etkileyen bir işlem. Yürütme dağıtılmış işlem için veri herhangi bir değişiklik kalıcı olacağını tüm katılımcılar güvence altına almalıdır. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Bu garantisi yapmak tek bir katılımcı başarısız olursa, tüm işlem başarısız olur ve işlem kapsamı içinde veri değişiklikler geri alınır.  
