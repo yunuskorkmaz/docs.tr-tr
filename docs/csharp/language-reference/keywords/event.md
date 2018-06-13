@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955972"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="0127a-102">event (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="0127a-102">event (C# Reference)</span></span>
 <span data-ttu-id="0127a-103">`event` Anahtar sözcüğü bir yayımcı sınıfı bir olayı bildirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0127a-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  

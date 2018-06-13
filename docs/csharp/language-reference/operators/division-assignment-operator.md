@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171628"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a6972-102">/= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="a6972-102">/= Operator (C# Reference)</span></span>
 <span data-ttu-id="a6972-103">Bölme atama işleci.</span><span class="sxs-lookup"><span data-stu-id="a6972-103">The division assignment operator.</span></span>  

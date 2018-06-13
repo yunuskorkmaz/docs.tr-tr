@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956201"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a><span data-ttu-id="e6819-103">.NET core CLI araçlarını genişletilebilirlik modeli</span><span class="sxs-lookup"><span data-stu-id="e6819-103">.NET Core CLI tools extensibility model</span></span>
 

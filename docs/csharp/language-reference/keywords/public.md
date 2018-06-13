@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171999"
 ---
 # <a name="public-c-reference"></a><span data-ttu-id="d21e4-102">public (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="d21e4-102">public (C# Reference)</span></span>
 <span data-ttu-id="d21e4-103">`public` Sözcüktür türleri ve tür üyeleri için bir erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="d21e4-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="d21e4-104">Genel erişim en fazla izne sahip erişim düzeyi değil.</span><span class="sxs-lookup"><span data-stu-id="d21e4-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="d21e4-105">Bu örnekte olduğu gibi ortak üyelere erişme hiçbir kısıtlamaları vardır:</span><span class="sxs-lookup"><span data-stu-id="d21e4-105">There are no restrictions on accessing public members, as in this example:</span></span>  

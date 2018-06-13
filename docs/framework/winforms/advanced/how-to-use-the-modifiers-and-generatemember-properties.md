@@ -1,13 +1,6 @@
 ---
-title: "Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma"
-ms.custom: 
+title: 'Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,44 +15,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f11595daac74ceb76c5d017af015d5523506bdf3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524000"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="3131e-102">Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="3131e-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
-<span data-ttu-id="3131e-103">Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım ortamı tarafından sağlanan: `GenerateMember` ve `Modifiers`.</span><span class="sxs-lookup"><span data-stu-id="3131e-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="3131e-104">`GenerateMember` Özelliği, Windows Form Tasarımcısı bileşeni için bir üye değişkenine oluşturduğunda belirtir.</span><span class="sxs-lookup"><span data-stu-id="3131e-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="3131e-105">`Modifiers` Bu üye değişkenine atanan erişim değiştiricisi bir özelliktir.</span><span class="sxs-lookup"><span data-stu-id="3131e-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="3131e-106">Varsa değerini `GenerateMember` özelliği `false`, değeri `Modifiers` özelliğinin hiçbir etkisi.</span><span class="sxs-lookup"><span data-stu-id="3131e-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a><span data-ttu-id="bea46-102">Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma</span><span class="sxs-lookup"><span data-stu-id="bea46-102">How to: Use the Modifiers and GenerateMember Properties</span></span>
+<span data-ttu-id="bea46-103">Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım ortamı tarafından sağlanan: `GenerateMember` ve `Modifiers`.</span><span class="sxs-lookup"><span data-stu-id="bea46-103">When you place a component on a Windows Form, two properties are provided by the design environment: `GenerateMember` and `Modifiers`.</span></span> <span data-ttu-id="bea46-104">`GenerateMember` Özelliği, Windows Form Tasarımcısı bileşeni için bir üye değişkenine oluşturduğunda belirtir.</span><span class="sxs-lookup"><span data-stu-id="bea46-104">The `GenerateMember` property specifies when the Windows Forms Designer generates a member variable for a component.</span></span> <span data-ttu-id="bea46-105">`Modifiers` Bu üye değişkenine atanan erişim değiştiricisi bir özelliktir.</span><span class="sxs-lookup"><span data-stu-id="bea46-105">The `Modifiers` property is the access modifier assigned to that member variable.</span></span> <span data-ttu-id="bea46-106">Varsa değerini `GenerateMember` özelliği `false`, değeri `Modifiers` özelliğinin hiçbir etkisi.</span><span class="sxs-lookup"><span data-stu-id="bea46-106">If the value of the `GenerateMember` property is `false`, the value of the `Modifiers` property has no effect.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3131e-107">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="3131e-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3131e-108">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="3131e-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3131e-109">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="3131e-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="bea46-107">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="bea46-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="bea46-108">Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="bea46-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="bea46-109">Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="bea46-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="3131e-110">Bir bileşenin formun üyesi olup olmadığını belirtmek için</span><span class="sxs-lookup"><span data-stu-id="3131e-110">To specify whether a component is a member of the form</span></span>  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a><span data-ttu-id="bea46-110">Bir bileşenin formun üyesi olup olmadığını belirtmek için</span><span class="sxs-lookup"><span data-stu-id="bea46-110">To specify whether a component is a member of the form</span></span>  
   
-1.  <span data-ttu-id="3131e-111">Windows Forms Tasarımcısı'nda formunuz açın.</span><span class="sxs-lookup"><span data-stu-id="3131e-111">In the Windows Forms Designer, open your form.</span></span>  
+1.  <span data-ttu-id="bea46-111">Windows Forms Tasarımcısı'nda formunuz açın.</span><span class="sxs-lookup"><span data-stu-id="bea46-111">In the Windows Forms Designer, open your form.</span></span>  
   
-2.  <span data-ttu-id="3131e-112">Açık **araç**ve form üzerinde üç yerleştirin <xref:System.Windows.Forms.Button> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="3131e-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
+2.  <span data-ttu-id="bea46-112">Açık **araç**ve form üzerinde üç yerleştirin <xref:System.Windows.Forms.Button> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="bea46-112">Open the **Toolbox**, and on the form, place three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-3.  <span data-ttu-id="3131e-113">Ayarlama `GenerateMember` ve `Modifiers` özellikleri her <xref:System.Windows.Forms.Button> denetimi aşağıdaki tabloya göre.</span><span class="sxs-lookup"><span data-stu-id="3131e-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
+3.  <span data-ttu-id="bea46-113">Ayarlama `GenerateMember` ve `Modifiers` özellikleri her <xref:System.Windows.Forms.Button> denetimi aşağıdaki tabloya göre.</span><span class="sxs-lookup"><span data-stu-id="bea46-113">Set the `GenerateMember` and `Modifiers` properties for each <xref:System.Windows.Forms.Button> control according to the following table.</span></span>  
   
-    |<span data-ttu-id="3131e-114">Düğme adı</span><span class="sxs-lookup"><span data-stu-id="3131e-114">Button name</span></span>|<span data-ttu-id="3131e-115">GenerateMember değeri</span><span class="sxs-lookup"><span data-stu-id="3131e-115">GenerateMember value</span></span>|<span data-ttu-id="3131e-116">Değiştiriciler değeri</span><span class="sxs-lookup"><span data-stu-id="3131e-116">Modifiers value</span></span>|  
+    |<span data-ttu-id="bea46-114">Düğme adı</span><span class="sxs-lookup"><span data-stu-id="bea46-114">Button name</span></span>|<span data-ttu-id="bea46-115">GenerateMember değeri</span><span class="sxs-lookup"><span data-stu-id="bea46-115">GenerateMember value</span></span>|<span data-ttu-id="bea46-116">Değiştiriciler değeri</span><span class="sxs-lookup"><span data-stu-id="bea46-116">Modifiers value</span></span>|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
-    |`button3`|`false`|<span data-ttu-id="3131e-117">Değişiklik yok</span><span class="sxs-lookup"><span data-stu-id="3131e-117">No change</span></span>|  
+    |`button3`|`false`|<span data-ttu-id="bea46-117">Değişiklik yok</span><span class="sxs-lookup"><span data-stu-id="bea46-117">No change</span></span>|  
   
-4.  <span data-ttu-id="3131e-118">Çözümü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="3131e-118">Build the solution.</span></span>  
+4.  <span data-ttu-id="bea46-118">Çözümü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="bea46-118">Build the solution.</span></span>  
   
-5.  <span data-ttu-id="3131e-119">İçinde **Çözüm Gezgini**, tıklatın **tüm dosyaları göster** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="3131e-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
+5.  <span data-ttu-id="bea46-119">İçinde **Çözüm Gezgini**, tıklatın **tüm dosyaları göster** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="bea46-119">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
   
-6.  <span data-ttu-id="3131e-120">Açık **Form1** düğümünü ve **Kod Düzenleyicisi**açın **Form1.Designer.vb** veya **Form1.Designer.cs** dosya.</span><span class="sxs-lookup"><span data-stu-id="3131e-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="3131e-121">Bu dosyayı Windows Form Tasarımcısı tarafından gösterilen kodunu içerir.</span><span class="sxs-lookup"><span data-stu-id="3131e-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
+6.  <span data-ttu-id="bea46-120">Açık **Form1** düğümünü ve **Kod Düzenleyicisi**açın **Form1.Designer.vb** veya **Form1.Designer.cs** dosya.</span><span class="sxs-lookup"><span data-stu-id="bea46-120">Open the **Form1** node, and in the **Code Editor**,open the **Form1.Designer.vb** or **Form1.Designer.cs** file.</span></span> <span data-ttu-id="bea46-121">Bu dosyayı Windows Form Tasarımcısı tarafından gösterilen kodunu içerir.</span><span class="sxs-lookup"><span data-stu-id="bea46-121">This file contains the code emitted by the Windows Forms Designer.</span></span>  
   
-7.  <span data-ttu-id="3131e-122">Üç düğme için bildirimleri bulun.</span><span class="sxs-lookup"><span data-stu-id="3131e-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="3131e-123">Aşağıdaki kod örneği tarafından belirtilen farklar gösterilmektedir `GenerateMember` ve `Modifiers` özellikleri.</span><span class="sxs-lookup"><span data-stu-id="3131e-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
+7.  <span data-ttu-id="bea46-122">Üç düğme için bildirimleri bulun.</span><span class="sxs-lookup"><span data-stu-id="bea46-122">Find the declarations for the three buttons.</span></span> <span data-ttu-id="bea46-123">Aşağıdaki kod örneği tarafından belirtilen farklar gösterilmektedir `GenerateMember` ve `Modifiers` özellikleri.</span><span class="sxs-lookup"><span data-stu-id="bea46-123">The following code example shows the differences specified by the `GenerateMember` and `Modifiers` properties.</span></span>  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -68,10 +57,10 @@ ms.lasthandoff: 01/19/2018
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  <span data-ttu-id="3131e-124">Varsayılan olarak, Windows Form Tasarımcısı atar `private` (`Friend` Visual Basic'te) kapsayıcı denetimleri gibi değiştiriciyi <xref:System.Windows.Forms.Panel>.</span><span class="sxs-lookup"><span data-stu-id="3131e-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="3131e-125">Varsa tabanınızı <xref:System.Windows.Forms.UserControl> veya <xref:System.Windows.Forms.Form> bir kapsayıcı denetiminin devralınan denetimleri ve formlar yeni alt kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="3131e-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="3131e-126">Çözüm için temel kapsayıcı denetiminin değiştiricisi değiştirmektir `protected` veya `public`.</span><span class="sxs-lookup"><span data-stu-id="3131e-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
+>  <span data-ttu-id="bea46-124">Varsayılan olarak, Windows Form Tasarımcısı atar `private` (`Friend` Visual Basic'te) kapsayıcı denetimleri gibi değiştiriciyi <xref:System.Windows.Forms.Panel>.</span><span class="sxs-lookup"><span data-stu-id="bea46-124">By default, the Windows Forms Designer assigns the `private` (`Friend` in Visual Basic) modifier to container controls like <xref:System.Windows.Forms.Panel>.</span></span> <span data-ttu-id="bea46-125">Varsa tabanınızı <xref:System.Windows.Forms.UserControl> veya <xref:System.Windows.Forms.Form> bir kapsayıcı denetiminin devralınan denetimleri ve formlar yeni alt kabul etmez.</span><span class="sxs-lookup"><span data-stu-id="bea46-125">If your base <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Form> has a container control, it will not accept new children in inherited controls and forms.</span></span> <span data-ttu-id="bea46-126">Çözüm için temel kapsayıcı denetiminin değiştiricisi değiştirmektir `protected` veya `public`.</span><span class="sxs-lookup"><span data-stu-id="bea46-126">The solution is to change the modifier of the base container control to `protected` or `public`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3131e-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3131e-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bea46-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bea46-127">See Also</span></span>  
  <xref:System.Windows.Forms.Button>  
- [<span data-ttu-id="3131e-128">Windows Forms Görsel Devralma</span><span class="sxs-lookup"><span data-stu-id="3131e-128">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [<span data-ttu-id="3131e-129">İzlenecek Yol: Görsel Devralmayı Gösterme</span><span class="sxs-lookup"><span data-stu-id="3131e-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- [<span data-ttu-id="3131e-130">Nasıl yapılır: Windows Forms’u Devralma</span><span class="sxs-lookup"><span data-stu-id="3131e-130">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+ [<span data-ttu-id="bea46-128">Windows Forms Görsel Devralma</span><span class="sxs-lookup"><span data-stu-id="bea46-128">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [<span data-ttu-id="bea46-129">İzlenecek Yol: Görsel Devralmayı Gösterme</span><span class="sxs-lookup"><span data-stu-id="bea46-129">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [<span data-ttu-id="bea46-130">Nasıl yapılır: Windows Forms’u Devralma</span><span class="sxs-lookup"><span data-stu-id="bea46-130">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

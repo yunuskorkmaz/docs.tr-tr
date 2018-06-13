@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172025"
 ---
 # <a name="as-c-reference"></a><span data-ttu-id="ac3ab-102">as (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ac3ab-102">as (C# Reference)</span></span>
 <span data-ttu-id="ac3ab-103">Kullanabileceğiniz `as` belirli türde bir uyumlu başvuru türleri arasında dönüştürme gerçekleştirmek için işleci veya [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="ac3ab-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="ac3ab-104">Aşağıdaki kod örneği gösterir.</span><span class="sxs-lookup"><span data-stu-id="ac3ab-104">The following code shows an example.</span></span>  

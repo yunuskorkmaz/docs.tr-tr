@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956389"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a><span data-ttu-id="dbdb7-103">Azure Bulut ve Windows kapsayıcıları varolan .NET uygulamaları modernize (2 edition)</span><span class="sxs-lookup"><span data-stu-id="dbdb7-103">Modernize existing .NET applications with Azure cloud and Windows Containers (2nd edition)</span></span>
 

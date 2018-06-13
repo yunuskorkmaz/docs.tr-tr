@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234763"
 ---
 # <a name="protected-visual-basic"></a><span data-ttu-id="d4d70-102">Korumalı (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d4d70-102">Protected (Visual Basic)</span></span>
 <span data-ttu-id="d4d70-103">Bir veya daha fazla programlama öğeleri bildirilen belirten bir üye erişim değiştiricisi erişilebilir yalnızca kendi sınıfı içinde veya türetilmiş bir sınıf.</span><span class="sxs-lookup"><span data-stu-id="d4d70-103">A member access modifier that specifies that one or more declared programming elements are accessible only from within their own class or from a derived class.</span></span>  
