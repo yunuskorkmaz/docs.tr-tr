@@ -1,32 +1,23 @@
 ---
 title: System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 44a0b49e-fbd7-4649-a29a-1d1a6cd36a90
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: ec88dde395615937268d172c0ce5b5d3640a9809
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a83a72afb2eb4945134870aea9174565618e8390
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483233"
 ---
-# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="609c1-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="609c1-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
-<span data-ttu-id="609c1-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="609c1-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
+# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="a030d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="a030d-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
+<span data-ttu-id="a030d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="a030d-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="609c1-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="609c1-104">Description</span></span>  
- <span data-ttu-id="609c1-105">IssuanceTokenProvider güvenlik anlaşması tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="609c1-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="a030d-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a030d-104">Description</span></span>  
+ <span data-ttu-id="a030d-105">IssuanceTokenProvider güvenlik anlaşması tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="a030d-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="609c1-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="609c1-106">See Also</span></span>  
- [<span data-ttu-id="609c1-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="609c1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="609c1-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="609c1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="609c1-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="609c1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a030d-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a030d-106">See Also</span></span>  
+ [<span data-ttu-id="a030d-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="a030d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a030d-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="a030d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a030d-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="a030d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
