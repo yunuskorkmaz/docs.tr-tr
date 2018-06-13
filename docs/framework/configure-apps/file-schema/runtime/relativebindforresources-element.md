@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752305"
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a><span data-ttu-id="f4327-102">&lt;relativeBindForResources&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="f4327-102">&lt;relativeBindForResources&gt; Element</span></span>
 <span data-ttu-id="f4327-103">Araştırması için uydu derlemelerini en iyi duruma getirir.</span><span class="sxs-lookup"><span data-stu-id="f4327-103">Optimizes the probe for satellite assemblies.</span></span>  

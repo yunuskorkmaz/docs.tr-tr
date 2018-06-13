@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752773"
 ---
 # <a name="ltdatacontractserializergt"></a><span data-ttu-id="b81dd-102">&lt;dataContractSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="b81dd-102">&lt;dataContractSerializer&gt;</span></span>
 <span data-ttu-id="b81dd-103">Yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b81dd-103">Contains configuration data for the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="b81dd-104">Bu öğe, iki farklı hiyerarşilere oluşur.</span><span class="sxs-lookup"><span data-stu-id="b81dd-104">This element occurs in two different hierarchies.</span></span> <span data-ttu-id="b81dd-105">Bir listelenir aşağıdaki şema hiyerarşisini bölümü ve diğer açıklamalar bölümünde listelenir.</span><span class="sxs-lookup"><span data-stu-id="b81dd-105">One is listed the following Schema Hierarchy section and the other is listed in the Remarks section.</span></span>  
