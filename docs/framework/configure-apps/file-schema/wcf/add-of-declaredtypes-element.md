@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754125"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a><span data-ttu-id="11f60-102">&lt;declaredTypes&gt; Öğesi &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="11f60-102">&lt;add&gt; of &lt;declaredTypes&gt; Element</span></span>
 <span data-ttu-id="11f60-103">Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataContractSerializer> seri durumdan çıkarma sırasında.</span><span class="sxs-lookup"><span data-stu-id="11f60-103">Adds a type used by the <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="11f60-104">Bildirilen her türü, bir alan veya özellik bildirilen türü döndürülecek bilinen türler içerir.</span><span class="sxs-lookup"><span data-stu-id="11f60-104">Each declared type includes the known types that will be returned as a field or property of the declared type.</span></span>  

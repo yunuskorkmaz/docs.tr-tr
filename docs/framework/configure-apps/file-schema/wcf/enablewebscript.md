@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751902"
 ---
 # <a name="ltenablewebscriptgt"></a><span data-ttu-id="0b1bf-102">&lt;enableWebScript&gt;</span><span class="sxs-lookup"><span data-stu-id="0b1bf-102">&lt;enableWebScript&gt;</span></span>
 <span data-ttu-id="0b1bf-103">Bu öğe, ASP.NET AJAX web sayfalarından hizmeti kullanmak mümkün kılar uç nokta davranışını etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="0b1bf-103">This element enables the endpoint behavior that makes it possible to consume the service from ASP.NET AJAX web pages.</span></span>  

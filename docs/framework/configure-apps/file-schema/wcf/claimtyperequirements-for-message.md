@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754551"
 ---
 # <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="926fb-102">&lt;ileti&gt; için &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="926fb-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
 <span data-ttu-id="926fb-103">Gerekli talep türleri koleksiyonunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="926fb-103">Specifies a collection of required claim types.</span></span>  

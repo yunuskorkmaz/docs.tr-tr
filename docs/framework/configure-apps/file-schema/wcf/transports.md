@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755337"
 ---
 # <a name="transports"></a><span data-ttu-id="20768-102">Taşımalar</span><span class="sxs-lookup"><span data-stu-id="20768-102">Transports</span></span>
 <span data-ttu-id="20768-103">Aktarım katmanı kanal yığının en düşük düzeyinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="20768-103">The transport layer is at the lowest level of the channel stack.</span></span> <span data-ttu-id="20768-104">Windows Communication Foundation (WCF) kullanılan ana taşımalar HTTP, HTTPS, TCP ve adlandırılmış kanallar ' dir.</span><span class="sxs-lookup"><span data-stu-id="20768-104">The main transports used in Windows Communication Foundation (WCF) are HTTP, HTTPS, TCP, and Named Pipes.</span></span> <span data-ttu-id="20768-105">Bu bölümde taşımaları farklı türlerde yapılandırmanıza olanak tanıyan tüm yapılandırma öğeleri listelenir.</span><span class="sxs-lookup"><span data-stu-id="20768-105">This section lists all the configuration elements that allow you to configure different types of transports.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758171"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="231e4-102">Saklı yordamlar verilerle değiştirme</span><span class="sxs-lookup"><span data-stu-id="231e4-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="231e4-103">Saklı yordamlar veri giriş parametreleri olarak kabul edebilir ve veri çıkış parametreleri, sonuç kümesi ya da dönüş değeri geri dönebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="231e4-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="231e4-104">Aşağıdaki örnekte nasıl ADO.NET alıp gönderen giriş gösterilmektedir parametreleri, çıktı parametrelerini ve dönüş değerleri.</span><span class="sxs-lookup"><span data-stu-id="231e4-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="231e4-105">Örneğin, birincil anahtar sütunu bir kimlik sütunu bir SQL Server veritabanında olduğu bir tabloya yeni bir kayıt ekler.</span><span class="sxs-lookup"><span data-stu-id="231e4-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

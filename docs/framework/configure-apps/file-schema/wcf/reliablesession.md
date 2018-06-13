@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751447"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="aa146-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="aa146-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="aa146-103">WS güvenilir Mesajlaşma ayarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="aa146-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="aa146-104">Bu öğe için özel bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekleyebilir-kere teslim Güvenceleri.</span><span class="sxs-lookup"><span data-stu-id="aa146-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  

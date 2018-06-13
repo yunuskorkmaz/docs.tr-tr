@@ -1,13 +1,6 @@
 ---
-title: "İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma"
-ms.custom: 
+title: 'İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,97 +8,93 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 064626e3975838062c2d2287d29aa268edb8f21e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a9aca5d1aff1057d85509be517bb352b4b27bf9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548213"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a><span data-ttu-id="b5bde-102">İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="b5bde-102">Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms</span></span>
-<span data-ttu-id="b5bde-103">Bu kılavuz, nasıl oluşturabileceğinizi gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim ve içinde ana bilgisayar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ve kullanarak forms <xref:System.Windows.Forms.Integration.ElementHost> denetim.</span><span class="sxs-lookup"><span data-stu-id="b5bde-103">This walkthrough demonstrates how you can create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control and host it in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls and forms by using the <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
+# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a><span data-ttu-id="03b8f-102">İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="03b8f-102">Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms</span></span>
+<span data-ttu-id="03b8f-103">Bu kılavuz, nasıl oluşturabileceğinizi gösterir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim ve içinde ana bilgisayar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetimleri ve kullanarak forms <xref:System.Windows.Forms.Integration.ElementHost> denetim.</span><span class="sxs-lookup"><span data-stu-id="03b8f-103">This walkthrough demonstrates how you can create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control and host it in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls and forms by using the <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
   
- <span data-ttu-id="b5bde-104">Bu kılavuzda, uygulayacak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> iki alt denetimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b5bde-104">In this walkthrough, you will implement a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> that contains two child controls.</span></span> <span data-ttu-id="b5bde-105"><xref:System.Windows.Controls.UserControl> Üç boyutlu (3-b) koni görüntüler.</span><span class="sxs-lookup"><span data-stu-id="b5bde-105">The <xref:System.Windows.Controls.UserControl> displays a three-dimensional (3-D) cone.</span></span> <span data-ttu-id="b5bde-106">3-b nesneleri işleme ile çok daha kolay [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fazla ile [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b5bde-106">Rendering 3-D objects is much easier with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] than with [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span> <span data-ttu-id="b5bde-107">Bu nedenle, bu konağa mantıklı bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 3B grafik oluşturmak için sınıf [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b5bde-107">Therefore, it makes sense to host a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> class to create 3-D graphics in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span>  
+ <span data-ttu-id="03b8f-104">Bu kılavuzda, uygulayacak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> iki alt denetimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="03b8f-104">In this walkthrough, you will implement a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> that contains two child controls.</span></span> <span data-ttu-id="03b8f-105"><xref:System.Windows.Controls.UserControl> Üç boyutlu (3-b) koni görüntüler.</span><span class="sxs-lookup"><span data-stu-id="03b8f-105">The <xref:System.Windows.Controls.UserControl> displays a three-dimensional (3-D) cone.</span></span> <span data-ttu-id="03b8f-106">3-b nesneleri işleme ile çok daha kolay [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fazla ile [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="03b8f-106">Rendering 3-D objects is much easier with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] than with [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span> <span data-ttu-id="03b8f-107">Bu nedenle, bu konağa mantıklı bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 3B grafik oluşturmak için sınıf [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="03b8f-107">Therefore, it makes sense to host a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> class to create 3-D graphics in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
- <span data-ttu-id="b5bde-108">Bu örneklerde gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="b5bde-108">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="03b8f-108">Bu örneklerde gösterilen görevler aşağıdakileri içerir:</span><span class="sxs-lookup"><span data-stu-id="03b8f-108">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="b5bde-109">Oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="b5bde-109">Creating the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
+-   <span data-ttu-id="03b8f-109">Oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="03b8f-109">Creating the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
   
--   <span data-ttu-id="b5bde-110">Windows Forms konak projesi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="b5bde-110">Creating the Windows Forms host project.</span></span>  
+-   <span data-ttu-id="03b8f-110">Windows Forms konak projesi oluşturma.</span><span class="sxs-lookup"><span data-stu-id="03b8f-110">Creating the Windows Forms host project.</span></span>  
   
--   <span data-ttu-id="b5bde-111">Barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="b5bde-111">Hosting the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
+-   <span data-ttu-id="03b8f-111">Barındırma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="03b8f-111">Hosting the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
   
- <span data-ttu-id="b5bde-112">Bu örneklerde gösterilen görevlerin tam kod listesi için bkz: [3-b WPF bileşik denetim Windows Forms örnekteki barındırma](http://go.microsoft.com/fwlink/?LinkID=160001).</span><span class="sxs-lookup"><span data-stu-id="b5bde-112">For a complete code listing of the tasks illustrated in this walkthrough, see [Hosting a 3-D WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=160001).</span></span>  
+ <span data-ttu-id="03b8f-112">Bu örneklerde gösterilen görevlerin tam kod listesi için bkz: [3-b WPF bileşik denetim Windows Forms örnekteki barındırma](http://go.microsoft.com/fwlink/?LinkID=160001).</span><span class="sxs-lookup"><span data-stu-id="03b8f-112">For a complete code listing of the tasks illustrated in this walkthrough, see [Hosting a 3-D WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=160001).</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="b5bde-113">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="b5bde-113">Prerequisites</span></span>  
- <span data-ttu-id="b5bde-114">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="b5bde-114">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="03b8f-113">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="03b8f-113">Prerequisites</span></span>  
+ <span data-ttu-id="03b8f-114">Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="03b8f-114">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="b5bde-115">.</span><span class="sxs-lookup"><span data-stu-id="b5bde-115">.</span></span>  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="03b8f-115">.</span><span class="sxs-lookup"><span data-stu-id="03b8f-115">.</span></span>  
   
 <a name="To_Create_the_UserControl"></a>   
-## <a name="creating-the-usercontrol"></a><span data-ttu-id="b5bde-116">UserControl oluşturma</span><span class="sxs-lookup"><span data-stu-id="b5bde-116">Creating the UserControl</span></span>  
+## <a name="creating-the-usercontrol"></a><span data-ttu-id="03b8f-116">UserControl oluşturma</span><span class="sxs-lookup"><span data-stu-id="03b8f-116">Creating the UserControl</span></span>  
   
-#### <a name="to-create-the-usercontrol"></a><span data-ttu-id="b5bde-117">UserControl oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b5bde-117">To create the UserControl</span></span>  
+#### <a name="to-create-the-usercontrol"></a><span data-ttu-id="03b8f-117">UserControl oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="03b8f-117">To create the UserControl</span></span>  
   
-1.  <span data-ttu-id="b5bde-118">Adlı bir WPF kullanıcı denetimi kitaplığı projesi oluşturun `HostingWpfUserControlInWf`.</span><span class="sxs-lookup"><span data-stu-id="b5bde-118">Create a WPF User Control Library project named `HostingWpfUserControlInWf`.</span></span>  
+1.  <span data-ttu-id="03b8f-118">Adlı bir WPF kullanıcı denetimi kitaplığı projesi oluşturun `HostingWpfUserControlInWf`.</span><span class="sxs-lookup"><span data-stu-id="03b8f-118">Create a WPF User Control Library project named `HostingWpfUserControlInWf`.</span></span>  
   
-2.  <span data-ttu-id="b5bde-119">' Da UserControl1.xaml'i açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b5bde-119">Open UserControl1.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+2.  <span data-ttu-id="03b8f-119">' Da UserControl1.xaml'i açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="03b8f-119">Open UserControl1.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-3.  <span data-ttu-id="b5bde-120">Oluşturulan kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="b5bde-120">Replace the generated code with the following code.</span></span>  
+3.  <span data-ttu-id="03b8f-120">Oluşturulan kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="03b8f-120">Replace the generated code with the following code.</span></span>  
   
-     <span data-ttu-id="b5bde-121">Bu kodu tanımlayan bir <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> iki alt denetimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b5bde-121">This code defines a <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> that contains two child controls.</span></span> <span data-ttu-id="b5bde-122">İlk alt denetim bir <xref:System.Windows.Controls.Label?displayProperty=nameWithType> denetim; ikinci olan bir <xref:System.Windows.Controls.Viewport3D> 3-b koni görüntüleyen denetim.</span><span class="sxs-lookup"><span data-stu-id="b5bde-122">The first child control is a <xref:System.Windows.Controls.Label?displayProperty=nameWithType> control; the second is a <xref:System.Windows.Controls.Viewport3D> control that displays a 3-D cone.</span></span>  
+     <span data-ttu-id="03b8f-121">Bu kodu tanımlayan bir <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> iki alt denetimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="03b8f-121">This code defines a <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> that contains two child controls.</span></span> <span data-ttu-id="03b8f-122">İlk alt denetim bir <xref:System.Windows.Controls.Label?displayProperty=nameWithType> denetim; ikinci olan bir <xref:System.Windows.Controls.Viewport3D> 3-b koni görüntüleyen denetim.</span><span class="sxs-lookup"><span data-stu-id="03b8f-122">The first child control is a <xref:System.Windows.Controls.Label?displayProperty=nameWithType> control; the second is a <xref:System.Windows.Controls.Viewport3D> control that displays a 3-D cone.</span></span>  
   
      [!code-xaml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>   
-## <a name="creating-the-windows-forms-host-project"></a><span data-ttu-id="b5bde-123">Windows Forms konak projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="b5bde-123">Creating the Windows Forms Host Project</span></span>  
+## <a name="creating-the-windows-forms-host-project"></a><span data-ttu-id="03b8f-123">Windows Forms konak projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="03b8f-123">Creating the Windows Forms Host Project</span></span>  
   
-#### <a name="to-create-the-host-project"></a><span data-ttu-id="b5bde-124">Konak projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="b5bde-124">To create the host project</span></span>  
+#### <a name="to-create-the-host-project"></a><span data-ttu-id="03b8f-124">Konak projesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="03b8f-124">To create the host project</span></span>  
   
-1.  <span data-ttu-id="b5bde-125">Adlı bir Windows uygulaması projesi eklemek `WpfUserControlHost` çözüme.</span><span class="sxs-lookup"><span data-stu-id="b5bde-125">Add a Windows application project named `WpfUserControlHost` to the solution.</span></span> <span data-ttu-id="b5bde-126">Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span><span class="sxs-lookup"><span data-stu-id="b5bde-126">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
+1.  <span data-ttu-id="03b8f-125">Adlı bir Windows uygulaması projesi eklemek `WpfUserControlHost` çözüme.</span><span class="sxs-lookup"><span data-stu-id="03b8f-125">Add a Windows application project named `WpfUserControlHost` to the solution.</span></span> <span data-ttu-id="03b8f-126">Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span><span class="sxs-lookup"><span data-stu-id="03b8f-126">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
   
-2.  <span data-ttu-id="b5bde-127">Çözüm Gezgininde WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine başvuru ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b5bde-127">In Solution Explorer, add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
+2.  <span data-ttu-id="03b8f-127">Çözüm Gezgininde WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine başvuru ekleyin.</span><span class="sxs-lookup"><span data-stu-id="03b8f-127">In Solution Explorer, add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
   
-3.  <span data-ttu-id="b5bde-128">Aşağıdaki başvurular ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler:</span><span class="sxs-lookup"><span data-stu-id="b5bde-128">Add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies:</span></span>  
+3.  <span data-ttu-id="03b8f-128">Aşağıdaki başvurular ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] derlemeler:</span><span class="sxs-lookup"><span data-stu-id="03b8f-128">Add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies:</span></span>  
   
-    -   <span data-ttu-id="b5bde-129">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="b5bde-129">PresentationCore</span></span>  
+    -   <span data-ttu-id="03b8f-129">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="03b8f-129">PresentationCore</span></span>  
   
-    -   <span data-ttu-id="b5bde-130">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="b5bde-130">PresentationFramework</span></span>  
+    -   <span data-ttu-id="03b8f-130">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="03b8f-130">PresentationFramework</span></span>  
   
-    -   <span data-ttu-id="b5bde-131">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="b5bde-131">WindowsBase</span></span>  
+    -   <span data-ttu-id="03b8f-131">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="03b8f-131">WindowsBase</span></span>  
   
-4.  <span data-ttu-id="b5bde-132">Bir başvuru ekleyin `HostingWpfUserControlInWf` projesi.</span><span class="sxs-lookup"><span data-stu-id="b5bde-132">Add a reference to the `HostingWpfUserControlInWf` project.</span></span>  
+4.  <span data-ttu-id="03b8f-132">Bir başvuru ekleyin `HostingWpfUserControlInWf` projesi.</span><span class="sxs-lookup"><span data-stu-id="03b8f-132">Add a reference to the `HostingWpfUserControlInWf` project.</span></span>  
   
-5.  <span data-ttu-id="b5bde-133">Çözüm Gezgininde ayarlayın `WpfUserControlHost` projesini başlangıç projesi olacak şekilde.</span><span class="sxs-lookup"><span data-stu-id="b5bde-133">In Solution Explorer, set the `WpfUserControlHost` project to be the startup project.</span></span>  
+5.  <span data-ttu-id="03b8f-133">Çözüm Gezgininde ayarlayın `WpfUserControlHost` projesini başlangıç projesi olacak şekilde.</span><span class="sxs-lookup"><span data-stu-id="03b8f-133">In Solution Explorer, set the `WpfUserControlHost` project to be the startup project.</span></span>  
   
 <a name="To_Host_the_Windows_Presentation_Foundation"></a>   
-## <a name="hosting-the-windows-presentation-foundation-usercontrol"></a><span data-ttu-id="b5bde-134">Windows Presentation Foundation UserControl barındırma</span><span class="sxs-lookup"><span data-stu-id="b5bde-134">Hosting the Windows Presentation Foundation UserControl</span></span>  
+## <a name="hosting-the-windows-presentation-foundation-usercontrol"></a><span data-ttu-id="03b8f-134">Windows Presentation Foundation UserControl barındırma</span><span class="sxs-lookup"><span data-stu-id="03b8f-134">Hosting the Windows Presentation Foundation UserControl</span></span>  
   
-#### <a name="to-host-the-usercontrol"></a><span data-ttu-id="b5bde-135">UserControl barındırmak için</span><span class="sxs-lookup"><span data-stu-id="b5bde-135">To host the UserControl</span></span>  
+#### <a name="to-host-the-usercontrol"></a><span data-ttu-id="03b8f-135">UserControl barındırmak için</span><span class="sxs-lookup"><span data-stu-id="03b8f-135">To host the UserControl</span></span>  
   
-1.  <span data-ttu-id="b5bde-136">Windows Forms Tasarımcısı'nda Form1 açın.</span><span class="sxs-lookup"><span data-stu-id="b5bde-136">In the Windows Forms Designer, open Form1.</span></span>  
+1.  <span data-ttu-id="03b8f-136">Windows Forms Tasarımcısı'nda Form1 açın.</span><span class="sxs-lookup"><span data-stu-id="03b8f-136">In the Windows Forms Designer, open Form1.</span></span>  
   
-2.  <span data-ttu-id="b5bde-137">Özellikler penceresinde **olayları**, çift tıklayın ve ardından <xref:System.Windows.Forms.Form.Load> olay olay işleyicisi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b5bde-137">In the Properties window, click **Events**, and then double-click the <xref:System.Windows.Forms.Form.Load> event to create an event handler.</span></span>  
+2.  <span data-ttu-id="03b8f-137">Özellikler penceresinde **olayları**, çift tıklayın ve ardından <xref:System.Windows.Forms.Form.Load> olay olay işleyicisi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="03b8f-137">In the Properties window, click **Events**, and then double-click the <xref:System.Windows.Forms.Form.Load> event to create an event handler.</span></span>  
   
-     <span data-ttu-id="b5bde-138">Kod Düzenleyicisi yeni oluşturulan açar `Form1_Load` olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="b5bde-138">The Code Editor opens to the newly generated `Form1_Load` event handler.</span></span>  
+     <span data-ttu-id="03b8f-138">Kod Düzenleyicisi yeni oluşturulan açar `Form1_Load` olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="03b8f-138">The Code Editor opens to the newly generated `Form1_Load` event handler.</span></span>  
   
-3.  <span data-ttu-id="b5bde-139">Form1.cs içindeki kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="b5bde-139">Replace the code in Form1.cs with the following code.</span></span>  
+3.  <span data-ttu-id="03b8f-139">Form1.cs içindeki kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="03b8f-139">Replace the code in Form1.cs with the following code.</span></span>  
   
-     <span data-ttu-id="b5bde-140">`Form1_Load` Olay işleyicisi oluşturur örneği `UserControl1` ve yönlendirir ekler <xref:System.Windows.Forms.Integration.ElementHost> denetimin alt denetimler koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="b5bde-140">The `Form1_Load` event handler creates an instance of `UserControl1` and adds itto the <xref:System.Windows.Forms.Integration.ElementHost> control's collection of child controls.</span></span> <span data-ttu-id="b5bde-141"><xref:System.Windows.Forms.Integration.ElementHost> Denetimi formun alt denetimler koleksiyonuna eklenir.</span><span class="sxs-lookup"><span data-stu-id="b5bde-141">The <xref:System.Windows.Forms.Integration.ElementHost> control is added to the form's collection of child controls.</span></span>  
+     <span data-ttu-id="03b8f-140">`Form1_Load` Olay işleyicisi oluşturur örneği `UserControl1` ve yönlendirir ekler <xref:System.Windows.Forms.Integration.ElementHost> denetimin alt denetimler koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="03b8f-140">The `Form1_Load` event handler creates an instance of `UserControl1` and adds itto the <xref:System.Windows.Forms.Integration.ElementHost> control's collection of child controls.</span></span> <span data-ttu-id="03b8f-141"><xref:System.Windows.Forms.Integration.ElementHost> Denetimi formun alt denetimler koleksiyonuna eklenir.</span><span class="sxs-lookup"><span data-stu-id="03b8f-141">The <xref:System.Windows.Forms.Integration.ElementHost> control is added to the form's collection of child controls.</span></span>  
   
      [!code-csharp[HostingWpfUserControlInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]  
   
-4.  <span data-ttu-id="b5bde-142">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="b5bde-142">Press F5 to build and run the application.</span></span>  
+4.  <span data-ttu-id="03b8f-142">Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="03b8f-142">Press F5 to build and run the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5bde-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="b5bde-143">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="03b8f-143">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="03b8f-143">See Also</span></span>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [<span data-ttu-id="b5bde-144">WPF Tasarımcısı</span><span class="sxs-lookup"><span data-stu-id="b5bde-144">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [<span data-ttu-id="b5bde-145">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="b5bde-145">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [<span data-ttu-id="b5bde-146">İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma</span><span class="sxs-lookup"><span data-stu-id="b5bde-146">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [<span data-ttu-id="b5bde-147">Windows Forms örnek bir WPF bileşik denetimi barındırma</span><span class="sxs-lookup"><span data-stu-id="b5bde-147">Hosting a WPF Composite Control in Windows Forms Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160001)
+ [<span data-ttu-id="03b8f-144">WPF Tasarımcısı</span><span class="sxs-lookup"><span data-stu-id="03b8f-144">WPF Designer</span></span>](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="03b8f-145">İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma</span><span class="sxs-lookup"><span data-stu-id="03b8f-145">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="03b8f-146">İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma</span><span class="sxs-lookup"><span data-stu-id="03b8f-146">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="03b8f-147">Windows Forms örnek bir WPF bileşik denetimi barındırma</span><span class="sxs-lookup"><span data-stu-id="03b8f-147">Hosting a WPF Composite Control in Windows Forms Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160001)

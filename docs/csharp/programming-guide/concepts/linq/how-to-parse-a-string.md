@@ -1,27 +1,19 @@
 ---
-title: "Nasıl yapılır: bir dize (C#) ayrıştırılamıyor"
-ms.custom: 
+title: 'Nasıl yapılır: bir dize (C#) ayrıştırılamıyor'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 37e09885b00830f319a829e900f33927498df0e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fe1ef6d601b97252eb2d146f28003cad352b2d84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320150"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="4caed-102">Nasıl yapılır: bir dize (C#) ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="4caed-102">How to: Parse a String (C#)</span></span>
-<span data-ttu-id="4caed-103">Bu konuda, bir XML ağacı C# ' ta oluşturmak için bir dize ayrıştırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="4caed-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="99d11-102">Nasıl yapılır: bir dize (C#) ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="99d11-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="99d11-103">Bu konuda, bir XML ağacı C# ' ta oluşturmak için bir dize ayrıştırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="99d11-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4caed-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="4caed-104">Example</span></span>  
- <span data-ttu-id="4caed-105">Aşağıdaki C# kod bir dize ayrıştırmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="4caed-105">The following C# code shows how to parse a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="99d11-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="99d11-104">Example</span></span>  
+ <span data-ttu-id="99d11-105">Aşağıdaki C# kod bir dize ayrıştırmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="99d11-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -53,5 +45,5 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4caed-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4caed-106">See Also</span></span>  
- [<span data-ttu-id="4caed-107">XML Ayrıştırma (C#)</span><span class="sxs-lookup"><span data-stu-id="4caed-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="99d11-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="99d11-106">See Also</span></span>  
+ [<span data-ttu-id="99d11-107">XML Ayrıştırma (C#)</span><span class="sxs-lookup"><span data-stu-id="99d11-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
