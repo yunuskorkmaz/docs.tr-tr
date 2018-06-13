@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595845"
 ---
 # <a name="modules-visual-basic"></a>Modüller (Visual Basic)
 Visual Basic dizeleri, sistem bilgileri alma, dosya ve dizin işlemlerini gerçekleştirme matematiksel hesaplamalar gerçekleştirmek düzenleme dahil olmak üzere, kodunuzda ortak görevleri basitleştirmenize olanak sağlayan ve benzeri birkaç modülü sağlar. Aşağıdaki tabloda, Visual Basic tarafından sağlanan modüllerini listeler.  

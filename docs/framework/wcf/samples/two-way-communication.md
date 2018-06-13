@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508351"
 ---
 # <a name="two-way-communication"></a>Çift Yönlü İletişim
 Bu örnek üzerinde MSMQ hizmetteki iki yönlü kuyruğa alınan iletişim gerçekleştirme gösterir. Bu örnekte `netMsmqBinding` bağlama. Bu durumda, sıraya alınan iletileri alma hizmeti izlemek izin veren bir kendi kendini barındıran konsol uygulaması hizmetidir.  

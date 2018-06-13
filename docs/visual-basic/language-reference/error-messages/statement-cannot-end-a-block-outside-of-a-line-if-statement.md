@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596690"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>Deyimi, bir satırı dışında blok bitemez &#39;varsa&#39; deyimi
 Tek satırlı `If` deyimi içeren birkaç deyimleri biri olan iki nokta işareti (:), ayrılmış bir `End` tek satırlı dışında bir denetim bloğu bildirimi `If`. Tek satırlı `If` deyimleri kullanmayın `End If` deyimi.  

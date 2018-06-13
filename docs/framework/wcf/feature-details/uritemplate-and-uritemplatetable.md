@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508839"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekli ve kendi Hizmetleri yanıt URI düzeni tanımlamak için gerektirir. Windows Communication Foundation (WCF) iki yeni sınıflar geliştiricilerin kendi URI'ler üzerinde denetime eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı gönderme altyapısı içinde WCF temelini oluşturur. Bu sınıfları, kendi şablonlarını ve URI yararlanmak geliştiricilere izin verme eşleme mekanizması bir WCF Hizmeti uygulama olmadan da kullanılabilir.  

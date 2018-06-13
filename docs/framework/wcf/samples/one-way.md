@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505713"
 ---
 # <a name="one-way"></a>Tek Yönlü
 Bu örnek bir tek yönlü hizmet işlemleri hizmet kişiyle gösterir. İstemci, hizmet işlemlerinin çift yönlü hizmet işlemleri ile olduğu gibi tamamlamak beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  

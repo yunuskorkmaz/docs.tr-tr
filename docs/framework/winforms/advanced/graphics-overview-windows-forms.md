@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521763"
 ---
 # <a name="graphics-overview-windows-forms"></a>Grafiklere Genel Bakış (Windows Forms)
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] CİHAZDAN bağımsız uygulamaları yazmak programcıları sağlayan bir grafik cihaz arabirimi var. Hizmetlerini [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yönetilen sınıflar bir dizi sunulur.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514670"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server Kalıcılık veritabanı
 Bu bölümde SQL iş akışı örneği mağaza tarafından desteklenen ortak veritabanı görünümleri hakkında ayrıntılı bilgi sağlar ve seri durumdan ilkel örnek veri özellikleri ve kalıcı olmayan örnekleri için sorgu gösterir.  

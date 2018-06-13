@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518417"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Itanium tabanlı sistemler için .NET Framework 4 ile birlikte çalışma etkinlik .NET Framework 3.0 WF etkinlikleri kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] içinde (WF 3.5) etkinlik bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. WF 3 etkinlik tek yaprak etkinlik veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve kalıcılığı [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik ortaya bağlamında [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütüyor iş akışı örneği.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511897"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Windows Workflow Foundation'ı genişletme
 Aşağıdaki bölümde özel etkinlikler ve tasarımcıları dışında rehosted ortamlarda ile Windows Workflow Foundation (WF) genişletileceğini açıklar [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  

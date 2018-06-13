@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505976"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 *Açıklama ağaç* türleri hiyerarşisidir (ile başlayan <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> sınıfı), bir hizmetin her açıdan birlikte açıklanmaktadır. Windows Communication Foundation (WCF), Web Hizmetleri Açıklama Dili (WSDL), XML Şeması Tanım Dili (XSD) ve istemciler için kullanabilir hizmetiyle ilgili ilke onaylamalarını (meta verileri) yayımlamak için bir geçerli hizmet çalışma zamanı oluşturmak için bir açıklama ağacı kullanır. bağlanır ve hizmet kullanın ve çeşitli kod ve yapılandırma dosyası gösterimlerini açıklama ağaç değerleri oluşturmak için.  

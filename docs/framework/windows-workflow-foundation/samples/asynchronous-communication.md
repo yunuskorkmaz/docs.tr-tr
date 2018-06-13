@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515166"
 ---
 # <a name="asynchronous-communication"></a>Zaman uyumsuz iletişim
 Bu örnekte, iki farklı Windows Workflow Foundation (WF) hizmeti arasındaki iletişimi varsayılan olarak zaman uyumsuz olarak nasıl yapılacağı gösterilmektedir.  

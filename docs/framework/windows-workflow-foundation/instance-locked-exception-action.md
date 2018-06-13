@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517289"
 ---
 # <a name="instance-locked-exception-action"></a>Özel eylem örneği kilitli
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> Özelliği SQL iş akışı örneği deposunun SQL Kalıcılık sağlayıcısı tarafından alındığında almalıdır eylemi belirtmenize olanak sağlar bir <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Başka bir hizmet ana bilgisayarı tarafından şu anda kilitli bir iş akışı hizmeti örneği kilitlemek çalıştığında, bu özel Kalıcılık sağlayıcısı alır. Bu özellik için değerler <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry>, ve <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. Varsayılan değer <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry> şeklindedir. Aşağıdaki listede üç seçenekten açıklanmaktadır:  

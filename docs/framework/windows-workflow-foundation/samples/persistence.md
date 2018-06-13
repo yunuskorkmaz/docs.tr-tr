@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514588"
 ---
 # <a name="persistence"></a>Kalıcılığı
 Bu bölümde kalıcı iş akışları dayanıklı Orta Windows Workflow Foundation (WF) gösteren örnekleri içerir.  
