@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591511"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
 PLINQ birincil amacı, çok çekirdekli bilgisayarlarda paralel sorgu temsilcileri yürüterek nesneleri sorgularında LINQ yürütme hızlandırmak olmaktır. Kaynak koleksiyondaki her öğe işleme bağımsız duruma sahip olmayan paylaşılan arasında tek tek temsilcileri söz konusu olduğunda PLINQ en iyi şekilde çalışır. Bu tür işlemler LINQ nesneleri ve PLINQ için ortak olan ve genellikle denir "*delightfully paralel*" bunlar kendilerini kolayca üzerinde birden çok iş parçacıklarını zamanlama için ödünç vermek için. Ancak, tüm sorguları tamamen delightfully paralel işlemleri oluşur; Çoğu durumda, bir sorgu, ya da paralel birkaç ölçeklendirin olamaz veya paralel yürütme yavaş bazı işleçleri içerir. Ve tamamen delightfully paralel bile sorgular ile PLINQ gerekir hala veri kaynağı bölüm ve iş parçacığı üzerinde çalışması zamanlamak ve sorgu tamamlandığında genellikle birleştirme sonuçları. Bu işlemler paralelleştirme hesaplama maliyetine ekleyin; paralelleştirme ekleme, bu maliyetlerini adlı *yükünü*. PLINQ sorgusunda en iyi performansı elde etmek için delightfully paralel bölümleri en üst düzeye çıkarmak ve ek yükü gerektiren bölümleri en aza indirmek için belirtilir. Bu makale, hala doğru sonuçlar verir sırasında olabildiğince etkili PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  

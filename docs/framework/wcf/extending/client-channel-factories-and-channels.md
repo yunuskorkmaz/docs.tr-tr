@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483560"
 ---
 # <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
 Bu konu, kanal fabrikaları ve kanallar oluşturulmasını açıklar.  

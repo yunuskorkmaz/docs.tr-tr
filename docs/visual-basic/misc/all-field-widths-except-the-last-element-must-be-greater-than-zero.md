@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598446"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Son öğe dışındaki tüm alan genişlikleri sıfırdan büyük olmalıdır
 Son öğe dışındaki tüm alan genişlikleri sıfırdan büyük olmalıdır. Bir alan genişliği son öğesinde sıfıra eşit veya daha az son alan değişken uzunluğa sahip olduğunu gösterir.  

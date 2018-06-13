@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585521"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Sınıf&#39; deyimi, eşleşen bir ile bitmelidir &#39;son sınıfı&#39;
 `Class` başlatmak için kullanılan bir `Class` engelle; Bu nedenle, yalnızca eşleşen bloğun başlangıcında görünebilir `End Class` blok bitiş bildirimi. Ya da bir yedek sahip `Class` deyimi veya olmayan sona erdi, `Class` ile engelleme `End Class`.  

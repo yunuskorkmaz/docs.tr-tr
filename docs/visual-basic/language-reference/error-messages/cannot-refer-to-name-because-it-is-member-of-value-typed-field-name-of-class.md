@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586353"
 ---
 # <a name="cannot-refer-to-39ltnamegt39-because-it-is-a-member-of-the-value-typed-field-39ltnamegt39-of-class-39ltclassnamegt39-which-has-39systemmarshalbyrefobject39-as-a-base-class"></a>Başvuramıyor &#39; &lt;adı&gt; &#39; değer yazdınız alanın üyesi olduğundan &#39; &lt;adı&gt; &#39; sınıfının &#39; &lt;classname&gt; &#39;olan &#39;System.MarshalByRefObject&#39; temel sınıf olarak
 `System.MarshalByRefObject` Sınıfı uygulama etki alanı sınırlarında nesnelere uzaktan erişimi destekleyen uygulamalar sağlar. Türleri öğesinden devralmalıdır `MarshalByRejectObject` sınıf türü uygulama etki alanı sınırlarında kullanıldığında. Nesne üyeleri oluşturulmuş uygulama etki alanı kullanılabilir olmadığından nesnenin durumunu kopyalanmayacak.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600681"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; türüne dönüştürülemez &#39;tarihi&#39;
 Dönüştürme türü için bir değişken değiştirilmeye çalışıldı `Date`, ancak değeri geçerli bir tarih olarak tanınmıyor.  

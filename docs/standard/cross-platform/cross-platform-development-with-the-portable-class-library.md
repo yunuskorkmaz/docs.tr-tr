@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579671"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü, platformlar arası uygulamalar ve Microsoft platformları için kitaplıkları hızla ve kolayca oluşturmanıza yardımcı olur.  

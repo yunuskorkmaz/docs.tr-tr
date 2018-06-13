@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594452"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Dizeler için ayrılan alan doldu (Visual Basic)
 Visual Basic ile çok büyük dizelerini kullanabilirsiniz. Ancak, diğer programları ve dizelerinizi ile çalışma biçimini gereksinimlerini hala bu hataya neden olabilir.  

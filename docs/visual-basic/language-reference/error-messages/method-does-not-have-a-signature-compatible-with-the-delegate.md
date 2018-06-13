@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593255"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>Yöntemin temsilciyle uyumlu bir imzası yok
 Kullanmaya çalıştığınız temsilci yöntemi imzalarını arasında bir uyumsuzluk yoktur. `Delegate` Deyimi parametre türleri ve dönüş türleri bir temsilci sınıf tanımlar. Uyumlu türlerinin parametreleriyle eşleşen var ve dönüş türleri bu temsilci türünün bir örneğini oluşturmak için kullanılan herhangi bir yordam.  

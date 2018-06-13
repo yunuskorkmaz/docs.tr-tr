@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579372"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Belge Nesne Modeli (DOM)
 XML belge nesne modeli (DOM) sınıfı, bir XML belgesi bir bellek içi gösterimidir. DOM program aracılığıyla okuyun, yönetmek ve bir XML belgesi değiştirmenize olanak sağlar. **XmlReader** sınıfı ayrıca XML okur; ancak, önbelleğe alınmamış salt iletme, salt okunur erişim sağlar. Bu özniteliğin değerini veya bir öğenin veya ekleyin ve düğümleri kaldırma yeteneği içeriğini düzenlemek için özelliği yoktur anlamına gelir **XmlReader**. DOM birincil işlevi olduğu düzenleme Gerçek XML verilerini bir dosya veya başka bir nesneden gelen doğrusal bir biçimde depolanır ancak ortak ve yapılandırılmış şekilde XML verileri bellekte temsil edilen adıdır. XML verilerini verilmiştir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592060"
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>Visual Studio Uygulamalarına Yazdırılabilir Raporlar Ekleme
 Visual Studio, Visual Basic uygulamalarınız için raporlama zengin veri eklemenize yardımcı olmak için raporlama çözümleri çeşitli destekler. ReportViewer denetimleri, Crystal Reports veya SQL Server Reporting Services kullanarak raporlar ekleyin ve yaratın.  

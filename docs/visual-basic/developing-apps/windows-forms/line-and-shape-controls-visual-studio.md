@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585560"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Çizgi ve Şekil Denetimleri (Visual Studio)
 Visual Basic Power Packs çizgi ve Şekil denetimleri etkinleştirmeniz yatay, dikey ve çapraz çizgiler, dikdörtgenler, kareler, Oval, daire ve üçgen ve kareler bir form veya kapsayıcı yuvarlak köşeli çizmek grafik denetimleri bulunur.  

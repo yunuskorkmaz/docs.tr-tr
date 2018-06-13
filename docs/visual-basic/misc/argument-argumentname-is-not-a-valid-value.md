@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600347"
 ---
 # <a name="argument-39ltargumentnamegt39-is-not-a-valid-value"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; geçerli bir değer değil
 Bir değişkenin değeri geçerli değil.  

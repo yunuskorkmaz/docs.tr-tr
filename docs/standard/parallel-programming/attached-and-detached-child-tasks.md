@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590780"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Eklenen ve Ayrılan Alt Görevler
 A *alt görev* (veya *iç içe geçmiş görev*) olan bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> kullanıcı temsilci olarak bilinen başka bir görev oluşturulan örnek *üst görev*. Bir alt görev ya da iliştirilemez ya da. A *ayrılmış alt görev* üst bağımsız olarak yürüten bir görevdir. Bir *alt görev bağlı* ile oluşturulan iç içe geçmiş bir görevi <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> , üst değil açıkça veya varsayılan olarak engelliyor, bağlı olmak seçeneği. Bir görev herhangi bir sayıda eklenen ve ayrılan alt görevler, yalnızca sistem kaynaklarının yetersizliği sınırlı oluşturabilir.  

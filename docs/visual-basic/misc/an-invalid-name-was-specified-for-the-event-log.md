@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598069"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>Geçersiz bir ad için olay günlüğünü belirtildi
 Geçersiz bir ad için olay günlüğünü belirtildi. Genellikle bu ad, boş bir dosya adı veya çok uzun bir dosya adı geçersiz karakterler sonucudur.  

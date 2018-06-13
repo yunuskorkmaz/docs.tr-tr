@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585093"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Paralel Programlama için Veri Yapıları
 .NET Framework sürüm 4 paralel programlama, bir dizi eşzamanlı koleksiyon sınıfları, basit eşitleme temelleri ve türleri geç başlatma için de dahil olmak üzere kullanışlı olan birkaç yeni türleri tanıtır. Görev paralel kitaplığı ve PLINQ'da dahil olmak üzere tüm birden çok iş parçacıklı ile uygulama kodu, bu tür kullanabilirsiniz.  
