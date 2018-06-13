@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549535"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli aygıtlar almak için fare, klavye, dokunma ve Kalem de dahil olmak üzere. Bu konu, tarafından sağlanan hizmetlerin açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.  

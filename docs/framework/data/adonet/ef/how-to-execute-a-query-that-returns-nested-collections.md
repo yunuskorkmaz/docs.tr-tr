@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761785"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Nasıl yapılır: iç içe geçmiş koleksiyonları döndüren bir sorgu yürütme
 Bu komut kavramsal model karşı kullanarak yürütme gösterilmiştir bir <xref:System.Data.EntityClient.EntityCommand> nesne ve kullanarak iç içe toplama sonuçları almak nasıl bir <xref:System.Data.EntityClient.EntityDataReader>.  

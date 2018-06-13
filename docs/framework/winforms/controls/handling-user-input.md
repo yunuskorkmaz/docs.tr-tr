@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527806"
 ---
 # <a name="handling-user-input"></a>Kullanıcı Girişini İşleme
 Bu konu, tarafından sağlanan ana klavye ve fare olaylarını açıklar <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Bir olay işlenirken denetim yazarları korumalı kılmalıdır `On` *EventName* olaya bir temsilci ekleme yerine yöntemi. Olayları gözden geçirmek için bkz: [oluşturma olayları bir bileşenin](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  

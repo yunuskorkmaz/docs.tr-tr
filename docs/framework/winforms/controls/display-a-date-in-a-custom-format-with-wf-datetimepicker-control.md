@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526015"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> denetim tarihler ve saatler denetiminde görüntüsünü biçimlendirme esneklik sağlar. <xref:System.Windows.Forms.DateTimePicker.Format%2A> Özelliği listelenen önceden tanımlanmış biçimlerden seçmenize olanak verir <xref:System.Windows.Forms.DateTimePickerFormat>. Bunlar hiçbiri amaçlarınız için yeterli değilse listelenen biçimi karakter kullanarak kendi biçimi stili oluşturabilirsiniz <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  

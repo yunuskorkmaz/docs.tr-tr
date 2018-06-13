@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415168"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2 Arabirimi
 Yığın adresi ve Icordebugframe nesneleri ile ilgili olarak konumu gibi iç çerçeveler hakkında bilgi sağlar.  

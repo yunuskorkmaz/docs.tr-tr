@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757196"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Geçici Tablo Sorgu (LINQ-DataSet)
 Tek bir tablo sorgulama yanı sıra, geçici tablo sorguları da gerçekleştirebilirsiniz [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Bu kullanılarak yapılır bir *birleştirme*. Bir birleştirme nesnelerin bir veri kaynağı bir ürün gibi başka bir veri kaynağındaki ortak bir özniteliği paylaşan veya kimliği başvurun nesnelerle ilişkidir Nesne odaklı programlama içindeki nesneleri arasındaki ilişkiler her nesneyi başka bir nesneye başvuruda bulunan bir üye içerdiğinden gitmek görece kolaydır. Dış veritabanı tablolarında ancak ilişkilerinde gezinme kadar basit değildir. Veritabanı tabloları yerleşik ilişkileri içermez. Bu durumlarda, birleştirme işlemi her kaynak öğelerinden eşleştirmek için kullanılabilir. Örneğin, ürün bilgilerini ve satış bilgilerini içeren iki tablo verildiğinde, satış bilgilerini ve ürünleri aynı sipariş için eşleştirilecek bir birleştirme işlemi kullanabilirsiniz.  

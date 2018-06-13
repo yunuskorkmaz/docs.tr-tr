@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530399"
 ---
 # <a name="how-to-customize-colors-in-toolstrip-applications"></a>Nasıl yapılır: ToolStrip Uygulamalarında Renkleri Özelleştirme
 Görünümünü özelleştirebilirsiniz, <xref:System.Windows.Forms.ToolStrip> kullanarak <xref:System.Windows.Forms.ToolStripProfessionalRenderer> sınıfı özelleştirilmiş renkleri kullanın.  

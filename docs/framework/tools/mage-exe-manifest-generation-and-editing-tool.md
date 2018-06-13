@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410396"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Bildirim Üretme ve Düzenleme Aracı)
 Bildirim Oluşturma ve Düzenleme Aracı (Mage.exe), uygulama ve dağıtım bildirimlerinin oluşturulmasını ve düzenlenmesini destekleyen bir komut satırı aracıdır. Bir komut satırı aracı Mage.exe hem toplu komut dosyaları hem de dahil olmak üzere diğer Windows tabanlı uygulamalar çalıştırılabilir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamalar.  

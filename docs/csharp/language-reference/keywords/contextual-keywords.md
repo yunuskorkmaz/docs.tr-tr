@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216198"
 ---
 # <a name="contextual-keywords-c-reference"></a>Bağlamsal Anahtar Sözcükler (C# Başvurusu)
 Bağlamsal anahtar sözcüğü kodda özel bir anlamı sağlamak için kullanılır, ancak C# ayrılmış bir sözcük değil. Bu bölümde aşağıdaki bağlamsal anahtar sözcükler yapılmıştır:  

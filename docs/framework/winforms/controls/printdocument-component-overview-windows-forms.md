@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538271"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument Bileşenine Genel Bakış (Windows Forms)
 Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) bileşen ne yazdırma açıklayın özellikleri ve Windows tabanlı uygulamalar içinde belge yazdırma olanağı ayarlamak için kullanılır. İle birlikte kullanılabilir [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) belge yazdırma tüm yönlerini denetiminde olmasını bileşeni.  

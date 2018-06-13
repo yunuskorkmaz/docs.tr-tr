@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529447"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>İzlenecek yol: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma
 Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Windows.Forms.DataGridView> denetimi *ana/ayrıntı* form, iki veritabanı tabloları arasında bir üst/alt ilişkisi görüntülenir. Ana tablodaki satırları seçmek ayrıntı tablosunda karşılık gelen alt verilerle güncelleştirmeye neden olur.  

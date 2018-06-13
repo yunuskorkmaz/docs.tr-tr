@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538369"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Kullanıcı Girdisi
 Windows Forms'ta kullanıcı girdisi uygulamalar Windows iletileri biçiminde gönderilir. Geçersiz kılınabilir yöntemleri bir dizi uygulama, form, bu iletileri işlemek ve düzeyini denetleyebilirsiniz. Bu yöntemler, fare ve klavye iletileri aldığınızda, bunlar fare hakkında bilgi almak veya giriş klavye için işlenen olayların yükseltin. Çoğu durumda, Windows Forms uygulamaları bu olayları işleyerek tüm kullanıcı girişini işlemek mümkün olacaktır. Diğer durumlarda, bir uygulama uygulama, form veya denetim tarafından almadan önce belirli bir ileti müdahale için iletileri işlemek yöntemlerden birini geçersiz kılmanız gerekebilir.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549571"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. Fırçalar ve stiller kaynakları örneklerindendir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kodu arasında kaynaklarına erişim ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için bkz: [kaynaklar ve kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  

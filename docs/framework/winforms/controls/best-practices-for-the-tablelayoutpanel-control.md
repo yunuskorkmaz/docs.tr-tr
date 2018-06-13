@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526459"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel Denetimi için En İyi Yöntemler
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim dikkatle Windows formlarında kullanmadan önce dikkate almanız gereken güçlü yerleşim özellikleri sağlar.  

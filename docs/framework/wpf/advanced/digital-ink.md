@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537479"
 ---
 # <a name="digital-ink"></a>Dijital Mürekkep
 Bu bölümde dijital mürekkep kullanmayı açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geleneksel olarak yalnızca Tablet PC SDK içinde bulunan, dijital mürekkep çekirdek Windows Presentation Foundation kullanıma sunulmuştur. Başka bir deyişle, Windows Presentation Foundation gücünü kullanarak şimdi tam özellikli Tablet PC uygulamalar geliştirebilir.  

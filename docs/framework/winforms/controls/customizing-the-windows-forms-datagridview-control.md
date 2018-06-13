@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529850"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Özelleştirme
 `DataGridView` Denetim görünüm ve temel davranışını (Görünüm) hücrelerini, satırları ve sütunları ayarlamak için kullanabileceğiniz çeşitli özellikler sunar. Yeteneklerini gidin özel gereksinimleri olup olmadığını <xref:System.Windows.Forms.DataGridViewCellStyle> sınıfı, ancak denetim için çizim sahibi uygulamak ya da özel hücreler, sütunları ve satırları oluşturarak yeteneklerini genişletir.  

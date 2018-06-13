@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537570"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListBox> denetimi, kullanıcı seçebileceği bir veya daha fazla öğe listesini görüntüler. Toplam öğe sayısını görüntülenebilir sayıyı aşarsa, bir kaydırma çubuğunun otomatik olarak eklenir <xref:System.Windows.Forms.ListBox> denetim. Zaman <xref:System.Windows.Forms.ListBox.MultiColumn%2A> özelliği ayarlanmış `true`, liste kutusu öğeleri birden çok sütun görüntüler ve yatay kaydırma çubuğu görüntülenir. Zaman <xref:System.Windows.Forms.ListBox.MultiColumn%2A> özelliği ayarlanmış `false`, liste kutusu öğeleri tek bir sütunda görüntüler ve dikey kaydırma çubuğu görüntülenir. Zaman <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> ayarlanır `true`, öğelerin sayısı bağımsız olarak kaydırma çubuğu görüntülenir. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Özelliği, aynı anda kaç liste öğeleri seçilebilir belirler.  

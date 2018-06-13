@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542021"
 ---
 # <a name="annotations-schema"></a>Ek Açıklamalar Şeması
 Bu konuda kaydedin ve kullanıcı ek açıklama verilerini almak için Microsoft ek açıklamalar çerçevesi tarafından kullanılan XML şema tanımı (XSD) açıklanmaktadır.  

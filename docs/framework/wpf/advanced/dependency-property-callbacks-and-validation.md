@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541339"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Bağımlılık Özelliği Geri Aramaları ve Doğrulama
 Bu konuda doğrulamayı belirleme, özelliğin geçerli değeri değiştiğinde çağrılan geri aramalar gibi özelliği ile ilgili özellikler için alternatif özel uygulamalar kullanarak ve geçersiz kılma bağımlılık özelliklerin nasıl oluşturulacağı açıklanmaktadır olası değeri belirleme etkileri dışında. Bu konuda Ayrıca varsayılan özellik sistemi davranışlarını bu teknikleri kullanarak genişletmenin uygun olduğu senaryolar anlatılmaktadır.  

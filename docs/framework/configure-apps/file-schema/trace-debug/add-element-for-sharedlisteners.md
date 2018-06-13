@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752617"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;ekleme&gt; öğesi için &lt;sharedListeners&gt;
 Bir dinleyici ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhangi bir koleksiyonudur [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) başvuruda bulunabilir.  Varsayılan olarak, dinleyicileri `sharedListeners` koleksiyonu içinde değil yerleştirilir bir `Listeners` koleksiyonu. Adına eklenmesi gerekir [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Dinleyicileri almak mümkün değil `sharedListeners` çalışma zamanında kodda koleksiyonu.  

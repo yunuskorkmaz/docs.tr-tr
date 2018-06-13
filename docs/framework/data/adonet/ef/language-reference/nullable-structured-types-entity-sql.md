@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762393"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Boş değer atanabilir yapılandırılmış türler (varlık SQL)
 A `null` yapılandırılmış bir tür örneği olan mevcut bir örneği. Bu, tüm özellikleri olan mevcut örneğinden farklı değildir `null` değerleri.  

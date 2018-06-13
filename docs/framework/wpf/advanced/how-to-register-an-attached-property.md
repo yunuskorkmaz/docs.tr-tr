@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544083"
 ---
 # <a name="how-to-register-an-attached-property"></a>Nasıl yapılır: Ekli Özelliği Kaydetme
 Bu örnek, iliştirilmiş bir özellik kaydetmek ve böylece özelliği hem de kullanabilirsiniz ortak erişimciler sağlamak gösterilmiştir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve kod. Ekli özellikler tarafından tanımlanan bir sözdizimi kavramıdır olan [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. İçin çoğu iliştirilmiş özellik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] türleri bağımlılık özellikleri olarak da uygulanır. Bağımlılık özellikleri herhangi kullanabilirsiniz <xref:System.Windows.DependencyObject> türleri.  

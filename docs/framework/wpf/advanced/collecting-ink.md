@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541076"
 ---
 # <a name="collecting-ink"></a>Mürekkep Toplama
 [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) platform dijital mürekkep işlevselliğini önemli bir parçası toplar. Bu konu Windows Presentation Foundation (WPF) mürekkep topluluğu için yöntemleri açıklar.  

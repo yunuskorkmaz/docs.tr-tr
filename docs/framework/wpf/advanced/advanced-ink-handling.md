@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539036"
 ---
 # <a name="advanced-ink-handling"></a>Gelişmiş Mürekkep İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Birlikte <xref:System.Windows.Controls.InkCanvas>, ve toplama ve mürekkep görüntüleme hemen başlatmak için uygulamanızda koyabilir bir öğedir. Ancak, varsa <xref:System.Windows.Controls.InkCanvas> denetim Denetim yeterli düzeyini sağlamaz, kendi mürekkep koleksiyonu kullanarak ve mürekkep işleme sınıflarınızı özelleştirerek daha yüksek düzeyde denetim sağlayabilirsiniz <xref:System.Windows.Input.StylusPlugIns>.  

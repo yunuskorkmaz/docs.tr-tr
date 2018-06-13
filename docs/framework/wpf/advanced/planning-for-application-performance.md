@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546958"
 ---
 # <a name="planning-for-application-performance"></a>Uygulama Performansını Planlama
 Performans hedefleriniz elde başarısı ne kadar iyi performans stratejinizi geliştirin bağlıdır. Planlama herhangi bir ürün geliştirme ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  

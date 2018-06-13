@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540969"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetiminde Verileri Doğrulama
 Kullanıcılara veri girişi işlevlerini görüntülediğinizde, sık formunuza girilen veri doğrulama gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı verileri veri deposuna yürütülmeden önce doğrulama gerçekleştirmek için kullanışlı bir yöntem sağlar. İşleyerek veri doğrulama <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından gerçekleştirilen olay <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  

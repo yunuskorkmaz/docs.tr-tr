@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538586"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Tek Olay İşleyicisine Birden Fazla Olay Bağlama
 Uygulama tasarımınız, onu tek olay işleyicisine birden çok olaylar için kullanın veya birden çok olayları aynı yordamı gerçekleştirmek için gerekli bulabilirsiniz. Örneğin, bir güçlü zaman-formunuzda düğmesini aynı işlevselliği kullanıma durumunda olduğu gibi aynı olayını Başlat menü komutu sağlamak için koruyucu genellikle olur. Olaylar görünüm penceresinin C# veya kullanarak bunu yapabilirsiniz `Handles` anahtar sözcüğü ve **sınıf adı** ve **yöntem adı** açılan kutuları Visual Basic Kod Düzenleyicisi'nde.  

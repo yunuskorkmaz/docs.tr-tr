@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528950"
 ---
 # <a name="control-type-recommendations"></a>Denetim Türü Önerileri
 .NET Framework verir geliştirmek ve yeni denetimler uygulamak için güç. Tanıdık kullanıcı denetimi yanı sıra kendi boyama gerçekleştirmek ve devralma yoluyla mevcut denetimleri işlevselliğini genişletmek bile mümkün olan özel denetimler yazabilmesi şimdi bulacaksınız. Karar denetimi oluşturmak için hangi tür kafa karıştırıcı olabilir. Bu bölüm, çeşitli içinden denetimleri arasındaki devrettiği ve projeniz için göz önünde bulundurularak seçmek için türü verir farklılıkları vurgular.  

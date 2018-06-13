@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547468"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Framework özellik meta veri seçenekleri WPF framework düzeyde olarak kabul nesne öğelerin özellikleri için bildirilen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi bu özellikleri WPF çerçeve düzeyi ataması kapsar ve özellik sistem iyileştirmelerini tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir. Çerçeve özellik meta verileri, belirli öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  

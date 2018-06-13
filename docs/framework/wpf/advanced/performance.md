@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546090"
 ---
 # <a name="performance"></a>Performans
 En iyi uygulama performansını elde gerektiren uygulama tasarımı ve anlaşılması için en iyi uygulamaları öngörüyü [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama geliştirme. Bu bölümdeki konular, yüksek performanslı oluşturmaya ek bilgiler sağlayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  

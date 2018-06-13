@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532268"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Nasıl yapılır: Veri Bağlamada Oluşan Hataları ve Özel Durumları İşleme
 Denetimlere bağlama görmemeleri özel durumlar ve hataları temel iş nesnelerde oluşur. Bu hataları ve özel durumları müdahale ve sonra kurtarmak veya hata bilgilerini kullanıcıya işleyerek geçirmek <xref:System.Windows.Forms.Binding.BindingComplete> belirli bir olay <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource>, veya <xref:System.Windows.Forms.CurrencyManager> bileşeni.  

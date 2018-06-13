@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541554"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Arka Plan Kod ve WPF İçindeki XAML
 <a name="introduction"></a> Arka plan kodu biçimlendirme tanımlı nesneler ile birleştirilen kodu açıklamak için kullanılan bir terim olduğu durumlarda bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası biçimlendirme derlenmiş. Bu konu, arka plan kodu için gereksinimler ve aynı zamanda kodu için bir alternatif satır içi kod mekanizmasının açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529295"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Nasıl yapılır: Windows Forms'ta Baskı Önizlemeyi Kullanarak Yazdırma
 Windows Forms'ta baskı önizlemeyi yazdırma hizmetlerine ek olarak sunmak için programlama çok yaygın bir durumdur. Baskı Önizleme Hizmetleri uygulamanıza eklemek için kolay bir yol kullanmaktır bir <xref:System.Windows.Forms.PrintPreviewDialog> denetimi ile birlikte <xref:System.Drawing.Printing.PrintDocument.PrintPage> bir dosya yazdırma için olay işleme mantığı.  

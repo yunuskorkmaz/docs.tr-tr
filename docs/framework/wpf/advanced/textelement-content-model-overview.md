@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548863"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeli genel bakış için desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, hangi nesnelerin/öğelerin bazılarında bulunabilir açıklar. Bu genel bakışta türetilen nesneler için kullanılan içerik modelini özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için bkz: [akış belge genel bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546142"
 ---
 # <a name="preview-events"></a>Önizleme Olayları
 Tünel olayları olarak da bilinen önizleme olayları yönlendirilmiş burada olayı ve olay veri kaynağı olarak bildirilen öğe doğru uygulama kökünden rota yönü geçen olaylardır. Tüm olay senaryoları desteklemek veya önizleme olayları gerektirir; Bu konuda, burada özel bileşenlerde veya sınıflarda önizleme olayları oluşturma uygun durumlarda olabilir ve önizleme olayları, uygulama veya bileşenler bunları nasıl yöneteceğini var olduğu durumlar açıklanmaktadır.  
