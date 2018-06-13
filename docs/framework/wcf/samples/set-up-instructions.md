@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809111"
 ---
 # <a name="set-up-instructions"></a><span data-ttu-id="a12a1-102">Kurulum Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="a12a1-102">Set-Up Instructions</span></span>
 <span data-ttu-id="a12a1-103">Bu konular, bir Windows Communication Foundation (WCF) hizmetini çalıştırmak için gereken Services'i ayarlamak nasıl açıklar.</span><span class="sxs-lookup"><span data-stu-id="a12a1-103">This set of topics describes how to set up services that are required to run a Windows Communication Foundation (WCF) service.</span></span>  

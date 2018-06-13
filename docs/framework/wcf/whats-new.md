@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809907"
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a><span data-ttu-id="06ce4-102">Ne&#39;s Windows Communication Foundation 4.5'deki yenilikler</span><span class="sxs-lookup"><span data-stu-id="06ce4-102">What&#39;s New in Windows Communication Foundation 4.5</span></span>
 <span data-ttu-id="06ce4-103">Bu konu, Windows Communication Foundation (WCF) için yeni özellikleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="06ce4-103">This topic discusses features new to Windows Communication Foundation (WCF).</span></span>  

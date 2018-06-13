@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809176"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="37893-102">Uç Noktası Oluşturma Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="37893-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="37893-103">Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişimin *uç noktaları* hizmetinin.</span><span class="sxs-lookup"><span data-stu-id="37893-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="37893-104">Uç noktaları istemciler için bir WCF hizmeti sunan işlevlere erişimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="37893-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="37893-105">Bu bölümde bir uç nokta yapısını tanımlar ve bir uç nokta yapılandırması ve kodda nasıl tanımlanacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="37893-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

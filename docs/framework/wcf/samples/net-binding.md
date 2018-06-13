@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805960"
 ---
 # <a name="net-binding"></a><span data-ttu-id="5f7ee-102">Net Bağlama</span><span class="sxs-lookup"><span data-stu-id="5f7ee-102">Net Binding</span></span>
 <span data-ttu-id="5f7ee-103">Bu bölüm bir uç nokta öğenin ağ bağlama öznitelikleri kullanarak gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="5f7ee-103">This section contains samples that demonstrate using network binding attributes of an endpoint element.</span></span>  

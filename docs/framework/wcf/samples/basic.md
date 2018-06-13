@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809456"
 ---
 # <a name="basic"></a><span data-ttu-id="adc05-102">Temel</span><span class="sxs-lookup"><span data-stu-id="adc05-102">Basic</span></span>
 <span data-ttu-id="adc05-103">Bu bölümde temel Windows Communication Foundation (WCF) işlevselliğini göstermek örnekleri bölümleri içerir.</span><span class="sxs-lookup"><span data-stu-id="adc05-103">This section includes sections of samples that demonstrate basic Windows Communication Foundation (WCF)functionality.</span></span>  

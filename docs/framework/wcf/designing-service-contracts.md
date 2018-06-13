@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809933"
 ---
 # <a name="designing-service-contracts"></a><span data-ttu-id="0e0a1-102">Hizmet Sözleşmeleri Tasarlama</span><span class="sxs-lookup"><span data-stu-id="0e0a1-102">Designing Service Contracts</span></span>
 <span data-ttu-id="0e0a1-103">Bu konuda açıklanmaktadır olan, nasıl tanımlanır, hangi işlemleri kullanılabilir (ve temel alınan ileti alışverişlerinde etkilerini) hangi hizmetin sözleşme, hangi veri türleri olan yardımcı kullanılan ve diğer tasarım sorunları karşılamak işlemleri Senaryonuz gereksinimleri.</span><span class="sxs-lookup"><span data-stu-id="0e0a1-103">This topic describes what service contracts are, how they are defined, what operations are available (and the implications for the underlying message exchanges), what data types are used, and other issues that help you design operations that satisfy the requirements of your scenario.</span></span>  

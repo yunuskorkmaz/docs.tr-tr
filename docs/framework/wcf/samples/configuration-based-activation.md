@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809920"
 ---
 # <a name="configuration-based-activation"></a><span data-ttu-id="1e706-102">Yapılandırma Temelli Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="1e706-102">Configuration-Based Activation</span></span>
 <span data-ttu-id="1e706-103">Bu örnek, bir .svc dosya gerek kalmadan Windows Communication Foundation (WCF) hizmetlerini etkinleştirmek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="1e706-103">This sample demonstrates how to activate Windows Communication Foundation (WCF) services without requiring a .svc file.</span></span>  

@@ -8,6 +8,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457339"
 ---
 # <a name="introduction-to-classes"></a><span data-ttu-id="51e64-103">Giriş sınıfları</span><span class="sxs-lookup"><span data-stu-id="51e64-103">Introduction to classes</span></span>
 

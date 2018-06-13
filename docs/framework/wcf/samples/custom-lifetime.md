@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809309"
 ---
 # <a name="custom-lifetime"></a><span data-ttu-id="2094d-102">Özel Yaşam Süresi</span><span class="sxs-lookup"><span data-stu-id="2094d-102">Custom Lifetime</span></span>
 <span data-ttu-id="2094d-103">Bu örnek nasıl paylaşılan WCF hizmet örneği için özel yaşam süresi hizmetleri sağlamak için bir Windows Communication Foundation (WCF) uzantısı yazılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="2094d-103">This sample demonstrates how to write a Windows Communication Foundation (WCF) extension to provide custom lifetime services for shared WCF service instances.</span></span>  

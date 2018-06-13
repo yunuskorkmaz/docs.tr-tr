@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809215"
 ---
 # <a name="how-to-create-a-custom-token"></a><span data-ttu-id="f303a-102">Nasıl yapılır: Özel Belirteç Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f303a-102">How to: Create a Custom Token</span></span>
 <span data-ttu-id="f303a-103">Bu konuda kullanarak bir özel güvenlik belirteci oluşturmak nasıl gösterilmektedir <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcısı ile authenticator ile tümleştirme.</span><span class="sxs-lookup"><span data-stu-id="f303a-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="f303a-104">Tam kod örneği için bkz: [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md) örnek.</span><span class="sxs-lookup"><span data-stu-id="f303a-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  

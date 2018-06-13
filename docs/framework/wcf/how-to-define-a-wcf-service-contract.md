@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809231"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="fd803-102">Nasıl yapılır: Windows Communication Foundation Hizmet Sözleşmesini Tanımlama</span><span class="sxs-lookup"><span data-stu-id="fd803-102">How to: Define a Windows Communication Foundation Service Contract</span></span>
 <span data-ttu-id="fd803-103">Temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevler ilk budur.</span><span class="sxs-lookup"><span data-stu-id="fd803-103">This is the first of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="fd803-104">Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.</span><span class="sxs-lookup"><span data-stu-id="fd803-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

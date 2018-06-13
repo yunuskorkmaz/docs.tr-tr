@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808422"
 ---
 # <a name="transport-udp"></a><span data-ttu-id="5d9a5-102">Taşıma: UDP</span><span class="sxs-lookup"><span data-stu-id="5d9a5-102">Transport: UDP</span></span>
 <span data-ttu-id="5d9a5-103">UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) taşıma olarak gösterir.</span><span class="sxs-lookup"><span data-stu-id="5d9a5-103">The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="5d9a5-104">Örnek kanal Çerçevesi'ni kullanıp WCF en iyi uygulamaları izleyerek içinde WCF özel taşıma oluşturmak için önerilen yordamı açıklar.</span><span class="sxs-lookup"><span data-stu-id="5d9a5-104">The sample describes the recommended procedure for creating a custom transport in WCF, by using the channel framework and following WCF best practices.</span></span> <span data-ttu-id="5d9a5-105">Özel bir taşıma oluşturmaya yönelik adımlar aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="5d9a5-105">The steps to create a custom transport are as follows:</span></span>  
