@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763455"
 ---
 # <a name="method-based-query-syntax-examples-conversion-operators-linq-to-dataset"></a><span data-ttu-id="f8921-102">Yöntem temelli sorgu sözdizimi örnekler: Dönüşüm işleçleri (LINQ-DataSet)</span><span class="sxs-lookup"><span data-stu-id="f8921-102">Method-Based Query Syntax Examples: Conversion Operators (LINQ to DataSet)</span></span>
 <span data-ttu-id="f8921-103">Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A>, ve <xref:System.Linq.Enumerable.ToList%2A> hemen bir sorgu ifadesi yürütmek için yöntemler.</span><span class="sxs-lookup"><span data-stu-id="f8921-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A>, and <xref:System.Linq.Enumerable.ToList%2A> methods to immediately execute a query expression.</span></span>  

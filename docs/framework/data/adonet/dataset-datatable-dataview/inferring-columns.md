@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761083"
 ---
 # <a name="inferring-columns"></a><span data-ttu-id="05e15-102">Sütunları çıkarımını yapma</span><span class="sxs-lookup"><span data-stu-id="05e15-102">Inferring Columns</span></span>
 <span data-ttu-id="05e15-103">ADO.NET için tabloları olarak Infer hangi öğelerin bir XML belgesinden belirledi sonra bir <xref:System.Data.DataSet>, ardından bu tablo sütunlarını oluşturur.</span><span class="sxs-lookup"><span data-stu-id="05e15-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="05e15-104">ADO.NET 2.0 sunulan her biri için kesin türü belirtilmiş veri türü oluşturur Yeni bir şema çıkarımı altyapısının **simpleType** öğesi.</span><span class="sxs-lookup"><span data-stu-id="05e15-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="05e15-105">Önceki sürümlerde, veri türü bir oluşturulursa **simpleType** öğesi olan her zaman **xsd:string**.</span><span class="sxs-lookup"><span data-stu-id="05e15-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763858"
 ---
 # <a name="type-system-entity-sql"></a><span data-ttu-id="596f2-102">Tür sistemi (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="596f2-102">Type System (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="596f2-103"> bir dizi türlerini destekler:</span><span class="sxs-lookup"><span data-stu-id="596f2-103"> supports a number of types:</span></span>  

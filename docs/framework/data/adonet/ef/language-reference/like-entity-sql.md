@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763046"
 ---
 # <a name="like-entity-sql"></a><span data-ttu-id="e54e2-102">(Varlık gibi SQL)</span><span class="sxs-lookup"><span data-stu-id="e54e2-102">LIKE (Entity SQL)</span></span>
 <span data-ttu-id="e54e2-103">Belirli bir karakteri olup olmadığını belirleyen `String` belirtilen desenle eşleşir.</span><span class="sxs-lookup"><span data-stu-id="e54e2-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  

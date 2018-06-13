@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761538"
 ---
 # <a name="intersect-entity-sql"></a><span data-ttu-id="86879-102">INTERSECT (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="86879-102">INTERSECT (Entity SQL)</span></span>
 <span data-ttu-id="86879-103">Her iki sorgu ifadeleri sol tarafından döndürülen tüm farklı değerler koleksiyonu ve INTERSECT işleneni sağ tarafında döndürür.</span><span class="sxs-lookup"><span data-stu-id="86879-103">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span> <span data-ttu-id="86879-104">Tüm ifadeler aynı türde veya ortak bir temel veya türetilmiş türünde olması gerekir `expression`.</span><span class="sxs-lookup"><span data-stu-id="86879-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
