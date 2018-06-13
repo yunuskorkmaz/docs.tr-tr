@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387438"
 ---
 # <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="a6838-102">.NET Framework Bileşenlerini COM'da Gösterme</span><span class="sxs-lookup"><span data-stu-id="a6838-102">Exposing .NET Framework Components to COM</span></span>
 <span data-ttu-id="a6838-103">.NET türü yazma ve bu tür yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir.</span><span class="sxs-lookup"><span data-stu-id="a6838-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="a6838-104">Bu bölümde COM istemcileri ile birlikte çalışan yönetilen kod yazma için birkaç ipuçları açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="a6838-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755805"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a><span data-ttu-id="36931-102">Nasıl yapılır: EdmGen.exe modeli ve eşleme dosyaları doğrulamak için kullanın</span><span class="sxs-lookup"><span data-stu-id="36931-102">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>
 <span data-ttu-id="36931-103">Bu konuda nasıl kullanılacağını gösterir [EDM Oluşturucu (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) modeli ve eşleme dosyaları doğrulamak için aracı.</span><span class="sxs-lookup"><span data-stu-id="36931-103">This topic shows how to use the [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) tool to validate the model and mapping files.</span></span> <span data-ttu-id="36931-104">Daha fazla bilgi için bkz: [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).</span><span class="sxs-lookup"><span data-stu-id="36931-104">For more information, see [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).</span></span>  

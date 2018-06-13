@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387139"
 ---
 # <a name="calling-a-dll-function"></a><span data-ttu-id="955d0-102">DLL İşlevini Çağırma</span><span class="sxs-lookup"><span data-stu-id="955d0-102">Calling a DLL Function</span></span>
 <span data-ttu-id="955d0-103">Yönetilmeyen DLL işlevleri çağırma diğer yönetilen kodu çağırma için neredeyse aynı olsa da, DLL işlevleri kafa karıştırıcı göründüğü yapabilirsiniz farklar vardır ilk.</span><span class="sxs-lookup"><span data-stu-id="955d0-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="955d0-104">Bu bölümde bazı olağan dışı arama ile ilgili sorunları açıklayan konulara tanıtır.</span><span class="sxs-lookup"><span data-stu-id="955d0-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  

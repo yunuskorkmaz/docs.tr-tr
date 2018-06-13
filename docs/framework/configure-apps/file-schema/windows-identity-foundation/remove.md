@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755083"
 ---
 # <a name="ltremovegt"></a><span data-ttu-id="8b02e-102">&lt;remove&gt;</span><span class="sxs-lookup"><span data-stu-id="8b02e-102">&lt;remove&gt;</span></span>
 <span data-ttu-id="8b02e-103">Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="8b02e-103">Removes the specified security token handler from the token handler collection.</span></span>  

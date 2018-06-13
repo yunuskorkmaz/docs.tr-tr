@@ -1,48 +1,38 @@
 ---
 title: Yordam etkinlikleri kullanma
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c67f739-3878-48ad-806c-b2ce0d6733a0
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6516f5da83a4133451d73fc10a76a691a931d3ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 787e61a989cb5769461f5155738520dea4609d1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516015"
 ---
-# <a name="using-procedural-activities"></a><span data-ttu-id="84696-102">Yordam etkinlikleri kullanma</span><span class="sxs-lookup"><span data-stu-id="84696-102">Using Procedural Activities</span></span>
-<span data-ttu-id="84696-103">Örnek kullanır <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>, ve <xref:System.Activities.Statements.WriteLine> bir tahmin uygulamak için etkinlikler oyun.</span><span class="sxs-lookup"><span data-stu-id="84696-103">The sample uses the <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>, and <xref:System.Activities.Statements.WriteLine> activities to implement a guessing game.</span></span> <span data-ttu-id="84696-104">Rastgele bir sayı tahmin eden oyun seçer ve bu sayıyı tahmin etmeye player sahiptir.</span><span class="sxs-lookup"><span data-stu-id="84696-104">The guessing game selects a random number and the player has to guess that number.</span></span> <span data-ttu-id="84696-105">Player yanlış tahmin gönderdiğinde, iş akışı yüksek tahmin ya da daha düşük bir ipucu sağlar.</span><span class="sxs-lookup"><span data-stu-id="84696-105">When the player submits an incorrect guess, the workflow provides a hint whether to guess higher or lower.</span></span> <span data-ttu-id="84696-106">Player sayı değerinden 7 girişimlerinde tahminde bulunursa, bir özel Tebrikler kullanıcıya görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="84696-106">If the player guesses the number in less than 7 attempts, a special congratulations is displayed to the user.</span></span>  
+# <a name="using-procedural-activities"></a><span data-ttu-id="72440-102">Yordam etkinlikleri kullanma</span><span class="sxs-lookup"><span data-stu-id="72440-102">Using Procedural Activities</span></span>
+<span data-ttu-id="72440-103">Örnek kullanır <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>, ve <xref:System.Activities.Statements.WriteLine> bir tahmin uygulamak için etkinlikler oyun.</span><span class="sxs-lookup"><span data-stu-id="72440-103">The sample uses the <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>, and <xref:System.Activities.Statements.WriteLine> activities to implement a guessing game.</span></span> <span data-ttu-id="72440-104">Rastgele bir sayı tahmin eden oyun seçer ve bu sayıyı tahmin etmeye player sahiptir.</span><span class="sxs-lookup"><span data-stu-id="72440-104">The guessing game selects a random number and the player has to guess that number.</span></span> <span data-ttu-id="72440-105">Player yanlış tahmin gönderdiğinde, iş akışı yüksek tahmin ya da daha düşük bir ipucu sağlar.</span><span class="sxs-lookup"><span data-stu-id="72440-105">When the player submits an incorrect guess, the workflow provides a hint whether to guess higher or lower.</span></span> <span data-ttu-id="72440-106">Player sayı değerinden 7 girişimlerinde tahminde bulunursa, bir özel Tebrikler kullanıcıya görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="72440-106">If the player guesses the number in less than 7 attempts, a special congratulations is displayed to the user.</span></span>  
   
-## <a name="custom-activities-in-this-sample"></a><span data-ttu-id="84696-107">Bu örnek özel etkinlikleri</span><span class="sxs-lookup"><span data-stu-id="84696-107">Custom Activities in this Sample</span></span>  
+## <a name="custom-activities-in-this-sample"></a><span data-ttu-id="72440-107">Bu örnek özel etkinlikleri</span><span class="sxs-lookup"><span data-stu-id="72440-107">Custom Activities in this Sample</span></span>  
   
-### <a name="readline"></a><span data-ttu-id="84696-108">ReadLine</span><span class="sxs-lookup"><span data-stu-id="84696-108">ReadLine</span></span>  
- <span data-ttu-id="84696-109">Metin satırının konsoldan okur.</span><span class="sxs-lookup"><span data-stu-id="84696-109">Reads a line of text from the console.</span></span> <span data-ttu-id="84696-110">Bu etkinlik türetilen <xref:System.Activities.NativeActivity> sınıfı ve bir satır okunduğunda konsol uygulaması tarafından sürdürüldü bir yer işareti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="84696-110">This activity derives from the <xref:System.Activities.NativeActivity> class and creates a bookmark that is resumed by the console application when a line is read.</span></span>  
+### <a name="readline"></a><span data-ttu-id="72440-108">ReadLine</span><span class="sxs-lookup"><span data-stu-id="72440-108">ReadLine</span></span>  
+ <span data-ttu-id="72440-109">Metin satırının konsoldan okur.</span><span class="sxs-lookup"><span data-stu-id="72440-109">Reads a line of text from the console.</span></span> <span data-ttu-id="72440-110">Bu etkinlik türetilen <xref:System.Activities.NativeActivity> sınıfı ve bir satır okunduğunda konsol uygulaması tarafından sürdürüldü bir yer işareti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="72440-110">This activity derives from the <xref:System.Activities.NativeActivity> class and creates a bookmark that is resumed by the console application when a line is read.</span></span>  
   
-### <a name="promptint"></a><span data-ttu-id="84696-111">PromptInt</span><span class="sxs-lookup"><span data-stu-id="84696-111">PromptInt</span></span>  
- <span data-ttu-id="84696-112">Kullanıcıdan bir sayı yazın ve ardından bir konsol penceresinden okur.</span><span class="sxs-lookup"><span data-stu-id="84696-112">Prompts the user to type in a number and then reads it from a console window.</span></span> <span data-ttu-id="84696-113">Etkinlik türetilen <xref:System.Activities.Activity%601> ve kullandığı <xref:System.Activities.Statements.WriteLine> ve `ReadLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="84696-113">The activity derives from <xref:System.Activities.Activity%601> and uses the <xref:System.Activities.Statements.WriteLine> and `ReadLine` activities.</span></span>  
+### <a name="promptint"></a><span data-ttu-id="72440-111">PromptInt</span><span class="sxs-lookup"><span data-stu-id="72440-111">PromptInt</span></span>  
+ <span data-ttu-id="72440-112">Kullanıcıdan bir sayı yazın ve ardından bir konsol penceresinden okur.</span><span class="sxs-lookup"><span data-stu-id="72440-112">Prompts the user to type in a number and then reads it from a console window.</span></span> <span data-ttu-id="72440-113">Etkinlik türetilen <xref:System.Activities.Activity%601> ve kullandığı <xref:System.Activities.Statements.WriteLine> ve `ReadLine` etkinlikler.</span><span class="sxs-lookup"><span data-stu-id="72440-113">The activity derives from <xref:System.Activities.Activity%601> and uses the <xref:System.Activities.Statements.WriteLine> and `ReadLine` activities.</span></span>  
   
-##### <a name="to-use-this-sample"></a><span data-ttu-id="84696-114">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="84696-114">To use this sample</span></span>  
+##### <a name="to-use-this-sample"></a><span data-ttu-id="72440-114">Bu örneği kullanmak için</span><span class="sxs-lookup"><span data-stu-id="72440-114">To use this sample</span></span>  
   
-1.  <span data-ttu-id="84696-115">Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], GuessingGame.sln çözüm dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="84696-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the GuessingGame.sln solution file.</span></span>  
+1.  <span data-ttu-id="72440-115">Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], GuessingGame.sln çözüm dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="72440-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the GuessingGame.sln solution file.</span></span>  
   
-2.  <span data-ttu-id="84696-116">Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="84696-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="72440-116">Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="72440-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="84696-117">Çözümü çalıştırmak için CTRL + F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="84696-117">To run the solution, press CTRL+F5.</span></span>  
+3.  <span data-ttu-id="72440-117">Çözümü çalıştırmak için CTRL + F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="72440-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="84696-118">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="84696-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="84696-119">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="84696-119">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="72440-118">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="72440-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="72440-119">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="72440-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="84696-120">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="84696-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="84696-121">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="84696-121">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="72440-120">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="72440-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="72440-121">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="72440-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Procedurals`
