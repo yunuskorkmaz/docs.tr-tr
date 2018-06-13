@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530100"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen, bir nesne yerine bir tür bir denetimi bağlamak gerekli bulacaksınız. Ne zaman veri kullanılamayabilir, ancak bir türün ortak arabirim bilgilerini görüntülemek, veri bağlama denetimleri hala gerekir özellikle tasarım zamanında, bu durum ortaya çıkar. Örneğin, bağlayabilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetlemek için bir Web hizmeti tarafından sunulan bir nesne ve istediğiniz <xref:System.Windows.Forms.DataGridView> sütunlarını tasarım zamanında üyeyi içeren özel bir tür adlarını etiketlemek için denetim.  

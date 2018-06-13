@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744502"
 ---
 # <a name="client-application-services-overview"></a>İstemci Uygulama Hizmetlerine Genel Bakış
 İstemci uygulama hizmetleri sağlamak için Basitleştirilmiş erişim [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] oturum açma, roller ve Windows Forms ve Windows Presentation Foundation (WPF) uygulamalardan profili Hizmetleri. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] Uygulama Hizmetleri, Microsoft ASP.NET 2.0 AJAX, içerdiği uzantıları bulunmaktadır [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] ve [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Bu hizmetler, birden çok Web ve Windows tabanlı uygulamalar kullanıcı bilgileri ve kullanıcı yönetimi işlevleri tek bir sunucudan paylaşmak için etkinleştirin.  

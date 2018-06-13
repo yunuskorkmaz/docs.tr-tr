@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761434"
 ---
 # <a name="navigating-datarelations"></a>DataRelation gezinme
 Birincil işlevlerinden biri bir <xref:System.Data.DataRelation> Gezinti birinden izin <xref:System.Data.DataTable> içinde başka bir bir <xref:System.Data.DataSet>. Bu sayede tüm almak ilgili <xref:System.Data.DataRow> nesnelerini **DataTable** tek bir verildiğinde **DataRow** ilgili öğesinden **DataTable**. Örneğin, kurduktan sonra bir **DataRelation** Müşteriler tablosu ve Siparişler tablosu arasında kullanarak bir müşterinin satır için tüm sipariş satırları alabilirsiniz **GetChildRows**.  

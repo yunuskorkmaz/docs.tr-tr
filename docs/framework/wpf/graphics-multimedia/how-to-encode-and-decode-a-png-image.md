@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558854"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a>Nasıl yapılır: Bir PNG Görüntüsünü Kodlama ve Kodunu Çözme
 Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.PngBitmapDecoder> ve <xref:System.Windows.Media.Imaging.PngBitmapEncoder> nesneleri.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762416"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Bir veri kümesine XPath sorgusunu gerçekleştirme
 Bir eşitlenmiş arasındaki ilişkiyi <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> XML'sini kullanmak yapmanızı sağlar erişen gibi hizmetleri XML Path dili (XPath) sorgusu **XmlDataDocument** ve bazı işlevleri gerçekleştirebilir erişme değerinden daha rahat **DataSet** doğrudan. Örneğin, kullanarak yerine **seçin** yöntemi bir <xref:System.Data.DataTable> diğer tablolarla ilişkileri gitmek için bir **veri kümesi**, bir XPath sorgusu gerçekleştirebileceğiniz bir **XmlDataDocument**  ile eşitlenen **DataSet**biçiminde XML öğeleri listesini almak için bir <xref:System.Xml.XmlNodeList>. Düğümlerin **XmlNodeList**, noktaya yayın olarak <xref:System.Xml.XmlElement> düğümleri, ardından geçirilebilir için **GetRowFromElement** yöntemi **XmlDataDocument**, eşleşen döndürmek için <xref:System.Data.DataRow> Eşitlenmiş Tablo satırlara yapılan başvurular **DataSet**.  

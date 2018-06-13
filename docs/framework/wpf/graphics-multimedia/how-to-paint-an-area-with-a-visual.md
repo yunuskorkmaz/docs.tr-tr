@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559807"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Nasıl yapılır: Görsel ile bir Alanı Boyama
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.VisualBrush> sahip bir alan boyamak için sınıf bir <xref:System.Windows.Media.Visual>.  

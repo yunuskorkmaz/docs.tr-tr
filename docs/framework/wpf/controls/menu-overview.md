@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557608"
 ---
 # <a name="menu-overview"></a>Menüye Genel Bakış
 <xref:System.Windows.Controls.Menu> Sınıfı komutlar ve hiyerarşik sırada olay işleyicileri ile ilişkili öğeleri düzenlemenizi sağlar. Her <xref:System.Windows.Controls.Menu> öğesi içeren bir koleksiyonu <xref:System.Windows.Controls.MenuItem> öğeleri.  

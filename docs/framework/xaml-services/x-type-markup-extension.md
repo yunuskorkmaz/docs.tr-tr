@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563126"
 ---
 # <a name="xtype-markup-extension"></a>x:Type İşaretleme Uzantısı
 CLR sağlayan <xref:System.Type> belirtilen bir XAML tür için temel alınan tür nesnesi.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604698"
 ---
 # <a name="mywebservices-object"></a>My.WebServices Nesnesi
 Oluşturma ve erişme geçerli proje tarafından başvurulan her XML Web hizmetinin tek bir örneği için özellikleri sağlar.  

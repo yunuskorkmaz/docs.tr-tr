@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555784"
 ---
 # <a name="data-binding-wpf"></a>Veri Bağlama (WPF)
 Windows Presentation Foundation (WPF) veri bağlama sunmak ve veri ile etkileşim kurmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Öğeleri veri kaynakları ortak dil çalışma zamanı (CLR) nesneleri ve XML biçiminde çeşitli veriye bağlı olabilir.  

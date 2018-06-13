@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527476"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+'da Kalemler, Çizgiler ve Dikdörtgenler
 Satırıyla çizmek için [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne ve <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesne gerçekten çizimi yapmak yöntemler sağlar ve <xref:System.Drawing.Pen> nesnesi çizgi rengini, genişliğini ve stil gibi özniteliklerini depolar.  

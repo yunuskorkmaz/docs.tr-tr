@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555957"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Nasıl yapılır: DataGrid Denetimine Satır Ayrıntıları Ekleme
 Kullanırken <xref:System.Windows.Controls.DataGrid> denetimi, bir satır ayrıntıları bölümü ekleyerek veri sunumunu özelleştirebilirsiniz. Bir sıra ayrıntıları bölümü ekleyerek, bazı veriler, isteğe bağlı olarak görünür mü yoksa daraltılmış olan bir şablon gruplamanıza olanak sağlar. Örneğin, satır ayrıntıları ekleyebilirsiniz bir <xref:System.Windows.Controls.DataGrid> her satır için verileri yalnızca bir özetini sunar <xref:System.Windows.Controls.DataGrid>, ancak daha fazla veri alanı kullanıcı bir satır seçtiğinde gösterir. Şablon için satır Ayrıntılar bölümünde tanımladığınız <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> özelliği. Aşağıdaki çizimde bir satır ayrıntıları bölümü örneği gösterir.  

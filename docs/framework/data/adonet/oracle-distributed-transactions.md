@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765207"
 ---
 # <a name="oracle-distributed-transactions"></a>Oracle dağıtılmış işlemler
 <xref:System.Data.OracleClient.OracleConnection> Nesnesi bir işlem etkin olduğunu belirlerse, varolan bir dağıtılmış işlemde otomatik olarak kaydeder. Bağlantı açıldığında veya bağlantı havuzundan alınan otomatik işlem kaydı oluşur. Belirterek otomatik kaydı varolan işlemlerde devre dışı bırakabilirsiniz  

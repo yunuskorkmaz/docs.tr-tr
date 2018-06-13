@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759328"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod erişimi güvenliği ve ADO.NET
 .NET Framework rol tabanlı güvenlik yanı sıra kod erişim güvenliği (CAS), her ikisi de ortak dil çalışma zamanı tarafından (CLR) sağlanan ortak bir altyapı kullanılarak uygulanan sunar. Yönetilmeyen kod dünyasında uygulamaların çoğu kullanıcı veya asıl izinlerle yürütün. Sonuç olarak, bilgisayar sistemleri kötü amaçlı olduğunda tehlikeye bozuk ve özel veri olabilir veya yazılım hatası doldurulmuş bir kullanıcı tarafından yükseltilmiş ayrıcalıklarla çalıştırın.  

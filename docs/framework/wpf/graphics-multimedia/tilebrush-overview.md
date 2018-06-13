@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566343"
 ---
 # <a name="tilebrush-overview"></a>TileBrush Genel Bakışı
 <xref:System.Windows.Media.TileBrush> nesneleri sağlar, çok yüksek bir alanı bir görüntü ile nasıl boyanır üzerinden denetiminin <xref:System.Windows.Media.Drawing>, veya <xref:System.Windows.Media.Visual>. Bu konuda nasıl kullanılacağını açıklar <xref:System.Windows.Media.TileBrush> özellikleri nasıl üzerinde daha fazla denetim kazanmak için bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.VisualBrush> bir alanı boyar.  

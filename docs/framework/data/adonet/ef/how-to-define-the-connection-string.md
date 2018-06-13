@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760004"
 ---
 # <a name="how-to-define-the-connection-string"></a>Nasıl yapılır: bağlantı dizesi tanımlayın
 Bu konu, kavramsal bir model bağlanırken kullanılan bağlantı dizesi tanımlayın gösterilmektedir. Bu konuda dayanır [AdventureWorks satış](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) kavramsal model. AdventureWorks satış modeli görevle ilgili konulara genelinde kullanılan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belgeleri. Bu konu, zaten yapılandırmış olduğunuz varsayılır, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve AdventureWorks satış modeli tanımlanmış. Daha fazla bilgi için bkz: [nasıl yapılır: dosya eşleme ve Model el ile tanımlamak](http://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a). Bu konudaki yordamlar da yer alan [nasıl yapılır: bir Entity Framework projesi el ile yapılandırmanız](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525771"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetiminde Sütunların Sırasını Değiştirme
 Windows Forms bağladığınızda <xref:System.Windows.Forms.DataGridView> denetimi otomatik olarak oluşturulmuş sütunların görüntü sırasını bir veri kaynağına veri kaynağı tarafından belirler. Bu sipariş değil ne tercih ettiğiniz ise Tasarımcısı'nı kullanarak sütunların sırasını değiştirebilirsiniz. Denetimine bağlantısız sütun ekleme ve görüntüleme sıralamalarını değiştirmek isteyebilirsiniz. Sütun sırasını program aracılığıyla nasıl değiştirileceği hakkında daha fazla bilgi için bkz [nasıl yapılır: Windows Forms DataGridView denetiminde sipariş, sütunları değiştirmek](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  

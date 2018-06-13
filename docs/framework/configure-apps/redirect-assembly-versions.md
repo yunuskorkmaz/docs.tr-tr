@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759276"
 ---
 # <a name="redirecting-assembly-versions"></a>Derleme Sürümlerini Yönlendirme
 .NET Framework derlemeleri, üçüncü taraf derlemeleri ya da kendi uygulamanın derlemelerini derleme zamanı bağlama başvuruları yönlendirebilirsiniz. Çeşitli yollarla bütünleştirilmiş farklı bir sürümünü kullanmak için uygulamanızı yeniden yönlendirebilirsiniz: Yayımcı ilkesi, bir uygulama yapılandırma dosyası; aracılığıyla aracılığıyla makine yapılandırma dosyası aracılığıyla veya. Bu makalede, .NET Framework Derleme bağlama nasıl çalıştığını ve nasıl yapılandırılması anlatılmaktadır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760784"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities Visual Basic veya Visual C# kullanarak Entity Framework kavramsal model sorguları yazmaya geliştiricilerinin dil ile tümleşik sorgu (LINQ) desteği sağlar. Entity Framework sorguları karşı nesne bağlamı yürütme komut ağacı sorgular tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. İşlem oluşturma ve bir LINQ to Entities sorgusunun yürütülmesi için aşağıdadır:  

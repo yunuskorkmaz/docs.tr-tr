@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760339"
 ---
 # <a name="using-xml-in-a-dataset"></a>Bir veri kümesini XML kullanma
 ADO.NET ile doldurmak için bir <xref:System.Data.DataSet> bir XML akışı veya belge. XML akışı veya belge için sağlamak için kullanabileceğiniz <xref:System.Data.DataSet> verileri, şema bilgileri veya her ikisi de. Varolan veriler veya şema bilgileri zaten var XML akışı veya belge sağlanan bilgileri birleştirilebilir <xref:System.Data.DataSet>.  

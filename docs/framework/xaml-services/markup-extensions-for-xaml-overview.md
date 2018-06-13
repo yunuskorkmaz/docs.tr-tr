@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566580"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML İşaretleme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları türünün bir temel veya de belirli XAML türü olan bir değer almak için bir XAML teknik yer almaktadır. Öznitelik kullanımı için bir parantezinden bilinen karakter dizisi biçimlendirme uzantıları kullanmak `{` biçimlendirme uzantısı kapsamı ve kapanış kuşak girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken, önceden tanımlanmış XAML dil biçimlendirme uzantıları System.Xaml derlemesinden bazıları kullanabilirsiniz. Gelen bir alt kullanabileceğiniz <xref:System.Windows.Markup.MarkupExtension> sınıfı, System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantıları tanımlayın. Veya zaten bu framework başvurduğunuzdan, belirli bir çerçevesi tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  

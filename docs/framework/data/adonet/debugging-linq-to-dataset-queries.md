@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760121"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ-DataSet sorguları hata ayıklama
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] hata ayıklama destekleyen [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktalarını ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme gibi. Ancak, sorgu yürütme hata ayıklama sırasında dikkate almanız gereken bazı yan etkileri olan ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve devam et kullanmanın bazı sınırlamalar vardır. Bu konuda ele alınmıştır özgü hata ayıklama yönlerini [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] karşılaştırıldığında olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  

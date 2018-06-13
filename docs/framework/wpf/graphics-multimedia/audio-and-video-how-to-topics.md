@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556022"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Ses ve Video ile İlgili Nasıl yapılır Konuları
 Aşağıdaki konular nasıl kullanılacağını gösteren <xref:System.Windows.Controls.MediaElement> ses ve video içeriğine uygulamalarınıza tümleştirmek için.  

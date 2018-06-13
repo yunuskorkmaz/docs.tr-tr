@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524458"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog Bileşeni (Windows Forms)
 Windows Forms `FolderBrowserDialog` bileşen görüntüler arabirime sahip kullanıcılar göz atabilir ve bir klasör seçin veya yeni bir tane oluşturun. Bir tamamlayan olan [OpenFileDialog bileşeni](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) gözatma ve dosyaları seçmek için kullanılan bileşen.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755532"
 ---
 # <a name="connection-pooling"></a>Bağlantı havuzu
 Bir veri kaynağına bağlanma zaman alabilir. ADO.NET bağlantı açmayı maliyetini en aza indirmek için adında bir en iyi duruma getirme teknik kullanır *bağlantı havuzu*, tekrar tekrar açarak ve bağlantıları kapatmayı maliyeti azaltır. Bağlantı havuzu için .NET Framework veri sağlayıcıları farklı şekilde ele alınır.  

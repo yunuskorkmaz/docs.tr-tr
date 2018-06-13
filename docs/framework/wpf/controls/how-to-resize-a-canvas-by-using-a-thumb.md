@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555070"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Nasıl yapılır: Parmak Kullanarak Tuvali Yeniden Boyutlandırma
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.Primitives.Thumb> yeniden boyutlandırmak için denetim bir <xref:System.Windows.Controls.Canvas> denetim.  

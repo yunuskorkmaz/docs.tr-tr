@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524790"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Metin Çizme
 Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics> bir form üzerinde metin çizmek için. Alternatif olarak, kullanabileceğiniz <xref:System.Windows.Forms.TextRenderer> bir formunda metin çizme. Daha fazla bilgi için bkz: [nasıl yapılır: GDI ile metin çizme](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  

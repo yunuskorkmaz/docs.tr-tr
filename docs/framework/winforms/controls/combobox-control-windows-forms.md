@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524540"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox Denetimi (Windows Forms)
 Windows Forms `ComboBox` denetimi açılan kutuya verileri görüntülemek için kullanılır. Varsayılan olarak, `ComboBox` denetimi iki parça halinde görüntülenir: bir liste öğesi türü kullanıcı sağlayan bir metin kutusu üst parçasıdır. İkinci bölümü, kullanıcı bir seçebileceği öğe listesini görüntüleyen bir liste kutusudur.  

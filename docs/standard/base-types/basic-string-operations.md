@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567490"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET temel dize işlemleri
 Uygulamalar genellikle kullanıcı girişini temel alarak iletileri oluşturarak kullanıcılara yanıt verir. Örneğin, yeni oturum açmış olan bir kullanıcı kullanıcı adını içeren özelleştirilmiş bir karşılama yanıtlamak Web siteleri için seyrek değil. Çeşitli yöntemlerin <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıfları dinamik olarak, kullanıcı arabiriminde görüntülenecek özel dizeleri oluşturmak izin verir. Bu yöntemler bir dizi bayt dizileri yeni dizeler oluşturma, dize değerleri karşılaştırma ve varolan dizeleri değiştirme gibi temel dize işlemleri gerçekleştirmenize yardımcı.  

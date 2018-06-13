@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745844"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; öğesi
 Ortak dil çalışma zamanı ayrı bir iş parçacığı üzerinde çöp toplama çalışıp çalışmayacağını belirtir.  

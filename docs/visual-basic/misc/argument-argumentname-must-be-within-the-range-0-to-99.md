@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600477"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-within-the-range-0-to-99"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; 0-99 aralığında olması gerekir
 0 ile 99 dışında kaldığından bağımsız değişken geçerli değil.  

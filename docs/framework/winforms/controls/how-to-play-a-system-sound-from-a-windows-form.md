@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532405"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formundan Sistem Sesi Çalma
 Aşağıdaki kod örneği yürütür `Exclamation` sistem sesi çalışma zamanında. Sistem sesleri hakkında daha fazla bilgi için bkz: <xref:System.Media.SystemSounds>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760095"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Hiçbir iç içe geçme ile öğeleri arasındaki ilişkileri belirtin
 Öğeleri içe değil, hiçbir dolaylı ilişkileri oluşturulur. Ancak, şunları yapabilirsiniz açıkça belirtmek kullanarak iç içe değil öğeleri arasındaki ilişkileri **msdata:Relationship** ek açıklama.  

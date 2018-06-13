@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567308"
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenle Çok İş Parçacıklı Programlama
 Bir istemci kodu için zaman uyumsuz özellikler kullanıma sunmak için çeşitli yöntemler vardır. Olay tabanlı zaman uyumsuz desen zaman uyumsuz davranışı sunmak sınıflar için önerilen yol önerir.  

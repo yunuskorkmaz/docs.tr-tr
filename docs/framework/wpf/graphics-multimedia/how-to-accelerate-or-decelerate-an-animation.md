@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555681"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Nasıl yapılır: Bir Animasyonu Hızlandırma veya Yavaşlatma
 Bu örnek, animasyonun hızlandırmak ve zaman içinde hızını düşürün sağlamak gösterilmiştir. Aşağıdaki örnekte, birçok dikdörtgen farklı olan bir animasyon tarafından animasyonlu <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> ve <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ayarlar.  

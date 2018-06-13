@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568699"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Namespace önek özelliklerini değiştirme
 **XmlNode** sınıfı belirli bir düğümle ilişkilendirilen ad alanı öneki değiştirmenize izin verir. Örneğin, aşağıdaki kod, bir öğenin değiştirilmesini önek gösterir.  

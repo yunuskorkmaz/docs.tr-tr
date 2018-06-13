@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531221"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>Nasıl yapılır: Bir ToolStrip Denetimi Dışında Hareket Etmek için SEKME tuşunu etkinleştirme
 İşyeri dışında taşımak için SEKME tuşuna basın kullanıcıya etkinleştirmek için aşağıdaki yordamı kullanın bir <xref:System.Windows.Forms.ToolStrip> sekme sırasında bir sonraki denetime.  

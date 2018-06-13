@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556048"
 ---
 # <a name="drawings"></a>Çizimler
 <xref:System.Windows.Media.Drawing> nesneleri şekil, görüntü veya metin verimli bir şekilde çizmek için kullanılır. Çizimler ile Boyama yaparken kullanılan bir <xref:System.Windows.Media.DrawingBrush> veya programlama ile <xref:System.Windows.Media.Visual> nesneleri.  

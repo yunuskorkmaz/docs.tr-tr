@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558966"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>Nasıl yapılır: EllipseGeometry'ye Animasyon Ekleme
 Bu örnek animasyon gösterilmektedir bir <xref:System.Windows.Media.Geometry> içinde bir <xref:System.Windows.Shapes.Path> öğesi. Aşağıdaki örnekte, bir <xref:System.Windows.Media.Animation.PointAnimation> animasyon uygulamak için kullanılan <xref:System.Windows.Media.EllipseGeometry.Center%2A> , bir <xref:System.Windows.Media.EllipseGeometry>.  

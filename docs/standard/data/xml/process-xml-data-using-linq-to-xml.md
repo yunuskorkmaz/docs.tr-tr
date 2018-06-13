@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568751"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ-XML kullanılarak XML verilerini işlemek
 LINQ-XML .NET Framework sürüm 3.5 XML verilerini işlemek için yeni modelidir. LINQ-XML geliştiricilerin bekledikleri ile XML verileri her şeyi sağlar: sorgulama, değiştirme, oluşturma, kaydetme ve XML belgelerini seri hale getirme. Gerçek avantajları sorgu ve oluşturma özellikleri kalan.  

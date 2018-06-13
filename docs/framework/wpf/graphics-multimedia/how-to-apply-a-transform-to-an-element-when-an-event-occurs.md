@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558983"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Nasıl yapılır: Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama
 Bu örnek nasıl uygulanacağını gösterir bir <xref:System.Windows.Media.ScaleTransform> olay oluştuğunda. Burada gösterilen Dönüşümlerin diğer türleri uygulamak için kullandığınız aynı kavramdır. Dönüşümlerin kullanılabilir türleri hakkında daha fazla bilgi için bkz: <xref:System.Windows.Media.Transform> sınıfı veya [dönüştüren genel bakış](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  

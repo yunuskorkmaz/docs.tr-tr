@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557088"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Denetimi görüntülemek ve bir SQL veritabanı, LINQ sorgusu veya diğer bir bağlanabilir veri kaynağından gibi birçok farklı kaynaklardan gelen verileri düzenlemenize olanak sağlar. Daha fazla bilgi için bkz: [bağlama kaynaklarına genel bakış](../../../../docs/framework/wpf/data/binding-sources-overview.md).  

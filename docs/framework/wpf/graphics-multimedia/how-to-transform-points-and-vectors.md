@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559983"
 ---
 # <a name="how-to-transform-points-and-vectors"></a>Nasıl yapılır: Dönüşüm Noktaları ve Vektörleri
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Matrix> dönüştürmek için <xref:System.Windows.Point> ve <xref:System.Windows.Vector> nesneleri.  

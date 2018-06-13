@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766484"
 ---
 # <a name="string-functions"></a>Dize İşlevleri
 SQL Server (SqlClient) için .NET Framework veri sağlayıcısı sağlar `String` giriş işlemleri işlevleri `String` ve dönüş bir `String` veya sayısal değer sonucu. Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir. Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.  

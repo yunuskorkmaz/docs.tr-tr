@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757648"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri düzenleme
 Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.Data.DataSet>, bir tablo bir veritabanında kullanırken yaptığınız aynı etkinliklerini gerçekleştirebilirsiniz. Ekle, görüntülemek, düzenlemek ve tablosundaki verileri Sil; hatalar ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilir. Verilerde değişiklik yapıldığında bir **DataTable**, değişiklikler doğru olduğundan ve program aracılığıyla geçir çalıştırılmayacağını olup olmadığını da doğrulayabilirsiniz.  

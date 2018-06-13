@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528850"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Doldurma Modu
 Sütun doldurma modu içinde <xref:System.Windows.Forms.DataGridView> denetim, böylece bunlar kullanılabilir ekran alanının genişliğini kaplayacak sütunlarını otomatik olarak yeniden boyutlandırır. Her sütunun genişliği eşit tutmak gerekli veya daha büyük olduğu durumların dışında yatay kaydırma çubuğu denetimi görüntülemez kendi <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> özellik değeri.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761252"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Bir DataTable tablosundaki verileri görüntüleme
 İçeriğine erişmek için bir <xref:System.Data.DataTable> kullanarak **satırları** ve **sütunları** koleksiyonları **DataTable**. Aynı zamanda <xref:System.Data.DataTable.Select%2A> veri alt kümesi döndürülecek yöntemi bir **DataTable** arama ölçütleri gibi ölçütlere göre sıralama ve satır durumu. Ayrıca, kullanabileceğiniz <xref:System.Data.DataRowCollection.Find%2A> yöntemi **DataRowCollection** bir birincil anahtar değeri kullanarak belirli bir satır için arama yaparken.  

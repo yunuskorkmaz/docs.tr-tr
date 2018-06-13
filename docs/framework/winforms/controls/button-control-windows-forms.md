@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525095"
 ---
 # <a name="button-control-windows-forms"></a>Düğme Denetimi (Windows Forms)
 Windows Forms `Button` denetimi sağlar kullanıcıya bir eylemi gerçekleştirmek için tıklatın. `Button` Denetim metin ve görüntüler görüntüleyebilir. Düğme tıklatıldığında, düğmeye gibi durur ve yayımlandı.  

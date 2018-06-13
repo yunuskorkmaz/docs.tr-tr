@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556972"
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve geçersiz bir değer girdiğinizde kullanıcıyı bilgilendirmek üzere görsel geribildirim sağlamak için bir stil tetikleyici dayalı özel bir doğrulama kuralı üzerinde.  

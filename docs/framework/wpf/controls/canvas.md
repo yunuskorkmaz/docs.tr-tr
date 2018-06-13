@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553280"
 ---
 # <a name="canvas"></a>Tuval
 <xref:System.Windows.Controls.Canvas> alt öğelerin mutlak konumlandırılmasını etkinleştiren bir düzen denetimidir.  
