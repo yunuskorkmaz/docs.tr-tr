@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765730"
 ---
 # <a name="system-functions"></a><span data-ttu-id="aabef-102">Sistem işlevleri</span><span class="sxs-lookup"><span data-stu-id="aabef-102">System Functions</span></span>
 <span data-ttu-id="aabef-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı aşağıdaki sistem işlevleri sağlar:</span><span class="sxs-lookup"><span data-stu-id="aabef-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides the following system functions:</span></span>  

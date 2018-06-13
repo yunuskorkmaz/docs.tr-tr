@@ -4,52 +4,49 @@ description: Çalışma zamanı tanımlayıcı (RID) ve RID .NET Core nasıl kul
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215916"
 ---
-# <a name="net-core-rid-catalog"></a><span data-ttu-id="99110-103">.NET core RID Kataloğu</span><span class="sxs-lookup"><span data-stu-id="99110-103">.NET Core RID Catalog</span></span>
+# <a name="net-core-rid-catalog"></a><span data-ttu-id="b3618-103">.NET core RID Kataloğu</span><span class="sxs-lookup"><span data-stu-id="b3618-103">.NET Core RID Catalog</span></span>
 
-<span data-ttu-id="99110-104">RID kısaltması *çalışma zamanı tanımlayıcı*.</span><span class="sxs-lookup"><span data-stu-id="99110-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="99110-105">RID değerler, uygulamanın çalıştığı Hedef platformlar tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="99110-105">RID values are used to identify target platforms where the application runs.</span></span>
-<span data-ttu-id="99110-106">.NET paketleri tarafından bunlar NuGet paketlerini platforma özgü varlıkları temsil etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="99110-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="99110-107">Aşağıdaki değerleri RID örnekleri şunlardır: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, veya `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="99110-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
-<span data-ttu-id="99110-108">Yerel bağımlılıkları olan paketleri için hangi platformlarda paketi geri yüklemesi RID belirler.</span><span class="sxs-lookup"><span data-stu-id="99110-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
+<span data-ttu-id="b3618-104">RID kısaltması *çalışma zamanı tanımlayıcı*.</span><span class="sxs-lookup"><span data-stu-id="b3618-104">RID is short for *Runtime IDentifier*.</span></span> <span data-ttu-id="b3618-105">RID değerler, uygulamanın çalıştığı Hedef platformlar tanımlamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b3618-105">RID values are used to identify target platforms where the application runs.</span></span>
+<span data-ttu-id="b3618-106">.NET paketleri tarafından bunlar NuGet paketlerini platforma özgü varlıkları temsil etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b3618-106">They're used by .NET packages to represent platform-specific assets in NuGet packages.</span></span> <span data-ttu-id="b3618-107">Aşağıdaki değerleri RID örnekleri şunlardır: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, veya `osx.10.12-x64`.</span><span class="sxs-lookup"><span data-stu-id="b3618-107">The following values are examples of RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, or `osx.10.12-x64`.</span></span>
+<span data-ttu-id="b3618-108">Yerel bağımlılıkları olan paketleri için hangi platformlarda paketi geri yüklemesi RID belirler.</span><span class="sxs-lookup"><span data-stu-id="b3618-108">For the packages with native dependencies, the RID designates on which platforms the package can be restored.</span></span>
 
-<span data-ttu-id="99110-109">Tek bir RID ayarlanabilir ' `<RuntimeIdentifier>` proje dosyanızı öğesidir.</span><span class="sxs-lookup"><span data-stu-id="99110-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="99110-110">Birden fazla RID proje dosyasının bir noktalı virgülle ayrılmış liste olarak tanımlanabilir `<RuntimeIdentifiers>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="99110-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="99110-111">Ayrıca aracılığıyla kullanıldıklarından `--runtime` aşağıdaki seçeneğiyle [.NET Core CLI komutları](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="99110-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
+<span data-ttu-id="b3618-109">Tek bir RID ayarlanabilir ' `<RuntimeIdentifier>` proje dosyanızı öğesidir.</span><span class="sxs-lookup"><span data-stu-id="b3618-109">A single RID can be set in the `<RuntimeIdentifier>` element of your project file.</span></span> <span data-ttu-id="b3618-110">Birden fazla RID proje dosyasının bir noktalı virgülle ayrılmış liste olarak tanımlanabilir `<RuntimeIdentifiers>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="b3618-110">Multiple RIDs can be defined as a semicolon-delimited list in the project file's `<RuntimeIdentifiers>` element.</span></span> <span data-ttu-id="b3618-111">Ayrıca aracılığıyla kullanıldıklarından `--runtime` aşağıdaki seçeneğiyle [.NET Core CLI komutları](./tools/index.md):</span><span class="sxs-lookup"><span data-stu-id="b3618-111">They're also used via the `--runtime` option with the following [.NET Core CLI commands](./tools/index.md):</span></span>
 
-- [<span data-ttu-id="99110-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="99110-112">dotnet build</span></span>](./tools/dotnet-build.md)
-- [<span data-ttu-id="99110-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="99110-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
-- [<span data-ttu-id="99110-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="99110-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
-- [<span data-ttu-id="99110-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="99110-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
-- [<span data-ttu-id="99110-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="99110-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
-- [<span data-ttu-id="99110-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="99110-117">dotnet run</span></span>](./tools/dotnet-run.md)
-- [<span data-ttu-id="99110-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="99110-118">dotnet store</span></span>](./tools/dotnet-store.md)
+- [<span data-ttu-id="b3618-112">dotnet build</span><span class="sxs-lookup"><span data-stu-id="b3618-112">dotnet build</span></span>](./tools/dotnet-build.md)
+- [<span data-ttu-id="b3618-113">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="b3618-113">dotnet clean</span></span>](./tools/dotnet-clean.md)
+- [<span data-ttu-id="b3618-114">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="b3618-114">dotnet pack</span></span>](./tools/dotnet-pack.md)
+- [<span data-ttu-id="b3618-115">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="b3618-115">dotnet publish</span></span>](./tools/dotnet-publish.md)
+- [<span data-ttu-id="b3618-116">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="b3618-116">dotnet restore</span></span>](./tools/dotnet-restore.md)
+- [<span data-ttu-id="b3618-117">dotnet run</span><span class="sxs-lookup"><span data-stu-id="b3618-117">dotnet run</span></span>](./tools/dotnet-run.md)
+- [<span data-ttu-id="b3618-118">dotnet store</span><span class="sxs-lookup"><span data-stu-id="b3618-118">dotnet store</span></span>](./tools/dotnet-store.md)
 
-<span data-ttu-id="99110-119">Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: `[os].[version]-[architecture]-[additional qualifiers]` burada:</span><span class="sxs-lookup"><span data-stu-id="99110-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
+<span data-ttu-id="b3618-119">Temsil somut işletim sistemleri genellikle bu deseni izlemenizi kurtarmaları: `[os].[version]-[architecture]-[additional qualifiers]` burada:</span><span class="sxs-lookup"><span data-stu-id="b3618-119">RIDs that represent concrete operating systems usually follow this pattern: `[os].[version]-[architecture]-[additional qualifiers]` where:</span></span>
 
-- <span data-ttu-id="99110-120">`[os]` platform/işletim sistemi addır.</span><span class="sxs-lookup"><span data-stu-id="99110-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="99110-121">Örneğin, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="99110-121">For example, `ubuntu`.</span></span>
+- <span data-ttu-id="b3618-120">`[os]` platform/işletim sistemi addır.</span><span class="sxs-lookup"><span data-stu-id="b3618-120">`[os]` is the operating/platform system moniker.</span></span> <span data-ttu-id="b3618-121">Örneğin, `ubuntu`.</span><span class="sxs-lookup"><span data-stu-id="b3618-121">For example, `ubuntu`.</span></span>
 
-- <span data-ttu-id="99110-122">`[version]` işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası.</span><span class="sxs-lookup"><span data-stu-id="99110-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="99110-123">Örneğin, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="99110-123">For example, `15.10`.</span></span>
+- <span data-ttu-id="b3618-122">`[version]` işletim sistemi sürümü biçiminde noktalı virgülle ayrılmış (`.`) sürüm numarası.</span><span class="sxs-lookup"><span data-stu-id="b3618-122">`[version]` is the operating system version in the form of a dot-separated (`.`) version number.</span></span> <span data-ttu-id="b3618-123">Örneğin, `15.10`.</span><span class="sxs-lookup"><span data-stu-id="b3618-123">For example, `15.10`.</span></span>
 
-  - <span data-ttu-id="99110-124">Sürüm **döndürmemelidir** pazarlama sürümleri, bunlar genellikle birden fazla ayrı platform API yüzey alanını değişen ile işletim sistemi sürümünü temsil.</span><span class="sxs-lookup"><span data-stu-id="99110-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
+  - <span data-ttu-id="b3618-124">Sürüm **döndürmemelidir** pazarlama sürümleri, bunlar genellikle birden fazla ayrı platform API yüzey alanını değişen ile işletim sistemi sürümünü temsil.</span><span class="sxs-lookup"><span data-stu-id="b3618-124">The version **shouldn't** be marketing versions, as they often represent multiple discrete versions of the operating system with varying platform API surface area.</span></span>
 
-- <span data-ttu-id="99110-125">`[architecture]` İşlemci mimarisi ' dir.</span><span class="sxs-lookup"><span data-stu-id="99110-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="99110-126">Örneğin: `x86`, `x64`, `arm`, veya `arm64`.</span><span class="sxs-lookup"><span data-stu-id="99110-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
+- <span data-ttu-id="b3618-125">`[architecture]` İşlemci mimarisi ' dir.</span><span class="sxs-lookup"><span data-stu-id="b3618-125">`[architecture]` is the processor architecture.</span></span> <span data-ttu-id="b3618-126">Örneğin: `x86`, `x64`, `arm`, veya `arm64`.</span><span class="sxs-lookup"><span data-stu-id="b3618-126">For example: `x86`, `x64`, `arm`, or `arm64`.</span></span>
 
-- <span data-ttu-id="99110-127">`[additional qualifiers]` Daha fazla farklı platformlarda ayırt.</span><span class="sxs-lookup"><span data-stu-id="99110-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="99110-128">Örneğin: `aot` veya `corert`.</span><span class="sxs-lookup"><span data-stu-id="99110-128">For example: `aot` or `corert`.</span></span>
+- <span data-ttu-id="b3618-127">`[additional qualifiers]` Daha fazla farklı platformlarda ayırt.</span><span class="sxs-lookup"><span data-stu-id="b3618-127">`[additional qualifiers]` further differentiate different platforms.</span></span> <span data-ttu-id="b3618-128">Örneğin: `aot` veya `corert`.</span><span class="sxs-lookup"><span data-stu-id="b3618-128">For example: `aot` or `corert`.</span></span>
 
-## <a name="rid-graph"></a><span data-ttu-id="99110-129">RID grafiği</span><span class="sxs-lookup"><span data-stu-id="99110-129">RID graph</span></span>
+## <a name="rid-graph"></a><span data-ttu-id="b3618-129">RID grafiği</span><span class="sxs-lookup"><span data-stu-id="b3618-129">RID graph</span></span>
 
-<span data-ttu-id="99110-130">RID grafik veya çalışma zamanı geri dönüş grafik birbiriyle uyumlu RID listesidir.</span><span class="sxs-lookup"><span data-stu-id="99110-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="99110-131">RID tanımlanan [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) paket.</span><span class="sxs-lookup"><span data-stu-id="99110-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="99110-132">Desteklenen RID'ler ve RID grafikte listesini görebilir [ *runtime.json* ](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) CoreFX depodaki bulunduğu dosya.</span><span class="sxs-lookup"><span data-stu-id="99110-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="99110-133">Bu dosyada, tüm RID olduğunu, temel biri için içeren dışında görebilirsiniz bir `"#import"` deyimi.</span><span class="sxs-lookup"><span data-stu-id="99110-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="99110-134">Bu deyimler uyumlu RID gösterir.</span><span class="sxs-lookup"><span data-stu-id="99110-134">These statements indicate compatible RIDs.</span></span>
+<span data-ttu-id="b3618-130">RID grafik veya çalışma zamanı geri dönüş grafik birbiriyle uyumlu RID listesidir.</span><span class="sxs-lookup"><span data-stu-id="b3618-130">The RID graph or runtime fallback graph is a list of RIDs that are compatible with each other.</span></span> <span data-ttu-id="b3618-131">RID tanımlanan [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) paket.</span><span class="sxs-lookup"><span data-stu-id="b3618-131">The RIDs are defined in the [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) package.</span></span> <span data-ttu-id="b3618-132">Desteklenen RID'ler ve RID grafikte listesini görebilir [ *runtime.json* ](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) CoreFX depodaki bulunduğu dosya.</span><span class="sxs-lookup"><span data-stu-id="b3618-132">You can see the list of supported RIDs and the RID graph in the [*runtime.json*](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file, which is located at the CoreFX repo.</span></span> <span data-ttu-id="b3618-133">Bu dosyada, tüm RID olduğunu, temel biri için içeren dışında görebilirsiniz bir `"#import"` deyimi.</span><span class="sxs-lookup"><span data-stu-id="b3618-133">In this file, you can see that all RIDs, except for the base one, contain an `"#import"` statement.</span></span> <span data-ttu-id="b3618-134">Bu deyimler uyumlu RID gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3618-134">These statements indicate compatible RIDs.</span></span>
 
-<span data-ttu-id="99110-135">NuGet paketleri geri yüklerken belirtilen çalışma zamanı için tam bir eşleşme bulmaya çalışır.</span><span class="sxs-lookup"><span data-stu-id="99110-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
-<span data-ttu-id="99110-136">Tam bir eşleşme bulunmazsa RID grafik göre en yakın uyumlu sistem bulana kadar NuGet geri grafiği anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="99110-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
+<span data-ttu-id="b3618-135">NuGet paketleri geri yüklerken belirtilen çalışma zamanı için tam bir eşleşme bulmaya çalışır.</span><span class="sxs-lookup"><span data-stu-id="b3618-135">When NuGet restores packages, it tries to find an exact match for the specified runtime.</span></span>
+<span data-ttu-id="b3618-136">Tam bir eşleşme bulunmazsa RID grafik göre en yakın uyumlu sistem bulana kadar NuGet geri grafiği anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b3618-136">If an exact match is not found, NuGet walks back the graph until it finds the closest compatible system according to the RID graph.</span></span>
 
-<span data-ttu-id="99110-137">Aşağıdaki örnek için gerçek giriştir `osx.10.12-x64` RID:</span><span class="sxs-lookup"><span data-stu-id="99110-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
+<span data-ttu-id="b3618-137">Aşağıdaki örnek için gerçek giriştir `osx.10.12-x64` RID:</span><span class="sxs-lookup"><span data-stu-id="b3618-137">The following example is the actual entry for the `osx.10.12-x64` RID:</span></span>
 
 ```json
 "osx.10.12-x64": {
@@ -57,9 +54,9 @@ ms.lasthandoff: 04/28/2018
 }
 ```
 
-<span data-ttu-id="99110-138">Yukarıdaki RID belirleyen `osx.10.12-x64` alır `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="99110-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="99110-139">NuGet paketleri geri yüklerse, bu nedenle, onu için tam bir eşleşme bulmaya çalışır `osx.10.12-x64` paketinde.</span><span class="sxs-lookup"><span data-stu-id="99110-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="99110-140">NuGet belirli çalışma zamanı bulamazsanız, belirttiğiniz paketler geri yükleyebilirsiniz `osx.10.11-x64` örneğin çalışma zamanları.</span><span class="sxs-lookup"><span data-stu-id="99110-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
+<span data-ttu-id="b3618-138">Yukarıdaki RID belirleyen `osx.10.12-x64` alır `osx.10.11-x64`.</span><span class="sxs-lookup"><span data-stu-id="b3618-138">The above RID specifies that `osx.10.12-x64` imports `osx.10.11-x64`.</span></span> <span data-ttu-id="b3618-139">NuGet paketleri geri yüklerse, bu nedenle, onu için tam bir eşleşme bulmaya çalışır `osx.10.12-x64` paketinde.</span><span class="sxs-lookup"><span data-stu-id="b3618-139">So, when NuGet restores packages, it tries to find an exact match for  `osx.10.12-x64` in the package.</span></span> <span data-ttu-id="b3618-140">NuGet belirli çalışma zamanı bulamazsanız, belirttiğiniz paketler geri yükleyebilirsiniz `osx.10.11-x64` örneğin çalışma zamanları.</span><span class="sxs-lookup"><span data-stu-id="b3618-140">If NuGet cannot find the specific runtime, it can restore packages that specify `osx.10.11-x64` runtimes, for example.</span></span>
 
-<span data-ttu-id="99110-141">Aşağıdaki örnek, ayrıca tanımlanan biraz daha büyük bir RID grafik gösterir *runtime.json* dosyası:</span><span class="sxs-lookup"><span data-stu-id="99110-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
+<span data-ttu-id="b3618-141">Aşağıdaki örnek, ayrıca tanımlanan biraz daha büyük bir RID grafik gösterir *runtime.json* dosyası:</span><span class="sxs-lookup"><span data-stu-id="b3618-141">The following example shows a slightly bigger RID graph also defined in the *runtime.json*  file:</span></span>
 
 ```
     win7-x64    win7-x86
@@ -73,85 +70,85 @@ ms.lasthandoff: 04/28/2018
             any
 ```
 
-<span data-ttu-id="99110-142">Tüm RID sonunda kök geri eşlemek `any` RID.</span><span class="sxs-lookup"><span data-stu-id="99110-142">All RIDs eventually map back to the root `any` RID.</span></span>
+<span data-ttu-id="b3618-142">Tüm RID sonunda kök geri eşlemek `any` RID.</span><span class="sxs-lookup"><span data-stu-id="b3618-142">All RIDs eventually map back to the root `any` RID.</span></span>
 
-<span data-ttu-id="99110-143">Bunları ile çalışırken göz önünde bulundurmanız gereken RID hakkında bazı noktalar vardır:</span><span class="sxs-lookup"><span data-stu-id="99110-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
+<span data-ttu-id="b3618-143">Bunları ile çalışırken göz önünde bulundurmanız gereken RID hakkında bazı noktalar vardır:</span><span class="sxs-lookup"><span data-stu-id="b3618-143">There are some considerations about RIDs that you have to keep in mind when working with them:</span></span>
 
-- <span data-ttu-id="99110-144">RID olan **donuk dizeleri** ve siyah kutular değerlendirilmelidir.</span><span class="sxs-lookup"><span data-stu-id="99110-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
-- <span data-ttu-id="99110-145">RID program aracılığıyla yapı yok.</span><span class="sxs-lookup"><span data-stu-id="99110-145">Don't build RIDs programmatically.</span></span>
-- <span data-ttu-id="99110-146">Önceden tanımlanmış RID platformu için kullanın.</span><span class="sxs-lookup"><span data-stu-id="99110-146">Use RIDs that are already defined for the platform.</span></span>
-- <span data-ttu-id="99110-147">RID herhangi bir şeyin gerçek RID değer varsaymayın şekilde belirli olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="99110-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
+- <span data-ttu-id="b3618-144">RID olan **donuk dizeleri** ve siyah kutular değerlendirilmelidir.</span><span class="sxs-lookup"><span data-stu-id="b3618-144">RIDs are **opaque strings** and should be treated as black boxes.</span></span>
+- <span data-ttu-id="b3618-145">RID program aracılığıyla yapı yok.</span><span class="sxs-lookup"><span data-stu-id="b3618-145">Don't build RIDs programmatically.</span></span>
+- <span data-ttu-id="b3618-146">Önceden tanımlanmış RID platformu için kullanın.</span><span class="sxs-lookup"><span data-stu-id="b3618-146">Use RIDs that are already defined for the platform.</span></span>
+- <span data-ttu-id="b3618-147">RID herhangi bir şeyin gerçek RID değer varsaymayın şekilde belirli olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="b3618-147">The RIDs need to be specific, so don't assume anything from the actual RID value.</span></span>
 
-## <a name="using-rids"></a><span data-ttu-id="99110-148">RID kullanma</span><span class="sxs-lookup"><span data-stu-id="99110-148">Using RIDs</span></span>
+## <a name="using-rids"></a><span data-ttu-id="b3618-148">RID kullanma</span><span class="sxs-lookup"><span data-stu-id="b3618-148">Using RIDs</span></span>
 
-<span data-ttu-id="99110-149">RID kullanmak, RID mevcut bilmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="99110-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="99110-150">Yeni değerler düzenli aralıklarla platforma eklenir.</span><span class="sxs-lookup"><span data-stu-id="99110-150">New values are added regularly to the platform.</span></span>
-<span data-ttu-id="99110-151">En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) CoreFX depodaki dosyada.</span><span class="sxs-lookup"><span data-stu-id="99110-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
+<span data-ttu-id="b3618-149">RID kullanmak, RID mevcut bilmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="b3618-149">To be able to use RIDs, you have to know which RIDs exist.</span></span> <span data-ttu-id="b3618-150">Yeni değerler düzenli aralıklarla platforma eklenir.</span><span class="sxs-lookup"><span data-stu-id="b3618-150">New values are added regularly to the platform.</span></span>
+<span data-ttu-id="b3618-151">En son ve tam sürümü için bkz: [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) CoreFX depodaki dosyada.</span><span class="sxs-lookup"><span data-stu-id="b3618-151">For the latest and complete version, see the [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) file on CoreFX repo.</span></span>
 
-<span data-ttu-id="99110-152">.NET core 2.0 SDK taşınabilir RID kavramını sunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="99110-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="99110-153">Belirli bir sürüm ya da işletim sistemi dağıtım bağlı olmayan RID grafiğe eklenen yeni değerleri oldukları.</span><span class="sxs-lookup"><span data-stu-id="99110-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="99110-154">Bunlar, birden çok Linux distro'lar ile ilgilenirken yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="99110-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
+<span data-ttu-id="b3618-152">.NET core 2.0 SDK taşınabilir RID kavramını sunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b3618-152">.NET Core 2.0 SDK introduces the concept of portable RIDs.</span></span> <span data-ttu-id="b3618-153">Belirli bir sürüm ya da işletim sistemi dağıtım bağlı olmayan RID grafiğe eklenen yeni değerleri oldukları.</span><span class="sxs-lookup"><span data-stu-id="b3618-153">They are new values added to the RID graph that aren't tied to a specific version or OS distribution.</span></span> <span data-ttu-id="b3618-154">Bunlar, birden çok Linux distro'lar ile ilgilenirken yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="b3618-154">They're particularly useful when dealing with multiple Linux distros.</span></span>
 
-<span data-ttu-id="99110-155">Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID gösterir.</span><span class="sxs-lookup"><span data-stu-id="99110-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="99110-156">Bu kapsamıyordur `arm` veya `corert` değerleri.</span><span class="sxs-lookup"><span data-stu-id="99110-156">It doesn't cover `arm` or `corert` values.</span></span>
+<span data-ttu-id="b3618-155">Aşağıdaki liste, her işletim sistemi için kullanılan en yaygın RID gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3618-155">The following list shows the most common RIDs used for each OS.</span></span> <span data-ttu-id="b3618-156">Bu kapsamıyordur `arm` veya `corert` değerleri.</span><span class="sxs-lookup"><span data-stu-id="b3618-156">It doesn't cover `arm` or `corert` values.</span></span>
 
-## <a name="windows-rids"></a><span data-ttu-id="99110-157">Windows RID</span><span class="sxs-lookup"><span data-stu-id="99110-157">Windows RIDs</span></span>
+## <a name="windows-rids"></a><span data-ttu-id="b3618-157">Windows RID</span><span class="sxs-lookup"><span data-stu-id="b3618-157">Windows RIDs</span></span>
 
-- <span data-ttu-id="99110-158">Taşınabilir</span><span class="sxs-lookup"><span data-stu-id="99110-158">Portable</span></span>
+- <span data-ttu-id="b3618-158">Taşınabilir</span><span class="sxs-lookup"><span data-stu-id="b3618-158">Portable</span></span>
   - `win-x86`
   - `win-x64`
-- <span data-ttu-id="99110-159">Windows 7 / Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="99110-159">Windows 7 / Windows Server 2008 R2</span></span>
+- <span data-ttu-id="b3618-159">Windows 7 / Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="b3618-159">Windows 7 / Windows Server 2008 R2</span></span>
   - `win7-x64`
   - `win7-x86`
-- <span data-ttu-id="99110-160">Windows 8 / Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="99110-160">Windows 8 / Windows Server 2012</span></span>
+- <span data-ttu-id="b3618-160">Windows 8 / Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="b3618-160">Windows 8 / Windows Server 2012</span></span>
   - `win8-x64`
   - `win8-x86`
   - `win8-arm`
-- <span data-ttu-id="99110-161">Windows 8.1 / Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="99110-161">Windows 8.1 / Windows Server 2012 R2</span></span>
+- <span data-ttu-id="b3618-161">Windows 8.1 / Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="b3618-161">Windows 8.1 / Windows Server 2012 R2</span></span>
   - `win81-x64`
   - `win81-x86`
   - `win81-arm`
-- <span data-ttu-id="99110-162">Windows 10 / Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="99110-162">Windows 10 / Windows Server 2016</span></span>
+- <span data-ttu-id="b3618-162">Windows 10 / Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="b3618-162">Windows 10 / Windows Server 2016</span></span>
   - `win10-x64`
   - `win10-x86`
   - `win10-arm`
   - `win10-arm64`
 
-<span data-ttu-id="99110-163">Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="99110-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="b3618-163">Bkz: [.NET Core Windows önkoşulları](windows-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="b3618-163">See [Prerequisites for .NET Core on Windows](windows-prerequisites.md) for more information.</span></span>
 
-## <a name="linux-rids"></a><span data-ttu-id="99110-164">Linux RID</span><span class="sxs-lookup"><span data-stu-id="99110-164">Linux RIDs</span></span>
+## <a name="linux-rids"></a><span data-ttu-id="b3618-164">Linux RID</span><span class="sxs-lookup"><span data-stu-id="b3618-164">Linux RIDs</span></span>
 
-- <span data-ttu-id="99110-165">Taşınabilir</span><span class="sxs-lookup"><span data-stu-id="99110-165">Portable</span></span>
+- <span data-ttu-id="b3618-165">Taşınabilir</span><span class="sxs-lookup"><span data-stu-id="b3618-165">Portable</span></span>
   - `linux-x64`
-- <span data-ttu-id="99110-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="99110-166">CentOS</span></span>
+- <span data-ttu-id="b3618-166">CentOS</span><span class="sxs-lookup"><span data-stu-id="b3618-166">CentOS</span></span>
   - `centos-x64`
   - `centos.7-x64`
-- <span data-ttu-id="99110-167">Debian</span><span class="sxs-lookup"><span data-stu-id="99110-167">Debian</span></span>
+- <span data-ttu-id="b3618-167">Debian</span><span class="sxs-lookup"><span data-stu-id="b3618-167">Debian</span></span>
   - `debian-x64`
   - `debian.8-x64`
-- <span data-ttu-id="99110-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="99110-168">Fedora</span></span>
+- <span data-ttu-id="b3618-168">Fedora</span><span class="sxs-lookup"><span data-stu-id="b3618-168">Fedora</span></span>
   - `fedora-x64`
   - `fedora.24-x64`
-  - <span data-ttu-id="99110-169">`fedora.25-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="99110-170">`fedora.26-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="99110-171">Gentoo (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-169">`fedora.25-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-169">`fedora.25-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-170">`fedora.26-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-170">`fedora.26-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="b3618-171">Gentoo (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-171">Gentoo (.NET Core 2.0 or later versions)</span></span>
   - `gentoo-x64`
-- <span data-ttu-id="99110-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="99110-172">openSUSE</span></span>
+- <span data-ttu-id="b3618-172">openSUSE</span><span class="sxs-lookup"><span data-stu-id="b3618-172">openSUSE</span></span>
   - `opensuse-x64`
   - `opensuse.42.1-x64`
-- <span data-ttu-id="99110-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="99110-173">Oracle Linux</span></span>
+- <span data-ttu-id="b3618-173">Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="b3618-173">Oracle Linux</span></span>
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
   - `ol.7.1-x64`
   - `ol.7.2-x64`
-- <span data-ttu-id="99110-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="99110-174">Red Hat Enterprise Linux</span></span>
+- <span data-ttu-id="b3618-174">Red Hat Enterprise Linux</span><span class="sxs-lookup"><span data-stu-id="b3618-174">Red Hat Enterprise Linux</span></span>
   - `rhel-x64`
-  - <span data-ttu-id="99110-175">`rhel.6-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-175">`rhel.6-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-175">`rhel.6-x64` (.NET Core 2.0 or later versions)</span></span>
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - <span data-ttu-id="99110-176">`rhel.7.3-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
-  - <span data-ttu-id="99110-177">`rhel.7.4-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
-- <span data-ttu-id="99110-178">Tizen (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-178">Tizen (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-176">`rhel.7.3-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-176">`rhel.7.3-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-177">`rhel.7.4-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-177">`rhel.7.4-x64` (.NET Core 2.0 or later versions)</span></span>
+- <span data-ttu-id="b3618-178">Tizen (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-178">Tizen (.NET Core 2.0 or later versions)</span></span>
   - `tizen`
-- <span data-ttu-id="99110-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="99110-179">Ubuntu</span></span>
+- <span data-ttu-id="b3618-179">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="b3618-179">Ubuntu</span></span>
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
   - `ubuntu.14.10-x64`
@@ -159,33 +156,33 @@ ms.lasthandoff: 04/28/2018
   - `ubuntu.15.10-x64`
   - `ubuntu.16.04-x64`
   - `ubuntu.16.10-x64`
-- <span data-ttu-id="99110-180">Ubuntu türevleri</span><span class="sxs-lookup"><span data-stu-id="99110-180">Ubuntu derivatives</span></span>
+- <span data-ttu-id="b3618-180">Ubuntu türevleri</span><span class="sxs-lookup"><span data-stu-id="b3618-180">Ubuntu derivatives</span></span>
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
   - `linuxmint.18-x64`
-  - <span data-ttu-id="99110-181">`linuxmint.18.1-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
+  - <span data-ttu-id="b3618-181">`linuxmint.18.1-x64` (.NET core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-181">`linuxmint.18.1-x64` (.NET Core 2.0 or later versions)</span></span>
 
-<span data-ttu-id="99110-182">Bkz: [.NET Core Linux önkoşulları](linux-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="99110-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="b3618-182">Bkz: [.NET Core Linux önkoşulları](linux-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="b3618-182">See [Prerequisites for .NET Core on Linux](linux-prerequisites.md) for more information.</span></span>
 
-## <a name="macos-rids"></a><span data-ttu-id="99110-183">macOS RID</span><span class="sxs-lookup"><span data-stu-id="99110-183">macOS RIDs</span></span>
+## <a name="macos-rids"></a><span data-ttu-id="b3618-183">macOS RID</span><span class="sxs-lookup"><span data-stu-id="b3618-183">macOS RIDs</span></span>
 
-<span data-ttu-id="99110-184">macOS RID eski markalama "OSX" kullanın.</span><span class="sxs-lookup"><span data-stu-id="99110-184">macOS RIDs use the older "OSX" branding.</span></span>
+<span data-ttu-id="b3618-184">macOS RID eski markalama "OSX" kullanın.</span><span class="sxs-lookup"><span data-stu-id="b3618-184">macOS RIDs use the older "OSX" branding.</span></span>
 
-- <span data-ttu-id="99110-185">`osx-x64` (.NET core 2.0 veya sonraki sürümler, en düşük sürüm olan `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="99110-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
+- <span data-ttu-id="b3618-185">`osx-x64` (.NET core 2.0 veya sonraki sürümler, en düşük sürüm olan `osx.10.12-x64`)</span><span class="sxs-lookup"><span data-stu-id="b3618-185">`osx-x64` (.NET Core 2.0 or later versions, minimum version is `osx.10.12-x64`)</span></span>
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- <span data-ttu-id="99110-186">`osx.10.12-x64` (.NET core 1.1 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
+- <span data-ttu-id="b3618-186">`osx.10.12-x64` (.NET core 1.1 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-186">`osx.10.12-x64` (.NET Core 1.1 or later versions)</span></span>
 - `osx.10.13-x64`
 
-<span data-ttu-id="99110-187">Bkz: [.NET Core üzerinde macOS önkoşulları](macos-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="99110-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
+<span data-ttu-id="b3618-187">Bkz: [.NET Core üzerinde macOS önkoşulları](macos-prerequisites.md) daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="b3618-187">See [Prerequisites for .NET Core on macOS](macos-prerequisites.md) for more information.</span></span>
 
-## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="99110-188">Android RID (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="99110-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
+## <a name="android-rids-net-core-20-or-later-versions"></a><span data-ttu-id="b3618-188">Android RID (.NET Core 2.0 veya sonraki sürümler)</span><span class="sxs-lookup"><span data-stu-id="b3618-188">Android RIDs (.NET Core 2.0 or later versions)</span></span>
 
 - `android`
 - `android.21`
 
-## <a name="see-also"></a><span data-ttu-id="99110-189">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="99110-189">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3618-189">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b3618-189">See also</span></span>
 
-[<span data-ttu-id="99110-190">Çalışma zamanı kimlikleri</span><span class="sxs-lookup"><span data-stu-id="99110-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+[<span data-ttu-id="b3618-190">Çalışma zamanı kimlikleri</span><span class="sxs-lookup"><span data-stu-id="b3618-190">Runtime IDs</span></span>](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
