@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520321"
 ---
 # <a name="pick-activity"></a>Etkinlik seçin
 <xref:System.Activities.Statements.Pick> Etkinlik olay tetikleyicileri bunların karşılık gelen işleyiciler tarafından izlenen bir dizi modelleme basitleştirir.  A <xref:System.Activities.Statements.Pick> etkinlik koleksiyonunu içerir <xref:System.Activities.Statements.PickBranch> etkinlikleri, burada her <xref:System.Activities.Statements.PickBranch> arasında eşleştirme olduğu bir <xref:System.Activities.Statements.PickBranch.Trigger%2A> etkinliği ve bir <xref:System.Activities.Statements.PickBranch.Action%2A> etkinlik.  Yürütme sırasında tüm dalları tetikleyici paralel olarak yürütülür.  Bir tetikleyici tamamlandığında, karşılık gelen eylemi yürütülür ve diğer tüm Tetikleyicileri iptal edilir.  Davranışını [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> etkinlik benzer [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> etkinlik.  

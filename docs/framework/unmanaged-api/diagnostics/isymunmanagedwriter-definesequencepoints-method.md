@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426942"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints Yöntemi
 Geçerli yöntemi içinde sıralama noktaları grubunu tanımlar. Her bir başlangıç satırı ve başlangıç sütunu deyimi bir yöntem içinde başlangıcı tanımlayın. Her bitiş satır ve sütun bitiş deyimi bir yöntem içinde sonuna tanımlayın. Diziler uzaklıkları artan düzende sıralanmış. Uzaklık her zaman yönteminin bayt cinsinden ölçülür.  

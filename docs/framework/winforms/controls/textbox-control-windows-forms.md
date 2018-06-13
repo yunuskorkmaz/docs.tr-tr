@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536260"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox Denetimi (Windows Forms)
 Windows Forms metin kutuları kullanıcıdan giriş almak veya metni görüntülemek için kullanılır. `TextBox` Salt okunur ayrıca çalışabilmesine rağmen denetim düzenlenebilir metin için genellikle kullanılır. Metin kutuları birden çok satır görüntüleme, denetimin boyutunu metni kaydırma ve temel biçimlendirme ekleyin. `TextBox` Görüntülenen veya denetimde girilen metin için tek bir biçim izin verir.  

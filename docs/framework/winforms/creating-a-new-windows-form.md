@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537787"
 ---
 # <a name="creating-a-new-windows-form"></a>Yeni bir Windows Formu Oluşturma
 Bu konu, ilk Windows Forms uygulamasının nasıl oluşturulacağını açıklayan konulara bağlantılar içerir. Ayrıca, bu bölümdeki konular bazı temel sözlük ve bir Windows Forms uygulaması oluşturmak başlattığınızda anlamanız gereken yönergeler sunar. Windows Forms uygulamaları hakkında daha fazla bilgi için bunları, olayları ve olaylarını işleme ve kullanıcı girişini işlemek nasıl kullanabileceğiniz denetimleri ilgili konu listesine bakın.  

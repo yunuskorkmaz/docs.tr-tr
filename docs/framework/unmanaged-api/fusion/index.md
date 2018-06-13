@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428595"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (Yönetilmeyen API Başvurusu)
 Fusion API uygulama için bu kaynakların doğru sürümlerini bulmak için uygulamanın kaynak özelliklerine erişmek bir çalışma zamanı ana bilgisayarı sağlar.  

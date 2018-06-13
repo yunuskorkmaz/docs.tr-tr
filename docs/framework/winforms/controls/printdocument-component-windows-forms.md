@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536624"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument Bileşeni (Windows Forms)
 Windows Forms `PrintDocument` bileşen ne yazdırma açıklayın özelliklerini ayarlamak için kullanılır ve ardından Windows tabanlı uygulamalar belgesinde yazdırmak için. İle birlikte kullanılabilir <xref:System.Windows.Forms.PrintDialog> belge yazdırma tüm yönlerini komutta olmasını bileşeni.  

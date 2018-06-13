@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519587"
 ---
 # <a name="workflow-security"></a>İş akışı güvenlik
 Windows Workflow Foundation (WF) Microsoft SQL Server ve Windows Communication Foundation (WCF) gibi birkaç farklı teknolojiden tümleşiktir. Bu teknolojiler ile etkileşim yanlış yapıldığında iş akışınıza güvenlik sorunlar çıkarabilir.  

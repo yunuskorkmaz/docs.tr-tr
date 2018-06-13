@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529067"
 ---
 # <a name="using-nested-graphics-containers"></a>İç İçe Grafik Kapsayıcılarını Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] geçici olarak değiştirin veya durumda parçası büyütmek için kullanabileceğiniz kapsayıcıları sağlayan bir <xref:System.Drawing.Graphics> nesnesi. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesnesi. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> art arda iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> çağrısıyla eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640423"
 ---
 # <a name="use-39filegetobject39-instead-of-39fileget39-when-using-argument-of-type-39object39"></a>Kullanım &#39;FileGetObject&#39; yerine &#39;FileGet&#39; türünde bağımsız değişken kullanırken &#39;nesnesi&#39;
 `FileGet` Yöntemi içerir türünde bir bağımsız değişken `Object`. `FileGetObject` yerine kullanılmalıdır `FileGet` belirsizlikleri önlemek için.  

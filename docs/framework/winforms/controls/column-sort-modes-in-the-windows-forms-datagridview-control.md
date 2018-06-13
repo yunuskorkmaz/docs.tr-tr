@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529694"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 <xref:System.Windows.Forms.DataGridView> üç sıralama modları sütuna sahip. Her sütun için sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> numaralandırma değerleri.  

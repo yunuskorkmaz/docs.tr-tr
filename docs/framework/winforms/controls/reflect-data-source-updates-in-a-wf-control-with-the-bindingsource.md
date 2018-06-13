@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536884"
 ---
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Nasıl yapılır: BindingSource ile Windows Forms Denetiminde Veri Kaynağı Güncelleştirmelerini Yansıtma
 Verilere bağlı denetimler kullandığınızda, bazen değişiklikler veri kaynağındaki veri kaynağı listesi değişti olayları oluşturmaz zaman yanıtlamak zorunda değilsiniz. Kullandığınızda <xref:System.Windows.Forms.BindingSource> veri kaynağınız bir Windows Forms denetimi bağlamak için bileşen veri kaynağınız çağırarak değişti denetim bildirebilir <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> yöntemi.  

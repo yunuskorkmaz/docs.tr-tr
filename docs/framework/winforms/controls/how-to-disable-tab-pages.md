@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534273"
 ---
 # <a name="how-to-disable-tab-pages"></a>Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma
 Bazı durumlarda, Windows Forms uygulamanızdaki kullanılabilir verilere erişimi kısıtlamak isteyeceksiniz. Sekme denetimi sekmesi sayfalarında görüntülenen verileri varsa, bunun bir örneği olabilir; Yöneticiler, konuk veya alt düzey kullanıcılara kısıtlamak istediğiniz bir sekme sayfası hakkında bilgi olabilir.  

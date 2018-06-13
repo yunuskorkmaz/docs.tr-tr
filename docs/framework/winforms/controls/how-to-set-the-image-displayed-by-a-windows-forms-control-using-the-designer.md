@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532791"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları Denetimi Tarafından Görüntülenen Resmi Ayarlama
 Çeşitli Windows Forms denetimleri görüntüleri görüntüleyebilirsiniz. Görüntü denetimi belirten düğmesi üzerinde bir disk simgesi gibi amacı kavuşturuldu simge olabilir **kaydetmek** komutu. Alternatif olarak, simge denetimi istediğiniz görünümü vermek için bir arka plan görüntüsü olabilir.  

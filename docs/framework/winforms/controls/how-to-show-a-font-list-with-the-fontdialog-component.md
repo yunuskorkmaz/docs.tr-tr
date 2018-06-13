@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536504"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Nasıl Yapılır: FontDialog Bileşeni ile Yazı Tipi Listesi Gösterme
 [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) bileşen yanı sıra bir yazı tipi seçin, boyut ve Ağırlık gibi görüntü özelliklerini değiştirmek kullanıcıların sağlar.  

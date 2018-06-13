@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516756"
 ---
 # <a name="non-persisted-workflow-instances"></a>Kalıcı olmayan iş akışı örnekleri
 Bir iş akışı yeni bir örneğini oluşturulduğunda durumundayken kalıcı <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, hizmet ana bilgisayarı örnek deposunda bu hizmet için bir giriş oluşturur. Sonuç olarak, ne zaman iş akışı örneği kalıcıdır ilk kez <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> geçerli örnek durum depolar. İş akışı Windows İşlem Etkinleştirme hizmeti barındırılıyorsa örneği ilk kez kalıcı veri hizmeti dağıtımı da örnek deposuna yazılır.  

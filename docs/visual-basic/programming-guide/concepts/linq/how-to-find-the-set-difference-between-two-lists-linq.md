@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641259"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Nasıl yapılır: iki liste (LINQ) (Visual Basic) arasında ayarlanmış farkı bulma
 Bu örnek LINQ listelerini dizeleri karşılaştırmak ve names1.txt ancak names2.txt olan satırlar çıkış için nasıl kullanılacağını gösterir.  

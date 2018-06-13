@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534898"
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip Taşmasını Yönetme
 Zaman üzerindeki tüm öğeleri bir <xref:System.Windows.Forms.ToolStrip> denetimi ayrılan alanı Sığdır değil, üzerinde taşma işlevselliğini etkinleştirmek <xref:System.Windows.Forms.ToolStrip> ve özel taşma davranışını belirleyen <xref:System.Windows.Forms.ToolStripItem>s.  

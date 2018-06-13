@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533802"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Nasıl yapılır: Bir StatusStrip içinde Spring Özelliğini Etkileşimli Kullanma
 Kullanabileceğiniz <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> konumlandırmak için özellik bir <xref:System.Windows.Forms.ToolStripStatusLabel> denetim bir <xref:System.Windows.Forms.StatusStrip> denetim. <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> Özelliği belirler olup olmadığını <xref:System.Windows.Forms.ToolStripStatusLabel> denetimi otomatik olarak doldurur kullanılabilir alanı üzerinde <xref:System.Windows.Forms.StatusStrip> denetim.  

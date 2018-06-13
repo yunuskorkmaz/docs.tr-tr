@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529905"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimindeki Bir Düğme Sütununda Düğmeleri Devre Dışı Bırakma
 <xref:System.Windows.Forms.DataGridView> Denetimi içeren <xref:System.Windows.Forms.DataGridViewButtonCell> düğmesi gibi bir kullanıcı arabirimi (UI) hücrelerle görüntüleme sınıfı. Ancak, <xref:System.Windows.Forms.DataGridViewButtonCell> hücre tarafından görüntülenen düğmeye görünümünü devre dışı bırakmak için bir yol sağlamaz.  

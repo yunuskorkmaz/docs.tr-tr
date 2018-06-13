@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528366"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> kullanıcının tarihleri veya saatleri listesinden tek bir öğe seçmesine izin verir. Bir tarihi temsil etmek için kullanıldığında, iki parça halinde görüntülenir: metin ve listenin yanındaki aşağı oka tıkladığınızda görüntülenen bir kılavuz temsil edilen bir tarihle aşağı açılan liste. Kılavuz benzer <xref:System.Windows.Forms.MonthCalendar> birden çok tarihi seçmek için kullanılan denetim. Daha fazla bilgi için <xref:System.Windows.Forms.MonthCalendar> denetlemek için bkz: [MonthCalendar denetimine genel bakış](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  

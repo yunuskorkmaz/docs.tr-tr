@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517247"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: özel Kalıcılık katılımcı oluşturma
 Aşağıdaki yordam Kalıcılık katılımcı oluşturmak için adım vardır. Bkz: [kalıcı katılan](http://go.microsoft.com/fwlink/?LinkID=177735) örnek ve [deposu genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) konu Kalıcılık katılımcılarının örnek uygulamaları için.  

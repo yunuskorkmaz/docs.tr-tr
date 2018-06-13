@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530126"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Nasıl yapılır: Windows Forms Denetimini Bir Fabrika Nesnesine Bağlama
 Verilerle etkileşimli denetimleri oluştururken, bazen, bir denetim için bir nesne veya diğer nesnelerini oluşturan yöntem bağlamak gerekli bulacaksınız. Bu tür bir nesneye veya yöntemi bir Fabrika adı verilir. Veri kaynağı, örneğin, bellek veya bir türü bir nesne yerine bir yöntem çağrısının dönüş değerini olabilir. Kaynak bir koleksiyon döndürür sürece bu türdeki veri kaynağının bir denetim bağlayabilirsiniz.  

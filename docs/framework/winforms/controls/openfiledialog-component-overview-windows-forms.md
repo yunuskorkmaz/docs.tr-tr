@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536084"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.OpenFileDialog> bir önceden yapılandırılmış iletişim kutusu bir bileşendir. Aynı olduğundan **açık dosya** Windows işletim sistemi tarafından kullanıma sunulan iletişim kutusu. Öğesinden devralınan <xref:System.Windows.Forms.CommonDialog> sınıfı.  

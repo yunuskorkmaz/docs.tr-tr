@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535291"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ImageList> bileşen denetimleri tarafından görüntülenebilen görüntüleri depolamak için kullanılır. Görüntü listesi görüntülerinin tek, tutarlı bir katalog için kod yazmayı sağlar. Örneğin, tarafından görüntülenen görüntüleri döndürebilirsiniz bir <xref:System.Windows.Forms.Button> düğmenin değiştirerek sadece denetim <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> veya <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> özelliği. Ayrıca, aynı resim listesi birden çok denetimleri ile ilişkilendirebilirsiniz. Örneğin, her ikisi de kullanıyorsanız, bir <xref:System.Windows.Forms.ListView> denetim ve <xref:System.Windows.Forms.TreeView> denetimi dosyaları, görüntü listedeki bir dosyanın simgeyi değiştirme aynı listesini görüntülemek için her iki görünümde de görünen için yeni simgesine neden olur.  

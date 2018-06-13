@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315522"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Dizileri Bağımsız Değişkenler Olarak Geçirme (C# Programlama Kılavuzu)
 Dizileri bağımsız değişkenler olarak yöntemi parametrelerine geçirilebilir. Diziler başvuru türleri olduğundan, yöntemi öğelerinin değerini değiştirebilirsiniz.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534066"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Tarih Aralığı Seçme
 Windows Forms, önemli özelliklerinden <xref:System.Windows.Forms.MonthCalendar> denetimidir kullanıcı tarih aralığını seçebilirsiniz. Bu özellik bir geliştirme Tarih Seçimi özelliğidir <xref:System.Windows.Forms.DateTimePicker> yalnızca bir tek tarih/saat değeri seçmek kullanıcının sağlayan denetim. Bir tarih aralığı ayarlamak veya özelliklerini kullanarak kullanıcı tarafından ayarlanan bir seçim aralığı alma <xref:System.Windows.Forms.MonthCalendar> denetim. Aşağıdaki kod örneğinde, seçim aralığı ayarlamak gösterilmiştir.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535031"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
 Visual Studio geliştirme ortamında çalışmaya kullanılan hale olarak Windows Forms Tasarımcısı'nda tüm formlar ve projeleri ile çalışmak için tercihleri ayarlayabilirsiniz.  

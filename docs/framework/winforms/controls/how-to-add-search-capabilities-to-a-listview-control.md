@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528296"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme
 Büyük bir liste öğelerinin görmemeleri çalışırken, bir <xref:System.Windows.Forms.ListView> denetimi istediğiniz kullanıcıya arama özellikleri sunar. <xref:System.Windows.Forms.ListView> Denetim iki farklı şekilde bu özellik sunar: eşleşen metni ve arama konumu.  

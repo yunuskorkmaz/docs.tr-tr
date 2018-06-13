@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516155"
 ---
 # <a name="designer-rehosting"></a>Yeniden barındırma Tasarımcısı
 Tasarımcı yeniden barındırılmasını başvuruda bulunan özel bir uygulama içinde iş akışı tasarım tuvale barındırmak için ortak bir senaryodur. Çoğu kişi bilginiz barındırma Visual Studio, ancak bir dizi vardır burada bir uygulamada iş akışı Tasarımcısı'nı gösteren yararlı olabilir senaryoları uygulamadır:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752357"
 ---
 # <a name="ltendpointextensionsgt"></a>&lt;endpointExtensions&gt;
 Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç noktası kaydeder veya uygulama yapılandırma dosyası. Kullanarak standart bir uç noktası bu koleksiyona ekleyebileceğiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği uç nokta türü öğenin yanı sıra `name` öznitelik standart uç nokta adına.  

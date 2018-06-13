@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530928"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama
 Veriye bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> herhangi bir Windows Forms denetimi için gibi denetleme. Ancak, veritabanındaki verilerinizin biçimini maskesi tanımı tarafından beklenen biçimde eşleşmiyorsa, verileri yeniden biçimlendirmek gerekir. Aşağıdaki yordamı kullanarak bunu yapmayı gösteren <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> olayları <xref:System.Windows.Forms.Binding> ayrı telefon numarasını görüntülemek ve tek düzenlenebilir bir alanı telefon uzantısı veritabanı alanları sınıfı.  

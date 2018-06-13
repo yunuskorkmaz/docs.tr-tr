@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538035"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: Bir MenuStrip İçinde Seçenek Düğmeleri Görüntüleme (Windows Forms)
 Seçenek düğmeleri, olarak da bilinen radyo düğmeleri, kullanıcılar yalnızca birer birer seçebilirsiniz onay kutularını benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesi davranışı sağlamaz, sınıf menü öğeleri için seçenek düğmesi davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranışı sağlamak bir <xref:System.Windows.Forms.MenuStrip> denetim.  

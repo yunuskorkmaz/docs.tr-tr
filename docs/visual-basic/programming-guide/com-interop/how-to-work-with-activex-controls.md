@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640540"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
 ActiveX denetimleri şunlardır: COM bileşenlerini ya da nesneleri bir Web sayfası veya başka birinin programlanmış paketlenmiş işlevselliği yeniden kullanmak için başka bir uygulama yerleştirin. Visual Basic 6.0 ve önceki sürümler için geliştirilen ActiveX denetimlerini özellikleri eklemek için kullanabileceğiniz **araç** Visual Studio.  

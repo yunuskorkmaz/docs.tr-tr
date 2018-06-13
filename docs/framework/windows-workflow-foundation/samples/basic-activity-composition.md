@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515710"
 ---
 # <a name="basic-activity-composition"></a>Temel etkinlik oluşturma
 Bu örnek özel etkinlikler ve daha fazla özel etkinlikler oluşturmak için sistem tarafından sağlanan etkinlikleri oluşturmak nasıl gösterir.  

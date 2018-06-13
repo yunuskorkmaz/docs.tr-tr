@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535590"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Formları BindingSource Bileşeniyle Arama Tablosu Oluşturma
 Arama tablosu ilişkili bir tabloda kayıttan alınan verileri görüntüleyen bir sütun olan verilerin bir tablosu verilmiştir. Aşağıdaki yordamlarda bulunan bir <xref:System.Windows.Forms.ComboBox> denetimi üst alt tablosuna yabancı anahtar ilişkisi alanıyla görüntülemek için kullanılır.  

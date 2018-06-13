@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534589"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Nasıl yapılır: Denetim Sınıfından Devralma
 Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiyorsanız, gelen alması gerektiğini <xref:System.Windows.Forms.Control> sınıfı. İçinden devralma sırasında <xref:System.Windows.Forms.Control> sınıfı gerektirir daha fazla planlama ve uygulama gerçekleştirmek, ayrıca, en büyük çeşitli seçenekler ile sağlar. İçinden devralma zaman <xref:System.Windows.Forms.Control>, iş denetimleri yapar çok temel işlevleri devralır. Ndaki işlevselliği <xref:System.Windows.Forms.Control> sınıfı klavye ve fare kullanıcı girişini işleme, denetimin boyutunu ve sınırlarını tanımlar, bir windows tanıtıcı sağlar ve ileti işleme ve güvenlik sağlar. Bu durumda grafik arabiriminin denetiminin gerçek işleme olduğu, tüm boyama dahil değildir ve herhangi belirli kullanıcı etkileşimi işlevselliği dahil etmez. Tüm özel kod aracılığıyla bu yönlerinin sağlamanız gerekir.  

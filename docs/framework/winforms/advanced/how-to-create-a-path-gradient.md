@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529172"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol Gradyanı Oluşturma
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı renkleri kademeli olarak değişen bir şekli doldurmak özelleştirmenize olanak tanır. Örneğin, merkezi bir yolu için tek bir renk ve başka bir renk sınırın bir yolu belirtebilirsiniz. Ayrıca her bir yolu sınırları boyunca çeşitli noktalar için ayrı renkleri belirtebilirsiniz.  

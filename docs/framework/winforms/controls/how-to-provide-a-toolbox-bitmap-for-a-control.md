@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537527"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama
 Sahip olmak istiyorsanız denetlemek için özel bir simgesi görünür **araç**, kullanarak belirli bir görüntü belirtebilirsiniz <xref:System.Drawing.ToolboxBitmapAttribute>. Bu sınıf, bir *özniteliği*, özel türde bir sınıfı diğer sınıfların iliştirebilirsiniz. Öznitelikler hakkında daha fazla bilgi için bkz: [NOT ın yapı: Visual Basic'te öznitelikler genel bakış](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) Visual Basic ve [öznitelikleri](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) Visual C# için.  

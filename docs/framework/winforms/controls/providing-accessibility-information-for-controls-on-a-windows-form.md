@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536842"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama
 Erişilebilirlik yardımları özelleştirilmiş programlardır ve engelli kişilere yardımcı aygıtları bilgisayarlar daha etkili bir şekilde kullanın. Örnek ekran okuyucular blind ve ses giriş yardımcı programları klavye ve fare kullanmak yerine sözlü komutları sağlayan kişiler için birden çok kişi için verilebilir. Windows Forms denetimleri tarafından kullanıma sunulan erişilebilirlik özelliklerini bu erişilebilirlik yardımları etkileşim. Bu özellikleri şunlardır:  

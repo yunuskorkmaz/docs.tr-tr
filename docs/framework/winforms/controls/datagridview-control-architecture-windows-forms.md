@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529491"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView Denetimi Mimarisi (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Denetim ve ilişkili sınıfları görüntüleme ve tablo veri düzenlemek için esnek ve Genişletilebilir bir sistem olacak şekilde tasarlanmıştır. Bu sınıfların tüm bulunan <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ve tüm adlı "DataGridView" öneki.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534319"
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl Denetimi (Windows Forms)
 Windows Forms `PrintPreviewControl` yazdırıldığında görüneceğini belgeyi görüntülemek için kullanılır. Bu denetim yok düğmeler veya diğer kullanıcı arabirimi öğeleri nedenle genellikle kullandığınız sahip `PrintPreviewControl` yalnızca kendi Baskı Önizleme kullanıcı arabirimini yazmak istiyorsanız. Standart kullanıcı arabirimi istiyorsanız kullanın bir <xref:System.Windows.Forms.PrintPreviewDialog> denetim.  
