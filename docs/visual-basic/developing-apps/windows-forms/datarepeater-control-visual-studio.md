@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591044"
 ---
 # <a name="datarepeater-control-visual-studio"></a>DataRepeater Denetimi (Visual Studio)
 Visual Basic Power Packs <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimidir kaydırılabilir bir kapsayıcı verileri, örneğin, bir veritabanı tablosundaki satırları görüntüleyen denetimler yinelenen için. Alternatif olarak kullanılabilir <xref:System.Windows.Forms.DataGridView> veri düzeni üzerinde daha fazla denetim gerektiğinde denetim.  

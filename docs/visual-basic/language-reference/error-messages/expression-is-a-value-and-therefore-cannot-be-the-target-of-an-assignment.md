@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590244"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>İfade bir değerdir, bu nedenle atama işleminin hedefi olamaz
 Bir ifade için bir değer atamak bir deyim çalışır. Çalışma zamanında yalnızca bir yazılabilir değişkeni, özelliği veya dizi öğesi için bir değer atayabilirsiniz. Aşağıdaki örnek, bu hata oluşabilir nasıl gösterilmektedir.  

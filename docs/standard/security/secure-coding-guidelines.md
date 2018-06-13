@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588167"
 ---
 # <a name="secure-coding-guidelines"></a>Güvenli Kodlama Yönergeleri
 Kanıt tabanlı güvenlik ve kod erişim güvenliği güvenlik uygulamak çok güçlü, açık mekanizmaları sağlar. Çoğu uygulama kodu yalnızca .NET Framework tarafından uygulanan altyapısını kullanabilir. Bazı durumlarda, ek uygulamaya özgü güvenlik güvenlik sistemini genişletme veya yeni geçici yöntemleri kullanarak yerleşik gereklidir.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588112"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>Nasıl Yapılır: DataRepeater Denetimindeki İlişkisiz Denetimleri Görüntüleme (Visual Studio)
 Bağlama denetimleri ek olarak, diğer denetimler için eklemek isteyebilirsiniz bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>statik bir etiket veya her öğe üzerinde yinelenen bir görüntü gibi <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  

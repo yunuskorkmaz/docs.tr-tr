@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363120"
 ---
 # <a name="manipulating-data"></a>Verileri düzenleme
 Giriş, birden fazla etkin sonuç kümesi (MARS) önce geliştiricilerin belirli senaryolar çözmek için birden çok bağlantıları veya sunucu tarafı imleçler kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda kullanılan, ayrıca, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekirdi. Aşağıdaki senaryolarda nasıl yerine birden çok bağlantı MARS etkin bir bağlantı kullanılacağını gösterir.  

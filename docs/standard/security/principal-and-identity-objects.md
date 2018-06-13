@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590971"
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 Yönetilen kod Bul kimliğini ya da rolü bir asıl bir <xref:System.Security.Principal.IPrincipal> bir başvuru içeren bir nesne, bir <xref:System.Security.Principal.IIdentity> nesnesi. Kullanıcı ve grup hesaplarını gibi bilinen kavramlarını kimlik ve asıl nesneleri karşılaştırmak faydalı olabilir. Kullanıcılar ve bunlar sahip olduğu haklar belirli kategorilerini grup hesaplarını temsil ederken çoğu ağ ortamlarında, kullanıcı hesapları kişiler veya programları temsil eder. Benzer şekilde, rol üyeliklerini ve güvenlik kapsamları temsil ederken .NET Framework kimlik nesneleri kullanıcılar, temsil eder. .NET Framework'teki asıl nesne bir rolü ve bir kimlik nesne yalıtır. .NET framework uygulamaları kimliğini veya daha çok rolü üyeliğine göre asıl hakları.  

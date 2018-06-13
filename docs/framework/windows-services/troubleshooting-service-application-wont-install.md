@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509666"
 ---
 # <a name="troubleshooting-service-application-won39t-install"></a>Sorun giderme: Hizmet uygulaması kazanılan&#39;t yükleme
 Hizmet uygulamanızın doğru yüklenmez emin olmak için kontrol edin <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> özelliğini hizmet sınıfı bu hizmet için yükleyiciyi gösterildiği gibi aynı değere ayarlayın. Değer her iki örnek sırada hizmetinizin doğru bir şekilde yüklemek aynı olması gerekir.  

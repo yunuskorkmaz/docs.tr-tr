@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593736"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;MethodName&gt; &#39; aynı imzaları ile birden çok tanımlarına sahip
 A `Function` veya `Sub` yordamı bildirimini aynı yordamı adı ve bağımsız değişken listesi önceki bildirimi olarak kullanır. Olası bir nedeni özgün yordamı aşırı yükleme girişimi ' dir. Aşırı yüklenmiş yordamları farklı bağımsız değişken listeleri olması gerekir.  

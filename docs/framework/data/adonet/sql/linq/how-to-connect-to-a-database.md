@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362083"
 ---
 # <a name="how-to-connect-to-a-database"></a>Nasıl yapılır: bir veritabanına bağlan
 <xref:System.Data.Linq.DataContext> , Bir veritabanına bağlanmak, nesneleri ondan almak ve yapılan değişikliklerin geri göndermek ana conduit değil. Kullandığınız <xref:System.Data.Linq.DataContext> kullanacağınız gibi bir [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. Aslında, <xref:System.Data.Linq.DataContext> bir bağlantı veya sağladığınız bağlantı dizesi ile başlatıldı. Daha fazla bilgi için bkz: [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  

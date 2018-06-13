@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590019"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Nasıl Yapılır: PrintForm Bileşenini Kullanarak Form Yazdırma (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Bileşen sağlar, ekranda kullanmadan göründüğü gibi hızlı bir form görüntüsü yazdırmak bir <xref:System.Drawing.Printing.PrintDocument> bileşeni. Aşağıdaki yordamlar, bir yazıcı, Baskı Önizleme penceresinden ve kapsüllenmiş PostScript'i dosya form yazdırma gösterilmektedir.  

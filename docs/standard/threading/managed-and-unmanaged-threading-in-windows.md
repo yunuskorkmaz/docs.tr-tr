@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591696"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma
 Tüm iş parçacıklarının Yönetimi aracılığıyla yapılır <xref:System.Threading.Thread> sınıfı, ortak dil çalışma zamanı tarafından oluşturulan iş parçacığı ve kod yürütmek için yönetilen ortamı girin çalışma zamanı dışında oluşturulanlar gibi. Çalışma zamanı kodu yönetilen yürütme ortamını içinde hiç yürütülen tüm iş parçacıkları, işlemindeki izler. Başka bir iş parçacığı izlemez. İş parçacığı, COM birlikte çalışma aracılığıyla yönetilen yürütme ortamı girebilirsiniz, (çalışma zamanı yönetilen nesneler olarak yönetilmeyen world COM nesnelerine kullanıma sunar nedeniyle), COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) işlevi ve platform çağırma.  

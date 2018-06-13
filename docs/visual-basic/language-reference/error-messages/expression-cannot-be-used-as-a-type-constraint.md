@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588180"
 ---
 # <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;ifade&gt; &#39; tür sınırlaması kullanılamaz
 Bir kısıtlama listesi bir tür parametresi geçerli bir kısıtlaması göstermiyor bir ifade içerir.  

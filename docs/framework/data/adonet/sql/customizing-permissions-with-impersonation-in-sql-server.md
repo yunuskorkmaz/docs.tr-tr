@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362649"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Kimliğe bürünme SQL Server'daki izinlerle özelleştirme
 Birçok uygulama, sahipliği tablolar temel erişimi kısıtlamak için zincirleme bağlı olan verilere erişmek için saklı yordamları kullanın. Saklı yordamlar, yürütme izinlerini iptal etme veya reddetme temel tablolar üzerindeki izinleri verebilirsiniz. Tabloları ve saklı yordam aynı sahip varsa, SQL Server çağıran izinleri denetlemez. Ancak, sahipliği zincirleme nesneleri farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda işe yaramaz.  

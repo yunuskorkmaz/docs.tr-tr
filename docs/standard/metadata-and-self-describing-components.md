@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579333"
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 Geçmişte, tek bir dilde yazılmış bir yazılım bileşeni (.exe veya .dll) başka bir dilde yazılmış bir yazılım bileşeni kolayca kullanılamadı. COM bu sorunun çözümüne yönelik bir adım sağlanır. .NET Framework bileşenini birlikte çalışabilirlik bile ek bildirim temelli bilgi tüm modülleri ve derlemeleri Yayma derleyicileri vererek kolaylaştırır. Meta veri olarak adlandırılan bu bilgi, sorunsuz bir şekilde etkileşim kurmak için bileşenleri yardımcı olur.  

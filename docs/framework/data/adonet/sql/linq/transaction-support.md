@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364983"
 ---
 # <a name="transaction-support"></a>İşlem desteği
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] üç farklı işlem modeli destekler. Aşağıda bu modeller gerçekleştirilen denetimleri sırasına göre listelenmiştir.  

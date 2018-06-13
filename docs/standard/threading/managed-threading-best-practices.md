@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592476"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri
 Çoklu iş parçacığı kullanımı dikkatli programlama gerektirir. Çoğu görevlerde, karmaşıklık yürütme için sıraya alma istekleri iş parçacığı havuzu iş parçacıkları tarafından azaltabilir. Bu konuda, birden çok iş parçacığı iş Eşgüdümleme veya iş parçacığı, blok işleme gibi daha zor durumlarda giderir.  

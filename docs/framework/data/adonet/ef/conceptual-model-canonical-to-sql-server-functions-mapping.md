@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766315"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Eşleme kavramsal Model SQL Server'a kurallı işlevleri
 Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşılık gelen SQL Server işlevleri eşlenir.  

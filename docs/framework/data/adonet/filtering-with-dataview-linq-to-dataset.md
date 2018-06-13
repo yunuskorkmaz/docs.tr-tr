@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766107"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) ile filtreleme
 Belirli bir ölçüte kullanarak veri filtreleme ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satır kümelerine dönmek için çeşitli yöntemler sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtre ölçütlerini için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  

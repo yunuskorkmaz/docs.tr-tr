@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474038"
 ---
 # <a name="message-logging"></a>İleti Günlüğe Kaydetme
 Windows Communication Foundation (WCF) gelen ve giden iletiler çevrimdışı kullanım için oturum yeteneği sağlar. İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi görülüyor görmenizi sağlar. Bu tür günlükleri size ne içinde bağımsız değişken geçirildi ve nasıl XML olarak ifade edilen bağımsız değişken alan uç noktası gördüğünüz bildiren özellikle yararlıdır. Ayrıca, alındığı gibi ileti günlüğe kaydetme, nasıl ileti ulaştığında görmek için hatalı biçimlendirilmiş iletileri de tanılamak sağlar. Ayrıca, güvenlik inceleyebilirsiniz kullanılan bir belirtece bölümleri şifrelenip imzalanmış ve bölümleri değişmeden kalır.  

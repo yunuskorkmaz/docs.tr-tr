@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591774"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
 Kullanabilirsiniz ancak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemleri kaynak blokları, ileti blokları forma bağlanabilir bir *veri akışı ardışık düzenleri*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı blokları*, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her bir veri akışı ardışık düzen veri akışı bloğunda çalışma gerçekleştirir. Benzetme bu otomobil üretim için bir derleme satırdır. Her araç derleme satırın geçerken bir istasyon çerçeve derler, bir sonraki altyapısı vb. yükler. Bir derleme satırı aynı anda birleştirilen birden çok taşıtlardan sağladığından, aynı anda tam taşıtlardan bir birleştirme daha iyi verimlilik sağlar.

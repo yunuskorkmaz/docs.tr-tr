@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365884"
 ---
 # <a name="code-contracts"></a>Kod Sözleşmeleri
 Kod sözleşmeleri önkoşulları, Sonkoşullar ve nesne invariants kodunuzda belirtmek için bir yol sağlar. Önkoşulları yöntemi veya özelliği girerken karşılanması gereken gereksinimleri verilmiştir. Sonkoşullar beklentilerini yöntemi veya özelliği kod çıkar aynı anda açıklanmaktadır. Nesne invariants iyi bir durumda bir sınıfı için beklenen durumu açıklanmaktadır.  

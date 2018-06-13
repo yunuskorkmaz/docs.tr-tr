@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507598"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
 Bu hizmet kimliği örneği, bir hizmetin kimliğini ayarlamak gösterilmiştir. Tasarım zamanında bir istemci hizmetin meta verileri kullanarak kimlik alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci gelen kimliği doğrulanmamış çağrıları koruma işlemlerinden birini çağırmadan önce bir hizmetin kimliğini doğrulamak bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet ayrıca bir istemcinin kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.  

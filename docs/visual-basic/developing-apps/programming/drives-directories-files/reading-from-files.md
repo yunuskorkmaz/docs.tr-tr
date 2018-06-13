@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590806"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic'te Dosyaları Okuma
 Bu bölümde dosyaları okuma ile ilişkili görevlerin nasıl gerçekleştirileceği açıklanmaktadır.  

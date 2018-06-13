@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504191"
 ---
 # <a name="default-message-contract"></a>Varsayılan İleti Sözleşmesi
 Varsayılan ileti sözleşmesi örnek özel bir kullanıcı tarafından tanımlanan ileti için ve hizmet işlemleri geçirildiği hizmet gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı arabirimi yazılan hizmet olarak uygular. Ayrıca, çıkarma, çarpma ve bölme kullanılan bireysel hizmet işlemlerinde yerine [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bu örnek işlenenler ve işlecini içeriyor ve döndüren özel bir ileti geçirir aritmetik hesaplama sonucu.  

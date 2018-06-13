@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579281"
 ---
 # <a name="recoverable-xslt-errors"></a>Kurtarılabilir XSLT hataları
 W3C XSL Dönüşümleri (XSLT) sürüm 1.0 öneri uygulama sağlayıcısı bir durumu işlemek nasıl karar verebilir alanları içerir. Bu alanlar isteğe bağlı davranış olduğu kabul edilir. Örneğin, Bölüm 7.3 oluşturma işleme yönergelerde XSLT 1.0 öneri, bir hata içeriğinin başlatmasını varsa bildiren `xsl:processing-instruction` metin düğümleri dışında düğümleri oluşturur. Hatadan kurtarmak işlemci karar verirse ne karar öneri gösterir XSLT 1.0 bazı sorunlar için yapılması gerekir. 7.3 bölümünde verilen sorun için uygulama bu hatadan düğümleri ve bunların içeriği yoksayılıyor kurtarabilirsiniz W3C söyler.  

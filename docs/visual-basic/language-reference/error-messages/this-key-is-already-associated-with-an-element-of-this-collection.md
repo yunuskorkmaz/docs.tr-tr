@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593268"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Bu anahtar bu koleksiyonun bir öğesi ile zaten ilişkili
 Koleksiyon üyesi zaten başka bir koleksiyonun üyesi tanımlar için belirtilen bir anahtar. Belirtilen dize bir anahtardır `Add` belirli bir koleksiyonun üyesi benzersiz olarak tanıtan yöntemi.  

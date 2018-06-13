@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591839"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic'te My Ad Alanını Genişletme
 `My` Visual Basic'de ad alanı özellikleri ve .NET Framework'ün güç kolayca yararlanmak sağlayan yöntemler sunar. `My` Ad alanı tek satırlık bir kod için genellikle zor bir görev azaltma genel programlama sorunlarını basitleştirir. Ayrıca, `My` davranışını özelleştirebilirsiniz böylece ad alanı tam olarak Genişletilebilir `My` ve belirli bir uygulama gereksinimlerine uyarlamak için hiyerarşi için yeni hizmetler ekleyin. Bu konuda her ikisi de ele alınmıştır varolan üyeleri özelleştirmek nasıl `My` ad alanı ve kendi özel sınıfları ekleme `My` ad alanı.  

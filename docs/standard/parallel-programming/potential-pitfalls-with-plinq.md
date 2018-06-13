@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591722"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ'te Olası Tuzaklar
 Çoğu durumda, PLINQ nesneleri sorgulara sıralı LINQ üzerinde önemli ölçüde performans artışı sağlar. Ancak, sorgu yürütme parallelizing iş, sıralı kodda olarak ortak olmayan ya da hiç karşılaşılan değil sorunlara yol açabilir karmaşıklık getirir. Bu konuda PLINQ sorguları yazdığınızda önlemek için bazı yöntemler listelenmiştir.  

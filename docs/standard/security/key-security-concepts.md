@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590926"
 ---
 # <a name="key-security-concepts"></a>Temel Güvenlik Kavramları
 Rol tabanlı güvenlik güvenlik endişelere mobil kod hakkında Yardım için Microsoft .NET Framework sunar ve yapmak için kullanıcıların ne olduğunu belirlemek için bileşenlerini etkinleştiren desteği sağlamak için yetkili.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396613"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Zaman uyumsuz Server yuva kullanma
 Zaman uyumsuz server yuva ağ hizmet isteklerini işlemek için .NET Framework zaman uyumsuz programlama modeli kullanın. <xref:System.Net.Sockets.Socket> Sınıfı izleyen standart .NET Framework zaman uyumsuz adlandırma deseni; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginAccept%2A> ve <xref:System.Net.Sockets.Socket.EndAccept%2A> yöntemleri.  

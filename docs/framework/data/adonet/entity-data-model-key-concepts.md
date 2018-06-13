@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765639"
 ---
 # <a name="entity-data-model-key-concepts"></a>Varlık veri modeli temel kavramları
 Varlık veri modeli (EDM) verilerin yapısını tanımlamak için üç temel kavramları kullanır: *varlık türü*, *ilişkilendirme türü*, ve *özelliği*. EDM herhangi bir uygulamada verilerin yapısını açıklayan en önemli kavramlar bunlar.  

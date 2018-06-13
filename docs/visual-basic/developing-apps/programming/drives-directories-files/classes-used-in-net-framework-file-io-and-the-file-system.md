@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590705"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 Aşağıdaki tablolarda, .NET Framework dosyası g/ç, dosya g/ç sınıfları, akışları oluşturmak için kullanılan sınıfları ve okuma ve akışlara yazmak için kullanılan sınıfları içine kategorilere için yaygın olarak kullanılan sınıflar listelenir.  

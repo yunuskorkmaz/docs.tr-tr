@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359803"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel veritabanı SqlClient desteği
 SQL Server kod adı Denali başlayarak, SQL Server yerel veritabanı, olarak adlandırılan, basit bir sürümü kullanılabilir. Bu konuda bir LocalDB veritabanına bağlanmak nasıl ele alınmıştır.  

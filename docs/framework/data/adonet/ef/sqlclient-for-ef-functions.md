@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764677"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Entity Framework işlevleri için SqlClient
 .NET Framework veri sağlayıcısı için Entity Framework SQL Server (SqlClient) matematiksel gerçekleştirmek için İşlevler ve toplama hesaplamalar yanı sıra, işlevleri gerçekleştirmek için bir dizi sağlar `System.DateTime` ve `string` işlemleri. Bu işlevler bulunan `SQLServer` ad alanı.  

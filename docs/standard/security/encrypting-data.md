@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589834"
 ---
 # <a name="encrypting-data"></a>Veri Şifreleme
 Simetrik şifreleme ve asimetrik şifreleme farklı işlemler kullanılarak gerçekleştirilir. Simetrik şifreleme akışların gerçekleştirilir ve bu nedenle büyük miktarlarda verinin şifrelemek kullanışlıdır. Asimetrik şifreleme küçük bir bayt sayısı üzerinde gerçekleştirilir ve bu nedenle yalnızca küçük miktardaki veriler için kullanışlıdır.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587312"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>(Visual Basic) TextFieldParser nesnesiyle metin dosyalarını ayrıştırma
 `TextFieldParser` Ayrıştırmak için ve ayrılmış genişliği sütunları günlük dosyaları veya eski veritabanı bilgileri gibi bir metin olarak yapılandırılmış çok büyük bir dosya işlem nesnesi sağlar. Bir metin dosyası ile ayrıştırma `TextFieldParser` metin alanlarını ayıklamak için parse yöntemi sınırlandırılmış dizeleri simgeleştirilecek kullanılan dize işleme yöntemlerini benzer olsa da bir metin dosyası yineleme için benzer.  

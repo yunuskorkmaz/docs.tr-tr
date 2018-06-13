@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591761"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
 .NET Framework g/Ç-bağlı ve işlem bağlı zaman uyumsuz işlemleri gerçekleştirmek için aşağıdaki iki standart desenler sağlar:  

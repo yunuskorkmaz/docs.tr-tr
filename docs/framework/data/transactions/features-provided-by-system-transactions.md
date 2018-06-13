@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365936"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions tarafından sağlanan özellikleri
 Bu bölümde tarafından sağlanan özellikleri nasıl kullanabileceğinizi açıklar <xref:System.Transactions> işlem kendi uygulama ve Kaynak Yöneticisi yazmak için ad alanı. Özellikle, bu bölümde nasıl oluşturulacağı ve bir veya birden çok katılımcı olan işlem (yerel veya dağıtılmış) katılma ele alınmaktadır.  

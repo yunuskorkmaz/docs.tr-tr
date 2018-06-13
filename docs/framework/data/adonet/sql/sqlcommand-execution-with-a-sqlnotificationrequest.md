@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365559"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Bir SqlNotificationRequest ile SqlCommand yürütme
 A <xref:System.Data.SqlClient.SqlCommand> veri sunucudan alınan sonra sonuç kümesi sorguyu yeniden yürütüldü farklı olacaktır değiştiğinde bildirim oluşturmak için yapılandırılabilir. Bu özel bildirim sırası sunucuda veya dinamik nesneler korumak istemediğiniz zaman kullanmak istediğiniz senaryolar için kullanışlıdır.  

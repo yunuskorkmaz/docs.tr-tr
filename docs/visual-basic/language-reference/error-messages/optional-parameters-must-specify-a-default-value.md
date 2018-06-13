@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593922"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>İsteğe bağlı parametreler varsayılan bir değer belirtmelidir
 İsteğe bağlı parametreler arama yordamı tarafından hiçbir parametre belirtilirse, kullanılabilen varsayılan değerler sağlamanız gerekir.  

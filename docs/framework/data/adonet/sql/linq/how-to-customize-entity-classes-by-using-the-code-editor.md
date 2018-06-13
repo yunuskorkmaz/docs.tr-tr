@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360497"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Nasıl yapılır: kod düzenleyicisini kullanarak sınıflar özelleştirme
 Visual Studio kullanarak geliştiricileri kullanabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] oluşturmak veya kendi sınıflar özelleştirme.  

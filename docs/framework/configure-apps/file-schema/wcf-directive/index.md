@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386177"
 ---
 # <a name="wcf-directive-syntax"></a>WCF Yönerge Söz Dizimi
 Derleyicileri yönlendirmek için Windows Communication Foundation (WCF) yönergeleri .svc dosyalarında tarafından kullanılan ayarları belirtir. Her yönergesi o yönergeye özgü (değerleri ile eşleştirilmiş) bir veya daha fazla öznitelik içerebilir. WCF sahip yalnızca [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  

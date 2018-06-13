@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364862"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Arama hizmet işlemleri (WCF Veri Hizmetleri)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri hizmeti için hizmet işlemleri tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmeti yöntemi olarak gibi işlemleri tanımlamanızı sağlar. Veri Hizmeti kaynaklar gibi hizmet işlemlerini URI kullanılarak ele alınır. Bir hizmet işlemi, varlık türleri, tek bir varlık türü örnekleri ve tamsayı ve dize gibi basit türler koleksiyonlarının geri dönebilirsiniz. Bir hizmet işlemi de döndürebilir `null` (`Nothing` Visual Basic'te). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemleri erişmek için kullanılabilir. Bu tür hizmet işlemleri sahip yöntemleri olarak tanımlanan <xref:System.ServiceModel.Web.WebGetAttribute> uygulanır. Daha fazla bilgi için bkz: [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507869"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
 Bu örnek nasıl seri hale getirme ve seri durumdan çıkarma, şema verme ve şema alma veri sözleşmesi kullanılarak özelleştirilebilir gibi işlemleri sınıfı vekil gösterir. Bu örnek senaryoda burada veri seri hale getirilmiş ve bir Windows Communication Foundation (WCF) istemci ile hizmet arasında aktarılan bir istemci ve sunucu bir yedek kullanmayı gösterir.  

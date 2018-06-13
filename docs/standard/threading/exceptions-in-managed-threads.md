@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591579"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
 .NET Framework sürüm 2.0 ile başlayarak, ortak dil çalışma zamanı en işlenmeyen özel durumlar doğal olarak devam etmek için iş parçacığı sağlar. Çoğu durumda bu işlenmeyen bir özel durum için uygulamanın neden olduğunu anlamına gelir.  

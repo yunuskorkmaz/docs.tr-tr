@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592021"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme Temellerine Genel Bakış
 <a name="top"></a> .NET Framework eşitleme temelleri çeşitli iş parçacığı etkileşimlerinin denetleme ve yarış durumları önleme sağlar. Bunlar kabaca üç kategoriye ayrılabilir: kilitleme, sinyal ve ınterlocked işlemleri.  

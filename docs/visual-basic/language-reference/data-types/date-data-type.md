@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591826"
 ---
 # <a name="date-data-type-visual-basic"></a>Date Veri Türü (Visual Basic)
 1 Ocak 0001-31 Aralık 9999 yılın yılın arasında değişen tarih ve saat 12:00: 00'da (gece yarısı) temsil eden IEEE 64-bit (8-bayt) değerleri PM 11:59:59.9999999 tutar. Her artış başlayarak Gregoryen takvim 1 yılının 1 Ocak 100 nanosaniye geçen süreyi temsil eder. En yüksek değer 100 nanosaniye başlangıcından 10000 yılın 1 Ocak önce temsil eder.  

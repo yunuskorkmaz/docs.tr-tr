@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588927"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda ifadeleri ilk ifadesinde geçerli olmayan bir &#39;Select Case&#39; deyimi
 Test ifadesinde lambda ifadesi kullanamaz bir `Select Case` deyimi. Lambda ifadesi tanımları dönüş işlevler ve test ifadesi bir `Select Case` deyimi bir başlangıç veri türünde olması gerekir.  

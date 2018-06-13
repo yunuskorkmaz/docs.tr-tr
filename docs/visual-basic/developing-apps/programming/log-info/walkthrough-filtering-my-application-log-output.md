@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591891"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 Bu anlatımda için filtreleme varsayılan günlük değiştirmek nasıl gösterilir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesne dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığı için bile uygulama oluşturduktan sonra günlüğe kaydetme davranışını değiştirebilirsiniz.  

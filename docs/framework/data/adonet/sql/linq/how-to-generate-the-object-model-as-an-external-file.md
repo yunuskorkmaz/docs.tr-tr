@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364941"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: nesne modeli dış dosyası olarak oluştur
 Öznitelik tabanlı eşleme için alternatif olarak, harici bir XML dosyası olarak SQLMetal komut satırı aracını kullanarak nesne modeli oluşturabilir. Daha fazla bilgi için bkz: [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Dış XML eşleme dosyası kullanarak, kodunuzda görünmesine. Ayrıca, uygulamanızı ikili dosyaları derlemeden dış dosyasını değiştirerek davranışı değiştirebilirsiniz. Daha fazla bilgi için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  

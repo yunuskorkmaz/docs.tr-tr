@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591638"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 Nesnelere atıfta adresleri tutar. Herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabileceğiniz bir `Object` değişkeni. Bir `Object` değişkeni ayrıca herhangi bir değer türde veri bakın (sayısal, `Boolean`, `Char`, `Date`, yapı veya sabit listesi).  

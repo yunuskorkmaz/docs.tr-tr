@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365066"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gösterme ve olarak verinin tüketimi için senaryolar, bir çekirdek kümesini destekler [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları. Bu konuda aşağıdaki senaryolar için ilgili konulara işaret eder.  

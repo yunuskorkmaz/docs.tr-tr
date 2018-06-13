@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325584"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Bakımı ad/değer çiftleri (C#)
 Birçok uygulama, ad/değer çiftleri olarak en iyi şekilde tutulur Bilgi korumanız gerekir. Bu bilgiler, yapılandırma bilgileri veya genel ayarlar olabilir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kolaylaştıran bir ad/değer çifti kümesi tutmak bazı yöntemler içerir. Öğeleri öznitelikler veya alt kümesi olarak bilgi ya da koruyabilir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365348"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>İşlem ve toplu kopyalama işlemleri
 Toplu kopyalama işlemleri yalıtılmış operations veya birden çok adım işlemin parçası olarak gerçekleştirilebilir. Bu ikinci seçeneği yanı sıra aynı işlem içinde birden fazla toplu kopyalama işlemi gerçekleştirmek diğer veritabanı (örneğin, ekleme, güncelleştirme ve silme) hala yürütün veya işlemin tamamını geri kullanabilmeye devam ederken işlemleri sağlar.  

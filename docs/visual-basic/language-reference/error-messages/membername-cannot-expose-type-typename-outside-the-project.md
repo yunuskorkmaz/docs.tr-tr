@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588099"
 ---
 # <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>&#39;&lt;membername&gt; &#39; türünü gösteremez &#39; &lt;typename&gt; &#39; üzerinden proje dışına &lt;containertype&gt; &#39; &lt;containertypename&gt;&#39;
 Değişken, yordam parametresini veya işlev dönüş kapsayıcısı dışında gösterilir, ancak kapsayıcı dışında gösterilmeyen gerekir bir türü olarak bildirilmiş.  
