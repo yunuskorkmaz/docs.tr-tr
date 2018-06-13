@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312202"
 ---
 # <a name="install-the-net-framework-for-developers"></a><span data-ttu-id="c22ae-102">Geliştiriciler için .NET Framework'ü yükleme</span><span class="sxs-lookup"><span data-stu-id="c22ae-102">Install the .NET Framework for developers</span></span>
 

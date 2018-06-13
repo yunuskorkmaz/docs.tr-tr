@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149068"
 ---
 # <a name="reference-cells"></a><span data-ttu-id="483bf-103">Başvuru Hücreleri</span><span class="sxs-lookup"><span data-stu-id="483bf-103">Reference Cells</span></span>
 

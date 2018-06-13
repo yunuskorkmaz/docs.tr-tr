@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807989"
 ---
 # <a name="tracing-and-message-logging"></a><span data-ttu-id="24019-102">İleti İzleme ve Kaydetme</span><span class="sxs-lookup"><span data-stu-id="24019-102">Tracing and Message Logging</span></span>
 <span data-ttu-id="24019-103">Bu örnek, ileti izleme ve kaydetme etkinleştirmek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="24019-103">This sample demonstrates how to enable tracing and message logging.</span></span> <span data-ttu-id="24019-104">Sonuçta elde edilen izlemeleri ve ileti günlüklerini kullanarak görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span><span class="sxs-lookup"><span data-stu-id="24019-104">The resulting traces and message logs are viewed using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="24019-105">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="24019-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
