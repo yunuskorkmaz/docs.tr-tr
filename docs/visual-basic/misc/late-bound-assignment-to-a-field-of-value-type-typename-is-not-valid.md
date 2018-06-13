@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637657"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>Geç bağlama atamasının bir alana değer türü &#39; &lt;typename&gt; &#39; ne zaman geçersiz &#39; &lt;adı&gt; &#39; geç bağlama ifadesi sonucu
 Geçersiz bir geç bağlama ataması çalıştı.  

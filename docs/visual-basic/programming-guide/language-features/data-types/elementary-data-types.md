@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646390"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Başlangıç Veri Türleri (Visual Basic)
 Visual Basic birçok programlama öğeleriniz için kullanabileceğiniz önceden tanımlanmış veri türleri kümesi sağlar. Bu bölümde, bu türlerini ve bunların nasıl kullanılacağını açıklar.  

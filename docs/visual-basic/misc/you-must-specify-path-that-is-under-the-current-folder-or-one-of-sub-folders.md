@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639503"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Geçerli klasör veya alt klasörlerinde altında bir yol belirtmeniz gerekir
 Belirtilen yol geçerli dizinin altında değil. Bu göreli bir yol sağlanırken hatalı dosya yollarını ayrıştırma sonucunu olabilir.  

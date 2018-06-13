@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647897"
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
 Visual Basic döngü yapıları, bir veya daha fazla satır kod art arda çalıştırmanızı sağlar. Bir koşul kadar döngü yapısı deyimlerinde yineleyebilirsiniz `True`, bir koşul kadar `False`, bir sayı çok kez veya bir kez her öğe için bir koleksiyondaki belirtilen.  

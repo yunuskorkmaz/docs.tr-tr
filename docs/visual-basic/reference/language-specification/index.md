@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648674"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic Dil Belirtimi
 Visual Basic dil belirtimi, Visual Basic dil bilgisi ve sözdizimi hakkında tüm soruların yanıtları için yetkili kaynağıdır. Visual Basic başvurusu belgelerinde kapsanmayan çok puan içeren dili hakkında ayrıntılı bilgiler içerir.  

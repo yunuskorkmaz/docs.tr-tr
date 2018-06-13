@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647637"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme (Visual Basic)
 Oluşturabileceğiniz [XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) ve bunları bir dosya, dize veya bir akış gibi bir dış kaynaktan içeriğiyle birkaç yöntem kullanarak doldurabilirsiniz. Bu yöntemler aşağıdaki örneklerde gösterilmiştir.  

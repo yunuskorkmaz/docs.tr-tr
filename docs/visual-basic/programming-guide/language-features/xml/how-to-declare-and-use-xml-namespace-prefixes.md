@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648804"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Nasıl yapılır: XML Ad Alanı Öneklerini Bildirme ve Kullanma (Visual Basic)
 Bu örnek XML ad alanı öneki içeri aktarmak nasıl gösterir `ns` ve XML değişmez değeri ve XML eksen özellikleri kullanın.  

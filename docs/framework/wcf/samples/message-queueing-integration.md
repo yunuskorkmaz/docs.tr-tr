@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804839"
 ---
 # <a name="message-queueing-integration"></a>İleti Kuyruğa Alma Tümleştirme
 Bu bölüm, Message Queuing ve Windows Communication Foundation (WCF) arasındaki tümleştirmeyi göstermek örnekleri içerir.  

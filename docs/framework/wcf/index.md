@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804277"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>WCF ile Hizmet Odaklı Uygulamalar Geliştirme
 Bu bölümde belgelerin hakkında Windows Communication Foundation (hangi hizmet odaklı uygulamalar oluşturmaya yönelik bir programlama modelidir WCF), bilgi sağlar. Geliştiricilerin platformlarla tümleştirilen ve Yatırımlar ile birlikte çalışmak güvenli, güvenilir ve işlenen çözümleri oluşturmasına olanak sağlar.

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810011"
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 Windows Communication Foundation (WCF) zengin bir uygulamanın yaşam farklı aşamalarını izlemenize yardımcı olabilir işlevler sağlar. Örneğin, hizmetleri ve dağıtım istemcilerinde ayarlamak için yapılandırma kullanabilirsiniz. WCF performans sayaçları, uygulamanızın performansını ölçmek amacıyla büyük bir dizi içerir. WCF ayrıca İnceleme veri WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden çalışma zamanında bir hizmet sunar. Uygulama arızalanması veya hatalı davranan başlatıldığında, önemli bir şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. Hangi olayların oluşmasını uçtan uca uygulamanızda olduğunu görmek için ileti günlüğe kaydetme ve izleme de kullanabilirsiniz. Bu özellikler, geliştiriciler ve BT uzmanları düzgün çalışmıyorsa, bir WCF uygulaması sorun giderme için yardımcı.  

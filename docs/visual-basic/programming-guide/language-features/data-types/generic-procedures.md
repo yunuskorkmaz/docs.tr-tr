@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649402"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
 A *genel yordam*, olarak da bilinir bir *genel yöntem*, bir yordamı ile en az bir tür parametresi tanımlı değil. Bu yordam çağrıları her saat veri türleri için kendi gereksinimlerine uyarlamak çağıran kodu sağlar.  

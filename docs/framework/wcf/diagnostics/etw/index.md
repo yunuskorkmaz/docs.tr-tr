@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809270"
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW ile Çözümleme İzleme
 Windows Communication Foundation (WCF) çözümleme izleme bir WCF Hizmeti yürütülmesi sırasında tanılama bilgileri yakalamak için bir yol sunar. WCF hizmetleri bir üretim ortamında sorun giderme izin vermek için WCF yığınında anahtar noktalarda WCF analiz izleme olaylarını gösterilen. Çözümleme izleme WCF hizmetleri için bir ürün sunucusunun performansı üzerinde en az etki barındıran sahip [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF hizmetleri bu olayları olay izleme için Windows (ETW) oturumuna çok verimli bir şekilde gösterilen gibi.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803952"
 ---
 # <a name="automatic-format-selection"></a>Otomatik Biçim Seçimi
 Bu örnek Otomatik Biçim Seçimi (XML veya JSON) etkinleştirmek Windows Communication Foundation (WCF) REST biçimini işlemi kodda açıkça ayarlamak nasıl yanı sıra, model programlama ile gösterilmiştir.  

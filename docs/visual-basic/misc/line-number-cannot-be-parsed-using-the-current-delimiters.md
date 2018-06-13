@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639142"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Satır &lt;numarası&gt; geçerli ayırıcılar kullanılarak ayrıştırılamıyor
 Belirtilen dışındaki sınırlayıcıları kullandığı için belirtilen satır ayrıştırılamıyor.  

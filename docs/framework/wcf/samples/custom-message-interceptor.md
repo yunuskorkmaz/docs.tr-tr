@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806324"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir. Özellikle, kanal fabrikaları ve çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri izlemesine kanal dinleyicileri oluşturur özel bağlama öğesi uygulamak nasıl gösterir. Örnek, bir istemci ve bu özel oluşturucuları kullanımını gösteren sunucu de içerir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645765"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>XElement nesneler (Visual Basic) içeren nesne grafiklerinin seri hale getirme
 Bu konu, başvuru türünde nesneler içeren nesne grafiklerinin seri hale getirme yeteneği tanıtır <xref:System.Xml.Linq.XElement>. Tesis için seri hale getirme, bu tür <xref:System.Xml.Linq.XElement> uygulayan <xref:System.Xml.Serialization.IXmlSerializable> arabirimi.  

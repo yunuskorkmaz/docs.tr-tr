@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640498"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Kaynak klasörü ve hedef klasör aynıdır
 Kopyalama veya bir dosyayı taşımak için bir girişimde bulunuldu, ancak belirtilen kaynak dizin ve hedef dizin aynıdır. Bu, yanlış bir dosya yolu ayrıştırılırken bir sonucu olabilir.  

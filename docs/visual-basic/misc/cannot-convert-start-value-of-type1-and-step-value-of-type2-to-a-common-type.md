@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637072"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Başlangıç değeri türü dönüştürülemiyor &#39; &lt;type1&gt; &#39; ve adım türü değeri &#39; &lt;type2&gt; &#39; için ortak bir türü
 Belirtilen `For...Next` denetim değerleri farklı olan ve ortak türüne dönüştürülemez bu nedenle geçerli değildir.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649233"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma (Visual Basic)
 Çoğu durumda, özellikleri ve yöntemleri bir nesnenin tasarım zamanında bulun ve bunları işlemek için kod yazın. Ancak, bazı durumlarda, nesnenin özellikleri ve yöntemleri hakkında önceden bilemeyebilirsiniz veya yalnızca bir son kullanıcının özelliklerini belirtin veya çalışma zamanında bir yöntem yürütülemez etkinleştirme esnekliğini isteyebilirsiniz.  

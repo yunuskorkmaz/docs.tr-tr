@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643006"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Nasıl yapılır: belirli bir özniteliği (Visual Basic) sahip bir öğe bulunamadı
 Bu konuda, belirli bir değere sahip bir özniteliği olan bir öğeyi bulmak gösterilmiştir.  

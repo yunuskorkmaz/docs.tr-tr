@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637523"
 ---
 # <a name="drive-39ltdrivenamegt39-not-found"></a>Sürücü &#39; &lt;drivename&gt; &#39; bulunamadı
 Sürücü bulunamıyor. Ağ bağlantısı kaybedildi ya da erişmeye çalıştığınız sürücü çevrimdışı veya yok.  

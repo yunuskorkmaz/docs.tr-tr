@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654479"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic'de Değişkenler
 Genellikle, Visual Basic ile hesaplamalar gerçekleştirdiğinizde değerlerini depolamak sahiptir. Örneğin, birkaç değerleri hesaplamak, bunları karşılaştırın ve üzerlerinde, karşılaştırma sonucuna bağlı olarak farklı işlemler gerçekleştirmek isteyebilirsiniz. Bunları karşılaştırma yapmak isterseniz değerleri tutmak zorunda.  

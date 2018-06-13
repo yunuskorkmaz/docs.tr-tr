@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804192"
 ---
 # <a name="wcf-system-requirements"></a>WCF Sistem Gereksinimleri
 Windows Communication Foundation (WCF) dağıtılmış uygulamaları oluşturmak için kullanılan bir iletişim altyapısıdır. Çalıştırmak WCF etkinleştirme gereksinimleri aşağıda listelenmektedir.  

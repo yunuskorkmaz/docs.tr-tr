@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645295"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Dil ile tümleşik eksenleri Visual Basic (LINQ-XML)
 Bu bölümde XML erişim kolaylaştırmak için doğrudan Visual Basic dilinde yerleşik özellikleri açıklanmıştır. XML belgeleri için LINQ örneklerin çoğu bu tümleşik Visual Basic eksenler kullanın.  

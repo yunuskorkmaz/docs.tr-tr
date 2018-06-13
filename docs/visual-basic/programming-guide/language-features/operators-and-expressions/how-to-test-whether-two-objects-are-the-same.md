@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647611"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Test Etme (Visual Basic)
 Nesnelere atıfta iki değişken varsa ya da kullanabilirsiniz `Is` veya `IsNot` işleci veya her ikisini de aynı örneğine bakın olup olmadığını belirlemek için.  

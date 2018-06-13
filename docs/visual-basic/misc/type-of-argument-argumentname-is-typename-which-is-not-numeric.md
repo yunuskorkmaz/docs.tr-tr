@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639617"
 ---
 # <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>Bağımsız değişken türü &#39; &lt;argumentname&gt; &#39; olan &#39; &lt;typename&gt;&#39;, sayısal olmayan
 Sayısal olmayan bir bağımsız değişken sayısal bir bağımsız değişken beklenen bir durum oluşur.  

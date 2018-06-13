@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646545"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic Programlama Kılavuzu
 Tüm modern programlama dili gibi Visual Basic birçok ortak programlama yapıları ve dil öğeleri destekler. Bu kılavuz, Visual Basic ile programlama tüm önemli öğelerini açıklar.  
