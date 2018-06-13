@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745519"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a><span data-ttu-id="1a3ad-102">&lt;Clear&gt; öğesi için &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="1a3ad-102">&lt;clear&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="1a3ad-103">Tüm temizler `namedCache` girişleri `namedCaches` bir önbellek için koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="1a3ad-103">Clears all `namedCache` entries in the `namedCaches` collection for a memory cache.</span></span>  

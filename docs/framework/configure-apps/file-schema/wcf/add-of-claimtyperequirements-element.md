@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745415"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="a0d97-102">&lt;claimTypeRequirements&gt; öğesi &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="a0d97-102">&lt;add&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="a0d97-103">Federe kimlik bilgisi görünmesi beklenen gerekli ve isteğe bağlı talep türlerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a0d97-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="a0d97-104">Örneğin, belirli bir talep türleri kümesini sahip olması gerekir gelen kimlik bilgilerini gereksinimleri Hizmetleri durumu.</span><span class="sxs-lookup"><span data-stu-id="a0d97-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

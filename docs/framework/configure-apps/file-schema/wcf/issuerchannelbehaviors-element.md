@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747063"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a><span data-ttu-id="f87dc-102">&lt;issuerChannelBehaviors&gt; Öğesi</span><span class="sxs-lookup"><span data-stu-id="f87dc-102">&lt;issuerChannelBehaviors&gt; Element</span></span>
 <span data-ttu-id="f87dc-103">Belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak (yapılandırmasında tanımlanmış) Windows Communication Foundation (WCF) istemci uç nokta davranışları koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="f87dc-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="f87dc-104">Tanımlı davranışları herhangi içeremez [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğeleri.</span><span class="sxs-lookup"><span data-stu-id="f87dc-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>  

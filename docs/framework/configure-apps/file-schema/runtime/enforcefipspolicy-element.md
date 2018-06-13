@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746221"
 ---
 # <a name="ltenforcefipspolicygt-element"></a><span data-ttu-id="b35f0-102">&lt;Enforcefıpspolicy&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="b35f0-102">&lt;enforceFIPSPolicy&gt; Element</span></span>
 <span data-ttu-id="b35f0-103">Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uymalıdır bir bilgisayar yapılandırmasını gereksinim zorlanıp zorlanmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b35f0-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  

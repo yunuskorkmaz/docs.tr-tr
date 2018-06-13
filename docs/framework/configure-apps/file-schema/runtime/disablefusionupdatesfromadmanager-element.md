@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745896"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a><span data-ttu-id="5046d-102">&lt;disableFusionUpdatesFromADManager&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="5046d-102">&lt;disableFusionUpdatesFromADManager&gt; Element</span></span>
 <span data-ttu-id="5046d-103">Uygulama etki alanı için yapılandırma ayarlarını geçersiz kılmak çalışma zamanı konak izin vermek için varsayılan davranışı devre dışı olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="5046d-103">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>  

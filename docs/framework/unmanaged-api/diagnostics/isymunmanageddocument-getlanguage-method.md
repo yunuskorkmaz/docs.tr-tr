@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedDocument::GetLanguage Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetLanguage
 api_location:
@@ -23,34 +15,31 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31fdd2caaf877372fa28693cdc5b09ddf601427c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98c981a10a07d035300349cc8687b3201ed70927
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424303"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="451d1-102">ISymUnmanagedDocument::GetLanguage Metodu</span><span class="sxs-lookup"><span data-stu-id="451d1-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="451d1-103">Bu belge dil tanımlayıcısını alır</span><span class="sxs-lookup"><span data-stu-id="451d1-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="898cb-102">ISymUnmanagedDocument::GetLanguage Metodu</span><span class="sxs-lookup"><span data-stu-id="898cb-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="898cb-103">Bu belge dil tanımlayıcısını alır</span><span class="sxs-lookup"><span data-stu-id="898cb-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="451d1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="451d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="898cb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="898cb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="451d1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="451d1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="898cb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="898cb-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="451d1-106">[out] Bir işaretçi bir değişkene dil tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="451d1-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="898cb-106">[out] Bir işaretçi bir değişkene dil tanımlayıcısını alır.</span><span class="sxs-lookup"><span data-stu-id="898cb-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="451d1-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="451d1-107">Return Value</span></span>  
- <span data-ttu-id="451d1-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="451d1-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="898cb-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="898cb-107">Return Value</span></span>  
+ <span data-ttu-id="898cb-108">Yöntem başarılı olursa S_OK.</span><span class="sxs-lookup"><span data-stu-id="898cb-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="451d1-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="451d1-109">See Also</span></span>  
- [<span data-ttu-id="451d1-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="451d1-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="898cb-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="898cb-109">See Also</span></span>  
+ [<span data-ttu-id="898cb-110">ISymUnmanagedDocument Arabirimi</span><span class="sxs-lookup"><span data-stu-id="898cb-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

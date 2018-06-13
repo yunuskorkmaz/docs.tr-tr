@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744648"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a><span data-ttu-id="06155-102">Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma</span><span class="sxs-lookup"><span data-stu-id="06155-102">Creating and Using Strong-Named Assemblies</span></span>
 <a name="top"></a> <span data-ttu-id="06155-103">Tanımlayıcı ad derlemenin kimliğini oluşur — basit metin adı, sürüm numarasını ve (sağladıysanız) kültür bilgilerini — bir ortak anahtar ve dijital imza artı.</span><span class="sxs-lookup"><span data-stu-id="06155-103">A strong name consists of the assembly's identity—its simple text name, version number, and culture information (if provided)—plus a public key and a digital signature.</span></span> <span data-ttu-id="06155-104">Karşılık gelen özel anahtarı kullanarak bir derleme dosyası oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="06155-104">It is generated from an assembly file using the corresponding private key.</span></span> <span data-ttu-id="06155-105">(Derleme dosyası adları ve derlemeyi oluşturan tüm dosyaların karmaları içeren derleme bildirimi içerir.)</span><span class="sxs-lookup"><span data-stu-id="06155-105">(The assembly file contains the assembly manifest, which contains the names and hashes of all the files that make up the assembly.)</span></span>  

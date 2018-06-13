@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744918"
 ---
 # <a name="ltdependentassemblygt-element"></a><span data-ttu-id="493a1-102">&lt;dependentAssembly&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="493a1-102">&lt;dependentAssembly&gt; Element</span></span>
 <span data-ttu-id="493a1-103">Her bir derleme için bağlama ilkesi ve derleme konumunu saklar.</span><span class="sxs-lookup"><span data-stu-id="493a1-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="493a1-104">Kullanmayı `dependentAssembly` her derleme için öğesi.</span><span class="sxs-lookup"><span data-stu-id="493a1-104">Use one `dependentAssembly` element for each assembly.</span></span>  

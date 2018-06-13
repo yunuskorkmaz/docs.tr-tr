@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744245"
 ---
 # <a name="ltsocketgt-element-network-settings"></a><span data-ttu-id="b6fa8-102">&lt;Yuva&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="b6fa8-102">&lt;socket&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="b6fa8-103">Yuva işlemleri tamamlama bağlantı noktalarını kullanacak olup olmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b6fa8-103">Specifies whether socket operations use completion ports.</span></span>  

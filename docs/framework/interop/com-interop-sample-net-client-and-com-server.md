@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387110"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="7b10e-102">COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu</span><span class="sxs-lookup"><span data-stu-id="7b10e-102">COM Interop Sample: .NET Client and COM Server</span></span>
 <span data-ttu-id="7b10e-103">Bu örnek gösterilmektedir nasıl bir [.NET istemci](#cpconcominteropsamplenetclientcomserveranchor1), erişim için yerleşik bir [COM sunucusu](#cpconcominteropsamplenetclientcomserveranchor2), bir COM sınıfı örneği oluşturur ve sınıf üyeleri ev kredisi hesaplamalar çağırır.</span><span class="sxs-lookup"><span data-stu-id="7b10e-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  

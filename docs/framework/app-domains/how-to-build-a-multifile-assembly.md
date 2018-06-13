@@ -24,6 +24,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744089"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a><span data-ttu-id="5cd95-102">Nasıl yapılır: Birden Fazla Dosya Derleme</span><span class="sxs-lookup"><span data-stu-id="5cd95-102">How to: Build a Multifile Assembly</span></span>
 <span data-ttu-id="5cd95-103">Bu makalede, birden fazla dosya derlemesi oluşturma açıklanmaktadır ve yordamda her adım gösterilmektedir kodu sağlar.</span><span class="sxs-lookup"><span data-stu-id="5cd95-103">This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.</span></span>  

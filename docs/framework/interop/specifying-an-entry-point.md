@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388839"
 ---
 # <a name="specifying-an-entry-point"></a><span data-ttu-id="3f856-102">Giriş Noktası Belirtme</span><span class="sxs-lookup"><span data-stu-id="3f856-102">Specifying an Entry Point</span></span>
 <span data-ttu-id="3f856-103">Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3f856-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="3f856-104">Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3f856-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="3f856-105">Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3f856-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753007"
 ---
 # <a name="lttimeoutsgt"></a><span data-ttu-id="cf7cb-102">&lt;zaman aşımları&gt;</span><span class="sxs-lookup"><span data-stu-id="cf7cb-102">&lt;timeOuts&gt;</span></span>
 <span data-ttu-id="cf7cb-103">Hizmet ana bilgisayarı açmak veya kapatmak izin verilen zaman aralığını belirtir bir yapılandırma öğesi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="cf7cb-103">Represents a configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>  

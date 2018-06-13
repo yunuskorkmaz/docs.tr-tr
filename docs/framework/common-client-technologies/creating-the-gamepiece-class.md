@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744518"
 ---
 # <a name="creating-the-gamepiece-class"></a><span data-ttu-id="ecd2c-102">GamePiece Sınıfı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="ecd2c-102">Creating the GamePiece Class</span></span>
 <span data-ttu-id="ecd2c-103">**GamePiece** sınıfı yalıtır Microsoft XNA oyun parça görüntü yükleme, oyun parça sitedeki fare durumunu izlemek, fare yakalama, düzenleme ve eylemsizlik işleme sağlamak için gerekli tüm işlevlere ve Oyun parça görünümü bağlantı noktasının sınırlarını ulaştığında Sıçrama yeteneği sağlar.</span><span class="sxs-lookup"><span data-stu-id="ecd2c-103">The **GamePiece** class encapsulates all the functionality required to load a Microsoft XNA game piece image, track the state of the mouse in relation to the game piece, capture the mouse, provide manipulation and inertia processing, and provide bouncing capability when the game piece reaches the limits of the view port.</span></span>  

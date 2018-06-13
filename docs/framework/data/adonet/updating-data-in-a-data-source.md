@@ -1,35 +1,24 @@
 ---
-title: "Bir veri kaynağındaki verileri güncelleştirme"
-ms.custom: 
+title: Bir veri kaynağındaki verileri güncelleştirme
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3c611e2d7c4c1de17588ba5220124db55bca2764
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357799"
 ---
-# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="90beb-102">Bir veri kaynağındaki verileri güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="90beb-102">Updating Data in a Data Source</span></span>
-<span data-ttu-id="90beb-103">Verileri (örneğin, INSERT, UPDATE veya DELETE) değiştirme SQL deyimlerini satırları döndürmeyin.</span><span class="sxs-lookup"><span data-stu-id="90beb-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="90beb-104">Benzer şekilde, birçok saklı yordamlar bir eylem gerçekleştirmek ancak satırları döndürmüyor.</span><span class="sxs-lookup"><span data-stu-id="90beb-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="90beb-105">Satır döndürmeyen komutları yürütmek için Oluştur bir **komutu** uygun SQL komutu nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**.</span><span class="sxs-lookup"><span data-stu-id="90beb-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="90beb-106">Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.</span><span class="sxs-lookup"><span data-stu-id="90beb-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="f1abd-102">Bir veri kaynağındaki verileri güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="f1abd-102">Updating Data in a Data Source</span></span>
+<span data-ttu-id="f1abd-103">Verileri (örneğin, INSERT, UPDATE veya DELETE) değiştirme SQL deyimlerini satırları döndürmeyin.</span><span class="sxs-lookup"><span data-stu-id="f1abd-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="f1abd-104">Benzer şekilde, birçok saklı yordamlar bir eylem gerçekleştirmek ancak satırları döndürmüyor.</span><span class="sxs-lookup"><span data-stu-id="f1abd-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="f1abd-105">Satır döndürmeyen komutları yürütmek için Oluştur bir **komutu** uygun SQL komutu nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**.</span><span class="sxs-lookup"><span data-stu-id="f1abd-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="f1abd-106">Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.</span><span class="sxs-lookup"><span data-stu-id="f1abd-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="90beb-107">**ExecuteNonQuery** yöntemi deyimi veya yürütüldü saklı yordam tarafından etkilenen satırların sayısını temsil eden bir tamsayı döndürür.</span><span class="sxs-lookup"><span data-stu-id="90beb-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="90beb-108">Birden çok deyime yürütülürse, döndürülen değer tüm yürütülen deyimleri tarafından etkilenen kayıtların toplamıdır.</span><span class="sxs-lookup"><span data-stu-id="90beb-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
+ <span data-ttu-id="f1abd-107">**ExecuteNonQuery** yöntemi deyimi veya yürütüldü saklı yordam tarafından etkilenen satırların sayısını temsil eden bir tamsayı döndürür.</span><span class="sxs-lookup"><span data-stu-id="f1abd-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="f1abd-108">Birden çok deyime yürütülürse, döndürülen değer tüm yürütülen deyimleri tarafından etkilenen kayıtların toplamıdır.</span><span class="sxs-lookup"><span data-stu-id="f1abd-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="90beb-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="90beb-109">Example</span></span>  
- <span data-ttu-id="90beb-110">Aşağıdaki kod örneğinde bir veritabanı kullanarak bir kayıt eklemek için INSERT deyimi yürütür **ExecuteNonQuery**.</span><span class="sxs-lookup"><span data-stu-id="90beb-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
+## <a name="example"></a><span data-ttu-id="f1abd-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="f1abd-109">Example</span></span>  
+ <span data-ttu-id="f1abd-110">Aşağıdaki kod örneğinde bir veritabanı kullanarak bir kayıt eklemek için INSERT deyimi yürütür **ExecuteNonQuery**.</span><span class="sxs-lookup"><span data-stu-id="f1abd-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -53,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- <span data-ttu-id="90beb-111">Aşağıdaki kod örneği örnek kodda tarafından oluşturulan saklı yordam yürütür [katalog işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span><span class="sxs-lookup"><span data-stu-id="90beb-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span></span> <span data-ttu-id="90beb-112">Hiçbir satır saklı yordamı tarafından döndürülen böylece **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordamı bir giriş parametresi alır ve bir output parametresi ve dönüş değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="90beb-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
+ <span data-ttu-id="f1abd-111">Aşağıdaki kod örneği örnek kodda tarafından oluşturulan saklı yordam yürütür [katalog işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span><span class="sxs-lookup"><span data-stu-id="f1abd-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](../../../../docs/framework/data/adonet/performing-catalog-operations.md).</span></span> <span data-ttu-id="f1abd-112">Hiçbir satır saklı yordamı tarafından döndürülen böylece **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordamı bir giriş parametresi alır ve bir output parametresi ve dönüş değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="f1abd-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
   
- <span data-ttu-id="90beb-113">İçin <xref:System.Data.OleDb.OleDbCommand> nesnesi **ReturnValue** parametre eklenmelidir **parametreleri** koleksiyonu ilk.</span><span class="sxs-lookup"><span data-stu-id="90beb-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
+ <span data-ttu-id="f1abd-113">İçin <xref:System.Data.OleDb.OleDbCommand> nesnesi **ReturnValue** parametre eklenmelidir **parametreleri** koleksiyonu ilk.</span><span class="sxs-lookup"><span data-stu-id="f1abd-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -102,8 +91,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="90beb-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="90beb-114">See Also</span></span>  
- [<span data-ttu-id="90beb-115">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="90beb-115">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [<span data-ttu-id="90beb-116">Veri Kaynaklarını DataAdapters ile Güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="90beb-116">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [<span data-ttu-id="90beb-117">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="90beb-117">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [<span data-ttu-id="90beb-118">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="90beb-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f1abd-114">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f1abd-114">See Also</span></span>  
+ [<span data-ttu-id="f1abd-115">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="f1abd-115">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="f1abd-116">Veri Kaynaklarını DataAdapters ile Güncelleştirme</span><span class="sxs-lookup"><span data-stu-id="f1abd-116">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="f1abd-117">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="f1abd-117">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="f1abd-118">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="f1abd-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

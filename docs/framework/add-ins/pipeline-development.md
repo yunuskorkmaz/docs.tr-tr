@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744583"
 ---
 # <a name="pipeline-development"></a><span data-ttu-id="5b0a2-102">Ardışık Düzen Geliştirme</span><span class="sxs-lookup"><span data-stu-id="5b0a2-102">Pipeline Development</span></span>
 <span data-ttu-id="5b0a2-103">Eklenti ardışık düzeni konak uygulama ve onun eklenti birbirleri ile iletişim kurmak için kullanması gereken ardışık düzeni kesimlerini yoludur.</span><span class="sxs-lookup"><span data-stu-id="5b0a2-103">The add-in pipeline is the path of pipeline segments that the host application and its add-in must use to communicate with each other.</span></span>  
