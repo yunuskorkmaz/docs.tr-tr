@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331678"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Nasıl yapılır: Metin Dosyasından Okuma (C# Programlama Kılavuzu)
 Statik yöntemler kullanarak bu örnek bir metin dosyasının içeriğini okur <xref:System.IO.File.ReadAllText%2A> ve <xref:System.IO.File.ReadAllLines%2A> gelen <xref:System.IO.File?displayProperty=nameWithType> sınıfı.  

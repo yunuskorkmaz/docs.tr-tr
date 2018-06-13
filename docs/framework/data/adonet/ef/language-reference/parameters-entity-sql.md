@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765080"
 ---
 # <a name="parameters-entity-sql"></a>Parametreler (varlık SQL)
 Parametreleridir dışında tanımlanan değişkenler [!INCLUDE[esql](../../../../../../includes/esql-md.md)], genellikle bir ana bilgisayar dil tarafından kullanılan bir bağlama API'si aracılığıyla. Her bir parametreyi bir ad ve bir türe sahip. Parametre adları sorgu ifadeleri ile tanımlanmış adresindeki (@) öneki olarak simge. Bu onları özellik adlarını veya sorguda tanımlanan diğer adları açıklar.  

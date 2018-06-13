@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760771"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities sorgu ifadeleri
 Tek değer, nesne, yöntemi veya ad alanı için değerlendirilen kodunun bir parçası olan bir ifadedir. İfade, bir hazır değer, bir yöntem çağrısı, bir işleç ve işlenenleri veya basit bir ad içerebilir. Basit adları bir değişken, türü üyesinin, yöntem parametresi, ad alanı veya türü adı olabilir. İfadeler sırayla diğer ifadeleri parametreleri veya yöntem çağrılarını sırayla diğer yöntem çağrıları, parametreleridir olarak kullanma işleçleri kullanabilirsiniz. Bu nedenle, ifadeler basitten için çok karmaşık aralığında değişebilir.  

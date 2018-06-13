@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758509"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET veri izleme
 ADO.NET özellikleri SQL Server, Oracle, OLE DB ve ODBC yanı için ADO.NET .NET veri sağlayıcıları tarafından desteklenen yerleşik veri izleme işlevselliği <xref:System.Data.DataSet>ve SQL Server ağ protokolleri.  

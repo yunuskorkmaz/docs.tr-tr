@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760251"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML'den veri kümesi şema bilgileri yükleniyor
 Şeması bir <xref:System.Data.DataSet> (kendi tablolar, sütunlar, ilişkileri ve kısıtlamalar) programlı olarak tarafından oluşturulan tanımlanabilir **doldurun** veya **FillSchema** yöntemlerinin bir <xref:System.Data.Common.DataAdapter>, veya gelen yüklenen bir XML belgesi. Yüklemek için **DataSet** şema bilgileri bir XML belgesinden kullanabilirsiniz **ReadXmlSchema** veya **InferXmlSchema** yöntemi **DataSet**. **ReadXmlSchema** yüklemek veya Infer sağlayan **DataSet** XML Şeması Tanım Dili (XSD) şeması veya satır içi XML Şeması XML belgesiyle içeren belgedeki şema bilgileri. **InferXmlSchema** belirttiğiniz belirli XML ad alanları yoksayılıyor sırasında şemasını XML belgesinden olanak tanır.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604594"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
 `Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturduğunu numaralandırmalar içerir. Bu kitaplık üyeleri yordamları, özellikleri ve kodunuzda kullanabilirsiniz sabit değerleri sağlayın. Her bir modül ve sınıf işlevselliğinin belirli bir kategoriye temsil eder.  

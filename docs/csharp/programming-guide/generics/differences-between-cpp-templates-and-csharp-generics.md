@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331691"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ Şablonları ve C# Genel Türleri Arasındaki Farklar (C# Programlama Kılavuzu)
 C# genel türleri ve C++ şablonları parametreli türleri için destek sağlayan iki dil özellikleridir. Bununla birlikte, ikisi arasındaki birçok farklılıklar vardır. Sözdizimi, C# genel türleri C++ şablonlarının KARMAŞASIZ parametreli türler için basit bir yaklaşım düzeyindedir. Ayrıca, C# tüm C++ şablonları sağlar işlevselliği sağlamak denemez. Uygulama düzeyinde birincil çalışma zamanında C# genel tür kısaltmaları gerçekleştirilir ve genel tür bilgileri için örnek nesneleri böylece korunur farktır. Daha fazla bilgi için bkz: [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  

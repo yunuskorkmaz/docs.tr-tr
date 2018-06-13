@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759029"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn eşlemeleri
 A **DataAdapter** sıfır veya daha fazla koleksiyonu içeren <xref:System.Data.Common.DataTableMapping> nesnelerini kendi **TableMappings** özelliği. A **DataTableMapping** bir veri kaynağına karşı sorgu sağlayıcıdan döndürülen verileri arasında ana bir eşleme sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı yerine geçirilebilir **DataTable** için ad **doldurun** yöntemi **DataAdapter**. Aşağıdaki örnekte bir **DataTableMapping** adlı **AuthorsMapping** için **yazarlar** tablo.  

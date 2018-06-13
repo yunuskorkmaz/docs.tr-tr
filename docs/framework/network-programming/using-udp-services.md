@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397640"
 ---
 # <a name="using-udp-services"></a>UDP Hizmetleri kullanma
 <xref:System.Net.Sockets.UdpClient> Sınıfı için UDP kullanan ağ hizmetleri ile iletişim kurar. Özellikleri ve yöntemleri <xref:System.Net.Sockets.UdpClient> oluşturma ayrıntılarını soyut sınıf bir <xref:System.Net.Sockets.Socket> isteme ve UDP kullanarak veri almak için.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766406"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
 Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu de nasıl bu bilgileri sıralanmış, gruplandırılmış ve, döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntemler kümesi sağlar. Bu yöntemlerin çoğu sıraları üzerinde çalışır; Bu bağlamda, türü uygulayan bir nesne sırasıdır <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevi filtreleme, yansıtma, toplama, sıralama, gruplandırma, disk belleği ve daha fazlasını içerir. Bazıları, böylece sorgu ifade sözdizimi kullanılarak çağrılabilir işleçleri anahtar sözcüğü sözdizimi ayrılmış standart sorgu sık kullanılır. Bir sorgu ifadesi, bir sorgu tabanlı yöntemini eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi yan tümceleri derleme zamanında sorgu yöntemleri çağrıları içine çevrilir. Eşdeğer sorgu ifadesi yan tümceleri sahip standart sorgu işleçleri listesi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

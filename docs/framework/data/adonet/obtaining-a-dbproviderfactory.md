@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759471"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Bir DbProviderFactory alma
 Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıcısı hakkında bilgi geçirilmesi ile ilgilidir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adına sahip bir dize. Bir aşırı yüklemesini `GetFactory` geçen bir <xref:System.Data.DataRow>. Sağlayıcı fabrikası oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Bazı yöntemlerinden birini bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566239"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Geçirgenlik maskeleri bölümleri bir öğe veya görselin saydam veya kısmen saydam yapmanızı sağlar. Geçirgenlik maskesi oluşturmak için uygulamanız bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği, bir öğenin veya <xref:System.Windows.Media.Visual>.  Öğe veya görsel fırça eşlenen ve her fırça piksel geçirgenlik değeri karşılık gelen her piksel öğe veya görselin sonuç geçirgenliğini belirlemek için kullanılır.  

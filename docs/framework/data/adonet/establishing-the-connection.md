@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766146"
 ---
 # <a name="establishing-the-connection"></a>Bağlantı oluşturma
 Microsoft SQL Server veritabanına bağlanırken kullanacağı <xref:System.Data.SqlClient.SqlConnection> SQL Server için .NET Framework veri sağlayıcısı nesnesi. Bir OLE DB veri kaynağına bağlanırken kullanacağı <xref:System.Data.OleDb.OleDbConnection> OLE DB için .NET Framework veri sağlayıcısı nesnesi. Bir ODBC veri kaynağına bağlanmak için kullanmak <xref:System.Data.Odbc.OdbcConnection> ODBC için .NET Framework veri sağlayıcısı nesnesi. Bir Oracle veri kaynağına bağlanırken kullanacağı <xref:System.Data.OracleClient.OracleConnection> Oracle için .NET Framework veri sağlayıcısı nesnesi. Güvenli bir şekilde depolamak ve bağlantı dizeleri alma için bkz: [koruma bağlantı bilgilerini](../../../../docs/framework/data/adonet/protecting-connection-information.md).  

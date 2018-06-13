@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759744"
 ---
 # <a name="datatable-constraints"></a>DataTable kısıtlamaları
 Kısıtlamaları verileri kısıtlamalar uygulamak için kullanabileceğiniz bir <xref:System.Data.DataTable>, veri bütünlüğünü korumak için. Uygulanan bir otomatik kuralı bir kısıtlamadır bir sütun veya ilgili sütunları için belirleyen eylem seyri bir satır değerinin şekilde değiştirildiğinde. Kısıtlamaları zorlanmaz zaman `System.Data.DataSet.EnforceConstraints` özelliği <xref:System.Data.DataSet> olan **doğru**. Nasıl ayarlanacağı gösteren kod örneği için `EnforceConstraints` özelliği, bkz: <xref:System.Data.DataSet.EnforceConstraints%2A> başvuru konusu.  

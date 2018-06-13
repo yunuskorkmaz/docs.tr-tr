@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759965"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma
 Bu konuda nasıl oluşturulacağını gösteren bir örnek sağlar bir <xref:System.Data.EntityClient.EntityConnection>.  

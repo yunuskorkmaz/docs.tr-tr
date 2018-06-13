@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397695"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Görev Paralel Kitaplığı ve PLINQ'da ETW Olayları
 Görev paralel kitaplığı ve PLINQ'da profil ve uygulamaları Windows Performans Çözümleyicisi'ni gibi araçları kullanarak sorun gidermek için kullanabileceğiniz olay izleme için Windows (ETW) olayları oluşturur. Ancak, çoğu senaryoda, profil paralel uygulama kodu en iyi yolu kullanmaktır [eşzamanlılık görselleştiricisi](/visualstudio/profiling/concurrency-visualizer) içinde [!INCLUDE[vsUltShort](../../../includes/vsultshort-md.md)].  

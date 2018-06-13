@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758899"
 ---
 # <a name="local-transactions"></a>Yerel işlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] iş tek bir birim olarak execute birden çok görev birbirine bağlamak istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, bir tablo sipariş bilgilerle güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirmeleri, öğeleri borçlandırılacağı sıralı. Her iki görev başarısız olursa, güncelleştirmelerinin her ikisini de geri alınır.  

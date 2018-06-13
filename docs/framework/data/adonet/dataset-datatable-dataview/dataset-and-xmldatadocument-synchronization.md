@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759172"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Veri kümesi ve XmlDataDocument eşitleme
 ADO.NET <xref:System.Data.DataSet> ile ilişkisel bir veri gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework kullanılabilen XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki veri sunumu ayrı olarak kullanıldı. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik gösterimlerini gerçek zamanlı, zaman uyumlu erişimini etkinleştirir **DataSet** nesne ve <xref:System.Xml.XmlDataDocument> nesnesi, sırasıyla.  

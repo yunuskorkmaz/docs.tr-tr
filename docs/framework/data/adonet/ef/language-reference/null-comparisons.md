@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761278"
 ---
 # <a name="null-comparisons"></a>Null karşılaştırmaları
 A `null` veri kaynağındaki değer, değer bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, kontrol edebilirsiniz null değerleri bu nedenle, bazı hesaplamalar veya karşılaştırmaları yalnızca geçerli veya boş olan satırlar üzerinde gerçekleştirilen veri. CLR null semantiği, ancak veri kaynağı null semantiği farklı olabilir. Çoğu veritabanları, null karşılaştırma işlemek için üç değerli mantığı sürümünü kullanın. Diğer bir deyişle, bir null değer karşılaştırmak için değerlendirmez `true` veya `false`, için değerlendirir `unknown`. Genellikle bu ANSI null değerlere uygulamasıdır, ancak bu her zaman geçerli değildir.  

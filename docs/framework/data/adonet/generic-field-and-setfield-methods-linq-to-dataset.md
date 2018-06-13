@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767017"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Genel alan ve SetField yöntemleri (LINQ-DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] için genişletme yöntemleri sağlar <xref:System.Data.DataRow> sütun değerlerini erişmek için sınıf: <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi. Bu yöntemler, geliştiriciler, özellikle ilgili null değerler için sütun değerlerini daha kolay erişim sağlar. <xref:System.Data.DataSet> Kullanan <xref:System.DBNull.Value> ise null değerleri temsil etmek için [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sunulan boş değer atanabilir tür destek kullanan [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Önceden varolan sütun erişimcisi kullanarak <xref:System.Data.DataRow> dönüş nesnenin uygun türe gerektirir. Belirli bir alanda varsa bir <xref:System.Data.DataRow> null değerini açıkça denetlemelisiniz döndürmek için null olabilir <xref:System.DBNull.Value> ve örtük olarak başka bir tür döndürüleceğini atama bir <xref:System.InvalidCastException>. Aşağıdaki örnekte, <xref:System.Data.DataRow.IsNull%2A> yöntemi değil denetlemek için kullanılan bir null değer özel durum dizin oluşturucu döndürülürse <xref:System.DBNull.Value> ve hangisine yayınlayacağınızı denenen bir <xref:System.String>.  

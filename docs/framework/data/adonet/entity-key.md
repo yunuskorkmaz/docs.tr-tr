@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765002"
 ---
 # <a name="entity-key"></a>Varlık anahtarı
 Bir *Varlık anahtarı* olan bir [özelliği](../../../../docs/framework/data/adonet/property.md) veya özelliklerini kümesi bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) kimliğini belirlemek için kullanılır. Bir varlık anahtarı oluşturan özellikleri tasarım zamanında seçilir. Varlık anahtarı özelliklerinin değerlerini bir varlık türü örneği içinde tanımlamalıdır bir [varlık kümesini](../../../../docs/framework/data/adonet/entity-set.md) çalışma zamanında. Bir varlık kümesindeki örnekleri benzersizliğini güvence altına almak için varlık anahtarı oluşturan özellikleri seçilmelidir.  

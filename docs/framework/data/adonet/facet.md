@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762429"
 ---
 # <a name="facet"></a>facet
 A *modeli* bir ilkel tür özelliği tanımına ayrıntı eklemek için kullanılır. A [özelliği](../../../../docs/framework/data/adonet/property.md) tanımını özellik türü hakkında bilgi içerir, ancak genellikle daha fazla ayrıntı gereklidir. Örneğin, bir varlık türü kavramsal modelde türünde bir özellik olabilir `String` değeri ayarlanamıyor null. Modeller, bu düzeyde ayrıntı belirtmenize olanak verir.  

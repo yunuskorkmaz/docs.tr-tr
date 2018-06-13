@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590900"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
 Bu örnek, müşterilere, ürünler, siparişler ve Sipariş ayrıntılarını bellek içi koleksiyonlara dönüştürme yöntemleri ile birlikte .csv biçiminde örnek veri içerir. PLINQ ile daha fazla deneme için bu konudaki kod kod örnekleri belirli bir konulardan yapıştırın ve ondan çağırma `Main` yöntemi. Bu veri içeren kendi PLINQ sorguları de kullanabilirsiniz.  

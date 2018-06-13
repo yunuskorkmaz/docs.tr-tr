@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398085"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; Öğesi (.NET Yerel)
 Bir sınıf veya yapı gibi belirli türde bir çalışma zamanı ilke uygulanır.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756559"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Bir veri kümesine bir XSLT dönüşümü uygulanarak
 **WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **DataSet** XML verileri olarak. Bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime Dönüştür ortak bir görevdir. Ancak, eşitleme bir **DataSet** ile bir <xref:System.Xml.XmlDataDocument> XSLT stil sayfası içeriği için uygulamanızı sağlar bir **DataSet** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** XML verileri kullanarak olarak **WriteXml**.  

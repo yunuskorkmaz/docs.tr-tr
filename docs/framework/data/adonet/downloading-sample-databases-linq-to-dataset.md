@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763059"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ-DataSet) yükleniyor
 Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz Microsoft sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri SQL Server veri deposu olarak kullanın. SQL Server Express ücretsiz kullanılabilir olan Edition yerine SQL Server veri deposu olarak da kullanılabilir.  

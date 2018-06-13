@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758363"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Varolan kısıtlamaları bir veri kümesine ekleme
 **Doldurun** yöntemi **DataAdapter** doldurur bir <xref:System.Data.DataSet> yalnızca tablo sütunları ve satırları veri kaynağından; sahip ancak kısıtlamaları yaygın olarak ayarlanmış veri kaynağı tarafından **doldurun** yöntemi için bu şema bilgileri eklemez **DataSet** varsayılan olarak. Doldurmak için bir **DataSet** ya da arama yapabileceğiniz bir veri kaynağından var olan birincil anahtar kısıtlaması bilgilerle **FillSchema** yöntemi **DataAdapter**, veya ayarlayın **MissingSchemaAction** özelliği **DataAdapter** için **AddWithKey** çağırmadan önce **doldurun**. Bu birincil anahtara sağlayacak kısıtlamalar **veri kümesi** bu veri kaynağında yansıtır. Yabancı anahtar kısıtlaması bilgileri dahil değildir ve açıkça gösterildiği gibi oluşturulmalıdır [DataTable kısıtlamalarını](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

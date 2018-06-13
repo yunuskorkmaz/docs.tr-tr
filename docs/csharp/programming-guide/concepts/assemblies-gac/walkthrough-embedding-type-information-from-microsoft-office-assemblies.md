@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324531"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>İzlenecek yol: Visual Studio'da (C#) Microsoft Office derlemelerinden tür bilgilerini katıştırma
 COM nesneleri başvuruda bulunan bir uygulamada tür bilgilerini katıştırma, birincil birlikte çalışma derlemesi (PIA) gereksinimini ortadan kaldırabilirsiniz. Ayrıca, katıştırılmış tür bilgisi sürüm bağımsızlığı, uygulamanız için elde etmenizi sağlar. Diğer bir deyişle, programınız belirli PIA her sürüm için gerek kalmadan COM kitaplığı birden fazla sürümünü türlerinden kullanacak şekilde yazılabilir. Bu, Microsoft Office kitaplıklarından nesneleri kullanan uygulamalar için ortak bir senaryodur. Tür bilgilerini katıştırma farklı sürümlerini Microsoft Office programı veya Microsoft Office her sürümü PIA yeniden dağıtmak zorunda kalmadan farklı bilgisayarlarda çalışmak için bir programın aynı yapı sağlar.  

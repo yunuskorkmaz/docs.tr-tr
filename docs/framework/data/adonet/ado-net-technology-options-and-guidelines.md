@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758223"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modellerde programlamak için bunları etkinleştirerek geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu yayın stratejidir. Bu platform ADO.NET Entity Framework ve ilgili teknolojileri içerir.  

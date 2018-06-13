@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758847"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 <xref:System.Data.DataSet> Kısmen Kolay Aktarım verilerin Internet üzerinden kolaylaştırmak için bağlantısı kesik bir tasarım, tasarlanmış. **DataSet** bir girdi olarak belirtilebilir veya ek bir kodlama olmadan XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **DataSet** bir XML Web hizmeti bir istemci ve geri. **DataSet** biçimini kullanarak bir XML akışı örtük olarak dönüştürülen, ağ üzerinden gönderilen ve XML akışından yeniden bir **DataSet** alan uçta. Bu, çok basit ve esnek bir yöntemdir iletmek ve XML Web Hizmetleri ile ilişkisel veri döndürmek için sunar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

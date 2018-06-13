@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766549"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Varlık FrameworkTypes SqlClient
 SQL Server (SqlClient) sağlayıcı bildirim dosyası için .NET Framework veri sağlayıcısı sağlayıcısı ilkel türler, her bir türü için modelleri kavramsal ve depolama modeli ilkel türlerini ve yükseltme ve dönüştürme arasındaki eşlemeleri listesini içerir kavramsal ve depolama modeli ilkel türlerini arasındaki kuralları.  

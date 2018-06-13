@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336358"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda giriş dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ bildirim temelli sorgu sözdizimi kullanılarak yazılır. Bununla birlikte, kod derlendiğinde sorgu söz dizimi .NET ortak dil çalışma zamanı (CLR) için yöntem çağrılarını içine çevrilmelidir. Bu yöntem çağrılarını gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu sözdizimi yerine doğrudan yöntemi sözdizimini kullanarak bunları çağırabilirsiniz.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566489"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, uygulama türlerini veya derlemeler için XAML ilişkili bir senaryo olan .NET Framework tanımlanan diğer CLR öznitelikleri açıklanmaktadır. Derlemeler, türleri ve üyeleri bu CLR öznitelikleri ile öznitelik atanıyor, türleriyle ilgili XAML tür sistem bilgileri sağlar. XAML düğümü akışı doğrudan işlemek için veya ayrılmış XAML okuyucuları ve XAML yazıcılarının aracılığıyla .NET Framework XAML hizmetleri kullanan tüm XAML tüketici için bilgi sağlanmaktadır.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394887"
 ---
 # <a name="automatic-proxy-detection"></a>Otomatik Proxy algılama
 Otomatik proxy algılama olarak bir Web proxy sunucusu sistem tarafından tanımlanan ve istemci adına istekleri göndermek için kullanılan bir işlemdir. Bu özellik Web Proxy Otomatik Bulma (WPAD) de denir. Otomatik proxy algılaması etkinleştirildiğinde, sistem istek için kullanılan proxy kümesi döndürmek için sorumlu olduğu bir proxy yapılandırması komut dosyası bulmaya çalışır. Proxy yapılandırması komut dosyası bulunursa, komut dosyasını karşıdan derlenmiş ve kullanan bir istek için proxy bilgileri, istek akışı veya yanıtı alındığında yerel bilgisayarda çalıştırmak bir <xref:System.Net.WebProxy> örneği.  

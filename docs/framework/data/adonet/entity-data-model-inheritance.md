@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765275"
 ---
 # <a name="entity-data-model-inheritance"></a>Varlık veri modeli: devralma
 Varlık veri modeli (EDM) için devralma destekleyen [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md). EDM devralma nesne odaklı programlama dillerinde sınıfları için devralma benzer. Nesne odaklı dillerde sınıflarıyla kavramsal modelde bir varlık türü tanımlayabilirsiniz gibi (bir *türetilen türün*) başka bir varlık türünden devralan ( *temel türü*). Ancak, nesne odaklı programlama sınıflarında, kavramsal modelde türetilmiş bir tür her zaman tüm devralır [özellikleri](../../../../docs/framework/data/adonet/property.md) ve [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) temel türü. Türetilmiş bir tür devralınan özelliklerinde geçersiz kılamaz.  

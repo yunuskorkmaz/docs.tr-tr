@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590953"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic'te Dosya ve Dizin Oluşturma, Silme ve Taşıma
 Bu bölümde oluşturma, silme, taşıma ve dosyaları ve dizinleri Visual Basic'te yeniden adlandırma ile ilişkili görevleri listeler.  

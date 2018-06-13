@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336404"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 Bir dizi deyimi içeren kod bloğu bir yöntemdir. Bir program yöntemini çağırarak ve tüm gerekli yöntemi bağımsız değişkenleri belirtme yürütülecek deyimleri neden olur. C# ' ta yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. Main yöntemi her C# uygulaması için giriş noktasıdır ve program başlatıldığında, ortak dil çalışma zamanı tarafından (CLR) adı verilir.  

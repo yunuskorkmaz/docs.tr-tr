@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395238"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlama
 Konum temelli önbellek ilkeleri açıkça istenen kaynak konumunu temelinde önbelleğe alma davranışını tanımlamak bir uygulama sağlar. Bu konuda, önbellek ilkesini programlı olarak ayarlama gösterilir. Yapılandırma dosyalarını kullanarak bir uygulama için ilke ayarlama hakkında daha fazla bilgi için bkz: [ \<requestCaching > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  

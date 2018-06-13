@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758834"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>DataTable bir sorgu (LINQ-DataSet) oluşturuluyor
 Veri bağlama olduğu ortak bir kullanımını <xref:System.Data.DataTable> nesnesi. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi bir sorgunun sonuçlarını alır ve verileri kopyalayan bir <xref:System.Data.DataTable>, ardından kullanılabileceği için veri bağlama. Veri işlemleri zaman gerçekleştirmiş, yeni <xref:System.Data.DataTable> yeniden kaynağına birleştirilmiş <xref:System.Data.DataTable>.  

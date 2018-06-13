@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566905"
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
 Bu konuda nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> Animasyonların düzenlenmesi ve nesnelere. Etkileşimli olarak nasıl işleneceğini açıklayan <xref:System.Windows.Media.Animation.Storyboard> nesneleri ve dolaylı özellik hedeflemesi sözdizimini açıklar.  

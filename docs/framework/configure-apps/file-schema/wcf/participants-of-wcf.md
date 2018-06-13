@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748470"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>WCF &lt;katılımcıları&gt;
 Çalışma zamanı ' doğrudan gösterilmesini izleme kayıtları dinleme ve yapılandırılmış olan herhangi bir şekilde işleyen katılımcıları izleme listesini yapılandırın. Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.  

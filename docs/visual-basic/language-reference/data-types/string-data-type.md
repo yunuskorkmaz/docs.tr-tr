@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592125"
 ---
 # <a name="string-data-type-visual-basic"></a>Dize Veri Türü (Visual Basic)
 İmzasız 16-bit (2-bayt) kod noktaları dizilerini bu aralık 0 ile 65535 arasında bir değer olarak tutar. Her *kod noktası*, veya karakter kodu, tek bir Unicode karakteri temsil eder. Bir dize 0'dan yaklaşık iki milyardan içerebilir (2 ^ 31) Unicode karakterler.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763676"
 ---
 # <a name="merging-dataset-contents"></a>Veri kümesi içeriği birleştirme
 Kullanabileceğiniz <xref:System.Data.DataSet.Merge%2A> içeriğini birleştirmek için yöntemi bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, veya <xref:System.Data.DataRow> içine var olan bir dizi `DataSet`. Çeşitli Etkenler ve seçenekleri yeni verilerin nasıl etkiler varolan içine birleştirilir `DataSet`.  

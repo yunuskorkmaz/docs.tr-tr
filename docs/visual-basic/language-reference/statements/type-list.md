@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605296"
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 Belirtir *tür parametrelerindeki* için bir *genel* programlama öğesidir. Birden çok parametre virgülle ayrılır. Aşağıdaki bir tür parametresi sözdizimi aşağıdaki gibidir.  

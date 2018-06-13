@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758170"
 ---
 # <a name="connection-events"></a>Bağlantı olayları
 Tüm .NET Framework veri sağlayıcısı **bağlantı** bilgilendirici iletileri bir veri kaynağından veri almak veya belirlemek için kullanabileceğiniz iki olay nesneleriyle durumunu bir **bağlantı** sahip değiştirildi. Aşağıdaki tabloda olayların açıklanmaktadır **bağlantı** nesnesi.  

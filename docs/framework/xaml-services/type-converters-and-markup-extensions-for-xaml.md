@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565869"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücüleri ve İşaretleme uzantıları Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazıcılarının kullanan iki tekniklerle aynıdır. Bazı özellikleri paylaşır rağmen tür dönüştürücüleri ve İşaretleme uzantıları farklı bir XAML düğüm akış gösterilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantıları ve benzer yapıları bazen topluca için değer dönüştürücüler bilinir.  

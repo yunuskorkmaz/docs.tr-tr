@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604022"
 ---
 # <a name="-operator-visual-basic"></a>+= İşleci (Visual Basic)
 Sayısal bir ifadenin değerini sayısal değişken veya özellik değerine ekler ve değişken ya da özelliği için sonuç atar. Birleştirmek için de kullanılabilir bir `String` ifade bir `String` değişkeni veya özellik ve ata değişken veya özellik sonucu.  

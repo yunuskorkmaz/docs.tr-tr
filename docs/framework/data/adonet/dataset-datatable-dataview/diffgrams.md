@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760040"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğeleri geçerli ve özgün sürümleri tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yükleme ve içeriği kalır ve içeriğini taşıma için bir ağ bağlantısı üzerinden serileştirmek için biçimini kullanır. Zaman bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru bir şekilde içeriği ancak şema değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hata bilgilerini ve satır sırası.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753748"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;ekleme&gt; öğesi connectionManagement (ağ ayarları) için
 Bir IP adresi veya DNS adı bağlantısı Yönetim listesine ekler.  

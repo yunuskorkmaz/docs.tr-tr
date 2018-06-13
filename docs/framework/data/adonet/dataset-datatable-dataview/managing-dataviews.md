@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757911"
 ---
 # <a name="managing-dataviews"></a>DataView yönetme
 Kullanabileceğiniz bir <xref:System.Data.DataViewManager> tüm tablolarda görünüm ayarlarını yönetmek için bir <xref:System.Data.DataView>. Bir kılavuz gibi birden çok tablo bağlamak istediğiniz bir denetim varsa ilişkileri varlıklardan bir **DataViewManager** idealdir.  

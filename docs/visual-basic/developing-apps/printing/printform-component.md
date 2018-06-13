@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591414"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm Bileşeni (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Bileşeni için Visual Basic çalışma zamanında bir Windows Form görüntüsü yazdırma olanak sağlar. ' Nın davranışını değiştirir `PrintForm` Visual Basic önceki sürümlerinde yöntemi.  

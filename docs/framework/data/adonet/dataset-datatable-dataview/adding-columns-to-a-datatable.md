@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760472"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable tablosuna sütun ekleme
 A <xref:System.Data.DataTable> bir koleksiyonu içerir <xref:System.Data.DataColumn> tarafından başvurulan nesneler **sütunları** tablosunun özelliği. Tüm kısıtlamaları birlikte sütun bu koleksiyonu şema veya tablo yapısını tanımlar.  

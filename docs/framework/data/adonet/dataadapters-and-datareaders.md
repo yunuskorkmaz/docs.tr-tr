@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758106"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReader
 ADO.NET kullanabilirsiniz **DataReader** bir veritabanından veri salt okunur, yalnızca ileri akışı alınamadı. Sonuçları sorgu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabelleği depolanan gibi döndürülür kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir olduğunda hemen verileri alarak ve (varsayılan) uygulama performansını artırabilirsiniz sistem yükünü azaltma bellekte bir anda yalnızca bir satır depolama.  

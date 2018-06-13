@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749988"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; öğesi
 Uygulamanın yalnızca sürüm 1.0 ortak dil çalışma zamanı desteklediğini belirtir. Bu öğe kullanım dışıdır ve artık kullanılmalıdır. [ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.

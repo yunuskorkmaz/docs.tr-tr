@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321619"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Nasıl yapılır: Proje bir nesne grafiğinin (C#)
 Bu konu, proje veya doldurmak, bir nesne grafiğinin XML göstermektedir.  

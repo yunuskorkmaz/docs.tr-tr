@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749549"
 ---
 # <a name="lttokenrequestparametersgt"></a>&lt;tokenRequestParameters&gt;
 Bu yapılandırma öğesi ileti gövdesini güvenlik belirteci hizmeti için bir belirteç isterken gönderilmek üzere ek XML öğeleri belirtmek için kullanılan alt öğeleri içerir.  

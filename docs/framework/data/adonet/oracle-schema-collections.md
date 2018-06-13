@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766861"
 ---
 # <a name="oracle-schema-collections"></a>Oracle şema koleksiyonları
 Oracle için Microsoft .NET Framework veri sağlayıcısı ortak şeması koleksiyonları ek olarak aşağıdaki belirli şeması koleksiyonları destekler:  

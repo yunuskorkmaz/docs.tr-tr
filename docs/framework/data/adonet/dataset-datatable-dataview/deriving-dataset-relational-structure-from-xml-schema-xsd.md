@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759614"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Türetilen DataSet ilişkisel yapısından XML Şeması (XSD)
 Bu bölüm, nasıl bir bakış sağlar ve ilişkisel şema bir `DataSet` XML Şeması Tanım Dili (XSD) şema belgesi yerleşik olarak bulunur. Genel olarak, her biri için `complexType` şema öğesinin alt öğesi, bir tablo üretilir `DataSet`. Tablo yapısı karmaşık tür tanımı tarafından belirlenir. Tabloları oluşturulan `DataSet` şemanın en üst düzey öğe. Ancak, bir tablo yalnızca bir üst düzey için oluşturulan `complexType` öğesi zaman `complexType` öğesiyle başka içe `complexType` öğesi, iç içe durumda `complexType` öğesi eşleştirilir bir `DataTable` içinde `DataSet`.  

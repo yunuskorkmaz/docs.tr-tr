@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395979"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 Uygulamanızı serileştirir ve nesneleri seri durumdan çıkarır, çalışma zamanı yönergeleri girişleri eklemeniz gerekebilir (. rd.xml) dosyası gerekli meta veri çalışma zamanında mevcut olduğundan emin olun. Serileştiricileri iki kategorisi vardır ve her çalışma zamanı yönergeleri dosyanızda farklı işleme gerektirir:  

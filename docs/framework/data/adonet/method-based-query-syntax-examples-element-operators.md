@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764157"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Yöntem temelli sorgu sözdizimi örnekler: Öğesi işleçleri (LINQ-DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.First%2A> ve <xref:System.Linq.Enumerable.ElementAt%2A> almak için yöntemleri <xref:System.Data.DataRow> öğelerinden bir <xref:System.Data.DataSet> sorgu ifade sözdizimi kullanarak.  

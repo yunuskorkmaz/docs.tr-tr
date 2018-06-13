@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746091"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; öğesi
 Ortak dil çalışma zamanı üzerinde karma kodlarını dizeleri hesaplar olup olmadığını belirleyen bir uygulama etki alanı temelinde.  

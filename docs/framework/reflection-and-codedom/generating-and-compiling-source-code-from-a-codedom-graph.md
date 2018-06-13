@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397019"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
 <xref:System.CodeDom.Compiler> Ad alanı, CodeDOM nesne grafikleri gelen kaynak kodu oluşturma ve derleme desteklenen derleyicileri ile yönetme için arabirim sağlar. Kod sağlayıcının belirli bir programlama dili CodeDOM grafiğe göre kaynak kodunda üretebilir. Öğesinden türeyen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> yöntemler kodu oluşturma ve dil sağlayıcısı Desteler derleme için genellikle sağlayabilir.  

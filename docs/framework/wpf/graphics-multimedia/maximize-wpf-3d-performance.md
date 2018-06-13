@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565444"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3B Performansını En Üst Düzeye Çıkarma
 Kullandığınız gibi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3B denetimleri oluşturmak ve 3B Sahne uygulamalarınızda dahil etmek için performans en iyi duruma getirme göz önünde bulundurmanız önemlidir. Bu konu, 3B sınıfları ve performans etkileri birlikte kullanıldıklarında performansını iyileştirmek için önerilerini uygulamanız için sahip özellikler listesini sağlar.  

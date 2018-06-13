@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322555"
 ---
 # <a name="functional-transformation-of-xml-c"></a>İşlev dönüştürme XML (C#)
 Bu konu, XML belgelerini değiştirme saf işlev dönüştürme yaklaşım açıklar ve yordam bir yaklaşım ile karşılaştırır.  

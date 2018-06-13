@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567594"
 ---
 # <a name="manipulating-strings-in-net"></a>.NET dizeleri düzenleme
 .NET verimli bir şekilde oluşturmak, karşılaştırın ve dizeleri değiştirmek etkinleştirmeniz yanı sıra büyük miktarlarda metin ve veri aramak, kaldırmak ve metin kalıplarını değiştirmek için hızla ayrıştırma yordamları kapsamlı bir kümesini sağlar.  

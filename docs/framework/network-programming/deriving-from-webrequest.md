@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396824"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest türetme
 <xref:System.Net.WebRequest> Sınıfı, .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan bir Özet temel sınıf. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  

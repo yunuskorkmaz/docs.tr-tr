@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566749"
 ---
 # <a name="property-animation-techniques-overview"></a>Özellik Animasyon Tekniklerine Genel Bakış
 Bu konu özellikleri için farklı yaklaşımlara açıklar: film şeritleri, yerel animasyonları, saatler ve çerçeve başına animasyonları.  

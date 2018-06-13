@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398241"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alanı denetimleri dize sıralama ve nasıl platform çağırma bulur işlevi DLL adlarında belirler. Bu konuda iki davranışları açıklanmaktadır.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396360"
 ---
 # <a name="stack-etw-event"></a>Yığın ETW Olayı
 Yığın olayı diğer olaylar ile birlikte bir olay tetiklenir sonra Yığın izlemeleri oluşturmak için kullanılmalıdır. Çalışma zamanı sağlayıcısı etkinleştirildiğinde kaydedilir. Başka bir çalışma zamanı olay tetiklenir her tetiklenir çok sık olay olmasıdır. Bu nedenle, bu olay dikkatli bir şekilde kullanmanızı öneririz.  
