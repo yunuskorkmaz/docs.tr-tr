@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644387"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Arkadaş derlemeler (Visual Basic)
 A *derlemeyi* başka bir derlemenin erişebileceği bir derleme [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) türleri ve üyeleri. Derleme bir derlemeyi olarak belirlerseniz, artık işareti türleri ve bunları sırayla genel olarak üyeleri diğer derlemelerden tarafından erişilecek yok. Bu özellikle aşağıdaki senaryolarda kullanışlıdır:  

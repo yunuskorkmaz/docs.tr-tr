@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642083"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bul (XPath-LINQ-XML) belirli bir özniteliği olan öğeleri (Visual Basic)
 Bazen belirli bir özniteliği olan tüm öğeleri bulmak istediğiniz. Öznitelik içeriği hakkında ilgili değildir. Bunun yerine, seçmek öznitelik varlığını temel istiyor.  

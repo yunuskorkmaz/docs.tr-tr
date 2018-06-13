@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638384"
 ---
 # <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a>Varsayılan örneği sınıf kurucusunda bir sınıfın kullanımını sonsuz özyinelemeli çağrısına neden olabilir
 Bir sınıfın varsayılan bir örnek sınıf oluşturucuda kullanıldı. Bu, bir sonsuz Özyinelemeli çağrı olarak da bilinen sonsuz bir döngüde neden olabilir.  

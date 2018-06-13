@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647910"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Bir genişletme yöntemi (Visual Basic) kullanarak yeniden düzenleme
 Bu örnek önceki örnekte olduğu derlemeler [(Visual Basic) paragrafları metin alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), bir genişletme yöntemi uygulanan saf işlevi kullanarak dizeleri birleşimini yeniden düzenleme tarafından.  

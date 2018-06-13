@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597366"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 Bir yordam parametresini belirtilen türdeki öğeleri isteğe bağlı bir dizi aldığını belirtir. `ParamArray` parametre listesi yalnızca son parametresinin kullanılabilir.  

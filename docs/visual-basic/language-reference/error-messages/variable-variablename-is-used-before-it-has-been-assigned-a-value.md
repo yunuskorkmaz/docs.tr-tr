@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596925"
 ---
 # <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>Değişken &#39; &lt;variablename&gt; &#39; bir değer atanan önce kullanıldı
 Değişken '\<variablename >' değeri atanmış önce kullanılır. Bir null başvuru özel durumu, çalışma zamanında neden olabilir.  

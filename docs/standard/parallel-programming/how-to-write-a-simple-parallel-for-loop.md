@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586149"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma
 Bu konu, gösteren iki örnek içerir <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. İlk kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> yöntemi aşırı yüklemesini ve ikinci kullandığı <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> aşırı yüklemesi, iki basit aşırı <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi. Bu iki aşırı kullanabilirsiniz <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> döngüsünü iptal etmek gerekmediğinde yöntemi bölün döngüsü yinelemeleri dışında ya da herhangi bir iş parçacığı yerel durumu korumak.  

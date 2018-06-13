@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638407"
 ---
 # <a name="internal-error-visual-basic"></a>İç hata (Visual Basic)
 Visual Basic'te bir iç hatası oluştu.  

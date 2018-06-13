@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597516"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Çıkış dosyası yazılamıyor &#39; &lt;filename&gt;&#39;: &lt;hata&gt;
 Dosya oluşturulurken hata oluştu.  

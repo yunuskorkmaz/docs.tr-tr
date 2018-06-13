@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597327"
 ---
 # <a name="my-reference-visual-basic"></a>Başvurum (Visual Basic)
 `My` Özelliği, sezgisel erişim yaygın olarak kullanılan yöntemleri, özellikleri ve olayları vererek programlama daha hızlı ve kolay hale getirir. Bu tabloda yer alan nesneleri `My`ve her birinin gerçekleştirilen eylemler.  

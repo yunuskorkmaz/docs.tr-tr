@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645297"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Bir XML bildirimi (Visual Basic) ile seri hale getirme
 Bu konu, serileştirme bir XML bildirimi oluşturup oluşturmayacağını denetlemek açıklar.  

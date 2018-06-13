@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637618"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>İfade &#39; &lt;adı&gt; &#39; bir yordam değil, ancak bir yordam çağrısı hedefi olarak oluşuyor
 Bir yordam bir yordam değil bir ifade çağrısı yapıldı.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586175"
 ---
 # <a name="internal-error-happened-at-ltlocationgt"></a>İç hata oluştu &lt;konumu&gt;
 Bir iç hata oluştu. Gerçekleştiği satır hata iletisinde yer alır.  

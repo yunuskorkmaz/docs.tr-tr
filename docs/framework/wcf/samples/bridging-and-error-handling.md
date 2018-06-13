@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804397"
 ---
 # <a name="bridging-and-error-handling"></a>Köprü Oluşturma ve Hata İşleme
 Bu örnek, bir istemci ile farklı bağlamaları kullanan bir hizmeti arasındaki iletişimi köprüleme Windows Communication Foundation (WCF) yönlendirme hizmeti nasıl kullanıldığını gösterir. Bu örnek ayrıca yedekleme Hizmeti'nin yük devretme senaryoları için nasıl kullanılacağını gösterir. Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar.  

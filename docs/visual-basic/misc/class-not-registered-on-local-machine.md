@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638393"
 ---
 # <a name="class-not-registered-on-local-machine"></a>Yerel makinede kaydedilmemiş sınıfı
 Bu hata genellikle sonucunda bozuk bir dosya ile karşılaşıldı. Visual Studio yeniden yüklemeniz gerekebilir.  

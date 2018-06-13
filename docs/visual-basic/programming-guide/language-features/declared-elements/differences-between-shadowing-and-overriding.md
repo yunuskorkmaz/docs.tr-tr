@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649639"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Gölgeleme ve Geçersiz Kılma Arasındaki Farklar (Visual Basic)
 Taban sınıfından devralan bir sınıf tanımladığınızda, bazen bir veya daha fazla türetilmiş sınıflarda temel sınıf öğe yeniden tanımlamak istiyor. Gölgeleme ve geçersiz kılma kullanılabilir hem de bu amaç için var.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583246"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
 Bu belge, iletileri yazma ve veri akışı bloğundan iletiler okuma TPL veri akışı kitaplığı kullanmayı açıklar. TPL veri akışı kitaplığı iletileri ve bir veri akışı bloğu okuma iletilerden yazmak için zaman uyumlu ve zaman uyumsuz yöntemleri sağlar. Bu belgede <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfı. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletilerini arabelleğe alır ve her iki ileti kaynağı olarak ve bir ileti hedefine olarak davranır.  

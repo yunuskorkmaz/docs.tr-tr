@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585177"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez
 İle bildirilen bir değişken `Shared` değiştiricisi paylaşılan bir değişkendir. Paylaşılan değişken tam olarak bir depolama konumu tanımlar. İle bildirilen bir değişken `WithEvents` değiştiricisi onaylar değişkeni ait olduğu türü değişkeni başlatır olay kümesini işler. Değişkene bir değer atandığında, özellik tarafından oluşturulan `WithEvents` bildirim varolan herhangi bir olay işleyicisini unhooks ve yeni olay işleyicisi kancalarını `Add` yöntemi.  

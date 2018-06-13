@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642801"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Nesne Olay alıcıları üst sınırını olaylarına zaten geciktirilir çünkü nesnesinin olayları havuzu kurulamıyor destekler
 Olay alıcıları nesnesi tarafından desteklenen üst sınırını aştı.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640491"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>Dosya okuma için şu anda açık olan
 Okuma için şu anda açık olan bir dosya erişim girişiminde bulunuldu.  

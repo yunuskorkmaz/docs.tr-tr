@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642814"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Nasıl yapılır: Öğe Listesi Oluşturma
 Bu konudaki kodu tanımlayan bir `Student` sınıfı ve sınıfının örneklerinin bir listesini oluşturur. Listenin konu destekleyecek şekilde tasarlanmıştır [izlenecek yol: Visual Basic'te yazma sorguları](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Nesnelerin bir listesini gerektiren herhangi bir uygulama için de kullanılabilir. Kod öğeleri nesne başlatıcıları kullanarak Öğrenciler listesinde tanımlar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655029"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML Değişmez Değerlerine Genel Bakış (Visual Basic)
 Bir *XML değişmez değeri* , Visual Basic kodunuza doğrudan XML eklemenizi sağlar. XML değişmez sözdizimini temsil eden [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri ve benzer XML 1.0 sözdizimi. Bu, kodunuzu son XML aynı yapısını olduğundan XML öğelerini ve belgeleri program aracılığıyla oluşturma kolaylaştırır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637455"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>Dosya adı tarafından belirtilen dosya FileEncoding tarafından belirtilen kodlama kullanmaz
 Bir dosyadan okumak için bir girişimde bulunuldu, ancak belirtilen kodlama dosya tarafından kullanılmaz.  

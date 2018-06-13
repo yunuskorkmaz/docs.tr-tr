@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649038"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Nasıl yapılır: XML Özniteliklerine Erişme (Visual Basic)
 Bu örnek bir attribute axis özelliği ada göre bir XML öğesi XML öznitelikleri erişmek için nasıl kullanılacağını gösterir. Özellikle, kullanan `type` özniteliği axis özelliği adlı özniteliği erişmek için `type` içinde `phone` nesnesi.  

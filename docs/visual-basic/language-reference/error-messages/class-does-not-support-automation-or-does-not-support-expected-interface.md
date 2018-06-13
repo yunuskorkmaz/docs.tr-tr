@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585684"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>Sınıf Otomasyonu veya beklenen arabirimi desteklemiyor
 İçinde belirtilen sınıf `GetObject` veya `CreateObject` işlev çağrısı sunulmaz bir programlama arabirimi ya da bir proje .dll .exe dosyasına değiştirdiğiniz veya tam tersi.  

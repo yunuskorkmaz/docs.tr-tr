@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803734"
 ---
 # <a name="basic-resource-service"></a>Temel Kaynak Hizmeti
 Bu örnek alma destekleyen müşteriler koleksiyonunu sunar Windows Communication Foundation (WCF) REST programlama modeli kullanarak bir HTTP tabanlı hizmet uygulamak, ekleme, silme ve değiştirme işlemlerini gösterir. Bu örnek 2 bileşenleri - kendini barındıran WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs) oluşur.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647156"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>(Visual Basic) paragrafları metin alma
 Bu örnek önceki örnekte olduğu derlemeler [Their stilleri (Visual Basic) ve paragrafları alma](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Bu yeni örnek her paragraf metnini dize olarak alır.  

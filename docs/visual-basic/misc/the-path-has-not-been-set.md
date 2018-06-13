@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638336"
 ---
 # <a name="the-path-has-not-been-set"></a>Yolun ayarlanmadı
 Gerekli yolun girmeden taşıma veya bir dosya kopyalama gibi bir dosya işlemi girişiminde bulunuldu. Bu yolu yanlış ayrıştırma neden olabilir.  

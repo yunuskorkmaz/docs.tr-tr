@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643498"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic'te LINQ'e Başlarken
 Bu bölümde, genel bakışlar, örnekler ve anlamak ve Visual Basic ve dil ile tümleşik sorgu (LINQ) kullanmanıza yardımcı olacak bilgiler içerir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643906"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] teknolojisi Visual Basic'de sorgu sözdizimi destekler ve doğrudan dilde başka bir dil yapıları başvuruyor. İle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], dış veri kaynağına karşı sorgu için yeni bir dil öğrenin gerekmez. İlişkisel veritabanları, XML depoları veya nesneler verileri karşı Visual Basic kullanarak sorgulayabilirsiniz. Bu tümleştirme dile sorgu özelliklerinin sözdizimi hataları ve tür güvenliği için derleme zamanı denetimini etkinleştirir. Bu tümleştirme, aynı zamanda Visual Basic'te zengin, çeşitli sorguları yazmaya bilmek zorunda çoğu zaten biliyor sağlar.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643256"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-visual-basic"></a>Nasıl yapılır: bir derlemeyi sorgu&#39;s meta verilerini yansıma (LINQ) (Visual Basic)
 Aşağıdaki örnekte nasıl LINQ yansıma ile belirtilen arama ölçütüyle eşleşen yöntemleri hakkında belirli meta verilerini almak için kullanılabileceğini gösterir. Bu durumda, sorgu tüm yöntemlerin adlarını dönüş diziler gibi numaralandırılabilir türleri derlemesindeki bulur.  

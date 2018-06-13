@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583818"
 ---
 # <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>&#39;AddressOf&#39; işleneni bir yöntem (parantezler olmadan) adı olmalıdır
 `AddressOf` İşleci belirli bir yordamı başvuruda bulunan bir yordam temsilci örneği oluşturur. Söz dizimi aşağıdaki gibidir.  

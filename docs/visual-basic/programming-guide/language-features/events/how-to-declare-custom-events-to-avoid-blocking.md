@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646932"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme (Visual Basic)
 Bu bir olay işleyicisi değil sonraki olay işleyicileri engelle önemli olduğu durumlarda bazı durumlar vardır. Özel olaylar, olay işleyicileri zaman uyumsuz olarak çağırmak olay izin verin.  

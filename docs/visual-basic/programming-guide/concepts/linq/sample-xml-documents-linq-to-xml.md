@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646139"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Örnek XML belgeleri (LINQ-XML)
 Aşağıdaki örnek dosyaları kod örnekleri ve kod parçacıkları genelinde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.  

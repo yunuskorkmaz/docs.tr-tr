@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586584"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme
 Bir işletim sistemi işlem oluşturulduğunda, işletim sistemi herhangi bir özgün uygulama etki alanı dahil olmak üzere bu işlemde kod yürütmek için bir iş parçacığı yerleştirir. Bu noktadan itibaren uygulama etki alanları oluşturulur ve mutlaka oluşturulma veya yok tüm işletim sistemi iş parçacıkları yok. Yürütülen kod yönetiliyorsa kod, sonra bir <xref:System.Threading.Thread> geçerli uygulama etki alanında iş parçacığının statik alarak elde edilebilir için nesne <xref:System.Threading.Thread.CurrentThread%2A> türündeki özelliği <xref:System.Threading.Thread>. Bu konu, iş parçacığı oluşturma açıklar ve iş parçacığı yordamı veri geçirme için seçenekleri açıklar.  

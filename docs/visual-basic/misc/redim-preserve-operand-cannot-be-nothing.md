@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639382"
 ---
 # <a name="39redim39-preserve-operand-cannot-be-nothing"></a>&#39;ReDim&#39; Koru işleneni hiçbir şey olamaz
 A `ReDim` deyimi çalışır kullanmak `Preserve` son boyutu değil, ancak kendi işleneni için geçerli bir değer sağlamıyor bir dizi boyutunu değiştirmek için anahtar sözcüğü.  

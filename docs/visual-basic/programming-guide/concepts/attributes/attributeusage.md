@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643425"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 Özel bir öznitelik sınıfı nasıl kullanılabileceğini belirler. `AttributeUsage` Yeni öznitelik nasıl uygulanabilir denetlemek için özel öznitelik tanımlarını uygulanabilir bir özniteliktir. Varsayılan ayarları açıkça uygulandığında şöyle:  

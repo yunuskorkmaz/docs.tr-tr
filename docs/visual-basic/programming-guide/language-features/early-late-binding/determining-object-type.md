@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648300"
 ---
 # <a name="determining-object-type-visual-basic"></a>Nesne Türünü Belirleme (Visual Basic)
 Genel nesne değişkenleri (diğer bir deyişle, değişkenleri olarak bildirdiğiniz `Object`) herhangi bir sınıftan nesneleri içerebilir. Tür değişkenler kullanırken `Object`, nesne sınıfına göre farklı eylemleri gerekebilir; örneğin, bazı nesneler belirli özelliği veya yöntemi desteklemiyor olabilir. Visual Basic sağlayan bir nesne değişkeninin hangi nesne türünü depolanan belirleme iki anlamına gelir: `TypeName` işlevi ve `TypeOf...Is` işleci.  

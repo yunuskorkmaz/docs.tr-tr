@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643464"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Genel arabirimler (Visual Basic) varyans
 .NET framework 4 birkaç mevcut genel arabirimler sapma desteği sunmuştur. Bu arabirimleri uygulayan sınıflar örtük dönüştürme sapma desteği sağlar. Aşağıdaki arabirimleri şimdi değişken şunlardır:  

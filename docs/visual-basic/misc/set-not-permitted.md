@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641481"
 ---
 # <a name="set-not-permitted"></a>İzin ayarlama
 Bir özellik olan ayarları ya da çalışma zamanında ayarlanamaz veya başka yalnızca belirli koşullar altında ayarlanabilir değiştirilmeye çalışıldı. Örneğin, size değiştirmek denediniz `Appearance`, `ControlBox`,`MinButton`, veya `MaxButton` çalıştırma veya form için özellik ayarlarını ayarlamaya çalıştı `Visible` özelliğine `False` son kalan için bir üst menüsünde alt görünür.  

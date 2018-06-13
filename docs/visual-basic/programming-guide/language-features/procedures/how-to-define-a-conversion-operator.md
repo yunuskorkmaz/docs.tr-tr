@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648479"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Nasıl yapılır: Bir Dönüşüm İşleci Tanımlama (Visual Basic)
 Bir sınıf veya yapı tanımladıysanız, sınıf veya yapı türüne ve başka bir veri türü arasında tür dönüştürme işleci tanımlayabilirsiniz (gibi `Integer`, `Double`, veya `String`).  

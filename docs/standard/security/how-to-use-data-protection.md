@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582193"
 ---
 # <a name="how-to-use-data-protection"></a>Nasıl yapılır: Veri Korumayı Kullanma
 .NET Framework veri koruma API'si (geçerli kullanıcı hesabı veya bilgisayar bilgileri kullanarak verileri şifrelemek izin veren DPAPI), erişim sağlar.  DPAPI kullandığınızda, açıkça oluşturmak ve bir şifreleme anahtarı depolamak zor sorunu giderir.  

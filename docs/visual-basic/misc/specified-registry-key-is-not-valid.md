@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639454"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>İki veya daha fazla ardışık ters eğik çizgi içerdiğinden belirtilen kayıt defteri anahtarı geçerli değil
 İki veya daha fazla ardışık ters eğik bir yolu ile belirtilen bir kayıt defteri anahtarı içerir. Bu yolu oluşturmak için birkaç dizelerini birleştirme ve yanlışlıkla çok fazla ters eğik çizgi dahil olmak üzere bir sonucu olabilir.  

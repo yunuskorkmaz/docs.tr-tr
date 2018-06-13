@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649792"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)
 Sayısal ifadeler kullanımıyla sayısal değerleri hesaplayabilirsiniz. A *sayısal ifade* değişmez değerleri, sabitleri ve değişkenleri sayısal değerleri temsil eden içeren bir ifade ve bu değerlere göre hareket işleçler.  
