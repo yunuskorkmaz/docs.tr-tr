@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542970"
 ---
 # <a name="documents"></a>Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Gelişmiş belge özelliklerini ve geliştirilmiş okuma deneyimi uygulamaları oluşturmak, geliştiricilerin bileşenleri yönlü kümesi sağlar. Gelişmiş Özellikler ve kaliteye, ek olarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca belge paketleme, güvenlik ve depolama için basitleştirilmiş yönetim hizmetleri sağlar.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392963"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken, uygulamanızın yürütülmesini izlemek bir yoldur. Bunu geliştirmek ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz, .NET Framework uygulamasını izleme ve hata ayıklama araçları ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hatalar ve uygulama yürütme günlükleri, metin dosyaları veya daha sonraki analizler için diğer aygıtlar hakkındaki bilgileri kaydetmek için sınıflar.  

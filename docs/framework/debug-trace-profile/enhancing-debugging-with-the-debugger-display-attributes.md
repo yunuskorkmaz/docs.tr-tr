@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389548"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme
 Hata ayıklayıcı görüntü öznitelikleri izin Geliştirici belirtir ve bu tür çalışma zamanı davranışını anlayabilmesi gerekir, tür, ne de belirtmek için bu tür bir hata ayıklayıcıda zaman görüntülendiği gibi görünür. Ayrıca, hata ayıklayıcı görüntüleme sağlamak öznitelikleri bir `Target` özelliği kaynak kodunun bilgisi olmadan kullanıcılar tarafından derleme düzeyinde uygulanabilir. <xref:System.Diagnostics.DebuggerDisplayAttribute> Özniteliği denetleyen bir tür veya üye hata ayıklayıcı değişken pencerelerini de nasıl görüntülenir. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Özniteliği varsa ve bir alanın nasıl belirler veya özelliği hata ayıklayıcı değişken pencerelerini de görüntülenir. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik türü hata ayıklayıcı Windows'da görüntülenme şeklini değiştirir ve bir yedek türü ya da bir tür için bir proxy belirtir. Bir proxy veya yedek türüne sahip bir değişken görüntülediğinizde, proxy hata ayıklayıcı görüntü penceresinde özgün türünün anlamına gelir **.** Hata ayıklayıcı değişken windowdisplays yalnızca Genel üyeler proxy'sinin yazın. Özel üyelerin görüntülenmez.  

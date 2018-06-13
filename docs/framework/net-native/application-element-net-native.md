@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394640"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Application&gt; Öğesi (.NET Yerel)
 Uygulama çapında türleri ve, meta verileri yansıma çalışma zamanında yüklenebilir ve bir uygulamadaki tüm program öğelerinin çalışma zamanı yansıma ilkenin uygulandığı tür üyeleri için bir kapsayıcı görevi görür.  

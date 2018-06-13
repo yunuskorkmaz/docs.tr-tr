@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536247"
 ---
 # <a name="property-changed-events"></a>Özellik Değişti Olayları
 Adlı bir özellik olduğunda bildirim göndermek için denetiminizi istiyorsanız *PropertyName* değişiklikleri tanımlamak adlı bir olay *PropertyName* `Changed` ve adlı bir yöntem `On` *PropertyName* `Changed` olayını başlatır. Windows Forms'ta adlandırma kuralı word eklenecek olan *değiştirilen* özelliğinin adı. Özellik değişti olayları için ilişkili olay temsilci türüdür <xref:System.EventHandler>, ve olay veri türü <xref:System.EventArgs>. Taban sınıfı <xref:System.Windows.Forms.Control> gibi pek çok özellik değişti olayları tanımlayan <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>ve diğerleri. Olaylar hakkında bilgi için bkz: [olayları](../../../../docs/standard/events/index.md) ve [Windows Forms denetimlerindeki olaylar](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).  

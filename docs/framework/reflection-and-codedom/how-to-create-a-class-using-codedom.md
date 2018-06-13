@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395394"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma
 Aşağıdaki yordamlar nasıl oluşturulacağı ve iki alanları, üç özellik, bir yöntemi, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturur CodeDOM grafik derleme gösterilmektedir.  

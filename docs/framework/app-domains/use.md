@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742477"
 ---
 # <a name="using-application-domains"></a>Uygulama Etki Alanlarını Kullanma
 Uygulama etki alanları yalıtım ortak dil çalışma zamanı için bir birim sağlayın. Bunlar oluşturulur ve bir işlem içinde çalıştırma. Uygulama etki alanları genellikle uygulamanın çalışma zamanı yükleme işlemi ve uygulama etki alanı içinde kullanıcı kodu yürütme sorumlu olan bir çalışma zamanı ana bilgisayarı tarafından oluşturulur. Çalışma zamanı ana bilgisayarı bir işlem ve bir varsayılan uygulama etki alanı oluşturur ve bunu içinde yönetilen kod çalıştırır. Çalışma zamanı ana bilgisayarlarını, ASP.NET, Microsoft Internet Explorer ve Windows Kabuğu'nu içerir.  

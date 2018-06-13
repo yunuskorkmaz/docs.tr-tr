@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389574"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF Penceresi İşleme
 İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] çok İzleyici senaryosunda tek görüntüleme dışında genişletir, Windows 8 çalıştıran ve üzeri, tüm pencereyi kırpma olmadan oluşturulur.  

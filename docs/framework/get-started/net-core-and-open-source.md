@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389258"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve Açık Kaynak
 Bu konuda ne .NET Core olduğu ve nasıl daha fazla bilgi bulabilirsiniz gösterir kısa bir genel bakış sağlar. .NET Core konuları tam listesi için ziyaret edin [.NET Core Kılavuzu](../../core/index.md).

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392557"
 ---
 # <a name="time-based-cache-policies"></a>Önbellek zaman tabanlı ilkeleri
 Bir zamana dayalı önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak alınan saati ve geçerli saati kullanarak önbelleğe alınmış girişleri yenilik tanımlar. Önbellek zaman tabanlı ilke ayarı, kullanabilir <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı ilke veya özelleştirilmiş bir zamana dayalı ilkesi oluşturun. Varsayılan zaman tabanlı ilke için Köprü Metni Aktarım Protokolü (HTTP) kullanarak elde kaynaklar kullanırken, tam önbellek davranışını 13 ve RFC 2616 14 bölümlerinde belirtilen davranışları ve önbelleğe alınan yanıta dahil üstbilgileri tarafından belirlenir, adresinde [ http://www.ietf.org ](http://www.ietf.org/). HTTP kaynaklar için varsayılan zaman tabanlı ilke ayarı gösteren kod örneği için bkz: [nasıl yapılır: bir uygulama Default Time-Based önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [yapılandırma önbelleği ağ uygulamalarda](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  

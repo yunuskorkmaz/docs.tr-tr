@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391052"
 ---
 # <a name="making-an-image-easier-to-debug"></a>Görüntüde Hata Ayıklamayı Kolaylaştırma
 Yönetilmeyen kod derlerken ayar IDE anahtarları veya komut satırı seçenekleri tarafından hata ayıklama için yürütülebilir görüntü yapılandırabilirsiniz. Örneğin, kullanabileceğiniz /**Zi** Visual c++ komut satırı seçeneği, hata ayıklama simge dosyaları (dosya uzantısı .pdb) yaymak üzere isteyebilir. Benzer şekilde, /**Od** iyileştirme devre dışı bırakmak için derleyici komut satırı seçeneği söyler. Ortaya çıkan kodu daha yavaş çalışır, ancak bu gerekli olmalıdır hata ayıklamak daha kolay olur.  

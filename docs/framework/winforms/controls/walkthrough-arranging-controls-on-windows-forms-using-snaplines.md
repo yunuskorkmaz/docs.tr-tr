@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541596"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme
 Formunuza denetimler tam yerleşimi, pek çok uygulama yüksek önceliktir. Windows Form Tasarımcısı bunu gerçekleştirmek için birçok düzeni Araçlar verir. En önemlisi, biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  

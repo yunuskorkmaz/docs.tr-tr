@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389561"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu
 Bu örnek, birlikte çalışabilirlik gösterir bir [COM istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) ev kredisi hesaplamalar gerçekleştirir. Bu örnekte, istemci oluşturur ve yönetilen örneği çağırır `Loan` sınıfı, dört bağımsız değişkenleri (biri bu dört sıfıra eşit olması) geçirir örneği ve hesaplamaları görüntüler. Bu örnek kod örneklerinden Bu bölümde görünür.  

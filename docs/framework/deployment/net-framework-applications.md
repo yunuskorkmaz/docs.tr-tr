@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391657"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework Uygulamalarını Dağıtma
 Bu bölümde, uygulamanızın performansını iyileştirme derlemeleri yükleme ve derleme başvurularını çözümlemek için yönergeler de dahil olmak üzere, .NET Framework uygulamaları dağıtmak için önemli bilgiler .NET Framework belgeleri Yerel görüntü oluşturma.  

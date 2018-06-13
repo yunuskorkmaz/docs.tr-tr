@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392154"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme
 Ortak dil çalışma zamanı (CLR) etkinleştirme sistemi yönetilen uygulama kodu çalıştırmak için kullanılan CLR sürümü belirler. Bazı durumlarda, etkinleştirme sistemine yüklemek için CLR sürümü bulunamıyor mümkün olmayabilir. Bu durum genellikle uygulamanın belirli bir bilgisayarda yüklü değil veya geçersiz bir CLR sürümü gerektirdiğinde oluşur. İstenen sürüm bulunamazsa, CLR etkinleştirme sistemine HRESULT hata kodu işlev veya çağrıldı ve uygulama çalıştıran kullanıcı bir hata iletisi görüntülenebilir arabirimi döndürür. Bu makalede HRESULT kodlarının listesini sağlar ve nasıl görüntülenmesini hata iletisini önlemek açıklanmaktadır.  

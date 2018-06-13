@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393123"
 ---
 # <a name="synchronous-client-socket-example"></a>Zaman uyumlu istemci yuva örneği
 Aşağıdaki örnek program bir sunucuya bağlanan bir istemci oluşturur. İstemci zaman uyumlu bir yuvası ile oluşturulmuştur, bu sunucunun bir yanıt döndürür kadar istemci uygulamasının yürütme askıya alınmış şekilde. Uygulama bir dize sunucusuna gönderir ve konsolda sunucu tarafından döndürülen dize görüntüler.  

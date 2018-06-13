@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365176"
 ---
 # <a name="data-binding"></a>Veri Bağlama
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Kılavuz denetimleri gibi ortak denetimlere bağlama destekler. Özellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri kılavuza bağlama ve ana-ayrıntı bağlama, hem görüntüleme ve güncelleme açısından işleme için temel düzenlerden tanımlar.  

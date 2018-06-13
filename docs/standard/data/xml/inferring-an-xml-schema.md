@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568790"
 ---
 # <a name="inferring-an-xml-schema"></a>Bir XML Şeması çıkarımını yapma
 Şema nesne modeli (SOM) kullanmayı açıklar <xref:System.Xml.Schema.XmlSchemaInference> bir XML belgesi yapısını bir XML Şeması Tanım Dili (XSD) şemadan gerçekleştirip sınıfı.  

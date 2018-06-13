@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393848"
 ---
 # <a name="pnrp-clouds"></a>PNRP Bulutlar
 PNRP "bulut" ağ üzerinden birbirleriyle iletişim düğümler kümesini temsil eder. "Bulut" terimi "eş kafes" ve "eşler arası grafik" ile eşanlamlıdır.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541148"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms Denetimi Geliştirmenin Esasları
 Bir Windows Forms denetimi doğrudan veya dolaylı olarak türeyen bir sınıf olan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Aşağıdaki listede Windows Forms denetimleri geliştirme için genel senaryolar açıklanmaktadır:  

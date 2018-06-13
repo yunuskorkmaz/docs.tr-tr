@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392570"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
 <xref:System.Runtime.InteropServices> Ad alanı, üç kategoride birlikte çalışmaya özgü özniteliklerin sağlar: olanlar sizin tarafınızdan tasarım zamanında uygulanan, olanlar COM birlikte çalışma Araçlar ve API'ler tarafından dönüştürme işlemi sırasında uygulanan ve bu da siz veya COM birlikte çalışma tarafından uygulanan.  

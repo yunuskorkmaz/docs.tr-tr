@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571514"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Soyutlamalar uygulamak için temel sınıflar
 Kesinlikle olarak bakıldığında, başka bir sınıf ondan türetilmiş bir sınıf bir taban sınıf olur. Bu bölümde amacıyla ancak, bir taban sınıf çoğunlukla ortak bir Özet sağlar veya diğer sınıflar bazı yeniden kullanmak uygulama devralma ancak varsayılan için tasarlanmış bir sınıftır. Temel sınıflar genellikle ortasında bir Özet hiyerarşisinin kökü altındaki çeşitli özel uygulamalar arasındaki devralma hiyerarşileri sit.  

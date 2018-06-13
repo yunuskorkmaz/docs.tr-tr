@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392872"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
 .NET Framework geliştirme destekler API yansıma yoluyla meta yönetilen. Yansıma uygulama nesneleri inceleyin, inceleme bulunan nesnelerin yöntemleri çağırmak, çalışma zamanında yeni türleri oluşturmak olanak tanır ve diğer birçok dinamik kodu senaryolarını destekler. Seri hale getirme ve kalıcı ve daha sonra geri nesnenin alan değerlerini sağlayan seri durumdan çıkarma de destekler. Bu senaryolar tüm kullanılabilir meta verileri temel alarak yerel kodu oluşturmak için .NET Framework tam zamanında (JIT) derleyici gerektirir.  

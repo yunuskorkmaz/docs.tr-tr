@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389526"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>.NET Framework Windows 10 ve Windows Server 2016 yükleyin
 

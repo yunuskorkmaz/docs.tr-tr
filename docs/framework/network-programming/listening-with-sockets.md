@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395784"
 ---
 # <a name="listening-with-sockets"></a>Yuva başına dinleme
 Dinleyici veya server yuva ağ üzerinde bir bağlantı noktası açın ve bu bağlantı noktasına bağlanmak bir istemci için bekleyin. Diğer ağ adres ailesi ve protokolleri mevcut olmasına karşın, bu örnek bir TCP/IP ağı için uzak hizmetin nasıl oluşturulacağını gösterir.  

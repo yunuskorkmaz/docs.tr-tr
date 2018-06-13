@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542867"
 ---
 # <a name="element-tree-and-serialization"></a>Öğe Ağacı ve Serileştirme
 WPF programlama öğeleri ağaç ilişki birbirlerine çeşit genellikle bulunmaktadır. Örneğin, UI XAML'de oluşturulan bir uygulama nesne ağacı olarak kavramsallaştırılabileceği. Öğe ağacı iki ayrı henüz bazen paralel ağaçlara daha ayrılabilir: mantıksal ağacının ve görsel ağaç. WPF içinde serileştirme içerir bu durumu iki kaydetme ağaçları uygulama durumu ve potansiyel olarak XAML bir dosyaya yazma yanı sıra.  

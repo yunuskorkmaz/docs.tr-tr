@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392219"
 ---
 # <a name="apis-that-rely-on-reflection"></a>Yansıma kullanan API'ler
 Bazı durumlarda, kodda yansıma kullanımına açıktır, değil ve bu nedenle [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri çalışma zamanında gereken meta verileri korumak değil. Bu konu, bazı ortak API'ler veya, API yansıma bir parçası olarak kabul değil ancak başarıyla yürütme yansıma kullanan ortak programlama desenleri kapsar. Bunları kaynak kodunda kullanırsanız, bunlar hakkında bilgi için çalışma zamanı yönergeleri ekleyebilirsiniz (. rd.xml) Bu API çağrıları değil throw dosyasını bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu veya çalışma zamanında diğer bazı bir özel durum.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396535"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 Bu makale .NET Framework ile uygulamanızı dağıtımına başlamak yardımcı olur. Bilgilerin çoğunu geliştiriciler, OEM'ler ve kuruluş yöneticileri için tasarlanmıştır. .NET Framework'ü bilgisayarlarında yüklemek istediğiniz kullanıcıları kimler [.NET Framework yükleme](~/docs/framework/install/index.md).  

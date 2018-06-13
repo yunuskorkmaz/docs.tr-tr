@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391946"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Azaltma: Yeni 64-bit JIT derleme
 .NET Framework 4.6 ile başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64-bit JIT Derleyici içerir. Bu değişiklik, 32-bit JIT derleyicisi ile derleme etkilemez.  

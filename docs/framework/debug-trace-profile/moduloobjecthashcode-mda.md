@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392950"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Yönetilen hata ayıklama Yardımcısı (MDA) davranışını değiştirir <xref:System.Object> sınıfı gerçekleştirmek için bir işlem tarafından döndürülen karma kodu modulo <xref:System.Object.GetHashCode%2A> yöntemi. Bu MDA varsayılan mod neden olan 1 ' dir <xref:System.Object.GetHashCode%2A> tüm nesneleri için 0 dönün.  

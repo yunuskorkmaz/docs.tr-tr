@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394159"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Yol açabilir türü kimliğinin sorunları önlemek için bu makalede ele <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları. Makaleyi aşağıdaki öneriler ele alınmıştır:  

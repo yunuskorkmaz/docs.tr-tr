@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757586"
 ---
 # <a name="defining-primary-keys"></a>Birincil anahtarlar tanımlama
 Bir veritabanı tablosu genellikle bir sütun veya sütunlar tablodaki her satırda benzersiz olarak tanımlayan grubunun sahiptir. Bu tanımlayıcı sütun veya sütun grubunun birincil anahtar adı verilir.  

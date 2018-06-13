@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362253"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Nasıl yapılır: bir LINQ SQL veri kaynağı (WCF Veri Hizmetleri) kullanarak bir veri hizmeti oluşturma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] varlık verilerini veri hizmet olarak sunar. Üye sunan herhangi bir sınıf üzerinde dayalı bir veri modeli tanımlamak için bu iade yansıma sağlayıcı sağlar bir <xref:System.Linq.IQueryable%601> uygulaması. Veri kaynağındaki güncelleştirmeler yapmak için bu sınıfları ayrıca uygulamalıdır <xref:System.Data.Services.IUpdatable> arabirimi. Daha fazla bilgi için bkz: [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). Bu konu LINQ Northwind örnek veritabanı yansıtma sağlayıcı kullanarak erişim SQL sınıfları için oluşturma yanı sıra, bu veri sınıflara göre veri hizmetin nasıl oluşturulacağını gösterir.  

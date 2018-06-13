@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540325"
 ---
 # <a name="data-and-data-objects"></a>Veri ve Veri Nesneleri
 Sürükle ve bırak işlemi bir parçası olarak aktarılan veriler bir veri nesnesinde depolanır.  Kavramsal olarak, bir veri nesnesi bir veya daha fazla aşağıdaki çiftleri oluşur:  

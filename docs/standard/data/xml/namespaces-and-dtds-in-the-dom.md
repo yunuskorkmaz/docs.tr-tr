@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568686"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Ad alanları ve DOM DTD'leri
 Belge türü tanımları (DTD) complicate ad alanı desteği. Örneğin, aşağıdaki XML adlarında iki nokta üst üste içeren varsayılan öznitelikleri içerir.  

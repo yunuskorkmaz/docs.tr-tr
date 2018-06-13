@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392583"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Bileşim Analiz Aracı (Mefx)
 Bileşim analiz Aracı (Mefx) kitaplığı (.dll) ve uygulama (.exe) dosyalarını içeren Yönetilen Genişletilebilirlik Çerçevesi (MEF) çözümler bir komut satırı uygulamasıdır. Mefx birincil amacı, geliştiricilerin MEF uygulamalarını sıkıcı izleme kodu uygulamaya eklemek için gereksinimi olmadan de birleşim hataları tanılamak için bir yol sağlamaktır. Ayrıca bir üçüncü taraf tarafından sağlanan bir kitaplıktan bölümleri anlamanıza yardımcı olması yararlı olabilir. Bu konuda Mefx kullanmayı açıklar ve sözdizimi için bir başvuru sağlar.  

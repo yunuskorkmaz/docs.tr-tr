@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742438"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Uygulama Etki Alanları ve Derlemelerle Programlama
 Microsoft Internet Explorer, ASP.NET ve Windows Kabuk yük ortak dil çalışma zamanı bir işlemine gibi konakları Oluştur bir [uygulama etki alanı](../../../docs/framework/app-domains/application-domains.md) söz işlemek ve ardından yükleme ve o uygulama etki alanında kullanıcı kodu yürütme .NET Framework uygulama çalışırken. Çoğu durumda, uygulama etki alanları oluşturma ve bunların içine çalışma zamanı ana bilgisayarı bu görevleri gerçekleştirdiğinden derlemeleri yükleme hakkında endişelenmeniz gerekmez.  

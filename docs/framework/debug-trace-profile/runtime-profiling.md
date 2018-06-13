@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393061"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma, tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama bir yöntemdir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak istediğiniz sistem yöneticileri için değildir.  

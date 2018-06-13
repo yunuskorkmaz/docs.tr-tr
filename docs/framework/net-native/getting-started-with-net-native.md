@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395472"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native'i Kullanmaya Başlama
 Windows 10 için yeni bir Windows uygulaması yazma veya varolan bir Windows mağazası uygulaması geçirdiğiniz yordamları aynı kümesini izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:  

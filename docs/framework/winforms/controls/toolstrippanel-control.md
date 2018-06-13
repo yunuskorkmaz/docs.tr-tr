@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535434"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel Denetimi
 `ToolStripPanel` yatay veya dikey boşluk yerleştirildiğinde aracı alanda paylaşımı ve, düzenleme denetimi etkinleştirir <xref:System.Windows.Forms.ToolStrip> dört paneller ve merkezi panelini gerektiğinde değil denetleyen bir <xref:System.Windows.Forms.ToolStripContainer>.  

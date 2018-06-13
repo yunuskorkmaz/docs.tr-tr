@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395264"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Ağ uygulamalarında önbelleğe alma yapılandırma
 Önbelleğe alınmasını yapılandırmak için bir önbellek İlkesi uygulama belirtin veya <xref:System.Net.WebRequest> düzeyi. Aşağıdaki konular, yapılandırma uygulamaları ve önbelleğe almayı kullanmak üzere istekleri gösteren kod örnekleri sağlar.  

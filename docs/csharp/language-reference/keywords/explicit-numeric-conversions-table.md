@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218390"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Açık Sayısal Dönüşümler Tablosu (C# Başvurusu)
 Açık sayısal dönüşüm var olduğu örtük dönüştürme, bir cast ifadesi kullanarak herhangi diğer bir sayısal tür, herhangi bir sayısal tür dönüştürmek için kullanılır. Aşağıdaki tabloda bu dönüşümleri gösterir.  

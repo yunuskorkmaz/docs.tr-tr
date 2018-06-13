@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392515"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Öznitelikli Programlama Modeline Genel Bakış (MEF)
 İçinde Yönetilen Genişletilebilirlik Çerçevesi (MEF), bir *programlama modeli* MEF faaliyet kavramsal nesneler kümesini tanımlayan belirli bir yöntemdir. Bu kavramsal nesneler bölümleri, içeri aktarmalar ve dışarı aktarma içerir. MEF bu nesneleri kullanır, ancak nasıl temsil belirtmiyor. Bu nedenle, çok çeşitli programlama modelleri programlama modelleri de dahil olmak üzere özelleştirilebilir mümkün.  

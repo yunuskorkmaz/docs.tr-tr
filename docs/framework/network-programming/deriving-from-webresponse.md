@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395820"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse türetme
 <xref:System.Net.WebResponse> Sınıfı, .NET Framework takılabilir Protokolü modeli uygun protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan bir Özet temel sınıf. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri sınıfına kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** descendants soyut üyelerini uygulanmalı **WebResponse** sınıfı.  

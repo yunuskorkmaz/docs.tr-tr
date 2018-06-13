@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394254"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
 Seri hale getirme bakın veya aksi durumda erişilemez olacak nesne örnek verileri değiştirmek başka bir kod izin verebilir, özel bir izni serileştirme gerçekleştirme kodu gereklidir çünkü: <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında için Internet indirilen bu izni verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir.  

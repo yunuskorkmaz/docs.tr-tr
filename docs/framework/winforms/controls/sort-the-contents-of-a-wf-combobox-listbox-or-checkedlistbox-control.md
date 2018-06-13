@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535652"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama
 Verilere bağlı olduklarında Windows Forms denetimleri sıralama değil. Sıralanmış veri görüntülemek için sıralama destekleyen bir veri kaynağı kullanmak ve sıralanmasını veri kaynağına sahip. Sıralama destekleyen veri kaynakları veri görünümleri, veri yöneticileri görüntülemek ve diziler sıralanır.  

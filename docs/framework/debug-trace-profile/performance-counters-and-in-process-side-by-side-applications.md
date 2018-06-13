@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392024"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Performans Sayaçları ve Devam Eden Yan Yana Uygulamalar
 Performans İzleyicisi'ni (Perfmon.exe) kullanarak, çalışma zamanı başına temelinde performans sayaçları ayırt etmek mümkün değildir. Bu konu, bu işlevselliği etkinleştirmek için gerekli kayıt defteri değişikliği açıklar.  
