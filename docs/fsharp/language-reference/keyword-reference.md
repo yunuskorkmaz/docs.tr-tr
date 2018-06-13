@@ -7,6 +7,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33840895"
 ---
 # <a name="keyword-reference"></a><span data-ttu-id="d4598-103">Klavye Başvurusu</span><span class="sxs-lookup"><span data-stu-id="d4598-103">Keyword Reference</span></span>
 
