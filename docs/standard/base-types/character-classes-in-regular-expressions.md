@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579697"
 ---
 # <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="1522e-102">Normal İfadelerdeki Karakter Sınıfları</span><span class="sxs-lookup"><span data-stu-id="1522e-102">Character Classes in Regular Expressions</span></span>
 <a name="Top"></a> <span data-ttu-id="1522e-103">Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="1522e-103">A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="1522e-104">.NET normal ifade dilde şu karakter sınıflarından destekler:</span><span class="sxs-lookup"><span data-stu-id="1522e-104">The regular expression language in .NET supports the following character classes:</span></span>  
