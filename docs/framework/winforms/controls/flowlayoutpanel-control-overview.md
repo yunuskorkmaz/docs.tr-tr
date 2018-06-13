@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526731"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel Denetimine Genel Bakış
 <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi içeriğini yatay veya dikey akış yönü düzenler. Denetimin içeriği sonraki bir satır veya sonraki bir sütuna kayabilir. Alternatif olarak, içeriği kaydırma yerine bölebilirsiniz.  

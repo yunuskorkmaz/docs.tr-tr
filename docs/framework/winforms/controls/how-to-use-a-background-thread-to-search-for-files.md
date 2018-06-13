@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540309"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl Yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma
 <xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevlerini ekler <xref:System.Threading> ad alanı; ancak, <xref:System.Threading> ad alanı tutulur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için bkz: [BackgroundWorker bileşenine genel bakış](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  

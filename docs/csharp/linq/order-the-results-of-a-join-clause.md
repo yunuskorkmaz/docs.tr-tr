@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269706"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Join tümcesinin sonuçlarını sıralama
 Bu örnek, bir birleştirme işlemi sonuçlarını sıralama gösterilmektedir. Sıralama birleştirme sonrasında gerçekleştirildiğini unutmayın. Kullanabilirsiniz ancak bir `orderby` yan tümcesi bir veya daha fazla kaynak ile dizilerinin birleştirme öncesinde, genellikle bunu önermiyoruz. Bazı LINQ sağlayıcıları bu birleştirme sonrasında sıralama koruyabilir değil.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541027"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sanal Mod
 Sanal mod ile arasındaki etkileşimi yönetebilirsiniz <xref:System.Windows.Forms.DataGridView> denetimi ve bir özel veri önbelleği. Sanal mod uygulamak için ayarlanmış <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğine `true` ve bir veya daha fazla bu konuda açıklanan olayları işlemek. Genellikle işleyecek en az `CellValueNeeded` değerleri veri önbelleğindeki denetim Ara sağlayan olay.  

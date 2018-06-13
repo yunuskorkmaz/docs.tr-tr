@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535863"
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown Denetimi (Windows Forms)
 Windows Forms `NumericUpDown` denetimi kullanıcının bir değer ayarlamak için tıklatabileceği okları çifti ve bir metin kutusu birleşimini gibi görünüyor. Denetim görüntüler ve seçenekler listesinden tek bir sayısal değer ayarlar. Kullanıcı artırın ve yukarı ve aşağı düğmeleri tıklatarak yukarı ve aşağı ok tuşlarına basarak veya bir sayı yazarak sayısını azaltın. Yukarı Ok tuşuna tıklayarak, en doğru değeri taşır; Aşağı Ok tuşuna tıklayarak en düşük doğru konuma taşır. Müzik çalar üzerinde bir birim denetimi için burada bu tür bir denetim yararlı olabilecek bir örnek verilmiştir. Sayısal yukarı-aşağı denetimleri bazı Windows Denetim Masası uygulamalarda kullanılır.  

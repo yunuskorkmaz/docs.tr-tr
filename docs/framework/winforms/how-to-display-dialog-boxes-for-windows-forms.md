@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537430"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme
 Diğer bir uygulamada görüntülemek aynı şekilde bir iletişim kutusu görüntüler. Başlangıç formu uygulama çalıştırıldığında otomatik olarak yükler. İkinci form veya iletişim kutusu uygulamada görünür yapmak için yükleme ve görüntülemek için kod yazma. Benzer şekilde, form veya iletişim kutusu kaybolur, kaldırma veya gizlemek için kod yazma.  

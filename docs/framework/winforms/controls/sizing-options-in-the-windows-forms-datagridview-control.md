@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541760"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri
 <xref:System.Windows.Forms.DataGridView> Satırlar, sütunlar ve üstbilgiler boyutunu birçok farklı oluşum sonucu olarak değiştirebilirsiniz. Aşağıdaki tabloda bu örnekleri gösterilmektedir.  
