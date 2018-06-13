@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649171"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Nasıl yapılır: Nesne Başlatıcı Kullanarak Bir Nesne Bildirme (Visual Basic)
 Nesne başlatıcıları bildirme ve tek bir deyimde sınıfının bir örneğini sağlar. Ayrıca, parametreli bir oluşturucu çağırmadan aynı anda bir veya daha fazla üye örneğinin başlatabilirsiniz.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807085"
 ---
 # <a name="publishing-metadata-endpoints"></a>Meta Veri Uç Noktalarını Yayımlama
 Windows Communication Foundation (WCF) hizmetlerini, bir veya daha fazla meta veri uç noktalarını yayımlayarak meta veri yayımlama. Hizmet meta veri yayımlama meta verileri WS-MetadataExchange (MEX) ve HTTP/GET istekleri gibi standart protokoller kullanılarak kullanılabilir hale getirir. Meta veri uç noktalarını bir adresi, bağlama ve bir sözleşme sahip ve bir hizmet ana yapılandırma yoluyla ya da koddaki eklenebilir, diğer hizmet uç noktaları benzerdir. Yayımlama meta veri uç noktalarını etkinleştirmek için eklemelisiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> hizmet hizmet davranışı.  

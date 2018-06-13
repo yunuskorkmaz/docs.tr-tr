@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649756"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML Değişmez Değerlerinde Boşluk (Visual Basic)
 Visual Basic derleyici oluştururken bir XML değişmez değeri yalnızca önemli boşluk karakterlerinden içerir bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnesi. Önemsiz boşluk karakterleri dahil değildir.  

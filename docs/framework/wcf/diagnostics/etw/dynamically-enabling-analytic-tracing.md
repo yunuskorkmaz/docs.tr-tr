@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803495"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 Windows işletim sistemiyle birlikte araçlarını kullanarak etkinleştirin veya olay izleme için Windows (ETW) kullanarak dinamik olarak izlemeyi devre dışı. Tüm [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) hizmetlerini, çözümleme izleme etkin ve devre dışı dinamik olarak olmadan uygulamanın Web.config dosyasını değiştirme veya hizmeti yeniden başlatılıyor olabilir. Bu izleme olaylarını bozulmadan kalmasını yayar uygulama sağlar.  

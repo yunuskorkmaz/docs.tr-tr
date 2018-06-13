@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806139"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation Araçları
 Microsoft Windows Communication Foundation (WCF) araçları oluşturmak, dağıtmak ve WCF uygulamalarını yönetmek kolaylaştırmak için tasarlanmıştır. Bu bölümde araçları hakkında ayrıntılı bilgiler içerir. Araçlar desteklenmediğini unutmayın.  

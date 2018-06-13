@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656077"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic'de Gölgeleme
 İki programlama öğeleri aynı adı paylaşan, bunlardan birini gizleyebilirsiniz, veya *gölge*, diğerinde. Böyle bir durumda gölgeli öğesi başvurusu için kullanılabilir değil; kodunuzu öğe adı kullandığında, bunun yerine, Visual Basic derleyici gölgeleme öğesine çözer.  

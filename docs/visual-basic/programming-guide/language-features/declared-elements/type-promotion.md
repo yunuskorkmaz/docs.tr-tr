@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649431"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
 Bir modüldeki bir programlama öğesi bildirirken Visual Basic kapsamı modülü içeren ad alanına yükseltir. Bu olarak bilinir *yazın yükseltme*.  

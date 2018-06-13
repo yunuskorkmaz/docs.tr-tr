@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803446"
 ---
 # <a name="client-interoperability"></a>İstemci Birlikte Kullanılabilirliği
 Bu bölüm, Windows Communication Foundation (WCF) ve diğer teknolojiler arasında birlikte çalışabilirlik gösteren örnekleri içerir.  

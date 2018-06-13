@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649613"
 ---
 # <a name="value-comparisons-visual-basic"></a>Değer Karşılaştırmaları (Visual Basic)
 Karşılaştırma işleçleri sayısal değişkenlerin değerleri karşılaştırma ifadeleri oluşturmak için kullanılabilir. Bu deyimler dönüş bir `Boolean` değeri temel karşılaştırma doğru olup ya da yanlış. Bu tür bir ifade örnekleri aşağıdaki gibidir.  

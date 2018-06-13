@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652383"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parametre Dizileri (Visual Basic)
 Genellikle, bir yordam yordamı bildirimi belirtilenden daha fazla bağımsız değişkenlerle çağrılamaz. Sonsuz sayıda bağımsız değişken gerektiğinde bildirebilir bir *parametre dizisi*, bir parametre için değer bir dizi kabul etmek bir yordam sağlar. Yordam tanımlarsanız parametre dizisindeki öğelerin sayısı bilmeniz gerekmez. Dizi boyutu, tek tek her yordam çağrısına tarafından belirlenir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805531"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 Bu konuda iş denetim kaynak tüketimini ve performans ölçümleri etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisinin çeşitli özellikleri açıklanmaktadır.  

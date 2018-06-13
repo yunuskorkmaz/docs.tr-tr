@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649132"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma (Visual Basic)
 Bir yordamı aşırı yükleme avantajı çağrının esneklik olmasıdır. Çağrıyı yapan kod yordamlara geçirmek ve onu geçirerek hangi bağımsız değişkenleri olsun tek bir yordam adları çağırmak için gereken bilgileri elde edebilirsiniz.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655882"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
 Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadeleri. İzlenecek yol Öğrenci nesnelerin bir listesini sorgu oluşturma, sorguları çalıştırmak nasıl ve bunları değiştirme gösterilir. Sorguları nesne başlatıcılar, yerel türü çıkarımı ve anonim türler de dahil olmak üzere çeşitli özellikler dahil.  

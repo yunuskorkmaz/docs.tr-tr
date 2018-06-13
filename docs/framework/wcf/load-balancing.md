@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807531"
 ---
 # <a name="load-balancing"></a>YükDengeleme
 Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak için bir bunları bir yük dengeli sunucu grubunda dağıtarak ölçeklendirmek için yoludur. WCF uygulamaları teknikler, yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere standart dengelemesini yanı sıra donanım tabanlı Yük Dengeleme cihazları kullanılarak Yük Dengeleme olabilir.  

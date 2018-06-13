@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805174"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Windows Communication Foundation (WCF) çok sayıda uygulamanızın performansını ölçmek yardımcı olması için performans sayaçları içerir.  

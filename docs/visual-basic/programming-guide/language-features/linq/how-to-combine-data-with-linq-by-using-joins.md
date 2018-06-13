@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653461"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme (Visual Basic)
 Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri, koleksiyonları arasında ortak değerlere göre birden fazla koleksiyonun içeriğini birleştirmenize olanak sağlamak için. Bu değerler olarak da bilinir *anahtar* değerleri. Geliştiriciler ilişkisel veritabanı kavramlarını algılayacağı `Join` olarak INNER JOIN yan tümcesi ve `Group Join` olarak, etkili bir şekilde bir LEFT OUTER JOIN yan tümcesi.  

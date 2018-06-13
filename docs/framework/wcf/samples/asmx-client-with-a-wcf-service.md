@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805135"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF Hizmeti ile ASMX İstemcisi
 Bu örnek, Windows Communication Foundation (WCF) kullanarak bir hizmet oluşturmak ve bir ASMX istemcisi gibi bir WCF olmayan istemciden hizmete erişmek gösterilmiştir.  
