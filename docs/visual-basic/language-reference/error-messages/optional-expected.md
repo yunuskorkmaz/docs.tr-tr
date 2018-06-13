@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593960"
 ---
 # <a name="39optional39-expected"></a>&#39;İsteğe bağlı&#39; bekleniyor
 İsteğe bağlı bir bağımsız değişken bir yordam bildirimindeki gerekli bir bağımsız değişkeni tarafından izlenir. İsteğe bağlı bir bağımsız değişkeni takip her bağımsız değişken isteğe bağlı olmalıdır.  

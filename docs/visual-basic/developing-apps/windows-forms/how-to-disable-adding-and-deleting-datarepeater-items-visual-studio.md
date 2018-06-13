@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590817"
 ---
 # <a name="how-to-disable-adding-and-deleting-datarepeater-items-visual-studio"></a>Nasıl Yapılır: DataRepeater Öğelerini Eklemeyi ve Silmeyi Devre Dışı Bırakma (Visual Studio)
 Varsayılan olarak, kullanıcılar ekleyebilir ve öğeleri silmek bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim. Kullanıcılar, CTRL + N tuşlarına basarak yeni bir öğe ekleyebilirsiniz olduğunda bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> odağa sahip veya tıklayarak **AddNew-Item** düğmesini <xref:System.Windows.Forms.BindingNavigator> denetim. Kullanıcıları, bir öğe tuşlarına basarak silebilir ne zaman silmek bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItemEventArgs.DataRepeaterItem%2A> odağa sahip veya tıklayarak **DeleteItem** düğmesini <xref:System.Windows.Forms.BindingNavigator> denetim.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587439"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
 Değil sağladığınız bir `WithEvents` değişkeni, `Handles` yan tümcesi. `Handles` Bir yordam bildiriminin sonundaki anahtar sözcüğü kullanılarak bildirilen bir nesne değişkeni tarafından başlatılan olayları işlemek için neden `WithEvents` anahtar sözcüğü.  

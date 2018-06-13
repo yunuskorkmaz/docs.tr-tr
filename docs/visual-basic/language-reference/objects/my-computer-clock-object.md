@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595975"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock Nesnesi
 Geçerli yerel saat ve Evrensel Eşgüdümlü saate (Greenwich saati eşdeğer) sistem saatinden erişmek için özellikleri sağlar.  
