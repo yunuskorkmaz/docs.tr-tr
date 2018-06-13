@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764703"
 ---
 # <a name="input-character-set-entity-sql"></a><span data-ttu-id="c3b60-102">Giriş karakter kümesi (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="c3b60-102">Input Character Set (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="c3b60-103"> UTF-16 kodlu UNICODE karakterler kabul eder.</span><span class="sxs-lookup"><span data-stu-id="c3b60-103"> accepts UNICODE characters encoded in UTF-16.</span></span>  

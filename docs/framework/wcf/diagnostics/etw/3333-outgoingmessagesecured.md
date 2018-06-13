@@ -1,39 +1,28 @@
 ---
 title: 3333 - OutgoingMessageSecured
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21fe9445-4fa4-4d67-b865-78cecf9b5b82
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ea50942b30adf6c3cf4577493e994a7235fd580
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a8e8cefd25ef206786a64bc0781070d74892947
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464523"
 ---
-# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="124e4-102">3333 - OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="124e4-102">3333 - OutgoingMessageSecured</span></span>
-## <a name="properties"></a><span data-ttu-id="124e4-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="124e4-103">Properties</span></span>  
+# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="de763-102">3333 - OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="de763-102">3333 - OutgoingMessageSecured</span></span>
+## <a name="properties"></a><span data-ttu-id="de763-103">Özellikler</span><span class="sxs-lookup"><span data-stu-id="de763-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="124e4-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="124e4-104">ID</span></span>|<span data-ttu-id="124e4-105">3333</span><span class="sxs-lookup"><span data-stu-id="124e4-105">3333</span></span>|  
-|<span data-ttu-id="124e4-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="124e4-106">Keywords</span></span>|<span data-ttu-id="124e4-107">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="124e4-107">Security</span></span>|  
-|<span data-ttu-id="124e4-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="124e4-108">Level</span></span>|<span data-ttu-id="124e4-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="124e4-109">Verbose</span></span>|  
-|<span data-ttu-id="124e4-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="124e4-110">Channel</span></span>|<span data-ttu-id="124e4-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="124e4-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="de763-104">Kimlik</span><span class="sxs-lookup"><span data-stu-id="de763-104">ID</span></span>|<span data-ttu-id="de763-105">3333</span><span class="sxs-lookup"><span data-stu-id="de763-105">3333</span></span>|  
+|<span data-ttu-id="de763-106">Anahtar Sözcükler</span><span class="sxs-lookup"><span data-stu-id="de763-106">Keywords</span></span>|<span data-ttu-id="de763-107">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="de763-107">Security</span></span>|  
+|<span data-ttu-id="de763-108">Düzey</span><span class="sxs-lookup"><span data-stu-id="de763-108">Level</span></span>|<span data-ttu-id="de763-109">Ayrıntılı</span><span class="sxs-lookup"><span data-stu-id="de763-109">Verbose</span></span>|  
+|<span data-ttu-id="de763-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="de763-110">Channel</span></span>|<span data-ttu-id="de763-111">Microsoft Windows uygulaması sunucu-uygulamalar/hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="de763-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="124e4-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="124e4-112">Description</span></span>  
- <span data-ttu-id="124e4-113">Giden ileti güvenliği olduğunda bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="124e4-113">This event is emitted when the outgoing message has been secured.</span></span>  
+## <a name="description"></a><span data-ttu-id="de763-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="de763-112">Description</span></span>  
+ <span data-ttu-id="de763-113">Giden ileti güvenliği olduğunda bu olay yayınlanır.</span><span class="sxs-lookup"><span data-stu-id="de763-113">This event is emitted when the outgoing message has been secured.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="124e4-114">İleti</span><span class="sxs-lookup"><span data-stu-id="124e4-114">Message</span></span>  
- <span data-ttu-id="124e4-115">Giden message güvenli.</span><span class="sxs-lookup"><span data-stu-id="124e4-115">Outgoing message has been secured.</span></span>  
+## <a name="message"></a><span data-ttu-id="de763-114">İleti</span><span class="sxs-lookup"><span data-stu-id="de763-114">Message</span></span>  
+ <span data-ttu-id="de763-115">Giden message güvenli.</span><span class="sxs-lookup"><span data-stu-id="de763-115">Outgoing message has been secured.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="124e4-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="124e4-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="de763-116">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="de763-116">Details</span></span>
