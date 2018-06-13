@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810180"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="ea9b6-102">HTTP, TCP veya Named-Pipe Kullanan Eşzamanlı Senaryolar</span><span class="sxs-lookup"><span data-stu-id="ea9b6-102">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>
 <span data-ttu-id="ea9b6-103">Bu konuda veya adlandırılmış etkinlikleri ve aktarımlar farklı eşzamanlı istek/yanıt senaryoları için HTTP, TCP kullanan bir tek iş parçacıklı istemci ile açıklanır.</span><span class="sxs-lookup"><span data-stu-id="ea9b6-103">This topic describes the activities and transfers for different synchronous request/reply scenarios, with a single-threaded client, using HTTP, TCP or named pipe.</span></span> <span data-ttu-id="ea9b6-104">Bkz: [zaman uyumsuz HTTP, TCP veya Named-Pipe kullanan senaryolar](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) çok iş parçacıklı istekleri hakkında daha fazla bilgi için.</span><span class="sxs-lookup"><span data-stu-id="ea9b6-104">See [Asynchronous Scenarios using HTTP, TCP, or Named-Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) for more information on multi-threaded requests.</span></span>  

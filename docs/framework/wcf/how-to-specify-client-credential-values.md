@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806655"
 ---
 # <a name="how-to-specify-client-credential-values"></a><span data-ttu-id="cf12c-102">Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme</span><span class="sxs-lookup"><span data-stu-id="cf12c-102">How to: Specify Client Credential Values</span></span>
 <span data-ttu-id="cf12c-103">Windows Communication Foundation (WCF) kullanarak, hizmet istemci hizmete kimlik doğrulamasının nasıl belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cf12c-103">Using Windows Communication Foundation (WCF), the service can specify how a client is authenticated to the service.</span></span> <span data-ttu-id="cf12c-104">Örneğin, bir hizmeti bir sertifikayla istemcinin kimliğinin doğrulanmasını koşabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="cf12c-104">For example, a service can stipulate that the client be authenticated with a certificate.</span></span>  

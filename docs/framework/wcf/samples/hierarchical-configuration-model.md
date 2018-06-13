@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806636"
 ---
 # <a name="hierarchical-configuration-model"></a><span data-ttu-id="e4073-102">Hiyerarşik Yapılandırma Modeli</span><span class="sxs-lookup"><span data-stu-id="e4073-102">Hierarchical Configuration Model</span></span>
 <span data-ttu-id="e4073-103">Bu örnek, hizmetler için yapılandırma dosyalarını hiyerarşisini uygulamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="e4073-103">This sample demonstrates how to implement a hierarchy of configuration files for services.</span></span> <span data-ttu-id="e4073-104">Aynı zamanda, nasıl bağlamaları, hizmet davranışları ve uç nokta davranışları hiyerarşide daha yüksek bir düzeyinden devralınan gösterir.</span><span class="sxs-lookup"><span data-stu-id="e4073-104">It also shows how bindings, service behaviors, and endpoint behaviors are inherited from higher levels in the hierarchy.</span></span>  

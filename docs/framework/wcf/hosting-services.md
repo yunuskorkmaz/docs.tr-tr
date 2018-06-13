@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807859"
 ---
 # <a name="hosting-services"></a><span data-ttu-id="3b72b-102">Barındırma Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="3b72b-102">Hosting Services</span></span>
 <span data-ttu-id="3b72b-103">Etkin hale gelmesi bir hizmet oluşturduğu ve yaşam süresi ve bağlam denetleyen bir çalışma zamanı ortamında barındırılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="3b72b-103">To become active, a service must be hosted within a run-time environment that creates it and controls its context and lifetime.</span></span> <span data-ttu-id="3b72b-104">Windows Communication Foundation (WCF) hizmetlerini destekleyen yönetilen kodu herhangi bir Windows işlemin çalışmak üzere tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="3b72b-104">Windows Communication Foundation (WCF) services are designed to run in any Windows process that supports managed code.</span></span>  

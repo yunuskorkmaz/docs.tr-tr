@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808018"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a><span data-ttu-id="f1874-102">Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="f1874-102">Transport: WSE 3.0 TCP Interoperability</span></span>
 <span data-ttu-id="f1874-103">WSE 3.0 TCP birlikte çalışabilirlik taşıma örneği, TCP çift yönlü oturum özel bir Windows Communication Foundation (WCF) taşıma olarak uygulamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f1874-103">The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="f1874-104">Kanal katmanını genişletilebilirlik arabirimine varolan dağıtılan sistemleriyle kablo üzerinden nasıl kullanabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="f1874-104">It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems.</span></span> <span data-ttu-id="f1874-105">Aşağıdaki adımlar bu özel WCF taşıma nasıl oluşturulacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="f1874-105">The following steps show how to build this custom WCF transport:</span></span>  

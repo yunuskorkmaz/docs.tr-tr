@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807182"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="dd2fb-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="dd2fb-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="dd2fb-103">Örnek, HTTP taşıma kullanıldığında akış senaryoları desteklemek üzere tasarlanmış bir bağlama oluşturun gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dd2fb-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

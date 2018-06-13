@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803685"
 ---
 # <a name="guidelines-and-best-practices"></a><span data-ttu-id="fc013-102">Yönergeler ve En İyi Yöntemler</span><span class="sxs-lookup"><span data-stu-id="fc013-102">Guidelines and Best Practices</span></span>
 <span data-ttu-id="fc013-103">Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak için yönergeler sağlayan konuları içerir.</span><span class="sxs-lookup"><span data-stu-id="fc013-103">This section contains topics that provide guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  

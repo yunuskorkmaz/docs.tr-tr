@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808490"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="439b4-102">İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="439b4-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="439b4-103">Bu konu, nasıl özel istemci ve hizmet kimlik bilgilerini uygulanacağını ve uygulama kodu özel kimlik bilgilerini kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="439b4-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

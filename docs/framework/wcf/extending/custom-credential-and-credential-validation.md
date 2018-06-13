@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803459"
 ---
 # <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="6a1da-102">Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="6a1da-102">Custom Credential and Credential Validation</span></span>
 <span data-ttu-id="6a1da-103">Güvenlik Windows Communication Foundation (WCF) exchange Hizmetleri ve istemciler arasında kimlik bilgilerinin temel alır.</span><span class="sxs-lookup"><span data-stu-id="6a1da-103">Security in Windows Communication Foundation (WCF) is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="6a1da-104">Çoğu güvenlik senaryoları Windows (Kerberos), kullanıcı adı ve parolaları ve sertifikaları gibi ortak kimlik bilgisi türlerini kullanarak karşılanabilir.</span><span class="sxs-lookup"><span data-stu-id="6a1da-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="6a1da-105">Yeni bir kimlik bilgisi türünü gerekliyse, ancak, bu bölümdeki konular, işlemek ve yeni türleri doğrulamak açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6a1da-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  

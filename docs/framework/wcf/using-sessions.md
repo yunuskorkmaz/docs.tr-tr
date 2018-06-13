@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808598"
 ---
 # <a name="using-sessions"></a><span data-ttu-id="0637e-102">Oturumları Kullanma</span><span class="sxs-lookup"><span data-stu-id="0637e-102">Using Sessions</span></span>
 <span data-ttu-id="0637e-103">Windows Communication Foundation (WCF) uygulamalarında bir *oturum* iletileri bir grup konuşma karşılık gelen.</span><span class="sxs-lookup"><span data-stu-id="0637e-103">In Windows Communication Foundation (WCF) applications, a *session* correlates a group of messages into a conversation.</span></span> <span data-ttu-id="0637e-104">WCF oturumları bulunan oturum nesnesi farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışlar desteklemek ve farklı şekillerde denetlenir.</span><span class="sxs-lookup"><span data-stu-id="0637e-104">WCF sessions are different than the session object available in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, support different behaviors, and are controlled in different ways.</span></span> <span data-ttu-id="0637e-105">Bu konu içinde WCF oturumları etkinleştir özellikleri açıklar uygulamaları ve bunların nasıl kullanılacağını.</span><span class="sxs-lookup"><span data-stu-id="0637e-105">This topic describes the features that sessions enable in WCF applications and how to use them.</span></span>  

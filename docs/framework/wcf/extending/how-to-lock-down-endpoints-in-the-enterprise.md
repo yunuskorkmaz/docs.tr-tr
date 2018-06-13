@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806545"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="c29a9-102">Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme</span><span class="sxs-lookup"><span data-stu-id="c29a9-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="c29a9-103">Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir.</span><span class="sxs-lookup"><span data-stu-id="c29a9-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="c29a9-104">Aşağıdaki konu geliştirmek ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklenmesinin nasıl yapılacağı açıklanır.</span><span class="sxs-lookup"><span data-stu-id="c29a9-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

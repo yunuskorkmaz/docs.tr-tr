@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803286"
 ---
 # <a name="configuring-services"></a><span data-ttu-id="34fe6-102">Hizmetleri Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="34fe6-102">Configuring Services</span></span>
 <span data-ttu-id="34fe6-103">Tasarlanmış ve hizmet sözleşmesini uygulanmış sonra hizmetiniz yapılandırmaya hazırsınız demektir.</span><span class="sxs-lookup"><span data-stu-id="34fe6-103">Once you have designed and implemented your service contract, you are ready to configure your service.</span></span> <span data-ttu-id="34fe6-104">Burada tanımlayın ve hizmetinizi burada bulunabilir, taşıma ve iletileri ve gerektirdiği güvenlik türünü göndermek ve almak için kullandığı ileti kodlama adresini belirtme dahil olmak üzere istemcilere nasıl kullanıma sunulan özelleştirme budur.</span><span class="sxs-lookup"><span data-stu-id="34fe6-104">This is where you define and customize how your service is exposed to clients, including specifying the address where it can be found, the transport and message encoding it uses to send and receive messages, and the type of security it requires.</span></span>  

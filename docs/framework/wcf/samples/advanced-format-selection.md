@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805596"
 ---
 # <a name="advanced-format-selection"></a><span data-ttu-id="9af01-102">Gelişmiş Biçim Seçimi</span><span class="sxs-lookup"><span data-stu-id="9af01-102">Advanced Format Selection</span></span>
 <span data-ttu-id="9af01-103">Bu örnek, yeni giden yanıt formatları desteklemek için Windows Communication Foundation (WCF) REST programlama modelini gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="9af01-103">This sample demonstrates how to extend the Windows Communication Foundation (WCF) REST programming model to support new outgoing response formats.</span></span> <span data-ttu-id="9af01-104">Ayrıca, örnek bir görünüm stili programlama modeli nasıl uygulanabilir gösteren bir XHTML sayfası olarak yanıt dönmesini T4 şablon kullanır.</span><span class="sxs-lookup"><span data-stu-id="9af01-104">In addition, the sample uses a T4 Template to return the response as an XHTML page, demonstrating how a view-style programming model can be implemented.</span></span>  

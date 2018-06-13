@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810386"
 ---
 # <a name="dynamic-reconfiguration"></a><span data-ttu-id="8a4be-102">Dinamik Yeniden Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="8a4be-102">Dynamic Reconfiguration</span></span>
 <span data-ttu-id="8a4be-103">Bu örnek Windows Communication Foundation (WCF) yönlendirme hizmeti gösteriyor.</span><span class="sxs-lookup"><span data-stu-id="8a4be-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="8a4be-104">Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir.</span><span class="sxs-lookup"><span data-stu-id="8a4be-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="8a4be-105">Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar.</span><span class="sxs-lookup"><span data-stu-id="8a4be-105">This sample adapts the standard WCF Calculator Sample to communicate using the routing service.</span></span> <span data-ttu-id="8a4be-106">Bu örnek nasıl yönlendirme hizmeti dinamik olarak çalışma zamanı sırasında yeniden yapılandırılabilen gösterir.</span><span class="sxs-lookup"><span data-stu-id="8a4be-106">This sample shows how the routing service can be dynamically reconfigured during runtime.</span></span>  

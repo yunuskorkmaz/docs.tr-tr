@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803796"
 ---
 # <a name="address-headers"></a><span data-ttu-id="16b01-102">Adres Üstbilgileri</span><span class="sxs-lookup"><span data-stu-id="16b01-102">Address Headers</span></span>
 <span data-ttu-id="16b01-103">Adres üstbilgileri örnek istemciler Windows Communication Foundation (WCF) kullanarak bir hizmet için başvuru parametreleri nasıl geçirebilirsiniz gösterir.</span><span class="sxs-lookup"><span data-stu-id="16b01-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807439"
 ---
 # <a name="configuring-services-using-configuration-files"></a><span data-ttu-id="86896-102">Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="86896-102">Configuring Services Using Configuration Files</span></span>
 <span data-ttu-id="86896-103">Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sağlar ve hizmet davranışı verileri yerine dağıtım noktasında tasarım zamanında.</span><span class="sxs-lookup"><span data-stu-id="86896-103">Configuring a Windows Communication Foundation (WCF) service with a configuration file gives you the flexibility of providing endpoint and service behavior data at the point of deployment instead of at design time.</span></span> <span data-ttu-id="86896-104">Bu konu, birincil teknikleri özetler.</span><span class="sxs-lookup"><span data-stu-id="86896-104">This topic outlines the primary techniques available.</span></span>  

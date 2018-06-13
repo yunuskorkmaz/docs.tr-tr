@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808071"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a><span data-ttu-id="f8063-102">Özel İleti Kodlayıcı: Özel Metin Kodlayıcı</span><span class="sxs-lookup"><span data-stu-id="f8063-102">Custom Message Encoder: Custom Text Encoder</span></span>
 <span data-ttu-id="f8063-103">Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti Kodlayıcı uygulamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f8063-103">This sample demonstrates how to implement a custom text message encoder using Windows Communication Foundation (WCF).</span></span>  

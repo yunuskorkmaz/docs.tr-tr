@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809800"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="cd4d9-102">İleti Akışı Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="cd4d9-102">Message Flow Overview</span></span>
 <span data-ttu-id="cd4d9-103">Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetleri arasında nedensel ilişkilerini belirlemek gereklidir.</span><span class="sxs-lookup"><span data-stu-id="cd4d9-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="cd4d9-104">Kök neden analizi ve izleme, sorun giderme sistem durumu gibi kritik senaryoları desteklemek için bir istek akışının bir parçası olan çeşitli bileşenleri anlamak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="cd4d9-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="cd4d9-105">Aşağıdaki özellikler sayesinde destek eklediğimiz izlemeleri bağıntı .NET Framework 4'te çeşitli hizmetler arasında etkinleştirmek için:</span><span class="sxs-lookup"><span data-stu-id="cd4d9-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803387"
 ---
 # <a name="custom-binding"></a><span data-ttu-id="cceee-102">Özel Bağlama</span><span class="sxs-lookup"><span data-stu-id="cceee-102">Custom Binding</span></span>
 <span data-ttu-id="cceee-103">Bu bölüm, bir uç nokta öğenin özel bağlama özniteliğini kullanarak gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="cceee-103">This section contains samples that demonstrate using a custom binding attribute of an endpoint element.</span></span>  

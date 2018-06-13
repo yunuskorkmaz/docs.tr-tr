@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806750"
 ---
 # <a name="creating-user-defined-bindings"></a><span data-ttu-id="f3e6f-102">Kullanıcı Tanımlı Bağlamalar Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f3e6f-102">Creating User-Defined Bindings</span></span>
 <span data-ttu-id="f3e6f-103">Sistem tarafından sağlanmayan bağlamaları oluşturmanın birkaç yolu vardır:</span><span class="sxs-lookup"><span data-stu-id="f3e6f-103">There are several ways to create bindings not provided by the system:</span></span>  

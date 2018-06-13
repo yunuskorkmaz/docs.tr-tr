@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810115"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a><span data-ttu-id="0d042-102">WCF İstemcisi Kullanarak Hizmetlere Erişme</span><span class="sxs-lookup"><span data-stu-id="0d042-102">Accessing Services Using a WCF Client</span></span>
 <span data-ttu-id="0d042-103">Bir hizmeti oluşturduktan sonra sonraki adım bir WCF istemcisi proxy oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="0d042-103">After you create a service, the next step is to create a WCF client proxy.</span></span> <span data-ttu-id="0d042-104">Bir istemci uygulaması WCF istemci proxy hizmeti ile iletişim kurmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="0d042-104">A client application uses the WCF client proxy to communicate with the service.</span></span> <span data-ttu-id="0d042-105">İstemci uygulamaları genellikle hizmetini çağırmak için kullanılan WCF istemci kodu oluşturmak üzere bir hizmetin meta veri içeri aktarın.</span><span class="sxs-lookup"><span data-stu-id="0d042-105">Client applications usually import a service's metadata to generate WCF client code that can be used to invoke the service.</span></span>  

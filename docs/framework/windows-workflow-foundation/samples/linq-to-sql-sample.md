@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806724"
 ---
 # <a name="linq-to-sql-sample"></a><span data-ttu-id="0b63b-102">LINQ-SQL örneği</span><span class="sxs-lookup"><span data-stu-id="0b63b-102">LINQ to SQL Sample</span></span>
 <span data-ttu-id="0b63b-103">Bu örnek, SQL Server veritabanlarını tablolardan SQL sorgu varlıklara LINQ kullanmak için bir etkinlik oluşturmak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="0b63b-103">This sample demonstrates how to create an activity to use LINQ to SQL query entities from tables in SQL Server databases.</span></span>  

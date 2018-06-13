@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809787"
 ---
 # <a name="understanding-protection-level"></a><span data-ttu-id="2faba-102">Koruma Düzeylerini Anlama</span><span class="sxs-lookup"><span data-stu-id="2faba-102">Understanding Protection Level</span></span>
 <span data-ttu-id="2faba-103">`ProtectionLevel` Özelliği bulundu birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları.</span><span class="sxs-lookup"><span data-stu-id="2faba-103">The `ProtectionLevel` property is found on many different classes, such as the <xref:System.ServiceModel.ServiceContractAttribute> and the <xref:System.ServiceModel.OperationContractAttribute> classes.</span></span> <span data-ttu-id="2faba-104">Özelliği bir ileti bölümü (veya tam) nasıl korumalı denetler.</span><span class="sxs-lookup"><span data-stu-id="2faba-104">The property controls how a part (or whole) of a message is protected.</span></span> <span data-ttu-id="2faba-105">Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2faba-105">This topic explains the Windows Communication Foundation (WCF) feature and how it works.</span></span>  

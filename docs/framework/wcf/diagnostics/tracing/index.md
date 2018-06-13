@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809322"
 ---
 # <a name="tracing"></a><span data-ttu-id="63544-102">İzleme</span><span class="sxs-lookup"><span data-stu-id="63544-102">Tracing</span></span>
 <span data-ttu-id="63544-103">Windows Communication Foundation (WCF) uygulama izleme ve tanılama verilerini hata izleme ve çözümleme sağlar.</span><span class="sxs-lookup"><span data-stu-id="63544-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="63544-104">Bir uygulamanın nasıl davrandığını veya neden hataları anlamak için izleme yerine bir hata ayıklayıcısı kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="63544-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="63544-105">Hataları ve işleme bir uçtan uca deneyim sağlamak üzere bileşenler genelinde ilişkilendirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="63544-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  

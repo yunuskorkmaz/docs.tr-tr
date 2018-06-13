@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808340"
 ---
 # <a name="token-authenticator"></a><span data-ttu-id="0c631-102">Belirteç Kimlik Doğrulayıcı</span><span class="sxs-lookup"><span data-stu-id="0c631-102">Token Authenticator</span></span>
 <span data-ttu-id="0c631-103">Bu örnek, özel bir belirteç kimlik doğrulayıcı uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="0c631-103">This sample demonstrates how to implement a custom token authenticator.</span></span> <span data-ttu-id="0c631-104">Belirteç kimlik doğrulayıcı Windows Communication Foundation (WCF) ileti ile kullanılan belirteci doğrulamak için kendi kendine tutarlı ve kimliğinin doğrulanması belirteçle ilişkili doğrulama kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0c631-104">A token authenticator in Windows Communication Foundation (WCF) is used for validating the token used with the message, verifying that it is self-consistent, and authenticating the identity associated with the token.</span></span>  

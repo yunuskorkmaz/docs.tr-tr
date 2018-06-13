@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803711"
 ---
 # <a name="extending-wcf"></a><span data-ttu-id="7210e-102">WCF'yi Genişletme</span><span class="sxs-lookup"><span data-stu-id="7210e-102">Extending WCF</span></span>
 <span data-ttu-id="7210e-103">Windows Communication Foundation (WCF), değiştirmek ve tam olarak denetlemek için çalışma zamanı bileşenleri genişletmek ve hizmet tabanlı uygulamalar genişletmek sağlar.</span><span class="sxs-lookup"><span data-stu-id="7210e-103">Windows Communication Foundation (WCF) allows you to modify and extend run time components to precisely control and extend service-based applications.</span></span> <span data-ttu-id="7210e-104">Bu bölümdeki konular, genişletilebilirlik mimarisi hakkında ayrıntılı gidin.</span><span class="sxs-lookup"><span data-stu-id="7210e-104">The topics in this section go in depth about the extensibility architecture.</span></span> <span data-ttu-id="7210e-105">Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="7210e-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

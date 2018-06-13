@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807325"
 ---
 # <a name="using-performance-counters"></a><span data-ttu-id="55bd7-102">Performans Sayaçlarını Kullanma</span><span class="sxs-lookup"><span data-stu-id="55bd7-102">Using Performance Counters</span></span>
 <span data-ttu-id="55bd7-103">Bu örnek, Windows Communication Foundation (WCF) performans sayaçları erişmek nasıl ve kullanıcı tanımlı performans sayaçları oluşturma gösterilir.</span><span class="sxs-lookup"><span data-stu-id="55bd7-103">This sample demonstrates how to access Windows Communication Foundation (WCF) performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="55bd7-104">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="55bd7-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

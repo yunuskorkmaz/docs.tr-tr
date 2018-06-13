@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808614"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="a3f4b-102">Dayanıklı Örnek Bağlamı</span><span class="sxs-lookup"><span data-stu-id="a3f4b-102">Durable Instance Context</span></span>
 <span data-ttu-id="a3f4b-103">Bu örnek, dayanıklı örnek bağlamı etkinleştirmek için Windows Communication Foundation (WCF) çalışma zamanı özelleştirmek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a3f4b-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="a3f4b-104">SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="a3f4b-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="a3f4b-105">Ancak, özel depolama mekanizmaları erişmek için bir yol da sağlar.</span><span class="sxs-lookup"><span data-stu-id="a3f4b-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808864"
 ---
 # <a name="basic-http-service"></a><span data-ttu-id="7f980-102">Temel HTTP Hizmeti</span><span class="sxs-lookup"><span data-stu-id="7f980-102">Basic HTTP Service</span></span>
 <span data-ttu-id="7f980-103">Bu örnek, özellik için Windows Communication Foundation (WCF) REST programlama modeli kullanarak "POX" (düz eski XML) hizmet olarak – başvurulan bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7f980-103">This sample demonstrates how to implement an HTTP-based, RPC-based service - popularly referred to as "POX" (Plain Old XML) service – using the Windows Communication Foundation (WCF) REST Programming model.</span></span> <span data-ttu-id="7f980-104">Bu örnek iki bileşenden oluşur: kendini barındıran WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (Program.cs).</span><span class="sxs-lookup"><span data-stu-id="7f980-104">This sample consists of two components: a self-hosted WCF HTTP service (Service.cs) and a console application (Program.cs) that creates the service and makes calls to it.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806188"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a><span data-ttu-id="b6aff-102">Nasıl Yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma</span><span class="sxs-lookup"><span data-stu-id="b6aff-102">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>
 <span data-ttu-id="b6aff-103">Bu konu, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere yapılandırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b6aff-103">This topic shows how to configure Windows Communication Foundation (WCF) to use different certificates for message signing and encryption on both the client and service.</span></span>  

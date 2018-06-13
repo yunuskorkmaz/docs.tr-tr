@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810089"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="3d86d-102">Gelişmiş Hata İşleme</span><span class="sxs-lookup"><span data-stu-id="3d86d-102">Advanced Error Handling</span></span>
 <span data-ttu-id="3d86d-103">Bu örnek Windows Communication Foundation (WCF) yönlendirme hizmeti gösteriyor.</span><span class="sxs-lookup"><span data-stu-id="3d86d-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="3d86d-104">Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir.</span><span class="sxs-lookup"><span data-stu-id="3d86d-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="3d86d-105">Bu örnek nasıl yönlendirme hizmeti akıllıca hataları, işlemleri ve çok noktaya yayın gibi daha karmaşık diğer ileti kavramları kullanarak kurtarır gösterir.</span><span class="sxs-lookup"><span data-stu-id="3d86d-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  

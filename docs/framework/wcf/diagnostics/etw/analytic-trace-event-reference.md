@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808643"
 ---
 # <a name="analytic-trace-event-reference"></a><span data-ttu-id="b392e-102">Çözümleme İzleme Etkinliği Başvurusu</span><span class="sxs-lookup"><span data-stu-id="b392e-102">Analytic Trace Event Reference</span></span>
 <span data-ttu-id="b392e-103">Aşağıdaki tabloda olay düzeyleri, tanımlayıcılarını ve WCF analiz izleme ile ilişkili iletilerin tanımlar.</span><span class="sxs-lookup"><span data-stu-id="b392e-103">The following table defines the event levels, identifiers, and messages associated with the WCF Analytic Tracing.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809433"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="160b0-102">Dayanıklı Çift Yönlü</span><span class="sxs-lookup"><span data-stu-id="160b0-102">Durable Duplex</span></span>
 <span data-ttu-id="160b0-103">Bu örnek, ayarlama ve mesajlaşma etkinlikleri Windows Workflow Foundation (WF) kullanan dayanıklı çift yönlü ileti alışverişi yapılandırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="160b0-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="160b0-104">Dayanıklı çift yönlü ileti değişimi gerçekleşir uzun bir süre boyunca bir iki yönlü ileti değişimi ' dir.</span><span class="sxs-lookup"><span data-stu-id="160b0-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="160b0-105">İleti değişimi ömrü iletişim kanalını ömrü ve hizmet örnekleri bellek içi ömrü uzun olabilir.</span><span class="sxs-lookup"><span data-stu-id="160b0-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  

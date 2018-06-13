@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807794"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="0d17b-102">Başlarken Öğreticisi Sorun Giderme</span><span class="sxs-lookup"><span data-stu-id="0d17b-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="0d17b-103">Bu konuda başlangıç Öğreticisi ve bunların nasıl çözüleceği ile çalışırken en sık karşılaşılan sorunlar listelenmiştir.</span><span class="sxs-lookup"><span data-stu-id="0d17b-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

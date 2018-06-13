@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806266"
 ---
 # <a name="contract-first-tool"></a><span data-ttu-id="73848-102">Önce Anlaşma Aracı</span><span class="sxs-lookup"><span data-stu-id="73848-102">Contract-First Tool</span></span>
 <span data-ttu-id="73848-103">Hizmet sözleşmeleri genellikle varolan Hizmetleri'nden oluşturulması gerekir.</span><span class="sxs-lookup"><span data-stu-id="73848-103">Service contracts often need to be created from existing services.</span></span> <span data-ttu-id="73848-104">İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşmesi sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut Hizmetleri'nden.</span><span class="sxs-lookup"><span data-stu-id="73848-104">In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], data contract classes can be created automatically from existing services using the contract-first tool.</span></span> <span data-ttu-id="73848-105">Önce anlaşma aracı kullanmak için XML şeması tanım dosyası (XSD) yerel olarak yüklenmelidir; Aracı, HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.</span><span class="sxs-lookup"><span data-stu-id="73848-105">To use the contract-first tool, the XML schema definition file (XSD) must be downloaded locally; the tool cannot import remote data contracts via HTTP.</span></span>  

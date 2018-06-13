@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809764"
 ---
 # <a name="activity-list"></a><span data-ttu-id="3e9a1-102">Etkinlik Listesi</span><span class="sxs-lookup"><span data-stu-id="3e9a1-102">Activity List</span></span>
 <span data-ttu-id="3e9a1-103">Bu konu, Windows Communication Foundation (WCF) tarafından tanımlanan tüm etkinlikleri listeler.</span><span class="sxs-lookup"><span data-stu-id="3e9a1-103">This topic lists all the activities defined by Windows Communication Foundation (WCF).</span></span>  

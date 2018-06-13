@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808747"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="00c35-102">Özel İleti Kodlayıcı: Sıkıştırma Kodlayıcısı</span><span class="sxs-lookup"><span data-stu-id="00c35-102">Custom Message Encoder: Compression Encoder</span></span>
 <span data-ttu-id="00c35-103">Bu örnek, Windows Communication Foundation (WCF) platformu kullanarak özel bir kodlayıcı uygulamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="00c35-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>  

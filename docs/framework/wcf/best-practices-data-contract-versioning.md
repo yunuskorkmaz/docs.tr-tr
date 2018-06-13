@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808542"
 ---
 # <a name="best-practices-data-contract-versioning"></a><span data-ttu-id="5f008-102">En İyi Uygulamalar: Veri Sözleşmesi Sürümü Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5f008-102">Best Practices: Data Contract Versioning</span></span>
 <span data-ttu-id="5f008-103">Bu konu, zaman içinde kolayca gelişmesi veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler.</span><span class="sxs-lookup"><span data-stu-id="5f008-103">This topic lists the best practices for creating data contracts that can evolve easily over time.</span></span> <span data-ttu-id="5f008-104">Veri sözleşmeleri hakkında daha fazla bilgi için konulara bakın [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="5f008-104">For more information about data contracts, see the topics in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).</span></span>  

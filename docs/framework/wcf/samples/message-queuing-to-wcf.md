@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807583"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a><span data-ttu-id="d0a0f-102">Windows Communication Foundation'a İleti Kuyruğa Alma</span><span class="sxs-lookup"><span data-stu-id="d0a0f-102">Message Queuing to Windows Communication Foundation</span></span>
 <span data-ttu-id="d0a0f-103">Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisi nasıl gönderebilirsiniz gösterir.</span><span class="sxs-lookup"><span data-stu-id="d0a0f-103">This sample demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="d0a0f-104">Hizmeti, sıraya alınan iletileri alma hizmeti izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="d0a0f-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

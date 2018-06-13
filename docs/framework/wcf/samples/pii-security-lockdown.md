@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809036"
 ---
 # <a name="pii-security-lockdown"></a><span data-ttu-id="75b44-102">PII Güvenlik Kilidi</span><span class="sxs-lookup"><span data-stu-id="75b44-102">PII Security Lockdown</span></span>
 <span data-ttu-id="75b44-103">Bu örnek, bir Windows Communication Foundation (WCF) hizmetiyle güvenlikle ilgili çeşitli özelliklerini denetlemek gösterilmiştir:</span><span class="sxs-lookup"><span data-stu-id="75b44-103">This sample demonstrates how to control several security-related features of a Windows Communication Foundation (WCF) service by:</span></span>  

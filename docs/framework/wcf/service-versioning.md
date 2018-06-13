@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809696"
 ---
 # <a name="service-versioning"></a><span data-ttu-id="dc9c3-102">Hizmet Sürümü Oluşturma</span><span class="sxs-lookup"><span data-stu-id="dc9c3-102">Service Versioning</span></span>
 <span data-ttu-id="dc9c3-103">İlk dağıtım ve olası birkaç kez kendi ömürleri sırasında sonra Hizmetleri (ve bunların kullanıma uç noktaları) çeşitli değişen işletme gereksinimlerine göre bilgi teknolojisi gereksinimleri gibi nedenlerle, değiştirilecek veya diğer gidermenin gerekebilir sorunları.</span><span class="sxs-lookup"><span data-stu-id="dc9c3-103">After initial deployment, and potentially several times during their lifetime, services (and the endpoints they expose) may need to be changed for a variety of reasons, such as changing business needs, information technology requirements, or to address other issues.</span></span> <span data-ttu-id="dc9c3-104">Her değişiklik hizmeti yeni bir sürümünü kullanıma sunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="dc9c3-104">Each change introduces a new version of the service.</span></span> <span data-ttu-id="dc9c3-105">Bu konu, Windows Communication Foundation (WCF) sürüm göz önünde bulundurun açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="dc9c3-105">This topic explains how to consider versioning in Windows Communication Foundation (WCF).</span></span>  
