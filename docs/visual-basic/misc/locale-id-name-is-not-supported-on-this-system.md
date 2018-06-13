@@ -1,29 +1,23 @@
 ---
-title: "Yerel ayar kimliği &#39; &lt;adı&gt;&#39; bu sistemde desteklenmiyor"
+title: Yerel ayar kimliği &#39; &lt;adı&gt; &#39; bu sistemde desteklenmiyor
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a9a91a297b62278a09c2fe6ee6e74bf0e827a58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 87fd87dde05ed1bc11d622ffa33140625289a6a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636506"
 ---
-# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a><span data-ttu-id="920ef-102">Yerel ayar kimliği &#39; &lt;adı&gt;&#39; bu sistemde desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="920ef-102">Locale ID &#39;&lt;name&gt;&#39; is not supported on this system</span></span>
-<span data-ttu-id="920ef-103">Kullanmaya çalıştığınız `VbStrConv`, ancak sisteminizi belirtilen bölge desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="920ef-103">You are attempting to use `VbStrConv`, but your system does not support the specified locale.</span></span>  
+# <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a><span data-ttu-id="93e9a-102">Yerel ayar kimliği &#39; &lt;adı&gt; &#39; bu sistemde desteklenmiyor</span><span class="sxs-lookup"><span data-stu-id="93e9a-102">Locale ID &#39;&lt;name&gt;&#39; is not supported on this system</span></span>
+<span data-ttu-id="93e9a-103">Kullanmaya çalıştığınız `VbStrConv`, ancak sisteminizi belirtilen bölge desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="93e9a-103">You are attempting to use `VbStrConv`, but your system does not support the specified locale.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="920ef-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="920ef-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="93e9a-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="93e9a-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="920ef-105">Yerel ayar desteklemek için makine yükseltin veya uygulamayı belirtilen bölge destekleyen bir makinede çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="920ef-105">Upgrade the machine to support the locale, or run the application on a machine that supports the specified locale.</span></span>  
+1.  <span data-ttu-id="93e9a-105">Yerel ayar desteklemek için makine yükseltin veya uygulamayı belirtilen bölge destekleyen bir makinede çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="93e9a-105">Upgrade the machine to support the locale, or run the application on a machine that supports the specified locale.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="920ef-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="920ef-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="93e9a-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="93e9a-106">See Also</span></span>  
  <xref:System.Globalization>  
- [<span data-ttu-id="920ef-107">.NET Framework tabanlı Uluslararası uygulamalara giriş</span><span class="sxs-lookup"><span data-stu-id="920ef-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+ [<span data-ttu-id="93e9a-107">.NET Framework Tabanlı Uluslararası Uygulamalara Giriş</span><span class="sxs-lookup"><span data-stu-id="93e9a-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
