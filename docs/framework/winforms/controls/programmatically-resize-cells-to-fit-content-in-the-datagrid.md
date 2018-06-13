@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538148"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde İçeriği Sığdıracak Şekilde Hücreleri Programlı Olarak Yeniden Boyutlandırma
 Kullanabileceğiniz <xref:System.Windows.Forms.DataGridView> kontrol böylece kesmeden tüm değerleri görüntüler satırlar, sütunlar ve üstbilgileri yeniden boyutlandırmak için yöntemleri. Bu yöntemler yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.DataGridView> seçtiğiniz öğeleri bazen. Alternatif olarak, içerik her değiştiğinde bu öğeler otomatik olarak yeniden boyutlandırmak için denetimi yapılandırabilirsiniz. Ancak, büyük veri kümeleri veya verilerinizi sıklıkla değiştiği ile çalışırken Bu Verimsiz, olabilir. Daha fazla bilgi için bkz: [Windows Forms DataGridView denetimindeki boyutlandırma seçenekleri](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  

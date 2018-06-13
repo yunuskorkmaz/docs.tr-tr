@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594507"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>Yapı &#39; &lt;structurename&gt; &#39; en az bir örnek üye değişkeni ya da en az bir örnek olay bildirimi işaretlenmemiş içermelidir &#39;özel&#39;
 Yapı tanımı, herhangi bir paylaşılmayan değişkenleri veya paylaşılmayan de olayları içermez.  

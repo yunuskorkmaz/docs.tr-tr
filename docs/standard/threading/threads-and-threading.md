@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592190"
 ---
 # <a name="threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturma
 İşletim sistemleri işlemleri yürütülmekte olduğunu farklı uygulamaları ayırmak için kullanır. İş parçacığı bir işletim sistemi işlemci zamanı tarafından ayrılan temel birimi olan ve birden çok iş parçacığı işlem içinde kod yürütme. Her iş parçacığı, özel durum işleyicileri, bir zamanlama önceliği ve sistem zamanlandığı süreye kadar iş parçacığı içeriği kaydetmek için kullandığı yapıları kümesi tutar. İş parçacığı bağlamını sorunsuz bir şekilde yürütme iş parçacığının ana bilgisayar işlemi adres alanında CPU kaydeder ve yığını, iş parçacığının kümesi de dahil olmak üzere, devam etmek için iş parçacığı gereken tüm bilgileri içerir.  

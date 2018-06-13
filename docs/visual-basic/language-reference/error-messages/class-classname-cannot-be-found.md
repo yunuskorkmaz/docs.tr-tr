@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586496"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Sınıf &#39; &lt;classname&gt; &#39; bulunamıyor
 Sınıfı\<classname >' bulunamıyor. Bu durum genellikle bir eşleşmeyen 'Microsoft.VisualBasic.dll içinde' sonucudur.  

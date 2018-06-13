@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539743"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme
 Her bir kullanıcı, bir Windows Forms <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur. Onay kutusunun durumunu bağlı olarak bazı eylemleri gerçekleştirmek için uygulamanızın programlama yapabilirsiniz.  

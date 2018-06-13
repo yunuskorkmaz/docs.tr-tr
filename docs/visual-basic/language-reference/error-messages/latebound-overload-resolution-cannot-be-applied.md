@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589886"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Bağlanan aşırı yükleme çözünürlüğü uygulanamaz &#39; &lt;procedurename&gt; &#39; çünkü erişen örnek bir arabirim türü
 Derleyici aşırı yüklenmiş özelliği ya da yordamı başvuru çözümlemeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvuran nesne bir arabirim veri türüne sahip. `Object` Bağımsız değişkeni referans geç bağlama olarak çözmek için derleme zorlar.  

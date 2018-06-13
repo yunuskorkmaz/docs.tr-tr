@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172299"
 ---
 # <a name="extern-c-reference"></a>extern (C# Başvurusu)
 `extern` Değiştiricisi harici olarak uygulanan bir yöntem bildirmek için kullanılır. Yaygın kullanımı `extern` değiştiricisi durumdayken `DllImport` yönetilmeyen koda çağırmak için birlikte çalışma hizmetleri kullanırken özniteliği. Bu durumda, yöntem de olarak bildirilmelidir `static`, aşağıdaki örnekte gösterildiği gibi:  

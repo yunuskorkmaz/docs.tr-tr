@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586747"
 ---
 # <a name="input-past-end-of-file"></a>Dosya sonunun ötesinde giriş
 Ya da bir `Input` deyimi boş bir dosya veya bir tüm verileri kullanılır veya kullandığınız okuma `EOF` işlevi bir dosyayla ikili erişim için açıldı.  

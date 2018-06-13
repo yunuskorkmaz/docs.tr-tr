@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593132"
 ---
 # <a name="range-variable-ltvariablegt-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>Aralık değişkeni &lt;değişkeni&gt; kapsayan bir blok, önceden tanımlı aralık değişkeni ya da örtük olarak bildirilen bir değişken bir sorgu ifadesinde bir değişkeni gizler
 Belirtilen aralık değişkeni adı bir `Select`, `From`, `Aggregate`, veya `Let` yan tümcesi çoğaltan zaten sorgu veya sorgu tarafından örtülü olarak bildirilen bir değişken adı daha önce belirtilen aralık değişkeni adı bir alan adı veya bir toplama işlevi adı gibi.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589847"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic ile çalışmaya başlama
 Belgelerin bu bölümde Visual Basic uygulama geliştirme ile çalışmaya başlamanıza yardımcı olur.  

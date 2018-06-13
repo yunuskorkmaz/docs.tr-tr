@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338428"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Anonim Yöntemler (C# Programlama Kılavuzu)
 Sürümlerinde C# 2.0, bildirmek için tek yolu önce bir [temsilci](../../../csharp/language-reference/keywords/delegate.md) kullanılmasıydır [yöntemleri adlı](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 anonim yöntemler açıklanmıştır ve C# 3.0 ve sonraki sürümlerinde, lambda ifadeleri anonim yöntemler satır içi kod yazmak için tercih edilen yol geçersiz kılar. Ancak, bu konudaki anonim yöntemler hakkında bilgi lambda ifadeleri için de geçerlidir. Adsız bir yöntem lambda ifadelerini bulunamadı işlevselliği sağlayan bir durumda değil. Anonim yöntemler parametre listesi atlamak etkinleştirin. Bu, adsız bir yöntem imzaları çeşitli temsilcilere dönüştürülebilir anlamına gelir. Bu lambda ifadeleri ile mümkün değildir. Lambda ifadeleri özellikle hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  

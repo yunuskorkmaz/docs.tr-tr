@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572027"
 ---
 # <a name="accessing-attributes-in-the-dom"></a>DOM özniteliklere erişme
 Öğenin özelliklerini öğesinin alt öğeleri öznitelikleridir. Bu ayrım eşdüzey, üst ve alt düğümleri XML belge nesne modeli (DOM) gitmek için kullanılan yöntemleri nedeniyle önemlidir. Örneğin, **PreviousSibling** ve **NextSibling** yöntemleri bir öğeyi bir öznitelik veya öznitelikler arasında gezinmek için kullanılmaz. Bunun yerine, bir öznitelik, bir öğenin bir özelliktir ve sahibi bir öğe, sahip bir **OwnerElement** özelliği ve bir **parentNode** özelliği ve gezinti farklı yöntemleri vardır.  

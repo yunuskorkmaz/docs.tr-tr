@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591335"
 ---
 # <a name="threading-objects-and-features"></a>İş Parçacığı Nesneleri ve Özellikleri
 .NET Framework yardımcı nesne sayısı sağlar birden çok iş parçacıklı uygulamaları oluşturmak ve yönetmek. Yönetilen iş parçacığı tarafından gösterilen <xref:System.Threading.Thread> sınıfı. <xref:System.Threading.ThreadPool> Sınıfı, kolay oluşturulmasını ve birden çok iş parçacıklı arka plan görevleri yönetimini sağlar. <xref:System.ComponentModel.BackgroundWorker> Sınıfı kullanıcı arabirimiyle etkileşim görevler için aynı değil. <xref:System.Threading.Timer> Sınıfı zaman aralıklarında arka plan görevleri yürütür.  

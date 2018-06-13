@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596739"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>Bit Kaydırma İşleçleri (Visual Basic)
 Visual Basic'te tanımlanan bit kaydırma işleçleri verilmiştir.  

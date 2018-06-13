@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517971"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+'daki Ana Eğri Cetvelleri
 Kardinal eğri daha büyük bir eğri oluşturmak için birleştirilmiş tek tek Eğriler dizisidir. Eğri bir dizi noktaları ve gerilim parametresi tarafından belirtilir. Kardinal eğri her bir dizi noktası sorunsuz geçtiği; hiçbir keskin köşeleri ve eğri tightness ani hiçbir değişiklik vardır. Aşağıdaki çizimde bir dizi noktaları ve kümedeki her noktası geçtiği bir Kardinal eğri gösterir.  

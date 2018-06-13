@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589938"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Uygulamadan Günlüğe Bilgi Kaydetme (Visual Basic)
 Bu bölümde, uygulama kullanımından bilgileri günlüğe kaydetmek nasıl ele konuları bulunur `My.Application.Log` veya `My.Log` nesne ve uygulamanın günlüğe kaydetme özellikleri genişletme.  

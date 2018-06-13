@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397305"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Uygulamaları ile harika performans oluşturmak istiyorsanız, tasarım ve performans için yalnızca planlamanız gerekir, uygulamanızın herhangi bir özellik tasarlarken. Size Microsoft tarafından sağlanan araçları, uygulamanızın performansını ölçmek için kullanıp, gerekirse, bellek kullanımı, kod verimlilik ve yanıt hızını iyileştirmeler sağlar. Bu konu, Microsoft sağlar ve performans için uygulama geliştirme belirli alanlarında kapak diğer konulara bağlantılar sağlanır performans çözümleme araçları listeler.  

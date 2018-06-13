@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586081"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme
 Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi içindeki bir öğe şifrelemek için ad alanı.  XML şifrelemesi, saklamak veya hassas XML kolayca okunan veriler hakkında endişelenmeden aktarım olanak sağlar.  Bu yordam, Gelişmiş Şifreleme Standardı (AES) algoritması, olarak da bilinen Rijndael kullanarak bir XML öğesi şifresini çözer.  

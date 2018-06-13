@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172444"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
 Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md), bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) veya iki veya daha fazla kaynak dosyalar üzerinde bir yöntem. Her kaynak dosya türü veya yöntemi tanımının bir bölüm içerir ve uygulamanın derlendiğinde tüm bölümleri birleştirilir.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587729"
 ---
 # <a name="managed-thread-states"></a>Yönetilen İş Parçacığı Durumları
 Özellik <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> iş parçacığının geçerli durumunu belirten bir bit maskesi sağlar. Bir iş parçacığı her zaman en az bir olası durumlarda bulunduğu <xref:System.Threading.ThreadState> numaralandırma ve aynı anda birden çok durumda olabilir.  

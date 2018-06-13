@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214964"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# Derleyici Seçenekleri)
 Kullanım **-win32manifest** seçeneği bir projenin taşınabilir yürütülebilir (PE) dosyasına katıştırılmış bir kullanıcı tarafından tanımlanan Win32 uygulama bildirim dosyası belirtin.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172613"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 Uzantı yöntemleri, yeni türetilmiş bir tür oluşturmadan, yeniden derlemeden ya da özgün türü değiştirmeden yöntemler "eklemenizi" sağlar. Uzantı yöntemleri özel bir statik yöntem türüdür, ancak bunlar genişletilmiş türdeki örnek yöntemler ise çağrılır. C#, F # ve Visual Basic'te yazılmış istemci kodu için bir genişletme yöntemi ve gerçekte bir türde tanımlanan yöntemler çağırma arasında görünen fark yoktur.  

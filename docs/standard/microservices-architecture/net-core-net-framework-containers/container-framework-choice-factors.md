@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589332"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Karar tablosu: .NET Framework için Docker kullanmak için
 

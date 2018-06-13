@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588060"
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>Nasıl Yapılır: DataRepeater Denetiminde Veri Arama (Visual Studio)
 Kullanırken bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> belirli bir kayıt let kullanıcıları aramak istediğiniz çok sayıda kayıt içeren denetimi. Denetiminde veri arama yerine, bir arama arka plandaki sorgulayarak uygulayabileceğiniz <xref:System.Windows.Forms.BindingSource>. Öğe bulunursa, daha sonra kullanabilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A> özelliğini öğeyi seçin ve görünümüne gidin.  

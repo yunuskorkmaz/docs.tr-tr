@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539160"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Windows Forms'ta Olay İşleyicileri Oluşturma
 Olay işleyici hangi eylemlerin bir ileti sırası bir ileti alır veya bir olay oluşur, kullanıcı bir düğmesine tıkladığında gibi gerçekleştirilir belirler, kodunuzda bir yordamdır. Bir olay oluşturulduğunda, olay işleyicisi veya olay alırsınız işleyicileri yürütülür. Olaylar için birden çok işleyici atanabilir ve belirli olayları işlemek yöntemleri dinamik olarak değiştirilebilir. Windows Form Tasarımcısı, olay işleyicileri oluşturmak için de kullanabilirsiniz.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534816"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Nasıl yapılır Windows Forms ListView Denetimindeki Öğeleri Gruplama
 Gruplama özelliğiyle <xref:System.Windows.Forms.ListView> denetimi gruplarında ilgili öğeleri kümesi görüntüleyebilirsiniz. Bu gruplar ekranda grup başlıklarını içeren yatay grup üstbilgileri tarafından ayrılır. Kullanabileceğiniz <xref:System.Windows.Forms.ListView> öğeleri alfabetik olarak tarihe ya da diğer bir mantıksal gruplandırma göre gruplandırarak büyük listelerini daha kolay gezinme olmak için grupları. Aşağıdaki resimde gruplandırılmış bazı öğeler gösterilir.  

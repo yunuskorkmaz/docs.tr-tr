@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537092"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme
 Windows Forms kullanabilirsiniz <xref:System.Windows.Forms.ErrorProvider> bir dataset ya da başka bir veri kaynağını içindeki sütun hataları görüntülemek için bileşen. İçin bir <xref:System.Windows.Forms.ErrorProvider> veri hatalarını bir formda görüntülemek için bileşen olmasını yok doğrudan denetimi ile ilişkilendirilmiş. Bir veri kaynağına bağlandıktan sonra aynı veri kaynağına bağlı olduğu herhangi bir denetimi yanındaki hata simgesi görüntüleyebilirsiniz.  

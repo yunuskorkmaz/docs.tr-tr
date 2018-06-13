@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591639"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 Ayrı tutma 128-bit (16 bayt) değerleri değişken gücünü 10 tarafından ölçeklendirilmiş 96-bit (12-bayt) tamsayı numaraları temsil eden imzalı. Ölçeklendirme faktörü ondalık basamak sayısını belirtir; 0 ile 28 arasında çeşitlilik gösterir. Ölçeği 0 (hiçbir ondalık basamak) ile en büyük olası 79,228,162,514,264,337,593,543,950,335 +/-değerdir (7 +/-.9228162514264337593543950335E + 28). 28 ondalık basamak, en büyük değeri +/-7.9228162514264337593543950335, ve sıfır olmayan en küçük değeri +/-0.0000000000000000000000000001 (+/-1E-28).  

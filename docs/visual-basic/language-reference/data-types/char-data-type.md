@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590822"
 ---
 # <a name="char-data-type-visual-basic"></a>Char Veri Türü (Visual Basic)
 Değer 0 ile 65535 arasında değişen ayrı tutma imzasız 16-bit (2-bayt) kod noktaları. Her *kod noktası*, veya karakter kodu, tek bir Unicode karakteri temsil eder.  

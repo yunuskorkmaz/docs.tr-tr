@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592595"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 Görev paralel kitaplığı (TPL) kavramını esas bir *görev*, zaman uyumsuz işlemi temsil eder. Bazı yönlerden bir görev bir iş parçacığı benzer veya <xref:System.Threading.ThreadPool> öğesi, ancak daha yüksek bir soyutlama düzeyinde çalışır. Terim *görev paralelliği* eşzamanlı olarak çalışan bir veya daha fazla bağımsız görevlere başvuruyor. Görevler iki adet birincil avantaj sağlar:  

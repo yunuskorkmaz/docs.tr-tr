@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588989"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Paylaşılan üyeye bir örnek üzerinden erişim; niteleyen ifade değerlendirilmeyecek
 Bir örnek değişkeni bir sınıf veya yapı kullanılan erişmek için bir `Shared` değişkeni, özelliği, yordam ya da bu sınıf veya yapı tanımlanan olay. Bu uyarı bir sınıf veya bir sabit veya numaralandırma, veya iç içe geçmiş sınıf veya yapı gibi yapı örtük olarak paylaşılan bir üyesi erişmek için kullanılan bir örnek değişkeni de oluşabilir.  

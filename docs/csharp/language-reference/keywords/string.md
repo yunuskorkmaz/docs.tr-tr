@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172168"
 ---
 # <a name="string-c-reference"></a>string (C# Başvurusu)
 `string` Türü sıfır veya daha fazla Unicode karakterler dizisini temsil eder. `string` bir diğer adı için <xref:System.String> .NET içinde.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588464"
 ---
 # <a name="playing-sounds-visual-basic"></a>Ses Çalma [Visual Basic]
 `My.Computer.Audio` Nesne ses çalma için yöntemler sağlar.  

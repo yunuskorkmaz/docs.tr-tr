@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572934"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Namespace gezinme
 XPath sorguları XML belgeleri ile kullanmak için doğru adres XML ad alanları ve ad alanları tarafından bulunan öğeleri olması. Ad alanları adları birden fazla bağlamında kullanıldığında oluşabilecek belirsizlikleri önleyebilir. Örneğin, adı `ID` farklı bir XML belgesi öğelerle ilişkili birden fazla tanımlayıcısına başvurabilir. Namespace sözdizimi URI, adları ve bir XML belgesi öğelerini ayırt öneklerini belirtir.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592157"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>İzlenecek Yol: Özel bir Veri Akışı Blok Türü Oluşturma
 TPL veri akışı kitaplığı işlevleri, çeşitli etkinleştirmek birkaç veri akışı blok türü sağlasa da, özel blok türleri de oluşturabilirsiniz. Bu belge, özel davranışı uygulayan bir veri akışı blok türü oluşturmayı açıklar.  

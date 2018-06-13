@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595111"
 ---
 # <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace veya türü içeri aktarmalar içinde belirtilen &#39; &lt;qualifiedelementname&gt; &#39; mevcut değil&#39;t ortak üye içermiyor ya da bulunamıyor
 Namespace veya türü belirtilen içeri aktarmalar içinde\<qualifiedelementname >' ortak üye içermiyor veya bulunamıyor. Ad alanı veya tür tanımlanır ve en az bir ortak üye içerdiğinden emin olun. Diğer ad başka diğer adlar içermediğinden emin olun.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337031"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref Özniteliği (C# Programlama Kılavuzu)
 `cref` Bir XML belgeleri etiketinde öznitelik "kod başvurusu" anlamına gelir Bu etiket iç metni türü, yöntemi veya özelliği gibi bir kod öğesi olduğunu belirtir. Belge Araçlar [Sandcastle](https://github.com/EWSoftware/SHFB) kullanmak `cref` burada tür veya üye belgelenmiştir sayfasına köprüler otomatik olarak oluşturmak için öznitelikleri.  

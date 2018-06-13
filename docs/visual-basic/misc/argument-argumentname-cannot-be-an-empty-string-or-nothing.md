@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598133"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Bağımsız değişken &lt;argumentname&gt; boş bir dize veya hiçbir şey olamaz
 Boş bir dize dışında bir değer bağımsız değişken gerektirir ("") veya `Nothing`. Bu değeri yanlış hesaplıyor bir sonucu olabilir.  

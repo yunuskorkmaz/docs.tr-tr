@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588976"
 ---
 # <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; membername&gt; &#39; temel sınıfı tarafından zaten uygulanmış &#39; &lt;baseclassname&gt;&#39;. Yeniden uyarlamasını &lt;türü&gt; varsayılır
 Bir özellik, yordam veya türetilmiş bir sınıf olayda kullanan bir `Implements` yan tümcesi taban sınıf içinde zaten uygulanmış bir arabirim üyesini belirtme.  

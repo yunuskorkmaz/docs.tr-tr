@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337200"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> değeri metindir. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizesi sonunda hiçbir null sonlandırma karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda katıştırılmış boş karakterler ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliği sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını değil nesneleri. Bir dizede tek tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesnesi.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594799"
 ---
 # <a name="some-subkeys-cannot-be-deleted"></a>Bazı alt anahtarlar silinemiyor
 Bir kayıt defteri anahtarını silmek için bir girişimde bulunuldu, ancak bazı alt anahtarlar silinemiyor olduğundan işlem başarısız oldu. Genellikle bu izinlerin yetersiz olması nedeniyle adıdır.  

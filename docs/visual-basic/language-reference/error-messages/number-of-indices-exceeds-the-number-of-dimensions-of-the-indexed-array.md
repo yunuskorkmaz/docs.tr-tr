@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593442"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Dizin sayısı, sıralı dizinin boyut sayısını aşıyor
 Tam olarak bir dizi öğesine erişmek için kullanılan sayısından dizi, başka bir deyişle, bunun için bildirilen dimensions sayısı derecesini ile aynı olmalıdır.  

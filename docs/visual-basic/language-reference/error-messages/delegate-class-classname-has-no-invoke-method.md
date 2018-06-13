@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588836"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Temsilci sınıfı &#39; &lt;classname&gt; &#39; hiçbir Invoke yöntemi sahiptir, bu nedenle bu tür bir ifade bir yöntem çağrısı hedefi olamaz
 Çağrı `Invoke` bir temsilci başarısız oldu `Invoke` temsilci sınıf üzerinde uygulanmadı.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590305"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama
 Sınıflarda kullanabilirsiniz <xref:System.Security.Cryptography.Xml> bir XML belgesi veya bir XML belgesi bir dijital imza ile parçası imzalamak için ad alanı.  XML dijital imzaları (XMLDSIG) imzalandığından sonra veri değiştirildiği değil olduğunu doğrulamanızı sağlar.  World Wide Web Konsorsiyumu (W3C) öneri XMLDSIG standart hakkında daha fazla bilgi için bkz: [XML imza sözdizimi ve işleme](https://www.w3.org/TR/xmldsig-core/).  

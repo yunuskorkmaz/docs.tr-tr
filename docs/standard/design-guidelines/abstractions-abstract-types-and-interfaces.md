@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573032"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Soyutlamalar (Soyut türler ve arabirimler)
 Bir Özet bir sözleşme açıklar ancak sözleşme tam uygulamasını sağlamaz türüdür. Soyutlamalar genellikle soyut sınıflar veya arabirimleri olarak uygulanır ve sözleşme uygulama türleri gerekli semantiği açıklayan başvuru belgeleri iyi tanımlanmış bir dizi birlikte gelir. .NET Framework'teki en önemli soyutlamalar bazıları <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, ve <xref:System.Object>.  

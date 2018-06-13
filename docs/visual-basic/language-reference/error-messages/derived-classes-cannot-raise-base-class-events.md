@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586405"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Türetilmiş sınıflar temel sınıf olayları oluşturamaz
 Bir olay, içinde bildirildiği yalnızca bildirim alanından yükseltilebilir. Bu nedenle, bir sınıfın başka bir sınıf, hatta bir onu türetildiği olaylarından yükseltemez.  

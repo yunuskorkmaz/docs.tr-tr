@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590211"
 ---
 # <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Alma&#39; özelliği erişimcisi &#39; &lt;propertyname&gt; &#39; erişilebilir değil
 Bir deyim özelliğin erişimi olmadığında bir özelliğin değerini almaya çalışır `Get` yordamı.  

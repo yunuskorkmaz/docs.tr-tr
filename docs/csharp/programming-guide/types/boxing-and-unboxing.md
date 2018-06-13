@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336137"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Kutulama ve Kutudan Çıkarma (C# Programlama Kılavuzu)
 Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) türüne `object` veya herhangi bir arabirim türüne bu değer türü tarafından uygulanan. Değer türü CLR kutuları, bir System.Object içindeki değeri sarmalar ve yönetilen yığında depolar. Kutudan çıkarma değer türü nesneden ayıklar. Örtük kutulama; kutudan çıkarma açık değil. Kutulama ve kutudan çıkarma kavramı herhangi türde bir değer bir nesne işlenebilir türü sistem C# Birleşik görünümü vurgular.  
