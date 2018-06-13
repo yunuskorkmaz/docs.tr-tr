@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570370"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM modelini kullanarak işlem XML verileri
 XML belge nesne modeli (DOM) XML verileri standart bir nesneler kümesini değerlendirir ve işlem bellek XML verileri için kullanılır. `System.Xml` Ad alanı XML belgeleri, parçaları, düğüm veya düğüm kümeleri programlı bir gösterimini sağlar. World Wide Web Konsorsiyumu (W3C) DOM düzey 1 çekirdek ve DOM Düzey 2 Çekirdek önerileri dayanır.  

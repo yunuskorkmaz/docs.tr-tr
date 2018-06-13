@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598220"
 ---
 # <a name="math-summary-visual-basic"></a>Matematik Özeti (Visual Basic)
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amacına göre düzenlenir ve kullanın.  

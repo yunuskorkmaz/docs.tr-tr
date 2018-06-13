@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561078"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme
 Bu örnek nasıl kullanılacağını gösteren bir <xref:System.Windows.Media.Animation.Storyboard> özelliklerine animasyon uygulamak için. Bir özellik kullanarak animasyon için bir <xref:System.Windows.Media.Animation.Storyboard>, animasyon ve ayrıca oluşturmak istediğiniz her bir özellik için bir animasyon oluşturmak bir <xref:System.Windows.Media.Animation.Storyboard> animasyonları içermesi için.  

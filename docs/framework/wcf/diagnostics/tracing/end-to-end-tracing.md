@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474226"
 ---
 # <a name="end-to-end-tracing"></a>Uçtan Uca İzleme
 Uçtan uca bir kod yolu neden başarısız oldu araştırmak veya kapasite planlama ve performans analizi için ayrıntılı izleme sağlamak için Windows Communication Foundation (WCF) altyapısında kodun yürütülmesini izlemek geliştiricilerin (e2e) izleme sağlar. Windows Communication Foundation (WCF) bir hatanın nedenini tanılamaya yardımcı olmak için üç bağıntı mekanizma sağlar: etkinlikleri, aktarımları ve yayma.  

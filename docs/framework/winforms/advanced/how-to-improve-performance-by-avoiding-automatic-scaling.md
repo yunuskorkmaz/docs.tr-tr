@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523048"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] otomatik olarak, hangi performans azalır çizerken görüntü ölçeklendirme. Alternatif olarak, hedef dikdörtgenin boyutlarını geçirerek görüntüsü ölçeklendirme denetleyebilirsiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi.  

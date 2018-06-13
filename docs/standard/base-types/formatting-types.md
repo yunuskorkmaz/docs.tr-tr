@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579853"
 ---
 # <a name="formatting-types-in-net"></a>.NET biçimlendirme türleri
 <a name="Introduction"></a> Biçimlendirme Sonuç dizesini kullanıcılara görüntülenen ya da özgün veri türü geri yüklemek için seri, dize gösterimi için genellikle bir sınıf, yapı veya sabit listesi değeri örneği dönüştürme işlemidir. Bu dönüştürme belirli zorluklar oluşturabilir:  

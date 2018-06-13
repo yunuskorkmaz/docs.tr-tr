@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579580"
 ---
 # <a name="globalization"></a>Genelleştirme
 Genelleştirme tasarlama ve birden çok kültürü kullanıcılar için yerelleştirilmiş arabirimleri ve bölgesel veri destekleyen bir dünya çapında kullanılmaya hazır uygulaması geliştirme içerir. Tasarım aşaması başlamadan önce uygulamanızı destekleyecek hangi kültürler belirlemeniz gerekir. Bir uygulama bir tek kültür veya bölge varsayılan olarak hedefler rağmen tasarlayın ve böylece diğer kültürler veya bölgelerdeki kullanıcılar için kolayca genişletilebilir yazma.  

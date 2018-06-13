@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582141"
 ---
 # <a name="security-and-race-conditions"></a>Güvenlik ve Yarış Durumları
 Başka bir sorun olası güvenlik açıklarını yarış durumları tarafından yararlanan alanıdır. Bu durum oluşabilir birkaç yolu vardır. İzleyin konuları Geliştirici kaçınmalısınız ana Tuzaklar bazıları verilmiştir.  

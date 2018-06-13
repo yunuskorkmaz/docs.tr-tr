@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571403"
 ---
 # <a name="member-design-guidelines"></a>Üye tasarım yönergeleri
 Yöntemler, özellikler, olaylar, Oluşturucular ve alanları topluca için üye olarak adlandırılır. Sonuçta framework işlevselliği bir çerçeve son kullanıcılara sunulur anlamına gelir üyeleridir.  

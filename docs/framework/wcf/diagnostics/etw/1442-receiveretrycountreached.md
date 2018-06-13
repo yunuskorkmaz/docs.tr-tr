@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456807"
 ---
 # <a name="1442---receiveretrycountreached"></a>1442 - ReceiveRetryCountReached
 ## <a name="properties"></a>Özellikler  
