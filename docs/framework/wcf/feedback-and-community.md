@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810167"
 ---
 # <a name="feedback-and-community"></a><span data-ttu-id="5b385-102">Geri Bildirim ve Topluluk</span><span class="sxs-lookup"><span data-stu-id="5b385-102">Feedback and Community</span></span>
 <span data-ttu-id="5b385-103">Açıklamaları ve Windows Communication Foundation (WCF) hakkında endişeleriniz veriyoruz veya [!INCLUDE[infocard](../../../includes/infocard-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="5b385-103">We appreciate your comments and concerns about the Windows Communication Foundation (WCF) or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="5b385-104">Her sayfanın SDK cümle "Microsoft'a bu konu hakkında açıklamalar gönderin." açıktır</span><span class="sxs-lookup"><span data-stu-id="5b385-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="5b385-105">Görünümleri veya belirli konuyla ilgili öneriler göndermek için "Açıklamalar" bağlantısını tıklatın.</span><span class="sxs-lookup"><span data-stu-id="5b385-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  

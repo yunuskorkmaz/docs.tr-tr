@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457663"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a><span data-ttu-id="f6bcc-102">Fazla Yüklenebilir İşleçler (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="f6bcc-102">Overloadable Operators (C# Programming Guide)</span></span>
 

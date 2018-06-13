@@ -1,27 +1,18 @@
 ---
-title: "Örnek XML dosyası: Birleştirilmiş satın alma Orders3"
-ms.custom: 
+title: 'Örnek XML dosyası: Birleştirilmiş satın alma Orders3'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ccb1e08ee6fc45ea407fbe3a0501062e8340ea02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644852"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="7f8ec-102">Örnek XML dosyası: Birleştirilmiş satınalma siparişi</span><span class="sxs-lookup"><span data-stu-id="7f8ec-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="7f8ec-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="7f8ec-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7f8ec-104">Bu dosya, birden çok şirketlerden farklı şekillerdeki satınalma siparişleri kümesidir.</span><span class="sxs-lookup"><span data-stu-id="7f8ec-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="7f8ec-105">Her şirketten satın alma siparişleri ayrı ad alanlarında var.</span><span class="sxs-lookup"><span data-stu-id="7f8ec-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="2c407-102">Örnek XML dosyası: Birleştirilmiş satınalma siparişi</span><span class="sxs-lookup"><span data-stu-id="2c407-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="2c407-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="2c407-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2c407-104">Bu dosya, birden çok şirketlerden farklı şekillerdeki satınalma siparişleri kümesidir.</span><span class="sxs-lookup"><span data-stu-id="2c407-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="2c407-105">Her şirketten satın alma siparişleri ayrı ad alanlarında var.</span><span class="sxs-lookup"><span data-stu-id="2c407-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="7f8ec-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="7f8ec-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="2c407-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="2c407-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -153,5 +144,5 @@ ms.lasthandoff: 10/18/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f8ec-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7f8ec-107">See Also</span></span>  
- [<span data-ttu-id="7f8ec-108">Örnek XML belgeleri (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="7f8ec-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2c407-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2c407-107">See Also</span></span>  
+ [<span data-ttu-id="2c407-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2c407-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

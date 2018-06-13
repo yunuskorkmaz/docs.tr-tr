@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457514"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="6f77a-102">throw (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="6f77a-102">throw (C# Reference)</span></span>
 <span data-ttu-id="6f77a-103">Program yürütme sırasında bir özel durum geçişi işaret eder.</span><span class="sxs-lookup"><span data-stu-id="6f77a-103">Signals the occurrence of an exception during program execution.</span></span>  

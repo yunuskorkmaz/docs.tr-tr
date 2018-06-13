@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810154"
 ---
 # <a name="ws-transport-with-message-credential"></a><span data-ttu-id="97328-102">İleti Kimlik Bilgileri ile WS Aktarma</span><span class="sxs-lookup"><span data-stu-id="97328-102">WS Transport With Message Credential</span></span>
 <span data-ttu-id="97328-103">Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL taşıma güvenliği kullanımını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="97328-103">This sample demonstrates the use of SSL transport security in combination with client credential being carried in the message.</span></span> <span data-ttu-id="97328-104">Bu örnekte `wsHttpBinding` bağlama.</span><span class="sxs-lookup"><span data-stu-id="97328-104">This sample uses the `wsHttpBinding` binding.</span></span>  

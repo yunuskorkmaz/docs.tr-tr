@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809998"
 ---
 # <a name="routing-services"></a><span data-ttu-id="9bd40-102">Yönlendirme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="9bd40-102">Routing Services</span></span>
 <span data-ttu-id="9bd40-103">Bu bölüm, Windows Communication Foundation (WCF) yönlendirici kullanımını göstermektedir örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="9bd40-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  

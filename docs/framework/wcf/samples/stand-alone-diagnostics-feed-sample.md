@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807765"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a><span data-ttu-id="a583f-102">Bağımsız Tanılama Akış Örneği</span><span class="sxs-lookup"><span data-stu-id="a583f-102">Stand-Alone Diagnostics Feed Sample</span></span>
 <span data-ttu-id="a583f-103">Bu örnek nasıl dağıtım Windows Communication Foundation (WCF) için akış RSS/Atom oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="a583f-103">This sample demonstrates how to create an RSS/Atom feed for syndication with Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="a583f-104">Bu nesne modeli temelleri ve Windows Communication Foundation (WCF) hizmetini üzerinde ayarlamak nasıl gösteren temel bir "Hello World" programıdır.</span><span class="sxs-lookup"><span data-stu-id="a583f-104">It is a basic "Hello World" program that shows the basics of the object model and how to set it up on a Windows Communication Foundation (WCF) service.</span></span>  

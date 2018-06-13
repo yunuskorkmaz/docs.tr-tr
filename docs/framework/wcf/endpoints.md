@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803400"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="33d17-102">Windows Communication Foundation Uç Noktaları</span><span class="sxs-lookup"><span data-stu-id="33d17-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="33d17-103">Tüm Windows Communication Foundation (WCF) hizmetiyle aracılığıyla iletişimin *uç noktaları* hizmetinin.</span><span class="sxs-lookup"><span data-stu-id="33d17-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="33d17-104">Uç noktaları istemciler için bir WCF hizmeti sunan işlevlere erişimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="33d17-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

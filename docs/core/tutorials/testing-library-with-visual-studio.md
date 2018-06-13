@@ -12,6 +12,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483479"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a><span data-ttu-id="28310-103">Visual Studio 2017 içinde bir sınıf kitaplığı .NET Core ile test etme</span><span class="sxs-lookup"><span data-stu-id="28310-103">Testing a class library with .NET Core in Visual Studio 2017</span></span>
 

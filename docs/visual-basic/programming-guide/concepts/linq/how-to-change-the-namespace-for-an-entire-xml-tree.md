@@ -1,30 +1,21 @@
 ---
-title: "Nasıl yapılır: bir tüm XML ağacı (Visual Basic) Namespace değiştirme"
-ms.custom: 
+title: 'Nasıl yapılır: bir tüm XML ağacı (Visual Basic) Namespace değiştirme'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1c5ee83840f9d8b4105e7af53008a329dfde37d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1ef5ae9a2a8c4e69687809c117451d70dbfe211b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642993"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a><span data-ttu-id="4f598-102">Nasıl yapılır: bir tüm XML ağacı (Visual Basic) Namespace değiştirme</span><span class="sxs-lookup"><span data-stu-id="4f598-102">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>
-<span data-ttu-id="4f598-103">Bazen bir öğe veya öznitelik için ad alanı programlı olarak değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4f598-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="4f598-104">LINQ-XML bu kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="4f598-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="4f598-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliği ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="4f598-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="4f598-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Özelliği ayarlanamaz, ancak kolayca öznitelikler kopyalayabilirsiniz bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>varolan öznitelikleri kaldırın ve ardından yeni istenen ad alanında yeni öznitelikler ekleyin.</span><span class="sxs-lookup"><span data-stu-id="4f598-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a><span data-ttu-id="8ef7a-102">Nasıl yapılır: bir tüm XML ağacı (Visual Basic) Namespace değiştirme</span><span class="sxs-lookup"><span data-stu-id="8ef7a-102">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="8ef7a-103">Bazen bir öğe veya öznitelik için ad alanı programlı olarak değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-103">You sometimes have to programmatically change the namespace for an element or an attribute.</span></span> <span data-ttu-id="8ef7a-104">LINQ-XML bu kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-104">LINQ to XML makes this easy.</span></span> <span data-ttu-id="8ef7a-105"><xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Özelliği ayarlanabilir.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-105">The <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> property can be set.</span></span> <span data-ttu-id="8ef7a-106"><xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> Özelliği ayarlanamaz, ancak kolayca öznitelikler kopyalayabilirsiniz bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>varolan öznitelikleri kaldırın ve ardından yeni istenen ad alanında yeni öznitelikler ekleyin.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-106">The <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> property cannot be set, but you can easily copy the attributes into a <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, remove the existing attributes, and then add new attributes that are in the new desired namespace.</span></span>  
   
- <span data-ttu-id="4f598-107">Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="4f598-107">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+ <span data-ttu-id="8ef7a-107">Daha fazla bilgi için bkz: [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="8ef7a-107">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4f598-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="4f598-108">Example</span></span>  
- <span data-ttu-id="4f598-109">Aşağıdaki kod iki XML ağaçları hiçbir ad alanında oluşturur.</span><span class="sxs-lookup"><span data-stu-id="4f598-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="4f598-110">Ardından ağaçlarını her ad alanı değiştirir ve tek bir ağacına birleştirir.</span><span class="sxs-lookup"><span data-stu-id="4f598-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="8ef7a-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="8ef7a-108">Example</span></span>  
+ <span data-ttu-id="8ef7a-109">Aşağıdaki kod iki XML ağaçları hiçbir ad alanında oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-109">The following code creates two XML trees in no namespace.</span></span> <span data-ttu-id="8ef7a-110">Ardından ağaçlarını her ad alanı değiştirir ve tek bir ağacına birleştirir.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-110">It then changes the namespace of each of the trees, and combines them into a single tree.</span></span>  
   
 ```vb  
 Dim tree1 As XElement = _  
@@ -72,7 +63,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="4f598-111">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="4f598-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="8ef7a-111">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="8ef7a-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -85,5 +76,5 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4f598-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4f598-112">See Also</span></span>  
- [<span data-ttu-id="4f598-113">XML ağaçları (LINQ-XML) değiştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f598-113">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8ef7a-112">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8ef7a-112">See Also</span></span>  
+ [<span data-ttu-id="8ef7a-113">XML ağaçları (LINQ-XML) değiştirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ef7a-113">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
