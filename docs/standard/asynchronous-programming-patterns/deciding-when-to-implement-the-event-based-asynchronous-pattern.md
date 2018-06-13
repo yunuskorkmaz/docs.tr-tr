@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570984"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme
 Olay tabanlı zaman uyumsuz desen bir sınıfı zaman uyumsuz davranışı sunmaya yönelik bir desen sağlar. Bu desen girişiyle [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zaman uyumsuz davranışı gösterme için iki modeli tanımlar: zaman uyumsuz desen dayalı <xref:System.IAsyncResult?displayProperty=nameWithType> arabirimi ve olay tabanlı düzeni. Bu konu, her iki desenlerini uygulama için uygun olduğunda açıklar.  

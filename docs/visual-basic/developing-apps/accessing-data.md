@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585833"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic uygulamalarındaki verilere erişme
 Visual Basic veri erişimi uygulamaları geliştirmeye yardımcı olmak üzere çeşitli yeni özellikler içerir. Windows uygulamaları için veri bağlama formları konumundan öğeleri sürükleyerek oluşturulur [veri kaynakları penceresi](/visualstudio/data-tools/add-new-data-sources) forma. Konumundan öğeleri sürükleyerek verilere denetimler bağlama **veri kaynakları penceresi** mevcut denetimleri üzerine.  

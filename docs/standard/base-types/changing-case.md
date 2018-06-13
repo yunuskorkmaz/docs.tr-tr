@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570555"
 ---
 # <a name="changing-case-in-net"></a>.NET durumda değiştirme
 Bir kullanıcıdan giriş kabul eden bir uygulama yazıyorsanız, hiçbir zaman çözemiyorsa veri girmek için kullanacağı hangi durumda emin olabilirsiniz. Genellikle, özellikle, bunları kullanıcı arabiriminde görüntülüyorsanız tutarlı olarak ortası dizeleri istiyor. Aşağıdaki tabloda, üç durumda değiştirme yöntemleri açıklar. İlk iki yöntem bir kültür kabul eden bir aşırı sağlar.  

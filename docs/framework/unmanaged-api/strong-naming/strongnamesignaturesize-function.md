@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461207"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize İşlevi
 Tanımlayıcı ad imzası boyutu döndürür. `StrongNameSignatureSize` genellikle derleyicileri tarafından gecikmeli imzalanmış bir derleme oluştururken dosyasında ayırmak için ne kadar alan belirlemek için kullanılır.  

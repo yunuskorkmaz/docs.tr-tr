@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572014"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML veri ayıklamak
 Microsoft .NET Framework XML belgesinde temsil etmek için birkaç farklı yolu vardır. Bu kullanmayı da içeren bir <xref:System.String>, veya kullanarak <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XPath.XPathDocument> sınıfları. Bu bir XML belgesi farklı sunumu arasında taşıma kolaylaştırmak için <xref:System.Xml.XPath.XPathNavigator> sınıfı XML olarak ayıklanması için bir dizi yöntem ve özellikleri sağlar bir <xref:System.String>, <xref:System.Xml.XmlReader> nesne veya <xref:System.Xml.XmlWriter> nesnesi.  

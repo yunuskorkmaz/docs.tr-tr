@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573932"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Varolan düğümleri bir belgeden kopyalama
 **ImportNode** yöntemi olarak bir düğüm veya tüm düğüm alt ağacı kopyalanır birinden mekanizmasıdır **XmlDocument** başka bir. Çağrısından döndürülen düğümü, öznitelik değerleri, düğüm adı, düğüm türü ve tüm ad alanı ilgili öznitelikleri öneki, yerel ad ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI) gibi dahil olmak üzere kaynak belge düğümden kopyasıdır. Kaynak belge değiştirilmez. Düğüm içe aktardıktan sonra hala düğümleri eklemek için kullanılan yöntemlerden birini kullanarak ağacına eklemeniz gerekir.  

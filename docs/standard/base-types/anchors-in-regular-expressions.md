@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578033"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 <a name="top"></a> Bağlayıcılarını veya atomik Sıfır Genişlik onayları bir eşleşme gerçekleştiği gerekir bir dizedeki belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda .NET normal ifadelerde tarafından desteklenen bağlayıcıları listeler.  

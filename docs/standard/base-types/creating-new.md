@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567825"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET ile yeni dizeler oluşturma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Basit atama kullanılarak oluşturulması dizeleri sağlar ve aynı zamanda çok sayıda farklı parametreler kullanarak dize oluşturma desteklemek için bir sınıf oluşturucu overloads. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ayrıca çeşitli yöntemlerin sağlar <xref:System.String?displayProperty=nameWithType> yeni bir dize oluşturma sınıf nesneleri birkaç dizeleri, dizeleri, dizilerin birleştirerek veya nesneleri.  

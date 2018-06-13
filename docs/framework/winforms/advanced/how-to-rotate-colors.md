@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522401"
 ---
 # <a name="how-to-rotate-colors"></a>Nasıl yapılır: Renkleri Döndürme
 Four-dimensional renk alanını dönüş görselleştirmek zordur. Biz, sabit renk bileşenlerden biri tutmak kabul ettiğinizi belirten tarafından döndürme görselleştirmek kolaylaştırabilir. 1'den sabit alfa bileşeni (tamamıyla opak) tutmak kabul varsayalım. Sonra şu üç boyutlu renk alanını kırmızı, yeşil ve mavi eksenli aşağıdaki çizimde gösterildiği gibi görselleştirebilirsiniz.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572947"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Adı veya dizin tarafından sırasız düğümü alma
 **XmlNamedNodeMap** NamedNodeMap olarak World Wide Web Konsorsiyumu (W3C) belirtimi açıklandığı ve bunların adı veya dizin tarafından başvuru düğümlere yeteneği olan düğümler sırasız bir kümesini işlemek için gereklidir. Tek yolu erişiminiz bir **XmlNamedNodeMap** olduğunda bir **XmlNamedNodeMap** yöntemi veya özelliği döndürülür. Üç yöntem veya döndüren özellikleri bir **XmlNamedNodeMap**:  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579164"
 ---
 # <a name="garbage-collection-notifications"></a>Çöp Toplama Bildirimleri
 Bazı durumlarda, tam atık toplama (diğer bir deyişle, 2. nesil toplama) ortak dil çalışma zamanı tarafından performansını olumsuz etkileyebilir. Bu, özellikle büyük miktarda istekleri işlemek sunucuları ile ilgili bir sorun olabilir; Bu durumda, uzun çöp toplama istek zaman aşımı neden olabilir. Tam bir koleksiyon kritik bir dönem boyunca oluşmasını önlemek için tam atık toplama yaklaştığını ve iş yükünü başka bir sunucu örneğine yönlendirmek için önlem bildirilebilir. Geçerli sunucu örneğini istekleri işleyen gerekmez koşuluyla, ayrıca bir koleksiyon kendiniz anlamına.  

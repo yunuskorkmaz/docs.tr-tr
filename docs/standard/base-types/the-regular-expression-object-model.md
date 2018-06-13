@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579866"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a> Bu konu içinde .NET Normal ifadelerle çalışma kullanılan nesne modeli açıklar. Aşağıdaki bölümleri içerir:  

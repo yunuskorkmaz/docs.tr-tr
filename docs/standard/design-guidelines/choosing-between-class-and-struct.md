@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573587"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ve yapı arasında seçim yapma
 Her framework Tasarımcısı bakarken temel tasarım kararlarından biri bir türü (bir başvuru türü) bir sınıf veya yapı (bir değer türü) olarak tasarlamanız verilip biridir. Başvuru türleri ve değer türlerini davranış farklılıkları iyi anlaşılmasını, bu seçenek yaparken önemlidir.  

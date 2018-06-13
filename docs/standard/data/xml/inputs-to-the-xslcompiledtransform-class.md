@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572846"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform sınıfı girişleri
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Yöntemi kabul türleri kaynak belge için üç giriş: uygulayan bir nesne <xref:System.Xml.XPath.IXPathNavigable> arabirimi, bir <xref:System.Xml.XmlReader> kaynak belge ya da bir dize URI okur nesnesi.  

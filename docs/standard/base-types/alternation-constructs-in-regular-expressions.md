@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574741"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 <a name="top"></a> Değişim yapıları değiştirin ya da etkinleştirmek için normal bir ifade / veya veya koşullu eşleştirme. .NET üç değişim yapıları destekler:  

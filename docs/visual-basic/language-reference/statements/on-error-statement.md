@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605101"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 Hata işleme yordamını etkinleştirir ve yordam bir yordam içindeki konumunu belirtir; Ayrıca bir hata işleme yordamı devre dışı bırakmak için kullanılabilir.  

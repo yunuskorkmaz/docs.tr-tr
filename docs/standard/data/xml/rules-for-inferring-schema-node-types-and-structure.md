@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578241"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema düğüm türleri ve yapısı çıkarımını yapma için kurallar
 Bu konu, nasıl bir XML Şeması Tanım Dili (XSD) yapısı için bir XML belgesi düğüm türleri şema çıkarım işlemi çevirir açıklar.  
