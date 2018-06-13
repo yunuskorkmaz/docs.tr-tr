@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652135"
 ---
 # <a name="-verbose"></a>-verbose
 Ayrıntılı durum ve hata iletilerine neden derleyicinin neden olur.  

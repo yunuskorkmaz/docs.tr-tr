@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652158"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
 Her Visual Basic uygulama çağrılan bir yordam içermelidir `Main`. Bu yordam görevi görür, başlangıç noktası ve genel olarak, uygulamanız için Denetim aynıdır. .NET Framework çağrıları, `Main` uygulamanızı yükledi ve denetim geçirmeye hazır olduğunda yordamı. Bir Windows Forms uygulaması oluşturmakta olduğunuz sürece yazmalısınız `Main` yordamı kendi çalışan uygulamalar için.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654800"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
 A *lambda ifadesi* bir işlevi veya alt yordama bir temsilci geçerli olduğu yerlerde, kullanılabilecek bir ad olmadan. Lambda ifadeleri işlevleri veya alt yordamlar olabilir ve tek satırlı veya çok satırlı olabilir. Değerleri bir lambda ifadesi geçerli kapsamdan geçirebilirsiniz.  

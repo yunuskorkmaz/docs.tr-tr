@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651472"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
 Aşağıdaki koşullara uyması şartıyla farklı dizi türü için bir dizi türü dönüştürebilirsiniz:  

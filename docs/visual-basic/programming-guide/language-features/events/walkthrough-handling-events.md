@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655120"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
 Bu olayları ile çalışmak nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: bildiren ve yükseltmeyi olayları](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirme ve olaylarının arttığı gösterilmektedir. Bu bölümde, bunlar gerçekleştiğinde olayları işlemek nasıl göstermek için bu gözden geçirme sınıfından ve form kullanır.  

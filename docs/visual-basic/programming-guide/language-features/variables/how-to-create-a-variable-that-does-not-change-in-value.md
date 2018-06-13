@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651382"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: Değeri Değişmeyen Bir Değişken Oluşturma (Visual Basic)
 Değeri değişmeyen bir değişken kavramı çelişkili gibi görünebilir. Ancak bazı durumlarda bir sabit uygun olmadığı ve sabit bir değere sahip bir değişken kullanışlıdır. Böyle bir durumda olan bir üye değişkenine tanımlayabilirsiniz [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  

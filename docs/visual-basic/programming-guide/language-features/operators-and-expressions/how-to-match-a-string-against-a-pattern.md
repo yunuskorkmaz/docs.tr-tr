@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655218"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme (Visual Basic)
 Bir ifadenin olmadığını öğrenmek istiyorsanız [dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) kullanabileceğiniz sonra bir desen karşılayan [gibi işleci](../../../../visual-basic/language-reference/operators/like-operator.md).  

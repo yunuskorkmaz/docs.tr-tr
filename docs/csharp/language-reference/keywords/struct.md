@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172155"
 ---
 # <a name="struct-c-reference"></a>struct (C# Başvurusu)
 A `struct` türüdür genellikle bir dikdörtgen koordinatlarını veya öğeyi bir stok özelliklerini gibi ilgili değişkenlerin küçük gruplar kapsüllemek için kullanılan bir değer türü. Aşağıdaki örnek, bir basit yapı bildirimi gösterir:  

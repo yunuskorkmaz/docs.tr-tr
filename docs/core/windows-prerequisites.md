@@ -3,12 +3,13 @@ title: .NET Core Windows için Önkoşullar
 description: Windows üzerinde gereken bağımlılıkları geliştirmek ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
 author: JRAlexander
 ms.author: johalex
-ms.date: 05/14/2018
-ms.openlocfilehash: f27070c08755e5b650e32e01011bb7bac669c82d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34311994"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>.NET Core Windows için Önkoşullar
 
@@ -30,9 +31,11 @@ Bu makalede Windows .NET Core uygulamaları geliştirmek için gerekli bağıml�
 * Windows Server 2012 R2 (tam sunucu veya Sunucu Çekirdeği)
 * Windows Server 2016 veya sonraki sürümleri (tam sunucu, Sunucu Çekirdeği veya Nano Server)
 
-Bkz: [.NET Core 2.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) .NET Core tam listesi için desteklenen işletim sistemleri 2.x.
+Aşağıdaki makalelerde her sürümü .NET Core desteklenen işletim sistemlerinin tam bir listesi vardır:
 
-Bkz: [.NET Core 1.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri.
+* [.NET core 2.1 - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET core 2.0 - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
+* [.NET core 1.x - desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 ## <a name="net-core-dependencies"></a>.NET core bağımlılıkları
 

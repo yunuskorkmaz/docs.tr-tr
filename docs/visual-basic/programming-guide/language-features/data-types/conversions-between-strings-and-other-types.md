@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650575"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Dizeler ve Diğer Türleri Arasında Dönüştürmeler (Visual Basic)
 Bir sayısal dönüştürebilirsiniz `Boolean`, veya tarih/saat değerine bir `String`. Ters yönde de dönüştürebilirsiniz — bir sayısal dize değerinden `Boolean`, veya `Date` — dize içeriği hedef veri türü geçerli bir değer yorumlanacak sağlanan. Desteklemiyorlarsa, bir çalışma zamanı hatası oluşur.  

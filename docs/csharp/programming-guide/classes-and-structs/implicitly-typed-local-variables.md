@@ -10,6 +10,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172012"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtülü Olarak Yazılan Yerel Değişkenler (C# Programlama Kılavuzu)
 Yerel değişkenler bir açık tür vermeden bildirilebilir. `var` Anahtar sözcüğü başlatma ifadesinin sağ tarafında ifadesinden değişkeninin türü gerçekleştirip derleyici bildirir. Çıkarılan türü, yerleşik bir tür, anonim bir tür, kullanıcı tanımlı bir tür veya .NET Framework Sınıf Kitaplığı'nda tanımlanan bir türü olabilir. Dizilerle başlatma hakkında daha fazla bilgi için `var`, bkz: [örtük olarak yazılan diziler](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  

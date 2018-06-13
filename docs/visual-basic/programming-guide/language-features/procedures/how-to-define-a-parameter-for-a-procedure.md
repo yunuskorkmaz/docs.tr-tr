@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651119"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Parametresini Tanımlama (Visual Basic)
 A *parametresi* onu çağırdığında yordamı için bir değer geçirmek için çağıran kodu sağlar. Bir yordam için her parametre adı ve veri türünü belirten bir değişken bildirin aynı şekilde bildirin. Ayrıca geçirme mekanizması belirtin ve parametre isteğe bağlıdır.  

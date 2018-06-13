@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650419"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic'de XML'i Düzenleme
 Kullanabileceğiniz *XML değişmez değerleri* dize, dosya veya akış gibi bir dış kaynaktan XML yüklenmedi. Daha sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML işlemek ve kullanmak için [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] XML sorgulanamıyor.  

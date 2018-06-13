@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650900"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
 A *karakteristiğini* bir bildirilen bir durum kodu ile nasıl etkileşim etkiler o öğenin öğesidir. Bildirilen her öğe bir veya daha fazla ile ilişkili aşağıdaki özelliklere sahiptir:  

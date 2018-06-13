@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656038"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi Visual Studio tümleşik geliştirme ortamı (IDE) programları derleme alternatif olarak sağlanır. Visual Basic komut satırı derleyicisi seçenekleri alfabetik listesi verilmiştir.  

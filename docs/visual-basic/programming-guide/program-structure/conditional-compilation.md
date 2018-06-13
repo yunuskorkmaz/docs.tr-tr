@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653023"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
 İçinde *koşullu derleme*, belirli bir programı kod bloklarını diğerleri yoksayılır sırada seçmeli olarak derlenir.  

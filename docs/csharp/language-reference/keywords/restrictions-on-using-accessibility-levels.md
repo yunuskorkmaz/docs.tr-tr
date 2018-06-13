@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172415"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar (C# Başvurusu)
 Bir bildiriminde bir türü belirttiğinizde, türü erişilebilirlik düzeyi erişilebilirlik düzeyinde bir üye veya başka bir türde bağımlı olup olmadığını denetleyin. Örneğin, doğrudan temel sınıf en az türetilmiş sınıf olarak erişilebilir olmalıdır. Aşağıdaki bildirimler için derleyici hatası neden temel sınıfı `BaseClass` daha az erişilebilen `MyClass`:  

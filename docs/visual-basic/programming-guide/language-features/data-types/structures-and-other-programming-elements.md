@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652031"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
 Diziler, nesneleri ve yordamlarla yanı sıra birbirleri ile birlikte yapıları kullanabilirsiniz. Bu öğeleri tek tek kullandıkça etkileşimler aynı sözdizimini kullanır.  

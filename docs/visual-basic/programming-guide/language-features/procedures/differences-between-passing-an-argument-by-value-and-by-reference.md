@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651661"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar (Visual Basic)
 Bir yordama bağımsız değişkenlerden biri veya daha fazla geçirdiğinizde, her bir bağımsız değişkeni çağıran kodu temel programlama öğesi karşılık gelir. Bu temel alınan öğenin değerini ya da bir başvuru geçirebilirsiniz. Bu olarak bilinir *mekanizması geçirme*.  

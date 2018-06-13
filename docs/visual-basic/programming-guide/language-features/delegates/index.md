@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652889"
 ---
 # <a name="delegates-visual-basic"></a>Temsilciler (Visual Basic)
 Temsilciler yöntemlere başvuran nesneleridir. Bunlar bazen olarak açıklanan *tür kullanımı uyumlu işlev işaretçileri* diğer programlama dillerinde kullanılan işlev işaretçileri benzer olduğundan. Ancak işlev işaretçileri, Visual Basic temsilciler sınıfına dayalı bir başvuru türü <xref:System.Delegate?displayProperty=nameWithType>. Temsilciler paylaşılan her iki yöntem başvuru — belirli bir sınıf örneği çağrılabilir yöntemleri — ve örnek yöntemleri.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652122"
 ---
 # <a name="object-variable-values-visual-basic"></a>Nesne Değişkeni Değerleri (Visual Basic)
 Bir değişken [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) herhangi bir türde veri başvurabilir. Deposunda değeri bir `Object` değişkeni tutulur başka bir yerde bellekte değişkenin kendisine bir işaretçi verileri tutar ancak.  

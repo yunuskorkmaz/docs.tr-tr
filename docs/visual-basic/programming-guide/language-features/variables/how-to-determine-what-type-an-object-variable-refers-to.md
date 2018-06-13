@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651320"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Nasıl yapılır: Bir Nesne Değişkeninin Hangi Türe Başvurduğunu Belirleme (Visual Basic)
 Bir nesne değişkeni başka bir yerde depolanan veriler için bir işaretçi içeriyor. Bu veri türü, çalışma zamanı sırasında değiştirebilirsiniz. Herhangi bir anda kullandığınız <xref:System.Type.GetTypeCode%2A> geçerli çalışma zamanı tür belirlemek için yöntemi veya [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md) geçerli olmadığını öğrenmek için çalışma zamanı türü belirtilen türle uyumlu değil.  

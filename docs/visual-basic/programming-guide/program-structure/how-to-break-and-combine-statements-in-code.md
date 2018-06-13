@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651024"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme (Visual Basic)
 Kodunuzu yazarken, bazen Kod düzenleyicisinde yatay kaydırma başlatılmalarını uzun deyimleri oluşturabilirsiniz. Bu şekilde etkilemez, ancak kodunuzun çalıştığı, onu başkalarının veya monitörde göründüğü gibi kodunu okumak zorlaştırır. Böyle durumlarda, tek uzun deyimi birkaç satırlara ayırma göz önünde bulundurmalısınız.  
