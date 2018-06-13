@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599196"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>Bağımsız değişken değeri &#39; &lt;pathname&gt; &#39; bir yol adı geçerli olmayan karakterler içeriyor
 Bir yol adı geçerli olmayan bir veya daha fazla karakter içeriyor.  

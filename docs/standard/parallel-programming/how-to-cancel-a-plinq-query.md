@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584289"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
 Aşağıdaki örnekler bir PLINQ sorgusunu iptal etmek için iki yol gösterir. İlk örnek çoğunlukla veri geçişi oluşan bir sorguyu iptal gösterilmektedir. İkinci örnek pkı'ya pahalıdır kullanıcı işlevi içeren bir sorguyu iptal etme gösterir.  

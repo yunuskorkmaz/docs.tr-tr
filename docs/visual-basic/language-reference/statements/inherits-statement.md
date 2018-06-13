@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604347"
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
 Geçerli sınıf veya başka bir sınıf veya arabirim kümesine öznitelikleri, değişkenleri, özellikleri, yordamlar ve olayları devralmak için arabirimi neden olur.  

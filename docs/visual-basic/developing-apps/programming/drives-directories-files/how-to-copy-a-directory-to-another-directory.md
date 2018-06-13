@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588590"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> yöntemi bir dizin başka bir dizine kopyalayın. Bu yöntem, dizini ve bunun yanı sıra dizin içeriğini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı adı taşıyan bir dizin olup olmadığını ve `overwrite` ayarlanır `False`, iki dizin içeriğini birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596661"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>İç sistem hatası nedeniyle seri bağlantı noktası adları alınamıyor
 Bir iç hata oluştuğu `My.Computer.Ports.SerialPortNames` özelliği çağrıldı.  

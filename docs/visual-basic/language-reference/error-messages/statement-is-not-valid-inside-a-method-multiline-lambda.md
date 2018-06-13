@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598861"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Deyim yöntem/çok satırlı lambda içinde geçerli değil
 Deyimi içinde geçerli değil bir `Sub`, `Function`, özellik `Get`, veya özellik `Set` yordamı. Bazı deyimleri modül veya sınıf düzeyinde yerleştirilebilir. Diğerleri gibi `Option Strict`, gereken ad alanı düzeyinde olması ve tüm diğer bildirimlerden önce.  

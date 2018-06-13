@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601799"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase Deyimi (Visual Basic)
 Dizi değişkenleri serbest bırakır ve bunların öğeler için kullanılan bellek ayırması için kullanılır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598926"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Başka bir olay günlüğü bu ada sahip bir kaynak zaten kaydettirildi
 Bir olay günlüğüne bir giriş yazmak için belirtilen kaynak ile başka bir olay günlüğü, kayıtlı çalışıldı.  

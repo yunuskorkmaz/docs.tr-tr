@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584676"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma
 Bu örnek tarafından oluşturulan her ayrı görev durumda depolanıp iş parçacığı yerel değişkenleri kullanmayı gösterir bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü. İş parçacığı yerel verileri kullanarak, çok sayıda paylaşılan durum erişimin eşitleme yükünü önleyebilirsiniz. Paylaşılan kaynağa her yinelemesinde yazmak, yerine işlem ve görev için tüm yinelemeleri tamamlanana kadar değeri saklayın. Sonra nihai sonucu kez paylaşılan kaynağa yazma veya başka bir yönteme geçirin.  

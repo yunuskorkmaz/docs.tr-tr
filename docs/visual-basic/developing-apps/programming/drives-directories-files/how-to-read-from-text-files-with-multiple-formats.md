@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584878"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Birden Çok Biçimli Metin Dosyalarını Okuma
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Nesne kolay ve verimli günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar. Kullanarak bir dosyayı birden çok biçimli işleyebilir `PeekChars` dosyası aracılığıyla ayrıştırma gibi her bir satır biçimi belirlemek amacıyla yöntemi.  

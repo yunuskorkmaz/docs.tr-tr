@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600156"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast İşleci (Visual Basic)
 Bir özel durum olmayan bir tür dönüştürme işleminin tanıtır.  
