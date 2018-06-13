@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327365"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Sınıflar ve Yapılar (C# Programlama Kılavuzu)
 Sınıflar ve yapılar .NET Framework'teki ortak tür sistemi temel yapıları ikisidir. Her bir veri kümesini ve birlikte bir mantıksal birim olarak ait davranışları yalıtan aslında bir veri yapısıdır. Veri ve davranışları *üyeleri* sınıf veya yapı, ve yöntemleri, özellikleri ve olayları ve benzeri, bu konunun ilerleyen bölümlerinde listelendiği gibi içerirler.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528788"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator Denetimine Genel Bakış (Windows Forms)
 Kullanabileceğiniz <xref:System.Windows.Forms.BindingNavigator> aramak ve bir Windows formunda veri değiştirmek kullanıcılar için standartlaştırılmış bir yol oluşturmak için denetim. Sık kullandığınız <xref:System.Windows.Forms.BindingNavigator> ile <xref:System.Windows.Forms.BindingSource> bir form üzerinde veri kayıtlarda taşımak ve kayıtlarıyla etkileşim kullanıcılar etkinleştirmek için bileşen.  

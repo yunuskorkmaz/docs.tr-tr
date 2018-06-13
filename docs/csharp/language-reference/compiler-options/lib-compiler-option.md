@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216862"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# Derleyici Seçenekleri)
 **-Lib** seçeneği tarafından başvurulan derlemelerin konumunu belirleyen [-başvurusu (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneği.  

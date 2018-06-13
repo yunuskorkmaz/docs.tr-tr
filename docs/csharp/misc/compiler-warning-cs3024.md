@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33280351"
 ---
 # <a name="compiler-warning-cs3024"></a>Derleyici Uyarısı CS3024
 Kısıtlama türü 'type' CLS uyumlu değil.  

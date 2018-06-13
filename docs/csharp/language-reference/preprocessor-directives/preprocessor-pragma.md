@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278815"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# Başvurusu)
 `#pragma` Derleyici göründüğü dosyası derleme için özel yönergeler sağlar. Yönergeleri derleyici tarafından desteklenmesi gerekir. Diğer bir deyişle, kullanamazsınız `#pragma` özel önişlem yönergelerini oluşturmak için. Aşağıdaki iki Microsoft C# Derleyici destekleyen `#pragma` yönergeler:  

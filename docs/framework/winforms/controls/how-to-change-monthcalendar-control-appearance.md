@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531332"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Nasıl yapılır: Windows Forms MonthCalendar denetimi değiştirme&#39;s görünümü
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim birçok yolla Takvim görünümünü özelleştirmenizi sağlar. Örneğin, renk düzenini ayarlama ve hafta numaralarını ve geçerli tarih görüntüleme veya gizleme seçin.  

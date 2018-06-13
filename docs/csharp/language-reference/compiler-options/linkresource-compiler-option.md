@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219186"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# Derleyici Seçenekleri)
 .NET Framework kaynağına bağlantı çıktı dosyasında oluşturur. Kaynak dosyanın çıkış dosyasına eklenmez. Bu farklıdır [-kaynak](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) kaynak dosyasını çıktı dosyasına katıştırma seçeneği.  

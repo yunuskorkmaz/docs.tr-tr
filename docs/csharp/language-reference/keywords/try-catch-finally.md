@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265807"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (C# Başvurusu)
 Ortak kullanımını `catch` ve `finally` elde edilir ve kaynaklarını kullanmak için birlikte olan bir `try` engellemek, olağanüstü durumlarda içeren bir `catch` engelleme ve kaynakları serbest bırakmak `finally` bloğu.  

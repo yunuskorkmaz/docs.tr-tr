@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530620"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunların Sırasını Değiştirme
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> bir veri kaynağından görüntülemek için veri kaynağının şemasını bazen sütunlarında bunları görüntülemek istediğiniz sırayla görünmez. Kullanarak görüntülenen sütunların sırasını değiştirebilirsiniz <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> özelliği <xref:System.Windows.Forms.DataGridViewColumn> sınıfı.  

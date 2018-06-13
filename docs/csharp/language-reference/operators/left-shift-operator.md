@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286181"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt; İşleci (C# Başvurusu)
 Sola kaydırma işleci (`<<`) ilk işlenen sola bit sayısı kadar ikinci işlenen tarafından belirtilen kaydırır. İkinci işlenen türünde olmalıdır bir [int](../../../csharp/language-reference/keywords/int.md) veya önceden tanımlanmış bir örtük sayısal dönüştürme için olan bir türü `int`.  

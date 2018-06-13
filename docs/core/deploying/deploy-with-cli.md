@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217839"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Komut satırı arabirimi (CLI) araçları ile .NET Core uygulamaları dağıtma
 

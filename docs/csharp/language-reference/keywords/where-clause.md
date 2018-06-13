@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284309"
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
 `where` Yan tümcesi, veri kaynağından hangi öğelerin sorgu ifadesinde döndürülecek belirtmek için bir sorgu ifadesinde kullanılır. Bir Boole koşulu geçerlidir (*koşulu*) (aralık değişkeni tarafından başvurulan) her kaynak öğesine ve bunlar belirtilen koşulu olduğu true döndürür. Tek bir sorgu ifade birden çok içerebilir `where` yan tümceleri ve tek bir yan tümce birden çok koşul alt ifadelerin içerebilir.  

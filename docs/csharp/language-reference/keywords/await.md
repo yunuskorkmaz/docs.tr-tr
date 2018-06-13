@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218926"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
 `await` İşleci awaited görevi tamamlanana kadar yönteminin yürütülmesi askıya noktası eklemek için zaman uyumsuz bir yöntem göreve uygulanır. Görev devam eden iş temsil eder.  

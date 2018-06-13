@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218182"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# Derleyici Seçenekleri)
 **-Başvuru** seçeneği neden içeri aktarmak derleyici [ortak](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosya geçerli projeye böylece belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  

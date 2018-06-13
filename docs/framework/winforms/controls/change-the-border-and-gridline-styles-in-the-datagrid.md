@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528755"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Kenarlık ve Kılavuz Çizgi Stillerini Değiştirme
 İle <xref:System.Windows.Forms.DataGridView> denetim, denetimin kenarlık ve kullanıcı deneyimini geliştirmek için kılavuz çizgilerini görünümünü özelleştirebilirsiniz. Kılavuz çizgisi rengi ve denetim hücrelerde kenarlık stilleri yanı sıra Denetim kenarlık stili değiştirebilirsiniz. Ayrıca, farklı bir hücre kenarlık stilleri sıradan hücre, Satır üstbilgisi hücreleri ve sütun başlığı hücreleri uygulayabilirsiniz.  

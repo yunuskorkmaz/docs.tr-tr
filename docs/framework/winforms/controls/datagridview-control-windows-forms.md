@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529931"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView Denetimi (Windows Forms)
 `DataGridView` Denetimi verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar. Kullanabileceğiniz `DataGridView` çok küçük miktarda veri, salt okunur görünümlerde göstermek için denetlemek ya da çok büyük veri kümelerine yönelik düzenlenebilir görünümlerini göstermek için ölçeklendirebilirsiniz.  

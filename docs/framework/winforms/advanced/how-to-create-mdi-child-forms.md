@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527505"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
 MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), bu formların kullanıcı etkileşimi merkezi olarak.  

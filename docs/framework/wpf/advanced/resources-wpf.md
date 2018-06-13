@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545824"
 ---
 # <a name="resources-wpf"></a>Kaynaklar (WPF)
 Uygulamanız farklı yerde yeniden kullanılabilir bir nesne bir kaynaktır. WPF farklı türdeki kaynakların destekler. Bu kaynaklar temelde iki kaynak türleri şunlardır: XAML kaynakları ve kaynak veri dosyaları. Fırçalar ve stiller XAML kaynakları örneklerindendir. Kaynak veri dosyaları bir uygulama gerekiyor yapılamayan veri dosyalarıdır.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527021"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Sütununun Türünü Değiştirme
 Bazen bir Windows Forms zaten eklenmiş bir sütunun türünü değiştirmek istersiniz <xref:System.Windows.Forms.DataGridView> denetim. Örneğin, bir veri kaynağına denetimi bağladığınızda otomatik oluşturulan sütunları bazıları türlerini değiştirmek isteyebilirsiniz. Görüntü tablosu yabancı anahtarları ilgili tablodaki satırları içeren sütunlar olduğunda yararlıdır. Bu durumda, bu yabancı anahtarları ilişkili tablo daha anlamlı değerleri görüntülemek birleşik giriş kutusu sütunlarla görüntülemek metin kutusu sütunları değiştirmek isteyebilirsiniz.  

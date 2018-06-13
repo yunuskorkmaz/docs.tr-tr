@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325104"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Nasıl yapılır: as ve is İşleçlerini Kullanarak Güvenli Bir Şekilde Atama (C# Programlama Kılavuzu)
 Nesneler biçimli olduğundan türetilmiş bir tür tutmak için bir temel sınıf türünde bir değişken için mümkündür. Türetilen türün yöntemi erişmek için türetilmiş bir tür değerine geri dönüştürmek gereklidir. Ancak, basit bir girişiminde atma riskini bu gibi durumlarda cast oluşturur bir <xref:System.InvalidCastException>. Diğer bir deyişle neden C# sağlar [olan](../../../csharp/language-reference/keywords/is.md) ve [olarak](../../../csharp/language-reference/keywords/as.md) işleçler. Bir özel durum oluşturulmasına neden olmadan bir cast başarılı olup olmadığını sınamak için aşağıdaki işleçleri kullanabilirsiniz. Genel olarak, `as` işleci olduğundan daha verimli cast başarıyla yapılabilmesi için gerçekten cast değeri döndürür. `is` İşleci bir Boole değeri döndürür. Bu nedenle yalnızca bir nesnenin türünü belirlemek istiyorsanız ancak aslında cast gerekmez kullanılabilir.  

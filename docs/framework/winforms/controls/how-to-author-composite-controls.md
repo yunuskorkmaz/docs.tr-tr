@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528989"
 ---
 # <a name="how-to-author-composite-controls"></a>Nasıl yapılır: Bileşik Denetimler Yazma
 Bileşik denetimler birçok yolla değişiklik. Windows masaüstü uygulaması projesi parçası olarak bunları yazar ve bunları yalnızca projesinde formlarda kullanabilirsiniz. Veya Windows Denetim Kitaplığı projede yazar, bir derlemeye Projeyi derlemek ve diğer projelerinde denetimleri kullanın. Bile, bunları devralır ve görsel devralma bunları hızlı bir şekilde özel amaçlarla özelleştirmek için kullanın.  

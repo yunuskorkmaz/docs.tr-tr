@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217490"
 ---
 # <a name="group-clause-c-reference"></a>group tümcesi (C# Başvurusu)
 `group` Yan tümcesi bir dizi döndürür <xref:System.Linq.IGrouping%602> grubu için anahtar değeri ile eşleşen sıfır veya daha fazla öğe içeren nesne. Örneğin, bir dizi dize her dizedeki ilk harfi göre gruplandırabilirsiniz. Bu durumda, ilk harfi anahtarı ve bir türe sahip [char](../../../csharp/language-reference/keywords/char.md)ve depolanan `Key` her özellik <xref:System.Linq.IGrouping%602> nesnesi. Derleyici anahtar türü oluşturur.  

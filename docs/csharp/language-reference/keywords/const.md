@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216252"
 ---
 # <a name="const-c-reference"></a>const (C# Başvurusu)
 Kullandığınız `const` sabit bir alan veya sabit bir yerel bildirmek için anahtar sözcüğü. Sabit alanları ve yerel değişkenleri değil ve değiştirilemeyebilir. Sabitler numaraları, Boole değerleri, dize veya null bir başvuru olabilir. Herhangi bir zamanda değiştirmeniz beklediğiniz bilgileri temsil eden bir sabit oluşturmayın. Örneğin, sabit bir alan, bir hizmet, bir ürün sürüm numarası veya bir şirket markası adını fiyat depolamak için kullanmayın. Zaman içinde bu değerleri değiştirebilirsiniz ve derleyicileri sabitleri yayıldığından Kitaplıklarınızı ile derlenen diğer kod değişiklikleri görmek için derlenmesi gerekir. Ayrıca bkz. [readonly](../../../csharp/language-reference/keywords/readonly.md) anahtar sözcüğü. Örneğin:  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216918"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Sayısal Sonuçlar Tablosunu Biçimlendirme (C# Başvurusu)
 Sayısal sonuçlar kullanarak biçimlendirebilirsiniz <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi, ile <xref:System.Console.Write%2A?displayProperty=nameWithType> veya <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> çağrı yöntemleri `String.Format`, veya kullanarak [dize ilişkilendirme](../tokens/interpolated.md). Biçim biçim dizeleri kullanılarak belirtilir. Aşağıdaki tabloda, desteklenen standart biçim dizeleri içerir. Biçim dizesi aşağıdaki biçimdedir: `Axx`, burada `A` biçim belirteci olan ve `xx` duyarlık Belirleyicisi değil. Sayısal değer uygulanan biçimlendirme türü biçim belirteci denetler ve önemli basamak sayısını veya ondalık biçimlendirilmiş çıkış duyarlık Belirleyicisi denetler. Duyarlık Belirleyicisi aralığından 0 ile 99 değeri.  

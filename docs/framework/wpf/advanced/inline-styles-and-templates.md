@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545895"
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Style> ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıfların) kaynaklarında bir öğeyi görsel görünümünü tanımlamak için bir yol kullanılabilmesi için birden çok kez kullanabilmek. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri yararlanma <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman kaynak referans varolan stilleri ve şablonları olarak yerine satır içi yenilerini tanımlayın.  

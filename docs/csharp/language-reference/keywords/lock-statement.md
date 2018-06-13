@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274225"
 ---
 # <a name="lock-statement-c-reference"></a>lock Deyimi (C# Başvurusu)
 `lock` Anahtar sözcüğü belirli nesne karşılıklı dışlama kilidi alma, bir deyimi yürütme ve kilidin açılması bu deyimi blok önemli bir bölümü işaretler. Aşağıdaki örnek içeren bir `lock` deyimi.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526028"
 ---
 # <a name="button-control-overview-windows-forms"></a>Düğme Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Button> denetimi sağlar kullanıcıya bir eylemi gerçekleştirmek için tıklatın. Düğme tıklatıldığında, düğmeye gibi durur ve yayımlandı. Kullanıcı bir düğmesine tıkladığında <xref:System.Windows.Forms.Control.Click> olay işleyicisi çağrılır. Kodda yerleştirin <xref:System.Windows.Forms.Control.Click> seçtiğiniz herhangi bir eylemi gerçekleştirmek için olay işleyicisi.  

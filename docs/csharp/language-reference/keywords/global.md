@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216051"
 ---
 # <a name="global-c-reference"></a>global (C# Başvurusu)
 `global` Önce geldiğinde bağlamsal anahtar sözcüğü [:: işleci](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), herhangi bir C# programı için varsayılan ad alanını ve aksi durumda adlandırılmamış genel ad alanına başvuruyor. Daha fazla bilgi için bkz: [nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529031"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem her piksel rengi piksel dikdörtgen bir dizi belirtin BITS dizisidir. BITS için tek bir piksel hoşlanıyorsanız sayısını o piksel atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilen, örneğin, ardından belirli bir piksel 16 farklı renk biri atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksel atanabilir renklerin sayısı birkaç örneği gösterilmektedir.  

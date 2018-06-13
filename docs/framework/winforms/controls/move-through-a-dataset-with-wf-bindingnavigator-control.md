@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537196"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile DataSet içinde Hareket Etme
 Veri tabanlı uygulamalar oluşturmak gibi genellikle veri toplulukları kullanıcılara görüntülenecek gerekir. <xref:System.Windows.Forms.BindingNavigator> Birlikte denetim <xref:System.Windows.Forms.BindingSource> bileşeni, bir toplulukta taşıma ve öğeleri sıralı olarak görüntülemek için kullanışlı ve Genişletilebilir bir çözüm sağlar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529434"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Verileri Görüntüleme
 `DataGridView` Denetimi, çeşitli dış veri kaynakları verileri görüntülemek için kullanılır. Alternatif olarak, satırları ve sütunları denetimine ekleme ve el ile veri ile doldurulacak.  

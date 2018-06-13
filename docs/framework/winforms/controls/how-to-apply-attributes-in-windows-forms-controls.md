@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529642"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama
 Bileşenleri ve doğru tasarım ortamı ile etkileşim ve doğru şekilde çalışma zamanında yürütmek denetimleri geliştirmek için sınıflar ve üyeleri öznitelikleri doğru uygulamanız gerekir.  

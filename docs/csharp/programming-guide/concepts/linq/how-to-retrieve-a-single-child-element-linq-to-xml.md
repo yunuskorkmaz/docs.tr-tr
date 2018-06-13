@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321343"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Nasıl yapılır: tek bir alt öğe (LINQ-XML) alma (C#)
 Bu konuda, tek bir alt öğe, alt öğe adı verilen almak açıklanmaktadır. Adı alt öğe ve bu ada sahip olan yalnızca bir öğe olduğunu bildiğiniz durumlarda bir koleksiyon yerine yalnızca tek bir öğede almak kullanışlı olabilir.  

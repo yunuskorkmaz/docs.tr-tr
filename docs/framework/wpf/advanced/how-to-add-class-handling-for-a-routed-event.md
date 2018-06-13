@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545369"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Nasıl yapılır: Gönderilmiş bir Olay için Sınıf İşleme Ekleme
 Yönlendirilmiş olaylar, sınıf veya örnek işleyicileri verilen herhangi bir düğümde rotadaki tarafından işlenebilir. Sınıf işleyicileri önce çağrılır ve olayların örnek işlemesini bastırmak veya diğer olaya özgü davranışlar temel sınıflar tarafından sahip olunan olaylarına tanıtmak için sınıf uygulamaları tarafından kullanılabilir. Bu örnek sınıf işleyicileri uygulamak için iki yakından ilgili teknik gösterilmiştir.  

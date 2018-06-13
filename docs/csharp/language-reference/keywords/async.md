@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216944"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 Kullanım `async` belirtmek için değiştirici yöntemi, bir [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntemi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuz olarak çağrılır. Bir yöntem veya ifadesi bu değiştirici kullanıyorsanız, bunu olarak adlandırılır bir *async yöntemi*. Aşağıdaki örnek, adlandırılmış bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 

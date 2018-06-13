@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528358"
 ---
 # <a name="vector-graphics-overview"></a>Vektör Grafiklerine Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgiler, dikdörtgenler ve diğer şekiller bir koordinat sistemi çizer. Koordinat sistemleri çeşitli arasından seçebilirsiniz, ancak varsayılan koordinat sistemi kaynağını sol üst köşedeki sağa ve aşağı işaret eden y ekseni işaret eden x eksenine sahip. Piksel varsayılan koordinat sistemi ölçü birimidir.  

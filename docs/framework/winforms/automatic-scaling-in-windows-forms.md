@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529889"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 Otomatik ölçeklendirme etkinleştirir bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede başka bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi ile uygun şekilde görüntülenmesi için tasarlanmış. Formun sağlar ve denetimlerinden akıllıca yerel windows ve diğer uygulamaların hem kullanıcıların hem de diğer geliştiricilerinin makinelerde ile tutarlı olacak şekilde yeniden boyutlandırılır. Desteği [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlayan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı yerel Windows uygulamaları her bir kullanıcının makineye karşılaştırıldığında görünüm korumak için uygulamalar.

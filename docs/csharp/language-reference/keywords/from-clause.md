@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218403"
 ---
 # <a name="from-clause-c-reference"></a>from tümcesi (C# Başvurusu)
 Bir sorgu ifadesi ile başlamalıdır bir `from` yan tümcesi. Ayrıca, bir sorgu ifadesi de ile başlayan alt sorgularda içerebilir bir `from` yan tümcesi. `from` Yan tümcesi aşağıdaki belirtir:  

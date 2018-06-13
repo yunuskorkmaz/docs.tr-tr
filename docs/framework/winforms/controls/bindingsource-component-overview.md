@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529610"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen denetimleri için temel bir veri kaynağına bağlama işlemini basitleştirmek için tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen bir conduit ve bağlamak diğer denetimler için bir veri kaynağı olarak davranır. Temel alınan veri listesine komutları geçirme sırasında formun veri bağlantısı için bir Özet sağlar. Böylece bir veri kaynağı olarak bileşen işlevleri Ayrıca, veri doğrudan bu onu ekleyebilirsiniz.  

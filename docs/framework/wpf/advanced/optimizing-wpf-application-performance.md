@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546334"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF Uygulama Performansını İyileştirme
 Bu bölüm için bir başvuru olarak yöneliktir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarının performansını artırmak yolları arayan uygulama geliştiricileri. Microsoft .NET Framework için yeni bir geliştirici olup olmadığını ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ilk iki platformlarıyla öğrenmeniz. Bu bölümde her ikisinde de bilgili varsayar ve uygulamalarını başlamak ve çalıştırmak için yeterli zaten bilen programcıları için yazılmıştır.  

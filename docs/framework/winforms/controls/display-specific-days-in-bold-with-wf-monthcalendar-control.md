@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528537"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebilir günleri kalın yazıyla tekil tarihleri veya yinelenen aralıklarla. Dikkat çekmek tatiller ve hafta sonları gibi özel tarihler için bunu yapabilirsiniz.  

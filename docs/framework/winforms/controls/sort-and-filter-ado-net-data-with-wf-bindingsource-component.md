@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538080"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme
 Sıralama ve filtreleme özelliği, getirebilir <xref:System.Windows.Forms.BindingSource> aracılığıyla kontrol <xref:System.Windows.Forms.BindingSource.Sort%2A> ve <xref:System.Windows.Forms.BindingSource.Filter%2A> özellikleri. Temel alınan veri kaynağı olduğunda basit sıralama uygulayabilirsiniz bir <xref:System.ComponentModel.IBindingList>, ve gelişmiş veri kaynağı olduğunda sıralama ve filtreleme uygulayabilirsiniz bir <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Özelliği gerektiren standart [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sözdizimi: veri kaynağındaki veri sütununun adını temsil eden bir dize arkasından `ASC` veya `DESC` listeyi artan veya azalan sırada sıralanması olup olmadığını belirtmek için. Gelişmiş sıralama veya her bir sütunun virgülle ayırıcı ile ayırarak birden çok sütun sıralama ayarlayabilirsiniz. <xref:System.Windows.Forms.BindingSource.Filter%2A> Özelliği bir dize ifadesi alır.  

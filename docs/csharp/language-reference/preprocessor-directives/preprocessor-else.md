@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269161"
 ---
 # <a name="else-c-reference"></a>#else (C# Başvurusu)
 `#else` Bileşik koşullu yönergesi oluşturmanıza olanak tanır şekilde, önceki içinde ifadeleri hiçbiri [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya (isteğe bağlı) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) yönergeleri `true`, derleyici tüm kod değerlendirir arasında `#else` ve sonraki `#endif`.  

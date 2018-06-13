@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547033"
 ---
 # <a name="how-to-implement-icommandsource"></a>Nasıl yapılır: ICommandSource Uygulama
 Bu örnek uygulama tarafından bir komut kaynağı oluşturmak nasıl gösterir <xref:System.Windows.Input.ICommandSource>.  Komutu bir komut çağrılacak bildiği bir nesne kaynağıdır.  <xref:System.Windows.Input.ICommandSource> Bir arabirimi kullanıma sunan üç üye: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, ve <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> çağrılacak komuttur. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Komut kaynağından komutu işleyen yönteme geçirilen bir kullanıcı tanımlı veri türü. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> Komut üzerinde yürütülmekte olan nesnesidir.  

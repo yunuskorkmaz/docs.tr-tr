@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528305"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Bileşik Windows Forms Denetimi Geliştirme
 Diğer Windows Forms denetimleri birleştiren bileşik Windows Forms denetimi geliştirme yapabilirsiniz. Öğesinden türetilen bileşik denetimler <xref:System.Web.UI.UserControl> kullanıcı denetimleri olarak adlandırılır. Taban sınıfı <xref:System.Windows.Forms.UserControl>, alt denetimleri yönlendirme, böylece alt denetimleri odağı alabilir sağlama klavye sağlar. Bir kullanıcı denetimi örneği için bkz: <xref:System.Windows.Forms.UserControl> içinde örnek [nasıl yapılır: Windows Forms denetimlerindeki öznitelikler uygulamak](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  

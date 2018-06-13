@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529544"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms için ClickOnce Dağıtımı
 Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], kolayca Windows Forms uygulamaları istemci bilgisayarlara dağıtmak için kullanılan bir teknoloji.  

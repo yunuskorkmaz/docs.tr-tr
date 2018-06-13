@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527767"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya başka bir nesneye devralmak için en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümleri önceden oluşturduğunuz kod veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirler.  

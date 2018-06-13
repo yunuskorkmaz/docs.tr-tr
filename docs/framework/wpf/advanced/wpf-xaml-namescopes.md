@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548700"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML Ad Kapsamları
 XAML ad kapsamları tanımlayan bir kavram XAML içinde tanımlanan nesneler var. XAML isim alanı adları, bir nesne ağacında nesneleri XAML tanımlanan adlarını ve örnek eşdeğerlerine arasındaki ilişkileri oluşturmak için kullanılabilir. Genellikle, XAML ad kapsamları içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod XAML uygulama için ayrı ayrı XAML sayfası yükleniyor kökleri olduğunda oluşturulur. XAML ad kapsamları programlama nesnesi olarak tarafından tanımlanan <xref:System.Windows.Markup.INameScope> arabirim ve ayrıca pratik sınıfı tarafından uygulanan <xref:System.Windows.NameScope>.  

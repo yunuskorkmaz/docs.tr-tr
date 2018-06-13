@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218755"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
 **-Out** seçeneği çıktı dosyası adını belirtir.  

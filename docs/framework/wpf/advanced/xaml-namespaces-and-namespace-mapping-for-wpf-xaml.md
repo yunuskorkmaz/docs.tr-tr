@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549402"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığını ve sık bir WPF XAML dosyasının kök etiketinde bulunan iki XAML ad uzayı eşlemesinin amacını açıklanmaktadır. Ayrıca, benzer eşlemeleri kullanan kendi kodunuzda ve/veya ayrı derlemeler içinde tanımlanan öğeler için üretmek nasıl açıklanır.  

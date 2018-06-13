@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549236"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF ve Windows Forms Birlikte Çalışması
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulama arayüzleri oluşturmak için iki farklı mimariyi sunar. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Ad alanı, ortak birlikte çalışabilirlik senaryolarını etkinleştiren sınıfları sağlar. Birlikte çalışabilirlik özelliklerini uygulayan iki anahtar sınıf <xref:System.Windows.Forms.Integration.WindowsFormsHost> ve <xref:System.Windows.Forms.Integration.ElementHost>. Bu konuda, hangi birlikte çalışabilirlik senaryoları desteklenir ve hangi senaryoları desteklenmez açıklanmaktadır.  

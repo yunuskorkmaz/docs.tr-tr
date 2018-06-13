@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545415"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Nasıl yapılır: Metin Süslemesi Oluşturma
 A <xref:System.Windows.TextDecoration> metne ekleyebileceğiniz görsel süslemedir nesnesidir. Metin düzenlemelerinin dört tür vardır: alt çizgi, taban çizgisi, üst çizgi ve üst çizgi. Aşağıdaki örnek metin göre metin düzenlemelerinin konumlarını gösterir.  

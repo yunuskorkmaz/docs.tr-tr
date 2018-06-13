@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529212"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>İzlenecek yol: WPF İçeriği için Stil Oluşturma
 Bu kılavuz, bir Windows formunda barındırılan bir Windows Presentation Foundation (WPF) denetim stil uygulamak nasıl gösterir.  
