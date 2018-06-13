@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458092"
 ---
 # <a name="f-component-design-guidelines"></a><span data-ttu-id="d69e1-103">F # bileşen tasarım yönergeleri</span><span class="sxs-lookup"><span data-stu-id="d69e1-103">F# component design guidelines</span></span>
 

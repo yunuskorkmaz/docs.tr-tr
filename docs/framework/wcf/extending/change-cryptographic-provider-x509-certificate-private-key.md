@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808097"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a><span data-ttu-id="309bb-102">Nasıl yapılır: bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme&#39;s özel anahtarı</span><span class="sxs-lookup"><span data-stu-id="309bb-102">How to: Change the Cryptographic Provider for an X.509 Certificate&#39;s Private Key</span></span>
 <span data-ttu-id="309bb-103">Bu konu, bir X.509 sertifikasının özel anahtarı sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) güvenlik Framework'e sağlayıcı tümleştirme gösterir.</span><span class="sxs-lookup"><span data-stu-id="309bb-103">This topic shows how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) security framework.</span></span> <span data-ttu-id="309bb-104">Sertifika kullanma hakkında daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="309bb-104">For more information about using certificates, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805119"
 ---
 # <a name="web"></a><span data-ttu-id="d1fb0-102">Web</span><span class="sxs-lookup"><span data-stu-id="d1fb0-102">Web</span></span>
 <span data-ttu-id="d1fb0-103">Bu bölümde Web barındırılan örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="d1fb0-103">This section contains Web-hosted samples.</span></span>  

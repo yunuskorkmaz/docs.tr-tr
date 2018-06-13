@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803029"
 ---
 # <a name="deploying-a-wcf-library-project"></a><span data-ttu-id="4637d-102">Bir WCF Kitaplık Projesini Dağıtma</span><span class="sxs-lookup"><span data-stu-id="4637d-102">Deploying a WCF Library Project</span></span>
 <span data-ttu-id="4637d-103">Bu konuda, bir Windows Communication Foundation (WCF) hizmetini kitaplığı projesi nasıl dağıtılacağı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4637d-103">This topic describes how you can deploy a Windows Communication Foundation (WCF) Service Library Project.</span></span>  

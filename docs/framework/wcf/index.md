@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804277"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="ff00e-102">WCF ile Hizmet Odaklı Uygulamalar Geliştirme</span><span class="sxs-lookup"><span data-stu-id="ff00e-102">Developing Service-Oriented Applications with WCF</span></span>
 <span data-ttu-id="ff00e-103">Bu bölümde belgelerin hakkında Windows Communication Foundation (hangi hizmet odaklı uygulamalar oluşturmaya yönelik bir programlama modelidir WCF), bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="ff00e-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="ff00e-104">Geliştiricilerin platformlarla tümleştirilen ve Yatırımlar ile birlikte çalışmak güvenli, güvenilir ve işlenen çözümleri oluşturmasına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="ff00e-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>

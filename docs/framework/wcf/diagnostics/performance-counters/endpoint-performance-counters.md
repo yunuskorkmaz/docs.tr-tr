@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803143"
 ---
 # <a name="endpoint-performance-counters"></a><span data-ttu-id="7c256-102">Uç Noktası Performans Sayaçları</span><span class="sxs-lookup"><span data-stu-id="7c256-102">Endpoint Performance Counters</span></span>
 <span data-ttu-id="7c256-103">Uç noktası performans sayaçlarını nasıl bir uç nokta iletileri kabul etmeye ortaya çıkarır verilerini yakalama.</span><span class="sxs-lookup"><span data-stu-id="7c256-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="7c256-104">Altında bulunabilir `ServiceModelEndpoint 4.0.0.0` Performans İzleyicisi ile görüntülerken Performans nesnesi.</span><span class="sxs-lookup"><span data-stu-id="7c256-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="7c256-105">Bu desen kullanılarak adlandırılmış örnekleri:</span><span class="sxs-lookup"><span data-stu-id="7c256-105">The instances are named using this pattern:</span></span>  

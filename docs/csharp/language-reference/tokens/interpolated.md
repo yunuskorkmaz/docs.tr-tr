@@ -17,6 +17,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058842"
 ---
 # <a name="---string-interpolation-c-reference"></a><span data-ttu-id="618ae-103">$ - dize ilişkilendirme (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="618ae-103">$ - string interpolation (C# Reference)</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803773"
 ---
 # <a name="monitoring-service-operation-failures"></a><span data-ttu-id="b714f-102">Hizmet İşlemi Hatalarını İzleme</span><span class="sxs-lookup"><span data-stu-id="b714f-102">Monitoring Service Operation Failures</span></span>
 <span data-ttu-id="b714f-103">Bir uygulama için çözümleme izleme etkinleştirilirse, Olay Görüntüleyicisi'nde hizmet hataları kolayca izlenebilir.</span><span class="sxs-lookup"><span data-stu-id="b714f-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="b714f-104">Bu konuda, bir hizmet işlemi başarısız olur ve belirlemek nasıl hatasına neden oldu belirleme gösterilir.</span><span class="sxs-lookup"><span data-stu-id="b714f-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  

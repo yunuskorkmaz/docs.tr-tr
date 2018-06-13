@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808438"
 ---
 # <a name="wcf-client-overview"></a><span data-ttu-id="a4b21-102">WCF İstemcisi Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="a4b21-102">WCF Client Overview</span></span>
 <span data-ttu-id="a4b21-103">Bu bölümde, istemci uygulamalarının ne, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini sağlama açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a4b21-103">This section describes what client applications do, how to configure, create, and use a Windows Communication Foundation (WCF) client, and how to secure client applications.</span></span>  

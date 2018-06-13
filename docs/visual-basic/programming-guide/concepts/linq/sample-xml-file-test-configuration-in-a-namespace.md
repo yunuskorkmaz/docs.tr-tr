@@ -1,27 +1,18 @@
 ---
-title: "Örnek XML dosyası: Bir Namespace3 yapılandırmayı test etme"
-ms.custom: 
+title: 'Örnek XML dosyası: Bir Namespace3 yapılandırmayı test etme'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 58e0adcad36b42b0dc994a0c878ebd4e069186ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644634"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="ef52b-102">Örnek XML dosyası: Bir Namespace yapılandırmayı test etme</span><span class="sxs-lookup"><span data-stu-id="ef52b-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="ef52b-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="ef52b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ef52b-104">Bu bir test yapılandırması dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="ef52b-104">This is a test configuration file.</span></span> <span data-ttu-id="ef52b-105">XML ad alanında ' dir.</span><span class="sxs-lookup"><span data-stu-id="ef52b-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="bc325-102">Örnek XML dosyası: Bir Namespace yapılandırmayı test etme</span><span class="sxs-lookup"><span data-stu-id="bc325-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="bc325-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="bc325-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bc325-104">Bu bir test yapılandırması dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="bc325-104">This is a test configuration file.</span></span> <span data-ttu-id="bc325-105">XML ad alanında ' dir.</span><span class="sxs-lookup"><span data-stu-id="bc325-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="ef52b-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="ef52b-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="bc325-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="bc325-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -65,5 +56,5 @@ ms.lasthandoff: 10/18/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ef52b-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ef52b-107">See Also</span></span>  
- [<span data-ttu-id="ef52b-108">Örnek XML belgeleri (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="ef52b-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bc325-107">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bc325-107">See Also</span></span>  
+ [<span data-ttu-id="bc325-108">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bc325-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

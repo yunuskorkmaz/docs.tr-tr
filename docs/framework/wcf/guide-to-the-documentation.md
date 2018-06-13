@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805544"
 ---
 # <a name="guide-to-the-documentation"></a><span data-ttu-id="4b7ad-102">Belgeler için Kılavuz</span><span class="sxs-lookup"><span data-stu-id="4b7ad-102">Guide to the Documentation</span></span>
 <span data-ttu-id="4b7ad-103">Burada sağlanan Windows Communication Foundation (WCF) belgeler hakkında yönergeler.</span><span class="sxs-lookup"><span data-stu-id="4b7ad-103">Provided here is guidance about the Windows Communication Foundation (WCF) documentation.</span></span> <span data-ttu-id="4b7ad-104">Bağlı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerini göre gruplandırılmış önerilir.</span><span class="sxs-lookup"><span data-stu-id="4b7ad-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  

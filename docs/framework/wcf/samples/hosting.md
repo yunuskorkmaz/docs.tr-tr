@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809813"
 ---
 # <a name="hosting"></a><span data-ttu-id="f27dd-102">Barındırma</span><span class="sxs-lookup"><span data-stu-id="f27dd-102">Hosting</span></span>
 <span data-ttu-id="f27dd-103">Bu bölüm, Windows Communication Foundation (WCF) hizmetlerini barındıran gösterme örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f27dd-103">This section contains samples that demonstrate hosting Windows Communication Foundation (WCF) services.</span></span>  

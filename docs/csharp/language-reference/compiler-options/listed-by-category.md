@@ -11,6 +11,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472418"
 ---
 # <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="2b5cd-102">Kategorilere Göre Listelenen C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="2b5cd-102">C# Compiler Options Listed by Category</span></span>
 

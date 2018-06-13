@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805752"
 ---
 # <a name="reliable-secure-profile"></a><span data-ttu-id="180ad-102">Güvenilir Güvenlik Profili</span><span class="sxs-lookup"><span data-stu-id="180ad-102">Reliable Secure Profile</span></span>
 <span data-ttu-id="180ad-103">Bu örnek WCF oluşturmak nasıl gösterir ve [güvenilir güvenli profili](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span><span class="sxs-lookup"><span data-stu-id="180ad-103">This sample demonstrates how to compose WCF and [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span></span> <span data-ttu-id="180ad-104">Bu örnek uygulama ortaya koyar bir [bağlantı yap](http://go.microsoft.com/fwlink/?LinkId=178141) güvenilir Mesajlaşma ile birlikte ve isteğe bağlı olarak oluşan kanal güvenilir güvenli bağlama oluşturmak için güvenli bir kanal tabanlı RSP belirtimi.</span><span class="sxs-lookup"><span data-stu-id="180ad-104">This sample demonstrates the implementation of a [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) channel which can be composed together with Reliable Messaging and optionally a secure channel to create a Reliable Secure Binding based on the RSP specification.</span></span>  

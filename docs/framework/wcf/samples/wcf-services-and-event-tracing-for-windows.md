@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809839"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a><span data-ttu-id="5018a-102">Windows için WCF Hizmetleri ve Etkinlik İzleme</span><span class="sxs-lookup"><span data-stu-id="5018a-102">WCF Services and Event Tracing for Windows</span></span>
 <span data-ttu-id="5018a-103">Bu örnek çözümleme izleme Windows Communication Foundation (WCF) olayları, olay izleme için Windows (ETW) yayma için nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5018a-103">This sample demonstrates how to use the analytic tracing in Windows Communication Foundation (WCF) to emit events in Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="5018a-104">Analitik izlemeleri, WCF hizmetleri üretim ortamında sorun giderme sağlayan anahtar noktalarda WCF yığınında gösterilen olaylardır.</span><span class="sxs-lookup"><span data-stu-id="5018a-104">The analytic traces are events emitted at key points in the WCF stack that allow troubleshooting of WCF services in production environment.</span></span>  

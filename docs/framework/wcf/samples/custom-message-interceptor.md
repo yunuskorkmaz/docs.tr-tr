@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806324"
 ---
 # <a name="custom-message-interceptor"></a><span data-ttu-id="af49f-102">Özel İleti Kesici</span><span class="sxs-lookup"><span data-stu-id="af49f-102">Custom Message Interceptor</span></span>
 <span data-ttu-id="af49f-103">Bu örnek kanal genişletilebilirlik modeli kullanımını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="af49f-103">This sample demonstrates the use of the channel extensibility model.</span></span> <span data-ttu-id="af49f-104">Özellikle, kanal fabrikaları ve çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri izlemesine kanal dinleyicileri oluşturur özel bağlama öğesi uygulamak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="af49f-104">In particular, it shows how to implement a custom binding element that creates channel factories and channel listeners to intercept all incoming and outgoing messages at a particular point in the run-time stack.</span></span> <span data-ttu-id="af49f-105">Örnek, bir istemci ve bu özel oluşturucuları kullanımını gösteren sunucu de içerir.</span><span class="sxs-lookup"><span data-stu-id="af49f-105">The sample also includes a client and server that demonstrate the use of these custom factories.</span></span>  

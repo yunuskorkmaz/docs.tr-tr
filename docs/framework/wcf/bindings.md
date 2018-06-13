@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803601"
 ---
 # <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="ed1ba-102">Windows Communication Foundation Bağlamaları</span><span class="sxs-lookup"><span data-stu-id="ed1ba-102">Windows Communication Foundation Bindings</span></span>
 <span data-ttu-id="ed1ba-103">Bağlamaları bir Windows Communication Foundation (WCF) hizmeti bitiş noktası diğer uç nokta ile nasıl iletişim kuracağını belirtin.</span><span class="sxs-lookup"><span data-stu-id="ed1ba-103">Bindings specify how a Windows Communication Foundation (WCF) service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="ed1ba-104">Kendi en temel sırasında bir bağlama kullanılacak Aktarım (örneğin, HTTP veya TCP) belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="ed1ba-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="ed1ba-105">Güvenlik ve işlem, bağlamaları desteği gibi diğer özellikleri de ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed1ba-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  

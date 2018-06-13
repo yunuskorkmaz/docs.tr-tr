@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809407"
 ---
 # <a name="extending-security"></a><span data-ttu-id="ba8c2-102">Güvenliği Genişletme</span><span class="sxs-lookup"><span data-stu-id="ba8c2-102">Extending Security</span></span>
 <span data-ttu-id="ba8c2-103">Yeni talep türlerini ve özel belirteçler uyum sağlamak için Windows Communication Foundation (WCF) güvenlik altyapısı genişletebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ba8c2-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="ba8c2-104">Bu bölümdeki konular, bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ba8c2-104">The topics in this section show you how this is done.</span></span>  

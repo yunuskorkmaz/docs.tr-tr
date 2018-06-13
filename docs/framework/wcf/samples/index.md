@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804072"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a><span data-ttu-id="a757e-102">Windows Communication Foundation (WCF) Örnekleri</span><span class="sxs-lookup"><span data-stu-id="a757e-102">Windows Communication Foundation (WCF) Samples</span></span>
 <span data-ttu-id="a757e-103">Bu örnekler yönerge üzerinde çeşitli yönlerini Windows Communication Foundation (WCF) sağlayın.</span><span class="sxs-lookup"><span data-stu-id="a757e-103">These samples provide instruction on various aspects of Windows Communication Foundation (WCF).</span></span>  

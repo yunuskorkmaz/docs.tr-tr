@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803682"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a><span data-ttu-id="4acf5-102">Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme</span><span class="sxs-lookup"><span data-stu-id="4acf5-102">How to: Customize a System-Provided Binding</span></span>
 <span data-ttu-id="4acf5-103">Windows Communication Foundation (WCF) temel alınan bağlama öğeleri özelliklerden bazıları, ancak tüm özellikleri yapılandırmanıza olanak tanıyan çeşitli sistem tarafından sağlanan bağlamaları içerir.</span><span class="sxs-lookup"><span data-stu-id="4acf5-103">Windows Communication Foundation (WCF) includes several system-provided bindings that allow you to configure some of the properties of the underlying binding elements, but not all of the properties.</span></span> <span data-ttu-id="4acf5-104">Bu konu, özelliklerin özel bağlama oluşturma için bağlama öğeleri nasıl ayarlanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4acf5-104">This topic demonstrates how to set properties on the binding elements to create a custom binding.</span></span>  

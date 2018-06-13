@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805999"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a><span data-ttu-id="5819b-102">Temel Windows iş akışı kavramları</span><span class="sxs-lookup"><span data-stu-id="5819b-102">Fundamental Windows Workflow Concepts</span></span>
 <span data-ttu-id="5819b-103">İş akışı geliştirme [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] bazı geliştiriciler için yeni kavramları kullanır.</span><span class="sxs-lookup"><span data-stu-id="5819b-103">Workflow development in the [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] uses concepts that may be new to some developers.</span></span> <span data-ttu-id="5819b-104">Bu konuda bazı kavramlar ve nasıl uygulandığı açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="5819b-104">This topic describes some of the concepts and how they are implemented.</span></span>  
