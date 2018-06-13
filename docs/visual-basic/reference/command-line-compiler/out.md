@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655895"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Çıktı dosyası adını belirtir.  

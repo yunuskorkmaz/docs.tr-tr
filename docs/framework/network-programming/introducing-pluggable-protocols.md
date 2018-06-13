@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396396"
 ---
 # <a name="introducing-pluggable-protocols"></a>Takılabilir Protokol Tanıtımı
 Microsoft .NET Framework uygulamalarınıza hızla ve kolayca tümleştirilebilir Internet Hizmetleri katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  

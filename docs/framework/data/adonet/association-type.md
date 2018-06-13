@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756517"
 ---
 # <a name="association-type"></a>ilişki türü
 Bir *ilişkilendirme türü* (bir ilişki olarak da bilinir) ilişkileri varlık veri modeli (EDM) açıklamak için temel yapı bloğu. Bir kavramsal modelde ilişkilendirme iki arasındaki bir ilişkiyi temsil eder. [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) (gibi `Customer` ve `Order`). Bir uygulamada belirli bir ilişki ilişkilendirme örneğini temsil eder (bir örneği arasında bir ilişki gibi `Customer` bir örneği ile `Order`). İlişkilendirme örnekleri mantıksal olarak gruplandırılmış bir [ilişkilendirme kümesi](../../../../docs/framework/data/adonet/association-set.md).  

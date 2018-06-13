@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289431"
 ---
 # <a name="yield-c-reference"></a>yield (C# Başvurusu)
 Kullandığınızda `yield` anahtar sözcüğü bir deyimde size bildiren işleci, yöntemi veya `get` görünür olan yineleyici erişimcisi. Kullanarak `yield` yineleyici tanımlamak için bir açık ek sınıf gereksinimini ortadan kaldırır (bkz: bir numaralandırma durumu tutan sınıfı <xref:System.Collections.Generic.IEnumerator%601> bir örnek) ne zaman uygulamak <xref:System.Collections.IEnumerable> ve <xref:System.Collections.IEnumerator> özel bir koleksiyon için deseni yazın.  

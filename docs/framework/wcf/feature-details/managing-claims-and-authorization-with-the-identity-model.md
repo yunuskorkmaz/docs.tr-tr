@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497032"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme hangi varlıkların değiştirmek, görüntüleme veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler, çalışanlarına dosyalara erişmesine izin. Windows Communication Foundation (WCF), Yetkilendirme işlemi gerçekleştirmek için iki mekanizma destekler. İlk mekanizma, varolan ortak dil çalışma zamanı (CLR) yapıları kullanarak yetkilendirmeyi denetlemenizi sağlar. İkinci olarak bilinen bir talep tabanlı modeldir *kimlik modeli*. WCF gelen iletilere talepleri oluşturmak için kimlik modelini kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini desteklemek için genişletilebilir. Bu konuda özelliğini kullanıyor en önemli sınıfları listesini yanı sıra kimliği Model özelliğinin ana programlama kavramları hakkında genel bir bakış sunulmaktadır.  

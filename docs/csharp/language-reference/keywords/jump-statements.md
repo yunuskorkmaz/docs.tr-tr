@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265226"
 ---
 # <a name="jump-statements-c-reference"></a>Atlama Deyimleri (C# Başvurusu)
 Dal oluşturma program denetimini hemen bir aktarımını neden atlama deyimleri kullanılarak gerçekleştirilir. Aşağıdaki anahtar sözcükler atlama deyimlerinde kullanılır:  

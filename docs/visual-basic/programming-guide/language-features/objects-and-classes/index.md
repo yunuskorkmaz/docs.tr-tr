@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655869"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Nesneler ve sınıflar Visual Basic'te
 Bir *nesne* kod ve bir birim olarak kabul veri birleşimidir. Bir nesne bir denetim veya formun gibi bir uygulama bir parçası olabilir. Tüm uygulama aynı zamanda bir nesne olabilir.

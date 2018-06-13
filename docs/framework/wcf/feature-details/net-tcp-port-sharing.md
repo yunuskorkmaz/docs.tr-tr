@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497158"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 Windows Communication Foundation (WCF), yüksek performanslı iletişimi için yeni TCP tabanlı ağ protokolü (net.tcp://) sağlar. WCF aynı zamanda yeni bir sistem bileşeni olan birden çok kullanıcı işlemleri arasında paylaşılacak net.tcp bağlantı noktalarını etkinleştirir Net.TCP bağlantı noktası Paylaşımı hizmeti sunar.  

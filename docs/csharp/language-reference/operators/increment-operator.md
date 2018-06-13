@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275070"
 ---
 # <a name="-operator-c-reference"></a>++ İşleci (C# Başvurusu)
 Artış işleci (`++`), işlenen 1 arttırır. Artış işleci önce veya sonra işlenen görünebilir: `++variable` ve `variable++`.  

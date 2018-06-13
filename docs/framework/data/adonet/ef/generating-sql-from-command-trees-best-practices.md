@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760199"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>SQL komut ağaçlarını - en iyi uygulamaları oluşturma
 Çıktı sorgu komut ağaçlarını yakından sorguları SQL'de ifade model. Ancak, SQL bir çıkış komut ağacından oluştururken sağlayıcısı yazıcılarına ilişkin ortak bazı zorluklar mevcuttur. Bu konuda bu zorluklar anlatılmaktadır. Sonraki konusundaki örnek sağlayıcısı bu güçlükleri gösterilmektedir.  

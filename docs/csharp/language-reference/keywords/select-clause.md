@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279990"
 ---
 # <a name="select-clause-c-reference"></a>select tümcesi (C# Başvurusu)
 Bir sorgu ifadesinde `select` yan tümcesi sorgu yürütüldüğünde, üretilecek değerleri türünü belirtir. Sonuç önceki tüm yan tümceleri değerlendirmesi ve tüm ifadelerinde dayalı `select` yan tümcesi kendisi. Bir sorgu ifadesi ile bitmesi bir `select` yan tümcesinin veya bir [grup](../../../csharp/language-reference/keywords/group-clause.md) yan tümcesi.  

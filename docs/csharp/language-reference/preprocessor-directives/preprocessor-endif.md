@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269983"
 ---
 # <a name="endif-c-reference"></a>#endif (C# Başvurusu)
 `#endif` ile başlayan bir koşullu yönergesi sonunu belirtir [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi. Örneğin,  

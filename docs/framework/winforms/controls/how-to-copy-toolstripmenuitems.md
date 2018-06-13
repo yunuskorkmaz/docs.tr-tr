@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530487"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems Kopyalama
 Tasarım zamanında, tüm üst düzey menüleri ve bunların alt öğeleri farklı bir konuma üzerinde kopyalayabilirsiniz <xref:System.Windows.Forms.MenuStrip>. Ayrıca, tek tek menü öğeleri üst düzey menüleri arasında kopyalama veya menü öğeleri menü içinde konumunu değiştirebilirsiniz.  

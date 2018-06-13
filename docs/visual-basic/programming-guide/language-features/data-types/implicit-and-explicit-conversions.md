@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656171"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Örtük ve Açık Dönüştürmeler (Visual Basic)
 Bir *örtük dönüşüm* kaynak kodda özel bir sözdizimi gerektirmez. Aşağıdaki örnekte, Visual Basic örtük olarak değerini dönüştürür `k` atanarak önce bir tek duyarlıklı kayan noktalı değeri `q`.  

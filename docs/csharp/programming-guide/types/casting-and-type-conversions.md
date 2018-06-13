@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336563"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve Tür Dönüşümleri (C# Programlama Kılavuzu)
 Bir değişken bildirildikten sonra C# statik olarak derleme zamanında belirtilmiş olduğundan, yeniden bildirilen veya bu türü değişkenin türüne dönüştürülemez olmadığı sürece başka bir tür değerleri depolamak için kullanılır. Örneğin, bir tamsayı dönüştürme yok herhangi bir rastgele dizeye yoktur. Bu nedenle, sonra bildirdiğiniz `i` bir tamsayı olarak, dize "Hello", aşağıdaki kodda gösterildiği gibi atayamazsınız.  

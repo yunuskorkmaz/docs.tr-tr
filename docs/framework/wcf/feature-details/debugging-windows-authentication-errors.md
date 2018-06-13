@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495879"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI) güvenlik işlemleri işler. SSPI katmanında güvenlik hatası meydana geldiğinde, bunlar Windows Communication Foundation (WCF) tarafından çıkmış. Bu konu, hataları tanılamak için sorularını kümesi ve bir çerçeve sağlar.  

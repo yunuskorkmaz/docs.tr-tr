@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500675"
 ---
 # <a name="custom-binding-imperative"></a>Özel Bağlama Kesinliği
 Örnek tanımlamak ve bir yapılandırma dosyası veya bir Windows Communication Foundation (WCF) oluşturulan istemci kullanmadan özel bağlama kullanma kesinlik temelli kodunun nasıl yazılacağını gösterir. Bu örnek HTTP taşıma ve güvenilir bir HTTP tabanlı bağlama oluşturmak için güvenilir oturum kanalı tarafından sağlanan özellikleri birleştirir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular.  

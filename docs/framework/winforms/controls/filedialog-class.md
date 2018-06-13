@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526943"
 ---
 # <a name="filedialog-class"></a>FileDialog Sınıfı
 Windows Forms <xref:System.Windows.Forms.FileDialog> sınıftır için genel temel sınıf <xref:System.Windows.Forms.OpenFileDialog> ve <xref:System.Windows.Forms.SaveFileDialog> bileşenleri. Değişiklikler yapabilir <xref:System.Windows.Forms.FileDialog> görünümü ve davranışı üzerinde uygulamayı çalıştırdığınız Windows sürümüne bağlı olarak bu iletişim kutularının etkileyen sınıfı.  

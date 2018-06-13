@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289275"
 ---
 # <a name="line-c-reference"></a>#line (C# Başvurusu)
 `#line` Derleyicinin satır numarasını ve (isteğe bağlı) hataları ve uyarıları için dosya adı çıktı değiştirmenize olanak tanır. Bu örnekte, iki uyarıları satır numaralarını ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi zorlar (varsayılan #7 olmasına rağmen) 200 satır numarasını ve sonraki #line yönergesi kadar dosya adı "Özel" olarak raporlanır. #Line varsayılan yönergesi önceki yönergesi tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için numaralandırma satır döndürür.  

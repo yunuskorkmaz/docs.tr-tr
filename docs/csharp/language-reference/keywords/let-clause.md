@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269646"
 ---
 # <a name="let-clause-c-reference"></a>let tümcesi (C# Başvurusu)
 Bir sorgu ifadesinde bazen sonraki yan tümcelerinde kullanmak için bir alt ifade sonucunu depolamak yararlıdır. Bunu yapmak `let` yeni bir aralık değişkeni oluşturan ve sağladığınız ifade sonucuyla başlatır anahtar sözcüğü. Bir değerle başlatıldıktan sonra aralık değişkeni başka bir değeri depolamak için kullanılamaz. Ancak, aralık değişkeni sorgulanabilir bir tür barındırıyorsa, sorgulanabilir.  

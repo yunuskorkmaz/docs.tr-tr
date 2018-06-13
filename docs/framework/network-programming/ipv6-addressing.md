@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394842"
 ---
 # <a name="ipv6-addressing"></a>IPv6 adresi
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Tek bir tür büyük adres alanı için kullanılabilir adresler bulunan Internet'in topoloji yansıtacak Yönlendirme etki alanları bölümlere için nedenidir. Başka bir ağ bağdaştırıcısı (veya arabirimleri) cihazları ağa bağlamak adreslerini eşlemek için nedenidir. IPv6 ağ arabirimi düzeyinde ve aynı zamanda otomatik yapılandırma özellikleri içeren kendi en düşük düzeyde adresleri çözümleyecek şekilde devralınmış bir özellik sunar.  

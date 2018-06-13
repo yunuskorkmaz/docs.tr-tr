@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267986"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# Başvurusu)
 `unchecked` Anahtar sözcüğü taşma denetimi integral türü aritmetik işlemler ve dönüştürmeleri için gizlemek için kullanılır.  

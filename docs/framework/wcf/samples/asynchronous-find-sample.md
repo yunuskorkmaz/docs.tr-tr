@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500304"
 ---
 # <a name="asynchronous-find-sample"></a>Zaman Uyumsuz Bulma Örneği
 Bu örnek, bir istemci uygulaması zaman uyumsuz bulma işlemi kullanmayı gösterir.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528661"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Formlarında Tasarım Zamanında WPF İçeriği Atama
 Bu kılavuz, Windows Presentation Foundation (WPF) denetim türlerini formunuzda görüntülemek istediğinizi seçmek nasıl gösterir. Projenizde dahil tüm WPF denetim türlerini seçebilirsiniz.  

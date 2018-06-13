@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496246"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma
 Uygun bir barındırma modu seçtikten sonra Web Hizmetleri olarak ifşa edilip uygulama arabirimleri yapılandırmak için COM + hizmet modeli yapılandırma komut satırı aracı (ComSvcConfig.exe) kullanın.  

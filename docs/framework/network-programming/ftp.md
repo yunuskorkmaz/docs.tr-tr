@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395081"
 ---
 # <a name="ftp"></a>FTP
 .NET Framework, FTP Protokolü ile için kapsamlı destek sağlar. <xref:System.Net.FtpWebRequest> ve <xref:System.Net.FtpWebResponse> sınıfları. Bu sınıfların türetilmiş <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse>. Çoğu durumda, <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları isteği yapmak için gerekli olan tüm sağlar, ancak özellik olarak sunulan FTP özgü özellikler erişmesi gerekiyorsa, bu sınıfları typecast <xref:System.Net.FtpWebRequest> veya <xref:System.Net.FtpWebResponse>.  

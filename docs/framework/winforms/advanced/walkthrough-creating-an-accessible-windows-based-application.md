@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529629"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek Yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 Erişilebilir bir uygulama oluşturmaya önemli iş etkilere sahiptir. Birçok hükümetler erişilebilirlik düzenlemeleri yazılım satın vardır. Certified for Windows logo erişilebilirlik gereksinimleri içerir. ABD tek başına, bunların olası müşteriler, kaç tahmini bir 30 milyon yaşayanlar yazılım erişilebilirlik tarafından etkilenir.  

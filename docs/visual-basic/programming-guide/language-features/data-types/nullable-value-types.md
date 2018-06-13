@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656025"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Boş Değer Atanabilen Değer Türleri (Visual Basic)
 Bazen tanımlı bir değer bazı durumlarda sahip olmayan bir değer türü ile çalışır. Örneğin, bir veritabanı alanına anlamlı atanmış bir değere sahip ve atanmış bir değere sahip değil ayırt etmek zorunda kalabilirsiniz. Değer türleri normal değerlerine veya null değeri olması için genişletilebilir. Böyle bir uzantı olarak adlandırılan bir *boş değer atanabilir tür*.  

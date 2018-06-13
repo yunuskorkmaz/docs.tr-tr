@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497197"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Nasıl yapılır: Başka Bir İş Akışı Hizmetine Çağrı Yapan Bir İş Akışı Hizmeti Oluşturma
 Başka bir iş akışı hizmetinden bilgi almak bir iş akışı hizmeti için bazen gereklidir.  Bu konuda, bir iş akışı hizmeti başka bir çağrı gösterilmektedir. Bu konuda, iki iş akışı hizmetleri oluşturacağız; bir giriş dizesi ilk hizmetin kullandığı dizesini ters kaydedildikten sonra büyük harfe dönüştürür giriş dizesi ve başka bir tersine çevirir bir yöntemi vardır.  

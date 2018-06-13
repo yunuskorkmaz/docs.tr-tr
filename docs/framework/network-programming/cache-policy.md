@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393990"
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek yerine olup olmadığını belirlemek için kullanılan kuralları tanımlar. İstemci önbellek gereksinimleri yenilik uygulamaları belirtin, ancak etkili önbellek ilkesini istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulanması gereksinimleri tarafından belirlenir. İstemci önbellek İlkesi ve sunucu gereksinimleri etkileşimini her zaman en yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak üzere en koruyucu önbellek İlkesi sonuçlanır.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527738"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms Veri Bağlamada Bildirimi Değiştirme
 Windows Forms veri bağlama en önemli kavramlarını biri *bildirimi değiştirme*. Veri kaynağı ve ilişkili denetimler her zaman en yeni verilere sahip olduğunuzdan emin olmak için veri bağlama için değişiklik bildirimi eklemeniz gerekir. Özellikle, kendi veri kaynağına yapılan değişiklikler, ilişkili denetimler bildirilir olmak istiyorsanız ve veri kaynağı bir denetim ilişkili özelliklerine yapılan değişiklikler, bildirim.  

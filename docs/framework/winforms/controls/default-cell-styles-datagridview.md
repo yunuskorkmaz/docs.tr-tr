@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529944"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları DataGridView Denetimi İçin Varsayılan Hücre Stilleri ve Veri Biçimleri Ayarlama
 <xref:System.Windows.Forms.DataGridView> Denetimi, varsayılan hücre stilleri belirtin ve veri biçimleri için tüm denetim, belirli sütunlar için satır ve sütun üstbilgilerinin ve muhasebe efekti oluşturmak için satır değişen hücre sağlar. Varsayılan stiller ayarlamak için tüm denetim stilleri değişen satırları ve sütunları için varsayılan tarafından geçersiz kılınır. Ayrıca, tek tek satır ve hücre kodunu kümesindeki stilleri varsayılan stillerini geçersiz kılar.  

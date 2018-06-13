@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529996"
 ---
 # <a name="autosize-property-overview"></a>AutoSize Özelliğine Genel Bakış
 <xref:System.Windows.Forms.Control.AutoSize%2A> Özelliği tarafından belirtilen değeri elde etmek gerekirse, boyutunu değiştirmek bir denetim sağlar <xref:System.Windows.Forms.Control.PreferredSize%2A> özelliği. Belirleyerek belirli denetimleri boyutlandırma davranışını ayarlama `AutoSizeMode` özelliği.  
