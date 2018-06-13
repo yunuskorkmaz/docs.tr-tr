@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747791"
 ---
 # <a name="ltmexendpointgt"></a><span data-ttu-id="55148-102">&lt;mexEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="55148-102">&lt;mexEndpoint&gt;</span></span>
 <span data-ttu-id="55148-103">Bu yapılandırma öğesi, standart bir uç nokta sabit bir IMetadataExchange sözleşme ile tanımlar.</span><span class="sxs-lookup"><span data-stu-id="55148-103">This configuration element defines a standard endpoint with a fixed IMetadataExchange contract.</span></span> <span data-ttu-id="55148-104">Tüm meta veri exchange uç noktalar kendi sözleşme IMetadataExchange belirtin olduğundan, kendiniz için bir tane tanımlama yerine bu standart noktasını kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="55148-104">Since all metadata exchange endpoints specify IMetadataExchange as their contract, you can use this standard point instead of defining one for yourself.</span></span>  

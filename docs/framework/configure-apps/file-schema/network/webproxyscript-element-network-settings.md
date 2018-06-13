@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754512"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a><span data-ttu-id="97f6e-102">&lt;webProxyScript&gt; öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="97f6e-102">&lt;webProxyScript&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="97f6e-103">Web proxy bulmak için kullanılan komut dosyası özelliklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="97f6e-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  

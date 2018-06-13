@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756286"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a><span data-ttu-id="058e9-102">DataRow (LINQ-DataSet) karşılaştırma</span><span class="sxs-lookup"><span data-stu-id="058e9-102">Comparing DataRows (LINQ to DataSet)</span></span>
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]<span data-ttu-id="058e9-103"> eşit olup olmadığını görmek için kaynağı öğeleri karşılaştırmak için çeşitli kümesi işleçleri tanımlar.</span><span class="sxs-lookup"><span data-stu-id="058e9-103"> defines various set operators to compare source elements to see if they are equal.</span></span> [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]<span data-ttu-id="058e9-104"> Aşağıdaki kümesi işleçleri sağlar:</span><span class="sxs-lookup"><span data-stu-id="058e9-104"> provides the following set operators:</span></span>  

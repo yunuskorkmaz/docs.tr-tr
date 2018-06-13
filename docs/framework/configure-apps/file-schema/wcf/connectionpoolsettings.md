@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748158"
 ---
 # <a name="ltconnectionpoolsettingsgt"></a><span data-ttu-id="89492-102">&lt;Tcptransport&gt;</span><span class="sxs-lookup"><span data-stu-id="89492-102">&lt;connectionPoolSettings&gt;</span></span>
 <span data-ttu-id="89492-103">Bir adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="89492-103">Specifies additional connection pool settings for a Named Pipe binding.</span></span>  

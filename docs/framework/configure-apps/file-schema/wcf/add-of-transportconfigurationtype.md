@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749640"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="d5053-102">&lt;transportConfigurationType&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="d5053-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
 <span data-ttu-id="d5053-103">Belirli bir türünü tanımlayan bir anahtar/değer çifti öğedir.</span><span class="sxs-lookup"><span data-stu-id="d5053-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  

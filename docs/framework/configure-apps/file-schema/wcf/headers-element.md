@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748285"
 ---
 # <a name="ltheadersgt-element"></a><span data-ttu-id="64b61-102">&lt;üstbilgiler&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="64b61-102">&lt;headers&gt; element</span></span>
 <span data-ttu-id="64b61-103">Bu, doğru yerel yayımlayan değinmek için gerekli adres üstbilgileri koleksiyonunu içerir.</span><span class="sxs-lookup"><span data-stu-id="64b61-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="64b61-104">Kullanabileceğiniz `add` üstbilgi bu koleksiyona eklemek için anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="64b61-104">You can use the `add` keyword to add a header to this collection.</span></span>  

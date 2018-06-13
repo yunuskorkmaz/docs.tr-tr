@@ -1,14 +1,6 @@
 ---
 title: ICorDebugChain::GetReason Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChain.GetReason
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c23385c0d7b6173659e071735dee5d2d75a9e33a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405073"
 ---
-# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="b7feb-102">ICorDebugChain::GetReason Metodu</span><span class="sxs-lookup"><span data-stu-id="b7feb-102">ICorDebugChain::GetReason Method</span></span>
-<span data-ttu-id="b7feb-103">Bu arama zincirini genesis nedeni alır.</span><span class="sxs-lookup"><span data-stu-id="b7feb-103">Gets the reason for the genesis of this calling chain.</span></span>  
+# <a name="icordebugchaingetreason-method"></a><span data-ttu-id="b94e8-102">ICorDebugChain::GetReason Metodu</span><span class="sxs-lookup"><span data-stu-id="b94e8-102">ICorDebugChain::GetReason Method</span></span>
+<span data-ttu-id="b94e8-103">Bu arama zincirini genesis nedeni alır.</span><span class="sxs-lookup"><span data-stu-id="b94e8-103">Gets the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b7feb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7feb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b94e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b94e8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReason (  
@@ -46,15 +35,15 @@ HRESULT GetReason (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b7feb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b7feb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b94e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b94e8-105">Parameters</span></span>  
  `pReason`  
- <span data-ttu-id="b7feb-106">[out] Bu arama zincirini genesis nedenini belirten CorDebugChainReason numaralandırması (Bitsel bir birleşimi) değerini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b7feb-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
+ <span data-ttu-id="b94e8-106">[out] Bu arama zincirini genesis nedenini belirten CorDebugChainReason numaralandırması (Bitsel bir birleşimi) değerini gösteren bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b94e8-106">[out] A pointer to a value (a bitwise combination) of the CorDebugChainReason enumeration that indicates the reason for the genesis of this calling chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b7feb-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b7feb-107">Requirements</span></span>  
- <span data-ttu-id="b7feb-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b7feb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b94e8-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b94e8-107">Requirements</span></span>  
+ <span data-ttu-id="b94e8-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b94e8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b7feb-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b7feb-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b94e8-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b94e8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b7feb-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b7feb-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b94e8-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b94e8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b7feb-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b7feb-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b94e8-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b94e8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

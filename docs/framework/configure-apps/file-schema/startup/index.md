@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745103"
 ---
 # <a name="startup-settings-schema"></a><span data-ttu-id="6aeaa-102">Başlangıç Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="6aeaa-102">Startup Settings Schema</span></span>
 <span data-ttu-id="6aeaa-103">Başlangıç ayarları uygulama çalışması gerektiğini ortak dil çalışma zamanı sürümünü belirtin.</span><span class="sxs-lookup"><span data-stu-id="6aeaa-103">Startup settings specify the version of the common language runtime that should run the application.</span></span>  

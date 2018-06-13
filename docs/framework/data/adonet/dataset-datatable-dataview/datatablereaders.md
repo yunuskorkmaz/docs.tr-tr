@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756104"
 ---
 # <a name="datatablereaders"></a><span data-ttu-id="2ee95-102">DataTableReaders</span><span class="sxs-lookup"><span data-stu-id="2ee95-102">DataTableReaders</span></span>
 <span data-ttu-id="2ee95-103"><xref:System.Data.DataTableReader> İçeriğini sunan bir <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> bir veya daha fazla salt okunur, yalnızca ileri sonuç biçiminde ayarlar.</span><span class="sxs-lookup"><span data-stu-id="2ee95-103">The <xref:System.Data.DataTableReader> presents the contents of a <xref:System.Data.DataTable> or a <xref:System.Data.DataSet> in the form of one or more read-only, forward-only result sets.</span></span>  

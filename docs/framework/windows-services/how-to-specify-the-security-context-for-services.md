@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512482"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a><span data-ttu-id="725a3-102">Nasıl Yapılır: Hizmetler için Güvenlik İçeriği Belirtme</span><span class="sxs-lookup"><span data-stu-id="725a3-102">How to: Specify the Security Context for Services</span></span>
 <span data-ttu-id="725a3-103">Varsayılan olarak, hizmetler, oturum açan kullanıcının daha farklı güvenlik bağlamında çalışır.</span><span class="sxs-lookup"><span data-stu-id="725a3-103">By default, services run in a different security context than that of the logged-in user.</span></span> <span data-ttu-id="725a3-104">Varsayılan sistem hesabı bağlamında çalıştırmanız Hizmetleri olarak adlandırılır `LocalSystem`, sağlayan farklı erişim ayrıcalıkları kullanıcı dışındaki sistem kaynaklarına.</span><span class="sxs-lookup"><span data-stu-id="725a3-104">Services run in the context of the default system account, called `LocalSystem`, which gives them different access privileges to system resources than the user.</span></span> <span data-ttu-id="725a3-105">Hizmetinizin altında çalışması gerektiğini farklı bir kullanıcı hesabı belirtmek için bu davranışı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="725a3-105">You can change this behavior to specify a different user account under which your service should run.</span></span>  

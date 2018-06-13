@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747986"
 ---
 # <a name="ltpnrppeerresolvergt"></a><span data-ttu-id="e0d8f-102">&lt;pnrpPeerResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="e0d8f-102">&lt;pnrpPeerResolver&gt;</span></span>
 <span data-ttu-id="e0d8f-103">PNRP (Eş Adı Çözümleme Protokolü) çözümleyici çözümleyici kullanılması gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e0d8f-103">Specifies that the PNRP (Peer Name Resolution Protocol) resolver is to be used as a resolver.</span></span> <span data-ttu-id="e0d8f-104">PNRP varsayılan çözümleyici olduğundan bu öğe isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="e0d8f-104">This element is optional because PNRP is the default resolver.</span></span>  

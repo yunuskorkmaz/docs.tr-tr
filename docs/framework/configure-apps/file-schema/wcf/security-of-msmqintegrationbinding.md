@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750576"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="3eac0-102">&lt;msmqIntegrationBinding&gt; &lt;güvenliği&gt;</span><span class="sxs-lookup"><span data-stu-id="3eac0-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="3eac0-103">Message Queuing (MSMQ) tümleştirme kanal taşıma güvenlik ayarlarını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="3eac0-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  

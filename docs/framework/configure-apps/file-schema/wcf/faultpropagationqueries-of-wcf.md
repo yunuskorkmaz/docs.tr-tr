@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754012"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a><span data-ttu-id="75077-102">WCF &lt;faultPropagationQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="75077-102">&lt;faultPropagationQueries&gt; of WCF</span></span>
 <span data-ttu-id="75077-103">İçinde bir etkinlik oluşan hataların işlenmesi izlemek için kullanılan sorgu koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="75077-103">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="75077-104">Bu olay bir FaultHandler bir arıza her işlediğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="75077-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="75077-105">İçinde bir etkinlik oluşan hataların işlenmesi izlemek için bu tür sorgu kullanmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="75077-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="75077-106">Sorgu Hatası yayma kayıtlara abone olmak izleme katılımcı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="75077-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

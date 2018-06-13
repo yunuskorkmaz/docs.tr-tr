@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753085"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a><span data-ttu-id="b22d5-102">&lt;tcpTransport&gt; &lt;connectionPoolSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="b22d5-102">&lt;connectionPoolSettings&gt; of &lt;tcpTransport&gt;</span></span>
 <span data-ttu-id="b22d5-103">Bir TCP taşıma için ek bağlantı havuzu ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="b22d5-103">Specifies additional connection pool settings for a TCP transport.</span></span>  
