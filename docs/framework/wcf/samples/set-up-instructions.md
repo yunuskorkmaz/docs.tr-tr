@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809111"
 ---
 # <a name="set-up-instructions"></a>Kurulum Yönergeleri
 Bu konular, bir Windows Communication Foundation (WCF) hizmetini çalıştırmak için gereken Services'i ayarlamak nasıl açıklar.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810063"
 ---
 # <a name="building-clients"></a>İstemci Derleme
 Bu bölümdeki konular, oluşturmak ve bir Windows Communication Foundation (WCF) istemci kullanmak nasıl ekleyebileceğiniz gösterilmektedir.  

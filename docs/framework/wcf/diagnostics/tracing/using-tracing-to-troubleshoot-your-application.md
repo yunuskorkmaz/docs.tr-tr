@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809163"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Uygulamanızda Sorun Giderme için İzleme Kullanma
 Bu bölüm nasıl izleme uygulamanızda sorun giderme için kullanabileceğiniz açıklayan çeşitli konuları içerir.  

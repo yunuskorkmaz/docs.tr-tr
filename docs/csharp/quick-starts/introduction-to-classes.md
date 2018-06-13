@@ -8,6 +8,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457339"
 ---
 # <a name="introduction-to-classes"></a>Giriş sınıfları
 
