@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545538"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
 Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatma mantıksal ağaç veya görsel ağaç'ile bağlanmakta o öğeye genellikle Bel işlemlere ertelendi. Bu konuda ya da ağacına bağlı olmayan bir öğe başlatmak için gerekli adımlar açıklanmaktadır.  

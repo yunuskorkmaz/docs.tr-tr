@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543699"
 ---
 # <a name="how-to-recognize-application-gestures"></a>Nasıl yapılır: Uygulama Hareketlerini Tanıma
 Aşağıdaki örnek, bir kullanıcı bulunduğunda mürekkep silmek gösterilmiştir bir <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> üzerinde hareket bir <xref:System.Windows.Controls.InkCanvas>. Bu örnek varsayar bir <xref:System.Windows.Controls.InkCanvas>adlı `inkCanvas1`, XAML dosyasında bildirildi.  

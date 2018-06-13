@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544823"
 ---
 # <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>Nasıl yapılır: mailto kullanın: bir sayfanın posta göndermek için
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Documents.Hyperlink> ile birlikte bir **mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  

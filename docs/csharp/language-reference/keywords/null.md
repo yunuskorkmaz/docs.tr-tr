@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268126"
 ---
 # <a name="null-c-reference"></a>null (C# Başvurusu)
 `null` Anahtar sözcüğü bir null başvuru, herhangi bir nesneye başvurmuyor birini temsil eden bir hazır değer değil. `null` Başvuru türü değişkenlerin varsayılan değerdir. Sıradan değer türleri null olamaz. Ancak, C# 2.0 boş değer atanabilen değer türleri kullanıma sunuldu. Bkz: [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md).  

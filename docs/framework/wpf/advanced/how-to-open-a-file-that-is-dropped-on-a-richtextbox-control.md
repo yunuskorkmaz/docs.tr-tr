@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547768"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Nasıl yapılır: RichTextBox Denetimine Bırakılan bir Dosyayı Açma
 İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, ve <xref:System.Windows.Documents.FlowDocument> tüm denetimleriniz yerleşik bir Sürükle ve bırak işlevi. Sürükle ve bırak metin içinde ve arasında denetimleri yerleşik işlevsellik sağlar. Ancak, dosyanın denetimindeki bırakarak bir dosyanın açılması etkinleştirmez. Bu denetimler, sürükle ve bırak olayları da işlenmiş olarak işaretleyin. Sonuç olarak, varsayılan olarak, bırakılan dosyaları açmaya işlevselliği sağlamak için kendi olay işleyicileri ekleyemezsiniz.  

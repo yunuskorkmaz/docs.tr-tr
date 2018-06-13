@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544238"
 ---
 # <a name="input-wpf"></a>Giriş (WPF)
 Windows Presentation Foundation (WPF) giriş çeşitli türleri için destek içerir. Bu giriş, metin, dokunma, fare, komutları, odak, dokunma, sürükle ve bırak ve dijital mürekkep içerir. Bu bölümde, WPF içinde girmek için ilgili konular açıklanmaktadır.  

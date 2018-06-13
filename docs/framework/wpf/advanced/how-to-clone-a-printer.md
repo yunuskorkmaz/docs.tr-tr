@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544209"
 ---
 # <a name="how-to-clone-a-printer"></a>Nasıl yapılır: Yazıcı Kopyalama
 Çoğu işletme belirli bir noktada aynı modelin birden çok yazıcı satın alacaklardır. Genellikle, bunlar tüm neredeyse aynı yapılandırma ayarları ile yüklenir. Her yazıcı yükleme alabilir ve hataya. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Ad alanı ve <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft .NET Framework ile sunulan sınıfı anında kopyalandığı ek yazdırma sıralarını herhangi bir sayıda var olan bir yazdırma kuyruğundan yüklemek olanaklı kılar.  

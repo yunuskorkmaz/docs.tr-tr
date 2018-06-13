@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545304"
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Nasıl yapılır: bir tablo işlemek&#39;sütunlar özelliği aracılığıyla s sütunları
 Bu örnek bir tablonun sütunlar üzerinde gerçekleştirilen daha yaygın işlemlerin bazılarını göstermektedir <xref:System.Windows.Documents.Table.Columns%2A> özelliği.  

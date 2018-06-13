@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547400"
 ---
 # <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı
 Özellik değeri devralma özelliğidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi. Özellik değeri devralma ağacında belirli bir özellik değerini en yakın üst öğede herhangi bir yere ayarlanmış olarak bu değer devralma öğeler, üst öğeden elde öğelerinin alt öğeleri sağlar. Sistem büyük olasılıkla bu süreç boyunca tüm sayfa kök recurses şekilde üst öğenin de değerini özellik değeri devralma aracılığıyla elde. Özellik değeri devralma varsayılan özellik sistemi davranış değildir; bir özellik, özellik değeri devralma, alt öğelerde başlatmak bu özelliği neden için belirli meta veri ayarı ile oluşturulmuş olmalıdır.  

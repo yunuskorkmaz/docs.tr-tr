@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549223"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Performansı İyileştirme: Nesne Davranışı
 İç davranışını anlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesneleri işlevselliği ve performans arasındaki doğru avantajları yapmanıza yardımcı olur.  

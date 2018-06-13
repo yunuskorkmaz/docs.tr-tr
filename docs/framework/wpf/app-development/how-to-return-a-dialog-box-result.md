@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545593"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>Nasıl yapılır: bir iletişim kutusu sonucunu döndürür
 Bu örnek çağırarak açılan bir pencere için iletişim sonucu almak nasıl gösterir <xref:System.Windows.Window.ShowDialog%2A>.  

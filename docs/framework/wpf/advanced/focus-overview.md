@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548116"
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişi alan öğesiyle ve mantıksal odak odaklanmış bir odak kapsamında öğesine başvuruyor.  Bu kavramlar bu genel bakış içindeki ayrıntısı ele alınmıştır.  Bu kavramlar farkı anlama odak burada alınabilir birden çok bölgeye sahip karmaşık uygulamalar oluşturmak için önemlidir.  

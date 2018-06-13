@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546747"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle değil veya yavaş yazdırma yazdırma işleri hakkında kullanıcılardan şikayetlerinden alan. Yazdırma işi özellikleri de sağlanmaktadır zengin [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] yazdırma işlerinin hızlı uzaktan tanılamasını gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  

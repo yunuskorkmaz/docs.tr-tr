@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544517"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Nasıl yapılır: Mürekkep Verisine Özel Veri Ekleme
 Özel veri mürekkep mürekkep seri hale getirilmiş biçimi (ISF) olarak kaydedildiğinde, kaydedilecek mürekkep ekleyebilirsiniz.  Özel verileri kaydedebilirsiniz <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, veya <xref:System.Windows.Ink.Stroke>.  Özel verileri üç nesnelerde kaydetmek için verileri kaydetmek için en iyi yere karar olanağı sağlar.  Üç tüm sınıflar benzer yöntemler depolamak ve özel verilere erişmek için kullanır.  
