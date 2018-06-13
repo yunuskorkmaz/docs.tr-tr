@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572203"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XML Şeması (XSD) doğrulama XmlSchemaCollection ile
 Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> XML Şeması Tanım Dili (XSD) Şemalara karşı bir XML belgesi doğrulanacak. <xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama oluşur belleğe yüklenmiş olmayan şekilde şemaları koleksiyonda depolayarak performansını artırır. Şema şema koleksiyonu varsa `schemaLocation` özniteliği şema koleksiyonundaki bakmak için kullanılır.  

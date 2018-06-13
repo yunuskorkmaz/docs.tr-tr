@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515775"
 ---
 # <a name="state-machine-activities-in-wf"></a>WF etkinlikleri Durum makinesi
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] birkaç sistem tarafından sağlanan etkinlikleri ve etkinlik tasarımcıları durumu makine iş akışları oluşturmak için sağlar.  

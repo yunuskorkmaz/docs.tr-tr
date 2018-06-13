@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364277"
 ---
 # <a name="handling-null-values"></a>Boş değerler işleme
 Bir sütundaki değeri bilinmeyen ya da eksik olduğunda ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri) ne (sayısal veri türleri için) sıfır değeri olur. Böylece tüm null değerlere tutarlı bir şekilde işlenir ANSI SQL-92 belirtimi null tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Ad alanı uygulayarak null semantiği sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` bu veri türünün bir örneğine atanan değer.  

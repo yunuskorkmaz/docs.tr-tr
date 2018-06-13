@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450327"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE Yapısı
 Çöp toplama yapılıyor bir bellek aralığı (yani, blok) açıklar.  

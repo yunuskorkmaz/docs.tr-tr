@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215075"
 ---
 # <a name="-c-compiler-options"></a>@ (C# Derleyici Seçenekleri)
 @ Derleyici seçenekleri içeren bir dosya ve derlemek için kaynak kodu dosyaları belirttiğiniz seçeneği sağlar.  

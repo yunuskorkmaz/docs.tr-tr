@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568595"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XML XPathNavigator kullanarak verileri düzenleme
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı eklemek, değiştirmek ve düğüm kaldırmak için yöntemler sağlar ve bir XML belgesi değerlerinden bulunan bir <xref:System.Xml.XmlDocument> nesnesi. Bu yöntemlerin herhangi biriyle eklemek, değiştirmek ve düğümler ve değerleri kaldırmak için kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesnesi olmalıdır düzenlenebilir, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği true olmalıdır.  

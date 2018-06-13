@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563590"
 ---
 # <a name="generics-in-xaml"></a>XAML'deki Genel Türler
 .NET Framework XAML System.Xaml içinde uygulandığı şekilde hizmetleri genel CLR Türleri kullanma için destek sağlar. Bu destek tür bağımsız değişkeni olarak genel türler kısıtlamaları belirtme ve uygun çağırarak kısıtlaması uygulayan içerir `Add` genel koleksiyon durumlarda yöntemi. Bu konuda kullanarak ve XAML'deki genel türler başvuran yönleri açıklanmaktadır.  

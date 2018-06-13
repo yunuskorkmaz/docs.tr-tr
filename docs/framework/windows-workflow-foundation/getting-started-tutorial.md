@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512447"
 ---
 # <a name="getting-started-tutorial"></a>Başlangıç Öğreticisi
 Bu bölüm, Windows Workflow Foundation (WF) uygulama programlama tanıtmak gözden geçirme konuları kümesi içerir. Aşağıdaki konulardaki yordamları izleyerek, numara tahmin eden oyun bir uygulama oluşturacaksınız. Öğreticinin ilk konusunda iş akışı için gereken özel etkinlikler oluşturmak için aşağıdaki adımları size yol gösterir. İkinci konuda bu etkinlikleri yerleşik iş akışı etkinlikleri ile birlikte bir akış iş akışı ile birleştirilir. Üçüncü konusunda konak uygulama iş akışını çalıştırmak için yapılandırılmış ve son konusunda Kalıcılık sunulmuştur. Bunları sırayla tamamlamanızı öneririz şekilde bu işlemdeki her adım önceki adımları, bağlıdır.  

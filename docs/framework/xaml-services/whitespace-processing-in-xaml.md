@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565551"
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML'de Boşluk İşleme
 Bu önemli boşluk işlenen, tarafından XAML dil kuralları durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulama. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  

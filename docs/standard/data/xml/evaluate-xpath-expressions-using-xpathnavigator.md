@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569125"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPath XPathNavigator kullanarak ifadeler değerlendir
 <xref:System.Xml.XPath.XPathNavigator> SAX <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> bir XPath ifadesi değerlendirmek için bir yöntem. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesi alır, bu hesaplar ve mantıksal değer, sayı, dize W3C XPath türünü döndürür veya düğüm kümesi XPath ifadesi sonucuna bağlı.  

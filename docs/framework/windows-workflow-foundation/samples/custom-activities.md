@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513090"
 ---
 # <a name="custom-activities"></a>Özel etkinlikler
 Bu bölüm, Windows Workflow Foundation (WF) özel etkinlikler oluşturmak nasıl gösteren örnekleri içerir.  

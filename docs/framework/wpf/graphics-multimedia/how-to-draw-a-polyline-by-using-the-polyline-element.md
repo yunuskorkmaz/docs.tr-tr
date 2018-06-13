@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561767"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Nasıl yapılır: Çoklu Çizgi Öğesi Kullanarak Çoklu Çizgi Çizme
 Bu örnek, bir dizi bağlı çizgilere kullanmaktır bir çoklu çizgi çizmek gösterilmektedir <xref:System.Windows.Shapes.Polyline> öğesi.  

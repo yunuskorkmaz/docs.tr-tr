@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570609"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Özel durumlar için tasarım yönergeleri
 Özel durum işleme dönüş değeri temel hata bildirimi üzerinden birçok avantaj sunar. İyi framework tasarım özel durumlar faydaları hayata geçirmek uygulama geliştiricisi yardımcı olur. Bu bölümde özel durumlara avantajlar açıklanır ve etkili bir şekilde kullanma için yönergeler sunar.  

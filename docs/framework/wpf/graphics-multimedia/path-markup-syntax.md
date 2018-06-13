@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566775"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
 Yolları açıklanmıştır [şekilleri ve WPF genel bakış temel çizim](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) ve [geometrisi](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), ancak, bu konuda yolunu belirtmek için kullanabileceğiniz güçlü ve karmaşık Mini dili ayrıntılı olarak açıklanmaktadır. geometri kullanarak daha sıkı şekilde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

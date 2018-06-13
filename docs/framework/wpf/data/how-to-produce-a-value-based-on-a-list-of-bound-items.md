@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556841"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Nasıl yapılır: Bağımlı Öğeler Listesine Göre Değer Üretme
 <xref:System.Windows.Data.MultiBinding> Kaynak özelliklerinin bir listesi için bir bağlama hedef özelliği bağlamak ve sonra verilen girişleri bir değerle bağlamanıza olanak sağlar. Bu örnek nasıl kullanılacağı ortaya <xref:System.Windows.Data.MultiBinding>.  

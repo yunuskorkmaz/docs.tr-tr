@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741990"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Clear&gt; öğesi connectionManagement (ağ ayarları) için
 Bağlantı Yönetimi listesini temizler.  

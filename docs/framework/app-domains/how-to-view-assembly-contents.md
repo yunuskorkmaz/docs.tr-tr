@@ -21,6 +21,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742841"
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyada Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmesi dosyanın derleme olup, bu bilgileri derlemenin öznitelikleri yanı sıra diğer modüller ve derleme başvurularını ekleyebilirsiniz. Bu bilgiler bir dosyayı bir derleme veya derleme parçası olmasına ve dosya derlemeleri veya diğer modüller başvurular olup saptamanıza yardımcı olabilir.  

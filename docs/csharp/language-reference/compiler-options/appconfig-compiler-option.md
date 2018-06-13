@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214776"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# Derleyici Seçenekleri)
 **- Appconfig** derleyici seçeneği derleme bağlama zamanında ortak dil çalışma zamanı (CLR) için bir derlemenin uygulama yapılandırması (app.config) dosyasının konumunu belirtmek C# uygulaması sağlar.  

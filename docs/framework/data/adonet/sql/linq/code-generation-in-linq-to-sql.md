@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363386"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ-SQL kod oluşturma
 Kod kullanarak bir veritabanı temsil etmek için oluşturabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  

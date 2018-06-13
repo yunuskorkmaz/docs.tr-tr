@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514892"
 ---
 # <a name="expressions"></a>İfadeler
 Bir sonuç döndürür herhangi bir etkinliği bir Windows Workflow Foundation (WF) ifadesidir. Tüm ifade etkinlikleri dolaylı olarak türetilen <xref:System.Activities.Activity%601>, içeren bir <xref:System.Activities.OutArgument> adlı özellik <xref:System.Activities.Activity%601.Result%2A> etkinliğin dönüş değeri olarak. [!INCLUDE[wf1](../../../includes/wf1-md.md)] çok çeşitli ifade etkinlikleri olanları gibi basit gelir <xref:System.Activities.Expressions.VariableValue%601> ve <xref:System.Activities.Expressions.VariableReference%601>, gibi tek bir iş akışı değişken karmaşık etkinliklere işleci etkinlikleri üzerinden erişim sağlayan <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> ve <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Bu teklif sonucu oluşturmak için Visual Basic dil için olan tüm tekliflerden erişin. Ek ifade etkinlikleri türetme tarafından oluşturulabilir <xref:System.Activities.CodeActivity%601> veya <xref:System.Activities.NativeActivity%601>.  

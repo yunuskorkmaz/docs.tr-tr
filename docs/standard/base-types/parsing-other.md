@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568036"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET diğer dizeleri ayrıştırma
 Sayısal yanı sıra ve <xref:System.DateTime> dizeleri, türleri temsil eden dizeleri de ayrıştırmak <xref:System.Char>, <xref:System.Boolean>, ve <xref:System.Enum> veri türlerine.  

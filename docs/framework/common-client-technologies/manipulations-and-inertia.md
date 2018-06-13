@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742159"
 ---
 # <a name="manipulations-and-inertia"></a>Düzenlemeler ve Eylemsizlik
 *İşlemeleri* ve *eylemsizlik* işlemci sınıfları uygulamanızın doğal ve sezgisel şekilde ekranda kullanıcı arabirimi (UI) öğeleri taşımada yardımcı. İşlemeleri taşımak, döndürün ve manipülatörleri, Kalem, fare cihazı gibi veya (bir senaryoda doğrudan dokunma özellikli) kullanarak bileşenleri yeniden boyutlandırmak için kullanıcıların kendi parmakları etkinleştirin. *Eylemsizlik* hızda uyuşmazlık zorlar öğelerde taklit ederek kullanıcı Arabirimi öğeleri için gerçek davranışını taklit eden. Bu, bir Dur gelen önce kendi taşıma (doğrusal ve Açısal) yavaş yavaş yavaş öğeleri sağlar.  

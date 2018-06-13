@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561481"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Nasıl yapılır: Kullanıcı Olayı ile Medya Yürütme Tetikleme
 Bu örnek, bir olay medya kayıttan yürütme eşitlemek gösterilmiştir.  

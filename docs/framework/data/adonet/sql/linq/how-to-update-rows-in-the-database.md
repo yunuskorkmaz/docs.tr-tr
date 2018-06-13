@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363760"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Nasıl yapılır: veritabanındaki satırları güncelleştirme
 Üye değerleri ile ilişkili nesnelerin değiştirerek bir veritabanında satır güncelleştirebilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> toplama ve değişiklikler veritabanına gönderiliyor. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Değişikliklerinizi uygun SQL içine çevirir `UPDATE` komutları.  

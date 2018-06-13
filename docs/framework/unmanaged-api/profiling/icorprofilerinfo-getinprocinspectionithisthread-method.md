@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453596"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread Metodu
 Icordebugthread arabirimi için sorgulanabilir bir nesneyi alır. Bu yöntem .NET Framework 2.0 sürümünde kullanımdan kalkmıştır.  

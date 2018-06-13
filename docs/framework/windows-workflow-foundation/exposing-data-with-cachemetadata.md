@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515258"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata verilerle gösterme
 Bir etkinliği yürütmeden önce iş akışı çalışma zamanı tüm yürütülmesinin korumak için gereken etkinliği hakkında bilgi edinir. İş akışı çalışma zamanı yürütme işlemi sırasında bu bilgileri alır <xref:System.Activities.Activity.CacheMetadata%2A> yöntemi. Bu yöntem varsayılan uygulamasını tüm ortak bağımsız değişkenleri, değişkenler ve yürütülür aynı anda etkinlik tarafından sunulan alt etkinlikleri ile çalışma zamanı sağlar; Etkinlik daha fazla bilgi için çalışma zamanı bu (örneğin, özel üyelerin veya etkinlikleri etkinlik tarafından zamanlanacak) vermek gerekirse, bunu sağlamak için bu yöntem geçersiz kılınabilir.  

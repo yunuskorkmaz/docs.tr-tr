@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511936"
 ---
 # <a name="connection-string-and-connection-string-name"></a>Bağlantı dizesini ve bağlantı dizesi adı
 **Bağlantı dizesi** özelliği, SQL iş akışı örneği deposuna Kalıcılık veritabanına bağlanmak için kullanması gereken bağlantı dizesini belirtir. Bu parametre isteğe bağlı bir parametredir. **Bağlantı dizesi adı** özelliği, SQL iş akışı örneği deposuna Kalıcılık veritabanına bağlanmak için kullanması gereken adlandırılmış bağlantı dizesinin adını belirtir. Bu parametre isteğe bağlı bir parametredir. Varsayılan bağlantı dizesi adlı kullanılacak SQL iş akışı örneği deposu istemiyorsanız bağlantı dizesi adı özelliği veya bağlantı dizesi özelliği için bir değer belirtmelisiniz **DefaultSqlWorkflowInstanceStoreConnectionString** .

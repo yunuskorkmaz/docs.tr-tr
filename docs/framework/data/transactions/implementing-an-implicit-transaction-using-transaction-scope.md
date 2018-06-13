@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365312"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Örtük bir işlem kapsamı kullanarak işlem uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşim kurmak gerek kalmadan bir işlem içinde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. Bir işlem kapsamı seçin ve ortam işlem otomatik olarak yönetir. Kullanım kolaylığı ve verimlilik nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> hareket uygulaması geliştirilirken sınıfı.  

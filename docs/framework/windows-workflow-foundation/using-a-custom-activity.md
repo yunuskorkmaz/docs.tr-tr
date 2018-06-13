@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515516"
 ---
 # <a name="using-a-custom-activity"></a>Özel Etkinlik kullanma
 Öğesinden türetilen etkinlikleri <xref:System.Activities.Activity> veya alt sınıfları büyük iş akışlarıyla birleştirilerek oluşur veya doğrudan kod içinde oluşturulan. Bu konu, kod veya Tasarımcısı'nda oluşturulan iş akışlarında özel etkinlikleri kullanmak açıklar.  

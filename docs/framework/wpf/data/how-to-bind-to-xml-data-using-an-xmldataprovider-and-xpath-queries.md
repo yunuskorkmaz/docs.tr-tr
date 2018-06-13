@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557452"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verileri kullanarak bir <xref:System.Windows.Data.XmlDataProvider>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566213"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretim sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem Initiative önemli bir unsurdur [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Standart mühendislik işlemler ile birlikte güvenli kod teslimini kolaylaştırmak için kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization, measurability ve ek yapı ile en iyi yöntemler birleştiren on aşamadan oluşur dahil olmak üzere:  

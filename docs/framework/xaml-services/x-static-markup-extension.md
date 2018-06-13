@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565587"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değer tarafından kod varlığa başvuruda bulunan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu yolu. Başvurulan statik özellik XAML'de özelliğinin değeri sağlamak için kullanılabilir.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561741"
 ---
 # <a name="visual-layer-programming"></a>Görsel Katman Programlama
 <xref:System.Windows.Media.Visual> Nesnesidir çekirdek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , birincil rolü işleme desteği sağlamak üzere nesnesi,. Kullanıcı arabirimi denetimlerini, gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.TextBox>, türetilen <xref:System.Windows.Media.Visual> sınıfı ve işleme verilerini sürdürmek için kullanın.  
