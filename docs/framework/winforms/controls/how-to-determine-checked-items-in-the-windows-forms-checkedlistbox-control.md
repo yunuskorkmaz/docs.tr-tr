@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531020"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme
 Windows Forms'ta veri sunma zaman <xref:System.Windows.Forms.CheckedListBox> denetimi, ya da yinelemek depolanan koleksiyonu aracılığıyla <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özelliği ya da listesini kullanarak aracılığıyla adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> hangi öğelerin denetlenir belirlemek amacıyla yöntemi. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Yöntem bağımsız değişkeni olarak bir öğe dizin numarasını alıp döndüren `true` veya `false`. Ne bekleyebilir, aykırı <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özellikleri değil belirlemek hangi öğelerin denetlenir; bunlar hangi öğeler vurgulanır belirleyin.  

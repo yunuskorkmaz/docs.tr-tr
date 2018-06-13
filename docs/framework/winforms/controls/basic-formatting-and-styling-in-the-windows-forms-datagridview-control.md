@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528801"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Temel Biçim ve Stiller
 `DataGridView` Denetim temel hücrelerin görünüşünü ve görüntüyü biçimlendirme hücre değerleri tanımlamak kolaylaştırır. Görünüm tanımlayabilir ve biçimlendirme stilleri tek tek hücreler, belirli sütunları ve satırları hücrelerde veya denetimdeki tüm hücreleri özelliklerini ayarlayarak `DataGridViewCellStyle` çeşitli erişilen nesneler `DataGridView` denetleyen özellikler. Ayrıca, dinamik olarak hücre değeri gibi etkenlere işleyerek göre bu stiller değiştirebileceğiniz `CellFormatting` olay.  

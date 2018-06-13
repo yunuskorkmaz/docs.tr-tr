@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328870"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Nasıl yapılır: Karmaşık Sayı Sınıfı Oluşturmak için İşleç Aşırı Yüklemesi Kullanma (C# Programlama Kılavuzu)
 Bu örnek, bir karmaşık sayı sınıfı oluşturmak için işleç aşırı yüklemesi nasıl kullanabileceğinizi gösterir `Complex` karmaşık toplama tanımlar. Program sanal görüntüler ve geçersiz kılma kullanarak sayıları ve ayrıca gerçek bölümlerini neden `ToString` yöntemi.  

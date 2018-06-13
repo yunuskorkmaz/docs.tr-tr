@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545113"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>Nasıl yapılır: Belirli Veri Biçiminde Veri Alma
 Aşağıdaki örnekler belirtilen biçimde veri nesnesinden verileri almak üzere nasıl gösterir.  

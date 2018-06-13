@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545904"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Nasıl yapılır: bir sayfa tarayıcı barındırılan olup olmadığını belirler
 Bu örnek belirlemek gösterilmiştir bir <xref:System.Windows.Controls.Page> bir tarayıcı içinde barındırılır.  

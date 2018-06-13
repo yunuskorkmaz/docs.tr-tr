@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529707"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek Yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetim eklemek için sağlar. Bu kılavuzda temel form oluşturma ve bir sınıf kitaplığı'na derleyin. Bu sınıf kitaplığı başka bir projeye almak ve temel formundan devralan yeni bir form oluşturun. Bu gözden geçirme sırasında öğreneceksiniz nasıl yapılır:  

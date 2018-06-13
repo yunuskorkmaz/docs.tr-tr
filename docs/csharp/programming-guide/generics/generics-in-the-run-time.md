@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334541"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Çalışma Zamanındaki Genel Türler (C# Programlama Kılavuzu)
 Genel tür veya yöntem Microsoft Ara dile (MSIL) derlendiğinde türü parametrelerine sahip olarak tanımlar meta veriler içeriyor. Sağlanan tür parametresi bir değer olup nasıl genel bir tür kullanılan MSIL farklı temel türü veya reference türü.  

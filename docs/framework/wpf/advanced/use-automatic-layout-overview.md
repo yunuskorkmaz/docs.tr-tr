@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548321"
 ---
 # <a name="use-automatic-layout-overview"></a>Otomatik Düzen Kullanımına Genel Bakış
 Bu konu yazma konusunda geliştiricilere yönelik yönergeleri tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Geçmişte, yerelleştirme bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] uzun süren bir işlem. Her dil, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] piksel piksel ayarlama gerekli uyarlanmıştır. Bugün doğru tasarım ve doğru kodlama standartları ile [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] çevirmenler küçük yapmak için yeniden konumlandırma ve yeniden boyutlandırma böylece oluşturulabilir. Daha kolay yeniden boyutlandırılan ve konumlandırılabilir uygulamaları yazma yaklaşımına otomatik düzeni olarak adlandırılır ve kullanarak elde edilebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama tasarımı.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525973"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma
 Ölçeklendirme dönüştürme, bir veya daha fazla bir sayıyla dört renk bileşenleri çarpar. Ölçeklendirme temsil eden renk matrisi girişi aşağıdaki tabloda verilmiştir.  

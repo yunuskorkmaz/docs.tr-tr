@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546497"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır .NET Framework 3.0'ın Yüklü Olup Olmadığını Algılama
 Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanının olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript yazılmış bir betik sağlar. Yöneticiler, .NET Framework bir sistemde yüklü olup olmadığını belirlemek için kullanabilirsiniz.  

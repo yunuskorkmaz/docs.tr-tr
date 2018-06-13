@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545444"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Nasıl yapılır: Metne Animasyon Uygulama
 Animasyon, görüntüleme ve uygulamanızdaki metnin görünümünü değiştirebilirsiniz. Aşağıdaki örnekler farklı türdeki animasyonları metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetim.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358547"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 Yapılandırma öğesi belirten uygun Internet Information Services (IIS) bağlamaları IIS Windows Communication Foundation (WCF) uygulamasında barındırdığında seçmek için bir mekanizma sağlar filtreleri geçirir koleksiyonunu temsil eder.  

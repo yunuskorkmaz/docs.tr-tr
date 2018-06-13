@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530656"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Formları için Denetimler Yazma
 Bir denetim kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlayın veya verileri işlemek, kullanıcı girişi kabul, olaylara yanıt veya herhangi bir sayıda kullanıcı ve uygulama bağlanan diğer işlevleri gerçekleştirmek. Bir denetim bir bileşen aslında bir grafik arabirimle olduğundan, bir bileşen yapar, yanı sıra kullanıcı etkileşimi sağlayan herhangi bir işlev görebilir. Denetimleri belirli amaçlara hizmet için oluşturulan ve denetimleri yazma başka bir programlama bir görevdir. Aklınızda aşağıdaki adımları işlem yazma denetimine genel bakış temsil eder. Bağlantılar tek tek adımları ek bilgi sağlar.  
