@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763273"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Bir veri kümesi XmlDataDocument ile eşitleme
 Bu bölüm türü kesin belirlenmiş kullanarak bir satın alma siparişi işleme tek bir adımda gösterir <xref:System.Data.DataSet> eşitlenmiş bir <xref:System.Xml.XmlDataDocument>. İzleyin örnekleri oluşturma bir **DataSet** bir simge durumuna küçültülmüş şemasıyla kaynak XML belgesi yalnızca bir kısmını eşleşir. Örnekler bir **XmlDataDocument** kaynak XML belge kalitesini korumak için etkinleştirme **DataSet** bir alt kümesini XML belgesi kullanıma sunmak için kullanılacak.  

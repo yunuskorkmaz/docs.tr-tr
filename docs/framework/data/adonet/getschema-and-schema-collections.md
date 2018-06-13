@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763949"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema ve şeması koleksiyonları
 **Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulayan sınıflar bir **GetSchema** şu anda bağlı olduğu, veritabanında ilgili şema bilgileri almak için kullanılan yöntem ve döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** dönmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan bir aşırı yüklenmiş yöntemin bir yöntemdir.  
