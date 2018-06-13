@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337493"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
 A [deneyin](../../../csharp/language-reference/keywords/try-catch.md) blok C# programcıları için bir özel durum tarafından etkilenebilir bölüm kod tarafından kullanılır. İlişkili [catch](../../../csharp/language-reference/keywords/try-catch.md) blokları, sonuçta elde edilen özel durumları işlemek için kullanılır. A [son](../../../csharp/language-reference/keywords/try-finally.md) blok olsun veya olmasın bir özel durum bağımsız olarak çalıştırma kodunu içerir `try` içinde ayrılan kaynakları serbest bırakma gibi blok `try` bloğu. A `try` blok gerektiren bir veya daha fazla ilişkili `catch` blokları, veya bir `finally` engelleme veya her ikisi de.  

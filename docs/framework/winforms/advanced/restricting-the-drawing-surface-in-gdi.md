@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523929"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+'da Çizim Yüzeyini Sınırlandırma
 Belirli bir dikdörtgen veya bölgeye çizim kısıtlama kırpma içerir. Aşağıdaki çizimde dizesi "Merhaba" Kalp şeklindeki bir bölgeye kırpılmış olarak gösterir.  

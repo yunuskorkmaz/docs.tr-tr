@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519600"
 ---
 # <a name="property-grid-extensibliity"></a>Özellik Kılavuzu Extensibliity
 Bir geliştirici, belirli bir etkinlik Tasarımcısı'nda seçildiğinde görüntülenen özellik Kılavuzu özelleştirebilirsiniz. Bu bir zengin düzenleme deneyimi oluşturmak için yapılabilir. Bu örnek, bu nasıl yapılabilir göstermektedir.  

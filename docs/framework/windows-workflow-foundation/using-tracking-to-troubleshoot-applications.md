@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517049"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarla ilgili sorunları gidermek için izleme kullanma
 Windows Workflow Foundation (WF), bir Windows Workflow Foundation uygulaması veya hizmeti yürütülmesi ayrıntıları vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Windows Workflow Foundation ana iş akışı olayları bir iş akışı örneği yürütülürken yakalayabilir. İş akışınızı arıza ya da özel durum oluşturursa, Windows Workflow Foundation ayrıntıları işlemesi sorun giderme için izleme kullanabilirsiniz.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488517"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma
 Normal bir (SOAP tabanlı) WCF hizmetinden REST tarzı bir hizmete çağırma etkinleştirildiğinde (gelen isteği bilgilerini içeren) hizmeti yöntemi işlemi içeriğine giden istek tarafından kullanılması gereken bağlamı geçersiz kılar. Bu değişiklik HTTP POST istekleri için HTTP GET isteklerine neden olur. REST stilinde service çağırmak için doğru içeriği kullanmak için WCF Hizmeti zorlamak için yeni bir oluşturma <xref:System.ServiceModel.OperationContextScope> ve REST stili hizmetinden işlemi bağlam kapsam içinde çağırın. Bu konu, bu tekniği gösterir basit bir örnek oluşturmak nasıl anlatmaktadır.  

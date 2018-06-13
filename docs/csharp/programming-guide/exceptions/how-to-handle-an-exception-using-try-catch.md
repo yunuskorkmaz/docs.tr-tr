@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338077"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Nasıl yapılır: try/catch Kullanarak Özel Durum İşleme (C# Programlama Kılavuzu)
 Amacı bir [try-catch](../../../csharp/language-reference/keywords/try-catch.md) taşıdır yakalamak ve çalışma kod tarafından oluşturulan özel bir durumu işlemek için. Bazı özel durumlar işlenebilir bir `catch` bloğu ve sorun çözüldüğünde yeniden atılmış olan özel durum; ancak, daha sık yapabileceğiniz tek şey uygun özel durum atılır emin olun.  

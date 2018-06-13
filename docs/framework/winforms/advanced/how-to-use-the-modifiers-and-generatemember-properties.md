@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524000"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma
 Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım ortamı tarafından sağlanan: `GenerateMember` ve `Modifiers`. `GenerateMember` Özelliği, Windows Form Tasarımcısı bileşeni için bir üye değişkenine oluşturduğunda belirtir. `Modifiers` Bu üye değişkenine atanan erişim değiştiricisi bir özelliktir. Varsa değerini `GenerateMember` özelliği `false`, değeri `Modifiers` özelliğinin hiçbir etkisi.  

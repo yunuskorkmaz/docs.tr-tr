@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448029"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef Yöntemi
 Üye için MemberRef belirteci için bir işaretçi başvuru diğer bir deyişle alır içine tarafından belirtilen <xref:System.Type> ve belirtilen adı ve meta veri imza sahip.  

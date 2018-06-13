@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520428"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows Hizmet Uygulamalarına Giriş
 Microsoft Windows Hizmetleri, önceden NT hizmeti olarak bilinen kendi Windows oturumlarında çalışan uzun süre çalışan yürütülebilir uygulamalar oluşturmanıza olanak sağlar. Bilgisayar önyükleme yaptığında, bu hizmetler otomatik olarak yeniden başlatılabilir duraklatıldı ve yeniden başlatılabilir ve herhangi bir kullanıcı arabirimi gösterme. Bu özellikler Hizmetleri sunucusunda veya aynı bilgisayarda çalışan diğer kullanıcılarla etkilemediğinden uzun süre çalışan işlevselliğe gereksinim duyduğunuzda kullanım için ideal hale getirir. Oturum açmış olan kullanıcının farklı belirli bir kullanıcı hesabı veya varsayılan bilgisayar hesabının güvenlik bağlamı hizmetleri de çalıştırabilirsiniz. Hizmetleri ve Windows oturumları hakkında daha fazla bilgi için Windows SDK belgelerine bakın.  

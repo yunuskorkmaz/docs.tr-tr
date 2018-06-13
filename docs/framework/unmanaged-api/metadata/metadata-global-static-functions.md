@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450017"
 ---
 # <a name="metadata-global-static-functions"></a>Meta Veri Genel Statik İşlevleri
 İle başlayarak [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], belgelerine `_Cor*`, `CoInitialize*`, `CoUninitialize*`, ve `CoEEShutDownCOM` barındırma ilgilidir, işlevleri bulunduğu [kullanım dışı CLR barındırma işlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). Meta verileri ilgilidir hiçbir genel statik işlevleri vardır.  

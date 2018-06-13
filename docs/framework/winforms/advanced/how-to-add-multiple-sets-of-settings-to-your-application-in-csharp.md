@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520815"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Nasıl Yapılır: Uygulamanıza C#'de Birden Çok Ayar Kümesi Ekleme #
 Bazı durumlarda, bir uygulamada birden çok ayar kümesi sahip olmak isteyebilirsiniz. Belirli bir ayar grubu sık değiştirmek için beklenirken bir uygulama geliştiriyorsanız, örneğin, diğer ayarları etkilenmemesini değiştirmeden dosyası tümden değiştirilebilir böylece tüm tek bir dosyaya ayırmak akıllıca olabilir. Visual Studio projenize birden çok ayar kümesi eklemenizi sağlar. Ek ayarları kümesi Properties.Settings nesnesi erişilebilir.  

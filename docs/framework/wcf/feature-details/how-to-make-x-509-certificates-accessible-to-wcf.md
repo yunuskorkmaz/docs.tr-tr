@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493712"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Nasıl yapılır: X.509 Sertifikalarını WCF için Erişilebilir Hale Getirme
 Bir X.509 sertifikası Windows Communication Foundation (WCF) için erişilebilir olması için uygulama kodu sertifika depolama alanı adı ve konumu belirtmeniz gerekir. Bazı durumlarda, işlem kimliği, X.509 sertifikayla ilişkili özel anahtarı içeren dosyayı için erişimi olması gerekir. Bir sertifika deposunda bir X.509 sertifikası ile ilişkili özel anahtarı edinmek için WCF Bunu yapmak için izni olmalıdır. Varsayılan olarak, yalnızca sahibi ve sistem hesabı, bir sertifikanın özel anahtarı erişebilir.  

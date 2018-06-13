@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489670"
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
 Windows Communication Foundation (WCF) nasıl onu diğer yazılımlarla iletişim kurduğu gelen yazılım bir uygulama için nasıl yazılır ayırır. Bağlamaları Aktarım, kodlama ve istemcileri ve Hizmetleri birbirleri ile iletişim kurması gereken protokol ayrıntılarını belirtmek için kullanılır. WCF bağlamaları bağlama ayrıntıları çoğunu iletişim kuran tarafların üzerinde anlaşmaya varılan gerekir böylece uç noktanın temel alınan hat gösterimine oluşturmak için kullanılır. Bunu elde etmenin en kolay yolu, bir hizmet bağlaması aynı hizmet kullandığı için uç nokta kullanmak istemcileri içindir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz: [kullanarak bağlamaları yapılandırma Windows Communication Foundation Hizmetleri ve istemcilere](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  

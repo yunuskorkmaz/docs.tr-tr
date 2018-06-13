@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488481"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost Yapılandırma
 Bu bölümde kısa "nasıl" kümesini içeren farklı özelliklerini yapılandırmak nasıl kısaca açıklayan konulara <xref:System.ServiceModel.Activities.WorkflowServiceHost> yapılandırmasında sınıfı. Bu konularda belirli hizmet yapılandırması, iş akışı kapak, diğer tüm yapılandırma normal bir WCF hizmeti aynı şekilde yapılır.  

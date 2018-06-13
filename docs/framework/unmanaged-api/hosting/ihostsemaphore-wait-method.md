@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440431"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait Yöntemi
 Geçerli neden [Ihostsemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) örneği ait kadar bekleyin veya geçtiğinde belirtilen miktarı.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540910"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] İşletim sistemlerinde desteklemek görsel stiller kullanarak arabirimi (UI) öğeleri işleme denetimleri ve başka bir Windows kullanıcı için destek sağlar. Bu konuda destek birkaç düzeyini ele alınmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işleme denetimleri ve işletim sisteminin geçerli görsel stil ile diğer kullanıcı Arabirimi öğeleri için.  

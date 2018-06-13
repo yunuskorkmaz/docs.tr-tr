@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488835"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX Tümleştirme ve JSON Desteği
 ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) Windows Communication Foundation (WCF) desteği ve JavaScript nesne gösterimi (JSON) veri biçimi AJAX istemcilere işlemleri kullanıma sunmak WCF hizmetleri sağlar. AJAX, Web JavaScript kodunu çalıştıran ve HTTP isteklerini kullanarak bu WCF hizmetlerine erişme sayfaları istemcileridir. Bu bölümdeki konular, bunu gerçekleştirme ve bu destek hakkında bilgi sağlar.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337411"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Temsilcileri Kullanma (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) güvenli bir yöntem, benzer bir işlev işaretçisi C ve C++ için yalıtır türüdür. Aksine C işlev işaretçileri, nesne yönelimli Temsilciler, güvenli ve güvenli yazın. Bir temsilci türü temsilci adına göre tanımlanır. Aşağıdaki örnek, adlandırılmış bir temsilci bildirir `Del` geçen bir yöntem kapsülleyen bir [dize](../../../csharp/language-reference/keywords/string.md) bağımsız değişken ve döndürür [void](../../../csharp/language-reference/keywords/void.md):  

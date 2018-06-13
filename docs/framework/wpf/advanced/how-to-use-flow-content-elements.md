@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544137"
 ---
 # <a name="how-to-use-flow-content-elements"></a>Nasıl yapılır: Akış İçeriği Öğelerini Kullanma
 Aşağıdaki örnek, çeşitli içerik akışı öğeleri ve ilişkili öznitelikleri için bildirim kullanımını gösterir.  Gösterilen öğeler ve öznitelikler şunları içerir:  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523737"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Şekilleri Doldurmak için Fırça Kullanma
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> nesnesi kapalı bir şekil iç doldurmak için kullanılır. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çeşitli dolgu stilleri tanımlar: düz renk, tarama deseniyle, görüntü doku ve renk gradyan.  

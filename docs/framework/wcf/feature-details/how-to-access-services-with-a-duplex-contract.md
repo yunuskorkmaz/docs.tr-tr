@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490158"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme
 Bir Windows Communication Foundation (WCF) çift yönlü bir Mesajlaşma düzeni kullanan bir hizmet oluşturma yeteneği özelliğidir. Bu desen bir geri çağırma istemcinize ile iletişim kurmak bir hizmet sağlar. Bu konu geri çağırma arabirimini uygulayan bir istemci sınıfta bir WCF istemcisi oluşturma adımlarını gösterir.  

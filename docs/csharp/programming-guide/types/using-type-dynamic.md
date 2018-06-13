@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336644"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Tür dinamiği kullanma (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] Yeni bir türü sunar `dynamic`. Türündeki bir nesne, ancak statik bir türü türüdür `dynamic` statik tür denetlemesi atlar. Çoğu durumda, türüne sahip gibi çalıştığından `object`. Derleme zamanında olarak yazılan bir öğe `dynamic` herhangi bir işlemi desteklemek için kabul edilir. Bu nedenle, olup nesne değeri COM API'sinden, dinamik bir dilden IronPython gibi HTML belge nesne modeli (DOM) gelen, yansıma veya programa başka bir yere alır endişelenmeniz gerekmez. Bununla birlikte, kod geçerli değilse, hataları zamanında yakalanır.  

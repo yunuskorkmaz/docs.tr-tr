@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520259"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>İş akışları ve etkinlikler XAML seri hale getirme
 Derlemelerde bulunan türlerine derlenmiş ek olarak, iş akışı tanımları da XAML için seri hale getirilebilir. Bu seri hale getirilmiş tanımları düzenleme için yeniden yüklenmesi veya denetleme, derleme için bir yapı sistemi geçirilen veya yüklenen ve çağrılır. Bu konu, iş akışı tanımları seri hale getirme ve XAML iş akışı tanımları ile çalışmaya genel bir bakış sağlar.  

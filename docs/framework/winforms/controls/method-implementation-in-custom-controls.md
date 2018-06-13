@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538119"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Özel Denetimlerde Yöntem Uygulama
 Bir yöntem bir denetimde bir yöntem içindeki herhangi bir bileşen uygulanması aynı şekilde uygulanır.  

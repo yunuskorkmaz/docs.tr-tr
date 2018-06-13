@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516197"
 ---
 # <a name="toolbox-service"></a>Araç kutusu hizmeti
 Bu örnek nasıl güncelleştirileceğini gösterir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] etkinlikler araç kutusu temel iş akışı bağlamı. Örnek özel bir aktivite seçili olduğundan dayalı araç kutusu içeriği değiştiren bir iş akışı içerir.  

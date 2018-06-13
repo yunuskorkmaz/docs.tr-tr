@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447009"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType Yöntemi
 Tür tanımı meta verileri imza oluşturur, döndürür bir `mdTypeDef` belirteci bu tür için ve tanımlanmış türü tarafından başvurulan türünün bir üyesi olduğunu belirtir `tdEncloser` parametresi.  

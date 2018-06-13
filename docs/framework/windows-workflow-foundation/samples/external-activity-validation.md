@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517806"
 ---
 # <a name="external-activity-validation"></a>Dış etkinlik doğrulama
 Bu örnek nasıl doğrulama mantığını yazarı olmayan yerleşik bir etkinlik ekleneceğini gösterir. Doğrulama mantığını zorlama oluşur tüm <xref:System.Activities.Statements.If> etkinlikleri sunmak ya da iş akışında kendi <xref:System.Activities.Statements.If.Then%2A> özellik kümesi veya kendi <xref:System.Activities.Statements.If.Else%2A> özellik kümesi. Ayrıca, doğrulama mantığını olduğunu denetimini içermektedir ve tüm <xref:System.Activities.Statements.Pick> etkinlikler iş akışında mevcut sahip birden çok dal ve bu durumda değilse, bir uyarı üretilir.  

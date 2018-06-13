@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489137"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation'ı Benimseme
 ASP.NET kullanılarak geliştirilmiş uygulamalara sürdürmek devam ederken yeni geliştirme projeleri için Windows Communication Foundation (WCF) kullanmayı seçebilirsiniz. WCF herhangi bir senaryoda .NET Framework ile oluşturulan uygulamalar ile iletişimi kolaylaştırmanın için en uygun seçenek amaçlandığından, çok çeşitli şekilde yazılım iletişim sorunları çözmek için standart bir araç olarak ASP.NET görebilir uygulanamaz.  

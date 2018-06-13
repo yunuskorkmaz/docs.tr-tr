@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525014"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> gözatma ve klasörleri seçmek için kullanılan bir modal iletişim kutusu bir bileşendir. Yeni klasörler de oluşturulabilir içinden <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni.  

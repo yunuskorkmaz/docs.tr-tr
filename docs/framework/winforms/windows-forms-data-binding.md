@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540650"
 ---
 # <a name="windows-forms-data-binding"></a>Windows Forms Veri Bağlama
 Windows Forms veri bağlama görüntülemek ve form üzerinde denetimleri içinde bir veri kaynağından bilgileri değişiklikler yapmak için araçlar sağlar. Hem geleneksel veri kaynakları yanı sıra veri içeren neredeyse her yapısı bağlayabilirsiniz.  

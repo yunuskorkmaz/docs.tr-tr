@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525853"
 ---
 # <a name="polygons-in-gdi"></a>GDI+'daki Çokgenler
 Çokgen üç veya daha fazla düz kenarlar ile kapalı bir Şekil ' dir. Örneğin, bir üçgen üç kenarı sahip bir çokgenin, bir Çokgen dört kenara dikdörtgen şeklinde ve beş kenara sahip bir çokgenin bir pentagon olduğu. Aşağıda birkaç çokgenler gösterilmektedir.  

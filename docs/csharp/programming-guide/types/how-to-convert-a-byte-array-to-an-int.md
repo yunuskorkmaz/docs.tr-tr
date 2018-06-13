@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337879"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Nasıl yapılır: byte Dizisini int'e Dönüştürme (C# Programlama Kılavuzu)
 Bu örnek nasıl kullanılacağını gösterir <xref:System.BitConverter> sınıfı için bir bayt dizisi dönüştürmek için bir [int](../../../csharp/language-reference/keywords/int.md) daha sonra tekrar bir bayt dizisi. Örneğin Ağ kapalı bayt okuduktan sonra bayt, kaynağı bir yerleşik veri türüne dönüştürmek olabilir. Ek olarak [Toınt32 (bayt\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemi örnekte, aşağıdaki tabloda listelenmektedir yöntemleri <xref:System.BitConverter> diğer yerleşik türleri için (bayt dizesi) baytlar Dönüştür sınıfı.  

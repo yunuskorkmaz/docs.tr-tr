@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524419"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Forms Görsel Devralma
 Bazen, bir proje için bir form önceki bir proje ile oluşturduğunuz bir benzer çağırır karar verebilirsiniz. Ya da Filigran veya daha sonra yeniden bir projede özgün form şablonu değişiklikler içeren her bir yineleme ile kullanacağınız belirli denetim düzenini gibi ayarlarla temel form oluşturmak isteyebilirsiniz. Form devralma, temel bir form oluşturun ve ardından ondan devralır ve ihtiyacınız ne olursa olsun özgün ayarlarına korurken değişiklik olanak sağlar.  

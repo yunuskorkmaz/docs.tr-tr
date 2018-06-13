@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495284"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 Bir URL ayırmasını URL'yi veya URL'leri kümesini kimin ileti alabilir kısıtlamak sağlar. Bir ayırma bir URL şablonu, bir erişim denetimi listesi (ACL) ve bir dizi bayrakları oluşur. URL şablonu ayırma etkiler hangi URL'leri tanımlar. URL şablonları nasıl işlendiği hakkında daha fazla bilgi için bkz: [yönlendirme gelen istekleri](http://go.microsoft.com/fwlink/?LinkId=136764). Belirtilen URL'lerden iletileri almak için hangi kullanıcı veya kullanıcı grubuna izin ACL denetler. Bayrakları ayırma URL üzerinde doğrudan dinlemek veya başka bir işlem dinlemek için temsilci izni verme için bir kullanıcı veya grup izin vermek için olup olmadığını belirtin.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485371"
 ---
 # <a name="custom-tokens"></a>Özel Belirteçler
 X.509 sertifikaları, güvenlik bağlamı belirteçleri, Kerberos biletleri ve kullanıcı adı belirteçleri kimlik bilgileri olarak Windows Communication Foundation (WCF) yerel olarak destekler; ancak, kendi özel kimlik bilgilerini kullanmak izin vermek için esneklik sağlar.  

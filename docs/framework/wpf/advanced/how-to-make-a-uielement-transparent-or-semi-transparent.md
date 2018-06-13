@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545317"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Nasıl yapılır: Saydam veya Yarı Saydam UIElement Oluşturma
 Bu örnek nasıl yapılacağını gösteren bir <xref:System.Windows.UIElement> saydam veya yarı saydam. Saydam veya yarı saydam bir öğeyi göstermek için ayarladığınız kendi <xref:System.Windows.UIElement.Opacity%2A> özelliği. Değerini `0.0` öğenin değeri tamamen saydam yapar `1.0` öğesi tamamen opak yapar. Değerini `0.5` öğesi % 50 opak vb. yapar. Bir öğenin <xref:System.Windows.UIElement.Opacity%2A> ayarlanır `1.0` varsayılan olarak.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487678"
 ---
 # <a name="custom-message-formatters"></a>Custom Message Formatters
 Bir ileti içeriği XML biçiminde, genellikle bir uygulama için uygun bir biçim değil görülür. Uygulamaları alma ve bunların özelliklerini ayarlama nesnelerini yönetme. Windows Communication Foundation (WCF) kullanan *veri sözleşmesi* dönüştürmek için bir <xref:System.ServiceModel.Channels.Message> nesnesine kolayca bir uygulama tarafından işlenen bir nesne. Bu işlemler, seri hale getirme ve seri durumdan çıkarma denir. Bu aynı koşulları serileştirme tanımlamak ve Aktarım katmanı ilişkisiz bir işlemdir ileti gönderme biçimini gelen ve giden yapılır seri durumundan çıkarma için kullanıldığını unutmayın.  

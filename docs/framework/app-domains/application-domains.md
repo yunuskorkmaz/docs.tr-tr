@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233957"
 ---
 # <a name="application-domains"></a>Uygulama Etki Alanları
 İşletim sistemleri ve çalışma zamanı ortamları tipik olarak bazı form uygulamalar arasında yalıtım sağlar. Örneğin, Windows uygulamalarını yalıtmak için işlemleri kullanır. Bu yalıtım bir uygulamada çalışan kodu ilgisiz, diğer uygulamalar olumsuz etkileyemez sağlamak gereklidir.  

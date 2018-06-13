@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517231"
 ---
 # <a name="using-activity-extensions"></a>Etkinlik uzantıları kullanma
 Etkinlikler iş akışında açıkça Modellenen değil ek işlevsellik sağlamak için ana iş akışı uygulama uzantılar etkileşim kurabilirsiniz.  Bu konu, oluşturma ve etkinlik yürütür sayısı saymak için uzantı kullanma açıklar.  

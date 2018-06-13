@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171999"
 ---
 # <a name="public-c-reference"></a>public (C# Başvurusu)
 `public` Sözcüktür türleri ve tür üyeleri için bir erişim değiştiricisi. Genel erişim en fazla izne sahip erişim düzeyi değil. Bu örnekte olduğu gibi ortak üyelere erişme hiçbir kısıtlamaları vardır:  

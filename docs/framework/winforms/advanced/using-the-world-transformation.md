@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523689"
 ---
 # <a name="using-the-world-transformation"></a>Gerçek Koordinat Dönüştürmesini Kullanma
 Dünya dönüşümü özelliğidir <xref:System.Drawing.Graphics> sınıfı. Dünya dönüşümü belirtin sayıları depolanmış bir <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 matris temsil eden nesne. <xref:System.Drawing.Drawing2D.Matrix> Ve <xref:System.Drawing.Graphics> sınıflarının sayıları world dönüştürme matrisini ayarlamak için çeşitli yöntemler vardır.  

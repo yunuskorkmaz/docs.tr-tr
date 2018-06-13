@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958232"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Uygulamalarınızı izleme ve telemetri ile modernize
 

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488692"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Internet Explorer ve WCF Tarafından Yapılan Sertifika Doğrulama Arasındaki Farklar
 HTTPS kullanıldığında, Internet Explorer'ı ve Windows Communication Foundation (WCF) hizmetini sertifikaları doğrulamak yolu arasındaki fark nedeniyle, Internet Explorer Yardım sayfası veya Web Hizmetleri Açıklama Dili erişmek mümkün olmaz mümkündür (WSDL) bir WCF İstemcisi başarıyla yapabileceksiniz olsa bile bir hizmeti için hizmet uç noktalarına iletileri göndermek. Internet Explorer denetler bu hizmet sertifikası olup çünkü `ServerAuthentication` WCF böyle bir sınırlama uygulamaz ancak Gelişmiş kullanımı bayrakları nesne tanımlayıcıları (OID). Internet Explorer hizmeti Yardım sayfası veya hizmet için WSDL erişemiyor kullanırsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti meta verilere erişebilir.  

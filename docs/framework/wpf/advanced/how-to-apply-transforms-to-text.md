@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544928"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Nasıl yapılır: Metne Dönüşüm Uygulama
 Dönüşümler uygulamanızdaki metnin görüntüsünü değiştirebilir. Aşağıdaki örnekler farklı türdeki işleme dönüşümlerini metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetim.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543725"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Nasıl yapılır: Bağımlılık Özelliği için Meta Verileri Geçersiz Kılma
 Bu örnek çağırarak devralınan bir sınıftan gelen varsayılan bağımlılık özelliği meta verileri geçersiz kılmak nasıl gösterir <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> yöntemi ve türe özgü meta veriler sağlar.  

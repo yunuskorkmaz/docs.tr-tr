@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491583"
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
 Windows Communication Foundation (WCF) ile güvenli bir şekilde WS-Federasyon ve WS-Trust belirtimleri uygulayan Hizmetleri ile iletişim kuran istemciler oluşturabilirsiniz. Belirtimleri, kimlik doğrulama ve yetkilendirme farklı güven bölgelerinde etkinleştirmek mekanizmalar için XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanın.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541745"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir dil bileşeni ve adlı olay türünü tanımlayan bir *ekli olayı*. Ekli olay kavramı, belirli bir olay için bir işleyici rasgele öğenin yerine gerçekten tanımlayan veya olaydan devralınan bir öğe eklemenize olanak tanır. Bu durumda, ne olası olayı tetiklenmeden nesne ne de hedef işleme örneği tanımlar veya aksi halde olay "sahibi".  

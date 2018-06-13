@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766627"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
 Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik konuları açıklanmaktadır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Öneriler güvenli oluşturmak için izlemeniz gereken [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] uygulamalar. Daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  

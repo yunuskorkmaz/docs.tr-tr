@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517887"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Özel türler anahtar etkinlikle kullanımı
 Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik. Çoğu geleneksel yordam programlama dillerinde, bir [geçiş](http://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir değişkene koşullu değerlendirmeye dayanarak bir yürütme mantığını seçer. Geleneksel olarak, bir `switch` deyimi statik olarak değerlendirilen bir ifade üzerinde çalışır. Örneğin, C# gibi yalnızca basit türler yani <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve Numaralandırma türleri desteklenir.  

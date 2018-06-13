@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488962"
 ---
 # <a name="extending-the-metadata-system"></a>Meta Veri Sistemini Genişletme
 Windows Communication Foundation (WCF) meta veri sistemi, sınıflar ve hizmet tabanlı uygulamalar uygulamak için gereken meta verileri temsil eden arabirimler grubudur. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimleri yapılandırın.  

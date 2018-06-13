@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493301"
 ---
 # <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleme
 Bu konuda oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleştirmek için gereken temel adımlar verilmiştir. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc hesaplayıcı hizmete yönlendirir; Ancak, daha sonra program aracılığıyla hedef uç nokta roundingCalc hizmet değiştirmek için güncelleştirilir.  

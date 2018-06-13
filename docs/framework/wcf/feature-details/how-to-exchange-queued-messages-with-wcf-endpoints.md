@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494663"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma
 Hizmet iletişimi aynı anda kullanılabilir olsa bile sıraları güvenilir Mesajlaşma'nün bir istemci ve bir Windows Communication Foundation (WCF) hizmetini arasında oluşabilir emin olun. Aşağıdaki yordamlar dayanıklı standart kullanarak bir hizmet ile bir istemci arasında bağlayıcı WCF Hizmeti uygularken kuyruğa alınmış iletişim sağlamak nasıl gösterir.  

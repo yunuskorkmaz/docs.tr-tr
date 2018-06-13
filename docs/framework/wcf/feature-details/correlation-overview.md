@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493208"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı bir sipariş işleme iş akışı kalıcı durum için iş akışı hizmeti iletileri birbirleriyle veya uygulama örneği durumu ilk isteğine yanıt ya da bir sıra kimliği gibi ilgili mekanizmadır. Bu konu bağıntı genel bir bakış sağlar. Bu bölümdeki diğer konulara bağıntı her tür için ek bilgileri sağlayın.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525876"
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider Bileşeni (Windows Forms)
 Windows Forms `ErrorProvider` bileşen kullanıcı rahatsız edici olmayan bir şekilde bir şeylerin yanlış olduğunu göstermek için kullanılır. Genellikle, bir form üzerinde kullanıcı girişini doğrulama veya dataset içindeki hataları görüntüleme ile birlikte kullanılır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490925"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0 ile Birlikte Çalışabilme
 Windows Communication Foundation (WCF) istemcileri ve Hizmetleri Ağustos 2004 sürümü kullanmak için WCF istemcileri ve Hizmetleri yapılandırıldığında Microsoft .NET (WSE) istemcileri ve Hizmetleri için Web Hizmetleri geliştirmeleri 3.0 ile hat düzeyinde uyumlu olan WS-adresleme belirtimi.  

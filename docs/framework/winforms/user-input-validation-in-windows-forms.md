@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541813"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcılar uygulamanıza veri girdiğinizde, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, sıfır uzunluk, alan bir telefon numarası veya diğer iyi biçimlendirilmiş bir veri türü olarak biçimlendirilmiş olması ya da bir dizeyi bir veritabanı güvenliğinizi aşmaya kullanılabilecek herhangi güvenli olmayan karakterleri içeremez gerektirebilir. Windows Forms, uygulamanızdaki giriş doğrulamak çeşitli yöntemler sağlar.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234763"
 ---
 # <a name="protected-visual-basic"></a>Korumalı (Visual Basic)
 Bir veya daha fazla programlama öğeleri bildirilen belirten bir üye erişim değiştiricisi erişilebilir yalnızca kendi sınıfı içinde veya türetilmiş bir sınıf.  

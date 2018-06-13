@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540052"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
 Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  

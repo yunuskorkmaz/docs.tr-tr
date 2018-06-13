@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524228"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Nasıl yapılır: Donuk ve Yarı Saydam Çizgiler Çizme
 Çizgi çizme zaman geçmesi gereken bir <xref:System.Drawing.Pen> nesnesini <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Parametrelerden biri <xref:System.Drawing.Pen.%23ctor%2A> Oluşturucusu olan bir <xref:System.Drawing.Color> nesnesi. Opak bir çizgi çizmek için 255 rengin alfa bileşenini ayarlayın. Yarı saydam bir çizgi çizmek için 1 ile 254 arasında herhangi bir değere alfa bileşenini ayarlayın.  

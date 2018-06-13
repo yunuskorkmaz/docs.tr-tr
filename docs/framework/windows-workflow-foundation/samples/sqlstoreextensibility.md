@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518492"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Bu örnek kullanım ve SQL iş akışı örneği deposundaki yükseltilen özellikleri yapılandırmasını gösterir. SQL iş akışı örneği deposuna bir SQL tabanlı bir örnek deposuna uygulamasıdır. Durumu kaydedin ve durumunu bir SQL Server veya SQL Server Express veritabanı gelen ve giden yüklemek bir örnek sağlar. Depolama genişletilebilirlik özelliği örneği deposunda saklanır özelliklerini tanımlamak kullanıcı sağlar. Bu özellikler için sorgu kullanıcıya veren bir yükseltilen özellikleri görünümü görüntülenir.  

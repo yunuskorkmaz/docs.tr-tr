@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354939"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>Nasıl yapılır: DataContext düzeyinde filtresi
 Filtre uygulayabilirsiniz `EntitySets` adresindeki `DataContext` düzeyi. İle yapılan tüm sorguları gibi filtreler uygulamak <xref:System.Data.Linq.DataContext> örneği.  

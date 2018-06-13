@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495602"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
 Bu konu, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturmayı açıklar. Bu konu, burada yalnızca Mesajlaşma etkinlikleri servis oluşur bir iş akışı hizmeti oluşturma mekanizması odaklanır. Gerçek dünya hizmetinde, iş akışı diğer birçok etkinlik içerir. Hizmet bir dize alır ve çağırana dize verir Yankı adlı bir işlemi uygular. İlk iki Konular'a dizi konudur. Sonraki konuyu [nasıl yapılır: bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu konuda oluşturulan hizmet çağırabilirsiniz bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  

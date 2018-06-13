@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519632"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker ve WorkflowApplication kullanma
 Windows Workflow Foundation (WF) iş akışı barındırma çeşitli yöntemler sağlar. <xref:System.Activities.WorkflowInvoker> yöntem çağrısı sırasında ve Kalıcılık kullanmayan yalnızca iş akışları için kullanılabilir gibi bir iş akışı çağırma için basit bir yol sağlar. <xref:System.Activities.WorkflowApplication> yaşam döngüsü olayları, yürütme denetimi, yer işareti sürdürme ve kalıcılığı bildirimi içeren iş akışlarını yürütmek için daha zengin bir modeli sağlar. <xref:System.ServiceModel.Activities.WorkflowServiceHost> Mesajlaşma etkinlikleri için destek sağlar ve iş akışı Hizmetleri ile birincil olarak kullanılır. Bu konu ile iş akışı barındırma için tanıtır <xref:System.Activities.WorkflowInvoker> ve <xref:System.Activities.WorkflowApplication>. İş akışları ile barındırma hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.WorkflowServiceHost>, bkz: [iş akışı Hizmetleri](../../../docs/framework/wcf/feature-details/workflow-services.md) ve [iş akışı hizmetleri genel bakış barındırma](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  

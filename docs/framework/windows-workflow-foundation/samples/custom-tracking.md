@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518010"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek, özel izleme katılımcı oluşturmak ve izleme verilerini içeriğini konsola yazma gösterilmiştir. Ayrıca, örnek yayma gösterilmiştir <xref:System.Activities.Tracking.CustomTrackingRecord> kullanıcıyla doldurulmuş nesneleri tanımlanmış veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> izleme profili kullanan iş akışı tarafından gösterilen nesneleri kodda oluşturulan nesne.  
