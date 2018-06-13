@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640387"
 ---
 # <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39; dimensions sayısı değiştirilemiyor
 Bir işlem kullanma girişiminde `ReDim` bir dizi (dimensions sayısı) derecesini değiştirmek için deyimi. `ReDim` bir veya daha fazla boyutları zaten resmi olarak bildirilmiş bir dizinin boyutunu değiştirebilirsiniz, ancak bir dizinin derece değiştiremezsiniz.  

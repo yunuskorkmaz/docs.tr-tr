@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654745"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
 Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için nasıl kullandığını açıklar.  

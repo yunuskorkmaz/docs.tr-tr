@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647702"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic'de Bildirilen Öğeler
 A *öğesi bildirilen* bildirimi deyiminde tanımlı bir programlama öğesidir. Bildirilen öğeler değişkenleri, sabitleri, numaralandırmaları, sınıflar, yapıları, modüller, arabirimleri, yordamları, yordam parametreleri, işlevi döndürür, dış yordam başvurularını, işleçleri, özellikleri, olayları ve temsilciler içerir.  

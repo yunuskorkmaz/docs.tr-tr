@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635724"
 ---
 # <a name="cast-from-string-quotltstringgtquot-to-type-39lttypenamegt39-is-not-valid"></a>Dizeden cast &quot; &lt;dize&gt; &quot; yazmak için &#39; &lt;typename&gt; &#39; geçerli değil
 Başka bir türüne bir dize değişkenine dönüştürme girişimi geçerli değil.  
