@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566034"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim davranışı nasıl türü eşlemesi çözümler, derlemeler nasıl yüklenir, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, yazma nesnesi ile nasıl etkileşim kurduğu niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konu, .NET Framework XAML hizmetlerinde ve CLR türü sistemi temelinde ilişkili varsayılan XAML şema içeriği özelliklerini açıklar. Bu konu ayrıca WPF için kullanılan XAML şema içeriği açıklar.  

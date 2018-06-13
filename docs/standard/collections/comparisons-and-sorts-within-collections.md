@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573126"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
 <xref:System.Collections> Sınıfları öğesi kaldırmak arama olup olmadığını koleksiyonlar, yönetme veya bir anahtar-değer çiftinin değer döndürme söz konusu neredeyse tüm işlemlerde karşılaştırmaları gerçekleştirin.  

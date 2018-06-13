@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450394"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE Numaralandırması
 Bir statik alandır ve varsa, statik kalite, alan için geçerli olup olmadığını gösterir. Bu değerler, alanın birden fazla olduğunu belirtmek için bit düzeyinde OR işlemi kullanılarak birleştirilebilir farklı statik nitelikleri.  

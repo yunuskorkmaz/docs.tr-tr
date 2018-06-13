@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397461"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], işlem içi-tek bir işlemde birden fazla sürümünü ortak dil çalışma zamanı (CLR) çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini işlemi için yüklenen .NET Framework sürüm ne olursa olsun bunlar, oluşturulan .NET Framework sürümünü çalıştıran yönetilen.  

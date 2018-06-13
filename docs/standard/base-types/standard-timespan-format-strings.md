@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578313"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
 <a name="Top"></a> Standart bir <xref:System.TimeSpan> biçim dizesi metin gösterimini tanımlamak için bir tek biçim belirticisi kullanan bir <xref:System.TimeSpan> bir biçimlendirme işleminin sonuçları değeri. Beyaz alan dahil olmak üzere birden fazla karakter içeriyor herhangi bir biçim dizesini özel olarak yorumlanır <xref:System.TimeSpan> biçim dizesi. Daha fazla bilgi için bkz: [özel TimeSpan biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  

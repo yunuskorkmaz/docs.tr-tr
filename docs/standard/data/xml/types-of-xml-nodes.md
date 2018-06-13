@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572216"
 ---
 # <a name="types-of-xml-nodes"></a>XML düğüm türleri
 Bir XML belgesi düğümlerinin ağaç olarak belleğe okurken düğüm türleri düğümleri için düğümleri oluşturulduğunda vermiştir. XML belge nesne modeli (DOM) düğüm türleri, World Wide Web Konsorsiyumu (W3C) tarafından belirlenen çeşitli türlerde sahiptir ve DOM yapısı modeli 1.1.1 bölümünde listelenir. Aşağıdaki tabloda, bu düğüm türü ve her kısa bir açıklaması için atanmış nesnesini düğüm türleri listelenmektedir.  

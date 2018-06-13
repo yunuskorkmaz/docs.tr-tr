@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572976"
 ---
 # <a name="naming-guidelines"></a>Adlandırma yönergeleri
 Adlandırma kuralları çerçevenin geliştirmede tutarlı bir dizi aşağıdaki framework'ün kullanılabilirlik önemli bir katkısı olabilir. Yaygın olarak ayrılmış projelerde birçok geliştiriciler tarafından kullanılması için çerçeveyi sağlar. Tutarlılık formunun ötesinde framework öğelerin adları kolayca anlaşılması gerekir ve her öğenin işlevi iletmek gerekir.  

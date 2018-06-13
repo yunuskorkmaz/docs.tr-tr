@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397032"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme
 Aşağıdaki yordamlar, tanımlayın ve basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı dinamik yöntemi yürütme gösterilmektedir. Dinamik yöntemleri hakkında daha fazla bilgi için bkz: <xref:System.Reflection.Emit.DynamicMethod> sınıfı ve [yansıma yayma dinamik yöntemi senaryoları](http://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  

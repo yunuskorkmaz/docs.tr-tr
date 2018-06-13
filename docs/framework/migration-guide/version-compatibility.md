@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398280"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te Sürüm Uyumluluğu
 Geriye dönük uyumluluk bir platform, belirli bir sürümü için geliştirilen bir uygulamayı, platform sonraki sürümlerinde çalıştırılacağı anlamına gelir. Geriye dönük uyumluluk en üst düzeye çıkarmak .NET Framework çalışır: kaynak için bir .NET Framework sürümünü, .NET Framework'ün sonraki sürümlerinde derleme ve .NET Framework bir sürümünü çalıştıran ikili dosyaları davranır aynı üzerinde yazılan kod .NET Framework'ın sonraki sürümleri.  

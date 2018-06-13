@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574755"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 <xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu tarih ve saat değerinin çağırma yani `ToString` yöntemi, tarihin dize gösterimini görüntüler ve saati, tarih ve saat olsa bile Gregoryen takvim, başka bir takvim kullanılarak oluşturulmuş. Bu tarih ve saat değeri ile Farsça takvim oluşturmak için iki farklı şekilde kullanır, ancak hala çağırdığında Gregoryen takvim bu tarih ve saat değerleri görüntüler aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek belirli bir takvim tarihi görüntüleme için iki yaygın olarak kullanılan ancak yanlış teknikleri yansıtır.  

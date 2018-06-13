@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571468"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath sorguları ve ad alanları
 XPath sorguları bir XML belgesi, ad alanlarının farkında olduğundan ve ad alanı öneklerini öğe ve öznitelik adları nitelemek için kullanabilirsiniz. Bir ad alanı öneki ile öğe ve öznitelik adları niteleme belirli bir ad alanına ait düğümlere bir XPath sorgusu tarafından döndürülen düğümleri sınırlar.  

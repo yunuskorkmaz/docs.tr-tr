@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570459"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Okuma ve yazma XML şemaları
 Şema nesne modeli (SOM) API okumak ve XML Şeması Tanım Dili (XSD) şemaları dosyaları veya diğer kaynakları yazma ve XML şemaları sınıflarda kullanarak bellek içi oluşturmak için kullanılan <xref:System.Xml.Schema?displayProperty=nameWithType> dünyada tanımlanan yapıları Eşle ad alanı Wide Web Konsorsiyumu (W3C) XML Şeması öneri.  

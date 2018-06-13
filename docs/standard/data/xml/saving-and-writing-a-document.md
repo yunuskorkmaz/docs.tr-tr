@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573600"
 ---
 # <a name="saving-and-writing-a-document"></a>Kaydetme ve bir belgeyi yazma
 Ne zaman yükle ve Kaydet bir <xref:System.Xml.XmlDocument>, aşağıdaki yollarla kaydedilmiş belge orijinal olandan farklı olabilir:  

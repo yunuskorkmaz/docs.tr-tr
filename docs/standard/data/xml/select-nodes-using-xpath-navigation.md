@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572716"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath Gezinti kullanarak düğümleri seçin
 XML belge nesne modeli (DOM) sorgu bilgileri XML Path dili (XPath) gezinme DOM kullanmanıza olanak sağlayan yöntemler içerir XPath tek, belirli bir düğümü bulunamadı veya bazı ölçütlere uyan tüm düğümleri bulmak için kullanabilirsiniz.  

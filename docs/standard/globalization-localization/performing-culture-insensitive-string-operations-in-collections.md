@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577156"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Koleksiyonlarda Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme
 Sınıflar ve üyeleri <xref:System.Collections> varsayılan kültüre duyarlı davranışı sağlamak ad alanı. Varsayılan Oluşturucu için <xref:System.Collections.CaseInsensitiveComparer> ve <xref:System.Collections.CaseInsensitiveHashCodeProvider> sınıfları başlatma kullanarak yeni bir örneğini <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> özelliği. Tüm aşırı <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> yöntemi yeni bir örneğini oluşturmak <xref:System.Collections.Hashtable> kullanarak sınıfı `Thread.CurrentCulture` özelliği varsayılan olarak. Overloads <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> yöntemi kullanarak varsayılan kültüre duyarlı sıralar gerçekleştirmek `Thread.CurrentCulture`. Sıralama ve arama bir <xref:System.Collections.SortedList> tarafından etkilenen `Thread.CurrentCulture` dizeleri anahtar olarak kullanılan zaman. Bu sınıflar ve yöntemler de kültüre duyarsız sonuçları almak için bu bölümde sağlanan kullanım önerilere uyun `Collections` ad alanı.  

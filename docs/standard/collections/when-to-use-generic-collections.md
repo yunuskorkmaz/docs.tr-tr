@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572651"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
 Temel koleksiyonu türden türetilmiş ve türüne özgü üyeleri uygulamak gerek kalmadan tür güvenliği hemen avantajı elde çünkü genel koleksiyonlar kullanarak genellikle önerilir. Genel koleksiyon türleri de genellikle gerçekleştirmek nongeneric koleksiyon türleri ve karşılık gelen daha iyi (ve türlerini daha iyi, türetilen nongeneric temel koleksiyonu türlerinden) koleksiyon öğeleri olduğunda değer türleri, genel türler ile olduğundan öğeler kutu gerek yoktur.  

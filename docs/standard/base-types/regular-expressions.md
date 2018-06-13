@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577149"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeler
 Normal ifadeler, metin işleme için güçlü, esnek ve verimli bir yöntem sunar. Normal ifadeleri desen eşleştirme kapsamlı gösterimi, hızlı bir şekilde belirli karakter düzenleri bulmak için metin büyük miktarlarda ayrıştırılamıyor sağlar; önceden tanımlanmış bir desen (örneğin, bir e-posta adresi); eşleştiğinden emin olmak için metin doğrulamak için ayıklama, düzenleme, değiştirin veya metin silmek için alt dizeler; Ayıklanan dizelerin bir raporu oluşturmak için bir koleksiyona eklemek için ve. Dizeler üzerinde çalışan veya büyük metin bloklarını ayrıştıran uygulamalar için normal ifadeler vazgeçilmez bir araçtır.  

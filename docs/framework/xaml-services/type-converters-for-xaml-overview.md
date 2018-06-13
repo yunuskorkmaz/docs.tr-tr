@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566827"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 XAML biçimlendirme içinde bir dizeden bir nesne grafiğinin belirli nesneleri dönüştürür bir nesne yazıcısı için tür dönüştürücüleri tedarik mantığı. .NET Framework XAML hizmetlerinde tür dönüştürücüsünü türeyen bir sınıf olmalıdır <xref:System.ComponentModel.TypeConverter>. Bazı dönüştürücüler ayrıca kaydetme yolu XAML destekler ve Serileştirme biçimlendirmede dize forma bir nesne seri hale getirmek için kullanılabilir. Bu konuda nasıl ve ne zaman tür dönüştürücüleri XAML'de çağrılır ve yöntemini geçersiz kılar, uygulama önerileri sağlar açıklanmaktadır <xref:System.ComponentModel.TypeConverter>.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565369"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData İç XAML Türü
 XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri içinde `x:XData` hareket varsayılan XAML ad uzayı parçası veya diğer bir XAML ad olmaları durumunda gibi XAML işlemcileri tarafından değerlendirilmelidir değil. `x:XData` rastgele doğru biçimlendirilmiş XML içerebilir.  

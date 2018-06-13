@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453930"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 İşlevi
 Profil Oluşturucu denetim bir işlevinden döndürülen olduğunu bildirir.  

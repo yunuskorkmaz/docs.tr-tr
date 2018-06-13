@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577169"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Komut dosyası blokları kullanarak msxsl: Script
 <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış komut dosyalarını destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, tanımlı hiçbir işlev Microsoft Ara dili (MSIL) kod belge nesne modeli (CodeDOM) tarafından derlenir ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme için stil sayfası oluşturulan derleme daha ayrıdır.  

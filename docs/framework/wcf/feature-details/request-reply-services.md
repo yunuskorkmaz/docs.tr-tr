@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490951"
 ---
 # <a name="request-reply-services"></a>İstek-Yanıt Hizmetleri
 İstek-yanıt Hizmetleri işlemi sözleşme Windows Communication Foundation (WCF) varsayılan türüdür. İstemcileri hizmet işlemleri çağrı yapmak ve hizmetinden bir yanıt bekleyin. Bir hizmet işlemi çağrıları ya da zaman uyumlu olarak gerçekleştirebileceğiniz, kadar istemci engeller burada bu hizmetin veya çağrı süreleri bir yanıt alır veya zaman uyumsuz olarak, istemci hizmet işlemi için bir çağrı yapar burada çalışmaya devam eder ve alır başka bir iş parçacığında hizmetinden gelen yanıt.  

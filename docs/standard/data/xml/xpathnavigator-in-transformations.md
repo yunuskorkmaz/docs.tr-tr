@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570472"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümleri XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı verilerine salt okunur rastgele erişim sağlar ve Genişletilebilir Stil sayfası dili için bir giriş olarak kullanmak için Dönüşümleri (XSLT) için tasarlanmıştır. Üzerinde uygulanan <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, ve <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> XML Path dili (XPath) öneri 5 bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modeline dayanır.  

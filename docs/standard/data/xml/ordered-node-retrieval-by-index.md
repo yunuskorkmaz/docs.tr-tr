@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568631"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Düğüm alma dizine göre sıralanmış
 World Wide Web Konsorsiyumu (W3C) XML belge nesne modeli (DOM) tarafından işlenen sırasız kümesi aksine düğümleri sıralı bir listesi işleme yeteneği olan bir listesi ayrıca açıklanır **XmlNamedNodeMap**. Microsoft .NET Framework listesi adlı **XmlNodeList**. Yöntemleri ve döndüren özellikleri bir **XmlNodeList** şunlardır:  

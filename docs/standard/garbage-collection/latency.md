@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573906"
 ---
 # <a name="latency-modes"></a>Gecikme Modları
 Nesneleri geri kazanmak için atık toplayıcı tüm yürütme iş parçacığı bir uygulamada durdurmanız gerekir. Uygulama verileri alır veya içeriği, görüntüler gibi bazı durumlarda, tam atık toplama kritik bir zamanda meydana ve performansı olumsuz yönde. Ayarlayarak Atık toplayıcısının zorla girme ayarlayabilirsiniz <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> özelliğini birine <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> değerleri.  

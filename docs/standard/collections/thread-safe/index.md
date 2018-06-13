@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575537"
 ---
 # <a name="thread-safe-collections"></a>İş Parçacığı Koleksiyonları
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], iş parçacığı açısından güvenli ve ölçeklenebilir birkaç koleksiyon sınıfı içeren <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanını tanıtır. Birden çok iş parçacığı güvenli bir şekilde ve verimli bir şekilde eklemek veya kullanıcı kodu ek eşitleme gerek kalmadan bu koleksiyonlardan öğeleri kaldırın. Yeni kod yazdığınızda, koleksiyon birden çok iş parçacığına aynı anda yazdığında eşzamanlı koleksiyon sınıflarını kullanın. Yalnızca paylaşılan bir koleksiyondan okuyorsanız <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki sınıfları kullanabilirsiniz. .NET Framework 1.1 veya önceki çalışma zamanı sürümünü hedeflemeniz gerekmedikçe 1.0 koleksiyon sınıflarını kullanmamanızı öneririz.  

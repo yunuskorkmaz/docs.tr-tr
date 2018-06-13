@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575661"
 ---
 # <a name="weak-references"></a>Zayıf Başvurular
 Uygulamanın kodu söz konusu nesne ulaşabilir sırada atık toplayıcı bir uygulama tarafından kullanılan bir nesne toplayamazsınız. Uygulama nesnesi için güçlü bir başvuru barındırıyor olarak sınıflandırılır.  

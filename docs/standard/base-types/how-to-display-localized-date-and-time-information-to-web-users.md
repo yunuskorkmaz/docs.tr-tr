@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578163"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın her yerden görüntülenebilir olduğundan, ayrıştırma ve tarih ve saat değerlerini biçimlendirmek işlemleri (genellikle Web sunucusunun yerel kültür biçimi) bir varsayılan biçimi üzerinde güvenmemelisiniz kullanıcıyla kullanılırken. Bunun yerine, işleyen tarih ve saat dizeleri giriş kullanıcı tarafından Web forms kullanıcının tercih edilen kültürü kullanarak dizeleri ayrıştırma. Benzer şekilde, tarih ve saat verilerini kullanıcıya kullanıcının kültürü için uyumlu bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
