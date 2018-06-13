@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651417"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme (Visual Basic)
 İsterseniz `Get` ve `Set` yordamlarını bir özelliğe farklı erişim düzeyleri olması, daha fazla izin düzeyi kullanabilir `Property` deyimi ve ya da daha kısıtlayıcı düzeyi `Get` veya `Set` deyimi. Belirli özelliğin değerini almak kod parçalarını ve belirli bir değeri değiştirmek kod bölümlerini istediğinizde bir özelliği karışık erişim düzeyleri kullanın.  

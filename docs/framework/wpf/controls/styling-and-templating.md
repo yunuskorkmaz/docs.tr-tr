@@ -20,6 +20,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457764"
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon suite geliştiricilerin ve tasarımcıların görsel olarak ilgi çekici efektler oluşturmak ve kendi ürün için tutarlı bir görünüm oluşturmak için izin özellikleri (stiller, şablonlar, tetikleyiciler ve film şeritleri) bakın. Geliştiriciler ve/veya tasarımcıları bir uygulama tarafından uygulama temelinde yaygın görünümünü özelleştirebilirsiniz rağmen güçlü bir stil ve şablon modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasını izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  

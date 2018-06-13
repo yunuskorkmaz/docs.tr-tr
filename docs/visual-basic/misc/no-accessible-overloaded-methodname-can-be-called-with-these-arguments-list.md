@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637993"
 ---
 # <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Hayır erişilebilir aşırı &#39; &lt;methodname&gt; &#39; bu bağımsız değişkenlerle çağrılamaz: &lt;listesi&gt;
 Aşırı yüklenmiş yöntemin çağrıldı, ancak hiçbir yöntemi sağlanan bağımsız değişken listesiyle eşleştirilir.  

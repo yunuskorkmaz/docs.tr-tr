@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643199"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Nasıl yapılır: Bul Descendants belirli öğe adına (Visual Basic)
 Bazen belirli bir ada sahip tüm bağımlı öğelerini bulmak istediğiniz. Tüm alt öğeleri yinelemek için kod yazma, ancak kullanmayı daha kolay <xref:System.Xml.Linq.XContainer.Descendants%2A> ekseni.  

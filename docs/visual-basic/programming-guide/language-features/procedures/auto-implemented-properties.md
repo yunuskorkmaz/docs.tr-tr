@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656344"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
 *Otomatik uygulanan Özellikler* kod yazmak zorunda kalmadan bir özelliği bir sınıfın hızla belirtmenizi sağlayan `Get` ve `Set` özelliği. Otomatik uygulanan bir özellik için kodu yazarken, Visual Basic derleyici ilişkili oluşturma yanı sıra özelliği değişkeni depolamak için özel bir alan otomatik olarak oluşturur. `Get` ve `Set` yordamları.  

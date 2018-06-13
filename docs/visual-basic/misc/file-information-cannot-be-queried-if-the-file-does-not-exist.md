@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638493"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Dosya yoksa, dosya bilgileri sorgulanamıyor
 Sorgu için bir girişimde bulunuldu bir <xref:System.IO.FileInfo> nesne var olmayan bir dosya hakkında bilgi için. Genellikle bu dosya adı sağlanırken yapılan bir hata nedeniyle adıdır.  

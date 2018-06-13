@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648053"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme (Visual Basic)
 Türetilmiş bir sınıf kodda bir değişken eriştiğinde derleyici sürümüne başvuru en yakın erişilebilir, diğer bir deyişle, erişilebilir sürümü en az derivational adımları geriye dönük erişilirken sınıfından normalde çözümler. Değişkeni türetilmiş sınıfında tanımlanmışsa kodu tanımın normal olarak erişir.  

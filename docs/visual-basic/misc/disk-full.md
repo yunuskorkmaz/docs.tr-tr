@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635583"
 ---
 # <a name="disk-full-visual-basic"></a>Disk dolu (Visual Basic)
 Diskte ya da tamamlamak için yeterli yer yok bir `Print`, `Write`, veya `FileClose` işlemi, gerekli dosyaları oluşturmak için veya.  

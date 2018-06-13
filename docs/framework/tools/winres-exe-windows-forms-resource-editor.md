@@ -17,6 +17,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472587"
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Forms Kaynak Düzenleyici)
 Windows Formları Kaynak Düzenleyicisi Winres.exe, yerelleştirme uzmanlarının formlar tarafından kullanılan Windows Formları kullanıcı arabirimi (UI) kaynaklarını yerelleştirmesine yardımcı olan görsel bir düzen aracıdır. Winres.exe için girdi olarak kullanılan .resx veya .resources dosyaları Microsoft Visual Studio gibi bir görsel tasarım ortamı kullanarak oluşturulabilir. .NET Framework uygulamalarında kaynakları dağıtma hakkında daha fazla bilgi için bkz: [masaüstü uygulamalarında kaynakları](../../../docs/framework/resources/index.md).  
