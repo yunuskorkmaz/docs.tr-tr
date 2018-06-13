@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503488"
 ---
 # <a name="throttling"></a>Sınırlama
 Azaltma örnek azaltma denetimleri kullanımını gösterir. Azaltma denetimleri sınırlarını eşzamanlı çağrıları, örneği veya oturumları atlayarak kaynaklarının kullanımını engellemek için sayısına yerleştirin. Davranış azaltma hizmet yapılandırma dosyası ayarları belirtilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular.  

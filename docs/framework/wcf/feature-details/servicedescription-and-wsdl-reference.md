@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507374"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription ve WSDL Başvurusu
 Bu konu ve ondan Windows Communication Foundation (WCF) Web Hizmetleri Açıklama Dili (WSDL) belgeleri nasıl eşlendiğini açıklar <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  

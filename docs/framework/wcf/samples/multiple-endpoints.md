@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501976"
 ---
 # <a name="multiple-endpoints"></a>Birden Fazla Uç Noktası
 Birden çok uç nokta örnek bir hizmette birden çok uç nokta yapılandırma ve istemciden gelen her bir uç noktası ile iletişim kurmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet yapılandırması destekleyen iki uç noktalarını tanımlamak için değiştirilmiş `ICalculator` sözleşme, ancak her biri farklı bir bağlama kullanarak farklı bir adres. İstemci yapılandırma ve kodun hem hizmet uç noktaları ile iletişim kurmak için değiştirilmiş.  

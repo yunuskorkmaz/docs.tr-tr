@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508585"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken geliştiriciler serileştirme sorunları ve veri yapıları Kapat dikkat ve kendilerini veri taşınan iletileri yapısıyla ilgilendiren gerekmez. Bu uygulamalar için parametreleri veya dönüş değerleri için veri sözleşmeleri oluşturma basittir. (Daha fazla bilgi için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

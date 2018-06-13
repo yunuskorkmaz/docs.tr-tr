@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575856"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma
 Dizeleri adlarının numaralandırılabilir bir koleksiyonu döndüren yöntemler kullanarak dizinleri ve dosyaları numaralandırma. Numaralandırılabilir bir koleksiyonu döndüren yöntemler de kullanabilirsiniz <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo>, veya <xref:System.IO.FileSystemInfo> nesneleri. Dizin ve dosyaların büyük koleksiyonlarla çalışırken numaralandırılabilir koleksiyonları diziler daha iyi performans sağlar.  

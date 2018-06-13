@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579021"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Görev Tabanlı Zaman Uyumsuz Desen (TAP)
 Görev tabanlı zaman uyumsuz desen (TAP) dayanır <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> türlerini <xref:System.Threading.Tasks?displayProperty=nameWithType> rasgele zaman uyumsuz işlemleri temsil etmek için kullanılan ad. TAP yeni geliştirme için önerilen zaman uyumsuz tasarım desenidir.  

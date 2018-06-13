@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502396"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Satır İçi Kod Kullanarak IIS Barındırma
 Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir hizmete uygulamak gösterilmiştir servis kodunu bulunduğu satır içi .svc dosyasında ve isteğe bağlı olarak derlenir. Hizmet kod ayrıca uygulamanın \App_Code dizininde bulunan veya \bin içinde dağıtılan bütünleştirilmiş koda derlenmiş doğrudan kaynak kodu dosyaları uygulanabilir. Bu örnek, bu teknikler gösterilmemiştir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508884"
 ---
 # <a name="transacted-batching"></a>İşlem Yapılan Toplu İşlem
 Bu örnek, işlenen okuma Message Queuing (MSMQ) kullanarak toplu olarak gösterilmiştir. İşlenen Batching kuyruğa alınan iletişim hizmetteki okuma performansı en iyi duruma getirme özelliğini içindir.  

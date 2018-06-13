@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507580"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
 Internet Information Services (IIS) tarafından barındırılan örnekleri çalıştırmak için IIS düzgün yüklendiğinden ve çalıştığından emin olmanız gerekir.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576438"
 ---
 # <a name="names-of-namespaces"></a>Ad alanı adları
 Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef yeterli netlik hemen ad içeriği büyük olasılıkla ne olduğunu bilmeniz framework kullanarak programcı için oluşturuyor. Aşağıdaki şablonu ad alanları adlandırma genel kural belirtir:  

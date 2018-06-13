@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499199"
 ---
 # <a name="workflow-services"></a>İş Akışı Hizmetleri
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] tam olarak bir iş akışı tabanlı hizmet bildirimli olarak XAML'de açıklamak sağlar. Hizmetinizi uygulayan bir iş akışı tanımlayın ve hizmet sunan tüm tamamen XAML'de uç noktaları açıklar. Bu bölümdeki konular, bildirimli olarak yazma hizmetleri destekleyen programlama modeli ayrıntılı olarak açıklanmaktadır.  

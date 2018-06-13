@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499394"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` Bir dizi önceden tanımlanmış hizmet sözleşmelerini, özel kanal uygulamaları test etmek için kullanabileceğiniz bir araçtır. Hizmet sözleşmelerini kümeyi seçin ve bir XML dosyası kullanarak aracı geçirin. Araç ardından, özel kanal uygulamaları ileti alışverişi sırasında uygular istemci ve hizmet oluşturur.  

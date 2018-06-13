@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506473"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
 TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamalarına bağlantıları ayırt etmek için bir bağlantı noktası adı verilen bir 16 bit numara kullanır. Uygulamaya bir bağlantı noktasında dinleme, tüm TCP trafiği, bağlantı noktası için bu uygulamaya gider. Diğer uygulamalar aynı zamanda bu bağlantı noktasında dinleme yapamaz.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508650"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  

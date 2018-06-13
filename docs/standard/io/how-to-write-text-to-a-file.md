@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577131"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Nasıl yapılır: Bir Dosyaya Metin Yazma
 .NET Framework uygulamaları için bir dosyaya metin yazabilirler bu konuda gösterir farklı bir şekilde veya [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar. Genellikle aşağıdaki sınıflar ve yöntemler metin bir dosyaya yazmak için kullanılır:  

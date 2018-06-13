@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498250"
 ---
 # <a name="wcf-syndication-overview"></a>WCF Dağıtımı Genel Bakış
 Windows Communication Foundation (WCF), dağıtım akışlarını bir WCF hizmetinden sunmaya yönelik destek sağlar. Dağıtım, bir sunucu bazı uygulama veri akışı olarak bilinen bir birlikte çalışabilen biçiminde kullanıma sunar uygulama tümleştirme bir mekanizmadır. Bir akış bazı akış düzeyi meta verileri (başlık, yazar, URL ve diğer meta verileri) oluşur uygulama verilerinin bir koleksiyonunu ve akış öğelerini bir dizi ' dir. Akış içinde genellikle zaman ters tarih sırasına göre sıralı akış öğelerdir. Bir akış öğesi (başlık, URL, oluşturulduğu tarih, kategori ve diğer öğe düzeyinde meta verileri) öğe düzeyinde meta verileri ve rasgele bir uygulama belirli veri miktarı standart kümesinden oluşur. İki en yaygın dağıtım akışlarını gerçekten basit dağıtım (RSS) 2.0 ve Atom 1.0, her ikisi de WCF tarafından desteklenen türleridir.  

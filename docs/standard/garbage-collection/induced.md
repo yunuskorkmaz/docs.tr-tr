@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575869"
 ---
 # <a name="induced-collections"></a>Uyarılmış Koleksiyonlar
 Çoğu durumda, atık toplayıcı bir koleksiyon gerçekleştirmek için en iyi zaman belirleyebilir ve bağımsız olarak çalışmasına izin vermemelisiniz. Bazı nadir durumlarda zorlanmış koleksiyonu uygulamanızın performansını iyileştirebilir. Bu durumlarda, atık toplama kullanarak anlamına <xref:System.GC.Collect%2A?displayProperty=nameWithType> çöp toplama zorlamak için yöntem.  

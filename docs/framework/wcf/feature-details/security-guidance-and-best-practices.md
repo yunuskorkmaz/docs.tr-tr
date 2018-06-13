@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497509"
 ---
 # <a name="security-guidance-and-best-practices"></a>Güvenlik Kılavuzu ve En İyi Uygulamalar
 Bu bölümdeki konular için yönergeler ve güvenli Windows Communication Foundation (WCF) uygulamaları oluştururken dikkate alınması gereken öğeleri sunar. Windows Server AppFabric ve güvenlik bakın, hakkında daha fazla bilgi için [güvenlik modeli için Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

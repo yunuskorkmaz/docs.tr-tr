@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579749"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a> Kovaryans ve kontravaryans (ayrıntılı) fazla türetilmiş bir tür veya başlangıçta belirtilenden daha az türetilmiş bir tür (daha az belirli) kullanacak şekilde özelliği başvuran terimler. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Adlı bir temel sınıf örnekleri varsayın `Base` ve adlı türetilmiş bir sınıf `Derived`.  

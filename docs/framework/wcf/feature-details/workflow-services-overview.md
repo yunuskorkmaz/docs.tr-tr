@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502734"
 ---
 # <a name="workflow-services-overview"></a>İş Akışı Hizmetleri Genel Bakış
 İş akışı, iş akışları kullanılarak uygulanan WCF tabanlı hizmetler hizmetleridir. İş akışı, Windows Communication Foundation (WCF) ileti gönderme ve alma için Mesajlaşma etkinlikleri kullanan iş akışları hizmetleridir. .NET framework 4.5 birkaç iş akışı içinden iletilerini gönderip izin Mesajlaşma etkinlikleri tanıtır. Etkinlikleri ve nasıl farklı ileti exchange desenleri uygulamak için kullanılabilmesi için Mesajlaşma hakkında daha fazla bilgi için bkz: [Mesajlaşma etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

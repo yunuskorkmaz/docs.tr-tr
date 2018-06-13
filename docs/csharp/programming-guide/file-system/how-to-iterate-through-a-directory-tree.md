@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327479"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Dizin Ağacı ile Yineleme (C# Programlama Kılavuzu)
 Her iç içe alt herhangi bir derinliğe bir belirtilen kök klasörü altında her dosyaya erişmek deyimi "dizin ağacı yinelemek" anlamına gelir. Mutlaka her dosyayı açmak gerekmez. Dosya veya alt dizini olarak adını alıp bir `string`, veya biçiminde ek bilgi almak bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesne.  
