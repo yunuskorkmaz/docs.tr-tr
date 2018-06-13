@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360037"
 ---
 # <a name="getting-started"></a>Başlarken
 Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], kullanabileceğiniz [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL erişmek için teknoloji veritabanları bir bellek içi koleksiyonu erişim.  

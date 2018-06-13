@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333820"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 Genel türler 2.0 C# dili ve ortak dil çalışma zamanı (CLR) sürümüne eklenmiştir. Genel türler için .NET Framework tasarım sınıflar ve sınıf veya yöntemin bildirilen ve istemci kodu tarafından örneği kadar bir veya daha fazla türü belirtimini erteleneceği yöntemler için olası kolaylaştırır tür parametreleri kavramı tanıtır. Örneğin, bir genel tür parametresi T kullanarak kullanabileceğiniz diğer istemci kodu maliyet ya da çalışma zamanı atamaları veya kutulama işlemleri riskini yansıtılmasını olmadan aşağıda gösterildiği gibi tek bir sınıf yazabilirsiniz:  

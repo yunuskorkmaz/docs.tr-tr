@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365021"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da anlık görüntü yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir.  

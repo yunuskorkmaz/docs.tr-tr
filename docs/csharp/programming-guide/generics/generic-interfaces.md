@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323644"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
 Genellikle, arabirimleri genel koleksiyon sınıfları, veya koleksiyondaki öğelerin temsil eden genel sınıfları tanımlamak yararlıdır. Genel sınıflar için tercih genel arabirimler gibi kullanmaktır <xref:System.IComparable%601> yerine <xref:System.IComparable>, değer türleri kutulama ve kutudan çıkarma işlemlerini önlemek için. Koleksiyon sınıfları ile kullanılmak üzere birkaç genel arabirimler .NET Framework sınıf kitaplığı tanımlar <xref:System.Collections.Generic> ad alanı.  

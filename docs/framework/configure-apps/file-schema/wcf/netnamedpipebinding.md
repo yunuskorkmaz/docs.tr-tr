@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751834"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Güvenli, güvenilir, üzerinde-makine çapraz işlem iletişim için en iyi hale getirilmiş bir bağlama tanımlar. Varsayılan olarak, güvenilirlik, ileti teslimi ve ikili ileti kodlama için adlandırılmış kanallar aktarımı güvenlik için taşıma güvenliği için çalışma zamanı iletişim yığını WS-ReliableMessaging ile oluşturur.  

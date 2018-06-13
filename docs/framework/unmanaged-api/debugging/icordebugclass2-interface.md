@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405391"
 ---
 # <a name="icordebugclass2-interface1"></a>Icordebugclass2 Interface1
 Genel bir sınıf veya yöntemi parametresi ile bir sınıf türü temsil eden <xref:System.Type>. Bu arabirim genişletir [Icordebugclass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  

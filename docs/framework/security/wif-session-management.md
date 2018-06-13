@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399119"
 ---
 # <a name="wif-session-management"></a>WIF oturum yönetimi
 Bir istemci ilk bağlı olan taraf tarafından barındırılan korunan bir kaynağa erişmeyi denediğinde, istemci önce kendisi için bağlı olan taraf tarafından güvenilen bir güvenlik belirteci hizmeti (STS) doğrulaması gerekir. STS istemciye daha sonra bir güvenlik belirteci verir. İstemci, korumalı kaynak için istemci erişim verir bağlı olan taraf için bu belirteci sunar. Ancak, özellikle bu bile aynı bilgisayarda veya bağlı olan taraf aynı etki alanında olmayabilir olmadığından STS her istek için yeniden kimlik doğrulaması sahip istemci istemezsiniz. Bunun yerine, Windows Identity Foundation (WIF) bağlı olan taraf bir oturumu, istemci oturum güvenlik belirteci kendisini tüm istekler için bağlı olan tarafa sonra ilk istek kimliğini doğrulamak için kullanır ve istemci vardır. Bağlı olan taraf istemcinin yeniden oluşturmak için bir tanımlama bilgisi içinde depolanır, bu oturum güvenlik belirteci kullanabilirsiniz <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>.  

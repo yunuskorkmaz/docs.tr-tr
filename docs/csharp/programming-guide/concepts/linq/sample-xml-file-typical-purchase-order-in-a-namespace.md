@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337567"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Örnek XML dosyası: Tipik satınalma siparişi bir Namespace
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Tipik satın alma siparişi dosyasıdır. XML ad alanında ' dir.  

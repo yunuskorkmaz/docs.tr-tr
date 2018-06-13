@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402063"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly Yöntemi
 Bütünleştirilmiş kod oluşturur. Diğer tüm dosyalar dışında derleme dosyası kapatıldıktan sonra bu yöntemi çağırın. Bu yöntem, ilişkisiz modülleri üretirken çağırmayın.  

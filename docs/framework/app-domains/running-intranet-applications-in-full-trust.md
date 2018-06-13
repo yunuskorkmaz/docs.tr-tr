@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356795"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>İntranet Uygulamalarını Tam Güvende Çalıştırma
 .NET Framework sürüm 3.5 ile başlayan Service Pack 1 (SP1), uygulamaları ve bunların kitaplık derlemeleri tam güven derlemeleri olarak bir ağ paylaşımından çalıştırılabilir. <xref:System.Security.SecurityZone.MyComputer> Bölge kanıt, intranet üzerindeki paylaşımdan yüklenen derlemeler otomatik olarak eklenir. Bu bulgu aynı bilgisayarda bulunabilir derlemeleri olarak (genellikle tam güven olduğu) kümesini vermek bu derlemeler sağlar. Bu işlev ClickOnce uygulamaları veya bir ana bilgisayarda çalıştırmak için tasarlanmış uygulamalar için geçerli değildir.  

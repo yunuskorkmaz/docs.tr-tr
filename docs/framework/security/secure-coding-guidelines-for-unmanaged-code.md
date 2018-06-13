@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408157"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
 Yönetilmeyen kod (örneğin, yerel kod gibi Win32 API'ları) çağırmak bazı kitaplık kodu gerekir. Bu yönetilen kod için güvenlik çevre dışında son giderek gösterdiğinden dikkat gereklidir. Tarafsız güvenlik kodunuzu ise hem kodunuz hem de çağırır herhangi bir kod kod izni yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrağı belirtilmiş).  

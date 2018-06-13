@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351832"
 ---
 # <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
 Bu yapılandırma öğesi, standart bir uç nokta sabit duyuru sözleşme ile tanımlar. Bir hizmet açıldığında veya sırasıyla kapalı bir çevrimiçi ve çevrimdışı duyuru iletisi göndererek, kullanılabilirlik isteğe bağlı olarak Duyurusu. Windows Communication Foundation (WCF) hizmetini duyuru uç noktalardan belirtir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi ve duyuruları gerçekleştirmek için AnnouncementClient kullanır. Başka bir hizmet duyurudan dinlemek isteyen bir istemci gerçekte bir WCF hizmeti olarak hareket; Dolayısıyla, bu istemci için duyuru uç noktalarını yapılandırma sahip [ \<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) bölümü.  

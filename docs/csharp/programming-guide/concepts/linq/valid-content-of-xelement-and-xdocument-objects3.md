@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340326"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Geçerli içerik XElement ve XDocument nesneleri
 Bu konuda oluşturucular ve içerik öğelerini ve belgeleri eklemek için kullandığınız yöntemleri için geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  

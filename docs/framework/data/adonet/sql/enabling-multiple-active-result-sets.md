@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364885"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden fazla etkin sonuç kümesi etkinleştirme
 Birden fazla etkin sonuç kümeleri (MARS) birden çok toplu işlem yürütme üzerinde tek bir bağlantıya izin vermek için SQL Server ile çalışan bir özelliktir. MARS, SQL Server ile kullanmak için etkinleştirildiğinde, kullanılan her komut nesnesi bir oturum bağlantısı ekler.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445114"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile Yöntemi
 Şu anda bu yüklenmiş kod tabanını içeren bir kod temeli dosyası oluşturur [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi.  

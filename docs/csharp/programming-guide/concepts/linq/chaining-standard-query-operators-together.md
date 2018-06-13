@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326156"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Zincirleme standart sorgu işleçleri birlikte (C#)
 Son konusunda budur [Öğreticisi: zincirleme sorguları birlikte (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) Öğreticisi.  

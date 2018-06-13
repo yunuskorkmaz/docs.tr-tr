@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318594"
 ---
 # <a name="creating-xml-trees-c"></a>Oluşturma XML ağaçları (C#)
 En yaygın XML görevlerden birini bir XML ağacı oluşturma. Bu bölümde, bunları oluşturmak için çeşitli yollar açıklanmaktadır.  

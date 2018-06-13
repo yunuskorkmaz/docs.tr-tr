@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352870"
 ---
 # <a name="clr-triggers"></a>CLR Tetikleyiciler
 Bir tetikleyici bir dil olayı yürüttüğünde otomatik olarak çalıştırılan saklı yordamı özel bir türde değil. .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme nedeniyle CLR Tetikleyiciler oluşturmak için herhangi bir .NET Framework dil kullanabilirsiniz.  

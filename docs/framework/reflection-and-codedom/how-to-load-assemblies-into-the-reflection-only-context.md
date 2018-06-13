@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398732"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme
 Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya diğer .NET Framework sürümleri için derlenmiş derlemeleri incelemek sağlar. Bu bağlamına yüklenen kod yalnızca incelenebilir; yürütülemez. Oluşturucular yürütülemiyor çünkü bu nesneleri oluşturulamayacağını, anlamına gelir. Kod yürütülemiyor çünkü bağımlılıkları otomatik olarak yüklenmez. Bunları inceleyin ihtiyacınız varsa, bunları kendiniz yüklemelisiniz.  

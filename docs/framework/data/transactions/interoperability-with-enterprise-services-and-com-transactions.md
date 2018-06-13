@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362756"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik
 <xref:System.Transactions> Ad alanı bu ad alanı kullanılarak oluşturulan işlem nesneler ile oluşturulan COM + işlemleri arasında birlikte çalışabilirlik destekler.  

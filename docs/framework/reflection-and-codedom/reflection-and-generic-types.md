@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399710"
 ---
 # <a name="reflection-and-generic-types"></a>Yansıma ve Genel Türler
 <a name="top"></a> Yansıma point of görünümünü genel bir tür bir sıradan türü arasındaki fark (genel tür tanımında ise) genel bir tür ile türü parametreleri kümesini ilişkili olduğunu olan veya tür bağımsız değişkenleri (yapılandırılmış bir tür ise). Genel yöntem aynı şekilde bir sıradan yönteminden farklıdır.  

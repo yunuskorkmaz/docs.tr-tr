@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400009"
 ---
 # <a name="validating-issuer-name-registry-api-reference"></a>Yayınlayıcı Adı Kayıt API Başvurusunu Doğrulama
 Bu bölümde doğrulama verenin adı kayıt WIF uzantısı için API Başvurusu içeriyor.

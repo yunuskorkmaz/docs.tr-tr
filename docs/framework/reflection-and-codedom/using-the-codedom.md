@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399025"
 ---
 # <a name="using-the-codedom"></a>CodeDOM'yi Kullanma
 CodeDOM genel türlerde kaynak kod öğeleri temsil eden türler sağlar. Bir nesne grafiğinin derlemek için CodeDOM öğeleri kullanılarak bir kaynak kod modeli derlemeler bir program tasarlayabilirsiniz. Bu nesne grafiği, kaynak kodu CodeDOM Kod Oluşturucu için desteklenen bir programlama dili kullanılarak oluşturulabilir. CodeDOM ikili derlemeye kaynak kodu derlemek için de kullanılabilir.  

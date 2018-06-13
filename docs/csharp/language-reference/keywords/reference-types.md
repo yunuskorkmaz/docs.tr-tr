@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267345"
 ---
 # <a name="reference-types-c-reference"></a>Başvuru Türleri (C# Başvurusu)
 C#'de iki çeşit tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleri ile her değişkenin veri kopyasını vardır ve diğer etkilemek için bir değişken üzerinde işlemler için mümkün değildir (hariç durumunda, ref ve out parametresi değişkenleri; bkz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) ve [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi değiştiricisi).  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399749"
 ---
 # <a name="viewing-type-information"></a>Tür Bilgilerini Görüntüleme
 <xref:System.Type?displayProperty=nameWithType> Sınıfı için yansıma Merkezi. Ortak dil çalışma zamanı oluşturur **türü** yansıma istediğinde yüklenen bir türü. Kullanabileceğiniz bir **türü** nesnenin yöntemleri, alanları, özellikleri ve türü hakkında her şeyi öğrenmek için iç içe geçmiş sınıflar.  

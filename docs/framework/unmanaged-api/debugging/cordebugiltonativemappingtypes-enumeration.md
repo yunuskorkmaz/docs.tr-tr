@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402528"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes Numaralandırması
 Cor_debug_ıl_to_natıve_map yapısı bir örneği tarafından temsil edilen yerel yönergeleri, belirli bir dizi özel kod bölgesine karşılık gelen olup olmadığını gösterir.  

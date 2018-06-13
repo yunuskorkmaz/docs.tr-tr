@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355766"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Nasıl yapılır: müdahale veri hizmeti iletileri (WCF Veri Hizmetleri)
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], böylece bir işlem Özel mantık ekleyebilirsiniz istek iletilerini ele geçirebilir. Bir ileti müdahale için veri hizmeti özel öznitelikli yöntemleri kullanın. Daha fazla bilgi için bkz: [dinleyiciler](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  

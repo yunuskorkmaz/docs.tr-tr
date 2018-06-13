@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400425"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Ne&#39;s Windows Identity Foundation 4.5'deki yenilikler
 Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme olarak gönderildi ve .NET 3.5 SP1 zaman çerçevesinde kullanıma sunulduğundan WIF 3.5 olarak bilinmekteydi. .NET 4.5 sürümünden itibaren WIF, .NET çerçevesinin bir parçası olmuştur. Framework'te doğrudan kullanılabilen WIF sınıfları sahip talep tabanlı kimlik talepleri kullanan kolaylaştırma .NET içinde çok derin tümleştirme sağlar. WIF 3.5 için yazılmış uygulamalar için yeni model yararlanmak için değiştirilmesi gerekir; bilgi için bkz: [bir uygulama yerleşik kullanarak WIF 3.5 WIF 4.5 sürümüne geçirmek için yönergeler](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  

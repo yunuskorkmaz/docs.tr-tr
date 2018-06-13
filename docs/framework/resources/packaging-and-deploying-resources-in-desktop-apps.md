@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399697"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Paketleme ve Dağıtma Kaynakları
 Uygulamaları kullanan üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi, <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynaklar almak için sınıf. Kaynak Yöneticisi'ni bir hub ve bağlı bileşen modeli paketini ve kaynakları dağıtmak için kullanıldığını varsayar. Hub nonlocalizable yürütülebilir kod ve bağımsız olarak adlandırılan tek bir kültür için kaynakları içeren ana derlemedir veya varsayılan kültür. Geri dönüş kültürü uygulama için varsayılan kültürdür; Bu kültürdür yerelleştirilmiş kaynaklar bulunamazsa, kaynakları kullanılır. Her bağlı bileşen tek bir kültür için kaynakları içerir, ancak herhangi bir kod içermiyor bir uydu derleme bağlanır.  

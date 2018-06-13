@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399983"
 ---
 # <a name="custom-token-handlers"></a>Özel belirteç işleyicileri
 Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Varsayılan olarak WIF desteklenmeyen belirteç türleri için özel belirteç işleyiciler oluşturmak için gerekli nedir konu da kapsar.  

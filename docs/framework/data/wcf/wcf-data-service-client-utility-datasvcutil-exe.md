@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364532"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)
 DataSvcUtil.exe tarafından sağlanan bir komut satırı aracıdır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] , tüketir bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış ve veri hizmeti .NET Framework istemci uygulamasından erişmek için gerekli istemci veri hizmeti sınıfları oluşturur. Bu yardımcı programı, aşağıdaki meta veri kaynakları kullanarak veri sınıfları oluşturabilirsiniz:  

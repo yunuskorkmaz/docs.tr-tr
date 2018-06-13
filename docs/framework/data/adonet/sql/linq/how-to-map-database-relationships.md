@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364303"
 ---
 # <a name="how-to-map-database-relationships"></a>Nasıl yapılır: veritabanı ilişkileri eşleme
 Özellik varlık sınıfınızda her zaman aynı olacaktır herhangi bir veri ilişki başvuran şifreleyebilirsiniz. Northwind örnek veritabanı Örneğin, müşteriler genellikle siparişler geçirdiği için her zaman bir ilişkisi yoktur müşteriler ve bunların Siparişler arasında modelindeki.  

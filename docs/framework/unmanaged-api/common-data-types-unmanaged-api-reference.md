@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407085"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 Bu konu C/C++ tarafından tanımlanan tarafından yönetilmeyen API'ler .NET Framework kullanılan basit veri türleri listeler `typedef` deyimleri. Bu veri türleri genellikle C/C++ temel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin donuk değerlerdir; Böylece diğer işlevleri veya değişiklik yapmadan yöntemleri geçirilebilir diğer bir deyişle, bunlar belirli işlev veya yöntem tarafından döndürülür.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357588"
 ---
 # <a name="clr-user-defined-types"></a>CLR kullanıcı tanımlı türler
 Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile (CLR) uygulanan kullanıcı tanımlı türler (atama) için destek sağlar. CLR SQL Server'a tümleşiktir ve bu düzenek veritabanının tür sistemi genişletmenizi sağlar. Atama kullanıcı genişletilebilirlik SQL Server veri türü sisteminin ve karmaşık yapılandırılmış türleri tanımlama yeteneği sağlar.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402034"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
 Visual Studio için geliştirici komut istemi, .NET Framework araçları kolayca kullanmanıza olanak ortam değişkenlerini otomatik olarak ayarlar. Geliştirici komut istemi tam veya topluluk Visual Studio sürümleriyle yüklenir. Visual Studio Express sürümleri ile yüklenmedi.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353553"
 ---
 # <a name="ref-cursor-examples"></a>REF İMLEÇ örnekleri
 REF CURSOR örnekler REF imleçler kullanarak gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  

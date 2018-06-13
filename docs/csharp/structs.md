@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349775"
 ---
 # <a name="structs"></a>Yapılar
 A *yapısı* değer türü değil. Yapı oluşturulurken yapı atandığı değişkeni yapının gerçek veri tutar. Yapı için yeni bir değişken atandığında, kopyalanır. Bu nedenle yeni değişken ve özgün değişkeni iki ayrı bir kopyasını aynı verileri içerir. Bir kopya için yapılan değişiklikler diğer kopya etkilemez.

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398826"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework'te Dinamik Programlama
 Bu bölümde belgelerin .NET Framework'te dinamik programlama hakkında bilgi sağlar.  

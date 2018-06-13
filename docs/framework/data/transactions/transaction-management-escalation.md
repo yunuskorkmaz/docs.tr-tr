@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356865"
 ---
 # <a name="transaction-management-escalation"></a>İşlem yönetimi yükseltme
 Windows Hizmetleri ve birlikte bir işlem yöneticisi oluşturan modüllerin kümesi barındırır. İşlem yönetimi yükseltme bir işlem İşlem Yöneticisi'nin bileşenleri birinden diğerine geçiş işlemini açıklar.  

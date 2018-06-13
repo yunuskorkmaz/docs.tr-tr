@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358618"
 ---
 # <a name="oracle-sequences"></a>Oracle sıraları
 Oracle için .NET Framework veri sağlayıcısı kullanarak eklemeleri gerçekleştirildikten sonra anahtar Oracle sırası sunucu tarafından üretilen değerleri almak için destek sağlar <xref:System.Data.OracleClient.OracleDataAdapter>.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565840"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF'den System.Xaml'e Geçirilen Türler
 İçinde [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] ve [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], her iki [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ve Windows Workflow Foundation dahil XAML dil uygulama. WPF XAML uygulamasını genişletilebilirlik sağlanan genel türleri çoğunu WindowsBase, PresentationCore ve PresentationFramework derlemelerde vardı. Benzer şekilde, Windows Workflow Foundation XAML için genişletilebilirlik sağlanan genel türleri System.Workflow.ComponentModel derlemede vardı. İçinde [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], bazı XAML ilgili türleri System.Xaml derlemeye geçirilir. Bir ortak XAML dil Hizmetleri .NET Framework uygulamasını ilk olarak belirli bir framework'ün XAML uygulama tarafından tanımlanan ancak artık genel parçası olan birçok XAML genişletilebilirlik senaryoları mümkün kılar [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML dil desteği. Bu konu, geçişle ilgili sorunlar açıklanır ve geçirilir türleri listelenmektedir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399044"
 ---
 # <a name="json-web-token-handler"></a>JSON Web Belirteci İşleyicisi
 Windows Identity Foundation için JSON Web Belirteci İşleyicisi uzantısı, uygulamalarınızda JSON Web Belirteçleri (JWT) oluşturmanıza ve doğrulamanıza olanak verir. JWT Belirteci İşleyicisi, diğer yerleşik güvenlik belirteci işleyicileri gibi WIF ardışık düzeninde çalışacak şekilde yapılandırılabilir, ancak basit uygulamalarda belirteç doğrulamasını gerçekleştirmek için bağımsız olarak da kullanılabilir. JWT Belirteci İşleyicisi, Microsoft Azure Active Directory kimlik doğrulaması gibi bir OAuth 2.0 taşıyıcı belirteci düzenini kullanırken özellikle yararlıdır.  

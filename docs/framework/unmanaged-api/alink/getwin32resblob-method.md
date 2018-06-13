@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403298"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob Metodu
 Win32 kaynak blob alır. Derleme seçenekleri ayarladıktan sonra bu yöntemi çağırın.  

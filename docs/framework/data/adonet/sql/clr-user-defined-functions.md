@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359718"
 ---
 # <a name="clr-user-defined-functions"></a>CLR kullanıcı tanımlı işlevler
 Kullanıcı tarafından tanımlanan parametre almaz, hesaplama veya başka eylemler gerçekleştirmek ve bir sonuç yordamları işlevlerdir. Programlama dili, Microsoft Visual Basic .NET veya Microsoft Visual C# gibi herhangi bir Microsoft .NET Framework içinde kullanıcı tanımlı işlevler yazabilirsiniz.  

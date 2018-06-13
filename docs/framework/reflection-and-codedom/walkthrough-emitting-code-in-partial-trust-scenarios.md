@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399762"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API tam veya kısmi güvende kümesini kullanır, ancak bazı özellikler kısmen güvenilen kod özel izinleri gerektirir. Ayrıca, yansıma yayma ile kısmi güven ve güvenlik saydam derlemeleri tarafından kullanılmak üzere tasarlanmış bir özelliği anonim barındırılan dinamik yöntemler vardır.  

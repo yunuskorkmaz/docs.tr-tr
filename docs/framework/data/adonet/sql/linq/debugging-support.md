@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361779"
 ---
 # <a name="debugging-support"></a>Hata ayıklama desteği
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Genel hata ayıklama desteği sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeleri.  Ayrıca bkz. [hata ayıklama LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) veya [hata ayıklama LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  

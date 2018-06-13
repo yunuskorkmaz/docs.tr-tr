@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404206"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION Yapısı
 Bir iş parçacığının çerçevelere şu an etkin olan işlevler hakkında bilgi içerir. Bu yapı tarafından kullanılan [Icordebugthread2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) yöntemi.  

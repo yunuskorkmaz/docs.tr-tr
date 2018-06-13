@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398710"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 Yansıma erişim üyeleri ve bu türleri ve üyeleri hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemleri ve almak ve özelliği ayarlamak için oluşturucular çağırmak için değerleri, ekleme ve olay işleyicileri kaldırın ve benzeri). Türleri ve üyeleri hakkında bilgi edinmek için yansıma kullanımını sınırlı değildir. Tüm kod yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:  

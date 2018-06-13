@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402008"
 ---
 # <a name="wif-extensions"></a>WIF Uzantıları
 Bu bölüm için Windows Identity Foundation uzantılarını açıklar.  

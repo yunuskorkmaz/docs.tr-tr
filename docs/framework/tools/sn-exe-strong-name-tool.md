@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401127"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) oturum Derlemelerle yardımcı [tanımlayıcı adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  

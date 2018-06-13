@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340274"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme (C# Programlama Kılavuzu)
 C# ' ta türetilmiş bir sınıf yönteminde taban sınıf içinde aynı adı taşıyan bir yöntem olabilir. Yöntemleri kullanarak nasıl etkileşim belirtebilirsiniz [yeni](../../../csharp/language-reference/keywords/new.md) ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) anahtar sözcükler. `override` Değiştiricisi *genişletir* temel sınıf yöntemi ve `new` değiştiricisi *gizler* onu. Bu konudaki örnekler fark gösterilmiştir.  

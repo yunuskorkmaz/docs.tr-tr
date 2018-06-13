@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404521"
 ---
 # <a name="icordebugbreakpoint-interface1"></a>Icordebugbreakpoint Interface1
 Bir kesme noktası bir işlevi veya izleme üzerine bir değeri temsil eder.  

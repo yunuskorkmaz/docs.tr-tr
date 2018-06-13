@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401751"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject Metodu
 Paketlenmiş değer alır.  

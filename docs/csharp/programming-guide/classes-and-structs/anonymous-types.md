@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314222"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonim Türler (C# Programlama Kılavuzu)
 Anonim türleri açıkça bir tür ilk tanımlamak zorunda kalmadan bir salt okunur özellikler kümesi tek bir nesnede kapsüllemek için kolay bir yol sağlamak. Tür adı derleyici tarafından üretilen ve kaynak kodu düzeyinde kullanılabilir değildir. Her bir özellik türü derleyici tarafından algılanır.  

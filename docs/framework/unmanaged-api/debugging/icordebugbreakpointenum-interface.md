@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403324"
 ---
 # <a name="icordebugbreakpointenum-interface1"></a>Icordebugbreakpointenum Interface1
 Icordebugenum yöntemlerini uygular ve Icordebugbreakpoint diziler numaralandırır.  

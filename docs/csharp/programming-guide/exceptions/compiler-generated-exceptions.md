@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331447"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Derleyicinin Ürettiği Özel Durumlar (C# Programlama Kılavuzu)
 Temel işlemleri başarısız olduğunda bazı otomatik olarak .NET Framework'ün ortak dil çalışma zamanı tarafından (CLR) özel durumlar. Bu özel durumlar ve bunların hata koşulları aşağıdaki tabloda listelenmiştir.  

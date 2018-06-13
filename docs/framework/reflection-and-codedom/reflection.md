@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399064"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
 Sınıflarda <xref:System.Reflection> ad alanı, birlikte <xref:System.Type?displayProperty=nameWithType>, yüklenen hakkında bilgi edinmek etkinleştirmeniz [derlemeleri](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) ve bunların içinde gibi tanımlanan türleri [sınıfları](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [arabirimleri](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), ve [değer türleri](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Yansıma, çalışma zamanında tür örnekleri oluşturmak ve çağırma ve bunlara erişmek için de kullanabilirsiniz. Yansıma belirli yönlerini ilgili konular için bkz: [ilgili konular](#related_topics) bu genel bakışta, sonunda.  
