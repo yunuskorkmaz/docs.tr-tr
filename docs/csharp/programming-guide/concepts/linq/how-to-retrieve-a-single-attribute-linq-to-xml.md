@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321294"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Nasıl yapılır: tek bir öznitelik (LINQ-XML) alma (C#)
 Bu konuda, bir öğenin tek bir özniteliği öznitelik adı verilen almak açıklanmaktadır. Belirli bir özniteliği olan bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için kullanışlıdır.  

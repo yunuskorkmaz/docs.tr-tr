@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313920"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri (C# Programlama Kılavuzu)
 [Soyut](../../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğü sınıfları oluşturmanıza olanak sağlar ve [sınıfı](../../../csharp/language-reference/keywords/class.md) tamamlanmamış ve türetilen bir sınıfta uygulanmalı üyeleri.  

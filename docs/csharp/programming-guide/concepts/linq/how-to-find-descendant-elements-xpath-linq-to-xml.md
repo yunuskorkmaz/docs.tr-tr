@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320995"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul alt öğeleri (XPath-LINQ-XML) (C#)
 Bu konuda, belirli bir ada sahip alt öğelerini alma gösterilmektedir.  

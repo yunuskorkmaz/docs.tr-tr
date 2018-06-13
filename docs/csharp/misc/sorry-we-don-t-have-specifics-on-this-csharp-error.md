@@ -887,6 +887,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314076"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
 Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  

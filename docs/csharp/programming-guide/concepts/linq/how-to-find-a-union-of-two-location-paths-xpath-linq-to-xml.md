@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333303"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Nasıl yapılır: iki konum yolları (XPath-LINQ-XML) birleşimini Bul (C#)
 XPath iki XPath Konum yolları sonuçlarını birleşimi bulmanızı sağlar.  

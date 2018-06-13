@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327557"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili tasarlanmış böylece sürüm oluşturma arasında [temel](../../../csharp/language-reference/keywords/base.md) ve farklı kitaplıkları türetilmiş sınıflarda gelişmesi ve geriye dönük uyumluluğu korumak. Örneğin, yani bir Base yeni bir üye giriş [sınıfı](../../../csharp/language-reference/keywords/class.md) türetilmiş bir sınıf üye olarak aynı ada sahip tamamen C# tarafından desteklenir ve beklenmeyen bir davranışa neden olmaz. Ayrıca, bir sınıf bir yöntem devralınan yöntemi geçersiz kılmak için tasarlanmıştır veya yöntemi devralınan bir yöntem benzer ada gizler yeni bir yöntemi olup olmadığını açıkça belirtmelidir anlamına gelir.  

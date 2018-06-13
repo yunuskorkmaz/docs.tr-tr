@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323716"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Öğretici: Sorguları birlikte (C#) zincirleme
 Bu öğretici sorguları bir araya zincirleyebilirsiniz işleme modeli gösterir. Sorguları birlikte zincirleme işlevsel dönüşümleri yazmaya önemli bir parçasıdır. Tam olarak nasıl zincirleme sorguları iş anlamak önemlidir.  

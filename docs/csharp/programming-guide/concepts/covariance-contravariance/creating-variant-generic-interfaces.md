@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323745"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Değişken genel arabirimler oluşturma (C#)
 Genel tür parametreleri eşdeğişken olarak arabirimlerdeki bildirebilir veya karşıtı. *Kovaryans* dönüş türleri genel tür parametreleri tarafından tanımlanan daha fazla türetilmiş arabirim yöntemleri sağlar. *Değişken karşıtı* genel parametreler tarafından belirtilenden daha az türetilmiş bağımsız değişken türleri arabirim yöntemleri sağlar. Eşdeğişken sahip genel arabirim veya karşıtı genel tür parametreleri çağrılır *değişken*.  

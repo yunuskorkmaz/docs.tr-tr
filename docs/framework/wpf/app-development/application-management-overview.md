@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549717"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamaları, ortak bir uygulama uygulama ve Yönetim için geçerli işlevi sahip olma eğilimi gösterir. Bu konu içinde işlevlerine genel bakış sağlar <xref:System.Windows.Application> oluşturmak ve uygulamaları yönetmek için sınıf.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320683"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Nasıl yapılır: Proje anonim bir tür (C#)
 Bazı durumlarda, yalnızca kısa bir süre bu tür kullanacağınız bilseniz bile bir sorgu yeni bir tür için proje isteyebilirsiniz. Yalnızca yansıtma kullanmak için yeni bir türü oluşturmak için ek iş çok karmaşıktır. Daha verimli bir yaklaşım için bu durumda olan anonim bir tür projeye. Anonim türler, bir sınıf tanımlama sonra bildirme ve bu sınıfın bir nesnesi sınıfı bir ad verip olmadan başlatma olanak tanır.  

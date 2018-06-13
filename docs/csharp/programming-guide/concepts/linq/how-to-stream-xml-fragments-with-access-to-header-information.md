@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325038"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Nasıl yapılır: XML parçaları üst bilgileri (C#) erişim akışı
 Bazen büyük XML dosyaları okuma ve böylece uygulamanın bellek alanını tahmin edilebilir uygulamanızı yazma gerekir. Bir XML ağaç içeren büyük bir XML dosyası doldurmak çalışırsanız, bellek kullanımı dosyasının boyutunu orantılı — diğer bir deyişle, aşırı. Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  

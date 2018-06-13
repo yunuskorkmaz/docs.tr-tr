@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321853"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Anonim İşlevler (C# Programlama Kılavuzu)
 Adsız bir işlev bir "satır içi" deyimi veya bir temsilci türü bekleniyor her yerde kullanılabilir ifade değil. Adlandırılmış bir temsilci başlatmak veya bir yöntem parametresi olarak adlandırılan temsilci türü yerine geçirmek için kullanabilirsiniz.  
