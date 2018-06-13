@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655145"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
 A *yordam* bildirimi deyimi tarafından içine Visual Basic deyimleri bloğudur (`Function`, `Sub`, `Operator`, `Get`, `Set`) ve eşleşen bir `End` bildirimi. Visual Basic'te tüm executable deyimleri bazı yordam içinde olmalıdır.  

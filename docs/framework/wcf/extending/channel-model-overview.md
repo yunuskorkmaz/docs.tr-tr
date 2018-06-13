@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804644"
 ---
 # <a name="channel-model-overview"></a>Kanal Modeli Genel Bakış
 Windows Communication Foundation (WCF) kanal yığını katmanlı iletişim yığını iletileri işleyen bir veya daha fazla kanallar ' dir. Yığının sonuna (örneğin, TCP, HTTP, SMTP ve diğer türleri aktarım.) temel aktarımı kanal yığına uyarlamak için sorumlu bir aktarım kanalıdır. Kanallar ileti gönderme ve alma için alt düzey bir programlama modeli sağlar. Birkaç arabirimleri ve diğer türleri topluca WCF kanal modeli olarak bilinen bu programlama modeli kullanır. Bu konuda, kanal şekil, temel kanal dinleyicisi (hizmette) ve (istemcide) kanal fabrikası yapımı anlatılmaktadır.  

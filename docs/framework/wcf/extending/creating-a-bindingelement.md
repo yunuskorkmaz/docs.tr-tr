@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807195"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 Bağlamalar ve bağlama öğeleri (genişletmek nesneleri <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları, özel kanalları kullanılarak programlama kanal düzeyinde açıklandığı gibi gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda ele alınmıştır WCF, geliştirilmesi, kanal kullanarak etkinleştirmek için en düşük gereksinim bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve 4. adımda açıklandığı gibi uygulama etkinleştir kullanımdan [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  

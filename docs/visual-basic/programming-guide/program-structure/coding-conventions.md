@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655367"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic Kodlama Kuralları
 Microsoft, örnekler ve bu konudaki yönergeleri izleyin belgeler geliştirir. Aynı kodlama kurallarını izlerseniz, aşağıdaki faydaları elde:  

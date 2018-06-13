@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808614"
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 Bu örnek, dayanıklı örnek bağlamı etkinleştirmek için Windows Communication Foundation (WCF) çalışma zamanı özelleştirmek gösterilmiştir. SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır. Ancak, özel depolama mekanizmaları erişmek için bir yol da sağlar.  

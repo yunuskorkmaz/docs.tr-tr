@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805726"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Kullanıcı tanımlı bir tür verilen kablo biçiminde veya kablo biçiminde geri bir kullanıcı tanımlı tür seri durumdan serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemci kullanılabilir olması gerekir. Genellikle Bunu başarmak için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tanımlı türler uygulanır ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu düzenek de JavaScript nesne gösterimi (JSON) nesneleriyle çalışırken konu başlığı altında açıklandığı gibi geçerlidir [nasıl yapılır: seri hale getirmek ve seri durumdan JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

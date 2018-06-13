@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810089"
 ---
 # <a name="advanced-error-handling"></a>Gelişmiş Hata İşleme
 Bu örnek Windows Communication Foundation (WCF) yönlendirme hizmeti gösteriyor. Yönlendirme hizmeti, içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir. Bu örnek nasıl yönlendirme hizmeti akıllıca hataları, işlemleri ve çok noktaya yayın gibi daha karmaşık diğer ileti kavramları kullanarak kurtarır gösterir.  

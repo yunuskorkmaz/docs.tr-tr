@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806038"
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
 İstemci ve sunucu arasındaki bayt sürekli bir akış üzerinde akış odaklı taşımaları TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesnesi. Bir akış yükseltme istemci kanal yığına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalının diğer ucundaki sorar. Özgün değiştirme akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  

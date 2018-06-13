@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804137"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu, ileti günlüğe kaydetme tarafından oluşturulan olayları yanı sıra ileti günlüklerini de sağlanmaktadır hassas verilerinizi nasıl koruyabilirsiniz açıklar.  

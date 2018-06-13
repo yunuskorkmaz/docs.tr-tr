@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809475"
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri sözleşmesi *yedek* veri sözleşmesi modeli yerleşik Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir türü seri durumdan çıkarılmış veya meta veri içine tahmini serileştirilir değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Burada bir yedek kullanılabilir bazı senaryolar türü, alanları ve özellikleri ile işaretlenmemiş için bir veri sözleşmesi belirtilmemiş olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği ya da kullanıcılar şema Çeşitlemeler dinamik olarak oluşturmak istediğiniz.  

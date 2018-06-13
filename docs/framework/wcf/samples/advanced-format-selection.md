@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805596"
 ---
 # <a name="advanced-format-selection"></a>Gelişmiş Biçim Seçimi
 Bu örnek, yeni giden yanıt formatları desteklemek için Windows Communication Foundation (WCF) REST programlama modelini gösterilmiştir. Ayrıca, örnek bir görünüm stili programlama modeli nasıl uygulanabilir gösteren bir XHTML sayfası olarak yanıt dönmesini T4 şablon kullanır.  

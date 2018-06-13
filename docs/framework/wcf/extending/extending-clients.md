@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806662"
 ---
 # <a name="extending-clients"></a>İstemcileri Genişletme
 Bir arama uygulamasında hizmet modeli katmanını giden iletilere uygulama kodundaki yöntem çağrılarına çevirme, temel alınan kanalları Ftp'den, geri dönüş değerleri ve out Parametreleri sonuçları çevirme sorumludur uygulama kodu ve sonuçları döndüren çağırana yedekleyin. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcısı işlevi, özel davranışları, ileti ve parametre kişiler tarafından ele ve diğer genişletilebilirlik işlevleri içeren özellikler uygular.  

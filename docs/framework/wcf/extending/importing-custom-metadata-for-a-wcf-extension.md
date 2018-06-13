@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806867"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 Windows Communication Foundation (WCF) meta veri içeri aktarma kendi meta verilerini bir hizmeti veya bileşen parçalarından soyut bir temsili oluşturma işlemidir. Örneğin, WCF aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> WSDL örneklerden belge için bir hizmet. WCF'de hizmet meta verilerini almak için uygulaması kullanın <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> WS-Policy yararlanmak alma meta veri biçimleri WCF mantığında almak için sınıf uygulama desteği.  

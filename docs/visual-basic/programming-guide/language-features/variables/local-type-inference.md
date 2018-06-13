@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655329"
 ---
 # <a name="local-type-inference-visual-basic"></a>Yerel Türü Arabirimi (Visual Basic Başvurusu)
 Visual Basic derleyici kullanan *türü çıkarımı* olmadan bildirilen yerel değişkenleri veri türlerini belirlemek için bir `As` yan tümcesi. Derleyici başlatma ifade türü değişkeninden türü oluşturur. Bu, açıkça bir türü bildirmeden aşağıdaki örnekte gösterildiği gibi değişkenleri olanak sağlar. Bildirimleri sonucunda her ikisi de `num1` ve `num2` tamsayı olarak kesin türü belirtilmiş.  

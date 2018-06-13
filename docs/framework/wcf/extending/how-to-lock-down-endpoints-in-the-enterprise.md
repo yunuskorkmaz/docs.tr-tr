@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806545"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük ölçekli işletmeler genellikle Kurumsal güvenlik ilkeleriyle uyumlu uygulamalar geliştirilir gerektirir. Aşağıdaki konu geliştirmek ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç nokta Doğrulayıcı yüklenmesinin nasıl yapılacağı açıklanır.  

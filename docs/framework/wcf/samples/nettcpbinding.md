@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805060"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 Bu bölüm, Windows Communication Foundation (WCF) kullanarak TCP bağlama gösteren örnekleri içerir.  

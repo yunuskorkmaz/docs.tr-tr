@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807794"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Başlarken Öğreticisi Sorun Giderme
 Bu konuda başlangıç Öğreticisi ve bunların nasıl çözüleceği ile çalışırken en sık karşılaşılan sorunlar listelenmiştir.  

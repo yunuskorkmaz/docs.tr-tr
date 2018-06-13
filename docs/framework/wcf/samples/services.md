@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806103"
 ---
 # <a name="services"></a>Hizmetler
 Bu bölüm, Windows Communication Foundation (WCF) hizmetlerini gösterme örnekleri içerir.  

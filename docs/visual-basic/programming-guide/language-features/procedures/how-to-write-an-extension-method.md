@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648739"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: Uzantı Metodu Yazma (Visual Basic)
 Genişletme yöntemleri, varolan bir sınıfa yöntemleri eklemenize olanak tanır. Bu sınıfın örneğini değilmiş gibi genişletme yöntemi çağrılabilir.  

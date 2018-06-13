@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809657"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Hizmet: Kanal Dinleyicileri ve Kanallar
 Kanal nesneleri üç kategorisi vardır: kanalları, kanal dinleyicileri ve kanal fabrikaları. Kanallar uygulama ve kanal yığını arasındaki arabirim olan. Kanal dinleyicileri alma (veya dinleme) tarafında, genellikle yeni gelen ileti veya bağlantısı yanıtında kanalları oluşturmaktan sorumlu. Kanal fabrikaları bir uç nokta ile iletişim başlatmasını gönderme tarafında kanalları oluşturmaktan sorumlu.  

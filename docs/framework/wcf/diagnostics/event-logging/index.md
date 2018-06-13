@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804949"
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
 Windows Communication Foundation (WCF) Windows Olay Günlüğü'nde iç olayları izler.  

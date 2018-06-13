@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807234"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 Bu örnek özel protokol kanalı oturum yönetimi için HTTP tanımlama bilgilerini kullanacak şekilde nasıl oluşturulacağını gösterir. Bu kanal veya WCF istemcileri ile ASMX Hizmetleri Windows Communication Foundation (WCF) hizmetlerini ve ASMX istemciler arasında iletişim sağlar.  

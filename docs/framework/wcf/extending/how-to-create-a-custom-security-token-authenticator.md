@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809394"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma
 Bu konuda bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci manager ile tümleştirerek gösterilmektedir. Bir güvenlik belirteci kimlik doğrulayıcı gelen ileti ile sağlanan bir güvenlik belirteci içeriğini doğrular. Doğrulama başarılı olursa, Doğrulayıcı koleksiyonunu döndürür <xref:System.IdentityModel.Policy.IAuthorizationPolicy> , değerlendirildiğinde, örnekler talep kümesini döndürür.  

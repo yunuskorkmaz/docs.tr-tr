@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809868"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation özelliğini özellikleri
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] bir dizi özellik Windows Workflow Foundation ekler. Bu belge yeni özelliklerini açıklar ve içinde bunlar yararlı olabilecek senaryoları hakkında ayrıntılar sağlar.  

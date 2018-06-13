@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808516"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini yapılandırma karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman hangi ayarların gerekli olduğunu belirlemek kolay değildir. Yapılandırma dosyaları WCF hizmetleri esnekliğini artırmak olsa da, bunlar ayrıca sorunları bulmak sabit sayıda kaynağı değildir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bu sorunu giderir ve boyutunu ve hizmet yapılandırmasını karmaşıklığını azaltmak için bir yol sağlar.  

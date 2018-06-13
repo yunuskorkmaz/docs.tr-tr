@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808244"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Temel alınan kanalları dışında gelen iletileri çekme, bunları yöntem çağrılarına uygulama kodundaki içine çevirme ve sonuçları çağırana geri göndermek için dağıtıcıları sorumludur. Dağıtıcı uzantıları bu işleme değiştirmenize izin verin.  İnceleme veya iletileri veya parametreleri içeriğini değiştirme ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlamak şekilde değiştirebilirsiniz.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457936"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla olan *işlenenler* bir deyim veya ifade. Artış işleci gibi tek bir işlenen alır işleçleri (`++`) veya `new`, denir *birli* işleçler. Aritmetik işleçler gibi iki işlenen alır işleçleri (`+`,`-`,`*`,`/`), denir *ikili* işleçler. Bir işleç, koşullu işleç (`?:`), üç işlenen alır ve C# tek Üçlü işleci.  

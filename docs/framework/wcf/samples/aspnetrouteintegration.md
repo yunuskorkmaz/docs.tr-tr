@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804410"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Bu örnek, ASP.NET yollar kullanılarak bir Windows Communication Foundation (WCF) REST hizmeti barındırma gösterilmiştir. [Temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) örnek bu senaryo kendini barındıran bir sürümünü gösterir ve hizmet uygulaması derinlemesine anlatılmaktadır. Bu konu ASP.NET tümleştirme özelliğini odaklanır. ASP.NET yönlendirme hakkında daha fazla bilgi için bkz: <xref:System.Web.Routing>.  

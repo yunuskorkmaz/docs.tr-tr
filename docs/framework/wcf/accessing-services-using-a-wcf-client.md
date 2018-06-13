@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810115"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 Bir hizmeti oluşturduktan sonra sonraki adım bir WCF istemcisi proxy oluşturmaktır. Bir istemci uygulaması WCF istemci proxy hizmeti ile iletişim kurmak için kullanır. İstemci uygulamaları genellikle hizmetini çağırmak için kullanılan WCF istemci kodu oluşturmak üzere bir hizmetin meta veri içeri aktarın.  

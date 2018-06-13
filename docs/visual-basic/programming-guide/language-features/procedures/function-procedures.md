@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655541"
 ---
 # <a name="function-procedures-visual-basic"></a>İşlev Yordamları (Visual Basic)
 A `Function` yordamdır bir dizi kapsadığı Visual Basic deyimi `Function` ve `End Function` deyimleri. `Function` Yordamı bir görevi gerçekleştirir ve çağrıyı yapan kod denetimini döndürür. Denetim geri döndüğünde, çağrıyı yapan kod de bir değer döndürür.  

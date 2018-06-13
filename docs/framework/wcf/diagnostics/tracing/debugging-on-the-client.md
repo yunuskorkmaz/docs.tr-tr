@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809010"
 ---
 # <a name="debugging-on-the-client"></a>İstemcide Hata Ayıklama
 WCF Hizmeti istemci uygulamaları yazmak kullanıcıların kolaylaştırmak için ekleyebileceğiniz [ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) hizmet hizmetinizin yapılandırma dosyasına davranışı. Bu davranış, Yardım sayfalarına yayımlamak ve istemciye döndürülen SOAP hatalarının ayrıntıları yönetilen özel durum bilgileri döndürmek için kullanılabilir.
