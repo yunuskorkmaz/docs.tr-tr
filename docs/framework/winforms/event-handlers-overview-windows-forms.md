@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538163"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Olay İşleyicilerine Genel Bakış (Windows Forms)
 Olay işleyicisi olaya bağlı bir yöntemdir. Olay işleyicisi içindeki kod olay oluşturulduğunda yürütülür. Her olay işleyicisi olayını düzgün bir şekilde işlemek izin veren iki parametre sağlar. Aşağıdaki örnekte bir olay işleyicisi için bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay.  

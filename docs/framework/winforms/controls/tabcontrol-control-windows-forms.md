@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536767"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl Denetimi (Windows Forms)
 Windows Forms `TabControl` etiketler, bir dosya dolabı klasörlerde kümesi ya da bir not defteri Bölücü gibi birden fazla sekme görüntüler. Sekmeleri resimleri ve diğer denetimlerin içerebilir. Kullanım `TabControl` özellik sayfaları oluşturmak için.  

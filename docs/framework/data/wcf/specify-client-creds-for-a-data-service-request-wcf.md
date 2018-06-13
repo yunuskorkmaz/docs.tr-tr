@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363972"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: veri hizmeti için bir istek (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin
 Varsayılan olarak, kimlik bilgileri istemci kitaplığı için bir istek gönderirken sağlamıyor bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmet. Bununla birlikte, kimlik bilgileri sağlayarak veri hizmeti isteklerine kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere gösterilmiştir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmetinden veri isterken, istemci.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365299"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Veri Hizmeti istemci uygulamasında (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlayarak akış. Bir kaynak adres URI sağlar ve istek iletilerini erişmek veya kaynak temsil eden temel alınan veri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu verdiğinde ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  

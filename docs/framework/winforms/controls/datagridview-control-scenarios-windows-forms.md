@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529044"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView Denetimi Senaryoları (Windows Forms)
 İle <xref:System.Windows.Forms.DataGridView> denetimi, çeşitli veri kaynakları tablo verilerini görüntüleyebilir. Basit kullanımları, el ile doldurabilirsiniz bir <xref:System.Windows.Forms.DataGridView> ve denetim aracılığıyla doğrudan verileri işlemek. Genellikle, ancak bir dış veri kaynağında verilerinizi depolamak ve üzerinden denetimi bağlamak bir <xref:System.Windows.Forms.BindingSource> bileşeni.  

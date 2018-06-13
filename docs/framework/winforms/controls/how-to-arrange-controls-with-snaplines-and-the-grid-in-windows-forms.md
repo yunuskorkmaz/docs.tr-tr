@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528382"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme
 Visual Studio'nun yerleşim özellikleri kullanarak, bir form üzerinde denetimleri yerleştirildiği tam olarak yönlendirebilirsiniz. Bir form için eklenip bir form üzerinde denetimleri otomatik olarak satırları ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir veya dayama çizgileri özelliğini kullanarak denetimleri hizalama.  

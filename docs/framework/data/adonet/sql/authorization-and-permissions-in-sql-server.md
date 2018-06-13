@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364229"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Yetkilendirme ve SQL Server'daki izinleri
 Veritabanı nesneleri oluşturduğunuzda, açıkça kullanıcıların erişimine açmak için izinleri vermeniz gerekir. Her güvenliği sağlanabilir nesne izni deyimleri kullanarak bir sorumluyu verilebilir izinlerine sahip değil.  

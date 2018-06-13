@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528450"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Sabitleme
 Çalışma zamanında kullanıcı genişletebilir bir form tasarlarken, form üzerinde denetimleri yeniden boyutlandırma ve düzgün bir şekilde yeniden konumlandırmak gerekir. Denetimleri form ile dinamik olarak yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.Control.Anchor%2A> Windows Forms denetimleri özelliği. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği denetimi için bir yer işareti konumunun tanımlar. Forma Denetim bağlantılı ve formu yeniden boyutlandırılabilir denetimi denetimi ve bağlantı konumlar arasındaki uzaklığı korur. Örneğin, bir <xref:System.Windows.Forms.TextBox> formun boyutlandırıldığında sol, sağ ve form alt kenarlarını bağlantılı denetim <xref:System.Windows.Forms.TextBox> denetimi yeniden boyutlandırır yatay böylece form sağ ve sol yanlarından aynı uzaklığı korur. Konumuna her zaman formun kenar aynı mesafe böylece ek olarak, Denetim kendisini dikey olarak yerleştirir. Bir denetim yok bağlantılı ve formu yeniden boyutlandırılabilir, denetimin formun kenarları göreli konumunu değiştirilir.  

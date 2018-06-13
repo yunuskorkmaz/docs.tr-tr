@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532467"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Nasıl Yapılır: TabControl ile Yana Hizalanmış Sekmeler Görüntüleme
 <xref:System.Windows.Forms.TabControl.Alignment%2A> Özelliği <xref:System.Windows.Forms.TabControl> yatay (üst veya alt denetim) tersine dikey (sol veya sağ kenarı boyunca denetimi), sekmeler görüntüleme destekler. Varsayılan olarak, çünkü bir zayıf bir kullanıcı deneyimi bu dikey görüntü yapılandırmayı sağlar. <xref:System.Windows.Forms.TabPage.Text%2A> özelliği <xref:System.Windows.Forms.TabPage> nesne görsel stiller etkinken sekmesinde görüntülemez. Sekme içindeki metnin yönünü denetlemek için doğrudan yolu yoktur. Sahibi kullanabilirsiniz Çiz <xref:System.Windows.Forms.TabControl> bu deneyimini geliştirmek için.  

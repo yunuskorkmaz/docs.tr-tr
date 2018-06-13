@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534914"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems Öğelerini Taşıma
 Tasarım zamanında tüm üst düzey menü ve bunların menü öğeleri farklı bir konuma taşıyabilir <xref:System.Windows.Forms.MenuStrip>. Ayrıca, tek tek menü öğeleri üst düzey menüler arasında Taşı veya menü öğeleri menü içinde konumunu değiştirebilirsiniz.  

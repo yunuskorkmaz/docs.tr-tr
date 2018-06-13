@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428064"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort Yöntemi
 Sembol yazan sembol deposu simgeleri kaydetmeden kapatır. Bu çağrısından sonra simge yazan güncelleştirmeler için daha fazla geçersiz hale gelir. Simgeler tamamlama ve sembol yazıcı kapatmak için kullanın [Isymunmanagedwriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) yöntemi yerine.  
