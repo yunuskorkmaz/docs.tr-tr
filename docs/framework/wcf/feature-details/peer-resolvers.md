@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494614"
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir kafes bağlanmak için diğer düğümlere IP adreslerini Eş düğüm gerektirmez. IP adreslerini kafes kimliği alır ve bu belirli kafes kimliği ile kayıtlı düğümler için karşılık gelen adresleri listesi döndüren bir çözümleyici hizmeti ile iletişim kurarak elde edilir Çözümleyici hizmete kaydolmak her düğümünde kafes sağlayarak oluşturur kayıtlı adreslerinin bir listesini tutar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494276"
 ---
 # <a name="data-contract-names"></a>Veri Sözleşmesi Adları
 Bazen bir istemci ve hizmet aynı türlerini paylaşmayın. Veri sözleşmeleri iki tarafta da eşdeğer sürece bunlar hala veri birbirlerine geçirebilirsiniz. [Veri sözleşmesi eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) veri sözleşmesi ve veri üye adları, temel alır ve bu nedenle türleri ve üyeleri bu adlarıyla eşlemek için bir mekanizma sağlanır. Bu konu, Windows Communication Foundation (WCF) Altyapısı'nın varsayılan davranışını yanı sıra veri sözleşmeleri adları oluşturulurken adlandırma kurallarını açıklar.  

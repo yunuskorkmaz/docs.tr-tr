@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489212"
 ---
 # <a name="data-transfer-and-serialization"></a>Veri Aktarma ve Seri Hale Getirme
 Bağlı bir sistemde, hizmetler ve istemcileri herhangi bir görevi gerçekleştirmek için veri Exchange'de bağlıdır. Bir hizmet veya istemci geliştiricisi olarak, Windows Communication Foundation (WCF) veri ve veri seri hale getirme, verimli ve bakımını kolay uygulamaları oluşturmak için işleme biçimini anlamalısınız.  

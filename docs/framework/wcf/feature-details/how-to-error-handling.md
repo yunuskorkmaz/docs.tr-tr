@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493611"
 ---
 # <a name="how-to-error-handling"></a>Nasıl yapılır: Hata İşleme
 Bu konuda hata işleme kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar verilmiştir. Bu örnekte, iletilerin hedef uç noktasına yönlendirilir. Bir ağ veya iletişimleri ilgili bir hata nedeniyle ileti teslim edilmemesi durumunda (<xref:System.ServiceModel.CommunicationException>), iletinin diğer uç noktasına gönderilir.  

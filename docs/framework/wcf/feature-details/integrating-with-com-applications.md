@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491848"
 ---
 # <a name="integrating-with-com-applications"></a>COM Uygulamaları ile Tümleştirme
 Windows Communication Foundation (WCF) hizmetlerini WCF Hizmeti bilinen adını kullanarak doğrudan varolan kodunuza tümleştirilebilir. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  

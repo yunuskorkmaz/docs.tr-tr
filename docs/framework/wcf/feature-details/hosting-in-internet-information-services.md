@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494120"
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
 Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek bir Internet Information Services (IIS) uygulama içinde bulunur. Bu barındırma modeli tarafından kullanılan model benzer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve ASP.NET Web Hizmetleri (ASMX) Web Hizmetleri.  

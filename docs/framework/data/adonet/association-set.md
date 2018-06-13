@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757001"
 ---
 # <a name="association-set"></a>ilişkilendirme kümesi
 Bir *ilişkilendirme kümesi* için mantıksal bir kapsayıcısıdır [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) örnekleri aynı türde. Bir ilişkilendirme kümesi yapı modelleme veri değil; diğer bir deyişle, verileri veya ilişkileri yapısını açıklamaz. Böylece bir veri deposuna eşlenen bunun yerine, bir ilişkilendirme kümesine bir yapı için (örneğin, ortak dil çalışma zamanı veya SQL Server veritabanı) barındıran veya depolama bir ortam grubu ilişkisi örneklerine sağlar.  

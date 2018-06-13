@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489703"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
 Keşif proxy'si uygulama nasıl ele üçüncü üç konuların konudur. Önceki konusunda [nasıl yapılır:, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine kayıtlı bir WCF Hizmeti uygulanmadı. Bu konudaki WCF hizmeti bulmak için keşif proxy'si kullanan bir WCF istemcisi oluşturun.  

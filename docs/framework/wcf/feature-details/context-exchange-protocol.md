@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493219"
 ---
 # <a name="context-exchange-protocol"></a>Bağlam Değişimi Protokolü
 Bu bölümde, .NET Framework sürüm 3.5 Windows Communication Foundation (WCF) sürümünde tanıtılan bağlam değişimi protokolü açıklar. Bu protokol hizmeti tarafından sağlanan bir bağlam kabul etmek ve tüm istekler aynı istemci kanal örneği gönderilen bu hizmete uygulamak istemci kanal sağlar. Bağlam değişimi Protokolü aşağıdaki iki mekanizmalardan biri sunucu ve istemci arasındaki bağlam yaymak için kullanabilirsiniz: HTTP tanımlama bilgilerini veya SOAP üstbilgisi.  

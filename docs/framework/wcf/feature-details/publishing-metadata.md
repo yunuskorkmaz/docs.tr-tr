@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495021"
 ---
 # <a name="publishing-metadata"></a>Meta Verileri Yayımlama
 Windows Communication Foundation (WCF) hizmetlerini, bir veya daha fazla meta veri uç noktalarını yayımlayarak meta veri yayımlama. Hizmet meta veri yayımlama meta verileri WS-MetadataExchange (MEX) ve HTTP/GET istekleri gibi standart protokoller kullanılarak kullanılabilir hale getirir. Meta veri uç noktalarını, sahip oldukları bir adresi, bağlama ve bir sözleşme ve hizmet ana bilgisayar yapılandırması veya kesinlik temelli kodu üzerinden için eklenebilir, diğer hizmet uç noktaları benzerdir.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495541"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konuda Windows Communication Foundation (WCF) içerdiği üç ana taşımalar arasından seçim ölçütleri ele alınmıştır: HTTP, TCP ve adlandırılmış kanallar. WCF de içeren bir message queuing (MSMQ olarak da bilinir) taşıma, ancak bu belgede, message queuing kapsamaz.  

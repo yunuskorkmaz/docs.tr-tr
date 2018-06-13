@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493431"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma
 Windows Communication Foundation (WCF), akışı bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu akışı hem Atom 1.0 hem de RSS 2.0 kullanarak bir dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar. Bu hizmet ya da yayınlama biçimi döndürebilir bir uç noktasını kullanıma sunar. Kolaylık olması için bu örnekte kullanılan self barındırılan hizmetidir. Bir üretim ortamında bu türde bir hizmet IIS ya da WAS altında barındırılması. Seçenekler barındırma farklı WCF hakkında daha fazla bilgi için bkz: [barındırma](../../../../docs/framework/wcf/feature-details/hosting.md).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493137"
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 Windows Communication Foundation (WCF) istemci yapılandırması adresi, bağlama, davranış ve Sözleşme, hizmet uç noktalarına bağlanmak için hangi istemcilerin kullanın istemci uç noktası "ABC" özelliklerini belirtmek için kullanabilirsiniz. [ \<İstemci >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) öğesi özniteliklerini ABC uç noktası yapılandırmak için kullanılır. Bu öznitelikler, bu konunun "Uç noktaları yapılandırma" bölümünde ele alınmıştır.  

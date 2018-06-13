@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491256"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Bazı yeni WCF hizmetleri geliştirme sonra bir komut dosyası veya Visual Basic 6.0 uygulamadan bu hizmetleri çağıran kullanabilmek ister karar verebilirsiniz. Bir yöntemin bir WCF istemcisi derlemesini oluşturmak, derlemesini COM ile kaydetme, derlemeyi GAC'ye yükleyin ve ardından Visual Basic kodunuzdan COM türlerini başvuru olacaktır. Uygulamayı dağıttığınızda, WCF istemcisi derleme de dağıtmak gerekecektir. Ardından, kullanıcı WCF istemcisi derlemesini COM ile kaydetme ve GAC'ye yerleştirmek sahip olur. WCF COM birlikte çalışma bir WCF istemcisi derlemeye bağlı olmadan aynı hizmeti çağrıları yapma sağlar. WCF bilinen adını herhangi bir WCF Hizmeti herhangi bir COM uyumlu dili (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) bir meta veri değişimi (Mex) uç noktası türü ayıklamak için hizmet adının kullanır URI belirterek çağırmanıza olanak tanır hizmeti hakkında bilgi. Bu konu, Mex uç nokta belirtir WCF bilinen adını kullanarak alma başlatıldı WCF örnek çağrı açıklar.  

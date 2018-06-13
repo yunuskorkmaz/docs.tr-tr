@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491542"
 ---
 # <a name="peer-nodes"></a>Eş Düğümleri
 PeerNode bir eş kanalı kafes içindeki tek bir uç noktadır. Bir uygulama içinde farklı kafesleri katılmak birden çok eş düğümleri bulunabilir. Örneğin, bir eşler arası sohbet uygulaması iki ayrı kafesleri parçası olabilir: yüksek Okul arkadaşlarınızla; sohbet için tek bir kafes ve başka iş arkadaşlarınızla sohbet için.  

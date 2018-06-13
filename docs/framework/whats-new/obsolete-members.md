@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508780"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar .NET Framework 4.5 ve sonraki sürümlerinde derlemesi tarafından düzenlenen'te eski tür üyeleri listeler. Eski üyeler ve her derlemesindeki önerilen Alternatiflerle listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu eski türler üyeleri listesinde değil. Eski türler listesi için bkz: [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  

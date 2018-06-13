@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493288"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma
 Windows Communication Foundation (WCF), akışı bir dağıtım kullanıma sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, akışı bir RSS dağıtım gösteren bir dağıtım hizmetin nasıl oluşturulacağını açıklar.  

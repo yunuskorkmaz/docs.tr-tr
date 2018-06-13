@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490909"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 Bu bölümdeki konular, bir dizi olası istemci ve hizmet güvenlik yapılandırması katalog. Yapılandırmalarını bir dizi etkene göre farklılık gösterir. Örneğin, bir hizmet veya istemci intranet üzerinde olup ya da güvenlik olup Windows veya taşıma (Örneğin HTTPS) tarafından sağlanır.  

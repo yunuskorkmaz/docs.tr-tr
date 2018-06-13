@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494715"
 ---
 # <a name="wcf-feature-details"></a>WCF Özellik Ayrıntıları
 Windows Communication Foundation (WCF) ileti işlevleri bir uygulamanın üzerinde kapsamlı denetim sağlar. Bu bölümdeki konular, kullanılabilir özellikleri hakkında ayrıntılı bilgi uygulamasına gidin. Temel programlama hakkında daha fazla bilgi için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  

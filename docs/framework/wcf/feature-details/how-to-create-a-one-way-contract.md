@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490779"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma
 Bu konuda, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel adımlar gösterilmektedir. Bu yöntemler bir istemciden bir Windows Communication Foundation (WCF) hizmet işlemlerini çağırma ancak yanıt beklemediğiniz. Bu tür bir sözleşme, örneğin, birçok abonelere bildirimleri yayımlamak için kullanılabilir. Tek yönlü sözleşmeler, istemcilerin ve sunucuların ya da diğer çağrıları başlatmak için birbiriyle bağımsız olarak iletişim kurması verir çift yönlü bir (iki yönlü) sözleşme oluştururken de kullanabilirsiniz. Bu, özellikle, sunucunun istemci olayları olarak davranabilirsiniz istemci tek yönlü çağrı yapmak izin verebilirsiniz. Tek yönlü yöntemleri belirtme hakkında ayrıntılı bilgi için bkz: <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliği ve <xref:System.ServiceModel.OperationContractAttribute> sınıfı.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505651"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer Hataları
 <xref:System.Xml.Serialization.XmlSerializer> Hataya sözleşme örnek gösterilmektedir kullanan bir istemci için bir hizmetten hata bilgileri iletişim kurma <xref:System.Xml.Serialization.XmlSerializer>. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), dahili bir özel durum bir hataya dönüştürmek için hizmetine eklenen bazı ek kod. İstemci bir hata koşulu hizmette zorla sıfıra bölme gerçekleştirmeye çalışır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493343"
 ---
 # <a name="peer-meshes"></a>Eş Kafesleri
 A *mesh* iletişim kendilerini arasında ve bir benzersiz kafes kimliği tarafından tanımlanan eş düğümlerinin adlandırılmış koleksiyonu (birbirine bağlı bir grafik) Her düğüm için birden çok diğer düğümlere bağlanır. İyi bağlantılı bir kafes kafes en ilerideki kenarlarında düğümler arasında nispeten az durakları herhangi iki düğüm arasında bir yolu yoktur ve bazı düğümler veya bağlantıları bırakma olsa bile kafes bağlı kalır. Diğer eş bunları bulabilmesi için Kafes etkin düğüm karşılık gelen bir kafes kimliği ile uç nokta bilgilerini yayımlayabilir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494902"
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
 Bu konu aynı hizmetin farklı sürümlerini iletileri yönlendiren bir yönlendirme yapılandırması oluşturmak için gereken temel adımlarda özetler. Bu örnekte, bir hesap makinesi hizmetinin iki farklı sürümü için iletiler yönlendirilir `roundingCalc` (v1) ve `regularCalc` (v2). Her iki uygulamaları aynı işlemleri destekler; ancak eski hizmetini `roundingCalc`, döndürmeden önce hesaplamalarının yakın tamsayı değere yuvarlar. Bir istemci uygulaması yeni kullanılıp kullanılmayacağını belirtmek için `regularCalc` hizmet.  

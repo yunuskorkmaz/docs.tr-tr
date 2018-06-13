@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493171"
 ---
 # <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları
 Windows Communication Foundation (WCF) ile birkaç yolla erişimi denetleyebilirsiniz. Bu konu, kısa bir süre çeşitli mekanizmalar açıklar ve zaman her kullanılacağı hakkında öneriler sağlar; kullanılacak doğru mekanizması seçmenize yardımcı olmak için tasarlanmıştır. Erişim teknolojileri karmaşıklık sırada listelenir. En kolayıdır <xref:System.Security.Permissions.PrincipalPermissionAttribute>; en karmaşık kimlik modelidir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493327"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulama içinde yazılı sözleşme kullanmadan önce gerekli öznitelikli türleri COM ile kaydetme ve COM uygulama ve ad gerekli bağlama ile yapılandırmanız gerekir yapılandırma.  

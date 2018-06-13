@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495589"
 ---
 # <a name="best-practices-for-queued-communication"></a>Kuyruğa Alınan İletişim için En İyi Uygulamalar
 Bu konu, kuyruğa alınan iletişim Windows Communication Foundation (WCF) için önerilen yöntemler sağlar. Aşağıdaki bölümlerde bir senaryo açısından önerilen yöntemler açıklanmaktadır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491811"
 ---
 # <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
 Bu konu, birden çok örneğini aynı hedef hizmeti arasında bölüm iletileri için gereken temel adımlarda özetler. Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesi sağlamak amacıyla bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır. Örneğin, yüksek bir değer veya "Altın" müşterilerden iletileri standart müşteri iletilerden daha yüksek bir öncelik işlenecek gerekebilir.  

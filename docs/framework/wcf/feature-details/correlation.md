@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491289"
 ---
 # <a name="correlation"></a>Bağıntı
 İş akışı hizmeti uygulamaları diğer hizmetlerle iletişim kurarken, aralarında iletileri için uygun iş akışı örneği gönderilir önemlidir. Bağıntı Bu mekanizma sağlar. Bu bölümdeki konular, bağıntı ve farklı iş akışı hizmeti senaryolarda kullanma hakkında genel bir bakış sağlar.  

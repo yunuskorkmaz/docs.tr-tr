@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489748"
 ---
 # <a name="hosting-in-a-managed-application"></a>Yönetilen Bir Uygulamada Barındırma
 Windows Communication Foundation (WCF) hizmetlerini barındırılması birinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama. Kendi kendine barındırma hizmetleri en esnek barındırma seçenektir; çünkü dağıtmak için en az altyapısı gerektirir. Yönetilen uygulamalar Gelişmiş barındırma ve WCF, Internet Information Services (IIS) ve Windows Hizmetleri gibi diğer barındırma seçenekleri yönetim özellikleri sağlıyor mu ancak ayrıca en az sağlam barındırma seçeneği demektir.  

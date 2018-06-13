@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297374"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Basit Diziler (C# Programlama Kılavuzu)
 Basit bir dizi, öğeleri dizi olan bir dizidir. Basit bir dizinin öğeleri farklı boyutları ve boyutları olabilir. Basit dizi bazen "oluşan bir dizi." olarak adlandırılır Aşağıdaki örnekler bildirmek üzere, başlatmak ve diziler erişim basit.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493402"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF) yönetilen kod developer ile bağlı uygulamaları oluşturmak için zengin bir ortam sağlar. COM tabanlı yönetilmeyen kodunda önemli ölçüde yatırımınız varsa ve geçirmek istediğiniz değil, ancak, hala WCF Web Hizmetleri doğrudan varolan kodunuza WCF Hizmeti bilinen adını kullanarak tümleştirebilirsiniz. Hizmet adının Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  

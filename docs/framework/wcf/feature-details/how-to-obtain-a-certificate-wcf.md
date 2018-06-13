@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491513"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Nası yapılır: Sertifika Edinme (WCF)
 Windows Communication Foundation (WCF) kullanmak için X.509 sertifikaları, özelliklerini kullanmak, yalnızca ilk sertifika edinin.  

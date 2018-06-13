@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494552"
 ---
 # <a name="exporting-schemas-from-classes"></a>Sınıflardan Şemaları Dışarı Aktarma
 Veri sözleşmesi modelinde kullanılan sınıflardan XML Şeması Tanım Dili (XSD) şemaları oluşturmak için kullanmak <xref:System.Runtime.Serialization.XsdDataContractExporter> sınıfı. Bu konuda şemaları oluşturma işlemi açıklanmaktadır.  

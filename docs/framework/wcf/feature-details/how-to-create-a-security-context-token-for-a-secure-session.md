@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493418"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma
 Güvenli bir oturumda bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanarak oturum dönüştürülüyor hizmet dayanabilir. Örneğin, durum bilgisiz SCT güvenli bir oturumda kullanılır ve Internet Information Services (IIS) sıfırlanır sonra hizmetiyle ilişkili oturum veriler kaybolur. Bu oturum verilerini bir SCT belirteç önbelleği içerir. SCT ile ilişkili anahtar alınamadığından bu nedenle, bir istemci hizmeti durum bilgisiz SCT gönderir başlatıldığında bir hata, döndürülür. Ancak, bir durum bilgisi olan SCT kullanılıyorsa, SCT ile ilişkili anahtar SCT içinde yer alır. Anahtar SCT içinde yer alan ve bu nedenle iletinin içinde yer alan olduğundan, güvenli oturum dönüştürülüyor hizmeti tarafından etkilenmez. Varsayılan olarak, Windows Communication Foundation (WCF) güvenli bir oturumda durum bilgisiz SCTs kullanır. Bu konu, güvenli bir oturumda durum bilgisi olan SCTs kullanmayı ayrıntıları verilmektedir.  

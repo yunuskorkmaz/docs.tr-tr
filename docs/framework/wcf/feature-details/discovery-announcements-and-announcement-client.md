@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490291"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Keşif Duyuruları ve Duyuru İstemcisi
 WCF keşif özelliği kendi kullanıma sunulduğunu duyurmaktan bileşenleri sağlar. Bunu yapmak için yapılandırılmışsa, bir hizmet Hello ve Bye Duyurular gönderir. İstemcileri veya diğer bileşenleri, bu tür duyuru iletiler için dinleme ve bunlar üzerinde hareket. Bu, istemcilerin hizmetlerin farkında olması alternatif bir yöntem sağlar. Duyuru işlevselliği birkaç kullanımı vardır, örneğin, hizmetleri girin ve bir ağ sık bırakırsanız duyuruları arama hizmetleri için daha iyi bir alternatif olabilir. Bu yaklaşım ağ trafiği azaltılır ve duyuruları alınan hemen istemci varlığının veya hizmetin ayrılma hakkında bilgi edinebilirsiniz.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494822"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
 Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmeleri tasarlanmış ya da Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve geliştirici sağlanan sözleşme ile uyumlu bir hizmet uygulamalıdır. Windows Communication Foundation (WCF) için bir hizmetiniz geçirmek ancak kablo biçimini korumak isteyebilirsiniz. Ayrıca, çift yönlü sözleşmeler da bir geri çağırma sözleşmesini uygulama arayanlar gerektirir.  

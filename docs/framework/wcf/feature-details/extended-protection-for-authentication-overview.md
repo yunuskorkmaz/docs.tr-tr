@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489989"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Kimlik Doğrulama için Genişletilmiş Koruma Genel Bakış
 Kimlik doğrulaması için genişletilmiş koruma, bir saldırganın istemci kimlik bilgilerini yakalar ve bunları bir sunucuya iletir man-in--middle (MITM) saldırılarına karşı korunmasına yardımcı olur.  

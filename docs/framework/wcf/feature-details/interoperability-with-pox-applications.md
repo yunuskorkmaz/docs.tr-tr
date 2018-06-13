@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494206"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX Uygulamaları ile Birlikte Çalışabilirlik
 "Düz eski XML" (POX) uygulamalar, yalnızca bir SOAP Zarfı içinde içine alınmamış XML uygulama verileri içeren ham HTTP ileti değiş tokuşu ile iletişim. Windows Communication Foundation (WCF) hizmetlerini ve POX iletileri kullanan istemciler sağlayabilir. Hizmeti, WCF Hizmetleri Web tarayıcıları gibi istemcilere uç noktalarını kullanıma sunar ve POX ileti gönderme ve alma komut dosyası dillerini uygulamak için kullanılabilir. İstemcide, WCF programlama modeli POX tabanlı Hizmetleri ile iletişim kuran istemciler uygulamak için kullanılabilir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491965"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8 uygulamanın Windows mağazası uygulamaları adı verilen yeni bir türü sunar. Bu uygulamalar, dokunmatik ekran arabirimini tasarlanmıştır. .NET framework 4.5, WCF hizmetleri çağırmak Windows mağazası uygulamaları etkinleştirir.  

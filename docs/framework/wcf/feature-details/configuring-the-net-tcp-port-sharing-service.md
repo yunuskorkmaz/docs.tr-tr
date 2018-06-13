@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489524"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 Net.TCP taşıması kullanan kendi kendini barındıran Hizmetleri denetleyebilir birkaç Gelişmiş ayarları gibi `ListenBacklog` ve `MaxPendingAccepts`, ağ iletişimi için kullanılan temel alınan TCP yuva davranışını yönetir. Ancak, her yuva için bu ayarları yalnızca varsayılan olarak etkin aktarım bağlama bağlantı noktası paylaşımı, devre dışı bıraktı, bağlama düzeyinde uygulanır.  

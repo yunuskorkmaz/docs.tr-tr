@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489404"
 ---
 # <a name="hosting"></a>Barındırma
 Bu bölümdeki konularda, barındırma hizmeti açıklanmaktadır. Bir hizmeti Internet Information Services (IIS), Windows İşlem Etkinleştirme Hizmeti (WAS), Windows Server AppFabric, bir Windows hizmeti veya yönetilen bir uygulama tarafından barındırılan — bu seçenek, genellikle olarak adlandırılır *kendi kendine barındırma*.  

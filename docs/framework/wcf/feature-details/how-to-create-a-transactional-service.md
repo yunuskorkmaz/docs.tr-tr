@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494985"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Nasıl yapılır: İşlemsel Hizmet Oluşturma
 Bu örnek, çeşitli yönlerini oluşturma işlemsel hizmet ve hizmet işlemleri koordine etmek için bir istemci tarafından başlatılan işlem kullanımını gösterir.  

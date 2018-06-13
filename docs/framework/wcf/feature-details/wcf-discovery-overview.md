@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505908"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Keşif Genel Bakış
 Bulma API'ları dinamik yayını ve bulma WS bulma protokolünü kullanarak bir Web Hizmetleri için birleşik bir programlama modeli sağlar. Bu API'leri kendilerini ve yayımlanan hizmetleri bulmak için istemcileri yayımlamak hizmetler sağlar. Bir hizmet bulunabilirlik sağlandıktan sonra hizmet duyuru iletileri gönderme yanı sıra dinler ve bulma isteklerine yanıt özelliğine sahiptir. Bulunabilirlik Hizmetleri Ağ üzerinde kendi varış duyurmaktan Merhaba iletileri ve bunların ayrılma ağdan duyurmaktan Bye iletileri gönderebilir. Bir hizmet bulmak için istemcilerin gönderdiği bir `Probe` hizmet sözleşmesi türü, anahtar sözcükleri ve ağ üzerindeki kapsamı gibi belirli bir ölçüte içeren isteği. Hizmetleri almak `Probe` istemek ve ölçütlerle eşleştiğini belirlemek. Bir hizmet eşleşirse, göndererek yanıt bir `ProbeMatch` hizmetiyle iletişim için gereken bilgiler ile istemciye ileti. İstemcileri de gönderebilirler `Resolve` bunları kendi uç noktası adresi değişmiş olabilir Hizmetleri bulmak izin istekleri. Eşleşen Hizmetleri yanıt için `Resolve` göndererek isteklerini bir `ResolveMatch` istemciye ileti.  

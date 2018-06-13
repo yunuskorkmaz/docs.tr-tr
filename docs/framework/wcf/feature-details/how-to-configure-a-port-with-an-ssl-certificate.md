@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494835"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Kendini barındıran bir Windows Communication Foundation (WCF) hizmetiyle oluştururken <xref:System.ServiceModel.WSHttpBinding> bu kullanımları taşıma güvenliği sınıfı, bir bağlantı noktası bir X.509 sertifikası ile yapılandırmanız da gerekir. Kendini barındıran hizmet oluşturuyorsanız değil, hizmetiniz Internet Information Services (IIS) üzerinde barındırabilir. Daha fazla bilgi için bkz: [HTTP taşıma güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  

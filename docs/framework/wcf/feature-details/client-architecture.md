@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494097"
 ---
 # <a name="client-architecture"></a>İstemci Mimarisi
 Uygulamaları Windows Communication Foundation (WCF) istemci nesneleri hizmet işlemleri çağırmak için kullanın. Bu konuda, WCF istemci nesneleri, WCF istemci kanalları ve ilişkilerini temel alınan kanal mimarisinde anlatılmaktadır. WCF istemci nesneleri temel bir genel bakış için bkz: [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md). Kanal katmanını hakkında daha fazla bilgi için bkz: [kanal katmanını genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

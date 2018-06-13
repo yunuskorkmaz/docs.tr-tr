@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490503"
 ---
 # <a name="integrating-with-com-applications"></a>COM Uygulamaları ile Tümleştirme
 Windows Communication Foundation (WCF) dağıtılmış uygulamaları oluşturmak için zengin bir ortam sağlar. COM + barındırılan bir bileşen tabanlı uygulama mantığı önemli ölçüde yatırımınız varsa, onu yeniden yazmaya gerek yerine mevcut mantığınızı genişletmek için WCF kullanabilirsiniz. Bu bölüm içindeki konuları COM + WCF ile nasıl kullanılacağını açıklar.  

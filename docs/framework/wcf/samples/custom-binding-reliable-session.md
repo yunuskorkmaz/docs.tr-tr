@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500769"
 ---
 # <a name="custom-binding-reliable-session"></a>Özel Bağlama Güvenilir Oturum
 Özel bağlama ayrık bağlama öğeleri sıralı bir listesi tanımlanır. Bu örnek özel bağlama çeşitli taşıma ve kodlama öğelerini, özellikle güvenilir oturumlar etkinleştirme ileti ile nasıl yapılandırılacağını gösterir.  

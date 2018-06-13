@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489602"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma
 ASP.NET bugün kullanıyorsanız ve WCF gelecekte kullanarak düşündüğünüz, bu konuda yeni ASP.NET Web hizmetleri de WCF uygulamaları ile birlikte çalıştığından emin olmak için yönergeler sağlar.  

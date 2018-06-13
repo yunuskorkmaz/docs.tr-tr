@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489976"
 ---
 # <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a>Nasıl yapılır: Kanal Fabrikası Oluşturma ve Bunu Kanal Oluşturmak ve Yönetmek için Kullanma
 <xref:System.ServiceModel.DuplexChannelFactory%601> Sınıfı oluşturmak ve istemcilerin ve hizmet uç noktalarına gelen ileti gönderme ve alma için kullandıkları farklı türlerde çift yönlü kanalları yönetmek için araçlar sağlar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492254"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
 Özel bir ağda güvenli bir WCF uygulaması için bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmetini aşağıda gösterilmektedir. Düşük önem derecesi veri olduğundan, ağ doğası gereği güvenli olması bekleniyor veya güvenlik WCF altyapı altına bir katman tarafından sağlanan güvenlik gerekli değildir.  

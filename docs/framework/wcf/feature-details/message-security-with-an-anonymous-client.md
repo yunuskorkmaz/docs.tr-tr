@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495060"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Anonim İstemci ile İleti Güvenliği
 Aşağıdaki senaryoda, bir istemci ve Windows Communication Foundation (WCF) ileti güvenliği tarafından güvenli hale getirilmiş hizmet gösterir. Böylece gelecekte daha zengin bir talep tabanlı modeli destekleyebilir tasarım hedefi taşıma güvenliği yerine ileti güvenliği kullanmaktır. Yetkilendirme için zengin talep kullanma hakkında daha fazla bilgi için bkz: [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

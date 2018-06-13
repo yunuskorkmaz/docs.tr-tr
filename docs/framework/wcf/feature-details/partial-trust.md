@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492017"
 ---
 # <a name="partial-trust"></a>Kısmi Güven
 İle başlayarak [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)], kısmen güvenilen arayanlara genel türleri erişebilir ve yöntemleri uygulanan <xref:System.ServiceModel>, <xref:System.Runtime.Serialization>, ve <xref:System.ServiceModel.Web>. Bu bölümde daha az kod erişim güvenliği (CAS) çalışan uygulamalar için kullanılabilen WCF işlevlerinin sınırlı alt yanı sıra kısmen güvenilir uygulama içinde Windows Communication Foundation (WCF) kullanmak için desteklenen senaryolar açıklanmaktadır izinler.  

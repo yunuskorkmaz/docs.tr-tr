@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493898"
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 Windows Communication Foundation (WCF) güvenlik sağlamak için iki ana modu vardır (`Transport` ve `Message`) ve üçüncü modu (`TransportWithMessageCredential`) iki birleştirir. Bu konuda, ileti güvenliği ve kullanmak için nedenleri açıklanmaktadır.  

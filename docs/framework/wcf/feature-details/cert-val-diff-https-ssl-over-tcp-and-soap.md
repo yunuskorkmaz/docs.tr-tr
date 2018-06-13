@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489475"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
 Sertifikaları Windows Communication Foundation (WCF) ileti katmanlı (SOAP) güvenlik Aktarım Katmanı Güvenliği (TLS) yanı sıra ile HTTP (HTTPS) veya TCP üzerinden kullanabilirsiniz. Bu konuda bu tür sertifikalar doğrulanır farklılıklar açıklanmaktadır.  
