@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584430"
 ---
 # <a name="development-with-my-visual-basic"></a>My Özelliğiyle Geliştirme (Visual Basic)
 Visual Basic üretkenliği ve güç göndermeye çalışırken kullanım kolaylığı artırmak hızlı uygulama geliştirme için yeni özellikler sağlar. Adlı bu özelliklerden birini `My`, uygulama ve onun çalışma zamanı ortamı ile ilgili nesne örneklerini bilgi ve varsayılan erişim sağlar. Bu bilgiler, IntelliSense aracılığıyla bulunabilir ve kullanım göre mantıksal olarak sonuçları bir biçimde düzenlenmiştir.  

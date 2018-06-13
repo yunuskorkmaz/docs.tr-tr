@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578865"
 ---
 # <a name="guidelines-for-collections"></a>Koleksiyonlar için yönergeler
 Özellikle bir grup bazı ortak özelliğe sahip nesneleri yönetmek üzere tasarlanmış herhangi bir tür bir koleksiyon kabul edilebilir. Neredeyse her zaman böyle türleri uygulamak uygun olan <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>, bu bölümde biz yalnızca birini veya her ikisini bu arabirimleri uygulama türlerini koleksiyonları olması için göz önünde bulundurun.  

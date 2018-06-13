@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579775"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a> Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür, bir eşleşme için arama yapın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  

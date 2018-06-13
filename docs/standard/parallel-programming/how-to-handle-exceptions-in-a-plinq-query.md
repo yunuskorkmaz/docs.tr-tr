@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580750"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
 Bu konudaki ilk örnek nasıl işleneceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> , durum ile bir PLINQ sorgusu yürütüldüğünde. İkinci örnek try-catch bloklarını temsilciler içinde özel durumun nerede için mümkün olduğunca yakın put gösterilmektedir. Oluşur ve büyük olasılıkla sorgu yürütme devam hemen bu şekilde, siz bunları yakalayabilir. Özel durum oluşturulduktan sonra bazı öğeleri işlemek bir sorgu devam edebilir mümkündür ne zaman özel durumlar oluşturan geri katılma akışa Kabarcık izin verilir.  

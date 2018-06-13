@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583025"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
 *Yürütme veri akışı bloğunda* türleri veri aldıklarında bir kullanıcı tarafından sağlanan temsilci çağırma. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, Ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sınıflardır yürütme veri akışı blok türü. Kullanabileceğiniz `delegate` anahtar sözcüğü (`Sub` Visual Basic'te), <xref:System.Action%601>, <xref:System.Func%602>, veya bir çalışma işlevi bir yürütme veri akışı bloğuna sağladığınızda lambda ifadesi. Bu belge nasıl kullanılacağını açıklar <xref:System.Func%602> ve yürütme bloklarında eylemi gerçekleştirmek için lambda ifadesi.  

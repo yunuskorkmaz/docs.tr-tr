@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579840"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET normal ifadeler için en iyi uygulamalar
 <a name="top"></a> .NET normal ifade altyapısında desen eşleşmeleri yerine karşılaştırma ve metin eşleştirme göre metin işler güçlü, tam özellikli bir araçtır. Çoğu durumda desen eşleme işlemini hızlı ve verimli şekilde yapar. Ancak bazı durumlarda normal ifade motoru çok yavaş görünebilir. Aşırı durumlarda saatler ve hatta günler boyunca görece küçük bir girişi işlerken yanıt vermeyi durdurmuş gibi bile görünebilir.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578995"
 ---
 # <a name="dispose-pattern"></a>Desen dispose
 Tüm Programlar bir veya daha fazla sistem kaynakları, bellek, sistem tanıtıcıları veya veritabanı bağlantıları gibi kendi yürütme sürecinde alın. Geliştiriciler alınan ve kullanılan sonra bunlar serbest gerekir çünkü bu tür sistem kaynaklarını kullanırken dikkatli olmanız gerekir.  

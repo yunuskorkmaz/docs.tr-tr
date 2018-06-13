@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577039"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>XML XPathNavigator kullanarak verileri Kaldır
 <xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümleri ve değerleri bir XML belgesinden kaldırmak için kullanılan yöntemler kümesi sağlar. Bu yöntemleri kullanmak için <xref:System.Xml.XPath.XPathNavigator> nesnesi olmalıdır düzenlenebilir, diğer bir deyişle, kendi <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> olmalıdır `true`.  

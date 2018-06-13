@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579697"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Sınıfları
 <a name="Top"></a> Karakter sınıfı herhangi biri başarılı olması bir eşleştirme için giriş dizesi içinde oluşabilir karakter kümesini tanımlar. .NET normal ifade dilde şu karakter sınıflarından destekler:  

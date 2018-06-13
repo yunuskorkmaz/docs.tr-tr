@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583844"
 ---
 # <a name="bad-dll-calling-convention"></a>Hatalı DLL çağırma kuralı
 Dinamik bağlantı kitaplığı (DLL) için geçirilen bağımsız değişken tam olarak yordamı tarafından beklenen eşleşmelidir. Çağırma kuralları sayısı, türü ve bağımsız değişkenlerin sırası göz ile ilgilidir. Programınızı türü yanlış veya bağımsız değişken sayısı geçirilmiş bir DLL'de bir yordam çağırma.  

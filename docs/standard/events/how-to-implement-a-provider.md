@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576353"
 ---
 # <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı Uygulama
 Gözlemci tasarım deseni, verileri izler ve bildirimleri gönderen bir sağlayıcısı ve bildirimleri (geri aramalar) sağlayıcıdan almak, bir veya daha fazla gözlemcilerin arasında bölme gerektirir. Bu konuda bir sağlayıcı oluşturma açıklanmaktadır. İlgili konu [nasıl yapılır: gözlemci uygulama](../../../docs/standard/events/how-to-implement-an-observer.md), bir gözlemci oluşturulacağını anlatır.  

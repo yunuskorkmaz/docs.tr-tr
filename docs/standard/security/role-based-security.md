@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582538"
 ---
 # <a name="role-based-security"></a>Rol Tabanlı Güvenlik
 Roller, genellikle ilkeyi uygulamak için finans veya iş uygulamalarında kullanılır. Örneğin, bir uygulama, istekte bulunan kullanıcının belirtilen bir rol üyesi olup bağlı olarak işlenmekte olan işlem boyutu sınırları zorunlu tuttukları. Belirtilen eşikten daha az işlem işlemler için yetkilendirme elemanı olabilir, daha yüksek bir sınır denetçiler olabilir ve yardımcısının Yardımcıları hala daha yüksek bir sınır (veya hiç sınır) olabilir. Bir uygulama bir eylemi tamamlamak için birden çok onayları gerektirdiğinde rol tabanlı güvenlik de kullanılabilir. Böyle bir durumda çalışan bir satın alma isteği üretebilir bir satın alma sistemi olabilir, ancak yalnızca bir satın alma Aracısı bu isteği bir tedarikçiye gönderilebilecek bir satın alma siparişi dönüştürebilirsiniz.  

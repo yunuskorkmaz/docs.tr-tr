@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578359"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator kullanarak şema doğrulaması
 Kullanarak <xref:System.Xml.XmlDocument> sınıfı, bulunan XML içeriği doğrulamak bir <xref:System.Xml.XmlDocument> iki yolla nesnesi. Bir doğrulama kullanarak XML içeriği doğrulamak için ilk yoludur <xref:System.Xml.XmlReader> nesne ve ikinci yol kullanmaktır <xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. XML kullanarak içeriğin salt okunur doğrulama de gerçekleştirebilirsiniz <xref:System.Xml.XPath.XPathDocument> sınıfı.  

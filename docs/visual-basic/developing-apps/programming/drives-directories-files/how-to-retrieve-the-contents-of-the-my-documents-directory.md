@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583233"
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma
 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesne ait birçok özellikten okumak için kullanılabilecek **tüm kullanıcılar** dizinleri gibi **Belgelerim** veya **Masaüstü**.  

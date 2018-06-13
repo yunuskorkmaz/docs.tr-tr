@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579606"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator gönderim tabanlı doğrulama
 <xref:System.Xml.Schema.XmlSchemaValidator> Sınıfı bir gönderim tabanlı şekilde XML şemaları karşı XML verileri doğrulamak için verimli, yüksek performanslı bir mekanizma sağlar. Örneğin, <xref:System.Xml.Schema.XmlSchemaValidator> sınıfı bir XML belgesi olarak serileştirir ve bir doğrulama XML okuyucusu kullanarak belgeyi yeniden ayrıştırma zorunda kalmadan bir XML bilgi yerinde doğrulamanıza olanak verir.  

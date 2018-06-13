@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578137"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XML verilerini XPathNavigator kullanarak yazılan kesinlikle erişme
 XPath 2.0 veri modeli örneği olarak <xref:System.Xml.XPath.XPathNavigator> sınıfı, ortak dil çalışma zamanı (CLR) türleri ile eşleştirir kesin türü belirtilmiş veri içerebilir. XPath 2.0 veri modeline göre yalnızca öğeleri ve özniteliklerinin kesin türü belirtilmiş veri içerebilir. <xref:System.Xml.XPath.XPathNavigator> Sınıfı içindeki verilere erişilirken mekanizmalar sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne bir veri türünden diğerine dönüştürme mekanizmalar yanı sıra kesin türü belirtilmiş veri olarak.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583740"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uygulama Web Hizmetlerine Erişme (Visual Basic)
 `My.WebServices` Nesnesi geçerli proje tarafından başvurulan her Web hizmeti örneğini sağlar. İsteğe bağlı olarak her bir örnek örneği. Bu Web Hizmetleri özelliklerini erişebilirsiniz `My.WebServices` nesnesi. Özelliğin adını özelliğe erişir Web hizmeti adı ile aynıdır. Öğesinden devralınan herhangi bir sınıf <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> bir Web hizmetidir.  

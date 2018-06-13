@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579477"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a> İçin [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] uygulamalar, yalıtılmış depolama mekanizmasıdır kodu kaydedilmiş verilerle ilişkilendirme standartlaştırılmış yöntemler tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584598"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>Otomasyon işlemi sırasında dosya adı veya sınıf adı bulunamadı (Visual Basic)
 Dosya adı veya bir çağrı sınıfında için belirtilen ad `GetObject` işlevi bulunamadı.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577234"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyon olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflarda <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek için System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeler veya bir koleksiyondaki öğelerin aralığını değiştirin.  

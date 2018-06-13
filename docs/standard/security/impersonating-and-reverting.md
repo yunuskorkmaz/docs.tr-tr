@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582180"
 ---
 # <a name="impersonating-and-reverting"></a>Kimliğe Bürünme ve Geri Alma
 Bazen bir Windows hesabı kimliğine bürünmek üzere bir Windows hesabı belirteci edinmek gerekebilir. Örneğin, ASP.NET tabanlı uygulamanız farklı zamanlarda birkaç kullanıcı adına hareket gerekebilir. Uygulamanız yönetici Internet Information Services (IIS) temsil eden bir belirteci kabul, o kullanıcının kimliğine bürün, bir işlem gerçekleştirmek ve önceki kimliğine geri dönülemiyor. Ardından, daha az haklarına sahip bir kullanıcı temsil eden IIS uygulamasından bir belirteç kabul, başka bir işlem gerçekleştirmek ve yeniden geri.  

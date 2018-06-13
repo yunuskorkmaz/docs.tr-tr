@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579424"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 <a name="Top"></a> Değişimler yalnızca değiştirme desenleri içinde tanınan dil öğelerdir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri aşırı için sağlanan <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> sahip yöntemi bir `replacement` parametre ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemi. Yöntemleri tarafından tanımlanan düzeni eşleşen düzeni yerine `replacement` parametresi.  

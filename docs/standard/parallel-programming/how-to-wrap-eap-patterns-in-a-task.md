@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582775"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Nasıl yapılır: Bir Görevde EAP Desenlerini Sarmalama
 Aşağıdaki örnek kullanarak rastgele bir olay tabanlı zaman uyumsuz desen (EAP) işlemleri dizisini bir görev olarak kullanıma sunmak nasıl gösterir bir <xref:System.Threading.Tasks.TaskCompletionSource%601>. Bu örnek ayrıca nasıl kullanılacağını gösterir bir <xref:System.Threading.CancellationToken> üzerinde yerleşik iptal yöntemleri çağırmak için <xref:System.Net.WebClient> nesneleri.  

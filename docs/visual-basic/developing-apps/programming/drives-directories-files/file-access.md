@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583311"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic ile Dosya Erişimi
 `My.Computer.FileSystem` Nesnesi, dosyalar ve klasörlerle çalışmak için araçlar sağlar. Özellikleri, yöntemleri ve olayları oluşturma, kopyalama, taşıma, araştırmanıza ve dosya ve klasörleri silin sağlar. `My.Computer.FileSystem` eski işlevleri daha iyi performans sağlar (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, vb.), sağlanan Visual Basic tarafından geriye dönük uyumluluk için.  

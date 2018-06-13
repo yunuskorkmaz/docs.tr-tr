@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579151"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET StringBuilder sınıfını kullanma
 <xref:System.String> Nesnesidir değişmez. Yöntemlerden birini her kullanışınızda <xref:System.String?displayProperty=nameWithType> sınıfı, oluşturduğunuz yeni bir dize nesnesi bellekte bu yeni nesne için yeni bir ayırma alanı gerektirir. Burada bir dize yinelenen değişiklikleri gerçekleştirmeniz gerekir durumlarda yükü ilişkili yeni bir oluşturma ile <xref:System.String> nesne maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Sınıfı, yeni bir nesne oluşturmadan bir dize değiştirmek istediğinizde kullanılabilir. Örneğin, kullanarak <xref:System.Text.StringBuilder> sınıfı Döngüdeki birlikte birçok dizeleri birleştirme, performansı artırmak.  

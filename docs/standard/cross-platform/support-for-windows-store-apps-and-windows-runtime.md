@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579294"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] ile birlikte çok sayıda yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577622"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış Depolama erişimi her zaman oluşturan kullanıcıya sınırlıdır. Bu tür bir yalıtım uygulamak için depolama açıldığında kodu çalıştığı işlemle ilişkili kimlik olduğu ortak dil çalışma zamanı işletim sistemini algılar, kullanıcı kimliği aynı kavramı kullanır. Bu kimlik, kimliği doğrulanmış kullanıcı kimliği olmakla birlikte kimliğe bürünme dinamik olarak değiştirmek için geçerli kullanıcının kimliğini neden olabilir.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581859"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Uygulama Formlarına Erişme (Visual Basic)
 `My.Forms` Nesnesi, her Windows formunu örneği erişmek için kolay bir yol bildirilen uygulamanın projesinde sağlar. Özelliklerini de kullanabilirsiniz `My.Application` uygulamanın ekranı ve ana form erişmek için nesne ve uygulamanın açık formların listesini alın.  

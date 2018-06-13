@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582798"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Yazdırma ve Raporlama (Visual Basic)
 Visual Basic yazdırma ve raporlama için çeşitli seçenekler sunar. Aşağıdaki konular, genel bakışlar ve yazdırma ve Raporlama ile ilgili ilgili belgelere bağlantıları sağlar.  

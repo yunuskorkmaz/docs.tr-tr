@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577182"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Komut dosyası stil XSLT kullanarak &lt;msxsl: Script&gt;
 <xref:System.Xml.Xsl.XslTransform> Sınıfı destekler kullanarak katıştırılmış komut dosyası `script` öğesi.  

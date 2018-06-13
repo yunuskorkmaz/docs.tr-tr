@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578427"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
 Olay tabanlı zaman uyumsuz desen ve semantiği temsilci sınıflarıyla tanıdık olay zaman uyumsuz davranışı kullanıma sunmak için etkili bir yol sağlar. Olay tabanlı zaman uyumsuz desen uygulamak için bazı belirli davranış gereksinimini takip gerekir. Aşağıdaki bölümlerde, gereksinimleri ve olay tabanlı zaman uyumsuz deseni izler bir sınıf uygulama dikkate almanız yönergeler açıklanmaktadır.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577208"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML verilerine nesne hiyerarşisi eşleme
 Bir XML belgesi bellekte kavramsal temsili bir ağaç olur. Programlama için ağaç düğümleri erişmek için bir nesne hiyerarşisi vardır. Aşağıdaki örnekte nasıl XML içeriği düğümleri duruma gösterir.  

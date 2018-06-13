@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584777"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; (akıllı aygıt/Visual Basic derleyici hatası) bildirilmedi
 <`functionname`> bildirilmemiş olan. Dosya g/ç işlevselliği normal olarak kullanılabilir `Microsoft.VisualBasic` ad alanı, ancak hedeflenen .NET Compact Framework sürümü desteklemez.  
