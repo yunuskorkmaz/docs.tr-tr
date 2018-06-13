@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590744"
 ---
 # <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a>Çizgi ve Şekil Denetimlerine Giriş (Visual Studio)
 Visual Basic Power Packs çizgi ve Şekil denetimleri, formlar ve kapsayıcıları çizgiler ve şekiller çizme sağlayan üç grafik denetimleri kümesidir. <xref:Microsoft.VisualBasic.PowerPacks.LineShape> Denetimi yatay, dikey ve çapraz çizgi çizmek için kullanılır. <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Denetimi daire ve Oval, çizmek için kullanılır ve <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> denetimi dikdörtgenler ve kareler çizmek için kullanılır.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598159"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Genel Değiştirici) (Visual Basic)
 Genel tür parametreleri için `Out` anahtar sözcük türü eşdeğişken olduğunu belirtir.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584020"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Nasıl Yapılır: Kaydırılabilir Form Yazdırma (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Bileşen sağlar, hızlı bir form görüntüsü kullanmadan yazdırmak bir <xref:System.Drawing.Printing.PrintDocument> bileşeni. Varsayılan olarak, yalnızca form görüntülenmekte kısmını yazdırılır; Kullanıcı formu çalışma zamanında yeniden boyutlandırılabilir değilse, görüntüyü tasarlandığı gibi yazdırabilir değil. Formu yeniden boyutlandırılmış bile, aşağıdaki yordamı kaydırılabilir form tam istemci alanını yazdırma gösterilmektedir.  

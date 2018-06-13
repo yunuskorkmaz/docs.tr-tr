@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595858"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Ayarlama&#39; özelliği erişimcisi &#39; &lt;propertyname&gt; &#39; erişilebilir değil
 Özelliğin erişimi olmadığında bir özelliğin değerini depolamak bir deyim çalışır `Set` yordamı.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597597"
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-0-or-equal-to--1"></a>Bağımsız değişken &#39; &lt;argumentname&gt; &#39; -1 veya 0'dan büyük olmalıdır
 Bir değişkenin değeri 0'dan küçük, ancak -1 olarak eşit değil.  

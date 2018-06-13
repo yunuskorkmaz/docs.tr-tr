@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585417"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> alt düzey senaryolarda çekirdek olaylar için gerekli olan çekirdek geçişleri ve pahalı İçerik Geçişi önlemek için kullanabileceğiniz bir basit eşitleme türüdür. Bir kaynak süresi, uzun bir süre için tutulması için beklenmiyor çok çekirdekli bilgisayarlarda, bir bekleyen iş parçacığı kullanıcı modunda birkaç düzine ya da birkaç yüz döngüsü boyunca Döndür ve kaynak almak için Yeniden Dene'yi daha etkili olabilir. Ardından kaynak dönen sonra kullanılabilir durumdaysa, birkaç bin döngüsü kaydettiniz. Kaynak hala kullanılabilir değil ise, daha sonra yalnızca birkaç döngüleri harcadığınız ve hala çekirdek tabanlı bekleme girebilirsiniz. Bu dönen ardından bekleyen birleşimi, bazen olarak adlandırılır bir *iki aşamalı beklemeyi işlemi*.  

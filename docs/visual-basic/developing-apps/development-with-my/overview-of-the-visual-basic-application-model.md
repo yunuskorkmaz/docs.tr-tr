@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591605"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic Uygulama Modeline Genel Bakış
 Visual Basic Windows Forms uygulamaları davranışını denetlemek için iyi tanımlanmış bir model sağlar: Visual Basic uygulama modeli. Bu model uygulama başlatma ve kapatma, yanı sıra çalýþýrçalýþma yakalama işlenmeyen özel durum olayları işlemek için olaylarını içerir. Tek örnek uygulamaları geliştirmek için destek de sağlar. Uygulama modeli genişletilebilir, olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  

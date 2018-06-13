@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597705"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>Bağımsız değişken &#39;yaşam&#39; sıfır olamaz
 Bir bağımsız değişken `Life`, hangi olmalıdır bir `Double` , varlığın kullanım ömrü uzunluğunu belirtir, geçerli değil.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597415"
 ---
 # <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39;&lt;TypeName&gt; &#39; bir türü ve bir ifade olarak kullanılamaz
 Tür adı bir ifade gerekli olduğu oluşur. Bir ifade değişkenlerinin, sabitleri, değişmez değerleri, özellikler, şunların bir birleşimi oluşmalıdır ve `Function` yordam çağrıları.  

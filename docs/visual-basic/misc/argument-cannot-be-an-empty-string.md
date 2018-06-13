@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599001"
 ---
 # <a name="argument-cannot-be-an-empty-string"></a>Bağımsız değişkeni boş bir dize olamaz
 Bağımsız değişken olarak boş bir dize tanımlı ("").  
