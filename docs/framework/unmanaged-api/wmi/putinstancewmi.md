@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462166"
 ---
 # <a name="putinstancewmi-function"></a><span data-ttu-id="49d28-103">PutInstanceWmi işlevi</span><span class="sxs-lookup"><span data-stu-id="49d28-103">PutInstanceWmi function</span></span>
 <span data-ttu-id="49d28-104">Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="49d28-104">Creates or updates an instance of an existing class.</span></span> <span data-ttu-id="49d28-105">Örnek için WMI deposunun yazılır.</span><span class="sxs-lookup"><span data-stu-id="49d28-105">The instance is written to the WMI repository.</span></span> 

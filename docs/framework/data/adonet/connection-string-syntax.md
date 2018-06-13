@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472756"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="0e375-102">Bağlantı dizesi sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0e375-102">Connection String Syntax</span></span>
 <span data-ttu-id="0e375-103">Her .NET Framework veri sağlayıcısı sahip bir `Connection` devraldığı nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="0e375-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="0e375-104">Her bir sağlayıcı için belirli bağlantı dizesi sözdizimi belgelenen kendi `ConnectionString` özelliği.</span><span class="sxs-lookup"><span data-stu-id="0e375-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="0e375-105">.NET Framework dahil dört veri sağlayıcıları aşağıdaki tabloda listelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="0e375-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  

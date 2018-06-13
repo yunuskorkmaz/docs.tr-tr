@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058907"
 ---
 # <a name="interfaces"></a><span data-ttu-id="2510e-103">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="2510e-103">Interfaces</span></span>
 

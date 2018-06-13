@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235996"
 ---
 # <a name="property-statement"></a><span data-ttu-id="09cb5-102">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="09cb5-102">Property Statement</span></span>
 <span data-ttu-id="09cb5-103">Bir özellik ve depolamak ve özellik değerini almak için kullanılan özellik yordamları adını bildirir.</span><span class="sxs-lookup"><span data-stu-id="09cb5-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>  

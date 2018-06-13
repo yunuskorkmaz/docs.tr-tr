@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171921"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="5ad2c-102">&amp;&amp; İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5ad2c-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="5ad2c-103">Koşullu- ve işleci (`&&`) bir mantıksal gerçekleştirir- ve kendi `bool` işlenenler, ancak yalnızca kendi ikinci işlenen gerekirse değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="5ad2c-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  
