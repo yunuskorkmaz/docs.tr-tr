@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744518"
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece Sınıfı Oluşturma
 **GamePiece** sınıfı yalıtır Microsoft XNA oyun parça görüntü yükleme, oyun parça sitedeki fare durumunu izlemek, fare yakalama, düzenleme ve eylemsizlik işleme sağlamak için gerekli tüm işlevlere ve Oyun parça görünümü bağlantı noktasının sınırlarını ulaştığında Sıçrama yeteneği sağlar.  

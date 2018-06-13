@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430521"
 ---
 # <a name="hosting-coclasses"></a>Barındırma Coclass’ları
 Bu bölümde barındırma API'sini kullanan yönetilmeyen API coclass'ları açıklar.  

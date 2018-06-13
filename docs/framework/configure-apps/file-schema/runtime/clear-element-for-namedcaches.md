@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745519"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Clear&gt; öğesi için &lt;namedCaches&gt;
 Tüm temizler `namedCache` girişleri `namedCaches` bir önbellek için koleksiyonu.  

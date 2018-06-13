@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495821"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Bununla birlikte, birçok uygulamanın ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almak istiyorsa, örneğin, bu istek kafes her üyesine taşan olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları yakınında sınırlı olabilir. İletileri kafes tek tek bir düğümde yeniden gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçimi için genel yönergeler sağlar.  

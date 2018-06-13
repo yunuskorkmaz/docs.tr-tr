@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496941"
 ---
 # <a name="message-filters"></a>İleti Filtreleri
 İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı veya belirli bir XPath ifadesi gibi bir ileti belirli bölümlerine incelemek uygulamaları. İleti filtreleri hiçbiri ile sağladıysanız [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, yeni bir uygulama taban oluşturarak özel filtre oluşturabilirsiniz <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  

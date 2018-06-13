@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427775"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace Yöntemi
 Verilen tam ad alanı adı şu anda açık sözcük kapsamında kullanılmakta olduğunu belirtir. Ad alanı, açık olan kapsamlardan devralır tüm kapsamlarında kullanılır. Geçerli kapsamdaki kapatma ad alanı kullanımını de durdurulur.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359268"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Veri Hizmetleri güvenli hale getirme
 Bu konuda, geliştirme, dağıtmak ve çalıştırmak için belirli güvenlik konuları açıklanmaktadır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve Destek hizmetlerine erişmek uygulamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Öneriler güvenli oluşturmak için izlemeniz gereken [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar.  

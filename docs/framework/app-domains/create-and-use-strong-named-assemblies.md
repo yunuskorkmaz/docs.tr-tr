@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744648"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma
 <a name="top"></a> Tanımlayıcı ad derlemenin kimliğini oluşur — basit metin adı, sürüm numarasını ve (sağladıysanız) kültür bilgilerini — bir ortak anahtar ve dijital imza artı. Karşılık gelen özel anahtarı kullanarak bir derleme dosyası oluşturulur. (Derleme dosyası adları ve derlemeyi oluşturan tüm dosyaların karmaları içeren derleme bildirimi içerir.)  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356802"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Nasıl yapılır: birden çok sonuç şekiller için eşlenen saklı yordamları kullanma
 Saklı yordam birden çok sonuç şekil döndüğünüzde dönüş türü tek projeksiyon şekle kesin türü belirtilmiş olamaz. Ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tüm olası projeksiyon türlerinizi oluşturabilirsiniz, içinde bunlar döndürüleceği sipariş bilemezsiniz.  

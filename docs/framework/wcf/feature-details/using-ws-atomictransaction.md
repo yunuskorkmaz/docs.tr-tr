@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498263"
 ---
 # <a name="using-ws-atomictransaction"></a>WS-AtomicTransaction Kullanma
 WS-AtomicTransaction (WS-AT) bir birlikte çalışabilen işlem protokolüdür. Web hizmeti iletileri kullanarak dağıtılmış işlemler akış ve heterojen işlem altyapıları arasında birlikte çalışabilir bir şekilde koordine sağlar. WS-AT dağıtılmış uygulamalar, işlem yöneticileri ve kaynak yöneticileri arasında bir atomik sonucu sürücü için iki aşamalı yürütme protokolü kullanır.  

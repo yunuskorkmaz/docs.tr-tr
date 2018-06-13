@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388914"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleyici kullanan [yeniden başlatma Yöneticisi](http://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programı .NET Framework yüklerse, yeniden başlatma bu özelliğin avantajlarından yararlanmak için Yöneticisi ile arabirim oluşturabilirler. Daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework 4.5 yükleyici ilerlemesini almak](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497045"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Sınıf Oluşturmak için Şemayı İçe Aktarma
 Windows Communication Foundation (WCF) ile kullanılabilir şemaları sınıfları oluşturmak için kullanın <xref:System.Runtime.Serialization.XsdDataContractImporter> sınıfı. Bu konu işlemini ve farklılıkları açıklar.  

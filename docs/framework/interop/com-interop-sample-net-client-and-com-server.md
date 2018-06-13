@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387110"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu
 Bu örnek gösterilmektedir nasıl bir [.NET istemci](#cpconcominteropsamplenetclientcomserveranchor1), erişim için yerleşik bir [COM sunucusu](#cpconcominteropsamplenetclientcomserveranchor2), bir COM sınıfı örneği oluşturur ve sınıf üyeleri ev kredisi hesaplamalar çağırır.  

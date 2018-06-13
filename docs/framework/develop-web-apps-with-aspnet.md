@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386954"
 ---
 # <a name="developing-web-applications-with-aspnet"></a>ASP.NET ile Web Uygulamaları Geliştirme
 ASP.NET web uygulamaları oluşturmak için bir .NET Framework teknolojisidir. Size kolaylık olması için aşağıdaki bağlantıları verilmiştir:  

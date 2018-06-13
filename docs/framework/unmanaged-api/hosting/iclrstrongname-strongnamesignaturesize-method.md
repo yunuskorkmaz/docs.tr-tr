@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431948"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize Yöntemi
 Tanımlayıcı ad imzası boyutu döndürür. Bu yöntem, genellikle bir gecikmeli imzalanmış derleme oluştururken dosyasında ayırmak için ne kadar alan belirlemek için derleyicileri tarafından kullanılır.  

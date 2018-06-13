@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744918"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; öğesi
 Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Kullanmayı `dependentAssembly` her derleme için öğesi.  

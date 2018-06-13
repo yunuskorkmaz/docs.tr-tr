@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496015"
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli göz önünde bulundurarak seri durumdan çıkarma sırasında için dahil edilecek türleri belirtmenize olanak verir. Çalışan bir örnek için bkz: [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  

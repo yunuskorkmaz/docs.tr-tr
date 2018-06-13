@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422568"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass Metodu
 Arabirim işaretçisi dizilerine genel türünü temsil eden bir Icordebugclass alır.  

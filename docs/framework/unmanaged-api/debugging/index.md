@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423721"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>Hata Ayıklama (Yönetilmeyen API Başvurusu)
 Ortak dil çalışma zamanı (CLR) ortamında çalışan kod hatalarını ayıklamak bir hata ayıklayıcısı hata ayıklama API'si sağlar. Ayıklanacak kod, CLR destekleyen kod herhangi bir türde olabilir.  

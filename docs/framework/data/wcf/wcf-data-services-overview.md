@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365806"
 ---
 # <a name="wcf-data-services-overview"></a>WCF veri hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanarak oluşturma ve Veri Hizmetleri Web veya intranet tüketimini sağlayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Verilerinizi URI tarafından adreslenebilir kaynaklar olarak kullanıma sunmak etkinleştirir. Bu, erişmenize olanak tanır ve temsili durum aktarımı (REST), özellikle de, standart HTTP fiilleri semantiği kullanarak değişiklik verilerini al koy, POST ve SİLİN. Bu konu desenleri ve uygulamalar tarafından tanımlanan bir bakış sunar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve ayrıca tarafından sağlanan özellikleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yararlanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework tabanlı uygulamalarda.  

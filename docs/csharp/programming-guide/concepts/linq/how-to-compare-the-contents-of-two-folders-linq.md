@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330446"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Nasıl yapılır: iki klasörün (LINQ) (C#) içeriğini karşılaştırma
 Bu örnekte, iki dosya listelerini karşılaştırmak için üç yol gösterilmektedir:  

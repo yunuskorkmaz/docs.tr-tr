@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362520"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme
 Bu konuda nasıl kullanılacağını gösterir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Internet Information Services (IIS) çalıştıran bir ASP.NET Web uygulaması tarafından barındırılan Northwind örnek veritabanı dayalı bir veri hizmeti oluşturmak için. ASP.NET geliştirme sunucusu üzerinde çalışan bir ASP.NET Web uygulaması olarak aynı Northwind veri hizmeti oluşturma örneği için bkz: [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

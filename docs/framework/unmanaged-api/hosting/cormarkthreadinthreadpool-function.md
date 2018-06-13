@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431239"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool İşlevi
 Yönetilen kod yürütülmesi için şu anda yürütülen iş parçacığı havuzu iş parçacığı işaretler. .NET Framework sürüm 2.0 ile başlayarak, bu işlev hiçbir etkisi olmaz. Gerekli değildir ve kodunuzdan kaldırılabilir. Bu işlev de kullanım dışı [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  

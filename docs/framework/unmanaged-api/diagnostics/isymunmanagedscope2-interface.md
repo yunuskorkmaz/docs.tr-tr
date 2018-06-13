@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427254"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 Arabirimi
 Bir yöntem sözcük kapsamında temsil eder. Bu arabirim genişletir [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) kapsamı içinde tanımlanan sabitleri hakkında bilgi alma yöntemleriyle arabirimi.  

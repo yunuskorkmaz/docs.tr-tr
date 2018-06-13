@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495732"
 ---
 # <a name="how-to-create-a-duplex-federated-binding"></a>Nasıl yapılır: Çift Yönlü Federe Bağlama Oluşturma
 <xref:System.ServiceModel.WSFederationHttpBinding> yalnızca veri birimi ve istek/yanıt iletisi exchange sözleşmeleri destekler. Çift yönlü ileti exchange sözleşmesi kullanmak için özel bağlama oluşturmanız gerekir. Aşağıdaki yordamlar bu yapılandırmada, HTTP ve TCP taşımaları için ileti mod güvenliği kullanarak ve TCP taşıma için karma mod güvenliği kullanarak nasıl gösterir. Tüm 3 bağlamaları gösteren örnek bu konunun sonunda kodudur.  

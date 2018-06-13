@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430827"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding Arabirimi
 Ortak dil çalışma zamanı tarafından konak uygulamanın uygulama etki alanı oluşturulduğunu bildirmek için (CLR) adlı bir yöntem sağlar.  

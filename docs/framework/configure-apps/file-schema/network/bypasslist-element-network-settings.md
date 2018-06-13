@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743907"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;olarak ayarlanıyor&gt; öğesi (ağ ayarları)
 Bir proxy kullanmayın adresleri açıklamak normal bir ifade kümesi sağlar.  
