@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394520"
 ---
 # <a name="location-based-cache-policies"></a>Konum temelli önbellek ilkeleri
 Konum temelli önbellek İlkesi, istenen kaynak gelen gerçekleştirilebilecek göre geçerli önbelleğe alınan girdileri yenilik tanımlar. Önbelleğe alınan bir kaynağın geçerli olduğu kullanmadan yoksa sunucu belirtilen COLLECTION gereksinimleri ihlal değil. Konum temelli önbellek İlkesi kullanılarak programlı olarak oluşturulan bir <xref:System.Net.Cache.RequestCachePolicy> veya <xref:System.Net.Cache.HttpRequestCachePolicy> sınıfı oluşturucusu. Konum tabanlı ilke türünü Oluşturucusu kullanmaya geçirilen bir <xref:System.Net.Cache.RequestCacheLevel> veya <xref:System.Net.Cache.HttpRequestCacheLevel> numaralandırma değeri. Konum temelli önbellek ilkeleri oluşturma kod örnekleri için bkz [nasıl yapılır: bir uygulama için bir konum temelli önbellek İlkesi ayarlamak](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Aşağıdaki bölümlerde her Köprü Metni Aktarım Protokolü (http ve https) kaynaklar için önbellek konumu tabanlı ilke türü açıklanmaktadır.  

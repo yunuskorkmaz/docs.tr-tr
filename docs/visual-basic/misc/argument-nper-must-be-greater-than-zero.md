@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601198"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a>Bağımsız değişken &#39;dönem sayısı&#39; sıfırdan büyük olmalıdır
 `NPer` Döndürür işlevi bir `Double` Dönemsel sabit ödemeler ve sabit faiz oranına dayanan bir anüite için dönem sayısını belirten sıfırdan büyük bir bağımsız değişken gerektirir.  

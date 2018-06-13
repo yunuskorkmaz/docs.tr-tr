@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605491"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally Deyimi (Visual Basic)
 Belirli bir kod bloğu içinde hala kod çalıştırılırken ortaya çıkabilecek bazı veya tüm olası hataları işlemek için bir yol sağlar.  

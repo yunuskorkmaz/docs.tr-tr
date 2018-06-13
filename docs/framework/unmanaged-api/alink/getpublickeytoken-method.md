@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405479"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken Metodu
 Belirtilen keyfile veya anahtar kapsayıcısı için ortak anahtar belirteci alır.  

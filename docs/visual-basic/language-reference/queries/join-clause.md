@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603918"
 ---
 # <a name="join-clause-visual-basic"></a>Join Tümcesi (Visual Basic)
 Tek bir koleksiyon iki koleksiyonlara birleştirir. Birleştirme işlemi anahtarları eşleşmesini temel alan ve kullandığı `Equals` işleci.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395310"
 ---
 # <a name="etw-events-in-the-net-framework"></a>.NET Framework'te ETW Olayları
 Olay izleme için Windows (ETW), Windows işletim sistemleri tarafından sağlanan yüksek performanslı, düşük yükü, ölçeklenebilir izleme sistemidir. .NET Framework tarafından sağlanan profil oluşturma ve hata ayıklama desteği tamamlayan ve çeşitli senaryolarda gidermek için kullanılabilir.  

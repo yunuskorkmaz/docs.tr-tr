@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171799"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;= İşleci (C# Başvurusu)
 Sola kaydırma atama işleci.  

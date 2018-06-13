@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410104"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
@@ -102,7 +103,7 @@ caspol [options]
 |**-adı "** *adı* **"**|İle kullandıysanız **– addgroup** seçeneği, komut dosyası eklemek için bir kod grup adını belirtir. İle kullandıysanız **- chggroup** seçeneği, bir kod grubu düzenlemek komut dosyası adını belirtir. *Adı* bağımsız değişkeni çift tırnak içine alınmalıdır. *Adı* bağımsız değişkeni bir rakamla başlayamaz ve yalnızca A-Z, içerebilir 0-9 ve alt çizgi karakteri. Kod grupları başvurulabilir için bunu *adı* yerine kendi sayısal etiketine göre. *Adı* ayrıca komut dosyası oluşturma amacıyla çok yararlı olur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güvenlik ilkesi üç ilke düzeyi kullanılarak ifade edilir: Makine ilkesi, kullanıcı ilkesi ve kuruluş ilkesi. Bir derlemenin aldığı izin kümesi, bu üç ilke düzeyi tarafından izin verilen izin kümelerinin kesişimi ile belirlenir. Her ilke düzey kod gruplarının hiyerarşik bir yapısı ile temsil edilir. Her kod grubunun bir üyelik koşulu vardır ve bu koşul hangi kodun o grubun üyesi olduğunu belirler. Adlandırılmış bir izin kümesi aynı zamanda her kod grubu ile ilişkilidir. Bu izin kümesi, çalışma zamanı tarafından, üyelik koşulunu karşılayan kodun sahip olmasına izin verilen izinleri belirtir. Bir kod grubu hiyerarşisi, ilişkili adlandırılmış izin kümeleriyle birlikte, güvenlik ilkesinin her düzeyini tanımlar ve korur. Kullanabileceğiniz**– kullanıcı**, **- customuser**, **– makine** ve **-enterprise** güvenlik ilkesi düzeyini ayarlamak için Seçenekler.  
+ Güvenlik ilkesi üç ilke düzeyi kullanılarak ifade edilir: Makine ilkesi, kullanıcı ilkesi ve kuruluş ilkesi. Bir derlemenin aldığı izin kümesi, bu üç ilke düzeyi tarafından izin verilen izin kümelerinin kesişimi ile belirlenir. Her ilke düzey kod gruplarının hiyerarşik bir yapısı ile temsil edilir. Her kod grubunun bir üyelik koşulu vardır ve bu koşul hangi kodun o grubun üyesi olduğunu belirler. Adlandırılmış bir izin kümesi aynı zamanda her kod grubu ile ilişkilidir. Bu izin kümesi, çalışma zamanı tarafından, üyelik koşulunu karşılayan kodun sahip olmasına izin verilen izinleri belirtir. Bir kod grubu hiyerarşisi, ilişkili adlandırılmış izin kümeleriyle birlikte, güvenlik ilkesinin her düzeyini tanımlar ve korur. Kullanabileceğiniz **– kullanıcı**, **- customuser**, **– makine** ve **-enterprise** güvenlik ilkesi düzeyini ayarlamak için Seçenekler.  
   
  Güvenlik İlkesi ve çalışma zamanı kodu hangi izinleri nasıl belirlediğini hakkında daha fazla bilgi için bkz: [Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   

@@ -86,6 +86,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605088"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Tür Dönüştürme İşlevleri (Visual Basic)
 Bu işlevlerdir derlenmiş satır içi dönüştürme kodu ifadeyi hesaplar kod parçası olan anlamına gelir. Bazen performansı artırır dönüştürme gerçekleştirmek için bir yordam hiçbir çağrı yoktur. Her işlev belirli bir veri türüne bir ifadeyi olacak şekilde zorlar.  

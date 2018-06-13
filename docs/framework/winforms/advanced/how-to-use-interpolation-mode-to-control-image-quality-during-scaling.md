@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522365"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Nasıl yapılır: Ölçeklendirme Sırasında Görüntü Kalitesini Denetlemek için İlişkilendirme Modunu Kullanma
 İlişkilendirme modunu bir <xref:System.Drawing.Graphics> nesne şeklini etkiler [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ölçekler (uzatır ve küçültür) görüntüler. <xref:System.Drawing.Drawing2D.InterpolationMode> Numaralandırma aşağıdaki listede gösterildiği bazıları birkaç ilişkilendirme modu tanımlar:  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523129"
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Nasıl yapılır: Bir Şekli Bir Görüntüyle Döşeme
 Dikdörtgen görüntüleri yalnızca döşeme birbirinin yanına kat kapsayacak şekilde yerleştirilebilir gibi diğer yanındaki dolgu (döşeme) bir şekli yerleştirilebilir. Bir şekli iç döşeme için doku fırça kullanın. Oluşturduğunuzda bir <xref:System.Drawing.TextureBrush> nesne oluşturucuya geçirdiğiniz bağımsız değişkenlerden biri olan bir <xref:System.Drawing.Image> nesnesi. İç bir şekli kısmını boyamak için doku fırça kullandığınızda, şekil bu görüntüyü yinelenen kopyalarını dolu.  

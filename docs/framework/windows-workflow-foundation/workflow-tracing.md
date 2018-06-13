@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518183"
 ---
 # <a name="workflow-tracing"></a>İş akışı izleme
 İş akışı izleme .NET Framework izleme dinleyicilerini kullanarak tanılama bilgileri yakalamak için bir yol sunar. İzleme uygulama ile ilgili bir sorun algılandığında, etkin ve sorun çözüldükten sonra yeniden devre dışı bırakıldı. İş akışları için hata ayıklama izlemeyi etkinleştirebilir iki yolu vardır. Olay İzleme Görüntüleyicisi'ni kullanarak yapılandırabilirsiniz ya da kullanabilirsiniz <xref:System.Diagnostics> izleme olayları bir dosya göndermek için.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524072"
 ---
 # <a name="double-buffered-graphics"></a>İki Kez Arabelleğe Alınan Grafikler
 Grafik programlama olduğunda, titreşimi yaygın sorun kullanır. Birden çok karmaşık Boyama işlemleri gerektiren grafik işlemleri Titreşim veya aksi halde kabul edilebilir bir görünüme sahip görünecek şekilde işlenmiş görüntüleri neden olabilir. Bu sorunları gidermek için .NET Framework iki kez arabelleğe alma erişim sağlar.  

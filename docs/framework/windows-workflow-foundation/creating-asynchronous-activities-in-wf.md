@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520074"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Zaman uyumsuz etkinlikleri WF içinde oluşturma
 <xref:System.Activities.AsyncCodeActivity> Etkinlik yazarlar etkinleştirir ve zaman uyumsuz yürütme mantığını uygulamak için etkinlikler türetilmiş kullanmak için bir temel sınıf sağlar. Bu, zaman uyumsuz iş akışı Zamanlayıcı iş parçacığı tutan ve paralel olarak çalıştırılabilmesi için hiç etkinlik engelleme olmadan gerçekleştirmelisiniz özel etkinlikler için kullanışlıdır. Bu konu kullanarak zaman uyumsuz özel etkinlikler oluşturmak nasıl bir bakış sunar <xref:System.Activities.AsyncCodeActivity>.  

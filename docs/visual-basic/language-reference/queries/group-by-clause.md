@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605036"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
 Sorgu sonucu öğelerini gruplandırır. Ayrıca her gruba toplama işlevleri uygulamak için kullanılabilir. Gruplandırma işlemi bir veya daha fazla anahtarları temel alır.  
