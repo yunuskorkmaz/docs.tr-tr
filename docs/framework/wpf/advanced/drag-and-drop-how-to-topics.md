@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542880"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Sürükleme ve Bırakma ile İlgili Nasıl Yapılır Konuları
 Aşağıdaki örnekleri kullanarak, ortak görevlerin nasıl gerçekleştirileceğini gösterir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürükle ve bırak framework.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955959"
 ---
 # <a name="synchronous-server-socket-example"></a>Zaman uyumlu Server yuva örneği
 Aşağıdaki örnek programı istemcilerinden gelen bağlantı istekleri alan sunucu oluşturur. Bir istemciden bir bağlantı beklerken sunucu uygulaması yürütülmesini askıya alınmış şekilde sunucusu zaman uyumlu bir yuvası ile kurulur. Uygulama istemciden bir dize alır, konsolda dizesini görüntüler ve istemciye geri dize görüntülemektedir. İstemci, dizeden dize içermelidir "\<EOF >" iletisinin sonuna sinyal.  

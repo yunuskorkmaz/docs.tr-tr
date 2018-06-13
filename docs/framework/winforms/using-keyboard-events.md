@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542268"
 ---
 # <a name="using-keyboard-events"></a>Klavye Olaylarını Kullanma
 Windows Forms programlarının çoğu klavye girişi klavye olayları işleme göre işler. Bu konu, her olay ve sağlanan verileri her olay için kullanmak ne zaman ayrıntılar dahil olmak üzere klavye olayları genel bir bakış sağlar.  Ayrıca bkz. [olay işleyicilerine genel bakış (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [olaylara genel bakış (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  

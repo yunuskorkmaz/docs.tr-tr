@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540510"
 ---
 # <a name="dependency-property-security"></a>Bağımlılık Özelliği Güvenliği
 Bağımlılık özellikleri genellikle ortak özellikler olarak düşünülmelidir. Doğası [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özelliği sistemin bir bağımlılık özelliği değerini hakkında güvenlik garantisi yapma olanağı engeller.  

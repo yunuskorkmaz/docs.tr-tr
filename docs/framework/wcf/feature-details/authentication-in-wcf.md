@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489117"
 ---
 # <a name="authentication-in-wcf"></a>WCF'de Kimlik Doğrulama
 Aşağıdaki konular, kimlik doğrulama, örneğin sağlayan Windows Communication Foundation (WCF), Windows kimlik doğrulaması, X.509 sertifikaları ve kullanıcı adı ve parolaları farklı mekanizmaları sayısını gösterir.  

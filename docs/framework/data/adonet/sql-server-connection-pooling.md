@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364483"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server bağlantı (ADO.NET) havuzu
 Genellikle bir veritabanı sunucusuna bağlanmayı zaman birkaç adımdan oluşur. Bir yuva veya bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma olmalıdır, kurulmalıdır bağlantı dizesi bilgilerini ayrıştırılır, bağlantı sunucu tarafından doğrulanması gerekir, denetimleri içinde kaydetme için çalıştırılması gerekir Geçerli hareket ve benzeri.  

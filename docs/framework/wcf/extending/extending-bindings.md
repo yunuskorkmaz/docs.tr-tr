@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485828"
 ---
 # <a name="extending-bindings"></a>Bağlamaları Genişletme
 Taşıma, kodlama ve bir uç noktasına bağlanmak için gereken protokolü bağlamaları belirtin. Bağlama uzantıları ve özel bağlamalar uygulama özellikleri desteklemek için gereken özel iletişim işlevselliği uygular.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364452"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tanıtım konularını aşağıdaki konumlarda bulunabilir. Bu konularda çoğunu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  

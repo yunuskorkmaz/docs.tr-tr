@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542057"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> denetim ve onun ilişkili sınıfları sağlar ortak bir çerçeve araç çubukları, durum çubukları ve menüleri kullanıcı arabirimi öğeleri birleştirme için. <xref:System.Windows.Forms.ToolStrip> denetimler araç çubukları yatay veya dikey boşluk paylaşma olanağı olduğu, yerinde etkinleştirme ve düzenleme, özel düzen ve radye, içeren zengin bir tasarım zamanı deneyimi sunar.  

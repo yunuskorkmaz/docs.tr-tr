@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541183"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalardan veritabanlarında depolanan verileri yararlanmak için kullanılmış. Belirli en düşük gereksinimleri karşıladığınızdan sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diziler ve koleksiyonlar, gibi diğer yapıları verilerde verilere erişebilir.  

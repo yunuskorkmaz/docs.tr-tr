@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540569"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
 Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullanın özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kodu çalışma zamanında belirttiğiniz karşın, bir başlangıç tarih veya saat XAML'de belirtebilirsiniz. WPF XAML ayrıştırıcısı ayrıştırılmasını işler <xref:System.DateTime> değerlerini yerleşik XAML metin sözdizimini kullanarak. Bu konuda, özelliklerini açıklanmaktadır <xref:System.DateTime> XAML metin sözdizimi.  

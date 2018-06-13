@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543253"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>Nasıl yapılır: Özel Denetim Üzerinde Mürekkep Silme
 <xref:System.Windows.Ink.IncrementalStrokeHitTester> Şu anda çizilmiş vuruşun başka bir vuruş kesiştiğinden olup olmadığını belirler.  Bir denetimi oluşturma vuruşun bölümlerini silmek bir kullanıcı sağlar, bu yararlı olur, bir kullanıcı yolu gerçekleştirebileceğiniz bir <xref:System.Windows.Controls.InkCanvas> zaman <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> ayarlanır <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  

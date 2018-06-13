@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365034"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework sağlayıcısı (WCF Veri Hizmetleri)
 Gibi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework varlık veri türü varlık ilişkisi modeli olan modelini, temel alır. Entity Framework adlandırılır varlık veri modeli uygulamaya karşı işlemleri çevirir *kavramsal model*, bir veri kaynağına karşı eşdeğer işlemlere. Bu Entity Framework ilişkisel verilere dayalı Veri Hizmetleri için ideal bir sağlayıcısı hale getirir ve Entity Framework destekleyen bir veri sağlayıcı olan herhangi bir veritabanı ile kullanılabilir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Entity Framework şu anda destekleyen veri kaynakları listesi için bkz: [üçüncü taraf sağlayıcılar için Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  

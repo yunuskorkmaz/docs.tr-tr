@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541852"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Veri Bağlama ile İlgili Arabirimler
 İle [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], uygulamanız ve çalıştığınız veri bağlama gereksinimlerine uyacak şekilde birçok farklı veri yapılarını oluşturabilirsiniz. Sağlayan veya Windows Forms'ta veri tüketen kendi sınıflarınızı oluşturmak isteyebilirsiniz. Bu nesneler verilerin kendisini yapılan değişikliklerin yapılandırılmış bir geri alma için tasarım zamanı desteği, hata denetimi, değişiklik bildirimi veya hatta desteği sağlamaya temel veri bağlamanın dışında işlevselliği ve karmaşıklık, değişen düzeylerde sunabilir.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538747"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Formları Denetimlerinden Devralma
 Varolan bir denetim işlevselliğini genişletmek istiyorsanız, varolan denetimi devralma yoluyla türetilmiş bir denetim oluşturabilirsiniz. Varolan denetimden devralırken tüm işlevleri ve bu denetim görsel özelliklerini devralır. Örneğin, devralınan bir denetim oluşturuyorsanız <xref:System.Windows.Forms.Button>, yeni denetim görünür ve act tam gibi standart bir <xref:System.Windows.Forms.Button> denetim. Sonra genişletin veya yeni denetiminiz özel yöntemleri ve özellikleri uyarlamasını aracılığıyla işlevlerini değiştirin. Bazı denetimler de devralınan denetim görsel görünümünü geçersiz kılarak değiştirebilirsiniz kendi <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  

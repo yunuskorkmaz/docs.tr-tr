@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363292"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Tek aşaması kaydetmek ve yükseltilebilir tek aşaması bildirim kullanarak en iyi duruma getirme
 Bu konu, tarafından sağlanan mekanizmaları açıklar <xref:System.Transactions> performansını iyileştirmek için altyapı.  

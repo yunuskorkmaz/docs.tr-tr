@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488276"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Nasıl yapılır: Özel WSDL İçe Aktarma
 Bu konu, özel WSDL içe aktarmayı açıklar. Özel WSDL işlemek için uygulamanız gereken <xref:System.ServiceModel.Description.IWsdlImportExtension> arabirimi.  

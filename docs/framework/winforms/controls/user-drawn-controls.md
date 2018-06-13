@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542203"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler birbirine bağlı kod kümesidir, bir kullanıcı denetimi oluşturabilirsiniz veya yukarı sıfırdan denetiminizi tasarlayabilirsiniz. Devralma bile varolan denetimden devralan bir denetim oluşturmak ve devralınan işlevselliğini eklemek için de kullanabilirsiniz. Hangi yaklaşımın kullanın, .NET Framework oluşturduğunuz herhangi bir denetim için özel bir grafik arabirim çizmek için işlevsellik sağlar.  

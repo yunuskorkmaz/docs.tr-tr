@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387867"
 ---
 # <a name="reentrancy-mda"></a>yeniden giriş MDA'sı
 `reentrancy` Yönetilen hata ayıklama Yardımcısı (MDA) girişiminde durumlarda burada yerel için yönetilen kod önceki anahtardan gerçekleştirilmediği düzenli geçiş yönetilen kod Yerelden geçiş yapılırken etkinleştirilir.  
