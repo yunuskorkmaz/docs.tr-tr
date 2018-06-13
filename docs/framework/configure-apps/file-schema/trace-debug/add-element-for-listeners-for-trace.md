@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747352"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="0cef7-102">&lt;ekleme&gt; öğesi için &lt;dinleyicileri&gt; için &lt;izleme&gt;</span><span class="sxs-lookup"><span data-stu-id="0cef7-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="0cef7-103">Bir dinleyici ekler **dinleyicileri** koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="0cef7-103">Adds a listener to the **Listeners** collection.</span></span>  

@@ -1,14 +1,6 @@
 ---
 title: ICorDebugModule::GetAssembly Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetAssembly
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b359b68c1bff91e1077afe8ccf52befe22c246b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416029"
 ---
-# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="d714d-102">ICorDebugModule::GetAssembly Metodu</span><span class="sxs-lookup"><span data-stu-id="d714d-102">ICorDebugModule::GetAssembly Method</span></span>
-<span data-ttu-id="d714d-103">Bu modül için içeren derleme alır.</span><span class="sxs-lookup"><span data-stu-id="d714d-103">Gets the containing assembly for this module.</span></span>  
+# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="0c76d-102">ICorDebugModule::GetAssembly Metodu</span><span class="sxs-lookup"><span data-stu-id="0c76d-102">ICorDebugModule::GetAssembly Method</span></span>
+<span data-ttu-id="0c76d-103">Bu modül için içeren derleme alır.</span><span class="sxs-lookup"><span data-stu-id="0c76d-103">Gets the containing assembly for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d714d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d714d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c76d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0c76d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssembly(  
@@ -46,15 +35,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d714d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d714d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0c76d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0c76d-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="d714d-106">[out] Bu modül içeren derlemenin temsil eden bir Icordebugassembly nesnesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d714d-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
+ <span data-ttu-id="0c76d-106">[out] Bu modül içeren derlemenin temsil eden bir Icordebugassembly nesnesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0c76d-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d714d-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d714d-107">Requirements</span></span>  
- <span data-ttu-id="d714d-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d714d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c76d-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0c76d-107">Requirements</span></span>  
+ <span data-ttu-id="0c76d-108">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c76d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d714d-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d714d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0c76d-109">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0c76d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d714d-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d714d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0c76d-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0c76d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d714d-111">**.NET framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d714d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0c76d-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c76d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

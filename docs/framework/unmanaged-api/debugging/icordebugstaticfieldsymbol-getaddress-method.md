@@ -1,29 +1,20 @@
 ---
-title: "ICorDebugStaticFieldSymbol::GetAddress yöntemi"
-ms.custom: 
+title: ICorDebugStaticFieldSymbol::GetAddress yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5382a0b04a8a4d5adf9745d21b5bbcf629da1df3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b877bde80b59b7d2074e4d799653dedd5aaacf39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419259"
 ---
-# <a name="icordebugstaticfieldsymbolgetaddress-method"></a><span data-ttu-id="83905-102">ICorDebugStaticFieldSymbol::GetAddress yöntemi</span><span class="sxs-lookup"><span data-stu-id="83905-102">ICorDebugStaticFieldSymbol::GetAddress Method</span></span>
-<span data-ttu-id="83905-103">Statik bir alana adresini alır.</span><span class="sxs-lookup"><span data-stu-id="83905-103">Gets the address of a static field.</span></span>  
+# <a name="icordebugstaticfieldsymbolgetaddress-method"></a><span data-ttu-id="0e5ce-102">ICorDebugStaticFieldSymbol::GetAddress yöntemi</span><span class="sxs-lookup"><span data-stu-id="0e5ce-102">ICorDebugStaticFieldSymbol::GetAddress Method</span></span>
+<span data-ttu-id="0e5ce-103">Statik bir alana adresini alır.</span><span class="sxs-lookup"><span data-stu-id="0e5ce-103">Gets the address of a static field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83905-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83905-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e5ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0e5ce-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddress(  
@@ -31,24 +22,24 @@ HRESULT GetAddress(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="83905-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="83905-105">Parameters</span></span>  
- <span data-ttu-id="83905-106">pRVA</span><span class="sxs-lookup"><span data-stu-id="83905-106">pRVA</span></span>  
- <span data-ttu-id="83905-107">[out] Statik alanının göreli sanal adres (RAV) için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="83905-107">[out] A pointer to the relative virtual address (RVA) of the static field.</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0e5ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0e5ce-105">Parameters</span></span>  
+ <span data-ttu-id="0e5ce-106">pRVA</span><span class="sxs-lookup"><span data-stu-id="0e5ce-106">pRVA</span></span>  
+ <span data-ttu-id="0e5ce-107">[out] Statik alanının göreli sanal adres (RAV) için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0e5ce-107">[out] A pointer to the relative virtual address (RVA) of the static field.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="83905-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="83905-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0e5ce-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0e5ce-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="83905-109">Bu yöntem yalnızca .NET yerel ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="83905-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="0e5ce-109">Bu yöntem yalnızca .NET yerel ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="0e5ce-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83905-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="83905-110">Requirements</span></span>  
- <span data-ttu-id="83905-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83905-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0e5ce-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0e5ce-110">Requirements</span></span>  
+ <span data-ttu-id="0e5ce-111">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e5ce-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83905-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83905-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0e5ce-112">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0e5ce-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="83905-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83905-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0e5ce-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e5ce-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83905-114">**.NET framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83905-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="0e5ce-114">**.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e5ce-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83905-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="83905-115">See Also</span></span>  
- [<span data-ttu-id="83905-116">ICorDebugStaticFieldSymbol Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83905-116">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
- [<span data-ttu-id="83905-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="83905-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0e5ce-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0e5ce-115">See Also</span></span>  
+ [<span data-ttu-id="0e5ce-116">ICorDebugStaticFieldSymbol Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0e5ce-116">ICorDebugStaticFieldSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
+ [<span data-ttu-id="0e5ce-117">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="0e5ce-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
