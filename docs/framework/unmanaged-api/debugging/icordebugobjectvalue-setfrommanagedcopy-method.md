@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectValue::SetFromManagedCopy Yöntemi"
-ms.custom: 
+title: ICorDebugObjectValue::SetFromManagedCopy Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.SetFromManagedCopy
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2cee9108-a58d-48a8-b7d4-6beb6da3f4bb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e1b0a9789dc0b5082bee33835cd5eaf40d87005d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a2905caa011df4f0699445bafb8523c6b7e9eb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413871"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="9b921-102">ICorDebugObjectValue::SetFromManagedCopy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9b921-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="9b921-103">`SetFromManagedCopy`Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="9b921-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="9b921-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="9b921-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="20600-102">ICorDebugObjectValue::SetFromManagedCopy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="20600-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="20600-103">`SetFromManagedCopy` Kullanımdan kalktı.</span><span class="sxs-lookup"><span data-stu-id="20600-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="20600-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="20600-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b921-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9b921-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20600-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="20600-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -46,9 +35,9 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9b921-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9b921-106">Requirements</span></span>  
- <span data-ttu-id="9b921-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b921-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20600-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="20600-106">Requirements</span></span>  
+ <span data-ttu-id="20600-107">**Başlık:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="20600-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b921-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b921-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="20600-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="20600-108">See Also</span></span>  
     
  

@@ -1,14 +1,6 @@
 ---
-title: "IAssemblyCache::QueryAssemblyInfo Yöntemi"
-ms.custom: 
+title: IAssemblyCache::QueryAssemblyInfo Yöntemi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAssemblyCache.QueryAssemblyInfo
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66e09f805b120239eef764b8cd61835e713e236c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6935a72bb99e636b3732958ee88ad224b401513b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430726"
 ---
-# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="e76b3-102">IAssemblyCache::QueryAssemblyInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e76b3-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
-<span data-ttu-id="e76b3-103">Belirtilen derleme hakkında istenen verileri alır.</span><span class="sxs-lookup"><span data-stu-id="e76b3-103">Gets the requested data about the specified assembly.</span></span>  
+# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="448e8-102">IAssemblyCache::QueryAssemblyInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="448e8-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
+<span data-ttu-id="448e8-103">Belirtilen derleme hakkında istenen verileri alır.</span><span class="sxs-lookup"><span data-stu-id="448e8-103">Gets the requested data about the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e76b3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e76b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="448e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="448e8-104">Syntax</span></span>  
   
 ```  
 HRESULT QueryAssemblyInfo (  
@@ -48,26 +37,26 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e76b3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e76b3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="448e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="448e8-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="e76b3-106">[in] Fusion.idl içinde tanımlı bayrak.</span><span class="sxs-lookup"><span data-stu-id="e76b3-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="e76b3-107">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="e76b3-107">The following values are supported:</span></span>  
+ <span data-ttu-id="448e8-106">[in] Fusion.idl içinde tanımlı bayrak.</span><span class="sxs-lookup"><span data-stu-id="448e8-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="448e8-107">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="448e8-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="e76b3-108">QUERYASMINFO_FLAG_VALIDATE (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="e76b3-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
+-   <span data-ttu-id="448e8-108">QUERYASMINFO_FLAG_VALIDATE (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="448e8-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
   
--   <span data-ttu-id="e76b3-109">QUERYASMINFO_FLAG_GETSIZE (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="e76b3-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
+-   <span data-ttu-id="448e8-109">QUERYASMINFO_FLAG_GETSIZE (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="448e8-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="e76b3-110">[in] Veriler alınır derleme adı.</span><span class="sxs-lookup"><span data-stu-id="e76b3-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
+ <span data-ttu-id="448e8-110">[in] Veriler alınır derleme adı.</span><span class="sxs-lookup"><span data-stu-id="448e8-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
   
  `pAsmInfo`  
- <span data-ttu-id="e76b3-111">[içinde out] Bir [assembly_ınfo](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) yapısı derleme hakkındaki verileri içerir.</span><span class="sxs-lookup"><span data-stu-id="e76b3-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
+ <span data-ttu-id="448e8-111">[içinde out] Bir [assembly_ınfo](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) yapısı derleme hakkındaki verileri içerir.</span><span class="sxs-lookup"><span data-stu-id="448e8-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e76b3-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e76b3-112">Requirements</span></span>  
- <span data-ttu-id="e76b3-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e76b3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="448e8-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="448e8-112">Requirements</span></span>  
+ <span data-ttu-id="448e8-113">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="448e8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e76b3-114">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="e76b3-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="448e8-114">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="448e8-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="e76b3-115">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e76b3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="448e8-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="448e8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e76b3-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="e76b3-116">See Also</span></span>  
- [<span data-ttu-id="e76b3-117">IAssemblyCache Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e76b3-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="448e8-116">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="448e8-116">See Also</span></span>  
+ [<span data-ttu-id="448e8-117">IAssemblyCache Arabirimi</span><span class="sxs-lookup"><span data-stu-id="448e8-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

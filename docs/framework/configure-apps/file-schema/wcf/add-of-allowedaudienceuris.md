@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746634"
 ---
 # <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="a608b-102">&lt;allowedAudienceUris&gt; &lt;eklemesi&gt;</span><span class="sxs-lookup"><span data-stu-id="a608b-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
 <span data-ttu-id="a608b-103">Hedef URI ekler, <xref:System.IdentityModel.Tokens.SamlSecurityToken> güvenlik belirteci hedef olarak kullanılabilir için geçerli olarak kabul edilmesi için bir <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> örneği.</span><span class="sxs-lookup"><span data-stu-id="a608b-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  

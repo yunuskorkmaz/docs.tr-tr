@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744986"
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a><span data-ttu-id="e7642-102">&lt;giriş&gt; &lt;ekleme&gt;</span><span class="sxs-lookup"><span data-stu-id="e7642-102">&lt;add&gt; of &lt;entries&gt;</span></span>
 <span data-ttu-id="e7642-103">Önceden tanımlanmış bir istemci uç noktası bir filtre eşlemeleri bir yönlendirme girişi temsil eder.</span><span class="sxs-lookup"><span data-stu-id="e7642-103">Represents a routing entry that maps a filter to a client endpoint that was previously defined.</span></span> <span data-ttu-id="e7642-104">Bu filtre ile eşleşen iletileri bu hedefe gönderilir.</span><span class="sxs-lookup"><span data-stu-id="e7642-104">Messages matching this filter will be sent to this destination.</span></span>  
