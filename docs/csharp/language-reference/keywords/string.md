@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172168"
 ---
 # <a name="string-c-reference"></a><span data-ttu-id="3aeaa-102">string (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="3aeaa-102">string (C# Reference)</span></span>
 <span data-ttu-id="3aeaa-103">`string` Türü sıfır veya daha fazla Unicode karakterler dizisini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3aeaa-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="3aeaa-104">`string` bir diğer adı için <xref:System.String> .NET içinde.</span><span class="sxs-lookup"><span data-stu-id="3aeaa-104">`string` is an alias for <xref:System.String> in .NET.</span></span>  

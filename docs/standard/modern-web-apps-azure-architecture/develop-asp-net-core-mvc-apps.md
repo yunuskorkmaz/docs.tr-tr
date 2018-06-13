@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592411"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a><span data-ttu-id="04570-103">ASP.NET Core MVC uygulamaları geliştirme</span><span class="sxs-lookup"><span data-stu-id="04570-103">Develop ASP.NET Core MVC Apps</span></span>
 

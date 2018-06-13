@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171523"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ab5e0-102">|= İşleci (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ab5e0-102">|= Operator (C# Reference)</span></span>
 <span data-ttu-id="ab5e0-103">OR atama işleci.</span><span class="sxs-lookup"><span data-stu-id="ab5e0-103">The OR assignment operator.</span></span>  

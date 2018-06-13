@@ -18,6 +18,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235888"
 ---
 # <a name="class-statement-visual-basic"></a><span data-ttu-id="2b355-102">Class Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b355-102">Class Statement (Visual Basic)</span></span>
 <span data-ttu-id="2b355-103">Bir sınıfın adını bildirir ve tanımını değişkenleri, özellikleri, olayları ve sınıfı oluşur yordamları sunar.</span><span class="sxs-lookup"><span data-stu-id="2b355-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  

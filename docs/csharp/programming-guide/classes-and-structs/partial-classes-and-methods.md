@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172444"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a><span data-ttu-id="04ac7-102">Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="04ac7-102">Partial Classes and Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="04ac7-103">Tanımını bölme mümkündür bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md), bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) veya iki veya daha fazla kaynak dosyalar üzerinde bir yöntem.</span><span class="sxs-lookup"><span data-stu-id="04ac7-103">It is possible to split the definition of a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md), an [interface](../../../csharp/language-reference/keywords/interface.md) or a method over two or more source files.</span></span> <span data-ttu-id="04ac7-104">Her kaynak dosya türü veya yöntemi tanımının bir bölüm içerir ve uygulamanın derlendiğinde tüm bölümleri birleştirilir.</span><span class="sxs-lookup"><span data-stu-id="04ac7-104">Each source file contains a section of the type or method definition, and all parts are combined when the application is compiled.</span></span>  
