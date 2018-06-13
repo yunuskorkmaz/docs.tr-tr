@@ -1,39 +1,28 @@
 ---
-title: "Türsüz istek-yanıt"
-ms.custom: 
+title: Türsüz istek-yanıt
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f11f142912bf08ce00dbcd3ff4aeba939a996a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef1e20bbeaf5f7a0d9eae4b921628482714c6163
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505348"
 ---
-# <a name="untyped-requestreply"></a><span data-ttu-id="d3e5d-102">Yazılmamış İstek/Yanıt</span><span class="sxs-lookup"><span data-stu-id="d3e5d-102">Untyped Request/Reply</span></span>
-<span data-ttu-id="d3e5d-103">Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
+# <a name="untyped-requestreply"></a><span data-ttu-id="9be0d-102">Yazılmamış İstek/Yanıt</span><span class="sxs-lookup"><span data-stu-id="9be0d-102">Untyped Request/Reply</span></span>
+<span data-ttu-id="9be0d-103">Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3e5d-104">Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="9be0d-104">Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.</span><span class="sxs-lookup"><span data-stu-id="9be0d-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="d3e5d-105">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="d3e5d-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="d3e5d-106">Hizmet sözleşmesi ileti türünde bir bağımsız değişken olarak alan ve bir ileti döndüren bir işlemi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="d3e5d-107">İşlemi, ileti gövdesi Topla hesaplamak için gerekli tüm verileri toplar ve ardından Dönüş iletisinin gövdesinde olarak toplamı gönderir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
+ <span data-ttu-id="9be0d-105">Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="9be0d-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="9be0d-106">Hizmet sözleşmesi ileti türünde bir bağımsız değişken olarak alan ve bir ileti döndüren bir işlemi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="9be0d-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="9be0d-107">İşlemi, ileti gövdesi Topla hesaplamak için gerekli tüm verileri toplar ve ardından Dönüş iletisinin gövdesinde olarak toplamı gönderir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```  
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- <span data-ttu-id="d3e5d-108">Hizmet işlemi giriş iletisinde geçirilen dizisi alır ve toplamı hesaplar.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="d3e5d-109">Bir yanıt iletisi göndermek için örnek uygun ileti sürümü ve eylem ile yeni bir ileti oluşturur ve onun gövdesi olarak hesaplanan toplam ekler.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="d3e5d-110">Aşağıdaki örnek kod bu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-110">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="9be0d-108">Hizmet işlemi giriş iletisinde geçirilen dizisi alır ve toplamı hesaplar.</span><span class="sxs-lookup"><span data-stu-id="9be0d-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="9be0d-109">Bir yanıt iletisi göndermek için örnek uygun ileti sürümü ve eylem ile yeni bir ileti oluşturur ve onun gövdesi olarak hesaplanan toplam ekler.</span><span class="sxs-lookup"><span data-stu-id="9be0d-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="9be0d-110">Aşağıdaki örnek kod bu gösterir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-110">The following sample code demonstrates this.</span></span>  
   
 ```  
 public Message ComputeSum(Message request)  
@@ -54,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- <span data-ttu-id="d3e5d-111">İstemci tarafından oluşturulan kodu kullanır [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) uzak hizmet için bir proxy oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="d3e5d-112">Bir istek iletisi göndermek için istemci temel alınan kanalında bağlıdır ileti sürüm olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="d3e5d-113">Bu nedenle, yeni bir oluşturur <xref:System.ServiceModel.OperationContextScope> oluşturur oluşturulduğu, proxy kanal kapsamlı bir <xref:System.ServiceModel.OperationContext> içinde doldurulmuş doğru ileti sürümü ile kendi `OutgoingMessageHeaders.MessageVersion` özelliği.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="d3e5d-114">İstemci istek iletisi gövdesi olarak Giriş dizisinin geçirir ve ardından çağırır `ComputeSum` proxy.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="d3e5d-115">İstemci ardından geçirilen erişerek girişleri toplamını alır `GetBody<T>` yanıt iletisi yöntemi.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="d3e5d-116">Aşağıdaki örnek kod bu gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-116">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="9be0d-111">İstemci tarafından oluşturulan kodu kullanır [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) uzak hizmet için bir proxy oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="9be0d-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="9be0d-112">Bir istek iletisi göndermek için istemci temel alınan kanalında bağlıdır ileti sürüm olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9be0d-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="9be0d-113">Bu nedenle, yeni bir oluşturur <xref:System.ServiceModel.OperationContextScope> oluşturur oluşturulduğu, proxy kanal kapsamlı bir <xref:System.ServiceModel.OperationContext> içinde doldurulmuş doğru ileti sürümü ile kendi `OutgoingMessageHeaders.MessageVersion` özelliği.</span><span class="sxs-lookup"><span data-stu-id="9be0d-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="9be0d-114">İstemci istek iletisi gövdesi olarak Giriş dizisinin geçirir ve ardından çağırır `ComputeSum` proxy.</span><span class="sxs-lookup"><span data-stu-id="9be0d-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="9be0d-115">İstemci ardından geçirilen erişerek girişleri toplamını alır `GetBody<T>` yanıt iletisi yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9be0d-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="9be0d-116">Aşağıdaki örnek kod bu gösterir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-116">The following sample code demonstrates this.</span></span>  
   
 ```  
 using (new OperationContextScope(client.InnerChannel))  
@@ -72,7 +61,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="d3e5d-117">Bu örnek bir Web barındırılan bir örnektir ve bu nedenle yalnızca istemci yürütülebilir çalıştırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="d3e5d-118">İstemci üzerinde örnek çıktı verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-118">The following is the sample output on the client.</span></span>  
+ <span data-ttu-id="9be0d-117">Bu örnek bir Web barındırılan bir örnektir ve bu nedenle yalnızca istemci yürütülebilir çalıştırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="9be0d-118">İstemci üzerinde örnek çıktı verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-118">The following is the sample output on the client.</span></span>  
   
 ```  
 Prompt>Client.exe  
@@ -81,23 +70,23 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="d3e5d-119">Bu, bir örnek Web barındırılan ve bağlantıyı derlemeyi ve çalıştırmayı örnek nasıl görmek için 3. adım sağlanan kontrol örnektir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
+ <span data-ttu-id="9be0d-119">Bu, bir örnek Web barındırılan ve bağlantıyı derlemeyi ve çalıştırmayı örnek nasıl görmek için 3. adım sağlanan kontrol örnektir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d3e5d-120">Ayarlamak için derleme ve örnek çalıştırın</span><span class="sxs-lookup"><span data-stu-id="d3e5d-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="9be0d-120">Ayarlamak için derleme ve örnek çalıştırın</span><span class="sxs-lookup"><span data-stu-id="9be0d-120">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="d3e5d-121">Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d3e5d-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="9be0d-121">Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9be0d-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="d3e5d-122">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d3e5d-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="9be0d-122">Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9be0d-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="d3e5d-123">Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="d3e5d-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="9be0d-123">Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="9be0d-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="d3e5d-124">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d3e5d-125">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-125">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="9be0d-124">Örnekler, makinenizde zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="9be0d-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9be0d-125">Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.</span><span class="sxs-lookup"><span data-stu-id="9be0d-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="d3e5d-126">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm indirmek için [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d3e5d-127">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-127">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="9be0d-126">Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri.</span><span class="sxs-lookup"><span data-stu-id="9be0d-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9be0d-127">Bu örnek aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="9be0d-127">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
   
-## <a name="see-also"></a><span data-ttu-id="d3e5d-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d3e5d-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9be0d-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9be0d-128">See Also</span></span>
