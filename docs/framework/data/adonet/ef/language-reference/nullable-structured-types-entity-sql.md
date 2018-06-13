@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762393"
 ---
 # <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="99096-102">Boş değer atanabilir yapılandırılmış türler (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="99096-102">Nullable Structured Types (Entity SQL)</span></span>
 <span data-ttu-id="99096-103">A `null` yapılandırılmış bir tür örneği olan mevcut bir örneği.</span><span class="sxs-lookup"><span data-stu-id="99096-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="99096-104">Bu, tüm özellikleri olan mevcut örneğinden farklı değildir `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="99096-104">This is different from an existing instance in which all properties have `null` values.</span></span>  

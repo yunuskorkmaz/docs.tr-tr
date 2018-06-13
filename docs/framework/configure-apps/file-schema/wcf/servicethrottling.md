@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750173"
 ---
 # <a name="ltservicethrottlinggt"></a><span data-ttu-id="49172-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="49172-102">&lt;serviceThrottling&gt;</span></span>
 <span data-ttu-id="49172-103">Windows Communication Foundation (WCF) hizmetini azaltma mekanizmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="49172-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  

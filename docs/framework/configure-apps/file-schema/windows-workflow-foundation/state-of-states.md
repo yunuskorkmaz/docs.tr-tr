@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756858"
 ---
 # <a name="ltstategt-of-ltstatesgt"></a><span data-ttu-id="c7a3f-102">&lt;durumu&gt; , &lt;durumları&gt;</span><span class="sxs-lookup"><span data-stu-id="c7a3f-102">&lt;state&gt; of &lt;states&gt;</span></span>
 <span data-ttu-id="c7a3f-103">Bir izleme kaydını yayınlaması gerektiğini abone etkinlik durumunu içeren bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="c7a3f-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  

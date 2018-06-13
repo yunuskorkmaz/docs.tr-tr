@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761785"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a><span data-ttu-id="5b066-102">Nasıl yapılır: iç içe geçmiş koleksiyonları döndüren bir sorgu yürütme</span><span class="sxs-lookup"><span data-stu-id="5b066-102">How to: Execute a Query that Returns Nested Collections</span></span>
 <span data-ttu-id="5b066-103">Bu komut kavramsal model karşı kullanarak yürütme gösterilmiştir bir <xref:System.Data.EntityClient.EntityCommand> nesne ve kullanarak iç içe toplama sonuçları almak nasıl bir <xref:System.Data.EntityClient.EntityDataReader>.</span><span class="sxs-lookup"><span data-stu-id="5b066-103">This shows how to execute a command against a conceptual model by using an <xref:System.Data.EntityClient.EntityCommand> object, and how to retrieve the nested collection results by using an <xref:System.Data.EntityClient.EntityDataReader>.</span></span>  

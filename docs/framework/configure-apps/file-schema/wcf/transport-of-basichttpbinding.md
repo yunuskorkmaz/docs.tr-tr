@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751275"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a><span data-ttu-id="ef05c-102">&lt;basicHttpBinding&gt; &lt;taşıma&gt;</span><span class="sxs-lookup"><span data-stu-id="ef05c-102">&lt;transport&gt; of &lt;basicHttpBinding&gt;</span></span>
 <span data-ttu-id="ef05c-103">HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikler tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ef05c-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  

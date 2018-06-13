@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750953"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a><span data-ttu-id="427e5-102">&lt;localClientSettings&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="427e5-102">&lt;localClientSettings&gt; element</span></span>
 <span data-ttu-id="427e5-103">Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="427e5-103">Specifies the security settings of a local client for this binding.</span></span>  

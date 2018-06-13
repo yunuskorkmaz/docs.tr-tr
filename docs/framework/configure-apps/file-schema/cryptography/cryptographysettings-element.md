@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751941"
 ---
 # <a name="ltcryptographysettingsgt-element"></a><span data-ttu-id="b9395-102">&lt;cryptographySettings&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="b9395-102">&lt;cryptographySettings&gt; Element</span></span>
 <span data-ttu-id="b9395-103">Şifreleme ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="b9395-103">Contains cryptography settings.</span></span>  

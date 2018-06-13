@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750407"
 ---
 # <a name="ltservicecredentialsgt"></a><span data-ttu-id="da400-102">&lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="da400-102">&lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="da400-103">Hizmet ve istemci kimlik doğrulama ile ilgili ayarları kimlik doğrulaması kullanmak için kimlik bilgilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="da400-103">Specifies the credential to be used in authenticating the service and the client credential validation-related settings.</span></span>  

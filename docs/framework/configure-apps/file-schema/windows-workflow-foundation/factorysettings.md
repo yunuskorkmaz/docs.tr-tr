@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756468"
 ---
 # <a name="ltfactorysettingsgt"></a><span data-ttu-id="040d2-102">&lt;factorySettings&gt;</span><span class="sxs-lookup"><span data-stu-id="040d2-102">&lt;factorySettings&gt;</span></span>
 <span data-ttu-id="040d2-103">Kanal üreteci önbellek ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="040d2-103">Specifies the settings of the channel factory cache.</span></span>  
