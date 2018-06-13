@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760615"
 ---
 # <a name="sorting-and-filtering-data"></a><span data-ttu-id="14d5e-102">Verileri sıralama ve filtreleme</span><span class="sxs-lookup"><span data-stu-id="14d5e-102">Sorting and Filtering Data</span></span>
 <span data-ttu-id="14d5e-103"><xref:System.Data.DataView> Sıralama ve filtreleme verileri çeşitli yollar sağlar bir <xref:System.Data.DataTable>:</span><span class="sxs-lookup"><span data-stu-id="14d5e-103">The <xref:System.Data.DataView> provides several ways of sorting and filtering data in a <xref:System.Data.DataTable>:</span></span>  

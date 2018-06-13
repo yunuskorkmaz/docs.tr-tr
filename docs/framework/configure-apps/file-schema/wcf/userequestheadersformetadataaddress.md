@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766705"
 ---
 # <a name="ltuserequestheadersformetadataaddressgt"></a><span data-ttu-id="acebe-102">&lt;useRequestHeadersForMetadataAddress&gt;</span><span class="sxs-lookup"><span data-stu-id="acebe-102">&lt;useRequestHeadersForMetadataAddress&gt;</span></span>
 <span data-ttu-id="acebe-103">Meta veri adresi istek iletisi üst bilgilerinden alınmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="acebe-103">Enables the retrieval of metadata address information from the request message headers.</span></span>  

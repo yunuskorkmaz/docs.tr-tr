@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764729"
 ---
 # <a name="floating-point-numbers"></a><span data-ttu-id="1ef52-102">Kayan nokta sayıları</span><span class="sxs-lookup"><span data-stu-id="1ef52-102">Floating-Point Numbers</span></span>
 <span data-ttu-id="1ef52-103">Bu konuda kayan nokta sayıları ile çalışırken, geliştiricilerin sık karşılaşırsanız sorunlardan bazıları açıklanmaktadır [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1ef52-103">This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="1ef52-104">Bu sorunları şekilde bilgisayarlar kayan nokta sayıları depolamak ve gibi belirli bir sağlayıcıya özgü olmayan neden olduğu <xref:System.Data.SqlClient> veya <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="1ef52-104">These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:System.Data.SqlClient> or <xref:System.Data.OracleClient>.</span></span>  

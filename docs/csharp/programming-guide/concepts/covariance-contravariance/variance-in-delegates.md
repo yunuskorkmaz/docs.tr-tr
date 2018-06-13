@@ -1,27 +1,18 @@
 ---
 title: Temsilcilerde varyans (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c29d4ddbf5f1f9ae80535a8a97651b296f3c1fb3
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326234"
 ---
-# <a name="variance-in-delegates-c"></a><span data-ttu-id="94f37-102">Temsilcilerde varyans (C#)</span><span class="sxs-lookup"><span data-stu-id="94f37-102">Variance in Delegates (C#)</span></span>
-<span data-ttu-id="94f37-103">.NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# temsilci türleriyle eşleşen farkı desteği sunmuştur.</span><span class="sxs-lookup"><span data-stu-id="94f37-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C#.</span></span> <span data-ttu-id="94f37-104">Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler .</span><span class="sxs-lookup"><span data-stu-id="94f37-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="94f37-105">Bu, hem genel hem de genel olmayan temsilciler içerir.</span><span class="sxs-lookup"><span data-stu-id="94f37-105">This includes both generic and non-generic delegates.</span></span>  
+# <a name="variance-in-delegates-c"></a><span data-ttu-id="a1524-102">Temsilcilerde varyans (C#)</span><span class="sxs-lookup"><span data-stu-id="a1524-102">Variance in Delegates (C#)</span></span>
+<span data-ttu-id="a1524-103">.NET framework 3.5 yöntem imzaları bulunan tüm temsilcileri C# temsilci türleriyle eşleşen farkı desteği sunmuştur.</span><span class="sxs-lookup"><span data-stu-id="a1524-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C#.</span></span> <span data-ttu-id="a1524-104">Yalnızca imzalar eşleşen yöntemleri, aynı zamanda daha fazla türetilmiş tür (kovaryans) veya temsilci türü tarafından belirtilenden daha az türetilmiş türler (kontravaryans) sahip parametreleri kabul döndüren yöntemler için atayabilirsiniz Bunun anlamı temsilciler .</span><span class="sxs-lookup"><span data-stu-id="a1524-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="a1524-105">Bu, hem genel hem de genel olmayan temsilciler içerir.</span><span class="sxs-lookup"><span data-stu-id="a1524-105">This includes both generic and non-generic delegates.</span></span>  
   
- <span data-ttu-id="94f37-106">Örneğin, iki sınıf ve iki temsilciler aşağıdaki kodu göz önünde bulundurun: Genel ve genel olmayan.</span><span class="sxs-lookup"><span data-stu-id="94f37-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>  
+ <span data-ttu-id="a1524-106">Örneğin, iki sınıf ve iki temsilciler aşağıdaki kodu göz önünde bulundurun: Genel ve genel olmayan.</span><span class="sxs-lookup"><span data-stu-id="a1524-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>  
   
 ```csharp  
 public class First { }  
@@ -30,7 +21,7 @@ public delegate First SampleDelegate(Second a);
 public delegate R SampleGenericDelegate<A, R>(A a);  
 ```  
   
- <span data-ttu-id="94f37-107">Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleGenericDelegate<A, R>` türleri, aşağıdaki yöntemlerden birini bu temsilcileri atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="94f37-107">When you create delegates of the `SampleDelegate` or `SampleGenericDelegate<A, R>` types, you can assign any one of the following methods to those delegates.</span></span>  
+ <span data-ttu-id="a1524-107">Temsilciler, oluşturduğunuzda `SampleDelegate` veya `SampleGenericDelegate<A, R>` türleri, aşağıdaki yöntemlerden birini bu temsilcileri atayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a1524-107">When you create delegates of the `SampleDelegate` or `SampleGenericDelegate<A, R>` types, you can assign any one of the following methods to those delegates.</span></span>  
   
 ```csharp  
 // Matching signature.  
@@ -51,7 +42,7 @@ public static Second AFirstRSecond(First first)
 { return new Second(); }  
 ```  
   
- <span data-ttu-id="94f37-108">Aşağıdaki kod örneğinde yöntem imzası ve temsilci türü arasında örtük dönüşüm gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="94f37-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>  
+ <span data-ttu-id="a1524-108">Aşağıdaki kod örneğinde yöntem imzası ve temsilci türü arasında örtük dönüşüm gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a1524-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>  
   
 ```csharp  
 // Assigning a method with a matching signature   
@@ -71,14 +62,14 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- <span data-ttu-id="94f37-109">Daha fazla örnek için bkz: [Temsilcilerde varyans (C#) kullanarak](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="94f37-109">For more examples, see [Using Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
+ <span data-ttu-id="a1524-109">Daha fazla örnek için bkz: [Temsilcilerde varyans (C#) kullanarak](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) ve [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="a1524-109">For more examples, see [Using Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="94f37-110">Genel tür parametreleri varyans</span><span class="sxs-lookup"><span data-stu-id="94f37-110">Variance in Generic Type Parameters</span></span>  
- <span data-ttu-id="94f37-111">Böylece türlerini birbirinden gerektirdiği şekilde devralınırsa, genel tür parametresi tarafından belirtilen farklı türlerine sahip genel temsilciler birbirine atanabilir .NET Framework 4 veya üstü temsilciler arasında örtük dönüştürmeye etkinleştirebilirsiniz sapması.</span><span class="sxs-lookup"><span data-stu-id="94f37-111">In .NET Framework 4 or later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>  
+## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="a1524-110">Genel tür parametreleri varyans</span><span class="sxs-lookup"><span data-stu-id="a1524-110">Variance in Generic Type Parameters</span></span>  
+ <span data-ttu-id="a1524-111">Böylece türlerini birbirinden gerektirdiği şekilde devralınırsa, genel tür parametresi tarafından belirtilen farklı türlerine sahip genel temsilciler birbirine atanabilir .NET Framework 4 veya üstü temsilciler arasında örtük dönüştürmeye etkinleştirebilirsiniz sapması.</span><span class="sxs-lookup"><span data-stu-id="a1524-111">In .NET Framework 4 or later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>  
   
- <span data-ttu-id="94f37-112">Örtük dönüştürme etkinleştirmek için açıkça bir temsilci eşdeğişken olarak genel parametreleri bildirmeniz gerekir veya kullanarak karşıtı `in` veya `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="94f37-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>  
+ <span data-ttu-id="a1524-112">Örtük dönüştürme etkinleştirmek için açıkça bir temsilci eşdeğişken olarak genel parametreleri bildirmeniz gerekir veya kullanarak karşıtı `in` veya `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a1524-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>  
   
- <span data-ttu-id="94f37-113">Aşağıdaki kod örneğinde eşdeğişken genel tür parametresi var. bir temsilci nasıl oluşturabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="94f37-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>  
+ <span data-ttu-id="a1524-113">Aşağıdaki kod örneğinde eşdeğişken genel tür parametresi var. bir temsilci nasıl oluşturabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="a1524-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>  
   
 ```csharp  
 // Type T is declared covariant by using the out keyword.  
@@ -94,9 +85,9 @@ public static void Test()
 }  
 ```  
   
- <span data-ttu-id="94f37-114">Eşleştirilecek tek farkı destek kullanırsanız, yöntemi imzalarla temsilci türleri'yı ve kullanmayın `in` ve `out` anahtar sözcüklerini bulduğunuz bazen aynı lambda ifadeleri veya yöntemleri ile temsilciler örneğini oluşturabilirsiniz, ancak yapamazsınız bir temsilci diğerine atayın.</span><span class="sxs-lookup"><span data-stu-id="94f37-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>  
+ <span data-ttu-id="a1524-114">Eşleştirilecek tek farkı destek kullanırsanız, yöntemi imzalarla temsilci türleri'yı ve kullanmayın `in` ve `out` anahtar sözcüklerini bulduğunuz bazen aynı lambda ifadeleri veya yöntemleri ile temsilciler örneğini oluşturabilirsiniz, ancak yapamazsınız bir temsilci diğerine atayın.</span><span class="sxs-lookup"><span data-stu-id="a1524-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>  
   
- <span data-ttu-id="94f37-115">Aşağıdaki kod örneğinde, `SampleGenericDelegate<String>` açıkça dönüştürülemiyor `SampleGenericDelegate<Object>`, ancak `String` devralır `Object`.</span><span class="sxs-lookup"><span data-stu-id="94f37-115">In the following code example, `SampleGenericDelegate<String>` cannot be explicitly converted to `SampleGenericDelegate<Object>`, although `String` inherits `Object`.</span></span> <span data-ttu-id="94f37-116">Genel parametresini işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="94f37-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>  
+ <span data-ttu-id="a1524-115">Aşağıdaki kod örneğinde, `SampleGenericDelegate<String>` açıkça dönüştürülemiyor `SampleGenericDelegate<Object>`, ancak `String` devralır `Object`.</span><span class="sxs-lookup"><span data-stu-id="a1524-115">In the following code example, `SampleGenericDelegate<String>` cannot be explicitly converted to `SampleGenericDelegate<Object>`, although `String` inherits `Object`.</span></span> <span data-ttu-id="a1524-116">Genel parametresini işaretleyerek bu sorunu düzeltebilirsiniz `T` ile `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a1524-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -118,55 +109,55 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="94f37-117">.NET Framework değişken sahip genel temsilciler tür parametreleri</span><span class="sxs-lookup"><span data-stu-id="94f37-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>  
- <span data-ttu-id="94f37-118">.NET framework 4 birkaç mevcut genel temsilciler genel tür parametreleri sapma desteği sunulur:</span><span class="sxs-lookup"><span data-stu-id="94f37-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="a1524-117">.NET Framework değişken sahip genel temsilciler tür parametreleri</span><span class="sxs-lookup"><span data-stu-id="a1524-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>  
+ <span data-ttu-id="a1524-118">.NET framework 4 birkaç mevcut genel temsilciler genel tür parametreleri sapma desteği sunulur:</span><span class="sxs-lookup"><span data-stu-id="a1524-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>  
   
--   <span data-ttu-id="94f37-119">`Action` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602></span><span class="sxs-lookup"><span data-stu-id="94f37-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>  
+-   <span data-ttu-id="a1524-119">`Action` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Action%601> ve <xref:System.Action%602></span><span class="sxs-lookup"><span data-stu-id="a1524-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>  
   
--   <span data-ttu-id="94f37-120">`Func` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602></span><span class="sxs-lookup"><span data-stu-id="94f37-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>  
+-   <span data-ttu-id="a1524-120">`Func` gelen Temsilciler <xref:System> ad alanı, örneğin, <xref:System.Func%601> ve <xref:System.Func%602></span><span class="sxs-lookup"><span data-stu-id="a1524-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>  
   
--   <span data-ttu-id="94f37-121"><xref:System.Predicate%601> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="94f37-121">The <xref:System.Predicate%601> delegate</span></span>  
+-   <span data-ttu-id="a1524-121"><xref:System.Predicate%601> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="a1524-121">The <xref:System.Predicate%601> delegate</span></span>  
   
--   <span data-ttu-id="94f37-122"><xref:System.Comparison%601> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="94f37-122">The <xref:System.Comparison%601> delegate</span></span>  
+-   <span data-ttu-id="a1524-122"><xref:System.Comparison%601> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="a1524-122">The <xref:System.Comparison%601> delegate</span></span>  
   
--   <span data-ttu-id="94f37-123"><xref:System.Converter%602> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="94f37-123">The <xref:System.Converter%602> delegate</span></span>  
+-   <span data-ttu-id="a1524-123"><xref:System.Converter%602> Temsilci seçme</span><span class="sxs-lookup"><span data-stu-id="a1524-123">The <xref:System.Converter%602> delegate</span></span>  
   
- <span data-ttu-id="94f37-124">Daha fazla bilgi ve örnekler için bkz: [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="94f37-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
+ <span data-ttu-id="a1524-124">Daha fazla bilgi ve örnekler için bkz: [işlev ve eylem genel temsilciler (C#) kullanarak varyansını](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="a1524-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="94f37-125">Genel temsilciler değişken türü parametrelerinde bildirme</span><span class="sxs-lookup"><span data-stu-id="94f37-125">Declaring Variant Type Parameters in Generic Delegates</span></span>  
- <span data-ttu-id="94f37-126">Genel temsilci eşdeğişken varsa veya karşıtı genel tür parametreleri, onu başvurulabilir için farklı bir *değişken Genel temsilci*.</span><span class="sxs-lookup"><span data-stu-id="94f37-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="a1524-125">Genel temsilciler değişken türü parametrelerinde bildirme</span><span class="sxs-lookup"><span data-stu-id="a1524-125">Declaring Variant Type Parameters in Generic Delegates</span></span>  
+ <span data-ttu-id="a1524-126">Genel temsilci eşdeğişken varsa veya karşıtı genel tür parametreleri, onu başvurulabilir için farklı bir *değişken Genel temsilci*.</span><span class="sxs-lookup"><span data-stu-id="a1524-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>  
   
- <span data-ttu-id="94f37-127">Genel tür parametresi bir genel temsilci eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="94f37-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="94f37-128">Eşdeğişken türü yöntem bağımsız değişkenleri bir tür değil de, yalnızca bir yöntemin dönüş türü olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="94f37-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="94f37-129">Aşağıdaki kod örneğinde eşdeğişken Genel temsilci bildirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="94f37-129">The following code example shows how to declare a covariant generic delegate.</span></span>  
+ <span data-ttu-id="a1524-127">Genel tür parametresi bir genel temsilci eşdeğişken kullanarak bildirebilirsiniz `out` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a1524-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="a1524-128">Eşdeğişken türü yöntem bağımsız değişkenleri bir tür değil de, yalnızca bir yöntemin dönüş türü olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a1524-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="a1524-129">Aşağıdaki kod örneğinde eşdeğişken Genel temsilci bildirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a1524-129">The following code example shows how to declare a covariant generic delegate.</span></span>  
   
 ```csharp  
 public delegate R DCovariant<out R>();  
 ```  
   
- <span data-ttu-id="94f37-130">Kullanarak bir genel tür parametresi karşıtı genel temsilcisi de bildirebilirsiniz `in` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="94f37-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="94f37-131">Karşıtı türü yönteminin dönüş türü olarak değil de yalnızca yöntem bağımsız değişkenleri bir tür olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="94f37-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="94f37-132">Aşağıdaki kod örneğinde karşıtı Genel temsilci bildirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="94f37-132">The following code example shows how to declare a contravariant generic delegate.</span></span>  
+ <span data-ttu-id="a1524-130">Kullanarak bir genel tür parametresi karşıtı genel temsilcisi de bildirebilirsiniz `in` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="a1524-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="a1524-131">Karşıtı türü yönteminin dönüş türü olarak değil de yalnızca yöntem bağımsız değişkenleri bir tür olarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a1524-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="a1524-132">Aşağıdaki kod örneğinde karşıtı Genel temsilci bildirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a1524-132">The following code example shows how to declare a contravariant generic delegate.</span></span>  
   
 ```csharp  
 public delegate void DContravariant<in A>(A a);  
 ```  
   
 > [!IMPORTANT]
->  <span data-ttu-id="94f37-133">`ref`, `in`, ve `out` parametreleri C# değişken işaretlenmiş olamaz.</span><span class="sxs-lookup"><span data-stu-id="94f37-133">`ref`, `in`, and `out` parameters in C# can't be marked as variant.</span></span>  
+>  <span data-ttu-id="a1524-133">`ref`, `in`, ve `out` parametreleri C# değişken işaretlenmiş olamaz.</span><span class="sxs-lookup"><span data-stu-id="a1524-133">`ref`, `in`, and `out` parameters in C# can't be marked as variant.</span></span>  
   
- <span data-ttu-id="94f37-134">Aynı temsilci, ancak farklı tür parametreleri için sapması ve Kovaryans desteklemek mümkündür.</span><span class="sxs-lookup"><span data-stu-id="94f37-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="94f37-135">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="94f37-135">This is shown in the following example.</span></span>  
+ <span data-ttu-id="a1524-134">Aynı temsilci, ancak farklı tür parametreleri için sapması ve Kovaryans desteklemek mümkündür.</span><span class="sxs-lookup"><span data-stu-id="a1524-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="a1524-135">Bu, aşağıdaki örnekte gösterilir.</span><span class="sxs-lookup"><span data-stu-id="a1524-135">This is shown in the following example.</span></span>  
   
 ```csharp  
 public delegate R DVariant<in A, out R>(A a);  
 ```  
   
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="94f37-136">Örnek oluşturma ve değişken genel temsilciler çağırma</span><span class="sxs-lookup"><span data-stu-id="94f37-136">Instantiating and Invoking Variant Generic Delegates</span></span>  
- <span data-ttu-id="94f37-137">Örneği ve yalnızca örneği ve sabit temsilciler çağırma değişken temsilciler çağırma.</span><span class="sxs-lookup"><span data-stu-id="94f37-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="94f37-138">Aşağıdaki örnekte, temsilci bir lambda ifadesi tarafından başlatılmış.</span><span class="sxs-lookup"><span data-stu-id="94f37-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="a1524-136">Örnek oluşturma ve değişken genel temsilciler çağırma</span><span class="sxs-lookup"><span data-stu-id="a1524-136">Instantiating and Invoking Variant Generic Delegates</span></span>  
+ <span data-ttu-id="a1524-137">Örneği ve yalnızca örneği ve sabit temsilciler çağırma değişken temsilciler çağırma.</span><span class="sxs-lookup"><span data-stu-id="a1524-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="a1524-138">Aşağıdaki örnekte, temsilci bir lambda ifadesi tarafından başlatılmış.</span><span class="sxs-lookup"><span data-stu-id="a1524-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>  
   
 ```csharp  
 DVariant<String, String> dvariant = (String str) => str + " ";  
 dvariant("test");  
 ```  
   
-### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="94f37-139">Değişken genel temsilciler birleştirme</span><span class="sxs-lookup"><span data-stu-id="94f37-139">Combining Variant Generic Delegates</span></span>  
- <span data-ttu-id="94f37-140">Değişken temsilciler birleştirmelisiniz değil.</span><span class="sxs-lookup"><span data-stu-id="94f37-140">You should not combine variant delegates.</span></span> <span data-ttu-id="94f37-141"><xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüşümü desteklemez ve temsilciler tam olarak aynı türünde olmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="94f37-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="94f37-142">Ya da kullanarak temsilcileri birleştirme olduğunda bu bir çalışma zamanı özel yol açabilir <xref:System.Delegate.Combine%2A> yöntemi kullanarak veya `+` aşağıdaki kod örneğinde gösterildiği gibi işleci.</span><span class="sxs-lookup"><span data-stu-id="94f37-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method or by using the `+` operator, as shown in the following code example.</span></span>  
+### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="a1524-139">Değişken genel temsilciler birleştirme</span><span class="sxs-lookup"><span data-stu-id="a1524-139">Combining Variant Generic Delegates</span></span>  
+ <span data-ttu-id="a1524-140">Değişken temsilciler birleştirmelisiniz değil.</span><span class="sxs-lookup"><span data-stu-id="a1524-140">You should not combine variant delegates.</span></span> <span data-ttu-id="a1524-141"><xref:System.Delegate.Combine%2A> Yöntemi değişken temsilci dönüşümü desteklemez ve temsilciler tam olarak aynı türünde olmasını bekler.</span><span class="sxs-lookup"><span data-stu-id="a1524-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="a1524-142">Ya da kullanarak temsilcileri birleştirme olduğunda bu bir çalışma zamanı özel yol açabilir <xref:System.Delegate.Combine%2A> yöntemi kullanarak veya `+` aşağıdaki kod örneğinde gösterildiği gibi işleci.</span><span class="sxs-lookup"><span data-stu-id="a1524-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method or by using the `+` operator, as shown in the following code example.</span></span>  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -177,10 +168,10 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 // Delegate.Combine(actStr, actObj);  
 ```  
   
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="94f37-143">Genel tür parametreleri varyans değer ve başvuru türleri</span><span class="sxs-lookup"><span data-stu-id="94f37-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>  
- <span data-ttu-id="94f37-144">Genel tür parametreleri için varyansı yalnızca başvuru türleri için desteklenir.</span><span class="sxs-lookup"><span data-stu-id="94f37-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="94f37-145">Örneğin, `DVariant<int>` örtük olarak dönüştürülemiyor `DVariant<Object>` veya `DVariant<long>`, çünkü tamsayı değer türü.</span><span class="sxs-lookup"><span data-stu-id="94f37-145">For example, `DVariant<int>` can't be implicitly converted to `DVariant<Object>` or `DVariant<long>`, because integer is a value type.</span></span>  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="a1524-143">Genel tür parametreleri varyans değer ve başvuru türleri</span><span class="sxs-lookup"><span data-stu-id="a1524-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>  
+ <span data-ttu-id="a1524-144">Genel tür parametreleri için varyansı yalnızca başvuru türleri için desteklenir.</span><span class="sxs-lookup"><span data-stu-id="a1524-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="a1524-145">Örneğin, `DVariant<int>` örtük olarak dönüştürülemiyor `DVariant<Object>` veya `DVariant<long>`, çünkü tamsayı değer türü.</span><span class="sxs-lookup"><span data-stu-id="a1524-145">For example, `DVariant<int>` can't be implicitly converted to `DVariant<Object>` or `DVariant<long>`, because integer is a value type.</span></span>  
   
- <span data-ttu-id="94f37-146">Aşağıdaki örnek, bu farkı gösterir genel tür parametreleri değer türleri için desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="94f37-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>  
+ <span data-ttu-id="a1524-146">Aşağıdaki örnek, bu farkı gösterir genel tür parametreleri değer türleri için desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="a1524-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>  
   
 ```csharp  
 // The type T is covariant.  
@@ -205,7 +196,7 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="94f37-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="94f37-147">See Also</span></span>  
- [<span data-ttu-id="94f37-148">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="94f37-148">Generics</span></span>](~/docs/standard/generics/index.md)  
- [<span data-ttu-id="94f37-149">İşlev ve eylem genel temsilciler (C#) için varyans kullanma</span><span class="sxs-lookup"><span data-stu-id="94f37-149">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [<span data-ttu-id="94f37-150">Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme</span><span class="sxs-lookup"><span data-stu-id="94f37-150">How to: Combine Delegates (Multicast Delegates)</span></span>](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="a1524-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a1524-147">See Also</span></span>  
+ [<span data-ttu-id="a1524-148">Genel Türler</span><span class="sxs-lookup"><span data-stu-id="a1524-148">Generics</span></span>](~/docs/standard/generics/index.md)  
+ [<span data-ttu-id="a1524-149">İşlev ve eylem genel temsilciler (C#) için varyans kullanma</span><span class="sxs-lookup"><span data-stu-id="a1524-149">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+ [<span data-ttu-id="a1524-150">Nasıl yapılır: temsilcileri (çok noktaya yayın temsilcileri) birleştirme</span><span class="sxs-lookup"><span data-stu-id="a1524-150">How to: Combine Delegates (Multicast Delegates)</span></span>](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

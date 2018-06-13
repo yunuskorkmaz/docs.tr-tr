@@ -20,6 +20,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32768482"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a><span data-ttu-id="01b41-102">Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma</span><span class="sxs-lookup"><span data-stu-id="01b41-102">How to: Extract a Protocol and Port Number from a URL</span></span>
 <span data-ttu-id="01b41-103">Aşağıdaki örnek, bir URL'den protokol ve bağlantı noktası numarası ayıklar.</span><span class="sxs-lookup"><span data-stu-id="01b41-103">The following example extracts a protocol and port number from a URL.</span></span>  

@@ -1,38 +1,30 @@
 ---
 title: '&#39;Her&#39; türündeki &#39; &lt;typename&gt; &#39; türü birden çok işlemlerinden uyguladığından belirsiz &#39;System.Collections.Generic.IEnumerable (Of T)&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc32096
 - bc32096
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 81cb37cc4b61fa96e64f59150d95356b2fb0a355
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8c48a7134eb8da83fb418b9aa91d55dcbe8e8bcb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590978"
 ---
-# <a name="39for-each39-on-type-39lttypenamegt39-is-ambiguous-because-the-type-implements-multiple-instantiations-of-39systemcollectionsgenericienumerableof-t39"></a><span data-ttu-id="8818e-102">&#39;Her&#39; türündeki &#39; &lt;typename&gt; &#39; türü birden çok işlemlerinden uyguladığından belirsiz &#39;System.Collections.Generic.IEnumerable (Of T)&#39;</span><span class="sxs-lookup"><span data-stu-id="8818e-102">&#39;For Each&#39; on type &#39;&lt;typename&gt;&#39; is ambiguous because the type implements multiple instantiations of &#39;System.Collections.Generic.IEnumerable(Of T)&#39;</span></span>
-<span data-ttu-id="8818e-103">A `For Each` deyimi birden fazla sahip bir yineleyici değişkeni belirtir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8818e-103">A `For Each` statement specifies an iterator variable that has more than one <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span>  
+# <a name="39for-each39-on-type-39lttypenamegt39-is-ambiguous-because-the-type-implements-multiple-instantiations-of-39systemcollectionsgenericienumerableof-t39"></a><span data-ttu-id="11b66-102">&#39;Her&#39; türündeki &#39; &lt;typename&gt; &#39; türü birden çok işlemlerinden uyguladığından belirsiz &#39;System.Collections.Generic.IEnumerable (Of T)&#39;</span><span class="sxs-lookup"><span data-stu-id="11b66-102">&#39;For Each&#39; on type &#39;&lt;typename&gt;&#39; is ambiguous because the type implements multiple instantiations of &#39;System.Collections.Generic.IEnumerable(Of T)&#39;</span></span>
+<span data-ttu-id="11b66-103">A `For Each` deyimi birden fazla sahip bir yineleyici değişkeni belirtir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="11b66-103">A `For Each` statement specifies an iterator variable that has more than one <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span>  
   
- <span data-ttu-id="8818e-104">Yineleyici değişken uygulayan bir tür olmalıdır <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> birini arabiriminde `Collections` isim [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8818e-104">The iterator variable must be of a type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface in one of the `Collections` namespaces of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="8818e-105">Her bir yapı için farklı tür bağımsız değişkeni kullanarak birden fazla oluşturulan genel arabirimi uygulamak için bir sınıf mümkündür.</span><span class="sxs-lookup"><span data-stu-id="8818e-105">It is possible for a class to implement more than one constructed generic interface, using a different type argument for each construction.</span></span> <span data-ttu-id="8818e-106">Bu sınıf yineleyici değişken için kullanılırsa, bu değişken birden fazla sahip <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8818e-106">If a class that does this is used for the iterator variable, that variable has more than one <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="8818e-107">Böyle bir durumda, Visual Basic çağrı yönetimini seçemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="8818e-107">In such a case, Visual Basic cannot choose which method to call.</span></span>  
+ <span data-ttu-id="11b66-104">Yineleyici değişken uygulayan bir tür olmalıdır <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> birini arabiriminde `Collections` isim [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="11b66-104">The iterator variable must be of a type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface in one of the `Collections` namespaces of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="11b66-105">Her bir yapı için farklı tür bağımsız değişkeni kullanarak birden fazla oluşturulan genel arabirimi uygulamak için bir sınıf mümkündür.</span><span class="sxs-lookup"><span data-stu-id="11b66-105">It is possible for a class to implement more than one constructed generic interface, using a different type argument for each construction.</span></span> <span data-ttu-id="11b66-106">Bu sınıf yineleyici değişken için kullanılırsa, bu değişken birden fazla sahip <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="11b66-106">If a class that does this is used for the iterator variable, that variable has more than one <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="11b66-107">Böyle bir durumda, Visual Basic çağrı yönetimini seçemezsiniz.</span><span class="sxs-lookup"><span data-stu-id="11b66-107">In such a case, Visual Basic cannot choose which method to call.</span></span>  
   
- <span data-ttu-id="8818e-108">**Hata Kimliği:** BC32096</span><span class="sxs-lookup"><span data-stu-id="8818e-108">**Error ID:** BC32096</span></span>  
+ <span data-ttu-id="11b66-108">**Hata Kimliği:** BC32096</span><span class="sxs-lookup"><span data-stu-id="11b66-108">**Error ID:** BC32096</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8818e-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="8818e-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="11b66-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="11b66-109">To correct this error</span></span>  
   
--   <span data-ttu-id="8818e-110">Kullanmak [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md) veya [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md) yineleyici değişken türünü arabirim tanımlama yayınlanamıyor <xref:System.Collections.IEnumerable.GetEnumerator%2A> kullanmak istediğiniz yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8818e-110">Use [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) or [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) to cast the iterator variable type to the interface defining the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method you want to use.</span></span>  
+-   <span data-ttu-id="11b66-110">Kullanmak [DirectCast işleci](../../../visual-basic/language-reference/operators/directcast-operator.md) veya [TryCast işleci](../../../visual-basic/language-reference/operators/trycast-operator.md) yineleyici değişken türünü arabirim tanımlama yayınlanamıyor <xref:System.Collections.IEnumerable.GetEnumerator%2A> kullanmak istediğiniz yöntemi.</span><span class="sxs-lookup"><span data-stu-id="11b66-110">Use [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) or [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) to cast the iterator variable type to the interface defining the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method you want to use.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8818e-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8818e-111">See Also</span></span>  
- [<span data-ttu-id="8818e-112">For Each...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="8818e-112">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [<span data-ttu-id="8818e-113">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="8818e-113">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="11b66-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="11b66-111">See Also</span></span>  
+ [<span data-ttu-id="11b66-112">For Each...Next Deyimi</span><span class="sxs-lookup"><span data-stu-id="11b66-112">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="11b66-113">Arabirimler</span><span class="sxs-lookup"><span data-stu-id="11b66-113">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

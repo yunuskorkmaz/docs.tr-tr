@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766315"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a><span data-ttu-id="27cab-102">Eşleme kavramsal Model SQL Server'a kurallı işlevleri</span><span class="sxs-lookup"><span data-stu-id="27cab-102">Conceptual Model Canonical to SQL Server Functions Mapping</span></span>
 <span data-ttu-id="27cab-103">Bu konuda nasıl kavramsal model kurallı işlevleri açıklanmaktadır karşılık gelen SQL Server işlevleri eşlenir.</span><span class="sxs-lookup"><span data-stu-id="27cab-103">This topic describes how conceptual model canonical functions map to the corresponding SQL Server functions.</span></span>  

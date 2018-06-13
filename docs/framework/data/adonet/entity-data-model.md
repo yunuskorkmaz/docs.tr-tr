@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765249"
 ---
 # <a name="entity-data-model"></a><span data-ttu-id="58a36-102">Varlık Veri Modeli</span><span class="sxs-lookup"><span data-stu-id="58a36-102">Entity Data Model</span></span>
 <span data-ttu-id="58a36-103">Varlık veri modeli (EDM) depolanan form bağımsız olarak verilerin yapısını açıklayan kavramları kümesidir.</span><span class="sxs-lookup"><span data-stu-id="58a36-103">The Entity Data Model (EDM) is a set of concepts that describe the structure of data, regardless of its stored form.</span></span> <span data-ttu-id="58a36-104">EDM varlık ilişkisi içinde 1976 Peter Chen tarafından açıklanan modelinden taşır, ancak ayrıca varlık ilişkisi modeline oluşturur ve geleneksel kullanımları genişletir.</span><span class="sxs-lookup"><span data-stu-id="58a36-104">The EDM borrows from the Entity-Relationship Model described by Peter Chen in 1976, but it also builds on the Entity-Relationship Model and extends its traditional uses.</span></span>  

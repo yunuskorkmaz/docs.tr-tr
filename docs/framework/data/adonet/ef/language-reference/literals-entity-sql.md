@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767329"
 ---
 # <a name="literals-entity-sql"></a><span data-ttu-id="ec1c5-102">Değişmez değerler (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="ec1c5-102">Literals (Entity SQL)</span></span>
 <span data-ttu-id="ec1c5-103">Bu konuda açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemek için hazır.</span><span class="sxs-lookup"><span data-stu-id="ec1c5-103">This topic describes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] support for literals.</span></span>  

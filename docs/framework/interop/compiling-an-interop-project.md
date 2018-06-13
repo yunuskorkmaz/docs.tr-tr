@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388508"
 ---
 # <a name="compiling-an-interop-project"></a><span data-ttu-id="410e9-102">Birlikte Çalışma Projesi Derleme</span><span class="sxs-lookup"><span data-stu-id="410e9-102">Compiling an Interop Project</span></span>
 <span data-ttu-id="410e9-103">İçeri aktarılan COM türlerini içeren bir veya daha fazla derlemeler başvuru COM birlikte çalışma projelerini gibi yönetilen diğer proje derlenir.</span><span class="sxs-lookup"><span data-stu-id="410e9-103">COM interop projects that reference one or more assemblies containing imported COM types are compiled like any other managed project.</span></span> <span data-ttu-id="410e9-104">Visual Studio gibi geliştirme ortamında birlikte çalışma derlemeleri başvurusu yapabilir veya komut satırı derleyicisi kullandığınızda başvurabilir.</span><span class="sxs-lookup"><span data-stu-id="410e9-104">You can reference interop assemblies in a development environment such as Visual Studio, or you can reference them when you use a command-line compiler.</span></span> <span data-ttu-id="410e9-105">Her iki durumda da, diğer proje dosyaları ile aynı dizinde birlikte çalışma derlemesi düzgün derlemek için olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="410e9-105">In either case, to compile properly, the interop assembly must be in the same directory as the other project files.</span></span>  
