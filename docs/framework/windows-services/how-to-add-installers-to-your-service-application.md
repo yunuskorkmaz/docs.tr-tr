@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514366"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
 Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilirsiniz Yükleme bileşenleri gelir. Yükleme bileşenleri bireysel bir hizmet olarak yüklendiği ve Hizmet Denetim Yöneticisi'nin hizmetinin var olduğunu bilmek istiyorum sistemdeki kaydedin. Bir hizmet uygulaması ile çalışırken, bağlantı otomatik olarak uygun yükleyicileri projenize eklemek için Özellikler penceresini seçebilirsiniz.  

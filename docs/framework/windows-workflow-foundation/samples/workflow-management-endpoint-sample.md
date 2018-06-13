@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517105"
 ---
 # <a name="workflow-management-endpoint-sample"></a>İş akışı Yönetimi uç nokta örnek
 Bu örnek, bir iş akışı denetim uç noktası oluşturmak ve iş akışları hem yerel hem de uzaktan çalıştırmak için nasıl kullanılabileceğini gösterir. Örnek bir denetim uç noktası ana bilgisayar ve istemcileri yazma nasıl oluşturulduğunu gösteren oluşturmak ve bir iş akışı örneği çalıştırmak için denetim uç noktası çağırın. İş akışı bir hizmeti değil.  

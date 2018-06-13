@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519229"
 ---
 # <a name="suspended-instance-management"></a>Askıya alınmış örnek Yönetimi
 Bu örnek, askıya alınan iş akışı örnekleri yönetmek gösterilmiştir.  İçin varsayılan eylem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> olan `AbandonAndSuspend`. Varsayılan olarak, içinde bir iş akışı örneğinden oluşturulan işlenmeyen özel durumları barındırılan yani <xref:System.ServiceModel.WorkflowServiceHost> örneği (terk) bellekten çıkarılması ve dayanıklı ve kalıcı örneğinin sürümü, askıya alındı olarak işaretlenmesine neden olacak. Askıya alınan iş akışı örneği çalıştırabilir ve onu unsuspended kadar olmaz.  

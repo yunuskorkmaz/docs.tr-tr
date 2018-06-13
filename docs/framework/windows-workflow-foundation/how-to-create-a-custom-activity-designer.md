@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520350"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma
 Özel Etkinlik tasarımcıları, bunların ilişkili etkinliklerini onlarla tasarım yüzeyi açın, tasarımcıları bırakılabilir diğer etkinlikleri ile birleştirilebilir; böylece genellikle uygulanır. Bu işlev bir özel etkinlik Tasarımcısı "isteğe bağlı bir etkinlik nereye yerleştirileceğini bırakma bölgesi" ve ayrıca tasarım yüzeyine öğelerde elde edilen koleksiyonunu yönetmenizi anlamına gelir sağlaması gerekir. Bu konuda, bu tür bir bırakma bölgesi içeren bir özel etkinlik Tasarımcısı oluşturma ve düzenleme işlevi Tasarımcı öğe koleksiyonunu yönetmek gerekli olduğunu sağlayan bir özel etkinlik Tasarımcısı oluşturma açıklanmaktadır.  

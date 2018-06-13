@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515852"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World özel etkinlik
 Birkaç temel özellikleri, Windows Workflow Foundation (basit bir özel etkinlik oluşturmak nasıl dahil olmak üzere WF), bu örnek gösterilmektedir. Bu örnekte gösterilen özelliklerden bazıları C# ve kullanarak özel bir aktivite oluşturmakta olduğunuz `in` ve `out` bağımsız değişkenler (<xref:System.Activities.InArgument> ve <xref:System.Activities.OutArgument>).  

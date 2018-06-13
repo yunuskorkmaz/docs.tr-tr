@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506894"
 ---
 # <a name="xmlreader-sample"></a>XmlReader Örneği
 XmlReader örneği kullanarak bir ileti gövdesinin işlenmesini gösteren bir <xref:System.Xml.XmlReader>. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesap makinesi hizmetinin uygular. Bir ek hizmet işlemi `Sum`, bir dizi birlikte eklenecek değerleri içeren bir ileti kabul eden eklendi. İletiyi kullanarak hizmet okuyan bir <xref:System.Xml.XmlReader>.  

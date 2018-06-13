@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511622"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF etkinlikleri akış çizelgesi
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] yürütme denetleme ve bir akış içinde dallanma için birkaç sistem tarafından sağlanan etkinlikler sağlar.  

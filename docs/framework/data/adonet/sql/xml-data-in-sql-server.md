@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358745"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server'da XML verileri
 SQL Server için .NET Framework içinde SQLXML işlevselliğini kullanıma sunar. Geliştiriciler, bir SQL Server örneğinden XML verilerine erişim, veri getirme işlemi verileri .NET Framework ortamına ve güncelleştirmeleri SQL Server'a geri gönderebilirsiniz uygulamaları yazabilirsiniz. XML verileri veri depolama da dahil olmak üzere SQL Server'da ve parametre değerlerini olarak çeşitli şekillerde veri almak için kullanılabilir. **SqlXml** .NET Framework sınıf bir XML sütununda SQL Server içinde depolanan verilerle çalışmak için istemci tarafı desteği sağlar. Daha fazla bilgi için "SQLXML yönetilen sınıflar" SQL Server Books Online'a bakın.  

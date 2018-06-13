@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513220"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Özel akış denetimi etkinlikleri oluşturma
 .Net Framework benzer şekilde programlama yapıları soyut işlev akış denetimi etkinlikleri çeşitli içerir (gibi <xref:System.Activities.Statements.Flowchart>) veya standart programlama deyimleri (gibi <xref:System.Activities.Statements.If>). Bu konu örnek projelerinden birini mimarisini açıklar [olmayan genel ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398259"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri uluslararası kaynak tanımlayıcısı desteği
 <xref:System.Uri?displayProperty=nameWithType> Sınıfı genişletilmişse uluslararası kaynak tanımlayıcısı (IRI) ve Uluslararası yapılan etki alanı adları (IDN) desteği. Bu geliştirmeler, .NET Framework 3.5, 3.0 SP1 ve 2.0 SP1'de kullanılabilir.  

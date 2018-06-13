@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358885"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Veri sağlayıcıları (WCF Veri Hizmetleri) Hizmetleri
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri olarak sunmaya yönelik birden çok sağlayıcı modellerini destekleyen bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu konu en iyi seçmenize olanak sağlamak için bilgi sağlamaktadır [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri kaynağı için sağlayıcı.  

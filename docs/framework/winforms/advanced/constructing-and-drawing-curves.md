@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520623"
 ---
 # <a name="constructing-and-drawing-curves"></a>Eğriler Oluşturma ve Çizme
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Eğriler çeşitli türlerini destekler: üç nokta, yaylar, eğriler ve Bézier eğrisi. Elips kendisini çevreleyen bir dikdörtgen tarafından tanımlanan; Yayı Başlangıç açısı ve bir tarama açısı tarafından tanımlanan bir elips bölümüdür. Kardinal eğri noktası ve gerilim parametre dizisi tarafından tanımlanan — eğri her bir dizi noktası sorunsuz geçtiği ve gerilim parametre eğri bends biçimini etkiler. Bir Bézier eğrisi iki uç nokta ile eğri denetim noktaları aracılığıyla iletmez iki denetim noktaları tarafından tanımlanan, ancak denetim noktaları yönde etkileyen ve eğri bir uç noktasından diğerine geçtikçe bükme.  

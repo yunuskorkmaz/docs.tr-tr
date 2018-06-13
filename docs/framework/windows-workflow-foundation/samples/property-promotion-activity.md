@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519931"
 ---
 # <a name="property-promotion-activity"></a>Özelliği yükseltme etkinliği
 Bu örnek tümleşen bir uçtan uca çözümü sağlar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> yükseltme özelliğini doğrudan yazma deneyimini iş akışına. Yapılandırma öğeleri, iş akışı etkinlikleri ve yükseltme özelliğini kullanımını kolaylaştırmak iş akışı uzantıları koleksiyonu sağlanır. Ayrıca, bu koleksiyonu kullanımı gösterilmiştir basit bir iş akışı örneği içerir.  

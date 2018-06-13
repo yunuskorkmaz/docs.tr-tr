@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214595"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# Derleyici Seçenekleri)
 Recurse seçeneği, belirtilen dizin (dir) veya proje dizininin tüm alt dizinlerdeki kaynak kodu dosyaları derlemek sağlar.  

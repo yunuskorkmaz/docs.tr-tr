@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397825"
 ---
 # <a name="peer-to-peer-collaboration"></a>Eşler arası işbirliği
 Eşler arası, birden fazla yalnızca istemci tabanlı bilgi işlem görevleri için Internet kenarında mevcut oldukça güçlü bilgisayarların (kişisel bilgisayarlar) kullanımını ağdır. Modern kişisel bilgisayar (PC) çok hızlı bir işlemciye, büyük bellek ve hangi hiçbiri tam e-posta ve Web'e gözatma gibi ortak bilgi işlem görevler gerçekleştirirken göstermesi büyük sabit disk vardır. Modern PC kolayca hem istemci hem de birçok türdeki uygulamayı (bir eş) sunucusu olarak çalışabilir.  

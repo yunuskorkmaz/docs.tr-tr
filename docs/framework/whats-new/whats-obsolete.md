@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514456"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Ne&#39;s .NET Framework Sınıf Kitaplığı'te eski
 .NET Framework zaman içinde değişir. Her yeni sürümü yeni türleri ve yeni işlevsellik sağlar tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değiştirin. Örneğin, bazı türleri destekledikleri teknolojisi tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelmiştir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli yeni yöntemler tarafından değiştirilen.  

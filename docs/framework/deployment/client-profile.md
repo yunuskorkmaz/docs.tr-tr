@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390142"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
 .NET istemci profili ile birlikte sağlanan .NET Framework'ün bir alt kümesidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleri ve istemci uygulamalar için iyileştirilmiştir. .NET Framework geliştirme platformu Windows, Windows Phone ve Microsoft Azure için ve bir yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerinde sağlanan iki dağıtım seçenekleri: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  

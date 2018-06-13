@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518782"
 ---
 # <a name="instance-stores"></a>Örnek depolar
 Bir örnek deposuna örneklerinin mantıksal bir kapsayıcısıdır. Örnek veri ve meta veri depolandığı yerdir. Bir örnek deposuna ayrılmış bir fiziksel depolama göstermez. Bir örnek deposuna dayanıklı bir SQL Server veritabanında veya dayanıklı olmayan durum bilgileri bellek içerebilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Örnek verileri ve meta verileri bir SQL Server 2005 veya SQL Server 2008 veritabanına kalıcı hale getirmek iş akışları sağlayan bir örnek deposuna somut bir uygulamasıdır SQL iş akışı örneği deposuna birlikte verilir. Ayrıca Windows Server App Fabric ayrıca bir örnek deposuna somut bir uygulamasını sağlar. Daha fazla bilgi için bkz: [Windows Server App Fabric örnek deposu, sorgu ve denetim sağlayıcıları](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

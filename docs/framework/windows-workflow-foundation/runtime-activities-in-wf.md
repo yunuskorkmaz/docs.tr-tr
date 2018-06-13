@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513041"
 ---
 # <a name="runtime-activities-in-wf"></a>WF etkinlikleri çalışma zamanı
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kalıcılığı ve sonlandırma gibi iş akışı çalışma zamanı özelliklerine erişmek için birkaç sistem tarafından sağlanan etkinlikler sağlar.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515856"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ ileti sorgu bağıntısı
 Bu örnek özel bir kullanılarak içerik tabanlı bağıntı bunu nasıl yapacağınızı gösterir <xref:System.ServiceModel.Dispatcher.MessageQuery> sistem tarafından sağlanan aksine uygulama <xref:System.ServiceModel.XPathMessageQuery>.  

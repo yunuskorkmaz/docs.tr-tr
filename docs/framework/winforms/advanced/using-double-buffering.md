@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523916"
 ---
 # <a name="using-double-buffering"></a>İki Kez Arabelleğe Almayı Kullanma
 Karmaşık Boyama işlemleri içeren uygulamalarınızı titreşimi azaltmak için iki kez arabelleğe alınan grafikler kullanabilirsiniz. .NET Framework çift arabelleğe alma için yerleşik destek içerir veya yönetebilir ve grafikleri elle işleme.  

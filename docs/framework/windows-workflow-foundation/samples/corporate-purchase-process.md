@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520048"
 ---
 # <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
 Bu örnek ile otomatik en iyi Teklif seçimi tekliflerinin temel Projeyi satın alma işlemi çok basit bir istek oluşturulacağını gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.  

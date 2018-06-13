@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365390"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL nesne modeli
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştirici programlama dilinde ifade nesne modeli ilişkisel veritabanı veri modeline eşlendi. Veriler üzerinde işlemler nesne modeline göre daha sonra yürütülür.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514530"
 ---
 # <a name="flowchart-workflows"></a>Akış Çizelgesi iş akışları
 Bir akış çizelgesi, programları tasarlamak için iyi bilinen bir örnektir. Akış etkinliği genellikle sıralı olmayan iş akışları uygulamak için kullanılır, ancak sıralı iş akışları için hiç kullanılabilir `FlowDecision` düğümleri kullanılır.  

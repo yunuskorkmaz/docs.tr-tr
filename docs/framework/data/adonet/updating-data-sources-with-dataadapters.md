@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365507"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Veri kaynakları ile DataAdapters güncelleştiriliyor
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı bir <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapıldı, değişiklikler içeriyor ve `DataTable` değişiklikleri alınacağı tabloyu tanımlar. Öyle değilse `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513555"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Özel Etkinlik özelliğinin bir tasarımcı denetimine bağlama
 Bir etkinlik bağımsız bir metin kutusu Tasarımcı denetimi bağlama oldukça basittir; bir etkinlik bağımsız değişkeni (örneğin, bir birleşik giriş kutusu) karmaşık bir Tasarımcı denetim bağlamayı, ancak zorluklara. Bu konu nasıl etkinlik bağımsız değişken özel etkinlik Tasarımcısı birleşik giriş kutusu denetiminde bağlanacağını açıklar.  

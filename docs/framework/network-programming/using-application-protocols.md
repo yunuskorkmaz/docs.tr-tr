@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394871"
 ---
 # <a name="using-application-protocols"></a>Uygulama protokolleri kullanma
 .NET Framework yaygın olarak kullanılan Internet uygulama protokollerini destekler. Bu bölümde kullanma hakkında bilgi içeren [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.  

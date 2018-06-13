@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757066"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView nesnesinden DataTable oluşturma
 Verileri veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> veriler, sıralama, filtre ya da aksi takdirde döndürülen verileri yeniden alma olmadan sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bu olanaklı kılar. Ayrıca, yeni bir oluşturmanız gerekiyorsa <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları ya da bir veri alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı sağlar:  

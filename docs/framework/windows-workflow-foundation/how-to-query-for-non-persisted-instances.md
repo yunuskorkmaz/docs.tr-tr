@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516168"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Nasıl yapılır: Sorgu kalıcı olmayan örnekleri için
 Bir hizmetin yeni bir örneğini oluşturulur ve hizmet tanımlı SQL iş akışı örneği deposuna davranışı vardır, hizmet ana bilgisayarı ilk giriş o hizmet örneği için örnek deposunda oluşturur. Hizmet örneği ilk kez ediyorsa, daha sonra etkinleştirme, kurtarma ve denetim için gerekli olan ek veri birlikte geçerli örneğin durumu SQL iş akışı örneği deposuna davranışı depolar.  

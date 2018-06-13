@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508205"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Bir hizmetin *uç noktası kimlik*hizmeti Web Hizmetleri Açıklama Dili (WSDL) oluşturulan bir değerdir. Herhangi bir istemciye yayılan, bu değer, hizmetin kimliğini doğrulamak için kullanılır. İstemci iletişimi için bir bitiş noktasına başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik doğrulama işlemi döndürdü gerçek değer uç noktası kimlik değerle karşılaştırır. Eşleşirlerse, istemci beklenen hizmet uç noktası başvurduğunu emin olur. Bu karşı bir koruma görür *kimlik avı* kötü amaçlı bir hizmet tarafından barındırılan bir uç nokta yönlendiren bir istemci engelleyerek.  
