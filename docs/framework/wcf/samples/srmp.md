@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805505"
 ---
 # <a name="srmp"></a><span data-ttu-id="f7395-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="f7395-102">SRMP</span></span>
 <span data-ttu-id="f7395-103">Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f7395-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

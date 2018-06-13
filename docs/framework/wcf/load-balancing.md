@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807531"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="13ccc-102">YükDengeleme</span><span class="sxs-lookup"><span data-stu-id="13ccc-102">Load Balancing</span></span>
 <span data-ttu-id="13ccc-103">Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak için bir bunları bir yük dengeli sunucu grubunda dağıtarak ölçeklendirmek için yoludur.</span><span class="sxs-lookup"><span data-stu-id="13ccc-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="13ccc-104">WCF uygulamaları teknikler, yazılım yük dengeleyici gibi Windows Ağ Yükü Dengelemesi dahil olmak üzere standart dengelemesini yanı sıra donanım tabanlı Yük Dengeleme cihazları kullanılarak Yük Dengeleme olabilir.</span><span class="sxs-lookup"><span data-stu-id="13ccc-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

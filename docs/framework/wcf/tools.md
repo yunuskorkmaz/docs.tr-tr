@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806139"
 ---
 # <a name="windows-communication-foundation-tools"></a><span data-ttu-id="2df61-102">Windows Communication Foundation Araçları</span><span class="sxs-lookup"><span data-stu-id="2df61-102">Windows Communication Foundation Tools</span></span>
 <span data-ttu-id="2df61-103">Microsoft Windows Communication Foundation (WCF) araçları oluşturmak, dağıtmak ve WCF uygulamalarını yönetmek kolaylaştırmak için tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="2df61-103">Microsoft Windows Communication Foundation (WCF) tools are designed to make it easier for you to create, deploy, and manage WCF applications.</span></span> <span data-ttu-id="2df61-104">Bu bölümde araçları hakkında ayrıntılı bilgiler içerir.</span><span class="sxs-lookup"><span data-stu-id="2df61-104">This section contains detailed information about the tools.</span></span> <span data-ttu-id="2df61-105">Araçlar desteklenmediğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="2df61-105">Please note that the tools are not supported.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807667"
 ---
 # <a name="trusted-facade-service"></a><span data-ttu-id="a8f52-102">Güvenilir Görünüm Hizmeti</span><span class="sxs-lookup"><span data-stu-id="a8f52-102">Trusted Facade Service</span></span>
 <span data-ttu-id="a8f52-103">Bu senaryo örneği başka bir Windows Communication Foundation (WCF) kullanarak bir hizmetten Arayanın kimlik bilgileri akış yapmayı gösteren güvenlik altyapısı.</span><span class="sxs-lookup"><span data-stu-id="a8f52-103">This scenario sample demonstrates how to flow caller's identity information from one service to another using Windows Communication Foundation (WCF) security infrastructure.</span></span>  

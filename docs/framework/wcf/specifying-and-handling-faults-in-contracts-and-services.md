@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806506"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a><span data-ttu-id="67671-102">Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme</span><span class="sxs-lookup"><span data-stu-id="67671-102">Specifying and Handling Faults in Contracts and Services</span></span>
 <span data-ttu-id="67671-103">Windows Communication Foundation (WCF) uygulamaları, SOAP hataya ve SOAP hataya nesneleri yönetilen özel durum nesneleri için yönetilen özel durum nesneleri eşleme tarafından hata durumları işler.</span><span class="sxs-lookup"><span data-stu-id="67671-103">Windows Communication Foundation (WCF) applications handle error situations by mapping managed exception objects to SOAP fault objects and SOAP fault objects to managed exception objects.</span></span> <span data-ttu-id="67671-104">Bu bölümdeki konular, koşul olarak özel SOAP hataları, hizmet uygulaması'nın bir parçası olarak bu tür hataları döndürmek nasıl ve nasıl böyle hatası istemciler catch hata kullanıma sunmak için sözleşmeleri tasarlamak nasıl tartışın.</span><span class="sxs-lookup"><span data-stu-id="67671-104">The topics in this section discuss how to design contracts to expose error conditions as custom SOAP faults, how to return such faults as part of service implementation, and how clients catch such faults.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803446"
 ---
 # <a name="client-interoperability"></a><span data-ttu-id="677f5-102">İstemci Birlikte Kullanılabilirliği</span><span class="sxs-lookup"><span data-stu-id="677f5-102">Client Interoperability</span></span>
 <span data-ttu-id="677f5-103">Bu bölüm, Windows Communication Foundation (WCF) ve diğer teknolojiler arasında birlikte çalışabilirlik gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="677f5-103">This section contains samples that demonstrate interoperability between Windows Communication Foundation (WCF) and other technologies.</span></span>  

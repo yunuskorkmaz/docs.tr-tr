@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804423"
 ---
 # <a name="operation-performance-counters"></a><span data-ttu-id="7ef6b-102">İşlem Performansı Sayaçları</span><span class="sxs-lookup"><span data-stu-id="7ef6b-102">Operation Performance Counters</span></span>
 <span data-ttu-id="7ef6b-103">İşlem performansı sayaçları altında bulunan `ServiceModelOperation 4.0.0.0` Performans İzleyicisi (Perfmon.exe) görüntülerken Performans nesnesi.</span><span class="sxs-lookup"><span data-stu-id="7ef6b-103">Operation performance counters are found under the `ServiceModelOperation 4.0.0.0` performance object when viewing with the Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="7ef6b-104">Her işlem tek bir örneği vardır.</span><span class="sxs-lookup"><span data-stu-id="7ef6b-104">Each operation has an individual instance.</span></span> <span data-ttu-id="7ef6b-105">Diğer bir deyişle, belirli bir sözleşme 10 işlemler varsa, 10 işlemi örnekleri bu sözleşme ile ilişkilendirilmiş.</span><span class="sxs-lookup"><span data-stu-id="7ef6b-105">That is, if a given contract has 10 operations, 10 operation counter instances are associated with that contract.</span></span> <span data-ttu-id="7ef6b-106">Nesne örneklerini şu biçimi kullanarak adlandırılır:</span><span class="sxs-lookup"><span data-stu-id="7ef6b-106">The object instances are named using the following pattern:</span></span>  

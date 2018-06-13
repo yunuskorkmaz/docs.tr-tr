@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805674"
 ---
 # <a name="discovery-binding-element-sample"></a><span data-ttu-id="f8e9f-102">Keşif Bağlama Öğesi Örneği</span><span class="sxs-lookup"><span data-stu-id="f8e9f-102">Discovery Binding Element Sample</span></span>
 <span data-ttu-id="f8e9f-103">Bu örnek, bir hizmet bulmak için bulma istemci bağlama öğesi kullanılacak gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f8e9f-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="f8e9f-104">Bu özellik, bir keşif istemcisi kanalını programlama modeli çok sezgisel hale getirme, mevcut istemci kanal yığınına eklemek için geliştiricilere sağlar.</span><span class="sxs-lookup"><span data-stu-id="f8e9f-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="f8e9f-105">İlişkili kanalı açıldığında hizmetinin adresini bulma kullanılarak çözümlenir.</span><span class="sxs-lookup"><span data-stu-id="f8e9f-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="f8e9f-106">Bu örnek aşağıdaki projeleri oluşur:</span><span class="sxs-lookup"><span data-stu-id="f8e9f-106">This sample consists of the following projects:</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810219"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a><span data-ttu-id="a814f-102">WCF Güvenliğinde Şifreleme Çevikliği</span><span class="sxs-lookup"><span data-stu-id="a814f-102">Cryptographic Agility in WCF Security</span></span>
 <span data-ttu-id="a814f-103">Bu örnek, bir şifreleme Çevik uygulamasında bir Windows Communication Foundation (WCF) istemci ve hizmet sağlamak için bir standart/özel algoritması belirtmek üzere gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a814f-103">This sample shows how to specify in a standard/custom algorithm to provide a cryptographic agile implementation in a Windows Communication Foundation (WCF) client and service.</span></span> <span data-ttu-id="a814f-104">Örnek aşağıdaki projeleri oluşur:</span><span class="sxs-lookup"><span data-stu-id="a814f-104">The sample is composed of the following projects:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806584"
 ---
 # <a name="configuration-channel-factory"></a><span data-ttu-id="aea5d-102">Yapılandırma Kanal Fabrikası</span><span class="sxs-lookup"><span data-stu-id="aea5d-102">Configuration Channel Factory</span></span>
 <span data-ttu-id="aea5d-103">Bu örnek kullanımını kapsayan <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span><span class="sxs-lookup"><span data-stu-id="aea5d-103">This sample covers the usage of the <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>.</span></span> <span data-ttu-id="aea5d-104"><xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırması merkezi yönetilmesine izin verir.</span><span class="sxs-lookup"><span data-stu-id="aea5d-104">The <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> allows central management of WCF client configuration.</span></span> <span data-ttu-id="aea5d-105">Bu ayrıca yapılandırması seçili veya uygulama etki alanı yükleme sonra saati değişti senaryolarda yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="aea5d-105">This can also be useful in scenarios in which configuration is selected or changed after the application domain load time.</span></span>  

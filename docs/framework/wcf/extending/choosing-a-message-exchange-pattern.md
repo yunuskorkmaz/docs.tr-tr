@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805895"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a><span data-ttu-id="4b07c-102">Bir İleti Değişim Deseni seçin</span><span class="sxs-lookup"><span data-stu-id="4b07c-102">Choosing a Message Exchange Pattern</span></span>
 <span data-ttu-id="4b07c-103">Özel bir taşıma yazma ilk adımı, karar vermektir *ileti exchange desenleri* (veya MEPs) geliştirme kanalı gereklidir.</span><span class="sxs-lookup"><span data-stu-id="4b07c-103">The first step in writing a custom transport is to decide which *message exchange patterns* (or MEPs) are required for the channel you are developing.</span></span> <span data-ttu-id="4b07c-104">Bu konuda seçenekleri açıklar ve çeşitli gereksinimleri açıklanır.</span><span class="sxs-lookup"><span data-stu-id="4b07c-104">This topic describes the options available and discusses the various requirements.</span></span> <span data-ttu-id="4b07c-105">Bu ilk bölümünde açıklanan kanal geliştirme görev listesindeki bir görevdir [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).</span><span class="sxs-lookup"><span data-stu-id="4b07c-105">This is the first task in the channel development task list described in [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804228"
 ---
 # <a name="windows-communication-foundation-architecture"></a><span data-ttu-id="04847-102">Windows Communication Foundation Mimarisi</span><span class="sxs-lookup"><span data-stu-id="04847-102">Windows Communication Foundation Architecture</span></span>
 <span data-ttu-id="04847-103">Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisi ana katmanları gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="04847-103">The following graphic illustrates the major layers of the Windows Communication Foundation (WCF) architecture.</span></span>  

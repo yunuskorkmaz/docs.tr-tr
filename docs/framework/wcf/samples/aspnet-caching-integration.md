@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805414"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="60a3a-102">ASP.NET Önbelleğe Alma Tümleştirmesi</span><span class="sxs-lookup"><span data-stu-id="60a3a-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="60a3a-103">Bu örnek, ASP.NET çıktı önbelleğine WCF WEB HTTP programlama modeli kullanan gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="60a3a-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="60a3a-104">Lütfen bakın [temel kaynak hizmeti](../../../../docs/framework/wcf/samples/basic-resource-service.md) kendini barındıran sürümü derinliği hizmet uygulamasında ele bu senaryo için örnek.</span><span class="sxs-lookup"><span data-stu-id="60a3a-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="60a3a-105">Bu konu ASP.NET çıktı önbelleği tümleştirme özelliğini odaklanır.</span><span class="sxs-lookup"><span data-stu-id="60a3a-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

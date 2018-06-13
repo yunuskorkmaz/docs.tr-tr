@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803841"
 ---
 # <a name="data-binding-scenarios"></a><span data-ttu-id="b0dad-102">Veri Bağlama Senaryoları</span><span class="sxs-lookup"><span data-stu-id="b0dad-102">Data Binding Scenarios</span></span>
 <span data-ttu-id="b0dad-103">Bu bölüm, Windows Communication Foundation (WCF) veri bağlama senaryoları gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b0dad-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) data binding scenarios.</span></span>  

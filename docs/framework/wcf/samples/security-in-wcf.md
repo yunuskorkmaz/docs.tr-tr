@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803877"
 ---
 # <a name="security-in-wcf"></a><span data-ttu-id="bdea1-102">WCF'de Güvenlik</span><span class="sxs-lookup"><span data-stu-id="bdea1-102">Security in WCF</span></span>
 <span data-ttu-id="bdea1-103">Bu bölüm, Windows Communication Foundation (WCF) güvenlikle ilgili örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="bdea1-103">This section contains samples relating to Windows Communication Foundation (WCF) security.</span></span>  

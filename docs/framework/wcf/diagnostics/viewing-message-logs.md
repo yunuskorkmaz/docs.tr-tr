@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802983"
 ---
 # <a name="viewing-message-logs"></a><span data-ttu-id="296e5-102">İleti Günlüklerini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="296e5-102">Viewing Message Logs</span></span>
 <span data-ttu-id="296e5-103">Bu konuda, ileti günlüklerini nasıl görüntüleyebileceğiniz açıklanır.</span><span class="sxs-lookup"><span data-stu-id="296e5-103">This topic describes how you can view message logs.</span></span>  

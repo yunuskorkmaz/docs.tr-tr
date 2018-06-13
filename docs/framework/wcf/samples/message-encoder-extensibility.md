@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804205"
 ---
 # <a name="message-encoder-extensibility"></a><span data-ttu-id="717a1-102">İleti Kodlayıcı Genişletilebilirliği</span><span class="sxs-lookup"><span data-stu-id="717a1-102">Message Encoder Extensibility</span></span>
 <span data-ttu-id="717a1-103">Bu bölüm, özel ileti kodlama gösteren örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="717a1-103">This section contains samples that demonstrate custom message encoding.</span></span>  
