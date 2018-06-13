@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217291"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 C# dildir ve geliştiricilerin çeşitli çalıştırmak güvenli ve sağlam uygulamalar oluşturmasına olanak sağlayan bir zarif ve tür kullanımı uyumlu nesne yönelimli [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamalarını, veritabanı uygulamaları ve çok daha fazla oluşturmak için C# kullanabilirsiniz. Sağlayan Visual C# Gelişmiş kod düzenleyici, uygun kullanıcı arabirimi tasarımcıları, tümleşik hata ayıklayıcı ve diğer birçok Araçlar C# diline uygulama geliştirmeyi kolaylaştırmak için ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

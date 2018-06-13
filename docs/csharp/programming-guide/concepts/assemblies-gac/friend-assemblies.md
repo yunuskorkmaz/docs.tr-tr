@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320872"
 ---
 # <a name="friend-assemblies-c"></a>Arkadaş derlemeler (C#)
 A *derlemeyi* başka bir derlemenin erişebileceği bir derleme [iç](../../../../csharp/language-reference/keywords/internal.md) türleri ve üyeleri. Derleme bir derlemeyi olarak belirlerseniz, artık işareti türleri ve bunları sırayla genel olarak üyeleri diğer derlemelerden tarafından erişilecek yok. Bu özellikle aşağıdaki senaryolarda kullanışlıdır:  

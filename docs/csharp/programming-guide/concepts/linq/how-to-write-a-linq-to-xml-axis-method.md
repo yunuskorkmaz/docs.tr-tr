@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322789"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Nasıl yapılır: bir LINQ yazma XML eksen yöntemine (C#)
 Koleksiyonlar bir XML ağacından almak için kendi eksen yöntemleri yazabilirsiniz. Bunu yapmak için en iyi yöntemleri öğelerin veya özniteliklerin bir koleksiyonu döndüren uzantı metodu yazma için biridir. Öğelerin veya özniteliklerin uygulamanızın gereksinimlerine bağlı olarak, belirli alt kümelerini döndürmek için genişletme yöntemi yazabilirsiniz.  

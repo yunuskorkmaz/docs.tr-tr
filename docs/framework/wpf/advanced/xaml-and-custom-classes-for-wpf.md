@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549324"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 Uygulanan gibi XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçeveleri destekleyen özel sınıf veya yapı birinde tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim XAML biçimlendirme kullanarak sınıfı. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlı türleri ve özel türlerinizi aynı biçimlendirme dosyası içinde genellikle XAML ad alanı öneki özel türler eşleyerek. Bu konuda bir XAML öğesi olarak kullanılabilmesi için özel bir sınıf getirmelidir gereksinimleri açıklanmaktadır.  

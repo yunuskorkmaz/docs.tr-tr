@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329390"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Örnek XML dosyası: Birleştirilmiş satınalma siparişi
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, birden çok şirketlerden farklı şekillerdeki satınalma siparişleri kümesidir. Her şirketten satın alma siparişleri ayrı ad alanlarında var.  

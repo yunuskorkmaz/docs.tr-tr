@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329176"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>XmlReader (bildirilecekse XSLT) seri hale getirme (C#)
 Kullandığınızda <xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], kullanabileceğiniz <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için bir <xref:System.Xml.XmlReader>. Öğesinden okur Modülü <xref:System.Xml.XmlReader> düğümleri XML ağacından okur ve bunları uygun şekilde işler.  

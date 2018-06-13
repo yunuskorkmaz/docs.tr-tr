@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319773"
 ---
 # <a name="how-to-sort-elements-c"></a>Nasıl yapılır: sıralama öğeleri (C#)
 Bu örnek nasıl sonuçlarını sıralar bir sorgu yazılacağını gösterir.  

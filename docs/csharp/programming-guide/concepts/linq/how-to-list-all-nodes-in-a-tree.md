@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322136"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: bir ağaç (C#) tüm düğümler listesi
 Bazen bir ağacındaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntemi veya özelliği ağaç etkilemesi öğrenme kullanışlı olabilir. Tüm düğümleri metin biçiminde listeleyen bir yaklaşım özellikle ve tam olarak ağacındaki herhangi bir düğümün tanımlayan bir XPath ifadesi oluşturmaktır.  

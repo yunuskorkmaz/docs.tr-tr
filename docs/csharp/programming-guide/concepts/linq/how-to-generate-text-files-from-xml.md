@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316484"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Nasıl yapılır: metin dosyaları oluşturmak XML'den (C#)
 Bu örnek bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyası oluşturmak nasıl gösterir.  

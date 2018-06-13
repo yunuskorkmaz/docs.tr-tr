@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320150"
 ---
 # <a name="how-to-parse-a-string-c"></a>Nasıl yapılır: bir dize (C#) ayrıştırılamıyor
 Bu konuda, bir XML ağacı C# ' ta oluşturmak için bir dize ayrıştırma gösterilmektedir.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755337"
 ---
 # <a name="transports"></a>Taşımalar
 Aktarım katmanı kanal yığının en düşük düzeyinde bulunur. Windows Communication Foundation (WCF) kullanılan ana taşımalar HTTP, HTTPS, TCP ve adlandırılmış kanallar ' dir. Bu bölümde taşımaları farklı türlerde yapılandırmanıza olanak tanıyan tüm yapılandırma öğeleri listelenir.  

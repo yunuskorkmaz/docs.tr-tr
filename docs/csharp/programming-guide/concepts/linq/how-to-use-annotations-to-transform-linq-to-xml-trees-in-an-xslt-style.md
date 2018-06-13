@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328844"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Nasıl yapılır: LINQ-XML ağaçları bir XSLT stilde (C#) dönüştürmek için ek açıklamalarını kullanma
 Ek açıklamalar, bir XML ağacının dönüşümler kolaylaştırmak için kullanılabilir.  

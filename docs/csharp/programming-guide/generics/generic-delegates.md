@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332913"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Genel Temsilciler (C# Programlama Kılavuzu)
 A [temsilci](../../../csharp/language-reference/keywords/delegate.md) kendi tür parametreleri tanımlayabilirsiniz. Kod başvurularını ne zaman gibi kapalı oluşturulan türü oluşturmak için tür bağımsız değişkeni genel temsilcisi belirtebilirsiniz genel bir sınıf örneği veya aşağıdaki örnekte gösterildiği gibi genel bir yöntemini çağırmadan:  

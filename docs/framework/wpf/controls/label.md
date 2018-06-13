@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553734"
 ---
 # <a name="label"></a>Etiketle
 <xref:System.Windows.Controls.Label> denetimleri genellikle sağladığı bilgileri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Tarihsel olarak, bir <xref:System.Windows.Controls.Label> yalnızca metin içermiştir ancak çünkü <xref:System.Windows.Controls.Label> ile birlikte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olan bir <xref:System.Windows.Controls.ContentControl>, ya da metin içerebilir veya <xref:System.Windows.UIElement>.  

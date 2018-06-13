@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547657"
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanıt olarak bir özellik değerinde bir değişiklik ortaya çeşitli olaylarını tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen yönlendirilmiş olay ve bazı durumlarda standart bir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişikliklerini genellikle ise bazı özellik değişikliklerini daha uygun bir öğe ağacı üzerinden yönlendirilir çünkü olay tanımını senaryo bağlı olarak değişir sorun nerede özelliği değiştirildi nesnesine yalnızca biri.  

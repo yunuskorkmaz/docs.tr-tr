@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325610"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Nasıl yapılır: akış dönüşümü büyük XML belgelerinin (C#)
 Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece uygulamanın bellek alanını tahmin edilebilir gerekir. Bir XML ağaç içeren çok büyük bir XML dosyası doldurmak çalışırsanız, bellek kullanımı dosyasının boyutunu orantılı (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  

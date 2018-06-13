@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319994"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Nasıl yapılır: XML yükleme bir dosyadan (C#)
 Bu konuda kullanarak bir URİ'den XML yük gösterilmektedir <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> yöntemi.  

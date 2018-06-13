@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322347"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Nasıl yapılır: Başvuru Eşitliği Testi (Kimlik) (C# Programlama Kılavuzu)
 Referans eşitlik karşılaştırmaları, türlerinizi desteklemek için hiçbir özel mantığı uygulamanız gerekmez. Bu işlev tarafından statik tüm türleri için sağlanan <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> yöntemi.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332192"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Nasıl yapılır: Arabirim Üyelerini Açıkça Uygulama (C# Programlama Kılavuzu)
 Bu örnek bildiren bir [arabirimi](../../../csharp/language-reference/keywords/interface.md), `IDimensions`ve sınıfı, bir `Box`, arabirim üyelerini açıkça uygulayan `getLength` ve `getWidth`. Üyeler arabirim örneğinin erişilen `dimensions`.  

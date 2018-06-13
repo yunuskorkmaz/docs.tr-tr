@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326725"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Ayrıntılar Office Açık XML WordprocessingML belgeleri (C#)
 Bu bölümde Office Açık XML WordprocessingML belgeleri ayrıntıları hakkında bilgi sağlar. Open XML belgesinin belge ve stil bölümlerini örnekleri gösterilir.  

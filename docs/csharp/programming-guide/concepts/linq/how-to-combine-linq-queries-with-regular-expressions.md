@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328366"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Nasıl yapılır: normal ifadeler (C#) ile LINQ sorgularını birleştirme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Text.RegularExpressions.Regex> daha karmaşık metin dizelerini eşleştirme için normal bir ifade oluşturmak için sınıfı. LINQ Sorgu tam olarak normal ifade ile arama ve sonuçları Şekil istediğiniz dosyalarda filtre kolay hale getirir.  

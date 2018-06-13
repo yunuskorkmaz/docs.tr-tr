@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328194"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Nasıl yapılır: XML (C#) için metin akış dönüştürmeleri gerçekleştirebilirsiniz
 Bir metin dosyası işleme için bir yaklaşım ise metin dosyası akışları bir genişletme yöntemi kullanarak bir defada bir satır yazmak için `yield return` oluşturun. Ardından, yavaş bir ertelenmiş şekilde metin dosyasında işler bir LINQ sorgu yazabilirsiniz. Ardından kullanırsanız <xref:System.Xml.Linq.XStreamingElement> akış çıkışı için daha sonra bir dönüşüm metin dosyasından en az bir kaynak metin dosyasının boyutunu bağımsız olarak bellek miktarını kullanır XML oluşturabilirsiniz.  

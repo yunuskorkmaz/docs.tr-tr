@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329553"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad Alanlarını Kullanma (C# Programlama Kılavuzu)
 Ad alanları, C# programları iki yolla içinde yoğun olarak kullanılır. İlk olarak, .NET Framework sınıfları birçok sınıflarından düzenlemek için ad alanları kullanın. İkincisi, kendi ad alanlarını bildirme sınıfı ve yöntemi kapsamını büyük programlama projelerinde adları denetimi yardımcı olabilir.  

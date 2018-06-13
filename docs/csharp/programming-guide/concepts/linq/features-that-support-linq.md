@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325214"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 Aşağıdaki bölümde, C# 3.0 sürümünde sunulan yeni dil yapıları tanıtır. Bu yeni özellikleri tüm ile bir dereceye kullanılsa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları, bunlar için sınırlı değildir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ve bunları yararlı bulabileceğiniz bir bağlamda kullanılabilir.  

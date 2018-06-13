@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335192"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genel Türler ve Yansıma (C# Programlama Kılavuzu)
 Ortak dil çalışma zamanı (CLR) çalışma zamanında genel tür bilgilere erişimi olduğundan, genel olmayan türleri için olduğu gibi aynı şekilde genel türler hakkında bilgi edinmek için yansıma kullanabilirsiniz. Daha fazla bilgi için bkz: [çalışma zamanı'nda genel türler](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548357"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları dokunma yanıtlamak için etkinleştirir. Örneğin, birini kullanarak bir uygulama ile etkileşim kurabilir veya dokunmatik aygıtta, bu kılavuzda taşımak kullanıcı sağlayan bir uygulama oluşturur dokunmatik gibi daha fazla parmakları yeniden boyutlandırın veya touch kullanarak tek bir nesneyi döndürme.  

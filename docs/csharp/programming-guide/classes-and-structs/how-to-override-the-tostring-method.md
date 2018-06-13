@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330713"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Nasıl yapılır: ToString Yöntemini Geçersiz Kılma (C# Programlama Kılavuzu)
 Her sınıf veya yapı C# örtük olarak devralır <xref:System.Object> sınıfı. Bu nedenle, her nesne C# alır <xref:System.Object.ToString%2A> yöntemi nesnenin dize gösterimini döndürür. Örneğin, tüm değişkenler türü `int` sahip bir `ToString` bunları içeriklerini bir dize döndürecek şekilde etkinleştirir yöntemi:  

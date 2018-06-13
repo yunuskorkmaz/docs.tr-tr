@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333898"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ-XML vs. Diğer XML teknolojileri
 Bu konuda karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aşağıdaki XML teknolojiler: <xref:System.Xml.XmlReader>, XSLT, MSXML ve XmlLite. Bu bilgiler kullanmak için hangi teknoloji karar vermenize yardımcı olabilir.  

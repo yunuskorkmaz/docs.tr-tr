@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315210"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Türü Örtük Olarak Belirlenmiş Diziler (C# Programlama Kılavuzu)
 Dizi Başlatıcı belirtilen öğelerden array örneğine tür çıkarımı yapılan örtük olarak yazılan dizisi oluşturabilirsiniz. Örtük olarak yazılan değişken kuralları örtük olarak yazılan diziler için de geçerlidir. Daha fazla bilgi için bkz: [örtük olarak yazılan yerel değişkenler](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  

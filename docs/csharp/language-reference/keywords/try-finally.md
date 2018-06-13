@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288300"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# Başvurusu)
 Kullanarak bir `finally` bloğu içinde ayrılan tüm kaynakları temizlemek bir [deneyin](../../../csharp/language-reference/keywords/try-catch.md) bloğu ve çalıştırabilirsiniz kod içinde bir özel durum oluştuğunda dahi `try` bloğu. Genellikle, bilgilerinin bir `finally` denetim ayrıldığında çalıştırmak blok bir `try` deyimi. Denetim aktarımını yürütülmesi normal yürütülmesi sonucu olarak ortaya çıkabilir bir `break`, `continue`, `goto`, veya `return` deyimi, veya bir özel durum dışında yayılmasını `try` deyimi.  

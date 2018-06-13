@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547553"
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
 Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilen veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sözdizimi. Genel kaynak kullanımı ve kaynaklardan hakkında daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından bkz [XAML kaynakları](../../../../docs/framework/wpf/advanced/xaml-resources.md).  

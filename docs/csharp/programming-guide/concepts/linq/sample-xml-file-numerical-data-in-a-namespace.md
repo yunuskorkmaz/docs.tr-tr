@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329010"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace sayısal verileri
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, toplama, ortalama ve gruplandırma sayısal verileri içerir. XML ad alanında ' dir.  

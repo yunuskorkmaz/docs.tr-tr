@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323111"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Parametreleri Geçirme (C# Programlama Kılavuzu)
 C# ' ta bağımsız değişken parametreleri değere veya başvuruya göre geçirilebilir. Başvuruya göre geçirme etkinleştirir işlevi üyeleri, yöntemler, özellikler, dizin oluşturucular, işleçler ve parametre değerini değiştirin ve bu değişikliği oluşturucular arama ortamda kalır. Bir parametre değeri değiştirmenin amacıyla başvuruya geçirmek için kullanmak `ref`, veya `out` anahtar sözcüğü. Kopyalama ancak değerini değiştirmeyi değil önleme amacıyla başvuruya geçirmek için kullanmak `in` değiştiricisi. Basitlik, yalnızca için `ref` anahtar sözcüğü, bu konudaki örnekler kullanılıyor. Arasındaki farklar hakkında daha fazla bilgi için `in`, `ref`, ve `out`, bkz: [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md), [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md), ve [ Dizileri kullanma ref ve out geçirme](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  

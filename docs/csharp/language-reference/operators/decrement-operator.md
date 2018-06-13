@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288807"
 ---
 # <a name="---operator-c-reference"></a>-- İşleci (C# Başvurusu)
 Azaltma işleci (`--`) azaltır, işlenen 1. Azaltma işleci önce veya sonra işlenen görünebilir: `--variable` ve `variable--`. İlk form bir önek azaltma işlemdir. "İndirildiği sağlandıktan sonra" işleminin sonucu işleneni değerdir. İkinci bir sonek azaltma işlemi biçimidir. "Önce" indirildiği bırakıldı işleminin sonucu işleneni değerdir.  

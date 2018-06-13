@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334762"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Boş Değer Atanabilir Türleri Kutulama (C# Programlama Kılavuzu)
 Null olmayan nesne ise, boş değer atanabilir türlerine göre nesneleri yalnızca Kutulu. Varsa <xref:System.Nullable%601.HasValue%2A> olan `false`, nesne başvurusu atandığı `null` kutulama yerine. Örneğin:  

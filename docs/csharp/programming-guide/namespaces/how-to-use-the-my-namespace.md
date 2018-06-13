@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332016"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Nasıl yapılır: Ad Alanım'ı Kullanma (C# Programlama Kılavuzu)
 <xref:Microsoft.VisualBasic.MyServices> Ad alanı (`My` Visual Basic'te) .NET Framework sınıfları, bilgisayar, uygulama, ayarları, kaynaklar vb. ile etkileşime giren kod yazmayı sağlayan bir dizi kolay ve sezgisel erişim sağlar. İlk olarak Visual Basic ile kullanılmak üzere tasarlanmış olsa da `MyServices` ad alanı, C# uygulamalarda kullanılabilir.  

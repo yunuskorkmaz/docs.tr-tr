@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320644"
 ---
 # <a name="intermediate-materialization-c"></a>Ara Materialization (C#)
 Dikkatli değilse, bazı durumlarda, büyük ölçüde, uygulamanızın bellek ve performans profili sorgularınızda koleksiyonların erken materialization neden olarak değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe oluşturan önce kendi kaynak koleksiyonu materialization neden. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak toplulukta tekrarlanan sonra tüm öğeleri sıralar ve son olarak ilk öğe verir. Bu, sıralı bir koleksiyonu ilk öğesini almak pahalı olduğunu gösterir; her öğe bundan sonra pahalı değil. Bu mantıklı: Bu sorgu işleci aksini yapmasını olanaksız olacaktır.  

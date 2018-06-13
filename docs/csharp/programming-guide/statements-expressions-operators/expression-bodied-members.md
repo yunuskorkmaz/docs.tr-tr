@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332760"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>İfade bodied üyeleri (C# programlama Kılavuzu)
 İfade gövdesi tanımları çok kısa, okunabilir bir form bir üyenin uygulamasında sağlamanıza olanak tanır. Tek bir ifade yöntemi veya özelliği gibi herhangi bir desteklenen üyesi mantığını oluşur her bir ifade gövdesi tanımı kullanabilirsiniz. Bir ifade gövdesi tanımı genel sözdizimi aşağıdaki gibidir:

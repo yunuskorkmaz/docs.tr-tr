@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334142"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme (C# Programlama Kılavuzu)
 Komut satırında bir yürütülebilir dosya için sağlanan bağımsız değişkenler isteğe bağlı bir parametre üzerinden erişilebilir `Main`. Bağımsız değişken bir dize dizisi biçiminde sağlanır. Dizideki her öğe bir bağımsız değişken içeriyor. Boşluk bağımsız değişkenler arasındaki kaldırılır. Örneğin, bu komut satırı çağrılarını kurgusal bir yürütülebilir dosyanın göz önünde bulundurun:  

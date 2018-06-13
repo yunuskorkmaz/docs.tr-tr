@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328451"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne odaklı programlama üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok şekillendirilmiş" anlamına gelir Yunanca bir sözcüktür ve iki ayrı görünüşlere sahiptir:  

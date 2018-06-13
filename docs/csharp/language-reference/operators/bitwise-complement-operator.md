@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270309"
 ---
 # <a name="-operator-c-reference"></a>~ İşleci (C# Başvurusu)
 `~` İşleci her bit ters etkisi, işlenen bir bit düzeyinde tamamlama işlemi gerçekleştirir. Bit düzeyinde tamamlama işleçleri için önceden tanımlanmış [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [uzun](../../../csharp/language-reference/keywords/long.md), ve [ulong](../../../csharp/language-reference/keywords/ulong.md).  

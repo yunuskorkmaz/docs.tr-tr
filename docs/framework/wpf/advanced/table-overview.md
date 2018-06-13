@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549376"
 ---
 # <a name="table-overview"></a>Tabloya Genel Bakış
 <xref:System.Windows.Documents.Table> Kılavuz tabanlı sunu akan belgenin içerik destekleyen bir blok düzeyinde öğedir. Bu öğenin esnekliğini çok kullanışlı hale getirir, ancak aynı zamanda anlamak ve doğru bir şekilde kullanmak için daha karmaşık kolaylaştırır.  

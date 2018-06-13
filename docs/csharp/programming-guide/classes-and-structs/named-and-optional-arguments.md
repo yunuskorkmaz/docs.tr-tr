@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326338"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Bağımsız değişkenler adlı* , belirli bir parametre için bir bağımsız değişken bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenler* bazı parametreler için bağımsız değişken atlayın olanak sağlar. Her iki tekniği yöntemleri, dizin oluşturucular, Oluşturucular ve temsilciler ile kullanılabilir.  

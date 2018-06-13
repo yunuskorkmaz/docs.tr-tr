@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325350"
 ---
 # <a name="join-operations-c"></a>Birleştirme işlemleri (C#)
 A *birleştirme* iki veri kaynağının bir veri kaynağındaki nesneleri başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerle ilişkidir.  

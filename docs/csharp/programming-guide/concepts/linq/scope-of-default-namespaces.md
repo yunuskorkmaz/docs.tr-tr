@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330102"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C# varsayılan ad alanlarını kapsamı
 XML ağacında belirtildiği şekilde varsayılan ad alanları sorgular için kapsamında değildir. Varsayılan ad alanı içinde XML varsa, yine bildirmelisiniz bir <xref:System.Xml.Linq.XNamespace> , değişken ve Sorguda kullanılacak bir tam ad yapmak için yerel ad ile birleştirerek.  

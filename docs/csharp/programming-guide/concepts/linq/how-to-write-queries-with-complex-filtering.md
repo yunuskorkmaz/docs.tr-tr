@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324817"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Nasıl yapılır: karmaşık (C#) filtreleme ile sorguları yazma
 Bazen LINQ XML sorguları karmaşık filtrelerle yazmak istiyorum. Örneğin, bir özel ad ve değer olan bir alt öğesi olan tüm öğeleri bulmak olabilir. Bu konuda, karmaşık filtreleme ile bir sorgu yazma bir örnek verir.  

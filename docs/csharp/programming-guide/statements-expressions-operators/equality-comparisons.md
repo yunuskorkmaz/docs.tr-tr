@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335254"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik Karşılaştırmaları (C# Programlama Kılavuzu)
 Bazen, eşitlik için iki değerleri karşılaştırmak gereklidir. Bazı durumlarda için test ettiğiniz *değer eşitlik*, olarak da bilinen *eşdeğer*, iki değişken tarafından bulunan değerlerin eşit olup olmadığını anlamına gelir. Diğer durumlarda, iki değişken aynı nesnesini bellekte başvurmak olup olmadığını belirlemeniz gerekir. Bu tür bir eşitlik adlı *başvuru eşitliği*, veya *kimlik*. Bu konu, bu iki tür eşitlik açıklar ve daha fazla bilgi için diğer konulara bağlantılar sağlar.  

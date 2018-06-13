@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319650"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma
 Bir derlemeyi ya da dinamik bağlantı kitaplığı (DLL) programınıza çalışma zamanında bağlanır. Derleme ve DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
