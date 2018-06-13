@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517579"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI +'daki eğrileri
 Dört noktaları tarafından belirtilen bir eğri Bézier eğrisi olduğu: iki uç noktaları (p1 ve p2) ve iki denetim noktaları (c1 ve c2). Eğri p1 başlar ve p2 sona erer. Eğri denetim noktaları aracılığıyla vermeyen, ancak denetim noktaları eğri belirli yönde çekme ve eğri bends şekilde etkileyen mıknatıs davranacak. Aşağıdaki çizimde, kendi uç noktaları ve denetim noktalarının yanı sıra Bézier eğrisi gösterir.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637380"
 ---
 # <a name="file-format-not-valid"></a>Dosya biçimi geçerli değil
 Ya da bir bileşen bir dosya yüklenmeye çalışıldı ancak dosyasındaki verilerin biçimi bileşeni ile uyumsuz veya bileşeni verileri bir dosyaya kaydet çalışıldı, ancak veri biçimi dosya formatı ile uyumsuz.  

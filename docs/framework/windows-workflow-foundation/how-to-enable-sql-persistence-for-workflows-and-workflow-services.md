@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519440"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: iş akışları ve iş akışı hizmetleri için SQL kalıcılığı etkinleştir
 Bu konuda, iş akışlarınızı kalıcılığını etkinleştirmek için SQL iş akışı örneği deposuna özelliği yapılandırmayı açıklar ve iş akışı her ikisi de program aracılığıyla bir yapılandırma dosyası kullanarak hizmetleri ve.  

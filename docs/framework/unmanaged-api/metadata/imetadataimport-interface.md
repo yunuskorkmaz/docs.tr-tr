@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449357"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport Arabirimi
 İçeri aktarma ve taşınabilir yürütülebilir (PE) dosyasından ya da bir tür kitaplığı veya tek başına, çalışma zamanı meta veri ikili gibi diğer kaynak var olan meta veri düzenleme için yöntemleri sağlar.  

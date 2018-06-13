@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548821"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 ve WPF Arasında İleti Döngüleri Paylaşma
 Bu konu ile birlikte çalışma için bir ileti döngüsü uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], varolan kullanarak ya da ileti döngüsü <xref:System.Windows.Threading.Dispatcher> veya üzerinde ayrı bir ileti döngüsü oluşturarak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodunuzun tarafında.  

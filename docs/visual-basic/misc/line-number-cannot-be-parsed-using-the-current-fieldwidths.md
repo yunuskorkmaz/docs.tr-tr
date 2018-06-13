@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637924"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Satır &lt;numarası&gt; geçerli FieldWidths kullanılarak ayrıştırılamıyor
 Belirtilen dışında genişlikleri kendi alanlarına sahip olduğundan belirtilen satır ayrıştırılamıyor.  

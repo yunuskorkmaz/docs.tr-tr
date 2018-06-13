@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523461"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Nasıl yapılır: Görüntüleri Döndürme, Yansıtma ve Eğme
 Döndürme, yansıtma ve orijinal görüntünün sol üst, sağ üst ve alt sol köşe için hedef noktalarını belirterek bir görüntü eğme. Üç hedef noktaları bir paralel kenarı özgün dikdörtgen resmin eşleştirir bir afin dönüşümü belirler.  

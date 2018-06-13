@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547205"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource Biçimlendirme Uzantısı
 İçin herhangi bir değer sağlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] önceden tanımlanan bir kaynağa başvuru bakarak özellik özniteliği. Bu kaynak için arama davranışı önceden geçerli yüklenen kaynakları arar yükleme zamanı aramasına benzer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasında yanı sıra diğer uygulama kaynakları ve kaynak değeri olarak oluşturur çalışma zamanı nesnelerindeki özellik değeri.  

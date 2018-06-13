@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549133"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikleri [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Gelişmiş tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği ve yeni metin uygulama programlama arabirimleri (API).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494234"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma
 Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfı WS-MetadataExchange (MEX) protokolünü kullanarak meta verileri indirir. Alınan meta veri dosyaları verilir bir <xref:System.ServiceModel.Description.MetadataSet> nesnesi. Döndürülen <xref:System.ServiceModel.Description.MetadataSet> nesnesini içeren koleksiyonu <xref:System.ServiceModel.Description.MetadataSection> nesneleri, her biri içeren belirli meta veriler dialect ve bir tanımlayıcı. Döndürülen meta veri dosyaları için yazabilir veya Web Hizmetleri Açıklama Dili (WSDL) belgeleri döndürülen meta veri içeriyorsa, meta verileri kullanarak içeri aktarabilirsiniz <xref:System.ServiceModel.Description.WsdlImporter>.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522908"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 Temel formlardan devralarak yeni Windows Forms oluşturma en iyi çabalarınız bunu gerektiren her zaman bir form tamamen yeniden sürecinde geçmeden çoğaltmak için kullanışlı bir yoludur.  

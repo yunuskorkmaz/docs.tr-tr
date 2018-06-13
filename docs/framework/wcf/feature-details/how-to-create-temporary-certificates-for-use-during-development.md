@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495373"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 Güvenli hizmeti veya Windows Communication Foundation (WCF) kullanan istemci geliştirirken, genellikle bir kimlik bilgisi olarak kullanılacak bir X.509 sertifikası sağlamak gereklidir. Sertifika genellikle bilgisayar güvenilen kök sertifika yetkilileri deposunda bulunan kök yetkisine sahip bir sertifika zinciri parçasıdır. Bir sertifika zinciri sahip genellikle kök yetkilisi kuruluşunuz ya da iş birimi olduğu sertifikalar kümesini kapsam sağlar. Bu geliştirme anında benzetmek için güvenlik gereksinimlerini karşılamak için iki sertifika oluşturabilirsiniz. İlk olan otomatik olarak imzalanan bir sertifika olduğundan güvenilen kök sertifika yetkilileri deposunda yerleştirilir ve ikinci sertifikayla birinciden oluşturulur ve yerel makine konumunun kişisel deposunda ya kişisel deposuna yerleştirilir Geçerli kullanıcı konumu. Bu konuda kullanarak bu iki sertifika oluşturmak için adımlarda size yol [sertifika oluşturma Aracı (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), tarafından sağlanan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
