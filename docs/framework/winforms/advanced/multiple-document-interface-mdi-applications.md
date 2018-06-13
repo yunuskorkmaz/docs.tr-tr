@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523974"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Çoklu Belge Arabirimi (MDI) Uygulamaları
 Birden çok belge arabirimi (MDI) uygulamaları, kendi penceresinde görüntülenen her belgeyle aynı anda birden çok belgeleri görüntülemek etkinleştirir. MDI uygulamaları genellikle windows veya belgeler arasında geçiş yapmak için alt menüler pencere Menü öğesiyle sahiptir.  

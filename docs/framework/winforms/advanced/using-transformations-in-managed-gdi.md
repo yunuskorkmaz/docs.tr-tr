@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523802"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Yönetilen GDI+'da Dönüştürmeleri Kullanma
 Afin dönüşümler döndürme, ölçekleme, yansıtma, yamultma ve çevirme içerir. İçinde [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> sınıfı Vektör çizimleri, görüntüler ve metin afin dönüşümler gerçekleştirmek için temeli sağlar.  

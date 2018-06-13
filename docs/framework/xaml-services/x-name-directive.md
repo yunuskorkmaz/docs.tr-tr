@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565856"
 ---
 # <a name="xname-directive"></a>x:Name Yönergesi
 XAML isim alanı XAML tanımlanan öğelerinde benzersiz olarak tanımlar. Çerçeveler API'leri sağlayın ya da XAML oluşturulan nesne grafiği çalışma zamanında erişme davranışlarını uygulamak XAML ad kapsamları ve kendi benzersizlik modelleri örneklenen nesnelere uygulanabilir.  

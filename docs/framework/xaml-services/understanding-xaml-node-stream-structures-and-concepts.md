@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566658"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 XAML düğümü akışı tasarım kavramı XAML okuyucuları ve .NET Framework XAML hizmetlerinde uygulandığı şekilde XAML yazıcılarının temel alır. XAML düğümü akışı XAML düğüm kümesinin kavramsallaştırılması ' dir. Bu kavramsallaştırılması, XAML işlemci XAML düğüm ilişkilerde yapısını aynı anda anlatılmaktadır. Herhangi bir zamanda yalnızca bir geçerli kaydı veya geçerli konumu bir açık XAML düğümü akışı var ve yalnızca bilgi kullanılabilir o konumdan API pek çok görünüşünün rapor. XAML düğümü akışı geçerli düğümünde bir nesne, bir üye ya da bir değer olacak şekilde açıklanabilir. XAML düğümü akışı XAML düşünerek XAML okuyucuları XAML yazıcılarının ile iletişim kurabilmesini ve görüntülemek, etkileşimde veya bir yükleme yolu veya kaydetme sırasında XAML düğüm akış içeriğini değiştirmek bir programı etkinleştirmek XAML içerir yolu işlemi. XAML okuyucu ve yazıcı API tasarım ve XAML düğüm akış kavram önceki ilgili okuyucu ve yazıcı tasarımları ve kavramları, benzer gibi [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ve <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sınıfları. Bu konu, XAML düğüm akış kavramları açıklar ve XAML Beyanları XAML düğüm düzeyinde etkileşimde yordamları yazma biçimini açıklar.  

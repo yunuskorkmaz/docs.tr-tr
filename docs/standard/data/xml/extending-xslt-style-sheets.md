@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568829"
 ---
 # <a name="extending-xslt-style-sheets"></a>XSLT stil sayfaları genişletme
 Bu bölümde XSLT işlevselliği genişletmek için farklı yöntemler açıklanmaktadır. Uzantı nesneleri veya kullanarak parametreler ekleyebilirsiniz <xref:System.Xml.Xsl.XsltArgumentList> sınıfı. Uzantı nesneleri veya parametreleri stil sayfası içinden çağrılamaz. Ayrıca, aynı zamanda komut dosyası blokları stil sayfasına kullanarak eklenebilir `msxsl:script` öğesi.  

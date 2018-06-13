@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568556"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>CLR türlerine XML veri türleri eşleme
 Aşağıdaki tabloda, varsayılan eşleme XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasında açıklanmaktadır.  

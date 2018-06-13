@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568114"
 ---
 # <a name="enumeration-format-strings"></a>Numaralandırma Biçimi Dizeleri
 Kullanabileceğiniz <xref:System.Enum.ToString%2A?displayProperty=nameWithType> sayısal, onaltılık veya bir numaralandırma üyesine dize değerini temsil eden yeni bir dize nesnesi oluşturmak için yöntemi. Bu yöntem biçimlendirme döndürmesini istediğiniz değeri belirtmek için dizeleri numaralandırması birini alır.  

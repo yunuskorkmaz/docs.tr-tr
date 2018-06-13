@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525275"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Formları TabControl ile Sekme Ekleme ve Kaldırma
 Yerleştirdiğinizde bir <xref:System.Windows.Forms.TabControl> denetim formunuzda, iki sekme varsayılan olarak içerir. Ekleyebilir veya sekmeler Tasarımcısı'nı kullanarak kaldırabilirsiniz.  

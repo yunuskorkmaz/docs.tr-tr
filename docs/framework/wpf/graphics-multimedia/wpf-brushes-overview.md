@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566606"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Fırça tarafından boyandığında çünkü ekranda görünen her şeyi görünür olur. Örneğin, bir fırça bir düğme, metin ön ve şeklin dolgu arka plan açıklamak için kullanılır. Bu konu ile Boyama kavramlarını tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyamak etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] nesneler herhangi bir şeyin desenleri ve görüntüleri karmaşık kümesi için basit, düz renk ile.  

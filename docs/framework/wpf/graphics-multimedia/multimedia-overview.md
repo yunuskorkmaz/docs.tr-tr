@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566437"
 ---
 # <a name="multimedia-overview"></a>Multimedyaya Genel Bakış
 Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ses ve video kullanıcı deneyimini geliştirmek için uygulamalarınıza tümleştirmenize olanak sağlar. Bu konu multimedya özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

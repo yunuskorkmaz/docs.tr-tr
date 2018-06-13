@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551155"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> iki içerik özelliği vardır: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> ve <xref:System.Windows.Controls.Decorator.Child%2A>. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Özelliği tanımlar <xref:System.Windows.UIElement> madde işareti olarak kullanılacak. <xref:System.Windows.Controls.Decorator.Child%2A> Özelliği tanımlayan bir <xref:System.Windows.UIElement> madde işareti ile görsel olarak hizalar.  
