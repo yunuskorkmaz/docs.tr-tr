@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803734"
 ---
 # <a name="basic-resource-service"></a><span data-ttu-id="08b7b-102">Temel Kaynak Hizmeti</span><span class="sxs-lookup"><span data-stu-id="08b7b-102">Basic Resource Service</span></span>
 <span data-ttu-id="08b7b-103">Bu örnek alma destekleyen müşteriler koleksiyonunu sunar Windows Communication Foundation (WCF) REST programlama modeli kullanarak bir HTTP tabanlı hizmet uygulamak, ekleme, silme ve değiştirme işlemlerini gösterir.</span><span class="sxs-lookup"><span data-stu-id="08b7b-103">This sample demonstrates how to implement a HTTP-based service using the Windows Communication Foundation (WCF) REST Programming model that exposes a collection of customers that supports the retrieve, add, delete and replace operations.</span></span> <span data-ttu-id="08b7b-104">Bu örnek 2 bileşenleri - kendini barındıran WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bunu çağrılar bir konsol uygulaması (program.cs) oluşur.</span><span class="sxs-lookup"><span data-stu-id="08b7b-104">This sample consists of 2 components - a self-hosted WCF HTTP service (Service.cs) and a console application (program.cs) that creates the service and makes calls to it.</span></span>  

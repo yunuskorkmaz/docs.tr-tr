@@ -12,6 +12,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472851"
 ---
 # <a name="-pathmap-c-compiler-options"></a><span data-ttu-id="a1bfd-102">-pathmap (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="a1bfd-102">-pathmap (C# Compiler Options)</span></span>
 

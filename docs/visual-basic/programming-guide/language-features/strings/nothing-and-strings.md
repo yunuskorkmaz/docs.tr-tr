@@ -1,34 +1,25 @@
 ---
 title: Visual Basic'de Dizeler ve Nothing
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d7693e712884a500495e4573900e7d9a049c2879
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d03781209f0f9b021d540bd251c6c6025ad21422
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647200"
 ---
-# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="bc01e-102">Visual Basic'de Dizeler ve Nothing</span><span class="sxs-lookup"><span data-stu-id="bc01e-102">Nothing and Strings in Visual Basic</span></span>
-<span data-ttu-id="bc01e-103">Visual Basic çalışma zamanı ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] değerlendirmek `Nothing` farklı dizelere geldiğinde.</span><span class="sxs-lookup"><span data-stu-id="bc01e-103">The Visual Basic runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
+# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="ce94f-102">Visual Basic'de Dizeler ve Nothing</span><span class="sxs-lookup"><span data-stu-id="ce94f-102">Nothing and Strings in Visual Basic</span></span>
+<span data-ttu-id="ce94f-103">Visual Basic çalışma zamanı ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] değerlendirmek `Nothing` farklı dizelere geldiğinde.</span><span class="sxs-lookup"><span data-stu-id="ce94f-103">The Visual Basic runtime and the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="bc01e-104">Visual Basic çalışma zamanı ve .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bc01e-104">Visual Basic Runtime and the .NET Framework</span></span>  
- <span data-ttu-id="bc01e-105">Aşağıdaki örnek göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="bc01e-105">Consider the following example:</span></span>  
+## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="ce94f-104">Visual Basic çalışma zamanı ve .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ce94f-104">Visual Basic Runtime and the .NET Framework</span></span>  
+ <span data-ttu-id="ce94f-105">Aşağıdaki örnek göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="ce94f-105">Consider the following example:</span></span>  
   
  [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
- <span data-ttu-id="bc01e-106">Visual Basic çalışma zamanı genellikle değerlendirir `Nothing` boş bir dize olarak ("").</span><span class="sxs-lookup"><span data-stu-id="bc01e-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="bc01e-107">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ancak desteklemez ve üzerinde bir dize işlemi gerçekleştirmek için bir girişimde her bir özel durum oluşturur `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="bc01e-107">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
+ <span data-ttu-id="ce94f-106">Visual Basic çalışma zamanı genellikle değerlendirir `Nothing` boş bir dize olarak ("").</span><span class="sxs-lookup"><span data-stu-id="ce94f-106">The Visual Basic runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="ce94f-107">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ancak desteklemez ve üzerinde bir dize işlemi gerçekleştirmek için bir girişimde her bir özel durum oluşturur `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="ce94f-107">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc01e-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bc01e-108">See Also</span></span>  
- [<span data-ttu-id="bc01e-109">Visual Basic'de dizelere giriş</span><span class="sxs-lookup"><span data-stu-id="bc01e-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="ce94f-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ce94f-108">See Also</span></span>  
+ [<span data-ttu-id="ce94f-109">Visual Basic'de dizelere giriş</span><span class="sxs-lookup"><span data-stu-id="ce94f-109">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

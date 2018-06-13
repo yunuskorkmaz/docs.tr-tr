@@ -1,27 +1,18 @@
 ---
-title: "Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)"
-ms.custom: 
+title: 'Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5bd22edc4513c2b4facec3d60ca397b12478a9c6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4a0d16013ba85eace6cca374f2f284c4a6e39f69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644907"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="7cb9a-102">Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="7cb9a-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
-<span data-ttu-id="7cb9a-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="7cb9a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7cb9a-104">Tipik satın alma siparişi dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="7cb9a-104">This file is a typical purchase order.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="6be7e-102">Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="6be7e-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="6be7e-103">Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.</span><span class="sxs-lookup"><span data-stu-id="6be7e-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="6be7e-104">Tipik satın alma siparişi dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="6be7e-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a><span data-ttu-id="7cb9a-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="7cb9a-105">PurchaseOrder.xml</span></span>  
+## <a name="purchaseorderxml"></a><span data-ttu-id="6be7e-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="6be7e-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -60,5 +51,5 @@ ms.lasthandoff: 10/18/2017
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7cb9a-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="7cb9a-106">See Also</span></span>  
- [<span data-ttu-id="7cb9a-107">Örnek XML belgeleri (LINQ-XML)</span><span class="sxs-lookup"><span data-stu-id="7cb9a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="6be7e-106">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6be7e-106">See Also</span></span>  
+ [<span data-ttu-id="6be7e-107">Örnek XML Belgeleri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6be7e-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
