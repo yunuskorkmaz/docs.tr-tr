@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472509"
 ---
 # <a name="c-reference"></a><span data-ttu-id="14622-102">C# Başvurusu</span><span class="sxs-lookup"><span data-stu-id="14622-102">C# Reference</span></span>
 <span data-ttu-id="14622-103">Bu bölümde, C# anahtar sözcükleri, işleçler, özel karakterler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları hakkında başvuru bilgileri sağlar.</span><span class="sxs-lookup"><span data-stu-id="14622-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

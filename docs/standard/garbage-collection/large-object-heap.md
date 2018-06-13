@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457417"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a><span data-ttu-id="19574-102">Windows sistemlerinde büyük nesne yığın</span><span class="sxs-lookup"><span data-stu-id="19574-102">The large object heap on Windows systems</span></span>
 

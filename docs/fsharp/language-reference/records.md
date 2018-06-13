@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549613"
 ---
 # <a name="records"></a><span data-ttu-id="9f6ca-103">Kayıtlar</span><span class="sxs-lookup"><span data-stu-id="9f6ca-103">Records</span></span>
 

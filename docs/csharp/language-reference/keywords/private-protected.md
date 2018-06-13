@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457257"
 ---
 # <a name="private-protected-c-reference"></a><span data-ttu-id="d3f09-102">Özel korumalı (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="d3f09-102">private protected (C# Reference)</span></span>
 <span data-ttu-id="d3f09-103">`private protected` Anahtar sözcüğü birleşimi olan bir üye erişim değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="d3f09-103">The `private protected` keyword combination is a member access modifier.</span></span> <span data-ttu-id="d3f09-104">Özel bir korumalı üye içeren sınıfından ancak kendi içeren derleme içinde yalnızca türetilmiş türler tarafından erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="d3f09-104">A private protected member is accessible by types derived from the containing class, but only within its containing assembly.</span></span> <span data-ttu-id="d3f09-105">Bir karşılaştırması `private protected` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="d3f09-105">For a comparison of `private protected` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 

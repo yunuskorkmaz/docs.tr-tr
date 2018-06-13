@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457962"
 ---
 # <a name="methods"></a><span data-ttu-id="33e6f-103">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="33e6f-103">Methods</span></span> #
 

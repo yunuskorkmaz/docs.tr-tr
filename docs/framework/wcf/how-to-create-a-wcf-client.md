@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806279"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a><span data-ttu-id="3beda-102">Nasıl yapılır: Bir Windows Communication Foundation İstemcisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3beda-102">How to: Create a Windows Communication Foundation Client</span></span>
 <span data-ttu-id="3beda-103">Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevleri dördüncü budur.</span><span class="sxs-lookup"><span data-stu-id="3beda-103">This is the fourth of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="3beda-104">Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.</span><span class="sxs-lookup"><span data-stu-id="3beda-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  

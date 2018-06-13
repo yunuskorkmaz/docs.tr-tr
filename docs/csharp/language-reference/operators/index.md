@@ -23,6 +23,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457615"
 ---
 # <a name="c-operators"></a><span data-ttu-id="79ea0-102">C# İşleçleri</span><span class="sxs-lookup"><span data-stu-id="79ea0-102">C# Operators</span></span>
 <span data-ttu-id="79ea0-103">C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirmek için hangi işlemleri belirtin simgelerdir birçok işleçleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="79ea0-103">C# provides many operators, which are symbols that specify which operations (math, indexing, function call, etc.) to perform in an expression.</span></span> <span data-ttu-id="79ea0-104">Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) kullanıcı tanımlı bir tür uygulandığında anlamları değiştirmek için çok sayıda işleci.</span><span class="sxs-lookup"><span data-stu-id="79ea0-104">You can [overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) many operators to change their meaning when applied to a user-defined type.</span></span>  

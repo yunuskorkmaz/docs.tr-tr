@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457381"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="b81bf-102">Tür parametreleri (C# programlama Kılavuzu) kısıtlamaları</span><span class="sxs-lookup"><span data-stu-id="b81bf-102">Constraints on type parameters (C# Programming Guide)</span></span>
 

@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo2::GetCodeInfo2 Metodu
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.GetCodeInfo2
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b211ba79de7454361b44c6e9852ad6698c2e71c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7db9b5af9b8bb8419573ef90ddf8beef697cb5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457506"
 ---
-# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="ca695-102">ICorProfilerInfo2::GetCodeInfo2 Metodu</span><span class="sxs-lookup"><span data-stu-id="ca695-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
-<span data-ttu-id="ca695-103">Yerel kod belirtilen ile ilişkili kapsam alır `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="ca695-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
+# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="aaf64-102">ICorProfilerInfo2::GetCodeInfo2 Metodu</span><span class="sxs-lookup"><span data-stu-id="aaf64-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
+<span data-ttu-id="aaf64-103">Yerel kod belirtilen ile ilişkili kapsam alır `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="aaf64-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca695-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ca695-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aaf64-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aaf64-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeInfo2(  
@@ -49,37 +38,37 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ca695-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ca695-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="aaf64-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aaf64-105">Parameters</span></span>  
  `functionID`  
- <span data-ttu-id="ca695-106">[in] Yerel kod ilişkilendirildiği işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="ca695-106">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="aaf64-106">[in] Yerel kod ilişkilendirildiği işlevi kimliği.</span><span class="sxs-lookup"><span data-stu-id="aaf64-106">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `cCodeInfos`  
- <span data-ttu-id="ca695-107">[in] Boyutunu `codeInfos` dizi.</span><span class="sxs-lookup"><span data-stu-id="ca695-107">[in] The size of the `codeInfos` array.</span></span>  
+ <span data-ttu-id="aaf64-107">[in] Boyutunu `codeInfos` dizi.</span><span class="sxs-lookup"><span data-stu-id="aaf64-107">[in] The size of the `codeInfos` array.</span></span>  
   
  `pcCodeInfos`  
- <span data-ttu-id="ca695-108">[out] Toplam sayısını gösteren bir işaretçi [cor_prf_code_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapıları kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ca695-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
+ <span data-ttu-id="aaf64-108">[out] Toplam sayısını gösteren bir işaretçi [cor_prf_code_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) yapıları kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="aaf64-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
   
  `codeInfos`  
- <span data-ttu-id="ca695-109">[out] Çağıran tarafından sağlanan arabellek.</span><span class="sxs-lookup"><span data-stu-id="ca695-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="ca695-110">Metodu döndükten sonra bir dizi içerir `COR_PRF_CODE_INFO` yapıları, yerel kod bloğunu her biri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ca695-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
+ <span data-ttu-id="aaf64-109">[out] Çağıran tarafından sağlanan arabellek.</span><span class="sxs-lookup"><span data-stu-id="aaf64-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="aaf64-110">Metodu döndükten sonra bir dizi içerir `COR_PRF_CODE_INFO` yapıları, yerel kod bloğunu her biri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="aaf64-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca695-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ca695-111">Remarks</span></span>  
- <span data-ttu-id="ca695-112">Kapsam artan Microsoft Ara dili (MSIL) uzaklığı düzende sıralanır.</span><span class="sxs-lookup"><span data-stu-id="ca695-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aaf64-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aaf64-111">Remarks</span></span>  
+ <span data-ttu-id="aaf64-112">Kapsam artan Microsoft Ara dili (MSIL) uzaklığı düzende sıralanır.</span><span class="sxs-lookup"><span data-stu-id="aaf64-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
   
- <span data-ttu-id="ca695-113">Sonra `GetCodeInfo2` döndürür, doğrulamalısınız `codeInfos` arabellek tüm içerecek şekilde büyük `COR_PRF_CODE_INFO` yapıları.</span><span class="sxs-lookup"><span data-stu-id="ca695-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="ca695-114">Bunu yapmak için değeri ile karşılaştırın `cCodeInfos` değeriyle `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="ca695-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="ca695-115">Varsa `cCodeInfos` boyutu tarafından ayrılmış bir `COR_PRF_CODE_INFO` yapısıdır küçüktür `pcCodeInfos`, daha geniş bir ayırma `codeInfos` arabellek, güncelleştirme `cCodeInfos` yeni, büyük boyutu ve çağrı `GetCodeInfo2` yeniden.</span><span class="sxs-lookup"><span data-stu-id="ca695-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="aaf64-113">Sonra `GetCodeInfo2` döndürür, doğrulamalısınız `codeInfos` arabellek tüm içerecek şekilde büyük `COR_PRF_CODE_INFO` yapıları.</span><span class="sxs-lookup"><span data-stu-id="aaf64-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="aaf64-114">Bunu yapmak için değeri ile karşılaştırın `cCodeInfos` değeriyle `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="aaf64-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="aaf64-115">Varsa `cCodeInfos` boyutu tarafından ayrılmış bir `COR_PRF_CODE_INFO` yapısıdır küçüktür `pcCodeInfos`, daha geniş bir ayırma `codeInfos` arabellek, güncelleştirme `cCodeInfos` yeni, büyük boyutu ve çağrı `GetCodeInfo2` yeniden.</span><span class="sxs-lookup"><span data-stu-id="aaf64-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
   
- <span data-ttu-id="ca695-116">Alternatif olarak, ilk çağırabilirsiniz `GetCodeInfo2` sıfır uzunluklu ile `codeInfos` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="ca695-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="ca695-117">Ardından ayarlayabilirsiniz `codeInfos` arabellek boyutu için döndürülen değer `pcCodeInfos`, boyutuna çarpılan bir `COR_PRF_CODE_INFO` yapısı ve çağrı `GetCodeInfo2` yeniden.</span><span class="sxs-lookup"><span data-stu-id="ca695-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="aaf64-116">Alternatif olarak, ilk çağırabilirsiniz `GetCodeInfo2` sıfır uzunluklu ile `codeInfos` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="aaf64-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="aaf64-117">Ardından ayarlayabilirsiniz `codeInfos` arabellek boyutu için döndürülen değer `pcCodeInfos`, boyutuna çarpılan bir `COR_PRF_CODE_INFO` yapısı ve çağrı `GetCodeInfo2` yeniden.</span><span class="sxs-lookup"><span data-stu-id="aaf64-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca695-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ca695-118">Requirements</span></span>  
- <span data-ttu-id="ca695-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca695-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aaf64-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aaf64-118">Requirements</span></span>  
+ <span data-ttu-id="aaf64-119">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aaf64-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca695-120">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ca695-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="aaf64-120">**Başlık:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="aaf64-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ca695-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca695-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aaf64-121">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aaf64-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ca695-122">**.NET framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca695-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="aaf64-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aaf64-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca695-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="ca695-123">See Also</span></span>  
- [<span data-ttu-id="ca695-124">GetCodeInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ca695-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)  
- [<span data-ttu-id="ca695-125">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ca695-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [<span data-ttu-id="ca695-126">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="ca695-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="ca695-127">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="ca695-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="aaf64-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="aaf64-123">See Also</span></span>  
+ [<span data-ttu-id="aaf64-124">GetCodeInfo3 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aaf64-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)  
+ [<span data-ttu-id="aaf64-125">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aaf64-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
+ [<span data-ttu-id="aaf64-126">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="aaf64-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="aaf64-127">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="aaf64-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

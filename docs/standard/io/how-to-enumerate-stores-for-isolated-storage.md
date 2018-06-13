@@ -1,13 +1,7 @@
 ---
-title: "Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma"
-ms.custom: 
+title: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,28 +13,24 @@ helpviewer_keywords:
 - isolated storage, enumerating stores
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7c4fa63c5c7f966831a55c9103c9ba58cfa621d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 77f6053cad85b5012a455a1fc020e0f559defdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573769"
 ---
-# <a name="how-to-enumerate-stores-for-isolated-storage"></a><span data-ttu-id="9b467-102">Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="9b467-102">How to: Enumerate Stores for Isolated Storage</span></span>
-<span data-ttu-id="9b467-103">Geçerli kullanıcı için tüm yalıtılmış depoları kullanarak numaralandırabilir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> statik yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b467-103">You can enumerate all isolated stores for the current user by using the  <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> static method.</span></span> <span data-ttu-id="9b467-104">Bu yöntem alır bir <xref:System.IO.IsolatedStorage.IsolatedStorageScope> değeri ve döndürür bir <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="9b467-104">This  method takes an <xref:System.IO.IsolatedStorage.IsolatedStorageScope> value and returns an <xref:System.IO.IsolatedStorage.IsolatedStorageFile> enumerator.</span></span> <span data-ttu-id="9b467-105">Depoları numaralandırma için bilmeniz gereken <xref:System.Security.Permissions.IsolatedStorageFilePermission> belirtir izni <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> değeri.</span><span class="sxs-lookup"><span data-stu-id="9b467-105">To enumerate stores, you must have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that specifies the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span> <span data-ttu-id="9b467-106">Çağırırsanız <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemiyle <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> değer, bir dizi döndürür <xref:System.IO.IsolatedStorage.IsolatedStorageFile> geçerli kullanıcı için tanımlanan nesneleri.</span><span class="sxs-lookup"><span data-stu-id="9b467-106">If you call the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method with the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> value, it returns an array of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objects that are defined for the current user.</span></span>  
+# <a name="how-to-enumerate-stores-for-isolated-storage"></a><span data-ttu-id="c250b-102">Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="c250b-102">How to: Enumerate Stores for Isolated Storage</span></span>
+<span data-ttu-id="c250b-103">Geçerli kullanıcı için tüm yalıtılmış depoları kullanarak numaralandırabilir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> statik yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c250b-103">You can enumerate all isolated stores for the current user by using the  <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> static method.</span></span> <span data-ttu-id="c250b-104">Bu yöntem alır bir <xref:System.IO.IsolatedStorage.IsolatedStorageScope> değeri ve döndürür bir <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="c250b-104">This  method takes an <xref:System.IO.IsolatedStorage.IsolatedStorageScope> value and returns an <xref:System.IO.IsolatedStorage.IsolatedStorageFile> enumerator.</span></span> <span data-ttu-id="c250b-105">Depoları numaralandırma için bilmeniz gereken <xref:System.Security.Permissions.IsolatedStorageFilePermission> belirtir izni <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> değeri.</span><span class="sxs-lookup"><span data-stu-id="c250b-105">To enumerate stores, you must have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that specifies the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span> <span data-ttu-id="c250b-106">Çağırırsanız <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemiyle <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> değer, bir dizi döndürür <xref:System.IO.IsolatedStorage.IsolatedStorageFile> geçerli kullanıcı için tanımlanan nesneleri.</span><span class="sxs-lookup"><span data-stu-id="c250b-106">If you call the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method with the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> value, it returns an array of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objects that are defined for the current user.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9b467-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="9b467-107">Example</span></span>  
- <span data-ttu-id="9b467-108">Aşağıdaki kod örneğinde, kullanıcı ve derlemeye göre yalıtılmış, birkaç dosyaları oluşturur ve bu dosyaları kullanarak alır bir mağaza edinir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b467-108">The following code example obtains a store that is isolated by user and assembly, creates a few files, and retrieves those files by using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="c250b-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="c250b-107">Example</span></span>  
+ <span data-ttu-id="c250b-108">Aşağıdaki kod örneğinde, kullanıcı ve derlemeye göre yalıtılmış, birkaç dosyaları oluşturur ve bu dosyaları kullanarak alır bir mağaza edinir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c250b-108">The following code example obtains a store that is isolated by user and assembly, creates a few files, and retrieves those files by using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="9b467-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="9b467-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c250b-109">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c250b-109">See Also</span></span>  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [<span data-ttu-id="9b467-110">Yalıtılmış Depolama</span><span class="sxs-lookup"><span data-stu-id="9b467-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+ [<span data-ttu-id="c250b-110">Yalıtılmış Depolama</span><span class="sxs-lookup"><span data-stu-id="c250b-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

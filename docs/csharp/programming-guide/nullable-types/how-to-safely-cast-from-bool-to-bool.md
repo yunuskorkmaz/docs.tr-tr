@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457512"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a><span data-ttu-id="044c9-102">Nasıl yapılır: bool? Değerinden bool Değerine Güvenli bir Şekilde Atama (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="044c9-102">How to: Safely Cast from bool? to bool (C# Programming Guide)</span></span>
 <span data-ttu-id="044c9-103">`bool?` Boş değer atanabilir tür üç farklı değerler içerebilir: `true`, `false`, ve `null`.</span><span class="sxs-lookup"><span data-stu-id="044c9-103">The `bool?` nullable type can contain three different values: `true`, `false`, and `null`.</span></span> <span data-ttu-id="044c9-104">Bu nedenle, `bool?` türü ile gibi koşulları kullanılamaz `if`, `for`, veya `while`.</span><span class="sxs-lookup"><span data-stu-id="044c9-104">Therefore, the `bool?` type cannot be used in conditionals such as with `if`, `for`, or `while`.</span></span> <span data-ttu-id="044c9-105">Örneğin, aşağıdaki kod derleyici hatasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="044c9-105">For example, the following code causes a compiler error.</span></span>  

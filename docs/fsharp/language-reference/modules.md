@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483529"
 ---
 # <a name="modules"></a><span data-ttu-id="6f9a4-103">Modüller</span><span class="sxs-lookup"><span data-stu-id="6f9a4-103">Modules</span></span>
 
