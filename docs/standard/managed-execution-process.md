@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578982"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı olarak ele alınmıştır aşağıdaki adımları içerir:  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494328"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme
 Aşağıdaki yordamlar, nasıl bir Windows Communication Foundation (WCF) hizmetine erişmek için tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlayan ve çift yönlü iletişim düzeni kullanmaz açıklar.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496171"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 Windows Communication Foundation (WCF) güvenlik üç ana işlevsel alanlara bölünmüş: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenlik bütünlüğü, gizlilik ve kimlik doğrulaması sağlar. Aktarım güvenlik şunlardan biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  

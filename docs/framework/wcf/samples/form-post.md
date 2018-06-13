@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503769"
 ---
 # <a name="form-post"></a>Form Gönderme
 Bu örnek, yeni gelen istek biçimlerinin desteklemek için WCF programlama modeli REST genişletmek gösterilmiştir. Örnek ayrıca, bir HTML form postasına isteğinden seri durumdan bir biçimlendirici uygulaması içeren bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Ayrıca, örnek bir T4 şablon kullanıcılar geri WCF REST hizmeti nakledebilirsiniz HTML formu sağlayan bir HTML sayfasına dönmek için kullanır.  

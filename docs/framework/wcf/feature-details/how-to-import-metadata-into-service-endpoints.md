@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492550"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma
 Bu konu hizmet uç noktaları koleksiyona meta verileri alma ve içinde tanımlanan Hizmeti'yle açıklanmaktadır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu konu hizmet ve çağrıları sonra meta verileri içe aktaran bir istemci uygulaması oluşturmak nasıl Göster `Add` hizmette yöntemi.  

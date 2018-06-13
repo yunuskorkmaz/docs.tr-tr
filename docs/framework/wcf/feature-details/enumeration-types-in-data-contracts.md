@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494523"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Veri Sözleşmelerinde Numaralandırma Türleri
 Numaralandırmalar veri sözleşmesi modelinde ifade edilebilir. Bu konuda programlama modeli açıklayan birkaç örneklerle anlatılmaktadır.  

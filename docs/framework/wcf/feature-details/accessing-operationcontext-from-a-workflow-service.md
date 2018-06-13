@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495573"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Bir İş Akışı Hizmetinden OperationContext Erişimi
 Erişim için <xref:System.ServiceModel.OperationContext> bir iş akışı hizmeti içinde uygulamanız gereken <xref:System.ServiceModel.Activities.IReceiveMessageCallback> özel yürütme özelliğinde arabirimi. Geçersiz kılma <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> başvuru iletilen yöntemi <xref:System.ServiceModel.OperationContext>. Bu konu, bu özelliğe belirir özel etkinlik yanı sıra, bir özel üst bilgi almak için bu yürütme özelliği uygulama aracılığıyla yükselteceğinizi <xref:System.ServiceModel.Activities.Receive> çalışma zamanında.  Özel Etkinlik aynı davranışı uygulayacak bir <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` etkinlik olduğunda dışında bir <xref:System.ServiceModel.Activities.Receive> bunun içinde yerleştirilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> çağrılacağı ve <xref:System.ServiceModel.OperationContext> bilgi alınabilir.  Bu konu aynı zamanda istemci-tarafı erişim gösterilmektedir <xref:System.ServiceModel.OperationContext> aracılığıyla giden üstbilgilerini eklemek için <xref:System.ServiceModel.Activities.ISendMessageCallback> arabirimi.  

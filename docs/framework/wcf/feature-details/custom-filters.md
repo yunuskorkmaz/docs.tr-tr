@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489761"
 ---
 # <a name="custom-filters"></a>Özel Filtreler
 Özel Filtreler, sistem tarafından sağlanan ileti filtreleri kullanılarak elde edemiyor eşleşen mantığı tanımlamanıza olanak sağlar. Örneğin, belirli ileti öğesi karma hale getirir ve filtre doğru döndürme zorunluluğu olup olmadığını belirlemek için değeri inceler özel filtre veya yanlış oluşturabilirsiniz.  

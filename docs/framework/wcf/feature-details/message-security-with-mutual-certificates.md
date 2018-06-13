@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494182"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Karşılıklı Sertifikalar ile İleti Güvenliği
 Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) hizmetini ve ileti güvenlik modu kullanılarak güvenli istemci gösterir. İstemci ve hizmet sertifikalarla doğrulanır.  

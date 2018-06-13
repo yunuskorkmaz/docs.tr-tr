@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274943"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;= İşleci (C# Başvurusu)
 Tüm sayısal ve numaralandırma türlerinin bir "büyük veya ona eşit" ilişkisel işleci, tanımlama `>=` döndüren `true` ilk işlenen ikinci eşit veya daha büyük ise `false` Aksi takdirde.  

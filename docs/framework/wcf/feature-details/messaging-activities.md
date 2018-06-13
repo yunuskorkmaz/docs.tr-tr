@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496692"
 ---
 # <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri
 Mesajlaşma etkinlikleri WCF ileti gönderme ve alma için iş akışlarını izin verir. Bir iş akışına Mesajlaşma etkinlikleri ekleyerek tüm rasgele karmaşık ileti exchange desenleri (MEP) model oluşturabilirsiniz.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494787"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows İstemcisi ile İleti Güvenliği
 Bu senaryo, bir Windows Communication Foundation (WCF) istemci ve sunucu ileti güvenlik modu tarafından güvenli hale getirilmiş gösterir. İstemci ve hizmet Windows kimlik bilgileri kullanılarak kimlik doğrulaması yapılır.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494062"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService İçinde: İstemci Kayıtları
 Uç nokta bilgileri kafes içindeki her bir düğümün Çözümleyici hizmeti aracılığıyla yayımlar `Register` işlevi. Çözümleyici hizmeti bu bilgileri bir kayıt depolar. Bu kayıt, benzersiz bir tanımlayıcı (RegistrationId) ve düğüm için uç nokta bilgileri (PeerNodeAddress) içerir.  

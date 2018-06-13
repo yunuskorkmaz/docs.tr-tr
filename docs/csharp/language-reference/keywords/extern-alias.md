@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217395"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
 Aynı tam olarak nitelenmiş tür adları olan derlemeler iki sürümü başvuru gerekebilir. Örneğin, bir derlemeyi iki veya daha fazla sürümünü ve aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, ad alanlarının her derlemesinden bunları aynı dosyada kullanılacak sağlayan diğer adı tarafından adlı kök düzeyinde ad içinde sarmalamak.  

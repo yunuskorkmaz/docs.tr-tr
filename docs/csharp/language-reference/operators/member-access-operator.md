@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271035"
 ---
 # <a name="-operator-c-reference"></a>biçimindeki telefon numarasıdır. İşleci (C# Başvurusu)
 Nokta işleci (`.`) üye erişimi için kullanılır. Nokta işleci türü veya ad alanı üyesi belirtir. Örneğin, dot işleci, .NET Framework sınıf kitaplıkları içinde belirli yöntemler erişmek için kullanılır:  

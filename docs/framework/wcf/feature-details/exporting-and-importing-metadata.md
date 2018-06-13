@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495430"
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
 Windows Communication Foundation (WCF) meta verileri dışarı aktarma hizmeti uç noktalarını tanımlayan ve istemcilerin Hizmeti'nin nasıl kullanılacağını anlamak için kullanabileceği bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Hizmet meta verilerini alma işlemidir oluşturmanın <xref:System.ServiceModel.Description.ServiceEndpoint> örneği veya hizmet meta verilerini parçalarını.  

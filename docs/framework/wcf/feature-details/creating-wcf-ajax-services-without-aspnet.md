@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490363"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET Olmadan WCF AJAX Hizmetleri Oluşturma
 Windows Communication Foundation (WCF) AJAX Hizmetleri, ASP.NET AJAX gerek kalmadan tüm JavaScript etkin Web sayfasından erişilebilir. Bu konu, bu tür bir WCF hizmeti oluşturma açıklar.  

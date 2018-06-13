@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498130"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation'da Taşımalar
 Aktarım katmanı kanal yığının en düşük düzeyinde bulunur. Windows Communication Foundation (WCF) kullanılan ana taşımalar HTTP, HTTPS, TCP ve adlandırılmış kanallar ' dir. Bu bölümdeki konular arasında bu taşımaları seçme, taşıma yapılandırma ve ayarlama özellikleri ayarlama tartışın.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492131"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerlerin*. Örneğin, varsayılan değer tüm başvuru türündeki `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır olduğunda. Varsayılan değer olarak ayarlandığında serileştirilmiş verilerinden bir veri üyesi atlamak için bazen istenen bir durumdur. Üye varsayılan değeri olduğundan, gerçek bir değer serileştirilmesi değil; Bu performans avantajı vardır.  

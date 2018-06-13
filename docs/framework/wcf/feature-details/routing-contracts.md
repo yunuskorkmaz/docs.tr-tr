@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494260"
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
 Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebilir ileti desenleri tanımlayın.  Her sözleşme yazısız ve ileti Şeması veya eylem bilgisine olmadan bir ileti almak hizmet sağlar. Bu genel yönlendirilen temel alınan iletilerin özellikleri için ek yapılandırma olmadan iletileri yönlendirmek yönlendirme hizmeti sağlar.  

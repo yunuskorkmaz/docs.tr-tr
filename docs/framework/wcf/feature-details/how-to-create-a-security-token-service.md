@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493884"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma
 Bir güvenlik belirteci hizmeti WS-Trust belirtimine tanımlanan protokolünü uygular. Bu protokol, ileti biçimleri ve verme, yenileme, iptal etme ve doğrulama güvenlik belirteçleri için ileti exchange desenleri tanımlar. Verilen güvenlik belirteci hizmeti bir veya daha fazla bu yetenekleri sağlar. Bu konuda en yaygın bir senaryo arar: belirteci verme uygulama.  

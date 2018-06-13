@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494738"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML Belirteçleri ve Talepleri
 Güvenlik onaylar biçimlendirme dili (SAML) *belirteçleri* talep XML gösterimlerini şunlardır. Varsayılan olarak, Windows Communication Foundation (WCF) kullanan Federasyon güvenlik senaryolarda SAML belirteçleri olan *verilen belirteçler*.  

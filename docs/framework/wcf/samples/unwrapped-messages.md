@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504974"
 ---
 # <a name="unwrapped-messages"></a>Açılmamış İletiler
 Bu örnek açılmamış iletiler gösterir. Bir hizmet işlemi parametreleri kaydırılmış şekilde varsayılan olarak, ileti gövdesi olarak biçimlendirilir. Aşağıdaki örnekte gösterildiği bir `Add` İstek iletisini `ICalculator` Sarmalanan modda hizmet.  

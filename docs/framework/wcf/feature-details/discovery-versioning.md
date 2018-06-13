@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489186"
 ---
 # <a name="discovery-versioning"></a>Keşif Sürümü Oluşturma
 Bu konu, bazı yeni bulma özellikler uyarlamasını kısa bir genel bakış sağlar. Ayrıca bulma sürümün kullanılacağını seçme hakkında genel bir bakış sağlar.  

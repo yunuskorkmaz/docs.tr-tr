@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490450"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapı Genişletilebilir talep tabanlı yetkilendirme modelini destekler. Talep belirteçlerinden ayıklanan ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve içine yerleştirilen bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Bir Yetkilendirme Yöneticisi'ni Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
