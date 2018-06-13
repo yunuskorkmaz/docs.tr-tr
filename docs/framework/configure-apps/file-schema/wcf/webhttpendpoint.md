@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767095"
 ---
 # <a name="ltwebhttpendpointgt"></a><span data-ttu-id="d6f29-102">&lt;webHttpEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="d6f29-102">&lt;webHttpEndpoint&gt;</span></span>
 <span data-ttu-id="d6f29-103">Bu yapılandırma öğesi bir sabit ile standart bir uç nokta tanımlayan [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) otomatik olarak bağlama ekler [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) davranışı.</span><span class="sxs-lookup"><span data-stu-id="d6f29-103">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="d6f29-104">Bu uç noktaya bir REST hizmeti yazarken kullanın.</span><span class="sxs-lookup"><span data-stu-id="d6f29-104">Use this endpoint when writing a REST service.</span></span>  

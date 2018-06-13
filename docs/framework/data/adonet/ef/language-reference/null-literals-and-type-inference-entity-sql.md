@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764222"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a><span data-ttu-id="ecef1-102">Değişmez değerler ve tür çıkarma (varlık SQL) null</span><span class="sxs-lookup"><span data-stu-id="ecef1-102">Null Literals and Type Inference (Entity SQL)</span></span>
 <span data-ttu-id="ecef1-103">Null değişmez değerleri herhangi bir türü ile uyumlu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sistem yazın.</span><span class="sxs-lookup"><span data-stu-id="ecef1-103">Null literals are compatible with any type in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] type system.</span></span> <span data-ttu-id="ecef1-104">Ancak, bir null hazır değeri doğru çıkarımı yapılan tür için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir null hazır değeri kullanıldığı belirli kısıtlamaları getirir.</span><span class="sxs-lookup"><span data-stu-id="ecef1-104">However, for the type of a null literal to be inferred correctly, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] imposes certain constraints on where a null literal can be used.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754164"
 ---
 # <a name="ltperformancecountersgt-element"></a><span data-ttu-id="9df22-102">&lt;performans sayaçları&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="9df22-102">&lt;performanceCounters&gt; Element</span></span>
 <span data-ttu-id="9df22-103">Performans sayaçları tarafından paylaşılan genel bellek boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="9df22-103">Specifies the size of the global memory shared by performance counters.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762890"
 ---
 # <a name="then-entity-sql"></a><span data-ttu-id="fb1c6-102">SONRA (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="fb1c6-102">THEN (Entity SQL)</span></span>
 <span data-ttu-id="fb1c6-103">Sonuç olarak değerlendirildiğinde WHEN yan tümcesinin `true`.</span><span class="sxs-lookup"><span data-stu-id="fb1c6-103">The result of a WHEN clause when it evaluates to `true`.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766042"
 ---
 # <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="08d23-102">Komut ağaçlarını şekli</span><span class="sxs-lookup"><span data-stu-id="08d23-102">The Shape of the Command Trees</span></span>
 <span data-ttu-id="08d23-103">SQL oluşturma modülü, belirtilen giriş sorgu komut ağacı ifadesi temelinde bir arka uç belirli SQL sorgusu oluşturmak için sorumludur.</span><span class="sxs-lookup"><span data-stu-id="08d23-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="08d23-104">Bu bölüm, özellikleri, özellikleri ve sorgu komut ağaçlarını yapısını anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="08d23-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  

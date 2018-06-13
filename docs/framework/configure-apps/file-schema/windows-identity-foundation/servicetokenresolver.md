@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755766"
 ---
 # <a name="ltservicetokenresolvergt"></a><span data-ttu-id="7f8bf-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="7f8bf-102">&lt;serviceTokenResolver&gt;</span></span>
 <span data-ttu-id="7f8bf-103">Belirteci işleyicisi koleksiyonundaki işleyiciler tarafından kullanılan hizmet belirteci çözümleyiciyi kaydeder.</span><span class="sxs-lookup"><span data-stu-id="7f8bf-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="7f8bf-104">Hizmet belirteç Çözümleyicisi gelen belirteçleri ve iletileri şifreleme belirteci çözmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7f8bf-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  

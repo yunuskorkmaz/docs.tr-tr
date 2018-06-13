@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766510"
 ---
 # <a name="string-canonical-functions"></a><span data-ttu-id="f0b4f-102">Dize kurallı işlevleri</span><span class="sxs-lookup"><span data-stu-id="f0b4f-102">String Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="f0b4f-103"> dize kurallı işlevleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f0b4f-103"> includes string canonical functions.</span></span>  

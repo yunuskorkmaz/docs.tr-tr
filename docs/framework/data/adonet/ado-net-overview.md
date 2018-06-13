@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757950"
 ---
 # <a name="adonet-overview"></a><span data-ttu-id="5a890-102">ADO.NET genel bakış</span><span class="sxs-lookup"><span data-stu-id="5a890-102">ADO.NET Overview</span></span>
 <span data-ttu-id="5a890-103">ADO.NET veri kaynakları SQL Server ve XML gibi ve OLE DB ve ODBC ile kullanıma sunulan veri kaynaklarına tutarlı erişimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="5a890-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="5a890-104">Veri paylaşımı tüketici uygulamaları ADO.NET bu veri kaynaklarına bağlanmak ve alabilir, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="5a890-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  

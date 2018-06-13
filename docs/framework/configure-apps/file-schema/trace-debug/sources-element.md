@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752708"
 ---
 # <a name="ltsourcesgt-element"></a><span data-ttu-id="fd15f-102">&lt;Kaynakları&gt; öğesi</span><span class="sxs-lookup"><span data-stu-id="fd15f-102">&lt;sources&gt; Element</span></span>
 <span data-ttu-id="fd15f-103">İzleme iletileri başlatmak izleme kaynakları belirtir.</span><span class="sxs-lookup"><span data-stu-id="fd15f-103">Specifies trace sources that initiate tracing messages.</span></span>  

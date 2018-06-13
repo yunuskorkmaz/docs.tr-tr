@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766234"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="f2111-102">İyimser eşzamanlılık</span><span class="sxs-lookup"><span data-stu-id="f2111-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="f2111-103">Çok kullanıcılı bir ortamda bir veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve eşzamanlılık.</span><span class="sxs-lookup"><span data-stu-id="f2111-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="f2111-104"><xref:System.Data.DataSet> Nesne remoting veri ve veri ile etkileşim gibi uzun süre çalışan etkinlikleri için iyimser eşzamanlılık kullanımını teşvik şekilde tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="f2111-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

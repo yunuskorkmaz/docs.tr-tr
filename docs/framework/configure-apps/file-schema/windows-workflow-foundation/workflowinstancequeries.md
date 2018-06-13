@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755597"
 ---
 # <a name="ltworkflowinstancequeriesgt"></a><span data-ttu-id="ca034-102">&lt;Workflowınstancequeries&gt;</span><span class="sxs-lookup"><span data-stu-id="ca034-102">&lt;workflowInstanceQueries&gt;</span></span>
 <span data-ttu-id="ca034-103">Başlatılan ya da tamamlanan olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izlemek yapılandırma öğelerinin koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ca034-103">Represents a collection of configuration elements that track workflow instance life cycle changes such as a started or completed event.</span></span>  

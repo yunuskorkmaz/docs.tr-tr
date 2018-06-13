@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764664"
 ---
 # <a name="top-entity-sql"></a><span data-ttu-id="ca1e2-102">ÜST (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="ca1e2-102">TOP (Entity SQL)</span></span>
 <span data-ttu-id="ca1e2-103">SELECT yan tümcesi, isteğe bağlı tüm/DISTINCT değiştiricisi izleyen bir isteğe bağlı TOP alt yan tümcesinin olabilir.</span><span class="sxs-lookup"><span data-stu-id="ca1e2-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="ca1e2-104">TOP alt yan tümcesi, yalnızca ilk satır kümesini sorgu sonuç döndürülür belirtir.</span><span class="sxs-lookup"><span data-stu-id="ca1e2-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  

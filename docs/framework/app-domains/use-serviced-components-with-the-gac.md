@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753358"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a><span data-ttu-id="f6072-102">Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma</span><span class="sxs-lookup"><span data-stu-id="f6072-102">Using Serviced Components with the Global Assembly Cache</span></span>
 <span data-ttu-id="f6072-103">Hizmet verilen bileşenleri (yönetilen kod COM + bileşenleri), Genel Derleme Önbelleği'nde moduna geçirmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="f6072-103">Serviced components (managed code COM+ components) should be put in the Global Assembly Cache.</span></span> <span data-ttu-id="f6072-104">Bazı senaryolarda, Genel Derleme Önbelleği'nde olmayan hizmet verilen bileşenler Ortak dil çalışma zamanı ve COM + hizmetlerinin işleyebilir; Diğer senaryolarda yapamazlar.</span><span class="sxs-lookup"><span data-stu-id="f6072-104">In some scenarios, the Common Language Runtime and COM+ Services can handle serviced components that are not in the Global Assembly Cache; in other scenarios, they cannot.</span></span> <span data-ttu-id="f6072-105">Aşağıdaki senaryolar bu gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="f6072-105">The following scenarios illustrate this:</span></span>  

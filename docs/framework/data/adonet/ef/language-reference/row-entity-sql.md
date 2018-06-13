@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765613"
 ---
 # <a name="row-entity-sql"></a><span data-ttu-id="b1ebd-102">SATIR (varlık SQL)</span><span class="sxs-lookup"><span data-stu-id="b1ebd-102">ROW (Entity SQL)</span></span>
 <span data-ttu-id="b1ebd-103">Bir veya daha fazla değer anonim, yapısal olarak yazılan kayıtları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="b1ebd-103">Constructs anonymous, structurally typed records from one or more values.</span></span>  

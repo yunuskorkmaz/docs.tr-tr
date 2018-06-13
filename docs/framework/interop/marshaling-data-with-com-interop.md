@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388361"
 ---
 # <a name="marshaling-data-with-com-interop"></a><span data-ttu-id="fb2ba-102">COM Birlikte Çalışma ile Verileri Hazırlama</span><span class="sxs-lookup"><span data-stu-id="fb2ba-102">Marshaling Data with COM Interop</span></span>
 <span data-ttu-id="fb2ba-103">COM birlikte çalışma COM nesnelerine yönetilen COM nesneleri yönetilen koddan kullanarak hem gösterme desteği sağlar</span><span class="sxs-lookup"><span data-stu-id="fb2ba-103">COM interop provides support for both using COM objects from managed code and exposing managed objects to COM.</span></span> <span data-ttu-id="fb2ba-104">Verileri için ve COM hazırlama desteği kapsamlı ve neredeyse her zaman doğru hazırlama davranışı sağlar.</span><span class="sxs-lookup"><span data-stu-id="fb2ba-104">Support for marshaling data to and from COM is extensive and almost always provides the correct marshaling behavior.</span></span>  
