@@ -7,11 +7,11 @@
 ## Hızlı Başlangıçlar
 ### [Söz dizimi analizi](get-started/syntax-analysis.md)
 ### [Anlam analizi](get-started/semantic-analysis.md)
+### [Sözdizimi Dönüşümü](get-started/syntax-transformation.md)
+
 
 <!-- Taken from https://github.com/dotnet/roslyn/wiki/Samples-and-Walkthroughs -->
 <!--
-### Get started with semantic analysis
-### Get started with Syntax transformation
 ### Get started writing custom analyzers and code fixes
 
 <!--
