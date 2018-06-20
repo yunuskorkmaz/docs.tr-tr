@@ -1,113 +1,107 @@
 ---
 title: for (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 06/13/2018
 f1_keywords:
 - for
 - for_CSharpKeyword
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34306533"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208420"
 ---
 # <a name="for-c-reference"></a>(için C# Başvurusu)
 
-Kullanarak bir `for` döngü, çalıştırabileceğiniz bir deyim veya deyimleri bloğu art arda için belirtilen ifadeyi değerlendirir kadar `false`. Bu tür bir döngü hem de önceden yinelemek için döngü istediğiniz kaç kez bilmeniz diğer uygulamalar diziler yineleme için yararlıdır.
-  
-## <a name="example"></a>Örnek
+`for` Deyimi, bir deyim veya ifadeleri bir blok için belirtilen bir Boole ifadesini değerlendirir sırada yürütür `true`.
 
-Aşağıdaki örnekte, değeri `i` konsola yazılır ve her döngü sırasında 1 azaltılır:
+Bir oranda noktası içinde `for` deyimi bloğu, bölün dışında döngü kullanarak [sonu](break.md) deyimi ya da kullanarak adım döngüsünde sonraki yinelemeye [devam](continue.md) deyimi. Ayrıca çıkabilirsiniz bir `for` tarafından döngü [goto](goto.md), [dönmek](return.md), veya [throw](throw.md) deyimleri.
   
-[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
-  
-[Deyimi için](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) önceki örnekte aşağıdaki eylemleri gerçekleştirir:
-  
-1.  İlk olarak, ilk değişkenin değeri olarak `i` kurulur. Bu adım, döngü yineler birçok kez nasıl bağımsız olarak yalnızca bir kez gerçekleşir. Bu başlatılması döngü işlemin dışında oluşmasını olarak düşünebilirsiniz.
-  
-2.  Koşulunu hesaplamayı (`i <= 5`), değeri `i` 5 ile karşılaştırılır.
-  
-    -   Varsa `i` küçük veya ona eşit için 5, koşulu değerlendirir `true`, ve aşağıdaki eylemler gerçekleşir.  
-  
-        1.  `Console.WriteLine` Döngü gövdesine ifade değerini görüntüler `i`.  
-  
-        2.  Değeri `i` 1 artırılır.  
-  
-        3.  Döngü koşulu yeniden değerlendirmek için 2. adım başlangıcını döndürür.  
-  
-    -   Varsa `i` 5'ten büyük olduğu için koşulu değerlendirir `false`, ve döngüden çıkın.  
-  
-Unutmayın ilk değeri `i` 5'ten büyük döngünün gövdesi bile bir kez çalıştırmaz.
+## <a name="structure-of-the-for-statement"></a>Yapısını `for` deyimi
 
-## <a name="sections-of-a-for-statement"></a>Bölümlerini bir deyim için
+`for` Deyimi tanımlar *Başlatıcı*, *koşulu*, ve *yineleyici* bölümler:
   
-Her [deyimi için](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) tanımlar *Başlatıcı*, *koşulu*, ve *yineleyici* bölümler. Bu bölümler genellikle döngü tekrarlanan kaç kez belirler.  
-  
-```csharp  
+```csharp
 for (initializer; condition; iterator)  
     body  
-```  
-  
-Bölümler aşağıdaki amaca hizmet eder:
-  
--   Başlatıcı bölüm ilk koşul ayarlar. Döngü girmeden önce bu bölümdeki deyimleri yalnızca bir kez çalıştırın. Bölüm yalnızca aşağıdaki iki seçenekten birini içerebilir.  
-  
-    -   Bildirim ve başlatma İlk örnekte gösterildiği gibi bir yerel döngü değişkenin (`int i = 1`). Değişkeni döngü için yerel olan ve gelen döngü dışında erişilemez.  
-  
-    -   Sıfır veya daha fazla deyim expressons virgülle ayırarak aşağıdaki listeden.  
-  
-        -   [atama](../../../csharp/language-reference/operators/assignment-operator.md) deyimi  
-  
-        -   bir yöntemi çağrıldı  
-  
-        -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
-  
-        -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
-  
-        -   kullanarak bir nesne oluşturulmasını [yeni](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-        -   [await](../../../csharp/language-reference/keywords/await.md) ifadesi  
-  
--   Koşul bölüm döngü çıkmalıdır veya yeniden çalışması gerektiğini belirlemek için değerlendirilen boolean bir ifade içeriyor.  
-  
--   Yineleyici bölümü döngüden gövdesinin her yinelemeden sonra ne olacağını tanımlar. Yineleyici bölüm sıfır veya daha fazla virgülle ayırarak aşağıdaki deyimi ifadeleri içerir:  
-  
-    -   [atama](../../../csharp/language-reference/operators/assignment-operator.md) deyimi  
-  
-    -   bir yöntemi çağrıldı  
-  
-    -   önek veya sonek [artırma](../../../csharp/language-reference/operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
-  
-    -   önek veya sonek [azaltma](../../../csharp/language-reference/operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
-  
-    -   kullanarak bir nesne oluşturulmasını [yeni](../../../csharp/language-reference/keywords/new-operator.md)  
-  
-    -   [await](../../../csharp/language-reference/keywords/await.md) ifadesi  
-  
--   Döngünün gövdesi bir deyim, boş bir deyimi veya sıfır veya daha fazla deyimleri ayraçlar içinde kapsayan tarafından oluşturduğunuz deyimleri bloğu oluşur.  
-  
-     İşyeri dışında bölünebilir bir `for` kullanarak döngü [sonu](../../../csharp/language-reference/keywords/break.md) anahtar sözcüğü veya adım sonraki yinelemeye kullanarak [devam](../../../csharp/language-reference/keywords/continue.md) anahtar sözcüğü. Kullanarak her döngü çıkabilirsiniz bir [goto](../../../csharp/language-reference/keywords/goto.md), [dönmek](../../../csharp/language-reference/keywords/return.md), veya [throw](../../../csharp/language-reference/keywords/throw.md) deyimi.  
-  
-Bu konudaki ilk örnek tür en tipik gösterir `for` döngüsü bölümleri için aşağıdaki seçenekleri sağlar:
-  
--   Başlatıcı bildirir ve bir yerel döngü değişkenini `i`, döngü yineleme sayısını tutar.  
-  
--   Koşul değişkenin değeri olarak döngü bilinen son bir değer olan 5 karşı denetler.  
-  
--   Sonek artırma deyimi yineleyici kullanıyorsa `i++`, her döngü tekrarında kaydetmesini.
+```
 
-## <a name="more-examples"></a>Daha fazla örnek
+Tüm üç bölüm isteğe bağlıdır. Bir deyim veya deyimleri bloğu döngü gövdesidir.
+
+Aşağıdaki örnekte gösterildiği `for` tüm tanımlı bölümler deyimiyle:
+
+[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+
+### <a name="the-initializer-section"></a>*Başlatıcı* bölümü
+
+İfadeler *Başlatıcı* bölüm yürütülme yalnızca bir kez döngü girmeden önce. *Başlatıcı* bölümünde aşağıdakilerden birini alır:
+
+- Bildirim ve başlatma gelen döngü dışında erişilemez bir yerel döngü değişkenin.
+
+- Sıfır veya daha fazla deyimi ifadeleri virgülle ayırarak aşağıdaki listeden:
+
+  - [atama](../operators/assignment-operator.md) deyimi
+
+  - bir yöntemi çağrıldı  
+
+  - önek veya sonek [artırma](../operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
+
+  - önek veya sonek [azaltma](../operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
+
+  - kullanarak bir nesne oluşturulmasını [yeni](new-operator.md) anahtar sözcüğü
+
+  - [await](await.md) ifadesi
+
+*Başlatıcı* yukarıdaki örnekte bölümünde bildirir ve yerel döngü değişkenini `i`:
+
+```csharp
+int i = 0
+```
+
+### <a name="the-condition-section"></a>*Koşulu* bölümü
+
+*Koşulu* bölümünde, varsa, olmalıdır Boole ifadesi. İfade, her döngü tekrarında önce değerlendirilir. Varsa *koşulu* bölüm mevcut değil ya da Boole ifadesi değerlendiren `true`sonraki döngü tekrarında yürütülen; Aksi takdirde, döngü çıkıldı.
+
+*Koşulu* yukarıdaki örnekte bölümünde döngü yerel döngü değişkeni değere göre kesilip kesilmediğini belirler:
+
+```csharp
+i < 5
+```
+
+### <a name="the-iterator-section"></a>*Yineleyici* bölümü
+
+*Yineleyici* bölümü tanımlar ne döngüden gövdesinin her yinelemeden sonra olur. *Yineleyici* bölüm, sıfır veya daha fazla virgülle ayırarak aşağıdaki deyimi ifadeleri içerir:  
+
+- [atama](../operators/assignment-operator.md) deyimi
+
+- bir yöntemi çağrıldı  
+
+- önek veya sonek [artırma](../operators/increment-operator.md) ifadesi gibi `++i` veya `i++`  
+
+- önek veya sonek [azaltma](../operators/decrement-operator.md) ifadesi gibi `--i` veya `i--`  
+
+- kullanarak bir nesne oluşturulmasını [yeni](new-operator.md) anahtar sözcüğü
+
+- [await](await.md) ifadesi
+
+*Yineleyici* yukarıdaki örnekte bölümünde artırır yerel döngü değişkeni:
+
+```csharp
+i++
+```
+
+## <a name="examples"></a>Örnekler
+
+Aşağıdaki örnek birçok yaygın kullanımları daha az gösterilmektedir `for` deyimi bölümleri: bir dış döngü değişken için bir değer atama *Başlatıcı* bölümünde, hem de bir yöntem çağırma  *Başlatıcı* ve *yineleyici* bölümler ve iki değişken değerlerini değiştirme *yineleyici* bölümü. Seçin **çalıştırmak** örnek kodu çalıştırmak için. Bundan sonra kodu değiştirin ve yeniden çalıştırın.
   
-Aşağıdaki örnek birkaç genel seçenek daha az gösterilmektedir: Başlatıcı bölümünde bir dış döngü değişkene bir değer atama, çağırma `Console.WriteLine` hem Başlatıcı yineleyici bölümleri ve iki değerlerini değiştirme yöntemi Yineleyici bölümünde değişkenleri.
+[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
   
-[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+Aşağıdaki örnek, sonsuz tanımlar `for` döngü:
   
-Tüm tanımlayan bir ifade bir `for` deyimi isteğe bağlıdır. Örneğin, aşağıdaki deyim sonsuz bir döngüde oluşturur:
-  
-[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
   
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 
@@ -116,9 +110,9 @@ Tüm tanımlayan bir ifade bir `for` deyimi isteğe bağlıdır. Örneğin, aşa
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Deyimi (C# dil belirtimi) için](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[C# başvurusu](../../../csharp/language-reference/index.md)  
-[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-[C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[C# başvurusu](../index.md)  
+[C# Programlama Kılavuzu](../../programming-guide/index.md)  
+[C# Anahtar Sözcükleri](index.md)  
+[foreach, in](foreach-in.md)  
 [for Deyimi (C++)](/cpp/cpp/for-statement-cpp)  
-[Yineleme Deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)
+[Yineleme Deyimleri](iteration-statements.md)

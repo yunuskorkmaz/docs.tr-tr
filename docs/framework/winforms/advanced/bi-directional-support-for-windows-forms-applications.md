@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208475"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms Uygulamalarında İki Yönlü Destek
 Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windows tabanlı uygulamalar oluşturmak için Visual Studio'yu kullanabilirsiniz. Bu standart formlar, iletişim kutuları, MDI formları ve birlikte çalışabilir tüm denetimler bu formlarda içerir — diğer bir deyişle, tüm nesneleri <xref:System.Windows.Forms.Control> ad alanı.  
@@ -116,6 +117,7 @@ Arapça ve İbranice gibi çift yönlü (sağdan sola) dilleri destekleyen Windo
   
  Bazı denetimler korumalıdır. Bu nedenle, bunları yeni bir denetim türetilemez. Bunlar <xref:System.Windows.Forms.ImageList> ve <xref:System.Windows.Forms.ProgressBar> kontrol eder.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET Web uygulamaları için çift yönlü destek](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Windows Forms’u Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+[ASP.NET Web uygulamaları için çift yönlü destek](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Windows Forms uygulamaları Genelleştirme](globalizing-windows-forms.md)

@@ -4,16 +4,16 @@ description: Algılanmasına ve zamanlama güvenlik açıkları dolgusu kullanı
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327271"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208528"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zamanlama açıklarıyla doldurmayı kullanarak CBC modunda simetrik şifre çözme
 
-Microsoft, şu anda bilinen şifreleme araştırmaya göre çok özel durumlar dışında artık doğrulanabilen doldurma kaldığında simetrik şifreleme şifre blok zincirleme (CBC) modunu ile şifrelenmiş verilerin şifresini çözmek güvenli, olduğunu düşündüğünü ilk ciphertext bütünlüğünü sağlamaya olmadan uygulanır.
+Microsoft düşündüğü artık doğrulanabilen doldurma ilk ciphertext bütünlüğünü dışında sağlama olmadan yapıldıysa simetrik şifreleme şifre blok zincirleme (CBC) modunu ile şifrelenmiş verilerin şifresini çözmek güvenli olduğunu belirli koşullar. Bu judgement üzerinde şu anda bilinen şifreleme araştırmaları temel alır. 
 
 ## <a name="introduction"></a>Giriş
 

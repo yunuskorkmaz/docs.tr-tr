@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dbdb4aa70fcd14a914e1cb1b608260f1e51c1d0
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208531"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel Tarih ve Saat Biçim Dizeleri
 Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> bir biçimlendirme işleminin sonuçları değeri. Ayrıca, dizeyi tarih ve saate başarılı bir şekilde dönüştürmek için bir ayrıştırma işleminde gerekli olan tarih ve saat değerinin bildirimini tanımlayabilir. Özel biçim dizesi, bir veya daha fazla özel tarih ve saat biçimi belirleyicisinden oluşur. Değil herhangi bir dize bir [standart tarih ve saat biçim dizesi](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) özel tarih ve saat biçim dizesi yorumlanır.  
@@ -90,7 +91,7 @@ Bir tarih ve saat biçim dizesi metin gösterimini tanımlayan bir <xref:System.
 |"/"|Tarih ayırıcı.<br /><br /> Daha fazla bilgi: ["/" özel biçim belirticisi](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -&GT;. (tr-TR)|  
 |"*dize*"<br /><br /> '*dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) arr ->: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) arr ->: 1:45 P|  
 |%|Aşağıdaki karakteri özel biçim belirticisi olarak tanımlar.<br /><br /> Daha fazla bilgi:[kullanarak tek özel biçim belirticileri](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|Kaçış karakteri.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals) ve [kaçış karakteri kullanarak](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|\\| Kaçış karakteri.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals) ve [kaçış karakteri kullanarak](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |Başka bir karakter|Karakter, değişmeyen sonuç dizesine kopyalanır.<br /><br /> Daha fazla bilgi: [karakter değişmez değerleri](#Literals).|2009-06-15T01:45:30 (arr ss: dd t) -> arr 01: 45 A|  
   
  Aşağıdaki bölümlerde, her özel tarih ve saat biçim belirticisi hakkında ek bilgi sağlanır. Aksi belirtilmediği sürece, her tanımlayıcısı ile mi kullanılacağını bakılmaksızın bir aynı dize gösterimini üreten bir <xref:System.DateTime> değeri veya <xref:System.DateTimeOffset> değeri.  

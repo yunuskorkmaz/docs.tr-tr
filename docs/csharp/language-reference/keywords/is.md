@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289223"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208418"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu) #
 
@@ -75,7 +75,7 @@ Tür deseni desen eşleştirme gerçekleştirmek için kullanılırken `is` bir 
 
 Burada *expr* bazı türünün bir örneği için değerlendirilen ifade *türü* türün adı sonucu *expr* dönüştürülmekte olan ve *varname* hangi nesne sonucu *expr* dönüştürülür `is` test `true`. 
 
-`is` İfade `true` aşağıdakilerden biri doğruysa:
+`is` İfade `true` varsa *expr* değil `null`, ve aşağıdakilerden herhangi birini doğrudur:
 
 - *Expr* aynı türde örneği *türü*.
 
@@ -85,7 +85,7 @@ Burada *expr* bazı türünün bir örneği için değerlendirilen ifade *türü
 
 - *Expr* uygulayan bir tür örneği *türü* arabirimi.
 
-Varsa *exp* olan `true` ve `is` ile kullanılan bir `if` deyimi, *varname* atanır ve yerel kapsamda sahip `if` deyimi yalnızca.
+Varsa *expr* olan `true` ve `is` ile kullanılan bir `if` deyimi, *varname* atanır ve yerel kapsamda sahip `if` deyimi yalnızca.
 
 Aşağıdaki örnek kullanır `is` bir türün uygulamasını sağlamak için türü desen <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> yöntemi.
 

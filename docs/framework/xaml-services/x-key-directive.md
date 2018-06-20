@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565905"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207553"
 ---
 # <a name="xkey-directive"></a>x:Key Yönergesi
 Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz şekilde tanımlar. Ekleme bir `x:Key` değerdir XAML nesne öğesi için bir kaynak örneğin bir WPF içinde bir kaynak sözlüğü olarak tanımlamak için en yaygın yolu <xref:System.Windows.ResourceDictionary>.  
@@ -73,7 +73,7 @@ Oluşturulan ve XAML tanımlı bir sözlükte başvurulan öğeleri benzersiz ş
   
  Anahtarlar ve adları farklı yönergeleri ve dil öğeleri kullanın (`x:Key` karşı `x:Name`) temel XAML tanımı'nda. Ayrıca anahtarları ve adları farklı durumlarda WPF tanım ve bu kavramları uygulama tarafından kullanılır. Ayrıntılar için bkz [WPF XAML ad kapsamları](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Daha önce belirtildiği gibi bir anahtarın değerini biçimlendirme uzantısı aracılığıyla sağlanabilir ve dışında bir dize değeri olabilir. Örnek bir WPF senaryo, değeri `x:Key` olabilir bir[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Belirli denetimleri bu tür tamamen stili değiştirmeden bölümü görünümünü ve davranışını denetleyen etkilediğini özel stil kaynağı için bir stil anahtarı kullanır. Böyle bir anahtar örneğidir <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Daha önce belirtildiği gibi bir anahtarın değerini biçimlendirme uzantısı aracılığıyla sağlanabilir ve dışında bir dize değeri olabilir. Örnek bir WPF senaryo, değeri `x:Key` olabilir bir [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Belirli denetimleri bu tür tamamen stili değiştirmeden bölümü görünümünü ve davranışını denetleyen etkilediğini özel stil kaynağı için bir stil anahtarı kullanır. Böyle bir anahtar örneğidir <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  WPF birleştirilmiş sözlük özelliği anahtar benzersizliği ve anahtar arama davranışı için ek hususlar sunmaktadır. Daha fazla bilgi için bkz: [birleştirilmiş kaynak sözlükleri](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

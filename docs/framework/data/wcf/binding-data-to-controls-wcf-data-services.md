@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 85a50d5425b8eec0166c839440f15e31500f3984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a38727a638f7764c01db5da6506b705267b7bd6e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365572"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207488"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>(WCF Veri Hizmetleri) denetimlere veri bağlama
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], denetimleri gibi bağlayabilirsiniz `ComboBox` ve `ListView` örneği denetimlere <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı. Öğesinden devralınan bu koleksiyonu <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfı, verileri içeren bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu sınıf bildirimleri öğeleri eklendiğinde veya kaldırılan sağlayan dinamik veri koleksiyonunu temsil eder. Bir örneğini kullandığınızda <xref:System.Data.Services.Client.DataServiceCollection%601> veri bağlama için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları tarafından izlenen nesneleri emin olmak için bu olayları işleme <xref:System.Data.Services.Client.DataServiceContext> ilişkili kullanıcı Arabirimi öğesi verilerle eşitlenmiş olarak kalır.  
@@ -22,7 +22,7 @@ ms.locfileid: "33365572"
  <xref:System.Data.Services.Client.DataServiceCollection%601> (Dolaylı olarak) uygulayan sınıf <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi nesneleri için eklenemez veya koleksiyondan kaldırıldı olduğunda bağlamını uyarır. Veri hizmeti türü nesneleri ile kullanılan bir <xref:System.Data.Services.Client.DataServiceCollection%601> de uygulamalıdır <xref:System.ComponentModel.INotifyPropertyChanged> uyarı arabirimine <xref:System.Data.Services.Client.DataServiceCollection%601> bağlama koleksiyonundaki nesnelerin özelliklerini zaman değişti.  
   
 > [!NOTE]
->  Kullandığınızda **hizmet Başvurusu Ekle** iletişim veya[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) ile aracı `/dataservicecollection` istemci veri hizmeti sınıfları oluşturmak için seçeneği, oluşturulanverisınıflarınıuygulama<xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [nasıl yapılır: el ile oluşturmak istemci veri hizmeti sınıfları](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+>  Kullandığınızda **hizmet Başvurusu Ekle** iletişim veya [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) ile aracı `/dataservicecollection` istemci veri hizmeti sınıfları oluşturmak için seçeneği, oluşturulanverisınıflarınıuygulama<xref:System.ComponentModel.INotifyPropertyChanged> arabirimi. Daha fazla bilgi için bkz: [nasıl yapılır: el ile oluşturmak istemci veri hizmeti sınıfları](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="creating-the-binding-collection"></a>Bağlama koleksiyonu oluşturma  
  Yeni bir örneğini oluşturmak <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfı oluşturucusu sağlanan yöntemleriyle birini çağırarak sınıfı <xref:System.Data.Services.Client.DataServiceContext> örneği ve isteğe bağlı olarak bir <xref:System.Data.Services.Client.DataServiceQuery%601> veya döndüren, yürütüldüğünde, LINQ sorgusu bir <xref:System.Collections.Generic.IEnumerable%601> örneği. Bu <xref:System.Collections.Generic.IEnumerable%601> gelen gerçekleştirilip bağlama koleksiyonu nesnelerin kaynak sağlayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [nesne Materialization](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). Varsayılan olarak, bağlı nesnelere yapılan değişiklikleri ve koleksiyona eklenen öğelerin otomatik olarak tarafından izlenen <xref:System.Data.Services.Client.DataServiceContext>. Bu değişiklikleri el ile izlemeniz gerekiyorsa, alan oluşturucu yöntemlerden birini çağrısı bir `trackingMode` parametresi ve değeri belirtin <xref:System.Data.Services.Client.TrackingMode.None>.  

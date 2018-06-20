@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f65e8bb1a61bad458cb33a3bf9d2553479c750e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208530"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan Biçim Dizeleri
 A <xref:System.TimeSpan> biçim dizesi tanımlayan dize gösterimini bir <xref:System.TimeSpan> bir biçimlendirme işleminin sonuçları değeri. Özel bir biçim dizesi bir veya daha fazla özel oluşur <xref:System.TimeSpan> biçimlendirmek değişmez değer karakter herhangi bir sayıda birlikte tanımlayıcıları. Değil herhangi bir dize bir [standart TimeSpan biçim dizesi](../../../docs/standard/base-types/standard-timespan-format-strings.md) özel olarak yorumlanır <xref:System.TimeSpan> biçim dizesi.  
@@ -66,7 +67,7 @@ A <xref:System.TimeSpan> biçim dizesi tanımlayan dize gösterimini bir <xref:S
 |"FFFFFF"|İkinci bir milyonda bir zaman aralığı içinde. Kesirli sıfırları görüntülenmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" özel biçim belirticisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|On-milyonlarca ikinci bir zaman aralığı içinde. Kesirli sıfırları veya yedi sıfırları görüntülenmez.<br /><br /> Daha fazla bilgi: ["FFFFFFF" özel biçim belirticisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*' dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterleri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|Kaçış karakteri.<br /><br /> Daha fazla bilgi:[diğer karakterleri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|\\| Kaçış karakteri.<br /><br /> Daha fazla bilgi:[diğer karakterleri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |Başka bir karakter|Atlanmayan herhangi bir karakter özel biçim tanımlayıcısı yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterleri](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

@@ -3,13 +3,13 @@ title: DotNet yeni komutu - .NET Core CLI
 description: Dotnet yeni komut belirtilen şablona dayalı yeni .NET Core projelerini oluşturur.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: ae24c4145cc67ca863c07e4d22af8a1c2c2dd732
-ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.date: 06/12/2018
+ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570469"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208327"
 ---
 # <a name="dotnet-new"></a>DotNet yeni
 
@@ -151,8 +151,8 @@ Belirtilen ad içeren şablonlarını listeler. İçin başlatılırsa `dotnet n
 
 Oluşturmak için şablon dili. Dil kabul değişir şablon tarafından (varsayılan ayarlarında bkz [bağımsız değişkenleri](#arguments) bölümü). Bazı şablonlar için geçerli değil.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Bazı Kabukları yorumlama `#` bir özel karakter olarak. Bu gibi durumlarda dil parametre değeri, aşağıdaki gibi alın gerek `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -202,8 +202,8 @@ Belirtilen ad içeren şablonlarını listeler. İçin başlatılırsa `dotnet n
 
 Oluşturmak için şablon dili. Dil kabul değişir şablon tarafından (varsayılan ayarlarında bkz [bağımsız değişkenleri](#arguments) bölümü). Bazı şablonlar için geçerli değil.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Bazı Kabukları yorumlama `#` bir özel karakter olarak. Bu gibi durumlarda dil parametre değeri, aşağıdaki gibi alın gerek `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -243,8 +243,8 @@ Belirtilen ad içeren şablonlarını listeler. İçin başlatılırsa `dotnet n
 
 Oluşturmak için şablon dili. Dil kabul değişir şablon tarafından (varsayılan ayarlarında bkz [bağımsız değişkenleri](#arguments) bölümü). Bazı şablonlar için geçerli değil.
 
-    > [!NOTE]
-    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+> [!NOTE]
+> Bazı Kabukları yorumlama `#` bir özel karakter olarak. Bu gibi durumlarda dil parametre değeri, aşağıdaki gibi alın gerek `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -502,13 +502,13 @@ Geçerli dizinde bir F # konsol uygulama projesi oluşturun:
 
 `dotnet new classlib -lang VB -o MyLibrary`
 
-Yeni bir ASP.NET Core C# MVC uygulama projesi geçerli dizinde kimlik doğrulamasız .NET Core 2.0 hedefleme oluşturun:
+Geçerli dizinde hiçbir kimlik doğrulama ile yeni bir ASP.NET Core C# MVC uygulama projesi oluşturun:
 
-`dotnet new mvc -au None -f netcoreapp2.0`
+`dotnet new mvc -au None`
 
-.NET Core 2.0 hedefleme yeni bir xUnit uygulaması oluşturun:
+Yeni bir xUnit uygulaması oluşturun:
 
-`dotnet new xunit --framework netcoreapp2.0`
+`dotnet new xunit`
 
 MVC için kullanılabilir tüm şablonları listeler:
 

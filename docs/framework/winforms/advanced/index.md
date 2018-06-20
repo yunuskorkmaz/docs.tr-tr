@@ -5,11 +5,12 @@ helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 750d94caf08776ae457dbff153afbc8ec9368f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1a79bc3a799edc8b0472bb31983a7215f6f9e
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208484"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows Forms Uygulamalarını Geliştirme
 Windows Forms, kullanıcılarınızın özel ihtiyaçlarını karşılamak için Windows tabanlı uygulamalar geliştirmek için kullanabileceğiniz birçok özellik içerir. Aşağıdaki konular bu özellikleri ve bunların nasıl kullanılacağını açıklar.  
@@ -30,7 +31,7 @@ Windows Forms, kullanıcılarınızın özel ihtiyaçlarını karşılamak için
  [Windows Forms Uygulamalarında Ağ İletişimi](../../../../docs/framework/winforms/advanced/networking-in-windows-forms-applications.md)  
  Açıklayan ve Windows Forms'ta ağ kullanmayı gösteren konulara bağlantılar içerir.  
   
- [Windows Forms’u Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Windows Forms uygulamaları Genelleştirme](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  Windows Forms uygulamaları globalize nasıl Göster konulara bağlantılar içerir.  
   
  [Windows Forms ve Yönetilmeyen Uygulamalar](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  

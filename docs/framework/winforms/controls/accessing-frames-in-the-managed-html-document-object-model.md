@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525523"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207514"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri çıkışı oluşur *çerçeveleri*, ya da kendi ayrı HTML belgeleri tutabilir windows. Çerçeveler kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfasının bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
@@ -23,7 +23,7 @@ Bazı HTML belgeleri çıkışı oluşur *çerçeveleri*, ya da kendi ayrı HTML
   
 -   Kullanarak `FRAMESET` ve `FRAME` sabit pencerelerini etiketler.  
   
- -veya-  
+ veya  
   
 -   Kullanarak `IFRAME` çalışma zamanında konumlandırılmasına kayan bir pencere oluşturur etiketi.  
   
@@ -38,7 +38,7 @@ Bazı HTML belgeleri çıkışı oluşur *çerçeveleri*, ya da kendi ayrı HTML
   
  Bu kuralı kullanarak açın windows için de geçerlidir <xref:System.Windows.Forms.HtmlWindow.Open%2A> ve <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> yöntemleri. Açtığınız pencere barındırılan sayfasından farklı bir etki alanında ise <xref:System.Windows.Forms.WebBrowser> denetimi, olmayacak bu pencereyi taşıyabilir veya içeriğini inceleyin. Kullanıyorsanız bu kısıtlamaları da zorlanır <xref:System.Windows.Forms.WebBrowser> Windows Forms tabanlı uygulamanızı dağıtmak için kullanılan Web sitesinden farklı bir Web sitesini görüntülemek için denetim. Kullanırsanız [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] uygulamanız bir Web sitesinden ve yüklemek için dağıtım teknolojisini kullanan <xref:System.Windows.Forms.WebBrowser> Web sitesini B görüntülemek için access Web sitesinin B'nin veri mümkün olmaz.  
   
- Siteler arası komut dosyası hakkında daha fazla bilgi için bkz:[hakkında çerçeveler arası komut dosyası oluşturma ve güvenlik](http://msdn.microsoft.com/library/ms533028.aspx).  
+ Siteler arası komut dosyası hakkında daha fazla bilgi için bkz: [hakkında çerçeveler arası komut dosyası oluşturma ve güvenlik](http://msdn.microsoft.com/library/ms533028.aspx).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ÇERÇEVE öğesi &#124; nesne çerçeve](http://msdn.microsoft.com/library/ms535250.aspx)  

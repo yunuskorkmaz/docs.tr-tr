@@ -4,12 +4,12 @@ description: ASP.NET Core ve Microsoft Azure ile Mimarı modern web uygulamalar�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582905"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208512"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
 
@@ -71,10 +71,10 @@ Sık SPAs adres çubuğunda geçerli işleme yansıtarak (ve yer işareti kullan
 SPAs yazma, JavaScript ve/veya TypeScript ve istemci tarafı programlama tekniklerinin ve kitaplıkları gerektirir. Ekibinizin Angular gibi SPA framework kullanarak modern JavaScript yazılırken yetkin olmalıdır.
 
 > ### <a name="references--spa-frameworks"></a>Başvuruları – SPA çerçeveler
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **4 popüler JavaScript çerçeveleri karşılaştırması**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Açısal**  
+> <https://angular.io>
+> - **JavaScript çerçeveleri karşılaştırması**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **Zaten bir API uygulamanızın diğer (dahili veya genel) istemcileri için kullanıma gerekir**
 

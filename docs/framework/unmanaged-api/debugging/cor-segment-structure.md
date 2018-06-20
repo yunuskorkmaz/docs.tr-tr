@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406513"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207410"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT Yapısı
 Yönetilen yığın bellekte bir bölge hakkında bilgiler içerir.  
@@ -47,7 +47,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|Bellek bölge bulunduğu yığın sayısı. Daha fazla bilgi için Açıklamalar bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `COR_SEGMENTS` Yapısı Yönetilen yığın bellekte bölgesini temsil eder.  `COR_SEGMENTS` nesneleri üyeleri olan [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) çağırarak doldurulur koleksiyon nesnesi[Icordebugprocess5::enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) yöntemi.  
+ `COR_SEGMENTS` Yapısı Yönetilen yığın bellekte bölgesini temsil eder.  `COR_SEGMENTS` nesneleri üyeleri olan [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) çağırarak doldurulur koleksiyon nesnesi [Icordebugprocess5::enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) yöntemi.  
   
  `heap` Raporlandığını yığın karşılık gelen işlemci numarası bir alandır. İş istasyonları yalnızca bir atık toplama yığın olduğundan iş istasyonu atık toplayıcıları, değeri sıfır, her zaman olduğu. Sunucu atık toplayıcıları değerini öbek iliştirildiği işlemci karşılık gelir. Olabileceğini daha fazla veya daha az atık toplama yığınlardaki atık toplayıcı uygulama ayrıntılarını nedeniyle gerçek işlemciler çok dikkat edin.  
   

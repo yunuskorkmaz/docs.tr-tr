@@ -2,12 +2,12 @@
 title: Dinamik güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520363"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207527"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 Dinamik güncelleştirme kalıcı iş akışı örneği iş akışı tanımını güncelleştirmek için uygulama geliştiricileri iş akışı için bir mekanizma sağlar. Bu yeni gereksinimleri, bir hata düzeltme uygulamak için veya beklenmeyen değişiklikleri uyum sağlayacak şekilde olabilir. Bu konuda sunulan dinamik güncelleştirme işlevlerine genel bakış sağlayan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Dinamik güncelleştirme uygulandıktan sonra iş akışı örneği sürdürülebilir. Yeni tanımı güncelleştirildiğini Not ve <xref:System.Activities.WorkflowIdentity> kullanılması gerekir.  
   
 > [!NOTE]
->  İle çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowIdentity>, bkz:[kullanarak WorkflowIdentity ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  İle çalışma hakkında daha fazla bilgi için <xref:System.Activities.WorkflowApplication> ve <xref:System.Activities.WorkflowIdentity>, bkz: [kullanarak WorkflowIdentity ve sürüm oluşturma](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  Aşağıdaki örnekte, `MortgageWorkflow_v1.1.xaml` iş akışı önceki örnekten derlendikten, yüklenir ve güncelleştirilmiş iş akışı tanımı kullanılarak sürdürüldü.  
   

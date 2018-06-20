@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577312"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207462"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
+
 .NET uygulamaları, sınıflar, arabirimler, temsilciler ve hızlandırmak ve geliştirme sürecinin en iyi duruma getirme ve sistem işlevlere erişim sağlayan değer türleri içerir. Diller arasında birlikte çalışabilirlik kolaylaştırmak için çoğu .NET türleri CLS ile uyumlu olan ve bu nedenle, derleyici ortak dil belirtimi (CLS) uyan herhangi bir programlama dili kullanılabilir.  
   
  .NET, .NET uygulamaları, bileşenleri ve denetimleri yerleşiktir foundation türleridir. .NET uygulamaları aşağıdaki işlevleri gerçekleştirir türleri şunlardır:  
@@ -63,22 +64,24 @@ ms.locfileid: "33577312"
   
 -   Veri erişimi, zengin istemci-tarafı GUI ve sunucu tarafından denetlenen, istemci-tarafı GUI sağlar.  
   
- .NET zengin bir soyut ve somut (soyut olmayan) sınıflar yanı sıra arabirimleri sağlar. Kendi sınıflarınızı aktarımlar, olduğu gibi veya pek çok durumda somut sınıflar kullanın. Arabirim işlevselliğini kullanmak için arabirimini uygulayan bir sınıf oluşturun veya arabirimini uygulayan .NET Framework sınıfları birinden bir sınıf türetin.  
+ .NET zengin bir soyut ve somut (soyut olmayan) sınıflar yanı sıra arabirimleri sağlar. Kendi sınıflarınızı aktarımlar, olduğu gibi veya pek çok durumda somut sınıflar kullanın. Arabirim işlevselliğini kullanmak için arabirimini uygulayan bir sınıf oluşturun veya arabirimini uygulayan .NET sınıfları birinden bir sınıf türetin.  
   
-## <a name="naming-conventions"></a>Adlandırma kuralları  
- .NET türleri bir hiyerarşi connotes nokta sözdizimini adlandırma şeması kullanın. Bunlar kullanılabilir aranır ve daha kolay başvurduğu için bu tekniği ad alanında ilgili türleri gruplandırır. Tam adı ilk bölümü — en sağdaki nokta kadar — ad alanı adı. Son adı tür adı parçasıdır. Örneğin, **System.Collections.ArrayList** temsil eden **ArrayList** ait olduğu tür **System.Collections** ad alanı. Türler **System.Collections** nesne koleksiyonları işlemek için kullanılabilir.  
+## <a name="naming-conventions"></a>Adlandırma kuralları
+
+ .NET türleri bir hiyerarşi connotes nokta sözdizimini adlandırma şeması kullanın. Bunlar kullanılabilir aranır ve daha kolay başvurduğu için bu tekniği ad alanında ilgili türleri gruplandırır. Tam adı ilk bölümü — en sağdaki nokta kadar — ad alanı adı. Son adı tür adı parçasıdır. Örneğin, `System.Collections.Generic.List<T>` temsil eden `List<T>` ait olduğu tür `System.Collections.Generic` ad alanı. Türler <xref:System.Collections.Generic> genel koleksiyonlar ile çalışmak için kullanılabilir.  
   
  Bu adlandırma şeması genişletme kitaplığı geliştiriciler için kolaylaştırır [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] türleri hiyerarşik grupları oluşturmak ve bunları tutarlı ve bilgilendirici bir şekilde için. Ayrıca tam adına göre belirsizliğe tanımlanmasını türlerine izin verir (diğer bir deyişle, ad alanı ve tür adı), türü ad çakışmaları engeller. Aşağıdaki kural kendi ad alanları için adları oluşturulurken kullanılacak kitaplığı geliştiriciler bekleniyor:  
   
  *Şirket adı*. *TechnologyName*  
   
- Örneğin, ad alanı Microsoft.Word bu kılavuz için uygundur.  
+ Örneğin, ad alanı `Microsoft.Word` bu kılavuz için uygundur.  
   
  Grup için adlandırma modelleri kullanımını ad alanları türlerine oluşturmak ve belge sınıf kitaplıkları için çok kullanışlı bir yol ile ilgili. Ancak, bu adlandırma şeması görünürlük, üye erişimi, devralma, güvenlik veya bağlama üzerinde hiçbir etkisi yoktur. Bir ad alanı arasında birden çok derleme bölümlenebilir ve tek bir derleme birden çok ad alanını türlerinden içerebilir. Derleme sürümü oluşturma, dağıtım, güvenlik, yükleme ve ortak dil çalışma zamanı görünürlüğü resmi yapısı sağlar.  
   
  Ad alanları ve tür adları hakkında daha fazla bilgi için bkz: [ortak tür sistemi](../../docs/standard/base-types/common-type-system.md).  
   
-## <a name="system-namespace"></a>Sistem Namespace  
+## <a name="system-namespace"></a>Sistem ad alanı
+
  <xref:System> Ad .NET temel türleri için kök ad alanıdır. Bu ad alanı, tüm uygulamaları tarafından kullanılan temel veri türlerini temsil eden sınıflar içerir: <xref:System.Object> (devralma hiyerarşisi kökündeki) <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>ve benzeri. Bu tür pek çok programlama diliniz kullanan temel veri türleri karşılık gelir. .NET Framework türleri kullanarak kod yazarken dilinizi ait karşılık gelen anahtar sözcüğü bir .NET Framework temel veri türü beklenen zaman kullanabilirsiniz.  
   
  Aşağıdaki tabloda .NET sağlar, kısaca her türünü tanımlar ve Visual Basic, C#, C++ ve F # içinde karşılık gelen türünü gösterir, temel türleri listelenmektedir.  
@@ -86,12 +89,12 @@ ms.locfileid: "33577312"
 |Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C + +/ CLI veri türü|F # veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Tamsayı|<xref:System.Byte>|Bir 8 bit işaretsiz tamsayıyı.|**Bayt**|**byte**|**İmzasız char**|**byte**|  
-||<xref:System.SByte>|Bir 8 bit işaretli tamsayıyı.<br /><br /> Değil CLS ile uyumlu.|**SByte**|**sbyte**|**char**<br /> -veya-<br /> **İmzalı** **char**|**sbyte**|  
+||<xref:System.SByte>|Bir 8 bit işaretli tamsayıyı.<br /><br /> Değil CLS ile uyumlu.|**SByte**|**sbyte**|**char**<br /> veya<br /> **İmzalı** **char**|**sbyte**|  
 ||<xref:System.Int16>|Bir 16 bit işaretli tamsayıyı.|**kısa**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32 bit imzalı bir tamsayı.|**tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 bit imzalı bir tamsayı.|**tamsayı**|**int**|**int**<br /><br /> veya<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64-bit imzalı bir tamsayı.|**uzun**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Bir 16 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**UShort**|**ushort**|**İmzasız short**|**uint16**|  
-||<xref:System.UInt32>|Bir 32 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**Uınteger**|**uint**|**İmzasız int**<br /> -veya-<br /> **İmzasız long**|**uint32**|  
+||<xref:System.UInt32>|Bir 32 bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**Uınteger**|**uint**|**İmzasız int**<br /> veya<br /> **İmzasız long**|**uint32**|  
 ||<xref:System.UInt64>|Bir 64-bit işaretsiz tamsayı.<br /><br /> Değil CLS ile uyumlu.|**ULong**|**ulong**|**İmzasız __int64**|**uint64**|  
 |Kayan nokta|<xref:System.Single>|Bir tek duyarlıklı (32 bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**Float32**</br> veya</br>**single**|  
 ||<xref:System.Double>|Bir çift duyarlıklı (64 bit) kayan noktalı sayı.|**Çift**|**double**|**double**|**float**</br> veya </br> **double**|  

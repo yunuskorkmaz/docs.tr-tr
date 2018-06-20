@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "35017302"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208326"
 ---
 # <a name="machine-learning-glossary"></a>Machine learning sözlüğü
 
@@ -33,7 +33,7 @@ Aşağıdaki özel Modellerinizi yapı oldukça faydalıdır önemli makine öğ
 
 ## <a name="binary-classification"></a>ikili sınıflandırma
 
-A [sınıflandırma](#classification) durumda nerede [etiket](#label) yalnızca bir dışı iki sınıfları. Daha fazla bilgi için bkz: [ikili sınıflandırma](https://en.wikipedia.org/wiki/Binary_classification) makale wikipedia'da.
+A [sınıflandırma](#classification) durumda nerede [etiket](#label) yalnızca bir dışı iki sınıfları. Daha fazla bilgi için bkz: [ikili sınıflandırma](tasks.md#binary-classification) bölümünü [makine görevleri öğrenme](tasks.md) konu.
 
 ## <a name="classification"></a>Sınıflandırma
 
@@ -85,7 +85,7 @@ Geleneksel olarak, tahmin işlevinde parametreleri. Örneğin, ağırlıkları d
 
 ## <a name="multiclass-classification"></a>çok sınıflı sınıflandırma
 
-A [sınıflandırma](#classification) durumda nerede [etiket](#label) üç veya daha fazla sınıf dışında biridir. Daha fazla bilgi için bkz: [çok sınıflı sınıflandırma](https://en.wikipedia.org/wiki/Multiclass_classification) makale wikipedia'da.
+A [sınıflandırma](#classification) durumda nerede [etiket](#label) üç veya daha fazla sınıf dışında biridir. Daha fazla bilgi için bkz: [çok sınıflı sınıflandırma](tasks.md#multiclass-classification) bölümünü [makine görevleri öğrenme](tasks.md) konu.
 
 ## <a name="n-gram"></a>N-gram
 
@@ -113,7 +113,7 @@ Tüm işlemlerini bir veri kümesi için bir model sığması gerekli. Bir ardı
 
 ## <a name="regression"></a>regresyon
 
-A [denetimli makine öğrenme](#supervised-machine-learning) çıkış olduğu gerçek bir değer, örneğin, çift görev. Hisse senedi fiyatları tahmin etmeye örnekler.
+A [denetimli makine öğrenme](#supervised-machine-learning) çıkış olduğu gerçek bir değer, örneğin, çift görev. Hisse senedi fiyatları tahmin etmeye örnekler. Daha fazla bilgi için bkz: [regresyon](tasks.md#regression) bölümünü [makine görevleri öğrenme](tasks.md) konu.
 
 ## <a name="relative-absolute-error"></a>Göreli mutlak hata
 

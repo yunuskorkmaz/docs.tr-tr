@@ -1,6 +1,6 @@
 ---
 title: Standart Sayısal Biçim Dizeleri
-ms.date: 09/10/2017
+ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,13 +18,15 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208529"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
+
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart sayısal biçim dizesi biçimi alır `Axx`, burada:  
   
 -   `A` tek bir alfasayısal karakter adlı *belirticisi biçimlendirmek*. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz: [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
@@ -64,24 +66,27 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri Kullanma  
- Standart bir sayısal biçimli dize, şu iki yoldan biriyle sayısal bir değerin biçimlendirmesini tanımlamak için kullanılabilir:  
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+
+Standart bir sayısal biçimli dize, şu iki yoldan biriyle sayısal bir değerin biçimlendirmesini tanımlamak için kullanılabilir:  
   
 -   Bir aşırı yüklemesini geçirilebilir `ToString` sahip yöntemi bir `format` parametresi. Aşağıdaki örnekte bir sayısal değer bir para birimi dize geçerli kültürün (Bu durumda, en-US kültür) olarak biçimlendirir.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
-     [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
 -   Olarak sağlanabilir `formatString` bağımsız değişkeni tür yöntemleri olarak kullanılan bir biçim öğesinde <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Daha fazla bilgi için bkz: [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md). Aşağıdaki örnek, bir dizeye bir para birimi değeri eklemek için bir biçim öğesi kullanmaktadır.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
-     [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
      İsteğe bağlı olarak, sağlayabilir bir `alignment` sayısal alana ve sağa veya sola hizalı değerini olup genişliğini belirlemek için bağımsız değişken. Aşağıdaki örnek sol-28 karakter alanındaki para birimi değeri, ve onu sağ-14 karakter alanındaki para birimi değeri hizalar.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
-     [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
 -   Olarak sağlanabilir `formatString` Ara değerli ifade öğeyi Ara değerli bir dize bağımsız değişkeni. Daha fazla bilgi için bkz: [dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) C# Başvurusu'nda başlığı veya [Ara değerli dizeler](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) Visual Basic Başvurusu'nda başlığı.  
@@ -110,7 +115,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimlerinden bir <xref:System.Double> para birimi biçimi tanımlayıcısı değeri.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [Tablo dön](#table)  
@@ -130,7 +135,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimlerinden bir <xref:System.Int32> değeri ondalık biçim belirteci ile.  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
- [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
  [Tablo dön](#table)  
@@ -154,7 +159,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimlerinden bir <xref:System.Double> üstel biçimde belirleyici değerle.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [Tablo dön](#table)  
@@ -176,7 +181,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimlerinden bir <xref:System.Double> ve bir <xref:System.Int32> sabit noktalı biçim belirteci değeri.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [Tablo dön](#table)  
@@ -205,10 +210,10 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  
 İle kullanıldığında unutmayın bir <xref:System.Double> değeri, "G17" biçim belirticisi sağlar, özgün <xref:System.Double> başarıyla gidiş dönüş değeri. Bunun nedeni, <xref:System.Double> bir IEEE 754 2008-uyumlu çift duyarlık (`binary64`) kayan noktalı sayı, en fazla 17 önemli basamak duyarlık sağlar. Kullanımını yerine öneririz ["R" format belirleyici](#RFormatString), bazı durumlarda "R" başarıyla gidiş dönüş çift duyarlıklı kayan nokta değerlerine başarısız olduğundan. Aşağıdaki örnek, böyle bir durumda gösterilmektedir.
 
-[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-İle kullanıldığında bir <xref:System.Single> değeri, "G9" biçim belirticisi sağlar, özgün <xref:System.Single> başarıyla gidiş dönüş değeri. Bunun nedeni, <xref:System.Single> bir IEEE 754 2008-uyumlu tek duyarlılık (`binary32`) kayan noktalı sayı, en fazla dokuz önemli basamak duyarlık sağlar. Kullanımını yerine öneririz ["R" format belirleyici](#RFormatString), bazı durumlarda "R" başarıyla gidiş dönüş tek duyarlıklı kayan nokta değerlerine başarısız olduğundan.
+İle kullanıldığında bir <xref:System.Single> değeri, "G9" biçim belirticisi sağlar, özgün <xref:System.Single> başarıyla gidiş dönüş değeri. Bunun nedeni, <xref:System.Single> bir IEEE 754 2008-uyumlu tek duyarlılık (`binary32`) kayan noktalı sayı, en fazla dokuz önemli basamak duyarlık sağlar. Performans nedenleriyle öneririz kullanımını yerine ["R" format belirleyici](#RFormatString).
 
  Sonuç dizesini geçerli biçimlendirme bilgilerini tarafından etkilenen <xref:System.Globalization.NumberFormatInfo> nesnesi. Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesinde denetleyen özellikler.  
   
@@ -221,7 +226,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek, çeşitli kayan nokta değerlerini genel biçim belirteci ile biçimlendirir.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [Tablo dön](#table)  
@@ -244,7 +249,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek, çeşitli kayan nokta değerlerini sayı biçim belirteci ile biçimlendirir.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [Tablo dön](#table)  
@@ -269,7 +274,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek, kayan nokta değerlerini yüzdelik biçim belirteci ile biçimlendirir.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [Tablo dön](#table)  
@@ -278,7 +283,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 ## <a name="the-round-trip-r-format-specifier"></a>Gidiş Dönüş ("R") Biçim Belirleyicisi  
  Gidiş dönüş ("R") biçimi belirleyici bir dizeye dönüştürülür sayısal bir değer geri aynı sayısal değer ayrıştırılır emin olmak çalışır. Bu biçim yalnızca desteklenen <xref:System.Single>, <xref:System.Double>, ve <xref:System.Numerics.BigInteger> türleri.  
 
-İçin <xref:System.Double> ve <xref:System.Single> değerleri, bazı durumlarda "R" biçim belirticisi özgün değeri için başarıyla gidiş dönüş başarısız olur ve ayrıca nispeten düşük performans sunar. Bunun yerine, kullanmanızı öneririz ["G17"](#GFormatString) tanımlayıcısı için biçimlendirme <xref:System.Double> değerleri ve ["G9"](#GFormatString) başarıyla gidiş dönüş için belirleyici biçimlendirmek <xref:System.Single> değerleri.
+İçin <xref:System.Double> değerleri, bazı durumlarda "R" biçim belirticisi başarısız için başarıyla gidiş dönüş özgün değeri. Her ikisi için de <xref:System.Double> ve <xref:System.Single> değerleri, aynı zamanda sağlar nispeten düşük performans. Bunun yerine, kullanmanızı öneririz ["G17"](#GFormatString) tanımlayıcısı için biçimlendirme <xref:System.Double> değerleri ve ["G9"](#GFormatString) başarıyla gidiş dönüş için belirleyici biçimlendirmek <xref:System.Single> değerleri.
 
  Zaman bir <xref:System.Numerics.BigInteger> değeri bu tanımlayıcısı kullanılarak biçimlendirilmiş, içindeki tüm önemli basamak dize gösterimini içeren <xref:System.Numerics.BigInteger> değeri.  
   
@@ -294,7 +299,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimlerinden bir <xref:System.Numerics.BigInteger> gidiş dönüş biçim belirteci değeri.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -302,7 +307,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
   
  Sorunu çözmek için <xref:System.Double> "R" standart sayısal biçim ile biçimlendirilen değerleri kullanarak derlenmiş ise gidiş başarıyla dize `/platform:x64` veya `/platform:anycpu` anahtarları ve çalıştırılacak 64 bit sistemler., Biçim <xref:System.Double> "G17" standart sayısal biçim dizesi kullanarak değerleri. Aşağıdaki örnekte "R" biçim dizesine kullanan bir <xref:System.Double> gidiş-dönüş yapmaz o mu başarıyla değer ve ayrıca kullanır "G17" biçim dizesi için başarıyla gidiş dönüş özgün değeri.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [Tablo dön](#table)  
@@ -318,7 +323,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
  Aşağıdaki örnek biçimleri <xref:System.Int32> onaltılı değerlerini biçimlendirir tanımlayıcısı.  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
- [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
  [Tablo dön](#table)  
@@ -343,11 +348,13 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 ### <a name="floating-point-infinities-and-nan"></a>Kayan Nokta Sonsuz ve NaN  
  Biçim dizesi bağımsız olarak, değeri bir <xref:System.Single> veya <xref:System.Double> kayan nokta türdür pozitif sonsuzluk, negatif sonsuz veya sayı olmayan (NaN), biçimlendirilmiş dize değeri ilgili <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>, veya <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> tarafından şu anda geçerli olarak belirtilen özellik <xref:System.Globalization.NumberFormatInfo> nesnesi.  
   
-<a name="example"></a>   
 ## <a name="example"></a>Örnek  
+ 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+ 
  Aşağıdaki örnek, bir tamsayı ve kayan nokta sayısal değerini ing-ABD kültürü ve tüm standart sayısal biçim tanımlayıcılarını kullanarak biçimlendirir. Bu örnek iki belirli sayısal türler kullanır (<xref:System.Double> ve <xref:System.Int32>), diğer sayısal temel türlerinden herhangi birini için benzer sonuçlar verir ancak (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal>, ve <xref:System.Single>).  
   
- [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

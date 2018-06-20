@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570617"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207179"
 ---
 # <a name="net-class-libraries"></a>.NET sınıf kitaplıkları
 
@@ -39,11 +39,11 @@ Taşınabilir bir kitaplık oluşturduğunuzda bir platform yapılandırması se
 
 Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklarını (koşullu derleme yönergeleri kullanarak) bir kaynaktan oluşturan taşınabilir kitaplıklara geçtiniz. Vardır [çeşitli yaklaşımlar](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) taşınabilir kitaplıklara içinde platforma özgü işlevselliği erişmek için [yemi anahtar](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) en yaygın olan kabul teknik bu noktada.
 
-### <a name="net-standard-class-libraries"></a>.NET standart sınıf kitaplıkları
+## <a name="net-standard-class-libraries"></a>Standart .NET sınıf kitaplıkları
 
 .NET standart kitaplıkları yerine yeni bir platforma özgü ve taşınabilir kitaplıkları kavramlarını ' dir. Platforma özgü (yapay platformları veya platform kesişimlerini) temel platformdan tüm işlevselliği kullanıma herkese açık. Bunlar, tüm desteklenen platformlarda çalıştıkları herkese açık taşınabilir.
 
-.NET standart kitaplığı kümesi sunan _sözleşmeleri_. .NET uygulamaları, tam olarak ya da hiç her sözleşme desteklemesi gerekir. Her uygulama, bu nedenle, .NET Standart sözleşmeler, bir kümesini destekler. Corollary olan kullanıcının sözleşme bağımlılıkları .NET standart her sınıf kitaplığı destekleyen platformlarda desteklenir.
+.NET standart kitaplığı kümesi sunan _sözleşmeleri_. .NET uygulamaları, tam olarak ya da hiç her sözleşme desteklemesi gerekir. Her uygulama, bu nedenle, .NET Standart sözleşmeler, bir kümesini destekler. Corollary, .NET standart her sınıf kitaplığı sözleşme bağımlılıklarını destekleyen platformlarda desteklenir.
 
 .NET standart .NET Framework'ün tüm işlevselliği kullanıma sunmuyor (ya da bir hedefi olan), ancak bunlar taşınabilir sınıf kitaplıkları daha pek çok daha fazla API'lerini kullanıma. Daha fazla API'leri zamanla eklenir.
 
@@ -60,6 +60,6 @@ Birçok kitaplığı geliştiricileri birden çok platforma özgü kitaplıklar�
 
 Daha fazla bilgi için bkz: [.NET standart](net-standard.md) konu.
 
-### <a name="mono-class-libraries"></a>Mono sınıf kitaplıkları
+## <a name="mono-class-libraries"></a>Mono sınıf kitaplıkları
 
 Sınıf kitaplıkları Mono kitaplıkları yukarıda açıklanan üç tür dahil olmak üzere üzerinde desteklenir. Mono genellikle (doğru) olarak Microsoft .NET Framework'ün bir platformlar arası uygulaması görüldü. Kısmen platforma özgü .NET Framework kitaplıkları Mono çalışma zamanı değiştirilme ya da yeniden derleme olmadan çalışan çünkü bu oluştu. Bu özellik taşınabilir sınıf kitaplıkları oluşturulmasını önce yerinde olduğu şekilde (yalnızca tek yönlü çalıştınız rağmen) .NET Framework ve Mono arasında ikili taşınabilirlik etkinleştirmek için belirgin bir seçim oluştu.

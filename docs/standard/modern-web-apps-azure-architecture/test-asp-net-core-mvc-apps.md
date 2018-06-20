@@ -4,17 +4,17 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592567"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208527"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları sınama
 
-> _"Birim testi ürününüzü hoşlanmıyorsanız, büyük olasılıkla müşterilerinizin, ya da test etmek gibi olmaz."_
-> _ - Anonim -
+> _"Birim testi ürününüzü hoşlanmıyorsanız, büyük olasılıkla müşterilerinizin, ya da test etmek gibi olmaz." _ 
+>  _- Anonim -_
 
 ## <a name="summary"></a>Özet
 
@@ -38,7 +38,7 @@ Tümleştirme testleri genellikle daha karmaşık kurulum ve birim testleri daha
 
 LocalFileImageService uygulama sınıfı getirme ve bir görüntü dosyası bayt kimliği verilen belirli bir klasörden döndürmek için mantığını uygular:
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>İşlevsel testleri
@@ -101,19 +108,19 @@ Tercih ettiğiniz çerçeveye test kullanabilirsiniz. XUnit framework iyi çalı
 
 Her sınama ne yaptığını gösteren adlarla testlerinizi tutarlı bir şekilde adlandırmanız gerekir. Harika başarı ile sahip bir sınıf ve test ettiğiniz yöntemi göre ad test sınıflarını yaklaşımdır. Bu çok sayıda küçük test sınıflarda olur, ancak son derece her test sorumlu nedir temizleyin sağlar. Test yöntemi adı sınıfı ve sınanacak yöntemi tanımlamak için ayarladığınız test sınıf adı ile test edilen davranışını belirtmek için kullanılır. Bu beklenen bir davranış ve girişleri veya bu davranış verim varsayımlar içermelidir. Bazı örnek test adları:
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 Bu yaklaşımın bir değişim her test sınıfı adı "Gerekir" ile biten ve zamanın biraz değiştirir:
 
--   CatalogControllerGetImage**gereken**. **Çağrı**ImageServiceWithId
+- CatalogControllerGetImage**gereken**. **Çağrı**ImageServiceWithId
 
--   CatalogControllerGetImage**gereken**. **Günlük**WarningGivenImageMissingException
+- CatalogControllerGetImage**gereken**. **Günlük**WarningGivenImageMissingException
 
 NET, ikinci adlandırma yaklaşımını bazı ekipler bulmak ancak biraz daha ayrıntılı. Herhangi bir durumda, böylece bir veya birkaç sınama başarısız olduğunda hangi durumlarda başarısız olmuş kendi adlarından belirgin test davranışı hakkında bilgi sağlayan bir adlandırma kuralı kullanmayı deneyin. Test sonuçlarında görüntülendiğinde bu herhangi bir değer sunar gibi testleri ControllerTests.Test1 gibi vaguely, adlandırma kaçının.
 
@@ -131,7 +138,7 @@ Elbette, belirli uygulama sınıfı sınanan birçok yöntemleri vardır (ve bö
 
 Bazen birim testi kodunuzda sipariş düzenleme gerekir. Sık bu soyutlama tanımlama ve test etmek istediğiniz kod soyutlama erişmek için bağımlılık ekleme kullanılarak yerine doğrudan altyapı karşı kodlama içerir. Örneğin, görüntüleri görüntüleme için bu basit eylem yöntemine göz önünde bulundurun:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ Birim testi bu yöntem, dosya sisteminden okumak için kullandığı System.IO.F
 
 Birim testi dosya sistemi davranışını doğrudan yükleyemezsiniz ve rota test edilemez, var. test etmek için nedir? İyi, birim testi mümkün kılmak için yeniden düzenleme sonra bazı test durumları ve hata işleme gibi eksik davranışı fark edebilirsiniz. Bir dosya bulunamadığında zaman yöntemi ne yapar? Neler? Bu örnekte, işlenmiş yöntemi şöyle görünür:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Tümleştirme ASP.NET Core uygulamaları test etme
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 Bu hizmet, yalnızca ayrı bir hizmet yeniden düzenlenmeden önce kodu vermedi CatalogController olarak IHostingEnvironment kullanır. Bu IHostingEnvironment kullanılan denetleyici yalnızca kod olduğundan, bu bağımlılık CatalogController'ın oluşturucudan kaldırıldı.
 
 Bu hizmet düzgün çalıştığını test etmek için bilinen test görüntü dosyası oluşturmak ve hizmet, belirli bir giriş verilen döndürür doğrulamak gerekir. Sahte nesneler gerçekte (dosya sisteminden okuma bu durumda,) test etmek istediğiniz davranışı üzerinde kullanmayacak şekilde halletmeniz. Ancak, sahte nesneler hala tümleştirme testleri oluşturma yararlı olabilir. Bu durumda, böylece kendi ContentRootPath test görüntüsü için kullanacaksanız klasörü işaret IHostingEnvironment mock. Tüm çalışma tümleştirme test sınıf burada gösterilir:
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 ASP.NET Core uygulamaları TestServer sınıfı işlevsel testleri yazmak oldukça kolay hale getirir. Normalde, uygulamanız için yaptığınız gibi bir WebHostBuilder kullanarak bir TestServer yapılandırın. Bu WebHostBuilder yalnızca uygulamanızın gerçek ana bilgisayar gibi yapılandırılması gerekir, ancak test işlemini kolaylaştıran tüm yönleriyle değiştirebilirsiniz. Çoğu zaman, yeniden kullanılabilir bir yöntem (belki de bir taban sınıf) kapsülleyen şekilde birçok test çalışmaları için aynı TestServer yeniden:
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 GetProjectPath yöntemi yalnızca web projesine (indirme örnek çözümü) fiziksel yolu döndürür. WebHostBuilder bu durumda yalnızca burada web uygulaması için içerik kök ve gerçek web uygulamasını kullanan aynı başlangıç sınıfı başvuran belirtir. TestServer ile çalışmak için istekleri yapmak için standart System.Net.HttpClient türü kullanın. TestServer TestServer üzerinde çalışan uygulama isteklerini yapmaya hazır önceden yapılandırılmış bir istemci sağlayan yararlı bir CreateClient yöntemi gösterir. Bu İstemcisi'ni kullanın (korunan ayarlamak \_yukarıdaki temel test istemci üyesinde) işlevsel testleri ASP.NET Core uygulamanız için yazarken:
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

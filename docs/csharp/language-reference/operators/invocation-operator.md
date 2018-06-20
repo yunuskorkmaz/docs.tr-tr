@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275031"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208437"
 ---
 # <a name="-operator-c-reference"></a>() İşleci (C# Başvurusu)
 Bir ifadeyi işlemlerin sırasını belirlemek için kullanılan ek olarak, parantez aşağıdaki görevleri gerçekleştirmek için kullanılır:  
@@ -32,8 +32,6 @@ Bir ifadeyi işlemlerin sırasını belirlemek için kullanılan ek olarak, para
  `()` İşleci olamaz aşırı yüklenebilir.  
   
  Daha fazla bilgi için bkz: [atama ve tür dönüşümleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Cast ifadesi belirsiz sözdizimine yol açabilir. Örneğin, ifade `(x)–y` ya da bir cast ifadesi (– tür x y cast) veya bir ADDITIVE olarak yorumlanabilecek x – değeri hesaplar ve parantez içine alınmış ifade ile birlikte ifade y.  
   
  Yöntem çağırma hakkında daha fazla bilgi için bkz: [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md).  
   

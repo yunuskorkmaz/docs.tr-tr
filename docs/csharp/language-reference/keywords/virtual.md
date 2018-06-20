@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 5a188e9a7cbb7a1c497d577039c2b2578eaa7526
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: af5b7e3efdc98910ebbe7e061eba250cbe2d0c50
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172652"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207355"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# Başvurusu)
 `virtual` Anahtar sözcüğü bir yöntemi, özelliği, dizin oluşturucu veya olay bildiriminin değiştirebilir ve türetilen bir sınıfta geçersiz kılınmak üzere izin için kullanılır. Örneğin, bu yöntem, devralınan herhangi bir sınıf tarafından geçersiz kılınabilir:  
@@ -42,7 +42,7 @@ public virtual double Area()
 -   Sanal bir devralınan özelliği kullanan bir özellik bildirimi dahil ederek türetilen bir sınıfta kılınabilir `override` değiştiricisi.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `Shape` sınıfı içeren iki koordinat `x`, `y`ve `Area()` sanal yöntemi. Farklı şekil sınıfları gibi `Circle`, `Cylinder`, ve `Sphere` devral `Shape` sınıfı ve yüzey alanını her şekil için hesaplanır. Her türetilmiş bir sınıf, geçersiz kılma uyarlamasını kendi sahip `Area()`.  
+ Bu örnekte, `Shape` sınıfı içeren iki koordinat `x`, `y`ve `Area()` sanal yöntemi. Farklı şekil sınıfları gibi `Circle`, `Cylinder`, ve `Sphere` devral `Shape` sınıfı ve yüzey alanını her şekil için hesaplanır. Türetilmiş her sınıf kendi geçersiz kılma uyarlamasını sahip `Area()`.  
   
  Dikkat devralınan sınıfları `Circle`, `Sphere`, ve `Cylinder` tüm taban sınıf başlatmak oluşturucular aşağıdaki bildiriminde gösterildiği gibi kullanın.  
   

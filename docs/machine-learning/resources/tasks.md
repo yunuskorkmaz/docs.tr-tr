@@ -4,12 +4,12 @@ description: İçinde ML.NET desteklenen görev öğrenme farklı makine keşfed
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "35017304"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208325"
 ---
 # <a name="machine-learning-tasks"></a>Makine öğrenimi görevlerini
 
@@ -29,13 +29,17 @@ A [denetimli makine öğrenme](glossary.md#supervised-machine-learning) veri ör
 * Bir süre bekleyin veya belirli bir Hastalık olup tanılama.
 * İstenmeyen posta"veya"olarak bir e-posta işaretlemek için bir kararı.
 
-## <a name="multi-class-classification"></a>Birden çok sınıf sınıflandırma
+Daha fazla bilgi için bkz: [ikili sınıflandırma](https://en.wikipedia.org/wiki/Binary_classification) makale wikipedia'da.
+
+## <a name="multiclass-classification"></a>çok sınıflı sınıflandırma
 
 A [denetimli makine öğrenme](glossary.md#supervised-machine-learning) veri örneği sınıfı (kategori) tahmin etmek için kullanılan görev. Bir sınıflandırma algoritmasıdır giriş etiketli örnekler kümesidir. Her etiket 0 ile k-1, arasında bir tamsayı k sınıfların sayısı olduğu. Bir sınıflandırma algoritmasıdır çıktısını yeni etiketlenmemiş örnekleri sınıfının tahmin etmek için kullanabileceğiniz bir sınıflandırıcı ' dir. Birden çok sınıf sınıflandırma senaryoları örnekleri şunlardır:
 
 * Köpek bir "Siberian Husky", "Altın alıcısı", "Şu dar", vb. olarak belirleniyor.
 * Film anlama "pozitif", "nötr" veya "negatif" inceler.
 * Otel kategorilere ayrılması "Konum", "price", "cleanliness" vb. inceler.
+
+Daha fazla bilgi için bkz: [çok sınıflı sınıflandırma](https://en.wikipedia.org/wiki/Multiclass_classification) makale wikipedia'da.
 
 ## <a name="regression"></a>regresyon
 

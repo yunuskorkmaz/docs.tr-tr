@@ -4,12 +4,12 @@ description: ML.NET bir ikili sınıflandırma senaryosunda düşünceleri tahmi
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6c9ae0eb91fcb570209ce25d4a18a4dcd104724
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 85fb55582d891c67f172effa4952f15ac5604d50
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "35017309"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207670"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: Kullanım düşünceleri analiz ikili sınıflandırma senaryosunda ML.NET
 
@@ -179,7 +179,7 @@ Yeni bir örneğini başlatır <xref:Microsoft.ML.LearningPipeline> veri yüklem
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.TextLoader%601> Nesne Ardışık düzenin ilk bir parçasıdır ve eğitim dosya verileri yükler.
+<xref:Microsoft.ML.Data.TextLoader> Nesne Ardışık düzenin ilk bir parçasıdır ve eğitim dosya verileri yükler.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -239,7 +239,7 @@ Yeni yönteminden bir çağrı ekleyin `Main` yöntemi, sağda altında `Train` 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.TextLoader%601> Sınıfı aynı şema yeni test veri yükler. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirebilirsiniz. Aşağıdaki kodu ekleyin `Evaluate` yöntemi:
+<xref:Microsoft.ML.Data.TextLoader> Sınıfı aynı şema yeni test veri yükler. Bu veri kümesi kalite kontrolü kullanarak modeli değerlendirebilirsiniz. Aşağıdaki kodu ekleyin `Evaluate` yöntemi:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 

@@ -3,12 +3,12 @@ title: Yapı ifade ağaçları
 description: İfade ağaçları oluşturma teknikleri hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216320"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207195"
 ---
 # <a name="building-expression-trees"></a>Yapı ifade ağaçları
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Toplama ifadesi getirdikten sonra lambda ifadesi oluşturabilirsiniz:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-Bağımsız değişkenler içerdiğinden çok basit bir LambdaExpression budur.
+Bağımsız değişkenler içerdiğinden bu çok basit lambda ifadesi değil.
 Daha sonra bu bölümde, bağımsız değişkenler parametreleriyle eşleyin ve daha karmaşık ifadeleri oluşturmak nasıl görürsünüz.
 
 Bu bir basit ifadeler için tek bir deyimde tüm çağrılar birleştirmek:

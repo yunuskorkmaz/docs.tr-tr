@@ -3,12 +3,12 @@ title: Dizin Oluşturucular
 description: C# dizin oluşturucular ve bir veya daha fazla bağımsız değişken kullanarak başvurulan özelliklerdir Dizinli Özellikler nasıl uyguladıkları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 73f79f58cd20187a6fd0de29f53f1a31a269e0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012213a4cdf8b70ec919639a082d5700228dde6b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218305"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207501"
 ---
 # <a name="indexers"></a>Dizin Oluşturucular
 
@@ -176,7 +176,7 @@ Koleksiyon her tür model oluşturmak için bu tasarım deyim izleyebilirsiniz v
 
 ### <a name="dictionaries"></a>Sözlük
 
-Bir sözlük veya bir harita model gerektiğinde başka bir yaygın senaryodur. Bu senaryo, anahtarı, genellikle metnin anahtarları temel değerleri türünüz depolayan durumdur. Bu örnek komut satırı bağımsız değişkenleri için eşleşen bir sözlük oluşturur [lamdba ifadeleri](delegates-overview.md) bu seçenekleri yönetin. Aşağıdaki örnek, iki sınıf gösterir: bir `ArgsActions` bir komut satırı seçeneği eşleyen sınıfı bir `Action` temsilci ve bir `ArgsProcessor` kullanan `ArgsActions` her yürütmek için `Action` seçeneği karşılaştığında.
+Bir sözlük veya bir harita model gerektiğinde başka bir yaygın senaryodur. Bu senaryo, anahtarı, genellikle metnin anahtarları temel değerleri türünüz depolayan durumdur. Bu örnek komut satırı bağımsız değişkenleri için eşleşen bir sözlük oluşturur [lambda ifadeleri](delegates-overview.md) bu seçenekleri yönetin. Aşağıdaki örnek, iki sınıf gösterir: bir `ArgsActions` bir komut satırı seçeneği eşleyen sınıfı bir `Action` temsilci ve bir `ArgsProcessor` kullanan `ArgsActions` her yürütmek için `Action` seçeneği karşılaştığında.
 
 ```csharp
 public class ArgsProcessor
