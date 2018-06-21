@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f791ea339c9188ac8fada525611fc68821351d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743426"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270428"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a> Bir derlemeyi derlerken, derleme çalıştırılması için gerekli izinleri belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
@@ -45,9 +45,13 @@ ms.locfileid: "32743426"
  Yükleme zamanında derlemenin kanıtı güvenlik ilkesine giriş olarak kullanılır. Güvenlik ilkesi, kuruluş ve bilgisayar yöneticisinin yanı sıra kullanıcı ilke ayarları tarafından belirlenir ve yürütüldüklerinde tüm yönetilen kodlara verilen izinler kümesini belirler. Güvenlik ilkesi derlemenin yayımcısı için (imzalama aracıyla oluşturulmuş bir imzaya sahipse), derlemenin indirildiği Web sitesi ve bölge için (Internet Explorer terimiyle) veya derlemenin tanımlayıcı adı için belirlenebilir. Örneğin bir bilgisayarın yöneticisi, bir Web sitesinden indirilen ve belirli bir yazılım şirketi tarafından imzalanan tüm kodların bir bilgisayardaki veritabanına erişmesine izin veren, ancak bilgisayarın diskine yazmasına izin vermeyen bir güvenlik ilkesi belirleyebilir.  
   
 ## <a name="strong-named-assemblies-and-signing-tools"></a>Katı Ada Sahip Derlemeler ve İmzalama Araçları  
+
+ > [!WARNING]
+ > Güvenlik tanımlayıcı adlar kullanmayın. Yalnızca benzersiz bir kimlik sağlarlar.
+
  İki farklı ancak birbirini tamamlayıcı şekilde derlemeyi imzalamak: güçlü bir adla veya kullanarak [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md). Bir derlemeyi tanımlayıcı adla imzalama ortak anahtar şifrelemesi derleme bildirimi içeren dosyasına ekler. Tanımlayıcı ad imzalaması ad benzersizliğini doğrulamaya, ad sahtekarlığını önlemeye ve bir referans çözüldüğünde çağıranlara kimlik sağlamaya yardımcı olur.  
   
- Ancak, hiçbir güven düzeyini sağlayan güçlü bir ad ile ilişkilendirilmiş [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) önemli. İki imzalama aracı, bir yayımcının kimliğini üçüncü taraf bir yetkiliye kanıtlamasını ve bir sertifika almasını gerektirir. Bu sertifika ardından dosyanıza katıştırılır ve bir yönetici tarafından kodunuzun orijinalliğine güvenip güvenmemeye karar vermek için kullanılabilir.  
+ Hiçbir güven düzeyini sağlayan güçlü bir ad ile ilişkilendirilmiş [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) önemli. İki imzalama aracı, bir yayımcının kimliğini üçüncü taraf bir yetkiliye kanıtlamasını ve bir sertifika almasını gerektirir. Bu sertifika ardından dosyanıza katıştırılır ve bir yönetici tarafından kodunuzun orijinalliğine güvenip güvenmemeye karar vermek için kullanılabilir.  
   
  Güçlü bir ad ve kullanılarak oluşturulan bir dijital imza verebilirsiniz [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bir derleme veya kullanabilirsiniz tek başına. İki imzalama aracı aynı anda yalnızca tek bir dosya imzalayabilir; bir çoklu dosya derlemesi için derleme bildirimini içeren dosyayı imzalarsınız. Tanımlayıcı ad içeren derleme bildirimi dosyasında depolanır, ancak bir imza kullanılarak oluşturulan [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) ayrılmış bir yuva derleme bildirimi içeren taşınabilir yürütülebilir (PE) dosyasında depolanır. Kullanarak bir derlemenin imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) (veya ile güçlü bir ad olmadan) kullanılabilir dayanan bir güven hiyerarşisi zaten varsa[SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) imzalar, oluşturulan veya ilkeniz yalnızca anahtar bölümü kullanır ve bir güven zinciri denetlemez.  
   

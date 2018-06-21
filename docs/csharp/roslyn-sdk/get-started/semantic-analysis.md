@@ -3,12 +3,12 @@ title: Anlam Analizi ile çalışmaya başlama
 description: Bu öğreticide, .NET derleme SDK'sını kullanarak anlamsal Analizi ile çalışma genel bir bakış sağlar.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 360d31b86a677adfe51ebd6752fca8475814fd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358758"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270467"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Anlam Analizi ile çalışmaya başlama
 
@@ -131,7 +131,7 @@ Yalnızca ad özelliği ve yalnızca DISTINCT adlarını herhangi aşırı kald�
 
 Ayrıca LINQ sorgu sözdizimini kullanarak tam sorgusu oluşturun ve sonra konsolda tüm yöntemi adlarını görüntülemek:
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 Derleme ve programı çalıştırın. Şu çıktı görmeniz gerekir:
 
