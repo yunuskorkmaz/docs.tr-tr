@@ -3,15 +3,15 @@ title: .NET standart
 description: .NET standart, kendi sürümleri ve destekleyen .NET uygulamalar hakkında bilgi edinin.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 05/18/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 832efe566aaab1e0add687cdb474bacdf5b5d829
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f4490edfc06fcc3ec06daffdb0966ac9ee72e23
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590887"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298181"
 ---
 # <a name="net-standard"></a>.NET standart
 

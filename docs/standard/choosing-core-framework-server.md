@@ -3,13 +3,13 @@ title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 description: Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluştururken dikkate almanız gereken kılavuzu.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728725"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298194"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
 
@@ -88,8 +88,6 @@ Bazı .NET Framework teknolojiler .NET Core kullanılamaz. Bunlardan bazıları 
 * ASP.NET Web Forms uygulamaları: ASP.NET Web Forms bulunan ve yalnızca .NET Framework. ASP.NET Core ASP.NET Web formları için kullanılamaz. ASP.NET Web Forms .NET Core getirmek için plan yok.
 
 * ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil değildir. ASP.NET Core [Razor sayfalarının](/aspnet/core/mvc/razor-pages/) Web sayfalarıyla birçok benzerlikler vardır.
-
-* ASP.NET SignalR sunucu/istemci uygulaması. Şu anda [ASP.NET SignalR](https://github.com/aspnet/SignalR) ASP.NET Core 2.1 ile önizleme modunda kullanılabilir.
 
 * WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerini kullanmak için WCF sunucu şu anda yalnızca .NET Framework kullanılabilir uygulamasıdır. Bu senaryo, .NET Core için geçerli planının bir parçası değil, ancak gelecek için kabul.
 

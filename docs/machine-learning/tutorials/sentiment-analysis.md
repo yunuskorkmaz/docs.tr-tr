@@ -4,12 +4,12 @@ description: ML.NET bir ikili sınıflandırma senaryosunda düşünceleri tahmi
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 85fb55582d891c67f172effa4952f15ac5604d50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5194ec8b41304cc06848400607d5d76f288d42e6
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207670"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298285"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: Kullanım düşünceleri analiz ikili sınıflandırma senaryosunda ML.NET
 
@@ -167,7 +167,7 @@ Değiştir `Console.WriteLine("Hello World!")` aşağıdaki kodda satırıyla `M
 Oluşturma `Train` yöntemi, hemen sonra `Main` yöntemi, aşağıdaki kodu kullanarak:
 
 ```csharp
-public static PredictionModel<SentimentData, SentimentPrediction> Train()
+public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
 {
 
 }

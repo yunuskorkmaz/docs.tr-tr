@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# ' ta - C# dili turu
 description: C# yeni misiniz? Bu sınıf, nesneler ve devralma genel bakış
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1a8c34588cce21f4f4164df57aa8044074c23783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357348"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298298"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -207,7 +207,7 @@ Aşağıdaki program kullanan `Expression` ifade değerlendirmek için sınıfla
 
 ### <a name="method-overloading"></a>Yöntemi aşırı yüklemesi
 
-Yöntem *aşırı* benzersiz imzaları sahip oldukları sürece aynı ada sahip aynı sınıfta birden çok yöntem verir. Aşırı yüklenmiş yöntemin bir çağrısını derlerken, derleme kullanır *aşırı yükleme çözümü* çağırmak için belirli yöntemi belirlemek için. Aşırı yükleme çözünürlüğü en iyi bağımsız değişkenlerle veya tek en iyi eşleşme bulunamazsa, bir hata raporları bir yöntem bulur. Aşağıdaki örnek aşırı yükleme çözünürlüğü yürürlükte gösterir. Her çağırma için yorum `Main` yöntemi gösterilir hangi yöntemi gerçekte çağrılır.
+Yöntem *aşırı* benzersiz imzaları sahip oldukları sürece aynı ada sahip aynı sınıfta birden çok yöntem verir. Aşırı yüklenmiş yöntemin bir çağrısını derlerken, derleme kullanır *aşırı yükleme çözümü* çağırmak için belirli yöntemi belirlemek için. Aşırı yükleme çözünürlüğü en iyi bağımsız değişkenlerle veya tek en iyi eşleşme bulunamazsa, bir hata raporları bir yöntem bulur. Aşağıdaki örnek aşırı yükleme çözünürlüğü yürürlükte gösterir. Her çağırma için yorum `UsageExample` yöntemi gösterilir hangi yöntemi gerçekte çağrılır.
 
 [!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
