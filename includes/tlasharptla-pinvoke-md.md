@@ -1,1 +1,1 @@
-<span data-ttu-id="a9e18-101">Platform Başlatma Hizmetleri (PInvoke)</span><span class="sxs-lookup"><span data-stu-id="a9e18-101">Platform Invocation Services (PInvoke)</span></span>
+<span data-ttu-id="5976b-101">Platform Başlatma Hizmetleri (PInvoke)</span><span class="sxs-lookup"><span data-stu-id="5976b-101">Platform Invocation Services (PInvoke)</span></span>
