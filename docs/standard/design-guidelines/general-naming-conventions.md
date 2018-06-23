@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578046"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338110"
 ---
 # <a name="general-naming-conventions"></a>Genel adlandırma kuralları
 Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısaltmalar ve kısaltmalar ve öneriler dile özel adlar kullanmaktan kaçının nasıl kullanma hakkında yönergeler açıklanmaktadır.  
@@ -65,12 +65,12 @@ Bu bölümde, sözcük seçimi için ilgili genel adlandırma kuralları kısalt
 |**byte**|**Bayt**|**İmzasız char**|**Bayt**|  
 |**short**|**kısa**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**İmzasız short**|**UInt16**|  
-|**int**|**tamsayı**|**int**|**Int32**|  
+|**int**|**Tamsayı**|**int**|**Int32**|  
 |**uint**|**UInt32**|**İmzasız int**|**UInt32**|  
 |**long**|**uzun**|**__int64**|**Int64**|  
 |**ulong**|**UInt64**|**İmzasız __int64**|**UInt64**|  
 |**float**|**Tek**|**float**|**Tek**|  
-|**double**|**Çift**|**double**|**Çift**|  
+|**double**|**çift**|**double**|**çift**|  
 |**bool**|**Boole değeri**|**bool**|**Boole değeri**|  
 |**char**|**char**|**wchar_t**|**char**|  
 |**string**|**Dize**|**Dize**|**Dize**|  
