@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572297"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315127"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Ortak dil çalışma zamanı (CLR) genel bakış
 
@@ -32,7 +32,7 @@ ms.locfileid: "33572297"
 Derleyicileri ve araçları ortak dil çalışma zamanı 's işlevselliği kullanıma sunar ve bu yönetilen yürütme ortamından bu avantajları kod yazmanızı etkinleştirin. Çalışma zamanı hedefleyen bir dil derleyici geliştirmek kod yönetilen kod çağrılır; diller arası tümleştirme, diller arası özel durum işleme, Gelişmiş güvenlik, sürüm ve dağıtım desteği bileşen etkileşimi ve hata ayıklama ve profil oluşturma hizmetleri için basitleştirilmiş bir model gibi özelliklerinden yararlanır.
 
 > [!NOTE]
-> Derleyicileri ve araçları tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi) tüm, ECMA ortak dil gibi ortak bir standart tanımlı olduğundan, ortak dil çalışma zamanı tüketebileceği bir çıktı oluşturmak için Altyapı belirtimi. Daha fazla bilgi için bkz: [ECMA C# ve ortak dil altyapısı belirtimleri](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/).
+> Derleyicileri ve araçları tür sistemi, meta veri biçimi ve çalışma zamanı ortamı (sanal yürütme sistemi) tüm, ECMA ortak dil gibi ortak bir standart tanımlı olduğundan, ortak dil çalışma zamanı tüketebileceği bir çıktı oluşturmak için Altyapı belirtimi. Daha fazla bilgi için bkz: [ECMA C# ve ortak dil altyapısı belirtimleri](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
 Yönetilen kod hizmetleri sağlamak üzere çalışma zamanı etkinleştirmek için dil derleyicileri türleri, üyeleri ve kodunuzu başvurularında açıklayan meta veriler yayması gerekir. Meta veriler koduyla depolanır; Her yüklenebilir ortak dil çalışma zamanı taşınabilir yürütülebilir (PE) dosya meta verileri içerir. Çalışma zamanı meta verileri bulun ve sınıfları yük bellek durumlarda yerleştirme yöntemi çağrılarını çözmek yerel kod oluşturmak güvenlik zorlama ve çalışma zamanı bağlam sınırları ayarlamak kullanır.
 
@@ -44,7 +44,7 @@ Bunların meta verilerini bir parçası olarak, tüm yönetilen bileşenleri olu
 
 Dil derleyicileri ve araçları çalışma zamanı işlevselliği yararlı ve sezgisel geliştiricilere yönelik yolla kullanıma sunar. Bu, bazı özellikler çalışma zamanının daha belirgin bir ortamında başka olabileceği anlamına gelir. Çalışma zamanı deneyimi nasıl hangi dil derleyicileri veya araçlarını kullanmanız bağlıdır. Örneğin, bir Visual Basic Geliştirici varsa, ortak dil çalışma zamanı ile daha fazla nesne yönelimli özelliği daha önce Visual Basic dili olduğunu fark edebilirsiniz. Çalışma zamanı aşağıdaki avantajları sağlar:
 
-- Performans iyileştirmeleri.
+- Performans geliştirmeleri.
 
 - Kolayca bileşenleri kullanma yeteneğini diğer dillerde geliştirmiştir.
 

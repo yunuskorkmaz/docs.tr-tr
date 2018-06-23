@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579671"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314945"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü, platformlar arası uygulamalar ve Microsoft platformları için kitaplıkları hızla ve kolayca oluşturmanıza yardımcı olur.  
@@ -51,8 +51,8 @@ Visual Studio'da .NET Framework taşınabilir sınıf kitaplığı proje türü,
 |Visual Studio Express 2010 sürümleri|Hayır.|  
 |Visual Studio 2012 Professional, Premium veya Ultimate|Evet. Windows Phone 8.0 desteği yükleme [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Visual Studio Express 2012 sürümleri|Hayır.|  
-|Visual Studio 2013 Professional, Premium veya Ultimate|Evet. Windows Phone 8.1 desteği yükleme [Visual Studio 2013'ün en son sürümünü](https://www.visualstudio.com/vs/older-downloads/).|  
-|Windows için Visual Studio Community 2013|Evet, yüklediğinizde [Visual Studio Community 2013 en son sürümünü](https://www.visualstudio.com/vs/older-downloads/), güncelleştirme 2 içerir.|  
+|Visual Studio 2013 Professional, Premium veya Ultimate|Evet. Windows Phone 8.1 desteği yükleme [Visual Studio 2013'ün en son sürümünü](https://visualstudio.microsoft.com/vs/older-downloads/).|  
+|Windows için Visual Studio Community 2013|Evet, yüklediğinizde [Visual Studio Community 2013 en son sürümünü](https://visualstudio.microsoft.com/vs/older-downloads/), güncelleştirme 2 içerir.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Taşınabilir sınıf kitaplığı proje oluşturma  

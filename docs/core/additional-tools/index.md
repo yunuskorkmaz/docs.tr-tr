@@ -5,12 +5,12 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: a842224a76962a9d6db820149a75f1255204e9b7
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5f744fd63116ac453a2a7db8eb94f12738c95f21
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728569"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315205"
 ---
 # <a name="net-core-additional-tools"></a>.NET core ek araçlar
 
@@ -18,7 +18,7 @@ Bu bölümde destekleyen ve ek olarak .NET çekirdek işlevselliğini genişlete
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web hizmeti başvuru aracı](wcf-web-service-reference-guide.md)
 
-WCF (Windows Communication Foundation) Web hizmeti, ilk kez içinde yapılan bir Visual Studio bağlı hizmet sağlayıcısı başvurudur [Visual Studio 2017 sürüm 15,5](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes#WCFTools). Bu araç, bir web hizmeti geçerli çözümdeki bir ağ konumu veya WSDL dosya meta verileri alır ve .NET Core, web hizmeti işlemleri erişmek için kullanabileceğiniz yöntemleri ile WCF proxy sınıfı tanımlayan ile uyumlu bir kaynak dosyası oluşturur.
+WCF (Windows Communication Foundation) Web hizmeti, ilk kez içinde yapılan bir Visual Studio bağlı hizmet sağlayıcısı başvurudur [Visual Studio 2017 sürüm 15,5](https://visualstudio.microsoft.com/news/releasenotes/vs2017-relnotes#WCFTools). Bu araç, bir web hizmeti geçerli çözümdeki bir ağ konumu veya WSDL dosya meta verileri alır ve .NET Core, web hizmeti işlemleri erişmek için kullanabileceğiniz yöntemleri ile WCF proxy sınıfı tanımlayan ile uyumlu bir kaynak dosyası oluşturur.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet svcutil aracı](dotnet-svcutil-guide.md)
 

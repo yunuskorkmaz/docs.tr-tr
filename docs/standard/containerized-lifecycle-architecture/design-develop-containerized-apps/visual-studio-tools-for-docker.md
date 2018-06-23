@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 05db5cf8e8dc073dd341fbffab619c326b48f136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569297"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314717"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma
 
@@ -23,7 +23,7 @@ Windows için Docker en son sürümleri ile Kurulum sonucunun aşağıdaki başv
 
 Visual Studio 2015 kullanıyorsanız, güncelleştirme 3 veya sonraki bir sürümünü artı Docker için Visual Studio Araçları olması gerekir.
 
-**Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [ https://www.visualstudio.com/\ ürünler/vs-2015-ürün-sürümleri](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Daha fazla bilgi:** Visual Studio'yu yükleme ile ilgili yönergeler için Git [ https://visualstudio.microsoft.com/\ ürünler/vs-2015-ürün-sürümleri](https://visualstudio.microsoft.com/products/vs-2015-product-editions).
 
 Docker için Visual Studio araçlarını yükleme hakkında daha fazla bilgi görmek için Git <http://aka.ms/vstoolsfordocker> ve <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 

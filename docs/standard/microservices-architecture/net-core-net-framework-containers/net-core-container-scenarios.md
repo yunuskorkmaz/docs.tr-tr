@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne za
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580178"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314932"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Core seçin
 
@@ -25,9 +25,9 @@ Amacınız için .NET Framework yalnızca Windows desteklediğinden Açıkçası
 
 .NET core macOS geliştirme platformu olarak da destekler. Kapsayıcıları bir Docker konağına dağıttığınızda, ancak bu ana bilgisayar (şu anda) Linux veya Windows üzerinde temel alması gerekir. Örneğin, bir geliştirme ortamında, Mac'te çalışan bir Linux VM kullanabilirsiniz
 
-[Visual Studio](https://www.visualstudio.com/) için Windows tümleşik geliştirme ortamı (IDE) sağlar ve Docker için geliştirmeyi destekler. 
+[Visual Studio](https://visualstudio.microsoft.com/) için Windows tümleşik geliştirme ortamı (IDE) sağlar ve Docker için geliştirmeyi destekler. 
 
-[Mac için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/) bir IDE içinde macOS çalıştıran Xamarin Studio evrimi ve Docker mid-2017 bu yana destekler.
+[Mac için Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/) bir IDE içinde macOS çalıştıran Xamarin Studio evrimi ve Docker mid-2017 bu yana destekler.
 
 Aynı zamanda [Visual Studio Code](https://code.visualstudio.com/) (VS Code) macOS, Linux ve Windows üzerinde. VS Code .NET Core ve hata ayıklama IntelliSense dahil olmak üzere, tam olarak destekler. VS Code basit bir düzenleyici olduğundan, Docker CLI ile birlikte Mac kapsayıcılı uygulamaları geliştirmek için kullanabilirsiniz ve [.NET Core komut satırı arabirimi (CLI) araçları](../../../core/tools/index.md). Ayrıca, Sublime Text, Emacs, VI ve .NET dilleri için IntelliSense desteği sağlayan açık kaynak OmniSharp proje gibi üçüncü taraf en düzenleyicileri ile .NET Core hedefleyebilirsiniz. IDE ve düzenleyiciler ek olarak, .NET Core CLI desteklenen tüm platformlar için kullanabilirsiniz.
 

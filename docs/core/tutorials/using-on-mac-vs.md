@@ -4,12 +4,12 @@ description: Bu konu, Mac ve .NET Core için Visual Studio kullanarak basit bir 
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 82cd7c09dd595a8273eb88a4caaf34782fa10ac4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd8262a7d2fa03ab06f9f85e91c298f52e3c0849
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214549"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315153"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macOS üzerinde .NET Core'u kullanmaya başlama
 
@@ -28,7 +28,7 @@ Bkz: [.NET Core Mac üzerinde önkoşulları](../../core/macos-prerequisites.md)
 
 Mac için Önkoşullar ve Visual Studio zaten yüklediniz, bu bölüm atlayın ve devam [proje oluşturma](#creating-a-project). Mac için Visual Studio ve önkoşulları yüklemek için aşağıdaki adımları izleyin:
 
-Karşıdan [Mac Yükleyicisi için Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/). Yükleyiciyi çalıştırın. Okuyun ve Lisans Sözleşmesi'ni kabul edin. Yükleme sırasında Xamarin, platformlar arası mobil uygulama geliştirme teknolojisi yükleme fırsatı sağlanan. Xamarin ve ilgili bileşenlerini yüklemek için .NET Core geliştirme isteğe bağlıdır. Visual Studio Mac yükleme işlemi için kılavuz için bkz: [Mac için Visual Studio Tanıtımı](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). Yükleme tamamlandığında, Mac IDE için Visual Studio'yu başlatın.
+Karşıdan [Mac Yükleyicisi için Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/). Yükleyiciyi çalıştırın. Okuyun ve Lisans Sözleşmesi'ni kabul edin. Yükleme sırasında Xamarin, platformlar arası mobil uygulama geliştirme teknolojisi yükleme fırsatı sağlanan. Xamarin ve ilgili bileşenlerini yüklemek için .NET Core geliştirme isteğe bağlıdır. Visual Studio Mac yükleme işlemi için kılavuz için bkz: [Mac için Visual Studio Tanıtımı](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). Yükleme tamamlandığında, Mac IDE için Visual Studio'yu başlatın.
 
 ## <a name="creating-a-project"></a>Proje oluşturma
 

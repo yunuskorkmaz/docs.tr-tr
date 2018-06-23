@@ -4,12 +4,12 @@ description: Desteklenen Linux sürümleri ve geliştirmek, dağıtmak ve Linux 
 author: jralexander
 ms.author: johalex
 ms.date: 06/01/2018
-ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 62493d45bd5839119fd98adb6db52d8d53ce4de5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728553"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314828"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>.NET Core Linux önkoşulları
 
@@ -197,7 +197,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 **.NET core 2.1**
 
 >[!IMPORTANT]
-> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 yüklemek ya da daha yeni](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Çalışma zamanları / SDK'ları                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Naneli 18|Ubuntu 14.04 / Linux Naneli 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
@@ -253,7 +253,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 **.NET core 2.1**
 
 >[!IMPORTANT]
-> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 yüklemek ya da daha yeni](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Çalışma zamanları / SDK'ları                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
@@ -306,7 +306,7 @@ Red Hat .NET kanal erişim kayıt Yardım için bkz: [.NET Core 1.1 Başlarken K
 **.NET core 2.1**
 
 >[!IMPORTANT]
-> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 yüklemek ya da daha yeni](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Çalışma zamanları / SDK'ları                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
@@ -363,7 +363,7 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 **.NET core 2.1**
 
 >[!IMPORTANT]
-> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview/).
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 yüklemek ya da daha yeni](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 * .NET çekirdeği çalışma zamanı 2.1.0 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
 * .NET core SDK 2.1.300 [bağlantı yükleyin](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
@@ -423,7 +423,7 @@ Yüklemek için .NET Core desteklenen CentOS ve Oracle Linux dağıtımları/sü
 **.NET core 2.1**
 
 >[!IMPORTANT]
-> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 Preview 1 yüklemek ya da daha yeni](https://www.visualstudio.com/vs/preview).
+> .NET Core 2.1 Visual Studio ile kullanmak için yapmanız [Visual Studio 2017 15.7 yüklemek ya da daha yeni](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 **SUSE Linux Enterprise Server**
 

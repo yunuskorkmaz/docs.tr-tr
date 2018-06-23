@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529889"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314769"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms'ta otomatik ölçeklendirme
 Otomatik ölçeklendirme etkinleştirir bir form ve diğer denetimler ile belirli bir ekran çözünürlüğü veya sistem yazı tipi, tek bir makinede başka bir makinede farklı ekran çözünürlüğü veya sistem yazı tipi ile uygun şekilde görüntülenmesi için tasarlanmış. Formun sağlar ve denetimlerinden akıllıca yerel windows ve diğer uygulamaların hem kullanıcıların hem de diğer geliştiricilerinin makinelerde ile tutarlı olacak şekilde yeniden boyutlandırılır. Desteği [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] otomatik ölçeklendirme ve görsel stiller sağlayan [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bir tutarlı yerel Windows uygulamaları her bir kullanıcının makineye karşılaştırıldığında görünüm korumak için uygulamalar.
@@ -42,14 +42,6 @@ Bu mekanizma çoğu amaç için yeterli çalışırken, aşağıdaki sınırlama
 - Otomatik ölçeklendirme uygulanan içinde yalnızca <xref:System.Windows.Forms.Form> de sınıfı <xref:System.Windows.Forms.ContainerControl> sınıfı. Sonuç olarak, kullanıcı denetimleri doğru yalnızca kullanıcı denetimi formun aynı çözünürlükte tasarlanmıştır ve tasarım zamanında biçiminde yerleştirilen ölçeklendirmek.
 
 - Makine çözümlerinin aynı olsaydı formlar ve kendi alt denetimleri yalnızca aynı anda birden çok geliştiriciler tarafından tasarlanabilir. Benzer şekilde de formun devralma üst formla ilişkili çözüm bağımlı yapılan.
-
-> [!NOTE]
-> Görüntü DPIs, modern 2'ü 1 cihazları, özellikle de aşırı farklılıkları ile bu hala en güncel .NET Framework ve Visual Studio sürümleriyle meydana gelebilir. Farklı DPI görüntüler kullanarak bir grupta bu adres, yaptığınız her zaman emin Visual Studio için Windows Form Tasarımcısı her zaman 96 DPI'de düzeni hesaplamayı taban şekilde bir DPI kullanmayan modunda başlatır. Bu amaçla, yalnızca Visual Studio'nun HighDPI tanıma devre dışı bırakmak için aşağıdaki kayıt defteri anahtarını ayarlayın:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - İle sunulan yeni düzen yöneticileri ile uyumlu değil [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sürüm 2.0 gibi <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel>.
 

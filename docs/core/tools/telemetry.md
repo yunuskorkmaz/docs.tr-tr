@@ -1,21 +1,21 @@
 ---
-title: .NET core CLI araçlarını telemetri
-description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgilerini toplamasına .NET Core araçları telemetri özellikleri keşfedin.
+title: .NET core SDK telemetri
+description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgilerini toplamasına .NET Core SDK telemetri özellikleri keşfedin.
 author: richlander
 ms.author: mairaw
-ms.date: 08/04/2017
-ms.openlocfilehash: 4c04867f5db512ef53c23ec41ea66db570a82021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/20/2018
+ms.openlocfilehash: f60a1eaa7b869676dfbb67529e7878ca9b9ca34a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216089"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314883"
 ---
-# <a name="net-core-cli-tools-telemetry"></a>.NET core CLI araçlarını telemetri
+# <a name="net-core-sdk-telemetry"></a>.NET core SDK telemetri
 
-[.NET Core SDK](index.md) içeren bir [telemetri özellik](https://github.com/dotnet/cli/pull/2145) kullanım bilgilerini toplar. .NET ekibi, böylece biz artırabilir araçları nasıl kullanıldığını algıladığını önemlidir. Daha fazla bilgi için bkz: [ne biz .NET Core SDK Telemetri öğrendiğinize](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[.NET Core SDK](index.md) içeren bir [telemetri özellik](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) kullanım bilgilerini toplar. .NET ekibi geliştirilebilir böylece araçları nasıl kullanıldığını algıladığını önemlidir. Daha fazla bilgi için bkz: [ne biz .NET Core SDK Telemetri öğrendiğinize](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
 
-Anonim ve kullanmak için toplanan biçimde yayınlanan hem Microsoft hem de altında topluluk tarafından toplanan veriler [Creative Commons Attribution lisans](https://creativecommons.org/licenses/by/4.0/). 
+Anonim ve kullanmak için toplanan biçimde yayınlanan hem Microsoft hem de altında topluluk tarafından toplanan veriler [Creative Commons Attribution lisans](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Kapsam
 
@@ -33,10 +33,9 @@ Telemetri *etkin* kullanırken [.NET Core CLI komutları](index.md), gibi:
 - `dotnet restore`
 - `dotnet run`
 
+## <a name="how-to-opt-out"></a>Geri çevirmek nasıl
 
-## <a name="behavior"></a>Davranış
-
-.NET Core CLI araçlarını telemetri özellik varsayılan olarak etkindir. Üyelikten çıkmak ayarlayarak telemetri özelliğinin `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenine `1` veya `true`.
+.NET Core SDK telemetri özellik varsayılan olarak etkindir. Telemetri özellik dışında ayarlayarak opt `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenine `1` veya `true`.
 
 ## <a name="data-points"></a>Veri noktaları
 
@@ -58,17 +57,18 @@ Bu özellik aşağıdaki verileri toplar:
 - `dotnet` komut bağımsız değişkenleri ve seçenekleri: yalnızca bağımsız değişkenleri ve seçenekleri toplanan (değil rastgele dizeleri) bilinir.
 - SDK bir kapsayıcıda çalışıp çalışmadığını.
 - Bir hedef çerçeve.
-- Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz kimliği için bir makine. Bu ölçüm yayımlanmaz.
+- Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz kimliği için bir makine. Bu ölçüm yayımlanan değil.
 - Karma geçerli çalışma dizini.
 
 Özellik kullanıcı adlarını veya e-posta adresleri gibi kişisel verilerini topla değil. Kodunuzu taramaz ve adı, depodaki veya yazar gibi hassas proje düzeyi verileri ayıklamak değil. Veriler güvenli bir şekilde kullanarak Microsoft sunucularına gönderilir [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) altında kısıtlı erişim tutulur ve katı güvenlik denetimleri güvenli altında yayımlanan teknolojisi [Azure Storage](https://azure.microsoft.com/services/storage/) sistemler.
 
-Araçlar nasıl kullanıldığı ve bunlar da, ne araçlarla oluşturmakta değil çalışırken bilmek isteriz. Telemetri hassas verileri veya güvenli şekilde çalışıyoruz toplama veya açamayacağı veri işleme şüpheleniyorsanız [bir sorun dotnet/CLI depodaki sorunları dosya](https://github.com/dotnet/cli/issues) araştırma için.
+.NET ekibi araçları nasıl kullanıldığı ve bunlar da, ne araçlarla oluşturmakta değil çalışırken bilmek ister. Telemetri hassas verileri ya da topluyor şüpheleniyorsanız verileri güvenli şekilde yüklenmekte olan veya bir sorunu açamayacağı işlenen dosya [dotnet/CLI](https://github.com/dotnet/cli/issues) araştırma için depo.
 
 ## <a name="published-data"></a>Yayımlanan veriler
 
 Yayımlanan verileri üç aylık olarak kullanılabilir ve adresinde listelenmiş [.NET Core SDK kullanım verilerini](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Bir veri dosyası sütunlarının şunlardır:
-- zaman damgası
+
+- Zaman damgası
 - Yineleme&#8224;
 - Komut
 - Coğrafi konum&#8225;
@@ -77,28 +77,28 @@ Yayımlanan verileri üç aylık olarak kullanılabilir ve adresinde listelenmi�
 - OSVersion
 - SDKVersion
 
-&#8224;*Oluşum* sütunu bu komut, sıranın ölçümleri kullanılmak o gün toplam sayısını görüntüler. 
+&#8224;*Oluşum* sütunu bu komut, sıranın ölçümleri kullanılmak o gün toplam sayısını görüntüler.
 
 &#8225;Genellikle, *Coğrafya* sütun bir ülke adını görüntüler. Bazı durumlarda, bu sütun, .NET Core Antarktika veya yanlış konumu verileri kullanarak araştırmacılarının nedeniyle Antarktika kıtada görünür.
 
 ### <a name="example"></a>Örnek
 
-| zaman damgası      | Yineleme | Komut | coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| Zaman damgası      | Yineleme | Komut | Coğrafi konum | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | Çalıştırma     | Uganda    | Darwin   | osx.10.12 x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>Veri kümeleri
 
 [2016 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
 [2016 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
 [2017 - S1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - S2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+[2017 - S2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
+[2017 - S3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
+[2017 - 4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
 
-Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir. Değiştir `<YEAR>` değiştirin ve yıl `<QUARTER>` çeyreği ile (kullanmak `1`, `2`, `3`, veya `4`). Dosyaları sekmeyle ayrılmış değerler (*TSV*) biçimi. 
+Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir. Değiştir `<YEAR>` değiştirin ve yıl `<QUARTER>` çeyreği ile (kullanmak `1`, `2`, `3`, veya `4`). Dosyaları sekmeyle ayrılmış değerler (*TSV*) biçimi.
 
-```
-https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv
-```
+`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
 
 ## <a name="license"></a>Lisans
 
@@ -110,22 +110,26 @@ https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUAR
 
 ## <a name="disclosure"></a>Açığa çıkması
 
-.NET Core CLI araçlarını komutlarından birini ilk kez çalıştırdığınızda, aşağıdaki metni görüntüle (örneğin, `dotnet restore`). Metin, çalıştırmakta olduğunuz SDK'sı sürümüne bağlı olarak biraz değişebilir. Bu "ilk Çalıştır" nasıl Microsoft, verilerin toplanması hakkında bilgilendirir deneyimidir.
+Aşağıdakilerden birini ilk kez çalıştırdığınızda, aşağıdaki metni .NET Core SDK'sı görüntüler [.NET Core CLI komutları](index.md) (örneğin, `dotnet restore`). Metin, çalıştırmakta olduğunuz SDK'sı sürümüne bağlı olarak biraz değişebilir. Bu "ilk Çalıştır" nasıl Microsoft, verilerin toplanması hakkında bilgilendirir deneyimidir.
 
 ```console
 Welcome to .NET Core!
 ---------------------
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
- 
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
 Telemetry
---------------
-The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. 
+The data is anonymous and doesn't include command-line arguments. 
+The data is collected by Microsoft and shared with the community. 
+You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Ne biz .NET Core SDK Telemetri öğrendiniz](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Telemetri başvuru kaynağı (dotnet/CLI depodaki; release/2.0.0 dalı)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
-[.NET core SDK kullanım verileri](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+[Telemetri başvuru kaynağı (dotnet/CLI deposu)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)  
+[.NET core SDK kullanım verileri](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)  

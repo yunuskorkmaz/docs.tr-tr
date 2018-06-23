@@ -8,49 +8,49 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: d7ea869c2e42e045149faa522b615c19a8ec5f60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af8491a2887f4a35e2cd9926304948c12a67623a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549092"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314984"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF'te Win32 Denetimi Barındırma
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tamamen yeniden yazmak yerine uygulama. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırma için basit bir mekanizma sağlar bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.  
+Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodunda önemli ölçüde yatırımınız varsa, ancak, bu en az bazılarını yeniden daha etkili olabilir, kod WPF uygulamanızda yerine tamamen yeniden yazın. WPF bir WPF sayfası üzerinde bir Win32 penceresi barındırmak için basit bir mekanizma sağlar.  
   
- Bu konuda, bir uygulama anlatan [WPF Örneğinde Win32 ListBox denetimi barındırma](http://go.microsoft.com/fwlink/?LinkID=159998), o ana bilgisayarlar bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] liste kutusu denetimini. Bu genel yordam herhangi barındırmak için Genişletilebilir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi.  
+ Bu konuda, bir uygulama anlatan [WPF Örneğinde Win32 ListBox denetimi barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), ana bilgisayarlar bir Win32 liste kutusu denetim. Bu genel yordam herhangi bir Win32 penceresi barındırmak için genişletilebilir.  
   
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu konuda her ikisi de temel bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [Başlarken](../../../../docs/framework/wpf/getting-started/index.md). Giriş için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama herhangi konu üzerine çok sayıdaki kitaplardan özellikle başvurmalısınız *Windows programlama* Charles Petzold'un.  
+ Bu konu, WPF ve Win32 programlama temel olarak bilindiğini varsayar. WPF programlama temel bir giriş için bkz: [Başlarken](../../../../docs/framework/wpf/getting-started/index.md). Win32 programlamaya giriş için bu konu üzerine çok sayıda kitaplardan herhangi birine özellikle başvurmalısınız *Windows programlama* Charles Petzold'un.  
   
- Bu konuda eşlik örnek C# ' ta uygulandığı için kolaylaştırır kullanımı [!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)] erişimi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Aşina [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] yararlı ancak temel değildir.  
+ Bu konuda eşlik örnek C# ' ta uygulandığı için Win32 API erişmek için Platform Başlatma Hizmetleri (PInvoke) kullanan kolaylaştırır. PInvoke aşina yararlı ancak temel değildir.  
   
 > [!NOTE]
->  Bu konu, kod örnekleri ilişkili örnekten sayısını içerir. Ancak, okunabilmesi için tam örnek kodu içermez. Edinmek veya tam kodundan görüntülemek [WPF Örneğinde Win32 ListBox denetimi barındırma](http://go.microsoft.com/fwlink/?LinkID=159998).  
+>  Bu konu, kod örnekleri ilişkili örnekten sayısını içerir. Ancak, okunabilmesi için tam örnek kodu içermez. Edinmek veya tam kodundan görüntülemek [WPF Örneğinde Win32 ListBox denetimi barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Temel yordamı  
- Bu bölümde barındırma temel yordamı özetlenmektedir bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresinde bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası. Kalan bölümler her bir adımın ayrıntılarını gidin.  
+ Bu bölümde bir WPF sayfası üzerinde bir Win32 penceresi barındırmak için temel yordamı özetlenmektedir. Kalan bölümler her bir adımın ayrıntılarını gidin.  
   
  Temel barındırma yordamı şöyledir:  
   
-1.  Uygulama bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pencereyi barındırmak için sayfa. Bir tekniktir oluşturmak için bir <xref:System.Windows.Controls.Border> barındırılan pencere için sayfanın bölümünü ayrılacak öğesi.  
+1.  Pencereyi barındırmak için bir WPF sayfası uygulayın. Bir tekniktir oluşturmak için bir <xref:System.Windows.Controls.Border> barındırılan pencere için sayfanın bölümünü ayrılacak öğesi.  
   
 2.  Öğesinden devralınan denetimi barındırmak için bir sınıf uygulama <xref:System.Windows.Interop.HwndHost>.  
   
 3.  Bu sınıfta geçersiz kılma <xref:System.Windows.Interop.HwndHost> sınıf üyesi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Bir alt öğesi içeren bir pencere olarak barındırılan pencereyi oluşturun [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası. Geleneksel rağmen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama açıkça gerekmez kullanmak, barındırma sayfası işleyici (HWND) ile bir penceredir. HWND sayfasını alırsınız aracılığıyla `hwndParent` parametresinin <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> yöntemi. Barındırılan pencere bu HWND alt sitesi olarak oluşturulmalıdır.  
+4.  Barındırılan pencere WPF sayfasını içeren pencerenin alt öğesi olarak oluşturursunuz. Geleneksel WPF programlama açıkça gerekmez ancak bunu kullanmak, barındırma sayfası işleyici (HWND) ile bir penceredir. HWND sayfasını alırsınız aracılığıyla `hwndParent` parametresinin <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> yöntemi. Barındırılan pencere bu HWND alt sitesi olarak oluşturulmalıdır.  
   
-5.  Konak penceresini oluşturduktan sonra barındırılan pencere HWND döndür. Bir veya daha barındırmak istiyorsanız [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetimleri, genellikle bir konak pencereyi HWND alt sitesi olarak oluşturun ve konak penceresinin denetimleri alt öğesi yapın. Bir ana bilgisayar penceresinde denetimleri sarmalama için basit bir yol sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerden bildirimleri almak için bazı belirli ile ilgilenir sayfasında [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND sınır üzerinden bildirimleri ile ilgili sorunları.  
+5.  Konak penceresini oluşturduktan sonra barındırılan pencere HWND döndür. Bir veya daha fazla Win32 denetimleri barındırmak istiyorsanız, genellikle bir konak pencereyi HWND alt sitesi olarak oluşturun ve konak penceresinin denetimleri alt öğesi yaparsınız. Bir ana bilgisayar penceresinde denetimleri sarmalama hangi bildirimleri ile belirli bazı Win32 sorunları HWND sınırından ilgilenir denetimlerden bildirimleri almak WPF sayfanız için basit bir yol sağlar.  
   
 6.  Alt denetimler bildirimler gibi konak penceresine gönderilen Seçili iletileri işleyin. Bunu yapmanın iki yolu vardır.  
   
     -   Barındırma sınıfınızda iletileri işlemek tercih ederseniz, geçersiz kılma <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemi <xref:System.Windows.Interop.HwndHost> sınıfı.  
   
-    -   Olmasını isterseniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iletileri işlemek, işleme <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> , arka plan kodu olayı. Barındırılan pencere tarafından alınan her ileti için bu olayı oluşur. Bu seçeneği seçerseniz, hala kılmalı <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
+    -   WPF iletileri işlemek, işlemek tercih ederseniz <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> , arka plan kodu olayı. Barındırılan pencere tarafından alınan her ileti için bu olayı oluşur. Bu seçeneği seçerseniz, hala kılmalı <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
   
 7.  Geçersiz kılma <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemlerini <xref:System.Windows.Interop.HwndHost>. Karşılamak için bu yöntemleri geçersiz kılmanız gerekir <xref:System.Windows.Interop.HwndHost> sözleşme, ancak yalnızca gerekebilir en az bir uygulama sunmak.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "33549092"
   
 <a name="page_layout"></a>   
 ## <a name="implement-the-page-layout"></a>Sayfa düzeni uygulama  
- Düzenini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ListBox denetimi barındıran sayfasını iki bölgeden oluşur. Sayfanın sol tarafında birkaç barındıran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sağlamak denetimleri bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] yönetmenize olanak tanıyan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetim. Sayfanın sağ üst köşesindeki barındırılan ListBox denetimi için kare bölgesi vardır.  
+ ListBox denetimi barındıran WPF sayfa düzeni iki bölgeden oluşur. Sayfanın sol tarafında sağlayan birkaç WPF denetimleri barındıran bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Win32 denetimi yönetmenize olanak sağlar. Sayfanın sağ üst köşesindeki barındırılan ListBox denetimi için kare bölgesi vardır.  
   
- Bu düzen uygulamak için kod oldukça basittir. Kök öğe bir <xref:System.Windows.Controls.DockPanel> iki alt öğeye sahip. İlki bir <xref:System.Windows.Controls.Border> ListBox denetimini barındıran öğesi. 200 x 200 kare inç sayfanın sağ üst köşesindeki kaplar. İkinci bir <xref:System.Windows.Controls.StackPanel> içeren bir dizi öğeyi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bilgilerini görüntülemek ve ayarlayarak ListBox denetimi değiştirmenize izin veren denetimleri sunulan birlikte çalışabilirlik özellikleri. Alt öğelerin her biri için <xref:System.Windows.Controls.StackPanel>, bu öğeler nelerdir veya ne yaptıklarıyla ilgili ayrıntılar için kullanılan çeşitli öğeleri için başvuru materyallerini bakın, bunlar örnek kodda listelenen ancak olmayacaktır (temel burada açıklanan birlikte çalışabilirlik modeli hiçbirini gerektirmez, bunlar bazı etkileşim için örnek eklemek için sağlanır).  
+ Bu düzen uygulamak için kod oldukça basittir. Kök öğe bir <xref:System.Windows.Controls.DockPanel> iki alt öğeye sahip. İlki bir <xref:System.Windows.Controls.Border> ListBox denetimini barındıran öğesi. 200 x 200 kare inç sayfanın sağ üst köşesindeki kaplar. İkinci bir <xref:System.Windows.Controls.StackPanel> bilgileri görüntüleyen ve ayarlayarak ListBox denetimi değiştirmenize izin veren WPF denetimleri kümesini içeren öğeyi kullanıma sunulan birlikte çalışabilirlik özellikleri. Alt öğelerin her biri için <xref:System.Windows.Controls.StackPanel>, bu öğeler nelerdir veya ne yaptıklarıyla ilgili ayrıntılar için kullanılan çeşitli öğeleri için başvuru materyallerini bakın, bunlar örnek kodda listelenen ancak olmayacaktır (temel burada açıklanan birlikte çalışabilirlik modeli hiçbirini gerektirmez, bunlar bazı etkileşim için örnek eklemek için sağlanır).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
@@ -73,20 +73,20 @@ ms.locfileid: "33549092"
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- Yoktur sabitleri kümesi de. Bu sabitlerin Winuser.H'den büyük ölçüde alınır ve çağrılırken geleneksel adlarını kullanmanıza olanak sağlayan [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevleri.  
+ Yoktur sabitleri kümesi de. Bu sabitleri Winuser.H'den büyük ölçüde alınır ve Win32 işlevleri çağrılırken geleneksel adlarını kullanmanıza izin verir.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Microsoft Win32 penceresi oluşturmak için BuildWindowCore'u Geçersiz kılma  
- Oluşturmak için bu yöntemi geçersiz kılın [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] sayfa tarafından barındırılan ve pencere ve sayfa arasındaki bağlantı yapan penceresi. Bu örnek bir ListBox denetimi barındırma içerdiğinden, iki windows oluşturulur. İlk gerçekte tarafından barındırılan bir penceredir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası. ListBox denetimi penceresinin bir alt öğesi olarak oluşturulur.  
+ Sayfa tarafından barındırılan ve pencere ve sayfa arasındaki bağlantı yapan Win32 penceresi oluşturmak için bu yöntemi geçersiz kılın. Bu örnek bir ListBox denetimi barındırma içerdiğinden, iki windows oluşturulur. İlk gerçekte WPF sayfa tarafından barındırılan bir penceredir. ListBox denetimi penceresinin bir alt öğesi olarak oluşturulur.  
   
- Bu yaklaşım denetimden bildirimleri alma işlemini basitleştirmek için nedeni. <xref:System.Windows.Interop.HwndHost> Sınıfı, onu barındıran pencereye gönderilen iletileri işlemek olanak sağlar. Barındırıyorsanız bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetimini doğrudan, denetimin iç ileti döngüsü gönderilen iletileri alır. Denetim ve ona iletileri gönderme görüntüleyebilir, ancak kendi üst penceresi denetim gönderir bildirimleri almazsınız. Bu, bunun yanı sıra, kullanıcı denetimi ile etkileşim kurduğunda algılama bir yolu yoktur anlamına gelir. Bunun yerine, bir ana penceresi oluşturun ve o pencerenin alt öğesi denetimi yapın. Bu denetim tarafından gönderilen bildirimler de dahil olmak üzere ana pencere iletileri işlemenize olanak sağlar. Konak penceresi biraz daha fazla denetim için basit bir sarmalayıcısı dan olduğundan kolaylık olması için paket için bir ListBox denetimi olarak anılacaktır.  
+ Bu yaklaşım denetimden bildirimleri alma işlemini basitleştirmek için nedeni. <xref:System.Windows.Interop.HwndHost> Sınıfı, onu barındıran pencereye gönderilen iletileri işlemek olanak sağlar. Win32 Konak denetimini doğrudan denetimi iç ileti döngüsüne gönderilen iletileri alıyorsunuz. Denetim ve ona iletileri gönderme görüntüleyebilir, ancak kendi üst penceresi denetim gönderir bildirimleri almazsınız. Bu, bunun yanı sıra, kullanıcı denetimi ile etkileşim kurduğunda algılama bir yolu yoktur anlamına gelir. Bunun yerine, bir ana penceresi oluşturun ve o pencerenin alt öğesi denetimi yapın. Bu denetim tarafından gönderilen bildirimler de dahil olmak üzere ana pencere iletileri işlemenize olanak sağlar. Konak penceresi biraz daha fazla denetim için basit bir sarmalayıcısı dan olduğundan kolaylık olması için paket için bir ListBox denetimi olarak anılacaktır.  
   
 <a name="create_the_window_and_listbox"></a>   
 #### <a name="create-the-host-window-and-listbox-control"></a>ListBox denetimi ve konak penceresi oluşturma  
- Kullanabileceğiniz [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] denetimi için konak pencere oluşturma ve pencere sınıfı kaydı oluşturmak ve benzeri için. Ancak, bir daha basit bir yaklaşım bir pencere ile önceden tanımlanmış "statik" pencere sınıfı oluşturmaktır. Bu pencere yordamı denetimden bildirimleri almak için gereken ve en az kodlamayı gerektiren sağlar.  
+ Denetim için bir konak penceresi oluşturma ve pencere sınıfı kaydı oluşturmak ve benzeri PInvoke kullanabilirsiniz. Ancak, bir daha basit bir yaklaşım bir pencere ile önceden tanımlanmış "statik" pencere sınıfı oluşturmaktır. Bu pencere yordamı denetimden bildirimleri almak için gereken ve en az kodlamayı gerektiren sağlar.  
   
  Ana sayfa denetime iletiler göndermek için kullanabilirsiniz, denetimi HWND salt okunur özelliği aracılığıyla sunulur.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "33549092"
  Örnek bir işleyici iliştirir <xref:System.Windows.Interop.HwndHost.MessageHook> olayı `ControlHost` denetimden iletileri almak için. Bu olay, barındırılan penceresine gönderilen her ileti için oluşturulur. Bu durumda denetimden bildirimler de dahil olmak üzere gerçek ListBox denetimi sarmalar penceresi gönderilen iletileri şunlardır. Örnek denetimden bilgi edinmek ve içeriğini değiştirmek için SendMessage çağırır. Sayfa denetimi ile nasıl iletişim kurduğu ayrıntılarını sonraki bölümde açıklanmıştır.  
   
 > [!NOTE]
->  İki olduğuna dikkat edin [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] SendMessage için bildirimleri. Bir kullandığı için bu gereklidir `wParam` bir dize ve diğer iletilecek parametre tamsayıya geçirmek için bunu kullanır. Verileri doğru şekilde sıralanmış olduğundan emin olmak her imza için ayrı bir bildirim gerekir.  
+>  SendMessage için iki PInvoke bildirimleri olduğuna dikkat edin. Bir kullandığı için bu gereklidir `wParam` bir dize ve diğer iletilecek parametre tamsayıya geçirmek için bunu kullanır. Verileri doğru şekilde sıralanmış olduğundan emin olmak her imza için ayrı bir bildirim gerekir.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -128,7 +128,7 @@ ms.locfileid: "33549092"
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Denetim ve sayfa arasındaki iletişimi uygulama  
- Windows iletileri göndererek denetimi değiştirebilirsiniz. Kullanıcı kendi konak penceresine bildirimleri göndererek ile etkileşim denetimi size bildirir. [WPF Örneğinde Win32 ListBox denetimi barındırma](http://go.microsoft.com/fwlink/?LinkID=159998) örnek bunun nasıl çalıştığı çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
+ Windows iletileri göndererek denetimi değiştirebilirsiniz. Kullanıcı kendi konak penceresine bildirimleri göndererek ile etkileşim denetimi size bildirir. [WPF'de Win32 ListBox denetimi barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) örnek bunun nasıl çalıştığı çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
   
 -   Bir öğeyi listeye ekleyin.  
   
@@ -138,18 +138,18 @@ ms.locfileid: "33549092"
   
 -   Listedeki öğe sayısını görüntüler.  
   
- Geleneksel bir yaptıkları gibi kullanıcı aynı zamanda bir öğe liste kutusunda, tıklayarak seçebilir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulama. Görüntülenen verileri seçme, ekleme veya bir öğe ekleme kullanıcı liste kutusu durumunu her değiştiğinde güncelleştirilir.  
+ Geleneksel bir Win32 uygulaması için yaptıkları gibi kullanıcı bir öğeyi liste kutusunda, tıklayarak öğesini de seçebilirsiniz. Görüntülenen verileri seçme, ekleme veya bir öğe ekleme kullanıcı liste kutusu durumunu her değiştiğinde güncelleştirilir.  
   
- Öğeler eklemek için liste kutusu LB_ADDSTRING iletisi gönderin. Öğeleri silmek için geçerli seçim dizinini almak için LB_GETCURSEL ve ardından öğeyi silmek için LB_DELETESTRING gönderin. Örnek ayrıca LB_GETCOUNT gönderir ve öğe sayısını gösteren görüntü güncelleştirmek için döndürülen değeri kullanır. SendMessage'nın iki örneği birini kullanın [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] önceki bölümde tartışılan bildirimleri.  
+ Öğeler eklemek için liste kutusu Gönder bir [ `LB_ADDSTRING` ileti](https://msdn.microsoft.com/library/windows/desktop/bb775181(v=vs.85).aspx). Öğeleri silmek için Gönder [ `LB_GETCURSEL` ](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx) geçerli seçim dizinini almak için ve ardından [ `LB_DELETESTRING` ](https://msdn.microsoft.com/library/windows/desktop/bb775183(v=vs.85).aspx) öğe silinemedi. Örnek ayrıca gönderir [ `LB_GETCOUNT` ](https://msdn.microsoft.com/library/windows/desktop/bb775195(v=vs.85).aspx)ve öğe sayısını gösteren görüntü güncelleştirmek için döndürülen değeri kullanır. ' In iki örneği [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) önceki bölümde tartışılan PInvoke bildirimleri birini kullanın.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Kullanıcı bir öğeyi seçer veya seçimini değiştirir, Denetim konak penceresini başlatır WM_COMMAND ileti göndererek size bildirir <xref:System.Windows.Interop.HwndHost.MessageHook> sayfası için olay. İşleyici ana pencere yordamı ana penceresinin aynı bilgileri alır. Ayrıca bir Boole değeri başvuru geçirir `handled`. Ayarladığınız `handled` için `true` ileti işlenmiş olduğunu ve başka bir işleme gerek olmadığını belirtmek için.  
+ Kullanıcı bir öğeyi seçer veya seçimini değiştirir, Denetim konak penceresine göndererek bildirir bir [ `WM_COMMAND` ileti](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx), hangi başlatır <xref:System.Windows.Interop.HwndHost.MessageHook> sayfası için olay. İşleyici ana pencere yordamı ana penceresinin aynı bilgileri alır. Ayrıca bir Boole değeri başvuru geçirir `handled`. Ayarladığınız `handled` için `true` ileti işlenmiş olduğunu ve başka bir işleme gerek olmadığını belirtmek için.  
   
- İşlemek istediğiniz bir olay olup olmadığını belirlemek için bildirim kimliği incelemeniz gerekir böylece WM_COMMAND çeşitli nedenlerle, için gönderilir. Kimliği yüksek Word'de bulunan `wParam` parametresi. Bu yana [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] mu HIWORD makrosu sahip değilse, örnek kimliği ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcı yapılan veya kendi seçimini, kimlik LBN_SELCHANGE olacaktır.  
+ [`WM_COMMAND`](https://msdn.microsoft.com/library/windows/desktop/ms647591(v=vs.85).aspx) işlemek istediğiniz bir olay olup olmadığını belirlemek için bildirim kimliği incelemeniz gerekir böylece çeşitli nedenlerle, için gönderilir. Kimliği yüksek Word'de bulunan `wParam` parametresi. Örnek kimliği ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcı yapılan veya kendi seçimini, kimliği olacaktır [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx).  
   
- LBN_SELCHANGE alındığında, örnek denetimi LB_GETCURSEL iletisi göndererek seçili öğenin dizinini alır. Metni almak için önce oluşturduğunuz bir <xref:System.Text.StringBuilder>. Denetimin ardından LB_GETTEXT iletisi gönderin. Boş geçmesi <xref:System.Text.StringBuilder> olarak nesne `wParam` parametresi. SendMessage döndürüldüğünde, <xref:System.Text.StringBuilder> seçilen öğenin metnini içerir. Bu SendMessage kullanılmasını henüz gerektiren başka bir [!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)] bildirimi.  
+ Zaman [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) olan alınan, örnek seçili öğenin dizini denetimi göndererek alır bir [ `LB_GETCURSEL` ileti](https://msdn.microsoft.com/library/windows/desktop/bb775197(v=vs.85).aspx). Metni almak için önce oluşturduğunuz bir <xref:System.Text.StringBuilder>. Denetim daha sonra göndereceğiniz bir [ `LB_GETTEXT` ileti](https://msdn.microsoft.com/library/windows/desktop/bb761313(v=vs.85).aspx). Boş geçmesi <xref:System.Text.StringBuilder> olarak nesne `wParam` parametresi. Zaman [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) döndürür, <xref:System.Text.StringBuilder> seçilen öğenin metnini içerir. Bu kullanımını [ `SendMessage` ](https://msdn.microsoft.com/library/windows/desktop/ms644950(v=vs.85).aspx) henüz başka bir PInvoke bildirimi gerektirir.  
   
  Son olarak, ayarlamak `handled` için `true` iletinin işlendiğini belirtmek için.  
   
