@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579879"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948611"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 <a name="top"></a> Normal bir ifade normal ifade altyapısı giriş metni eşleştirmeyi dener bir desen ' dir. Bir desen, bir veya daha çok karakter sabitinden, işleçlerden veya yapılardan oluşur.  Kısa bir giriş için bkz [.NET normal ifadeler](../../../docs/standard/base-types/regular-expressions.md).  
@@ -93,8 +93,8 @@ ms.locfileid: "33579879"
   
 |Onaylama işlemi|Açıklama|Desen|Eşleşmeler|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Eşleşme dizenin veya satırın başlangıcında başlamalıdır.|`^\d{3}`|"901" içinde<br /><br /> "901-333-"|  
-|`$`|Eşleşme dizenin veya önce sonunda gerçekleşmelidir `\n` satırı veya dize sonunda.|`-\d{3}$`|"-333"<br /><br /> "-901-333"|  
+|`^`|Varsayılan olarak, dizenin başında eşleşme başlamalıdır; çok satırlı modunda, satır başında başlatmanız gerekir.|`^\d{3}`|"901" içinde<br /><br /> "901-333-"|  
+|`$`|Varsayılan olarak, dize veya önce sonunda eşleşme gerçekleşmelidir `\n` sonunda dize; çok satırlı modunda, satır veya önce bitmeden önce gerçekleşmelidir `\n` satırın sonundaki.|`-\d{3}$`|"-333"<br /><br /> "-901-333"|  
 |`\A`|Eşleşme dizenin başlangıcında gerçekleşmelidir.|`\A\d{3}`|"901" içinde<br /><br /> "901-333-"|  
 |`\Z`|Eşleşme dizenin veya önce sonunda gerçekleşmelidir `\n` dizesi sonunda.|`-\d{3}\Z`|"-333"<br /><br /> "-901-333"|  
 |`\z`|Eşleşme dizenin sonunda gerçekleşmelidir.|`-\d{3}\z`|"-333"<br /><br /> "-901-333"|  

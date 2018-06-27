@@ -4,12 +4,12 @@ description: ML.NET bir ikili sınıflandırma senaryosunda düşünceleri tahmi
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314844"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948624"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Öğretici: Kullanım düşünceleri analiz ikili sınıflandırma senaryosunda ML.NET
 
@@ -113,13 +113,13 @@ Aşağıdaki ek ekleyin `using` deyimleri üstüne *Program.cs* dosyası:
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Yolun son indirilen dosyaları tutmak için üç genel değişkenler oluşturmanız gerekir:
+En son indirilen dosyaları yolları tutmak için üç genel alan oluşturmanız gerekir:
 
 * `_dataPath` modeli eğitmek için kullanılan veri kümesi yolu.
 * `_testDataPath` model değerlendirmek için kullanılan veri kümesi yolu.
 * `_modelPath` Eğitim modeli kaydedildiği yolu vardır.
 
-Satırının sağındaki aşağıdaki kodu ekleyin `Main` yöntemi en son indirilen dosyaları belirtmek için:
+Satırının sağındaki aşağıdaki kodu ekleyin `Main` yöntemi bu yollarını belirtin:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

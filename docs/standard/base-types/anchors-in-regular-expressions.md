@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578033"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948595"
 ---
 # <a name="anchors-in-regular-expressions"></a>Normal İfadelerdeki Tutturucular
 <a name="top"></a> Bağlayıcılarını veya atomik Sıfır Genişlik onayları bir eşleşme gerçekleştiği gerekir bir dizedeki belirtin. Arama ifadenizde bir yer işareti kullandığınızda, normal ifade motoru dize veya harcama karakterleri boyunca ilerlemez; sadece belirtilen konumda bir eşleşme arar. Örneğin `^` , eşleşmenin bir satır veya dize başında başlaması gerektiğini belirtir. Bu nedenle `^http:` normal ifadesi, sadece bir satırın başında gerçekleştiğinde "http:" ile eşleşir. Aşağıdaki tabloda .NET normal ifadelerde tarafından desteklenen bağlayıcıları listeler.  
   
 |Yer işareti|Açıklama|  
 |------------|-----------------|  
-|`^`|Eşleşme dizenin veya satırın başlangıcında gerçekleşmelidir. Daha fazla bilgi için bkz: [Başlat, dize veya satır](#Start).|  
-|`$`|Eşleşme dize veya satırının ya da önce sonunda gerçekleşmelidir `\n` dize veya satırının sonunda. Daha fazla bilgi için bkz: [son, dize veya satır](#End).|  
+|`^`|Varsayılan olarak, dizenin başında eşleşme olmalıdır; çok satırlı modunda, satır başında bulunması gerekir. Daha fazla bilgi için bkz: [Başlat, dize veya satır](#Start).|  
+|`$`|Varsayılan olarak, dize veya önce sonunda eşleşme gerçekleşmelidir `\n` sonunda dize; çok satırlı modunda, satır veya önce sonunda gerçekleşmelidir `\n` satırın sonundaki. Daha fazla bilgi için bkz: [son, dize veya satır](#End).|  
 |`\A`|Eşleşme yalnızca dizenin başında gerçekleşmelidir (çok satır desteği yok). Daha fazla bilgi için bkz: [Başlat, dize yalnızca](#StartOnly).|  
 |`\Z`|Eşleşme dizesinin ya da önce sonunda gerçekleşmelidir `\n` dizesi sonunda. Daha fazla bilgi için bkz: [son, dize ya da önce bitiş yeni satır](#EndOrNOnly).|  
 |`\z`|Eşleşme sadece dizenin sonunda gerçekleşmelidir. Daha fazla bilgi için bkz: [son, dize yalnızca](#EndOnly).|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578033"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Dize veya Satır Başlangıcı: ^  
- `^` yer işareti, aşağıdaki desenin dizenin ilk karakter konumunda başlaması gerektiğini belirtir. Kullanırsanız `^` ile <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneği (bkz [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)), her satırın başındaki eşleşme olmalıdır.  
+ Varsayılan olarak, `^` bağlantısı belirtir. şu biçimi dizesi ilk karakter konumunda başlaması gerekir. Kullanırsanız `^` ile <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> seçeneği (bkz [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md)), her satırın başındaki eşleşme olmalıdır.  
   
  Aşağıdaki örnek, bazı profesyonel beysbol takımlarının var olduğu yıllar hakkındaki bilgiyi ayıklayan normal bir ifadedeki `^` yer işaretini kullanır. Örnek, <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yönteminin iki aşırı yüklemesini çağırır:  
   

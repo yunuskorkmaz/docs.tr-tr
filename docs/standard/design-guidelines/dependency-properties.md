@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576122"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948491"
 ---
 # <a name="dependency-properties"></a>Bağımlılık özellikleri
 Bağımlılık özelliği (DP) yerine bir türü değişkeni (alanı), örneğin bir özellik deposu değerini depolar normal bir özelliktir.  
@@ -43,7 +43,7 @@ Bağımlılık özelliği (DP) yerine bir türü değişkeni (alanı), örneğin
   
  Ekli özellik klasik bir örneği olan <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> özelliği. Düğmenin (değil ızgaranın) sütun konumu özelliğini temsil eder, ancak yalnızca düğme kılavuzunda yer alıyorsa, ve "düğmelere kılavuzları tarafından bağlı olduğu için" ilgili.  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ Bağımlılık özelliği (DP) yerine bir türü değişkeni (alanı), örneğin
   
  Erişimciler Get ve Set statik yöntemler tarafından temsil edilen dışında iliştirilmiş bir özellik tanımını çoğunlukla, normal bir bağımlılık özelliğinin, gibi görünür:  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  

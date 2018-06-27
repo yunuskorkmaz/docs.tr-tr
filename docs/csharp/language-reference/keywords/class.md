@@ -1,5 +1,5 @@
 ---
-title: class (C# Başvurusu)
+title: class anahtar sözcüğü (C# Başvurusu)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216758"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948517"
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
@@ -21,12 +21,13 @@ Sınıfları, anahtar sözcüğünü kullanarak bildirildiğinde `class`, aşağ
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>Açıklamalar
+
 C# içinde yalnızca tek devralma izin verilir. Diğer bir deyişle, bir sınıf bir taban sınıftan yalnızca uygulama devralabilirsiniz. Ancak, bir sınıfın birden fazla arabirimi uygulayabilirsiniz. Aşağıdaki tabloda sınıf devralma ve arabirim uygulamasına örnekleri gösterilmektedir:
 
 |Devralma|Örnek|
@@ -73,11 +74,13 @@ Bir sınıf bildirimleri aşağıdaki üyeleri içerebilir:
 - [Yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Örnek
+
 Aşağıdaki örnek bildiren sınıfı alanları, Oluşturucular ve yöntemleri gösterir. Ayrıca nesne örnek oluşturma ve yazdırma örnek verilerini gösterir. Bu örnekte, iki sınıf bildirilir. İlk sınıf `Child`, iki özel alan içeriyor (`name` ve `age`), iki ortak oluşturucular ve bir genel yöntem. İkinci sınıfı `StringTest`, kapsamak için kullanılmış `Main`.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Açıklamalar
+
 Önceki örnekte dikkat özel alanlar (`name` ve `age`) yalnızca genel yöntemi aracılığıyla erişilebilir `Child` sınıfı. Örneğin, çocuğunuzun adı, yazdırma olamaz `Main` yöntemi, böyle bir deyimi kullanarak:
 
 ```csharp
@@ -90,11 +93,13 @@ Türleri bildirilen bir erişim değiştiricisi varsayılan olmayan bir sınıf 
 
 Son olarak, varsayılan oluşturucu kullanılarak oluşturulan nesne için dikkat edin (`child3`), alan başlatılır yaş varsayılan olarak sıfır.
 
-## <a name="c-language-specification"></a>C# Dil Belirtimi
+## <a name="c-language-specification"></a>C# dili belirtimi
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Ayrıca Bkz.
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+[C# başvurusu](../../../csharp/language-reference/index.md)  
+[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+[C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+[Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)

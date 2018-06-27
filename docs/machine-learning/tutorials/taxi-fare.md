@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314971"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948637"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Öğretici: Kullanım ML.NET New York ücreti fares (regresyon) tahmin etmek için
 
@@ -82,7 +82,7 @@ Giriş verilerini ve tahminleri için sınıflar oluşturun:
 
 1. İçinde **Çözüm Gezgini**projeye sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
 1. İçinde **Yeni Öğe Ekle** iletişim kutusunda **sınıfı** değiştirip **adı** alanı *TaxiTrip.cs*. Ardından, seçin **Ekle** düğmesi.
-1. Aşağıdakileri ekleyin `using` deyimleri yeni dosya için:
+1. Aşağıdakileri ekleyin `using` yönergeleri yeni dosyaya:
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ Varolan sınıf tanımına kaldırmak ve iki sınıf olan aşağıdaki kodu ekle
 
 ## <a name="define-data-and-model-paths"></a>Veriler ve model yolları tanımla
 
-Geri dönerek *Program.cs* dosya ve veri kümeleri ile dosyalara yolları tutun ve model kaydetmek için üç genel sabitler oluşturun:
+Geri dönerek *Program.cs* dosya ve veri kümelerini dosyalarıyla ve model kaydetmek için dosya yolları tutmak için üç alanları ekleyin:
 
-* `_datapath` veri modeli eğitmek için kullanılan yolu vardır.
-* `_testdatapath` veri modeli değerlendirmek için kullanılan yolu vardır.
-* `_modelpath` Eğitim modeli depolandığı yolu vardır.
+* `_datapath` modeli eğitmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
+* `_testdatapath` model değerlendirmek için kullanılan veri kümesiyle dosyasının yolunu içerir.
+* `_modelpath` Eğitim modeli depolandığı dosyasının yolunu içerir.
 
-Satırının sağındaki aşağıdaki kodu ekleyin `Main` yöntemi bu yollarını belirtin:
+Aşağıdakileri ekleyin üzerinde doğru kod `Main` yöntemi bu yollarını belirtin:
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+Önceki kod derleme, aşağıdaki ekleyin yapmak için `using` üst kısmındaki yönergeleri *Program.cs* dosyası:
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>Öğrenme işlem hattı oluşturma
 
-Aşağıdaki ek ekleyin `using` deyimleri üstüne *Program.cs* dosyası:
+Aşağıdaki ek ekleyin `using` üst kısmındaki yönergeleri *Program.cs* dosyası:
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Yükleme ve dönüştürme verileri
 
-Öğrenme ardışık düzen gerçekleştirir ilk adımı verileri eğitim veri kümesinden yüklüyor. Örneğimizde, eğitim veri kümesi metin dosyasında tarafından tanımlanan bir yol ile depolanan `_datapath` sabit. Bu dosyayı sütun adları üstbilgiyle içerdiğinden, verileri yüklenirken ilk satırın yoksayılacak. Dosyadaki sütunları virgülle ayrılmış (","). Aşağıdaki kodu ekleyin `Train` yöntemi:
+Öğrenme ardışık düzen gerçekleştirir ilk adımı verileri eğitim veri kümesinden yüklüyor. Örneğimizde, eğitim veri kümesi metin dosyasında tarafından tanımlanan bir yol ile depolanan `_datapath` alan. Bu dosyayı sütun adları üstbilgiyle içerdiğinden, verileri yüklenirken ilk satırın yoksayılacak. Dosyadaki sütunları virgülle ayrılmış (","). Aşağıdaki kodu ekleyin `Train` yöntemi:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ Kullanarak `await` içinde `Main` yöntemi anlamına gelir `Main` yöntemi olmal
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-Ayrıca aşağıdaki eklemeniz gerekir `using` deyimini dosyanın üst:
+Ayrıca aşağıdaki eklemeniz gerekir `using` dosyasının üst yönerge:
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
