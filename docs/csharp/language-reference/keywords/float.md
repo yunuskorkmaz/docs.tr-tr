@@ -1,5 +1,5 @@
 ---
-title: float (C# Başvurusu)
+title: float anahtar sözcüğü (C# Başvurusu)
 ms.date: 07/20/2015
 f1_keywords:
 - float
@@ -8,63 +8,69 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: edeed59da26c7007b23e1eec8c05fbd2e6d34d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219251"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028246"
 ---
-# <a name="float-c-reference"></a><span data-ttu-id="58370-102">float (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="58370-102">float (C# Reference)</span></span>
-<span data-ttu-id="58370-103">`float` Anahtar sözcüğü 32 bit kayan nokta değerlerini depolayan basit bir tür belirtir.</span><span class="sxs-lookup"><span data-stu-id="58370-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="58370-104">Aşağıdaki tabloda duyarlık ve yaklaşık aralığının gösterir `float` türü.</span><span class="sxs-lookup"><span data-stu-id="58370-104">The following table shows the precision and approximate range for the `float` type.</span></span>  
-  
-|<span data-ttu-id="58370-105">Tür</span><span class="sxs-lookup"><span data-stu-id="58370-105">Type</span></span>|<span data-ttu-id="58370-106">Yaklaşık aralığı</span><span class="sxs-lookup"><span data-stu-id="58370-106">Approximate range</span></span>|<span data-ttu-id="58370-107">Duyarlık</span><span class="sxs-lookup"><span data-stu-id="58370-107">Precision</span></span>|<span data-ttu-id="58370-108">.NET Framework türü</span><span class="sxs-lookup"><span data-stu-id="58370-108">.NET Framework type</span></span>|  
+# <a name="float-c-reference"></a><span data-ttu-id="97343-102">float (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="97343-102">float (C# Reference)</span></span>
+
+<span data-ttu-id="97343-103">`float` Anahtar sözcüğü 32 bit kayan nokta değerlerini depolayan basit bir tür belirtir.</span><span class="sxs-lookup"><span data-stu-id="97343-103">The `float` keyword signifies a simple type that stores 32-bit floating-point values.</span></span> <span data-ttu-id="97343-104">Aşağıdaki tabloda duyarlık ve yaklaşık aralığının gösterir `float` türü.</span><span class="sxs-lookup"><span data-stu-id="97343-104">The following table shows the precision and approximate range for the `float` type.</span></span>
+
+|<span data-ttu-id="97343-105">Tür</span><span class="sxs-lookup"><span data-stu-id="97343-105">Type</span></span>|<span data-ttu-id="97343-106">Yaklaşık aralığı</span><span class="sxs-lookup"><span data-stu-id="97343-106">Approximate range</span></span>|<span data-ttu-id="97343-107">Duyarlık</span><span class="sxs-lookup"><span data-stu-id="97343-107">Precision</span></span>|<span data-ttu-id="97343-108">.NET türü</span><span class="sxs-lookup"><span data-stu-id="97343-108">.NET type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|<span data-ttu-id="58370-109">-3.4 × 10<sup>38</sup>+3.4 × 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="58370-109">-3.4 × 10<sup>38</sup>to +3.4 × 10<sup>38</sup></span></span>|<span data-ttu-id="58370-110">7 basamağa</span><span class="sxs-lookup"><span data-stu-id="58370-110">7 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
-  
-## <a name="literals"></a><span data-ttu-id="58370-111">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="58370-111">Literals</span></span>  
- <span data-ttu-id="58370-112">Varsayılan olarak, gerçek tamsayısal bir hazır değer atama işlecinin sağ tarafında olarak işlem görür [çift](double.md).</span><span class="sxs-lookup"><span data-stu-id="58370-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="58370-113">Bu nedenle, bir float değişkeni başlatmak için sonekini kullan `f` veya `F`, aşağıdaki örnekte olduğu gibi:</span><span class="sxs-lookup"><span data-stu-id="58370-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>  
-  
+|`float`|<span data-ttu-id="97343-109">-3.4 × 10<sup>38</sup> +3.4 × 10<sup>38</sup></span><span class="sxs-lookup"><span data-stu-id="97343-109">-3.4 × 10<sup>38</sup> to +3.4 × 10<sup>38</sup></span></span>|<span data-ttu-id="97343-110">7 basamağa</span><span class="sxs-lookup"><span data-stu-id="97343-110">7 digits</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
+
+## <a name="literals"></a><span data-ttu-id="97343-111">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="97343-111">Literals</span></span>
+
+<span data-ttu-id="97343-112">Varsayılan olarak, gerçek tamsayısal bir hazır değer atama işlecinin sağ tarafında olarak işlem görür [çift](double.md).</span><span class="sxs-lookup"><span data-stu-id="97343-112">By default, a real numeric literal on the right side of the assignment operator is treated as [double](double.md).</span></span> <span data-ttu-id="97343-113">Bu nedenle, bir float değişkeni başlatmak için sonekini kullan `f` veya `F`, aşağıdaki örnekte olduğu gibi:</span><span class="sxs-lookup"><span data-stu-id="97343-113">Therefore, to initialize a float variable, use the suffix `f` or `F`, as in the following example:</span></span>
+
 ```csharp
-float x = 3.5F;  
+float x = 3.5F;
 ```
-  
- <span data-ttu-id="58370-114">Önceki bildiriminde soneki kullanmıyorsanız depolamak çalıştığınız için bir derleme hatası alırsınız bir [çift](double.md) içine değeri bir `float` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="58370-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>  
-  
-## <a name="conversions"></a><span data-ttu-id="58370-115">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="58370-115">Conversions</span></span>  
- <span data-ttu-id="58370-116">Sayısal tam sayı türleri ve bir ifadede kayan nokta türleri karıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="58370-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="58370-117">Bu durumda, tam sayı türleri için kayan nokta türleri dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="58370-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="58370-118">İfade değerlendirme aşağıdaki kurallara göre gerçekleştirilir:</span><span class="sxs-lookup"><span data-stu-id="58370-118">The evaluation of the expression is performed according to the following rules:</span></span>  
-  
--   <span data-ttu-id="58370-119">Kayan nokta türlerinden birini ise [çift](double.md), için ifadeyi hesaplar [çift](double.md) veya [bool](bool.md) ilişkisel ya da Boole ifadelerde.</span><span class="sxs-lookup"><span data-stu-id="58370-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md) or [bool](bool.md) in relational or Boolean expressions.</span></span>  
-  
--   <span data-ttu-id="58370-120">Varsa hiçbir [çift](double.md) ifadede, ifade türü hesaplar için `float` veya [bool](bool.md) ilişkisel ya da Boole ifadelerde.</span><span class="sxs-lookup"><span data-stu-id="58370-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float` or [bool](bool.md) in relational or Boolean expressions.</span></span>  
-  
- <span data-ttu-id="58370-121">Kayan nokta ifade aşağıdaki değerleri içerebilir:</span><span class="sxs-lookup"><span data-stu-id="58370-121">A floating-point expression can contain the following sets of values:</span></span>  
-  
--   <span data-ttu-id="58370-122">Pozitif ve negatif sıfır</span><span class="sxs-lookup"><span data-stu-id="58370-122">Positive and negative zero</span></span>  
-  
--   <span data-ttu-id="58370-123">Pozitif ve negatif sonsuzluk</span><span class="sxs-lookup"><span data-stu-id="58370-123">Positive and negative infinity</span></span>  
-  
--   <span data-ttu-id="58370-124">Bir sayı değil değeri (NaN)</span><span class="sxs-lookup"><span data-stu-id="58370-124">Not-a-Number value (NaN)</span></span>  
-  
--   <span data-ttu-id="58370-125">Sıfır olmayan değerler sınırlı kümesi</span><span class="sxs-lookup"><span data-stu-id="58370-125">The finite set of nonzero values</span></span>  
-  
- <span data-ttu-id="58370-126">Bu değerler hakkında daha fazla bilgi için ikili Floating-Point aritmetik, kullanılabilir IEEE standardı bkz [IEEE](http://www.ieee.org) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="58370-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](http://www.ieee.org) Web site.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="58370-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="58370-127">Example</span></span>  
- <span data-ttu-id="58370-128">Aşağıdaki örnekte, bir [int](int.md), [kısa](short.md)ve bir `float` bir matematik ifadesindeki vermiş bulunan bir `float` sonucu.</span><span class="sxs-lookup"><span data-stu-id="58370-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="58370-129">(Unutmayın `float` için diğer ad olduğu <xref:System.Single?displayProperty=nameWithType> türü.) Var olduğuna dikkat edin hiçbir [çift](double.md) ifadesinde.</span><span class="sxs-lookup"><span data-stu-id="58370-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>  
-  
- [!code-csharp[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="58370-130">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="58370-130">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="58370-131">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="58370-131">See Also</span></span>  
- <xref:System.Single>  
- [<span data-ttu-id="58370-132">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="58370-132">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="58370-133">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="58370-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="58370-134">Tür Değiştirme ve Tür Dönüştürmeler</span><span class="sxs-lookup"><span data-stu-id="58370-134">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [<span data-ttu-id="58370-135">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="58370-135">C# Keywords</span></span>](index.md)  
- [<span data-ttu-id="58370-136">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="58370-136">Integral Types Table</span></span>](integral-types-table.md)  
- [<span data-ttu-id="58370-137">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="58370-137">Built-In Types Table</span></span>](built-in-types-table.md)  
- [<span data-ttu-id="58370-138">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="58370-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)  
- [<span data-ttu-id="58370-139">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="58370-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)
+
+<span data-ttu-id="97343-114">Önceki bildiriminde soneki kullanmıyorsanız depolamak çalıştığınız için bir derleme hatası alırsınız bir [çift](double.md) içine değeri bir `float` değişkeni.</span><span class="sxs-lookup"><span data-stu-id="97343-114">If you do not use the suffix in the previous declaration, you will get a compilation error because you are trying to store a [double](double.md) value into a `float` variable.</span></span>
+
+## <a name="conversions"></a><span data-ttu-id="97343-115">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="97343-115">Conversions</span></span>
+
+<span data-ttu-id="97343-116">Sayısal tam sayı türleri ve bir ifadede kayan nokta türleri karıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="97343-116">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="97343-117">Bu durumda, tam sayı türleri için kayan nokta türleri dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="97343-117">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="97343-118">İfade değerlendirme aşağıdaki kurallara göre gerçekleştirilir:</span><span class="sxs-lookup"><span data-stu-id="97343-118">The evaluation of the expression is performed according to the following rules:</span></span>
+
+- <span data-ttu-id="97343-119">Kayan nokta türlerinden birini ise [çift](double.md), için ifadeyi hesaplar [çift](double.md) veya [bool](bool.md) ilişkisel ya da Boole ifadelerde.</span><span class="sxs-lookup"><span data-stu-id="97343-119">If one of the floating-point types is [double](double.md), the expression evaluates to [double](double.md) or [bool](bool.md) in relational or Boolean expressions.</span></span>
+
+- <span data-ttu-id="97343-120">Varsa hiçbir [çift](double.md) ifadede, ifade türü hesaplar için `float` veya [bool](bool.md) ilişkisel ya da Boole ifadelerde.</span><span class="sxs-lookup"><span data-stu-id="97343-120">If there is no [double](double.md) type in the expression, the expression evaluates to `float` or [bool](bool.md) in relational or Boolean expressions.</span></span>
+
+<span data-ttu-id="97343-121">Kayan nokta ifade aşağıdaki değerleri içerebilir:</span><span class="sxs-lookup"><span data-stu-id="97343-121">A floating-point expression can contain the following sets of values:</span></span>
+
+- <span data-ttu-id="97343-122">Pozitif ve negatif sıfır</span><span class="sxs-lookup"><span data-stu-id="97343-122">Positive and negative zero</span></span>
+
+- <span data-ttu-id="97343-123">Pozitif ve negatif sonsuzluk</span><span class="sxs-lookup"><span data-stu-id="97343-123">Positive and negative infinity</span></span>
+
+- <span data-ttu-id="97343-124">Bir sayı değil değeri (NaN)</span><span class="sxs-lookup"><span data-stu-id="97343-124">Not-a-Number value (NaN)</span></span>
+
+- <span data-ttu-id="97343-125">Sıfır olmayan değerler sınırlı kümesi</span><span class="sxs-lookup"><span data-stu-id="97343-125">The finite set of nonzero values</span></span>
+
+<span data-ttu-id="97343-126">Bu değerler hakkında daha fazla bilgi için ikili Floating-Point aritmetik, kullanılabilir IEEE standardı bkz [IEEE](http://www.ieee.org) Web sitesi.</span><span class="sxs-lookup"><span data-stu-id="97343-126">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](http://www.ieee.org) website.</span></span>
+
+## <a name="example"></a><span data-ttu-id="97343-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="97343-127">Example</span></span>
+
+<span data-ttu-id="97343-128">Aşağıdaki örnekte, bir [int](int.md), [kısa](short.md)ve bir `float` bir matematik ifadesindeki vermiş bulunan bir `float` sonucu.</span><span class="sxs-lookup"><span data-stu-id="97343-128">In the following example, an [int](int.md), a [short](short.md), and a `float` are included in a mathematical expression giving a `float` result.</span></span> <span data-ttu-id="97343-129">(Unutmayın `float` için diğer ad olduğu <xref:System.Single?displayProperty=nameWithType> türü.) Var olduğuna dikkat edin hiçbir [çift](double.md) ifadesinde.</span><span class="sxs-lookup"><span data-stu-id="97343-129">(Remember that `float` is an alias for the <xref:System.Single?displayProperty=nameWithType> type.) Notice that there is no [double](double.md) in the expression.</span></span>
+
+[!code-csharp[csrefKeywordsTypes#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#13)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="97343-130">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="97343-130">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="97343-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97343-131">See also</span></span>
+
+<xref:System.Single>  
+[<span data-ttu-id="97343-132">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="97343-132">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="97343-133">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="97343-133">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+[<span data-ttu-id="97343-134">Tür Değiştirme ve Tür Dönüştürmeler</span><span class="sxs-lookup"><span data-stu-id="97343-134">Casting and Type Conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)  
+[<span data-ttu-id="97343-135">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="97343-135">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="97343-136">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="97343-136">Integral Types Table</span></span>](integral-types-table.md)  
+[<span data-ttu-id="97343-137">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="97343-137">Built-In Types Table</span></span>](built-in-types-table.md)  
+[<span data-ttu-id="97343-138">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="97343-138">Implicit Numeric Conversions Table</span></span>](implicit-numeric-conversions-table.md)  
+[<span data-ttu-id="97343-139">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="97343-139">Explicit Numeric Conversions Table</span></span>](explicit-numeric-conversions-table.md)  

@@ -7,105 +7,105 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 657d5bb3866a3ad88226740ebf7ef12c3654e56b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288170"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027869"
 ---
-# <a name="short-c-reference"></a><span data-ttu-id="8957f-102">short (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="8957f-102">short (C# Reference)</span></span>
+# <a name="short-c-reference"></a><span data-ttu-id="363b6-102">short (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="363b6-102">short (C# Reference)</span></span>
 
-<span data-ttu-id="8957f-103">`short` değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı veri türünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="8957f-103">`short` denotes an integral data type that stores values according to the size and range shown in the following table.</span></span>  
+<span data-ttu-id="363b6-103">`short` değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı veri türünü gösterir.</span><span class="sxs-lookup"><span data-stu-id="363b6-103">`short` denotes an integral data type that stores values according to the size and range shown in the following table.</span></span>  
   
-|<span data-ttu-id="8957f-104">Tür</span><span class="sxs-lookup"><span data-stu-id="8957f-104">Type</span></span>|<span data-ttu-id="8957f-105">Aralık</span><span class="sxs-lookup"><span data-stu-id="8957f-105">Range</span></span>|<span data-ttu-id="8957f-106">Boyut</span><span class="sxs-lookup"><span data-stu-id="8957f-106">Size</span></span>|<span data-ttu-id="8957f-107">.NET Framework türü</span><span class="sxs-lookup"><span data-stu-id="8957f-107">.NET Framework type</span></span>|  
+|<span data-ttu-id="363b6-104">Tür</span><span class="sxs-lookup"><span data-stu-id="363b6-104">Type</span></span>|<span data-ttu-id="363b6-105">Aralık</span><span class="sxs-lookup"><span data-stu-id="363b6-105">Range</span></span>|<span data-ttu-id="363b6-106">Boyut</span><span class="sxs-lookup"><span data-stu-id="363b6-106">Size</span></span>|<span data-ttu-id="363b6-107">.NET türü</span><span class="sxs-lookup"><span data-stu-id="363b6-107">.NET type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`short`|<span data-ttu-id="8957f-108">-32.768 için 32.767</span><span class="sxs-lookup"><span data-stu-id="8957f-108">-32,768 to 32,767</span></span>|<span data-ttu-id="8957f-109">İşaretli 16 bit tam sayı</span><span class="sxs-lookup"><span data-stu-id="8957f-109">Signed 16-bit integer</span></span>|<xref:System.Int16?displayProperty=nameWithType>|  
+|`short`|<span data-ttu-id="363b6-108">-32.768 için 32.767</span><span class="sxs-lookup"><span data-stu-id="363b6-108">-32,768 to 32,767</span></span>|<span data-ttu-id="363b6-109">İşaretli 16 bit tam sayı</span><span class="sxs-lookup"><span data-stu-id="363b6-109">Signed 16-bit integer</span></span>|<xref:System.Int16?displayProperty=nameWithType>|  
   
-## <a name="literals"></a><span data-ttu-id="8957f-110">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="8957f-110">Literals</span></span>  
+## <a name="literals"></a><span data-ttu-id="363b6-110">Sabit değerler</span><span class="sxs-lookup"><span data-stu-id="363b6-110">Literals</span></span>  
 
-<span data-ttu-id="8957f-111">Bildirme ve başlatma bir `short` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak).</span><span class="sxs-lookup"><span data-stu-id="8957f-111">You can declare and initialize a `short` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span>  <span data-ttu-id="8957f-112">Değişmez değer tamsayı aralığı dışında ise `short` (diğer bir deyişle, bu ise değerinden <xref:System.Int16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int16.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.</span><span class="sxs-lookup"><span data-stu-id="8957f-112">If the integer literal is outside the range of `short` (that is, if it is less than <xref:System.Int16.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int16.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span> 
+<span data-ttu-id="363b6-111">Bildirme ve başlatma bir `short` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak).</span><span class="sxs-lookup"><span data-stu-id="363b6-111">You can declare and initialize a `short` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span>  <span data-ttu-id="363b6-112">Değişmez değer tamsayı aralığı dışında ise `short` (diğer bir deyişle, bu ise değerinden <xref:System.Int16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int16.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur.</span><span class="sxs-lookup"><span data-stu-id="363b6-112">If the integer literal is outside the range of `short` (that is, if it is less than <xref:System.Int16.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int16.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span> 
 
-<span data-ttu-id="8957f-113">Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 1,034 tamsayılar eşit ve ikili değişmez değerleri gelen örtük olarak dönüştürülür [int](../../../csharp/language-reference/keywords/int.md) için `short` değerleri.</span><span class="sxs-lookup"><span data-stu-id="8957f-113">In the following example, integers equal to 1,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `short` values.</span></span>  
+<span data-ttu-id="363b6-113">Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 1,034 tamsayılar eşit ve ikili değişmez değerleri gelen örtük olarak dönüştürülür [int](../../../csharp/language-reference/keywords/int.md) için `short` değerleri.</span><span class="sxs-lookup"><span data-stu-id="363b6-113">In the following example, integers equal to 1,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `short` values.</span></span>  
   
 [!code-csharp[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Short)]  
 
 > [!NOTE] 
-> <span data-ttu-id="8957f-114">Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="8957f-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="8957f-115">Ondalık değişmez değerler, önek vardır.</span><span class="sxs-lookup"><span data-stu-id="8957f-115">Decimal literals have no prefix.</span></span>
+> <span data-ttu-id="363b6-114">Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="363b6-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="363b6-115">Ondalık değişmez değerler, önek vardır.</span><span class="sxs-lookup"><span data-stu-id="363b6-115">Decimal literals have no prefix.</span></span>
 
-<span data-ttu-id="8957f-116">C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor.</span><span class="sxs-lookup"><span data-stu-id="8957f-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
- - <span data-ttu-id="8957f-117">C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.</span><span class="sxs-lookup"><span data-stu-id="8957f-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
- - <span data-ttu-id="8957f-118">C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="8957f-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="8957f-119">Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.</span><span class="sxs-lookup"><span data-stu-id="8957f-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
+<span data-ttu-id="363b6-116">C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor.</span><span class="sxs-lookup"><span data-stu-id="363b6-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="363b6-117">C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.</span><span class="sxs-lookup"><span data-stu-id="363b6-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="363b6-118">C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak.</span><span class="sxs-lookup"><span data-stu-id="363b6-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="363b6-119">Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.</span><span class="sxs-lookup"><span data-stu-id="363b6-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="8957f-120">Aşağıda bazı örnekler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8957f-120">Some examples are shown below.</span></span>
+<span data-ttu-id="363b6-120">Aşağıda bazı örnekler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="363b6-120">Some examples are shown below.</span></span>
 
 [!code-csharp[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
  
-## <a name="compiler-overload-resolution"></a><span data-ttu-id="8957f-121">Derleyici aşırı yükleme çözümü</span><span class="sxs-lookup"><span data-stu-id="8957f-121">Compiler overload resolution</span></span>
+## <a name="compiler-overload-resolution"></a><span data-ttu-id="363b6-121">Derleyici aşırı yükleme çözümü</span><span class="sxs-lookup"><span data-stu-id="363b6-121">Compiler overload resolution</span></span>
 
- <span data-ttu-id="8957f-122">Arama aşırı yüklenmiş yöntemler bir cast kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="8957f-122">A cast must be used when calling overloaded methods.</span></span> <span data-ttu-id="8957f-123">Örneğin, aşağıdaki aşırı kullanan yöntemleri düşünün `short` ve [int](../../../csharp/language-reference/keywords/int.md) Parametreler:</span><span class="sxs-lookup"><span data-stu-id="8957f-123">Consider, for example, the following overloaded methods that use `short` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
+ <span data-ttu-id="363b6-122">Arama aşırı yüklenmiş yöntemler bir cast kullanılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="363b6-122">A cast must be used when calling overloaded methods.</span></span> <span data-ttu-id="363b6-123">Örneğin, aşağıdaki aşırı kullanan yöntemleri düşünün `short` ve [int](../../../csharp/language-reference/keywords/int.md) Parametreler:</span><span class="sxs-lookup"><span data-stu-id="363b6-123">Consider, for example, the following overloaded methods that use `short` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(short s) {}  
 ```  
   
- <span data-ttu-id="8957f-124">Kullanarak `short` cast garanti doğru türde, örneğin çağrıldığından emin:</span><span class="sxs-lookup"><span data-stu-id="8957f-124">Using the `short` cast guarantees that the correct type is called, for example:</span></span>  
+ <span data-ttu-id="363b6-124">Kullanarak `short` cast garanti doğru türde, örneğin çağrıldığından emin:</span><span class="sxs-lookup"><span data-stu-id="363b6-124">Using the `short` cast guarantees that the correct type is called, for example:</span></span>  
   
 ```csharp  
 SampleMethod(5);         // Calling the method with the int parameter  
 SampleMethod((short)5);  // Calling the method with the short parameter  
 ```  
   
-## <a name="conversions"></a><span data-ttu-id="8957f-125">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="8957f-125">Conversions</span></span>  
+## <a name="conversions"></a><span data-ttu-id="363b6-125">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="363b6-125">Conversions</span></span>  
 
- <span data-ttu-id="8957f-126">Önceden tanımlanmış bir örtük dönüştürme `short` için [int](../../../csharp/language-reference/keywords/int.md), [uzun](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ ondalık](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="8957f-126">There is a predefined implicit conversion from `short` to [int](../../../csharp/language-reference/keywords/int.md), [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
+ <span data-ttu-id="363b6-126">Önceden tanımlanmış bir örtük dönüştürme `short` için [int](../../../csharp/language-reference/keywords/int.md), [uzun](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ ondalık](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="363b6-126">There is a predefined implicit conversion from `short` to [int](../../../csharp/language-reference/keywords/int.md), [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- <span data-ttu-id="8957f-127">Daha büyük depolama boyutu nonliteral sayısal türlerini örtük olarak dönüştürülemiyor `short` (bkz [tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md) depolama boyutları tam sayı türleri için).</span><span class="sxs-lookup"><span data-stu-id="8957f-127">You cannot implicitly convert nonliteral numeric types of larger storage size to `short` (see [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) for the storage sizes of integral types).</span></span> <span data-ttu-id="8957f-128">Örneğin, aşağıdaki iki göz önünde bulundurun `short` değişkenleri `x` ve `y`:</span><span class="sxs-lookup"><span data-stu-id="8957f-128">Consider, for example, the following two `short` variables `x` and `y`:</span></span>  
+ <span data-ttu-id="363b6-127">Daha büyük depolama boyutu nonliteral sayısal türlerini örtük olarak dönüştürülemiyor `short` (bkz [tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md) depolama boyutları tam sayı türleri için).</span><span class="sxs-lookup"><span data-stu-id="363b6-127">You cannot implicitly convert nonliteral numeric types of larger storage size to `short` (see [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) for the storage sizes of integral types).</span></span> <span data-ttu-id="363b6-128">Örneğin, aşağıdaki iki göz önünde bulundurun `short` değişkenleri `x` ve `y`:</span><span class="sxs-lookup"><span data-stu-id="363b6-128">Consider, for example, the following two `short` variables `x` and `y`:</span></span>  
   
 ```csharp  
 short x = 5, y = 12;  
 ```  
   
- <span data-ttu-id="8957f-129">Atama işlecinin sağ taraftaki aritmetik ifade değerlendiren çünkü aşağıdaki atama deyimi bir derleme hatası üretir [int](../../../csharp/language-reference/keywords/int.md) varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="8957f-129">The following assignment statement produces a compilation error because the arithmetic expression on the right-hand side of the assignment operator evaluates to [int](../../../csharp/language-reference/keywords/int.md) by default.</span></span>  
+ <span data-ttu-id="363b6-129">Atama işlecinin sağ taraftaki aritmetik ifade değerlendiren çünkü aşağıdaki atama deyimi bir derleme hatası üretir [int](../../../csharp/language-reference/keywords/int.md) varsayılan olarak.</span><span class="sxs-lookup"><span data-stu-id="363b6-129">The following assignment statement produces a compilation error because the arithmetic expression on the right-hand side of the assignment operator evaluates to [int](../../../csharp/language-reference/keywords/int.md) by default.</span></span>  
   
 ```csharp
 short z  = x + y;        // Compiler error CS0266: no conversion from int to short
 ```
 
- <span data-ttu-id="8957f-130">Bu sorunu gidermek için bir atama kullanın:</span><span class="sxs-lookup"><span data-stu-id="8957f-130">To fix this problem, use a cast:</span></span>  
+ <span data-ttu-id="363b6-130">Bu sorunu gidermek için bir atama kullanın:</span><span class="sxs-lookup"><span data-stu-id="363b6-130">To fix this problem, use a cast:</span></span>  
   
 ```csharp
 short z  = (short)(x + y);   // Explicit conversion
 ```
   
- <span data-ttu-id="8957f-131">Hedef değişken depolama boyutu ile aynı veya daha büyük bir depolama boyutu sahip olduğu aşağıdaki deyimleri kullanmak da mümkündür:</span><span class="sxs-lookup"><span data-stu-id="8957f-131">It is also possible to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
+ <span data-ttu-id="363b6-131">Hedef değişken depolama boyutu ile aynı veya daha büyük bir depolama boyutu sahip olduğu aşağıdaki deyimleri kullanmak da mümkündür:</span><span class="sxs-lookup"><span data-stu-id="363b6-131">It is also possible to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
   
 ```csharp  
 int m = x + y;  
 long n = x + y;  
 ```  
   
- <span data-ttu-id="8957f-132">Kayan nokta türlerinden örtük bir dönüştürme yok `short`.</span><span class="sxs-lookup"><span data-stu-id="8957f-132">There is no implicit conversion from floating-point types to `short`.</span></span> <span data-ttu-id="8957f-133">Örneğin, bir açık atama kullanılmadığı sürece aşağıdaki ifadeyi derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="8957f-133">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
+ <span data-ttu-id="363b6-132">Kayan nokta türlerinden örtük bir dönüştürme yok `short`.</span><span class="sxs-lookup"><span data-stu-id="363b6-132">There is no implicit conversion from floating-point types to `short`.</span></span> <span data-ttu-id="363b6-133">Örneğin, bir açık atama kullanılmadığı sürece aşağıdaki ifadeyi derleyici hatası oluşturur:</span><span class="sxs-lookup"><span data-stu-id="363b6-133">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 short x = 3.0;          // Error: no implicit conversion from double  
 short y = (short)3.0;   // OK: explicit conversion  
 ```  
   
- <span data-ttu-id="8957f-134">Karma kayan nokta türleri ve tam sayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="8957f-134">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
+ <span data-ttu-id="363b6-134">Karma kayan nokta türleri ve tam sayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="363b6-134">For information on arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- <span data-ttu-id="8957f-135">Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz: [örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="8957f-135">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
+ <span data-ttu-id="363b6-135">Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz: [örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="363b6-135">For more information on implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="8957f-136">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="8957f-136">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="363b6-136">C# Dil Belirtimi</span><span class="sxs-lookup"><span data-stu-id="363b6-136">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8957f-137">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8957f-137">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="363b6-137">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="363b6-137">See Also</span></span>  
  <xref:System.Int16>  
- [<span data-ttu-id="8957f-138">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="8957f-138">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="8957f-139">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="8957f-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="8957f-140">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="8957f-140">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="8957f-141">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="8957f-141">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [<span data-ttu-id="8957f-142">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8957f-142">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [<span data-ttu-id="8957f-143">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8957f-143">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [<span data-ttu-id="8957f-144">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="8957f-144">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [<span data-ttu-id="363b6-138">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="363b6-138">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="363b6-139">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="363b6-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="363b6-140">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="363b6-140">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="363b6-141">Tam Sayı Türleri Tablosu</span><span class="sxs-lookup"><span data-stu-id="363b6-141">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="363b6-142">Yerleşik Türler Tablosu</span><span class="sxs-lookup"><span data-stu-id="363b6-142">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="363b6-143">Örtük Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="363b6-143">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="363b6-144">Açık Sayısal Dönüştürmeler Tablosu</span><span class="sxs-lookup"><span data-stu-id="363b6-144">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
