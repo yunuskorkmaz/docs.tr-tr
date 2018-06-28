@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 589218e410d5c78b5df959bca84d409485e52e5d
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948478"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027960"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# Başvurusu)
 
 `decimal` Anahtar sözcüğü 128-bit veri türünü gösterir. Diğer kayan nokta türleri için karşılaştırıldığında `decimal` daha yüksek duyarlılık ve finansal ve para hesaplamaları için uygun hale getirir daha küçük bir aralık türü içeriyor. İçin duyarlık ve yaklaşık aralığı `decimal` türü aşağıdaki tabloda gösterilmiştir.
 
-|Tür|Yaklaşık Aralık|Duyarlık|.NET Framework türü|
+|Tür|Yaklaşık Aralık|Duyarlık|.NET türü|
 |----------|-----------------------|---------------|-------------------------|
 |`decimal`|(-7.9 x 10<sup>28</sup> 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> 10<sup>28</sup>)|28-29 önemli basamaklar|<xref:System.Decimal?displayProperty=nameWithType>|
 

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 657d5bb3866a3ad88226740ebf7ef12c3654e56b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7991259aadd391288caa37b35addd6e16e234878
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288170"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027869"
 ---
 # <a name="short-c-reference"></a>short (C# Başvurusu)
 
 `short` değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı veri türünü gösterir.  
   
-|Tür|Aralık|Boyut|.NET Framework türü|  
+|Tür|Aralık|Boyut|.NET türü|  
 |----------|-----------|----------|-------------------------|  
 |`short`|-32.768 için 32.767|İşaretli 16 bit tam sayı|<xref:System.Int16?displayProperty=nameWithType>|  
   

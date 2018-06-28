@@ -1,6 +1,6 @@
 ---
 title: Varsayılan Hazırlama Davranışı
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457419"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028077"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Hazırlama Davranışı
 Birlikte çalışma hazırlama kurallarında yönetilen ve yönetilmeyen bellek arasında geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Bu yerleşik kurallar bir Aranan kendisine geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana dönün ve altında Sıralayıcı koşulda performans iyileştirmelerini sağlar hazırlama gibi etkinlikler veri türü dönüşümleri olarak denetler.  
@@ -113,7 +113,9 @@ interface DelegateTest : IDispatch {
 ```  
   
  Yalnızca başka bir yönetilmeyen işlev işaretçisi başvuru yapıldı gibi bir işlev işaretçisi, başvuru yapıldı.  
-  
+
+Bu örnekte, iki temsilcileri olarak sıralanmış zaman <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, sonuç bir `int` gösteren bir işaretçi bir `int`. Temsilci türleri başvuruya çünkü `int` burada bir işaretçi bir geçersiz kılma temsil eder (`void*`), bellekte temsilci adresini olduğu. Diğer bir deyişle, bu sonucu beri 32-bit Windows sistemleri için belirli `int` burada işlev işaretçisi boyutunu temsil eder.
+
 > [!NOTE]
 >  Yönetilmeyen kod tarafından tutulan yönetilen bir temsilci için işlev işaretçisi başvuru, yönetilen bir nesne üzerinde çöp toplama gerçekleştirme ortak dil çalışma zamanı engellemez.  
   

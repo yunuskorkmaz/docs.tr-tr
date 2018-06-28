@@ -2,12 +2,12 @@
 title: Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494023"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027934"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Hizmet Meta Verilerinden WCF İstemcisi Oluşturma
 Bu konu, meta veri belgelerden istemcileri oluşturmak için Svcutil.exe içinde çeşitli anahtarları kullanmayı açıklar.  
@@ -20,7 +20,7 @@ Bu konu, meta veri belgelerden istemcileri oluşturmak için Svcutil.exe içinde
   
 -   DISCO isteği (kullanarak [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET Web hizmetlerinden) için sağlanan adresi.  
   
- Svcutil.exe hizmetinden alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyası bağlı olarak istemciye oluşturur. Kullanıcı adı ile birleştirerek kullanıcı asıl adı (UPN) oluşturulan "@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracı üretir UPN Kerberos kimlik doğrulaması şu hata iletisiyle neden olan hata: **oturum açma girişimi başarısız oldu.** Bu sorunu gidermek için el ile aracı oluşturulan istemci dosyası düzeltin.  
+ Svcutil.exe hizmetinden alınan Web Hizmetleri Açıklama Dili (WSDL) veya ilke dosyası bağlı olarak istemciye oluşturur. Kullanıcı adı ile birleştirerek kullanıcı asıl adı (UPN) oluşturulan "\@" ve sonra bir tam etki alanı adı (FQDN) ekleme. Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracı üretir UPN Kerberos kimlik doğrulaması şu hata iletisiyle neden olan hata: **oturum açma girişimi başarısız oldu.** Bu sorunu gidermek için el ile aracı oluşturulan istemci dosyası düzeltin.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  

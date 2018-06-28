@@ -4,12 +4,12 @@ description: .NET Framework kitaplığı projelerden .NET Core için bağlantı 
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "33218364"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028051"
 ---
 # <a name="porting-to-net-core---libraries"></a>.NET Core - kitaplıkları taşıma
 
@@ -72,18 +72,6 @@ En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullan�
 Benzer CA'lar için güvenlik saydamlık korumalı kod güvenlik kritik kodundan bildirim temelli bir şekilde ayrılmasını sağlar ancak olan [artık bir güvenlik sınırı desteklenen](~/docs/framework/misc/security-transparent-code.md). Bu özellik, Silverlight tarafından yoğun olarak kullanılır. 
 
 En az çalışan işlemleri için sanallaştırma, kapsayıcıları veya kullanıcı hesapları gibi işletim sistemi tarafından sağlanan güvenlik sınırları kullanın ayrıcalık kümesi.
-
-### <a name="globaljson"></a>Global.JSON
-
-*Global.json* bir projenin .NET Core araçları sürümünü ayarlamanıza olanak tanır isteğe bağlı bir dosya bir dosyadır. .NET Core gecelik derlemelerini kullanıyorsanız ve SDK'ın belirli bir sürüm belirtmek istiyorsanız, sürümüyle belirtin bir *global.json* dosya. Genellikle geçerli çalışma dizini veya üst dizinleri birinde yer alıyor. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>PCL proje dönüştürme
 
