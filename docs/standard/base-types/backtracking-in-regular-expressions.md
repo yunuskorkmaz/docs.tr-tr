@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579775"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071870"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a> Geri dönüş bir normal ifade deseni isteğe bağlı içerdiğinde oluşur [nicelik](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), ve devam etmek için önceki kaydedilen bir duruma normal ifade altyapısı döndürür, bir eşleşme için arama yapın. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579775"
 |`[-.\w]*`|Bir kısa çizgi, nokta veya sözcük karakterinin sıfır, bir veya daha fazla örneğini eşleştirin.|  
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin|  
 |`([-.\w]*[0-9A-Z])*`|Ardından alfasayısal bir karakter gelen sıfır veya daha fazla kısa çizgi, nokta veya sözcük karakteri birleşiminin sıfır veya daha fazla örneğini eşleştirin. Bu ilk yakalama grubudur.|  
-|`@`|Bir at işaretini ("\@") eşleştirin.|  
+|`@`|Eşleşen bir at işareti ("\@").|  
   
  İkinci normal ifade deseni `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, pozitif geriye ilerleme onaylama işlemi kullanır. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579775"
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Bu karşılaştırma büyük küçük harf duyarsız, çünkü <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> yöntemi ile çağrılır <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> seçeneği.|  
 |`[-.\w]*`|Bir kısa çizgi, nokta veya sözcük karakterinin sıfır, bir veya daha fazla örneğini eşleştirin.|  
 |`(?<=[0-9A-Z])`|Son eşleşen karaktere geriye doğru bakın ve alfasayısal ise eşleştirmeyi devam ettirin. Alfasayısal karakterlerin, nokta, kısa çizgi ve tüm sözcük karakterlerinden oluşan kümenin bir alt kümesi olduğunu unutmayın.|  
-|`@`|Bir at işaretini ("\@") eşleştirin.|  
+|`@`|Eşleşen bir at işareti ("\@").|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>İleriye Yönelik Onaylar  
