@@ -6,6 +6,6 @@
 |Öneri|Bu sorunun olası iş geçici çözüm vardır:<ul><li>.NET Framework 4.5.1, de kullanmak için biçimlendiricisi bilgisayar yükseltin.</li><li>Kullanım <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> yerine <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> tam aynı CLR türlerini hem seri hale getirme ve uçları seri durumdan beklemiyor gibi.</li><li>Kullanım <xref:System.Collections.Generic.Dictionary%602?displayProperty=name> yerine <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> , bu belirli 4.5 - gerçekleştirilmez beri&gt;4.5.1 bölün.</li></ul>|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
 

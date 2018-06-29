@@ -5,5 +5,5 @@
 |Ayrıntılar|Yeni bir CodeDOM özellik mscorlib.dll .NET Framework 4.5 sürümü yerine mscorlib.dll hedeflenen sürümü karşı derlemek derleyici sağlar.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

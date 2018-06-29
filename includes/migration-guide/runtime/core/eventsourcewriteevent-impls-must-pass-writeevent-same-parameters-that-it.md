@@ -6,5 +6,5 @@
 |Öneri|Bir <xref:System.IndexOutOfRangeException?displayProperty=name> , özel durum bir <xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> okur <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> işlemi bu sözleşmeyi ihlal eden bir olay kaynağı için verileri.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

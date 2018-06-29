@@ -6,6 +6,6 @@
 |Öneri|Bu hata, .NET Framework 4.5.1 yükselterek önlenebilir. Alternatif olarak, kenar boşlukları görünüm koleksiyonlarından kaldırılabilir (gibi <xref:System.Windows.Controls.TreeView?displayProperty=name>s) sanallaştırılmış yığın içindeki tüm öğeler içeriyorsa paneller aynı boyuttadır.|
 |Kapsam|Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
 

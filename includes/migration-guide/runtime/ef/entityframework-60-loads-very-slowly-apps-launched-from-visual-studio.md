@@ -6,5 +6,5 @@
 |Öneri|EntityFramework 6.0.2 Bu sorun düzeltilmiştir. Performans sorunu önlemek için EntityFramework güncelleştirin.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

@@ -6,5 +6,5 @@
 |Öneri|Bu değişiklik, burada ileti ASP.NET veya WCF tarafından izin verilen sınırı aşıyor durumlarda hata ayıklama kolaylaştırır. Bir HTTP 400 durum koduna göre işleyen herhangi bir kodu değiştirmeniz gerekir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

@@ -6,6 +6,6 @@
 |Öneri|Bir geri alma sınırı olan 100 düşükse sınırını açıkça ile ayarlanabilir <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
 

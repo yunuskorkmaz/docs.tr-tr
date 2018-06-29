@@ -6,6 +6,6 @@
 |Öneri|.NET Framework 4.5.1 Bu sorun düzeltilmiştir. Bu çerçeve yükseltme sorunu çözün.|
 |Kapsam|Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
 

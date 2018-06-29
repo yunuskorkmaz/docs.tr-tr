@@ -6,6 +6,6 @@
 |Öneri|Unutmayın, etkinleştirme <code>UseRandomizedStringHashAlgorithm</code> olmayacaktır <xref:System.AppDomainSetup.DynamicBase> rastgele. Rastgele bir taban gerekiyorsa, uygulamanızın kodu yerine bu API aracılığıyla oluşturulması gerekir.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
 

@@ -6,5 +6,5 @@
 |Öneri|Bu sorun .NET Framework 4.6 sabit ve .NET Framework'ün bu sürüme yükseltme tarafından desteklenebilir.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

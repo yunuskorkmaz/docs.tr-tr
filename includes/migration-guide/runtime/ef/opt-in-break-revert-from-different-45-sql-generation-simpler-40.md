@@ -6,5 +6,5 @@
 |Öneri|Bu özellik varsayılan olarak devre dışıdır. Entity Framework performans düşüşüne neden ek JOIN deyimleri oluşturursa, aşağıdaki girişini ekleyerek bu özelliği etkinleştirebilirsiniz <code>&lt;appSettings&gt;</code> uygulama yapılandırma (app.config) dosyasının:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
 |Kapsam|Geçirgen|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

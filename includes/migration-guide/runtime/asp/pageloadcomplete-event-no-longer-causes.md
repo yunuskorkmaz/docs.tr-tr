@@ -6,5 +6,5 @@
 |Öneri|Veri bağlama için bir gereksinimi varsa, el ile databind sonrası arka planda daha eski bir olayı çağırır.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

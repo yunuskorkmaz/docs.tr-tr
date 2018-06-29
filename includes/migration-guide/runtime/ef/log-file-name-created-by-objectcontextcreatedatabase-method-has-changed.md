@@ -6,6 +6,6 @@
 |Öneri|Günlük dosyası adı bir uygulama için önemliyse, uygulama standart _log.ldf dosya adı biçimi beklenir güncelleştirilmesi gerekir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
 

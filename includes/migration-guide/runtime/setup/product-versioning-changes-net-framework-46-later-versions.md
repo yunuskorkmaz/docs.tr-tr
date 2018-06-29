@@ -6,5 +6,5 @@
 |Öneri|Genel olarak, uygulamalar .NET Framework ve yükleme dizinini çalışma zamanı sürümü gibi şeyler saptamak için önerilen teknikleri bağlı:<ul><li>.NET Framework çalışma zamanı sürümü algılamak için bkz: [nasıl yapılır: belirlemek, .NET Framework sürümlerinin yüklendiğini](~/docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).</li><li>.NET Framework için yükleme yolu belirlemek için değerini kullanmak <code>InstallPath</code> girişi <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</code> anahtarı.</li></ul> <blockquote> [!IMPORTANT] Alt anahtar adı <code>NET Framework Setup</code>değil <code>.NET Framework Setup</code>.</blockquote> <ul><li>.NET Framework ortak dil çalışma zamanı dizin yolu belirlemek için arama <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory?displayProperty=nameWithType> yöntemi.</li><li>CLR sürümünü almak için arama <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion?displayProperty=nameWithType> yöntemi. .NET Framework 4 ve kendi noktası için serbest (.NET Framework 4.5, 4.5.1, 4.5.2 ve .NET Framework 4.6, 4.6.1, 4.6.2, 4.7 ve 4.7.1), dize v4.0.30319 döndürür.</li></ul>|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

@@ -6,5 +6,5 @@
 |Öneri|<ul><li>Sunucu ve istemci sertifika gerekli EKU OID olup olmadığını doğrulayın. Aksi durumda, sertifikanızı güncelleştirin.</li><li>Kök sertifika geçersiz olduğunda doğrulayın. Bu durumda, kök sertifikayı güncelleştirin.</li><li>Değişiklik dışında kabul etme: sertifika güncelleştirilemiyor, geçici olarak önemli değişiklik şu yapılandırma ayarı ile çalışabilir, ancak değişiklik dışında kullanmama sisteminizi güvenlik sorundan bırakır.</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;wcf:useLegacyCertificateUsagePolicy&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
 |Kapsam|Küçük|
 |Sürüm|4.7.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

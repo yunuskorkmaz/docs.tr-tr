@@ -6,6 +6,6 @@
 |Öneri|Kodu bağımlı değil için güncelleştirilmesi gerektiğini <xref:System.AppDomainSetup.TargetFrameworkName> null varsayılan olarak ayarlanıyor. Bu değer gerekirse bu özellik null olarak değerlendirilecek devam ettiğinden, onu açıkça bu değer için ayarlanabilir.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
 

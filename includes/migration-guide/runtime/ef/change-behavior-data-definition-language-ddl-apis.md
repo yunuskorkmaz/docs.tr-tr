@@ -6,5 +6,5 @@
 |Öneri|Bu değişiklikler, DDL API'larını kullanan araçlar ve uygulamalar oluşturmayı kolaylaştırır. Bu değişiklikler, aşağıdaki senaryolarda uygulama uyumluluğunu etkileyebilir:<ul><li>Kullanıcı yürütülen kodu Yazar bir <code>DROP DATABASE</code> doğrudan çağırmak yerine komutunu <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A> varsa <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A> döndürür <code>true</code>. Bu, veritabanı bağlı olmadığında, ancak MDF dosyası mevcut olduğunda mevcut kodu kırar.</li><li>Kullanıcı bekliyor kod yazar <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A> throw yöntemi bir <xref:System.Data.SqlClient.SqlException> yerine bir <xref:System.InvalidOperationException> zaman yok ilk katalog ve MDF dosyası yok.</li></ul>|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

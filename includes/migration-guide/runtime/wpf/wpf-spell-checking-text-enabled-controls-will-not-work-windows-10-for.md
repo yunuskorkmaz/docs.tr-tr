@@ -6,5 +6,5 @@
 |Öneri|Windows 10'da çalışmak için yazım denetimi için bir giriş dili olarak dili veya yazım denetimi olmasını metin eklenmelidir unutmayın.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

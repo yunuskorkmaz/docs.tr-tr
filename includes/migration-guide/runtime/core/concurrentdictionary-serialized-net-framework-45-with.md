@@ -6,5 +6,5 @@
 |Öneri|Seri hale getirmek ve seri durumdan gerekliyse bir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> .NET Framework 4.5 ve .NET Framework 4.5.1/4.5.2 arasında alternatif bir seri hale getirici gibi <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> veya <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> seri hale getirici, yerine kullanılmalıdır <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name>. Bu sorun .NET Framework 4.6 ele olduğundan, alternatif olarak, bu .NET Framework'ün bu sürümüne yükselterek çözülmesi.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

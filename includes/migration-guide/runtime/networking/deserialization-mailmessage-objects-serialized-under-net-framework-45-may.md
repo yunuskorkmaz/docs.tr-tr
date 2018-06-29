@@ -6,6 +6,6 @@
 |Öneri|Kodunuzu işlenirken özel durum işleme sağladığından emin olun bir <xref:System.Web.Mail.MailMessage> nesnesi.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|
 

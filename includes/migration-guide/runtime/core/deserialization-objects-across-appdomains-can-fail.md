@@ -6,5 +6,5 @@
 |Öneri|Bkz: [azaltma: uygulama etki alanlarında nesneleri seri durumdan çıkarma](~/docs/framework/migration-guide/mitigation-deserialization-of-objects-across-app-domains.md)|
 |Kapsam|Kenar|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

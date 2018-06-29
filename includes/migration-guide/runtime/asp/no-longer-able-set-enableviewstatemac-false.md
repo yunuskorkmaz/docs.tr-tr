@@ -6,5 +6,5 @@
 |Öneri|EnableViewStateMac kabul, true olarak ve sonuçta elde edilen MAC hataları giderilmesi gerekir (açıklandığı gibi [bu kılavuz](https://support.microsoft.com/kb/2915218), MAC hatalara neden olan özelliklerini bağlı olarak birden çok çözünürlüğü içerir).|
 |Kapsam|Ana|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

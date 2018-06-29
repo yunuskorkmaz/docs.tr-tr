@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7.2 yükselttikten sonra web uygulamanızda normal ifadeler çalışmıyor bulursanız, değerini güncelleştirebilirsiniz <code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code> ayarını <code>false</code> önceki davranışa geri dönmek için.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appsettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot; value=&quot;false&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appsettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Kapsam|Küçük|
 |Sürüm|4.7.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

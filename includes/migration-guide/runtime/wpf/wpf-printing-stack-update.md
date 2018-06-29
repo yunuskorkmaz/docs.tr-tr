@@ -6,5 +6,5 @@
 |Öneri|Windows 10 oluşturucuları güncelleştirmede eski yığını kullanmak üzere ayarlanmış <code>UseXpsOMPrinting</code> REG_DWORD değerini <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> kayıt defteri anahtarına <code>1</code>.|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

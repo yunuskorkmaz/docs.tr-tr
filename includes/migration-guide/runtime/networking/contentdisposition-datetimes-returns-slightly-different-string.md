@@ -6,6 +6,6 @@
 |Öneri|ContentDispositions dize gösterimlerini farklı .NET Framework sürümlerinden düzgün bir şekilde karşılaştırır, beklemediğiniz. Dizeleri ContentDispositions, mümkünse, bir karşılaştırma yapmadan önce dönüştürün.|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|
 

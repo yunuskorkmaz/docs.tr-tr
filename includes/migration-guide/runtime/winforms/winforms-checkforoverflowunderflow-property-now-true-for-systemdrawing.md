@@ -6,5 +6,5 @@
 |Öneri|Daha önce taşmalar oluştuğunda, sonuç sessizce kesilebilir. Şimdi bir <xref:System.OverflowException?displayProperty=name> özel durumu oluşur.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

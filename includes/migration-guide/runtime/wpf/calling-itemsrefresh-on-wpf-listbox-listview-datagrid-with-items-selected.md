@@ -6,6 +6,6 @@
 |Öneri|Bu sorunu çözmek programlı şekilde öğelerden önce unselecting tarafından çalışılan <xref:System.Windows.Data.CollectionView.Refresh?displayProperty=name> olarak adlandırılır ve aramayı tamamladıktan sonra daha sonra yeniden seçme. Alternatif olarak, bu sorun .NET Framework 4.6 sabit ve .NET Framework'ün bu sürüme yükseltme tarafından desteklenebilir.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
 

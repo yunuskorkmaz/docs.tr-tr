@@ -6,5 +6,5 @@
 |Öneri|İPad özgü özellikleri gerekirse, önceden tanımlanmış ağ geçidi refID özellikleri ayarlayarak iPad davranışını değiştirmek gerekli olan &quot;IPad&quot; yerine yeni bir oluşturma tarafından &quot;IPad&quot; Kimliğine göre kullanıcı aracısı eşleşme.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

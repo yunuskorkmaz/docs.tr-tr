@@ -6,5 +6,5 @@
 |Öneri|Görev yöntemleri artık atabilir unutmayın <xref:System.ObjectDisposedException?displayProperty=name> durumlarda nesne atıldı. Bir uygulama bir görev atıldı öğrenmek için bu özel durum bağlı değilse, bunu açıkça görev durumunu denetlemek için güncelleştirilmelidir kullanarak <xref:System.Threading.Tasks.Task.Status>.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

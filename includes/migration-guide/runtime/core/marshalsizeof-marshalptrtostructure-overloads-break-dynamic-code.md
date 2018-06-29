@@ -6,5 +6,5 @@
 |Öneri|Hangi aşırı yüklemenin kullanılması gerektiğini açıkça belirtmek için komut dosyaları güncelleştirin. Genellikle yöntemleri türü parametreleri olarak açıkça atama tarafından yapılır olabilir <xref:System.Type>. Bkz: [bu bağlantıyı](https://support.microsoft.com/kb/2909958/) daha fazla ayrıntı ve nasıl örnekleri için geçici çözüm sorun.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

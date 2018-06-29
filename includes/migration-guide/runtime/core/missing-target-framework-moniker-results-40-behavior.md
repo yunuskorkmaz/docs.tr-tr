@@ -6,5 +6,5 @@
 |Öneri|A <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> doğrudan derleme veya bir hedef framework belirterek öznitelik ekleme yoluyla sağlanmalı [proje dosyası veya özellikler GUI Visual Studio'nun proje](http://blogs.msdn.com/b/visualstudio/archive/2010/05/19/visual-studio- managed-multi-targeting-part-1-concepts-target-framework-moniker-target-framework.aspx).|
 |Kapsam|Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

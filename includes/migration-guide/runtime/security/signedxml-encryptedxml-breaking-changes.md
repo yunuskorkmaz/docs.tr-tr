@@ -6,6 +6,6 @@
 |Öneri|Geliştiriciler kullanımını gözden geçirmek isteyebilirsiniz <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform> ve <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform>, yanı sıra türleri türetilmiş <xref:System.Security.Cryptography.Xml.Transform> bu yana bir belge alıcı işlemek olmayabilir.|
 |Kapsam|Küçük|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
 

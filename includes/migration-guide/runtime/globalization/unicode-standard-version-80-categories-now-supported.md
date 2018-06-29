@@ -6,6 +6,6 @@
 |Öneri|Kod gözden geçirin ve sabit kodlanmış Unicode karakter kategorilerindeki bağlıdır mantığı Kaldır/Değiştir.|
 |Kapsam|Küçük|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
 

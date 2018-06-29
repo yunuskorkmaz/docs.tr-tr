@@ -6,5 +6,5 @@
 |Öneri|Bu değişiklik, yalnızca 1 ile QueryViews kullanan kodu etkiler-0.. 1 çokluğa çalışan bu çağrı sorguladığında ilişkiler. İçerir. Güvenilirliğini artırır ve neredeyse tüm uygulamalar için saydam olmalıdır. Beklenmeyen davranışlara neden olur, ancak bunu aşağıdaki girişini ekleyerek devre dışı bırakabilirsiniz <code>&lt;appSettings&gt;</code> uygulamanın yapılandırma dosyasının:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyUserSpecifiedViews&quot; value=&quot;false&quot; /&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

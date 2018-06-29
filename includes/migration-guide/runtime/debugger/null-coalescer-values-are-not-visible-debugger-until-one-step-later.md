@@ -6,5 +6,5 @@
 |Öneri|Hata ayıklayıcı ek bir kerelik atlama doğru güncelleştirilmesi yerel/alanın değerini neden olur. Ayrıca, bu sorun .NET Framework 4.6 düzeltilmiştir; Framework'ün bu sürüme yükseltme sorunu çözecektir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

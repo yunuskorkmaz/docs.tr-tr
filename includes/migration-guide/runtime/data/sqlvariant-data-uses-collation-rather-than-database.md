@@ -6,5 +6,5 @@
 |Öneri|Veritabanı harmanlaması farklıysa, bu olası veri bozulması adresleri <code>sql_variant</code> alfabe düzeni. Bozulmuş verilere dayanan uygulamalar hatayla karşılaşabilir.|
 |Kapsam|Geçirgen|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

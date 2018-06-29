@@ -6,6 +6,6 @@
 |Öneri|Uygulamaları tutarlı bir şekilde Unicode karakterler içeren URI ile çalışma alanlara bu davranış UNC paylaşımlarına başvuruları izin vermeyecek şekilde kullanmış. Bu uygulamaların kullanması gereken <xref:System.Uri.IsUnc> yerine.|
 |Kapsam|Kenar|
 |Sürüm|4.7.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
 

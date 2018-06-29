@@ -6,6 +6,6 @@
 |Öneri|.NET Framework sürümleri aynı anda durumunu paylaşan web sunucularındaki yükseltme emin olun.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
 

@@ -6,6 +6,6 @@
 |Öneri|Yok. Bu değişiklik içinde denetimleri için beklenen bir davranış uyan bir <xref:System.Windows.Controls.TextBlock?displayProperty=name> denetim.|
 |Kapsam|Küçük|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
 

@@ -6,5 +6,5 @@
 |Öneri|Bu sorun için bir düzeltme, .NET Framework 4.5.2 (düzeltme dökümü 3026376) ya da .NET Framework 4.6 yükselterek bakım bir sürümde kullanılabilir|
 |Kapsam|Ana|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

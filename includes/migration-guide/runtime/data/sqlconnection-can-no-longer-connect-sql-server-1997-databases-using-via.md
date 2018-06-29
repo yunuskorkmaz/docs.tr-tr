@@ -6,6 +6,6 @@
 |Öneri|VIA Protokolü kullanım dışı SQL veritabanlarına bağlanmak için bir alternatif Protokolü kullanılmalıdır. Kullanılan en yaygın TCP/IP'yi kuralıdır. TCP/IP protokolünün etkinleştirilmesi için yönergeler bulunabilir [burada](https://msdn.microsoft.com/library/bb909712.aspx). Veritabanı yalnızca intranet içinde erişilen, paylaşılan kanallar protokolü ağ yavaşsa daha iyi performans sağlayabilir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)?displayProperty=nameWithType></li></ul>|
 

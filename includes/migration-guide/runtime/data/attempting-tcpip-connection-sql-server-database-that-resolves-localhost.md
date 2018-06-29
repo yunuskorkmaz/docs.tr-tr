@@ -6,5 +6,5 @@
 |Öneri|Bu sorunu ele ve .NET Framework 4.6.2 önceki davranış geri. Çözümler bir SQL Server Database bağlanmak için <code>localhost</code>, .NET Framework 4.6.2'ye yükseltin.|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

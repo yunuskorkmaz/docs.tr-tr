@@ -6,6 +6,6 @@
 |Öneri|Önceki (.NET Framework 4.0) davranışı ayarlayarak geri yüklenebilir <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> özelliğine <code>false</code>.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
 

@@ -6,6 +6,6 @@
 |Öneri|Mümkünse, .NET Framework 4.6.2 yükseltin.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=nameWithType></li></ul>|
 

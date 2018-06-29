@@ -6,5 +6,5 @@
 |Öneri|Bu değişiklik verir <xref:System.DateTime?displayProperty=name> ve <xref:System.DateTimeOffset?displayProperty=name> gidiş dönüş değerleri. Nitelik söz dizimindeki giriş XAML'inin doğru çalışmayacağını varsayan özel XAML ayrıştırıcıları.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

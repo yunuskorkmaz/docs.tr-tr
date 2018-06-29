@@ -6,5 +6,5 @@
 |Öneri|Bir düzeltme bu kullanıma sunulacaktır.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

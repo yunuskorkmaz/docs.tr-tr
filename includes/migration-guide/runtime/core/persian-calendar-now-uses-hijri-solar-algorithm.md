@@ -6,6 +6,6 @@
 |Öneri|Bazı erken ve geç tarihleri PersianCalendar .NET Framework 4.6 kullanırken biraz farklı olabileceğini unutmayın. (Bu değerler farklı olabileceğinden) ayrıca, tarih farklı .NET Framework sürümleri üzerinde çalışabilir işlemleri arasındaki seri hale getirme, bunları PersianCalendar tarih dizeleri olarak depolamayın.|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
 

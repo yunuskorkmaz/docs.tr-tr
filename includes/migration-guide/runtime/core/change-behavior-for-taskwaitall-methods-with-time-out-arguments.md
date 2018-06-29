@@ -6,6 +6,6 @@
 |Öneri|Varsa bir <xref:System.AggregateException?displayProperty=name> öncesinde iptal edildi bir görev algılama yolu olarak yakalanan <xref:System.Threading.Tasks.Task.WaitAll%2A> çağrılan kod aracılığıyla aynı algılama yerine yapmalısınız çağrı <xref:System.Threading.Tasks.Task.IsCanceled%2A> özelliği (örneğin:. Any(t =&gt; t.IsCanceled)) zaman aşımı önce tüm awaited görevler tamamlandığında, .NET Framework 4.6 yalnızca bu durumda başlatıldıysa bu yana.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
 

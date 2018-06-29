@@ -6,6 +6,6 @@
 |Öneri|Sort dikkate göre verileri farklı bazı durumlarda sıralanır ancak çoğu uygulamalar etkilenmez, olması gerekir. Varsa <code>xsl:sort</code> olan 1.1 stil sayfasında kullanıldığında, uygulamaları veri sıralanmamış siparişte bağlı değil olduğunu onaylayın. Uygulamaları davranışı sıralama 4.0 üzerinde kullanıyorsa, kaldırma <code>xsl:sort</code> stil sayfasından.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType></li></ul>|
 

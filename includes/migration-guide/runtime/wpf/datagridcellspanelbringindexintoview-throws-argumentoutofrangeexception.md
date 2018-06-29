@@ -6,6 +6,6 @@
 |Öneri|Aşağıdakilerden herhangi biri:<ol><li>.NET Framework 4.7'ye yükseltin.</li><li>Son bakım düzeltme ekini .NET Framework 4.6.2 yükleyin.</li><li>Zaman uyumsuz yanıtı kadar sütunları kaldırma kaçının <xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)> tamamlandı.</li></ol>|
 |Kapsam|Kenar|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.ScrollIntoView(System.Object,System.Windows.Controls.DataGridColumn)?displayProperty=nameWithType></li></ul>|
 

@@ -6,6 +6,6 @@
 |Öneri|Önceki davranış belirleyici olduğu için kodu bağımlı olması beklenmez. Ancak, açık boş dizi boş enumerables karşılaştırıldığı ve bazen eşit olması beklenen olası durumda oluşturulmalıdır (<code>new T[0]</code>) kullanmak yerine <xref:System.Linq.Enumerable.Empty%60%601>.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
 

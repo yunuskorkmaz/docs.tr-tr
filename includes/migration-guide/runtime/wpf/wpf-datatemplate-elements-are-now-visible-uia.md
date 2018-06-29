@@ -6,6 +6,6 @@
 |Öneri|UI Otomasyonu testleri bu uygulamayı gerekebilir güncelleştirilmiş için UIA ağacı şimdi dahil olmak üzere daha önce görünmez hesap için <xref:System.Windows.DataTemplate?displayProperty=name> öğeleri. Örneğin, diğer yanındaki olması için bazı öğeler beklediğiniz testleri şimdi daha önce görünmez UIA öğeler arasındaki beklediğiniz gerekebilir. Veya yeni değerlerle UIA öğeleri gerekebilir için belirli sayılar veya dizinleri kullanan testleri güncelleştirilemedi.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.DataTemplate.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.DataTemplate.%23ctor(System.Object)?displayProperty=nameWithType></li></ul>|
 

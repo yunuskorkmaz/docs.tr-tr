@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7.1'ye yükseltin.|
 |Kapsam|Küçük|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

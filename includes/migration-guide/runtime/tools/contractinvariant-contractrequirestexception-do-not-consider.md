@@ -6,6 +6,6 @@
 |Öneri|Bu davranış, giderilmiş [GitHub sorunu #339](https://github.com/Microsoft/CodeContracts/issues/339). Bu uyarı ortadan kaldırmak için indirebilir ve güncelleştirilmiş sürümünü kod sözleşmeleri aracından için kaynak kodu derleme [GitHub](https://github.com/Microsoft/CodeContracts/blob/master/README.md). İndirme bilgileri sayfasının en altında bulundu.|
 |Kapsam|Küçük|
 |Sürüm|4.6.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType></li></ul>|
 

@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7 yükseltme|
 |Kapsam|Kenar|
 |Sürüm|4.6.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

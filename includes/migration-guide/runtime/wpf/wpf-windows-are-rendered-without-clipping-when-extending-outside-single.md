@@ -6,5 +6,5 @@
 |Öneri|Bu davranış (verilip verilmeyeceğini veya küçük) kullanılarak açıkça ayarlanabilir <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> öğesinde <code>&lt;appSettings&gt;</code> uygulamanın yapılandırma dosyasında ya da ayarlayarak <code>EnableMultiMonitorDisplayClipping</code> uygulama başlangıçta özelliği.|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

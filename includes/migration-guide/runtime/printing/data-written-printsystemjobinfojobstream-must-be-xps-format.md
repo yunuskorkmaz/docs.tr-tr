@@ -6,6 +6,6 @@
 |Öneri|Yazdırma içerik çıktısını almak için aşağıdakilerden birini yapabilirsiniz:<ul><li>Kullanım <xref:System.Windows.Xps.XpsDocumentWriter> yazdırma içerik çıktısını almak için sınıf. Önerilen seçenek budur.</li><li>Tarafından döndürülen akışa gönderilen verileri emin <xref:System.Printing.PrintSystemJobInfo.JobStream> özelliği olan bir paket akışı olarak XPS biçiminde.</li></ul>|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Printing.PrintSystemJobInfo.JobStream?displayProperty=nameWithType></li></ul>|
 

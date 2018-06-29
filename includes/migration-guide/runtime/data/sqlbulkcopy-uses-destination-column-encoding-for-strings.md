@@ -6,6 +6,6 @@
 |Öneri|Bekler <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=name> farklar kodlama nedeniyle verileri artık bozar. Hedef sütunun boyutuna yakın dizeleri kopyalanır, ya da (verileri hedef sütunu sığacak şekilde denetlemek için Kopyalanacak) veri önceden kodlamak gerekli olabilir veya catch <xref:System.Data.SqlClient.SqlException?displayProperty=name>s.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlBulkCopy.%23ctor(System.Data.SqlClient.SqlConnection)?displayProperty=nameWithType></li></ul>|
 

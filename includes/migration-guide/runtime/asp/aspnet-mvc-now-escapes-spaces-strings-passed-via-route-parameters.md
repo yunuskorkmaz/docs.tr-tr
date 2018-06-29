@@ -6,6 +6,6 @@
 |Öneri|Kod bir rotadaki dizesi parametreleri unescape için güncelleştirilmesi gerekir. Özgün URI gerekirse ile erişilebileceğini <xref:System.Net.HttpWebRequest.RequestUri>. OriginalString API.|
 |Kapsam|Küçük|
 |Sürüm|4.5.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
 

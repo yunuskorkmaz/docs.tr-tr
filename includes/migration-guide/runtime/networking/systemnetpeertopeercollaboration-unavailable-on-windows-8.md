@@ -6,6 +6,6 @@
 |Öneri|Windows 8'i destekler veya bu ad alanı veya üyeleri bağımlı değil için yukarıdaki güncelleştirilmelidir uygulamalar.|
 |Kapsam|Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType></li></ul>|
 

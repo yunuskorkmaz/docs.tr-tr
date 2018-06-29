@@ -6,5 +6,5 @@
 |Öneri|Yok|
 |Kapsam|Kenar|
 |Sürüm|4.7.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

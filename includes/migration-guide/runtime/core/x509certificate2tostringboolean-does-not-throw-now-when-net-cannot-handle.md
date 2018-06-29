@@ -6,6 +6,6 @@
 |Öneri|Bağlı olarak kod <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType> döndürülen dize bazı sertifika verileri (örneğin, ortak anahtar, özel anahtarı ve uzantıları) dışarıda bırakılabilir, API daha önce oluşturulan bazı durumlarda beklenir güncelleştirilmesi.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
 

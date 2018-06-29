@@ -6,5 +6,5 @@
 |Öneri|Yansıma olmayan nesneler ile çalışmak için hazırlama kodunu güncelleştirin|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

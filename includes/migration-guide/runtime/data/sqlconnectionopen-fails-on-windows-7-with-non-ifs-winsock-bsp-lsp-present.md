@@ -6,6 +6,6 @@
 |Öneri|.NET Framework yükselterek önlenebilir için .NET Framework 4.5.2, bu hatanın düzeltildiğini. Alternatif olarak, tüm yüklü olmayan - IFS Winsock LSPs kaldırarak önlenebilir.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
 

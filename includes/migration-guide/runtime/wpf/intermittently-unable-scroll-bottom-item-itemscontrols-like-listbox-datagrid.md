@@ -6,5 +6,5 @@
 |Öneri|Bu sorun, .NET Framework 4.5.2 sabit ve bu sürümü (veya sonraki bir sürümünü) .NET Framework'ün yükselterek desteklenebilir. Alternatif olarak, kullanıcılar bu koleksiyonlardaki son öğelerine hala kaydırma çubukları sürükleyin, ancak iki kez bunu başarıyla yapmak denemeniz gerekebilir.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

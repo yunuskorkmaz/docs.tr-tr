@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.5.2 Bu sorun düzeltilmiştir. Alternatif olarak, profil oluşturucu bu sorunu belirterek önlemek <code>COR_PRF_DISABLE_ALL_NGEN_IMAGES</code> olay maske.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

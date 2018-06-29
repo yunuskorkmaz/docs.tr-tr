@@ -6,5 +6,5 @@
 |Öneri|Seri hale getirici oluşturmak için MEF artık kullanabilirsiniz|
 |Kapsam|Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

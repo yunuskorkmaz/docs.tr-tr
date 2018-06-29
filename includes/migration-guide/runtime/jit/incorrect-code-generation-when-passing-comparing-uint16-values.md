@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7 16 bit işaretsiz değerleri karşılaştırma sorunlarla karşılaşırsanız, .NET Framework 4.7.1 yükseltin.|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

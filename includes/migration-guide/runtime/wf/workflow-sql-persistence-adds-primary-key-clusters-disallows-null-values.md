@@ -6,5 +6,5 @@
 |Öneri|Bu değişiklik deneyimi için SQL dosyası SqlWorkflowInstanceStoreSchemaUpgrade.sql var olan yüklemelerin uygulanmış olması gerekir. Yeni veritabanı yüklemeleri otomatik olarak değiştir sahip olacaktır.|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

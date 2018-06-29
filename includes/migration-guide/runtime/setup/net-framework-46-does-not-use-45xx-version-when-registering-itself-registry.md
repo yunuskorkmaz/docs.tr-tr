@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.5 için yoklama güncelleştirme uygulamalar ayrıca 4.6 kabul etmek 4.5 kayıt defteri anahtarları için bakarak yükleyin.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

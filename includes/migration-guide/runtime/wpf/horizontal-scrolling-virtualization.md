@@ -6,6 +6,6 @@
 |Öneri|Tahmin edilen bir değer için kullanan bir uygulama <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> gerçek değer getirilemedi değiştirilmelidir (ve değerini <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>) değişebilir herhangi yatay kaydırma sonra <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> devre dışı bırakma sanallaştırma nedeniyle.|
 |Kapsam|Küçük|
 |Sürüm|4.6.2|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
 

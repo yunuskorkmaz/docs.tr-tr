@@ -6,6 +6,6 @@
 |Öneri|Yineleme .NET Framework 4.6.1 ancak önceki sürümlerden - diğer bir deyişle, varsa oluşursa <xref:System.Windows.Controls.ItemsControl?displayProperty=name> iş öğesi-düz bir liste kaydırma farklı piksel height - öğeleriyle iki çözümler vardır:<ol><li>.NET Framework 4.6.2 yükleyin.</li><li>.NET Framework 4.6.1 düzeltmeyi HR 1605 yükleyin.</li></ol>|
 |Kapsam|Küçük|
 |Sürüm|4.6.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
 

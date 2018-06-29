@@ -6,5 +6,5 @@
 |Öneri|Sorun #1 - Bu .NET Framework 4.6.2 düzeltildiğini sorunu #2 - WPF yazım denetleyicisi 'farklı bir kullanıcı olarak çalıştır' kullanarak uygulamalar başlatıldığında, artık desteklenmiyor. .NET Framework 4.6.2 başlayarak, bu şekilde başlatılan uygulamalara artık beklenmedik bir şekilde kilitleniyor - bunun yerine yazım denetleyicisi sessiz bir şekilde devre dışı bırakılır. Sorun #3 - Bu .NET Framework 4.6.2 düzeltilmiştir.|
 |Kapsam|Kenar|
 |Sürüm|4.6.1|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

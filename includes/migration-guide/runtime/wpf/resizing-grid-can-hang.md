@@ -6,5 +6,5 @@
 |Öneri|.NET Framework 4.7.1'ye yükseltin.  Alternatif olarak, 4.7 ayırma algoritmasını gerekmiyorsa şu yapılandırma ayarı kullanabilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 

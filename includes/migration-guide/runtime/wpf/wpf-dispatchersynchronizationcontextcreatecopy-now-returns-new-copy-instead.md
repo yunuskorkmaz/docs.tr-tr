@@ -6,6 +6,6 @@
 |Öneri|Unutmayın, <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> artık yeni bir döndürülecek <xref:System.Threading.SynchronizationContext?displayProperty=name> nesnesi. Daha önce bu şekilde oluşturulan başvuruları eşdeğer kullanılan kod gerçekte, uygun bağlamda olsa da, .NET Framework 4.5 karşı ya da daha sonra oluşturulmuş yapar olup olmadığını denetlenirken değil.  Olası sorunlara neden karşın, etkilenen kod yolları kullanan bu herhangi bir sorun oluşturur belirlemek için yeterli olmalıdır.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType></li></ul>|
 

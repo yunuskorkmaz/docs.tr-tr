@@ -6,6 +6,6 @@
 |Öneri|Mümkünse, .NET Framework 4.6.2 yükseltin.|
 |Kapsam|Küçük|
 |Sürüm|4.6|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
 

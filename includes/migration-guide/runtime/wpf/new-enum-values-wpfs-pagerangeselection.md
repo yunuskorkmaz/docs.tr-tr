@@ -6,6 +6,6 @@
 |Öneri|Çoğu durumda, bu değişiklikler, kullanıcı kodu etkisi olmaz. Mevcut öğeleri belirli sayıda bağımlı kod <xref:System.Enum.GetNames(System.Type)> veya <xref:System.Enum.GetValues(System.Type)> çağırır <xref:System.Windows.Controls.PageRangeSelection?displayProperty=name> türü değiştirilmelidir, ancak.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
 
