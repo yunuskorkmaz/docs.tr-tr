@@ -2,12 +2,12 @@
 title: Ortak şema koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: fc8b581a127fbef0f32cdee53eaa62d241e4ae31
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29ccd2af4268a86ae4c2047ad2523f68b0f6489e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759315"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072130"
 ---
 # <a name="common-schema-collections"></a>Ortak şema koleksiyonları
 Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Çağıran desteklenen şema koleksiyonları listesini belirlemek için bir .NET Framework yönetilen sağlayıcısı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken içermeyen veya şema koleksiyonu adı "MetaDataCollections". Bu döndürülecek bir <xref:System.Data.DataTable> desteklenen şeması koleksiyonları, her destekledikleri kısıtlama sayısı ve kullandıkları tanımlayıcı bölümlerinin sayısını listesini içeren. Bu koleksiyonları tüm gerekli sütunları açıklanmaktadır. Sağlayıcıları istediklerinde ek sütunlar eklemek boş. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyonuna ekleyin.  
@@ -19,7 +19,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 ## <a name="metadatacollections"></a>MetaDataCollections  
  Bu şema koleksiyonu tüm veritabanına bağlanmak için kullanılan .NET Framework yönetilen sağlayıcısı tarafından desteklenen şema koleksiyonları hakkında bilgiler sunar.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |CollectionName|dize|Geçirilecek koleksiyonunun adı **GetSchema** koleksiyon döndürmek için yöntem.|  
 |NumberOfRestrictions|int|Koleksiyon için belirtilen kısıtlamaları sayısı.|  
@@ -28,9 +28,9 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 ## <a name="datasourceinformation"></a>DataSourceInformation  
  Bu şema koleksiyonu yönetilen şu anda sağlayıcısıdır .NET Framework bağlanmak için veri kaynağı ile ilgili bilgileri gösterir.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "@&#124;\\." (Oracle için).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "@&#124;\\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
+|CompositeIdentifierSeparatorPattern|dize|Bileşik ayırıcı bileşik bir tanımlayıcı olarak eşleştirilecek normal ifade. Örneğin, "\\." (için SQL Server) veya "\@&#124;\\." (Oracle için).<br /><br /> Bileşik bir tanımlayıcı genellikle ne için veritabanı nesne adı, örneğin kullanılır: pubs.dbo.authors veya pubs@dbo.authors.<br /><br /> SQL Server için normal ifade kullanın "\\.". OracleClient için kullanma "\@&#124;\\.".<br /><br /> ODBC için Catalog_name_seperator kullanın.<br /><br /> OLE DB için DBLITERAL_CATALOG_SEPARATOR veya DBLITERAL_SCHEMA_SEPARATOR kullanın.|  
 |DataSourceProductName|dize|"Oracle" veya "SQLServer" gibi sağlayıcısı tarafından erişilen ürünün adı.|  
 |DataSourceProductVersion|dize|Veri kaynakları yerel biçiminde ve Microsoft biçiminde değil sağlayıcısı tarafından erişilen ürünün sürümünü gösterir.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda, bu her zaman aynı olacaktır.|  
 |DataSourceProductVersionNormalized|dize|Verileri için normalleştirilmiş bir sürümü kaynak ile karşılaştırılabilir şekilde `String.Compare()`. Bu sürüm 1 ve sürüm 2 arasında sıralamasını sürüm 10 önlemek için Sağlayıcı'nin tüm sürümleri için tutarlı biçimidir.<br /><br /> Örneğin, Oracle sağlayıcısı Oracle 8i veri kaynağı "08.01.07.04.01" döndürülecek neden olan kendi normalleştirilmiş sürümü için "nn.nn.nn.nn.nn" biçimini kullanır. SQL Server normal Microsoft "nn.nn.nnnn" biçimini kullanır.<br /><br /> Bazı durumlarda, DataSourceProductVersion ve DataSourceProductVersionNormalized aynı değer olacaktır. Temel alınan yerel API'sindeki aynı işlev çağrısı için eşlenmiş olarak OLE DB ve ODBC söz konusu olduğunda bu her zaman aynı olacaktır.|  
@@ -38,7 +38,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 |IdentifierPattern|dize|Bir tanımlayıcı ile eşleşen ve tanımlayıcısı eşleşme değerine sahip bir normal ifade. Örneğin, "[A-Za-z0-9_ #$]".|  
 |IdentifierCase|<xref:System.Data.Common.IdentifierCase>|Tırnak işaretli olmayan tanıtıcıları olarak büyük küçük harfe duyarlı olmadığı kabul edilip edilmeyeceğini belirtir.|  
 |OrderByColumnsInSelect|bool|Seçim listesinde ORDER BY yan tümcesi sütunlarında olması gerekip gerekmediğini belirtir. Doğru değeri, seçim listesinde olması gerekir, false değeri, seçim listesinde olması gerekmez gösterir gösterir.|  
-|ParameterMarkerFormat|dize|Bir parametre biçimlendirme temsil eden bir biçim dizesi.<br /><br /> Adlandırılmış parametreleri veri kaynağı tarafından destekleniyorsa, bu dizenin ilk yer tutucuyu parametre adı burada biçimlendirilmiş olması gerekir.<br /><br /> Örneğin, veri kaynağı adlı ve önekine sahip parametreleri görüyorsa bir ':' Bu olur ":{0}". Bu parametre adı "p1" ile elde edilen biçimlendirirken dizedir ": p1".<br /><br /> Veri kaynağı ile önek için parametre bekliyor varsa ' @', ancak adlarını bunları zaten içerir, bu olacaktır '{0}' ve adlı bir parametre biçimlendirme sonucu "@p1"yalnızca olacaktır"@p1".<br /><br /> Adlandırılmış parametreler beklediğiniz ve kullanımını beklediğiniz veri kaynakları için '?' karakter, biçim dizesi basit belirtilebilir '?', parametre adı yoksayacaktır. OLE DB için döndürürüz '?'.|  
+|ParameterMarkerFormat|dize|Bir parametre biçimlendirme temsil eden bir biçim dizesi.<br /><br /> Adlandırılmış parametreleri veri kaynağı tarafından destekleniyorsa, bu dizenin ilk yer tutucuyu parametre adı burada biçimlendirilmiş olması gerekir.<br /><br /> Örneğin, veri kaynağı adlı ve önekine sahip parametreleri görüyorsa bir ':' Bu olur ":{0}". Bu parametre adı "p1" ile elde edilen biçimlendirirken dizedir ": p1".<br /><br /> Veri kaynağı ile önek için parametre bekliyor varsa ' @', ancak adlarını bunları zaten içerir, bu olacaktır '{0}' ve adlı bir parametre biçimlendirme sonucu "\@p1" yalnızca olacaktır "\@p1".<br /><br /> Adlandırılmış parametreler beklediğiniz ve kullanımını beklediğiniz veri kaynakları için '?' karakter, biçim dizesi basit belirtilebilir '?', parametre adı yoksayacaktır. OLE DB için döndürürüz '?'.|  
 |ParameterMarkerPattern|dize|Bir parametre işaretçisi eşleşen normal bir ifade. Varsa, parametre adı bir eşleşme değeri olur.<br /><br /> Örneğin, adlandırılmış parametreleri ile desteklenen bir '\@' eklenecek öncü karakter parametre adı bu olur: "(\@[A-Za-z0-9_$ #]*)".<br /><br /> Ancak, adlandırılmış parametreleri ile destekleniyorsa, bir ':' parametre adı parçası öncü karakter ve değil gibi bu olur: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Elbette, veri kaynağı adlandırılmış parametreleri desteklemiyorsa, bu yalnızca olur "?".|  
 |ParameterNameMaxLength|int|Bir parametre adı karakter cinsinden en büyük uzunluğu. Visual Studio parametre adları destekleniyorsa, en fazla uzunluğu için en düşük değer 30 karakter olduğunu bekliyor.<br /><br /> Veri kaynağı adlandırılmış parametreleri desteklemiyorsa bu özellik sıfır döndürür.|  
 |ParameterNamePattern|dize|Geçerli parametre adları eşleşen normal bir ifade. Farklı veri kaynakları için parametre adları kullanılabilir karakterleri ilgili farklı kuralları vardır.<br /><br /> Visual Studio parametre adları destekleniyorsa, "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" karakterlerin en düşük desteklenen parametre adları için geçerli bir karakter kümesini olduğunu bekliyor.|  
@@ -51,7 +51,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 ## <a name="datatypes"></a>Veri türleri  
  Bu şema koleksiyonu çıkarır bilgileri .NET Framework sağlayıcısı yönetilen veritabanı tarafından desteklenen veri türleri hakkında şu anda bağlı.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |TypeName|dize|Sağlayıcıya özel veri türü adı.|  
 |ProviderDbType|int|Bir parametrenin türünü belirtirken kullanılmalıdır sağlayıcıya özgü türü değeri. Örneğin, SqlDbType.Money veya OracleType.Blob.|  
@@ -80,7 +80,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 ## <a name="restrictions"></a>Kısıtlamalar  
  Bu şema koleksiyonu şu anda veritabanına bağlanmak için kullanılan .NET Framework yönetilen sağlayıcısı tarafından desteklenen sınırlamaları hakkında bilgi açık.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |CollectionName|dize|Bu kısıtlamalar uygulamak koleksiyon adı.|  
 |RestrictionName|dize|Koleksiyondaki kısıtlama adı.|  
@@ -90,7 +90,7 @@ Ortak şema koleksiyonları her .NET çerçevesi ile yönetilen sağlayıcılar�
 ## <a name="reservedwords"></a>ReservedWords  
  Bu şema koleksiyonu şu anda bağlı sağlayıcısı .NET Framework yönetilen veritabanı tarafından ayrılmış sözcükler hakkında bilgi gösterir.  
   
-|columnName|Veri türü|Açıklama|  
+|ColumnName|Veri türü|Açıklama|  
 |----------------|--------------|-----------------|  
 |ReservedWord|dize|Sağlayıcı belirli ayrılmış sözcük.|  
   

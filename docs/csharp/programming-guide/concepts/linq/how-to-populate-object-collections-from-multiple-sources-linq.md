@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ) (C#) birden fazla kaynaktan nesne koleksiyonları doldurma'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 6824b3293421b88633964b71f773d44ae6b5a447
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 5f0c0e92c7448eebc6f395fcdb16cfca840bb2ea
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948442"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071090"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Nasıl yapılır: (LINQ) (C#) birden fazla kaynaktan nesne koleksiyonları doldurma
 
@@ -143,7 +143,8 @@ foreach (var student in queryNamesScores2)
 
 Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir projeyi derleyin:
 
-- .NET framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru.
+- .NET framework sürüm 3.5 System.Core.dll başvuru.
+- .NET framework sürüm 4.0 veya üstü.
 - .NET core sürüm 1.0 veya üstü.
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da87531ff7f20181e1e5499acb8152d0fbadc8af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592398"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073235"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
 Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngüler sağlayabilir. Ancak, döngü parallelizing iş, sıralı kodda olarak ortak olmayan ya da hiç karşılaşılan değil sorunlara yol açabilir karmaşıklık getirir. Bu konuda paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  
@@ -24,7 +24,7 @@ ms.locfileid: "33592398"
  Belirli durumlarda paralel bir döngüden göre sıralı karşılığını daha yavaş çalışabilir. Temel birkaç yineleme ve Hızlı Kullanıcı temsilciler paralel döngüler çok speedup için olası udur. Bununla birlikte, birçok faktöre performans oynayan olduğundan her zaman gerçek sonuçları ölçmek öneririz.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlara yazma kaçının  
- Sıralı kodda, onu okuma veya yazma statik değişkenler veya sınıf alanları vermektir. Ancak, birden çok iş parçacığı aynı anda bu değişkenleri erişen her bir büyük olası yarış durumları yoktur. Kilitleri değişkeni erişimi eşitlemek için kullanabileceğiniz olsa da, eşitleme maliyetini performansa zarar verebilir. Bu nedenle, öneririz, kaçının, veya en azından sınırlamak, paylaşılan erişimi mümkün olduğunca paralel bir döngüden durumda olduğunu. Bunu yapmak için en iyi yolu aşırı kullanmaktır <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanan bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı yerel durumunu depolamak için değişkeni. Daha fazla bilgi için bkz: [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ Sıralı kodda, onu okuma veya yazma statik değişkenler veya sınıf alanları vermektir. Ancak, birden çok iş parçacığı aynı anda bu değişkenleri erişen her bir büyük olası yarış durumları yoktur. Kilitleri değişkeni erişimi eşitlemek için kullanabileceğiniz olsa da, eşitleme maliyetini performansa zarar verebilir. Bu nedenle, öneririz, kaçının, veya en azından sınırlamak, paylaşılan erişimi mümkün olduğunca paralel bir döngüden durumda olduğunu. Bunu yapmak için en iyi yolu aşırı kullanmaktır <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanan bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı yerel durumunu depolamak için değişkeni. Daha fazla bilgi için bkz: [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Atlayarak Paralelleştirme kaçının  
  Paralel döngüler kullanarak, kaynak koleksiyonu bölümlendirme ve çalışan iş parçacıklarını eşitleme genel giderlerinden doğurur. Paralelleştirme yararları daha fazla bilgisayar işlemci sayısıyla sınırlıdır. Tek bir işlemci, birden çok işlem bağlı iş parçacığı çalıştırarak kazanılacak hiçbir speedup yoktur. Bu nedenle, bir döngü aşırı paralel hale değil dikkatli olmanız gerekir.  

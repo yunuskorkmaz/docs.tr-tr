@@ -2,12 +2,12 @@
 title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496643"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072728"
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 Windows Communication Foundation (WCF) kanal yığını iç ileti gösterimi kablo biçimine dönüştürme ve belirli bir kullanarak göndermek için kodlama ve taşıma kanalları kullanır. HTTP Web Hizmetleri birlikte çalışabilirlik için kullanılan en yaygın aktarım olduğunu ve Web Hizmetleri tarafından kullanılan en yaygın Kodlamalar XML tabanlı SOAP 1.1 ve SOAP 1.2 ileti iletim en iyi duruma getirme mekanizmasını (MTOM).  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132: Bir HTTP Content-Type üstbilgisi değeri olan bir tür parametresi olmalıdır `application/xop+xml` çift tırnak işaretleri içine alınmalıdır.  
   
- Çift tırnak işaretleri kullanma zorunluluğu RFC 2387 açık olmamasına karşın, tüm parametreleri büyük olasılıkla içeren multipart/related medya türü gibi karakterler ayrılmış metin gözlemleyen "@" or "/" ve bu nedenle çift tırnak işareti gerekiyor.  
+ Çift tırnak işaretleri kullanma zorunluluğu RFC 2387 açık olmamasına karşın, tüm multipart/related medya türü parametreleri büyük olasılıkla gibi ayrılmış karakterleri içeren metin gözlemleyen "\@" veya "/" ve bu nedenle çift tırnak gerekir işaretler.  
   
 -   R4133: Başlangıç parametresi SOAP içeren MIME bölümü Content-ID üstbilgisi değeri ile bir HTTP Content-Type üstbilgisi olmalıdır 1.x Zarf, çift tırnak işaretleri içine alınmalıdır. Başlangıç parametresi atlanırsa, ilk MIME bölümü SOAP içermelidir 1.x Zarf.  
   

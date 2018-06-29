@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9d612186e1051644e8d4ae9476b8fafd811deb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567347"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071441"
 ---
 # <a name="async-overview"></a>Zaman uyumsuz genel bakış
 
@@ -37,7 +37,7 @@ Zaman uyumsuz kod aşağıdaki özelliklere sahiptir:
 
 Daha fazla bilgi için bkz: [zaman uyumsuz derinlemesine](async-in-depth.md) konu.
 
-[Zaman uyumsuz programlama desenleri](/asynchronous-programming-patterns/index.md) konu .NET içinde desteklenen üç zaman uyumsuz programlama desenleri genel bir bakış sağlar:  
+[Zaman uyumsuz programlama desenleri](asynchronous-programming-patterns/index.md) konu .NET içinde desteklenen üç zaman uyumsuz programlama desenleri genel bir bakış sağlar:  
   
 -   [Zaman uyumsuz programlama modeli (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (eski)  
   

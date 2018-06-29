@@ -2,12 +2,12 @@
 title: Değişiklik SQL oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766666"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071958"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL oluşturma
 Bu bölüm için değiştirme SQL oluşturma modülü geliştirmek nasıl anlatır, (SQL:1999-uyumlu bir veritabanına) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimleri değişikliği komut ağacı çevirmek için sorumludur.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Bir INSERT SQL komutu oluşturuluyor  
  Örnek Sağlayıcısı'nda belirtilen DbInsertCommandTree için oluşturulan INSERT komutu aşağıdaki iki Ekle şablonlarından birini izler.  
   
- İlk şablon SetClauses listesinde değerlerine göre Ekle gerçekleştirmek için bir komut var ve döndürme özelliği null olmayan, eklenen satır için döndürme özelliğinde belirtilen özellikleri döndürmek için bir SELECT deyimi. Koşul öğesi "@@ROWCOUNT > 0" bir satır eklediyseniz doğrudur. Koşul öğesi "keyMemberI keyValueI = &#124; SCOPE_IDENTITY()" şeklini alır "keyMemberI SCOPE_IDENTITY() =" yalnızca SCOPE_IDENTITY() bir kimlik (eklenen son kimlik değer döndürdüğünden keyMemeberI depoda üretilmiş bir anahtarı ise depoda üretilmiş) sütun.  
+ İlk şablon SetClauses listesinde değerlerine göre Ekle gerçekleştirmek için bir komut var ve döndürme özelliği null olmayan, eklenen satır için döndürme özelliğinde belirtilen özellikleri döndürmek için bir SELECT deyimi. Koşul öğesi "\@ @ROWCOUNT > 0" değeri bir satır eklediyseniz true. Koşul öğesi "keyMemberI keyValueI = &#124; SCOPE_IDENTITY()" şeklini alır "keyMemberI SCOPE_IDENTITY() =" yalnızca SCOPE_IDENTITY() bir kimlik (eklenen son kimlik değer döndürdüğünden keyMemeberI depoda üretilmiş bir anahtarı ise depoda üretilmiş) sütun.  
   
 ```  
 -- first insert Template  

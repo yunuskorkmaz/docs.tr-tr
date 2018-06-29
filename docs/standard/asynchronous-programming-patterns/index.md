@@ -8,21 +8,22 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ed48361e0868d9e2fa2b79b1c5fa8955018bef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071311"
 ---
 # <a name="asynchronous-programming-patterns"></a>Zaman Uyumsuz Programlama Desenleri
 
 .NET Framework zaman uyumsuz işlemleri gerçekleştirmek için üç desenleri sağlar:  
   
-- Zaman uyumsuz programlama modeli (APM) deseni (olarak da bilinir <xref:System.IAsyncResult> desen), burada zaman uyumsuz işlemleri gerektirir `Begin` ve `End` yöntemleri (örneğin, `BeginWrite` ve `EndWrite` zaman uyumsuz yazma işlemleri için). Bu desen artık yeni geliştirme projeleri için önerilir. Daha fazla bilgi için bkz: [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
+- **Zaman uyumsuz programlama modeli (APM)** deseni (olarak da bilinir <xref:System.IAsyncResult> desen), burada zaman uyumsuz işlemleri gerektirir `Begin` ve `End` yöntemleri (örneğin, `BeginWrite` ve `EndWrite` için zaman uyumsuz işlemleri yazma). Bu desen artık yeni geliştirme projeleri için önerilir. Daha fazla bilgi için bkz: [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
-- Olay tabanlı zaman uyumsuz desen (içeren bir yöntem gerektiren EAP), `Async` sonek ve de gerektiren bir veya daha fazla olaylar, olay işleyici temsilci türleri ve `EventArg`-türetilmiş tür. EAP, .NET Framework 2. 0 ' sunulmuştur. Artık yeni geliştirme projeleri için önerilir. Daha fazla bilgi için bkz: [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+- **Olay tabanlı zaman uyumsuz desen (EAP)**, içeren bir yöntem gerektirir `Async` sonek ve de gerektiren bir veya daha fazla olaylar, olay işleyici temsilci türleri ve `EventArg`-türetilmiş tür. EAP, .NET Framework 2. 0 ' sunulmuştur. Artık yeni geliştirme projeleri için önerilir. Daha fazla bilgi için bkz: [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
-- Görev tabanlı zaman uyumsuz desen (başlatma ve zaman uyumsuz bir işlemin tamamlanmasını temsil etmek için tek bir yöntem kullanan DOKUNUN). DOKUNUN .NET Framework 4'te tanıtılan ve .NET Framework önerilen yaklaşım zaman uyumsuz programlama. [Zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) C# anahtar sözcükleri ve [zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [bekleme](~/docs/visual-basic/language-reference/operators/await-operator.md) Visual Basic Dil işleçleri DOKUNUN için dil desteği ekleyin. Daha fazla bilgi için bkz: [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+- **Görev tabanlı zaman uyumsuz desen (TAP)**, başlatma ve zaman uyumsuz bir işlemin tamamlanmasını temsil etmek için tek bir yöntem kullanır. DOKUNUN .NET Framework 4'te tanıtılan ve .NET Framework önerilen yaklaşım zaman uyumsuz programlama. [Zaman uyumsuz](~/docs/csharp/language-reference/keywords/async.md) ve [await](~/docs/csharp/language-reference/keywords/await.md) C# anahtar sözcükleri ve [zaman uyumsuz](~/docs/visual-basic/language-reference/modifiers/async.md) ve [bekleme](~/docs/visual-basic/language-reference/operators/await-operator.md) Visual Basic Dil işleçleri DOKUNUN için dil desteği ekleyin. Daha fazla bilgi için bkz: [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
 ## <a name="comparing-patterns"></a>Desenler karşılaştırma  
 

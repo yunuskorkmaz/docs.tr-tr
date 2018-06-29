@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579151"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072962"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET StringBuilder sınıfını kullanma
 <xref:System.String> Nesnesidir değişmez. Yöntemlerden birini her kullanışınızda <xref:System.String?displayProperty=nameWithType> sınıfı, oluşturduğunuz yeni bir dize nesnesi bellekte bu yeni nesne için yeni bir ayırma alanı gerektirir. Burada bir dize yinelenen değişiklikleri gerçekleştirmeniz gerekir durumlarda yükü ilişkili yeni bir oluşturma ile <xref:System.String> nesne maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Sınıfı, yeni bir nesne oluşturmadan bir dize değiştirmek istediğinizde kullanılabilir. Örneğin, kullanarak <xref:System.Text.StringBuilder> sınıfı Döngüdeki birlikte birçok dizeleri birleştirme, performansı artırmak.  
@@ -43,7 +43,7 @@ ms.locfileid: "33579151"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Kapasite ve uzunluğu ayarlama  
- Ancak <xref:System.Text.StringBuilder> onu yalıtan, dizedeki karakter sayısını genişletmek izin veren dinamik bir nesnedir içerebileceğinden karakter sayısı için bir değer belirtebilirsiniz. Bu değer nesnesinin kapasite olarak adlandırılır ve dize uzunluğu ile karıştırılmamalıdır, geçerli <xref:System.Text.StringBuilder> tutar. Örneğin, yeni bir örneğini oluşturabilirsiniz <xref:System.Text.StringBuilder> dize uzunluğu 5 ve "Hello" sınıfıyla belirtin nesnesi 25 en fazla kapasiteye sahiptir. Değiştirdiğinizde <xref:System.Text.StringBuilder>, kapasite sınırına kadar bu boyutu kendisi için yeniden tahsis değil. Bu durumda, yeni alan otomatik olarak ayrılır ve kapasite iki katına. Kapasitesini belirtin <xref:System.Text.StringBuilder> aşırı yüklü oluşturucular birini kullanarak sınıfı. Aşağıdaki örnek belirleyen `MyStringBuilder` nesne en fazla 25 alanları için genişletilebilir.  
+ Ancak <xref:System.Text.StringBuilder> onu yalıtan, dizedeki karakter sayısını genişletmek izin veren dinamik bir nesnedir içerebileceğinden karakter sayısı için bir değer belirtebilirsiniz. Bu değer nesnesinin kapasite olarak adlandırılır ve dize uzunluğu ile karıştırılmamalıdır, geçerli <xref:System.Text.StringBuilder> tutar. Örneğin, yeni bir örneğini oluşturabilirsiniz <xref:System.Text.StringBuilder> dize uzunluğu 5 ve "Hello" sınıfıyla belirtin nesnesi 25 en fazla kapasiteye sahiptir. Değiştirdiğinizde <xref:System.Text.StringBuilder>, kapasite sınırına kadar bu boyutu kendisi için yeniden tahsis değil. Bu durumda, yeni alan otomatik olarak ayrılır ve kapasite iki katına. Kapasitesini belirtin <xref:System.Text.StringBuilder> aşırı yüklü oluşturucular birini kullanarak sınıfı. Aşağıdaki örnek belirleyen `myStringBuilder` nesne en fazla 25 alanları için genişletilebilir.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]
@@ -70,7 +70,7 @@ ms.locfileid: "33579151"
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Geçerli belirtilen sayıda karakteri kaldırır **StringBuilder**.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Belirtilen dizindeki belirtilen bir karakterin yerini alır.|  
   
-### <a name="append"></a>ekleme  
+### <a name="append"></a>Ekleme  
  **Append** yöntemi, geçerli tarafından temsil edilen bir dize sonu metin ya da bir nesnenin dize gösterimini eklemek için kullanılabilir **StringBuilder**. Aşağıdaki örnek başlatır bir **StringBuilder** "Hello World" ve sonra bazı metinleri nesne sonuna ekler. Alan gerektiğinde otomatik olarak ayrılır.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]

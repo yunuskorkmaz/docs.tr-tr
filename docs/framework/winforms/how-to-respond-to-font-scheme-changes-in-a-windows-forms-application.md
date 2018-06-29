@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071152"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme
 Windows işletim sistemlerinde, bir kullanıcı daha büyük veya küçük görünür varsayılan yazı tipi yapmak için sistem genelinde yazı tipi ayarlarını değiştirebilirsiniz. Bu yazı tipi ayarlarını değiştirme ekranlarını üzerindeki metin okumak büyük türü gerektirir ve görme engelli kullanıcılar için kritik öneme sahiptir. Bu değişiklikleri artırarak veya yazı tipi düzenini değiştiğinde form ve içerdiği tüm metin boyutunu azaltarak tepki vermek için Windows Forms uygulaması ayarlayabilirsiniz. Formunuz yazı tipi boyutlarını değişiklikleri dinamik olarak sağlamak istiyorsanız, kod ekleyebilirsiniz.  
@@ -39,13 +40,13 @@ Windows işletim sistemlerinde, bir kullanıcı daha büyük veya küçük gör�
   
 5.  Son olarak, uygulama için bir işleyici <xref:System.Windows.Forms.Form.FormClosing> ayırır olay <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> olay işleyicisi.  
   
-> [!IMPORTANT]
->  Bu kod dahil etmek için hata bellek sızıntısı uygulamanıza neden olur.  
+     > [!IMPORTANT]
+     > Bu kod dahil etmek için hata bellek sızıntısı uygulamanıza neden olur.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Derleme ve kodu çalıştırın.  
+6.  Derleme ve kodu çalıştırın.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>El ile Windows XP'de yazı tipi düzenini değiştirmek için  
   
@@ -55,7 +56,7 @@ Windows işletim sistemlerinde, bir kullanıcı daha büyük veya küçük gör�
   
 3.  Gelen **yazı tipi boyutu** aşağı açılan liste kutusunda, yeni bir yazı tipi boyutu seçin.  
   
-     Form şimdi de masaüstü yazı tipi düzeni değiştiğinde çalışmaya tepki verdiğini olduğunu fark edeceksiniz. Kullanıcı değiştiğinde arasında **Normal**, **büyük yazı tipleri**, ve **ekstra büyük yazı tipleri**, form yazı tipini değiştirir ve doğru şekilde ölçeklendirir.  
+     Form artık çalışma zamanı değişiklikleri Masaüstü yazı tipi düzenindeki tepki verdiğini olduğunu fark edeceksiniz. Kullanıcı değiştiğinde arasında **Normal**, **büyük yazı tipleri**, ve **ekstra büyük yazı tipleri**, form yazı tipini değiştirir ve doğru şekilde ölçeklendirir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

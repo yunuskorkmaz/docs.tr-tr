@@ -13,12 +13,12 @@ ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e20d414b3be41fc175037c6691518adf6a424b69
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743033"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073027"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;kaldırma&gt; öğesi webRequestModules (ağ ayarları) için
 Özel bir Web isteği modülü uygulamadan kaldırır.  
@@ -57,7 +57,7 @@ ms.locfileid: "32743033"
 ## <a name="remarks"></a>Açıklamalar  
  `remove` Öğeyi belirtilen URI öneki için kayıtlı Web isteği modülü kaldırır.  
   
- Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http", baştaki karakterleri olmalıdır veya "http://www.contoso.com".  
+ Değeri `prefix` özniteliği geçerli bir URI--Örneğin, "http", baştaki karakterleri olmalıdır veya "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  

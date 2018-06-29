@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65084296cd4fb462670d0c4927b741a698a59da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584663"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070960"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Veri Paralelliği (Görev Paralel Kitaplığı)
 *Veri paralelliği* , aynı işlemi gerçekleştirilir eşzamanlı olarak senaryoları için ifade eder (diğer bir deyişle, içinde paralel) bir kaynak koleksiyonu veya dizideki öğeler üzerinde. Böylece birden çok iş parçacığı farklı parçaları üzerinde aynı anda çalışabilir verileri paralel işlemlerinde kaynak koleksiyonu bölümlenmiş.  
@@ -47,7 +47,7 @@ ms.locfileid: "33584663"
 |[Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> herhangi döngü <xref:System.Collections.Generic.IEnumerable%601> kaynak koleksiyonu.|  
 |[Nasıl yapılır: durdurun ya da bir Parallel.For döngüden bölün](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Böylece tüm iş parçacıklarının eylemini bildirilir paralel bir döngüden bölün veya durdurmak açıklar.|  
 |[Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.For%2A> döngü her iş parçacığı başka bir iş parçacığı ve döngü tamamlandığında tüm iş parçacıklarının sonuçlarından eşitlemeye nasıl görünür değil özel bir değişkene korur.|  
-|[Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü her iş parçacığı başka bir iş parçacığı ve döngü tamamlandığında tüm iş parçacıklarının sonuçlarından eşitlemeye nasıl görünür değil özel bir değişkene korur.|  
+|[Nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Nasıl yazılacağını açıklar bir <xref:System.Threading.Tasks.Parallel.ForEach%2A> döngü her iş parçacığı başka bir iş parçacığı ve döngü tamamlandığında tüm iş parçacıklarının sonuçlarından eşitlemeye nasıl görünür değil özel bir değişkene korur.|  
 |[Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Paralel bir döngüden kullanarak iptal etmeyi açıklar bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
 |[Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|Döngü gövdesine çok küçük olduğunda yürütmesini kurma hızı yollarından biri açıklanır.|  
 |[Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Görev paralel kitaplığı genel bir bakış sağlar.|  

@@ -2,12 +2,12 @@
 title: '&lt;Kimlik&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 9cfd1d6cc7c278fd7e95c13df0a6f801cfabbc33
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749172"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071298"
 ---
 # <a name="ltidentitygt"></a>&lt;Kimlik&gt;
 Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir istemci Geliştirici sağlar. Anlaşma işlemi istemci ve hizmet arasındaki Windows Communication Foundation (WCF) altyapısı, beklenen hizmet eşleşen değerleri bu öğenin kimliği ilişkilendirilmesini sağlar ve böylece doğrulanabilir. Daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -48,7 +48,7 @@ Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir iste
 |dns|Bir hizmetin kimliğini doğrulamak için kullanılan bir X.509 sertifikası DNS belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek kimliğini içerir.|  
 |rsa|Bir hizmet için bir istemci kimlik doğrulaması için kullanılan bir X.509 sertifikası RSA alanının değerini belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek kimliğini içerir|  
 |servicePrincipalName|Bir hizmet örneğini benzersiz şekilde tanımlamak için bir istemci tarafından kullanılan asıl ad sunucu asıl adı (SPN) kimliğini belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Bir kullanıcı ağda oturum açma adı türünde bir kullanıcı asıl adı (UPN) kimliğini belirtir. Ardından, Active Directory içinde kullanılan kullanıcı nesne adı, kullanıcı asıl adı oluşur simgesini (@) ve ardından, genellikle, etki alanı adı sistemi üst etki alanı. Örneğin, kullanıcı asıl adı Jeff Fabrikam.com etki alanı ağacındaki olabilir [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|userPrincipalName|Bir kullanıcı ağda oturum açma adı türünde bir kullanıcı asıl adı (UPN) kimliğini belirtir. Ardından, Active Directory içinde kullanılan kullanıcı nesne adı, kullanıcı asıl adı oluşur simgesini (\@) ve ardından, genellikle, etki alanı adı sistemi üst etki alanı. Örneğin, kullanıcı asıl adı Jeff Fabrikam.com etki alanı ağacındaki olabilir [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

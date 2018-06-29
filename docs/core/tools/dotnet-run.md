@@ -4,12 +4,12 @@ description: Komutu çalıştırın dotnet uygulamanızın kaynak kodunu çalı�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696318"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071766"
 ---
 # <a name="dotnet-run"></a>dotnet çalıştırın
 
@@ -201,9 +201,9 @@ Proje geçerli dizinde çalıştırın:
 
 Belirtilen proje çalıştırın:
 
-`dotnet run --project /projects/proj1/proj1.csproj`
+`dotnet run --project ./projects/proj1/proj1.csproj`
 
-Geçerli dizinde projeyi çalıştırın ( `--help` bağımsız değişkeni Bu örnekte geçirilir uygulamaya beri `--` bağımsız değişkeninin değeri kullanılır):
+Geçerli dizinde projeyi çalıştırın ( `--help` Bu örnekte bağımsız değişkeni boş bu yana uygulama geçirilir `--` seçeneği kullanıldığında):
 
 `dotnet run --configuration Release -- --help`
 

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ) (Visual Basic) birden fazla kaynaktan nesne koleksiyonları doldurma'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948455"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070869"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Nasıl yapılır: (LINQ) (Visual Basic) birden fazla kaynaktan nesne koleksiyonları doldurma
 
@@ -25,7 +25,6 @@ Bu örnek, verilerin farklı kaynaklardan yeni türleri dizisi nasıl birleştir
 Aşağıdaki örnekte bir adlandırılmış türü kullanmayı gösterir `Student` elektronik tablo verileri .csv biçiminde benzetimini dizeleri iki bellek içi koleksiyonundan birleştirilmiş verileri depolamak için. Dizeleri ilk koleksiyonu Öğrenci adları ve kimlikleri ve ikinci koleksiyon Öğrenci Kimliğini (ilk sütun) ve dört incelemesi puanlarını temsil eder. Yabancı anahtar olarak kullanılan kimliği.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Oluşturun ve aşağıdaki seçeneklerden birini hedefleyen bir projeyi derleyin:
 
-- .NET framework sürüm 3.5 veya daha yüksek System.Core.dll başvuru.
+- .NET framework sürüm 3.5 System.Core.dll başvuru.
+- .NET framework sürüm 4.0 veya üstü.
 - .NET core sürüm 1.0 veya üstü.
 
 ## <a name="see-also"></a>Ayrıca bkz.

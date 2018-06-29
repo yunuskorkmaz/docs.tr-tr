@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509157"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071337"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
 ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta veri belgelerini hizmet modeli kodundan hizmet modeli kodu oluşturmak için kullanılır.  
@@ -36,7 +36,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
 >   
 >  Ayrıca, `/r` ve `/ct` türlerine başvurma için anahtarlar şunlardır veri sözleşmeleri oluşturmak için. XmlSerializer kullanırken, bu anahtarlar çalışmaz.  
   
-### <a name="timeout"></a>Zaman aşımı  
+### <a name="timeout"></a>zaman aşımı  
  Araç, meta verileri alınırken bir 5 dakikalık zaman aşımı sahiptir.  Bu zaman aşımı yalnızca ağ üzerinden meta verilerini alma için geçerlidir. Bu meta verileri herhangi bir işlem için geçerli değildir.  
   
 ### <a name="multi-targetting"></a>Çoklu atamak  
@@ -66,7 +66,7 @@ ServiceModel meta veri yardımcı programracı meta veri belgelerini ve meta ver
  BasicHttpContextbinding uç noktası ile bir hizmet için Svcutil.exe BasicHttpBinding ile oluşturur `allowCookies` özniteliğini `true` yerine. Tanımlama bilgileri, sunucu üzerindeki bağlamı için kullanılır. Hizmet tanımlama bilgileri kullandığında istemcide bağlam yönetmek istiyorsanız, bir bağlam bağlama kullanmak üzere yapılandırma el ile değiştirebilirsiniz.  
   
 > [!CAUTION]
->  Svcutil.exe hizmetinden alınan WSDL veya ilke dosyası bağlı olarak istemciye oluşturur. Kullanıcı adı, birleştirerek kullanıcı asıl adı (UPN) oluşturulan "@" ve tam etki alanı adı (FQDN). Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracı tarafından oluşturulan UPN "oturum açma girişimi başarısız oldu" hata iletisiyle Kerberos kimlik doğrulamasındaki hata neden olur. Bu sorunu gidermek için bu aracı tarafından oluşturulan istemci dosyası el ile düzeltmeniz.  
+>  Svcutil.exe hizmetinden alınan WSDL veya ilke dosyası bağlı olarak istemciye oluşturur. Kullanıcı adı, birleştirerek kullanıcı asıl adı (UPN) oluşturulan "\@" ve tam etki alanı adı (FQDN). Ancak, Active Directory'de kayıtlı kullanıcılar için bu biçimi geçerli değil ve aracı tarafından oluşturulan UPN "oturum açma girişimi başarısız oldu" hata iletisiyle Kerberos kimlik doğrulamasındaki hata neden olur. Bu sorunu gidermek için bu aracı tarafından oluşturulan istemci dosyası el ile düzeltmeniz.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

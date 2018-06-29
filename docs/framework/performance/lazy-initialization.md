@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398033"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073222"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Geç başlatma* bir nesnenin anlamına gelir oluşturulduktan ilk kullanılan kadar ertelenir. (Bu konu için koşulları *geç başlatma* ve *yavaş örneklemesi* eşanlamlıdır.) Geç Başlatma öncelikle performansı, kayıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  
@@ -140,7 +140,7 @@ ms.locfileid: "33398033"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For ve ForEach iş parçacığı yerel değişkenler  
- Kullandığınızda <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemi yinelemek için veri kaynakları paralel olarak üzerinden iş parçacığı yerel verileri için yerleşik destek sahip aşırı kullanabilirsiniz. Bu yöntemler, yerleşim yeri iş parçacığı oluşturma, erişim ve veriyi temizlemek için yerel temsilciler kullanarak elde edilir. Daha fazla bilgi için bkz: [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ Kullandığınızda <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> yöntemi veya <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> yöntemi yinelemek için veri kaynakları paralel olarak üzerinden iş parçacığı yerel verileri için yerleşik destek sahip aşırı kullanabilirsiniz. Bu yöntemler, yerleşim yeri iş parçacığı oluşturma, erişim ve veriyi temizlemek için yerel temsilciler kullanarak elde edilir. Daha fazla bilgi için bkz: [nasıl yapılır: iş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Düşük yükünü senaryoları için geç başlatma kullanarak  
  Çok sayıda nesneleri geç başlatma için sahip olduğu senaryolarda, her nesne kaydırma karar verebilirsiniz bir <xref:System.Lazy%601> çok fazla bellek veya çok sayıda bilgi işlem kaynaklarını gerektirir. Veya, katı gereksinimlere sahip olabilir hakkında nasıl geç başlatma sunulur. Böyle durumlarda, kullandığınız `static` (`Shared` Visual Basic'te) yöntemlerinin <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> yavaş-her nesne bir örnekte kaydırma olmadan başlatma için sınıf <xref:System.Lazy%601>.  
