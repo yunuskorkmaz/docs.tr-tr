@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Oluş
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4b57a0ed8c4e8a4cd36ef5cef4b40de0595f1284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575882"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105699"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Oluşturma, Gelişmekte olan ve sürüm oluşturma mikro hizmet API'leri ve sözleşmeler
 
@@ -38,4 +38,5 @@ Son olarak, bir REST mimarisi kullanıyorsanız [iletilir](https://www.infoq.com
 
 
 >[!div class="step-by-step"]
-[Önceki] (zaman uyumsuz-ileti-tabanlı-communication.md) [sonraki] (mikro-çözümlenebilme-service-registry.md)
+[Önceki](asynchronous-message-based-communication.md)
+[sonraki](microservices-addressability-service-registry.md)

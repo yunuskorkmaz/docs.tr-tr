@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208527"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106508"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları sınama
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 Bu işlev sınama tüm ara yazılım, filtreleri, bağlayıcıları, yerinde olabilir vb. de dahil olmak üzere tam ASP.NET Core MVC uygulama yığınını uygular. Olduğunu doğrular bir rota verilen ("/ PIC/katalog/1") bilinen bir konumda bir dosya için beklenen bayt dizisi döndürür. Bunu gerçek web sunucunuzu kurmak ayarlamadan yapar ve bu nedenle, gerçek web kullanarak test etmek için sunucu (örneğin, güvenlik duvarı ayarlarını sorunları) yaşayabilirsiniz brittleness çoğunu önler. TestServer karşı çalıştırmak işlevsel testleri tümleştirme ve birim testleri genellikle yavaştır, ancak ağ üzerinden bir test web sunucusunda çalışır testleri hızlıdır.
 
 >[!div class="step-by-step"]
-[Önceki] (work-with-data-in-asp-net-core-apps.md) [sonraki] (geliştirme-işlem-için-azure.md)
+[Önceki](work-with-data-in-asp-net-core-apps.md)
+[sonraki](development-process-for-azure.md)

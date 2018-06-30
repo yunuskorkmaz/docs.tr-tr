@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457017"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105178"
 ---
 # <a name="net-guide"></a>.NET Kılavuzu
 
 .NET Kılavuzu büyük miktarda .NET hakkında bilgi sağlar.  .NET, alışkanlığına bağlı olarak, bu kılavuzun farklı bölümleri ve diğer bölümleri .NET belgelerin araştırmak isteyebilirsiniz.
 
 ## <a name="new-to-net"></a>.NET için yeni
+
+.NET hakkında üst düzey bir genel bakış istiyorsanız, kullanıma [.NET nedir?](https://www.microsoft.com/net/learn/what-is-dotnet).
 
 .NET ile yeniyseniz, kullanıma [Get Started](get-started.md) makalesi.
 

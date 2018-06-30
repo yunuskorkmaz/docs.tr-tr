@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP ver
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 89df46c8e04e1826c84058e5d2a92d089eb96098
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f1350f57ed649b9bf53968c19ab652b3c74384
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592528"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106181"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalardaki verileri ile çalışma
 
@@ -437,4 +437,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[Önceki] (develop-asp-net-core-mvc-apps.md) [sonraki] (test-asp-net-core-mvc-apps.md)
+[Önceki](develop-asp-net-core-mvc-apps.md)
+[sonraki](test-asp-net-core-mvc-apps.md)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Durum
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: c5cfe617335d8150d069149ac87f79206b1b5eca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1469038af29167f7dbb1a161b951eee742cf4bec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578661"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105624"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarda verileri
 
@@ -59,4 +59,5 @@ Docker kapsayıcıları bir orchestrator tarafından yönetildiğinde ek olarak,
 
 
 >[!div class="step-by-step"]
-[Önceki] (containerize-tek yapılı-applications.md) [sonraki] (hizmet-yönelimli-architecture.md)
+[Önceki](containerize-monolithic-applications.md)
+[sonraki](service-oriented-architecture.md)

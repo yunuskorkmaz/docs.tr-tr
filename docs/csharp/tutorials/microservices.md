@@ -3,12 +3,12 @@ title: Docker içinde - C# barındırılan mikro
 description: ASP.NET Docker kapsayıcılarında çalıştırmak Çekirdek Hizmetleri oluşturmayı öğrenin
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208419"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106356"
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker içinde barındırılan mikro
 
@@ -46,15 +46,17 @@ Docker, birçok Linux dağıtımları, macOS veya Windows yüklenebilir. Yukarı
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-Tüm Araçlar yüklediniz, yeni bir ASP.NET Core uygulaması oluşturun. Bunu yapmak için "WeatherMicroservice" adlı yeni bir dizin oluşturun ve sık kullanılan kabuğunuzu bu dizinde aşağıdaki komutu yürütün:
+Tüm Araçlar yüklediniz, yeni bir ASP.NET Core uygulaması, sık kullanılan Kabuğu'nda aşağıdaki komutu çalıştırarak "WeatherMicroservice" adlı bir dizin oluşturun:
 
 ```console
-dotnet new web
+dotnet new web -o WeatherMicroservice
 ```
 
 `dotnet` Komutu .NET geliştirme için gerekli araçları çalıştırır. Her fiil farklı bir komut yürütür.
 
 `dotnet new` Komutu .net oluşturmak için kullanılan çekirdek projeleri.
+
+`-o WeatherMicroservice` Sonra seçeneği `dotnet new` komutu ASP.NET Core uygulama oluşturmak için konum vermek için kullanılır.
 
 Kısa adını belirterek "ASP.NET Core boş" şablonu kullandık şekilde bu mikro hizmet için basit ve en basit bir web uygulaması mümkün istiyoruz `web`.
 

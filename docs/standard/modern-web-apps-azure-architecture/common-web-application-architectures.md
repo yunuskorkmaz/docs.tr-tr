@@ -4,12 +4,12 @@ description: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları mimari
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 943163ca4c82ad75f177ebe73559d909e7292c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb9a1d68d4c7c66c6adab3a5e932ee37c3ea22b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592502"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106429"
 ---
 # <a name="common-web-application-architectures"></a>Ortak Web uygulama mimariler
 
@@ -225,4 +225,5 @@ Tek yapılı uygulamaları Docker, ölçeklendirilebilir, alt sistemlerini tek y
 > - **Mikro e-kitap mimarisi oluşturma** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Önceki] (Mimari-principles.md) [sonraki] (ortak-istemci-tarafı-web-technologies.md)
+[Önceki](architectural-principles.md)
+[sonraki](common-client-side-web-technologies.md)

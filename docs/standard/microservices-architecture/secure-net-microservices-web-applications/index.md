@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | .NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591982"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106703"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>.NET mikro ve Web uygulamalarının güvenliğini sağlama
 
@@ -224,8 +224,8 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı ayrıca yerel bir sertifik
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Uygulamalar arasında tanımlama bilgilerini paylaşımı**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#paylaşımı kimlik doğrulama-tanımlama bilgileri-arasında-uygulamalar*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+-   **Tanımlama bilgilerini uygulamalar arasında paylaşma**
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Kimlik giriş**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
@@ -250,4 +250,5 @@ JWT taşıyıcı kimlik doğrulaması ara yazılımı ayrıca yerel bir sertifik
 
 
 >[!div class="step-by-step"]
-[Önceki] (.. /implement-resilient-Applications/Monitor-App-Health.MD) [sonraki] (yetkilendirme-net-mikro-web-applications.md)
+[Önceki](../implement-resilient-applications/monitor-app-health.md)
+[sonraki](authorization-net-microservices-web-applications.md)

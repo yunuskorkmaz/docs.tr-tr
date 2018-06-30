@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | anaht
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578189"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105520"
 ---
 # <a name="key-takeaways"></a>Anahtar paketler
 
@@ -38,4 +38,4 @@ Bir Özet ve anahtar paketler en önemli bir sonuca bu Guide'daki verilmiştir.
 **Orchestrators.** Azure kapsayıcı hizmeti (Kubernetes, Mesos DC/OS ve Docker Swarm) ve Azure Service Fabric sağlanan herhangi bir çok kapsayıcısına ve herhangi bir üretime hazır mikro hizmet tabanlı uygulama için vazgeçilmez olanlardır gibi kapsayıcı tabanlı orchestrators Uygulama önemli karmaşıklık, ölçeklenebilirlik gereksinimlerini ve sabit evrimi. Bu kılavuz orchestrators ve rolleri mikro hizmet ve kapsayıcı tabanlı çözümlerinde anlatılmıştır. Uygulamanızın gereksinimlerine karmaşık kapsayıcılı uygulamaları taşıyorsanız, orchestrators hakkında daha fazla bilgi için ek kaynaklar çıkışı aramak yararlı
 
 >[!div class="step-by-step"]
-[Önceki] (secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+[Önceki](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

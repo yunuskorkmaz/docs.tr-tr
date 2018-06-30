@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314717"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104898"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Docker (Windows için Visual Studio) için Visual Studio araçlarını kullanma
 
@@ -71,4 +71,5 @@ Bir ASP.NET kapsayıcısı uzak bir Docker konağına dağıtın: [https://docs.
 
 
 >[!div class="step-by-step"]
-[Önceki] (docker-apps-iç-döngü-workflow.md) [sonraki] (set-up-windows-containers-with-powershell.md)
+[Önceki](docker-apps-inner-loop-workflow.md)
+[sonraki](set-up-windows-containers-with-powershell.md)

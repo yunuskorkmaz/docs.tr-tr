@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Eski 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578839"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106521"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Eski tek yapılı .NET Framework uygulamaları geçirme Windows kapsayıcıları
 
@@ -186,4 +186,5 @@ Birkaç geliştirme yapılandırması ve üretim yapılandırması arasındaki f
 Geliştirme ortamında aynı işletim sisteminde tüm kapsayıcıları çalıştırmanız gerekir. Windows CE docker aynı anda çalışan Windows ve Linux tabanlı kapsayıcılar desteklemez. Üretimde uygulama Linux kapsayıcısında farklı bir üzerinde çalışan katalog mikro hizmet örneği ile iletişim kurabilir Web Forms olması veya tek bir Docker ana bilgisayar (veya küme) Windows kapsayıcısında katalog mikro hizmet çalıştırmak istediğiniz karar verebilirsiniz Docker ana bilgisayar. Bunu nasıl, ağ gecikmesi için en iyi duruma getirmek istediğiniz yere bağlıdır. Çoğu durumda, aynı Docker ana bilgisayar (veya swarm) dağıtım kolaylığı ve düşük iletişim gecikmesi için üzerinde çalışan uygulamalarınızı bağımlı mikro istiyor. Bu yapılandırmalarda mikro hizmet örnekleri ve kalıcı veri depolama için yüksek kullanılabilirlik sunucuları yalnızca pahalı iletişimleri arasındadır.
 
 >[!div class="step-by-step"]
-[Önceki] (.. / net-core-single-containers-linux-windows-server-hosts/index.md) [sonraki] (.. /multi-Container-microservice-NET-Applications/index.MD)
+[Önceki](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[sonraki](../multi-container-microservice-net-applications/index.md)

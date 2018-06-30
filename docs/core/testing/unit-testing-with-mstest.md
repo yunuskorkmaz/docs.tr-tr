@@ -4,11 +4,12 @@ description: Adım adım örnek çözüm oluşturma etkileşimli bir deneyim ara
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: b76e577d3950dd13b038f47c1b133e3529867c38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105608"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Birim testi C# mstest'i ve .NET Core
 
@@ -16,7 +17,7 @@ Bu öğretici birim testi kavramlarını öğrenmek için adım adım örnek ç�
 
 ### <a name="creating-the-source-project"></a>Kaynak projesi oluşturma
 
-Kabuk penceresini açın. Adlı bir dizin oluşturun *birim testi-kullanma-dotnet-sınama* çözümü tutmak için. Bu yeni dizin içinde çalıştırmak [ `dotnet new sln` ](../tools/dotnet-new.md) sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak için. Ardından, oluşturun bir *PrimeService* dizini. Aşağıdaki anahat dizin ve dosya yapısı bugüne kadarki gösterilmektedir:
+Kabuk penceresini açın. Adlı bir dizin oluşturun *birim-test etme-kullanma-mstest'i* çözümü tutmak için. Bu yeni dizin içinde çalıştırmak [ `dotnet new sln` ](../tools/dotnet-new.md) sınıf kitaplığı ve test projesi için yeni bir çözüm dosyası oluşturmak için. Ardından, oluşturun bir *PrimeService* dizini. Aşağıdaki anahat dizin ve dosya yapısı bugüne kadarki gösterilmektedir:
 
 ```
 /unit-testing-using-mstest

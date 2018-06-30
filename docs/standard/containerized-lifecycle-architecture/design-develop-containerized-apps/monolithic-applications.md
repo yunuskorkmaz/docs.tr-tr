@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: fe25fa8772c60625c5564d5e7194957366a6010a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572755"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106625"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamaları
 
@@ -71,4 +71,5 @@ Azure uygulama hizmeti ile sezgisel ve alma ve harika Git sağladığından hız
 
 
 >[!div class="step-by-step"]
-[Önceki] (ortak-kapsayıcı-design-principles.md) [sonraki] (state-and-data-in-docker-applications.md)
+[Önceki](common-container-design-principles.md)
+[sonraki](state-and-data-in-docker-applications.md)

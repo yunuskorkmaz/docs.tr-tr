@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Karar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0e384fabca88d8ad6f93ae626140fb3d5dcaf971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589332"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105306"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Karar tablosu: .NET Framework için Docker kullanmak için
 
@@ -58,4 +58,5 @@ Uygulamanızın kararınızı etkileyen çeşitli özellikler vardır. Bu özell
     - İstemci için kullanılabilen API'lerin kullanırsanız *.NET Core*, arasından seçim yapabilirsiniz *Linux kapsayıcıları ve Windows kapsayıcıları*.
 
 >[!div class="step-by-step"]
-[Önceki] (net-framework-kapsayıcı-scenarios.md) [sonraki] (net-kapsayıcı-os-targets.md)
+[Önceki](net-framework-container-scenarios.md)
+[sonraki](net-container-os-targets.md)

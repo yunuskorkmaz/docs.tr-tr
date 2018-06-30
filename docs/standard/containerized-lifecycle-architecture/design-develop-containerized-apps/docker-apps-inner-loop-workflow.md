@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579216"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105595"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -122,7 +122,7 @@ Uygulamayı çalıştırmak nasıl Docker bilmesi için kullanmakta olduğunuz d
 
 **Daha fazla bilgi** .NET Core uygulamaları için Docker görüntülerinizi oluşturmak hakkında daha fazla bilgi için Git <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [ https://docs.docker.com/engine/\öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Kendi görüntüleri oluşturma hakkında daha fazla bilgi için şuraya gidin [ https://docs.docker.com/engine/\ öğreticileri/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Birden çok platform görüntüsü depoları**
 
@@ -259,4 +259,5 @@ Ayrıca Docker .NET Core kapsayıcılarında Visual Studio kullanırken bir sonr
 
 
 >[!div class="step-by-step"]
-[Önceki] (docker-apps-development-environment.md) [sonraki] (visual-studio-araçları-için-docker.md)
+[Önceki](docker-apps-development-environment.md)
+[sonraki](visual-studio-tools-for-docker.md)

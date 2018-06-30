@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cbadb13109c51ba53530011a17006b585573f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576799"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105375"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Mikro visual UI şekli ve birden çok mikro tarafından oluşturulan düzeni dahil olmak üzere, temel bileşik kullanıcı Arabirimi oluşturma
 
@@ -58,4 +58,5 @@ Ancak, üzerinde mikro UI tabanlı bileşik hakkında daha fazla bilgi için aş
 
 
 >[!div class="step-by-step"]
-[Önceki] (mikro-çözümlenebilme-service-registry.md) [sonraki] (esnek-yüksek-kullanılabilirlik-microservices.md)
+[Önceki](microservices-addressability-service-registry.md)
+[sonraki](resilient-high-availability-microservices.md)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docke
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 02ee40ebab37ae1898dc46e215728cba512a23e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4716159d052fd8e229ac42e5d17c72717ac86d9f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574092"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106466"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker kapsayıcıları, görüntüler ve kayıt defterleri
 
@@ -34,4 +34,5 @@ Kayıt defterinde görüntüleri koyma framework düzeydeki tüm bağımlılıkl
 -   Görüntülerinizi seçilen dağıtım ortamınızı arasındaki en düşük ağ gecikmesini olmasını istiyorsunuz. Üretim ortamınıza Azure bulut ise, örneğin, büyük olasılıkla ağ gecikme süresi en az olması görüntülerinizi Azure kapsayıcı kayıt defterine depolamak istediğiniz. Üretim ortamınıza şirket ise benzer şekilde, bir şirket içi Docker güvenilen kayıt defteri aynı yerel ağ içinde kullanılabilir olmasını istiyorsanız.
 
 >[!div class="step-by-step"]
-[Önceki] (docker-terminology.md) [sonraki] (.. /NET-Core-NET-Framework-Containers/index.MD)
+[Önceki](docker-terminology.md)
+[sonraki](../net-core-net-framework-containers/index.md)

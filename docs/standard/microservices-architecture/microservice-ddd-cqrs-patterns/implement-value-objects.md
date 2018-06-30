@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Değe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 04a0def5fbadcc39220d9dc8daa9c9341fe66b26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579313"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106729"
 ---
 # <a name="implementing-value-objects"></a>Değer nesnelerini uygulama
 
@@ -326,4 +326,5 @@ Henüz türleri • hiçbir koleksiyonları ait (ancak bunlar sürümlerde EF ç
 
 
 >[!div class="step-by-step"]
-[Önceki] (seedwork-domain-model-base-classes-interfaces.md) [sonraki] (numaralandırması-sınıfları-üzerinden-enum-types.md)
+[Önceki](seedwork-domain-model-base-classes-interfaces.md)
+[sonraki](enumeration-classes-over-enum-types.md)

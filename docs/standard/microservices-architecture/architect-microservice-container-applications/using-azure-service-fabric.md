@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Azure
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577684"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105826"
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric kullanma
 
@@ -89,4 +89,5 @@ Aktör deseni destekleyen ve hataya dayanıklılık ve iş mantığı ve veriler
 Docker kapsayıcıları durum bilgisiz kendilerini olduğuna dikkat edin. Durum bilgisi olan hizmet uygulamak istiyorsanız, daha önce not ettiğiniz ek önerilerde bulunan ve üst düzey çerçeveleri biri gerekir. 
 
 >[!div class="step-by-step"]
-[Önceki] (scalable-available-multi-container-microservice-applications.md) [sonraki] (.. /docker-Application-Development-Process/index.MD)
+[Önceki](scalable-available-multi-container-microservice-applications.md)
+[sonraki](../docker-application-development-process/index.md)

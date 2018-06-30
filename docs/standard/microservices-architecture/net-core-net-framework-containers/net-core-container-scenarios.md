@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Ne za
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314932"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104660"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Ne zaman Docker kapsayıcıları için .NET Core seçin
 
@@ -53,4 +53,5 @@ Bu özellikle çalıştıran mikro (kapsayıcı) yüzlerce olduğu mikro mimari 
 
 
 >[!div class="step-by-step"]
-[Önceki] (genel-guidance.md) [sonraki] (net-framework-kapsayıcı-scenarios.md)
+[Önceki](general-guidance.md)
+[sonraki](net-framework-container-scenarios.md)

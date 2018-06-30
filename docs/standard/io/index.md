@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579049"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105660"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanları veri akışlarını ve dosyaları okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak etkinleştirin türleri içerir. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -26,6 +26,8 @@ Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamın
   
 ## <a name="files-and-directories"></a>Dosyalar ve Dizinler  
  Türler kullanabilirsiniz <xref:System.IO?displayProperty=nameWithType> dosyaları ve dizinleri ile etkileşim kurmak için ad alanı. Örneğin, dosyalar ve dizinler için özellikleri alabilir ve ayarlayabilirsiniz. Ayrıca arama ölçütlerine dayanarak bir dizi dosya ve dizini alabilirsiniz.  
+
+Yol için bkz: adlandırma kuralları ve desteklenen .NET Core 1.1 ve daha sonra DOS aygıtı sözdizimi ve .NET Framework 4.6.2 dahil olmak üzere ve daha sonra Windows sistemleri için bir dosya yolu express yolları [dosya yolu biçimleriWindowssistemlerinde](file-path-formats.md). 
   
  Yaygın olarak kullanılan bazı dosya ve dizin sınıfları şunlardır:  
   

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579463"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106258"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Mikro hizmet etki alanı model tasarlama
 
@@ -87,8 +87,8 @@ Değer belgede uygulamak ve kullanmak daha kolay veritabanlarına yönelik ancak
 -   **Değer nesnesi**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Değer Test-Driven geliştirme nesneleri**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub otomatik değeri nesneleri*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Değer nesnelerini teste dayalı geliştirme**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling.** (Kitap; değer nesnelerini tartışması içerir) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -134,7 +134,7 @@ Tanımlama ve toplamalar ile çalışma araştırma ve deneyimi gerektirir. Daha
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Vaughn Vernon. Etkin Toplama tasarımı - bölümü I: tek bir toplama modelleme**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_TOPLULUK\_özellik\_TOPLAMALAR\_bölümü \_1. pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. Etkin Toplama tasarımı - Bölüm II: Yapma toplamalar iş birlikte**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
@@ -153,4 +153,5 @@ Tanımlama ve toplamalar ile çalışma araştırma ve deneyimi gerektirir. Daha
 
 
 >[!div class="step-by-step"]
-[Önceki] (bbb-yönelimli-microservice.md) [sonraki] (net-core-mikro hizmet-etki-model.md)
+[Önceki](ddd-oriented-microservice.md)
+[sonraki](net-core-microservice-domain-model.md)

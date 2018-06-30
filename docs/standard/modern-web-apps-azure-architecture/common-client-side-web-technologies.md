@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Ortak i
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 96bafce9c81a3a0486b7b8930367cf47ec5cbcb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79dac220e40274889783d29c0e04679dd878fda5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592073"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106768"
 ---
 # <a name="common-client-side-web-technologies"></a>Ortak istemci tarafı Web teknolojileri
 
@@ -70,10 +70,10 @@ Eski JavaScript framework standartları tarafından rağmen jQuery HTML/CSS ile 
 |--------------------------|------------|-------------|
 | DOM soyutlar | **Evet** | **Evet** |
 | AJAX desteği | **Evet** | **Evet** |
-| Bildirim temelli veri bağlama | **Yok** | **Evet** |
-| MVC stili yönlendirme | **Yok** | **Evet** |
-| Şablon oluşturma | **Yok** | **Evet** |
-| Ayrıntılı bağlantı Yönlendirme | **Yok** | **Evet** |
+| Bildirim temelli veri bağlama | **yok** | **Evet** |
+| MVC stili yönlendirme | **yok** | **Evet** |
+| Şablon oluşturma | **yok** | **Evet** |
+| Ayrıntılı bağlantı Yönlendirme | **yok** | **Evet** |
 
 JQuery doğası gereği eksik özelliklerin çoğunu diğer kitaplıkları eklenmesiyle eklenebilir. Ancak, bunu, tümünü başından aklınızda tasarlandığından SPA framework Angular gibi bu özellikleri daha tümleşik bir şekilde sağlar. Ayrıca, jQuery jQuery ile bir şey yapmanız için jQuery işlevleri çağırmak ihtiyacınız anlamı çok kesinlik temelli bir kitaplığı vardır. SPA çerçeveleri sağlayan işlevselliği ve iş çoğunu, yazılacak gerçek bir kod gerektiren bildirimli olarak, yapılabilir.
 
@@ -167,4 +167,5 @@ JavaScript çerçeveler breakneck hızıyla gelişmeye devam edin. Bağımlı ol
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Önceki] (ortak-web-uygulama-architectures.md) [sonraki] (develop-asp-net-core-mvc-apps.md)
+[Önceki](common-web-application-architectures.md)
+[sonraki](develop-asp-net-core-mvc-apps.md)

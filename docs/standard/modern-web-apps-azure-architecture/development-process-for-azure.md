@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Azure i
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 66f321d4671364fa1f7eebef98d53210098b5ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585495"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106859"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -113,4 +113,5 @@ Web uygulaması çalışırken, uygulama durumunu izlemenize ve tanılama ve kul
 
 
 >[!div class="step-by-step"]
-[Önceki] (test-asp-net-core-mvc-apps.md) [sonraki] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Önceki](test-asp-net-core-mvc-apps.md)
+[sonraki](azure-hosting-recommendations-for-asp-net-web-apps.md)

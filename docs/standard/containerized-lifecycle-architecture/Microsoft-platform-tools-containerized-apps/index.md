@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576249"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106197"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
@@ -59,4 +59,5 @@ VSTS ile geliştiriciler, kaynak kodu kapsayan hızlı ve yinelemeli bir işlem 
 Bu nedenle, Microsoft, bir uçtan uca kapsayıcılı Docker uygulama yaşam döngüsü için tam bir temel sunar. Ancak, *ürünleri ve isteğe bağlı olarak seçin ve var olan tümleştirmenize olanak tanıyan teknolojileri koleksiyonu araçları ve işler*. Geniş bir yaklaşım yetenekleri derinlemesine gücü birlikte esneklik kapsayıcılı Docker uygulama geliştirme için güçlü bir konumda Microsoft yerleştirin.
 
 >[!div class="step-by-step"]
-[Önceki] (.. / Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [sonraki] (.. /Design-Develop-containerized-Apps/index.MD)
+[Önceki](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[sonraki](../design-develop-containerized-apps/index.md)

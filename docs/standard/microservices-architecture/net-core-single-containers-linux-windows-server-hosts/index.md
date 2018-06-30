@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Tek k
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591100"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105533"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux veya Windows Nano Server konakları tek kapsayıcı tabanlı .NET Core Web uygulamalarını dağıtma
 
@@ -142,4 +142,5 @@ Farklı yapılandırmaları arasında geçiş yaptığınızda çalışan işlem
 Docker desteği ekler Sihirbazı'nı çalışan Docker işlemi ile iletişim kurar. Sihirbazı başlattığınızda Docker çalışmıyorsa, sihirbazın düzgün çalışmaz. Ayrıca, sihirbaz doğru Docker desteği eklemek için geçerli kapsayıcı tercih ettiğiniz inceler. Windows kapsayıcıları için destek eklemek istiyorsanız, Docker çalışan Windows yapılandırılmış kapsayıcılar ile çalışırken Sihirbazı'nı çalıştırmanız gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, Docker ile yapılandırılmış Linux kapsayıcıları çalıştıran varken Sihirbazı'nı çalıştırın.
 
 >[!div class="step-by-step"]
-[Önceki] (.. / docker-application-development-process/docker-app-development-workflow.md) [sonraki] (.. /containerize-NET-Framework-Applications/index.MD)
+[Önceki](../docker-application-development-process/docker-app-development-workflow.md)
+[sonraki](../containerize-net-framework-applications/index.md)

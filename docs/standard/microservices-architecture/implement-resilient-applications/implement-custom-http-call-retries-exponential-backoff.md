@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Özel
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 10751bb74ed648839fabec67ff7a71e458fb2a44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77663f193b5f788ee07eba001306caed764ed253
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574952"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104785"
 ---
 # <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a>Özel HTTP çağrısı deneme üstel geri alma ile uygulama
 
@@ -117,4 +117,5 @@ Ancak, bu kod yalnızca bir kavram kanıtı uygundur. Sonraki konuyu daha karma�
 
 
 >[!div class="step-by-step"]
-[Önceki] (implement-resilient-entity-framework-core-sql-connections.md) [sonraki] (implement-http-call-retries-exponential-backoff-polly.md)
+[Önceki](implement-resilient-entity-framework-core-sql-connections.md)
+[sonraki](implement-http-call-retries-exponential-backoff-polly.md)

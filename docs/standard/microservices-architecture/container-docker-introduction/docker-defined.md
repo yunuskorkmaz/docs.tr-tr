@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Docke
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576200"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106807"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -58,4 +58,5 @@ Bir kapsayıcı görüntüsü, bir uygulama veya hizmet paketi ve güvenilir ve 
 Docker geliştiriciler yok söyleyin, "Benim makinede neden üretimde çalıştığını?" Bunlar söyleyin, ", Docker üzerinde çalıştığı". Docker paketlenmiş uygulamalar tüm desteklenen Docker ortamda çalıştırılabilir. Docker paketlenmiş uygulamalar tutarlı bir şekilde tüm dağıtım hedeflerine (geliştirme, QA, hazırlama, üretim) çalıştırın.
 
 >[!div class="step-by-step"]
-[Önceki] (index.md) [sonraki] (docker-terminology.md)
+[Önceki](index.md)
+[sonraki](docker-terminology.md)

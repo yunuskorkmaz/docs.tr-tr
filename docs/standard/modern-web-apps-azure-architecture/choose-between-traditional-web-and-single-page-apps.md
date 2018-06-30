@@ -4,12 +4,12 @@ description: ASP.NET Core ve Microsoft Azure ile Mimarı modern web uygulamalar�
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208512"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104772"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
 
@@ -86,10 +86,11 @@ Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seç
 
   | **Faktörü** | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
   |---|---|---|
-  | JavaScript/TypeScript gerekli takım aşina | **en az** | **Gerekli** |
+  | JavaScript/TypeScript gerekli takım aşina | **En az** | **Gerekli** |
   | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |
   | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Gereğinden fazla** |
   | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Sınırlı** | **Oldukça uygun** |
 
 >[!div class="step-by-step"]
-[Önceki] (modern-web-uygulamalar-characteristics.md) [sonraki](architectural-principles.md)
+[Önceki](modern-web-applications-characteristics.md)
+[sonraki](architectural-principles.md)

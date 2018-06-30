@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 48af11117ec8eb0034d9557a332b89d3418d4b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d68378a12a16dd4072b381f00241e781b40c3e16
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567864"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105556"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>(Standart Docker tabanlı) Windows kapsayıcıları ayarlamak için bir DockerFile Windows PowerShell komutlarını kullanma
 
@@ -33,4 +33,5 @@ RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
-[Önceki] (visual-studio-araçları-için-docker.md) [sonraki] (.. /docker-devops-Workflow/index.MD)
+[Önceki](visual-studio-tools-for-docker.md)
+[sonraki](../docker-devops-workflow/index.md)

@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579008"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106168"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulama için dış döngü DevOps iş akışı adımları
 
@@ -234,4 +234,5 @@ Bu konuda, BT işlemleri gerçekleştirir üretim sistemleri görevleri bir par�
 Yalnızca izleme ve tanılama DevOps bölge içindeki yüzde 100 olduğunda izleme işlemleri ve test etme veya beta ortamlar karşı geliştirme ekibi tarafından gerçekleştirilen analytics değildir. Bu yük testi gerçekleştirmek veya yalnızca beta veya beta Test edenlere yeni sürümler burada çalıştığınız QA ortamları izleme tarafından gerçekleştirilir.
 
 >[!div class="step-by-step"]
-[Önceki] (index.md) [sonraki] (.. /Run-Manage-Monitor-docker-Environments/index.MD)
+[Önceki](index.md)
+[sonraki](../run-manage-monitor-docker-environments/index.md)

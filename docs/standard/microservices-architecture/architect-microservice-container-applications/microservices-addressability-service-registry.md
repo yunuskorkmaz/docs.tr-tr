@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573678"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106677"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Mikro çözümlenebilme ve hizmet kayıt defteri
 
@@ -34,4 +34,5 @@ Hizmet kayıt defteri ve yardımcı olan de bu sorunu çözmek API ağ geçidi d
 
 
 >[!div class="step-by-step"]
-[Önceki] (korumak-mikro hizmet-apis.md) [sonraki] (microservice-based-composite-ui-shape-layout.md)
+[Önceki](maintain-microservice-apis.md)
+[sonraki](microservice-based-composite-ui-shape-layout.md)

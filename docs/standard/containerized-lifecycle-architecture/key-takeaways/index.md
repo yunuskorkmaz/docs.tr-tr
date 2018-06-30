@@ -4,12 +4,12 @@ description: Microsoft Platformu ve Araçları (e-kitap) _v1.1 kapsayıcılı Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568985"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104644"
 ---
 # <a name="key-takeaways"></a>Anahtar paketler
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568985"
 Visual Studio Team Services basit Docker ortamları veya göre daha gelişmiş mikro hizmet ve kapsayıcı orchestrators dahil olmak üzere sürekli dağıtım hatlarınızı gelen Docker ortamlar için belirlenmiş DevOps ortamınızı büyük ölçüde basitleştirir Azure.
 
 >[!div class="step-by-step"]
-[Önceki] (.. / run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[Önceki](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

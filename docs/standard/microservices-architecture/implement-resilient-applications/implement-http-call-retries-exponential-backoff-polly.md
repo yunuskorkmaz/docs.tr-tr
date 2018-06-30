@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | HTTP 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 66ac57fc824e01f96d6584ab86bb95ba1b0174a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576987"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106937"
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
 
@@ -171,4 +171,5 @@ private Policy[] CreatePolicies()
 
 
 >[!div class="step-by-step"]
-[Önceki] (implement-custom-http-call-retries-exponential-backoff.md) [sonraki] (uygulama-hattı-ayırıcı-pattern.md)
+[Önceki](implement-custom-http-call-retries-exponential-backoff.md)
+[sonraki](implement-circuit-breaker-pattern.md)

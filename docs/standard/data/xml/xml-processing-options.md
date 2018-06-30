@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b1295185bf0fa06884b1332762d01f86f138a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 902c82f77240c957cc6070c9437b95d0c89fca53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572229"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105355"
 ---
 # <a name="xml-processing-options"></a>XML işleme seçenekleri
 XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir listesi için aşağıdaki tablolara bakın.  
@@ -19,7 +19,7 @@ XML verilerini işlemek için kullanabileceğiniz Microsoft teknolojilerin bir l
   
 |**Seçeneği**|**İşleme türü**|**Açıklama**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-İnituive belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> ad alanı)|Bellek içi|-.NET Framework Language-Integrated sorgu (LINQ) teknolojisine dayalı.<br />-Nesneleri, ilişkisel veri ve XML verilerini SQL benzer sorgu deneyimi sağlar.<br />-Sezgisel belge oluşturma ve dönüştürme özellikleri sağlar.<br />-Yeni kod yazıyorsanız, bu seçeneği kullanın.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Akış tabanlı|-XML verilerine erişmek için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlReaderSettings> sınıfı.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Akış tabanlı|-XML verileri oluşturmak için hızlı, önbelleğe alınmamış, yalnızca ileri bir yol sağlar.<br />-Nesneleri kullanarak oluşturabileceğiniz <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemini ve bir nesne üzerinde kullanarak etkinleştirmek için özellik kümesi belirtin <xref:System.Xml.XmlWriterSettings> sınıfı.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Bellek içi|-Uygulayan [W3C belge nesne modeli (DOM) Düzey 1 çekirdek](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) ve [DOM Düzey 2 Çekirdek](https://www.w3.org/TR/DOM-Level-2-Core/) öneriler.<br />-Oluşturabilir, Ekle, Kaldır ve düğümler yöntemleri ve tanıdık DOM modelini temel alan özelliklerini kullanarak değiştirebilirsiniz.<br />-Bu seçenek W3C DOM kullanan var olan kodu değiştiriyorsanız kullanın|  

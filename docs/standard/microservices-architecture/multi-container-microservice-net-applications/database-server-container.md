@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir k
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578176"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106155"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
@@ -201,4 +201,5 @@ Son olarak, docker compose.override.yml dosyasında eShopOnContainers örnek bas
 
 
 >[!div class="step-by-step"]
-[Önceki] (çok-container-uygulamalar-docker-compose.md) [sonraki] (tümleştirme-olay-tabanlı-mikro hizmet-communications.md)
+[Önceki](multi-container-applications-docker-compose.md)
+[sonraki](integration-event-based-microservice-communications.md)

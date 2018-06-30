@@ -4,12 +4,12 @@ description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575550"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106142"
 ---
 # <a name="monitor-containerized-application-services"></a>Kapsayıcılı İzleyici uygulama hizmetleri
 
@@ -42,7 +42,7 @@ Application Insights kaynağı oluşturmak için aşağıdaki listeden sunulan m
 -   **Application Insights Docker uygulamaları izleyin:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Uygulama Öngörüler Docker görüntüsü Docker hub'a ve Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) Ve <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) ve <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **ASP.NET için Application Insights'ı ayarlayın:**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -97,4 +97,5 @@ Ayrıca bir standart Operations Management Suite özelliğidir ve yardımcı ola
 **Daha fazla bilgi** kapsayıcı çözümde yükleme ve Docker yapılandırma hakkında bilgi bulmak için [Operations Management Suite](http://microsoft.com/oms)gidin <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Önceki] (yönetme-üretim-docker-environments.md) [sonraki] (.. /Key-takeaways/index.MD)
+[Önceki](manage-production-docker-environments.md)
+[sonraki](../key-takeaways/index.md)

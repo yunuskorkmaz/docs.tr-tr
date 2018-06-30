@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olay 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d7037f91cb338721f91d35567246ebbca018a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579183"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105800"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Olay tabanlı mikro (tümleştirme olayları) arasındaki iletişimi uygulama
 
@@ -129,4 +129,5 @@ public interface IEventBus
 
 
 >[!div class="step-by-step"]
-[Önceki] (veritabanı-server-container.md) [sonraki] (rabbitmq-event-bus-development-test-environment.md)
+[Önceki](database-server-container.md)
+[sonraki](rabbitmq-event-bus-development-test-environment.md)

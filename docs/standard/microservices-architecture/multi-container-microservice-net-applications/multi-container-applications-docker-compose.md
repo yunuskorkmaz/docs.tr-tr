@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Birde
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592359"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106310"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama 
 
@@ -432,7 +432,7 @@ Docker compose'u bekliyor biçiminde bir .env dosyasındaki her satırın &lt;de
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
 -   **Birden çok oluşturma dosyaları**
-    [*https://docs.docker.com/compose/extends/\#birden çok oluşturan dosyaları*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>ASP.NET Core Docker görüntüleri oluşturma en iyi duruma getirilmiş
 
@@ -548,4 +548,5 @@ Burada genel takeway aynı şekilde CI/CD hattınızı yapı, uygulamanızı mü
 
 
 >[!div class="step-by-step"]
-[Önceki] (veri-güdümlü-crud-microservice.md) [sonraki] (veritabanı sunucu container.md)
+[Önceki](data-driven-crud-microservice.md)
+[sonraki](database-server-container.md)

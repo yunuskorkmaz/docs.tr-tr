@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Devre
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c89992c4c60ca7f1085050e6fed4922ecd4d8cc
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578020"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106140"
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Devre kesici düzeni uygulama
 
@@ -243,4 +243,5 @@ Policy.Handle<HttpResponseException>() // etc
 
 
 >[!div class="step-by-step"]
-[Önceki] (implement-http-call-retries-exponential-backoff-polly.md) [sonraki] (İzleyicisi-app-health.md)
+[Önceki](implement-http-call-retries-exponential-backoff-polly.md)
+[sonraki](monitor-app-health.md)

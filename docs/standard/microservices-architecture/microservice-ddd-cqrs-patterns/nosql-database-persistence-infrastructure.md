@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | NoSQL
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578969"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106651"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL veritabanı olarak Kalıcılık altyapısı kullanma
 
@@ -310,7 +310,7 @@ Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, 
 -   **Azure Cosmos DB giriş: API MongoDB için** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB: MongoDB API web uygulaması .NET ve Azure portal derleme** 
+-   **Azure Cosmos DB: .NET ve Azure portal ile bir MongoDB API web uygulaması oluşturma** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **Yerel geliştirme ve sınama için Azure Cosmos DB öykünücüsünü kullanma** 
@@ -330,4 +330,5 @@ Varsa `ESHOP_AZURE_COSMOSDB` genel değişkeni, out olarak geçersiz kılınan, 
 
 
 >[!div class="step-by-step"]
-[Önceki] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [sonraki] (microservice-application-layer-web-api-design.md)
+[Önceki](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[sonraki](microservice-application-layer-web-api-design.md)
