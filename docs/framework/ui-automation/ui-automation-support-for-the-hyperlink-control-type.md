@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409987"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140248"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Köprü Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "33409987"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Evet|Tüm Köprü denetimleri Invoke düzeni desteklemesi gerekir.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Bağlıdır|Bağlantıyı kullanılabilir ve kullanıcıya anlamlı bilgiler içerdiğinde Köprü denetimleri değer denetim düzenini desteklemelidir.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Örneğin, "http://www...."|Bir Internet veya Intranet adresi için bir URL, kullanıcı için anlamlı bilgileri içeren bir köprü örneğidir. Programlı bir bağlantı, ancak yalnızca bir uygulamaya anlamlı ve değer özelliği için önerilmez.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Örneğin, `"http://www...."`|Bir Internet veya Intranet adresi için bir URL, kullanıcı için anlamlı bilgileri içeren bir köprü örneğidir. Programlı bir bağlantı, ancak yalnızca bir uygulamaya anlamlı ve değer özelliği için önerilmez.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  

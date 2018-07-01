@@ -1,6 +1,6 @@
 ---
 title: foreach, in (C# Başvurusu)
-ms.date: 06/28/2018
+ms.date: 06/29/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: e4b5ba6fb97d82d2b6f03e77995b9d3c2b9d68c6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d3ce1122c54c14b1baf35641f28d062a2855d335
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104422"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140274"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
 
@@ -35,11 +35,11 @@ Aşağıdaki örnek kullanımını gösterir `foreach` örneği deyimiyle <xref:
 
 Sonraki örnek kullanır `foreach` örneği deyimiyle <xref:System.Span%601?displayProperty=nameWithType> arabirimlerden uygulamaz türü:
 
-[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-C# 7.3 ile başlayarak, ne zaman koleksiyon türünü destekler `ref` erişim öğeleri için yineleme değişkeni ile bildirebilir `ref` veya `ref readonly` değiştiricisi. Aşağıdaki örnek kullanan bir `ref` stackalloc dizideki her öğe değerini ayarlamak için yineleme değişkeni. `ref readonly` Sürüm tekrarlanan tüm değerleri yazdırmak için koleksiyonu. `readonly` Bildirimini örtük bir yerel değişken bildirimi kullanır. Örtük değişken bildirimleri ile birlikte kullanılabilir `ref` veya `ref readonly` açıkça gibi bildirimleri yazılan değişken bildirimleri.
+C# ile 7.3, varsa başlayan Numaralandırıcının `Current` özelliği döndürür bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T` burada `T` koleksiyon öğesi türü), yineleme değişkeni ile bildirebilir `ref` veya `ref readonly` değiştiricisi. Aşağıdaki örnek kullanan bir `ref` stackalloc dizideki her öğe değerini ayarlamak için yineleme değişkeni. `ref readonly` Sürüm tekrarlanan tüm değerleri yazdırmak için koleksiyonu. `readonly` Bildirimini örtük bir yerel değişken bildirimi kullanır. Örtük değişken bildirimleri ile birlikte kullanılabilir `ref` veya `ref readonly` açıkça gibi bildirimleri yazılan değişken bildirimleri.
 
-[!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

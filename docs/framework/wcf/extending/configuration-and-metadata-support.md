@@ -2,12 +2,12 @@
 title: Yapılandırma ve Meta Veri Desteği
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486730"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140157"
 ---
 # <a name="configuration-and-metadata-support"></a>Yapılandırma ve Meta Veri Desteği
 Bu konu, bağlamalar ve bağlama öğeleri yapılandırma ve meta veri desteğini etkinleştirmek açıklar.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Özel bağlama öğesi bu bağlama öğesi özelliklerini ifade etmek için bir hizmet uç noktası için WSDL bağlama ilke onaylamalarını dışa aktarabilirsiniz. Aşağıdaki kod örneği alınırlar [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.  
   
 #### <a name="policy-export"></a>İlke verme  
- `UdpTransportBindingElement` Yazın Implements''<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> İlkesi dışarı aktarma desteği eklemek için. Sonuç olarak, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> içeren `UdpTransportBindingElement` içerdiği bağlama için ilke oluşturma.  
+ `UdpTransportBindingElement` Yazın uygulayan <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> İlkesi dışarı aktarma desteği eklemek için. Sonuç olarak, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> içeren `UdpTransportBindingElement` içerdiği bağlama için ilke oluşturma.  
   
  İçinde <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, kanal çok noktaya yayın modunda ise bir onaylama UDP ve başka bir onaylama için ekleyin. Çok noktaya yayın modu etkilediğinden nasıl iletişim yığını oluşturulur ve böylece her iki yüz arasındaki Eşgüdümlü olmalıdır budur.  
   
