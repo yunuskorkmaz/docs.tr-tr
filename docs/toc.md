@@ -91,6 +91,7 @@
 ### [Bağımlılık yönetimi](core/tools/dependencies.md)
 ### [Csproj biçimine eklenenler](core/tools/csproj.md)
 ## Geçiş
+### [.NET Core 2.0’dan 2.1’e geçiş](core/migration/20-21.md)
 ### [Csproj biçimine geçiş](core/migration/index.md)
 ### [Project.json ile csproj arasında eşleme](core/tools/project-json-to-csproj.md)
 ### [DNX’ten geçiş](core/migration/from-dnx.md)
@@ -414,7 +415,7 @@
 ### [Ad Alanları](fsharp/language-reference/namespaces.md)
 ### [Modüller](fsharp/language-reference/modules.md)
 ### [İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [İmzalar](fsharp/language-reference/signatures.md)
+### [İmza Dosyaları](fsharp/language-reference/signature-files.md)
 ### [Ölçü Birimleri](fsharp/language-reference/units-of-measure.md)
 ### [XML Belgeleri](fsharp/language-reference/xml-documentation.md)
 ### [Geç Hesaplamalar](fsharp/language-reference/lazy-computations.md)

@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Uygul
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e126cced38073d97289cc5697b36938992e03b0
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579112"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105230"
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>Uygulama okuma/CQRS mikro hizmet sorguları
 
@@ -199,4 +199,5 @@ ViewModel türleri artı döndürülebilecek olası HTTP durum kodları temel ba
     *https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*
 
 >[!div class="step-by-step"]
-[Önceki] (eshoponcontainers-cqrs-bbb-microservice.md) [sonraki] (bbb-yönelimli-microservice.md)
+[Önceki](eshoponcontainers-cqrs-ddd-microservice.md)
+[sonraki](ddd-oriented-microservice.md)

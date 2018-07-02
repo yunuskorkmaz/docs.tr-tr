@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Olayl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592450"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106583"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -319,8 +319,8 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Çatallanmış eShopOnContainers NServiceBus (belirli yazılım) kullanma**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Olay tabanlı Mesajlaşma**
-    [*http://soapatterns.org/design\_desen/olay\_güdümlü\_Mesajlaşma*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **İleti güdümlü olay**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. Esnekliği doğru yeniden düzenleme: Bağlantı değerlendirme**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
@@ -332,7 +332,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Nihai tutarlılık**
-    [*https://en.wikipedia.org/wiki/Eventual\_tutarlılık*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Elmas kahverengi. Tümleştirme stratejileri bağlamları sınırlanmış**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -353,7 +353,7 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **CAP Teoremi**
-    [*https://en.wikipedia.org/wiki/CAP\_Teoremi*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **CAP Teoremi nedir?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
@@ -367,15 +367,16 @@ Göre [RabbitMQ belgelerine](https://www.rabbitmq.com/reliability.html#consumer)
 -   **Eric Brewer. CAP üzeri on iki yıllık: "Kurallar" nasıl değiştiğini**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Dış (DTC) işlemlere katılan** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Dış (DTC) işlemlere katılan** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [  *https://www.rabbitmq.com/reliability.html \#tüketici*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Güvenilirlik Kılavuzu** (RabbitMQ belge) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[Önceki] (rabbitmq-event-bus-development-test-environment.md) [sonraki] (test-aspnet-core-services-web-apps.md)
+[Önceki](rabbitmq-event-bus-development-test-environment.md)
+[sonraki](test-aspnet-core-services-web-apps.md)

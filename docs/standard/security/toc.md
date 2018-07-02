@@ -31,3 +31,4 @@
 ### [Güvenlik ve Kullanıcı Girdisi](security-and-user-input.md)
 ### [Güvenlik ve Yarış Durumları](security-and-race-conditions.md)
 ### [Güvenlik ve Çalışma Sırasında Kod Oluşturma](security-and-on-the-fly-code-generation.md)
+### [Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları](vulnerabilities-cbc-mode.md)

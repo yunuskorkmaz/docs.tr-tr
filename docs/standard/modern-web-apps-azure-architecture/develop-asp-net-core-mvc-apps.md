@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592411"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106599"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirme
 
@@ -73,7 +73,7 @@ ASP.NET Core MVC Web API'leri destekleyen [ *içerik anlaşması*](https://docs.
 > - **Model bağlama** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **Model doğrulama**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **filtreleri** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filtreleri** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
@@ -552,4 +552,5 @@ Uygulamanızı Azure üzerinde koyduysanız birkaç hizmetleri sağlamak için a
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Önceki] (ortak-istemci-tarafı-web-technologies.md) [sonraki] (work-with-data-in-asp-net-core-apps.md)
+[Önceki](common-client-side-web-technologies.md)
+[sonraki](work-with-data-in-asp-net-core-apps.md)

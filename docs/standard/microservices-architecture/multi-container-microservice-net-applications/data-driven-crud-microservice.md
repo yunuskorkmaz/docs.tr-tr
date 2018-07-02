@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir b
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848508"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106453"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
 
@@ -414,4 +414,5 @@ Bu basit bir işlemdir. Ve otomatik olarak oluşturulduğundan, API için daha f
 
 
 >[!div class="step-by-step"]
-[Önceki] (mikro hizmet-uygulama-design.md) [sonraki] (çok-container-uygulamalar-docker-compose.md)
+[Önceki](microservice-application-design.md)
+[sonraki](multi-container-applications-docker-compose.md)
