@@ -4,7 +4,7 @@
 #### [Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma](how-to-write-a-simple-parallel-for-loop.md)
 #### [Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme](how-to-handle-exceptions-in-parallel-loops.md)
 #### [Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma](how-to-speed-up-small-loop-bodies.md)
