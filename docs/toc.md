@@ -120,7 +120,6 @@
 ### [Birim Test Yayımlanmış Çıktısı](core/testing/unit-testing-published-output.md)
 ### [Visual Studio ile .NET Core projelerinde canlı birim testi](/visualstudio/test/live-unit-testing-start)
 ## [Sürüm Oluşturma](core/versions/index.md)
-### [.NET Core Desteği](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Çalışma Zamanı Tanımlayıcı kataloğu](core/rid-catalog.md)
 ## [.NET Core SDK’sına Genel Bakış](core/sdk.md)
