@@ -1,4 +1,5 @@
 # [Dosya ve Akış G/Ç'si](index.md)
+## [Windows sistemlerinde dosya yolu biçimleri](file-path-formats.md)
 ## [Ortak G/Ç Görevleri](common-i-o-tasks.md)
 ### [Nasıl yapılır: Dizinleri Kopyalama](how-to-copy-directories.md)
 ### [Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma](how-to-enumerate-directories-and-files.md)
