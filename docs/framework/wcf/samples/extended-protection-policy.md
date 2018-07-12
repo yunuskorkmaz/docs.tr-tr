@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504364"
 ---
 # <a name="extended-protection-policy"></a>Genişletilmiş Koruma İlkesi
 Genişletilmiş koruma, ADAM-in--middle (MITM) saldırılarına karşı korumak için bir güvenlik girişimidir. MITM saldırı bir güvenlik tehdididir bir MITM bir istemcinin kimlik bilgilerini alır ve bir sunucuya iletir.  
