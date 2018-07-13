@@ -1,30 +1,30 @@
 ---
-title: Web Hizmetleri genel türler seri hale getirme teknolojisi örneği
+title: Web Hizmetleri genel serileştirme teknolojisi örneği
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 29cfa8f66f4b465d30c85c6944b8f3d94203f489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585622"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936782"
 ---
-# <a name="web-services-generics-serialization-technology-sample"></a>Web Hizmetleri genel türler seri hale getirme teknolojisi örneği
-[Örnek indirme](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+# <a name="web-services-generics-serialization-technology-sample"></a>Web Hizmetleri genel serileştirme teknolojisi örneği
+[Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
- Bu örnek, kullanma ve ASP.NET Web Hizmetleri'nda genel türler serileştirmek denetim gösterilmektedir.  
+ Bu örnek, ASP.NET Web Hizmetleri genel türler serileştirmek denetlemek ve nasıl kullanılacağını gösterir.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio kullanarak örneği oluşturmak için  
   
-1.  Visual Studio'yu açın ve seçin **yeni Web sitesi** gelen **dosya** menüsü.  
+1.  Visual Studio açıp seçin **yeni Web sitesi** gelen **dosya** menüsü.  
   
-2.  İçinde **yeni Web sitesi** iletişim kutusunda, sol bölmeden istediğiniz programlama dili seçin ve ardından sağ bölmeden **ASP.NET Web hizmeti**.  
+2.  İçinde **yeni Web sitesi** iletişim kutusunda, sol bölmede, istediğiniz programlama dili seçin, sonra sağ bölmeden **ASP.NET Web hizmeti**.  
   
-3.  Tıklatın **Gözat** ve \CS\GenericsService alt dizinine gidin.  
+3.  Tıklayın **Gözat** ve \CS\GenericsService alt dizinine gidin.  
   
 4.  Visual Studio'da dosyayı açmak için QuoteService.asmx'e değiştirin seçin.  
   
-5.  Üzerinde **yapı** menüsünde tıklatın **yapı çözümü**.  
+5.  Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.  
   
 > [!NOTE]
 >  Bu listedeki ilk beş adımları isteğe bağlıdır. .NET Framework çalışma zamanı, hizmet istenen Web hizmeti ilk zaman otomatik olarak oluşturur.  
@@ -34,38 +34,38 @@ ms.locfileid: "33585622"
   
 1.  Açık [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] ve \CS alt dizinine gidin.  
   
-2.  GenericsService alt simgesine sağ tıklayın ve seçin **paylaşım ve güvenlik**.  
+2.  GenericsService alt simgesini sağ tıklatın ve seçin **paylaşım ve güvenlik**.  
   
-3.  İçinde **Web Paylaşımı** sekmesine **bu klasörü paylaş**.  
+3.  İçinde **Web Paylaşımı** sekmesinde **bu klasörü paylaş**.  
   
 > [!IMPORTANT]
->  İçinde listelenen sanal dizin adını not edin **diğer adlar** bölmesinde, çünkü bu örneği çalıştırmak için gerekecektir.  
+>  Listelenen sanal dizin adı Not **diğer adlar** bölmesinde örneği çalıştırmak için gerekeceği.  
   
 ### <a name="to-build-the-sample-using-internet-information-services"></a>Internet Information Services kullanarak örneği oluşturmak için  
   
-1.  Açık **Internet Information Services** Yönetimi ek bileşenini ve genişletin **Web siteleri**.  
+1.  Açık **Internet Information Services** yönetim ek bileşenini ve genişletme **Web siteleri**.  
   
 2.  Sol tıklatma **varsayılan Web sitesi**seçin **yeni**ve ardından **sanal dizin?** oluşturmak için **sanal dizin oluşturma Sihirbazı**.  
   
-3.  Tıklatın **sonraki**, sanal dizin için ortak diğer adı girin ve tıklatın **sonraki**.  
+3.  Tıklayın **sonraki**, sanal dizin için ortak diğer adı girin ve tıklayın **sonraki**.  
   
-4.  (Normalde \CS\GenericsService alt) örnek kaydettiğiniz dizinin yolunu girin ve tıklayın **sonraki**. Tıklatın **sonraki** Sihirbazı tamamlamak için.  
+4.  Örnek (normal olarak \CS\GenericsService alt) kaydettiğiniz dizine yolu girin ve tıklayın **sonraki**. Tıklayın **sonraki** Sihirbazı tamamlamak için.  
   
 > [!IMPORTANT]
->  İçinde listelenen sanal dizin adını not edin **diğer ad** bölmesinde, çünkü örnek çalıştıracak şekilde gerekecektir.  
+>  Listelenen sanal dizin adı Not **diğer** bölmesinde örneği çalıştırmak için gerekeceği.  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
 1.  Bir tarayıcı penceresi açın ve kendi adres çubuğuna seçin.  
   
-2.  Tür  **http://localhost/[sanal directory]/Service.asmx**, burada [sanal dizin] örneği oluşturulduğunda, oluşturduğunuz sanal dizini temsil eder.  
+2.  Tür `http://localhost/[virtual directory]/Service.asmx`burada `[virtual directory]` örnek yapılandırıldığında oluşturduğunuz sanal dizini temsil eder.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örnek Web hizmeti tanımının bağlantılar içeren bir varsayılan ASP.NET sayfasını görüntüler. Web hizmeti için kaynak kodu değiştirme ek olarak görünen özelleştirebilirsiniz. Daha fazla bilgi için bkz: [XML Web hizmeti istemci derleme](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Örnek Web hizmeti tanımının bağlantılar içeren bir varsayılan ASP.NET sayfasını görüntüler. Web hizmeti için kaynak kodu değiştirme ek olarak görünen özelleştirebilirsiniz. Daha fazla bilgi için [yapı XML Web hizmeti istemcileriyle](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [Serileştirme](../../../docs/standard/serialization/index.md)  
- [ASP.NET ve XML Web hizmeti istemcileri kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [ASP.NET ve XML Web hizmeti istemcileriyle kullanılarak oluşturulan XML Web Hizmetleri](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
