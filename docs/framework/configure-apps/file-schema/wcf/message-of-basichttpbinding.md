@@ -3,10 +3,10 @@ title: '&lt;basicHttpBinding&gt; &lt;iletisi&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
 ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 378f0e075030239d8259a92a6a0193dd6faf54b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/16/2018
 ms.locfileid: "33366053"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt; &lt;iletisi&gt;
@@ -28,21 +28,21 @@ ms.locfileid: "33366053"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt öğelerini ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır  
+ Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|algorithmSuite|İleti şifreleme ve anahtar-wrap algoritmaları ayarlar. Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, algoritmalar ve anahtar boyutları belirtir. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen eşlenir.<br /><br /> Varsayılan değer `Basic256` şeklindedir.|  
-|clientCredentialType|İleti tabanlı güvenlik kullanarak istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgileri türünü belirtir. Varsayılan, `UserName` değeridir.|  
+|algorithmSuite|İleti şifreleme ve anahtar-wrap algoritmaları ayarlar. Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, algoritmalar ve anahtar boyutları belirtir. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen platformlarla eşlenir.<br /><br /> Varsayılan değer `Basic256` şeklindedir.|  
+|clientCredentialType|İleti tabanlı güvenlik yöntemi ile bir istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgisi türünü belirtir. Varsayılan, `UserName` değeridir.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|UserName|-İstemci kimlik doğrulaması bir kullanıcı adı kimlik bilgisi sunucuda gerektirir. Bu kimlik bilgilerini kullanarak belirtilmesi gerekiyor [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-WCF parola Özet gönderme veya parolaları kullanmanızı ve ileti güvenliği için bu anahtarları kullanarak anahtarları türetme desteklemez. Bu nedenle, WCF taşıma kullanıcı adı kimlik bilgileri kullanılırken korunması gerektiğini zorlar. İçin `basicHttpBinding`, bu SSL kanalı oluşturulması gerekir.|  
-|Sertifika|Bir sertifika kullanarak sunucuya istemcinin kimliğinin doğrulanmasını gerektirir. İstemci kimlik bilgileri bu durumda kullanarak belirtilmesi gerekiyor [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) ve [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Ayrıca, ileti güvenlik modunu kullanırken, istemci ile hizmet sertifikası hazırlanması gerekir. Hizmet kimlik bilgilerini bu durumda kullanarak belirtilmesi gerekiyor <xref:System.ServiceModel.Description.ClientCredentials> sınıfı veya `ClientCredentials` davranışı öğesi ve hizmet belirterek sertifika kullanarak [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
+|UserName|-İstemci kimlik doğrulaması için bir kullanıcı adı kimlik bilgisi ile sunucu gerektirir. Bu kimlik bilgilerini kullanarak belirtilmesi gerekiyor [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).<br />-WCF parola özeti gönderme veya parolaları ve ileti güvenliği için bu anahtarları kullanarak anahtarlar türetme desteklemez. Bu nedenle, WCF, taşıma, kullanıcı adı kimlik bilgileri kullanılırken korunması gerektiğini zorlar. İçin `basicHttpBinding`, bu SSL kanalı ayarlama gerektirir.|  
+|Sertifika|Bir sertifika kullanarak sunucuya istemcinin kimliğinin doğrulanmasını gerektirir. İstemci kimlik bilgisi bu durumda kullanarak belirtilmesi gerekiyor [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) ve [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md). Ayrıca, ileti güvenlik modunu kullanırken, istemcinin hizmet sertifikası ile sağlanması gerekir. Hizmet kimlik bilgisi bu durumda kullanarak belirtilmesi gerekiyor <xref:System.ServiceModel.Description.ClientCredentials> sınıfı veya `ClientCredentials` davranış öğesi ve hizmeti belirterek sertifika kullanarak [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,12 +51,12 @@ ms.locfileid: "33366053"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Güvenlik özellikleri için tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|İçin güvenlik özelliklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, basicHttpBinding ve ileti güvenliği kullanan bir uygulamayı uygulamak gösterilmiştir. Aşağıdaki yapılandırma örneği bir hizmet için uç nokta tanımı basicHttpBinding belirtir ve adlı bir bağlama yapılandırması başvuran `Binding1`. Hizmetin kendisi için istemci kimlik doğrulaması için kullandığı sertifika kümesinde `behaviors` altında yapılandırma dosyasının `serviceCredentials` öğesi. İstemci hizmete kendi kimliğini doğrulamak için kullandığı sertifikayı uygulandığı doğrulama modu da kümesinde `behaviors` altında bölümünde `clientCertificate` öğesi.  
+ Bu örnek basicHttpBinding ve ileti güvenlik kullanan bir uygulamanın nasıl uygulanacağını gösterir. Aşağıdaki yapılandırma örneği bir hizmet için uç nokta tanımı basicHttpBinding belirtir ve adlı bir bağlama yapılandırmasını başvuran `Binding1`. Hizmetin kendisini istemcinin kimliğini doğrulamak için kullandığı sertifika kümesinde `behaviors` yapılandırma dosyasının altında `serviceCredentials` öğesi. İstemcinin hizmete kendi kimliğini doğrulamak için kullandığı sertifikayı uygulandığı doğrulama modu da kümesinde `behaviors` bölümüne `clientCertificate` öğesi.  
   
- Aynı bağlama ve güvenlik ayrıntıları istemci yapılandırma dosyasında belirtilir.  
+ Aynı bağlama ve güvenlik ayrıntıları, istemci yapılandırma dosyasında belirtilir.  
   
 ```xml  
 <system.serviceModel>  
