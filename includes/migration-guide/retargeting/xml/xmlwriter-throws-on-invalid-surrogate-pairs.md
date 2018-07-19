@@ -1,9 +1,9 @@
-### <a name="xmlwriter-throws-on-invalid-surrogate-pairs"></a>Geçersiz yedek çiftlerine XmlWriter oluşturur
+### <a name="xmlwriter-throws-on-invalid-surrogate-pairs"></a>Geçersiz yedek çiftler hakkında XmlWriter oluşturur
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.5.2 veya önceki sürümlerini hedefleyen uygulamalar için geri dönüş özel durum işleme kullanarak her zaman bir özel durum oluşturmadığını geçersiz yedek çifti yazma. .NET Framework 4.6 hedef uygulamaları için geçersiz bir yedek çifti oluşturur yazma girişimi bir <xref:System.ArgumentException?displayProperty=name>.|
-|Öneri|Gerekirse, bu sonu .NET Framework 4.5.2'deki hedefleyerek hükümsüz kılınan veya önceki bir sürümü olabilir. Alternatif olarak, geçersiz temsilci çiftleri bunları yazma önce geçerli xml halinde önceden işlenmiş olabilir.|
+|Ayrıntılar|.NET Framework 4.5.2 veya önceki sürümlerini hedefleyen uygulamalar için özel durum geri dönüş işleme kullanarak her zaman bir özel durum oluşturmaz geçersiz yedek çifti yazma. .NET Framework 4.6 hedefleyen uygulamalar için geçersiz bir yedek çifti oluşturur yazma girişimi bir <xref:System.ArgumentException?displayProperty=name>.|
+|Öneri|Gerekirse, bu kesme .NET Framework 4.5.2 hedefleyerek hükümsüz kılınan veya önceki bir sürümü olabilir. Alternatif olarak, geçersiz yedek çiftler halinde bunları yazmadan önce geçerli xml önceden işlenmiş olabilir.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden hedefleme|

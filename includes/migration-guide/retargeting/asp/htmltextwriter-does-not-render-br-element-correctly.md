@@ -1,9 +1,9 @@
-### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter işlemek değil `<br/>` öğesi doğru
+### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter işleme değil `<br/>` öğesi doğru
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6, çağırma başlayarak <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ve <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> ile bir <code>&lt;BR /&gt;</code> öğesi doğru ekler tek <code>&lt;BR /&gt;</code> (iki yerine)|
-|Öneri|Bir uygulama üzerinde ek bağlıysa <code>&lt;BR /&gt;</code> etiketi <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ikinci kez çağrılmalıdır. Bu davranış değişikliği yalnızca .NET Framework 4.6 veya daha sonra eski davranışı alabilmek için .NET Framework'ün önceki sürümünü hedefleyecek şekilde başka bir seçenek olacak şekilde hedefleyen uygulamalar etkilediğini unutmayın.|
+|Ayrıntılar|.NET Framework 4.6, çağırma başlayarak <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ve <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> ile bir <code>&lt;BR /&gt;</code> öğesi doğru ekler tek <code>&lt;BR /&gt;</code> (yerine iki)|
+|Öneri|Bir uygulama üzerinde fazladan bağlıysa <code>&lt;BR /&gt;</code> etiketi <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ikinci bir kez çağrılmalıdır. Bu davranışı değiştirmek yalnızca unutmayın .NET Framework 4.6 veya üzeri, eski davranışı sağlamak için .NET Framework'ün önceki bir sürümü hedeflemek için başka bir seçenek, bu nedenle hedefleyen uygulamaları etkiler.|
 |Kapsam|Kenar|
 |Sürüm|4.6|
 |Tür|Yeniden hedefleme|

@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6 ile başlayan <xref:System.Net.ServicePointManager> ve <xref:System.Net.Security.SslStream> sınıfları aşağıdaki üç protokolden birini kullanmak için izin verilmez: Tls1.0, Tls1.1 veya Tls1.2. RC4 şifreleme ve SSL3.0 protokolü desteklenmiyor.|
-|Öneri|Önerilen risk azaltma Tls1.0, Tls1.1 ya da Tls1.2 için sunucu tarafı uygulama yükseltmektir. Bu uygun olmadığı veya istemci uygulamaları koptu <xref:System.AppContext?displayProperty=name> sınıfı, bu özellik iki yoldan biriyle dışında kabul etmek için kullanılabilir:<ol><li>Compat anahtarlarını programlı olarak ayarlayarak <xref:System.AppContext?displayProperty=name>açıklandığı gibi [burada](http://blogs.msdn.com/b/dotnet/archive/2015/04/29/net-announcements-at-build-2015.aspx#dotnet46)</li><li>Aşağıdaki satırı ekleyerek <code>&lt;runtime&gt;</code> app.config dosyasının: <code>&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableSchUseStrongCrypto=true&quot;/&gt;</code>;</li></ol>|
+|Ayrıntılar|.NET Framework 4.6 ile başlayan <xref:System.Net.ServicePointManager> ve <xref:System.Net.Security.SslStream> sınıfları yalnızca izin verilecek aşağıdaki üç protokolden birini kullanın: Tls1.0, Tls1.1 veya Tls1.2. SSL3.0 protokolünün ve RC4 şifreleme desteklenmez.|
+|Öneri|Önerilen risk azaltma, sunucu tarafı uygulamayı Tls1.0, Tls1.1 veya Tls1.2 yükseltme sağlamaktır. Bu uygun değilse veya istemci uygulamaları kopmuş <xref:System.AppContext?displayProperty=name> sınıfı, bu özellik iki yöntemden biriyle dışında kabul etmek için kullanılabilir:<ol><li>/ Compat anahtarlarını programlı olarak ayarlayarak <xref:System.AppContext?displayProperty=name>açıklandığı gibi [burada](http://blogs.msdn.com/b/dotnet/archive/2015/04/29/net-announcements-at-build-2015.aspx#dotnet46)</li><li>Aşağıdaki satırı ekleyerek <code>&lt;runtime&gt;</code> app.config dosyasının: <code>&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableSchUseStrongCrypto=true&quot;/&gt;</code>;</li></ol>|
 |Kapsam|Küçük|
 |Sürüm|4.6|
 |Tür|Yeniden hedefleme|

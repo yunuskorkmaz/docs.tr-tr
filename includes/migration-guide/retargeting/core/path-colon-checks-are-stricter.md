@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6.2, daha önce desteklenmeyen yolları (hem uzunluğu ve biçim) desteklemek için birkaç değişiklik yapıldı. Uygun sürücü ayırıcı (iki nokta üst üste) sözdizimi denetimlerinin, bunlar kabul edileceği kullanıldığı birkaç select yolu API'lerde bazı URI yolları engelleme yan etkisi olan daha doğru yapıldı.|
-|Öneri|Bir URI etkilenen API'lerine geçirilirse, geçerli bir yol ilk olarak dizesini değiştirin.<ul><li>Düzen URL'lerden el ile kaldırın (örneğin kaldırmak <code>file://</code> URL'lerden)</li><li>URI geçirmek <xref:System.Uri> sınıfı ve kullanma <xref:System.Uri.LocalPath></li></ul>Alternatif olarak, ayarlayarak dışında yeni yol normalleştirme tercih edebilirsiniz <code>Switch.System.IO.UseLegacyPathHandling</code> AppContext anahtar true.|
+|Ayrıntılar|.NET Framework 4.6.2, daha önce desteklenmeyen yolları (hem uzunluğu ve biçim) desteklemek için bir dizi değişiklik yapıldı. Denetimleri için uygun sürücü ayırıcı (virgül) sözdizimi, bazı URI yolları kabul edileceği kullanıldıkları birkaç select yolu API'lerde engelleme yan etkisi olan daha doğru yapıldı.|
+|Öneri|Bir URI etkilenen API'lerine geçirilirse, dize geçerli bir yol ilk olarak değiştirin.<ul><li>Düzen URL'lerden el ile kaldırın (örneğin kaldırmak <code>file://</code> URL'lerden)</li><li>URI geçirmek <xref:System.Uri> sınıfı ve kullanın <xref:System.Uri.LocalPath></li></ul>Alternatif olarak, ayarlayarak dışında yeni yolu normalleştirme tercih edebilirsiniz <code>Switch.System.IO.UseLegacyPathHandling</code> AppContext anahtar true.|
 |Kapsam|Kenar|
 |Sürüm|4.6.2|
 |Tür|Yeniden hedefleme|
