@@ -1,53 +1,53 @@
 ---
 title: .NET core CLI genişletilebilirlik modeli
-description: Komut satırı arabirimi (CLI) araçları nasıl genişletebileceğini öğrenin.
+description: Komut satırı arabirimi (CLI) araçlarını nasıl genişletebileceğinizi öğreneceğiz.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
 ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956201"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244796"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçlarını genişletilebilirlik modeli
+# <a name="net-core-cli-tools-extensibility-model"></a>.NET core CLI araçları genişletilebilirlik modeli
 
-Bu belge, .NET Core komut satırı arabirimi (CLI) araçları genişletir ve her biri, sürücü senaryoları açıklayan farklı yöntemleri kapsar.
-Araçlar kullanma gibi farklı türlerde araçlar oluşturma görürsünüz.
+Bu belgede, .NET Core komut satırı arabirimi (CLI) araçlarını genişletmek ve her biri sürücü senaryoları açıklayın farklı yöntemleri kapsar.
+Araçları kullanma ve bunun yanı sıra farklı türlerde araçlar oluşturma görürsünüz.
 
 ## <a name="how-to-extend-cli-tools"></a>CLI araçlarını genişletme
-CLI araçlarını üç temel şekilde genişletilebilir:
+CLI araçları üç temel şekilde genişletilebilir:
 
 1. [Proje başına temelinde NuGet paketleri](#per-project-based-extensibility)
 
-   Proje başına araçları projenin bağlamı içinde yer alır, ancak geri yükleme aracılığıyla kolay yükleme sağlarlar.
+   Proje başına araçları projenin bağlamı içinde yer alır, ancak geri yükleme yoluyla kolay yükleme sağlarlar.
 
-2. [Özel hedefler NuGet paketleri](#custom-targets)
+2. [Özel hedefleri NuGet paketleri](#custom-targets)
 
-   Özel hedefleri kolayca özel görevlerle derleme işlemini genişletme olanak sağlar.
+   Özel hedefleri özel görevleri birlikte derleme işlemini kolayca genişletmenizi sağlar.
 
 3. [Sistem yolu](#path-based-extensibility)
 
-   YOL tabanlı araçlar, tek bir makinede kullanılabilen genel, çapraz proje araçları için iyidir.
+   YOL tabanlı araçlar, tek bir makinede kullanılabilir olan genel, projeler arası araçlar için uygundur.
 
-Yukarıda özetlenen üç genişletilebilirlik mekanizması özel değildir. Biri veya tümü, kullanabilirsiniz veya bir birleşimi. Hangisinin seçmek için büyük ölçüde uzantısı ile elde etmek için çalıştığınız hedef bağlıdır.
+Yukarıda özetlenen, üç genişletilebilirlik mekanizması dışlamaz. Bir ya da tamamını kullanabilirsiniz veya onları birleşimi. Hangisinin seçmek için büyük ölçüde uzantınız ile elde etmek çalıştığınız hedef bağlıdır.
 
 ## <a name="per-project-based-extensibility"></a>Proje başına tabanlı genişletilebilirliği
-Proje başına araçlardır [framework bağımlı dağıtımları](../deploying/index.md#framework-dependent-deployments-fdd) NuGet paket olarak dağıtılır. Araçlar yalnızca bunları başvuran ve, bunlar geri proje bağlamında kullanılabilir. Bağlam dışında çağırma (örneğin, projeyi içeren dizin dışında) projenin komutu bulunamadığı için başarısız olur.
+Proje başına Araçlar [framework bağımlı dağıtımları](../deploying/index.md#framework-dependent-deployments-fdd) NuGet paketleri olarak dağıtılır. Araçlar, yalnızca onlara başvuran ve bunlar geri yüklenir, proje bağlamında kullanılabilir. Komut bulunamadığı için (örneğin, projesini içeren dizin dışında) bir projenin bağlamı dışında çağırma başarısız olur.
 
-Proje dosyası dışında bir şey gerekli olmadığından, bu araçları yapı sunucuları için mükemmeldir. Derleme işlem çalıştırmalarını derlemeleri geri proje için ve araçlar kullanılabilir olacaktır. Her proje yalnızca belirli bir dilde yazılabilir olduğundan gibi F # dili projeler de bu kategoride bulunan.
+Proje dosyası dışında bir şey gerekli olmadığından bu araçlar, derleme sunucuları için mükemmeldir. Derleme işlem çalıştırmalarını derlemeler geri için proje ve araçlar kullanılabilir olacak. Her proje yalnızca belirli bir dilde yazılabilir olduğundan gibi F # dil projeleri aynı zamanda bu kategoride bulunan.
 
-Son olarak, bu genişletilebilirlik modeli projesi için yerleşik çıktı erişmesi gereken araçları oluşturulması için destek sağlar. Çeşitli Razor görünüm örneği için araçlarla [ASP.NET](https://www.asp.net/) MVC uygulamaları bu kategoriye ayrılır.
+Son olarak, bu genişletilebilirlik modeli proje çıkışı erişmesi gereken araçları oluşturulması için destek sağlar. Örneğin, çeşitli Razor Görünüm Araçları [ASP.NET](https://www.asp.net/) MVC uygulamaları bu kategoriye girer.
 
-### <a name="consuming-per-project-tools"></a>Proje başına araçlarını kullanma
-Bu araçların tüketme gerektirir eklemek bir `<DotNetCliToolReference>` proje dosyanıza kullanmak istediğiniz her bir araçla öğesi. İçinde `<DotNetCliToolReference>` öğesi, aracı bulunduğu paketine başvurduğunuzda ve ihtiyacınız olan sürümü belirtin. Çalıştırdıktan sonra [ `dotnet restore` ](dotnet-restore.md), Aracı'nı ve onun bağımlılıklarını geri yüklenir.
+### <a name="consuming-per-project-tools"></a>Proje başına araçları kullanma
+Bu araçlar kullanan gerektirir eklemek bir `<DotNetCliToolReference>` proje dosyanıza kullanmak istediğiniz her aracı için öğesi. İçinde `<DotNetCliToolReference>` öğesi, araç bulunduğu paket başvurusu ve ihtiyacınız olan sürümü belirtin. Çalıştırdıktan sonra [ `dotnet restore` ](dotnet-restore.md), Aracı'nı ve bağımlılıklarını geri yüklenir.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Proje yürütme için derleme çıktısı yüklemek için gereken araçları için proje dosyasında normal bağımlılıkları altında listelenen genellikle başka bir bağımlılık yoktur. CLI kendi yapı altyapısı olarak MSBuild kullandığından, bu aracın bölümlerini özel MSBuild yazılması öneririz [hedefleri](/visualstudio/msbuild/msbuild-targets) ve [görevleri](/visualstudio/msbuild/msbuild-tasks), bu yana bunlar daha sonra genel derleme işleminde yer alabilir. Ayrıca, bunlar alabilirsiniz kolayca oluşturulmakta olan geçerli yapılandırmasını ve çıkış dosyalarının konumu gibi yapı aracılığıyla üretilen tüm verileri, vb. Bu bilgileri herhangi hedeften okunabilir MSBuild özellikleri kümesi olur. Bu belgenin sonraki bölümlerinde NuGet kullanarak özel bir hedef ekleme görebilirsiniz.
+Proje yürütme için yapı çıkışını yüklemek için gereken araçları için normal bağımlılıkları proje dosyasında altında listelenen genellikle başka bir bağımlılık yoktur. CLI, yapı altyapısı olarak MSBuild kullandığından, bu aracın bölümlerini özel MSBuild yazılması öneririz [hedefleri](/visualstudio/msbuild/msbuild-targets) ve [görevleri](/visualstudio/msbuild/msbuild-tasks), sonra bunlar daha sonra genel derleme işleminde yer alabilir. Ayrıca, bunlar alabilirsiniz kolayca çıktı dosyalarının konumu gibi yapılandırma yoluyla oluşturulmakta olan geçerli yapılandırmasını üretilen tüm veriler, vb. Bu bilgiler, herhangi bir hedef okunabilir MSBuild özellikleri kümesi olur. NuGet kullanarak bu belgede daha sonra özel bir hedef ekleme görebilirsiniz.
 
-Şimdi basit bir proje için basit bir salt araçları aracı ekleme konusunda bir örnek gözden geçirin. Adlı bir örnek komut verilen `dotnet-api-search` için belirtilen API NuGet paketlerini arama izin verir, o aracını kullanarak bir konsol uygulamasının proje dosyası aşağıdadır:
+Basit bir proje için basit bir salt araçları aracı ekleme örneği gözden geçirelim. Adlı bir örnek komut verilen `dotnet-api-search` belirtilen API'si aracılığıyla NuGet paketlerinin aramanıza olanak sağlayan, bu aracı kullanan bir konsol uygulamasının proje dosyası şu şekildedir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -63,26 +63,26 @@ Proje yürütme için derleme çıktısı yüklemek için gereken araçları iç
 </Project>
 ```
 
-`<DotNetCliToolReference>` Öğesi benzer şekilde yapılandırıldığı `<PackageReference>` öğesi. Geri yükleme yapabilmek için araç ve sürümü içeren paket paketin paket Kimliğini gerekir.
+`<DotNetCliToolReference>` Öğesi benzer bir şekilde yapılandırıldığı `<PackageReference>` öğesi. Bu, geri yüklemek için araç ve sürümü içeren paketin paket kimliği gerekiyor.
 
-### <a name="building-tools"></a>Derleme araçları
-Belirtildiği gibi yalnızca taşınabilir konsol uygulamaları araçlardır. Başka bir konsol uygulaması oluşturmayı tercih gibi araçlar oluşturun.
-Bu yapı sonra kullandığınız [ `dotnet pack` ](dotnet-pack.md) vb. kodunuzu, bağımlılıkları hakkında bilgi içeren bir NuGet paketi (.nupkg dosyasını) oluşturmak için komutu. Herhangi bir ad paketini yükler, ancak uygulama içinden, ikili gerçek aracı verebilirsiniz, kurala uygun olması sahip `dotnet-<command>` sırada `dotnet` onu çağırmak için.
+### <a name="building-tools"></a>Yapı araçları
+Belirtildiği gibi yalnızca taşınabilir konsol uygulamaları araçlardır. Diğer bir konsol uygulaması oluşturmayı tercih gibi araçları oluşturun.
+Bunu derledikten sonra kullandığınız [ `dotnet pack` ](dotnet-pack.md) vb. kodunuzu, bağımlılıkları hakkında bilgi içeren bir NuGet paketi (.nupkg dosyası) oluşturmak için komutu. Paket, ancak içindeki ikili gerçek aracı uygulama için istediğiniz adı verebilirsiniz, kuralı için uygun olan `dotnet-<command>` sırayla `dotnet` onu çağırmak için.
 
 > [!NOTE]
-> .NET Core komut satırı araçları öncesi RC3 sürümlerinde `dotnet pack` komutu neden olan bir hata vardı `runtime.config.json` aracıyla paketlenmiş değil için. Bu dosya sonuçlarını hatalarla çalışma zamanında eksik. Bu davranış karşılaşırsanız, en yeni araç ve try güncelleştirdiğinizden emin olun `dotnet pack` yeniden.
+> .NET Core komut satırı araçları RC3 öncesi sürümlerinde `dotnet pack` komut neden bir hata vardı `runtime.config.json` aracıyla değil ve heyecanla. Çalışma zamanı hatalarını, dosya sonuçlarında eksik. Bu davranış karşılaşırsanız, en son araçları ve deneyin güncelleştirdiğinizden emin olması `dotnet pack` yeniden.
 
-Araçları taşınabilir uygulamaları olduğundan, aracı kullanma kullanıcı aracı aracını çalıştırmak için karşı oluşturulan .NET Core kitaplıkları sürümüne sahip olmalıdır. Aracı kullanır ve değil barındırılan, .NET Core kitaplıkları içinde herhangi bir bağımlılığı geri ve NuGet önbellekte yerleştirilir. Tüm aracı bu nedenle, .NET Core kitaplıkları derlemelerden yanı sıra derlemeleri NuGet önbellekten kullanarak Çalıştır.
+Aracı'nı kullanan kullanıcı, Araçlar taşınabilir uygulamaları olduğundan, aracı çalıştırmak için aracın derlendiği .NET Core kitaplıkları sürümüne sahip olmanız gerekir. Aracı tarafından kullanılan ve yer almıyor, .NET Core kitaplıkları içinde herhangi bir bağımlılık geri ve NuGet önbelleğine yerleştirilmesi. Tüm aracı bu nedenle, .NET Core kitaplıkları derlemelerden yanı sıra derlemeleri NuGet önbellekten kullanarak Çalıştır.
 
-Bu tür araçların, bunları kullanan proje bağımlılık grafikten tamamen ayrı bir bağımlılık grafiğinin vardır. Geri yükleme işlemi ilk proje bağımlılıkları yükler ve ardından her araçları ve bağımlılıklarını geri yükler.
+Bu tür araçların bunları kullanan projenin bağımlılık grafı denetiminin dışında tamamen ayrı olan bir bağımlılık grafiği vardır. Geri yükleme işlemi önce projenin bağımlılıkları yükler ve her biri araçları ve bunların bağımlılıklarını yükler.
 
-Daha zengin örnekler ve bu konuda farklı birleşimlerini bulabilirsiniz [.NET Core CLI depodaki](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
-Ayrıca bkz [kullanılan araçlar uyarlamasını](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) aynı depodaki.
+Daha zengin örnekler ve bu farklı birleşimlerini bulabilirsiniz [.NET Core CLI depo](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+Ayrıca bkz [kullanılan araçları uygulaması](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) aynı depodaki.
 
 ### <a name="custom-targets"></a>Özel hedefleri
-NuGet yeteneğine sahip [özel MSBuild hedefleri ve özellik dosyalarını paketini](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). .NET Core CLI araçlarını MSBuild kullanmak için taşıma ile aynı mekanizması genişletilebilirlik şimdi .NET Core projeler için geçerlidir. Bu tür genişletilebilirliği derleme işlemini genişletme istediğinizde ya da herhangi bir derleme işlemindeki oluşturulan dosyaları gibi yapılarının erişmek istediğiniz veya altında yapı çağrılır yapılandırmayı incelemek istediğinizde kullanırsınız , vs.
+NuGet yeteneğine sahip [paket özel MSBuild hedeflerini ve özellik dosyalarını](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). .NET Core CLI araçları, MSBuild kullanmak için taşıma ile aynı mekanizması genişletilebilirlik artık .NET Core projeleri için geçerlidir. Derleme işlemini genişletme istediğinizde ya da yapı çağırıldığı yapılandırmayı incelemek istediğiniz veya oluşturulan dosyalar gibi yapı işleminde yapıtlar erişmek istediğinizde, bu tür bir genişletilebilirlik kullanırsınız , vs.
 
-Aşağıdaki örnekte, hedefin proje görebilirsiniz kullanarak dosya `csproj` sözdizimi. Bu bildirir [ `dotnet pack` ](dotnet-pack.md) ne hedefleri dosyalarının yanı sıra derlemelerine yerleştirme pakete komutunu *yapı* paketin içindeki klasör. Bildirim `<ItemGroup>` olan öğeyi `Label` özelliğini `dotnet pack instructions`, hedef altında tanımlanan ve.
+Aşağıdaki örnekte, hedefin proje gördüğünüz kullanarak dosya `csproj` söz dizimi. Bu bildirir [ `dotnet pack` ](dotnet-pack.md) ne derlemelerine yanı sıra hedef dosyaları yerleştirmek paket komutunu *derleme* paket klasöründen. Bildirim `<ItemGroup>` sahip öğe `Label` özelliğini `dotnet pack instructions`, hedef altında tanımlanmış.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -131,21 +131,21 @@ Aşağıdaki örnekte, hedefin proje görebilirsiniz kullanarak dosya `csproj` s
 </Project>
 ```
 
-Özel hedefleri tüketen yapılır sağlayarak bir `<PackageReference>` işaret paketi ve genişletilen projesi içinde sürümü. Araçlar, özel hedefleri paket kaybı projenin bağımlılık kapatma dahil.
+Özel hedefleri tüketen yapılır sağlayarak bir `<PackageReference>` işaret eden paket ve Genişletilmekte olan proje içinde sürümü. Araçları özel hedefleri paket kaybı projenin bağımlılık kapanış dahil.
 
-Özel hedef kullanarak yalnızca onu nasıl yapılandırdığınıza üzerinde bağlıdır. MSBuild hedef olduğuna göre bağlı olabilir belirli bir hedef sonra başka bir hedef çalıştırın ve ayrıca el ile kullanarak çağrılabilir `dotnet msbuild /t:<target-name>` komutu.
+Özel hedef kullanarak yalnızca nasıl yapılandırmanız üzerinde bağlıdır. MSBuild hedefi olduğundan, güvenebileceğiniz bir belirtilen hedef sonra başka bir hedef çalıştırın ve ayrıca el ile çağrılabilir `dotnet msbuild /t:<target-name>` komutu.
 
-Ancak, kullanıcılarınıza daha iyi bir kullanıcı deneyimi sağlamak istiyorsanız, proje başına Araçlar ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, proje başına aracı temelde yalnızca ne olursa olsun Parametreler gerekli ve gerekli çevirir kabul [ `dotnet msbuild` ](dotnet-msbuild.md) hedef yürütülür çağırma. Bu tür bir synergy örneği görebilirsiniz [MVP Zirvesi'ne 2016 Hackathon örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) bağlantıların bulunması [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) projesi.
+Ancak, kullanıcılarınıza daha iyi bir kullanıcı deneyimi sağlamak istiyorsanız, proje başına Araçlar ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, her proje araç aslında yalnızca ne olursa olsun gerekli parametreleri ve gerekli çevirir kabul [ `dotnet msbuild` ](dotnet-msbuild.md) hedef yürüterek çağırma. Bu tür bir synergy örneği gördüğünüz [MVP Zirvesi 2016 HACK Maratonunda örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) depoda [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) proje.
 
 ### <a name="path-based-extensibility"></a>YOL tabanlı genişletilebilirliği
-YOL tabanlı genişletilebilirlik genellikle kavramsal olarak tek bir projede birden fazla kapsayan bir aracı ihtiyaç duyacağınız geliştirme makineler için kullanılır. Bu uzantı mekanizması en büyük dezavantajı, bu aracın bulunduğu makineye bağlıdır ' dir. Başka bir makinede ihtiyacınız varsa, bunu dağıtmak gerekir.
+YOL tabanlı genişletilebilirliği, genellikle kavramsal olarak tek bir projede birden fazla kapsayan bir aracı gerek duyduğunuz geliştirme makineler için kullanılır. Bu uzantı mekanizması en büyük dezavantajı, bu aracın bulunduğu makineye bağlıdır ' dir. Başka bir makineye ihtiyacınız varsa, bunu dağıtmak gerekir.
 
-Bu tür CLI araç takımı genişletilebilirlik çok kolaydır. İçinde anlatıldığı gibi [.NET Core CLI genel bakış](index.md), `dotnet` sürücü sonra adlı herhangi bir komutunu çalıştırabilirsiniz `dotnet-<command>` kuralı. Varsayılan çözünürlük mantığı ilk çeşitli konumlardan araştırmaları ve son olarak sistem yolu geri döner. İstenen komut sistem yolu varsa ve çağrılabilir, bir ikili dosyadır `dotnet` sürücü, çağırılır.
+Bu düzen CLI araç takımı genişletilebilirlik çok kolaydır. İçinde anlatıldığı gibi [.NET Core CLI genel bakış](index.md), `dotnet` sürücü sonra adlı herhangi bir komutu çalıştırabilir `dotnet-<command>` kuralı. Varsayılan çözümleme mantığı ilk çeşitli konumlardan araştırmaları ve son olarak sisteme yolu geri döner. İstenen komut yolu sistemde mevcut ve çağrılabilir, bir ikili dosyadır `dotnet` sürücü, çağırılır.
 
-Dosya çalıştırılabilir olmalıdır. UNIX sistemleri üzerinde aracılığıyla yürütme bit kümesine sahip herhangi bir şey yani `chmod +x`. Windows, kullandığınız *cmd* dosyaları.
+Dosyanın yürütülebilir olması gerekir. UNIX sistemlerde aracılığıyla yürütme biti ayarlanmış herhangi bir şeyi yani `chmod +x`. Windows üzerinde kullanabileceğiniz *cmd* dosyaları.
 
-"Hello World" aracı çok basit uygulanması bir göz atalım. Her ikisi de kullanacağız `bash` ve `cmd` Windows.
-Aşağıdaki komut, konsola yalnızca bir echo "Hello World".
+Çok basit bir "Merhaba Dünya" aracı uygulaması bir göz atalım. Her ikisi de kullanacağız `bash` ve `cmd` Windows üzerinde.
+Aşağıdaki komutu yalnızca konsolda "Hello World" echo.
 
 ```bash
 #!/bin/bash
@@ -157,6 +157,6 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-MacOS üzerinde Biz bu komut dosyası olarak kaydedebilirsiniz `dotnet-hello` ve kendi yürütülebilir biti ile `chmod +x dotnet-hello`. Buna sembolik bağlantı sonra oluşturabiliriz `/usr/local/bin` komutunu kullanarak `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Bu, komutunu kullanarak çağırmak mümkün hale getirir `dotnet hello` sözdizimi.
+MacOS, biz bu komut dosyası olarak kaydedebilirsiniz `dotnet-hello` ve ile yürütülebilir, biti `chmod +x dotnet-hello`. İçinde bir sembolik bağlantısını ardından oluşturabiliriz `/usr/local/bin` komutunu kullanarak `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Bu, komutu kullanarak çağırmak mümkün hale getirir `dotnet hello` söz dizimi.
 
-Windows, biz bu komut dosyası olarak kaydedebilirsiniz `dotnet-hello.cmd` ve sistem yolunda bir konumda put (veya yolunda zaten bir klasöre ekleyebilirsiniz). Bundan sonra yalnızca kullanabilirsiniz `dotnet hello` Bu örneği çalıştırmak için.
+Windows üzerinde Biz bu komut dosyası olarak kaydedebilirsiniz `dotnet-hello.cmd` ve sistem yolunda bir konuma yerleştirin (veya zaten yolunda bir klasöre ekleyebilirsiniz). Bundan sonra yalnızca kullanabilirsiniz `dotnet hello` Bu örneği çalıştırmak için.
