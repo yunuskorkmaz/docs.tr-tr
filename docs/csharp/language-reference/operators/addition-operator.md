@@ -9,23 +9,23 @@ helpviewer_keywords:
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
 ms.openlocfilehash: d4a269c07e0d6dc2ac6a6a101f200653c6ea7a29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267413"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244877"
 ---
 # <a name="-operator-c-reference"></a>+ İşleci (C# Başvurusu)
-`+` İşleci bir birli ya da bir ikili işleç olarak işlev görebilir.  
+`+` İşleci bir birli veya ikili işleç olarak işlev görebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birli `+` işleçleri tüm sayısal türler için önceden tanımlanmıştır. Bir tekli sonucunu `+` işlemdir sayısal bir tür üzerinde işlenen değeri.  
+ Birli `+` işleçleri tüm sayısal türler için önceden tanımlanmıştır. Bir tekli sonucunu `+` işlemdir üzerinde bir sayısal tür işleneni değeri.  
   
- İkili `+` işleçleri sayısal ve dize türleri için önceden tanımlanmıştır. Sayısal için türleri + iki işlenenleri toplamını hesaplar. Ne zaman bir veya iki işlenen türü dize olan + işlenenler dize gösterimlerini art arda ekler.  
+ İkili `+` işleçleri sayısal ve dize türleri için önceden tanımlanmıştır. İçin sayısal türleri + iki işlenenleri toplamını hesaplar. Ne zaman bir veya iki işlenenin türü dize olan + işlenenler dize temsillerini art arda ekler.  
   
- Temsilci türleri de sağlayan bir ikili `+` temsilci birleştirme gerçekleştirir işleci.  
+ Temsilci türleri de sağlayan bir ikili `+` işleci temsilci birleştirme gerçekleştirir.  
   
- Kullanıcı tanımlı türler birli aşırı yükleme `+` ve ikili `+` işleçler. Tam sayı türleri üzerinde işlemler genellikle numaralandırma üzerinde izin verilir. Daha fazla bilgi için bkz: [işleci (C# Başvurusu)](../../../csharp/language-reference/keywords/operator.md).  
+ Kullanıcı tanımlı türler aşırı yükleme birli `+` ve ikili `+` işleçleri. Tamsayı türlerinde işlemler genellikle numaralandırma üzerinde izin verilir. Daha fazla bilgi için [işleci (C# Başvurusu)](../../../csharp/language-reference/keywords/operator.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  

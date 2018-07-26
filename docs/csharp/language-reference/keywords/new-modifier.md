@@ -5,44 +5,44 @@ helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: b66cfacc2203e0e529c19b5c566abad6c676f149
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273974"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245576"
 ---
 # <a name="new-modifier-c-reference"></a>new Değiştiricisi (C# Başvurusu)
-Bir bildirim değiştirici kullanıldığında `new` anahtar sözcüğü bir taban sınıftan devralınan üye açıkça gizler. Devralınmış bir üyeyi gizleme, üye türetilmiş sürümünü temel sınıf sürümü değiştirir. Kullanmadan üyeleri gizleyebilirsiniz rağmen `new` değiştiricisi, derleyici uyarısı alırsınız. Kullanırsanız `new` açıkça üyesi gizlemek için bu uyarıyı bastırır.  
+Bir bildirim değiştirici olarak kullanıldığında `new` anahtar sözcüğü açıkça bir temel sınıftan devralınan üyeyi gizler. Devralınmış bir üyeyi gizlediğinizde, üyenin sürümü temel sınıftaki sürümün yerine geçer. Üyeleri kullanmadan gizleyebilmenize rağmen `new` değiştiricisi, bir derleyici uyarısı alırsınız. Kullanırsanız `new` bir üyeyi açıkça gizlemek için bu uyarı bastırılır.  
   
- Devralınmış bir üyeyi gizlemek için aynı üye adı kullanarak türetilen sınıfta bildirme ve onunla değiştirmek `new` anahtar sözcüğü. Örneğin:  
+ Devralınan bir üyeyi gizlemek için türetilen sınıfta aynı üye adını kullanarak bildirin ve değiştirin `new` anahtar sözcüğü. Örneğin:  
   
  [!code-csharp[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
- Bu örnekte, `BaseC.Invoke` tarafından gizli `DerivedC.Invoke`. Alan `x` benzer ada göre değil gizlendiği etkilenmez.  
+ Bu örnekte, `BaseC.Invoke` tarafından gizleniyor `DerivedC.Invoke`. Alan `x` çünkü benzer bir adla gizlenmediğinden etkilenmez.  
   
- Devralma yoluyla gizleme adı aşağıdaki biçimlerden birini alır:  
+ Devralma üzerinden ad gizleme aşağıdaki biçimlerden birini alır:  
   
--   Genellikle, sabit, alan, özelliği veya bir sınıf veya yapı biriminde sunulan türü adını paylaşan tüm taban sınıfı üyeleri gizler.  Özel durumlar vardır.  Örneğin, yeni bir ad alanıyla bildirirseniz `N` invocable olmayan bir türü ve bir taban türü bildirir `N` bir yöntemi olması için yeni alan çağırma söz dizimi temel bildiriminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("İfadeleri" bölümünde "Üye araması" bölümüne bakın).  
+-   Genellikle, bir sabit, alan, özelliği veya bir sınıf veya yapı içinde tanıtılan türü kendi adını paylaşan tüm taban sınıfı üyelerini gizler.  Özel durumlar vardır.  Örneğin, adı ile yeni bir alan bildirmek `N` çağrılmayan bir tür ve temel tür olduğunu `N` bir yöntemi olması için yeni alan taban bildirimini çağırma sözdiziminde gizlemez.  Bkz: [5.0 C# dil belirtimi](https://www.microsoft.com/download/details.aspx?id=7029) için ayrıntıları ("Expressions" bölümünde "Üye arama" bölümüne bakın).  
   
--   Sınıfta veya yapı biriminde sunulan bir yöntemi, özellikleri, alanları ve temel sınıfı ad paylaşmak türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıf yöntemlerini gizler.  
+-   Bir sınıf ya da struct'a dahil edilen bir yöntem özellikleri, alanları ve temel sınıfta bu adı paylaşan türleri gizler. Ayrıca, aynı imzaya sahip tüm taban sınıfı yöntemlerini gizler.  
   
--   Bir sınıf veya yapı biriminde sunulan bir dizin oluşturucu aynı imzaya sahip tüm temel sınıf dizin oluşturucular gizler.  
+-   Bir sınıf veya yapı içinde tanıtılan bir dizin oluşturucu, aynı imzaya sahip tüm taban sınıfı dizin oluşturucularını gizler.  
   
- Her ikisi de kullanmak için bir hata olduğunu `new` ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) aynı üye üzerindeki iki değiştiricileri birbirini dışlayan anlamları olduğundan. `new` Değiştiricisi aynı ada sahip yeni bir üye oluşturur ve gizli hale özgün üye neden olur. `override` Değiştiricisi devralınmış bir üyeyi uygulamasını genişletir.  
+ Her ikisi de kullanmak için bir hata olduğunu `new` ve [geçersiz kılma](../../../csharp/language-reference/keywords/override.md) aynı üyede, çünkü iki değiştirici karşılıklı özel anlamlara sahiptir. `new` Değiştiricisi, aynı ada sahip yeni bir üye oluşturur ve ilk üyenin gizli hale gelmesine neden olur. `override` Değiştiricisi devralınan bir üyenin uygulanmasını genişletir.  
   
- Kullanarak `new` değiştiricisi devralınmış bir üyeyi gizlemez bildiriminde bir uyarı oluşturur.  
+ Kullanarak `new` değiştiricisi devralınan bir üyeyi gizlemek olmayan bir bildirimde kullanmak bir uyarı oluşturur.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, bir taban sınıf `BaseC`ve türetilmiş bir sınıf `DerivedC`, aynı alan adını kullanmak `x`, devralınan alanın değerini gizler. Örnek kullanımını gösteren `new` değiştiricisi. Ayrıca, temel sınıfın gizli üyeleri tam adlarını kullanarak erişmek nasıl gösterir.  
+ Bu örnekte, bir temel sınıf `BaseC`ve bir türetilen sınıf `DerivedC`, aynı alan adını kullanan `x`, devralınan alandaki değeri gizleyen. Bu örnek kullanımını gösterir `new` değiştiricisi. Ayrıca bunların tam nitelikli adlarını kullanarak taban sınıfının gizlenmiş üyelerine nasıl erişileceğini gösteren.  
   
  [!code-csharp[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, bir iç içe geçmiş sınıf taban sınıf içinde aynı ada sahip bir sınıf gizler. Örnek nasıl kullanılacağı ortaya `new` uyarı iletisi ve gizli sınıf üyeleri tam adlarını kullanarak erişim ortadan kaldırmak için değiştiricisi.  
+ Bu örnekte, iç içe geçmiş bir sınıf taban sınıfında aynı ada sahip bir sınıfı gizler. Bu örnek nasıl kullanılacağını gösterir `new` değiştiricisi uyarı iletisini ve gizli sınıf üyelerine bunların tam nitelikli adlarını kullanarak erişmek nasıl ortadan kaldırmak için.  
   
  [!code-csharp[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
   
- Kaldırırsanız `new` değiştiricisi, program hala derleyin ve çalıştırın, ancak aşağıdaki uyarı alırsınız:  
+ Kaldırırsanız `new` değiştiricisi, program hala derler ve çalışır, ancak aşağıdaki uyarıyı alırsınız:  
   
 ```  
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.  

@@ -6,35 +6,35 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 7fb56da8a28367a6dcd5e28f208b4519510d7d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650887"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243885"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de XML Belgesi Oluşturma
-Bu örnek kodunuzu XML belge açıklamaları ekleme gösterir.  
+Bu örnek XML belge açıklamaları ekleme kodunuzu gösterir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Bir tür veya üye için XML belgeleri oluşturmak için  
   
-1.  İçinde **Kod düzenleyicisinde**, imlecinizi belgeleri oluşturmak istediğiniz tür veya üye üstündeki satırın getirin.  
+1.  İçinde **Kod Düzenleyicisi**, yukarıdaki belgeleri oluşturmak istediğiniz türe veya üyeye satırında imlecinizi.  
   
-2.  Tür `'''` (üç tek tırnak işaretleri).  
+2.  Tür `'''` (üç tek tırnak işareti).  
   
-     Tür veya üye için bir XML çatıyı eklenir **Kod düzenleyicisinde**.  
+     Türe veya üyeye bir XML çatısı eklenir **Kod Düzenleyicisi**.  
   
-3.  Uygun etiketleri arasında açıklayıcı bilgileri ekleyin.  
+3.  Uygun etiketleri arasına tanımlayıcı bilgiler ekleyin.  
   
     > [!NOTE]
-    >  XML belgeleri bloğu içinde ek satırlar eklerseniz, her bir satır ile başlamalıdır `'''`.  
+    >  XML belgeleri bloğu içinde ek satırlar eklerseniz, her bir çizgi ile başlamalıdır `'''`.  
   
-4.  Tür veya üye ile yeni XML belgeleri yorumları kullanan ek kodu ekleyin.  
+4.  Türe veya üyeye yeni XML belge açıklamaları kullanan ek kod ekleyin.  
   
-     IntelliSense görüntüler metinden \<Özet > tür veya üye etiketi.  
+     IntelliSense görüntüler metinden \<Özet > türe veya üyeye etiketi.  
   
-5.  Belge açıklamaları içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için bkz: [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5.  Belge açıklamaları içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  

@@ -9,36 +9,36 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: aca1a9fa0b57e9b3b0a515a805039ade2fe0c2f1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027921"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199423"
 ---
 # <a name="extern-c-reference"></a>extern (C# Başvurusu)
 
-`extern` Değiştiricisi harici olarak uygulanan bir yöntem bildirmek için kullanılır. Yaygın kullanımı `extern` değiştiricisi durumdayken `DllImport` yönetilmeyen koda çağırmak için birlikte çalışma hizmetleri kullanırken özniteliği. Bu durumda, yöntem de olarak bildirilmelidir `static`, aşağıdaki örnekte gösterildiği gibi:
+`extern` Değiştiricisi dışarıdan uygulanan bir yöntemi bildirmek için kullanılır. Yaygın `extern` değiştiricisinin `DllImport` yönetilmeyen koda çağrı yapmak birlikte çalışma hizmetlerini kullanırken özniteliği. Bu durumda, yöntem olarak da bildirilmeleri gerekir `static`, aşağıdaki örnekte gösterildiği gibi:
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-`extern` Anahtar sözcüğü de tek bir derleme içinde aynı bileşenin farklı sürümlerini başvuru mümkün kılan bir dış derleme diğer ad tanımlayın. Daha fazla bilgi için bkz: [extern alias](extern-alias.md).
+`extern` Anahtar sözcüğü, tek bir derleme içinde aynı bileşenin farklı sürümlerine başvurmayı olanaklı kılan bir dış derleme takma adı da tanımlayabilir. Daha fazla bilgi için [extern diğer adı](extern-alias.md).
 
-Kullanmak için bir hata olduğunu [soyut](abstract.md) ve `extern` değiştiricileri birlikte aynı üye değiştirin. Kullanarak `extern` değiştiricisi anlamına gelir C# kodu dışında uygulanan yöntemi kullanarak ancak `abstract` değiştiricisi anlamına gelir yöntem uygulaması sınıfında sağlanmadı.
+Kullanılacak bir hata olduğunu [soyut](abstract.md) ve `extern` birlikte aynı üyeyi değiştirmek için değiştiriciler. Kullanarak `extern` değiştiricisi anlamına gelir yöntemin C# kodunun dışında uygulandığını kullanarak ise `abstract` değiştiricisini kullanmak yöntem uygulamasının sınıfta sağlanmadığı anlamına gelir;.
 
 extern anahtar sözcüğünün kullanımları, C++'a göre C#'de daha fazladır. C# anahtar sözcüğünü C++ anahtar sözcüğüyle karşılaştırmak için, C++ Dilinde Bağlantı Belirtmek için extern Kullanma Başvurusu'na bakın.
 
 ## <a name="example-1"></a>Örnek 1
 
-Bu örnekte, kullanıcıdan bir dize alır ve program içinde bir ileti kutusu görüntüler. Program kullanan `MessageBox` yöntemi User32.dll kitaplığından içeri aktarıldı.
+Bu örnekte, program kullanıcıdan bir dize alır ve bir ileti kutusu içinde görüntüler. Programın kullandığı `MessageBox` User32.dll kitaplığından aktarılan yöntemi.
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
 ## <a name="example-2"></a>Örnek 2
 
-Bu örnekte, bir C Kitaplığı'na (yerel DLL) çağıran bir C# programı gösterilmektedir.
+Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı gösterilmektedir.
 
 1. Aşağıdaki C dosyası oluşturun ve adlandırın `cmdll.c`:
 
@@ -51,9 +51,9 @@ int __declspec(dllexport) SampleMethod(int i)
 }
 ```
 
-2. Visual Studio yükleme dizininden bir Visual Studio x64 (veya x32) yerel Araçları Komut İstemi penceresi açın ve derleme `cmdll.c` yazarak dosya **cl -LD cmdll.c** komut isteminde.
+2. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cmdll.c` yazarak dosya **cl -LD cmdll.c** komut isteminde.
 
-3. Aynı dizinde aşağıdaki C# dosyası oluşturun ve adlandırın `cm.cs`:
+3. Aynı dizinde, aşağıdaki C# dosyası oluşturun ve adlandırın `cm.cs`:
 
 ```csharp
 // cm.cs
@@ -71,13 +71,13 @@ public class MainClass
 }
 ```
 
-4. Visual Studio yükleme dizininden bir Visual Studio x64 (veya x32) yerel Araçları Komut İstemi penceresi açın ve derleme `cm.cs` yazarak dosyası:
+4. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cm.cs` yazarak dosyası:
 
 > **CSC cm.cs** (x64 için komut istemi) — veya — **csc-platform: x 86 cm.cs** (x32 için komut istemi)
 
-Bu yürütülebilir dosya oluşturacak `cm.exe`.
+Bu yürütülebilir dosya oluşturur `cm.exe`.
 
-5. Çalıştırma `cm.exe`. `SampleMethod` Yöntemi tarafından 10 çarpılan değeri döndürür DLL dosyasının 5 değerini iletir.  Program şu çıkışı üretir:
+5. Çalıştırma `cm.exe`. `SampleMethod` Yöntemi 5 değerini değerin 10 ile çarpılmış olarak döndüren DLL dosyasına geçirir.  Program şu çıktıyı üretir:
 
 ```
 SampleMethod() returns 50.

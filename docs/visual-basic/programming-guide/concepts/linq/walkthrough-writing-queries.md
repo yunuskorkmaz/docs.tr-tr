@@ -8,16 +8,16 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655882"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245745"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
-Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadeleri. İzlenecek yol Öğrenci nesnelerin bir listesini sorgu oluşturma, sorguları çalıştırmak nasıl ve bunları değiştirme gösterilir. Sorguları nesne başlatıcılar, yerel türü çıkarımı ve anonim türler de dahil olmak üzere çeşitli özellikler dahil.  
+Bu izlenecek yol yazmak için Visual Basic dil özellikleri nasıl kullanabileceğinizi gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu ifadelerinde. İzlenecek yol, sorgu Öğrenci nesnelerin listesini oluşturma, sorgularının nasıl çalıştırılacağını ve bunları değiştirmek nasıl gösterir. Sorguları nesne başlatıcıları, yerel tür çıkarımı ve anonim türler dahil olmak üzere çeşitli özelliklerini bir araya getirin.  
   
- Bu kılavuzu tamamladıktan sonra örnekler ve belirli belgeler için geçmek hazır olacak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları dahil [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Bu kılavuzu tamamladıktan sonra belirli belgeleri ve örnekleri taşımaya hazır olmayacak [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları içerir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Proje oluşturma  
   
@@ -25,36 +25,36 @@ Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceği
   
 1.  Visual Studio'yu başlatın.  
   
-2.  Üzerinde **dosya** menüsündeki **yeni**ve ardından **proje**.  
+2.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   
-3.  İçinde **yüklü şablonlar** tıklatın **Visual Basic**.  
+3.  İçinde **yüklü şablonlar** listesinde **Visual Basic**.  
   
-4.  Proje türleri listesinde tıklatın **konsol uygulaması**. İçinde **adı** kutusunda, proje için bir ad yazın ve ardından **Tamam**.  
+4.  Proje türleri listesinde tıklayın **konsol uygulaması**. İçinde **adı** kutusuna proje için bir ad yazın ve ardından **Tamam**.  
   
-     Bir Proje oluşturulur. Varsayılan olarak, bu System.Core.dll başvuru içeriyor. Ayrıca, **içeri aktarılan ad alanları** listesini [başvurular sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) içeren <xref:System.Linq?displayProperty=nameWithType> ad alanı.  
+     Bir Proje oluşturulur. Varsayılan olarak, bir System.Core.dll başvurusu içerir. Ayrıca, **içeri aktarılan ad alanlarını** listesini [başvurular sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) içerir <xref:System.Linq?displayProperty=nameWithType> ad alanı.  
   
 5.  Üzerinde [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), emin **Option Infer** ayarlanır **üzerinde**.  
   
 ## <a name="add-an-in-memory-data-source"></a>Bellek İçi Veri Kaynağı ekleme  
- Bu kılavuzda sorguları için veri kaynağı listesidir `Student` nesneleri. Her `Student` nesnesini içeren bir ad, Soyadı, bir sınıf yılın ve bir Akademik Öğrenci gövde derece.  
+ Veri kaynağını sorgular için bu kılavuzda bir listesidir `Student` nesneleri. Her `Student` nesne, ad, Soyadı, sınıf yıl ve bir Akademik Öğrenci gövdesi derece içerir.  
   
 #### <a name="to-add-the-data-source"></a>Veri kaynağı eklemek için  
   
--   Tanımlayan bir `Student` sınıfı ve sınıfının örneklerinin bir listesini oluşturun.  
+-   Tanımlayan bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturun.  
   
     > [!IMPORTANT]
-    >  Tanımlamak için gerekli kod `Student` sınıfı ve kullanılan liste oluşturma kılavuzda örnekler sağlanır [nasıl yapılır: öğelerinin listesi oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Buradan kopyalayın ve bunu projenize yapıştırın. Yeni kodunu projeyi oluşturduğunuzda görünen kodu değiştirir.  
+    >  Tanımlamak için gereken kodu `Student` sınıfı ve kullanılan liste oluşturma izlenecek yolda örnekler sağlanır [nasıl yapılır:, bir liste öğesi oluşturun](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Buradan kopyalayın ve projenize yapıştırın. Projeyi oluşturduğunuzda görünen kodu yeni kodu değiştirir.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Öğrenciler listesine yeni bir öğrenci eklemek için  
   
--   Düzende izleyin `getStudents` başka bir örneği eklemek için yöntemini `Student` listesine sınıfı. Öğrenci ekleme nesne başlatıcıları tanıtılacaktır. Daha fazla bilgi için bkz: [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Düzende izleyin `getStudents` başka bir örneğini ekleme yöntemi `Student` listesine sınıfı. Bir öğrenci eklemek için nesne başlatıcıları başlatacaktır. Daha fazla bilgi için [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
-## <a name="create-a-query"></a>Bir sorgu oluşturun  
- Çalıştırıldığında, bu bölümde eklenen sorgu, akademik derece bunları ilk on koyar Öğrenciler listesini oluşturur. Sorgu tam seçer çünkü `Student` her zaman, sorgunun sonuç türü nesnesidir `IEnumerable(Of Student)`. Ancak, sorgu türü sorgu tanımlarında genellikle belirtilmedi. Bunun yerine, derleyici yerel türü çıkarımı türü belirlemek için kullanır. Daha fazla bilgi için bkz: [yerel türü çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Sorgunun aralık değişkeni `currentStudent`, her bir başvuru olarak hizmet veren `Student` kaynak örneğinde `students`, her nesnenin özelliklerini erişim sağlayan `students`.  
+## <a name="create-a-query"></a>Sorgu oluşturma  
+ Çalıştırıldığında, bu bölüme eklendiğinden sorgu, akademik derece bunları en iyi on koyar Öğrenciler listesini oluşturur. Sorgu tam seçer çünkü `Student` sorgu sonuç türü her zaman nesnedir `IEnumerable(Of Student)`. Ancak, sorgu türü genellikle sorgu tanımlarında belirtilmedi. Bunun yerine, derleyici yerel tür çıkarımı türünü belirlemek için kullanır. Daha fazla bilgi için [yerel tür çıkarımı](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Sorgunun aralık değişkeni `currentStudent`, her bir başvuru olarak hizmet veren `Student` kaynak örneğinde `students`, her bir nesnenin özelliklerini erişim sağlamaya `students`.  
   
 #### <a name="to-create-a-simple-query"></a>Basit bir sorgu oluşturmak için  
   
-1.  Yerinde Bul `Main` şu şekilde işaretlenir projesinin yöntemi:  
+1.  Bir yerde bulmanızı `Main` şu şekilde işaretlenmiş projenin yöntemi:  
   
      [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
@@ -62,77 +62,77 @@ Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceği
   
      [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
-2.  Üzerinden fare işaretçisini `studentQuery` derleyici atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of Student)`.  
+2.  Üzerine fare işaretçisini `studentQuery` derleyici tarafından atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of Student)`.  
   
 ## <a name="run-the-query"></a>Sorguyu çalıştır  
- Değişkeni `studentQuery` sorgu, sorgu çalıştırmanın sonuçlarını değil tanımını içerir. Bir sorgu çalıştırmak için tipik bir mekanizmadır bir `For Each` döngü. Döndürülen dizideki her öğe döngü yineleme değişkeni erişilir. Sorgu yürütme hakkında daha fazla bilgi için bkz: [yazma bilgisayarınızı ilk LINQ sorgusu](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Değişken `studentQuery` sorgu, sorgu çalıştırmanın sonuçlarını değil tanımını içerir. Bir sorgu çalıştırmak için tipik bir mekanizma bir `For Each` döngü. Döndürülen dizideki her öğe döngüsünün yineleme değişkeni erişilir. Sorgu yürütme hakkında daha fazla bilgi için bkz: [bilgisayarınızı ilk LINQ sorgusu yazma](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
 #### <a name="to-run-the-query"></a>Sorguyu çalıştırmak için  
   
-1.  Aşağıdakileri ekleyin `For Each` döngü projenizdeki sorgu aşağıda.  
+1.  Aşağıdaki `For Each` projenizi sorguda aşağıdaki döngü.  
   
      [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
-2.  For döngüsü denetim değişkeni fare işaretçisini `studentRecord` veri türünü görmek için. Türü `studentRecord` olmasını olayla `Student`, çünkü `studentQuery` koleksiyonunu döndürür `Student` örnekleri.  
+2.  Fare işaretçisini döngü denetim değişkeni `studentRecord` veri türünü görmek için. Türünü `studentRecord` olmasını çıkarılan `Student`, çünkü `studentQuery` koleksiyonunu döndürür `Student` örnekleri.  
   
-3.  Oluşturma ve CTRL + F5'e basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
+3.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 ## <a name="modify-the-query"></a>Sorguyu Değiştirme  
- Belirli bir sırada olmaları durumunda tarama sorgu sonuçlarını daha kolaydır. Döndürülen dizi tüm kullanılabilir alana göre sıralayabilirsiniz.  
+ Belirli bir sırada olmaları durumunda tarama sorgu sonuçlarını daha kolaydır. Tüm kullanılabilir alana göre döndürülen dizi sıralayabilirsiniz.  
   
 #### <a name="to-order-the-results"></a>Sonuçları sıralamak için  
   
-1.  Aşağıdakileri ekleyin `Order By` yan tümcesi arasında `Where` deyimi ve `Select` sorgu ifadesi. `Order By` Yan tümcesi sipariş sonuçları alfabetik olarak A'dan Z'ye, son her öğrencinin adını göre.  
+1.  Aşağıdaki `Order By` arasında yan tümcesi `Where` deyimi ve `Select` sorgu deyimi. `Order By` Yan tümcesi sipariş sonuçları alfabetik olarak A'dan Z'ye, son her öğrencinin adına göre.  
   
     ```  
     Order By currentStudent.Last Ascending   
     ```  
   
-2.  Soyadı ve sonra ilk adına göre sıralamak için her iki alan sorguya ekleyin:  
+2.  Son adı ve ardından ilk adına göre sıralamak için her iki alanı sorguya ekleyin:  
   
     ```  
     Order By currentStudent.Last Ascending, currentStudent.First Ascending   
     ```  
   
-     Ayrıca belirtebilirsiniz `Descending` Z siparişe A. için  
+     Ayrıca belirtebileceğiniz `Descending` sipariş Z'den A'ya için  
   
-3.  Oluşturma ve CTRL + F5'e basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
+3.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 #### <a name="to-introduce-a-local-identifier"></a>Yerel tanımlayıcı tanıtmak için  
   
-1.  Bu bölümdeki yerel bir tanımlayıcı sorgu ifadesinde tanıtmak için kodu ekleyin. Yerel tanımlayıcı bir ara sonuç tutar. Aşağıdaki örnekte, `name` Öğrenci birleşimini tutan bir tanımlayıcı ilk ve son adları. Aksi takdirde birden çok kez hesaplanan bir ifadenin sonuçlarını depolayarak performansını artırabilir veya yerel bir tanımlayıcı kolaylık sağlamak için kullanılabilir.  
+1.  Sorgu ifadesi içinde yerel tanımlayıcı tanıtmak için bu bölümdeki kod ekleyin. Yerel tanımlayıcı bir ara sonucunu tutacaktır. Aşağıdaki örnekte, `name` dizilerin bir bitiştirmesi olan Öğrenci tutan bir tanımlayıcı ilk ve son adları. Aksi takdirde birden çok kez hesaplanan bir ifadenin sonuçlarını depolayarak performansını artırabilir veya yerel tanımlayıcı kolaylık sağlamak için kullanılabilir.  
   
      [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
-2.  Oluşturma ve CTRL + F5'e basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
+2.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 #### <a name="to-project-one-field-in-the-select-clause"></a>Select yan tümcesinde bir alan planlamak için  
   
-1.  Sorguyu eklemek ve `For Each` öğeleri farklı kaynak öğelerinden bir dizi üreten bir sorgu oluşturmak için bu bölümü döngüden. Aşağıdaki örnekte, kaynak topluluğudur `Student` nesneleri, ancak her nesnenin yalnızca bir üye döndürülür: Soyadı olan Garcia Öğrenciler adı. Çünkü `currentStudent.First` bir dize veri türü tarafından döndürülen sıra `studentQuery3` olan `IEnumerable(Of String)`, bir dizi dize. Önceki örneklerde olduğu gibi bir veri atama türü `studentQuery3` yerel türü çıkarımı kullanarak belirlemek derleyici için bırakılır.  
+1.  Sorguya ekleyin ve `For Each` öğeleri farklı kaynaktaki öğelerinden bir dizi üretir bir sorgu oluşturmak için bu bölümdeki döngü. Aşağıdaki örnekte, bir kaynak koleksiyonudur `Student` nesneleri, ancak her bir nesnenin yalnızca bir üye döndürülür: Soyadı olan Garcia Öğrenciler adı. Çünkü `currentStudent.First` bir dize veri türü tarafından döndürülen dizinin `studentQuery3` olduğu `IEnumerable(Of String)`, bir dize sırası. Önceki örneklerde olduğu gibi bir veri atamasını türü `studentQuery3` yerel tür çıkarımı kullanarak belirlemek derleyicinin bırakılır.  
   
      [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
-2.  Üzerinden fare işaretçisini `studentQuery3` atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of String)`.  
+2.  Üzerine fare işaretçisini `studentQuery3` atanan türü olduğunu doğrulamak için kodunuzda `IEnumerable(Of String)`.  
   
-3.  Oluşturma ve CTRL + F5'e basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
+3.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 #### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Select yan tümcesinde anonim bir tür oluşturmak için  
   
-1.  Nasıl anonim türlerini görmek için bu bölümdeki kod sorgularda kullanılan ekleyin. Veri kaynağı tam kayıtları yerine birkaç alanları döndürmek istediğinizde sorgularda kullanabilmek (`currentStudent` önceki örneklerde kayıtları) ya da tek alanları (`First` önceki bölümde). Sonuçta dahil etmek istediğiniz alanları içeren yeni bir adlandırılmış türü tanımlama yerine alanlarda belirtin `Select` yan tümcesi ve derleyici özelliklerini olarak bu alanlara sahip anonim bir tür oluşturur. Daha fazla bilgi için bkz: [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+1.  Nasıl anonim türler görmek için bu bölümü koddan sorgularında kullanılan ekleyin. Çeşitli alanları veri kaynağı tüm kayıtların yerine döndürülecek istediğinizde bunları sorguları içinde kullanabilirsiniz (`currentStudent` önceki örneklerde, kayıtlarını) veya tek alanları (`First` önceki bölümde). Sonuçta dahil etmek istediğiniz alanları içeren yeni bir adlandırılmış tür tanımlama yerine alanlarda belirtin `Select` yan tümcesi ve derleyici özelliklerini olarak bu alanlara sahip bir anonim tür oluşturur. Daha fazla bilgi için [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-     Aşağıdaki örnek adını ve 1 ile 10 akademik derece sırasına göre akademik derece arasındadır seniors derecesini döndüren bir sorgu oluşturur. Bu örnekte, türü `studentQuery4` çünkü olayla gerekir `Select` yan tümcesi anonim bir türün bir örneği döndürür ve anonim bir tür kullanılabilir adı yok.  
+     Aşağıdaki örnek, boyut sayısı 1 ile 10, akademik derece sırasına göre akademik derece arasındadır seniors ve adını döndüren sorgu oluşturur. Bu örnekte, türü `studentQuery4` çünkü anlaşılmalıdır `Select` yan tümcesi, anonim bir türün örneğini döndürür ve anonim bir tür kullanılabilir adı yok.  
   
      [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
-2.  Oluşturma ve CTRL + F5'e basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
+2.  Derleme ve CTRL + F5 tuşlarına basarak uygulamayı çalıştırın. Sonuçları konsol penceresinde unutmayın.  
   
 ## <a name="additional-examples"></a>Ek Örnekler  
- Temel kavramları anladığınıza göre gücü ve esnekliği göstermek için ek örnekler listesi aşağıdadır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular. Her örneğin ne yaptığını kısa bir açıklaması tarafından gelmelidir. Fare işaretçisini çıkarılan türü görmek her sorgu için sorgu sonucu değişkeni üzerine bırakın. Kullanım bir `For Each` sonuçlar döngü.  
+ Temelleri anladığınıza göre gücü ve esnekliği göstermek için ek örnekler listesi aşağıda verilmiştir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgular. Her örneğin ne işe yaradığını kısa bir açıklaması tarafından gelmelidir. Fare işaretçisini çıkarsanan tür görmek her bir sorgu için sorgu sonucu değişkenine üzerine bırakın. Kullanım bir `For Each` döngü, istediğiniz sonuçları vermeyebilir.  
   
  [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## <a name="additional-information"></a>Ek Bilgiler  
- Sorguları ile çalışmanın temel kavramları hakkında bilgi sahibi olduktan sonra belgeler ve örnekler için belirli türünü okumak hazır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı:  
+ Sorgularla çalışma temel kavramları hakkında bilgi sahibi olduktan sonra belgeler ve örnekler için belirli türünü okumak hazır olursunuz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ilgilendiğiniz sağlayıcısı:  
   
  [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
@@ -144,7 +144,7 @@ Bu kılavuzda yazmak için Visual Basic dil özellikleri nasıl kullanabileceği
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Visual Basic'te Lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  

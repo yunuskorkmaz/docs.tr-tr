@@ -9,19 +9,19 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276025"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245622"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# Başvurusu)
-`namespace` Anahtar sözcük, ilgili nesne kümesi içeren kapsamı bildirmek için kullanılır. Kod öğelerini düzenlemek ve genel benzersiz türleri oluşturmak için bir ad alanı kullanabilirsiniz.  
+`namespace` Anahtar sözcüğü, bir dizi ilgili nesneleri içeren bir kapsamı bildirmek için kullanılır. Kod öğelerini düzenlemek ve genel olarak benzersiz türleri oluşturmak için bir ad kullanabilirsiniz.  
   
  [!code-csharp[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ad alanı içinde bir veya daha fazla türlerinden birini bildirebilir:  
+ Ad alanı içinde bir veya daha fazla türlerinden birini bildirebilirsiniz:  
   
 -   başka bir ad alanı  
   
@@ -35,16 +35,16 @@ ms.locfileid: "33276025"
   
 -   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
- C# kaynak dosyasında bir ad alanını açıkça bildirme olup olmadığına, bir varsayılan ad alanı derleyici ekler. Bazen genel ad alanı da adlandırılır bu adlandırılmamış ad alanı, her dosyasında bulunur. Genel ad alanındaki herhangi bir tanımlayıcı, adlandırılmış bir ad alanını kullanmak için kullanılabilir.  
+ Açıkça bir C# kaynak dosyası içinde bir ad alanı bildirimini olsun veya olmasın, derleyici varsayılan bir ad alanı ekler. Bazen genel ad alanı adlandırılır, bu adlandırılmamış ad, her bir dosyanın yok. Genel ad alanındaki herhangi bir tanımlayıcı adlandırılmış bir ad alanında kullanılabilir.  
   
- Ad alanları örtük olarak genel erişimi vardır ve bu değiştirilebilir değil. Erişim değiştiricileri öğelere bir ad atamak için bkz [erişim değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md).  
+ Ad alanları, örtük olarak genel erişimi vardır ve bu değiştirilebilir değildir. Bir ad alanındaki öğeler atayabilirsiniz erişim değiştiricileri ile ilgili tartışma için bkz: [erişim değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md).  
   
- Ad alanı iki veya daha fazla bildirimlerinde tanımlamak mümkündür. Örneğin, aşağıdaki örnekte bir parçası olarak iki sınıf tanımlar `MyCompany` ad alanı:  
+ İki veya daha fazla bildirimlerinde ad alanı tanımlamak mümkündür. Örneğin, aşağıdaki örnekte iki sınıf kapsamında tanımlar `MyCompany` ad alanı:  
   
  [!code-csharp[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iç içe geçmiş bir ad alanında bir statik yöntem çağrısı gösterilmektedir.  
+ Aşağıdaki örnek, bir iç içe geçmiş ad alanındaki statik bir yöntemi çağırmak nasıl gösterir.  
   
  [!code-csharp[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   

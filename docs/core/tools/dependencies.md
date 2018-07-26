@@ -1,53 +1,53 @@
 ---
-title: .NET Core araç bağımlılıkları yönetme
-description: Bağımlılıklarınız .NET Core araçları ile yönetmek açıklanmaktadır.
+title: .NET Core araçları bağımlılıkları yönetme
+description: .NET Core araçları ile bağımlılıklarınızı yönetmesini açıklanmaktadır.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
 ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213668"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244234"
 ---
-# <a name="managing-dependencies-with-net-core-sdk-10"></a>Bağımlılıkları .NET Core SDK 1.0 ile yönetme
+# <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK'sı 1.0 ile bağımlılık Yönetimi
 
-Önemli bir yatırımın, taşımak .NET Core projeleri ile project.json csproj ve MSBuild, proje dosyası ve bağımlılıkları izleme izin varlıklar Birleştirici içinde sonuçlanan ayrıca oluştu. .NET Core projelerde bu hangi project.json vermedi için benzer. NuGet bağımlılıkları izleyen ayrı JSON veya XML dosya yok. Bu değişiklikle, biz de başka bir tür ekledik *başvuru* adlı csproj sözdizimi içine `<PackageReference>`. 
+Ciddi bir yatırım, taşıma, .NET Core projeleri ile project.json'ndan csproj ve MSBuild proje dosyası ve bağımlılıkları izlenmesine izin vermek varlıklar birleştirmesi içinde sonuçlanan da oldu. .NET Core projeleri için hangi project.json benzer budur. NuGet bağımlılıklarını izleyen ayrı JSON veya XML dosya yok. Bu değişiklik, aynı zamanda başka bir tür tanıttık *başvuru* adlı csproj söz dizimini içine `<PackageReference>`. 
 
-Bu belgede yeni başvuru türü açıklanmaktadır. Ayrıca, bu yeni başvuru türü projenize kullanarak bir paket bağımlılığı eklemek nasıl gösterir. 
+Bu belge, yeni başvuru türünü açıklar. Ayrıca bu yeni bir başvuru türü projenize kullanarak paket bağımlılık ekleme işlemini de gösterir. 
 
 ## <a name="the-new-packagereference-element"></a>Yeni \<PackageReference > öğesi
-`<PackageReference>` Aşağıdaki temel yapı vardır:
+`<PackageReference>` Aşağıdaki temel yapıya sahiptir:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-MSBuild ile hakkında bilginiz varsa, zaten bulunan diğer başvuru türleri için tanıdık gelecektir. Anahtar `Include` deyimi projeye eklemek istediğiniz paket kimliğini belirtir. `<Version>` Alt öğesi almak için sürümünü belirtir. Sürümleri göre belirtilen [NuGet sürümü kurallarını](/nuget/create-packages/dependency-versions#version-ranges).
+Msbuild'i iyi bilmiyorsanız, zaten mevcut olan diğer başvuru türlerine benzer görünecektir. Anahtar `Include` deyimi projeye eklemek istediğiniz paket kimliğini belirtir. `<Version>` Sürümü almak için alt öğe belirtir. Sürümler olarak başına belirtilen [NuGet sürümü kurallarını](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Bütün ile bilmiyorsanız `csproj` sözdizimi, bkz: [MSBuild proje başvurusu](/visualstudio/msbuild/msbuild-project-file-schema-reference) daha fazla bilgi için.  
+> Genel ile aşina değilseniz `csproj` söz dizimini bkz [MSBuild proje başvurusu](/visualstudio/msbuild/msbuild-project-file-schema-reference) daha fazla bilgi için belgelere bakın.  
 
-Yalnızca belirli bir hedef olarak kullanılabilir bir bağımlılık ekleme gerçekleştirilir gibi koşullar aşağıdaki örnekte kullanarak:
+Yalnızca belirli bir hedef olarak kullanılabilir bir bağımlılık ekleme yapılır gibi koşullar kullanarak aşağıdaki örnekte:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
 ```
 
-Bağımlılık yalnızca derleme için hedef verilen oluşuyorsa geçerli olacağını yukarıdaki anlamına gelir. `$(TargetFramework)` Koşulunda projede ayarlandığında bir MSBuild özelliğidir. En yaygın .NET Core uygulamalar için bunu yapmak gerekmez. 
+Bağımlılık yalnızca derleme için hedef verilen karşılaşıyorsanız geçerli olacağını yukarıdaki anlamına gelir. `$(TargetFramework)` Koşulda projede ayarlanan bir MSBuild özelliğidir. En yaygın .NET Core uygulamaları için bunu yapmak gerekmez. 
 
 ## <a name="adding-a-dependency-to-your-project"></a>Projenize bir bağımlılık ekleme
-Projenize bir bağımlılık ekleme basittir. Json.NET sürüm ekleme konusunda bir örneği burada verilmiştir `9.0.1` projenize. Elbette, herhangi bir NuGet bağımlılığı için geçerlidir. 
+Bir bağımlılık projenize eklemek oldukça basittir. İşte bir örnek Json.NET sürüm ekleme `9.0.1` projenize. Elbette, diğer NuGet bağımlılık için geçerlidir. 
 
-Proje dosyası açtığınızda, iki veya daha fazla görürsünüz `<ItemGroup>` düğümleri. Düğümlerden birinde zaten olduğunu fark edeceksiniz `<PackageReference>` öğelere. Bu düğüm, yeni bağımlılık ekleme ya da yeni bir tane oluşturun; Sonuç aynı olacak şekilde, tamamen size bağlıdır. 
+Proje dosyanız açtığınızda, iki veya daha fazla görürsünüz `<ItemGroup>` düğümleri. Düğümlerden biri zaten olduğunu fark edebilirsiniz `<PackageReference>` öğelere. Bu düğüme yeni, bağımlılık ekleme ya da yeni bir tane oluşturun; Sonuç aynı olacaktır. Bu tamamen size bağlıdır aynıdır. 
 
-Bu örnekte bırakılan tarafından varsayılan şablonu kullanacağız `dotnet new console`. Basit bir konsol uygulaması budur. Biz projeyi açtığınızda, biz ilk Bul `<ItemGroup>` zaten var olan `<PackageReference>` da. Biz ardından aşağıdakileri ekleyin:
+Bu örnekte bırakılan tarafından varsayılan şablonu kullanacağız `dotnet new console`. Bu basit bir konsol uygulamasıdır. Biz projeyi açtığınızda, ilk buluyoruz `<ItemGroup>` zaten varolan `<PackageReference>` da. Biz ardından aşağıdakileri ekleyin:
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
-Bundan sonra biz projeyi kaydedin ve Çalıştır `dotnet restore` bağımlılık yüklemek için komutu. 
+Bundan sonra biz projeyi kaydedin ve çalıştırın `dotnet restore` bağımlılık yüklemek için komutu. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -66,5 +66,5 @@ Tam proje şöyle görünür:
 </Project>
 ```
 
-## <a name="removing-a-dependency-from-the-project"></a>Bir bağımlılık projeden kaldırma
-Proje dosyasından bir bağımlılık kaldırmayı içerir yalnızca kaldırma `<PackageReference>` proje dosyasından.
+## <a name="removing-a-dependency-from-the-project"></a>Projeden bir bağımlılık kaldırma
+Proje dosyasından bir bağımlılık kaldırmayı içerir yalnızca kaldırma `<PackageReference>` proje dosyasında.

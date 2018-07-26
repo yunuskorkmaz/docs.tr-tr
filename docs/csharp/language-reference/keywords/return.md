@@ -9,19 +9,19 @@ helpviewer_keywords:
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
 ms.openlocfilehash: 29d2b8e28ae6240b9d06b82695efe1736404c5cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266116"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244783"
 ---
 # <a name="return-c-reference"></a>return (C# Başvurusu)
-`return` Açıklamayı sonlandıran yürütme yönteminin, görünür ve denetim çağıran yönteme döndürür. Ayrıca isteğe bağlı değeri geri dönebilirsiniz. Yöntemi bir `void` türü, `return` deyimi etmeyebilirsiniz.  
+`return` Deyimi yöntemin hangi görüntülenir ve çağıran Metoda döndürür denetim yürütülmesini sonlandırır. Ayrıca, isteğe bağlı bir değer de döndürebilir. Yöntem ise bir `void` türü `return` ifade atlanabilir.  
   
- Return deyimi içinde ise bir `try` bloğu `finally` bloğu, varsa, yürütülür önce çağıran yönteme denetimini döndürür.  
+ Return deyimi içinde ise bir `try` bloğu `finally` bloğu, varsa, yürütülecek önce denetimini çağıran Metoda döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, yöntem `CalculateArea()` yerel değişken döndürür `area` olarak bir [çift](../../../csharp/language-reference/keywords/double.md) değeri.  
+ Aşağıdaki örnekte, yöntem `CalculateArea()` yerel değişkeni döndürür `area` olarak bir [çift](../../../csharp/language-reference/keywords/double.md) değeri.  
   
  [!code-csharp[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   

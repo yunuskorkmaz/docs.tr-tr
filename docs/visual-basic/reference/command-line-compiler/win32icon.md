@@ -9,14 +9,14 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 045e621f0104c4c958d77d2443c1524b33410b7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650471"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221029"
 ---
 # <a name="-win32icon"></a>-win32icon
-Bir .ico dosyasını çıktı dosyasına ekler. Çıktı dosyasında bu .ico dosyasını temsil eden **dosya Gezgini**.  
+Çıktı dosyasına bir .ico simge dosyası ekler. Bu .ico dosyasını temsil eder çıkış dosyasında **dosya Gezgini**.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,19 +28,19 @@ Bir .ico dosyasını çıktı dosyasına ekler. Çıktı dosyasında bu .ico dos
   
 |Terim|Tanım|  
 |---|---|  
-|`filename`|Çıkış dosyanızın eklemek için .ico dosyasını. Dosya adını tırnak işaretleri içine alın ("") boşluk içeriyorsa.|  
+|`filename`|Çıkış dosyanızı eklemek için .ico dosyası. Dosya adı tırnak içine alın ("") bir boşluk içeriyorsa.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Microsoft Windows Kaynak Derleyici (RC) ile bir .ico dosyasını oluşturabilirsiniz. Kaynak derleyicisi bir Visual C++ programını derleme yaparken çağrılır; .rc dosyasından bir .ico dosyası oluşturulur. `-win32icon` Ve `-win32resource` seçenekleri karşılıklı olarak birbirini dışlar.  
+ Microsoft Windows Kaynak derleyicisi (RC) olan bir .ico simge dosyası oluşturabilirsiniz. Kaynak derleyicisi, bir Visual C++ programını derlerken çağrılır; .rc dosyasından bir .ico simge dosyası oluşturulur. `-win32icon` Ve `-win32resource` seçenekleri karşılıklı olarak birbirini dışlar.  
   
- Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) başvurusu için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) eklemek için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası. Bkz: [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res dosyasını içeri aktarmak için.  
+ Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) başvurmak için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) eklemek için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası. Bkz: [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) bir .res dosyası içeri aktarmak için.  
   
-|Ayarlanacak - win32icon Visual Studio IDE içinde|  
+|Ayarlanacak - Visual Studio IDE'de win32icon|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde tıklatın **özellikleri**. <br />2.  Tıklatın **uygulama** sekmesi.<br />3.  Değer değiştirme **simgesi** kutusu.|  
+|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **uygulama** sekmesi.<br />3.  Değer değiştirme **simgesi** kutusu.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `In.vb` ve bir .ico dosyasını ekler `Rf.ico`.  
+ Aşağıdaki kod derlenir `In.vb` ve bir .ico simge dosyası ekler `Rf.ico`.  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
 ms.openlocfilehash: e8f1f097a62f022d305987800e89353b038f42ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315795"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244471"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Özel Oluşturucular (C# Programlama Kılavuzu)
-Özel Oluşturucusu bir özel örnek Oluşturucusu ' dir. Bu genellikle yalnızca statik üyeleri içeren sınıfları kullanılır. Bir sınıf bir veya daha fazla özel oluşturucular ve ortak oluşturucu yok varsa, bu sınıfın örnekleri, diğer sınıflar (dışında iç içe geçmiş sınıflar) oluşturulamıyor. Örneğin:  
+Bir özel örnek oluşturucusu bir özel oluşturucudur. Ayrıca, yalnızca statik üyeleri içeren sınıflar genel olarak kullanılır. Bir sınıf, bir veya daha fazla özel oluşturucular ve genel Oluşturucusu varsa, diğer sınıflar (iç içe geçmiş sınıflar dışında) bu sınıfın örnekleri oluşturulamaz. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_1.cs)]  
   
- Boş Oluşturucusu bildirimi varsayılan bir oluşturucu otomatik olarak oluşturulmasını engeller. Oluşturucu bir erişim değiştiricisi kullanmazsanız, hala varsayılan olarak özel olacağını unutmayın. Ancak, [özel](../../../csharp/language-reference/keywords/private.md) değiştiricisi genellikle açıkça sağlamak için kullanılan sınıfın örneği oluşturulamıyor temizleyin.  
+ Boş Oluşturucu bildirimi bir varsayılan oluşturucu otomatik olarak oluşturulmasını engeller. Bir erişim değiştiricisidir oluşturucuyla kullanmazsanız, yine de varsayılan olarak özel olacağını unutmayın. Ancak, [özel](../../../csharp/language-reference/keywords/private.md) değiştiricisi genellikle açıkça sağlamak için kullanılan sınıfın oluşturulamadığını temizleyin.  
   
- Özel oluşturucular önlemek için kullanılan olduğunda hiçbir örneği alan veya yöntem, aşağıdaki gibi bir sınıf örneklerini oluşturmaya <xref:System.Math> sınıfı veya ne zaman bir yöntemi çağrıldığında bir sınıfın bir örneği elde etmek için. Sınıfındaki tüm yöntemler statik varsa, tüm sınıf statik yapmayı düşünün. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Özel oluşturucular önlemek için kullanılan olduğunda hiçbir örneği alanlar veya yöntemler, aşağıdaki gibi bir sınıfın örnekleri oluşturma <xref:System.Math> sınıfı veya ne zaman bir yöntemi çağrıldığında bir sınıfın bir örneği elde etmek için. Sınıfındaki tüm yöntemler statik ise tam sınıf statik yapma göz önünde bulundurun. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Örnek  
- Özel Oluşturucu kullanarak bir sınıfın bir örnek verilmiştir.  
+ Aşağıdaki özel bir oluşturucu kullanılarak sınıfının bir örneğidir.  
   
  [!code-csharp[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
   
- Aşağıdaki deyim örneğindeki açıklamadan çıkarın, Oluşturucusu koruma düzeyi nedeniyle erişilemez durumda olduğundan, bir hata oluşturacağını dikkat edin:  
+ Aşağıdaki örnek ifade açıklamasını kaldırın, koruma düzeyi nedeniyle oluşturucusuna erişilemediğinden, bir hata oluşturacağına dikkat edin:  
   
  [!code-csharp[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   

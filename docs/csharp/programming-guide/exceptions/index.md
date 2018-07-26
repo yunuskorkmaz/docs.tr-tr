@@ -7,18 +7,18 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335272"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244273"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Özel Durumlar ve Özel Durum İşleme (C# Programlama Kılavuzu)
-C# dil özel durum özellikleri Yardım işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir Eylemler denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verirken hataları işlemek için anahtar sözcükler. Özel durumlar ortak dil çalışma zamanı tarafından (CLR), .NET Framework veya herhangi bir üçüncü taraf kitaplıklar veya uygulama kodu tarafından oluşturulabilir. Özel durumlar kullanarak oluşturulur `throw` anahtar sözcüğü.  
+C# dil özel durum özelliklerin help işleme ile bir program çalışırken oluşan beklenmeyen veya olağanüstü durumlara ilgilenir. Özel durum işleme kullanan `try`, `catch`, ve `finally` başarılı olmayabilir eylemleri denemek için bunu yapmak için ve daha sonra kaynakları temizlemek için makul karar verdiğinizde, hataları işlemek için anahtar sözcükler. Özel durumlar, .NET Framework veya herhangi bir üçüncü taraf kitaplıklar tarafından veya uygulama kodu tarafından ortak dil çalışma zamanı tarafından (CLR) oluşturulabilir. Özel durumlar kullanılarak oluşturulan `throw` anahtar sözcüğü.  
   
- Çoğu durumda, bir özel durum kodunuzu doğrudan çağrılan olmayan bir yöntemi tarafından oluşturulan, ancak başka bir yöntem kullanarak aşağı çağrı yığınında daha fazla. Bu gerçekleştiğinde, CLR yığını bir yöntemle arayan bırakma bir `catch` belirli özel durum türünü ve bu ilk yürütecek için engelleme gibi `catch` olması durumunda engelleme bulur. Hayır uygun bulursa `catch` herhangi bir yere çağrı yığınında engellemek, işlemi sonlandırmamız ve kullanıcıya bir ileti görüntüler.  
+ Çoğu durumda, bir özel durum kodunuzu doğrudan çağıran olmayan bir yöntemi tarafından oluşturulan, ancak başka bir yöntemle aşağı çağrı yığınında daha fazla. Bu durumda, CLR yığını bir yöntemle aranıyor geriye doğru izleme bir `catch` belirli özel durum türü ve ilk yürütecek için engelleme gibi `catch` olması durumunda block bulur. En uygun bulursa `catch` herhangi bir çağrı yığınında engelleme, işlemi sonlandırmak ve kullanıcıya bir ileti görüntüler.  
   
- Bu örnekte, bir yöntem sıfıra bölme için test ve hata yakalar. Özel durum işleme olmadan bu programı ile sonlandırmak bir **DivideByZeroException işlenmemiş** hata.  
+ Bu örnekte, bir yöntem sıfıra bölme için test ve hata yakalar. Özel durum işleme olmadan, bu program ile sonlanırdı bir **DivideByZeroException işlenmemiş** hata.  
   
  [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
@@ -27,23 +27,23 @@ C# dil özel durum özellikleri Yardım işleme ile bir program çalışırken o
   
 -   Özel durumları olan tüm sonuçta öğesinden türetilen türler `System.Exception`.  
   
--   Kullanım bir `try` özel durumlar oluşturma deyimleri geçici bloğu.  
+-   Kullanım bir `try` geçici özel durumlar deyimleri blok.  
   
--   Bir özel durum oluşması sonra `try` engellemek, akışını herhangi bir yere çağrı yığınında mevcut ilk ilişkili özel durum işleyici denetimi atlar. C# ' ta, `catch` anahtar sözcüğü bir özel durum işleyici tanımlamak için kullanılır.  
+-   Özel durum oluşması sonra `try` herhangi bir çağrı yığınında mevcut olan ilk ilişkili bir özel durum işleyici denetimi atlar akışını engelleyin. C# ' ta, `catch` anahtar sözcüğü, bir özel durum işleyicisi tanımlamak için kullanılır.  
   
--   Belirli bir özel durum için hiçbir özel durum işleyicisi varsa, bir hata iletisi ile yürütme programı durdurur.  
+-   Belirli bir özel durum için hiçbir özel durum işleyicisi varsa, yürütülürken bir hata iletisiyle programı durdurur.  
   
--   Bunu işlemek ve uygulama bilinen bir durumda bırakır sürece bir özel durum catch değil. Catch `System.Exception`, kullanarak yeniden oluşturulması `throw` anahtar sözcüğü sonunda `catch` bloğu.  
+-   Bunu işlemek ve uygulamanın bilinen bir durumda bırakır sürece bir özel durum yakalamayın. Yakalarsanız, `System.Exception`, kullanarak rethrow `throw` sonunda, anahtar sözcüğü `catch` blok.  
   
--   Varsa bir `catch` blok tanımlayan bir özel durum değişkeni, oluşan özel durum türü hakkında daha fazla bilgi edinmek için kullanın.  
+-   Varsa bir `catch` blok bir özel durum değişken tanımlar, oluşan özel durumun türünü hakkında daha fazla bilgi edinmek için kullanabilirsiniz.  
   
 -   Özel durumlar açıkça oluşturulabilir bir program tarafından kullanarak `throw` anahtar sözcüğü.  
   
--   Özel durum nesneleri çağrı yığını ve metin açıklamasını hata durumu gibi hatayla ilgili ayrıntılı bilgiler içerir.  
+-   Özel durum nesneleri, çağrı yığını ve metin açıklamasını hata durumu gibi hata hakkında ayrıntılı bilgi içerir.  
   
--   Kod bir `finally` blok, bir özel durum olsa bile yürütüldüğünde. Kullanım bir `finally` herhangi bir akış veya açılmış dosyaları kapatmak örneğin kaynakları serbest bırakmak için blok `try` bloğu.  
+-   Kod bir `finally` blokesi bile bir özel durum oluşturulur. Kullanım bir `finally` herhangi bir akış veya açılmış dosyaları kapatın. Örneğin, kaynakları serbest bırakmak için blok `try` blok.  
   
--   .NET Framework yönetilen özel durumlar mekanizması yapılandırılmış Win32 özel durum işleme üzerinde uygulanır. Daha fazla bilgi için bkz: [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) ve [bir kilitlenme indirmelere derinliklerine, Win32 yapılandırılmış özel durum işleme üzerinde](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
+-   Yönetilen özel durumlar .NET Framework'teki Win32 yapılandırılmış özel durum işleme mekanizmasını üzerine uygulanır. Daha fazla bilgi için [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) ve [derinliği, Win32 yapılandırılmış özel durum işleme ile ilgili bir kilitlenme dersi](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Özel durumlar ve özel durum işleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:  

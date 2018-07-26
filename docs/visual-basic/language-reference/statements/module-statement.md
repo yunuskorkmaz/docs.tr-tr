@@ -1,5 +1,5 @@
 ---
-title: Module Deyimi
+title: Module deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - Module
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: f4a0c7b772417085718b63569e8368178e348567
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605023"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244107"
 ---
 # <a name="module-statement"></a>Module Deyimi
-Bir modül adını bildirir ve tanımını değişkenleri, özellikleri, olayları ve modülü oluşur yordamları sunar.  
+Bir modülün adını bildirir ve değişkenleri, özellikleri, olayları ve modülü oluşturan yordamların tanımını tanıtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -48,50 +48,50 @@ End Module
  Gerekli. Bu modül adı. Bkz: [bildirilen öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `statements`  
- İsteğe bağlı. Değişkenleri, özellikleri, olayları, yordamlar ve bu modülün iç içe geçmiş türler tanımlamak deyimleri.  
+ İsteğe bağlı. Değişkenleri, özellikleri, olayları, yordamları ve bu modülün iç içe geçmiş türleri tanımlamak deyimler.  
   
  `End Module`  
  Sonlandırır `Module` tanımı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A `Module` deyimi, ad alanı bir başvuru türü tanımlar. A *Modülü* (bazen adlı bir *standart modül*) benzer bir sınıf, ancak bazı önemli farklılıklar. Her modül tam olarak bir örnek var ve oluşturulamaz veya bir değişkenine atanan gerekmez. Modülleri devralma desteklemez veya arabirimlerini. Bir modül bildirimi bir *türü* bir sınıf veya yapı herkese açık — bir modül veri türüne sahip bir programlama öğesi bildiremezsiniz.  
+ A `Module` deyimi, ad alanı bir başvuru türü tanımlar. A *Modülü* (bazen adlı bir *standart modül*) benzer bir sınıf, ancak bazı önemli farklılıklar. Her bir modüle tam olarak bir örneği olduğu ve oluşturulamaz veya bir değişkene atanması gerekmez. Modüller devralmayı desteklemez veya arabirimlerini. Bir modül bildirimi bir *türü* bir sınıf veya yapı olan anlamında — bir modülün veri türü için bir programlama öğesi bildiremezsiniz.  
   
- Kullanabileceğiniz `Module` yalnızca ad alanı düzeyinde. Yani *bildirimi bağlam* bir modül kaynak dosya veya ad alanı olmalı ve bir sınıf, yapı, modülü, arabirimi, yordamı veya blok olamaz. Bir modül herhangi bir tür veya başka bir modül içinde iç içe yerleştirilemez. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Kullanabileceğiniz `Module` yalnızca ad alanı düzeyinde. Başka bir deyişle *bildirim içeriğinin* bir modül, kaynak dosya veya ad alanı olmalıdır ve bir sınıf, yapı, modül, arabirimi, yordam veya blok olamayacağı için. Bir modülün herhangi bir türü veya başka bir modül içinde iç içe olamaz. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Bir modül programınız olarak aynı yaşam süresi vardır. Üyeleri tüm olduğundan `Shared`, ayrıca sahip oldukları yaşam süreleri, program eşit.  
+ Bir modül programınızı olarak aynı kullanım ömrü vardır. Tüm üyeleri olduğundan `Shared`, ayrıca sahip oldukları yaşam süreleri, programın eşit.  
   
- Modülleri varsayılan [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişim. Erişim değiştiricileri ile erişim düzeylerine göre ayarlayabilirsiniz. Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Modüller için varsayılan değer [arkadaş](../../../visual-basic/language-reference/modifiers/friend.md) erişim. Erişim değiştiricileri ile kullanıcıların erişim düzeylerini ayarlayabilirsiniz. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- Örtük olarak bir modül tüm üyeleri olan `Shared`.  
+ Tüm modül örtük olarak üyeleri `Shared`.  
   
-## <a name="classes-and-modules"></a>Sınıfları ve modülleri  
- Benzer şekilde bu öğelere sahip, ancak de önemli bazı farklar vardır.  
+## <a name="classes-and-modules"></a>Sınıflar ve modüller  
+ Bu öğeleri birçok benzerlikler, ancak bazı önemli farklar da mevcuttur.  
   
--   **Terminolojisi.** Visual Basic önceki sürümlerini tanıması modülleri iki tür: *sınıf modülleri* (.cls dosyaları) ve *Standart modüller* (.bas dosyaları). Bunlar geçerli sürümü çağırır *sınıfları* ve *modülleri*sırasıyla.  
+-   **Terimler.** Visual Basic'in önceki sürümlerindeki tanımak modülleri iki tür: *sınıf modülleri* (.cls dosyaları) ve *Standart modüller* (.bas dosyaları). Bu sürümdeki çağırır *sınıfları* ve *modülleri*sırasıyla.  
   
--   **Paylaşılan üyeler.** Bir sınıf üyesi paylaşılan olup veya örnek üyesine kontrol edebilirsiniz.  
+-   **Paylaşılan üyeler.** Bir sınıfın üyesi bir paylaşılan olup veya örnek üye denetleyebilirsiniz.  
   
--   **Nesne yönü.** Nesne odaklı sınıfları, ancak modüller değildir. Bu nedenle yalnızca sınıfları nesneler olarak oluşturulabilir. Daha fazla bilgi için bkz: [nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+-   **Nesne yönü.** Nesne yönelimli sınıflardır, ancak modüller değildir. Bu nedenle tek sınıf nesneleri olarak oluşturulabilir. Daha fazla bilgi için [nesneler ve sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Değiştirici.** Tüm modül örtük olarak üyeleridir [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md). Kullanamazsınız `Shared` bildirme üyesi ve herhangi bir üyenin paylaşılan durum değiştirilemiyor, anahtar sözcük.  
+-   **Değiştiriciler.** Tüm modül örtük olarak üyeleridir [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md). Kullanamazsınız `Shared` bildirme üyesi ve herhangi bir üyenin paylaşılan durumu değiştirilemiyor, anahtar sözcüğü.  
   
--   **Devralma.** Bir modül herhangi bir türünden dışında devral olamaz <xref:System.Object>, tüm modüllerine devralır. Özellikle, bir modül başka bir devralma olamaz.  
+-   **Devralma.** Bir modül dışında herhangi bir türden devralamaz <xref:System.Object>, hangi tüm modüllerden devralır. Özellikle, bir modül bir başkasından devralınamaz.  
   
-     Kullanamazsınız [Inherits deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md) belirtmek için bir modül tanımında bile <xref:System.Object>.  
+     Kullanamazsınız [devralan deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md) belirtmek için bir modül tanımında bile <xref:System.Object>.  
   
--   **Varsayılan özellik.** Bir modüldeki herhangi bir varsayılan özellik tanımlayamazsınız. Daha fazla bilgi için bkz: [varsayılan](../../../visual-basic/language-reference/modifiers/default.md).  
+-   **Varsayılan özellik.** Bir modülün herhangi bir varsayılan özelliği tanımlanamaz. Daha fazla bilgi için [varsayılan](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Erişim düzeyi.** Bir modül her üye kendi erişim düzeyi ile bildirebilir. Modül üyeleri için varsayılan değer [ortak](../../../visual-basic/language-reference/modifiers/public.md) erişim, değişkenleri ve sabitleri dışında varsayılan [özel](../../../visual-basic/language-reference/modifiers/private.md) erişim. Bir modül daha üyeleri birden sınırlı erişimi Belirtilen modül erişim düzeyi önceliklidir.  
+-   **Erişim düzeyi.** Bir modül her bir üyeyi kendi erişim düzeyiyle bildirebilirsiniz. Modül üyeler için varsayılan değer [genel](../../../visual-basic/language-reference/modifiers/public.md) erişim, değişkenler ve sabitler, dışında varsayılan [özel](../../../visual-basic/language-reference/modifiers/private.md) erişim. Bir modül daha üyelerinin birden sınırlı erişimi Belirtilen modül erişim düzeyi önceliklidir.  
   
--   **Kapsamı.** Kendi ad boyunca kapsamdaki bir modüldür.  
+-   **Kapsam.** Ad alanı kapsamdadır bir modüldür.  
   
-     Her modül üye kapsamını tüm modülüdür. Tüm üyeler uygulanabilecek bildirimi *yazın yükseltme*, kapsamlarına modülü içeren ad alanına yükseltilmesi neden olur. Daha fazla bilgi için bkz: [tür yükseltme](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+     Her modülü üye kapsamı bütün bir modüldür. Tüm üyeleri geçmeleri bildirimi *türü promosyon*, modülü içeren ad alanına yükseltilecek kapsamlarına neden olur. Daha fazla bilgi için [tür promosyonu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
--   **Niteliğe.** Bir projede birden fazla modülü sahip olabilir ve iki veya daha fazla modüllerinde aynı ada sahip üye bildirebilirsiniz. Ancak, başvuru dışında bu modül ise böyle bir üyesi uygun modül adı ile herhangi bir referans nitelemeniz gerekir. Daha fazla bilgi için bkz: [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   **Nitelik.** Bir projede birden çok modül sahip olabilir ve iki veya daha fazla modül aynı ada sahip üye bildirebilirsiniz. Ancak, başvurusu bu modül dışında ise herhangi bir referans gibi bir üye uygun modül adıyla nitelemeniz gerekir. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  

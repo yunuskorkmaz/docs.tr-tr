@@ -1,5 +1,5 @@
 ---
-title: SyncLock Deyimi
+title: SyncLock deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.SyncLock
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f5a89ebe359ca2fdae1d5545192dc2dcecca6a2
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604984"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244163"
 ---
 # <a name="synclock-statement"></a>SyncLock Deyimi
-Özel bir kilit deyimi bloğu için blok yürütmeden önce devralır.  
+Bir deyim bloğunu için özel bir kilit bloğu yürütmeden önce alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>Bölümler  
  `lockobject`  
- Gerekli. Bir nesne başvurusu veren ifade.  
+ Gerekli. Bir nesne başvurusu için değerlendirilen bir ifade.  
   
  `block`  
- İsteğe bağlı. Kilit alındığında yürütmek üzere olduğunuz deyimleri bloğu.  
+ İsteğe bağlı. Kilit alınıncaya sonra yürütülecek olan bir deyimler bloğunu.  
   
  `End SyncLock`  
- Sonlandırır bir `SyncLock` bloğu.  
+ Sonlandıran bir `SyncLock` blok.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SyncLock` Deyimi sağlar birden çok iş parçacığı aynı anda deyimi blok yürütülmez. `SyncLock` Her iş parçacığı, başka bir iş parçacığı, yürütülmekte olduğu kadar blok geçmesini engeller.  
+ `SyncLock` Bildirimi birden çok iş parçacığı deyim bloğunu aynı anda yürütmemesini sağlar. `SyncLock` Her iş parçacığı başka bir iş parçacığında yürütülen kadar blok girmesini engeller.  
   
- En yaygın kullanımı `SyncLock` verileri birden çok iş parçacığı tarafından eşzamanlı olarak güncelleştirilmesini korumaktır. Verileri işlemek deyimleri kesintisiz tamamlama gerekir giderseniz, bunları içine yerleştirin bir `SyncLock` bloğu.  
+ En yaygın kullanımı `SyncLock` birden fazla iş parçacığı tarafından aynı anda güncelleştirilmesini verilerin korunmasını sağlamaktır. Verileri işlemek için ifadeleri kesintisiz tamamlanması için geçmesi gereken, bunları içine yerleştirebilirsiniz bir `SyncLock` blok.  
   
- Özel bir kilit tarafından korunan bir ifade bloğu adlandırılan bir *kritik bölüm*.  
+ Özel bir kilit tarafından korunan bir deyim bloğunu adlandırılan bir *kritik bölüm*.  
   
 ## <a name="rules"></a>Kurallar  
   
--   Dal oluşturma. İçine dallanamıyor bir `SyncLock` dışında blok önleyin.  
+-   Dal oluşturma. Dal oluşturamazsınız bir `SyncLock` blok dışındaysa önleyin.  
   
--   Kilit nesne değeri. Değeri `lockobject` olamaz `Nothing`. İçinde kullanmadan önce kilit nesnesi oluşturmanız gerekir bir `SyncLock` deyimi.  
+-   Kilit nesne değeri. Değerini `lockobject` olamaz `Nothing`. İçinde kullanmadan önce nesnesi kilitlenemedi oluşturmalısınız bir `SyncLock` deyimi.  
   
-     Değeri değiştiremezsiniz `lockobject` yürütülürken bir `SyncLock` bloğu. Kilit nesnesi değişmeden mekanizması gerektirir.  
+     Değerini değiştiremezsiniz `lockobject` yürütülürken bir `SyncLock` blok. Mekanizması nesnesi kilitlenemedi değişmeden kalmasını gerektirir.  
   
--   Kullanamazsınız [bekleme](../../../visual-basic/language-reference/operators/await-operator.md) işlecinde bir `SyncLock` bloğu.  
+-   Kullanamazsınız [Await](../../../visual-basic/language-reference/operators/await-operator.md) işlecinde bir `SyncLock` blok.  
   
 ## <a name="behavior"></a>Davranış  
   
--   Mekanizması. Bir iş parçacığı ulaştığında `SyncLock` deyimi, bu hesaplar `lockobject` ifade ve özel bir kilit ifadesi tarafından döndürülen nesne üzerinde edinir kadar yürütme askıya alır. Başka bir iş parçacığı ulaştığında `SyncLock` deyimi, onu olmayan bir kilit alınması ilk iş parçacığı yürütür kadar `End SyncLock` deyimi.  
+-   Mekanizması. Bir iş parçacığı ulaştığında `SyncLock` deyimi olarak değerlendirilir `lockobject` deyim ve ifade tarafından döndürülen nesne üzerinde özel bir kilit alması kadar yürütmeyi askıya alır. Başka bir iş parçacığı ulaştığında `SyncLock` deyimi, onu değil bir kilit alınması ilk iş parçacığında yürütülene kadar `End SyncLock` deyimi.  
   
--   Korunan veriler. Varsa `lockobject` olan bir `Shared` değişken, özel kullanım kilidi sınıfının bir örneğini bir iş parçacığında yürütülmesini engeller `SyncLock` başka bir iş parçacığı yürütülürken engelleyin. Bu, tüm örnekler arasında paylaşılan verileri korur.  
+-   Korunan veriler. Varsa `lockobject` olduğu bir `Shared` değişken, özel bir kilit herhangi bir sınıfın örneğini bir iş parçacığında yürütülmesini engeller `SyncLock` başka bir iş parçacığı yürütülürken engelleyin. Bu, tüm örnekler arasında paylaşılan verileri korur.  
   
-     Varsa `lockobject` bir örnek değişkeni (değil `Shared`), kilit yürütülmesini geçerli örneğinde çalışan iş parçacığı engeller `SyncLock` başka bir iş parçacığı aynı örneğinde aynı zamanda bloğu. Bu, tek tek örneği tarafından tutulan verileri korur.  
+     Varsa `lockobject` bir örneği değişkenidir (değil `Shared`), kilit yürütülmesini geçerli örneğinde çalışan iş parçacığı engeller `SyncLock` başka bir iş parçacığıyla aynı örneğinde aynı anda blok. Bu, tek bir örnek tarafından tutulan verileri korur.  
   
--   Edinme ve sürüm. A `SyncLock` engelleme davranacağını gibi bir `Try...Finally` yapım, `Try` blok üzerinde özel bir kilit edinir `lockobject` ve `Finally` blok yayımlar. Bu nedenle, `SyncLock` blok blok çıkmak nasıl olsun kilidi sürümü güvence altına alır. Bu, hatta işlenmeyen bir özel durum söz konusu olduğunda geçerlidir.  
+-   Alım ve yayın. A `SyncLock` blok davranacağını gibi bir `Try...Finally` oluşturma, hangi `Try` blok üzerinde özel bir kilit alması `lockobject` ve `Finally` blok yayımlar. Bu nedenle, `SyncLock` blok blok çıkış ne olursa olsun kilit, yayın garanti eder. İşlenmeyen özel durum söz konusu olduğunda bile bu geçerlidir.  
   
--   Framework çağırır. `SyncLock` Bloğu edinir ve çağırarak özel kullanım kilidi serbest `Enter` ve `Exit` yöntemlerinin `Monitor` sınıfını <xref:System.Threading> ad alanı.  
+-   Framework çağırır. `SyncLock` Blok edinme ve özel bir kilit çağırarak serbest `Enter` ve `Exit` yöntemlerinin `Monitor` sınıfını <xref:System.Threading> ad alanı.  
   
 ## <a name="programming-practices"></a>Programlama yöntemler  
- `lockobject` İfade her zaman özel olarak sınıfa ait bir nesneye değerlendirin. Bildirmeniz gerekir bir `Private` geçerli örneğine ait olan verileri korumak için nesne değişkeni veya `Private Shared` için tüm örnekleri ortak verileri korumak için nesne değişkeni.  
+ `lockobject` İfade her zaman özel olarak, sınıfın ait olduğu bir nesneye değerlendirin. Size bildirmelidir bir `Private` geçerli örneğine ait verileri korumak için nesne değişkeni veya bir `Private Shared` için tüm örnekleri ortak verileri korumak için nesne değişkeni.  
   
- Kullanılamaz `Me` anahtar sözcüğü bir kilit sağlamak için nesne örneği için veri. Kodu sınıfınıza dış sınıfının bir örneğine başvuru varsa, bunun için bir kilit nesnesi olarak bu başvuruyu kullanabilir bir `SyncLock` blok sizin tamamen farklı farklı veri koruma. Bu şekilde, sizin ve diğer sınıf birbiriyle ilgisiz kendi yürütülmesini engelleyin `SyncLock` engeller. Aynı dize kullanarak işlemdeki başka bir kod aynı kilit paylaşacak beri benzer şekilde bir dizesine kilitleme sorunlu olabilir.  
+ Kullanmamalısınız `Me` anahtar sözcüğü bir kilit sağlamak için nesne örneği için veri. Kodu sınıfınıza dış bir başvuru sınıfının bir örneği varsa, bunun için bir kilit nesnesi olarak bu başvuruyu kullanabilir bir `SyncLock` blok sizinkinden, tamamen farklı farklı veri koruma. Bu şekilde, sınıfınıza ve diğer sınıf birbiriyle ilgisiz kendi yürütülmesini engelleyebilecek `SyncLock` engeller. Aynı kilit işlemi kullanarak aynı dize içindeki diğer kodlardan paylaşacak beri benzer şekilde bir dizesine kilitleme sorunlara neden olabilir.  
   
- Ayrıca kullanılamaz `Me.GetType` yöntemi için bir kilit nesnesi sağlamak için paylaşılan veri. Bunun nedeni, `GetType` her zaman aynı döndürür `Type` nesne belirtilen sınıf adı. Harici kod çağrısı `GetType` sınıfınızın ve kullandığınız aynı kilit nesnesini alın. Bu birbirinden engelleme iki sınıf ile sonuçlandı kendi `SyncLock` engeller.  
+ Ayrıca kullanmamalısınız `Me.GetType` yöntemi için bir kilit nesnesi sağlamak için paylaşılan veri. Bunun nedeni, `GetType` her zaman aynı döndürür `Type` nesne için belirli bir sınıf adı. Dış kod arama `GetType` sınıfınızın ve kullanmakta olduğunuz aynı kilit nesnesini alın. Bu iki sınıf birbirinden engelleme neden olur, `SyncLock` engeller.  
   
 ## <a name="examples"></a>Örnekler  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte basit iletilerin listesini tutar bir sınıfı gösterir. Bir dizi iletileri tutar ve son bu dizinin öğesi bir değişkende kullanılır. `addAnotherMessage` Yordamı son öğe artırır ve yeni ileti depolar. Bu iki işlemler tarafından korunan `SyncLock` ve `End SyncLock` deyimleri, son öğe artar sonra başka bir iş parçacığı son öğe yeniden artırabilirsiniz önce yeni ileti depolanması gerekir çünkü.  
+ Aşağıdaki örnek, basit bir iletiler listesini tutar bir sınıfı gösterir. Bir dizide iletileri tutar ve son öğe, dizinin bir değişkende kullanılır. `addAnotherMessage` Yordam son öğeyi artırır ve yeni iletinin depolar. Bu iki işlem tarafından korunan `SyncLock` ve `End SyncLock` deyimleri, çünkü son öğeyi artırıldıktan sonra başka bir iş parçacığı son öğeyi yeniden artırabilirsiniz önce yeni iletinin depolanması gerekir.  
   
- Varsa `simpleMessageList` sınıfı paylaşılan tüm örneklerini, değişkenleri arasında iletilerinin bir listesini `messagesList` ve `messagesLast` olarak bildirilmesi `Shared`. Bu durumda, değişkeni `messagesLock` ayrıca olmalıdır `Shared`her örneği tarafından kullanılan tek kilit nesnesi böylece bulunmaz.  
+ Varsa `simpleMessageList` sınıfın tüm örnekleri, değişkenleri arasında iletilerinin bir listesini paylaşılan `messagesList` ve `messagesLast` olarak bildirilmesi `Shared`. Bu durumda, değişken `messagesLock` ayrıca olmalıdır `Shared`, her örnek için kullanılan tek kilit nesnesi böylece olacaktır.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, iş parçacığı kullanır ve `SyncLock`. Sürece `SyncLock` deyimi varsa, deyimi blok kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı olur. Out açıklama `SyncLock` ve `End SyncLock` bırakarak etkisini görmek için deyimleri `SyncLock` anahtar sözcüğü.  
+ Aşağıdaki örnek, iş parçacığı kullanır ve `SyncLock`. Sürece `SyncLock` deyimi, deyim bloğunu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı olur. Açıklama `SyncLock` ve `End SyncLock` bırakarak etkisini görmek için ifadeleri `SyncLock` anahtar sözcüğü.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  

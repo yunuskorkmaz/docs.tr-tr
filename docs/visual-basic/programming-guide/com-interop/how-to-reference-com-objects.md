@@ -9,48 +9,48 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 49f3da396ca5cd48b0cf454ce1ecd5422c28e38f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643958"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199371"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma
-Visual Basic'te tür kitaplıklarının COM nesneleri başvuruları ekleme birlikte çalışabilirlik bütünleştirilmiş oluşturulması için COM kitaplığı gerektirir. COM Nesne üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve gerçek COM nesneye iletilir. COM nesnesi yanıtlarının birlikte çalışma derlemesine yönlendirilir ve iletilir, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama.  
+Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve iletilmesi, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama.  
   
- Bir .NET derlemesi COM nesnesinin tür bilgilerini katıştırma ile birlikte çalışma bütünleştirilmiş kullanmadan bir COM nesnesi başvuruda bulunabilir. Tür bilgileri katıştırmak için `Embed Interop Types` özelliğine `True` COM Nesne başvurusunu için. Komut satırı derleyicisini kullanarak derlediğiniz kullanırsanız `/link` COM kitaplığı başvurusu için seçeneği. Daha fazla bilgi için bkz: [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Tür bilgilerini COM nesnesi için bir .NET derlemesine gömerek birlikte çalışma derlemesi kullanmadan bir COM nesnesi başvuruda bulunabilir. Tür bilgilerini katıştırma için ayarlanmış `Embed Interop Types` özelliğini `True` için COM nesnesine başvuru. Komut satırı derleyicisini kullanarak derlemek kullanırsanız `/link` COM kitaplığı başvurmak için seçeneği. Daha fazla bilgi için [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- Tümleşik geliştirme ortamı (IDE) bir tür kitaplığı için bir başvuru eklediğinizde, Visual Basic birlikte çalışma derlemeleri otomatik olarak oluşturur. Komut satırından çalışırken, el ile birlikte çalışma derlemeleri oluşturma için Tlbimp yardımcı programını kullanabilirsiniz.  
+ Tümleşik geliştirme ortamından (IDE) bir tür kitaplığına bir başvuru eklediğinizde, Visual Basic birlikte çalışma derlemeleri otomatik olarak oluşturur. Komut satırından çalışırken, birlikte çalışma derlemelerini el ile oluşturmak için Tlbimp yardımcı programını kullanabilirsiniz.  
   
-### <a name="to-add-references-to-com-objects"></a>COM nesneleri eklemek için  
+### <a name="to-add-references-to-com-objects"></a>COM nesnelerinin başvuruları eklemek için  
   
 1.  Üzerinde **proje** menüsünde seçin **Başvuru Ekle** ve ardından **COM** iletişim kutusundaki sekmesi.  
   
 2.  COM nesneleri listesinden kullanmak istediğiniz bileşeni seçin.  
   
-3.  Birlikte çalışma derlemesi erişimi kolaylaştırmak için add bir `Imports` sınıfı veya COM nesnesi içinde kullanacağınız modülü üstüne deyimi. Örneğin, aşağıdaki kod örneğinde ad alır `INKEDLib` başvurulan nesneler için `Microsoft InkEdit Control 1.0` kitaplığı.  
+3.  Birlikte çalışma derlemesi erişimini basitleştirmek için ekleme bir `Imports` sınıfı veya modülü COM nesnesi içinde kullanacağınız üstüne deyimi. Örneğin, aşağıdaki kod örneği ad alanını içeri aktarır `INKEDLib` başvurulan nesneler için `Microsoft InkEdit Control 1.0` kitaplığı.  
   
      [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
-### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Birlikte çalışma bütünleştirilmiş Tlbimp kullanarak oluşturmak için  
+### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Tlbimp kullanarak birlikte çalışma derlemesi oluşturmak için  
   
-1.  Bunu zaten arama yolu parçası olmayan ve, şu anda bulunduğu dizinde olmayan Tlbimp konumunu arama yoluna ekleyin.  
+1.  Tlbimp konumunu zaten arama yolu bir parçası değilse ve değil o anda bulunduğu dizinde arama yoluna ekleyin.  
   
 2.  Çağrı, bir komut isteminden aşağıdaki bilgileri sağlayarak Tlbimp:  
   
-    -   Ad ve tür kitaplığı içeren dll Dosyasının konumu  
+    -   Ad ve tür kitaplığı içeren DLL konumunu  
   
-    -   Ad ve konum bilgileri nereye yerleştirileceğini ad alanı  
+    -   Ad ve konum bilgileri yerleştirilmesi gereken ad alanı  
   
-    -   Ad ve konum hedef birlikte çalışma derlemesinin  
+    -   Ad ve hedef birlikte çalışma bütünleştirilmiş kod konumu  
   
-     Aşağıdaki kod bir örnek sağlar:  
+     Aşağıdaki kod, bir örnek sağlar:  
   
     ```  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     Kayıtsız COM nesneleri için bile tür kitaplıkları için birlikte çalışma derlemeleri oluşturma için Tlbimp kullanabilirsiniz. Ancak, birlikte çalışma derlemeleri tarafından başvurulan COM nesneleri düzgün kullanılacak oldukları bilgisayarda kayıtlı olması gerekir. Bir COM nesnesi ile Windows işletim sisteminde Regsvr32 yardımcı programını kullanarak kaydedebilirsiniz.  
+     Kayıtsız COM nesneleri için bile, tür kitaplıkları için birlikte çalışma derlemeleri oluşturmak için Tlbimp kullanabilirsiniz. Ancak, birlikte çalışma derlemesi tarafından başvurulan COM nesneleri kullanılacak oldukları bilgisayarda düzgün bir şekilde kaydedilmesi gerekir. Bir COM nesnesi ile Windows işletim sisteminde Regsvr32 yardımcı programını kullanarak kaydedebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)  

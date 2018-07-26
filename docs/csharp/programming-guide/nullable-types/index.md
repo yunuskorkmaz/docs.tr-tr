@@ -7,43 +7,43 @@ helpviewer_keywords:
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105494"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245602"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Boş Değer Atanabilir Türler (C# Programlama Kılavuzu)
-Boş değer atanabilir türler örnekleridir <xref:System.Nullable%601?displayProperty=nameWithType> yapısı. Boş değer atanabilir bir tür değerleri temel alınan değer türü artı ek için doğru aralığı gösterebilir `null` değeri. Örneğin, bir `Nullable<Int32>`, okunur "Boş değer atanabilir, Int32," atanabilir herhangi bir değer -2147483648 2147483647 için ya da bu atanabilir `null` değeri. A `Nullable<bool>` değerler atanabilir [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), veya [null](../../../csharp/language-reference/keywords/null.md). Atama olanağı `null` veritabanları ve bir değer atanamaz öğeleri içeren diğer veri türleri ile ilgilenirken sayısal ve Boole türleri için özellikle yararlıdır. Örneğin, bir veritabanında bir Boole alanı değerleri depolayabilir `true` veya `false`, veya tanımsız olabilir. 
+Boş değer atanabilir türler örnekleridir <xref:System.Nullable%601?displayProperty=nameWithType> yapısı. Boş değer atanabilir bir tür değerleri kendi temel değer türü artı ek için doğru aralığı temsil edebilen `null` değeri. Örneğin, bir `Nullable<Int32>`, okunur "Boş değer atanabilir, Int32," atanabilir herhangi bir değer -2147483648 2147483647 için veya bu atanabilir `null` değeri. A `Nullable<bool>` değerler atanabilir [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), veya [null](../../../csharp/language-reference/keywords/null.md). Atama özelliği `null` veritabanları ve bir değer atanamaz öğeleri içeren diğer veri türleri ile ilgilenirken sayısal ve Boolean türleri için özellikle yararlıdır. Örneğin, bir veritabanında bir Boole alanı değerleri depolayabilir `true` veya `false`, ya da tanımlanmamış olabilir. 
   
 [!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
-Daha fazla örnek için bkz: [boş değer atanabilir türleri kullanma](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+Daha fazla örnek için bkz. [boş değer atanabilir türleri kullanma](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
 ## <a name="nullable-types-overview"></a>Boş değer atanabilir türler genel bakış  
  Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:  
   
--   Boş değer atanabilir türleri temsil eden değeri atanabilir değer türü değişkenleri `null`. Bir başvuru türüne göre boş değer atanabilir bir tür oluşturulamıyor. (Başvuru türleri zaten Destek `null` değeri.)  
+-   Boş değer atanabilir türleri temsil eden değeri atanabilir bir değer türü değişkenler `null`. Bir başvuru türüne göre boş değer atanabilir bir tür oluşturulamıyor. (Başvuru türleri halihazırda desteklediği `null` değeri.)  
   
--   Sözdizimi `T?` için toplu özelliktir <xref:System.Nullable%601>, burada `T` değer türü değil. İki tür birbirinin yerine kullanılabilir.  
+-   Söz dizimi `T?` için toplu özelliktir <xref:System.Nullable%601>burada `T` bir değer türüdür. İki tür birbirinin yerine kullanılabilir.  
   
--   Sıradan değer türü için örneğin gibi bir değer null olabilir bir tür atama `int? x = 10;` veya `double? d = 4.108;`. Boş değer atanabilir bir tür, değer atanabilir `null`: `int? x = null;`.  
+-   Sıradan değer türü için örneğin olduğu gibi boş değer atanabilir bir tür için bir değer atamak `int? x = 10;` veya `double? d = 4.108;`. Boş değer atanabilir bir tür, değer atanabilir `null`: `int? x = null;`.  
   
--   Kullanım <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> değer ise atanan değer veya temel alınan türü için varsayılan değer döndürmek için yöntemini `null`, örneğin `int j = x.GetValueOrDefault();`  
+-   Kullanım <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> atanan değer veya varsayılan değeri temel alınan türü için değer ise döndürülecek yöntemi `null`, örneğin `int j = x.GetValueOrDefault();`  
   
--   Kullanım <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> salt okunur özellikler için null sınamak ve aşağıdaki örnekte gösterildiği gibi değeri almak için: `if(x.HasValue) j = x.Value;`  
+-   Kullanım <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> salt okunur özellikler için null test etmek ve değerini, aşağıdaki örnekte gösterildiği gibi almak için: `if(x.HasValue) j = x.Value;`  
   
-    -   `HasValue` Özelliği döndürür `true` değişkeni bir değer içeriyorsa veya `false` , `null`.  
+    -   `HasValue` Özelliği döndürür `true` değişken bir değer içeriyorsa veya `false` ise `null`.  
   
-    -   `Value` Özelliği bir atanmışsa değeri döndürür. Aksi halde, bir <xref:System.InvalidOperationException?displayProperty=nameWithType> oluşturulur.  
+    -   `Value` Atanırsa, bir özellik değeri döndürür. Aksi takdirde, bir <xref:System.InvalidOperationException?displayProperty=nameWithType> oluşturulur.  
   
-    -   İçin varsayılan değer `HasValue` olan `false`. `Value` Özelliğine sahip bir varsayılan değeri yok.  
+    -   İçin varsayılan değer `HasValue` olduğu `false`. `Value` Özelliği varsayılan değere sahip.  
   
-    -   Aynı zamanda `==` ve `!=` aşağıdaki örnekte gösterildiği gibi null olabilir bir tür işleçlerle: `if (x != null) y = x;`  
+    -   Ayrıca `==` ve `!=` işleçleri aşağıdaki örnekte gösterildiği gibi boş değer atanabilir bir tür ile: `if (x != null) y = x;`  
   
--   Kullanım `??` geçerli değeri null olabilir bir tür olduğunda uygulanan varsayılan bir değer atamak için işleci `null` alamayan bir tür için örneğin atanır `int? x = null; int y = x ?? -1;`  
+-   Kullanım `??` geçerli değeri null yapılabilir bir tür olduğunda uygulanacak bir varsayılan değer atamak için işleç `null` alamayan bir tür için örneğin atanır `int? x = null; int y = x ?? -1;`  
   
--   İç içe geçmiş boş değer atanabilir türler izin verilmiyor. Aşağıdaki satırı derlenmez: `Nullable<Nullable<int>> n;`  
+-   İç içe geçmiş boş değer atanabilir türler izin verilmez. Aşağıdaki satırı derlemeyecektir: `Nullable<Nullable<int>> n;`  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  
@@ -62,4 +62,4 @@ Daha fazla örnek için bkz: [boş değer atanabilir türleri kullanma](../../..
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md)  
  [C# başvurusu](../../../csharp/language-reference/index.md)  
- [Tam olarak 'kaldırılmış' anlamı nedir?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+ [Tam olarak 'yükseltilmiş' ne demektir?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

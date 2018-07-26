@@ -3,40 +3,40 @@ title: "İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derleme
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643828"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244062"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio'da (Visual Basic) Microsoft Office derlemelerinden tür bilgilerini katıştırma
-COM nesneleri başvuruda bulunan bir uygulamada tür bilgilerini katıştırma, birincil birlikte çalışma derlemesi (PIA) gereksinimini ortadan kaldırabilirsiniz. Ayrıca, katıştırılmış tür bilgisi sürüm bağımsızlığı, uygulamanız için elde etmenizi sağlar. Diğer bir deyişle, programınız belirli PIA her sürüm için gerek kalmadan COM kitaplığı birden fazla sürümünü türlerinden kullanacak şekilde yazılabilir. Bu, Microsoft Office kitaplıklarından nesneleri kullanan uygulamalar için ortak bir senaryodur. Tür bilgilerini katıştırma farklı sürümlerini Microsoft Office programı veya Microsoft Office her sürümü PIA yeniden dağıtmak zorunda kalmadan farklı bilgisayarlarda çalışmak için bir programın aynı yapı sağlar.  
+Tür bilgilerini COM nesnelerine başvuran bir uygulamaya eklerseniz, birincil birlikte çalışma derlemesi (PIA) gereksinimini ortadan kaldırabilir. Ek olarak, gömülü tür bilgileri, uygulamanız için sürüm bağımsızlığı elde etmenizi sağlar. Diğer bir deyişle, programınız her sürüm için belirli bir PIA'ya gerek kalmadan bir COM kitaplığının birden çok sürümünden türler kullanmak üzere yazılabilir. Bu, Microsoft Office kitaplıklarından nesne kullanan uygulamalar için yaygın bir senaryodur. Tür bilgilerini katıştırma farklı Microsoft Office sürümleri program ya da her sürümü Microsoft Office PIA'yı tekrar dağıtma gereği olmaksızın farklı bilgisayarlarda çalışmak için bir programı'nın aynı derlemesini etkinleştirir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu kılavuz aşağıdakileri gerektirir:  
+ Bu izlenecek yol aşağıdakileri gerektirir:  
   
--   Visual Studio ve Microsoft Excel yüklü bir bilgisayar.  
+-   Visual Studio ve Microsoft Excel yüklü olan bir bilgisayar.  
   
--   .NET Framework 4 veya sonraki sürümünü ve Excel farklı bir sürümü yüklü ikinci bir bilgisayar.  
+-   .NET Framework 4 veya daha yüksek ve farklı bir Excel sürümünün yüklü olan ikinci bir bilgisayar.  
   
-##  <a name="BKMK_createapp"></a> Microsoft Office birden çok sürümü ile çalışan bir uygulama oluşturmak için  
+##  <a name="BKMK_createapp"></a> Birden çok Microsoft Office sürümü ile çalışan bir uygulama oluşturmak için  
   
-1.  Excel yüklü olmadığı bir bilgisayara Visual Studio'yu başlatın.  
+1.  Excel yüklü olduğu bir bilgisayarda Visual Studio'yu başlatın.  
   
 2.  Üzerinde **dosya** menüsünde seçin **yeni**, **proje**.  
   
-3.  İçinde **yeni proje** iletişim kutusunda **proje türleri** bölmesinde olduğundan emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `CreateExcelWorkbook`ve ardından **Tamam** düğmesi. Yeni Proje oluşturulur.  
+3.  İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `CreateExcelWorkbook`ve ardından **Tamam** düğmesi. Yeni Proje oluşturulur.  
   
-4.  CreateExcelWorkbook proje için kısayol menüsünü açın ve ardından **özellikleri**. Seçin **başvuruları** sekmesi. Seçin **Ekle** düğmesi.  
+4.  CreateExcelWorkbook projesinin kısayol menüsünü açın ve ardından **özellikleri**. Seçin **başvuruları** sekmesi. Seçin **Ekle** düğmesi.  
   
-5.  Üzerinde **.NET** sekmesinde, en son sürümünü seçin `Microsoft.Office.Interop.Excel`. Örneğin, **Microsoft.Office.Interop.Excel 14.0.0.0**. Seçin **Tamam** düğmesi.  
+5.  Üzerinde **.NET** sekmesini, en son sürümünü `Microsoft.Office.Interop.Excel`. Örneğin, **Microsoft.Office.Interop.Excel 14.0.0.0**. Seçin **Tamam** düğmesi.  
   
-6.  Başvuruları listesinde **CreateExcelWorkbook** projesi, başvurusunu seçin `Microsoft.Office.Interop.Excel` , önceki adımda eklediğiniz. İçinde **özellikleri** penceresinde olduğundan emin olun `Embed Interop Types` özelliği ayarlanmış `True`.  
+6.  Başvuruları listesinde **CreateExcelWorkbook** başvurusunu seçin, proje `Microsoft.Office.Interop.Excel` önceki adımda eklediğiniz. İçinde **özellikleri** penceresinde emin `Embed Interop Types` özelliği `True`.  
   
     > [!NOTE]
-    >  Bu kılavuzda oluşturulan uygulama nedeniyle katıştırılmış birlikte çalışma türü bilgileri Microsoft Office'in farklı sürümlerinde çalışır. Varsa `Embed Interop Types` özelliği ayarlanmış `False`, her sürümü ile uygulamanın çalıştırılacağı Microsoft Office PIA eklemeniz gerekir.  
+    >  Bu izlenecek yolda oluşturulan uygulama, katıştırılmış birlikte çalışma türünden bilgiler nedeniyle farklı Microsoft Office sürümleri ile çalışır. Varsa `Embed Interop Types` özelliği `False`, her uygulamanın birlikte çalışacağı Microsoft Office sürümü için bir PIA eklemelisiniz.  
   
 7.  Module1.vb dosyasını açın. Dosyasındaki kodu aşağıdaki kodla değiştirin:  
   
@@ -95,19 +95,19 @@ COM nesneleri başvuruda bulunan bir uygulamada tür bilgilerini katıştırma, 
   
 8.  Projeyi kaydedin.  
   
-9. Projesini derlemeyi ve çalıştırmayı için CTRL + F5 tuşuna basın. Bir Excel çalışma kitabı örnek kodda belirtilen konumda oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
+9. Derleme ve projeyi çalıştırmak için CTRL + F5 tuşlarına basın. Örnek kodda belirtilen konumda bir Excel çalışma kitabının oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
   
-##  <a name="BKMK_publishapp"></a> Microsoft Office'in farklı bir sürümü yüklü olduğu bir bilgisayar için uygulama yayımlamak için  
+##  <a name="BKMK_publishapp"></a> Uygulamayı farklı bir Microsoft Office sürümü yüklü olan bir bilgisayarda yayınlamak için  
   
 1.  Bu kılavuzda Visual Studio tarafından oluşturulan projeyi açın.  
   
-2.  Üzerinde **yapı** menüsünde seçin **yayımlama CreateExcelWorkbook**. Uygulama, yüklenebilir bir sürümünü oluşturmak için Yayımlama Sihirbazı'nın adımları izleyin. Daha fazla bilgi için bkz: [Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)](https://msdn.microsoft.com/library/bb625071).  
+2.  Üzerinde **derleme** menüsünde seçin **CreateExcelWorkbook Yayınla**. Uygulamanın yüklenebilir bir sürümünü oluşturmak için yayınlama Sihirbazı'nın adımları izleyin. Daha fazla bilgi için [Yayımlama Sihirbazı (Visual Studio'da Office Geliştirme)](https://msdn.microsoft.com/library/bb625071).  
   
-3.  Uygulama, .NET Framework 4 veya sonraki sürümünü ve Excel farklı bir sürümü yüklü bir bilgisayara yükleyin.  
+3.  Uygulama, .NET Framework 4 veya daha yüksek ve farklı bir Excel sürümünün yüklü bir bilgisayara yükleyin.  
   
-4.  Yükleme tamamlandığında, yüklenen bir program çalıştır.  
+4.  Yükleme tamamlandığında yüklenen programı çalıştırın.  
   
-5.  Bir Excel çalışma kitabı örnek kodda belirtilen konumda oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
+5.  Örnek kodda belirtilen konumda bir Excel çalışma kitabının oluşturulduğunu doğrulayın: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  

@@ -1,24 +1,24 @@
 ---
-title: 'Hayır erişilebilir aşırı &#39; &lt;methodname&gt; &#39; daraltma dönüşümü olmadan bu bağımsız değişkenlerle çağrılamaz: &lt;listesi&gt;'
+title: 'Hiçbir erişilebilir aşırı &#39; &lt;methodname&gt; &#39; bir daraltma dönüşümü olmadan bu bağımsız değişkenlerle çağrılır: &lt;listesi&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: 5ed692ffaa22f82eda0c675dafaa1cb64a4d31f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c298f996322f5ad80b4e76ecf2dd33b4205e3f42
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636545"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244370"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Hayır erişilebilir aşırı &#39; &lt;methodname&gt; &#39; daraltma dönüşümü olmadan bu bağımsız değişkenlerle çağrılamaz: &lt;listesi&gt;
-Aşırı yüklenmiş yöntemin çağrıldı, ancak sağlanan bağımsız değişkenler olmadan daraltma dönüşümü listesiyle yöntemi eşleştirilemiyor.  
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Hiçbir erişilebilir aşırı &#39; &lt;methodname&gt; &#39; bir daraltma dönüşümü olmadan bu bağımsız değişkenlerle çağrılır: &lt;listesi&gt;
+Aşırı yüklenmiş bir yöntemi çağrıldı, ancak yöntem bir daraltma dönüşümü olmadan sağlanan bağımsız değişken listesiyle eşleşemez.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Belirtin `Option``Strict` `Off`.  
+1.  Belirtin `Option Strict Off`.
   
-2.  Bağımsız değişkenlerini aşırı yüklenmiş yöntemin imzası eşleşecek şekilde değiştirin.  
+2.  Bağımsız değişkenleri, aşırı yüklenmiş metodun imzası eşleşecek şekilde değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  

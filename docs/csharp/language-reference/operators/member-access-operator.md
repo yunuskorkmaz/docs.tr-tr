@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
 ms.openlocfilehash: 088f1991cafa92a69e11ca14bd2d983b36c0e3ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271035"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244705"
 ---
 # <a name="-operator-c-reference"></a>biçimindeki telefon numarasıdır. İşleci (C# Başvurusu)
-Nokta işleci (`.`) üye erişimi için kullanılır. Nokta işleci türü veya ad alanı üyesi belirtir. Örneğin, dot işleci, .NET Framework sınıf kitaplıkları içinde belirli yöntemler erişmek için kullanılır:  
+Nokta işleci (`.`) üye erişimi için kullanılır. Dot işleci, bir tür veya ad alanı üyesi belirtir. Örneğin, nokta işleci, .NET Framework sınıf kitaplıkları belirli yöntemlerinde erişmek için kullanılır:  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
@@ -26,11 +26,11 @@ Nokta işleci (`.`) üye erişimi için kullanılır. Nokta işleci türü veya 
   
  [!code-csharp[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
   
- Değişkeni `s` iki üyesi olan `a` ve `b`; erişmesine, nokta işlecini kullanın:  
+ Değişken `s` iki üyesi olan `a` ve `b`; bunlara erişmek için nokta işlecini kullanın:  
   
  [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- Nokta da ad alanı veya arabirim, örneğin, ait oldukları belirtin adları nitelenmiş adlar oluşturmak için kullanılır.  
+ Nokta ad alanı veya arabirimi, örneğin, ait oldukları belirten adlarının tam adları oluşturmak için de kullanılır.  
   
  [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
@@ -38,7 +38,7 @@ Nokta işleci (`.`) üye erişimi için kullanılır. Nokta işleci türü veya 
   
  [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- Ancak bir tanımlayıcı belirsiz olduğunda nitelenmelidir:  
+ Ancak, bir tanımlayıcı belirsiz olduğunda nitelenmelidir:  
   
  [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   

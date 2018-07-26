@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: akış dönüşümü büyük XML belgelerinin (C#)'
+title: 'Nasıl yapılır: (C#) büyük XML belgelerinin akış dönüşümünü gerçekleştirme'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
 ms.openlocfilehash: 1a12e8c0ae98be37599b05e5d63469336247d915
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325610"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244146"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Nasıl yapılır: akış dönüşümü büyük XML belgelerinin (C#)
-Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece uygulamanın bellek alanını tahmin edilebilir gerekir. Bir XML ağaç içeren çok büyük bir XML dosyası doldurmak çalışırsanız, bellek kullanımı dosyasının boyutunu orantılı (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Nasıl yapılır: (C#) büyük XML belgelerinin akış dönüşümünü gerçekleştirme
+Bazen büyük XML dosyalarını dönüştürme ve uygulamanızı yazın, böylece bellek Ayak izi uygulamanın öngörülebilir gerekir. Çok büyük bir XML dosyası ile XML ağacı doldurma denerseniz, bellek kullanımınızı orantılı dosya boyutunu (diğer bir deyişle, aşırı). Bu nedenle, bir akış teknik yerine kullanmanız gerekir.  
   
- Akış teknikleri en iyi kaynak belge yalnızca bir kez işlem gerekir ve belge sırayla öğeleri işleyebilmesi için durumlarda uygulanır. Belirli standart sorgu işleçleri gibi <xref:System.Linq.Enumerable.OrderBy%2A>kendi kaynak yinelemek, tüm verileri toplamak, sıralanmasını ve son olarak dizinin ilk öğesi verim. İlk öğe sağlayan önce kaynağı gerçeğe bir sorgu işleci kullanırsanız, küçük bellek alanını'ı, uygulamanız için bulamayacaktır unutmayın.  
+ Akış teknikleri, burada yalnızca bir kez kaynak belge işlemek gereken ve belge sırada öğeleri işleyebilir durumlarda en iyi şekilde uygulanır. Belirli standart sorgu işleçleri gibi <xref:System.Linq.Enumerable.OrderBy%2A>kaynağına yineleme, tüm verileri Topla, sıralanmasını ve son sıradaki ilk öğeyi yield. İlk öğeyi oluşturan önce kaynağına gerçekleştiren bir sorgu işlecini kullanmak, bir küçük bellek Ayak izi'ı uygulamanız için korumaz unutmayın.  
   
- Açıklanan tekniği kullansanız bile [nasıl yapılır: akışı XML parçaları üst bilgileri (C#) erişimi](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), bellek kullanımı çok olacaktır dönüştürülmüş belgeyi içeren bir XML ağacı derlemek çalışırsanız.  
+ Açıklanan tekniği kullanıyor olsanız bile [nasıl yapılır: üst bilgileri (C#) erişimi Stream parçalarını](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), dönüştürülen belgeyi, bellek kullanımı çok olacaktır içeren bir XML ağacı derlemek deneyin.  
   
- İki ana yaklaşım vardır. Bir yaklaşım ise ertelenmiş işleme özelliklerini kullanmak için <xref:System.Xml.Linq.XStreamingElement>. Başka bir yaklaşım oluşturmaktır bir <xref:System.Xml.XmlWriter>ve özelliklerini kullanma [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu konu, her iki yaklaşımın gösterir.  
+ İki temel yaklaşım vardır. Ertelenen işlem özelliklerini kullanmak için bir yaklaşım ise <xref:System.Xml.Linq.XStreamingElement>. Başka bir yaklaşım oluşturmaktır bir <xref:System.Xml.XmlWriter>ve yeteneklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu konuda, her iki yaklaşım gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek örnekte inşa edilmiştir [nasıl yapılır: akışı XML parçaları üst bilgileri (C#) erişimi](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Aşağıdaki örnek örnekte geliştirir [nasıl yapılır: üst bilgileri (C#) erişimi Stream parçalarını](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Bu örnek, ertelenmiş yürütme yeteneklerini kullanır <xref:System.Xml.Linq.XStreamingElement> çıkış akışı. Bu örnek, bir küçük bellek alanını korurken çok büyük bir belge dönüştürebilirsiniz.  
+ Bu örnekte ertelenmiş yürütme yeteneklerini <xref:System.Xml.Linq.XStreamingElement> çıkış akışı. Bu örnek, bir küçük bellek Ayak izi korurken çok büyük bir belge dönüştürebilirsiniz.  
   
- Unutmayın özel eksen (`StreamCustomerItem`) bir belge bekliyor böylece özel olarak yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve bu öğeleri aşağıdaki Source.xml belgeyi olduğu gibi düzenlenmiş. Geçersiz bir belge ayrıştırılacak ancak, daha sağlam bir uygulama hazırlanması.  
+ Unutmayın özel eksen (`StreamCustomerItem`) ve böylece bir belgeye bekliyor özellikle yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve öğeler aşağıdaki Source.xml belgeyi olduğu gibi düzenlenir. Geçersiz bir belge ayrıştırılacak ancak daha sağlam bir uygulama hazırlanması.  
   
  Kaynak belge Source.xml verilmiştir:  
   
@@ -189,15 +189,15 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte de örnekte inşa edilmiştir [nasıl yapılır: akışı XML parçaları üst bilgileri (C#) erişimi](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Aşağıdaki örnekte de geliştirir [nasıl yapılır: üst bilgileri (C#) erişimi Stream parçalarını](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Bu örnek yeteneğini kullanır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu örnek, bir küçük bellek alanını korurken çok büyük bir belge dönüştürebilirsiniz.  
+ Bu örnekte yeteneğini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğelerine yazmak için bir <xref:System.Xml.XmlWriter>. Bu örnek, bir küçük bellek Ayak izi korurken çok büyük bir belge dönüştürebilirsiniz.  
   
- Unutmayın özel eksen (`StreamCustomerItem`) bir belge bekliyor böylece özel olarak yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve bu öğeleri aşağıdaki Source.xml belgeyi olduğu gibi düzenlenmiş. Daha sağlam bir uygulama, ancak bir XSD kaynak belge ya da doğrulamak veya geçersiz bir belge ayrıştırmak hazır olacaktır.  
+ Unutmayın özel eksen (`StreamCustomerItem`) ve böylece bir belgeye bekliyor özellikle yazılmış olan `Customer`, `Name`, ve `Item` öğeleri ve öğeler aşağıdaki Source.xml belgeyi olduğu gibi düzenlenir. Daha sağlam bir uygulama, ancak bir XSD kaynak belge ya da doğrulamak veya geçersiz bir belge ayrıştırmak hazır olacaktır.  
   
- Bu örnek aynı kaynak belge Source.xml, bu konunun önceki örnek olarak kullanır. Ayrıca, tam olarak aynı çıkışı üretir.  
+ Bu örnek aynı kaynak belge Source.xml, bu konuda önceki örnekteki gibi kullanır. Ayrıca, tam olarak aynı çıktı üretir.  
   
- Kullanarak <xref:System.Xml.Linq.XStreamingElement> XML çıkış akış yazma üzerinden tercih edilir bir <xref:System.Xml.XmlWriter>.  
+ Kullanarak <xref:System.Xml.Linq.XStreamingElement> çıkış XML akış yazmak üzerinden tercih edilir bir <xref:System.Xml.XmlWriter>.  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  
@@ -323,4 +323,4 @@ static void Main(string[] args)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş LINQ-XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

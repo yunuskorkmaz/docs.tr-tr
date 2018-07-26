@@ -2,21 +2,21 @@
 title: Yineleyiciler (C#)
 ms.date: 07/20/2015
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 08fe529f46ccaae7b2e17367a47346265aa0e8b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52450c4e80f5d9a149fd95c31f9c1189066659c5
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338877"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245276"
 ---
 # <a name="iterators-c"></a>Yineleyiciler (C#)
-Bir *yineleyici* koleksiyonlarına listeler ve dizi gibi adım için kullanılabilir.  
+Bir *yineleyici* koleksiyonlarına listeler ve diziler gibi adım için kullanılabilir.  
   
- İterator yöntemi veya `get` erişimci gerçekleştiren özel bir yineleme içinde bir koleksiyon. İterator yöntemi kullanır [verim return](../../../csharp/language-reference/keywords/yield.md) her öğeye aynı anda geri dönmek için deyimi. Zaman bir `yield return` deyimi ulaşıldığında geçerli kod konumda anımsanacak. Yürütme o konumdan yineleyici işlevi bir sonraki zamana yeniden başlatılır.  
+ Yineleyici yöntemini veya `get` erişimci bir koleksiyon üzerinde özel yineleme gerçekleştirir. Yineleyici yöntemini kullanır [yield return](../../../csharp/language-reference/keywords/yield.md) her öğeyi bir defada döndürmek için deyimi. Olduğunda bir `yield return` deyimine ulaşıldığında, kodun geçerli konumu anımsanacak. Yürütme, yineleyici işlevinin bir sonraki zamana o konumdan başlatılır.  
   
- İle yineleyici istemci kodundan kullanmasını bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi veya bir LINQ Sorgu kullanarak.  
+ Kullanarak bir yineleyici istemci kodundan kullanmak bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimini veya LINQ sorgusu kullanarak.  
   
- Aşağıdaki örnekte, ilk yinelemesi `foreach` döngüye neden olur, devam etmek yürütme `SomeNumbers` yineleyici yöntemi ilk kadar `yield return` deyimi ulaşıldığında. Bu yineleme 3 değerini döndürür ve yineleyici yöntemi geçerli konumda korunur. Döngü sonraki yinelemesinde nereden yürütülmeye yineleyici yönteminde ulaştığında yeniden durdurma kapalı, solda bir `yield return` deyimi. Bu yineleme 5 değerini döndürür ve yineleyici yöntemi geçerli konuma yeniden korunur. Yineleyici yönteminin sonuna gelindiğinde döngü tamamlar.  
+ Aşağıdaki örnekte, ilk yinelemeyi `foreach` döngüye neden oluyor, devam etmek yürütme `SomeNumbers` yineleyici yöntemin ilk kadar `yield return` deyimine ulaşıldığında. Bu yineleme 3 değerini döndürür ve yineleyici yöntem geçerli konumu korunur. Döngüsünün sonraki yinelemesinde, yineleyici yöntemin yürütülmesine kadar devam eder, ulaştığında yeniden kaldığı bir `yield return` deyimi. Bu yineleme 5 değerini döndürür ve yineleyici yöntem geçerli konumu tekrar korunur. Yineleyici yöntemin sonuna ulaşıldığında döngüsünü tamamlar.  
   
 ```csharp  
 static void Main()  
@@ -37,31 +37,31 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- Yineleyici yönteminin dönüş türü veya `get` erişimci olabilir <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.  
+ Bir yineleyici yöntemin dönüş türü veya `get` erişimcisi olabilir <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.  
   
  Kullanabileceğiniz bir `yield break` yinelemeyi sonlandırmak için deyimi.  
   
- Yineleyiciler C# Visual Studio 2005'te tanıtıldı.  
+ Yineleyiciler, C# Visual Studio 2005'te tanıtıldı.  
   
  **Bu konudaki**  
   
--   [Basit yineleyici](#BKMK_SimpleIterator)  
+-   [Basit bir yineleyici](#BKMK_SimpleIterator)  
   
 -   [Koleksiyon sınıfı oluşturma](#BKMK_CollectionClass)  
   
--   [Yineleyiciler genel bir listesi ile kullanma](#BKMK_GenericList)  
+-   [Yineleyiciler genel listeyle kullanma](#BKMK_GenericList)  
   
--   [Sözdizimi bilgileri](#BKMK_SyntaxInformation)  
+-   [Söz dizimi bilgileri](#BKMK_SyntaxInformation)  
   
 -   [Teknik uygulama](#BKMK_Technical)  
   
--   [Yineleyiciler kullanımı](#BKMK_UseOfIterators)  
+-   [Yineleyicilerin kullanın](#BKMK_UseOfIterators)  
   
 > [!NOTE]
->  Bu konuda basit yineleyici örnek dışındaki tüm örnekler için dahil [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri için `System.Collections` ve `System.Collections.Generic` ad alanları.  
+>  Bu konuda, basit bir yineleyici örnek hariç tüm örnekler için dahil [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri `System.Collections` ve `System.Collections.Generic` ad alanları.  
   
-##  <a name="BKMK_SimpleIterator"></a> Basit yineleyici  
- Aşağıdaki örnek bir tek sahip `yield return` içinde deyimi bir [için](../../../csharp/language-reference/keywords/for.md) döngü. İçinde `Main`, her yinelemesinden `foreach` deyimi gövde oluşturur diğerine geçer yineleyici işlevi çağrısı `yield return` deyimi.  
+##  <a name="BKMK_SimpleIterator"></a> Basit bir yineleyici  
+ Aşağıdaki örnek, tek bir sahip `yield return` içindeki bir [için](../../../csharp/language-reference/keywords/for.md) döngü. İçinde `Main`, her bir yinelemesini `foreach` diğerine geçer yineleyici işlevine bir çağrı oluşturur ve deyim gövdesi `yield return` deyimi.  
   
 ```csharp  
 static void Main()  
@@ -89,9 +89,9 @@ public static System.Collections.Generic.IEnumerable<int>
 ```  
   
 ##  <a name="BKMK_CollectionClass"></a> Koleksiyon sınıfı oluşturma  
- Aşağıdaki örnekte, `DaysOfTheWeek` uygulayan sınıf <xref:System.Collections.IEnumerable> gerektirir arabirimi bir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi. Derleyici örtülü olarak çağırır `GetEnumerator` döndürür yöntemi bir <xref:System.Collections.IEnumerator>.  
+ Aşağıdaki örnekte, `DaysOfTheWeek` sınıfının Implements <xref:System.Collections.IEnumerable> gerektiren arabirimi bir <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi. Derleyici örtük olarak çağırır `GetEnumerator` döndüren yöntemi bir <xref:System.Collections.IEnumerator>.  
   
- `GetEnumerator` Yöntemi döndürür her dize aynı anda kullanarak `yield return` deyimi.  
+ `GetEnumerator` Yöntemi döndürür her dize bir kerede kullanarak `yield return` deyimi.  
   
 ```csharp  
 static void Main()  
@@ -121,9 +121,9 @@ public class DaysOfTheWeek : IEnumerable
 }  
 ```  
   
- Aşağıdaki örnekte bir `Zoo` hayvanlar koleksiyonunu içeren sınıf.  
+ Aşağıdaki örnek, oluşturur bir `Zoo` hayvanlar koleksiyonunu içeren sınıf.  
   
- `foreach` Sınıf örneğine başvuruda bulunan deyimi (`theZoo`) örtük olarak çağırır `GetEnumerator` yöntemi. `foreach` Başvurmak deyimleri `Birds` ve `Mammals` özelliklerini kullanmak `AnimalsForType` yineleyici yöntemi adı.  
+ `foreach` Sınıfı örneğini ifade deyimi (`theZoo`) örtük olarak çağırır `GetEnumerator` yöntemi. `foreach` Başvurmak ifadeleri `Birds` ve `Mammals` özellikleri kullanım `AnimalsForType` yineleyici yöntemin adı.  
   
 ```csharp  
 static void Main()  
@@ -217,14 +217,14 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <a name="BKMK_GenericList"></a> Yineleyiciler genel bir listesi ile kullanma  
- Aşağıdaki örnekte, `Stack(Of T)` genel bir sınıf uygular <xref:System.Collections.Generic.IEnumerable%601> genel arabirim. `Push` Yöntemi atar değerleri türünde bir dizi `T`. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Yöntemi kullanarak dizi değerleri döndürür `yield return` deyimi.  
+##  <a name="BKMK_GenericList"></a> Yineleyiciler genel listeyle kullanma  
+ Aşağıdaki örnekte, <xref:System.Collections.Generic.Stack%601> genel bir sınıf uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirim. <xref:System.Collections.Generic.Stack%601.Push%2A> Yöntemi, bir dizi türüne değerleri atar `T`. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Yöntemi kullanarak dizi değerlerini döndürür `yield return` deyimi.  
   
- Genel yanı sıra <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntemi, genel olmayan <xref:System.Collections.IEnumerable.GetEnumerator%2A> gerekir ayrıca uygulanan yöntemi. Bunun nedeni, <xref:System.Collections.Generic.IEnumerable%601> devraldığı <xref:System.Collections.IEnumerable>. Genel olmayan uygulama genel uygulamasını erteler.  
+ Genel yanı sıra <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> yöntem, genel olmayan <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi de uygulanmalı. Bunun nedeni, <xref:System.Collections.Generic.IEnumerable%601> devraldığı <xref:System.Collections.IEnumerable>. Genel olmayan uygulama için genel uygulamasını erteler.  
   
- Örnek veri aynı koleksiyonu yineleme yapma çeşitli yollarını desteklemek için adlandırılmış yineleyiciler kullanır. Bunlar yineleyiciler adlı `TopToBottom` ve `BottomToTop` özelliklerini ve `TopN` yöntemi.  
+ Örneğin, verilerin aynı koleksiyon aracılığıyla yineleme çeşitli yöntemler desteklemek için adlandırılmış yineleyiciler kullanır. Bunlar yineleyiciler adlı `TopToBottom` ve `BottomToTop` özellikleri ve `TopN` yöntemi.  
   
- `BottomToTop` Özelliği kullanan bir yineleyici bir `get` erişimcisi.  
+ `BottomToTop` Özelliği kullanan bir yineleyici içinde bir `get` erişimcisi.  
   
 ```csharp  
 static void Main()  
@@ -334,36 +334,36 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> Sözdizimi bilgileri  
- Yineleyici bir yöntem olarak oluşabilir veya `get` erişimcisi. Yineleyici bir olay, örnek oluşturucusu, statik Oluşturucusu veya statik sonlandırıcıyı gerçekleşemez.  
+##  <a name="BKMK_SyntaxInformation"></a> Söz dizimi bilgileri  
+ Yineleyici yöntem olarak oluşabilir veya `get` erişimcisi. Bir yineleyiciyi bir olay, örnek oluşturucusu, statik oluşturucu veya statik Sonlandırıcı oluşamaz.  
   
- Örtük bir dönüştürme ifadesi türden bulunmalıdır `yield return` yineleyici dönüş türü bildirimi.  
+ Örtük bir dönüştürme ifadesi türden bulunmalıdır `yield return` deyimi için dönüş türü yineleyici.  
   
- C# ' ta yineleyici yöntemi içeremez `in`, `ref`, veya `out` parametreleri.  
+ C# ' ta bir yineleyici yöntemini içeremez `in`, `ref`, veya `out` parametreleri.  
   
- C# ' ta, "Verim" ayrılmış bir sözcük değildir ve yalnızca önce kullanıldığında, özel bir anlamı olan bir `return` veya `break` anahtar sözcüğü.  
+ C# ' ta, "yield" ayrılmış bir sözcük değildir ve yalnızca önce kullanıldığında özel anlamı bir `return` veya `break` anahtar sözcüğü.  
   
 ##  <a name="BKMK_Technical"></a> Teknik uygulama  
- Yineleyici bir yöntem olarak yazma rağmen derleyici, iç içe geçmiş sınıf diğer bir deyişle, etkin, Durum makinesi çevirir. Bu sınıf olarak uzun yineleyici konumunu izler `foreach` istemci kodu döngüde devam eder.  
+ Bir yöntem olarak bir yineleyici yazma olsa da, derleyici, iç içe geçmiş bir sınıf içinde başka bir deyişle, aslında bir Durum makinesi çevirir. Bu sınıf olarak uzun yineleyici konumunu izler `foreach` istemci kodu döngüde devam eder.  
   
- Derleyici yaptıklarını görmek için bir yineleyici yöntemi için oluşturulan Microsoft Ara dil kodu görüntülemek için Ildasm.exe Aracı'nı kullanabilirsiniz.  
+ Derleyicinin ne yaptığını görmek için bir yineleyici yöntem için oluşturulan Microsoft Ara dil kodunu görüntülemek için Ildasm.exe Aracı'nı kullanabilirsiniz.  
   
- Yineleyici için oluşturduğunuzda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapısı](../../../csharp/language-reference/keywords/struct.md), tüm uygulama gerekmez <xref:System.Collections.IEnumerator> arabirimi. Derleyici yineleyici algılarsa, otomatik olarak oluşturur `Current`, `MoveNext`, ve `Dispose` yöntemlerinin <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> arabirimi.  
+ İçin bir yineleyici oluşturduğunuzda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md), tam uygulamanız gerekmez <xref:System.Collections.IEnumerator> arabirimi. Derleyici yineleyici algıladığında otomatik olarak oluşturduğu `Current`, `MoveNext`, ve `Dispose` yöntemlerinin <xref:System.Collections.IEnumerator> veya <xref:System.Collections.Generic.IEnumerator%601> arabirimi.  
   
- Art arda gelen her yinelemesinden üzerinde `foreach` döngü (veya doğrudan çağrısı `IEnumerator.MoveNext`), sonraki yineleyici kod gövdesi önceki sonra sürdürür `yield return` deyimi. Sonraki devam edip `yield return` yineleyici gövde sonuna ulaşılana kadar deyimi veya kadar bir `yield break` deyimi karşılaştı.  
+ Her yinelemede üzerinde `foreach` döngü (veya doğrudan arama `IEnumerator.MoveNext`), İleri yineleyici kod gövdesi önceki sonra sürdürür `yield return` deyimi. Daha sonra bir sonraki sürdürür `yield return` yineleyici gövdenin sonuna ulaşılana kadar bir deyimi veya kadar bir `yield break` deyimi karşılaştı.  
   
- Yineleyiciler desteklemez <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> yöntemi. Baştan yeniden yinelemek için yeni bir yineleyici edinmeniz gerekir.  
+ Yineleyicileri desteklemez <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> yöntemi. Baştan yeniden yinelemek için yeni bir yineleyici edinmeniz gerekir.  
   
  Ek bilgi için bkz: [C# dil belirtimi](../../../csharp/language-reference/language-specification/index.md).  
   
-##  <a name="BKMK_UseOfIterators"></a> Yineleyiciler kullanımı  
- Yineleyiciler basitliği korumanıza olanak tanır bir `foreach` döngü listesi sırası doldurmak için karmaşık kodlar kullanmanız gerektiğinde. Aşağıdakileri yapmak istediğinizde bu yararlı olabilir:  
+##  <a name="BKMK_UseOfIterators"></a> Yineleyicilerin kullanın  
+ Yineleyiciler basitliğinin korumak etkinleştirme bir `foreach` döngü listesi sırası doldurmak için karmaşık kodlar kullanmanız gerektiğinde. Aşağıdakileri yapmak istediğinizde bu yararlı olabilir:  
   
--   Sonra ilk listesi değişiklik `foreach` döngü yineleme.  
+-   Liste sonra ilk dağıtmayın `foreach` döngü yinelemesi.  
   
--   Büyük bir liste ilk yinelemesi önce tam olarak yüklenmesini önlemek bir `foreach` döngü. Bir grup tablo satır yüklemek için disk belleğine alınan fetch örneğidir. Başka bir örnek <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> .NET Framework içinde yineleyiciler uygulayan yöntemi.  
+-   Büyük bir liste ilk yinelemeyi önce tam olarak yüklenmesini önlemek bir `foreach` döngü. Tablo satırları toplu yükleme için disk belleğine alınan fetch buna bir örnektir. Başka bir örnek <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> yineleyiciler .NET Framework içindeki uygulayan yöntemi.  
   
--   Yineleyici listesini derlerken kapsüller. Yineleyici yönteminde listesi oluşturun ve her bir döngü sonucu verecek.  
+-   Yineleyici listesinde oluşturmaya kapsüller. Yineleyici yöntem içinde listesi oluşturmak ve ardından her bir döngü sonucu verecek.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Collections.Generic>  

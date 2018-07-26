@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XML CSV dosyalarından (C#) oluştur'
+title: 'Nasıl yapılır: XML, CSV dosyalarından (C#) oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 71fc10d4b48737a816532fa16f4e621c81050ab3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325662"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244731"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Nasıl yapılır: XML CSV dosyalarından (C#) oluştur
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Nasıl yapılır: XML, CSV dosyalarından (C#) oluşturma
 Bu örnek nasıl kullanılacağını gösterir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguda bir dizeler dizisi.  
+ Aşağıdaki kod gerçekleştiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dizelerden oluşan bir dizi üzerindeki sorgu.  
   
  Sorgu kullanan `let` her dize alanları bir diziye bölmek için yan tümcesi.  
   
@@ -108,4 +108,4 @@ Console.WriteLine(cust);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeksiyonlar ve dönüştürmeler (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+ [Projeksiyonlar ve Dönüşümler (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

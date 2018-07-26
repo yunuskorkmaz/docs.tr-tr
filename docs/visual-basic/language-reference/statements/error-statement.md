@@ -1,5 +1,5 @@
 ---
-title: Error Deyimi
+title: Error deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603892"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199485"
 ---
 # <a name="error-statement"></a>Error Deyimi
-Bir hata oluşması benzetimini yapar.  
+Bir hatanın oluşum benzetimini yapar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,26 +31,26 @@ Error errornumber
  Gerekli. Herhangi bir geçerli hata sayı olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Error` Deyimi, geriye dönük uyumluluk için desteklenir. Özellikle nesneleri oluştururken, yeni kodda, kullanın `Err` nesnenin `Raise` çalışma zamanı hataları oluşturmak için yöntem.  
+ `Error` Deyimi, geriye dönük uyumluluk için desteklenir. Özellikle, nesneleri oluştururken yeni kodda, kullanın `Err` nesnenin `Raise` çalışma zamanı hataları oluşturmasına yöntemi.  
   
- Varsa `errornumber` tanımlanan `Error` deyimi özelliklerini sonra hata işleyici çağırır `Err` nesne aşağıdaki varsayılan değerler atanır:  
+ Varsa `errornumber` tanımlanan `Error` ifade, sonra özelliklerini hata işleyicisini çağırır `Err` nesne, aşağıdaki varsayılan değerler atanır:  
   
 |Özellik|Değer|  
 |--------------|-----------|  
 |`Number`|Bağımsız değişkeni olarak belirtilen değeri `Error` deyimi. Herhangi bir geçerli hata sayı olabilir.|  
-|`Source`|Geçerli Visual Basic proje adı.|  
-|`Description`|Dize ifadesi dönüş değerine karşılık gelen `Error` işlevi için belirtilen `Number`, bu dize varsa. Dize mevcut değilse `Description` sıfır uzunlukta bir dize içeriyor ("").|  
-|`HelpFile`|Tam sürücü, yol ve uygun Visual Basic Yardım dosyasının dosya adı.|  
-|`HelpContext`|Visual Basic uygun Yardım dosyası hata karşılık gelen için bağlam kimliği `Number` özelliği.|  
+|`Source`|Geçerli Visual Basic projesi adı.|  
+|`Description`|Dize ifadesi dönüş değerine karşılık gelen `Error` işlevi için belirtilen `Number`, bu dizenin varsa. Dize mevcut değilse `Description` sıfır uzunlukta bir dize içerir ("").|  
+|`HelpFile`|Tam sürücü yolu ve uygun Visual Basic Yardım dosyasının dosya adı.|  
+|`HelpContext`|Visual Basic uygun Yardım dosyası hata karşılık gelen için bir bağlam kimliği `Number` özelliği.|  
 |`LastDLLError`|Sıfır.|  
   
- Hiçbir hata işleyici olup olmadığını veya hiçbiri etkinleştirilirse, hata iletisi oluşturulur ve gelen görüntülenen olmadığını `Err` nesne özellikleri.  
+ Hiçbir hata işleyicisi yok veya etkinse, bir hata iletisi oluşturulur ve gelen görüntülenen `Err` nesne özellikleri.  
   
 > [!NOTE]
->  Bazı Visual Basic konak uygulamaların nesneler oluşturamaz. Bunu sınıflar ve nesneler oluşturabilirsiniz olup olmadığını belirlemek için ana bilgisayar uygulamanızın belgelerine bakın.  
+>  Bazı Visual Basic ana bilgisayar uygulamalarını nesneler oluşturamaz. Sınıflar ve nesneler oluşturabilir olup olmadığını belirlemek için konak uygulamanızın belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Error` hata numarası 11 oluşturmak için ifade.  
+ Bu örnekte `Error` hata numarası 11 oluşturulacak deyimi.  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -60,7 +60,7 @@ Error 11   ' Simulate the "Division by zero" error.
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  

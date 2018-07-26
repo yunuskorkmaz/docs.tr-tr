@@ -1,18 +1,18 @@
 ---
-title: TextFieldParser boşluk içeren açıklama belirteçleri desteklemiyor
+title: TextFieldParser, boşluk içeren yorum belirtkeleri desteklemiyor.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-ms.openlocfilehash: ed22ac435a5cd46288f9854ae711b7fad354f624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92aa3539a09a2479e75d1127b63db0e57297ba26
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641243"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245511"
 ---
-# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a>TextFieldParser boşluk içeren açıklama belirteçleri desteklemiyor
-Boşluk içeren bir açıklama belirteci belirtildi. `TextFieldParser` Belirteç başında boşluk oluşmadığı sürece, boşluk içeren açıklama belirteçleri desteklemez. Bir belirteç başında gerçekleşen boşluk göz ardı edilir.  
+# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-white-space"></a>TextFieldParser, boşluk içeren yorum belirtkeleri desteklemiyor.
+Boşluk içeren bir açıklama belirteci sağlandı. `TextFieldParser` Belirteç başında boşluk gerçekleşmediği sürece, boşluk içeren yorum belirtkeleri desteklemez. Gerçekleşen bir belirteç başında boşluk yoksayılır.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

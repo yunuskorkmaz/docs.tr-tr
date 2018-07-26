@@ -6,19 +6,19 @@ f1_keywords:
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 ms.openlocfilehash: 2695095aa4bf2035d8766f3cbcb82f4fbb290e22
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208409"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245641"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# Başvurusu)
 
-Değişken, tür veya üye basit (nitelenmemiş) dize adını almak için kullanılır.  
+Değişken, tür veya üyenin basit (nitelenmemiş) dize adını almak için kullanılır.  
 
-Model-view-controller (MVC) bağlantıları, takma kodundaki bildirilirken tetikleme özellik değişti olayları, vb., genellikle bir yöntem dize adını yakalamak istediğiniz.  Kullanarak `nameof` tutan kodunuzu geçerli tanımları adlandırırken.  Önce dize değişmez değerleri tanımları için başvurmak için kullanmanız Bu dize değişmez değerleri denetlemek için Araçlar bilmiyorsanız çünkü kod öğeleri adlandırırken kırılır gerekiyordu.  
+Model-view-controller (MVC) bağlantıları, takma kodundaki bildirirken tetikleme özellik değişti olayları, vb. genellikle bir yöntemin dize adını yakalamak istediğiniz.  Kullanarak `nameof` tutan kodunuzu geçerli tanımları adlandırırken.  Önce dize sabit değerleri tanımları için başvuruda bulunmak için kullanmanız araçları bu dize değişmez değerleri denetlemek için bilmiyorsanız çünkü kod öğeleri yeniden adlandırılırken kırılır gerekiyordu.  
   
- A `nameof` ifadesi bu formu vardır:  
+ A `nameof` ifadesi bu formu sahiptir:  
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
@@ -26,16 +26,16 @@ WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"
 ```  
   
 ## <a name="key-use-cases"></a>Anahtar kullanım örnekleri  
- Anahtar kullanım durumları için bu örnekler `nameof`.  
+ Bu örnekler için anahtar kullanım örnekleri `nameof`.  
   
- Parametreleri doğrulayın:  
+ Parametreleri doğrula:  
  ```csharp  
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
 ```  
   
- MVC eylemi bağlantıları:  
+ MVC eylemi bağlantılar:  
  ```html  
 <%= Html.ActionLink("Sign up",  
              @typeof(UserController),  
@@ -104,11 +104,11 @@ class Test {
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağımsız değişkeni `nameof` basit bir ad, tam adı, üye erişimi, belirtilen üyenin temel erişimle veya belirtilen üyeyle bu erişimi olması gerekir.  Kod tanımı bağımsız değişken ifadesi tanımlar, ancak hiçbir zaman değerlendirilir.  
+ Bağımsız değişkeni `nameof` basit bir ad, tam adı, üye erişimi, temel erişim belirtilen bir üyeye sahip veya bu erişim belirli bir üyeye sahip olması gerekir.  Kod tanımı bağımsız değişken ifadesi tanımlar, ancak hiçbir zaman değerlendirilir.  
   
- Bağımsız değişkeni bir ifade sözdizimsel olarak olması gerektiğinden vardır listelemek yararlı değildir pek çok şeyi izin verilmiyor.  Hataları üretmek tümleştirilmediği şunlardır: türleri önceden tanımlanmış (örneğin, `int` veya `void`), boş değer atanabilir türler (`Point?`), dizi türleri (`Customer[,]`), işaretçi türleri (`Buffer*`), diğer ad tam (`A::B` ) ve genel türler ilişkisiz (`Dictionary<,>`), simgeler ön işleme (`DEBUG`) ve etiketler (`loop:`).  
+ Bağımsız değişken bir ifadenin sözdizimi kurallarına göre olması gerektiğinden, vardır listelemek kullanışlı olmayan birçok şey izin verilmiyor.  Hataları üreten söz şunlardır: önceden tanımlanmış türleri (örneğin, `int` veya `void`), boş değer atanabilir türler (`Point?`), dizisi, türlerini (`Customer[,]`), işaretçi türleri (`Buffer*`), diğer koşullu (`A::B` ) ve genel türler ilişkisiz (`Dictionary<,>`), ön işlem sembolleri (`DEBUG`) ve etiketleri (`loop:`).  
   
- Tam adını almak gerekiyorsa, kullanabileceğiniz `typeof` ifade ile birlikte `nameof`.  Örneğin:
+ Tam olarak nitelenmiş adını almak gerekiyorsa, kullanabileceğiniz `typeof` ifadesinin yanı sıra `nameof`.  Örneğin:
 ```csharp  
 class C {
     void f(int i) {  
@@ -117,20 +117,20 @@ class C {
 }
 ``` 
 
- Ne yazık ki `typeof` gibi sabit bir ifade değil `nameof`, bu nedenle `typeof` ile birlikte kullanılamaz `nameof` hepsi aynı olarak yerleştirir `nameof`.  Örneğin, aşağıdaki CS0182 derleme hatasına neden olur:
+ Ne yazık ki `typeof` gibi sabit bir ifade değil `nameof`, bu nedenle `typeof` ile birlikte kullanılamaz `nameof` aynı olarak yerleştirir `nameof`.  Örneğin, aşağıdaki CS0182 derleme hatasına neden olur:
  ```csharp  
 [DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
 class C {  
     string GetString() { }  
 }  
 ```    
- Örneklerde, bir tür adı kullanın ve bir örnek yöntemi adı erişim görürsünüz.  Türünün bir örneği için gereken değerlendirilen ifadeleri olarak olması gerekmez.  Tür adı kullanarak, yalnızca adına başvuran ve örnek verileri kullanarak değil, bir örnek değişkeni ya da ifade contrive gerekmez bazı durumlarda ve çok kullanışlı olabilir.  
+ Örneklerde, bir tür adı kullanın ve bir örnek yöntem adı erişim görürsünüz.  Türünün bir örneği için gereken değerlendirilen ifadeleri olarak olması gerekmez.  Tür adı kullanarak, yalnızca adına başvuran ve örnek verileri kullanarak değil, bir örnek değişkeni veya ifade contrive gerekmez bazı durumlarda ve çok kullanışlı olabilir.  
   
- Bir sınıf özniteliği ifadelerde sınıfı üyeleri başvuruda bulunabilir.  
+ Bir sınıf özniteliği ifadelerinde sınıf üyelerinin başvurabilirsiniz.  
   
- Gibi bir imza bilgileri almak için bir yolu yoktur "`Method1 (str, str)`".  Bunu yapmanın bir yolu, bir ifade kullanmaktır `Expression e = () => A.B.Method1("s1", "s2")`ve sonuçta elde edilen ifadesi ağacından MemberInfo çeker.  
+ Aşağıdaki gibi bir imza bilgileri almak için bir yolu yoktur "`Method1 (str, str)`".  Bunu yapmanın bir yolu olan bir ifade kullanmanızı `Expression e = () => A.B.Method1("s1", "s2")`ve elde edilen ifadenin ağacından MemberInfo çekin.  
   
-## <a name="language-specifications"></a>Dil belirtimleri  
+## <a name="language-specifications"></a>Dil özellikleri  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

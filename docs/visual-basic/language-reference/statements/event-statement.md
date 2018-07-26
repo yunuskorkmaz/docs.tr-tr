@@ -1,5 +1,5 @@
 ---
-title: Event Deyimi
+title: Event deyimi (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233944"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245446"
 ---
 # <a name="event-statement"></a>Event Deyimi
 Kullanıcı tanımlı bir olay bildirir.  
@@ -58,64 +58,64 @@ End Event
   
 |Bölümü|Açıklama|  
 |---|---|  
-|`attrlist`|İsteğe bağlı. Bu olay için geçerli öznitelikler listesi. Birden çok öznitelik virgülle ayrılır. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraç ("`<`"ve"`>`").|  
-|`accessmodifier`|İsteğe bağlı. Hangi kod olay erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Ortak](../../../visual-basic/language-reference/modifiers/public.md)— bunu bildirir öğesi erişebilmeniz için herhangi bir kod erişim.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)— kod sınıfı veya türetilmiş bir sınıf içinde erişebildiğinizi yalnızca.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)— yalnızca aynı bütünleştirilmiş kodda, erişebilir.<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)— bunu bildirir öğesi yalnızca bir kodda erişebilirsiniz.<br /> -   [Arkadaş korumalı](../../language-reference/modifiers/protected-friend.md)-yalnızca olay sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kodda, erişebilir. <br />- [Özel korumalı](../../language-reference/modifiers/private-protected.md)-yalnızca olay sınıfı veya türetilmiş bir sınıf aynı bütünleştirilmiş kodda, erişebilir.|  
-|`Shared`|İsteğe bağlı. Bu olay belirli bir sınıf veya yapı örneği ile ilişkili değil belirtir.|  
-|`Shadows`|İsteğe bağlı. Bu olay redeclares ve bir aynı adlı programlama öğesi ya da bir taban sınıf içinde aşırı yüklenmiş öğelerin gizler gösterir. Bildirilen öğe herhangi bir tür başka herhangi bir tür ile gölge.<br /><br /> Gölgeli bir öğe, dışında gölgeleme öğesi erişilemez olduğu gelen shadows türetilmiş sınıf içinde kullanılamaz. Örneğin, varsa bir `Private` öğesi shadows erişim izni yok kod bir temel sınıf öğesi `Private` öğe temel sınıf öğesi yerine erişir.|  
-|`eventname`|Gerekli. Olayın adı; Standart değişken adlandırma kuralları izler.|  
-|`parameterlist`|İsteğe bağlı. Bu olay parametrelerinin temsil eden yerel değişkenler listesi. İçine almalısınız [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içinde.|  
-|`Implements`|İsteğe bağlı. Bu olay bir olay, bir arabirimi uygulayan gösterir.|  
-|`implementslist`|Gerekli olursa `Implements` sağlanır. Listesi `Sub` uygulanan yordamlar. Birden çok yordam virgülle ayrılır:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Gerekli. Bu yordam, sınıf veya yapı içeren kullanıcının bir arabirim adı uygulama.<br />-   `Definedname` -Gerekli. Adı olarak yordamı tanımlanmış `interface`. Bu aynı olması gerekmez `name`, tanımlanmış yordamı uygulamak için bu yordamı kullanarak ad.|  
-|`Custom`|Gerekli. Olayları bildirilen `Custom` özel tanımlamalısınız `AddHandler`, `RemoveHandler`, ve `RaiseEvent` erişimciler.|  
-|`delegatename`|İsteğe bağlı. Olay işleyici imzası belirten bir temsilci adı.|  
-|`AddHandler`|Gerekli. Bildiren bir `AddHandler` olay işleyicisi eklendiğinde yürütmek için ifadeleri belirtir, ya da açıkça kullanarak erişimcisi `AddHandler` deyimi kullanarak örtük veya `Handles` yan tümcesi.|  
-|`End AddHandler`|Gerekli. Sonlandırır `AddHandler` bloğu.|  
+|`attrlist`|İsteğe bağlı. Bu olaya uygulanan öznitelikler listesi. Birden çok öznitelik virgülle ayrılır. İçine almalısınız [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md) açılı ayraçlar içinde ("`<`"ve"`>`").|  
+|`accessmodifier`|İsteğe bağlı. Hangi kod olay erişip belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Genel](../../../visual-basic/language-reference/modifiers/public.md)— bildirir, öğe erişimi olan herhangi bir kod da erişebilirsiniz.<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)— yalnızca kendi sınıfı veya türetilmiş bir sınıf içinde kod da erişebilir.<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)— yalnızca aynı bütünleştirilmiş kodda, erişebilir.<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)— yalnızca onu bildiren öğesindeki kodu erişebilirsiniz.<br /> -   [Korumalı Friend](../../language-reference/modifiers/protected-friend.md)-yalnızca olay sınıfı, türetilmiş bir sınıf ya da aynı bütünleştirilmiş kod da erişebilir. <br />- [Özel korumalı](../../language-reference/modifiers/private-protected.md)-yalnızca olay sınıfı veya türetilmiş sınıf içinde aynı bütünleştirilmiş kodda, erişebilir.|  
+|`Shared`|İsteğe bağlı. Bu olay bir sınıf veya yapı belirli örneği ile ilişkili olduğunu belirtir.|  
+|`Shadows`|İsteğe bağlı. Bu olay redeclares ve bir programlama aynı adlı bir öğeyi veya taban sınıfında aşırı yüklenmiş bir öğe kümesini gizler gösterir. Bildirilen öğe herhangi bir türden başka bir tür ile gölge.<br /><br /> Gölgeli öğe, dışında gölgeleme öğesi erişilemez olduğu gelen gölgeleri türetilmiş sınıf içinde kullanılamaz. Örneğin, bir `Private` öğesi bir temel sınıf öğesi, erişim iznine sahip olmayan kod gölgeliyor `Private` öğe temel sınıf öğe yerine erişir.|  
+|`eventname`|Gerekli. Olayın adı; Standart değişken adlandırma kurallarını izler.|  
+|`parameterlist`|İsteğe bağlı. Bu olay parametrelerinin temsil eden yerel değişkenlerin listesi. İçine almalısınız [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içinde.|  
+|`Implements`|İsteğe bağlı. Bu olay bir olay arabirim uyguladığını belirtir.|  
+|`implementslist`|Gerekli if `Implements` sağlanır. Listesi `Sub` uygulanmakta olan yordamlar. Birden çok yordam virgülle ayrılır:<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Her `implementedprocedure` aşağıdaki söz dizimini ve bölümleri vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Gerekli. Bu yordam, sınıf veya yapı içeren uygulamanın bir arabirimin adını uygular.<br />-   `Definedname` -Gerekli. Ad tarafından yordamı tanımlanan `interface`. Bu aynı olmak zorunda değil `name`, tanımlı bir yordamdan uygulamak için bu yordamı kullanarak ad.|  
+|`Custom`|Gerekli. Olaylar olarak bildirilen `Custom` özel tanımlamalıdır `AddHandler`, `RemoveHandler`, ve `RaiseEvent` erişimcileri.|  
+|`delegatename`|İsteğe bağlı. Olay işleyici signatura bir temsilci adı.|  
+|`AddHandler`|Gerekli. Bildiren bir `AddHandler` bir olay işleyicisi eklendiğinde çalıştırılacak deyimleri belirtir, kullanarak ya da açıkça erişimci `AddHandler` deyimi kullanarak örtük olarak veya `Handles` yan tümcesi.|  
+|`End AddHandler`|Gerekli. Sonlandırır `AddHandler` blok.|  
 |`value`|Gerekli. Parametre adı.|  
-|`RemoveHandler`|Gerekli. Bildiren bir `RemoveHandler` olay işleyicisi kullanarak kaldırıldığında yürütmek için ifadeleri belirtir erişimcisi `RemoveHandler` deyimi.|  
-|`End RemoveHandler`|Gerekli. Sonlandırır `RemoveHandler` bloğu.|  
-|`RaiseEvent`|Gerekli. Bildiren bir `RaiseEvent` kullanarak olay oluşturulduğunda yürütmek için ifadeleri belirtir erişimcisi `RaiseEvent` deyimi. Genellikle, bu tarafından tutulan temsilciler listesini çağırır `AddHandler` ve `RemoveHandler` erişimciler.|  
-|`End RaiseEvent`|Gerekli. Sonlandırır `RaiseEvent` bloğu.|  
-|`delegatesignature`|Gerekli. Gereken parametrelerle eşleşen parametrelerin listesi `delegatename` temsilci. İçine almalısınız [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içinde.|  
-|`statements`|İsteğe bağlı. Gövdeleri içeren deyimleri `AddHandler`, `RemoveHandler`, ve `RaiseEvent` yöntemleri.|  
-|`End Event`|Gerekli. Sonlandırır `Event` bloğu.|  
+|`RemoveHandler`|Gerekli. Bildiren bir `RemoveHandler` kullanarak bir olay işleyicisi kaldırıldığında çalıştırılacak deyimleri belirtir erişimci `RemoveHandler` deyimi.|  
+|`End RemoveHandler`|Gerekli. Sonlandırır `RemoveHandler` blok.|  
+|`RaiseEvent`|Gerekli. Bildiren bir `RaiseEvent` kullanarak olay ortaya çıktığında çalıştırılacak deyimleri belirtir erişimci `RaiseEvent` deyimi. Genellikle, bu temsilcileri tarafından tutulan bir listesini başlatır `AddHandler` ve `RemoveHandler` erişimcileri.|  
+|`End RaiseEvent`|Gerekli. Sonlandırır `RaiseEvent` blok.|  
+|`delegatesignature`|Gerekli. Gereken parametrelerle eşleşen parametrelerinin listesi `delegatename` temsilci. İçine almalısınız [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md) parantez içinde.|  
+|`statements`|İsteğe bağlı. Gövdeleri içeren ifadeler `AddHandler`, `RemoveHandler`, ve `RaiseEvent` yöntemleri.|  
+|`End Event`|Gerekli. Sonlandırır `Event` blok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Olay bildirildikten sonra kullanın `RaiseEvent` deyimi olayı oluşturun. Tipik bir olay bildirilen ve aşağıdaki parçalanma gösterildiği gibi oluşturulur:  
+ Olay bildirildikten sonra kullanın `RaiseEvent` deyimini olayı oluşturun. Tipik bir olay bildirildi ve aşağıdaki parçası gösterildiği gibi oluşturulur:  
   
  [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
->  Yordamlar, aşağıdaki istisnalar dışında bağımsız gibi olay bağımsız bildirebilir: olaylar, bağımsız değişken adlı olamaz `ParamArray` bağımsız değişken veya `Optional` bağımsız değişkenler. Olaylar, dönüş değerleri yok.  
+>  Yordamlar, aşağıdaki istisnalarla birlikte bağımsız olarak olay bağımsız değişkenleri bildirebilirsiniz: olay bağımsız değişkenleri, adlandırılmış olamaz `ParamArray` bağımsız değişken veya `Optional` bağımsız değişkenler. Olaylar, dönüş değeri yoktur.  
   
- Bir olayı işlemek için bunu kullanarak bir olay işleyicisi alt yordama ile ilişkilendirmeniz gerekir `Handles` veya `AddHandler` deyimi. Alt yordama ve olay imzalarını eşleşmesi gerekir. Paylaşılan olayını işlemek için kullanmanız gerekir `AddHandler` deyimi.  
+ Bir olayı işlemek için onu kullanarak bir olay işleyicisi alt ile ilişkilendirmelisiniz `Handles` veya `AddHandler` deyimi. Alt yordam ve olay imzalarını eşleşmesi gerekir. Paylaşılan bir olayı işlemek için kullanmalısınız `AddHandler` deyimi.  
   
- Kullanabileceğiniz `Event` yalnızca modülü düzeyinde. Yani *bildirimi bağlam* bir olay sınıfı, yapısı, modül veya arabirim olmalı ve kaynak dosyasını, ad alanı, yordam veya blok olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Kullanabileceğiniz `Event` yalnızca Modül düzeyinde. Başka bir deyişle *bildirim içeriğinin* bir olay, bir sınıf, yapı, modül veya arabirimi olması gerekir ve bir kaynak dosyası, ad alanı, yordam veya blok olamayacağı için. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Çoğu durumda olaylarını bildirmek için bu konunun sözdizimi bölümünde ilk sözdizimini kullanabilirsiniz. Ancak, bazı senaryolar olay ayrıntılı davranışı hakkında daha fazla denetime sahip olmasını gerektirir. Son sözdizimi kullanan bu konu, söz dizimi bölümünde `Custom` anahtar sözcüğü, özel olaylar tanımlamanıza olanak sağlayarak bu denetim sağlar. Özel bir olay tam olarak kod ekler veya bir olay işleyicisi kaldırdığında veya olaydan neler veya ne zaman kodu olayını belirtin. Örnekler için bkz [nasıl yapılır: tasarruf bellek için olan özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) ve [nasıl yapılır: bildirme özel olaylar kaçının engellemesine](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ Çoğu durumda, olayları bildirmek için bu konunun söz dizimi bölümünde ilk sözdizimini kullanabilirsiniz. Ancak, bazı senaryolar, olayın ayrıntılı davranışı hakkında daha fazla denetime sahip olmasını gerektirir. Son söz dizimini kullanan bu konu, sözdizimi bölümündeki `Custom` anahtar sözcüğü, özel olaylar tanımlamanıza olanak sağlayarak bu denetim sağlar. Özel bir olay tam olarak bir olay işleyicisi için kod ekler veya kaldırdığında veya olaydan neler veya ne zaman kod olayını belirtin. Örnekler için bkz [nasıl yapılır: tasarrufu bellek için olan özel olayları bildirme](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) ve [nasıl yapılır: bildirmek özel olayları önlemek engellemesine](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, 10 saniyeden 0 aşağı saymak için olayları kullanır. Kod olayla ilgili yöntemler, özellikler ve deyimleri çeşitli gösterir. Bu içerir `RaiseEvent` deyimi.  
+ Aşağıdaki örnek, 0, 10 saniye basılı saymak için olayları kullanır. Kod birkaç ilgili olay yöntemleri, özellikleri ve ifadeleri gösterir. Bu içerir `RaiseEvent` deyimi.  
   
- Olay kaynağı bir olay başlatır sınıf olduğunu ve olay işleme yöntemleri olay işleyicileri. Bir olay kaynağı ürettiği olaylar için birden çok işleyicileri olabilir. Olay sınıfı başlatır, bu olay nesnesinin bu örneği için olayları işlemek için katılmamayı her bir sınıf üzerinde tetiklenir.  
+ Bir olay başlatır sınıf olay kaynağı olan ve olay işleme yöntemleri olay işleyicileridir. Olay kaynağı, oluşturduğu olaylar için birden çok işleyiciler olabilir. Olay sınıfı başlatır, nesnenin Bu örneği için olayları işlemek için katılmamayı her sınıfta bu olay tetiklenir.  
   
- Bu örnek ayrıca bir form kullanır (`Form1`) bir düğme ile (`Button1`) ve bir metin kutusu (`TextBox1`). Düğmeye tıkladığınızda, ilk metin kutusunu 0 saniye 10 geri sayım görüntüler. Tam zamanlı (10 saniye) geçtiğinde "Tamamlandı" ilk metin kutusunu görüntüler.  
+ Örnek ayrıca bir form kullanır (`Form1`) bir düğme olan (`Button1`) ve bir metin kutusu (`TextBox1`). Düğmeye tıkladığınızda, 10'dan geri sayım 0 saniyeye ilk metin kutusunu görüntüler. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   
- Kodunu `Form1` formun ilk ve terminal durumunu belirtir. Ayrıca, olayları ortaya çıktığında yürütülen kodu içerir.  
+ Kodu `Form1` formun ilk ve terminal durumunu belirtir. Ayrıca, olaylar oluştuğunda yürütülen kodu içerir.  
   
- Bu örneği kullanmak için yeni bir Windows Forms projesi açın. Adlı bir düğme ekleme `Button1` ve adlı bir metin kutusu `TextBox1` ana forma adlı `Form1`. Ardından formu sağ tıklatın ve **görünümü kodu** Kod Düzenleyicisi'ni açın.  
+ Bu örneği kullanmak için yeni bir Windows Forms projesi açın. Ardından adlı bir düğme ekleyin `Button1` ve adlı bir metin kutusu `TextBox1` ana forma adlı `Form1`. Ardından formun sağ tıklatıp **kodu görüntüle** Kod Düzenleyicisi'ni açın.  
   
  Ekleme bir `WithEvents` değişken bildirimleri bölümüne `Form1` sınıfı:  
   
  [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
- Aşağıdaki kodu için kod ekleme `Form1`. Aşağıdaki gibi bulunabilecek yinelenen yordamlarla Değiştir `Form_Load` veya `Button_Click`.  
+ Aşağıdaki kodu için kod ekleyin `Form1`. Oluşabilecek, gibi yinelenen yordamlarla değiştirin `Form_Load` veya `Button_Click`.  
   
  [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
- Önceki örneği çalıştırmak ve etiketli düğmesini için F5 tuşuna basın **Başlat**. Saniye sayısı ilk metin kutusunu başlatır. Tam zamanlı (10 saniye) geçtiğinde "Tamamlandı" ilk metin kutusunu görüntüler.  
+ Önceki örneği çalıştırmak ve etiketli düğmeye tıklayın için F5 tuşuna basın **Başlat**. İlk metin kutusuna saniye sayısı başlar. Tam zamanlı (10 saniye) geçtikten sonra "Bitti" ilk metin kutusunu görüntüler.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Yöntemi form yaptığı biçimde olayları işlemez. Olayları doğrudan işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için bkz: [parçacıkları](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Yöntemi olayları form mu aynı şekilde işlemez. Doğrudan olaylarını işlemek form etkinleştirmek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [parçacıkları](../../programming-guide/concepts/threading/index.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  

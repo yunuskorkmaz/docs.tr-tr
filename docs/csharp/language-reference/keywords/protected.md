@@ -8,36 +8,36 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269576"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243632"
 ---
 # <a name="protected-c-reference"></a>protected (C# Başvurusu)
-`protected` Sözcüktür üye erişim değiştiricisi. 
+`protected` Anahtar sözcüğü, bir üye erişim değiştiricisi. 
 
- > Bu sayfayı kapsayan `protected` erişim. `protected` Sözcüktür ayrıca parçası [ `protected internal` ](./protected-internal.md) ve [ `private protected` ](./private-protected.md) erişim değiştiricileri. 
+ > Bu sayfa kapsayan `protected` erişim. `protected` Anahtar sözcüğü, ayrıca parçası [ `protected internal` ](./protected-internal.md) ve [ `private protected` ](./private-protected.md) erişim değiştiricileri. 
 
-Korumalı üye kendi sınıfı içinde ve türetilen sınıf örnekleri tarafından erişilebilir. 
+Korumalı üye sınıfı içinde ve türetilen sınıf örnekleri tarafından erişilebilir. 
 
 Bir karşılaştırması `protected` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). 
   
 ## <a name="example"></a>Örnek  
- Yalnızca erişim üzerinden türetilmiş sınıf türü oluşuyorsa korumalı bir temel sınıf üyesi türetilen bir sınıfta erişilebilir. Örneğin, aşağıdaki kod kesimi göz önünde bulundurun:  
+ Yalnızca türetilmiş sınıf türü erişim ortaya çıkarsa, bir taban sınıfın korumalı bir üye türetilen bir sınıfta erişilebilir. Örneğin, aşağıdaki kod kesimi göz önünde bulundurun:  
   
  [!code-csharp[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_1.cs)]  
   
- Deyim `a.x = 10` ana statik yöntemi içinde oluşturulur ve b sınıf örneği değil çünkü bir hata oluşturur  
+ Deyim `a.x = 10` ana statik yöntem içinde yapılır ve örneği değil, sınıf b olduğundan bir hata oluşturur.  
   
- Yapı üyeleri yapısı devraldığından korunamaz.  
+ Yapı üyeleri struct devralınamaz korunamaz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, sınıf `DerivedPoint` türetildiği `Point`. Bu nedenle, doğrudan türetilmiş sınıftan temel sınıfın korumalı üyeleri erişebilir.  
+ Bu örnekte, sınıf `DerivedPoint` türetilir `Point`. Bu nedenle, temel sınıfın korumalı üyeler türetilmiş sınıftan doğrudan erişebilirsiniz.  
   
  [!code-csharp[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_2.cs)]  
   
- Erişim düzeyleri değiştirirseniz `x` ve `y` için [özel](../../../csharp/language-reference/keywords/private.md), derleyici hata iletileri verecek:  
+ Erişim düzeyleri değiştirirseniz `x` ve `y` için [özel](../../../csharp/language-reference/keywords/private.md), derleyici hata iletilerini verir:  
   
  `'Point.y' is inaccessible due to its protection level.`  
   
@@ -56,4 +56,4 @@ Bir karşılaştırması `protected` diğer erişim değiştiricileri ile bkz [e
  [public](../../../csharp/language-reference/keywords/public.md)  
  [private](../../../csharp/language-reference/keywords/private.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
- [İç sanal anahtar ile ilgili güvenlik konuları](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [İç sanal anahtar sözcükleri ile ilgili güvenlik konuları](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

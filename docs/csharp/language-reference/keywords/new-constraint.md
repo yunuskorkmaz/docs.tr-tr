@@ -5,26 +5,26 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: 77c955102ba9cede831c85838a6a7e57025ad35b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269002"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199469"
 ---
 # <a name="new-constraint-c-reference"></a>new Kısıtlaması (C# Başvurusu)
-`new` Kısıtlaması, hiçbir tür bağımsız değişkeni genel bir sınıf bildirimindeki genel bir parametresiz oluşturucuya sahip gerektiğini belirtir. New kısıtlaması kullanmak için türü soyut olamaz.  
+`new` Kısıtlaması belirtir bir genel sınıf bildiriminde herhangi bir tür bağımsız değişkeni genel bir parametresiz oluşturucusu olmalıdır. New'kısıtlamasının kullanılabilmesi için türü soyut olamaz.  
   
 ## <a name="example"></a>Örnek  
- Uygulama `new` kısıtlaması aşağıdaki örnekte gösterildiği gibi genel bir sınıf türünün yeni örneklerini oluşturduğunda, bir tür parametresi için:  
+ Uygulama `new` öğesini aşağıdaki örnekte gösterildiği gibi genel bir sınıf türünün yeni örneğini oluşturduğunda, bir tür parametresi kısıtlaması:  
   
  [!code-csharp[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Kullandığınızda `new()` kısıtlaması diğer kısıtlamalarla son belirtilmelidir:  
+ Kullanırken `new()` kısıtlama diğer kısıtlamalarla en son belirtilmelidir:  
   
  [!code-csharp[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
- Daha fazla bilgi için bkz: [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+ Daha fazla bilgi için [tür parametrelerindeki kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

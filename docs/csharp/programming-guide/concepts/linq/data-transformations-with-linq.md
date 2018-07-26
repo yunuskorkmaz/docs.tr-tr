@@ -11,27 +11,27 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 ms.openlocfilehash: c165f78c53cec0417d39320580b812ff01fef68b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333264"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199328"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak giriş ve yeni bir çıkış sırası oluşturmak için birçok yolla değiştirme kaynağı sırası kullanabilirsiniz. Öğeleri sıralama ve Gruplama değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak, belki de en güçlü özelliği [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgudur yeni türleri oluşturma yeteneği. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] yalnızca veri alma hakkında değil. Veri dönüştürme için de güçlü bir araçtır. Kullanarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, giriş ve yeni bir çıkış dizisi oluşturmak için birçok şekilde değiştirme gibi bir kaynak sırası kullanabilirsiniz. Öğeleri sıralama ve gruplandırma değiştirmeden dizisi kendisini değiştirebilirsiniz. Ancak belki de en güçlü özelliğidir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgulardır yeni türleri oluşturma olanağı. Bu, gerçekleştirilir [seçin](../../../../csharp/language-reference/keywords/select-clause.md) yan tümcesi. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
   
--   Birden çok giriş dizilerini yeni bir türe sahip bir tek bir çıkış sırası birleştirin.  
+-   Birden çok giriş dizilerini yeni bir türü olan bir tek bir çıkış sırasına birleştirin.  
   
--   Kaynak sıradaki her bir öğe yalnızca bir veya birkaç özelliklerini öğeleri oluşur çıkış sıraları oluşturun.  
+-   Öğeleri kaynak sırasındaki her öğenin yalnızca bir veya birkaç özellikleri oluşur çıkış sıraları oluşturun.  
   
--   Kaynak veriler üzerinde gerçekleştirilen işlemler sonuçlarını öğeleri oluşur çıkış sıraları oluşturun.  
+-   Kaynak veriler üzerinde gerçekleştirilen işlemlerin sonuçlarını öğeleri oluşur çıkış sıraları oluşturun.  
   
--   Çıkış sıraları farklı bir biçimde oluşturun. Örneğin, XML verileri SQL satırları veya metin dosyalarından dönüştürebilirsiniz.  
+-   Çıkış sıraları farklı bir biçimde oluşturun. Örneğin, verileri SQL satırları veya metin dosyalarından XML'e dönüştürebilirsiniz.  
   
- Bu, yalnızca birkaç örnek verilmiştir. Elbette, bu dönüşümleri aynı sorguda çeşitli şekillerde birleştirilebilir. Ayrıca, bir sorgu çıkış dizisi giriş dizisi yeni bir sorgu için kullanılabilir.  
+ Bunlar yalnızca birkaç örnektir. Elbette, bu dönüştürmeleri, çeşitli yollarla aynı sorguda birleştirilebilir. Ayrıca, bir sorgu çıkış dizisi, yeni bir sorgu için giriş dizisi kullanılabilir.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Birden Çok Girdiyi Bir Çıkış Sırasına Katma  
- Kullanabileceğiniz bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] birden fazla giriş sırası öğeleri içeren bir çıkış sırası oluşturmak için sorgu. Aşağıdaki örnekte, iki bellek içi veri yapılarını birleştirmek gösterilmektedir, ancak aynı ilkeler XML veya SQL veya veri kümesi kaynaklardan veri birleştirmek için uygulanabilir. Aşağıdaki iki sınıf türleri varsayın:  
+ Kullanabileceğiniz bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] birden fazla giriş dizisinin öğeleri içeren bir çıkış dizisi oluşturmak için sorgu. Aşağıdaki örnek, iki bellek içi veri yapılarını birleştirilecek gösterilmektedir, ancak aynı ilkeler, XML veya SQL veya veri kaynaklarından alınan verileri birleştirmek için uygulanabilir. Aşağıdaki iki sınıf türleri varsayın:  
   
  [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
@@ -39,33 +39,33 @@ ms.locfileid: "33333264"
   
  [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
- Daha fazla bilgi için bkz: [JOIN yan tümcesi](../../../../csharp/language-reference/keywords/join-clause.md) ve [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Daha fazla bilgi için [JOIN yan tümcesi](../../../../csharp/language-reference/keywords/join-clause.md) ve [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md).  
   
 ## <a name="selecting-a-subset-of-each-source-element"></a>Her Kaynak Öğesinin alt kümesini seçme  
- Her öğe kümesini kaynak sırasını seçmek için birincil iki yolu vardır:  
+ Kaynak dizideki her öğe kümesini seçmek için iki temel yol vardır:  
   
-1.  Source öğesi yalnızca bir üye seçmek için nokta işlemi kullanın. Aşağıdaki örnekte, varsayımında bir `Customer` nesnesini içeren adlı bir dize dahil olmak üzere birkaç ortak özellikler `City`. Çalıştırıldığında, bu sorgu dizeleri çıkış dizisi oluşturur.  
+1.  Kaynak öğesi yalnızca bir üye seçmek için nokta işlemi kullanın. Aşağıdaki örnekte, varsayımında bir `Customer` nesnesini içeren bir dize adlı de dahil olmak üzere birkaç ortak özellikler `City`. Bu sorgu yürütüldüğünde, dize bir çıkış sırası oluşturur.  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Source öğesi birden fazla özelliğinden içeren öğeleri oluşturmak için nesne Başlatıcı adlandırılmış bir nesne veya anonim bir tür ile kullanabilirsiniz. Aşağıdaki örnek, her iki özellik kapsülleyen anonim bir tür kullanımını gösterir `Customer` öğe:  
+2.  Kaynak öğesi birden fazla özelliği içeren öğeler oluşturmak için bir nesne Başlatıcı adlandırılmış bir nesneye veya anonim bir tür ile kullanabilirsiniz. Aşağıdaki örnek her iki özellik yalıtılacak anonim bir türün kullanımı gösterilmektedir `Customer` öğesi:  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- Daha fazla bilgi için bkz: [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ve [anonim türler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Daha fazla bilgi için [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) ve [anonim türler](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Bellek İçi Nesneleri XML'e dönüştürme  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bellek içi veri yapılarını, SQL veritabanları arasında verileri dönüştürmek kolaylaştırır [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümelerini ve XML akışları ya da belgeler. Aşağıdaki örnekte bir bellek içi veri yapısı nesneleri XML elemanlara dönüştürür.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguları bellek içi veri yapıları, SQL veritabanları arasında verileri dönüştürmek kolaylaştırır [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri ve XML akışlarını veya belgeler. Aşağıdaki örnek, nesneleri bir bellek içi veri yapısı XML öğeleri dönüştürür.  
   
  [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
- Kod şu XML çıkışı üretir:  
+ Kod aşağıdaki XML çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -87,13 +87,13 @@ ms.locfileid: "33333264"
 </Root>  
 ```  
   
- Daha fazla bilgi için bkz: [oluşturma XML ağaçları C# (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).  
+ Daha fazla bilgi için [C# (LINQ to XML) XML ağaçları oluşturma](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Kaynak Öğeler Üzerinde İşlemler Gerçekleştirme  
- Çıkış dizisi, herhangi bir öğe veya kaynak sıradaki öğenin özelliklerinden içermeyebilir. Çıkışı, bunun yerine kaynak öğelerin giriş bağımsız değişken olarak kullanarak hesaplanan bir değerleri dizisi olabilir. Yürütüldüğünde, aşağıdaki basit sorgu, bir dizi dize değerleri temsil eden türündeki öğeler kaynak sıralamasına dayalı bir hesaplama çıkarır `double`.  
+ Bir çıkış dizisi, herhangi bir öğe veya öğe özellikleri için kaynak sırasından içermeyebilir. Çıkışı, bunun yerine kaynak öğeleri giriş bağımsız değişkeni kullanarak hesaplanan değerler bir dizi olabilir. Yürütüldüğünde, aşağıdaki basit sorgu, bir dizi dize değerleri temsil eden türünde öğeler kaynak dizi temel hesaplama çıkarır `double`.  
   
 > [!NOTE]
->  Sorgu başka bir etki alanına çevrilir, sorgu ifadelerinde yöntemleri çağırma desteklenmiyor. Örneğin, bir sıradan C# yöntemi çağrılamıyor [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server bağlam için içerdiğinden. Ancak, saklı yordamlar eşleştirme için yöntemleri ve bu çağırın. Daha fazla bilgi için bkz: [saklı yordamlar](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
+>  Sorgu başka bir etki alanına çevrilir, sorgu ifadelerinde yöntem çağırma desteklenmiyor. Örneğin, bir normal C# tuto metodu nelze vyvolat [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server için hiçbir bağlam olduğundan. Ancak, eşleştirme yöntemleri için saklı yordamlar ve bu çağırın. Daha fazla bilgi için [saklı yordamlar](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
@@ -101,6 +101,6 @@ ms.locfileid: "33333264"
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
- [LINQ-XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [select yan tümcesi](../../../../csharp/language-reference/keywords/select-clause.md)

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284309"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244000"
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
-`where` Yan tümcesi, veri kaynağından hangi öğelerin sorgu ifadesinde döndürülecek belirtmek için bir sorgu ifadesinde kullanılır. Bir Boole koşulu geçerlidir (*koşulu*) (aralık değişkeni tarafından başvurulan) her kaynak öğesine ve bunlar belirtilen koşulu olduğu true döndürür. Tek bir sorgu ifade birden çok içerebilir `where` yan tümceleri ve tek bir yan tümce birden çok koşul alt ifadelerin içerebilir.  
+`where` Yan tümcesi bir sorgu ifadesinde sorgu ifadesi içinde veri kaynağından hangi öğelerin döndürülmesi belirtmek için kullanılır. Bir Boolean koşulu uygular (*koşul*) için her kaynak öğesi (aralık değişkeni tarafından başvurulan) ve bunlar için belirtilen koşulun true döndürür. Tek bir sorgu ifadesi birden çok içerebilir `where` yan tümceleri ve tek bir yan tümce birden çok koşul alt ifadeler içeriyor olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `where` en az beş olanlar dışındaki tüm sayılar filtreleyen yan tümcesi. Kaldırırsanız `where` yan tümcesi, veri kaynağından gelen tüm sayıları döndürülen. İfade `num < 5` her öğeye uygulanan koşul.  
+ Aşağıdaki örnekte, `where` yan tümcesi filtreler en az beş olanlar dışındaki tüm sayılar uğradı. Kaldırırsanız `where` yan tümcesi, veri kaynağından tüm sayılar döndürülen. İfade `num < 5` her öğeye uygulanan koşuldur.  
   
  [!code-csharp[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Tek bir `where` yan tümcesi sayıda koşulları gerektiği gibi kullanarak belirleyebileceğiniz [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md) işleçler. Aşağıdaki örnekte, sorgunun yalnızca en az beş olan çift sayı seçmek için iki koşulları belirtir.  
+ Tek bir `where` yan tümcesini kullanarak, çok doğrulamaları gerektiği gibi belirtebilirsiniz [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md) işleçleri. Aşağıdaki örnekte, yalnızca en az beş olan çift sayıları seçmek için iki doğrulamaları sorguyu belirtir.  
   
  [!code-csharp[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
 ## <a name="example"></a>Örnek  
- A `where` yan tümcesi, Boole değerleri döndüren bir veya daha fazla yöntemleri içerebilir. Aşağıdaki örnekte, `where` yan tümcesinin aralık değişkeni geçerli değeri çift veya tek olup olmadığını belirlemek için bir yöntem kullanır.  
+ A `where` yan tümcesi, Boole değerleri döndüren bir veya daha fazla yöntemler içerebilir. Aşağıdaki örnekte, `where` yan tümcesinin Aralık değişkeninin geçerli değerini çift veya tek sayı olup olmadığını belirlemek için bir yöntem kullanır.  
   
  [!code-csharp[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
 ## <a name="remarks"></a>Açıklamalar  
- `where` Yan tümcesi olan bir filtreleme mekanizması. İlk veya son yan tümcesi olamaz dışında neredeyse her yerden sorgu ifadesinde yerleştirilebilir. A `where` yan tümcesi önce veya sonra görünebilir bir [grup](../../../csharp/language-reference/keywords/group-clause.md) önce veya sonra bunlar gruplandırılır kaynağı öğeleri filtrelemek sahip bağlı olarak yan tümcesi.  
+ `where` Yan tümcesi ise bir filtreleme mekanizması. İlk veya son yan tümcesi olamaz dışında bir sorgu ifadesinde, neredeyse her yerden konumlandırılmalıdır. A `where` yan tümcesi, önce veya sonra görünebilir bir [grubu](../../../csharp/language-reference/keywords/group-clause.md) önce veya sonra gruplanmış olan kaynak öğeleri filtrelemek olmasına bağlı olarak yan tümcesi.  
   
- Belirtilen önerme veri kaynağındaki öğeler için geçerli değilse, derleme zamanı hata neden olur. Tanımlayıcı türü tarafından sağlanan denetimi bir yararı budur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Belirtilen bir koşulu veri kaynağındaki öğeleri için geçerli değilse, bir derleme zamanı hatası neden olur. Bu güçlü tür tarafından sağlanan denetimi bir yararı, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
- Derleme zamanında `where` anahtar sözcüğü bir çağrı biçimine dönüştürülür <xref:System.Linq.Enumerable.Where%2A> standart sorgu işleci yöntemi.  
+ Derleme zamanında `where` anahtar sözcüğü, bir çağrı biçimine dönüştürülür <xref:System.Linq.Enumerable.Where%2A> standart sorgu işleci yöntem.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
