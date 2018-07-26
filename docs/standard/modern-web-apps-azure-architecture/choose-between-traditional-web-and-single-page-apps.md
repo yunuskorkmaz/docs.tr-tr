@@ -1,96 +1,95 @@
 ---
-title: Geleneksel web uygulamaları ve tek sayfa uygulamaları arasında seçim yapma
-description: ASP.NET Core ve Microsoft Azure ile Mimarı modern web uygulamaları
+title: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim yapma
+description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek sayfa uygulamaları (Spa'lar) arasında seçim yapma öğrenin.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104772"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404157"
 ---
-# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ve tek sayfa uygulamaları (SPAs) arasında seçim yapma
+# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web uygulamaları ile tek sayfa uygulamaları (Spa'lar) arasında seçim yapma
 
-> "Atwood'ın Yasası:, JavaScript'te yazılmış herhangi bir uygulama içinde JavaScript sonunda yazılır."  
+> "Atwood'ın yasaları: JavaScript'te yazılmış herhangi bir uygulama JavaScript'te sonunda yazılır."  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Özet
+Bugün web uygulamaları oluşturmak için iki genel yaklaşım vardır: sunucu ve tek sayfa uygulamaları (Spa'lar) bir web tarayıcısında kullanıcı arabirimi mantığının çoğunu gerçekleştirmek uygulama mantığı çoğunu gerçekleştir geleneksel web uygulamaları öncelikle web API'leri kullanarak web sunucusu ile iletişim kurma. Karma bir yaklaşım da mümkündür, en basit olan konak bir veya daha fazla zengin SPA benzeri alt uygulamalar daha büyük geleneksel web uygulaması içinde.
 
-Web uygulamaları oluşturmaya hemen için iki genel yaklaşım vardır: sunucu ve bir web tarayıcısında kullanıcı arabirimi mantığı çoğunu gerçekleştirmek tek sayfa uygulamaları (SPAs) uygulama mantığını çoğunu gerçekleştirmek geleneksel web uygulamaları öncelikle web API'leri kullanarak web sunucusu ile iletişim kurma. Karma bir yaklaşım da mümkündür, en basit olan konak bir veya daha fazla zengin SPA benzeri alt uygulamalara daha büyük bir geleneksel web uygulaması.
+Geleneksel web uygulamaları kullanmanız gerektiği zaman:
 
-Geleneksel web uygulamaları kullanması gereken zaman:
+- Basit veya salt okunur bile, uygulamanızın istemci-tarafı gereksinimleri verilmiştir.
 
--   Uygulamanızın istemci-tarafı gereksinimleri, basit veya salt okunur.
+- Tarayıcılarında JavaScript desteğiyle çalışabilmesi uygulamanız gerekir.
 
--   JavaScript desteği olmadan tarayıcılarda çalışabilmesi uygulamanız gerekir.
+- Takımınızın geliştirme tekniklerini JavaScript veya TypeScript ile tanınmıyor.
 
--   Ekibinizin JavaScript veya TypeScript geliştirme teknikleri tanınmayan ' dir.
+Bir SPA kullanmanız gerektiği zaman:
 
-Bir SPA kullanması gereken zaman:
+- Uygulamanızı, birçok özellik ile zengin kullanıcı arabirimi kullanıma sunması gerekir.
 
--   Uygulamanızın birçok özellik ile zengin kullanıcı arabirimi kullanıma gerekir.
+- Takımınız, JavaScript ve/veya TypeScript geliştirmeyle.
 
--   Ekibiniz ile JavaScript ve/veya TypeScript geliştirme alışkın olduğu.
+- Uygulamanız zaten diğer (dahili veya genel) istemciler için bir API göstermesi gerekir.
 
--   Uygulamanız, diğer (dahili veya genel) istemcileri için zaten bir kullanıma bir API gerekir.
+SPA çerçeveleri büyük gerektiren ek olarak, mimari ve güvenlik uzmanlığı. Bunlar, büyük veri değişim sıklığı nedeniyle sık sık güncelleştirme ve yeni çerçeveleri daha geleneksel web uygulamaları karşılaşırsınız. Otomatik derleme ve dağıtım işlemleri yapılandırma ve kapsayıcıları gibi dağıtım seçenekleri yararlanarak geleneksel web uygulamaları SPA uygulamalarla daha zordur.
 
-Ayrıca, SPA çerçeveleri büyük gerektirir mimari ve güvenlik uzmanlık. Bunlar, geleneksel web uygulamalarını daha sık güncelleştirmeler ve yeni çerçeveleri nedeniyle büyük karmaşası karşılaşırsınız. Otomatikleştirilmiş derleme ve dağıtım işlemlerini yapılandırma ve dağıtım seçenekleri kapsayıcıları gibi kullanan geleneksel web uygulamaları SPA uygulamalarla daha zordur.
-
-Bu noktalar karşı SPA modeli tarafından mümkün hale kullanıcı deneyimi geliştirmeleri ağırlıklı gerekir.
+Kullanıcı deneyiminde SPA modeli tarafından olası yapılan geliştirmeler, bu konuları karşı ağırlıklı gerekir.
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Ne zaman geleneksel web uygulamaları seçin
 
-Daha önce belirtildiği nedenlerini geleneksel web uygulamaları çekme daha ayrıntılı bir açıklaması verilmiştir.
+Çekme geleneksel web uygulamaları için daha önce belirtilen nedenlerden daha ayrıntılı bir açıklaması verilmiştir.
 
-**Basit salt okunur büyük olasılıkla, istemci-tarafı gereksinimleri uygulamanızı vardır**
+**Uygulamanız basit, salt okunur büyük olasılıkla, istemci-tarafı gereksinimleri vardır**
 
-Birçok web uygulamaları, öncelikle bir salt okunur şekilde kullanıcılarının büyük çoğunluğu tarafından tüketilen. Salt okunur (veya okuma çoğunlukla) uygulamalar çok daha kolaydır, bakımını ve durum önemli miktarda işlemek olanlar olma eğilimindedir. Örneğin, bir arama motoru, metin kutusu ve arama sonuçlarını görüntülemek için ikinci bir sayfa ile tek giriş noktası içerebilir. Anonim kullanıcılar istekleri kolayca yapabilirsiniz ve istemci tarafı mantığı için pek gereksinim yoktur. Benzer şekilde, bir blog veya içerik yönetimi sistemin genel kullanıma yönelik uygulama genellikle çoğunlukla biraz istemci tarafı davranışı içerikle oluşur. Bu tür uygulamalar, web sunucusunda mantığı gerçekleştirmek ve tarayıcıda görüntülenecek HTML oluşturmak geleneksel sunucu tabanlı web uygulamaları olarak kolayca oluşturulur. Her sitenin benzersiz sayfasını işareti ve arama motorları tarafından (varsayılan olarak bu uygulamanın ayrı bir özellik olarak eklemek zorunda kalmadan) dizine kendi URL sahip olmasına ayrıca Temizle senaryolarda avantajdır.
+Birçok web uygulamaları, öncelikli olarak salt okunur bir biçimde kullanıcılarının büyük çoğunluğu tarafından tüketilir. Salt okunur (veya okuma çoğunlukla) uygulamaları, çok daha kolaydır, bakımını ve durum önemli miktarda işleme alınanlardan olma eğilimindedir. Örneğin, bir arama motoru, bir metin kutusu ve arama sonuçlarını görüntülemek için ikinci bir sayfa ile tek giriş noktası oluşabilir. Anonim kullanıcılar kolayca istekleri yapabilir ve istemci tarafı mantığı için pek gereksinim yoktur. Benzer şekilde, bir blog veya içerik yönetim sisteminin genel kullanıma yönelik uygulama, biraz istemci tarafı davranışı içerikle esas olarak, genellikle oluşur. Tür uygulamalar web sunucusunda mantığını gerçekleştirebilir ve tarayıcıda görüntülenecek HTML işleme geleneksel sunucu tabanlı web uygulamaları kolayca oluşturulur. Her sitenin benzersiz sayfasını bozulmasına ve (varsayılan olarak bu uygulamanın ayrı bir özellik olarak eklemek zorunda kalmadan) arama motorları tarafından dizine kendi URL sahip olmasına da Temizle senaryolarda avantajdır.
 
-**JavaScript desteği olmadan tarayıcılarda çalışması uygulamanız gereken**
+**Uygulamanızın tarayıcılarında JavaScript desteğiyle çalışması için gereken**
 
-Sınırlı olan veya hiç JavaScript desteği tarayıcılarda çalışması için gereken web uygulamaları geleneksel web uygulaması iş akışlarını kullanarak yazılmalıdır (veya en az bu tür davranış geri mümkün olmayacaktır). SPAs çalışması için istemci tarafı JavaScript gerektirir; kullanılabilir durumda değilse, SPAs iyi bir seçim değildir.
+Kısıtlı veya JavaScript desteği olan tarayıcılarda çalışması için web uygulamaları geleneksel web uygulama iş akışları kullanılarak yazılmış olması gerekir (veya benzer bir davranış dönmesi için en az). Spa'lar çalışabilmesi için istemci tarafı JavaScript gerektirir; Spa'lar kullanılabilir durumda değilse, iyi bir seçim değildir.
 
-**Ekibinizin JavaScript veya TypeScript geliştirme teknikleri tanınmayan**
+**Takımınızın geliştirme tekniklerini JavaScript veya TypeScript ile tanınmıyor**
 
-Ekibiniz, JavaScript veya TypeScript ile tanınmayan ancak ile sunucu tarafı web uygulaması geliştirme alışkın olduğu sonra büyük olasılıkla bir geleneksel web uygulaması bir SPA daha hızlı bir şekilde teslim etmek seçebilecekler. Öğrenme program SPAs için bir hedef veya SPA tarafından karşılanan kullanıcı deneyimi gerekli olduğu sürece, geleneksel web uygulamaları oluşturma ile bilginiz ekipler için daha verimli bir seçimdir.
+Ardından takımınız, JavaScript veya TypeScript ile yabancıysa ancak sunucu tarafı web uygulama geliştirmeyle, bunlar büyük olasılıkla geleneksel web uygulaması bir SPA daha hızlı teslim edebilirsiniz olacaktır. Öğrenme program Spa'lar için bir hedef, veya bir SPA tarafından gösterilen kullanıcı deneyimini gereklidir sürece, geleneksel web uygulamaları oluşturma ile ilgili bilgi sahibi olan takımlar için daha üretken bir seçimdir.
 
-## <a name="when-to-choose-spas"></a>Ne zaman SPAs seçin
+## <a name="when-to-choose-spas"></a>Ne zaman Spa'lar seçin
 
-Geliştirme, web uygulamanız için bir tek sayfalık uygulamalar stilini seçmek ne zaman daha ayrıntılı bir açıklaması verilmiştir.
+Geliştirme web uygulamanız için bir tek sayfalık uygulamalar stili seçmek ne zaman daha ayrıntılı bir açıklaması verilmiştir.
 
-**Uygulamanızın birçok özellik ile zengin kullanıcı arabirimi kullanıma sunma**
+**Uygulamanızı birçok özelliği ile zengin kullanıcı arabirimi kullanımına sunun**
 
-SPAs kullanıcı eylemleri veya uygulama alanları arasında gezinmek gibi sayfa yeniden yükleniyor gerektirmeyen zengin istemci tarafı işlevleri destekler. Arka planda veri getirme sPAs daha hızlı bir şekilde yükleyebilir ve tam sayfa yeniden yükler nadir olduğundan tek tek kullanıcı eylemlerini daha iyi yanıt. Kısmen tamamlanan formları ya da belgeler form göndermek için bir düğmeye gerek kalmadan kullanıcı kaydetme artımlı güncelleştirmeler sPAs destekler. SPAs sürükle ve bırak gibi zengin istemci-tarafı davranışları geleneksel uygulamalar çok daha kolay destekleyebilirsiniz. SPAs bağlantı yeniden kurulduğunda, sunucuya geri sonunda eşitlenen bir istemci-tarafı modeline güncelleştirmeleri yapma bir bağlantısız modda çalıştırmak için tasarlanmış olabilir. Uygulamanızın gereksinimlerine tipik HTML formları sunma ötesine gider zengin işlevlerine eklerseniz SPA stil uygulama seçmeniz gerekir.
+Spa'lar kullanıcı eylemleri veya uygulamanın bölgeler arasında gezinmek için sayfayı yeniden yüklemeyi gerektirmeyen zengin istemci tarafı işlevleri destekler. Spa'lar, daha hızlı bir şekilde veri arka planda getirme yükleyebilir ve tam sayfada yüklemelere nadir olduğundan tek tek kullanıcı eylemlerini daha hızlı yanıt. Spa'lar kısmen tamamlanmış forms veya belgeler form göndermek için bir düğmeye tıklayın girmelerine gerek kaydetme artımlı güncelleştirmeleri destekler. Spa'lar sürükle ve bırak gibi zengin istemci tarafı davranışları geleneksel uygulamaları çok daha kolay destekleyebilirsiniz. Spa'lar güncelleştirmeler yapma bağlantı yeniden kurulur kurulmaz sunucuya geri sonunda eşitlenen bir istemci-tarafı modeli için bir bağlantı kesik modda çalışacak şekilde tasarlanabilir. Uygulamanızın gereksinimlerini tipik HTML formları teklif ötesine giden zengin işlevleri eklerseniz SPA stil uygulama seçmeniz gerekir.
 
-Sık SPAs adres çubuğunda geçerli işleme yansıtarak (ve yer işareti kullanıcılara ya da bu URL için ayrıntılı bağlantı dönün izin vererek) anlamlı bir URL görüntüleme gibi geleneksel web uygulamaları için yerleşik özellikleri uygulamak gerektiğini unutmayın. SPAs Ayrıca kullanıcıların tarayıcının geri ve İleri düğmelerini bunları beklenmedik olmaz sonuçlarıyla kullanmasına izin vermelidir.
+Sık Spa'lar için anlamlı bir URL adresi çubuk geçerli işlem yansıtma (ve kullanıcılarının yer işaretine veya bu URL için ayrıntılı bağlantı geri) görüntüleme gibi geleneksel web uygulamaları, yerleşik özellikleri uygulamak gerektiğini unutmayın. Spa'lar Ayrıca kullanıcılar tarayıcının geri ve İleri düğmelerini bunları sürpriz olmaz sonuçla kullanmak izin vermelidir.
 
-**Ekibiniz ile JavaScript ve/veya TypeScript geliştirme alışkın olduğu**
+**Takımınız, JavaScript ve/veya TypeScript geliştirmeyle**
 
-SPAs yazma, JavaScript ve/veya TypeScript ve istemci tarafı programlama tekniklerinin ve kitaplıkları gerektirir. Ekibinizin Angular gibi SPA framework kullanarak modern JavaScript yazılırken yetkin olmalıdır.
+Spa'lar yazma, JavaScript ve/veya TypeScript ve istemci tarafı programlama teknikleri ve kitaplıkları ile aşinalık gerekir. Takımınızın Angular gibi bir SPA framework kullanarak modern JavaScript yazılırken yetkin olmalıdır.
 
-> ### <a name="references--spa-frameworks"></a>Başvuruları – SPA çerçeveler
-> - **Açısal**  
-> <https://angular.io>
-> - **JavaScript çerçeveleri karşılaştırması**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+> ### <a name="references--spa-frameworks"></a>Başvuruları – SPA çerçeveleri
+>
+> - **Angular**  
+>   <https://angular.io>
+> - **JavaScript çerçevesini karşılaştırma**  
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
-**Zaten bir API uygulamanızın diğer (dahili veya genel) istemcileri için kullanıma gerekir**
+**Uygulamanız diğer (dahili veya genel) istemciler için zaten bir API kullanıma açmalıdır**
 
-Diğer istemciler tarafından kullanılacak bir web API destekleniyorsa zaten sunucu tarafı form mantık yeniden oluşturma yerine bu API'leri yararlanır SPA uygulaması oluşturmak için daha az çaba gerektirebilir. Kullanıcıların uygulama ile etkileşim sPAs sorgu ve güncelleştirme veri web API'leri kapsamlı kullanımını kılın.
+Diğer istemciler tarafından kullanılacak bir web API'sini zaten destekliyor, mantık, sunucu tarafı formu yeniden oluşturma yerine bu API'leri yararlanan bir SPA uygulamasını oluşturmak için daha az çaba gerektirebilir. Kullanıcılar uygulama ile etkileşim kurarken Spa'lar kapsamlı kullanımını web API'leri için veri sorgulamak ve güncelleştirme olun.
 
 ## <a name="decision-table--traditional-web-or-spa"></a>Karar tablosu – geleneksel Web veya SPA
 
-Aşağıdaki karar tablo bazı geleneksel web uygulaması arasında bir SPA seçerken dikkate alınması gereken temel etmenler özetler.
+Aşağıdaki karar tablosu için temel faktör, geleneksel web uygulaması ve bir SPA arasında seçim yapılırken dikkate alınacak bazı özetlenmektedir.
 
-  | **Faktörü** | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
-  |---|---|---|
-  | JavaScript/TypeScript gerekli takım aşina | **En az** | **Gerekli** |
-  | Komut dosyası olmadan tarayıcılar destekler | **Desteklenen** | **Desteklenmiyor** |
-  | En düşük istemci tarafı uygulama davranışı | **Oldukça uygun** | **Gereğinden fazla** |
-  | Zengin ve karmaşık bir kullanıcı arabirimi gereksinimleri | **Sınırlı** | **Oldukça uygun** |
+| **faktörü**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| JavaScript/TypeScript konusunda gerekli ekip | **En az**             | **Gerekli**                |
+| R betiği oluşturmanıza destek tarayıcılar                   | **Desteklenen**           | **Desteklenmiyor**           |
+| En düşük istemci tarafında uygulama davranışı             | **Uygundur**         | **Düşünülecek**                |
+| Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **Uygundur**             |
 
 >[!div class="step-by-step"]
 [Önceki](modern-web-applications-characteristics.md)
-[sonraki](architectural-principles.md)
+[İleri](architectural-principles.md)

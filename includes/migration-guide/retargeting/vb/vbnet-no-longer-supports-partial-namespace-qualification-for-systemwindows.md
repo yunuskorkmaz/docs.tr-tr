@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|VB.NET projelerinde, .NET Framework 4.5.2 başlayarak, kısmen nitelenmiş ad alanları ile System.Windows API'leri belirtemezsiniz. Örneğin, başvurma <code>Windows.Forms.DialogResult</code> başarısız olur. Bunun yerine, kod için tam adı başvurması gerekir (<xref:System.Windows.Forms.DialogResult>) veya belirli bir ad alanı almak ve yalnızca çok başvurun <xref:System.Windows.Forms.DialogResult?displayProperty=name>.|
-|Öneri|Kod başvurmak için güncelleştirilmesi gerektiğini <code>System.Windows</code> API'leri basit adları (ve ilgili ad alanı içe aktarma) veya tam olarak nitelenmiş adlar ile.|
+|Ayrıntılar|.NET Framework 4.5.2 başlayarak VB.NET projeleri System.Windows API'leri kısmen nitelenmiş ad alanları ile belirtemezsiniz. Örneğin, söz konusu <code>Windows.Forms.DialogResult</code> başarısız olur. Bunun yerine, kod tam adına başvurmak gerekir (<xref:System.Windows.Forms.DialogResult>) veya belirli ad alanını içeri aktarır ve başvurmak için yalnızca <xref:System.Windows.Forms.DialogResult?displayProperty=name>.|
+|Öneri|Kod başvurmak için güncelleştirilmesi gerektiğini <code>System.Windows</code> API'leri basit adları (ve ilgili ad alanı alma) veya tam olarak nitelenmiş adlar.|
 |Kapsam|Küçük|
 |Sürüm|4.5.2|
 |Tür|Yeniden hedefleme|

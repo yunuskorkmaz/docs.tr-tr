@@ -1,10 +1,10 @@
-### <a name="wpf-printing-stack-update"></a>WPF yazdırma yığın güncelleştirme
+### <a name="wpf-printing-stack-update"></a>WPF yazdırma yığını güncelleştirmesi
 
 |   |   |
 |---|---|
-|Ayrıntılar|WPF'ın yazdırma API'lerini kullanarak <xref:System.Printing.PrintQueue?displayProperty=name> Şimdi pencerenin yazdırma belge paket API artık kullanım dışı XPS yazdırma API lehinde çağırın. Bakım kolaylığı aklınızda ile değişikliğin yapıldığı; kullanıcıların ne geliştiriciler davranışı veya API kullanımı değişiklikler görmeniz gerekir. Yeni yazdırma yığını, Windows 10 oluşturucuları güncelleştirmede çalıştırırken varsayılan olarak etkindir. Eski yazdırma yığını hala eski Windows sürümlerinde yalnızca eskisi çalışmaya devam eder.|
-|Öneri|Windows 10 oluşturucuları güncelleştirmede eski yığını kullanmak üzere ayarlanmış <code>UseXpsOMPrinting</code> REG_DWORD değerini <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> kayıt defteri anahtarına <code>1</code>.|
+|Ayrıntılar|WPF'nin yazdırma API'lerini kullanarak <xref:System.Printing.PrintQueue?displayProperty=name> penceresinin Yazdır belge paket API artık kullanım dışı XPS yazdırma API yerine artık çağırın. Bakım kolaylığı düşünülerek ile değişiklik yapılmıştır; kullanıcıların ne geliştiricilerin herhangi bir değişiklik davranış veya API kullanımı görmeniz gerekir. Yeni yazdırma yığın içinde Windows 10 Creators Update çalıştıran, varsayılan olarak etkindir. Eski yazdırma yığın hala eski Windows sürümlerinde yalnızca önceki gibi çalışmaya devam eder.|
+|Öneri|Eski yığın içinde Windows 10 Creators Update kullanmak için ayarlanmış <code>UseXpsOMPrinting</code> REG_DWORD değeri <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> kayıt defteri anahtarına <code>1</code>.|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 

@@ -5,38 +5,38 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
 ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172415"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960911"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Erişilebilirlik Düzeylerinin Kullanılmasındaki Kısıtlamalar (C# Başvurusu)
-Bir bildiriminde bir türü belirttiğinizde, türü erişilebilirlik düzeyi erişilebilirlik düzeyinde bir üye veya başka bir türde bağımlı olup olmadığını denetleyin. Örneğin, doğrudan temel sınıf en az türetilmiş sınıf olarak erişilebilir olmalıdır. Aşağıdaki bildirimler için derleyici hatası neden temel sınıfı `BaseClass` daha az erişilebilen `MyClass`:  
+Bir bildirim türü belirttiğinizde, türün erişilebilirlik düzeyi erişilebilirlik düzeyine üyesi veya başka bir türe bağımlı olup olmadığını denetleyin. Örneğin, doğrudan temel sınıf en az türetilen sınıf olarak olarak erişilebilir olması gerekir. Aşağıdaki bildirimleri için bir derleyici hatasına neden temel sınıf `BaseClass` daha az erişilebilir `MyClass`:  
   
 ```csharp  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
   
- Aşağıdaki tabloda bildirilen erişilebilirlik düzeyi kısıtlamaları özetlenir.  
+ Bildirilen erişilebilirlik düzeyi kısıtlamaları aşağıdaki tabloda özetlenmiştir.  
   
 |Bağlam|Açıklamalar|  
 |-------------|-------------|  
-|[Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)|Sınıf türü doğrudan temel sınıfını en az sınıf türü kendisi olarak erişilebilir olmalıdır.|  
-|[Arabirimler](../../../csharp/programming-guide/interfaces/index.md)|Bir arabirim türünün açık temel arabirimler en az arabirim türü kendisi olarak erişilebilir olmalıdır.|  
-|[Temsilciler](../../../csharp/programming-guide/delegates/index.md)|Dönüş türü ve bir temsilci türü parametre türleri, en az temsilci türü olarak kendisi olarak erişilebilir olması gerekir.|  
-|[Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)|Bir sabit türü en az sabit olarak olarak erişilebilir olmalıdır.|  
-|[Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)|Bir alan türü en az alan olarak olarak erişilebilir olmalıdır.|  
+|[Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)|Bir sınıf türünün doğrudan temel sınıf en az sınıf türü kendisini olarak erişilebilir olması gerekir.|  
+|[Arabirimler](../../../csharp/programming-guide/interfaces/index.md)|Açık bir arabirim türü temel arabirimleri en az arabirim türü kendisini olarak erişilebilir olması gerekir.|  
+|[Temsilciler](../../../csharp/programming-guide/delegates/index.md)|Bir temsilci türü parametre türleri ve dönüş türü, en az temsilci türü kendisini olarak erişilebilir olması gerekir.|  
+|[Sabitler](../../../csharp/programming-guide/classes-and-structs/constants.md)|Bir sabit değer türü en az sabit olarak olarak erişilebilir olması gerekir.|  
+|[Alanlar](../../../csharp/programming-guide/classes-and-structs/fields.md)|Bir alan türü en az alan olarak olarak erişilebilir olması gerekir.|  
 |[Yöntemler](../../../csharp/programming-guide/classes-and-structs/methods.md)|Bir yöntemin parametre türleri ve dönüş türü, en az yöntemi olarak olarak erişilebilir olması gerekir.|  
-|[Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)|Bir özelliğin türünü en az özelliği olarak olarak erişilebilir olmalıdır.|  
-|[Olaylar](../../../csharp/programming-guide/events/index.md)|Bir olay türü en az olayı olarak olarak erişilebilir olmalıdır.|  
-|[Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)|Bir dizin oluşturucu türü ve parametre türleri en az dizinleyici olarak erişilebilir olmalıdır.|  
-|[İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Dönüş türü ve bir işleç parametre türleri, en azından operatör olarak olarak erişilebilir olması gerekir.|  
-|[Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Bir oluşturucu parametre türleri en az oluşturucusu olarak erişilebilir olmalıdır.|  
+|[Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)|Bir özelliğin türünü en az özelliği olarak olarak erişilebilir olması gerekir.|  
+|[Olaylar](../../../csharp/programming-guide/events/index.md)|Bir olay türü en az olay olarak olarak erişilebilir olması gerekir.|  
+|[Dizin Oluşturucular](../../../csharp/programming-guide/indexers/index.md)|Bir dizin oluşturucu türü ve parametre türleri, en az Indexer olarak erişilebilir olması gerekir.|  
+|[İşleçler](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Operatör için parametre türleri ve dönüş türü, en azından operatör olarak olarak erişilebilir olması gerekir.|  
+|[Oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Parametre türleri bir oluşturucunun en az Oluşturucu olarak olarak erişilebilir olması gerekir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, farklı türlerde hatalı bildirimleri içerir. Her bildirim aşağıdaki açıklama beklenen derleyici hatası gösterir.  
+ Aşağıdaki örnek, farklı türlerdeki hatalı bildirimi içerir. Her bildiriminin açıklama beklenen derleyici hata olduğunu gösterir.  
   
 ```csharp  
 // Restrictions on Using Accessibility Levels  

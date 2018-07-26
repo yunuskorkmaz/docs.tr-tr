@@ -1,29 +1,29 @@
 ## <a name="installation-instructions"></a>Yükleme yönergeleri 
 
-Bulmak için iki farklı yolla **.NET derleyici Platform SDK** içinde **Visual Studio yükleyicisi**:
+Bulmak için iki farklı yolu vardır **.NET derleyici Platformu SDK'sı** içinde **Visual Studio yükleyicisi**:
 
 ### <a name="install-using-the-workloads-view"></a>İş yükleri görünümünü kullanarak yükleme
 
-.NET derleme Platform SDK'yı otomatik olarak Visual Studio uzantısı geliştirme iş yükü bir parçası olarak seçili değildir. İsteğe bağlı bir bileşen seçmelisiniz.
+.NET derleyici Platformu SDK'sı, Visual Studio uzantısı geliştirme iş yükünün parçası otomatik olarak seçili değildir. İsteğe bağlı bir bileşen seçmelisiniz.
 
 1. Çalıştırma **Visual Studio yükleyicisi** 
 1. Seçin **değiştirme** 
 1. Denetleme **Visual Studio uzantısı geliştirme** iş yükü.
 1. Açık **Visual Studio uzantısı geliştirme** Özet ağaç düğümü.
-1. Onay kutusunu için **.NET derleyici Platform SDK**. Bu son isteğe bağlı bileşenler altında bulabilirsiniz.
+1. İçin kutuyu **.NET derleyici Platformu SDK'sı**. Bu son isteğe bağlı bileşenler altında bulabilirsiniz.
 
-İsteğe bağlı olarak, ayrıca istediğiniz **DGML Düzenleyicisi** Görselleştirici grafikleri görüntülemek için:
+Bunu Ayrıca isteğe bağlı olarak, istersiniz **DGML düzenleyici** görselleştiricisindeki grafikleri görüntülemek için:
 
-1. Açık **bileşenleri tek tek** Özet ağaç düğümü.
-1. İçin kutuyu **DGML Düzenleyicisi**
+1. Açık **tek tek bileşenler** Özet ağaç düğümü.
+1. İçin kutuyu **DGML Düzenleyici**
 
-### <a name="install-using-the-individual-components-tab"></a>Bileşenleri tek tek sekmesini kullanarak yükleme
+### <a name="install-using-the-individual-components-tab"></a>Bağımsız bileşenler sekmesinde kullanarak yükleme
 
 1. Çalıştırma **Visual Studio yükleyicisi** 
 1. Seçin **değiştirme** 
-1. Seçin **bileşenleri tek tek** sekmesi 
-1. Onay kutusunu için **.NET derleyici Platform SDK**. Üst altında bulabilirsiniz **derleyicileri, yapı araçları ve çalışma zamanları** bölümü.
+1. Seçin **tek tek bileşenler** sekmesi 
+1. İçin kutuyu **.NET derleyici Platformu SDK'sı**. Üst altında bulabilirsiniz **derleyiciler, derleme araçları ve çalışma zamanları** bölümü.
 
-İsteğe bağlı olarak, ayrıca istediğiniz **DGML Düzenleyicisi** Görselleştirici grafikleri görüntülemek için:
+Bunu Ayrıca isteğe bağlı olarak, istersiniz **DGML düzenleyici** görselleştiricisindeki grafikleri görüntülemek için:
 
-1. Onay kutusunu için **DGML Düzenleyicisi**. Altında bulabilirsiniz **kod Araçları** bölümü.
+1. İçin kutuyu **DGML düzenleyici**. Bunun altında bulabilirsiniz **kod Araçları** bölümü.

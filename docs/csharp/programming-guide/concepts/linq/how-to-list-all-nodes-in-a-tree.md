@@ -3,25 +3,25 @@ title: 'Nasıl yapılır: bir ağaç (C#) tüm düğümler listesi'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: 0ee4c51946ff6116fa37f4ca61bc42deed562532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322136"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959487"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: bir ağaç (C#) tüm düğümler listesi
-Bazen bir ağacındaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntemi veya özelliği ağaç etkilemesi öğrenme kullanışlı olabilir. Tüm düğümleri metin biçiminde listeleyen bir yaklaşım özellikle ve tam olarak ağacındaki herhangi bir düğümün tanımlayan bir XPath ifadesi oluşturmaktır.  
+Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  
   
- XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri sahip daha düşük performansa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular çok daha güçlü. Ancak, XML ağaç düğümleri tanımlamak için bir yol olarak XPath iyi çalışır.  
+ XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri daha düşük performansa sahip [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çok daha güçlü sorgular. Ancak, XPath düğümleri XML ağacındaki tanımlamak için bir yol işe yarar.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir işlev gösterir `GetXPath` , herhangi bir düğüm için belirli bir XPath ifadesi XML ağacında oluşturur. Düğümleri ad alanında olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
+ Bu örnek adlı bir işlev gösterir `GetXPath` XML ağacında, herhangi bir düğüm için belirli bir XPath ifadesi oluşturur. Bir ad alanı düğümleri olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
   
- Örnek ardından düğümler çeşitli örneği içeren küçük bir XML ağaç oluşturur. Alt düğümleri arasında yineler ve her düğüm için XPath ifadesi yazdırır.  
+ Örnek daha sonra birden fazla düğüm örneği içeren küçük bir XML ağacı oluşturur. Alt düğümler yinelenir ve her düğüm için XPath ifadesi yazdırır.  
   
- XML bildirimi ağacında bir düğümü değil fark edeceksiniz.  
+ XML bildirimi ağacında bir düğümü olmadığını fark edeceksiniz.  
   
- Çeşitli düğümleri içeren bir XML dosyası verilmiştir:  
+ Birden fazla düğümleri içeren bir XML dosyası verilmiştir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ Bazen bir ağacındaki tüm düğümleri listelemek yararlıdır. Bu tam olarak 
 </Root>  
 ```  
   
- XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacında düğüm listesi aşağıdadır:  
+ XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacı düğümler listesi verilmiştir:  
   
 ```  
 /processing-instruction()  
@@ -315,7 +315,7 @@ class Program
 }  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -349,4 +349,4 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Gelişmiş sorgu teknikleri (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

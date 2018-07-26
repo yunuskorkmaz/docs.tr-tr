@@ -8,16 +8,16 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268126"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961176"
 ---
 # <a name="null-c-reference"></a>null (C# Başvurusu)
-`null` Anahtar sözcüğü bir null başvuru, herhangi bir nesneye başvurmuyor birini temsil eden bir hazır değer değil. `null` Başvuru türü değişkenlerin varsayılan değerdir. Sıradan değer türleri null olamaz. Ancak, C# 2.0 boş değer atanabilen değer türleri kullanıma sunuldu. Bkz: [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md).  
+`null` Anahtar sözcüğü, bir null başvuru, herhangi bir nesneye başvurmuyor birini temsil eden bir sabit değer. `null` Başvuru türü değişkenlerin varsayılan değeridir. Sıradan değer türleri null olamaz. Ancak, C# 2.0 boş değer atanabilir türler kullanıma sunuldu. Bkz: [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md).  
   
- Aşağıdaki örnek, bazı davranışlarını null anahtar sözcüğü gösterir:  
+ Aşağıdaki örnek, bazı davranışları null anahtar sözcüğü gösterir:  
   
  [!code-csharp[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/null_1.cs)]  
   

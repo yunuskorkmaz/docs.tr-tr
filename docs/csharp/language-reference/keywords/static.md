@@ -8,52 +8,52 @@ helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
 ms.openlocfilehash: b7e2981c8832d6ac1744c102d5bde55bbe25c256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287273"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959991"
 ---
 # <a name="static-c-reference"></a>static (C# Başvurusu)
-Kullanım `static` türü yerine belirli bir nesneye ait statik bir üyenin bildirmek için değiştiricisi. `static` Sınıfları, alanları, yöntemler, özellikler, işleçleri, olayları ve oluşturucular ile değiştiricisi kullanılabilir, ancak dizin oluşturucular, sonlandırıcılar veya türleri sınıfları dışında kullanılamaz. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+Kullanım `static` belirli bir nesne yerine türün kendisine ait olduğu statik bir üye bildirmek için değiştiricisi. `static` Değiştiricisi sınıflar, alanları, yöntemleri, özellikleri, işleçler, olaylar ve oluşturucular ile kullanılabilir, ancak dizin oluşturucular, bir sonlandırıcı ya da sınıfları dışındaki türler ile kullanılamaz. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sınıf olarak bildirilmiş `static` ve yalnızca içeren `static` yöntemleri:  
+ Aşağıdaki sınıf olarak bildirilir `static` ve yalnızca içeren `static` yöntemleri:  
   
  [!code-csharp[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
- Bir sabit veya türü örtük olarak statik bir üyenin bildirimidir.  
+ Bir sabit değer veya tür bildirimi örtük olarak statik bir üyedir.  
   
- Statik bir üyenin örneğinden başvurulamaz. Bunun yerine, türü adı aracılığıyla başvurulur. Örneğin, aşağıdaki sınıf göz önünde bulundurun:  
+ Statik bir üyeye bir örnek başvurulamaz. Bunun yerine, bu tür adı ile başvurulur. Örneğin, aşağıdaki sınıf göz önünde bulundurun:  
   
  [!code-csharp[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
- Statik üye başvurmak için `x`, tam ad kullanın `MyBaseC.MyStruct.x`, üye aynı kapsamdan erişilebilir değilse:  
+ Statik bir üyeye başvuruda bulunmak için `x`, tam adı kullanmanız `MyBaseC.MyStruct.x`, üye aynı kapsamdan erişilebilir değilse:  
   
 ```csharp  
 Console.WriteLine(MyBaseC.MyStruct.x);  
 ```  
   
- Sınıfının bir örneği sınıfın tüm örneği alanları ayrı bir kopyasını içerirken, her bir statik alan yalnızca bir kopyası yoktur.  
+ Bir sınıf örneği ayrı bir sınıfın tüm örnek alanları kopyasını içerirken, her bir statik alanı yalnızca bir kopyası yoktur.  
   
- Kullanmak mümkün değil [bu](../../../csharp/language-reference/keywords/this.md) statik yöntemler veya özellik erişimcisi başvurmak için.  
+ Kullanmak mümkün değil [bu](../../../csharp/language-reference/keywords/this.md) statik yöntemler veya özellik erişimcileri başvurmak için.  
   
- Varsa `static` anahtar sözcüğü bir sınıfa uygulandığında, sınıfın tüm üyeleri statik olmalıdır.  
+ Varsa `static` anahtar sözcüğü, bir sınıfa uygulandığında, sınıfın tüm üyeleri statik olmalıdır.  
   
- Statik Oluşturucular, sınıflar ve statik sınıflar olabilir. Statik oluşturucular arasında belirli bir noktada program başlar ve sınıf örneğinin adı verilir.  
+ Sınıflar ve statik sınıfların statik oluşturucuları olabilir. Statik oluşturucular arasında belirli bir noktada program başlar ve sınıfın örneği çağrılır.  
   
 > [!NOTE]
->  `static` Anahtar sözcüğü C++ daha kullanır daha sınırlı. C++ anahtar sözcüğü ile karşılaştırmak için bkz: [depolama sınıfları (C++)](/cpp/cpp/storage-classes-cpp#static).
+>  `static` Anahtar sözcüğü C++'ta kullanımı daha fazla sınırlı sahiptir. C++ anahtar sözcüğüyle karşılaştırmak için bkz [depolama sınıfları (C++)](/cpp/cpp/storage-classes-cpp#static).
   
- Statik üyeler göstermek için bir şirket çalışan temsil eden bir sınıf göz önünde bulundurun. Sınıfı çalışanları Say ve bir alan çalışanların sayısını depolamak için bir yöntem içerdiğini varsayar. Yöntem ve alan için herhangi bir örnek çalışanı ait değil. Bunun yerine şirket sınıfına ait. Bu nedenle, statik sınıf üyeleri bildirilmelidir.  
+ Statik üyeleri göstermek için bir şirket çalışanı temsil eden bir sınıf göz önünde bulundurun. Sınıf sayısı çalışan ve bir alan çalışanların sayısını depolamak için bir yöntem içerdiğini varsayın. Yöntemi hem de alan hiçbir örneği çalışana ait değil. Bunun yerine şirket sınıfa ait. Bu nedenle, statik sınıf üyeleri olarak bildirilmelidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte yeni bir çalışan Kimliğini ve adını okur, çalışan sayacın bire artırır ve yeni çalışan ve yeni çalışanların sayısını bilgileri görüntüler. Kolaylık olması için bu program klavyeden çalışanların geçerli sayısını okur. Gerçek bir uygulamada bu bilgileri bir dosyadan okumanız gerekir.  
+ Bu örnekte yeni bir çalışanın Kimliğini ve adını okur, çalışan sayacı bir artar ve yeni çalışan ve yeni kaç kişi bilgilerini görüntüler. Kolaylık olması için bu programı klavyeden çalışanların geçerli sayısını okur. Gerçek bir uygulamada, bu bilgileri bir dosyadan okunmalıdır.  
   
  [!code-csharp[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, henüz bildirilen başka bir statik alan kullanarak statik bir alana başlatabilirsiniz rağmen statik alanın açıkça bir değer atayana kadar sonuçları tanımsız olacağını gösterir.  
+ Bu örnek, henüz bildirilen başka bir statik alan kullanarak statik alanı başlatabilirsiniz, ancak açıkça statik alanı için bir değer atamak kadar sonuçlar tanımsız olacağını gösterir.  
   
  [!code-csharp[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   

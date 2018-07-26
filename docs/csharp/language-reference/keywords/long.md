@@ -8,64 +8,64 @@ helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
 ms.openlocfilehash: 106b832801a373ca387be455ef1c0df4233621d0
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027830"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961345"
 ---
 # <a name="long-c-reference"></a>long (C# Başvurusu)
 
-`long` Aşağıdaki tabloda gösterilen aralığı ve boyutu göre değerleri depolayan tamsayı türü gösterir.  
+`long` boyutu ve aşağıdaki tabloda gösterilen aralığı göre değerler depolayan bir tamsayı türü gösterir.  
   
 |Tür|Aralık|Boyut|.NET türü|  
 |----------|-----------|----------|-------------------------|  
-|`long`|-9,223,372,036,854,775,808 için 9,223,372,036,854,775,807|İşaretli 64 bit tam sayı|<xref:System.Int64?displayProperty=nameWithType>|  
+|`long`|-9,223,372,036,854,775,808 için 9.223.372.036.854.775.807|İşaretli 64 bit tam sayı|<xref:System.Int64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Sabit değerler 
 
-Bildirme ve başlatma bir `long` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak). 
+Bildirmek ve başlatmak bir `long` değişkenini değişmez değer ondalık, onaltılık bir sabit değer atama veya (C# 7.0 ile için sabit bir ikili başlayarak). 
 
-Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 4,294,967,296 tamsayılar eşit ve ikili değişmez değerler atanır `long` değerleri.  
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 4,294,967,296 eşit ve ikili sabit değerler atanır `long` değerleri.  
   
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
 
 > [!NOTE] 
-> Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır. 
+> Önek kullanın `0x` veya `0X` onaltılık bir sabit değer ve öneki belirtmek için `0b` veya `0B` ikili bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır. 
 
 C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
- - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
- - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
+ - C# 7.0, alt çizgi karakteri kullanımına izin verir `_`, basamak ayırıcı olarak.
+ - C# 7.2 sağlayan `_` sonra öneki için bir ikili veya onaltılık sabit basamak ayırıcı olarak kullanılacak. Ondalık bir sabit değer, bir alt çizgi olan izin verilen değil.
 
 Aşağıda bazı örnekler gösterilmektedir.
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Tamsayı değişmez değerleri türü gösterir bir sonek de içerir. Sonek `L` gösterir bir `long`. Aşağıdaki örnek kullanır `L` uzun tamsayı belirtmek için soneki:
+ Tamsayı sabit değerleri türü gösteren bir son eki de içerebilir. Sonek `L` gösterir bir `long`. Aşağıdaki örnekte `L` sonek uzun tamsayı belirtmek için:
  
 ```csharp
 long value = 4294967296L;  
 ```  
 
 > [!NOTE]
->  Bu gibi durumlarda, küçük harf "m" de sonek olarak kullanabilirsiniz. Ancak, bu derleyici uyarısı oluşturur harf "l" kolay "1." rakamla karıştırılır çünkü "M" daha anlaşılır olması için kullanın.  
+>  Bu gibi durumlarda, küçük harf "l" de sonek olarak kullanabilirsiniz. Ancak, bu bir derleyici uyarısı oluşturur çünkü "m" harfinin basamağı "1" ile kolaylıkla karıştırılır "M" daha anlaşılır olması için kullanın.  
   
- Sonek kullandığınızda `L`, sabit değeri Tamsayı türünde ya da olduğu belirlenir `long` veya [ulong](../../../csharp/language-reference/keywords/ulong.md)boyutuna bağlı olarak. Bu durumda olan `long` olduğundan, aralığı'den [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+ Sonek kullandığınızda `L`, sabit tamsayı türü ya da belirlenir `long` veya [ulong](../../../csharp/language-reference/keywords/ulong.md)boyutuna bağlı olarak. Bu durumda `long` çünkü bu aralığı değerinden [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
- Bir ortak soneki aşırı yüklenmiş yöntemleri çağırmak için kullanılır. Örneğin, aşağıdaki aşırı yüklenmiş yöntemler türü parametrelerine sahip `long` ve [int](../../../csharp/language-reference/keywords/int.md):  
+ Bir ortak soneki aşırı yüklü yöntemleri çağırmak için kullanılır. Örneğin, aşağıdaki aşırı yüklenmiş yöntemler türünde parametreye sahip `long` ve [int](../../../csharp/language-reference/keywords/int.md):  
   
 ```csharp
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(long l) {}  
 ```  
   
- `L` Soneki garanti doğru aşırı adı verilir:  
+ `L` Soneki garanti aşırı yük çağrılır:  
   
 ```csharp  
 SampleMethod(5);    // Calls the method with the int parameter  
 SampleMethod(5L);   // Calls the method with the long parameter  
 ```  
-Değişmez değer bir tamsayı sonek türünü ilk değerini gösterilebilir aşağıdaki türlerde ise: 
+Değişmez değer bir tamsayı sonek varsa, ilk değerini gösterilebilir aşağıdaki türlerde türünü verilmiştir: 
 
 1. [int](int.md)
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
@@ -74,25 +74,25 @@ Değişmez değer bir tamsayı sonek türünü ilk değerini gösterilebilir aş
 
 Önceki örneklerde değişmez değer 4294967296 türünde `long`, aralığı aştığından [uint](../../../csharp/language-reference/keywords/uint.md) (bkz [tam sayı türleri tablosu](../../../csharp/language-reference/keywords/integral-types-table.md) depolama boyutları tam sayı türleri için).  
   
- Kullanırsanız `long` ifadesi aynı ifadedeki diğer tam sayı türleri türüyle olarak değerlendirildiği `long` (veya [bool](../../../csharp/language-reference/keywords/bool.md) ilişkisel ya da Boole ifadeleri söz konusu olduğunda). Örneğin, olarak aşağıdaki ifadeyi hesaplar `long`:  
+ Kullanırsanız `long` diğer tamsayı türlerinin aynı ifadede, ifade türü olarak değerlendirildiği `long` (veya [bool](../../../csharp/language-reference/keywords/bool.md) ilişkisel veya Boolean ifadeler söz konusu olduğunda). Örneğin, aşağıdaki ifade, olarak değerlendirir `long`:  
   
 ```csharp  
 898L + 88  
 ```  
   
- Karma kayan nokta türleri ve tam sayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).  
+ Karma kayan nokta türleri ve tamsayı türleri aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="conversions"></a>Dönüşümler  
- Önceden tanımlanmış bir örtük dönüştürme `long` için [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md). Aksi halde bir cast kullanılmalıdır. Örneğin, aşağıdaki deyim derleme hatası açık atama olmadan üretir:  
+ Önceden tanımlanmış bir örtük dönüştürme vardır `long` için [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md). Aksi takdirde bir yayın kullanılmalıdır. Örneğin, aşağıdaki deyim, açık atama olmadan bir derleme hatasına neden olur:  
   
 ```csharp  
 int x = 8L;        // Error: no implicit conversion from long to int  
 int x = (int)8L;   // OK: explicit conversion to int  
 ```  
   
- Önceden tanımlanmış bir örtük dönüştürme [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [bayt](../../../csharp/language-reference/keywords/byte.md), [kısa](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), veya [char](../../../csharp/language-reference/keywords/char.md) için `long`.  
+ Önceden tanımlanmış bir örtük dönüştürme vardır [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [bayt](../../../csharp/language-reference/keywords/byte.md), [kısa](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), veya [char](../../../csharp/language-reference/keywords/char.md) için `long`.  
   
- Ayrıca kayan nokta türleri için örtük dönüştürme yok fark `long`. Örneğin, bir açık atama kullanılmadığı sürece aşağıdaki ifadeyi derleyici hatası oluşturur:  
+ Ayrıca örtülü dönüştürme için kayan nokta türlerinden fark `long`. Örneğin, bir açık tür dönüştürme kullanılmadığı sürece aşağıdaki deyim, bir derleyici hatası oluşturur:  
   
 ```csharp  
 long x = 3.0;         // Error: no implicit conversion from double  

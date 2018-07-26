@@ -1,10 +1,10 @@
-### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Seçici içinde bir öğe özel bir INCC koleksiyondan kaldırırken kilitlenme
+### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Özel bir INCC koleksiyondan bir öğe kaldırılırken seçicide kilitlenme
 
 |   |   |
 |---|---|
-|Ayrıntılar|Bir <code>T:System.InvalidOperationException</code> aşağıdaki senaryolarda oluşabilir:<ul><li>ItemsSource için bir <code>T:System.Windows.Controls.Primitives.Selector</code> bir koleksiyondur, özel bir uygulama <code>T:System.Collections.Specialized.INotifyCollectionChanged</code>.</li><li>Seçili öğeyi koleksiyondan kaldırılır.</li><li><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> Sahip <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1 (bir bilinmeyen konumu belirtir).</li></ul>Özel durum çağrı yığını System.Windows.Threading.Dispatcher.VerifyAccess() System.Windows.DependencyObject.GetValue (DependencyProperty dp) System.Windows.Controls.Primitives.Selector.GetIsSelected (DependencyObject adresindeki adresindeki başlar öğesi) uygulama, birden fazla dağıtıcı iş parçacığı içeriyorsa, bu özel durumun .NET Framework 4. 5 ' oluşabilir. .NET Framework 4.7 tek bir dağıtıcı iş parçacığı ile uygulamalarında özel durumu oluşabilir. .NET Framework 4.7.1 sorun düzeltilmiştir.|
-|Öneri|.NET Framework 4.7.1'ye yükseltin.|
+|Ayrıntılar|Bir <code>T:System.InvalidOperationException</code> aşağıdaki senaryolarda oluşabilir:<ul><li>ItemsSource için bir <code>T:System.Windows.Controls.Primitives.Selector</code> özel uygulanışı ile koleksiyonudur <code>T:System.Collections.Specialized.INotifyCollectionChanged</code>.</li><li>Seçili öğeyi koleksiyondan kaldırılır.</li><li><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> Sahip <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1 (bilinmeyen bir konumu belirtir).</li></ul>Özel durumun çağrı yığını System.Windows.Threading.Dispatcher.VerifyAccess() System.Windows.Controls.Primitives.Selector.GetIsSelected (DependencyObject adresindeki System.Windows.DependencyObject.GetValue (DependencyProperty dp) konumunda başlar öğesi) uygulamanın birden fazla dağıtıcı iş parçacığı varsa bu özel durum .NET Framework 4.5 içinde ortaya çıkabilir. .NET Framework 4.7 tek bir dağıtıcı iş parçacığıyla uygulamalarında özel durumu oluşabilir. .NET Framework 4.7.1 olan sorun çözüldüğünde.|
+|Öneri|.NET Framework 4.7.1 yükseltin.|
 |Kapsam|Küçük|
 |Sürüm|4.7|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 

@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.6.2'da, çalışma zamanı oluşturur bir <code>T:System.NullReferenceException</code> alınırken bir <code>P:System.Web.HttpRuntime.AppDomainAppPath</code> boş karakterler içeren değer. .NET Framework 4.6.1 ve önceki sürümleri, çalışma zamanı oluşturur bir <code>T:System.ArgumentNullException</code>.|
-|Öneri|Bu değişiklik yanıt izleme birini yapabilirsiniz:<ul><li>Tanıtıcı <code>T:System.NullReferenceException</code> uygulama, .NET Framework 4.6.2 çalıştırıyorsa.</li><li>Önceki davranışını geri yükler ve oluşturur .NET Framework 4.7, yükseltme bir <code>T:System.ArgumentNullException</code>.</li></ul>|
+|Ayrıntılar|.NET Framework 4.6.2, çalışma zamanı oluşturur bir <code>T:System.NullReferenceException</code> alınırken bir <code>P:System.Web.HttpRuntime.AppDomainAppPath</code> null karakterleri içeren bir değer. .NET Framework 4.6.1 ve önceki sürümlerinde, çalışma zamanı oluşturur bir <code>T:System.ArgumentNullException</code>.|
+|Öneri|Bu değişiklik yanıt vermek için izleme birini yapabilirsiniz:<ul><li>Tanıtıcı <code>T:System.NullReferenceException</code> uygulamanız .NET Framework 4.6.2 çalışıyorsa.</li><li>Önceki davranış geri yükler ve oluşturur .NET Framework 4.7, yükseltme bir <code>T:System.ArgumentNullException</code>.</li></ul>|
 |Kapsam|Kenar|
 |Sürüm|4.6.2|
 |Tür|Yeniden hedefleme|

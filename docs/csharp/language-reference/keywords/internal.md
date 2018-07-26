@@ -8,18 +8,18 @@ helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172678"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961488"
 ---
 # <a name="internal-c-reference"></a>internal (C# Başvurusu)
-`internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türleri ve tür üyeleri için. 
+`internal` Anahtar sözcüğü bir [erişim değiştiricisi](../../../csharp/language-reference/keywords/access-modifiers.md) türler ve tür üyeleri için. 
   
- > Bu sayfayı kapsayan `internal` erişim. `internal` Sözcüktür ayrıca parçası [ `protected internal` ](./protected-internal.md) erişim değiştiricisi.
+ > Bu sayfa kapsayan `internal` erişim. `internal` Anahtar sözcüğü, ayrıca parçası [ `protected internal` ](./protected-internal.md) erişim değiştiricisi.
   
-İç türleri veya üyeleri yalnızca bu örnekte olduğu gibi aynı bütünleştirilmiş kodda dosyalarındaki erişilebilir:  
+İç türleri veya üyeleri yalnızca bu örnekte olduğu gibi aynı derleme dosyalarında erişilebilir:  
   
 ```csharp  
 public class BaseClass   
@@ -31,14 +31,14 @@ public class BaseClass
 
  Bir karşılaştırması `internal` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Derlemeler hakkında daha fazla bilgi için bkz: [derlemeler ve genel derleme önbelleği](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
+ Derlemeler hakkında daha fazla bilgi için bkz. [derlemeler ve genel derleme önbelleği](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
   
- Uygulama kodu geri kalanı için görmeden özel bir biçimde işbirliği bileşenlerinin bir grup sağladığından bir ortak iç erişim bileşen tabanlı geliştirme kullanılır. Örneğin, grafik kullanıcı arabirimi oluşturmak için bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları. Bu üyeler iç olduğundan, framework kullanarak kod sunulmaz.  
+ Bir grup için uygulama kodunun kalanı görmeden özel bir şekilde işbirliği bileşenlerinin sağladığından bir ortak iç erişim bileşeni tabanlı geliştirme kullanılır. Örneğin, grafik kullanıcı arabirimleri oluşturmaya yönelik bir çerçeve sağlayabilir `Control` ve `Form` iç erişimle üyeleri kullanarak iş Birliği sınıfları. Bu üyeleri iç olduğundan, framework kullanan kodu sunulmaz.  
   
- Bir tür veya üye içinde tanımlandı derleme dışına dahili erişime sahip başvurmak için bir hata var.  
+ Bu bir tür veya üye, içinde tanımlandı derleme dışından iç erişimle başvurmak için bir hatadır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki dosya içerir `Assembly1.cs` ve `Assembly1_a.cs`. Bir iç temel sınıf ilk dosyasını içeren `BaseClass`. Örneği girişimi ikinci dosyasındaki `BaseClass` hataya neden olur.  
+ Bu örnek iki dosyayı içeren `Assembly1.cs` ve `Assembly1_a.cs`. İlk dosya içeren bir iç temel sınıf `BaseClass`. İkinci örneğini oluşturma girişiminde dosyasında `BaseClass` hataya neden olur.  
   
 ```csharp  
 // Assembly1.cs  
@@ -62,7 +62,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, 1. örnekte kullanılan aynı dosyaları kullanın ve erişilebilirlik düzeyini değiştirme `BaseClass` için `public`. Ayrıca üye erişilebilirlik düzeyini değiştirme `IntM` için `internal`. Bu durumda, sınıfının örneği, ancak iç üye erişemiyor.  
+ Bu örnekte, örnek 1 kullanılan de indirdiğiniz dosyaları kullanarak ve erişilebilirlik düzeyini değiştirme `BaseClass` için `public`. Ayrıca üyenin erişilebilirlik düzeyi değiştirme `IntM` için `internal`. Bu durumda, sınıfın örneğini oluşturabilir, ancak iç üyeye erişemez.  
   
 ```csharp  
 // Assembly2.cs  

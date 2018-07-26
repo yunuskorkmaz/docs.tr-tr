@@ -5,57 +5,57 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 9bd030efb2e3e7bdbf3bb727948a2aae04a2fe50
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 7437868bffa0f317ad29ed6c920ae007c602defa
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208436"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874887"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Nasıl yapılır: Arabirim Olaylarını Uygulama (C# Programlama Kılavuzu)
-Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilir bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmektedir. Herhangi bir arabirim yöntemi veya özelliği uyguladığınızda temelde aynı kurallardır.  
+Bir [arabirimi](../../../csharp/language-reference/keywords/interface.md) bildirebilirsiniz bir [olay](../../../csharp/language-reference/keywords/event.md). Aşağıdaki örnek, bir sınıf içinde arabirim olaylarını uygulama gösterilmiştir. Herhangi bir arabirim yöntemi veya özelliği uygularken temelde aynı kurallardır.  
   
-### <a name="to-implement-interface-events-in-a-class"></a>Bir sınıfta arabirim olayları uygulamak için  
+## <a name="to-implement-interface-events-in-a-class"></a>Bir sınıf içinde arabirim olaylarını uygulama  
   
--   Sınıfınızda olay bildirme ve uygun alanlarında çağırma.  
+Sınıf içinde olay bildirmek ve ardından uygun alanları çağırır.  
   
-    ```csharp
-    namespace ImplementInterfaceEvents  
+```csharp
+namespace ImplementInterfaceEvents  
+{  
+    public interface IDrawingObject  
     {  
-        public interface IDrawingObject  
-        {  
-            event EventHandler ShapeChanged;  
-        }  
-        public class MyEventArgs : EventArgs   
-        {  
-            // class members  
-        }  
-        public class Shape : IDrawingObject  
-        {  
-            public event EventHandler ShapeChanged;  
-            void ChangeShape()  
-            {  
-                // Do something here before the event…  
-  
-                OnShapeChanged(new MyEventArgs(/*arguments*/));  
-  
-                // or do something here after the event.   
-            }  
-            protected virtual void OnShapeChanged(MyEventArgs e)  
-            {  
-                ShapeChanged?.Invoke(this, e);  
-            }  
-        }  
-  
+        event EventHandler ShapeChanged;  
     }  
-    ```  
+    public class MyEventArgs : EventArgs   
+    {  
+        // class members  
+    }  
+    public class Shape : IDrawingObject  
+    {  
+        public event EventHandler ShapeChanged;  
+        void ChangeShape()  
+        {  
+            // Do something here before the event…  
+
+            OnShapeChanged(new MyEventArgs(/*arguments*/));  
+
+            // or do something here after the event.   
+        }  
+        protected virtual void OnShapeChanged(MyEventArgs e)  
+        {  
+            ShapeChanged?.Invoke(this, e);  
+        }  
+    }  
+
+}  
+```  
   
 ## <a name="example"></a>Örnek  
-Aşağıdaki örnek sınıfınız iki veya daha fazla arabirimden devralan ve aynı ada sahip bir olay her bir arabirime sahip daha az yaygın durum nasıl ele alınacağını gösterir. Bu durumda, olayları en az biri için bir açık arabirim uygulaması sağlamalısınız. Bir olay için bir açık arabirim uygulaması yazdığınızda, ayrıca yazmalısınız `add` ve `remove` olay erişimcileri. Normalde bu derleyici tarafından sağlanır, ancak bu durumda derleyici bunları sağlayamaz.  
+Aşağıdaki örnek, sınıfınıza iki veya daha fazla arabirimlerinden devralır ve her bir arabirime sahip aynı ada sahip bir olay daha az yaygın durum nasıl ele alınacağını gösterir. Bu durumda, olayları en az biri için açık arabirim uygulaması sağlamalısınız. Bir olayın açık arabirim uygulaması yazdığınızda, ayrıca yazmalısınız `add` ve `remove` olay erişimcileri. Normalde bu derleyici tarafından sağlanır, ancak bu durumda derleyici bunları sağlayamaz.  
   
-Kendi erişimciler sağlayarak, iki olay sınıfınız aynı olay tarafından ya da farklı olaylar tarafından temsil edilen belirtebilirsiniz. Örneğin, olayları arabirimi belirtimlerine uygun farklı zamanlarda oluşturulması gereken, ayrı bir uygulama ile sınıfınızda her olay ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneler hangi belirleme `OnDraw` alacağı şekli başvuru ya da atama tarafından olay bir `IShape` veya bir `IDrawingObject`.  
+Kendi erişimcileri sağlayarak, iki olay sınıfınızın aynı olay tarafından ya da farklı olaylar tarafından temsil edilen belirtebilirsiniz. Örneğin, farklı zamanlarda arabirimi belirtimlerine göre olaylar harekete Geçirilmemesi gereken, ayrı bir uygulama ile Sınıfınız içinde her olay ilişkilendirebilirsiniz. Aşağıdaki örnekte, aboneleri hangi belirleme `OnDraw` olay alacağı şekli başvuru ya da atayarak bir `IShape` veya bir `IDrawingObject`.  
   
- [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
+ [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  

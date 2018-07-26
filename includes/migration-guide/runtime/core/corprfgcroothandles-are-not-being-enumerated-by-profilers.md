@@ -2,9 +2,9 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework v4.5.1, profil oluşturma API içinde <code>RootReferences2()</code> yanlış hiçbir zaman döndürmektir <code>COR_PRF_GC_ROOT_HANDLE</code> (olarak döndürülen <code>COR_PRF_GC_ROOT_OTHER</code> yerine). .NET Framework 4.6 itibaren bu sorun düzeltilmiştir.|
-|Öneri|Bu sorun .NET Framework 4.6 sabit ve .NET Framework'ün bu sürüme yükseltme tarafından desteklenebilir.|
+|Ayrıntılar|.NET Framework v4.5.1, profil oluşturma API içinde <code>RootReferences2()</code> yanlış hiçbir zaman döndüren <code>COR_PRF_GC_ROOT_HANDLE</code> (olarak döndürülen <code>COR_PRF_GC_ROOT_OTHER</code> bunun yerine). .NET Framework 4. 6 ' ' den itibaren bu sorun düzeltilmiştir.|
+|Öneri|Bu sorun, .NET Framework 4. 6 ' sabit ve .NET Framework'ün bu sürümüne yükseltme tarafından desteklenebilir.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 

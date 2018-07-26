@@ -8,60 +8,60 @@ helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
 ms.openlocfilehash: 96975bcfc270694a59a19e7c40183083dbc5bd98
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027999"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960227"
 ---
 # <a name="ulong-c-reference"></a>ulong (C# Başvurusu)
 
-`ulong` Anahtar sözcüğü değerleri aşağıdaki tabloda gösterilen aralığı ve boyutu göre depolayan bir tam sayı türünü gösterir.  
+`ulong` Anahtar değerlere göre boyutunu ve aşağıdaki tabloda gösterilen aralığı depolayan bir tamsayı türü gösterir.  
   
 |Tür|Aralık|Boyut|.NET türü|  
 |----------|-----------|----------|-------------------------|  
-|`ulong`|0 için 18,446,744,073,709,551,615|İmzasız 64 bit tam sayı|<xref:System.UInt64?displayProperty=nameWithType>|  
+|`ulong`|0 için 18,446,744,073,709,551,615|64-bit işaretsiz tamsayı|<xref:System.UInt64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Sabit değerler  
 
-Bildirme ve başlatma bir `ulong` değişken ondalık değişmez değer, onaltılık bir hazır değer atama veya (C# ile 7.0 için değişmez değer bir ikili başlayarak).  Değişmez değer tamsayı aralığı dışında ise `ulong` (diğer bir deyişle, bu ise değerinden <xref:System.UInt64.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
+Bildirmek ve başlatmak bir `ulong` değişkenini değişmez değer ondalık, onaltılık bir sabit değer atama veya (C# 7.0 ile için sabit bir ikili başlayarak).  Tamsayı sabit değeri aralığının dışında ise `ulong` (diğer bir deyişle, bu ise kısa <xref:System.UInt64.MinValue?displayProperty=nameWithType> veya ondan <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), bir derleme hatası oluşur. 
 
-Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 7,934,076,125 tamsayılar eşit ve ikili değişmez değerler atanır `ulong` değerleri.  
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 7,934,076,125 eşit ve ikili sabit değerler atanır `ulong` değerleri.  
   
 [!code-csharp[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
 
 > [!NOTE] 
-> Önek kullanması `0x` veya `0X` onaltılık değişmez değeri ve öneki belirtmek için `0b` veya `0B` ikili bir hazır değer belirtmek için. Ondalık değişmez değerler, önek vardır. 
+> Önek kullanın `0x` veya `0X` onaltılık bir sabit değer ve öneki belirtmek için `0b` veya `0B` ikili bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır. 
 
 C# 7.0 ile okunabilirliği artırmak birkaç özellik eklenmiştir başlatılıyor. 
- - C# 7.0 sağlar alt çizgi karakteri kullanımını `_`, basamak ayırıcı olarak.
- - C# 7.2 verir `_` önekten sonra bir ikili ya da onaltılık değişmez değeri basamak ayırıcısı olarak kullanılacak. Ondalık bir hazır değer önde gelen bir alt çizgi olan izin verilen değil.
+ - C# 7.0, alt çizgi karakteri kullanımına izin verir `_`, basamak ayırıcı olarak.
+ - C# 7.2 sağlayan `_` sonra öneki için bir ikili veya onaltılık sabit basamak ayırıcı olarak kullanılacak. Ondalık bir sabit değer, bir alt çizgi olan izin verilen değil.
 
 Aşağıda bazı örnekler gösterilmektedir.
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Tamsayı değişmez değerleri türü gösterir bir sonek de içerir. Sonek `UL` veya `ul` belirsizliğe sayısal sabit değer olarak tanımlayan bir `ulong` değeri. `L` Soneki gösterir bir `ulong` hazır değeri aşarsa <xref:System.Int64.MaxValue?displayProperty=nameWithType>. Ve `U` veya `u` soneki gösterir bir `ulong` hazır değeri aşarsa <xref:System.UInt32.MaxValue?displayProperty=nameWithType>. Aşağıdaki örnek kullanır `ul` uzun tamsayı belirtmek için soneki:
+ Tamsayı sabit değerleri türü gösteren bir son eki de içerebilir. Sonek `UL` veya `ul` sayısal bir değişmez değer olarak kesin bir şekilde tanımlayan bir `ulong` değeri. `L` Soneki gösterir bir `ulong` değişmez değer aşarsa <xref:System.Int64.MaxValue?displayProperty=nameWithType>. Ve `U` veya `u` soneki gösterir bir `ulong` değişmez değer aşarsa <xref:System.UInt32.MaxValue?displayProperty=nameWithType>. Aşağıdaki örnekte `ul` sonek uzun tamsayı belirtmek için:
  
 [!code-csharp[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
-Değişmez değer bir tamsayı sonek türünü ilk değerini gösterilebilir aşağıdaki türlerde ise: 
+Değişmez değer bir tamsayı sonek varsa, ilk değerini gösterilebilir aşağıdaki türlerde türünü verilmiştir: 
 
 1. [int](int.md)
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
 3. [long](long.md)
 4. `ulong`
 
-## <a name="compiler-overload-resolution"></a>Derleyici aşırı yükleme çözümü
+## <a name="compiler-overload-resolution"></a>Derleyici aşırı yükleme çözümlemesi
   
- Bir ortak soneki aşırı yüklenmiş yöntemleri çağırma ile kullanılır. Örneğin, aşağıdaki aşırı kullanan yöntemleri düşünün `ulong` ve [int](../../../csharp/language-reference/keywords/int.md) Parametreler:  
+ Bir ortak soneki aşırı yüklenmiş yöntem çağırma işleviyle kullanılır. Örneğin, aşağıdaki aşırı yüklenmiş yöntem düşünün `ulong` ve [int](../../../csharp/language-reference/keywords/int.md) parametreleri:  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
- Bir sonek ile kullanarak `ulong` parametresi doğru türde, örneğin çağrıldığından emin güvence altına alır:  
+ Bir sonek ile kullanarak `ulong` parametresi doğru türde, örneğin çağrıldığını güvence altına alır:  
   
 ```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
@@ -69,17 +69,17 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
 ```  
   
 ## <a name="conversions"></a>Dönüşümler  
- Önceden tanımlanmış bir örtük dönüştürme `ulong` için [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md).  
+ Önceden tanımlanmış bir örtük dönüştürme vardır `ulong` için [float](../../../csharp/language-reference/keywords/float.md), [çift](../../../csharp/language-reference/keywords/double.md), veya [ondalık](../../../csharp/language-reference/keywords/decimal.md).  
   
- Örtük dönüştürme yok `ulong` herhangi bir tam sayı türüne. Örneğin, aşağıdaki deyim derleme hatası açık atama olmadan üretir:  
+ Örtülü dönüştürme olmaz yoktur `ulong` için herhangi bir tamsayı türü. Örneğin, aşağıdaki deyim, açık atama olmadan bir derleme hatasına neden olur:  
   
 ```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
- Önceden tanımlanmış bir örtük dönüştürme [bayt](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), veya [char](../../../csharp/language-reference/keywords/char.md) için `ulong`.  
+ Önceden tanımlanmış bir örtük dönüştürme vardır [bayt](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md), veya [char](../../../csharp/language-reference/keywords/char.md) için `ulong`.  
   
- Ayrıca, kayan nokta türleri için örtük dönüştürme yok yok `ulong`. Örneğin, bir açık atama kullanılmadığı sürece aşağıdaki ifadeyi derleyici hatası oluşturur:  
+ Ayrıca, kayan nokta türlerinden örtük dönüştürme vardır `ulong`. Örneğin, bir açık tür dönüştürme kullanılmadığı sürece aşağıdaki deyim, bir derleyici hatası oluşturur:  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -88,9 +88,9 @@ ulong x = 3.0;
 ulong y = (ulong)3.0;    
 ```  
   
- Karma kayan nokta türleri ve tam sayı türleri ile aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).  
+ Karma kayan nokta türleri ve tamsayı türleri aritmetik ifadeler hakkında daha fazla bilgi için bkz: [float](../../../csharp/language-reference/keywords/float.md) ve [çift](../../../csharp/language-reference/keywords/double.md).  
   
- Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz: [örtük sayısal dönüşümler tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Örtük sayısal dönüştürme kuralları hakkında daha fazla bilgi için bkz. [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

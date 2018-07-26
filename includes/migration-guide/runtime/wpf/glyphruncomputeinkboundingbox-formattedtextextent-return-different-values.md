@@ -1,11 +1,11 @@
-### <a name="glyphruncomputeinkboundingbox-and-formattedtextextent-return-different-values-beginning-in-net-framework-45"></a>GlyphRun.ComputeInkBoundingBox() ve FormattedText.Extent .NET Framework 4.5 başlayan farklı değerleri döndürür
+### <a name="glyphruncomputeinkboundingbox-and-formattedtextextent-return-different-values-beginning-in-net-framework-45"></a>.NET Framework 4. 5 ' başlayarak farklı değerler GlyphRun.ComputeInkBoundingBox() ve FormattedText.Extent döndürür
 
 |   |   |
 |---|---|
-|Ayrıntılar|Geliştirmeler yapıldı <xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox> ve <xref:System.Windows.Media.FormattedText.Extent> nerede kutuları .NET Framework 4.0 bazı durumlarda içerilen metindeki için çok küçük sorunları gidermek için .NET Framework 4.5 içinde. Bunun sonucunda, bazı sınırlayıcı kutularını UI düzeni küçük farklılıklar sonuçta .NET Framework 4.5, büyük'den itibaren olacaktır.|
-|Öneri|Bazı karakter sınırlayıcı kutu boyutu artırmıştır unutmayın. Bu değişiklikler genellikle sunu ve isabet kutusunu test etme artırır, ancak eski (ön .NET 4.5) davranışı isterseniz bunu içine app.config dosyasına aşağıdaki giriş ekleyerek seçti:<pre><code class="lang-xml">&lt;appsettings&gt;&#13;&#10;&lt;add key=&quot;IncludeAllInkInBoundingBox&quot; value=&quot;false&quot;&gt;&#13;&#10;&lt;/appsettings&gt;&#13;&#10;</code></pre>|
+|Ayrıntılar|İyileştirmeler yapıldı <xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox> ve <xref:System.Windows.Media.FormattedText.Extent> burada kutuları bazı durumlarda .NET Framework 4.0 kapsanan karakter için çok küçük sorunlarını gidermek için .NET Framework 4.5 içinde. Bunun bir sonucu olarak, bazı sınırlama kutusu kullanıcı Arabirimi düzeninde farklar výsledek .NET Framework 4.5, daha büyük'den itibaren olacaktır.|
+|Öneri|Bazı glif sınırlayıcı kutu boyutu artırmıştır dikkat edin. Bu değişiklikler, genellikle sunu ve isabet kutusunu test etme geliştirecek ancak eski (öncesi .NET 4.5) davranışı isterseniz, bunu app.config dosyasına şu giriş ekleyerek seçimi yaptıysanız:<pre><code class="lang-xml">&lt;appsettings&gt;&#13;&#10;&lt;add key=&quot;IncludeAllInkInBoundingBox&quot; value=&quot;false&quot;&gt;&#13;&#10;&lt;/appsettings&gt;&#13;&#10;</code></pre>|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
 

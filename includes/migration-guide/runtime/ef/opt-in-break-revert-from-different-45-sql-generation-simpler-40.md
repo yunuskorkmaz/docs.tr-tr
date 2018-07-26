@@ -1,10 +1,10 @@
-### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Öğesinden farklı 4.5 SQL üretimi için daha basit 4.0 SQL üretimi dönmek için katılımı sonu
+### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Öğesinden farklı 4.5 SQL oluşturma için daha basit 4.0 SQL oluşturma dönmek için kabul etme sonu
 
 |   |   |
 |---|---|
-|Ayrıntılar|BİRLEŞİM deyimleri üretip ve bir çağrı içeren sorgular ilk olmadan sınırlama işlemi için OrderBy şimdi kullanarak üretmek daha basit SQL. .NET Framework 4.5 sürümüne yükselttikten sonra bu sorguları önceki sürümlerinden daha karmaşık SQL üretti.|
-|Öneri|Bu özellik varsayılan olarak devre dışıdır. Entity Framework performans düşüşüne neden ek JOIN deyimleri oluşturursa, aşağıdaki girişini ekleyerek bu özelliği etkinleştirebilirsiniz <code>&lt;appSettings&gt;</code> uygulama yapılandırma (app.config) dosyasının:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
+|Ayrıntılar|JOIN deyimleri oluşturmak ve bir çağrı içeren sorgular sınırlayan bir işleme ilk olmadan OrderBy artık ürettiğiniz daha basit SQL. Bu sorgular, .NET Framework 4.5 sürümüne yükselttikten sonra önceki sürümlerinden daha karmaşık SQL oluşturdu.|
+|Öneri|Bu özellik varsayılan olarak devre dışıdır. Entity Framework performans düşüşüne neden fazladan JOIN deyimleri oluşturursa aşağıdaki girişe ekleyerek bu özelliği etkinleştirebilirsiniz <code>&lt;appSettings&gt;</code> uygulama yapılandırma (app.config) dosyasından bölümünü:<pre><code class="lang-xml">&lt;add key=&quot;EntityFramework_SimplifyLimitOperations&quot; value=&quot;true&quot; /&gt;&#13;&#10;</code></pre>|
 |Kapsam|Geçirgen|
 |Sürüm|4.5.2|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 

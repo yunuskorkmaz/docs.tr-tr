@@ -1,30 +1,28 @@
 ---
-title: ASP.NET Core MVC uygulamaları geliştirme
-description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET Core MVC uygulamaları geliştirme
+title: ASP.NET Core MVC geliştirme uygulamaları
+description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.NET Core MVC uygulamaları geliştirme
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106599"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404651"
 ---
-# <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirme
+# <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
-> "Bu ilk kez sağ almak önemli değildir. En son ne zaman sağ almak oldukça önemlidir."  
-> _-Barış aramaya ve David Thomas_
+> "Bunu ilk kez doğru almak önemli değildir. Son doğru almak oldukça önemlidir."  
+> _-Andrew Hunt ve David Thomas_
 
-## <a name="summary"></a>Özet
-
-ASP.NET Core modern bulut iyileştirilmiş web uygulamaları oluşturmak için platformlar arası, açık kaynaklı bir çerçevedir. ASP.NET Core uygulamaları basit ve modüler, bağımlılık ekleme, büyük sınanabilirlik ve bakımı etkinleştirme için yerleşik destek bulunur. Modern web API'leri görünüm tabanlı uygulamalar yanı sıra oluşturmayı destekleyen, MVC ile birlikte ASP.NET Core bir güçlü Kurumsal web uygulamaları oluşturmak hangi çerçevedir.
+ASP.NET Core, modern bulut için iyileştirilmiş web uygulamaları oluşturmaya yönelik platformlar arası, açık kaynaklı bir çerçevedir. ASP.NET Core uygulamaları, basit ve modüler, bağımlılık ekleme, büyük Test Edilebilirlik ve bakımı etkinleştirmek için yerleşik destek. Görünüm tabanlı uygulamaların yanı sıra modern web API'leri oluşturmaya destekler, MVC ile birleştirilmiş ASP.NET Core, Kurumsal web uygulamaları oluşturmak güçlü bir çerçeve olan.
 
 ## <a name="mapping-requests-to-responses"></a>Eşleme isteklerini yanıtlar
 
-Temelinde, ASP.NET Core uygulamaları giden yanıtlar gelen istekleri eşleyin. Düşük düzeyde, bu Ara yazılımla yapılır ve basit ASP.NET Core uygulamaları ve mikro hizmetler yalnızca özel ara yazılım oluşabilir. ASP.NET Core MVC kullanırken cinsinden düşünüyorum biraz daha yüksek bir düzeyde çalışabilirsiniz *yollar*, *denetleyicileri*, ve *Eylemler*. Her gelen istek uygulamanın yönlendirme tablosu ile karşılaştırılır ve eşleşen bir rota bulunursa, (bir denetleyiciye ait) ilişkili eylem yöntemi isteği işlemek üzere çağrılır. Eşleşen bir rota bulunursa, bir hata işleyicisi (NotFound sonucu döndürerek bu durumda,) adı verilir.
+Temelinde, ASP.NET Core uygulamaları, gelen istekleri giden yanıtlarını eşleyin. Düşük düzeyde, bu ara yazılım ile gerçekleştirilir ve basit bir ASP.NET Core uygulamaları ve mikro hizmetler, yalnızca özel bir ara yazılım oluşabilir. ASP.NET Core MVC kullanırken açısından düşünmek biraz daha yüksek bir düzeyde çalışabilir _yollar_, _denetleyicileri_, ve _eylemleri_. Her gelen istek uygulamanın yönlendirme tablosu ile karşılaştırılır ve eşleşen bir rota bulunursa (bir denetleyiciye ait) ilişkili eylem yöntemi isteği işlemek için çağrılır. Eşleşen hiçbir yol bulunursa, bir hata işleyicisi (NotFound sonucu döndürerek bu durumda,) çağrılır.
 
-ASP.NET Core MVC uygulamaları geleneksel yolları, öznitelik rotaları veya her ikisini de kullanabilirsiniz. Geleneksel yollar yönlendirme belirtme kodda tanımlanmış *kuralları* aşağıdaki örnekte olduğu gibi sözdizimini kullanarak:
+ASP.NET Core MVC uygulamaları, geleneksel yollar, öznitelik rotaları veya her ikisini de kullanabilirsiniz. Geleneksel yollar yönlendirme belirterek kod içinde tanımlanan _kuralları_ aşağıdaki örnekte olduğu gibi bir söz dizimi kullanarak:
 
 ```csharp
 app.UseMvc(routes =>;
@@ -33,9 +31,9 @@ app.UseMvc(routes =>;
 });
 ```
 
-Bu örnekte, "varsayılan" adlı bir rota yönlendirme tablosuna eklendi. Bir rota şablonuyla yer tutucular tanımlar *denetleyicisi*, *eylem*, ve *kimliği*. Belirtilen varsayılan denetleyici ve eylem yer tutucuları bulunur ("Home" ve "Dizin" sırasıyla), ve kimliği tutucudur isteğe bağlı (tarafından virtue, bir "?" uygulanan). Kuralı ikinci bölümü eyleme denetleyicinin adı bir isteğin ilk parçası karşılık gelmelidir durumları burada tanımlanan ve ardından gerekirse, üçüncü bir bölümü bir ID parametresi temsil eder. Geleneksel yollar genellikle uygulama için tek bir yerde gibi başlangıç sınıfı yapılandırma yönteminde tanımlanır.
+Bu örnekte, "varsayılan" adlı bir rota yönlendirme tablosuna eklendi. Bir rota şablonu için yer tutucu ile tanımlar _denetleyicisi_, _eylem_, ve _kimliği_. Denetleyici ve eylem yer tutucuları varsayılan belirtilen sahip ("Home" ve "Index", sırasıyla), ve kimliği tutucudur isteğe bağlı (tarafından virtue, bir "?" uygulanmış). Kuralı ikinci bölümü eyleme denetleyicinin adı bir isteğin ilk parçası karşılık gelmelidir durumları burada tanımlanan ve ardından gerekirse üçüncü bölümü bir kimliği parametre temsil eder. Geleneksel yollar genellikle, uygulama için tek bir yerde gibi başlangıç sınıfındaki yapılandırma yöntemi tanımlanır.
 
-Öznitelik rotaları denetleyicileri ve eylemleri doğrudan uygulanan yerine genel olarak belirtilmiş. Bu, belirli bir yöntem arıyorsanız, ancak yönlendirme bilgilerini uygulamadaki tek bir yerde tutulan değil anlamına gelmez, çok daha bulunabilirlik yapma avantajına sahiptir. Öznitelik rotaları ile kolayca belirli bir eylem için birden çok rotaları belirtin yanı denetleyicileri ve eylemleri arasındaki yolları birleştirin. Örneğin:
+Öznitelik rotaları denetleyicileri ve eylemleri doğrudan uygulanan yerine genel olarak belirtildi. Bu, belirli bir yöntem arıyorsanız, ancak yönlendirme bilgileri uygulamada tek bir yerde tutulan değil demektir daha bulunabilir hale getirme avantajına sahiptir. Öznitelik rotaları ile kolayca için belirli bir eylemi birden çok yol belirtmek, yapabilir denetleyicilere ve eylemlere arasında rotaları birleştirin. Örneğin:
 
 ```csharp
 [Route("Home")]
@@ -45,9 +43,10 @@ public class HomeController : Controller
     [Route("Index")] // Combines to define route template "Home/Index"
     [Route("/")] // Does not combine, defines the route template ""
     public IActionResult Index() {}
+}
 ```
 
-Yollar [HttpGet] üzerinde belirtilebilir ve benzer öznitelikler eklemek için gereken önleme, ayrı [rota\] öznitelikleri. Öznitelik rotaları belirteçleri, denetleyici veya eylem adlarını yinelemek için gereken aşağıda gösterildiği gibi azaltmak için de kullanabilirsiniz:
+Yollar [HttpGet] üzerinde belirtilebilir ve eklemek için gereğinden kurtulursunuz benzer öznitelikleri [yol] özniteliğini ayırmak. Öznitelik rotaları da aşağıda gösterildiği gibi denetleyici veya eylem adları yineleyin gereksinimini azaltmak için belirteçleri kullanabilirsiniz:
 
 ```csharp
 [Route("[controller\]")]
@@ -55,37 +54,40 @@ public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
     [Route("Index")] // Matches 'Products/Index'
-    public IActionResult Index()
+    public IActionResult Index() {}
 }
 ```
 
-Belirtilen bir isteğin rotayla eşleşen, ancak önce eylem yönteminden sonra ASP.NET Core MVC gerçekleştirecek [model bağlama](https://docs.microsoft.com/aspnet/core/mvc/models/model-binding) ve [model doğrulama](https://docs.microsoft.com/aspnet/core/mvc/models/validation) istek. Model bağlama, gelen HTTP veri çağrılacak eylem yönteminin bir parametre olarak belirtilen .NET türlerine dönüştürme için sorumludur. Örneğin, bir eylem yönteminin bir int kimliği parametre bekliyor, isteğin bir parçası sağlanan değer bu parametresinden sağlamak model bağlama deneyecek. Bunu yapmak için model bağlama gönderilen bir formu değerleri, rota değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değeri bulundu varsayıldığında, onu bir tamsayıya eylem yönteminin iletilmeden önce dönüştürülür.
+Belirtilen bir isteğin bir rota için eşleşen, ancak önce eylem yöntemi çağırıldıktan sonra ASP.NET Core MVC gerçekleştirecek [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulama](/aspnet/core/mvc/models/validation) istekte. Model bağlama, gelen HTTP veri çağrılacak eylem yönteminin bir parametre olarak belirtilen .NET türlerine dönüştürme için sorumludur. Örneğin, bir eylem yönteminin bir int kimliği parametre bekliyor, bu parametre, isteğin bir parçası sağlanan bir değerden sağlamak model bağlama deneyecek. Bunu yapmak için model bağlama için gönderilen bir formu değerleri, rota değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değeri bulundu varsayıldığında, da bir tamsayıya eylem metodun Metoda geçilen önce dönüştürülür.
 
-Model bağlama sonra ancak eylem yöntemi çağrılmadan önce model doğrulama oluşur. Model doğrulama, model türü üzerinde isteğe bağlı öznitelik kullanır ve sağlanan model nesnesi belirli veri gereksinimleri uymasını sağlamak yardımcı olabilir. Belirli değerleri olarak belirtilebilir gerekli veya belirli bir uzunlukta veya sayısal aralığı için sınırlı, vb. Doğrulama öznitelikleri belirtildi ancak model kendi gereksinimlerine uygun değil, özellik ModelState.IsValid false olur ve doğrulama kuralları başarısız kümesi istekte istemciye göndermek kullanılabilir olacak.
+Model doğrulama, model bağlama sonra ancak eylem yöntemi çağrılmadan önce gerçekleşir. Model doğrulama, model türü üzerinde isteğe bağlı öznitelikleri kullanır ve belirtilen model nesnesi belirli veri gereksinimlere uymasını sağlamak yardımcı olabilir. Belirli değerleri olarak belirtilebilir gerekli veya belirli bir uzunlukta veya sayısal aralık için sınırlı, vs. Doğrulama öznitelikleri belirtildiğinde, ancak modelin kendi gereksinimlerine uymuyor ModelState.IsValid özelliği false olacak ve başarısız doğrulama kuralları kümesi isteği yapan istemcinin göndermek kullanılabilir.
 
-Model doğrulama kullanıyorsanız, her zaman uygulamanızı geçersiz veriler bozuk değil emin olmak için tüm durum değiştirme komutları gerçekleştirmeden önce model geçerli olup olmadığını denetlediğinizden emin olun. Kullanabileceğiniz bir [filtre](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) kod bu her eylem eklemek için gereksinimini ortadan kaldırmak için. Böylece ortak ilkeleri ve çapraz kesme sorunları hedeflenen temelinde uygulanabilir ASP.NET Core MVC filtreleri isteklerinin grupları kesintiye uğratan bir yol sunar. Filtreler, tek tek Eylemler, tüm denetleyicileri veya genel bir uygulama için uygulanabilir.
+Model doğrulama kullanıyorsanız, her zaman uygulamanızı geçersiz veriler bozuk olmadığından emin olmak için tüm durum değiştirme komutları gerçekleştirmeden önce model geçerli olduğunu denetleyin. Kullanabileceğiniz bir [filtre](/aspnet/core/mvc/controllers/filters) her eylem için bu kodu eklemek için gereken önlemek için. Ortak ilkelere ve geniş kapsamlı kritik konular hedef temelinde uygulanabilir, ASP.NET Core MVC filtreleri grupları istekleri sızdırılması bir yol sunar. Bireysel işlemlere, tüm denetleyicileri veya genel olarak bir uygulama için filtre uygulanabilir.
 
-ASP.NET Core MVC Web API'leri destekleyen [ *içerik anlaşması*](https://docs.microsoft.com/aspnet/core/mvc/models/formatting), istekleri yanıtlar nasıl biçimlendirilmiş belirtmek izin verme. İstekte sağlanan üstbilgileri bağlı olarak, XML, JSON veya başka bir desteklenen biçiminde yanıt veriyor Eylemler biçimlendirir. Bu özellik, farklı veri biçim gereksinimleri ile birden çok istemci tarafından kullanılmak üzere aynı API sağlar.
+ASP.NET Core MVC Web API'lerini destekleyen [ _içerik anlaşması_](/aspnet/core/mvc/models/formatting), istekleri yanıtlar nasıl biçimlendirilmesi gerektiğini belirtmek izin verme. İstekte sağlanan üstbilgileri bağlı olarak, XML, JSON veya desteklenen başka bir biçimde yanıt veriyor eylemleri biçimlendirir. Bu özellik, farklı veri biçimi gereksinimlerine sahip birden çok istemci tarafından kullanılmak üzere aynı API sağlar.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Başvuruları – isteklerini yanıtlar eşleme
-> - **Denetleyici eylemleri için yönlendirme**
+>
+> - **Denetleyici eylemlerine yönlendirme**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Model bağlama** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Model bağlama**
+> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Model doğrulama**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtreleri** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filtreleri**
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Bağımlılıkları ile çalışma
 
-ASP.NET Core için yerleşik destek varsa ve dahili olarak kullanır olarak bilinen bir tekniği [bağımlılık ekleme](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). Bağımlılık ekleme gevşek bağlantı uygulamanın farklı bölümleri arasında etkin bir tekniktir. Bazı bağlantı arzu çünkü sınama ya da değiştirme için izin vererek uygulama parçalarını yalıtmak üzere kolaylaştırır. Ayrıca, daha az büyük olasılıkla bir değişiklik uygulamanın bir parçası olarak uygulamada başka bir yere beklenmeyen etkisi olduğunu kılar. Bağımlılık ekleme bağımlılık ters çevirmeyi ilkeye dayanarak ve genellikle açık ve kapalı ilkesini ulaşmak için anahtarıdır. Uygulamanızı bağımlılıklarını ile nasıl çalıştığı değerlendirirken, dikkat [statik cling](http://deviq.com/static-cling/) kod kokusu ve aphorism unutmayın "[Birleştirici yeni](https://ardalis.com/new-is-glue)."
+ASP.NET Core için yerleşik desteği vardır ve dahili olarak bilinen bir tekniğin kullanır [bağımlılık ekleme](/aspnet/core/fundamentals/dependency-injection). Bağımlılık ekleme, bir uygulamanın farklı kısımlarını arasındaki bu sıkı bağ sağlayan bir tekniktir. Bazı bağlantı arzu çünkü test ya da değiştirme için uygulamanın parçalarını yalıtmak üzere kolaylaştırır. Ayrıca, bir uygulamanın bir bölümünde değişiklik uygulamada başka bir yere beklenmeyen bir etkisi olacağını düşürür. Bağımlılık ekleme bağımlılık tersine çevirme ilkeye dayanarak ve genellikle açık/kapalı ilkesini ulaşmak için anahtardır. Uygulamanızın çalışma şeklinden bağımlılıklarını değerlendirirken dikkat [statik cling](https://deviq.com/static-cling/) kod kokusu ve aphorism unutmayın "[Birleştirici yeni](https://ardalis.com/new-is-glue)."
 
-Statik cling sınıflarınızı statik yöntemler çağrı yapmak veya yan etkileri veya bağımlılıkları altyapısına sahip statik özelliklerine erişim oluşur. Örneğin, sırayla bir veritabanına yazma, bir statik yöntemini çağıran bir yöntemi varsa yönteminizi sıkı şekilde veritabanına bağlı. Bu veritabanı çağrısı keser herhangi bir şey yönteminizi çalışmamasına neden olur. Bu tür sınamalar statik çağrıları mock için ticari mocking kitaplıkları gerektiren ya da yalnızca bir test veritabanı yerinde ile test edilebilir beri tür yöntem sınama notoriously zor olabilir. Altyapı, özellikle de tamamen durum bilgisiz herhangi bağımlılığı yok statik çağrıları arayıp bağ veya Test Edilebilirlik (ötesinde kod statik çağrısı kendisini Kuplaj) üzerinde hiçbir etkisi ince.
+Statik cling sınıflarınızı statik yöntemler çağrı yapmak veya yan etkileri veya bağımlılıkları altyapıya sahip statik özelliklerine erişim oluşur. Örneğin, sırasıyla bir veritabanına yazan, statik bir yöntemi çağıran bir yöntemi varsa, yöntemi sıkı şekilde veritabanına bağlı. Bu veritabanı çağrısı keser herhangi bir şey yönteminizi çalışmamasına neden olur. Bu tür testler statik çağrıları sahte ticari sahte kitaplıkları gerektiren ya da bir test veritabanı yerinde yalnızca test edilebilir olduğundan bu tür yöntemler test öğesinin kolay değildir. Altyapı, özellikle de tamamen durum bilgisi olmayan herhangi bir bağımlılığa sahip olmayan statik çağrıları çağrı ve bağ veya (ötesinde kodu statik çağrısı kendisini eşlenmesiyle) Test Edilebilirlik üzerinde hiçbir etkisi bir sakınca yoktur.
 
-Çoğu geliştirici statik cling ve genel durum risklerini anlamak, ancak kendi kodlarını doğrudan oluşturmada size belirli uygulamaları için hala sıkı bir şekilde eşleştiği. "Birleştirici yenilikler" Bu bağlantı, anımsatıcı ve değil genel condemnation yeni anahtar sözcük kullanımı için tasarlanmıştır. Gibi statik yöntem çağrılarını genellikle dış bağımlılıkları olmayan türleri yeni örneklerini değil sıkı bir şekilde kod uygulama ayrıntılarını eşleştiği veya test daha zor hale. Ancak bir sınıf örneği, her zaman sabit kodlu için belirli Bu örnek, belirli bir konumda mantıklıdır olup olmadığını ya da bu örnek bir bağımlılık olarak istemek için daha iyi bir tasarım olacaksa dikkate alınması gereken yalnızca kısa biraz zaman ayırın.
+Birçok geliştiricinin statik cling ve genel durum risklerini anlayın, ancak kendi kod aracılığıyla doğrudan belirli uygulamalar için yine de sıkı bir şekilde birleştirin. "Bağlantılı yeni bir" Bu eşleştirmeye bir anımsatıcı ve yeni anahtar sözcük kullanımını olmayan genel bir condemnation olacak şekilde tasarlanmıştır. Gibi statik yöntem çağrılarını türleri genellikle dış bağımlılıkları olmayan yeni örneklerini değil sıkı bir şekilde kod uygulama ayrıntılarını birleştirin veya test daha zor hale. Ancak, bir sınıf örneği, her zaman sabit kodlamak için o belirli örnekte ilgili belirli bir konumda mantıklıdır veya bağımlılık olarak bu örneğe istemek için daha iyi bir tasarım olacaksa, dikkate alınması gereken yalnızca bir kısa dakikanızı ayırın.
 
-### <a name="declare-your-dependencies"></a>Bağımlılıklarınız bildirme
+### <a name="declare-your-dependencies"></a>Bağımlılıklarınızı bildirme
 
-ASP.NET Core yöntemleri sahip geçici oluşturulur ve bağımsız değişkenler olarak isteyen bağımlılıklarını sınıfları bildirme. ASP.NET uygulamaları tipik olarak ayarlandığı bir başlangıç sınıfta kendisi bağımlılık ekleme birkaç noktalarda desteklemek üzere yapılandırıldı. Başlangıç sınıfı bir oluşturucu varsa, Oluşturucusu aracılığıyla bağımlılıklar isteyebilir sözlüğüdür:
+ASP.NET Core yöntemleri sahip etrafında oluşturulmuştur ve bunları bağımsız değişken olarak isteyen bağımlılıklarını sınıfları bildirme. ASP.NET uygulamalarının tipik olarak ayarlandığı bir başlangıç sınıfta kendisi çeşitli noktalarda bağımlılık eklemeyi desteklemek için yapılandırılır. Başlangıç sınıfınızın bir oluşturucusu yoksa, oluşturucu aracılığıyla bağımlılıklar isteyebilir şu şekilde:
 
 ```csharp
 public class Startup
@@ -100,9 +102,9 @@ public class Startup
 }
 ```
 
-Var olan hiçbir açık tür gereksinimlerin başlangıç sınıfı ilginç olmamasıdır. Bir özel başlangıç temel sınıfından devralmaz veya herhangi belirli arabirimini uygulayan yapar. Ona bir oluşturucu veya verebilirsiniz ve istediğiniz sayıda parametrelere Oluşturucusu belirtebilirsiniz. Uygulamanız için yapılandırdığınız web ana bilgisayar başlatıldığında kullanacak şekilde söylediyse başlangıç sınıfı çağırır ve bağımlılık ekleme başlangıç sınıfı gerektirir bağımlılıkları doldurmak için kullanır. Doğal olarak, ASP.NET Core tarafından kullanılan hizmetler kapsayıcısında yapılandırılmamışlardır parametreleri isterse bir özel durum alırsınız, ancak bağımlılıkları takılıyor sürece kapsayıcı bilir hakkında istediğinizi isteyebilir.
+Başlangıç sınıfı hiçbir açık tür gereksinimlerin olduğuna açısından ilginçtir. Özel başlangıç temel sınıftan devralmaz ya da herhangi bir belirli arabirimini uygulamıyor. Ona bir oluşturucu veya verebilirsiniz ve istediğiniz sayıda parametre oluşturucuda belirtebilirsiniz. Uygulamanız için yapılandırdığınız web ana bilgisayarı başlatıldığında kullanacak şekilde söylediğiniz başlangıç sınıfı çağıracak ve bağımlılık ekleme, başlangıç sınıfı gerektirdiği tüm bağımlılıkların doldurmak için kullanır. Elbette, ASP.NET Core tarafından kullanılan hizmet kapsayıcı yapılandırılmamışlardır parametreleri istek, bir özel durum alırsınız, ancak bağımlılıklarını takılıyor sürece kapsayıcı bilir hakkında istediğinizi isteyebilir.
 
-Başlangıç örneği oluşturduğunuzda, bağımlılık ekleme ASP.NET Core uygulamalarınızı sağ başından içinde yerleşiktir. Ayrıca başlangıç sınıfı var. bitmez. Yapılandırma yöntemi bağımlılıkları da isteğinde bulunabilirsiniz:
+Başlangıç örneği oluşturduğunuzda, ASP.NET Core uygulamalarınızı sağ başından bağımlılık ekleme yerleşiktir. Ayrıca, başlangıç sınıfı için yok bitmez. Yapılandırma yönteminin bağımlılıkları da isteyebilirsiniz:
 
 ```csharp
 public void Configure(IApplicationBuilder app,
@@ -113,38 +115,38 @@ public void Configure(IApplicationBuilder app,
 }
 ```
 
-Bu davranış özel durumu ConfigureServices yöntemdir; IServiceCollection türünde yalnızca bir parametre almalıdır. Ayrıca, bir yandan hizmet kapsayıcı nesneleri eklemek için sorumlu olduğu ve diğer tüm yapılandırılmış hizmetler IServiceCollection parametresi üzerinden erişimi olan bağımlılık ekleme desteklemek gerçekten gerekmez. Bu nedenle, her bir parametre olarak gerekli hizmet isteyen veya IServiceCollection ConfigureServices içinde çalışma başlangıç sınıfı parçası ASP.NET Core services koleksiyonunda içinde tanımlanan bağımlılıklar çalışabilirsiniz.
+Bu davranışı özel durumu Createservicereplicalisteners() yöntemdir; Bunu IServiceCollection türünde tek bir parametre almalıdır. Ayrıca, bir yandan Hizmetleri kapsayıcıya nesneleri eklemek için sorumlu olduğundan ve diğer tüm yapılandırılmış hizmetlerini IServiceCollection parametresi üzerinden erişimi olan bağımlılık eklemeyi desteklemek gerçekten gerekmiyor. Bu nedenle, her parçasını başlangıç sınıfı, bir parametre olarak gerekli hizmet isteyen veya IServiceCollection Createservicereplicalisteners() içinde çalışan ASP.NET Core Hizmetleri koleksiyonda tanımlanan bağımlılıklar çalışabilirsiniz.
 
 > [!NOTE]
-> Belirli hizmetleri başlatma sınıfınıza kullanılabilir olduğundan emin olun ihtiyacınız varsa, bunları yapılandırabilirsiniz WebHostBuilder ve onun ConfigureServices yöntemini kullanarak.
+> Belirli hizmetleri başlatma sınıfınıza kullanılabilir olduğundan emin olmak ihtiyacınız varsa, bunları yapılandırabilirsiniz WebHostBuilder ve kendi Createservicereplicalisteners() yöntemi kullanarak.
 
-Başlangıç sınıfı diğer filtreleri kendi hizmetlerine Ara denetleyicilerinden ASP.NET Core uygulamanızın parçalarını nasıl yapılandırdığınızı modelidir. Her durumda, uygulamanız gereken [açık bağımlılıkları ilkesine](http://deviq.com/explicit-dependencies-principle/)bağımlılıklarınızı isteyen yerine doğrudan oluşturarak ve bağımlılık ekleme, uygulama boyunca yararlanarak. Nerede ve nasıl, doğrudan uygulamaları, özellikle Hizmetleri ve altyapı ile çalışma veya yan etkileri olan nesneleri örneği dikkat edin. Uygulama çekirdek içinde tanımlanan ve içinde cmdlet'e kod başvurularını belirli uygulama türleri için bağımsız değişken olarak geçirilen soyutlama ile çalışmayı tercih eder.
+Başlangıç sınıfı diğer bölümlerine kendi hizmetlerine filtreleri için Ara yazılıma denetleyicilerinden ASP.NET Core uygulamanızı nasıl yapılandırmanız gerektiği bir modeldir. Her durumda, uygulamanız gereken [açık bağımlılıkları İlkesi](https://deviq.com/explicit-dependencies-principle/)bağımlılıklarınızı isteyen yerine doğrudan oluşturarak ve bağımlılık ekleme uygulamanızda kullanma. Nerede ve nasıl doğrudan uygulamaları, özellikle hizmetler ve altyapı ile çalışır veya yan etkileri olan nesneleri örneği dikkat edin. Uygulama çekirdek içinde tanımlanan ve bağımsız değişkenler olarak belirli uygulama türlerini runbook'a kod başvurularına geçirilen soyutlama ile çalışmayı tercih eder.
 
 ## <a name="structuring-the-application"></a>Uygulama yapılandırma
 
-Tek yapılı uygulamalar genellikle tek giriş noktası vardır. Bir ASP.NET Core web uygulaması söz konusu olduğunda, ASP.NET Core web projesi giriş noktası olacaktır. Ancak, bu çözüm yalnızca tek bir projenin oluşmalıdır anlamına gelmez. Sorunları ayrılması takip etmek için farklı katmanlara uygulamayı oluşturan ayırmak yararlıdır. Katmanlara parçalanmış sonra daha iyi kapsülleme elde etmeye yardımcı olabilir projeleri ayırmak için klasörleri gitmek yararlıdır. Bir ASP.NET Core uygulamayla bu hedeflere ulaşmak için en iyi yaklaşımı, temiz 5 bölümde tartışılan mimarisi çeşididir. Bu yaklaşım uygulamanın çözüm ayrı kitaplıklarının UI, altyapı ve ApplicationCore oluşan.
+Tek yapılı uygulamalar genellikle tek giriş noktası vardır. Bir ASP.NET Core web uygulaması söz konusu olduğunda, ASP.NET Core web projesi giriş noktası olacaktır. Ancak, bu çözüm yalnızca tek bir projenin oluşmalıdır anlamına gelmez. Görev ayrımı nettir takip etmek için uygulamayı farklı katmanlara ayırmak kullanışlıdır. Katmanlara parçalanmış sonra daha iyi saklama elde etmeye yardımcı olabilir projeleri ayırmak için klasörleri gitmek yararlıdır. Bir ASP.NET Core uygulaması ile bu hedeflere ulaşmak için en iyi yaklaşım temiz 5. bölümde tartışılan mimari bir çeşididir. Bu yaklaşım uygulamanın çözüm ayrı kitaplıklarını kullanıcı Arabirimi, altyapı ve ApplicationCore oluşur.
 
-Bu projeler ek olarak, ayrı bir test projeleri de dahil edilen (Bölüm 9'test açıklanmıştır).
+Bu projeler ek olarak, ayrı bir test projeleri de dahil edilir (Bölüm 9'da test açıklanmıştır).
 
-Uygulamanın nesne modeli ve arabirimleri ApplicationCore projesinde yerleştirilmelidir. Bu proje mümkün olduğunca az bağımlılıkları olacaktır ve çözümdeki diğer projelerin başvurur. Altyapı üzerinde doğrudan bağlı olmayan hizmetleri olarak kalıcı olmasını gerektiren iş varlıklarını ApplicationCore projesinde tanımlanır.
+Uygulamanın nesne modeli ve arabirimleri ApplicationCore projede yerleştirilmelidir. Bu proje mümkün olduğu kadar az bağımlılıklar sahiptir ve çözümdeki diğer projelerin başvurur. Altyapısında doğrudan bağlı olmayan hizmetler olarak kalıcı gereken iş varlıkları ApplicationCore projesinde tanımlanmıştır.
 
-Kalıcılık nasıl gerçekleştirildiğini veya nasıl bir kullanıcı, bildirimleri gönderilebilir gibi uygulama ayrıntılarını altyapı projesinde tutulur. Bu projenin Entity Framework Çekirdek gibi uygulamaya özel paketleri başvurur, ancak proje dışında bu uygulamaların ayrıntılarını açığa çıkarmamalıdır. Altyapı hizmetleri ve depoları ApplicationCore proje tanımlanan arabirimi uygulamalıdır ve kendi kalıcılığı ApplicationCore içinde tanımlanan varlıklar saklama ve alma için sorumlu uygulamalarıdır.
+Kalıcılık nasıl gerçekleştirildiğini veya nasıl bir kullanıcı, bildirimleri gönderilebilir gibi uygulama ayrıntılarını altyapı projede tutulur. Bu proje, Entity Framework Core gibi uygulamaya özel paketler başvurur, ancak proje dışında bu uygulamaların ayrıntılarını kullanıma sunmamalıdır. Altyapı hizmetleri ve depoları ApplicationCore projede tanımlanan arabirimi uygulamalıdır ve bunun Kalıcılık uygulamalarını alma ve varlıkları ApplicationCore içinde tanımlanan depolama sorumludur.
 
-ASP.NET Core UI proje herhangi bir kullanıcı Arabirimi düzeyi endişelerini sorumlu olduğu, ancak iş mantığı ya da altyapı ayrıntıları içermemesi gerekir. Aslında, ideal olarak, hatta bir bağımlılık iki proje arasında hiçbir bağımlılık yanlışlıkla sunulan sağlamaya yardımcı olur altyapı projede sahip olmamalıdır. Bu kayıt defteri sınıfların her projede dı kuralları tanımlamanıza olanak verir StructureMap gibi üçüncü taraf bir dı kapsayıcı kullanılarak gerçekleştirilebilir.
+ASP.NET Core UI projesi herhangi bir kullanıcı Arabirimi düzeyi sorunları için sorumlu olan, ancak iş mantığı ya da altyapı ayrıntıları içermemelidir. Aslında, ideal olarak, hatta bir bağımlılık iki projeler arasında hiçbir bağımlılık yanlışlıkla sunulan olmanıza yardımcı olur altyapısı projesi hakkında sahip olmamalıdır. Bu, bir üçüncü taraf DI kapsayıcı kayıt defteri sınıflar her projede DI kuralları tanımlamak olanak tanıyan StructureMap gibi kullanarak gerçekleştirilebilir.
 
-Uygulama Ayrıntıları uygulamasından kesilmesi için başka bir yaklaşım, tek tek Docker kapsayıcılarında belki de dağıtılan uygulamayı çağrısı mikro sağlamaktır. Bu sorunları ve iki projeleri arasında dı yararlanarak daha kesilmesi daha da büyük ayrımı sağlar, ancak ek karmaşıklık sahiptir.
+Uygulama Ayrıntıları uygulamadan ayırma başka bir yaklaşım, uygulamanın çağrı belki de tek bir Docker kapsayıcılarında dağıtılmış mikro hizmetler, sahip olmaktır. Bu sorunları ve iki projeler arasında DI yararlanarak daha ayırma daha da fazla ayrımı sağlar, ancak ek karmaşıklığa sahiptir.
 
 ### <a name="feature-organization"></a>Özellik kuruluş
 
-Varsayılan olarak, ASP.NET Core uygulamaları denetleyicileri ve görünümler ve sık ViewModels dahil olmak üzere kendi klasör yapısı toplayın. Bu sunucu tarafı yapıları desteklemek üzere istemci tarafı kodlar genellikle ayrı olarak wwwroot klasöründe depolanır. Ancak, belirli bir özelliği genellikle çalışma bu klasörler arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşla sorunlarla karşılaşabilirsiniz. Dosya ve alt her klasördeki sayısı arttıkça, Çözüm Gezgini aracılığıyla kaydırmanın büyük bir bölümünü sonuçta daha zor alır. Bu sorun için bir çözüm olan uygulama kodu tarafından düzenlemek için *özelliği* yerine göre dosya türü. Bu kuruluş stili genellikle için özellik klasörleri veya özellik dilimler olarak adlandırılır (Ayrıca bkz: [dikey dilimler](http://deviq.com/vertical-slices/)).
+Varsayılan olarak, ASP.NET Core uygulamaları bunların klasör yapılarını denetleyicileri ve görünümler ve Viewmodel'lar sık içerecek şekilde düzenleyin. Bu sunucu tarafı yapılarını desteklemek üzere istemci tarafı kod, genellikle wwwroot klasörü içinde ayrı olarak depolanır. Ancak, genellikle herhangi belirli bir özellik üzerinde çalışan bu klasör arasında atlama gerektirdiğinden büyük uygulamalar bu kuruluşun sorunlarla karşılaşabilirsiniz. Bu dosyaları ve alt klasörlerdeki her klasör sayısı arttıkça, çözüm Gezginine kaydırma büyük ölçüde sonuçta daha zor alır. Bu soruna bir çözüm ise uygulama kodu tarafından düzenlemek için _özellik_ bunun yerine dosya türü. Bu kuruluş stili genellikle özellik klasörler veya özellik dilim adlandırılır (Ayrıca bkz: [dikey dilimleri](https://deviq.com/vertical-slices/)).
 
-ASP.NET Core MVC alanları bu amaç için destekler. Alanları kullanarak denetleyicileri ve görünümler klasörleri (aynı zamanda ilişkili tüm modelleri) her alanı klasörde ayrı ayrı kümeleri oluşturabilirsiniz. Şekil 7-1 alanları kullanarak bir örnek klasör yapısını gösterir.
+ASP.NET Core MVC, bu amaçla alanlarını destekler. Alanlara kullanarak denetleyicileri ve görünümleri klasörleri (aynı zamanda ilişkili herhangi bir model) her alan klasördeki ayrı kümeleri oluşturabilirsiniz. Şekil 7-1 alanlara kullanarak bir örnek klasör yapısını gösterir.
 
 ![](./media/image7-1.png)
 
 Şekil 7-1 örnek alanı kuruluş
 
-Alanları kullanırken, ait oldukları alanın adı ile denetleyicilerinizi tasarlamanız öznitelikleri kullanmanız gerekir:
+Alanları kullanırken, ait oldukları alanın adı ile denetleyicilerinizi donatmak için öznitelikleri kullanmanız gerekir:
 
 ```csharp
 [Area("Catalog")]
@@ -152,7 +154,7 @@ public class HomeController
 {}
 ```
 
-Ayrıca, yolları alan Destek eklemeniz gerekir:
+Alan desteği eklemek için yollarınızı gerekir:
 
 ```csharp
 app.UseMvc(routes =>
@@ -167,9 +169,9 @@ app.UseMvc(routes =>
 });
 ```
 
-Alanlar için yerleşik destek yanı sıra kendi klasör yapısı ve öznitelikler ve özel yollar yerine kuralları de kullanabilirsiniz. Bu ayrı klasörlerini eklemediniz görünümleri, denetleyicileri, tüm ilgili her özellik için tek bir yerde dosyaları görmeyi kolaylaştırır ve hiyerarşi daha düz tutulması vb. için özellik klasörleri yapmanıza olanak tanır.
+Alanlar için yerleşik destek ek olarak kendi klasör yapısını ve öznitelikler ve özel yollar yerine kuralları da kullanabilirsiniz. Bu ayrı klasörlerini eklemediğiniz görünümleri, denetleyicileri, hiyerarşi düzleştiren tutulması ve tüm ilgili dosyalar tek bir yerde her bir özellik görmek kolaylaştırarak vb. için özellik klasörleri olmasını çalıştırmasına olanak tanır.
 
-ASP.NET Core yerleşik kuralı türleri davranışını denetlemek için kullanır. Bu kuralları değiştirmek ya da değiştirin. Örneğin, özellik adı (genellikle denetleyicisi bulunduğu klasörü karşılık gelen), ad göre belirli bir denetleyici için otomatik olarak alırsınız bir kural oluşturabilirsiniz:
+ASP.NET Core yerleşik kuralı türleri davranışını denetlemek için kullanır. Bu kuralları değiştirmek ya da değiştirin. Örneğin, özellik adı, ad alanı (Bu genellikle, denetleyici bulunduğu klasöre ilişkilendirir) göre belirli bir denetleyici için otomatik olarak alacak bir kural oluşturabilirsiniz:
 
 ```csharp
 FeatureConvention : IControllerModelConvention
@@ -195,23 +197,23 @@ FeatureConvention : IControllerModelConvention
 }
 ```
 
-Uygulamanıza ConfigureServices MVC desteği eklediğinizde, isteğe bağlı olarak bu kural belirtin:
+Uygulamanıza Createservicereplicalisteners() MVC için destek eklediğinizde bir seçenek olarak bu kural belirtin:
 
 ```csharp
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC bir kuralı görünümlerini bulmak için de kullanılır. Böylece görünümler (yukarıda FeatureConvention tarafından sağlanan özellik adı kullanarak), özellik klasörlerde bulunan bir özel kuralı geçersiz kılabilirsiniz. Bu yaklaşımı hakkında daha fazla bilgi ve MSDN makalesinden çalışma örnek indirme [ASP.NET Core MVC özelliği dilimleri](https://msdn.microsoft.com/magazine/mt763233.aspx).
+ASP.NET Core MVC bir kuralı görünümlerini bulmak için de kullanılır. Böylece görünümleri (yukarıda FeatureConvention tarafından sağlanan özellik adı kullanarak) özellik klasörlerde bulunan bir özel kuralı geçersiz kılabilirsiniz. Bu yaklaşımı hakkında daha fazla bilgi edinin ve MSDN makalesi, bir çalışma örneği indirin [ASP.NET Core MVC özellik dilimleri](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Çapraz kesme sorunları
+### <a name="cross-cutting-concerns"></a>Geniş kapsamlı kritik konular
 
-Uygulamaları arttıkça, çoğaltma ortadan kaldırmak ve tutarlılık sağlamak için çapraz kesme sorunları faktörü giderek önemli hale gelir. Olsa diğer birçok bazı arası kesme sorunları ASP.NET Core uygulamalarında kimlik doğrulama, model doğrulama kuralları, çıktı önbelleği ve hata işleme, gösterilebilir. ASP.NET Core MVC [filtreleri](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) , önce veya sonra istek işleme ardışık düzeninde belirli adımları kodu çalıştırmanızı sağlar. Örneğin, bir filtre önce ve sonra model bağlama, önce ve bir eylem veya önce ve sonra bir eylem sonucu çalıştırabilirsiniz. Bir yetkilendirme filtresi, kalan ardışık düzenini erişimi denetlemek için de kullanabilirsiniz. Şekil 7-2'de gösterildiği nasıl yürütme akış filtreleri yoluyla yapılandırdıysanız isteyin.
+Uygulamaları büyüdükçe, çoğaltma ortadan kaldırabilir ve tutarlılık sağlamak için geniş kapsamlı kritik konular etkimesi giderek daha önemli hale gelir. Vardır ancak diğer birçok bazı geniş kapsamlı kritik konular ASP.NET Core uygulamalarında kimlik doğrulama, model doğrulama kuralları, çıktı önbelleği ve hata işleme örnekleridir. ASP.NET Core MVC [filtreleri](/aspnet/core/mvc/controllers/filters) önce veya sonra bazı adımlar istek işleme ardışık düzeninde kod çalıştırmanıza olanak tanır. Örneğin, bir filtre önce ve sonra model bağlama, önce ve sonra bir eylem veya önce ve sonra bir eylem sonucu çalıştırabilirsiniz. Bir yetkilendirme filtresi, kalan ardışık düzenini erişimi denetlemek için de kullanabilirsiniz. Şekil 7-2'de gösterildiği nasıl yürütme akışları, yapılandırılmış istek filtreleri.
 
-![Talep yetkilendirme filtreleri, kaynak filtreleri, Model bağlama, eylem filtreleri, eylem yürütme ve eylem sonucu dönüştürme, özel durum filtreleri, sonuç filtreleri ve sonuç yürütme işlenir. Yolda isteği yalnızca sonuç filtreleri ve kaynak filtreleri tarafından istemciye gönderilen bir yanıt olmadan önce işlenir.](./media/image7-2.png)
+![İstek, yetkilendirme filtreleri, kaynak filtreleri, Model bağlama, eylem filtreleri, eylem yürütme ve eylem sonucu dönüştürme, özel durum filtreleri, sonuç filtreleri ve sonuç yürütme işlenir. Biçimi üzerinde istek yalnızca sonuç filtreleri ve kaynak filtreler tarafından istemciye gönderilen bir yanıt olmadan önce işlenir.](./media/image7-2.png)
 
 Şekil 7-2 İstek Yürütme filtreleri ve istek ardışık düzeni üzerinden.
 
-Bunları denetleyicileri veya Eylemler uygulayabilmek için filtreleri genellikle öznitelik olarak uygulanır. Bu şekilde, eylem düzeyi geçersiz kılma veya denetleyici düzeyinde belirtilen filtreler temel yapı belirtilen filtreler eklendiğinde kendileri genel filtreleri geçersiz kılar. Örneğin, \[rota\] özniteliği denetleyicileri ve eylemleri arasındaki yolları oluşturmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnek gösterdiği gibi ayrı eylemler tarafından geçersiz kılındı:
+Bunları denetleyicileri veya Eylemler uygulayabilirsiniz böylece filtreleri genellikle öznitelik olarak uygulanır. Bu şekilde düzeyinde geçersiz kılma eylem veya denetleyici düzeyinde belirtilen filtreleri temel yapı belirtilen filtreler eklendiğinde kendileri genel filtreleri geçersiz kılar. Örneğin, \[rota\] özniteliği derleme denetleyicileri ve eylemleri arasındaki yolları'kurmak için kullanılabilir. Benzer şekilde, yetkilendirme denetleyici düzeyinde yapılandırılabilir ve aşağıdaki örnekte gösterildiği gibi bireysel eylemleri tarafından geçersiz kılınmış:
 
 ```csharp
 [Authorize]
@@ -224,9 +226,9 @@ public class AccountController : Controller
 }
 ```
 
-İlk yöntem, oturum açma, AllowAnonymous filtre (özniteliği) Authorize filtresi denetleyici düzeyinde Ayarla geçersiz kılmak için kullanır. Kimliği doğrulanmış bir isteği ForgotPassword eylem (ve AllowAnonymous özniteliğine sahip değil sınıfı içinde herhangi bir işlem) gerektirir.
+İlk yöntem, oturum açma, denetleyici düzeyinde Authorize filtre geçersiz kılmak için AllowAnonymous filtre (öznitelik) kullanır. Kimliği doğrulanmış bir isteği ForgotPassword eylemi (ve herhangi bir işlem AllowAnonymous özniteliğine sahip değil sınıfında) gerektirir.
 
-Filtreler, çoğaltma ortak hata ilkeleri API'ler işleme biçiminde ortadan kaldırmak için kullanılabilir. Örneğin, tipik bir API İlkesi model doğrulama başarısız olursa mevcut anahtarları başvuran isteklerin NotFound yanıt ve bir BadRequest yanıt getirmektir. Aşağıdaki örnek, bu iki ilke uygulamada gösterir:
+Filtreler, çoğaltma ilkeleri için API'leri işleme yaygın hata biçiminde ortadan kaldırmak için kullanılabilir. Örneğin, tipik bir API İlkesi mevcut anahtarlar başvuran isteklerin NotFound yanıt ve bir BadRequest yanıt model doğrulama başarısız olursa geri döndürmektir. Aşağıdaki örnek, bu iki ilke uygulamada gösterir:
 
 ```csharp
 [HttpPut("{id}")]
@@ -246,7 +248,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Bu gibi koşullu koduyla kalabalık hale için eylem yöntemlerini izin vermez. Bunun yerine, ilkeleri gerektiği ölçüde temeline göre uygulanabilir filtreleri içine alın. Bu örnekte, bir komut API için gönderilen dilediğiniz zaman gerçekleşeceğini, model doğrulama denetimi aşağıdaki özniteliği tarafından değiştirilebilir:
+Bu gibi koşullu kodla dağınık hale, eylem yöntemlerine izin vermez. Bunun yerine, gerektiğinde bir temelinde uygulanabilen filtreleri içine ilkeleri çekin. Bu örnekte, bir komut, API'ye gönderilen dilediğiniz zaman gerçekleşmesi gerektiğini, model doğrulama denetimi aşağıdaki özniteliği tarafından değiştirilebilir:
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -261,10 +263,9 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-Benzer şekilde, bir filtre, bir kaydı var ve bu denetimleri eylemi gerçekleştirmek için gereksinimini eylem yürütülmeden önce bir 404 dönüş denetlemek için kullanılabilir. Genel kurallar çekilen ve altyapı kodu ve iş mantığı, kullanıcı Arabiriminden ayırmak için çözümünüzün düzenlenmiş sonra MVC eylem yöntemleri son derece ince olmalıdır:
+Benzer şekilde, bir filtre, bir kaydı var ve bu denetimleri eylemi gerçekleştirmek için gereksinimini ortadan kaldırır eylem yürütülmeden önce bir 404 döndüren denetlemek için kullanılabilir. Genel kurallar çekilen ve altyapı kod ve iş mantığı, kullanıcı Arabiriminden ayırmak için çözümünüzün düzenlenmiş sonra MVC eylemi yöntemlerinizi son derece basit olması gerekir:
 
 ```csharp
-// PUT api/authors/2/5
 [HttpPut("{id}")]
 [ValidateAuthorExists]
 public async Task<IActionResult> Put(int id, [FromBody]Author author)
@@ -274,33 +275,34 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Daha fazla bilgiyi filtreleri uygulama ve çalışma örnek MSDN makalesinden indirme hakkında [gerçek dünya ASP.NET Core MVC filtreleri](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin hakkında [gerçek dünya ASP.NET Core MVC filtreleri](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Başvuruları – uygulamaları yapılandırma
+>
 > - **Alanlar**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – ASP.NET Core MVC özelliği dilimleri**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
+> - **MSDN Magazine – ASP.NET Core MVC özellik dilimleri**  
+ > <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtreler**  
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN – gerçek dünya ASP.NET Core MVC filtreleri**  
-> <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **MSDN – gerçek ASP.NET Core MVC filtreleri**  
+>   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Güvenlik
 
-Web uygulamalarının güvenliğini sağlama birçok göz önünde büyük bir konu ile ilgilidir. En temel düzeyde, belirtilen bir isteğin geldiği ve bu isteği yalnızca gerektiği kaynaklara erişimi olduğundan emin olduktan bildiğiniz sağlayarak güvenlik içerir. Kimlik doğrulama isteği bilinen bir varlıktan geliyormuş gibi değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda ile sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme kullanıcı kimliğine göre belirli kaynaklara erişimi kısıtlama işlemidir. Üçüncü güvenlik sorunu istekleri için size gereken en az üçüncü taraflar tarafından gizli dinleme koruma [SSL, uygulamanız tarafından kullanıldığından emin olun](https://docs.microsoft.com/aspnet/core/security/enforcing-ssl).
+Web uygulamalarının güvenliğini sağlama, birçok konuları ile büyük bir konu olduğu. En temel düzeyde güvenlik, belirtilen bir isteğin geldiği ve ardından bu isteği yalnızca olması gerektiği kaynaklarına erişimi olduğundan emin bildiğiniz gelmelerini sağlamak anlamına gelir. Kimlik doğrulama isteği bilinen bir varlıktan yakında olarak değerlendirilip değerlendirilmeyeceğini görmek için bir istek bu güvenilir veri deposunda sağlanan kimlik bilgileri karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara kullanıcı kimliğine göre erişimi kısıtlama işlemidir. Üçüncü bir güvenlik sorunu için size gereken en az üçüncü taraflarca gizlice gelen istekleri koruduğu [uygulamanız için SSL kullanıldığından emin olun](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Kimlik doğrulaması
 
-ASP.NET Core, uygulamanız için oturum açma işlevleri desteklemek için kullanabileceğiniz bir üyelik sistemi kimliğidir. Yerel kullanıcı hesapları için destek ve aynı zamanda Microsoft Account, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılarından dış oturum açma sağlayıcısı destek vardır. ASP.NET Core kimliği ek olarak, windows kimlik doğrulaması, uygulamanızın kullanabilir veya bir üçüncü taraf kimlik sağlayıcısı ister [kimlik sunucusunu](https://github.com/IdentityServer/IdentityServer4).
+ASP.NET Core, uygulamanız için oturum açma işlevlerini desteklemek için kullanabileceğiniz bir üyelik sistemi kimliğidir. Bunun yanı sıra Microsoft Account, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılarından dış oturum açma sağlayıcısı destek yerel kullanıcı hesapları için destek de vardır. ASP.NET Core kimliği ek olarak, uygulamanızı windows kimlik doğrulaması kullanabilir veya bir üçüncü taraf kimlik sağlayıcısı ister [kimlik sunucusu](https://github.com/IdentityServer/IdentityServer4).
 
-Bireysel kullanıcı hesapları seçeneği seçili değilse ASP.NET Core kimlik yeni proje şablonlarını dahil edilir. Bu şablon, kayıt, oturum açma, dış oturum açma bilgileri, unutulan parolaları ve ek işlevsellik için destek içerir.
+Bireysel kullanıcı hesapları seçeneğini seçtiyseniz, ASP.NET Core kimliği yeni proje şablonları bulunur. Bu şablon, kaydı, oturum açma, dış oturum açma bilgileri, unutulan parolalar ve ek işlevler için destek içerir.
 
 ![](./media/image7-3.png)
 
-Şekil 7-3 seçin bireysel kullanıcı kimliği önceden yapılandırılmış olmasını hesaplar.
+Şekil 7-3 tek tek kullanıcı önceden yapılandırılmış bir kimliğe sahip hesapları.
 
-Kimlik desteği, başlangıç, hem de ConfigureServices ve yapılandırma yapılandırılır:
+Kimlik desteği hem Createservicereplicalisteners() ve yapılandırma başlangıç yapılandırılır:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -327,13 +329,13 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-UseIdentity yapılandırma yönteminde UseMvc önce görünen önemlidir. Kimlik ConfigureServices içinde yapılandırırken AddDefaultTokenProviders çağrısı fark edeceksiniz. Bu web iletişimin güvenliğini sağlamak için kullanılabilir, ancak bunun yerine SMS veya e-posta için bunları sırayla kimliğini onaylamak için üzerinden kullanıcılara gönderilen istekleri oluşturmak sağlayıcıları başvuruyor belirteçleri ile ilgisi sahiptir.
+UseIdentity yapılandırma yöntemi önce UseMvc göründüğünü önemlidir. Kimlik Createservicereplicalisteners() yapılandırırken, bir çağrı AddDefaultTokenProviders fark edeceksiniz. Bu web iletişimin güvenliğini sağlamak için kullanılabilir, ancak bunun yerine SMS veya e-posta edebilmeleri kimliğini onaylamak için aracılığıyla kullanıcılara gönderilen istekleri oluşturma sağlayıcıları başvurduğu belirteçleriyle yapılacak bir şey yok sahiptir.
 
-Hakkında daha fazla bilgiyi [iki faktörlü kimlik doğrulamasını yapılandırma](https://docs.microsoft.com/aspnet/core/security/authentication/2fa) ve [dış oturum açma sağlayıcılarını etkinleştirme](https://docs.microsoft.com/aspnet/core/security/authentication/social/) resmi ASP.NET Core belgeleri gelen.
+Daha fazla bilgi edinebilirsiniz [iki öğeli kimlik doğrulamayı yapılandırma](/aspnet/core/security/authentication/2fa) ve [dış oturum açma sağlayıcılarını etkinleştirme](/aspnet/core/security/authentication/social/) resmi ASP.NET Core belgeleri öğesinden.
 
 ### <a name="authorization"></a>Yetkilendirme
 
-Yetkilendirme en basit biçimi, anonim kullanıcılar için erişimi kısıtlamak içerir. Bu basitçe uygulayarak sağlanabilir \[Authorize\] özniteliği belirli denetleyicileri veya eylemler. Rolleri kullanılıyorsa gösterildiği gibi belirli rollere ait olan kullanıcılar için erişimi kısıtlamak için daha fazla öznitelik Genişletilebilir:
+Anonim kullanıcılar için erişimi kısıtlamak en basit şekliyle yetkilendirme içerir. Bu basitçe uygulayarak gerçekleştirilebilir \[Authorize\] öznitelik belirli denetleyicileri veya eylemler. Rolleri kullanılıyorsa, gösterildiği gibi belirli rollere ait olan kullanıcılar için erişimi kısıtlamak için daha fazla öznitelik Genişletilebilir:
 
 ```csharp
 [Authorize(Roles = "HRManager,Finance")]
@@ -343,9 +345,9 @@ public class SalaryController : Controller
 }
 ```
 
-Bu durumda, kullanıcılar ya da HRManager veya finans rolleri (veya her ikisi de) ait SalaryController erişimi gerekir. Bir kullanıcı birden çok rol için (yalnızca biri birkaç) ait zorunlu kılmak için her zaman gerekli rol belirten birden çok kez öznitelik uygulayabilirsiniz.
+Bu durumda, kullanıcılar ya da HRManager veya finans rolleri (veya her ikisi de) ait SalaryController erişimi gerekir. Bir kullanıcı birden çok rol için (yalnızca birkaçını) ait zorunlu kılmak için gerekli bir rol her durumda belirtilmesinden öznitelik birden çok kez uygulayabilirsiniz.
 
-Birçok farklı denetleyicileri ve eylemleri dizelerde istenmeyen yineleme açabilir gibi belirli roller kümesi belirtme. Yetkilendirme kuralları saklayan, yetkilendirme ilkelerini yapılandırın ve ardından ilkeyi bireysel rolleri yerine uygularken belirtin \[Authorize\] özniteliği:
+Birçok farklı denetleyicileri ve eylemleri dizeleri için istenmeyen yineleme neden olabileceğinden bazı roller kümesi belirtme. Yetkilendirme kuralları yalıtma, yetkilendirme ilkelerini yapılandırabilir ve ardından ilkeyi ayrı roller yerine uygularken belirtin \[Authorize\] özniteliği:
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -355,11 +357,11 @@ public IActionResult ExecutiveSalaryReport()
 }
 ```
 
-İlkeleri bu şekilde kullanarak, belirli roller ya da uygulayan kuralları sınırlı kalmayarak Eylemler türlerini ayırabilirsiniz. Belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, daha sonra yalnızca üzerinde her rollerin listesini güncelleştirme yerine bir ilke güncelleştirebilirsiniz her \[Authorize\] özniteliği.
+İlkeleri bu şekilde kullanılması, tür Eylemler belirli roller ya da ona uygulanacak kuralları kısıtlı ayırabilirsiniz. Belirli kaynaklara erişmesi gereken yeni bir rol oluşturursanız, daha sonra yalnızca üzerinde her rollerin listesini güncelleştirmek yerine bir ilke güncelleştirebilirsiniz her \[Authorize\] özniteliği.
 
-#### <a name="claims"></a>Talepleri
+#### <a name="claims"></a>Talep
 
-Talep Kimliği doğrulanmış bir kullanıcı özelliklerini temsil eden adı değer çiftleridir. Örneğin, kullanıcıların çalışan numarası bir talep depolayabilir. Talep Yetkilendirme İlkeleri bir parçası olarak kullanılabilir. "EmployeeOnly" adında bir ilke oluşturabilirsiniz Bu örnekte gösterildiği gibi "EmployeeNumber" adlı bir talep varlığını gerektirir:
+Talep Kimliği doğrulanmış bir kullanıcının özelliklerini temsil eden ad değer çiftleridir. Örneğin, kullanıcıların çalışan numarası bir talep depolayabilir. Talep Yetkilendirme İlkeleri bir parçası olarak kullanılabilir. "EmployeeOnly" adlı bir ilke oluşturabilirsiniz. Bu örnekte gösterildiği gibi "EmployeeNumber" adlı bir talep varlığını gerektirir:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -372,53 +374,54 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Bu ilke ile sonra kullanılabilir \[Authorize\] herhangi bir denetleyici ve/veya eylem, yukarıda açıklandığı gibi korumak için öznitelik.
+Bu ilke ile ardından kullanılabilir \[Authorize\] herhangi bir denetleyici ve/veya eylem, yukarıda açıklanan şekilde korumak için özniteliği.
 
 #### <a name="securing-web-apis"></a>Web API güvenliğini sağlama
 
-Çoğu web API'leri, bir belirteç tabanlı kimlik doğrulama sistemi uygulamanız gerekir. Belirteç kimlik doğrulama, durum bilgisiz ve ölçeklenebilir olacak şekilde tasarlanmıştır. Bir belirteç tabanlı kimlik doğrulama sisteminde istemci ilk ile kimlik doğrulama sağlayıcısını kimliğini doğrulaması gerekir. Başarılı olursa, istemcinin sadece bir şifreleme açısından anlamlı karakter dizesidir bir belirteç verilir. İstemci ardından bir API için bir istek yayınlamasını gerektiğinde bu belirteç isteği başlığındaki olarak ekler. Sunucu, ardından istek tamamlamadan önce istek üstbilgisinde bulunan belirteci doğrular. Şekil 7-4, bu işlemi gösterir.
+Çoğu web API'leri, bir belirteç tabanlı kimlik doğrulama sisteminde uygulamalıdır. Belirteç kimlik doğrulaması, durum bilgisiz ve ölçeklenebilir şekilde tasarlanmıştır. Bir belirteç tabanlı kimlik doğrulama sisteminde, istemci öncelikle kimlik doğrulama sağlayıcısının doğrulaması gerekir. Başarılı olursa, istemci yalnızca şifreleme açısından anlamlı bir dize karakter olan bir belirteç verilir. İstemci ardından API'ye bir isteği yayımlamanız gerektiğinde bu belirteci bir istek başlığında olarak ekler. Sunucu, ardından isteğini tamamlamadan önce istek üstbilgisinde bulunan belirteci doğrular. Şekil 7-4'te, bu işlemi gösterir.
 
 ![TokenAuth](./media/image7-4.png)
 
-**Şekil 7-4.** Belirteç tabanlı kimlik doğrulaması Web API'leri için.
+**Şekil 7-4.** Belirteç tabanlı kimlik doğrulaması için Web API'leri.
 
-> ### <a name="references--security"></a>Başvuruları – güvenlik
+> ### <a name="references--security"></a>Başvurular: güvenlik
+>
 > - **Güvenlik belgeleri genel bakış**  
-> https://docs.microsoft.com/aspnet/core/security/
-> - **Bir ASP.NET Core uygulamasında SSL zorlama**  
-> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
+>   https://docs.microsoft.com/aspnet/core/security/
+> - **ASP.NET Core uygulaması olarak SSL'yi zorunlu tutma**  
+>   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Kimliğe giriş**  
-> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Yetkilendirme giriş**  
-> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Kimlik doğrulama ve yetkilendirme Azure uygulama hizmetinde API uygulamaları için**  
-> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+>   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
+> - **Kimlik doğrulama ve yetkilendirme için Azure App Service'te API Apps**  
+>   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>İstemci iletişimi
 
-Sayfalarını sunmadan ve web API'leri aracılığıyla veri isteklerine yanıt ek olarak, ASP.NET Core uygulamaları doğrudan bağlı istemcileri ile iletişim kurabilir. Bu giden iletişim çeşitli aktarım teknolojiler, en yaygın olma WebSockets kullanabilirsiniz. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucu istemci iletişimi işlevselliği eklemek kolaylaştırır bir kitaplıktır. SignalR WebSockets, aktarım teknolojilerini çeşitli destekler ve geliştirici uygulama ayrıntılarından, dışarıda çok soyutlar.
+ASP.NET Core uygulamaları, sayfalarını sunmadan ve web API'leri aracılığıyla veri isteklerine yanıt ek olarak, bağlı istemciler ile doğrudan iletişim kurabilir. Bu giden iletişim birçok farklı aktarım teknoloji, en yaygın durdurulmasını WebSockets kullanabilirsiniz. ASP.NET Core SignalR, uygulamalarınıza gerçek zamanlı sunucusu istemci iletişim işlevselliği eklemek basit yapan bir kitaplıktır. SignalR değişik WebSockets, aktarım teknolojilerini destekler ve uygulama Ayrıntıları ' geliştiriciden biri koyma çok soyutlar.
 
-ASP.NET Core SignalR şu anda geliştirilmekte ve ASP.NET Core sonraki sürümde kullanılabilir olacaktır. Ancak, diğer [kaynak WebSockets kitaplıkları açmak](https://github.com/radu-matei/websocket-manager) şu anda kullanılabilir.
+ASP.NET Core SignalR ile ASP.NET Core 2.1 kullanılabilir.
 
-Gerçek zamanlı istemci iletişimi, doğrudan WebSockets veya başka teknikler kullanarak olup çeşitli uygulama senaryolarda kullanışlıdır. Bazı örnekler şunlardır:
+Gerçek zamanlı istemci iletişimi WebSockets doğrudan ya da diğer teknikleri kullanarak olup olmadığını uygulama senaryoları çeşitli yararlıdır. Bazı örnekler şunlardır:
 
--   Canlı sohbet odası uygulamaları
+- Canlı sohbet odası uygulamalar
 
--   Uygulamaları izleme
+- Uygulamaları izleme
 
--   İş ilerleme güncelleştirmeleri
+- İş ilerleme güncelleştirmeleri
 
--   Bildirimler
+- Bildirimler
 
--   Etkileşimli forms uygulamaları
+- Etkileşimli forms uygulamaları
 
-İstemci iletişimi, uygulamalara oluştururken da genellikle iki bileşeni vardır:
+İstemci iletişimi uygulamalarınızla oluştururken da genellikle iki bileşeni vardır:
 
--   Sunucu tarafı Bağlantı Yöneticisi'ni (SignalR hub'ı, WebSocketManager WebSocketHandler)
+- Sunucu tarafı Bağlantı Yöneticisi (SignalR hub'ı, WebSocketManager WebSocketHandler)
 
--   İstemci-tarafı kitaplığı
+- İstemci tarafı kitaplık
 
-İstemcileri tarayıcıları – mobil uygulamaları, konsol uygulamalar, sınırlı değildir ve diğer yerel uygulamalar ayrıca SignalR/WebSockets kullanarak iletişim kurabilir. Aşağıdaki basit programı WebSocketManager örnek bir uygulama bir parçası olarak konsola sohbet uygulamaya gönderilen tüm içeriği görüntülemektedir:
+İstemciler tarayıcılar – mobil uygulamaları, konsol uygulamaları, sınırlı değildir ve diğer yerel uygulamalar ayrıca SignalR/WebSockets kullanarak iletişim kurabilir. Aşağıdaki basit programı konsola sohbet uygulaması WebSocketManager örnek bir uygulama bir parçası olarak gönderilen tüm içeriği yankılayan:
 
 ```csharp
 public class Program
@@ -434,123 +437,127 @@ public class Program
         Console.ReadLine();
         StopConnectionAsync();
     }
-    
+
     public static async Task StartConnectionAsync()
     {
         _connection = new Connection();
         await _connection.StartConnectionAsync("ws://localhost:65110/chat");
     }
-    
+
     public static async Task StopConnectionAsync()
     {
         await _connection.StopConnectionAsync();
     }
+}
 ```
 
-Uygulamalarınızı doğrudan istemci uygulamaları ile iletişim kurmak ve gerçek zamanlı iletişim uygulamanızın kullanıcı artırmak göz önünde bulundurun yolları deneyimi göz önünde bulundurun.
+Hangi uygulamalarınızın istemci uygulamaları ile doğrudan iletişim kurmak ve gerçek zamanlı iletişim uygulamanızın kullanıcı artardı olup olmadığını göz önünde bulundurun yolları deneyimi göz önünde bulundurun.
 
 > ### <a name="references--client-communication"></a>Başvuruları – istemci iletişimi
+>
 > - **ASP.NET Core SignalR**  
-> <https://github.com/aspnet/SignalR>
+>   <https://github.com/aspnet/SignalR>
 > - **WebSocket Yöneticisi**  
-> https://github.com/radu-matei/websocket-manager
+>   https://github.com/radu-matei/websocket-manager
 
-## <a name="domain-driven-design--should-you-apply-it"></a>Etki alanı tabanlı tasarım – bu uygulamalıdır?
+## <a name="domain-driven-design--should-you-apply-it"></a>Etki alanı Odaklı Tasarım – uygulanmalı?
 
-Etki alanı tabanlı tasarım (DDD) olan üzerine odaklanan vurgular yazılım oluşturmaya Çevik bir yaklaşım *iş etki alanı*. Ağır indirimlere iletişim ve geliştiricileri için gerçek sisteminin nasıl çalıştığı ilişkilendirebilirsiniz iş etki alanı expert(s) etkileşim yerleştirir. Örneğin, stok ticaret anlaşması işleyen bir sistem oluşturuyorsanız, etki alanı Uzman deneyimli stok Aracısı olabilir. DDD büyük ve karmaşık iş sorunlarını gidermek için tasarlanmıştır ve yatırım anlama ve etki alanı modelleme, olmadığından daha küçük, daha basit uygulamalar için uygun değil genellikle.
+Etki alanı Odaklı Tasarım (DDD) üzerinde odaklanarak vurgular yazılım oluşturmaya yönelik Çevik bir yaklaşım olan _iş etki alanı_. Bir iletişim ve geliştiriciler için gerçek sisteminin nasıl çalıştığı ilişkilendirebilirsiniz iş etki alanı expert(s) etkileşim ağır vurguyu yerleştirir. Örneğin, mal stoku işleyen bir sistem oluşturuyorsanız, etki alanı uzmanı deneyimli bir stok Aracısı olabilir. DDD büyük ve karmaşık iş sorunlarını çözmek için tasarlanmıştır ve anlaşılması ve etki alanı modelleme yatırım etkiliyorsa olmadığından daha küçük, daha basit uygulamalar için uygun değildir.
 
-Ekibinizin (teknik olmayan paydaşlara ve katkıda bulunanlar dahil) DDD yaklaşımı izleyerek yazılım oluştururken geliştirmelisiniz bir *bulunabilen dil* sorun alanı için. Diğer bir deyişle, aynı terminolojisi Modellenen gerçek kavram, yazılım eşdeğer ve (örneğin, veritabanı tabloları) kavram kalıcı hale getirmek için mevcut olabilecek tüm yapıları için kullanılmalıdır. Bu nedenle, her yerden dilde açıklanan kavramları temelini, *etki alanı modeli*.
+DDD yaklaşımı izleyerek yazılım oluştururken, takımınızın (teknik olmayan proje katılımcıları ve katkıda bulunanlar dahil) geliştirmelisiniz bir _bulunabilen dil_ sorun alanı için. Diğer bir deyişle, aynı terminoloji modellenmiş gerçek kavramı, yazılım eşdeğer ve (örneğin, veritabanı tablolarını) kavramı kalıcı hale getirmek için mevcut olabilecek tüm yapıları için kullanılmalıdır. Bu nedenle, bulunabilen dilde açıklanan kavramları temelini, _etki alanı modeli_.
 
-Sistem davranışını temsil etmek için birbiriyle etkileşim nesnelerinin, etki alanı modeli oluşur. Bu nesneler, aşağıdaki kategorilere ayrılır:
+Etki alanı modeliniz sistem davranışını temsil etmek için birbiriyle etkileşim kuran nesneleri içerir. Bu nesneler, aşağıdaki kategorilere ayrılır:
 
--   [Varlıkları](http://deviq.com/entity/), bir iş parçacığı kimliği nesneleriyle temsil eder. Varlıklar, genellikle, bunlar daha sonra alınabilir bir anahtarla kalıcı depolanır.
+- [Varlıkları](https://deviq.com/entity/), bir iş parçacığı kimliğini nesneleriyle temsil eder. Varlıklar, tipik olarak, bunlar daha sonra alınabilmesi için bir anahtar ile kalıcı depolanır.
 
--   [Toplamalar](http://deviq.com/aggregate-pattern/), bir birim olarak kalıcı nesne gruplarını temsil eder.
+- [Toplamlar](https://deviq.com/aggregate-pattern/), bir birim olarak kalıcı nesne gruplarını temsil eder.
 
--   [Değer nesneleri](http://deviq.com/value-object/), özellik değerlerine toplamını temel alarak karşılaştırılabilir kavramları temsil eder. Örneğin, bir başlangıç ve bitiş tarihi oluşan DateRange.
+- [Değer nesneleri](https://deviq.com/value-object/), özellik değerlerine toplamını göndermemeniz karşılaştırılabilir kavramlar temsil eder. Örneğin, bir başlangıç ve bitiş tarihi oluşan DateRange.
 
--   [Etki alanı olayları](https://martinfowler.com/eaaDev/DomainEvent.html), sisteminin diğer bölümleriyle ilgi sistem içinde gerçekleştiği şeyler temsil eder.
+- [Etki alanı olayları](https://martinfowler.com/eaaDev/DomainEvent.html), sistemin diğer bölümlerini ilgi içerisinde'olmuyor öğeleri temsil eder.
 
-DDD etki alanı modeli modelindeki karmaşık davranışı kapsülleyen unutmayın. Varlıklar, özellikle, yalnızca özelliklerinin koleksiyonlarından oluşan olmamalıdır. Etki alanı modeli davranışına sahip değil ve yalnızca sistem durumunu temsil eder, bu olarak kabul edilir bir [anemic modeli](http://deviq.com/anemic-model/), GGG istenmeyen olduğu.
+DDD etki alanı modeli model içindeki karmaşık davranış kapsülleyen unutmayın. Varlıklar, özellikle, yalnızca özellik koleksiyonları olmamalıdır. Etki alanı modeli davranışı azaltır ve yalnızca sistem durumunu temsil eder, bu olduğu söylenir bir [anemic modeli](https://deviq.com/anemic-model/), DDD istenmeyen olduğu.
 
-Bu model türlerinin yanı sıra DDD genellikle desenleri çeşitli uygular:
+Bu model türlerinin yanı sıra DDD desenlerini çeşitli genellikle kullanır:
 
--   [Depo](http://deviq.com/repository-pattern/), Kalıcılık ayrıntılarını özetleyen için.
+- [Depo](https://deviq.com/repository-pattern/), Kalıcılık ayrıntılarını özetleyen için.
 
--   [Fabrika](https://en.wikipedia.org/wiki/Factory_method_pattern), karmaşık nesne oluşturma Kapsüllenen için.
+- [Fabrika](https://en.wikipedia.org/wiki/Factory_method_pattern), karmaşık nesne oluşturma kapsüllemek için.
 
--   Davranış tetikleme gelen bağımlı davranışı kesilmesi için etki alanı olaylar.
+- Ayırma davranışını tetiklemesini gelen bağımlı davranış için etki alanı olayları.
 
--   [Hizmetleri](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/), kapsülleyerek karmaşık davranışı ve/veya altyapı uygulama ayrıntıları.
+- [Hizmetleri](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/), kapsayan karmaşık davranış ve/veya altyapı uygulama ayrıntıları.
 
--   [Komut](https://en.wikipedia.org/wiki/Command_pattern), ayırma için verme komutları ve komut yürütme.
+- [Komut](https://en.wikipedia.org/wiki/Command_pattern), ayırma için verme komutları ve komut yürütülüyor.
 
--   [Belirtimi](http://deviq.com/specification-pattern/), sorgu ayrıntıları Kapsüllenen için.
+- [Belirtimi](https://deviq.com/specification-pattern/), sorgu ayrıntılarını kapsüllemek için.
 
-DDD gevşek bağlantı, kapsülleme ve birim testleri kullanarak kolayca doğrulanabilir kodu için izin verme temiz daha önce ele alınan mimarisi kullanımını da önerir.
+DDD gevşek bağ modelini, kapsülleme ve birim testlerini kullanma kolayca doğrulanabilir kod izin vererek temiz, daha önce açıklanan mimarisi kullanımını da önerir.
 
 ### <a name="when-should-you-apply-ddd"></a>DDD uyguladığınızda
 
-DDD (yalnızca teknik) önemli iş karmaşıklık ile büyük uygulamalar için çok uygundur. Uygulama etki alanı uzmanlar bilgisi istemeniz gerekir. İş kuralları ve yalnızca depolama ve veri depolarına çeşitli kayıtları geçerli durumu alma ötesinde etkileşimleri temsil eden etki alanı modeli kendisini önemli davranışı olmalıdır.
+DDD (yalnızca teknik) önemli iş karmaşıklığını ile büyük uygulamalar için çok uygundur. Uygulama etki alanı uzmanları bilgisi istemeniz gerekir. İş kuralları ve yalnızca depolama ve veri depolarından çeşitli kayıtlarının geçerli durumu alınırken ötesinde etkileşimleri temsil eden etki alanı modeli kendisini önemli davranışı olmalıdır.
 
-### <a name="when-shouldnt-you-apply-ddd"></a>DDD uyguladığınızda döndürmemelidir
+### <a name="when-shouldnt-you-apply-ddd"></a>DDD uyguladığınızda olmaması gerekir
 
-DDD modelleme, mimari ve daha küçük uygulamalar veya temelde yalnızca CRUD (oluşturma/okuma/güncelleştirme/silme) olan uygulamalar için garanti değil iletişimi yatırım gerektirir. Uygulamanızı DDD aşağıdaki yaklaşımlardan, ancak etki alanınız yok davranışı anemic bir modelle olduğunu bulmak tercih ederseniz, yaklaşım zorlanıyor gerekebilir. Uygulamanızı DDD ihtiyacınız olmayabilir ya da etki alanı modeli yerine veritabanı ya da kullanıcı arabirimi iş mantığını saklamak için uygulamanızı yeniden düzenleme yardıma ihtiyacınız.
+Modelleme mimarisi ve daha küçük uygulamalar veya aslında yalnızca CRUD (oluşturma/okuma/güncelleştirme/silme) olan uygulamalar için belirtir değil iletişim Yatırımlar DDD içerir. Uygulamanızı DDD aşağıdaki yaklaşımı, ancak etki alanınızın hiçbir davranış anemic bir model olduğunu bulmak tercih ederseniz yaklaşımınızı gözden geçirmeye itiyor gerekebilir. Uygulamanızı DDD gerekmeyebilir veya etki alanı modeli yerine, veritabanı veya kullanıcı arabirimi iş mantığı kapsülleyen uygulamanızı yeniden düzenleme yardıma ihtiyacınız.
 
-Karma bir yaklaşım, yalnızca GGG uygulamanın işlem ya da daha karmaşık alanlar için ancak daha basit CRUD veya uygulama salt okunur bölümlerini için kullanmak üzere olacaktır. Örneğin, bir raporu görüntülemek için veya bir Pano için görselleştirmek için verileri sorgulama, bir toplama kısıtlama söz konusu gerekmez. Bu tür gereksinimleri için daha basit, ayrı okuma modeline sahip edilebilir.
+Karma bir yaklaşım DDD, uygulamanın işlem ya da daha karmaşık alanları için ancak daha basit CRUD veya salt okunur bölümleri uygulamanın yalnızca kullanmak olabilir. Örneğin, bir raporu görüntülemek için veya bir Pano için verileri görselleştirmek üzere verileri sorguluyorsanız kısıtlamaları dahilinde bir toplama sahip yüklenebileceğinden. Ayrı, daha basit bir okuma modeli için bu gereksinimleri sağlamak için mükemmel bir şekilde kullanılabilir.
 
 > ### <a name="references--domain-driven-design"></a>Başvuruları – etki alanı Odaklı Tasarım
-> - **Düz İngilizce (StackOverflow yanıt) DDD**  
-> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
+>
+> - **DDD düz İngilizce (StackOverflow yanıt)**  
+>   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Dağıtım
 
-Burada barındırılacak bağımsız olarak ASP.NET Core uygulamanızı dağıtma sürecinde ilgili birkaç adım vardır. Yapılabilir uygulamayı yayımlamak için ilk adımdır dotnet kullanarak yayımlamak CLI komutu. Bu uygulamayı derleyin ve atanmış bir klasöre uygulamayı çalıştırmak için gereken tüm dosyaların yerleştirin. Visual Studio'dan dağıttığınızda, bu adımı sizin için otomatik olarak gerçekleştirilir. Yayımlama klasörü .exe ve .dll dosyaları için uygulama ve onun bağımlılıklarını içerir. Kendi başına bir uygulama .NET çalışma zamanı sürümünü de içerir. ASP.NET Core uygulamaları da yapılandırma dosyalarını, statik istemciyi varlıklar ve MVC görünümleri içerir.
+Nerede barındırılacağını bağımsız olarak ASP.NET Core uygulamanızı dağıtma sürecinde kullanılan birkaç adım vardır. Yapılabilir uygulamayı yayımlamak için ilk adımıdır kullanarak dotnet CLI komutunu yayımlayın. Uygulamayı derlemek ve tüm dosyaları belirtilen klasöre uygulamasını çalıştırmak için gerekli yerleştirin. Visual Studio'dan dağıttığınızda, bu adım, otomatik olarak gerçekleştirilir. Yayımlama klasörü .exe ve .dll dosyaları için uygulama ve onun bağımlılıklarını içerir. Kendi içinde bir uygulama .NET çalışma zamanının bir sürümünü de içerir. ASP.NET Core uygulamaları yapılandırma dosyalarını, statik istemciyi varlıklar ve MVC görünümleri de içerir.
 
-ASP.NET Core uygulamaları sunucu önyüklenir ve uygulama (veya sunucu) çökerse yeniden başlatılması gerekir konsol uygulamalardır. Bir işlem yöneticisi, bu işlemi otomatikleştirmek için kullanılabilir. ASP.NET Core en yaygın işlem yöneticilerinden Nginx ve Linux ve IIS üzerinde Apache ya da Windows'da Windows hizmeti ' dir.
+ASP.NET Core, sunucunun önyüklenir ve uygulama (veya sunucu) kilitlenmesi durumunda yeniden başlatılması gerekir konsol uygulamaları uygulamalardır. Bir işlem yöneticisi, bu işlemi otomatikleştirmek için kullanılabilir. ASP.NET Core için en yaygın işlem yöneticileri Ngınx ve Linux ve IIS Apache veya Windows üzerinde Windows hizmeti ' dir.
 
-İşlem Yöneticisi ek olarak, ASP.NET Core uygulamaları Kestrel web sunucusunda barındırılan bir ters proxy sunucusu kullanmanız gerekir. Ters proxy sunucusu internet'ten HTTP isteklerini alır ve bunları Kestrel için bazı ön işleme sonra iletir. Ters proxy sunucuları uygulama için bir güvenlik katmanı sağlamak ve (trafiğini Internet'ten gösterilen) kenar dağıtımlar için gereklidir. Kestrel görece olarak daha yeni ve henüz belirli saldırılarına karşı savunma sağlamaz. Kestrel aynı zamanda barındırma üstbilgileri gibi teknikler kendisiyle aynı bağlantı noktasını ve IP adresini birden çok uygulamayı barındıran etkinleştirmek için kullanılamaz aynı bağlantı noktasında birden çok uygulamayı barındıran desteklemiyor.
+Bir işlem yöneticisi yanı sıra Kestrel web sunucusunda barındırılan ASP.NET Core uygulamaları ters Ara sunucu kullanmanız gerekir. Ters Ara sunucu, internet'ten HTTP isteklerini alır ve bunları Kestrel için bazı ön işleme sonra iletir. Ters proxy sunucuları, uygulama için bir güvenlik katmanı sağlar ve edge dağıtımları (trafiği Internet'ten kullanıma sunulur) için gereklidir. Kestrel'i nispeten yeni ve henüz belirli saldırılara karşı savunma sunmaz. Kestrel'i aynı zamanda barındırma üstbilgileri tekniklerle birlikte aynı bağlantı noktası ve IP adresi üzerinde birden çok uygulama barındırmayı etkinleştirmek için kullanılamaz aynı bağlantı noktasında birden çok uygulama barındırma desteklemiyor.
 
-![Internet'e kestrel](./media/image7-5.png)
+![İnternet'e kestrel](./media/image7-5.png)
 
-Şekil 7-5 ters proxy sunucunun arkasında Kestrel içinde barındırılan ASP.NET
+Şekil 7-5 Kestrel içinde bir ters proxy sunucusu arkasında barındırılan ASP.NET
 
-Ters proxy yararlı olabilir başka bir SSL/HTTPS kullanarak birden çok uygulama güvenliğini sağlamak için bir senaryodur. Bu durumda, yalnızca ters proxy SSL yapılandırılmış olması gerekir. Ters proxy sunucusu ve Kestrel arasındaki iletişimi yer HTTP üzerinden Şekil 7-6'da gösterildiği gibi ele geçirebilir.
+Başka bir senaryo ters Ara sunucu yararlı olabilir, SSL/HTTPS kullanarak birden çok uygulama güvenliğini sağlamaktır. Bu durumda, yalnızca ters proxy SSL yapılandırılmış olması gerekir. Kestrel ve ters Ara sunucu arasındaki iletişimi Şekil 7-6'da gösterildiği gibi HTTP üzerinden yer alabilir.
 
 ![](./media/image7-6.png)
 
-Şekil 7-6 HTTPS güvenlikli ters proxy sunucunun arkasında barındırılan ASP.NET
+Şekil 7-6 bir HTTPS güvenlikli ters proxy sunucusunun barındırılan ASP.NET
 
-Bir giderek popüler ASP.NET Core uygulamanızda ardından yerel olarak barındırılan veya bulut tabanlı barındırmak için Azure'da dağıtılan bir Docker kapsayıcısı barındırmak için bir yaklaşımdır. Docker kapsayıcısı Kestrel üzerinde çalışan uygulama kodunuz içerebilir ve bir ters proxy sunucunun arkasındaki yukarıda gösterildiği gibi dağıtılması.
+Ardından yerel olarak barındırılan veya Azure'da barındırmak için bulut tabanlı dağıtılan bir Docker kapsayıcısında ASP.NET Core uygulamanızı barındırmak için giderek popüler yaklaşım. Docker kapsayıcısı Kestrel üzerinde çalışan uygulama kodunuzun içerebilir ve yukarıda da gösterildiği gibi bir ters proxy sunucunun arkasındaki dağıtılması.
 
-Uygulamanızı Azure üzerinde koyduysanız birkaç hizmetleri sağlamak için ayrılmış bir sanal gereç olarak Microsoft Azure uygulama ağ geçidi kullanabilirsiniz. Tek tek uygulamalar için ters proxy görevi gören ek olarak, uygulama ağ geçidi aynı zamanda aşağıdaki özellikleri sunmaktadır:
+Uygulamanız Azure üzerinde barındırıyorsanız, adanmış bir sanal gereç Microsoft Azure Application Gateway çeşitli hizmetleri sağlamak için kullanabilirsiniz. Tek tek uygulamalar için ters proxy gibi davranan ek olarak, Application Gateway ayrıca aşağıdaki özellikleri sunmaktadır:
 
--   HTTP Yük Dengeleme
+- HTTP Yük Dengeleme
 
--   SSL boşaltma (yalnızca Internet'e SSL)
+- SSL yük boşaltma (yalnızca Internet için SSL)
 
--   Uçtan uca SSL
+- Uçtan uca SSL
 
--   Çok siteli yönlendirme (tek bir uygulama ağ geçidi en fazla 20 sitelerinde birleştirmek)
+- Çok siteli yönlendirme (en fazla 20 siteleri tek bir uygulama ağ geçidinde birleştirmek)
 
--   Web uygulaması güvenlik duvarı
+- Web uygulaması güvenlik duvarı
 
--   Websocket desteği
+- Websocket desteği
 
--   Gelişmiş tanılama
+- Gelişmiş tanılama
 
-*Bölüm 10'daki Azure dağıtım seçenekleri hakkında daha fazla bilgi edinin.*
+_Azure dağıtım seçenekleri hakkında daha fazla bilgi [Bölüm 10](development-process-for-azure.md)._
 
-> ### <a name="references--deployment"></a>Başvuruları – dağıtım
+> ### <a name="references--deployment"></a>Başvuru – dağıtım
+>
 > - **Barındırma ve dağıtımına genel bakış**  
-> <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Ters proxy ile Kestrel kullanma zamanı**  
-> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **Docker ana ASP.NET Core uygulamaları**  
-> <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Azure uygulama ağ geçidi Tanıtımı**  
-> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
+>   <https://docs.microsoft.com/aspnet/core/publishing/>
+> - **Ne zaman Kestrel ters Ara sunucu ile kullanılır.**  
+>   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
+> - **Docker içinde ASP.NET Core uygulamaları barındırın**  
+>   <https://docs.microsoft.com/aspnet/core/publishing/docker>
+> - **Azure uygulama ağ geçidi ile tanışın**  
+>   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Önceki](common-client-side-web-technologies.md)
-[sonraki](work-with-data-in-asp-net-core-apps.md)
+[İleri](work-with-data-in-asp-net-core-apps.md)

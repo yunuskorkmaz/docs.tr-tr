@@ -8,14 +8,14 @@ helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
 ms.openlocfilehash: 9bef5d076d9ab84aa15e2cdec2d176db8d1ac82b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171999"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960250"
 ---
 # <a name="public-c-reference"></a>public (C# Başvurusu)
-`public` Sözcüktür türleri ve tür üyeleri için bir erişim değiştiricisi. Genel erişim en fazla izne sahip erişim düzeyi değil. Bu örnekte olduğu gibi ortak üyelere erişme hiçbir kısıtlamaları vardır:  
+`public` Anahtar sözcüğü, türler ve tür üyeleri için bir erişim değiştiricisidir. Genel erişim, en esnek erişim düzeyidir. Bu örnekte olduğu gibi public üyelere erişmede hiçbir kısıtlama vardır:  
   
 ```csharp  
 class SampleClass  
@@ -27,13 +27,13 @@ class SampleClass
  Bkz: [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) ve [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) daha fazla bilgi için.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki sınıf bildirilir, `PointTest` ve `MainClass`. Genel üyeler `x` ve `y` , `PointTest` doğrudan erişilen `MainClass`.  
+ Aşağıdaki örnekte, iki sınıf bildirilen, `PointTest` ve `MainClass`. Genel üyeleri `x` ve `y` , `PointTest` doğrudan erişilir `MainClass`.  
   
  [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
- Değiştirirseniz `public` erişim düzeyini [özel](../../../csharp/language-reference/keywords/private.md) veya [korumalı](../../../csharp/language-reference/keywords/protected.md), hata iletisi alırsınız:  
+ Değiştirirseniz `public` erişim düzeyi için [özel](../../../csharp/language-reference/keywords/private.md) veya [korumalı](../../../csharp/language-reference/keywords/protected.md), hata iletisi alırsınız:  
   
- 'PointTest.y' koruma düzeyi nedeniyle erişilemiyor.  
+ 'PointTest.y' koruma düzeyi nedeniyle erişilemez durumda.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

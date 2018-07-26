@@ -1,28 +1,28 @@
 ---
-title: My.Computer.Info Nesnesi
+title: My.Computer.Info nesnesi (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: f536f7915d8f8befcb4f1b0ca2494dd99a203ea6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9eabd2538d43c5a0104032c501da8cbf81b5c74d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594958"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198789"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info Nesnesi
 Bilgisayarın bellek, yüklenen derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikleri sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özellikleri hakkında bilgi için `My.Computer.Info` nesne için bkz: <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
+ Özellikleri hakkında daha fazla bilgi için `My.Computer.Info` nesne, bkz: <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Sınıfı:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo>  
   
- **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

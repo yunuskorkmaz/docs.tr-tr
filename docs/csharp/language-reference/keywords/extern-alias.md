@@ -9,31 +9,31 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: a2803d09ee64af854cad352f6a158fb84bb6d410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217395"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960594"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
-Aynı tam olarak nitelenmiş tür adları olan derlemeler iki sürümü başvuru gerekebilir. Örneğin, bir derlemeyi iki veya daha fazla sürümünü ve aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, ad alanlarının her derlemesinden bunları aynı dosyada kullanılacak sağlayan diğer adı tarafından adlı kök düzeyinde ad içinde sarmalamak.  
+İki sürümünü tam olarak nitelenmiş tür adları aynı bütünleştirilmiş kodları başvuru yapması gerekli olabilir. Örneğin, aynı uygulamada iki veya daha fazla derleme sürümünü kullanmanız gerekebilir. Bir dış bütünleştirilmiş diğer adı kullanarak, aynı dosyada kullanılmak üzere etkinleştirir diğer ad tarafından adlandırılan kök düzeyinde ad alanları içinde her derlemenin ad alanlarını sarmalanabilir.  
   
 > [!NOTE]
->  [Extern](../../../csharp/language-reference/keywords/extern.md) anahtar sözcüğü yönetilmeyen kod içinde yazılmış bir yöntem bildirme bir yöntemi değiştirici olarak da kullanılır.  
+>  [Extern](../../../csharp/language-reference/keywords/extern.md) anahtar sözcüğü yönetilmeyen kodda yazılmış bir yöntemi bildirmek, bir yöntemi değiştirici olarak da kullanılır.  
   
- İki derlemeleri aynı tam olarak nitelenmiş tür adları ile başvurmak için bir diğer ad bir komut isteminde şu şekilde belirtilmelidir:  
+ İki derlemenin aynı tam olarak nitelenmiş tür adları ile başvurmak için bir diğer ad bir komut isteminde şu şekilde belirtilmelidir:  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- Bu dış diğer adlar oluşturur `GridV1` ve `GridV2`. Bir programdan gelen bu diğer adları kullanmak için bunları kullanarak başvuru `extern` anahtar sözcüğü. Örneğin:  
+ Bu dış diğer oluşturur `GridV1` ve `GridV2`. Bir programın gelen bu diğer adlar kullanmak için bunları kullanarak başvuru `extern` anahtar sözcüğü. Örneğin:  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- Parallels (ancak içinde bulunmayacak) bir ek kök düzeyinde ad alanı her extern alias bildirimi tanıtır genel ad alanı. Bu nedenle her derleme türlerinden için karışıklık uygun ad alanı-diğer kökü kullanıcıların tam adı, kullanılarak belirtilebilir.  
+ Parallels (ancak içinde yer almıyor) bir ek kök düzeyinde ad alanı her extern diğer ad bildirimi tanıtır genel ad. Bu nedenle her derlemesinden türleri için belirsizlik kökü uygun namespace-diğer kullanıcıların tam adı, kullanarak bulunulabilir.  
   
  Önceki örnekte, `GridV1::Grid` kılavuz denetiminden olacaktır `grid.dll`, ve `GridV2::Grid` kılavuz denetiminden olacaktır `grid20.dll`.  
   

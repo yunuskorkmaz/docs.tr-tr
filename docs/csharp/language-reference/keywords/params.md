@@ -9,21 +9,21 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: d7e0094d0f60aa201ae7229983f3e4b9764d2cbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265476"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960201"
 ---
 # <a name="params-c-reference"></a>params (C# Başvurusu)
-Kullanarak `params` anahtar sözcüğü, belirtebilirsiniz bir [yöntem parametresi](../../../csharp/language-reference/keywords/method-parameters.md) değişken sayıda bağımsız değişken alan.  
+Kullanarak `params` belirtebileceğiniz anahtar sözcüğü, bir [yöntem parametresi](../../../csharp/language-reference/keywords/method-parameters.md) , değişken sayıda bağımsız değişken alır.  
   
- Bağımsız değişkenler belirtilen türde bir dizi parametre bildiriminde belirtilen tür bağımsız değişkenleri virgülle ayrılmış bir liste gönderebilirsiniz. Bağımsız değişkenler de gönderebilirsiniz. Bağımsız değişkenler, uzunluğu gönderirseniz `params` sıfır listesidir.  
+ Parametre bildiriminde belirtilen türde bağımsız değişkenleri dizisini belirtilen türdeki bağımsız değişkenlerin virgülle ayrılmış bir liste gönderebilirsiniz. Ayrıca, herhangi bir bağımsız değişken gönderebilirsiniz. Hiçbir bağımsız değişken uzunluğu gönderirseniz `params` sıfır listesidir.  
   
- Ek parametre sonra izin verilen `params` bir yöntem bildirimi ve tek bir anahtar sözcük `params` anahtar sözcüğü bir yöntem bildiriminde izin verilir.  
+ Ek parametre sonra izin verilen `params` anahtar sözcüğü bir yöntem bildiriminde ve tek `params` anahtar sözcüğü bir metodun bildiriminde izin verilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bağımsız değişkenler gönderilebilir için çeşitli yollar gösterir bir `params` parametresi.  
+ Aşağıdaki örnek, bağımsız değişkenleri göndermenin çeşitli yollarını gösterir bir `params` parametresi.  
   
  [!code-csharp[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/params_1.cs)]  
   

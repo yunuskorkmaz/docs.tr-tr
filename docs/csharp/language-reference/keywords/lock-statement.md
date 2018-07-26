@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 2ce870e8caa67d780ce603a6f1dbcc7cd303b842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274225"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960965"
 ---
 # <a name="lock-statement-c-reference"></a>lock Deyimi (C# Başvurusu)
-`lock` Anahtar sözcüğü belirli nesne karşılıklı dışlama kilidi alma, bir deyimi yürütme ve kilidin açılması bu deyimi blok önemli bir bölümü işaretler. Aşağıdaki örnek içeren bir `lock` deyimi.  
+`lock` Anahtar sözcük belirli bir nesne için karşılıklı dışlama kilidini alma, deyimi yürütüp ve sonra kilidi bırakarak bu bir deyim bloğunu kritik bir bölüm olarak işaretler. Aşağıdaki örnek içeren bir `lock` deyimi.  
   
 ```csharp  
 class Account  
@@ -37,34 +37,34 @@ class Account
 }  
 ```  
   
- Daha fazla bilgi için bkz: [iş parçacığı eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md).  
+ Daha fazla bilgi için [iş parçacığı eşitleme](../../programming-guide/concepts/threading/thread-synchronization.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
- `lock` Anahtar sözcüğü sağlar başka bir iş parçacığı kritik bölümünde olsa da bir iş parçacığı önemli bir bölümü kodunun geçmiyor. Başka bir iş parçacığı kilitli kodu girmek çalışırsa, bekler, nesne serbest kadar engelleyin.  
+ `lock` Anahtar sözcüğü, başka bir iş parçacığı kritik bölümünde olsa da bir iş parçacığı kodun önemli bir bölümünü geçmiyor sağlar. Kilitli bir kodu girmek başka bir iş parçacığı çalışırsa, bekler, nesne yayımlanana kadar engelleyin.  
   
  Bölüm [parçacıkları](../../programming-guide/concepts/threading/index.md) iş parçacığı oluşturma açıklanır.  
   
- `lock` Anahtar sözcüğü çağrıları <xref:System.Threading.Monitor.Enter%2A> bloğun başlangıcında ve <xref:System.Threading.Monitor.Exit%2A> bloğun sonunda. A <xref:System.Threading.ThreadInterruptedException> erişilirse durum <xref:System.Threading.Thread.Interrupt%2A> girmek için bekleyen bir iş parçacığı keser bir `lock` deyimi.  
+ `lock` Anahtar sözcüğü çağrıları <xref:System.Threading.Monitor.Enter%2A> bloğun başlangıcında ve <xref:System.Threading.Monitor.Exit%2A> bloğunun sonunda. A <xref:System.Threading.ThreadInterruptedException> oluşturulur <xref:System.Threading.Thread.Interrupt%2A> girmek için bekleyen bir iş parçacığı kesmeleri bir `lock` deyimi.  
   
- Genel olarak, üzerinde kilitleme kaçının bir `public` türü ya da kodunuzu ait denetim ötesinde örnekleri. Ortak yapıları `lock (this)`, `lock (typeof (MyType))`, ve `lock ("myLock")` bu kılavuz ihlal:  
+ Genel olarak, üzerinde kilitleme kaçının bir `public` türü veya kodunuzun kontrolü örnekleri. Ortak Yapılar `lock (this)`, `lock (typeof (MyType))`, ve `lock ("myLock")` bu anlayışın ihlal:  
   
--   `lock (this)` örnek genel olarak erişilebiliyorsa bir sorundur.  
+-   `lock (this)` Örneğin genel olarak erişilebilen bir sorun ise.  
   
 -   `lock (typeof (MyType))` bir sorun ise `MyType` genel olarak erişilebilir.  
   
--   `lock("myLock")` aynı dize kullanarak işlemdeki başka bir kod paylaşır çünkü aynı kilit bir sorundur.  
+-   `lock("myLock")` aynı dize kullanarak işlemindeki herhangi bir kod paylaştığından aynı kilit bir sorundur.  
   
  En iyi uygulamadır tanımlamak için bir `private` , kilitlemek için nesne veya `private static` için tüm örnekleri ortak verileri korumak için nesne değişkeni.  
   
  Kullanamazsınız [await](../../../csharp/language-reference/keywords/await.md) gövdesinde anahtar sözcüğü bir `lock` deyimi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, C# ' ta kilitlemeden basit bir iş parçacığı kullanımını gösterir.  
+ Aşağıdaki örnek, C# dilinde kilitlemeden basit bir iş parçacığı kullanımını gösterir.  
   
  [!code-csharp[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iş parçacığı kullanır ve `lock`. Sürece `lock` deyimi varsa, deyimi blok kritik bir bölümdür ve `balance` negatif bir sayı hiçbir zaman olur.  
+ Aşağıdaki örnek iş parçacığı kullanır ve `lock`. Sürece `lock` deyimi, deyim bloğunu kritik bir bölümdür ve `balance` hiçbir zaman negatif bir sayı olur.  
   
  [!code-csharp[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   

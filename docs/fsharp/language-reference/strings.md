@@ -1,38 +1,38 @@
 ---
 title: Dizeler (F#)
-description: "F # 'string' türü değişmez metin Unicode karakter dizisi nasıl temsil öğrenin."
+description: "Nasıl F # 'string' türü sabit metin Unicode karakter dizisi olarak temsil ettiğini öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: d8bfce9ac47cb137456e02b1b213fd2c6a53594d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207111"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404278"
 ---
 # <a name="strings"></a>Dizeler
 
 > [!NOTE]
-Bu makalede API başvuru bağlantılar için MSDN götürür.  Docs.microsoft.com API Başvurusu tamamlanmadı.
+Bu makaledeki API başvuru bağlantıları için MSDN sürer.  Docs.microsoft.com API başvuru tamamlanmadı.
 
-`string` Türü değişmez metin Unicode karakter dizisi temsil eder. `string` bir diğer adı için `System.String` .NET Framework'teki.
+`string` Türü sabit metin Unicode karakter dizisi olarak temsil eder. `string` için bir diğer addır `System.String` .NET Framework'teki.
 
 ## <a name="remarks"></a>Açıklamalar
-Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılmış. Ters eğik çizgi karakteri ( \\ ) özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve birlikte sonraki karakteri olarak bilinen bir *kaçış dizisi*. Kaçış dizilerine değişmez değerleri aşağıdaki tabloda gösterilen F # dize desteklenir.
+Dize değişmez değerleri tırnak işareti (") karakteriyle ayrılır. Ters eğik çizgi karakteri ( \\ ) özel karakterleri kodlamak için kullanılır. Ters eğik çizgi ve birlikte sonraki karakteri olarak bilinen bir *kaçış dizisi*. Kaçış dizileri desteklenen, F # dize değişmez değerleri aşağıdaki tabloda gösterilmiştir.
 
 |Karakter|Kaçış sırası|
 |---------|---------------|
-|Geri Al tuşu|\b|
-|Yeni satır|\n|
-|satır başı|\r|
-|Tab|\t|
-|ters eğik çizgi|\\|
-|Tırnak işareti|\"|
-|Kesme işareti|\'|
-|Unicode karakter|\u*XXXX* veya \U*XXXXXXXX* (burada *X* onaltılık basamak gösterir)|
+|Geri Al tuşu|`\b`|
+|Yeni satır|`\n`|
+|satır başı|`\r`|
+|Tab|`\t`|
+|Ters eğik çizgi|`\\`|
+|Tırnak işareti|`\"`|
+|Kesme işareti|`\'`|
+|Unicode karakter|`\uXXXX` veya `\UXXXX` (burada `X` onaltılık basamak gösterir)|
 
-Öncesinde, @ sembolü, sabit verbatim bir dizedir. İki tırnak işareti karakteri tek tırnak işareti karakteri olarak yorumlanır dışında bu, tüm çıkış sıraları göz ardı, anlamına gelir.
+Öncesinde, @ sembolü, değişmez değer verbatim bir dizedir. İki tırnak karakteri tek tırnak işareti karakteri yorumlanır dışında bu, herhangi bir kaçış dizileri göz ardı, anlamına gelir.
 
-Ayrıca, bir dize Üçlü tırnak içine. Bu durumda, çift tırnak işareti karakterleri dahil olmak üzere tüm çıkış sıraları yoksayılır. Sınırlandırılmış bir katıştırılmış içeren bir dize belirtmek için ya da bir verbatim veya Üçlü tırnak içine alınmış bir dize kullanabilirsiniz. Harfi harfine bir dize kullanmak, tek tırnak işareti karakteri belirtmek için iki tırnak işareti karakteri belirtmeniz gerekir. Üçlü tırnak içine alınmış bir dize kullanmak, bunları dize sonu Ayrıştırılmakta olmadan tek tırnak işareti karakter kullanabilirsiniz. Bu yöntem, XML veya katıştırılmış tırnak işaretleri dahil diğer yapıları çalışırken yararlı olabilir.
+Ayrıca, bir dize Üçlü tırnak işareti içine alınabilir. Bu durumda, çift tırnak işareti karakterleri dahil olmak üzere tüm kaçış dizileri yoksayılır. Sınırlandırılmış bir katıştırılmış içeren bir dize belirtmek için ya da bir harfi harfine veya bir Üçlü alıntılanmış dize kullanabilirsiniz. Verbatim dizesi kullanıyorsanız, iki tırnak karakteri tek tırnak işareti karakteri belirtmek için belirtmeniz gerekir. Üçlü tırnak içine bir dize kullanmak, bunları dize sonu Ayrıştırılmakta olmadan tek tırnak işareti karakter kullanabilirsiniz. Bu teknik, XML veya katıştırılmış tırnak işaretleri dahil diğer yapılar çalışırken yararlı olabilir.
 
 ```fsharp
 // Using a verbatim string
@@ -42,17 +42,17 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Kodda, satır sonları sahip dizeleri kabul edilir ve satır sonundan önceki son karakter bir ters bölü karakteri olmadığı sürece satır sonları tam anlamıyla satır başı yorumlanır. Ters eğik çizgi karakteri kullanıldığında, sonraki satıra öndeki boşlukları göz ardı edilir. Aşağıdaki kod bir dize oluşturur `str1` değeri olan `"abc\n     def"` ve bir dize `str2` değeri olan `"abcdef"`.
+Kodda satır sonları olan dizeleri kabul edilir ve son karakter satır sonundan önce bir ters eğik çizgi karakteri olmadığı sürece satır sonları tam anlamıyla yeni satırlardan yorumlanır. Ters eğik çizgi karakteri kullanıldığında, bir sonraki satırda öndeki boşlukları göz ardı edilir. Aşağıdaki kod bir dize üretir `str1` değeri olan `"abc\ndef"` ve bir dize `str2` değeri olan `"abcdef"`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 
-Bir dizede tek tek karakterleri şekilde dizi benzeri sözdizimi kullanarak erişebilirsiniz.
+Aşağıdaki gibi bir dizi benzeri sözdizimi kullanarak, bir dizedeki karakterlerin tek tek erişebilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
 Çıktı `b`.
 
-Veya, alt dizeler dizisi dilim sözdizimini kullanarak aşağıdaki kodda gösterildiği gibi ayıklayabilirsiniz.
+Veya, alt dizeler dizisi dilim söz dizimini kullanarak aşağıdaki kodda gösterildiği gibi ayıklayabilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
 
@@ -63,26 +63,26 @@ abc
 def
 ```
 
-İmzasız bayt sayısı, türü diziler tarafından ASCII dizeleri gösterebilir `byte[]`. Soneki eklemek `B` bir ASCII dizesi olduğunu belirtmek için bir dize için. Bayt dizileri ile kullanılan ASCII dize değişmez değerleri aynı kaçış sıraları Unicode kaçış sıraları dışında Unicode dizeleri olarak destekler.
+ASCII dizelerinde işaretsiz bayt sayısı, türü bir dizi temsil edebilen `byte[]`. Sonek Ekle `B` için bir ASCII dizesi olduğunu belirten bir dize. Bayt dizileri ile kullanılan ASCII dize değişmez değerleri, Unicode kaçış dizileri dışında Unicode dize olarak aynı kaçış dizileri destekler.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
     
 ## <a name="string-operators"></a>Dize İşleçleri
-Dizeyi birleştirmek için iki yolu vardır: kullanarak `+` işleci veya kullanarak `^` işleci. `+` İşleci .NET Framework dize özellikleri işleme ile uyumluluk korur.
+Dizeleri birleştirmek için iki yolu vardır: kullanarak `+` işleci kullanarak veya `^` işleci. `+` İşleci özellikleri işleme .NET Framework dize ile uyumluluk sağlar.
 
-Aşağıdaki örnek, dize birleştirme gösterilmektedir.
+Aşağıdaki örnekte, dize birleştirme gösterilmektedir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
     
-## <a name="string-class"></a>String sınıfı
-F # dize türü gerçekte bir .NET Framework olduğundan `System.String` türü, tüm `System.String` üyeleri kullanılabilir. Bu içerir `+` dizeyi birleştirmek için kullanılan işleci `Length` özelliği ve `Chars` özelliği dize Unicode karakter dizisi döndürür. Dizeleri hakkında daha fazla bilgi için bkz: `System.String`.
+## <a name="string-class"></a>Dize sınıfı
+F # dize türü .NET Framework gerçekten olduğundan `System.String` yazın, tümünü `System.String` üyeleri kullanılabilir. Bu içerir `+` dizeyi birleştirmek için kullanılır, operatör `Length` özelliği ve `Chars` dize Unicode karakter dizisi olarak döndüren özellik. Dizeleri hakkında daha fazla bilgi için bkz. `System.String`.
 
-Kullanarak `Chars` özelliği `System.String`, aşağıdaki kodda gösterildiği gibi bir dizin belirterek bir dizedeki karakterleri tek tek erişebilirsiniz.
+Kullanarak `Chars` özelliği `System.String`, aşağıdaki kodda gösterildiği gibi bir dizin belirterek, bir dizedeki karakterlerin tek tek erişebilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
     
 ## <a name="string-module"></a>String modülü
-Dize işleme için ek işlevler dahil `String` modülünde `FSharp.Core` ad alanı. Daha fazla bilgi için bkz: [Core.String modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Dize işleme için ek işlevler dahil `String` modülünde `FSharp.Core` ad alanı. Daha fazla bilgi için [Core.String modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 [F# Dili Başvurusu](index.md)

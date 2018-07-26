@@ -2,10 +2,10 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|Etkinleştirilirken <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> oturum durumunu, tüm verilen web grubundaki sunucular aynı sürüm .NET Framework'ün durumu için sırayla düzgün paylaşılan için kullanmalısınız.|
-|Öneri|.NET Framework sürümleri aynı anda durumunu paylaşan web sunucularındaki yükseltme emin olun.|
+|Ayrıntılar|Etkinleştirilirken <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=name> oturum durumunu, belirli bir web grubundaki tüm sunucularda .NET Framework sürümüyle aynı sürümü durumu için sırayla düzgün bir şekilde paylaşılan için kullanmalısınız.|
+|Öneri|.NET Framework sürümleri üzerinde aynı anda durum paylaşma web sunucuları yükseltme emin olun.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
 

@@ -7,36 +7,36 @@ helpviewer_keywords:
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313972"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960523"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
-Sonlandırıcılar sınıfların örneklerini destruct için kullanılır.  
+Sonlandırıcılar, sınıfların örneklerini yok etmek üzere kullanılır.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
--   Sonlandırıcılar yapılar için tanımlanamaz. Bunlar yalnızca sınıflarıyla kullanılır.  
+-   Sonlandırıcılar yapılarda tanımlanamaz. Bunlar, yalnızca sınıf ile kullanılır.  
   
--   Bir sınıf, yalnızca bir Sonlandırıcısı olabilir.  
+-   Bir sınıf, bir sonlandırıcı yalnızca olabilir.  
   
--   Sonlandırıcılar devralınan veya aşırı yüklendi.  
+-   Sonlandırıcılar devralınmış veya aşırı yüklenmiş.  
   
 -   Sonlandırıcılar çağrılamaz. Bunlar otomatik olarak çağrılır.  
   
--   Bir sonlandırıcı değiştiricileri alın ya da parametrelere sahip.  
+-   Bir sonlandırıcı değiştiriciler alın veya parametreleri desteklemez.  
   
- Örneğin, aşağıdaki sonlandırıcıyı için bildirimini `Car` sınıfı.
+ Örneğin, bir sonlandırıcı için bildirimi aşağıdaki gibidir `Car` sınıfı.
   
  [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
 
-Bir Sonlandırıcı, aşağıdaki örnekte gösterildiği gibi bir ifade gövdesi tanımı olarak da uygulanabilir.
+Bir Sonlandırıcı, aşağıdaki örnekte gösterildiği gibi bir ifade gövdesi tanımı da uygulanabilir.
 
 [!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
- Sonlandırıcıyı örtük olarak çağırır <xref:System.Object.Finalize%2A> nesnenin temel sınıfı. Bu nedenle, bir sonlandırıcı çağrısına örtük olarak aşağıdaki kodu çevrilir:  
+ Sonlandırıcı örtük olarak çağırır <xref:System.Object.Finalize%2A> nesnenin temel sınıfı üzerinde. Bu nedenle, bir sonlandırıcı bir çağrı örtük olarak aşağıdaki kodu çevrilir:  
   
 ```csharp  
 protected override void Finalize()  
@@ -52,20 +52,20 @@ protected override void Finalize()
 }  
 ```  
   
- Bunun anlamı `Finalize` yöntemi çağrılır yinelemeli olarak devralma zincirinde tüm örnekleri için en çok türetilen en az türetilen için.  
+ Diğer bir deyişle `Finalize` yöntemi çağrılır yinelemeli devralma zincirini tüm örnekler için en çok türetilen en az türetilen için.  
   
 > [!NOTE]
->  Boş Sonlandırıcıları kullanılmamalıdır. Bir sınıf bir sonlandırıcı içeriyorsa, bir giriş oluşturulan `Finalize` sırası. Sonlandırıcıyı çağrıldığında atık toplayıcı sırasını işlemek üzere çağrılır. Boş bir Sonlandırıcısı yalnızca performans gereksiz kaybına neden olur.  
+>  Boş Sonlandırıcıları kullanılmamalıdır. Bir sınıf, bir sonlandırıcı içeriyorsa, bir giriş oluşturulan `Finalize` kuyruk. Sonlandırıcı çağrıldığında çöp toplayıcı kuyruğu işlemek için çağrılır. Boş Sonlandırıcı yalnızca gereksiz bir performans kaybı neden olur.  
   
- Bu Atık toplayıcısının belirlediğinden sonlandırıcıyı çağrıldığında Programcı üzerinde denetimi yoktur. Uygulama tarafından artık kullanılmayan nesneler için atık toplayıcı denetler. Bu nesneyi sonlandırma için uygun olarak değerlendirir, (varsa) sonlandırıcıyı çağırır ve nesne depolamak için kullanılan bellek geri kazanır. Program çıktığında sonlandırıcılar da denir.  
+ Bu çöp toplayıcı tarafından belirlenir çünkü Sonlandırıcı çağrıldığında Programcı üzerinde denetimi yoktur. Çöp toplayıcı uygulama tarafından artık kullanılmayan nesneleri denetler. Bu nesne sonlandırma için uygun olarak değerlendirir, sonlandırıcı (varsa) çağırır ve nesne depolamak için kullanılan belleği geri kazanır. Program çıkış yaptığı andaki sonlandırıcılar da denir.  
   
- Çöp toplama çağırarak zorlamak mümkün mü <xref:System.GC.Collect%2A>, ancak performans sorunları oluşturabilir çünkü çoğu zaman, bu kaçınılmalıdır.  
+ Çağırarak atık toplamayı zorlamak mümkün mü <xref:System.GC.Collect%2A>, ancak performans sorunları oluşturabilir, çünkü çoğu zaman bu kaçınılmalıdır.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Yayın kaynaklara sonlandırıcılar kullanma  
- Genel olarak, C# çalışma zamanı çöp toplama ile hedeflemiyor bir dille geliştirirken gerektiği kadar bellek yönetimi gerektirmez. .NET Framework Atık toplayıcısının örtük olarak ayırma ve yayın nesneleriniz için bellek yönetir olmasıdır. Ancak, windows, dosyaları ve ağ bağlantıları gibi yönetilmeyen kaynakları uygulamanızı yalıtır olduğunda, bu kaynakları serbest sonlandırıcılar kullanmanız gerekir. Nesne sonlandırma için uygun olduğunda Atık toplayıcısının çalışacağı `Finalize` nesnesinin yöntemi.  
+ Genel olarak, C# bir çalışma zamanının atık toplama ile hedeflemiyor bir dil ile geliştirdiğinizde gerektiği kadar bellek yönetimi gerektirmez. .NET Framework atık toplayıcı, örtük olarak sağlanmasını ve ayrılmasını, nesneler için bellek yönetir olmasıdır. Ancak, uygulamanızı windows, dosyaları ve ağ bağlantıları gibi yönetilmeyen kaynakları yalıtan, bu kaynakları serbest bırakacak sonlandırıcılar kullanmanız gerekir. Nesne sonlandırma için uygun olduğunda, Atık toplayıcısının çalışacağı `Finalize` nesnesinin yöntemi.  
   
 ## <a name="explicit-release-of-resources"></a>Açık kaynak sürümü  
- Uygulamanızı pahalı dış kaynak kullanıyorsa, atık toplayıcı nesnesi boşaltır önce kaynak açıkça serbest bırakmak için bir yol sağlamak da öneririz. Uygulayarak bunu bir `Dispose` yönteminden <xref:System.IDisposable> nesne için gerekli temizleme gerçekleştirir arabirimi. Bu uygulamanın performansını önemli ölçüde artırabilir. Bile bu açık denetim ile kaynakları üzerinden sonlandırıcıyı varsa kaynakları temizlemek için koruyucu hale çağrısı `Dispose` yöntemi başarısız oldu.  
+ Uygulamanızı pahalı bir dış kaynağa kullanıyorsanız, çöp toplayıcı nesneyi serbest bırakan önce kaynak açıkça serbest bırakmak için bir yol sağlamak da öneririz. Uygulayarak bunu bir `Dispose` yönteminden <xref:System.IDisposable> nesne için gerekli temizleme gerçekleştirir arabirimi. Bu, uygulamanın performansını önemli ölçüde artırabilir. Bile bu açık denetime ile kaynakları, sonlandırıcı durumunda kaynakları temizlemek için bir önlem haline gelir. çağrı `Dispose` yöntemi başarısız oldu.  
   
  Kaynakları temizleme hakkında daha fazla ayrıntı için aşağıdaki konulara bakın:  
   
@@ -76,7 +76,7 @@ protected override void Finalize()
 -   [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, devralma zinciri olun üç sınıfları oluşturur. Sınıf `First` taban sınıf `Second` türetildiği `First`, ve `Third` türetildiği `Second`. Üç sonlandırıcılar vardır. İçinde `Main`, çoğu türetilmiş sınıf örneği oluşturdu. Program çalıştırıldığında sonlandırıcılar üç sınıfları için otomatik olarak ve sırasıyla çoğu türetilmiş en az türetilen için gelen olarak adlandırılır, dikkat edin.  
+ Aşağıdaki örnek, bir devralma zincirini olun üç sınıf oluşturur. Sınıf `First` temel sınıf `Second` türetilir `First`, ve `Third` türetilir `Second`. Üç sonlandırıcılar vardır. İçinde `Main`, en çok türetilen sınıfın bir örneği oluşturulur. Program çalıştığında sonlandırıcılar üç sınıfları için otomatik olarak ve sırasıyla en çok türetilen en az türetilen için gelen çağrılır, dikkat edin.  
   
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   

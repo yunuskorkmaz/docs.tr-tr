@@ -1,24 +1,24 @@
 ---
-title: Bir sorgu döndürme
-description: Bir sorgu iade etme.
+title: Yöntemden sorgu döndürme
+description: Sorgu döndürme yapma.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274956"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404164"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Nasıl yapılır: Yöntemden Sorgu Döndürme (C# Programlama Kılavuzu)
-Bu örnek bir sorgu ve dönüş değeri olarak döndürme gösterilmektedir bir `out` parametresi.  
+Bu örnek ve dönüş değeri olarak bir yöntemden sorgu döndürme işlemini gösterir. bir `out` parametresi.  
   
- Sorgu nesneleri birleştirilebilir bir yöntemden sorgu döndürebilir anlamına gelir. Sorguları temsil eden nesneler, sonuçta elde edilen koleksiyonu, ancak gerektiğinde sonuçlar yerine adımlarını depolamayın. Yöntemleri sorgu nesneleri döndürme avantajı, bunların daha oluşan değiştirilebilir veya olduğunu olmasıdır. Bu nedenle herhangi bir değeri döndürme veya `out` bir sorgu döndüren bir yöntem parametresinin türü de olması gerekir. Bir yöntem somut bir sorgu gerçeğe varsa <xref:System.Collections.Generic.List%601> veya <xref:System.Array> türü, onu olarak kabul sorgu yerine sorgu sonuçları döndürüyor. Bir yöntemin döndürdüğü bir sorgu değişkeni hala oluşur veya değiştirilemez.  
+ Sorgu nesneleri yöntemden sorgu döndürme, yani birleştirilebilir. Sorguları temsil eden nesneleri, sonuçta elde edilen koleksiyon, ancak gerektiğinde, istediğiniz sonuçları vermeyebilir adımları yerine depolamayın. Sorgu nesneleri döndürme yöntemleri avantajı, bunların daha da oluşan değiştirilebilir veya emin olmanızdır. Bu nedenle herhangi bir değer döndürür veya `out` bir sorgu döndüren bir yöntem parametresi türü de olmalıdır. Bir yöntem içinde bir somut bir sorgu gerçekleştiren varsa <xref:System.Collections.Generic.List%601> veya <xref:System.Array> türü, bu olarak kabul sorgu sonuçları yerine sorguyu döndürüyor. Yöntemi tarafından döndürülen bir sorgu değişkeni yine de oluşur veya değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, ilk yöntem sorgu dönüş değeri olarak döndürür ve bir sorgu olarak ikinci yöntem bir `out` parametresi. Her iki durumda da, sorgu sonuçları döndüren bir sorgu olduğuna dikkat edin.  
+ Aşağıdaki örnekte, ilk yöntem dönüş değeri olarak bir sorgu döndürür ve ikinci yöntem döndüren bir sorgu olarak bir `out` parametresi. Her iki durumda da, sorgu sonuçları, döndürülen bir sorgu olduğunu unutmayın.  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ Sorgu ifadeleri](index.md)
+ [Dil ile Tümleşik Sorgu (LINQ)](index.md)

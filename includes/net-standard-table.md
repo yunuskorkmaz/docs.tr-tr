@@ -1,4 +1,4 @@
-| .NET standart              | [1.0] | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
+| .NET standard              | [1.0] | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
 |----------------------------|-------|--------|-------|-------|-------|------------|------------|------------|
 | .NET Core                  | 1.0   | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2,0        |
 | .NET framework <sup>1</sup>| 4,5   | 4,5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1      | 4.6.1      | 4.6.1      |
@@ -11,12 +11,12 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 .NET Framework için listelenen sürümlerini .NET Core SDK 2.0 ve Araçları'nın sonraki sürümleri için geçerlidir. ' In eski sürümlerini .NET standart 1.5 ve daha yüksek farklı eşleme kullanılır. </sup>
+<sup>1 .NET Framework için listelenen sürümleri, .NET Core SDK 2.0 ve Araçları'nın sonraki sürümleri için geçerlidir. Eski sürümleri ve üzeri için .NET standart 1.5 farklı bir eşlemeyle kullanılır. </sup>
 
-- Sütunlar .NET standart sürümleri temsil eder. Her üst bilgi hücresini hangi API'leri .NET Standard bu sürümde eklenen gösteren bir belge için bir bağlantıdır.
-- Satırları farklı .NET uygulamaları temsil eder.
-- Her hücrede sürüm numarasını gösterir *minimum* .NET standart sürümünün hedeflemek için gerekir uygulaması sürümü.
-- Etkileşimli bir tablo için bkz: [.NET standart sürümleri](http://immo.landwerth.net/netstandard-versions/#).
+- Sütunlar .NET Standard sürümleri temsil eder. Her üst bilgi hücresini hangi API'ler .NET Standard'ın bu sürümünde eklenen gösteren bir belgeye bir bağlantıdır.
+- Satırları, farklı .NET uygulamalarını temsil eder.
+- Her hücredeki sürüm numarasını gösterir *minimum* , .NET Standard sürümünü hedeflemek için ihtiyaç duyacağınız uygulama sürümü.
+- Etkileşimli bir tablo için bkz: [.NET Standard sürümleri](http://immo.landwerth.net/netstandard-versions/#).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

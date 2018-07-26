@@ -8,18 +8,18 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171869"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960813"
 ---
 # <a name="private-c-reference"></a>private (C# Başvurusu)
-`private` Sözcüktür üye erişim değiştiricisi. 
+`private` Anahtar sözcüğü, bir üye erişim değiştiricisi. 
    
- > Bu sayfayı kapsayan `private` erişim. `private` Sözcüktür ayrıca parçası [ `private protected` ](./private-protected.md) erişim değiştiricisi.
+ > Bu sayfa kapsayan `private` erişim. `private` Anahtar sözcüğü, ayrıca parçası [ `private protected` ](./private-protected.md) erişim değiştiricisi.
   
-Özel erişim en az izin veren bir erişim düzeydir. Özel üyeler, yalnızca sınıf ya da, bunlar, bu örnekteki bildirilir yapı gövdesi içinde erişilebilir:  
+Özel erişim en katı erişim düzeyidir. Özel üyeler, yalnızca sınıf veya yapı içinde bu örnekte olduğu gibi bildirildikleri gövdesi içinde erişilebilir:  
   
 ```csharp  
 class Employee  
@@ -31,12 +31,12 @@ class Employee
 
  İç içe geçmiş türler aynı gövdesinde, bu özel üyeler de erişebilirsiniz.  
   
- Özel üye sınıfta veya yapı içinde bildirilmiş dışında başvurmak için bir derleme zamanı hata var.  
+ Bu sınıf veya yapı birimi içinde bildirildiği dışındaki özel üye başvurmak için bir derleme zamanı hatasıdır.  
   
  Bir karşılaştırması `private` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md) ve [erişim değiştiricileri](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `Employee` sınıfı içeren iki özel veri üyesi `name` ve `salary`. Özel üye olarak, bunlar dışındaki üye yöntemleri tarafından erişilemez. Genel yöntemler adlı `GetName` ve `Salary` özel üyelerin denetimli erişmesine izin vermek için eklenir. `name` Üye genel bir yöntem aracılığıyla erişilen ve `salary` üye genel salt okunur özelliği aracılığıyla erişilir. (Bkz [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md) daha fazla bilgi için.)  
+ Bu örnekte, `Employee` sınıfı içeren iki özel veri üyeleri, `name` ve `salary`. Özel üyeler bunlar dışında üye yöntemleri tarafından erişilemez. Genel yöntemler adlı `GetName` ve `Salary` özel üyeler denetimli erişim izni vermek için eklenir. `name` Genel bir yöntem aracılığıyla erişilen üyenin ve `salary` genel bir salt okunur özelliği yoluyla erişilen üyenin. (Bkz [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md) daha fazla bilgi için.)  
   
  [!code-csharp[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
   

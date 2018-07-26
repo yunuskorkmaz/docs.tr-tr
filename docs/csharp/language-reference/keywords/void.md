@@ -8,16 +8,16 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: e66efc287fc3ed0fcc15963a827fccb788c38753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267294"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37960566"
 ---
 # <a name="void-c-reference"></a>void (C# Başvurusu)
-Bir yöntemi, dönüş türü olarak kullanıldığında `void` yöntemi bir değer döndürmüyor belirtir.
+Bir yöntem için dönüş türü olarak kullanıldığında `void` yöntemi bir değer döndürmediğini belirtir.
 
-`void` bir yöntemin parametre listesinde izin verilmiyor. Hiçbir parametre alan ve herhangi bir değer döndüren bir yöntem aşağıdaki gibi bildirilmiş:
+`void` bir yöntemin parametre listesinde izin verilmez. Hiçbir parametre almayan ve hiçbir değer döndürmeyen bir yöntem şu şekilde bildirilir:
 
 ```csharp
 public void SampleMethod()
@@ -26,9 +26,9 @@ public void SampleMethod()
 }
 ```
 
-`void` Ayrıca güvensiz bir bağlamda bilinmeyen bir tür için bir işaretçi bildirmek için kullanılır. Daha fazla bilgi için bkz: [işaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).
+`void` Ayrıca güvenli olmayan bir bağlamda, bir işaretçi türü bilinmiyor bildirmek için kullanılır. Daha fazla bilgi için [işaretçi türleri](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).
 
-`void` .NET Framework için bir diğer ad olduğu <xref:System.Void?displayProperty=nameWithType> türü.
+`void` .NET Framework için bir diğer addır <xref:System.Void?displayProperty=nameWithType> türü.
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]

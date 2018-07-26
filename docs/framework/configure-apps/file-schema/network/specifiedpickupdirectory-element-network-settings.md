@@ -11,15 +11,15 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743982"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874708"
 ---
 # <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; öğesi (ağ ayarları)
-Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.  
+Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -42,7 +42,7 @@ Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Uygulamaları daha sonra SMTP sunucusu tarafından işlenmek için e-posta kaydetmek dizin.|  
+|`pickupDirectoryLocation`|SMTP sunucusu tarafından daha sonra işlenmek için e-posta uygulamaları kaydetmek dizin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,19 +51,19 @@ Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<SMTP > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçenekleri yapılandırır.|  
+|[\<SMTP > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `specifiedPickupDirectory` Öznitelik uygulamaları posta iletileri SMTP sunucusu tarafından işlenmek üzere kaydetmek dizini ayarlar.  
+ `specifiedPickupDirectory` Özniteliği uygulamaları e-posta iletileri SMTP sunucusu tarafından işlenecek kaydetmek dizin ayarlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek c:\maildrop posta toplama dizini belirtir.  
+ Aşağıdaki örnek, posta toplama dizini c:\maildrop belirtir.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

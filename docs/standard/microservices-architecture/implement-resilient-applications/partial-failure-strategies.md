@@ -1,44 +1,44 @@
 ---
 title: Kısmi hata işleme stratejileri
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Kısmi hata işleme stratejileri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Kısmi hata işleme stratejileri
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: c36ea31ad19b02fb02bc8e7185bfe8687b87764f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104215"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874409"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Kısmi hata işleme stratejileri
 
-Kısmi hatalar postalarla stratejileri arasında şunlar yer alır.
+Kısmi hatalarıyla ilgili stratejiler aşağıda verilmiştir.
 
-**Zaman uyumsuz iletişim (örneğin, ileti tabanlı iletişim) iç mikro kullanmak**. Bu yanlış tasarımı sonunda hatalı kesintileri ana neden olacak çünkü uzun zincirleri zaman uyumlu HTTP çağrıları arasında iç mikro oluşturun değil yüksek oranda önerilir. Tersine, istemci uygulamaları mikro veya hassas API ağ geçitleri ilk düzeyi arasında ön uç iletişim dışında yalnızca zaman uyumsuz (ileti tabanlı) iletişim ilk istek geçmiş kez kullanmak için önerilir / İç mikro arasında yanıt döngüsü. Nihai tutarlılık ve olay denetimli mimarileri ripple etkileri en aza indirmek için yardımcı olur. Bu yaklaşım mikro hizmet otonomisi daha yüksek düzeyde zorlamak ve bu nedenle burada bahsedilen sorun karşı engelleyebilirsiniz.
+**İç mikro hizmetler arasında zaman uyumsuz iletişim (örneğin, ileti tabanlı iletişim) kullanan**. Bu yanlış tasarım sonunda hatalı kesintiler ana nedenini olur çünkü zaman uyumlu HTTP çağrıları için uzun zincirleri iç mikro hizmetler arasında oluşturmamayı yüksek oranda önerilir. Tam, istemci uygulamalar ve mikro hizmetler veya ayrıntılı API ağ geçitleri ilk düzeyi arasında ön uç iletişim dışında (yalnızca zaman uyumsuz ileti tabanlı) iletişim ilk istek son kez kullanmak için önerilir / İç mikro hizmetler arasında yanıt döngüsü. Son tutarlılık ve olaya dayalı mimariler ripple etkileri en aza indirmek için yardımcı olur. Bu yaklaşımların mikro hizmet bağımsız çalışma sınırı daha yüksek bir düzeyde uygulamak ve bu nedenle burada bahsedilen sorun karşı önleme.
 
-**Yeniden deneme üstel geri alma ile kullanmak**. Bu teknik kısa önlenmesine yardımcı olur ve çağrı yaparak aralıklı hatalar yeniden deneme zaman, belirli bir sayıda hizmet yalnızca kısa bir süre için kullanılamadığı durumda. Bu, zaman zaman ortaya çıkan ağ sorunları nedeniyle veya mikro hizmet/kapsayıcı farklı bir düğüme bir küme içinde taşındığında ortaya çıkabilir. Bu deneme hattı ayırıcıları ile düzgün şekilde tasarlanmamıştır, ancak bunu ripple etkilerini aggravate sonuçta bile neden olan bir [hizmet reddi (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Üstel geri alma ile yeniden denemeleri kullanma**. Bu teknik kısa kaçınmaya yardımcı olur ve çağrı yaparak aralıklı hatalar yalnızca kısa bir süre için hizmet kullanılamıyor durumunda belirli sayıda bir kez yeniden dener. Bu, aralıklı ağ sorunlarından kaynaklanan veya bir mikro hizmet/kapsayıcı farklı bir düğüme bir küme içinde taşındığında ortaya çıkabilir. Bu yeniden deneme devre Kesiciler ile düzgün şekilde tasarlanmamıştır, ancak bunu ripple etkileri aggravate sonuçta bile neden olan bir [hizmet reddi (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
-**Ağ zaman aşımı geçici**. Genel olarak, istemciler süresiz olarak engellemeyi değil ve her zaman için bir yanıt beklenirken zaman aşımı kullanmak üzere tasarlanmalıdır. Zaman aşımları kullanarak kaynakları hiçbir zaman süresiz olarak bağlıdır olduğunu sağlar.
+**Ağ zaman aşımı geçici**. Genel olarak, istemciler süresiz olarak Engellemesi değil ve her zaman bir yanıtı beklenirken zaman aşımı kullanacak şekilde tasarlanmalıdır. Zaman aşımı kullanarak kaynakları hiçbir zaman süresiz olarak bağlı olduğunu sağlar.
 
-**Devre kesici desenini kullanan**. Bu yaklaşımda, istemci işleminin başarısız isteklerin sayısını izler. Böylece hemen başka denemeleri başarısız hata oranı "devre kesici" dönüşleri yapılandırılmış bir sınır aşarsa. (Çok sayıda isteği başarısız oluyorsa, hizmet kullanılamıyor ve istekleri gönderirken bir durum olduğunu önerir.) Zaman aşımı süresinden sonra istemci yeniden deneyin ve, yeni istekleri başarılı olup olmadığını devre kesici kapatın.
+**Devre kesici düzeni kullanmak**. Bu yaklaşımda, istemci işlemi başarısız istek sayısını izler. Daha fazla denemeleri hemen başarısız olduğunu hata oranı "devre kesici" gelişlerin yapılandırılmış bir sınır aşarsa. (Çok sayıda istek başarısız oluyorsa, hizmet kullanılamıyor ve istekleri gönderirken anlamsız olduğunu önerir.) Bir zaman aşımı süresinden sonra istemci yeniden deneyin ve gerekir, yeni istekler başarılı olursa, devre kesici kapatılır.
 
-**Geri dönüşler sağlamak**. Önbelleğe alınan veriler veya varsayılan değeri döndüren gibi bir isteği başarısız olduğunda bu yaklaşım, geri dönüş mantığı istemci işlemini gerçekleştirir. Bu sorguları için uygun bir yaklaşım ve güncelleştirmeleri veya komutları için daha karmaşıktır.
+**Geri dönüşleri sağlamak**. Önbelleğe alınmış verileri veya varsayılan değeri döndürme gibi bir istek başarısız olduğunda bu yaklaşımda, geri dönüş mantığı istemci işlemini gerçekleştirir. Bu sorgular için uygun bir yaklaşım ve güncelleştirmeleri veya komutları için daha karmaşıktır.
 
-**Sıraya alınan istek sayısı sınırı**. İstemciler ayrıca bir istemci mikro hizmet belirli bir hizmet gönderebilirsiniz bekleyen istek sayısı üst sınırı zorunlu tuttukları. Sınıra ulaştıysanız ek istekler yapmasını büyük olasılıkla bir durum ve bu girişimler hemen başarısız olması. Uygulama, Polly açısından [Bulkhead yalıtım](https://github.com/App-vNext/Polly/wiki/Bulkhead) İlkesi, bu gereksinimi karşılamak için kullanılabilir. Bu yaklaşım temelde paralelleştirme azaltma ile olan <xref:System.Threading.SemaphoreSlim> uygulaması olarak. Ayrıca, bulkhead dışında bir "sıra" verir. (Örneğin, kapasite tam kabul edilir çünkü) yürütmeden önce bile aşırı yük proaktif olarak shed. Bu yanıt belirli hata senaryoları için devre kesici hataları için bekleyeceği beri devre kesici olması durumuna göre hızlandırır. Polly BulkheadPolicy nesnesinde nasıl tam bulkhead gösterir ve sıra olan ve taşma teklifleri olaylarına bu nedenle de Otomatik yatay ölçekleme sürücü için kullanılabilir.
+**Kuyruğa alınan istekler sayısını sınırlayın**. İstemciler ayrıca bir istemci bir mikro hizmet belirli bir hizmete gönderebilirsiniz bekleyen istek sayısı üst sınırı dayatır. Sınırına ulaşıldı, ek isteğinde bulunmak büyük olasılıkla anlamsız ve bu girişimler hemen başarısız olması. Uygulama, Polly açısından [bölme perdesi yalıtım](https://github.com/App-vNext/Polly/wiki/Bulkhead) İlkesi, bu gereksinimi karşılamak için kullanılabilir. Aslında bir paralelleştirme azaltma ile bu yaklaşım, <xref:System.Threading.SemaphoreSlim> uygulaması olarak. Bölme perdesi dışında bir "sıra" izin verir. (Örneğin, kapasite tam kabul edilir çünkü) aşırı yük yürütme önce proaktif olarak boşaltmaktır. Bu belirli hata senaryoları yanıtını hataları için devre kesici bekler olduğundan devre kesici, daha hızlı sağlar. Polly BulkheadPolicy nesnesinde nasıl tam bölme perdesi kullanıma sunar ve sırası olan ve teklifler olayları taşmada bu nedenle de Otomatik yatay ölçeklendirme sürücü için kullanılabilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **Dayanıklılık desenleri**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Esnekliği ekleme ve performansı en iyi duruma getirme**
+-   **Dayanıklılık ekleme ve performansı en iyi duruma getirme**
     [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead.** GitHub depo. Uygulama Polly ilkesiyle. \
+-   **Bölme perdesi.** GitHub deposu. Polly ilke uygulamasıyla. \
     [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Azure için esnek uygulamalar tasarlama**
+-   **Azure için dayanıklı uygulamalar tasarlama**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
 -   **Geçici hata işleme**
@@ -47,4 +47,4 @@ Kısmi hatalar postalarla stratejileri arasında şunlar yer alır.
 
 >[!div class="step-by-step"]
 [Önceki](handle-partial-failure.md)
-[sonraki](implement-retries-exponential-backoff.md)
+[İleri](implement-retries-exponential-backoff.md)

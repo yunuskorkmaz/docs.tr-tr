@@ -1,38 +1,110 @@
 ---
-title: Global.JSON başvurusu
-description: .NET Core Araçları sürüm ayarını verir global.json dosyası için şema bakın.
-author: blackdwarf
+title: Global.JSON genel bakış
+description: .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalıştırırken ayarlanacak global.json dosyasını kullanmayı öğrenin.
+author: mairaw
 ms.author: mairaw
-ms.date: 04/05/2017
-ms.openlocfilehash: 7479774c7b9cdda233cf32d791c16e7fc6d733a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/02/2018
+ms.custom: updateeachrelease
+ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33209976"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936977"
 ---
-# <a name="globaljson-reference"></a>Global.JSON başvurusu
+# <a name="globaljson-overview"></a>Global.JSON genel bakış
 
-*Global.json* dosyasının aracılığıyla kullanılan .NET Core Araçları sürüm seçimine olanak tanır `sdk` özelliği.
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-.NET core CLI araçlarını (hangi mutlaka proje dizini ile aynı değil) geçerli çalışma dizini veya onun üst dizinlerden biri bu dosyada arayın.
+*Global.json* dosyası hangi .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalıştırmanız kullanıldığında tanımlamanıza izin verir. .NET Core SDK'yı seçerek projenizin hedeflediği çalışma zamanı belirtmelerini bağımsızdır. .NET Core SDK'sı sürümü, .NET Core CLI araçları hangi sürümlerinin kullanıldığını belirtir. Genel olarak, Araçlar, dolayısıyla en son sürümünü kullanmak istediğiniz *global.json* dosyası gereklidir.
 
-## <a name="sdk"></a>SDK'sı
-Tür: nesnesi
+Bunun yerine çalışma zamanı belirtme hakkında daha fazla bilgi için bkz. [hedef çerçeveyi](../../standard/frameworks.md).
 
-SDK hakkında bilgileri belirtir.
+.NET core SDK'sı arayan bir *global.json* dosyasında (Bu proje dizinine aynı olmak zorunda olmayan) geçerli çalışma dizinine veya onun üst dizinlerin biri.
 
-### <a name="version"></a>sürüm
+## <a name="globaljson-schema"></a>Global.JSON şeması
+
+### <a name="sdk"></a>SDK'sı
+
+Tür: nesne
+
+Seçmek için .NET Core SDK'sı hakkında bilgileri belirtir.
+
+#### <a name="version"></a>sürüm
+
 Türü: dize
 
-Kullanmak için SDK sürümü.
+.NET Core SDK'sını kullanmaya sürümü.
 
-Örneğin:
+Unutmayın, bu alan:
+
+- Değil Glob desteğine sahip, diğer bir deyişle, tam sürüm numarası belirtilmiş olması gerekir.
+- Sürüm aralıklarını desteklemiyor.
+
+Aşağıdaki örnek, içeriğini gösterir. bir *global.json* dosyası:
 
 ```json
 {
   "sdk": {
-    "version": "1.0.0-preview2-003121"
+    "version": "2.1.300"
   }
 }
 ```
+
+## <a name="globaljson-and-the-net-core-cli"></a>Global.JSON ve .NET Core CLI
+
+Hangi sürümlerinin bir ayarlamak için kullanılabilir olduğunu öğrenmek yararlıdır *global.json* dosya. Desteklenen kullanılabilir SDK'lar tam listesini bulabilirsiniz [.NET indirir](https://www.microsoft.com/net/download/all) site. .NET Core SDK 2.1 ile başlayarak, hangi SDK sürümlerinin makinenizde zaten yüklü olduğunu doğrulamak için aşağıdaki komutu çalıştırabilirsiniz:
+
+```console
+dotnet --list-sdks
+```
+
+Makinenizde ek .NET Core SDK'sı sürümünü birden yüklemek için şurayı ziyaret edin [.NET indirir](https://www.microsoft.com/net/download/all) site.
+
+Yeni bir oluşturabilirsiniz *global.json* yürüterek geçerli dizin dosyası [yeni dotnet](dotnet-new.md) komutu, aşağıdaki örneğe benzer:
+
+```console
+dotnet new globaljson --sdk-version 2.1.300
+```
+
+## <a name="matching-rules"></a>Eşleştirme kuralları
+
+> [!NOTE]
+> Eşleştirme kuralları, .NET Core çalışma zamanı bir parçası olduğu apphost tarafından yönetilir.
+> Konak en son sürümünü, birden çok çalışma zamanları yüklü yan yana olduğunda kullanılır.
+
+.NET Core 2.0 ile başlayarak, SDK'yı kullanmak için hangi sürümünün belirlerken aşağıdaki kurallar geçerlidir:
+
+- Hayır ise *global.json* dosya bulunduğunda veya *global.json* bir SDK sürümü belirtmeyen en son yüklenen SDK sürüm kullanılır. En son SDK sürümü, yayın veya yayın öncesi-en yüksek sürüm numarası WINS olabilir.
+- Varsa *global.json* SDK sürümü belirtin:
+  - Belirtilen SDK sürümü makinede bulunursa o tam sürümü kullanılır.
+  - Belirtilen SDK sürümü makinede bulunamazsa, en son SDK'sı yüklü **düzeltme eki sürümü** olan sürümü kullanılır. SDK'sı yüklü en son sürüm **düzeltme eki sürümü** yayın veya yayın öncesi-en yüksek sürüm numarası WINS olabilir. .NET Core 2.1 ve üzeri **düzeltme eki sürümleri** tutardan **düzeltme eki sürümü** belirtilen SDK seçiminde göz ardı edilir.
+  - Varsa belirtilen SDK sürümü ve uygun bir SDK **düzeltme eki sürümü** bulunamıyor, hata oluşur.
+
+SDK sürümü, şu anda aşağıdaki bölümlerden oluşur:
+
+`[.NET Core major version].[.NET Core minor version].[xyz][-optional preview name]`
+
+**Özellik yayın** .NET Core SDK'ın ilk basamak tarafından temsil edilen (`x`) numarasının son bölümünde (`xyz`) 2.1.100 SDK sürümleri ve üzeri. Genel olarak, .NET Core SDK'sı, .NET Core daha hızlı sürüm döngüsü vardır.
+
+**Düzeltme eki sürümü** son iki basamak tarafından tanımlanan (`yz`) numarasının son bölümünde (`xyz`) 2.1.100 SDK sürümleri ve üzeri. Örneğin, belirttiğiniz `2.1.300` SDK sürümü kadar SDK seçimi bulur `2.1.399` ancak `2.1.400` için bir düzeltme eki sürümü kabul değil `2.1.300`.
+
+.NET core SDK sürümleri `2.1.100` aracılığıyla `2.1.201` sürüm numarası düzeni arasında geçiş sırasında yayımlanan ve doğru bir şekilde işlemez `xyz` gösterimi. Bu sürümlerde belirtirseniz önerilir *global.json* dosyası belirtilen sürümlerde hedef makinelerde olduğundan emin olun.
+
+.NET Core SDK'sı ile bir sürüm ve tam eşleşme belirtilmişse 1.x bulunamadı, en son yüklenen SDK sürüm kullanıldı. En son SDK sürümü, yayın veya yayın öncesi-en yüksek sürüm numarası WINS olabilir.
+
+## <a name="troubleshooting-build-warnings"></a>Sorun giderme derleme uyarıları
+
+> [!WARNING]
+> .NET Core SDK'sını bir önizleme sürümü ile çalışıyor. Geçerli projede SDK sürümü bir global.json dosyasını aracılığıyla tanımlayabilirsiniz. Daha fazla bilgi için https://go.microsoft.com/fwlink/?linkid=869452
+
+Bu uyarı, projeniz .NET Core SDK'sı, bir önizleme sürümünü kullanarak açıklandığı şekilde derleniyor olduğunu gösterir. [kurallarına](#matching-rules) bölümü. .NET core SDK'sı sürümü geçmişi ve yüksek kaliteli olma taahhüdü bulunuyor. Ancak, bir önizleme sürümünü kullanmak istemiyorsanız, ekleme bir *global.json* proje hiyerarşisi yapısı kullanın ve hangi SDK sürümünü belirtmek üzere dosyaya `dotnet --list-sdks` sürümü, makinenizde yüklü olduğundan emin olmak için. Yeni bir sürümü yayımlandığında yeni sürümü kullanmak için ya da kaldırma *global.json* dosya ya da daha yeni sürümünü kullanacak şekilde güncelleştirin.
+
+> [!WARNING]
+> Başlangıç projesi '{startupProject}' hedef framework '. NETCoreApp' sürümü '{targetFrameworkVersion}'. Entity Framework Core ve .NET komut satırı araçları bu sürümü yalnızca sürüm 2.0 veya üstü destekler. Araçlar'ın eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=871254
+
+Başlayarak .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core SDK 2.1 ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. .NET Core SDK 2.0 (v. projenizi derlemek için yükleme 2.1.201) ve makinenizde önceki. Daha fazla bilgi için [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Proje SDK'ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

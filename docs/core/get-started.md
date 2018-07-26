@@ -1,57 +1,87 @@
 ---
-title: .NET Core'u kullanmaya başlama
-description: Windows, Linux ve macOS .NET Core uygulamalarının nasıl oluşturulacağını öğrenmek için kaynakları bulun.
-author: johalex
-ms.author: johalex
-ms.date: 09/14/2017
-ms.openlocfilehash: 7e70cd4ba9891403f6b5890aa585dafb77c76898
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+title: .NET Core ile çalışmaya başlama
+description: Windows, Linux ve Macos'ta .NET Core uygulamaları oluşturma hakkında bilgi edinmek için kaynakları bulun.
+author: thraka
+ms.author: adegeo
+ms.date: 06/27/2018
+ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212956"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792406"
 ---
-# <a name="get-started-with-net-core"></a>.NET Core'u kullanmaya başlama
+# <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
-.NET core üzerinde çalıştığı [Windows](#windows), [Linux](#linux), ve [macOS / OS X](#os-x--macos).
+Bu makalede .NET Core kullanmaya başlama hakkında bilgi sağlar. Windows, Linux ve Macos'ta .NET core yüklenebilir. Sık kullandığınız metin düzenleyicinizde kod ve platformlar arası kitaplıklar ve uygulamalar oluşturur. 
 
-## <a name="windows"></a>Windows
+.NET Core nedir ve .NET teknolojilerden nasıl ilişkili olduğu emin değilseniz başlayın [.NET nedir](https://www.microsoft.com/net/learn/what-is-dotnet) genel bakış. Kısacası, .NET Core açık kaynaklı, platformlar arası .NET uygulamasıdır.
 
-.NET Core yüklemek [Windows](https://www.microsoft.com/net/core#windows). 
+## <a name="create-an-application"></a>Uygulama oluşturma
 
-Bu adım adım öğreticiler izleyerek .NET Core uygulamaları geliştirmeye başlayabilirsiniz.
+İlk olarak, indirme ve yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/) bilgisayarınızda.
 
-* [Bir C# Hello World uygulaması ile Visual Studio 2017 .NET çekirdek oluşturma](./tutorials/with-visual-studio.md) -yapı, hata ayıklama ve C# ve Visual Studio 2017 kullanarak basit bir .NET Core konsol uygulaması yayımlama öğrenin.
-* [C# ve Visual Studio 2017 .NET çekirdek sınıf kitaplığı oluşturmak](./tutorials/library-with-visual-studio.md) -Visual Studio 2017 kullanarak C# içinde yazılmış bir sınıf kitaplığı oluşturmayı öğrenin.
-* [Visual Basic Hello World uygulamasının Visual Studio 2017 .NET çekirdek ile yapı](./tutorials/vb-with-visual-studio.md) -yapı, hata ayıklama ve Visual Basic ve Visual Studio 2017 kullanarak basit bir .NET Core konsol uygulaması yayımlama öğrenin. 
-* [Visual Basic ve Visual Studio 2017 .NET çekirdek ile bir sınıf kitaplığı oluşturmak](./tutorials/vb-library-with-visual-studio.md) -Visual Studio 2017 kullanarak Visual Basic'te yazılmış bir sınıf kitaplığı oluşturmayı öğrenin.
-* [C# ve .NET Core üzerinde Windows kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft'un basit platformlar arası Kod düzenleyicisinde, .NET Core ilk Konsol uygulamanızı oluşturmak için.
-* [.NET Core ve Visual Studio 2017 kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), Microsoft tam özellikli ilk oluşturmak için IDE platformlar arası konsol uygulamasındaki .NET Core.
-* [Komut satırı kullanarak .NET Core'u kullanmaya başlama](tutorials/using-with-xplat-cli.md) -herhangi bir kod düzenleyicisini ile [.NET Core platformlar arası komut satırı arabirimi (CLI)](tools/index.md).
+Ardından, aşağıdaki gibi bir terminal açın **PowerShell**, **komut istemi**, veya **bash**. Aşağıdaki komutu yazın `dotnet` oluşturma ve C# uygulama çalıştırma için komutları.
 
-Bkz: [Önkoşullar için Windows geliştirme](windows-prerequisites.md) desteklenen Windows sürümlerinin bir listesi için konu.
+```console
+dotnet new console --output sample1
+dotnet run --project sample1
+```
 
-## <a name="linux"></a>Linux
+Aşağıdaki çıktıyı görmeniz gerekir:
 
-.NET Core yüklemek [Linux](https://www.microsoft.com/net/core#linuxredhat).
+```console
+Hello World!
+```
 
-Bu adım adım öğreticiler izleyerek .NET Core uygulamaları geliştirmeye başlayabilirsiniz.
+Tebrikler! Basit bir .NET Core uygulaması oluşturdunuz. Ayrıca [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (yalnızca Windows) veya [Mac için Visual Studio](tutorials/using-on-mac-vs.md) (.NET Core uygulaması oluşturmak için macOS yalnızca).
 
-* [Komut satırı kullanarak .NET Core'u kullanmaya başlama](tutorials/using-with-xplat-cli.md) -herhangi bir kod düzenleyicisini ile [.NET Core platformlar arası komut satırı arabirimi (CLI)](tools/index.md).
-* [C# ve .NET Core üzerinde Ubuntu kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft'un basit platformlar arası Kod düzenleyicisinde, .NET Core üzerinde Ubuntu 14.04 ilk Konsol uygulamanızı oluşturmak için.
+## <a name="tutorials"></a>Öğreticiler
 
-Bkz: [Linux geliştirmesi için Önkoşullar](linux-prerequisites.md) desteklenen Linux distro'lar ve sürümlerin listesi için konu.
+Bu adım adım öğreticileri izleyerek .NET Core uygulamaları geliştirmeye başlayabilirsiniz.
 
-## <a name="os-x--macos"></a>OS X / macOS
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-.NET Core için yükleme [macOS](https://www.microsoft.com/net/core#macos). .NET core, OS X El Capitan (sürüm 10.11 sürümünü) ve macOS Sierra (sürüm 10,12) desteklenir.
+* [Visual Studio 2017'de .NET Core ile C# "Hello World" uygulaması oluşturun.](./tutorials/with-visual-studio.md)
 
-Bu adım adım öğreticiler izleyerek .NET Core uygulamaları geliştirmeye başlayabilirsiniz.
+* [Bir Visual Studio 2017'de .NET Core ile C# sınıf kitaplığı oluşturun.](./tutorials/library-with-visual-studio.md)
 
-* [C# ve .NET Core üzerinde macOS kullanarak Visual Studio Code ile çalışmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) - bu [Channel9](https://channel9.msdn.com) video gösterir, yüklemek ve kullanmak nasıl [Visual Studio Code](https://code.visualstudio.com/), Microsoft'un basit platformlar arası Kod düzenleyicisinde, .NET Core ilk Konsol uygulamanızı oluşturmak için. 
-* [Visual Studio Code kullanarak macOS üzerinde .NET Core'u kullanmaya başlama](tutorials/using-on-macos.md) -adımları ve .NET Core birim testleri, üçüncü taraf kitaplıklar ve hata ayıklama araçları nasıl kullanacağınızı içeren Visual Studio kod kullanarak bir çözüm oluşturmak için iş akışı turu.
-* [Komut satırı kullanarak .NET Core'u kullanmaya başlama](tutorials/using-with-xplat-cli.md) -herhangi bir kod düzenleyicisini ile [.NET Core platformlar arası komut satırı arabirimi (CLI)](tools/index.md).
-* [Mac için Visual Studio kullanarak macOS üzerinde .NET Core'u kullanmaya başlama](tutorials/using-on-mac-vs.md) -Bu öğreticide, Mac için Visual Studio kullanarak basit bir .NET Core konsol uygulamasının nasıl oluşturulacağını gösterir
-* [Mac için Visual Studio kullanarak macOS üzerinde eksiksiz bir .NET Core çözümü derleme](tutorials/using-on-mac-vs-full-solution.md) -Bu öğreticide, yeniden kullanılabilir kitaplık ve birim testi içeren tam bir .NET Core çözümü oluşturmak nasıl gösterilir.
+* [Visual Studio 2017'de .NET Core ile bir Visual Basic "Hello World" uygulaması oluşturun.](./tutorials/vb-with-visual-studio.md)
 
-Bkz: [macOS geliştirme için Önkoşullar](macos-prerequisites.md) desteklenen OS X listesi için konu / macOS sürümleri.
+* [Visual Basic ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturun.](./tutorials/vb-library-with-visual-studio.md)  
+
+* Üzerinde bir video izleyin [yüklemek ve Visual Studio Code ve .NET Core kullanmak nasıl](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
+
+* Üzerinde bir video izleyin [yüklemek ve Visual Studio 2017 ve .NET Core kullanmak nasıl](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
+
+* [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+
+Bkz: [Önkoşullar için Windows geliştirme](windows-prerequisites.md) desteklenen Windows sürümlerinin bir listesi için makale.
+
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+Bu adım adım öğreticileri izleyerek .NET Core uygulaması geliştirmeye başlayabilirsiniz.
+
+* [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+
+* Üzerinde bir video izleyin [Ubuntu üzerinde C# ve .NET Core kullanarak Visual Studio Code kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
+
+Bkz: [Linux geliştirme için Önkoşullar](linux-prerequisites.md) makale listesi için desteklenen Linux dağıtımları ve sürümleri.
+
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
+
+Bu adım adım öğreticileri izleyerek .NET Core uygulaması geliştirmeye başlayabilirsiniz.
+
+* Üzerinde bir video izleyin [macOS üzerinde C# ve .NET Core kullanarak Visual Studio Code kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
+
+* [Visual Studio Code kullanarak macOS üzerinde .NET Core ile çalışmaya başlama.](tutorials/using-on-macos.md)
+
+* [Komut satırını kullanarak .NET Core ile çalışmaya başlama.](tutorials/using-with-xplat-cli.md)
+
+* [Mac için Visual Studio kullanarak macos'ta .NET Core ile çalışmaya başlama](tutorials/using-on-mac-vs.md)
+
+* [Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme](tutorials/using-on-mac-vs-full-solution.md)
+
+Bkz: [macOS geliştirme önkoşulları](macos-prerequisites.md) makale listesi için desteklenen işletim sistemi x / macOS sürümleri.
+
+***

@@ -1,11 +1,11 @@
-### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>Ve işareti HttpUtility.JavaScriptStringEncode çıkışları
+### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility.JavaScriptStringEncode çıkar ve işareti
 
 |   |   |
 |---|---|
-|Ayrıntılar|.NET Framework 4.5 ile başlayan <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=name> ve işareti çıkışları (&amp;) karakter.|
-|Öneri|Bu yöntem önceki davranışı uygulamanızı bağımlı olması durumunda, bir aspnet:JavaScriptDoNotEncodeAmpersand ayarı ekleyebilirsiniz [ASP.NET appSettings öğesi](https://msdn.microsoft.com/library/hh975440.aspx) yapılandırma dosyanızda.|
+|Ayrıntılar|.NET Framework 4.5 ile başlayarak <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=name> çıkışları ve işareti (&amp;) karakter.|
+|Öneri|Uygulamanız bu yöntemin önceki davranışına bağlı olduğu durumlarda bir ASPNET: javascriptdonotencodeampersand ayarına ekleyebilirsiniz [ASP.NET appSettings öğesi](https://msdn.microsoft.com/library/hh975440.aspx) yapılandırma dosyanızdaki.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
 

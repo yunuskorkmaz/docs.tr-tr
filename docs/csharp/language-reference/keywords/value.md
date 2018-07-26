@@ -7,18 +7,18 @@ helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
 ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265278"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959402"
 ---
 # <a name="value-c-reference"></a>value (C# Başvurusu)
-Bağlamsal anahtar sözcüğü `value` sıradan özelliği bildirimlerden set erişimcisi kullanılır. Giriş parametresi bir metot benzerdir. Word `value` özelliğine atamak için istemci kodu deniyor değeri başvuruyor. Aşağıdaki örnekte, `MyDerivedClass` adlı bir özelliği vardır `Name` kullanan `value` yedekleme alanına yeni bir dize atamak için parametre `name`. Açısından bakıldığında, istemci kodu, işlemi basit atama yazılır.  
+Bağlamsal anahtar sözcüğü `value` sıradan özellik bildiriminde kümesi erişimcisi kullanılır. Yöntemi giriş parametresi benzerdir. Word `value` istemci kodu özelliğe atanacak çalışıyor değeri başvuruyor. Aşağıdaki örnekte, `MyDerivedClass` adlı bir özelliğe sahiptir `Name` kullanan `value` yedekleme alanına yeni bir dize atamak için parametre `name`. Bakış açısıyla, istemci kodu, işlem bir basit atama yazılır.  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
   
- Kullanımı hakkında daha fazla bilgi için `value`, bkz: [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md).  
+ Kullanımıyla ilgili daha fazla bilgi için `value`, bkz: [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

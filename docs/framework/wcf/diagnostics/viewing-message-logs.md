@@ -2,36 +2,36 @@
 title: İleti Günlüklerini Görüntüleme
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33802983"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198516"
 ---
 # <a name="viewing-message-logs"></a>İleti Günlüklerini Görüntüleme
-Bu konuda, ileti günlüklerini nasıl görüntüleyebileceğiniz açıklanır.  
+Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>İleti görüntüleme hizmet izleme Görüntüleyicisi'nde günlüğe kaydeder  
- WCF tarafından işlendiği bir ileti dönüştürülür. Bu nedenle, yalnızca ileti içeriği noktada kaydedildiğini, içeriğini değil Tel üzerinde bir ileti günlüğe kaydedilmesini yansıtır.  
+ WCF tarafından işlendiği bir ileti dönüştürülür. Bu nedenle, bir ileti günlüğe kaydedildi. yalnızca ileti içeriği, günlüğe kaydedilen noktasına değil Tel üzerinde içerik yansıtır.  
   
- İleti günlüğe kaydetme çıktısını iletisinin aktarımı biçimine hiçbir ilişki olduğundan, her zaman ileti günlüğe kaydetme kodu çözülmüş ileti çıkarır. İleti günlüğünü düzgün yapılandırdıysanız, günlüğe kaydedilen tüm iletiler düz metin olarak olmalıdır. Örneğin, günlüğe kaydedilen iletilere biçimi (düz metin) ikili ileti kodlayıcı kullanımını etkilenmez.  
+ Günlüğe ileti kaydetme çıktısını iletisinin aktarımı biçimi hiçbir ilişkisi olduğundan, her zaman ileti günlüğe kaydetme kodu çözülen ileti çıkarır. İletileri günlüğe düzgün şekilde yapılandırdıysanız, günlüğe kaydedilen iletiler düz metin biçiminde olmalıdır. Örneğin, günlüğe kaydedilen iletilere biçimi (düz metin), ikili ileti Kodlayıcısı'nın kullanımı etkilenmez.  
   
- XmlWriterTraceListener çıktısını bir dizi parçalarını içeren bir dosyadır. Dosya geçerli bir XML dosyası değil bilmeniz gerekir. Kullanmanız önerilir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ileti günlük dosyalarını görüntülemek için. Bu aracın nasıl kullanılacağı hakkında daha fazla bilgi için bkz: [bağıntılı izlemeleri görüntüleme ve sorun giderme için hizmet izleme görüntüleyicisini kullanma](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ XmlWriterTraceListener çıktısını bir dizi parçalarını içeren bir dosyadır. Dosya geçerli bir XML dosyası değil bilmeniz gerekir. Kullanmanız önerilir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ileti günlük dosyalarını görüntülemek için. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [ilişkilendirilmiş izlemeleri görüntülemek ve sorun giderme için hizmet izleme görüntüleyicisini kullanarak](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
- Hizmet izleme Görüntüleyicisi'nde iletileri listelenen **ileti** sekmesi. Neden olan veya olmayan iletilerini ilgili işleme hatası, sarı (uyarı düzeyi) ya da kırmızı (hata düzeyi) hatanın önem düzeyine bağlı olarak vurgulanır. İstek işlenirken bağlamında ileti izleme yukarı iletide çift getirir.  
+ Hizmet izleme Görüntüleyicisi'nde iletileri içinde listelenen **ileti** sekmesi. Neden veya olmayan iletilerini ilgili işleme hatası (uyarı düzeyi), sarı veya kırmızı (hata düzeyi), hatanın önem derecesine bağlı olarak vurgulanır. İstek işlenirken bağlamında ileti izleme üzerinde iletisine çift tıklandığında getirir.  
   
 > [!NOTE]
->  Bir ileti, üst Hayır sahipse `<header/>` etiketi günlüğe kaydedilir.  
+>  Bir ileti üst bilgisi yok, Hayır varsa `<header/>` etiketi günlüğe kaydedilir.  
   
-## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Bir istemci, bir geçiş ve bir hizmet tarafından günlüğe kaydedilen iletileri görüntüleme  
- Ortamınızı daha sonra hizmet iletiyi iletir geçiş, bir ileti gönderir bir istemci içerebilir. Ne zaman ileti günlüğe kaydetme, tüm üç konumlarının etkinleştirildiğinde ve üç ileti günlüğü içinde görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ileti günlüğü alışverişlerinde yanlış eşzamanlı olarak işlenir. Bunun nedeni, `CorrelationId` ve `ActivityId` ileti üstbilgisinde her send-receive çifti için benzersiz değildir.  
+## <a name="viewing-messages-logged-by-a-client-a-relay-and-a-service"></a>Bir istemci, geçiş ve bir hizmet oturum açmış iletilerini görüntüleme  
+ Ortamınızı sonradan yapılacak hizmetine ileten bir geçiş için bir ileti gönderen bir istemci içerebilir. Ne zaman ileti günlüğe kaydetme, tüm üç konumlarının etkinleştirildiğinde ve üç ileti günlüğü içinde görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ileti günlüğü değişimleri yanlış eşzamanlı olarak işlenir. Bunun nedeni, `CorrelationId` ve `ActivityId` ileti üstbilgisinde her send-receive çifti için benzersiz değil.  
   
- Bu sorunu gidermek için aşağıdaki yöntemlerden birini kullanabilirsiniz.  
+ Bu sorunu çözmek için aşağıdaki yöntemlerden birini kullanabilirsiniz.  
   
--   Yalnızca iki üç ileti günlüklerde görüntülemek [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dilediğiniz zaman.  
+-   Yalnızca iki üç ileti günlükleri görüntüleme [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dilediğiniz zaman.  
   
--   Tüm üç günlüklerinde görüntülerseniz gerekir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) aynı anda yeni bir oluşturarak geçiş hizmeti değiştirebilirsiniz <xref:System.ServiceModel.Channels.Message> örneği. Bu örnek dışındaki tüm üstbilgileri yanı sıra gelen ileti gövdesi bir kopyası olmalıdır `ActivityId` ve `Action` üstbilgileri. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  
+-   Üç tüm günlüklerde görüntülerseniz gerekir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) aynı anda yeni bir geçiş hizmeti değiştirebilirsiniz <xref:System.ServiceModel.Channels.Message> örneği. Bu örnek hariç tüm üstbilgileri yanı sıra gelen ileti gövdesinin bir kopyasını olmalıdır `ActivityId` ve `Action` üstbilgileri. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  
   
 ```  
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -47,18 +47,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 }  
 ```  
   
-## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Yanlış ileti günlüğe kaydetme içerik için olağanüstü durumlar  
- Aşağıdaki koşullarda iletileri günlüğe kaydedilmesini kablo mevcut sekizli akış tam temsilini olmayabilir.  
+## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Olağanüstü durumlar için yanlış ileti günlüğe kaydetme içeriği  
+ Aşağıdaki koşullarda iletileri günlüğe kaydedilmesini tam temsili sekizli akış kablo mevcut olmayabilir.  
   
--   Hiçbiri gelen / adresleme/içinde iletileri için BasicHttpBinding için zarf üstbilgileri günlüğe kaydedilen ad alanı.  
+-   Hiçbiri gelen / adres/içinde iletileri için BasicHttpBinding için zarf üst bilgileri günlüğe kaydedilen ad alanı.  
   
--   Boşluk eşleşmeyen.  
+-   Boşluk eşleşmiyor olabilir.  
   
--   Gelen iletiler için boş öğeleri farklı temsil edilebilir. Örneğin, \<etiketi >\</etiket > yerine \<etiketi / >  
+-   Gelen iletiler için boş öğeleri farklı şekilde temsil edilebilir. Örneğin, \<etiket >\</etiketi > yerine \<etiket / >  
   
 -   Bilinen PII günlüğü devre dışı bırakıldığında varsayılan veya açık ayarı enableLoggingKnownPii = "true".  
   
--   Kodlama UTF-8'e dönüştürme için etkinleştirilir.  
+-   Kodlama, UTF-8'e dönüştürme için etkinleştirilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  

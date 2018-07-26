@@ -1,9 +1,9 @@
-### <a name="machinekeyencode-and-machinekeydecode-methods-are-now-obsolete"></a>MachineKey.Encode ve MachineKey.Decode yöntemleri geçersiz
+### <a name="machinekeyencode-and-machinekeydecode-methods-are-now-obsolete"></a>MachineKey.Encode ve MachineKey.Decode yöntemleri artık kullanılmamaktadır
 
 |   |   |
 |---|---|
 |Ayrıntılar|Bu yöntemler artık kullanım dışıdır. Bu yöntemleri çağıran kodun derlemesi bir derleyici uyarısı meydana getirir.|
-|Öneri|Önerilen Alternatiflerle olan <xref:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])> ve <xref:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])>. Alternatif olarak, derleme uyarıları gizlenebilir veya eski bir derleyici kullanılarak önlenebilir. API'ler hala desteklenmektedir.|
+|Öneri|Önerilen alternatifler, <xref:System.Web.Security.MachineKey.Protect(System.Byte[],System.String[])> ve <xref:System.Web.Security.MachineKey.Unprotect(System.Byte[],System.String[])>. Alternatif olarak, derleme uyarıları gizlenebilir ya da daha eski bir derleyici kullanılarak önlenebilir. API'leri hala desteklenmektedir.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
 |Tür|Yeniden hedefleme|

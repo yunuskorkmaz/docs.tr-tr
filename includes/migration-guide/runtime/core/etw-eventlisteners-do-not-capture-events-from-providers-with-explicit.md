@@ -1,11 +1,11 @@
-### <a name="etw-eventlisteners-do-not-capture-events-from-providers-with-explicit-keywords-like-the-tpl-provider"></a>ETW EventListeners (gibi TPL sağlayıcısı) açık sözcüklerle sağlayıcılardan gelen olayları yakalamak değil
+### <a name="etw-eventlisteners-do-not-capture-events-from-providers-with-explicit-keywords-like-the-tpl-provider"></a>ETW EventListeners açık anahtar sözcükleri (örneğin, TPL sağlayıcısı) sağlayıcılarıyla olaylardan yakalamayın
 
 |   |   |
 |---|---|
-|Ayrıntılar|ETW EventListeners boş anahtar sözcüğü maskesiyle düzgün açık sözcüklerle sağlayıcılardan olayları yakalar değil. .NET Framework 4.5 TPL sağlayıcısı açık anahtar sözcükleri sağlama başladı ve bu sorunu tetiklendi. .NET Framework 4.6 EventListeners artık bu sorunu sağlamak için güncelleştirilmiştir.|
-|Öneri|Bu sorunu geçici olarak çözmek için çağrıları yerini <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)> açıkça belirtir EnableEvents aşırı çağrıları ile &quot;herhangi bir anahtar sözcük&quot; kullanılacak maskesi: <code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>. Alternatif olarak, bu sorun .NET Framework 4.6 sabit ve .NET Framework'ün bu sürüme yükseltme tarafından desteklenebilir.|
+|Ayrıntılar|ETW EventListeners boş anahtar sözcüğü maskesiyle açık anahtar sözcükleri sağlayıcılarıyla olaylardan düzgün yakalamayın. .NET Framework 4.5, TPL sağlayıcısı açık anahtar sağlama başladı ve bu sorunu tetiklendi. .NET Framework 4.6, EventListeners artık bu sorunu sağlamak için güncelleştirildi.|
+|Öneri|Bu sorunu gidermek için çağrı değiştirin <xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)> açıkça belirten EnableEvents aşırı çağrılarıyla &quot;her anahtar sözcük&quot; kullanılacak maskesi: <code>EnableEvents(eventSource, level, unchecked((EventKeywords)0xFFFFffffFFFFffff))</code>. Alternatif olarak, bu sorun içinde .NET Framework 4.6 düzeltildi ve .NET Framework'ün bu sürümüne yükseltme tarafından desteklenebilir.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
-|Tür|çalışma zamanı|
+|Tür|Çalışma zamanı|
 |Etkilenen API'leri|<ul><li><xref:System.Diagnostics.Tracing.EventListener.EnableEvents(System.Diagnostics.Tracing.EventSource,System.Diagnostics.Tracing.EventLevel)?displayProperty=nameWithType></li></ul>|
 

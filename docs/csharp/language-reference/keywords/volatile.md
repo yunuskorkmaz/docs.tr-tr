@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 7f3aafc1255667f2a3917c6e171ce4ddf0343b41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64bd5ce7d7dfe3265c3c645467493ab7d8792172
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272590"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936884"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# Başvurusu)
-`volatile` Anahtar sözcüğü gösteren bir alan aynı anda yürütülen birden çok iş parçacığı tarafından değiştirilebilir. Bildirilen alanları `volatile` olan değil tek bir iş parçacığı tarafından erişim varsayın derleyici iyileştirmelerini tabidir. Bu, en güncel değeri her zaman alanında mevcut olduğunu sağlar.  
+`volatile` Anahtar sözcüğü gösteren bir alan, aynı anda yürütülen birden çok iş parçacığı tarafından değiştirilebilir. Bildirilen alanları `volatile` olan tek bir iş parçacığı tarafından erişim varsayar derleyici iyileştirmeleri değil tabidir. Bu kısıtlamalar, tüm iş parçacıkları tarafından gerçekleştirilen sırada başka bir iş parçacığı tarafından gerçekleştirilen geçici yazma dikkate aldığınızdan emin olun. Bir tek toplam geçici yazma olarak görülen yürütme tüm iş parçacıklarından sıralama garantisi yoktur.  
   
- `volatile` Değiştiricisi kullanmadan birden çok iş parçacığı tarafından erişilen bir alan için kullanılan genellikle [kilit](../../../csharp/language-reference/keywords/lock-statement.md) erişim serileştirmek için deyimi.  
+ `volatile` Değiştiricisi kullanmadan birden çok iş parçacığı tarafından erişilebilir bir alan için kullanılan genellikle [kilit](../../../csharp/language-reference/keywords/lock-statement.md) deyimi erişim serileştirmek için.  
   
- `volatile` Anahtar sözcüğü bu tür alanlar için uygulanabilir:  
+ `volatile` Anahtar sözcüğü, bu tür alanlar için uygulanabilir:  
   
 -   Başvuru türleri.  
   
--   İşaretçi türleri (güvenli olmayan içerik). İşaretçi geçici olmasına karşın işaret nesnesi olamaz unutmayın. Diğer bir deyişle, "için bir işaretçi geçici." bildiremezsiniz.  
+-   İşaretçi türleri (güvenli olmayan bir bağlamda). İşaretçi geçici olabilir, ancak işaret nesnesi dönüştürülemez unutmayın. Diğer bir deyişle, "işaretçisi geçici." bildiremezsiniz.  
   
--   Sbyte, bayt, short, ushort, int, uint, char, float ve bool gibi türleri.  
+-   Sbyte, byte, kısa, ushort, int, uint, char, float ve bool gibi türler.  
   
--   Aşağıdaki temel türlerinden biriyle bir numaralandırma türü: byte, sbyte, short, ushort, int veya uint.  
+-   Aşağıdaki temel türlerden birine sahip bir sabit listesi türü: byte, sbyte, short, ushort, int veya uint.  
   
--   Başvuru türleri olduğu bilinen genel tür parametreleri.  
+-   Başvuru türleri olarak bilinen genel tür parametreleri.  
   
 -   <xref:System.IntPtr> ve <xref:System.UIntPtr>.  
   
- Volatile anahtar sözcüğü yalnızca bir sınıf veya yapı alanlar için uygulanabilir. Yerel değişkenler bildirilemez `volatile`.  
+ Volatile anahtar sözcüğü, yalnızca bir sınıfın veya yapının alanlarına uygulanabilir. Yerel değişkenler bildirilemez `volatile`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ortak alan değişken olarak bildirmek gösterilmiştir `volatile`.  
+ Aşağıdaki örnek, bir ortak alan değişken olarak bildirmek gösterilmektedir `volatile`.  
   
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl yardımcı veya çalışan iş parçacığı oluşturulabilir ve birincil iş parçacığının ile paralel işleme gerçekleştirmek için kullanılan gösterir. Arka plan bilgileri için hakkında çoklu iş parçacığı kullanımı, bkz: [parçacıkları (C#)](../../../standard/threading/index.md) ve [yönetilen iş parçacığı oluşturma](../../programming-guide/concepts/threading/index.md).  
+ Aşağıdaki örnek nasıl yardımcı veya çalışan iş parçacığı oluşturulabilir ve birincil iş parçacığının ile paralel işleme gerçekleştirmek için kullanılan gösterir. Arka plan bilgileri için çoklu iş parçacığı hakkında bkz: [yönetilen iş parçacığı](../../../standard/threading/index.md) ve [parçacıkları (C#)](../../programming-guide/concepts/threading/index.md).  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   

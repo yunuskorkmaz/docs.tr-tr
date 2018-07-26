@@ -1,21 +1,21 @@
 ---
-title: Esnek Entity Framework Çekirdek SQL bağlantıları uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Esnek Entity Framework Çekirdek SQL bağlantıları uygulama
+title: Dayanıklı Entity Framework Core SQL bağlantıları uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Dayanıklı Entity Framework Core SQL bağlantıları uygulayın. Bu yöntem Azure SQL veritabanı bulutta kullanırken özellikle önemlidir.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105481"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874942"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Esnek Entity Framework Çekirdek SQL bağlantıları uygulama
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Dayanıklı Entity Framework Core SQL bağlantıları uygulama
 
-Azure SQL DB için Entity Framework Çekirdek zaten iç veritabanı bağlantısı dayanıklılık ve yeniden deneme mantığı sağlar. Ancak sahip olmak istiyorsanız her DbContext bağlantısı için Entity Framework yürütme stratejisi etkinleştirmeniz gerekiyor [dayanıklı EF çekirdek bağlantıları](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
+Azure SQL DB için Entity Framework Core zaten iç veritabanı bağlantı dayanıklılığı ve yeniden deneme mantığı sağlar. Ancak olmasını istiyorsanız, her bir DbContext bağlantı için Entity Framework yürütme stratejisi etkinleştirmeniz gerekiyor [dayanıklı EF Core bağlantıları](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
 
-Örneği için aşağıdaki kodu EF çekirdek bağlantı düzeyinde bağlantı başarısız olursa yeniden denenir dayanıklı SQL bağlantıları sağlar.
+Örneğin, aşağıdaki kodu EF Core bağlantı düzeyinde bağlantı başarısız olursa şartıyla dayanıklı SQL bağlantısı sağlar.
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -41,15 +41,15 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Yürütme stratejilerini ve BeginTransaction ve birden çok DbContexts kullanarak açık işlemleri
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Yürütme stratejileri ve BeginTransaction ve birden çok DbContexts kullanarak açık işlemleri
 
-EF çekirdek bağlantıları yeniden deneme etkinleştirildiğinde, EF çekirdek kullanarak gerçekleştirdiğiniz her işlem yeniden denenebilir çalışması haline gelir. Geçici bir hata oluşursa, her sorgu ve her çağrı SaveChanges bir birim olarak yeniden denenecek.
+EF Core bağlantıları yeniden deneme etkinleştirildiğinde, EF Core kullanarak gerçekleştirdiğiniz her işlem yeniden denenebilir kendi işlem olur. Geçici bir hata oluşursa, her sorgu ve SaveChanges yapılan her çağrı bir birim olarak yeniden denenecek.
 
-Ancak, kodunuzu BeginTransaction kullanarak bir işlem başlatır, bir birim olarak kabul edilmesi için gereken işlemleri kendi grubunun tanımlıyorsanız — işlem içinde her şeyi sahip olması alındı geri bir hata oluşursa. EF yürütme stratejisi (yeniden deneme ilkesi) kullanırken bu işlemi yürütme girişimi ve işlemde birden çok DbContexts birkaç SaveChanges çağrılarından dahil aşağıdaki gibi bir özel durum görürsünüz.
+Kodunuzu BeginTransaction'ı kullanarak bir işlem başlatır, ancak bir birim olarak kabul edilmesi için gereken işlemleri kendi grubu tanımladığınız — işlem içinde her şeyi sahip olması toplu geri bir arıza oluşması durumunda. EF yürütme stratejisi (yeniden deneme ilkesi) kullanılırken, işlem yürütme girişimi ve bir işlemde birden çok DbContexts birkaç SaveChanges çağrılarından dahil, aşağıdaki gibi bir özel durum görürsünüz.
 
-> System.InvalidOperationException: 'SqlServerRetryingExecutionStrategy' yapılandırılmış yürütme stratejisi kullanıcı tarafından başlatılan işlemleri desteklemez. İşlem yeniden denenebilir bir birim olarak tüm işlemleri yürütmek için 'DbContext.Database.CreateExecutionStrategy()' tarafından döndürülen yürütme stratejisi kullanın.
+> System.InvalidOperationException: 'SqlServerRetryingExecutionStrategy' yapılandırılmış yürütme stratejisi, kullanıcı tarafından başlatılan işlemleri desteklemez. İşlem yeniden denenebilir bir birim olarak tüm işlemleri yürütmek için 'DbContext.Database.CreateExecutionStrategy()' tarafından döndürülen yürütme stratejisi kullanın.
 
-Çözüm, yürütülecek gereken her şeyi temsil eden bir temsilci ile EF yürütme stratejisi el ile çağırmaktır. Geçici bir hata oluşursa, yürütme stratejisi temsilci yeniden çağırır. Örneğin, aşağıdaki kodu göster nasıl şu iki eShopOnContainers uygulanan birden çok DbContexts (\_catalogContext ve IntegrationEventLogContext) ürün ve ardından kaydetme güncelleştirirken ProductPriceChangedIntegrationEvent nesne, farklı bir DbContext kullanması gerekir.
+El ile yürütülmesi gereken her şeyi temsil eden bir temsilci ile EF yürütme stratejisi çağırmak için kullanılan çözümüdür. Geçici bir hata oluşursa yürütme stratejisi temsilciyi yeniden çağırır. Örneğin, aşağıdaki kodu göster hizmetine iki ile nasıl uygulandığı birden çok DbContexts (\_catalogContext ve IntegrationEventLogContext) ürün ve sonra kaydetme güncelleştirilirken Farklı bir DbContext kullanması gereken ProductPriceChangedIntegrationEvent nesnesi.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
@@ -81,17 +81,17 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 }
 ```
 
-İlk DbContext olan \_catalogContext ve ikinci DbContext içinde olduğunu \_integrationEventLogService nesnesi. Yürütme eylemi EF yürütme stratejisi kullanarak birden çok DbContexts gerçekleştirilir.
+İlk DbContext olduğu \_catalogContext ve ikinci DbContext içinde olduğunu \_integrationEventLogService nesne. Yürütme eylemi bir EF yürütme stratejisi kullanarak birden çok DbContexts gerçekleştirilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Bağlantı dayanıklılığı ve Entity Framework komut kişiler tarafından ele**
+-   **EF bağlantı dayanıklılığı** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
+-   **Bağlantı dayanıklılığı ve komut durdurma Entity Framework ile**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Cesar de la Torre. Esnek Entity Framework Çekirdek Sql bağlantıları ve işlemleri kullanma**
+-   **Cesar de la Torre. Dayanıklı Entity Framework Core Sql bağlantıları ve işlemleri kullanma**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
-[Önceki](implement-retries-exponential-backoff.md)
-[sonraki](implement-custom-http-call-retries-exponential-backoff.md)
+[Önceki](implement-retries-exponential-backoff.md) [Next]explore-custom-http-call-retries-exponential-backoff.md)

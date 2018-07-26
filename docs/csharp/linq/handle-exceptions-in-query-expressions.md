@@ -1,35 +1,35 @@
 ---
-title: Sorgu ifadelerinde özel durumları işleme
-description: Sorgu ifadelerinde özel durumları nasıl ele alınacağını.
+title: (C# üzerinde LINQ) sorgu ifadelerinde özel durumları işleme
+description: C# LINQ Sorgu ifadelerinde özel durumları işleme hakkında bilgi edinin.
 ms.date: 12/1/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 691373fabeb3934ecc454cbc3b36a5f7bf477bee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 344d11129814516a5ed3dcf0eba73a5ecbb96981
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284857"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403845"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Sorgu ifadelerinde özel durumları işleme
 
-Bir sorgu ifadesi bağlamında herhangi bir yöntemini çağırmak mümkündür. Ancak, veri kaynağı içeriğini değiştirme veya bir özel durum atma gibi bir yan etkisi oluşturabilirsiniz bir sorgu ifadesinde herhangi bir yöntemini çağırmadan kaçının öneririz. Bu örnek, genel özel durum işleme .NET Framework yönergeleri ihlal etmeden sorgu ifadesinde yöntemlerini çağırdığınızda özel durumlarını oluşturma önlemek gösterilmiştir. Verilen bir bağlamda neden oluşturulacaktır anladığınızda, belirli bir özel durum yakalamak için kabul edilebilir bu yönergeleri durumu. Daha fazla bilgi için bkz: [özel durumlar için en iyi uygulamaları](../../standard/exceptions/best-practices-for-exceptions.md).  
-  
- Son örnek bir sorgu yürütülmesi sırasında bir özel durum gerekir, bu gibi durumlarda nasıl ele alınacağını gösterir.  
-  
-## <a name="example"></a>Örnek  
+Sorgu ifadesi bağlamında herhangi bir yöntemi çağırmak mümkündür. Ancak, veri kaynağı içeriğini değiştirme ya da bir özel durum gibi bir yan etkisi oluşturabilmeniz için bir sorgu ifadesinde herhangi bir yöntemini çağırmadan kaçınmanızı öneririz. Bu örnek, genel özel durum işleme .NET yönergeleri ihlal etmeden sorgu ifadesinde yöntem çağırdığınızda, özel durumlarını oluşturma önlemek gösterilmektedir. Kabul edilebilir neden belirli bir bağlamda durum anladığınızda, belirli bir özel durum yakalamak için bu yönergeleri durumu. Daha fazla bilgi için [özel durumlar için en iyi yöntemler](../../standard/exceptions/best-practices-for-exceptions.md).
 
- Aşağıdaki örnek, özel durum kodu bir sorgu ifadesi dışında işleme taşımak gösterilmiştir. Yalnızca yöntemi değişkenlerin sorguya yerel dayanmayacak mümkün olur.  
-  
- [!code-csharp[csProgGuideLINQ#10](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_1.cs)]  
-  
-## <a name="example"></a>Örnek 
+Son örnek bir sorgu yürütülürken bir özel durum gerekir, bu durumların nasıl işleneceğini gösterir.
 
- Bazı durumlarda, sorgu yürütme hemen durdurmak için en iyi sorgu içinde oluşturulan bir özel durum yanıta olabilir. Aşağıdaki örnek alanından bir sorgu gövdesi içinde durum özel durumları işleme gösterir. Varsayımında `SomeMethodThatMightThrow` durdurmak için sorgu yürütme gerektiren bir özel durum neden olabilir.  
-  
- Unutmayın `try` blok barındırır `foreach` döngü ve sorgunun kendisini değil. Bunun nedeni, `foreach` döngü başlayacağı sorgu gerçekte yürütüldüğünde noktasıdır. Daha fazla bilgi için bkz: [LINQ sorgularına giriş](../programming-guide/concepts/linq/introduction-to-linq-queries.md).  
-  
- [!code-csharp[csProgGuideLINQ#12](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]  
-  
+## <a name="example"></a>Örnek
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ Sorgu ifadeleri](index.md)
+Aşağıdaki örnek, özel durum işleme bir sorgu ifadesinin dışındaki kod taşımak gösterilmektedir. Yalnızca yöntemi sorguya yerel değişkenlerin bağlı olmayan mümkün olur.
+
+[!code-csharp[csProgGuideLINQ#10](~/samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_1.cs)]
+
+## <a name="example"></a>Örnek
+
+Bazı durumlarda, sorgu yürütme hemen durdurmak için bir sorgu içinde oluşturulan bir özel durum için en iyi yanıtı olabilir. Aşağıdaki örnek, gelen sorgu gövdesi içinde oluşturulabilecek özel durumların nasıl işleneceğini gösterir. Varsayımında `SomeMethodThatMightThrow` durdurmak için sorgu yürütme gerektiren bir özel durum neden olabilir.
+
+Unutmayın `try` blok kapsayan `foreach` döngüsü ve sorgunun kendisi. Bunun nedeni, `foreach` döngü, hangi sorgu gerçekte yürütülür noktasıdır. Daha fazla bilgi için [LINQ sorgularına giriş](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
+
+[!code-csharp[csProgGuideLINQ#12](~/samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Dil ile Tümleşik Sorgu (LINQ)](index.md)  

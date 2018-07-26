@@ -1,9 +1,9 @@
-### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>Genel sanal üyeler DbParameter.Precision ve DbParameter.Scale sunulmuştur
+### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>Genel sanal üyeleri DbParameter.Precision ve DbParameter.Scale sunulmuştur
 
 |   |   |
 |---|---|
-|Ayrıntılar|<xref:System.Data.Common.DbParameter.Precision> ve <xref:System.Data.Common.DbParameter.Scale> ortak sanal özellikleri olarak uygulanır. Karşılık gelen açık arabirim uygulamaları Değiştir <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> ve <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
-|Öneri|Bir ADO.NET veritabanı sağlayıcısı yeniden oluştururken bu farklılıklar duyarlık ve ölçek özelliklerine uygulanacak 'override' anahtar sözcüğünü gerektirir. Bu yalnızca bileşenleri yeniden oluştururken gereklidir; Varolan ikili dosyaları çalışmaya devam eder.|
+|Ayrıntılar|<xref:System.Data.Common.DbParameter.Precision> ve <xref:System.Data.Common.DbParameter.Scale> genel sanal özellikleri olarak uygulanır. Bunlar karşılık gelen bir açık arabirim uygulamalarını değiştirir <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Precision> ve <xref:System.Data.Common.DbParameter.System%23Data%23IDbDataParameter%23Scale>.|
+|Öneri|Bir ADO.NET veritabanı sağlayıcısı yeniden oluştururken bu farklılıkları 'override' anahtar sözcüğü kesinlik ve ölçek özellikleri uygulanmasını gerektirir. Bu, bileşenleri yeniden oluştururken yalnızca gereklidir; Mevcut ikili dosyaları çalışmaya devam eder.|
 |Kapsam|Küçük|
 |Sürüm|4.5.1|
 |Tür|Yeniden hedefleme|

@@ -2,46 +2,45 @@
 title: İş parçacığı (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 9f1c7071972d8e449bc06054fbe6d70e447b694f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335841"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874672"
 ---
 # <a name="threading-c"></a>İş parçacığı (C#)
-İş parçacığı bir defada birden fazla işlem yapabilmesi için eşzamanlı işlem yapmak, C# programı sağlar. Örneğin, kullanıcıdan girdi izlemek, arka plan görevleri ve eşzamanlı girdi akışları ile işlemek için iş parçacığı oluşturma kullanabilirsiniz.  
+İş parçacığı aynı anda birden fazla işlemi yapabilir, böylece eş zamanlı işlem yapmak C# programınızı sağlar. Örneğin, kullanıcıdan girdi izleme, arka plan görevlerini gerçekleştirmek ve eşzamanlı giriş akışları işlemek için iş parçacığı kullanabilirsiniz.  
   
- İş parçacığı aşağıdaki özelliklere sahiptir:  
+ İş parçacıkları, aşağıdaki özelliklere sahiptir:  
   
--   İş parçacığı eşzamanlı işlem gerçekleştirmek, program etkinleştirin.  
+-   İş parçacıklarının eş zamanlı işlem gerçekleştirmek programınızı etkinleştirin.  
   
 -   .NET Framework <xref:System.Threading> iş parçacığı daha kolay kullanarak ad alanı sağlar.  
   
--   İş parçacıkları uygulamanın kaynakları paylaşır. Daha fazla bilgi için bkz: [kullanarak iş parçacıkları ve parçacıkları](../../../../../docs/standard/threading/using-threads-and-threading.md).  
+-   İş parçacığı, uygulamanın kaynakları paylaşır. Daha fazla bilgi için [kullanarak iş parçacıkları ve parçacıkları](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
- Varsayılan olarak, bir C# programı bir iş parçacığı vardır. Ancak, yardımcı iş parçacığı oluşturulabilir ve birincil iş parçacığı ile paralel kod yürütmek için kullanılır. Bu iş parçacıkları adlandırılırlar *çalışan iş parçacığı*.  
+ Varsayılan olarak, bir iş parçacığı bir C# programı vardır. Ancak, ikincil iş parçacığı oluşturulabilir ve birincil iş parçacığı ile paralel kod yürütmek için kullanılır. Bu iş parçacıkları genellikle adlı *çalışan iş parçacıkları*.  
   
- Çalışan iş parçacığı birincil iş parçacığını bağlamadan zaman veya zaman açısından kritik görevleri gerçekleştirmek için kullanılabilir. Örneğin, çalışan iş parçacığı tamamlanacak önceki isteği beklerken olmadan gelen istekleri karşılamak için genellikle sunucu uygulamalarında kullanılır. Çalışan iş parçacığı masaüstü uygulamalarında "arka plan" görevleri gerçekleştirmek için de kullanılır böylece kullanıcı arabirimi öğeleri--kullanıcı eylemlerine yanıt verebilir durumda kalır sürücüleri ana iş parçacığı--.  
+ Çalışan iş parçacıkları, birincil iş parçacığını bağlamadan zaman açısından kritik ya da zaman alıcı görevleri gerçekleştirmek için kullanılabilir. Örneğin, çalışan iş parçacığı önceki isteğin tamamlanması beklemenize gerek kalmadan, gelen istekleri karşılamak için genellikle sunucu uygulamalarında kullanılır. Çalışan iş parçacıkları aynı zamanda masaüstü uygulamalarında "arka plan" görevleri gerçekleştirmek için kullanılır, böylece kullanıcı arabirimi öğeleri--kalan kullanıcı eylemlerine duyarlı sürücüleri ana iş parçacığı--.  
   
- İş parçacığı oluşturma sorunları üretilen iş ve yanıt hızını çözer, ancak Kilitlenmeler ve yarış durumları gibi kaynak paylaşma sorunları getirebilir. Birden çok iş parçacığı dosya tanıtıcıları ve ağ bağlantıları gibi farklı kaynaklar gerektiren görevler için en iyisi. Tek kaynak için birden çok iş parçacığı atama eşitleme sorunlara neden olabilir ve sık için başka bir iş parçacığı beklenirken engellenmiş iş parçacıklarının sahip birden çok iş parçacığı kullanma uramayacak.  
+ İş parçacığı oluşturma sorunları aktarım hızı ve yanıt hızını çözer, ancak Kilitlenmeler ve yarış koşulları gibi kaynak paylaşımını sorunlar çıkarabilir. Birden çok iş parçacığı, dosya tanıtıcıları ve ağ bağlantıları gibi farklı kaynakları gerektiren görevler için idealdir. Birden çok iş parçacığı için tek bir kaynak atama eşitleme sorunlarına neden olabilir ve diğer iş parçacıkları için beklenirken zaman sık engellenen iş parçacıkları sahip birden çok iş parçacığı kullanım amacını boşa çıkarır.  
   
- Uzun süren gerçekleştirmek için çalışan iş parçacığı veya diğer iş parçacıkları tarafından kullanılan kaynakları çoğunu gerektirmeyen zaman açısından kritik görevleri, ortak bir strateji kullanmaktır. Doğal olarak, bazı kaynaklar programınızdaki birden çok iş parçacığı tarafından erişilmesi gerekir. Bu durumlarda <xref:System.Threading> ad alanı, iş parçacıklarını eşitleme için sınıflar sağlar. Bu sınıfların dahil <xref:System.Threading.Mutex>, <xref:System.Threading.Monitor>, <xref:System.Threading.Interlocked>, <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.ManualResetEvent>.  
+ Ortak bir strateji, zaman alıcı gerçekleştirmek için çalışan iş parçacıkları veya diğer iş parçacıkları tarafından kullanılan kaynakları birçoğu gerektirmeyen zaman açısından kritik görevleri kullanmaktır. Doğal olarak, bazı kaynaklar programınızdaki birden çok iş parçacığı tarafından erişilmelidir. Bu gibi durumlarda için <xref:System.Threading> ad alanı, iş parçacıklarını eşitleme için sınıflar sağlar. Bu sınıfları <xref:System.Threading.Mutex>, <xref:System.Threading.Monitor>, <xref:System.Threading.Interlocked>, <xref:System.Threading.AutoResetEvent>, ve <xref:System.Threading.ManualResetEvent>.  
   
- Birden çok iş parçacığı etkinliklerini eşitlemek için bu sınıfların bazıları veya tümü kullanabilirsiniz, ancak bazı iş parçacığı oluşturma desteği C# dili tarafından desteklenir. Örneğin, [Lock deyimi](../../../../csharp/language-reference/keywords/lock-statement.md) örtülü kullanımı aracılığıyla eşitleme özellikleri sağlayan <xref:System.Threading.Monitor>.  
+ Birden çok iş parçacığı etkinliklerini eşitlemek için bu sınıfların bazılarını veya tümünü kullanabilirsiniz, ancak bazı iş parçacığı oluşturma desteği C# dili tarafından desteklenir. Örneğin, [Lock deyiminin](../../../../csharp/language-reference/keywords/lock-statement.md) eşitleme özellikleri aracılığıyla örtük sağlar <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], birden çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), yeni eşzamanlı koleksiyon sınıfları <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramı dayalı yeni bir programlama modeli. Daha fazla bilgi için bkz: [paralel programlama](../../../../../docs/standard/parallel-programming/index.md).  
+>  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Birden çok iş parçacıklı uygulamalar (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Oluşturma ve iş parçacığı kullanma açıklar.|  
-|[Parametreler ve dönüş değerleri birden çok iş parçacıklı yordamlar (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|Geçirmek ve birden çok iş parçacıklı uygulamalar parametrelerle dönmek açıklar.|  
-|[İzlenecek yol: BackgroundWorker bileşeni (C#) ile çoklu iş parçacığı kullanımı](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Basit bir birden çok iş parçacıklı uygulamasının nasıl oluşturulacağını gösterir.|  
-|[İş parçacığı eşitleme (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|İş parçacığı etkileşimleri denetlemek açıklar.|  
-|[İş parçacığı zamanlayıcılar (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|Ayrı iş parçacıklarına sabit aralıklarda yordamları çalıştırmak açıklar.|  
+|[Çok iş parçacıklı uygulamalar (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|İş parçacıkları oluşturup kullanacağınızı açıklar.|  
+|[Parametreler ve dönüş değerleri birden çok iş parçacıklı yordamlar (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|Başarılı ve çok iş parçacıklı uygulamalar parametrelerle döndürmek açıklar.|  
+|[İzlenecek yol: BackgroundWorker bileşeni (C#) ile çoklu iş parçacığı kullanımı](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Basit bir çok iş parçacıklı uygulamanın nasıl oluşturulacağını gösterir.|  
+|[İş parçacığı eşitleme (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|İş parçacığı etkileşimler denetlemek nasıl açıklar.|  
 |[İş parçacığı havuzu (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Sistem tarafından yönetilen çalışan iş parçacığı havuzu kullanmayı açıklar.|  
-|[Nasıl yapılır: iş parçacığı havuzu (C#) kullanma](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|İş parçacığı havuzu birden çok iş parçacığı eşitlenmiş kullanımını göstermektedir.|  
-|[İş parçacığı oluşturma](../../../../../docs/standard/threading/index.md)|.NET Framework iş parçacığı oluşturma uygulamak açıklar.|
+|[Nasıl yapılır: iş parçacığı havuzu (C#) kullanma](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Eşzamanlı iş parçacığı havuzundaki birden çok iş parçacığı kullanımını gösterir.|  
+|[İş parçacığı oluşturma](../../../../../docs/standard/threading/index.md)|.NET Framework'teki iş parçacığı uygulanacağını açıklar.|

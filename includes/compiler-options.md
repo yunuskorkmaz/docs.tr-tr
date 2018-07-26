@@ -1,2 +1,2 @@
 
-Her derleyici seçeneği iki biçimde sağlanır: **-seçeneği** ve **/seçeneği**. Belgelere yalnızca gösterir seçeneği formu. 
+Her derleyici seçeneğinin iki biçimde sağlanır: **-seçeneği** ve **/seçeneği**. Yalnızca belgelerde seçeneği formu. 

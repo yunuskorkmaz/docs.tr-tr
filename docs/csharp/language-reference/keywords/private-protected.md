@@ -1,22 +1,22 @@
 ---
-title: Özel korumalı (C# Başvurusu)
+title: private protected (C# Başvurusu)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457257"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961138"
 ---
-# <a name="private-protected-c-reference"></a>Özel korumalı (C# Başvurusu)
-`private protected` Anahtar sözcüğü birleşimi olan bir üye erişim değiştiricisi. Özel bir korumalı üye içeren sınıfından ancak kendi içeren derleme içinde yalnızca türetilmiş türler tarafından erişilebilir. Bir karşılaştırması `private protected` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). 
+# <a name="private-protected-c-reference"></a>private protected (C# Başvurusu)
+`private protected` Anahtar sözcüğü bir üye erişim değiştiricisi oluşur. Özel bir korumalı üye, kapsayan sınıfı ancak kendi içeren bütünleştirilmiş kod içinde yalnızca türetilen türler tarafından erişilebilir. Bir karşılaştırması `private protected` diğer erişim değiştiricileri ile bkz [erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md). 
 
 > [!NOTE]
 > `private protected` Erişim değiştiricisi geçerli sürümde C# 7.2 ve üzeri.
    
 ## <a name="example"></a>Örnek  
- Yalnızca statik değişkeni türetilmiş sınıf türü türündeyse bir taban sınıf, özel korumalı üyesi içeren derleme türetilmiş türlerde erişilebilir. Örneğin, aşağıdaki kod kesimi göz önünde bulundurun:  
+ Yalnızca statik değişken türü türetilmiş sınıf türü ise bir taban sınıfın özel ve korumalı bir üye türetilen türler, içeren derlemede erişilebilir. Örneğin, aşağıdaki kod kesimi göz önünde bulundurun:  
   
  ```csharp
  // Assembly1.cs  
@@ -55,10 +55,10 @@ ms.locfileid: "34457257"
      }
  }
 ```  
- Bu örnek iki dosya içerir `Assembly1.cs` ve `Assembly2.cs`. İlk dosya ortak bir taban sınıf içeren `BaseClass`ve bu sınıftan türetilen tür `DerivedClass1`. `BaseClass` özel bir korumalı üye sahibi `myValue`, hangi `DerivedClass1` iki yolla erişmeyi dener. İlk erişim girişiminde `myValue` örneği üzerinden `BaseClass` hataya neden olur. Ancak, devralınan bir üyesi olarak kullanmayı denerseniz `DerivedClass1` başarılı olur.
-İkinci dosyasında, erişme denemesi `myValue` devralınan bir üyesi olarak `DerivedClass2` yalnızca Assembly1 türetilmiş türlerde tarafından erişilebilir durumda olduğu gibi bir hata oluşturur. 
+ Bu örnek iki dosyayı içeren `Assembly1.cs` ve `Assembly2.cs`. İlk dosyayı içeren genel bir temel sınıf `BaseClass`ve bu türden türetilmiş tür `DerivedClass1`. `BaseClass` özel bir korumalı üye sahibi `myValue`, hangi `DerivedClass1` iki yolla erişmeyi dener. Erişmek için yapılan ilk girişim `myValue` örneği üzerinden `BaseClass` hataya neden olur. Ancak, devralınan bir üyesi olarak kullanma girişimi `DerivedClass1` başarılı olur.
+İkinci dosyasında, erişme denemesi `myValue` devralınan bir üyesi olarak `DerivedClass2` yalnızca Assembly1 türetilmiş türleri tarafından erişilebilir olduğundan bir hata üretecektir. 
 
- Yapı üyeleri olamaz `private protected` yapısı devraldığından.  
+ Yapı üyeleri olamaz `private protected` struct devraldığından.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -70,7 +70,7 @@ ms.locfileid: "34457257"
  [Erişim değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Erişilebilirlik düzeyleri](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)   
- [Ortak](../../../csharp/language-reference/keywords/public.md)   
+ [Genel](../../../csharp/language-reference/keywords/public.md)   
  [Özel](../../../csharp/language-reference/keywords/private.md)   
  [İç](../../../csharp/language-reference/keywords/internal.md)   
- [İç sanal anahtar ile ilgili güvenlik konuları](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))
+ [İç sanal anahtar sözcükleri ile ilgili güvenlik konuları](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))

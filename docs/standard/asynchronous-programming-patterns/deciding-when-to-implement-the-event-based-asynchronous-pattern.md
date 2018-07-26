@@ -12,73 +12,73 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570984"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198886"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme
-Olay tabanlı zaman uyumsuz desen bir sınıfı zaman uyumsuz davranışı sunmaya yönelik bir desen sağlar. Bu desen girişiyle [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zaman uyumsuz davranışı gösterme için iki modeli tanımlar: zaman uyumsuz desen dayalı <xref:System.IAsyncResult?displayProperty=nameWithType> arabirimi ve olay tabanlı düzeni. Bu konu, her iki desenlerini uygulama için uygun olduğunda açıklar.  
+Olay tabanlı zaman uyumsuz desen, bir sınıfın zaman uyumsuz davranış açığa çıkarmak için bir desen sağlar. Bu düzen sunulmasıyla birlikte [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] iki deseni için zaman uyumsuz davranış gösterme tanımlar: zaman uyumsuz desen dayalı <xref:System.IAsyncResult?displayProperty=nameWithType> arabirimi ve olay-tabanlı düzeni. Bu konu, her iki desenleri uygulamak, uygun olduğunda açıklar.  
   
- İle zaman uyumsuz programlama hakkında daha fazla bilgi için <xref:System.IAsyncResult> arabirim için bkz: [olay tabanlı zaman uyumsuz desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ İle zaman uyumsuz programlama hakkında daha fazla bilgi için <xref:System.IAsyncResult> arabirim için bkz: [zaman uyumsuz programlama modeli (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
-## <a name="general-principles"></a>Genel ilkeler  
- Genel olarak, olay tabanlı zaman uyumsuz desen mümkün olduğunca kullanarak zaman uyumsuz özellikler maruz bırakmamalısınız. Ancak, olay tabanlı deseni karşılayamayan bazı gereksinimler vardır. Bu durumda, uygulamanız gerekebilir <xref:System.IAsyncResult> olay tabanlı deseni yanı sıra düzeni.  
+## <a name="general-principles"></a>Genel ilkeleri  
+ Genel olarak, olay tabanlı zaman uyumsuz desen mümkün olduğunca kullanarak zaman uyumsuz özellikler sunması gerekir. Ancak, olay tabanlı deseni karşılayamayan bazı gereksinimler vardır. Bu gibi durumlarda, uygulamanız gerekebilir <xref:System.IAsyncResult> olay tabanlı deseni yanı sıra deseni.  
   
 > [!NOTE]
->  Nadir <xref:System.IAsyncResult> da uygulanan olay tabanlı deseni uygulanması için desen.  
+>  İçin nadir olarak rastlanıyor <xref:System.IAsyncResult> da uygulanan olay-tabanlı deseni uygulanması için desen.  
   
 ## <a name="guidelines"></a>Kuralları  
- Aşağıdaki liste, olay tabanlı zaman uyumsuz desenin ne zaman uygulamak için yönergeleri açıklar:  
+ Aşağıdaki liste, olay tabanlı zaman uyumsuz desenin ne zaman uygulamalıdır yönergeleri açıklar:  
   
--   Olay tabanlı deseni varsayılan API sınıfınız için zaman uyumsuz davranışı kullanıma sunmak için kullanın.  
+-   Olay tabanlı düzeni, zaman uyumsuz davranış sınıfınız için kullanıma sunmak için varsayılan API olarak kullanın.  
   
--   Değil kullanıma <xref:System.IAsyncResult> desen sınıfınız öncelikle bir istemci uygulaması, örneğin Windows Forms kullanıldığında.  
+-   Kullanıma <xref:System.IAsyncResult> sınıfınızın bir istemci uygulama, örneğin Windows Forms öncelikli olarak kullanıldığında desen.  
   
--   Yalnızca kullanıma <xref:System.IAsyncResult> desen gereksinimlerinizi karşılamak için gerekli olduğunda. Örneğin, var olan bir API ile uyumluluk kullanıma sunmak gerektirebilecek <xref:System.IAsyncResult> düzeni.  
+-   Yalnızca kullanıma <xref:System.IAsyncResult> desen gereksinimlerinizi Karşılama konusunda gerekli olduğunda. Örneğin, var olan bir API ile uyumluluk kullanıma sunmak gerektirebilecek <xref:System.IAsyncResult> deseni.  
   
--   Değil kullanıma <xref:System.IAsyncResult> ayrıca olay tabanlı deseni gösterme olmadan düzeni.  
+-   Kullanıma <xref:System.IAsyncResult> deseni olmadan da olay-tabanlı desenini gösterme.  
   
--   Kullanıma gerekir, <xref:System.IAsyncResult> desen, Gelişmiş bir seçenek olarak bunu. Proxy nesnesi oluşturursanız, örneğin, olay tabanlı deseni oluşturmak için bir seçenek ile varsayılan üretmek <xref:System.IAsyncResult> düzeni.  
+-   Kullanımına açmanız gerekiyorsa <xref:System.IAsyncResult> desen, Gelişmiş bir seçenek olarak bunu. Bir proxy nesnesi oluşturursanız, örneğin, olay tabanlı deseni varsayılan olarak oluşturmak için bir seçenek ile üretmek <xref:System.IAsyncResult> deseni.  
   
--   Olay tabanlı deseni uygulamanızı oluşturmak, <xref:System.IAsyncResult> desen uygulaması.  
+-   Olay tabanlı deseni uygulamanızı oluşturmak, <xref:System.IAsyncResult> deseni uygulaması.  
   
--   Her iki olay tabanlı deseni kullanılmasını önlemek ve <xref:System.IAsyncResult> düzeni aynı sınıfta. Olay tabanlı deseni "daha yüksek düzey" sınıflarda kullanıma ve <xref:System.IAsyncResult> üzerinde "düzeyini düşürmek" sınıfların desen. Örneğin, olay tabanlı deseni üzerinde karşılaştırmak <xref:System.Net.WebClient> ile bileşen <xref:System.IAsyncResult> üzerinde desen <xref:System.Web.HttpRequest> sınıfı.  
+-   Her iki olay tabanlı deseni kullanılmasını önlemek ve <xref:System.IAsyncResult> deseni aynı sınıfta. Olay tabanlı deseni "yüksek düzey" sınıflarda kullanıma sunmak ve <xref:System.IAsyncResult> desen üzerinde "alt düzey" sınıfları. Örneğin, üzerinde olay-tabanlı desenini karşılaştırma <xref:System.Net.WebClient> ile bileşen <xref:System.IAsyncResult> üzerinde desen <xref:System.Web.HttpRequest> sınıfı.  
   
-    -   Olay tabanlı deseni kullanıma ve <xref:System.IAsyncResult> düzeni uyumluluk gerektirdiğinde aynı sınıfta. Örneğin, kullanan bir API zaten yayımlandı <xref:System.IAsyncResult> desen korumak gerekir <xref:System.IAsyncResult> geriye dönük uyumluluk için desen.  
+    -   Olay tabanlı deseni kullanıma sunmak ve <xref:System.IAsyncResult> deseni uyumluluk gerektirdiğinde aynı sınıfta. Örneğin, bir API kullanan zaten yayımlandı <xref:System.IAsyncResult> deseni korumak gerekir <xref:System.IAsyncResult> geriye dönük uyumluluk için desen.  
   
-    -   Olay tabanlı deseni kullanıma ve <xref:System.IAsyncResult> elde edilen nesne modeli karmaşıklık uygulamaları ayırma avantajı ağır varsa aynı sınıf içinde desen. Olay tabanlı deseni kullanılmasını önlemek üzere daha tek bir sınıftaki her iki desenleri kullanıma sunmak iyidir.  
+    -   Olay tabanlı deseni kullanıma sunmak ve <xref:System.IAsyncResult> uygulamaları ayırma avantajı elde edilen nesne modeli karmaşıklığı ağır varsa aynı sınıf desen. Olay tabanlı desenini gösterme önlemek üzere daha tek bir sınıftaki her iki desenleri göstermek daha iyidir.  
   
-    -   Her iki olay tabanlı deseni kullanıma varsa ve <xref:System.IAsyncResult> kullanım tek bir sınıf desenine <xref:System.ComponentModel.EditorBrowsableAttribute> kümesine <xref:System.ComponentModel.EditorBrowsableState.Advanced> işaretlemek için <xref:System.IAsyncResult> Gelişmiş bir özellik olarak düzeni uygulaması. Bu gibi görüntüleme için Visual Studio IntelliSense, tasarım ortamlara gösterir <xref:System.IAsyncResult> özellikleri ve yöntemleri. Bu özellikleri ve yöntemleri hala tam olarak kullanılabilir, ancak IntelliSense çalışan Geliştirici API daha anlaşılır bir görünüme sahiptir.  
+    -   Her iki olay tabanlı deseni kullanımına açmanız gerekiyorsa ve <xref:System.IAsyncResult> deseni kullanımı tek bir sınıftaki <xref:System.ComponentModel.EditorBrowsableAttribute> kümesine <xref:System.ComponentModel.EditorBrowsableState.Advanced> işaretlemek için <xref:System.IAsyncResult> Gelişmiş bir özellik olarak deseni uygulaması. Bu gibi değil görüntülemek için Visual Studio IntelliSense, tasarım ortamlara gösterir <xref:System.IAsyncResult> özellikleri ve yöntemleri. Bu özellikler ve yöntemler yine de tam olarak kullanılabilir, ancak API'sinin daha net bir görünüm IntelliSense çalışmayı Geliştirici sahiptir.  
   
-## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Olay tabanlı deseni yanı sıra IAsyncResult düzeni gösterme ölçütleri  
- Olay tabanlı zaman uyumsuz desen yukarıda açıklanan senaryoları altında birçok avantaj sahipken, performans, en önemli gereksinimi varsa bilmeniz gereken bazı dezavantajları sahip.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Olay tabanlı deseni yanı sıra IAsyncResult desenini gösterme ölçütleri  
+ Olay tabanlı zaman uyumsuz desen çok sayıda avantaj yukarıda açıklanan senaryoları altında olsa da performans ise, en önemli gereksinim, bilmeniz gereken bazı dezavantajları vardır.  
   
- Olay tabanlı deseni olmayan adres üç senaryo vardır yanı sıra <xref:System.IAsyncResult> Desen:  
+ Olay tabanlı deseni olmayan adres üç senaryo vardır ve <xref:System.IAsyncResult> Desen:  
   
 -   Bir bekleme engelleme <xref:System.IAsyncResult>  
   
--   Birçok bekleme engelleme <xref:System.IAsyncResult> nesneleri  
+-   Çoğu bekleme engelleme <xref:System.IAsyncResult> nesneleri  
   
 -   Üzerinde tamamlanması için yoklama <xref:System.IAsyncResult>  
   
- Olay tabanlı deseni kullanarak bu senaryoyu ele, ancak bunun yapılması kullanmaktan daha kullanışsız <xref:System.IAsyncResult> düzeni.  
+ Olay tabanlı deseni kullanılarak bu senaryoları karşılayabilirsiniz. ancak bunun yapılması kullanmaktan daha kullanışsız <xref:System.IAsyncResult> deseni.  
   
- Geliştiriciler sık kullandığınız <xref:System.IAsyncResult> genellikle çok yüksek performans gereksinimlerin Hizmetleri için desen. Örneğin, yoklama tamamlama senaryosu için yüksek performanslı sunucu tekniğidir.  
+ Geliştiriciler sık kullandığınız <xref:System.IAsyncResult> deseni genellikle çok yüksek performans gereksinimlerine sahip hizmetler için. Örneğin, yoklama tamamlama senaryosu için yüksek performanslı server tekniğidir.  
   
- Ayrıca, olay tabanlı deseni daha az verimli <xref:System.IAsyncResult> daha fazla nesneleri, özellikle oluşturduğundan desen <xref:System.EventArgs>, ve iş parçacıkları arasında eşitler.  
+ Ayrıca, olay tabanlı deseni daha az verimli <xref:System.IAsyncResult> daha fazla nesne, özellikle oluşturduğundan desen <xref:System.EventArgs>, ve iş parçacıkları arasında eşitler.  
   
  Aşağıdaki liste kullanmaya karar verirseniz izlemek için bazı öneriler gösterir <xref:System.IAsyncResult> Desen:  
   
--   Yalnızca kullanıma <xref:System.IAsyncResult> desen desteği özellikle gerektirdiğinde <xref:System.Threading.WaitHandle> veya <xref:System.IAsyncResult> nesneleri.  
+-   Yalnızca kullanıma <xref:System.IAsyncResult> deseni desteği özellikle gerektirdiğinde <xref:System.Threading.WaitHandle> veya <xref:System.IAsyncResult> nesneleri.  
   
--   Yalnızca kullanıma <xref:System.IAsyncResult> desen kullanan mevcut bir API olduğunda <xref:System.IAsyncResult> düzeni.  
+-   Yalnızca kullanıma <xref:System.IAsyncResult> deseni kullanan mevcut bir API'ye sahip olduğunuzda <xref:System.IAsyncResult> deseni.  
   
--   Temel bir varolan API varsa <xref:System.IAsyncResult> desen, ayrıca, bir sonraki sürümde olay tabanlı deseni gösterme göz önünde bulundurun.  
+-   Mevcut bir API'ye göre varsa <xref:System.IAsyncResult> desen, ayrıca olay tabanlı deseni, bir sonraki sürümde kullanıma sunmak isteyebilirsiniz.  
   
--   Yalnızca kullanıma <xref:System.IAsyncResult> doğrulandı yüksek performans gereksinimlerini varsa düzeni olay tabanlı bir desen karşılanamıyor ancak tarafından karşılanması <xref:System.IAsyncResult> düzeni.  
+-   Yalnızca kullanıma <xref:System.IAsyncResult> doğrulamanız yapıldı, yüksek performans gereksinimleriniz varsa, deseni, olay tabanlı deseni tarafından karşılanamıyor ancak tarafından karşılanması <xref:System.IAsyncResult> deseni.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlenecek yol: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  

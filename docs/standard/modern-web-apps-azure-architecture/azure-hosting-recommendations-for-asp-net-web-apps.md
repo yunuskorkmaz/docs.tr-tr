@@ -1,129 +1,131 @@
 ---
-title: ASP.NET Core web uygulamaları için öneriler barındırma azure
-description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | ASP.NET web uygulamaları için öneriler barındırma azure
+title: Azure barındırma önerileri için ASP.NET Core web uygulamaları
+description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Azure barındırma önerileri ASP.NET web uygulamaları için
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105715"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404534"
 ---
-# <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web uygulamaları için öneriler barındırma azure
+# <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure barındırma önerileri için ASP.NET Core web uygulamaları
 
-> "İş kılavuzları her yerde bulut (diğer adıyla SaaS) uygulamaları almak için BT departmanları atlayarak ve Dergi aboneliğinin gibi bunlar için ödeme. Ve hizmet artık gerekli olmadığında abonelik sol üst köşedeki kullanılmayan hiçbir donanım ile iptal."  
+> "Satır iş liderleri her yerde buluttan (diğer adıyla SaaS) uygulamaları almak için BT departmanları atlayarak ve magazine aboneliği yaptıkları gibi bunlar için ödeme yapma. Ve hizmet artık gerekli olmadığında, abonelik sol üst köşedeki kullanılmayan hiçbir donanım ile iptal edebilirsiniz. "  
 > _\- Daryl Plummer, Gartner analisti_
 
-## <a name="summary"></a>Özet
+İnovasyonunuz ne olursa olsun, uygulamanızın ihtiyaçlarına ve mimarisi, Windows Azure, destekleyebilir. Barındırma gereksinimlerinize statik bir Web sitesi Hizmetleri onlarca oluşan karmaşık bir uygulama olarak basit olabilir. ASP.NET Core tek parça web uygulamaları ve destekleyici hizmetler için önerilen çeşitli iyi bilinen yapılandırmaları vardır. Bu makalede bulunan önerileri barındırılması, uygulamalar, tek tek işlemleri veya veri olup tam kaynak türüne göre gruplandırılır.
 
-Ne olursa olsun, uygulamanızın gereksinimlerine ve mimari, Windows Azure bunu destekleyebilir. Barındırma gereksinimlerinize Hizmetleri düzinelerce oluşan bir son derece Gelişmiş uygulama statik web sitesine kadar basit olabilir. ASP.NET Core tek yapılı web uygulamaları ve destekleyici hizmetler için önerilen çeşitli iyi bilinen yapılandırmaları vardır. Aşağıdaki öneriler barındırılması, uygulamalar, tek tek işlemler veya veri olup tam kaynak türüne göre gruplandırılır.
-
-## <a name="web-applications"></a>Web Uygulamaları
+## <a name="web-applications"></a>Web uygulamaları
 
 Web uygulamaları ile barındırılabilir:
 
--   App Service Web Apps
+- App Service Web uygulamaları
 
--   Kapsayıcılar
+- Kapsayıcılar
 
--   Azure Service Fabric
+- Azure Service Fabric
 
--   Sanal makineler (VM'ler)
+- Sanal makineler (VM)
 
-Bu, App Service Web Apps çoğu senaryo için önerilen yaklaşım şunlardır. Mikro hizmet mimarisi için bir kapsayıcı dayalı yaklaşım veya service fabric göz önünde bulundurun. Uygulamanızı çalıştıran makineler hakkında daha fazla denetime ihtiyacınız varsa, Azure sanal makineleri göz önünde bulundurun.
+Bu App Service Web Apps için önerilen çoğu senaryo için yaklaşımdır. Mikro hizmet mimarileri için bir kapsayıcı tabanlı bir yaklaşım veya Service Fabric göz önünde bulundurun. Uygulamanızı çalıştıran makineler hakkında daha fazla denetime ihtiyacınız varsa, Azure sanal makineler göz önünde bulundurun.
 
-### <a name="app-service-web-apps"></a>App Service Web Apps
+### <a name="app-service-web-apps"></a>App Service Web uygulamaları
 
-App Service Web Apps web uygulamalarını barındırmak için en iyi duruma getirilmiş tam olarak yönetilen bir platform sağlar. Azure alır altyapınızla ilgilenirken, iş mantığına odaklanmanıza olanak tanır çalıştırın ve uygulama ölçeklendirme için gereken sunan bir platform-as-a-service(PaaS) olur. Önemli özelliklerinden bazıları App Service Web Apps:
+App Service Web Apps, web uygulamalarını barındırmak için en iyi duruma getirilmiş tam olarak yönetilen bir platform sunar. Bu Azure altyapınızla ilgilenirken, sizin işlerinize odaklanmanızı odaklanmanıza olanak tanır, çalıştırmak ve uygulamayı ölçeklendirmek gereken sunan bir hizmet (PaaS) olarak platformudur. App Service Web Apps'in temel özelliklerinden bazıları:
 
--   DevOps iyileştirmesi (sürekli tümleştirme ve teslimat, birden çok ortamları A / B testi, komut dosyası oluşturma desteği)
+- DevOps iyileştirmesi (sürekli tümleştirme ve teslim, birden çok ortama, A / B testi, komut dosyası oluşturma desteği).
 
--   Genel ölçeği ve yüksek kullanılabilirlik
+- Küresel ölçekli ve yüksek kullanılabilirlik.
 
--   SaaS platformları ve şirket içi verilerinizi bağlantılar
+- SaaS platformları ve şirket içi verilerinizi bağlantılar.
 
--   Güvenlik ve uyumluluk
+- Güvenlik ve uyumluluk.
 
--   Visual Studio tümleştirmesi
+- Visual Studio tümleştirmesi.
 
-Azure uygulama hizmeti, çoğu web uygulamaları için en iyi seçimdir. Dağıtım ve yönetim platformuyla doğrudan tümleşik, siteleri hızlı bir şekilde yüksek trafik yükleri işlemek için ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Azure uygulama hizmeti var olan sitelere bir çevrimiçi geçiş aracı ile kolayca Web uygulama Galeriden bir açık kaynak uygulama kullanın ya da framework ve tercih ettiğiniz Araçları'nı kullanarak yeni bir site oluşturun taşıyabilirsiniz. WebJobs özelliğini arka plan işi uygulama hizmeti web uygulamanızı işleme eklemek kolaylaştırır.
+Azure App Service, çoğu web uygulaması için en iyi seçenektir. Dağıtım ve yönetim süreçleri platform ile tümleştirilmiştir, siteler hızla yüksek trafik yüklerinin altından kalkacak şekilde ölçeklendirilebilir ve yerleşik Yük Dengeleme ve trafik Yöneticisi yüksek kullanılabilirlik sağlar. Bir çevrimiçi geçiş aracı ile kolayca Azure App Service için var olan siteler, Web uygulamaları Galerisi'nden açık kaynaklı uygulama kullanma veya çerçevesi ve tercih ettiğiniz araçları kullanarak yeni bir site oluşturmak taşıyabilirsiniz. WebJobs özelliği, App Service web uygulamanıza işleme arka plan işinin eklemenizi kolaylaştırır.
 
-### <a name="containers-and-azure-container-service"></a>Kapsayıcılar ve Azure kapsayıcı hizmeti
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes hizmeti
 
-Azure kapsayıcı hizmeti oluşturmak, yapılandırmak ve sanal makinelerin kapsayıcılı uygulamaları çalıştırmak için yapılandırılmış bir kümeyi yönetmek için daha basit hale getirir. En iyi duruma getirilmiş bir popüler açık kaynak planlama ve düzenleme araçları yapılandırmasını kullanır. Bu, varolan yeteneklerinizi kullanın veya Microsoft Azure üzerinde kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlığı büyük ve artan bir gövdesi üzerine çizmek sağlar.
+Azure Kubernetes Service (AKS), barındırılan Kubernetes ortamınızı hızla ve kolayca kapsayıcı düzenleme uzmanlığı gerektirmeden kapsayıcıya alınmış uygulamaları dağıtmayı ve yönetmeyi yönetir. Sağlama, yükseltme ve uygulamalarınızı çevrimdışı duruma getirmeden kaynakları isteğe bağlı olarak ölçeklendirme Süren işlemlerin ve bakımın yükünü de kaldırır.
 
-Azure kapsayıcı hizmeti oluşturmak, yapılandırmak ve sanal makinelerin kapsayıcılı uygulamaları çalıştırmak için yapılandırılmış bir kümeyi yönetmek için daha basit hale getirir. En iyi duruma getirilmiş bir popüler açık kaynak planlama ve düzenleme araçları yapılandırmasını kullanır. Bu, varolan yeteneklerinizi kullanın veya Microsoft Azure üzerinde kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için topluluk uzmanlığı büyük ve artan bir gövdesi üzerine çizmek sağlar.
+AKS, karmaşıklığı ve azure'a SORUMLULUĞUN çoğunu devrederek bir Kubernetes kümesi yönetmenin işlemsel ek yükü azaltır. Barındırılan bir Kubernetes hizmeti, sistem durumu izleme ve sizin için bakım gibi kritik görevleri Azure tanıtıcıları. Ayrıca, yalnızca aracı düğümleri için yönetici değil, kümeleri içinde ödeme. Yönetilen bir Kubernetes hizmeti olarak Aks Aşağıdakileri sağlar:
 
-Azure kapsayıcı hizmeti tek amacı, açık kaynaklı araçları ve bugün Microsoft'un müşterileri arasında popüler teknolojileri kullanarak bir kapsayıcı barındırma ortamı sağlamaktır. Bu amaçla, Azure kapsayıcı hizmeti standart API uç noktaları için seçilen orchestrator (DC/OS, Docker Swarm veya Kubernetes) kullanıma sunar. Bu uç noktalar kullanarak, bu Uç noktalara Konuşmayı yeteneğine sahip herhangi bir yazılım yararlanabilirsiniz. Örneğin, Docker Swarm uç nokta söz konusu olduğunda, Docker komut satırı arabirimi (CLI) kullanmayı seçebilirsiniz. DC/OS için DCOS CLI seçebilirsiniz. Kubernetes için kubectl seçebilirsiniz. Şekil 11-1, kapsayıcı kümelerinizi yönetmek için bu uç noktaları nasıl kullanacağınız gösterir.
+- Otomatik Kubernetes sürüm yükseltmeleri ve düzeltme eki uygulama.
+- Kolay küme ölçeklendirme.
+- Kendi kendini onaran barındırılan denetim düzlemi (Yöneticiler).
+- Maliyet tasarrufu - yalnızca çalışan aracı havuz düğümleri için ödeme yaparsınız.
 
-![](./media/image11-1.png)
-
-**Şekil 11-1.** Docker, Kubernetes veya DC/OS uç noktaları ile Azure kapsayıcı Hizmeti Yönetimi.
+AKS kümenizde düğümleri yönetimi işlemleri Azure ile artık birçok el ile Küme yükseltme gibi görevleri gerekir. Azure Bu kritik bakım görevlerini sizin için gerçekleştirdiğinden, AKS doğrudan erişim sağlamaz (gibi SSH ile) kümeye.
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Yeni bir uygulama oluşturma ya da mevcut bir uygulamayı mikro hizmet mimarisi kullanmak üzere yeniden yazmadan Service Fabric iyi bir seçimdir. Paylaşılan bir havuzunda makineleri çalıştırmak, uygulamaları küçük başlayın ve büyük ölçekli yüzlerce veya binlerce gerektiğinde makinelerin büyüyebileceği. Durum bilgisi olan hizmetler tutarlı ve güvenilir bir şekilde uygulama durumunu depolamak kolaylaştırır ve Service Fabric otomatik olarak hizmet bölümlendirme, ölçeklendirme ve kullanılabilirlik tarafından yönetilir. Service Fabric Webapı açık Web arabirimi ile .NET (OWIN) ve ASP.NET Core için de destekler. Uygulama hizmeti ile karşılaştırıldığında, Service Fabric ayrıca daha fazla denetime ya da doğrudan erişim, altyapının sağlar. Sunucu başlangıç görevleri yapılandırmak veya sunucularınızı uzaktan kullanabilirsiniz.
+Yeni bir uygulama oluşturuyor ya da bir mikro hizmet mimarisi kullanan mevcut bir uygulamayı yeniden yazma, Service Fabric iyi bir seçimdir. Paylaşılan makine havuzu üzerinde çalışan, uygulamalar küçükten başlayabilir ve yüzlerce veya binlerce makineye gerektiği gibi makineyle muazzam bir ölçeğe uygun şekilde büyütüldüğünü görürsünüz. Durum bilgisi olan hizmetler uygulama durumunu tutarlı ve güvenilir bir şekilde depolamak kolaylaştırır ve Service Fabric otomatik olarak hizmet bölümleme, ölçeklendirme ve kullanılabilirlik sizin yerinize yönetir. Service Fabric .NET (OWIN) ve ASP.NET Core Webapı açık Web arabirimine sahip de destekler. App Service ile karşılaştırıldığında Service Fabric ayrıca daha fazla denetime veya doğrudan erişim için temel alınan altyapı sağlar. Siz sunucularınıza uzaktan bağlanabilir veya sunucu başlatma görevleri yapılandırabilirsiniz.
 
-### <a name="azure-virtual-machines"></a>Azure sanal makineler
+### <a name="azure-virtual-machines"></a>Azure sanal makineleri
 
-Uygulama hizmeti veya Service Fabric çalıştırmak için önemli değişiklikler gerektiren var olan bir uygulamanız varsa, buluta geçiş basitleştirmek için sanal makineleri seçebilir. Ancak, doğru şekilde güvenli hale getirme, yapılandırma ve bakımını yapmak VM'ler gerektirir çok daha fazla zaman ve Azure App Service ve Service Fabric karşılaştırıldığında BT uzmanlık. Azure sanal makineleri düşünüyorsanız, düzeltme eki, güncelleştirme ve VM ortamınızı yönetmek için gerekli devam eden bakım çaba dikkate emin olun. Azure sanal makinelerin App Service ve Service Fabric Platform olarak-hizmet (Paas) durumdayken-olarak-hizmet altyapı (Iaas) şeklindedir.
+App Service veya Service Fabric çalıştırmak için önemli değişiklikler gerektirecek bir var olan bir uygulamanız varsa, buluta geçirme basitleştirmek için sanal makineleri seçebilirsiniz. Ancak, doğru yapılandırmak, güvenliğini sağlamak ve bakımını yapmak Vm'leri gerektirir çok daha fazla zaman ve IT uzmanlığı için Azure App Service ve Service Fabric karşılaştırması. Azure sanal makineleri düşünüyorsanız, düzeltme eki uygulama, güncelleştirme ve VM ortamınızı yönetmek için gereken sürekli bir bakım çabası dikkate emin olun. Azure sanal makineleri olan altyapı (Iaas), hizmet olarak App Service ve Service Fabric PaaS çalışırken.
 
 #### <a name="feature-comparison"></a>Özellik karşılaştırması
 
-| Uygulama hizmeti özelliği | Service Fabric | Sanal makine |
-|---------|----------|----------|
-| Neredeyse anında dağıtım | X | X | |
-| Daha büyük makinelere dağıtın olmadan ölçeği | X | X | |
-| İçerik ve yapılandırma örnekleri paylaşır; gereksiz yeniden dağıtın veya ölçeklendirdiğinizde yeniden yapılandırın | X | X | |
-| Birden çok dağıtım ortamı (üretim, hazırlama) | X | X | |
-| Otomatik işletim sistemi güncelleştirme yönetimi | X | | |
-| Sorunsuz 32/64 bit platformlarda arasında geçiş yapma | X | | |
-| Git, FTP ile kod dağıtma | X | | X |
-| WebDeploy koduyla dağıtma | X | | X |
-| Kod TFS ile Dağıt | X | X | X |
-| Ana bilgisayar web veya web hizmeti katmanı çok katmanlı mimarisi | X | X | X |
-| Hizmet veri yolu, depolama, SQL veritabanı gibi Azure hizmetlerine erişim | X | X | X |
-| Tüm özel MSI yükleme | | X | X |
+| Özellik                                                                                    | App Service | Kapsayıcılar (AKS) | Service Fabric | Sanal makine |
+| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
+| Neredeyse anında dağıtım                                                                    | X           | X                | X              |                 |
+| Yeniden dağıtmadan daha büyük makinelere ölçeklendirme                                               | X           | X                | X              |                 |
+| Örnekleri içeriği ve yapılandırmayı paylaşır; yeniden dağıtın veya ölçeklendirme RECONFIGURE gerek | X           | X                | X              |                 |
+| Birden çok dağıtım ortamı (üretim, hazırlama)                                     | X           | X                | X              |                 |
+| Otomatik işletim sistemi güncelleştirme yönetimi                                                             | X           | X                |                |                 |
+| Sorunsuz 32/64 bit platformlar arasında geçiş yapma                                             | X           | X                |                |                 |
+| Git ve FTP ile kod dağıtma                                                                  | X           | X                |                | X               |
+| WebDeploy ile kod dağıtma                                                                 | X           | X                |                | X               |
+| TFS ile kod dağıtma                                                                       | X           | X                | X              | X               |
+| Barındırma web veya çok katmanlı mimarinin web hizmet katmanı                                    | X           | X                | X              | X               |
+| Service Bus, depolama, SQL veritabanı gibi Azure hizmetlerine erişim                              | X           | X                | X              | X               |
+| Herhangi bir özel MSI'yi yükleme                                                                     |             | X                | X              | X               |
 
 ## <a name="logical-processes"></a>Mantıksal işlemleri
 
-Uygulama geri kalanından ayrılmış ayrı mantıksal işlemlerin, "sunucusuz" bir şekilde Azure işlevleri için bağımsız olarak dağıtılabilir. Azure işlevleri yalnızca çalıştırmak için uygulamayı veya altyapı hakkında endişelenmeden belirli bir sorun için gereken kod yazmanıza izin verir. Programlama dilleri, C dahil olmak üzere çeşitli arasından seçim yapabilirsiniz\#, F\#, Node.js, Python ve PHP, görev için en verimli dil elinizdeki çekme olanak sağlar. Bulut tabanlı çoğu çözümleri gibi kullanımınız yalnızca zaman miktarı için ödeme ve gerektiğinde ölçeği Azure işlevleri güvenebilir.
+Uygulama geri kalanından birbirinden ayrı mantıksal işlemlerin "sunucusuz" bir şekilde Azure işlevleri için bağımsız olarak dağıtılabilir. Azure işlevleri yalnızca çalıştırmak için uygulama veya altyapı hakkında endişelenmeden belirli bir sorun için ihtiyacınız olan kod yazmanıza olanak sağlar. Programlama dilleri, C de dahil olmak üzere çeşitli arasından seçim yapabilirsiniz\#, F\#, Node.js, Python ve PHP, eldeki en verimli dil görev için çekme etmenize imkan sağlar. Çoğu bulut tabanlı çözümler gibi kullanımınız yalnızca zaman miktarı ödeme yapar ve Azure işlevleri'nin ölçeği gerektikçe güvenebilir.
 
 ## <a name="data"></a>Veri
 
-Uygulamanız için uygun veri sağlayıcısı için söz konusu verileri kullanabilmesi için azure çok çeşitli veri depolama seçenekleri sunar.
+Uygulamanızı uygun veri sağlayıcısı için söz konusu verileri kullanabilmesi için azure, çok çeşitli veri depolama seçenekleri sunar.
 
-İşlem, ilişkisel veri için en iyi seçenek Azure SQL veritabanlarıdır. Yüksek performans okuma çoğunlukla verileri için bir Azure SQL veritabanı tarafından yedeklenen bir Redis önbelleği iyi bir çözümdür.
+İşlem, ilişkisel veri, Azure SQL veritabanı en iyi seçenektir. Yüksek performanslı okuma çoğunlukla veriler için bir Azure SQL veritabanı tarafından desteklenen bir Redis önbelleği iyi bir çözümdür.
 
-Yapılandırılmamış JSON verilerini çeşitli şekillerde, BLOB'ları veya Azure Storage tablolarda SQL veritabanı sütunlarından documentdb'ye depolanabilir. Bu, DocumentDB işlevselliği sorgulama en iyi sunar ve çok sayıda sorgulama desteklemelidir JSON tabanlı belgeler için önerilen bir seçenektir.
+Yapılandırılmamış JSON verilerini çeşitli şekillerde, Blobları veya tabloları, Azure depolama, SQL veritabanı sütunlarından documentdb'ye depolanabilir. Bu, DocumentDB işlevi sorgulanırken en iyi sunar ve çok sayıda sorgulama desteklemelidir, JSON tabanlı belgeleri için önerilen seçenektir.
 
-Uygulama davranışına düzenlemek için kullanılan geçici komut veya olay tabanlı verileri Azure hizmet veri yolu veya Azure depolama kuyrukları kullanabilirsiniz. Azure depolama veri Yolu'nun daha fazla esneklik sunar ve önemsiz olmayan ileti içinde ve uygulamalar arasında için önerilen hizmetidir.
+Uygulama davranışını düzenlemek için kullanılan geçici komutu veya olay tabanlı verileri, Azure Service Bus veya Azure depolama kuyruklarını kullanabilirsiniz. Azure depolama veri yolu, daha fazla esneklik sunar ve önemsiz içinde ve uygulamalar arasında ileti için önerilen hizmetidir.
 
 ## <a name="architecture-recommendations"></a>Mimari önerileri
 
-Uygulamanızın gereksinimlerine mimarisinin dikte. Birçok farklı Azure Hizmetleri doğru olanı önemli bir karardır seçme kullanılabilir. Microsoft ortak senaryolar için iyileştirilen tipik mimarileri tanımlamaya yardımcı olmak için başvuru mimarileri Galerisi sunar. Maps yakından için uygulamanızın gereksinimlerine ya da en az sunduğu bir başlangıç noktası bir referans mimarisi bağlayabilirsiniz.
+Uygulamanızın gereksinimlerini mimarisinin belirleyen unsurlar olmalıdır. Birçok farklı Azure hizmetlerini kullanılabilir. Doğru olanı seçme önemli bir karardır. Microsoft, yaygın senaryolar için en iyi duruma getirilmiş tipik mimariler belirlemenize yardımcı olması için başvuru mimarileri Galerisi sunar. Bir başvuru mimarisi, haritalar, uygulamanızın gereksinimleri için yakından veya daha az sunar, başlangıç noktası bulabilirsiniz.
 
-Şekil 11-2 bir örnek referans mimarisi gösterilir. Bu diyagramda, pazarlama için en iyi hale getirilmiş bir Sitecore içerik yönetim sistemi Web sitesi için önerilen mimarisi yaklaşımı açıklanmaktadır.
+Şekil 11-2, bir örnek başvuru mimarisini gösterir. Bu diyagramda, pazarlama için en iyi duruma getirilmiş Sitecore içerik yönetim sistemi Web sitesi için önerilen mimari bir yaklaşım açıklanmaktadır.
 
 ![](./media/image11-2.png)
 
-**Şekil 11-2.** Web sitesi referans mimarisi pazarlama Sitecore.
+**Şekil 11-1.** Sitecore pazarlama Web sitesi başvuru mimarisi.
 
-**Başvuruları – Azure önerileri barındırma**
+**Başvuruları – Azure barındırma önerileri**
 
--   Azure çözüm Architectures\
-    <https://azure.microsoft.com/solutions/architecture/>
+- Azure çözüm Architectures\
+  <https://azure.microsoft.com/solutions/architecture/>
 
--   Azure Geliştirici Guide\
-    <https://azure.microsoft.com/campaigns/developer-guide/>
+- Azure Geliştirici Guide\
+  <https://azure.microsoft.com/campaigns/developer-guide/>
 
--   Azure uygulama hizmeti nedir? \
-    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
+- Web Apps overview\
+  <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
--   Azure uygulama hizmeti, sanal makineleri, Service Fabric ve Cloud Services Comparison\
-    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Azure App Service, sanal makineler, Service Fabric ve Cloud Services comparison\
+  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+
+- Azure Kubernetes Service'i (AKS) giriş \
+  <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
 [Önceki](development-process-for-azure.md)

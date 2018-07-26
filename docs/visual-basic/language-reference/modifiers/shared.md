@@ -11,46 +11,46 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76d999bfe3f7ae5205cb9486e040c1d6191b78c
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143537"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
-Bir veya daha fazla bildirilen programlama öğeleri ile bir sınıf veya yapı büyük ve değil sınıf veya yapı belirli bir örneği ile ilişkili olduğunu belirtir.  
+Bir veya daha fazla bildirilmiş programlama öğesine bir sınıf veya yapı büyük ile değil, belirli bir sınıfın veya yapının örneği ile ilişkili olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
-## <a name="when-to-use-shared"></a>Ne zaman kullanılacağı paylaşılan  
- Bir sınıf veya yapı üyesi paylaşımı kullanılabilir hale getirir, her örneği için yerine *paylaşılmayan*, burada her örneğinin kendi kopyasını tutar. Bir değişkenin değeri uygulamanın tümünü uygulanıyorsa, örneğin, kullanışlıdır. Olması için bu değişkeni bildirirseniz `Shared`, ardından tüm örnekleri aynı depolama konumuna erişim ve bir örnek değişkenin değeri değişirse, tüm örnekler güncelleştirilmiş değeri erişim.  
+## <a name="when-to-use-shared"></a>Paylaşılan ne zaman kullanılır?  
+ Bir sınıf veya yapı üyesi paylaşımı kullanılabilir hale getirir, her örnek için yerine *paylaşılmayan*, burada her örnek kendi kopyasını tutar. Bir değişkenin değeri uygulamanın tamamı için geçerliyse bu örneğin, kullanışlıdır. Olması için bu değişken bildirirseniz `Shared`, ardından tüm örnekleri aynı depolama konumu erişmek ve bir örnek, değişkenin değeri değişirse, güncelleştirilmiş değeri tüm örneklere erişmek.  
   
- Paylaşım erişim düzeyi üyenin değiştirmez. Örneğin, bir sınıf üyesi paylaşılabilir ve özel (sınıf içinde erişilebilir yalnızca gelen), ya da paylaşılmayan hem de genel. Daha fazla bilgi için bkz: [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Paylaşımı bir üye erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesinin paylaşılabilir ve özel (sınıf içinde erişilebilir yalnızca), veya paylaşılmayan hem de ortak. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Bildirim bağlamı.** Kullanabileceğiniz `Shared` yalnızca modülü düzeyinde. Bu bildirimi bağlamının anlamına gelir bir `Shared` öğesi bir sınıf veya yapı olması ve kaynak dosyasını, ad alanı veya yordam olamaz.  
+-   **Bildirim bağlamı.** Kullanabileceğiniz `Shared` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `Shared` öğesi bir sınıf veya yapı olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
   
--   **Birleşik değiştirici.** Belirtemeyeceğiniz `Shared` ile birlikte [geçersiz kılmaları](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), veya [ Statik](../../../visual-basic/language-reference/modifiers/static.md) aynı bildirimi.  
+-   **Birleşik değiştiriciler.** Belirtemezsiniz `Shared` ile birlikte [geçersiz kılmalar](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), veya [ Statik](../../../visual-basic/language-reference/modifiers/static.md) aynı bildirimde.  
   
--   **Erişme.** Sınıf veya yapı adıyla birlikte, belirli bir sınıf ya da yapısı örneği değişken adını bilgisayardı niteleme tarafından paylaşılan bir öğenin erişin. Hatta sınıfı veya paylaşılan üyelerine erişmek için yapısının bir örneğini oluşturmanız gerekmez.  
+-   **Erişme.** Sınıf veya yapı adı ile belirli bir örneği, sınıfın veya yapının değişken adı ile değil niteleme tarafından paylaşılan bir öğe erişin. Bile bir sınıf veya yapı paylaşılan üyelerine erişmek için bir örneğini oluşturmak gerekmez.  
   
-     Aşağıdaki örnek paylaşılan yordam çağrıları <xref:System.Double.IsNaN%2A> tarafından sunulan <xref:System.Double> yapısı.  
+     Aşağıdaki örnek, paylaşılan bir yordam çağrıları <xref:System.Double.IsNaN%2A> tarafından kullanıma sunulan <xref:System.Double> yapısı.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Örtük paylaşımı.** Kullanamazsınız `Shared` değiştiricisi bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md), ancak sabitleri örtük olarak paylaşılan. Benzer şekilde, olması için bir modül veya üyesi bir arabirim bildiremezsiniz `Shared`, ancak örtük olarak paylaşılır.  
+-   **Örtük paylaşma.** Kullanamazsınız `Shared` değiştiricisini bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md), ancak sabitleri örtük olarak paylaşılır. Benzer şekilde, bir üyesinin bir modül veya bir arabirim bildiremezsiniz `Shared`, ancak örtük olarak paylaşılır.  
   
 ## <a name="behavior"></a>Davranış  
   
--   **depolama alanı.** Yalnızca kaç veya birkaç örneği olsun, kendi sınıf veya yapı oluşturduktan sonra bir paylaşılan değişken veya olay bellekte depolanır. Benzer şekilde, bir paylaşılan bir yordam veya özellik, yerel değişkenleri yalnızca bir kümesi tutar.  
+-   **Depolama alanı.** Yalnızca ne kadar ya da birkaç örnek ne olursa olsun, kendi sınıf veya yapı oluşturduktan sonra paylaşılan bir değişken veya olay bellekte depolanır. Benzer şekilde, paylaşılan bir yordam veya özellik yerel değişkenler yalnızca bir kümesini içerir.  
   
--   **Bir örnek değişkeni erişme.** Belirli bir sınıf ya da yapısı örneği içeren bir değişkeni adı ile niteleme tarafından paylaşılan bir öğesine erişmek mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturur ve sınıf veya yapı adı değişkeni yerine üzerinden erişim sağlar.  
+-   **Bir örnek değişkeni erişme.** Belirli bir alt sınıf veya yapının örneğini içeren bir değişken adını nitelendirme tarafından paylaşılan bir öğeye erişmeyi mümkündür. Bu genellikle beklendiği gibi çalışır, ancak derleyici bir uyarı iletisi oluşturuyor ve sınıf veya yapı adı yerine değişken üzerinden erişim sağlar.  
   
--   **Bir örneği ifade yoluyla erişme.** Paylaşılan bir öğe, sınıf veya yapı örneğini döndüren bir ifadeye erişirseniz, derleyici ifade değerlendirme yerine sınıf veya yapı adı ile erişim sağlar. Diğer eylemlerin yanı sıra örneği döndüren gerçekleştirmek için ifade amaçlıyorsanız bu beklenmeyen sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.  
+-   **Bir örnek ifade yoluyla erişme.** Paylaşılan öğe, bir sınıfın veya yapının örneğini döndüren bir ifade erişirseniz, derleyici ifadenin değerlendirilmesi yerine sınıf veya yapı adı aracılığıyla erişim sağlar. Bu, diğer eylemlerin yanı sıra örneği döndüren gerçekleştirmek için ifade hedeflediyseniz beklenmeyen sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.  
   
-    ```  
+    ```vb
     Sub main()  
         shareTotal.total = 10  
         ' The preceding line is the preferred way to access total.  
@@ -76,9 +76,9 @@ Bir veya daha fazla bildirilen programlama öğeleri ile bir sınıf veya yapı 
     End Class  
     ```  
   
-     Önceki örnekte derleyici bir uyarı iletisi kodu paylaşılan değişken erişen her iki kez oluşturur `total` bir örnek üzerinden. Her durumda kolaylaştırır sınıfı aracılığıyla doğrudan erişim `shareTotal` ve kullanmayan herhangi bir örneğini kullanın. Yordam hedeflenen çağrısı durumunda `returnClass`, bu, hatta oluşturmaz yapılan bir çağrı anlamına gelir `returnClass`, "olarak adlandırılan işlevi returnClass()" görüntüleme başka bir işlem gerçekleştirilemiyor.  
+     Önceki örnekte, derleyici bir uyarı iletisi kod erişen paylaşılan değişkeni iki kez oluşturur `total` bir örnek üzerinden. Her durumda, sınıf üzerinden doğrudan erişim sağlar `shareTotal` ve kullanmayan herhangi bir örneğini kullanın. Hedeflenen çağrı yordam söz konusu olduğunda `returnClass`, bu, hatta oluşturmaz çağrısı anlamına gelir `returnClass`, "adlı işlevi returnClass()" görüntülemenin başka bir işlem gerçekleştirilemiyor.  
   
- `Shared` Değiştiricisi bu bağlamlarında kullanılabilir:  
+ `Shared` Bu bağlamda değiştirici kullanılabilir:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

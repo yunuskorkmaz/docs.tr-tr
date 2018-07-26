@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741899"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874929"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; öğesi (ağ ayarları)
-Teslim biçimi, teslim yöntemini yapılandırır ve e-postaları göndermek için adresinden.  
+Teslim biçimini, teslim yöntemini yapılandırır ve Kimden e-postaları gönderme için adresi.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -45,31 +45,31 @@ Teslim biçimi, teslim yöntemini yapılandırır ve e-postaları göndermek iç
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`deliveryFormat`|Giden e-postalar için teslim biçimi belirtir. SevenBit ve uluslararası bunun kabul edilebilir değerlerdir.|  
-|`deliveryMethod`|E-postalar için teslim yöntemini belirtir. Ağ, pickupDirectoryFromIis ve specifiedPickupDirectory bunun kabul edilebilir değerlerdir.|  
-|`from`|Belirtir giden e-posta adresinden.|  
+|`deliveryFormat`|Giden e-postalar için teslim etme biçimini belirtir. Kabul edilebilir değerler şunlardır: SevenBit ve uluslararası ' dir.|  
+|`deliveryMethod`|E-postalar için teslim etme yöntemini belirtir. Ağ, Pickupdirectoryfromıis ve SpecifiedPickupDirectory bunun kabul edilebilir değerlerdir.|  
+|`from`|Belirtir giden e-postalar için adresinden.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Basit Posta Aktarım Protokolü (SMTP) sunucusunun yerel dizin yapılandırır.|  
-|`network`|Harici bir SMTP sunucusu için ağ seçenekleri yapılandırır.|  
+|`specifiedPickupDirectory`|Bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için yerel dizini yapılandırır.|  
+|`network`|Dış SMTP sunucusu ağ seçeneklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |**Öğesi**|**Açıklama**|  
 |-----------------|---------------------|  
-|[\<mailSettings > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Posta gönderme seçenekleri yapılandırır.|  
+|[\<mailSettings > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametreleri belirtir.  
+ Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

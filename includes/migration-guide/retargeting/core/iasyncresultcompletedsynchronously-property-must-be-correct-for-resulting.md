@@ -1,9 +1,9 @@
-### <a name="iasyncresultcompletedsynchronously-property-must-be-correct-for-the-resulting-task-to-complete"></a>IAsyncResult.CompletedSynchronously özelliği elde edilen görevinin tamamlanması için doğru olmalıdır
+### <a name="iasyncresultcompletedsynchronously-property-must-be-correct-for-the-resulting-task-to-complete"></a>IAsyncResult.CompletedSynchronously özelliği sonuç görevinin tamamlanması doğru olmalıdır
 
 |   |   |
 |---|---|
-|Ayrıntılar|TaskFactory.FromAsync, uygulanması çağrılırken <xref:System.IAsyncResult.CompletedSynchronously> elde edilen görevinin tamamlanması için doğru olmalıdır. Diğer bir deyişle, özelliği true ise ve yalnızca uygulama eşzamanlı olarak tamamlandı, döndürmesi gerekir. Daha önce özellik denetlenmedi.|
-|Öneri|Varsa <xref:System.IAsyncResult?displayProperty=name> uygulamaları doğru dönmek için doğru <xref:System.IAsyncResult.CompletedSynchronously?displayProperty=name> özelliği yalnızca kesme yok gözlenen sonra eşzamanlı olarak, tamamlanmış bir görevi zaman. Kullanıcıların gözden geçirmeniz gereken <xref:System.IAsyncResult?displayProperty=name> uygulamaları oldukları (varsa), doğru zaman uyumlu olarak ya da olmasın tamamlanan bir görev olup olmadığını değerlendirmek emin olmak için.|
+|Ayrıntılar|TaskFactory.FromAsync, uygulanması çağrılırken <xref:System.IAsyncResult.CompletedSynchronously> özelliği, sonuçta elde edilen görev için doğru olmalıdır. Diğer bir deyişle, özelliği true ise ve sadece uygulama eşzamanlı olarak tamamlanırsa, döndürmesi gerekir. Daha önce özellik denetlenmedi.|
+|Öneri|Varsa <xref:System.IAsyncResult?displayProperty=name> uygulamaları doğru döndürmek için doğru <xref:System.IAsyncResult.CompletedSynchronously?displayProperty=name> özelliği yalnızca kesme yok gözlemlenen sonra zaman uyumlu olarak, tamamlanan bir görev oluşturulduğunda. Kullanıcılar gözden geçirmeniz gereken <xref:System.IAsyncResult?displayProperty=name> uygulamaları, doğru olmayan ya da zaman uyumlu olarak tamamlanan bir görev olup olmadığını değerlendirmek emin olmak için (varsa) sahip oldukları.|
 |Kapsam|Kenar|
 |Sürüm|4,5|
 |Tür|Yeniden hedefleme|

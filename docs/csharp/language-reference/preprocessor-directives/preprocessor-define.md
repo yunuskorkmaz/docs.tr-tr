@@ -1,20 +1,20 @@
 ---
-title: '#(C# Başvurusu)'
-ms.date: 07/20/2015
+title: '#tanımlama (C# Başvurusu)'
+ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143485"
 ---
 # <a name="define-c-reference"></a>#define (C# Başvurusu)
-Kullandığınız `#define` bir simge tanımlamak için. Geçirilen ifade olarak simgenin kullandığınızda [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ifade için yönerge, değerlendirecek `true`, aşağıdaki örnekte gösterildiği gibi:  
+Kullandığınız `#define` simge tanımlamak için. Geçirilen ifade olarak sembol kullanırken [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) yönergesi, ifade için değerlendirilecek olan `true`aşağıdaki örnekte gösterildiği gibi:  
  
  ```csharp
  #define DEBUG
@@ -23,19 +23,19 @@ Kullandığınız `#define` bir simge tanımlamak için. Geçirilen ifade olarak
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  `#define` Yönergesi, genellikle C ve C++ gerçekleştirilir gibi sabit değerleri bildirmek için kullanılamaz. C# sabitleri en iyi sınıfta veya yapı statik üyeleri tanımlanır. Bu tür birkaç sabitleri varsa, bunları tutmak için ayrı bir "Sabitleri" sınıf oluşturmayı düşünün.  
+>  `#define` Yönergesi, genellikle C ve C++ içinde olduğu gibi sabit değerler bildirmek için kullanılamaz. C# içinde sabitleri en iyi bir sınıfın veya yapının üyeleri statik olarak tanımlanır. Birkaç sabitiniz varsa, bunları tutmak için ayrı bir "Sabitler" sınıfı oluşturmayı göz önünde bulundurun.  
   
- Simgeler, derleme için koşulları belirtmek için kullanılabilir. Ya da simgesiyle için test edebilirsiniz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Aynı zamanda `conditional` koşullu derleme gerçekleştirmek için öznitelik.  
+ Derleme koşullarını belirtmek için simgeler kullanılabilir. Sembolü ile ya da test [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Ayrıca `conditional` koşullu derleme gerçekleştirmek için özniteliği.  
   
- Bir simge tanımlayabilirsiniz, ancak bir sembol için bir değer atayamazsınız. `#define` Yönergesi de önişlemci yönergeleri olmayan herhangi bir yönerge kullanmadan önce dosyada görünmelidir.  
+ Bir simge tanımlayabilir ancak bir simgeye değer atayamazsınız. `#define` Önişlemci yönergesi de olmayan yönergeleri kullanmadan önce yönergesinin dosyada görünmesi gerekir.  
   
- Ayrıca, bir simge ile tanımlayabilirsiniz [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) derleyici seçeneği. İle bir simge tanımlarını Kaldır [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Ayrıca bir simge tanımlayabilirsiniz [-tanımlama](../../../csharp/language-reference/compiler-options/define-compiler-option.md) derleyici seçeneği. Sahip bir simge tanımlarını Kaldır [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- İle tanımlayan bir sembol `/define` veya `#define` aynı ada sahip bir değişken çakışmayan. Diğer bir deyişle, önişlemci yönergesi için bir değişken adı geçirilmemelidir ve bir simge yalnızca önişlemci yönergesi değerlendirilebilir.  
+ İle tanımladığınız bir sembol `-define` veya `#define` aynı ada sahip bir değişkenle çakışmaz. Diğer bir deyişle, bir değişken adı bir önişlemci yönergesine geçmemiş olmalıdır ve bir simge yalnızca bir önişlemci yönergesince değerlendirilebilir.  
   
- Kullanılarak oluşturulmuş bir simge kapsamını `#define` simgenin tanımlanmıştı dosyasıdır.  
+ Kullanılarak oluşturulan bir simgenin kapsamı `#define` simgenin tanımlandığı dosyadır.  
   
- Aşağıdaki örnekte gösterildiği gibi konulmalıdır `#define` dosyanın üst kısmındaki yönergeleri.  
+ Aşağıdaki örnekte gösterildiği gibi yerleştirmelisiniz `#define` yönergelerini dosyanın üst.  
   
 ```csharp  
 #define DEBUG  
@@ -61,7 +61,7 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- Bir simge tanımlarını Kaldır konusunda bir örnek için bkz: [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Bir sembolün tanımını kaldırmaya ilişkin bir örnek için bkz. [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# başvurusu](../../../csharp/language-reference/index.md)  

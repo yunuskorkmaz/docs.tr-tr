@@ -1,175 +1,92 @@
 ---
-title: HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
+title: İle Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
+description: Polly ile HttpClientFactory HTTP hatalarını işlemek hakkında bilgi edinin
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/10/2018
+ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106937"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874903"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>HTTP çağrısı deneme üstel geri alma ile Polly ile uygulama
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ve Polly üstel geri alma ile HTTP çağrı yeniden uygulayın
 
-Açık kaynak gibi daha gelişmiş .NET kitaplıklarına yararlanmak için yeniden deneme üstel geri alma ile için önerilen yaklaşım olan [Polly](https://github.com/App-vNext/Polly) kitaplığı.
+Açık kaynak gibi daha gelişmiş .NET kitaplıkları yararlanmak için üstel geri alma ile yeniden denemeler için önerilen bir yaklaşım olan [Polly kitaplığını](https://github.com/App-vNext/Polly).
 
-Polly esnekliği ve geçici hata işleme yetenekleri sağlayan bir .NET kitaplıktır. Bu özellikler kolayca yeniden deneme devre kesici, Bulkhead yalıtımı, zaman aşımı ve geri dönüş gibi Polly ilkelerini uygulayarak uygulayabilirsiniz. Polly hedefler .NET 4.x ve .NET Standard sürüm 1.0 (hangi .NET Core destekler).
+Polly esnekliği ve geçici hata işleme özellikleri sağlayan bir .NET Kitaplığı ' dir. Bu özellikler, yeniden deneme, devre kesici, bölme perdesi yalıtım, zaman aşımı ve geri dönüş gibi Polly ilkeleri uygulayarak uygulayabilirsiniz. Polly hedefleyen .NET 4.x ve .NET Standard kitaplığı (.NET Core destekleyen) 1.0.
 
-Yeniden deneme ilkesi Polly içinde eShopOnContainers HTTP yeniden deneme uygularken kullanılan yaklaşımdır. Standart HttpClient işlevini veya Polly, kullanmak istediğiniz hangi yeniden deneme ilkesi yapılandırmasına bağlı olarak kullanarak HttpClient esnek bir sürümünü ekleme için bir arabirimi uygulayabilirsiniz.
+Ancak, kendi özel kodunuzu içeren HttpClient Polly'nın kitaplığı kullanarak önemli ölçüde karmaşık olabilir. Hizmetine özgün sürümünde oluştu bir [ResilientHttpClient Yapı Taşı](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs) Polly üzerinde temel. Ancak, böylece yapı taşı hizmetine kullanım dışı bırakıldı HttpClientFactory'nın yayınlanmasıyla birlikte, Http iletişimi için dayanıklı uygulamak, çok daha kolay olur. 
 
-Aşağıdaki örnek eShopOnContainers içinde uygulanan arabirimi gösterir.
+Aşağıdaki adımlar, Http nasıl kullanabileceğinizi gösterir önceki bölümde açıklanan HttpClientFactory, yeniden denemeler Polly ile tümleştirilir.
+
+**ASP.NET Core 2.1 referans paketleri**
+
+NuGet kullanarak ASP.NET Core 2.1 paketleri bitvise projeniz vardır. Genelde gerekir `AspNetCore` metapackage ve uzantı paketi `Microsoft.Extensions.Http.Polly`.
+
+**Polly'nın yeniden deneme ilkesi, başlatma ile istemci yapılandırma**
+
+Önceki bölümlerde gösterildiği gibi adlandırılmış veya türü belirtilmiş bir istemci HttpClient yapılandırma, standart Startup.ConfigureServices(...) yöntemi tanımlamak gerekir, ancak şimdi, üstel geri alma ile Http yeniden deneme ilkesi olarak belirterek artımlı kod ekleyin Aşağıda:
 
 ```csharp
-public interface IHttpClient
+//ConfigureServices()  - Startup.cs
+services.AddHttpClient<IBasketService, BasketService>()
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+        .AddPolicyHandler(GetRetryPolicy());
+```
+
+**AddPolicyHandler()** yöntemdir hangi ilkeleri ekler `HttpClient` nesnelerini kullanırsınız. Bu durumda, bunu Polly'nın ilke Http yeniden deneme için üstel geri alma ile eklemektir.
+
+Daha modüler bir yaklaşım sahip olmak için Http yeniden deneme ilkesi ConfigureServices() yöntemi içinde ayrı bir yöntem aşağıdaki kodu tanımlanabilir.
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
-    Task<string> GetStringAsync(string uri, string authorizationToken = null,
-        string authorizationMethod = "Bearer");
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    Task<HttpResponseMessage> DeleteAsync(string uri,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    // Other methods ...
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2,
+                                                                    retryAttempt)));
 }
 ```
 
-Geliştirme veya basit yaklaşımlardan sınama esnek bir mekanizma olarak kullanmak istemiyorsanız, standart uygulama kullanabilirsiniz. Aşağıdaki kod standart HttpClient uygulama izin verme isteği kimlik doğrulama belirteçleri ile isteğe bağlı bir durum olarak gösterir.
+Polly ile yeniden denemeler, üstel geri alma yapılandırmasını ve hata günlük kaydı gibi bir HTTP özel durum olduğunda gerçekleştirilecek eylemleri sayısı bir yeniden deneme ilkesi tanımlayabilirsiniz. Bu durumda, ilke ile iki saniyede bir üstel yeniden deneme altı kat denemek için yapılandırılır. 
+
+Bu nedenle altı kat deneyecek ve her yeniden deneme arasındaki saniye iki saniye cinsinden başlangıç üstel, olacaktır.
+
+### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Değişimi stratejisi için yeniden deneme ilkesi ekleme
+
+Normal bir yeniden deneme ilkesi, sisteminizin durumlarda yüksek eşzamanlılık ve ölçeklenebilirlik ve yüksek Çekişme altında etkileyebilir. En yüksek sayılar kısmi kesintiler durumunda birçok istemcilerden gelen benzer bir yeniden deneme aşmak için iyi bir geçici çözüm değişimi stratejisi için yeniden deneme algoritması/İlkesi eklemektir. Rastgele üstel geri alma için ekleyerek bu uçtan uca sistemin genel performansı artırabilir. Sorunlar ortaya çıktığında bunu ani değişiklikleri yayar. Değişimi uygulamak için kodu, düz bir Polly İlkesi kullandığınızda, aşağıdaki örnekteki gibi görünebilir:
 
 ```csharp
-public class StandardHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private ILogger<StandardHttpClient> _logger;
-
-    public StandardHttpClient(ILogger<StandardHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-    }
-
-    public async Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-        if (authorizationToken != null)
-        {
-            requestMessage.Headers.Authorization =
-                new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
-        }
-        var response = await _client.SendAsync(requestMessage);
-        return await response.Content.ReadAsStringAsync();
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer")
-    {
-        // Rest of the code and other Http methods ...
+Random jitterer = new Random(); 
+Policy
+  .Handle<HttpResponseException>() // etc
+  .WaitAndRetry(5,    // exponential back-off plus some jitter
+      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+  );
 ```
 
-Başka bir, benzer sınıfı ancak Polly kullanmak istediğiniz dayanıklı mekanizmalar uygulaması kullanmayı kod ilginç uygulamasıdır — üstel geri alma ile aşağıdaki örnekte, yeniden deneme sayısı.
+## <a name="additional-resources"></a>Ek kaynaklar
 
-```csharp
-public class ResilientHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private PolicyWrap _policyWrapper;
-    private ILogger<ResilientHttpClient> _logger;
+-   **Yeniden deneme düzeni**
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
-    public ResilientHttpClient(Policy[] policies,
-        ILogger<ResilientHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-        // Add Policies to be applied
-        _policyWrapper = Policy.WrapAsync(policies);
-    }
+-   **Polly ve HttpClientFactory**
+    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
-    private Task<T> HttpInvoker<T>(Func<Task<T>> action)
-    {
-        // Executes the action applying all
-        // the policies defined in the wrapper
-        return _policyWrapper.ExecuteAsync(() => action());
-    }
+-   **Polly (.NET esnekliği ve geçici hata işleme kitaplığı)**
 
-    public Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        return HttpInvoker(async () =>
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-            // The Token's related code eliminated for clarity in code snippet
-            var response = await _client.SendAsync(requestMessage);
-            return await response.Content.ReadAsStringAsync();
-        });
-    }
-    // Other Http methods executed through HttpInvoker so it applies Polly policies
-    // ...
-}
-```
+    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-Polly ile bir yeniden deneme ilkesi sayısıyla yeniden deneme, üstel geri alma yapılandırma ve hata günlüğü gibi bir HTTP özel durum olduğunda gerçekleştirilecek eylemleri tanımlayın. Bu durumda, ilke türleri IOC kapsayıcısında kaydedilirken belirtilen sayıda deneyecek şekilde yapılandırılır. Kod HttpRequest istisna algıladığında üstel geri alma yapılandırması nedeniyle, Http isteği bir katlanarak İlkesi nasıl yapılandırılmış bağlı olarak artırır zaman miktarı bekledikten sonra yeniden dener.
+-   **Marc Brooker. Değişimi: Şeyler doğrulukla ile daha iyi hale**
 
-Önemli HttpInvoker, HTTP isteklerini bu yardımcı sınıf boyunca kılan olduğu yöntemidir. Yöntemi dahili olan HTTP isteği yürütür \_yeniden deneme ilkesi dikkate alır policyWrapper.ExecuteAsync.
+    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-İçinde eShopOnContainers Polly ilkeleri aşağıdaki kod olduğu gibi IOC kapsayıcı türlerini kaydedilirken belirttiğiniz [MVC web uygulaması haline adresindeki](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) sınıfı.
-
-```csharp
-// Startup.cs class
-if (Configuration.GetValue<string>("UseResilientHttp") == bool.TrueString)
-{
-    services.AddTransient<IResilientHttpClientFactory,
-        ResilientHttpClientFactory>();
-    services.AddSingleton<IHttpClient,
-        ResilientHttpClient>(sp =>
-            sp.GetService<IResilientHttpClientFactory>().
-            CreateResilientHttpClient());
-}
-else
-{
-    services.AddSingleton<IHttpClient, StandardHttpClient>();
-}
-```
-
-Böylece TCP bağlantılarını verimli bir şekilde hizmeti tarafından kullanılan IHttpClient nesneleri yerine bir singleton geçici olarak olarak örneği oluşturulmadan unutmayın ve [yuvaları ile ilgili bir sorunu](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) gerçekleşmez.
-
-Ancak önemli dayanıklılığı hakkında CreateResilientHttpClient yöntemi ResilientHttpClientFactory içinde Polly WaitAndRetryAsync İlkesi uygulama aşağıdaki kodda gösterildiği şekilde noktadır:
-
-```csharp
-public ResilientHttpClient CreateResilientHttpClient()
-    => new ResilientHttpClient(CreatePolicies(), _logger);
-
-// Other code
-private Policy[] CreatePolicies()
-    => new Policy[]
-    {
-        Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(
-        // number of retries
-        6,
-        // exponential backoff
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-        // on retry
-        (exception, timeSpan, retryCount, context) =>
-        {
-            var msg = $"Retry {retryCount} implemented with Pollys RetryPolicy " +
-            $"of {context.PolicyKey} " +
-            $"at {context.ExecutionKey}, " +
-            $"due to: {exception}.";
-            _logger.LogWarning(msg);
-            _logger.LogDebug(msg);
-        }),
-    }
-```
 
 
 >[!div class="step-by-step"]
-[Önceki](implement-custom-http-call-retries-exponential-backoff.md)
-[sonraki](implement-circuit-breaker-pattern.md)
+[Önceki](explore-custom-http-call-retries-exponential-backoff.md)
+[İleri](implement-circuit-breaker-pattern.md)

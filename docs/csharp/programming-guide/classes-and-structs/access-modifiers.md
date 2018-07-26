@@ -6,69 +6,69 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314115"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199244"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
-Tüm türleri ve tür üyeleri derlemenizi veya diğer derlemelerden diğer koddan kullanılabilmesi için olup olmadığını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiricileri bildirirken ne zaman bir tür veya üye erişilebilirliğini belirtmek için kullanabilirsiniz:  
+Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
   
  [public](../../../csharp/language-reference/keywords/public.md)  
- Tür veya üye, başka bir kod aynı bütünleştirilmiş kodda ya da başvurduğu başka bir derleme tarafından erişilebilir. 
+ Türe veya üyeye aynı derlemenin veya ona başvuran başka bir derleme içindeki diğer kodlardan tarafından erişilebilir. 
   
  [private](../../../csharp/language-reference/keywords/private.md)  
- Tür veya üye, yalnızca aynı sınıfta veya yapı kodda tarafından erişilebilir.  
+ Tür veya üye, yalnızca aynı sınıf veya yapı içindeki kod tarafından erişilebilir.  
   
  [protected](../../../csharp/language-reference/keywords/protected.md)  
- Tür veya üye yalnızca kodu aynı sınıfın veya bu sınıftan türetilmiş bir sınıf tarafından erişilebilir.  
+ Türe veya üyeye aynı sınıftaki veya bu sınıftan türetilen bir sınıfta kod yalnızca tarafından erişilebilir.  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
- Tür veya üye, herhangi bir kod aynı bütünleştirilmiş kodda değiştirebilir, ancak başka bir derleme tarafından erişilebilir.  
+ Türe veya üyeye aynı derlemedeki ancak farklı derlemeyle herhangi bir kod tarafından erişilebilir.  
   
- [İç korumalı](../../../csharp/language-reference/keywords/protected-internal.md) tür veya üye, bildirildiği veya içinden bütünleştirilmiş kod tarafından erişilebilecek başka bir derleme türetilen bir sınıfta. 
+ [İç korumalı](../../../csharp/language-reference/keywords/protected-internal.md) türe veya üyeye bildirildiği içinden veya derlemedeki kod ile erişilebilir başka bir derlemedeki türetilmiş bir sınıf. 
 
- [korumalı özel](../../../csharp/language-reference/keywords/private-protected.md) tür veya üye bildiren derlemede yalnızca kendi kodu aynı sınıfın veya bu sınıftan türetilen bir tür erişebilir.
+ [Özel korumalı](../../../csharp/language-reference/keywords/private-protected.md) kodu aynı sınıftaki veya bu sınıftan türetilmiş bir tür tarafından türün veya üyenin yalnızca bildirme derlemesi, erişilebilir.
   
- Aşağıdaki örnekler bir tür ve üye erişim değiştiricileri belirtme göstermektedir:  
+ Aşağıdaki örnekler, bir tür ve üye erişim değiştiricileri belirtmeniz göstermektedir:  
   
  [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
- Tüm erişim değiştiricileri tüm türleri veya tüm bağlamlarında üyeleri tarafından kullanılabilir ve bazı durumlarda bir tür üyesi erişilebilirliğini içeren türünü erişilebilirlik tarafından sınırlı değildir. Aşağıdaki bölümler erişilebilirlik hakkında daha fazla ayrıntı sağlar.  
+ Tüm erişim değiştiricileri tüm türleri veya üyeleri tüm bağlamlarda tarafından kullanılabilir ve bazı durumlarda bir tür üyesi erişilebilirliği kapsayan türü erişilebilirliğini tarafından sınırlanır. Aşağıdaki bölümler, erişilebilirlik hakkında daha fazla ayrıntı sağlar.  
   
 ## <a name="class-and-struct-accessibility"></a>Sınıf ve yapı erişilebilirlik  
- Sınıflar ve doğrudan bir ad alanı (diğer sınıf veya yapı içinde yuvalanmış olmayan diğer sözcükler,) içinde bildirilen yapılar ortak ya da iç olabilir. Herhangi bir erişim değiştiricisi belirtilmezse varsayılan iç kullanılır.  
+ Sınıfları ve doğrudan bir ad alanı (diğer sınıflar veya yapılar içinde yuvalanmış değil, başka bir deyişle,) içinde bildirilen yapıları, public veya internal olabilir. Hiçbir erişim değiştiricisi belirtilmişse iç varsayılandır.  
   
- İç içe geçmiş sınıflar ve yapılar, gibi yapı üyeleri olarak genel, iç veya özel bildirilebilir. Sınıf üyeleri, iç içe geçmiş sınıflar ve yapılar dahil olmak üzere, ortak olabilir, korumalı iç, korumalı, dahili, özel korumalı veya özel. Sınıf üyeleri ve iç içe geçmiş sınıflar ve yapılar, gibi yapı üyeleri için erişim düzeyi varsayılan olarak özeldir. Özel iç içe geçmiş türler içeren tür dışında erişilebilir değildir.  
+ İç içe geçmiş sınıflar ve yapılar, dahil olmak üzere, Yapı üyeleri olarak genel, iç veya özel olarak bildirilebilir. Sınıf üyeleri, iç içe geçmiş sınıflar ve yapılar dahil olmak üzere, genel, korumalı iç, korumalı, dahili, özel korumalı veya özel. Sınıf üyeleri ve iç içe geçmiş sınıflar ve yapılar, dahil olmak üzere, Yapı üyeleri için erişim düzeyi varsayılan olarak özeldir. Özel iç içe geçmiş türler içeren tür dışında erişilebilir değildir.  
   
- Türetilmiş sınıflar temel türlerini daha büyük erişilebilirlik sahip olamaz. Diğer bir deyişle, ortak bir sınıf olamaz `B` bir iç sınıfın türeyen `A`. Bu izin, yapma etkisini olurdu `A` ortak, çünkü tüm korumalı veya iç üyeleri `A` türetilmiş sınıftan erişilebilir.  
+ Türetilmiş sınıflar temel türleri değerinden daha büyük düzeyde erişilebilirlik sahip olamaz. Diğer bir deyişle, bir ortak sınıf olamaz `B` iç bir sınıftan türetilen `A`. Bu izin verilirse, bu duruma getirme yarayıp `A` genel, çünkü tüm korumalı veya iç üyeleri `A` türetilmiş sınıftan erişilebilir.  
   
- Belirli etkinleştirebilirsiniz, iç türlerinizi Internalsvisibletoattribute kullanarak erişmek için diğer derlemeler. Daha fazla bilgi için bkz: [arkadaş derlemeleri](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Belirli etkinleştirmek ınternalsvisibletoattribute özniteliğini kullanarak tarafından iç türlerine erişmek için diğer derlemeler. Daha fazla bilgi için [arkadaş derlemeleri](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
-## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üyesi erişilebilirlik  
- Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim altı tür ile bildirilebilir. Yapı üyeleri yapılar devralma desteklemediği için korumalı olarak bildirilemez.  
+## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üyesi erişilebilirliği  
+ Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim altı tür ile bildirilebilir. Yapı üyeleri, yapılar devralımı desteklemez çünkü korumalı olarak bildirilemez.  
   
- Normalde, bir üye erişilebilirliğini içerdiği türü erişilebilirlik büyük değil. Ancak, üye arabirim yöntemleri uygulayan veya ortak bir taban sınıf içinde tanımlı sanal yöntemlerini geçersiz kılar, genel bir iç sınıf üyesi derleme dışında erişilebilir olabilir.  
+ Normalde, bir üyenin erişilebilirliğini içeren türün erişilebilirlik büyük değil. Ancak, genel bir iç sınıf üyesi üye arabirim yöntemleri uygulayan ya da genel bir temel sınıfta tanımlanan sanal yöntemleri geçersiz kılan derlemenin dışından erişilebilir olabilir.  
   
- Tür alanı, özelliği veya olay herhangi bir üyenin en az üye olarak olarak erişilebilir olmalıdır. Benzer şekilde, dönüş türü ve parametre türleri bir yöntemi, dizin oluşturucu veya temsilci herhangi bir üyenin en az üye olarak olarak erişilebilir olmalıdır. Örneğin, ortak bir yöntem olamaz `M` bir sınıf döndüren `C` sürece `C` de geneldir. Benzer şekilde, korumalı bir özellik türü olamaz `A` varsa `A` özel olarak bildirilmedi.  
+ Bir alan, özellik veya olay herhangi bir üyenin türü en az üyesi olarak olarak erişilebilir olması gerekir. Benzer şekilde, dönüş türü ve parametre türleri, yöntem, dizin oluşturucu veya temsilci olan herhangi bir üyenin en az üyesi olarak olarak erişilebilir olmalıdır. Örneğin, bir genel yöntem olamaz `M` bir sınıf döndüren `C` sürece `C` ayrıca geneldir. Benzer şekilde, bir korumalı özellik türü olamaz `A` varsa `A` özel olarak bildirilir.  
   
- Kullanıcı tanımlı işleçler her zaman ortak olarak bildirilmelidir. Daha fazla bilgi için bkz: [işleci (C# Başvurusu)](../../../csharp/language-reference/keywords/operator.md).  
+ Kullanıcı tanımlı işleçler her zaman ortak olarak bildirilmelidir. Daha fazla bilgi için [işleci (C# Başvurusu)](../../../csharp/language-reference/keywords/operator.md).  
   
- Sonlandırıcılar erişilebilirlik değiştiricileri sahip olamaz.  
+ Sonlandırıcılar erişilebilirlik değiştiricileri olamaz.  
   
- Bir sınıf veya yapı üyesi için erişim düzeyi ayarlamak için aşağıdaki örnekte gösterildiği gibi üye bildirimi için uygun anahtar sözcüğünü ekleyin.  
+ Uygun anahtar sözcüğü bir sınıf veya yapı üyesi için erişim düzeyi ayarlamak için üye bildirimi için aşağıdaki örnekte gösterildiği gibi ekleyin.  
   
  [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  Korumalı iç erişilebilirlik düzeyi korumalı veya dahili, not anlamına gelmektedir korumalı ve iç. Diğer bir deyişle, korumalı bir iç üye türetilen sınıflar dahil olmak üzere aynı bütünleştirilmiş kodda, herhangi bir sınıftan erişilebilir. Yalnızca türetilmiş sınıflar aynı bütünleştirilmiş kodda erişilebilirlik sınırlamak için sınıf iç bildirme ve üyeleri korumalı olarak bildirin. Ayrıca, C# 7.2 ile başlayarak, özel korumalı erişim değiştiricisi içeren sınıf iç yapmaya gerek kalmadan aynı sonucu elde etmek için kullanabilirsiniz.  
+>  Korumalı dahili erişilebilirlik düzeyi korumalı veya iç, not anlamına gelir. korumalı ve iç. Diğer bir deyişle, korumalı, dahili bir üye aynı derlemedeki türetilmiş sınıflar da dahil olmak üzere herhangi bir sınıftan erişilebilir. Aynı derlemenin yalnızca türetilmiş sınıflarda erişilebilirlik sınırlamak için sınıfı iç bildirmek ve üyeleri protected olarak bildirin. Ayrıca, C# 7.2 ile başlayarak, kapsayan sınıfı iç yapmaya gerek kalmadan aynı sonucu elde etmek için özel bir korumalı erişim değiştiricisi kullanabilirsiniz.  
   
 ## <a name="other-types"></a>Diğer türleri  
- Bildirilen arabirimleri gibi ortak veya dahili bir ad alanı içinde doğrudan bildirilebilir ve sınıflar ve yapılar, arabirimleri varsayılan iç erişmek için olduğu gibi. Arabirim üyeleri her zaman bir sınıf veya yapı erişmek diğer türleri etkinleştirmek için bir arabirim amacı olduğu için ortaktır. Erişim değiştiricileri arabirimi üyelerine uygulanabilir.  
+ Bildirilen arabirimleri, ortak veya iç olarak ad alanı içinde doğrudan bildirilebilir ve sınıflar ve yapılar, arabirimler varsayılan iç erişimi olduğu gibi. Arabirim üyeleri, her zaman bir sınıf veya yapı erişmek diğer türleri etkinleştirmek için bir arabirim amacı olduğu için ortaktır. Hiçbir erişim değiştiricisine arabirimi üyelerine uygulanabilir.  
   
- Numaralandırma üyeleri her zaman ortak ve hiçbir erişim değiştiricileri uygulanabilir.  
+ Her zaman numaralandırma üyelerini genel ve hiçbir erişim değiştiricisine uygulanabilir.  
   
- Temsilciler sınıflar ve yapılar gibi davranır. Varsayılan olarak, bunlar doğrudan ad alanı içinde bildirirken iç erişim ve iç içe geçmiş olduğunda özel erişimi var.  
+ Temsilciler, sınıflar ve yapılar gibi davranır. Varsayılan olarak, doğrudan ad alanı içinde bildirildiğinde iç erişim ve iç içe olduğunda özel erişime sahiptirler.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

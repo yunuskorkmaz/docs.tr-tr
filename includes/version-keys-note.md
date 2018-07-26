@@ -1,3 +1,3 @@
 
 > [!IMPORTANT]
-> Aşağıdaki tabloda, yalnızca .NET Framework'ün yayımlanan sürümleri anahtarları listeler. Anahtarları Önizleme veya yayın öncesi sürümleri listesinde değil.
+> Aşağıdaki tabloda, yalnızca .NET Framework sürümlerini anahtarlarını listeler. Bu önizleme veya yayın öncesi sürümler anahtarları listelenmiyor.

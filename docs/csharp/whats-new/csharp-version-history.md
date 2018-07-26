@@ -1,28 +1,28 @@
 ---
-title: C# - C# Kılavuzu geçmişi
-description: Ne dil görünüm erken sürümlerde düşüncelerinizi ve nasıl itibaren gelişmiştir?
+title: Geçmişini C# - C# Kılavuzu
+description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207540"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404599"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
-Ne dil görünüm kendi erken incarnations düşüncelerinizi? Ve nasıl itibaren yıllarda gelişmiştir?
+Hangi dil, erken incarnations içinde aşağıdaki gibi görünür? Ve bu yıllar içinde nasıl geliştirildiğini?
 
 ## <a name="c-version-10"></a>C# sürüm 1.0
 
-Geri dönün ve arayın, C# sürüm 1.0 Java gibi çok Aranan. Olarak [belirtilen Tasarım hedeflerini ECMA için parçası](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), bir "basit, modern, genel amaçlı nesne yönelimli dili." olarak aranan  Aynı anda Java anlamına gelir gibi arayan bu erken tasarım hedefleri elde.
+Geri dönün ve konum, C# sürüm 1.0 çok Java gibi görünüyordu. Olarak [belirtilen Tasarım hedeflerini ECMA parçası](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), bir "basit, modern, genel amaçlı nesne yönelimli dil." olmasını Aranan  Zaman erken bu tasarım hedefleri, Java desktop'takiler gibi mi arıyorsunuz elde edebilirsiniz.
 
-Ancak geri C# 1.0 şimdi bakarsanız, kendiniz biraz dizzy bulur. Yerleşik zaman uyumsuz özellikler ve bazı verilen almak için genel türler geçici tıklatmanız işlevlerini olmadığı. Gibi bir matter, gerçekte, bu genel türler tamamen olmadığı.  Ve [LINQ](../linq/index.md)? Mevcut değil henüz. Bu eklemeleri piyasaya çıkmasını bazı yıl sürer.
+Ancak geri C# 1.0 artık bakarsanız, kendiniz biraz dizzy bulur. Bu, yerleşik zaman uyumsuz özellikler ve verilen almak için genel türler etrafında bahsettiniz işlevlerinden bazıları koduk. Gibi bir matter, aslında, genel türler tamamen koduk.  Ve [LINQ](../linq/index.md)? Kullanılabilir değil henüz. Bu eklemeler gelecek bazı yıllarda sürecektir.
 
-C# sürüm 1.0 için bugün karşılaştırıldığında özelliklerinin kırpılmış arama. Kendiniz ayrıntılı biraz kod yazmaya bulur. Ancak henüz bir yere başlatmak gerekir. C# sürüm 1.0 Windows platformunda uygun bir alternatif Java için oluştu.
+C# sürüm 1.0 için bugün karşılaştırıldığında özelliklerin kesilmiş arıyordu. Kendinizi ayrıntılı kod yazarken bulur. Ancak henüz bir yere başlatmak gerekir. C# sürüm 1.0 Windows platformunda uygun bir alternatif için Java oluştu.
 
-C# 1.0 dahil önemli özellikleri:
+C# 1.0 önemli özelliklere yer:
 
 - [Sınıflar](../programming-guide/classes-and-structs/classes.md)
 - [Yapılar](../programming-guide/classes-and-structs/structs.md)
@@ -37,7 +37,7 @@ C# 1.0 dahil önemli özellikleri:
 
 ## <a name="c-version-20"></a>C# sürüm 2.0
 
-Şimdi ilginç almak şeyler başlatın. Bir C# 2005, Visual Studio 2005 ile birlikte yayımlanan 2.0, önemli özelliklerinden bazıları bakalım:
+Artık ilgi çekici şeyler başlatın. Bir C# 2005, Visual Studio 2005 ile birlikte yayımlanan 2.0, bazı önemli özelliklere göz atalım:
 
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
@@ -46,74 +46,74 @@ C# 1.0 dahil önemli özellikleri:
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve kontravaryans](../programming-guide/concepts/covariance-contravariance/index.md)
 
-Diğer C# 2.0 özellikleri özellikleri için var olan özellikleri ekledi:
+Diğer C# 2.0 özellikleri Özellikler mevcut özellikleri ekledik:
 
 - Alıcı/ayarlayıcı ayrı erişilebilirlik
-- Yöntem grubu Dönüşümleri (temsilcileri)
+- Yöntem grubu dönüştürmeler (temsilcileri)
 - Statik sınıflar
-- Temsilci çıkarımı
+- Temsilci çıkarma
 
-C# genel Object-Oriented (OO) dili olarak başlatılmamış olabilir, ancak C# sürüm 2.0, Aceleniz değiştirildi. Bunları altında kendi ayak sahip oldukları sonra bunların bazı önemli Geliştirici kalınan sonra geçti. Ve bunları sonra önemli bir şekilde oluştu.
+C# genel bir Object-Oriented (Paylaşımlarınızda) dili olarak başlatılmamış olabilir, ancak C# sürüm 2.0, Aceleniz değiştirildi. Bunları altında kendi ayak sahip oldukları sonra bazı önemli Geliştirici sorunlu noktaları sonra sorun oluştu. ' İ tıklatın ve sonra bunları belirgin bir şekilde geçti.
 
-Genel türler ile türleri ve yöntemleri rasgele bir türü hala tür güvenliği korurken çalışabilir. Örneğin, sahip bir <xref:System.Collections.Generic.List%601> sahip sağlar `List<string>` veya `List<int>` ve bunları yineleme sırada tür kullanımı uyumlu bu dizeler veya tamsayılar işlemleri. Genel türler kullanarak oluşturmak yerine daha iyi `ListInt` , türetilen `ArrayList` veya çevrim gelen `Object` her işlem için.
+Genel türler ile türleri ve yöntemleri hala tür güvenliğini korurken rastgele bir tür üzerinde çalışabilir. Örneğin, sahip bir <xref:System.Collections.Generic.List%601> olması sayesinde `List<string>` veya `List<int>` ve bunlar içerisinde yineleme yapmanızı sırada bu dize veya tamsayı tür açısından güvenli işlemler gerçekleştirin. Genel türler kullanarak oluşturmak yerine daha iyi `ListInt` türetilen `ArrayList` veya atama gelen `Object` her işlem için.
 
-C# duruma sürüm 2.0 yineleyiciler. Temellerini koymak için yineleyiciler tüm öğeleri inceleyin olanak tanıyan bir `List` (veya diğer numaralandırılabilir türleri) ile bir `foreach` döngü. Yineleyiciler dil birinci sınıf bir parçası olarak önemli ölçüde sahip dil ve neden kodu hakkında kişilerin yeteneği okunabilirliğini geliştirilmiştir.
+C# sürüm 2.0 duruma yineleyiciler. Temellerini koymak için yineleyiciler tüm öğeleri incelemenize olanak bir `List` (veya diğer numaralandırılabilir türleri) ile bir `foreach` döngü. Yineleyiciler dil birinci sınıf bir parçası olarak önemli ölçüde olması neden kodu hakkında daha fazla insana olanağı ile dil ve okunabilirliği iyileştirdik.
 
-Ve henüz, C# biraz Java ile nım çalınmaya devam eder. Java zaten genel türler ve yineleyiciler dahil sürümleri yayımlanan. Ancak, yakında parçalayın gelişmeye devam diller olarak değiştirir.
+Ve henüz, C# biraz yakalama ayarlamasından Java ile oynamaya devam eder. Java zaten genel türler ve yineleyiciler sürümleri yayımlanan. Ancak, yakında parçalayın gelişmeye devam dilleri değiştirmeniz gerekir.
 
 ## <a name="c-version-30"></a>C# 3.0 sürümü
 
-Dil özelliklerinin tam bot gerçekte .NET Framework sürüm 3.5 gelecektir rağmen C# 3.0 sürümü geç 2007'de, Visual Studio 2008 birlikte geldi. Bu sürüm, C# büyümesini önemli bir değişiklik olarak işaretlenmiş. Bu C# kurdu gerçekten formidable bir programlama dili olarak. Bir önemli özelliklerinden bazıları bu sürümde bakalım:
+Dil özelliklerinin tam bot gerçekten .NET Framework sürüm 3.5 gelecektir ancak C# 3.0 sürümü Visual Studio 2008 ile birlikte geç 2007 geldi. Bu sürüm, C# büyümesi büyük bir değişiklik işaretlenmiş. Bunu C# kuruldu gerçekten formidable bir programlama dili olarak. Bu sürümde bazı önemli özelliklere göz atalım:
 
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [lambda ifadesi](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
+- [Lambda ifadesi](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [İfade ağaçları](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Genişletme yöntemleri](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)
 - [Kısmi yöntemler](../language-reference/keywords/partial-method.md)
-- Nesne ve koleksiyon başlatıcıları
+- [Nesne ve koleksiyon başlatıcıları](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
-Baktýðýmýzda, bu özelliklerin çoğunu kaçınılmaz ve inseparable gibi görünüyor. Bunların tümü birlikte stratejik uygun. Bu genellikle C# sürümün geliştirilen müthiş özelliği sorgu ifadesi olarak da bilinen dil ile tümleşik sorgu (LINQ) olan düşünüldüğü.
+Geriye dönüp, bu özelliklerin birçoğuna kaçınılmaz ve inseparable gibi görünüyor. Tüm bunların birlikte stratejik sığdırır. Bu genellikle C# sürümün harika özellik sorgu ifadesi olarak da bilinen dil ile tümleşik sorgu (LINQ) olduğunu düşündüğünüz.
 
-Daha fazla nuanced görünüm bağlı LINQ oluşturulan temel olarak ifade ağaçları, lambda ifadeleri ve anonim türler inceler. Ancak, her iki durumda da, C# 3.0 devrim niteliğinde bir kavram sunulur. C# 3.0 için karma nesne yönelimli / işlevsel dil C# kapatma önlemlerini başlamış.
+İfade ağaçları, lambda ifadeleri ve anonim türler, durumunun daha ayrıntılı bir görünüm temellendirildiği LINQ oluşturulan temeli inceler. Ancak, her iki durumda da, C# 3.0 devrim niteliğinde bir kavram sunulur. C# 3.0 için C# karma nesne yönelimli / işlevsel dil kapatma nuspec'te başlamış.
 
-Özellikle, artık SQL stili, başka şeylerin koleksiyonlar üzerinde işlem gerçekleştirmek için bildirim temelli sorgular yazabilirsiniz. Yazma yerine bir `for` tamsayı listesi ortalamayı hesaplamak için döngü, artık, olabildiğince basit bir şekilde yapabilirsiniz, olarak `list.Average()`. Sorgu ifadeleri ve genişletme yöntemleri birleşimi tamsayılar listesini tüm çok daha akıllı onayınızı ancak gibi görünmesi yapılan.
+Özellikle, artık SQL stili, başka şeylerin yanında, koleksiyonlar üzerinde işlem gerçekleştirmek için bildirim temelli sorgular yazabilirsiniz. Yazma yerine bir `for` tamsayı listesi ortalamasını hesaplamak için döngüsünde, bunu şimdi basit yapabilirsiniz olarak `list.Average()`. Sorgu ifadeleri ve genişletme yöntemleri birleşimi, tamsayı listesi çok daha akıllı edinmiş ancak gibi görünmesini yapıldı.
 
-Gerçekten kavramak ve kavram tümleştirmek kişiler için zaman aldı, ancak aşamalı olarak menülerin. Ve artık yıl daha sonra çok daha kısa, basit ve işlevsel kodudur.
+Sürdü kişilerin gerçekten kavrayın ve kavramı tümleştirmek, ancak aşamalı olarak vermedi. Ve artık, yıl, kodu çok daha kısa, basit ve işlev.
 
-## <a name="c-version-40"></a>C# sürüm 4.0
+## <a name="c-version-40"></a>C# 4.0 sürümü
 
-Ve C# sürüm 4.0 sürüm 3.0 temel durumuna yaşayan zor bir süre beklendiğinden. Sürüm 3.0 C# dili sıkıca out Java ve teklifleriyle içine gölge taşınmıştır. Dil hızla Zarif olma.
+C# 4.0 sürümü için sürüm 3.0 çığır açan durumunu yaşayan zor bir süre beklendiğinden. Sürüm 3.0 ile C# dili metz'in out teklifleriyle içine ve Java gölge taşınmıştır. Dil hızla Zarif haline gelmişti.
 
-Bir sonraki sürümünün ilginç bazı yeni özellikler tanıtmaktadır:
+Sonraki sürümü bazı ilgi çekici yeni özellikleri tanıtan:
 
 - [Dinamik bağlama](../language-reference/keywords/dynamic.md)
 - [Adlı/isteğe bağlı bağımsız değişkenler](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Genel eşdeğişken ve karşıtı](../../standard/generics/covariance-and-contravariance.md)
-- [Katıştırılmış birlikte çalışma türleri](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [Genel değişken ve değişken karşıtı](../../standard/generics/covariance-and-contravariance.md)
+- [Gömülü birlikte çalışma türleri](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
 
-Katıştırılmış birlikte çalışma türlerini dağıtım sorunları alleviated. Genel türlerde Kovaryans ve kontravaryans genel türler kullanmak için daha fazla güç sağlar, ancak biraz akademik ve büyük olasılıkla en takdir framework ve kitaplık yazarlar tarafından. Adlandırılmış ve isteğe bağlı parametreleri, birçok yöntemi aşırı ortadan kaldırmak ve kolaylık sağlamak olanak tanır. Ancak bu özellikleri hiçbiri tam olarak kip değiştirme.
+Gömülü birlikte çalışma türleri dağıtım sorunlu alleviated. Genel Kovaryans ve kontravaryans, genel türler kullanmak için daha fazla güç sağlar, ancak biraz akademik ve büyük olasılıkla en takdir framework ve kitaplık yazarlar tarafından. Adlandırılmış ve isteğe bağlı parametreler, birçok yöntem aşırı yüklemeleri ortadan kaldırabilir ve kolaylık sağlayan olanak tanır. Ancak, bu özellikleri hiçbiri tam olarak paradigma değiştirme.
 
-Önemli özellik sunulması oldu `dynamic` anahtar sözcüğü. `dynamic` Anahtar sözcüğü sunulan C# diline sürüm 4.0 derleme zamanı yazarak üzerinde derleyici geçersiz kılma yeteneği. Dynamic anahtar kullanarak, yapıları JavaScript gibi dinamik olarak yazılan diller için benzer oluşturabilirsiniz. Oluşturabileceğiniz bir `dynamic x = "a string"` ve altı, sonraki yapılması gerekenleri çıkışı sıralamak için çalışma zamanı kadar bırakarak ekleyin.
+Önemli özellik kullanıma sunulması oldu `dynamic` anahtar sözcüğü. `dynamic` Anahtar sözcüğü sunulan C# diline sürüm 4.0 derleyici, derleme zamanı yazarak üzerinde geçersiz kılma olanağı. Dynamic anahtar sözcüğü kullanarak, yapıları benzer şekilde dinamik olarak yazılan diller JavaScript gibi oluşturabilirsiniz. Oluşturabileceğiniz bir `dynamic x = "a string"` ve altı için çalışma zamanının sonraki gerçekleşmesi gereken kullanıma sıralama kadar bırakarak ekleyin.
 
-Dinamik bağlama hataları aynı zamanda dil içinde harika güç için olası sağlar.
+Dinamik bağlama, hatalar, ancak ayrıca dil içinde harika power olası sunar.
 
 ## <a name="c-version-50"></a>C# sürüm 5.0
 
-C# sürüm 5.0 odaklanmış bir dil sürümünü oluştu. Neredeyse tüm çaba bu sürüm için başka bir temel dil kavram oluştu: `async` ve `await` zaman uyumsuz programlama için model.  Önemli özelliklerin listesi aşağıda verilmiştir:
+C# sürüm 5.0 odaklanmış bir dil sürümünü oluştu. Neredeyse tüm bu sürüm için çaba başka bir çığır açan bir dil kavramını oluştu: `async` ve `await` zaman uyumsuz programlama için model.  Büyük özelliklerin listesi aşağıda verilmiştir:
 
-- [Zaman uyumsuz üyeleri](../async.md)
+- [Zaman uyumsuz üyeler](../async.md)
 - [Arayan bilgileri öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
-Arayan bilgileri özniteliğinin kolayca Demirbaş yansıma kod ton için başvurmadan çalıştırıyorsanız bağlamı hakkında bilgi almak olanak sağlar. Tanılama ve günlük görevlerini birçok kullanımı vardır.
+Çağıran bilgisi özniteliği kolayca sarmalayıcımızı yazdık ortak yansıma kod başvurmadan çalıştırıyorsanız bağlamıyla ilgili bilgileri almak olanak tanır. Bu, tanılama ve günlüğe kaydetme görevleri pek çok kullanımı vardır.
 
-Ancak `async` ve `await` bu sürümü gerçek yıldız şunlardır. 2012'de bu özellikler ortaya çıktığında, C# oyunu yeniden birinci sınıf Katılımcısı olarak dile asynchrony fırında tarafından pişirme değiştirildi. Şimdiye kadar uzun süre çalışan işlemleri ve geri çağırmaları webs uyarlamasını ele varsa, bu dil özelliği'de severek.
+Ancak `async` ve `await` bu yayının gerçek yıldız olan. 2012'de bu özellikler ortaya çıktığında, C# oyunu yeniden birinci sınıf bir katılımcı olarak dile faaliyetler saklanacağı tarafından değiştirildi. Şimdiye kadar uzun süre çalışan işlemleri ve geri çağırmalar Web uygulaması ile ele, büyük olasılıkla bu dil özelliğinin sevdiği.
 
 ## <a name="c-version-60"></a>C# sürüm 6.0
 
-3.0 ve 5.0 sürümleri ile C# önemli yeni özellikleri bir nesne yönelimli dilde eklenen. Sürüm 6.0, baskın geliştirilen müthiş bir özellik yapılması uzağa doğru gidin ve bunun yerine yapılan C# programlama daha üretken pek çok daha küçük özellikleri sürüm. Bunlardan bazıları şunlardır:
+3.0 ve 5.0 sürümleri ile C# önemli yeni özellikleri bir nesne yönelimli dil eklenen. Sürüm 6.0, baskın harika bir özellik yapılması uzağa gidin ve bunun yerine yapılan C# programlama daha üretken ve daha küçük birçok özellik sürüm. Bunlardan bazıları şunlardır:
 
 - [Statik içeri aktarmalar](../language-reference/keywords/using-static.md)
 - [Özel durum filtreleri](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
@@ -122,38 +122,38 @@ Ancak `async` ve `await` bu sürümü gerçek yıldız şunlardır. 2012'de bu �
 - [Null yayılması](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Dize ilişkilendirme](../language-reference/tokens/interpolated.md)
 - [nameof işleci](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Dizin başlatıcıları](csharp-6.md#index-initializers)
+- [Dizin başlatıcılar](csharp-6.md#index-initializers)
 
-Diğer yeni özellikleri şunlardır:
+Diğer yeni özellikler şunları içerir:
 
-- Catch/finally bloğu bekleme
-- Yalnızca bir alıcı özellikler için varsayılan değerler
+- Catch/finally bloklarında await
+- Salt okuyucu özellikler için varsayılan değerler
 
-Bu özelliklerin her biri kendi sağ ilginç olacaktır. Ancak onları tamamen bakarsanız, ilginç bir desen görürsünüz. Bu sürümde, C# dili Demirbaş kod daha kısa ve okunabilir hale ortadan. Bu nedenle için fanlar temiz, basit kod, bu dil sürümü büyük kazanım oluştu.
+Bu özelliklerin her biri kendi sağ ilginçtir. Ancak onları tamamen bakarsanız, ilgi çekici bir düzen görürsünüz. Bu sürümde, C# kod daha kısa ve okunabilir hale getirmek için ortak dil ortadan kalkar. Bu nedenle için fanlar temiz, basit kod, bu dil sürümü büyük bir kazanç oluştu.
 
-Kendi içinde bir geleneksel dil özelliği olmasa da bu sürüm ile birlikte bir diğer şey menülerin. Bunlar serbest [Roslyn bir hizmet olarak derleyici](https://github.com/dotnet/roslyn). C# Derleyici şimdi C# dilinde yazılmıştır ve derleyici programlama çabalarınız bir parçası olarak kullanabilirsiniz.
+Kendi içinde bir geleneksel dil özelliği olmasa da bu sürüm ile birlikte başka bir şey menülerin. Yayınlanmadan [Roslyn derleyici bir hizmet olarak](https://github.com/dotnet/roslyn). C# derleyicisi artık C# dilinde yazılmıştır ve derleyici, programlama çalışmalarınızın bir parçası olarak kullanabilirsiniz.
 
-## <a name="c-version-70"></a>C# sürüm 7.0
+## <a name="c-version-70"></a>C# 7.0 sürümü
 
-C# sürüm 7.0 son ana sürümle olur. Bu sürüm bazı Açılım ve seyrek erişimli stuff C# 6. 0, ancak derleyici damarlı bir hizmet olarak sahiptir. Yeni özelliklerden bazıları şunlardır:
+En son ana sürüm C# 7.0 sürümü var. Bu sürüm bazı gelişime ve harika şeyler damarlı C# 6.0, ancak derleyicinin bir hizmet olarak sahiptir. Yeni özelliklerden bazıları şunlardır:
 
 - [Değişkenleri](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [Diziler ve deconstruction](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Diziler ve ayrıştırma](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Desen eşleştirme](./csharp-7.md#pattern-matching)
 - [Yerel işlevler](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Genişletilmiş ifade bodied üyeleri](./csharp-7.md#more-expression-bodied-members)
-- [Ref Yereller ve döndürür](./csharp-7.md#ref-locals-and-returns)
+- [Ref yerel değerleri ve dönüşleri](./csharp-7.md#ref-locals-and-returns)
 
-Dahil diğer özellikler:
+Diğer özellikler dahil:
 
 - [Atılanlar](../discards.md)
-- [İkili değişmez değerleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [Basamak ayırıcıları](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- Ref döndürür ve yerel öğeler
-- [Throw deyimleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [İkili sabit dizeler](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
+- [Basamak ayırıcılar](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
+- Ref dönüşler ve yerel öğeler
+- [Throw ifadeleri](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
 
-Bu özelliklerin tümü, geliştiriciler ve zamankinden bile temizleyici kod yazmak için Fırsat için harika yeni özellikler sunar. Vurgu ile kullanılacak değişkenleri bildirimi condensing `out` anahtar sözcüğü ve tanımlama grubu aracılığıyla birden çok dönüş değerleri sağlayarak.
+Tüm bu özellikler, geliştiricilerin ve hiç olmadığı kadar bile daha temiz bir kod yazma olanağı için harika yeni özellikleri sağlar. Bir Vurgu, bildirimi ile kullanılacak değişkenleri condensing `out` anahtar sözcüğü ve birden çok değer tanımlama grubu aracılığıyla sağlayarak.
 
-Ancak, C# her zamankinden daha geniş kullanmak koyulmuş. .NET core artık herhangi bir işletim sistemini hedefleyen ve onun gözler sıkıca taşınabilirlik ve bulut üzerinde sahiptir.  Bu yeni özelliklere kesinlikle dil tasarımcıları düşüncelerinizi ve yeni özelliklerle yaklaşan yanı sıra zaman kaplar.
+Ancak, C# her zamankinden daha geniş kullanımına yerine koyulan. .NET core artık herhangi bir işletim sistemini hedefleyen ve taşınabilirlik ve bulut üzerinde kendi gözler sıkıca sahip.  Bu yeni özellikler, dil tasarımcıları düşüncelerinizi ve yeni özellikler yakında yanı sıra zaman kesinlikle kaplar.
 
-_Makale_ [ _ilk NDepend blogunda yayımlandığı_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich ve Can Smacchia'nın._
+_Makale_ [ _NDepend blogda ilk yayımlandığı_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich ve Patrick Smacchia'nın._

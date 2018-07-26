@@ -1,9 +1,9 @@
 
 > [!NOTE]
-> C# örnekleri bu makalede Çalıştır [Try.NET](https://try.dot.net) satır içi kod Çalıştırıcısı ve playground. Seçin **çalıştırmak** etkileşimli bir pencere örneği çalıştırmak için düğmesi. Kod yürüttükten sonra değiştirmek ve seçerek değiştirilmiş kodu çalıştırma **çalıştırmak** yeniden. Değiştirilmiş ya da çalışır etkileşimli penceresinde kod veya derleme başarısız olursa, etkileşimli pencere tüm C# Derleyici hata iletileri görüntüler. 
+> Bu makalede, C# örnekleri çalıştırmak [Try.NET](https://try.dot.net) satır içi kod Çalıştırıcısı ve oyun alanı. Seçin **çalıştırma** bir etkileşimli penceresinde bir örnek çalıştırmak için düğme. Kod yürüttükten sonra değiştirmek ve seçerek değiştirilmiş kodu çalıştırmak **çalıştırma** yeniden. Değiştirilmiş ya da çalıştırmalarını etkileşimli pencerede kod ya da derleme başarısız olursa, tüm C# Derleyici hata iletilerini etkileşimli pencere görüntüler. 
 >  
-> [Geçerli kültür](xref:System.Globalization.CultureInfo.CurrentCulture) , [Try.NET](https://try.dot.net) satır içi kod Çalıştırıcısı ve playground [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Sonuç olarak, satır içi kod Çalıştırıcısı tarafından üretilen çıkış geçerli kültür varsayılan kültürü kullanan örnekler tarafından görüntülenen çıktı farklıdır. 
+> [Geçerli kültürü](xref:System.Globalization.CultureInfo.CurrentCulture) , [Try.NET](https://try.dot.net) satır içi kod Çalıştırıcısı ve oyun alanı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Sonuç olarak, satır içi kod Çalıştırıcısı tarafından üretilen çıkış bir varsayılan kültür geçerli kültürü kullanan örnekler tarafından görüntülenen çıkış farklıdır. 
 >
-> Bu sınırlamaya geçici bir kültür ayarlamak için aşağıdaki gibi kod satırı ekleyerek çalışabilir: `System.Globalization.CultureInfo.CurrentCulture = new System.Globalization.CultureInfo("en-US");` sadece Değiştir `en-US` geçerli kültürü olmasını istediğiniz kültür adı.
+> Bir kültür ayarlamak için aşağıdaki gibi kod satırı ekleyerek bu sınırlandırma çerçevesinde çalışabilirsiniz: `System.Globalization.CultureInfo.CurrentCulture = new System.Globalization.CultureInfo("en-US");` sadece Değiştir `en-US` geçerli kültürü olmasını istediğiniz kültür adı.
 
 

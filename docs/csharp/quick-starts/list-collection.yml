@@ -1,28 +1,28 @@
 ### YamlMime:Tutorial
-title: C# koleksiyonları
+title: C# dilinde koleksiyonlar
 metadata:
-  title: Koleksiyonları etkileşimli öğreticisini - C# quickstarts
-  description: Bu öğreticide, C# etkileşimli olarak öğrenmek için tarayıcınızın kullanacaksınız. C# kod yazma ve derleme ve kodunuzu doğrudan tarayıcıda çalıştırma sonuçları görüntüleyin.
+  title: Koleksiyonları etkileşimli öğretici - C# hızlı başlangıçları
+  description: Bu öğreticide, C# etkileşimli bir şekilde öğrenmek için tarayıcınızı kullanacaksınız. C# kodu yazacak ve derleme ve kodunuzu doğrudan tarayıcınızda çalıştırmaya sonuçlarını göreceksiniz.
   audience: Developer
   ms.topic: quickstart
   ms.custom: mvc
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 79861f7a04939fafd77bd7a905b8fef0e94b8966
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 70db30c1d6a3d193533119dd5a49be3b9315eaaf
+  ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/07/2018
-  ms.locfileid: "33805921"
+  ms.lasthandoff: 07/10/2018
+  ms.locfileid: "37937017"
 items:
 - durationInMinutes: 1
   content: >
-    Bu hızlı başlangıç C# etkileşimli olarak C# kod yazmak ve derleme ve kodunuzu çalıştırmaya sonuçlarını görmek için tarayıcınızı kullanarak öğretilmektedir. Bir dizi oluşturmak, değiştirmek ve Koleksiyonlar ve diziler keşfedin dersleri içerir.
+    Bu hızlı başlangıç size C# etkileşimli olarak C# kodu yazacak ve kodunuzu derlerken ve sonuçları görmek için tarayıcınızı kullanmayı öğretir. Bu, bir dizi oluşturmak, değiştirmek ve koleksiyonlarda ve dizilerde keşfedin ders içerir.
 - title: Listeleri oluşturma
   durationInMinutes: 2
   content: >
-    Aşağıdaki kod etkileşimli penceresinde çalıştırın. Bunu yapmak için aşağıdaki kod bloğu etkileşimli penceresinde yazın (Değiştir "<name>" adıyla) tıklatıp **çalıştırmak** düğmesi:
+    Etkileşimli pencerede aşağıdaki kodu çalıştırın. Bunu yapmak için aşağıdaki kod bloğunu etkileşimli pencereye yazın (Değiştir `<name>` 'ınızın adıyla) ve tıklayın **çalıştırın** düğmesi:
 
 
     ```csharp
@@ -38,25 +38,25 @@ items:
     ```
 
 
-    Yalnızca dizelerinin listesini oluşturduğunuz, üç adları bu listeye eklenen ve tümü büyük harf adlarında çıkışı yazdırılmıştır. Listede ilerleyin döngü önceki quickstarts içinde öğrendiğinize kavramları kullanıyorsunuz.
+    Yalnızca bir dize listesi oluşturduğunuz, üç adları bu listeye eklenmesine ve tamamı büyük harf adları kullanıma yazdırılır. Listede ilerleyin döngü önceki hızlı başlangıçlarda öğrendiniz kavramları kullanıyorsunuz.
 
 
-    Adlarını görüntülemek için kod kullanır [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği. Öncesinde ne zaman bir `string` ile `$` karakter dizesi bildiriminde C# kodu katıştırmak. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, yerini `{name.ToUpper()}` aradığınız çünkü her adıyla dönüştürülen büyük harfler için <xref:System.String.ToUpper%2A> yöntemi.
+    Görünen adları için kodu kullanır [dize ilişkilendirme](../language-reference/tokens/interpolated.md) özelliği. Ne zaman önünde bir `string` ile `$` karakter dizesi bildiriminde C# kod ekleme. Gerçek dize, C# kodu ürettiği değeri ile değiştirir. Bu örnekte, onu değiştirir `{name.ToUpper()}` her addaki aradığınız çünkü harfleri büyük olacak şekilde dönüştürülmüş <xref:System.String.ToUpper%2A> yöntemi.
 
 
-    Şimdi keşfetme tutun.
+    Şimdi keşfetmeye devam etmek.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Liste içeriklerini değiştirme
   durationInMinutes: 3
   content: >
-    Kullandığı oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçları arasında öğelerin türü belirtin.
+    Kullanan oluşturduğunuz koleksiyonda <xref:System.Collections.Generic.List%601> türü. Bu tür, öğelerin sıralarının depolar. Açılı ayraçlar arasındaki öğelerin türünü belirtin.
 
 
-    Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür onu büyütür veya böylelikle küçültür, ekleme veya öğeleri kaldırma olanak sağlar. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:
+    Bu önemli bir özelliği <xref:System.Collections.Generic.List%601> türüdür bunu büyüyebilen veya küçülebilen, ekleme veya öğeleri kaldırma olanak sağlar. Zaten yazdığınız kodun altına aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -78,10 +78,10 @@ items:
     ```
 
 
-    İki daha fazla ad listesinin sonuna ekledik. Ayrıca bir de kaldırdınız.
+    Listenin sonuna iki daha fazla ad ekledik. Ayrıca bir de kaldırdınız.
 
 
-    <xref:System.Collections.Generic.List%601> Tarafından ayrı öğeleri başvuru sağlar **dizin** de. Öğelerini kullanarak erişim `[` ve `]` belirteçleri. Neleri zaten yazdıktan ve deneyin altına aşağıdaki kodu ekleyin:
+    <xref:System.Collections.Generic.List%601> Tek tek öğeler tarafından başvuruda sayesinde **dizin** de. Kullanarak öğeleri erişim `[` ve `]` belirteçleri. Neleri yazmış olduğunuz ve deneyin altına aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -93,7 +93,7 @@ items:
     ```
 
 
-    Listenin sonunun erişim izin verilmez. Ne kadar süreyle listeyi kullanarak denetleyebilirsiniz <xref:System.Collections.Generic.List%601.Count%2A> özelliği. Denemek için aşağıdaki kodu ekleyin:
+    Listenin sonundan erişmesine izin verilmez. Listenin ne kadar süre kullandığı denetleyebilirsiniz <xref:System.Collections.Generic.List%601.Count%2A> özelliği. Denemek için aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -103,16 +103,16 @@ items:
     ```
 
 
-    Tıklatın **çalıştırmak** yeniden sonuçları görüntüleyin. Bu nedenle en büyük geçerli dizin biridir C# ' ta dizinlerini 0'da, Başlat listedeki öğeleri sayısından küçük.
+    Tıklayın **çalıştırma** yeniden sonuçları görmek için. En büyük geçerli dizin olduğundan C# ' ta dizinleri 0'da başlar listedeki öğelerin sayısından küçük.
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Arama ve sıralama listeler
   durationInMinutes: 5
   content: >
-    Bizim örneklerimizi görece küçük listeleri kullanın, ancak uygulamalarınızı genellikle bazen binlerce numaralandırma pek çok daha fazla öğe ile listeleri oluşturabilirsiniz. Bu büyük koleksiyonlarda öğeleri bulmak için farklı öğeleri listede arama gerekir. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi için bir öğe arar ve öğenin dizinini döndürür. Bunu nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınızı altına aşağıdaki kodu ekleyin:
+    Örneklerimizi görece küçük listeleri kullanın, ancak uygulamalarınızın genellikle bazen bin numaralandırma çok daha fazla öğe ile listeleri oluşturabilirsiniz. İçinde büyük bu koleksiyonlara öğeleri bulmak için farklı öğeler listesinde arama yapmanız gerekmiyor. <xref:System.Collections.Generic.List%601.IndexOf%2A> Yöntemi bir öğe için arar ve öğenin indisini döndürür. Nasıl çalıştığını görmek için deneyin.  Şu ana kadar yazdıklarınızı altına aşağıdaki kodu ekleyin:
 
 
     ```csharp
@@ -127,10 +127,10 @@ items:
     ```
 
 
-    Her zaman tarafından döndürülen dizin denetlemeniz gerekir böylece öğeyi listede olup olmadığını bilemeyebilirsiniz <xref:System.Collections.Generic.List%601.IndexOf%2A>. -1 olması durumunda öğe bulunamadı.
+    Tarafından döndürülen dizinin her zaman denetlemeniz gerekir böylece bir öğenin listesinde olup olmadığını bilemeyebilirsiniz <xref:System.Collections.Generic.List%601.IndexOf%2A>. -1 olması durumunda, öğe bulunamadı.
 
 
-    Listenizdeki öğeleri de sıralanabilir. <xref:System.Collections.Generic.List%601.Sort%2A> Yöntemi (alfabetik olarak söz konusu olduğunda dizeleri) normal sıralarına listesindeki tüm öğeleri sıralar. Bu kodu ekleyin ve yeniden çalıştırın:
+    Listenizdeki öğeleri de sıralanabilir. <xref:System.Collections.Generic.List%601.Sort%2A> Yöntemi (alfabetik sırada durumunda dizeler) normal sıralarına listesinden tüm öğeleri sıralar. Bu kodu ekleyin ve yeniden çalıştırın:
 
 
     ```csharp
@@ -148,11 +148,11 @@ items:
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Diğer türleri listesi
   durationInMinutes: 5
   content: >
-    Kullanmakta olduğunuz `string` kadarki listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> farklı türü kullanıyor. Şimdi bir sayı kümesi oluşturun. Şu ana kadar yazdığınız kodun silin ve bu ile değiştirin:
+    Kullanmakta olduğunuz `string` şimdiye listelerindeki türü. Olalım bir <xref:System.Collections.Generic.List%601> kullanarak farklı bir tür. Bir dizi sayının oluşturalım. Şu ana kadar yazdığınız kodu silin ve bununla değiştirin:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Tamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, sayılardan oluşan bir dizi. Sonraki her Fibonacci numarası, önceki iki sayı toplamı gerçekleştirerek bulunur. Bu kodu ekleyin:
+    Tamsayı listesi oluşturur ve ilk iki tamsayı 1 değerine ayarlar. İlk iki değerlerini bunlar bir *Fibonacci dizisi*, bir sayı dizisi üzerinde. Önceki iki sayının toplamı gerçekleştirerek sonraki her Fibonacci numarası bulunamadı. Bu kodu ekleyin:
 
 
     ```csharp
@@ -180,26 +180,26 @@ items:
     ```
 
 
-    Tuşuna **çalıştırmak** ; sonuçları görmek için
+    Tuşuna **çalıştırma** ; sonuçları görmek için
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).
-- title: sınama
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Sınama
   durationInMinutes: 10
   content: >
-    Birlikte koyabilirsiniz varsa bkz bazı kavramlar bu ve önceki sürümleri dersleri. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve ilk 20 numaralarını sırayla oluşturması için kod yazın. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)
+    Birlikte koyabilirsiniz varsa bkz. bazı kavramlar ve daha önce bu dersler. Ne kadar Fibonacci numaralarıyla derlediğiniz genişletin. Deneyin ve dizideki ilk 20 sayılar üretmek için kod yazın. (Bir ipucu olarak 20 Fibonacci 6765 numarasıdır.)
 
 
     > [!NOTE]
 
-    > Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).
-- title: Tam sınama
+    > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
+- title: Görevi tamamlama
   durationInMinutes: 3
-  content: "Aşağıdakine benzer ile gündeme?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nHer döngü tekrarında ile son iki tamsayı listesinde, bunları birleşimi ve bu değer listesine ekleyerek yönlendiriyoruz. Listeye 20 öğeleri ekleyene kadar döngü tekrarlar.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama önizleme modunda deneyimidir. Lütfen bunları sorunlarla karşılaşırsanız, rapor [dotnet/deneyin depoyu üzerinde](https://github.com/dotnet/try/issues).\n"
+  content: "Bu gibi bir şeyle gündeme mı?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nDöngünün her yinelemesinden son iki tamsayının listesinde, bunları fiyatının ve bu değer, listeye eklemeyi yönlendiriyoruz. 20 öğe listesine ekleyene kadar döngü tekrarlanır.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).\n"
 - content: >-
-    Liste Hızlı Başlangıç tamamladınız. Bu hızlı başlangıç son etkileşimli Hızlı Başlangıç ' dir. Bu hızlı başlangıç ipuçları kendi geliştirme ortamı devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve bir Hızlı Başlangıç'ı seçin. Bu aynı alıştırma deneyin, sonraki hızlı başlangıç doğrudan taşımak veya yeniden ile başlangıç [C# numaraları](numbers-in-csharp-local.md) hızlı başlangıç.
+    Listeyi Hızlı başlangıcını tamamladınız. Bu hızlı başlangıçta, son etkileşimli quickstart şeklindedir. Bu hızlı başlangıçlara kendi geliştirme ortamınızda devam edebilirsiniz. Temel bilgileri öğrenmek [yerel geliştirme](local-environment.md) ve ardından bir Hızlı Başlangıç'ı seçin. Alıştırmanın aynısını deneyebilir, doğrudan bir sonraki hızlı başlangıca geçebilir veya başlangıcıyla tekrar [C# dilinde sayılar](numbers-in-csharp-local.md) hızlı başlangıç.
 
 
-    İle çalışma hakkında daha fazla bilgiyi `List` yazın [.NET Kılavuzu](../../standard/index.md) konuyla ilgili [koleksiyonları](../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.
+    İle çalışma hakkında daha fazla bilgi `List` yazın [.NET Kılavuzu](../../standard/index.md) konuda [koleksiyonları](../../standard/collections/index.md). Ayrıca diğer birçok koleksiyon türleri hakkında bilgi edineceksiniz.

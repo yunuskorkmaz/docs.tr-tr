@@ -1,63 +1,61 @@
 ---
-title: Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano Server konakları göre
+title: Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano sunucu konaklarına göre
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Tek kapsayıcı dağıtma .NET Core Web uygulamaları Linux veya Windows Nano sunucu konaklarına göre
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105533"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404505"
 ---
-# <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux veya Windows Nano Server konakları tek kapsayıcı tabanlı .NET Core Web uygulamalarını dağıtma
+# <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux veya Windows Nano sunucu konaklarına tek kapsayıcı tabanlı .NET Core Web uygulamaları dağıtma
 
-*Docker kapsayıcıları tek yapılı daha basit web uygulamalarının dağıtımını için kullanabilirsiniz. Bu, sürekli tümleştirme artırır ve sürekli dağıtımı ardışık düzenleri ve dağıtım üretim başarılı olmasına yardımcı olur. Daha fazla "Makinem içinde çalışır neden üretimde çalışmıyor?"*
+_Docker kapsayıcıları tek parça daha basit web uygulamaları dağıtımını için kullanabilirsiniz. Bu artırır sürekli tümleştirme ve sürekli dağıtım işlem hatları ve üretim için dağıtım başarı elde etmenize yardımcı olur. Daha fazla "neden üretimde çalışmaz makineme çalışır?"_
 
-Mikro tabanlı bir mimari için birçok fayda olsa da, bu avantajlar artan karmaşıklık maliyetlerine gelir. Bazı durumlarda, maliyetleri ağır basıyor ve, tek bir kapsayıcı veya yalnızca birkaç kapsayıcıları çalıştıran bir tek yapılı dağıtım uygulama ile daha iyi sunulacak. 
+Bir mikro hizmet tabanlı mimariye pek çok faydası vardır, ancak bu avantajlar bulunan artan karmaşıklık bedeli. Bazı durumlarda, maliyetleri ağır basıyor ve bir veya birkaç kapsayıcılarda çalıştırılan bir tek parçalı dağıtım uygulaması daha iyi bir seçenektir.
 
-Tek yapılı bir uygulama içinde iyi ayrılmış mikro kolayca decomposable olmayabilir. Bu işlev tarafından bölümlenmesi öğrendiniz: mikro birbirinden bağımsız olarak daha esnektir uygulaması sağlamak için çalışmalıdır. Uygulamanın özellik dilimler gönderemez, onu ayırarak karmaşıklık yalnızca ekler.
+Tek parça bir uygulamayı kolayca iyi ayrılmış mikro hizmetler halinde decomposable olmayabilir. Bu mikro işlevi tarafından bölümlendirilmelidir öğrendiniz: karşı daha dayanıklı bir uygulama sağlamak için birbirinden çalışması gerekir. Uygulamanın özellik dilimleri teslim edilemiyor, bu ayırma karmaşıklık yalnızca ekler.
 
-Bir uygulama, henüz özellikleri bağımsız olarak ölçeklendirebilirsiniz gerekmeyebilir. Şimdi erken ömrünü bizim eShopOnContainers başvuru uygulaması, trafiği özellikleri farklı mikro ayırarak justify değil olduğunu varsayalım. Trafik kaynakları için bir hizmet genellikle ekleme kaynakları tüm hizmetlere ekleme amacı yetecek kadar küçük. Ayrık Hizmetleri uygulamasına ayırmak için ek iş en az avantajı sağlanır.
+Bir uygulama, özelliklerin bağımsız olarak ölçeklendirme henüz gerekmeyebilir. Erken aşamalarında varsayalım, `eShopOnContainers` başvuru uygulaması, trafik farklı mikro hizmetler halinde özellikleri ayırma Yasla alamadık. Trafiği bir hizmet için kaynak ekleme, genellikle tüm hizmetler için kaynak ekleme geliyordu kadar küçük. Ayrık Hizmetleri uygulamasına ayırmak için ek iş en az bir avantaj sağladı.
 
-Ayrıca, erken bir uygulama geliştirmede, dair NET bir fikir doğal işlevsel sınırları nerede sahip olmayabilir. En az bir anlamlı ürün geliştirdikçe doğal ayrımı henüz çıkmıştır değil.
+Ayrıca, bir uygulamanın erken geliştirme, dair NET bir fikir doğal işlevsel sınırları nerede sahip olmayabilir. En düşük uygun bir ürün geliştirirken, doğal ayrımı henüz çıkmıştır değil.
 
-Bu koşullar bazıları geçici olabilir. Tek yapılı bir uygulama oluşturun ve daha sonra geliştirilen ve mikro hizmetler dağıtılan için bazı özellikler ayrı. Diğer koşullar uygulama içinde birden çok mikro hiçbir zaman bozuk, yani uygulamanın sorun alanı için önemli olabilir.
+Bu koşullar bazıları geçici olabilir. Tek parça bir uygulamayı oluşturun ve daha sonra bazı özellikleri geliştirilen ve mikro hizmet dağıtılan ayrı. Diğer koşullar, uygulamanın birden fazla mikro hizmetler halinde hiçbir zaman bozuk durumda, yani, uygulamanın sorun alanı için gerekli olabilir.
 
-Bir uygulamaya birçok ayrı işlemler ayırarak ek yükü tanıtır. Özellikler farklı işlemlere ayırmak daha karmaşık yoktur. İletişim protokolleri daha karmaşık hale gelir. Yöntem çağrıları yerine Hizmetleri arasındaki zaman uyumsuz iletişim kullanmanız gerekir. Mikro mimarisi için ilerlerken, birçok eShopOnContainers uygulama mikro sürümünde yapı taşları eklemeniz gerekir: olay bus işleme, ileti dayanıklılık ve yeniden deneme, nihai tutarlılık ve daha fazla.
+Bir uygulamaya birçok ayrı işlemler ayırma yükü tanıtır. Özellikler farklı işlemlere ayırmak daha karmaşık yoktur. İletişim protokolleri, daha karmaşık hale gelir. Yerine yöntem çağrılarını, hizmetler arasında zaman uyumsuz iletişim kullanmanız gerekir. Bir mikro hizmet mimarisi için taşırken, mikro hizmetler sürümünde yapılan yapı taşlarını birçoğu eklemenize gerek `eShopOnContainers` uygulama: olay veri yolu işleme, ileti dayanıklılık ve yeniden denemeler, nihai tutarlılığa kadar giden ve daha fazla.
 
-EShopOnContainers daha basitleştirilmiş bir sürümünü (adlı [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebMonolithic) ve aynı GitHub depo dahil) çalışır ve olarak yalnızca tek yapılı bir MVC uygulaması olarak açıklandığı gibi bu tasarım seçiminin tarafından sunulan avantajı vardır. Bu uygulama için kaynak Github'dan indirin ve yerel olarak çalıştırın. Tek yapılı bu uygulama, bir kapsayıcı ortamında dağıtılan fayda sağlar.
+Hizmetine daha basitleştirilmiş bir sürümünü (adlı [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebMonolithic) ve aynı GitHub deposunda dahil) tek parça bir MVC uygulaması çalışır. Açıklandığı gibi bu tasarım seçiminin tarafından sunulan avantajları vardır. Bu uygulama kaynağını Github'dan indirip yerel olarak çalıştırın. Tek parça bu uygulama bir kapsayıcı ortamında dağıtılan fayda sağlar.
 
-Birincisi, kapsayıcılı dağıtım uygulama her örneğini aynı ortamda çalıştırır anlamına gelir. Bu, burada erken test ve geliştirme gerçekleşmesi Geliştirici ortamı içerir. Geliştirme ekibi uygulamayı üretim ortamına eşleşen kapsayıcılı bir ortamda çalıştırabilirsiniz.
+Biri için kapsayıcı dağıtımı uygulamanın her örneği aynı ortamda çalıştığı anlamına gelir. Bu, burada erken test ve geliştirme gerçekleşmesi Geliştirici ortamı içerir. Geliştirme ekibi, uygulamayı üretim ortamına eşleşen bir kapsayıcı ortamında çalıştırabilirsiniz.
 
-Ayrıca, daha düşük maliyetle uygulamaları ölçeklendirme kapsayıcılı. Daha önce gördüğünüz gibi geleneksel VM ortamlarında paylaşımı büyük kaynak kapsayıcı ortamı sağlar.
+Ayrıca, kapsayıcılı uygulamaların ölçeklendirme daha düşük maliyetle. Daha önce bahsettiğim gibi kapsayıcı ortamınızı geleneksel VM ortamları paylaşımı büyük kaynak sağlar.
 
-Son olarak, uygulama containerizing iş mantığı ve depolama sunucusu arasında ayrım zorlar. Uygulamanın çıkışı ölçeklendirir gibi birden çok kapsayıcı tüm tek bir fiziksel depolama bir ortamda kullanır. Bu, genellikle bir SQL Server veritabanını çalıştıran bir yüksek oranda kullanılabilirlik sunucusu olacaktır.
+Son olarak, ASP.NET'in, iş mantığı ve depolama sunucusu arasında bir ayrım zorlar. Uygulama Ölçeklendirmesi eşitlenene gibi çeşitli kapsayıcıları tek bir fiziksel depolama bir ortamda tüm güvenirsiniz. Bu depolama genelde bir SQL Server veritabanı çalıştıran bir yüksek kullanılabilirlik sunucusu olacaktır.
 
 ## <a name="application-tour"></a>Uygulama turu
 
-[EShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebMonolithic) tek yapılı bir uygulama olarak çalışan eShopOnContainers uygulama bazıları uygulamasını temsil eder — .NET Core üzerinde çalışan bir ASP.NET Core göre MVC uygulama. Esas olarak, biz önceki bölümlerde açıklanan özellikleri gözatma Kataloğu sağlar.
+[EShopWeb](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebMonolithic) bazı tek parça bir uygulamayı çalıştıran hizmetine uygulama uygulamasını temsil eder: .NET Core üzerinde çalışan bir ASP.NET Core MVC tabanlı uygulama. Esas olarak, önceki bölümlerde açıklandığı gibi göz atma özellikleri Kataloğu sağlar.
 
-Uygulama Kataloğu depolama için bir SQL Server veritabanını kullanır. Kapsayıcı tabanlı dağıtımlarda, bu tek yapılı uygulaması aynı veri deposu mikro tabanlı bir uygulama olarak erişebilir. Uygulama, SQL Server tek yapılı uygulama yanında bir kapsayıcıda çalıştırmak için yapılandırılır. Bir üretim ortamında, SQL Server Docker ana bilgisayar dışında bir yüksek kullanılabilirlik makine üzerinde çalışır. Bir geliştirme veya test ortamına kolaylık olması için kendi kapsayıcısında SQL Server çalıştıran öneririz.
+Uygulama Kataloğu depolama alanı için bir SQL Server veritabanını kullanır. Kapsayıcı tabanlı dağıtımlarda, bu tek parça bir uygulamayı mikro hizmet tabanlı uygulama aynı veri deposuna erişebilirsiniz. Uygulama, bir kapsayıcıdaki tek parça bir uygulamayı yanı sıra SQL Server çalıştırmak için yapılandırılmıştır. Bir üretim ortamında, SQL Server, Docker konağının dışında bir yüksek kullanılabilirlik makinede çalıştırılır. Geliştirme veya test ortamında, kolaylık sağlamak için SQL Server kendi kapsayıcısında çalıştırılması önerilir.
 
-Yalnızca ilk özellik katalog taramayı etkinleştirir. Güncelleştirmeleri kapsayıcılı uygulamanın tam özellik kümesini etkinleştirir. Tek yapılı web uygulama mimarisi daha gelişmiş bir açıklanan [ASP.NET Web uygulaması mimarisi yöntemler](https://aka.ms/webappebook) e-kitap ve ilgili [eShopOnWeb örnek uygulama](http://aka.ms/WebAppArchitecture), ancak bu durumda Bu senaryo ile ASP.NET Core düz web geliştirme odaklanır çünkü Docker kapsayıcılarında çalışmıyor.
-
-Ancak, eShopOnContainers (eShopWeb) kullanılabilir Basitleştirilmiş sürüm Docker kapsayıcısı içinde çalışır.
+Yalnızca ilk özelliği, katalog taramayı etkinleştirir. Güncelleştirmeleri kapsayıcılı uygulama tüm özellik kümesini etkinleştirir. Tek parça bir web uygulaması mimarisi daha gelişmiş bir açıklanan [ASP.NET Web uygulaması mimarisi yöntemler](https://aka.ms/webappebook) e-kitap ve ilgili [eShopOnWeb örnek uygulama](http://aka.ms/WebAppArchitecture).
 
 ## <a name="docker-support"></a>Docker desteği
 
-EShopOnWeb proje .NET Core üzerinde çalışır. Bu nedenle, Linux tabanlı veya Windows tabanlı kapsayıcılarında çalıştırabilirsiniz. Aynı ana bilgisayar türü SQL Server için kullanmak istediğiniz Docker dağıtımı için unutmayın. Linux tabanlı kapsayıcıları daha küçük bir yer sağlar ve tercih edilir.
+EShopOnWeb proje .NET Core üzerinde çalışır. Linux tabanlı veya Windows tabanlı kapsayıcılarda çalıştırabilirsiniz anlamına gelir. Aynı ana bilgisayar türü için SQL Server kullanmak istediğiniz bir dağıtım için Docker unutmayın. Linux tabanlı kapsayıcılar bir daha küçük kaplama alanı izin ve tercih edilir.
 
-Visual Studio çözüm Docker için destek ekler bir proje şablonu sağlar. Projeye sağ tıklayın, ardından **Ekle** arkasından **Docker Destek**. Projenizi ve yeni bir şablon bir Dockerfile ekler **docker compose'u** proje starter docker-compose.yml dosyası sağlar. Bu adım, Github'dan indirilen eShopOnWeb projede zaten gerçekleştirilmedi. Çözüm içerdiğini görürsünüz **eShopOnWeb** proje ve **docker compose'u** proje Şekil 6-1'de gösterildiği gibi.
+Visual Studio için Docker desteği ekleyen bir çözüme bir proje şablonu sağlar. Projeye sağ tıklayın, tıklayın **Ekle** ardından **Docker desteği**. Projenizi ve yeni bir şablon bir Dockerfile ekler **docker-compose** bir Başlatıcısı sağlayan proje *docker-compose.yml* dosya. Bu adım, Github'dan indirilen eShopOnWeb projede zaten yapılmıştır. Çözüm içerdiğini görebilirsiniz **eShopOnWeb** proje ve **docker-compose** proje Şekil 6-1'de gösterildiği gibi.
 
 ![](./media/image1.png)
 
-**Şekil 6-1**. **Docker compose'u** bir tek kapsayıcı web uygulaması projesi
+**Şekil 6-1**. **Docker-compose** tek kapsayıcı web uygulaması projesinde
 
-Bu dosyalar standart docker-dosyaları, hiçbir Docker projeyle tutarlı oluşturun. Bunları, Visual Studio ile veya komut satırından kullanabilirsiniz. Bu uygulama .NET Core üzerinde çalışır ve ayrıca kod, derleme ve bir Mac veya Linux makine çalıştırmak için Linux kapsayıcıları kullanır.
+Bu dosyalar standart docker-compose dosyası, herhangi bir Docker projesi ile tutarlı. Bunları, Visual Studio ile veya komut satırından kullanabilirsiniz. Bu uygulama, .NET Core üzerinde çalışır ve Linux kapsayıcıları kullanır. Bu nedenle, kod, derleme da bir Mac veya Linux makine üzerinde çalıştırın.
 
-Docker-compose.yml dosyası ne oluşturmak için görüntüler ve başlatmak için hangi kapsayıcıları hakkında bilgi içerir. Şablonları nasıl eshopweb yansıması oluştur ve uygulamanın kapsayıcıları başlatma belirtin. Bir görüntü ekleyerek SQL Server'da bağımlılık eklemeniz gerekir (örneğin, mssql sunucu linux) ve bir hizmet oluşturmak ve bu kapsayıcı başlatmak Docker sql.data görüntü için. Bu ayarlar, aşağıdaki örnekte gösterilir:
+*Docker-compose.yml* dosya ne oluşturmak için görüntüler ve başlatmak için hangi kapsayıcıları hakkında bilgiler içerir. Şablonları nasıl oluşturulacağını belirtin `eshopweb` görüntü ve uygulamanın kapsayıcılar'ı başlatın. Görüntü ekleyerek SQL Server'da bağımlılık eklemeniz gerekir (örneğin, `mssql-server-linux`) ve bir hizmet oluşturmak ve bu kapsayıcısı başlatmak Docker için sql.data görüntüsü. Bu ayarlar, aşağıdaki örnekte gösterilmiştir:
 
 ```yml
 version: '2'
@@ -75,15 +73,15 @@ services:
     image: microsoft/mssql-server-linux
 ```
 
-Bağımlı\_eShopWeb görüntü sql.data görüntüde bağlıdır Docker yönergesi üzerinde söyler. Bir görüntü oluşturmak için yönergeler aşağıdaki satırları microsoft/mssql-server-linux görüntüsünü kullanarak sql.data etiketlenir.
+`depends_on` Yönergesi Docker eShopWeb görüntü sql.data görüntüye bağlı olduğunu bildirir. Aşağıdaki satırları `depends_on` etiketli bir görüntüsünü oluşturmak için yönergeler `sql.data` kullanarak `microsoft/mssql-server-linux` görüntü.
 
-**Docker compose'u** project bu dosyaların ilişkili olduğunu görsel bir gösterge sağlamak için ana docker-compose.yml düğümü altındaki diğer docker-compose dosyaları görüntüler. Docker oluşturan override.yml dosyası hem Hizmetleri, bağlantı dizeleri ve diğer uygulama ayarları gibi ayarları içerir.
+**Docker-compose** proje ana altındaki diğer docker-compose dosyaları görüntüler *docker-compose.yml* düğümü bu dosyaların ilişkili olduğunu görsel bir gösterge sağlar. *Docker compose override.yml* dosya bağlantı dizelerini ve diğer uygulama ayarları gibi her iki hizmet ayarlarını içerir.
 
-Aşağıdaki örnek Visual Studio'da hata ayıklama için kullanılan ayarları içerir docker compose.vs.debug.yml dosya gösterir. Bu dosyada eshopweb görüntü eklenmiş geliştirme etiketi yok. Böylece, yanlışlıkla hata ayıklama bilgileri üretim ortamına dağıtılmaz, yayın görüntülerden ayrı hata ayıklama yardımcı olur:
+Aşağıdaki örnekte gösterildiği *docker compose.vs.debug.yml* dosyasını Visual Studio'da hata ayıklama için kullanılan ayarları içerir. Bu dosyada, kendisine eklenmiş geliştirme etiketi eshopweb görüntü sahiptir. Böylece hata ayıklama bilgileri yanlışlıkla bir üretim ortamına dağıtmanıza gerek yoktur, sürüm görüntülerden ayrı hata ayıklama yardımcı olur:
 
 ```yml
 version: '2'
-  
+
 services:
   eshopweb:
     image: eshop/web:dev
@@ -101,11 +99,11 @@ services:
       - "com.microsoft.visualstudio.targetoperatingsystem=linux"
 ```
 
-Eklenen son docker compose.ci.build.yml dosyasıdır. Bu komut satırından bir CI sunucudan Projeyi derlemek için kullanılabilir. Bu oluşturma dosyası, uygulamanız için gerekli görüntü oluşturur Docker kapsayıcısı başlatır. Aşağıdaki örnek, docker compose.ci.build.yml dosyasının içeriğini gösterir.
+Eklenen son dosya *docker-compose.ci.build.yml*. Komut satırından bu dosya bir CI sunucudan projeyi oluşturmak için kullanılır. Bu compose dosyasının, uygulamanız için gereken bir görüntü oluşturur bir Docker kapsayıcısı başlatır. Aşağıdaki örnek, içeriğini gösterir *docker-compose.ci.build.yml* dosyası:
 
 ```yml
 version: '2'
-  
+
 services:
   ci-build:
     image: microsoft/aspnetcore-build:latest
@@ -115,32 +113,33 @@ services:
   command: /bin/bash -c "dotnet restore ./eShopWeb.sln && dotnet publish  ./eShopWeb.sln -c Release -o ./obj/Docker/publish"
 ```
 
-**Not**: .NET Core 2.0 ile başlayarak, dotnet restore komutu otomatik olarak yürütür dotnet yayımlarken yürütülür.
+> [!NOTE]
+> .NET Core SDK 2.0 ile başlayarak [dotnet restore](../../../core/tools/dotnet-restore.md) komutu yürütür otomatik olarak zaman [dotnet yayımlama](../../../core/tools/dotnet-publish.md) yürütülür.
 
-Görüntünün bir ASP.NET Core yapı görüntü olduğuna dikkat edin. Bu görüntüyü Uygulamanızı yapılandırmak ve gerekli görüntüleri oluşturmak için SDK'sı ve derleme araçlarını içerir. Çalışan **docker compose'u** bu dosyayı kullanarak proje derleme kapsayıcı görüntüden başlar, sonra bu kapsayıcıda uygulamanızın görüntü oluşturur. Bu docker belirtin-Docker kapsayıcısı uygulamanızda oluşturmak için komut satırının parçası olarak dosya oluşturun ve sonra başlatın.
+Görüntünün bir ASP.NET Core derleme görüntü olduğuna dikkat edin. Bu görüntüyü, uygulamanızı yapılandırmak ve gerekli görüntüleri oluşturmak için SDK'sı ve derleme araçları içerir. Çalışan **docker-compose** proje bu dosyayı kullanan derleme kapsayıcı görüntüsünden başlatılır ve ardından kapsayıcıdaki uygulamanızın görüntü oluşturur. Belirttiğiniz *docker-compose* uygulamanızı bir Docker kapsayıcısında oluşturun ve ardından başlatmak için komut satırının bir parçası olarak dosya.
 
-Visual Studio'da seçerek uygulamanızı Docker kapsayıcılarında çalıştırabilirsiniz **docker-oluşturan** proje başlangıç projesi olarak ve Ctrl + F5'e (hata ayıklama için) F5 ' e basarak başka bir uygulama ile yapabileceğiniz gibi. Başlattığınızda **docker compose'u** proje, Visual Studio çalışır **docker compose'u** docker-compose.yml dosyası, docker compose.override.yml dosya ve docker compose.vs birini kullanarak.\* dosyalar. Uygulama başlatıldıktan sonra Visual Studio tarayıcı başlatır.
+Visual Studio'da seçerek uygulamanızı Docker kapsayıcılarında çalıştırabilirsiniz **docker-compose** projesini başlangıç projesi olarak ve ardından (hata ayıklamak için F5), Ctrl + F5 tuşlarına basarak herhangi bir uygulama ile yapabildiğiniz gibi. Başladığınızda **docker-compose** proje, Visual Studio çalıştırmaları **docker-compose** kullanarak *docker-compose.yml* dosyası  *docker-compose.override.yml* dosyası ve bir docker-compose.vs.\* dosyaları. Uygulama başlatıldıktan sonra Visual Studio tarayıcı başlatılır.
 
-Hata ayıklayıcı uygulama başlatma, Visual Studio Docker çalışan uygulamaya ekleyecek.
+Visual Studio hata ayıklayıcı uygulamasını başlatın, Docker uygulama çalışırken ekler.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
 Bu bölümde ortaya çıkabilecek bazı sorunlar açıklanmaktadır, yerel olarak çalıştırma kapsayıcılarınızı ve bazı düzeltmeler önerir.
 
-### <a name="stopping-docker-containers"></a>Docker kapsayıcıları durdurma 
+### <a name="stop-docker-containers"></a>Docker kapsayıcıları Durdur
 
-Kapsayıcılı uygulama başlattıktan sonra kapsayıcıları bile hata ayıklama durdurduktan sonra çalışmaya devam eder. Docker çalışan hangi kapsayıcılar görmek için komut satırından ps komutu çalıştırabilirsiniz. Şekil 6-2'de gösterildiği gibi docker Durdur komutu çalışan bir kapsayıcı durdurur.
+Kapsayıcılı uygulama başlattıktan sonra kapsayıcıları bile hata ayıklama durdurduktan sonra çalışmaya devam edin. Çalıştırabileceğiniz `docker ps` çalışan kapsayıcıları görmek için komut satırından komutu. `docker stop` Komut Şekil 6-2'de gösterildiği gibi bir çalışan kapsayıcıya durdurur.
 
 ![](./media/image2.png)
 
-**Şekil 6-2**. Listeleme ve docker stop CLI komutlarının ve docker ps ile kapsayıcıları durdurma
+**Şekil 6-2**. Listeleme ve kapsayıcılar docker ps ve docker durdurma CLI komutları ile durduruluyor
 
-Farklı yapılandırmaları arasında geçiş yaptığınızda çalışan işlemleri durdurmanız gerekebilir. Aksi takdirde, web uygulamasını çalıştıran kapsayıcı uygulamanız için bağlantı noktasını kullanıyorsa (Bu örnekte 5106).
+Çalışan işlemleri farklı yapılandırmalar arasında geçiş yaptığınızda durdurmanız gerekebilir. Aksi takdirde, web uygulamasını çalıştıran kapsayıcıyı uygulamanız için bağlantı noktasını kullanıyorsa (Bu örnekte 5106).
 
-### <a name="adding-docker-to-your-projects"></a>Docker projelerinize ekleme
+### <a name="add-docker-to-your-projects"></a>Docker, projenize ekleyin.
 
-Docker desteği ekler Sihirbazı'nı çalışan Docker işlemi ile iletişim kurar. Sihirbazı başlattığınızda Docker çalışmıyorsa, sihirbazın düzgün çalışmaz. Ayrıca, sihirbaz doğru Docker desteği eklemek için geçerli kapsayıcı tercih ettiğiniz inceler. Windows kapsayıcıları için destek eklemek istiyorsanız, Docker çalışan Windows yapılandırılmış kapsayıcılar ile çalışırken Sihirbazı'nı çalıştırmanız gerekir. Linux kapsayıcıları için destek eklemek istiyorsanız, Docker ile yapılandırılmış Linux kapsayıcıları çalıştıran varken Sihirbazı'nı çalıştırın.
+Docker desteği ekler Sihirbazı çalışan Docker işlemi ile iletişim kurar. Sihirbazı başlattığınızda Docker çalışmıyorsa, sihirbaz düzgün çalışmıyor. Sihirbazın geçerli kapsayıcı seçiminizi doğru Docker desteği Ekle inceler. Windows kapsayıcıları için destek eklemek için Windows yapılandırılmış kapsayıcılarla çalışan Docker varken Sihirbazı'nı çalıştırın. Linux kapsayıcıları için destek eklemek üzere yapılandırılmış Linux kapsayıcıları ile çalışan Docker varken Sihirbazı'nı çalıştırın.
 
 >[!div class="step-by-step"]
 [Önceki](../docker-application-development-process/docker-app-development-workflow.md)
-[sonraki](../containerize-net-framework-applications/index.md)
+[İleri](../containerize-net-framework-applications/index.md)

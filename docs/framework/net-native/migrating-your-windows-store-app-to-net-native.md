@@ -4,96 +4,96 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397786"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874750"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulamaların Windows Mağazası'nda veya geliştiricinin bilgisayarda statik derleme sağlar. Bu Windows mağazası uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derleme farklıdır veya [yerel Görüntü Oluşturucu (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farkları rağmen [!INCLUDE[net_native](../../../includes/net-native-md.md)] ile uyumluluğu korumak çalışır [.NET için Windows mağazası uygulamaları](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows mağazası uygulamaları üzerinde çalışır şeyler de çalışmak [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Ancak, bazı durumlarda davranış değişiklikleri karşılaşabilirsiniz. Bu belge standart .NET için Windows mağazası uygulamaları arasındaki bu farklılıkları açıklar ve [!INCLUDE[net_native](../../../includes/net-native-md.md)] aşağıdaki alanlarda:  
+.NET yerel uygulamaları Windows Store veya Geliştirici bilgisayara statik derlenmesini sağlar. Bu Windows Store uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derlemeden farklıdır veya [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farklar rağmen .NET Native ile uyumluluğu korumak çalışır [.NET için Windows Store apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows Store uygulamaları iş öğeleri de .NET Native ile çalışır.  Ancak, bazı durumlarda, davranış değişiklikleri karşılaşabilirsiniz. Bu belge aşağıdaki alanlarda standart .NET için Windows Store uygulamaları ve .NET Native arasındaki farklar açıklanır:  
   
--   [Genel çalışma zamanı farklar](#Runtime)  
+-   [Genel çalışma zamanı farkları](#Runtime)  
   
 -   [Dinamik programlama farkları](#Dynamic)  
   
 -   [Yansıma ile ilgili diğer farklar](#Reflection)  
   
--   [Desteklenmeyen senaryolar ve API'leri](#Unsupported)  
+-   [Desteklenmeyen senaryolar ve API'ler](#Unsupported)  
   
--   [Visual Studio farklar](#VS)  
+-   [Visual Studio farkları](#VS)  
   
 <a name="Runtime"></a>   
-## <a name="general-runtime-differences"></a>Genel çalışma zamanı farklar  
+## <a name="general-runtime-differences"></a>Genel çalışma zamanı farkları  
   
--   Özel durumlar gibi <xref:System.TypeLoadException>, durum JIT Derleyici tarafından üzerinde ortak bir uygulama çalıştırdığında dil çalışma zamanı (CLR) genellikle neden tarafından işlendiğinde derleme zamanı hataları [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   Özel durumlar gibi <xref:System.TypeLoadException>, durum JIT derleyicisi tarafından üzerinde ortak bir uygulama çalıştırdığında dil çalışma zamanı (CLR) .NET Native tarafından işlendiğinde derleme zamanı hatalarına genellikle sonuçlanır.  
   
--   Çağrı yok <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> bir uygulamanın kullanıcı Arabirimi iş parçacığı yönteminden. Bu üzerinde bir kilitlenmeyle sonuçlanabilir [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   Remove() çağırmayın <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> uygulamanın UI iş parçacığından yöntemi. Bu karşılıklı bir kilitlenme .NET Native neden olabilir.  
   
--   Statik sınıf oluşturucu çağırma sıralama güvenmeyin. İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], çağırma sırası standart çalışma zamanı siparişte farklıdır. (Hatta standart çalışma zamanı ile statik sınıf oluşturucular yürütme terabayt güvenmemelisiniz.)  
+-   Statik sınıf oluşturucu çağrı sırası güvenmeyin. .NET Native çağırma farklı standart çalışma zamanı üzerinde sırasıdır. (Hatta standart çalışma zamanıyla statik sınıf oluşturucuları yürütülmesini bazında güvenmemelisiniz.)  
   
--   Döngü sonsuz bir çağrı yapmaya gerek olmadan (örneğin, `while(true);`) herhangi bir iş parçacığı üzerinde uygulama durdurmak için getir. Benzer şekilde, büyük ya da sonsuz bekler uygulama getirin ve bu da durdurmak için.  
+-   Döngü sonsuz bir çağrı yapmadan (örneğin, `while(true);`) herhangi bir iş parçacığı üzerinde bir durdurmak için uygulamayı getir. Benzer şekilde, büyük ya da sonsuz bekler, bir durdurmak için uygulamayı getiriyor.  
   
--   Bazı genel başlatma döngüleri özel durumlar oluşturma yok [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Örneğin, aşağıdaki atar kod bir <xref:System.TypeLoadException> standart CLR özel durum. İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], yoktur.  
+-   Bazı genel başlatma döngüleri özel .NET Native durumlar yok. Örneğin, aşağıdaki oluşturur kod bir <xref:System.TypeLoadException> standart CLR özel durum. .NET Native içinde bu değil.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   Bazı durumlarda, [!INCLUDE[net_native](../../../includes/net-native-md.md)] .NET Framework sınıf kitaplıkları farklı uygulamaları sağlar. Bir yönteminden döndürülen nesne her zaman döndürülen tür üyeleri gerçekleştireceksiniz. Yedekleme uygulaması farklı olduğundan, Bununla birlikte, diğer .NET Framework platformlarda de türleri aynı kümesine yayınlanamıyor mümkün olabilir değil. Örneğin, bazı durumlarda, cast mümkün olmayabilir <xref:System.Collections.Generic.IEnumerable%601> gibi yöntemler tarafından döndürülen arabirimi nesnesi <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> veya <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> için `T[]`.  
+-   Bazı durumlarda, .NET Framework sınıf kitaplıkları farklı uygulamaları .NET Native sağlar. Yöntemi tarafından döndürülen bir nesne, döndürülen tür üyelerinin her zaman uygular. Yedekleme uygulaması farklı olduğundan, ancak, diğer .NET Framework platformunda çalışan de aynı türleri kümesi için tür dönüştürme mümkün olmayabilir. Örneğin, bazı durumlarda, size bir şekilde yayınlanabilirler olmayabilir <xref:System.Collections.Generic.IEnumerable%601> arabirimi nesnesi gibi yöntemler tarafından döndürülen <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> veya <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> için `T[]`.  
   
--   WinINet önbellek .NET için Windows mağazası uygulamaları üzerinde varsayılan olarak etkin değildir, ancak açıktır [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Bu performansı artırır ancak kümesi etkileri çalışma sahiptir. Herhangi bir geliştirici eylemi gerekli değildir.  
+-   Varsayılan olarak .NET için Windows Store apps WinInet önbelleğinde etkin değil ancak .NET Native üzerinde olacaktır. Bu durum peformansı artırmasına karşın çalışma kümesi etkileri vardır. Herhangi bir geliştirici eylemi gerekli değildir.  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>Dinamik programlama farkları  
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] kodu en yüksek performans için uygulama yerel kod yapmak için .NET Framework ile statik olarak bağlar. Ancak, ikili boyutları tüm .NET Framework duruma getirilemiyor böylece küçük, kalması gerekir. [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici kullanılmayan kod başvuruları kaldırır bir bağımlılık reducer kullanarak bu sınırlamaya giderir. Ancak, [!INCLUDE[net_native](../../../includes/net-native-md.md)] korumak veya olmayabilir bu bilgileri derleme zamanında statik olarak çıkarsanamıyor, ancak bunun yerine çalışma zamanında dinamik olarak alınır olduğunda bazı tür bilgilerini ve kod oluşturur.  
+ .NET native statik olarak en yüksek performans için uygulama yerel kod yapmak için .NET Framework kodundaki bağlar. Ancak, ikili boyutları küçük kalır. böylece, tüm .NET Framework yapılamıyor gerekir. .NET yerel derleyici, kullanılmayan kod başvurularını kaldırır bir bağımlılık Azaltıcı kullanarak bu sınırlama çözümler. Ancak, .NET Native korumak veya olmayabilir bu bilgiler, statik olarak derleme zamanında çıkarsanamıyor, ancak bunun yerine çalışma zamanında dinamik olarak alınır olduğunda bazı tür bilgilerini ve kod oluşturur.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Yansıma ve dinamik programlama etkinleştirin. Ancak, tüm türleri (özellikle .NET Framework'teki ortak API'ler yansıtacak şekilde desteklendiğinden) bu oluşturulan kod boyutu çok büyük yapmayacağı yansıma için işaretlenebilir. [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici hangi türlerini yansıma desteklemesi ve meta veriler tutar ve yalnızca bu türleri için kod oluşturur akıllı seçenekler sağlar.  
+ .NET native yansıtma ve dinamik programlama etkinleştirmez. Ancak, tüm türleri (özellikle .NET Framework'teki ortak API'lerde yansıtan desteklendiğinden) bu oluşturulan kod boyutu çok büyük yapacağı için yansıma için işaretlenebilir. .NET yerel derleyici, yansıma türlerini desteklemesi ve hakkında meta veriler tutar ve yalnızca bu türleri için kod oluşturur akıllı seçimlerini yapar.  
   
- Örneğin, veri bağlama özellik adları işlevlere Eşle yapabilmek için bir uygulama gerekiyor. .NET için Windows mağazası uygulamalarında ortak dil çalışma zamanı yansıma yönetilen türler ve genel kullanıma açık yerel türleri için bu yeteneği sağlamak için otomatik olarak kullanır. İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], derleyici meta verileri için bağladığınız türleri için otomatik olarak ekler.  
+ Örneğin, veri bağlama işlevleri için özellik adlarını eşleştirmek için uygulama gerektiriyor. .NET için Windows Store uygulamalarında ortak dil çalışma zamanı yansıma yönetilen türleri ve genel kullanıma açık yerel türler için bu yeteneği vermek otomatik olarak kullanır. .NET Native, derleyici, otomatik olarak veri bağlama türleri için meta verileri içerir.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Derleyici de gibi yaygın olarak kullanılan genel türleri işlemek <xref:System.Collections.Generic.List%601> ve <xref:System.Collections.Generic.Dictionary%602>, hangi herhangi bir ipuçları veya yönergeleri gerektirmeden çalışır. [Dinamik](~/docs/csharp/language-reference/keywords/dynamic.md) anahtar sözcüğü belirli sınırları içinde de desteklenir.  
+ .NET derleyici ayrıca işleyebilir genellikle yerel genel türler gibi kullanılan <xref:System.Collections.Generic.List%601> ve <xref:System.Collections.Generic.Dictionary%602>, hangi ipuçlarının ya da yönergeleri gerektirmeden çalışır. [Dinamik](~/docs/csharp/language-reference/keywords/dynamic.md) anahtar sözcüğü de bazı sınırlar içinde desteklenir.  
   
 > [!NOTE]
->  Tüm dinamik kod yollarının uygulamanıza bağlantı noktası oluşturma, sınamanız gerekir [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+>  Tüm dinamik kod yolları .NET Native uygulamanıza taşırken sınamanız gerekir.  
   
- İçin varsayılan yapılandırmayı [!INCLUDE[net_native](../../../includes/net-native-md.md)] için çoğu geliştirici, ancak bazı geliştiriciler ince yapılandırmalarına çalışma zamanı yönergeleri kullanarak ayarlama isteyebilirsiniz yeterlidir (. rd.xml) dosyası. Ayrıca, bazı durumlarda, [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleyici hangi meta verilerini yansıma için kullanılabilir olmalıdır ve ipuçları, aşağıdaki durumlarda özellikle dayanır belirlenemiyor:  
+ .NET Native için varsayılan yapılandırma Çoğu geliştirici için yeterli olmakla birlikte, bazı geliştiriciler ince yapılandırmalarına bir çalışma zamanı yönergeleri kullanarak ayarlama isteyebilirsiniz (. rd.xml) dosyası. Ayrıca, bazı durumlarda, .NET yerel derleyici hangi meta verilerini yansıma için kullanılabilir olmalıdır ve ipuçları, özellikle aşağıdaki durumlarda dayanan belirlenemiyor:  
   
 -   Bazı yapıları ister <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> ve <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> statik olarak belirlenemez.  
   
--   Derleyici örneklemesi belirleyemediğinden yansıtmak istediğiniz genel bir tür çalışma zamanı yönergeleri tarafından belirtilmiş olması gerekir. Bu, yalnızca tüm kod dahil olması gerektiğinden, ancak genel türlerde yansıma sonsuz bir döngü (örneğin, genel türde bir genel yöntem çağrıldığında) form çünkü değildir.  
+-   Derleyici örneklemeleri belirleyemediğinden yansıtmak istediğiniz genel bir tür tarafından çalışma zamanı yönergeleri belirtilmelidir. Bu, yalnızca tüm kod dahil olması gerektiğinden, ancak genel türlerde yansıma (örneğin, genel türde bir genel yöntem çağrıldığında) sonsuz bir döngü oluşturur çünkü değildir.  
   
 > [!NOTE]
->  Çalışma zamanı yönergeleri, bir çalışma zamanı yönergeleri tanımlanır (. rd.xml) dosyası. Bu dosyayı kullanma hakkında genel bilgi için bkz: [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md). Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+>  Çalışma zamanı yönergeleri, bir çalışma zamanı yönergeleri tanımlanır (. rd.xml) dosyası. Bu dosyayı kullanma hakkında genel bilgi için bkz. [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md). Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] Ayrıca profil varsayılan kümenin dışında hangi tür yansıma desteklemelidir belirlemek Geliştirici yardım araçları içerir.  
+ .NET native ayrıca profil varsayılan dışındaki hangi tür yansıma desteklemelidir belirlemek geliştiricilere araçları içerir.  
   
 <a name="Reflection"></a>   
 ## <a name="other-reflection-related-differences"></a>Yansıma ile ilgili diğer farklar  
- Diğer tek yansıma ilgili arasındaki davranış farklılıkları .NET için Windows mağazası uygulamaları dizi vardır ve [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+ Diğer tek tek yansıma ilgili arasındaki davranış farklılıkları .NET için Windows Store uygulamaları ve .NET Native vardır.  
   
- İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ .NET yerel:  
   
--   Özel yansıma türleri ve üyeleri .NET Framework Sınıf Kitaplığı'nda üzerinde desteklenmiyor. Ancak, kendi özel türleri ve üyeleri, yanı sıra türleri ve üçüncü taraf kitaplıklar üyelerinde üzerinden yansıtacak olabilir.  
+-   Özel yansıma üzerinden türler ve üyeler .NET Framework Sınıf Kitaplığı'nda desteklenmiyor. Ancak, kendi özel türler ve üyeler, hem de türler ve üyeler üçüncü taraf kitaplıklarındaki üzerinden yansıtacak olabilir.  
   
--   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> Özelliği doğru döndürür `false` için bir <xref:System.Reflection.ParameterInfo> dönüş değerini temsil eden nesne. .NET için Windows mağazası uygulamalarında döndürdüğü `true`. Ara dile (IL) bu doğrudan desteklemez ve dil yorumlama bırakılır.  
+-   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> Özelliği doğru bir şekilde döndürür `false` için bir <xref:System.Reflection.ParameterInfo> dönüş değeri temsil eden nesne. .NET için Windows Store uygulamalarında döndürür `true`. Ara dil (IL) bu doğrudan desteklemez ve dil yorumu kaldı.  
   
--   Ortak üye <xref:System.RuntimeFieldHandle> ve <xref:System.RuntimeMethodHandle> yapıları desteklenmez. Bu tür yalnızca LINQ ifade ağaçları ve statik dizi başlatma için desteklenir.  
+-   Ortak üyelerde <xref:System.RuntimeFieldHandle> ve <xref:System.RuntimeMethodHandle> yapıları desteklenmez. Bu tür, yalnızca LINQ ifade ağaçları ve statik dizi başlatma için desteklenir.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> ve <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> temel sınıflarda gizli üyeleri Ekle ve bu nedenle açık geçersiz kılmalar geçersiz kılınabilir. Bu ayrıca diğer geçerlidir [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) yöntemleri.  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> ve <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> taban sınıflardaki gizli üyeleri içerir ve bu nedenle açık geçersiz kılmalar geçersiz kılınabilir. Bu ayrıca diğer true [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) yöntemleri.  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli birleşimleri (örneğin, ByRef'ler dizisi) oluşturmayı denediğinizde başarısız yok.  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli birleşimleri (örneğin, zkratka dizisi) oluşturmaya çalıştığınızda başarısız yok.  
   
--   İşaretçi parametrelere sahip üyeler çağrılacak yansıma kullanamazsınız.  
+-   Yansıma, işaretçi parametrelere sahip bir üye çağırmak için kullanamazsınız.  
   
--   Yansıma almak veya bir işaretçi alanı ayarlamak için kullanamazsınız.  
+-   Alınacak veya ayarlanacak bir işaretçi alan yansıma kullanamazsınız.  
   
--   Bağımsız değişken sayısı yanlış olduğunda ve bir bağımsız değişken türü geçersiz [!INCLUDE[net_native](../../../includes/net-native-md.md)] oluşturur bir <xref:System.ArgumentException> yerine bir <xref:System.Reflection.TargetParameterCountException>.  
+-   .NET Native oluşturur, bağımsız değişken sayısı yanlış olduğunda ve bağımsız değişkenler birinin türü yanlış bir <xref:System.ArgumentException> yerine bir <xref:System.Reflection.TargetParameterCountException>.  
   
--   İkili seri hale getirme özel durumların genellikle desteklenmiyor. Serileştirilebilir olmayan nesneler sonucu olarak eklenebilir <xref:System.Exception.Data%2A?displayProperty=nameWithType> sözlük.  
+-   İkili serileştirme özel durumlar genellikle desteklenmiyor. Seri hale getirilemeyen nesneleri sonucu olarak eklenebilir <xref:System.Exception.Data%2A?displayProperty=nameWithType> sözlüğü.  
   
 <a name="Unsupported"></a>   
-## <a name="unsupported-scenarios-and-apis"></a>Desteklenmeyen senaryolar ve API'leri  
- Aşağıdaki bölümlerde, genel geliştirme, birlikte çalışabilirlik ve HTTPClient ve Windows Communication Foundation (WCF) gibi teknolojileri için desteklenmeyen senaryolar ve API'leri listelenmektedir:  
+## <a name="unsupported-scenarios-and-apis"></a>Desteklenmeyen senaryolar ve API'ler  
+ Aşağıdaki bölümlerde, genel geliştirme, birlikte çalışabilirlik ve HTTPClient ve Windows Communication Foundation (WCF) gibi teknolojiler için desteklenmeyen senaryolar ve API'leri listelenmektedir:  
   
 -   [Genel Geliştirme](#General)  
   
@@ -104,110 +104,106 @@ ms.locfileid: "33397786"
 -   [Desteklenmeyen API'leri](#APIs)  
   
 <a name="General"></a>   
-### <a name="general-development-differences"></a>Genel Geliştirme farklar  
+### <a name="general-development-differences"></a>Genel Geliştirme farkları  
  **Değer türleri**  
   
--   Geçersiz kılarsanız <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> ve <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> yöntemleri bir değer türü için temel sınıf uygulamaları çağrısı yok. .NET için Windows mağazası uygulamalarında bu yöntemleri yansıma kullanan. Derleme zamanında [!INCLUDE[net_native](../../../includes/net-native-md.md)] çalışma zamanı yansıma kullanan olmayan bir uygulama oluşturur. Bu iki yöntem geçersiz kılmaz, bunlar beklendiği gibi çünkü çalışmayacak, yani [!INCLUDE[net_native](../../../includes/net-native-md.md)] derleme zamanında uygulaması oluşturur. Ancak, bu yöntemleri geçersiz kılma ancak temel sınıf uygulamasını çağıran bir özel durum oluşur.  
+-   Kılarsanız <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> ve <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> bir değer türü için yöntemleri taban sınıf uygulamaları çağrı yok. .NET için Windows Store uygulamalarında yansıma bu yöntemleri kullanan. Derleme zamanında .NET yerel çalışma zamanı yansıma kullanan olmayan bir uygulama oluşturur. Bu, bu iki yöntem geçersiz kılmazsanız .NET yerel derleme zamanında bir uygulama oluşturur çünkü bunlar beklendiği gibi çalışmasını anlamına gelir. Ancak, bu yöntemleri geçersiz ancak taban sınıf uygulamasını çağırmak bir özel durum oluşur.  
   
 -   Bir megabayttan büyük değer türleri desteklenmez.  
   
--   Değer türleri varsayılan bir oluşturucu olamaz [!INCLUDE[net_native](../../../includes/net-native-md.md)]. (C# ve Visual Basic varsayılan oluşturucular değer türleri üzerinde engelliyor. Ancak, bunlar IL içinde oluşturulabilir.)  
+-   Değer türleri, varsayılan bir oluşturucu .NET Native sahip olamaz. (C# ve Visual Basic değer türleri üzerinde varsayılan oluşturucular yasaktır. Ancak, bunlar IL içinde oluşturulabilir.)  
   
  **Diziler**  
   
--   Sıfır dışındaki bir alt sınırı ile diziler desteklenmez. Genellikle, bu diziler çağrılarak oluşturulan <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> aşırı yükleme.  
+-   Alt sınırı sıfır dışındaki dizilerle desteklenmez. Genellikle, bu dizileri çağrılarak oluşturulmuş <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> aşırı yükleme.  
   
--   Çok boyutlu diziler dinamik oluşturulması desteklenmiyor. Bu tür diziler, genellikle bir aşırı yüklemesini çağrılarak oluşturulan <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> içeren yöntem bir `lengths` parametresi veya çağırarak <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> yöntemi.  
+-   Dinamik oluşturulmasını çok boyutlu diziler desteklenmiyor. Bu tür diziler, genellikle bir aşırı yüklemesini çağırarak oluşturulan <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> içeren yöntem bir `lengths` parametresi veya çağırarak <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> yöntemi.  
   
--   Dört veya daha fazla boyutlarda çok boyutlu diziler desteklenmez; diğer bir deyişle, kendi <xref:System.Array.Rank%2A?displayProperty=nameWithType> özellik değeri olan dört veya daha büyük. Kullanım [basit dizileri](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (oluşan bir dizi) yerine. Örneğin, `array[x,y,z]` geçersiz, ancak `array[x][y][z]` değil.  
+-   Dört veya daha fazla boyuta sahip çok boyutlu diziler desteklenmez; diğer bir deyişle, kendi <xref:System.Array.Rank%2A?displayProperty=nameWithType> özellik değeri, dört veya daha büyük. Kullanım [basit dizileri](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (dizi) bunun yerine. Örneğin, `array[x,y,z]` geçersiz, ancak `array[x][y][z]` değil.  
   
--   Çok boyutlu diziler için varyansı desteklenmiyor ve neden olan bir <xref:System.InvalidCastException> çalışma zamanında özel durum.  
+-   Çok boyutlu diziler için varyans desteklenmiyor ve neden olan bir <xref:System.InvalidCastException> çalışma zamanında özel durum.  
   
  **Genel Türler**  
   
--   Sınırsız genel tür genişletme derleyici hataya yol açar. Örneğin, bu kodu derlemek başarısız olur:  
+-   Sınırsız genel tür genişletme bir derleyici hatasına neden olur. Örneğin, bu kodu derlemek başarısız olur:  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **İşaretçiler**  
   
--   İşaretçileri diziler desteklenmez.  
+-   İşaretçileri dizilerini desteklenmez.  
   
--   Yansıma almak veya bir işaretçi alanı ayarlamak için kullanamazsınız.  
+-   Alınacak veya ayarlanacak bir işaretçi alan yansıma kullanamazsınız.  
   
  **Serileştirme**  
   
- <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> Öznitelik desteklenmez. Kullanım <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> yerine özniteliği.  
+ <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> Özniteliği desteklenmiyor. Kullanım <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> yerine özniteliği.  
   
  **Kaynaklar**  
   
- Yerelleştirilmiş kaynaklar ile kullanımını <xref:System.Diagnostics.Tracing.EventSource> sınıfı desteklenmiyor. <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> Özellik yerelleştirilmiş kaynaklar tanımlamak değil.  
+ Yerelleştirilmiş kaynaklar ile kullanımını <xref:System.Diagnostics.Tracing.EventSource> sınıfı desteklenmiyor. <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> Özelliği, yerelleştirilmiş kaynaklar tanımlamıyor.  
   
  **Temsilciler**  
   
  `Delegate.BeginInvoke` ve `Delegate.EndInvoke` desteklenmez.  
   
- **Async**  
-  
- Görev IAsync aşırı mantığında iş parçacığı oluşturma desteklenmiyor.  
-  
  **Çeşitli API'ler**  
   
--   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> Özelliği atar bir <xref:System.PlatformNotSupportedException> özel durum, bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türü için uygulanan değil. Kullanılan GUID öncelikle COM desteği.  
+-   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> Özelliği oluşturur bir <xref:System.PlatformNotSupportedException> özel durum, bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türü için uygulanan değil. GUID kullanılan birincil COM desteği.  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi doğru kısa tarihleri içeren dizeleri ayrıştırma [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ancak, bu değişikliklerle uyumluluk tarih bilgisini korumaz ve ayrıştırma süresi Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](http://support.microsoft.com/kb/2803771) ve [KB2803755](http://support.microsoft.com/kb/2803755).  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](http://support.microsoft.com/kb/2803771) ve [KB2803755](http://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` içinde doğru yuvarlanır [!INCLUDE[net_native](../../../includes/net-native-md.md)]. CLR bazı sürümlerinde yerine Sonuç dizesini kesilir yuvarlanır.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` doğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
   
 <a name="HttpClient"></a>   
-### <a name="httpclient-differences"></a>HttpClient farklar  
- İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], <xref:System.Net.Http.HttpClientHandler> sınıfı WinINet düzenlenmemeli (aracılığıyla [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı) yerine <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> standart .NET için Windows mağazası uygulamalarında kullanılan sınıflar.  WinINet tüm desteklemiyor yapılandırma seçenekleri <xref:System.Net.Http.HttpClientHandler> sınıf destekler.  Sonuç olarak:  
+### <a name="httpclient-differences"></a>HttpClient farkları  
+ .NET Native içinde <xref:System.Net.Http.HttpClientHandler> sınıfı dahili olarak, WinINet kullanır (aracılığıyla [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı) yerine <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> standart .NET için Windows Store uygulamalarında kullanılan sınıflar.  WinINet tüm desteklemiyor yapılandırma seçeneklerini <xref:System.Net.Http.HttpClientHandler> sınıfı destekler.  Sonuç olarak:  
   
--   Yetenek özelliklerinden bazıları <xref:System.Net.Http.HttpClientHandler> dönmek `false` üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], döndürmeleri ancak `true` standart .NET için Windows mağazası uygulamalarında.  
+-   Özellik özellikleri bazıları <xref:System.Net.Http.HttpClientHandler> dönüş `false` .NET Native üzerinde döndürmeleri ise `true` standart .NET için Windows Store uygulamalarında.  
   
--   Bazı yapılandırma özelliği `get` erişimciler her zaman geri sabit bir değer üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)] .NET için Windows mağazası uygulamalarında varsayılan yapılandırılabilir değerinden farklı.  
+-   Bazı yapılandırma özelliği `get` erişimcileri her zaman bir sabit değer döndürür üzerinde .NET, .NET için Windows Store apps varsayılan yapılandırılabilir değeri farklı olan yerel.  
   
- Bazı ek davranış farklılıkları aşağıdaki alt bölümlerde ele alınmıştır.  
+ Bazı ek davranış farklılıklarının aşağıdaki alt bölümlerde ele alınmıştır.  
   
  **Proxy**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı, yapılandırma veya istek başına temelinde proxy geçersiz kılma desteklemiyor.  Tüm istekleri üzerinde yani [!INCLUDE[net_native](../../../includes/net-native-md.md)] yapılandırılmış sistemi proxy sunucusu veya değerine bağlı olarak hiçbir Ara sunucunun kullanmak <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> özelliği.  .NET için Windows mağazası uygulamalarında proxy sunucusu tarafından tanımlanan <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> özelliği.  Üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], ayar <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> dışında bir değere `null` oluşturur bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Özelliği döndürür `false` üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], onu verir kullanılabilirken `true` standart Windows mağazası için .NET Framework uygulamalarında.  
+ [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı, yapılandırma veya istek başına temelinde proxy geçersiz kılmayı desteklemez.  Bu .NET Native tüm istekleri sistem yapılandırılmış bir proxy sunucusu veya değerine bağlı olarak, proxy sunucusu kullanmak anlamına gelir <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> özelliği.  .NET için Windows Store uygulamalarında proxy sunucusu tarafından tanımlanan <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> özelliği.  Ayarı .NET Native üzerinde <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> dışında bir değere `null` oluşturur bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` standart .NET Framework için Windows Store uygulamalarında.  
   
  **Otomatik yeniden yönlendirme**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı yapılandırılması için otomatik yeniden yönlendirme en fazla izin vermez.  Değeri <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> özelliği varsayılan olarak standart .NET için Windows mağazası uygulamaları 50'dir ve değiştirilebilir. Üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], bu özelliğin değeri 10 ve atar değiştirmeye çalışırken bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Özelliği döndürür `false` üzerinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], onu verir kullanılabilirken `true` .NET için Windows mağazası uygulamalarında.  
+ [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı yapılandırılması için otomatik yeniden yönlendirmeleri sayısı izin vermez.  Değerini <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> özelliği varsayılan olarak standart .NET için Windows Store apps 50'dir ve değiştirilebilir. .NET Native üzerinde bu özelliğin değeri 10 ve atar değiştirmeye çalışırken bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` .NET için Windows Store uygulamalarında.  
   
- **Otomatik açma**  
+ **Otomatik Sıkıştırma**  
   
- .NET için Windows mağazası uygulamaları ayarlamanıza olanak tanır <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> özelliğine <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, her iki <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)] yalnızca destekler <xref:System.Net.DecompressionMethods.Deflate> ile birlikte <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Ayarlanmaya çalışılırken <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> ya da özellik <xref:System.Net.DecompressionMethods.Deflate> veya <xref:System.Net.DecompressionMethods.GZip> tek başına sessizce hem de ayarlar <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>.  
+ .NET için Windows Store apps ayarlamanıza olanak tanır <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> özelliğini <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>hem <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Yalnızca .NET native destekler <xref:System.Net.DecompressionMethods.Deflate> ile birlikte <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Ayarlanmaya çalışılırken <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> ya da özellik <xref:System.Net.DecompressionMethods.Deflate> veya <xref:System.Net.DecompressionMethods.GZip> tek başına sessizce hem de ayarlar <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>.  
   
  **Çerezler**  
   
- Tanımlama bilgisi işleme ile aynı anda gerçekleştirilen <xref:System.Net.Http.HttpClient> ve WinINet.  Tanımlama bilgilerini <xref:System.Net.CookieContainer> WinINet tanımlama bilgisi önbelleğinde tanımlama bilgisi ile birleştirilir.  Bir tanımlama bilgisinden kaldırma <xref:System.Net.CookieContainer> engeller <xref:System.Net.Http.HttpClient> ancak tanımlama bilgisi zaten WinINet tarafından görülen ve tanımlama bilgileri, kullanıcı tarafından silinmiş doğru tanımlama bilgisi, göndermesinin WinINet gönderir.  Program aracılığıyla kullanarak bir tanımlama bilgisi WinINet kaldırmak kurulamadığı <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, veya <xref:System.Net.CookieContainer> API.  Ayarı <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> özelliğine `false` yalnızca neden <xref:System.Net.Http.HttpClient> tanımlama bilgilerini; gönderilmesini durdurmak için WinINet istekte hala, tanımlama bilgileri içerebilir.  
+ Tanımlama bilgisi işleme ile aynı anda gerçekleştirilen <xref:System.Net.Http.HttpClient> ve WinINet.  Tanımlama bilgilerine <xref:System.Net.CookieContainer> WinINet tanımlama bilgisi önbelleğinde tanımlama bilgileri ile birleştirilir.  Tanımlama bilgisinden kaldırma <xref:System.Net.CookieContainer> engeller <xref:System.Net.Http.HttpClient> tanımlama bilgisi, zaten WinINet tarafından görülen ve tanımlama bilgileri, kullanıcı tarafından silinmiş olmayan ancak tanımlama bilgisi göndermesini WinINet gönderir.  Program aracılığıyla kullanarak bir tanımlama bilgisi WinINet kaldırmak mümkün değildir <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, veya <xref:System.Net.CookieContainer> API.  Ayarı <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> özelliğini `false` yalnızca neden <xref:System.Net.Http.HttpClient> tanımlama bilgileri göndermeyi durdurun WinINet, yine de isteğinde, tanımlama bilgileri içerebilir.  
   
- **kimlik bilgileri**  
+ **Kimlik bilgileri**  
   
- .NET için Windows mağazası uygulamalarında <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> özellikleri bağımsız olarak çalışır.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği kabul uygulayan herhangi bir nesne <xref:System.Net.ICredentials> arabirimi.  İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], ayar <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> özelliğine `true` neden <xref:System.Net.Http.HttpClientHandler.Credentials%2A> olmasını özelliği `null`.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği yalnızca ayarlanabilir `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, veya bir nesne türü <xref:System.Net.NetworkCredential>.  Diğer atama <xref:System.Net.ICredentials> en popüler olduğu nesne <xref:System.Net.CredentialCache>, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği atar bir <xref:System.PlatformNotSupportedException>.  
+ .NET için Windows Store uygulamalarında <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> özellikleri bağımsız olarak çalışır.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği uygulayan nesne kabul eden <xref:System.Net.ICredentials> arabirimi.  Ayarı .NET Native içinde <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> özelliğini `true` neden <xref:System.Net.Http.HttpClientHandler.Credentials%2A> olacak özelliği `null`.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği yalnızca ayarlanabilir `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, veya bir nesne türü <xref:System.Net.NetworkCredential>.  Diğer atama <xref:System.Net.ICredentials> en popüler olan nesne, <xref:System.Net.CredentialCache>, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği oluşturur bir <xref:System.PlatformNotSupportedException>.  
   
  **Diğer desteklenmeyen veya unconfigurable özellikleri**  
   
- İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ .NET yerel:  
   
--   Değeri <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> özelliktir her zaman <xref:System.Net.Http.ClientCertificateOption.Automatic>.  .NET için Windows mağazası uygulamalarında varsayılandır <xref:System.Net.Http.ClientCertificateOption.Manual>.  
+-   Değerini <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> özelliği her zaman <xref:System.Net.Http.ClientCertificateOption.Automatic>.  .NET için Windows Store uygulamalarında varsayılandır <xref:System.Net.Http.ClientCertificateOption.Manual>.  
   
 -   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> Özelliği yapılandırılabilir değildir.  
   
--   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> Özelliktir her zaman `true`.  .NET için Windows mağazası uygulamalarında varsayılandır `false`.  
+-   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> Özelliği her zaman `true`.  .NET için Windows Store uygulamalarında varsayılandır `false`.  
   
--   `SetCookie2` Yanıtları üstbilgisinde geçersiz yoksayılır.  
+-   `SetCookie2` Yanıtları üstbilgisinde eski olarak sayılır.  
   
 <a name="Interop"></a>   
-### <a name="interop-differences"></a>Birlikte çalışma farklar  
- **Kullanım dışı API'leri**  
+### <a name="interop-differences"></a>Birlikte çalışma farkları  
+ **Kaldırılmış API'ler**  
   
- Yönetilen kod ile birlikte çalışabilirlik için sık kullanılan API'leri sayısı kullanım dışı bırakıldı. İle kullanıldığında [!INCLUDE[net_native](../../../includes/net-native-md.md)], bu API'leri atabilir bir <xref:System.NotImplementedException> veya <xref:System.PlatformNotSupportedException> özel durum ya da bir derleyici hatası sonuçlanır. Derleyici Hatası yerine bir derleyici uyarısı oluşturur, bunları çağırma rağmen .NET için Windows mağazası uygulamalarında bu API'leri kullanılmayan olarak işaretlenir.  
+ Yönetilen kod ile birlikte çalışabilirlik için sık kullanılan API'ler birkaç kullanım dışı bırakıldı. Bu API'ler .NET Native ile kullanıldığında, oluşturabilecek bir <xref:System.NotImplementedException> veya <xref:System.PlatformNotSupportedException> özel durum ya da bir derleyici hatası sonuçlanır. Bunların çağrılması bir derleyici hatası yerine derleyici uyarısı oluşturur ancak .NET için Windows Store uygulamalarında bu API'leri eski işaretlendi.  
   
- Kullanım dışı API'ler `VARIANT` hazırlama:  
+ API'ler için kullanım dışı `VARIANT` hazırlama:  
   
 ||  
 |-|  
@@ -221,24 +217,24 @@ ms.locfileid: "33397786"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> desteklenir, ancak ile kullanıldığında gibi bazı senaryolarda bir özel durum oluşturur [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) veya byref değişkenleri.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> desteklenir, ancak bir özel durum ile kullanıldığında gibi bazı senaryolarda oluşturur [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) veya türevleri byref.  
   
- Kullanım dışı API'ler [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) destekler:  
+ API'ler için kullanım dışı [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) destekler:  
   
 |Tür|Üye|  
 |----------|------------|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch>|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>|  
-|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>|Öznitelik desteklenmiyor|  
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType>|Özniteliği desteklenmiyor|  
   
- Kullanım dışı API'ler klasik COM olayları için:  
+ Kaldırılmış API'ler klasik COM olayları için:  
   
 ||  
 |-|  
 |<xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|  
   
- Kullanım dışı API'leri <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> içinde desteklenmeyen arabirimi [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ Kullanım dışı API'leri <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> arabirimi, .NET Native desteklenmez:  
   
 |Tür|Üye|  
 |----------|------------|  
@@ -247,7 +243,7 @@ ms.locfileid: "33397786"
 |<xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType>|Tüm üyeler.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=nameWithType>|  
   
- Başka desteklenmeyen birlikte çalışma özellikleri:  
+ Diğer desteklenmeyen birlikte çalışma özellikleri:  
   
 |Tür|Üye|  
 |----------|------------|  
@@ -259,7 +255,7 @@ ms.locfileid: "33397786"
 |<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.AsAny>|  
 |<xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler>|  
   
- Sıralama API'leri nadiren kullanılır:  
+ Hazırlama API nadiren kullanılır:  
   
 |Tür|Üye|  
 |----------|------------|  
@@ -276,9 +272,9 @@ ms.locfileid: "33397786"
   
  **Platform çağırma ve COM birlikte çalışma uyumluluğu**  
   
- Çoğu platform çağırma ve COM birlikte çalışma senaryoları içinde hala desteklenmektedir [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Özellikle, Windows çalışma zamanı (WinRT) API ile tüm birlikte çalışabilirlik ve tüm hazırlama Windows çalışma zamanı için gerekli desteklenir. Bu, sıralama için destek içerir:  
+ Çoğu platform çağırma ve COM birlikte çalışma senaryolar hala .NET Native desteklenir. Özellikle, Windows çalışma zamanı (WinRT) API'leri ile tüm birlikte çalışabilirlik ve Windows çalışma zamanı için gerekli tüm hazırlama desteklenir. Bu, sıralama için destek içerir:  
   
--   Diziler (de dahil olmak üzere <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
+-   Diziler (dahil olmak üzere <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
   
 -   `BStr`  
   
@@ -294,7 +290,7 @@ ms.locfileid: "33397786"
   
 -   Tüm WinRT yapıları  
   
--   VARIANT türlerini hazırlama kısmi desteği. Aşağıdakiler desteklenir:  
+-   VARIANT türlerini hazırlama için kısmi destek. Aşağıdakiler desteklenir:  
   
     -   <xref:System.Boolean>  
   
@@ -324,23 +320,23 @@ ms.locfileid: "33397786"
   
     -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
   
- Ancak, [!INCLUDE[net_native](../../../includes/net-native-md.md)] aşağıdakileri desteklemez:  
+ Ancak, .NET Native aşağıdakileri desteklemez:  
   
--   Klasik COM olaylarını kullanma  
+-   Kullanarak klasik COM olayları  
   
 -   Uygulama <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> yönetilen tür arabirimi  
   
--   Uygulama [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) yoluyla bir yönetilen türü arabirimde <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> özniteliği. Ancak, COM nesneleri aracılığıyla çağrılamıyor unutmayın `IDispatch`, ve yönetilen nesnenizin uygulayamaz `IDispatch`.  
+-   Uygulama [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) arabirimi yönetilen türe göre <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> özniteliği. Ancak, COM nesneleri aracılığıyla çağrılamıyor unutmayın `IDispatch`, ve yönetilen nesnenizin uygulayamaz `IDispatch`.  
   
- Bir platform çağrılacak yansıma kullanarak yöntem çağırma desteklenmiyor. Yöntem çağrısının içinde başka bir yöntem kaydırma ve bunun yerine sarmalayıcı çağrılacak yansıma kullanarak bu sınırlamaya geçici çalışabilirsiniz.  
+ Yansıma kullanarak bir platform çağırma yöntemi çağırma desteklenmiyor. Başka bir yöntem yöntem çağrısının sarmalama ve bunun yerine sarmalayıcı çağırmak için yansıma kullanarak bu sınırlandırma çerçevesinde çalışabilirsiniz.  
   
 <a name="APIs"></a>   
-### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Diğer .NET API'leri için Windows mağazası uygulamaları arasındaki farklar  
- Bu bölüm içinde desteklenmeyen kalan API'ları listeler [!INCLUDE[net_native](../../../includes/net-native-md.md)]. En büyük desteklenmeyen API kümesidir Windows Communication Foundation (WCF) API'leri.  
+### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>.NET API için Windows Store uygulamalarından diğer farklar  
+ Bu bölüm .NET Native desteklenmeyen kalan API'ları listeler. Windows Communication Foundation (WCF) API'leri en büyük dizi desteklenmeyen API var.  
   
  **DataAnnotations (System.ComponentModel.DataAnnotations)**  
   
- Türler <xref:System.ComponentModel.DataAnnotations> ve <xref:System.ComponentModel.DataAnnotations.Schema> ad alanları desteklenmeyen [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Bu, Windows 8 için .NET için Windows mağazası uygulamaları yok aşağıdaki türleri şunlardır:  
+ Türlerinde <xref:System.ComponentModel.DataAnnotations> ve <xref:System.ComponentModel.DataAnnotations.Schema> ad alanları .NET Native desteklenmez. Bu, Windows 8 için .NET için Windows Store uygulamalarında bulunan aşağıdaki türleri şunlardır:  
   
 ||  
 |-|  
@@ -372,7 +368,7 @@ ms.locfileid: "33397786"
   
  **Visual Basic**  
   
- Visual Basic şu anda desteklenmiyor [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Aşağıdaki türleri <xref:Microsoft.VisualBasic> ve <xref:Microsoft.VisualBasic.CompilerServices> kullanılabilir olmayan ad alanlarını [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ Visual Basic .NET Native şu anda desteklenmemektedir. Aşağıdaki türleri içinde <xref:Microsoft.VisualBasic> ve <xref:Microsoft.VisualBasic.CompilerServices> ad alanları .NET Native kullanıma sunulmaz:  
   
 ||  
 |-|  
@@ -396,15 +392,15 @@ ms.locfileid: "33397786"
   
  **Yansıma bağlam (System.Reflection.Context ad alanı)**  
   
- <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> Sınıfı desteklenmiyor [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+ <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> Sınıfı .NET Native desteklenmez.  
   
  **RTC (System.Net.Http.Rtc)**  
   
- <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType> Sınıfı desteklenmiyor [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+ <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType> Sınıfı .NET Native desteklenmez.  
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- Türler [System.ServiceModel.* ad alanları](http://msdn.microsoft.com/library/gg145010.aspx) içinde desteklenmeyen [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Bunlar aşağıdaki türleri içerir:  
+ Türlerinde [System.ServiceModel.* ad alanları](http://msdn.microsoft.com/library/gg145010.aspx) .NET Native desteklenmez. Bunlar aşağıdaki türleri içerir:  
   
 ||  
 |-|  
@@ -587,28 +583,28 @@ ms.locfileid: "33397786"
 |<xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters?displayProperty=nameWithType>|  
   
-### <a name="differences-in-serializers"></a>Serileştiricileri farklılıkları  
- Aşağıdaki farkları ilgilendiren seri hale getirme ve seri durumundan çıkarma ile <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıfları:  
+### <a name="differences-in-serializers"></a>Seri hale getiricileri genişletme farklılıkları  
+ Aşağıdaki farklar ilgilendiriyor serileştirme ve seri durumdan çıkarma ile <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıflar:  
   
--   İçinde [!INCLUDE[net_native](../../../includes/net-native-md.md)], <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serileştirmek veya seri durumdan, türü kök seri hale getirme türü olmayan bir taban sınıfı üyenin türetilmiş bir sınıf başarısız. Örneğin, aşağıdaki kodda serileştirmek veya seri durumdan çalışılırken `Y` hatayla sonuçlanır:  
+-   .NET Native içinde <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serileştirmek veya seri durumdan türü olmayan bir kök serileştirme türü bir temel sınıf üyesinin türetilmiş bir sınıf başarısız. Örneğin, aşağıdaki kodda, serileştirmek veya seri durumdan çalışılırken `Y` hatayla sonuçlanır:  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
-     Tür `InnerType` taban sınıfı üyeleri seri hale getirme sırasında geçiş değil çünkü seri hale getirici için bilinen değil.  
+     Tür `InnerType` seri hale getirici için temel sınıf üyelerini serileştirme sırasında geçiş değildir çünkü bilinen değil.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sınıf veya uygulayan yapısı serileştirmek başarısız <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Örneğin, aşağıdaki türleri serileştirmek veya serisini kaldırmak başarısız olur:  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> serileştirilecek nesnenin tam türü bilmiyor çünkü aşağıdaki nesne değeri serileştirmek başarısız olur:  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sınıf veya yapı uygulayan serileştirmek başarısız <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Örneğin, aşağıdaki türleri serileştirmek veya seri durumdan çıkarmak başarısız:  
   
   
   
--   <xref:System.Xml.Serialization.XmlSerializer> serileştirmek veya seri durumdan serileştirilmiş nesne türü buysa başarısız <xref:System.Xml.XmlQualifiedName>.  
+-   <xref:System.Xml.Serialization.XmlSerializer> serileştirilecek nesnenin tam tür bilmediği aşağıdaki nesne değeri serileştirmek başarısız olur:  
   
--   Tüm serileştiricileri (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer>) türü seri hale getirme kodunu oluşturmak başarısız <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> veya içeren bir türü için <xref:System.Xml.Linq.XElement>. Bunun yerine, derleme zamanı hataları görüntüler.  
   
--   Seri hale getirme türlerinde şu oluşturuculardan beklendiği şekilde çalışması için garanti değil:  
+  
+-   <xref:System.Xml.Serialization.XmlSerializer> serileştirmek veya seri hale getirilmiş nesne türü ise seri durumdan başaramıyor <xref:System.Xml.XmlQualifiedName>.  
+  
+-   Tüm seri hale getiricileri genişletme (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer>) tür için serileştirme kod oluşturmak başarısız <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ya da içeren bir tür için <xref:System.Xml.Linq.XElement>. Bunlar bunun yerine derleme zamanı hataları görüntüleyin.  
+  
+-   Seri hale getirme türlerinde şu oluşturuculardan beklendiği şekilde çalışması için garantili değildir:  
   
     -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
@@ -632,7 +628,7 @@ ms.locfileid: "33397786"
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> herhangi bir aşağıdaki özniteliklere öznitelikli yöntemleri olan bir türü için kod oluşturmanın başarısız olur:  
+-   <xref:System.Xml.Serialization.XmlSerializer> Aşağıdaki özniteliklerden birini öznitelikli yöntem olan bir türü için kod oluşturmak üzere başarısız olur:  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -642,40 +638,40 @@ ms.locfileid: "33397786"
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> kabul etmez <xref:System.Xml.Serialization.IXmlSerializable> özel seri duruma getirme arabirimi. Bu arabirimi uygulayan bir sınıf varsa <xref:System.Xml.Serialization.XmlSerializer> türü düz bir eski CLR nesnesi (POCO) türü olarak değerlendirir ve yalnızca genel özellikleri serileştirir.  
+-   <xref:System.Xml.Serialization.XmlSerializer> ne uygun olmayan <xref:System.Xml.Serialization.IXmlSerializable> özel seri hale getirme arabirimi. Bu arabirimi uygulayan bir sınıf varsa <xref:System.Xml.Serialization.XmlSerializer> türü düz eski bir CLR nesnesi (POCO) türü olarak değerlendirir ve yalnızca genel özelliklerini serileştirir.  
   
--   Bir düz seri hale getirme <xref:System.Exception> aşağıdaki gibi nesne ile iyi işe yaramazsa <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
+-   Düz bir'seri hale getirme <xref:System.Exception> aşağıdaki gibi bir nesne ile iyi çalışmaz <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
   
   
   
 <a name="VS"></a>   
-## <a name="visual-studio-differences"></a>Visual Studio farklar  
+## <a name="visual-studio-differences"></a>Visual Studio farkları  
  **Özel durumlar ve hata ayıklama**  
   
- Ne zaman çalıştırdığınız kullanarak derlenmiş uygulamaları [!INCLUDE[net_native](../../../includes/net-native-md.md)] Hata Ayıklayıcısı'ndaki ilk fırsat özel durumlar için aşağıdaki özel durum türleri etkinleştirilir:  
+ .NET yerel hata ayıklayıcıda kullanılarak derlenmiş uygulamalar çalıştırırken, ilk şans özel durumlar aşağıdaki özel durum türleri için etkinleştirilir:  
   
 -   <xref:System.MemberAccessException>  
   
 -   <xref:System.TypeAccessException>  
   
- **Yapı uygulamalar**  
+ **Uygulamaları oluşturma**  
   
- Varsayılan olarak Visual Studio tarafından kullanılan x86 derleme araçlarını kullanın. C:\Program Files (x86)\MSBuild\12.0\bin\amd64; bulunan AMD64 MSBuild araçları kullanarak öneririz yok Bu yapı sorunlara neden olabilir.  
+ Varsayılan olarak Visual Studio tarafından kullanılan x86 derleme araçlarını kullanın. C:\Program Files (x86)\MSBuild\12.0\bin\amd64; bulunan AMD64 MSBuild araçları kullanımı önerilmemektedir Bu derleme sorunlara neden olabilir.  
   
  **Profil oluşturucular**  
   
--   Visual Studio CPU profil oluşturucu ve XAML bellek profil oluşturucu sadece kendi-kodumu doğru görüntülemiyor.  
+-   Visual Studio CPU Profiler ve XAML bellek Profiler Just My-kod düzgün görüntülemez.  
   
--   XAML bellek profil oluşturucu doğru şekilde yönetilen yığın veri görüntülemez.  
+-   XAML bellek Profiler, yönetilen yığın verileri doğru bir şekilde görüntülemez.  
   
--   CPU profil oluşturucu doğru modülleri belirlemek değil ve işlev adları görüntüler öneki.  
+-   CPU Profiler doğru modülleri belirlemek değil ve işlev adlarını görüntüler öneki.  
   
- **Birim testi kitaplık projeleri**  
+ **Birim testi kitaplığı projeleri**  
   
- Etkinleştirme [!INCLUDE[net_native](../../../includes/net-native-md.md)] Birim Test kitaplığının bir Windows mağazası uygulamaları projesi desteklenmiyor ve projeyi oluşturmak başarısız olmasına neden olur.  
+ .NET yerel bir Windows Store uygulamaları projesi için bir birim testi kitaplığı üzerindeki etkinleştirme desteklenmez ve projeyi oluşturmak başarısız olmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET için Windows mağazası uygulamalarına genel bakış](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [.NET için Windows Store uygulamalarına genel bakış](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

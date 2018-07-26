@@ -18,29 +18,29 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f0bf9b1da76033ef40cc72657ee722083a6f8b1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a96641e6dd42e033f2d28b847fc071dfc514912d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567641"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937003"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
-Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemek için ses ve, ana iş parçacığı kesinti olmadan çalışmaya devam ederken "arka planda" görüntüleri etkinleştir.  
+Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemenizi ses ve kesinti olmadan çalışan, ana iş parçacığı devam ederken "arka planda" görüntüleri etkinleştirin.  
   
- Zaman uyumsuz yöntemleri destekleyen bir sınıf kullanarak [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin olay işleyicisi ekleme olarak kadar basit olabilir *MethodName *** tamamlandı** olayı herhangi bir olay için yaptığınız gibi. Çağırdığınızda *MethodName *** zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz *MethodName *** tamamlandı** olayı oluşturulur. Olay işleyicisi incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlemi başarıyla tamamlandı veya iptal edildi belirlemek için parametre.  
+ Destekleyen bir sınıf üzerinde zaman uyumsuz metotlar kullanma [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) bileşenin bir olay işleyicisi ekleme olarak basit olabilir *MethodName *** tamamlandı** olayı herhangi bir olay için yaptığınız gibi. Çağırdığınızda *MethodName *** zaman uyumsuz** yöntemi, uygulamanız çalışmaya devam eder kadar kesintisiz *MethodName *** tamamlandı** olayı oluşturulur. Olay işleyicisinde, incelemeniz <xref:System.ComponentModel.AsyncCompletedEventArgs> zaman uyumsuz işlem başarıyla tamamlanırsa veya iptal edildi belirlemek için parametre.  
   
- Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz: [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [olay işleyicilerine genel bakış](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Aşağıdaki yordam zaman uyumsuz resim yükleme yeteneğini kullanmayı gösterir bir <xref:System.Windows.Forms.PictureBox> denetim.  
+ Aşağıdaki yordam zaman uyumsuz resim yükleme yeteneğini kullanmayı gösterir. bir <xref:System.Windows.Forms.PictureBox> denetimi.  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Zaman uyumsuz olarak bir görüntü yüklemek PictureBox denetimi etkinleştirmek için  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Zaman uyumsuz olarak görüntü yüklemek bir PictureBox denetimini etkinleştirmek için  
   
-1.  Bir örneğini oluşturmak <xref:System.Windows.Forms.PictureBox> formunuzda bileşen.  
+1.  Bir örneğini oluşturmak <xref:System.Windows.Forms.PictureBox> formunuza bileşen.  
   
-2.  Bir olay işleyicisi atamak <xref:System.Windows.Forms.PictureBox.LoadCompleted> olay.  
+2.  Bir olay işleyicisi atama <xref:System.Windows.Forms.PictureBox.LoadCompleted> olay.  
   
-     Zaman uyumsuz indirme sırasında oluşmuş olabilecek hataları denetleyin. Burada iptalleri denetlemek budur.  
+     Zaman uyumsuz indirme sırasında oluşmuş olabilecek hataları kontrol edin. İptalleri denetlemek burada budur.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -48,7 +48,7 @@ Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini i�
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Adlı iki düğme ekleme `loadButton` ve `cancelLoadButton`, formunuza. Ekleme <xref:System.Windows.Forms.Control.Click> başlatmak ve yüklemeyi iptal etmek için olay işleyicileri.  
+3.  Adlı iki düğme ekleyin `loadButton` ve `cancelLoadButton`, form. Ekleme <xref:System.Windows.Forms.Control.Click> başlatmak ve yüklemeyi iptal etmek için olay işleyicileri.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -58,9 +58,9 @@ Birçok bileşen işlerine zaman uyumsuz olarak gerçekleştirme seçeneğini i�
   
 4.  Uygulamanızı çalıştırın.  
   
-     Görüntü yükleme devam ettikçe formun serbestçe hareket, simge durumuna küçültün ve onu en üst düzeye çıkarmak.  
+     Görüntü yükleme devam ettikçe form serbestçe hareket, simge durumuna küçültün ve, en üst düzeye çıkarın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [IN derleme değil: Visual Basic'te çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)
+ [Visual Basic'te çoklu iş parçacığı kullanımı](../../../docs/visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

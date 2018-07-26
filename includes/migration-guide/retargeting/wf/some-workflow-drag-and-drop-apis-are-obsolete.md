@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Ayrıntılar|Bu iş akışı sürükle ve bırak API artık kullanılmıyor ve uygulama karşı 4.5 yeniden oluşturulursa derleyici uyarıları neden olur.|
-|Öneri|Yeni <xref:System.Activities.Presentation.DragDropHelper?displayProperty=name> birden fazla nesne işlemleriyle destekler API'lerini bunun yerine kullanılmalıdır. Alternatif olarak, derleme uyarıları gizlenebilir veya eski bir derleyici kullanılarak önlenebilir. API'ler hala desteklenmektedir.|
+|Ayrıntılar|Bu iş akışı sürükle ve bırak API artık kullanılmıyor ve 4.5 karşı uygulamayı yeniden oluşturulursa derleyici uyarılarına neden olur.|
+|Öneri|Yeni <xref:System.Activities.Presentation.DragDropHelper?displayProperty=name> birden fazla nesneyle işlemlerini destekleyen API'ler bunun yerine kullanılmalıdır. Alternatif olarak, derleme uyarıları gizlenebilir veya daha eski bir derleyici kullanılarak önlenebilir. API'leri hala desteklenmektedir.|
 |Kapsam|Küçük|
 |Sürüm|4,5|
 |Tür|Yeniden hedefleme|

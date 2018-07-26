@@ -11,19 +11,19 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
 ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696445"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961442"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
-Try-catch deyimi oluşan bir `try` blok izlenen bir veya daha fazla tarafından `catch` yan tümceleri farklı özel durumlar için işleyiciler belirleyin.  
+Try-catch deyiminin oluşan bir `try` blok izlenen bir veya daha fazla tarafından `catch` farklı özel durumlar için işleyiciler belirten yan tümceleri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özel durum, ortak dil çalışma zamanı (CLR) arar `catch` bu özel durumu işler deyimi. Şu anda yürütülen yöntemi gibi içermiyorsa, bir `catch` engellemek, CLR bakar ve benzeri çağrı yığını yukarı geçerli yöntemi çağrılan yöntemi. Öyle değilse `catch` blok bulunursa, ardından CLR kullanıcıya bir işlenmeyen özel durum iletisi görüntüler ve programın yürütülmesi durdurulur.  
+ Ortak dil çalışma zamanı (CLR) bir özel durum oluştuğunda arar `catch` bu özel durumu işleyen bir ifade. Şu anda yürütülen yöntemi gibi içermiyorsa bir `catch` engelleme, vb. çağrı yığınında yukarı geçerli bir yöntemi çağıran yönteme CLR bakar. Hayır ise `catch` bloğu bulundu ve ardından CLR kullanıcıya bir işlenmeyen özel durum iletisi görüntüler ve programın yürütülmesini durdurur.  
   
- `try` Blok özel durumuna neden olabilir korunmuş kodunu içerir. Blok, bir özel durum veya başarıyla tamamlanıncaya kadar yürütülür. Örneğin, aşağıdaki cast denemesi bir `null` nesnesini başlatır <xref:System.NullReferenceException> özel durum:  
+ `try` Bloğu özel durumuna neden olabilir korunan kodu içerir. Blok, bir özel durum veya başarıyla tamamlanana kadar yürütülür. Aşağıdaki örnek, atama yapmayı bir `null` nesne harekete geçirirse <xref:System.NullReferenceException> özel durum:  
   
 ```csharp  
 object o2 = null;  
@@ -33,7 +33,7 @@ try
 }  
 ```  
   
- Ancak `catch` yan tümcesi kullanılabilir bağımsız değişkenler herhangi bir özel durum türü yakalamak için bu kullanımı önerilmez. Genel olarak, yalnızca nasıl kurtarılır bildiğiniz bu özel durumları yakalamak. Bu nedenle, her zaman türetilmiş bir nesne bağımsız değişkeni belirtmeniz <xref:System.Exception?displayProperty=nameWithType> örneğin:  
+ Ancak `catch` yan tümcesi bağımsız değişkenler herhangi bir türde özel durum yakalamak için kullanılabilir, bu kullanım önerilmez. Genel olarak, yalnızca, kurtarılır biliyorsunuz özel durumları yakalamalısınız. Bu nedenle, her zaman türetilen bir nesne bağımsız değişkeni belirtmeniz gerekir <xref:System.Exception?displayProperty=nameWithType> örneğin:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -41,9 +41,9 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Birden fazla özel kullanmak da mümkündür `catch` yan tümcesinde aynı try-catch deyimi. Bu durumda, sırasını `catch` yan tümceleri önemlidir çünkü `catch` yan tümceleri sırayla inceledi. Daha fazla özel durum daha az yayına önce yakalar. Böylece daha sonra bir blok hiç üst sınırına, catch blokları siparişi derleyici bir hata oluşturur.  
+ Birden fazla özel kullanmak da mümkündür `catch` aynı try-catch deyiminin yan tümcesi. Bu durumda, sırası `catch` yan tümceleri önemlidir çünkü `catch` yan tümceleri sırayla incelenir. Less yazımına özgü olanlardan önce daha özel istisnaları yakalayın. Böylece bir sonraki bloğuna hiç ulaşılmadı, catch engeller sipariş, derleyici bir hata oluşturur.  
   
- Kullanarak `catch` bağımsız değişkenleri olan istediğiniz işlemek için özel durumlar için filtre uygulamak için bir yolu.  Daha fazla uygulayacağınıza karar vermek için özel durum inceler bir özel durum filtresi de kullanabilirsiniz.  Özel Durum Filtresi false değeri döndürülürse, bir işleyici aramaya devam eder.  
+ Kullanarak `catch` bağımsız değişkenler, işlemek istediğiniz özel durumları filtrelemek için bir yoludur.  Daha fazla uygulayacağınıza karar vermek için özel durum inceleyen bir özel durum filtresi de kullanabilirsiniz.  Ardından, özel durum filtresi false döndürürse, işleyici için arama devam eder.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -51,9 +51,9 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- Özel durum filtreleri yakalama ve filtreleri yaralanmadığı türde yığını bıraktığınızdan (aşağıda anlatıldığı) yeniden atma tercih edilir.  Bir sonraki işleyici yığın dökümleri, burada özel durum ilk olarak, bunu işlenemezse yalnızca en son yer yerine geldiğini görebilirsiniz.  Özel durum filtre ifadeleri yaygın kullanımı günlüğü.  Her zaman, bunları işlemek ve yeniden oluşturulması gerekmeden ilerledikçe özel durumları günlüğe kaydetmek bir oturum için de çıkarır false verir bir filtre oluşturabilirsiniz.  
+ Özel durum filtreleri yakalama ve filtreleri yaralanmadığı türde yığın bıraktığınızdan (aşağıda anlatıldığı) yeniden atma tercih edilir.  Bir sonraki işleyici yığın dökümleri, nereden özel durumun ilk olarak, bunu döndükten hemen son yer yerine geldiğini görebilirsiniz.  Özel durum filtre ifadeleri yaygın kullanımı günlüğe kaydetme.  Her zaman yeniden oluşturma ve bunları işlemek zorunda kalmadan ilerledikçe özel durumları günlüğe kaydetmek bir günlük için de çıkarır false döndüren bir filtre oluşturabilirsiniz.  
   
- A [throw](../../../csharp/language-reference/keywords/throw.md) deyimi içinde kullanılabilir bir `catch` tarafından yakalanan özel durum yeniden throw blok `catch` deyimi. Aşağıdaki örnekte kaynak bilgilerini ayıklar bir <xref:System.IO.IOException> özel durum ve ardından üst yöntemi özel durum oluşturur.  
+ A [throw](../../../csharp/language-reference/keywords/throw.md) deyimi kullanılabilir bir `catch` blok tarafından yakalanan özel durumu yeniden harekete geçirileceğini `catch` deyimi. Aşağıdaki örnekte kaynak bilgileri ayıklayan bir <xref:System.IO.IOException> özel durum ve ardından üst yöntemi özel durum oluşturur.  
   
 ```csharp  
 catch (FileNotFoundException e)  
@@ -70,7 +70,7 @@ catch (IOException e)
 }  
 ```  
   
- Bunun tek istisnası yakalamak ve farklı bir özel durum. Bunu yaptığınızda, aşağıdaki örnekte gösterildiği gibi iç özel durum olarak yakalanan özel durum belirtin.  
+ Bir özel durumu yakalar ve farklı bir özel durum. Bunu yaptığınızda, aşağıdaki örnekte gösterildiği gibi iç özel durum Yakalanan özel durum belirtin.  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -80,7 +80,7 @@ catch (InvalidCastException e)
 }  
 ```  
   
- Belirtilen bir koşul true olduğunda aşağıdaki örnekte gösterildiği gibi aynı zamanda bir özel durum yeniden atabilirsiniz.  
+ Belirtilen bir koşul true olduğunda aşağıdaki örnekte gösterildiği gibi ayrıca bir özel durum yeniden oluşturabilecek.  
   
 ```csharp  
 catch (InvalidCastException e)  
@@ -97,7 +97,7 @@ catch (InvalidCastException e)
 ```  
 
 > [!NOTE]
-> Genellikle temiz bir şekilde (aynı zamanda bu belgenin önceki bölümlerinde açıklandığı gibi yığın değiştirme değil) benzer bir sonuç almak için bir özel durum filtresi kullanmak da mümkündür. Aşağıdaki örnek, önceki örnek olarak çağıranlar için benzer bir davranışı vardır. İşlev oluşturur `InvalidCastException` çağırana geri zaman `e.Data` olan `null`.
+> Genellikle daha net bir şekilde (aynı zamanda bu belgede daha önce açıklandığı gibi yığını değiştirme değil) benzer bir sonuç almak için bir özel durum filtresi kullanmak da mümkündür. Aşağıdaki örnek, önceki örnek olarak arayanlar için benzer bir davranış sahiptir. İşlevin `InvalidCastException` çağırana geri olduğunda `e.Data` olduğu `null`.
 > 
 > ```csharp
 > catch (InvalidCastException e) when (e.Data != null)   
@@ -106,7 +106,7 @@ catch (InvalidCastException e)
 > }
 > ```   
 
- Gelen içinde bir `try` engellemek, okuduğunuzu bildirilen değişkenlerini Başlat. Aksi takdirde, bloğun yürütme tamamlanmadan önce bir özel durum meydana gelebilir. Örneğin, aşağıdaki kod örneğinde, değişkenin içinde `n` içinde başlatılan `try` bloğu. Bu değişken dışında kullanma girişimi `try` engelleyin `Write(n)` deyimi derleyici hatası üretir.  
+ Gelen içinde bir `try` sıralamadaki bildirilen değişkenlerini başlatmak, engelleyin. Aksi takdirde, bloğun yürütülmesini tamamlanmadan önce bir özel durum ortaya çıkabilir. Örneğin, aşağıdaki kod örneği, değişken içinde `n` içinde başlatılan `try` blok. Bu değişken dışında kullanma girişimi `try` engelleyin `Write(n)` deyimi bir derleyici hatası üretir.  
   
 ```csharp  
 static void Main()   
@@ -125,46 +125,46 @@ static void Main()
 }  
 ```  
   
- Catch hakkında daha fazla bilgi için bkz: [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
+ Yakalama hakkında daha fazla bilgi için bkz: [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
-## <a name="exceptions-in-async-methods"></a>Zaman uyumsuz yöntemler özel durumlar  
- Bir zaman uyumsuz yöntem olarak işaretlenmiş bir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) değiştirici ve genellikle bir içeriyor ya da daha fazla ifadeler veya deyimleri bekler. Bir bekleme ifade geçerlidir [bekleme](../../../csharp/language-reference/keywords/await.md) işleci bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>.  
+## <a name="exceptions-in-async-methods"></a>Zaman uyumsuz yöntemlerde özel durumları  
+ Zaman uyumsuz bir yöntem tarafından işaretlenen bir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) değiştiricisi ve genellikle bir içeriyor ya da daha fazla await ifadeler veya deyimler. Await ifadesi geçerli [await](../../../csharp/language-reference/keywords/await.md) işleci bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>.  
   
- Ulaştığında denetlemek bir `await` awaited görevi tamamlanana kadar zaman uyumsuz yönteminde yöntemi ediyor askıya alınır. Görev tamamlandığında, yürütme yönteminde devam edebilirsiniz. Daha fazla bilgi için bkz: [zaman uyumsuz programlama ile zaman uyumsuz ve bekleme](../../../csharp/programming-guide/concepts/async/index.md) ve [zaman uyumsuz programlarda denetim akışı](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ Ulaştığında denetlemek bir `await` awaited görevi tamamlanıncaya kadar zaman uyumsuz yöntemin yöntem ediyor askıya alındı. Görev tamamlandığında, yürütme yönteminde devam edebilir. Daha fazla bilgi için [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md) ve [zaman uyumsuz programlarda akış kontrolü](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
- Tamamlanan görevin hangi `await` uygulanan görev döndüren yöntemi işlenmeyen bir özel durum nedeniyle hatalı bir durumda olabilir. Görev bekleyen bir özel durum oluşturur. Onu döndüren zaman uyumsuz işlemi iptal edilirse bir görevi iptal edilmiş durumda da düşebilir. İptal edilen bir görevin bekleyen oluşturur bir `OperationCanceledException`. Zaman uyumsuz bir işlem iptal etme hakkında daha fazla bilgi için bkz: [Fine-Tuning uygulamanız zaman uyumsuz](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ Tamamlanan görev `await` uygulanan hatalı bir durumda, görev döndüren yöntem içinde işlenmeyen bir özel durum nedeniyle olabilir. Bekleyen görev özel durum oluşturur. Bunu döndüren zaman uyumsuz işlem iptal edilirse bir görev bir iptal edildi durumunda da kalabilirsiniz. Bekleyen iptal edilen bir görev oluşturur bir `OperationCanceledException`. Zaman uyumsuz bir işlem iptal etme hakkında daha fazla bilgi için bkz. [Fine-Tuning Async uygulamanızda](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Özel durum yakalamak için görev await bir `try` engelleme ve özel durum ilişkili catch `catch` bloğu. Örneğin, "Örnek" bölümüne bakın.  
+ Özel durum yakalamak için görev await bir `try` engelleyin ve özel durum ilişkili catch `catch` blok. Örneğin, "Örnek" bölümüne bakın.  
   
- Zaman uyumsuz beklemenin yönteminde oluştuğundan, birden fazla özel bir görev hatalı bir durumda olabilir. Örneğin, görev için bir çağrı sonucunu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Bu tür bir görev await, yalnızca bir özel durum yakalandı ve hangi özel durumu yakalandı tahmin edilemez. Örneğin, "Örnek" bölümüne bakın.  
+ Beklenen zaman uyumsuz yöntemin birden çok özel durum oluştuğu için bir görev hatalı bir durumda olabilir. Örneğin, görev yapılan bir çağrının sonucu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Böyle bir görevi beklerken, yakalanan özel durumlardan yalnızca birini ve özel durum yakalandı tahmin edemezsiniz. Örneğin, "Örnek" bölümüne bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `try` bloğu için bir çağrı içerir `ProcessString` yöntemi bir özel durum neden olabilir. `catch` Yan tümcesi yalnızca ekranda bir ileti görüntüler özel durum işleyici içeriyor. Zaman `throw` deyimi çağrılır içinde `MyMethod`, sistem arar `catch` deyimi ve iletiyi görüntüler `Exception caught`.  
+ Aşağıdaki örnekte, `try` bloğu içeren bir çağrı `ProcessString` yönteminin bir özel durumuna neden olabilir. `catch` Yan tümcesi içeren özel durum işleyici, yalnızca ekranda bir ileti görüntüler. Zaman `throw` deyimi çağrılır içindeki `MyMethod`, sistem arar `catch` deyimi ve iletisini görüntüler `Exception caught`.  
   
  [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki catch bloklarını kullanılır ve önce geliyorsa, en özel durum yakalandı.  
+ Aşağıdaki örnekte, iki catch blokları kullanılır ve ilk birlikte gelen en özel durum yakalandı.  
   
- En az belirli özel durumu yakalamak için throw deyimi içinde değiştirebilirsiniz `ProcessString` aşağıdaki ifadesiyle: `throw new Exception()`.  
+ En az spesifiğe istisna yakalamak için throw deyiminde değiştirebilirsiniz `ProcessString` şu ifadeyle: `throw new Exception()`.  
   
- En az özgü catch bloğu ilk örnekte yerleştirirseniz, aşağıdaki hata iletisi görüntülenir: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
+ En az Özel catch bloğu ilk örnekte yerleştirirseniz aşağıdaki hata iletisi görüntülenir: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
   
  [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, özel durum işleme için zaman uyumsuz yöntemleri gösterilmektedir. Zaman uyumsuz görev oluşturur bir özel durum çekmek için koyun `await` ifadesinde bir `try` engelleme ve catch özel durum bir `catch` bloğu.  
+ Aşağıdaki örnekte, özel durum işleme için zaman uyumsuz yöntemler gösterilmektedir. Zaman uyumsuz bir görev oluşturan bir özel durum yakalamak için yerleştirin `await` ifadesinde bir `try` blok ve özel durumu bir `catch` blok.  
   
- Açıklamadan çıkarın `throw new Exception` özel durum işleme göstermek için örnekte satır. Görevin `IsFaulted` özelliği ayarlanmış `True`, görevin `Exception.InnerException` özelliği, özel durumu ayarlanır ve özel durumun yakalandığı `catch` bloğu.  
+ Açıklamadan çıkarın `throw new Exception` özel durum işleme göstermek için örnek satır. Görevin `IsFaulted` özelliği `True`, görevin `Exception.InnerException` özelliği, özel duruma ayarlanır ve özel durum yakalandı `catch` blok.  
   
- Açıklamadan çıkarın `throw new OperationCancelledException` satır zaman uyumsuz bir işlem iptal ettiğinizde ne olacağını gösterir. Görevin `IsCanceled` özelliği ayarlanmış `true`, ve özel durumun yakalandığı `catch` bloğu. Bu örnek için görev 's uygulanmaz bazı koşullarda `IsFaulted` özelliği ayarlanmış `true` ve `IsCanceled` ayarlanır `false`.  
+ Açıklamadan çıkarın `throw new OperationCancelledException` zaman uyumsuz bir işlem iptal ettiğinizde ne göstermek için satır. Görevin `IsCanceled` özelliği `true`, ve özel durum yakalandı `catch` blok. Bu örnek için görev ait uygulama bazı koşullar altında `IsFaulted` özelliği `true` ve `IsCanceled` ayarlanır `false`.  
   
  [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, birden çok görev birden çok özel durumları burada sonuçlanabilir özel durum işleme gösterilmektedir. `try` Blok bekler yapılan bir çağrı tarafından döndürülen görev <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. WhenAll uygulandığı üç görevler tamamlandığında tam bir görevdir.  
+ Aşağıdaki örnek, özel durum işleme birden çok görev içinde birden çok özel durum burada sonuçlanabilir gösterir. `try` Bloğu için bir çağrı tarafından döndürülen görev bekler <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. WhenAll uygulandığı üç görev tamamlandığında, görev tamamlandıysa.  
   
- Her biri üç görev bir özel durum oluşur. `catch` Blok tekrarlanan bulunan özel durumlar aracılığıyla `Exception.InnerExceptions` özellik tarafından döndürülen görev <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
+ Her biri üç görev, bir özel durum neden olur. `catch` Blok yinelenir bulunan özel durumlar üzerinden `Exception.InnerExceptions` özelliği tarafından döndürülen görevin <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   

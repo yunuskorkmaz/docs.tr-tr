@@ -10,29 +10,29 @@ helpviewer_keywords:
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286035"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961451"
 ---
 # <a name="-operator-c-reference"></a>[] İşleci (C# Başvurusu)
-Köşeli ayraç (`[]`) dizileri, dizin oluşturucular ve öznitelikleri için kullanılır. İşaretçileri ile de kullanılabilir.  
+Köşeli ayraçlar (`[]`) diziler, dizin oluşturucular ve öznitelikleri için kullanılır. İşaretçiler ile de kullanılabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir dizi türü arkasından bir türdür `[]`:  
   
  [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
- Dizi bir öğe erişmek için istenen öğenin dizini ayraç içine alınır:  
+ Bir dizinin bir öğesine erişmek için istenen öğenin dizini ayraç içine alınır:  
   
  [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
- Bir dizi dizini aralık dışında ise özel durum oluşur.  
+ Bir dizi dizini aralık dışında ise bir özel durum oluşturulur.  
   
- Dizin oluşturma işleci dizi aşırı yüklenemez; Ancak, türleri dizin oluşturucular ve bir veya daha fazla parametre almaz özelliklerini tanımlayabilirsiniz. Dizin Oluşturucu parametreleri dizi dizinleri gibi köşeli parantez içine alınır ancak dizin oluşturucu parametresi tamsayı dizi dizinleri aksine herhangi bir türde olması için bildirilebilir.  
+ Dizin oluşturma işleci dizi aşırı yüklenemez; Ancak, türleri, dizin oluşturucular ve bir veya daha fazla parametre özellikleri tanımlayabilirsiniz. Dizin Oluşturucu parametresi dizi dizinleri gibi köşeli ayraçlar içine alınan ancak dizin oluşturucu parametresi tamsayı dizisi dizinler, aksine herhangi bir türde olması için bildirilebilir.  
   
- Örneğin, .NET Framework tanımlayan bir `Hashtable` anahtarları ve değerleri rastgele türün ilişkilendirir türü:  
+ Örneğin, .NET Framework tanımlayan bir `Hashtable` anahtarları ve değerleri rastgele tür ilişkilendirir türü:  
   
  [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
@@ -40,11 +40,11 @@ Köşeli ayraç (`[]`) dizileri, dizin oluşturucular ve öznitelikleri için ku
   
  [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
- Bir işaretçi kapalı dizin için köşeli ayraç kullanın:  
+ Bir işaretçi dizinlemek için köşeli ayraçlar kullanabilirsiniz:  
   
  [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
- Hiçbir sınırları denetimi gerçekleştirilir.  
+ Sınır denetimi gerçekleştirilir.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
