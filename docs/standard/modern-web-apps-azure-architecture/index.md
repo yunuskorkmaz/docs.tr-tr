@@ -1,76 +1,113 @@
 ---
-title: ASP.NET Core ve Azure ile Mimarı modern web uygulamaları
-description: ASP.NET Core ve Azure ile modern Web uygulamaları mimari | Giriş
+title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
+description: ASP.NET Core ve Azure kullanarak tek parça web uygulamaları oluşturmaya uçtan uca yönergeler sağlar. bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103926"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936990"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="12f5d-103">ASP.NET Core ve Azure ile Mimarı Modern Web uygulamaları</span><span class="sxs-lookup"><span data-stu-id="12f5d-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="b35dc-103">ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama</span><span class="sxs-lookup"><span data-stu-id="b35dc-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
-![kapak resmi](./media/cover.jpg)
+![kapak resmi](./media/cover.png)
 
+<span data-ttu-id="b35dc-105">TARAFINDAN YAYIMLANAN</span><span class="sxs-lookup"><span data-stu-id="b35dc-105">PUBLISHED BY</span></span>
 
-<span data-ttu-id="12f5d-105">.NET core ve ASP.NET Core geleneksel .NET geliştirme birkaç avantaj sunar.</span><span class="sxs-lookup"><span data-stu-id="12f5d-105">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="12f5d-106">Aşağıdaki tümünün veya uygulamanızın başarısı için önemli olan ise, sunucu uygulamaları için .NET Core kullanmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="12f5d-106">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
+<span data-ttu-id="b35dc-106">Microsoft Geliştirici bölme, .NET ve Visual Studio ürün takımları</span><span class="sxs-lookup"><span data-stu-id="b35dc-106">Microsoft Developer Division, .NET, and Visual Studio product teams</span></span>
 
--   <span data-ttu-id="12f5d-107">Platformlar arası desteği</span><span class="sxs-lookup"><span data-stu-id="12f5d-107">Cross-platform support</span></span>
+<span data-ttu-id="b35dc-107">Microsoft Corporation'ın bir bölme</span><span class="sxs-lookup"><span data-stu-id="b35dc-107">A division of Microsoft Corporation</span></span>
 
--   <span data-ttu-id="12f5d-108">Mikro kullanımı</span><span class="sxs-lookup"><span data-stu-id="12f5d-108">Use of microservices</span></span>
+<span data-ttu-id="b35dc-108">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="b35dc-108">One Microsoft Way</span></span>
 
--   <span data-ttu-id="12f5d-109">Docker kapsayıcıları kullanma</span><span class="sxs-lookup"><span data-stu-id="12f5d-109">Use of Docker containers</span></span>
+<span data-ttu-id="b35dc-109">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="b35dc-109">Redmond, Washington 98052-6399</span></span>
 
--   <span data-ttu-id="12f5d-110">Yüksek performans ve ölçeklenebilirlik gereksinimleri</span><span class="sxs-lookup"><span data-stu-id="12f5d-110">High performance and scalability requirements</span></span>
+<span data-ttu-id="b35dc-110">Telif Hakkı © 2018 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="b35dc-110">Copyright © 2018 by Microsoft Corporation</span></span>
 
--   <span data-ttu-id="12f5d-111">Aynı sunucuda bir uygulama tarafından .NET sürümlerinin yan yana sürüm oluşturma</span><span class="sxs-lookup"><span data-stu-id="12f5d-111">Side-by-side versioning of .NET versions by application on the same server</span></span>
+<span data-ttu-id="b35dc-111">Tüm hakları saklıdır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-111">All rights reserved.</span></span> <span data-ttu-id="b35dc-112">Bu kitap içeriğini bir parçası çoğaltılamaz veya herhangi bir araçla yayımcı yazılı izni olmadan herhangi bir biçimdeki aktarılamaz.</span><span class="sxs-lookup"><span data-stu-id="b35dc-112">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
 
-<span data-ttu-id="12f5d-112">Geleneksel .NET uygulamaları yapın ve bu gereksinimleri desteklemesi ancak yukarıdaki senaryoları için geliştirilmiş destek sunmak için ASP.NET Core ve .NET Core getirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-112">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
+<span data-ttu-id="b35dc-113">Bu kitap sağlanan "olarak-olduğunu" ve yazarın görünümleri ve düşünceleri son derece ifade eder.</span><span class="sxs-lookup"><span data-stu-id="b35dc-113">This book is provided “as-is” and expresses the author’s views and opinions.</span></span> <span data-ttu-id="b35dc-114">Görünümleri ve düşünceleri son derece bilgi URL ve diğer Internet Web sitesi referansları da dahil olmak üzere bu kitap, ifade verilmeksizin değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-114">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
 
-<span data-ttu-id="12f5d-113">Microsoft Azure gibi hizmetler kullanarak bulutta web uygulamalarını barındırmak daha da fazla kuruluşlar seçim.</span><span class="sxs-lookup"><span data-stu-id="12f5d-113">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="12f5d-114">Aşağıdakiler, uygulama veya kuruluşunuz için önemliyse, uygulamanızda bulut barındırma dikkate almanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="12f5d-114">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+<span data-ttu-id="b35dc-115">Burada açıklanan bazı örnekler yalnızca çizim için sağlanmıştır ve bu kurgusaldır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-115">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="b35dc-116">Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya çıkarılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-116">No real association or connection is intended or should be inferred.</span></span>
 
--   <span data-ttu-id="12f5d-115">Azaltılmış yatırım veri merkezi maliyetlerini (donanım, yazılım, boşluk, yardımcı programlar, vb.)</span><span class="sxs-lookup"><span data-stu-id="12f5d-115">Reduced investment in data center costs (hardware, software, space, utilities, etc)</span></span>
+<span data-ttu-id="b35dc-117">Microsoft ve adresinde listelenmiş ticari https://www.microsoft.com "Ticari" Web sayfasında Microsoft şirketler grubunun ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-117">Microsoft and the trademarks listed at https://www.microsoft.com on the “Trademarks” webpage are trademarks of the Microsoft group of companies.</span></span>
 
--   <span data-ttu-id="12f5d-116">(Kullanım için boşta kapasite göre ödeme) fiyatlandırma esnek</span><span class="sxs-lookup"><span data-stu-id="12f5d-116">Flexible pricing (pay based on usage, not for idle capacity)</span></span>
+<span data-ttu-id="b35dc-118">Mac ve macOS Apple Inc.'in ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-118">Mac and macOS are trademarks of Apple Inc.</span></span>
 
--   <span data-ttu-id="12f5d-117">Extreme güvenilirlik</span><span class="sxs-lookup"><span data-stu-id="12f5d-117">Extreme reliability</span></span>
+<span data-ttu-id="b35dc-119">Docker whale logosu, Docker, Inc.'in kayıtlı ticari markasıdır. İzni tarafından kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-119">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
 
--   <span data-ttu-id="12f5d-118">Geliştirilmiş uygulama mobility; kolayca değiştirmek, uygulamanızın nerede ve nasıl dağıtılır</span><span class="sxs-lookup"><span data-stu-id="12f5d-118">Improved app mobility; easily change where and how your app is deployed</span></span>
+<span data-ttu-id="b35dc-120">Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.</span><span class="sxs-lookup"><span data-stu-id="b35dc-120">All other marks and logos are property of their respective owners.</span></span>
 
--   <span data-ttu-id="12f5d-119">Esnek Kapasite; Yukarı veya aşağı göre gerçek gereksinimlerini ölçeklendirme</span><span class="sxs-lookup"><span data-stu-id="12f5d-119">Flexible capacity; scale up or down based on actual needs</span></span>
+<span data-ttu-id="b35dc-121">Yazar:</span><span class="sxs-lookup"><span data-stu-id="b35dc-121">Author:</span></span>
 
-<span data-ttu-id="12f5d-120">Microsoft Azure üzerinde barındırılan ASP.NET Core ile Web uygulamaları oluşturmak, geleneksel alternatifleri çok sayıda rekabet avantaj sunar.</span><span class="sxs-lookup"><span data-stu-id="12f5d-120">Building web applications with ASP.NET Core, hosted in Microsoft Azure, offers numerous competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="12f5d-121">ASP.NET Core modern web uygulaması geliştirme uygulamaları ve bulut barındırma senaryolarında için optimize edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-121">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="12f5d-122">Bu kılavuzda, bu özellikler en iyi şekilde yararlanmak için ASP.NET Core uygulamaları mimari öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="12f5d-122">In this guide, you will learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+> <span data-ttu-id="b35dc-122">**Steve Smith (@ardalis)**, yazılım mimarisi Danışmanı [Ardalis.com](https://ardalis.com)</span><span class="sxs-lookup"><span data-stu-id="b35dc-122">**Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)</span></span>
 
-## <a name="purpose"></a><span data-ttu-id="12f5d-123">Amaç</span><span class="sxs-lookup"><span data-stu-id="12f5d-123">Purpose</span></span>
+<span data-ttu-id="b35dc-123">Düzenleyiciler:</span><span class="sxs-lookup"><span data-stu-id="b35dc-123">Editors:</span></span>
 
-<span data-ttu-id="12f5d-124">Bu kılavuz, ASP.NET Core ve Azure kullanarak tek yapılı web uygulamaları geliştirmek uçtan uca yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="12f5d-124">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+> <span data-ttu-id="b35dc-124">**Maira Wenzel**</span><span class="sxs-lookup"><span data-stu-id="b35dc-124">**Maira Wenzel**</span></span>
 
-<span data-ttu-id="12f5d-125">Bu kılavuz için tamamlayıcı "*Architecting ve geliştirme kapsayıcılı ve .NET mikro hizmet tabanlı uygulamalarla*" hangi odaklanır daha fazla üzerinde Docker, mikro ve dağıtım, kapsayıcıları konak kuruluş uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="12f5d-125">This guide is complementary to the "*Architecting and Developing Containerized and Microservice-based Applications with .NET*" which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+## <a name="introduction"></a><span data-ttu-id="b35dc-125">Giriş</span><span class="sxs-lookup"><span data-stu-id="b35dc-125">Introduction</span></span>
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a><span data-ttu-id="12f5d-126">Mimariden ve kapsayıcılı mikro hizmet geliştirirken .NET uygulamalarında dayalı</span><span class="sxs-lookup"><span data-stu-id="12f5d-126">Architecting and Developing Containerized Microservice Based Apps in .NET</span></span>
-> - <span data-ttu-id="12f5d-127">**e-kitap**</span><span class="sxs-lookup"><span data-stu-id="12f5d-127">**e-book**</span></span>  
-> <http://aka.ms/MicroservicesEbook>
-> - <span data-ttu-id="12f5d-128">**Örnek uygulama**</span><span class="sxs-lookup"><span data-stu-id="12f5d-128">**Sample Application**</span></span>  
-> <http://aka.ms/microservicesarchitecture>
+<span data-ttu-id="b35dc-126">.NET core ve ASP.NET Core geleneksel .NET geliştirme kıyasla çeşitli avantajlar sunar.</span><span class="sxs-lookup"><span data-stu-id="b35dc-126">.NET Core and ASP.NET Core offer several advantages over traditional .NET development.</span></span> <span data-ttu-id="b35dc-127">Aşağıdakilerin tümü veya uygulamanızın başarısı için önemli ise, sunucu uygulamaları için .NET Core kullanmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="b35dc-127">You should use .NET Core for your server applications if some or all of the following are important to your application's success:</span></span>
 
-## <a name="who-should-use-this-guide"></a><span data-ttu-id="12f5d-129">Bu kılavuz kullanan</span><span class="sxs-lookup"><span data-stu-id="12f5d-129">Who should use this guide</span></span>
+- <span data-ttu-id="b35dc-128">Platformlar arası desteği.</span><span class="sxs-lookup"><span data-stu-id="b35dc-128">Cross-platform support.</span></span>
 
-<span data-ttu-id="12f5d-130">Bu kılavuzda kitlesi çoğunlukla geliştiriciler, geliştirme müşteri adayları ve bulutta Microsoft teknolojileri ve hizmetleri kullanan modern web uygulamaları oluşturmaya ilgi duyan mimarlar içindir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-130">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+- <span data-ttu-id="b35dc-129">Mikro hizmetler kullanın.</span><span class="sxs-lookup"><span data-stu-id="b35dc-129">Use of microservices.</span></span>
 
-<span data-ttu-id="12f5d-131">İkincil bir dinleyici zaten bilinen ASP.NET ve/veya Azure ve yeni veya mevcut projeleri için ASP.NET Core yükseltmek için anlam olup olmadığı hakkında bilgi mi arıyorsunuz teknik karar alıcılar ' dir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-131">A secondary audience is technical decision makers who are already familiar ASP.NET and/or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+- <span data-ttu-id="b35dc-130">Docker kapsayıcılarını kullanın.</span><span class="sxs-lookup"><span data-stu-id="b35dc-130">Use of Docker containers.</span></span>
 
-## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="12f5d-132">Bu kılavuz nasıl kullanabileceğiniz</span><span class="sxs-lookup"><span data-stu-id="12f5d-132">How you can use this guide</span></span>
+- <span data-ttu-id="b35dc-131">Yüksek performans ve ölçeklenebilirlik gereksinimleri.</span><span class="sxs-lookup"><span data-stu-id="b35dc-131">High performance and scalability requirements.</span></span>
 
-<span data-ttu-id="12f5d-133">Bu kılavuz, modern .NET teknolojileri ve Windows Azure ile web uygulamaları oluşturmaya odaklanan görece küçük bir belgeye sıkıştırılmış.</span><span class="sxs-lookup"><span data-stu-id="12f5d-133">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="12f5d-134">Bu nedenle, bu tür uygulamalar ve bunların teknik konular anlamanın bir temel tamamının okunabilir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-134">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="12f5d-135">Kendi örnek uygulama ile birlikte kılavuzu ayrıca bir başlangıç noktası veya başvuru hizmet verebilir.</span><span class="sxs-lookup"><span data-stu-id="12f5d-135">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="12f5d-136">İlişkili örnek uygulaması, kendi uygulamalar için veya uygulamanızın bileşen parçalarını nasıl düzenleyebileceğini görmek için bir şablon olarak kullanın.</span><span class="sxs-lookup"><span data-stu-id="12f5d-136">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="12f5d-137">Geri kılavuz ilkeleri ve kapsamı mimarisi ve teknoloji seçenekleri ve karar dikkat edilecek noktalar, kendi uygulama için bu seçeneklerin başvuracaklarını zaman bakın.</span><span class="sxs-lookup"><span data-stu-id="12f5d-137">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when weighing these choices for your own application.</span></span>
+- <span data-ttu-id="b35dc-132">Uygulama ile aynı sunucuya .NET sürümlerinin yan yana sürüm oluşturma.</span><span class="sxs-lookup"><span data-stu-id="b35dc-132">Side-by-side versioning of .NET versions by application on the same server.</span></span>
 
-<span data-ttu-id="12f5d-138">Bu konuları ve fırsatlar genel olarak anlaşılmasını sağlamak için bu kılavuzu ekibinize iletmek çekinmeyin.</span><span class="sxs-lookup"><span data-stu-id="12f5d-138">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="12f5d-139">Herkes ortak bir dizi terminolojisi çalışma ve ilkeleri temelindeki sahip mimari desenleri ve uygulamalar tutarlı uygulama sağlamaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="12f5d-139">Having everybody working from a common set of terminology and underlying principles will help ensure consistent application of architectural patterns and practices.</span></span>
+<span data-ttu-id="b35dc-133">Geleneksel .NET uygulamalar yapın ve bu gereksinimleri destekler, ancak yukarıdaki senaryoları için geliştirilmiş destek sunmak için ASP.NET Core ve .NET Core getirilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-133">Traditional .NET applications can and do support these requirements, but ASP.NET Core and .NET Core have been optimized to offer improved support for the above scenarios.</span></span>
 
-## <a name="references"></a><span data-ttu-id="12f5d-140">Referanslar</span><span class="sxs-lookup"><span data-stu-id="12f5d-140">References</span></span>
-- <span data-ttu-id="12f5d-141">**Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**</span><span class="sxs-lookup"><span data-stu-id="12f5d-141">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+<span data-ttu-id="b35dc-134">Microsoft Azure gibi hizmetleri kullanarak bulutta web uygulamalarını barındırmak giderek daha fazla kuruluşların seçim.</span><span class="sxs-lookup"><span data-stu-id="b35dc-134">More and more organizations are choosing to host their web applications in the cloud using services like Microsoft Azure.</span></span> <span data-ttu-id="b35dc-135">Aşağıda, uygulama veya kuruluşunuz için önemliyse, uygulamanızı bulutta barındırma dikkate almanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="b35dc-135">You should consider hosting your application in the cloud if the following are important to your application or organization:</span></span>
+
+- <span data-ttu-id="b35dc-136">Daha az yatırım veri merkezi maliyetlerini (donanım, yazılım, boşluk, yardımcı programlar, vb.)</span><span class="sxs-lookup"><span data-stu-id="b35dc-136">Reduced investment in data center costs (hardware, software, space, utilities, etc.)</span></span>
+
+- <span data-ttu-id="b35dc-137">Esnek fiyatlandırma (boş kapasite için değil, kullanıma bağlı olarak ödeme).</span><span class="sxs-lookup"><span data-stu-id="b35dc-137">Flexible pricing (pay based on usage, not for idle capacity).</span></span>
+
+- <span data-ttu-id="b35dc-138">Extreme güvenilirlik.</span><span class="sxs-lookup"><span data-stu-id="b35dc-138">Extreme reliability.</span></span>
+
+- <span data-ttu-id="b35dc-139">Gelişmiş uygulama taşınabilirliği; kolayca uygulamanızı nerede ve nasıl dağıtılır.</span><span class="sxs-lookup"><span data-stu-id="b35dc-139">Improved app mobility; easily change where and how your app is deployed.</span></span>
+
+- <span data-ttu-id="b35dc-140">Esnek Kapasite; ölçeği artırın veya göre gerçek ihtiyaçları azaltın.</span><span class="sxs-lookup"><span data-stu-id="b35dc-140">Flexible capacity; scale up or down based on actual needs.</span></span>
+
+<span data-ttu-id="b35dc-141">ASP.NET Core, Azure üzerinde barındırılan Web uygulamalarıyla geleneksel alternatifleri rekabetçi birçok avantaj sunar.</span><span class="sxs-lookup"><span data-stu-id="b35dc-141">Building web applications with ASP.NET Core, hosted in Azure, offers many competitive advantages over traditional alternatives.</span></span> <span data-ttu-id="b35dc-142">ASP.NET Core, modern bir web uygulaması geliştirme uygulamaları ve bulut barındırma senaryoları için optimize edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-142">ASP.NET Core is optimized for modern web application development practices and cloud hosting scenarios.</span></span> <span data-ttu-id="b35dc-143">Bu kılavuzda, bu özellikler en iyi şekilde yararlanmak için ASP.NET Core uygulamalarınızı tasarlama öğreneceksiniz.</span><span class="sxs-lookup"><span data-stu-id="b35dc-143">In this guide, you'll learn how to architect your ASP.NET Core applications to best take advantage of these capabilities.</span></span>
+
+## <a name="purpose"></a><span data-ttu-id="b35dc-144">Amaç</span><span class="sxs-lookup"><span data-stu-id="b35dc-144">Purpose</span></span>
+
+<span data-ttu-id="b35dc-145">Bu kılavuz, ASP.NET Core ve Azure kullanarak tek parça web uygulamaları oluşturmaya, uçtan uca yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="b35dc-145">This guide provides end-to-end guidance on building monolithic web applications using ASP.NET Core and Azure.</span></span>
+
+<span data-ttu-id="b35dc-146">Bu kılavuz için tamamlayıcı ["_.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi_"](../microservices-architecture/index.md) hangi odaklanır daha fazla üzerinde Docker, mikro hizmetler ve kapsayıcılar dağıtımının Kurumsal uygulamalarını barındırmak için.</span><span class="sxs-lookup"><span data-stu-id="b35dc-146">This guide is complementary to the ["_.NET Microservices. Architecture for Containerized .NET Applications_"](../microservices-architecture/index.md) which focuses more on Docker, Microservices, and Deployment of Containers to host enterprise applications.</span></span>
+
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a><span data-ttu-id="b35dc-147">.NET mikro Hizmetleri.</span><span class="sxs-lookup"><span data-stu-id="b35dc-147">.NET Microservices.</span></span> <span data-ttu-id="b35dc-148">Kapsayıcılı .NET uygulamaları mimarisi</span><span class="sxs-lookup"><span data-stu-id="b35dc-148">Architecture for Containerized .NET Applications</span></span>
+
+- <span data-ttu-id="b35dc-149">**e-kitabı**</span><span class="sxs-lookup"><span data-stu-id="b35dc-149">**e-book**</span></span>  
+  <https://aka.ms/MicroservicesEbook>
+- <span data-ttu-id="b35dc-150">**Örnek uygulama**</span><span class="sxs-lookup"><span data-stu-id="b35dc-150">**Sample Application**</span></span>  
+  <https://aka.ms/microservicesarchitecture>
+
+## <a name="who-should-use-this-guide"></a><span data-ttu-id="b35dc-151">Bu kılavuzda kullanan</span><span class="sxs-lookup"><span data-stu-id="b35dc-151">Who should use this guide</span></span>
+
+<span data-ttu-id="b35dc-152">Bu kılavuz için İzleyici ağırlıklı olarak geliştiriciler, geliştirme Liderleri ve bulutta Microsoft teknolojileri ve Hizmetleri kullanarak modern web uygulamaları oluşturmak istiyorsanız mimarları olduğu.</span><span class="sxs-lookup"><span data-stu-id="b35dc-152">The audience for this guide is mainly developers, development leads, and architects who are interested in building modern web applications using Microsoft technologies and services in the cloud.</span></span>
+
+<span data-ttu-id="b35dc-153">İkincil bir dinleyici zaten bilinen ASP.NET veya Azure ve ASP.NET Core için yeni veya mevcut projeleri için yükseltme mantıklı olup olmadığı hakkında bilgi arıyorsanız, teknik karar verenler ' dir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-153">A secondary audience is technical decision makers who are already familiar ASP.NET or Azure and are looking for information on whether it makes sense to upgrade to ASP.NET Core for new or existing projects.</span></span>
+
+## <a name="how-you-can-use-this-guide"></a><span data-ttu-id="b35dc-154">Nasıl bu kılavuzu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b35dc-154">How you can use this guide</span></span>
+
+<span data-ttu-id="b35dc-155">Bu kılavuz, modern .NET teknolojileri ve Windows Azure ile web uygulamaları oluşturmaya odaklanan görece küçük bir belgenin içine sıkıştırılmış.</span><span class="sxs-lookup"><span data-stu-id="b35dc-155">This guide has been condensed into a relatively small document that focuses on building web applications with modern .NET technologies and Windows Azure.</span></span> <span data-ttu-id="b35dc-156">Bu nedenle, bu tür uygulamalar ve bunların teknik konuları anlamanın sağlamasıdır için tamamen okunabilir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-156">As such, it can be read in its entirety to provide a foundation of understanding such applications and their technical considerations.</span></span> <span data-ttu-id="b35dc-157">Birlikte, örnek uygulama Kılavuzu, ayrıca bir başlangıç noktası veya başvuru hizmet verebilir.</span><span class="sxs-lookup"><span data-stu-id="b35dc-157">The guide, along with its sample application, can also serve as a starting point or reference.</span></span> <span data-ttu-id="b35dc-158">İlişkili örnek uygulama için kendi uygulamalarınızı ya da uygulamanızın bileşen parçalarına nasıl düzenleyebileceğini görmek için bir şablon olarak kullanın.</span><span class="sxs-lookup"><span data-stu-id="b35dc-158">Use the associated sample application as a template for your own applications, or to see how you might organize your application's component parts.</span></span> <span data-ttu-id="b35dc-159">Kendi uygulamanız için bu seçenekleri ağırlığıyla olduğunda geri kılavuz ilkeleri ve mimarisi ve teknolojisi seçeneklerini ve karar konuları kapsamını bakın.</span><span class="sxs-lookup"><span data-stu-id="b35dc-159">Refer back to the guide's principles and coverage of architecture and technology options and decision considerations when you're weighing these choices for your own application.</span></span>
+
+<span data-ttu-id="b35dc-160">Bu noktalar ve fırsatlar genel olarak anladığından emin olmak için bu kılavuzu takımınıza iletmek çekinmeyin.</span><span class="sxs-lookup"><span data-stu-id="b35dc-160">Feel free to forward this guide to your team to help ensure a common understanding of these considerations and opportunities.</span></span> <span data-ttu-id="b35dc-161">Herkesin sahip ortak bir dizi terminolojisi çalışma ve ilkeler temel mimari desenleri ve uygulamaları tutarlı uygulama sağlamaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="b35dc-161">Having everybody working from a common set of terminology and underlying principles helps ensure consistent application of architectural patterns and practices.</span></span>
+
+## <a name="references"></a><span data-ttu-id="b35dc-162">Referanslar</span><span class="sxs-lookup"><span data-stu-id="b35dc-162">References</span></span>
+
+- <span data-ttu-id="b35dc-163">**Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma**</span><span class="sxs-lookup"><span data-stu-id="b35dc-163">**Choosing between .NET Core and .NET Framework for server apps**</span></span>  
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
-[<span data-ttu-id="12f5d-142">Next</span><span class="sxs-lookup"><span data-stu-id="12f5d-142">Next</span></span>](modern-web-applications-characteristics.md)
+[<span data-ttu-id="b35dc-164">Next</span><span class="sxs-lookup"><span data-stu-id="b35dc-164">Next</span></span>](modern-web-applications-characteristics.md)

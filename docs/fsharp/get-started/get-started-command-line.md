@@ -1,52 +1,52 @@
 ---
 title: 'F # ile komut satırı araçları ile çalışmaya başlama'
-description: 'F # .NET Core CLI kullanarak bir işletim sistemine (Windows, macOs veya Linux) üzerinde bir basit birden çok proje çözümü oluşturmayı öğrenin.'
+description: 'F # .NET Core CLI kullanarak tüm işletim sistemlerinde (Windows, macOs veya Linux) üzerinde basit bir çoklu proje çözümü oluşturmayı öğrenin.'
 ms.date: 03/26/2018
-ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562043"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875020"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="310d5-103">F # .NET Core CLI ile kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="310d5-103">Get started with F# with the .NET Core CLI</span></span>
+# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="84a1e-103">F # ile .NET Core CLI kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="84a1e-103">Get started with F# with the .NET Core CLI</span></span>
 
-<span data-ttu-id="310d5-104">Bu makalede, nasıl, F # ile .NET Core CLI ile herhangi bir işletim sistemine (Windows, macOS veya Linux) kullanmaya başlayabilir yer almaktadır.</span><span class="sxs-lookup"><span data-stu-id="310d5-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="310d5-105">Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile birden çok proje çözümü oluşturma üzerinden gider.</span><span class="sxs-lookup"><span data-stu-id="310d5-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
+<span data-ttu-id="84a1e-104">Bu makale, nasıl F # ile .NET Core CLI ile tüm işletim sistemlerinde (Windows, macOS veya Linux) oluşturabileceğinize dair kapsar.</span><span class="sxs-lookup"><span data-stu-id="84a1e-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="84a1e-105">Bu, bir konsol uygulaması tarafından çağrılan bir sınıf kitaplığı ile bir çoklu proje çözümü oluşturma sürecinde gider.</span><span class="sxs-lookup"><span data-stu-id="84a1e-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="310d5-106">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="310d5-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="84a1e-106">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="84a1e-106">Prerequisites</span></span>
 
-<span data-ttu-id="310d5-107">Başlamak için yüklemelisiniz [.NET Core SDK 1.0 veya üstü](https://www.microsoft.com/net/download/).</span><span class="sxs-lookup"><span data-stu-id="310d5-107">To begin, you must install the [.NET Core SDK 1.0 or later](https://www.microsoft.com/net/download/).</span></span> <span data-ttu-id="310d5-108">Yan yana yüklemeler desteklediği .NET Core SDK ' nın önceki bir sürümünü kaldırmak için gerek yoktur.</span><span class="sxs-lookup"><span data-stu-id="310d5-108">There is no need to uninstall a previous version of the .NET Core SDK, as it supports side-by-side installations.</span></span>
+<span data-ttu-id="84a1e-107">Başlamak için en son yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/).</span><span class="sxs-lookup"><span data-stu-id="84a1e-107">To begin, you must install the latest [.NET Core SDK](https://www.microsoft.com/net/download/).</span></span>
 
-<span data-ttu-id="310d5-109">Bu makalede, nasıl bir komut satırını kullanın ve tercih edilen bir metin Düzenleyicisi'ni bildiğinizi varsayar.</span><span class="sxs-lookup"><span data-stu-id="310d5-109">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="310d5-110">Zaten, kullanmazsanız [Visual Studio Code](https://code.visualstudio.com) olarak bir metin düzenleyicisi F # için kullanışlı bir seçenektir.</span><span class="sxs-lookup"><span data-stu-id="310d5-110">If you don't already use it, [Visual Studio Code](https://code.visualstudio.com) is a great option as a text editor for F#.</span></span> <span data-ttu-id="310d5-111">IntelliSense, daha iyi söz dizimi vurgulama ve diğerleri gibi harika özellikler almak için indirebilirsiniz [Ionide uzantısı](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span><span class="sxs-lookup"><span data-stu-id="310d5-111">To get awesome features like IntelliSense, better syntax highlighting, and more, you can download the [Ionide Extension](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).</span></span>
+<span data-ttu-id="84a1e-108">Bu makalede, komut satırını kullanın ve tercih edilen bir metin düzenleyicisi bildiğiniz varsayılır.</span><span class="sxs-lookup"><span data-stu-id="84a1e-108">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="84a1e-109">Bu, zaten kullanmıyorsanız, [Visual Studio Code](get-started-vscode.md) F # için bir metin düzenleyicisi olarak mükemmel bir seçenektir.</span><span class="sxs-lookup"><span data-stu-id="84a1e-109">If you don't already use it, [Visual Studio Code](get-started-vscode.md) is a great option as a text editor for F#.</span></span>
 
-## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="310d5-112">Basit bir birden çok proje çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="310d5-112">Build a simple multi-project solution</span></span>
+## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="84a1e-110">Basit bir çoklu proje çözümü oluşturma</span><span class="sxs-lookup"><span data-stu-id="84a1e-110">Build a simple multi-project solution</span></span>
 
-<span data-ttu-id="310d5-113">Bir komut istemi/Terminali açın ve kullanmak [dotnet yeni](../../core/tools/dotnet-new.md) adlı yeni çözüm dosyasını oluşturmak için komutu `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="310d5-113">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
+<span data-ttu-id="84a1e-111">Bir komut istemi/terminal açın ve kullanmak [yeni dotnet](../../core/tools/dotnet-new.md) adlı yeni bir çözüm dosyası oluşturmak için komut `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="84a1e-111">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
 
-```
+```console
 dotnet new sln -o FSNetCore
 ```
 
-<span data-ttu-id="310d5-114">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:</span><span class="sxs-lookup"><span data-stu-id="310d5-114">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="84a1e-112">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:</span><span class="sxs-lookup"><span data-stu-id="84a1e-112">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a><span data-ttu-id="310d5-115">Bir sınıf kitaplığı yazma</span><span class="sxs-lookup"><span data-stu-id="310d5-115">Write a class library</span></span>
+### <a name="write-a-class-library"></a><span data-ttu-id="84a1e-113">Bir sınıf kitaplığı yazma</span><span class="sxs-lookup"><span data-stu-id="84a1e-113">Write a class library</span></span>
 
-<span data-ttu-id="310d5-116">Değiştirme dizinleri *FSNetCore*.</span><span class="sxs-lookup"><span data-stu-id="310d5-116">Change directories to *FSNetCore*.</span></span>
+<span data-ttu-id="84a1e-114">Dizinleri *FSNetCore*.</span><span class="sxs-lookup"><span data-stu-id="84a1e-114">Change directories to *FSNetCore*.</span></span>
 
-<span data-ttu-id="310d5-117">Kullanım `dotnet new` komutu, bir sınıf kitaplığı projesi oluştur **src** kitaplığı adlı klasörü.</span><span class="sxs-lookup"><span data-stu-id="310d5-117">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
+<span data-ttu-id="84a1e-115">Kullanım `dotnet new` komutu, bir sınıf kitaplığı projesi oluşturma **src** kitaplığı adlı bir klasör.</span><span class="sxs-lookup"><span data-stu-id="84a1e-115">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
 
-```
+```console
 dotnet new lib -lang F# -o src/Library
 ```
 
-<span data-ttu-id="310d5-118">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:</span><span class="sxs-lookup"><span data-stu-id="310d5-118">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="84a1e-116">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:</span><span class="sxs-lookup"><span data-stu-id="84a1e-116">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -55,7 +55,7 @@ dotnet new lib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-<span data-ttu-id="310d5-119">Değiştir `Library.fs` aşağıdaki kod ile:</span><span class="sxs-lookup"><span data-stu-id="310d5-119">Replace the contents of `Library.fs` with the following code:</span></span>
+<span data-ttu-id="84a1e-117">Öğesinin içeriğini değiştirin `Library.fs` aşağıdaki kod ile:</span><span class="sxs-lookup"><span data-stu-id="84a1e-117">Replace the contents of `Library.fs` with the following code:</span></span>
 
 ```fsharp
 module Library
@@ -66,31 +66,31 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-<span data-ttu-id="310d5-120">Newtonsoft.Json NuGet paketi kitaplığı projeye ekleyin.</span><span class="sxs-lookup"><span data-stu-id="310d5-120">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
+<span data-ttu-id="84a1e-118">Newtonsoft.Json NuGet paketini kitaplığı projeye ekleyin.</span><span class="sxs-lookup"><span data-stu-id="84a1e-118">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
 
-```
+```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-<span data-ttu-id="310d5-121">Ekleme `Library` için proje `FSNetCore` çözümünü kullanarak [dotnet sln ekleme](../../core/tools/dotnet-sln.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="310d5-121">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
+<span data-ttu-id="84a1e-119">Ekleme `Library` için proje `FSNetCore` çözümünü kullanarak [dotnet sln ekleme](../../core/tools/dotnet-sln.md) komutu:</span><span class="sxs-lookup"><span data-stu-id="84a1e-119">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
 
-```
+```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="310d5-122">Kullanarak NuGet bağımlılıkları geri `dotnet restore` komutu ([nota bakın](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.</span><span class="sxs-lookup"><span data-stu-id="310d5-122">Restore the NuGet dependencies using the `dotnet restore` command ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="84a1e-120">Çalıştırma `dotnet build` Projeyi derlemek için.</span><span class="sxs-lookup"><span data-stu-id="84a1e-120">Run `dotnet build` to build the project.</span></span> <span data-ttu-id="84a1e-121">Çözümlenmemiş bağımlılıklar oluşturma sırasında geri yüklenir.</span><span class="sxs-lookup"><span data-stu-id="84a1e-121">Unresolved dependencies will be restored when building.</span></span>
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="310d5-123">Sınıf kitaplığı tüketen bir konsol uygulaması yazma</span><span class="sxs-lookup"><span data-stu-id="310d5-123">Write a console application that consumes the class library</span></span>
+### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="84a1e-122">Sınıf kitaplığı kullanan bir konsol uygulaması yazma</span><span class="sxs-lookup"><span data-stu-id="84a1e-122">Write a console application that consumes the class library</span></span>
 
-<span data-ttu-id="310d5-124">Kullanım `dotnet new` komutu, bir konsol uygulaması oluşturun **src** uygulama adlı klasörü.</span><span class="sxs-lookup"><span data-stu-id="310d5-124">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
+<span data-ttu-id="84a1e-123">Kullanım `dotnet new` komutu, bir konsol uygulamasında oluşturma **src** uygulama adlı bir klasör.</span><span class="sxs-lookup"><span data-stu-id="84a1e-123">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
 
-```
+```console
 dotnet new console -lang F# -o src/App
 ```
 
-<span data-ttu-id="310d5-125">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını oluşturulur:</span><span class="sxs-lookup"><span data-stu-id="310d5-125">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="84a1e-124">Önceki komutu çalıştırdıktan sonra aşağıdaki dizin yapısını üretilir:</span><span class="sxs-lookup"><span data-stu-id="84a1e-124">The following directory structure is produced after running the previous command:</span></span>
 
-```
+```console
 └── FSNetCore
     ├── FSNetCore.sln
     └── src
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-<span data-ttu-id="310d5-126">Değiştir `Program.fs` aşağıdaki kod ile dosya:</span><span class="sxs-lookup"><span data-stu-id="310d5-126">Replace the contents of the `Program.fs` file with the following code:</span></span>
+<span data-ttu-id="84a1e-125">Öğesinin içeriğini değiştirin `Program.fs` dosyasındaki kodu aşağıdaki kodla:</span><span class="sxs-lookup"><span data-stu-id="84a1e-125">Replace the contents of the `Program.fs` file with the following code:</span></span>
 
 ```fsharp
 open System
@@ -119,35 +119,36 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="310d5-127">Bir başvuru ekleyin `Library` kullanarak proje [dotnet Başvuru Ekle](../../core/tools/dotnet-add-reference.md).</span><span class="sxs-lookup"><span data-stu-id="310d5-127">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
+<span data-ttu-id="84a1e-126">Bir başvuru ekleyin `Library` kullanarak proje [dotnet Başvuru Ekle](../../core/tools/dotnet-add-reference.md).</span><span class="sxs-lookup"><span data-stu-id="84a1e-126">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
 
-```
+```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="310d5-128">Ekleme `App` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` komutu:</span><span class="sxs-lookup"><span data-stu-id="310d5-128">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
+<span data-ttu-id="84a1e-127">Ekleme `App` için proje `FSNetCore` çözümünü kullanarak `dotnet sln add` komutu:</span><span class="sxs-lookup"><span data-stu-id="84a1e-127">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
 
-```
+```console
 dotnet sln add src/App/App.fsproj
 ```
 
-<span data-ttu-id="310d5-129">NuGet bağımlılıkları geri `dotnet restore` ([nota bakın](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.</span><span class="sxs-lookup"><span data-stu-id="310d5-129">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="84a1e-128">NuGet bağımlılıklarını geri `dotnet restore` ([bkz. Not](#dotnet-restore-note)) çalıştırıp `dotnet build` Projeyi derlemek için.</span><span class="sxs-lookup"><span data-stu-id="84a1e-128">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
 
-<span data-ttu-id="310d5-130">Değişiklik dizinine `src/App` konsol projesi ve geçirme projeyi `Hello World` bağımsız değişken olarak:</span><span class="sxs-lookup"><span data-stu-id="310d5-130">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
+<span data-ttu-id="84a1e-129">Dizini `src/App` geçirme projeyi çalıştırın ve konsol projesi `Hello World` bağımsız değişkenler olarak:</span><span class="sxs-lookup"><span data-stu-id="84a1e-129">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
 
-```
+```console
 cd src/App
 dotnet run Hello World
 ```
 
-<span data-ttu-id="310d5-131">Aşağıdaki sonuçları görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="310d5-131">You should see the following results:</span></span>
+<span data-ttu-id="84a1e-130">Aşağıdaki sonuçları görmeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="84a1e-130">You should see the following results:</span></span>
 
-```
+```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:
 
 I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="next-steps"></a><span data-ttu-id="84a1e-131">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="84a1e-131">Next steps</span></span>
+
+<span data-ttu-id="84a1e-132">Ardından, kullanıma [turu, F #](../tour.md) farklı F # özellikleri hakkında daha fazla bilgi edinmek için.</span><span class="sxs-lookup"><span data-stu-id="84a1e-132">Next, check out the [Tour of F#](../tour.md) to learn more about different F# features.</span></span>

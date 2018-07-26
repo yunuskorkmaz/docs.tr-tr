@@ -1,25 +1,25 @@
 ---
-title: DotNet yapı sunuculu command - .NET Core CLI
-description: Dotnet yapı sunuculu bir yapı tarafından başlatılan sunucuları ile etkileşim kurar.
+title: DotNet yapı sunucu command - .NET Core CLI
+description: Dotnet yapı sunucu komut, bir derleme tarafından başlatılan sunucularıyla etkileşim kurar.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: 929b8d74aa5f3f0ad73b108be8a5bf22f86e30d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 07/02/2018
+ms.openlocfilehash: 1c59c85f246b79c7e2552f704db5b4f076f9b502
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696260"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404339"
 ---
-# <a name="dotnet-build"></a><span data-ttu-id="65866-103">DotNet derleme</span><span class="sxs-lookup"><span data-stu-id="65866-103">dotnet-build</span></span>
+# <a name="dotnet-build-server"></a><span data-ttu-id="34ef4-103">DotNet yapı sunucu</span><span class="sxs-lookup"><span data-stu-id="34ef4-103">dotnet build-server</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a><span data-ttu-id="65866-104">Ad</span><span class="sxs-lookup"><span data-stu-id="65866-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="34ef4-104">Ad</span><span class="sxs-lookup"><span data-stu-id="34ef4-104">Name</span></span>
 
-<span data-ttu-id="65866-105">`dotnet build-server` -Bir yapı tarafından başlatılan sunucularıyla etkileşim kurar.</span><span class="sxs-lookup"><span data-stu-id="65866-105">`dotnet build-server` - Interacts with servers started by a build.</span></span>
+<span data-ttu-id="34ef4-105">`dotnet build-server` -Bir derleme tarafından başlatılan sunucularıyla etkileşim kurar.</span><span class="sxs-lookup"><span data-stu-id="34ef4-105">`dotnet build-server` - Interacts with servers started by a build.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="65866-106">Özet</span><span class="sxs-lookup"><span data-stu-id="65866-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="34ef4-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="34ef4-106">Synopsis</span></span>
 
 ```
 dotnet build-server shutdown [--msbuild] [--razor] [--vbcscompiler]
@@ -27,26 +27,26 @@ dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
 ```
 
-## <a name="commands"></a><span data-ttu-id="65866-107">Komutlar</span><span class="sxs-lookup"><span data-stu-id="65866-107">Commands</span></span>
+## <a name="commands"></a><span data-ttu-id="34ef4-107">Komutlar</span><span class="sxs-lookup"><span data-stu-id="34ef4-107">Commands</span></span>
 
 `shutdown`
 
-<span data-ttu-id="65866-108">Dotnet başlatılan yapı sunucuları kapatır.</span><span class="sxs-lookup"><span data-stu-id="65866-108">Shuts down build servers that are started from dotnet.</span></span> <span data-ttu-id="65866-109">Varsayılan olarak, tüm sunucuların kapatılır.</span><span class="sxs-lookup"><span data-stu-id="65866-109">By default, all servers are shut down.</span></span>
+<span data-ttu-id="34ef4-108">Dotnet başlatılan yapı sunucularını kapatır.</span><span class="sxs-lookup"><span data-stu-id="34ef4-108">Shuts down build servers that are started from dotnet.</span></span> <span data-ttu-id="34ef4-109">Varsayılan olarak, tüm sunucuların kapatılır.</span><span class="sxs-lookup"><span data-stu-id="34ef4-109">By default, all servers are shut down.</span></span>
 
-## <a name="options"></a><span data-ttu-id="65866-110">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="65866-110">Options</span></span>
+## <a name="options"></a><span data-ttu-id="34ef4-110">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="34ef4-110">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="65866-111">Komutu için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="65866-111">Prints out a short help for the command.</span></span>
+<span data-ttu-id="34ef4-111">Komut için kısa bir Yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="34ef4-111">Prints out a short help for the command.</span></span>
 
 `--msbuild`
 
-<span data-ttu-id="65866-112">MSBuild kapatır sunucusu oluşturun.</span><span class="sxs-lookup"><span data-stu-id="65866-112">Shuts down the MSBuild build server.</span></span>
+<span data-ttu-id="34ef4-112">Yapı sunucusunda MSBuild kapatır.</span><span class="sxs-lookup"><span data-stu-id="34ef4-112">Shuts down the MSBuild build server.</span></span>
 
 `--razor`
 
-<span data-ttu-id="65866-113">Razor kapatır sunucusu oluşturun.</span><span class="sxs-lookup"><span data-stu-id="65866-113">Shuts down the Razor build server.</span></span>
+<span data-ttu-id="34ef4-113">Yapı sunucusunda Razor kapatır.</span><span class="sxs-lookup"><span data-stu-id="34ef4-113">Shuts down the Razor build server.</span></span>
 
 `--vbcscompiler`
 
-<span data-ttu-id="65866-114">VB kapatır / C# Derleyici build sunucu.</span><span class="sxs-lookup"><span data-stu-id="65866-114">Shuts down the VB/C# compiler build server.</span></span>
+<span data-ttu-id="34ef4-114">Kapatan VB / C# Derleyici sunucusu derleme.</span><span class="sxs-lookup"><span data-stu-id="34ef4-114">Shuts down the VB/C# compiler build server.</span></span>

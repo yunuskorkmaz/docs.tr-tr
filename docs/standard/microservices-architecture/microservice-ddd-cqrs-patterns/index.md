@@ -1,86 +1,86 @@
 ---
-title: Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling
+title: DDD ve CQRS desenleriyle bir mikro hizmetteki iş karmaşıklığını bağlayabileceğiniz
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | DDD ve CQRS desenleriyle bir mikro hizmetteki iş karmaşıklığını bağlayabileceğiniz
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105764"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874393"
 ---
-# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a><span data-ttu-id="de497-103">Mikro hizmet DDD ve CQRS desenler ile iş karmaşıklığı tackling</span><span class="sxs-lookup"><span data-stu-id="de497-103">Tackling Business Complexity in a Microservice with DDD and CQRS Patterns</span></span>
+# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a><span data-ttu-id="2abc9-103">DDD ve CQRS desenleriyle bir mikro hizmetteki iş karmaşıklığını bağlayabileceğiniz</span><span class="sxs-lookup"><span data-stu-id="2abc9-103">Tackling Business Complexity in a Microservice with DDD and CQRS Patterns</span></span>
 
-<span data-ttu-id="de497-104">*Her mikro hizmet veya iş etki alanının anlama yansıtır ilişkisindeki bağlamı için bir etki alanı modeli tasarlayın.*</span><span class="sxs-lookup"><span data-stu-id="de497-104">*Design a domain model for each microservice or Bounded Context that reflects understanding of the business domain.*</span></span>
+<span data-ttu-id="2abc9-104">*Her mikro hizmet ya da iş etki alanının anlama yansıtır sınırlanmış bağlam için bir etki alanı modeli tasarlayın.*</span><span class="sxs-lookup"><span data-stu-id="2abc9-104">*Design a domain model for each microservice or Bounded Context that reflects understanding of the business domain.*</span></span>
 
-<span data-ttu-id="de497-105">Bu bölümde daha gelişmiş karmaşık alt sistemleri üstesinden gelmek gerektiğinde uygulayan mikro veya sürekli değişen iş kuralları etki alanı uzmanlarıyla bilgi türetilmiş mikro odaklanır.</span><span class="sxs-lookup"><span data-stu-id="de497-105">This section focuses on more advanced microservices that you implement when you need to tackle complex subsystems, or microservices derived from the knowledge of domain experts with ever-changing business rules.</span></span> <span data-ttu-id="de497-106">Bu bölümde kullanılan mimarisi desenleri etki alanı Odaklı Tasarım (DDD) ve komut ve sorgu sorumluluk ayrımı (CQRS) yaklaşım, Şekil 9-1'de gösterildiği gibi temel alır.</span><span class="sxs-lookup"><span data-stu-id="de497-106">The architecture patterns used in this section are based on domain-driven design (DDD) and Command and Query Responsibility Segregation (CQRS) approaches, as illustrated in Figure 9-1.</span></span>
+<span data-ttu-id="2abc9-105">Bu bölümde daha gelişmiş karmaşık alt sistemlerin üstesinden gerektiğinde uygulayan mikro hizmette veya etki alanı uzmanlarıyla durmaksızın değişen iş kuralları bilgisi türetilen mikro hizmetler ele alınmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2abc9-105">This section focuses on more advanced microservices that you implement when you need to tackle complex subsystems, or microservices derived from the knowledge of domain experts with ever-changing business rules.</span></span> <span data-ttu-id="2abc9-106">Bu bölümde kullanılan mimarisi desenleri, Şekil 9-1'de gösterildiği gibi etki alanı Odaklı Tasarım (DDD) ve yaklaşım, komut ve sorgu sorumluluğu ayrımı (CQRS) bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="2abc9-106">The architecture patterns used in this section are based on domain-driven design (DDD) and Command and Query Responsibility Segregation (CQRS) approaches, as illustrated in Figure 9-1.</span></span>
 
 ![](./media/image1.png)
 
-<span data-ttu-id="de497-107">**Şekil 9-1**.</span><span class="sxs-lookup"><span data-stu-id="de497-107">**Figure 9-1**.</span></span> <span data-ttu-id="de497-108">Her mikro hizmet için iç mimari desenleri karşı dış mikro hizmet mimarisi</span><span class="sxs-lookup"><span data-stu-id="de497-108">External microservice architecture versus internal architecture patterns for each microservice</span></span>
+<span data-ttu-id="2abc9-107">**Şekil 9-1**.</span><span class="sxs-lookup"><span data-stu-id="2abc9-107">**Figure 9-1**.</span></span> <span data-ttu-id="2abc9-108">Her mikro hizmet için iç mimari desenleri ve dış mikro hizmet mimarisi</span><span class="sxs-lookup"><span data-stu-id="2abc9-108">External microservice architecture versus internal architecture patterns for each microservice</span></span>
 
-<span data-ttu-id="de497-109">Ancak, bir ASP.NET çekirdek Web API hizmeti uygulama veya Swashbuckle, Swagger meta verilerini kullanıma sunmak nasıl gibi mikro verilerle teknikleri de dahili DDD ile uygulanan daha gelişmiş mikro uygulanabilir çoğu desenler.</span><span class="sxs-lookup"><span data-stu-id="de497-109">However, most of the techniques for data driven microservices, such as how to implement an ASP.NET Core Web API service or how to expose Swagger metadata with Swashbuckle, are also applicable to the more advanced microservices implemented internally with DDD patterns.</span></span> <span data-ttu-id="de497-110">Bu bölümde önceki bölümlerde uzantısı çünkü daha önce açıklanan uygulamalarının çoğu burada veya mikro hizmet herhangi bir tür için de geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="de497-110">This section is an extension of the previous sections, because most of the practices explained earlier also apply here or for any kind of microservice.</span></span>
+<span data-ttu-id="2abc9-109">Ancak, veri odaklı mikro hizmetler, bir ASP.NET Core Web API'si hizmeti uygulama veya Swashbuckle, Swagger meta verilerini nasıl sunacağınızı öğrenin gibi teknikler de DDD ile dahili olarak uygulanan daha gelişmiş mikro hizmetler için geçerli çoğu desenler.</span><span class="sxs-lookup"><span data-stu-id="2abc9-109">However, most of the techniques for data driven microservices, such as how to implement an ASP.NET Core Web API service or how to expose Swagger metadata with Swashbuckle, are also applicable to the more advanced microservices implemented internally with DDD patterns.</span></span> <span data-ttu-id="2abc9-110">Bu bölümde, önceki bölümlerde uzantısı çünkü daha önce açıklanan yöntemler çoğunu burada veya her türden bir mikro hizmet için de geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="2abc9-110">This section is an extension of the previous sections, because most of the practices explained earlier also apply here or for any kind of microservice.</span></span>
 
-<span data-ttu-id="de497-111">Bu bölümde ilk eShopOnContainers başvuru uygulamada kullanılan Basitleştirilmiş CQRS desenleri ayrıntıları sağlar.</span><span class="sxs-lookup"><span data-stu-id="de497-111">This section first provides details on the simplified CQRS patterns used in the eShopOnContainers reference application.</span></span> <span data-ttu-id="de497-112">Daha sonra uygulamalarınızda yeniden kullanabilirsiniz ortak desenler bulmak etkinleştirmeniz DDD teknikleri genel bir bakış alırsınız.</span><span class="sxs-lookup"><span data-stu-id="de497-112">Later, you will get an overview of the DDD techniques that enable you to find common patterns that you can reuse in your applications.</span></span>
+<span data-ttu-id="2abc9-111">Bu bölümde, ilk hizmetine başvuru uygulamada kullanılan Basitleştirilmiş CQRS desenleriyle ilgili ayrıntılar verilmektedir.</span><span class="sxs-lookup"><span data-stu-id="2abc9-111">This section first provides details on the simplified CQRS patterns used in the eShopOnContainers reference application.</span></span> <span data-ttu-id="2abc9-112">Daha sonra uygulamalarınızda yeniden kullanabilirsiniz ortak desenler bulmanıza olanak sağlamak DDD teknikleri genel bir bakış alırsınız.</span><span class="sxs-lookup"><span data-stu-id="2abc9-112">Later, you will get an overview of the DDD techniques that enable you to find common patterns that you can reuse in your applications.</span></span>
 
-<span data-ttu-id="de497-113">GGG, zengin bir bilgi edinme kaynakları ile büyük bir konudur.</span><span class="sxs-lookup"><span data-stu-id="de497-113">DDD is a large topic with a rich set of resources for learning.</span></span> <span data-ttu-id="de497-114">Gibi kitaplarıyla başlatabilirsiniz [Domain-Driven tasarım](https://domainlanguage.com/ddd/) Eric Evans ve ek malzemeleri Vaughn Vernon, Jimmy Nilsson, Greg Young, UDI Dahan, Jimmy Bogard ve diğer birçok DDD/CQRS uzmanlar tarafından.</span><span class="sxs-lookup"><span data-stu-id="de497-114">You can start with books like [Domain-Driven Design](https://domainlanguage.com/ddd/) by Eric Evans and additional materials from Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard, and many other DDD/CQRS experts.</span></span> <span data-ttu-id="de497-115">Ancak, tüm çoğunu görüşmeleri, whiteboarding ve etki alanı somut iş etki alanınızdaki uzmanlarla oturumları modelleme DDD teknikleri uygulamak öğrenmek denemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="de497-115">But most of all you need to try to learn how to apply DDD techniques from the conversations, whiteboarding, and domain modeling sessions with the experts in your concrete business domain.</span></span>
+<span data-ttu-id="2abc9-113">DDD zengin için kaynaklar ile büyük bir konudur.</span><span class="sxs-lookup"><span data-stu-id="2abc9-113">DDD is a large topic with a rich set of resources for learning.</span></span> <span data-ttu-id="2abc9-114">Kitapları gibi ile başlayabilirsiniz [etki alanı Odaklı Tasarım](https://domainlanguage.com/ddd/) Eric Evans ve ek Materyaller Vaughn Vernon, Jimmy Nilsson, Greg Young, UDI Dahan, Jimmy Bogard ve diğer birçok DDD/CQRS uzmanlar tarafından.</span><span class="sxs-lookup"><span data-stu-id="2abc9-114">You can start with books like [Domain-Driven Design](https://domainlanguage.com/ddd/) by Eric Evans and additional materials from Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard, and many other DDD/CQRS experts.</span></span> <span data-ttu-id="2abc9-115">Ancak çoğu, tüm konuşmaları, Beyaz Tahta kullanımı ve etki alanı uzmanlarıyla somut iş etki alanınızda oturumları modelleme DDD teknikleri uygulama hakkında bilgi edinmek denemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="2abc9-115">But most of all you need to try to learn how to apply DDD techniques from the conversations, whiteboarding, and domain modeling sessions with the experts in your concrete business domain.</span></span>
 
-#### <a name="additional-resources"></a><span data-ttu-id="de497-116">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="de497-116">Additional resources</span></span>
+#### <a name="additional-resources"></a><span data-ttu-id="2abc9-116">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="2abc9-116">Additional resources</span></span>
 
-##### <a name="ddd-domain-driven-design"></a><span data-ttu-id="de497-117">DDD (etki alanı tabanlı tasarım)</span><span class="sxs-lookup"><span data-stu-id="de497-117">DDD (Domain-Driven Design)</span></span>
+##### <a name="ddd-domain-driven-design"></a><span data-ttu-id="2abc9-117">DDD (etki alanı Odaklı Tasarım)</span><span class="sxs-lookup"><span data-stu-id="2abc9-117">DDD (Domain-Driven Design)</span></span>
 
--   <span data-ttu-id="de497-118">**Eric Evans. Etki alanı dili**
-    [*https://domainlanguage.com/*](https://domainlanguage.com/)</span><span class="sxs-lookup"><span data-stu-id="de497-118">**Eric Evans. Domain Language**
+-   <span data-ttu-id="2abc9-118">**Eric Evans. Etki alanı dil**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-118">**Eric Evans. Domain Language**
 [*https://domainlanguage.com/*](https://domainlanguage.com/)</span></span>
 
--   <span data-ttu-id="de497-119">**Martin Fowler. Etki alanı Odaklı Tasarım**
-    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)</span><span class="sxs-lookup"><span data-stu-id="de497-119">**Martin Fowler. Domain-Driven Design**
+-   <span data-ttu-id="2abc9-119">**Martin Fowler. Etki alanı Odaklı Tasarım**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)</span><span class="sxs-lookup"><span data-stu-id="2abc9-119">**Martin Fowler. Domain-Driven Design**
 [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)</span></span>
 
--   <span data-ttu-id="de497-120">**Jimmy Bogard. Etki alanınızı güçlendirme: öncü**
-    [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)</span><span class="sxs-lookup"><span data-stu-id="de497-120">**Jimmy Bogard. Strengthening your domain: a primer**
+-   <span data-ttu-id="2abc9-120">**Jimmy Bogard. Etki alanınızı güçlendirme: bir öncü**
+    [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-120">**Jimmy Bogard. Strengthening your domain: a primer**
 [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)</span></span>
 
-##### <a name="ddd-books"></a><span data-ttu-id="de497-121">DDD defterleri</span><span class="sxs-lookup"><span data-stu-id="de497-121">DDD books</span></span>
+##### <a name="ddd-books"></a><span data-ttu-id="2abc9-121">DDD kitaplar</span><span class="sxs-lookup"><span data-stu-id="2abc9-121">DDD books</span></span>
 
--   <span data-ttu-id="de497-122">**Eric Evans. Etki alanı Odaklı Tasarım: Yazılım Kalp karmaşıklığı Tackling**
-    [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="de497-122">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
+-   <span data-ttu-id="2abc9-122">**Eric Evans. Etki alanı Odaklı Tasarım: Yazılım kalbi karmaşıklığı bağlayabileceğiniz**
+    [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-122">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
 [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
 
--   <span data-ttu-id="de497-123">**Eric Evans. Etki alanı Odaklı Tasarım başvuru: Tanımları ve desen özetleri**
-    [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)</span><span class="sxs-lookup"><span data-stu-id="de497-123">**Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
+-   <span data-ttu-id="2abc9-123">**Eric Evans. Etki alanı Odaklı Tasarım başvurusu: Tanımları ve desen özetleri**
+    [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-123">**Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
 [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)</span></span>
 
--   <span data-ttu-id="de497-124">**Vaughn Vernon. Etki alanı tabanlı tasarımı uygulama**
-    [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="de497-124">**Vaughn Vernon. Implementing Domain-Driven Design**
+-   <span data-ttu-id="2abc9-124">**Vaughn Vernon. Uygulama etki alanı Odaklı Tasarım**
+    [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-124">**Vaughn Vernon. Implementing Domain-Driven Design**
 [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
 
--   <span data-ttu-id="de497-125">**Vaughn Vernon. Etki alanı tabanlı tasarım biçimlendirileceğini**
-    [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)</span><span class="sxs-lookup"><span data-stu-id="de497-125">**Vaughn Vernon. Domain-Driven Design Distilled**
+-   <span data-ttu-id="2abc9-125">**Vaughn Vernon. Etki alanı Odaklı Tasarım biçimlendirileceğini**
+    [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-125">**Vaughn Vernon. Domain-Driven Design Distilled**
 [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)</span></span>
 
--   <span data-ttu-id="de497-126">**Jimmy Nilsson. Etki alanı Odaklı Tasarım ve desenleri uygulama**
-    [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)</span><span class="sxs-lookup"><span data-stu-id="de497-126">**Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
+-   <span data-ttu-id="2abc9-126">**Jimmy Nilsson. Etki alanı Odaklı Tasarım ve desenleri uygulama**
+    [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-126">**Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
 [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)</span></span>
 
--   <span data-ttu-id="de497-127">**Cesar de la Torre. .NET ile N katmanlı etki alanı odaklı Mimari Kılavuzu**
-    [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)</span><span class="sxs-lookup"><span data-stu-id="de497-127">**Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
+-   <span data-ttu-id="2abc9-127">**Cesar de la Torre. .NET ile N katmanlı etki alanı odaklı Mimari Kılavuzu**
+    [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-127">**Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
 [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)</span></span>
 
--   <span data-ttu-id="de497-128">**Abel Avram ve Floyd Marinescu. Etki alanı tasarım hızla temelli**
-    [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)</span><span class="sxs-lookup"><span data-stu-id="de497-128">**Abel Avram and Floyd Marinescu. Domain-Driven Design Quickly**
+-   <span data-ttu-id="2abc9-128">**Abel Avram ve Floyd Marinescu. Etki alanı tasarım hızla odaklı**
+    [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)</span><span class="sxs-lookup"><span data-stu-id="2abc9-128">**Abel Avram and Floyd Marinescu. Domain-Driven Design Quickly**
 [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)</span></span>
 
-<span data-ttu-id="de497-129">DDD eğitim</span><span class="sxs-lookup"><span data-stu-id="de497-129">DDD training</span></span>
+<span data-ttu-id="2abc9-129">DDD eğitim</span><span class="sxs-lookup"><span data-stu-id="2abc9-129">DDD training</span></span>
 
--   <span data-ttu-id="de497-130">**Julie Lerman ve Steve Smith. Etki alanı Odaklı Tasarım temelleri**
-    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)</span><span class="sxs-lookup"><span data-stu-id="de497-130">**Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals**
+-   <span data-ttu-id="2abc9-130">**Julie Lerman ve Steve Smith. Etki alanı Odaklı Tasarım ile ilgili temel bilgiler**
+    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)</span><span class="sxs-lookup"><span data-stu-id="2abc9-130">**Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals**
 [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="de497-131">[Önceki](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
-[sonraki](apply-simplified-microservice-cqrs-ddd-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="de497-131">[Previous](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+<span data-ttu-id="2abc9-131">[Önceki](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
+[İleri](apply-simplified-microservice-cqrs-ddd-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="2abc9-131">[Previous](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [Next](apply-simplified-microservice-cqrs-ddd-patterns.md)</span></span>
