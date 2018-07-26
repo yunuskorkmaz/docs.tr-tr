@@ -7,41 +7,41 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 603b56325d7b690a153bd7db41f34621675a4ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285700"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245462"
 ---
-# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="a5dc9-102">#pragma sağlama toplamı (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="a5dc9-102">#pragma checksum (C# Reference)</span></span>
-<span data-ttu-id="a5dc9-103">Hata ayıklamaya yardımcı olmak kaynak dosyaları için sağlama oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="3ef15-102">#pragma sağlama toplamı (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="3ef15-102">#pragma checksum (C# Reference)</span></span>
+<span data-ttu-id="3ef15-103">Hata ayıklamaya yardımcı olmak kaynak dosyalar için sağlama toplamları oluşturur [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.</span><span class="sxs-lookup"><span data-stu-id="3ef15-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5dc9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a5dc9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ef15-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3ef15-104">Syntax</span></span>  
   
 ```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5dc9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a5dc9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3ef15-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3ef15-105">Parameters</span></span>  
  `"filename"`  
- <span data-ttu-id="a5dc9-106">İzleme gerektiren değişiklikler veya güncelleştirmeler için dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-106">The name of the file that requires monitoring for changes or updates.</span></span>  
+ <span data-ttu-id="3ef15-106">İzleme gerektiren değişiklikleri veya güncelleştirmeleri için dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="3ef15-106">The name of the file that requires monitoring for changes or updates.</span></span>  
   
  `"{guid}"`  
- <span data-ttu-id="a5dc9-107">Genel benzersiz tanımlayıcı (GUID) karma algoritması için.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
+ <span data-ttu-id="3ef15-107">Genel benzersiz tanıtıcısı (GUID) karma algoritması için.</span><span class="sxs-lookup"><span data-stu-id="3ef15-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
   
  `"checksum_bytes"`  
- <span data-ttu-id="a5dc9-108">Onaltılık basamak sağlama toplamı baytını temsil eden dize.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="a5dc9-109">Onaltılık basamak sayısı bir çift sayı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="a5dc9-110">Derleme zamanı uyarı ve yönergesi basamak sonuçlarında tek sayıda göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
+ <span data-ttu-id="3ef15-108">Sağlama toplamı baytını temsil eden bir onaltılık basamak dizisi.</span><span class="sxs-lookup"><span data-stu-id="3ef15-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="3ef15-109">Onaltı basamaklı bir çift sayı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3ef15-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="3ef15-110">Bir derleme zamanı uyarı ve yönerge basamak sonuçları tek sayıda göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="3ef15-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a5dc9-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a5dc9-111">Remarks</span></span>  
- <span data-ttu-id="a5dc9-112">Visual Studio hata ayıklayıcısı bir sağlama toplamı her zaman doğru kaynak bulduğu emin olmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="a5dc9-113">Derleyici bir kaynak dosya için sağlama toplamı hesaplar ve ardından program veritabanı (PDB) dosyası çıktıyı yayar.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="a5dc9-114">Hata ayıklayıcı PDB için kaynak dosyası hesaplar sağlama toplamı Karşılaştırılacak sonra kullanır.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ef15-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3ef15-111">Remarks</span></span>  
+ <span data-ttu-id="3ef15-112">Visual Studio hata ayıklayıcı her zaman doğru kaynak bulduğu emin olmak için bir sağlama toplamı kullanır.</span><span class="sxs-lookup"><span data-stu-id="3ef15-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="3ef15-113">Derleyici, bir kaynak dosyası için sağlama toplamını hesaplar ve ardından program veritabanı (PDB) dosyası çıktıyı yayar.</span><span class="sxs-lookup"><span data-stu-id="3ef15-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="3ef15-114">Hata ayıklayıcı, PDB sonra kaynak dosyasını hesaplar sağlama toplamı karşılaştırma için kullanır.</span><span class="sxs-lookup"><span data-stu-id="3ef15-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
   
- <span data-ttu-id="a5dc9-115">Bu çözüm için çalışmaz [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projeleri hesaplanan sağlama toplamı .aspx dosyası yerine oluşturulan kaynak dosya için olduğundan.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="a5dc9-116">Bu sorunu gidermek için `#pragma checksum` sağlama toplamı desteği sağlar [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+ <span data-ttu-id="3ef15-115">Bu çözüm için çalışmaz [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] .aspx dosyası yerine üretilen kaynak dosyası için hesaplanan sağlama toplamı olduğu için proje.</span><span class="sxs-lookup"><span data-stu-id="3ef15-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="3ef15-116">Bu sorunu gidermek için `#pragma checksum` sağlama desteği sağlayan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sayfaları.</span><span class="sxs-lookup"><span data-stu-id="3ef15-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
- <span data-ttu-id="a5dc9-117">Oluştururken bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projesini Visual C# ' ta, oluşturulan kaynak dosya içeren bir sağlama toplamı, kaynak oluşturulduğunda .aspx dosyası için.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="a5dc9-118">Derleyici, sonra bu bilgileri PDB dosyasına yazar.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-118">The compiler then writes this information into the PDB file.</span></span>  
+ <span data-ttu-id="3ef15-117">Oluştururken bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projesini Visual C# içinde oluşturulan kaynak dosyayı içeren içinden kaynak oluşturulduğunda .aspx dosyası, bir sağlama toplamı.</span><span class="sxs-lookup"><span data-stu-id="3ef15-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="3ef15-118">Derleyici, daha sonra bu bilgileri PDB dosyasına yazar.</span><span class="sxs-lookup"><span data-stu-id="3ef15-118">The compiler then writes this information into the PDB file.</span></span>  
   
- <span data-ttu-id="a5dc9-119">Derleyici Hayır karşılaşırsa `#pragma checksum` yönerge dosyasında sağlama toplamı hesaplar ve değeri PDB dosyasına yazar.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
+ <span data-ttu-id="3ef15-119">Derleyici Hayır karşılaşırsa `#pragma checksum` dosyasındaki yönergesi, sağlama toplamını hesaplar ve değeri PDB dosyasına yazar.</span><span class="sxs-lookup"><span data-stu-id="3ef15-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a5dc9-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="a5dc9-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3ef15-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="3ef15-120">Example</span></span>  
   
 ```csharp
 class TestClass  
@@ -53,7 +53,7 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a5dc9-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="a5dc9-121">See Also</span></span>  
- [<span data-ttu-id="a5dc9-122">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="a5dc9-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="a5dc9-123">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="a5dc9-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="a5dc9-124">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="a5dc9-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="3ef15-121">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3ef15-121">See Also</span></span>  
+ [<span data-ttu-id="3ef15-122">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="3ef15-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3ef15-123">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="3ef15-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3ef15-124">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="3ef15-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
