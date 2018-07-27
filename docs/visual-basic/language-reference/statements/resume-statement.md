@@ -1,5 +1,5 @@
 ---
-title: Resume Deyimi
+title: Resume deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Resume
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603788"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296162"
 ---
 # <a name="resume-statement"></a>Resume Deyimi
-Hata işleme yordamı tamamladıktan sonra yürütme devam ettirir.  
+Bir hata işleme yordamını tamamlandıktan sonra yürütmeye devam eder.  
   
- Yapılandırılmamış özel durum işleme kullanmak yerine, mümkün olduğunda, kodunuzda yapılandırılmış özel durum işleme kullanmanızı öneririz ve `On Error` ve `Resume` deyimleri. Daha fazla bilgi için bkz: [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Yapılandırılmamış özel durum işleme kullanmak yerine, mümkün olduğunda, kodunuzda yapılandırılmış özel durum işleme kullanmanızı öneririz ve `On Error` ve `Resume` deyimleri. Daha fazla bilgi için [deneyin... Catch... Finally deyimini](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,32 +35,32 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Bölümler  
  `Resume`  
- Gerekli. Yordamın aynısını hata işleyicisine hata oluştu, yürütme hataya deyimiyle devam ettirir. Adlı bir yordamda bir hata oluştu, en son hata işleme yordamı içeren yordamı dışında adlı deyimi yürütme sürdürür.  
+ Gerekli. Hata işleyicisi aynı yordam içinde hata oluştu, hataya neden olan deyim yürütmeye devam eder. Çağrılan bir yordamda hata oluştuysa, son hata işleme yordamını içeren yordam dışında adlı deyimindeki yürütmeyi devam ettirir.  
   
  `Next`  
- İsteğe bağlı. Yordamın aynısını hata işleyicisine hata oluştu, yürütme hemen aşağıdaki hata nedeniyle ifadeyi deyimiyle devam ettirir. Adlı bir yordamda bir hata oluştu, yürütme hemen son hata işleme yordamı içeren yordamı dışında adlı deyimi aşağıdaki deyim ile devam ettirir (veya `On Error Resume Next` deyimi).  
+ İsteğe bağlı. Hata işleyicisi aynı yordam içinde hata oluştu, yürütme hemen bir hataya yol açmayan deyiminin sonrasındaki deyime ile devam eder. Adlı bir yordamda hata oluştuysa, hemen en son hata işleme yordamını içeren yordam dışında çağrılan deyiminin sonrasındaki deyime ile yürütme sürdürür (veya `On Error Resume Next` deyimi).  
   
  `line`  
- İsteğe bağlı. Yürütme sürdürür gerekli belirtilen satırında `line` bağımsız değişkeni. `line` Bağımsız değişkeni bir satır etiket veya satır numarası ve bu yordamın aynısını hata işleyicisine olması gerekir.  
+ İsteğe bağlı. Yürütmeye devam eder gerekli belirtilen satır `line` bağımsız değişken. `line` Bağımsız değişkeni bir satır etiket ya da satır numarasını ve hata işleyicisini aynı yordam içinde olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Yapılandırılmamış özel durum işleme kullanmak yerine, mümkün olduğunda, kodunuzda yapılandırılmış özel durum işleme kullanmanızı öneririz ve `On Error` ve `Resume` deyimleri. Daha fazla bilgi için bkz: [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  Yapılandırılmamış özel durum işleme kullanmak yerine, mümkün olduğunda, kodunuzda yapılandırılmış özel durum işleme kullanmanızı öneririz ve `On Error` ve `Resume` deyimleri. Daha fazla bilgi için [deneyin... Catch... Finally deyimini](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
- Kullanırsanız, bir `Resume` deyiminde herhangi bir yere dışında bir hata işleme yordamı, bir hata oluşur.  
+ Kullanıyorsanız bir `Resume` deyiminde herhangi bir yere dışında bir hata işleme yordamı, bir hata oluşur.  
   
- `Resume` Deyimi içeren herhangi bir yordamı kullanılamaz bir `Try...Catch...Finally` deyimi.  
+ `Resume` Deyimi içeren herhangi bir yordamda kullanılamaz bir `Try...Catch...Finally` deyimi.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Resume` hata bir yordamda işleme sonlandırmak ve yürütme hataya deyim ile devam etmek için bildirimi. Hata numarası 55 kullanımını göstermek için oluşturulur `Resume` deyimi.  
+ Bu örnekte `Resume` hata bir yordamda işleme ve sonra da hataya neden deyimi yürütme devam deyimi. Hata numarası 55 kullanımını göstermek için oluşturulan `Resume` deyimi.  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
