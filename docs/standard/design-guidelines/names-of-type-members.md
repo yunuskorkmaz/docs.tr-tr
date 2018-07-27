@@ -1,5 +1,5 @@
 ---
-title: Tür üyeleri adları
+title: Tür üyelerinin adları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575355"
 ---
-# <a name="names-of-type-members"></a>Tür üyeleri adları
-Türleri üyeleri yapılır: yöntemler, özellikler, olaylar, Oluşturucular ve alanları. Tür üyeleri adlandırma yönergeleri aşağıdaki bölümlerde açıklanmaktadır.  
+# <a name="names-of-type-members"></a>Tür üyelerinin adları
+Üyeleri türlerine yapılan: yöntemler, özellikler, olaylar, Oluşturucular ve alanları. Aşağıdaki bölümlerde, tür üyeleri adlandırmak için yönergeler açıklanmaktadır.  
   
-## <a name="names-of-methods"></a>Yöntemlerin adlarını  
- Yöntemleri eylemin gerçekleştirilmesi şekillerini olduğundan tasarım yönergeleri yöntem adları fiiller veya fiil cümleleri olmasını gerektirir. Bu kılavuz ayrıca aşağıdaki isim veya gelen tümcecikleri olan özellik türü adları ve, yöntem adlarını ayırt etmek için kullanılır.  
+## <a name="names-of-methods"></a>Yöntemlerin adları  
+ Yöntemleri eylemde toplanabilmesini olduğundan, tasarım yönergeleri yöntem adları fiilleri ya da tümcelere fiili olması gerekir. Bu kılavuz ayrıca aşağıdaki isim veya sıfat tümcecikleri olan özellik ve tür adları, yöntem adlarını ayırt etmek için hizmet verir.  
   
- **✓ YAPMAK** fiiller ya da fiil cümleleri yöntemleri adlar verin.  
+ **✓ YAPMAK** fiilleri ya da fiili tümcecikleri yöntemleri adlar verin.  
   
 ```  
 public class String {  
@@ -37,25 +37,25 @@ public class String {
 }  
 ```  
   
-## <a name="names-of-properties"></a>Özellik adlarını  
- Diğer üyeleri, isim tümcecik veya sıfat adları özellikleri verilmelidir. Bir özellik verilere başvuruda bulunmaktadır ve özelliğin adını yansıtır çünkü olmasıdır. PascalCasing özellik adları için her zaman kullanılır.  
+## <a name="names-of-properties"></a>Özelliklerin adları  
+ Diğer üyeleri özellikleri isim ifade veya sıfat adları verilmelidir. Bir özellik verileri ifade eder ve özellik adını yansıtılan çünkü olmasıdır. PascalCasing her zaman özellik adları için kullanılır.  
   
- **✓ YAPMAK** isim, isim tümcecik veya gelen kullanarak özelliklerini olarak adlandırın.  
+ **✓ YAPMAK** adı bir isim, isim sözcük veya sıfat kullanarak özellikleri.  
   
- **X yok** "Get" yöntem aşağıdaki örnekteki gibi adıyla aynı özelliklere sahip:  
+ **X yok** aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla aynı özelliklere sahiptir:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Bu deseni genelde özelliği gerçekten bir yöntemi olması gerektiğini gösterir.  
+ Bu düzen, genellikle özelliği bir yöntem gerçekten gerektiğini gösterir.  
   
- **✓ YAPMAK** Koleksiyon Özellikleri "List" veya "Koleksiyonu." gelmelidir tekil bir ifade kullanmak yerine koleksiyondaki öğelerin açıklayan bir çoğul deyimi adı  
+ **✓ YAPMAK** koleksiyon özellikleri ardından "List" veya "Koleksiyonu." tekil bir ifade kullanmak yerine koleksiyondaki öğeleri açıklayan çoğul tümcecik adı  
   
- **✓ YAPMAK** bir İleticiden olumlu bir ifade Boolean özelliklerle adı (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak, aynı zamanda Boole özellikleri önek ", ancak değer ekler burada var" veya "İçin"Durumdayken,"".  
+ **✓ YAPMAK** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak ayrıca Boole özellikleri öneki "İçin"Olan,"" veya ", ancak yalnızca değer kazandıran burada sahip".  
   
- **✓ DÜŞÜNÜN** bir özellik türü aynı adı verip.  
+ **✓ DÜŞÜNÜN** özellik türü olarak aynı adı vererek.  
   
- Örneğin, aşağıdaki özelliği doğru alır ve adlı bir enum değeri ayarlar `Color`, özellik adlı `Color`:  
+ Örneğin, aşağıdaki özelliği doğru alır ve bir enum değeri ayarlar `Color`, özellik adlı `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Olayların adları  
- Olayları için oluşmasını olan bir ya da oluştu bir bazı eylemler her zaman başvurun. Bu nedenle, yöntemleriyle olduğu gibi olayları fiiller ile adlandırılır ve fiil zamanın zaman olayının saat göstermek için kullanılır.  
+ Olayları için gerçekleşmesini olan bir ya da gerçekleşen bir bazı eylemler her zaman bakın. Bu nedenle, yöntemleriyle yönteminde olduğu gibi olayları fiiller ile adlandırılır ve fiili şimdiki zaman olayı zaman belirtmek için kullanılır.  
   
- **✓ YAPMAK** bir fiil veya bir fiil deyimi olaylarla olarak adlandırın.  
+ **✓ YAPMAK** fiil veya fiili tümcecik olaylarla adı.  
   
  Örnekler `Clicked`, `Painting`, `DroppedDown`ve benzeri.  
   
  **✓ YAPMAK** mevcut ve geçmiş zamanlarını kullanarak önce ve sonra bir kavramı ile olayları adlar verin.  
   
- Örneğin, bir pencere kapatılmadan önce bir kapatma olayı adlı `Closing`, ve bir pencere kapatıldıktan sonra tetiklenir çağrılabilir `Closed`.  
+ Örneğin, bir pencere kapatılmadan hemen önce bir kapatma olayı adlı `Closing`, ve penceresi kapatıldıktan sonra başlatan bir çağrılabilir `Closed`.  
   
- **X yok** "Önce" veya "Sonra" önekleri veya öncesi belirtmek için postfixes ve sonrası olayları kullanın. Kullanım mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.  
+ **X yok** "Önce" veya "Sonra" ön ekleri veya öncesi belirtmek için postfixes ve sonrası olayları kullanın. Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.  
   
- **✓ YAPMAK** aşağıdaki örnekte gösterildiği gibi "EventHandler" soneki ile ad olay işleyicileri (olay türleri kullanılan temsilcileri):  
+ **✓ YAPMAK** aşağıdaki örnekte gösterildiği gibi "EventHandler" soneki ile ad olay işleyicileri (temsilcileri olay türleri kullanılan):  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
  **✓ YAPMAK** adlı iki parametre kullanmak `sender` ve `e` olay işleyicileri.  
   
- Gönderen parametresi olayı nesneyi temsil eder. Gönderen parametresi genellikle türünde `object`daha belirli bir tür kullanmayı mümkün olsa bile.  
+ Gönderen parametresi olayı tetikleyen nesne temsil eder. Gönderen parametresi genellikle türüdür `object`bile daha belirli bir tür kullanmak istemiyorsunuz mümkündür.  
   
  **✓ YAPMAK** "EventArgs" sonek bağımsız değişkeni sınıflarıyla olay adı.  
   
 ## <a name="names-of-fields"></a>Alanların adlarını  
- Statik genel ve korumalı alanlarına alan adlandırma yönergeleri uygulayın. İç ve özel alanlar yönergeleri tarafından kapsanmayan ve ortak veya korumalı örneği alanları tarafından izin verilmez [üye tasarım yönergeleri](../../../docs/standard/design-guidelines/member.md).  
+ Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın. İç ve özel alanları yönergeleri tarafından kapsanmayan ve ortak veya korumalı örnek alanları tarafından izin verilmez [üye tasarımı yönergeleri](../../../docs/standard/design-guidelines/member.md).  
   
  **✓ YAPMAK** PascalCasing alan adları kullanın.  
   
- **✓ YAPMAK** ad alanları bir isim, isim tümcecik veya gelen kullanarak.  
+ **✓ YAPMAK** ad alanları bir isim, isim tümceciği veya sıfat kullanarak.  
   
- **X yok** alan adları için bir önek kullanın.  
+ **X yok** alan adları için önek kullanın.  
   
- Örneğin, "g_" veya "s_" statik alanları belirtmek için kullanmayın.  
+ Örneğin, "g_" veya "kendisinin" statik alanları göstermek için kullanmayın.  
   
- *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
+ *Kısımları © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *Pearson eğitim, Inc. şirketinin izni tarafından yeniden yazdırılmaları [Framework tasarım yönergeleri: kuralları, deyimleri ve yeniden kullanılabilir .NET kitaplıkları, 2 sürümü için desenleri](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams tarafından 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison-Wesley Professional.*  
+ *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)  
