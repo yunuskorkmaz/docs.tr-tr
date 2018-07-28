@@ -1,28 +1,28 @@
 ---
-title: My.Computer Nesnesi
+title: My.Computer nesnesi (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597353"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323046"
 ---
 # <a name="mycomputer-object"></a>My.Computer Nesnesi
-Ses, saatin, klavye, dosya sistemi ve benzerleri gibi bilgisayar bileşenlerini yönetmek için gereken özellikleri sağlar.  
+Ses, saat, klavye, dosya sistemi ve benzeri gibi bilgisayar bileşenlerini yönetmek için gereken özellikleri sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemleri ve özellikleri hakkında bilgi için `My.Computer` nesne için bkz: <xref:Microsoft.VisualBasic.Devices.Computer>. Taban sınıfı <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir üyeler sağlar.  
+ Yöntemleri ve özellikleri hakkında bilgi için `My.Computer` nesne, bkz: <xref:Microsoft.VisualBasic.Devices.Computer>. Temel sınıf <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilen üyeleri sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Sınıfı:** <xref:Microsoft.VisualBasic.Devices.Computer> (temel sınıf <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir üyeler sağlar).  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Computer> (temel sınıf <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilen üyeleri sağlar).  
   
- **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [My.Computer.Audio Nesnesi](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)  
