@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: bir alt öğesi (XPath-LINQ-XML) bulunamadı (Visual Basic)'
+title: 'Nasıl yapılır: bulma (XPath-LINQ to XML) bir alt öğesi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 ms.openlocfilehash: 122cc269b95a3f35b8eef71e9c7ca1d50af4210b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640464"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332619"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir alt öğesi (XPath-LINQ-XML) bulunamadı (Visual Basic)
-Bu konuda XPath alt öğesi eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bulma (XPath-LINQ to XML) bir alt öğesi (Visual Basic)
+Bu konu XPath alt öğe eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.  
   
  XPath ifadesi `DeliveryNotes`.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek alt öğesi bulur `DeliveryNotes`.  
+ Bu örnekte alt öğesi bulur `DeliveryNotes`.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birden çok satınalma siparişi (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,7 +39,7 @@ End If
 Console.WriteLine(el1)  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -47,4 +47,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

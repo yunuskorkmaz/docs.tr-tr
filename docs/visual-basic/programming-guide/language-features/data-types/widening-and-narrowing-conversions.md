@@ -20,21 +20,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: e574c20ec259953fea4b11d8f65e546373a4fe8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655425"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332580"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
-Önemli bir tür dönüştürmesi ile dönüştürme işleminin sonucu hedef veri türü aralık içinde olup olmadığını konudur.  
+Önemli bir tür dönüştürme ile dönüştürmenin sonucu hedef veri türü aralık içinde olup olmadığını noktadır.  
   
- A *dönüştürme genişletme* özgün veriler için bir olası değer sağlayan bir veri türü için bir değer değiştirir.  Genişletme dönüşümleri kaynak değerin koruma, ancak kendi gösterimi değiştirebilirsiniz. İçin bir tam sayı türünden dönüştürürseniz, bu gerçekleşir `Decimal`, veya `Char` için `String`.  
+ A *dönüştürme genişletme* özgün veriler için bir olası değer sağlayan bir veri türü için bir değerini değiştirir.  Genişletme dönüştürmeleri, kaynak değeri korumak ancak gösterimine değiştirebilirsiniz. İçin bir integral türünden dönüştürürseniz böyle `Decimal`, veya `Char` için `String`.  
   
- A *dönüştürme daraltma* bazı olası değerleri tutun mümkün olmayabilir veri türü için bir değer değiştirir. Örneğin, bir tam sayı türü ve dönüştürülen sayısal bir tür dönüştürüldüğünde bir kesir değerini yuvarlanır `Boolean` ya da daha azdır `True` veya `False`.  
+ A *daraltma dönüştürmesi* bazı olası değerlerini tutabilecek özellikte olmayabilecek bir veri türü için bir değerini değiştirir. Örneğin, bir tamsayı türü ve dönüştürülen bir sayı türüne dönüştürülür, kesirli değer yuvarlanır `Boolean` ya da azaltılır `True` veya `False`.  
   
 ## <a name="widening-conversions"></a>Dönüştürmeleri Genişletme  
- Aşağıdaki tabloda dönüşümleri standart gösterir.  
+ Aşağıdaki tabloda dönüşümlerdir standart gösterilmektedir.  
   
 |Veri türü|Veri türleri için widens <sup>1</sup>|  
 |---|---|  
@@ -48,55 +48,55 @@ ms.locfileid: "33655425"
 |[ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Ondalık](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single`, `Double`<sup>2</sup>|  
 |[Tek](../../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
-|[Çift](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
-|Herhangi bir numaralandırılmış türü ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Temel alınan tam sayı türünü ve olduğu temel alınan tür widens herhangi bir tür.|  
-|[char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` Dizi|`Char` dizi, `String`|  
+|[çift](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
+|Tüm numaralandırılan tür ([Enum](../../../../visual-basic/language-reference/statements/enum-statement.md))|Temel alınan integral türü ve, temel alınan türü widens herhangi bir tür.|  
+|[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
+|`Char` Dizi|`Char` dizi `String`|  
 |Herhangi bir türü|[Nesne](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |Türetilmiş bir tür|Herhangi bir temel türü, türetilmiş <sup>3</sup>.|  
-|Herhangi bir türü|Bunu uygulayan herhangi bir arabirim.|  
+|Herhangi bir türü|Herhangi bir arabirimi uygular.|  
 |[Nothing](../../../../visual-basic/language-reference/nothing.md)|Tüm veri türü veya nesne türü.|  
   
- <sup>1</sup> tanım olarak, her veri türü kendisine widens.  
+ <sup>1</sup> tanımı gereği, her veri türü kendisine widens.  
   
- <sup>2</sup> gelen dönüşümleri `Integer`, `UInteger`, `Long`, `ULong`, veya `Decimal` için `Single` veya `Double` duyarlık kaybına, ancak hiçbir zaman büyüklük kaybına neden olabilir. Bu anlamda bunlar bilgi kaybına neden değil.  
+ <sup>2</sup> Dönüştürmelere `Integer`, `UInteger`, `Long`, `ULong`, veya `Decimal` için `Single` veya `Double` kesinlik kaybı, ancak büyüklüğünü hiçbir zaman kaybına neden olabilir. Bu anlamda bunlar bilgi kaybı durumunda değil.  
   
- <sup>3</sup> türetilmiş bir tür dönüştürme temel türlerinden birine genişletme, şaşırtıcı görünebilir. Gerekçeyi temel türün bir örneği olarak niteleyen şekilde türetilmiş bir tür temel türdeki tüm üyelerin içermesidir. Ters yönde temel türü türetilen türü tarafından tanımlanan herhangi bir yeni üye içermiyor.  
+ <sup>3</sup> türetilmiş bir tür dönüştürme temel türlerinden birine genişletme, şaşırtıcı görünebilir. Gerekçe temel türün bir örneği uygun şekilde türetilmiş tür temel türünün tüm üyelerini içermesidir. Ters yönde, türetilmiş bir tür tarafından tanımlanan tüm yeni üyeleri taban türü içermiyor.  
   
- Genişletme dönüşümleri çalışma zamanında her zaman başarılı ve hiçbir zaman veri kaybına neden. Her zaman bunları örtük olarak gerçekleştirebileceğiniz olsun [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) anahtara denetimi türünü ayarlar `On` veya `Off`.  
+ Genişletme dönüştürmeleri, çalışma zamanında her zaman başarılı ve hiçbir zaman veri kaybına neden. Her zaman bunları örtük olarak gerçekleştirebileceğiniz, ister [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) anahtara denetimi türünü ayarlar `On` veya `Off`.  
   
 ## <a name="narrowing-conversions"></a>Daraltma dönüşümleri  
- Standart daraltma dönüşümleri aşağıdakileri içerir:  
+ Standart daraltma dönüştürmelerini şunları içerir:  
   
--   (Her türün kendisine widens dışında) önceki içinde genişletme dönüşümleri ters yönleri tablo  
+-   (Her türün kendisine widens dışında) önceki içinde genişletme dönüştürmeleri, ters yönde tablo  
   
--   Dönüşümler arasında herhangi bir yönde [Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ve herhangi bir sayısal tür  
+-   Dönüştürmeleri arasında herhangi bir yönde [Boole](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) ve herhangi bir sayısal tür  
   
--   Herhangi bir sayısal her tür dönüşümleri numaralandırılan türü (`Enum`)  
+-   Herhangi bir sayısal tür dönüştürmelerinde herhangi numaralandırılmış tür (`Enum`)  
   
--   Dönüşümler arasında herhangi bir yönde [dize](../../../../visual-basic/language-reference/data-types/string-data-type.md) ve herhangi bir sayısal tür `Boolean`, veya [tarihi](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+-   Dönüştürmeleri arasında herhangi bir yönde [dize](../../../../visual-basic/language-reference/data-types/string-data-type.md) ve herhangi bir sayısal tür `Boolean`, veya [tarihi](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Ondan türetilmiş bir tür için bir veri türü veya nesne dönüşümleri yazın  
+-   Bu türden türetilmiş türe türü bir veri türü veya nesne dönüşümleri  
   
- Daraltma dönüşümleri her zaman çalışma zamanında başarılı ve başarısız veya veri kaybına neden. Hedef veri türüne dönüştürülecek değer alırsanız hata oluşur. Örneğin, bir sayısal dönüşüm taşmayla neden olabilir. Derleyici sürece örtük olarak daraltma dönüşümleri gerçekleştirmenize izin vermiyor [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) anahtara denetimi türünü ayarlar `Off`.  
+ Daraltma dönüştürmeleri her zaman çalışma zamanında başarılı ve başarısız veya veri kaybına neden. Hedef veri türüne dönüştürülen değer alamaz, bir hata meydana gelir. Örneğin, bir sayısal dönüştürme bir taşma neden olabilir. Derleyicisi daraltma dönüştürmelerini örtülü olarak sürece izin vermiyor [Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md) anahtara denetimi türünü ayarlar `Off`.  
   
 > [!NOTE]
->  Daraltma dönüştürme hatası öğelerde bulunan dönüştürmeleri için gizlenen bir `For Each…Next` for döngüsü denetim değişkeni koleksiyonu. Daha fazla bilgi ve örnekler için "Daraltma dönüşümleri" bölümüne bakın [For Each... Sonraki deyim](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+>  Öğeleri dönüştürmelerinde daraltmaya dönüştürme hatası gizlenen bir `For Each…Next` döngü denetim değişkeni koleksiyonu. Daha fazla bilgi ve örnekler için "Daraltma dönüştürmeleri" bölümüne bakın. [her biri için... Sonraki deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-### <a name="when-to-use-narrowing-conversions"></a>Daraltma Dönüşümleri kullanma zamanı  
- Kaynak değerin hatası veya veri kaybı olmadan hedef veri türüne dönüştürülebilir bildiğinizde daraltma dönüşümü kullanın. Örneğin, bir `String` kullanabileceğiniz içeren "True" veya "False" bildiğinizden, `CBool` öğesine dönüştürmek için anahtar sözcüğü `Boolean`.  
+### <a name="when-to-use-narrowing-conversions"></a>Daraltma dönüştürmeleri kullanma zamanı  
+ Kaynak değeri hedef veri türü hatası veya veri kaybı olmadan dönüştürülebilir bildiğiniz durumlarda bir daraltma dönüşümü kullanın. Örneğin, bir `String` kullanabileceğiniz içeren "True" veya "False" bildiğinizden, `CBool` öğesine dönüştürmek için anahtar sözcüğü `Boolean`.  
   
 ## <a name="exceptions-during-conversion"></a>Dönüşüm sırasında özel durumlar  
- Her zaman dönüşümleri başarılı olması için özel durumlar oluşturmayın. Daraltma dönüşümleri, bunlar başarısız olduğunda, genellikle aşağıdaki özel durumlar oluşturma:  
+ Genişletme dönüştürmeleri her zaman başarılı, özel durumlar oluşturmayın. Daraltma dönüştürmeleri, başarısız olduğunda, en yaygın olarak aşağıdaki özel durumlar:  
   
--   <xref:System.InvalidCastException> — iki tür arasında dönüştürme tanımlanmışsa  
+-   <xref:System.InvalidCastException> — iki tür arasında dönüştürme tanımlanmadıysa  
   
--   <xref:System.OverflowException> — (yalnızca integral türleri) dönüştürülen değer hedef türü çok büyük ise  
+-   <xref:System.OverflowException> — (sadece integral türleri) dönüştürülen değer hedef türü için çok büyük ise  
   
- Bir sınıf veya yapı tanımlıyorsa bir [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) Bu sınıf veya yapı, bilgisayardan veya bir dönüşüm işleci olarak hizmet verecek, `CType` onu uymak açısından gerekli olduğunu uygun herhangi bir özel durum. Ayrıca, `CType` Visual Basic işlevleri deniyor olabilir veya [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] özel durumlar, çeşitli sırayla throw yöntemleri.  
+ Bir sınıf veya yapı tanımlıyorsa bir [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) , sınıf veya yapı, gelen veya dönüştürme işleci olarak görev yapacak, `CType` , uygun gördüğü herhangi bir özel durum oluşturabilir. Ayrıca, `CType` Visual Basic işlevleri deniyor olabilir veya [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri sırayla çeşitli özel durumlar oluşturabilir.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Başvuru türü dönüşümleri sırasında değişiklikleri  
- Bir dönüştürme bir *başvuru türüne* yalnızca işaretçi değeri kopyalar. Değer ne kopyalanan ya da herhangi bir şekilde değiştirilmez. Değiştirebilirsiniz tek şey işaretçinin bulunduran değişkeni veri türüdür. Aşağıdaki örnekte, veri türü türetilmiş sınıftan devralınabilir. taban sınıfı için dönüştürülür, ancak her iki değişken şimdi işaret nesnesi değiştirilmez.  
+ Dönüştürme bir *başvuru türüne* yalnızca işaretçi değerine kopyalar. Değer ne kopyalanamaz ya da herhangi bir şekilde değiştirildi. İşaretçi tutan değişken veri türünü değiştirmek için gereken tek şey var. Aşağıdaki örnekte, veri türü temel sınıfı için türetilen bir sınıftan dönüştürülür, ancak her iki değişken için artık işaret nesnesi değiştirilmez.  
   
 ```  
 ' Assume class cSquare inherits from class cShape.  
@@ -112,7 +112,7 @@ shape = square
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Nasıl yapılır: Visual Basic'de başka bir tür nesneyi Dönüştür](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Nasıl yapılır: bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

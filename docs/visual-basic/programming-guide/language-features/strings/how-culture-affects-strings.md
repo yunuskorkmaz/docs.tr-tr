@@ -6,77 +6,77 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654745"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332606"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Kültürün Visual Basic'de Dizeleri Etkilemesi
-Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürmeleri ve karşılaştırmaları gerçekleştirmek için nasıl kullandığını açıklar.  
+Bu Yardım sayfası kültür bilgilerini Visual Basic dize dönüştürme ve karşılaştırma gerçekleştirmek için nasıl kullandığını açıklar.  
   
-## <a name="when-to-use-culture-specific-strings"></a>Kültüre özgü dizeleri kullanmak ne zaman  
- Genellikle, için sunulan tüm veriler için kültüre özgü dizelerini kullanın ve kullanıcılardan okuyun ve kültür değişmez değer dizeleri uygulamanızın iç verileri için kullanın.  
+## <a name="when-to-use-culture-specific-strings"></a>Ne zaman kültüre özel dize kullanılır?  
+ Genellikle, sunulan tüm veriler için kültüre özgü dizeleri kullanın ve kullanıcıların okuma ve kültür sabit dizelerini uygulamanızın iç verileri için kullanın gerekir.  
   
- Örneğin, uygulamanız kullanıcıların bir tarih olarak bir dize girin isterse, kullanıcıların biçim dizeleri kültüre göre beklemelisiniz ve uygulama dize uygun şekilde dönüştürmeniz gerekir. Kullanıcı arabiriminde bu tarihten sonra uygulamanızın gösterir, bu kullanıcının kültürün sunmalıdır.  
+ Örneğin, uygulamanız kullanıcıların bir dize olarak bir tarih girin isterse, biçim dizeleri kültüre göre kullanıcıların beklemelisiniz ve uygulama dizesi uygun şekilde dönüştürmeniz gerekir. Ardından, uygulamanızın kullanıcı arabiriminde o tarih sunarsa, bu kullanıcının kültürünü sunmalıdır.  
   
- Ancak, uygulama tarihi merkezi sunucusuna yükler, potansiyel olarak farklı tarih biçimleri arasında Karışıklığı önlemek için bir özel kültüre göre dize biçiminde.  
+ Ancak uygulama tarih merkezi sunucusuna yükler, büyük olasılıkla farklı tarih biçimleri arasında Karışıklığı önlemek için bir özel kültüre göre dize biçiminde.  
   
 ## <a name="culture-sensitive-functions"></a>Kültüre duyarlı işlevleri  
- Tüm Visual Basic dize dönüştürme işlevleri (dışında `Str` ve `Val` işlevleri) karşılaştırmaları ve dönüşümler uygulamanın kültür için uygun olduğundan emin olmak için uygulamanın kültür bilgilerini kullanın Kullanıcı.  
+ Tüm Visual Basic dize dönüştürme işlevleri (dışında `Str` ve `Val` işlevler) dönüştürme ve karşılaştırmalar uygulamanın kültür için uygun olduğundan emin olmak için uygulamanın kültür bilgilerini kullanın. Kullanıcı.  
   
- Dize dönüştürme işlevleri farklı kültür ayarları olan bilgisayarlarda çalıştırılan uygulamalardaki kullanarak başarıyla anahtarını hangi işlevleri belirli kültür ayarı kullanın ve geçerli kültür ayarı kullanan anlamaktır. Uygulamanın kültür ayarları varsayılan olarak, işletim sistemi kültür ayarlarından devralınacağı dikkat edin. Daha fazla bilgi için bkz: <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, ve [tür dönüştürme işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Anahtar başarıyla farklı kültür ayarları olan bilgisayarlarda çalıştırılan uygulamalardaki dize dönüştürme işlevlerini kullanarak belirli bir kültür ayarı hangi işlevleri'ni kullanın ve geçerli kültür ayarı kullanan öğrenmektir. Uygulamanın kültür ayarları işletim sisteminin kültür ayarları varsayılan olarak, devralınan olan dikkat edin. Daha fazla bilgi için <xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>, <xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>, <xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>, ve [tür dönüştürme işlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- `Str` (Numaraları dönüştürür dizelere) ve `Val` dizeleri ve numaralar arasında dönüştürme (dönüştürür dizeleri sayılara) işlevleri uygulamanın kültür bilgilerini kullanmayın. Bunun yerine, bunlar yalnızca nokta (.) geçerli bir ondalık ayırıcısı olarak tanır. Bu işlevlerin culturally algılayan analogues şunlardır:  
+ `Str` (Sayıları dizeleri dönüştürür) ve `Val` (sayıları dizeleri dönüştürür) işlevleri dizeleri ve numaralar arasında dönüştürme yaparken uygulamanın kültür bilgilerini kullanmaz. Bunun yerine, bunlar yalnızca nokta (.) geçerli bir ondalık ayırıcı olarak tanır. Bu işlevlerin duyarlıymış algılayan analogues şunlardır:  
   
--   **Geçerli kültür kullanmak dönüşümler.** `CStr` Ve `Format` işlevleri bir sayı bir dizeye dönüştürmek ve `CDbl` ve `CInt` işlevleri bir dize bir sayıya dönüştürün.  
+-   **Geçerli kültürü kullanan dönüştürme.** `CStr` Ve `Format` işlevleri bir sayıyı bir dizeye dönüştürür ve `CDbl` ve `CInt` işlevler bir dizeyi sayıya dönüştürme.  
   
--   **Belirli bir kültür kullanmak dönüşümler.** Her sayı nesnesi olan bir `ToString(IFormatProvider)` bir sayı bir dizeye dönüştürür yöntemi ve `Parse(String, IFormatProvider)` bir dizeyi sayıya dönüştürür yöntemi. Örneğin, `Double` türü sağlar <xref:System.Double.ToString%28System.IFormatProvider%29> ve <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> yöntemleri.  
+-   **Belirli bir kültür kullanan dönüştürme.** Her sayı nesnesi olan bir `ToString(IFormatProvider)` bir sayıyı bir dizeye dönüştürür yöntemi ve bir `Parse(String, IFormatProvider)` yönteminin bir dizeyi sayıya dönüştürür. Örneğin, `Double` sağlayan türü <xref:System.Double.ToString%28System.IFormatProvider%29> ve <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> yöntemleri.  
   
  Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Conversion.Str%2A> ve <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
-## <a name="using-a-specific-culture"></a>Belirli bir kültür kullanma  
- Bir Web hizmetine (bir dize olarak biçimlendirilmiş) bir tarih gönderen uygulama geliştirme düşünün. Bu durumda, uygulamanızın belirli bir kültür dize dönüştürme için kullanmanız gerekir. Nedenini anlamak için tarihin kullanmanın sonucu düşünün <xref:System.DateTime.ToString> yöntemi: uygulamanız 4 Temmuz 2005 tarih biçimlendirmek için bu yöntem kullanıyorsa döndürür "4/7/2005 12:00:00 AM" ile Amerika Birleşik Devletleri İngilizce (en-US) kültür çalıştırdığınızda, ancak bunu döndürür " 04.07.2005 00:00:00 "ile Almanca (de-DE) kültür çalıştırdığınızda.  
+## <a name="using-a-specific-culture"></a>Belirli bir kültür kullanarak  
+ Bir Web hizmeti için (bir dize olarak biçimlendirilmiş) bir tarih gönderen bir uygulama geliştiriyorsanız düşünün. Bu durumda, uygulamanızın belirli bir kültür dize dönüştürme için kullanmanız gerekir. Nedenini anlamak için tarihin kullanmanın sonucu göz önünde bulundurun. <xref:System.DateTime.ToString> yöntemi: 4 Temmuz 2005 tarihi biçimlendirmek için bu yöntem uygulamanızın kullandığı döndürür "4/7/2005 12:00:00 AM" Amerika Birleşik Devletleri İngilizce (en-US) kültür ile çalıştırdığınızda, ancak döndürür " 04.07.2005 00:00:00 "ne Almanca (de-DE) kültür ile çalışır.  
   
- Belirli kültür biçiminde bir dize dönüştürme gerçekleştirmek gerektiğinde, kullanması gereken `CultureInfo` içinde yerleşik sınıfı [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Yeni bir oluşturabilirsiniz `CultureInfo` kültürün adını geçirerek belirli bir kültür için nesne <xref:System.Globalization.CultureInfo.%23ctor%2A> Oluşturucusu. Desteklenen bir kültür adları listelenen <xref:System.Globalization.CultureInfo> sınıfı Yardım sayfası.  
+ Belirli bir kültür biçiminde bir dize dönüştürme yapmak gerektiğinde, kullanmanız gereken `CultureInfo` yerleşiktir sınıfı [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Yeni bir oluşturabilirsiniz `CultureInfo` kültürün adını geçirerek belirli bir kültür için nesne <xref:System.Globalization.CultureInfo.%23ctor%2A> Oluşturucusu. Desteklenen kültürü adların listelenme <xref:System.Globalization.CultureInfo> sınıfı Yardım sayfası.  
   
- Alternatif olarak, bir örneği elde edebilirsiniz *sabit kültür* gelen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği. Sabit kültür üzerinde İngilizce kültürüne dayanır, ancak bazı farklılıklar vardır. Örneğin, 24 saatlik 12 saatlik yerine sabit kültür belirtir.  
+ Alternatif olarak, örneği alabilirsiniz *sabit kültür* gelen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği. Sabit kültürü İngilizce kültürü temel alan, ancak bazı farklar vardır. Örneğin, sabit kültür, 24 saatlik bir 12 saatlik düzende yerine belirtir.  
   
- Bir tarihi kültürün dizeye dönüştürmek için geçirmek <xref:System.Globalization.CultureInfo> tarih nesnenin nesnesine <xref:System.DateTime.ToString%28System.IFormatProvider%29> yöntemi. Örneğin, aşağıdaki görüntüler kod "07/04/2005 00:00:00" ne olursa olsun, uygulamanın kültür ayarları.  
+ Bir tarih kültürün dizeye dönüştürülecek geçirmek <xref:System.Globalization.CultureInfo> tarih nesnesinin nesnesine <xref:System.DateTime.ToString%28System.IFormatProvider%29> yöntemi. Örneğin, aşağıdaki görüntüler kod "04/07/2005 00:00:00" uygulamanın kültür ayarları ne olursa olsun.  
   
  [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
->  Tarih değişmez değerleri her zaman İngilizce kültürüne uygun olarak yorumlanır.  
+>  Tarih değişmez değerleri, her zaman İngilizce kültürüne göre yorumlanır.  
   
 ## <a name="comparing-strings"></a>Dizeleri Karşılaştırma  
- Dize karşılaştırmaları burada gereken iki önemli durum vardır:  
+ Dize karşılaştırmaları gerekmesi iki önemli durumlar vardır:  
   
--   **Kullanıcıya görünen sıralama verileri.** Dizeleri uygun şekilde sıralamak için geçerli kültür üzerinde temel işlemleri kullanın.  
+-   **Kullanıcıya görüntülenecek veri sıralama.** Uygun şekilde dizeleri sıralamak için geçerli kültürü temel alarak işlemler kullanın.  
   
--   **İki uygulama iç dizeleri (genellikle güvenlik nedenleriyle) tam olarak eşleşmesi olup olmadığı belirleniyor.** Geçerli kültür göz ardı işlemleri kullanın.  
+-   **İki uygulama iç dizeleri (genellikle. Güvenlik amaçları için) tam olarak eşleşip eşleşmediğini belirleyin.** Geçerli kültürü dikkate işlemlerini kullanın.  
   
- Visual Basic ile karşılaştırmaları her iki tür gerçekleştirebilirsiniz <xref:Microsoft.VisualBasic.Strings.StrComp%2A> işlevi. İsteğe bağlı belirtin `Compare` karşılaştırma türünü denetlemek için bağımsız değişken: `Text` çoğu giriş ve çıkış için `Binary` tam eşleşme belirlemek için.  
+ Visual Basic ile karşılaştırma her iki türdeki gerçekleştirebileceğiniz <xref:Microsoft.VisualBasic.Strings.StrComp%2A> işlevi. İsteğe bağlı belirtin `Compare` karşılaştırma türünü denetlemek için bağımsız değişken: `Text` çoğu girdi ve çıktı `Binary` tam eşleşme belirlemek için.  
   
- `StrComp` İşlevi sıralama sırasına göre iki karşılaştırılan dizeler arasındaki ilişkiyi gösteren bir tamsayı döndürür. Sonuç için pozitif bir değer ilk dizesi ikinci dize büyük olduğunu gösterir. Negatif bir sonuç ilk dize küçüktür, sıfır dizeleri arasındaki eşitlik belirtir.  
+ `StrComp` İşlevi bir sıralama ölçütüne göre iki karşılaştırılan dizeler arasındaki ilişkiyi gösteren bir tamsayı döndürür. Birinci dize ikinci dizeden büyükse sonuç için pozitif bir değer belirtir. Negatif bir sonuç ilk dize küçüktür, sıfır dizeler arasındaki belirtir.  
   
  [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
- Aynı zamanda [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] iş ortağı `StrComp` işlevi, <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi. Temel dize sınıfının statik, aşırı yüklenmiş bir yöntem budur. Aşağıdaki örnek, bu yöntem nasıl kullanıldığı gösterilmektedir:  
+ Ayrıca [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] iş ortağı `StrComp` işlevi <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi. Temel dize sınıfının statik, aşırı yüklenmiş bir yöntem budur. Aşağıdaki örnekte, bu yöntem nasıl kullanıldığı gösterilmektedir:  
   
  [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
- Karşılaştırmaları nasıl gerçekleştirileceğini üzerinde daha hassas denetim için ek aşırı kullanabilirsiniz <xref:System.String.Compare%2A> yöntemi. İle <xref:System.String.Compare%2A?displayProperty=nameWithType> kullanabileceğiniz yöntemi, `comparisonType` kullanmak için karşılaştırma türünü belirtmek için bağımsız değişken.  
+ Karşılaştırmalar nasıl gerçekleştirileceğini denetleyebilmek için ek bir aşırı yüklemesini kullanabilirsiniz <xref:System.String.Compare%2A> yöntemi. İle <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi kullanabileceğiniz `comparisonType` kullanmak için karşılaştırma türünü belirtmek için bağımsız değişken.  
   
-|Değeri `comparisonType` bağımsız değişken|Karşılaştırma türü|Ne zaman kullanmalı|  
+|Değerini `comparisonType` bağımsız değişken|Karşılaştırma türü|Ne zaman kullanmalı|  
 |---|---|---|  
-|`Ordinal`|Dizeleri bileşeni bayt alarak karşılaştırmayı.|Karşılaştırma olduğunda bu değeri kullanın: büyük küçük harfe duyarlı tanımlayıcıları, güvenlikle ilgili ayarları veya diğer dil olmayan tanımlayıcıları burada bayt eşleşmelidir.|  
-|`OrdinalIgnoreCase`|Dizeleri bileşeni bayt alarak karşılaştırmayı.<br /><br /> `OrdinalIgnoreCase` büyük harf yalnızca iki karakter farklı olduğunda belirlemek için sabit kültür bilgilerini kullanır.|Karşılaştırma olduğunda bu değeri kullanın: büyük küçük harf duyarsız tanımlayıcıları, güvenlikle ilgili ayarları ve Windows'ta depolanan verileri.|  
-|`CurrentCulture` Veya `CurrentCultureIgnoreCase`|Geçerli kültür dizeleri yorumu temel alarak karşılaştırmayı.|Bu değerleri karşılaştırılırken kullanın: kullanıcı, çoğu kullanıcı girişi ve dil yorumlama gerektiren diğer veriler için görüntülenen verileri.|  
-|`InvariantCulture` Veya `InvariantCultureIgnoreCase`|Sabit kültür dizeleri yorumu temel alarak karşılaştırmayı.<br /><br /> Bu farklıdır `Ordinal` ve `OrdinalIgnoreCase`, sabit kültür kabul edilebilir aralık dışında karakterler eşdeğer değişmez karakter olarak davrandığı için.|Kalıcı veri veya görüntüleme incelemeye ilgili verileri karşılaştırılırken sabit bir sıralama gerektiren yalnızca bu değerleri kullanın.|  
+|`Ordinal`|Karşılaştırma dizeleri bileşen baytlara bağlı.|Bu değeri karşılaştırılırken kullanın: büyük küçük harf duyarlı tanımlayıcıları, güvenlikle ilgili ayarları ya da diğer dilsel olmayan tanımlayıcıları yeri bayt eşleşmelidir.|  
+|`OrdinalIgnoreCase`|Karşılaştırma dizeleri bileşen baytlara bağlı.<br /><br /> `OrdinalIgnoreCase` yalnızca büyük harf karakter iki farklı olduğunda belirlemek için sabit kültür bilgilerini kullanır.|Bu değeri karşılaştırılırken kullanın: büyük küçük harf duyarsız tanımlayıcılar, güvenlikle ilgili ayarlar ve Windows içinde depolanan veriler.|  
+|`CurrentCulture` veya `CurrentCultureIgnoreCase`|Geçerli kültürü dizeleri yorumu temel alarak karşılaştırmayı.|Karşılaştırılırken şu değerleri kullanın: kullanıcı, çoğu kullanıcı girişi ve dilsel yorumlama gerektiren diğer veriler için görüntülenen verileri.|  
+|`InvariantCulture` veya `InvariantCultureIgnoreCase`|Sabit kültür dizelerin yorumu temel alarak karşılaştırmayı.<br /><br /> Bu farklıdır `Ordinal` ve `OrdinalIgnoreCase`, sabit kültür, kabul edilen aralığın dışındaki karakterleri eşdeğer sabit karakter değerlendirir.|Kalıcı veri veya görüntüleme dilsel olarak gerekli veri karşılaştırılırken sabit bir sıralama düzeni olmasını gerektirir. yalnızca şu değerleri kullanın.|  
   
 ### <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- Uygulamanızı bir karşılaştırma ya da durum değiştirme işlemi sonucuna güvenlik kararları sonra işlemi kullanması gereken <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi ve geçişi `Ordinal` veya `OrdinalIgnoreCase` için `comparisonType` bağımsız değişkeni.  
+ Uygulamanız bir karşılaştırma veya harf değiştirme işleminin sonucuna dayalı güvenlik kararları hale getirir. ardından işlemi kullanması gereken <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntemi ve pass `Ordinal` veya `OrdinalIgnoreCase` için `comparisonType` bağımsız değişken.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Globalization.CultureInfo>  

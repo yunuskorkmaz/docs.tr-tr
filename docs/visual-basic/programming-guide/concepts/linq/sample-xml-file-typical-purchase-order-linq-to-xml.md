@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)'
+title: 'Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
 ms.openlocfilehash: 4a0d16013ba85eace6cca374f2f284c4a6e39f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644907"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332667"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Örnek XML dosyası: Tipik satın alma siparişi (LINQ-XML)
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Örnek XML dosyası: Tipik satın alma siparişi (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Tipik satın alma siparişi dosyasıdır.  
   
 ## <a name="purchaseorderxml"></a>PurchaseOrder.xml  

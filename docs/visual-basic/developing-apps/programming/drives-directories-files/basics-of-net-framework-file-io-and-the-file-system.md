@@ -10,40 +10,40 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591787"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332967"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
-Sınıfları <xref:System.IO> ad alanı, sürücüler, dosyaları ve dizinleri ile çalışmak için kullanılır.  
+Sınıflar <xref:System.IO> ad alanı, sürücüler, dosyalar ve dizinler ile çalışmak için kullanılır.  
   
- <xref:System.IO> Ad alanında <xref:System.IO.File> ve <xref:System.IO.Directory> sağlayan sınıflar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dosyaları ve dizinleri yöneten işlevselliği. Nedeni bu nesnelerin yöntemleri statik veya paylaşılan üyeler, bunları doğrudan sınıfının bir örneği ilk kez oluşturmadan kullanabilirsiniz. Bu sınıfların ile ilişkili olan <xref:System.IO.FileInfo> ve <xref:System.IO.DirectoryInfo> kullanıcıları için tanıdık gelecektir sınıfları `My` özelliği. Bu sınıfların kullanmak için tam olarak adları nitelemeniz veya içeri aktarmanız gerekir uygun ad alanlarını dahil ederek `Imports` başında deyim etkilenen kod. Daha fazla bilgi için bkz: [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+ <xref:System.IO> Ad alanı içerir <xref:System.IO.File> ve <xref:System.IO.Directory> sağlayan sınıflar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dosyalar ve dizinler yöneten işlevselliği. Nedeni bu nesnelerin yöntemleri statik veya paylaşılan üyeler, bunları doğrudan sınıfının bir örneğini ilk oluşturma olmadan kullanabilirsiniz. Bu sınıf ile ilişkili olan <xref:System.IO.FileInfo> ve <xref:System.IO.DirectoryInfo> kullanıcıları için tanıdık gelecektir sınıflarını `My` özelliği. Bu sınıfların kullanmak için tam adları nitelemeniz veya gerekir uygun ad alanlarını dahil ederek içeri aktarma `Imports` başında bir deyim etkilenen kod. Daha fazla bilgi için [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Diğer konular bu bölüm kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarında kullanılmak için tasarlanmıştır. `System.IO` sınıfları destekleyen herhangi bir dil tarafından kullanıma yöneliktir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], Visual Basic dahil olmak üzere.  
+>  Bu diğer konulara bölümünde kullanım `My.Computer.FileSystem` yerine nesne `System.IO` sürücüsü, dosyalar ve dizinler ile çalışmak için sınıflar. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarda kullanmak için tasarlanmıştır. `System.IO` sınıflar, destekleyen herhangi bir dilde kullanıma yöneliktir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], Visual Basic dahil.  
   
-## <a name="definition-of-a-stream"></a>Bir akış tanımı  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Okuma ve dosyalara yazma desteklemek için akışlarını kullanır. Tek boyutlu bir başlangıç ve bitiş tarihi olan ve burada imleci akışında geçerli konumu gösterir bitişik veri kümesi olarak akışı düşünebilirsiniz.  
+## <a name="definition-of-a-stream"></a>Bir Stream tanımı  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Okuma ve dosyalara yazma desteklemek üzere akışları kullanır. Bir akışı, sahip olduğu bir başlangıç ve bitiş tarihi ve burada stream'de geçerli konum bir imleç gösterir bitişik veri tek boyutlu bir dizi olarak düşünebilirsiniz.  
   
- ![İmleç akışında geçerli konumu gösterir. ] (../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FILESTREAM")  
+ ![İmleç akışında geçerli konumunu gösterir. ] (../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FILESTREAM")  
   
-## <a name="stream-operations"></a>Akış işlemleri  
- Akış içinde bulunan verileri, bellek, bir dosya ya da bir TCP/IP'yi yuva gelebilir. Akışlar için uygulanabilir temel işlemler vardır:  
+## <a name="stream-operations"></a>Stream işlemleri  
+ İş akışında yer alan verileri, bellek, bir dosya ya da bir TCP/IP yuva gelebilir. Akışlar için uygulanabilir temel işlemler vardır:  
   
--   Okuma. Bir dize veya bir bayt dizisi gibi bir veri yapıda akıştan veri aktarırken bir akıştan okuyabilir.  
+-   Okuma. Bir akıştan bir dize veya bayt dizisi gibi bir veri yapısı içine bir akıştan veri aktarma okuyabilirsiniz.  
   
 -   **Yazma**. Akışa bir veri kaynağından veri aktarırken bir akışa yazabilirsiniz.  
   
--   **Aramayı**. Sorgulamak ve konumunuzu akışında değiştirin.  
+-   **Aramayı**. Sorgu ve akışta, konumu değiştirebilirsiniz.  
   
- Daha fazla bilgi için bkz: [oluşturma akışları](../../../../standard/io/composing-streams.md).  
+ Daha fazla bilgi için [oluşturma akışları](../../../../standard/io/composing-streams.md).  
   
-## <a name="types-of-streams"></a>Akışlar türleri  
- İçinde [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir akış tarafından temsil edilen <xref:System.IO.Stream> diğer tüm akışlar için Özet sınıf forms sınıfı. Doğrudan bir örneğini oluşturamaz <xref:System.IO.Stream> sınıfı, ancak bunu uygulayan sınıflar birini kullanmanız gerekir.  
+## <a name="types-of-streams"></a>Akış türleri  
+ İçinde [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir akış tarafından temsil edilen <xref:System.IO.Stream> diğer akışlar için soyut sınıf forms sınıfı. Bir örneğini doğrudan oluşturamazsınız <xref:System.IO.Stream> sınıfı, ancak bunu uygulayan sınıflardan birini kullanmanız gerekir.  
   
- Akışlar türlerde vardır, ancak dosya giriş/çıkış ile (g/ç) çalışma amacıyla, en önemli türleridir <xref:System.IO.FileStream> bir şekilde okuma ve dosyalara yazmasını sağlar, sınıf ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> dosyaları oluşturmak için bir yol sağlayan sınıfı ve yalıtılmış depolamada dizinleri. Dosya g/ç ile çalışırken, kullanılabilir diğer akışlar şunları içerir:  
+ Birçok tür akış vardır, ancak dosya giriş/çıkış ile (g/ç) çalışma amacıyla, en önemli türleri <xref:System.IO.FileStream> okuma ve dosyalara yazmak için bir yol sağlayan bir sınıf ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> dosyaları oluşturmak için bir yol sağlar sınıfını ve Yalıtılmış Depolama dizinleri. Dosya g/ç ile çalışırken kullanılabilir diğer akışlar şunlardır:  
   
 -   <xref:System.IO.BufferedStream>  
   
@@ -53,50 +53,50 @@ Sınıfları <xref:System.IO> ad alanı, sürücüler, dosyaları ve dizinleri i
   
 -   <xref:System.Net.Sockets.NetworkStream>.  
   
- Aşağıdaki tablo olan bir akış sık gerçekleştirilen görevleri listeler:  
+ Aşağıdaki tabloda stream ile yaygın olarak gerçekleştirilen görevlerdir listelenmektedir:  
   
 |Bitiş|Bkz. |
 |---|---|   
-|Okuma ve bir veri dosyasına yazma|[Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|İçin bir veri dosyasını okuma ve yazma|[Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Bir dosyadan metin okuma|[Nasıl yapılır: Dosyadan Metin Okuma](../../../../standard/io/how-to-read-text-from-a-file.md)|  
 |Bir dosyaya metin yazma|[Nasıl yapılır: Bir Dosyaya Metin Yazma](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|Bir dizeden karakterleri okuma|[Nasıl yapılır: Dizeden Karakterleri Okuma](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|Karakterleri dizeye yazma|[Nasıl yapılır: Bir Dizeye Karakter Yazma](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
-|Veri şifreleme|[Veri Şifreleme](../../../../standard/security/encrypting-data.md)|  
+|Dizeden karakterleri okuma|[Nasıl yapılır: Dizeden Karakterleri Okuma](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Bir dizeye karakter yazma|[Nasıl yapılır: Bir Dizeye Karakter Yazma](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Verileri şifrele|[Veri Şifreleme](../../../../standard/security/encrypting-data.md)|  
 |Verilerin şifresini|[Verilerin Şifresini Çözme](../../../../standard/security/decrypting-data.md)|  
   
-## <a name="file-access-and-attributes"></a>Dosya erişimi ve öznitelikleri  
- Nasıl dosyaları, açık olan paylaşılan oluşturulduğunu ve kontrol edebilirsiniz <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, ve <xref:System.IO.FileShare> oluşturucular tarafından kullanılan bayrak içeren numaralandırmalar <xref:System.IO.FileStream> sınıfı. Örneğin, açtığınızda veya yeni bir <xref:System.IO.FileStream>, <xref:System.IO.FileMode> numaralandırma, dosya ekleme için açılıp açılmayacağını dosyanın üzerine olup belirtilen dosya mevcut değilse yeni bir dosya oluşturulur olup olmadığını belirlemek için ve benzeri sağlar.  
+## <a name="file-access-and-attributes"></a>Dosya erişimi ve öznitelikler  
+ Nasıl dosyaları, açık olan paylaşılan oluşturulduğunu ve Denetim <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, ve <xref:System.IO.FileShare> Oluşturucuları tarafından kullanılan bayrak içeren sabit listeleri <xref:System.IO.FileStream> sınıfı. Örneğin, açtığınızda veya yeni bir <xref:System.IO.FileStream>, <xref:System.IO.FileMode> numaralandırma, dosya ekleme için açılıp açılmayacağını belirtilen dosya yoksa, dosyanın üzerine olmadığını yeni dosya oluşturulduğunda olup olmadığını belirlemek için ve benzeri sağlar.  
   
- <xref:System.IO.FileAttributes> Dosya özgü bilgileri toplanıyor etkinleştirir. <xref:System.IO.FileAttributes> Numaralandırma sıkıştırılmış şifrelenmiş, gizli, salt okunur olup, bir arşiv, bir dizin, bir sistem dosyası veya geçici bir dosya gibi dosyanın saklı öznitelikleri döndürür.  
+ <xref:System.IO.FileAttributes> Dosya özgü bilgileri toplamayı etkinleştirir. <xref:System.IO.FileAttributes> Sıkıştırılmış şifrelenmiş, gizli, salt okunur olup, bir arşiv, bir dizin, bir sistem dosyası veya geçici bir dosya gibi depolanan dosya özniteliklerini sabit listesi döndürür.  
   
- Aşağıdaki tabloda dosya erişimi ve dosya özniteliklerini içeren görevler listelenmektedir:  
+ Aşağıdaki tabloda dosya erişimi ile dosya öznitelikleri arasındaki görevleri listeler:  
   
 |Bitiş|Bkz. |  
 |---|---|
-|Açın ve bir günlük dosyasına metin ekleme|[Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Açın ve bir günlük dosyasına metin Ekle|[Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Bir dosyanın özniteliklerini belirleme|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dosya izinleri  
- İle dosya ve dizinleri erişimini denetleme yapılabilir <xref:System.Security.Permissions.FileIOPermission> sınıfı. Bu, bir parçası olarak oluşturulan ASPNET adlı özel bir yerel kullanıcı hesabı bağlamı içinde çalıştırılır varsayılan Web Forms ile çalışan geliştiriciler için özellikle önemlidir olabilir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yüklemeleri. Bu tür bir uygulama erişme isteğinde bulunduğunda bir kaynağa, ASPNET kullanıcı hesabı kullanıcının bir Web uygulamasından bir dosyaya yazmak gibi eylemleri gerçekleştirmesini engelleyebilir izinleri sınırlıdır. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.FileIOPermission>.  
+ İle dosyalara ve dizinlere erişimi denetleme yapılabilir <xref:System.Security.Permissions.FileIOPermission> sınıfı. Bu, varsayılan özel bir yerel kullanıcı hesabı bağlamında çalıştırma kapsamında oluşturulan ASPNET adlı Web Forms ile çalışan geliştiriciler için özellikle önemlidir olabilir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ve [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yüklemeleri. Bu tür bir uygulama isteklerini erişimi, bir kaynağa ASPNET kullanıcı hesabının izinlerini kullanıcı, bir Web uygulamasından bir dosyaya yazma gibi eylemleri gerçekleştirmesini önleyebilen sınırlıdır. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Yalıtılmış dosya depolama  
- Yalıtılmış Depolama burada kullanıcı veya kod gerekli izinlere sahip olmayabilir dosyaları ile çalışırken, oluşturulan sorunları çözmek için bir denemedir. Yalıtılmış Depolama her kullanıcıya bir veya daha fazla depoları tutabilen veri bölme atar. Depoları birbirinden derleme ve kullanıcı tarafından yalıtılmış olabilir. Yalnızca kullanıcı ve bir depo oluşturulduğuna derleme erişime sahiptir. Bir mağaza tam sanal dosya sistemi gibi davranan — bir deposu içinde oluşturabilir ve dizinleri ve dosyaları değiştirmek.  
+ Burada kullanıcı veya kod gerekli izinlere sahip olmayabilir dosyalarıyla çalışırken oluşturulan çözmekte girişimi yalıtılmış depolamadır. Yalıtılmış Depolama her kullanıcı bir veya daha fazla depoları tutabilen bir veri bölmesi atar. Depoları birbirinden kullanıcı ve derlemeye göre yalıtılmış olabilir. Yalnızca kullanıcı ve bir depo oluşturulduğuna derleme erişimi vardır. Bir depolama tam sanal dosya sistemi olarak görev yapar; bir depo içinde oluşturabilir ve dizinleri ve dosyaları işleme.  
   
- Aşağıdaki tabloda, yaygın olarak yalıtılmış file storage ile ilişkili görevleri listeler.  
+ Aşağıdaki tabloda, genellikle yalıtılmış dosya depolama ile ilişkili görevleri listeler.  
   
 |Bitiş|Bkz. |
 |---|---|  
-|Yalıtılmış depolama alanı oluşturun|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Yalıtılmış depoları listeleme|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Yalıtılmış depolamada Sil|[Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Bir yalıtılmış depolama oluşturma|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Yalıtılmış depoları numaralandırma|[Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Bir yalıtılmış depolama Sil|[Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
 |Yalıtılmış depolamada dosya veya dizin oluşturma|[Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
 |Yalıtılmış depolamada dosya bulma|[Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Okuma veya insolated depolama dosyasında yazma|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Bir dosya veya dizin yalıtılmış depolamada Sil|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|İnsolated depolama alanındaki bir dosyaya yazma veya okuma|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Bir dosya veya dizin yalıtılmış depolamadaki Sil|[Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Dosya olayları  
- <xref:System.IO.FileSystemWatcher> Bileşeni, dosyalar ve dizinler sisteminizde veya olan ağ erişimi herhangi bir bilgisayarda değişiklikleri izlemek sağlar. Örneğin, bir dosya değiştirilirse, bir kullanıcı değişiklik gerçekleştikten bir uyarı göndermek isteyebilirsiniz. Değişiklikler olduğunda, bir veya daha fazla olay gerçekleşti, arabellekte depolanan ve karmalayan <xref:System.IO.FileSystemWatcher> işleme için bileşen.  
+ <xref:System.IO.FileSystemWatcher> Bileşen dosya ve dizinleri sisteminize veya ağ erişimi için kullandığınız herhangi bir bilgisayarda yapılan değişiklikleri izlemek üzere sağlar. Örneğin, bir dosya değiştirildiğinde, bir kullanıcı değişiklik gerçekleştikten bir uyarı göndermek isteyebilirsiniz. Değişiklikler olduğunda, bir veya daha fazla olay gerçekleşti, bir arabellek depolanan ve için teslim <xref:System.IO.FileSystemWatcher> işleme için bileşen.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)  

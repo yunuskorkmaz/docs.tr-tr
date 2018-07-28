@@ -7,20 +7,20 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
 ms.openlocfilehash: 6ce05b956ebf9a544eb8c95165b0f709c694f334
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584624"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332941"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Kayıt Defterini Okuma ve Yazma (Visual Basic)
-Bu konuda, görev ve kayıt defteri ile ilişkili kavramsal konuları açıklanmaktadır.  
+Bu konuda, görev ve kayıt defteri ile ilişkili olan kavramsal konular açıklanmaktadır.  
   
- Visual Basic'te programlama, Visual Basic veya .NET Framework'ün kayıt defteri sınıflar tarafından sağlanan işlevleri yoluyla kayıt defterine erişim seçebilirsiniz. Kayıt defteri bilgileri işletim sisteminden bilgilerinin yanı sıra bir makinede barındırılan uygulamalardan barındırır. Kayıt defteri ile çalışma sistem kaynaklarına uygun erişime izin vererek güvenliği tehlikeye atabilir veya bilgi korumalı.  
+ Visual Basic'te programlama, Visual Basic veya .NET Framework'ün kayıt defteri sınıfları tarafından sağlanan işlevleri yoluyla kayıt defterine erişim seçebilirsiniz. Kayıt defteri konakların bilgilerini makinede barındırılan uygulamalardan bilgi yanı sıra işletim sistemi. Kayıt defteri ile çalışma, sistem kaynakları için uygun olmayan erişimine izin vererek güvenliği tehlikeye atabilir veya korumalı bilgileri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl Yapılır: Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- Nasıl kullanılacağını açıklar `CreateSubKey` ve `SetValue` yöntemlerinin `My.Computer.Registry` bir kayıt defteri anahtarı oluşturun ve değerini ayarlama için nesne.  
+ Nasıl kullanılacağını açıklar `CreateSubKey` ve `SetValue` yöntemlerinin `My.Computer.Registry` nesne bir kayıt defteri anahtarı oluşturma ve değerini ayarlayın.  
   
  [Nasıl Yapılır: Kayıt Defteri Anahtarından Değer Okuma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
  Nasıl kullanılacağını açıklar `GetValue` yöntemi `My.Computer.Registry` kayıt defteri anahtarından değer okuma için nesne.  
@@ -29,14 +29,14 @@ Bu konuda, görev ve kayıt defteri ile ilişkili kavramsal konuları açıklanm
  Nasıl kullanılacağını açıklar `DeleteSubKey` yöntemi `My.Computer.Registry.CurrentUser` özelliği bir kayıt defteri anahtarını silin.  
   
  [Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Nasıl kullanılacağını açıklar `Registry` ve `RegistryKey` sınıfları [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kayıt defterine erişemedi.  
+ Nasıl kullanılacağını açıklar `Registry` ve `RegistryKey` sınıfları [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kayıt defterine erişim.  
   
  [Güvenlik ve Kayıt Defteri](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- Kayıt defteriyle ilgili güvenlik konuları anlatılmaktadır.  
+ Kayıt defteriyle ilgili güvenlik sorunları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- Listeler ve üyeleri açıklar `My.Computer.Registry` nesnesi.  
+ Listeler ve üyelerini açıklar `My.Computer.Registry` nesne.  
   
  <xref:Microsoft.Win32.Registry>  
- Genel bir bakış sunar `Registry` tek tek anahtarları ve üyeleri bağlantılarıyla birlikte sınıfı.
+ Genel bir bakış sunan `Registry` bireysel anahtarları ve üyelerine bağlantılarıyla birlikte bir sınıf.
