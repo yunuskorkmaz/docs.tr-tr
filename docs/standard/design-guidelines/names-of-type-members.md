@@ -27,7 +27,7 @@ ms.locfileid: "33575355"
 ## <a name="names-of-methods"></a>Yöntemlerin adları  
  Yöntemleri eylemde toplanabilmesini olduğundan, tasarım yönergeleri yöntem adları fiilleri ya da tümcelere fiili olması gerekir. Bu kılavuz ayrıca aşağıdaki isim veya sıfat tümcecikleri olan özellik ve tür adları, yöntem adlarını ayırt etmek için hizmet verir.  
   
- **✓ YAPMAK** fiilleri ya da fiili tümcecikleri yöntemleri adlar verin.  
+ **✓ DO** fiilleri ya da fiili tümcecikleri yöntemleri adlar verin.  
   
 ```  
 public class String {  
@@ -40,20 +40,20 @@ public class String {
 ## <a name="names-of-properties"></a>Özelliklerin adları  
  Diğer üyeleri özellikleri isim ifade veya sıfat adları verilmelidir. Bir özellik verileri ifade eder ve özellik adını yansıtılan çünkü olmasıdır. PascalCasing her zaman özellik adları için kullanılır.  
   
- **✓ YAPMAK** adı bir isim, isim sözcük veya sıfat kullanarak özellikleri.  
+ **✓ DO** adı bir isim, isim sözcük veya sıfat kullanarak özellikleri.  
   
- **X yok** aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla aynı özelliklere sahiptir:  
+ **X DO NOT** aşağıdaki örnekte olduğu gibi "Get" yöntemlerinin adıyla aynı özelliklere sahiptir:  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
  Bu düzen, genellikle özelliği bir yöntem gerçekten gerektiğini gösterir.  
   
- **✓ YAPMAK** koleksiyon özellikleri ardından "List" veya "Koleksiyonu." tekil bir ifade kullanmak yerine koleksiyondaki öğeleri açıklayan çoğul tümcecik adı  
+ **✓ DO** koleksiyon özellikleri ardından "List" veya "Koleksiyonu." tekil bir ifade kullanmak yerine koleksiyondaki öğeleri açıklayan çoğul tümcecik adı  
   
- **✓ YAPMAK** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak ayrıca Boole özellikleri öneki "İçin"Olan,"" veya ", ancak yalnızca değer kazandıran burada sahip".  
+ **✓ DO** olumlu bir ifade ile Boole özellikleri adlandırın (`CanSeek` yerine `CantSeek`). İsteğe bağlı olarak ayrıca Boole özellikleri öneki "İçin"Olan,"" veya ", ancak yalnızca değer kazandıran burada sahip".  
   
- **✓ DÜŞÜNÜN** özellik türü olarak aynı adı vererek.  
+ **✓ CONSIDER** özellik türü olarak aynı adı vererek.  
   
  Örneğin, aşağıdaki özelliği doğru alır ve bir enum değeri ayarlar `Color`, özellik adlı `Color`:  
   
@@ -67,34 +67,34 @@ public class Control {
 ## <a name="names-of-events"></a>Olayların adları  
  Olayları için gerçekleşmesini olan bir ya da gerçekleşen bir bazı eylemler her zaman bakın. Bu nedenle, yöntemleriyle yönteminde olduğu gibi olayları fiiller ile adlandırılır ve fiili şimdiki zaman olayı zaman belirtmek için kullanılır.  
   
- **✓ YAPMAK** fiil veya fiili tümcecik olaylarla adı.  
+ **✓ DO** fiil veya fiili tümcecik olaylarlaA adı.  
   
  Örnekler `Clicked`, `Painting`, `DroppedDown`ve benzeri.  
   
- **✓ YAPMAK** mevcut ve geçmiş zamanlarını kullanarak önce ve sonra bir kavramı ile olayları adlar verin.  
+ **✓ DO** mevcut ve geçmiş zamanlarını kullanarak önce ve sonra bir kavramı ile olayları adlar verin.  
   
  Örneğin, bir pencere kapatılmadan hemen önce bir kapatma olayı adlı `Closing`, ve penceresi kapatıldıktan sonra başlatan bir çağrılabilir `Closed`.  
   
- **X yok** "Önce" veya "Sonra" ön ekleri veya öncesi belirtmek için postfixes ve sonrası olayları kullanın. Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.  
+ **X DO NOT** "Önce" veya "Sonra" ön ekleri veya öncesi belirtmek için postfixes ve sonrası olayları kullanın. Kullanımı mevcut ve geçmiş zamanlarını yalnızca tanımlandığı gibi.  
   
- **✓ YAPMAK** aşağıdaki örnekte gösterildiği gibi "EventHandler" soneki ile ad olay işleyicileri (temsilcileri olay türleri kullanılan):  
+ **✓ DO** aşağıdaki örnekte gösterildiği gibi "EventHandler" soneki ile ad olay işleyicileri (temsilcileri olay türleri kullanılan):  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ YAPMAK** adlı iki parametre kullanmak `sender` ve `e` olay işleyicileri.  
+ **✓ DO** adlı iki parametre kullanmak `sender` ve `e` olay işleyicileri.  
   
  Gönderen parametresi olayı tetikleyen nesne temsil eder. Gönderen parametresi genellikle türüdür `object`bile daha belirli bir tür kullanmak istemiyorsunuz mümkündür.  
   
- **✓ YAPMAK** "EventArgs" sonek bağımsız değişkeni sınıflarıyla olay adı.  
+ **✓ DO** "EventArgs" sonek bağımsız değişkeni sınıflarıyla olay adı.  
   
 ## <a name="names-of-fields"></a>Alanların adlarını  
  Statik genel ve korumalı alanlar için alan adlandırma yönergeleri uygulayın. İç ve özel alanları yönergeleri tarafından kapsanmayan ve ortak veya korumalı örnek alanları tarafından izin verilmez [üye tasarımı yönergeleri](../../../docs/standard/design-guidelines/member.md).  
   
- **✓ YAPMAK** PascalCasing alan adları kullanın.  
+ **✓ DO** PascalCasing alan adları kullanın.  
   
- **✓ YAPMAK** ad alanları bir isim, isim tümceciği veya sıfat kullanarak.  
+ **✓ DO** ad alanları bir isim, isim tümceciği veya sıfat kullanarak.  
   
- **X yok** alan adları için önek kullanın.  
+ **X DO NOT** alan adları için önek kullanın.  
   
  Örneğin, "g_" veya "kendisinin" statik alanları göstermek için kullanmayın.  
   
