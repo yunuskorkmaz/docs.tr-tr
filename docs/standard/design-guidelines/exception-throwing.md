@@ -21,15 +21,15 @@ Bu bölümde açıklanan özel durum atma yönergeleri yürütme hatası anlamı
   
  Çoğu geliştirici özel durumlar bölme gibi kullanım hatalar için sıfır ya da null başvurular kullanabileceğinizden hale getirildi. Framework'te özel durumları yürütme hatalar dahil olmak üzere tüm hata koşulları için kullanılır.  
   
- **X yok** hata kodlarını döndürür.  
+ **X DO NOT** hata kodlarını döndürür.  
   
  İstisnaları çerçeveleri hatalarını raporlama birincil anlamına gelir.  
   
- **✓ YAPMAK** rapor yürütme hataları özel durumları atma.  
+ **✓ DO** rapor yürütme hataları özel durumları atma.  
   
- **✓ DÜŞÜNÜN** çağırarak işlem sonlandırılıyor `System.Environment.FailFast` (.NET Framework 2.0 özelliği) kodunuzu daha fazla yürütme için güvenli olduğu bir durumla karşılaşırsa yerine bir özel durum atma.  
+ **✓ CONSIDER** çağırarak işlem sonlandırılıyor `System.Environment.FailFast` (.NET Framework 2.0 özelliği) kodunuzu daha fazla yürütme için güvenli olduğu bir durumla karşılaşırsa yerine bir özel durum atma.  
   
- **X yok** özel durumlar için normal akışı denetimi, mümkünse kullanın.  
+ **X DO NOT** özel durumlar için normal akışı denetimi, mümkünse kullanın.  
   
  Kullanıcıların özel durumlar oluşturmadığını kod yazabilirsiniz şekilde sistem hataları ve olası yarış durumlarını işlemleriyle dışında framework tasarımcıları API'leri tasarlamanız gerekir. Örneğin, kullanıcıların özel durumlar oluşturmadığını kod yazabilirsiniz şekilde üyesi çağırmadan önce önkoşulları kontrol etmenin bir yolu sağlayabilir.  
   
@@ -37,29 +37,29 @@ Bu bölümde açıklanan özel durum atma yönergeleri yürütme hatası anlamı
   
  Kabul edilebilir bir performansa Tester Doer düzeni olabilir, durumlar vardır. Böyle durumlarda, sözde deneyin ayrıştırma düzeni bulundurulması gerekir (bkz [özel durumları ve performans](../../../docs/standard/design-guidelines/exceptions-and-performance.md) daha fazla bilgi için).  
   
- **✓ DÜŞÜNÜN** özel durumları atma performans etkileri. Throw hızlarını saniyede 100 yukarıda büyük bir olasılıkla çoğu uygulamalarının performansını önemli ölçüde etkileyebilir.  
+ **✓ CONSIDER** özel durumları atma performans etkileri. Throw hızlarını saniyede 100 yukarıda büyük bir olasılıkla çoğu uygulamalarının performansını önemli ölçüde etkileyebilir.  
   
- **✓ YAPMAK** belge herkese açık şekilde çağrılabilir üyeleri tarafından bir üye ihlali nedeniyle oluşturulan tüm özel durumları Sözleşme (bir sistem hatası yerine) ve bunları sizin sözleşmesinin bir parçası davran.  
+ **✓ DO** belge herkese açık şekilde çağrılabilir üyeleri tarafından bir üye ihlali nedeniyle oluşturulan tüm özel durumları Sözleşme (bir sistem hatası yerine) ve bunları sizin sözleşmesinin bir parçası davran.  
   
  Sözleşmenin parçası olan özel durumlar değiştirme bir sürümünden sonraki (yani, özel durum türü değiştirme ve yeni özel durumlar eklenmemelidir).  
   
- **X yok** olması ya da throw veya yok edebilir Genel üyeler temel bazı seçeneği.  
+ **X DO NOT** olması ya da throw veya yok edebilir Genel üyeler temel bazı seçeneği.  
   
- **X yok** dönüş değeri olarak özel durumları döndüren Genel üyeler olması veya bir `out` parametresi.  
+ **X DO NOT** dönüş değeri olarak özel durumları döndüren Genel üyeler olması veya bir `out` parametresi.  
   
  Bunları atma yerine ortak API'ler özel durumlar döndürme birçok özel durum tabanlı hata raporlama avantajı defeats.  
   
- **✓ DÜŞÜNÜN** özel Oluşturucu yöntemleri kullanarak.  
+ **✓ CONSIDER** özel Oluşturucu yöntemleri kullanarak.  
   
  Farklı yerlerden aynı özel durum yaygındır. Kod oluşan şişirmeyi önlemek için özel durumlar oluşturma ve bunların özelliklerini başlatma yardımcı yöntemlerini kullanın.  
   
  Ayrıca, özel durumlar oluşturma üyeleri değil aldıklarından içermesinden. Throw deyimi oluşturucu içinde taşıma üye içermesinden olmasını sağlayabilir.  
   
- **X yok** özel durum filtresi taşlarından özel durumlar oluşturma.  
+ **X DO NOT** özel durum filtresi taşlarından özel durumlar oluşturma.  
   
  Bir özel durum filtresi bir özel durum oluşturur, CLR tarafından özel durum yakalandı ve filtre false döndürür. Bu davranış yürütme ve açıkça false değerinin döndürülmesi filtresinden ayırt ve bu nedenle hata ayıklamak çok zordur.  
   
- **KAÇININ x** açıkça finally blokları özel durumları atma. Throw yöntemleri çağırma sonucu oluşan örtük olarak atılmış özel durumları kabul edilir.  
+ **X AVOID** açıkça finally blokları özel durumları atma. Throw yöntemleri çağırma sonucu oluşan örtük olarak atılmış özel durumları kabul edilir.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

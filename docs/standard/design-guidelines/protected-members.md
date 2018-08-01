@@ -24,9 +24,9 @@ Korumalı üyeleri kendileri tarafından hiçbir genişletilebilirlik sağlamaz,
   
  Framework tasarımcıları "korumalı" adı yanlış bir fikir güvenlik verebilirsiniz çünkü korumalı üyeleriyle dikkatli olmanız gerekir. Herhangi bir alt korumasız bir sınıf ve Korumalı Erişim üyeleri için bulabildiği ve bu nedenle aynı genel üyeler için kullanılan savunma kodlama uygulamalarını korumalı üyeleri için geçerli.  
   
- **✓ DÜŞÜNÜN** kullanarak korumalı üyeler için Gelişmiş özelleştirme.  
+ **✓ CONSIDER** kullanarak korumalı üyeler için Gelişmiş özelleştirme.  
   
- **✓ YAPMAK** korumalı üyeleri korumasız sınıflarında güvenlik, belgelerine ve uyumluluk analiz amacıyla genel olarak ele alın.  
+ **✓ DO** korumalı üyeleri korumasız sınıflarında güvenlik, belgelerine ve uyumluluk analiz amacıyla genel olarak ele alın.  
   
  Herhangi bir sınıftan ve korumalı üyeleri erişebilirsiniz.  
   

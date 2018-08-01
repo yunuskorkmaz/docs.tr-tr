@@ -36,9 +36,9 @@ Her framework Tasarımcısı bakarken temel tasarım kararlarından biri bir tü
   
  Altın kural, bir çerçeve türlerinde çoğunluğu sınıfları olmalıdır. Bununla birlikte, içinde bir değer türü özelliklerini yapılar kullanmak daha uygun kolaylaştırır bazı durumlar vardır.  
   
- **✓ DÜŞÜNÜN** türünün örnekleri küçük ve yaygın olarak kısa süreli veya diğer nesneleri genellikle katıştırılmış yapı yerine bir sınıf tanımlama.  
+ **✓ CONSIDER** türünün örnekleri küçük ve yaygın olarak kısa süreli veya diğer nesneleri genellikle katıştırılmış yapı yerine bir sınıf tanımlama.  
   
- **KAÇININ x** türü tüm aşağıdaki özelliklere sahip olmadığı sürece yapı tanımlama:  
+ **X AVOID** türü tüm aşağıdaki özelliklere sahip olmadığı sürece yapı tanımlama:  
   
 -   Mantıksal olarak, ilkel türler için benzer tek bir değeri temsil eder (`int`, `double`vb..).  
   

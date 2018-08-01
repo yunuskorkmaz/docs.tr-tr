@@ -26,25 +26,25 @@ ms.locfileid: "33574640"
   
  Mutlaka öznitelik olduğunda uygulanır belirtilmesi gerekmez özellikleri isteğe bağlı özellikleri (veya isteğe bağlı bağımsız değişkenler) adı verilir. Bunlar ayarlanabilir özellikleri tarafından gösterilir. Derleyicileri bir öznitelik uygulandığında bu özellikleri ayarlamak için özel bir sözdizimi sağlar. Örneğin, <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> özelliği, isteğe bağlı bir bağımsız değişkeni temsil eder.  
   
- **✓ YAPMAK** "Özniteliği" soneki ile özel öznitelik sınıfları adı  
+ **✓ DO** "Özniteliği" soneki ile özel öznitelik sınıfları adı  
   
- **✓ YAPMAK** uygulamak <xref:System.AttributeUsageAttribute> özel öznitelikleri için.  
+ **✓ DO** uygulamak <xref:System.AttributeUsageAttribute> özel öznitelikleri için.  
   
- **✓ YAPMAK** isteğe bağlı bağımsız değişkeni için ayarlanabilir özellikler sağlar.  
+ **✓ DO** isteğe bağlı bağımsız değişkeni için ayarlanabilir özellikler sağlar.  
   
- **✓ YAPMAK** yalnızca get özellikler için gerekli bağımsız değişkenleri sağlayın.  
+ **✓ DO** yalnızca get özellikler için gerekli bağımsız değişkenleri sağlayın.  
   
- **✓ YAPMAK** gerekli bağımsız değişkenleri karşılık gelen özellikleri başlatmak için Oluşturucusu parametreleri sağlayın. Her bir parametreyi aynı adı karşılık gelen özelliği (ile farklı büyük/küçük harf rağmen) olmalıdır.  
+ **✓ DO** gerekli bağımsız değişkenleri karşılık gelen özellikleri başlatmak için Oluşturucusu parametreleri sağlayın. Her bir parametreyi aynı adı karşılık gelen özelliği (ile farklı büyük/küçük harf rağmen) olmalıdır.  
   
- **KAÇININ x** Oluşturucu parametreleri için isteğe bağlı bağımsız değişkenleri karşılık gelen özellikleri başlatmak için sağlama.  
+ **X AVOID** Oluşturucu parametreleri için isteğe bağlı bağımsız değişkenleri karşılık gelen özellikleri başlatmak için sağlama.  
   
  Diğer bir deyişle, hem bir oluşturucu hem de ayarlayıcı ile ayarlayabileceğiniz özellikleri yok. Bu kılavuz, hangi bağımsız değişkenler isteğe bağlıdır ve hangi gereklidir ve aynı işi yapmanın iki yolu belirlemeyi önler çok açık hale getirir.  
   
- **KAÇININ x** özel öznitelik oluşturucuların aşırı yüklemesi.  
+ **X AVOID** özel öznitelik oluşturucuların aşırı yüklemesi.  
   
  Açıkça sadece bir oluşturucuya sahip kullanıcıya hangi bağımsız değişkenler zorunludur ve isteğe bağlı olduğu iletişim kurar.  
   
- **✓ YAPMAK** özel öznitelik sınıfları, mümkünse korumaya. Bu öznitelik için araması hızlandırır.  
+ **✓ DO** özel öznitelik sınıfları, mümkünse korumaya. Bu öznitelik için araması hızlandırır.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

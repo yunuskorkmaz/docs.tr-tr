@@ -21,44 +21,44 @@ ms.locfileid: "33574601"
 Bu bölümde Framework ve bunların kullanım ayrıntılarını tarafından sağlanan standart özel durumlar açıklanmaktadır. Halinde kapsamlı listesidir. Lütfen .NET Framework başvuru diğer Framework özel durum türleri kullanım için belgelerine bakın.  
   
 ## <a name="exception-and-systemexception"></a>Özel durum ve SystemException  
- **X yok** throw <xref:System.Exception?displayProperty=nameWithType> veya <xref:System.SystemException?displayProperty=nameWithType>.  
+ **X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> veya <xref:System.SystemException?displayProperty=nameWithType>.  
   
- **X yok** catch `System.Exception` veya `System.SystemException` framework kodunda yeniden oluşturulması düşünmüyorsanız.  
+ **X DO NOT** catch `System.Exception` veya `System.SystemException` framework kodunda yeniden oluşturulması düşünmüyorsanız.  
   
- **KAÇININ x** yakalama `System.Exception` veya `System.SystemException`, üst düzey özel durum işleyicileri dışındaki.  
+ **X AVOID** yakalama `System.Exception` veya `System.SystemException`, üst düzey özel durum işleyicileri dışındaki.  
   
 ## <a name="applicationexception"></a>ApplicationException  
- **X yok** throw veya öğesinden türetilen <xref:System.ApplicationException>.  
+ **X DO NOT** throw veya öğesinden türetilen <xref:System.ApplicationException>.  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **✓ YAPMAK** throw bir <xref:System.InvalidOperationException> nesne uygunsuz bir durumda ise.  
+ **✓ DO** throw bir <xref:System.InvalidOperationException> nesne uygunsuz bir durumda ise.  
   
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException ve ArgumentOutOfRangeException  
- **✓ YAPMAK** throw <xref:System.ArgumentException> ya da hatalı değişkenler üye aktarılırsa, alt türlerinden birini. En çok türetilen özel durum türü varsa tercih eder.  
+ **✓ DO** throw <xref:System.ArgumentException> ya da hatalı değişkenler üye aktarılırsa, alt türlerinden birini. En çok türetilen özel durum türü varsa tercih eder.  
   
- **✓ YAPMAK** ayarlamak `ParamName` sınıfları birini atarken özelliği `ArgumentException`.  
+ **✓ DO** ayarlamak `ParamName` sınıfları birini atarken özelliği `ArgumentException`.  
   
  Bu özellik, özel durum oluşturulmasına neden parametre adını temsil eder. Özelliği Oluşturucusu aşırı birini kullanarak ayarlanabilir unutmayın.  
   
- **✓ YAPMAK** kullanmak `value` özellik ayarlayıcıları örtük değeri parametrenin adı.  
+ **✓ DO** kullanmak `value` özellik ayarlayıcıları örtük değeri parametrenin adı.  
   
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException ve AccessViolationException  
- **X yok** açıkça veya örtük throw herkese açık şekilde çağrılabilir izin vermek <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, veya <xref:System.IndexOutOfRangeException>. Bu özel durumlar ayrılmış ve yürütme altyapısı tarafından oluşturulur ve buna genellikle bir hata gösterir.  
+ **X DO NOT** açıkça veya örtük throw herkese açık şekilde çağrılabilir izin vermek <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, veya <xref:System.IndexOutOfRangeException>. Bu özel durumlar ayrılmış ve yürütme altyapısı tarafından oluşturulur ve buna genellikle bir hata gösterir.  
   
  Bu özel durumları atma önlemek için denetimi bağımsız değişkeni yapın. Bu özel durumları atma zaman içinde değişebilir yönteminizi uygulama ayrıntılarını gösterir.  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X yok** açıkça throw <xref:System.StackOverflowException>. Özel yalnızca CLR tarafından açıkça durum.  
+ **X DO NOT** açıkça throw <xref:System.StackOverflowException>. Özel yalnızca CLR tarafından açıkça durum.  
   
- **X yok** catch `StackOverflowException`.  
+ **X DO NOT** catch `StackOverflowException`.  
   
  Rastgele yığını taşmaları varlığında tutarlılığın yönetilen kod yazmaya neredeyse mümkün değildir. CLR yönetilmeyen bölümlerini araştırmalar yığını iyi tanımlanmış basamağa taşar taşımak için yerine kullanarak rasgele yığını taşmaları yedekleme tutarlı kalır.  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X yok** açıkça throw <xref:System.OutOfMemoryException>. Bu durum yalnızca CLR altyapısı tarafından oluşturulan olmaktır.  
+ **X DO NOT** açıkça throw <xref:System.OutOfMemoryException>. Bu durum yalnızca CLR altyapısı tarafından oluşturulan olmaktır.  
   
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, SEHException ve ExecutionEngineException  
- **X yok** açıkça throw <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, ve <xref:System.Runtime.InteropServices.SEHException>. Bu özel durumlar, yalnızca CLR altyapısı tarafından oluşturulan üzeresiniz.  
+ **X DO NOT** açıkça throw <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, ve <xref:System.Runtime.InteropServices.SEHException>. Bu özel durumlar, yalnızca CLR altyapısı tarafından oluşturulan üzeresiniz.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

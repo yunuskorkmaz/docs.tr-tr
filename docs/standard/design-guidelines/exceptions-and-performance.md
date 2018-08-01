@@ -21,7 +21,7 @@ ms.locfileid: "33575342"
 # <a name="exceptions-and-performance"></a>Özel durumları ve performans
 Özel durumlar için ilgili bir ortak özel durumlar için düzenli olarak başarısız kodu kullandıysanız, uygulama performansını kabul edilemez olduğunu konusudur. Bu geçerli bir konudur. Üye bir özel durum oluşturduğunda, kendi performansını büyüklük yavaş olabilir. Ancak, kesinlikle hata kodlarını kullanarak izin vermeyecek özel durum yönergelerine uymak sırasında iyi performans elde etmek mümkündür. Bu bölümde açıklanan iki desenleri Bunu yapmak için yöntemler önerir.  
   
- **X yok** özel durumlar performansı olumsuz etkileyebilir sorunları nedeniyle hata kodları kullanın.  
+ **X DO NOT** özel durumlar performansı olumsuz etkileyebilir sorunları nedeniyle hata kodları kullanın.  
   
  Performansı artırmak için Tester Doer desen veya deneyin ayrıştırma sonraki iki bölümde açıklanan düzeni kullanmak da mümkündür.  
   
@@ -45,7 +45,7 @@ if(!numbers.IsReadOnly){
   
  Özelliği, örneğimizde bir koşulu test etmek için kullanılan üye `IsReadOnly`, tester adlandırılır. Olası oluşturma işlemi gerçekleştirmek için kullanılan üye `Add` örneğimizde yöntemi doer adlandırılır.  
   
- **✓ DÜŞÜNÜN** Tester Doer düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
+ **✓ CONSIDER** Tester Doer düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
   
 ## <a name="try-parse-pattern"></a>Try-ayrıştırma düzeni  
  Son derece performans duyarlı API'ler, önceki bölümde açıklanan Tester Doer düzeni daha daha hızlı bir desen kullanılması gerekir. Üye semantiğini parçası durumda iyi tanımlanmış bir test yapmak için üye adı ayarlamak için desen çağırır. Örneğin, <xref:System.DateTime> tanımlayan bir <xref:System.DateTime.Parse%2A> yöntemi dizesi ayrıştırma başarısız olursa, bir özel durum oluşturur. Ayrıca bir karşılık gelen tanımlar <xref:System.DateTime.TryParse%2A> ayrıştırmak için çalışır yöntemi ancak yanlış döndürür ayrıştırma başarısız olur ve bir başarılı ayrıştırma kullanmanın sonucu döndürürse bir `out` parametresi.  
@@ -63,11 +63,11 @@ public struct DateTime {
   
  Bu deseni kullanılırken deneyin işlevselliği katı koşullarını tanımlamak önemlidir. Üye iyi tanımlanmış deneyin dışındaki herhangi bir nedenle başarısız olursa, üye karşılık gelen bir özel durum gerekir.  
   
- **✓ DÜŞÜNÜN** deneyin ayrıştırma düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
+ **✓ CONSIDER** deneyin ayrıştırma düzeni özel durumlar oluşturma üyeleri için özel durumlar ortak senaryolar performans sorunlarını önlemek için ilgili.  
   
- **✓ YAPMAK** bu düzeni uygulama yöntemleri için "Deneme" ve Boolean dönüş türü önekini kullanın.  
+ **✓ DO** bu düzeni uygulama yöntemleri için "Deneme" ve Boolean dönüş türü önekini kullanın.  
   
- **✓ YAPMAK** deneyin ayrıştırma desenini kullanarak her üyesi için bir özel durum atma üye sağlayın.  
+ **✓ DO** deneyin ayrıştırma desenini kullanarak her üyesi için bir özel durum atma üye sağlayın.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

@@ -21,29 +21,29 @@ ms.locfileid: "33571023"
 # <a name="equality-operators"></a>Eşitlik İşleçleri
 Bu bölümde tekrar yüklemesi eşitlik işleçleri açıklanır ve başvurduğu `operator==` ve `operator!=` eşitlik işleçleri olarak.  
   
- **X yok** eşitlik işleçleri ve diğer aşırı yükleme.  
+ **X DO NOT** eşitlik işleçleri ve diğer aşırı yükleme.  
   
- **✓ YAPMAK** emin <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiği ve benzer performans özellikleri vardır.  
+ **✓ DO** emin <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiği ve benzer performans özellikleri vardır.  
   
  Bu genellikle anlamına `Object.Equals` eşitlik işleçleri aşırı zaman geçersiz kılınacak gerekiyor.  
   
- **KAÇININ x** eşitlik işleçleri özel durumları atma.  
+ **X AVOID** eşitlik işleçleri özel durumları atma.  
   
  Örneğin, bağımsız değişkenlerden biri atma yerine null ise false döndürür `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Değer türleri üzerinde eşitlik işleçleri  
- **✓ YAPMAK** eşitlik anlamlı ise, değer türleri üzerinde eşitlik işleçleri aşırı yükleme.  
+ **✓ DO** eşitlik anlamlı ise, değer türleri üzerinde eşitlik işleçleri aşırı yükleme.  
   
  Çoğu programlama dillerinde hiçbir varsayılan uygulaması olduğundan `operator==` değer türleri için.  
   
 ## <a name="equality-operators-on-reference-types"></a>Başvuru türleri üzerinde eşitlik işleçleri  
- **KAÇININ x** kesilebilir başvuru türleri üzerinde eşitlik işleçleri aşırı yükleme.  
+ **X AVOID** kesilebilir başvuru türleri üzerinde eşitlik işleçleri aşırı yükleme.  
   
  Birçok dilin başvuru türleri için yerleşik eşitlik işleçleri vardır. Yerleşik genellikle başvuru eşitliği işleçler ve varsayılan davranışı için değer eşitliği değiştirildiğinde, geliştiricilerin çoğu Şaşkın.  
   
  Girişi çok referans eşitlik ve değer eşitliği arasındaki fark zorlaştıran çünkü bu sorunu değişmez başvuru türlerinde azalır.  
   
- **KAÇININ x** uygulama önemli ölçüde daha yavaş, başvuru eşitliği olacaksa başvuru türlerinde eşitlik işleçleri aşırı yükleme.  
+ **X AVOID** uygulama önemli ölçüde daha yavaş, başvuru eşitliği olacaksa başvuru türlerinde eşitlik işleçleri aşırı yükleme.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

@@ -30,50 +30,50 @@ Oluşturucular iki tür vardır: oluşturucular ve örnek oluşturucuları yazı
   
  Oluşturucular bir türün örneklerinin oluşturmak için en iyi yoludur. Çoğu geliştirici arayın ve örnekler (örneğin, Fabrika yöntemleri) oluşturma alternatif yolu düşünmeden önce bir oluşturucu kullanmayı deneyin.  
   
- **✓ DÜŞÜNÜN** sağlayan basit, ideal olarak varsayılan, Oluşturucular.  
+ **✓ CONSIDER** sağlayan basit, ideal olarak varsayılan, Oluşturucular.  
   
  Parametreler çok az sayıda basit bir oluşturucuya sahip ve tüm ilkel veya numaralandırmaları parametreleridir. Bu tür basit oluşturucular framework kullanılabilirliğini artırın.  
   
- **✓ DÜŞÜNÜN** statik Üreteç yöntemi yerine bir oluşturucu istenen işlemin semantiği doğrudan yapımı yeni bir örneğini eşleşmiyorsa ya da Oluşturucusu tasarım yönergeleri izleyerek doğal olmayan hissi kullanarak.  
+ **✓ CONSIDER** statik Üreteç yöntemi yerine bir oluşturucu istenen işlemin semantiği doğrudan yapımı yeni bir örneğini eşleşmiyorsa ya da Oluşturucusu tasarım yönergeleri izleyerek doğal olmayan hissi kullanarak.  
   
- **✓ YAPMAK** ana özelliklerini ayarlamak için kısayol olarak Oluşturucusu parametrelerini kullanın.  
+ **✓ DO** ana özelliklerini ayarlamak için kısayol olarak Oluşturucusu parametrelerini kullanın.  
   
  Semantiği fark olmalıdır bazı özellik kümeleri tarafından izlenen boş Oluşturucusu kullanma ve birden çok bağımsız değişkenlerle bir oluşturucu kullanma.  
   
- **✓ YAPMAK** Oluşturucu parametreleri yalnızca özelliğini ayarlamak için kullanılan Oluşturucu parametreleri ve bir özellik için aynı adı kullanın.  
+ **✓ DO** Oluşturucu parametreleri yalnızca özelliğini ayarlamak için kullanılan Oluşturucu parametreleri ve bir özellik için aynı adı kullanın.  
   
  Tür parametreleri ve özellikleri arasındaki tek fark büyük/küçük harfleri.  
   
- **✓ YAPMAK** Oluşturucusu en az iş.  
+ **✓ DO** Oluşturucusu en az iş.  
   
  Oluşturucular kadar iş yakalama dışında Oluşturucu parametreleri yapmanız gerekir. Başka bir işlem maliyetini gerekli kadar Gecikmeli.  
   
- **✓ YAPMAK** uygunsa örnek Oluşturucular, özel durumlar oluşturma.  
+ **✓ DO** uygunsa örnek Oluşturucular, özel durumlar oluşturma.  
   
- **✓ YAPMAK** böyle bir oluşturucu gerekliyse, sınıflar, bir ortak varsayılan oluşturucu açıkça bildirin.  
+ **✓ DO** böyle bir oluşturucu gerekliyse, sınıflar, bir ortak varsayılan oluşturucu açıkça bildirin.  
   
  Bir türde tüm oluşturucular açıkça bildirmeyin, birçok dilde (örneğin, C# ' ta) otomatik olarak ortak varsayılan bir oluşturucu ekleyin. (Soyut sınıflar korumalı Oluşturucu Al)  
   
  Parametreli oluşturucusu için sınıf ekleme derleyici varsayılan oluşturucu eklemesini engeller. Bu genellikle yanlışlıkla önemli değişiklikler neden olur.  
   
- **KAÇININ x** açıkça varsayılan oluşturucular üzerinde yapıları tanımlama.  
+ **X AVOID** açıkça varsayılan oluşturucular üzerinde yapıları tanımlama.  
   
  Varsayılan Oluşturucu tanımlanmazsa, bu dizinin her bir yuvada çalıştırılacak sahip olmadığından bu dizi oluşturma daha hızlı hale getirir. C# ' de dahil olmak üzere birçok derleyicileri, bu nedenle parametresiz kurucular yapılar izin verme unutmayın.  
   
- **KAÇININ x** kurucusu içinde bir nesne üzerinde sanal üyeler çağırma.  
+ **X AVOID** kurucusu içinde bir nesne üzerinde sanal üyeler çağırma.  
   
  En çok türetilen Tür oluşturucu tam henüz çalıştırılmadı olsa bile sanal üyesi çağırma çağrılacak, en çok türetilen override neden olur.  
   
 ### <a name="type-constructor-guidelines"></a>Türü kurucusunu yönergeleri  
- **✓ YAPMAK** statik oluşturucular özel yap.  
+ **✓ DO** statik oluşturucular özel yap.  
   
  Bir sınıf oluşturucu olarak da adlandırılan bir statik Oluşturucu türü başlatmak için kullanılır. CLR türünün ilk örneği oluşturulduğunda veya ilgili türdeki tüm statik üyeler denir önce statik Oluşturucusu çağırır. Kullanıcının statik Oluşturucusu ne zaman çağrıldığını üzerinde denetimi yoktur. Statik oluşturucu özel durumda değilse, CLR dışında bir kod tarafından çağrılabilir. Oluşturucuda gerçekleştirilen işlemler bağlı olarak bu beklenmeyen davranışlara neden olabilir. C# Derleyici statik oluşturucular özel olmasını zorlar.  
   
- **X yok** statik oluşturucular özel durumlar oluşturma.  
+ **X DO NOT** statik oluşturucular özel durumlar oluşturma.  
   
  Bir özel durum türü oluşturucudan oluşturulursa türü geçerli uygulama etki alanında kullanılabilir değil.  
   
- **✓ DÜŞÜNÜN** çalışma zamanı açıkça tanımlanmış bir statik oluşturucusu yok türleri performansını optimize etmek mümkün olduğundan statik oluşturucular açıkça kullanmak yerine statik alanları satır içi başlatılıyor.  
+ **✓ CONSIDER** çalışma zamanı açıkça tanımlanmış bir statik oluşturucusu yok türleri performansını optimize etmek mümkün olduğundan statik oluşturucular açıkça kullanmak yerine statik alanları satır içi başlatılıyor.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

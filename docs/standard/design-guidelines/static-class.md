@@ -24,15 +24,15 @@ Statik sınıf yalnızca statik üyeleri içeren bir sınıf olarak tanımlanır
   
  Saf nesne odaklı tasarım ve Basitlik arasında bir seçim statik sınıflarıdır. Bunlar genellikle diğer işlemleri kısayollar sağlamak için kullanılır (gibi <xref:System.IO.File?displayProperty=nameWithType>), uzantı yöntemleri ya da tam nesne yönelimli bir sarmalayıcı olduğu unwarranted işlevselliği sahiplerini (gibi <xref:System.Environment?displayProperty=nameWithType>).  
   
- **✓ YAPMAK** statik sınıflar tutumlu kullanın.  
+ **✓ DO** statik sınıflar tutumlu kullanın.  
   
  Statik sınıflar yalnızca framework nesne yönelimli çekirdek için destekleyici sınıflar olarak kullanılmalıdır.  
   
- **X yok** statik sınıflar çeşitli kova olarak ele alın.  
+ **X DO NOT** statik sınıflar çeşitli kova olarak ele alın.  
   
- **X yok** bildirme veya statik sınıflarda örnek üyeleri geçersiz kılın.  
+ **X DO NOT** bildirme veya statik sınıflarda örnek üyeleri geçersiz kılın.  
   
- **✓ YAPMAK** statik sınıflar bildirmeniz korumalı, soyut olarak ve programlama diliniz statik sınıflar için yerleşik destek yoksa özel örnek oluşturucu ekleyin.  
+ **✓ DO** statik sınıflar bildirmeniz korumalı, soyut olarak ve programlama diliniz statik sınıflar için yerleşik destek yoksa özel örnek oluşturucu ekleyin.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

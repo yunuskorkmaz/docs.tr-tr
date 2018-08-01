@@ -27,24 +27,24 @@ Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef y
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ YAPMAK** önek ad alanı adları ile aynı ada sahip öğesinden farklı şirketler ad alanlarını önlemek için bir şirket adı.  
+ **✓ DO** önek ad alanı adları ile aynı ada sahip öğesinden farklı şirketler ad alanlarını önlemek için bir şirket adı.  
   
- **✓ YAPMAK** ad alanı adı ikinci düzeyde kararlı ve sürüm bağımsız ürün adı kullanın.  
+ **✓ DO** ad alanı adı ikinci düzeyde kararlı ve sürüm bağımsız ürün adı kullanın.  
   
- **X yok** grup adlarını kuruluşlar içinde kısa süreli olma eğilimindedir için kuruluş hiyerarşileri temel olarak ad alanı hiyerarşileri adları kullanın. İlgili teknolojiler grupları geçici ad alanları hiyerarşisi düzenleyin.  
+ **X DO NOT** grup adlarını kuruluşlar içinde kısa süreli olma eğilimindedir için kuruluş hiyerarşileri temel olarak ad alanı hiyerarşileri adları kullanın. İlgili teknolojiler grupları geçici ad alanları hiyerarşisi düzenleyin.  
   
- **✓ YAPMAK** PascalCasing ve ayrı ad alanı bileşenler süreleriyle kullanır (örn., `Microsoft.Office.PowerPoint`). Marka nontraditional büyük/küçük harf içeriyorsa, gelen normal ad büyük/küçük harf farklılık göstermesi olsa bile, marka tarafından tanımlanan büyük küçük harf izlemelisiniz.  
+ **✓ DO** PascalCasing ve ayrı ad alanı bileşenler süreleriyle kullanır (örn., `Microsoft.Office.PowerPoint`). Marka nontraditional büyük/küçük harf içeriyorsa, gelen normal ad büyük/küçük harf farklılık göstermesi olsa bile, marka tarafından tanımlanan büyük küçük harf izlemelisiniz.  
   
- **✓ DÜŞÜNÜN** uygun olan yerlerde çoğul ad alanı adlarını kullanarak.  
+ **✓ CONSIDER** uygun olan yerlerde çoğul ad alanı adlarını kullanarak.  
   
  Örneğin, `System.Collections` yerine `System.Collection`. Marka adlar ve kısaltmalar bu kuralın ancak durumlardır. Örneğin, `System.IO` yerine `System.IOs`.  
   
- **X yok** bu ad alanında bir ad alanı ve türü için aynı adı kullanın.  
+ **X DO NOT** bu ad alanında bir ad alanı ve türü için aynı adı kullanın.  
   
  Örneğin, kullanmayın `Debug` bir ad alanı olarak adlandırın ve ayrıca adlı bir sınıf sağlayın `Debug` aynı ad alanında. Birkaç derleyicileri gibi türler tam olmasını gerektirir.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Ad alanları ve türü ad çakışmaları  
- **X yok** genel tür adları gibi tanıtmak `Element`, `Node`, `Log`, ve `Message`.  
+ **X DO NOT** genel tür adları gibi tanıtmak `Element`, `Node`, `Log`, ve `Message`.  
   
  Adı yazmaya yol açacaktır böylece ortak senaryolar çakışmaları çok büyük bir olasılıkla yoktur. Genel tür adları nitelemeniz (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
@@ -57,7 +57,7 @@ Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef y
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X yok** tek bir uygulama modeli içindeki ad alanlarında türleri için aynı adı verin.  
+     **X DO NOT** tek bir uygulama modeli içindeki ad alanlarında türleri için aynı adı verin.  
   
      Örneğin, adlı tür eklemeyin `Page` için <xref:System.Web.UI.Adapters?displayProperty=nameWithType> ad alanı, çünkü <xref:System.Web.UI?displayProperty=nameWithType> ad alanı zaten var. adlı tür `Page`.  
   
@@ -69,7 +69,7 @@ Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef y
   
      Çekirdek ad alanlarını dahil tüm `System` ad alanları, bir uygulama modelini ad alanları ve altyapı ad alanlarını hariç. Çekirdek ad alanlarını dahil, başka şeylerin yanı sıra `System`, `System.IO`, `System.Xml`, ve `System.Net`.  
   
-     **X yok** verin çekirdek ad alanlarında herhangi bir türü ile çakışan adları türleri.  
+     **X DO NOT** verin çekirdek ad alanlarında herhangi bir türü ile çakışan adları türleri.  
   
      Örneğin, hiçbir zaman kullanmayın `Stream` bir tür adı olarak. İle çakışabilir <xref:System.IO.Stream?displayProperty=nameWithType>, bir çok kullanılan türü.  
   
@@ -77,9 +77,9 @@ Olarak diğer adlandırma kuralları ile ad alanlarını adlandırırken hedef y
   
      Bu kategorideki tüm ad alanlarını aynı ilk iki ad alanı düğümlerle içeren `(<Company>.<Technology>*`), aşağıdaki gibi `Microsoft.Build.Utilities` ve `Microsoft.Build.Tasks`. Tek bir teknoloji ait türleri birbirleri ile çakışmadığını önemlidir.  
   
-     **X yok** tek bir teknoloji içindeki diğer türleriyle çakışabilir tür adları atayın.  
+     **X DO NOT** tek bir teknoloji içindeki diğer türleriyle çakışabilir tür adları atayın.  
   
-     **X yok** (teknoloji uygulama modeli ile kullanılmak üzere tasarlanmamıştır sürece) teknolojisi ad alanlarında türleri ve bir uygulama model ad arasındaki ad çakışmalarının türü tanıtır.  
+     **X DO NOT** (teknoloji uygulama modeli ile kullanılmak üzere tasarlanmamıştır sürece) teknolojisi ad alanlarında türleri ve bir uygulama model ad arasındaki ad çakışmalarının türü tanıtır.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

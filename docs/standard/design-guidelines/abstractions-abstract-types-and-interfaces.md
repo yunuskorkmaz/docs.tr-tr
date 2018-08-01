@@ -28,11 +28,11 @@ Bir Özet bir sözleşme açıklar ancak sözleşme tam uygulamasını sağlamaz
   
  Ancak, diğer genişletilebilirlik mekanizmaları genellikle eşleşemez son derece güçlü genişletilebilirlik soyutlamalar sağlar. Eklentileri gibi birçok mimari düzenleri çekirdek tersine çevirme (IOC) denetim, ardışık düzen ve benzeri altındadır. Ayrıca çerçeveleri edilebilirliğini için son derece önemlidir. İyi soyutlamalar birim testi amacıyla ağır bağımlılıkları çıkışı saplama olanaklı hale getirir. Özet olarak, soyutlamalar modern nesne yönelimli çerçeveleri sought-after zenginliğini için sorumludur.  
   
- **X yok** birkaç somut uygulamaları ve soyutlama kullanan API'ler geliştirerek sınanır sürece soyutlamalar sağlar.  
+ **X DO NOT** birkaç somut uygulamaları ve soyutlama kullanan API'ler geliştirerek sınanır sürece soyutlamalar sağlar.  
   
- **✓ YAPMAK** bir Özet tasarlarken, bir Özet sınıf arasında bir arabirim dikkatle seçin.  
+ **✓ DO** bir Özet tasarlarken, bir Özet sınıf arasında bir arabirim dikkatle seçin.  
   
- **✓ DÜŞÜNÜN** başvuru testleri soyutlamalar somut uygulamaları için sağlama. Bu tür testleri, kullanıcıların kendi uygulamalarını doğru sözleşmesini uygulama olup olmadığını sınamak izin vermelidir.  
+ **✓ CONSIDER** başvuru testleri soyutlamalar somut uygulamaları için sağlama. Bu tür testleri, kullanıcıların kendi uygulamalarını doğru sözleşmesini uygulama olup olmadığını sınamak izin vermelidir.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

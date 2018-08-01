@@ -24,11 +24,11 @@ Kesinlikle olarak bakıldığında, başka bir sınıf ondan türetilmiş bir s�
   
  Daha önce ele alındığı temel sınıflar soyutlamalar uygulamak için gereken kullanıcılar için çok değerli bir kaynak Yardım sağlayabilir, ancak aynı anda önemli bir yükümlülük olabilirler. Bunlar yüzey alanını ekleyin ve devralma hiyerarşileri derinliğini artırın ve böylece kavramsal framework zorlaştırabilir. Bu nedenle, yalnızca bunlar framework kullanıcılara önemli değer'ı belirtirseniz temel sınıflar kullanılmalıdır. Değer, taban sınıfından devralma yerine iç uygulaması için büyük/küçük harfe temsilci kesinlikle düşünülmesi gereken framework'ün Implementers belirtirseniz bunlar kaçınılmalıdır.  
   
- **✓ DÜŞÜNÜN** yapmayı temel, Özet üye içermeyen olsa bile soyut sınıflar. Bu kullanıcılar için açık bir şekilde iletişim kurar, sınıfı yalnızca devralınan için tasarlanmıştır.  
+ **✓ CONSIDER** yapmayı temel, Özet üye içermeyen olsa bile soyut sınıflar. Bu kullanıcılar için açık bir şekilde iletişim kurar, sınıfı yalnızca devralınan için tasarlanmıştır.  
   
- **✓ DÜŞÜNÜN** mainline senaryo türlerinden ayrı bir ad alanı taban sınıfları yerleştirmekten. Tanımı, temel sınıflar gelişmiş Genişletilebilirlik senaryoları için tasarlanmıştır ve bu nedenle kullanıcıların çoğunluğunun ilginç değildir.  
+ **✓ CONSIDER** mainline senaryo türlerinden ayrı bir ad alanı taban sınıfları yerleştirmekten. Tanımı, temel sınıflar gelişmiş Genişletilebilirlik senaryoları için tasarlanmıştır ve bu nedenle kullanıcıların çoğunluğunun ilginç değildir.  
   
- **KAÇININ x** sınıfı için ortak API'ler kullanımda amaçlanıyorsa bir "Temel" soneki temel sınıflarının adlandırma.  
+ **X AVOID** sınıfı için ortak API'ler kullanımda amaçlanıyorsa bir "Temel" soneki temel sınıflarının adlandırma.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

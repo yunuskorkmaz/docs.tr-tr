@@ -21,15 +21,15 @@ ms.locfileid: "33571192"
 # <a name="naming-resources"></a>Adlandırma kaynakları
 Yerelleştirilebilir kaynaklar özellikleri değilmiş gibi belirli nesneleri başvurulabilir olduğundan kaynaklar için adlandırma kuralları özellik Kılavuzu benzerdir.  
   
- **✓ YAPMAK** PascalCasing kaynak tuşlarını kullanın.  
+ **✓ DO** PascalCasing kaynak tuşlarını kullanın.  
   
- **✓ YAPMAK** yerine kısa tanımlayıcıları açıklayıcı sağlayın.  
+ **✓ DO** yerine kısa tanımlayıcıları açıklayıcı sağlayın.  
   
- **X yok** ana CLR dillerin dile özgü anahtar sözcükler kullanın.  
+ **X DO NOT** ana CLR dillerin dile özgü anahtar sözcükler kullanın.  
   
- **✓ YAPMAK** yalnızca alfasayısal karakterler ve kaynakları adlandırma, alt çizgiler kullanın.  
+ **✓ DO** yalnızca alfasayısal karakterler ve kaynakları adlandırma, alt çizgiler kullanın.  
   
- **✓ YAPMAK** özel durum iletisi kaynaklar için aşağıdaki adlandırma kuralını kullanın.  
+ **✓ DO** özel durum iletisi kaynaklar için aşağıdaki adlandırma kuralını kullanın.  
   
  Kaynak tanımlayıcısı, özel durum türü adına ve özel durumun kısa bir tanımlayıcı olmalıdır:  
   

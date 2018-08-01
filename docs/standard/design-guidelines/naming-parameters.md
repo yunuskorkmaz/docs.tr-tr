@@ -18,20 +18,20 @@ ms.locfileid: "33570493"
 # <a name="naming-parameters"></a>Adlandırma parametreleri
 Okunabilirlik belirgin nedenini görsel Tasarım araçları IntelliSense ve işlevsellik gözatma sınıfı sağladığınızda parametreleri belgelerinde ve Tasarımcısı'nda görüntülendiğinden yönergelere parametre adları için önemlidir.  
   
- **✓ YAPMAK** camelCasing parametre adları kullanın.  
+ **✓ DO** camelCasing parametre adları kullanın.  
   
- **✓ YAPMAK** açıklayıcı parametre adları kullanın.  
+ **✓ DO** açıklayıcı parametre adları kullanın.  
   
- **✓ DÜŞÜNÜN** parametrenin türü yerine bir parametrenin anlamı dayalı adları kullanarak.  
+ **✓ CONSIDER** parametrenin türü yerine bir parametrenin anlamı dayalı adları kullanarak.  
   
 ### <a name="naming-operator-overload-parameters"></a>İşleç aşırı yüklemesi parametreleri adlandırma  
- **✓ YAPMAK** kullanmak `left` ve `right` parametreleri için hiçbir anlamı ise ikili İşleç aşırı yüklemesi parametre adları için.  
+ **✓ DO** kullanmak `left` ve `right` parametreleri için hiçbir anlamı ise ikili İşleç aşırı yüklemesi parametre adları için.  
   
- **✓ YAPMAK** kullanmak `value` için birli işleç aşırı yüklemesi parametre adları parametreleri için hiçbir anlamı ise.  
+ **✓ DO** kullanmak `value` için birli işleç aşırı yüklemesi parametre adları parametreleri için hiçbir anlamı ise.  
   
- **✓ DÜŞÜNÜN** anlamlı adlar işleci aşırı yükleme parametreleri bunun nedenle önemli değer eklerse.  
+ **✓ CONSIDER** anlamlı adlar işleci aşırı yükleme parametreleri bunun nedenle önemli değer eklerse.  
   
- **X yok** kullanım kısaltmalar veya sayısal dizinlerini işleci için aşırı yükleme parametre adları.  
+ **X DO NOT** kullanım kısaltmalar veya sayısal dizinlerini işleci için aşırı yükleme parametre adları.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

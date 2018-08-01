@@ -43,9 +43,9 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
  `ioStream`  
  `htmlTag`  
   
- **✓ YAPMAK** PascalCasing birden çok sözcüklük oluşan tüm ortak üye, türü ve ad alanı adları için kullanın.  
+ **✓ DO** PascalCasing birden çok sözcüklük oluşan tüm ortak üye, türü ve ad alanı adları için kullanın.  
   
- **✓ YAPMAK** camelCasing parametre adları için kullanın.  
+ **✓ DO** camelCasing parametre adları için kullanın.  
   
  Aşağıdaki tabloda, farklı türlerdeki tanımlayıcıları için büyük/küçük harf kurallar açıklanmaktadır.  
   
@@ -64,7 +64,7 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Bileşik sözcüklerin ve Ortak terimleri büyük harfe dönüştürme  
  Çoğu bileşik koşulları büyük/küçük harf amaçları için tek sözcük olarak kabul edilir.  
   
- **X yok** sözde kapalı form bileşik sözcüklerin her sözcüğün büyük harfe çevirme.  
+ **X DO NOT** sözde kapalı form bileşik sözcüklerin her sözcüğün büyük harfe çevirme.  
   
  Bu uç nokta gibi tek bir sözcük olarak yazılmış bileşik sözcüklerdir. Büyük/küçük harf yönergeleri amacıyla kapalı form bileşik word tek bir sözcük kabul eder. Geçerli bir sözlük, bileşik bir sözcük kapalı formunda yazılırsa belirlemek için kullanın.  
   
@@ -99,7 +99,7 @@ Bu bölüm yerleşim kullanmak için basit bir yöntem çıkışı yönergeleri,
 ## <a name="case-sensitivity"></a>Büyük/küçük harfe duyarlılık  
  Bazı yapmak rağmen üzerinde CLR çalıştırabilirsiniz dilleri büyük küçük harf duyarlılığı, desteklemek için gereken değil. Dilinizi desteklediği olsa bile, framework erişebilir diğer diller yoktur. Harici olarak erişilebilir olan tüm API'ları bu nedenle, tek başına aynı bağlamda iki ad arasında ayrım yapmak için durumu güvenir olamaz.  
   
- **X yok** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Bunlar değildir. Adları örneği tarafından tek başına farklı olamaz.  
+ **X DO NOT** tüm programlama dilleriyle büyük küçük harfe duyarlı olduğunu varsayar. Bunlar değildir. Adları örneği tarafından tek başına farklı olamaz.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

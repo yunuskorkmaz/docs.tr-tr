@@ -23,23 +23,23 @@ ms.locfileid: "33572742"
 # <a name="struct-design"></a>Yapı tasarım
 Genel amaçlı değer türü, genellikle kendi C# anahtar sözcüğü bir yapı da adlandırılır. Bu bölüm için genel yapısı tasarım yönergeleri sağlar.  
   
- **X yok** yapısı için varsayılan bir oluşturucu sağlayın.  
+ **X DO NOT** yapısı için varsayılan bir oluşturucu sağlayın.  
   
  Bu kılavuz aşağıdaki Oluşturucusu dizinin her bir öğede çalıştırmak zorunda kalmadan oluşturulacak yapılar dizileri sağlar. C# varsayılan oluşturucular olmasını yapılar izin vermediğini unutmayın.  
   
- **X yok** değişmez değer türleri tanımlayın.  
+ **X DO NOT** değişmez değer türleri tanımlayın.  
   
  Değişmez değer türleri bazı sorunlar vardır. Örneğin, bir özellik Get yordamı bir değer türü geri döndüğünde, çağıran bir kopyasını alır. Kopya örtük olarak oluşturulduğundan, geliştiriciler, kopyalama ve özgün değeri diziyi, uyumlu olmayabilir. Ayrıca, bazı dillerde (özellikle dinamik dilleri) yerel değişkenler başvuru yapıldı olduğunda bile, yapılacak bir kopyasını neden olduğundan değişmez değer türleri kullanarak sorunları vardır.  
   
- **✓ YAPMAK** veri tüm örnek olduğu bir duruma sıfıra ayarlanır ve yanlış veya boş (hangisi uygunsa) geçerli olduğundan emin.  
+ **✓ DO** veri tüm örnek olduğu bir duruma sıfıra ayarlanır ve yanlış veya boş (hangisi uygunsa) geçerli olduğundan emin.  
   
  Yapılar dizisi oluşturulduğunda, bu geçersiz örnekleri yanlışlıkla oluşturulmasını engeller.  
   
- **✓ YAPMAK** uygulamak <xref:System.IEquatable%601> değer türleri üzerinde.  
+ **✓ DO** uygulamak <xref:System.IEquatable%601> değer türleri üzerinde.  
   
  <xref:System.Object.Equals%2A?displayProperty=nameWithType> Değer türleri üzerinde yöntemi kutulama neden olur ve yansıma kullandığından, varsayılan uygulama çok verimli değil. <xref:System.IEquatable%601.Equals%2A> çok daha iyi performans sağlayabilirsiniz ve böylece kutulama açmayacağını uygulanabilir.  
   
- **X yok** açıkça genişletmek <xref:System.ValueType>. Aslında, çoğu dilleri bu engeller.  
+ **X DO NOT** açıkça genişletmek <xref:System.ValueType>. Aslında, çoğu dilleri bu engeller.  
   
  Genel olarak, yapılar çok kullanışlı olabilir ancak yalnızca sık Kutulu olmayan küçük, tek, değişmez değerler kullanılmalıdır.  
   

@@ -22,25 +22,25 @@ ms.locfileid: "33579320"
   
  İzin verilen ve bazı durumlarda yararlı olsa da, işlecin dikkatli kullanılmalıdır. Hangi İşleç aşırı yüklemesi, framework tasarımcıları işleçleri basit yöntemleri olmalıdır işlemleri için kullanılacak başladığında gibi kötüye birçok durumlar vardır. Aşağıdaki yönergeler ne zaman ve nasıl İşleç aşırı yüklemesi kullanma karar vermenize yardımcı olmalıdır.  
   
- **KAÇININ x** gibi (yerleşik) ilkel türlerinde geliyor olmalıdır türlerinde dışında işleci aşırı tanımlama.  
+ **X AVOID** gibi (yerleşik) ilkel türlerinde geliyor olmalıdır türlerinde dışında işleci aşırı tanımlama.  
   
- **✓ DÜŞÜNÜN** gibi basit tür geliyor olmalıdır bir türdeki işlecin tanımlama.  
+ **✓ CONSIDER** gibi basit tür geliyor olmalıdır bir türdeki işlecin tanımlama.  
   
  Örneğin, <xref:System.String?displayProperty=nameWithType> sahip `operator==` ve `operator!=` tanımlanmış.  
   
- **✓ YAPMAK** numaralarını temsil eden yapılar için işleç aşırı yüklemeleri tanımlayın (gibi <xref:System.Decimal?displayProperty=nameWithType>).  
+ **✓ DO** numaralarını temsil eden yapılar için işleç aşırı yüklemeleri tanımlayın (gibi <xref:System.Decimal?displayProperty=nameWithType>).  
   
- **X yok** işlecin tanımlarken şirin olabilir.  
+ **X DO NOT** işlecin tanımlarken şirin olabilir.  
   
  İşleç aşırı yüklemesi işlemin sonucunu ne olacağını hemen göze olduğu durumlarda faydalıdır. Örneğin, bir çıkarma yapabilmek için mantıklıdır <xref:System.DateTime> başka bir `DateTime` ve bir <xref:System.TimeSpan>. Ancak, mantıksal birleşim işlecini bileşim iki veritabanı sorgularını kullanın ya da bir akışa yazmak üzere kaydırma işleci kullanmak için uygun değil.  
   
- **X yok** işleci aşırı yüklemeler işlenen en az biri aşırı tanımlama türü olmadıkça sağlayın.  
+ **X DO NOT** işleci aşırı yüklemeler işlenen en az biri aşırı tanımlama türü olmadıkça sağlayın.  
   
- **✓ YAPMAK** bir simetrik şekilde işleçleri aşırı yükleme.  
+ **✓ DO** bir simetrik şekilde işleçleri aşırı yükleme.  
   
  Örneğin, aşırı yükleme `operator==`, ayrıca aşırı `operator!=`. Benzer şekilde, aşırı yükleme varsa `operator<`, ayrıca aşırı `operator>`ve benzeri.  
   
- **✓ DÜŞÜNÜN** yöntemleri karşılık gelen kolay adlarla her aşırı yüklenmiş işleç sağlama.  
+ **✓ CONSIDER** yöntemleri karşılık gelen kolay adlarla her aşırı yüklenmiş işleç sağlama.  
   
  İşleç aşırı yüklemesi birçok dil desteklemez. Bu nedenle, işleçleri aşırı yükleme türleri ikincil bir yöntem uygun bir etki alanına özgü adıyla eşdeğer işlevsellik sağlayan olmaması önerilir.  
   
@@ -93,21 +93,21 @@ ms.locfileid: "33579320"
 ### <a name="conversion-operators"></a>Dönüşüm İşleçleri  
  Dönüştürme işleçleri bir türden diğerine dönüştürme izin birli işleçler şunlardır. İşleçler statik üyeler işlenen ya da dönüş türü olarak tanımlanmış olması gerekir. Dönüştürme işleçleri iki tür vardır: örtük ve açık.  
   
- **X yok** tür dönüştürme son kullanıcılar tarafından açıkça görülmüyorsa bir dönüşüm işleci sağlayın.  
+ **X DO NOT** tür dönüştürme son kullanıcılar tarafından açıkça görülmüyorsa bir dönüşüm işleci sağlayın.  
   
- **X yok** dönüşüm işleçleri dışında bir tür etki alanını tanımlayın.  
+ **X DO NOT** dönüşüm işleçleri dışında bir tür etki alanını tanımlayın.  
   
  Örneğin, <xref:System.Int32>, <xref:System.Double>, ve <xref:System.Decimal> tüm sayısal ancak türleridir <xref:System.DateTime> değil. Bu nedenle, olmamalıdır dönüştürmek için hiçbir dönüştürme işleci bir `Double(long)` için bir `DateTime`. Bir oluşturucu, böyle bir durumda tercih edilir.  
   
- **X yok** dönüştürme olası kayıplı ise bir örtük dönüşüm işleci sağlayın.  
+ **X DO NOT** dönüştürme olası kayıplı ise bir örtük dönüşüm işleci sağlayın.  
   
  Örneğin, olmamalıdır örtük bir dönüştürme `Double` için `Int32` çünkü `Double` daha geniş bir sahip `Int32`. Dönüştürme olası kayıplı olsa bile bir açık dönüşüm işleci sağlanabilir.  
   
- **X yok** örtük atamaları özel durumlar atar.  
+ **X DO NOT** örtük atamaları özel durumlar atar.  
   
  Neler olduğunu, bunların dönüştürme yer aldığı kullanan olmayabileceğinden anlamak son kullanıcılar için çok zor olabilir.  
   
- **✓ YAPMAK** throw <xref:System.InvalidCastException?displayProperty=nameWithType> atama işleci için bir çağrı sonuçları kayıplı dönüştürmede ve sözleşmenin işlecinin kayıplı dönüşümleri izin vermez.  
+ **✓ DO** throw <xref:System.InvalidCastException?displayProperty=nameWithType> atama işleci için bir çağrı sonuçları kayıplı dönüştürmede ve sözleşmenin işlecinin kayıplı dönüşümleri izin vermez.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

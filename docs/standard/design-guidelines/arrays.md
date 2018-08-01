@@ -17,11 +17,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570413"
 ---
 # <a name="arrays"></a>Diziler
-**✓ YAPMAK** ortak API'ler dizilerde üzerinden koleksiyonları kullanmayı tercih. [Koleksiyonları](../../../docs/standard/design-guidelines/guidelines-for-collections.md) bölüm koleksiyonları ve diziler arasında seçim yapma hakkında ayrıntılı bilgi sağlar.  
+**✓ DO** ortak API'ler dizilerde üzerinden koleksiyonları kullanmayı tercih. [Koleksiyonları](../../../docs/standard/design-guidelines/guidelines-for-collections.md) bölüm koleksiyonları ve diziler arasında seçim yapma hakkında ayrıntılı bilgi sağlar.  
   
- **X yok** salt okunur dizi alanları kullanın. Alan salt okunurdur ve değiştirilemez, ancak dizideki öğeler değiştirilebilir.  
+ **X DO NOT** salt okunur dizi alanları kullanın. Alan salt okunurdur ve değiştirilemez, ancak dizideki öğeler değiştirilebilir.  
   
- **✓ DÜŞÜNÜN** basit dizileri çok boyutlu diziler yerine kullanma.  
+ **✓ CONSIDER** basit dizileri çok boyutlu diziler yerine kullanma.  
   
  Basit dizi de diziler öğeleri ile bir dizidir. Öğeleri olun dizileri çok boyutlu diziler kıyasla daha az harcanan alan bazı (örn., seyrek matris) veri kümeleri için önde gelen farklı boyutlarda olabilir. Ayrıca, bazı senaryolarda daha iyi çalışma zamanı performans sergiler şekilde CLR basit diziler üzerinde dizin işlemleri iyileştirir.  
   

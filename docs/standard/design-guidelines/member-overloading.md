@@ -34,23 +34,23 @@ public static class Console {
   
  Aşırı yüklemesi, kullanılabilirlik, verimliliği ve yeniden kullanılabilir kitaplıkları okunabilirliğini artırmak için en önemli teknikler biridir. Parametrelerin sayısı aşırı oluşturucular ve yöntemleri daha basit sürümlerini sağlamak mümkün kılar. Parametre türü aşırı yüklemesi farklı türleri seçili kümesi üzerinde aynı işlemler üyeleri için aynı üye adı kullanmayı mümkün kılar.  
   
- **✓ YAPMAK** kısa aşırı yüklemeler tarafından kullanılan varsayılan belirtmek için açıklayıcı parametre adları kullanmayı deneyin.  
+ **✓ DO** kısa aşırı yüklemeler tarafından kullanılan varsayılan belirtmek için açıklayıcı parametre adları kullanmayı deneyin.  
   
- **KAÇININ x** rasgele aşırı parametre adlarında değişen. Aynı giriş başka bir aşırı içindeki bir parametre olarak bir aşırı parametresinde temsil ediyorsa parametreleri aynı ada sahip.  
+ **X AVOID** rasgele aşırı parametre adlarında değişen. Aynı giriş başka bir aşırı içindeki bir parametre olarak bir aşırı parametresinde temsil ediyorsa parametreleri aynı ada sahip.  
   
- **KAÇININ x** parametrelerinde sıralama içinde tutarsız olan aşırı yüklenmiş üyeler. Aynı adlı parametreleri, tüm aşırı aynı konumda görüntülenmelidir.  
+ **X AVOID** parametrelerinde sıralama içinde tutarsız olan aşırı yüklenmiş üyeler. Aynı adlı parametreleri, tüm aşırı aynı konumda görüntülenmelidir.  
   
- **✓ YAPMAK** (genişletilebilirlik gerekliyse) yalnızca en uzun aşırı sanal olun. Daha kısa aşırı yalnızca üzerinden uzun bir aşırı yüklemesine çağırmanız gerekir.  
+ **✓ DO** (genişletilebilirlik gerekliyse) yalnızca en uzun aşırı sanal olun. Daha kısa aşırı yalnızca üzerinden uzun bir aşırı yüklemesine çağırmanız gerekir.  
   
- **X yok** kullanmak `ref` veya `out` üyeleri aşırı yüklemeyi değiştiricileri.  
+ **X DO NOT** kullanmak `ref` veya `out` üyeleri aşırı yüklemeyi değiştiricileri.  
   
  Bazı diller şöyle aşırı çağrıları çözümlenemiyor. Ayrıca, bu tür aşırı genellikle tamamen farklı semantiklerine sahip ve büyük olasılıkla aşırı ancak iki ayrı yöntem bunun yerine olmamalıdır.  
   
- **X yok** aşırı aynı konuma ve benzer türleri parametrelerle henüz farklı semantiği ile sahip.  
+ **X DO NOT** aşırı aynı konuma ve benzer türleri parametrelerle henüz farklı semantiği ile sahip.  
   
- **✓ YAPMAK** izin `null` isteğe bağlı bağımsız değişkenler için geçirilecek.  
+ **✓ DO** izin `null` isteğe bağlı bağımsız değişkenler için geçirilecek.  
   
- **✓ YAPMAK** varsayılan bağımsız değişkenler üyeleriyle tanımlama yerine aşırı üye kullanın.  
+ **✓ DO** varsayılan bağımsız değişkenler üyeleriyle tanımlama yerine aşırı üye kullanın.  
   
  Varsayılan bağımsız değişkenler, CLS uyumlu değildir.  
   

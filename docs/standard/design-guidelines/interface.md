@@ -23,23 +23,23 @@ ms.locfileid: "33573045"
   
  Hangi tanımlama arabirim uygun olan diğer bazı değer türleri dahil olmak üzere çeşitli türleri tarafından desteklenen ortak bir arabirim oluşturmada durumdur. Değer türleri olamaz devral türlerinden dışında <xref:System.ValueType>, ancak arabirimleri uygulayabilir, bunu bir arabirimi kullanarak ortak bir taban türü sunmak için tek seçenek.  
   
- **✓ YAPMAK** değer türleri içeren bir dizi türleri tarafından desteklenen bazı ortak API gerekiyorsa bir arabirim tanımlayın.  
+ **✓ DO** değer türleri içeren bir dizi türleri tarafından desteklenen bazı ortak API gerekiyorsa bir arabirim tanımlayın.  
   
- **✓ DÜŞÜNÜN** önceden başka bazı türünden devralan türleri işlevselliği desteklemek gereksinim duyarsanız bir arabirim tanımlama.  
+ **✓ CONSIDER** önceden başka bazı türünden devralan türleri işlevselliği desteklemek gereksinim duyarsanız bir arabirim tanımlama.  
   
- **KAÇININ x** işaret arabirimleri (hiçbir üye arabirimleriyle) kullanarak.  
+ **X AVOID** işaret arabirimleri (hiçbir üye arabirimleriyle) kullanarak.  
   
  Genel olarak, bir sınıfın belirli bir karakteristik (işaret) sahip olarak işaretlemek gerekiyorsa, bir arabirim yerine özel bir öznitelik kullanın.  
   
- **✓ YAPMAK** bir arabirim uygulaması en az bir türü sağlar.  
+ **✓ DO** bir arabirim uygulaması en az bir türü sağlar.  
   
  Yaptıktan arabirimi tasarımını doğrulamak için bu yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601> uygulamasıdır <xref:System.Collections.Generic.IList%601> arabirimi.  
   
- **✓ YAPMAK** tanımladığınız her bir arabirime tüketir en az bir API sağlar (bir parametre veya bir özellik arabirimi alma yöntemi yazılan arabirimi olarak).  
+ **✓ DO** tanımladığınız her bir arabirime tüketir en az bir API sağlar (bir parametre veya bir özellik arabirimi alma yöntemi yazılan arabirimi olarak).  
   
  Yaptıktan arabirimi tasarımı doğrulamak için bu yardımcı olur. Örneğin, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> tüketir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> arabirimi.  
   
- **X yok** önceden sevk edilmiş bir arabirim üye ekleyin.  
+ **X DO NOT** önceden sevk edilmiş bir arabirim üye ekleyin.  
   
  Bunun yapılması arabirimin uygulamaları çalışmamasına neden. Sürüm oluşturma sorunları önlemek için yeni bir arabirimi oluşturmanız gerekir.  
   

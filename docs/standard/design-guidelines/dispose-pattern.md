@@ -41,15 +41,15 @@ Tüm Programlar bir veya daha fazla sistem kaynakları, bellek, sistem tanıtıc
   
  Uygulaması karmaşıklığını azaltmak için desen ana gerekçesi olan <xref:System.Object.Finalize%2A> ve <xref:System.IDisposable.Dispose%2A> yöntemleri. Yöntemler (farklar sonraki bölümde açıklanmıştır) bazı ancak tüm kod yollarının paylaşmak olgu gelen karmaşıklık kaynaklandığını. Ayrıca, bazı öğeler belirleyici kaynak yönetimi için dil desteği evrimi ilgili deseninin geçmiş nedenleri vardır.  
   
- **✓ YAPMAK** atılabilir türler örneklerini içeren türlerinde temel Dispose desenini uygular. Bkz: [temel Dispose düzeni](#basic_pattern) temel düzeni hakkında ayrıntılı bilgi için bölüm.  
+ **✓ DO** atılabilir türler örneklerini içeren türlerinde temel Dispose desenini uygular. Bkz: [temel Dispose düzeni](#basic_pattern) temel düzeni hakkında ayrıntılı bilgi için bölüm.  
   
  Bir tür atılabilir diğer nesnelerin ömrü boyunca sorumlu ise, geliştiriciler bunlarla ilgili çok silmek için bir yönteme ihtiyacınız vardır. Kapsayıcının kullanarak `Dispose` yöntemi bu mümkün kılmak için uygun bir yoldur.  
   
- **✓ YAPMAK** temel Dispose desen uygulamak ve bir sonlandırıcı türlerinde, açıkça boşaltılması gerekiyor ve sonlandırıcılar sahip değil tutan kaynakları sağlar.  
+ **✓ DO** temel Dispose desen uygulamak ve bir sonlandırıcı türlerinde, açıkça boşaltılması gerekiyor ve sonlandırıcılar sahip değil tutan kaynakları sağlar.  
   
  Örneğin, yönetilmeyen bellek arabelleği depolama türlerinde düzeni uygulanmalıdır. [Sonlandırılabilir türleri](#finalizable_types) bölüm sonlandırıcılar uygulama için ilgili yönergeleri ele alınmaktadır.  
   
- **✓ DÜŞÜNÜN** temel Dispose düzeni uygulama sınıflarında kendilerini tutmayın yönetilmeyen kaynakları veya tek kullanımlık nesneleri ancak yapmak subtypes etkileyebilir.  
+ **✓ CONSIDER** temel Dispose düzeni uygulama sınıflarında kendilerini tutmayın yönetilmeyen kaynakları veya tek kullanımlık nesneleri ancak yapmak subtypes etkileyebilir.  
   
  Bu harika bir örneği <xref:System.IO.Stream?displayProperty=nameWithType> sınıfı. Herhangi bir kaynağa sahip olmayan bir Özet temel sınıf olmasına rağmen kendi alt sınıfların çoğunu ve bu nedenle, bu deseni uygular.  
   
@@ -85,7 +85,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Ayrıca, bu bölümde, zaten Dispose düzeni uygulamıyor bir taban sınıflarıyla uygular. Zaten deseni uygulayan bir sınıftan devralmayı, yalnızca geçersiz kılma `Dispose(bool)` yöntemi ek kaynak temizleme mantığı sağlar.  
   
- **✓ YAPMAK** bildirme bir `protected virtual void Dispose(bool disposing)` tüm mantığı merkezileştirmek yöntemi ilgili yönetilmeyen kaynakları serbest bırakma için.  
+ **✓ DO** bildirme bir `protected virtual void Dispose(bool disposing)` tüm mantığı merkezileştirmek yöntemi ilgili yönetilmeyen kaynakları serbest bırakma için.  
   
  Tüm kaynak temizleme Bu yöntemde olmalıdır. Yöntem sonlandırıcıyı çağrılır ve `IDisposable.Dispose` yöntemi. Parametre bir sonlandırıcı içinde çağrılan varsa false olur. Sonlandırma sırasında çalıştıran herhangi bir kod sonlandırılabilir diğer nesneleri erişilmemesi emin olmak için kullanılmalıdır. Sonlandırıcılar uygulama ayrıntılarını sonraki bölümde açıklanmaktadır.  
   
@@ -97,7 +97,7 @@ protected virtual void Dispose(bool disposing) {
 }  
 ```  
   
- **✓ YAPMAK** uygulamak `IDisposable` yalnızca çağırarak arabirim `Dispose(true)` arkasından `GC.SuppressFinalize(this)`.  
+ **✓ DO** uygulamak `IDisposable` yalnızca çağırarak arabirim `Dispose(true)` arkasından `GC.SuppressFinalize(this)`.  
   
  Çağrı `SuppressFinalize` varsa yalnızca gerçekleşeceğini `Dispose(true)` başarıyla yürütür.  
   
@@ -108,7 +108,7 @@ public void Dispose(){
 }  
 ```  
   
- **X yok** parametresiz olun `Dispose` sanal yöntemi.  
+ **X DO NOT** parametresiz olun `Dispose` sanal yöntemi.  
   
  `Dispose(bool)` Alt sınıflar tarafından geçersiz kılınması gereken bir yöntemdir.  
   
@@ -126,11 +126,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X yok** hiçbir aşırı bildirme `Dispose` yöntemi dışında `Dispose()` ve `Dispose(bool)`.  
+ **X DO NOT** hiçbir aşırı bildirme `Dispose` yöntemi dışında `Dispose()` ve `Dispose(bool)`.  
   
  `Dispose` Bu desen kod oluşturma ve uygulayıcılar, kullanıcılar ve derleyicileri arasında Karışıklığı önlemek için ayrılmış bir sözcük dikkate alınmalıdır. Bazı diller belirli türlerinde bu deseni otomatik olarak uygulamak seçebilirsiniz.  
   
- **✓ YAPMAK** izin `Dispose(bool)` birden çok kez çağrılacak yöntem. Yöntemi, hiçbir şey ilk çağrısından sonra yapmayı seçebilirsiniz.  
+ **✓ DO** izin `Dispose(bool)` birden çok kez çağrılacak yöntem. Yöntemi, hiçbir şey ilk çağrısından sonra yapmayı seçebilirsiniz.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -146,13 +146,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **KAÇININ x** içinden bir özel durum atma `Dispose(bool)` dışındaki burada içeren işlem bozulmuş Kritik durumları altında (sızıntılarını, paylaşılan durumu tutarsız, vs.).  
+ **X AVOID** içinden bir özel durum atma `Dispose(bool)` dışındaki burada içeren işlem bozulmuş Kritik durumları altında (sızıntılarını, paylaşılan durumu tutarsız, vs.).  
   
  Kullanıcıların beklediğiniz yapılan bir çağrı `Dispose` bir özel durum oluşturmaz.  
   
  Varsa `Dispose` bir özel durum oluşturabilen, daha fazla finally bloğu temizleme mantığı değil yürütülecek. Bu sorunu çözmek için kullanıcının her çağrı için Kaydır gerekir `Dispose` (içinde finally bloğunda!) bir try bloğunda, müşteri adayları çok karmaşık temizleme işleyicilerine. Çalıştırıldığında bir `Dispose(bool disposing)` yöntemi, hiçbir zaman throw bir atma false ise özel durumu. Bunun yapılması bir Sonlandırıcısı bağlamı içinde çalıştırıldığında işlemini sonlandırır.  
   
- **✓ YAPMAK** throw bir <xref:System.ObjectDisposedException> , nesne atıldı sonra kullanılamayan üyeden.  
+ **✓ DO** throw bir <xref:System.ObjectDisposedException> , nesne atıldı sonra kullanılamayan üyeden.  
   
 ```csharp
 public class DisposableResourceHolder : IDisposable {  
@@ -173,7 +173,7 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ DÜŞÜNÜN** yöntemi sağlama `Close()`, ek olarak `Dispose()`, yakın alan standart terminolojisinde olup olmadığını.  
+ **✓ CONSIDER** yöntemi sağlama `Close()`, ek olarak `Dispose()`, yakın alan standart terminolojisinde olup olmadığını.  
   
  Bunu yaparken, yaptığınız önemli `Close` uygulaması aynı `Dispose` ve uygulayın `IDisposable.Dispose` yöntemi açıkça.  
   
@@ -230,15 +230,15 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **KAÇININ x** türleri sonlandırılabilir yapma.  
+ **X AVOID** türleri sonlandırılabilir yapma.  
   
  Bir sonlandırıcı gerekli düşündüğünüz herhangi bir durumu dikkatlice düşünün. Gerçek yoktur hem performans hem de kod karmaşıklık açısından sonlandırıcılar örnekleriyle ilişkili maliyeti. Kaynak sarmalayıcıları gibi kullanmayı tercih <xref:System.Runtime.InteropServices.SafeHandle> mümkün olduğunda yönetilmeyen kaynakları kapsüllemek için; bu durumda bir sonlandırıcı hale gereksiz sarmalayıcı kendi kaynak Temizleme için sorumlu olduğu için.  
   
- **X yok** değer türleri sonlandırılabilir olun.  
+ **X DO NOT** değer türleri sonlandırılabilir olun.  
   
  Yalnızca başvuru türleri gerçekte CLR tarafından sonlandırılır ve bu nedenle değer türünde bir sonlandırıcı yerleştirmek için her türlü girişim yok sayılacak. Bu kural, C# ve C++ Derleyicileri uygulayın.  
   
- **✓ YAPMAK** tür kendi Sonlandırıcı olmayan bir yönetilmeyen kaynak serbest bırakma için sorumlu ise bir türü sonlandırılabilir olun.  
+ **✓ DO** tür kendi Sonlandırıcı olmayan bir yönetilmeyen kaynak serbest bırakma için sorumlu ise bir türü sonlandırılabilir olun.  
   
  Sonlandırıcıyı uygularken, yalnızca çağrısı `Dispose(false)` ve içindeki tüm kaynak temizleme mantığını yerleştirin `Dispose(bool disposing)` yöntemi.  
   
@@ -255,25 +255,25 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ YAPMAK** her sonlandırılabilir türüne temel Dispose desenini uygular.  
+ **✓ DO** her sonlandırılabilir türüne temel Dispose desenini uygular.  
   
  Bu türdeki kullanıcıların açıkça belirleyici temizleme sonlandırıcıyı sorumlu olduğu kaynaklarla işlemini gerçekleştirmek için bir yol sağlar.  
   
- **X yok** önemli riski Bunlar zaten sonlandırılan, çünkü sonlandırıcıyı kod yolunda sonlandırılabilir tüm nesnelere erişme.  
+ **X DO NOT** önemli riski Bunlar zaten sonlandırılan, çünkü sonlandırıcıyı kod yolunda sonlandırılabilir tüm nesnelere erişme.  
   
  Örneğin, başka bir sonlandırılabilir nesne B başvuruyor sonlandırılabilir bir nesne A güvenilir bir şekilde B A'ın kullanamazsınız sonlandırıcıyı, veya tam tersi. Sonlandırıcılar (eksikliği kritik sonlandırma için zayıf bir sıralama garanti) rastgele sırayla denir.  
   
  Ayrıca, bir uygulama etki alanı kaldırma sırasında veya işlem sonlandırma sırasında bazı noktalarda statik değişkenler depolanan nesneler da toplanan olduğunu unutmayın. Sonlandırılabilir nesne (veya statik değişkenler depolanan değerleri kullanabilecek statik bir yöntemini çağırmadan) başvurduğu statik bir değişken olabilir erişme güvenli IF <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> true değerini döndürür.  
   
- **✓ YAPMAK** olun, `Finalize` korumalı yöntemi.  
+ **✓ DO** olun, `Finalize` korumalı yöntemi.  
   
  Çünkü bu kılavuz zorlamak için derleyicileri yardımcı C#, C++ ve VB.NET geliştiriciler bu hakkında endişelenmeniz gerekmez.  
   
- **X yok** let özel durumlar kaçış sistem kritik hataları dışında Sonlandırıcısı mantığı gelen.  
+ **X DO NOT** let özel durumlar kaçış sistem kritik hataları dışında Sonlandırıcısı mantığı gelen.  
   
  Sonlandırıcı bir özel durum, CLR (itibariyle .NET Framework sürüm 2.0), tüm işlem kapatılır yürütme ve denetimli bir şekilde yayımlanan kaynakları diğer sonlandırıcılar engelleyen.  
   
- **✓ DÜŞÜNÜN** oluşturma ve kritik sonlandırılabilir nesnesini kullanarak (içeren bir tür hiyerarşisinde bir türüyle <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) içinde bir sonlandırıcı kesinlikle gerekir yürütme zorlanmış uygulama etki alanı kaldırır ve iş parçacığı karşısında bile durumlar için durdurur.  
+ **✓ CONSIDER** oluşturma ve kritik sonlandırılabilir nesnesini kullanarak (içeren bir tür hiyerarşisinde bir türüyle <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) içinde bir sonlandırıcı kesinlikle gerekir yürütme zorlanmış uygulama etki alanı kaldırır ve iş parçacığı karşısında bile durumlar için durdurur.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

@@ -22,7 +22,7 @@ Nesne odaklı çerçeveleri özelliklerini geliştiriciler genişletmek ve frame
   
  Genişletilebilirlik engeller güçlü bir mekanizma mühürleme. Sınıf veya tek tek üyeleri korumaya. Bir sınıf mühürleme kullanıcıların sınıfından devralan engeller. Üye mühürleme, kullanıcıların belirli bir üye önlemiş olursunuz.  
   
- **X yok** sınıfları Bunu yapmak için iyi bir neden olmadan mühürlemek.  
+ **X DO NOT** sınıfları Bunu yapmak için iyi bir neden olmadan mühürlemek.  
   
  Bir sınıf bir genişletilebilirlik senaryo düşündüğünüz yapılamıyor çünkü mühürleme iyi bir nedenle değil. Framework kullanıcılar kolaylık üye ekleme gibi çeşitli nonobvious nedeniyle sınıflardan devralmak ister. Bkz: [korumasız sınıfları](../../../docs/standard/design-guidelines/unsealed-classes.md) nonobvious nedenleri örnekleri için kullanıcıları bir türünden devralan istiyor.  
   
@@ -36,11 +36,11 @@ Nesne odaklı çerçeveleri özelliklerini geliştiriciler genişletmek ve frame
   
 -   Sınıf çok hızlı çalışma zamanı arama gerektiren bir özniteliktir. Korumalı öznitelikleri korumasız olanları daha biraz daha yüksek performans düzeyine sahip. Bkz: [öznitelikleri](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X yok** korumalı türlerde korunan veya sanal üyeleri bildirme.  
+ **X DO NOT** korumalı türlerde korunan veya sanal üyeleri bildirme.  
   
  Tanımı gereği, korumalı türlerde kaynağından devralındı olamaz. Bu, korumalı türlerde korunan üyeleri çağrılamaz ve korumalı türlerde sanal yöntemleri geçersiz kılınamaz anlamına gelir.  
   
- **✓ DÜŞÜNÜN** kılmanız üyeleri mühürleme.  
+ **✓ CONSIDER** kılmanız üyeleri mühürleme.  
   
  Sanal üyeler Tanıtımı sonuçlanabilir sorunları (ele [sanal üyeler](../../../docs/standard/design-guidelines/virtual-members.md)) biraz daha düşük bir derecede rağmen de geçersiz kılmaları uygulamak. Bir geçersiz kılma korumalı hale getirilmesiyle, devralma hiyerarşisinde o noktadan başlayarak bu sorunlardan ayrıntılarından korur.  
   

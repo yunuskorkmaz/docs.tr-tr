@@ -23,19 +23,19 @@ Saklama ilkesini en önemli kavramları nesne odaklı tasarım biridir. Bu ilke,
   
  Bu tür alanları neredeyse tanımı tarafından hiçbir zaman değiştirmek için gerekli olduğundan Biz bu katı sınırlama listesinden sabit ve statik salt okunur alanları hariç tutun.  
   
- **X yok** genel veya korumalı örneği alanları sağlar.  
+ **X DO NOT** genel veya korumalı örneği alanları sağlar.  
   
  Genel veya korumalı yapmak yerine alanları erişmek için özellikler sağlamalıdır.  
   
- **✓ YAPMAK** için hiçbir zaman değiştirecek sabitleri sabit alanları kullanın.  
+ **✓ DO** için hiçbir zaman değiştirecek sabitleri sabit alanları kullanın.  
   
  Derleyici, doğrudan kod çağırma içine const alanlarına ait değerlerin yakar. Bu nedenle, sabit değerler hiçbir zaman uyumluluk çiğnemekten riski değiştirilebilir.  
   
- **✓ YAPMAK** ortak statik kullanmak `readonly` alanları önceden tanımlanmış nesne örnekleri için.  
+ **✓ DO** ortak statik kullanmak `readonly` alanları önceden tanımlanmış nesne örnekleri için.  
   
  Önceden tanımlanmış türünün örneklerini varsa, bunları genel olarak salt okunur statik alanları türü bildirin.  
   
- **X yok** değişebilir türlerin örnekleri atamak `readonly` alanları.  
+ **X DO NOT** değişebilir türlerin örnekleri atamak `readonly` alanları.  
   
  Bir örneği sonra değiştirilebilen örnekleri türüyle bir değişebilir türüdür. Örneğin, dizileri, birçok koleksiyonun ve akışlar değişebilir türleridir ancak <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, ve <xref:System.String?displayProperty=nameWithType> tüm sabittir. Bir başvuru türü alanı üzerinde salt okunur değiştiricisi değiştirilmekte olan gelen alanda depolanan örneği engeller, ancak alanın örnek veri örneğini değiştirme arama üyeleri tarafından değiştirilmiş engellemez.  
   

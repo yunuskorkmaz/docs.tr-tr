@@ -20,17 +20,17 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570576"
 ---
 # <a name="abstract-class-design"></a>Soyut sınıf tasarımı
-**X yok** soyut türlerinde genel ya da korumalı iç oluşturucuları tanımlama.  
+**X DO NOT** soyut türlerinde genel ya da korumalı iç oluşturucuları tanımlama.  
   
  Oluşturucular kullanıcılar türdeki örneklerin oluşturmanız gerekir, ortak olmalıdır. Soyut bir tür örneklerini oluşturamazsınız çünkü bir public oluşturucuya sahip soyut bir tür tasarlanmış ve kullanıcılara yanıltıcı yanlış.  
   
- **✓ YAPMAK** korumalı bir ya da bir iç Oluşturucusu soyut sınıflarda tanımlayın.  
+ **✓ DO** korumalı bir ya da bir iç Oluşturucusu soyut sınıflarda tanımlayın.  
   
  Korumalı Oluşturucu daha yaygın bir durumdur ve yalnızca alt oluşturulduğunda kendi başlatma yapmak temel sınıf sağlar.  
   
  Bir iç Oluşturucusu sınıfını tanımlama derleme Özet sınıf, somut uygulamalarını sınırlamak için kullanılabilir.  
   
- **✓ YAPMAK** sevk her soyut sınıfından devralan en az bir somut türü sağlayın.  
+ **✓ DO** sevk her soyut sınıfından devralan en az bir somut türü sağlayın.  
   
  Soyut sınıf tasarımını doğrulamak için bu yardımcı yapılıyor. Örneğin, <xref:System.IO.FileStream?displayProperty=nameWithType> uygulamasıdır <xref:System.IO.Stream?displayProperty=nameWithType> soyut sınıf.  
   

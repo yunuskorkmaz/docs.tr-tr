@@ -17,31 +17,31 @@ Genişletme yöntemleri örnek yöntemi çağrı sözdizimini kullanarak çağr�
   
  Bu tür genişletme yöntemlerini açıklar sınıfı "sponsoru" sınıf olarak adlandırılır ve static olarak bildirilmelidir. Genişletme yöntemleri kullanmak için bir sponsoru sınıfı tanımlayan ad alanı almanız gerekir.  
   
- **KAÇININ x** frivolously genişletme yöntemleri, özellikle yok kendi türlerinde tanımlama.  
+ **X AVOID** frivolously genişletme yöntemleri, özellikle yok kendi türlerinde tanımlama.  
   
  Kaynak kodu türü sahipseniz, normal örnek yöntemleri kullanmayı düşünün. Size ait olmayan ve bir yöntem eklemek istiyorsanız, çok dikkatli olun. Genişletme yöntemleri serbest kullanımını API'leri bu yöntemleri için tasarlanmamıştır türlerinin alanınızda karışıklık, olasılığı vardır.  
   
- **✓ DÜŞÜNÜN** genişletme yöntemleri aşağıdaki senaryolardan birini kullanarak:  
+ **✓ CONSIDER** genişletme yöntemleri aşağıdaki senaryolardan birini kullanarak:  
   
 -   Yardımcı sağlamak için işlevselliği denirse, ilgili her bir arabirim uygulama için işlevselliği açısından çekirdek arabirimi yazılabilir. Somut uygulamaları aksi arabirimlerine atanamaz olmasıdır. Örneğin, `LINQ to Objects` işleçleri uzantı yöntemleri olarak tüm uygulanır <xref:System.Collections.Generic.IEnumerable%601> türleri. Bu nedenle, herhangi bir `IEnumerable<>` otomatik olarak LINQ etkin uygulamasıdır.  
   
 -   Bir bağımlılık bazı türünde, ancak böyle bir bağımlılık örnek yöntemi zaman gösterebileceği bağımlılık Yönetimi kurallarını çalışmamasına neden. Örneğin, bir bağımlılık <xref:System.String> için <xref:System.Uri?displayProperty=nameWithType> arzu, büyük olasılıkla değil ve bu nedenle `String.ToUri()` döndüren örnek yöntemi `System.Uri` bağımlılık yönetim açısından yanlış tasarım olacaktır. Statik genişletme yöntemi `Uri.ToUri(this string str)` döndüren `System.Uri` kadar daha iyi tasarım olacaktır.  
   
- **KAÇININ x** üzerinde genişletme yöntemleri tanımlama <xref:System.Object?displayProperty=nameWithType>.  
+ **X AVOID** üzerinde genişletme yöntemleri tanımlama <xref:System.Object?displayProperty=nameWithType>.  
   
  VB kullanıcılar tür yöntem uzantı yöntemi sözdizimini kullanarak nesne başvuruları üzerinde arayabilmesi için olmayacaktır. VB VB içinde nesne üzerinde geç olması için tüm yöntem çağrılarına zorlar gibi bir başvuru bildirme bağlı olduğundan, bu tür yöntemleri çağırma desteklemez (gerçek üye adlı çalışma zamanında belirlenir) bağlamaları genişletme yöntemleri için derleme zamanında (erken belirlenen sırada bağlı).  
   
  Kılavuz aynı bağlama davranışı mevcut olduğu veya nerede genişletme yöntemleri desteklenmez diğer diller için geçerli olduğunu unutmayın.  
   
- **X yok** veya bağımlılık yönetimi yöntemleri arabirimlerine ekleme için olmadığı sürece, genişletilmiş türü aynı ad alanına genişletme yöntemleri uygulamak.  
+ **X DO NOT** veya bağımlılık yönetimi yöntemleri arabirimlerine ekleme için olmadığı sürece, genişletilmiş türü aynı ad alanına genişletme yöntemleri uygulamak.  
   
- **KAÇININ x** farklı ad alanlarında bulunuyorsa bile aynı imzayla iki veya daha fazla genişletme yöntemleri tanımlama.  
+ **X AVOID** farklı ad alanlarında bulunuyorsa bile aynı imzayla iki veya daha fazla genişletme yöntemleri tanımlama.  
   
- **✓ DÜŞÜNÜN** türü bir arabirim ise ve çoğu veya tamamı durumlarda kullanılacak genişletme yöntemleri istediyseniz genişletilmiş türü olarak aynı ad alanında genişletme yöntemleri tanımlama.  
+ **✓ CONSIDER** türü bir arabirim ise ve çoğu veya tamamı durumlarda kullanılacak genişletme yöntemleri istediyseniz genişletilmiş türü olarak aynı ad alanında genişletme yöntemleri tanımlama.  
   
- **X yok** normalde diğer özelliklerle ilişkili ad alanlarında bir özellik uygulama uzantı yöntemleri tanımlar. Bunun yerine, bunları ait özelliğiyle ilgili ad alanını tanımlayın.  
+ **X DO NOT** normalde diğer özelliklerle ilişkili ad alanlarında bir özellik uygulama uzantı yöntemleri tanımlar. Bunun yerine, bunları ait özelliğiyle ilgili ad alanını tanımlayın.  
   
- **KAÇININ x** genel bir ad alanları adlandırma ayrılmış genişletme yöntemleri (örneğin, "uzantılarla"). Açıklayıcı bir ad kullanın (örneğin, "yönlendirme") yerine.  
+ **X AVOID** genel bir ad alanları adlandırma ayrılmış genişletme yöntemleri (örneğin, "uzantılarla"). Açıklayıcı bir ad kullanın (örneğin, "yönlendirme") yerine.  
   
  *Bölümleri © 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   

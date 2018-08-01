@@ -20,11 +20,11 @@ ms.locfileid: "33570438"
 # <a name="names-of-assemblies-and-dlls"></a>Derlemeler ve DLL adları
 Derleme dağıtımı ve yönetilen kod programlar kimliğini birimidir. Genellikle bir veya daha çok dosya derlemeleri yayılabilir karşın, bir derlemeyi bire bir DLL ile eşler. Bu nedenle, bu bölümde daha sonra derleme adlandırma kurallarına eşlenen yalnızca DLL adlandırma kuralları, açıklanmaktadır.  
   
- **✓ YAPMAK** derlemenizi System.Data gibi işlevleri büyük boyutta önermek DLL'ler için adları'ı seçin.  
+ **✓ DO** derlemenizi System.Data gibi işlevleri büyük boyutta önermek DLL'ler için adları'ı seçin.  
   
  Derleme ve DLL adları ad alanı adları için karşılık gelen gerekmez, ancak ad derlemeleri adlandırırken izlemek makul. Bir iyi derlemesinde bulunan ad alanları ortak önekini temel DLL adlandırmak için udur. Örneğin, iki ad alanı, bir derleme `MyCompany.MyTechnology.FirstFeature` ve `MyCompany.MyTechnology.SecondFeature`, çağrılabilir `MyCompany.MyTechnology.dll`.  
   
- **✓ DÜŞÜNÜN** göre aşağıdaki düzeni DLL'leri adlandırma:  
+ **✓ CONSIDER** göre aşağıdaki düzeni DLL'leri adlandırma:  
   
  `<Company>.<Component>.dll`  
   
