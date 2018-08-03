@@ -1,1 +1,1 @@
-<span data-ttu-id="684d3-101">Windows 8.x Mağazası</span><span class="sxs-lookup"><span data-stu-id="684d3-101">Windows 8.x Store</span></span>
+<span data-ttu-id="70884-101">Windows 8.x Mağazası</span><span class="sxs-lookup"><span data-stu-id="70884-101">Windows 8.x Store</span></span>
