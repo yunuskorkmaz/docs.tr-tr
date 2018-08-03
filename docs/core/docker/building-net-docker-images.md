@@ -1,121 +1,132 @@
 ---
-title: .NET Core Docker görüntülerinizi oluşturmak
-description: Docker görüntüler ve .NET Core anlama
+title: .NET Core, Docker görüntüleri oluşturma
+description: Docker görüntülerini ve .NET Core anlama
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827345"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntülerinizi oluşturmak
+# <a name="building-docker-images-for-net-core-applications"></a>.NET Core uygulamaları için Docker görüntüleri oluşturma
 
- Bu öğreticide, biz .NET Core üzerinde Docker kullanma odaklanılmaktadır. İlk olarak sunulan ve Microsoft ve kullanım örnekleri tarafından tutulan farklı Docker görüntüleri keşfedin. Biz sonra yapı ve ASP.NET Core uygulama dockerize hakkında bilgi edinin.
+ Bu öğreticide, .NET Core üzerinde Docker nasıl odaklanıyoruz. İlk olarak sunulur ve Microsoft ve kullanım örnekleri tarafından tutulan farklı bir Docker görüntüleri keşfedin. Biz, daha sonra nasıl oluşturacağınızı ve ASP.NET Core uygulaması docker kapsayıcılarında çalıştırın öğrenin.
 
-Bu öğreticinin sürecinde size bilgi edinin:
+Bu öğreticinin Kurs sırasında şunları öğrenirsiniz:
 > [!div class="checklist"]
-> * Microsoft .NET Core Docker görüntüler hakkında bilgi edinin 
-> * Bir ASP.NET Core Dockerize için örnek uygulamayı Al
+> * Microsoft .NET Core Docker görüntüleri hakkında bilgi edinin 
+> * Bir ASP.NET Core Dockerize örnek uygulaması alma
 > * ASP.NET örnek uygulamayı yerel olarak çalıştırma
 > * Derleme ve örnek Linux kapsayıcıları için Docker ile çalıştırma
-> * Derleme ve örnek ile Windows için Docker kapsayıcıları çalıştırma
+> * Derleme ve örnek için Docker Windows kapsayıcıları ile çalıştırma
 
-## <a name="docker-image-optimizations"></a>Docker resmi en iyi duruma getirme
+## <a name="docker-image-optimizations"></a>Docker görüntüsünü en iyi duruma getirme
 
-Geliştiriciler için Docker görüntülerinizi oluşturmak, biz üzerinde üç ana senaryo odaklanır:
+Geliştiriciler için Docker görüntülerini oluştururken, biz üç ana senaryo üzerinde odaklanır:
 
 * .NET Core uygulamaları geliştirmek için kullanılan görüntü
 * .NET Core uygulamaları oluşturmak için kullanılan görüntü
 * .NET Core uygulamaları çalıştırmak için kullanılan görüntü
 
 Neden üç görüntüleri?
-Geliştirme, derleme ve kapsayıcılı uygulamaları çalıştıran farklı önceliklere sahip olduğumuz.
+Geliştirme, derleme ve kapsayıcılı uygulamalar çalıştırmak, farklı önceliklere sahibiz.
 
-* **Geliştirme:** değişiklikleri ve değişiklikleri hata ayıklama özelliği öncelik odaklanır hızla yineleme. Görüntünün boyutuna kadar önemli değilse, bunun yerine, değişiklik kodunuzu yapabilir ve hızlıca görmek?
+* **Geliştirme:** öncelik odaklanır değişiklikleri ve değişiklikleri hata ayıklama özelliği hızla yineleyin. Resmin boyutu önemli değildir, bunun yerine, değişiklikler kodunuza yapabilir ve bunları hızlıca görmek?
 
-* **Derleme:** bu görüntü derleyici ve ikili dosyaları iyileştirmek için başka bir bağımlılık içerir, uygulamanızın derlemek için gereken her şeyi içerir.  Yapı görüntünün bir üretim görüntüsüne yerleştirin varlıklar oluşturmak için kullanın. Yapı görüntü sürekli tümleştirme için veya bir yapı ortamında kullanılır. Bu yaklaşım derlemek ve uygulamada (tüm gerekli bağımlılıkları olan) bir yapı görüntü örneği oluşturmak derleme aracısı sağlar. Derleme aracınızı, yalnızca bu Docker görüntü çalıştırma bilmesi gerekir.
+* **Derleme:** bu görüntü derleyici ve ikili dosyaları iyileştirmek için diğer herhangi bir bağımlılığın içeren uygulamanızı derlemek için gereken her şeyi içerir.  Derleme görüntüyü bir üretim görüntüsüne yerleştirdiğiniz varlıkları oluşturmak için kullanın. Derleme görüntüsünü veya bir yapı ortamı sürekli tümleştirme için kullanılır. Bu yaklaşım, derlemek ve bir yapı görüntü örneği (tüm gerekli bağımlılıkları olan) uygulamasında oluşturmak bir yapı aracısını sağlar. Yapı aracınız, yalnızca bu Docker görüntüsünü çalıştırma bilmesi gerekir.
 
-* **Üretim:** ne kadar hızlı dağıtma ve görüntü başlatma? Bu görüntü, Docker ana bilgisayarlarınız için Docker kayıt defterinden ağ performansı en iyi duruma getirilmiş şekilde küçüktür. İçeriği Docker sonuçları işleme için Çalıştır'dan en iyi süreye etkinleştirme çalıştırmaya hazırsınız. Dinamik kod derleme Docker modelinde gerekli değildir. Bu görüntüde yerleştirin içeriği ikili dosyaları ve uygulamayı çalıştırmak için gereken içerik için sınırlı olacaktır.
+* **Üretim:** dağıtma ve görüntü Başlat ne kadar hızlı? Bu görüntü, Docker kayıt defterinizin Docker konaklarınız için ağ performansı en iyi duruma getirilmiş şekilde küçüktür. İçeriği, Docker run sonuçları işlemek için hızlı süreye etkinleştirme çalıştırmaya hazırsınız. Dinamik kod derlemesi, Docker modelde gerek yoktur. Bu görüntüde yerleştirdiğiniz içeriği ikili dosyaları ve uygulamayı çalıştırmak için gerekli içeriklere sınırlı olacaktır.
 
     Örneğin, `dotnet publish` çıktı içerir:
 
-    * derlenmiş ikili dosyalar
+    * derlenmiş ikili dosyaları
     * .js ve .css dosyaları
 
 
-Eklenecek neden `dotnet publish` üretim görüntünüzü komut çıktısında olduğu boyutuna minimum değerde tutmak için.
+Eklenecek nedeni `dotnet publish` üretim görüntünüzü komut çıktısında boyutuna dürüst etmektir.
 
-Bazı .NET Core görüntüleri katmanları son etiket indirme oldukça basit bir işlemdir şekilde farklı etiketler arasında paylaşın. Makinenizde zaten daha eski bir sürümü varsa, bu mimarinin gerekli disk alanı azaltır.
+Bazı .NET Core görüntüleri Katmanlar oldukça basit bir işlem en son etiket indiriliyor, bu nedenle farklı etiketler arasında paylaşın. Makinenizde zaten daha eski bir sürümü varsa, bu mimaride gerekli disk alanını azaltır.
 
-Birden çok uygulama aynı makinede ortak görüntüleri kullandığınızda, bellek ortak görüntülerin arasında paylaşılır. Görüntüleri paylaşılması için aynı olması gerekir.
+Birden çok uygulama aynı makinede genel görüntülerden kullandığınızda, bellek ortak görüntülerin arasında paylaşılır. Görüntüleri paylaşılması için aynı olması gerekir.
 
-## <a name="docker-image-variations"></a>Docker görüntü farklılıkları
+## <a name="docker-image-variations"></a>Docker görüntüsü farklılıkları
 
-Görüntü çeşitleri altında sağladığımız yukarıdaki hedeflerinize ulaşmak için [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/).
+Görüntü çeşitleri altında sağladığımız yukarıdaki hedeflere ulaşmak için [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/).
 
-* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.1-sdk`) Bu görüntü .NET Core ve komut satırı araçları (CLI) içeren .NET Core SDK'sı içerir. Bu görüntü eşlendiği **geliştirme senaryosu**. Bu görüntü, yerel geliştirme, hata ayıklama ve birim testi için kullanın. Bu görüntü için de kullanılabilir, **yapı** senaryoları. Kullanarak `microsoft/dotnet:sdk` her zaman en son sürümünü sağlar.
+* `microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.1-sdk`) Bu görüntü .NET Core ve komut satırı araçları'nı (CLI) içerir .NET Core SDK'sı içerir. Bu görüntü eşlendiği **geliştirme senaryosu**. Bu görüntü, yerel geliştirme, hata ayıklama ve birim testi için kullanın. Bu görüntü için de kullanılabilir, **derleme** senaryoları. Kullanarak `microsoft/dotnet:sdk` , en son sürümü her zaman verir.
 
 > [!TIP]
-> Kullanmak istediğiniz, gereksinimleriniz hakkında konusunda emin değilseniz `microsoft/dotnet:<version>-sdk` görüntü. "Gerçek" görüntüsü olarak throw kullanılmak üzere tasarlanmıştır koyma kapsayıcı (kaynak kodu bağlayın ve kapsayıcı uygulamanızı başlatmak için Başlat) ve diğer görüntüleri oluşturmak için temel görüntü olarak.
+> Gereksinimlerinizi hakkında konusunda emin değilseniz, kullanmak istediğiniz `microsoft/dotnet:<version>-sdk` görüntü. "Pratikte" görüntü olarak throw kullanılmak üzere tasarlanmıştır koyma kapsayıcı (kaynak kodunuzu bağlayın ve uygulamanızı başlatmak için bir kapsayıcı başlatma) ve diğer görüntüleri oluşturmak için temel görüntü olarak.
 
-* `microsoft/dotnet:<version>-runtime`: Bu görüntü .NET Core (çalışma zamanı ve kitaplıklar) içerir ve .NET Core uygulamaları çalıştırmak için optimize edilmiştir **üretim**.
+* `microsoft/dotnet:<version>-runtime`: Bu görüntü, .NET Core (çalışma zamanı ve kitaplıklarda) içerir ve .NET Core uygulamaları çalıştırma için optimize edilmiştir **üretim**.
 
-## <a name="alternative-images"></a>Alternatif görüntüleri
+## <a name="alternative-images"></a>Alternatif resimleri
 
-Geliştirme, derleme ve üretim en iyi duruma getirilmiş senaryolara ek olarak, ek görüntüleri sağlar:
+Geliştirme, derleme ve üretim en iyi duruma getirilmiş senaryoların yanı sıra ek görüntüleri sağlıyoruz:
 
-* `microsoft/dotnet:<version>-runtime-deps`**Çalışma zamanı deps** görüntü tüm .NET Core tarafından gerekli yerel bağımlılıklarını ile işletim sistemi içerir. Bu görüntü içindir [kendi içinde bulunan uygulamalar](../deploying/index.md).
+* `microsoft/dotnet:<version>-runtime-deps`**Çalışma zamanı deps** görüntü, tüm yerel .NET Core tarafından gerekli bağımlılıkları ile işletim sistemi içerir. Bu görüntü içindir [kendi içindeki uygulamaları](../deploying/index.md).
 
 Her değişken en son sürümleri:
 
-* `microsoft/dotnet` veya `microsoft/dotnet:latest` (diğer ad SDK görüntüsü için)
+* `microsoft/dotnet` veya `microsoft/dotnet:latest` (diğer ad SDK görüntü için)
 * `microsoft/dotnet:sdk`
 * `microsoft/dotnet:runtime`
 * `microsoft/dotnet:runtime-deps`
 
-## <a name="samples-to-explore"></a>Keşfetmek için örnekleri
+## <a name="samples-to-explore"></a>Araştırılacak örnekleri
 
-* [Bu ASP.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) Docker görüntülerinizi ASP.NET Core için üretim için uygulamalar oluşturmak için en iyi yöntem desen gösterir. Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
+* [Bu ASP.NET Core Docker örnek](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) Docker görüntüleri için ASP.NET Core için üretim uygulamaları oluşturmaya yönelik en iyi uygulama desenini gösterir. Örnek, hem Linux hem de Windows kapsayıcıları ile çalışır.
 
-* Bu .NET Core Docker örneği için en iyi yöntem deseni gösterir [üretim için .NET Core uygulamaları için Docker görüntülerinizi oluşturmak.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
+* Bu .NET Core Docker örnek bir en iyi uygulama desenini gösterir [üretim için .NET Core uygulamaları için Docker görüntülerinizi oluşturmak.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>İstek düzeni ve özgün IP iletme
+
+Proxy sunucuları, yük Dengeleyiciler ve diğer ağ Gereçleri, bir istek hakkındaki bilgiler genellikle kapsayıcılı uygulama ulaşmadan önce gizlememeniz:
+
+* HTTPS isteklerini HTTP üzerinden taşınır, özgün şeması (HTTPS) kaybolur ve bir üst bilgisinde iletilmesi gerekir.
+* Uygulama proxy'si ve doğru kaynağına değil Internet veya kurumsal ağ üzerindeki bir istek aldığından, özgün istemci IP adresi de üst bilgisinde gönderilmelidir.
+
+Bu bilgiler, örneğin yeniden yönlendirmeleri, kimlik doğrulaması, bağlama oluşturmayı, ilke değerlendirmesi ve istemci coğrafi konum isteği işleme önemli olabilir.
+
+Şema ve kapsayıcılı bir ASP.NET Core uygulaması orijinal IP adresine iletmek için iletilen üstbilgileri ara yazılımı kullanın. Daha fazla bilgi için [proxy sunucuları ile çalışma ve yük Dengeleyiciler için ASP.NET Core yapılandırma](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>İlk ASP.NET Core Docker uygulamanızı
 
-Bu öğretici için dockerize istiyoruz uygulama için bir ASP.NET Core Docker örnek uygulama kullanarak olanak sağlar. Bu ASP.NET Core Docker örnek uygulama Docker görüntülerinizi ASP.NET Core için üretim için uygulamalar oluşturmak için en iyi yöntem desen gösterir. Örnek, Linux ve Windows kapsayıcılarını ile çalışır.
+Bu öğretici için docker kapsayıcılarında çalıştırın istiyoruz uygulama için bir ASP.NET Core Docker örnek uygulama kullanma olanak tanır. Bu ASP.NET Core Docker örnek uygulama, Docker görüntüleri için ASP.NET Core için üretim uygulamaları oluşturmaya yönelik en iyi bir uygulama desenini gösterir. Örnek, hem Linux hem de Windows kapsayıcıları ile çalışır.
 
-Dockerfile örnek dışına ASP.NET çekirdeği çalışma zamanı Docker temel görüntü tabanlı bir ASP.NET Core uygulama Docker görüntüsü oluşturur.
+Örnek Dockerfile, ASP.NET Core çalışma zamanı Docker temel görüntüsünde alanlarını temel alan bir ASP.NET Core uygulamasını Docker görüntü oluşturur.
 
-Kullandığı [Docker çok aşama yapı özelliği](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) için:
+Kullandığı [Docker çok aşamalı yapı özelliği](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) için:
 
-* bağlı bir kapsayıcıdaki örneği oluşturmak **büyük** ASP.NET Core yapı Docker temel görüntüsü 
-* temel bir Docker görüntüye son derleme sonucu kopyalar **küçük** ASP.NET çekirdeği Docker çalışma zamanı temel görüntüsü
+* temel bir kapsayıcıda örneği oluşturmak **büyük** ASP.NET Core derleme Docker temel görüntüsünde 
+* temel bir Docker görüntüsü son yapı sonucu kopyalar **daha küçük** ASP.NET Core Docker çalışma zamanı temel görüntü
 
 > [!NOTE]
-> Yapı görüntüsü çalışma zamanı görüntü çalışmazken uygulamaları geliştirmek için gerekli araçları içerir.
+> Derleme görüntü, çalışma zamanı yansıma çalışmazken uygulamaları geliştirmek için gerekli araçları içerir.
 
 ### <a name="prerequisites"></a>Önkoşullar
 
-Derlemek ve çalıştırmak için aşağıdaki öğeleri yükleyin:
+Derlemek ve çalıştırmak için aşağıdakileri yükleyin:
 
 #### <a name="net-core-21-sdk"></a>.NET core 2.1 SDK'sı
 
-* Yükleme [.NET Core SDK 2.1](https://www.microsoft.com/net/core).
+* Yükleme [.NET Core SDK'sını 2.1](https://www.microsoft.com/net/core).
 
-* Henüz yapmadıysanız, sık kullanılan kod düzenleyicisinde yükleyin.
+* Henüz yapmadıysanız, sık kullandığınız kod düzenleyicinize yükleyin.
 
 > [!TIP]
-> Kod Düzenleyicisi yüklemeniz gerekiyor? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
+> Bir kod Düzenleyicisi'ni yüklemeniz gerekir? Deneyin [Visual Studio](https://visualstudio.com/downloads)!
 
 #### <a name="installing-docker-client"></a>Docker istemcisi yükleme
 
-Yükleme [Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki.
+Yükleme [Docker 18.03](https://docs.docker.com/release-notes/docker-ce/) veya Docker istemcinin sonraki bir sürümü.
 
-Docker istemci yüklenebilir:
+Docker istemcisi yüklenebilir:
 
 * Linux dağıtımları
 
@@ -131,25 +142,25 @@ Docker istemci yüklenebilir:
 
 * [Windows](https://docs.docker.com/docker-for-windows/).
 
-#### <a name="installing-git-for-sample-repository"></a>Örnek depo için Git yükleme
+#### <a name="installing-git-for-sample-repository"></a>Örnek deposu için Git yükleme
 
-* Yükleme [git](https://git-scm.com/download) depoyu kopyalayın istiyorsanız.
+* Yükleme [git](https://git-scm.com/download) depoyu kopyalamak istiyorsanız.
 
-### <a name="getting-the-sample-application"></a>Örnek uygulama alma
+### <a name="getting-the-sample-application"></a>Örnek uygulamayı alma
 
-Kopyalama işlemi tarafından örnek almak için en kolay yolu olan [.NET Core Docker depo](https://github.com/dotnet/dotnet-docker) git ile aşağıdaki yönergeleri kullanarak: 
+Kopyalayarak örnek almak için en kolay yolu olan [.NET Core Docker deposunda](https://github.com/dotnet/dotnet-docker) git ile aşağıdaki yönergeleri kullanarak: 
 
 ```console
 git clone https://github.com/dotnet/dotnet-docker
 ```
 
-.NET Core Docker depodan bir zip olarak (küçük) deposu de indirebilirsiniz.
+(Küçük) depo, .NET Core Docker depodan bir zip olarak da indirebilirsiniz.
 
-### <a name="run-the-aspnet-app-locally"></a>ASP.NET uygulama yerel olarak çalıştırma
+### <a name="run-the-aspnet-app-locally"></a>ASP.NET uygulamasını yerel olarak çalıştırma
 
-Biz uygulama containerize önce bir başvuru noktası için ilk uygulama yerel olarak çalıştırın.
+Biz uygulamayı kapsayıcılı hale getirme önce bir başvuru noktası için öncelikle uygulamayı yerel olarak çalıştırın.
 
-Derleme ve uygulamayı .NET Core 2.1 (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak SDK ile yerel olarak çalıştırın:
+Derleme ve uygulamayı yerel olarak .NET Core 2.1 (depo kökünde yönergeleri olduğunu varsayın) aşağıdaki komutları kullanarak SDK ile çalıştırın:
 
 ```console
 cd dotnet-docker
@@ -164,7 +175,7 @@ Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıc�
 
 ### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>Derleme ve örnek Linux kapsayıcıları için Docker ile çalıştırma
 
-Derleme ve örnek (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak Linux kapsayıcıları kullanma Docker içinde çalıştırın:
+Derleme ve Docker (depo kökünde yönergeleri olduğunu varsayın) aşağıdaki komutları kullanarak Linux kapsayıcıları kullanarak örneği çalıştırın:
 
 ```console
 cd dotnet-docker
@@ -176,13 +187,13 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
 > [!NOTE]
-> `docker run` '-P' bağımsız değişkeni eşlemeleri bağlantı noktası 5000 kapsayıcının 80 numaralı bağlantı noktasına yerel makinenizde (bağlantı noktası eşleme form `host:container`). Daha fazla bilgi için bkz: [çalıştırmak docker](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri başvuru.
+> `docker run` '-P' bağımsız değişkeni haritalar 5000 kapsayıcının 80 numaralı bağlantı noktasına yerel makinenizde bağlantı noktası (bağlantı noktası eşleme formu `host:container`). Daha fazla bilgi için [docker run](https://docs.docker.com/engine/reference/commandline/exec/) başvuru komut satırı parametreleri.
 
 Uygulama başlatıldıktan sonra ziyaret **http://localhost:5000** web tarayıcınızda.
 
-### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>Derleme ve örnek ile Windows için Docker kapsayıcıları çalıştırma
+### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>Derleme ve örnek için Docker Windows kapsayıcıları ile çalıştırma
 
-Derleme ve örnek (yönergeleri depo kök varsayılmıştır) aşağıdaki komutları kullanarak Windows kapsayıcıları kullanma Docker içinde çalıştırın:
+Derleme ve Docker (depo kökünde yönergeleri olduğunu varsayın) aşağıdaki komutları kullanarak Windows kapsayıcıları kullanarak örneği çalıştırın:
 
 ```console
 cd dotnet-docker
@@ -194,17 +205,17 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> İçin gezinmesi gereken **kapsayıcı IP adresi** (tersine http://localhost) doğrudan tarayıcınızda Windows kapsayıcıları kullanırken. Aşağıdaki adımlarla, kapsayıcı IP adresini elde edebilirsiniz:
+> İçin gezinmesi gereken **kapsayıcı IP adresi** (başlangıcı yerine sonundan http://localhost) doğrudan tarayıcınızda Windows kapsayıcıları kullanırken. Aşağıdaki adımlarla kapsayıcınızı IP adresini alabilirsiniz:
 
 * Başka bir komut istemi açın.
-* Çalıştırma `docker ps` çalışan kapsayıcıları görmek için. "Aspnetcore_sample" kapsayıcı olması.
+* Çalıştırma `docker ps` , çalışan kapsayıcıları görmek için. "Aspnetcore_sample" kapsayıcı olması.
 * Çalıştırma `docker exec aspnetcore_sample ipconfig`.
-* Kapsayıcı IP adresi kopyalayıp tarayıcınıza (örneğin, 172.29.245.43).
+* Kapsayıcı IP adresini kopyalayıp tarayıcınıza (örneğin, 172.29.245.43).
 
 > [!NOTE]
-> Docker exec adı ya da karma ile tanımlayıcı kapsayıcıları destekler. Bizim örneğimizde (aspnetcore_sample) adı kullanılır.
+> Docker exec adı ya da karma değeri ile tanımlama kapsayıcıları destekler. Bizim örneğimizde (aspnetcore_sample) adı kullanılır.
 
-Çalışan bir Windows kapsayıcısının IP adresini almak nasıl aşağıdaki örneğe bakın.
+Çalışan bir Windows kapsayıcısına IP adresini alma, aşağıdaki örneğe bakın.
 
 ```console
 docker exec aspnetcore_sample ipconfig
@@ -221,16 +232,16 @@ Ethernet adapter Ethernet:
 ```
 
 > [!NOTE]
-> Docker exec çalışan bir kapsayıcıda yeni bir komut çalıştırır. Daha fazla bilgi için bkz: [docker exec başvuru](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri.
+> Docker exec çalışan bir kapsayıcıda yeni bir komut çalıştırır. Daha fazla bilgi için [docker exec başvuru](https://docs.docker.com/engine/reference/commandline/exec/) komut satırı parametreleri.
 
-Kullanarak yerel olarak üretime dağıtmaya hazır bir uygulama oluşturmak üzere [dotnet yayımlama](../tools/dotnet-publish.md) komutu.
+Yerel olarak kullanarak üretime dağıtmaya hazır bir uygulama oluşturabilir [dotnet yayımlama](../tools/dotnet-publish.md) komutu.
 
 ```console
 dotnet publish -c Release -o published
 ```
 
 > [!NOTE]
-> - C yayın bağımsız değişkeni uygulama yayın modunda (hata ayıklama modu varsayılandır) oluşturur. Daha fazla bilgi için bkz: [dotnet çalıştırmak başvuru](../tools/dotnet-run.md) komut satırı parametreleri.
+> - C sürüm bağımsız uygulamayı (hata ayıklama modu varsayılandır) yayın modunda oluşturur. Daha fazla bilgi için [dotnet çalıştırma başvuru](../tools/dotnet-run.md) komut satırı parametreleri.
 
 Uygulamayı çalıştırmak **Windows** aşağıdaki komutu kullanarak.
 
@@ -246,29 +257,28 @@ dotnet published/aspnetapp.dll
 
 ### <a name="docker-images-used-in-this-sample"></a>Bu örnekte kullanılan docker görüntüleri
 
-Aşağıdaki Docker görüntüleri Bu örnek 's dockerfile kullanılır.
+Bu örnek 's dockerfile içinde aşağıdaki Docker görüntüleri kullanılır.
 
 * `microsoft/dotnet:2.1-sdk`
 * `microsoft/dotnet:2.1-aspnetcore-runtime`
 
 Tebrikler! yalnızca gerekir:
 > [!div class="checklist"]
-> * Microsoft .NET Core Docker görüntüler hakkında öğrendiniz
-> * Bir ASP.NET Core Dockerize için örnek uygulama var
-> * ASP.NET örnek uygulamayı yerel olarak çalışan
-> * Yerleşik ve örnek Docker ile Linux kapsayıcıları için çalıştı.
-> * Yerleşik ve örnek ile Windows için Docker kapsayıcıları çalıştı
-
+> * Microsoft .NET Core Docker görüntüleri hakkında bilgi edindiniz
+> * Bir ASP.NET Core Dockerize örnek uygulaması alındı
+> * Örnek ASP.NET uygulamasını yerel olarak çalıştı
+> * Yerleşik ve örnek Linux kapsayıcıları için Docker ile çalıştırıldı.
+> * Yerleşik ve örnek için Docker Windows kapsayıcıları ile çalıştırıldı
 
 **Sonraki adımlar**
 
-Uygulayabileceğiniz bazı sonraki adımlar şunlardır:
+Gerçekleştirebileceğiniz bazı sonraki adımlar şunlardır:
 
 * [Visual Studio Docker araçları ile çalışma](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
-* [Azure kapsayıcı örneklerine Azure kapsayıcı kayıt defterinden Docker görüntüleri dağıtma](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
-* [Visual Studio Code ile hata ayıklama](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
-* [Ellere Visual Studio ile Mac, kapsayıcıları ve sunucusuz kodu bulutta hakkında alma](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
+* [Docker görüntülerini Azure Container registry'den Azure Container ınstances'a dağıtma](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
+* [Visual Studio kodu ile hata ayıklama](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
+* [Bire bir Visual Studio ile Mac, kapsayıcılar ve sunucusuz kod için bulutta hakkında edinme](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Mac Laboratuvar için Docker ve Visual Studio ile çalışmaya başlama](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
 > [!NOTE]
-> Bir Azure aboneliğiniz yoksa [bugün kaydolun](https://azure.microsoft.com/free/?b=16.48) Ücretsiz 30 günlük hesabı ve Azure Hizmetleri herhangi bir bileşimini denemek için Azure KREDİLERİ 200 ABD Doları alın.
+> Azure aboneliğiniz yoksa [hemen kaydolun](https://azure.microsoft.com/free/?b=16.48) 30 günlük ücretsiz hesabı ve get 200 ABD Doları değerinde Azure kredisi, out Azure Hizmetleri, herhangi bir birleşimini denemek için.

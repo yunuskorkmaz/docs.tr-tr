@@ -14,51 +14,56 @@ ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96c0c898f103c058c370a0d108568056b1ff8196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33586584"
 ---
-# <a name="creating-threads-and-passing-data-at-start-time"></a>Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme
-Bir işletim sistemi işlem oluşturulduğunda, işletim sistemi herhangi bir özgün uygulama etki alanı dahil olmak üzere bu işlemde kod yürütmek için bir iş parçacığı yerleştirir. Bu noktadan itibaren uygulama etki alanları oluşturulur ve mutlaka oluşturulma veya yok tüm işletim sistemi iş parçacıkları yok. Yürütülen kod yönetiliyorsa kod, sonra bir <xref:System.Threading.Thread> geçerli uygulama etki alanında iş parçacığının statik alarak elde edilebilir için nesne <xref:System.Threading.Thread.CurrentThread%2A> türündeki özelliği <xref:System.Threading.Thread>. Bu konu, iş parçacığı oluşturma açıklar ve iş parçacığı yordamı veri geçirme için seçenekleri açıklar.  
+# <a name="creating-threads-and-passing-data-at-start-time"></a>İş parçacığı oluşturma ve başlatma zamanında veri geçirme
+
+İşletim sistemi, bir işletim sistemi işlem oluşturulduğunda, özgün tüm uygulama etki alanı da dahil olmak üzere bu işlemde kod yürütmek için bir iş parçacığı ekler. Bu noktadan itibaren uygulama etki alanları oluşturulabilir ve mutlaka yok veya oluşturulan tüm işletim sistemleri iş parçacıkları yok. Yürütülen kod yönetilen kod, bir <xref:System.Threading.Thread> parçacığının geçerli uygulama etki alanında statik alarak elde edilebilir nesnesi <xref:System.Threading.Thread.CurrentThread%2A> türünün özelliği <xref:System.Threading.Thread>. Bu konu, iş parçacığı oluşturma açıklar ve iş parçacığı yordamı için verileri geçirmek için seçenekleri açıklar.  
   
-## <a name="creating-a-thread"></a>Bir iş parçacığı oluşturma  
- Yeni bir oluşturma <xref:System.Threading.Thread> yeni bir yönetilen iş parçacığı nesnesi oluşturur. <xref:System.Threading.Thread> Sınıfına sahip olması oluşturucular bir <xref:System.Threading.ThreadStart> temsilci veya <xref:System.Threading.ParameterizedThreadStart> temsilci; çağırdığınızda yeni iş parçacığı tarafından çağrılan yöntemin temsilci sarmalar <xref:System.Threading.Thread.Start%2A> yöntemi. Çağırma <xref:System.Threading.Thread.Start%2A> birden çok kez neden olan bir <xref:System.Threading.ThreadStateException> oluşturulmasına.  
+## <a name="creating-a-thread"></a>Bir iş parçacığı oluşturma
+
+ Yeni bir oluşturma <xref:System.Threading.Thread> yeni bir yönetilen iş parçacığı nesnesi oluşturur. <xref:System.Threading.Thread> Sınıfında alan oluşturucular bir <xref:System.Threading.ThreadStart> temsilci veya <xref:System.Threading.ParameterizedThreadStart> temsilci; çağırdığınızda, yeni iş parçacığı tarafından çağrılan yöntem temsilciye sarmalar <xref:System.Threading.Thread.Start%2A> yöntemi. Çağırma <xref:System.Threading.Thread.Start%2A> birden çok kez neden olan bir <xref:System.Threading.ThreadStateException> oluşturulması için.  
   
- <xref:System.Threading.Thread.Start%2A> Yöntemi, hemen, genellikle yeni bir iş parçacığı gerçekten başlatılmadan önce döndürür. Kullanabileceğiniz <xref:System.Threading.Thread.ThreadState%2A> ve <xref:System.Threading.Thread.IsAlive%2A> iş parçacığı herhangi bir anda durumunu belirlemek için özellikler, ancak bu özellikler hiçbir iş parçacığı etkinliklerini eşitlemek için kullanılmalıdır.  
+ <xref:System.Threading.Thread.Start%2A> Yöntemi, hemen, genellikle yeni iş parçacığı gerçekten başlatılmadan önce döndürür. Kullanabileceğiniz <xref:System.Threading.Thread.ThreadState%2A> ve <xref:System.Threading.Thread.IsAlive%2A> herhangi bir anda iş parçacığı durumunu belirlemek için özellikleri, ancak bu özellikler hiçbir zaman iş parçacıklarının etkinlikleri eşitlemek için kullanılmamalıdır.  
   
 > [!NOTE]
->  Bir iş parçacığı başladıktan sonra bir başvuru korumak gerekli değildir <xref:System.Threading.Thread> nesnesi. İş parçacığı için iş parçacığı yordamı sonlanana kadar yürütmeye devam eder.  
+> Bir iş parçacığı başlatıldıktan sonra bir başvuru korumak gerekli değildir <xref:System.Threading.Thread> nesne. İş parçacığının iş parçacığı yordamı sonlandırılana kadar yürütmeye devam eder.  
   
- Aşağıdaki kod örneği başka bir nesne üzerinde örnek ve statik yöntemleri çağırmak için iki yeni iş parçacığı oluşturur.  
+ Aşağıdaki kod örneği, örnek ve statik yöntemler, başka bir nesne üzerinde çağırmak için iki yeni iş parçacığı oluşturur.  
   
  [!code-cpp[System.Threading.ThreadStart2#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.ThreadStart2#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source2.cs#2)]
  [!code-vb[System.Threading.ThreadStart2#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source2.vb#2)]  
   
-## <a name="passing-data-to-threads-and-retrieving-data-from-threads"></a>İş parçacıklarına veri geçirme ve parçacıklarından veri alma  
- .NET Framework sürüm 2.0, <xref:System.Threading.ParameterizedThreadStart> temsilci çağırdığınızda bir iş parçacığı verileri içeren bir nesne geçirmek için kolay bir yol sağlar <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini. Bkz: <xref:System.Threading.ParameterizedThreadStart> için bir kod örneğidir.  
+## <a name="passing-data-to-threads"></a>İş parçacıklarına veri geçirme
+
+ .NET Framework sürüm 2.0 <xref:System.Threading.ParameterizedThreadStart> temsilci çağırdığınızda, bir iş parçacığına veri içeren bir nesne geçirmek için kolay bir yol sağlar <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesi. Bkz: <xref:System.Threading.ParameterizedThreadStart> kod örneği için.  
   
- Kullanarak <xref:System.Threading.ParameterizedThreadStart> temsilci değil veri iletmek için bir tür kullanımı uyumlu şekilde çünkü <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini kabul eden herhangi bir nesne. İş parçacığı yordamı ve bir yardımcı sınıfı verileri şifreleyebilir ve kullanmak için bir alternatif olan <xref:System.Threading.ThreadStart> iş parçacığı yordamı yürütmek için temsilci. Bu teknik izleyen iki kod örnekleri gösterilir.  
-  
- Hiçbirini temsilcileri olan dönüş değeri, zaman uyumsuz çağrısından verileri döndürmek için hiçbir yerde olduğundan. Bir iş parçacığı yöntem sonuçlarını almak için ikinci kod örneğinde gösterildiği gibi bir geri çağırma yöntemi kullanabilirsiniz.  
-  
+ Kullanarak <xref:System.Threading.ParameterizedThreadStart> temsilci değil veri iletmek için tür açısından güvenli bir şekilde çünkü <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi aşırı yüklemesini kabul eden herhangi bir nesne. İş parçacığı yordamı ve yardımcı bir sınıf içindeki verileri kapsüllemek ve kullanmak için bir alternatifidir <xref:System.Threading.ThreadStart> iş parçacığı yordamı yürütmek için temsilci. Aşağıdaki örnek, bu tekniği gösterir:
+
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
  [!code-vb[System.Threading.ThreadStart2#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source3.vb#3)]  
+
+Ne <xref:System.Threading.ThreadStart> ya da <xref:System.Threading.ParameterizedThreadStart> temsilcinin dönüş değeri, zaman uyumsuz bir çağrıdan dönüş verileri bir yer olduğundan. Bir iş parçacığı yöntem sonuçlarını almak için sonraki bölümde gösterildiği gibi bir geri çağırma yöntemi kullanabilirsiniz.
   
-### <a name="retrieving-data-with-callback-methods"></a>Geri arama yöntemleri ile veri alma  
- Aşağıdaki örnek, bir iş parçacığından veri alan geri arama yöntemi gösterir. Verileri ve iş parçacığı yöntemi içeren sınıf oluşturucusu geri çağırma yöntemi temsil eden bir temsilci de kabul eder; iş parçacığı yöntemi sona ermeden önce geri çağırma temsilcisini çağırır.  
+## <a name="retrieving-data-from-threads-with-callback-methods"></a>Geri çağırma yöntemleri ile parçacıklarından veri alma
+
+ Aşağıdaki örnek, bir iş parçacığından verileri alan bir geri arama yöntemi gösterir. Verileri ve iş parçacığı yöntemi içeren sınıf için oluşturucu, aynı zamanda geri çağırma yöntemi temsil eden bir temsilci kabul eder; iş parçacığı yöntemi sona ermeden önce geri çağırma temsilcisini çağırır.  
   
  [!code-cpp[System.Threading.ThreadStart2#4](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source4.cpp#4)]
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
+
  <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadStart>  
  <xref:System.Threading.ParameterizedThreadStart>  
  <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)  
- [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](../../../docs/standard/threading/using-threads-and-threading.md)
+ [İş parçacığı oluşturma](index.md)  
+ [İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma](using-threads-and-threading.md)
