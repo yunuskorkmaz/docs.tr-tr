@@ -119,11 +119,11 @@ WCF Veri Hizmetleri'nin bir bileşeni olan [!INCLUDE[dnprdnshort](../../../inclu
  **xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<Başlık türü = "text" > siparişler \< /title >**  
- **\<Kimliği >http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI') / Orders\</ID >**  
+ **\<Kimliği>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</ID>**  
  **\<güncelleştirilmiş > 2010-05-19T19:37:07Z\</ güncelleştirilen >**  
  **\<link rel = "İç" title = "Siparişler" href = "Siparişler" = / >**  
  **\<Giriş >**  
- **\<Kimliği >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
+ **\<Kimliği>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<Başlık türü = "text" > \< /title >**  
  **\<güncelleştirilmiş > 2010-05-19T19:37:07Z\</ güncelleştirilen >**  
  **\<Yazar >**  
