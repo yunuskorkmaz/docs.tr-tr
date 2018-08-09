@@ -6,14 +6,14 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33602742"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;dahil&gt; (Visual Basic)
-Türleri ve kaynak kodunuzu üyeleri tanımlayan başka bir dosyaya başvuruyor.  
+Türler ve üyeler, kaynak kodunuzdaki açıklayan başka bir dosyaya ifade eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,28 +23,28 @@ Türleri ve kaynak kodunuzu üyeleri tanımlayan başka bir dosyaya başvuruyor.
   
 #### <a name="parameters"></a>Parametreler  
  `filename`  
- Gerekli. Belgeleri içeren dosyanın adı. Dosya adı nitelenmiş bir yol olmalıdır. İçine `filename` çift tırnak işaretleri ("").  
+ Gerekli. Belgeleri içeren dosyanın adı. Dosya adını içeren bir yol nitelenmiş olmalıdır. İçine `filename` çift tırnak işaretleri ("").  
   
  `tagpath`  
- Gerekli. Etiketleri yolunu `filename` etikete müşteri adayları `name`. Yolu çift tırnak işaretleri içine alın ("").  
+ Gerekli. Etiketleri yolunu `filename` etikete müşteri adayları `name`. Yolu, çift tırnak işaretleri içine alın ("").  
   
  `name`  
- Gerekli. Açıklamaları önündeki etiketinde ad tanımlayıcısı. `Name` sahip bir `id`.  
+ Gerekli. Yorumları önündeki etiketinde ad tanımlayıcısı. `Name` sahip bir `id`.  
   
  `id`  
- Gerekli. Açıklamaları önündeki etiket kimliği. Kimliği tek tırnak işaretleri içine alın (' ').  
+ Gerekli. Yorumları önünde etiket kimliği. Kimliği tek tırnak işaretleri içine (' ').  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<include>` etiketi başka bir dosya türlerini tanımlamak açıklamaları ve kaynak kodunuzu üyelerinde bakın. Bu belge açıklamaları doğrudan, kaynak kodu dosyasına yerleştirerek alternatiftir.  
+ Kullanım `<include>` türlerini açıklayan yorumlar başka bir dosyaya ve kaynak kodunuzu üyelerine başvurmak için etiket. Bu belge açıklamaları doğrudan, kaynak kodu dosyasında yerleştirme için bir alternatifidir.  
   
- `<include>` Etiketini W3C XML Path dili (XPath) sürüm 1.0 öneri kullanır. Daha fazla bilgi için özelleştirme yolları, `<include>` kullanın, şu adreste http://www.w3.org/TR/xpath.  
+ `<include>` Etiketini kullanır: W3C XML Path Language (XPath) sürüm 1.0 öneri. Daha fazla bilgi için özelleştirme yolları, `<include>` kullanım kullanılabilir http://www.w3.org/TR/xpath.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<include>` üye belge açıklamaları olarak adlandırılan bir dosyadan içeri aktarmak için etiket `commentFile.xml`.  
+ Bu örnekte `<include>` belge açıklamaları üye adlı bir dosyadan içeri aktarmak için etiket `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- Biçimi `commentFile.xml` aşağıdaki gibidir.  
+ Biçimi `commentFile.xml` gibidir.  
   
 ```xml  
 <Docs>  

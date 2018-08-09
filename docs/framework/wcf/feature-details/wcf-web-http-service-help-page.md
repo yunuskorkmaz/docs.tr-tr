@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500958"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] bir otomatik Yardım sayfası için WCF WEB HTTP Hizmetleri sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemaları açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı için bir WCF WEB HTTP hizmeti gözatar ve ekler "/ Yardım" Örneğin URL'nin sonuna açın http://localhost:8000/Customers/Help, aşağıda gösterilen gibi bir Yardım sayfası.  

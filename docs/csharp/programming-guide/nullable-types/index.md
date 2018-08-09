@@ -1,65 +1,65 @@
 ---
-title: Boş Değer Atanabilir Türler (C# Programlama Kılavuzu)
-ms.date: 05/15/2017
+title: Boş değer atanabilir türler (C# programlama Kılavuzu)
+description: C# boş değer atanabilir türleri ve bunların nasıl kullanıldığı hakkında bilgi edinin
+ms.date: 07/30/2018
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "39245602"
 ---
-# <a name="nullable-types-c-programming-guide"></a>Boş Değer Atanabilir Türler (C# Programlama Kılavuzu)
-Boş değer atanabilir türler örnekleridir <xref:System.Nullable%601?displayProperty=nameWithType> yapısı. Boş değer atanabilir bir tür değerleri kendi temel değer türü artı ek için doğru aralığı temsil edebilen `null` değeri. Örneğin, bir `Nullable<Int32>`, okunur "Boş değer atanabilir, Int32," atanabilir herhangi bir değer -2147483648 2147483647 için veya bu atanabilir `null` değeri. A `Nullable<bool>` değerler atanabilir [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), veya [null](../../../csharp/language-reference/keywords/null.md). Atama özelliği `null` veritabanları ve bir değer atanamaz öğeleri içeren diğer veri türleri ile ilgilenirken sayısal ve Boolean türleri için özellikle yararlıdır. Örneğin, bir veritabanında bir Boole alanı değerleri depolayabilir `true` veya `false`, ya da tanımlanmamış olabilir. 
+# <a name="nullable-types-c-programming-guide"></a>Boş değer atanabilir türler (C# programlama Kılavuzu)
+
+Boş değer atanabilir türler örnekleridir <xref:System.Nullable%601?displayProperty=nameWithType> yapısı. Boş değer atanabilir türler bir temel türünün tüm değerleri temsil eden `T`ve ek [null](../../language-reference/keywords/null.md) değeri. Temel alınan türü `T` alamayan herhangi olabilir [değer türü](../../language-reference/keywords/value-types.md). `T` bir başvuru türü olamaz.
+
+Örneğin, atayabilirsiniz `null` veya tamsayı değerdeki <xref:System.Int32.MinValue?displayProperty=nameWithType> için <xref:System.Int32.MaxValue?displayProperty=nameWithType> için bir `Nullable<int>` ve [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md), veya `null` için bir `Nullable<bool>`.
+
+Boş değer atanabilir bir tür, bir temel türü tanımlanmamış değerini temsil etmek, ihtiyacınız olduğunda kullanın. Bir Boolean değişkeni yalnızca iki değere sahip olabilir: true ve false. "Tanımlanmamış" değer yoktur. Birçok programlama uygulamada, bir değişken değeri en önemlisi veritabanı etkileşimleri tanımsız veya eksik olabilir. Örneğin, bir veritabanındaki bir alanı true veya false değerleri içerebilir veya hiç değer içerebilir. Kullandığınız bir `Nullable<bool>` durumda yazın.
+
+Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:
   
-[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+- Boş değer atanabilir türleri temsil eden atanabilir değer türü değişkenler `null` değeri. Bir başvuru türüne göre boş değer atanabilir bir tür oluşturulamıyor. (Başvuru türleri halihazırda desteklediği `null` değeri.)  
   
-Daha fazla örnek için bkz. [boş değer atanabilir türleri kullanma](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+- Söz dizimi `T?` için toplu özelliktir `Nullable<T>`. İki tür birbirinin yerine kullanılabilir.  
   
-## <a name="nullable-types-overview"></a>Boş değer atanabilir türler genel bakış  
- Boş değer atanabilir türler aşağıdaki özelliklere sahiptir:  
+- Temel alınan bir değer türü için yaptığınız gibi boş değer atanabilir bir tür için bir değer atayın: `int? x = 10;` veya `double? d = 4.108;`. Ayrıca atayabilirsiniz `null` değer: `int? x = null;`.  
   
--   Boş değer atanabilir türleri temsil eden değeri atanabilir bir değer türü değişkenler `null`. Bir başvuru türüne göre boş değer atanabilir bir tür oluşturulamıyor. (Başvuru türleri halihazırda desteklediği `null` değeri.)  
+- Kullanım <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> ve <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> salt okunur özellikler için null test etmek ve değerini, aşağıdaki örnekte gösterildiği gibi almak için: `if (x.HasValue) y = x.Value;`  
   
--   Söz dizimi `T?` için toplu özelliktir <xref:System.Nullable%601>burada `T` bir değer türüdür. İki tür birbirinin yerine kullanılabilir.  
+  - <xref:System.Nullable%601.HasValue%2A> Özelliği döndürür `true` değişken bir değer içeriyorsa veya `false` ise `null`.
   
--   Sıradan değer türü için örneğin olduğu gibi boş değer atanabilir bir tür için bir değer atamak `int? x = 10;` veya `double? d = 4.108;`. Boş değer atanabilir bir tür, değer atanabilir `null`: `int? x = null;`.  
+  - <xref:System.Nullable%601.Value%2A> Özelliği, bir değer döndürür <xref:System.Nullable%601.HasValue%2A> döndürür `true`. Aksi takdirde, bir <xref:System.InvalidOperationException> oluşturulur.  
   
--   Kullanım <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> atanan değer veya varsayılan değeri temel alınan türü için değer ise döndürülecek yöntemi `null`, örneğin `int j = x.GetValueOrDefault();`  
+- Ayrıca `==` ve `!=` işleçleri aşağıdaki örnekte gösterildiği gibi boş değer atanabilir bir tür ile: `if (x != null) y = x.Value;`. Varsa `a` ve `b` her ikisi de null olan `a == b` değerlendiren `true`.  
+
+- C# 7.0 ile başlayarak, desen eşleştirme hem incelemek ve boş değer atanabilir bir tür değerini almak için kullanabilirsiniz: `if (x is int xValue) y = xValue;`.
   
--   Kullanım <xref:System.Nullable%601.HasValue%2A> ve <xref:System.Nullable%601.Value%2A> salt okunur özellikler için null test etmek ve değerini, aşağıdaki örnekte gösterildiği gibi almak için: `if(x.HasValue) j = x.Value;`  
+- Varsayılan değer olan `T?` bir örneği olan <xref:System.Nullable%601.HasValue%2A> özelliği döndürür `false`.  
+
+- Kullanım <xref:System.Nullable%601.GetValueOrDefault> ya da atanan değer döndürmek için yöntemi veya [varsayılan](../../language-reference/keywords/default-values-table.md) değer boş değer atanabilir türde ise temel değer türünün `null`.  
+
+- Kullanım <xref:System.Nullable%601.GetValueOrDefault(%600)> atanan değer veya sağlanan varsayılan değer boş değer atanabilir tür değeri ise döndürülecek yöntemi `null`.
   
-    -   `HasValue` Özelliği döndürür `true` değişken bir değer içeriyorsa veya `false` ise `null`.  
+- Kullanım [null birleşim işleci](../../language-reference/operators/null-coalescing-operator.md), `??`, boş değer atanabilir türde bir değere göre bir temel türü bir değer atamak için: `int? x = null; int y = x ?? -1;`. Örnekte, bu yana `x` null, sonuç değeri olan `y` olduğu `-1`.
+
+- Bir kullanıcı tanımlı dönüştürme iki veri türleri arasında tanımlıysa, bu veri türlerini boş değer atanabilir sürümleriyle aynı dönüştürme de kullanılabilir.
   
-    -   `Value` Atanırsa, bir özellik değeri döndürür. Aksi takdirde, bir <xref:System.InvalidOperationException?displayProperty=nameWithType> oluşturulur.  
+- İç içe geçmiş boş değer atanabilir türler izin verilmez. Aşağıdaki satırı derleme değil: `Nullable<Nullable<int>> n;`  
+
+Daha fazla bilgi için [boş değer atanabilir türleri kullanma](using-nullable-types.md) ve [nasıl yapılır: boş değer atanabilir bir tür belirleme](how-to-identify-a-nullable-type.md) konuları.
   
-    -   İçin varsayılan değer `HasValue` olduğu `false`. `Value` Özelliği varsayılan değere sahip.  
-  
-    -   Ayrıca `==` ve `!=` işleçleri aşağıdaki örnekte gösterildiği gibi boş değer atanabilir bir tür ile: `if (x != null) y = x;`  
-  
--   Kullanım `??` geçerli değeri null yapılabilir bir tür olduğunda uygulanacak bir varsayılan değer atamak için işleç `null` alamayan bir tür için örneğin atanır `int? x = null; int y = x ?? -1;`  
-  
--   İç içe geçmiş boş değer atanabilir türler izin verilmez. Aşağıdaki satırı derlemeyecektir: `Nullable<Nullable<int>> n;`  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- Daha fazla bilgi için:  
-  
--   [Boş Değer Atanabilir Tipleri Kullanma](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
-  
--   [Boş Değer Atanabilir Tipleri Kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
-  
--   [?? İşleç](../../../csharp/language-reference/operators/null-coalescing-operator.md)  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Nullable>  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md)  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [Tam olarak 'yükseltilmiş' ne demektir?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+## <a name="see-also"></a>Ayrıca bkz.
+
+ <xref:System.Nullable%601?displayProperty=nameWithType>  
+ <xref:System.Nullable?displayProperty=nameWithType>  
+ [?? İşleç](../../language-reference/operators/null-coalescing-operator.md)  
+ [C# Programlama Kılavuzu](../index.md)  
+ [C# Kılavuzu](../../index.md)  
+ [C# başvurusu](../../language-reference/index.md)  
+ [Boş değer atanabilen değer türleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
