@@ -45,7 +45,7 @@ HRESULT Merge (
  [in] Bir işaretçi bir [Imaptoken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) belirteci yeniden eşleme belirtir nesnesi.  
   
  `pHandleer`  
- [in] Bir işaretçi bir <!--<<!--zzxref:IUnknown --> `IUnknown` >-->  `IUnknown` hataları belirten nesne.  
+ [in] Bir işaretçi bir <!--<<!--zzxref:IUnknown --> `IUnknown`>--> `IUnknown` hataları belirten nesne.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Çağrı [Imetadataemit::mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) birleşme meta verilerin tek bir kapsam tetiklemek için.  
