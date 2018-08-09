@@ -1,105 +1,174 @@
 ---
 title: Tür Uzantıları (F#)
-description: 'Önceden tanımlanmış nesne türü için yeni üye eklemek F # tür uzantıları nasıl izin öğrenin.'
-ms.date: 05/16/2016
+description: 'Bir önceden tanımlanmış nesne türü için yeni üyeler eklemek, F # tür uzantıları nasıl izin öğrenin.'
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566892"
 ---
-# <a name="type-extensions"></a><span data-ttu-id="de069-103">Tür Uzantıları</span><span class="sxs-lookup"><span data-stu-id="de069-103">Type Extensions</span></span>
+# <a name="type-extensions"></a><span data-ttu-id="0fa0b-103">Tür uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-103">Type extensions</span></span>
 
-<span data-ttu-id="de069-104">Tür uzantıları önceden tanımlanmış nesne türü için yeni üyeler eklemenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="de069-104">Type extensions let you add new members to a previously defined object type.</span></span>
+<span data-ttu-id="0fa0b-104">Tür Uzantıları (olarak da adlandırılan _genişletmelerinde_) olan bir aile özelliklerinin bir önceden tanımlanmış nesne türü için yeni üye eklemenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-104">Type extensions (also called _augmentations_) are a family of features that let you add new members to a previously defined object type.</span></span> <span data-ttu-id="0fa0b-105">Üç özellikleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-105">The three features are:</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="de069-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="de069-105">Syntax</span></span>
+* <span data-ttu-id="0fa0b-106">İç tür uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-106">Intrinsic type extensions</span></span>
+* <span data-ttu-id="0fa0b-107">İsteğe bağlı türü uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-107">Optional type extensions</span></span>
+* <span data-ttu-id="0fa0b-108">Genişletme yöntemleri</span><span class="sxs-lookup"><span data-stu-id="0fa0b-108">Extension methods</span></span>
+
+<span data-ttu-id="0fa0b-109">Her farklı senaryolarda kullanılabilir ve farklı Artıları ve eksileri vardır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-109">Each can be used in different scenarios and has different tradeoffs.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="0fa0b-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0fa0b-110">Syntax</span></span>
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="de069-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="de069-106">Remarks</span></span>
-<span data-ttu-id="de069-107">Biraz farklı bir sözdizimi ve davranış türü uzantıları iki tür vardır.</span><span class="sxs-lookup"><span data-stu-id="de069-107">There are two forms of type extensions that have slightly different syntax and behavior.</span></span> <span data-ttu-id="de069-108">Bir *iç uzantı* aynı ad alanı veya modül, aynı kaynak dosyasını ve aynı derleme (DLL ya da yürütülebilir dosya) görüntülenen genişletilen türü olarak uzantısıdır.</span><span class="sxs-lookup"><span data-stu-id="de069-108">An *intrinsic extension* is an extension that appears in the same namespace or module, in the same source file, and in the same assembly (DLL or executable file) as the type being extended.</span></span> <span data-ttu-id="de069-109">Bir *isteğe bağlı uzantı* özgün modülü, ad veya derleme genişletilen türü dışında görünür bir uzantısıdır.</span><span class="sxs-lookup"><span data-stu-id="de069-109">An *optional extension* is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span> <span data-ttu-id="de069-110">İç uzantıları türüne türü tarafından yansıma incelenir, ancak isteğe bağlı uzantılar sağlamadığı görünür.</span><span class="sxs-lookup"><span data-stu-id="de069-110">Intrinsic extensions appear on the type when the type is examined by reflection, but optional extensions do not.</span></span> <span data-ttu-id="de069-111">Uzantıları modülleri olmalıdır ve uzantısını içeren modülü açık olduğunda bunlar yalnızca kapsamda isteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="de069-111">Optional extensions must be in modules, and they are only in scope when the module that contains the extension is open.</span></span>
+## <a name="intrinsic-type-extensions"></a><span data-ttu-id="0fa0b-111">İç tür uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-111">Intrinsic type extensions</span></span>
 
-<span data-ttu-id="de069-112">Önceki sözdiziminde *typename* genişletilen türünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="de069-112">In the previous syntax, *typename* represents the type that is being extended.</span></span> <span data-ttu-id="de069-113">Erişilebilen herhangi bir türü genişletilmiş ancak tür adı türü kısaltması bir gerçek tür adı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="de069-113">Any type that can be accessed can be extended, but the type name must be an actual type name, not a type abbreviation.</span></span> <span data-ttu-id="de069-114">Birden çok üye bir türü uzantısı'nda tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="de069-114">You can define multiple members in one type extension.</span></span> <span data-ttu-id="de069-115">*Kendi kendine tanımlayıcı* yalnızca normal üye olduğu gibi çağrılan nesne örneğini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="de069-115">The *self-identifier* represents the instance of the object being invoked, just as in ordinary members.</span></span>
+<span data-ttu-id="0fa0b-112">Gerçek tür uzantısı kullanıcı tarafından tanımlanan bir türü genişleten bir türü uzantısıdır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-112">An intrinsic type extension is a type extension that extends a user-defined type.</span></span>
 
-<span data-ttu-id="de069-116">`end` Sözcüktür basit sözdiziminde isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="de069-116">The `end` keyword is optional in lightweight syntax.</span></span>
+<span data-ttu-id="0fa0b-113">Aynı dosyada iç tür uzantıları tanımlanan **ve** aynı ad alanı veya modül olarak genişletme türü.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-113">Intrinsic type extensions must be defined in the same file **and** in the same namespace or module as the type they're extending.</span></span> <span data-ttu-id="0fa0b-114">Diğer bir tanımı bunları neden olacak olan [isteğe bağlı türü uzantıları](type-extensions.md#optional-type-extensions).</span><span class="sxs-lookup"><span data-stu-id="0fa0b-114">Any other definition will result in them being [optional type extensions](type-extensions.md#optional-type-extensions).</span></span>
 
-<span data-ttu-id="de069-117">Üye türü uzantılarında tanımlanmıştır gibi diğer üyeleri bir sınıf türü üzerinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="de069-117">Members defined in type extensions can be used just like other members on a class type.</span></span> <span data-ttu-id="de069-118">Diğer üyeleri gibi bunlar statik veya örnek üyeleri.</span><span class="sxs-lookup"><span data-stu-id="de069-118">Like other members, they can be static or instance members.</span></span> <span data-ttu-id="de069-119">Bu yöntemleri olarak da bilinen olan *genişletme yöntemleri*; özellikleri olarak bilinen *uzantısı özellikleri*ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="de069-119">These methods are also known as *extension methods*; properties are known as *extension properties*, and so on.</span></span> <span data-ttu-id="de069-120">İsteğe bağlı uzantı üyeleri statik üyeleri için nesne örneği örtük olarak ilk parametre olarak geçirilen derlenir.</span><span class="sxs-lookup"><span data-stu-id="de069-120">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="de069-121">Ancak, örnek üyelerin veya nasıl bildirilir göre statik üyeler gibi bunlar görür.</span><span class="sxs-lookup"><span data-stu-id="de069-121">However, they act as if they were instance members or static members according to how they are declared.</span></span> <span data-ttu-id="de069-122">Örtük uzantı üyeleri türü bir üyesi olarak dahil edilir ve kısıtlama kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="de069-122">Implicit extension members are included as members of the type and can be used without restriction.</span></span>
-
-<span data-ttu-id="de069-123">Genişletme yöntemleri sanal ya da soyut yöntemler olamaz.</span><span class="sxs-lookup"><span data-stu-id="de069-123">Extension methods cannot be virtual or abstract methods.</span></span> <span data-ttu-id="de069-124">Aynı ada sahip başka yöntemler aşırı yüklenebilir, ancak derleyici tercih uzantısı olmayan yöntemlerine belirsiz bir çağrı durumunda sağlar.</span><span class="sxs-lookup"><span data-stu-id="de069-124">They can overload other methods of the same name, but the compiler gives preference to non-extension methods in the case of an ambiguous call.</span></span>
-
-<span data-ttu-id="de069-125">Birden çok geçerli bir tür uzantıları için bir türü yoksa, tüm üyeleri benzersiz olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="de069-125">If multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="de069-126">İsteğe bağlı türü uzantıları için aynı türde farklı tür uzantıları üyeleri aynı ada sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="de069-126">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="de069-127">Yalnızca istemci kodu aynı üye adlarının tanımlayan iki farklı kapsamlar açarsa belirsizlik hataları oluşur.</span><span class="sxs-lookup"><span data-stu-id="de069-127">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
-
-<span data-ttu-id="de069-128">Aşağıdaki örnekte, geçerli bir tür uzantı modülünde bir türe sahip.</span><span class="sxs-lookup"><span data-stu-id="de069-128">In the following example, a type in a module has an intrinsic type extension.</span></span> <span data-ttu-id="de069-129">Modül dışındaki istemci kodu için türü uzantısı türünün tüm bakımdan normal bir üyesi olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="de069-129">To client code outside the module, the type extension appears as a regular member of the type in all respects.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-<span data-ttu-id="de069-130">Bir tür bölümlere tanımını ayırmak için geçerli bir tür uzantıları kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="de069-130">You can use intrinsic type extensions to separate the definition of a type into sections.</span></span> <span data-ttu-id="de069-131">Derleyicinin ürettiği kodu ve yazılan kodu ayrı tutmak için ya da farklı kişiler tarafından oluşturulan ya da farklı işlevselliği ile ilişkili kodu gruplamak için büyük tür tanımları yönetilmesindeki yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="de069-131">This can be useful in managing large type definitions, for example, to keep compiler-generated code and authored code separate or to group together code created by different people or associated with different functionality.</span></span>
-
-<span data-ttu-id="de069-132">Aşağıdaki örnekte, bir isteğe bağlı türü uzantısı genişletir `System.Int32` türü bir genişletme yöntemi ile `FromString` statik üye çağırır `Parse`.</span><span class="sxs-lookup"><span data-stu-id="de069-132">In the following example, an optional type extension extends the `System.Int32` type with an extension method `FromString` that calls the static member `Parse`.</span></span> <span data-ttu-id="de069-133">`testFromString` Yöntemi gösteren yeni üye yalnızca bir örnek üyesine gibi olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="de069-133">The `testFromString` method demonstrates that the new member is called just like any instance member.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-<span data-ttu-id="de069-134">Yeni örnek üyesine herhangi diğer bir yöntemini gibi görünür `Int32` türü IntelliSense, ancak yalnızca uzantısı içeren modülü kapsamında açık veya aksi durumda olduğunda.</span><span class="sxs-lookup"><span data-stu-id="de069-134">The new instance member will appear like any other method of the `Int32` type in IntelliSense, but only when the module that contains the extension is open or otherwise in scope.</span></span>
-
-## <a name="generic-extension-methods"></a><span data-ttu-id="de069-135">Genel genişletme yöntemleri</span><span class="sxs-lookup"><span data-stu-id="de069-135">Generic Extension Methods</span></span>
-<span data-ttu-id="de069-136">F # 3.1 önce C# kullanımını F # derleyici desteklemekteydi-stil genel tür değişkeni, dizi türü, kayıt türü veya bir "Bu" parametresi olarak F # işlev türü ile genişletme yöntemleri.</span><span class="sxs-lookup"><span data-stu-id="de069-136">Before F# 3.1, the F# compiler didn't support the use of C#-style extension methods with a generic type variable, array type, tuple type, or an F# function type as the "this" parameter.</span></span> <span data-ttu-id="de069-137">F # 3.1 Bu uzantı üyeleri kullanımını destekler.</span><span class="sxs-lookup"><span data-stu-id="de069-137">F# 3.1 supports the use of these extension members.</span></span>
-
-<span data-ttu-id="de069-138">Örneğin, F # 3.1 kodda, C# aşağıdaki söz dizimine benzer imzaları ile genişletme yöntemleri kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="de069-138">For example, in F# 3.1 code, you can use extension methods with signatures that resemble the following syntax in C#:</span></span>
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-<span data-ttu-id="de069-139">Genel tür parametresi kısıtlı kullanılırken, bu yaklaşım özellikle yararlıdır.</span><span class="sxs-lookup"><span data-stu-id="de069-139">This approach is particularly useful when the generic type parameter is constrained.</span></span> <span data-ttu-id="de069-140">Ayrıca, artık F # kodunda şöyle uzantı üyeleri bildirme ve ek bir anlam olarak zengin genişletme yöntemleri kümesini tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="de069-140">Further, you can now declare extension members like this in F# code and define an additional, semantically rich set of extension methods.</span></span> <span data-ttu-id="de069-141">F #'ta, genellikle uzantı üyeleri aşağıdaki örnekte gösterildiği gibi tanımlayın:</span><span class="sxs-lookup"><span data-stu-id="de069-141">In F#, you usually define extension members as the following example shows:</span></span>
+<span data-ttu-id="0fa0b-115">İç tür uzantıları bazen işlevi türü bildirimden ayırmak için bir temizleme yoludur.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-115">Intrinsic type extensions are sometimes a cleaner way to separate functionality from the type declaration.</span></span> <span data-ttu-id="0fa0b-116">Aşağıdaki örnek, gerçek tür uzantısı tanımlamak gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-116">The following example shows how to define an intrinsic type extension:</span></span>
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+<span data-ttu-id="0fa0b-117">Bir tür uzantısı kullanarak aşağıdakilerin her biri ayrı sağlar:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-117">Using a type extension allows you to separate each of the following:</span></span>
+
+* <span data-ttu-id="0fa0b-118">Bildirimi bir `Variant` türü</span><span class="sxs-lookup"><span data-stu-id="0fa0b-118">The declaration of a `Variant` type</span></span>
+* <span data-ttu-id="0fa0b-119">Yazdırma işlevselliği `Variant` "şeklini" bağlı olarak sınıfı</span><span class="sxs-lookup"><span data-stu-id="0fa0b-119">Functionality to print the `Variant` class depending on its "shape"</span></span>
+* <span data-ttu-id="0fa0b-120">Nesne stiliyle yazdırma işlevselliği erişmek için bir yol `.`-gösterimi</span><span class="sxs-lookup"><span data-stu-id="0fa0b-120">A way to access the printing functionality with object-style `.`-notation</span></span>
+
+<span data-ttu-id="0fa0b-121">Bu üye olarak her şey üzerinde tanımlama alternatiftir `Variant`.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-121">This is an alternative to defining everything as a member on `Variant`.</span></span> <span data-ttu-id="0fa0b-122">Doğal olarak daha iyi bir yaklaşım olmasa da, bu işlevsellik bazı durumlarda daha net bir temsilini olabilir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-122">Although it is not an inherently better approach, it can be a cleaner representation of functionality in some situations.</span></span>
+
+<span data-ttu-id="0fa0b-123">İç tür uzantıları büyütmek ve tür yansıma tarafından incelendiğinde tür üzerinde görünür bir türün üyeleri olarak derlenir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-123">Intrinsic type extensions are compiled as members of the type they augment, and appear on the type when the type is examined by reflection.</span></span>
+
+## <a name="optional-type-extensions"></a><span data-ttu-id="0fa0b-124">İsteğe bağlı türü uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-124">Optional type extensions</span></span>
+
+<span data-ttu-id="0fa0b-125">İsteğe bağlı tür uzantısı özgün modülü, ad alanı veya Genişletilmekte olan türün derlemenin dışında görünür bir uzantısıdır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-125">An optional type extension is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span>
+
+<span data-ttu-id="0fa0b-126">İsteğe bağlı türü uzantıları kendiniz tanımlamadığınız bir türü genişletmek için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-126">Optional type extensions are useful for extending a type that you have not defined yourself.</span></span> <span data-ttu-id="0fa0b-127">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-127">For example:</span></span>
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-<span data-ttu-id="de069-142">Ancak, genel bir tür için türü değişkeni kısıtlı değil.</span><span class="sxs-lookup"><span data-stu-id="de069-142">However, for a generic type, the type variable may not be constrained.</span></span> <span data-ttu-id="de069-143">Şimdi bir C# bildirebilirsiniz-bu sınırlamaya geçici bir çözüm için F # stili uzantı üyesi.</span><span class="sxs-lookup"><span data-stu-id="de069-143">You can now declare a C#-style extension member in F# to work around this limitation.</span></span> <span data-ttu-id="de069-144">Bu tür bir bildirimi F # satır içi özelliğiyle birleştirdiğinizde uzantısı üye olarak genel algoritmaları sunabilir.</span><span class="sxs-lookup"><span data-stu-id="de069-144">When you combine this kind of declaration with the inline feature of F#, you can present generic algorithms as extension members.</span></span>
+<span data-ttu-id="0fa0b-128">Artık erişebilirsiniz `RepeatElements` üyesi ise gibi <xref:System.Collections.Generic.IEnumerable%601> sürece `Extensions` modülü içinde çalışmakta olduğunuz kapsam içinde açılır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-128">You can now access `RepeatElements` as if it's a member of <xref:System.Collections.Generic.IEnumerable%601> as long as the `Extensions` module is opened in the scope that you are working in.</span></span>
 
-<span data-ttu-id="de069-145">Aşağıdaki bildirimi göz önünde bulundurun:</span><span class="sxs-lookup"><span data-stu-id="de069-145">Consider the following declaration:</span></span>
+<span data-ttu-id="0fa0b-129">Genişletilmiş tür yansıma tarafından incelendiğinde, isteğe bağlı uzantılar görünmez.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-129">Optional extensions do not appear on the extended type when examined by reflection.</span></span> <span data-ttu-id="0fa0b-130">İsteğe bağlı uzantılar, modüller halinde olmalıdır ve uzantıyı içeren modül açık veya aksi halde kapsam içinde olduğunda yalnızca kapsamda oldukları.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-130">Optional extensions must be in modules, and they're only in scope when the module that contains the extension is open or is otherwise in scope.</span></span>
+
+<span data-ttu-id="0fa0b-131">İsteğe bağlı uzantı üyeleri, nesne örneğinin örtülü olarak ilk parametre olarak geçirildiği statik üyeler için derlenmiştir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-131">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="0fa0b-132">Örnek üyeleri veya göre nasıl bildirilen statik üye oldukları gibi ancak bunlar işlevi görür.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-132">However, they act as if they're instance members or static members according to how they're declared.</span></span>
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a><span data-ttu-id="0fa0b-133">Genel SORUMLULUĞUN iç ve isteğe bağlı türü uzantıları</span><span class="sxs-lookup"><span data-stu-id="0fa0b-133">Generic limitation of intrinsic and optional type extensions</span></span>
+
+<span data-ttu-id="0fa0b-134">Burada tür değişkeni kısıtlı genel türde bir tür uzantısı bildirmek mümkündür.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-134">It's possible to declare a type extension on a generic type where the type variable is constrained.</span></span> <span data-ttu-id="0fa0b-135">Uzantı bildirimi kısıtlaması bildirilen türü kısıtlamasını eşleştiğini gereksinimidir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-135">The requirement is that the constraint of the extension declaration matches the constraint of the declared type.</span></span>
+
+<span data-ttu-id="0fa0b-136">Bildirilen tür ve tür uzantısı arasında kısıtlamaları bile eşleştirilir, ancak bildirilen türünden tür parametresi üzerinde farklı bir gereksinim uygular genişletilmiş bir üyesinin gövdesi tarafından çıkarılan için bir kısıtlama mümkündür.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-136">However, even when constraints are matched between a declared type and a type extension, it's possible for a constraint to be inferred by the body of an extended member that imposes a different requirement on the type parameter than the declared type.</span></span> <span data-ttu-id="0fa0b-137">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-137">For example:</span></span>
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+<span data-ttu-id="0fa0b-138">Bir isteğe bağlı tür uzantısı ile çalışmak için bu kodu erişmenin bir yolu vardır:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-138">There is no way to get this code to work with an optional type extension:</span></span>
+
+* <span data-ttu-id="0fa0b-139">Olduğu gibi `Sum` üye var. farklı bir kısıtlama `'T` (`static member get_Zero` ve `static member (+)`) daha ne tür uzantısı tanımlar.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-139">As is, the `Sum` member has a different constraint on `'T` (`static member get_Zero` and `static member (+)`) than what the type extension defines.</span></span>
+* <span data-ttu-id="0fa0b-140">Tür uzantısı olarak aynı kısıtlamasına sahip değiştirme `Sum` üzerinde tanımlanan kısıtlaması artık eşleşecektir `IEnumerable<'T>`.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-140">Modifying the type extension to have the same constraint as `Sum` will no longer match the defined constraint on `IEnumerable<'T>`.</span></span>
+* <span data-ttu-id="0fa0b-141">Üye değiştirme yapmadan `member inline Sum` tür kısıtlamaları uyumsuz bir hata verir</span><span class="sxs-lookup"><span data-stu-id="0fa0b-141">Making changing the member to `member inline Sum` will give an error that type constraints are mismatched</span></span>
+
+<span data-ttu-id="0fa0b-142">İstenildiği gibi bir türü genişletmek gibi sunulan ve "alanında kayan" statik yöntem bulunmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-142">What is desired are static methods that "float in space" and can be presented as if they're extending a type.</span></span> <span data-ttu-id="0fa0b-143">Burada uzantı yöntemleri gerekli hale budur.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-143">This is where extension methods become necessary.</span></span>
+
+## <a name="extension-methods"></a><span data-ttu-id="0fa0b-144">Genişletme yöntemleri</span><span class="sxs-lookup"><span data-stu-id="0fa0b-144">Extension methods</span></span>
+
+<span data-ttu-id="0fa0b-145">Son olarak, genişletme yöntemleri ("C# stili uzantı üyeleri" olarak da adlandırılır) F #'ta bir statik üye yöntemi olarak sınıfta bildirilebilir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-145">Finally, extension methods (sometimes called "C# style extension members") can be declared in F# as a static member method on a class.</span></span>
+
+<span data-ttu-id="0fa0b-146">Genişletme yöntemleri, ne zaman uzantılar tür değişkeni sınırlamak bir genel tür tanımlamak istediğiniz için kullanışlıdır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-146">Extension methods are useful for when you wish to define extensions on a generic type that will constrain the type variable.</span></span> <span data-ttu-id="0fa0b-147">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-147">For example:</span></span>
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-<span data-ttu-id="de069-146">Bu bildirim kullanarak, aşağıdaki örneğe benzer bir kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="de069-146">By using this declaration, you can write code that resembles the following sample.</span></span>
+<span data-ttu-id="0fa0b-148">Kullanıldığında, bu kod görünmesini yapar gibi `Sum` tanımlanan <xref:System.Collections.Generic.IEnumerable%601>, sürece `Extensions` açılmış veya kapsamdadır.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-148">When used, this code will make it appear as if `Sum` is defined on <xref:System.Collections.Generic.IEnumerable%601>, so long as `Extensions` has been opened or is in scope.</span></span>
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a><span data-ttu-id="0fa0b-149">Diğer açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0fa0b-149">Other remarks</span></span>
 
-<span data-ttu-id="de069-147">Bu kodda, iki tür bir listesi için tek uzantısı üyesi tanımlayarak aşırı olmadan aynı genel aritmetik kod uygulanır.</span><span class="sxs-lookup"><span data-stu-id="de069-147">In this code, the same generic arithmetic code is applied to lists of two types without overloading, by defining a single extension member.</span></span>
+<span data-ttu-id="0fa0b-150">Tür uzantıları ayrıca aşağıdaki özniteliklere sahiptir:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-150">Type extensions also have the following attributes:</span></span>
 
+* <span data-ttu-id="0fa0b-151">Erişilebilen herhangi bir türü genişletilebilir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-151">Any type that can be accessed can be extended.</span></span>
+* <span data-ttu-id="0fa0b-152">İç ve isteğe bağlı türü uzantıları tanımlayabilirsiniz _herhangi_ üye türü, yalnızca yöntemi.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-152">Intrinsic and optional type extensions can define _any_ member type, not just methods.</span></span> <span data-ttu-id="0fa0b-153">Bu nedenle uzantı özellikleri da örneğin, mümkündür.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-153">So extension properties are also possible, for example.</span></span>
+* <span data-ttu-id="0fa0b-154">`self-identifier` Belirtecini [söz dizimi](type-extensions.md#syntax) , sıradan üyelerdeki gibi çağrılmakta olan türün örneğini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-154">The `self-identifier` token in the [syntax](type-extensions.md#syntax) represents the instance of the type being invoked, just like ordinary members.</span></span>
+* <span data-ttu-id="0fa0b-155">Genişletilmiş üyeleri, statik veya örnek üyeler.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-155">Extended members can be static or instance members.</span></span>
+* <span data-ttu-id="0fa0b-156">Bir tür uzantısı türü değişkenlerde bildirilen tür kısıtlamaları eşleşmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-156">Type variables on a type extension must match the constraints of the declared type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="de069-148">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="de069-148">See Also</span></span>
-[<span data-ttu-id="de069-149">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="de069-149">F# Language Reference</span></span>](index.md)
+<span data-ttu-id="0fa0b-157">Aşağıdaki sınırlamalar türü uzantıları için de mevcuttur:</span><span class="sxs-lookup"><span data-stu-id="0fa0b-157">The following limitations also exist for type extensions:</span></span>
 
-[<span data-ttu-id="de069-150">Üyeler</span><span class="sxs-lookup"><span data-stu-id="de069-150">Members</span></span>](members/index.md)
+* <span data-ttu-id="0fa0b-158">Tür uzantıları sanal veya soyut yöntemleri desteklemez.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-158">Type extensions do not support virtual or abstract methods.</span></span>
+* <span data-ttu-id="0fa0b-159">Tür uzantıları genişletmeleri geçersiz kılma yöntemleri desteklemez.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-159">Type extensions do not support override methods as augmentations.</span></span>
+* <span data-ttu-id="0fa0b-160">Tür uzantıları desteklemez [statik olarak çözümlenmiş tür Parametreleri'nde](generics/statically-resolved-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="0fa0b-160">Type extensions do not support [Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md).</span></span>
+* <span data-ttu-id="0fa0b-161">İsteğe bağlı türü uzantıları genişletmelerinde oluşturucuları desteklemez.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-161">Optional Type extensions do not support constructors as augmentations.</span></span>
+* <span data-ttu-id="0fa0b-162">Tür uzantıları tanımlanamaz [yazın kısaltmalar](type-abbreviations.md).</span><span class="sxs-lookup"><span data-stu-id="0fa0b-162">Type extensions cannot be defined on [type abbreviations](type-abbreviations.md).</span></span>
+* <span data-ttu-id="0fa0b-163">Tür uzantıları için geçerli olmayan `byref<'T>` (bunlar bildirilebilir rağmen).</span><span class="sxs-lookup"><span data-stu-id="0fa0b-163">Type extensions are not valid for `byref<'T>` (though they can be declared).</span></span>
+* <span data-ttu-id="0fa0b-164">Tür Uzantıları (bunlar bildirilebilir rağmen) öznitelikler için geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-164">Type extensions are not valid for attributes (though they can be declared).</span></span>
+* <span data-ttu-id="0fa0b-165">Aynı ada sahip diğer yöntemleri aşırı uzantıları tanımlayabilirsiniz, ancak belirsiz bir çağrı ise F # derleyici tercihi uzantısı olmayan yöntemlere verir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-165">You can define extensions that overload other methods of the same name, but the F# compiler gives preference to non-extension methods if there is an ambiguous call.</span></span>
+
+<span data-ttu-id="0fa0b-166">Son olarak, bir tür için birden çok gerçek tür uzantısı varsa, tüm üyelerin benzersiz olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-166">Finally, if multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="0fa0b-167">İsteğe bağlı türü uzantıları için farklı tür Uzantılardaki aynı türe üyeleri aynı adları olabilir.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-167">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="0fa0b-168">Belirsizlik hataları yalnızca istemci kodu aynı üye adını tanımlayan iki farklı kapsamı açarsa oluşur.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-168">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="0fa0b-169">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0fa0b-169">See also</span></span>
+
+[<span data-ttu-id="0fa0b-170">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="0fa0b-170">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="0fa0b-171">Üyeler</span><span class="sxs-lookup"><span data-stu-id="0fa0b-171">Members</span></span>](members/index.md)
