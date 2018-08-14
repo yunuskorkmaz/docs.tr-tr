@@ -18,14 +18,14 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 053c94bc540b130510f155506b6fad32f032a475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
 ms.locfileid: "33449552"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit Yöntemi
-Modül türü geçerli meta veri kapsamda belirtir ve doğrulama hataları için belirtilen geri çağırma yöntemi kaydeden bir bayrak ayarlar.  
+Geçerli meta veri kapsamda modül türünü belirtir ve doğrulama hataları için belirtilen geri çağırma yöntemi kaydeder bir bayrak ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,17 +38,17 @@ HRESULT ValidatorInit (
   
 #### <a name="parameters"></a>Parametreler  
  `dwModule`  
- [in] Değerini [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) modül türü geçerli meta veri kapsamda belirtir numaralandırması.  
+ [in] Değerini [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) modül türü geçerli meta veri kapsamda belirten sabit listesi.  
   
  `pUnk`  
- [in] Bir işaretçi bir <<!--zzxref:IUnknown --> `IUnknown`> Doğrulama hataları için işlevi geri görevi gören örneği.  
+ [in] Bir işaretçi bir [IUnknown](/cpp/atl/iunknown) doğrulama hataları için bir işlev geri çağırma işlevi görür örneği.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** Cor.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
