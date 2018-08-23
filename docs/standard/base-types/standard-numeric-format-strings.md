@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
+ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36208529"
+ms.lasthandoff: 08/15/2018
+ms.locfileid: "42752193"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
@@ -55,7 +55,7 @@ Standart sayısal biçim dizeleri tarafından desteklenir:
 |----------------------|----------|-----------------|--------------|  
 |"C" ya da "c"|Para Birimi|Sonuç: Bir para birimi değeri.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [para birimi ("C") Biçim belirleyicisi](#CFormatString).|123,456 ("C", en-US) -> 123,46 $<br /><br /> 123,456 ("C", fr-FR) -> 123,46 €<br /><br /> 123,456 ("C", ja-JP) ¥ 123 -><br /><br /> ($123,456)-123.456 ("C3", en-US) -><br /><br /> -123,456 €-123.456 ("C3", fr-FR) -><br /><br /> -123.456 ("C3", ja-JP) ->-¥ 123,456|  
 |"D" veya "d"|Ondalık|Sonuç: İsteğe bağlı eksi işaretli tamsayı basamaklar.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Minimum basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: En az gereken basamak sayısı.<br /><br /> Daha fazla bilgi: [Decimal("D") biçim belirticisi](#DFormatString).|1234 1234 ("D") -&GT;<br /><br /> -001234 ("D6") -1234 -&GT;|  
-|"E" ya da "e"|Üstsel (bilimsel)|Sonuç: Üstel simgeleme.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: 6.<br /><br /> Daha fazla bilgi: [üstel ("E") Biçim belirleyicisi](#EFormatString).|1052.0329112756 ("E" en-US) -> 1.052033E + 003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> - 1.05e + 003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
+|"E" ya da "e"|Üstsel (bilimsel)|Sonuç: Üstel simgeleme.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: 6.<br /><br /> Daha fazla bilgi: [üstel ("E") Biçim belirleyicisi](#EFormatString).|1052.0329112756 ("E" en-US) -> 1.052033E + 003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> - 1.05e + 003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1, 05E + 003|  
 |"F" ya da "f"|Sabit nokta|Sonuç: İsteğe bağlı eksi işaretli tamsayı ve ondalık basamaklar.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sabit nokta ("F") Biçim belirleyicisi](#FFormatString).|1234.567 ("F" en-US) -> 1234.57<br /><br /> 1234.567 ("F" de-DE) 1234,57 -><br /><br /> 1234 ("F1" en-US) -> 1234.0<br /><br /> 1234 ("F1" de-DE) 1234,0 -><br /><br /> -1234.5600-1234.56 ("F4", en-US) -><br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
 |"G" ya da "g"|Genel|Sonuç: Daha fazla sabit noktalı veya bilimsel gösterim.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Anlamlı basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Sayısal türe bağlıdır.<br /><br /> Daha fazla bilgi: [genel ("G") Biçim belirleyicisi](#GFormatString).|-123.456-123.456 ("G", en-US) -><br /><br /> -123,456-123.456 ("G", sv-SE) -><br /><br /> 123.4546 ("G4" en-US) -> 123.5<br /><br /> 123.4546 ("G4" sv-SE) 123,5 -><br /><br /> -1.234567890e-25 ("G", en-US) -> - 1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1, 25 23456789E|  
 |"N" ya da "n"|Sayı|Sonuç: Integral ve ondalık basamaklar, grup ayırıcılar ve isteğe bağlı eksi işaretli ondalık ayırıcı.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: tarafından tanımlanan <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Daha fazla bilgi: [sayısal ("N") Biçim belirleyicisi](#NFormatString).|1234.567 ("N" en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) 1 234,57 -><br /><br /> 1234 ("N1" en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) 1 234,0 -><br /><br /> -1,234.560-1234.56 ("N3", en-US) -><br /><br /> -1 234,560-1234.56 ("N3", ru-RU) ->|  
