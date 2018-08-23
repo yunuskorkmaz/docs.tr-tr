@@ -8,30 +8,30 @@ helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
 ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171947"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753942"
 ---
 # <a name="typeof-c-reference"></a>typeof (C# Başvurusu)
-Elde etmek için kullanılan `System.Type` nesne türü için. A `typeof` ifade aşağıdaki formu alır:  
+Elde etmek için kullanılan `System.Type` nesne türü. A `typeof` ifade aşağıdaki biçimleri alır:  
   
 ```csharp  
 System.Type type = typeof(int);  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çalışma zamanı tür ifade elde etmek için .NET Framework yöntemini kullanabilirsiniz <xref:System.Object.GetType%2A>, aşağıdaki örnekte olduğu gibi:  
+ Bir ifadenin çalışma zamanı türü elde etmek için .NET Framework yöntemi kullanabilirsiniz <xref:System.Object.GetType%2A>, aşağıdaki örnekte olduğu gibi:  
   
 ```csharp  
 int i = 0;  
 System.Type type = i.GetType();  
 ```  
   
- `typeof` İşleci olamaz aşırı yüklenebilir.  
+ `typeof` İşleci aşırı yüklenemez.  
   
- `typeof` İşleci açık genel türler üzerinde de kullanılabilir. Birden fazla tür parametresi türleriyle virgül uygun sayıda belirtiminde olması gerekir. Aşağıdaki örnek, bir yöntemin dönüş türünü genel olup olmadığını belirlemek gösterilmiştir <xref:System.Collections.Generic.IEnumerable%601>. Yöntem MethodInfo türünün bir örneği olduğunu varsayın:  
+ `typeof` İşleci açık genel türler üzerinde de kullanılabilir. Birden fazla tür parametresi ile türleri belirtiminde virgül uygun sayıda olmalıdır. Aşağıdaki örnek, bir yöntemin dönüş türü genel olup olmadığını belirlemek gösterilmektedir <xref:System.Collections.Generic.IEnumerable%601>. Metodu için MethodInfo türünün bir örneği olduğunu varsayın:  
   
 ```csharp  
 string s = method.ReturnType.GetInterface  
@@ -42,7 +42,7 @@ string s = method.ReturnType.GetInterface
  [!code-csharp[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Object.GetType%2A> yöntemi sayısal hesaplamanın sonucu kapsamak için kullanılmış türü belirlenemiyor. Bu sonuç sayısı depolama gereksinimlerine bağlıdır.  
+ Bu örnekte <xref:System.Object.GetType%2A> sayısal hesaplama sonucu kapsamak için kullanılmış türünü belirlemek için yöntemi. Bu, sonuçta elde edilen sayı depolama gereksinimlerine bağlıdır.  
   
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   

@@ -1,27 +1,27 @@
 ---
-title: My.Log Nesnesi
+title: My.Log nesnesi (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596027"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751938"
 ---
 # <a name="mylog-object"></a>My.Log Nesnesi
 Bir özellik ve olay ve özel durum bilgileri için uygulamanın günlük dinleyicileri yazmak için yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemleri ve özellikleri hakkında bilgi için `My.Log` nesne için bkz: <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ Yöntemleri ve özellikleri hakkında bilgi için `My.Log` nesne, bkz: <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- `My.Log` Nesne yalnızca ASP.NET uygulamaları için kullanılabilir. İstemci uygulamaları için kullanmak [My.Application.Log nesnesi](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ `My.Log` Nesne yalnızca ASP.NET uygulamaları için kullanılabilir. İstemci uygulamaları için kullanıyor [My.Application.Log nesnesi](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Sınıfı:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **Sınıf:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
  **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]

@@ -11,15 +11,15 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072520"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752335"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;Proxy&gt; öğesi (ağ ayarları)
-Bir proxy sunucu tanımlar.  
+Bir proxy sunucusu tanımlar.  
   
  \<Yapılandırma >  
 \<system.net>  
@@ -46,10 +46,10 @@ Bir proxy sunucu tanımlar.
 |**Özniteliği**|**Açıklama**|  
 |-------------------|---------------------|  
 |`autoDetect`|Proxy otomatik olarak algılanır olup olmadığını belirtir. Varsayılan değer `unspecified` şeklindedir.|  
-|`bypassonlocal`|Proxy için yerel kaynak atlanır olup olmadığını belirtir. Yerel kaynaklar dahil yerel sunucuyu (`http://localhost`, `http://loopback`, veya `http://127.0.0.1`) ve bir nokta olmadan bir URI (`http://webserver`). Varsayılan değer `unspecified` şeklindedir.|  
+|`bypassonlocal`|Proxy için yerel kaynak atlanır olup olmadığını belirtir. Yerel kaynaklar yerel sunucuyu içerir (`http://localhost`, `http://loopback`, veya `http://127.0.0.1`) ve bir nokta olmadan bir URI (`http://webserver`). Varsayılan değer `unspecified` şeklindedir.|  
 |`proxyaddress`|Proxy kullanmak için URI belirtir.|  
-|`scriptLocation`|Yapılandırma komut dosyası konumunu belirtir.|  
-|`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Varsa kümesine `true`, sonraki öznitelikleri Internet Explorer proxy ayarları geçersiz kılar. Varsayılan değer `unspecified` şeklindedir.|  
+|`scriptLocation`|Yapılandırma betiğini konumunu belirtir. Kullanmayın `bypassonlocal` özniteliği bu öznitelikle. |  
+|`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Varsa kümesine `true`, sonraki öznitelikleri, Internet Explorer proxy ayarlarını geçersiz kılınır. Varsayılan değer `unspecified` şeklindedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,26 +58,26 @@ Bir proxy sunucu tanımlar.
   
 |**Öğesi**|**Açıklama**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusu yapılandırır.|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.|  
   
 ## <a name="text-value"></a>Metin Değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- `proxy` Öğe, bir uygulama için bir proxy sunucusu tanımlar. Bu öğe yapılandırma dosyasından eksikse, .NET Framework Internet Explorer proxy ayarlarını kullanır.  
+ `proxy` Öğesi, bir uygulama için bir proxy sunucusu tanımlar. Bu öğe yapılandırma dosyasından eksikse, .NET Framework Internet Explorer'ın proxy ayarlarını kullanır.  
   
- Değeri `proxyaddress` özniteliği bir doğru biçimlendirilmiş Tekdüzen Kaynak göstergesi'nı (URI) olmalıdır.  
+ Değeri `proxyaddress` özniteliği bir biçimlendirilmiş Tekdüzen Kaynak göstergesi'nı (URI) olmalıdır.  
   
- `scriptLocation` Özniteliği proxy yapılandırma komut otomatik algılama için başvuruyor. <xref:System.Net.WebProxy> Sınıfı bulmaya çalışır bir yapılandırma betiğini (genellikle adlandırılmış Wpad.dat) ne zaman **otomatik yapılandırma betiği kullan** seçeneği, Internet Explorer'da belirlenir.  
+ `scriptLocation` Öznitelik proxy yapılandırma betiklerini otomatik algılanması için ifade eder. <xref:System.Net.WebProxy> Sınıfı, bir yapılandırma betiği (genellikle adlandırılmış Wpad.dat) ne zaman bulunacak deneyecek **otomatik yapılandırma betiği kullan** seçeneği, Internet Explorer'da belirlenir. Varsa `bypassonlocal` herhangi bir değere ayarlanmış `scriptLocation` göz ardı edilir.
   
- Kullanım `usesystemdefault` özniteliği sürüm 2.0 geçirme .NET Framework sürüm 1.1 uygulamaları için.  
+ Kullanım `usesystemdefault` 2.0 sürümüne geçiş yapıyorsanız, .NET Framework sürüm 1.1 uygulamaları için özniteliği.  
   
- Bir özel durum `proxyaddress` özniteliği geçersiz varsayılan proxy belirtir. <xref:System.Exception.InnerException%2A> Özel durum özelliği hatasının kök nedeni hakkında daha fazla bilgi sahip olmalıdır.  
+ Bir özel durum `proxyaddress` özniteliği geçersiz varsayılan proxy belirtir. <xref:System.Exception.InnerException%2A> Özel durum özelliği, hatanın kök nedeni hakkında daha fazla bilgi olması gerekir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan Internet Explorer proxy adlardan kullanır, proxy adresi belirtir ve yerel erişim için proxy atlar.  
+ Aşağıdaki örnek, Internet Explorer proxy varsayılanlarından kullanır, proxy adresi belirtir ve yerel erişim proxy atlar.  
   
 ```xml  
 <configuration>  

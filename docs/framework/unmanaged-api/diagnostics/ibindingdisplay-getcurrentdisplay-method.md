@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8e585942cf6b7e368351fde3181402990201d6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 889456f08c967c807b4d3d09508af000035ebdaf
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426286"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755086"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay Metodu
-Geçerli bağlama görüntü bilgileri döndürür.  
+Geçerli bağlama görüntü bilgilerini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,12 +37,12 @@ HRESULT GetCurrentDisplay (
   
 #### <a name="parameters"></a>Parametreler  
  `display`  
- [Çıkış, retval] Bağlama görüntü bilgilerini içeren bir SAFEARRAY'i gösteren bir işaretçi.  
+ [out, retval] Bağlama görünen bilgileri içeren bir SAFEARRAY'i işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Ibindingdisplay::ınitializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) yöntemi gerekir daha önce başarılı ve programı bir hata ayıklayıcı tarafından durdurulması gerekir.  
+ [Ibindingdisplay::ınitializeforprocess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) yöntemi gerekir daha önce başarılı ve programı bir hata ayıklayıcının durdurulması gerekir.  
   
- Çağıran döndürülen ayırması `SAFEARRAY` kullanarak bellek [SafeArrayDestroy](http://msdn.microsoft.com/library/fc94f7e7-b903-4c78-905c-54df1f8d13fa).  
+ Arayan döndürülen serbest `SAFEARRAY` kullanarak bellek [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

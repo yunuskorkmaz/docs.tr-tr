@@ -17,21 +17,21 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: fdf984cd52441fd2bbe38499f981542386bd56ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781c78fde1a8bd9c5c09f64d66f730c28e670aef
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591401"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752143"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML serileştirme
-XML serileştirme olduğu tarafından gerçekleştirilen XML Web Hizmetleri mimarisi kullanılan temelindeki iletim mekanizması <xref:System.Xml.Serialization.XmlSerializer> sınıfı. XML Web hizmeti tarafından oluşturulan XML denetlemek için ikisi de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıfları, dönüş değerleri, parametreler ve XML Web Hizmetleri (.asmx) oluşturmak için kullanılan bir dosya alanları. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz: [yapı XML Web Hizmetleri kullanarak ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
+XML serileştirme tarafından gerçekleştirilen XML Web Hizmetleri mimarisi içinde kullanılan temel aktarma mekanizması olduğunu <xref:System.Xml.Serialization.XmlSerializer> sınıfı. Bir XML Web hizmeti tarafından oluşturulan XML denetlemek için her ikisini de listelenen öznitelikleri uygulayabilirsiniz [öznitelikleri emin denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) ve [öznitelikleri emin denetim kodlanmış SOAP serileştirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) için sınıflar, dönüş değerleri, parametreleri ve XML Web hizmeti (.asmx) oluşturmak için kullanılan bir dosyanın alanlarını. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz. [yapı XML Web Hizmetleri kullanarak ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
   
 ## <a name="literal-and-encoded-styles"></a>Değişmez değer ve kodlanmış stilleri  
- XML Web hizmeti tarafından oluşturulan XML ya da sabit değer iki yoldan birini biçimlendirilmiş ya da açıklandığı gibi kodlanmış [özelleştirme SOAP iletilerine](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Bu nedenle iki XML serileştirme denetim öznitelikleri kümesi vardır. Listelenen öznitelikleri [öznitelikleri, Denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) değişmez değer stili XML denetlemek için tasarlanmıştır. Listelenen öznitelikleri [öznitelikleri, Denetim kodlanmış SOAP seri hale getirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) kodlanmış stili denetim. Seçime bağlı olarak bu öznitelikler uygulayarak, her ikisi de stilleri döndürmek için bir uygulama uyarlayabilirsiniz. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametreleri döndürmek için uygulanabilir.  
+ Bir XML Web hizmeti tarafından oluşturulan XML iki şekilde, her iki değişmez değer birini biçimlendirilmiş ya da açıklandığı gibi kodlanmış [SOAP iletilerini özelleştirme](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Bu nedenle iki XML serileştirme denetleyen öznitelikleri kümesi vardır. Listelenen öznitelikleri [öznitelikleri emin denetim XML serileştirme](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) değişmez değer stil XML denetlemek için tasarlanmıştır. Listelenen öznitelikleri [öznitelikleri emin denetim kodlanmış SOAP serileştirme](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) kodlanmış stili denetler. Bu öznitelikler seçerek uygulayarak, ya da her ikisi de stil döndürmek için bir uygulama uyarlama. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametre döndürmek için uygulanabilir.  
   
 ### <a name="example-of-using-both-styles"></a>Her iki stil kullanarak örneği  
- XML Web Hizmetleri oluştururken, iki özniteliklerin yöntemlerini kullanabilirsiniz. Aşağıdaki kod örneğinde adlı sınıfı `MyService` iki XML Web hizmeti yöntemlerini içeren `MyLiteralMethod` ve `MyEncodedMethod`. Her iki yöntem aynı işlevi gerçekleştirmek: örneği döndüren `Order` sınıfı. İçinde `Order` sınıfı, <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.SoapTypeAttribute> öznitelikler için her ikisini de uygulanır `OrderID` alan ve her iki öznitelik sahip kendi `ElementName` özelliği farklı bir değere ayarlanmış.  
+ XML Web hizmeti oluştururken, her iki öznitelikleri üzerinde yöntemleri kullanabilirsiniz. Aşağıdaki kod örneğinde adlı sınıfı `MyService` iki XML Web hizmeti yöntemlerini içeren `MyLiteralMethod` ve `MyEncodedMethod`. Her iki yöntem aynı işlevi gerçekleştirmek: örneği döndüren `Order` sınıfı. İçinde `Order` sınıfı <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.SoapTypeAttribute> öznitelikleri her ikisi de uygulanır `OrderID` alan ve her iki öznitelik sahip kendi `ElementName` özelliği farklı bir değere ayarlanmış.  
   
  Örneği çalıştırmak için bir dosya uzantısı olan bir .asmx kodu yapıştırın ve Internet Information Services (IIS) tarafından yönetilen bir sanal dizin dosyası yerleştirin. Internet Explorer gibi bir HTML tarayıcısından bilgisayar, sanal dizin ve dosya adını yazın.  
   
@@ -69,14 +69,14 @@ using System;
 using System.Web.Services;  
 using System.Web.Services.Protocols;  
 using System.Xml.Serialization;  
-public class Order{  
+public class Order {  
     // Both types of attributes can be applied. Depending on which type  
     // the method used, either one will affect the call.  
     [SoapElement(ElementName = "EncodedOrderID")]  
     [XmlElement(ElementName = "LiteralOrderID")]  
     public String OrderID;  
 }  
-public class MyService{  
+public class MyService {  
     [WebMethod][SoapDocumentMethod]  
     public Order MyLiteralMethod(){  
         Order myOrder = new Order();  
@@ -121,8 +121,8 @@ public class MyService{
 </soap:Envelope>  
 ```  
   
-### <a name="applying-attributes-to-return-values"></a>Dönüş değerleri öznitelikleri uygulama  
- Ad alanı, öğe adı ve benzeri denetlemek için değer döndürmek için öznitelikler de uygulayabilirsiniz. Aşağıdaki kod örneğinde geçerlidir `XmlElementAttribute` özniteliği dönüş değerini `MyLiteralMethod` yöntemi. Bunun yapılması, ad alanı ve öğe adı denetlemenizi sağlar.  
+### <a name="applying-attributes-to-return-values"></a>Değerleri döndürülecek uygulanan öznitelikleri  
+ Ad alanı, öğe adı ve diğerleri denetlemek için değerler döndürülecek öznitelikleri de uygulayabilirsiniz. Aşağıdaki kod örneğinde uygular `XmlElementAttribute` öznitelik dönüş değerini `MyLiteralMethod` yöntemi. Bunun yapılması, ad alanı ve öğe adı denetlemenizi sağlar.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -161,7 +161,7 @@ public Order MyLiteralMethod(){
 ```  
   
 ### <a name="attributes-applied-to-parameters"></a>Parametreleri uygulanan öznitelikleri  
- Ad alanı, öğe adı ve benzeri belirtmek üzere parametreler için öznitelikler de uygulayabilirsiniz. Aşağıdaki kod örneği için bir parametre ekler `MyLiteralMethodResponse` yöntemi, geçerli ve `XmlAttributeAttribute` özniteliği parametresi. Öğe adı ve ad alanı her iki parameTRe için kümesidir.  
+ Ad alanı, öğe adı ve diğerleri belirtmek üzere parametreler için öznitelikleri de uygulayabilirsiniz. Aşağıdaki kod örneği bir parametre ekler `MyLiteralMethodResponse` yöntemini ve geçerlidir `XmlAttributeAttribute` özniteliği için parametre. Öğe adı ve ad alanı her iki parameTRe için kümesidir.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -201,8 +201,8 @@ Namespace="http://www.microsoft.com")] string ID){
 </soap:Envelope>  
 ```  
   
-### <a name="applying-attributes-to-classes"></a>Sınıflara öznitelikleri uygulama  
- Ad alanı sınıflarına ilişkilendirmek öğelerinin denetlemeye ihtiyacınız varsa, uygulamadan `XmlTypeAttribute`, `XmlRootAttribute`, ve `SoapTypeAttribute`uygun şekilde. Aşağıdaki kod örneği için üç uygular `Order` sınıfı.  
+### <a name="applying-attributes-to-classes"></a>Öznitelikleri için sınıflar uygulanıyor  
+ Ad alanı sınıfları için bağıntısını öğelerin denetlemek ihtiyacınız varsa, uygulayabilirsiniz `XmlTypeAttribute`, `XmlRootAttribute`, ve `SoapTypeAttribute`uygun şekilde. Aşağıdaki kod örneği için üç uygular `Order` sınıfı.  
   
 ```vb  
 <XmlType("BigBookService"), _  
@@ -221,7 +221,7 @@ End Class
 [XmlType("BigBooksService", Namespace = "http://www.cpandl.com")]  
 [SoapType("SoapBookService")]  
 [XmlRoot("BookOrderForm")]  
-public class Order{  
+public class Order {  
     // Both types of attributes can be applied. Depending on which  
     // the method used, either one will affect the call.  
     [SoapElement(ElementName = "EncodedOrderID")]  

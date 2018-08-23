@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429507"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752353"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream Yöntemi
-Belirtilen ada ve biçimi ile bir akış oluşturur.  
+Belirtilen ada ve biçimi bir akış oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,22 +42,22 @@ HRESULT CreateStream (
   
 #### <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Fusion.idl içinde tanımlı bayrak.  
+ [in] Fusion.idl içinde tanımlanan bayraklar.  
   
  `pszStreamName`  
  [in] Oluşturulacak Akış adı.  
   
  `dwFormat`  
- [in] Akışını dosya biçimi.  
+ [in] Akışla için dosya biçimi.  
   
  `dwFormatFlags`  
- [in] Fusion.idl içinde tanımlanan biçimi özgü bayraklar.  
+ [in] Fusion.idl içinde tanımlanan özel biçim bayrakları.  
   
  `ppIStream`  
- [out] Döndürülen adresini gösteren bir işaretçi [IStream](https://msdn.microsoft.com/library/aa380034.aspx) örneği.  
+ [out] Döndürülen adresini bir işaretçiye [IStream](/windows/desktop/api/objidl/nn-objidl-istream) örneği.  
   
  `puliMaxSize`  
- [isteğe bağlı] En büyük boyutu tarafından başvuruda bulunulan akışın `ppIStream`.  
+ [, isteğe bağlı] En büyük boyutu tarafından başvuruda bulunulan akışın `ppIStream`.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

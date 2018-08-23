@@ -1,5 +1,5 @@
 ---
-title: Mid Deyimi
+title: Mid deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.MidB
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602271"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751894"
 ---
 # <a name="mid-statement"></a>Mid Deyimi
-Belirtilen sayıda karakteri değiştiren bir `String` başka bir dizeden karakterleri içeren değişken.  
+Belirtilen sayıda karakter yerini alan bir `String` başka bir dizeden karakterlerle değişken.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,10 +35,10 @@ Mid( _
  Gerekli. Adını `String` değiştirmek için değişken.  
   
  `Start`  
- Gerekli. `Integer` İfade. Karakter konumda `Target` metin değiştirme başladığı. `Start` bir tabanlı bir dizin kullanır.  
+ Gerekli. `Integer` ifade. Karakter konumunda `Target` burada metin değiştirmesinin. `Start` bir tabanlı bir dizin kullanır.  
   
  `Length`  
- İsteğe bağlı. `Integer` İfade. Değiştirilecek karakterler sayısı. Atlanırsa, tüm `String` kullanılır.  
+ İsteğe bağlı. `Integer` ifade. Değiştirilecek karakterlerin sayısı. Atlanırsa, tüm `String` kullanılır.  
   
  `StringExpression`  
  Gerekli. `String` bölümünü değiştirir ifade `Target`.  
@@ -50,22 +50,22 @@ Mid( _
 |<xref:System.ArgumentException>|`Start` < = 0 veya `Length` < 0.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değiştirilen karakter sayısını her zaman karakter sayısı küçük veya buna eşit olan `Target`.  
+ Değiştirilen karakter sayısını her zaman eşit veya karakter sayısı küçüktür `Target`.  
   
- Visual Basic sahip bir <xref:Microsoft.VisualBasic.Strings.Mid%2A> işlevi ve `Mid` deyimi. Her ikisi de çalışan bir dizedeki karakter belirtilen sayıdaki bu öğeleri ancak `Mid` işlevi sırasında karakter döndürür `Mid` deyimi karakterleri yerini alır. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic sahip bir <xref:Microsoft.VisualBasic.Strings.Mid%2A> işlevi ve bir `Mid` deyimi. Bu öğelerden hem de çalışan bir belirtilen bir dizedeki karakter sayısına ancak `Mid` işlevi çalışırken karakterleri döndürür `Mid` deyimi karakterleri değiştirir. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  `MidB` Deyimi Visual Basic önceki sürümlerinin bir alt dizenin karakter yerine bayt yerini alır. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. Tüm Visual Basic dizeleri Unicode biçiminde olan ve `MidB` artık desteklenmiyor.  
+>  `MidB` Visual Basic'in önceki sürümlerindeki deyiminin karakter yerine bayt bir alt dizeyi değiştirir. Esas olarak çift baytlı karakter kümesi (DBCS) uygulamalarında dize dönüştürmek için kullanılır. Tüm Visual Basic dizeleri Unicode biçimindedir ve `MidB` artık desteklenmiyor.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Mid` başka bir dizeden karakterleri içeren bir dize değişkeni karakter belirtilen sayıda değiştirmek için deyimi.  
+ Bu örnekte `Mid` deyimi başka bir dizeden karakterlerle belirtilen sayıda karakteri bir dize değişkeniyle değiştirin.  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Modülü:** `Strings`  
+ **Modül:** `Strings`  
   
  **Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

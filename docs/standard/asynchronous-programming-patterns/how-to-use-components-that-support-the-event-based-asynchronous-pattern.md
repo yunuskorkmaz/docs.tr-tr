@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: a96641e6dd42e033f2d28b847fc071dfc514912d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: e6aecd5957ae62e3c147af22c2a1b135a4c32310
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937003"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752162"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma
 Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren sağlar. <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, örneğin, yüklemenizi ses ve kesinti olmadan çalışan, ana iş parçacığı devam ederken "arka planda" görüntüleri etkinleştirin.  
@@ -63,4 +63,3 @@ Birçok bileşen iş zaman uyumsuz olarak gerçekleştirme seçeneğini içeren 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [Visual Basic'te çoklu iş parçacığı kullanımı](../../../docs/visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

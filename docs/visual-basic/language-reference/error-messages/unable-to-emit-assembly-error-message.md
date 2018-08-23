@@ -1,63 +1,67 @@
 ---
-title: 'Derleme oluşturulamıyor: &lt;hata iletisi&gt;'
-ms.date: 07/20/2015
+title: 'Derleme yayılamıyor: <error message>'
+ms.date: 08/14/2018
 f1_keywords:
 - vbc30145
 - bc30145
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 8f497069088ad30a3be58d02caa0a32f7f1b21b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595179"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751940"
 ---
-# <a name="unable-to-emit-assembly-lterror-messagegt"></a>Derleme oluşturulamıyor: &lt;hata iletisi&gt;
-Visual Basic derleyici derleme oluşturma çıkması aşamasında hata raporlama bağlayıcı ile derleme bağlayıcı (bir derleme bir bildirim oluşturmak için Al.exe, Alink olarak da bilinir) çağırır.  
-  
- **Hata Kimliği:** BC30145  
-  
-## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
-  
-1.  Tırnak işaretli hata iletisini inceleyin ve konu bakın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Daha fazla açıklama ve öneriler için.  
-  
-2.  Derleme kullanarak el ile oturum açmayı deneyin [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md).  
-  
-3.  Sorun devam ederse, koşullar hakkında bilgi toplayın ve Microsoft Ürün Destek Hizmetleri'ne bildirin.  
-  
-### <a name="to-sign-the-assembly-manually"></a>Derleme el ile imzalamak için  
-  
-1.  [Sn.exe (tanımlayıcı ad aracı)] kullanın[Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)) ortak/özel anahtar çifti dosya oluşturulamadı.  
-  
-     Bu dosya .snk uzantısına sahiptir.  
-  
-2.  Projenizden hata oluşturmadan COM başvurusu silin.  
-  
-3.  Windows **Başlat** menüsündeki **programları**, işaret **Microsoft Visual Studio 2008**, işaret **Visual Studio Araçları**, ve ardından **Visual Studio 2008 Komut İstemi**.  
-  
-4.  Derleme sarmalayıcı eklemek istediğiniz yeri dizinine taşıyın.  
-  
-5.  Aşağıdaki kodu yazın.  
-  
-    ```  
-    tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>  
-    ```  
-  
-     Girdiğiniz kod örneği aşağıdaki gibi olabilir.  
-  
-    ```  
-    tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"  
-    ```  
-  
-     Bir yol veya dosya boşluk içeriyorsa, çift tırnak işaretleri (") kullanın.  
-  
-6.  Visual Studio'da yeni oluşturduğunuz dosyayı bir .NET derlemesi başvuru ekleyin.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))  
- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)
+# <a name="unable-to-emit-assembly-error-message"></a>Derleme yayılamıyor: \<hata iletisi >
+
+Visual Basic Derleyicisi Assembly Linker çağırır (*Al.exe*Alink olarak da bilinen) bir bildirim ve bağlayıcı sahip bir derleme oluşturmak için derleme oluşturma Emisyonu aşamasında bir hata bildirir.
+
+**Hata Kimliği:** BC30145
+
+## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
+
+1. Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) daha ayrıntılı bir açıklama ve öneriler için.
+
+2. Derlemeyi kullanarak el ile açmayı deneyin [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) veya [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md).
+
+3. Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.
+
+### <a name="to-sign-the-assembly-manually"></a>Derlemeyi el ile imzalamak için
+
+1. Kullanma [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)) bir ortak/özel anahtar çifti dosyası oluşturun.
+
+   Bu dosyanın bir *.snk* uzantısı.
+
+2. Projenizden hata oluşturuyor COM başvurusu silin.
+
+3. Açık [Visual Studio için geliştirici komut istemi](../../../framework/tools/developer-command-prompt-for-vs.md).
+
+   Windows 10, girin **Geliştirici komut istemi** görev çubuğundaki arama kutusuna. Ardından, **VS 2017 için geliştirici komut istemi** sonuçları listesinde.
+
+4. Dizini, derleme sarmalayıcısı yerleştirmek istediğiniz dizine geçin.
+
+5. Aşağıdaki komutu girin:
+
+    ```cmd
+    tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
+    ```
+
+   Şunu yazabilirsiniz gerçek komut bir örnektir:
+
+    ```cmd
+    tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"
+    ```
+
+   > [!TIP]
+   > Bir yol veya dosya boşluk içeriyorsa çift tırnak işaretleri kullanın.
+
+6. Visual Studio'da oluşturduğunuz dosya bir .NET derlemesine başvuru ekleyin.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).
+- [Sn.exe (tanımlayıcı ad aracı)] [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

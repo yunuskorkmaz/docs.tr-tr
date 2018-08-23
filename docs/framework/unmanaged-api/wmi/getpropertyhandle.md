@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle işlevi (yönetilmeyen API Başvurusu)
-description: GetPropertyHandle işlevi bu identies bir özelliği bir benzersiz tanıtıcı döndürür.
+description: GetPropertyHandle işlevi bu identies özellik benzersiz bir tanıtıcı döndürür.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460589"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752321"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür.
@@ -43,38 +43,38 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) örneği.
 
 `wszPropertyName`  
-[in] Özellik adını içeren UTF16 kodlu characaters null ile sonlandırılmış dizisi.   
+[in] UTF16 kodlu characaters, özellik adı içeriyor, null ile sonlandırılmış dize.   
 
 `pType`  
-[out] Bir işaretçi bir [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özelliğinin CIM türünü temsil eden numaralandırma üyesi.
+[out] Bir işaretçi bir [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) özelliği CIM türünü temsil eden numaralandırma üyesi.
 
 `pHandle`   
-[out] Özellik işleyicisi içeren bir tamsayı gösteren bir işaretçi.
+[out] Özellik işleyicisi içeren bir tamsayı işaretçisi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik adı bulunamadı. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | İstenen özellik türünde olan `CIM_OBJECT` veya `CIM_ARRAY`. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) yöntemi.
 
-Bu işleyici kullanırken özelliklerini tanımlamak için kullanabileceğiniz [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) özellik değerlerini okumak veya yazmak için yöntem.
+Kullanırken özellikleri tanımlamak için bu tutamacı kullan [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) özellik değerlerini okumak veya yazmak için yöntemleri.
 
-Tanıtıcıları alınabilir tüm veri türlerinin özelliklerini dışında `CIM_OBJECT` ve `CIM_ARRAY`. İşler iş bir sınıfın tüm örneklerini döndürdü.
+Tanıtıcıları alınabilir özellikleri için tüm veri türleri dışındaki `CIM_OBJECT` ve `CIM_ARRAY`. Bir sınıfın tüm örnekleri arasında tanıtıcıları iş döndürdü.
 
 ## <a name="requirements"></a>Gereksinimler  
 **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

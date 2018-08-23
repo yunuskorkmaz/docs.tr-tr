@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: ec275d4782fee047b16fd114c4d22ceb03eecb11
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 4be248b1d86692bd35491e55b1c649cd8428a33b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199244"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753987"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyi vardır. Aşağıdaki erişim değiştiriciler, tür veya üyenin erişilebilirliğini bildirirken zaman belirtmek için kullanabilirsiniz:  
@@ -43,7 +43,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelere başka kodda
   
  Türetilmiş sınıflar temel türleri değerinden daha büyük düzeyde erişilebilirlik sahip olamaz. Diğer bir deyişle, bir ortak sınıf olamaz `B` iç bir sınıftan türetilen `A`. Bu izin verilirse, bu duruma getirme yarayıp `A` genel, çünkü tüm korumalı veya iç üyeleri `A` türetilmiş sınıftan erişilebilir.  
   
- Belirli etkinleştirmek ınternalsvisibletoattribute özniteliğini kullanarak tarafından iç türlerine erişmek için diğer derlemeler. Daha fazla bilgi için [arkadaş derlemeleri](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Belirli etkinleştirmek ınternalsvisibletoattribute özniteliğini kullanarak tarafından iç türlerine erişmek için diğer derlemeler. Daha fazla bilgi için [arkadaş derlemeleri](../concepts/assemblies-gac/friend-assemblies.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Sınıf ve yapı üyesi erişilebilirliği  
  Sınıf üyeleri (iç içe geçmiş sınıflar ve yapılar dahil) erişim altı tür ile bildirilebilir. Yapı üyeleri, yapılar devralımı desteklemez çünkü korumalı olarak bildirilemez.  

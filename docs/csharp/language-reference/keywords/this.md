@@ -9,25 +9,25 @@ helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
 ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172041"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753923"
 ---
 # <a name="this-c-reference"></a>this (C# Başvurusu)
-`this` Anahtar sözcüğü sınıfının geçerli örneği başvuruyor ve bir ilk parametresi bir genişletme yöntemi değiştirici da kullanılır.  
+`this` Anahtar sözcüğü sınıfın geçerli örneğine başvurur ve genişletme yönteminin ilk parametresinin bir değiştirici da kullanılır.  
   
 > [!NOTE]
->  Bu makalede kullanımını ele `this` sınıf örnekleri ile. Kullanımını genişletme yöntemleri hakkında daha fazla bilgi için bkz: [genişletme yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+>  Bu makalede kullanımı ele alınmaktadır `this` sınıf örneğine sahip. Kullanımını genişletme yöntemleri hakkında daha fazla bilgi için bkz: [genişletme yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
  ' In yaygın kullanımları şunlardır `this`:  
   
--   Benzer adları, örneğin gizli üyeleri nitelemek için:  
+-   Örneğin benzer adlarla gizli üyeleri nitelemek için:  
   
  [!code-csharp[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
--   Örneğin diğer yöntemleri için bir nesne bir parametre olarak geçirmek için:  
+-   Diğer yöntemleri için parametre olarak nesne örneğin iletmek için:  
   
     ```csharp  
     CalcTax(this);  
@@ -37,10 +37,10 @@ ms.locfileid: "34172041"
   
  [!code-csharp[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
- Statik üye işlevleri, bir nesnenin parçası olarak değil de sınıf düzeyinde olmadıklarından sahip bir `this` işaretçi. Başvurmak için bir hata olduğunu `this` bir statik yöntem.  
+ Bir nesnenin parçası olarak değil de sınıf düzeyinde olduğundan statik üye işlevleri yoktur bir `this` işaretçi. Başvurmak için bir hata olduğunu `this` statik yöntemde.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `this` nitelemek için kullanılan `Employee` sınıfı üyelerine, `name` ve `alias`, benzer adlarıyla gizlidir. Bir nesne yönteme de kullanılan `CalcTax`, başka bir sınıfa ait olduğu.  
+ Bu örnekte, `this` nitelemek için kullanılan `Employee` sınıf üyeleri, `name` ve `alias`, benzer adlarla gizlidir. Bir nesne yönteme geçirmek için de kullanılır `CalcTax`, başka bir sınıfa aittir.  
   
  [!code-csharp[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   

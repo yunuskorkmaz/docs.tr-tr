@@ -1,51 +1,39 @@
 ---
-title: 'Nasıl yapılır: Boş Değer Atanabilir bir Tür Belirleme (C# Programlama Kılavuzu)'
-ms.date: 07/20/2015
+title: 'Nasıl yapılır: boş değer atanabilir bir tür (C# programlama Kılavuzu) belirleme'
+description: Boş değer atanabilir bir tür bir türdür örneği boş değer atanabilir bir tür olup olmadığını belirlemek hakkında bilgi edinin
+ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f3ac4ebd77fc92a133eb326919d5ba55264ced97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333189"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754962"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Nasıl yapılır: Boş Değer Atanabilir bir Tür Belirleme (C# Programlama Kılavuzu)
-C# kullanabilirsiniz [typeof](../../../csharp/language-reference/keywords/typeof.md) oluşturmak için işleç bir <xref:System.Type> null atanabilir bir tür temsil eden nesnesi:  
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Nasıl yapılır: boş değer atanabilir bir tür (C# programlama Kılavuzu) belirleme
+
+Aşağıdaki örnek nasıl belirleneceğini göstermektedir olup olmadığını bir <xref:System.Type?displayProperty=nameWithType> örneği boş değer atanabilir bir tür temsil eder:
+
+[!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
+
+Örnekte gösterildiği gibi kullandığınız [typeof](../../language-reference/keywords/typeof.md) oluşturmak için işleç bir <xref:System.Type?displayProperty=nameWithType> nesne.  
   
-```  
-System.Type type = typeof(int?);  
-```  
+Belirlemek istiyorsanız bir örnek olup boş değer atanabilir bir tür, kullanmayın <xref:System.Object.GetType%2A?displayProperty=nameWithType> almak için yöntemi bir <xref:System.Type> önceki kod ile test edilecek örneği. Çağırdığınızda <xref:System.Object.GetType%2A?displayProperty=nameWithType> yöntemi null yapılabilir bir tür örneği üzerinde örneğidir [Kutulu](using-nullable-types.md#boxing-and-unboxing) için <xref:System.Object>. Bir null olmayan boş değer atanabilir bir tür örneğinin kutulama temel türünde bir değer olarak kutulama için eşdeğer olarak <xref:System.Object.GetType%2A> döndürür bir <xref:System.Type> boş değer atanabilir bir tür temel alınan türünü temsil eden nesne:
+
+[!code-csharp-interactive[GetType example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#2)]
+
+Kullanmayın [olduğu](../../language-reference/keywords/is.md) örneği boş değer atanabilir bir tür olup olmadığını belirlemek için işleci. Aşağıdaki örnekte gösterildiği gibi boş değer atanabilir bir tür ve kullanarak, temelindeki türe örnekleri türlerini ayırt edemez `is` işleci:
+
+[!code-csharp-interactive[is operator example](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#3)]
+
+Aşağıdaki örnekte gösterilen kod örneği boş değer atanabilir bir tür olup olmadığını belirlemek için kullanabilirsiniz:
+
+[!code-csharp-interactive[whether an instance is of a nullable type](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#4)]
   
- Sınıflar ve yöntemler birini de kullanabilirsiniz <xref:System.Reflection> oluşturmak için ad alanı <xref:System.Type> boş değer atanabilir türleri temsil eden nesne. Ancak, kullanarak boş değer atanabilir değişkenlerden çalışma zamanında tür bilgilerini edinmek için deneyin <xref:System.Object.GetType%2A> yöntemi veya `is` işleç sonucu olan bir <xref:System.Type> temel alınan türü, null atanabilir olmayan temsil eden nesnesi kendisini yazın.  
-  
- Çağırma `GetType` üzerinde null atanabilir tür türü örtük olarak dönüştürülür olduğunda gerçekleştirilecek kutulama işlemi neden <xref:System.Object>. Bu nedenle <xref:System.Object.GetType%2A> her zaman döndüren bir <xref:System.Type> temel alınan türü, boş değer atanabilir tür temsil eden nesne.  
-  
-```  
-int? i = 5;  
-Type t = i.GetType();  
-Console.WriteLine(t.FullName); //"System.Int32"  
-```  
-  
- C# [olan](../../../csharp/language-reference/keywords/is.md) işleci null atanabilir'ın temel alınan tür üzerinde de çalışır. Bu nedenle kullanamazsınız `is` bir değişken null atanabilir bir tür olup olmadığını belirlemek için. Aşağıdaki örnekte gösterilir `is` işleci değerlendirir bir null atanabilir\<int > bir tamsayı olarak değişken  
-  
-```  
-static void Main(string[] args)  
-{  
-  int? i = 5;  
-  if (i is int) // true  
-    //…  
-}  
-```  
-  
-## <a name="example"></a>Örnek  
- Belirlemek için aşağıdaki kodu kullanmak isteyip bir <xref:System.Type> nesnesi, null atanabilir bir tür temsil eder. Bu kodu yanlış olmadığını her zaman döndürdüğünü unutmayın `Type` çağrısından döndürülen nesne <xref:System.Object.GetType%2A>, bu konunun önceki kısımlarında açıklandığı gibi.  
-  
-```  
-if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>)) {…}  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Boş Değer Atanabilir Tipler](../../../csharp/programming-guide/nullable-types/index.md)  
- [Boş Değer Atanabilir Tipleri Kutulama](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Boş değer atanabilir türler](index.md)  
+[Boş değer atanabilir türleri kullanma](using-nullable-types.md)  
+<xref:System.Nullable.GetUnderlyingType%2A>  

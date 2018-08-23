@@ -4,12 +4,12 @@ description: Durum Yönetimi ve ölçeklendirmek için kalıcı depolama sunucus
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8b0b5241e6bae0bb4c77451e500b6c623c206fbf
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405022"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754689"
 ---
 # <a name="serverless-architecture-considerations"></a>Sunucusuz mimari konuları
 
@@ -79,7 +79,7 @@ Daha fazla bilgi için [devre kesici desenini uygulama](../microservices-archite
 
 ## <a name="versioning-and-greenblue-deployments"></a>Sürüm oluşturma ve yeşil/mavi dağıtımları
 
-Sunucusuz, önemli bir avantajı tüm uygulamayı yeniden dağıtmak zorunda kalmadan belirli bir işlev yükseltmek yeteneğidir. Başarılı olması yükseltmeler için bunların çağrılması Hizmetleri kodunun doğru sürüme yönlendirilebilmesi işlevleri tutulan olması gerekir. Yeni sürümlerini dağıtmak için bir strateji de önemlidir. Yaygın bir yaklaşım "Yeşil/dağıtımları mavi." kullanmaktır. Yeşil dağıtım geçerli bir işlevdir. Yeni "mavi" sürümü üretime dağıtılmadan ve test. Yeni sürümü Canlı gelecektir geçişleri test ederken, yeşil ve mavi sürümleri değiştirilir. Herhangi bir sorun karşılaşılırsa geri değiştirilebilir. Sürüm oluşturma ve yeşil/mavi dağıtımlarını destekleyen bir bileşimi sürüm değişikliklerini uyum sağlamak için İşlevler yazma ve dağıtımları işlemek için sunucusuz platformu ile çalışma gerektirir. Olası bir yaklaşım açıklanmıştır proxy'leri kullanmaktır [./azure-functions.md](Azure serverless platform) bölüm.
+Sunucusuz, önemli bir avantajı tüm uygulamayı yeniden dağıtmak zorunda kalmadan belirli bir işlev yükseltmek yeteneğidir. Başarılı olması yükseltmeler için bunların çağrılması Hizmetleri kodunun doğru sürüme yönlendirilebilmesi işlevleri tutulan olması gerekir. Yeni sürümlerini dağıtmak için bir strateji de önemlidir. Yaygın bir yaklaşım "Yeşil/dağıtımları mavi." kullanmaktır. Yeşil dağıtım geçerli bir işlevdir. Yeni "mavi" sürümü üretime dağıtılmadan ve test. Yeni sürümü Canlı gelecektir geçişleri test ederken, yeşil ve mavi sürümleri değiştirilir. Herhangi bir sorun karşılaşılırsa geri değiştirilebilir. Sürüm oluşturma ve yeşil/mavi dağıtımlarını destekleyen bir bileşimi sürüm değişikliklerini uyum sağlamak için İşlevler yazma ve dağıtımları işlemek için sunucusuz platformu ile çalışma gerektirir. Olası bir yaklaşım açıklanmıştır proxy'leri kullanmaktır [Azure sunucusuz platformu](azure-functions.md#proxies) bölüm.
 
 >[!div class="step-by-step"]
 [Önceki](serverless-architecture.md)

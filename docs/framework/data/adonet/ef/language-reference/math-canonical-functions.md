@@ -2,27 +2,139 @@
 title: Kurallı matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199314"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752359"
 ---
 # <a name="math-canonical-functions"></a>Kurallı matematik işlevleri
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı matematik işlevleri içerir.  
+
+Entity SQL aşağıdaki kurallı matematik işlevleri içerir:
   
- Aşağıdaki tabloda, matematik gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.  
-  
-|İşlev|Açıklama|  
-|--------------|-----------------|  
-|`Abs(value)`|Mutlak değerini döndürür `value`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|Küçük olmayan en küçük tamsayı döndürür daha `value`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Single`, `Double`, ve `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|Değerinden büyük olmayan en büyük tamsayı döndürür `value`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Single`, `Double`, ve `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|Belirtilen sonuç döndüren `value` belirtilen `exponent`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `value`: Bir `Int32, Int64, Double`, veya `Decimal`.<br /><br /> `exponent`: Bir `Int64`, `Double`, veya `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.<br /><br /> **Bağımsız Değişkenler**<br /><br /> A `Single`, `Double`, ve `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|Döndürür `value`, yuvarlanır yakın belirtilen `digits`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `value`: `Double` veya `Decimal`.<br /><br /> `digits`: `Int16` veya `Int32`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|Döndürür `value`, kesilmiş yakın belirtilen `digits`.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `value`: `Double` veya `Decimal`.<br /><br /> `digits`: `Int16` veya `Int32`.<br /><br /> **Dönüş değeri**<br /><br /> Türünü `value`.<br /><br /> **Örnek**<br /><br /> `Truncate(748.58,1)`|  
+## <a name="absvalue"></a>Abs(Value)
+
+Mutlak değerini döndürür `value`.
+
+**Bağımsız Değişkenler**
+
+Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a>Ceiling(Value)
+
+Küçük olmayan en küçük tamsayı döndürür daha `value`.
+
+**Bağımsız Değişkenler**
+
+A `Single`, `Double`, ve `Decimal`.
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a>Floor(Value)
+
+Değerinden büyük olmayan en büyük tamsayı döndürür `value`.
+
+**Bağımsız Değişkenler**
+
+A `Single`, `Double`, ve `Decimal`.
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a>Güç (değeri, üs)
+
+Belirtilen sonuç döndüren `value` belirtilen `exponent`.
+
+**Bağımsız Değişkenler**
+
+|  |  |
+|--|--|
+|`value` | Bir `Int32, Int64, Double`, veya `Decimal`. |
+|`exponent` | Bir `Int64`, `Double`, veya `Decimal`. |
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a>Round(Value)
+
+Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.
+
+**Bağımsız Değişkenler**
+
+A `Single`, `Double`, ve `Decimal`.
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a>Round (değer, basamak)
+
+Döndürür `value`, yuvarlanır yakın belirtilen `digits`.
+
+**Bağımsız Değişkenler**
+
+|  |  |
+|--|--|
+|`value`|`Double` veya `Decimal`.|
+|`digits`|`Int16` veya `Int32`.|
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a>(Değer, basamak) Kes
+
+Döndürür `value`, kesilmiş yakın belirtilen `digits`.
+
+**Bağımsız Değişkenler**
+
+|  |  |
+|--|--|
+|`value`|`Double` veya `Decimal`.|
+|`digits`|`Int16` veya `Int32`.|
+
+**Dönüş değeri**
+
+Türünü `value`.
+
+**Örnek**
+
+`Truncate(748.58,1)`  
   
  Bu işlevler döndüreceği `null` verildiyse `null` giriş.  
   

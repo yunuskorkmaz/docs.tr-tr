@@ -8,60 +8,60 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
 ms.openlocfilehash: 8aad85ce3369f84e82100072bccf389b03c38221
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826925"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751923"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Nasıl yapılır: Bir Saklı Yordamı LINQ Kullanarak Çağırma (Visual Basic)
-Dil ile tümleşik sorgu (LINQ) veritabanı gibi depolanan nesneler yordamlarını içeren veritabanı bilgileri erişimi kolay hale getirir.  
+Dil ile tümleşik sorgu (LINQ), veritabanı bilgileri, veritabanı nesneleri gibi depolanan yordamları da dahil olmak üzere erişim kolaylaştırır.  
   
- Aşağıdaki örnek bir SQL Server veritabanı içinde saklı yordamı çağıran bir uygulamasının nasıl oluşturulacağını gösterir. Örnek veritabanında iki farklı saklı yordam çağrısı gösterilmektedir. Her bir yordam bir sorgunun sonuçlarını döndürür. Bir yordam giriş parametreleri alır ve diğer yordamı parametre almaz.  
+ Aşağıdaki örnek, bir SQL Server veritabanında bir saklı yordamı çağıran bir uygulama oluşturma işlemi gösterilmektedir. Örnek veritabanında iki farklı saklı yordam çağırmak nasıl gösterir. Her yordam, bir sorgunun sonuçlarını döndürür. Bir yordam giriş parametreleri alır ve diğer yordam parametre almaz.  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Bu veritabanı geliştirme bilgisayarınızda yoksa, Microsoft Download Center'dan gelen yükleyebilirsiniz. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu konudaki örnekler, Northwind örnek veritabanını kullanır. Geliştirme bilgisayarınızda bu veritabanı yoksa Microsoft Download Center'dan gelen indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bir bağlantı oluşturmak için  
   
-1.  Visual Studio'da açın **Sunucu Gezgini**/**Database Explorer** tıklayarak **Sunucu Gezgini**/**veritabanı Explorer** üzerinde **Görünüm** menüsü.  
+1.  Visual Studio'da açın **Sunucu Gezgini**/**veritabanı Gezgini** tıklayarak **Sunucu Gezgini**/**veritabanı Explorer** üzerinde **görünümü** menüsü.  
   
-2.  Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**Database Explorer** ve ardından **Bağlantı Ekle**.  
+2.  Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**veritabanı Gezgini** ve ardından **Bağlantı Ekle**.  
   
-3.  Northwind örnek veritabanı için geçerli bir bağlantı belirtin.  
+3.  Northwind örnek veritabanıyla kurulan geçerli bir bağlantı belirtin.  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Bir LINQ to SQL dosyası içeren bir proje eklemek için  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL dosyası içeren bir proje eklemek için  
   
-1.  Visual Studio'da üzerinde **dosya** menüsündeki **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü olarak.  
+1.  Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü.  
   
-2.  Üzerinde **proje** menüsünde tıklatın **Yeni Öğe Ekle**. Seçin **LINQ'ten SQL'e sınıflarını** öğe şablonu.  
+2.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
   
-3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) northwind.dbml dosyası için açıldı.  
+3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için northwind.dbml dosyası açılır.  
   
-### <a name="to-add-stored-procedures-to-the-or-designer"></a>Saklı yordamlar için O/R Tasarımcısı eklemek için  
+### <a name="to-add-stored-procedures-to-the-or-designer"></a>O/R Tasarımcısı için saklı yordamlar eklemek için  
   
-1.  İçinde **Sunucu Gezgini**/**Database Explorer**, Northwind veritabanına bağlantı genişletin. Genişletme **saklı yordamlar** klasör.  
+1.  İçinde **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına bağlantı genişletin. Genişletin **saklı yordamlar** klasör.  
   
-     O/R Tasarımcısı kapattıysanız, daha önce eklediğiniz northwind.dbml dosyasını çift tıklatarak yeniden açabilirsiniz.  
+     O/R Tasarımcısı kapattıysanız, daha önce eklediğiniz northwind.dbml dosyasına çift tıklayarak açabilirsiniz.  
   
-2.  Tıklatın **yıla göre satış** saklı yordamı ve tasarımcı sağ bölmesine sürükleyin. Tıklatın **on en pahalı ürün** saklı yordam, Tasarımcı sağ bölmesinde sürükleyin.  
+2.  Tıklayın **yıla göre satış** saklı yordam ve tasarımcısının sağ bölmeye sürükleyin. Tıklayın **on en pahalı ürün** saklı yordam, tasarımcının sağ bölmeye sürükleyin.  
   
 3.  Değişikliklerinizi kaydetmek ve Tasarımcısı'nı kapatın.  
   
-4.  Projeyi kaydedin.  
+4.  Projenizi kaydedin.  
   
-### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Saklı yordamlar sonuçlarını görüntülemek üzere kod eklemek için  
+### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Saklı yordamları sonuçlarını görüntülemek için kod eklemek için  
   
-1.  Gelen **araç**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
+1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
   
-2.  Form1 kodu eklemek için çift tıklayın, `Load` olay.  
+2.  Form1 kod eklemek için çift tıklayın, `Load` olay.  
   
-3.  O/R Tasarımcısı saklı yordamlar eklendiğinde Tasarımcı eklenen bir <xref:System.Data.Linq.DataContext> projeniz için nesne. Bu nesne, bu yordamlar erişmek için gerekli kod içerir. <xref:System.Data.Linq.DataContext> Nesne proje adlı için .dbml dosya adına dayalı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlandırılan `northwindDataContext`.  
+3.  Tasarımcı saklı yordamlar için O/R Tasarımcısı eklendiğinde, eklenen bir <xref:System.Data.Linq.DataContext> projeniz için nesne. Bu nesne, bu yordamları erişmek için gereken kodu içerir. <xref:System.Data.Linq.DataContext> Nesne proje adı için bir .dbml dosyası adına bağlı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlı `northwindDataContext`.  
   
-     Bir örneğini oluşturabilirsiniz <xref:System.Data.Linq.DataContext> kod ve çağrı de O/R tasarımcısı tarafından belirtilen saklı yordam yöntemlerinin. Bağlamak için <xref:System.Windows.Forms.DataGridView> nesne çağırarak hemen çalıştırılacak sorgu zorlamak yaptığınız <xref:System.Linq.Enumerable.ToList%2A> saklı yordamı sonuçlarını yöntemi.  
+     Bir örneği oluşturabilir <xref:System.Data.Linq.DataContext> , kodu ve çağrı O/R tasarımcısı tarafından belirtilen saklı yordam yöntemleri. Bağlanacak <xref:System.Windows.Forms.DataGridView> nesnesini çağırarak hemen yürütme için sorguyu zorlamak sahip olabileceğiniz <xref:System.Linq.Enumerable.ToList%2A> saklı yordam sonuçlarında yöntemi.  
   
-     Aşağıdaki kodu ekleyin `Load` veri içeriğiniz için yöntemleri olarak sunulan saklı yordamlardan birini çağrılacak olay.  
+     Aşağıdaki kodu ekleyin `Load` veri Bağlamınızı yöntemler olarak kullanıma sunulan saklı yordamlardan birini çağrılacak olay.  
   
      [!code-vb[VbLINQtoSQLHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_1.vb)]  
     [!code-vb[VbLINQtoSQLHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-call-a-stored-procedure-by-using-linq_2.vb)]  
@@ -72,5 +72,5 @@ Dil ile tümleşik sorgu (LINQ) veritabanı gibi depolanan nesneler yordamların
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Nasıl yapılır: güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atayın](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [DataContext yöntemi (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [Nasıl yapılır: güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atama](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

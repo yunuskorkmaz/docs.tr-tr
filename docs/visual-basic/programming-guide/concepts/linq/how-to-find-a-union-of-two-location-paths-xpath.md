@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: iki konum yolları (XPath-LINQ-XML) birleşimini Bul (Visual Basic)'
+title: 'Nasıl yapılır: (XPath-LINQ to XML) iki konum yolunun birleşimini bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642646"
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "42751888"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: iki konum yolları (XPath-LINQ-XML) birleşimini Bul (Visual Basic)
-XPath iki XPath Konum yolları sonuçlarını birleşimi bulmanızı sağlar.  
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: (XPath-LINQ to XML) iki konum yolunun birleşimini bulma (Visual Basic)
+XPath birleşim iki XPath Konum yolları sonuçlarını bulmanıza olanak tanır.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `//Category|//Price`  
   
- Kullanarak aynı sonucu elde edebilirsiniz <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işleci.  
+ Kullanarak aynı sonucu elde edebileceğiniz <xref:System.Linq.Enumerable.Concat%2A> standart sorgu işleci.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte tüm bulur `Category` öğeleri ve tüm `Price` öğeleri ve bunları tek bir koleksiyona art arda ekler. Unutmayın [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu çağrıları <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sonuçları sıralamak için. XPath ifadesi değerlendirme sonuçlarını da belge sıradadır.  
+ Bu örnekte tüm bulur `Category` öğeleri ve tüm `Price` öğeleri ve bunları tek bir koleksiyon birleştirir. Unutmayın [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu çağrıları <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sonuçları sıralamak için. Belge düzeninde XPath ifade değerlendirme sonuçlarını da var.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: sayısal verileri (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: sayısal veriler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -66,4 +66,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

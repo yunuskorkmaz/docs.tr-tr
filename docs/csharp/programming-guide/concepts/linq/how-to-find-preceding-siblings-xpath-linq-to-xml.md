@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: eşdüzey (XPath-LINQ-XML) önceki Bul (C#)'
+title: 'Nasıl yapılır: Bul önceki eşdüzey (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 64c5bc35899f85e107ccc9d6b0bf93eefb5576ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316887"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753977"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Nasıl yapılır: eşdüzey (XPath-LINQ-XML) önceki Bul (C#)
-Bu konuda XPath karşılaştırır `preceding-sibling` eksene [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseni.  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul önceki eşdüzey (XPath-LINQ to XML) (C#)
+Bu konu XPath karşılaştırır `preceding-sibling` eksene [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseni.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `preceding-sibling::*`  
   
- Unutmayın her ikisi de sonuçlarını <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> ve <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> belge sırayla.  
+ Unutmayın ikisi için de sonuçları <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> ve <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> belge sıradadır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bulur `FullAddress` öğesini ve ardından kullanarak önceki öğeleri alır `preceding-sibling` ekseni.  
+ Aşağıdaki örnek bulur `FullAddress` öğesini ve ardından önceki öğeleri kullanarak alır `preceding-sibling` ekseni.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: müşteriler ve siparişler (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -54,4 +54,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

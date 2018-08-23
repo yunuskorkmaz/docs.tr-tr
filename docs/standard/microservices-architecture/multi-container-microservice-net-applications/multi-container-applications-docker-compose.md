@@ -1,25 +1,25 @@
 ---
-title: Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama
+title: Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106310"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42754735"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Birden çok kapsayıcı uygulamanızla docker-compose.yml tanımlama 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama 
 
-Bu kılavuzdaki [docker-compose.yml](https://docs.docker.com/compose/compose-file/) dosya bölümünde sunulmuştur [4. adım. Birden çok kapsayıcı Docker uygulama oluştururken docker-compose.yml hizmetlerinizi tanımlamak](#step4_define_svcs_in_docker_compose_yml). Ancak, daha ayrıntılı olarak incelenmesi yararlı docker-compose dosyaları kullanmak için ek yöntemler vardır.
+Bu kılavuzdaki [docker-compose.yml](https://docs.docker.com/compose/compose-file/) dosya bölümünde tanıtılmıştır [4. adım. Çok kapsayıcılı Docker uygulaması oluştururken, hizmetlerinizi docker-compose.yml tanımlamak](#step4_define_svcs_in_docker_compose_yml). Ancak, daha ayrıntılı olarak incelenmesi yararlı olan docker-compose dosyaları kullanmak için ek yolu vardır.
 
-Örneğin, birden çok kapsayıcı uygulamanızda docker-compose.yml dosyası dağıtmak istediğiniz nasıl açıkça tanımlayabilirsiniz. İsteğe bağlı olarak, nasıl özel Docker görüntülerinizi oluşturmak zorunda kalacaklarını tanımlayabilirsiniz. (Özel Docker görüntüleri Docker CLI ile de oluşturulabilir.)
+Örneğin, docker-compose.yml dosyası çok Kapsayıcılı uygulamanızı dağıtmak istediğiniz nasıl açıkça tanımlayabilirsiniz. İsteğe bağlı olarak, özel Docker görüntülerinizi oluşturmak için nasıl yükleyeceksiniz tanımlayabilirsiniz. (Özel Docker görüntüleri ile Docker CLI'yı da oluşturulabilir.)
 
-Temel olarak, her dağıtmak istediğiniz kapsayıcıları ve her bir kapsayıcı dağıtımı için belirli özellikleri tanımlayın. Birden çok kapsayıcı dağıtım açıklama dosyasını oluşturduktan sonra tarafından düzenlenmiş tek bir eylem tüm çözümde dağıtabilirsiniz [docker-oluşturmanıza](https://docs.docker.com/compose/overview/) CLI komut veya dağıtabilir, saydam Visual Studio'dan. Aksi takdirde, Docker CLI kapsayıcı tarafından kapsayıcı birden çok adımlarda komutu komut satırından çalıştırma docker kullanarak dağıtmak için kullanmanız gerekir. Bu nedenle, docker-compose.yml tanımlanan her bir hizmet tam olarak bir resim belirtin veya bu yapı gerekir. Diğer anahtarlar isteğe bağlıdır ve komut satırı ortaklarınıza çalıştırmak, docker benzer.
+Temel olarak, her kapsayıcıları dağıtmak istediğiniz ek olarak her kapsayıcı dağıtımı için belirli özellikleri tanımlar. Bir çoklu kapsayıcı dağıtım açıklama dosyası oluşturduktan sonra tek bir eylem tarafından düzenlenen tüm çözüm dağıtabileceğiniz [docker compose up](https://docs.docker.com/compose/overview/) CLI komutunu veya dağıtabilir, saydam Visual Studio'dan. Aksi takdirde, komutu komut satırından çalıştırın docker'ı kullanarak kapsayıcı tarafından kapsayıcı birden çok adımda dağıtmak için Docker CLI'yı kullanmak gerekir. Bu nedenle, docker-compose.yml tanımlanan her bir hizmet tam olarak bir resim belirtin veya bu yapı gerekir. Diğer anahtarlar isteğe bağlıdır ve kendi docker komut satırı ortaklarınıza çalıştırmak için benzer.
 
-Aşağıdaki YAML kodu eShopOnContainers örnek için bir olası genel ancak tek docker-compose.yml dosyası tanımıdır. Bu eShopOnContainers gerçek docker-compose dosyasından değildir. Bunun yerine, tek bir en iyi olmayan dosya, Basitleştirilmiş ve birleştirilmiş bir sürümde olduğundan çalışmak için yol docker-oluşturan dosyaları, daha sonra açıklanacaktır gibi.
+Aşağıdaki YAML koduna hizmetine örneği için bir olası genel ancak tek docker-compose.yml dosyası tanımıdır. Bu gerçek docker-compose dosyasından hizmetine değildir. Bunun yerine, tek bir dosyada en iyi değil, bir basit ve birleştirilmiş sürüm olduğu şekilde çalışmak için docker compose dosyaları, daha sonra açıklanacaktır gibi.
 
 ```yml
 version: '2'
@@ -84,29 +84,29 @@ services:
     image: redis
 ```
 
-Hizmetleri bu dosyadaki kök anahtardır. Bu anahtarın altında tanımladığınız dağıtmak ve yürüttüğünüzde çalıştırmak istediğiniz hizmetleri docker-oluşturan komut veya ne zaman bu docker-compose.yml dosyası kullanarak Visual Studio'dan dağıtın. Bu durumda, docker-compose.yml dosyası aşağıdaki listede açıklandığı gibi tanımlı, birden çok hizmetleri vardır.
+Hizmetler bu dosyadaki kök anahtardır. Bu anahtarın altında dağıtmak ve yürüttüğünüzde çalıştırmak istediğiniz hizmetleri tanımlamakta docker compose up komutu ya da bu docker-compose.yml dosyasını kullanarak Visual Studio'dan dağıtırken. Bu durumda, docker-compose.yml dosyası aşağıdaki listede açıklandığı gibi tanımlı, birden çok hizmet yok.
 
--   webmvc sunucu tarafı c mikro kullanan ASP.NET Core MVC uygulaması da dahil olmak üzere kapsayıcısı\#
+-   Sunucu tarafı c mikro hizmetler kullanan ASP.NET Core MVC uygulaması da dahil olmak üzere kapsayıcı webmvc\#
 
--   catalog.api katalog ASP.NET çekirdek Web API mikro hizmet dahil olmak üzere kapsayıcısı
+-   catalog.api Kataloğu ASP.NET Core Web API'si mikro hizmet de dahil olmak üzere kapsayıcı
 
--   ordering.api sıralama ASP.NET çekirdek Web API mikro hizmet dahil olmak üzere kapsayıcısı
+-   ASP.NET Core Web API'si sıralama mikro hizmet de dahil olmak üzere kapsayıcı ordering.api
 
--   SQL.Data mikro veritabanları bulunduran Linux için SQL Server çalıştıran kapsayıcısı
+-   Linux için mikro hizmetler veritabanlarını barındıran SQL Server çalıştıran kapsayıcı SQL.Data
 
--   Basket.api kapsayıcı Sepeti ASP.NET çekirdek Web API mikro hizmet ile
+-   Sepet ASP.NET Core Web API'si mikro hizmet ile kapsayıcı Basket.api
 
--   Basket.Data kapsayıcı REDIS önbelleği olarak Sepeti veritabanıyla REDIS önbelleği hizmeti çalışıyor
+-   Basket.Data sepet veritabanıyla bir REDIS önbelleği olarak REDIS cache hizmeti çalıştıran kapsayıcısı
 
-### <a name="a-simple-web-service-api-container"></a>Basit bir Web hizmeti API'sine kapsayıcı
+### <a name="a-simple-web-service-api-container"></a>Basit bir Web hizmeti API'si kapsayıcı
 
-Tek bir kapsayıcıda odaklanan catalog.api kapsayıcı mikro basit bir tanımı vardır:
+Tek bir kapsayıcı'na Odaklanıldığında, basit bir tanımı catalog.api container-mikro hizmet vardır:
 
 ```yml
   catalog.api:
     image: eshop/catalog.api
     environment:
-      - ConnectionString=Server=catalog.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -118,45 +118,45 @@ Tek bir kapsayıcıda odaklanan catalog.api kapsayıcı mikro basit bir tanımı
       - sql.data
 ```
 
-Bu kapsayıcılı hizmet temel yapılandırması aşağıdaki gibidir:
+Bu kapsayıcı hizmeti, temel yapılandırması aşağıdaki gibidir:
 
--   Özel eshop/catalog.api görüntüde dayanır. Basitlik'ın artırmak amacıyla için hiçbir yapı vardır: anahtar dosyasındaki ayarı. Bu görüntü önceden (docker yapı ile) oluşturulmuş gerekir veya tüm Docker kayıt defterinden (docker çekme komutuyla) yüklenmiş olan anlamına gelir.
+-   Bu özel eshop/catalog.api görüntüye bağlıdır. Basitlik'ın çok için hiçbir derleme yok: anahtar dosyasında ayarı. Bu görüntü daha önce (docker derleme ile) oluşturulmuş gerekir veya herhangi bir Docker kayıt defterinden (docker pull komutuyla) indirilip anlamına gelir.
 
--   ConnectionString Kataloğu veri modeli içeren SQL Server örneğine erişmek için Entity Framework tarafından kullanılacak bağlantı dizesinin adlı bir ortam değişkeni tanımlar. Bu durumda, aynı SQL Server kapsayıcı birden çok veritabanı tutuyor. Bu nedenle, daha az bellek için Docker geliştirme makinenizde gerekir. Bununla birlikte, her mikro hizmet veritabanı için bir SQL Server kapsayıcısı dağıtabilirsiniz.
+-   ConnectionString Kataloğu veri modeli içeren SQL Server örneğine erişmesi için Entity Framework tarafından kullanılacak bağlantı dizesiyle adlı bir ortam değişkeni tanımlar. Bu durumda, aynı SQL Server kapsayıcı birden çok veritabanı tutuyor. Bu nedenle, daha az bellek için Docker geliştirme makinenizde gerekir. Ancak, her bir mikro hizmet veritabanı için bir SQL Server kapsayıcı dağıtabilirsiniz.
 
--   SQL Server sql.data, SQL Server örneği için Linux çalıştıran kapsayıcısı için kullandığınız aynı adı olan addır. Bu uygundur; iç IP diğer kapsayıcılardan eriştiğiniz kapsayıcıları için bilmeniz gerek kalmaması (için Docker ana bilgisayar iç) bu ad çözümlemesi kullanabilmek için ağ adresi çözümleyin.
+-   SQL Server sql.data, Linux için SQL Server örneğini çalıştıran kapsayıcısı için kullanılan aynı adı olan addır. Bu kullanışlıdır; Bu ad çözümlemesi (Docker konağı dahili) kullanabilmek için ağ adresi çözer, bu diğer kapsayıcılardan eriştiğiniz kapsayıcılar için iç IP bilmek zorunda kalmazsınız.
 
-Bağlantı dizesi bir ortam değişkeni tarafından tanımlı olduğundan farklı mekanizması aracılığıyla ve farklı bir zamanda bu değişkeni ayarlayabilirsiniz. Örneğin, farklı bir bağlantı dizesi üretime son konakları veya CI/CD hatlarınızı VSTS ya da tercih edilen DevOps sisteminizi gelen yapmakta dağıtırken ayarlayabilirsiniz.
+Bağlantı dizesi bir ortam değişkeni tarafından tanımlı olduğundan, farklı bir mekanizma aracılığıyla ve farklı bir zamanda bu değişkeni ayarlayabilirsiniz. Örneğin, son konaklar veya CI/CD işlem hatlarınızı VSTS veya tercih edilen DevOps sisteminizi gelen yapmakta üretime dağıtırken farklı bağlantı dizesi ayarlayabilirsiniz.
 
--   Bağlantı noktası 80 iç erişim için Docker ana catalog.api Hizmeti'nde gösterir. Konak şu anda bir Linux VM Linux için Docker görüntüde dayanır, ancak bunun yerine bir Windows görüntüsünü çalıştırmak için kapsayıcı yapılandırabilirsiniz nedeni.
+-   Bu, Docker konağının catalog.api hizmetinde iç erişimi için 80 numaralı bağlantı noktasını kullanıma sunar. Konak şu anda bir Linux VM Linux için Docker görüntü temel alan, ancak bunun yerine bir Windows görüntüsü üzerinde çalıştırmak için kapsayıcı yapılandırabilirsiniz olmasıdır.
 
--   Kullanıma sunulan bağlantı noktası 80 kapsayıcısındaki (Linux VM'de) Docker ana makinede 5101 numaralı bağlantı noktasına iletir.
+-   Bu, kullanıma sunulan bağlantı noktası (Linux VM) Docker konak makinedeki 5101 numaralı bağlantı noktasına kapsayıcı üzerindeki 80 iletir.
 
--   Web hizmeti (bir kapsayıcıda çalışan Linux veritabanı için SQL Server örneğini) sql.data hizmetine bağlar. Bu bağımlılık belirttiğinizde, sql.data kapsayıcısı zaten başlatıldı kadar catalog.api kapsayıcı başlatılmaz; Bu ilk catalog.api SQL Server veritabanı olmasını gerektiğinden önemli ve çalışır durumdadır. Docker yalnızca kapsayıcı düzeyinde denetler olduğundan ancak, bu tür bir kapsayıcı bağımlılığı birçok durumda yeterli değil. Yeniden deneme mantığı üstel geri alma ile istemci mikro uygulamanız önerilir; böylece bazen hizmetinde (büyük/küçük harfe bu SQL Server) hala hazır olmayabilir. Bir bağımlılık kapsayıcı kısa bir süre için hazır değilse, bu şekilde, uygulamayı esnek olmaya devam eder.
+-   Web hizmeti sql.data hizmet (SQL Server örneği için bir kapsayıcı içinde çalışan Linux veritabanı) bağlar. Bu bağımlılık belirttiğinizde, sql.data kapsayıcı zaten başlamış catalog.api kapsayıcı tamamlanıncaya kadar çalışmaz; Bu ilk catalog.api SQL Server veritabanına sahip gerektiğinden önemli ve çalışır durumdadır. Docker kapsayıcı düzeyinde iade ettiğinden ancak, bu tür bir kapsayıcı bağımlılık çoğu durumda, yeterli değildir. Üstel geri alma ile yeniden deneme mantığı, istemci mikro Hizmetleri uygulamak için önerilir, bu nedenle bazen hizmeti (büyük/küçük harf bu SQL Server) hala hazır olmayabilir. Bu şekilde, bir bağımlılık kapsayıcı kısa bir süre için hazır değilse, uygulama hala dayanıklı olacak.
 
--   Dış sunucuları erişmesine izin vermek için yapılandırılmış: ek\_ayarı ana dış sunucuların ya da makineleri Docker ana dışında erişmenize olanak tanır (diğer bir deyişle, geliştirme Docker olan bir Linux VM varsayılan dışında barındırma) gibi bir yerel SQL PC Geliştirme Sunucusu örneğinde.
+-   Dış sunucuları erişmesine izin vermek için yapılandırılmış: ek\_konakları ayarlama dış sunucuların ya da Docker konağı dışında makineleri erişmenizi sağlar (diğer bir deyişle, varsayılan bir Docker geliştirme olan bir Linux VM dışında barındırma) gibi bir yerel SQL Sunucu örneği geliştirme koruyun.
 
-Aşağıdaki bölümlerde ele alınacaktır diğer, daha gelişmiş docker-compose.yml ayarları vardır.
+Aşağıdaki bölümlerde ele alınacaktır diğer, daha gelişmiş bir docker-compose.yml ayarları vardır.
 
-### <a name="using-docker-compose-files-to-target-multiple-environments"></a>Kullanarak docker-oluşturan birden çok ortamları hedeflemek için dosyaları
+### <a name="using-docker-compose-files-to-target-multiple-environments"></a>Kullanarak docker-compose dosyaları, birden çok ortama hedeflemek için
 
-Docker-compose.yml dosyalar tanım dosyalarını ve bu biçimi anlamak birden çok altyapıları tarafından kullanılabilir. Docker en kolay araçtır-komutu oluşturmak, ancak bu dosya ayrıca orchestrators (örneğin, Docker Swarm) anlamak gibi diğer araçları.
+Docker-compose.yml dosyaları tanımı dosyaları ve söz konusu biçimini birden çok altyapıları tarafından kullanılabilir. En basit araçtır docker-compose komutu, ancak Düzenleyicileri (örneğin, Docker Swarm) Bu dosya ayrıca anlama gibi diğer araçları.
 
-Kullanarak bu nedenle, aşağıdaki ana senaryo hedef komutu docker compose'u.
+Kullanarak bu nedenle, docker compose komutuyla aşağıdaki ana senaryoları hedefleyebilir.
 
 #### <a name="development-environments"></a>Geliştirme ortamları
 
-Uygulamaları geliştirirken, uygulamanın bir yalıtılmış geliştirme ortamında çalıştırılabilmesi için önemlidir. Kullanabileceğiniz docker compose'u bu ortam oluşturmak veya hangi kullanımlar docker-perde arkasında oluşturan Visual Studio kullanmak için CLI komutu.
+Uygulama geliştirirken, yalıtılmış bir geliştirme ortamında bir uygulamayı çalıştırmak önemlidir. Kullanabileceğiniz docker-compose, ortam veya kullandığı docker perde compose Visual Studio kullanmak için CLI komutu.
 
-Docker-compose.yml dosyası, yapılandırmak ve tüm uygulama Hizmet bağımlılıklarını (diğer hizmetler, önbellek, veritabanları, kuyruklar, vb.) belge olanak sağlar. Kullanarak CLI komutu docker compose'u, oluşturabilir ve her bir bağımlılığın için bir veya daha fazla kapsayıcı tek bir komutla başlatın (docker-oluşturmanıza).
+Docker-compose.yml dosyasını yapılandırın ve hizmeti tüm uygulama bağımlılıklarınızın (diğer hizmetleri, önbellek, veritabanları, kuyruklar, vb.) belge sağlar. Kullanarak CLI komut docker-compose, oluşturabilir ve her bir bağımlılığın için bir veya daha fazla kapsayıcıları tek bir komutla Başlat (docker compose up).
 
-Docker-compose.yml dosyalar Docker altyapısı tarafından yorumlanan yapılandırma dosyaları ancak uygun belge dosyalarını birden çok kapsayıcı uygulamanızı bileşimi hakkında olarak da hizmet.
+Docker-compose.yml dosyaları Docker altyapısı tarafından yorumlanan yapılandırma dosyalarını ancak uygun belge dosyaları çok kapsayıcılı bir uygulama, oluşumunu hakkında da görür.
 
-#### <a name="testing-environments"></a>Sınama ortamları
+#### <a name="testing-environments"></a>Test ortamları
 
-Herhangi bir sürekli dağıtımı (CD) veya sürekli tümleştirme (CI) işlemi önemli bir parçası olan birim testleri ve tümleştirme testleri. Bu otomatikleştirilmiş testleri yalıtılmış bir ortamda gerektirdiğinden, kullanıcılar veya herhangi bir değişiklik uygulamanın veri tarafından etkilenmez.
+Herhangi bir sürekli dağıtım (CD) veya sürekli tümleştirme (CI) işlem önemli bir parçası olan birim testleri ve tümleştirme testleri. Bu otomatik testleri yalıtılmış bir ortam gerektirdiğinden, kullanıcılar ya da herhangi bir değişiklik uygulamanın veri etkilenmez.
 
-Docker Compose ile oluşturun ve o yalıtılmış bir ortamda kolayca komut istemi veya komut dosyaları, aşağıdaki komutları gibi birkaç komutları yok:
+Docker Compose ile oluşturabilir ve bu yalıtılmış bir ortamda çok bir kolayca komut istemi veya komut dosyaları, aşağıdaki komutları gibi birkaç komut yok:
 
 ```
 docker-compose up -d
@@ -166,41 +166,41 @@ docker-compose down
 
 #### <a name="production-deployments"></a>Üretim dağıtımları
 
-Oluştur, uzak bir Docker altyapısına dağıtmak için de kullanabilirsiniz. Tipik bir servis talebi için tek bir Docker ana bilgisayar örneği dağıtmaktır (bir üretim VM veya sunucusu ile sağlanan gibi [Docker makine](https://docs.docker.com/machine/overview/)). Ancak tüm olabilir [Docker Swarm](https://docs.docker.com/swarm/overview/) kümeleri de docker-compose.yml dosyaları ile uyumlu olmadığından, küme.
+Oluştur, uzak bir Docker altyapısı dağıtmak için de kullanabilirsiniz. Tipik bir durumda, tek bir Docker konağı örneği dağıtmaktır (üretim VM veya sunucu ile sağlanan gibi [Docker Machine](https://docs.docker.com/machine/overview/)). Ancak tüm olabilir [Docker Swarm](https://docs.docker.com/swarm/overview/) kümeleri ayrıca docker-compose.yml dosyaları ile uyumlu olmadığından, küme.
 
-Tüm diğer orchestrator (Azure Service Fabric, Mesos DC/OS, Kubernetes, vb.) kullanıyorsanız, docker-compose.yml ancak diğer orchestrator tarafından gerekli olan biçime benzer Kurulum ve meta verileri yapılandırma ayarlarını eklemeniz gerekebilir.
+Herhangi diğer orchestrator (Azure Service Fabric, Mesos DC/OS, Kubernetes, vb.) kullanıyorsanız, bu docker-compose.yml, ancak diğer orchestrator tarafından gereken biçimde gibi Kurulum ve meta verileri yapılandırma ayarlarını eklemek gerekebilir.
 
-Herhangi bir durumda, docker compose'u geliştirme, test ve üretim iş akışları için kullanışlı bir aracı ve meta veri biçimi olsa üretim iş akışı kullanmakta olduğunuz orchestrator değişebilir.
+Her iki durumda da docker-compose geliştirme, test ve üretim iş akışları için kullanışlı bir aracı ve meta veri biçimi, üretim iş akışı, kullanmakta olduğunuz orchestrator üzerinde farklılık gösterebilir ancak.
 
-### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>Birden fazla docker-oluşturan çeşitli ortamlar işlemek için dosyaları
+### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>Birden fazla docker-compose birkaç ortamlarını işleyecek şekilde dosyaları
 
-Birden çok farklı ortamlarda hedeflerken kullanması gereken dosyaları oluşturun. Bu ortam bağlı olarak birden çok yapılandırma çeşitleri oluşturmanıza olanak tanır.
+Farklı ortamlar hedeflenirken birden çok kullanması gereken compose dosyası. Bu ortama bağlı olarak birden çok yapılandırma çeşitleri oluşturmanıza olanak sağlar.
 
-#### <a name="overriding-the-base-docker-compose-file"></a>Temel docker-compose dosya geçersiz kılma
+#### <a name="overriding-the-base-docker-compose-file"></a>Temel docker-compose dosyası geçersiz kılma
 
-Önceki bölümlerde Basitleştirilmiş örneklerde olduğu gibi tek docker-compose.yml dosyası kullanabilirsiniz. Bununla birlikte, çoğu uygulama için önerilmez.
+Önceki bölümlerde gösterildiği Basitleştirilmiş örneklerde gösterildiği gibi bir tek docker-compose.yml dosyası kullanabilirsiniz. Bununla birlikte, çoğu uygulama için önerilmez.
 
-Varsayılan olarak, iki dosya, docker-compose.yml ve isteğe bağlı docker compose.override.yml dosyası oluşturma okur. Şekil 8-11'de gösterildiği gibi zaman, Visual Studio kullanarak ve Docker desteği, Visual Studio de etkinleştirme, CI/CD hatlarınızı gibi VSTS içinde kullanmak bir ek docker compose.ci.build,yml dosyası oluşturur.
+Varsayılan olarak, iki dosya, docker-compose.yml ve docker-compose.override.yml isteğe bağlı dosya oluşturma okur. Şekil 8-11'de gösterildiği gibi ne zaman, Visual Studio kullanarak ve Docker desteği, Visual Studio ayrıca etkinleştirme, CI/CD işlem hatlarınızı gibi vsts'de kullanmak için bir ek docker compose.ci.build,yml dosyası oluşturur.
 
 ![](./media/image12.png)
 
-**Şekil 8-11**. Visual Studio 2017 dosyalarında docker compose'u
+**Şekil 8-11**. docker-compose dosyası Visual Studio 2017
 
-Visual Studio Code veya Sublime, gibi herhangi bir Düzenleyicisi docker-compose dosyaları düzenleyin ve uygulamayla çalıştırmak docker compose'u up komutu.
+Visual Studio Code veya Sublime, gibi herhangi bir düzenleyici ile docker-compose dosyaları düzenleyin ve uygulamayı çalıştırın docker-compose up komutu.
 
-Kurala göre docker-compose.yml dosyası temel yapılandırma ve diğer statik ayarlarını içerir. Hizmet yapılandırması, hedeflediğiniz dağıtım ortamı bağlı olarak değiştirmemelisiniz anlamına gelir.
+Kural gereği, docker-compose.yml dosyasını temel yapılandırma ve diğer statik ayarlarını içerir. Hizmet yapılandırması, hedeflediğiniz dağıtım ortamı bağlı olarak değiştirmemelisiniz anlamına gelir.
 
-Adından da anlaşılacağı gibi docker compose.override.yml dosya dağıtım ortamınıza bağlıdır yapılandırma gibi temel yapılandırmasını geçersiz kılma yapılandırma ayarlarını içerir. Farklı adlara sahip birden çok geçersiz kılma dosyaları da sahip olabilirsiniz. Geçersiz kılma dosyalar genellikle uygulama ancak belirli bir ortam veya bir dağıtım için gerekli ek bilgiler içerir.
+Adından da anlaşılacağı gibi docker-compose.override.yml dosyası, dağıtım ortamınıza bağlıdır yapılandırma gibi temel yapılandırma geçersiz yapılandırma ayarlarını içerir. Ayrıca, farklı adlara sahip birden fazla geçersiz kılma dosyası olabilir. Geçersiz kılma dosyalar genellikle uygulama ancak belirli bir ortam veya bir dağıtım için gerekli ek bilgileri içerir.
 
-#### <a name="targeting-multiple-environments"></a>Birden çok ortamları hedefleme
+#### <a name="targeting-multiple-environments"></a>Birden çok ortama hedefleme
 
-Tipik kullanım örneği olan birden çok tanımlarken oluşturan dosyaları hazırlama, CI ya da geliştirme üretim gibi birden çok ortamları hedefleyebilirsiniz şekilde. Bu farklılıklar desteklemek için Şekil 8-12'de gösterildiği gibi birden çok dosyalarına Oluştur yapılandırmanızı bölebilirsiniz.
+Tipik bir kullanım örneği olan birden çok tanımlarken compose dosyaları, üretim gibi birden çok ortamı hazırlama, CI veya geliştirme hedefleyebilir. Bu farklar desteklemek için Şekil 8-12'de gösterildiği gibi birden çok dosyalarına oluşturma yapılandırmanızı bölebilirsiniz.
 
 ![](./media/image13.png)
 
-**Şekil 8-12**. Birden çok oluşturan docker dosyaları temel docker-compose.yml dosyasındaki değerleri geçersiz kılma
+**Şekil 8-12**. Geçersiz kılma değerleri temel docker-compose.yml dosyasındaki dosyaları birden çok docker-compose
 
-Temel docker-compose.yml dosyası ile başlatın. Bu temel dosyanın ortamına bağlı olarak değiştirmeyin temel veya statik yapılandırma ayarlarını içermesi gerekir. Örneğin, eShopOnContainers temel dosyası olarak aşağıdaki docker-compose.yml dosyası vardır.
+Temel docker-compose.yml dosyası ile başlayın. Bu temel dosya ortamına bağlı olarak değiştirmeyin temel ya da statik yapılandırma ayarlarını içeren gerekir. Örneğin, hizmetine taban dosyası olarak aşağıdaki docker-compose.yml dosyası vardır.
 
 ```yml
 #docker-compose.yml (Base)
@@ -262,21 +262,21 @@ services:
 
 ```
 
-Temel docker-compose.yml dosyası değerler farklı bir hedef dağıtım ortamları nedeniyle değiştirmemeniz gerekir.
+Temel docker-compose.yml dosyasındaki değerleri nedeniyle farklı bir hedef dağıtım ortamlarının değiştirmemesi gerekir.
 
-Örneğin, webmvc hizmet tanımını odaklanmanıza, nasıl bu bilgileri çok aynı hedefleme hangi ortam olduğunu görebilirsiniz. Aşağıdaki bilgilere sahip:
+Örneğin, webmvc hizmet tanımı üzerinde odaklanmak, nasıl bu bilgileri çok hedefleyen hangi ortamı ne olursa olsun aynıdır görebilirsiniz. Aşağıdaki bilgileri vardır:
 
 -   Hizmet adı: webmvc.
 
 -   Kapsayıcının özel görüntü: Elektronik Mağaza/webmvc.
 
--   Kullanmak için hangi Dockerfile gösteren özel Docker görüntü oluşturmak için komutu.
+-   Kullanmak için hangi Dockerfile belirten özel Docker görüntüsü oluşturmak için komutu.
 
--   Bir bağımlılık kapsayıcıları başlatılıncaya kadar bu kapsayıcı başlamaz diğer hizmetler bağımlılıkları.
+-   Bağımlılıkları diğer hizmetleri, bir bağımlılık kapsayıcıları başlatılıncaya kadar bu kapsayıcı başlamaz.
 
-Ek yapılandırma olabilir, ancak önemli temel docker-compose.yml dosyası, yalnızca ortamlar arasında ortak olan bilgileri ayarlamak istediğinizi noktasıdır. Ardından docker compose.override.yml veya üretim veya hazırlama benzer dosyalarını her ortam için belirli yapılandırma yerleştirmeniz gerekir.
+Ek yapılandırma olabilir, ancak önemli temel docker-compose.yml dosyasında, yalnızca ortamlar arasında ortak olan bilgiyi ayarlamak istediğiniz noktasıdır. Ardından docker-compose.override.yml veya benzer dosyaları üretim ya da hazırlık, her ortam için belirli yapılandırma yerleştirmeniz gerekir.
 
-Genellikle, docker compose.override.yml eShopOnContainers aşağıdaki örnekte olduğu gibi geliştirme ortamınız için kullanılır:
+Genellikle, docker-compose.override.yml hizmetine aşağıdaki örnekte olduğu gibi geliştirme ortamınız için kullanılır:
 
 ```yml
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
@@ -388,31 +388,31 @@ services:
 
 ```
 
-Bu örnekte, geliştirme geçersiz kılma yapılandırmasını barındırmak için bazı bağlantı noktalarını kullanıma sunar, ortam değişkenleri tanımlar URL'leri yönlendirmek ve geliştirme ortamı için bağlantı dizelerini belirtir. Bu ayarlar tüm yalnızca geliştirme ortamına ' dir.
+Bu örnekte, geliştirme geçersiz kılma yapılandırmasını konağa bazı bağlantı noktalarını kullanıma sunar, ortam değişkenlerini tanımlar URL'lerini yönlendirmek ve geliştirme ortamı için bağlantı dizelerini belirtir. Bu ayarlar, tüm yeni geliştirme ortamına yöneliktir.
 
-Çalıştırdığınızda `docker-compose up` (veya Visual Studio'dan başlatma), her iki dosyaları birleştirme gibi komut geçersiz kılmaları otomatik olarak okur.
+Çalıştırdığınızda `docker-compose up` (veya Visual Studio'dan başlatmak), her iki dosya birleştirme gibi komut geçersiz kılmaları otomatik olarak okur.
 
-Üretim ortamında, farklı yapılandırma değerlerini, bağlantı noktası veya bağlantı dizeleri için başka bir oluşturma dosyası istediğinizi varsayalım. Adlı dosyası gibi başka bir geçersiz kılma dosyası oluşturabilirsiniz `docker-compose.prod.yml` farklı ayarlar ve ortam değişkenleri.  Bu dosyayı farklı bir Git deposu içinde depolanan veya yönetilebilir ve farklı bir takım tarafından güvenli hale getirilmiş.
+Farklı yapılandırma değerleri, bağlantı noktası veya bağlantı dizeleri üretim ortamı için başka bir Compose dosyasının istediğinizi varsayalım. Adlı bir dosya gibi başka bir geçersiz kılma dosyası oluşturabilirsiniz `docker-compose.prod.yml` farklı ayarlar ve ortam değişkenleri.  Bu dosyayı farklı bir Git deposunda depolanabilir veya yönetilen ve farklı bir takım tarafından güvenli hale getirilmiş.
 
-#### <a name="how-to-deploy-with-a-specific-override-file"></a>Bir özel geçersiz kılma dosyayla dağıtma
+#### <a name="how-to-deploy-with-a-specific-override-file"></a>Bir özel geçersiz kılma dosyası ile dağıtma
 
-Birden çok geçersiz kılma dosyaları veya bir geçersiz kılma dosyasını farklı bir ad ile kullanmak için -f seçeneğiyle kullanabilirsiniz komutu docker compose'u ve dosyaları belirtin. Komut satırında belirtilen sırada birleştirmeler dosyaları oluşturun. Aşağıdaki örnek, geçersiz kılma dosyalarıyla dağıtma gösterilmektedir.
+Farklı ada sahip birden fazla geçersiz kılma dosyası veya bir geçersiz kılma dosyası kullanmak için -f seçeneğiyle kullanabilirsiniz docker-compose komutu ve dosyaları belirtin. Komut satırında belirtildikleri sırada birleştirmeleri dosyalarını oluşturun. Aşağıdaki örnek, geçersiz kılma dosyalarıyla dağıtma gösterilmektedir.
 
 ```
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
-#### <a name="using-environment-variables-in-docker-compose-files"></a>Ortam değişkenlerini kullanma, docker-dosyaları oluşturma
+#### <a name="using-environment-variables-in-docker-compose-files"></a>Ortam değişkenlerini kullanarak içinde docker-compose dosyası
 
-Bu, biz önceki örneklerde gösterildiği gibi ortam değişkenlerinin, yapılandırma bilgileri elde edebilmek için özellikle üretim ortamlarında, uygundur. Docker-compose dosyalarınızı sözdizimini kullanarak bir ortam değişkeni başvurusu \${MY\_VAR}. Aşağıdaki satırı docker compose.prod.yml dosyasından bir ortam değişkeni değeri başvuru gösterilmektedir.
+Biz önceki örneklerde gösterildiği gibi ortam değişkenlerinden yapılandırma bilgilerini almak için özellikle de üretim ortamlarında, kullanışlı. Docker-compose dosyalarınızı söz dizimini kullanarak bir ortam değişkeni başvurusu \${MY\_VAR}. Aşağıdaki satırı bir docker compose.prod.yml dosyasından bir ortam değişkeninin değerini yapmayı gösterir.
 
 ```yml
 IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 ```
 
-Ortam değişkenleri oluşturuldu ve ana bilgisayar ortamınıza bağlı olarak, farklı şekillerde başlatıldı (Linux, Windows, bulut küme, vs.). Ancak, uygun bir yaklaşım .env dosya kullanmaktır. .Env dosyasındaki varsayılan ortam değişkenleri bildirme docker-compose dosyalarını destekler. Bu ortam değişkenleri için varsayılan değerleri değerlerdir. Ancak her ortamınızı (ana bilgisayar işletim sistemi veya ortam değişkenleri, kümeden) tanımlanmış değeri geçersiz kılınabilir. Bu .env dosyasını bu klasöre yerleştirin nerede docker compose'u komutu yürütüldü.
+Ortam değişkenlerini oluşturuldu ve ana bilgisayar ortamına bağlı olarak, farklı şekillerde başlatıldı (Linux, Windows, bulut kümesine, vs.). Ancak, uygun bir yaklaşım bir .env dosyasında kullanmaktır. .Env dosyasında varsayılan ortam değişkenleri bildirme docker-compose dosyalarını destekler. Bu değerler ortam değişkenleri için varsayılan değerlerdir. Ancak, her ortamlarınızda (ana bilgisayar işletim sistemi veya ortam değişkenlerini kümenizden) tanımlamış olabileceği değerlere göre kılınabilir. .Env dosyasında bu klasöre yerleştirdiğiniz yere docker-compose komutu yürütülmediyse.
 
-Aşağıdaki örnek, bir .env dosyası gibi gösterir [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) eShopOnContainers uygulamanın dosyası.
+Aşağıdaki örnek, bir .env dosyasında gibi gösterir [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) hizmetine uygulamanın dosyası.
 
 ```
 # .env file
@@ -422,21 +422,21 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-Docker compose'u bekliyor biçiminde bir .env dosyasındaki her satırın &lt;değişkeni&gt;=&lt;değeri&gt;.
+Docker-compose bekliyor biçiminde bir .env dosyasında her satırı &lt;değişkeni&gt;=&lt;değer&gt;.
 
-Çalışma zamanı ortamında her zaman ayarlanan değerlerle .env dosyanın içinde tanımlanan değerlerden birisini üzerine yazılacağını unutmayın. Benzer şekilde, komut satırı komut bağımsız değişkenleri geçirilen değerleri de .env dosyasında ayarlanan varsayılan değerlerini geçersiz kılar.
+Çalışma zamanı ortamında her zaman ayarlanan değerleri içinde .env dosyasında tanımlı değerlerin üzerine yazılacağını unutmayın. Benzer şekilde, geçirilen komut satırı komut bağımsız değişkenlerinin değerleri de .env dosyasında ayarlanan varsayılan değerlerini geçersiz kılar.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Docker genel bakış oluşturma**
+-   **Genel Bakış docker Compose**
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Birden çok oluşturma dosyaları**
+-   **Birden çok Compose dosyaları**
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>ASP.NET Core Docker görüntüleri oluşturma en iyi duruma getirilmiş
 
-Internet üzerindeki kaynaklarında Docker ve .NET Core araştırırken, bir kapsayıcıya kaynağınız kopyalayarak Docker görüntü oluşturmanın Basitlik göstermek Dockerfiles bulabilirsiniz. Bu örnekler, basit bir yapılandırma kullanarak, Docker görüntü uygulamanızla paketlenmiş ortamıyla sağlayabilirsiniz öneririz. Aşağıdaki örnekte basit bir Dockerfile bu damarlı gösterir.
+Internet kaynaklarında Docker ve .NET Core araştırıyorsanız, Basitlik, bir kapsayıcıya kaynağınızı kopyalayarak bir Docker görüntüsü oluşturma gösteren dockerfile'ları bulabilirsiniz. Bu örnekler, basit bir yapılandırma öğesini kullanarak bir Docker görüntüsü, uygulamanızla birlikte paketlenmiş ortamıyla sağlayabilirsiniz önerin. Aşağıdaki örnek, basit bir Dockerfile içinde bu damarlı gösterir.
 
 ```
 FROM microsoft/dotnet
@@ -454,44 +454,44 @@ RUN dotnet restore
 ENTRYPOINT ["dotnet", "run"]
 ```
 
-Böyle bir Dockerfile çalışır. Ancak, özellikle üretim görüntülerinizi görüntülerinizi önemli ölçüde iyileştirebilirsiniz.
+Böyle bir Dockerfile çalışır. Ancak, özellikle de üretim görüntülerinin görüntülerinizi önemli ölçüde iyileştirebilir.
 
-Kapsayıcı ve mikro modeli sürekli kapsayıcıları başlıyor. Kapsayıcı atılabilir olduğundan kapsayıcıları kullanma normal şekilde Uyuyan bir kapsayıcı yeniden başlatmaz. Orchestrators (örneğin, Docker Swarm, Kubernetes, DCOS veya Azure Service Fabric) yalnızca yeni örnekleri görüntülerin oluşturun. Ne Bu örnek oluşturma işlemi daha hızlı olması için derlendikten sonra uygulamayı önceden derleme en iyi duruma getirme gerek olduğu anlamına gelir. Kapsayıcı başlatıldığında, çalıştırılmaya hazır olması gerekir. Olmayan geri yükleme ve çalışma zamanında derlemek, .NET Core ve Docker ilgili birçok Web günlüğü postaları gördüğünüz gibi dotnet kullanarak geri yükleme ve dotnet dotnet CLI komutları, yapı.
+Kapsayıcı ve mikro hizmetler modeli sürekli kapsayıcıları başlıyor. Kapsayıcıları kullanarak normal şekilde kapsayıcı atılabilir olduğundan Uyuyan bir kapsayıcı yeniden başlatmaz. Düzenleyiciler (örneğin, Docker Swarm, Kubernetes, DCOS veya Azure Service Fabric) yalnızca görüntüleri yeni bir örneğini oluşturun. Ne bu örnekleme işlemi daha hızlı olacak şekilde nasıl yapılandırıldığında, uygulama ön derleme tarafından en iyi duruma getirme gerektiğini anlamına gelir. Kapsayıcı başlatıldığında, çalıştırmaya hazır olmalıdır. Olmayan geri yükleme ve çalışma zamanında derleme, .NET Core ve Docker birçok blog gönderileri gördüğünüz gibi dotnet kullanarak geri yükleme ve dotnet dotnet CLI komutları, yapı.
 
-.NET ekibi .NET Core ve ASP.NET Core kapsayıcı özelliği iyileştirilmiş bir çerçeve sağlamak için önemli iş yapmadan. Yalnızca .NET Core küçük bellek kaplama alanı için bir basit çerçevesiyle algılanmadığı; Takım başlangıç performans üzerinde odaklanır ve bazı en iyi duruma getirilmiş Docker görüntüleri gibi üretilen [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) görüntü adresinde [Docker hub'a](https://hub.docker.com/r/microsoft/aspnetcore/), normal kıyasla [ Microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) veya [microsoft/nanoserver](https://github.com/dotnet/dotnet-docker/blob/master/1.0/nanoserver/runtime/Dockerfile) görüntüler. [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) görüntü sağlar aspnetcore otomatik ayarı\_80 numaralı bağlantı noktasını ve derlemeler; öncesi ngend önbelleğini URL'lere bu ayarların her ikisi de daha hızlı başlangıç sonucu.
+.NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım başlangıç performansı üzerinde odaklanır ve bazı en iyi duruma getirilmiş Docker görüntüleri gibi üretilen [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) görüntü adresinde [Docker Hub](https://hub.docker.com/r/microsoft/aspnetcore/), normal kolaylığına [ Microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) veya [microsoft/nanoserver](https://github.com/dotnet/dotnet-docker/blob/master/1.0/nanoserver/runtime/Dockerfile) görüntüler. [Microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) otomatik ayarı aspnetcore görüntüsü sağlar\_URL'ler 80 numaralı bağlantı noktasını ve öncesi ngend önbellek derlemelerin; bu ayarların her ikisini de daha hızlı başlangıç neden.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Yapı ASP.NET Core Docker görüntülerle en iyi duruma getirilmiş**
+-   **ASP.NET Core ile Docker görüntü oluşturma en iyi duruma getirilmiş**
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-### <a name="building-the-application-from-a-build-ci-container"></a>Derleme (CI) kapsayıcısından uygulaması oluşturma
+### <a name="building-the-application-from-a-build-ci-container"></a>Bir derleme (CI) kapsayıcısından uygulama oluşturma
 
-Bir yapı makine ya da uygulamanızı oluşturmak için VM oluşturmak gerek yoktur Şekil 8-13'te gösterildiği gibi Docker başka bir yararı önceden yapılandırılmış bir kapsayıcı uygulamanızdan oluşturabilirsiniz olur. Geliştirme makinenizde çalıştırarak test, yapı kapsayıcısı veya kullanabilirsiniz. Ancak daha ilginç nedir CI (sürekli tümleştirme) hattınızı aynı yapı kapsayıcı kullanabilirsiniz.
+Şekil 8-13'te gösterildiği şekilde, bir derleme makinesi veya uygulamanızı oluşturmak için VM oluşturmak ihtiyacınız yoktur, Docker'ın başka bir avantajı uygulamanızı önceden yapılandırılmış bir kapsayıcı oluşturabilirsiniz içindir. Geliştirme makinenizde çalıştırarak test, yapı kapsayıcısı veya kullanabilirsiniz. Ancak daha da ilginç nedir, CI (sürekli tümleştirme) hattından aynı derleme kapsayıcısı kullanabilirsiniz.
 
 ![](./media/image14.png)
 
-**Şekil 8-13**. Docker derleme-kapsayıcısı .NET ikili dosyaları derleme 
+**Şekil 8-13**. Docker derleme-kapsayıcı .NET ikili dosyaları derleme 
 
-Bu senaryo için size sağladığımız [aspnetcore/microsoft-yapı](https://hub.docker.com/r/microsoft/aspnetcore-build/) derlemek ve ASP.NET Core uygulamaları oluşturmak için kullanabileceğiniz görüntü. Çıktı temel görüntü yerleştirilir [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) daha önce not ettiğiniz bir en iyi duruma getirilmiş çalışma zamanı görüntü görüntü.
+Bu senaryo için sağladığımız [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/) derlemek ve ASP.NET Core uygulamaları oluşturmak için kullanabileceğiniz bir görüntüsü. Çıkış temel alan bir görüntü yerleştirilir [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) da daha önce not ettiğiniz en iyi duruma getirilmiş çalışma zamanı görüntünün görüntü.
 
-Aspnetcore derleme görüntüsünü dahil .NET Core, ASP.NET SDK'sı, npm, bir ASP.NET Core uygulama derlemek için ihtiyaç duyduğunuz her şeyi içeren Bower, Gulp, vs.
+.NET Core, ASP.NET SDK'sı, npm, dahil olmak üzere bir ASP.NET Core uygulaması derlemek için ihtiyacınız olan her şey aspnetcore-build görüntüsünü içeren Bower, Gulp, vs.
 
-Bu bağımlılıklar derleme zamanında ihtiyacımız var. Ancak, görüntünün düşükse yapmayacağı Biz bu uygulama ile çalışma zamanında taşımak istemiyorsanız. EShopOnContainers uygulamada uygulama oluşturabilir yalnızca çalıştırarak kapsayıcısından aşağıdaki docker-komutu oluşturun.
+Bu bağımlılıklar oluşturma zamanında ihtiyacımız var. Ancak görüntü gereksiz derecede büyük hale getirir çünkü bu uygulama ile birlikte çalışma zamanında Yürüt istiyoruz değil. Hizmetine uygulamada, uygulamayı oluşturmak yalnızca çalıştırarak kapsayıcısından aşağıdaki docker compose komutuyla.
 
 ```
   docker-compose -f docker-compose.ci.build.yml up
 ```
 
-Şekil 8-14 komut satırında çalıştıran bu komut gösterir.
+Şekil 8-14, bu komut komut satırında çalıştıran gösterir.
 
 ![](./media/image15.png)
 
-**Şekil 8-14.** .NET uygulamanızdan bir kapsayıcı oluşturma
+**Şekil 8-14.** .NET uygulamanızı bir kapsayıcı oluşturma
 
-Gördüğünüz gibi çalıştıran CI yapı kapsayıcıdır\_1 kapsayıcı. Böylece derlemek ve Bilgisayarınızdan yerine bu kapsayıcıdaki tüm uygulama içinden derleme bu aspnetcore yapı görüntüde temel alır. Diğer bir deyişle neden gerçekte olduğundan oluşturma ve Linux .NET Core projelerinde derleme — bu kapsayıcı varsayılan Docker Linux ana bilgisayarına çalıştığından.
+Gördüğünüz gibi çalışmakta olan kapsayıcıyı CI yapısı olduğu\_1 kapsayıcı. Derleme ve Bilgisayarınızdan yerine ilgili kapsayıcıdaki tüm uygulama içinden yapı bu aspnetcore-build görüntüye bağlıdır. Diğer bir deyişle neden gerçekte bu oluşturma ve Linux'ta .NET Core projelerini derlemek — bu kapsayıcı varsayılan Docker Linux ana bilgisayarında çalıştığından.
 
-[Docker compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) için aşağıdaki kod, görüntü (eShopOnContainers parçası) içeren dosya. Kullanarak bir yapı kapsayıcı başlayacağını görebilirsiniz [aspnetcore/microsoft-yapı](https://hub.docker.com/r/microsoft/aspnetcore-build/) görüntü.
+[Docker-compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) için o yansıma (hizmetine parçası) aşağıdaki kodu içeren dosya. Kullanarak yapı kapsayıcı başladıktan gördüğünüz [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/) görüntü.
 
 ```yml
 version: '3'
@@ -511,42 +511,42 @@ services:
 
 ```
 
-* İle başlayarak **.NET Core 2.0**, `dotnet restore` komutu yürütür otomatik olarak zaman `dotnet publish` komut yürütülürse.
+* İle başlayarak **.NET Core 2.0**, `dotnet restore` komutu yürütür otomatik olarak zaman `dotnet publish` komutu yürütülür.
 
-Yapı kapsayıcı hazır ve çalışır hale geldikten sonra .NET SDK'sı dotnet geri yükleme çalıştırır ve dotnet .NET BITS derlemek için Çözümdeki tüm projeleri karşı komutları yayımlayın. EShopOnContainers de TypeScript ve Angular için istemci kodu dayalı bir SPA olduğundan, eylem .NET BITS ile ilgili değildir ancak bu bu durumda, bu da npm, JavaScript bağımlılıklarla denetlemesi gerekir.
+Derleme kapsayıcısı çalışır duruma geldikten sonra .NET SDK'sı dotnet restore çalıştırır ve dotnet .NET bit derle için Çözümdeki tüm projeleri komutları yayımlayın. Hizmetine de TypeScript ve Angular için istemci kodu dayalı bir SPA olduğundan, eylem .NET BITS ile ilişkili değildir, ancak bu durumda, bu da npm, JavaScript bağımlılıklarla denetlemesi gerekir.
 
-Dotnet komutu derlemeleri yayımlamak ve her projenin klasörüne derlenmiş çıktısı yayımlar... Şekil 8-15'te gösterildiği gibi /obj/Docker/publish klasör.
+Dotnet komut yapılar yayımlama ve her projesinin klasörüne içinde derlenen Çıkışta yayımlar... Şekil 8-15'te gösterildiği gibi /obj/Docker/publish klasör.
 
 ![](./media/image16.png)
 
-**Şekil 8-15.** Komut dotnet tarafından oluşturulan ikili dosyaları yayımlama
+**Şekil 8-15.** Dotnet tarafından oluşturulan ikili dosyaları yayımlama komutu
 
-#### <a name="creating-the-docker-images-from-the-cli"></a>CLI üzerinden Docker görüntüleri oluşturma
+#### <a name="creating-the-docker-images-from-the-cli"></a>CLI'dan Docker görüntüleri oluşturma
 
-Uygulama çıkış (içinde her proje) ilgili klasörlere yayımlandığında, sonraki adıma gerçekten Docker görüntüleri oluşturmaktır. Bunu yapmak için docker-compose yapı kullanın ve Şekil 8-16'da gösterildiği gibi komutları docker-oluşturun.
+Uygulama çıktısı (her projede) ilgili klasörleri yayımlandıktan sonra sonraki adım gerçekten Docker görüntüleri oluşturmaktır. Bunu yapmak için docker-compose derleme kullanın ve Şekil 8-16 gösterildiği gibi komutları docker-compose.
 
 ![](./media/image17.png)
 
 **Şekil 8-16.** Docker görüntülerinizi oluşturmak ve çalışan kapsayıcılar
 
-Şekil 8-17'de nasıl docker-compose komutu çalıştırır yapı görebilirsiniz.
+Şekil 8-17'de nasıl docker-compose komutu çalıştırmaları yapı görebilirsiniz.
 
 ![](./media/image18.png)
 
-**Şekil 8-17**. Docker ile Docker görüntülerinizi oluşturmak-yapı komutu oluşturma
+**Şekil 8-17**. Docker ile Docker görüntüleri oluşturma-oluşturma komutu oluştur
 
-Docker-compose arasındaki farkı oluşturmak ve docker-oluşturmanıza komutları olan docker-oluşturan hem derlemeleri hem de başlatır görüntülerini yedekleyin.
+Docker-compose arasındaki fark, derleme ve docker compose up komutları olan docker-compose derlemeler ve başlar görüntüleri.
 
-Visual Studio kullandığınızda, tüm bu adımları perde arkasında gerçekleştirilir. Visual Studio .NET uygulamanızı derler, Docker görüntülerini oluşturur ve kapsayıcılar Docker ana bilgisayara dağıtır. Visual Studio Docker içinde doğrudan Visual Studio'dan çalıştırma kapsayıcılarınızı hata ayıklama özelliği gibi ek özellikler sunar.
+Visual Studio kullandığınızda, bu adımların tümünü arka planda gerçekleştirilir. Visual Studio .NET uygulamanızı derleyen, Docker görüntüleri oluşturur ve Docker ana bilgisayar kapsayıcıları dağıtır. Visual Studio, Docker, doğrudan Visual Studio'dan çalıştırma kapsayıcılarınızı hata ayıklama yapabilme gibi ek özellikler sunar.
 
-Burada genel takeway aynı şekilde CI/CD hattınızı yapı, uygulamanızı mümkün olan — bir yerel makine yerine bir kapsayıcısından. Oluşturulan görüntüler sahip sonra sonra Docker görüntüleri docker kullanarak çalıştırmak yeterlidir-komutu oluşturun.
+Genel takeway burada aynı şekilde CI/CD ardışık düzeninizi derleme, uygulamanızı oluşturmak üzere mümkün olduğu — bir yerel makine yerine bir kapsayıcısından. Oluşturulan görüntüleri atandıktan sonra sonra docker kullanarak Docker görüntülerini çalıştırmak yeterlidir-compose komutu.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Bir kapsayıcı bitten oluşturma: bir Windows CLI ortamında (dotnet CLI, Docker CLI ve VS Code) eShopOnContainers çözümü kurma**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- ve -VS-kodu)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **Bir kapsayıcı bitten oluşturma: bir Windows CLI ortamda (dotnet CLI, Docker CLI ve VS Code) hizmetine çözüm ayarlama**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, - Docker - CLI- ve -VS-kod)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]
 [Önceki](data-driven-crud-microservice.md)
-[sonraki](database-server-container.md)
+[İleri](database-server-container.md)

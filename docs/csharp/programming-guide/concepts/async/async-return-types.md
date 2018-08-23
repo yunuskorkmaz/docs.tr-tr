@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 5ea3ef538bd0e3d74bbdcbd41519ae5041556b7e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143563"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753944"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleri (C#)
 Zaman uyumsuz yöntemler, aşağıdaki dönüş türlerine sahip olabilir:
@@ -33,7 +33,7 @@ Aşağıdaki örnekte, `GetLeisureHours` zaman uyumsuz yönteminde bir `return` 
 
 Zaman `GetLeisureHours` bir await ifadesine içinde çağrılır `ShowTodaysInfo` yöntemi, await ifadesi tamsayı değerini alır (değerini `leisureHours`) tarafından döndürülen görev depolanan `GetLeisureHours` yöntemi. Hakkında daha fazla bilgi için await ifadeleri, bkz: [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Çağrı ayırarak nasıl böyle daha iyi anlamak `GetLeisureHours` uygulamasından `await`aşağıdaki kodda gösterildiği gibi. Yöntemine yapılan bir çağrı `TaskOfT_MethodAsync` hemen beklenmeyen döndürür, değilse bir `Task<int>`, yöntem bildiriminden beklediğiniz gibi. Görevin atandığı `integerTask` örnekte değişken. Çünkü `integerTask` olduğu bir <xref:System.Threading.Tasks.Task%601>, içerdiği bir <xref:System.Threading.Tasks.Task%601.Result> türünün özelliği `TResult`. Bu durumda, TResult bir tamsayı türünü temsil eder. Zaman `await` uygulanan `integerTask`, bekleme ifadesi içeriğine göre değerlendirilir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği `integerTask`. Değeri atanır `result2` değişkeni.  
+Çağrı ayırarak nasıl böyle daha iyi anlamak `GetLeisureHours` uygulamasından `await`aşağıdaki kodda gösterildiği gibi. Yöntemine yapılan bir çağrı `GetLeisureHours` hemen beklenmeyen döndürür, değilse bir `Task<int>`, yöntem bildiriminden beklediğiniz gibi. Görevin atandığı `infoTask` örnekte değişken. Çünkü `infoTask` olduğu bir <xref:System.Threading.Tasks.Task%601>, içerdiği bir <xref:System.Threading.Tasks.Task%601.Result> türünün özelliği `TResult`. Bu durumda, `TResult` bir tamsayı türünü temsil eder. Zaman `await` uygulanan `infoTask`, bekleme ifadesi içeriğine göre değerlendirilir <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği `infoTask`. Değeri atanır `ret` değişkeni.  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Kendi görevi bitmeden önce buna erişmeyi denerseniz, şu anda etkin olan iş parçacığı değeri kullanılabilir ve görev tamamlanıncaya kadar engellenir. Çoğu durumda, değeri kullanarak erişmeli `await` özelliği doğrudan erişmek yerine. <br/> Değerini önceki örnekte alınan <xref:System.Threading.Tasks.Task%601.Result%2A> ana iş parçacığı engellemek için özellik böylece `ShowTodaysInfo` yöntemi uygulama sona ermeden önce yürütme son.  
@@ -49,7 +49,7 @@ Aşağıdaki örnekte, `WaitAndApologize` zaman uyumsuz yöntem içermiyor bir `
   
 `WaitAndApologize` void döndüren bir zaman uyumlu yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak beklenir. Bir await işleci uygulaması, bu durumda değer üretemez.  
   
-Önceki olduğu gibi <xref:System.Threading.Tasks.Task%601> örnek, çağrı ayırabilirsiniz `Task_MethodAsync` aşağıdaki kod, bir await işlecinin uygulamasından gösterir. Ancak, unutmayın bir `Task` sahip olmayan bir `Result` özelliği ve bir await işleci uygulandığında, değer üretilmediğini bir `Task`.  
+Önceki olduğu gibi <xref:System.Threading.Tasks.Task%601> örnek, çağrı ayırabilirsiniz `WaitAndApologize` aşağıdaki kod, bir await işlecinin uygulamasından gösterir. Ancak, unutmayın bir `Task` sahip olmayan bir `Result` özelliği ve bir await işleci uygulandığında, değer üretilmediğini bir `Task`.  
   
 Aşağıdaki kod ayırır `WaitAndApologize` yöntemin döndürdüğü görevi bekleme işleminden yöntemi.  
  

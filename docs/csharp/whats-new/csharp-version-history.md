@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404599"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753975"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -105,7 +105,11 @@ Dinamik bağlama, hatalar, ancak ayrıca dil içinde harika power olası sunar.
 C# sürüm 5.0 odaklanmış bir dil sürümünü oluştu. Neredeyse tüm bu sürüm için çaba başka bir çığır açan bir dil kavramını oluştu: `async` ve `await` zaman uyumsuz programlama için model.  Büyük özelliklerin listesi aşağıda verilmiştir:
 
 - [Zaman uyumsuz üyeler](../async.md)
-- [Arayan bilgileri öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Arayan bilgileri öznitelikleri](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>Ayrıca Bkz.
+
+* [Kod projesini: C# 5.0 arayan bilgileri öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Çağıran bilgisi özniteliği kolayca sarmalayıcımızı yazdık ortak yansıma kod başvurmadan çalıştırıyorsanız bağlamıyla ilgili bilgileri almak olanak tanır. Bu, tanılama ve günlüğe kaydetme görevleri pek çok kullanımı vardır.
 

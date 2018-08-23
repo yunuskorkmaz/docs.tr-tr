@@ -1,6 +1,6 @@
 ---
-title: Örneğin işlevi (yönetilmeyen API Başvurusu)
-description: Örneğin işlevi numaralandırma sonlandırır.
+title: EndEnumeration işlevi (yönetilmeyen API Başvurusu)
+description: EndEnumeration işlevi, bir numaralandırma sonlandırır.
 ms.date: 11/06/2017
 api_name:
 - EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459524"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752290"
 ---
-# <a name="endenumeration-function"></a>Örneğin işlevi
-Çağrı kullanmaya bir numaralandırma sırasını sonlandırır [BeginEnumeration işlevi](beginenumeration.md).  
+# <a name="endenumeration-function"></a>EndEnumeration işlevi
+Bir çağrı ile başlatılan bir numaralandırma sırasını sonlandırıyor [BeginEnumeration işlevi](beginenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,26 +40,26 @@ HRESULT EndEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::EndEnumeration](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemi.
 
-Çağrı `EndEnumeration` işlevi gerekli değildir, ancak numaralandırması ile ilişkili kaynakları serbest nedeniyle önerilir. Ancak, resoruces otomatik olarak sonraki numaralandırma başlatıldığında veya nesne serbest serbest.
+Bir çağrı `EndEnumeration` işlevi gerekli değildir, ancak numaralandırma ile ilişkili kaynakları serbest nedeniyle önerilir. Ancak, resoruces otomatik olarak sonraki numaralandırma başlattığınızda veya nesne serbest serbest bırakılır.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

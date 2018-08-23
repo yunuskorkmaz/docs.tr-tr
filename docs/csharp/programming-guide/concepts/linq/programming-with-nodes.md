@@ -1,24 +1,24 @@
 ---
-title: Düğümler (C#) ile programlama
+title: Düğümleri (C#) ile programlama
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
 ms.openlocfilehash: 060f487e6e92c2ca42a685cc03afbe438106b839
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335425"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753973"
 ---
-# <a name="programming-with-nodes-c"></a>Düğümler (C#) ile programlama
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML Düzenleyicisi, dönüştürme sistem ya da bir rapor yazıcı gibi programlar genellikle yazmak için isteyen geliştiriciler daha hassas bir ayrıntı düzeyinde öğeleri ve özniteliklerinin daha çalışan programlar yazmanız gerekir. Bunlar genellikle metin düğümleri, işleme yönergeleri ve açıklamalar düzenleme düğüm düzeyinde çalışması gerekir. Bu konu, düğüm düzeyinde programlama hakkında bazı ayrıntılar sağlar.  
+# <a name="programming-with-nodes-c"></a>Düğümleri (C#) ile programlama
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] öğeler ve öznitelikler daha hassas bir düzeyde ayrıntı çalışan programları yazmak bir XML Düzenleyicisi, bir dönüştürme sistemi veya bir rapor yazıcı gibi programlar genellikle yazmanız gereken geliştiriciler gerekir. Bunlar genellikle metin düğümleri, işleme yönergeleri ve açıklamaları düzenleme düğüm düzeyinde çalışması gerekir. Bu konu, düğüm düzeyinde programlama hakkında bazı ayrıntılar sağlar.  
   
 ## <a name="node-details"></a>Düğüm ayrıntıları  
- Düğüm düzeyinde çalışma Programcı bilmeniz gereken programlama ayrıntılarını mevcuttur.  
+ Bir dizi düğümü düzeyinde çalışan Programcı bilmeniz gereken programlama ayrıntılarını vardır.  
   
-### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Üst özelliği, alt düğümleri olarak XDocument Null olarak ayarlandı  
- <xref:System.Xml.Linq.XObject.Parent%2A> Özelliği içeren üst <xref:System.Xml.Linq.XElement>, üst düğümü değil. Alt düğümleri <xref:System.Xml.Linq.XDocument> üst öğeye sahip <xref:System.Xml.Linq.XElement>. Kendi üst belgesidir böylece <xref:System.Xml.Linq.XObject.Parent%2A> düğümleri için özelliği null.  
+### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Üst özellik, alt düğümleri, XDocument Null olarak ayarlandı  
+ <xref:System.Xml.Linq.XObject.Parent%2A> Özelliği içeren üst <xref:System.Xml.Linq.XElement>, üst düğümü değil. Alt düğümleri <xref:System.Xml.Linq.XDocument> üst sahip <xref:System.Xml.Linq.XElement>. Üst belge olduğu şekilde <xref:System.Xml.Linq.XObject.Parent%2A> düğümleri için özelliği null.  
   
- Aşağıdaki örnekte bu gösterir:  
+ Aşağıdaki örnek bunu gösterir:  
   
 ```csharp  
 XDocument doc = XDocument.Parse(@"<!-- a comment --><Root/>");  
@@ -26,7 +26,7 @@ Console.WriteLine(doc.Nodes().OfType<XComment>().First().Parent == null);
 Console.WriteLine(doc.Root.Parent == null);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 True  
@@ -34,9 +34,9 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Bitişik metin düğümleri mümkündür.  
- XML programlama modelleri sayısında bitişik metin düğümleri her zaman birleştirilir. Buna bazen metin düğümleri normalleştirme denir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] metin düğümleri normalleştirin değil. İki metin düğümleri aynı öğeye eklerseniz, bitişiğindeki metin düğümleri neden olur. Ancak, bir dize olarak yerine olarak belirtilen içeriği eklerseniz, bir <xref:System.Xml.Linq.XText> düğümü [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bitişik metin düğümü dizeyle birleştirmek.  
+ Bir XML programlama modelleri sayısında bitişik metin düğümleri her zaman birleştirilir. Bu, bazen metin düğümleri normalleştirmesini denir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] metin düğümleri Normalleştir değil. İki metin düğümleri aynı öğe eklerseniz, bitişik metin düğümleri neden olur. Ancak, bir dize yerine olarak belirtilen içeriği eklerseniz bir <xref:System.Xml.Linq.XText> düğümünün [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bitişiğindeki metin düğümü ile dize birleştirme.  
   
- Aşağıdaki örnekte bu gösterir:  
+ Aşağıdaki örnek bunu gösterir:  
   
 ```csharp  
 XElement xmlTree = new XElement("Root", "Content");  
@@ -52,7 +52,7 @@ xmlTree.Add(new XText("more text"));
 Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 1  
@@ -61,7 +61,7 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
 ```  
   
 ### <a name="empty-text-nodes-are-possible"></a>Boş metin düğümleri mümkündür.  
- Bazı XML programlama modellerinde metin düğümleri boş dize içermemesi garanti. Bu tür bir metin düğümü XML serileştirme üzerinde hiçbir etkisi olmaz mantık olur. Ancak, bitişiğindeki metin düğümler aynı nedenden dolayı değeri boş dize, metin düğümü ayarlayarak metni metin düğüm kaldırırsanız olası silinmez.  
+ Bazı XML programlama modellerinde metin düğümleri boş dize içermiyor garanti edilir. Mantık gibi bir metin düğümü XML serileştirme üzerinde hiçbir etkisi olmasıdır. Ancak, bitişiğindeki metin düğümleri aynı nedenden dolayı boş dize olarak metin düğümü değerine ayarlayarak metnin bir metin düğümü kaldırırsanız mümkün silinmez.  
   
 ```csharp  
 XElement xmlTree = new XElement("Root", "Content");  
@@ -74,14 +74,14 @@ XText textNode2 = xmlTree.Nodes().OfType<XText>().First();
 Console.WriteLine(">>{0}<<", textNode2);   
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 >><<  
 ```  
   
-### <a name="an-empty-text-node-impacts-serialization"></a>Seri hale getirme boş metin düğümü etkiler  
- Bir öğe yalnızca boş bir alt metin düğümü içeriyorsa uzun etiket sözdizimi ile seri değildir: `<Child></Child>`. Bir öğe doğabilecek alt düğüm içeriyorsa, kısa etiket sözdizimiyle seri değildir: `<Child />`.  
+### <a name="an-empty-text-node-impacts-serialization"></a>Boş metin düğümü serileştirme etkiler.  
+ Yalnızca boş bir alt metin düğümü bir öğe içeriyorsa, ile uzun etiket sözdizimi serileştirildiği: `<Child></Child>`. Kullanılabilir alt düğümler olmadan bir öğe içeriyorsa, kısa etiket sözdizimi ile serileştirildiği: `<Child />`.  
   
 ```csharp  
 XElement child1 = new XElement("Child1",  
@@ -92,17 +92,17 @@ Console.WriteLine(child1);
 Console.WriteLine(child2);   
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
-### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Ad alanları öznitelikleridir XML ağacına LINQ  
- Ad alanı bildirimleri XSLT ve XPath, gibi bazı programlama arabirimleri öznitelikleri, aynı sözdizimine sahip olsa da ad alanı bildirimleri öznitelikleri için dikkate alınmaz. Bununla birlikte, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], ad alanları olarak depolanır <xref:System.Xml.Linq.XAttribute> XML ağacında nesneleri. Bir ad alanı bildirimi içeren bir öğesinin özniteliklerini yinelemek, döndürülen koleksiyondaki öğelerin biri olarak ad alanı bildirimi görürsünüz.  
+### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Öznitelikleridir LINQ to XML ağacının ad alanları  
+ Ad alanı bildirimi, XSLT ve XPath, gibi bazı programlama arabirimlerinde öznitelikleri aynı sözdizimine sahip olsa bile ad alanı bildirimi öznitelikler için dikkate alınmaz. Bununla birlikte, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], ad alanları olarak depolanır <xref:System.Xml.Linq.XAttribute> XML ağacı nesneleri. Bir ad alanı bildirimi içeren bir öğesi için öznitelikleri yinelemek, döndürülen koleksiyon öğeleri biri olarak ad alanı bildirimi görürsünüz.  
   
- <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> Özelliği, bir öznitelik bir ad alanı bildirimi olup olmadığını belirtir.  
+ <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> Özelliği bir öznitelik ad alanı bildirimi olup olmadığını gösterir.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -114,7 +114,7 @@ foreach (XAttribute att in root.Attributes())
     Console.WriteLine("{0}  IsNamespaceDeclaration:{1}", att, att.IsNamespaceDeclaration);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
@@ -122,8 +122,8 @@ xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True
 AnAttribute="abc"  IsNamespaceDeclaration:False  
 ```  
   
-### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath eksen yöntemleri alt boşluklardan-XDocument döndürmüyor  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için alt metin düğümleri sağlayan bir <xref:System.Xml.Linq.XDocument>, metin düğümleri yalnızca boşluk içeremez sürece. Ancak, XPath nesne modeli beyaz alanı bir belgenin alt düğümleri olarak şekilde içermez alt yineleme ne zaman bir <xref:System.Xml.Linq.XDocument> kullanarak <xref:System.Xml.Linq.XContainer.Nodes%2A> eksen, boşluk metin düğümleri döndürülecek. Ancak, ne zaman, yineleme alt bir <xref:System.Xml.Linq.XDocument> XPath eksen yöntemleri kullanarak, boşluk metin düğümleri olmayan döndürülür.  
+### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath eksen yöntemleri XDocument alt boşluk döndürmüyor  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] için alt metin düğümleri sağlayan bir <xref:System.Xml.Linq.XDocument>metin düğümleri yalnızca boşluk içeren sürece. Ancak, XPath nesne modeli boşluk bir belgenin alt düğümleri olarak bu nedenle içermez alt yineleme ne zaman bir <xref:System.Xml.Linq.XDocument> kullanarak <xref:System.Xml.Linq.XContainer.Nodes%2A> eksen, boşluk metin düğümleri döndürülür. Ancak, ne zaman, yineleme alt bir <xref:System.Xml.Linq.XDocument> XPath eksen yöntemleri kullanarak, boşluk metin düğümleri değil döndürülür.  
   
 ```csharp  
 // Create a document with some white-space child nodes of the document.  
@@ -142,7 +142,7 @@ Console.WriteLine(root.Nodes().OfType<XText>().Count());
 Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 3  
@@ -150,7 +150,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>XDeclaration nesneleri düğümleri olmayan  
- Yineleme zaman alt öğe düğümlerinin bir <xref:System.Xml.Linq.XDocument>, XML bildirimi nesnesi görmezsiniz. Belgenin alt düğümü değil bunu bir özelliktir.  
+ Alt düğümleri yineleme yaptığınızda bir <xref:System.Xml.Linq.XDocument>, XML bildirimi nesne görmezsiniz. Alt düğümü değil, bu belgenin bir özelliktir.  
   
 ```csharp  
 XDocument doc = new XDocument(  
@@ -164,7 +164,7 @@ Console.WriteLine(File.ReadAllText("Temp.xml"));
 Console.WriteLine(doc.Nodes().Count());  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count());
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş LINQ-XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

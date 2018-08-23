@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: d7e0094d0f60aa201ae7229983f3e4b9764d2cbc
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 692c2f61ae99f1c1c8e04a5a1bcad08814d286fe
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960201"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753960"
 ---
 # <a name="params-c-reference"></a>params (C# Başvurusu)
 Kullanarak `params` belirtebileceğiniz anahtar sözcüğü, bir [yöntem parametresi](../../../csharp/language-reference/keywords/method-parameters.md) , değişken sayıda bağımsız değişken alır.  
@@ -21,6 +21,8 @@ Kullanarak `params` belirtebileceğiniz anahtar sözcüğü, bir [yöntem parame
  Parametre bildiriminde belirtilen türde bağımsız değişkenleri dizisini belirtilen türdeki bağımsız değişkenlerin virgülle ayrılmış bir liste gönderebilirsiniz. Ayrıca, herhangi bir bağımsız değişken gönderebilirsiniz. Hiçbir bağımsız değişken uzunluğu gönderirseniz `params` sıfır listesidir.  
   
  Ek parametre sonra izin verilen `params` anahtar sözcüğü bir yöntem bildiriminde ve tek `params` anahtar sözcüğü bir metodun bildiriminde izin verilir.  
+ 
+ Bildirilen türü `params` parametresi, aşağıdaki örnekte gösterildiği gibi bir tek boyutlu bir dizi olmalıdır. Aksi halde bir derleyici hatası [CS0225](../../../csharp/misc/cs0225.md) gerçekleşir.
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bağımsız değişkenleri göndermenin çeşitli yollarını gösterir bir `params` parametresi.  

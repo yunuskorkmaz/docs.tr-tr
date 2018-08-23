@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Bul konumu (XPath-LINQ-XML) göre alt öğeleri (Visual Basic)'
+title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) konuma göre (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
 ms.openlocfilehash: 9f18da12786b4c44dc21e54c8d5020f49ef9ecb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641046"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42751936"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bul konumu (XPath-LINQ-XML) göre alt öğeleri (Visual Basic)
-Bazen kendi konumuna bağlı öğeleri bulmak istediğiniz. İkinci öğe bulmak istediğiniz veya üçüncü beşinci öğe aracılığıyla bulmak isteyebilirsiniz.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) konuma göre (Visual Basic)
+Bazen kendi konumlarına göre öğeleri bulmak istediğiniz. İkinci öğe bulmak isteyebilirsiniz veya beşinci öğeyi aracılığıyla üçüncü bulmak isteyebilirsiniz.  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Bu yazma için iki yaklaşım vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yavaş bir şekilde sorgu. Kullanabileceğiniz <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> işleçleri veya kullanabilirsiniz <xref:System.Linq.Enumerable.Where%2A> dizin alan aşırı. Kullandığınızda <xref:System.Linq.Enumerable.Where%2A> aşırı yüklemesi, iki bağımsız değişken almayan bir lambda ifadesi kullanın. Aşağıdaki örnek, her iki yöntem konumuna bağlı seçme gösterir.  
+ Bu yazma için iki yaklaşım vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yavaş bir şekilde sorgu. Kullanabileceğiniz <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> işleçleri veya kullanabileceğiniz <xref:System.Linq.Enumerable.Where%2A> dizin alan aşırı yüklemesini. Kullanırken <xref:System.Linq.Enumerable.Where%2A> aşırı yüklemesi, iki bağımsız değişken alan bir lambda ifadesi kullanın. Aşağıdaki örnek, iki yöntem de konumlarına göre seçme gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek dördüncü aracılığıyla ikinci bulur `Test` öğesi. Öğe koleksiyonunu sonucudur.  
+ Bu örnekte ikinci dördüncü aracılığıyla bulur `Test` öğesi. Öğelerinin bir koleksiyonunu sonucudur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: Test yapılandırmasını (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: Test yapılandırması (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -54,7 +54,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -79,4 +79,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 292fd92ebab9d1af2a2623ab55c3324fab2a69dc
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490395"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752259"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma
-Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanırken erişebilir kapsar bir <xref:System.ServiceModel.ChannelFactory%601>-tabanlı istemci. (Kullanırken bir <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> olay tabanlı zaman uyumsuz çağırma model kullanabileceğiniz hizmetini çağırmak için nesne. Daha fazla bilgi için bkz: [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz: [birden çok iş parçacıklı programlama olay tabanlı zaman uyumsuz desen ile](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  
+Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanılırken erişebilir kapsayan bir <xref:System.ServiceModel.ChannelFactory%601>-tabanlı istemci uygulaması. (Kullanırken bir <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> olay tabanlı zaman uyumsuz çağırma modeli kullandığınız bir hizmeti çağırmak için nesne. Daha fazla bilgi için [nasıl yapılır: hizmet işlemlerini zaman uyumsuz çağrı](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz desen (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
- Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimde işlemlerini zaman uyumsuz olarak işlemlerini ister anlamına gelir çağırabilirsiniz `Add` iki yöntem bölme `BeginAdd` ve `EndAdd`, eski biri çağrı başlatır ve ikincisi biri alır sonucu İşlem tamamlandığında. Bir işlem zaman uyumsuz olarak bir hizmet olarak uygulamak nasıl gösteren bir örnek için bkz: [nasıl yapılır: zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla ayrıntı için bkz: [zaman uyumlu ve zaman uyumsuz işlemleri](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ Bu konuda hizmeti uygulayan `ICalculator` arabirimi. İstemci bu arabirimdeki işlemlerini zaman uyumsuz olarak işlemleri gibi sağladığı anlamına gelir çağırabilirsiniz `Add` iki yöntem bölme `BeginAdd` ve `EndAdd`, biri önceki çağrı başlatır ve ikincisi biri sonucunu alır İşlem tamamlandığında. Bir işlemi zaman uyumsuz olarak bir hizmet olarak uygulama gösteren bir örnek için bkz [nasıl yapılır: zaman uyumsuz bir hizmet işlemi uygulama](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla ayrıntı için bkz: [zaman uyumlu ve zaman uyumsuz işlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ## <a name="procedure"></a>Yordam  
   
@@ -27,22 +27,22 @@ Bu konu, nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanırken
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   
-     Bu işlem için hizmet sözleşmesini zaman uyumsuz istemci sürümünü oluşturur.  
+     Bu işlem için hizmet sözleşmesi bir zaman uyumsuz istemci sürümünü oluşturur.  
   
-2.  Zaman uyumsuz işlemi aşağıdaki örnek kodda gösterildiği gibi tamamlandığında çağrılacak bir geri çağırma işlevini oluşturun.  
+2.  Zaman uyumsuz işlemi aşağıdaki örnek kodda gösterildiği gibi tamamlandığında çağrılacak bir geri çağırma işlevi oluşturun.  
   
      [!code-csharp[C_How_To_CF_Async#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#2)]
      [!code-vb[C_How_To_CF_Async#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#2)]  
   
-3.  Bir hizmet işlemi zaman uyumsuz olarak erişmek için istemci ve çağrı oluşturma `Begin[Operation]` (örneğin, `BeginAdd`) ve aşağıdaki örnek kodda gösterildiği gibi bir geri çağırma işlevi belirtin.  
+3.  Bir hizmet işlemi zaman uyumsuz olarak erişmek için istemci ve çağrı oluşturma `Begin[Operation]` (örneğin, `BeginAdd`) ve aşağıdaki örnek kodda gösterildiği gibi bir geri çağırma işlevini belirtin.  
   
      [!code-csharp[C_How_To_CF_Async#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#3)]
      [!code-vb[C_How_To_CF_Async#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#3)]  
   
-     Geri çağırma işlevi yürütüldüğünde, istemcinin çağıran `End<operation>` (örneğin, `EndAdd`) sonucu alınamadı.  
+     İstemci geri çağırma işlevi yürütüldüğünde, çağıran `End<operation>` (örneğin, `EndAdd`) sonuç almak için.  
   
 ## <a name="example"></a>Örnek  
- Önceki yordamda kullanılan istemci kodu ile birlikte kullanılan hizmeti uygulayan `ICalculator` arabirimi aşağıdaki kodda gösterildiği gibi. Hizmet tarafında `Add` ve `Subtract` sözleşme işlemlerini çağrılır zaman uyumlu olarak Windows Communication Foundation (çalışma zamanı, WCF tarafından) rağmen önceki istemci adımları istemcide zaman uyumsuz olarak çağrılır. `Multiply` Ve `Divide` işlemleri kullanılan zaman uyumsuz olarak hizmet tarafında hizmetini çağırmak için bile istemci bunları zaman uyumlu olarak çağırır. Bu örnek ayarlar <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliğine `true`. Uygulaması ile birlikte bu özellik ayarı [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zaman uyumsuz desen işlemi zaman uyumsuz olarak çağırmak için çalışma süresi söyler.  
+ Önceki yordamda kullanılan istemci kodu ile kullanılan hizmeti uygulayan `ICalculator` arabirimi aşağıdaki kodda gösterildiği gibi. Hizmet tarafında, `Add` ve `Subtract` sözleşmenin operations çağrılır zaman uyumlu olarak Windows Communication Foundation (çalışma zamanı, WCF) tarafından rağmen önceki istemci adımları zaman uyumsuz olarak istemcide çağrılır. `Multiply` Ve `Divide` operations zaman uyumsuz olarak hizmet tarafında hizmetini çağırmak için kullanılan bile istemcisi eşzamanlı olarak onları çağırır. Bu örnekte ayarlar <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> özelliğini `true`. Uygulaması ile birlikte bu özellik ayarı [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işlemini zaman uyumsuz olarak çağırmak için çalışma zamanı zaman uyumsuz desen söyler.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
