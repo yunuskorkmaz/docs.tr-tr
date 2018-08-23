@@ -1,72 +1,231 @@
 ---
-title: Kurallı toplama işlevleri
+title: Toplu kurallı İşlevler
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 04b7d9c20373a465c073d55a090f1c2fd7fc6e07
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761941"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752266"
 ---
-# <a name="aggregate-canonical-functions"></a><span data-ttu-id="693e5-102">Kurallı toplama işlevleri</span><span class="sxs-lookup"><span data-stu-id="693e5-102">Aggregate Canonical Functions</span></span>
+# <a name="aggregate-canonical-functions"></a><span data-ttu-id="aa1f0-102">Toplu kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="aa1f0-102">Aggregate Canonical Functions</span></span>
 
-<span data-ttu-id="693e5-103">Toplamalar, örneğin, tek bir değer olarak, bir dizi giriş değerleri azaltmak ifadelerini.</span><span class="sxs-lookup"><span data-stu-id="693e5-103">Aggregates are expressions that reduce a series of input values into, for example, a single value.</span></span> <span data-ttu-id="693e5-104">Toplamalar normalde SELECT deyiminin GROUP BY yan tümcesi ile birlikte kullanılır ve burada kullanılabilmesi için kısıtlamaları vardır.</span><span class="sxs-lookup"><span data-stu-id="693e5-104">Aggregates are normally used in conjunction with the GROUP BY clause of the SELECT expression, and there are constraints on where they can be used.</span></span>
+<span data-ttu-id="aa1f0-103">Toplamlar, örneğin, tek bir değer giriş değerlerini bir dizi azaltan ifadelerdir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-103">Aggregates are expressions that reduce a series of input values into, for example, a single value.</span></span> <span data-ttu-id="aa1f0-104">Toplamlar normalde seçin ifadesinin GROUP BY yan tümcesi ile birlikte kullanılır ve burada kullanılabilirler üzerindeki kısıtlamalar vardır.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-104">Aggregates are normally used in conjunction with the GROUP BY clause of the SELECT expression, and there are constraints on where they can be used.</span></span>
 
-<span data-ttu-id="693e5-105">Aşağıdaki tabloda toplama gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-105">The following table shows the aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>
+## <a name="aggegate-entity-sql-canonical-functions"></a><span data-ttu-id="aa1f0-105">Entity SQL Aggegate kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="aa1f0-105">Aggegate Entity SQL canonical functions</span></span>
 
-| <span data-ttu-id="693e5-106">İşlev</span><span class="sxs-lookup"><span data-stu-id="693e5-106">Function</span></span> | <span data-ttu-id="693e5-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="693e5-107">Description</span></span> |
-| -------- | ----------- |
-| `Avg(expression)` | <span data-ttu-id="693e5-108">Null olmayan değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-108">Returns the average of the non-null values.</span></span><br><br><span data-ttu-id="693e5-109">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-109">**Arguments**</span></span><br><br><span data-ttu-id="693e5-110">Bir `Int32`, `Int64`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-110">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span><br><br><span data-ttu-id="693e5-111">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-111">**Return Value**</span></span><br><br><span data-ttu-id="693e5-112">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="693e5-112">The type of `expression`.</span></span> <span data-ttu-id="693e5-113">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-113">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-114">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]</span><span class="sxs-lookup"><span data-stu-id="693e5-114">**Example**[!code-csharp[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] [!code-sql[DP EntityServices Concepts#EDM_AVG](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]</span></span> |
-| `BigCount(expression)` | <span data-ttu-id="693e5-115">Null yinelenen değerler dahil olmak üzere toplam boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-115">Returns the size of the aggregate including null and duplicate values.</span></span><br><br><span data-ttu-id="693e5-116">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-116">**Arguments**</span></span><br><br><span data-ttu-id="693e5-117">Herhangi bir türü.</span><span class="sxs-lookup"><span data-stu-id="693e5-117">Any type.</span></span><br><br><span data-ttu-id="693e5-118">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-118">**Return Value**</span></span><br><br><span data-ttu-id="693e5-119">Bir `Int64`.</span><span class="sxs-lookup"><span data-stu-id="693e5-119">An `Int64`.</span></span><br><br><span data-ttu-id="693e5-120">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]</span><span class="sxs-lookup"><span data-stu-id="693e5-120">**Example**[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]</span></span> |
-| `Count(expression)` | <span data-ttu-id="693e5-121">Null yinelenen değerler dahil olmak üzere toplam boyutu döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-121">Returns the size of the aggregate including null and duplicate values.</span></span><br><br><span data-ttu-id="693e5-122">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-122">**Arguments**</span></span><br><br><span data-ttu-id="693e5-123">Herhangi bir türü.</span><span class="sxs-lookup"><span data-stu-id="693e5-123">Any type.</span></span><br><br><span data-ttu-id="693e5-124">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-124">**Return Value**</span></span><br><br><span data-ttu-id="693e5-125">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="693e5-125">An `Int32`.</span></span><br><br><span data-ttu-id="693e5-126">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)] [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]</span><span class="sxs-lookup"><span data-stu-id="693e5-126">**Example**[!code-csharp[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)] [!code-sql[DP EntityServices Concepts#EDM_COUNT](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]</span></span> |
-| `Max(expression)` | <span data-ttu-id="693e5-127">Null olmayan değerler maksimum döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-127">Returns the maximum of the non-null values.</span></span><br><br><span data-ttu-id="693e5-128">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-128">**Arguments**</span></span><br><br><span data-ttu-id="693e5-129">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="693e5-129">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br><br><span data-ttu-id="693e5-130">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-130">**Return Value**</span></span><br><br><span data-ttu-id="693e5-131">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="693e5-131">The type of `expression`.</span></span> <span data-ttu-id="693e5-132">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-132">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-133">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)] [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]</span><span class="sxs-lookup"><span data-stu-id="693e5-133">**Example**[!code-csharp[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)] [!code-sql[DP EntityServices Concepts#EDM_MAX](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]</span></span> |
-| `Min(expression)` | <span data-ttu-id="693e5-134">Boş olmayan değerlerinin en küçüğünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-134">Returns the minimum of the non-null values.</span></span><br><br><span data-ttu-id="693e5-135">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-135">**Arguments**</span></span><br><br><span data-ttu-id="693e5-136">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="693e5-136">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br><br><span data-ttu-id="693e5-137">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-137">**Return Value**</span></span><br><br><span data-ttu-id="693e5-138">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="693e5-138">The type of `expression`.</span></span> <span data-ttu-id="693e5-139">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-139">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-140">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)] [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]</span><span class="sxs-lookup"><span data-stu-id="693e5-140">**Example**[!code-csharp[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)] [!code-sql[DP EntityServices Concepts#EDM_MIN](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]</span></span> |
-| `StDev(expression)` | <span data-ttu-id="693e5-141">Boş olmayan değerlerinin standart sapmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-141">Returns the standard deviation of the non-null values.</span></span><br><br><span data-ttu-id="693e5-142">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-142">**Arguments**</span></span><br><br><span data-ttu-id="693e5-143">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-143">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="693e5-144">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-144">**Return Value**</span></span><br><br><span data-ttu-id="693e5-145">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="693e5-145">A `Double`.</span></span> <span data-ttu-id="693e5-146">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-146">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-147">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)] [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]</span><span class="sxs-lookup"><span data-stu-id="693e5-147">**Example**[!code-csharp[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)] [!code-sql[DP EntityServices Concepts#EDM_STDEV](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]</span></span> |
-| `StDevP(expression)` | <span data-ttu-id="693e5-148">Tüm değerlerin popülasyon standart sapmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-148">Returns the standard deviation for the population of all values.</span></span><br><br><span data-ttu-id="693e5-149">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-149">**Arguments**</span></span><br><br><span data-ttu-id="693e5-150">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-150">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="693e5-151">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-151">**Return Value**</span></span><br><br><span data-ttu-id="693e5-152">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="693e5-152">A `Double`.</span></span> <span data-ttu-id="693e5-153">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-153">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-154">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)] [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]</span><span class="sxs-lookup"><span data-stu-id="693e5-154">**Example**[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)] [!code-sql[DP EntityServices Concepts#EDM_STDEVP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]</span></span> |
-| `Sum(expression)` | <span data-ttu-id="693e5-155">Null olmayan değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-155">Returns the sum of the non-null values.</span></span><br><br><span data-ttu-id="693e5-156">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-156">**Arguments**</span></span><br><br><span data-ttu-id="693e5-157">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-157">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="693e5-158">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-158">**Return Value**</span></span><br><br><span data-ttu-id="693e5-159">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="693e5-159">A `Double`.</span></span> <span data-ttu-id="693e5-160">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-160">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-161">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)] [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]</span><span class="sxs-lookup"><span data-stu-id="693e5-161">**Example**[!code-csharp[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)] [!code-sql[DP EntityServices Concepts#EDM_SUM](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]</span></span> |
-| `Var(expression)` | <span data-ttu-id="693e5-162">Null olmayan tüm değerlerin varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-162">Returns the variance of all non-null values.</span></span><br><br><span data-ttu-id="693e5-163">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-163">**Arguments**</span></span><br><br><span data-ttu-id="693e5-164">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-164">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="693e5-165">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-165">**Return Value**</span></span><br><br><span data-ttu-id="693e5-166">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="693e5-166">A `Double`.</span></span> <span data-ttu-id="693e5-167">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-167">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-168">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)] [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]</span><span class="sxs-lookup"><span data-stu-id="693e5-168">**Example**[!code-csharp[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)] [!code-sql[DP EntityServices Concepts#EDM_VAR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]</span></span> |
-| `VarP(expression)` | <span data-ttu-id="693e5-169">Null olmayan tüm değerlerinin popülasyon varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-169">Returns the variance for the population of all non-null values.</span></span><br><br><span data-ttu-id="693e5-170">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="693e5-170">**Arguments**</span></span><br><br><span data-ttu-id="693e5-171">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="693e5-171">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br><br><span data-ttu-id="693e5-172">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="693e5-172">**Return Value**</span></span><br><br><span data-ttu-id="693e5-173">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="693e5-173">A `Double`.</span></span> <span data-ttu-id="693e5-174">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="693e5-174">`Null`, if all input values are `null` values.</span></span><br><br><span data-ttu-id="693e5-175">**Örnek**[!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)] [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]</span><span class="sxs-lookup"><span data-stu-id="693e5-175">**Example**[!code-csharp[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)] [!code-sql[DP EntityServices Concepts#EDM_VARP](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]</span></span> |
+<span data-ttu-id="aa1f0-106">Entity SQL toplu kurallı işlevler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="aa1f0-106">The following are the aggregate Entity SQL canonical functions.</span></span>
 
-<span data-ttu-id="693e5-176">Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer işlevselliği kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-176">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="693e5-177">Daha fazla bilgi için bkz: [SqlClient Entity Framework işlevleri için](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="693e5-177">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>
+### <a name="avgexpression"></a><span data-ttu-id="aa1f0-107">AVG(Expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-107">Avg(expression)</span></span>
 
-## <a name="collection-based-aggregates"></a><span data-ttu-id="693e5-178">Koleksiyon tabanlı toplar</span><span class="sxs-lookup"><span data-stu-id="693e5-178">Collection-based aggregates</span></span>
+<span data-ttu-id="aa1f0-108">Null olmayan değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-108">Returns the average of the non-null values.</span></span>
 
-<span data-ttu-id="693e5-179">Koleksiyon tabanlı toplamalar (toplama işlevleri) koleksiyonlar üzerinde çalışır ve bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="693e5-179">Collection-based aggregates (collection functions) operate on collections and return a value.</span></span> <span data-ttu-id="693e5-180">Örneğin tüm siparişleri koleksiyonu SİPARİŞLERİ ise, aşağıdaki ifade en erken sevk tarihi hesaplayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="693e5-180">For example if ORDERS is a collection of all orders, you can calculate the earliest ship date with the following expression:</span></span>
+<span data-ttu-id="aa1f0-109">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-109">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-110">Bir `Int32`, `Int64`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-110">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-111">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-111">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-112">Türünü `expression`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-112">The type of `expression`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-113">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-113">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
+
+### <a name="bigcountexpression"></a><span data-ttu-id="aa1f0-114">BigCount(expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-114">BigCount(expression)</span></span>
+
+<span data-ttu-id="aa1f0-115">Null ve yinelenen değerleri dahil olmak üzere toplam boyutunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-115">Returns the size of the aggregate including null and duplicate values.</span></span>
+
+<span data-ttu-id="aa1f0-116">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-116">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-117">Herhangi bir türü.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-117">Any type.</span></span>
+
+<span data-ttu-id="aa1f0-118">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-118">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-119">Bir `Int64`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-119">An `Int64`.</span></span>
+
+<span data-ttu-id="aa1f0-120">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-120">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
+
+### <a name="countexpression"></a><span data-ttu-id="aa1f0-121">Count (deyim)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-121">Count(expression)</span></span> 
+
+<span data-ttu-id="aa1f0-122">Null ve yinelenen değerleri dahil olmak üzere toplam boyutunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-122">Returns the size of the aggregate including null and duplicate values.</span></span>
+
+<span data-ttu-id="aa1f0-123">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-123">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-124">Herhangi bir türü.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-124">Any type.</span></span>
+
+<span data-ttu-id="aa1f0-125">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-125">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-126">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-126">An `Int32`.</span></span>
+
+<span data-ttu-id="aa1f0-127">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-127">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_count)]
+[!code-sql[DP EntityServices Concepts#EDM_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_count)]
+
+### <a name="maxexpression"></a><span data-ttu-id="aa1f0-128">Max(Expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-128">Max(expression)</span></span>
+
+<span data-ttu-id="aa1f0-129">Maksimum null olmayan değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-129">Returns the maximum of the non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-130">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-130">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-131">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-131">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span>
+
+<span data-ttu-id="aa1f0-132">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-132">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-133">Türünü `expression`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-133">The type of `expression`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-134">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-134">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_max)]
+[!code-sql[DP EntityServices Concepts#EDM_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_max)]
+
+### <a name="minexpression"></a><span data-ttu-id="aa1f0-135">Min(Expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-135">Min(expression)</span></span>
+
+<span data-ttu-id="aa1f0-136">Boş olmayan değerlerinin en küçüğünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-136">Returns the minimum of the non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-137">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-137">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-138">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-138">A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span>
+
+<span data-ttu-id="aa1f0-139">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-139">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-140">Türünü `expression`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-140">The type of `expression`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-141">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-141">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_min)]
+[!code-sql[DP EntityServices Concepts#EDM_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_min)]
+
+### <a name="stdevexpression"></a><span data-ttu-id="aa1f0-142">StDev(expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-142">StDev(expression)</span></span>
+
+<span data-ttu-id="aa1f0-143">Boş olmayan değerlerinin standart sapmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-143">Returns the standard deviation of the non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-144">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-144">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-145">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-145">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-146">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-146">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-147">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-147">A `Double`.</span></span> <span data-ttu-id="aa1f0-148">`Null`, tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-148">`Null`, if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-149">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-149">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdev)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdev)]
+
+### <a name="stdevpexpression"></a><span data-ttu-id="aa1f0-150">StDevP(expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-150">StDevP(expression)</span></span>
+
+<span data-ttu-id="aa1f0-151">İçin tüm değerlerin popülasyon standart sapmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-151">Returns the standard deviation for the population of all values.</span></span>
+
+<span data-ttu-id="aa1f0-152">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-152">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-153">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-153">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-154">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-154">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-155">A `Double`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-155">A `Double`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-156">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-156">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_stdevp)]
+[!code-sql[DP EntityServices Concepts#EDM_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_stdevp)]
+
+### <a name="sumexpression"></a><span data-ttu-id="aa1f0-157">SUM(Expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-157">Sum(expression)</span></span>
+
+<span data-ttu-id="aa1f0-158">Null olmayan değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-158">Returns the sum of the non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-159">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-159">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-160">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-160">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-161">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-161">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-162">A `Double`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-162">A `Double`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-163">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-163">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_sum)]
+[!code-sql[DP EntityServices Concepts#EDM_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_sum)]
+
+### <a name="varexpression"></a><span data-ttu-id="aa1f0-164">Var(Expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-164">Var(expression)</span></span>
+
+<span data-ttu-id="aa1f0-165">Null olmayan tüm değerlerin varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-165">Returns the variance of all non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-166">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-166">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-167">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-167">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-168">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-168">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-169">A `Double`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-169">A `Double`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-170">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-170">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_var)]
+[!code-sql[DP EntityServices Concepts#EDM_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_var)]
+
+### <a name="varpexpression"></a><span data-ttu-id="aa1f0-171">VarP(expression)</span><span class="sxs-lookup"><span data-stu-id="aa1f0-171">VarP(expression)</span></span>
+
+<span data-ttu-id="aa1f0-172">Null olmayan tüm değerlerin popülasyon varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-172">Returns the variance for the population of all non-null values.</span></span>
+
+<span data-ttu-id="aa1f0-173">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-173">**Arguments**</span></span>
+
+<span data-ttu-id="aa1f0-174">Bir `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-174">An `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="aa1f0-175">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-175">**Return Value**</span></span>
+
+<span data-ttu-id="aa1f0-176">A `Double`, veya `null` tüm giriş değerlerini varsa `null` değerleri.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-176">A `Double`, or `null` if all input values are `null` values.</span></span>
+
+<span data-ttu-id="aa1f0-177">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="aa1f0-177">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+
+<span data-ttu-id="aa1f0-178">Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-178">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="aa1f0-179">Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="aa1f0-179">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>
+
+## <a name="collection-based-aggregates"></a><span data-ttu-id="aa1f0-180">Koleksiyon tabanlı toplamaları</span><span class="sxs-lookup"><span data-stu-id="aa1f0-180">Collection-based aggregates</span></span>
+
+<span data-ttu-id="aa1f0-181">Koleksiyon tabanlı toplamlar (toplama işlevleri), koleksiyonlar üzerinde çalışır ve bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-181">Collection-based aggregates (collection functions) operate on collections and return a value.</span></span> <span data-ttu-id="aa1f0-182">Örneğin SİPARİŞLER varsa tüm siparişleri koleksiyonunu sevk tarihten şu ifadeyle hesaplayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="aa1f0-182">For example if ORDERS is a collection of all orders, you can calculate the earliest ship date with the following expression:</span></span>
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
 ```
 
-<span data-ttu-id="693e5-181">Koleksiyon tabanlı toplamalar içindeki ifadeleri geçerli ortam ad çözümleme kapsamı içinde değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-181">Expressions inside collection-based aggregates are evaluated within the current ambient name-resolution scope.</span></span>
+<span data-ttu-id="aa1f0-183">Koleksiyon tabanlı toplamalar içindeki ifadeler, geçerli ortam ad çözümlemesi kapsamında değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-183">Expressions inside collection-based aggregates are evaluated within the current ambient name-resolution scope.</span></span>
 
-## <a name="group-based-aggregates"></a><span data-ttu-id="693e5-182">Grup tabanlı toplar</span><span class="sxs-lookup"><span data-stu-id="693e5-182">Group-based aggregates</span></span>
+## <a name="group-based-aggregates"></a><span data-ttu-id="aa1f0-184">Grup tabanlı toplamaları</span><span class="sxs-lookup"><span data-stu-id="aa1f0-184">Group-based aggregates</span></span>
 
-<span data-ttu-id="693e5-183">Grup tabanlı toplamalar, GROUP BY yan tümcesi tarafından tanımlanan bir grup üzerinden hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="693e5-183">Group-based aggregates are calculated over a group as defined by the GROUP BY clause.</span></span> <span data-ttu-id="693e5-184">Sonuç her grup için ayrı bir toplama toplama hesaplama giriş olarak olan her grupta öğeleri kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="693e5-184">For each group in the result, a separate aggregate is calculated by using the elements in each group as input to the aggregate calculation.</span></span> <span data-ttu-id="693e5-185">Group by yan tümcesi select ifadesinde kullanıldığında, ifade adları, toplamalar veya sabit ifadeleri yalnızca gruplandırma projeksiyon ya da order by yan tümcesi mevcut olabilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-185">When a group-by clause is used in a select expression, only grouping expression names, aggregates, or constant expressions can be present in the projection or order-by clause.</span></span>
+<span data-ttu-id="aa1f0-185">Grup tabanlı toplamalar GROUP BY yan tümcesi tarafından tanımlanan bir grup üzerinden hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-185">Group-based aggregates are calculated over a group as defined by the GROUP BY clause.</span></span> <span data-ttu-id="aa1f0-186">Sonuçta her bir grup için ayrı bir toplama, toplam hesaplaması için giriş olarak her gruba öğeleri kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-186">For each group in the result, a separate aggregate is calculated by using the elements in each group as input to the aggregate calculation.</span></span> <span data-ttu-id="aa1f0-187">Group by yan tümcesi select ifadesinde kullanıldığında, ifade adlarının, toplamlar ve sabit ifadeler yalnızca gruplandırma projeksiyon veya order by yan tümcesi içinde bulunabilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-187">When a group-by clause is used in a select expression, only grouping expression names, aggregates, or constant expressions can be present in the projection or order-by clause.</span></span>
 
-<span data-ttu-id="693e5-186">Aşağıdaki örnekte, her ürün için sipariş edilen ortalama miktarı hesaplar:</span><span class="sxs-lookup"><span data-stu-id="693e5-186">The following example calculates the average quantity ordered for each product:</span></span>
+<span data-ttu-id="aa1f0-188">Aşağıdaki örnek, her ürün için sıralı ortalama miktarı hesaplar:</span><span class="sxs-lookup"><span data-stu-id="aa1f0-188">The following example calculates the average quantity ordered for each product:</span></span>
 
 ```sql
 select p, avg(ol.Quantity) from LOB.OrderLines as ol 
   group by ol.Product as p
 ```
 
-<span data-ttu-id="693e5-187">Bir grup tabanlı toplama açık group by yan tümcesi olmadan SELECT ifadesinde olması mümkündür.</span><span class="sxs-lookup"><span data-stu-id="693e5-187">It's possible to have a group-based aggregate without an explicit group-by clause in the SELECT expression.</span></span> <span data-ttu-id="693e5-188">Bu durumda, tüm öğeler tek bir grup olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-188">In this case, all elements are treated as a single group.</span></span> <span data-ttu-id="693e5-189">Bu, bir sabit üzerinde alan bir gruplama belirtme eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="693e5-189">This is equivalent of specifying a grouping based on a constant.</span></span> <span data-ttu-id="693e5-190">, Örneğin, aşağıdaki ifade alın:</span><span class="sxs-lookup"><span data-stu-id="693e5-190">Take, for example, the following expression:</span></span>
+<span data-ttu-id="aa1f0-189">Bir grup tabanlı toplama açık group by yan tümcesi olmadan seçme olması mümkündür.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-189">It's possible to have a group-based aggregate without an explicit group-by clause in the SELECT expression.</span></span> <span data-ttu-id="aa1f0-190">Bu durumda, tüm öğeleri tek bir grup kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-190">In this case, all elements are treated as a single group.</span></span> <span data-ttu-id="aa1f0-191">Bu, bir sabit üzerinde temel alan bir gruplama belirtme eşdeğerdir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-191">This is equivalent of specifying a grouping based on a constant.</span></span> <span data-ttu-id="aa1f0-192">Örneğin, aşağıdaki ifade'yı uygulayın:</span><span class="sxs-lookup"><span data-stu-id="aa1f0-192">Take, for example, the following expression:</span></span>
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
 ```
 
-<span data-ttu-id="693e5-191">Bu şuna eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="693e5-191">This is equivalent to the following:</span></span>
+<span data-ttu-id="aa1f0-193">Bu aşağıdakine eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="aa1f0-193">This is equivalent to the following:</span></span>
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 ```
 
-<span data-ttu-id="693e5-192">İfadelerinin içinde grup tabanlı toplama WHERE yan tümcesi ifade görünür olacak ad çözümleme kapsamında değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-192">Expressions inside the group-based aggregate are evaluated within the name-resolution scope that would be visible to the WHERE clause expression.</span></span>
+<span data-ttu-id="aa1f0-194">Grup tabanlı toplama içinde ifadeler, WHERE yan tümcesi ifade görünür olur ad çözümlemesi kapsamında değerlendirilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-194">Expressions inside the group-based aggregate are evaluated within the name-resolution scope that would be visible to the WHERE clause expression.</span></span>
 
-<span data-ttu-id="693e5-193">Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup tabanlı toplamalar ayrıca bir tüm belirtin veya farklı değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="693e5-193">As in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], group-based aggregates can also specify an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="693e5-194">AYRI değiştiricisi belirtilmemişse, toplama hesaplanan önce yinelenenleri birleşik giriş koleksiyonundan ortadan kalkar.</span><span class="sxs-lookup"><span data-stu-id="693e5-194">If the DISTINCT modifier is specified, duplicates are eliminated from the aggregate input collection, before the aggregate is computed.</span></span> <span data-ttu-id="693e5-195">Tüm değiştiricisi belirtilirse (veya hiçbir değiştiricisi belirtilmişse), hiçbir yinelenen eleme gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="693e5-195">If the ALL modifier is specified (or if no modifier is specified), no duplicate elimination is performed.</span></span>  
+<span data-ttu-id="aa1f0-195">Olarak [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Grup tabanlı toplamalar BÜTÜN belirtebilirsiniz veya ayrı değiştiricisi.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-195">As in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], group-based aggregates can also specify an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="aa1f0-196">AYRI değiştiricisi belirtilmemişse, toplama hesaplanan önce yinelenenleri birleşik giriş koleksiyondan ortadan kalkar.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-196">If the DISTINCT modifier is specified, duplicates are eliminated from the aggregate input collection, before the aggregate is computed.</span></span> <span data-ttu-id="aa1f0-197">Tüm değiştirici belirtilirse (veya herhangi bir değiştiricisi belirtilmişse), hiçbir yinelenen eleme gerçekleştirilir.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-197">If the ALL modifier is specified (or if no modifier is specified), no duplicate elimination is performed.</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="693e5-196">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="693e5-196">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa1f0-198">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aa1f0-198">See also</span></span>
 
-[<span data-ttu-id="693e5-197">Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="693e5-197">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+[<span data-ttu-id="aa1f0-199">Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="aa1f0-199">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

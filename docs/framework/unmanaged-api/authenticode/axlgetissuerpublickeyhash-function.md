@@ -10,17 +10,17 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b197aa539e60a9dbcee55cf190c44b45da3a5fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402021"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752283"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="98d70-102">_AxlGetIssuerPublicKeyHash İşlevi</span><span class="sxs-lookup"><span data-stu-id="98d70-102">_AxlGetIssuerPublicKeyHash Function</span></span>
-<span data-ttu-id="98d70-103">Belirtilen sertifika imzalamak için kullanılan özel anahtar ile ilişkili ortak anahtarın SHA-1 karma alır.</span><span class="sxs-lookup"><span data-stu-id="98d70-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="8d186-102">_AxlGetIssuerPublicKeyHash İşlevi</span><span class="sxs-lookup"><span data-stu-id="8d186-102">_AxlGetIssuerPublicKeyHash Function</span></span>
+<span data-ttu-id="8d186-103">Belirtilen sertifika imzalamak için kullanılan özel anahtarıyla ilişkilendirilmiş ortak anahtar SHA-1 karmasını alır.</span><span class="sxs-lookup"><span data-stu-id="8d186-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98d70-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98d70-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d186-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8d186-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlGetIssuerPublicKeyHash (  
@@ -29,15 +29,15 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="98d70-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="98d70-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8d186-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8d186-105">Parameters</span></span>  
  `pChainContext`  
- <span data-ttu-id="98d70-106">[in] CSP ortak anahtarı blob.</span><span class="sxs-lookup"><span data-stu-id="98d70-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="98d70-107">Bkz: [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) yapısı.</span><span class="sxs-lookup"><span data-stu-id="98d70-107">See the [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) structure.</span></span>  
+ <span data-ttu-id="8d186-106">[in] CSP ortak anahtar blob'u.</span><span class="sxs-lookup"><span data-stu-id="8d186-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="8d186-107">Bkz: [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) yapısı.</span><span class="sxs-lookup"><span data-stu-id="8d186-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="98d70-108">[out] Bir işaretçi WCHAR \* onaltılık kodlanmış ortak anahtar belirteci almak için.</span><span class="sxs-lookup"><span data-stu-id="98d70-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="8d186-108">[out] WCHAR işaretçisi \* onaltılık kodlanmış ortak anahtar belirteci almak için.</span><span class="sxs-lookup"><span data-stu-id="8d186-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="98d70-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="98d70-109">Return Value</span></span>  
- <span data-ttu-id="98d70-110">`S_OK` işlev başarılı olursa; Aksi takdirde `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="98d70-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8d186-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8d186-109">Return Value</span></span>  
+ <span data-ttu-id="8d186-110">`S_OK` işlev başarılı olursa; Aksi takdirde `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="8d186-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98d70-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="98d70-111">See Also</span></span>  
- [<span data-ttu-id="98d70-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="98d70-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="8d186-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="8d186-111">See Also</span></span>  
+ [<span data-ttu-id="8d186-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="8d186-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

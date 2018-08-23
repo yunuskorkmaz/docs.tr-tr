@@ -1,6 +1,6 @@
 ---
 title: GetObjectText işlevi (yönetilmeyen API Başvurusu)
-description: GetObjectText işlevi bir nesnenin bir metinsel oluşturma MOF sözdiziminde döndürür.
+description: GetObjectText işlevi bir metin işleme bir nesnenin MOF sözdiziminde döndürür.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459645"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752358"
 ---
-# <a name="getobjecttext-function"></a><span data-ttu-id="320b2-103">GetObjectText işlevi</span><span class="sxs-lookup"><span data-stu-id="320b2-103">GetObjectText function</span></span>
-<span data-ttu-id="320b2-104">Nesnenin metinsel işleme Yönetilen Nesne Biçimi (MOF) sözdiziminde döndürür.</span><span class="sxs-lookup"><span data-stu-id="320b2-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>
+# <a name="getobjecttext-function"></a><span data-ttu-id="9e823-103">GetObjectText işlevi</span><span class="sxs-lookup"><span data-stu-id="9e823-103">GetObjectText function</span></span>
+<span data-ttu-id="9e823-104">Nesnenin değerinin metinsel bir işleme Yönetilen Nesne Biçimi (MOF) söz diziminde döndürür.</span><span class="sxs-lookup"><span data-stu-id="9e823-104">Returns a textual rendering of the object in the Managed Object Format (MOF) syntax.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="320b2-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="320b2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e823-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9e823-105">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectText (
@@ -39,50 +39,50 @@ HRESULT GetObjectText (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="320b2-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="320b2-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="9e823-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9e823-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="320b2-107">[in] Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="320b2-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="9e823-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="9e823-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="320b2-108">[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.</span><span class="sxs-lookup"><span data-stu-id="320b2-108">[in] A pointer to an [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.</span></span>
+<span data-ttu-id="9e823-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="9e823-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="320b2-109">[in] Normalde 0.</span><span class="sxs-lookup"><span data-stu-id="320b2-109">[in] Normally 0.</span></span> <span data-ttu-id="320b2-110">Varsa `WBEM_FLAG_NO_FLAVORS` (veya 0x1) belirtilirse, niteleyicileri yayma veya özellik bilgileri olmadan dahil.</span><span class="sxs-lookup"><span data-stu-id="320b2-110">If `WBEM_FLAG_NO_FLAVORS` (or 0x1) is specified, qualifiers are included without propagation or flavor information.</span></span>
+<span data-ttu-id="9e823-109">[in] Normalde 0.</span><span class="sxs-lookup"><span data-stu-id="9e823-109">[in] Normally 0.</span></span> <span data-ttu-id="9e823-110">Varsa `WBEM_FLAG_NO_FLAVORS` (veya 0x1) belirtilirse, niteleyicileri yayma veya flavor bilgileri olmadan dahil edilir.</span><span class="sxs-lookup"><span data-stu-id="9e823-110">If `WBEM_FLAG_NO_FLAVORS` (or 0x1) is specified, qualifiers are included without propagation or flavor information.</span></span>
 
 `pstrObjectText`   
-<span data-ttu-id="320b2-111">[out] Bir işaretçi bir `null` girişi.</span><span class="sxs-lookup"><span data-stu-id="320b2-111">[out] A pointer to a `null` on entry.</span></span> <span data-ttu-id="320b2-112">Üzerinde dönün, yeni ayrılan `BSTR` nesnenin MOF sözdizimi işleme içerir.</span><span class="sxs-lookup"><span data-stu-id="320b2-112">On return, a newly allocated `BSTR` that contains a MOF syntax rendering of the object.</span></span>  
+<span data-ttu-id="9e823-111">[out] Bir işaretçi bir `null` girişi.</span><span class="sxs-lookup"><span data-stu-id="9e823-111">[out] A pointer to a `null` on entry.</span></span> <span data-ttu-id="9e823-112">Üzerinde iade, yeni ayrılan `BSTR` , içeren nesnenin MOF sözdizimi işleme.</span><span class="sxs-lookup"><span data-stu-id="9e823-112">On return, a newly allocated `BSTR` that contains a MOF syntax rendering of the object.</span></span>  
 
-## <a name="return-value"></a><span data-ttu-id="320b2-113">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="320b2-113">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="9e823-113">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="9e823-113">Return value</span></span>
 
-<span data-ttu-id="320b2-114">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="320b2-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="9e823-114">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="9e823-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="320b2-115">Sabit</span><span class="sxs-lookup"><span data-stu-id="320b2-115">Constant</span></span>  |<span data-ttu-id="320b2-116">Değer</span><span class="sxs-lookup"><span data-stu-id="320b2-116">Value</span></span>  |<span data-ttu-id="320b2-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="320b2-117">Description</span></span>  |
+|<span data-ttu-id="9e823-115">Sabit</span><span class="sxs-lookup"><span data-stu-id="9e823-115">Constant</span></span>  |<span data-ttu-id="9e823-116">Değer</span><span class="sxs-lookup"><span data-stu-id="9e823-116">Value</span></span>  |<span data-ttu-id="9e823-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9e823-117">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="320b2-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="320b2-118">0x80041001</span></span> | <span data-ttu-id="320b2-119">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="320b2-119">There has been a general failure.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="320b2-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="320b2-120">0x80041008</span></span> | <span data-ttu-id="320b2-121">Parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="320b2-121">A parameter is not valid.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="320b2-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="320b2-122">0x80041006</span></span> | <span data-ttu-id="320b2-123">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="320b2-123">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="320b2-124">0</span><span class="sxs-lookup"><span data-stu-id="320b2-124">0</span></span> | <span data-ttu-id="320b2-125">İşlev çağrısı başarısız oldu.</span><span class="sxs-lookup"><span data-stu-id="320b2-125">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="9e823-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="9e823-118">0x80041001</span></span> | <span data-ttu-id="9e823-119">Genel bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="9e823-119">There has been a general failure.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="9e823-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="9e823-120">0x80041008</span></span> | <span data-ttu-id="9e823-121">Bir parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="9e823-121">A parameter is not valid.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="9e823-122">0x80041006</span><span class="sxs-lookup"><span data-stu-id="9e823-122">0x80041006</span></span> | <span data-ttu-id="9e823-123">İşlemi tamamlamak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="9e823-123">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="9e823-124">0</span><span class="sxs-lookup"><span data-stu-id="9e823-124">0</span></span> | <span data-ttu-id="9e823-125">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="9e823-125">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="320b2-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="320b2-126">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9e823-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9e823-126">Remarks</span></span>
 
-<span data-ttu-id="320b2-127">Bu işlev çağrısı sarmalar [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="320b2-127">This function wraps a call to the [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="9e823-127">Bu işlev bir çağrı sarılır [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9e823-127">This function wraps a call to the [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) method.</span></span>
 
-<span data-ttu-id="320b2-128">Döndürülen MOF metni nesneyle ilgili tüm bilgileri, ancak yalnızca orijinal nesneyi yeniden yapabilmek MOF Derleyici yeterli bilgi içermiyor.</span><span class="sxs-lookup"><span data-stu-id="320b2-128">The MOF text returned does not contain all the information about the object, but only enough information for the MOF compiler to be able to recreate the original object.</span></span> <span data-ttu-id="320b2-129">Örneğin, hiçbir yayılan niteleyicileri veya üst sınıf özellikleri dahil edilir.</span><span class="sxs-lookup"><span data-stu-id="320b2-129">For instance, no propagated qualifiers or parent class properties are included.</span></span>
+<span data-ttu-id="9e823-128">Döndürülen MOF metin nesnesine ilişkin tüm bilgileri, ancak orijinal nesneyi yeniden oluşturmaya yapabilmek MOF derleyicisi için yeterli bilgi içermiyor.</span><span class="sxs-lookup"><span data-stu-id="9e823-128">The MOF text returned does not contain all the information about the object, but only enough information for the MOF compiler to be able to recreate the original object.</span></span> <span data-ttu-id="9e823-129">Örneğin, yayılan niteleyicileri ya da üst sınıfı özellikleri dahil edilir.</span><span class="sxs-lookup"><span data-stu-id="9e823-129">For instance, no propagated qualifiers or parent class properties are included.</span></span>
 
-<span data-ttu-id="320b2-130">Aşağıdaki algoritması, bir yöntemin parametrelerini metnin yeniden oluşturmak için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="320b2-130">The following algorithm is used to reconstruct the text of the parameters of a method:</span></span>
+<span data-ttu-id="9e823-130">Aşağıdaki algoritması, bir yöntemin parametre metin yeniden oluşturmak için kullanılır:</span><span class="sxs-lookup"><span data-stu-id="9e823-130">The following algorithm is used to reconstruct the text of the parameters of a method:</span></span>
 
-1. <span data-ttu-id="320b2-131">Parametre tanımlayıcı değerlerini sırasına göre yeniden sıralanmış.</span><span class="sxs-lookup"><span data-stu-id="320b2-131">Parameters are resequenced in the order of their identifier values.</span></span>
-1. <span data-ttu-id="320b2-132">Olarak belirtilen parametreleri `[in]` ve `[out]` tek bir parametre birleştirilir.</span><span class="sxs-lookup"><span data-stu-id="320b2-132">Parameters that are specified as `[in]` and `[out]` are combined into a single parameter.</span></span>
+1. <span data-ttu-id="9e823-131">Parametre tanımlayıcı değerlerini sırasına göre yeniden sıralanmış.</span><span class="sxs-lookup"><span data-stu-id="9e823-131">Parameters are resequenced in the order of their identifier values.</span></span>
+1. <span data-ttu-id="9e823-132">Parametre olarak belirtilen `[in]` ve `[out]` tek bir parametre birleştirilir.</span><span class="sxs-lookup"><span data-stu-id="9e823-132">Parameters that are specified as `[in]` and `[out]` are combined into a single parameter.</span></span>
  
-<span data-ttu-id="320b2-133">`pstrObjectText` bir işaretçi olmalıdır bir `null` işlevi çağrıldığında; Bu işaretçinin değil serbest olduğundan yöntem çağrısı önce geçerli bir dize işaret etmelidir değil.</span><span class="sxs-lookup"><span data-stu-id="320b2-133">`pstrObjectText` must be a pointer to a `null` when the function is called; it must not point to a string that is valid before the method call, because the pointer will not be deallocated.</span></span>
+<span data-ttu-id="9e823-133">`pstrObjectText` bir işaretçi olmalıdır bir `null` işlev çağrıldığında; bu işaretçisi serbest çünkü yöntem çağrısından önce geçerli bir dizeye işaret etmelidir değil.</span><span class="sxs-lookup"><span data-stu-id="9e823-133">`pstrObjectText` must be a pointer to a `null` when the function is called; it must not point to a string that is valid before the method call, because the pointer will not be deallocated.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="320b2-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="320b2-134">Requirements</span></span>  
-<span data-ttu-id="320b2-135">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="320b2-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e823-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9e823-134">Requirements</span></span>  
+<span data-ttu-id="9e823-135">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e823-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="320b2-136">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="320b2-136">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="9e823-136">**Başlık:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="9e823-136">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="320b2-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="320b2-137">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="9e823-137">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9e823-137">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="320b2-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="320b2-138">See also</span></span>  
-[<span data-ttu-id="320b2-139">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="320b2-139">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9e823-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e823-138">See also</span></span>  
+[<span data-ttu-id="9e823-139">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="9e823-139">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

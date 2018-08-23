@@ -2,31 +2,143 @@
 title: Kurallı matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199314"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752359"
 ---
-# <a name="math-canonical-functions"></a><span data-ttu-id="dbc4b-102">Kurallı matematik işlevleri</span><span class="sxs-lookup"><span data-stu-id="dbc4b-102">Math Canonical Functions</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="dbc4b-103"> kurallı matematik işlevleri içerir.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-103"> includes math canonical functions.</span></span>  
+# <a name="math-canonical-functions"></a><span data-ttu-id="4016e-102">Kurallı matematik işlevleri</span><span class="sxs-lookup"><span data-stu-id="4016e-102">Math Canonical Functions</span></span>
+
+<span data-ttu-id="4016e-103">Entity SQL aşağıdaki kurallı matematik işlevleri içerir:</span><span class="sxs-lookup"><span data-stu-id="4016e-103">Entity SQL includes the following math canonical functions:</span></span>
   
- <span data-ttu-id="dbc4b-104">Aşağıdaki tabloda, matematik gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kurallı işlevler.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-104">The following table shows the math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
+## <a name="absvalue"></a><span data-ttu-id="4016e-104">Abs(Value)</span><span class="sxs-lookup"><span data-stu-id="4016e-104">Abs(value)</span></span>
+
+<span data-ttu-id="4016e-105">Mutlak değerini döndürür `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-105">Returns the absolute value of `value`.</span></span>
+
+<span data-ttu-id="4016e-106">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-106">**Arguments**</span></span>
+
+<span data-ttu-id="4016e-107">Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-107">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="4016e-108">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-108">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-109">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-109">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-110">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-110">**Example**</span></span>
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a><span data-ttu-id="4016e-111">Ceiling(Value)</span><span class="sxs-lookup"><span data-stu-id="4016e-111">Ceiling(value)</span></span>
+
+<span data-ttu-id="4016e-112">Küçük olmayan en küçük tamsayı döndürür daha `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-112">Returns the smallest integer that is not less than `value`.</span></span>
+
+<span data-ttu-id="4016e-113">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-113">**Arguments**</span></span>
+
+<span data-ttu-id="4016e-114">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-114">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="4016e-115">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-115">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-116">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-116">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-117">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-117">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a><span data-ttu-id="4016e-118">Floor(Value)</span><span class="sxs-lookup"><span data-stu-id="4016e-118">Floor(value)</span></span>
+
+<span data-ttu-id="4016e-119">Değerinden büyük olmayan en büyük tamsayı döndürür `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-119">Returns the largest integer that is not greater than `value`.</span></span>
+
+<span data-ttu-id="4016e-120">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-120">**Arguments**</span></span>
+
+<span data-ttu-id="4016e-121">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-121">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="4016e-122">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-122">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-123">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-123">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-124">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-124">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a><span data-ttu-id="4016e-125">Güç (değeri, üs)</span><span class="sxs-lookup"><span data-stu-id="4016e-125">Power(value, exponent)</span></span>
+
+<span data-ttu-id="4016e-126">Belirtilen sonuç döndüren `value` belirtilen `exponent`.</span><span class="sxs-lookup"><span data-stu-id="4016e-126">Returns the result of the specified `value` to the specified `exponent`.</span></span>
+
+<span data-ttu-id="4016e-127">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-127">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value` | <span data-ttu-id="4016e-128">Bir `Int32, Int64, Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-128">An `Int32, Int64, Double`, or `Decimal`.</span></span> |
+|`exponent` | <span data-ttu-id="4016e-129">Bir `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-129">An `Int64`, `Double`, or `Decimal`.</span></span> |
+
+<span data-ttu-id="4016e-130">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-130">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-131">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-131">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-132">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-132">**Example**</span></span>
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a><span data-ttu-id="4016e-133">Round(Value)</span><span class="sxs-lookup"><span data-stu-id="4016e-133">Round(value)</span></span>
+
+<span data-ttu-id="4016e-134">Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="4016e-134">Returns the integer portion of `value`, rounded to the nearest integer.</span></span>
+
+<span data-ttu-id="4016e-135">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-135">**Arguments**</span></span>
+
+<span data-ttu-id="4016e-136">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-136">A `Single`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="4016e-137">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-137">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-138">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-138">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-139">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-139">**Example**</span></span>
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a><span data-ttu-id="4016e-140">Round (değer, basamak)</span><span class="sxs-lookup"><span data-stu-id="4016e-140">Round(value, digits)</span></span>
+
+<span data-ttu-id="4016e-141">Döndürür `value`, yuvarlanır yakın belirtilen `digits`.</span><span class="sxs-lookup"><span data-stu-id="4016e-141">Returns the `value`, rounded to the nearest specified `digits`.</span></span>
+
+<span data-ttu-id="4016e-142">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-142">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value`|<span data-ttu-id="4016e-143">`Double` veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-143">`Double` or `Decimal`.</span></span>|
+|`digits`|<span data-ttu-id="4016e-144">`Int16` veya `Int32`.</span><span class="sxs-lookup"><span data-stu-id="4016e-144">`Int16` or `Int32`.</span></span>|
+
+<span data-ttu-id="4016e-145">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-145">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-146">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-146">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-147">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-147">**Example**</span></span>
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a><span data-ttu-id="4016e-148">(Değer, basamak) Kes</span><span class="sxs-lookup"><span data-stu-id="4016e-148">Truncate(value, digits)</span></span>
+
+<span data-ttu-id="4016e-149">Döndürür `value`, kesilmiş yakın belirtilen `digits`.</span><span class="sxs-lookup"><span data-stu-id="4016e-149">Returns the `value`, truncated to the nearest specified `digits`.</span></span>
+
+<span data-ttu-id="4016e-150">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4016e-150">**Arguments**</span></span>
+
+|  |  |
+|--|--|
+|`value`|<span data-ttu-id="4016e-151">`Double` veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4016e-151">`Double` or `Decimal`.</span></span>|
+|`digits`|<span data-ttu-id="4016e-152">`Int16` veya `Int32`.</span><span class="sxs-lookup"><span data-stu-id="4016e-152">`Int16` or `Int32`.</span></span>|
+
+<span data-ttu-id="4016e-153">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4016e-153">**Return Value**</span></span>
+
+<span data-ttu-id="4016e-154">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="4016e-154">The type of `value`.</span></span>
+
+<span data-ttu-id="4016e-155">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4016e-155">**Example**</span></span>
+
+`Truncate(748.58,1)`  
   
-|<span data-ttu-id="dbc4b-105">İşlev</span><span class="sxs-lookup"><span data-stu-id="dbc4b-105">Function</span></span>|<span data-ttu-id="dbc4b-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="dbc4b-106">Description</span></span>|  
-|--------------|-----------------|  
-|`Abs(value)`|<span data-ttu-id="dbc4b-107">Mutlak değerini döndürür `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-107">Returns the absolute value of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-108">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-108">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-109">Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-109">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-110">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-110">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-111">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-111">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-112">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-112">**Example**</span></span><br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|<span data-ttu-id="dbc4b-113">Küçük olmayan en küçük tamsayı döndürür daha `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-113">Returns the smallest integer that is not less than `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-114">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-114">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-115">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-115">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-116">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-116">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-117">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-117">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-118">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-118">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|<span data-ttu-id="dbc4b-119">Değerinden büyük olmayan en büyük tamsayı döndürür `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-119">Returns the largest integer that is not greater than `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-120">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-120">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-121">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-121">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-122">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-122">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-123">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-123">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-124">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-124">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|<span data-ttu-id="dbc4b-125">Belirtilen sonuç döndüren `value` belirtilen `exponent`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-125">Returns the result of the specified `value` to the specified `exponent`.</span></span><br /><br /> <span data-ttu-id="dbc4b-126">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-126">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-127">`value`: Bir `Int32, Int64, Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-127">`value`: An `Int32, Int64, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-128">`exponent`: Bir `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-128">`exponent`: An `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-129">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-129">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-130">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-130">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-131">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-131">**Example**</span></span><br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|<span data-ttu-id="dbc4b-132">Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-132">Returns the integer portion of `value`, rounded to the nearest integer.</span></span><br /><br /> <span data-ttu-id="dbc4b-133">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-133">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-134">A `Single`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-134">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-135">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-135">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-136">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-136">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-137">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-137">**Example**</span></span><br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|<span data-ttu-id="dbc4b-138">Döndürür `value`, yuvarlanır yakın belirtilen `digits`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-138">Returns the `value`, rounded to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="dbc4b-139">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-139">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-140">`value`: `Double` veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-140">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-141">`digits`: `Int16` veya `Int32`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-141">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="dbc4b-142">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-142">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-143">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-143">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-144">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-144">**Example**</span></span><br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|<span data-ttu-id="dbc4b-145">Döndürür `value`, kesilmiş yakın belirtilen `digits`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-145">Returns the `value`, truncated to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="dbc4b-146">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-146">**Arguments**</span></span><br /><br /> <span data-ttu-id="dbc4b-147">`value`: `Double` veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-147">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="dbc4b-148">`digits`: `Int16` veya `Int32`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-148">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="dbc4b-149">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-149">**Return Value**</span></span><br /><br /> <span data-ttu-id="dbc4b-150">Türünü `value`.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-150">The type of `value`.</span></span><br /><br /> <span data-ttu-id="dbc4b-151">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="dbc4b-151">**Example**</span></span><br /><br /> `Truncate(748.58,1)`|  
+ <span data-ttu-id="4016e-156">Bu işlevler döndüreceği `null` verildiyse `null` giriş.</span><span class="sxs-lookup"><span data-stu-id="4016e-156">These functions will return `null` if given `null` input.</span></span>  
   
- <span data-ttu-id="dbc4b-152">Bu işlevler döndüreceği `null` verildiyse `null` giriş.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-152">These functions will return `null` if given `null` input.</span></span>  
+ <span data-ttu-id="4016e-157">Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4016e-157">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="4016e-158">Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="4016e-158">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
- <span data-ttu-id="dbc4b-153">Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-153">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="dbc4b-154">Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span><span class="sxs-lookup"><span data-stu-id="dbc4b-154">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="dbc4b-155">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dbc4b-155">See Also</span></span>  
- [<span data-ttu-id="dbc4b-156">Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="dbc4b-156">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4016e-159">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4016e-159">See Also</span></span>  
+ [<span data-ttu-id="4016e-160">Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="4016e-160">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
