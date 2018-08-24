@@ -2,32 +2,32 @@
 title: Yönlendirme Hizmeti ile Merhaba Dünya
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 881636097cf342de09164804c6df6acfbcd97c45
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d875ab5471a7c1ff50aa0501991a7af0eaf0bb5f
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810258"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792402"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Yönlendirme Hizmeti ile Merhaba Dünya
-Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, bir içerik tabanlı yönlendirici uygulamanıza dahil kolaylaştıran bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnekte, hesaplayıcı istemci yönlendirici tarafından kullanıma sunulan bir uç nokta ileti göndermek için yapılandırılır. Yönlendirme hizmeti, kendisine gönderilen tüm iletileri kabul etmek ve hesaplayıcı hizmeti karşılık gelen bir uç nokta iletmek için yapılandırılır. Bu nedenle istemci tarafından gönderilen iletileri yönlendirici tarafından alınan ve gerçek hesaplayıcı hizmete yeniden yönlendirildi. Hesaplayıcı hizmetinden gelen iletileri hangi sırayla bunları hesaplayıcı istemciye aktarır geri yönlendiriciye gönderilir.  
+Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir. Yönlendirme hizmeti, içerik tabanlı bir yönlendirici uygulamanıza dahil etmek kolay bir WCF bileşenidir. Bu örnek, yönlendirme hizmeti kullanarak iletişim kurmak için standart WCF hesaplayıcı örnek uyum sağlar. Bu örnekte, hesaplayıcı istemci yönlendirici tarafından sunulan bir uç noktaya iletileri göndermek için yapılandırılır. Yönlendirme hizmeti, kendisine gönderilen tüm iletileri kabul etmesini ve hesaplayıcı hizmetine karşılık gelen bir uç nokta iletmek için yapılandırılır. Bu nedenle istemci tarafından gönderilen iletileri yönlendirici tarafından alınan ve gerçek hesaplayıcı hizmete yeniden yönlendirilen. Hesaplayıcı hizmetinden gelen iletileri hangi sırayla bunları hesaplayıcı istemciye aktarır yeniden yönlendiriciye gönderilir.  
   
 ### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
 1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], HelloRoutingService.sln açın.  
   
-2.  F5 veya CTRL + SHIFT + B tuşuna basın.  
+2.  F5 veya CTRL + SHIFT + B tuşlarına basın.  
   
     > [!NOTE]
-    >  F5 tuşuna basarsanız hesaplayıcı istemci otomatik olarak başlar. CTRL + SHIFT + B (yapı) tuşuna basarsanız, uygulamaları kendiniz başlamalıdır.  
-    >   
-    >  1.  Hesaplayıcı istemci (./CalculatorClient/bin/client.exe  
-    > 2.  Hesap Makinesi hizmetinin (. / CalculatorService/bin/service.exe)  
+    >  F5 tuşuna basarsanız, hesaplayıcı istemci otomatik olarak başlar. CTRL + SHIFT + B (derleme) tuşuna basarsanız, kendiniz uygulamaları başlatmanız gerekir.  
+    >  
+    > 1.  Hesaplayıcı istemci (./CalculatorClient/bin/client.exe  
+    > 2.  Hesaplayıcı hizmeti (. / CalculatorService/bin/service.exe)  
     > 3.  Yönlendirme Hizmeti (. / RoutingService/bin/RoutingService.exe)  
   
 3.  İstemcisini başlatmak için ENTER tuşuna basın.  
   
-     Şu çıktı görmeniz gerekir:  
+     Aşağıdaki çıktıyı görmeniz gerekir:  
   
      Add(100,15.99) 115.99 =  
   
@@ -37,23 +37,23 @@ Bu örnek, Windows Communication Foundation (WCF) yönlendirme hizmeti gösterir
   
      Divide(22,7) 3.14285714285714 =  
   
-## <a name="configurable-via-code-or-appconfig"></a>Kod ya da App.Config aracılığıyla yapılandırılabilir  
- Bir App.config dosyası yönlendiricinin davranışını tanımlamak için kullanmak üzere yapılandırılmış örnek verilir. Ayrıca, App.config dosyasının adı başka bir şey için tanınmıyor şekilde değiştirin ve ConfigureRouterViaCode() yöntemi çağrısına açıklamadan çıkarın. Her iki yöntem yönlendiriciden aynı davranışı sonuçlanır.  
+## <a name="configurable-via-code-or-appconfig"></a>Kod veya App.Config aracılığıyla yapılandırılabilir  
+ Bir App.config dosyası yönlendiricinin davranışını tanımlamak için kullanmak üzere yapılandırılmış örnek verilir. Ayrıca, App.config dosyasının adı bir şeye tanınmıyor şekilde değiştirin ve ConfigureRouterViaCode() yöntem çağrısına açıklamasını kaldırın. Her iki yöntem aynı davranışı yönlendiriciden sonuçlanır.  
   
 ### <a name="scenario"></a>Senaryo  
- Bu örnek, temel ileti Pompalama işlev gören yönlendirici gösterir. Yönlendirme hizmeti, iletileri doğrudan önceden yapılandırılmış bir hedef uç noktaları kümesine geçirmek için yapılandırılmış bir saydam proxy düğümü olarak görev yapar.  
+ Bu örnek, bir temel ileti pompası davranan yönlendirici gösterir. Yönlendirme hizmeti, iletileri doğrudan önceden yapılandırılmış bir hedef uç noktaları kümesine geçirmek için yapılandırılmış bir saydam proxy düğümü olarak görev yapar.  
   
 ### <a name="real-world-scenario"></a>Gerçek dünya senaryosu  
- Contoso adlandırma, adresleme, yapılandırma ve hizmetlerinin güvenliğini sahip esnekliğini artırmak ister. Bunu yapmak için temel ileti Pompalama genel kullanıma yönelik bir uç nokta davranacak şekilde hizmetlerini önüne yerleştirin. Bu ek güvenlik gerçek hizmetlerini önüne yerleştirin ve uygulamak çözümleri veya hizmet sürümü oluşturma daha sonraki bir tarihte ölçeklendirilmiş kolaylaştırmak sağlar.  
+ Contoso adlandırma, adres, yapılandırma ve güvenlik hizmetleri olan esnekliği artırmak istiyor. Bunu yapmak için bunlar bir temel ileti pompası genel kullanıma yönelik bir uç nokta yapması hizmetlerini önüne koyun. Bu ek güvenlik gerçek hizmetlerini önüne yerleştirin ve uygulamak daha sonraki bir tarihte daraltılmasına çözümleri veya hizmet sürümü oluşturma kolaylaştırmak sağlar.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric barındırma ve Kalıcılık örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)
