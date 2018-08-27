@@ -1,84 +1,116 @@
 ---
-title: Mürekkep ile Çalışmaya Başlama
-ms.date: 03/30/2017
+title: Bir InkCanvas Visual Studio'da WPF uygulaması oluşturma
+ms.date: 08/15/2018
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - procedural code in lieu of XAML [WPF]
-- gradient brush [WPF], animating colors of
 - XAML [WPF], procedural code in lieu of
-- animation [WPF], gradient brush colors
-- brushes [WPF], animating colors of
+- InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546243"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925050"
 ---
-# <a name="getting-started-with-ink"></a><span data-ttu-id="703b5-102">Mürekkep ile Çalışmaya Başlama</span><span class="sxs-lookup"><span data-stu-id="703b5-102">Getting Started with Ink</span></span>
-<span data-ttu-id="703b5-103">Dijital Mürekkep uygulamalarınıza her zamankinden daha kolay olur.</span><span class="sxs-lookup"><span data-stu-id="703b5-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="703b5-104">Mürekkep gelişen corollary içinde tam tümleştirmeyi programlamayı COM ve Windows Forms yöntemine olmaktan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="703b5-105">Ayrı SDK veya çalışma zamanı kitaplıkları yüklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="703b5-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="703b5-106">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="703b5-106">Prerequisites</span></span>  
- <span data-ttu-id="703b5-107">Aşağıdaki örnekler kullanmak için önce Microsoft Visual Studio 2005 yüklemeniz gerekir ve [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="703b5-108">Uygulamaları yazmak nasıl anlamanız gerekir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="703b5-109">İle çalışmaya başlama hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="703b5-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
-  
-## <a name="quick-start"></a><span data-ttu-id="703b5-110">Hızlı Başlangıç</span><span class="sxs-lookup"><span data-stu-id="703b5-110">Quick Start</span></span>  
- <span data-ttu-id="703b5-111">Bu bölüm, basit bir yazmanıza yardımcı olur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Mürekkep toplayan uygulama.</span><span class="sxs-lookup"><span data-stu-id="703b5-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
-  
- <span data-ttu-id="703b5-112">Zaten yapmadıysanız, Microsoft Visual Studio 2005 yükleyin ve [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="703b5-113"> uygulamalar genellikle derlenmelidir bunları görüntüleyebilmeniz bunlar tamamen oluşur olsa bile [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="703b5-114">Ancak, [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] uygulama hızlandırmak için tasarlanmış bir uygulama olan, XamlPad'i içeren bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-UI tabanlı.</span><span class="sxs-lookup"><span data-stu-id="703b5-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="703b5-115">Bu uygulamayı görüntülemek ve bu belgedeki ilk birkaç örneği ile tamir etmek için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="703b5-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="703b5-116">Oluşturma işlemi derlenmiş uygulamalardan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bu belgenin sonraki bölümlerinde ele alınmaktadır.</span><span class="sxs-lookup"><span data-stu-id="703b5-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
-  
- <span data-ttu-id="703b5-117">XamlPad'i başlatmak için tıklatın **Başlat** menüsündeki **tüm programlar**, işaret **Microsoft Windows SDK'sı**, işaret **Araçları**ve'ı tıklatın **XAMLPad**.</span><span class="sxs-lookup"><span data-stu-id="703b5-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Windows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="703b5-118">İşleme bölmesinde XAMLPad kod bölmesinde yazılan XAML kodu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="703b5-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="703b5-119">XAML kodunu düzenleyebilirsiniz ve değişiklikler hemen işleme bölmesinde görünür.</span><span class="sxs-lookup"><span data-stu-id="703b5-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
-  
-#### <a name="got-ink"></a><span data-ttu-id="703b5-120">Mürekkep var mı?</span><span class="sxs-lookup"><span data-stu-id="703b5-120">Got Ink?</span></span>  
- <span data-ttu-id="703b5-121">İlk başlatmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Mürekkep destekleyen uygulama:</span><span class="sxs-lookup"><span data-stu-id="703b5-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
-  
-1.  <span data-ttu-id="703b5-122">Microsoft Visual Studio 2005 açın</span><span class="sxs-lookup"><span data-stu-id="703b5-122">Open Microsoft Visual Studio 2005</span></span>  
-  
-2.  <span data-ttu-id="703b5-123">Yeni bir **Windows uygulaması (WPF)**</span><span class="sxs-lookup"><span data-stu-id="703b5-123">Create a new **Windows Application (WPF)**</span></span>  
-  
-3.  <span data-ttu-id="703b5-124">Tür `<InkCanvas/>` arasında `<Grid>` etiketleri</span><span class="sxs-lookup"><span data-stu-id="703b5-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
-  
-4.  <span data-ttu-id="703b5-125">Tuşuna **F5** hata ayıklayıcı uygulamanızda başlatmak için</span><span class="sxs-lookup"><span data-stu-id="703b5-125">Press **F5** to launch your application in the debugger</span></span>  
-  
-5.  <span data-ttu-id="703b5-126">Kalem veya fare kullanarak yazma **Merhaba Dünya** penceresinde</span><span class="sxs-lookup"><span data-stu-id="703b5-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
-  
- <span data-ttu-id="703b5-127">"Hello world" uygulama yalnızca 12 tuş mürekkep denk yazdıktan!</span><span class="sxs-lookup"><span data-stu-id="703b5-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
-  
-#### <a name="spice-up-your-application"></a><span data-ttu-id="703b5-128">Uygulamanızı renklendirin</span><span class="sxs-lookup"><span data-stu-id="703b5-128">Spice Up Your Application</span></span>  
- <span data-ttu-id="703b5-129">Bazı özellikleri avantajlarından atalım [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="703b5-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="703b5-130">Açılış arasındaki her şeyi değiştirin \<penceresi > ve kapatma \</Window > gradyan fırçası arka plan içindekine yüzeyinizi almak için aşağıdaki biçimlendirme etiketleriyle.</span><span class="sxs-lookup"><span data-stu-id="703b5-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
-  
-#### <a name="using-animation"></a><span data-ttu-id="703b5-131">Animasyon kullanma</span><span class="sxs-lookup"><span data-stu-id="703b5-131">Using Animation</span></span>  
- <span data-ttu-id="703b5-132">Fun için gradyan fırçası renkleri şimdi animasyon.</span><span class="sxs-lookup"><span data-stu-id="703b5-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="703b5-133">Aşağıdakileri ekleyin [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kapatma sonra `</InkCanvas>` etiketi ancak kapatmadan önce `</Page>` etiketi.</span><span class="sxs-lookup"><span data-stu-id="703b5-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
-  
- [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
-  
-#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="703b5-134">XAML arkasına bazı kod ekleme</span><span class="sxs-lookup"><span data-stu-id="703b5-134">Adding Some Code Behind the XAML</span></span>  
- <span data-ttu-id="703b5-135">XAML kullanıcı arabirimi tasarlamak çok kolay olmasını sağlarken olayları işlemek üzere kod eklemek herhangi bir gerçek uygulama gerekir.</span><span class="sxs-lookup"><span data-stu-id="703b5-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="703b5-136">Fare gelen yanıt sağ tıklatma olarak mürekkep yakınlaştırır basit bir örnek aşağıda verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="703b5-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
-  
- <span data-ttu-id="703b5-137">Ayarlama `MouseRightButtonUp` işleyicisinde, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="703b5-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
-  
- [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
-  
- <span data-ttu-id="703b5-138">Visual Studio'nun Çözüm Gezgini'nde, Windows1.XAML'i genişletin ve arka plan kod dosyası, Window1.xaml.cs veya Visual Basic kullanıyorsanız Window1.xaml.vb'yi açın.</span><span class="sxs-lookup"><span data-stu-id="703b5-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="703b5-139">Aşağıdaki olay işleyici kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="703b5-139">Add the following event handler code:</span></span>  
-  
- [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
- [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
-  
- <span data-ttu-id="703b5-140">Artık, uygulamanızı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="703b5-140">Now, run your application.</span></span> <span data-ttu-id="703b5-141">Bazı mürekkep ekleyin ve ardından fareyle sağ tıklayın veya ve tutma eşdeğer kalem ile gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="703b5-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
-  
-#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="703b5-142">XAML yerine yordam kodu kullanma</span><span class="sxs-lookup"><span data-stu-id="703b5-142">Using Procedural Code Instead of XAML</span></span>  
- <span data-ttu-id="703b5-143">Tüm erişebilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerine yordamsal koddan.</span><span class="sxs-lookup"><span data-stu-id="703b5-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="703b5-144">"Hello mürekkep World" uygulaması için işte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] herhangi kullanmayan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hiç.</span><span class="sxs-lookup"><span data-stu-id="703b5-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="703b5-145">Visual Studio'da boş bir konsol uygulamasına aşağıdaki kodu yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="703b5-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="703b5-146">PresentationCore, PresentationFramework ve WindowsBase derlemelerine başvurular ekleyin ve tuşlarına basarak uygulamayı derlediğinizde **F5**:</span><span class="sxs-lookup"><span data-stu-id="703b5-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
-  
- [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
- [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
-  
-## <a name="see-also"></a><span data-ttu-id="703b5-147">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="703b5-147">See Also</span></span>  
- [<span data-ttu-id="703b5-148">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="703b5-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [<span data-ttu-id="703b5-149">Mürekkep Toplama</span><span class="sxs-lookup"><span data-stu-id="703b5-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [<span data-ttu-id="703b5-150">El Yazısı Tanıma</span><span class="sxs-lookup"><span data-stu-id="703b5-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [<span data-ttu-id="703b5-151">Mürekkep Depolama</span><span class="sxs-lookup"><span data-stu-id="703b5-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
+# <a name="get-started-with-ink-in-wpf"></a><span data-ttu-id="878dc-102">WPF mürekkep ile çalışmaya başlama</span><span class="sxs-lookup"><span data-stu-id="878dc-102">Get Started with Ink in WPF</span></span>
+
+<span data-ttu-id="878dc-103">Windows Presentation Foundation (WPF), dijital mürekkep uygulamanıza eklemenizi kolaylaştırır bir mürekkep özelliği vardır.</span><span class="sxs-lookup"><span data-stu-id="878dc-103">Windows Presentation Foundation (WPF) has an ink feature that makes it easy to incorporate digital ink into your app.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="878dc-104">Önkoşullar</span><span class="sxs-lookup"><span data-stu-id="878dc-104">Prerequisites</span></span>
+
+<span data-ttu-id="878dc-105">Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span><span class="sxs-lookup"><span data-stu-id="878dc-105">To use the following examples, first [install Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).</span></span> <span data-ttu-id="878dc-106">Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="878dc-106">It also helps to know how to write basic WPF apps.</span></span> <span data-ttu-id="878dc-107">WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="878dc-107">For help getting started with WPF, see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>
+
+## <a name="quick-start"></a><span data-ttu-id="878dc-108">Hızlı Başlangıç</span><span class="sxs-lookup"><span data-stu-id="878dc-108">Quick Start</span></span>
+
+<span data-ttu-id="878dc-109">Bu bölümde Mürekkep toplayan Basit WPF uygulaması yazmanıza yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="878dc-109">This section helps you write a simple WPF application that collects ink.</span></span>
+
+### <a name="got-ink"></a><span data-ttu-id="878dc-110">Mürekkep var mı?</span><span class="sxs-lookup"><span data-stu-id="878dc-110">Got Ink?</span></span>
+
+<span data-ttu-id="878dc-111">Mürekkep destekleyen bir WPF uygulaması oluşturmak için:</span><span class="sxs-lookup"><span data-stu-id="878dc-111">To create a WPF app that supports ink:</span></span>
+
+1. <span data-ttu-id="878dc-112">Visual Studio'yu açın.</span><span class="sxs-lookup"><span data-stu-id="878dc-112">Open Visual Studio.</span></span>
+
+2. <span data-ttu-id="878dc-113">Yeni bir **WPF uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="878dc-113">Create a new **WPF App**.</span></span>
+
+   <span data-ttu-id="878dc-114">İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** veya **Visual Basic**  >   **Windows Masaüstü** kategorisi.</span><span class="sxs-lookup"><span data-stu-id="878dc-114">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="878dc-115">Ardından, **WPF uygulaması (.NET Framework)** uygulaması şablonu.</span><span class="sxs-lookup"><span data-stu-id="878dc-115">Then, select the **WPF App (.NET Framework)** app template.</span></span> <span data-ttu-id="878dc-116">Bir ad girin ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="878dc-116">Enter a name, and then select **OK**.</span></span>
+
+   <span data-ttu-id="878dc-117">Visual Studio projesi oluşturur ve *MainWindow.xaml* Tasarımcısı'nda açılır.</span><span class="sxs-lookup"><span data-stu-id="878dc-117">Visual Studio creates the project, and *MainWindow.xaml* opens in the designer.</span></span>
+
+3. <span data-ttu-id="878dc-118">Tür `<InkCanvas/>` arasında `<Grid>` etiketler.</span><span class="sxs-lookup"><span data-stu-id="878dc-118">Type `<InkCanvas/>` between the `<Grid>` tags.</span></span>
+
+   ![InkCanvas etiketi ile XAML Tasarımcısı](media/getting-started-with-ink/inkcanvas-xaml.png)
+
+4. <span data-ttu-id="878dc-120">Tuşuna **F5** uygulamanızda hata ayıklayıcıyı başlatmak için.</span><span class="sxs-lookup"><span data-stu-id="878dc-120">Press **F5** to launch your application in the debugger.</span></span>
+
+5. <span data-ttu-id="878dc-121">Ekran kalemi veya fare kullanarak yazma **Merhaba Dünya** penceresinde.</span><span class="sxs-lookup"><span data-stu-id="878dc-121">Using a stylus or mouse, write **hello world** in the window.</span></span>
+
+<span data-ttu-id="878dc-122">Bir "hello world" uygulaması yalnızca 12 tuş mürekkep denk yazdığınız!</span><span class="sxs-lookup"><span data-stu-id="878dc-122">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>
+
+### <a name="spice-up-your-app"></a><span data-ttu-id="878dc-123">Uygulamanızı renklendirin</span><span class="sxs-lookup"><span data-stu-id="878dc-123">Spice Up Your App</span></span>
+
+<span data-ttu-id="878dc-124">Bazı WPF özelliklerinden ele alalım.</span><span class="sxs-lookup"><span data-stu-id="878dc-124">Let’s take advantage of some features of the WPF.</span></span> <span data-ttu-id="878dc-125">Her şey açılış ve kapanış arasında Değiştir \<penceresi > aşağıdaki işaretlemeyle etiketler:</span><span class="sxs-lookup"><span data-stu-id="878dc-125">Replace everything between the opening and closing \<Window> tags with the following markup:</span></span>
+
+```xaml
+<Page>
+  <InkCanvas Name="myInkCanvas" MouseRightButtonUp="RightMouseUpHandler">
+    <InkCanvas.Background>
+      <LinearGradientBrush>
+        <GradientStop Color="Yellow" Offset="0.0" />
+          <GradientStop Color="Blue" Offset="0.5" />
+            <GradientStop Color="HotPink" Offset="1.0" />
+              </LinearGradientBrush>
+    </InkCanvas.Background>
+  </InkCanvas>
+</Page>
+```
+
+<span data-ttu-id="878dc-126">Bu XAML arka plan gradyan fırçası Mürekkep yüzeyiniz oluşturur.</span><span class="sxs-lookup"><span data-stu-id="878dc-126">This XAML creates a gradient brush background on your inking surface.</span></span>
+
+![WPF uygulaması yüzeyini mürekkep üzerinde Gradyan renklerini](media/getting-started-with-ink/gradient-colors.png)
+
+### <a name="add-some-code-behind-the-xaml"></a><span data-ttu-id="878dc-128">XAML arkasındaki kod ekleyin</span><span class="sxs-lookup"><span data-stu-id="878dc-128">Add Some Code Behind the XAML</span></span>
+
+<span data-ttu-id="878dc-129">XAML kullanıcı arabirimi tasarlamak çok kolay hale karşın, olayları işlemek üzere kod eklemek herhangi bir gerçek yaşam uygulaması gerekir.</span><span class="sxs-lookup"><span data-stu-id="878dc-129">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="878dc-130">Yanıtta bir sağ tıklama fare tarafından mürekkep yakınlaştırır basit bir örnek aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="878dc-130">Here is a simple example that zooms in on the ink in response to a right-click from a mouse.</span></span>
+
+1. <span data-ttu-id="878dc-131">Ayarlama `MouseRightButtonUp` , XAML işleyicisinde:</span><span class="sxs-lookup"><span data-stu-id="878dc-131">Set the `MouseRightButtonUp` handler in your XAML:</span></span>
+
+   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+
+1. <span data-ttu-id="878dc-132">İçinde **Çözüm Gezgini**MainWindow.XAML'yi genişletin ve (MainWindow.xaml.cs veya MainWindow.xaml.vb) arka plan kod dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="878dc-132">In **Solution Explorer**, expand MainWindow.xaml and open the code-behind file (MainWindow.xaml.cs or MainWindow.xaml.vb).</span></span> <span data-ttu-id="878dc-133">Aşağıdaki olay işleyicisini ekleyin:</span><span class="sxs-lookup"><span data-stu-id="878dc-133">Add the following event handler code:</span></span>
+
+   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+
+1. <span data-ttu-id="878dc-134">Uygulamayı çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="878dc-134">Run the application.</span></span> <span data-ttu-id="878dc-135">Bazı mürekkep ekleyebilir ve ardından fareyle sağ tıklayın ya da tuşuna basın ve basılı eşdeğer bir ekran kalemi ile gerçekleştirin.</span><span class="sxs-lookup"><span data-stu-id="878dc-135">Add some ink, and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>
+
+   <span data-ttu-id="878dc-136">Farenin sağ düğmesiyle tıklatın her zaman görünümü yakınlaştırır.</span><span class="sxs-lookup"><span data-stu-id="878dc-136">The display zooms in each time you click with the right mouse button.</span></span>
+
+### <a name="use-procedural-code-instead-of-xaml"></a><span data-ttu-id="878dc-137">XAML yerine yordam kodu kullanın</span><span class="sxs-lookup"><span data-stu-id="878dc-137">Use Procedural Code Instead of XAML</span></span>
+
+<span data-ttu-id="878dc-138">Yordam kodundan tüm WPF özelliklerine erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="878dc-138">You can access all WPF features from procedural code.</span></span> <span data-ttu-id="878dc-139">Tüm XAML kullanmayan WPF için bir "Hello mürekkep World" uygulaması oluşturmak için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="878dc-139">Follow these steps to create a "Hello Ink World" application for WPF that doesn’t use any XAML at all.</span></span>
+
+1. <span data-ttu-id="878dc-140">Visual Studio'da yeni bir konsol uygulama projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="878dc-140">Create a new console application project in Visual Studio.</span></span>
+
+   <span data-ttu-id="878dc-141">İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** veya **Visual Basic**  >   **Windows Masaüstü** kategorisi.</span><span class="sxs-lookup"><span data-stu-id="878dc-141">In the **New Project** dialog, expand the **Installed** > **Visual C#** or **Visual Basic** > **Windows Desktop** category.</span></span> <span data-ttu-id="878dc-142">Ardından, **konsol uygulaması (.NET Framework)** uygulaması şablonu.</span><span class="sxs-lookup"><span data-stu-id="878dc-142">Then, select the **Console App (.NET Framework)** app template.</span></span> <span data-ttu-id="878dc-143">Bir ad girin ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="878dc-143">Enter a name, and then select **OK**.</span></span>
+
+1. <span data-ttu-id="878dc-144">Program.cs veya Program.vb dosyaya aşağıdaki kodu yapıştırın:</span><span class="sxs-lookup"><span data-stu-id="878dc-144">Paste the following code into the Program.cs or Program.vb file:</span></span>
+
+   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+
+1. <span data-ttu-id="878dc-145">Sağ tıklayarak PresentationCore PresentationFramework ve WindowsBase derlemelere başvurular ekleyin **başvuruları** içinde **Çözüm Gezgini** seçip **BaşvuruEkle**.</span><span class="sxs-lookup"><span data-stu-id="878dc-145">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies by right-clicking on **References** in **Solution Explorer** and choosing **Add Reference**.</span></span>
+
+   ![Başvuru Yöneticisi PresentationCore ve PresentationFramework gösteriliyor](media/getting-started-with-ink/references.png)
+
+1. <span data-ttu-id="878dc-147">Tuşlarına basarak uygulamayı derleyin **F5**.</span><span class="sxs-lookup"><span data-stu-id="878dc-147">Build the application by pressing **F5**.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="878dc-148">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="878dc-148">See Also</span></span>
+
+- [<span data-ttu-id="878dc-149">Dijital Mürekkep</span><span class="sxs-lookup"><span data-stu-id="878dc-149">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)
+- [<span data-ttu-id="878dc-150">Mürekkep Toplama</span><span class="sxs-lookup"><span data-stu-id="878dc-150">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)
+- [<span data-ttu-id="878dc-151">El Yazısı Tanıma</span><span class="sxs-lookup"><span data-stu-id="878dc-151">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
+- [<span data-ttu-id="878dc-152">Mürekkep Depolama</span><span class="sxs-lookup"><span data-stu-id="878dc-152">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)
