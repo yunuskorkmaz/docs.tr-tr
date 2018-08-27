@@ -1,27 +1,27 @@
 ---
-title: Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
+title: Sabit listesi türleri yerine sabit listesi sınıfları kullanma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: eff87dbfad84ba5521f029064115a5fc54ee574b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f1b88d160d6532c2a768684b55cd236417699322
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106116"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933394"
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a>Numaralandırma türleri yerine numaralandırma sınıflarını kullanma
+# <a name="using-enumeration-classes-instead-of-enum-types"></a>Sabit listesi türleri yerine sabit listesi sınıfları kullanma
 
-[Numaralandırmalar](../../../../docs/csharp/language-reference/keywords/enum.md) (veya *enum türleri* kısaca) bir tam sayı türü çevresinde bir ince dil sarmalayıcı şunlardır. Kapalı bir değerler kümesinden bir değer depolarken kullanımları sınırlamak isteyebilirsiniz. (Küçük, Orta, büyük) boyutlarına göre sınıflandırma iyi bir örnektir. Denetim akışı veya daha sağlam soyutlamalar numaralandırmaları kullanmak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür kullanımı kırılacak kodu Enum değerleri denetleme birçok denetim akışı deyimleri ile yol açar.
+[Numaralandırmalar](../../../../docs/csharp/language-reference/keywords/enum.md) (veya *Numaralandırma türleri* kısaca) basit dil funcınner çevresindeki bir integral türü olan. Kapalı bir değerler kümesinden bir değer depolarken, bunların kullanılması için sınırlamak isteyebilirsiniz. (Küçük, Orta, büyük) boyutlarına göre sınıflandırma iyi bir örnektir. Denetim akışı ya da daha sağlam soyutlama için sabit listeleri kullanarak olabilir bir [kod kokusu](http://deviq.com/code-smells/). Bu tür bir kullanım Enum değerleri denetleme birçok denetim akış deyimlerindeki ile kırılgan koduna yol açar.
 
-Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştirmek numaralandırması sınıfları oluşturabilirsiniz.
+Bunun yerine, tüm zengin bir nesne yönelimli dil özelliklerini etkinleştir sabit listesi sınıfları oluşturabilirsiniz.
 
-Ancak, bu önemli bir konu değildir ve çoğu durumda, kolaylık sağlamak için normal kullanmaya devam edebilirsiniz [enum türleri](../../../../docs/csharp/language-reference/keywords/enum.md) tercihinizi olması durumunda.
+Ancak, bu önemli bir konu değildir ve çoğu durumda, kolaylık olması için normal kullanmaya devam edebilirsiniz [Numaralandırma türleri](../../../../docs/csharp/language-reference/keywords/enum.md) , tercihinize ise.
 
 ## <a name="implementing-an-enumeration-base-class"></a>Bir numaralandırma taban sınıfı uygulama
 
-Sıralama mikro hizmet eShopOnContainers içinde aşağıdaki örnekte gösterildiği gibi bir örnek numaralandırması temel sınıf uygulamasını sağlar:
+Aşağıdaki örnekte gösterildiği gibi sıralama mikro hizmetine bir örnek numaralandırması taban sınıf uygulamasını sağlar:
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -43,22 +43,12 @@ public abstract class Enumeration : IComparable
     {
         return Name;
     }
-
-    public static IEnumerable<T> GetAll<T>() where T : Enumeration, new()
+    
+    public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var type = typeof(T);
-        var fields = type.GetTypeInfo().GetFields(BindingFlags.Public |
-            BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
-        foreach (var info in fields)
-        {
-            var instance = new T();
-            var locatedValue = info.GetValue(instance) as T;
-            if (locatedValue != null)
-            {
-                yield return locatedValue;
-            }
-        }
+        var fields = typeof(T).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+
+        return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
     public override bool Equals(object obj)
@@ -82,50 +72,60 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Bu sınıf, aşağıdaki CardType numaralandırma sınıfı için olduğu gibi tüm varlık veya değer nesnesindeki türü olarak kullanabilirsiniz:
+Bu sınıf, aşağıdaki CardType sabit listesi sınıfı için tüm varlık veya değer nesnesi türü olarak kullanabilirsiniz:
 
 ```csharp
-public class CardType : Enumeration
+public abstract class CardType : Enumeration
 {
-    public static CardType Amex = new CardType(1, "Amex");
-    public static CardType Visa = new CardType(2, "Visa");
-    public static CardType MasterCard = new CardType(3, "MasterCard");
+    public static CardType Amex = new AmexCardType();
+    public static CardType Visa = new VisaCardType();
+    public static CardType MasterCard = new MasterCardType();
 
-    protected CardType() { }
-
-    public CardType(int id, string name)
+    protected CardType(int id, string name)
         : base(id, name)
     {
     }
 
-    public static IEnumerable<CardType> List()
+    private class AmexCardType : CardType
     {
-        return new[] { Amex, Visa, MasterCard };
+        public AmexCardType(): base(1, "Amex")
+        { }
     }
-    // Other util methods
+    
+    private class VisaCardType : CardType
+    {
+        public VisaCardType(): base(2, "Visa")
+        { }
+    }
+    
+    private class MasterCardType : CardType
+    {
+        public MasterCardType(): base(3, "MasterCard")
+        { }
+    }
 }
 ```
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **Enum'ın kötü — güncelleştirme**
+-   **Sabit listesine kötü — güncelleştirme**
     [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman. Nasıl numaralandırmaları Hastalık yayılan — Ve onu temizlemeye yönelik nasıl**
+-   **Daniel Hardman. Nasıl numaralandırmalar Hastalık yayılan — Ve onu bir temizlemeye yönelik nasıl**
     [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Jimmy Bogard. Numaralandırma sınıfları**
+-   **Jimmy Bogard. Sabit listesi sınıfları**
     [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Steve Smith. C# Enum alternatifleri**
+-   **Steve Smith. C# sabit listesi alternatifleri**
     [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs.** EShopOnContainers temel numaralandırma sınıfında [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** Hizmetine temel sabit listesi sınıfı [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
--   **CardType.cs**. EShopOnContainers örnek numaralandırma sınıfı.
+-   **CardType.cs**. Hizmetine sabit listesi sınıfı örneği.
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
 [Önceki](implement-value-objects.md)
-[sonraki](domain-model-layer-validations.md)
+[İleri](domain-model-layer-validations.md)

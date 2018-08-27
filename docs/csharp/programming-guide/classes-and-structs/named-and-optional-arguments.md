@@ -14,43 +14,43 @@ helpviewer_keywords:
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326338"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932048"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Bağımsız değişkenler adlı* , belirli bir parametre için bir bağımsız değişken bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenler* bazı parametreler için bağımsız değişken atlayın olanak sağlar. Her iki tekniği yöntemleri, dizin oluşturucular, Oluşturucular ve temsilciler ile kullanılabilir.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Adlandırılmış bağımsız değişkenler* bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirli bir parametre için bir bağımsız değişken belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenlere* bazı parametrelerin bağımsız değişkenleri atlamak sağlar. Her iki tekniği, yöntemleri, Dizinleyicileri, Oluşturucular ve temsilciler ile kullanılabilir.  
   
- Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullandığınızda, bağımsız değişken bağımsız değişken listesi, parametre listesi görünme sırasını değerlendirilir.  
+ Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullandığınızda, bağımsız değişken, parametre listesi bağımsız değişken listesinde göründükleri sırayla değerlendirilir.  
   
- Adlandırılmış ve isteğe bağlı parametreler birlikte kullanıldığında, yalnızca birkaç parametre isteğe bağlı parametreler listesinden için bağımsız değişkenleri eklemek etkinleştirin. Bu özelliği COM arabirimleri gibi Microsoft Office Otomasyon API çağrıları büyük ölçüde kolaylaştırır.  
+ Adlandırılmış ve isteğe bağlı parametreler birlikte kullanıldığında, yalnızca birkaç parametreleri isteğe bağlı parametreler için bağımsız değişkenleri sağlar. Bu özellik, Microsoft Office Otomasyon API'leri gibi COM arabirimleri çağrıları büyük ölçüde kolaylaştırır.  
   
 ## <a name="named-arguments"></a>Adlandırılmış bağımsız değişkenler  
- Adlandırılmış bağımsız değişkenler gereken anımsaması veya çağrılan yöntem parametre listesi parametrelerinde sırasını bakmak için gelen boş. Her değişken için parametresi tarafından parametre adı belirtilebilir. Örneğin, sipariş ayrıntılarını yazdırır bir işlev (gibi satıcı adı, sipariş numarası & ürün adı) standart biçiminde bağımsız değişkenleri sıralamasında, işlev tarafından tanımlanan gönderen tarafından çağrılabilir.
+ Adlandırılmış bağımsız değişkenler unutmayın veya çağrılan yöntemlerin parametre listeleri parametrelerinde sırasını aramak için gereken gelen boş. Parametresi her bağımsız değişkeni için parametre adı belirtilebilir. Örneğin, sipariş ayrıntılarını yazdırır bir işlev (gibi satıcı adı, sipariş numarası & ürün adı) işlev tarafından tanımlanan sırayla konuma göre bağımsız değişken göndererek standart yolla çağrılabilir.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Parametreler sırası hatırlamıyorsanız, ancak adlarını bilmeniz bağımsız değişkenler herhangi bir sırada gönderebilirsiniz.  
+ Parametreler sırası hatırlıyor musunuz, ancak adlarını bilmeniz, bağımsız değişkenler herhangi bir sırada gönderebilirsiniz.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Adlandırılmış bağımsız değişkenler ne her bağımsız değişkeni temsil eden belirleyerek kodunuzun okunabilirliğini de geliştirir. Aşağıdaki örnek yönteminde `sellerName` null veya boşluk olamaz. Her ikisi de olarak `sellerName` ve `productName` dize türleri, bağımsız değişkenleri konuma göre göndermek yerine, iki belirsizliğini ortadan kaldırmak ve kod okuyan herkes için karışıklığı azaltmak için adlandırılmış bağımsız değişkenler kullanılacak mantıklıdır.
+ Adlandırılmış bağımsız değişkenler de ne her bağımsız değişken temsil eden belirleyerek kodunuzu okunabilirliğini geliştirmek. Aşağıdaki örnek yöntemi içinde `sellerName` null veya boşluk olamaz. Her ikisi de olarak `sellerName` ve `productName` dize türleri, bağımsız değişkenleri konuma göre göndermek yerine, iki belirsizliğinin ortadan kaldırılmasını ve Karışıklığın kodu okuyan herkese adlandırılmış bağımsız değişkenler kullanan mantıklıdır.
   
- Bağımsız değişkenler, konumsal bağımsız değişkenlerle birlikte kullanıldığında adlı, geçerli olan sürece 
+ Konumsal bağımsız değişkenlerle birlikte kullanıldığında adlandırılmış bağımsız değişkenler, geçerli olduğu sürece 
 
-- Bunlar konumsal tüm bağımsız değişkenleri tarafından izlenmeyen veya
+- hiçbir konumsal bağımsız değişkeni tarafından ardından veya
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _C# ile 7.2 Başlangıç_, doğru konumda kullanılırlar. Parametre aşağıdaki örnekte `orderNum` doğru konumda olsa da açıkça adlı değil.
+- _C# 7.2 ile başlayan_, doğru konumda hazırsınız demektir. Parametresi aşağıdaki örnekte `orderNum` doğru konumda olmakla birlikte açıkça adlandırılmış değil.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Ancak, sipariş adlandırılmış bağımsız değişkenler konumsal değişkenleriyle ardından varsa geçersizdir.
+ Ancak, sırası adlandırılmış bağımsız değişkenler konumsal bağımsız değişkenler ardından varsa geçersizdir.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -58,72 +58,72 @@ ms.locfileid: "33326338"
  ```
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bu bölümde bazı ek olanları birlikte örneklerinden uygular.  
+ Aşağıdaki kod, bazı bulunmakla birlikte, bu bölümdeki örnekler uygular.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## <a name="optional-arguments"></a>İsteğe bağlı bağımsız değişkenler  
- Yöntemi, oluşturucusu, dizin oluşturucu veya temsilci tanımını parametrelerini gerekli veya isteğe bağlı oldukları belirtebilirsiniz. Tüm çağrısı tüm gerekli parametreleri için bağımsız değişkenleri belirtmeniz gerekir, ancak isteğe bağlı parametreler için bağımsız değişken atlayabilirsiniz.  
+ Yöntemi, oluşturucu, dizin oluşturucu veya temsilci tanımı parametreleri gerekli veya isteğe bağlı belirtebilirsiniz. Tüm çağrıların tüm gerekli parametrelerin bağımsız değişkenleri belirtmeniz gerekir, ancak isteğe bağlı parametrelerin bağımsız değişkenleri atlayabilirsiniz.  
   
- Her isteğe bağlı bir parametre kendi tanımının bir parçası olarak varsayılan bir değeri yok. Bu parametre için bağımsız değişken gönderilirse, varsayılan değer kullanılır. Varsayılan değer ifadelerin aşağıdaki türlerden biri olmalıdır:  
+ Her isteğe bağlı parametre bir varsayılan değeri kendi tanımının bir parçası olarak bulunur. Bu parametre için hiçbir bağımsız değişken gönderirse, varsayılan değer kullanılır. Varsayılan değer ifadelerin aşağıdaki türlerden biri olmalıdır:  
   
--   bir sabit ifadesine;  
+-   sabit bir ifade;  
   
--   bir ifade formun `new ValType()`, burada `ValType` olduğu gibi bir değer türü bir [enum](../../../csharp/language-reference/keywords/enum.md) veya [yapısı](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+-   bir ifade formun `new ValType()`burada `ValType` bir değer türü olduğu gibi bir [enum](../../../csharp/language-reference/keywords/enum.md) veya bir [yapı](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   bir ifade formun [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), burada `ValType` değer türü değil.  
+-   bir ifade formun [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md)burada `ValType` bir değer türüdür.  
   
- İsteğe bağlı parametreler parametre listesinin sonuna sonra gerekli parametreleri tanımlanır. Çağıran bir bağımsız değişken isteğe bağlı parametrelerden biri art arda herhangi biri için sağlıyorsa, tüm önceki isteğe bağlı parametreler için bağımsız değişken sağlamanız gerekir. Bağımsız değişken listesi boşluklar virgülle ayrılmış desteklenmez. Örneğin, aşağıdaki kodda yöntemi örneği `ExampleMethod` gerekli bir ve iki isteğe bağlı parametreler ile tanımlanır.  
+ İsteğe bağlı parametreler tüm gerekli parametrelerden sonra parametre listesinin sonunda tanımlanır. Çağıran, isteğe bağlı parametreler izleyenler herhangi biri için bağımsız değişken sağlıyorsa, önceki tüm isteğe bağlı parametrelerin bağımsız değişkenleri sağlamanız gerekir. Bağımsız değişken listesini virgülle ayrılmış boşlukları desteklenmez. Örneğin, aşağıdaki kodda, yöntem örnek `ExampleMethod` bir gerekli ve isteğe bağlı parametrelerden ile tanımlanır.  
   
  [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
- Aşağıdaki çağrı `ExampleMethod` üçüncü parametre için kullanılabilir ancak ikinci bağımsız değişken sağlanan derleyici hatası neden olur.  
+ Aşağıdaki çağrı `ExampleMethod` üçüncü parametresi için kullanılabilir ancak ikinci bağımsız değişken sağlandığından bir derleyici hatasına neden olur.  
   
  `//anExample.ExampleMethod(3, ,4);`  
   
- Ancak, üçüncü parametre adını biliyorsanız, görevi gerçekleştirmek için bir adlandırılmış bağımsız değişkeni kullanabilirsiniz.  
+ Üçüncü parametre adını biliyorsanız, bu görevi gerçekleştirmek için bir adlandırılmış bağımsız değişkeni kullanabilirsiniz.  
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense köşeli isteğe bağlı parametreler belirtmek için aşağıdaki çizimde gösterildiği gibi kullanır.  
+ IntelliSense ayraçlar isteğe bağlı parametreleri belirtmek için aşağıdaki çizimde gösterildiği gibi kullanır.  
   
- ![ExampleMethod yöntemi için IntelliSense Hızlı bilgileri. ] (../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
+ ![Hızlı bilgi ExampleMethod yöntemi için IntelliSense. ](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
 ExampleMethod isteğe bağlı parametreler  
   
 > [!NOTE]
->  .NET kullanarak isteğe bağlı parametreler bildirebilirsiniz <xref:System.Runtime.InteropServices.OptionalAttribute> sınıfı. `OptionalAttribute` Parametreler varsayılan bir değer gerektirmez.  
+>  .NET kullanarak isteğe bağlı parametreler bildirebilirsiniz <xref:System.Runtime.InteropServices.OptionalAttribute> sınıfı. `OptionalAttribute` parametre bir varsayılan değer gerektirmez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Oluşturucusu `ExampleClass` isteğe bağlı olduğu bir parametre içeriyor. Örnek yöntemi `ExampleMethod` gerekli parametresinin, `required`ve iki isteğe bağlı parametreler `optionalstr` ve `optionalint`. Kodda `Main` , yöntemi ve Oluşturucusu çağrılabilir farklı yolları gösterir.  
+ Aşağıdaki örnekte, Oluşturucusu `ExampleClass` isteğe bağlı olduğu bir parametresi vardır. Örnek yöntemi `ExampleMethod` bir gerekli parametresi `required`ve isteğe bağlı parametrelerden `optionalstr` ve `optionalint`. Kodda `Main` , yöntem ve oluşturucu çağrılacak farklı yolları gösterir.  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## <a name="com-interfaces"></a>COM arabirimleri  
- Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneler ve diğer geliştirmeler desteğinin yanı sıra Office Automation API'leri gibi COM API'leri ile birlikte çalışabilirlik büyük ölçüde artırır.  
+ Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneleri ve diğer geliştirmeler desteği yanı sıra Office Otomasyon API'leri gibi COM API'leri ile birlikte çalışabilirlik büyük ölçüde geliştirebilirsiniz.  
   
- Örneğin, [biçim](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) Microsoft Office Excel yönteminde [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) arabirimi tümü isteğe bağlı yedi parametreleri sahiptir. Bu parametreler aşağıdaki çizimde gösterilmektedir.  
+ Örneğin, [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) Microsoft Office Excel yönteminde [aralığı](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) arabirimi tümü isteğe bağlı olan yedi parametreleri vardır. Bu parametreler aşağıdaki çizimde gösterilmektedir.  
   
- ![Otomatik Biçim yöntemi için IntelliSense Hızlı bilgileri. ] (../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-Otomatik Biçim parametreleri  
+ ![AutoFormat yöntemi için hızlı bilgi IntelliSense. ](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
+AutoFormat parametreleri  
   
- C# 3.0 ve önceki sürümlerde, bağımsız değişken aşağıdaki örnekte gösterildiği gibi her bir parametreyi gereklidir.  
+ C# 3.0 ve önceki sürümlerde, bağımsız değişken aşağıdaki örnekte gösterildiği gibi her parametre için gereklidir.  
   
  [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
- Ancak, büyük ölçüde çağrısı basitleştirebilir `AutoFormat` C# 4. 0'sunulan adlandırılmış ve isteğe bağlı bağımsız değişkenler, kullanarak. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, parametrenin varsayılan değeri değiştirmek istemiyorsanız, isteğe bağlı bir parametre için bağımsız değişken atlamak etkinleştirin. Aşağıdaki çağrısında yedi parametrelerden yalnızca birini kullanmak için bir değer belirtilirse.  
+ Ancak, büyük ölçüde çağrısı basitleştirebilirsiniz `AutoFormat` C# 4.0 sunulan adlandırılmış ve isteğe bağlı bağımsız değişkenler, kullanarak. Adlandırılmış ve isteğe bağlı bağımsız değişkenler, parametrenin varsayılan değeri değiştirmek istemiyorsanız, isteğe bağlı parametresi için bağımsız değişkeni atlamak etkinleştirin. Aşağıdaki çağrıda yedi parametreleri yalnızca biri için bir değer belirtilirse.  
   
  [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Daha fazla bilgi ve örnekler için bkz: [nasıl yapılır: kullanım adlandırılmış ve isteğe bağlı bağımsız değişkenler Office programlama](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: erişim Office birlikte çalışma nesnelerine kullanarak olan Visual C# özellikleri tarafından](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Daha fazla bilgi ve örnekler için bkz [nasıl yapılır: Office programlama isteğe bağlı bağımsız değişkenler adlandırılmış kullanma ve](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) ve [nasıl yapılır: erişim Office birlikte çalışma nesnelerine kullanarak olan Visual C# özellikleri tarafından](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Aşırı Yükleme Çözümü  
- Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanımını aşırı yükleme çözümü aşağıdaki şekillerde etkiler:  
+ Adlandırılmış ve isteğe bağlı bağımsız değişkenler kullanımını aşırı yükleme çözünürlüğü aşağıdaki şekillerde etkiler:  
   
--   Yöntemi, dizin oluşturucu veya oluşturucusu yürütme aday, tüm parametrelerinin isteğe bağlı olduğu veya karşılık gelen, adıyla veya konuma arama deyiminde tek bir bağımsız değişken ve bağımsız değişken parametre türüne dönüştürülebilir ise.  
+-   Yöntem, dizin oluşturucu veya Oluşturucu bir aday yürütme için kendi parametrelerinin her biri, isteğe bağlı olduğunu veya karşılık gelen, adına veya konumuna çağrı deyimindeki tek bir bağımsız değişken ve bağımsız değişken, parametre türüne dönüştürülebilen olur.  
   
--   Birden fazla aday bulunursa, tercih edilen dönüştürmeleri için aşırı çözümleme kurallarını açıkça belirtilen bağımsız değişkenler için uygulanır. İsteğe bağlı parametreleri belirtilmemişse bağımsız değişkenleri göz ardı edilir.  
+-   Birden fazla aday bulunursa, tercih edilen dönüştürmeler için aşırı yükleme çözünürlüğü kuralları açıkça belirtilen bağımsız değişkenler için uygulanır. İsteğe bağlı parametreler için atlanmış bağımsız değişkenler yoksayılır.  
   
--   İki aday eşit iyi olmasını nitelendirilmiştir, tercih değişkenleri çağrısında atlanmış isteğe bağlı parametreler yok bir aday gider. Daha az parametrelere sahip bir aday aşırı çözünürlük genel bir tercih sonucu budur.  
+-   İki adayları eşit derecede iyi olmasını materyali çağrıda atlanıp bağımsız değişkenler için isteğe bağlı parametrelere sahip olmayan bir aday için tercih gider. Bu aşırı yükleme çözünürlüğü içinde genel bir tercih daha az parametrelere sahip adayları için bir sonuç olur.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

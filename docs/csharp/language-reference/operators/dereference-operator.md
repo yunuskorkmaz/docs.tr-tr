@@ -7,37 +7,38 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 037229b2081a43077cb4b5d02a8929b06ba9e077
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171986"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930310"
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; İşleci (C# Başvurusu)
-`->` İşleci, birleştirir işaretçi başvurusunun kaldırılmasının ve üye erişimi.  
+`->` İşleci, bir araya getirir işaretçi başvurusunun kaldırılması ve üye erişimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir ifade formun  
+ Bir ifade form  
   
 ```csharp  
 x->y  
 ```  
   
- (burada `x` işaretçi türü `T*` ve `y` üyesi `T`), eşdeğerdir  
+ (burada `x` bir işaretçi türü `T*` ve `y` üyesi `T`) için eşdeğerdir  
   
 ```csharp  
 (*x).y  
 ```  
   
- `->` İşleci olarak işaretlenen kod kullanılabilir [güvensiz](../../../csharp/language-reference/keywords/unsafe.md).  
+ `->` İşleci olarak işaretlenmiş kod kullanılabilir [güvenli](../../../csharp/language-reference/keywords/unsafe.md).  
   
- `->` İşleci olamaz aşırı yüklenebilir.  
+ `->` İşleci aşırı yüklenemez.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

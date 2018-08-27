@@ -2,15 +2,15 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352550"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930182"
 ---
-# <a name="servicehost"></a>@ServiceHost
-Barındırılacak şekilde hizmet ana bilgisayar hizmeti ile üretmek için kullanılan Üreteç ve erişim veya .svc dosyasında sağlanan barındırma Kodu derlemek için gereken diğer programlama özelliklerini ilişkilendirir.  
+# <a name="servicehost"></a>\@ServiceHost
+Barındırılan hizmet konak hizmeti ile üretmek için kullanılan Üreteç ve erişmek veya .svc dosyasında sağlanan barındırma Kodu derlemek için gereken diğer programlama özelliklerini ilişkilendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,34 +26,34 @@ CodeBehind = "CodeBehind"%>
 ## <a name="attributes"></a>Öznitelikler  
   
 #### <a name="service"></a>Hizmet  
- Barındırılan hizmete CLR türü adı. Bu, bir veya daha fazla hizmet kişileri uygulayan bir tür tam bir adı olmalıdır.  
+ Barındırılan hizmet CLR türü adı. Bu, bir veya daha fazla hizmet kişileri uygulayan bir tür tam bir adı olmalıdır.  
   
 #### <a name="factory"></a>Fabrika  
- Hizmet ana bilgisayarı örneği oluşturmak için kullanılan hizmet ana bilgisayar üreteci CLR türü adı. Bu öznitelik isteğe bağlıdır. Belirtilmezse, varsayılan <xref:System.ServiceModel.Activation.ServiceHostFactory> kullanılan örneğini döndüren <xref:System.ServiceModel.ServiceHost>.  
+ Hizmet ana bilgisayarı örneği oluşturmak için kullanılan hizmet barındırma ortamı fabrikası CLR türü adı. Bu öznitelik isteğe bağlıdır. Belirtilmemişse, varsayılan <xref:System.ServiceModel.Activation.ServiceHostFactory> kullanılan örneğini döndüren <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Hata ayıklama  
- Windows Communication Foundation (WCF) hizmetini hata ayıklama sembolleriyle derlenip derlenmeyeceğini gösterir. `true` WCF Hizmeti hata ayıklama sembolleriyle derlenip Aksi takdirde `false`.  
+ Windows Communication Foundation (WCF) hizmet hata ayıklama sembolleriyle derlenmiş olup olmadığını gösterir. `true` WCF hizmet hata ayıklama sembolleriyle derlenmiş Aksi takdirde, `false`.  
   
 #### <a name="language"></a>Dil  
- Dosya (.svc) içindeki tüm satır içi kod derleme sırasında kullanılan dili belirtir. Değerler herhangi temsil edebilir. C#, VB ve C#, Visual Basic .NET ve JScript .NET sırasıyla başvuru JS içeren NET desteklenen dili. Bu öznitelik isteğe bağlıdır.  
+ Dosya (.svc) içindeki tüm satır içi kod derlenirken kullanılan dili belirtir. Değerlerin herhangi temsil edebilir. C#, VB ve C#, Visual Basic .NET ve JScript .NET için sırasıyla başvuran JS dahil olmak üzere ağ tarafından desteklenen dil. Bu öznitelik isteğe bağlıdır.  
   
-#### <a name="codebehind"></a>Arkasındaki koda  
- XML Web hizmeti uygulayan sınıf aynı dosyada bulunmuyor ve edilmemiş bütünleştirilmiş koda derlenmemiş ve \Bin dizinine yerleştirilen yükleyen XML Web hizmeti uygulayan kaynak dosyasını belirtir.  
+#### <a name="codebehind"></a>CodeBehind  
+ XML Web hizmeti XML Web hizmeti uygulayan sınıfı aynı dosyada bulunmadığı ve edilmemiş bir bütünleştirilmiş kod içine derlenmiş ve \Bin dizinine olduğunda uygulayan kaynak dosyasını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.ServiceModel.ServiceHost> Hizmet barındırmak için kullanılan Windows Communication Foundation (WCF) programlama modeli içindeki genişletilebilirlik noktasıdır. Fabrika düzeni örneği oluşturmak için kullanılan <xref:System.ServiceModel.ServiceHost> , büyük olasılıkla barındırma ortamı doğrudan örneği değil çok biçimli bir tür olduğundan.  
+ <xref:System.ServiceModel.ServiceHost> Hizmeti barındırmak için kullanılan bir Windows Communication Foundation (WCF) programlama modeli içinde genişletilebilirlik noktasıdır. Fabrika düzeni örneği oluşturmak için kullanılan <xref:System.ServiceModel.ServiceHost> , büyük olasılıkla barındırma ortamı doğrudan örneğini oluşturmalıdır değil polimorfik bir tür olduğundan.  
   
- Varsayılan uygulama kullanan <xref:System.ServiceModel.Activation.ServiceHostFactory> bir örneğini oluşturmak için <xref:System.ServiceModel.ServiceHost>. Ancak Fabrika uygulamanızda CLR türü adını belirterek kendi Fabrika (bir türetilmiş ana bilgisayarınız döndürür) sağlayabilir [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  
+ Varsayılan uygulama kullanan <xref:System.ServiceModel.Activation.ServiceHostFactory> bir örneğini oluşturmak için <xref:System.ServiceModel.ServiceHost>. Ancak, Fabrika uygulamanızda CLR tür adını belirterek kendi Fabrika (bir türetilmiş ana döndürür) sağlayabilirsiniz [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi.  
   
- Varsayılan fabrika yerine kendi özel hizmet ana bilgisayar üreteci kullanmak için yalnızca ın türü adını belirtin [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) şekilde yönergesi:  
+ Kendi özel hizmet barındırma ortamı fabrikası yerine varsayılan fabrika kullanmak için yalnızca tür adı sağlayın [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi aşağıdaki gibi:  
   
 ```xml  
 <% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
 ```  
   
- Fabrika uygulamaları olabildiğince hafif tutun. Çok sayıda özel mantık varsa, kodunuzu yerine, konak Fabrika içinde içinde bu mantığı yerleştirirseniz daha yeniden kullanılabilir.  
+ Fabrika uygulamaları olabildiğince hafif tutun. Özel mantığı çok sayıda varsa, kod içinde yerine ana Fabrika içinde bu mantığı koyarsanız daha yeniden kullanılabilir.  
   
- Örneğin, bir AJAX etkinleştirilmiş uç nokta için etkinleştirmek için `MyService`, belirtin <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> değerini `Factory` varsayılan yerine özniteliği <xref:System.ServiceModel.Activation.ServiceHostFactory>, [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) olarak yönergesi Aşağıdaki örnekte gösterilir.  
+ Örneğin, için AJAX etkinleştirilmiş uç noktayı etkinleştirme `MyService`, belirtin <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> değerini `Factory` varsayılan yerine bir öznitelik <xref:System.ServiceModel.Activation.ServiceHostFactory>, [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönerge olarak Aşağıdaki örnekte gösterilir.  
   
 ## <a name="example"></a>Örnek  
   

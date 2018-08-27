@@ -10,58 +10,58 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ab732ffedfbe05b1b246d8d8eef1c374e223eb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401186"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931621"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern ve Katıştırılmış Nesnelere Genel Bakış
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu genel bakış açıklanmaktadır nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] çıkarır katıştırılmış nesneler veya bir metin belgesi veya kapsayıcı içindeki alt öğe.  
+ Bu genel bakış açıklar nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kullanıma sunan katıştırılmış nesneler veya bir metin belgesi veya kapsayıcı içinde alt öğeleri.  
   
- İçinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] katıştırılmış nesne metinsel olmayan sınırları sahip herhangi bir öğe; örneğin, bir görüntü, köprü, tablo veya belge türü gibi bir [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] elektronik tablo veya [!INCLUDE[TLA#tla_winmedia](../../../includes/tlasharptla-winmedia-md.md)] dosyası. Bu, burada bir öğenin bir uygulama içinde oluşturulan ve katıştırılmış veya bağlantılı, içinde başka bir standart tanımı farklıdır. Nesne özgün uygulamasına içinde düzenlenip düzenlenemeyeceğini bağlamında ilgisiz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ İçinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] katıştırılmış nesne metinsel olmayan sınırları olan herhangi bir öğenin; Örneğin, bir görüntü, köprü, tablo veya belge türü gibi bir [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] elektronik tablo veya [!INCLUDE[TLA#tla_winmedia](../../../includes/tlasharptla-winmedia-md.md)] dosya. Bu, burada bir öğe bir uygulamada oluşturulduğunda ve gömülü veya bağlantılı, içinde başka bir standart tanımlı farklıdır. Nesne özgün uygulamasına içinde düzenlenebilir olup olmadığını bağlamında ilgisizdir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Katıştırılmış nesneler ve UI Otomasyon ağacı  
- Katıştırılmış nesneler denetim görünümü içinde ayrı ayrı öğeler olarak kabul edilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacı. Böylece bunlar aynı erişilebilen diğer denetimlerinde metin kapsayıcı alt model olarak kullanıma sunulan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ Katıştırılmış nesneler kontrol görünümündeki tek tek öğeleri olarak kabul edilir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç. Bunlar aynı erişilebilir olduğunu metin kapsayıcısını alt diğer denetimleri model olarak sunulan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
- ![Bir metin kapsayıcısında görüntü tabloyla katıştırılmış](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
+ ![Bir metin kapsayıcıda görüntü tabloyla katıştırılmış](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
 Tablo, görüntü ve köprü metni kapsayıcıyla örneği katıştırılmış nesneler  
   
- ![İçerik görünümü önceki örnek için](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
+ ![İçerik görünümü önceki örneğin](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-example2.PNG "UIA_TextPattern_Embedded_Objects_Overview_Example2")  
 Önceki metin kapsayıcı bir kısmı için içerik görünümü örneği  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>   
 ## <a name="expose-embedded-objects-using-textpattern-and-textpatternrange"></a>TextPattern ve TextPatternRange kullanarak katıştırılmış nesnelere kullanıma sunma  
- Birlikte kullanılan <xref:System.Windows.Automation.TextPattern> denetim düzeni sınıfı ve <xref:System.Windows.Automation.Text.TextPatternRange> sınıfı yöntemleri ve gezinti ve katıştırılmış nesnelerin sorgulama kolaylaştırmak özellikleri kullanıma sunar.  
+ Birlikte kullanılan <xref:System.Windows.Automation.TextPattern> denetim düzeni sınıfı ve <xref:System.Windows.Automation.Text.TextPatternRange> sınıfı yöntemleri ve özellikleri, gezinti ve katıştırılmış nesnelerin sorgulama işlemlerini gerçekleştiren kullanıma sunar.  
   
- Denetim Görünüm ve içerik görünümünü tek, sürekli metin akışında olarak metin kapsayıcı ve katıştırılmış nesneler, köprü veya tablo hücresinin gibi metinsel içeriği (veya iç metni) sunulan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç; sınırları yoksayılır nesne. UI Otomasyonu istemci reciting, yorumlama veya bazı şekilde çözümleme amacıyla metin alıyorsa, metin aralığını metinsel içerik veya diğer katıştırılmış nesneler içeren bir tablo gibi özel durumlar için denetlenmelidir. Bu çağırarak gerçekleştirilebilir <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> elde etmek için bir <xref:System.Windows.Automation.AutomationElement> her nesne ve ardından çağırma katıştırılmış için <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> her öğe için bir metin aralığını elde edilir. Tüm metin içeriği alınan kadar bu yinelemeli olarak gerçekleştirilir.  
+ Denetim ve içerik görünümünde hem tek, sürekli bir metin akışında olarak metin kapsayıcısını ve katıştırılmış nesne, köprü veya tablo hücresi gibi metinsel içeriği (veya iç metni) gösterilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç; nesne, sınırlar yok sayılır. UI Otomasyonu istemci reciting, yorumlama veya herhangi bir biçimde çözümleme amacıyla metin alıyorsa, metinsel içerik veya katıştırılmış nesneleri içeren bir tablo gibi özel durumlar için metin aralığı denetlenmelidir. Bu çağrı yaparak da gerçekleştirilebilir <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> almak için bir <xref:System.Windows.Automation.AutomationElement> her nesne ve ardından arama embedded için <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> her öğe için bir metin aralığını elde edilir. Tüm metin içeriği alınıncaya kadar bu yinelemeli olarak gerçekleştirilir.  
   
- ![Katıştırılmış nesneler tarafından yayılan metin aralıkları. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
-Katıştırılmış nesneler ve onların aralığı yayılma olan bir metin akış örneği  
+ ![Katıştırılmış nesneler tarafından kaplanan metin aralıkları ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+Katıştırılmış nesneler ve onların aralığı yayılma ile metin akışına örneği  
   
- Bir metin aralığını içeriğini çapraz geçiş için gerekli olduğunda, bir dizi adımı söz konusu arka planda sırayla <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> başarıyla yürütülecek yöntem.  
+ Bir metin aralığını içeriğini geçirmek gerekli olduğunda, bir dizi adım söz konusu sırasını arka planda <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> yöntemi başarıyla yürütülemedi.  
   
-1.  Metin aralığını normalleştirilmiş; diğer bir deyişle, bozuk bir aralıkta için metin aralığını daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> yapar uç nokta <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Burada bir metin aralığını kapsayan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, "{U} RL [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılmış" burada "{" ve "}" metin aralığı noktalarıdır.  
+1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, "{U} RL [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılmış" nerede "{" ve "}" metin aralığı noktalarıdır.  
   
-2.  Sonuçta elde edilen aralığı geriye doğru taşınmış <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
+2.  Elde edilen aralığın geriye taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
-3.  Aralığın ileriye veya geriye doğru olarak taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen sayısına göre <xref:System.Windows.Automation.Text.TextUnit> sınırlar.  
+3.  Aralığın ileriye veya geriye doğru de taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen sayısına göre <xref:System.Windows.Automation.Text.TextUnit> sınırlar.  
   
-4.  Aralığın taşıyarak bozuk aralığı durumdan sonra Genişletilmiş <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> bitiş noktası tarafından istenen bir <xref:System.Windows.Automation.Text.TextUnit> sınır.  
+4.  Aralığın taşıyarak bozuk aralığı durumundan ardından Genişletilmiş <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktası tarafından istenen bir <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
- ![Aralık taşıma & göe tarafından ayarlamalar](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
-Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlanacağını örnekleri  
+ ![Aralık & Yukarı Taşı göe tarafından ayarlamalar](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
+Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlandığını örnekleri  
   
 <a name="Common_Scenarios"></a>   
 ## <a name="common-scenarios"></a>Yaygın senaryolar  
- Aşağıdaki bölümlerde katıştırılmış nesneler ilgili yaygın senaryolar örnekleri sunar.  
+ Aşağıdaki bölümlerde, katıştırılmış nesneleri içeren en yaygın senaryoları örnekleri sunar.  
   
- Gösterge örneklerde için:  
+ Gösterge gösterilen örneklerden için:  
   
  { = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start>  
   
@@ -69,86 +69,86 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlanac
   
 <a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Köprü  
- **Örnek 1 - katıştırılmış bir köprü içeren bir metin aralığını**  
+ **Örnek 1 - katıştırılmış bir köprü içeren bir metin aralığı**  
   
  {URL [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılmış}.  
   
-|Adlı yöntemi|Sonuç|  
+|Yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Bir dize döndürür "URL http://www.microsoft.com metinde katıştırılmış".|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Dizeyi döndürür "URL http://www.microsoft.com metinde katıştırılmış".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür bir <xref:System.Windows.Automation.AutomationElement> köprü denetimini temsil eden.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetChildren` yöntemi.|Gösteren aralığını döndürür "http://www.microsoft.com".|  
   
- **Örnek 2 - kısmen katıştırılmış bir köprü yayılan bir metin aralığını**  
+ **Örnek 2 - katıştırılmış bir köprü kısmen yayılan bir metin aralığı**  
   
- URL http://{[www]} metin olarak katıştırılır.  
+ URL `http://{[www]}` metinde katıştırılır.  
   
-|Adlı yöntemi|Sonuç|  
+|Yöntemi|Sonuç|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"Www" dizesini döndürür.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, köprü denetim.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür `null` metin aralığını tüm URL dizesi span değil bu yana.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, köprü denetim.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür `null` olduğundan tüm URL dizesi metin aralığını kapsayan değil.|  
   
- **Örnek 3 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığını. Metin kapsayıcısı metin aralığının parçası olmayan bir katıştırılmış köprü metni içerir.**  
+ **Örnek 3 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığı. Metin aralığı bir parçası olmayan bir ekli metinleri köprü metin kapsayıcı vardır.**  
   
- {URL} [ http://www.microsoft.com ](http://www.microsoft.com) metin olarak katıştırılır.  
+ {URL} [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılır.  
   
-|Adlı yöntemi|Sonuç|  
+|Yöntemi|Sonuç|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"URL" dizesini döndürür.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (TextUnit.Word, 1) parametrelerle.|Köprü metni tek tek sözcüklük oluşan bu yana metin aralığı aralık "http" taşır. Bu durumda, köprüyü tek bir nesne olarak işlenmez.<br /><br /> {[Http]} URL metin olarak katıştırılır.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (TextUnit.Word, 1) parametreleriyle.|Köprü metni tek sözcüklük oluşan bu yana metin aralığı yayılma "http" taşır. Bu durumda, köprüyü tek bir nesne olarak işlenmez.<br /><br /> {[Http]} URL metin olarak eklenir.|  
   
 <a name="Image"></a>   
 ### <a name="image"></a>Görüntü  
- **Örnek 1 - bir katıştırılmış resim içeren bir metin aralığını**  
+ **Örnek 1 - bir katıştırılmış resim içeren bir metin aralığı**  
   
  {Görüntü ![katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") metinde katıştırılmış}.  
   
-|Adlı yöntemi|Sonuç|  
+|Yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Bir dize döndürür "metinde katıştırılmış". Görüntüsü ile ilişkili herhangi bir ALT metin metin akışında eklenmesi beklenen olamaz.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür bir <xref:System.Windows.Automation.AutomationElement> resim denetimini temsil eden.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Dizeyi döndürür "metninde katıştırılmış". Görüntüyle ilişkilendirilen herhangi bir ALT metin metin akışında dahil edilecek beklenen olamaz.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Döndürür bir <xref:System.Windows.Automation.AutomationElement> görüntü denetimini temsil eden.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> yöntemi.|Gösteren bozuk aralığını döndürür "![katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
- **Örnek 2 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığını. Metin kapsayıcısı metin aralığını parçası olmayan bir katıştırılmış resim içerir.**  
+ **Örnek 2 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığı. Metin aralığı bir parçası olmayan bir katıştırılmış resim metin kapsayıcı vardır.**  
   
- {Görüntünün} ![Katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") metin olarak katıştırılır.  
+ {} Görüntüsü ![Katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") metinde katıştırılır.  
   
-|Adlı yöntemi|Sonuç|  
+|Yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"Görüntü" dizesini döndürür.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> metin aralığını alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (TextUnit.Word, 1) parametrelerle.|Metin aralığı aralık "olduğu için" taşır. Yalnızca metin tabanlı katıştırılmış nesneler metin akış parçası olarak kabul edilir çünkü bu örnekte görüntü taşıma veya dönüş değeri (1 Bu durumda) etkilemez.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|"İmage" dizesini döndürür.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|En içteki döndürür <xref:System.Windows.Automation.AutomationElement> , metin aralığı alır; bu durumda, <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> (TextUnit.Word, 1) parametreleriyle.|"İs" için metin aralığı aralık taşır. Yalnızca metin tabanlı katıştırılmış nesneler metin akışına bir parçası olarak kabul edilir, çünkü bu örnekte görüntü taşıma veya dönüş değerini (Bu durumda 1) etkilemez.|  
   
 <a name="Table"></a>   
 ### <a name="table"></a>Tablo  
   
 ### <a name="table-used-for-examples"></a>Örnekler için kullanılan tablo  
   
-|Görüntü ile hücre|Metni hücrenin|  
+|Hücre resmi|Metin hücresi|  
 |---------------------|--------------------|  
 |![Katıştırılmış Resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
 |![Katıştırılmış Resim örneği 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
-|![Görüntü örnek 3 katıştırılmış](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Z görüntüsü|Z|  
+|![Katıştırılmış Resim örneği 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Görüntü için Z|Z|  
   
- **Örnek 1 - bir hücre içerikten metin kapsayıcısını alır.**  
-  
-|Adlı yöntemi|Sonuç|  
-|-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> parametrelerle (0,0)|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi içeriğini temsil eden bu durumda, bir metin denetimini öğedir.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetItem` yöntemi.|Görüntü yayılan aralık verir ![katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `RangeFromChild` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi temsil eden bu durumda, TableItemPattern destekleyen bir metin denetimini öğedir.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `GetEnclosingElement` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> tablo temsil eden.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `GetEnclosingElement` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> , metin sağlayıcısını temsil eder.|  
-  
- **Örnek 2 - bir hücre metin içeriğini alın.**  
+ **Örnek 1 - bir hücrenin içeriğini metin kapsayıcıya alın.**  
   
 |Adlı yöntemi|Sonuç|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> (1,1) parametrelerle.|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi içeriğini temsil eden bu durumda, bir metin denetimini öğedir.|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> parametrelerle (0,0)|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi içeriğini temsil eden bu durumda, bir metin denetimi öğedir.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetItem` yöntemi.|Görüntü yayılan bir aralık verir ![katıştırılmış resim örneği](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `RangeFromChild` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi temsil eden bu durumda, TableItemPattern destekleyen bir metin denetimi öğedir.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `GetEnclosingElement` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> tablosunu temsil eden.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> Önceki tarafından döndürülen nesne için `GetEnclosingElement` yöntemi.|Döndürür <xref:System.Windows.Automation.AutomationElement> temsil eden metin sağlayıcısı.|  
+  
+ **Örnek 2 - bir hücre metin içeriğini alır.**  
+  
+|Adlı yöntemi|Sonuç|  
+|-------------------|------------|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> (1,1) parametreleriyle.|Döndürür <xref:System.Windows.Automation.AutomationElement> ; tablo hücresi içeriğini temsil eden bu durumda, bir metin denetimi öğedir.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> Burada <xref:System.Windows.Automation.AutomationElement> önceki tarafından döndürülen nesne `GetItem` yöntemi.|Döndürür "Y".|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

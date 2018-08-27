@@ -1,66 +1,66 @@
 ---
-title: Bir basit veri güdümlü CRUD mikro hizmet oluşturma
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Bir basit veri güdümlü CRUD mikro hizmet oluşturma
+title: Bir basit veri temelli CRUD mikro hizmeti oluşturma
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Bir basit veri temelli CRUD mikro hizmeti oluşturma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: d99480c1b703bc46228e25f6acd7e7fbbcae6228
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106453"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935399"
 ---
-# <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri güdümlü CRUD mikro hizmet oluşturma
+# <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
-Bu bölüm anahatları basit bir oluşturmak için gerçekleştirdiği mikro hizmet oluşturun nasıl okuma, güncelleştirme ve bir veri kaynağında Sil (CRUD) işlemleri.
+Bu bölümde anahatları basit bir şekilde gerçekleştirir mikro hizmet oluşturma nasıl okuma, güncelleştirme ve silme (CRUD) işlemleri veri kaynağında.
 
 ## <a name="designing-a-simple-crud-microservice"></a>Basit bir CRUD mikro hizmet tasarlama
 
-Bir tasarım açısından bakıldığında, bu tür kapsayıcılı mikro çok kolaydır. Belki de sorunu çözmek için basit bir işlemdir veya yalnızca bir kavram kanıtı belki de uygulamasıdır.
+Bir tasarım açısından bakıldığında, bu tür bir kapsayıcılı mikro hizmet çok kolaydır. Belki de sorunu çözmek için basit veya belki de yalnızca bir kavram kanıtı uygulamasıdır.
 
 ![](./media/image4.png)
 
-**Şekil 8-4**. Basit CRUD mikro için iç tasarımı
+**Şekil 8-4**. Basit CRUD mikro Hizmetleri için iç tasarım
 
-Bu tür bir basit veri sürücüsü hizmet Kataloğu mikro hizmet eShopOnContainers örnek uygulamadan örnektir. Bu tür bir hizmet kendi veri modeli, iş mantığı ve kendi veri erişim kodu için sınıflar içerir tek bir ASP.NET çekirdek Web API projesinde tüm işlevlerini uygular. Ayrıca, ilgili verilerini (olarak geliştirme ve test amaçları için başka bir kapsayıcı) SQL Server çalıştıran bir veritabanında depolar ancak normal herhangi bir SQL Server ana Şekil 8-5'te gösterildiği gibi de olabilir.
+Bu tür bir basit veri sürücüsü hizmet Kataloğu mikro hizmetine örnek uygulamadan örneğidir. Bu tür bir hizmet sınıfları veri modeliyle, kendi iş mantığı ve veri erişim kodunu içeren tek bir ASP.NET Core Web API'si projede tüm işlevlerini uygular. Ayrıca, ilgili verileri (başka bir kapsayıcı geliştirme ve test amaçları için) olarak SQL Server çalıştıran bir veritabanında depolar ancak normal herhangi bir SQL Server ana Şekil 8-5'te gösterildiği gibi de olabilir.
 
 ![](./media/image5.png)
 
-**Şekil 8-5**. Basit veri-güdümlü/CRUD mikro hizmet tasarım
+**Şekil 8-5**. Basit veri-driven/CRUD mikro hizmet tasarım
 
-Bu tür bir hizmet geliştirirken, yalnızca ihtiyacınız [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) ve veri erişimi API veya ORM gibi [Entity Framework Çekirdek](https://docs.microsoft.com/ef/core/index). Ayrıca üretebilir [Swagger](https://swagger.io/) meta verileri otomatik olarak ile [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ne hizmetiniz sunar, açıklaması bir sonraki bölümde açıklandığı gibi sağlamak için.
+Bu tür bir hizmet geliştirirken, yalnızca gereksinim duyduğunuz [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) ve veri erişimi API'si veya ORM [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Ayrıca üretebilir [Swagger](https://swagger.io/) meta verileri otomatik olarak ile [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ne hizmetiniz sunar, açıklaması sonraki bölümde açıklandığı gibi sağlamak için.
 
-Tüm bağımlılıklarınızı sahip için SQL Server'ın bir Docker kapsayıcısı içinde geliştirme ortamları için harikadır gibi bir veritabanı sunucusunu çalıştıran ve bir veritabanı bulutta veya şirket içi sağlamak zorunda kalmadan çalışan unutmayın. Tümleştirme testleri, bu çok kullanışlı olur. Bu yaklaşım ile yüksek kullanılabilirlik genellikle almazsanız olduğundan ancak üretim ortamları için bir veritabanı sunucusu bir kapsayıcıda çalışan, önerilmez. Azure'da bir üretim ortamı için Azure SQL DB veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilir herhangi bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşım için DocumentDB seçebilirsiniz.
+Tüm bağımlılıklarınızı sahip için bir Docker kapsayıcısı içinde SQL Server geliştirme ortamları için harikadır gibi bir veritabanı sunucusunu çalıştıran ve bulutta veya şirket içi bir veritabanını sağlamak zorunda kalmadan çalıştıran unutmayın. Tümleştirme testleri, bu kullanışlı olur. Genellikle bu yaklaşım sayesinde yüksek kullanılabilirlik elde ederim çünkü ancak üretim ortamları için bir veritabanı sunucusu çalıştıran bir kapsayıcıda, önerilmez. Azure'da bir üretim ortamı için Azure SQL DB veya yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik sağlayabilir herhangi bir veritabanı teknolojisini kullanmanız önerilir. Örneğin, bir NoSQL yaklaşım için DocumentDB seçebilirsiniz.
 
-Son olarak, Dockerfile ve docker-compose.yml meta veri dosyaları düzenleyerek, bu kapsayıcı görüntüsünü nasıl oluşturulacak yapılandırabileceğiniz — hangi temel görüntü, kullanın, artı tasarım iç ve dış adlar ve TCP bağlantı noktaları gibi ayarlar. 
+Son olarak, Dockerfile ve docker-compose.yml meta veri dosyaları düzenleyerek, bu kapsayıcı görüntüsü nasıl oluşturulur yapılandırabileceğiniz — hangi temel görüntü kullanmak yanı tasarım iç ve dış adları ve TCP bağlantı noktaları gibi ayarlar. 
 
-## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core ile basit bir CRUD mikro hizmet uygulama
+## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core ile bir basit CRUD mikro hizmet uygulama
 
-.NET Core ve Visual Studio kullanarak basit bir CRUD mikro hizmet uygulamak için (Linux Docker ana bilgisayarda çalıştırabilmeniz için .NET Core üzerinde çalışan), basit bir ASP.NET çekirdek Web API projesi oluşturarak gösterildiği Şekil 8-6 olarak başlatın.
+.NET Core ve Visual Studio kullanarak basit bir CRUD mikro hizmeti uygulamak için (.NET Core üzerinde bir Linux Docker konakta çalışabilecek şekilde çalışan), basit bir ASP.NET Core Web API projesi oluşturarak gösterildiği Şekil 8-6 olarak başlatın.
 
   ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
   ![](./media/image6.png)   ![](./media/image7.png)
   ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
 
-**Şekil 8-6**. Visual Studio'da ASP.NET çekirdek Web API projesi oluşturma
+**Şekil 8-6**. Visual Studio'da bir ASP.NET Core Web API projesi oluşturma
 
-Projesi oluşturduktan sonra Entity Framework API veya diğer API kullanarak tüm diğer Web API projesinde, olduğu gibi MVC denetleyicileri uygulayabilirsiniz. Yeni bir Web API projesinde, mikro hizmet ASP.NET Core üzerinde kendisini bakımından, yalnızca bağımlılık, olduğunu görebilirsiniz. Dahili olarak, içinde `Microsoft.AspNetCore.All` bağımlılık, onu başvurduğu Entity Framework ve diğer birçok .NET Core Nuget paketleri, Şekil 8-7'de gösterildiği gibi.
+Projeyi oluşturduktan sonra diğer Web API projesi içinde Entity Framework API veya diğer API'yi kullanarak yaptığınız gibi MVC denetleyicileri uygulayabilirsiniz. Yeni bir Web API projesinde, mikro hizmet üzerinde ASP.NET Core kendisini bakımından, yalnızca bağımlılık, olduğunu görebilirsiniz. Dahili olarak, içinde `Microsoft.AspNetCore.All` bağımlılık başvurduğu Entity Framework ve diğer birçok .NET Core Nuget paketi, Şekil 8-7'de gösterildiği gibi.
 
 ![](./media/image8.PNG)
 
-**Şekil 8-7**. Basit bir CRUD Web API mikro Hizmet bağımlılıkları
+**Şekil 8-7**. Basit bir Web API'sini CRUD mikro Hizmet bağımlılıkları
 
-### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Entity Framework Çekirdek ile uygulama CRUD Web API Hizmetleri
+### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Entity Framework Core ile uygulama CRUD Web API Hizmetleri
 
-Hafif, Genişletilebilir, Entity Framework (EF) çekirdeği olur ve platformlar arası sürümü popüler Entity Framework verilerine erişim teknolojisini. EF çekirdeği .NET geliştiricilerinin .NET nesneleri kullanarak bir veritabanı ile çalışmak bir nesne ilişkisel Eşleyici (ORM) olur.
+Entity Framework (EF) Core hafif, Genişletilebilir, ve platformlar arası sürümüne popüler Entity Framework Veri erişim teknolojisi. EF Core, .NET geliştiricilerinin .NET nesneleri kullanarak bir veritabanıyla çalışmasına imkan sağlayan bir nesne ilişkisel eşleyicidir (ORM) ' dir.
 
-Veritabanını bir kapsayıcıda Linux Docker görüntüsü için SQL Server ile çalıştığı için katalog mikro hizmet EF ve SQL Server sağlayıcısı kullanır. Ancak, veritabanı içine Windows Şirket içi veya Azure SQL DB gibi herhangi bir SQL sunucusuna dağıtılabilir. Değiştirmek için gereken tek şey, ASP.NET Web API mikro hizmet bağlantı dizesinde.
+Veritabanını SQL Server Linux Docker görüntüsü için bir kapsayıcı içinde çalışmakta olduğundan katalog mikro hizmet EF ve SQL Server sağlayıcısı kullanır. Ancak, veritabanı Windows Şirket içi veya Azure SQL DB gibi herhangi bir SQL Server olarak dağıtılabilir. Değiştirmeniz gereken tek şey, ASP.NET Web API mikro hizmet bağlantı dizesidir.
 
 
 #### <a name="the-data-model"></a>Veri modeli
 
-EF çekirdek ile veri erişim modeli kullanarak gerçekleştirilir. Bir model sınıflar ve sorgu ve veri kaydetmenize olanak veren veritabanı, oturumla temsil eden bir türetilmiş bağlamı oluşur. Varolan bir veritabanından bir model oluşturmak, el ile veritabanınızı eşleştirmek için bir model kod veya EF geçişler modelinizin dışında bir veritabanı oluşturmak için (ve modelinizi zaman içinde değiştikçe gelişmesi için) kullanın. Katalog mikro hizmet için son yaklaşım kullanıyoruz. Basit bir düz eski CLR nesnesi aşağıdaki kod örneğinde, CatalogItem varlık sınıfı örneği görebilirsiniz ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) varlık sınıfı.
+EF Core ile veri erişimi, bir model kullanarak gerçekleştirilir. Bir modeli varlık sınıfları ve böylece sorgu ve veri kaydetmek, veritabanı ile bir oturumu temsil eden türetilmiş bir bağlam oluşur. Varolan bir veritabanından bir model oluşturmak, el ile kod veritabanınızı eşleştirmek için bir model veya EF geçişleri modelinizden bir veritabanı oluşturmak (ve modelinizi zamanla değiştikçe evrim geçiren için) kullanın. Katalog mikro hizmet için son yaklaşımı kullanıyoruz. Bir basit düz eski CLR nesnesi aşağıdaki kod örneğinde, Catalogıtem varlık sınıfı bir örneğini görebilirsiniz ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) varlık sınıfı.
 
 ```csharp
 public class CatalogItem
@@ -86,7 +86,7 @@ public class CatalogItem
 }
 ```
 
-Ayrıca veritabanı oturumla temsil eden bir DbContext gerekir. Katalog mikro hizmet için CatalogContext sınıfı aşağıdaki örnekte gösterildiği gibi DbContext temel sınıfından türetilen:
+Ayrıca veritabanı ile bir oturumu temsil eden DbContext gerekir. Katalog mikro hizmet için CatalogContext sınıfı aşağıdaki örnekte gösterildiği gibi DbContext temel sınıfından türetilir:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -103,11 +103,11 @@ public class CatalogContext : DbContext
 }
 ```
 
-Ek olabilir `DbContext` uygulamaları. Örneğin, örnek Catalog.API mikro yoktur saniyenin `DbContext` adlı `CatalogContextSeed` burada bunu otomatik olarak doldurur örnek verileri çalışır veritabanına erişmek için ilk kez. Bu yöntem, demo verileri ve otomatikleştirilmiş test senaryoları için de kullanışlıdır. İçinde `DbContext`, kullandığınız `OnModelCreating` nesne/veritabanı varlık eşlemeleri ile ve diğer özelleştirmek için yöntemi [EF genişletilebilirlik noktaları](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
+Ek olabilir `DbContext` uygulamaları. Örneğin, örnek Catalog.API mikro hizmet içinde olduğu ikinci `DbContext` adlı `CatalogContextSeed` nerede otomatik olarak doldurulur örnek verileri ilk kez çalıştığında veritabanına erişmek için. Bu yöntem, tanıtım verileri ve otomatikleştirilmiş test senaryoları için de kullanışlıdır. İçinde `DbContext`, kullandığınız `OnModelCreating` nesne/veritabanı varlık eşlemelerini ile ve diğer özelleştirme yöntemi [EF genişletilebilirlik noktaları](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
-##### <a name="querying-data-from-web-api-controllers"></a>Web API denetleyicilerinin verileri Sorgulama
+##### <a name="querying-data-from-web-api-controllers"></a>Web APİ'si denetleyicilerinin verileri Sorgulama
 
-Varlık sınıfları, genellikle aşağıdaki örnekte gösterildiği gibi dil tümleşik sorgu (LINQ), kullanarak veritabanından alınır:
+Aşağıdaki örnekte gösterildiği gibi varlık sınıflarının örneklerini genellikle dil tümleşik sorgu (LINQ), kullanarak veritabanından alınır:
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -158,7 +158,7 @@ public class CatalogController : ControllerBase
 
 ##### <a name="saving-data"></a>Verileri kaydetme
 
-Veri oluşturulur, silinmiş ve varlık sınıfların örneklerini kullanarak veritabanında değiştirildi. Kod aşağıdaki sabit kodlanmış örneği (Bu durumda sahte veriler), Web API denetleyicilerinin gibi ekleyebilirsiniz.
+Veri oluşturulan, silinen ve örnekleri, varlık sınıfları kullanarak veritabanında değiştirildi. Aşağıdaki örnekte olduğu gibi sabit kodlanmış (Bu örnekte sahte veriler), Web APİ'si denetleyicilerinin için kod ekleyebilirsiniz.
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
@@ -169,9 +169,9 @@ _context.SaveChanges();
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>ASP.NET Core ve Web API denetleyicilerinin bağımlılık ekleme
 
-ASP.NET Core kutu dışı bağımlılık ekleme (dı) kullanabilirsiniz. İsterseniz, tercih edilen IOC kapsayıcı ASP.NET Core altyapısını ekleyebilirsiniz ancak bir üçüncü taraf denetimi tersine çevirme (IOC) kapsayıcı ayarlamak gerekmez. Bu durumda, doğrudan gerekli EF DBContext veya denetleyicisi Oluşturucusu aracılığıyla ek depoları ekleyemezsiniz, anlamına gelir. Örnekte `CatalogController` sınıfı, biz injecting bir nesnenin `CatalogContext` yazın diğer nesneler arasında artı `CatalogController()` Oluşturucusu.
+ASP.NET Core, kullanıma hazır bağımlılık ekleme (dı) kullanabilirsiniz. İsterseniz, tercih edilen IOC kapsayıcınızın ASP.NET Core altyapısına takılabilir rağmen bir üçüncü taraf denetimi tersine çevirme (IOC) kapsayıcısı ayarlamak gerekmez. Bu durumda, doğrudan gerekli EF DBContext veya ek depoları aracılığıyla denetleyici Oluşturucu ekleyebilir, anlamına gelir. Yukarıdaki örnekte `CatalogController` sınıfı, biz ekleme bir nesnenin `CatalogContext` türü diğer nesneler arasında artı `CatalogController()` Oluşturucusu.
 
-DbContext sınıf kaydı hizmetin IOC kapsayıcı içine Web API projesinde ayarlamak için önemli bir yapılandırmadır. Bu nedenle, genellikle yaptığınız `Startup` çağırarak sınıfı `services.AddDbContext<DbContext>()` yönteminin içinde `ConfigureServices()` yöntemi, aşağıdaki örnekte gösterildiği gibi:
+Hizmetin IOC kapsayıcısına DbContext sınıfı kaydı Web API projesinde ayarlamak için önemli bir yapılandırmadır. Genellikle, bu nedenle bunu `Startup` çağırarak sınıfı `services.AddDbContext<DbContext>()` yöntem içinde `ConfigureServices()` aşağıdaki örnekte gösterildiği gibi yöntemi:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -211,7 +211,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Veri sorgulama**
+-   **Verileri sorgulama**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **Verileri kaydetme**
@@ -219,7 +219,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker kapsayıcıları tarafından kullanılan DB bağlantı dizesi ve ortam değişkenleri
 
-ASP.NET Core ayarları kullanmak ve ConnectionString özelliğini settings.json dosyanıza aşağıdaki örnekte gösterildiği gibi ekleyin:
+ASP.NET Core ayarları kullanın ve ConnectionString özelliğini aşağıdaki örnekte gösterildiği gibi settings.json dosyasına ekleyin:
 
 ```csharp
 {
@@ -236,9 +236,9 @@ ASP.NET Core ayarları kullanmak ve ConnectionString özelliğini settings.json 
 }
 ```
 
-Settings.json dosyası ConnectionString özelliği için veya başka bir özellik için varsayılan değerleri olabilir. Ancak, bu özellikleri Docker kullanırken, docker compose.override.yml dosyasında belirlediğiniz ortam değişkenleri değerlerle geçersiz kılınır.
+ConnectionString özelliği için ya da başka bir özellik için varsayılan değerleri settings.json dosyasına sahip olabilir. Ancak, bu özellikleri Docker kullanarak docker-compose.override.yml dosyasında belirttiğiniz ortam değişkenlerinin değerlerini tarafından geçersiz kılınır.
 
-Bu Docker bunları işletim sistemi ortam değişkenleri olarak sizin için ayarlamanız şekilde, docker-compose.yml veya docker compose.override.yml dosyalarından, bu ortam değişkenleri aşağıdaki docker compose.override.yml dosyasında (bağlantı gösterildiği gibi başlatabilir Bu örnekte, dize ve diğer satırlar sarmalama, ancak bunu kendi kod dosyasında kaydırılacak).
+Docker bunları işletim sistemi ortam değişkenleri olarak sizin için ayarlamanız, böylece docker-compose.yml ya da docker-compose.override.yml dosyalarından, bu ortam değişkenlerini aşağıdaki docker-compose.override.yml dosya (bağlantının gösterilen şekilde başlatabilirsiniz Bu örnekte, dize ve diğer satır kaydırma, ancak bunu kendi kod dosyasında kaydırılacak).
 
 ```yml
 # docker-compose.override.yml
@@ -252,29 +252,29 @@ catalog.api:
     - "5101:80"
 ```
 
-Çözüm düzeyinde docker-compose.yml dosyaları yalnızca proje veya mikro hizmet düzeyinde yapılandırma dosyalarını daha esnek değildir, ancak kümeden değerlerle docker-compose dosyalara bildirilen ortam değişkenleri geçersiz kılarsanız daha da güvenli Dağıtım araçlarınızı VSTS Docker dağıtım görevleri ister. 
+Docker-compose.yml dosyaları çözüm düzeyinde yalnızca yapılandırma dosyalarını proje veya mikro hizmet düzeyinde daha esnek değildir, ancak docker-compose dosyalara kümeden değerlerle bildirilen ortam değişkenlerini geçersiz kılarsanız daha da güvenli Dağıtım Araçları, VSTS Docker dağıtım görevlerini ister. 
 
-Son olarak, bu değeri kodunuzdan yapılandırmayı kullanarak alabileceğiniz\["ConnectionString"\]ConfigureServices yöntemi bir önceki kod örneğinde gösterildiği gibi.
+Kodunuz aracılığıyla yapılandırmayı kullanarak bu değeri son olarak, alabilirsiniz\["ConnectionString"\]Createservicereplicalisteners() yöntemi bir önceki kod örneğinde gösterildiği gibi.
 
-Ancak, üretim ortamları için bağlantı dizelerini gibi parolaları depolamak nasıl ek yollarını incelemek isteyebilirsiniz. Genellikle, yönetilecek, seçilen orchestrator tarafından ile yapabileceğiniz gibi [Docker Swarm gizli Yönetim](https://docs.docker.com/engine/swarm/secrets/).
+Ancak, üretim ortamları için bağlantı dizeleri gibi gizli dizileri depolamak nasıl ek yollarını keşfetmek isteyebilirsiniz. Genellikle, yönetilecek an kullandığınız düzenleyici tarafından ile yapabildiğiniz gibi [Docker Swarm gizli dizileri Yönetim](https://docs.docker.com/engine/swarm/secrets/).
 
-### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API uygulama sürüm oluşturma
+### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API, uygulama sürümü oluşturma
 
-İş gereksinimleri değişirken kaynakların yeni koleksiyonları eklenebilir, kaynakları arasındaki ilişkileri değişebilir ve veri kaynaklarında yapısını dayanıklıdır. Yeni gereksinimleri işlemek için bir Web API güncelleştirme görece basit bir işlemdir, ancak bu değişiklikleri Web API'sini kullanan istemci uygulamaları üzerinde sahip olacağı etkilerini dikkate almanız gerekir. Tasarlama ve bir Web API Uygulama geliştirici bu API üzerinde tam denetime sahip olsa da, geliştirici aynı derecede uzaktan işletim üçüncü taraf kuruluşlar tarafından oluşturulan istemci uygulamaları denetime sahip değil.
+İş gereksinimleri değiştikçe yeni kaynak koleksiyonları eklenebilir, kaynaklar arasındaki ilişkiler değişebilir ve kaynaklardaki verilerin yapısını düzeltilir. Yeni gereksinimlerini karşılamak için bir Web API güncelleştiriliyor oldukça basit bir işlemdir ancak bu tür değişikliklerin Web API'sini kullanan istemci uygulamalar üzerinde olacak etkileri göz önünde bulundurmanız gerekir. Tasarlama ve uygulama bir Web API'sini bir geliştirici bu API üzerinde tam denetime sahip olsa da, geliştirici aynı derecede uzaktan çalışan üçüncü taraf kuruluşlar tarafından oluşturulabilir istemci uygulamalar üzerinde daha fazla denetime sahip değil.
 
-Sürüm oluşturma, sunar kaynaklarını ve Özellikler belirtmek bir Web API sağlar. Bir istemci uygulaması sonra bir özellik veya kaynak belirli bir sürümünü istekleri gönderebilirsiniz. Sürüm oluşturma uygulamak için birçok yaklaşım vardır:
+Sürüm oluşturma, kullanıma sunduğu kaynaklar ve Özellikler belirtmek bir Web API'si sağlar. Bir istemci uygulaması daha sonra bir özellik ya da kaynağın belirli bir sürümünü istekleri gönderebilirsiniz. Sürüm oluşturma uygulamak için birçok yaklaşım vardır:
 
--   URI sürüm oluşturma
+-   URI sürümü oluşturma
 
--   Sorgu dizesi sürüm oluşturma
+-   Sorgu dizesi sürümü oluşturma
 
--   Üstbilgi sürüm oluşturma
+-   Üst bilgi sürümü oluşturma
 
-Sorgu dizesi ve URI sürüm basit uygulamak markalarıdır. Üstbilgi sürüm iyi bir yaklaşımdır. Ancak, üstbilgi sürüm olarak açık ve URI sürüm olarak kolay. URL sürüm en basit ve en açık olduğundan, eShopOnContainers örnek uygulama URI sürüm kullanır.
+Sorgu dizesi ve URI sürümü oluşturma uygulamak en basit olan. Üst bilgi sürümü oluşturma iyi bir yaklaşımdır. Bununla birlikte, üst bilgi sürümü oluşturma gibi açık ve basit olarak URI sürümü oluşturma. URL sürüm oluşturma basit ve en açık olduğundan, URI sürümü oluşturma hizmetine örnek uygulamayı kullanır.
 
-EShopOnContainers örnek uygulama olduğu gibi URI sürüm ile Web API değiştirmek veya kaynakları, şema değiştirme her zaman, bir sürüm numarası için her kaynak için URI ekleyin. Varolan URI, uygun kaynaklar istenen sürümüyle eşleşen şemanın dönmeden önce gibi çalışmaya devam etmelidir.
+Hizmetine örnek uygulaması, olduğu gibi URI sürümü oluşturma ile Web API değiştirmek veya kaynak şemasını değiştirmek eklediğiniz her sefer bir sürüm numarası için her kaynak için URI. Mevcut bir URI'leri önce uygun kaynakları istenen sürümle eşleşen şemalarına gibi çalışmaya devam etmelidir.
 
-Aşağıdaki kod örneğinde gösterildiği gibi sürüm rota özniteliğinin sürüm URI açık hale getirir Web API kullanılarak ayarlanabilir (Bu durumda v1).
+Aşağıdaki kod örneğinde gösterildiği gibi sürüm sürüm urı'sindeki açık hale getirir Web API'sindeki rota özniteliği kullanılarak ayarlanabilir (Bu durumda v1).
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -283,66 +283,66 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-Bu sürüm oluşturma mekanizması basittir ve uygun uç noktasına istek yönlendirme sunucusu bağlıdır. Ancak, daha karmaşık bir sürüm oluşturma ve REST kullanırken en iyi yöntemi için iletilir kullanın ve uygulamak [HATEOAS (köprü metni olarak uygulama altyapısı durumu)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources).
+Bu sürüm oluşturma mekanizması basittir ve isteği uygun uç noktaya yönlendiren sunucuya bağlıdır. Ancak, daha karmaşık bir sürüm oluşturma ve REST kullanırken en iyi yöntemi için hiper medya kullanma ve uygulamak [HATEOAS (uygulama durumu altyapısı olarak köprü metni)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources).
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Scott Hanselman. Kolay ASP.NET Core RESTful Web API'si sürüm oluşturma**
+-   **Scott Hanselman. ASP.NET Core RESTful Web API'si sürümü oluşturma artık daha kolay**
     [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Sürüm oluşturma bir RESTful web API'si**
+-   **RESTful web API'si sürümü oluşturma**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Roy Fielding. Sürüm oluşturma, iletilir ve REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Oluşturma Swagger açıklama meta verilerini, ASP.NET çekirdek Web API 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Swagger tanım meta verileri, ASP.NET Core Web API'si oluşturma 
 
-[Swagger](https://swagger.io/) olan yaygın olarak kullanılan açık kaynak framework tasarımı, yapı, belge yardımcı olan bir büyük ekosistemi araçları tarafından desteklenen ve RESTful API'lerini kullanma. API tanımı meta verileri etki alanı için standart durumundadır. Mikro hizmet, veri tabanlı mikro veya daha fazla etki alanı tabanlı mikro (aşağıdaki bölümde açıklandığı gibi) Gelişmiş herhangi bir tür ile Swagger açıklama meta verileri içermelidir.
+[Swagger](https://swagger.io/) olduğu bir yaygın olarak kullanılan açık kaynak çerçeve tasarım, derleme, belge yardımcı olan oluşan geniş ekosistem araçları tarafından desteklenen ve RESTful API'leri kullanır. Bu API'leri açıklama meta verileri etki alanı için standart hale gelmektedir. Swagger tanım meta verileri ile mikro hizmet, veri odaklı bir mikro hizmetler veya daha fazla etki alanı odaklı bir mikro hizmetler (aşağıdaki bölümde açıklandığı gibi) Gelişmiş herhangi bir türden içermelidir.
 
-Swagger Kalp API açıklama meta veriler JSON veya YAML dosyasında Swagger belirtimidir. Belirtimi tüm kaynakları ve işlemleri hem bir biçimde İnsan ve machine readable kolay geliştirme, bulma ve tümleştirme için ayrıntılı API'nizi RESTful sözleşmesi oluşturur.
+Swagger API tanımı meta veriler bir JSON veya YAML dosyasına Swagger belirtimi kalbidir. Tüm kaynakları ve işlemleri hem İnsan ve machine readable biçimde kolay geliştirme, Keşif ve tümleştirme için gerçekleşen API'niz için RESTful sözleşme belirtimi oluşturur.
 
-Belirtimi OpenAPI belirtimi'nın (OAS) temelini ve RESTful arabirimlerinden tanımlanan şekilde standart hale getirmek için bir açık, saydam ve işbirliği topluluğuna geliştirilmiştir.
+Belirtimi, Openapı belirtimi'nın (OAS) temelidir ve RESTful arabirimlerinden tanımlanma biçimini standart hale getirmek için bir açık, şeffaf ve işbirliğine dayalı topluluğuna geliştirilmiştir.
 
-Belirtimi nasıl bir hizmeti bulunan ve nasıl yeteneklerini anladım yapısını tanımlar. Daha fazla bilgi için bir web Düzenleyicisi'ni ve Swagger belirtimleri Spotify, Uber, boşluk ve Microsoft, gibi şirketlerden örnekleri dahil olmak üzere Swagger sitesine bakın (<https://swagger.io/>).
+Belirtimi, bir hizmetin nasıl bulunabileceğini ve özelliklerini nasıl anladım yapısını tanımlar. Daha fazla bilgi için bir web Düzenleyicisi ve Swagger belirtimlerinden Spotify, Uber, Slack ve Microsoft gibi şirketler örnekleri dahil olmak üzere Swagger sitesine bakın (<https://swagger.io/>).
 
-### <a name="why-use-swagger"></a>Swagger neden kullanılır?
+### <a name="why-use-swagger"></a>Swagger neden kullanmalısınız?
 
-API için Swagger meta verileri oluşturmak için nedenler şunlardır:
+Apı'leriniz için Swagger meta verileri oluşturmak için temel neden aşağıda verilmiştir.
 
-**Otomatik olarak kullanabilir ve Apı'lerinizi tümleştirmek diğer ürünleri yeteneği**. Ürünler onlarca ve [ticari Araçları](https://swagger.io/commercial-tools/) ve birçok [kitaplıklarını ve çerçevelerini](https://swagger.io/open-source-integrations/) Swagger destekler. Microsoft, üst düzey ürünleri ve otomatik olarak aşağıdaki gibi Swagger tabanlı API'ler tüketebileceği araçlara sahiptir:
+**Otomatik olarak kullanmak ve Apı'lerinizi tümleştirmek diğer ürünlere yönelik özelliği**. Ürünleri onlarca ve [ticari Araçları](https://swagger.io/commercial-tools/) ve birçok [kitaplıklar ve çerçeveler](https://swagger.io/open-source-integrations/) Swagger'ı destekler. Microsoft üst düzey ürün ve otomatik olarak aşağıdaki gibi Swagger tabanlı API'ler tüketebileceği araç vardır:
 
--   [AutoRest](https://github.com/Azure/AutoRest). .NET istemci sınıfları Swagger çağırmak için otomatik olarak oluşturabilir. CLI üzerinden bu aracı kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirir.
+-   [AutoRest](https://github.com/Azure/AutoRest). Swagger'ı çağırmak için .NET istemci sınıfları otomatik olarak oluşturabilirsiniz. Bu aracı CLI üzerinden kullanılabilir ve GUI aracılığıyla kolay kullanım için de Visual Studio ile tümleştirilir.
 
--   [Microsoft Akış](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow akışına olmadan programlama gerekli niteliklere.
+-   [Microsoft Flow](https://flow.microsoft.com/en-us/). Otomatik olarak [kullanın ve API'nizi tümleştirme](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) üst düzey bir Microsoft Flow iş akışınıza olmadan programlama becerileri gerekir.
 
--   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Otomatik olarak API öğesinden tüketebileceği [PowerApps mobil uygulamaları](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) ile oluşturulan [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), gerekli hiçbir programlama becerilerine sahip.
+-   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Otomatik olarak, API'SİNDEN tüketebileceği [PowerApps mobil uygulamalar](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) ile oluşturulmuş [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), gerekli herhangi bir programlama becerilerine sahip.
 
--   [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). Otomatik olarak [kullanın ve Azure App Service Logic uygulamaya API'nizi tümleştirme](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api), gerekli herhangi bir programlama becerilerine sahip.
+-   [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps). Otomatik olarak [kullanın ve API'nizi Azure App Service mantıksal uygulamalarla tümleştirme](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api), gerekli herhangi bir programlama becerilerine sahip.
 
-**API belgelerine otomatik olarak oluşturma yeteneği**. Mikro hizmet tabanlı karmaşık uygulamalar gibi büyük ölçekli RESTful API'lerini oluşturduğunuzda, istek ve yanıt yükleri kullanılır farklı veri modelleri ile çok sayıda uç noktaları ele almanız gerekir. API ve benimseme geliştiriciler tarafından başarısı için uygun belgeleri olması ve Swagger ile aldıkça düz bir API Gezgini sahip anahtardır.
+**API belgelerini otomatik olarak oluşturma yeteneği**. Karmaşık mikro hizmet tabanlı uygulamalar gibi büyük ölçekli RESTful API'leri oluşturduğunuzda, istek ve yanıt yükleri kullanılan farklı veri modellerine sahip çok sayıda uç noktalar ele almanız gerekir. API'NİZİN ve geliştiriciler tarafından benimseme başarısı için uygun belgelere sahip olunması ve Swagger ile aldıkça, sağlam bir API Gezgini sahip anahtardır.
 
-Swagger ait meta verileri ne Microsoft Flow, PowerApps ve Azure mantıksal uygulamaları API'leri kullanan ve kendilerine bağlanması nasıl anlamak için kullandığınız yöntemdir.
+Microsoft Flow, PowerApps ve Logic Apps Azure API'leri ve bunlara nasıl kullanılacağını anlamak için kullandıklarınız swagger'ın meta verilerdir.
 
-### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>API Swagger meta verileri oluşturma Swashbuckle NuGet paketi ile otomatikleştirme
+### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swagger API meta verileri oluşturma Swashbuckle NuGet paketini ile otomatikleştirme
 
-Swagger meta verilerde el ile (JSON veya YAML dosyası) oluşturma can sıkıcı iş olabilir. Ancak, ASP.NET Web API hizmetlerinin API bulma kullanarak otomatik hale getirebilir [Swashbuckle NuGet paketi](http://aka.ms/swashbuckledotnetcore) dinamik olarak Swagger API'si meta verileri oluşturmak için.
+Swagger meta verilerde el ile (bir JSON veya YAML dosyası) oluşturmak zahmetli bir iş olabilir. Ancak, ASP.NET Web API Hizmetleri API bulma kullanarak otomatikleştirebileceğiniz [Swashbuckle NuGet paketini](http://aka.ms/swashbuckledotnetcore) dinamik olarak Swagger API'si meta verileri oluşturmak için.
 
-Swashbuckle, ASP.NET Web API projeleri için Swagger meta verileri otomatik olarak oluşturur. ASP.NET Core Web API projeleri ve geleneksel ASP.NET Web API ve Azure API uygulaması, Azure mobil uygulaması, ASP Azure Service Fabric mikro gibi diğer tüm özellik destekler. Ayrıca, kapsayıcılarında olarak başvuru uygulaması için Dağıtılmış düz Web API destekler.
+Swashbuckle, ASP.NET Web API projeleriniz için Swagger meta verileri otomatik olarak oluşturur. Bu, ASP.NET Core Web API projelerini ve geleneksel ASP.NET Web API ve Azure API uygulaması, Azure mobil uygulaması, ASP Azure Service Fabric mikro hizmetler gibi diğer tüm flavor destekler. Ayrıca, düz Web API'si için başvuru uygulaması olarak kapsayıcılarında, dağıtılan destekler.
 
-Swashbuckle birleştirir API'si Gezgini ve Swagger veya [swagger kullanıcı arabirimi](https://github.com/swagger-api/swagger-ui) zengin bulma ve belgeleri API tüketicileriniz için deneyimi sağlamak için. Kendi Swagger meta verileri Oluşturucu Altyapısı'na ek olarak, Swashbuckle swagger Swashbuckle yüklendikten sonra onu otomatik olarak hizmet verecektir yukarı kullanıcı arabirimi, katıştırılmış bir sürümünü de içerir.
+Swashbuckle birleştirir API Gezgini ve Swagger veya [swagger kullanıcı arabirimi](https://github.com/swagger-api/swagger-ui) zengin bulma ve belgeler için API tüketicilerinize deneyimi sağlamak. Kendi Swagger meta verileri Oluşturucu altyapısına ek olarak, Swashbuckle swagger-Swashbuckle yüklendikten sonra otomatik olarak hizmet verecek yukarı kullanıcı arabirimi, katıştırılmış bir sürümünü de içerir.
 
-Başka bir deyişle, API'nizi iyi bulma API'nizi kullanmak için geliştiricilere yardımcı olmak için kullanıcı Arabirimi ile tamamlayabilir. Bu otomatik olarak, API'nizi oluşturmaya odaklanmanıza olanak tanıyan üretildiği için çok küçük miktarda kod ve bakım gerektirir. Sonucun API'si Gezgini için Şekil 8-8 gibi görünüyor.
+Bu, iyi bir bulma geliştiricilerin API'nizi kullanmasına yardımcı olmak için kullanıcı Arabirimi ile API'nizi tamamlayabilir anlamına gelir. Bu otomatik olarak, API'nizi geliştirmeye odaklanabilirsiniz oluşturulmuş olduğu için çok az miktarda kodu ve bakım gerektirir. API Gezgini için sonucu Şekil 8-8 gibi görünüyor.
 
 ![](./media/image9.png)
 
-**Şekil 8-8**. Swashbuckle API'si Gezgini Swagger meta verilerini temel — eShopOnContainers mikro hizmet Kataloğu
+**Şekil 8-8**. Swashbuckle API Gezgini Swagger meta verileri temel alarak — hizmetine mikro hizmet Kataloğu
 
-API explorer en önemli şey burada değil. Kendisini Swagger meta verilerde açıklayan bir Web API oluşturduktan sonra API birçok platformda hedefleyebilirsiniz istemci proxy sınıfı kod oluşturucuları dahil olmak üzere Swagger tabanlı Araçları'ndan, sorunsuz bir şekilde kullanılabilir. Örneğin, söz edildiği gibi [AutoRest](https://github.com/Azure/AutoRest) otomatik olarak .NET istemci sınıfları oluşturur. Ancak ek araçlar [swagger codegen](https://github.com/swagger-api/swagger-codegen) kod oluşturma API İstemci kitaplıkları, sunucu saplamalar ve belgeleri otomatik olarak izin veren öğeler de kullanılabilir.
+API Gezgini burada en önemli şey değil. Kendisini Swagger meta verilerde açıklayan bir Web API'si aldıktan sonra birçok platformda hedefleyebilen istemci proxy sınıfı kod oluşturucuları dahil olmak üzere Swagger tabanlı araçlardan, API'nizi sorunsuz bir şekilde kullanılabilir. Örneğin, bahsedildiği gibi [AutoRest](https://github.com/Azure/AutoRest) otomatik olarak .NET istemci sınıfları oluşturur. Ancak gibi ek araçlar [swagger codegen](https://github.com/swagger-api/swagger-codegen) kod oluşturma API'si istemci kitaplıkları, sunucu saptamalar ve belgeleri otomatik olarak izin olan de kullanılabilir.
 
-Şu anda Swashbuckle iki üst düzey meta paket altındaki çeşitli iç NuGet paketlerini oluşur [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) sürümü 1.0.0 veya ASP.NET Core uygulamaları daha yeni.
+Üst düzey meta-package altında çeşitli iç NuGet paketleri şu anda, Swashbuckle oluşan [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) sürüm 1.0.0 veya sonraki bir sürümü ASP.NET Core uygulamaları için.
 
-Web API projesinde bu NuGet paketleri yükledikten sonra aşağıdaki kodu olduğu gibi başlangıç sınıftaki Swagger yapılandırmanız gerekir:
+Bu NuGet paketleri, Web API projesinde yükledikten sonra aşağıdaki kodu olduğu gibi bir başlangıç sınıfı Swagger yapılandırmanız gerekir:
 
 ```csharp
 public class Startup
@@ -385,7 +385,7 @@ public class Startup
 }
 ```
 
-Bunu yaptıktan sonra uygulamanızı başlatın ve bu benzer URL'ler kullanarak aşağıdaki Swagger JSON ve kullanıcı Arabirimi uç noktaları göz atın:
+Bunu yaptıktan sonra uygulamanızı başlatın ve bu gibi URL'leri kullanarak aşağıdaki Swagger JSON ve UI uç göz atın:
 
 ```json
   http://<your-root-url>/swagger/v1/swagger.json
@@ -393,26 +393,26 @@ Bunu yaptıktan sonra uygulamanızı başlatın ve bu benzer URL'ler kullanarak 
   http://<your-root-url>/swagger/
 ```
 
-Daha önce oluşturulan kullanıcı arabirimini http:// URL için Swashbuckle tarafından oluşturulan gördüğünüz&lt;kök URL'si bilgisayarınızı &gt; /swagger/kullanıcı arabirimi. Şekil 8-9'da herhangi bir API yöntemi test nasıl de görebilirsiniz.
+Daha önce oluşturulan kullanıcı arabirimini http:// gibi bir URL için Swashbuckle tarafından oluşturulan gördüğünüz&lt;kök URL'si your &gt; /swagger/kullanıcı arabirimi. Şekil 8-9'da herhangi bir API yöntemini nasıl test görebilirsiniz.
 
 ![](./media/image10.png)
 
-**Şekil 8-9**. Swashbuckle katalog/öğeleri API yöntemi sınama UI
+**Şekil 8-9**. Swashbuckle UI testi katalog/öğeleri API yöntemi
 
-Şekil 8-10 eShopOnContainers mikro oluşturulan Swagger JSON meta verileri gösterir (olduğu Araçları altında kullanın) olduğunda, isteği &lt;kök URL'si bilgisayarınızı&gt;/swagger/v1/swagger.json kullanarak [Postman](https://www.getpostman.com/).
+Şekil 8-10 hizmetine mikro hizmet oluşturulan Swagger JSON meta verileri gösterir (olan araçlar altında kullanın) olduğunda, isteği &lt;kök URL'si your&gt;/swagger/v1/swagger.json kullanarak [Postman](https://www.getpostman.com/).
 
 ![](./media/image11.png)
 
 **Şekil 8-10**. Swagger JSON meta verileri
 
-Bu basit bir işlemdir. Ve otomatik olarak oluşturulduğundan, API için daha fazla işlevsellik eklediğinizde, Swagger meta verileri büyüyecektir.
+Bu basit bir işlemdir. Ve daha fazla işlevsellik API'nize eklediğinizde otomatik olarak oluşturulduğundan, Swagger meta verileri büyüyecektir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **ASP.NET Web API Yardım Swagger kullanarak sayfaları**
+-   **Swagger kullanan ASP.NET Web API Yardım sayfaları**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 
 >[!div class="step-by-step"]
 [Önceki](microservice-application-design.md)
-[sonraki](multi-container-applications-docker-compose.md)
+[İleri](multi-container-applications-docker-compose.md)

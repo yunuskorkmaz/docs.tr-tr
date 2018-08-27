@@ -10,17 +10,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172168"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929279"
 ---
 # <a name="string-c-reference"></a>string (C# Başvurusu)
-`string` Türü sıfır veya daha fazla Unicode karakterler dizisini temsil eder. `string` bir diğer adı için <xref:System.String> .NET içinde.  
+`string` Türü bir dizi sıfır veya daha fazla Unicode karakteri temsil eder. `string` için bir diğer addır <xref:System.String> .NET içinde.  
   
- Ancak `string` bir başvuru türü eşitlik işleçleri (`==` ve `!=`) değerlerini karşılaştırmak için tanımlanan `string` nesneleri, değil başvuruyor. Bu, daha sezgisel dize eşitlik için test kolaylaştırır. Örneğin:  
+ Ancak `string` bir başvuru türü eşitlik işleçleri (`==` ve `!=`) değerlerini karşılaştırmak için tanımlanan `string` nesnelerine, başvuruda değil. Bu, daha sezgisel dizeyi eşitlik için sınama yapar. Örneğin:  
   
 ```csharp  
 string a = "hello";  
@@ -31,9 +31,9 @@ Console.WriteLine(a == b);
 Console.WriteLine((object)a == (object)b);  
 ```  
   
- Bu "True" görüntüler ve ardından "False" dizeleri içeriğini eşdeğer olduğundan ancak `a` ve `b` aynı dize örneğine başvurmamasını sağlama.  
+ Bu "True" görüntüler ve ardından "False" eşdeğer dizeler içeriğini çünkü ancak `a` ve `b` aynı dize örneğine işaret etmiyor.  
   
- + İşleci dizeleri art arda ekler:  
+ + İşleci dizeleri birleştirir:  
   
 ```csharp  
 string a = "good " + "morning";  
@@ -41,27 +41,27 @@ string a = "good " + "morning";
   
  Bu, "Günaydın" içeren bir dize nesnesi oluşturur.  
   
- Dizelerdir *değişmez*--bir dize nesnesi içeriğini nesne oluşturulduktan sonra değiştirilemez, sözdizimi yapar ancak görünür Bunu yapmak gibi. Örneğin, bu kodu yazarken derleyici gerçekten yeni karakter dizisi tutmak için yeni bir dize nesnesi oluşturur ve bu yeni nesne B'ye atanır. "Y" dizesi sonra atık toplama için uygundur.  
+ Dizelerdir *değişmez*--bir dize nesnesi, içeriğini nesne oluşturulduktan sonra değiştirilemez, söz dizimi sağlar ancak görünür Bunu yapmak gibi. Örneğin, bu kod yazdığınızda, derleyici, gerçekte yeni dizi karakteri tutmak için yeni bir dize nesnesi oluşturur ve yeni nesne b atanır. "H" dizesi, ardından çöp toplama için uygundur.  
   
 ```csharp
 string b = "h";  
 b += "ello";  
 ```  
   
- [] İşleci tek tek karakter salt okunur erişim için kullanılan bir `string`:  
+ [] İşleci karakterlerin tek tek salt okunur erişim için kullanılan bir `string`:  
   
 ```csharp  
 string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
- Dize değişmez değerleri türündedir `string` ve tırnak içine alınmış iki biçimde yazılabilir ve @-quoted. Değişmez değerler çift tırnak işaretleri (") arasına alınan sınırlandırılmış:  
+ Dize değişmez değerleri, tür `string` ve teklif iki biçimde yazılır ve @-quoted. Dize değişmez değerleri çift tırnak işaretleri (") içine alınan Teklif:  
   
 ```csharp  
 "good morning"  // a string literal  
 ```  
   
- Dize değişmez değerleri değişmez değer herhangi bir karakter içerebilir. Kaçış sıraları dahil edilir. Aşağıdaki örnek, kaçış sırası kullanır `\\` ters eğik çizgi için `\u0066` harfi f için ve `\n` yeni satır için.  
+ Dize değişmez değerleri, sabit değer herhangi bir karakter içerebilir. Kaçış dizileri dahil edilir. Aşağıdaki örnekte çıkış dizisi `\\` eğik için `\u0066` harfi f, için ve `\n` için yeni satır.  
   
 ```csharp  
 string a = "\\\u0066\n";  
@@ -69,29 +69,29 @@ Console.WriteLine(a);
 ```  
   
 > [!NOTE]
->  Çıkış kodu `\udddd` (burada `dddd` dört basamaklı bir sayı değil) Unicode karakteri U + temsil eden`dddd`. Sekiz basamaklı Unicode çıkış kodları ayrıca tanınan: `\Udddddddd`.  
+>  Çıkış kodu `\udddd` (burada `dddd` bir dört basamaklı sayıdır) U + Unicode karakteri temsil eden`dddd`. Sekiz basamağı Unicode atlatma kodları da tanınan: `\Udddddddd`.  
   
- Harfi harfine dize değişmez değerleri başlayarak `@` ve ayrıca çift tırnak işaretleri içine alınır. Örneğin:  
+ Verbatim dize değişmez değerleri ile başlayıp `@` ve ayrıca çift tırnak işaretleri içine alınır. Örneğin:  
   
 ```csharp  
 @"good morning"  // a string literal  
 ```  
   
- Harfi harfine dizeler avantajlarından kaçış sıraları olmasıdır *değil* işlenen, hangi kolaylaştırır yazma, örneğin, bir tam dosya adı:  
+ Kaçış dizileri: avantajlarındandır harfi harfine dizeler *değil* işlenen, hangi kolaylaştırır, örneğin, tam olarak nitelenmiş dosya adını yazın:  
   
 ```csharp  
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
 ```  
   
- Çift tırnak işareti içinde dahil etmek için bir @-quoted dize, onu çift:  
+ Çift tırnak işareti eklemek için bir @-quoted , çift, dize:  
   
 ```csharp  
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Diğer kullanımlar için `@` özel karakter bkz [@--verbatim tanımlayıcı](../tokens/verbatim.md).  
+ Diğer kullanımları için `@` özel karakter bkz [@--tam tanımlayıcı](../tokens/verbatim.md).  
   
- C# dizeleri hakkında daha fazla bilgi için bkz: [dizeleri](../../../csharp/programming-guide/strings/index.md).  
+ C# dizeleri hakkında daha fazla bilgi için bkz. [dizeleri](../../../csharp/programming-guide/strings/index.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
- [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)  
- [Yeni Dizeler Oluşturma](../../../standard/base-types/creating-new.md)  
- [Sayısal Sonuçlar Tablosunu Biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../standard/base-types/best-practices-strings.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
+- [Temel Dize İşlemleri](../../../standard/base-types/basic-string-operations.md)  
+- [Yeni Dizeler Oluşturma](../../../standard/base-types/creating-new.md)  
+- [Sayısal Sonuçlar Tablosunu Biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

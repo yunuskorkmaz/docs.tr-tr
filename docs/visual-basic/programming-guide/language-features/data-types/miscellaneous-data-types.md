@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 9261a02f3dc286dc37b3073158ccc0c151030fe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 490a462859a916d21c816ff96c47d2deeb9312ee
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647342"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931144"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Çeşitli Veri Türleri (Visual Basic)
-Visual Basic rakam veya karakter doğru odaklı olmayan birkaç veri türlerini sağlar. Bunun yerine, bunlar özel verilerle gibi Evet/Hayır değerleri, tarih/saat değerleri ve nesne adresleri ilgilenir.  
+Visual Basic, sayı veya karakterlerden doğru yönlendirilmiş olmayan çeşitli veri türleri sağlar. Bunun yerine, bunlar özelleştirilmiş verilerle gibi Evet/Hayır değerleri, tarih/saat değerleri ve nesne adresleri ilgilenir.  
   
- Visual Basic veri türleri yan yana karşılaştırmasını gösteren bir tablo için bkz: [veri türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Visual Basic veri türleri yan yana karşılaştırmasını gösteren bir tablo için bkz: [veri türleri](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>Boolean türü  
- [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) olarak yorumlanır imzasız bir değer `True` veya `False`. Veri genişliği uygulama platformuna bağlıdır. Bir değişken true/false gibi yalnızca iki durumlu değerler içerebilir, Evet/Hayır, veya açık/kapalı olarak bildirme `Boolean`.  
+## <a name="boolean-type"></a>Boole türü  
+ [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) olarak yorumlanır işaretsiz bir değer `True` veya `False`. Veri genişliği uygulama platformuna bağlıdır. Bir değişken true/false gibi yalnızca iki durumlu değerler içerebilir, Evet/Hayır veya açık/kapalı olarak bildirin `Boolean`.  
   
 ## <a name="date-type"></a>Tarih türü  
- [Tarih veri türü](../../../../visual-basic/language-reference/data-types/date-data-type.md) tarih ve saat bilgilerini tutan bir 64-bit değeridir. Her artış 100 nanosaniye geçen süre (12:00 AM) başına itibaren Gregoryen takvim 1 yılının 1 Ocak, temsil eder. Bir değişkenin bir tarih değeri, bir saat değeri veya her ikisini içerebilir, olarak bildirme `Date`.  
+ [Date veri türü](../../../../visual-basic/language-reference/data-types/date-data-type.md) tarih ve saat bilgilerini tutan bir 64-bit değeri. Her 100 nanosaniyelik geçen süre (12:00 AM) başından bu yana Gregoryen takvim yılının 1 Ocak 1, temsil eder. Bir değişkenin bir tarih değeri, bir saat değeri veya her ikisini içerebilir, olarak bildirin `Date`.  
   
 ## <a name="object-type"></a>Nesne türü  
- [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) noktalarını bir nesne örneği, uygulamanızda veya başka bir uygulama için bir 32 bit adresidir. Bir `Object` değişkeni uygulamanızın tanıdığı herhangi bir nesne ya da herhangi bir veri türünde başvurabilir. Bu, her ikisi de içerir *değer türleri*, gibi `Integer`, `Boolean`ve yapısı örnekleri ve *başvuru türleri*, sınıflardan gibi oluşturulan nesneler örnekleriolan`String`ve <xref:System.Windows.Forms.Form>ve dizi örnekleri.  
+ [Nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) uygulamanızda veya başka bir uygulama bir nesne örneğine işaret eden bir 32-bit adresidir. Bir `Object` uygulamanızın tanıdığı herhangi bir nesne veya herhangi bir veri türünde değişken başvurabilir. Her ikisi de buna dahildir *değer türleri*, gibi `Integer`, `Boolean`ve yapısı örnekleri ve *başvuru türleri*, sınıflardan gibi oluşturulan nesne örnekleriolan`String`ve <xref:System.Windows.Forms.Form>ve dizi örnekleri.  
   
- Derleme zamanında bilmiyorsanız sınıfının bir örneği için bir işaretçi bir değişkeni depolar veya çeşitli veri türlerinin veri gösterebilir, olarak bildirme `Object`.  
+ Bir değişken derleme zamanında bilmiyorsanız bir sınıfın bir örneğine bir işaretçi depolar veya verileri çeşitli veri türlerini gösterebilir, olarak bildirin `Object`.  
   
- Avantajı `Object` veri türü olan, bunu herhangi bir veri türü, verileri depolamak için kullanabileceğiniz. Olumsuz daha fazla yürütme süresi almak ve uygulamanızı daha yavaş gerçekleştirmek yapan ek işlemleri neden olur. Kullanırsanız, bir `Object` değişken değer türleri için tabi *kutulama* ve *kutudan çıkarma*. Referans türleri için kullanırsanız, tabi *geç bağlama*.  
+ Avantajı `Object` veri türüdür, bunu herhangi bir veri türü, verileri depolamak için kullanabileceğiniz. Olumsuz yönüyse yürütme daha uzun sürer ve uygulamanızın daha yavaş gerçekleştirmek ek işlemler tabi olur. Kullanıyorsanız bir `Object` değer türleri için değişken ücretler *kutulama* ve *kutudan çıkarma*. Başvuru türleri için kullanıyorsanız ücretler *geç bağlama*.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  

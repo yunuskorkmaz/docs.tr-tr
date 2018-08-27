@@ -1,6 +1,6 @@
 ---
 title: GetPropertyOrigin işlevi (Unmnaged API Başvurusu)
-description: GetPropertyOrigin işlevi bir özellik bildirilmedi sınıfı belirler.
+description: GetPropertyOrigin işlevi, bir özellik içinde bildirildiği sınıf belirler.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyOrigin
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f16bc5ce23e6bf110a140d10f0e787935070dbcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461103"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933523"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin işlevi
-Bir özellik bildirilmedi sınıfı belirler.
+Bir özellik içinde bildirildiği sınıf belirler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,36 +42,36 @@ HRESULT GetPropertyOrigin (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `wszMethodName`  
-[in] Özellik adı, sahibi olan sınıf istenen nesne için. 
+[in] Özelliğin adı, sahibi olan sınıfı istenen nesne için. 
 
 `pstrClassName`  
-[out] Özellik sahibi sınıfın adını alır.
+[out] Özellik sahibi sınıfının adını alır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik bulunamadı. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::GetPropertyOrigin](https://msdn.microsoft.com/library/aa391449(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) yöntemi.
 
-Bir sınıf bir veya daha fazla temel sınıflardan özellikleri devrettiği için geliştiriciler genellikle belirli bir yöntemin tanımlandığı özellik belirlemek istersiniz.
+Bir sınıf özelliklerini bir veya daha fazla temel sınıftan devralabilir olduğundan, geliştiriciler genellikle belirli bir yöntemin tanımlandığı özellik belirlemek istersiniz.
 
-`pstrClassName` Parametre gerekir göstermiyor geçerli bir `BSTR` bu olduğundan işlevi çağrılmadan önce bir `out` parametresi; bu işaretçisi değil serbest işlevi döndükten sonra.
+`pstrClassName` Parametre gerekir işaret geçerli bir `BSTR` çünkü bu işlevi çağrılmadan önce bir `out` parametre; bu işaretçisi işlev döndürdükten sonra serbest.
 
 ## <a name="requirements"></a>Gereksinimler  
 **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

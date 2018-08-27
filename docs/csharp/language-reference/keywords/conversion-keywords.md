@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type conversion [C#], keywords
 - types [C#], conversion keywords
 ms.assetid: 8683ff14-5289-4efe-b4f5-1e6a075918ab
-ms.openlocfilehash: ffa6d7cb4b6606a5742077b823c1a3f710d2e624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34175f1bda169a9def9e3146214a6d5cd4d258e7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930417"
 ---
 # <a name="conversion-keywords-c-reference"></a>Dönüşüm Anahtar Sözcükleri (C# Başvurusu)
-Bu bölüm türü Dönüşümlerde kullanılan anahtar sözcükleri açıklar:  
+Bu bölümde, tür dönüştürmelerinde kullanılan anahtar sözcükler açıklanmaktadır:  
   
 -   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
@@ -22,6 +23,7 @@ Bu bölüm türü Dönüşümlerde kullanılan anahtar sözcükleri açıklar:
 -   [operator](../../../csharp/language-reference/keywords/operator.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

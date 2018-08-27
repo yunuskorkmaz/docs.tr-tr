@@ -18,37 +18,37 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590718"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930158"
 ---
 # <a name="short-data-type-visual-basic"></a>Short veri türü (Visual Basic)
-Ayrı tutma 32,768 değeri ile 32.767 aralığı 16-bit (2-bayt) tamsayılar imzalanmış.  
+-32.768 değeri ile 32.767 aralığı 16-bit (2-bayt) tamsayıları tutar imzalanmış.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `Short` veri türü tam veri genişliği gerektirmeyen tamsayı değerleri içeren `Integer`. Bazı durumlarda, ortak dil çalışma zamanı paketi, `Short` değişkenleri yakın işbirliği içinde ve bellek tüketimi.  
+ Kullanım `Short` veri türü, tam veri genişliği gerektirmeyen tamsayı değerler içerecek şekilde `Integer`. Bazı durumlarda, ortak dil çalışma zamanı paketi, `Short` değişkenleri yakından birlikte ve bellek tüketimi.  
   
  Varsayılan değer olan `Short` 0'dır.  
   
 ## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bildirme ve başlatma bir `Short` değişken bir ondalık değişmez değeri, onaltılık değişmez değeri bir sekizlik değişmez değeri atama veya (Visual Basic 2017 ile ikili bir hazır değer başlayarak). Değişmez değer tamsayı aralığı dışında ise `Short` (diğer bir deyişle, bu ise değerinden <xref:System.Int16.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int16.MaxValue?displayProperty=nameWithType>, derleme hatası oluşur.
+Bildirmek ve başlatmak bir `Short` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `Short` (diğer bir deyişle, bu ise kısa <xref:System.Int16.MinValue?displayProperty=nameWithType> veya ondan <xref:System.Int16.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 1,034 tamsayılar eşit ve ikili değişmez değerleri gelen örtük olarak dönüştürülür [tamsayı](integer-data-type.md) için `Short` değerleri.
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 1,034 eşit ve ikili sabit dizeler öğesinden örtük olarak dönüştürülür [tamsayı](integer-data-type.md) için `Short` değerleri.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> Önek kullanması `&h` veya `&H` bir onaltılık değişmez değeri, öneki belirtmek için `&b` veya `&B` ikili bir hazır değer ve öneki belirtmek için `&o` veya `&O` sekizlik değişmez değeri belirtmek için. Ondalık değişmez değerler, önek vardır.
+> Önek kullanın `&h` veya `&H` önek onaltılık bir sabit belirtmek için `&b` veya `&B` ikili sabit ve öneki belirtmek için `&o` veya `&O` sekizlik bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır.
 
-Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliğini artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
+Visual Basic 2017'den itibaren alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliği artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
 
 ```vb
 Dim number As Short = &H_3264
@@ -64,16 +64,16 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
--   **Genişletme.** `Short` Veri türü widens için `Integer`, `Long`, `Decimal`, `Single`, veya `Double`. Bu dönüştürebilirsiniz anlamına gelir `Short` karşılaşmadan olmadan bu türlerinden herhangi biri için bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+-   **Genişletme.** `Short` Widens veri türü için `Integer`, `Long`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Short` karşılaşmadan bu türlerden herhangi birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Karakterleri yazın.** Değişmez değer türü karakteri ekleme `S` bir hazır değer zorlar `Short` veri türü. `Short` hiçbir tanımlayıcı türü karakteri var.  
+-   **Tür karakterleri.** Değişmez değer türü karakterinin `S` sabit değerine zorlar `Short` veri türü. `Short` hiçbir tanımlayıcı türü karakteri var.  
   
--   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Int16?displayProperty=nameWithType> yapısı.  
+-   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Int16?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
  <xref:System.Int16?displayProperty=nameWithType>  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  

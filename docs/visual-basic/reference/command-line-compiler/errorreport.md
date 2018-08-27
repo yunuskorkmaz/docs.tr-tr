@@ -1,6 +1,6 @@
 ---
 title: -errorreport
-ms.date: 03/10/2018
+ms.date: 08/14/2018
 helpviewer_keywords:
 - -errorreport compiler option [Visual Basic]
 - /errorreport compiler option [Visual Basic]
@@ -8,51 +8,55 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8c6a81d3491f4876cfbca80aa8fda6640187176
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d093b8ce4413a375e79eec239be37e83ac674d05
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650939"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929949"
 ---
 # <a name="-errorreport"></a>-errorreport
-Visual Basic derleyici iç derleyici hataları nasıl bildirmelisiniz belirtir.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```  
--errorreport:{ prompt | queue | send | none }  
-```  
-  
-## <a name="remarks"></a>Açıklamalar  
- Bu seçenek, Microsoft Visual Basic ekibi için bir Visual Basic derleyici iç hatası (çok) bildirmek için kolay bir yol sağlar. Varsayılan olarak, derleyici hiçbir bilgi Microsoft'a gönderir. Ancak, derleyici iç hatayla karşılaşırsanız, bu seçenek, Microsoft'a hata raporu olanak tanır. Bu bilgileri Microsoft mühendisleri nedenini yardımcı olur ve Visual Basic sonraki sürümü artırmanıza yardımcı olabilir.  
-  
- Bir kullanıcının, raporları göndermek becerisini makine ve kullanıcı ilkesi izinlerine bağlıdır.  
-  
- Aşağıdaki tabloda özetlenmiştir etkisini `-errorreport` seçeneği.  
-  
-|Seçenek|Davranış|  
-|---|---|  
-|`prompt`|Bir iç derleyici hatası oluşursa, derleyici toplanan verilerin tam görüntüleyebilmesi için bir iletişim kutusu belirir. Hata raporunda herhangi bir önemli bilgi olup olmadığını belirlemek ve bir karar Microsoft'a gönderilip gönderilmeyeceğini yapın. Göndermeden karar ve makine ve kullanıcı ilke ayarlarını izin, derleyici verilerini Microsoft'a gönderir.|  
-|`queue`|Hata raporu sıralar. Yönetici ayrıcalıklarıyla oturum kapatışınızda oturum en son ne zaman bu yana hataları bildirebilirsiniz (üç günde birden çok kez hata raporu göndermek için istenir değildir). Bu varsayılan davranıştır zaman `-errorreport` seçeneği belirtilmedi.|  
-|`send`|Bir iç derleyici hatası olursa ve makine ve kullanıcı ilke ayarlarını izin derleyici verilerini Microsoft'a gönderir.<br /><br /> Seçenek `-errorreport:send` hata bilgilerini Microsoft'a otomatik olarak göndermeyi dener. Bu seçenek, kayıt defterine bağlıdır. Kayıt defterinde uygun değerleri ayarlama hakkında daha fazla bilgi için bkz: [Visual Studio 2008 komut satırı araçları'nda otomatik hata raporlamayı etkinleştirme](http://go.microsoft.com/fwlink/?LinkID=184695).|  
-|`none`|Bir iç derleyici hatası oluşursa, onu değil toplanmayacak veya Microsoft'a gönderilir.|  
-  
- Derleyici genellikle bazı kaynak kodu içeren hata, aynı anda yığını içeren verileri gönderir. Varsa `-errorreport` ile kullanılan [- bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) tüm kaynak dosyasına gönderilen seçeneği.  
-  
- Bu seçenek en iyi ile kullanılan [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) Microsoft mühendisleri daha kolayca hatayı yeniden oluşturmaya izin verdiğinden seçeneği.  
-  
+
+Visual Basic derleyici iç derleyici hatalarını nasıl raporlayacağını belirtir.
+
+## <a name="syntax"></a>Sözdizimi
+
+```
+-errorreport:{ prompt | queue | send | none }
+```
+
+## <a name="remarks"></a>Açıklamalar
+
+Bu seçenek, Microsoft Visual Basic ekip için bir Visual Basic derleyici iç hatası (ICE) bildirmek için kullanışlı bir yol sağlar. Varsayılan olarak, derleyici, hiçbir bilgi Microsoft'a gönderir. Ancak, derleyici iç hatayla karşılaşırsanız, bu seçenek hata Microsoft'a bildirmenize olanak tanır. Bu bilgiler, Microsoft mühendisleri nedeni belirlemenize yardımcı olur ve Visual Basic'in sonraki sürümüne artırmanıza yardımcı olabilir.
+
+Bir kullanıcının yeteneğini raporları göndermek için makine ve kullanıcı ilkesi izinlerine bağlıdır.
+
+Aşağıdaki tabloda özetlenmiştir etkisini `-errorreport` seçeneği.
+
+|Seçenek|Davranış|
+|---|---|
+|`prompt`|Derleyici iç hatası meydana gelirse, derleyici toplanan verileri tam görüntüleyebilmesi için bir iletişim kutusu belirir. Hata raporunda herhangi bir önemli bilgi olup olmadığını belirlemek ve bir karar Microsoft'a gönderilip gönderilmeyeceğini yapın. Göndermeden karar ve makine ve kullanıcı ilke ayarları izin, derleyici verilerini Microsoft'a gönderir.|
+|`queue`|Hata raporunu kuyruğa alır. Yönetici ayrıcalıklarıyla oturum açtığınızda, son kez oturum açtıktan sonra herhangi bir hata rapor edebilirsiniz (, üç günde birden çok kez hata raporu göndermek isteyip istemediğiniz değil). Bu varsayılan davranıştır olduğunda `-errorreport` seçeneği belirtilmedi.|
+|`send`|Derleyici iç hatası oluşur ve makine ve kullanıcı ilke ayarları izin, derleyici verilerini Microsoft'a gönderir.<br /><br /> Seçenek `-errorreport:send` raporlama tarafından etkinleştirilirse hata bilgileri Microsoft'a otomatik olarak göndermeyi dener [Windows hata bildirimi](/windows/desktop/wer/windows-error-reporting) sistem ayarları. |
+|`none`|Derleyici iç hatası oluşursa, toplanmaz ve Microsoft'a gönderilir.|
+
+Derleyici, yığın genellikle bazı kaynak kodu içerir hata anında içeren verileri gönderir. Varsa `-errorreport` ile kullanılan [- bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) kaynak dosyanın tümüne gönderilen seçeneği.
+
+Bu seçenek ile en iyi şekilde kullanılır [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) Microsoft mühendisleri daha kolayca yeniden hata verdiğinden seçeneği.
+
 > [!NOTE]
->  `-errorreport` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki kod derleme girişiminde `T2.vb`, ve derleyici derleyici iç hatayla karşılaşırsa, hata raporunu Microsoft'a göndermek ister.  
-  
-```  
-vbc -errorreport:prompt t2.vb  
-```  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+> `-errorreport` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki kod, derleme dener `T2.vb`, ve derleyici bir iç derleyici hatası karşılaşırsa, hata raporunu Microsoft'a göndermek ister.
+
+```
+vbc -errorreport:prompt t2.vb
+```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

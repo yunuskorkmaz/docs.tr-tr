@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d6b0cb91dd9b8159919b0d155bb2f9773e7ba534
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40239901"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929775"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
@@ -51,10 +51,10 @@ Bu örnekte, bir karakter klavyeden girmeniz ve program, girdi karakteri bir har
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[C# başvurusu](../../../csharp/language-reference/index.md)  
-[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-[C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-[Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

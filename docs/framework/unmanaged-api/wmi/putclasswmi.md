@@ -1,6 +1,6 @@
 ---
 title: PutClassWmi işlevi (yönetilmeyen API Başvurusu)
-description: PutClassWmi işlevi yeni bir sınıf oluşturur veya mevcut bir güncelleştirir.
+description: PutClassWmi işlevi, yeni bir sınıf oluşturur veya mevcut olanı güncelleştirir.
 ms.date: 11/06/2017
 api_name:
 - PutClassWmi
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de08662a825a84f19a40863cf73481d89364ebd0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461535"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930511"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi işlevi
-Yeni bir sınıf oluşturur veya mevcut bir güncelleştirir.  
+Yeni bir sınıf oluşturur veya mevcut olanı güncelleştirir.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -42,56 +42,56 @@ HRESULT PutClassWmi (
 ## <a name="parameters"></a>Parametreler
 
 `pObject`    
-[in] Geçerli bir sınıf tanımı için bir işaretçi. Gereken tüm özellik değerlerini ile doğru şekilde yeniden başlatılmalıdır.
+[in] Geçerli bir sınıf tanımı için bir işaretçi. Tüm gerekli özellik değerleri doğru şekilde yeniden başlatılmalıdır.
 
 `lFlags`   
-[in] Bu işlev davranışını etkileyen bayrak birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda: 
+[in] Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda: 
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlama, WMI herhangi niteleyicileri değiştirilmiş özellik ile depolamaz </br> Değilse kümesi varsayılır Bu nesne yerelleştirilmemiş ve tüm niteleyiciler storedwith olduğundan bu örnek. |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Bunu yok, veya zaten varsa üzerine sınıfı oluşturun. |
-| `WBEM_FLAG_UPDATE_ONLY` | 1. | Sınıf güncelleştirin. Sınıfı, çağrı başarılı olması mevcut olması gerekir. |
-| `WBEM_FLAG_CREATE_ONLY` | 2 | Sınıf oluşturun. Sınıf zaten varsa çağrı başarısız olur. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumlu bir çağrı neden olur. |
-| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | İtme sağlayıcıları, bu bayrak belirtmelisiniz, çağrılırken `PutClassWmi` Bu sınıf değiştiğini belirtmek için. |
-| `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Türetilmiş sınıfları ve bu sınıfın hiçbir örneği varsa güncelleştirilmesi için bir sınıf sağlar. Değişiklik yalnızca açıklama niteleyici gibi önemli niteleyicileri istiyorsanız tüm durumlarda da güncelleştirmeler sağlar. Sınıf örnekleri olan veya önemli niteleyicileri değişikliklerdir güncelleştirme başarısız olur. |
-| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Olsa bile alt sınıflar değişiklik alt sınıflarla çakışmaları neden olmaz sürece sınıfların güncelleştirmeler sağlar. Örneğin, bu bayrak herhangi bir alt sınıfı önceden olarak belirtilmeyen temel sınıf eklemek yeni bir özellik sağlar. Sınıf örneği varsa, güncelleştirme başarısız. |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | Çakışan alt sınıflar bulunduğunda sınıfların güncelleştirmeleri zorlar. Örneğin, bu bayrak, sınıf niteleyici bir alt sınıfında tanımlanır ve olduğu bir varolan thte ile çakışıyor aynı niteleyici eklemek temel sınıf çalışırsa bir güncelleştirme zorlar. Zorlama modunda TIS çakışma alt sınıf çakışan niteleyicisinde silerek çözümlenir. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Tüm niteleyicileri ile değiştirilmiş özellik kümesi, WMI depolamaz </br> Aksi durumda, küme bu nesne yerelleştirilmez ve tüm niteleyicileri storedwith başladığınız varsayılır Bu örneği. |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Sınıfı, yok, veya zaten varsa üzerine oluşturun. |
+| `WBEM_FLAG_UPDATE_ONLY` | 1. | Sınıf güncelleştirin. Sınıf araması başarılı olması mevcut olması gerekir. |
+| `WBEM_FLAG_CREATE_ONLY` | 2 | Bir sınıf oluşturun. Sınıf zaten varsa başarısız olur. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. |
+| `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Anında iletme sağlayıcıları, bu bayrak belirtmelisiniz, çağrılırken `PutClassWmi` Bu sınıf değiştirildiğini göstermek için. |
+| `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Türetilmiş sınıfları ve bu sınıf örneği varsa güncelleştirilecek bir sınıf sağlar. Değişiklik yalnızca açıklama niteleyicisi gibi önemli niteleyicileri, ayrıca tüm durumlarda güncelleştirmeler sağlar. Sınıf örnekleri sahip veya bu değişiklikler için önemli niteleyicileri güncelleştirme başarısız olur. |
+| `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Olsa bile alt sınıfları değişikliği alt sınıflarla çakışmaları neden olmaz sürece sınıflarının güncelleştirmelerine olanak sağlar. Örneğin, bu bayrak, herhangi bir alt sınıfı önceden olarak belirtilmeyen temel sınıfa eklenecek yeni bir özellik sağlar. Sınıf örneği varsa, güncelleştirmeyi başarısız olur. |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | Çakışan alt sınıflar bulunduğunda sınıflarının güncelleştirmeleri zorlar. Örneğin, bu bayrak sınıf niteleyici bir alt sınıfında tanımlanır ve var olan bir thte ile çakışıyor aynı niteleyiciyi eklemek temel sınıf çalışırsa bir güncelleştirmenin yapılmasını sağlar. Zorlama modunda, çakışan alt sınıf niteleyicisi silerek TIS çakışma çözülür. |
 
 `pCtx`  
-[in] Bu değer genellikle `null`. Aksi takdirde, gösteren bir işaretçidir bir [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) istenen sınıfları sağlayarak sağlayıcı tarafından kullanılan örnek. 
+[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen sınıfları sağlayan sağlayıcı tarafından kullanılan bir örnek. 
 
 `ppCallResult`  
-[out] Varsa `null`, bu parametre kullanılmıyor. Varsa `lFlags` içeren `WBEM_FLAG_RETURN_IMMEDIATELY`, işlevi ile hemen döndürür `WBEM_S_NO_ERROR`. `ppCallResult` Parametre alan yeni bir işaretçi [IWbemCallResult](https://msdn.microsoft.com/library/aa391425(v=vs.85).aspx) nesnesi.
+[out] Varsa `null`, bu parametre kullanılmaz. Varsa `lFlags` içeren `WBEM_FLAG_RETURN_IMMEDIATELY`, işlev ile hemen döndürür. `WBEM_S_NO_ERROR`. `ppCallResult` Parametre bir işaretçi yeni bir alan [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) nesne.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcı oluşturma veya sınıfları değiştirme izni yok. |
-| `WBEM_E_FAILED` | 0x80041001 | Belirlenemeyen bir hata oluştu. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | Belirtilen sınıf geçerli değil. Genellikle, bu belirten `pObject` örneği nesneyi belirtir. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcı oluşturma veya sınıflar değiştirme izni yok. |
+| `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | Belirtilen sınıf geçerli değil. Genellikle, gösterir `pObject` örneği nesnesini belirtir. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Belirtilen sınıf adı geçerli değil. |
-| `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Bir alt sınıfı kılacak bir değişiklik yapılmaya çalışıldı. |
+| `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Bir alt kılacak bir değişiklik yapmak için girişimde bulunuldu. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Bayrağı belirtildi, ancak sınıf zaten mevcut. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` Belirtilen `lFlags`, ve sınıfı bulunamadı. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Tüm sınıflar için gerekli özellikleri ayarlanmadı. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durduruldu ve yeniden başlatma. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ile WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durdu ve yeniden başlatılıyor. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemServices::PutClass](https://msdn.microsoft.com/library/aa392113(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemServices::PutClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putclass) yöntemi.
 
-Kullanıcı sınıfları başlayamaz ya da bir alt çizgi chacater ile bitemez adlarla oluşturamaz
+Kullanıcı sınıfları ile başlayamaz veya bitemez ile bir alt çizgi chacater adları oluşturamaz
 
-İşlev çağrısı başarısız olursa, çağırarak ek hata bilgileri elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
+İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

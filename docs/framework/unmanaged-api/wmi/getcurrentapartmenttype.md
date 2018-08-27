@@ -1,6 +1,6 @@
 ---
 title: GetCurrentApartmentType işlevi (yönetilmeyen API Başvurusu)
-description: GetCurrentApartmentType işlevi çağıran yürütülmekte olduğu Grup türünü alır.
+description: GetCurrentApartmentType işlevi çağıran dosyanızın çalıştığı Grup türünü alır.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7b5fa5bf6d845d542d3e80c0571e59f3d4c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461730"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931421"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType işlevi
-Arayan yürütülmekte olduğu Grup türünü alır.   
+Arayan içinde yürütüyor Grup türünü alır.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,13 +41,13 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IComThreadingInfo](https://msdn.microsoft.com/library/windows/desktop/ms694502(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) örneği.
 
 `aptType`  
-[out] Bir işaretçi bir [APTTYPE](https://msdn.microsoft.com/library/windows/desktop/ms693793(v=vs.85).aspx) arayanın Grup belirten numaralandırma değeri.
+[out] Bir işaretçi bir [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) arayanın apartman belirten numaralandırma değeri.
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -55,11 +55,11 @@ HRESULT GetCurrentApartmentType (
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `S_OK` | 0 | İşlev başarıyla tamamlandı. |
-| `E_FAIL` | 0x80000008 | Çağıran bir grupta yürütülmüyor. |
+| `E_FAIL` | 0x80000008 | Arayan bir grupta yürütülmüyor. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

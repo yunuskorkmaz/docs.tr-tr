@@ -2,15 +2,15 @@
 title: DEREF (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: ee3877ca256eb3847b0284ac2a7362a4a60aad48
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abe47f8c72abe13bd5c27fe10a412ff94ab861cf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761486"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930018"
 ---
 # <a name="deref-entity-sql"></a>DEREF (varlık SQL)
-Bir başvuru değer ve başvuru sonucu, üretir dereferences.  
+Bir başvuru değeri ve bu sonucu başvuru oluşturur başvurusunu kaldırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,20 +20,20 @@ SELECT DEREF ( o.expression ) from Table as o;
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Bir koleksiyon döndürür herhangi bir geçerli sorgu ifade.  
+ Bir koleksiyon döndürür herhangi bir geçerli ifade.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Başvurulan varlık değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- DEREF işleci bir başvuru değer ve başvuru sonucu, üretir dereferences. Örneğin, varsa `r` türü ref başvurudur\<T >, `Deref``(r)` ifade türü olan `T` tarafından başvurulan varlık verir `r`. Başvuru değeri null veya sarkan değil (diğer bir deyişle, başvuru hedef için yok), DEREF işleci sonuç NULL'dur.  
+ DEREF işleci bir başvuru değeri ve bu sonucu başvuru oluşturur başvurusunu kaldırır. Örneğin, varsa `r` türü ref başvurudur\<T >, `Deref(r)` türündeki bir ifade `T` tarafından başvurulan varlık verir `r`. Başvuru değeri null veya sarkan olduğu (yani, başvuru hedefinin yok), DEREF işlecinin sonucunu null.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu başvuru değer ve başvuru sonucu, üretim başvurulacak DEREF işleci kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu DEREF işleci bir başvuru değeri ve ürettiği sonucu, başvuru başvuru için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür PrimitiveType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: Bu döndürür PrimitiveType sonuçları sorguyu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak ExecutePrimitiveTypeQuery yönteme geçirin:  
+2.  Aşağıdaki sorguda ExecutePrimitiveTypeQuery yönteme bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
   

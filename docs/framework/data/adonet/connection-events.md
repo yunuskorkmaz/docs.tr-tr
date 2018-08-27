@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 719e529c7813679f1e927b66e7db0e110714e438
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758170"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930868"
 ---
 # <a name="connection-events"></a>Bağlantı olayları
-Tüm .NET Framework veri sağlayıcısı **bağlantı** bilgilendirici iletileri bir veri kaynağından veri almak veya belirlemek için kullanabileceğiniz iki olay nesneleriyle durumunu bir **bağlantı** sahip değiştirildi. Aşağıdaki tabloda olayların açıklanmaktadır **bağlantı** nesnesi.  
+Tüm .NET Framework veri sağlayıcıları **bağlantı** belirlemek için ya da bir veri kaynağından bilgi iletilerini almak için kullanabileceğiniz iki olay nesneleri durumunu bir **bağlantı** sahip değiştirildi. Aşağıdaki tabloda olaylarını açıklar **bağlantı** nesne.  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|**InfoMessage**|Bir bilgi iletisidir bir veri kaynağından döndürülen oluşur. Bilgilendirici iletileri oluşturulan bir özel durum yol açmamasını iletileri bir veri kaynağından alınan ' dir.|  
-|**StateChange**|Oluşur, durumu **bağlantı** değişiklikler.|  
+|**InfoMessage**|Bir veri kaynağından bir bilgi iletisidir döndürüldüğünde gerçekleşir. Bilgi iletilerini bir veri kaynağından oluşturulan bir özel durum neden iletileri ' dir.|  
+|**StateChange**|Gerçekleşir, durumunu **bağlantı** değişiklikler.|  
   
 ## <a name="working-with-the-infomessage-event"></a>InfoMessage olayı ile çalışma  
- SQL Server veri kaynağı kullanarak bir, uyarılar ve bilgilendirici iletileri alabilirsiniz <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olayı <xref:System.Data.SqlClient.SqlConnection> nesnesi. 16 11 önem düzeyine sahip veri kaynağından döndürülen hatalar bir özel durum oluşturulmasına neden. Ancak, <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay, bir hata ile ilişkili olmayan veri kaynağından alınan iletileri almak için kullanılabilir. Microsoft SQL Server, söz konusu olduğunda herhangi bir hata önem derecesi 10 veya daha az ileti bilgilendirme olarak değerlendirilir ve kullanılarak yakalanabilir <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay. Daha fazla bilgi için SQL Server Books Online'da "Hata iletisi önem düzeyleri" konusuna bakın.  
+ Bir SQL Server veri kullanarak kaynak uyarıları ve bilgilendirici iletileri alabilirsiniz <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olayı <xref:System.Data.SqlClient.SqlConnection> nesne. 16 11 önem derecesi ile veri kaynağından döndürülen hata, bir özel durum oluşturulmasına neden. Ancak, <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay, bir hata ile ilişkili olmayan bir veri kaynağından alınan iletileri almak için kullanılabilir. Microsoft SQL Server, söz konusu olduğunda herhangi bir hata önem derecesi 10 veya daha küçük bir bilgi iletisidir olduğu kabul edilir ve kullanılarak yakalanabilir <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay. Daha fazla bilgi için [veritabanı altyapısı hata önem dereceleri](/sql/relational-databases/errors-events/database-engine-error-severities) makalesi.
   
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Olayı aldığı bir <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> nesnesini içeren, buna onun **hataları** özelliği, veri kaynağından alınan iletileri koleksiyonu. Sorgulayabileceğiniz **hata** hatanın kaynağını yanı sıra, hata numarası ve ileti metni için bu koleksiyonundaki nesneleri. SQL Server için .NET Framework veri sağlayıcısı ayrıca veritabanı, saklı yordam ve iletinin geldiği satır numarası hakkında ayrıntılı bilgi içerir.  
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Olay aldığında bir <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> nesnesini içeren, içinde kendi **hataları** özelliği, veri kaynağından alınan iletileri koleksiyonu. Sorgulayabilirsiniz **hata** hatanın kaynağının yanı sıra hata sayısı ve ileti metni, bu koleksiyondaki nesneleri. SQL Server için .NET Framework veri sağlayıcısı ayrıca veritabanı, saklı yordam ve iletinin geldiği satır numarası hakkında ayrıntılı bilgi içerir.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için bir olay işleyicisi ekleme gösterir <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay.  
+ Aşağıdaki kod örneği için bir olay işleyicisi eklemek gösterilmektedir <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay.  
   
 ```vb  
 ' Assumes that connection represents a SqlConnection object.  
@@ -66,17 +66,17 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>InfoMessages hataları işleme  
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Olay normalde sunucudan gönderilen bilgi ve uyarı iletileri için kov. Ancak, gerçek bir hata oluştuğunda, yürütülmesi **ExecuteNonQuery** veya **ExecuteReader** sunucu işlemi başlatan yöntem durdurulamaz ve bir özel durum.  
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> Olay normalde sunucudan gönderilen bilgilendirme ve uyarı iletileri için harekete. Ancak, gerçek bir hata oluştuğunda, yürütme **ExecuteNonQuery** veya **ExecuteReader** sunucu işlemi başlatan bir yöntemi durdurulamaz ve bir özel durum oluşturulur.  
   
- Devam etmek istiyorsanız hataları bağımsız olarak bir komut deyimlerinde kalan işleme sunucu tarafından üretilen, Ayarla <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> için `true`. Bunun yapılması neden tetiklenecek bağlantı <xref:System.Data.SqlClient.SqlConnection.InfoMessage> bir özel durum atma ve işleme kesintiye yerine hataları için olay. İstemci uygulaması bu olayı işlemek ve hata koşullarını yanıt.  
+ Devam etmek istiyorsanız hataları bağımsız olarak bir komut deyimlerin geri kalanını işlem sunucu tarafından üretilen, Ayarla <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> için `true`. Bunun yapılması bağlantı ateşlenmesine neden olur <xref:System.Data.SqlClient.SqlConnection.InfoMessage> yerine bir özel durum ve işleme kesintiye hataları için olay. İstemci uygulaması daha sonra bu olayı işleyin ve hata koşullarını yanıt.  
   
 > [!NOTE]
->  Komut işlemeyi durdur sunucuya neden olan hata 17 veya üstü önem düzeyine sahip bir özel durum olarak ele alınması gerekir. Bir özel nasıl hata olarak ele alınır bağımsız olarak bu durumda, durum <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay.  
+>  Sunucunun komut işlenmeden durdurmak neden bir hata 17 veya üzeri önem düzeyine sahip bir özel durum işlenmesi gerekir. Bu durumda, nasıl hata olarak işlenir bağımsız olarak durum <xref:System.Data.SqlClient.SqlConnection.InfoMessage> olay.  
   
-## <a name="working-with-the-statechange-event"></a>StateChange olay ile çalışma  
- **StateChange** olayı oluşur, durumu bir **bağlantı** değişiklikler. **StateChange** olayı aldığı <xref:System.Data.StateChangeEventArgs> durumundaki değişikliği belirlemek etkinleştirme **bağlantı** kullanarak **OriginalState** ve **CurrentState** özellikleri. **OriginalState** özelliği bir <xref:System.Data.ConnectionState> durumunu belirten numaralandırma **bağlantı** önce onu değiştirildi. **CurrentState** olan bir <xref:System.Data.ConnectionState> durumunu belirten numaralandırma **bağlantı** onu değiştikten sonra.  
+## <a name="working-with-the-statechange-event"></a>StateChange olayı ile çalışma  
+ **StateChange** bir olay oluşursa, durumu bir **bağlantı** değişiklikler. **StateChange** olay aldığında <xref:System.Data.StateChangeEventArgs> durumundaki değişikliği belirlemenize olanak sağlayan **bağlantı** kullanarak **OriginalState** ve **CurrentState** özellikleri. **OriginalState** özelliği bir <xref:System.Data.ConnectionState> durumunu gösteren numaralandırma **bağlantı** önceki değiştirildi. **CurrentState** olduğu bir <xref:System.Data.ConnectionState> durumunu gösteren numaralandırma **bağlantı** değiştirmeden sonra.  
   
- Aşağıdaki kod örneğinde **StateChange** konsoluna bir ileti yazmak için olay zaman durumunu **bağlantı** değişiklikler.  
+ Aşağıdaki kod örneğinde **StateChange** konsola ileti yazmak için olay olduğunda durumu **bağlantı** değişiklikler.  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  
@@ -107,4 +107,4 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

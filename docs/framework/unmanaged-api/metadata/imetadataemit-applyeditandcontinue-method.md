@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444262"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930943"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue Yöntemi
-Belirtilen meta verilerde yapılan değişikliklerle geçerli derleme kapsamı güncelleştirir.  
+Belirtilen meta verilerde yapılan değişiklikleri geçerli derleme kapsamı güncelleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>Parametreler  
  `pImport`  
- [in] İşaretçi bir <<!--zzxref:IUnknown --> `IUnknown`> taşınabilir yürütülebilir (PE) dosyasından delta meta verileri temsil eden nesne.  
+ \[içinde\] işaretçi bir [IUnknown](/cpp/atl/iunknown) taşınabilir yürütülebilir (PE) dosyasından delta meta verileri temsil eden nesne.
   
- Delta meta verileri modülün gerçek meta veri kopyası yapılan değişiklikler içeren meta veri bloğu oluşturur.  
+ Delta meta veriler modülün gerçek meta verilerinin kopyaya yapılan değişiklikler içeren bloğudur.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** Cor.h  
   
- **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** MSCorEE.dll kaynak olarak kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

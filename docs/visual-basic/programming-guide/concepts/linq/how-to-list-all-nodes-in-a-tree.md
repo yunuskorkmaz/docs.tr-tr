@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: (Visual Basic) ağacındaki tüm düğümler listesi'
+title: 'Nasıl yapılır: bir ağaç (Visual Basic) tüm düğümler listesi'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: b7bd2f3cebbf660209c47f5a4797f343b2b1e4e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643763"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929891"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Nasıl yapılır: (Visual Basic) ağacındaki tüm düğümler listesi
-Bazen bir ağacındaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntemi veya özelliği ağaç etkilemesi öğrenme kullanışlı olabilir. Tüm düğümleri metin biçiminde listeleyen bir yaklaşım özellikle ve tam olarak ağacındaki herhangi bir düğümün tanımlayan bir XPath ifadesi oluşturmaktır.  
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Nasıl yapılır: bir ağaç (Visual Basic) tüm düğümler listesi
+Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  
   
- XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri sahip daha düşük performansa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular çok daha güçlü. Ancak, XML ağaç düğümleri tanımlamak için bir yol olarak XPath iyi çalışır.  
+ XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri daha düşük performansa sahip [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çok daha güçlü sorgular. Ancak, XPath düğümleri XML ağacındaki tanımlamak için bir yol işe yarar.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir işlev gösterir `GetXPath` , herhangi bir düğüm için belirli bir XPath ifadesi XML ağacında oluşturur. Düğümleri ad alanında olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
+ Bu örnek adlı bir işlev gösterir `GetXPath` XML ağacında, herhangi bir düğüm için belirli bir XPath ifadesi oluşturur. Bir ad alanı düğümleri olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
   
- Örnek ardından düğümler çeşitli örneği içeren küçük bir XML ağaç oluşturur. Alt düğümleri arasında yineler ve her düğüm için XPath ifadesi yazdırır.  
+ Örnek daha sonra birden fazla düğüm örneği içeren küçük bir XML ağacı oluşturur. Alt düğümler yinelenir ve her düğüm için XPath ifadesi yazdırır.  
   
- XML bildirimi ağacında bir düğümü değil fark edeceksiniz.  
+ XML bildirimi ağacında bir düğümü olmadığını fark edeceksiniz.  
   
- Çeşitli düğümleri içeren bir XML dosyası verilmiştir:  
+ Birden fazla düğümleri içeren bir XML dosyası verilmiştir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ Bazen bir ağacındaki tüm düğümleri listelemek yararlıdır. Bu tam olarak 
 </Root>  
 ```  
   
- XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacında düğüm listesi aşağıdadır:  
+ XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacı düğümler listesi verilmiştir:  
   
 ```  
 /processing-instruction()  
@@ -230,7 +230,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -264,4 +264,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş sorgu teknikler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+ [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

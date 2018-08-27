@@ -4,12 +4,12 @@ description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir o
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 7400603aa11b2a741db727c97c2e4b2a17268ac0
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878825"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930804"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>API ağ geçitleri Ocelot ile uygulama
 
@@ -65,6 +65,7 @@ Tipik bir ASP.NET Core Web API'si projesi birkaç denetleyicileriyle Kataloğu m
 ```csharp
 [HttpGet]
 [Route("items/{id:int}")]
+[ProducesResponseType((int)HttpStatusCode.BadRequest)]
 [ProducesResponseType((int)HttpStatusCode.NotFound)]
 [ProducesResponseType(typeof(CatalogItem),(int)HttpStatusCode.OK)]
 public async Task<IActionResult> GetItemById(int id)
@@ -545,7 +546,7 @@ Kuberentes hizmetine dağıttığınızda, yalnızca birkaç hizmet veya uç nok
 
 -   `/` SPA istemci için web uygulaması
 -   `/webmvc` MVC web uygulaması istemci için
--   `/webstatus` İstemci web uygulaması için durum/healchecks gösteriliyor
+-   `/webstatus` İstemci web uygulaması için durum/healthchecks gösteriliyor
 -   `/webshoppingapigw` alışveriş iş süreçleri ve web BFF için
 -   `/webmarketingapigw` Pazarlama iş süreçleri ve web BFF için
 -   `/mobileshoppingapigw` Mobil BFF ve iş süreçlerini alışveriş için

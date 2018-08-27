@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d69332988c698b7dd33aeadbc2cf5d1e9ed8f8be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc105b335069635791e9e558fe6f9a28eba8b60
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282122"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931037"
 ---
-# <a name="c-special-characters"></a>C# özel karakterler
+# <a name="c-special-characters"></a>C# özel karakterleri
 
-Özel karakterler, bunlar $a için bir program öğesi (sabit değerli bir dize, bir tanımlayıcı veya bir öznitelik adı) değiştirme önceden tanımlanmış, bağlamsal karakterlerdir. C# aşağıdaki özel karakterleri destekler: 
+Özel karakterler, bunlar tanımlandıkları için program öğesi (bir sabit dizesi, tanımlayıcı veya bir öznitelik adı) değiştirme önceden tanımlanmış ve bağlamsal karakterleridir. C# şu özel karakterleri destekler: 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md), verbatim tanımlayıcı karakteri. 
+- [@](../../../csharp/language-reference/tokens/verbatim.md), tam tanımlayıcı karakter. 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md), Ara değerli dize karakter.
+- [$](../../../csharp/language-reference/tokens/interpolated.md), ilişkilendirilmiş dize karakter.
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
 
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

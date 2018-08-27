@@ -3,29 +3,29 @@ title: Ara değerli dizeler (Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 313e74d5ce252884f1df2479ef1db8b4b24b5cce
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653565"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930556"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Ara değerli dizeler (Visual Basic Başvurusu)
 
-Dizeleri oluşturmak için kullanılır.  Ara değerli bir dize içeren bir şablon dize gibi görünüyor *Ara değerli ifadeleri*.  Ara değerli bir dize içeriyor Ara değerli ifadeleri kendi dize Beyanları ile değiştiren bir dize döndürür. Bu özellik, Visual Basic 14 ve sonraki sürümlerinde kullanılabilir.
+Dizeleri oluşturmak için kullanılır.  İlişkilendirilmiş dize içeren bir şablon dize gibi görünüyor *ilişkilendirilmiş ifade*.  Bir aradeğerlendirme dizesinde içerdiği ilişkilendirilmiş ifadeler ile bunların dize temsilleri yerini alan bir dize döndürür. Bu özellik, Visual Basic 14 ve sonraki sürümlerinde kullanılabilir.
 
-Ara değerli bir dize bağımsız değişkenleri daha anlamak daha kolay bir [bileşik biçim dizesi](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Örneğin, Ara değerli dize  
+İlişkilendirilmiş dize bağımsız değişkenleri daha anlamak daha kolay anlaşılır bir [bileşik biçimlendirme dizesi](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Örneğin, ilişkilendirilmiş dize  
   
 ```vb  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}")
 ```  
-'{name}', iki ara değerli ifadeleri içerir ve '{saatleri: ss}'. Eşdeğer bileşik biçim dizesi şöyledir:
+'{name}', iki ilişkilendirilmiş ifadeler içerir ve '{saat: ss}'. Eşdeğer bileşik biçimlendirme dizesi şöyle olur:
 
 ```vb
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
 ```  
 
-Ara değerli bir dize yapıdır:  
+Bir aradeğerlendirme dizesinde yapısı şöyledir:  
   
 ```vb  
 $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."  
@@ -33,53 +33,53 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 burada: 
 
-- *Alan genişliği* alanında karakter sayısını gösteren imzalı bir tamsayıdır. Pozitif ise sağa hizalı alanıdır; negatifse, sola hizalı. 
+- *Alan genişliği* alanında karakter sayısını belirten işaretli bir tamsayıdır. Pozitif ise sağa hizalı alanıdır; negatif ise sola hizalıdır. 
 
-- *Biçim dizesi* bir biçim dizesi biçimlendirilen nesne türü için uygundur. Örneğin, bir <xref:System.DateTime> değeri, onu olabilir bir [standart tarih ve saat biçim dizesi](~/docs/standard/base-types/standard-date-and-time-format-strings.md) "D" veya "d" gibi.
+- *Biçim dizesi* bir biçim dizesi, biçimlendirilen nesnenin türü için uygundur. Örneğin, bir <xref:System.DateTime> değeri olabilir bir [standart tarih ve saat biçim dizesi](~/docs/standard/base-types/standard-date-and-time-format-strings.md) "D" veya "d" gibi.
 
 > [!IMPORTANT]
-> Arasında bir boşluk olamaz `$` ve `"` dize başlar. Bunun yapılması bir derleyici hatasına neden olur.
+> Arasında beyaz boşluk olamaz `$` ve `"` , dize başlar. Bunun yapılması, bir derleyici hatasına neden olur.
 
- Ara değerli bir dize kullanabileceğiniz bir değişmez dize değeri her yerde kullanabilirsiniz.  Ara değerli dize ara değerli dizesiyle kodu yürütür her zaman değerlendirilir. Bu, tanım ve Ara değerli bir dize değerlendirmesine ayırmanıza olanak sağlar.  
+ Bir aradeğerlendirme dizesinde kullanabileceğiniz bir dize sabit değeri her yerde kullanabilirsiniz.  İlişkilendirilmiş dize ile ilişkilendirilmiş dize kodu yürütür her zaman değerlendirilir. Bu, bir aradeğerlendirme dizesinde değerlendirmesini ve tanımı ayırmanıza olanak sağlar.  
   
- Süslü ayraç içerecek şekilde ("{" veya "}") iki süslü ayraçlar, bir ara değerli dizesinde kullanmak "{{" veya "}}".  Daha fazla ayrıntı için örtük dönüşümler bölümüne bakın.  
+ Küme ayracı içerecek şekilde ("{" veya "}") iki küme ayracı, bir aradeğerlendirme dizesinde kullanın "{{" veya "}}".  Daha fazla ayrıntı için örtülü dönüştürmeler bölümüne bakın.  
 
-Ara değerli dize tırnak işareti ("), iki nokta üst üste (:) veya virgül (,) gibi ara değerli bir dize olarak özel bir anlamı olan diğer karakterler içeriyorsa, bunlar değişmez değer metinde oluşma ya da virgülle ayrılan bir ifadede eklenmelidir kaçış Dil öğeleri ara değerli bir ifadede dahil olmaları durumunda parantez. Aşağıdaki örnek sonuç dizesinde eklemek için tırnak işaretleri çıkışları ve ifade sınırlandırmak için parantez kullanır `(age == 1 ? "" : "s")` böylece iki nokta üst üste bir biçim dizesi başlayan olarak yorumlanır değil.
+İlişkilendirilmiş dize tırnak işareti ("), iki nokta üst üste (:) veya virgül (,) gibi bir aradeğerlendirme dizesinde özel bir anlamı olan diğer karakterler içeriyorsa bunlar değişmez değer metni ortaya ya da ayrılmış bir ifadede eklenmelidir Atlanan Dil öğeleri bir ilişkilendirilmiş ifadede dahil olmaları durumunda parantez. Aşağıdaki örnek, tırnak işaretleri, sonuç dizesine eklemek çıkışları ve ifade sınırlandırmak için parantez kullanan `(age == 1 ? "" : "s")` böylece iki noktadan başlayarak bir biçim dizesi olarak yorumlanır değil.
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]  
 
 ## <a name="implicit-conversions"></a>Örtük dönüşümler  
 
-Ara değerli bir dizeden üç örtük tür dönüşümleri vardır:  
+Bir aradeğerlendirme dizesinde üç örtük tür dönüştürmelerinde vardır:  
 
-1. Ara değerli bir dizeye dönüştürme bir <xref:System.String>. Aşağıdaki örnek, Ara değerli dizesi ifadeleri kendi dize Beyanları ile değiştirilmiş bir dize döndürür. Örneğin:
+1. Bir araya alınmış dizeye dönüştürme bir <xref:System.String>. Aşağıdaki örnek, ilişkilendirilmiş dize ifadeleri ile bunların dize temsilleri değiştirilmiş bir dize döndürür. Örneğin:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]  
 
-   Bu dize yorumlama son sonucudur. Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}") için tek bir büyük ayraç dönüştürülür. 
+   Bir dize yorumu sonucunu budur. Tüm oluşumlarını çift kaşlı ayraçlar ("{{" ve "}}") için tek bir küme ayracı dönüştürülür. 
 
-2. Ara değerli bir dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak değişkeni dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, tek tek kültürler için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), açıkça veya örtük çağırarak biçim dizesi kadar çift ayraç kalır <xref:System.Object.ToString> yöntemi.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
+2. Bir araya alınmış dizeye dönüştürme bir <xref:System.IFormattable> birden çok sonuç oluşturmanıza olanak değişkeni dizeleri tek bir kültüre özgü içerikle <xref:System.IFormattable> örneği. Bu, bağımsız kültür için doğru sayısal ve tarih biçimleri gibi şeyler dahil etmek için kullanışlıdır.  Tüm oluşumlarını çift kaşlı ayraçlar ("{{" ve "}}"), açıkça veya dolaylı olarak çağırarak biçim dizesi çift kaşlı ayraçlar ermesine <xref:System.Object.ToString> yöntemi.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
 
-   Aşağıdaki örnek, alan ve özellik değerlerini yanı sıra üyeleri görüntülemek için yansıma kullanır. bir <xref:System.IFormattable> Ara değerli bir dizeden oluşturulmuş değişkeni. Ayrıca geçirir <xref:System.IFormattable> değişkenini <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemi.
+   Aşağıdaki örnek, üyeleri ve bunun yanı sıra alan ve özellik değerlerini görüntülemek için yansıtma kullanır. bir <xref:System.IFormattable> ilişkilendirilmiş bir dizeden oluşturulan değişken. Bu işlem ayrıca geçirir <xref:System.IFormattable> değişkenini <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> yöntemi.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   Ara değerli dize yalnızca yansıma kullanarak Denetlenmekte olduğunu unutmayın. Yöntemi, aşağıdaki gibi biçimlendirme dizeye geçip geçmediğini <xref:System.Console.WriteLine(System.String)>biçimi öğelerinden çözümlendiği ve sonucu dize döndürdü. 
+   Yalnızca yansıma kullanarak ilişkilendirilmiş dize inceledi olduğunu unutmayın. Aşağıdakiler gibi biçimlendirme yöntemi, bir dizeye geçip geçmediğini <xref:System.Console.WriteLine(System.String)>, biçim öğeleri çözümlendiği ve sonuç dizesi döndürdü. 
 
-3. Ara değerli bir dizeye dönüştürme bir <xref:System.FormattableString> bileşik biçim dizesi gösteren değişkeni. Bileşik biçim dizesi ve nasıl dizeyi sonucunda işler İnceleme Örneğin, bir sorgu oluşturuyorsanız ekleme saldırılara karşı korunmaya yardımcı olabilir. A <xref:System.FormattableString> de içerir:
+3. Bir araya alınmış dizeye dönüştürme bir <xref:System.FormattableString> bir bileşik biçimlendirme dizesi temsil eden değişken. Bileşik biçimlendirme dizesi ve sonuç olarak nasıl dize işleyen İnceleme Örneğin, bir sorgu oluşturuyorsanız bir ekleme saldırısına karşı korumanıza yardımcı. A <xref:System.FormattableString> de içerir:
 
-      - A <xref:System.FormattableString.ToString> için bir sonuç dize üreten aşırı <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - A <xref:System.FormattableString.ToString> için bir sonuç dizesi oluşturur aşırı <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
-      - A <xref:System.FormattableString.Invariant%2A> için bir dize üreten yöntem <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - A <xref:System.FormattableString.Invariant%2A> için bir dize üreten yöntemi <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> belirtilen kültür için bir sonuç dize üreten yöntem. 
+      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> yönteminin belirtilen kültür için bir sonuç dizesi oluşturur. 
   
-    Çift süslü ayraçlar tüm oluşumlarını ("{{" ve "}}"), format kadar çift ayraç kalır.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
+    Tüm oluşumlarını çift kaşlı ayraçlar ("{{" ve "}}"), biçimlendirme kadar çift kaşlı ayraçlar kalır.  Tüm kapsanan ilişkilendirme ifadeleri dönüştürülür {0}, {1}ve benzeri.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
- [Visual Basic Dil Başvurusu](index.md)  
+ [Visual Basic Dili Başvurusu](index.md)  
  

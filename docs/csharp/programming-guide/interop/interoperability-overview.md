@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 747b2d420beeb63b89b21dd16d2977d12bc5d580
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244195"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930790"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -24,7 +24,7 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
  Daha fazla bilgi için [yönetilmeyen DLL işlevlerini kullanma](../../../framework/interop/consuming-unmanaged-dll-functions.md) ve [nasıl yapılır: kullanım Wave dosyasını oynatmak için Platform Çağırma](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
->  [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. Dışında CLR yönetilmeyen kod çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle güvenlik riski oluşturur. Örneğin, yönetilmeyen kod yönetilmeyen kodda doğrudan CLR güvenlik mekanizmaları atlayarak kaynakları çağırabilirsiniz. Daha fazla bilgi için [.NET Framework Güvenlik](https://technet.microsoft.com/en-us/security/).  
+>  [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. Dışında CLR yönetilmeyen kod çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle güvenlik riski oluşturur. Örneğin, yönetilmeyen kod yönetilmeyen kodda doğrudan CLR güvenlik mekanizmaları atlayarak kaynakları çağırabilirsiniz. Daha fazla bilgi için [.NET içinde güvenlik](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Birlikte Çalışma  
  C++ birlikte çalışması, olarak da bilinir, yalnızca çalışır (IJW), yerel bir C++ sınıfı C# veya başka bir .NET Framework dilde yazılan kod tarafından tüketilebilir böylece sarmalamak için kullanabilirsiniz. Bunu yapmak için yerel bir DLL veya COM bileşeni sarmalamak için C++ kod yazın. Diğer .NET Framework dillerinde aksine [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] birlikte çalışabilirlik sağlar yönetilen ve yönetilmeyen kod aynı uygulama ve hatta aynı dosyanın bulunduğu desteği vardır. Ardından kullanarak C++ kodu derleme **/CLR** yönetilen bir bütünleştirilmiş kod üretmek için derleyici anahtarı. Son olarak, C# projenize derlemesine bir başvuru ekleyin ve diğer yönetilen sınıfları kullanırken Sarmalanan nesneleri kullanın.  

@@ -2,24 +2,24 @@
 title: Akış Gerçekleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 2c420bad9ad96107f56b5435efa6fffd6941cdaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50fa7ccfde544ac9e0ab762434ccc5c3b94958ea
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505543"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929253"
 ---
 # <a name="streaming-feeds-sample"></a>Akış Gerçekleştirme Örneği
-Bu örnek, çok sayıda öğe içeren dağıtım akışlarını yönetmek gösterilmiştir. Sunucu üzerinde örnek tek tek oluşturulması gecikme gösterilmiştir <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri hemen kadar akış içinde öğe ağ akışa yazılmadan önce.  
+Bu örnek çok sayıda öğe içeren dağıtım akışlarını yönetmek nasıl gösterir. Sunucuda örnek tek tek oluşturulması gecikme yapmayı gösteren <xref:System.ServiceModel.Syndication.SyndicationItem> nesneleri hemen kadar akışın içinde öğe ağ akışa yazılmadan önce.  
   
- İstemci üzerinde örnek akış biçimlendirici özel bir dağıtım okunan akışın belleğe hiçbir zaman tamamen arabelleğe alınıp böylece ayrı öğeleri ağ akıştan okumak için nasıl kullanılabileceğini gösterir.  
+ İstemcide, örnek okunan akışın belleğe hiçbir zaman tam olarak yürütülmeden, tek tek öğeleri ağ akışından okunacak akış biçimlendirici bir özel dağıtım'ın nasıl kullanılabileceğini gösterir.  
   
- En iyi dağıtım API akış yeteneğini göstermek için bu örnek sunucu sonsuz sayıda öğe içeren bir akış sunar biraz olası bir senaryo kullanır. Bu durumda, sunucunun istemci belirtilen sayıda öğeyi akıştan (varsayılan olarak, 10) okuma izni olduğunu belirler kadar akışa yeni öğeler oluşturma devam eder. Basitlik, hem istemci hem de sunucunun aynı işlem içinde uygulanan ve paylaşılan kullanın `ItemCounter` kaç istemci öğelerini izlemek için nesne üretilen. `ItemCounter` Türü yalnızca düzgün bir şekilde sonlandırmak Örnek senaryo izin vermek amacıyla var ve gösterilen deseni çekirdek öğesi değil.  
+ En iyi API dağıtım akış yeteneğini göstermek için bu örnek sunucu sonsuz sayıda öğe içeren bir akış kullanıma sunan biraz olası bir senaryo kullanır. Bu durumda, sunucunun istemci (varsayılan: 10) akıştan belirtilen sayıda öğeyi okudu belirler kadar yeni öğeler akış oluşturma devam eder. Kolaylık olması için istemci ve sunucu aynı işlem içinde uygulanır ve paylaşılan kullanın `ItemCounter` kaç istemci öğelerini izlemek için nesne oluşturulur. `ItemCounter` Türü amacı doğrultusunda yalnızca düzgün bir şekilde sonlandırmak Örnek senaryo izin vererek var ve gösterilen düzeninin bir çekirdek öğesi değil.  
   
- Visual C#, kullanan Tanıtımı yararlanır yineleyiciler (kullanarak `yield``return` anahtar sözcüğü yapı). Yineleyiciler hakkında daha fazla bilgi için MSDN'de "Yineleyiciler kullanma" konusuna bakın.  
+ Tanıtım Visual C#, yararlanır yineleyiciler (kullanarak `yield return` anahtar sözcüğü yapısı). Yineleyiciler hakkında daha fazla bilgi için MSDN'de "Yineleyicileri kullanma" konusuna bakın.  
   
 ## <a name="service"></a>Hizmet  
- Temel bir hizmet uygulayan <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi bir işleme, oluşur sözleşme.  
+ Temel hizmeti uygulayan <xref:System.ServiceModel.Web.WebGetAttribute> aşağıdaki kodda gösterildiği gibi bir işleme, oluşan sözleşme.  
   
 ```  
 [ServiceContract]  
@@ -31,7 +31,7 @@ interface IStreamingFeedService
 }  
 ```  
   
- Kullanarak bu sözleşme hizmeti uygulayan bir `ItemGenerator` olası sonsuz akışı oluşturmak için sınıf <xref:System.ServiceModel.Syndication.SyndicationItem> aşağıdaki kodda gösterildiği gibi bir yineleyici kullanarak örnekleri.  
+ Kullanarak, bu sözleşme hizmeti uygulayan bir `ItemGenerator` olası sonsuz bir akışı oluşturmak için sınıf <xref:System.ServiceModel.Syndication.SyndicationItem> aşağıdaki kodda gösterildiği gibi bir yineleyici kullanarak örnekler.  
   
 ```  
 class ItemGenerator  
@@ -49,7 +49,7 @@ class ItemGenerator
 }  
 ```  
   
- Hizmet uygulaması, akış çıkışı oluşturduğunda `ItemGenerator.GenerateItems()` arabelleğe alınan öğeleri koleksiyonu yerine kullanılır.  
+ Hizmet uygulaması, akışın çıkışına oluşturduğunda `ItemGenerator.GenerateItems()` arabelleğe alınan öğelerin koleksiyonunu yerine kullanılır.  
   
 ```  
 public Atom10FeedFormatter StreamedFeed()  
@@ -65,10 +65,10 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- Sonuç olarak, öğesi akış belleğe hiçbir zaman tamamen arabelleğe alınıp. Üzerinde bir kesme noktası ayarlayarak bu davranış gözlenir `yield``return` deyimi içinde `ItemGenerator.GenerateItems()` yöntemi ve bu kesme hizmet sonucu döndürdü sonra ilk kez karşılaşılana belirtmeye `StreamedFeed()` yöntemi.  
+ Sonuç olarak, akış öğesi hiçbir zaman tam olarak belleğe yürütülmeden. Üzerinde bir kesme noktası ayarlayarak bu davranış gözlenir `yield return` deyimi içinde `ItemGenerator.GenerateItems()` yöntemi ve bu Kesme noktasının hizmet sonucunu verdi sonra ilk kez karşılaşılanaa belirtmeye `StreamedFeed()` yöntemi.  
   
 ## <a name="client"></a>İstemci  
- Özel bir istemcinin bu örnekteki <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> belleğe arabelleğe yerine akıştaki tek tek öğelerin materialization gecikmeler uygulama. Özel `StreamedAtom10FeedFormatter` örneği aşağıdaki gibi kullanılır.  
+ Özel bir istemcinin bu <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> belleğe arabelleğe yerine akış içinde tek tek öğelerin materialization gecikmeler uygulama. Özel `StreamedAtom10FeedFormatter` örneği şu şekilde kullanılır.  
   
 ```  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
@@ -77,7 +77,7 @@ StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter)
 SyndicationFeed feed = formatter.ReadFrom(reader);  
 ```  
   
- Normal olarak yapılan bir çağrı <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> akışın tüm içeriği ağdan okuyun ve belleğe arabelleğe kadar döndürmüyor. Ancak, `StreamedAtom10FeedFormatter` Nesne geçersiz kılmaları <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> aşağıdaki kodda gösterildiği gibi yineleyici arabelleğe alınan bir koleksiyon yerine döndürülecek.  
+ Normalde, bir çağrı <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> akışın tüm içeriği ağdan okuyun ve belleğe arabelleğe kadar döndürmez. Ancak, `StreamedAtom10FeedFormatter` Nesne geçersiz kılmaları <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> aşağıdaki kodda gösterildiği gibi bir yineleyici arabelleğe alınan bir koleksiyon yerine döndürülecek.  
   
 ```  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
@@ -97,24 +97,24 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- Sonuç olarak, her bir öğeyi ağdan sonuçlarını çapraz geçiş yapan istemci uygulaması kadar okunamaz `ReadItems()` kullanmak hazırdır. Üzerinde bir kesme noktası ayarlayarak bu davranış gözlenir `yield``return` deyimi içinde `StreamedAtom10FeedFormatter.DelayReadItems()` ve bu kesme çağrısından sonra ilk kez karşılaşılana haberiniz bile `ReadFrom()` tamamlar.  
+ Sonuç olarak, her öğe ağdan sonuçlarını geçiş istemci uygulaması kadar okunamaz `ReadItems()` , kullanıma hazır. Üzerinde bir kesme noktası ayarlayarak bu davranış gözlenir `yield return` deyimi içinde `StreamedAtom10FeedFormatter.DelayReadItems()` ve bu Kesme noktasının çağrısından sonra ilk kez girildiğinde tercihinize `ReadFrom()` tamamlar.  
   
- Aşağıdaki yönergeler, derlemeyi ve çalıştırmayı örnek gösterilmektedir. Sunucunun istemci 10 Öğe Okuma sonra öğeleri oluşturma durdurur ancak çıktı istemci önemli ölçüde birden fazla 10 öğe okur gösterdiğine dikkat edin. Örnek tarafından kullanılan ağ bağlama dört kilobayt (KB) Segment veri aktaran olmasıdır. Bu nedenle, tek öğe okunur fırsatına sahip önce istemci 4 KB öğesi veri alır. (Makul boyutlu kesimler artar performans akış HTTP veri gönderme) normal davranış budur.  
+ Aşağıdaki yönergeler, derleme ve çalıştırma örneği gösterilmektedir. Sunucunun istemci 10 Öğe Okuma sonra öğeleri oluşturma durdurur ancak çıkış istemci fazla 10 öğe okur gösterdiğine dikkat edin. Örnek tarafından kullanılan ağ bağlama dört kilobayt (KB) kesimlerinde veri aktaran olmasıdır. Bu nedenle, tek bir öğesi okuma fırsatına sahip önce istemci 4 KB'lık veri öğesi alır. (Makul boyutlu kesimler arttıkça performans akış HTTP veri gönderme) normal davranış budur.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

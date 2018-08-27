@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461421"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930928"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom işlevi
 Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler.
@@ -41,27 +41,27 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `wszAncestor`  
-[in] Sınıfın adı. `wszAncestor` Geçerli bir işaret etmelidir `LPCWSTR`.
+[in] Sınıf adı. `wszAncestor` Geçerli bir işaret etmelidir `LPCWSTR`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | 0 | Geçerli nesnenin devraldığı `wszAncestor`.  |
-| `WBEM_S_FALSE` | 1. | Geçerli nesne öğesinden devralmıyor `wszAncestor`. |
+| `WBEM_S_NO_ERROR` | 0 | Geçerli nesnenin miras `wszAncestor`.  |
+| `WBEM_S_FALSE` | 1. | Geçerli nesne öğesinden devralmayan `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` olan `null`. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -1,101 +1,109 @@
 ---
-title: Paketleme ve özel My Uzantıları (Visual Basic) dağıtma
-ms.date: 07/20/2015
+title: Paketleme ve özel My uzantılarını (Visual Basic) dağıtma
+ms.date: 08/14/2018
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591865"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931498"
 ---
-# <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Paketleme ve özel My Uzantıları (Visual Basic) dağıtma
-Visual Basic, kendi özel dağıtmak kolay bir yol sağlar `My` Visual Studio şablonları kullanarak ad alanı uzantıları. Kendisi için bir proje şablonu oluşturuyorsanız, `My` uzantıları yeni proje türü ayrılmaz bir parçası, yalnızca kendi özel içerebilir `My` proje şablonu dışarı aktardığınızda uzantı kodu. Proje şablonları dışarı aktarma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Proje şablonları oluşturma](/visualstudio/ide/how-to-create-project-templates).  
-  
- Varsa özel `My` uzantısı tek kod dosyasında, kullanıcıların herhangi bir Visual Basic projesinde türüne ekleyebileceğiniz öğesi şablonu olarak dosyasını dışarı aktarabilirsiniz. Ardından ek yetenekler ve kendi özel davranışını etkinleştirmek için öğe şablonu özelleştirebilir `My` Visual Basic projesinde uzantısı. Bu özellikler şunları içerir:  
-  
--   Kullanıcıların kendi özel yönetmesine izin vererek `My` uzantı **My Extensions** Visual Basic Proje Tasarımcısı'nın sayfası.  
-  
--   Otomatik olarak kendi özel ekleme `My` uzantısı belirtilen derleme için bir başvuru olduğunda, projeye eklenir.  
-  
--   Gizleme `My` uzantısı öğesi şablonunda **Öğe Ekle** iletişim kutusunu proje öğeleri listede bulunmayan.  
-  
- Bu konuda bir özel için nasıl ele alınmıştır `My` uzantısı sunucudan yönetilebilir bir gizli öğe şablonu olarak **My Extensions** Visual Basic Proje Tasarımcısı'nın sayfası. Özel `My` uzantısı da eklenebilir otomatik olarak belirtilen derlemesine başvuru bir projeye eklendiğinde.  
-  
-## <a name="create-a-my-namespace-extension"></a>Oluşturma bir My ad uzantısı  
- Özel bir dağıtım paketi oluşturmanın ilk adımı `My` uzantısıdır uzantısı tek bir kod dosyası olarak oluşturmak için. Ayrıntılar ve özel bir oluşturma hakkında yönergeler `My` uzantısı bkz [Visual Basic'te My Namespace genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).  
-  
-## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Dışarı aktarma bir öğe şablonu olarak My ad uzantısı  
- İçeren bir kod dosyası oluşturduktan sonra `My` ad alanı uzantı kodu dosyasını Visual Studio öğe şablon olarak dışarı aktarabilirsiniz. Bir dosyayı Visual Studio öğe şablon olarak dışarı aktarma hakkında daha fazla yönerge için bkz: [nasıl yapılır: öğe şablonları oluşturma](/visualstudio/ide/how-to-create-item-templates).  
-  
+# <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>Paketleme ve özel My uzantılarını (Visual Basic) dağıtma
+
+Visual Basic özel dağıtmanız için kolay bir yol sağlar `My` Visual Studio şablonları kullanarak ad alanı uzantıları. Kendisi için bir proje şablonu oluşturuyorsanız, sizin `My` uzantıları bütünleyici yeni proje türünü, yalnızca kendi özel içerebilir `My` proje şablonu dışarı aktardığınızda uzantı kodu. Proje şablonları dışarı aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Proje şablonları oluşturma](/visualstudio/ide/how-to-create-project-templates).
+
+Varsa özel `My` uzantısıdır tek bir kod dosyasında, dosyanın her türden Visual Basic proje kullanıcıları ekleyebileceğiniz öğe şablonu dışarı aktarabilirsiniz. Ardından ek özellikleri ve özel davranışı etkinleştirmek için öğe şablonu özelleştirebilir `My` Visual Basic projesinde uzantısı. Bu özellikler şunları içerir:
+
+- Kendi özel yönetmenize izin vererek `My` uzantısından **My uzantılarını** Visual Basic Proje Tasarımcısı'nın sayfa.
+
+- Özel otomatik olarak ekleme `My` uzantısı için belirtilen derlemeyi bir başvuru olduğunda, bir projeye eklenir.
+
+- Gizleme `My` uzantı öğesi şablonunda **Öğe Ekle** iletişim kutusunu listeden proje öğelerinin bulunmaz.
+
+Bu konuda bir özel paket anlatılmaktadır `My` uzantısı alanından yönetilebilir bir gizli öğe şablonu olarak **My uzantılarını** Visual Basic Proje Tasarımcısı'nın sayfa. Özel `My` uzantısı eklenebilir otomatik olarak belirtilen bir derlemeye başvuru için bir proje eklendiğinde.
+
+## <a name="create-a-my-namespace-extension"></a>Oluşturma bir ad alanı uzantısı
+
+Bir dağıtım paketi için özel bir oluşturmanın ilk adımı `My` bir uzantısı olarak tek bir kod dosyası oluşturmak için uzantısıdır. Ayrıntıları ve özel bir oluşturma hakkında yönergeler `My` uzantısı bkz [Visual Basic'te My Namespace genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md).
+
+## <a name="export-a-my-namespace-extension-as-an-item-template"></a>Dışarı aktarma bir öğe şablonu olarak ad alanı uzantısı
+
+İçeren bir kod dosyası oluşturduktan sonra `My` ad alanı uzantısı için kod dosyasını Visual Studio öğesi şablon olarak dışarı aktarabilirsiniz. Bir dosya Visual Studio öğesi şablon olarak dışarı aktarma yönergeleri için bkz [nasıl yapılır: öğe şablonları oluşturma](/visualstudio/ide/how-to-create-item-templates).
+
 > [!NOTE]
->  Varsa, `My` ad alanı uzantı üzerinde belirli bir derleme bir bağımlılığa sahiptir, otomatik olarak yüklemek için öğe şablonu özelleştirebilirsiniz, `My` o derlemesine başvuru eklendiğinde ad alanı uzantı. Sonuç olarak, kod dosyasını Visual Studio öğe şablon olarak dışarı aktardığınızda o derleme başvurusu çıkarılacak isteyeceksiniz.  
-  
-## <a name="customize-the-item-template"></a>Öğe şablonunu özelleştirme  
- Gelen yönetilecek öğesi şablonunuzu etkinleştirebilirsiniz **My Extensions** Visual Basic Proje Tasarımcısı'nın sayfası. Belirtilen derlemesine başvuru bir projeye eklendiğinde, otomatik olarak eklenecek öğe şablonu de etkinleştirebilirsiniz. Bu özelleştirmeler etkinleştirmek için CustomData dosyasına, şablonunuzu adlı yeni bir dosya ekleyin ve ardından yeni bir öğesi için XML .vstemplate dosyanızda ekleyin.  
-  
-### <a name="add-the-customdata-file"></a>CustomData dosyası ekleme  
- CustomData dosyası bir dosya adı uzantısına sahip bir metin dosyasıdır. (Dosya adı ayarlanabilir herhangi bir değere şablonunuza anlamlı) CustomData ve XML içeriyor. CustomData dosyasındaki XML dahil etmek için Visual Basic bildirir, `My` kullanıcılar kullandığınızda uzantısı **My Extensions** Visual Basic Proje Tasarımcısı'nın sayfası. İsteğe bağlı olarak ekleyebileceğiniz <`AssemblyFullName>` CustomData dosyanızı XML özniteliği. Bu özel otomatik olarak yüklemek için Visual Basic bildirir `My` uzantısı belirli bir derleme için bir başvuru olduğunda, projeye eklenir. CustomData dosyasını oluşturmak için herhangi bir metin düzenleyicisi veya XML Düzenleyicisi'ni kullanın ve öğeyi şablonun sıkıştırılmış klasöre (.zip dosyası) ekleyin.  
-  
- Örneğin, aşağıdaki XML şablonu öğesi Visual Basic projesinde Microsoft.VisualBasic.PowerPacks.Vs.dll derleme için bir başvuru olduğunda My uzantıları klasörüne ekleyeceksiniz CustomData dosyasının içeriğini projeye eklenen gösterir.  
-  
-```xml  
-<VBMyExtensionTemplate   
-    ID="Microsoft.VisualBasic.Samples.MyExtensions.MyPrinterInfo"   
-    Version="1.0.0.0"  
-    AssemblyFullName="Microsoft.VisualBasic.PowerPacks.vs"  
-/>  
-```  
-  
- CustomData dosyasını içeren bir <`VBMyExtensionTemplate>` öğesinin aşağıdaki tabloda listelendiği gibi özniteliklere sahip.  
-  
-|Öznitelik|Açıklama|  
-|---|---|  
-|`ID`|Gerekli. Uzantı için benzersiz bir tanımlayıcı. Bu Kimliğe sahip uzantısı projeye eklenir, kullanıcının yeniden eklemek için istenmez.|  
-|`Version`|Gerekli. Öğe şablonu için bir sürüm numarası.|  
-|`AssemblyFullName`|İsteğe bağlı. Derleme adı. Eklemek için bu derlemesine başvuru projeye eklendiğinde, kullanıcı istenir `My` bu öğe şablondan uzantısı.|  
-  
-### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Ekleme \<CustomDataSignature > .vstemplate dosyasına öğesi  
- Visual Studio öğe şablonunuzu olarak tanımlamak için bir `My` ad alanı uzantı .vstemplate dosyasını öğesi şablonunuz için aynı zamanda değiştirmeniz gerekir. Eklemelisiniz bir `<CustomDataSignature>` öğesine `<TemplateData>` öğesi. `<CustomDataSignature>` Öğesi metni içermelidir `Microsoft.VisualBasic.MyExtension`, aşağıdaki örnekte gösterildiği gibi.  
-  
-```xml  
-<CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>  
-```  
-  
- Bir sıkıştırılmış (.zip dosyası) klasördeki dosyaları doğrudan değiştiremezsiniz. Sıkıştırılmış klasörden .vstemplate dosyasına kopyalayın, değiştirin ve ardından sıkıştırılmış klasörü .vstemplate dosyasında, güncelleştirilmiş kopyayla gerekir.  
-  
- Aşağıdaki örnek sahip .vstemplate dosyasının içeriğini gösterir `<CustomDataSignature>` öğe eklendi.  
-  
-```xml  
-<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
-  <TemplateData>  
-    <DefaultName>MyCustomExtensionModule.vb</DefaultName>  
-    <Name>MyPrinterInfo</Name>  
-    <Description>Custom My Extensions Item Template</Description>  
-    <ProjectType>VisualBasic</ProjectType>  
-    <SortOrder>10</SortOrder>  
-    <Icon>__TemplateIcon.ico</Icon>  
-    <CustomDataSignature      >Microsoft.VisualBasic.MyExtension</CustomDataSignature>  
-  </TemplateData>  
-  <TemplateContent>  
-    <References />  
-    <ProjectItem SubType="Code"   
-                 TargetFileName="$fileinputname$.vb"  
-                 ReplaceParameters="true"  
-     >MyCustomExtensionModule.vb</ProjectItem>  
-  </TemplateContent>  
-</VSTemplate>  
-```  
-  
-## <a name="install-the-template"></a>Şablon yükle  
- Şablon yüklemek için Visual Basic öğe şablonları klasöre (örneğin, My Documents\Visual Studio 2008\Templates\Item Templates\Visual temel) sıkıştırılmış (.zip dosyası) klasör kopyalayabilirsiniz. Alternatif olarak, şablon bir Visual Studio Yükleyicisi (.vsi) dosyası olarak yayımlayabilirsiniz.  
-  
-## <a name="see-also"></a>Ayrıca bkz.  
- [Genişletme Visual Basic'te My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- [My Extensions sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)
+> Varsa, `My` ad alanı uzantısı belirli bir derleme üzerinde bir bağımlılık içeriyor, otomatik olarak yüklemek için öğe şablonunu özelleştirebilirsiniz, `My` derlemeye bir başvuru eklendiğinde ad alanı uzantısı. Sonuç olarak, kod dosyasını Visual Studio öğesi şablon olarak dışarı aktardığınızda, bu bütünleştirilmiş kod başvurusu hariç tutmak isteyeceksiniz.
+
+## <a name="customize-the-item-template"></a>Öğe şablonu özelleştirme
+
+Öğe şablonu, gelen yönetilecek etkinleştirebilirsiniz **My uzantılarını** Visual Basic Proje Tasarımcısı'nın sayfa. Belirtilen bir derlemeye başvuru için bir proje eklendiğinde, otomatik olarak eklenecek öğe şablonu da etkinleştirebilirsiniz. Özelleştirmeleri etkinleştirmek için CustomData dosyasına, şablonunuzu adlı yeni bir dosya ekleyin ve ardından yeni bir öğe, .vstemplate dosyasında XML ekleyin.
+
+### <a name="add-the-customdata-file"></a>CustomData dosyası ekleme
+
+CustomData dosyanın dosya adı uzantısına sahip bir metin dosyasıdır. CustomData (dosya adı ayarlanabilir herhangi bir değere şablonunuza anlamlı) ve XML içeren. CustomData dosyasındaki XML dahil etmek için Visual Basic bildirir, `My` kullanıcılar kullandığında uzantısı **My uzantılarını** Visual Basic Proje Tasarımcısı'nın sayfa. İsteğe bağlı olarak ekleyebilirsiniz <`AssemblyFullName>` CustomData dosyanızı XML özniteliği. Bu özel otomatik olarak yüklemek için Visual Basic bildirir `My` uzantısı, belirli bir derleme için bir başvuru olduğunda, projeye eklenir. CustomData dosyası oluşturmak için herhangi bir metin düzenleyicisi veya XML Düzenleyicisi'ni kullanın ve ardından, öğe şablonunun sıkıştırılmış klasöre (.zip dosyası) ekleyin.
+
+Örneğin, aşağıdaki XML şablonu öğesi Visual Basic projesinde başvuru olduğunda Microsoft.VisualBasic.PowerPacks.Vs.dll derlemeye My uzantılarını klasörünün ekleyeceğiniz CustomData dosyasının içeriğini projeye eklenen gösterir.
+
+```xml
+<VBMyExtensionTemplate
+    ID="Microsoft.VisualBasic.Samples.MyExtensions.MyPrinterInfo"
+    Version="1.0.0.0"
+    AssemblyFullName="Microsoft.VisualBasic.PowerPacks.vs"
+/>
+```
+
+CustomData dosyayı içeren bir <`VBMyExtensionTemplate>` öğesinin aşağıdaki tabloda listelendiği gibi özniteliklere sahip.
+
+|Öznitelik|Açıklama|
+|---|---|
+|`ID`|Gerekli. Uzantı için benzersiz bir tanımlayıcı. Bu Kimliğine sahip uzantı projesine eklenen, kullanıcı yeniden eklemek için istenmez.|
+|`Version`|Gerekli. Öğe şablonu için bir sürüm numarası.|
+|`AssemblyFullName`|İsteğe bağlı. Bir bütünleştirilmiş kod adı. Eklemek için bu derlemeye bir başvuru projeye eklendiğinde, kullanıcıdan istenir `My` bu öğe şablonu uzantı.|
+
+### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>Ekleme \<CustomDataSignature > .vstemplate dosyasının öğesi
+
+Visual Studio öğesi şablonunuzu olarak tanımlamak için bir `My` ad alanı uzantısı da, öğe şablonu için .vstemplate dosyasını değiştirmeniz gerekir. Eklemelisiniz bir `<CustomDataSignature>` öğesine `<TemplateData>` öğesi. `<CustomDataSignature>` Öğesi metni içermelidir `Microsoft.VisualBasic.MyExtension`, aşağıdaki örnekte gösterildiği gibi.
+
+```xml
+<CustomDataSignature>Microsoft.VisualBasic.MyExtension</CustomDataSignature>
+```
+
+Bir sıkıştırılmış (.zip dosyası) klasördeki dosyaları doğrudan değişiklik yapamazsınız. .Vstemplate dosyası sıkıştırılmış bir klasörden kopyalayın değiştirin ve ardından sıkıştırılmış klasörü .vstemplate dosyasında, güncelleştirilmiş kopyayla gerekir.
+
+Aşağıdaki örnek, sahip bir .vstemplate dosyasının içeriğini gösterir `<CustomDataSignature>` öğesi eklendi.
+
+```xml
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>MyCustomExtensionModule.vb</DefaultName>
+    <Name>MyPrinterInfo</Name>
+    <Description>Custom My Extensions Item Template</Description>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.ico</Icon>
+    <CustomDataSignature      >Microsoft.VisualBasic.MyExtension</CustomDataSignature>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="Code"
+                 TargetFileName="$fileinputname$.vb"
+                 ReplaceParameters="true"
+     >MyCustomExtensionModule.vb</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
+```
+
+## <a name="install-the-template"></a>Şablon yükle
+
+Şablon yüklemek için sıkıştırılmış klasöre kopyalayabilirsiniz (*.zip* dosyası) için Visual Basic öğe şablonları klasörü. Kullanıcı öğe şablonları bulunan varsayılan olarak, *%USERPROFILE%\Documents\Visual Studio \<sürüm\>\Templates\ItemTemplates\Visual temel*. Alternatif olarak, şablon olarak bir Visual Studio yükleyicisi yayımlayabilirsiniz (*.vsi*) dosyası.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Genişletme Visual Basic'te My Namespace](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
+- [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
+- [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [My Extensions Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

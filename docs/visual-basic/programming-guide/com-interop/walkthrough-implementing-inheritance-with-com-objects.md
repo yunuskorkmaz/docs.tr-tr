@@ -8,16 +8,16 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644309"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930004"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama (Visual Basic)
-Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic önceki sürümlerinde oluşturulan COM nesnelerini sınıflarda. Özellikleri ve yöntemleri COM nesneleri devralınan sınıfların geçersiz kılındı gibi özellikleri olarak aşırı yüklendi ve herhangi bir taban sınıf yöntemlerini geçersiz veya aşırı yüklenmiş. COM nesneleri içinden devralma yeniden derleyin istemediğiniz varolan bir sınıf kitaplığı olduğunda yararlıdır.  
+Visual Basic sınıfları türetebilirsiniz `Public` olanlar Visual Basic'in önceki sürümlerinde oluşturulan COM nesnelerini sınıfları. Özellikler ve yöntemler COM nesnelerden devralınan sınıf geçersiz kılınan gibi özellikleri olarak aşırı ve herhangi bir taban sınıf yöntemlerini geçersiz kılınmış veya aşırı yüklenmiş. COM nesneleri içinden devralma derlemeniz istemediğiniz var olan bir sınıf kitaplığı olduğunda yararlıdır.  
   
- Aşağıdaki yordamda, Visual Basic 6.0 bir sınıfı içeren bir COM nesnesi oluşturmak ve temel sınıf olarak kullanmak gösterilmiştir.  
+ Aşağıdaki yordam Visual Basic 6.0 bir sınıf içeren bir COM nesnesi oluşturur ve ardından bir temel sınıf olarak kullanmak nasıl gösterir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -25,24 +25,24 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic ö
   
 1.  Visual Basic 6. 0'da, yeni bir ActiveX DLL projesi açın. Adlı bir proje `Project1` oluşturulur. Adlı bir sınıf sahip `Class1`.  
   
-2.  İçinde **Proje Gezgini**, sağ **Project1**ve ardından **Project1 özellikleri**. **Proje özelliklerini** iletişim kutusu görüntülenir.  
+2.  İçinde **Proje Gezgini**, sağ **Project1**ve ardından **Project1 özellikleri**. **Proje özellikleri** iletişim kutusu görüntülenir.  
   
-3.  Üzerinde **genel** sekmesinde **proje özelliklerini** iletişim kutusunda, proje adını yazarak değiştirme `ComObject1` içinde **proje adı** alan.  
+3.  Üzerinde **genel** sekmesinde **proje özellikleri** iletişim kutusunda, proje adını yazarak değiştirin `ComObject1` içinde **proje adı** alan.  
   
-4.  İçinde **Proje Gezgini**, sağ `Class1`ve ardından **özellikleri**. **Özellikleri** sınıfı için penceresi görüntülenir.  
+4.  İçinde **Proje Gezgini**, sağ `Class1`ve ardından **özellikleri**. **Özellikleri** sınıfı penceresi görüntülenir.  
   
-5.  Değişiklik `Name` özelliğine `MathFunctions`.  
+5.  Değişiklik `Name` özelliğini `MathFunctions`.  
   
-6.  İçinde **Proje Gezgini**, sağ `MathFunctions`ve ardından **görünümü kodu**. **Kod düzenleyicisinde** görüntülenir.  
+6.  İçinde **Proje Gezgini**, sağ `MathFunctions`ve ardından **kodu görüntüle**. **Kod Düzenleyicisi** görüntülenir.  
   
-7.  Özellik değeri tutmak için yerel bir değişken ekleyin:  
+7.  Özellik değerini tutacak bir yerel değişken ekleyin:  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  Özellik ekleme `Let` ve özellik `Get` özellik yordamları:  
+8.  Özellik Ekle `Let` ve özellik `Get` özellik yordamları:  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -66,66 +66,66 @@ Visual Basic sınıflardan türetilemeyeceğini `Public` olanlar Visual Basic ö
     End Function  
     ```  
   
-10. Oluşturma ve tıklayarak COM nesnesi kaydetme **olun ComObject1.dll** üzerinde **dosya** menüsü.  
+10. Oluşturma ve COM nesnesi tıklayarak kaydetme **olun ComObject1.dll** üzerinde **dosya** menüsü.  
   
     > [!NOTE]
-    >  Ayrıca bir COM nesnesi olarak Visual Basic ile oluşturulan bir sınıf getirebilir rağmen doğru bir COM nesnesi değil ve bu kılavuzda kullanılamaz. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Ayrıca bir COM nesnesi olarak Visual Basic ile oluşturulan bir sınıf getirebilir olsa da, doğru bir COM nesnesi değil ve bu izlenecek yolda kullanılamaz. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
- Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve Visual Studio kullanan yönetilen kod arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturur. Visual Basic oluşturur birlikte çalışma derlemesi birçok gibi COM nesneleri ile çalışma ayrıntılarını işler *birlikte çalışma hazırlama*, işlemi paketleme parametreler ve dönüş değerleri eşdeğer veri türleri için taşırken ve COM nesneleri. Visual Basic uygulama nokta derlemesine başvuru birlikte çalışma, gerçek COM nesnesi değil.  
+ Aşağıdaki yordamda, yönetilmeyen kod (örneğin, bir COM nesnesi) ve Visual Studio kullanan yönetilen kodu arasında bir köprü görevi gören bir birlikte çalışma derlemesi oluşturur. Visual Basic oluşturur birlikte çalışma derlemesi çoğu, gibi COM nesneleri ile çalışma ayrıntılarını işler *birlikte çalışma hazırlama*, işlem paketleme parametrelerinin ve dönüş değerlerine eşdeğeri veri türleri için geçerken ve COM nesneleri. Visual Basic uygulama başvurusu değil gerçek COM nesnesi birlikte çalışma derlemesine işaret eder.  
   
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 ve sonraki sürümler ile COM nesnesini kullanma  
+#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Bir COM nesnesi Visual Basic 2005 ve sonraki sürümler ile kullanmak için  
   
-1.  Yeni bir Visual Basic Windows uygulama projesi açın.  
+1.  Yeni bir Visual Basic Windows uygulaması projesi açın.  
   
-2.  Üzerinde **proje** menüsünde tıklatın **Başvuru Ekle**.  
+2.  Üzerinde **proje** menüsünü tıklatın **Başvuru Ekle**.  
   
      **Başvuru Ekle** iletişim kutusu görüntülenir.  
   
-3.  Üzerinde **COM** sekmesinde, çift `ComObject1` içinde **bileşen adı** listesinde ve tıklatın **Tamam**.  
+3.  Üzerinde **COM** sekmesinde, çift `ComObject1` içinde **bileşen adı** listelemek ve tıklayın **Tamam**.  
   
-4.  Üzerinde **proje** menüsünde tıklatın **Yeni Öğe Ekle**.  
+4.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**.  
   
      **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
   
-5.  İçinde **şablonları** bölmesinde tıklatın **sınıfı**.  
+5.  İçinde **şablonları** bölmesinde tıklayın **sınıfı**.  
   
-     Varsayılan dosya adı `Class1.vb`, görünür **adı** alan. Bu alan MathClass.vb tıklatın geçip **Ekle**. Bu adlı bir sınıf oluşturur `MathClass`ve kendi kod görüntüler.  
+     Varsayılan dosya adı `Class1.vb`, görünür **adı** alan. Bu alan MathClass.vb ve seçeneğini değiştirme **Ekle**. Bu adlı bir sınıf oluşturur `MathClass`ve kendi kodunu görüntüler.  
   
-6.  En üst kısmına aşağıdaki kodu ekleyin `MathClass` COM sınıfından için.  
+6.  Üstüne aşağıdaki kodu ekleyin `MathClass` COM sınıfından devralmak için.  
   
      [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
-7.  Aşağıdaki kodu ekleyerek temel sınıfın genel yöntem aşırı `MathClass`:  
+7.  Aşağıdaki kodu ekleyerek temel sınıfının ortak yöntemi aşırı `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
-8.  Aşağıdaki kodu ekleyerek devralınan sınıfını genişleten `MathClass`:  
+8.  Aşağıdaki kodu ekleyerek devralınan sınıf genişletmek `MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
- Yeni sınıf COM nesnesi temel sınıfının özelliklerini devralır, bir yöntemi aşırı yüklemeleri ve sınıf genişletmek için yeni bir yöntemi tanımlar.  
+ Yeni bir sınıf COM nesnesi içinde temel sınıfın özelliklerini devralır, bir yöntem yüklemeleri ve sınıf genişletmek için yeni bir yöntem tanımlar.  
   
-#### <a name="to-test-the-inherited-class"></a>Devralınan sınıfı test etmek için  
+#### <a name="to-test-the-inherited-class"></a>Devralınan sınıf test etmek için  
   
-1.  Düğme başlangıç formunuza eklemek ve kendi kod görüntülemek için çift tıklatın.  
+1.  Başlangıç formunuza bir düğme ekleyin ve ardından kendi kodunu görüntülemek için çift tıklayın.  
   
-2.  Düğmenin içinde `Click` olay işleyicisi yordamı, bir örneğini oluşturmak için aşağıdaki kodu ekleyin `MathClass` ve aşırı yüklenmiş yöntemler çağırın:  
+2.  Düğmenin içinde `Click` olay işleyici yordamı, bir örneğini oluşturmak için aşağıdaki kodu ekleyin `MathClass` ve aşırı yüklenmiş yöntemler çağırabilirsiniz:  
   
      [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  F5 tuşuna basarak projeyi çalıştırın.  
   
- Form düğmeyi tıkladığınızda `AddNumbers` yöntemi ile çağrılmadan önce `Short` veri türü numaraları ve Visual Basic temel sınıfından uygun yöntemi seçer. İkinci çağrı `AddNumbers` aşırı yükleme yönteminden yönlendirildiği `MathClass`. Üçüncü çağrıları çağrı `SubtractNumbers` sınıfını genişleten yöntemi. Taban sınıfı özelliğinde ayarlanır ve değer görüntülenir.  
+ Formunda, düğmeyi tıklattığınızda `AddNumbers` yöntemi ile ilk kez çağrıldığında `Short` sayı veri türü ve Visual Basic, temel sınıftan uygun yöntemi seçer. İçin yapılan ikinci çağrı `AddNumbers` aşırı yükleme yöntemini yönlendirildiği `MathClass`. Üçüncü çağrı çağrıları `SubtractNumbers` sınıfını genişleten bir yöntem. Temel sınıf özelliği ayarlanmış ve değeri görüntülenir.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Fark etmiş aşırı yüklenmiş `AddNumbers` işlevi aynı veri türünde COM nesnesinin temel sınıfından devralınan yöntemi olarak görünür. Visual Basic 6.0 16 bit tamsayı olarak bağımsız değişkenleri ve parametreleri temel sınıf yönteminin tanımlı, ancak türü 16 bit tamsayı olarak gösterilir çünkü `Short` Visual Basic sonraki sürümlerinde. Yeni işlev 32-bit tamsayı kabul eder ve temel sınıf işlevi overloads.  
+ Fark etmiş Aşırı yüklenen `AddNumbers` işlevi aynı veri COM nesnesinin temel sınıftan devralınan yöntemi olarak türüne sahip görünür. Temel sınıf yönteminin parametreleri ve bağımsız değişkenler, Visual Basic 6.0 16-bit tamsayılar olarak tanımlanır, ancak 16-bit tamsayı türü olarak kullanıma sunulur çünkü `Short` Visual Basic'in daha sonraki sürümleri. Yeni işlev 32-bit tamsayı kabul eder ve temel sınıf işlev aşırı.  
   
- COM nesneleri ile çalışırken, parametre boyut ve veri türlerini doğruladığınızdan emin olun. Örneğin, bir Visual Basic 6.0 koleksiyon nesnesi bağımsız değişken olarak kabul eden bir COM nesnesi kullanırken, Visual Basic daha sonraki bir sürümü koleksiyondan sağlayamaz.  
+ COM nesneleriyle çalışırken, parametre boyutunu ve veri türlerini doğruladığınızdan emin olun. Örneğin, bir Visual Basic 6.0 koleksiyon nesnesi bağımsız değişken olarak kabul eden bir COM nesnesi kullandığınızda, Visual Basic'in sonraki bir sürümünü koleksiyonundan sağlayamaz.  
   
- Özellikleri ve yöntemleri COM sınıflardan devralınan bir yerel özellik veya bir özellik değiştiren veya temel bir COM sınıfından devralınan yöntemini bildirebilir anlamı kılınabilir. Devralınan COM özelliklerini geçersiz kılma kuralları, diğer özellikleri ve yöntemleri aşağıdaki istisnalar dışında geçersiz kılma için kurallar benzerdir:  
+ Özellikler ve yöntemler COM sınıflardan devralınan bir yerel özellik veya değiştiren bir özellik veya temel bir COM sınıftan devralınan yöntemini bildirebilirsiniz anlamı kılınabilir. Devralınan COM özellikleri geçersiz kılmak için kuralları, diğer özellikleri ve yöntemleri aşağıdaki istisnalar dışında geçersiz kılmak için kurallar benzerdir:  
   
--   Herhangi bir özelliği veya bir COM sınıfından devralınan yöntemi geçersiz kılarsanız, tüm diğer devralınan özellikleri ve yöntemleri geçersiz kılması gerekir.  
+-   Herhangi bir özelliği veya bir COM sınıftan devralınan yöntemi geçersiz kılarsanız, tüm diğer devralınan özellikleri ve yöntemleri geçersiz kılmanız gerekir.  
   
 -   Kullandığınız özellikler `ByRef` parametreleri geçersiz kılınamaz.  
   

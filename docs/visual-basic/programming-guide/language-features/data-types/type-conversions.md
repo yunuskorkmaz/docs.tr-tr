@@ -10,38 +10,38 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: 7f1a571cda4f68222c5c03c3a8fe31c29eafd8c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647220"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932292"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic'de Tür Dönüştürmeleri
-Bir değeri başka bir türüne bir veri türünden değiştirme işlemi adlı *dönüştürme*. Dönüşümler olan ya da *genişletme* veya *daraltma*ilgili türleri veri kapasiteleri bağlı olarak. Ayrıca oldukları *örtük* veya *açık*sözdizimi kaynak koduna bağlı olarak.  
+Değeri bir veri türünden başka bir türe değiştirme işleminin adlı *dönüştürme*. Dönüştürmeleri değerleri *genişletme* veya *daraltma*türleri dahil veri kapasiteleri bağlı olarak. Ayrıca bunlar *örtük* veya *açık*kaynak kodunda sözdizimi bağlı olarak.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Verileri hedef türü olup olmadığını tutabilir göre sınıflandırılmış dönüşümleri açıklanmaktadır.  
+ Dönüştürmeler verileri hedef türü olup olmadığını tutabilir tarafından sınıflandırılan açıklar.  
   
  [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Olup Visual Basic bunları otomatik olarak gerçekleştirir göre sınıflandırılmış dönüşümleri açıklanır.  
+ Dönüştürmeleri olup Visual Basic bunları otomatik olarak gerçekleştirir tarafından sınıflandırılan açıklanır.  
   
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Dizeler ve sayısal arasında dönüştürme gösterilmektedir `Boolean`, veya tarih/saat değerleri.  
   
- [Nasıl yapılır: Visual Basic'de başka bir tür nesneyi Dönüştür](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Dönüştürülecek gösterilmiştir bir `Object` herhangi bir veri türü için değişken.  
+ [Nasıl yapılır: bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Nasıl dönüştürüleceğini gösterir bir `Object` değişkenini herhangi bir veri türü.  
   
  [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Farklı veri türleri dizilerine dönüştürme süreci adımları.  
+ Farklı veri türlerinin dizileri arasında dönüştürme işleminde adımları.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Visual Basic veri türleri tanıtır ve bunların nasıl kullanılacağını açıklar.  
+ Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Visual Basic tarafından sağlanan başlangıç veri türleri listelenmektedir.  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
+ Visual Basic tarafından sağlanan başlangıç veri türleri listeler.  
   
  [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  Veri türleri ile çalışırken ortaya çıkabilecek bazı yaygın sorunlar ele alınmaktadır.

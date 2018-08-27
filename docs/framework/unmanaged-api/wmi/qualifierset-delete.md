@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Delete işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_Delete işlevi bir niteleyici adıyla siler.
+description: QualifierSet_Delete işlev adına göre bir niteleyici siler.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460051"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929788"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete işlevi
 Belirtilen bir niteleyici adıyla siler.  
@@ -41,31 +41,31 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
 `wszName`   
-[in] Silmek için Niteleyici adı.
+[in] Silinecek niteleyicisi adı.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` Parametresi geçerli değil. |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | Bu niteleyici silme geçersiz. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen niteleyici bulunamadı. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Yerel geçersiz kılma silindi ve özgün niteleyici üst nesneden kapsam sürdürdü. |
+|`WBEM_E_INVALID_OPERATION` | 0x80041016 | Bu niteleyici silme geçersizdir. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen niteleyicisi nebyl nalezen. |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Yerel geçersiz kılma silindi ve özgün niteleyici üst nesneden kapsam devam ediyor. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) yöntemi.
 
-Niteleyici yayma kuralları nedeniyle, belirli bir niteleyici alınan başka bir nesneden ve yalnızca geçerli sınıf veya örnek geçersiz kılındı. Bu durumda, `QualifierSet_Delete` yöntemi özgün devralınan değerine niteleyici sıfırlar. İşlev, bu durumda durum kodunu döndürür `WBEM_S_RESET_TO_DEFAULT`.
+Niteleyici yayma kuralları nedeniyle, belirli bir niteleyici alınan başka bir nesneden ve yalnızca geçerli sınıf veya örnek içinde geçersiz kılındı. Bu durumda, `QualifierSet_Delete` yöntemi niteleyici özgün devralınan değerine sıfırlar. İşlev bu durumda, durum kodu döndürür `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

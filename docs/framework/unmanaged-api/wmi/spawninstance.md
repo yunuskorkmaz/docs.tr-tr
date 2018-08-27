@@ -1,6 +1,6 @@
 ---
 title: SpawnInstance işlevi (yönetilmeyen API Başvurusu)
-description: SpawnInstance işlevi bir sınıfının yeni bir örneğini oluşturur.
+description: SpawnInstance işlev bir sınıfın yeni bir örneğini oluşturur.
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460469"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930233"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance işlevi
 Bir sınıfın yeni bir örneğini oluşturur.    
@@ -41,38 +41,38 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `lFlags`  
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `ppNewInstance`  
-[out] İşaretçi sınıfının yeni örneğini alır. Bir hata oluşursa, yeni bir nesne değil döndürülen ve `ppNewInstance` sol değiştirilmemiş.
+[out] Sınıfının yeni örneğini işaretçisi alır. Bir hata oluşursa, yeni bir nesne değil döndürdü ve `ppNewInstance` sol değiştirilmemiş.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` Geçerli bir sınıf tanımı değil ve yeni örnekleri oluşturma olamaz. Eksik ya da, Windows yönetimiyle çağırarak kaydedilmedi [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` Geçerli bir sınıf tanımı değil ve yeni örnekleri oluşturma olamaz. Windows yönetimiyle çağırarak kayıtlı değil veya eksik olduğu [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` olan `null`. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemclassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemclassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) yöntemi.
 
-`ptr` bir sınıf tanımı Windows Yönetimi'nden alınması gerekir. (Örneğini örneğinden oluşturma desteklenir, ancak döndürülen örneği boştur unutmayın.) Ardından yeni örnekleri oluşturmak için bu sınıf tanımını kullanın. Çağrı [PutInstanceWmi](putinstancewmi.md) işlevi, Windows Yönetimi için örnek yazmak istiyorsanız gereklidir.
-
-
+`ptr` bir sınıf tanımı Windows yönetiminden alınmalıdır. (Bir örneği bir örnekten UNICODE desteklenir, ancak döndürülen örneği boş unutmayın.) Yeni örnekleri oluşturmak için bu sınıf tanımı kullanın. Bir çağrı [PutInstanceWmi](putinstancewmi.md) işlevi, örneği için Windows Yönetim yazmak istiyorsanız gereklidir.
 
 
-Döndürülen yeni nesne `ppNewClass` otomatik olarak geçerli nesnenin bir alt sınıfı haline gelir. Bu davranışı geçersiz kılınamaz. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için diğer bir yöntem yoktur.
+
+
+Yeni Nesne döndürdü `ppNewClass` otomatik olarak geçerli nesne öğesinin alt sınıfı haline gelir. Bu davranışı geçersiz kılınamaz. Alt sınıflar (türetilmiş sınıflar) oluşturulabilmesi için diğer bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

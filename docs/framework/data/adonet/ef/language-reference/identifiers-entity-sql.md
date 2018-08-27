@@ -2,121 +2,121 @@
 title: Tanımlayıcılar (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765886"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932190"
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (varlık SQL)
-Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneler, İşlevler ve benzeri özelliklerini temsil etmek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
+Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneleri, işlevleri ve benzeri özelliklerini göstermek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
   
-## <a name="simple-identifiers"></a>Basit tanımlayıcıları  
- Basit bir tanımlayıcı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alfasayısal dizisini ve alt çizgi karakteri. Tanımlayıcı ilk karakteri bir alfabetik karakterler (a-z veya A-Z) olması gerekir.  
+## <a name="simple-identifiers"></a>Basit tanımlayıcı  
+ Basit bir tanımlayıcı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alfasayısal oluşan bir dizidir ve alt çizgi karakterleri. Bir tanımlayıcının ilk karakteri alfabetik bir karakterle (a-z veya A-Z) olmalıdır.  
   
-## <a name="quoted-identifiers"></a>Tırnak işaretli tanımlayıcılar  
- Bir dizi köşeli parantez ([]) içine karakteri buna tırnak içine alınmış bir tanımlayıcıdır. Tanımlayıcıları let tırnak içine alınmış tanımlayıcıları tanımlayıcılarının geçerli olmayan karakterler ile belirtin. Tüm karakterleri köşeli ayraçlar arasında tüm boşluklar dahil olmak üzere tanımlayıcı, bir parçası haline gelir.  
+## <a name="quoted-identifiers"></a>Tırnak işaretli tanımlayıcıları  
+ Dizi köşeli ayraçlar ([]) içine alınmış karakter bir tırnak işaretli tanımlayıcıdır. Tanımlayıcıları let sınırlandırılmış tanımlayıcıları tanımlayıcıları geçerli olmayan karakterler ile belirtin. Tüm karakterleri köşeli ayraçlar arasındaki tüm boşluk da dahil olmak üzere, tanımlayıcı bir parçası haline gelir.  
   
- Tırnak içine alınmış bir tanımlayıcı şu karakterleri içeremez:  
+ Tırnak işaretli tanımlayıcı şu karakterleri içeremez:  
   
 -   Yeni satır.  
   
--   Satır başı.  
+-   Satır başı döndürür.  
   
--   Sekmeleri.  
+-   Sekmeler.  
   
 -   Geri Al.  
   
--   Ek köşeli ayraç (diğer bir deyişle, köşeli tanımlayıcı ayırmak köşeli ayraç içinde).  
+-   Ek köşeli ayraç (diğer bir deyişle,. köşeli parantez tanımlayıcıyı ayırmak köşeli ayraç içinde).  
   
- Tırnak içine alınmış tanımlayıcı Unicode karakterler içerebilir.  
+ Teklif tanımlayıcısı, Unicode karakterler içerebilir.  
   
- Tırnak işaretli tanımlayıcılar aşağıdaki örnekte gösterildiği gibi tanımlayıcılarının, geçerli olmayan özellik adı karakterleri oluşturmanızı sağlar:  
+ Tırnak işaretli tanımlayıcıları aşağıdaki örnekte gösterildiği gibi tanımlayıcıların başında geçerli olmayan özellik adı karakterleri oluşturmanıza olanak sağlar:  
   
  `SELECT c.ContactName AS [Contact Name] FROM customers AS c`  
   
- Ayrılmış bir anahtar sözcük, bir tanımlayıcı belirtin için tırnak işaretli tanımlayıcılar kullanabilirsiniz [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Örneğin, varsa türü `Email` özelliğine "Kimden" olarak adlandırılan, ayrılmış bir anahtar sözcük gelen köşeli şekilde kullanarak belirsizliğini ortadan kaldırmak:  
+ Tırnak işaretli tanımlayıcıları, ayrılmış bir anahtar sözcük tanımlayıcı belirtmek için de kullanabilirsiniz [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Örneğin, türü `Email` bir özelliğe sahip "Kimden" adlı, bu ayrılmış anahtar sözcüğü gelen köşeli parantezler, aşağıdaki gibi kullanarak ayırt etmek:  
   
  `SELECT e.[From] FROM emails AS e`  
   
- Tırnak içine alınmış bir tanımlayıcı bir nokta (.) işlecinin sağ tarafta kullanabilirsiniz.  
+ Tırnak işaretli tanımlayıcı bir nokta (.) işlecinin sağ tarafta kullanabilirsiniz.  
   
  `SELECT t FROM ts as t WHERE t.[property] == 2`  
   
- Köşeli ayraç tanımlayıcıda kullanmak için ek bir köşeli ayraç ekleyin. Aşağıdaki örnekte "`abc]`" tanımlayıcısı:  
+ Köşeli ayraç bir tanımlayıcıda kullanmak için fazladan bir köşeli ayraç ekleyin. Aşağıdaki örnekte "`abc]`" tanımlayıcısı:  
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- Tırnak içine alınmış tanımlayıcı karşılaştırma semantiği için bkz: [giriş karakter kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ Tırnak işaretli tanımlayıcı karşılaştırma semantiği için bkz: [giriş karakter kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
   
 ## <a name="aliasing-rules"></a>Diğer ad kuralları  
- Diğer adlar belirtme öneririz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , aşağıdakiler de dahil olmak üzere gerektiğinde sorgular [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oluşturur:  
+ Diğer adlar belirtme öneririz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , aşağıdakiler dahil olmak üzere gerektiğinde sorgular [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oluşturur:  
   
 -   Bir satır oluşturucusunda alanları.  
   
--   Bir sorgu ifadesi öğelerinin FROM yan tümcesinde.  
+-   Sorgu ifadesinin FROM yan tümcesi içindeki öğeler.  
   
--   Bir sorgu ifadesi öğelerin SELECT yan tümcesinde.  
+-   Sorgu ifadesinin öğeleri SELECT yan tümcesinde.  
   
--   Bir sorgu ifadesi öğelerinin GROUP BY yan tümcesinde.  
+-   Sorgu ifadesinin öğeleri GROUP BY yan tümcesinde.  
   
 ### <a name="valid-aliases"></a>Geçerli diğer adlar  
- Geçerli adlarda [!INCLUDE[esql](../../../../../../includes/esql-md.md)] basit tanımlayıcı ya da alıntı tanımlayıcısı.  
+ Geçerli diğer adlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] herhangi bir basit tanımlayıcı ya da tırnak işaretli tanımlayıcı.  
   
-### <a name="alias-generation"></a>Diğer adı oluşturma  
- Diğer ad alanında belirtilmişse, bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aşağıdaki basit kurallara göre bir diğer ad oluşturmak çalışır:  
+### <a name="alias-generation"></a>Diğer ad oluşturma  
+ Takma ad belirtilmişse bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] basit aşağıdaki kurallara göre bir diğer ad oluşturmak çalışır:  
   
--   Bu tanımlayıcı (diğer ad belirtilmeyen olduğu) sorgu ifadesi basit ya da tırnak içine alınmış bir tanımlayıcı ise, diğer ad olarak kullanılır. Örneğin, `ROW(a, [b])` hale `ROW(a AS a, [b] AS [b])`.  
+-   Bu tanımlayıcı, sorgu ifadesi (diğer ad belirsiz olduğu) bir basit veya tırnak işaretli tanımlayıcı ise, diğer ad olarak kullanılır. Örneğin, `ROW(a, [b])` olur `ROW(a AS a, [b] AS [b])`.  
   
--   Sorgu ifadesi daha karmaşık bir ifade, ancak bu sorgu ifadesi son bileşeni basit bir tanımlayıcı tanımlayıcıyı diğer ad olarak kullanılır. Örneğin, `ROW(a.a1, b.[b1])` hale `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+-   Sorgu ifadesi daha karmaşık bir ifade, ancak bu sorgu ifadesinin son bileşeni basit bir tanımlayıcı tanımlayıcı diğer adı olarak kullanılır. Örneğin, `ROW(a.a1, b.[b1])` olur `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
   
- Daha sonra diğer ad kullanmak istiyorsanız, örtük yumuşatma kullanmamanızı öneririz. Diğer adlar (örtük veya açık) çakışma veya olan aynı kapsamda yinelenen her zaman, bir derleme hatası olacaktır. Açık veya örtülü bir diğer ad aynı ada sahip olsa bile örtük bir diğer ad derleme geçer.  
+ Daha sonra diğer ad kullanmak istiyorsanız, örtük yumuşatma kullanmamanızı öneririz. Diğer adları (örtük veya açık) çakışma veya olan aynı kapsam içinde yinelenen zaman bir derleme hatası olur. Açık veya örtülü bir diğer ad aynı ada sahip olsa bile örtük bir diğer ad, derleme geçer.  
   
- Örtük adlardır kullanıcı girişini temel alarak otomatik olarak oluşturulur. Örneğin, aşağıdaki kod satırını adı hem de sütunlar için diğer ad olarak oluşturur ve bu nedenle çakışır.  
+ Kullanıcı girişini temel alarak otomatik olarak oluşturulan örtük adlardır. Örneğin, aşağıdaki kod satırını adı hem de sütunlar için diğer ad olarak oluşturur ve bu nedenle çakışır.  
   
 ```  
 SELECT product.NAME, person.NAME  
 ```  
   
- Açık diğer adlar kullanır, kod, aşağıdaki satırı de başarısız olacak. Ancak, hata kodu okuyarak daha belirgin olacaktır.  
+ Aşağıdaki açık diğer adları kullanan kod satırını de başarısız olur. Ancak, hata kodu okuyarak daha belirgin olur.  
   
 ```  
 SELECT 1 AS X, 2 AS X …  
 ```  
   
 ## <a name="scoping-rules"></a>Kapsam kuralları  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] belirli değişkenleri sorgu dilde görünür olduğunda belirleyen ölçüm kuralları tanımlar. Bazı ifadeler veya deyimleri yeni adları tanıtır. Kapsam kuralları bu adlar kullanıldığı ve ne zaman veya burada başka aynı ada sahip yeni bir bildirimde öncülü gizleyebilirsiniz belirler.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] belirli değişkenleri sorgu dilinde görünür olduğunda belirleyen ölçüm kuralları tanımlar. Bazı ifadeler veya deyimler yeni adlar sunar. Kapsam kuralları, bu adları kullanıldığı ve ne zaman ya da burada başka aynı ada sahip yeni bir bildirim, öncülü gizleyebilirsiniz belirler.  
   
- Ne zaman adları tanımlanmış bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir kapsam içinde tanımlanan söylenir. Bir kapsam sorgunun tüm bir bölgeyi kapsar. Tüm ifadeler veya belirli bir kapsam adı başvurulara bu kapsam içinde tanımlanan adlarını görebilirsiniz. Bir kapsam başlamadan önce ve bittikten sonra kapsam içinde tanımlanan adları başvurulamaz.  
+ Ne zaman adları tanımlanmış bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir kapsam içinde tanımlanması söylenir. Bir kapsam sorgunun tüm bir bölgeyi kapsar. Tüm ifadeler veya belirli bir kapsam içindeki başvurular adı bu kapsamda tanımlanan adları görebilirsiniz. Bir kapsam başlamadan önce ve bittikten sonra kapsam içinde tanımlanan adları başvurulamaz.  
   
- Kapsamlar iç içe. Bölümlerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tüm bölgeler kapak yeni kapsamlar getirir ve bu bölge diğer içerebilir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de kapsamları tanıtmak ifadeler. Kapsamlar iç içe geçmiş zaman başvurular başvuru içeren en içteki kapsamda tanımlanan adlarına yapılamaz. Başvurular, herhangi bir dış kapsam içinde tanımlanan herhangi bir ad için de yapılabilir. Aynı kapsamda tanımlanan herhangi bir iki kapsam eşdüzey kapsamlar olarak kabul edilir. Başvuruları eşdüzey kapsamlarında tanımlanan adlarına yapılamaz.  
+ Kapsamları yuvalanabilir. Bölümleri [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tüm bölgeleri kapsayan yeni kapsamlar tanıtır ve bu bölgeler diğer içerebilir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sıra kapsamı uygular ifadeler. İç içe kapsamları, başvuruları içeren reference en içteki kapsamda tanımlanan adları yapılabilir. Başvurular, herhangi bir dış kapsam içinde tanımlanan herhangi bir adı için de yapılabilir. Eşdüzey kapsamları, aynı kapsam içinde tanımlanan herhangi bir iki kapsam olarak kabul edilir. Eşdüzey kapsamlarda tanımlanan adlarına başvurular yapılamaz.  
   
- Bir iç kapsamda bildirilen ad dış kapsamda bildirilen bir ad eşleşirse, iç kapsamında veya bu kapsamı içinde bildirilen kapsamlarında başvuruları yalnızca yeni bildirilen adına bakın. Dış kapsamdaki adı gizlenir.  
+ Bir iç kapsamda bildirilen bir ad dış bir kapsamda bildirilen bir adla eşleşirse, başvurular, kapsamı içinde bildirilen kapsamları veya iç kapsamı içinde yalnızca yeni bildirilen adına bakın. Kapsam adı gizlenir.  
   
  Tanımlanmadan önce bile aynı kapsamda adları başvurulamaz.  
   
- Global adlar Yürütme Ortamı'nın bir parçası olarak bulunabilir. Bu adları kalıcı koleksiyonları veya ortam değişkenleri içerebilir. Genel olması için bir ad, en dıştaki kapsamda bildirilmelidir.  
+ Global adlar Yürütme Ortamı'nın bir parçası olarak bulunabilir. Bu adları kalıcı koleksiyonları veya ortam değişkenleri içerebilir. Bir ad genel olarak, en dıştaki kapsamda bildirilmelidir.  
   
- Parametreler bir kapsamda değildir. Parametrelere başvurular özel sözdizimi içerdiğinden parametrelerinin adları asla sorgudaki diğer adlarıyla birbiriyle çakışır.  
+ Parametreleri bir kapsamda değildir. Parametrelere yapılan başvurular özel sözdizimi içerdiğinden parametrelerinin adları hiçbir zaman sorgudaki diğer adları birbiriyle çakışır.  
   
 ### <a name="query-expressions"></a>Sorgu İfadeleri  
- Bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi yeni bir kapsam tanıtır. FROM yan tümcesinde tanımlanan adları halinde sunulan seyri içinde kapsamdan soldan sağa. Birleşim listesinde ifadeleri listede daha önce tanımlanan adlarını başvurabilir. FROM yan tümcesinde tanımlanan öğelerin ortak özellikleri (alanlar ve benzeri) gelen-kapsamına eklenmez. Diğer ad tam adıyla her zaman başvurulmalıdır. Genellikle, SELECT ifadesi tüm parçalarını gelen-kapsamı içinde olarak kabul edilir.  
+ Bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi, yeni bir kapsam tanıtır. FROM yan tümcesinde tanımlı adları içinde sunulmuştur kapsamından görünümünü sırayla soldan sağa. Birleştirme listesinde ifadeleri, listede daha önce tanımlanan adları başvurabilir. FROM yan tümcesinde belirtilen öğelerin ortak özellikleri (alanlar ve benzeri) öğesinden-kapsama eklenmez. Diğer adla nitelenmiş ada göre her zaman başvurulmalıdır. Genellikle, SELECT deyimini tüm parçalarını gelen kapsam içinde olarak kabul edilir.  
   
- GROUP BY yan tümcesi, aynı zamanda yeni bir eş kapsamı sunar. Her Grup grubunda öğe koleksiyonunu başvurduğu bir grup adı olabilir. Her gruplandırma ifadesi, Grup kapsamı içine yeni bir ad da tanıtılacaktır. Ayrıca, iç içe toplama (veya adlandırılmış grup) kapsamına eklenir. Gruplandırma ifadeleri gelen-kapsamı içinde kullanılan. GROUP BY yan tümcesi kullanıldığında, ancak Seç-LIST (yansıtma), HAVING yan tümcesi ve ORDER BY yan tümcesi Grup kapsamı ve değil gelen kapsamı içinde olduğu varsayılır. Toplamalar, aşağıdaki madde işaretli listede açıklandığı gibi özel işleme alırsınız.  
+ GROUP BY yan tümcesi, yeni bir eş kapsamı da tanıtılmaktadır. Her grupta gruptaki öğelerin koleksiyonunu gösteren bir grup adı olabilir. Her gruplandırma ifadesi Grup kapsamı yeni bir ad kullanıma sunacak. Ayrıca, iç içe toplama (veya adlandırılmış grubuyla) kapsamına eklenir. Gruplandırma ifadeleri gelen-kapsamındaki. GROUP BY yan tümcesi kullanıldığında, ancak seçim listesi (yansıtma), HAVING yan tümcesi ve ORDER BY yan tümcesi Grup kapsamı ve olmayan öğesinden kapsam içinde olarak değerlendirilir. Toplamlar, aşağıdaki madde işaretli listede açıklandığı gibi özel işleme alırsınız.  
   
- Kapsamları hakkında ek notlar şunlardır:  
+ Kapsamlar hakkında ek notlar şunlardır:  
   
--   Select listesi sırayla kapsam içine yeni adları ortaya çıkarabilir. Projeksiyon ifadeleri sağa sol tarafta öngörülen adlarını başvurabilir.  
+-   Select listesi, yeni adları sırayla kapsama çıkarabilir. Projeksiyon ifadeleri sağ, sol taraftaki öngörülen adlarına başvurabilir.  
   
--   ORDER BY yan tümcesi select listesinde belirtilen adları (diğer adları) başvurabilirsiniz.  
+-   ORDER BY yan tümcesi select listesinde belirtilen adlardır (takma adlardır) başvurabilir.  
   
--   SELECT deyimi içinde yan tümceleri Değerlendirme sırasını adları kapsam içine sunulan sırasını belirler. FROM yan tümcesi, ilk olarak, WHERE yan tümcesi, GROUP BY yan tümcesi, HAVING yan tümcesi, SELECT yan tümcesi ve ORDER BY yan tümcesi tarafından son ardından değerlendirilir.  
+-   Yan tümce seçme içinde değerlendirilme sırasını adları kapsamına sunulan sırasını belirler. FROM yan tümcesi, WHERE yan tümcesi, GROUP BY yan tümcesi, HAVING yan tümcesi, SELECT yan tümcesi ORDER BY yan tümcesi son ardından ve ilk olarak değerlendirilir.  
   
-### <a name="aggregate-handling"></a>İşleme toplama  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamalar, iki biçimlerini destekler: Koleksiyon tabanlı toplamlar ve grup tabanlı toplar. Koleksiyon tabanlı toplamalar olan tercih edilen yapı [!INCLUDE[esql](../../../../../../includes/esql-md.md)], ve grup tabanlı toplamalar SQL Uyumluluk için desteklenir.  
+### <a name="aggregate-handling"></a>Toplam işleme  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplamlar iki biçimini destekler: Koleksiyon tabanlı toplamlar ve grup tabanlı toplar. Koleksiyon tabanlı toplamaları olan tercih edilen yapısında [!INCLUDE[esql](../../../../../../includes/esql-md.md)], ve grup tabanlı toplamlar SQL Uyumluluk için desteklenir.  
   
- Bir toplama çözülürken [!INCLUDE[esql](../../../../../../includes/esql-md.md)] koleksiyon tabanlı bir toplama olarak işlemek önce çalışır. Başarısız olursa, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iç içe toplama başvuru birleşik giriş dönüştüren ve bu yeni ifade çözümlemek aşağıdaki örnekte gösterildiği gibi çalışır.  
+ Bir toplama çözülürken [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ilk olarak koleksiyon tabanlı bir toplam değerlendirilecek çalışır. Bu başarısız olursa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iç içe toplama başvuru birleşik giriş dönüştüren ve bu yeni ifade aşağıdaki örnekte gösterildiği gibi çalışır.  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
