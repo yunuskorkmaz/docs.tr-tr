@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 2f614045be1b91b9c747d961cdefd526ba1bab98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603528"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932598"
 ---
-# <a name="return-statement-visual-basic"></a><span data-ttu-id="f650d-102">Return Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f650d-102">Return Statement (Visual Basic)</span></span>
-<span data-ttu-id="f650d-103">Denetim adlı kodu döndürür bir `Function`, `Sub`, `Get`, `Set`, veya `Operator` yordamı.</span><span class="sxs-lookup"><span data-stu-id="f650d-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
+# <a name="return-statement-visual-basic"></a><span data-ttu-id="dfb68-102">Return Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dfb68-102">Return Statement (Visual Basic)</span></span>
+<span data-ttu-id="dfb68-103">Denetim çağıran koda döndürür bir `Function`, `Sub`, `Get`, `Set`, veya `Operator` yordamı.</span><span class="sxs-lookup"><span data-stu-id="dfb68-103">Returns control to the code that called a `Function`, `Sub`, `Get`, `Set`, or `Operator` procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f650d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f650d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfb68-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-104">Syntax</span></span>  
   
 ```  
 Return  
@@ -27,31 +27,31 @@ Return
 Return expression  
 ```  
   
-## <a name="part"></a><span data-ttu-id="f650d-105">Bölümü</span><span class="sxs-lookup"><span data-stu-id="f650d-105">Part</span></span>  
+## <a name="part"></a><span data-ttu-id="dfb68-105">Bölümü</span><span class="sxs-lookup"><span data-stu-id="dfb68-105">Part</span></span>  
  `expression`  
- <span data-ttu-id="f650d-106">Gerekli bir `Function`, `Get`, veya `Operator` yordamı.</span><span class="sxs-lookup"><span data-stu-id="f650d-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="f650d-107">Çağrıyı yapan kod döndürülecek değer temsil eden ifade.</span><span class="sxs-lookup"><span data-stu-id="f650d-107">Expression that represents the value to be returned to the calling code.</span></span>  
+ <span data-ttu-id="dfb68-106">Gerekli bir `Function`, `Get`, veya `Operator` yordamı.</span><span class="sxs-lookup"><span data-stu-id="dfb68-106">Required in a `Function`, `Get`, or `Operator` procedure.</span></span> <span data-ttu-id="dfb68-107">Çağrıldığı koda döndürülecek değeri temsil eden ifade.</span><span class="sxs-lookup"><span data-stu-id="dfb68-107">Expression that represents the value to be returned to the calling code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f650d-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f650d-108">Remarks</span></span>  
- <span data-ttu-id="f650d-109">İçinde bir `Sub` veya `Set` yordamı, `Return` açıklamadır eşdeğer bir `Exit Sub` veya `Exit Property` deyimi, ve `expression` sağlanmadı gerekir.</span><span class="sxs-lookup"><span data-stu-id="f650d-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfb68-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dfb68-108">Remarks</span></span>  
+ <span data-ttu-id="dfb68-109">İçinde bir `Sub` veya `Set` yordamı `Return` deyimi, bir `Exit Sub` veya `Exit Property` deyimi ve `expression` belirtilmemelidir.</span><span class="sxs-lookup"><span data-stu-id="dfb68-109">In a `Sub` or `Set` procedure, the `Return` statement is equivalent to an `Exit Sub` or `Exit Property` statement, and `expression` must not be supplied.</span></span>  
   
- <span data-ttu-id="f650d-110">İçinde bir `Function`, `Get`, veya `Operator` yordamı, `Return` deyimi içermelidir `expression`, ve `expression` yordamı dönüş türüne dönüştürülebilir bir veri türü olarak değerlendirilmelidir.</span><span class="sxs-lookup"><span data-stu-id="f650d-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="f650d-111">İçinde bir `Function` veya `Get` yordamı, oluşturmuş olmanız da dönüş değeri olarak hizmet vermek için yordam adı bir ifade atamak ve ardından yürütme alternatif bir `Exit Function` veya `Exit Property` deyimi.</span><span class="sxs-lookup"><span data-stu-id="f650d-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="f650d-112">İçinde bir `Operator` yordamı kullanmalıdır `Return``expression`.</span><span class="sxs-lookup"><span data-stu-id="f650d-112">In an `Operator` procedure, you must use `Return``expression`.</span></span>  
+ <span data-ttu-id="dfb68-110">İçinde bir `Function`, `Get`, veya `Operator` yordamı `Return` deyimi içermelidir `expression`, ve `expression` yordamın dönüş türüne dönüştürülebilir bir veri türü olarak değerlendirilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="dfb68-110">In a `Function`, `Get`, or `Operator` procedure, the `Return` statement must include `expression`, and `expression` must evaluate to a data type that is convertible to the return type of the procedure.</span></span> <span data-ttu-id="dfb68-111">İçinde bir `Function` veya `Get` yordamı,'iniz de alternatif yordam adı, dönüş değeri olarak görev yapacak bir ifade atayarak ve ardından yürütme bir `Exit Function` veya `Exit Property` deyimi.</span><span class="sxs-lookup"><span data-stu-id="dfb68-111">In a `Function` or `Get` procedure, you also have the alternative of assigning an expression to the procedure name to serve as the return value, and then executing an `Exit Function` or `Exit Property` statement.</span></span> <span data-ttu-id="dfb68-112">İçinde bir `Operator` yordamı kullanmalıdır `Return expression`.</span><span class="sxs-lookup"><span data-stu-id="dfb68-112">In an `Operator` procedure, you must use `Return expression`.</span></span>  
   
- <span data-ttu-id="f650d-113">Kadar içerebilir `Return` deyimleri aynı yordamı uygun olarak.</span><span class="sxs-lookup"><span data-stu-id="f650d-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
+ <span data-ttu-id="dfb68-113">Kadar içerebilir `Return` deyimleri aynı yordam içinde uygun şekilde.</span><span class="sxs-lookup"><span data-stu-id="dfb68-113">You can include as many `Return` statements as appropriate in the same procedure.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f650d-114">Kodda bir `Finally` blok sonra çalışan bir `Return` deyiminde bir `Try` veya `Catch` blok karşılaşıldı, ancak önce `Return` deyimini yürütür.</span><span class="sxs-lookup"><span data-stu-id="f650d-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="f650d-115">A `Return` deyimi yer olamaz bir `Finally` bloğu.</span><span class="sxs-lookup"><span data-stu-id="f650d-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
+>  <span data-ttu-id="dfb68-114">Kodda bir `Finally` blok sonra çalışan bir `Return` deyiminde bir `Try` veya `Catch` bloğudur karşılaşıldı, ancak önce `Return` deyimi yürütür.</span><span class="sxs-lookup"><span data-stu-id="dfb68-114">The code in a `Finally` block runs after a `Return` statement in a `Try` or `Catch` block is encountered, but before that `Return` statement executes.</span></span> <span data-ttu-id="dfb68-115">A `Return` deyimi eklenemiyor bir `Finally` blok.</span><span class="sxs-lookup"><span data-stu-id="dfb68-115">A `Return` statement cannot be included in a `Finally` block.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f650d-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="f650d-116">Example</span></span>  
- <span data-ttu-id="f650d-117">Aşağıdaki örnek kullanır `Return` deyimi yordamı başka bir şey yapmama gerek var çağıran kodu döndürülecek birkaç kez.</span><span class="sxs-lookup"><span data-stu-id="f650d-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
+## <a name="example"></a><span data-ttu-id="dfb68-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="dfb68-116">Example</span></span>  
+ <span data-ttu-id="dfb68-117">Aşağıdaki örnekte `Return` deyimi yordamı başka bir şey yapmanız gerekmez, çağıran koda geri dönmek için birkaç kez.</span><span class="sxs-lookup"><span data-stu-id="dfb68-117">The following example uses the `Return` statement several times to return to the calling code when the procedure does not have to do anything else.</span></span>  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="f650d-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f650d-118">See Also</span></span>  
- [<span data-ttu-id="f650d-119">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
- [<span data-ttu-id="f650d-120">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [<span data-ttu-id="f650d-121">Get Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
- [<span data-ttu-id="f650d-122">Set Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
- [<span data-ttu-id="f650d-123">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [<span data-ttu-id="f650d-124">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
- [<span data-ttu-id="f650d-125">Exit Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [<span data-ttu-id="f650d-126">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="f650d-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="dfb68-118">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="dfb68-118">See Also</span></span>  
+ [<span data-ttu-id="dfb68-119">Function Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="dfb68-120">Sub Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="dfb68-121">Get Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-121">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [<span data-ttu-id="dfb68-122">Set Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-122">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [<span data-ttu-id="dfb68-123">Operator Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-123">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="dfb68-124">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-124">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="dfb68-125">Exit Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-125">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="dfb68-126">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="dfb68-126">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

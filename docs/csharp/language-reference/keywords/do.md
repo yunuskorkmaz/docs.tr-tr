@@ -7,38 +7,38 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961332"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932393"
 ---
-# <a name="do-c-reference"></a><span data-ttu-id="cabcf-102">do (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="cabcf-102">do (C# Reference)</span></span>
+# <a name="do-c-reference"></a><span data-ttu-id="647a1-102">do (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="647a1-102">do (C# Reference)</span></span>
 
-<span data-ttu-id="cabcf-103">`do` Deyimi, bir deyimi veya bir deyimler bloğunu belirtilen bir Boole ifadesi değerlendirilir sırada yürütür `true`.</span><span class="sxs-lookup"><span data-stu-id="cabcf-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="cabcf-104">Bu ifade döngünün her yürütülmesi değerlendirilir çünkü bir `do-while` bir veya daha fazla kez döngü yürütür.</span><span class="sxs-lookup"><span data-stu-id="cabcf-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="cabcf-105">Bu farklıdır [sırada](while.md) döngü, sıfır veya daha fazla kez yürütülür.</span><span class="sxs-lookup"><span data-stu-id="cabcf-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
+<span data-ttu-id="647a1-103">`do` Deyimi, bir deyimi veya bir deyimler bloğunu belirtilen bir Boole ifadesi değerlendirilir sırada yürütür `true`.</span><span class="sxs-lookup"><span data-stu-id="647a1-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="647a1-104">Bu ifade döngünün her yürütülmesi değerlendirilir çünkü bir `do-while` bir veya daha fazla kez döngü yürütür.</span><span class="sxs-lookup"><span data-stu-id="647a1-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="647a1-105">Bu farklıdır [sırada](while.md) döngü, sıfır veya daha fazla kez yürütülür.</span><span class="sxs-lookup"><span data-stu-id="647a1-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
 
-<span data-ttu-id="cabcf-106">Herhangi bir anda işaret içinde `do` deyim bloğunu kullanarak döngü dışında bozabilir [sonu](break.md) deyimi.</span><span class="sxs-lookup"><span data-stu-id="cabcf-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+<span data-ttu-id="647a1-106">Herhangi bir anda işaret içinde `do` deyim bloğunu kullanarak döngü dışında bozabilir [sonu](break.md) deyimi.</span><span class="sxs-lookup"><span data-stu-id="647a1-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
 
-<span data-ttu-id="cabcf-107">Değerlendirme için doğrudan geçebilirsiniz `while` kullanarak ifade [devam](continue.md) deyimi.</span><span class="sxs-lookup"><span data-stu-id="cabcf-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="cabcf-108">İfade değerlendirme sonucu `true`, yürütme Döngüdeki ilk deyimde devam eder.</span><span class="sxs-lookup"><span data-stu-id="cabcf-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="cabcf-109">Aksi takdirde, yürütme döngüyü sonra ilk deyimde devam eder.</span><span class="sxs-lookup"><span data-stu-id="cabcf-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+<span data-ttu-id="647a1-107">Değerlendirme için doğrudan geçebilirsiniz `while` kullanarak ifade [devam](continue.md) deyimi.</span><span class="sxs-lookup"><span data-stu-id="647a1-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="647a1-108">İfade değerlendirme sonucu `true`, yürütme Döngüdeki ilk deyimde devam eder.</span><span class="sxs-lookup"><span data-stu-id="647a1-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="647a1-109">Aksi takdirde, yürütme döngüyü sonra ilk deyimde devam eder.</span><span class="sxs-lookup"><span data-stu-id="647a1-109">Otherwise, execution continues at the first statement after the loop.</span></span>
 
-<span data-ttu-id="cabcf-110">Ayrıca çıkış bir `do-while` tarafından döngü [goto](goto.md), [dönüş](return.md), veya [throw](throw.md) deyimleri.</span><span class="sxs-lookup"><span data-stu-id="cabcf-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="647a1-110">Ayrıca çıkış bir `do-while` tarafından döngü [goto](goto.md), [dönüş](return.md), veya [throw](throw.md) deyimleri.</span><span class="sxs-lookup"><span data-stu-id="647a1-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
-## <a name="example"></a><span data-ttu-id="cabcf-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="cabcf-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="647a1-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="647a1-111">Example</span></span>
 
-<span data-ttu-id="cabcf-112">Aşağıdaki örnek, kullanımını gösterir. `do` deyimi.</span><span class="sxs-lookup"><span data-stu-id="cabcf-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="cabcf-113">Seçin **çalıştırma** örnek kodu çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="cabcf-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="cabcf-114">Bundan sonra bu kodu Değiştir ve yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="cabcf-114">After that you can modify the code and run it again.</span></span>
+<span data-ttu-id="647a1-112">Aşağıdaki örnek, kullanımını gösterir. `do` deyimi.</span><span class="sxs-lookup"><span data-stu-id="647a1-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="647a1-113">Seçin **çalıştırma** örnek kodu çalıştırmak için.</span><span class="sxs-lookup"><span data-stu-id="647a1-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="647a1-114">Bundan sonra bu kodu Değiştir ve yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="647a1-114">After that you can modify the code and run it again.</span></span>
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="cabcf-115">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="cabcf-115">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="647a1-115">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="647a1-115">C# language specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="cabcf-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cabcf-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="647a1-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="647a1-116">See also</span></span>
 
- [<span data-ttu-id="cabcf-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="cabcf-117">C# Reference</span></span>](../index.md)  
- [<span data-ttu-id="cabcf-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="cabcf-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
- [<span data-ttu-id="cabcf-119">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="cabcf-119">C# Keywords</span></span>](index.md)  
- [<span data-ttu-id="cabcf-120">do-while Deyimi (C++)</span><span class="sxs-lookup"><span data-stu-id="cabcf-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
- [<span data-ttu-id="cabcf-121">Yineleme Deyimleri</span><span class="sxs-lookup"><span data-stu-id="cabcf-121">Iteration Statements</span></span>](iteration-statements.md)  
- [<span data-ttu-id="cabcf-122">while deyimi</span><span class="sxs-lookup"><span data-stu-id="cabcf-122">while statement</span></span>](while.md)  
+- [<span data-ttu-id="647a1-117">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="647a1-117">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="647a1-118">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="647a1-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="647a1-119">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="647a1-119">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="647a1-120">do-while Deyimi (C++)</span><span class="sxs-lookup"><span data-stu-id="647a1-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
+- [<span data-ttu-id="647a1-121">Yineleme Deyimleri</span><span class="sxs-lookup"><span data-stu-id="647a1-121">Iteration Statements</span></span>](iteration-statements.md)  
+- [<span data-ttu-id="647a1-122">while deyimi</span><span class="sxs-lookup"><span data-stu-id="647a1-122">while statement</span></span>](while.md)  

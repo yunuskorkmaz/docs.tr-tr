@@ -1,56 +1,59 @@
 ---
-title: "İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+title: İş parçacığı kullanma ve iş parçacığı oluşturma
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934137"
 ---
-# <a name="using-threads-and-threading"></a><span data-ttu-id="15789-102">İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma</span><span class="sxs-lookup"><span data-stu-id="15789-102">Using Threads and Threading</span></span>
-<span data-ttu-id="15789-103">Bu bölümdeki konular, oluşturulmasını ve yönetimini yönetilen iş parçacığı, yönetilen iş parçacığı veri geçirmek ve geri sonuçlar almak nasıl ve iş parçacıklarını yok ve işlemek nasıl ele bir <xref:System.Threading.ThreadAbortException>.</span><span class="sxs-lookup"><span data-stu-id="15789-103">The topics in this section discuss the creation and management of managed threads, how to pass data to managed threads and get results back, and how to destroy threads and handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
+# <a name="using-threads-and-threading"></a><span data-ttu-id="9b25c-102">İş parçacığı kullanma ve iş parçacığı oluşturma</span><span class="sxs-lookup"><span data-stu-id="9b25c-102">Using threads and threading</span></span>
+
+<span data-ttu-id="9b25c-103">.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9b25c-103">With .NET, you can write applications that perform multiple operations at the same time.</span></span> <span data-ttu-id="9b25c-104">Diğer işlemlerini tutan, olası işlemleriyle olarak da bilinen bir işlem ayrı iş parçacıkları üzerinde yürütebilir *çoklu iş parçacığı kullanımı* veya *serbest iş parçacığı*.</span><span class="sxs-lookup"><span data-stu-id="9b25c-104">Operations with the potential of holding up other operations can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="15789-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="15789-104">In This Section</span></span>  
- [<span data-ttu-id="15789-105">Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme</span><span class="sxs-lookup"><span data-stu-id="15789-105">Creating Threads and Passing Data at Start Time</span></span>](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- <span data-ttu-id="15789-106">Açıklanır ve nasıl yeni iş parçacıklarına veri geçirme ve veri geri alma dahil olmak üzere yönetilen iş parçacığı oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="15789-106">Discusses and demonstrates the creation of managed threads, including how to pass data to new threads and how to get data back.</span></span>  
+<span data-ttu-id="9b25c-105">Çoklu iş parçacığı kullanımı yoğun işlemci kullanımı gerektiren görevleri yürütmek gibi kullanıcı arabirimi etkin kaldığından çünkü kullanıcı girişi için daha hızlı olan uygulamalar, iş parçacıklarını ayırın.</span><span class="sxs-lookup"><span data-stu-id="9b25c-105">Applications that use multithreading are more responsive to user input because the user interface stays active as processor-intensive tasks execute on separate threads.</span></span> <span data-ttu-id="9b25c-106">Ölçeklenebilir uygulamalar oluşturma iş parçacıkları iş yükü arttıkça eklemek için çoklu iş parçacığı kullanımı da yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="9b25c-106">Multithreading is also useful when you create scalable applications, because you can add threads as the workload increases.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="9b25c-107">Uygulamanın iş parçacığı davranışı hakkında daha fazla denetime ihtiyacınız varsa, iş parçacıkları kendiniz yönetebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9b25c-107">If you need more control over the behavior of the application's threads, you can manage the threads yourself.</span></span> <span data-ttu-id="9b25c-108">Ancak, .NET Framework 4 ile başlayarak, çok iş parçacıklı programlama büyük ölçüde ile basitleştirilmiştir <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli.</span><span class="sxs-lookup"><span data-stu-id="9b25c-108">However, starting with the .NET Framework 4, multithreaded programming is greatly simplified with the <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> and <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> classes, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), new concurrent collection classes in the <xref:System.Collections.Concurrent?displayProperty=nameWithType> namespace, and a new programming model that is based on the concept of tasks rather than threads.</span></span> <span data-ttu-id="9b25c-109">Daha fazla bilgi için [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="9b25c-109">For more information, see [Parallel Programming](../parallel-programming/index.md) and [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).</span></span>
+
+## <a name="how-to-create-and-start-a-new-thread"></a><span data-ttu-id="9b25c-110">Nasıl yapılır: oluşturun ve yeni bir iş parçacığı</span><span class="sxs-lookup"><span data-stu-id="9b25c-110">How to: Create and start a new thread</span></span>
+
+<span data-ttu-id="9b25c-111">Yeni bir örneğini oluşturarak yeni bir iş parçacığı oluşturma <xref:System.Threading.Thread?displayProperty=nameWithType> sınıf ve oluşturucu için yeni bir iş parçacığı üzerinde yürütmek istediğiniz yöntemin adını sağlama.</span><span class="sxs-lookup"><span data-stu-id="9b25c-111">You create a new thread by creating a new instance of the <xref:System.Threading.Thread?displayProperty=nameWithType> class and providing the name of the method that you want to execute on a new thread to the constructor.</span></span> <span data-ttu-id="9b25c-112">Oluşturulan bir iş parçacığı için çağrı <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-112">To start a created thread, call the <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9b25c-113">Daha fazla bilgi ve örnekler için bkz. [iş parçacığı oluşturma ve geçirme verilerini başlangıç zamanı](creating-threads-and-passing-data-at-start-time.md) makale ve <xref:System.Threading.Thread> API Başvurusu.</span><span class="sxs-lookup"><span data-stu-id="9b25c-113">For more information and examples, see the [Creating threads and passing data at start time](creating-threads-and-passing-data-at-start-time.md) article and the <xref:System.Threading.Thread> API reference.</span></span>
+
+## <a name="how-to-stop-a-thread"></a><span data-ttu-id="9b25c-114">Nasıl yapılır: bir iş parçacığı Durdur</span><span class="sxs-lookup"><span data-stu-id="9b25c-114">How to: Stop a thread</span></span>
+
+<span data-ttu-id="9b25c-115">Bir iş parçacığının yürütülmesini sonlandırmak için kullanmak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-115">To terminate the execution of a thread, use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9b25c-116">Bu yöntemi oluşturur bir <xref:System.Threading.ThreadAbortException> üzerinde çağrıldığında iş parçacığı üzerinde.</span><span class="sxs-lookup"><span data-stu-id="9b25c-116">That method raises a <xref:System.Threading.ThreadAbortException> on the thread on which it's invoked.</span></span> <span data-ttu-id="9b25c-117">Daha fazla bilgi için [iş parçacıklarını yok etme](destroying-threads.md).</span><span class="sxs-lookup"><span data-stu-id="9b25c-117">For more information, see [Destroying threads](destroying-threads.md).</span></span>
+
+<span data-ttu-id="9b25c-118">Kullanabileceğiniz .NET Framework 4 ile başlayarak, <xref:System.Threading.CancellationToken?displayProperty=nameWithType> bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için.</span><span class="sxs-lookup"><span data-stu-id="9b25c-118">Beginning with the .NET Framework 4, you can use the <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel a thread cooperatively.</span></span> <span data-ttu-id="9b25c-119">Daha fazla bilgi için [iş parçacıklarını işbirliği ile iptal etme](canceling-threads-cooperatively.md).</span><span class="sxs-lookup"><span data-stu-id="9b25c-119">For more information, see [Canceling threads cooperatively](canceling-threads-cooperatively.md).</span></span>
+
+<span data-ttu-id="9b25c-120">Kullanım <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemini çağıran iş parçacığını yöntemi çağrıldığında iş parçacığının sonlandırılması için bekleyin sağlamak için.</span><span class="sxs-lookup"><span data-stu-id="9b25c-120">Use the <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> method to make the calling thread wait for the termination of the thread on which the method is invoked.</span></span>
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a><span data-ttu-id="9b25c-121">Nasıl yapılır: duraklama veya kesme bir iş parçacığı</span><span class="sxs-lookup"><span data-stu-id="9b25c-121">How to: Pause or interrupt a thread</span></span>
+
+<span data-ttu-id="9b25c-122">Kullandığınız <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> belirtilen bir zaman miktarı için geçerli iş parçacığı duraklatmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-122">You use the <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> method to pause the current thread for a specified amount of time.</span></span> <span data-ttu-id="9b25c-123">Engellenen bir iş parçacığı çağırarak engelleyebilecek <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-123">You can interrupt a blocked thread by calling the <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="9b25c-124">Daha fazla bilgi için [duraklatma ve iş parçacıkları engellemeden](pausing-and-resuming-threads.md).</span><span class="sxs-lookup"><span data-stu-id="9b25c-124">For more information, see [Pausing and interrupting threads](pausing-and-resuming-threads.md).</span></span>
+
+## <a name="thread-properties"></a><span data-ttu-id="9b25c-125">İş parçacığı özellikleri</span><span class="sxs-lookup"><span data-stu-id="9b25c-125">Thread properties</span></span>
+
+<span data-ttu-id="9b25c-126">Aşağıdaki tabloda bazı sunulmaktadır <xref:System.Threading.Thread> özellikleri:</span><span class="sxs-lookup"><span data-stu-id="9b25c-126">The following table presents some of the <xref:System.Threading.Thread> properties:</span></span>  
   
- [<span data-ttu-id="15789-107">İş Parçacıklarını Duraklatma ve Sürdürme</span><span class="sxs-lookup"><span data-stu-id="15789-107">Pausing and Resuming Threads</span></span>](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- <span data-ttu-id="15789-108">Duraklatma ve sürdürme yönetilen iş parçacığı ayrımlar açıklanır.</span><span class="sxs-lookup"><span data-stu-id="15789-108">Discusses the ramifications of pausing and resuming managed threads.</span></span>  
-  
- [<span data-ttu-id="15789-109">İş Parçacıklarını Yok Etme</span><span class="sxs-lookup"><span data-stu-id="15789-109">Destroying Threads</span></span>](../../../docs/standard/threading/destroying-threads.md)  
- <span data-ttu-id="15789-110">Yönetilen iş parçacığı ve nasıl ele alınacağını yok etme, ayrımlar anlatılmaktadır bir <xref:System.Threading.ThreadAbortException>.</span><span class="sxs-lookup"><span data-stu-id="15789-110">Discusses the ramifications of destroying managed threads, and how to handle a <xref:System.Threading.ThreadAbortException>.</span></span>  
-  
- [<span data-ttu-id="15789-111">İş Parçacıklarını Zamanlama</span><span class="sxs-lookup"><span data-stu-id="15789-111">Scheduling Threads</span></span>](../../../docs/standard/threading/scheduling-threads.md)  
- <span data-ttu-id="15789-112">İş parçacığı öncelikleri ve iş parçacığı planlama nasıl etkilediklerini anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="15789-112">Discusses thread priorities and how they affect thread scheduling.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="15789-113">Başvuru</span><span class="sxs-lookup"><span data-stu-id="15789-113">Reference</span></span>  
- <xref:System.Threading.Thread>  
- <span data-ttu-id="15789-114">Başvuru belgelerine sağlar <xref:System.Threading.Thread> yönetilmeyen koddan gelen veya yönetilen bir uygulamada oluşturuldu, yönetilen bir iş parçacığı temsil eden sınıf.</span><span class="sxs-lookup"><span data-stu-id="15789-114">Provides reference documentation for the <xref:System.Threading.Thread> class, which represents a managed thread, whether it came from unmanaged code or was created in a managed application.</span></span>  
-  
- <xref:System.Threading.ThreadStart>  
- <span data-ttu-id="15789-115">Başvuru belgelerine sağlar <xref:System.Threading.ThreadStart> parametresiz iş parçacığı yordamları temsil eden temsilci.</span><span class="sxs-lookup"><span data-stu-id="15789-115">Provides reference documentation for the <xref:System.Threading.ThreadStart> delegate that represents parameterless thread procedures.</span></span>  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- <span data-ttu-id="15789-116">Güçlü yazarak rağmen olmadan iş parçacığı yordamı için veri iletmek için kolay bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="15789-116">Provides an easy way to pass data to a thread procedure, although without strong typing.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="15789-117">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="15789-117">Related Sections</span></span>  
- [<span data-ttu-id="15789-118">İş Parçacıkları ve İş Parçacığı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="15789-118">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
- <span data-ttu-id="15789-119">Yönetilen iş parçacığı oluşturma giriş bilgileri sağlar.</span><span class="sxs-lookup"><span data-stu-id="15789-119">Provides an introduction to managed threading.</span></span>
+|<span data-ttu-id="9b25c-127">Özellik</span><span class="sxs-lookup"><span data-stu-id="9b25c-127">Property</span></span>|<span data-ttu-id="9b25c-128">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b25c-128">Description</span></span>|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|<span data-ttu-id="9b25c-129">Döndürür `true` bir iş parçacığı başlatıldı ve henüz henüz olağan biçimde sona erdi veya iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-129">Returns `true` if a thread has been started and has not yet terminated normally or aborted.</span></span>|  
+|<xref:System.Threading.Thread.IsBackground%2A>|<span data-ttu-id="9b25c-130">Alır veya bir iş parçacığı bir arka plan iş parçacığı olup olmadığını belirten Boolean bir değer ayarlar.</span><span class="sxs-lookup"><span data-stu-id="9b25c-130">Gets or sets a Boolean that indicates if a thread is a background thread.</span></span> <span data-ttu-id="9b25c-131">Arka plan iş parçacığı için ön plan iş parçacığı gibi olsa da, bir arka plan iş parçacığı bir işlem durdurma gelen engellemez.</span><span class="sxs-lookup"><span data-stu-id="9b25c-131">Background threads are like foreground threads, but a background thread doesn't prevent a process from stopping.</span></span> <span data-ttu-id="9b25c-132">Bir işleme ait tüm ön plan iş parçacığı durdurduktan sonra ortak dil çalışma zamanı işlemi çağırarak sonlandırır <xref:System.Threading.Thread.Abort%2A> hala etkin olan bir arka plan iş parçacığı üzerinde yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9b25c-132">Once all foreground threads that belong to a process have stopped, the common language runtime ends the process by calling the <xref:System.Threading.Thread.Abort%2A> method on background threads that are still alive.</span></span> <span data-ttu-id="9b25c-133">Daha fazla bilgi için [ön plan ve arka plan iş parçacığı](foreground-and-background-threads.md).</span><span class="sxs-lookup"><span data-stu-id="9b25c-133">For more information, see [Foreground and Background Threads](foreground-and-background-threads.md).</span></span>|  
+|<xref:System.Threading.Thread.Name%2A>|<span data-ttu-id="9b25c-134">Alır veya bir iş parçacığının adını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="9b25c-134">Gets or sets the name of a thread.</span></span> <span data-ttu-id="9b25c-135">Tek tek iş parçacığı hata ayıklama bulmak için en sık kullanılan.</span><span class="sxs-lookup"><span data-stu-id="9b25c-135">Most frequently used to discover individual threads when you debug.</span></span>|  
+|<xref:System.Threading.Thread.Priority%2A>|<span data-ttu-id="9b25c-136">Alır veya ayarlar bir <xref:System.Threading.ThreadPriority> iş parçacığının'zamanlama önceliğini belirlemek için işletim sistemi tarafından kullanılan bir değer.</span><span class="sxs-lookup"><span data-stu-id="9b25c-136">Gets or sets a <xref:System.Threading.ThreadPriority> value that is used by the operating system to prioritize thread scheduling.</span></span> <span data-ttu-id="9b25c-137">Daha fazla bilgi için [iş parçacıklarını zamanlama](scheduling-threads.md) ve <xref:System.Threading.ThreadPriority> başvuru.</span><span class="sxs-lookup"><span data-stu-id="9b25c-137">For more information, see [Scheduling threads](scheduling-threads.md) and the <xref:System.Threading.ThreadPriority> reference.</span></span>|  
+|<xref:System.Threading.Thread.ThreadState%2A>|<span data-ttu-id="9b25c-138">Alır bir <xref:System.Threading.ThreadState> içeren bir iş parçacığı geçerli durumlarını değeri.</span><span class="sxs-lookup"><span data-stu-id="9b25c-138">Gets a <xref:System.Threading.ThreadState> value containing the current states of a thread.</span></span>|  
+
+## <a name="see-also"></a><span data-ttu-id="9b25c-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9b25c-139">See also</span></span>
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [<span data-ttu-id="9b25c-140">İş Parçacıkları ve İş Parçacığı Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9b25c-140">Threads and Threading</span></span>](threads-and-threading.md)  
+ [<span data-ttu-id="9b25c-141">Paralel Programlama</span><span class="sxs-lookup"><span data-stu-id="9b25c-141">Parallel Programming</span></span>](../parallel-programming/index.md)  

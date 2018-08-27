@@ -1,69 +1,69 @@
 ---
-title: 'Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması oluşturma'
+title: 'Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400100"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931778"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="490a8-102">Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="490a8-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="490a8-103">Uygulandığı öğe:</span><span class="sxs-lookup"><span data-stu-id="490a8-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="41140-102">Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme</span><span class="sxs-lookup"><span data-stu-id="41140-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="41140-103">Uygulandığı öğe:</span><span class="sxs-lookup"><span data-stu-id="41140-103">Applies To</span></span>  
   
--   <span data-ttu-id="490a8-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="490a8-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="41140-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="41140-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="490a8-105">ASP.NET® Web formları</span><span class="sxs-lookup"><span data-stu-id="490a8-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="41140-105">ASP.NET® Web formları</span><span class="sxs-lookup"><span data-stu-id="41140-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="490a8-106">Özet</span><span class="sxs-lookup"><span data-stu-id="490a8-106">Summary</span></span>  
- <span data-ttu-id="490a8-107">Bu yöntem basit talep kullanan ASP.NET Web Forms uygulaması oluşturmak için ayrıntılı adım adım yordamlar verilmektedir.</span><span class="sxs-lookup"><span data-stu-id="490a8-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="490a8-108">Ayrıca, federe kimlik doğrulaması başarılı uygulama için basit talep kullanan ASP.NET Web Forms uygulamayı test etme için yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="490a8-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="490a8-109">Bu yöntem bir güvenlik belirteci hizmeti (STS) oluşturmak için ayrıntılı yönergeler sahip değil ve bir STS zaten yapılandırmış olduğunuz varsayılır.</span><span class="sxs-lookup"><span data-stu-id="490a8-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="41140-106">Özet</span><span class="sxs-lookup"><span data-stu-id="41140-106">Summary</span></span>  
+ <span data-ttu-id="41140-107">Bu nasıl yapılır basit talep kullanan ASP.NET Web Forms uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar.</span><span class="sxs-lookup"><span data-stu-id="41140-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="41140-108">Ayrıca, basit talep kullanan ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması başarılı uygulaması için test etme için yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="41140-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="41140-109">Bu nasıl yapılır bir güvenlik belirteci hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bir STS'ye zaten yapılandırmış olduğunuz varsayılır.</span><span class="sxs-lookup"><span data-stu-id="41140-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="490a8-110">İçindekiler</span><span class="sxs-lookup"><span data-stu-id="490a8-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="41140-110">İçindekiler</span><span class="sxs-lookup"><span data-stu-id="41140-110">Contents</span></span>  
   
--   <span data-ttu-id="490a8-111">Amaçlar</span><span class="sxs-lookup"><span data-stu-id="490a8-111">Objectives</span></span>  
+-   <span data-ttu-id="41140-111">Amaçlar</span><span class="sxs-lookup"><span data-stu-id="41140-111">Objectives</span></span>  
   
--   <span data-ttu-id="490a8-112">Adımların Özeti</span><span class="sxs-lookup"><span data-stu-id="490a8-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="41140-112">Adımların Özeti</span><span class="sxs-lookup"><span data-stu-id="41140-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="490a8-113">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="490a8-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="41140-113">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="41140-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="490a8-114">2. adım – ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="490a8-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="41140-114">2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="41140-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="490a8-115">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="490a8-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="41140-115">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="41140-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="490a8-116">Amaçlar</span><span class="sxs-lookup"><span data-stu-id="490a8-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="41140-116">Amaçlar</span><span class="sxs-lookup"><span data-stu-id="41140-116">Objectives</span></span>  
   
--   <span data-ttu-id="490a8-117">ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="490a8-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
+-   <span data-ttu-id="41140-117">ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="41140-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="490a8-118">Başarılı talep kullanan ASP.NET Web Forms uygulamayı test etme</span><span class="sxs-lookup"><span data-stu-id="490a8-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
+-   <span data-ttu-id="41140-118">Test başarılı talep kullanan ASP.NET Web Forms uygulaması</span><span class="sxs-lookup"><span data-stu-id="41140-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="490a8-119">Adımların Özeti</span><span class="sxs-lookup"><span data-stu-id="490a8-119">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="41140-119">Adımların Özeti</span><span class="sxs-lookup"><span data-stu-id="41140-119">Summary of Steps</span></span>  
   
--   <span data-ttu-id="490a8-120">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="490a8-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="41140-120">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="41140-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="490a8-121">2. adım – ASP.NET Web Forms uygulaması federe kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="490a8-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
+-   <span data-ttu-id="41140-121">2. adım: ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması yapılandırma</span><span class="sxs-lookup"><span data-stu-id="41140-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
   
--   <span data-ttu-id="490a8-122">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="490a8-122">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="41140-122">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="41140-122">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="490a8-123">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="490a8-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="490a8-124">Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="490a8-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="41140-123">1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="41140-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="41140-124">Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="41140-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="490a8-125">Basit bir ASP.NET uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="490a8-125">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="41140-125">Basit bir ASP.NET uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="41140-125">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="490a8-126">Visual Studio'yu başlatın ve tıklatın **dosya**, **yeni**ve ardından **proje**.</span><span class="sxs-lookup"><span data-stu-id="490a8-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="41140-126">Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.</span><span class="sxs-lookup"><span data-stu-id="41140-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="490a8-127">İçinde **yeni proje** penceresinde tıklatın **ASP.NET Web Forms uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="490a8-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="41140-127">İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.</span><span class="sxs-lookup"><span data-stu-id="41140-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="490a8-128">İçinde **adı**, girin `TestApp` ve basın **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="490a8-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="41140-128">İçinde **adı**, girin `TestApp` basın **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="41140-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="490a8-129">2. adım – ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="490a8-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="490a8-130">Bu adımda yapılandırma girişlere ekleyeceksiniz *Web.config* talep kullanan ASP.NET Web Forms uygulamanızın yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="490a8-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="41140-129">2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma</span><span class="sxs-lookup"><span data-stu-id="41140-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="41140-130">Bu adımda, yapılandırma girdileri ekler *Web.config* talep kullanan ASP.NET Web Forms uygulamanızın yapılandırma dosyası.</span><span class="sxs-lookup"><span data-stu-id="41140-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="490a8-131">ASP.NET uygulama talep tabanlı kimlik doğrulaması için yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="490a8-131">To configure ASP.NET application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="41140-131">ASP.NET uygulamanızı beyana dayalı kimlik doğrulaması için yapılandırmak için</span><span class="sxs-lookup"><span data-stu-id="41140-131">To configure ASP.NET application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="490a8-132">Aşağıdaki yapılandırma bölümü girdileri eklemek *Web.config* yapılandırma dosyası hemen sonra  **\<configuration >** açılış öğe:</span><span class="sxs-lookup"><span data-stu-id="490a8-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="41140-132">Aşağıdaki yapılandırma bölümü girdileri ekleme *Web.config* yapılandırma dosyası hemen sonra  **\<yapılandırma >** açılış öğesi:</span><span class="sxs-lookup"><span data-stu-id="41140-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -72,7 +72,7 @@ ms.locfileid: "33400100"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="490a8-133">Ekleme bir  **\<konumu >** uygulamanın Federasyon meta verilerine erişim sağlayan öğe:</span><span class="sxs-lookup"><span data-stu-id="490a8-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="41140-133">Ekleme bir  **\<konum >** uygulamanın Federasyon meta verilerine erişim sağlayan bir öğe:</span><span class="sxs-lookup"><span data-stu-id="41140-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -84,7 +84,7 @@ ms.locfileid: "33400100"
     </location>  
     ```  
   
-3.  <span data-ttu-id="490a8-134">İçinde aşağıdaki yapılandırma girdileri eklemek  **\<system.web >** kullanıcıları reddedecek şekilde öğeleri yerel kimlik doğrulamasını devre dışı ve kimlik doğrulamasını yönetmek WIF etkinleştirin.</span><span class="sxs-lookup"><span data-stu-id="490a8-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="41140-134">İçinde aşağıdaki yapılandırma girdileri eklemek  **\<system.web >** kullanıcıları engellemek için öğeleri yerel kimlik doğrulamasını devre dışı ve kimlik doğrulamasını yönetmek WIF etkinleştirme.</span><span class="sxs-lookup"><span data-stu-id="41140-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -93,7 +93,7 @@ ms.locfileid: "33400100"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="490a8-135">Ekleme bir  **\<system.webServer >** şirket dışı kimlik doğrulaması modülleri tanımlar öğesi.</span><span class="sxs-lookup"><span data-stu-id="490a8-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="490a8-136">Unutmayın *PublicKeyToken* özniteliği aynı olmalıdır *PublicKeyToken* için öznitelik  **\<configSections >** daha önce eklenen girdileri:</span><span class="sxs-lookup"><span data-stu-id="490a8-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
+4.  <span data-ttu-id="41140-135">Ekleme bir  **\<system.webServer >** şirket dışı kimlik doğrulaması modülleri tanımlayan öğe.</span><span class="sxs-lookup"><span data-stu-id="41140-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="41140-136">Unutmayın *PublicKeyToken* özniteliği aynı olmalıdır *PublicKeyToken* özniteliğini  **\<configSections >** daha önce eklediğiniz girişleri:</span><span class="sxs-lookup"><span data-stu-id="41140-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
   
     ```xml  
     <system.webServer>  
@@ -104,7 +104,7 @@ ms.locfileid: "33400100"
     </system.webServer>  
     ```  
   
-5.  <span data-ttu-id="490a8-137">Aşağıdaki Windows Identity Foundation, ASP.NET uygulamanızın URL ve bağlantı noktası numarası değerleri eşleştiğinden emin olun ve ilgili yapılandırma girdileri eklemek  **\<AudienceUri >** girişi **bölgesi**  özniteliği  **\<wsFederation >** öğesi ve **yanıt** özniteliği  **\<wsFederation >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="490a8-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="490a8-138">Ayrıca emin **veren** değer uygun güvenlik belirteci hizmeti (STS) URL'nizi.</span><span class="sxs-lookup"><span data-stu-id="490a8-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+5.  <span data-ttu-id="41140-137">Aşağıdaki Windows Identity Foundation, ASP.NET uygulamanızın URL'sini ve bağlantı noktası numarası değerlerin eşleştiğinden emin olun ve ilgili yapılandırma girdileri eklemek  **\<AudienceUri >** girişi **bölge**  özniteliği  **\<wsFederation >** öğesi ve **yanıt** özniteliği  **\<wsFederation >** öğesi.</span><span class="sxs-lookup"><span data-stu-id="41140-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="41140-138">Ayrıca emin **veren** uygun güvenlik belirteci hizmeti (STS) URL'nizi değeri.</span><span class="sxs-lookup"><span data-stu-id="41140-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -122,22 +122,22 @@ ms.locfileid: "33400100"
     </system.identityModel>  
     <system.identityModel.services>  
         <federationConfiguration>  
-            <cookieHandler requireSsl="false" />  
-            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="false" />  
+            <cookieHandler requireSsl="true" />  
+            <wsFederation passiveRedirectEnabled="true" issuer="http://localhost:13922/wsFederationSTS/Issue" realm="http://localhost:28503/" reply="http://localhost:28503/" requireHttps="true" />  
         </federationConfiguration>  
     </system.identityModel.services>  
     ```  
   
-6.  <span data-ttu-id="490a8-139">Başvuru ekleme <xref:System.IdentityModel> derleme.</span><span class="sxs-lookup"><span data-stu-id="490a8-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+6.  <span data-ttu-id="41140-139">Başvuru ekleme <xref:System.IdentityModel> derleme.</span><span class="sxs-lookup"><span data-stu-id="41140-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-7.  <span data-ttu-id="490a8-140">Hiçbir hata bulunmadığından emin olmak için çözüm derleyin.</span><span class="sxs-lookup"><span data-stu-id="490a8-140">Compile the solution to make sure there are no errors.</span></span>  
+7.  <span data-ttu-id="41140-140">Hiçbir hata olmadığından emin olmak için çözümü derleyin.</span><span class="sxs-lookup"><span data-stu-id="41140-140">Compile the solution to make sure there are no errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="490a8-141">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="490a8-141">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="490a8-142">Bu adımda ASP.NET Web Forms uygulamanızı talep tabanlı kimlik doğrulaması için yapılandırılmış test.</span><span class="sxs-lookup"><span data-stu-id="490a8-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="490a8-143">Basit bir sınama gerçekleştirmek için güvenlik belirteci hizmeti (STS) tarafından verilen belirteç talep görüntüler kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="490a8-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="41140-141">3. Adım – Çözümünüzü Test Etme</span><span class="sxs-lookup"><span data-stu-id="41140-141">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="41140-142">Bu adımda, ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırılmış test eder.</span><span class="sxs-lookup"><span data-stu-id="41140-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="41140-143">Temel bir test gerçekleştirmek için güvenlik belirteci hizmeti (STS) tarafından verilen belirteçteki talepleri görüntüler kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="41140-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="490a8-144">Talep tabanlı kimlik doğrulaması için ASP.NET Web formu uygulamanızı test etmek için</span><span class="sxs-lookup"><span data-stu-id="490a8-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="41140-144">Talep tabanlı kimlik doğrulaması için ASP.NET Web formu uygulamanızı test etmek için</span><span class="sxs-lookup"><span data-stu-id="41140-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="490a8-145">Açık **Default.aspx** altında dosya **TestApp** proje ve varolan biçimlendirme aşağıdaki biçimlendirme ile değiştirin:</span><span class="sxs-lookup"><span data-stu-id="490a8-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
+1.  <span data-ttu-id="41140-145">Açık **Default.aspx** altında dosya **TestApp** proje ve onun varolan biçimlendirmesini aşağıdaki biçimlendirme değiştirin:</span><span class="sxs-lookup"><span data-stu-id="41140-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -159,12 +159,12 @@ ms.locfileid: "33400100"
     </html>  
     ```  
   
-2.  <span data-ttu-id="490a8-146">Kaydet **Default.aspx**ve kendi kod adlı dosyanın arkasındaki açın **Default.aspx.cs**.</span><span class="sxs-lookup"><span data-stu-id="490a8-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
+2.  <span data-ttu-id="41140-146">Kaydet **Default.aspx**ve ardından adlı dosyanın arkasındaki kodunu açın **Default.aspx.cs**.</span><span class="sxs-lookup"><span data-stu-id="41140-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="490a8-147">**Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde.</span><span class="sxs-lookup"><span data-stu-id="490a8-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="490a8-148">Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgen tıklayarak.</span><span class="sxs-lookup"><span data-stu-id="490a8-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
+    >  <span data-ttu-id="41140-147">**Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde.</span><span class="sxs-lookup"><span data-stu-id="41140-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="41140-148">Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgeni tıklayarak.</span><span class="sxs-lookup"><span data-stu-id="41140-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-3.  <span data-ttu-id="490a8-149">Varolan kodla **Page_Load** yöntemi **Default.aspx.cs** aşağıdaki kod ile:</span><span class="sxs-lookup"><span data-stu-id="490a8-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
+3.  <span data-ttu-id="41140-149">Varolan kodda değiştirin **Page_Load** yöntemi **Default.aspx.cs** aşağıdaki kod ile:</span><span class="sxs-lookup"><span data-stu-id="41140-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -203,8 +203,8 @@ ms.locfileid: "33400100"
     }  
     ```  
   
-4.  <span data-ttu-id="490a8-150">Kaydet **Default.aspx.cs**ve çözümü oluşturun.</span><span class="sxs-lookup"><span data-stu-id="490a8-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
+4.  <span data-ttu-id="41140-150">Kaydet **Default.aspx.cs**ve Çözümü derleyin.</span><span class="sxs-lookup"><span data-stu-id="41140-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
   
-5.  <span data-ttu-id="490a8-151">Tuşlarına basarak çözümü çalıştırın **F5** anahtarı.</span><span class="sxs-lookup"><span data-stu-id="490a8-151">Run the solution by pressing the **F5** key.</span></span>  
+5.  <span data-ttu-id="41140-151">Tuşlarına basarak çözümü çalıştırın **F5** anahtarı.</span><span class="sxs-lookup"><span data-stu-id="41140-151">Run the solution by pressing the **F5** key.</span></span>  
   
-6.  <span data-ttu-id="490a8-152">İçin güvenlik belirteci hizmeti tarafından verilen belirteç talep görüntüler sayfa sunulacaktır.</span><span class="sxs-lookup"><span data-stu-id="490a8-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
+6.  <span data-ttu-id="41140-152">İçin güvenlik belirteci hizmeti tarafından verilmiş belirteçteki talepleri gösteren sayfa ile sunulan.</span><span class="sxs-lookup"><span data-stu-id="41140-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
