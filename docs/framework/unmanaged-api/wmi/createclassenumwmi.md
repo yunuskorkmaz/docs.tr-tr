@@ -1,6 +1,6 @@
 ---
 title: CreateClassEnumWmi işlevi (yönetilmeyen API Başvurusu)
-description: CreateClassEnumWmi işlevi belirtilen ölçütleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür.
+description: CreateClassEnumWmi işlevi, belirtilen ölçütleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür.
 ms.date: 11/06/2017
 api_name:
 - CreateClassEnumWmi
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461460"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908189"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi işlevi
-Belirtilen seçim ölçütü karşılayan tüm sınıflar için bir numaralandırıcı döndürür.  
+Belirtilen seçim kriterleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -48,65 +48,65 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parametreler
 
 `strSuperclass`    
-[in] Aksi takdirde `null` veya boş, bir üst sınıf; adını belirtir, bu sınıfın yalnızca alt sınıfların Numaralandırıcı döndürür. Eğer öyleyse `null` ya da boş ve `lFlags` WBEM_FLAG_SHALLOW ise, yalnızca üst düzey sınıflar (hiçbir üst sınıf sınıflarıyla) döndürür. Eğer öyleyse `null` ya da boş ve `lFlags` olan `WBEM_FLAG_DEEP`, ad alanındaki tüm sınıfları döndürür.
+[in] Aksi takdirde `null` veya boş, bir üst sınıf; adını belirtir. yalnızca alt sınıfları bu sınıftan bir numaralandırıcı döndürür. Eğer öyleyse `null` veya boş ve `lFlags` WBEM_FLAG_SHALLOW ise, yalnızca üst düzey sınıflar (hiçbir üst sınıf ile sınıflar) döndürür. Eğer öyleyse `null` veya boş ve `lFlags` olduğu `WBEM_FLAG_DEEP`, ad alanındaki tüm sınıfları döndürür.
 
 `lFlags`   
-[in] Bu işlev davranışını etkileyen bayrak birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda: 
+[in] Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda: 
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Geçerli bağlantının yerel yerelleştirilmiş ad alanında depolanan değiştirilen niteleyicileri kümesi, işlevi alır <br/> Aksi durumda kümesi işlevi yalnızca hemen ad alanında depolanan niteleyicileri alır. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Geçerli bağlantının yerel yerelleştirilmiş ad alanında depolanan değiştirilen niteleyicileri işlev kümesini alır <br/> Aksi durumda, küme yalnızca anında ad alanında depolanan niteleyicileri işlevi alır. |
 | `WBEM_FLAG_DEEP` | 0 | Numaralandırma, hiyerarşi, ancak bu sınıfın tüm alt sınıflar içerir. |
-| `WBEM_FLAG_SHALLOW` | 1. | Numaralandırma yalnızca saf bu sınıfın örnekleri içerir ve bu sınıfında bulunmayan özellikleri tedarik alt sınıfların tüm örneklerini dışlar. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumlu bir çağrı neden olur. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlevi yalnızca ileri bir numaralandırıcı döndürür. Genellikle, yalnızca ileri numaralandırıcılar daha hızlı ve geleneksel numaralandırıcılar daha az bellek kullanır, ancak çağrıları izin verme [kopya](clone.md). |
+| `WBEM_FLAG_SHALLOW` | 1. | Bu sınıfın yalnızca saf örneklerini içerir ve bu sınıfında bulunmayan özellikleri tedarik alt sınıfların tüm örneklerini dahil değildir. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev yalnızca iletme bir numaralandırıcı döndürür. Genellikle, yalnızca iletme numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılar daha az bellek kullanır, ancak çağrısına izin verme [kopya](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | Serbest bırakılana kadar WMI enumration nesnelerine işaretçiler korur. | 
 
 Önerilen bayraklar `WBEM_FLAG_RETURN_IMMEDIATELY` ve `WBEM_FLAG_FORWARD_ONLY` en iyi performans için.
 
 `pCtx`  
-[in] Bu değer genellikle `null`. Aksi takdirde, gösteren bir işaretçidir bir [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) istenen sınıfları sağlayarak sağlayıcı tarafından kullanılan örnek. 
+[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen sınıfları sağlayan sağlayıcı tarafından kullanılan bir örnek. 
 
 `ppEnum`  
-[out] İşaretçi Numaralandırıcı alır.
+[out] İşaretçi numaralandırıcıyı alır.
 
 `authLevel`  
-[in] Kimlik doğrulama düzeyi.
+[in] Yetkilendirme düzeyi.
 
 `impLevel` [in] Kimliğe bürünme düzeyi.
 
 `pCurrentNamespace`   
-[in] Bir işaretçi bir [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) geçerli ad alanını temsil eden nesne.
+[in] Bir işaretçi bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) geçerli ad alanını temsil eden nesne.
 
 `strUser`   
-[in] Kullanıcı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.
+[in] Kullanıcı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
 `strPassword`   
-[in] Parola. Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.
+[in] Parola. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
 `strAuthority`   
-[in] Kullanıcının etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.
+[in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcı, bir veya daha fazla işlev döndürebilir sınıfları görüntüleme izni yok. |
-| `WBEM_E_FAILED` | 0x80041001 | Belirlenemeyen bir hata oluştu. |
+| `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` mevcut değil. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durduruldu ve yeniden başlatma. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ile WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durdu ve yeniden başlatılıyor. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemServices::CreateClassEnum](https://msdn.microsoft.com/library/aa392095(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemServices::CreateClassEnum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createclassenum) yöntemi.
 
-İşlev çağrısı başarısız olursa, çağırarak ek hata bilgileri elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
+İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -7,26 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: 9bc7d50b77fe42861f92cc5bec946678d11d73d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: eb0cde84ff57d1c4b927850ffddb1e862ea8f8dc
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266870"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925704"
 ---
 # <a name="into-c-reference"></a>into (C# Başvurusu)
-`into` Bağlamsal anahtar sözcüğü, sonuçlarını depolamak için geçici bir tanımlayıcı oluşturmak için kullanılabilecek bir [grup](../../../csharp/language-reference/keywords/group-clause.md), [birleştirme](../../../csharp/language-reference/keywords/join-clause.md) veya [seçin](../../../csharp/language-reference/keywords/select-clause.md) yan tümcesine yeni bir tanımlayıcısı. Bu tanımlayıcı kendisini ek sorgu komutları için bir oluşturucuyu olabilir. Kullanıldığında bir `group` veya `select` yan tümcesi, yeni tanımlayıcısı kullanımını bazen olarak adlandırılır bir *devamlılık*.  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanımı gösterilmiştir `into` geçici bir tanımlayıcı etkinleştirmek için anahtar sözcüğü `fruitGroup` oluşturulursa bir tür olan `IGrouping`. Tanımlayıcısını kullanarak, çağırabilirsiniz <xref:System.Linq.Enumerable.Count%2A> yöntemi her grubu ve iki veya daha fazla sözcükleri içeren gruplar'ı seçin.  
-  
- [!code-csharp[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/into_1.cs)]  
-  
- Kullanımını `into` içinde bir `group` yan tümcesi, yalnızca gerekli her grubu ek sorgu işlemleri istediğinizde. Daha fazla bilgi için bkz: [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md).  
-  
- Kullanımına ilişkin bir örnek `into` içinde bir `join` yan tümcesi, bkz: [JOIN yan tümcesi](../../../csharp/language-reference/keywords/join-clause.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md)
+
+`into` Bağlamsal anahtar sözcüğü, sonuçlarını depolamak için geçici bir tanımlayıcı oluşturmak için kullanılabilir bir [grubu](group-clause.md), [birleştirme](join-clause.md) veya [seçin](select-clause.md) yan tümcesine yeni bir tanımlayıcı. Bu tanımlayıcı kendisini ek sorgu komutları için bir oluşturucuyu olabilir. Kullanıldığında bir `group` veya `select` yan tümcesi, yeni tanımlayıcısı kullanımını bazen olarak adlandırılır bir *devamlılık*.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek kullanımını gösterir `into` geçici bir tanımlayıcı etkinleştirmek için anahtar sözcüğü `fruitGroup` sahip olduğu bir çıkarsanan tür `IGrouping`. Tanımlayıcısı'nı kullanarak çağırabilirsiniz <xref:System.Linq.Enumerable.Count%2A> yöntemi her grubu ve iki veya daha fazla sözcük içeren grubu seçin.
+
+[!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
+
+Kullanımını `into` içinde bir `group` yan tümcesi, yalnızca gerekli ek sorgu her grubu işlemleri istediğinizde. Daha fazla bilgi için [group yan tümcesi](group-clause.md).
+
+Kullanımını gösteren bir örnek `into` içinde bir `join` yan tümcesi bkz [JOIN yan tümcesi](join-clause.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)  
+[LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+[group yan tümcesi](group-clause.md)  

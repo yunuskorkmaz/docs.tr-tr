@@ -1,5 +1,5 @@
 ---
-title: My.Application.Log bilgileri (Visual Basic) nereye yazdığını belirleme
+title: My.Application.Log (Visual Basic) bilgileri nereye yazdığını belirleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object, output location
@@ -10,57 +10,57 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: fa177fa1f07c52d900f57e5bf61c967f06203c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590939"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908231"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme (Visual Basic)
-`My.Application.Log` Nesne için birden fazla günlük dinleyicileri bilgileri yazabilirsiniz. Günlük dinleyicileri bilgisayarın yapılandırma dosyası tarafından yapılandırılır ve bir uygulamanın yapılandırma dosyasına göre geçersiz kılınabilir. Bu konu varsayılan ayarları ve uygulamanızın ayarlarını belirleme açıklar.  
+`My.Application.Log` Nesne için birkaç günlük dinleyicileri bilgileri yazabilirsiniz. Günlük dinleyicileri bilgisayarın yapılandırma dosyası tarafından yapılandırılır ve bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir. Bu konu başlığı altında varsayılan ayarları ve uygulama ayarlarını belirlemek nasıl açıklar.  
   
- Varsayılan çıkış konumları hakkında daha fazla bilgi için bkz: [uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+ Varsayılan çıkış konumları hakkında daha fazla bilgi için bkz. [uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
-### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log dinleyicileri belirlemek için  
+### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log için dinleyicileri belirlemek için  
   
-1.  Derlemenin yapılandırma dosyasını bulun. Derleme geliştiriyorsanız, app.config dosyasında Visual Studio'dan erişebilirsiniz **Çözüm Gezgini**. Aksi durumda yapılandırma dosyasının adını ".config" ile eklenen derlemenin adıdır ve derleme aynı dizinde bulunur.  
+1.  Derlemenin yapılandırma dosyasını bulun. Derleme geliştiriyorsanız app.config dosyasında Visual Studio'dan erişebilirsiniz **Çözüm Gezgini**. Aksi takdirde, yapılandırma dosyası adı "ile .config" eklenmiş derlemenin adıdır ve derleme olarak aynı dizinde bulunur.  
   
     > [!NOTE]
-    >  Her derlemesi bir yapılandırma dosyası içeriyor.  
+    >  Her derleme, bir yapılandırma dosyası vardır.  
   
      Yapılandırma dosyasını bir XML dosyasıdır.  
   
-2.  Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` "DefaultSource bulunan", öznitelik `<sources>` bölümü. `<sources>` Bölüm bulunduğu `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+2.  Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` "DefaultSource bulunan", öznitelik `<sources>` bölümü. `<sources>` Bölümünde bulunan `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
-     Bu bölümler mevcut sonra bilgisayarın yapılandırma dosyasını yapılandırabilir `My.Application.Log` günlük dinleyicileri. Aşağıdaki adımlar, hangi bilgisayar yapılandırma dosyası tanımlar belirlemek açıklanmaktadır:  
+     Bu bölümler mevcut sonra bilgisayarın yapılandırma dosyası yapılandırabilirsiniz `My.Application.Log` günlük dinleyicileri. Aşağıdaki adımlarda, bilgisayar yapılandırma dosyasını tanımlar belirleme açıklanmıştır:  
   
-    1.  Bilgisayarın machine.config dosyasını bulun. Genellikle, bulunur *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dizin, burada `SystemRoot` işletim sistemi dizindir ve `frameworkVersion` sürümü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+    1.  Bilgisayar bir machine.config dosyasını bulun. Genellikle, bulunur *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dizin, burada `SystemRoot` işletim sistemi dizin ve `frameworkVersion` sürümü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
-         Machine.config ayarlarında, bir uygulamanın yapılandırma dosyasına göre geçersiz kılınabilir.  
+         Machine.config ayarlarında bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir.  
   
-         Aşağıda listelenen isteğe bağlı öğeleri yoksa, bunları oluşturabilirsiniz.  
+         Aşağıda listelenen isteğe bağlı öğeler mevcut değilse bunları oluşturabilirsiniz.  
   
     2.  Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` "DefaultSource" özniteliğini `<sources>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
-         Bu bölümler yoksa sonra `My.Application.Log` yalnızca varsayılan günlük dinleyicileri sahiptir.  
+         Bu bölüm yoksa, ardından `My.Application.Log` yalnızca varsayılan günlük dinleyicileri sahiptir.  
   
 3.  Bulun <`add>` öğelerinde <`listeners>` bölümü.  
   
-     Bu öğeler için adlandırılmış günlük dinleyicileri eklemek `My.Application.Log` kaynak.  
+     Bu öğeleri eklemek için adlandırılmış günlük dinleyicileri `My.Application.Log` kaynak.  
   
-4.  Bulun `<add>` öğeleri günlük dinleyicileri adlarıyla `<sharedListeners>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+4.  Bulun `<add>` öğeleri içinde günlük dinleyicileri adlarıyla `<sharedListeners>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
-5.  Paylaşılan dinleyiciler birçok türleri için dinleyici'nın başlatma verileri nerede verileri dinleyicisi yönlendirir açıklaması şunları içerir:  
+5.  Paylaşılan dinleyiciler birçok tür için burada verileri dinleyici yönlendirir açıklaması dinleyicinin başlatma verilerini içerir:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyicisi giriş açıklandığı gibi bir dosyayı günlüğe yazar.  
+    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyicisi giriş açıklandığı bir dosyayı günlüğe yazar.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyicisi tarafından belirtilen bilgisayarda olay günlüğü için bilgi Yazar `initializeData` parametresi. Olay günlüğünü görüntülemek için kullanabileceğiniz **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi'ni**. Daha fazla bilgi için bkz: [.NET Framework'te ETW olayları](../../../../framework/performance/etw-events.md).  
+    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyici bilgileri tarafından belirtilen bilgisayarın olay günlüğüne yazdığı `initializeData` parametresi. Olay günlüğünü görüntülemek için kullanabileceğiniz **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi'ni**. Daha fazla bilgi için [.NET Framework ETW olayları](../../../../framework/performance/etw-events.md).  
   
     -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> Ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyicileri yazma belirtilen dosyaya `initializeData` parametresi.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyicisi komut satırı konsola yazar.  
+    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyici komut satırı konsola yazar.  
   
-    -   Burada günlük dinleyicileri diğer tür bilgilerini yazma hakkında daha fazla bilgi için bu tür belgelerine başvurun.  
+    -   Burada günlük dinleyicileri diğer tür bilgilerini yazma hakkında daha fazla bilgi için bu türün belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  

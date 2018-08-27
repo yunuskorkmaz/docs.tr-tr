@@ -12,40 +12,42 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e04c6137bcb2b3da7e9883fde4de35737788587
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568114"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925748"
 ---
 # <a name="enumeration-format-strings"></a>Numaralandırma Biçimi Dizeleri
-Kullanabileceğiniz <xref:System.Enum.ToString%2A?displayProperty=nameWithType> sayısal, onaltılık veya bir numaralandırma üyesine dize değerini temsil eden yeni bir dize nesnesi oluşturmak için yöntemi. Bu yöntem biçimlendirme döndürmesini istediğiniz değeri belirtmek için dizeleri numaralandırması birini alır.  
-  
- Biçimlendirme dizeleri ve bunların dönüş değerleri numaralandırma aşağıdaki tabloda listelenmektedir. Bu biçim belirticileri büyük küçük harfe duyarlı değildir.  
-  
-| Biçim dizesi | Sonuç |  
-| ------------- | ------ |  
-| G veya g | Numaralandırma Giriş bir dize değeri, mümkünse ve aksi takdirde geçerli örneğinin tamsayı değeri görüntüler. Numaralandırma ile tanımlanmış olması durumunda **bayrakları** öznitelik kümesi, her geçerli giriş değerleri birleştirilmiş birlikte dize virgülle ayrılmış. Varsa **bayrakları** özniteliği ayarlanmamışsa, geçersiz bir değer sayısal girişi olarak görüntülenir. Aşağıdaki örnek G biçim belirticisi gösterilmektedir.<br><br>[!code-csharp[Formatting.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)] |  
-| F veya f | Numaralandırma giriş mümkünse bir dize değeri olarak görüntüler. Değeri, listedeki girişleri toplamı olarak tamamen görüntülenebilir varsa (olsa bile **bayrakları** özniteliği mevcut değil), virgülle ayrılmış geçerli her girişin dize değerlerini birlikte birleşir. Değer tamamen numaralandırması girdileri tarafından belirlenemiyorsa değeri tamsayı biçimlendirilir. Aşağıdaki örnek F biçim belirticisi gösterilmektedir.<br><br>[!code-csharp[Formatting.Enum#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)] |  
-| D veya d | Olası en kısa gösteriminde bir tamsayı değeri olarak numaralandırma giriş görüntüler. Aşağıdaki örnek, D biçim belirticisi gösterilmektedir.<br><br>[!code-csharp[Formatting.Enum#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)] |  
-| X veya x | Numaralandırma girişi bir onaltılık değer olarak görüntüler. Değeri, değerin en az sekiz basamak uzunluğunda olduğundan emin olmak için gerektiği gibi sıfırları ile gösterilir. Aşağıdaki örnek X biçim belirticisi gösterilmektedir.<br /><br /> [!code-csharp[Formatting.Enum#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)] |  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek olarak adlandırılan bir numaralandırma tanımlar `Colors` üç girişlerinin oluşur: `Red`, `Blue`, ve `Green`.  
-  
- [!code-csharp[Formatting.Enum#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
- [!code-vb[Formatting.Enum#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]  
-  
- Numaralandırma tanımlandıktan sonra aşağıdaki biçimde bir örneği bildirilebilir.  
-  
- [!code-csharp[Formatting.Enum#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
- [!code-vb[Formatting.Enum#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]  
-  
- `Color.ToString(System.String)` Yöntemi sonra kendisine geçirilen biçim belirticisi bağlı olarak, farklı şekillerde numaralandırma değeri görüntülemek için kullanılabilir.  
-  
- [!code-csharp[Formatting.Enum#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
- [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
+Kullanabileceğiniz <xref:System.Enum.ToString%2A?displayProperty=nameWithType> sayısal, onaltılık veya dize değerini bir numaralandırma üyesine temsil eden yeni bir dize nesnesi oluşturmak için yöntemi. Bu yöntem biçimlendirme dizeleri döndürülmesini istediğiniz değeri belirtmek için numaralandırma alır.
+
+Sabit listesi biçimlendirme dizeleri ve bunların dönüş değerleri aşağıdaki tabloda listelenmektedir. Bu biçim tanımlayıcıları büyük küçük harfe duyarlı değildir.
+
+| Biçim dizesi | Sonuç |
+| ------------- | ------ |
+| G veya g | Dize değeri olarak sabit listesi girişi görüntüler, mümkünse ve aksi takdirde geçerli örneğin tamsayı değeri görüntüler. Sabit listesi ile tanımlanmışsa **bayrakları** virgüllerle ayrılmış şekilde öznitelik kümesi, geçerli her girişin değerleri birleştirilmiş birlikte bir dize. Varsa **bayrakları** özniteliği ayarlanmadı, sayısal bir giriş olarak geçersiz bir değer görüntülenir. Aşağıdaki örnekte, G biçim belirticisi gösterilmektedir.<br /><br />[!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)] [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)] |
+| F veya f | Sabit listesi girişi mümkünse bir dize değeri görüntüler. Değeri, listedeki girişleri toplamı olarak tamamen görüntülenebilen varsa (bile **bayrakları** özniteliği mevcut değil), virgülle ayrılmış geçerli her girişin dize değerleri birlikte bitiştirilir. Ardından değeri tamamen göre sabit listesi girişi belirlenemiyorsa değeri tamsayı biçimlendirilir. Aşağıdaki örnek, F biçim belirticisi gösterir.<br /><br />[!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)] [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)] |
+| D veya d | Sabit listesi Giriş bir tamsayı değeri mümkün olan en kısa gösteriminde olarak görüntüler. Aşağıdaki örnek, D biçim belirticisi gösterir.<br /><br />[!code-csharp[Formatting.Enum#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)] [!code-vb[Formatting.Enum#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)] |
+| X ya da x | Sabit listesi girişi bir onaltılık değer görüntüler. Değer, değer en az sekiz basamak uzunluğunda olduğundan emin olmak için gerekirse sayının önüne gösterilir. Aşağıdaki örnek X biçim belirticisi gösterir.<br /><br /> [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)] [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)] |
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek adlı bir sabit listesi tanımlar `Colors` üç girişlerini oluşur: `Red`, `Blue`, ve `Green`.
+
+[!code-csharp[Formatting.Enum#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
+[!code-vb[Formatting.Enum#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]
+
+Numaralandırma tanımlandıktan sonra bir örneğini aşağıdaki şekilde bildirilebilir.
+
+[!code-csharp[Formatting.Enum#6](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
+[!code-vb[Formatting.Enum#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]
+
+`Color.ToString(System.String)` Yöntemi daha sonra geçirilen biçim belirticisi bağlı olarak farklı şekillerde numaralandırma değeri görüntülemek için kullanılabilir.
+
+[!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
+[!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+[Biçimlendirme Türleri](formatting-types.md)

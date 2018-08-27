@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5d1860a5703c79bd77331cfd821c3bff69f317ff
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960523"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925824"
 ---
 # <a name="finalizers-c-programming-guide"></a>Sonlandırıcılar (C# programlama Kılavuzu)
 Sonlandırıcılar, sınıfların örneklerini yok etmek üzere kullanılır.  
@@ -57,7 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 >  Boş Sonlandırıcıları kullanılmamalıdır. Bir sınıf, bir sonlandırıcı içeriyorsa, bir giriş oluşturulan `Finalize` kuyruk. Sonlandırıcı çağrıldığında çöp toplayıcı kuyruğu işlemek için çağrılır. Boş Sonlandırıcı yalnızca gereksiz bir performans kaybı neden olur.  
   
- Bu çöp toplayıcı tarafından belirlenir çünkü Sonlandırıcı çağrıldığında Programcı üzerinde denetimi yoktur. Çöp toplayıcı uygulama tarafından artık kullanılmayan nesneleri denetler. Bu nesne sonlandırma için uygun olarak değerlendirir, sonlandırıcı (varsa) çağırır ve nesne depolamak için kullanılan belleği geri kazanır. Program çıkış yaptığı andaki sonlandırıcılar da denir.  
+ Bu çöp toplayıcı tarafından belirlenir çünkü Sonlandırıcı çağrıldığında Programcı üzerinde denetimi yoktur. Çöp toplayıcı uygulama tarafından artık kullanılmayan nesneleri denetler. Bu nesne sonlandırma için uygun olarak değerlendirir, sonlandırıcı (varsa) çağırır ve nesne depolamak için kullanılan belleği geri kazanır. 
+ 
+ Program çıkış yaptığı andaki .NET Framework uygulamalarında (ancak .NET Core uygulamalarında), bir sonlandırıcı da denir. 
   
  Çağırarak atık toplamayı zorlamak mümkün mü <xref:System.GC.Collect%2A>, ancak performans sorunları oluşturabilir, çünkü çoğu zaman bu kaçınılmalıdır.  
   

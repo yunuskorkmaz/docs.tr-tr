@@ -3,11 +3,11 @@ title: 'Örnek XML dosyası: Birleştirilmiş satın alma Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751913"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924817"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Örnek XML dosyası: Birleştirilmiş satın alma siparişleri
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosyayı, birden çok şirketlerin farklı şekiller ile satın alma siparişleri kümesidir. Her bir şirketten satın alma siparişleri ayrı ad alanlarında ' dir.  

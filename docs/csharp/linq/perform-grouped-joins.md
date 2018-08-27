@@ -3,12 +3,12 @@ title: (C# üzerinde LINQ) gruplandırılmış birleştirmeler gerçekleştirme
 description: C# içinde LINQ kullanarak gruplandırılmış birleştirmeler gerçekleştirme konusunda bilgi edinin.
 ms.date: 12/1/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: d52aa8f75a1868c26f6a965553bf8047518bb447
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: f65faabcb039e186a2e0d18dda4373263ffd0b8b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404008"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911931"
 ---
 # <a name="perform-grouped-joins"></a>Gruplandırılmış birleştirmeler gerçekleştirme
 
@@ -35,8 +35,8 @@ Grup birleştirmeleri, LINQ to XML kullanarak XML oluşturmak için idealdir. A�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-<xref:System.Linq.Enumerable.Join%2A>  
-<xref:System.Linq.Enumerable.GroupJoin%2A>  
-[İç birleşimler gerçekleştirme](perform-inner-joins.md)  
-[Sol dış birleştirmeler gerçekleştirme](perform-left-outer-joins.md)  
-[Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>  
+- <xref:System.Linq.Enumerable.GroupJoin%2A>  
+- [İç birleşimler gerçekleştirme](perform-inner-joins.md)  
+- [Sol dış birleştirmeler gerçekleştirme](perform-left-outer-joins.md)  
+- [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)  

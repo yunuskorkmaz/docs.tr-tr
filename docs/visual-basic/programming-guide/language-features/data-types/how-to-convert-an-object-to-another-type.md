@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 367991e4bbca710df54edf73179f855ff79bb56e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647624"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912019"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Bir Nesneyi Başka Bir Türe Dönüştürme
-Dönüştürdüğünüz bir `Object` başka bir veri türüne dönüştürme anahtar sözcüğü gibi kullanarak değişken [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Dönüştürmeniz bir `Object` başka bir veri türüne dönüştürme anahtar sözcüğü gibi kullanarak değişken [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek dönüştürür bir `Object` için değişken bir `Integer` ve `String`.  
+ Aşağıdaki örnek bir `Object` değişkenini bir `Integer` ve `String`.  
   
 ```  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,7 +26,7 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- Biliyorsanız içeriğini bir `Object` değişken olan belirli veri türü, değişken, veri türüne dönüştürün daha iyi olur. Kullanmaya devam ederseniz `Object` ya da değişken, tabi *kutulama* ve *kutudan çıkarma* (için bir değer türü) veya *geç bağlama* (için bir başvuru türü). Bu işlemler, tüm ek yürütme süresi kılın ve daha yavaş performans yapın.  
+ Olduğunu biliyorsanız içeriğini bir `Object` değişken olan belirli veri türü, değişken, veri türüne dönüştürün en iyisidir. Kullanmaya devam ederseniz `Object` ya da değişken ücretler *kutulama* ve *kutudan çıkarma* (için bir değer türü) veya *geç bağlama* (için bir başvuru türü). Bu işlemler, tüm ek yürütme süresi almak ve daha yavaş performans olun.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
@@ -41,5 +41,5 @@ End Sub
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
  [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

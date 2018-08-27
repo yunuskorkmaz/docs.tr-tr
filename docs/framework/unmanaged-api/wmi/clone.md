@@ -1,6 +1,6 @@
 ---
-title: Kopya işlevi (yönetilmeyen API Başvurusu)
-description: Kopya işlevi geçerli bir tam bir kopyası olan yeni bir nesne döndürür.
+title: Clone işlevi (yönetilmeyen API Başvurusu)
+description: Kopyalama işlevi için geçerli bir tam bir kopyası olan yeni bir nesne döndürür.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd87cb619ef2dc1e0548c7553585b7e51e94c4f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457322"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924781"
 ---
-# <a name="clone-function"></a>Kopya işlevi
+# <a name="clone-function"></a>Clone işlevi
 Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,30 +41,30 @@ HRESULT Clone (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `ppCopy`  
-[out] Bir tam olan yeni bir nesne, silmenizin `ptr`. Bu bağımsız değişken olamaz `null` geçerli nesnenin kopyasını alırsa.
+[out] Tam olan yeni bir nesne, silmenizin `ptr`. Bu bağımsız değişkeni olamaz `null` geçerli nesnenin bir kopyasını alırsa.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` bir parametre belirtildi ve bu kullanım yasal değil. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesnesini kopyalamak yeterli bellek yok. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` bir parametre olarak belirtildi ve bu kullanımı geçerli değil. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesneyi kopyalamak yeterli bellek yok. |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::Clone](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemi.
 
-Kopyalanan nesne başvurusu sayısı 1 olan bir COM nesnesidir.
+Kopyalanan nesne başvuru sayısı 1 olan bir COM nesnesidir.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

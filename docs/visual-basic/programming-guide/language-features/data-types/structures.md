@@ -9,36 +9,36 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-ms.openlocfilehash: 1e245cb562a3112107ee805cf05c10b0374d8831
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647271"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925792"
 ---
 # <a name="structures-visual-basic"></a>Yapılar (Visual Basic)
-A *yapısı* Genelleştirme Visual Basic önceki sürümleri tarafından desteklenen kullanıcı tanımlı tür (UDT) değil. Alanlara ek olarak, özellikleri, yöntemleri ve olayları yapıları getirebilir. Bir yapı bir veya daha fazla arabirimleri uygulayabilir ve her bir alan için tek tek erişim düzeyleri bildirebilirsiniz.  
+A *yapısı* Visual Basic'in önceki sürümlerindeki tarafından desteklenen kullanıcı tanımlı tür (UDT) genelleştirilmiş olduğundan. Alanlara ek olarak, özellikleri, yöntemleri ve olayları yapıları kullanıma sunabilirsiniz. Bir yapının bir veya daha fazla arabirim uygulayabilir ve her alan için bireysel erişim düzeylerine bildirebilirsiniz.  
   
- Bir yapı oluşturmak için farklı türlerdeki veri öğeleri birleştirebilirsiniz. Bir veya daha fazla bir yapı ilişkilendirir *öğeleri* birbirleriyle ve yapısına sahip. Bir yapıyı bildirme, bu duruma bir *bileşik veri türü*, ve bu tür değişkenler bildirebilirsiniz.  
+ Bir yapı oluşturmak için farklı türlerde veri öğelerini birleştirebilirsiniz. Bir veya daha fazla yapı ilişkilendirir *öğeleri* birbirleriyle ve yapıya sahip. Bir yapıyı bildirme, bu duruma bir *bileşik veri türü*, ve bu türdeki değişkenleri bildirebilirsiniz.  
   
- Yapılar, ilgili bilgi parçalarını birkaç tutmak için tek bir değişken istediğinizde kullanışlıdır. Örneğin, bir çalışanın adı, dahili telefon numarası ve maaş birlikte tutmak isteyebilirsiniz. Çeşitli değişkenler için bu bilgileri kullanabilir veya bir yapı tanımlamak ve tek çalışan değişkeni için kullanın. Çok sayıda çalışan ve bu nedenle birçok örneklerini değişkeni olduğunda yapısı avantajlarından görünür olur.  
+ Yapılar, birkaç ilgili bilgilere tutmak için tek bir değişken istediğinizde yararlıdır. Örneğin, bir çalışanın adı, dahili telefon numarası ve maaş bir arada tutmak isteyebilirsiniz. Çeşitli değişkenler için bu bilgileri kullanabilir veya yapı tanımlamak ve için tek çalışan değişken kullanın. Çok sayıda çalışan ve bu nedenle birçok örneği değişkenin olduğunda yapısı avantajlarından belirgin olur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Bir Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- Bir yapı ve öğeleri bildirme gösterilmektedir.  
+ Bir yapı ve öğelerini bildirmek gösterilmektedir.  
   
  [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- Bir değişkene bir yapı atama ve öğeleri erişme kapsar.  
+ Bir yapının bir değişkene atayarak ve onun öğelerine erişme kapsar.  
   
  [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- Yapıları diziler, nesneler, yordamlar ve birbirleri ile nasıl etkileşim özetler.  
+ Yapılar, diziler, nesneleri, yordamları ve birbiriyle nasıl etkileşim özetler.  
   
  [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- Benzerlikler ve yapılar ve sınıflar arasındaki farklar açıklanmaktadır.  
+ Arasındaki benzerlikleri ve farkları yapıları ve sınıfları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Visual Basic veri türleri tanıtır ve bunların nasıl kullanılacağını açıklar.  
+ Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Visual Basic tarafından sağlanan başlangıç veri türleri listelenmektedir.
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
+ Visual Basic tarafından sağlanan başlangıç veri türleri listeler.

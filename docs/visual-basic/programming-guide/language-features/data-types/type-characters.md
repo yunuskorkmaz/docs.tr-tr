@@ -38,22 +38,22 @@ helpviewer_keywords:
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9262c57c5773b947f18fd9e8cf9087bb8e02de7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dc703598fa6d92b3f312b2b5f0bf5fadab9c04
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653513"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911828"
 ---
-# <a name="type-characters-visual-basic"></a>Karakterlerini (Visual Basic)
+# <a name="type-characters-visual-basic"></a>Tür karakterleri (Visual Basic)
 
-Bir veri türü bildirimi deyiminde belirtmeye ek olarak, bazı programlama öğeleri ile veri türünü zorlayabilirsiniz bir *türü karakteri*. Tür karakteri hemen öğe, herhangi bir türde müdahalede bulunan hiçbir karakter izlemeniz gerekir.
+Bir bildirim deyiminde veri türü belirtmeye ek olarak, bazı programlama öğeleri ile veri türünü zorlayabilirsiniz bir *türü karakteri*. Tür karakteri hemen öğe, müdahalede bulunan karakter herhangi bir türde izlemeniz gerekir.
 
-Tür karakteri öğesinin adı bir parçası değil. Tür karakteri ile tanımlanmış bir öğe türü karakteri başvurulabilir.
+Tür karakteri öğe adı bir parçası değil. Tür karakteri bir tür karakteri ile tanımlanan bir öğe başvurulabilir.
 
 ## <a name="identifier-type-characters"></a>Tanımlayıcı türü karakterleri
 
-Visual Basic sağlayan bir dizi *tanımlayıcı türü karakterleri* değişkeni ya da sabit veri türünü belirtmek için bir bildiriminde kullanabilirsiniz. Aşağıdaki tabloda kullanılabilir tanımlayıcı türü karakterleri kullanım örnekleri ile gösterilir.
+Visual Basic sağlayan bir dizi *tanımlayıcı türü karakterleri* bir bildiriminde bir değişken veya sabit veri türünü belirtmek için kullanabilirsiniz. Aşağıdaki tabloda kullanılabilir tanımlayıcı türü karakterleri kullanım örnekleri ile gösterilmektedir.
   
 |Tanımlayıcı türü karakteri|Veri türü|Örnek|  
 |-------------------------------|---------------|-------------|  
@@ -64,31 +64,31 @@ Visual Basic sağlayan bir dizi *tanımlayıcı türü karakterleri* değişkeni
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- Hiçbir tanımlayıcı türü karakterleri mevcut `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, veya `UShort` veri türleri veya herhangi bileşik veri türleri dizileri veya yapıları gibi.
+ Hiçbir tanımlayıcı türü karakterleri mevcut `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, veya `UShort` veri türleri veya herhangi bir için diziler veya yapılar gibi bileşik veri türleri.
 
-Bazı durumlarda, ekleyebilirsiniz `$` için Visual Basic işlevi, örneğin karakter `Left$` yerine `Left`, döndürülen değer türü elde etmek için `String`.
+Bazı durumlarda, eklediğiniz `$` Visual Basic işlevi için örneğin karakter `Left$` yerine `Left`türünde döndürülen bir değer elde etmek için `String`.
 
-Tüm durumlarda tanımlayıcı türü karakteri hemen tanımlayıcı adı izlemeniz gerekir.
+Her durumda, tanımlayıcı türü karakteri hemen tanımlayıcı adı izlemelidir.
 
 ## <a name="literal-type-characters"></a>Değişmez değer türü karakterleri
 
-A *değişmez değer* bir veri türünün belirli bir değerinin metinsel gösterimini değil.  
+A *değişmez değer* veri türünün belirli bir değeri değerinin metinsel bir gösterimini olduğu.  
 
 ### <a name="default-literal-types"></a>Varsayılan değişmez değer türleri
 
-Kodunuzda normalde göründüğü gibi bir hazır değer form veri türünü belirler. Aşağıdaki tabloda, bu varsayılan türleri gösterilmektedir.  
+Kodunuzda normalde göründüğü gibi bir sabit değer biçiminde veri türünü belirler. Aşağıdaki tabloda, bu varsayılan türleri gösterilmektedir.  
   
-|Metin biçiminde değişmez değeri|Varsayılan veri türü|Örnek|  
+|Sabit değerinin metinsel formu|Varsayılan veri türü|Örnek|  
 |-----------------------------|-----------------------|-------------|  
 |Sayısal, Hayır kesirli bölümü|`Integer`|`2147483647`|  
-|Sayısal, Hayır kesirli bölümü, için çok büyük `Integer`|`Long`|`2147483648`|  
+|Sayısal, Hayır kesirli bölümü, çok büyük `Integer`|`Long`|`2147483648`|  
 |Sayısal, kesirli bölümü|`Double`|`1.2`|  
-|Çift tırnak işaretleri içine|`String`|`"A"`|  
-|İçinde sayı işaretleri arasına|`Date`|`#5/17/1993 9:32 AM#`|  
+|Çift tırnak işareti içine alınmış|`String`|`"A"`|  
+|Sayı işaretleri alınmış|`Date`|`#5/17/1993 9:32 AM#`|  
 
 ### <a name="forced-literal-types"></a>Zorlanmış değişmez değer türleri
 
-Visual Basic sağlayan bir dizi *değişmez değer türü karakterleri*, farklı bir veri türü, form varsaymak bir hazır değer zorlamak için kullanabileceğiniz gösterir. Karakter sabit değeri sonuna ekleyerek bunu yapabilirsiniz. Aşağıdaki tabloda kullanılabilir değişmez değer türü karakterleri kullanım örnekleri ile gösterilir.
+Visual Basic sağlayan bir dizi *değişmez değer türü karakterleri*, farklı bir veri türü, form varsaymak bir sabit değer zorlamak için kullanabileceğiniz gösterir. Karakter sabit değerinin sonuna ekleyerek bunu yapabilirsiniz. Aşağıdaki tabloda kullanılabilir değişmez değer türü karakterleri kullanım örnekleri ile gösterilmektedir.
   
 |Değişmez değer türü karakteri|Veri türü|Örnek|  
 |----------------------------|---------------|-------------|  
@@ -103,38 +103,38 @@ Visual Basic sağlayan bir dizi *değişmez değer türü karakterleri*, farklı
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-Değişmez değer türü karakterleri mevcut `Boolean`, `Byte`, `Date`, `Object`, `SByte`, veya `String` veri türleri veya dizileri veya yapıları gibi tüm bileşik veri türleri için.
+Hiçbir değişmez değer türü karakterleri mevcut `Boolean`, `Byte`, `Date`, `Object`, `SByte`, veya `String` veri türleri veya dizi veya yapılar gibi tüm bileşik veri türleri için.
 
-Değişmez değerler tanımlayıcı türü karakterleri da kullanabilirsiniz (`%`, `&`, `@`, `!`, `#`, `$`) değişkenlerinin, sabitleri ve ifadeler gibi. Ancak, sabit karakterleri yazın (`S`, `I`, `L`, `D`, `F`, `R`, `C`) yalnızca değişmez değerler ile kullanılabilir.
+Değişmez değerler tanımlayıcı türü karakterleri de kullanabilir (`%`, `&`, `@`, `!`, `#`, `$`), değişkenleri, sabitleri ve ifadeler gibi. Ancak, değişmez değer türü karakterleri (`S`, `I`, `L`, `D`, `F`, `R`, `C`) yalnızca değişmez değerleri ile kullanılabilir.
 
-Tüm durumlarda değişmez değer türü karakteri hemen hazır değeri izlemeniz gerekir.
+Her durumda, değişmez değer türü karakteri hemen değişmez değer izlemeniz gerekir.
 
 ## <a name="hexadecimal-binary-and-octal-literals"></a>Onaltılık, ikili ve sekizlik değişmez değerler
 
-Derleyici ondalık (10 tabanı) sayı sisteminde olacak şekilde bir tamsayı değişmez değer normal olarak yorumlar. Değişmez değer bir tamsayı olan bir onaltılı (16 tabanı) sayı olarak tanımlayabilirsiniz `&H` öneki ile ikili (2 tabanı) sayı olarak `&B` öneki ve bir sekizli (8 tabanı) olarak numara ile `&O` öneki. Önek izleyin basamaklı sayı sistemi için uygun olmalıdır. Aşağıdaki tabloda bu gösterilmektedir.  
+Derleyici, ondalık (10 tabanında) sayı sisteminde olacak tamsayı değişmez değer normal olarak yorumlar. Tamsayı sabit değeri bir onaltılık (16 tabanında) sayı olarak tanımlayabilirsiniz `&H` ikili (taban 2) bir sayı olarak ön eki `&B` öneki ve bir sekizlik (Temel 8) olarak numaranızı `&O` önek. Önek izleyen basamaklı sayı sistemi için uygun olmalıdır. Aşağıdaki tablo bunu göstermektedir.  
   
-|Temel numarası|önek|Geçerli basamaklı değerler|Örnek|
+|Sayı tabanı|Ön eki|Geçerli basamaklı değerler|Örnek|
 |-----------------|------------|------------------------|-------------|
-|Onaltılı (16 tabanı)|`&H`|0-9 ve A-F|`&HFFFF`|
+|Onaltılık (16 tabanında)|`&H`|0-9 ve A-F|`&HFFFF`|
 |İkili (2 tabanı)|`&B`|0-1|`&B01111100`|
 |Octal (8 tabanı)|`&O`|0-7|`&O77`|
 
-Visual Basic 2017'dan başlayarak, alt çizgi karakterini kullanabilirsiniz (`_`) bir tam sayı sabit değeri okunabilirliğini artırmak için Grup ayırıcı olarak. Aşağıdaki örnek kullanır `_` karakter sabit değeri bir ikili 8 bit gruplar halinde gruplandırmak için:
+Visual Basic 2017'den itibaren alt çizgi karakterini kullanabilirsiniz (`_`) bir integral sabit değerinin okunabilirliği artırmak için bir grup ayracı olarak. Aşağıdaki örnekte `_` karakter sabit değeri bir ikili 8-bit gruplar halinde gruplandırmak için:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
 ```
 
-Değişmez değer türü karakteri ile önekli bir hazır değer izleyebilirsiniz. Aşağıdaki örnekte bu gösterir.
+Değişmez değer türü karakteri ile ön ekli bir sabit değer takip edebilirsiniz. Aşağıdaki örnekte bu gösterir.
 
 ```vb
 Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-Önceki örnekte, `counter` -32768, ondalık değeri vardır ve `flags` +32768 ondalık değerine sahip.
+Önceki örnekte, `counter` -32768, ondalık değeri vardır ve `flags` +32768 ondalık değerine sahiptir.
 
-Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -150,4 +150,4 @@ Dim number As Integer = &H_C305_F860
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)

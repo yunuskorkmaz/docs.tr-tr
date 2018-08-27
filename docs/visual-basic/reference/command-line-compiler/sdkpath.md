@@ -12,14 +12,14 @@ ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 162c7d58350c381ec667e8a4cd11c03e83fcdf44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654771"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925691"
 ---
 # <a name="-sdkpath"></a>-sdkpath
-Mscorlib.dll ve Microsoft.VisualBasic.dll içinde konumunu belirtir.  
+Mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin konumunu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,18 +29,18 @@ Mscorlib.dll ve Microsoft.VisualBasic.dll içinde konumunu belirtir.
   
 ## <a name="arguments"></a>Arguments  
  `path`  
- Mscorlib.dll ve derleme için kullanılacak Microsoft.VisualBasic.dll içinde sürümleri içeren dizini. Bunu yüklenene kadar bu yolu doğrulanmaz. Dizin adı tırnak işaretleri içine alın ("") boşluk içeriyorsa.  
+ Mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin derleme için kullanılacak sürümlerini içeren dizin. Bu yolu, yüklü olduğu kadar doğrulanmadı. Dizin adı tırnak içine alın ("") bir boşluk içeriyorsa.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek varsayılan olmayan konumdan mscorlib.dll ve Microsoft.VisualBasic.dll içinde dosyaları yüklemek için Visual Basic derleyici söyler. `-sdkpath` Seçeneği ile kullanılmak üzere tasarlanmış [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Bunlardan farklı sürümlerini kullanan destek kitaplıkları türleri ve farklı dil özelliklerini cihazlarda bulunamadı kullanmaktan kaçının.  
+ Bu seçenek, mscorlib.dll'nin ve Microsoft.VisualBasic.dll içinde dosyaları varsayılan olmayan bir konumdan yüklemek için Visual Basic Derleyicisi söyler. `-sdkpath` Seçeneği ile kullanılmak üzere tasarlanmış [- netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](~/includes/compact-md.md)] Bunlardan farklı sürümlerini kullanan destek kitaplıklar türleri ve cihazlarda bulunamadı dil özellikleri kullanmaktan kaçının.  
   
 > [!NOTE]
->  `-sdkpath` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir. `-sdkpath` Seçeneği, bir Visual Basic cihaz projesi yüklendiğinde ayarlanır.  
+>  `-sdkpath` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir. `-sdkpath` Seçeneği, Visual Basic cihaz projesi yüklendiğinde ayarlanır.  
   
- Derleyici Visual Basic çalışma zamanı kitaplığı başvurusu olmadan kullanarak derleme belirtebilirsiniz `-vbruntime` derleyici seçeneği. Daha fazla bilgi için bkz: [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ Kullanarak derleyicinin Visual Basic çalışma zamanı kitaplığı başvurusu olmadan derlemelisiniz belirtebilirsiniz `-vbruntime` derleyici seçeneği. Daha fazla bilgi için [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `Myfile.vb` ile [!INCLUDE[Compact](~/includes/compact-md.md)], Mscorlib.dll ve Microsoft.VisualBasic.dll içinde sürümleri kullanılarak varsayılan yükleme dizininde bulunan [!INCLUDE[Compact](~/includes/compact-md.md)] C sürücüsünde. Genellikle, en son sürümünü kullanmak [!INCLUDE[Compact](~/includes/compact-md.md)].  
+ Aşağıdaki kod derlenir `Myfile.vb` ile [!INCLUDE[Compact](~/includes/compact-md.md)], mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin sürümlerini kullanarak varsayılan yükleme dizininde bulunan [!INCLUDE[Compact](~/includes/compact-md.md)] C sürücüsünde. Genellikle, en son sürümünü kullanın [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

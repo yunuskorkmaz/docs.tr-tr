@@ -6,16 +6,16 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652967"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924915"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)
-[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) XML bir kaynaktan okunan ve yeni bir XML biçimine dönüştürmek kolaylaştırır. LINQ sorgularını dönüştürmek için içerik almak için yararlanmak veya var olan bir belgeyi içeriği yeni bir XML biçimine değiştirin.  
+[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) XML bir kaynaktan okunan ve yeni bir XML biçimine dönüştürmek kolaylaştırır. Dönüştürülecek içeriği almak için LINQ sorguları yararlanın veya var olan bir belgeyi içeriği yeni bir XML biçimine değiştirin.  
   
- Bu konudaki örnek bir tarayıcıda görüntülenecek HTML içeriği bir XML kaynağını belgeden dönüştürür.  
+ Bu konudaki örnek, bir tarayıcıda görüntülenecek HTML içeriği XML kaynak belgesinden dönüştürür.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -23,7 +23,7 @@ ms.locfileid: "33652967"
   
 1.  Visual Studio'da yeni bir Visual Basic projesinde oluşturma **konsol uygulaması** proje şablonu.  
   
-2.  Visual Basic kodu değiştirmek için projede oluşturulan Module1.vb dosyasını çift tıklatın. Aşağıdaki kodu ekleyin `Sub Main` , `Module1` modülü. Bu kod, kaynak XML belgesi olarak oluşturur. bir <xref:System.Xml.Linq.XDocument> nesnesi.  
+2.  Visual Basic kodunu değiştirmek için projeyi oluşturduğunuzda Module1.vb dosyasını çift tıklatın. Aşağıdaki kodu ekleyin `Sub Main` , `Module1` modülü. Kaynak XML belgesi olarak bu kod oluşturur bir <xref:System.Xml.Linq.XDocument> nesne.  
   
     ```vb  
     Dim catalog =   
@@ -57,9 +57,9 @@ ms.locfileid: "33652967"
         </Catalog>  
     ```  
   
-     [Nasıl yapılır: dosya, dize veya akıştan XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Nasıl yapılır: dosya, dize veya Stream XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
-3.  Kaynak XML belgesi oluşturmak için kodu sonra tüm almak için aşağıdaki kodu ekleyin \<defteri > nesnesinden öğeleri ve bir HTML belgesine dönüştürmek. Listesini \<defteri > öğeleri koleksiyonu döndüren bir LINQ Sorgu kullanarak oluşturulur <xref:System.Xml.Linq.XElement> dönüştürülmüş HTML içeren nesne. Yeni XML biçiminde kaynak belgedeki değerlerinin yerleştirileceği katıştırılmış ifadeler kullanabilirsiniz.  
+3.  Kaynak XML belgesi oluşturmak için kod sonra tüm almak için aşağıdaki kodu ekleyin \<kitap > Nesne öğeleri ve bunları bir HTML belgesine dönüştürün. Listesini \<kitap > öğeleri koleksiyonunu döndüren bir LINQ Sorgu kullanarak oluşturulan <xref:System.Xml.Linq.XElement> dönüştürülmüş HTML içeren nesneleri. Kaynak belgedeki XML biçiminde değerleri koymak için katıştırılmış ifadeleri'ni kullanabilirsiniz.  
   
      Sonuçta elde edilen HTML belgesi kullanarak bir dosyaya yazılır <xref:System.Xml.Linq.XElement.Save%2A> yöntemi.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "33652967"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  Sonra `Sub Main` , `Module1`, yeni bir yöntem ekleyin (`Sub`) dönüştürmek için bir \<açıklama > belirtilen HTML biçiminde düğümüne. Bu yöntem önceki adımda kodu tarafından çağrılır ve biçimini korumak için kullanılan \<açıklama > öğeleri.  
+4.  Sonra `Sub Main` , `Module1`, yeni bir yöntem ekleyin (`Sub`) dönüştürmek için bir \<açıklaması > düğümü belirtilen HTML biçiminde. Bu yöntem önceki adımda kod tarafından çağrılır ve biçimini korumak için kullanılan \<açıklaması > öğeleri.  
   
-     Bu yöntem, alt öğeleri değiştirir \<açıklama > olan HTML öğesi. `ReplaceWith` Yöntemi alt öğeleri konumunu korumak için kullanılır. Dönüştürülmüş içeriği \<açıklama > öğesi bir HTML paragrafta dahil (\<p >) öğesi. <xref:System.Xml.Linq.XContainer.Nodes%2A> Dönüştürülmüş içeriğini almak için kullanılan özellik \<açıklama > öğesi. Bu, alt öğeleri dönüştürülmüş içeriği içerdiği sağlar.  
+     Bu yöntem, alt öğelerini değiştirir \<açıklaması > HTML öğesi. `ReplaceWith` Yöntemi, alt öğelerine konumunu korumak için kullanılır. Dönüştürülen içeriğini \<açıklaması > öğesi, bir HTML paragrafta eklenir (\<p >) öğesi. <xref:System.Xml.Linq.XContainer.Nodes%2A> Dönüştürülmüş içeriğini almak için kullanılan özellik \<açıklaması > öğesi. Bu, dönüştürülen içeriği alt öğeleri dahil edilmesini sağlar.  
   
      Sonra aşağıdaki kodu ekleyin `Sub Main` , `Module1`.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33652967"
   
 5.  Değişikliklerinizi kaydedin.  
   
-6.  Kodu çalıştırmak için F5 tuşuna basın. Belge kaydedilmiş elde edilen şuna benzer:  
+6.  Kodu çalıştırmak için F5 tuşuna basın. Belgenin kaydedilip sonuç aşağıdakine benzer:  
   
     ```  
     <?xml version="1.0"?>  
@@ -157,7 +157,7 @@ ms.locfileid: "33652967"
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML Değişmez Değerleri](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [Visual Basic'te XML düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
+ [Visual Basic'de XML düzenleme](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
  [Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  

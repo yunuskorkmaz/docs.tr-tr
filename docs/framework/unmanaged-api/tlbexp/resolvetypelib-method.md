@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460847"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924475"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
-Basit bir tür kitaplığı adı, tam yolunu döndürerek çözümler.  
+Basit bir tür kitaplığı adı, tam nitelenmiş bir yol döndürerek çözümler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,30 +40,30 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Parametreler  
  `bstrSimpleName`  
- [in] A [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) basit tür kitaplığı adını içerir.  
+ [in] A [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) içeren basit tür kitaplığı adı.  
   
  `tlbid`  
- [in] Tür kitaplığı kayıt defterinde atanan GUID.  
+ [in] Kayıt defterinde tür kitaplığına atanan GUID.  
   
  `lcid`  
- [in] Tür kitaplığı yerelleştirme kimliği.  
+ [in] Tür kitaplığının yerelleştirme kimliği.  
   
  `wMajorVersion`  
- [in] Tür kitaplığı ana sürüm numarası. Örneğin, sürüm *x.y*, ana sürüm numarası *x*.  
+ [in] Tür kitaplığı sürüm sayısı. Örneğin, sürüm için *x.y*, ana sürüm numarası *x*.  
   
  `wMinorVersion`  
- [in] Tür kitaplığı ikincil sürüm numarası. Örneğin, sürüm *x.y*, ikincil sürüm numarası *y*.  
+ [in] Tür kitaplığının ikincil sürüm numarası. Örneğin, sürüm için *x.y*, ikincil sürüm numarası *y*.  
   
  `syskind`  
- [in] A [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) işletim sistemi ortamında belirleyen bayrak. SYS_WIN32 ve SYS_WIN64 bunun ortak değerlerdir.  
+ [in] A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) işletim ortamını belirten bayrak. Genel değerler şunlardır: SYS_WIN32 ve SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Bir işaretçi bir [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) adlı tür kitaplığı tam yolunu içeren `bstrSimpleName` parametresi.  
+ [out] Bir işaretçi bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) adlı tür kitaplığının tam yolu içeren `bstrSimpleName` parametresi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ResolveTypeLib` Yöntemi çağrılır [LoadTypeLibWithResolver işlevi](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) sırasında [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) işleme.  
+ `ResolveTypeLib` Yöntemi tarafından çağrılır [LoadTypeLibWithResolver işlevi](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) sırasında [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) işleniyor.  
   
- Bu arabirim özel uygulamaları döndürmelidir bir [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) adlı tür kitaplığı tam yolunu içeren `bstrSimpleName` parametresi.  
+ Bu arabirim özel uygulamaları döndürmelidir bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) adlı tür kitaplığının tam yolu içeren `bstrSimpleName` parametresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -76,4 +76,4 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
