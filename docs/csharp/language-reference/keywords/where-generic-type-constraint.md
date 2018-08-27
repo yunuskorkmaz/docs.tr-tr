@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961088"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931882"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (genel tür kısıtlaması) (C# Başvurusu)
 
@@ -64,8 +64,8 @@ Söz dizimi ve kullanım kısıtlamaları hakkında daha fazla bilgi için bkz: 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [new Kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)  
- [Tür Parametrelerindeki Kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Genel Türlere Giriş](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [new Kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Tür Parametrelerindeki Kısıtlamalar](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

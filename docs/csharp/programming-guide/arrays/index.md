@@ -6,37 +6,37 @@ helpviewer_keywords:
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313507"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936017"
 ---
 # <a name="arrays-c-programming-guide"></a>Diziler (C# Programlama Kılavuzu)
-Bir dizi veri yapısında aynı türde birden fazla değişken depolayabilirsiniz. Dizi öğeleri türü belirterek bildirin.  
+Bir dizi veri yapısında aynı türde birden fazla değişken depolayabilirsiniz. Bir diziyi, öğelerinin türünü belirterek bildirin.  
   
  `type[] arrayName;`  
   
- Aşağıdaki örnekler tek boyutlu, çok boyutlu ve basit diziler oluşturun:  
+ Aşağıdaki örnekler tek boyutlu, çok boyutlu ve düzensiz diziler oluşturur:  
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>Dizi genel bakış  
+## <a name="array-overview"></a>Diziye genel bakış  
  Bir dizi aşağıdaki özelliklere sahiptir:  
   
--   Bir dizi olabilir [tek boyutlu](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [çok boyutlu](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) veya [Jagged](../../../csharp/programming-guide/arrays/jagged-arrays.md).  
+-   Bir dizi olabilir [tek boyutlu](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [çok boyutlu](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) veya [düzensiz](../../../csharp/programming-guide/arrays/jagged-arrays.md).  
   
--   Array örneği oluşturulduğunda boyut sayısını ve her boyutun uzunluğu oluşturulur. Örneğin ömrü boyunca bu değerler değiştirilemez.  
+-   Boyutların sayısı ve her boyutun uzunluğu, dizi örneği oluşturulduğunda oluşturulur. Bu değerler örneğin kullanım süresi boyunca değiştirilemez.  
   
--   Varsayılan değerleri sayısal dizi öğelerinin sıfıra ayarlanır ve başvuru öğeleri ayarlanır null.  
+-   Sayısal dizi öğelerinin varsayılan değerleri sıfır olarak ayarlanır ve başvuru öğeleri ayarlanmış null.  
   
--   Basit dizi oluşan bir dizi ve bu nedenle öğeleri başvuru türleri için başlatılan `null`.  
+-   Düzensiz bir dizi, dizilerin bir dizidir ve bu nedenle öğeleri başvuru türleridir ve başlatılır `null`.  
   
--   Dizi dizini sıfır olan: sahip bir dizi `n` öğeleri dizine `0` için `n-1`.  
+-   Diziler sıfır dizinlidir şunlardır: bir diziyi `n` öğeleri arasında dizinlenir `0` için `n-1`.  
   
--   Dizi öğeleri bir dizi türü de dahil olmak üzere, herhangi bir türde olabilir.  
+-   Dizi öğeleri, bir dizi türü de dahil olmak üzere, herhangi bir türde olabilir.  
   
--   Dizi türleri [başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md) soyut taban türünden türetilmiş <xref:System.Array>. Bu tür uygulayan beri <xref:System.Collections.IEnumerable> ve <xref:System.Collections.Generic.IEnumerable%601>, kullanabileceğiniz [foreach](../../../csharp/language-reference/keywords/foreach-in.md) yineleme tüm diziler C# üzerinde.  
+-   Dizi türleri, [başvuru türleri](../../../csharp/language-reference/keywords/reference-types.md) soyut temel türünden türetilmiş <xref:System.Array>. Bu tür uyguladığından <xref:System.Collections.IEnumerable> ve <xref:System.Collections.Generic.IEnumerable%601>, kullanabileceğiniz [foreach](../../../csharp/language-reference/keywords/foreach-in.md) C# içindeki dizilerde yineleme.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   

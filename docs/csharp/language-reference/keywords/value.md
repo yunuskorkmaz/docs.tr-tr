@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: c8f808540385552f6222566f23251f6cbd6e86df
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1e120d68fc4a42f24feb225f652c14525fde3d71
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959402"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931948"
 ---
 # <a name="value-c-reference"></a>value (C# Başvurusu)
 Bağlamsal anahtar sözcüğü `value` sıradan özellik bildiriminde kümesi erişimcisi kullanılır. Yöntemi giriş parametresi benzerdir. Word `value` istemci kodu özelliğe atanacak çalışıyor değeri başvuruyor. Aşağıdaki örnekte, `MyDerivedClass` adlı bir özelliğe sahiptir `Name` kullanan `value` yedekleme alanına yeni bir dize atamak için parametre `name`. Bakış açısıyla, istemci kodu, işlem bir basit atama yazılır.  
@@ -23,7 +23,8 @@ Bağlamsal anahtar sözcüğü `value` sıradan özellik bildiriminde kümesi er
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)

@@ -6,46 +6,46 @@ helpviewer_keywords:
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
 ms.openlocfilehash: 553b0a5e75364bc5c294867852265575fb9271b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324681"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935506"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
-Bir sınıf veya yapı türü neler yapabileceğinizi belirten şeması gibi tanımıdır. Bir nesne temelde ayrılmış ve şeması göre yapılandırılmış bellek bloğudur. Bir program aynı sınıfın birçok nesne oluşturabilir. Nesnelerin örneklerini de denir ve bir adlandırılmış değişkeninde veya bir dizi ya da koleksiyon depolanabilir. İstemci, bu değişkenleri yöntemlerini çağırın ve nesneyi genel özelliklerine erişmek için kullandığı kodu kodudur. Bir nesne yönelimli dil C# gibi tipik bir program dinamik olarak etkileşim birden çok nesnelerin oluşur.  
+Bir sınıf veya yapı tanımı türü neler yapabileceğinizi belirten gibi plandır. Bir temel olarak ayrılmış ve şema göre yapılandırılmış bir bellek bloğunu nesnedir. Bir program, aynı sınıfın birçok nesne oluşturabilir. Nesne örneği olarak da adlandırılır ve adlandırılmış bir değişkeni veya bir dizi veya koleksiyon depolanabilir. İstemci kodu yöntemleri çağırın ve nesneyi genel özelliklerine erişmek için bu değişkenleri kullanır koda karşılık gelir. Bir nesne yönelimli dil C# gibi bir programın normal dinamik olarak etkileşim sahip birden çok nesne oluşur.  
   
 > [!NOTE]
->  Statik türleri burada açıklanan daha farklı şekilde davranır. Daha fazla bilgi için bkz: [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+>  Statik türleri burada açıklanan'den farklı davranır. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="struct-instances-vs-class-instances"></a>Yapı örnekleri vs. Sınıf örnekleri  
- Sınıflar başvuru türleri olduğundan, bir sınıf nesnesi bir değişken nesne adresine başvuru yönetilen yığında tutar. İlk nesneyi ikinci nesneden aynı türde atanırsa, her iki değişken adresi nesnede başvurun. Bu nokta, bu konunun ilerleyen bölümlerinde daha ayrıntılı ele alınmıştır.  
+ Başvuru türleri sınıflar olduğu için bir sınıf nesnesi bir değişken yönetilen yığında nesnenin adresi için bir başvuru içerir. İkinci bir nesnesinin aynı türdeki ilk nesneye atanırsa, her iki değişken Bu adresteki bir nesneye başvurun. Bu nokta, bu konunun ilerleyen bölümlerinde daha ayrıntılı ele alınmıştır.  
   
- Sınıfların örneklerini kullanarak oluşturulur [yeni işleç](../../../csharp/language-reference/keywords/new-operator.md). Aşağıdaki örnekte, `Person` türü ve `person1` ve `person 2` örnekleri ya da nesnelerin türü.  
+ Sınıfların örneklerini kullanılarak oluşturulan [new işleci](../../../csharp/language-reference/keywords/new-operator.md). Aşağıdaki örnekte, `Person` türüdür ve `person1` ve `person 2` örnekleri ya da nesnelerin türü.  
   
  [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
- Yapılar değer türleri olduğundan, bir değişken yapısı nesnesinin tüm nesnesinin bir kopyasını tutar. Yapılar örneklerini de oluşturulabilir kullanarak `new` işleci, ancak bu zorunlu değildir, aşağıdaki örnekte gösterildiği gibi:  
+ Yapılar değer türleri olduğundan, bir değişken bir yapı nesnesinin tüm nesnesinin bir kopyasını tutar. Yapılar örneği de oluşturulabilir kullanarak `new` işleci, ancak bu zorunlu değildir, aşağıdaki örnekte gösterildiği gibi:  
   
  [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Her ikisi için de bellek `p1` ve `p2` iş parçacığı yığında ayrılmış. Bu bellek türü veya yöntemi içinde bildirilmiş birlikte alınmadan. Yapılar atamada neden kopyalanır bir neden de budur. Nesne yapılan tüm başvuruları fazlası kapsam dışında aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri çöp toplama) ortak dil çalışma zamanı tarafından durumdur. C++'ta yapabildiğiniz gibi bir sınıf nesnesi belirleyici biçimde yok etmek mümkün değildir. Çöp toplama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bkz: [çöp toplama](../../../standard/garbage-collection/index.md).  
+ Hem bellek `p1` ve `p2` iş parçacığı yığında ayrılır. Bu bellek tür veya yöntem içinde bildirildiği birlikte geri kazanılır. Yapılar atamada neden kopyalanır nedenlerinden biri budur. Nesne tüm başvuruları kapsam dışına sahiplikten aksine, bir sınıf örneği için ayrılan bellek (otomatik olarak geri kazanılan çöp olarak toplanacak) ortak dil çalışma zamanı tarafından andır. C++'ta gibi bir sınıf nesnesi belirleyici yok etmek mümkün değildir. Çöp toplama hakkında daha fazla bilgi için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bkz: [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Ayırma ve yönetilen yığında bellek ayırmayı kaldırma ortak dil çalışma zamanı'nda yüksek oranda iyileştirilmiş. Çoğu durumda bir sınıf örneği yığında yapısı örneği ayırma karşı yığınındaki ayırma performans maliyetini önemli fark yoktur.  
+>  Ayırmayı ve ayırmayı kaldırma yönetilen yığında bellek ortak dil çalışma zamanı yüksek oranda iyileştirilmiş. Çoğu durumda bir sınıf örneği yığında bir struct örneği ayırma karşı yığınındaki ayırma performans maliyeti, önemli bir fark yoktur.  
   
 ## <a name="object-identity-vs-value-equality"></a>Nesne Kimliği vs. Değer eşitliği  
- İki nesnenin eşitlik için karşılaştırdığınızda olup bellek aynı nesne iki değişken temsil eder ve bir veya daha fazla alanlarının değerleri eşdeğer olup bilmek istediğinizi ilk ayırdetmek. Değerleri Karşılaştır amaçlanıyorsa nesneleri değer türleri (yapılar) veya başvuru türleri (sınıfları, temsilciler, diziler) örneği olup olmadığını dikkate almanız gerekir.  
+ Eşitlik için iki nesneleri karşılaştırmak, iki değişken aynı nesneye bellekte olup olmadığını temsil eder ve bir veya daha fazla alanlarının değerlerini eşdeğer olup bilmek istemediğiniz ilk ayırdetmek. Değerleri Karşılaştır amaçlanıyorsa nesnenin örneğini değer türleri (yapı) veya başvuru türleri (sınıflar, temsilciler, diziler) olup olmadığını dikkate almanız gerekir.  
   
--   İki sınıf örneklerini bellek aynı konumda başvurmak olup olmadığını belirlemek için (aynı sahip oldukları anlamına gelir *kimlik*), statik kullanmak <xref:System.Object.Equals%2A> yöntemi. (<xref:System.Object?displayProperty=nameWithType> tüm değer türleri ve başvuru türleri, kullanıcı tanımlı yapıları ve sınıfları dahil olmak üzere örtük temel sınıftır.)  
+-   İki sınıf örnekleri bellekte aynı konuma başvurmadığını belirlemek için (yani aynı sahip olduğunuzu *kimlik*), statik <xref:System.Object.Equals%2A> yöntemi. (<xref:System.Object?displayProperty=nameWithType> tüm değer türleri ve kullanıcı tarafından tanımlanan yapıları ve sınıfları da dahil olmak üzere, başvuru türleri için örtük temel sınıftır.)  
   
--   İki yapısı örneği örneği alanları aynı değerlere sahip olup olmadığını belirlemek için <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi. Tüm yapılar örtük olarak öğesinden devraldığı <xref:System.ValueType?displayProperty=nameWithType>, doğrudan nesne üzerinde aşağıdaki örnekte gösterildiği gibi yöntemini çağırın:  
+-   İki yapısı örneği örnek alanları aynı değerlere sahip olup olmadığını belirlemek için <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi. Tüm yapıları öğesinden örtük olarak devraldığı <xref:System.ValueType?displayProperty=nameWithType>, doğrudan nesne üzerinde aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:  
   
  [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
- <xref:System.ValueType?displayProperty=nameWithType> Uyarlamasını `Equals` herhangi yapıda alanlar nelerdir belirlemek mümkün olması nedeniyle yansıma kullanır. Kendi yapılar oluştururken, geçersiz kılma `Equals` türünüz için belirli bir verimli eşitlik algoritma sağlamak için yöntem.  
+ <xref:System.ValueType?displayProperty=nameWithType> Uygulaması `Equals` yansıma kullanır, çünkü bir yapıda alanlar nelerdir belirlemek mümkün olması gerekir. Kendi yapılar oluştururken, geçersiz kılma `Equals` türünüz için belirli bir verimli eşitlik algoritma sağlamak için yöntemi.  
   
--   İki sınıf durumlarda alanlarına ait değerlerin eşit olup olmadığını belirlemek için kullanılacak olabilir <xref:System.Object.Equals%2A> yöntemi veya [== işleci](../../../csharp/language-reference/operators/equality-comparison-operator.md). Sınıf geçersiz veya bu türündeki nesneler için hangi "eşitlik" anlamına gelir, özel bir tanımını sağlamak için aşırı yüklü, ancak yalnızca kullanın. Sınıf ayrıca uygulayabilir <xref:System.IEquatable%601> arabirimi veya <xref:System.Collections.Generic.IEqualityComparer%601> arabirimi. Her iki arabirimde değer eşitliği test etmek için kullanılan yöntemleri sağlar. Ne zaman kendi tasarlama izin ver sınıfları bu geçersiz kılma `Equals`, belirtilen yönergeleri izlediğinizden emin olun [nasıl yapılır: bir tür için değer eşitliği tanımlama](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+-   İki sınıf örnekleri, alanların değerlerini eşit olup olmadığını belirlemek için kullanmanız mümkün olabilir <xref:System.Object.Equals%2A> yöntemi veya [== işleci](../../../csharp/language-reference/operators/equality-comparison-operator.md). Sınıfı geçersiz veya bunların hangi "eşitlik" anlamına gelir türü nesneler için bir özel tanım sağlamak için aşırı yüklenmiş, ancak yalnızca bunları kullanın. Sınıfı ayrıca uygulayabilir <xref:System.IEquatable%601> arabirimi veya <xref:System.Collections.Generic.IEqualityComparer%601> arabirimi. İki arabirim, değer eşitliği test etmek için kullanılan yöntemler sağlar. Ne zaman kendi tasarlama izin ver sınıfları bu geçersiz kılma `Equals`, belirtilen yönergeleri takip edin [nasıl yapılır: bir tür için değer eşitliği tanımlama](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) ve <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için:  

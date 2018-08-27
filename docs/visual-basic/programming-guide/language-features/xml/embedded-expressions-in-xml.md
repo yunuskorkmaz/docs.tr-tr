@@ -9,20 +9,20 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653526"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932935"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
-Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri içeren XML değişmez değerleri oluşturma olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı sözdizimini kullanılan gibi [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade içeren bir XML sabit değerleri oluşturmanıza olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı söz dizimi içinde kullanılan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
- Örneğin, bir XML öğesi değişmez değeri metin içeriği katıştırılmış ifadeler birleştirme oluşturabilirsiniz.  
+ Örneğin, bir XML öğesi değişmez değeri katıştırılmış ifadeler sabit metin içerikli birleştirme oluşturabilirsiniz.  
   
  [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
- Varsa `isbnNumber` 12345 tamsayı içerir ve `modifiedDate` tarihini içerir 3/5/ne zaman bu kodu yürütür, değerini 2006, `book` değil:  
+ Varsa `isbnNumber` 12345 tamsayı içerir ve `modifiedDate` tarihi içeren 3/5/olduğunda bu kodu yürütür, değerini 2006 `book` olan:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,35 +30,35 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri i�
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Katıştırılmış ifade konumu ve doğrulama  
- Katıştırılmış ifadeler yalnızca XML değişmez ifadeleri içinde belirli konumlarda yer alabilir. İfade türleri ifade konumu denetimleri döndürebilir ve nasıl `Nothing` ele alınır. Aşağıdaki tabloda, izin verilen konumların ve katıştırılmış ifadeler türleri açıklanmaktadır.  
+## <a name="embedded-expression-location-and-validation"></a>Gömülü deyim konumu ve doğrulama  
+ XML değişmez ifadelerinde içinde belirli konumlara yalnızca katıştırılmış ifadeler görünür. İfade türleri ifade konumu denetimleri döndürebilir ve nasıl `Nothing` ele alınır. Aşağıdaki tabloda, izin verilen konumlar ve katıştırılmış ifadeler türleri açıklanmaktadır.  
   
-|Değişmez değeri konumda|İfade türü|İşleme `Nothing`|  
+|Konumda sabit değer|İfadenin türü|İşleme `Nothing`|  
 |---|---|---|  
 |XML öğesi adı|<xref:System.Xml.Linq.XName>|Hata|  
 |XML öğesi içeriği|`Object` veya dizi `Object`|Yoksayıldı|  
 |XML öğesi öznitelik adı|<xref:System.Xml.Linq.XName>|Hata, öznitelik değeri de olmadığı sürece `Nothing`|  
-|XML öğesi öznitelik değeri|`Object`|Göz ardı özniteliği bildirimi|  
-|XML öğe özniteliği|<xref:System.Xml.Linq.XAttribute> veya bir koleksiyonu <xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
-|XML belge kök öğesi|<xref:System.Xml.Linq.XElement> veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesne ve isteğe bağlı sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri|Yoksayıldı|  
+|XML öğesi öznitelik değeri|`Object`|Öznitelik bildirim yoksayıldı|  
+|XML öğesi özniteliği|<xref:System.Xml.Linq.XAttribute> veya bir koleksiyonu <xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
+|XML belgesi kök öğesi|<xref:System.Xml.Linq.XElement> veya bir koleksiyonu <xref:System.Xml.Linq.XElement> nesne ve tercihe bağlı sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesneleri|Yoksayıldı|  
   
--   Bir XML öğesi adı katıştırılmış bir ifadede örneği:  
+-   Bir XML öğesinin adındaki katıştırılmış bir ifade örneği:  
   
      [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
--   Katıştırılmış içerik ifadede bir XML öğesi örneği:  
+-   Bir XML öğesi içeriğinde katıştırılmış bir ifade örneği:  
   
      [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
--   Bir XML öğesi öznitelik adı katıştırılmış bir ifadede örneği:  
+-   Bir XML öğesi öznitelik adı bir gömülü ifade örneği:  
   
      [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
--   Bir XML öğesi öznitelik değerinde katıştırılmış bir ifade örneği:  
+-   Gömülü deyim bir XML öğesi öznitelik değeri örneği:  
   
      [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
--   Bir XML öğesi özniteliğindeki katıştırılmış bir ifade örneği:  
+-   Bir XML öğesi özniteliği katıştırılmış bir ifadede örneği:  
   
      [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
@@ -66,19 +66,19 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilir ifadeleri i�
   
      [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
- Etkinleştirirseniz, `Option Strict`, her katıştırılmış ifade türü için gerekli tür widens derleyici denetler. Kod çalıştığında doğrulanır bir XML belgesi kök öğesi için yalnızca istisnadır. Olmadan derleme yaparsanız `Option Strict`, türünde ifadeler katıştırmak `Object` ve bunların türü çalışma zamanında doğrulanır.  
+ Etkinleştirirseniz `Option Strict`, derleyici her katıştırılmış ifadenin türü için gerekli tür widens denetler. Tek özel durum için kod çalıştığında doğrulanır bir XML belgesi kök öğesidir. Olmadan derlerseniz `Option Strict`, türündeki ifadeler katıştırabilirsiniz `Object` ve çalışma zamanında türlerine doğrulanır.  
   
- İçerik nerede isteğe bağlı, konumlarda içeren ifadeleri katıştırılmış `Nothing` göz ardı edilir. Bu öznitelik değerleri, o öğe içeriği denetleyin gerekmez ve dizi öğeleri olmayan anlamına gelir `Nothing` bir XML değişmez değeri kullanmadan önce. Öğe ve öznitelik adları gibi değerler olamaz gerekli `Nothing`.  
+ İçeriğin bulunduğu, isteğe bağlı konumlarda içeren ifadeler katıştırılmış `Nothing` göz ardı edilir. Bunun anlamı, öznitelik değerleri, öğe içerik denetleme gerekmez ve dizi öğesi olmayan `Nothing` önce bir XML değişmez değeri kullanın. Öğe ve öznitelik adları gibi bir değer olamaz gerekli `Nothing`.  
   
- Katıştırılmış bir ifade hazır değer belirli bir tür kullanma hakkında daha fazla bilgi için bkz: [XML belgesi değişmez değer](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML öğesi değişmez değer](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ Katıştırılmış bir ifade sabit değeri belirli bir tür kullanma hakkında daha fazla bilgi için bkz. [XML belgesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Kapsam kuralları  
- Derleyici Oluşturucusu çağrısı uygun değişmez değer türü için her XML değişmez değer dönüştürür. Değişmez değer içeriğine ve XML değişmez değeri katıştırılmış ifadeler oluşturucuya bağımsız değişken olarak geçirilir. Başka bir deyişle, bir XML değişmez değer kullanılabilir tüm Visual Basic programlama öğeleri de kendi katıştırılmış ifadeler için kullanılabilir.  
+ Derleyici uygun bir değişmez değer türü için bir oluşturucu çağrısı her XML değişmez değer dönüştürür. Katıştırılmış ifadelerde XML sabit ve değişmez değer içeriğine oluşturucusuna bağımsız değişken olarak geçirilir. Başka bir deyişle, XML değişmez değer için kullanılabilir tüm Visual Basic programlama öğeleri de kendi katıştırılmış ifadeler için kullanılabilir.  
   
- XML değişmez değer içinde önekleri bildirilen ile XML ad alanına erişebildiğinizi `Imports` deyimi. Yeni bir XML ad alanı önekini bildirmek veya kullanarak bir öğedeki var olan bir XML ad alanı öneki gölge `xmlns` özniteliği. Yeni ad alanı, o öğesinin alt düğümleri, ancak katıştırılmış ifadelerde XML değişmez değerleri kullanılabilir.  
+ XML değişmez değer içinde XML ad alanı ön ekleri ile bildirilmiş erişebileceğiniz `Imports` deyimi. Yeni bir XML ad alanı öneki bildirin veya bir öğedeki kullanarak varolan bir XML ad alanı öneki gölge `xmlns` özniteliği. Yeni ad alanı, o öğenin alt düğümleri, ancak XML değişmez değerlerine katıştırılmış ifadeler kullanılabilir.  
   
 > [!NOTE]
->  Ne zaman bildirdiğiniz bir XML ad alanı öneki kullanarak `xmlns` namespace özniteliği öznitelik değerinin bir sabit dize olması gerekir. Bu bağlamda kullanarak `xmlns` özniteliktir kullanarak gibi `Imports` bir XML ad alanı bildirmek için deyimi. XML ad alanı değeri belirtmek için katıştırılmış bir ifade kullanamazsınız.  
+>  Kullanarak bir XML ad alanı öneki bildirdiğinizde `xmlns` namespace özniteliği, öznitelik değeri bir sabit dize olmalıdır. Bu bağlamda kullanarak `xmlns` özniteliktir kullanma gibi `Imports` deyimi bir XML ad alanı bildirmek için. XML ad alanı değeri belirtmek için bir katıştırılmış deyim kullanamazsınız.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  

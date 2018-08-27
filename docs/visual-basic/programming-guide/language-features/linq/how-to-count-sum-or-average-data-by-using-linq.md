@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 4584f8ee8b0a87c2150217b1b9eb0c19bc122487
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 942cb889c595f8caaf86dee1c025a935bd7db1b1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244208"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934785"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Count, Sum veya Average Verisi (Visual Basic)
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır.  
@@ -79,8 +79,8 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext yöntemi (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [Aggregate Yan Tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Group By Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604724"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932494"
 ---
 # <a name="from-clause-visual-basic"></a>From Tümcesi (Visual Basic)
-Bir veya daha fazla aralık değişkeni ve sorgu bir koleksiyona belirtir.  
+Bir veya daha fazla aralık değişkenleri ve bir sorgu koleksiyonu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,46 +31,46 @@ From element [ As type ] In collection [ _ ]
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. A *aralık değişkeni* koleksiyonu öğelerinde yineleme yapmak için kullanılır. Aralık değişkeni için her üye başvurmak için kullanılan `collection` sorgu dolaşır gibi `collection`. Bir numaralandırma türü olmalıdır.|  
-|`type`|İsteğe bağlı. Türü `element`. Öyle değilse `type` belirtilirse, türü `element` gelen olayla `collection`.|  
-|`collection`|Gerekli. Sorgulanacak koleksiyona ifade eder. Bir numaralandırma türü olmalıdır.|  
+|`element`|Gerekli. A *aralık değişkeni* koleksiyon öğelerinde yineleme yapmak için kullanılır. Aralık değişkeni için her üye için kullanılır `collection` sorgu gezinir gibi `collection`. Sıralanabilir bir tür olmalıdır.|  
+|`type`|İsteğe bağlı. Türünü `element`. Hayır ise `type` belirtilen türü `element` içinden gösterilen `collection`.|  
+|`collection`|Gerekli. Koleksiyona sorgulanacağı anlamına gelir. Sıralanabilir bir tür olmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `From` Yan tümcesi, bir sorgu ve kaynak koleksiyondan bir öğe olarak başvurmak için kullanılan değişkenler için kaynak verilerini tanımlamak için kullanılır. Bu değişkenler adlı *aralık değişkenleri*. `From` Ne zaman dışında bir sorgu için yan tümcesi gereklidir `Aggregate` yan tümcesi döndürür yalnızca sonuçları birleşik bir sorgu tanımlamak için kullanılır. Daha fazla bilgi için bkz: [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ `From` Yan tümcesi bir sorgu ve kaynak koleksiyonu bir öğesine başvurmak için kullanılan değişkenleri için kaynak verilerini tanımlamak için kullanılır. Bu değişkenleri olarak adlandırılmasının *aralık değişkenleri*. `From` Aşağıdakiler haricinde bir sorgu yan tümcesi gereklidir `Aggregate` yan tümcesi döndürür yalnızca toplu sonuçları, bir sorgu tanımlamak için kullanılır. Daha fazla bilgi için [Aggregate tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Birden çok belirtebilirsiniz `From` birleştirilecek olan birden çok koleksiyon tanımlayacak bir sorgu yan tümcelerinde. Birden çok koleksiyon belirtildiğinde, bunlar üzerinden bağımsız olarak yinelendiğinde veya ilişkili oldukları varsa bunları katılabilirsiniz. Kullanarak koleksiyonları örtük olarak birleştirebilirsiniz `Select` yan tümcesi veya kullanarak açıkça `Join` veya `Group Join` yan tümceleri. Alternatif olarak, birden çok aralık değişkeni ve koleksiyonları tek bir belirtebilirsiniz `From` yan tümcesi, her ilgili aralık değişkeni ve diğerlerinden virgülle ayrılmış koleksiyonu. Aşağıdaki kod örneği iki sözdizimi seçeneklerini gösterir `From` yan tümcesi.  
+ Birden çok belirtebilirsiniz `From` birleştirilecek olan birden çok koleksiyon belirlemek üzere bir sorgu yan tümcelerinde. Birden çok koleksiyon belirtildiğinde, bunlar üzerinden bağımsız olarak yinelendiğinde veya ilişkili oldukları varsa bunları birleştirebilirsiniz. Kullanarak, örtük olarak bir koleksiyonları birleştirebilirsiniz `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri. Alternatif olarak, birden çok aralık değişkenleri ve Koleksiyonlar tek bir belirtebilirsiniz `From` her ilgili aralık değişkeni ve diğerlerinden virgülle ayırarak toplama yan tümcesi. Aşağıdaki kod örneği her iki sözdizimi seçeneklerini gösterir `From` yan tümcesi.  
   
  [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
- `From` Yan tümcesi kapsamına benzer bir sorgu kapsamını tanımlayan bir `For` döngü. Bu nedenle, her `element` aralık değişkeni bir sorgu kapsamında benzersiz bir adı olması gerekir. Birden çok belirtebildiğinizden `From` sonraki bir sorgu için tümcecikleri `From` yan tümceleri aralık değişkenlerinin başvurabilir `From` yan tümcesi veya başvurabilir aralık değişkeni için önceki bir `From` yan tümcesi. Örneğin, aşağıdaki örnekte bir iç içe gösterir `From` burada ikinci tümce koleksiyonunda temel bir özelliğe ilk yan tümcesinde Aralık değişkeninin yan tümcesi.  
+ `From` Yan tümcesi bir sorgu kapsamına benzer kapsamını tanımlar bir `For` döngü. Bu nedenle, her `element` aralık değişkeni bir sorgu kapsamında benzersiz adlara sahip olmalıdır. Birden çok belirtebildiğinizden `From` izleyen bir sorgu için yan tümceler `From` yan tümceleri aralık değişkenleri başvurabilir `From` yan tümcesi veya başvurabilir aralık değişkenleri önceki `From` yan tümcesi. Örneğin, aşağıdaki örnekte iç içe bir gösterir `From` burada ikinci yan tümcesinde toplama temel bir özelliği birinci yan tümce de Aralık değişkeninin yan tümcesi.  
   
  [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
- Her `From` yan tümcesi herhangi bir bileşimini sorguyu daraltmak için ek sorgu yan tümceleri takip. Sorgu aşağıdaki yollarla tanımlayabilirsiniz:  
+ Her `From` yan tümcesi sorguyu daraltmak için ek sorgu yan tümceleri herhangi bir birleşimi tarafından takip. Sorgu aşağıdaki yollarla daraltabilirsiniz:  
   
--   Birden çok koleksiyon örtük olarak kullanarak birleştirme `From` ve `Select` yan tümceleri, veya kullanarak açıkça `Join` veya `Group Join` yan tümceleri.  
+-   Örtük olarak kullanarak birden çok koleksiyon birleştirme `From` ve `Select` yan tümcesi kullanılarak açık şekilde veya `Join` veya `Group Join` yan tümceleri.  
   
 -   Kullanım `Where` sorgu sonucu filtrelemek için yan tümcesi.  
   
 -   Sonuç kullanarak sıralama `Order By` yan tümcesi.  
   
--   Benzer sonuçlar gruplamak kullanarak `Group By` yan tümcesi.  
+-   Şuna benzer sonuçlar gruplamak kullanarak `Group By` yan tümcesi.  
   
--   Kullanım `Aggregate` için tüm sorgu sonucu değerlendirmek için toplama işlevleri tanımlamak için yan tümcesi.  
+-   Kullanım `Aggregate` yan tümcesi için tüm sorgu sonucu değerlendiremedik toplama işlevleri tanımlamak için.  
   
--   Kullanım `Let` değerini bir deyim bir koleksiyon yerine belirlenir bir yineleme değişkeni tanıtmak için yan tümcesi.  
+-   Kullanım `Let` yan tanıtan bir yineleme değişkeninin değeri ifade yerine bir koleksiyona göre belirlenir.  
   
--   Kullanım `Distinct` yinelenen sorgu sonuçları yoksaymak için yan tümcesi.  
+-   Kullanım `Distinct` yan yinelenen sorgu sonuçları yoksay.  
   
--   Kullanarak döndürülecek sonuç parçalarını tanımlamak `Skip`, `Take`, `Skip While`, ve `Take While` yan tümceleri.  
+-   Kullanarak, döndürülecek sonuç parçalarını tanımlamak `Skip`, `Take`, `Skip While`, ve `Take While` yan tümceleri.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu ifade kullanan bir `From` yan tümcesinin aralık değişkeni bildirmek için `cust` her `Customer` nesnesinde `customers` koleksiyonu. `Where` Yan tümcesi, çıkış müşterilere belirtilen bölgesinden kısıtlamak için aralık değişkeni kullanır. `For Each` Döngü sorgu sonucunda her müşteri için şirket adını görüntüler.  
+ Aşağıdaki sorgu ifadesi kullanan bir `From` yan tümcesinin aralık değişkenini bildirmek için `cust` her `Customer` nesnesine `customers` koleksiyonu. `Where` Yan tümcesi, çıkış belirtilen bölgeden müşterilere kısıtlamak için aralık değişkeni kullanır. `For Each` Döngü, her müşteri için şirket adı sorgu sonucu görüntüler.  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [For Each...Next Deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
  [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)  

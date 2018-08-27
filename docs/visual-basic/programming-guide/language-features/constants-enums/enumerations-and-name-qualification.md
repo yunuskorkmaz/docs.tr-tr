@@ -17,34 +17,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648586"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933972"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Numaralandırmalar ve Ad Niteliği (Visual Basic)
-Normalde, bir numaralandırma üyesi için söz konusu olduğunda numaralandırması adıyla üye nitelemeniz gerekir. Örneğin, başvurmak için `Sunday` üyesi, `Days` numaralandırma, aşağıdaki sözdizimini kullanın:  
+Normalde, bir sabit listesi üyesi için söz konusu olduğunda, üye adını sabit listesi adıyla nitelemeniz gerekir. Örneğin, başvurmak için `Sunday` üyesi, `Days` numaralandırma, aşağıdaki sözdizimini kullanın:  
   
  [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
   
 ## <a name="using-the-imports-statement"></a>Imports deyimi kullanarak  
- Ekleyerek tam olarak nitelenmiş adlar kullanmaktan kaçınabilirsiniz bir `Imports` ad alanı bildirimleri bölümüne aşağıdaki örnekte olduğu gibi kodunuzu deyimi:  
+ Ekleyerek tam olarak nitelenmiş adlar kullanmaktan kaçınabilirsiniz bir `Imports` ad alanı bildirimleri bölümüne aşağıdaki örnekte olduğu gibi kodunuzun deyimi:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
- Bir `Imports` başvurulan projeleri ve derlemeler ve içinden ad alanı adları Imports deyimi aynı projesi deyim göründüğü modülü olarak. Bu bildirimi eklendikten sonra aşağıdaki örnekte olduğu gibi nitelik olmadan numaralandırma üyeleri başvurabilir:  
+ Bir `Imports` başvurulan projeleri ve derlemeleri ve içinden ad alanı adları Imports deyimi deyim göründüğü modül olarak aynı proje. Bu bildirimi eklendikten sonra aşağıdaki örnekte olduğu gibi bir nitelik olmadan numaralandırma üyeleri başvurabilir:  
   
  [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
- Numaralandırmalar ilgili sabitler kümesi düzenleyerek farklı bağlamlarda aynı sabit adlarını kullanabilirsiniz. Örneğin, haftanın günü sabitler için aynı adlarını kullanabilirsiniz `Days` ve `WorkDays` numaralandırmalar. Kullanırsanız `Imports` deyimi, numaralandırmalar sahip olmanız gerekir belirsiz başvuruları kaçınmak için dikkatli. Aşağıdaki örnek göz önünde bulundurun:  
+ İlişkili numaralandırmalar sabitlerle kümesi düzenleyerek, farklı bağlamlardaki aynı sabit adları kullanabilirsiniz. Örneğin, hafta içi sabitlerle için aynı adları kullanabilirsiniz `Days` ve `WorkDays` numaralandırma. Kullanırsanız `Imports` ifadesi, sabit listeleri ile olmalısınız belirsiz başvuru kaçınmak dikkatli. Aşağıdaki örnek göz önünde bulundurun:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
  [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
   
- Varsayılarak `Monday` her ikisi de üyesi `Days` numaralandırma ve `Workdays` numaralandırma, bu kod bir derleyici hatası oluşturur. Tek bir sabite başvururken belirsiz başvuruları önlemek için kendi numaralandırma sabit adıyla nitelemek. Aşağıdaki kod başvurduğu `Saturday` sabitler `Days` ve `WorkDays` numaralandırmalar.  
+ Varsayarak `Monday` hem de bir üyesi `Days` numaralandırma ve `Workdays` sabit listesi, bu kod bir derleyici hatası oluşturur. Tek bir sabite söz konusu olduğunda belirsiz başvuru kaçınmak için sabit, sabit listesi adıyla niteleyin. Aşağıdaki kod başvurduğu `Saturday` sabitlerle `Days` ve `WorkDays` numaralandırma.  
   
  [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
   
@@ -52,10 +52,10 @@ Normalde, bir numaralandırma üyesi için söz konusu olduğunda numaralandırm
  [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)  
  [Nasıl yapılır: bir numaralandırma bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
  [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
- [Nasıl yapılır: Visual Basic'de numaralandırma yoluyla yineleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [Nasıl yapılır: Visual Basic'de numaralandırma yoluyla yineleme yapma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
  [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
  [Sabit Listesi Ne Zaman Kullanılır?](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
  [Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
  [Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)  
  [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)

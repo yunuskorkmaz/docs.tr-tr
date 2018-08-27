@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314945"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933709"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 .NET Framework taşınabilir sınıf kitaplığı proje türü Visual Studio'da platformlar arası uygulamalar ve kitaplıklar Microsoft platformları için hızlı ve kolay bir şekilde oluşturmanıza yardımcı olur.  
@@ -147,7 +147,7 @@ Visual Studio 2012'de değişiklik hedefleri iletişim kutusu
  ➌ Gerektirir [Microsoft HTTP istemcisi kitaplıkları](https://www.nuget.org/packages/Microsoft.Net.Http) paket  
   
 > [!WARNING]
->  Başvuru hataları karşılaşabilirsiniz [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) ve [Microsoft HTTP istemcisi kitaplıkları](https://www.nuget.org/packages/Microsoft.Net.Http) bir Windows Phone Silverlight 8.1 uygulaması tarafından kullanılan bir taşınabilir kitaplık paketleri. Daha fazla bilgi için [Platform uyumluluğu ve Windows Phone Silverlight 8.1 uygulamaları için önemli değişiklikler](/previous-versions/windows/apps/dn642084(v=vs.105)).  
+>  Başvuru hataları karşılaşabilirsiniz [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) ve [Microsoft HTTP istemcisi kitaplıkları](https://www.nuget.org/packages/Microsoft.Net.Http) bir Windows Phone Silverlight 8.1 uygulaması tarafından kullanılan bir taşınabilir kitaplık paketleri. Daha fazla bilgi için [Platform uyumluluğu ve Windows Phone Silverlight 8.1 uygulamaları için önemli değişiklikler](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Desteklenen türler ve Üyeler  

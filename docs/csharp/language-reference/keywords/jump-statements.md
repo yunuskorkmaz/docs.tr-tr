@@ -5,15 +5,15 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 363e0cfa9d31479caeb8c71e2454db3e28d372bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eb72fc599eae85b6c51b5030ffcd5072b7d7cef
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265226"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934106"
 ---
 # <a name="jump-statements-c-reference"></a>Atlama Deyimleri (C# Başvurusu)
-Dal oluşturma program denetimini hemen bir aktarımını neden atlama deyimleri kullanılarak gerçekleştirilir. Aşağıdaki anahtar sözcükler atlama deyimlerinde kullanılır:  
+Dallanma hemen bir program denetiminin aktarımı neden atlama deyimleri kullanılarak gerçekleştirilir. Aşağıdaki anahtar sözcükler atlama deyimlerinde kullanılır:  
   
 -   [break](../../../csharp/language-reference/keywords/break.md)  
   
@@ -25,8 +25,9 @@ Dal oluşturma program denetimini hemen bir aktarımını neden atlama deyimleri
   
 -   [throw](../../../csharp/language-reference/keywords/throw.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Deyim Anahtar Sözcükleri](../../../csharp/language-reference/keywords/statement-keywords.md)

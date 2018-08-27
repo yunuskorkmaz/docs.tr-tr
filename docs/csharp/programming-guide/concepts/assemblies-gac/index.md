@@ -2,53 +2,53 @@
 title: Derlemeler ve Genel Derleme Önbelleği (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 994498525aed3ebb08f2de7926c7adc2d3d95f56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320933"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933031"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Derlemeler ve Genel Derleme Önbelleği (C#)
-Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleştirme kapsamı ve güvenlik izinleri olan bir. NET tabanlı bir uygulama. Derlemeler bir yürütülebilir dosya (.exe) veya dinamik bağlantı kitaplığı (.dll) dosyası şeklinde ve .NET Framework'ün yapı taşlarıdır. Ortak dil çalışma zamanı tür uygulamaları haberdar olmanız gereken bilgilerle sağlarlar. Derleme türleri ve işlevlerin bir mantıksal birim oluşturur ve birlikte çalışacak biçimde oluşturulmuş kaynak koleksiyonu olarak düşünebilirsiniz.  
+Derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve güvenlik izinleri için temel birimini oluşturur bir. AĞ tabanlı bir uygulama. Derlemeler, bir yürütülebilir (.exe) dosya veya dinamik bağlantı kitaplığı (.dll) dosyası biçiminde ve .NET Framework'ün yapı taşlarıdır. Bunlar, ortak dil çalışma zamanı tür uygulamalarına dikkat etmeniz gereken bilgileri sağlar. Derleme türleri ve mantıksal bir işlevsellik birimi oluşturacak ve birlikte çalışmak üzere tasarlanan kaynakları koleksiyonu olarak düşünebilirsiniz.  
   
- Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeler birkaç her bir geliştirici ayrı modülleri, birlikte tek bir derleme oluşturmak için tüm gelecek iş şekilde planlanan. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: bir Multifile derleme](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Derlemeler, bir veya daha fazla modül içerebilir. Örneğin, daha büyük projeleri birden fazla bireysel geliştiriciler ayrı modüllerde, tek bir derleme oluşturmak için bir araya tüm gelecek iş şekilde planlı. Modüller hakkında daha fazla bilgi için Ek Yardım konusuna [nasıl yapılır: birden fazla dosyadan oluşan bir derleme](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
- Derlemeler, aşağıdaki özelliklere sahiptir:  
+ Derlemeleri, aşağıdaki özelliklere sahiptir:  
   
--   Derlemeleri .exe veya .dll dosyaları olarak uygulanır.  
+-   Derlemeleri, .exe veya .dll dosyaları olarak uygulanır.  
   
--   Bir derlemeyi genel derleme önbelleğinde koyarak uygulamalar arasında paylaşabilirsiniz. Derlemeleri güçlü-genel derleme önbelleğinde dahil önce adlandırılması gerekir. Daha fazla bilgi için bkz: [Strong-Named derlemeler](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
+-   Bir derlemeyi genel derleme önbelleğinde koyarak uygulamalar arasında paylaşabilirsiniz. Derlemeleri güçlü-genel derleme önbelleğinde bulunan önce adlandırılması gerekir. Daha fazla bilgi için [Strong-Named derlemeleri](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Derlemeler, yalnızca gerekli olduğunda belleğe yüklenir. Bunlar kullanılmazsa, bunlar yüklü değildir. Başka bir deyişle, derlemeler daha büyük projeler alanındaki kaynakları yönetmek için etkili bir yol olabilir.  
+-   Derlemeleri, yalnızca gerekli olduğunda belleğe yüklenir. Kullanılmazlar, bunlar yüklü değildir. Başka bir deyişle, derlemeleri daha büyük projeler kaynakları yönetmek için etkili bir yol olabilir.  
   
--   Yansıma kullanarak program aracılığıyla bir derleme hakkında bilgi edinebilirsiniz. Daha fazla bilgi için bkz: [yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
+-   Yansıma kullanarak program aracılığıyla bir derlemeyle ilgili bilgiler elde edebilirsiniz. Daha fazla bilgi için [yansıma (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
   
 -   Yalnızca incelemek için bir derlemeyi yüklemek istiyorsanız, bir yöntem gibi kullanın <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Derleme Bildirimi  
- Her derleme bir *derleme bildirimi*. Benzer şekilde bir içindekiler tablosu, derleme bildirimi aşağıdakileri içerir:  
+ Her derleme içinde var olan bir *derleme bildirimi*. Benzer şekilde bir içindekiler tablosu, derleme bildirimi aşağıdakileri içerir:  
   
--   Derlemenin kimliği (adı ve sürüm).  
+-   Derlemenin kimliğini (adı ve sürümü).  
   
--   Tüm diğer derleme, örneğin, .exe veya .dll dosyasını, bağımlı oluşturulan diğer derlemeleri dosyaları veya hatta bit eşlem veya Benioku dosyaları açıklayan bir dosya tablosu.  
+-   Diğer tüm derlemeyi oluşturan, örneğin, .exe veya .dll dosyası, dayandığını oluşturduğunuz herhangi bir derleme dosyaların veya hatta bit eşlem ya da Benioku dosyaları tanımlayan bir dosya tablosu.  
   
--   Bir *derleme başvurusu listesi*, tüm dış bağımlılıkları listesi olduğu — .dll veya diğer dosyaları uygulama gereksinimlerinizi başka birisi tarafından oluşturulmuş olabilir. Derleme başvurularını hem genel hem de özel nesnelere başvurular içerir. Genel derleme önbelleğinde başka uygulamalar için kullanılabilir bir alan genel nesneler bulunur. Özel nesneleri aynı düzeyde olarak veya uygulamanızın yüklendiği dizinin altında ya da bir dizin olmalıdır.  
+-   Bir *derleme başvurusu listesi*, tüm dış bağımlılıkları listesi verilmiştir: .dll veya diğer dosyaları uygulama gereksinimlerinizi başkası tarafından oluşturulmuş olabilir. Derleme başvuruları, genel ve özel nesnelere başvurular içerir. Genel nesneler, genel derleme önbelleği, diğer uygulamalar için de kullanılabilir olan bir alan olarak yer alır. Özel nesneleri aynı düzeyde olarak veya uygulamanızı yüklendiği dizinin altında ya da bir dizin olmalıdır.  
   
- Derlemeleri içerik, sürüm ve bağımlılıklar hakkındaki bilgileri içerdiğinden, C# ile oluşturduğunuz uygulamaların düzgün çalışması için Windows kayıt defteri değerlerini kullanmayın. Derlemeler .dll çakışmaları azaltmak ve uygulamalarınızı daha güvenilir ve kolay dağıtmak yapın. Çoğu durumda, yüklediğiniz bir. Yalnızca kopyalayarak dosyalarından hedef bilgisayara NET tabanlı uygulama.  
+ Derlemeleri içeriği, sürümleri ve bağımlılıkları hakkında bilgi içerdiğinden, C# ile oluşturduğunuz uygulamaların düzgün çalışması için Windows kayıt defteri değerlerini güvenmeyin. Derlemeler .dll çakışmalarını azaltmak ve daha güvenilir ve kolay dağıtmak uygulamalarınızı. Çoğu durumda, yüklediğiniz bir. Hedef bilgisayarın dosyaları kopyalama powershell'inizi yazarak NET tabanlı uygulama.  
   
- Daha fazla bilgi için bkz: [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  
+ Daha fazla bilgi için [derleme bildirimi](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
-## <a name="adding-a-reference-to-an-assembly"></a>Bir derleme başvurusu ekleme  
- Bir derlemeyi kullanmak için bir başvuru eklemeniz gerekir. Ardından, kullandığınız [using yönergesi](../../../../csharp/language-reference/keywords/using-directive.md) ad alanını kullanmak istediğiniz öğeleri seçin. Bir derlemeyi başvurulan ve içe sonra erişilebilir tüm sınıfları, özellikleri, yöntemleri ve diğer üyelerin kendi ad alanları, kendi kodlarını kaynak dosyanızın parçası değilmiş gibi uygulamanız için kullanılabilir.  
+## <a name="adding-a-reference-to-an-assembly"></a>Bir derlemeye bir başvuru ekleme  
+ Bir derlemeyi kullanması için buna bir başvuru eklemeniz gerekir. Ardından, kullandığınız [using yönergesi](../../../../csharp/language-reference/keywords/using-directive.md) için ad alanı kullanmak istediğiniz öğeleri seçin. Bir derlemeye başvuru ve içeri aktarıldıktan sonra tüm erişilebilir sınıfları, özellikleri, yöntemleri ve diğer üyeleri, ad alanları kodlarını kaynak dosyanıza bir parçası değilmiş gibi uygulamanızda kullanılabilir.  
   
- C# ' ta aynı derlemesinin iki sürümü de tek bir uygulama kullanabilirsiniz. Daha fazla bilgi için bkz: [extern alias](../../../../csharp/language-reference/keywords/extern-alias.md).  
+ C# ' ta aynı derlemenin iki sürümü de tek bir uygulama kullanabilirsiniz. Daha fazla bilgi için [extern diğer adı](../../../../csharp/language-reference/keywords/extern-alias.md).  
   
-## <a name="creating-an-assembly"></a>Derleme oluşturma  
- Tıklayarak uygulamanızı derleyin **yapı** üzerinde **yapı** menü veya komut satırı derleyicisini kullanarak komut satırından oluşturma. Komut satırından derlemeleri oluşturma hakkında daha fazla bilgi için bkz [komut satırı derleme ile csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+## <a name="creating-an-assembly"></a>Bir derleme oluşturma  
+ Tıklayarak uygulamanızı derleyin **derleme** üzerinde **derleme** menüsünden veya komut satırı derleyicisini kullanarak komut satırından derleme. Komut satırı derlemeleri oluşturma hakkında daha fazla ayrıntı için bkz [oluşturma ile komut satırı csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 > [!NOTE]
->  Visual Studio'da bir derleme üzerinde oluşturmak için **yapı** menüsünü seçin **yapı**.  
+>  Visual Studio'da bir derlemeyi derlemek için **derleme** menüsünde **yapı**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)  
@@ -56,7 +56,7 @@ Derlemeleri form temel birimi dağıtım, sürüm denetimi, yeniden, etkinleşti
  [Arkadaş derlemeler (C#)](friend-assemblies.md)  
  [Nasıl yapılır: bir derlemeyi başka uygulamalarla (C#) paylaşma](how-to-share-an-assembly-with-other-applications.md)  
  [Nasıl yapılır: yük derlemeleri ve yüklemelerini kaldırma (C#)](how-to-load-and-unload-assemblies.md)  
- [Nasıl yapılır: bir dosyanın derleme (C#) olup olmadığını belirleme](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Nasıl yapılır: bir dosyanın bir derleme (C#) olup olmadığını belirleme](how-to-determine-if-a-file-is-an-assembly.md)  
  [Nasıl yapılır: komut satırını (C#) kullanarak derlemeler oluşturma ve kullanma](how-to-create-and-use-assemblies-using-the-command-line.md)  
  [İzlenecek yol: Visual Studio'da (C#) yönetilen derlemelerden türler katıştırma](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
  [İzlenecek yol: Visual Studio'da (C#) Microsoft Office derlemelerinden tür bilgilerini katıştırma](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

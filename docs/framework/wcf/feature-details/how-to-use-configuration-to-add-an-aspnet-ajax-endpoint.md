@@ -2,23 +2,23 @@
 title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: f14b441ead7c701aa4f794370fc5f54ad3b4a4e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495008"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934413"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma
-Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç istemci Web sitesinde JavaScript'ten çağrılabilir kullanılabilir hale getirir bir hizmet oluşturmanıza olanak sağlar. Bu tür bir uç nokta oluşturmak için tüm diğer Windows Communication Foundation (WCF) uç noktaları gibi bir yapılandırma dosyası kullanın veya tüm yapılandırma öğeleri gerektirmeyen bir yöntemi kullanabilirsiniz. Bu konuda yapılandırma yaklaşım gösterilir.  
+Windows Communication Foundation (WCF), bir ASP.NET AJAX etkinleştirilmiş uç nokta, istemci Web sitesinde JavaScript'ten çağrılabilir kullanılabilir bir hizmet oluşturmanıza olanak sağlar. Böyle bir uç nokta oluşturmak için bir yapılandırma dosyası ile tüm diğer Windows Communication Foundation (WCF) uç noktalar olarak kullanabilir veya yapılandırma öğeleri gerektirmeyen bir yöntem kullanın. Bu konuda, yapılandırma yaklaşım gösterilmektedir.  
   
- Hizmet uç noktası, ASP.NET AJAX etkinleştirilmiş olmasını sağlayan yordamının parçası kullanmak için uç nokta yapılandırmayı içerir <xref:System.ServiceModel.WebHttpBinding> ve eklemek için [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) uç noktası davranışı. Uç nokta yapılandırdıktan sonra uygulama ve hizmet barındırmak için adımları herhangi bir WCF hizmeti tarafından kullanılan benzerdir. Çalışan bir örnek için bkz: [AJAX hizmeti kullanarak HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ Hizmet uç noktası, ASP.NET AJAX etkinleştirilmiş olmasını sağlayan yordamının parçası kullanılacak uç nokta yapılandırmayı içerir <xref:System.ServiceModel.WebHttpBinding> eklenecek ve [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) uç nokta davranışı. Uç noktası yapılandırıldıktan sonra uygulama ve hizmeti barındırmak için adımları herhangi bir WCF hizmeti tarafından kullanılan benzerdir. Çalışan bir örnek için bkz. [hizmet HTTP POST kullanan AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- Yapılandırma kullanmadan ASP.NET AJAX uç noktası yapılandırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET AJAX uç nokta olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Yapılandırma kullanmadan ASP.NET AJAX uç nokta yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir ASP.NET AJAX uç noktası olmadan kullanarak Yapılandırması Ekle](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Temel bir WCF hizmeti oluşturmak için  
   
-1.  İle işaretlenen bir arabirim ile temel bir WCF sözleşmesi tanımlayın. <xref:System.ServiceModel.ServiceContractAttribute> özniteliği. Her işlemiyle işaretlemek <xref:System.ServiceModel.OperationContractAttribute>. Ayarladığınızdan emin olun <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> özelliği.  
+1.  İle işaretlenen arabirim ile temel bir WCF sözleşmesi tanımlayın. <xref:System.ServiceModel.ServiceContractAttribute> özniteliği. Her işlemi ile işaretle <xref:System.ServiceModel.OperationContractAttribute>. Ayarladığınızdan emin olun <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> özelliği.  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç iste
     }  
     ```  
   
-2.  Uygulama `ICalculator` hizmet sözleşmesine bir `CalculatorService`.  
+2.  Uygulama `ICalculator` hizmet söyleşmesi bir `CalculatorService`.  
   
     ```  
     public class CalculatorService : ICalculator  
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç iste
     //Other operations omitted…  
     ```  
   
-3.  Bir ad alanı için tanımlayın `ICalculator` ve `CalculatorService` bir ad alanı bloğunda kaydırma tarafından uygulamaları.  
+3.  Tanımlamak için bir ad alanı `ICalculator` ve `CalculatorService` tarafından bir ad alanı bloğunda kaydırmalı uygulamaları.  
   
     ```  
     Namespace Microsoft.Ajax.Samples  
@@ -55,9 +55,9 @@ Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç iste
     }  
     ```  
   
-### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>Hizmeti için bir ASP.NET AJAX uç noktası oluşturmak için  
+### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>Hizmet için bir ASP.NET AJAX uç noktası oluşturmak için  
   
-1.  Davranışı yapılandırmasını oluşturun ve belirtin [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) hizmet uç noktalarına ASP.NET AJAX etkinleştirilmiş davranışı.  
+1.  Davranışı yapılandırmasını oluşturun ve belirtin [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) ASP.NET AJAX etkinleştirilmiş uç hizmet davranışı.  
   
     ```xml  
     <system.serviceModel>  
@@ -86,9 +86,9 @@ Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç iste
     </system.serviceModel>   
     ```  
   
-### <a name="to-host-the-service-in-iis"></a>Ana bilgisayar hizmeti IIS  
+### <a name="to-host-the-service-in-iis"></a>IIS hizmeti barındırmak için  
   
-1.  IIS hizmetinde barındırmak için uygulama .svc uzantısında hizmetiyle adlı yeni bir dosya oluşturun. Uygun ekleyerek bu dosyayı düzenlemek [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) hizmet için yönerge bilgileri. Örneğin, hizmet dosyanın içeriği `CalculatorService` örnek aşağıdaki bilgileri içerir.  
+1.  IIS hizmeti barındırmak için uygulamada .svc uzantılı hizmeti adlı yeni bir dosya oluşturun. Uygun ekleyerek bu dosyayı Düzenle [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) hizmeti yönerge bilgi. Örneğin, hizmet dosyanın içeriği `CalculatorService` örnek, aşağıdaki bilgileri içerir.  
   
     ```  
     <%@ServiceHost   
@@ -98,11 +98,11 @@ Windows Communication Foundation (WCF), ASP.NET AJAX etkinleştirilmiş uç iste
     %>  
     ```  
   
-2.  IIS barındırma hakkında daha fazla bilgi için bkz: [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  IIS'de barındırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Hizmeti çağırmak için  
   
-1.  Hizmet kullanıma sunulmuştur ve service.svc/ için istek göndererek çağrılabilir uç nokta .svc dosyasıyla ilişkili boş bir adresindeki yapılandırıldığından\<işlemi > - Örneğin, service.svc/Add için `Add` işlemi. ASP.NET AJAX komut dosyası Manager denetim betikleri koleksiyona uç nokta URL'sini girerek kullanabilirsiniz. Bir örnek için bkz: [AJAX hizmeti kullanarak HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+1.  Hizmeti kullanıma sunuldu ve service.svc/ için istek göndererek çağrılabilir uç nokta boş bir adresten .svc dosyanın göreli yapılandırılır\<işlemi > - Örneğin, için service.svc/Add `Add` işlemi. ASP.NET AJAX komut dosyası Manager denetim betikleri koleksiyona uç nokta URL'sini girerek kullanabilirsiniz. Bir örnek için bkz. [hizmet HTTP POST kullanan AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

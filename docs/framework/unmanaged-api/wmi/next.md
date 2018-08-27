@@ -1,6 +1,6 @@
 ---
-title: Next işlevi (yönetilmeyen API Başvurusu)
-description: Sonraki işlev retireves numaralandırma sonraki özelliği.
+title: Sonraki işlev (yönetilmeyen API Başvurusu)
+description: Sonraki işlev retireves sonraki özelliğini bir sabit listesi.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461434"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934979"
 ---
 # <a name="next-function"></a>Next işlevi
-Sonraki çağrı ile başlayan bir numaralandırma özelliğinde alır [BeginEnumeration](beginenumeration.md).  
+Bir çağrı ile başlayan bir listedeki sonraki özelliği alır [BeginEnumeration](beginenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -45,55 +45,55 @@ HRESULT Next (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `lFlags`  
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `pstrName`  
-[out] Yeni bir `BSTR` özellik adını içerir. Bu parametre ayarlayabileceğiniz `null` adı gerekli değilse.
+[out] Yeni bir `BSTR` içeren özellik adı. Bu parametre ayarlayabileceğiniz `null` adı gerekli değilse.
 
 `pVal`  
-[out] A `VARIANT` özelliğinin değeri ile doldurulur. Bu parametre ayarlayabileceğiniz `null` değeri gerekli değilse. İşlevi bir hata kodu döndürürse `VARIANT` geçirilen `pVal` sol değiştirilmemiş. 
+[out] A `VARIANT` özelliğinin değeri ile doldurulur. Bu parametre ayarlayabileceğiniz `null` değer gerekli değilse. İşlev bir hata kodu döndürmesi durumunda `VARIANT` geçirilen `pVal` sol değiştirilmemiş. 
 
 `pvtType`  
-[out] Bir işaretçi bir `CIMTYPE` değişken (bir `LONG` özelliğinin türü yerleştirildiği içine). Bu özelliğin değeri olabilir bir `VT_NULL_VARIANT`, gerçek tür özelliğinin belirlemek gerekli değildir; bu durumda. Bu parametre de olabilir `null`. 
+[out] Bir işaretçi bir `CIMTYPE` değişkeni (bir `LONG` özelliğinin türü yerleştirildiği halinde). Bu özelliğin değeri olabilir bir `VT_NULL_VARIANT`, bu durumda özelliğinin gerçek türü belirlemek gerekli olur. Bu parametre aynı zamanda olabilir `null`. 
 
 `plFlavor`  
-[out] `null`, veya özelliğin kaynak hakkında bilgi alan bir değer. Olası değerler [uyarılar] bölümüne bakın. 
+[out] `null`, veya kaynak hakkında bilgi özelliğinin alan bir değer. Olası değerler için [açıklamalar] bölümüne bakın. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçersiz. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Hiçbir çağrısına vardı [ `BeginEnumeration` ](beginenumeration.md) işlevi. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Hiçbir çağrı oluştu [ `BeginEnumeration` ](beginenumeration.md) işlevi. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırma başlatmak yeterli bellek yok. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Uzak yordam çağrısı zamanlamalar geçerli işlem ile Windows Yönetimi başarısız oldu. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Sabit listede daha fazla özellik yok. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Uzak yordam, Windows Yönetim başarısız oldu ve işlemin zamanlamalar çağırın. |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Sabit listede daha fazla özellik vardır. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::Next](https://msdn.microsoft.com/library/aa391453(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) yöntemi.
 
-Bu yöntem aynı zamanda Sistem özellikleri döndürür.
+Bu yöntem Ayrıca Sistem özellikleri döndürür.
 
-Özelliğin temel türü bir nesne yolu, bir tarih veya saat veya başka bir özel tür ise, döndürülen tür yeterli bilgi içermiyor. Arayan incelemelisiniz `CIMTYPE` özelliği bir nesne başvurusu, bir tarih veya saat veya başka bir özel tür olup olmadığını belirlemek belirtilen özellik için.
+Özelliğin temel alınan türü bir nesne yolu, bir tarih veya saat veya başka bir özel türü ise, döndürülen tür yeterli bilgi içermiyor. Çağıranın incelemelisiniz `CIMTYPE` özelliği bir nesne başvurusu, bir tarih veya saat veya başka bir özel tür olup olmadığını belirlemek belirtilen özellik için.
 
-Varsa `plFlavor` değil `null`, `LONG` değer özelliğinin kaynak hakkında bilgi aşağıdaki gibi alır:
+Varsa `plFlavor` değil `null`, `LONG` değeri özellik kaynağı hakkındaki bilgileri aşağıdaki gibi alır:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özelliği bir standart sistemi özelliğidir. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: özellik üst sınıftan devralındı. </br> Bir örneği için: özellik üst sınıftan devralındı ederken örneği tarafından değiştirildi.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: türetilmiş sınıf özellik ait. </br> Bir örneği için: özelliğini örneği tarafından; değiştirdi diğer bir deyişle, bir değer sağlandı veya bir niteleyicisi eklenemez veya değiştirilemez. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Standart sistem özelliği özelliğidir. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: özellik üst sınıftan devralınır. </br> Bir örneği için: özellik üst sınıftan devralındı sırada örneği tarafından değiştirilmedi.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: özelliği türetilmiş bir sınıfa aittir. </br> Bir örneği için: özelliğin bir örneği tarafından; değiştirilir diğer bir deyişle, bir değer sağlanmamış veya niteleyicisi eklenemez veya değiştirilemez. |
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

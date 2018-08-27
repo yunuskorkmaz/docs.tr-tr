@@ -4,12 +4,12 @@ description: .NET Core 2.1 içinde bulunan yeni özellikler hakkında bilgi edin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874578"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935585"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -123,7 +123,7 @@ Farklı bir sürümü aracılığıyla belirtilmediği sürece .NET Core 2.0 SDK
 
 ## <a name="windows-compatibility-pack"></a>Windows Uyumluluk Paketi
 
-.NET Framework mevcut koddan .NET Core için bağlantı noktası, kullanabileceğiniz [Windows Uyumluluk Paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). ' De .NET Core bulunandan daha fazla API 20.000 erişim sağlar. Bu API'ler türler <xref:System.Drawing?displayProperty="nameWithType"> ad alanı, <xref:System.Diagnostics.EventLog> sınıf, WMI, performans sayaçları, Windows Hizmetleri ve Windows kayıt defteri türleri ve üyeleri.
+.NET Framework mevcut koddan .NET Core için bağlantı noktası, kullanabileceğiniz [Windows Uyumluluk Paketi](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). ' De .NET Core bulunandan daha fazla API 20.000 erişim sağlar. Bu API'ler türler <xref:System.Drawing?displayProperty=nameWithType> ad alanı, <xref:System.Diagnostics.EventLog> sınıf, WMI, performans sayaçları, Windows Hizmetleri ve Windows kayıt defteri türleri ve üyeleri.
 
 ## <a name="jit-compiler-improvements"></a>JIT Derleyici iyileştirmeleri
 
@@ -195,7 +195,7 @@ Aşağıdaki örnekte bir <xref:System.Span%601> dizi 10 öğelerini sanal bir g
 
   - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> hale getirilemeyen bir bellek temizleme yordamdır.
 
-- Statik <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> yöntemi dolduran bir <xref:System.Span%601> rasgele değerlere sahip.
+- Statik <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> yöntemi dolduran bir <xref:System.Span%601> rasgele değerlere sahip.
 
 - <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> Linux ve maxOS artık desteklenmektedir.
 
@@ -215,7 +215,7 @@ Aşağıdaki örnekte bir <xref:System.Span%601> dizi 10 öğelerini sanal bir g
 
 - Tüm .NET Core platformlar genelinde tutarlı davranışı.
 
-<xref:System.Net.Http.SocketsHttpHandler> .NET Core 2.1 içinde varsayılan uygulamasıdır. Ancak, eski kullanmak için uygulamanızı yapılandırabileceğiniz <xref:System.Net.Http.HttpClientHandler> çağırarak sınıfı <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> yöntemi:
+<xref:System.Net.Http.SocketsHttpHandler> .NET Core 2.1 içinde varsayılan uygulamasıdır. Ancak, eski kullanmak için uygulamanızı yapılandırabileceğiniz <xref:System.Net.Http.HttpClientHandler> çağırarak sınıfı <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> yöntemi:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

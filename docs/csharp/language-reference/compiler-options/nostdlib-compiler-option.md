@@ -8,38 +8,46 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 1dc0ab70ca28626c4a3f505c13ec1d6f828a4b05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70007c74efe9a41bdfc15e8fa7daf3c8fc0221ed
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216141"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935530"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (C# Derleyici Seçenekleri)
-**-nostdlib** tüm sistem ad alanını tanımlayan mscorlib.dll alma engeller.  
-  
-## <a name="syntax"></a>Sözdizimi  
-  
-```console  
--nostdlib[+ | -]  
-```  
-  
-## <a name="remarks"></a>Açıklamalar  
- Tanımlayın veya kendi sistem ad alanı ve nesneleri oluşturmak istiyorsanız bu seçeneği kullanın.  
-  
- Belirtmezseniz, **- nostdlib**, mscorlib.dll programınıza içeri aktarılacak (belirtme aynı **- nostdlib-**). Belirtme **- nostdlib** belirtme aynı **- nostdlib +**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
-  
-1.  Açık **özellikleri** projesi için sayfa.  
-  
-2.  Tıklatın **yapı** Özellikler sayfası.  
-  
-3.  Tıklatın **Gelişmiş** düğmesi.  
-  
-4.  Değiştirme **mscorlib.dll başvurmadığından** özelliği.  
-  
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+
+**-nostdlib** tüm sistem ad alanını tanımlayan mscorlib.dll alma engeller.
+
+## <a name="syntax"></a>Sözdizimi
+
+```console
+-nostdlib[+ | -]
+```
+
+## <a name="remarks"></a>Açıklamalar
+
+Tanımlayın veya kendi sistem ad alanı ve nesneler oluşturmak istiyorsanız bu seçeneği kullanın.
+
+Siz belirtmezseniz **- nostdlib**, mscorlib.dll programınız alınır (belirtmekle aynı **- nostdlib-**). Belirtme **- nostdlib** belirtmekle aynı **- nostdlib +**.
+
+### <a name="to-set-this-compiler-option-in-visual-studio"></a>Bu derleyici seçeneğini Visual Studio'da ayarlamak için
+
+> [!NOTE]
+> Visual Studio 2015 (ve önceki sürümleri) aşağıdaki yönergeleri uygulamak yalnızca. **Mscorlib.dll dosyasına başvurma** yapı özelliği, Visual Studio 2017'de yok.
+
+1. Açık **özellikleri** proje sayfası.
+
+2. Tıklayın **derleme** Özellikler sayfası.
+
+3. Tıklayın **Gelişmiş** düğmesi.
+
+4. Değiştirme **mscorlib.dll dosyasına başvurma** özelliği.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Bu derleyici seçeneğini program üzerinden ayarlamak için
+
+Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)

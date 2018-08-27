@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-ms.openlocfilehash: 12452f5e3fcc78835a7aed9f6e4044463fb0b755
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c5b061b41591ecca0364c2ec940fbf09e223f5cb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208416"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936004"
 ---
 # <a name="iteration-statements-c-reference"></a>Yineleme Deyimleri (C# Başvurusu)
 
-Yineleme deyimleri kullanarak döngüler oluşturabilirsiniz. Yineleme deyimleri katıştırılmış neden deyimleri olması için birkaç kez döngü sonlandırma ölçütleri tabi yürütüldü. Bu ifadeler, ne zaman dışında sırada yürütülür bir [deyimi atlama](jump-statements.md) ile karşılaşıldı.
+Yineleme deyimleri kullanarak döngüler oluşturabilirsiniz. Yineleme deyimleri katıştırılmış neden deyimleri olması birkaç döngü sonlandırma ölçütünü tabi bir kez yürütüldü. Bu deyimler, aşağıdakiler haricinde sırayla yürütülen bir [atlama deyimi](jump-statements.md) karşılaşıldı.
 
-Aşağıdaki anahtar sözcükler yineleme deyimlerinde kullanılır:
+Aşağıdaki anahtar sözcükler, yineleme deyimlerinde kullanılır:
 
 - [do](do.md)
 
@@ -28,7 +28,7 @@ Aşağıdaki anahtar sözcükler yineleme deyimlerinde kullanılır:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
- [C# başvurusu](../index.md)  
- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
- [C# Anahtar Sözcükleri](index.md)  
- [Deyim Anahtar Sözcükleri](statement-keywords.md)
+- [C# başvurusu](../index.md)  
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](index.md)  
+- [Deyim Anahtar Sözcükleri](statement-keywords.md)

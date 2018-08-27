@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445451"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933228"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
-Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerleri içerir.  
+Bildirim dosyaları açma bağlı meta veri davranışını denetleyen bayrak değerlerini içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,16 +52,16 @@ typedef enum CorOpenFlags
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ofRead`|Dosya yalnızca okumak için açılmalı gösterir.|  
-|`ofWrite`|Dosya yazma için açılmış olduğunu gösterir.<br /><br /> Kullanıyorsanız `ofWrite` ne zaman bayrak .winmd dosyası açılırken, ayrıca geçirdiğiniz `ofNoTransform` bayrağı.|  
+|`ofRead`|Yalnızca okumak için dosyanın açılması gerektiğini gösterir.|  
+|`ofWrite`|Dosya yazma için açılması gerektiğini gösterir.<br /><br /> Kullanıyorsanız `ofWrite` ne zaman bayrağı da geçmesi bir .winmd dosyası açılırken, `ofNoTransform` bayrağı.|  
 |`ofReadWriteMask`|Okuma ve yazma için bir maske.|  
-|`ofCopyMemory`|Dosya belleğe okuma olduğunu gösterir. Meta veri kendi kopya korumanız gerekir.|  
+|`ofCopyMemory`|Dosya belleğe okunmalıdır gösterir. Meta verileri kendi kopyalama korumanız gerekir.|  
 |`ofCacheImage`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
 |`ofManifestMetadata`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofReadOnly`|Dosya okuma ve, açılmalı gösteren bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.|  
-|`ofTakeOwnership`|Bellek için bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) ve meta verileri ile serbest.|  
+|`ofReadOnly`|Okuma ve bu dosyanın açılması gerektiğini belirten bir çağrı `QueryInterface` için bir [Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) yapılamaz.|  
+|`ofTakeOwnership`|Bellek yapılan bir çağrı kullanılarak ayrıldı gösterir [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) ve meta verileri tarafından serbest bırakılacak.|  
 |`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak göz ardı edilir.|  
-|`ofNoTransform`|.Winmd dosyaların otomatik Dönüşümlerin devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için bkz: [altındaki başlık .NET ve Windows çalışma zamanı ile](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Otomatik dönüştürmeler .winmd dosyaları devre dışı olduğunu gösterir. Diğer bir deyişle, bir .NET Framework türü için bir Windows çalışma zamanı tür projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için [altındaki Seçenekler .NET ve Windows çalışma zamanı ile](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|İç kullanım için ayrılmıştır.|  
 |`ofReserved2`|İç kullanım için ayrılmıştır.|  
 |`ofReserved`|İç kullanım için ayrılmıştır.|  

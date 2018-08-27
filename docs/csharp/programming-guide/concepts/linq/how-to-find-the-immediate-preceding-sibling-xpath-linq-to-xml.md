@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: hemen önceki eşdüzey (XPath-LINQ-XML) Bul (C#)'
+title: 'Nasıl yapılır: Bul önceki eşdüzeyi (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
 ms.openlocfilehash: 82c0ee6e7340ada18fb2077c0b8b04fb6a41671a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318561"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935199"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Nasıl yapılır: hemen önceki eşdüzey (XPath-LINQ-XML) Bul (C#)
-Bazen bir düğüme hemen önceki eşdüzey bulmak istediğiniz. XPath tersine önceki eşdüzey eksenlerin konumsal koşulları semantiği fark nedeniyle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bu daha ilginç karşılaştırmaları biridir.  
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bul önceki eşdüzeyi (XPath-LINQ to XML) (C#)
+Bazen bir düğüme önceki eşdüzeyi bulma istersiniz. XPath başlangıcı yerine sonundan önceki eşdüzey eksenleri için konumsal doğrulamaları semantiği fark nedeniyle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bu daha ilgi çekici karşılaştırmalar biridir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu kullanır <xref:System.Linq.Enumerable.Last%2A> tarafından döndürülen bir koleksiyondaki son düğümünü bulmayı işleci <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>. Bunun aksine, XPath ifadesi hemen önceki öğeyi bulmak için 1 değerine sahip bir koşul kullanır.  
+ Bu örnekte, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu kullandığı <xref:System.Linq.Enumerable.Last%2A> son düğümü tarafından döndürülen bir koleksiyonda bulunacak işleci <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>. Aksine, XPath ifadesi hemen önceki öğeyi bulmak için 1 değerini bir koşul kullanır.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -45,7 +45,7 @@ else
 Console.WriteLine(el1);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -53,4 +53,4 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

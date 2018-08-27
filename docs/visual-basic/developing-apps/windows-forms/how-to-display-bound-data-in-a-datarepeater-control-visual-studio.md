@@ -6,43 +6,43 @@ helpviewer_keywords:
 - DataRepeater, displaying bound controls
 ms.assetid: 56a15326-1334-4275-af4e-075cad79e6f7
 ms.openlocfilehash: b96fb33a0dcf80a86d1fcb6e219e5f35b1f7351c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589873"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933412"
 ---
 # <a name="how-to-display-bound-data-in-a-datarepeater-control-visual-studio"></a>Nasıl Yapılır: DataRepeater Denetiminde Bağlı Verileri Görüntüleme (Visual Studio)
-En yaygın kullanımı <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimidir bir veritabanı veya başka bir veri kaynağını ilişkili verileri görüntülemek için.  
+En yaygın kullanımı <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> bir veritabanı veya başka bir veri kaynağı ilişkili verileri görüntülemek için denetimidir.  
   
- Bağlama denetimleri ek olarak, statik bir etiket veya her öğe üzerinde yinelenen bir görüntü gibi diğer denetimleri eklemek isteyebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim. Daha fazla bilgi için bkz: [nasıl yapılır: DataRepeater denetimindeki ilişkisiz denetimleri görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
+ Bağlama denetimleri ek olarak, statik bir etiket ya da her öğesine yinelenen görüntü gibi başka denetimler eklemek isteyebilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi. Daha fazla bilgi için [nasıl yapılır: DataRepeater denetimindeki ilişkisiz denetimleri görüntüleme](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md).  
   
- Ayarlayarak çalışma zamanında bir veri kaynağına bağlayabilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> özelliğine `True` ve bir veri kaynağına atama <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> özelliği. Bu durumda, veri kaynağı ile tüm etkileşimi yönetmek gerekir. Daha fazla bilgi için bkz: [DataRepeater denetiminde sanal mod](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
+ Ayarlayarak çalışma zamanında bir veri kaynağına bağlayabilirsiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> özelliğini `True` ve bir veri kaynağına atama <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> özelliği. Bu durumda, tüm etkileşimi veri kaynağı ile yönetmek gerekir. Daha fazla bilgi için [DataRepeater denetiminde sanal mod](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-data-bound-datarepeater"></a>Veri bağlama DataRepeater oluşturmak için  
+### <a name="to-create-a-data-bound-datarepeater"></a>Verilere bağlı DataRepeater oluşturmak için  
   
-1.  Sürükleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> gelen denetim **Visual Basic PowerPacks** sekmesinde **araç** bir form veya kapsayıcı denetlemek için.  
+1.  Sürükleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi **Visual Basic PowerPacks** sekmesinde **araç kutusu** bir form veya kapsayıcı denetlemek için.  
   
-2.  Boyutlandırma ve konumu tanıtıcıları boyuta sürükleyin ve denetim getirin.  
+2.  Boyut ve konum tutamaçları boyutuna sürükleyin ve denetimi konumlandırın.  
   
-     Denetim iki dikdörtgen bölgeler olduğuna dikkat edin. Üst bölge *öğe şablonu*; şablona eklenen denetimler yinelenen her öğesinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> çalışma zamanında denetim. Alt bölge *görünüm penceresinin*, öğeleri burada görüntülenir.  
+     Denetim dikdörtgen iki bölgeleri olduğuna dikkat edin. Üst bölgenin *öğe şablonu*; şablonuna eklenen denetimler yinelenen her öğesinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> çalışma zamanında denetim. Alt bölgenin *Görünüm penceresi*öğeleri burada görüntülenir.  
   
-     Ayrıca boyut ve denetim veya öğe şablonu değiştirerek Yerleştir **boyutu** ve **konumu** Özellikleri penceresinde özellikler.  
+     Ayrıca boyutu ve denetimi veya öğe şablonu değiştirerek konumunu **boyutu** ve **konumu** özellikleri Özellikler penceresinde.  
   
-3.  Üzerinde **veri** menüsünde tıklatın **veri kaynaklarını Göster**.  
+3.  Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.  
   
     > [!NOTE]
-    >  Varsa **veri kaynakları** penceresi boşsa, bir veri kaynağı ekleyin. Daha fazla bilgi için bkz: [yeni veri kaynakları ekleyin](/visualstudio/data-tools/add-new-data-sources).  
+    >  Varsa **veri kaynakları** penceresi boş ise, bir veri kaynağı ekleyin. Daha fazla bilgi için [yeni veri kaynağı ekleme](/visualstudio/data-tools/add-new-data-sources).  
   
-4.  İçinde **veri kaynakları** penceresi, üst düzey düğüm bağlamak istediğiniz verileri içeren bir tablo için seçin.  
+4.  İçinde **veri kaynakları** penceresinde bağlamak istediğiniz verileri içeren bir tablo için üst düzey düğümü seçin.  
   
-5.  Tabloya açılan türünü değiştirme `Details` tıklayarak `Details` Tablo düğümü aşağı açılan listesinde.  
+5.  Tabloya bırakma türünü değiştirme `Details` tıklayarak `Details` Tablo düğümü aşağı açılan listesinde.  
   
-6.  Tablo düğümü seçin ve Madde şablonu bölgesini sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+6.  Tablo düğümü seçin ve öğe şablonu bölgesi sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-     Hangi tür denetimler için her bir alan görüntülenen belirtebilirsiniz. Daha fazla bilgi için bkz: [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimini ayarlama](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
+     Tür denetimler her alan için görüntülenen belirtebilirsiniz. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](/visualstudio/data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  

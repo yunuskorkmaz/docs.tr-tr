@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557517"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931546"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Cam Çerçeveyi WPF Uygulamasında Genişletme
-Bu konuda nasıl genişletileceğini gösterir [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] bir Windows Presentation Foundation (WPF) uygulamasının istemci alanına cam çerçeve.  
+Bu konu nasıl genişleteceğinizi gösterir [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cam çerçeveyi bir Windows Presentation Foundation (WPF) uygulamasının istemci alanına.  
   
 > [!NOTE]
->  Bu örnek yalnızca çalışır bir [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] etkin cam ile Masaüstü Pencere Yöneticisi (DWM) çalıştıran makine. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic sürümü saydam cam etkisini desteklemez. Genellikle diğer sürümleri saydam cam etkisini ile hale getiren alanları [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] donuk işlenir.  
+>  Bu örnek yalnızca çalışır bir [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] etkin cam ile Masaüstü Pencere Yöneticisi'ni (DWM) çalıştıran makine. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic sürümü saydam cam etkisi desteklemez. Genellikle diğer sürümleri üzerinde saydam cam etkisi ile işlenen alanları [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] donuk işlenir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki resimde adres çubuğu, Internet Explorer'a 7 genişletilmiş cam çerçeve gösterilmektedir.  
+ Aşağıdaki görüntüde, adres çubuğuna, Internet Explorer'a 7 genişletilmiş cam çerçeveyi gösterir.  
   
- **Internet Explorer Adres çubuğuna arkasında genişletilmiş cam çerçeveyle.**  
+ **Internet Explorer Adres çubuğuna arkasındaki genişletilmiş cam çerçeveyi ile.**  
   
- ![Adres çubuğu genişletilmiş cam çerçeve IE7. ] (../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![Cam çerçeveyi adres çubuğuna genişletilmiş IE7. ](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
- Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama, yönetilmeyen erişimi [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] gereklidir. Aşağıdaki kod örneği iki için bir Platform Çağırma (PInvoke) yapmaz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] çerçeve istemci alanına genişletmek için gerekli. Bunların her biri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] adlı bir sınıf içinde bildirilen **NonClientRegionAPI**.  
+ Üzerinde cam çerçeveyi genişletmek için bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama erişimi yönetilmeyen [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] gereklidir. Aşağıdaki kod örneği iki bir Platform Çağırma (PInvoke) yapmaz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] istemci alanına çerçeveyi genişletmek için gerekli. Bunların her biri [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] adlı bir sınıfta bildirilen **NonClientRegionAPI**.  
   
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) çerçeveyi istemci alanına genişleten bir DWM işlevidir. İki parametre alır; bir pencere tanıtıcının ve [kenar BOŞLUKLARI](https://msdn.microsoft.com/library/bb773244.aspx) yapısı. [Kenar BOŞLUKLARI](https://msdn.microsoft.com/library/bb773244.aspx) çerçeve istemci alanına ne kadar çok genişletilmiş DWM bildirmek için kullanılır.  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) çerçevenin istemci alanına genişleten DWM işlevdir. İki parametre alır; bir pencere tutucu ve [kenar BOŞLUKLARI](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) yapısı. [Kenar BOŞLUKLARI](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) DWM çerçevenin istemci alanına ne kadar çok genişletilmiş söylemek için kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Kullanılacak [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) işlevi, bir pencere tanıtıcının gerekir elde edilebilir. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], bir pencere tanıtıcının elde edilebilir <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği bir <xref:System.Windows.Interop.HwndSource>. Aşağıdaki örnekte, çerçeve istemci alanına genişletilir <xref:System.Windows.FrameworkElement.Loaded> penceresinin olay.  
+ Kullanılacak [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) işlevi, bir pencere tutucu gerekir elde edilebilir. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], pencere işleyicisi örneğinden alınabilen <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği bir <xref:System.Windows.Interop.HwndSource>. Aşağıdaki örnekte, çerçevenin istemci alanını genişletilir <xref:System.Windows.FrameworkElement.Loaded> penceresinin olay.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -109,7 +109,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çerçeve istemci alanına genişletilmiş basit bir pencereyi gösterir. İki içeren üst kenarlığın arkasında genişletilen çerçeve <xref:System.Windows.Controls.TextBox> nesneleri.  
+ Aşağıdaki örnek, çerçevenin istemci alanını genişletilir basit bir pencere gösterir. İki içeren üst kenarlık genişletilen çerçeve <xref:System.Windows.Controls.TextBox> nesneleri.  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -143,13 +143,13 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>  
 ```  
   
- Aşağıdaki resimde uygulamasına genişletilmiş cam çerçeve gösterilir bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama.  
+ Aşağıdaki görüntüde gösterilmiştir uygulamasına genişletilmiş cam çerçeveyi bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama.  
   
- **Uygulamada bir**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**uygulama.**  
+ **Uygulamada bir**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**uygulama.**   
   
- ![Çerçevenin cam genişletilmiş WPF uygulamasına. ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![Cam çerçeveyi WPF uygulamasına genişletilmiş. ](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Masaüstü Pencere Yöneticisi'ne genel bakış](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Masaüstü Pencere Yöneticisi bulanık bakış](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Masaüstü Pencere Yöneticisi'ne genel bakış](/windows/desktop/dwm/dwm-overview)  
+ [Masaüstü Pencere Yöneticisi Bulanıklaştırma genel bakış](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

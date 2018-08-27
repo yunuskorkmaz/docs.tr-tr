@@ -1,23 +1,23 @@
 ---
-title: '&lt;dizileştirme mekanizmasını System.xml.Serialization&gt; öğesi'
+title: '&lt;System.xml.Serialization&gt; öğesi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: e26a12facb92147d7660ae266ea5e1b090d7e198
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf84c412c2d5e3c75cfdc752eeb70239f23d9245
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583779"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933835"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a>&lt;dizileştirme mekanizmasını System.xml.Serialization&gt; öğesi
-XML serileştirme denetleme en üst düzey öğesi. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz: [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="ltsystemxmlserializationgt-element"></a>&lt;System.xml.Serialization&gt; öğesi
+XML serileştirme denetlemek için üst düzey öğe. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<Yapılandırma >  
-\<dizileştirme mekanizmasını System.xml.Serialization >  
+\<System.xml.Serialization >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,7 +46,7 @@ XML serileştirme denetleme en üst düzey öğesi. Yapılandırma dosyaları ha
 |[\<Yapılandırma > öğesi](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde serileştirme modunu belirtme gösterilmektedir bir <xref:System.DateTime> nesne ve tarafından kullanılan türlerinin eklenmesi <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.  
+ Aşağıdaki kod örneğinde serileştirme modunu belirtmek verilmektedir bir <xref:System.DateTime> nesnesi ve tarafından kullanılan türlerinin eklenmesi <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.  
   
 ```xml  
 <system.xml.serialization>  
@@ -68,4 +68,4 @@ XML serileştirme denetleme en üst düzey öğesi. Yapılandırma dosyaları ha
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)  
  [\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- [\<Ekle > öğesi için \<xmlSchemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)
+ [\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

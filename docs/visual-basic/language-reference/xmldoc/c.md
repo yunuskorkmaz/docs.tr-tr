@@ -5,15 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 556c00fa761a1bce5e922a304706c78893550901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599612"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935364"
 ---
 # <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
-İçindeki bir açıklama metni kodu gösterir.  
+Metin açıklama içinde kod olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,14 +28,14 @@ ms.locfileid: "33599612"
 |`text`|Kod olarak belirtmek istediğiniz metin.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<c>` Etiketi bir açıklama metni kodu olarak işaretlenmelidir belirtmek için bir yol sağlar. Kullanım [ \<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) birden fazla satır kodu olarak belirtmek için.  
+ `<c>` Etiket metin açıklama içinde kod olarak işaretlenmelidir göstermek için bir yol sağlar. Kullanım [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) çok satırlı kod olarak belirtmek için.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<c>` belirtmek için Özet bölümündeki etiketi `Counter` kodudur.  
+ Bu örnekte `<c>` etiket belirtmek için Özet bölümünde `Counter` kodudur.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

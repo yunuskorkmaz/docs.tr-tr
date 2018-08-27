@@ -1,6 +1,6 @@
 ---
-title: İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma
-ms.date: 03/30/2017
+title: İş parçacığı kullanma ve iş parçacığı oluşturma
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
@@ -8,39 +8,52 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584186"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934137"
 ---
-# <a name="using-threads-and-threading"></a>İş Parçacıkları ve İş Parçacığı Oluşturmayı Kullanma
-Bu bölümdeki konular, oluşturulmasını ve yönetimini yönetilen iş parçacığı, yönetilen iş parçacığı veri geçirmek ve geri sonuçlar almak nasıl ve iş parçacıklarını yok ve işlemek nasıl ele bir <xref:System.Threading.ThreadAbortException>.  
+# <a name="using-threads-and-threading"></a>İş parçacığı kullanma ve iş parçacığı oluşturma
+
+.NET ile aynı anda birden çok işlem gerçekleştiren uygulamalar yazabilirsiniz. Diğer işlemlerini tutan, olası işlemleriyle olarak da bilinen bir işlem ayrı iş parçacıkları üzerinde yürütebilir *çoklu iş parçacığı kullanımı* veya *serbest iş parçacığı*.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
- [Başlatma Zamanında İş Parçacığı Oluşturma ve Veri Geçirme](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- Açıklanır ve nasıl yeni iş parçacıklarına veri geçirme ve veri geri alma dahil olmak üzere yönetilen iş parçacığı oluşturmayı gösterir.  
+Çoklu iş parçacığı kullanımı yoğun işlemci kullanımı gerektiren görevleri yürütmek gibi kullanıcı arabirimi etkin kaldığından çünkü kullanıcı girişi için daha hızlı olan uygulamalar, iş parçacıklarını ayırın. Ölçeklenebilir uygulamalar oluşturma iş parçacıkları iş yükü arttıkça eklemek için çoklu iş parçacığı kullanımı da yararlı olur.
+
+> [!NOTE]
+> Uygulamanın iş parçacığı davranışı hakkında daha fazla denetime ihtiyacınız varsa, iş parçacıkları kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ile başlayarak, çok iş parçacıklı programlama büyük ölçüde ile basitleştirilmiştir <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../parallel-programming/index.md) ve [görev paralel kitaplığı (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+
+## <a name="how-to-create-and-start-a-new-thread"></a>Nasıl yapılır: oluşturun ve yeni bir iş parçacığı
+
+Yeni bir örneğini oluşturarak yeni bir iş parçacığı oluşturma <xref:System.Threading.Thread?displayProperty=nameWithType> sınıf ve oluşturucu için yeni bir iş parçacığı üzerinde yürütmek istediğiniz yöntemin adını sağlama. Oluşturulan bir iş parçacığı için çağrı <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi ve örnekler için bkz. [iş parçacığı oluşturma ve geçirme verilerini başlangıç zamanı](creating-threads-and-passing-data-at-start-time.md) makale ve <xref:System.Threading.Thread> API Başvurusu.
+
+## <a name="how-to-stop-a-thread"></a>Nasıl yapılır: bir iş parçacığı Durdur
+
+Bir iş parçacığının yürütülmesini sonlandırmak için kullanmak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi. Bu yöntemi oluşturur bir <xref:System.Threading.ThreadAbortException> üzerinde çağrıldığında iş parçacığı üzerinde. Daha fazla bilgi için [iş parçacıklarını yok etme](destroying-threads.md).
+
+Kullanabileceğiniz .NET Framework 4 ile başlayarak, <xref:System.Threading.CancellationToken?displayProperty=nameWithType> bir iş parçacığı işbirliği içerisinde devamlılığı iptal etmek için. Daha fazla bilgi için [iş parçacıklarını işbirliği ile iptal etme](canceling-threads-cooperatively.md).
+
+Kullanım <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemini çağıran iş parçacığını yöntemi çağrıldığında iş parçacığının sonlandırılması için bekleyin sağlamak için.
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Nasıl yapılır: duraklama veya kesme bir iş parçacığı
+
+Kullandığınız <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> belirtilen bir zaman miktarı için geçerli iş parçacığı duraklatmak için yöntemi. Engellenen bir iş parçacığı çağırarak engelleyebilecek <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için [duraklatma ve iş parçacıkları engellemeden](pausing-and-resuming-threads.md).
+
+## <a name="thread-properties"></a>İş parçacığı özellikleri
+
+Aşağıdaki tabloda bazı sunulmaktadır <xref:System.Threading.Thread> özellikleri:  
   
- [İş Parçacıklarını Duraklatma ve Sürdürme](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- Duraklatma ve sürdürme yönetilen iş parçacığı ayrımlar açıklanır.  
-  
- [İş Parçacıklarını Yok Etme](../../../docs/standard/threading/destroying-threads.md)  
- Yönetilen iş parçacığı ve nasıl ele alınacağını yok etme, ayrımlar anlatılmaktadır bir <xref:System.Threading.ThreadAbortException>.  
-  
- [İş Parçacıklarını Zamanlama](../../../docs/standard/threading/scheduling-threads.md)  
- İş parçacığı öncelikleri ve iş parçacığı planlama nasıl etkilediklerini anlatılmaktadır.  
-  
-## <a name="reference"></a>Başvuru  
- <xref:System.Threading.Thread>  
- Başvuru belgelerine sağlar <xref:System.Threading.Thread> yönetilmeyen koddan gelen veya yönetilen bir uygulamada oluşturuldu, yönetilen bir iş parçacığı temsil eden sınıf.  
-  
- <xref:System.Threading.ThreadStart>  
- Başvuru belgelerine sağlar <xref:System.Threading.ThreadStart> parametresiz iş parçacığı yordamları temsil eden temsilci.  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- Güçlü yazarak rağmen olmadan iş parçacığı yordamı için veri iletmek için kolay bir yol sağlar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)  
- Yönetilen iş parçacığı oluşturma giriş bilgileri sağlar.
+|Özellik|Açıklama|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|Döndürür `true` bir iş parçacığı başlatıldı ve henüz henüz olağan biçimde sona erdi veya iptal edildi.|  
+|<xref:System.Threading.Thread.IsBackground%2A>|Alır veya bir iş parçacığı bir arka plan iş parçacığı olup olmadığını belirten Boolean bir değer ayarlar. Arka plan iş parçacığı için ön plan iş parçacığı gibi olsa da, bir arka plan iş parçacığı bir işlem durdurma gelen engellemez. Bir işleme ait tüm ön plan iş parçacığı durdurduktan sonra ortak dil çalışma zamanı işlemi çağırarak sonlandırır <xref:System.Threading.Thread.Abort%2A> hala etkin olan bir arka plan iş parçacığı üzerinde yöntemi. Daha fazla bilgi için [ön plan ve arka plan iş parçacığı](foreground-and-background-threads.md).|  
+|<xref:System.Threading.Thread.Name%2A>|Alır veya bir iş parçacığının adını ayarlar. Tek tek iş parçacığı hata ayıklama bulmak için en sık kullanılan.|  
+|<xref:System.Threading.Thread.Priority%2A>|Alır veya ayarlar bir <xref:System.Threading.ThreadPriority> iş parçacığının'zamanlama önceliğini belirlemek için işletim sistemi tarafından kullanılan bir değer. Daha fazla bilgi için [iş parçacıklarını zamanlama](scheduling-threads.md) ve <xref:System.Threading.ThreadPriority> başvuru.|  
+|<xref:System.Threading.Thread.ThreadState%2A>|Alır bir <xref:System.Threading.ThreadState> içeren bir iş parçacığı geçerli durumlarını değeri.|  
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [İş Parçacıkları ve İş Parçacığı Oluşturma](threads-and-threading.md)  
+ [Paralel Programlama](../parallel-programming/index.md)  

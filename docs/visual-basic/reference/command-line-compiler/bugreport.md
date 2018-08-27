@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: 0383a5e369ee4a8146764c13b2f12f48ebe52190
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653500"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934583"
 ---
 # <a name="-bugreport"></a>-bugreport
 Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
@@ -26,35 +26,35 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
   
 |Terim|Tanım|  
 |---|---|  
-|`file`|Gerekli. Hata raporu içeren dosyanın adı. Dosya adını tırnak işaretleri içine alın ("") adı boşluk içeriyorsa.|  
+|`file`|Gerekli. Hata raporunuzu içerecek dosyanın adı. Dosya adı tırnak içine alın ("") adı boşluk içeriyorsa.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki bilgiler eklenir `file`:  
+ Aşağıdaki bilgileri eklenir `file`:  
   
--   Derlemedeki tüm kaynak kodu dosyaları bir kopyası.  
+-   Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
   
--   Derlemede kullanılan derleyici seçenekleri listesi.  
+-   Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
   
--   Derleyici, ortak dil çalışma zamanı ve işletim sistemi hakkında sürüm bilgisi.  
+-   Derleyici, ortak dil çalışma zamanı ve işletim sistemi sürüm bilgisi.  
   
 -   Derleyici çıkışı, varsa.  
   
--   Kendisi için sizden istenir sorunun açıklaması.  
+-   Kendileri için sizden istenir, sorun açıklaması.  
   
--   Kendisi için sizden istenir sorunu nasıl düşündüğünüz açıklaması düzeltilmelidir.  
+-   Sorunun ne düşündüğünüzü açıklaması düzeltilmelidir, kendileri için sizden istenir.  
   
- Tüm kaynak kodu dosyalarının bir kopyasını dahil olduğundan `file`, kısa olası programında (şüpheli) kod hatası yeniden oluşturmak isteyebilirsiniz.  
+ Tüm kaynak kodu dosyalarının bir kopyasını dahil olduğundan `file`, kısa olası programına (şüphelenilen) kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   
 > [!IMPORTANT]
->  `-bugreport` Seçeneği olası duyarlı bilgileri içeren bir dosya oluşturur. Bu, geçerli saati, derleyici sürümü içerir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sürümü, işletim sistemi sürümü, kullanıcı adı, hangi derleyici çalıştırıldı, tüm kaynak kodu ve ikili biçimi herhangi başvurulan derleme komut satırı bağımsız değişkenleri. Bu seçenek, bir sunucu tarafı derlenmesi için Web.config dosyasındaki komut satırı seçenekleri belirterek erişilebilir bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulama. Bunu önlemek için Machine.config dosyasının sunucuda derleme kullanıcıların izin vermeyecek şekilde değiştirin.  
+>  `-bugreport` Seçenek olası duyarlı bilgileri içeren bir dosya oluşturur. Bu, geçerli zamanı, derleyici sürümü içerir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sürümü, işletim sistemi sürümü, kullanıcı adı, hangi derleyici çalıştırıldığı, tüm kaynak kodu ve herhangi bir ikili biçimini başvurulan derleme komut satırı bağımsız değişkenleri. Bu seçenek, bir sunucu tarafı derlenmesi için Web.config dosyasında komut satırı seçenekleri belirterek erişilebilir bir [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] uygulama. Bunu önlemek için sunucuda önleyen kullanıcıların Machine.config dosyasının değiştirin.  
   
- Bu seçenek ile kullanıldığında `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, bilgileri bir iç derleyici hatası uygulamanızı karşılaştığında `file` Microsoft Corporation'ın için gönderilir. Bu bilgileri Microsoft mühendisleri hatanın nedenini belirlemeye yardımcı olur ve Visual Basic sonraki sürümü artırmaya yardımcı. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, ne zaman, derleme bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, uygulamanın kendi hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem oturum açma işleminden sonra oluştu herhangi bir hata raporlarını Microsoft'a iletmek yöneticinin sağlar bir açılır pencere görüntüler.  
+ Bu seçeneği ile kullandıysanız `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, ve bir iç derleyici hata bilgileri uygulamanızın karşılaştığı `file` Microsoft Corporation gönderilir. Bu bilgiler, Microsoft mühendisleri hatanın nedenini belirlemenize yardımcı olur ve Visual Basic'in sonraki sürümüne artırmanıza yardımcı olabilir. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, derleme yaparken bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, bu uygulama, hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem yönetici oturum açma işleminden sonra gerçekleşen tüm hata raporlarını Microsoft'a iletecek şekilde sağlayan bir açılır pencere görüntüler.  
   
 > [!NOTE]
->  `/bugreport` Kullanılabilir olduğundan komut satırından derleme zaman yalnızca; seçeneği Visual Studio geliştirme ortamında kullanılabilir değil.  
+>  `/bugreport` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek derler `T2.vb` ve tüm hata raporlama bilgileri dosyasına yerleştirir `Problem.txt`.  
+ Aşağıdaki örnek derler `T2.vb` ve hata raporlama tüm bilgileri dosyada koyar `Problem.txt`.  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  
@@ -65,4 +65,4 @@ vbc -bugreport:problem.txt t2.vb
  [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
  [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
  [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [securityPolicy (ASP.NET Ayarlar Şeması) için trustLevel ögesi](http://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+ [trustLevel öğesi securityPolicy (ASP.NET Settings Schema) için](http://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)

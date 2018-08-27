@@ -12,14 +12,14 @@ ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac495e10be2ec1534dc9d9081aef369773d93e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649880"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933057"
 ---
 # <a name="-win32resource"></a>-win32resource
-Win32 kaynak dosyasını çıktı dosyasına ekler.  
+Bir Win32 kaynak dosyası çıkış dosyasına ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,20 +29,20 @@ Win32 kaynak dosyasını çıktı dosyasına ekler.
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Çıkış dosyanızın eklemek için kaynak dosyanın adı. Dosya adını tırnak işaretleri içine alın ("") boşluk içeriyorsa.  
+ Çıkış dosyanızı eklemek için kaynak dosyanın adı. Dosya adı tırnak içine alın ("") bir boşluk içeriyorsa.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Microsoft Windows Kaynak Derleyici (RC) ile Win32 kaynak dosyasını oluşturabilirsiniz.  
+ Microsoft Windows Kaynak derleyicisi (RC) ile bir Win32 kaynak dosyası oluşturabilirsiniz.  
   
- Win32 kaynak sürüm içerebilir veya yardım eden bir bit eşlem (simgesi) bilgi tanımlamak, uygulamanızda **dosya Gezgini**. Belirtmezseniz, `-win32resource`, derleyici derleme sürümünü temel alan sürüm bilgisi oluşturur. `-win32resource` Ve `-win32icon` seçenekleri karşılıklı olarak birbirini dışlar.  
+ Bir Win32 kaynağı sürümü içerebilir veya yardımcı olan bit eşlem (simge) bilgileri, uygulamanızda tanımlamak **dosya Gezgini**. Siz belirtmezseniz `-win32resource`, derleyici derleme sürümünü temel alan sürüm bilgisi oluşturur. `-win32resource` Ve `-win32icon` seçenekleri karşılıklı olarak birbirini dışlar.  
   
- Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) başvurusu için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) eklemek için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası.  
+ Bkz: [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) başvurmak için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası veya [-kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) eklemek için bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kaynak dosyası.  
   
 > [!NOTE]
->  `-win32resource` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-win32resource` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `In.vb` ve Win32 kaynak dosyasını, iliştirir `Rf.res`:  
+ Aşağıdaki kod derlenir `In.vb` ve bir Win32 kaynak dosyası ekler `Rf.res`:  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

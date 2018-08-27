@@ -6,39 +6,39 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334356"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934879"
 ---
 # <a name="namespaces-c-programming-guide"></a>Ad Alanları (C# Programlama Kılavuzu)
-Ad alanları, C# programlama iki yolla yoğun olarak kullanılır. İlk olarak, .NET Framework gibi birçok sınıflarından düzenlemek için ad alanları kullanır:  
+Ad alanlarında, C# programlama iki yolla yoğun olarak kullanılır. İlk olarak, .NET Framework ad alanları, çok sayıda sınıfa gibi düzenlemek için kullanır:  
   
  [!code-csharp[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
- `System` bir ad alanıdır ve `Console` bu ad alanındaki bir sınıftır. `using` Anahtar sözcüğü kullanılabilir, böylece tam adı, aşağıdaki örnekte olduğu gibi gerekli değildir:  
+ `System` bir ad alanı ve `Console` bu ad alanındaki bir sınıftır. `using` Anahtar sözcüğü kullanılabilir, böylece tam adı, aşağıdaki örnekte olduğu gibi gerekli değildir:  
   
  [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
  [!code-csharp[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
- Daha fazla bilgi için bkz: [using yönergesi](../../../csharp/language-reference/keywords/using-directive.md).  
+ Daha fazla bilgi için [using yönergesi](../../../csharp/language-reference/keywords/using-directive.md).  
   
- İkinci olarak, kendi ad alanlarını bildirme sınıfı ve yöntem adları büyük programlama projelerinde kapsamını denetlemenize yardımcı olabilir. Kullanım [ad alanı](../../../csharp/language-reference/keywords/namespace.md) aşağıdaki örnekteki gibi bir ad alanı bildirmek için anahtar sözcüğü:  
+ İkinci olarak, kendi ad alanlarını bildirme sınıf ve yöntem adları büyük programlama projelerinde kapsamını denetlemenize yardımcı olabilir. Kullanım [ad alanı](../../../csharp/language-reference/keywords/namespace.md) aşağıdaki örnekteki gibi bir ad alanı bildirmek için anahtar:  
   
  [!code-csharp[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
-## <a name="namespaces-overview"></a>Ad alanları genel bakış  
- Ad alanları aşağıdaki özelliklere sahiptir:  
+## <a name="namespaces-overview"></a>Ad alanlarına genel bakış  
+ Ad alanları, aşağıdaki özelliklere sahiptir:  
   
--   Bunlar büyük kod projeleri düzenleyin.  
+-   Bunlar, büyük kod projeleri düzenleyin.  
   
--   Kullanarak sınırlandırılır `.` işleci.  
+-   Kullanarak sınırlandırılmıştır `.` işleci.  
   
--   `using directive` Obviates gereksinimi her sınıf için ad alanı adını belirtin.  
+-   `using directive` Obviates gereksinimi her sınıf ad alanının adını belirtin.  
   
--   `global` Ad alanı olan "Kök" ad: `global::System` her zaman .NET Framework ad alanına başvuruda bulunacak `System`.  
+-   `global` Ad "Kök" ad alanı: `global::System` her zaman .NET Framework ad alanına başvuruda bulunacak `System`.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Ad alanları hakkında daha fazla bilgi için aşağıdaki konulara bakın:  

@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296149"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933593"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Atama ve Tür Dönüşümleri (C# Programlama Kılavuzu)
-Bir değişken bildirildikten sonra C# türü statik belirlenmiştir derleme zamanında olduğundan, yeniden bildirilen veya türü değişkenin türüne dönüştürülebilir olmadığı sürece başka bir tür değerleri depolamak için kullanılır. Örneğin, bir tamsayı herhangi bir rastgele dize hiçbir dönüştürme yoktur. Bu nedenle, sonra bildirdiğiniz `i` bir tamsayı, dize "Hello", aşağıdaki kodda gösterildiği şekilde atayamazsınız.  
+
+Bir değişken bildirildikten sonra C# türü statik belirlenmiştir derleme zamanında olduğundan, yeniden bildirilen veya bu tür değişkenin türüne örtük olarak dönüştürülebilir olmadığı sürece başka bir türde bir değer atanır. Örneğin, `string` için örtük olarak dönüştürülemez `int`. Bu nedenle, sonra bildirdiğiniz `i` olarak bir `int`, ", aşağıdaki kodun gösterdiği gibi Hello" dizesi atanamaz:
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  Ancak, bazen bir değişken veya yöntem türünden parametreye başka bir değeri kopyalama gerekebilir. Örneğin, bir yöntem parametresi olarak yazıldığında geçirmek için gereken tamsayı değişkenini olabilir `double`. Veya bir sınıf değişkeni bir arabirim türü bir değişkene atayın gerekebilir. Bu tür işlemler adlı *tür dönüştürmeleri*. C# ' ta, aşağıdaki tür dönüştürmeleri gerçekleştirebilirsiniz:  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **Yardımcı sınıfları dönüştürmeler**: tamsayı gibi uyumlu olmayan türleri arasında dönüştürme yapma ve <xref:System.DateTime?displayProperty=nameWithType> nesneleri veya onaltılık dizeler ve bayt dizileri kullanabilirsiniz <xref:System.BitConverter?displayProperty=nameWithType> sınıfı <xref:System.Convert?displayProperty=nameWithType> sınıfı ve `Parse`gibi yerleşik sayısal yöntemlerinin türleri <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Daha fazla bilgi için [nasıl yapılır: byte dizisini int'e dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [nasıl yapılır: bir dizeyi sayıya dönüştürme](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md), ve [nasıl yapılır: dönüştürme arasında onaltılık dizeler ve sayısal türler](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Örtük dönüşümler  
- Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/keywords/long.md) (8 baytlık tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/keywords/int.md) (32-bit bilgisayarda 4 bayt) depolayabilir. Aşağıdaki örnekte, derleyici örtük olarak türe sağ taraftaki değer dönüştürür `long` giderek önce `bigNum`.  
+ Depolanacak değer kısaltılır veya yuvarlanır olmadan değişkene uygun olduğunda yerleşik sayısal türler için örtük bir dönüştürme yapılabilir. Örneğin, bir değişken türü [uzun](../../../csharp/language-reference/keywords/long.md) (64-bit tamsayı) depolayabileceğiniz değerine herhangi bir [int](../../../csharp/language-reference/keywords/int.md) (32-bit tamsayı) depolayabilir. Aşağıdaki örnekte, derleyici değeri örtük olarak dönüştürür `num` türüne sağ taraftaki `long` giderek önce `bigNum`.  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   

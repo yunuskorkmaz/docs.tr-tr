@@ -1,110 +1,110 @@
 ---
-title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
-description: Hangi .NET uygulaması üzerinde .NET içinde sunucu uygulama oluştururken dikkate almanız gereken kılavuzu.
+title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçin
+description: Hangi .NET uygulamasının üzerinde. NET'te bir sunucu uygulaması derlerken, dikkate almanız gereken bir kılavuz.
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298194"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934539"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma
+# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim
 
-.NET ile sunucu tarafı uygulamalar oluşturmak için iki desteklenen uygulamaları vardır: .NET Framework ve .NET Core. Her ikisi de aynı bileşenlerin çoğu paylaşabilir ve kodu arasında iki paylaşabilirsiniz. Bununla birlikte, ikisi arasındaki temel farklar vardır ve tercih ettiğiniz gerçekleştirmek istediğiniz yere bağlıdır.  Bu makale, ne zaman her kullanılacağı hakkında yönergeler sağlar.
+.NET ile sunucu tarafı uygulamalar oluşturmak için iki desteklenen uygulamaları vardır: .NET Framework ve .NET Core. Her ikisi de aynı bileşenleri çoğunu paylaşmak ve ikisi arasında kod paylaşabilirsiniz. Bununla birlikte, ikisi arasındaki temel farklar vardır ve kendi seçtiğiniz gerçekleştirmek istediğiniz üzerinde bağlıdır.  Bu makalede, ne zaman her kullanılacağı hakkında yönergeler sağlar.
 
-Sunucu uygulaması için .NET Core kullanmak zaman:
+.NET Core için sunucu uygulamanızı kullanın. zaman:
 
-* Platformlar arası gereksinimleri vardır.
-* Mikro hedeflediğiniz.
-* Docker kapsayıcıları kullanıyor.
-* Yüksek performanslı ve ölçeklenebilir sistemlerinin gerekir.
+* Platformlar arası ihtiyaçları vardır.
+* Mikro hizmetler hedeflediğiniz.
+* Docker kapsayıcılarını kullanıyor.
+* Yüksek performanslı ve ölçeklenebilir sistemleri ihtiyacınız vardır.
 * Uygulama başına yan yana .NET sürümleri gerekir.
 
-Sunucu uygulaması için .NET Framework kullanan zaman:
+.NET Framework için sunucu uygulamanızı kullanan olduğunda:
 
-* Uygulamanız şu anda .NET Framework (geçirmek yerine genişletmek için önerilir) kullanır.
-* Uygulamanız .NET Core için üçüncü taraf .NET kitaplıklarına veya NuGet paketlerini kullanılamaz kullanır.
-* Uygulamanız için .NET Core kullanılamaz .NET teknolojilerini kullanır.
-* Uygulamanız .NET Core desteklemeyen bir platform kullanır.
+* Uygulamanızı .NET Framework (geçirmek yerine genişletmek için önerilir) şu anda kullanır.
+* Uygulamanızı .NET Core için üçüncü taraf .NET kitaplıkları veya kullanılabilir değil NuGet paketlerini kullanır.
+* Uygulamanızı .NET Core için kullanılamayan .NET teknolojilerini kullanır.
+* Uygulamanızı .NET Core desteği olmayan bir platform kullanır.
 
-## <a name="when-to-choose-net-core"></a>.NET Core seçmek ne zaman
+## <a name="when-to-choose-net-core"></a>Ne zaman .NET Core seçin
 
-Aşağıdaki bölümlerde daha ayrıntılı bir açıklaması .NET Core çekme daha önce belirtilen nedenlerini ve verin.
+Aşağıdaki bölümlerde, .NET Core çekme için yukarıda belirtilen nedenlerden daha ayrıntılı bir açıklama sağlar.
 
 ### <a name="cross-platform-needs"></a>Platformlar arası gerekiyor
 
-Birden çok Platformu (Windows, Linux ve macOS) çalıştırmak için uygulama (web/hizmet) gereksinimlerinizi .NET Core kullanıyorsanız.
+Uygulama (web/hizmet) gereksinimlerinizi birden çok platformda (Windows, Linux ve macOS) çalıştırmak için .NET Core kullanıyorsanız.
 
-.NET core, geliştirme iş istasyonu olarak yukarıda sözü edilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS bir tümleşik geliştirme ortamı (IDE) sağlar. MacOS, Linux ve Windows çalıştıran Visual Studio Code de kullanabilirsiniz. Visual Studio Code .NET hata ayıklama ve IntelliSense dahil çekirdek destekler. Sublime, Emacs ve VI, gibi çoğu üçüncü taraf düzenleyicileri .NET Core'u kullanmaya çalışır. Bu üçüncü taraf düzenleyicileri Düzenleyicisi IntelliSense alma kullanarak [Omnisharp](https://www.omnisharp.net/). Ayrıca herhangi bir kod düzenleyicisini kaçının ve doğrudan kullanmak [.NET Core CLI araçlarını](../core/tools/index.md), desteklenen tüm platformlar için kullanılabilir.
+.NET core geliştirme iş istasyonunuzu daha önce sözü edilen işletim sistemlerini destekler. Visual Studio, Windows ve macOS için bir tümleşik geliştirme ortamı (IDE) sağlar. Ayrıca, macOS, Linux ve Windows üzerinde çalışan Visual Studio Code kullanabilirsiniz. Visual Studio Code hata ayıklama ve IntelliSense dahil olmak üzere .NET Core, destekler. Çoğu üçüncü taraf düzenleyiciler, Sublime Emacs ve gibi VI, .NET Core ile çalışır. Bu üçüncü taraf düzenleyicileri Düzenleyicisi IntelliSense Al kullanarak [Omnisharp](https://www.omnisharp.net/). Ayrıca herhangi bir kod düzenleyici önlemek ve doğrudan [.NET Core CLI Araçları](../core/tools/index.md), desteklenen tüm platformlar için kullanılabilir.
 
-### <a name="microservices-architecture"></a>Mikro mimarisi
+### <a name="microservices-architecture"></a>Mikro hizmet mimarisi
 
-Mikro mimarisi, hizmet sınırından bir karışımını teknolojileri sağlar. Bu teknoloji karışımı aşamalı bir .NET Core embrace diğer mikro veya hizmetleri iş yeni mikro için etkinleştirir. Örneğin, mikro veya .NET Framework, Java, Ruby veya diğer tek yapılı teknolojileri ile geliştirilen Hizmetleri karıştırabilirsiniz.
+Bir mikro hizmet mimarisi, bir hizmet sınırında teknolojilerinin bir karışımını sağlar. Bu teknoloji karışımı diğer mikro hizmetler veya hizmetler ile çalışan yeni mikro hizmetler için .NET Core, aşamalı bir embrace sağlar. Örneğin, mikro hizmetler veya .NET Framework, Java, Ruby veya tek parçalı diğer teknolojiler ile geliştirilen Hizmetleri karıştırabilirsiniz.
 
-Birçok altyapı platformda kullanılabilir. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) büyük ve karmaşık mikro hizmet sistemler için tasarlanmıştır. [Azure uygulama hizmeti](https://azure.microsoft.com/services/app-service/) durum bilgisiz mikro için iyi bir seçimdir. Docker üzerinde tabanlı mikro alternatifleri sığacak mikro yaklaşımı, her türlü açıklandığı gibi [kapsayıcıları](#containers) bölümü. Tüm bu platformlar, mikro barındırmak için ideal hale ve .NET Core desteği.
+Birçok altyapı platformda kullanılabilir. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) büyük ve karmaşık bir mikro hizmet sistemler için tasarlanmıştır. [Azure App Service](https://azure.microsoft.com/services/app-service/) durum bilgisi olmayan mikro hizmetler için iyi bir seçimdir. Mikro hizmetler alternatifleri üzerinde Docker tabanlı mikro hizmetler yaklaşımı, herhangi bir türden açıklandığı gibi uygun [kapsayıcıları](#containers) bölümü. Bu tüm platformlarda, .NET Core desteği ve mikro hizmetlerin barındırmak için ideal hale getirilmeleri.
 
-Mikro mimarisi hakkında daha fazla bilgi için bkz: [.NET mikro. Mimari kapsayıcılı .NET uygulamaları için](microservices-architecture/index.md).
+Mikro hizmet mimarisi hakkında daha fazla bilgi için bkz: [.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi](microservices-architecture/index.md).
 
 ### <a name="containers"></a>Kapsayıcılar
 
-Kapsayıcıları genellikle mikro mimarisi ile birlikte kullanılır. Kapsayıcılar, web uygulamaları veya herhangi bir mimari modeliyle izleyin Hizmetleri containerize için de kullanılabilir. .NET framework üzerinde Windows kapsayıcıları kullanılabilir, ancak .NET Core basit yapısını ve modülerlik kılar kapsayıcıları için daha uygun bir seçenektir. Oluşturma ve bir kapsayıcı dağıtma, kendi görüntü boyutunu .NET çerçevesi ile .NET Core ile çok daha küçük. Platformlar arası olduğu için sunucu uygulamalarını Linux Docker kapsayıcılara, örneğin dağıtabilirsiniz.
+Kapsayıcılar, mikro hizmet mimarisi ile birlikte sık kullanılır. Kapsayıcılar, web uygulamaları veya herhangi bir mimari deseni izleyen Hizmetleri kapsayıcılı hale getirme için de kullanılabilir. .NET framework Windows kapsayıcılarında kullanılabilir, ancak basit bir .NET Core doğasını ve modülerlik kılar kapsayıcılar için daha iyi bir seçenek. Oluşturma ve kapsayıcı dağıtma, kendi görüntüsünün boyutu .NET Framework ile .NET Core küçüktür. Platformlar arası olduğundan, sunucu uygulamaları için Linux Docker kapsayıcılar, örneğin dağıtabilirsiniz.
 
-Docker kapsayıcıları barındırılması kendi Linux veya Windows altyapınızı ya da bir bulut hizmeti gibi [Azure kapsayıcı hizmeti](https://azure.microsoft.com/services/container-service/). Azure kapsayıcı hizmeti yönetmek, düzenlemek ve bulut kapsayıcı tabanlı uygulamalarda ölçeklendirin.
+Docker kapsayıcıları barındırılabilir Linux veya Windows kendi altyapınızı ya da bir bulut hizmeti gibi [Azure Container Service](https://azure.microsoft.com/services/container-service/). Azure Container Service, yönetme, düzenlemeyi ve kapsayıcı tabanlı uygulamaları bulutta ölçeklendirin.
 
-### <a name="a-need-for-high-performance-and-scalable-systems"></a>Yüksek performanslı ve ölçeklenebilir sistemleri gereksinimini
+### <a name="a-need-for-high-performance-and-scalable-systems"></a>Yüksek performanslı ve ölçeklenebilir sistemleri için bir gereksinimi
 
-Sisteminizin olası en iyi performans ve ölçeklenebilirlik, .NET Core ve ASP.NET Core gerektiği zaman, en iyi seçenekler belirtilmiştir. Windows Server ve Linux yapar .NET üst gerçekleştirmek için yüksek performanslı sunucu çalışma zamanı üzerinde framework web [TechEmpower kıyaslamaları](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext).
+Sisteminizi iyi olası performans ve ölçeklenebilirlik, .NET Core ve ASP.NET Core gerektiğinde olan en iyi seçenekleri. Windows Server ve Linux kolaylaştırır .NET üst gerçekleştirmek için yüksek performanslı sunucu çalışma zamanı üzerinde framework web [TechEmpower Kıyaslama](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext).
 
-Performans ve ölçeklenebilirlik mikro yüzlerce çalıştırdığı mikro mimari için özellikle ilgili. ASP.NET Core ile sistemleri kadar daha az sayıda sunucuları/sanal makine (VM) ile çalıştırın. Azaltılmış sunucuları/VMs, altyapı ve barındırma maliyetlerini kaydedin.
+Performans ve ölçeklenebilirlik mikro hizmetler yüzlerce çalıştığı mikro hizmet mimarileri için yakından ilgili olan. ASP.NET Core ile sistemleri çok daha az sayıda sunucuları/sanal makineler (VM) ile çalıştırın. Azaltılmış sunucuları/VMs, altyapı ve barındırma maliyetlerinden tasarruf.
 
 ### <a name="a-need-for-side-by-side-of-net-versions-per-application-level"></a>Uygulama düzeyinde başına .NET sürümlerinin yan yana gereksinimini
 
-Farklı sürümlerini .NET bağımlılıkları olan uygulamalar yüklemek için .NET Core öneririz. .NET core .NET çekirdeği çalışma zamanı ile aynı makinede farklı sürümlerinin yan yana yüklemesini sağlar. Bu yan yana yükleme, aynı sunucuda, her biri kendi sürümü .NET Core üzerinde birden fazla hizmet sağlar. Ayrıca, riskleri azaltır ve para uygulama yükseltmeleri ve BT işlemleri kaydeder.
+Farklı sürümleri .NET ilgili bağımlılıkları olan uygulamaları yüklemek için .NET Core öneririz. .NET core, .NET Core çalışma zamanı ile aynı makinede farklı sürümlerinin yan yana yüklemesini sağlar. Bu yan yana yükleme birden fazla hizmeti aynı sunucuda, her biri kendi sürümünde .NET Core sağlar. Ayrıca, riskleri azaltır ve para uygulama yükseltmeleri ve BT işlemleri kaydeder.
 
-## <a name="when-to-choose-net-framework"></a>.NET Framework seçmek ne zaman
+## <a name="when-to-choose-net-framework"></a>Ne zaman .NET Framework seçin
 
-.NET core yeni uygulamalar ve uygulama düzenleri için önemli avantajlar sunar. Ancak, .NET Framework birçok varolan senaryoları için doğal seçimi kadar devam eder ve bu nedenle .NET Framework tarafından .NET Core tüm sunucu uygulamaları için değiştirilir değil.
+.NET core için yeni uygulamalar ve uygulama desenleri önemli avantajlar sunar. Ancak, .NET Framework mevcut birçok senaryo için doğal seçenek olmaya devam eder ve bu nedenle .NET Framework ile .NET Core tüm sunucu uygulamaları için değiştirilir değil.
 
 ### <a name="current-net-framework-applications"></a>Geçerli .NET Framework uygulamaları
 
-Çoğu durumda, mevcut uygulamalarınızı .NET Core geçirmek gerekmez. Bunun yerine, önerilen yaklaşım ASP.NET Core yeni bir web hizmeti yazma gibi varolan bir uygulama, genişletme gibi .NET Core kullanmaktır.
+Çoğu durumda, mevcut uygulamalarınızı .NET Core geçişi gerekmez. Bunun yerine, önerilen yaklaşım yeni bir web hizmeti ASP.NET Core yazma gibi mevcut bir uygulamayı yeniden genişletirken .NET Core kullanmaktır.
 
-### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Üçüncü taraf .NET kitaplıklarına veya NuGet paketlerini kullanılamaz .NET Core için kullanılacak bir gereksinimi
+### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core için üçüncü taraf .NET kitaplıkları veya kullanılabilir değil NuGet paketlerini kullanmak için bir gereksinim
 
-Kitaplıklar, .NET standart benimsemenin hızla. .NET standart paylaşım kod .NET Core dahil olmak üzere tüm .NET uygulamaları etkinleştirir. .NET standart 2.0 ile daha kolay şudur:
+Hızlı bir şekilde kitaplıkları .NET Standard benimsemektedir. .NET standard paylaşım kod arasında tüm .NET uygulamalarının .NET Core dahil olmak üzere sağlar. .NET Standard 2.0 ile bunu daha da kolaydır:
 
-- API yüzeyi çok daha büyük hale geldi. 
-- .NET Framework uyumluluk modu sunulmuştur. Bu uyumluluk modu, .NET Framework kitaplıkları başvurmak .NET standart/.NET Core projeleri sağlar. Uyumluluk modu hakkında daha fazla bilgi için bkz: [.NET standart 2.0 Duyurusu](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
+- Bir API yüzeyi, çok daha büyük hale geldi. 
+- .NET Framework uyumluluk modu kullanıma sunuldu. Bu uyumluluk modu, .NET Framework kitaplıkları başvurmak .NET standart/.NET Core projeleri sağlar. Uyumluluk modu hakkında daha fazla bilgi için bkz: [.NET Standard 2.0 ile tanışın](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
 
-Burada kitaplıkları veya NuGet paketlerini .NET standart/.NET Core kullanılamaz teknolojilerini kullanan durumlarda yalnızca .NET Framework kullanmanız gerekir.
+Burada kitaplıkları veya NuGet paketlerini de .NET standart/.NET Core kullanılamayan teknolojilerini kullanan durumlarda yalnızca .NET Framework kullanmanız gerekir.
 
 ### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılabilir değil .NET teknolojileri kullanmaya gerek
 
-Bazı .NET Framework teknolojiler .NET Core kullanılamaz. Bunlardan bazıları daha sonra .NET Core sürümlerde kullanılabilir olabilir. Başkaları tarafından .NET Core hedeflenen yeni uygulama desenler için uygulanmaz ve hiçbir zaman kullanılabilir olabilir. Aşağıdaki listede, .NET Core bulunamadı en yaygın teknolojiler gösterilmektedir:
+' De .NET Core bazı .NET Framework teknolojilerini kullanılamaz. Bunların bazılarını daha sonra .NET Core sürümlerinde kullanılabilir olabilir. Diğer .NET Core tarafından hedeflenen yeni uygulama desenleri için geçerli değildir ve hiçbir zaman kullanılabilir. Aşağıdaki liste, en yaygın teknolojileri de .NET Core bulunamadı gösterir:
 
-* ASP.NET Web Forms uygulamaları: ASP.NET Web Forms bulunan ve yalnızca .NET Framework. ASP.NET Core ASP.NET Web formları için kullanılamaz. ASP.NET Web Forms .NET Core getirmek için plan yok.
+* ASP.NET Web formları uygulamalarını: ASP.NET Web Forms yüklenebilir yalnızca .NET Framework. ASP.NET Core, ASP.NET Web formları için kullanılamaz. .NET Core ile ASP.NET Web Forms getirmek için herhangi bir plan yoktur.
 
-* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil değildir. ASP.NET Core [Razor sayfalarının](/aspnet/core/mvc/razor-pages/) Web sayfalarıyla birçok benzerlikler vardır.
+* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları, ASP.NET Core dahil edilmemiş. ASP.NET Core [Razor sayfaları](/aspnet/core/mvc/razor-pages/) Web sayfaları ile birçok benzerlikler.
 
-* WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerini kullanmak için WCF sunucu şu anda yalnızca .NET Framework kullanılabilir uygulamasıdır. Bu senaryo, .NET Core için geçerli planının bir parçası değil, ancak gelecek için kabul.
+* WCF hizmetleri uygulaması. Olduğunda bile bir [WCF istemci Kitaplığı](https://github.com/dotnet/wcf) .NET Core WCF hizmetlerinden kullanmak için WCF sunucusu uygulaması şu anda yalnızca .NET Framework içinde kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir ancak geleceğe yönelik değerlendiriliyor.
 
-* İş akışı ile ilgili hizmetlerin: Windows Workflow Foundation (WF), (WCF + tek bir hizmette WF) iş akışı hizmetleri ve WCF Veri Hizmetleri (eski adıyla "ADO.NET Veri Hizmetleri"), yalnızca .NET Framework kullanılabilir.  WCF + WF/WF/WCF Veri Hizmetleri için .NET Core getirmek için plan yok.
+* İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF) iş akışı Hizmetleri (WCF + WF tek bir hizmette) ve WCF Veri Hizmetleri (eski adıyla "ADO.NET Data Services" da bilinir), yalnızca .NET Framework içinde kullanılabilir.  WF/WCF + WF/WCF Data Services için .NET Core getirmek için herhangi bir plan yoktur.
 
-* Dil desteği: Visual Basic ve F # şu anda desteklenen .NET Core, ancak tüm proje türleri için değil. Desteklenen proje şablonları listesi için bkz: [dotnet yeni şablonu seçeneklerini](../core/tools/dotnet-new.md#arguments).
+* Dil desteği: Visual Basic ve F # şu anda desteklenen .NET Core, ancak tüm proje türleri için değil. Desteklenen proje şablonları listesi için bkz. [dotnet yeni şablon seçeneklerini](../core/tools/dotnet-new.md#arguments).
 
-Resmi yol haritası yanı sıra diğer çerçeveler .NET Core için bağlantı noktası kurulmuş vardır. Tam listesi için bkz: olarak işaretlenmiş CoreFX sorunları [bağlantı noktası çekirdek](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Bu liste, bu bileşenler için .NET Core getirmek için Microsoft'un taahhüdü temsil etmez. Yalnızca bunu isteğini topluluktan yakalama. İşaretlenen bileşenleri hakkında önemli `port-to-core`, github'da tartışmalara katılın. Ve şeyin eksik olduğunu düşünüyorsanız, yeni bir sorun dosya [CoreFX depo](https://github.com/dotnet/corefx/issues/new).
+Resmi yol haritası yanı sıra .NET Core için unity'nin için diğer çerçeveler vardır. Olarak işaretlenmiş Corefx'te sorunlar tam listesi için bkz. [bağlantı noktası çekirdek](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Bu liste, bu bileşenler, .NET Core getirmek için Microsoft'un taahhüdü temsil etmez. Bunlar yalnızca bunu yapma arzusu topluluğundan yakalayacağınızı. Olarak işaretlenmiş bileşenleri hakkında dikkatli olun `port-to-core`, GitHub üzerindeki tartışmaların katılın. Bir şeyler eksik olduğunu düşünüyorsanız, yeni bir konu dosya [Corefx'te depo](https://github.com/dotnet/corefx/issues/new).
 
-### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core desteklemeyen bir platform kullanmanız gerekmez
+### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core desteği olmayan bir platform kullanın gerekmez
 
-Bazı Microsoft veya üçüncü taraf platformları .NET Core desteklemez. Örneğin, .NET Framework hizmet doku durum bilgisi olan güvenilir hizmetler ve hizmet doku Reliable Actors gerektiren gibi bazı Azure Hizmetleri. Başka bir hizmetler, .NET Core üzerinde bir SDK tüketimi için henüz kullanılamıyor sağlar. Tüm Azure hizmetlerini .NET Core kullandıkça geçici bir durum budur. Bu arada, eşdeğer REST API istemcisi SDK yerine her zaman kullanabilirsiniz.
+.NET Core, bazı Microsoft veya üçüncü taraf platformları desteklemez. Örneğin, Service Fabric durum bilgisi olan Reliable Services ve Service Fabric Reliable Actors, .NET Framework gerektiren gibi bazı Azure Hizmetleri. Bazı diğer hizmetler üzerinde .NET Core SDK tüketimi için henüz kullanılamıyor sağlar. Tüm Azure hizmetlerinin .NET Core kullanırken geçici bir durumda budur. Bu arada, eşdeğer REST API İstemci SDK'sı yerine her zaman kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [ASP.NET ve ASP.NET Core arasında seçim yapma](/aspnet/core/choose-aspnet-framework)  
- [.NET Core Kılavuzu](../core/index.md)  
- [.NET Core için .NET Framework'bağlantı noktası oluşturma](../core/porting/index.md)  
+
+ [ASP.NET Core ile ASP.NET arasında seçim](/aspnet/core/choose-aspnet-framework) [hedef çerçeveyi](frameworks.md) [.NET Core Kılavuzu](../core/index.md)  
+ [.NET Core ile .NET Framework'ten taşıma](../core/porting/index.md)  
  [Docker Üzerinde .NET Framework Kılavuzu](../framework/docker/index.md)  
  [.NET bileşenleri'ne genel bakış](components.md)  
- [.NET mikro. Kapsayıcılı .NET uygulamaları için mimarisi](microservices-architecture/index.md)
+ [.NET mikro Hizmetleri. Kapsayıcılı .NET uygulamaları mimarisi](microservices-architecture/index.md)

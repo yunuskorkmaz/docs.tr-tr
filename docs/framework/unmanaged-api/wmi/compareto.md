@@ -1,6 +1,6 @@
 ---
 title: CompareTo işlevi (yönetilmeyen API Başvurusu)
-description: CompareTo işlevi başka bir WMI nesnesi bir nesneyi karşılaştırır.
+description: CompareTo işlevi bir nesneyi başka bir WMI nesnesini karşılaştırır.
 ms.date: 11/06/2017
 api_name:
 - CompareTo
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bde25ae7455dd7fe35fe1a0a43bb2a6b560c0e3e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460414"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935014"
 ---
 # <a name="compareto-function"></a>CompareTo işlevi
-Nesneyi başka bir Windows Yönetim nesnesi için karşılaştırır.  
+Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,51 +42,51 @@ HRESULT CompareTo (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `flags`  
-[in] Karşılaştırma için dikkate alınması gereken nesne özellikleri belirten bayrakları Bitsel bir birleşimi. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
+[in] Karşılaştırma için dikkate alınması gereken nesne özellikleri belirten bayraklar Bitsel bir birleşimi. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
 
 `pCompareTo`  
 
-[in] Karşılaştırma için nesnesi. `pcompareTo` Geçerli bir olmalıdır [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örnek; olamaz `null`.
+[in] Karşılaştırma için nesne. `pcompareTo` Geçerli bir olmalıdır [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örnek; olamaz `null`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Belirlenemeyen bir hata oluştu. |
+| `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçersiz. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | İkinci çağrı `BeginEnumeration` olmadan müdahalede bulunan bir çağrı yapıldı [ `EndEnumeration` ](endenumeration.md). |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
-| `WBEM_S_DIFFERENT` | 0x40003 | Nesneleri farklıdır. |
-| `WBEM_S_SAME` | 0 | Nesneleri karşılaştırma bayrakları dayalı aynıdır. |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | İkinci çağrı `BeginEnumeration` bir çağrı göndermelisiniz olmadan yapılan [ `EndEnumeration` ](endenumeration.md). |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
+| `WBEM_S_DIFFERENT` | 0x40003 | Nesneler farklı. |
+| `WBEM_S_SAME` | 0 | Nesneleri karşılaştırma bayraklarını tabanlı aynıdır. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::CompareTo](https://msdn.microsoft.com/library/aa391437(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) yöntemi.
 
-Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişkeni tanımlanmış *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda. Aşağıdaki bayraklar Bitsel bir birleşimi belirterek Karşılaştırmada söz konusu tek tek özellikleri belirtebilirsiniz:
-
-|Sabit  |Değer  |Açıklama  |
-|---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Kaynak (sunucu ve bunların nereden geldiğini ad alanı) yoksay. |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1. | Tüm niteleyicileri yoksay (de dahil olmak üzere **anahtar** ve **dinamik**) |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Özelliklerin varsayılan değerleri yok sayın. Bu bayrak, yalnızca sınıfları bir karşılaştırması için geçerlidir. |
-| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Niteleyici özellikleri yoksay. Bu bayrak hala niteleyicileri, dikkate alır, ancak özellik farklılıklar yayma kurallar gibi yoksayar ve kısıtlamalarını geçersiz kılmak. |
-| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Dize değerleri karşılaştırma içinde durumu yoksay. Bu, hem dizeler ve niteleyicisi değerleri için geçerlidir. Özellik ve niteleyicisi adları karşılaştırması bu bayrağı ayarlanmış olduğundan bağımsız olarak her zaman duyarlıdır. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Karşılaştırılan nesnelerin aynı sınıf örneklerinin olduğunu varsayar. Sonuç olarak, bu bayrak örneği ile ilgili bilgiler yalnızca karşılaştırır. Bu bayrak, performansı iyileştirmek için kullanın. Nesneleri aynı sınıfının emin değilseniz, sonuçları tanımlanmamış. |
-
-Veya tek bir birleşik bayrak aşağıdaki gibi belirtin:
+Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişken tanımlanmış *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda. Aşağıdaki bayraklar Bitsel bir birleşimi belirterek Karşılaştırmada dahil bireysel özelliklerini belirtebilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Karşılaştırma tüm özelliklerini göz önünde bulundurun. |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Kaynak (sunucu ve kaynaklarına ad alanı) yoksayın. |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | 1. | Tüm niteleyicileri yoksay (dahil olmak üzere **anahtarı** ve **dinamik**) |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Özelliklerin varsayılan değerlerini yoksayın. Bu bayrağı yalnızca sınıfları bir karşılaştırması için geçerlidir. |
+| `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Niteleyici özelliği yoksayın. Bu bayrak hala niteleyicileri, dikkate ancak flavor farklılıklar yayma kuralları gibi yoksayar ve kısıtlamaları geçersiz kılar. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Dize değerleri karşılaştırma içinde çalışması yoksayar. Bu, hem dizeleri ve niteleyici değeri için geçerlidir. Özellik ve niteleyicisi adlarının karşılaştırma her zaman bu bayrağı ayarlanmış olduğundan bağımsız olarak büyük küçük harfe duyarlıdır. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Karşılaştırılan nesnelerin örneklerinin aynı sınıfın olduğunu varsayar. Sonuç olarak, bu bayrağı yalnızca örnekle ilgili bilgi karşılaştırır. Bu bayrak, performansı iyileştirmek için kullanın. Nesneleri aynı sınıfının emin değilseniz, sonuçlar tanımsızdır. |
+
+Veya tek bir bileşik bayrağı şu şekilde belirtebilirsiniz:
+
+|Sabit  |Değer  |Açıklama  |
+|---------|---------|---------|
+|`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Karşılaştırma içindeki tüm özelliklerini göz önünde bulundurun. |
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

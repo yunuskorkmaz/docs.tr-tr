@@ -6,22 +6,23 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 577f94cec75022ed9680dd2ae137c1f0fa2e44cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9abedb72e04cb36273b48bb609fe8e410872f8b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265492"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935385"
 ---
 # <a name="in-c-reference"></a>in (C# Başvurusu)
 
 `in` Anahtar sözcüğü, dört bağlamlarında kullanılır:  
   
--   [genel tür parametreleri](in-generic-modifier.md) genel arabirimler ve temsilciler.
--   Farklı bir [parametresi değiştiricisi](in-parameter-modifier.md), olanak sağlayan bir bağımsız değişken için bir yöntem başvuru yerine değere göre geçirdiğiniz.
--   [foreach](foreach-in.md) deyimleri.
--   [Birleştirme yan tümceleri](join-clause.md) LINQ Sorgu ifadeleri.
+- [genel tür parametreleri](in-generic-modifier.md) genel arabirimler ve temsilciler.
+- Olarak bir [parametre değiştiricisi](in-parameter-modifier.md), olanak sağlayan, bağımsız değişken bir yönteme başvuru yerine değere göre geçirin.
+- [foreach](foreach-in.md) deyimleri.
+- [JOIN yan tümceleri](join-clause.md) LINQ Sorgu ifadeleri.
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Anahtar Sözcükleri](index.md)  
- [C# başvurusu](../index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Anahtar Sözcükleri](index.md)  
+- [C# başvurusu](../index.md)

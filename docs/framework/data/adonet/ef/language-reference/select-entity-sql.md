@@ -2,12 +2,12 @@
 title: SEÇİN (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765990"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933859"
 ---
 # <a name="select-entity-sql"></a>SEÇİN (varlık SQL)
 Bir sorgu tarafından döndürülen öğeleri belirtir.  
@@ -23,18 +23,18 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
   
 ## <a name="arguments"></a>Arguments  
  TÜM  
- Çoğaltmaları sonuç kümesinde görünebilir belirtir. Tüm varsayılan değerdir.  
+ Yinelenen sonuç kümesinde göründüğünü belirtir. Tüm varsayılan değerdir.  
   
  FARKLI  
- Yalnızca benzersiz sonuçları sonuç kümesinde görünebilir belirtir.  
+ Yalnızca benzersiz sonuçları sonuç kümesinde görünebileceğini belirtir.  
   
  DEĞER  
- Yalnızca bir öğesinin belirtilmesine izin verir ve bir satır sarmalayıcı eklemez.  
+ Yalnızca bir öğe belirtilmesine olanak sağlar ve bir satır sarmalayıcı üzerinde eklemez.  
   
  `topSubclause`  
- Formun sorgudan döndürülecek ilk sonuç sayısını gösterir. geçerli bir ifade `top (``expr``)`.  
+ Form sorgudan döndürülecek ilk sonuç sayısını gösteren herhangi bir geçerli ifade `top(expr)`.  
   
- SINIR parametresinin [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) işleci de olanak tanır, sonuç kümesinde ilk n öğeleri seçin.  
+ SINIRI parametresi [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) işleci de olanak tanır, sonuç kümesindeki ilk n öğe seçin.  
   
  `aliasedExpr`  
  Bir ifade formun:  
@@ -42,44 +42,44 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `expr` olarak `identifier`&#124; `expr`  
   
  `expr`  
- Bir sabit değer veya ifade.  
+ Değişmez değer veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- SELECT yan tümcesi sonra değerlendirilir [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), ve [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) yan tümceleri değerlendirilir. SELECT yan tümcesi, yalnızca (FROM yan tümcesi, veya dış kapsamları) şu anda kapsam öğelerine başvurabilir. GROUP BY yan tümcesinde belirtilen SELECT yan tümcesi yalnızca GROUP BY anahtarları için diğer adlar başvurmak için izin verilir. FROM yan tümcesi öğelerine başvuran yalnızca toplama işlevleri içinde izin verilir.  
+ SELECT yan tümcesi sonra değerlendirilir [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), ve [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) yan tümceleri değerlendirilir. SELECT yan tümcesi yalnızca (FROM yan tümcesi, veya dış kapsamları) şu anda kapsam öğelerine başvurabilir. GROUP BY yan tümcesi belirtilmiş ise SELECT yan tümcesi yalnızca GROUP BY anahtarları için diğer adlar başvurmak için izin verilir. FROM yan tümcesi öğelerine başvuran yalnızca toplama işlevlerinde izin verilir.  
   
- SELECT anahtar sözcüğü aşağıdaki bir veya daha fazla sorgu ifadeleri listesi seçim listesi olarak veya projeksiyon olarak daha resmi olarak bilinir. En genel projeksiyon tek sorgu ifadesi biçimidir. Üye seçerseniz `member1` bir koleksiyondan `collection1`, tüm yeni bir koleksiyon oluşturacak `member1` her nesnenin değerleri `collection1`aşağıdaki örnekte gösterildiği gibi.  
+ SELECT anahtar sözcüğünü izleyen bir veya daha fazla sorgu ifadeleri listesini seçim listesi olarak veya daha eski adıyla projeksiyon olarak bilinir. En genel projeksiyon tek sorgu ifadesi biçimindedir. Bir üye seçtiğinizde `member1` bir koleksiyondan `collection1`, tüm yeni bir koleksiyon oluşturacak `member1` her nesne için değerler `collection1`aşağıdaki örnekte gösterildiği gibi.  
   
 ```  
 SELECT collection1.member1 FROM collection1  
 ```  
   
- Örneğin, varsa `customers` türü koleksiyonudur `Customer` bir özellik olan `Name` türü olan `string`, seçme `Name` gelen `customers` dizeleri koleksiyonu aşağıdaki örnekte gösterildiği gibi sunacak .  
+ Örneğin, varsa `customers` türü koleksiyonudur `Customer` bir özelliği olan `Name` türü olan `string`u seçerek `Name` gelen `customers` dizelerden oluşan bir koleksiyonu, aşağıdaki örnekte gösterildiği gibi verecek olan .  
   
 ```  
 SELECT customers.Name FROM customers AS c  
 ```  
   
- JOIN söz dizimi (tam, iç, sol, dış, ON ve sağa) kullanmak da mümkündür. ON İç birleşimler için gereklidir ve nhizmetin birleştirmeler izin verilir.  
+ JOIN söz dizimini (tam, iç, sol, dış, ON ve SAĞDA) kullanmak mümkündür. Şirket iç birleştirmeler için gereklidir ve nBaşka birleştirmeler izin verilir.  
   
-## <a name="row-and-value-select-clauses"></a>Satır ve değer Select yan tümceleri  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT yan tümcesi iki çeşidini destekler. Satır seçin, ilk değişken SELECT anahtar sözcüğe göre tanımlanır ve çıkışı öngörülen bir veya daha fazla değerleri belirtmek için kullanılır. Bir satır sarmalayıcı döndürdüğü değer örtük olarak eklendiğinden, sorgu ifadesi her zaman bir çoklu küme satır sonucudur.  
+## <a name="row-and-value-select-clauses"></a>Yan tümceleri satır ve değer seçin  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT yan tümcesi birinin iki çeşidi destekler. İlk satırı seçin, değişken, SELECT anahtar sözcüğü tarafından tanımlanır ve çıkış öngörülen bir veya daha fazla değerleri belirtmek için kullanılabilir. Bir satır sarmalayıcı döndürülen değerlerden örtük olarak eklendiğinden, sorgu ifadesi her zaman bir çoklu küme satır sonucudur.  
   
- Her bir satır select sorgu ifadesinde bir diğer ad belirtmeniz gerekir. Diğer ad belirtilmezse,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] diğer adı oluşturma kuralları kullanarak bir diğer ad oluşturmak çalışır.  
+ Her sorgu ifadesi içinde bir satırı seçin, bir diğer ad belirtmeniz gerekir. Diğer ad yok belirtilirse,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] diğer ad oluşturma kurallarını kullanarak bir diğer ad oluşturmaya çalışır.  
   
- Bir değer seçin, SELECT yan tümcesi türevi SELECT VALUE anahtar sözcüğü tarafından tanımlanır. Belirtilmesi tek bir değer verir ve bir satır sarmalayıcı eklemez.  
+ Bir değişken değeri select, SELECT yan tümcesi, SELECT VALUE anahtar sözcüğü tarafından tanımlanır. Yalnızca bir değer belirtilmesine olanak tanır ve satır sarmalayıcı eklemez.  
   
- Bir satır seçin her zaman aşağıdaki örnekte gösterildiği gibi değeri seçin bakımından ifade.  
+ Bir satır seçin her zaman aşağıdaki örnekte gösterildiği gibi değeri seçin açısından ifade.  
   
 ```  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
   
-## <a name="all-and-distinct-modifiers"></a>Tüm ve ayrı değiştiricileri  
- Her iki SELECT çeşitlemelerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BÜTÜN belirtimi izin ver veya ayrı değiştiricisi. AYRI değiştiricisi belirtilirse, yinelenen sorgu ifadesi (kadar ve SELECT yan tümcesi de dahil olmak üzere) tarafından üretilen koleksiyonundan ortadan kalkar. Tüm değiştiricisi ise, belirtilen, Hayır yinelenen eleme gerçekleştirilir; Tüm varsayılan değerdir.  
+## <a name="all-and-distinct-modifiers"></a>Tüm ve ayrı değiştiriciler  
+ Her iki SELECT türevleri [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BÜTÜN belirtilmesine izin ver veya ayrı değiştiricisi. FARKLI değiştiricisi belirtilirse, çoğaltmaları (en fazla ve SELECT yan tümcesi dahil olmak üzere) sorgu ifadesi tarafından üretilen koleksiyondan ortadan kalkar. Belirtilen, Hayır yinelenen tüm değiştiricisi, eleme gerçekleştirilir; Tüm varsayılan değerdir.  
   
-## <a name="differences-from-transact-sql"></a>Transact-SQL farkları  
- Transact-SQL, aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kullanımını desteklemez * SELECT yan tümcesinde bağımsız değişkeni.  Bunun yerine, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tüm kayıtları FROM yan tümcesinden koleksiyonu diğer adlar başvurarak aşağıdaki örnekte gösterildiği gibi projeye sorguları sağlar.  
+## <a name="differences-from-transact-sql"></a>Transact-SQL arasındaki farklar  
+ Transact-SQL, aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kullanımını desteklemiyor * SELECT yan tümcesinde bağımsız değişken.  Bunun yerine, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tüm kayıtları süzer koleksiyonu diğer adlar FROM yan tümcesinden başvurarak aşağıdaki örnekte gösterildiği gibi projeye sorguları sağlar.  
   
 ```  
 SELECT * FROM T1, T2  
@@ -92,11 +92,11 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusunu sorgu tarafından döndürülen öğeler belirtmek için SELECT işlecini kullanır. Sorgu AdventureWorks satış modelini temel alır. Derlemek ve bu sorguyu çalıştırmak için aşağıdaki adımları izleyin:  
+ Aşağıdaki varlık SQL sorgusu seçme işleci bir sorgu tarafından döndürülen öğeleri belirtmek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
   
-1.  Yordamı izleyin [nasıl yapılır: Sorgu döndürür StructuralType sonucu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Verilen yordamı izleyin [nasıl yapılır: Bu döndürür StructuralType sonuçları sorguyu](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Aşağıdaki sorgu bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2.  Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   

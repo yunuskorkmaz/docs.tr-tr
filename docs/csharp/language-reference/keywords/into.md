@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: eb0cde84ff57d1c4b927850ffddb1e862ea8f8dc
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: HT
+ms.openlocfilehash: 6d46ae67dd84650172125c62ea70dc109671a89b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925704"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934772"
 ---
 # <a name="into-c-reference"></a>into (C# Başvurusu)
 
@@ -30,6 +30,6 @@ Kullanımını gösteren bir örnek `into` içinde bir `join` yan tümcesi bkz [
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)  
-[LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-[group yan tümcesi](group-clause.md)  
+- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)  
+- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [group yan tümcesi](group-clause.md)  
