@@ -1,6 +1,6 @@
 ---
 title: BeginMethodEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: Nesnenin yöntemleri numaralandırması BeginMethodEnumeration işlevi başlar
+description: BeginMethodEnumeration işlevi nesnesinin yöntemlerini numaralandırması başlar.
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459882"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000349"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
 Nesne için kullanılabilen yöntemler numaralandırması başlar.  
@@ -41,33 +41,33 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `lEnumFlags`  
-[in] Sıfır (0) tüm yöntemler ve numaralandırma kapsamını belirten bir bayrak. Aşağıdaki bayraklar tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+[in] Tüm yöntemler veya numaralandırma kapsamını belirten bir bayrak için sıfır (0). Aşağıdaki bayraklar tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sınıfında tanımlanan yöntemler numaralandırma sınırlayın. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Temel sınıflardan devralınır özellikler numaralandırma sınırlayın. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sabit listesi sınıfı içinde tanımlanan yöntemleri sınırlayın. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Temel sınıftan devralınan özellikler için sabit sınırlar. |
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` sıfır olmayan ve belirtilen bayrakları biri değil. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` sıfır olmayan ve belirtilen bayraklar biri değil. |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) yöntemi.
 
-Bu yöntem çağrısı, geçerli nesne bir sınıf tanımı ise yalnızca desteklenir. Yöntem işleme kullanılabilir değil [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneklerine noktası işaretçileri. Yöntemleri numaralandırılan sipariş belirli bir örneği için sabit olması garanti [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).
+Geçerli nesne bir sınıf tanımı ise bu yöntem çağrısı yalnızca desteklenir. Yöntem işleme kullanılabilir değil [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneklerine işaret eden işaretçilerin. Yöntemleri numaralandırılan sırasını belirli bir örneği için sabit olması garanti [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

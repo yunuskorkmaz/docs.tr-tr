@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654375"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003131"
 ---
 # <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
-Belirtilen derlemelerde türü bilgileri şu anda derlediğiniz proje kullanılabilir hale getirmek derleyici neden olur.  
+Derleyicinin tür bilgilerini belirli derlemelerde şu anda derleme proje kullanılabilir hale getirmek neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,27 +33,27 @@ Belirtilen derlemelerde türü bilgileri şu anda derlediğiniz proje kullanıla
   
 |Terim|Tanım|  
 |---|---|  
-|`fileList`|Gerekli. Derleme dosya adlarının virgülle ayrılmış listesi. Dosya adı boşluk içeriyorsa adı tırnak işaretleri içine alın.|  
+|`fileList`|Gerekli. Derleme dosya adlarının virgülle ayrılmış liste. Dosya adı boşluk içeriyorsa adı tırnak içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleme meta verilerini içe aktardığınız dosyaları içermelidir. Yalnızca genel türleri dışında derleme görünür. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçenek, bir modülden meta verileri alır.  
+ İçeri aktardığınız dosya, derleme meta verileri içermelidir. Yalnızca genel türleri derlemenin dışında görünür. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) seçenek, bir modülden meta verileri alır.  
   
- Bir derlemeye (a derlemesi) başvurursanız kendisi başka bir derlemeye (B derlemesi) başvuran, varsa B derlemesine başvuru gerekir:  
+ Bir bütünleştirilmiş kodu (bütünleştirilmiş kod: A) başvuruda bulunursanız kendisi başvuran bir derlemeyle (derlemeyi B), başvuru derlemesi B, gerekir:  
   
--   Derlemesi türünden bir türden devralır veya derleme B'deki bir arabirimi uygular.  
+-   Bir derlemeden bir tür bir tür tarafından devralındığında veya derleme B'deki bir arabirim uygular.  
   
--   Alan, özellik, olay veya b derlemesinden dönüş türü veya parametresi türü olan yöntemi çağrılır.  
+-   Bir alan, özelliği, olay veya dönüş türü veya parametresi türü derleme b olan yöntemi çağrılır.  
   
- Kullanım [- LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) bir veya daha fazla derleme başvurularını bulunduğu dizini belirtmek için.  
+ Kullanım [- LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) için bir veya daha fazla, derleme başvuruları bulunduğu dizini belirtin.  
   
- Derleyicinin türü derlemedeki (modülü değil) tanımak bu türü çözümlemeye zorlanması gerekir. Türünün bir örneği tanımlamak için nasıl Bunu yapmak için bir örnek verilmiştir. Diğer yolları derleyici için derlemeyi türü adları çözümlemek kullanılabilir. Örneğin, bir derlemede türünden devralan, tür adı sonra derleyiciye bilinir.  
+ Derleyicinin derlemede (modül değil) bir türü tanıması, türü çözümlemeye zorlanması gerekir. Bunu yapmak nasıl ilişkin bir örnek, bir türün örneğini tanımlamaktır. Yollar, derleyici bir derlemede bulunan tür adlarını çözmek kullanılabilir. Örneğin, bir derleme içinde bulunan bir türden devralıyorsanız, tür adı ardından derleyiciye bildiği.  
   
- Başvuruları yaygın olarak kullanılan Vbc.rsp yanıt dosyası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler, varsayılan olarak kullanılır. Kullanmak `-noconfig` derleyicinin Vbc.rsp kullanmasını istemiyorsanız.  
+ Başvuru sık kullanılan nezahrnovat yanıt dosyası [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeleri, varsayılan olarak kullanılır. Kullanma `-noconfig` derleyici nezahrnovat kullanmak istemiyorsanız.  
   
- Kısa formunu `-reference` olan `/r`.  
+ Kısa formunu da `-reference` olduğu `/r`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komutu kaynak dosyasını derler `Input.vb` ve başvuru derlemelerden `Metad1.dll` ve `Metad2.dll` üretmek için `Out.exe`.  
+ Aşağıdaki komut, kaynak dosyası derler `Input.vb` ve başvuru derlemeleri `Metad1.dll` ve `Metad2.dll` üretmek için `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
