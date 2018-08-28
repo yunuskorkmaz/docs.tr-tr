@@ -7,23 +7,24 @@ helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 02d9de34bf0293194f3a72bd5901d047e4cc5b2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8749d1dc0670a5a76bda5ee0d69a4a142671c1e6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000291"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;= İşleci (C# Başvurusu)
-Tüm sayısal ve numaralandırma türlerinin bir "büyük veya ona eşit" ilişkisel işleci, tanımlama `>=` döndüren `true` ilk işlenen ikinci eşit veya daha büyük ise `false` Aksi takdirde.  
+Bir "büyüktür veya eşittir" ilişkisel işleç, tüm sayısal ve Numaralandırma türleri tanımlamak `>=` döndüren `true` birinci işlenenin değerinden büyük veya eşit, ikinci ise `false` Aksi takdirde.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıcı tanımlı türler aşırı yükleme `>=` işleci. Daha fazla bilgi için bkz: [işleci](../../../csharp/language-reference/keywords/operator.md). Varsa `>=` aşırı yüklendi [ <= ](../../../csharp/language-reference/operators/less-than-equal-operator.md) da aşırı yüklenmiş gerekir. Tam sayı türleri üzerinde işlemler genellikle numaralandırma üzerinde izin verilir.  
+ Kullanıcı tanımlı türler aşırı yükleme `>=` işleci. Daha fazla bilgi için [işleci](../../../csharp/language-reference/keywords/operator.md). Varsa `>=` aşırı yüklendi [ <= ](../../../csharp/language-reference/operators/less-than-equal-operator.md) da aşırı yüklenmiş gerekir. Tamsayı türlerinde işlemler genellikle numaralandırma üzerinde izin verilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

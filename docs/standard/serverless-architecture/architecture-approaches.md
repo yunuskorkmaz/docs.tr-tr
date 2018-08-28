@@ -4,12 +4,12 @@ description: Giriş mimarisi, N katmanlı mimariler için sunucusuz bulut tabanl
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b080e029fb1214ebf4d2717902c3b6d4af06d254
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37405025"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999887"
 ---
 # <a name="architecture-approaches"></a>Mimari yaklaşımları
 
@@ -75,7 +75,7 @@ Sunucusuz bir veya daha fazla katmanı uygulamak için kullanılabilir.
 * Hizmetleri bir tek veri deposuna bağımlı değildir.
 * Sistem hatası düşünülerek tasarlanmıştır ve bile belirli hizmetleri başarısız olduğunda uygulama çalışmaya devam.
 
-Mikro hizmetler, diğer mimari yaklaşımları karşılıklı olması gerekmez. Örneğin, N katmanlı bir mimari, mikro hizmetler için orta katman kullanabilir. Mikro hizmetler çeşitli yollarla, kapsayıcılar için IIS konaklardaki sanal dizinlerden uygulamak mümkündür. Mikro hizmet özelliklerini bunları sunucusuz uygulamalar için özellikle ideal hale getirir.
+Mikro hizmetler, diğer mimari yaklaşımları birbirini dışlayan olması gerekmez. Örneğin, N katmanlı bir mimari, mikro hizmetler için orta katman kullanabilir. Mikro hizmetler çeşitli yollarla, kapsayıcılar için IIS konaklardaki sanal dizinlerden uygulamak mümkündür. Mikro hizmet özelliklerini bunları sunucusuz uygulamalar için özellikle ideal hale getirir.
 
 ![Mikro hizmet mimarisi](./media/microservices-architecture.png)
 

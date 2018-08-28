@@ -1,113 +1,113 @@
 ---
-title: Sorunları ve çözümleri Dağıtılmış veri yönetimi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Sorunları ve çözümleri Dağıtılmış veri yönetimi
+title: Dağıtılmış veri yönetimi için sorunlar ve çözümler
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Dağıtılmış veri yönetimi için sorunlar ve çözümler
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106495"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998690"
 ---
-# <a name="challenges-and-solutions-for-distributed-data-management"></a>Sorunları ve çözümleri Dağıtılmış veri yönetimi
+# <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Sınama \#1: her mikro hizmet sınırları tanımlama
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Sınama \#1: her mikro hizmet sınırlarını tanımlama
 
-Mikro hizmet sınırları tanımlama herkes karşılaştığında ilk testten olabilir. Her mikro hizmet uygulamanızı bir parçası olması gerekir ve her mikro hizmet tüm avantajları ve onu ilettiği güçlükleri ile otonom olması gerekir. Ancak bu sınırlar nasıl tanımlarsınız?
+Mikro hizmet sınırlarını tanımlama herkes karşılaştığında ilk testten olabilir. Her mikro hizmet, uygulamanızın bir parçası olması gerekir ve her bir mikro hizmetin tüm avantajları ve onu ilettiği zorlukları ile otonom olmalıdır. Ancak, bu sınırları nasıl saptadınız mı?
 
-İlk olarak, uygulamanın mantıksal etki alanı modelleri ve ilgili verileri odaklanmak gerekir. Veri ve aynı uygulama içinde farklı bağlamdan ayrılmış Adaları tanımlamak denemeniz gerekir. Her bağlam farklı iş dili (farklı iş koşullarını) olabilir. Bağlamları tanımlanabilir ve bağımsız olarak yönetilebilir. Hüküm ve bu farklı bağlamlarda kullanılan varlıkların benzer görünebilir, ancak belirli bir bağlamda başka bir bağlamda farklı bir amaç için bir iş kavramını kullanıldığını keşfetmenize ve hatta farklı bir ad olabilir. Örneğin, bir kullanıcı kullanıcı kimliği veya üyelik bağlamı olarak Müşteri bir CRM içeriği olarak bir sıralama bağlamında bir alıcı olarak adlandırılabilir ve benzeri.
+İlk olarak, uygulamanın mantıksal etki alanı modelleri ve ilgili verileri gerekir. Veri ve aynı uygulama içinde farklı bağlamlardaki ayrılmış Adaları belirlemeye çalışın gerekir. Her bağlamı, farklı iş dili (farklı iş terimlerini) olabilir. Bağlamları tanımlanabilir ve bağımsız olarak yönetilebilir. Hüküm ve bu farklı bağlamlardaki kullanılabilir varlıklar benzer görünebilir, ancak başka bir bağlamda farklı bir amaç için bir iş kavramını belirli bir bağlamda kullanılan keşfedin ve hatta farklı bir ad olabilir. Örneğin, bir kullanıcının kullanıcı kimliği veya üyelik bağlamı olarak olarak CRM bağlamda, bir müşteri bir sipariş bağlamında bir alıcı olarak adlandırılabilir ve VS.
 
-Her bağlam tam olarak her iş mikro hizmet ve onun ilişkili sınırları nasıl tanımlamak için farklı bir etki alanı ile birden çok uygulama bağlamları arasındaki sınırları tanımlamak şekilde etki alanı modeli ve veri. Her zaman bu mikro arasında bağ en aza indirmek çalışır. Bu kılavuzun bu bölümünde tanımlama ve etki alanı modeli tasarım hakkında daha fazla ayrıntı girmeyeceğini [her mikro hizmet için etki alanı modeli sınırları tanımlayan](#identifying-domain-model-boundaries-for-each-microservice) daha sonra.
+Her bağlamı tam olarak her iş mikro hizmet ve onun ilişkili için sınırları nasıl tanımlamak için farklı bir etki alanı ile birden çok uygulama içerikleri arasındaki sınırları tanımlamak şekilde etki alanı modeli ve veri. Her zaman bu mikro hizmetler arasında eşleştirmeye en aza indirmek çalışır. Bu kılavuzda bu bölümdeki tanımlama ve etki alanı modeli tasarımı hakkında daha fazla ayrıntıya gider [her mikro hizmet için etki alanı modeli sınırlarını tanımlama](#identifying-domain-model-boundaries-for-each-microservice) daha sonra.
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Sınama \#2: birkaç mikro verileri sorgu oluşturma
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Sınama \#2: veri birden fazla mikro hizmetler sorgu oluşturma
 
-Uzak istemci uygulamalardan mikro chatty iletişimi kaçınarak birkaç mikro verileri sorgular gerçekleştirme buna ikinci bir sorundur. Bir örnek Sepeti, katalog ve kullanıcı kimliği mikro ait kullanıcı bilgilerini göstermek için gereken bir mobil uygulaması tek ekranından olabilir. Başka bir örnek içinde birden çok mikro bulunan çok sayıda tabloları içeren karmaşık bir rapor olabilir. Doğru çözüm sorguların karmaşıklığına bağlıdır. Ancak herhangi bir durumda, sisteminizin iletişimin verimliliğini artırmak istiyorsanız toplama bilgileri için bir yol gerekir. En popüler çözümleri aşağıda verilmiştir.
+İkinci sık iletişim için mikro Hizmetleri kaçınarak uzak istemci uygulamalardan birden fazla mikro hizmetler, veri alan sorguları uygulanması zordur. Sepet, katalog ve kullanıcı kimlik mikro hizmetler tarafından ait kullanıcı bilgilerini göstermek için gereken bir mobil uygulama tek bir ekrandan bir örnek olabilir. Başka bir örnek, birden fazla mikro Hizmetleri bulunan birçok tabloları içeren karmaşık bir rapor olabilir. Doğru çözüm, sorgu karmaşıklığına bağlıdır. Ancak herhangi bir durumda, iletişimin sistemin verimliliğini artırmak istiyorsanız, toplam bilgileri için bir yol gerekir. En popüler çözümler aşağıda verilmiştir.
 
-**API ağ geçidi**. Farklı veritabanlarına ait birden çok mikro öğesinden basit veri toplama için önerilen bir API ağ geçidi olarak başvurulan bir toplama mikro hizmet yaklaşımdır. Ancak, sisteminizdeki bir sıkıştırma noktası olabilir ve mikro hizmet otonomisi ilkesini ihlal edebilir çünkü bu deseni uygulama hakkında dikkatli olmanız gerekir. Bu olasılığını azaltmak için her bir dikey "dilim" ya da sistem iş alanı odaklanan birden çok fined düzey API ağ geçidi sahip olabilir. API ağ geçidi desen kullanma bölümünde daha ayrıntılı açıklanmıştır daha sonra bir API ağ geçidi.
+**API ağ geçidi**. Farklı veritabanlarına ait birden fazla mikro hizmetin gelen Basit veri toplama için önerilen yaklaşım bir API ağ geçidi başvurulan bir toplama mikro hizmetidir. Ancak, sisteminizdeki bir sıkıştırma noktası olabilir ve mikro hizmet bağımsız çalışma sınırı ilkesini ihlal edebilir çünkü bu düzen uygulama hakkında dikkatli olmanız gerekir. Bu olasılığını azaltmak için her bir dikey "dilim" ya da sistemin iş alanı odaklanarak birden çok fined şirketlerinde API ağ geçitleri olabilir. API ağ geçidi desenini kullanarak bölümünde daha ayrıntılı açıklanmıştır daha sonra bir API ağ geçidi.
 
-**Sorgu/okuma tablolarla CQRS**. Birden çok mikro verileri toplama için başka bir çözüm [gerçekleştirilip görünüm düzeni](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Bu yaklaşımda, önceden oluşturduğunuz (hazırlamanız Normalleştirilmemiş veri gerçek sorguları durum önce) tarafından birden çok mikro ait verilerle salt okunur bir tablo. Tablo istemci uygulamasının gereksinimlerine göre uygun bir biçime sahip.
+**Sorgu/okuma tablolarla CQRS**. Birden fazla mikro hizmetin veri toplama için başka bir çözüm [gerçekleştirilmiş görünüm düzeni](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Bu yaklaşımda, önceden oluşturduğunuz (hazırlama normalleştirilmişlikten çıkarılmış veriler gerçek sorguları meydana gelmeden), birden fazla mikro hizmetin ait verilerle bir salt okunur tablo. Tablo, istemci uygulamanın ihtiyaçlarına uygun bir biçimde.
 
-Bir mobil uygulama için ekrana benzer şekilde göz önünde bulundurun. Tek bir veritabanınız varsa, birden çok tablo içeren bir karmaşık birleştirme gerçekleştiren bir SQL sorgusu kullanılarak bu ekranda verileri birlikte çekme. Ancak, birden çok veritabanı varsa ve her veritabanı farklı bir mikro hizmet tarafından ait olduğunda, bu veritabanları sorgu ve SQL birleştirme oluşturma olamaz. Bir challenge, karmaşık bir sorgu olur. CQRS yaklaşım kullanarak gereksinimi karşılamak — yalnızca sorgularında kullanılır farklı bir veritabanına Normalleştirilmemiş bir tablo oluşturun. Tablo özellikle uygulamanızın ekran ve sorgu tablodaki sütunlar için gerekli alanlar arasında bire bir ilişki ile karmaşık bir sorgu için gereksinim duyduğunuz verileri için tasarlanmış olabilir. Ayrıca raporlama amacıyla hizmet.
+Mobil uygulama ekran gibi göz önünde bulundurun. Tek bir veritabanı varsa, verileri birden çok tablo karmaşık birleşim gerçekleştiren bir SQL sorgusu kullanarak bu ekran için birlikte çekeceği. Ancak, birden çok veritabanına sahip ve her veritabanı farklı bir mikro hizmet tarafından sahip olunan, bu veritabanlarını sorgulama ve SQL birleştirme oluşturma olamaz. Bir challenge, karmaşık bir sorgu olur. CQRS yaklaşımı kullanarak bir gereksinimi ele almanız — normalleştirilmişlikten çıkarılmış bir tablo sorguları için kullanılan farklı bir veritabanı oluşturun. Tablo, özellikle uygulamanızın ekran ve sorgu tablodaki sütunlar için gerekli alanlar arasında bire bir ilişki ile karmaşık bir sorgu için ihtiyacınız olan verileri için tasarlanmış olması. Ayrıca raporlama amacıyla hizmet.
 
-Bu yaklaşım yalnızca (nasıl sorgu ve mikro hizmetler arasında birleştirme); özgün sorununu çözer uygulamanın sorgu tabloda gerekir veri zaten yüklü olduğu da oldukça karmaşık bir birleşim ile karşılaştırıldığında performansı artırır. Elbette, sorgu/okuma tablolarla komutunu ve sorgu sorumluluk ayrımı (CQRS) kullanarak ek geliştirme iş anlamına gelir ve nihai tutarlılık kapsayacak şekilde gerekir. Öte yandan, performans ve yüksek ölçeklenebilirlik gereksinimlerini [işbirliği senaryoları](http://udidahan.com/2011/10/02/why-you-should-be-using-cqrs-almost-everywhere/) (veya bağlı olarak bakış açısından rekabetçi senaryoları) burada birden çok veritabanlarıyla CQRS uygulamalıdır olduğu.
+Bu yaklaşım yalnızca özgün (sorgu ve mikro hizmetler arasında birleştirme için nasıl); sorunu çözer zaten sahip olduğunuz sorgu tabloda uygulamanız için gereken veriler için oldukça karmaşık bir birleşim ile karşılaştırıldığında performansı da artırır. Elbette, komut ve sorgu sorumluluğu ayrımı (CQRS) içeren sorgu/okuma tablolar'ı kullanarak ek geliştirme iş anlamına gelir ve nihai tutarlılık yaklaşımını benimseyin gerekecektir. Öte yandan, performans ve yüksek ölçeklenebilirlik gereksinimlerine [işbirliği senaryoları](http://udidahan.com/2011/10/02/why-you-should-be-using-cqrs-almost-everywhere/) (veya bağlı açısından rekabetçi senaryoları) olan birden çok veritabanıyla CQRS burada uygulamalıdır.
 
-**Merkezi veritabanlarındaki "soğuk veriler"**. Karmaşık raporlar ve gerçek zamanlı veri gerektirmeyebilecek sorgular için ortak bir yaklaşım, "veri hot" verilmesidir (mikro işlem verilerden) yalnızca raporlama için kullanılan büyük veritabanlarına "soğuk veriler" olarak. Bu merkezi veritabanı sistem Hadoop, bir Azure SQL Data Warehouse veya (boyutu bir sorun olursa) yalnızca raporları için kullanılan bile tek bir SQL veritabanı göre gibi bir veri ambarı gibi büyük veri tabanlı bir sistem olabilir.
+**"Soğuk verileri" merkezi veritabanlarındaki**. Karmaşık raporlar ve gerçek zamanlı veri gerektirmeyebilecek sorgular için "veri"Sık erişimli dışarı aktarmak için yaygın bir yaklaşım olan (mikro hizmetler işlemsel verileri) olarak "soğuk veri" yalnızca raporlama için kullanılan büyük veritabanları. Hadoop, bir Azure SQL veri ambarı veya raporlar için kullanılan (boyut bir sorun olmayacaktır) bile tek bir SQL veritabanı gibi bir veri ambarı gibi büyük veri tabanlı bir sistem, merkezi bir veritabanı sistemi olabilir.
 
-Bu merkezi veritabanı yalnızca sorgular ve gerçek zamanlı veri gerekmez raporları için kullanılacak aklınızda bulundurun. Özgün güncelleştirmeleri ve gerçekte, kaynağınız işlemleri mikro verilerinizi olması gerekir. Veri eşitleme şekilde olay denetimli iletişimi (sonraki bölümlerde ele) kullanarak veya diğer veritabanı altyapısı içeri/dışarı aktarma araçları kullanarak olacaktır. Olay kaynaklı iletişimi kullanırsanız, tümleştirme işlem CQRS sorgu tablolar için daha önce açıklandığı gibi veri yayılması şekilde benzer olacaktır.
+Bu merkezi bir veritabanında yalnızca sorgular ve gerçek zamanlı veri gerekmeyen raporlar için kullanılacak aklınızda bulundurun. Özgün güncelleştirmeleri ve işlemleri, kaynağınız getirilir, mikro hizmetler verilerinizi olmanız gerekir. Olay temelli iletişim (sonraki bölümde ele) kullanarak ya da diğer veritabanı altyapısı içeri/dışarı aktarma araçları kullanarak verileri eşitlemek şekilde olacaktır. Olay temelli iletişim kullanırsanız, bu tümleştirme işlemi benzer şekilde CQRS sorgu tablolar için daha önce açıklandığı gibi veri yaymak olacaktır.
 
-Ancak, Uygulama tasarımınız sürekli karmaşık sorgular için birden çok mikro bilgileri toplama içeriyorsa, hatalı bir tasarım belirtisi olabilir — bir mikro hizmet diğer mikro gelen mümkün olduğunca yalıtılmış olması gerekir. (Soğuk veri merkezi veritabanlarını daima raporları/analytics dışlar.) Bu sorun genellikle mikro birleştirmek için bir neden olabilir. Evrimi otonomisi ve güçlü bağımlılıkları, cohesion ve veri toplama her mikro hizmet dağıtımını dengelemeniz gerekir.
+Ancak, uygulama tasarımınızı sürekli karmaşık sorgular için birden fazla mikro hizmetin bilgileri toplayarak içeriyorsa, hatalı bir tasarım belirtisi olabilir — bir mikro hizmet diğer mikro hizmetler mümkün olarak yalıtılmış olması gerekir. (Her zaman soğuk veri merkezi veritabanlarını kullanması gereken raporları/analizleri dışlar.) Bu sorun genellikle mikro hizmetler birleştirmek için bir neden olabilir. Gelişimi, özerkliği ve güçlü bağımlılıkları uyumda ve veri toplama ile her bir mikro Hizmet dağıtımının dengelemeniz gerekir.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Sınama \#3: birden çok mikro arasında tutarlılık sağlamak nasıl
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Sınama \#3: birden çok mikro hizmetler arasında tutarlılığı elde etme
 
-Daha önce belirtildiği gibi her mikro hizmet tarafından ait veriler bu mikro hizmet özel ve yalnızca kendi mikro hizmet API kullanılarak erişilebilir. Bu nedenle, sunulan bir uçtan uca iş süreçlerini arasında birden çok mikro tutarlılık tutarken uygulamak nasıl iştir.
+Daha önce belirtildiği gibi her bir mikro hizmet tarafından sahip olunan veri, mikro hizmet için özeldir ve yalnızca kendi mikro hizmet API'si kullanılarak erişilebilir. Bu nedenle, sunulan birden fazla mikro hizmetler arasında tutarlılık sağlarken uçtan uca iş süreçlerini uygulanması zordur.
 
-Bu sorunu çözümlemek için bir örnek bakalım [eShopOnContainers başvuru uygulama](http://aka.ms/eshoponcontainers). Katalog mikro hizmet stok düzeylerini dahil olmak üzere tüm ürünlerle ilgili bilgileri tutar. Sıralama mikro hizmet siparişleri yönetir ve yeni bir sipariş kullanılabilir Kataloğu ürün stok aşmayan doğrulamanız gerekir. (Veya senaryo backordered ürünleri işleme mantığı gerektirebilir.) Bir kuramsal tek yapılı sürümünde bu uygulama, sipariş alt sistemi yalnızca ACID işlemi kullanılabilir hisse senedi denetleyin, Siparişler tablosunda sırasını oluşturmak ve Ürünler tablosuna kullanılabilir stokta güncelleştirmek için kullanabilirsiniz.
+Bu sorunu çözümlemek için bir örnekten göz atalım [hizmetine başvuru uygulaması](http://aka.ms/eshoponcontainers). Katalog mikro hizmet stok düzeylerini dahil olmak üzere tüm ürünlerle ilgili bilgileri tutar. Sıralama mikro hizmet, siparişler yönetir ve yeni bir sipariş kullanılabilir Kataloğu ürün stok saklama aşmamasını doğrulamanız gerekir. (Veya senaryo backordered ürünleri işleme mantığı gerektirebilir.) Bir kuramsal tek parça sürümünde bu uygulama, sıralama alt sistemi yalnızca bir ACID işlemi kullanılabilir hisse senedi denetleyin, Siparişler tablosunda sırasını oluşturmak ve kullanılabilir Ürünler tablosu stokta güncelleştirmek için kullanabilirsiniz.
 
-Ancak, bir mikro tabanlı uygulamada kendi ilgili mikro tarafından sırası ve ürün tabloları sahibi olur. Şekil 4-9'da gösterildiği gibi hiçbir mikro hizmet kendi işlemleri ya da sorgular, başka bir mikro sahibi veritabanları her zamankinden içermelidir.
+Ancak, bir mikro hizmet tabanlı uygulama sipariş ve ürün tablolarını ilgili kendi mikro hizmetin sahibi olur. Şekil 4-9'da gösterildiği gibi hiçbir mikro hizmet kendi işlem ya da sorguları, başka bir mikro hizmet tarafından sahip olunan veritabanları hiç olmadığı kadar içermelidir.
 
 ![](./media/image9.PNG)
 
-**Şekil 4-9**. Bir mikro hizmet başka bir mikro hizmet tablosunda doğrudan erişemiyor
+**Şekil 4-9**. Bir mikro hizmet, bir tablodaki başka bir mikro hizmet doğrudan erişemez
 
-Katalog mikro hizmet tarafından Ürünler tablosuna ait olduğundan sıralama mikro hizmet Ürünler tablosuna doğrudan güncelleştirmelidir değil. Katalog mikro hizmet için bir güncelleştirme yapmak için sıralama mikro hizmet yalnızca sürekli tümleştirme olaylarını (ileti ve olay tabanlı iletişim) gibi zaman uyumsuz iletişim kullanmanız gerekir. Bunun nasıl [eShopOnContainers](http://aka.ms/eshoponcontainers) başvuru uygulaması bu tür bir güncelleştirme gerçekleştirir.
+Ürünler tablosu Kataloğu mikro hizmet tarafından sahiplenildiğinden sıralama mikro hizmet Ürünler tablosu doğrudan güncelleştirmelidir değil. Katalog mikro hizmet için bir güncelleştirme yapmak için sıralama mikro hizmet yalnızca sürekli tümleştirme olayları (ileti ve olay tabanlı iletişim) gibi zaman uyumsuz iletişim kullanmanız gerekir. Bu, nasıl [hizmetine](http://aka.ms/eshoponcontainers) başvuru uygulaması, bu tür bir güncelleştirme gerçekleştirir.
 
-Tarafından belirtildiği gibi [CAP Teoremi](https://en.wikipedia.org/wiki/CAP_theorem), ACID güçlü tutarlılık ve kullanılabilirlik arasında seçim yapmanız gerekir. Mikro hizmet tabanlı çoğu senaryoda, kullanılabilirlik ve güçlü tutarlılık aksine yüksek ölçeklenebilirlik talep. Görev açısından kritik uygulamalar yukarı kalması ve çalıştığından ve geliştiricilerin güçlü tutarlılık zayıf veya nihai tutarlılık ile çalışmak için teknikleri kullanarak çalışabilir. Mikro hizmet tabanlı çoğu mimariler tarafından uygulanan yaklaşıma budur.
+Tarafından belirtildiği gibi [CAP Teoremi](https://en.wikipedia.org/wiki/CAP_theorem), ACID güçlü tutarlılık ve kullanılabilirlik arasında seçim yapmanız gerekir. Mikro hizmet tabanlı çoğu senaryoda, kullanılabilirlik ve güçlü tutarlılık aksine yüksek ölçeklenebilirlik talep. Görev açısından kritik uygulamalar kalması gereken ve çalışan ve geliştiricilerin güçlü tutarlılık zayıf veya nihai tutarlılık ile çalışmaya yönelik teknikleri kullanarak çalışabilir. Çoğu mikro hizmet tabanlı mimari tarafından uygulanan yaklaşıma budur.
 
-Ayrıca, ACID stili veya iki aşamalı kaydetme işlemleri yalnızca mikro ilkelerine karşı değildir; Çoğu NoSQL veritabanı (örneğin, Azure Cosmos DB, MongoDB, vb.) iki aşamalı kaydetme işlemleri desteklemez. Ancak, veri koruma hizmetleri ve veritabanları arasında tutarlılık gereklidir. Bu sorunu bazı verileri yedek olması gerektiğinde arasında birden çok mikro değişiklikleri yaymak nasıl soru için de ilgili — Örneğin, ne zaman ürünün ad veya açıklama katalog mikro hizmet ve sepeti olması gerekir mikro hizmet.
+Ayrıca, ACID stili veya iki aşamalı tamamlama işlemleri yalnızca mikro hizmetler ilkelerine karşı değildir; Çoğu NoSQL veritabanları (örneğin, Azure Cosmos DB, MongoDB, vb.) iki aşamalı tamamlama işlemleri desteklemez. Ancak, veri koruma hizmetleri ve veritabanları arasında tutarlılığı gereklidir. Bu zorluğu da yedekli olacak şekilde bazı verilere ihtiyaç duyduğunda, birden fazla mikro hizmetler arasında değişiklikleri yaymak nasıl soruyu ilgili — Örneğin, ne zaman ürün adına veya açıklamasına Kataloğu mikro hizmet ve sepet olması gerekir mikro hizmet.
 
-Bu sorun için iyi bir çözüm olay denetimli iletişim ve bir Yayımla ve abone ol sistemi geliştirilmiştir mikro arasında nihai tutarlılık kullanmaktır. Bu konular bölümünde ele alınmıştır [olay tabanlı zaman uyumsuz iletişim](#async_event_driven_communication) bu kılavuzda daha sonra.
+Bu sorun için iyi bir çözümdür, olay tabanlı iletişim ve bir Yayımla ve abone ol sistemi geliştirilmiştir mikro hizmetler arasındaki son tutarlılık kullanmaktır. Bu konulara bölümünde ele alınmıştır [zaman uyumsuz olay temelli iletişim](#async_event_driven_communication) bu kılavuzun sonraki.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Sınama \#4: mikro hizmet sınırları boyunca iletişimi tasarlamak nasıl
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Sınama \#4: nasıl mikro hizmet sınırları arasında iletişim
 
-Mikro hizmet arasında iletişim sınırları olan gerçek bir sınama. Bu bağlamda iletişimi başvurmuyor hangi Protokolü (HTTP ve REST, AMQP, Mesajlaşma vb.) kullanmalısınız. Bunun yerine, kullanmanız gereken hangi iletişim stili ve özellikle bu nasıl bağlı, mikro olmalıdır yöneliktir. Hata oluştuğunda, ilişki düzeyine bağlı olarak, bu hata, sistem üzerindeki etkisini önemli ölçüde farklılık gösterir.
+Mikro hizmet arasında iletişim kuran sınırları gerçek zor olur. Bu bağlamda iletişim başvurmuyor, protokol (HTTP ve REST, AMQP, Mesajlaşma vb.) kullanmanız gerekir. Bunun yerine, kullanmanız gereken hangi iletişim stili ve özellikle bu nasıl bağlı mikro hizmetlerin olmalıdır yöneliktir. Hata oluştuğunda bağlantısından düzeyine bağlı olarak, bu hata, sistem üzerindeki etkisini önemli ölçüde farklılık gösterir.
 
-Mikro tabanlı bir uygulama, çok sayıda yapıları hareket etmek ve birçok sunucuları veya ana bilgisayar üzerinde dağıtılmış hizmetlerle gibi dağıtılmış sistemindeki bileşenleri sonunda başarısız olur. Bunlar dikkate riskleri Dağıtılmış Sistem bu tür ortak alarak üzerinde mikro ve iletişimi tasarlamanız gerekir böylece kısmi hatası ve daha da büyük kesintiler oluşacaktır.
+Bir mikro hizmet tabanlı uygulama, çok sayıda yapıtları gezinmek ve birçok sunucuları veya konaklar arasında dağıtılmış hizmetlerle gibi dağıtılmış bir sistemde bileşenleri sonunda başarısız olur. Böylece bunlar hesaba riskleri Dağıtılmış Sistem bu tür genel katılarak üzerinde mikro hizmetlerin ve iletişimi tasarım gerek kısmi hata ve daha da büyük kesintiler oluşacaktır.
 
-Popüler bir yaklaşım HTTP (REST) uygulamaktır-kendi kolaylık olması nedeniyle mikro tabanlı. HTTP tabanlı bir yaklaşım edilebilir; sorunu burada kullandığınız nasıl ilişkilidir. Yalnızca, mikro istemci uygulamaları veya API ağ geçidi ile etkileşim kurmak için HTTP isteklerinin ve yanıtlarının kullanırsanız, sorun yoktur. Ancak mikro arasında zaman uyumlu HTTP çağrıları uzun zincirleri oluşturursanız, mikro tek yapılı bir uygulamadaki nesneler değilmiş gibi kendi sınırlarında iletişim uygulamanızı sonunda sorunlarla çalışır.
+HTTP REST tabanlı mikro hizmetler, kendi kolaylık olması nedeniyle uygulamak yaygın bir yaklaşımdır. HTTP tabanlı yaklaşım edilebilir, sorun burada kullandığınız nasıl ilişkilidir. Yalnızca istemci uygulamaları veya API ağ geçitleri, mikro hizmetler ile etkileşim kurmak için HTTP isteklerini ve yanıtlarını kullanırsanız, uygundur. Ancak mikro hizmetler arasında zaman uyumlu HTTP çağrıları için uzun zincirleri oluşturursanız, mikro hizmetler tek parça bir uygulamayı nesneleri değilmiş gibi kendi sınırları arasında iletişim kurma, uygulamanızın sonunda sorunlarla karşılaşırsanız çalışır.
 
-Örneğin, istemci uygulamanız sıralama mikro hizmet gibi tek bir mikro hizmet için bir HTTP API çağrısını yapar düşünün. Sıralama mikro hizmet sırayla ek çağırırsa içinde aynı istek/yanıt HTTP kullanarak mikro döngüsü, HTTP çağrıları zinciri oluşturma. Başlangıçta makul görünebilir. Ancak, bu yol geçerken dikkate alınması gereken önemli noktalar vardır:
+Örneğin, istemci uygulamanız sıralama mikro hizmet gibi tek bir mikro hizmet için bir HTTP API çağrısı yapar düşünün. Sıralama mikro hizmet sırayla ek çağırırsa döngüsü içinde aynı istek/yanıt HTTP kullanarak mikro hizmetler, HTTP çağrıları zinciri oluşturuyorsunuz. Başlangıçta makul görünebilir. Ancak, bu yolunda giderken dikkat edilmesi gereken önemli noktalar vardır:
 
--   Engelleme ve düşük performans. HTTP zaman uyumlu yapısı nedeniyle, iç HTTP çağrıları tamamlanana kadar özgün istek yanıt almazsınız. Bu çağrılarının sayısını önemli ölçüde artırır ve Ara HTTP birini çağırır mikro hizmet için aynı anda engellenmiş düşünün. Performansı etkilenir ve genel ölçeklenebilirlik katlanarak ek HTTP isteklerini artış etkileneceğini sonucudur.
+-   Engelleme ve düşük performans. HTTP zaman uyumlu yapısı nedeniyle, iç HTTP çağrıları bitene kadar özgün istek yanıt almazsınız. Bu çağrı sayısı önemli ölçüde artırır ve aynı zamanda bir mikro hizmet için bir ara HTTP çağrıları engellenir hayal edin. Performansı etkilenir ve genel ölçeklenebilirlik katlanarak ek HTTP istekleri artış etkilenecek sonucudur.
 
--   Bağ mikro HTTP ile. İş mikro ile diğer iş mikro eşleştirilmek değil. İdeal olarak, bunlar "diğer mikro varlığı hakkında bilmeniz gereken değil". Uygulamanızı örnekte olduğu gibi mikro Kuplaj dayalıysa, mikro hizmet başına otonomisi elde neredeyse imkansız olur.
+-   HTTP ile eşleştirmeye mikro hizmetler. İş mikro hizmetler ile diğer iş mikro hizmetler bağlanmış olmalıdır değil. İdeal olarak, bunlar "varlığını diğer mikro hizmetler hakkında bilmeniz gerekenler değil". Uygulamanız mikro hizmetler örnekte olduğu gibi eşlenmesiyle dayanıyorsa, mikro hizmet başına otonomi elde neredeyse imkansız olur.
 
--   Herhangi bir mikro hizmet hatası. HTTP çağrıları tarafından mikro hiçbirini başarısız (ve sonunda yapamaz seçtiğinizde) ve tüm zincir mikro, bağlantılı mikro zinciri uygulanırsa, başarısız olur. Mikro hizmet tabanlı bir sistemin yanı sıra olası kısmi hataları sırasında çalışmaya devam etmek için tasarlanmalıdır. Yeniden deneme üstel geri alma veya devre kesici mekanizmaları kullanan istemci mantığı uygulamanız olsa bile, daha fazla karmaşık HTTP çağrısı zincirleri olan HTTP tabanlı bir hata stratejisi uyguladıktan olan daha karmaşık.
+-   Herhangi bir mikro hizmet hatası. Herhangi bir mikro hizmet başarısız olursa (ve sonunda başarısız olur olduğunda) ve tüm zincir mikro HTTP çağrıları ile bağlantılı bir mikro hizmet zinciri uygulanması durumunda başarısız olur. Mikro hizmet tabanlı bir sistem yanı sıra mümkün kısmi hataları sırasında çalışmaya devam etmek için tasarlanmış olmalıdır. Yeniden deneme üstel geri alma ya da devre kesicinin mekanizmaları kullanan istemci mantığı uygulamasına olsa bile, daha fazla karmaşık HTTP çağrısı zincirleri olan HTTP tabanlı bir hata stratejisi uygulamak olan daha karmaşık.
 
-İç mikro açıklandığı gibi HTTP isteklerinin zincirleri oluşturarak kurarken, aslında bu bir intraprocess iletişim mekanizmasını yerine işlemleri arasındaki HTTP tabanlı ancak tek yapılı bir uygulamaya sahip tartışılabilir.
+İç, mikro hizmetler, HTTP isteklerini zincirleri açıklandığı oluşturarak kurarken aslında bu intraprocess iletişim mekanizmaları yerine işlemleri arasındaki HTTP tabanlı ancak tek parça bir uygulamayı sahip tartışılabilir.
 
-Bu nedenle, mikro hizmet otonomisi zorlamak ve daha iyi esneklik olması için istek/yanıt iletişimin zincirleri kullanımını mikro arasında en aza indirmeniz gerekir. Zaman uyumsuz ileti ve olay tabanlı iletişim veya HTTP yoklama özgün HTTP istek/yanıt döngüsü bağımsız olarak kullanan ağlar arası mikro hizmet iletişimi için yalnızca zaman uyumsuz etkileşim kullandığınızdan emin önerilir.
+Bu nedenle, mikro hizmet otonomi zorlamak ve daha iyi bir dayanıklılık olması için istek/yanıt iletişim zincirleri kullanımını mikro hizmetler arasında en aza indirmeniz gerekir. Yalnızca zaman uyumsuz etkileşim inter-mikro hizmet iletişimi için zaman uyumsuz ileti ve olay-tabanlı iletişim veya özgün HTTP istek/yanıt döngüsü bağımsız olarak HTTP yoklama kullanarak kullanmanız önerilir.
 
-Zaman uyumsuz iletişim kullanımını bölümlerde bu kılavuzda daha sonra ek ayrıntılarıyla açıklandığı [zaman uyumsuz mikro hizmet tümleştirme zorlar mikro'nın otonomisi](#asynchronous-microservice-integration-enforce-microservices-autonomy) ve [zaman uyumsuz ileti tabanlı iletişim](#asynchronous-message-based-communication).
+Zaman uyumsuz iletişim kullanımı ile ek ayrıntılar sonraki bölümlerde bu kılavuzda açıklanan [zaman uyumsuz bir mikro hizmet tümleştirmesi zorlar mikro hizmet'ın bağımsız çalışma sınırı](#asynchronous-microservice-integration-enforce-microservices-autonomy) ve [zaman uyumsuz ileti tabanlı iletişim](#asynchronous-message-based-communication).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 -   **CAP Teoremi**
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Nihai tutarlılık**
+-   **Son tutarlılık**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Veri tutarlılığı Primer**
+-   **Veri tutarlılığı temel bilgileri**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Martin Fowler. CQRS (komut ve sorgu sorumluluk ayrımı)**
+-   **Martin Fowler. CQRS (komut ve sorgu sorumluluğu ayrımı)**
     [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
 -   **Gerçekleştirilmiş Görünüm**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
--   **Charles satır. ACID vs. TABAN: Veritabanı işlem işleme Shifting pH**
+-   **Charles satır. ACID vs. TABANI: Veritabanı işlem işleme Shifting pH**
     [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
--   **İşlem karşılayan**
+-   **Telafi işlemi**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
--   **UDI Dahan. Birleşim hizmet odaklı**
+-   **UDI Dahan. Hizmet yönelimli oluşturma**
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 
 >[!div class="step-by-step"]
 [Önceki](logical-versus-physical-architecture.md)
-[sonraki](identify-microservice-domain-model-boundaries.md)
+[İleri](identify-microservice-domain-model-boundaries.md)

@@ -1,40 +1,40 @@
 ---
-title: LINQ-XML olaylar (C#)
+title: LINQ to XML olayları (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 3dd4eaa0261ae7d878e188572d260b34b64fc031
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322399"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999947"
 ---
-# <a name="linq-to-xml-events-c"></a>LINQ-XML olaylar (C#)
+# <a name="linq-to-xml-events-c"></a>LINQ to XML olayları (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları bir XML ağacı değiştirildiğinde bildirim almak etkinleştirin.  
   
- Herhangi bir örneğine olayları ekleyebilirsiniz <xref:System.Xml.Linq.XObject>. Olay işleyicisi sonra değişiklikler için olayları alacak <xref:System.Xml.Linq.XObject> ve tüm alt öğeleri. Örneğin, olay işleyici ağaç kök dizinine ekleyin ve bu olay işleyicisinden ağaç yapılan tüm değişiklikler işlemek.  
+ Herhangi bir örneği için olayları ekleyebilirsiniz <xref:System.Xml.Linq.XObject>. Olay işleyicisi, ardından, değişiklikler için olayları alacaksınız <xref:System.Xml.Linq.XObject> ve tüm alt öğeleri. Örneğin, ağacının kökü için bir olay işleyicisi ekleme ve ağaç yapılan tüm değişiklikler bu olay işleyicisinden tanıtıcı.  
   
  Örnekler için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları görmek <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Türleri ve olaylar  
- Olaylar ile çalışırken aşağıdaki türlerini kullanın:  
+ Olaylar ile çalışırken aşağıdaki türlerini kullanır:  
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|İçin bir olay oluşturulduğunda olay türünü belirten bir <xref:System.Xml.Linq.XObject>.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Veriler için sağlar <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olaylar.|  
+|<xref:System.Xml.Linq.XObjectChange>|Olay türü için bir olay oluştuğunda belirtir bir <xref:System.Xml.Linq.XObject>.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|İçin veri sağlayan <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları.|  
   
- Bir XML ağacı değişiklik yaptığınızda aşağıdaki olaylar oluşturulur:  
+ Bir XML ağacı değiştirdiğinizde, aşağıdaki olaylar oluşturulur:  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Yalnızca bu önce oluşur <xref:System.Xml.Linq.XObject> veya alt öğelerinden birini değiştirmek için olduğuna.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Oluşur, bir <xref:System.Xml.Linq.XObject> değişti veya alt öğelerinden birini değiştirilmiştir.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Hemen önce gerçekleşir <xref:System.Xml.Linq.XObject> veya alt öğelerinden birini gittiğini değiştirin.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Gerçekleşir, bir <xref:System.Xml.Linq.XObject> değiştirildi veya alt öğelerinden birini değiştirilmiştir.|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Olayların bir XML ağacında toplama bazı bilgileri korumak istediğinizde kullanışlıdır. Örneğin, fatura satır öğelerin toplamı bir fatura toplam korumak isteyebilirsiniz. Bu örnek, karmaşık bir öğe altındaki tüm alt öğeleri toplamı korumak için olayları kullanır `Items`.  
+ Olayları toplama bazı bilgiler XML ağacındaki bulundurmak istediğinizde yararlıdır. Örneğin, toplam fatura satır öğelerini bir fatura toplamı korumak isteyebilirsiniz. Bu örnekte, toplam karmaşık öğesinin altındaki tüm alt öğeleri tutmak için olayları kullanır. `Items`.  
   
 ### <a name="code"></a>Kod  
   
@@ -98,4 +98,4 @@ Total:308
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Gelişmiş LINQ-XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Gelişmiş LINQ to XML programlama (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

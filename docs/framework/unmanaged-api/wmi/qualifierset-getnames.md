@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999384"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames işlevi
-Tüm niteleyicileri veya geçerli nesne ya da özellik kullanılabilir belirli niteleyicileri adlarını alır. 
+Tüm niteleyicileri veya geçerli nesne ya da özellik mevcut olan bazı niteleyicileri adlarını alır. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -42,39 +42,39 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`   
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
 `lFlags`   
-[in] Aşağıdaki bayraklar veya numaralandırmada dahil etmek için hangi adlarını belirtir değerleri biri.
+[in] Aşağıdaki bayrakları veya numaralandırmada dahil etmek için hangi adlarını belirten değerlerinden biri.
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |  | 0 | Tüm niteleyicileri adlarını döndürür. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adlarını belirli geçerli özellik veya nesne döndürür. <br/> Bir özellik için: yalnızca niteleyicileri (geçersiz kılmaları dahil) özelliğine belirli dönün ve bu niteleyicileri sınıf tanımı yayılır. <br/> Bir örneği için: yalnızca örneğe özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: yalnızca niteleyicileri türetilmiş sınıf beiong belirli döndürür.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesne yalnızca niteleyicileri adlarını yayılan dönüş. <br/> Bir özellik için: sınıf tanımı ve özelliğinden olanlar geri dönmek için bu özelliği olarak yalnızca niteleyicileri yayılır. <br/> Bir örneği için: sınıf tanımını dönüş yalnızca bu niteleyicileri yayılır. <br/> Bir sınıf için: Return niteleyicisi adları yalnızca üst sınıflardan devralınır. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Yalnızca niteleyicileri adları belirli için geçerli bir özellik veya nesne döndürür. <br/> Bir özellik için: yalnızca niteleyicileri (geçersiz kılmaları dahil) özelliğine belirli dönün ve bu niteleyicileri, sınıf tanımından yayılır. <br/> Bir örneği için: yalnızca örnek özgü niteleyicisi adlarını döndürür. <br/> Bir sınıf için: türetilmiş sınıf beiong yalnızca niteleyicileri belirli döndürür.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0x20 | Başka bir nesnenin dönüş yalnızca niteleyicileri adlarını yayılır. <br/> Bir özellik için: Bu özellik sınıf tanımı ve özelliğinden olanlar yalnızca niteleyicileri yayılan dönün. <br/> Bir örneği için: sınıf tanımının dönüş niteleyicileri yalnızca yayılır. <br/> Bir sınıf için: Bu niteleyici adları yalnızca üst sınıflardan devralınır Return. |
 
-`pstrNames` [out] Yeni bir `SAFEARRAY` istenen adlarını içerir. Dizi 0 öğeler bulunabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
+`pstrNames` [out] Yeni bir `SAFEARRAY` , istenen adlarını içerir. Dizi öğeleri 0 olabilir. Bir hata oluşursa, yeni bir `SAFEARRAY` döndürülmez.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırma başlatmak yeterli bellek yok. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) yöntemi.
 
-Niteleyici adları elde sonra her niteleyicisi ada göre arayarak erişebilirsiniz [QualifierSet_Get](qualifierset-get.md) işlevi. 
+Siz niteleyicisi adları aldıktan sonra her niteleyicisi adına göre çağırarak erişebilirsiniz [QualifierSet_Get](qualifierset-get.md) işlevi. 
 
-Sıfır niteleyicileri olması belirli bir nesne için bir hata değildir dizelerde sayısı `pstrNames` işlevi döndürür olsa bile getirisi 0, olabilir `WBEM_S_NO_ERROR`.
+Sıfır niteleyicileri olması belirli bir nesne için bir hata değil dizelerde sayısını `pstrNames` işlevi döndürür olsa bile getirisini 0 olabilir `WBEM_S_NO_ERROR`.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

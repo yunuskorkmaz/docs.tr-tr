@@ -1,6 +1,6 @@
 ---
 title: GetMethodOrigin işlevi (yönetilmeyen API Başvurusu)
-description: GetMethodOrigin işlevi bir yöntem olarak bildirilen sınıfı belirler.
+description: GetMethodOrigin işlevi bir yöntem içinde bildirildiği sınıf belirler.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458157"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999399"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin işlevi
-Bir yöntem olarak bildirilen sınıfı belirler.
+Bir yöntem içinde bildirildiği sınıf belirler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,34 +42,34 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `wszMethodName`  
-[in] Sahibi olan sınıf istenen nesne için yöntemin adı. 
+[in] Sahip olan, sınıfı istenen nesne için yöntemin adı. 
 
 `pstrClassName`  
-[out] Yöntem sahip olduğu sınıfın adını alır.
+[out] Yöntemi sahip olduğu sınıfın adını alır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem bulunamadı. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::GetMethodOrigin](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemi.
 
-Bir sınıf bir veya daha fazla temel sınıflardan yöntemleri devrettiği için geliştiriciler genellikle belirli bir yöntemin tanımlandığı sınıfı belirlemek istiyorsanız.
+Bir sınıfı yöntemleri bir veya daha fazla temel sınıftan devralınabilir. çünkü, geliştiriciler genellikle belirli bir yöntemin tanımlandığı sınıf belirlemek istersiniz.
 
-`pstrClassName` Parametre gerekir göstermiyor geçerli bir `BSTR` bu olduğundan işlevi çağrılmadan önce bir `out` parametresi; bu işaretçisi değil serbest işlevi döndükten sonra.
+`pstrClassName` Parametre gerekir işaret geçerli bir `BSTR` çünkü bu işlevi çağrılmadan önce bir `out` parametre; bu işaretçisi işlev döndürdükten sonra serbest.
 
 ## <a name="requirements"></a>Gereksinimler  
 **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

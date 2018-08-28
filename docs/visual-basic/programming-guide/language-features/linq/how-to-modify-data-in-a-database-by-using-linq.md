@@ -12,59 +12,59 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 617bb62f9009c507658b5d1262657cb4dfa860e9
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: afc8474cd12042b0c60c9afb4d1af79d8b260f63
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827117"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000969"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Veritabanındaki Verileri Değiştirme (Visual Basic)
-Dil ile tümleşik sorgu (LINQ) sorgularını Veritabanı bilgilerine erişmek ve veritabanını değerleri değiştirmek kolaylaştırır.  
+Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve veritabanını değerleri değiştirmek kolaylaştırır.  
   
- Aşağıdaki örnek, bir SQL Server veritabanında alır yeni bir uygulama oluşturma ve güncelleştirme bilgilerini gösterir.  
+ Aşağıdaki örnek, bir SQL Server veritabanında alır, yeni bir uygulama oluşturma ve güncelleştirme bilgilerini gösterir.  
   
- Bu konudaki örnekler Northwind örnek veritabanı kullanır. Bu veritabanı geliştirme bilgisayarınızda yoksa, Microsoft Download Center'dan gelen yükleyebilirsiniz. Yönergeler için bkz: [örnek veritabanları yükleme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Bu konudaki örnekler, Northwind örnek veritabanını kullanır. Geliştirme bilgisayarınızda bu veritabanı yoksa Microsoft Download Center'dan gelen indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bir bağlantı oluşturmak için  
   
-1.  Visual Studio'da açın **Sunucu Gezgini**/**Database Explorer** tıklayarak **Görünüm** menüsüne ve ardından **Sunucu Gezgini** / **Veritabanı Gezgini**.  
+1.  Visual Studio'da açın **Sunucu Gezgini**/**veritabanı Gezgini** tıklayarak **görünümü** menüsüne ve ardından **SunucuGezgini** / **Veritabanı Gezgini**.  
   
-2.  Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**Database Explorer**, tıklatıp **Bağlantı Ekle**.  
+2.  Sağ **veri bağlantıları** içinde **Sunucu Gezgini**/**veritabanı Gezgini**, tıklatıp **Bağlantı Ekle**.  
   
-3.  Northwind örnek veritabanı için geçerli bir bağlantı belirtin.  
+3.  Northwind örnek veritabanıyla kurulan geçerli bir bağlantı belirtin.  
   
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>SQL dosyasına bir LINQ sahip bir proje eklemek için  
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Bir proje ile LINQ to SQL dosyası eklemek için  
   
-1.  Visual Studio'da üzerinde **dosya** menüsündeki **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü olarak.  
+1.  Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**. Visual Basic seçin **Windows Forms uygulaması** proje türü.  
   
-2.  Üzerinde **proje** menüsünde tıklatın **Yeni Öğe Ekle**. Seçin **LINQ'ten SQL'e sınıflarını** öğe şablonu.  
+2.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **LINQ to SQL sınıfları** öğe şablonu.  
   
-3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) için açıldığında `northwind.dbml` dosya.  
+3.  Dosya adı `northwind.dbml`. **Ekle**'yi tıklatın. Object Relational Designer (O/R Tasarımcısı) için açıldığında `northwind.dbml` dosya.  
   
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Sorgulamak ve Designer'a değiştirmek için tabloları eklemek için  
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Sorgu ve tasarımcıya değiştirmek için tablolar eklemek için  
   
-1.  İçinde **Sunucu Gezgini**/**Database Explorer**, Northwind veritabanına bağlantı genişletin. Genişletme **tabloları** klasör.  
+1.  İçinde **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına bağlantı genişletin. Genişletin **tabloları** klasör.  
   
-     O/R Tasarımcısı kapattıysanız, belgeyi çift tıklatarak yeniden açabilirsiniz `northwind.dbml` daha önce eklediğiniz dosya.  
+     O/R Tasarımcısı kapattıysanız, onu çift tıklayarak açabilirsiniz `northwind.dbml` daha önce eklediğiniz dosya.  
   
-2.  Müşteriler tablosunu tıklayın ve tasarımcı sol bölmesine sürükleyin.  
+2.  Müşteriler tablosu tıklayın ve tasarımcının sol bölmeye sürükleyin.  
   
-     Tasarımcı projeniz için yeni bir müşteri nesnesi oluşturur.  
+     Tasarımcı, projeniz için yeni bir müşteri nesnesi oluşturur.  
   
 3.  Değişikliklerinizi kaydetmek ve Tasarımcısı'nı kapatın.  
   
-4.  Projeyi kaydedin.  
+4.  Projenizi kaydedin.  
   
 ### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Veritabanını değiştirme ve sonuçları görüntülemek üzere kod eklemek için  
   
-1.  Gelen **araç**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
+1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.DataGridView> Form1 projeniz için varsayılan Windows Form denetimi.  
   
-2.  O/R Tasarımcısı tabloları eklendiğinde Tasarımcı eklenen bir <xref:System.Data.Linq.DataContext> projenize nesnesi. Bu nesne Müşteriler tablosunu erişmek için kullanabileceğiniz kodu içerir. Ayrıca, yerel bir müşteri nesnesi ve tablo müşteriler koleksiyonu tanımlayan kodu içerir. <xref:System.Data.Linq.DataContext> Nesne projenizi adlı için .dbml dosyanızı adına dayalı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlandırılan `northwindDataContext`.  
+2.  Tasarımcı tablolar için O/R Tasarımcısı eklendiğinde, eklenen bir <xref:System.Data.Linq.DataContext> projenize nesne. Bu nesne, Müşteriler tablosunu erişmek için kullanabileceğiniz kodu içerir. Ayrıca, yerel bir müşteri nesnesi ve bir tablo için müşteri koleksiyonunun tanımlayan kodu içerir. <xref:System.Data.Linq.DataContext> Nesne projeniz için .dbml dosyanızın adına bağlı. Bu proje için <xref:System.Data.Linq.DataContext> nesne adlı `northwindDataContext`.  
   
-     Bir örneğini oluşturabilirsiniz <xref:System.Data.Linq.DataContext> nesne, kod ve sorgu ve O/R tasarımcısı tarafından belirtilen müşteriler koleksiyonunu Değiştir. Müşteriler koleksiyona yaptığınız değişiklikler değil yansıtılır veritabanında bunları çağırarak gönderme kadar <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yöntemi <xref:System.Data.Linq.DataContext> nesnesi.  
+     Bir örneği oluşturabilir <xref:System.Data.Linq.DataContext> kodunuz ve sorgu nesnesi ve O/R tasarımcısı tarafından belirtilen müşteri koleksiyonunun değiştirin. Müşteriler koleksiyona yaptığınız değişiklikler değil yansıtılır veritabanında bunları çağırarak göndermek kadar <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yöntemi <xref:System.Data.Linq.DataContext> nesne.  
   
-     Windows için kod eklemek için Form1, formu <xref:System.Windows.Forms.Form.Load> müşterilerin Tablo Sorgu olaya özelliği olarak gösterilir, <xref:System.Data.Linq.DataContext>. Aşağıdaki kodu ekleyin:  
+     Windows için kod eklemek için Form1, formu <xref:System.Windows.Forms.Form.Load> sorgu Müşteriler tablosu için olay özelliği olarak sunulan, <xref:System.Data.Linq.DataContext>. Aşağıdaki kodu ekleyin:  
   
     ```vb  
     Private db As northwindDataContext  
@@ -86,9 +86,9 @@ Dil ile tümleşik sorgu (LINQ) sorgularını Veritabanı bilgilerine erişmek v
     End Sub  
     ```  
   
-3.  Gelen **araç**, üç sürükleyin <xref:System.Windows.Forms.Button> forma kontrol eder. İlk seçin `Button` denetim. İçinde **özellikleri** penceresindeki ayarlayın `Name` , `Button` denetimini `AddButton` ve `Text` için `Add`. İkinci düğmesini seçin ve ayarlayın `Name` özelliğine `UpdateButton` ve `Text` özelliğine `Update`. Üçüncü düğmesini seçin ve ayarlayın `Name` özelliğine `DeleteButton` ve `Text` özelliğine `Delete`.  
+3.  Gelen **araç kutusu**, üç sürükleyin <xref:System.Windows.Forms.Button> form üzerine denetimler. İlk seçin `Button` denetimi. İçinde **özellikleri** penceresinde `Name` , `Button` denetimini `AddButton` ve `Text` için `Add`. İkinci bir düğme seçip ayarlayın `Name` özelliğini `UpdateButton` ve `Text` özelliğini `Update`. Üçüncü düğmeyi seçin ve ayarlayın `Name` özelliğini `DeleteButton` ve `Text` özelliğini `Delete`.  
   
-4.  Çift **Ekle** kodu eklemek için düğmeyi kendi `Click` olay. Aşağıdaki kodu ekleyin:  
+4.  Çift **Ekle** kodu eklemek için Ekle düğmesine kendi `Click` olay. Aşağıdaki kodu ekleyin:  
   
     ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
@@ -113,7 +113,7 @@ Dil ile tümleşik sorgu (LINQ) sorgularını Veritabanı bilgilerine erişmek v
     End Sub  
     ```  
   
-5.  Çift **güncelleştirme** kodu eklemek için düğmeyi kendi `Click` olay. Aşağıdaki kodu ekleyin:  
+5.  Çift **güncelleştirme** kodu eklemek için Ekle düğmesine kendi `Click` olay. Aşağıdaki kodu ekleyin:  
   
     ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
@@ -134,7 +134,7 @@ Dil ile tümleşik sorgu (LINQ) sorgularını Veritabanı bilgilerine erişmek v
     End Sub  
     ```  
   
-6.  Çift **silmek** kodu eklemek için düğmeyi kendi `Click` olay. Aşağıdaki kodu ekleyin:  
+6.  Çift **Sil** kodu eklemek için Ekle düğmesine kendi `Click` olay. Aşağıdaki kodu ekleyin:  
   
     ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
@@ -155,11 +155,11 @@ Dil ile tümleşik sorgu (LINQ) sorgularını Veritabanı bilgilerine erişmek v
     End Sub  
     ```  
   
-7.  Projenizi çalıştırmak için F5 tuşuna basın. Tıklatın **Ekle** yeni bir kayıt eklemek için. Tıklatın **güncelleştirme** yeni kayıttaki değiştirmek için. Tıklatın **silmek** yeni kaydı silinemiyor.  
+7.  Projenizi çalıştırmak için F5 tuşuna basın. Tıklayın **Ekle** yeni bir kayıt eklemek için. Tıklayın **güncelleştirme** yeni bir kaydı değiştirmek için. Tıklayın **Sil** yeni kaydı silinemedi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Sorgular](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext yöntemleri (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Nasıl yapılır: güncelleştirme, ekleme ve silme (O/R Tasarımcısı) gerçekleştirmek için saklı yordamlar atayın](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

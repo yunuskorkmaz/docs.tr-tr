@@ -5,22 +5,22 @@ helpviewer_keywords:
 - elementary data types [Visual Basic]
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
-ms.openlocfilehash: 57caaf33d3e67bc6a2a0caed9733bc42ffdb54be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db989bbfcb8aa00278eb20bd269872c9447616f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646390"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998634"
 ---
 # <a name="elementary-data-types-visual-basic"></a>Başlangıç Veri Türleri (Visual Basic)
-Visual Basic birçok programlama öğeleriniz için kullanabileceğiniz önceden tanımlanmış veri türleri kümesi sağlar. Bu bölümde, bu türlerini ve bunların nasıl kullanılacağını açıklar.  
+Visual Basic, birçok programlama öğeleriniz için kullanabileceğiniz önceden tanımlı veri türleri kümesi sağlar. Bu bölümde, bu türleri ve bunların nasıl kullanılacağı açıklanmaktadır.  
   
 > [!NOTE]
->  Visual Basic'te her başlangıç veri türü bir yapı veya içinde bir sınıf tarafından desteklenen <xref:System> ad alanı. Derleyici her veri türü anahtar sözcüğü yapılarını ya da sınıf için bir diğer ad olarak kullanır. Örneğin, özel amaçlı sözcük kullanarak bir değişken bildirme `Byte` tam yapısı adını kullanarak bildirme aynı <xref:System.Byte?displayProperty=nameWithType>.  
+>  Bir yapının ya da olan bir sınıf tarafından desteklenen her başlangıç veri türü Visual Basic'te <xref:System> ad alanı. Derleyici her veri türü anahtar sözcüğü temelindeki ya da sınıf için bir diğer ad olarak kullanır. Örneğin, ayrılmış bir sözcük kullanarak değişken bildirme `Byte` tam yapısı adını kullanarak bildirme aynı <xref:System.Byte?displayProperty=nameWithType>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- Tam sayı ve integral olmayan sayısal türler açıklanmaktadır.  
+ Tamsayı ve tamsayı olmayan sayısal türleri açıklanmaktadır.  
   
  [Karakter Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
  Açıklar `Char` ve `String` türleri.  
@@ -30,7 +30,7 @@ Visual Basic birçok programlama öğeleriniz için kullanabileceğiniz önceden
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Visual Basic veri türleri tanıtır ve bunların nasıl kullanılacağını açıklar.  
+ Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Visual Basic tarafından sağlanan başlangıç veri türleri hakkında genel bakış sağlar.
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
+ Visual Basic tarafından sağlanan başlangıç veri türleri genel bir bakış sağlar.

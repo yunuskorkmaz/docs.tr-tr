@@ -1,25 +1,25 @@
 ---
-title: Ad alanları genel bakış (LINQ-XML)
+title: Ad alanlarına genel bakış (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
 ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323855"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999231"
 ---
-# <a name="namespaces-overview-linq-to-xml"></a>Ad alanları genel bakış (LINQ-XML)
-Ad alanları, bu konu tanıtır <xref:System.Xml.Linq.XName> sınıfı ve <xref:System.Xml.Linq.XNamespace> sınıfı.  
+# <a name="namespaces-overview-linq-to-xml"></a>Ad alanlarına genel bakış (LINQ to XML)
+Bu konu, ad alanları, tanıtır <xref:System.Xml.Linq.XName> sınıfı ve <xref:System.Xml.Linq.XNamespace> sınıfı.  
   
 ## <a name="xml-names"></a>XML adları  
- XML genellikle bir kaynak XML programlamada karmaşıklık adlardır. Bir XML adı (bir XML ad alanı URI'si olarak da bilinir) bir XML ad alanı ve yerel ad oluşur. Bir XML ad alanı için bir ad alanındaki benzer bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-tabanlı programı. Öğeleri ve özniteliklerinin adları benzersiz olarak nitelemek sağlar. Bu, bir XML belgesi çeşitli kısımlarını arasındaki ad çakışmalarının önlemeye yardımcı olur. Bir XML ad alanı bildirirken yalnızca ad alanında benzersiz olması için bir yerel adı seçebilirsiniz.  
+ XML adları genellikle karmaşıklık XML programlamada bir kaynaktır. Bir XML adı (XML ad alanı URI olarak da bilinir) bir XML ad alanı ve bir yerel ad oluşur. Bir XML ad alanı için bir ad alanında benzer bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-tabanlı bir program. Öğeleri ve özniteliklerinin adları benzersiz olarak sınıflandırmak sağlar. Bu durum, bir XML belgesi çeşitli parçaları arasındaki ad çakışmalarının önlemeye yardımcı olur. Bir XML ad alanı bildirildiğinde yalnızca bu ad alanı içinde benzersiz olması gereken yerel bir ad seçebilirsiniz.  
   
- Başka bir XML adları XML yönüdür *ad alanı öneklerini*. XML öneklerini XML adları karmaşıklığını çoğunu neden. Bu önekler XML belge daha kısa ve anlaşılabilir hale getirir bir XML ad alanı için bir kısayol oluşturmak etkinleştirin. Ancak, XML öneklerini karmaşıklık ekler anlamı sağlamak için bunların içeriğine bağlıdır. Örneğin, XML öneki `aw` XML ağacının bir parçası olarak bir XML ad alanı ve farklı bir XML ad alanı XML ağacının farklı bir parçası olarak ilişkili olabilir.  
+ XML ad bir diğer unsuru XML'dir *ad alanı öneklerini*. XML önekler XML adları karmaşıklığını çoğunu neden. Bu önekler, XML belgesi daha kısa ve anlaşılır olmasını sağlayan bir XML ad alanı için bir kısayol oluşturmak etkinleştirin. Ancak, XML öneklerini karmaşıklığı ekleyen bir anlamı yoktur için kendi bağlam bağlıdır. Örneğin, XML öneki `aw` XML ağacının bir parçası olarak bir XML ad alanı ile XML ağacı farklı bir parçası olarak farklı bir XML ad alanı ile ilişkili olabilir.  
   
- Kullanmanın yararları birini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olan C# ile XML öneklerini kullanmanız gerekmez. Zaman [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yükler veya ayrıştırıyor bir XML belgesi, her XML öneki, karşılık gelen XML ad alanına çözülmüş. Ad alanları, kullanan bir belge ile çalışırken bundan sonra neredeyse her zaman ad alanları ad alanı öneki üzerinden değil ve ad alanı URI'si aracılığıyla erişebilir. Geliştiriciler çalışırken XML adlarında ile [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] her zaman bir tam XML adla (diğer bir deyişle, bir XML ad alanı ve bir yerel adı) çalışırlar. Ancak, gerektiğinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çalışmak ve ad alanı öneklerini denetlemenize olanak tanır.  
+ Kullanmanın sağladığı [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olan C# ile XML öneklerini kullanmanız gerekmez. Zaman [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yükler veya ayrıştırıyor bir XML belgesi, her XML öneki, karşılık gelen XML ad alanı çözümlenen. Ad alanları, kullanan bir belge ile çalışırken bundan sonra neredeyse her zaman ad alanları ad alanı URI aracılığıyla ve ad alanı öneki üzerinden değil erişin. Geliştiriciler XML adlarında ile çalışırken [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bunlar her zaman bir tam XML adıyla (diğer bir deyişle, bir XML ad alanı ve bir yerel ad) çalışır. Ancak, gerekli olduğunda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çalışmak ve ad alanı öneklerini denetlemenizi sağlar.  
   
- İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML adlarını temsil eden sınıf <xref:System.Xml.Linq.XName>. XML adları görünür sık boyunca [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API, bir XML adı gerekli olduğu yerlerde bulacaktır bir <xref:System.Xml.Linq.XName> parametresi. Ancak, nadiren doğrudan birlikte çalıştığınız bir <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> dize örtük bir dönüştürme içerir.  
+ İçinde [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML adları temsil eden sınıf <xref:System.Xml.Linq.XName>. XML adları görünür sık boyunca [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API, bir XML adı gerekli olduğunda göreceksiniz bir <xref:System.Xml.Linq.XName> parametresi. Ancak, nadiren doğrudan birlikte çalıştığınız bir <xref:System.Xml.Linq.XName>. <xref:System.Xml.Linq.XName> dize örtük bir dönüştürme içerir.  
   
  Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XNamespace> ve <xref:System.Xml.Linq.XName>.  
   

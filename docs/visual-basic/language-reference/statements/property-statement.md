@@ -1,5 +1,5 @@
 ---
-title: Property Deyimi
+title: Property deyimi (Visual Basic)
 ms.date: 05/12/2018
 f1_keywords:
 - vb.PropertySet
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 3f3ced3f0c441518594820f75243c71fb0c3babd
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 21ca15d6a6939d884c7e6abedc1f7919be079edd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235996"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999531"
 ---
 # <a name="property-statement"></a>Property Deyimi
-Bir özellik ve depolamak ve özellik değerini almak için kullanılan özellik yordamları adını bildirir.  
+Adı bir özelliği ve depolamak ve özelliğin değerini almak için kullanılan özellik yordamlarını bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,15 +44,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     İsteğe bağlı. Bu özellik için geçerli öznitelikler listesi veya `Get` veya `Set` yordamı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     İsteğe bağlı. Bu özellik için geçerli olan özniteliklerin listesi veya `Get` veya `Set` yordamı. Bkz: [öznitelik listesi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     İsteğe bağlı. Bu özellik varsayılan özelliği sınıf veya yapı tanımlı için olduğunu belirtir. Varsayılan Özellikler parametreleri kabul etmeniz gerekir ve ayarlanabilir ve özellik adı belirtmeden alınır. Özelliği olarak bildirirseniz `Default`, kullanamazsınız `Private` özelliği veya onun özellik yordamlardan birini.  
+     İsteğe bağlı. Bu özellik bir sınıf ya da yapı üzerinde tanımlandığı için varsayılan özelliği olduğunu belirtir. Varsayılan özellikleri parametreleri kabul etmeniz gerekir ve ayarlanabilir ve özellik adı belirtmeden alınır. Özellik olarak bildirirseniz `Default`, kullanamazsınız `Private` özelliği veya ya da kendi özellik yordamları.  
   
 -   `accessmodifier`  
   
-     İsteğe bağlı `Property` deyimi ve en fazla birinde `Get` ve `Set` deyimleri. Aşağıdakilerden biri olabilir:  
+     İsteğe bağlı `Property` deyimi ve en fazla bir `Get` ve `Set` deyimleri. Aşağıdakilerden biri olabilir:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -92,7 +92,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shadows`  
   
-     İsteğe bağlı. Bkz: [gölgeleri](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     İsteğe bağlı. Bkz: [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
@@ -112,19 +112,19 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `parameterlist`  
   
-     İsteğe bağlı. Bu özellik parametrelerinin ve olası ek parametreleri temsil eden yerel değişken adları listesi `Set` yordamı. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     İsteğe bağlı. Bu özelliğin parametreleri ve olası ek parametrelerini temsil eden yerel değişken adlarının listesini `Set` yordamı. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
-     Gerekli olursa `Option``Strict` olan `On`. Bu özellik tarafından döndürülen değerin veri türü.  
+     Gerekli if `Option Strict` olduğu `On`. Bu özellik tarafından döndürülen değerin veri türü.  
   
 -   `Implements`  
   
-     İsteğe bağlı. Bu özellik bir veya daha fazla özellikler, bu özelliğin içeren sınıf veya yapı tarafından uygulanan bir arabirim tanımlanan her biri uygulayan gösterir. Bkz: [uygulayan deyimi](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     İsteğe bağlı. Bu özellik bir veya daha fazla özellik, her biri bu özelliğin içeren sınıf veya yapı tarafından uygulanan bir arabirim içinde tanımlanmış uygulayan gösterir. Bkz: [uygulayan deyimi](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
-     Gerekli olursa `Implements` sağlanır. Uygulanan özelliklerin listesi.  
+     Gerekli if `Implements` sağlanır. Uygulanan özelliklerin listesi.  
   
      `implementedproperty [ , implementedproperty ... ]`  
   
@@ -134,16 +134,16 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Bölümü|Açıklama|  
     |---|---|  
-    |`interface`|Gerekli. Bu özellik tarafından uygulanan bir arabirim adını sınıf veya yapı içeren.|  
-    |`definedname`|Gerekli. Adı olarak özelliği tanımlanmış `interface`.|  
+    |`interface`|Gerekli. Bu özellik tarafından uygulanan arabirimin adını sınıf veya yapı içeren.|  
+    |`definedname`|Gerekli. Ad tarafından özelliği tanımlanan `interface`.|  
   
 -   `Get`  
   
-     İsteğe bağlı. Özellik işaretlenmişse gerekli `WriteOnly`. Başlayan bir `Get` özelliğinin değeri döndürmek için kullanılan özellik yordamı.  
+     İsteğe bağlı. Özellik işaretlenmişse gerekli `WriteOnly`. Başlatan bir `Get` özelliğinin değeri döndürmek için kullanılan bir özellik yordamı.  
   
 -   `statements`  
   
-     İsteğe bağlı. İçinde çalıştırmak için deyimleri bloğunu `Get` veya `Set` yordamı.  
+     İsteğe bağlı. İçinde çalıştırılacak deyimler bloğunu `Get` veya `Set` yordamı.  
   
 -   `End Get`  
   
@@ -151,7 +151,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     İsteğe bağlı. Özellik işaretlenmişse gerekli `ReadOnly`. Başlayan bir `Set` özelliğinin değeri depolamak için kullanılan özellik yordamı.  
+     İsteğe bağlı. Özellik işaretlenmişse gerekli `ReadOnly`. Başlatan bir `Set` özellik değerini depolamak için kullanılan bir özellik yordamı.  
   
 -   `End Set`  
   
@@ -159,36 +159,36 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `End Property`  
   
-     Bu özellik tanımını sonlandırır.  
+     Bu özelliğin tanımını sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Property` Deyimi bir özellik bildirimi tanıtır. Bir özelliğin sahip olabileceği bir `Get` (salt okunur), yordam bir `Set` yordamı (yalnızca yazma) veya her iki (okuma-yazma). Atlayabilirsiniz `Get` ve `Set` otomatik uygulanan özelliğini kullanırken yordamı. Daha fazla bilgi için bkz: [Auto-Implemented özellikleri](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
+ `Property` Deyimi, özelliğin bildirimini sunar. Bir özelliğin sahip olabileceği bir `Get` yordamı (salt okunur), bir `Set` yordamı (salt okunur) veya her iki (okuma ve yazma). Atlayabilirsiniz `Get` ve `Set` otomatik uygulanan bir özellik kullanıldığında yordamı. Daha fazla bilgi için [Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
- Kullanabileceğiniz `Property` yalnızca sınıf düzeyinde. Yani *bildirimi bağlam* bir özelliği bir sınıf, yapısı, modül veya arabirim olmalı ve kaynak dosyasını, ad alanı, yordam veya blok olamaz. Daha fazla bilgi için bkz: [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Kullanabileceğiniz `Property` yalnızca sınıf düzeyinde. Başka bir deyişle *bildirim içeriğinin* bir özellik bir sınıf, yapı, modül veya arabirimi olması gerekir ve bir kaynak dosyası, ad alanı, yordam veya blok olamayacağı için. Daha fazla bilgi için [bildirim bağlamları ve varsayılan erişim düzeyleri](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Varsayılan olarak, genel erişim özelliklerini kullanın. Bir özelliğin erişim düzeyi bir erişim değiştiricisi ile ayarlayabilirsiniz `Property` deyimi ve isteğe bağlı olarak ayarlayabilir, özellik yordamları daha kısıtlayıcı bir erişim düzeyi için.  
+ Varsayılan olarak, genel erişim özelliklerini kullanın. Bir özelliğin erişim düzeyiyle bir erişim değiştiricisidir düzenleyebilirsiniz `Property` deyimi ve isteğe bağlı olarak ayarlayabilir, özellik yordamları daha kısıtlayıcı bir erişim düzeyi.  
   
- Visual Basic geçirir parametresi `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanır `value`. Bu parametre özelliğine atanan değer tutar. Genellikle bu değer bir özel yerel değişkende depolayın ve döndürün her `Get` yordamı çağrılır.  
+ Visual Basic için bir parametre geçirir `Set` yordam sırasında özelliği atamaları. İçin bir parametre belirtmezseniz `Set`, tümleşik geliştirme ortamı (IDE) adlı bir örtük parametresini kullanan `value`. Bu parametre, özelliğe atanacak değer tutar. Genellikle bu değer özel bir yerel değişkene depolayın ve döndürün. her `Get` yordamı çağrılır.  
   
 ## <a name="rules"></a>Kurallar  
   
--   **Karışık erişim düzeyleri.** Bir okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için ya da belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisini birden değil. Bunu yaparsanız, yordam erişim düzeyi özelliğin erişim düzeyinden daha kısıtlayıcı olması gerekir. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordam `Private`, ama `Public`.  
+-   **Karışık erişim düzeyleri.** Okuma-yazma özelliği tanımlıyorsanız, isteğe bağlı olarak farklı erişim düzeyi için belirtebilirsiniz `Get` veya `Set` yordamı, ancak ikisine birden değil. Bunu yaparsanız, yordam erişim düzeyi özellik erişim düzeyinden daha kısıtlayıcı olmalıdır. Örneğin, özellik bildirilirse `Friend`, bildirebilirsiniz `Set` yordamı `Private`, ama `Public`.  
   
-     Tanımlıyorsanız, bir `ReadOnly` veya `WriteOnly` özelliği, tek bir özellik yordamı (`Get` veya `Set`sırasıyla) tüm özelliğinin temsil eder. Özelliği için iki erişim düzeyleri ayarlamanız gerekir çünkü bu tür bir yordam için farklı erişim düzeyi bildiremezsiniz.  
+     Tanımlıyorsanız, bir `ReadOnly` veya `WriteOnly` özelliği, tek bir özellik yordamı (`Get` veya `Set`sırasıyla) tüm özelliği temsil eder. İki erişim düzeyi özelliği ayarlamanız gerekir çünkü bu tür bir yordam için bir farklı erişim düzeyi bildiremezsiniz.  
   
--   **Dönüş türü.** `Property` Deyimi döndürdüğü değerin veri türü bildirebilirsiniz. Herhangi bir veri türü veya bir numaralandırma, yapısı, sınıf veya arabirim adını belirtebilirsiniz.  
+-   **Dönüş türü.** `Property` Deyimi döndürdüğü değerin veri türü bildirebilirsiniz. Herhangi bir veri türü veya bir sabit listesi, yapısı, sınıf veya arabirim adını belirtebilirsiniz.  
   
-     Belirtmezseniz, `returntype`, özellik döndürür `Object`.  
+     Siz belirtmezseniz `returntype`, özellik döndürür `Object`.  
   
--   **Uygulaması.** Bu özellik kullanıyorsa `Implements` anahtar sözcüğü, içeren sınıf veya yapı olmalıdır bir `Implements` hemen ardından deyimi kendi `Class` veya `Structure` deyimi. `Implements` Deyim, belirtilen her bir arabirime içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan ad `Property` (içinde `definedname`) bu özelliğin adı ile aynı olması gerekmez (içinde `name`).  
+-   **Uygulama.** Bu özellik kullanıyorsa `Implements` anahtar sözcüğü, kapsayan sınıf veya yapı olmalıdır bir `Implements` hemen deyimi, `Class` veya `Structure` deyimi. `Implements` Deyimi belirttiğiniz her arabirim içermelidir `implementslist`. Ancak, bir arabirim tarafından tanımlayan adı `Property` (içinde `definedname`) bu özelliğin adı ile aynı olması gerekmez (içinde `name`).  
   
 ## <a name="behavior"></a>Davranış  
   
--   **Bir özellik yordamından döndürülüyor.** Zaman `Get` veya `Set` yordamı çağıran kodu döndürür, yürütme çağrılması deyiminden deyim ile devam eder.  
+-   **Bir özellik yordamı döndürüyor.** Zaman `Get` veya `Set` yordamı çağıran koda döndürür, kendisini çağıran deyiminin sonrasındaki deyime ile yürütme devam eder.  
   
-     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordam. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
+     `Exit Property` Ve `Return` deyimleri neden hemen bir çıkış bir özellik yordamı. Herhangi bir sayıda `Exit Property` ve `Return` deyimleri yordamda herhangi bir yerinde görünebilir ve karıştırabilir miyim `Exit Property` ve `Return` deyimleri.  
   
--   **Dönüş değeri.** Bir değer almak için bir `Get` yordamı, özellik adı değerini atayın veya olmasını bir `Return` deyimi. Aşağıdaki örnek, özellik adı dönüş değeri atar `quoteForTheDay` ve ardından `Exit Property` dönmek için deyimi.  
+-   **Dönüş değeri.** Bir değer döndürmek için bir `Get` yordam, özellik adı için değer atamak veya olmasını bir `Return` deyimi. Aşağıdaki örnek, özellik adı için dönüş değeri atar `quoteForTheDay` ve ardından `Exit Property` döndürülecek deyimi.  
   
      [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
@@ -203,7 +203,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
      [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir sınıftaki bir özelliği bildirir.  
+ Aşağıdaki örnek, bir sınıftaki bir özelliği bildirir.  
   
  [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   

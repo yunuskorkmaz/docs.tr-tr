@@ -8,15 +8,15 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: c432140dfd009518290ac6a21129cfb968f661b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a46766b17f413346c22dd6980b461421af26391c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266817"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999113"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Türler için Başvuru Tabloları (C# Başvurusu)
-Aşağıdaki başvuru tablolarda C# türleri özetlenmektedir:  
+Aşağıdaki başvuru tablolarda, C# türleri özetlenmektedir:  
   
  [Yerleşik türler tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
   
@@ -32,10 +32,11 @@ Aşağıdaki başvuru tablolarda C# türleri özetlenmektedir:
   
  [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
   
- Sayısal türler çıktısını biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)

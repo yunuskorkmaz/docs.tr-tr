@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643032"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999915"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma (Visual Basic)
-Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.  
+Bir sınıf, modül veya işaretsiz tamsayı türlerinin üyelerini içeren yapı kullanıyorsa, Visual Basic ile bu üyeleri erişebilir.  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>İşaretsiz tür geçen bir Windows işlevi çağırma  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Bir işaretsiz türe almayan bir Windows işlevi çağırma  
   
-1.  Kullanım bir [Declare deyimi](../../../visual-basic/language-reference/statements/declare-statement.md) Visual Basic işlevi hangi kitaplığı tutar, bu kitaplığın adı nedir, kendi arama sırası nedir ve bunu çağrılırken dizeleri dönüştürme bildirmek için.  
+1.  Kullanım bir [Declare Deyimi'nin](../../../visual-basic/language-reference/statements/declare-statement.md) hangi kitaplığı işlevi tutar, bu kitaplıkta adı nedir, kendi çağrı sırası nedir ve nasıl çağırırken dizeleri dönüştürmek Visual Basic söylemek için.  
   
-2.  İçinde `Declare` deyimi, kullanım `UInteger`, `ULong`, `UShort`, veya `Byte` imzasız türe sahip her parametre için uygun şekilde.  
+2.  İçinde `Declare` deyimi, kullanım `UInteger`, `ULong`, `UShort`, veya `Byte` uygun şekilde her bir parametreye bir işaretsiz türe sahip.  
   
-3.  Adları ve değerleri kullanır sabitlerin bulmak için aradığınız Windows işlevi için belgelere bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.  
+3.  Windows işlev adlarını ve değerlerini kullanır sabitlerin bulmak için arama için belgelerine bakın. Bunların çoğu WinUser.h dosyasında tanımlanır.  
   
-4.  Kodunuzda gerekli sabitleri bildirin. Çok sayıda Windows sabitler 32-bit işaretsiz değerlerdir ve bunlar bildirmelidir `As``UInteger`.  
+4.  Kodunuzu gerekli sabitlerle bildirin. 32-bit işeritsiz değerler birçok Windows sabittir ve bunlar bildirmelidir `As``UInteger`.  
   
-5.  Normal bir şekilde işlevini çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, bir işaretsiz tamsayı bağımsız değişkeni alır.  
+5.  İşlevi, normal bir şekilde çağırın. Aşağıdaki örnek Windows işlevini çağırır `MessageBox`, işaretsiz tamsayı bağımsız değişken alır.  
   
     ```  
     Public Class windowsMessage  
@@ -59,7 +59,7 @@ Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kulla
     End Class  
     ```  
   
-     İşlevi test `messageThroughWindows` aşağıdaki kod ile.  
+     İşlevi test edebilirsiniz `messageThroughWindows` aşağıdaki kod ile.  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -69,16 +69,16 @@ Bir sınıf, modül veya imzasız tamsayı türleri üyeleri olan yapısı kulla
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri olmayan parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir component kullanamayacaklarını şekilde, bunları kullanır.  
+    >  `UInteger`, `ULong`, `UShort`, Ve `SByte` veri türleri parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), CLS uyumlu kod bir bileşen kullanamıyor. Bu nedenle, bunları kullanır.  
   
     > [!IMPORTANT]
-    >  Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod aradığı kodunuzu olası güvenlik risklerini kullanıma sunar.  
+    >  Windows uygulama programlama arabirimi gibi (API), yönetilmeyen kod çağırmak, olası güvenlik risklerini kodunuza kullanıma sunar.  
   
     > [!IMPORTANT]
-    >  Windows API'si çağırma kısmi güven durumlarda yürütülmesinin etkileyebilecek yönetilmeyen kod izni gerektirir. Daha fazla bilgi için bkz: <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Windows API çağırmak, kısmi güven durumlarında yürütme şeklinizi etkileyebilecek olan yönetilmeyen kod iznini gerektirir. Daha fazla bilgi için <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  

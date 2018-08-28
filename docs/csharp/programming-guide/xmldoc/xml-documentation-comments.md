@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 2f3bc5780e202bc5905cc027821f937b75335454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a8b6395209e95f3156354c4ee919291e05c7471
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359176"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998430"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML Belgeleri Yorumları (C# Programlama Kılavuzu)
 Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun hemen öncesindeki özel açıklama alanlarına (üç eğik çizgiyle gösterilir) XML öğeleri ekleyerek, kodunuz için belge oluşturabilirsiniz, örneğin:  
@@ -25,12 +25,12 @@ Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun
 /// <summary>  
 ///  This class performs an important function.  
 /// </summary>  
-public class MyClass{}  
+public class MyClass {}  
 ```  
   
- İle derleme zaman [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) seçeneği, derleyicinin tüm XML etiketleri kaynak kodu ve XML belge dosyası oluşturma için arayacaktır. Derleyicinin ürettiği dosyasını temel alarak son belgeleri oluşturmak için özel bir araç oluşturabilir veya gibi bir araç kullanın [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ Derleme yaptığınızda [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) seçeneği, derleyicinin tüm XML etiketlerini kaynak kodu ve XML belge dosyası oluşturma için arar. Son belgeleri derleyici tarafından üretilen dosyaya dayalı oluşturmak için özel bir araç oluşturabilir veya gibi bir araç kullanın [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
- XML öğeleri (bir XML belgeleri açıklamada tanımlamak istediğiniz gibi işlev işlemleri belirli XML öğeleri) başvurmak için mekanizması tırnak içine almak standart kullanabilirsiniz (`<` ve `>`).  Kod başvurusu genel tanımlayıcıları başvurmak için (`cref`) öğeleri kaçış karakterleri kullanabilirsiniz (örneğin, `cref="List&lt;T&gt;"`) ya da küme ayraçları (`cref="List{T}"`).  Özel bir durum olarak, derleyici, genel tanımlayıcılara başvururken belge açıklamasının yazar için daha az sıkıcı olması için, derleyici tireleri açılı ayraçlar olarak ayrıştırır.  
+ (Bir XML belgesi açıklamasında tanımlamak istediğiniz gibi işlev belirli XML öğelerini işler) XML öğelerine başvurmak için düzeneğini standart kullanabilirsiniz (`<` ve `>`).  Kod başvurusu genel tanımlayıcılara başvurmak için (`cref`) öğeleri kaçış karakterlerini kullanabilirsiniz (örneğin, `cref="List&lt;T&gt;"`) veya küme ayraçları (`cref="List{T}"`).  Özel bir durum olarak, derleyici, genel tanımlayıcılara başvururken belge açıklamasının yazar için daha az sıkıcı olması için, derleyici tireleri açılı ayraçlar olarak ayrıştırır.  
   
 > [!NOTE]
 >  XML belge açıklamaları meta veri değildir; oluşturulan derlemeye dahil edilmezler ve bu nedenle yansıtma üzerinden erişilemezler.  
@@ -48,7 +48,7 @@ public class MyClass{}
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  
   
--   [/ doc (işlem belgesi açıklamaları)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+-   [/ doc (işlem belgeleri açıklamaları)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

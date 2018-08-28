@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 671cadce0bd120ec0728562ec448b2ce6edf2dd7
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 182f7164ad929232c185903a3dbf024a2e5d22a7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961358"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998647"
 ---
 # <a name="get-c-reference"></a>get (C# Başvurusu)
 
@@ -34,7 +34,9 @@ Basit durumlarda için bir özelliğin `get` ve `set` erişimcileri ayarlama vey
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# anahtar sözcükleri](../../../csharp/language-reference/keywords/index.md) [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+- [Özellikler](../../../csharp/programming-guide/classes-and-structs/properties.md)

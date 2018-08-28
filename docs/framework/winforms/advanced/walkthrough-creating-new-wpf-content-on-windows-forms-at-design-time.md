@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
 - WPF content [Windows Forms], hosting in Windows Forms
@@ -8,110 +8,110 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 1ea0160530fea0f35c6d4746dc4bbca9439bc462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd68911abfa6bd6315091fb4630134532053efa1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529015"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999877"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Formlarında Tasarım Zamanında Yeni bir WPF İçeriği Oluşturma
-Bu konu, Windows Forms tabanlı uygulamalarda kullanım için bir Windows Presentation Foundation (WPF) denetimini oluşturulacağını gösterir.  
-  
- Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:  
-  
--   Projesi oluşturun.  
-  
--   Yeni bir WPF denetim oluşturun.  
-  
--   Yeni WPF denetimi için Windows formu ekleyin. WPF denetimi içinde barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> denetim.  
-  
+
+Bu konuda kullanım için bir Windows Presentation Foundation (WPF) denetimini Windows Forms tabanlı uygulamalarınızı oluşturma işlemini gösterir.
+
+Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
+
+- Projeyi oluşturun.
+
+- Yeni bir WPF denetiminde oluşturun.
+
+- Yeni WPF denetimi için bir Windows formu ekleyin. WPF denetiminde barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi.
+
+## <a name="prerequisites"></a>Önkoşullar
+
+Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
+
+- Visual Studio 2017
+
+## <a name="creating-the-project"></a>Projeyi Oluşturma
+
+İlk adım Windows Forms projesi oluşturmaktır. Visual Studio'yu açın ve yeni bir **Windows Forms uygulaması (.NET Framework)** Visual Basic veya Visual C# adlı proje `HostingWpf`.
+
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
-  
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
-  
-## <a name="creating-the-project"></a>Projeyi Oluşturma  
- Windows Forms projesi oluşturmak için ilk adımdır bakın.  
-  
+> WPF içeriği barındırma, yalnızca C# ve Visual Basic projelerinde desteklenir.
+
+## <a name="creating-a-new-wpf-control"></a>Yeni bir WPF denetim oluşturma
+
+Yeni bir WPF denetim oluşturma ve bunu projenize ekleyerek herhangi bir öğeyi projenize eklemek kadar kolaydır. Windows Form Tasarımcısı adlı Denetim belirli bir türünü çalışır *bileşik denetim*, veya *kullanıcı denetimi*. WPF kullanıcı denetimleri hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.UserControl>.
+
 > [!NOTE]
->  WPF içeriği barındırma, yalnızca C# ve Visual Basic projeleri desteklenir.  
-  
-#### <a name="to-create-the-project"></a>Proje oluşturmak için  
-  
--   Visual Basic veya Visual C# adlı yeni bir Windows Forms uygulaması projesi oluşturma `HostingWpf`.  
-  
-## <a name="creating-a-new-wpf-control"></a>Yeni bir WPF denetim oluşturma  
- Yeni bir WPF denetim oluşturma ve projenize ekleme projenize başka bir öğe ekleme olarak kadar kolaydır. Belirli bir tür adlı denetimi ile Windows Form Tasarımcısı çalışır *bileşik denetim*, veya *kullanıcı denetimi*. WPF kullanıcı denetimi hakkında daha fazla bilgi için bkz: <xref:System.Windows.Controls.UserControl>.  
-  
-> [!NOTE]
->  <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> WPF olarak da adlandırılır Windows Forms tarafından sağlanan kullanıcı denetimi türü farklıdır türüyle <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.  
-  
-#### <a name="to-create-a-new-wpf-control"></a>Yeni bir WPF denetimi oluşturmak için  
-  
-1.  İçinde **Çözüm Gezgini**, yeni bir ekleme **WPF kullanıcı denetimi Kitaplığı** çözüme proje. Denetim Kitaplığı için varsayılan adı kullanacak `WpfControlLibrary1`. Varsayılan Denetim adı `UserControl1.xaml`.  
-  
-     Yeni denetim ekleme aşağıdaki etkileri gösterir.  
-  
-    -   Dosya da UserControl1.XAML'i eklenir.  
-  
-    -   Dosya UserControl1.xaml.cs veya UserControl1.xaml.vb eklenir. Bu dosya, arka plan koduna olay işleyicileri ve diğer uygulama içerir.  
-  
-    -   WPF derlemelerine başvurular eklenir.  
-  
-    -   Dosya da UserControl1.XAML'i açılır [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].  
-  
-2.  Tasarım görünümü içinde olduğundan emin olun `UserControl1` seçilir. Daha fazla bilgi için bkz: [nasıl yapılır: seçin ve tasarım yüzeyine taşıma öğelerde](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
-  
-3.  İçinde **özellikleri** penceresindeki değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine `200`.  
-  
-4.  Gelen **araç**, sürükleyin bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> tasarım yüzeyine denetim.  
-  
-5.  İçinde **özellikleri** penceresindeki değerini ayarlayın <xref:System.Windows.Controls.TextBox.Text%2A> özelliğine **barındırılan içerik**.  
-  
+> <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> WPF farklı olarak da adlandırılır Windows Forms tarafından sağlanan kullanıcı Denetim türü için tür <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.
+
+### <a name="to-create-a-new-wpf-control"></a>Yeni bir WPF denetimi oluşturmak için
+
+1. İçinde **Çözüm Gezgini**, yeni bir **WPF kullanıcı denetimi kitaplığı (.NET Framework)** çözüme bir proje. Denetim Kitaplığı için varsayılan adı kullanın `WpfControlLibrary1`. Varsayılan Denetim adı `UserControl1.xaml`.
+
+     Yeni denetim ekleme, aşağıdaki etkileri gösterir:
+
+    - Dosya UserControl1.xaml eklenir.
+
+    - Dosya UserControl1.xaml.cs veya UserControl1.xaml.vb eklenir. Bu dosya, arka plan kod olay işleyicileri ve diğer uygulaması içerir.
+
+    - WPF derlemelerine başvurular eklenir.
+
+    - Dosya UserControl1.xaml açılır [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
+
+2. Tasarım görünümünde emin `UserControl1` seçilir. Daha fazla bilgi için [nasıl yapılır: seçin ve tasarım yüzeyinde taşımak öğeleri](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+
+3. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.FrameworkElement.Width%2A> ve <xref:System.Windows.FrameworkElement.Height%2A> özelliklerine **200**.
+
+4. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> denetimi tasarım yüzeyine sürükleyin.
+
+5. İçinde **özellikleri** penceresinde değerini ayarlayın <xref:System.Windows.Controls.TextBox.Text%2A> özelliğini **barındırılan içerik**.
+
     > [!NOTE]
-    >  Genel olarak, daha karmaşık WPF içeriği barındırma. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetimi yalnızca tanım yalnızca amacıyla burada kullanılır.  
-  
-6.  Projeyi oluşturun.  
-  
-## <a name="adding-a-wpf-control-to-a-windows-form"></a>Bir Windows formu WPF denetim ekleme  
- Yeni WPF denetiminizi formdaki kullanılmaya hazırdır. Windows Forms kullanan <xref:System.Windows.Forms.Integration.ElementHost> denetlemek için konak WPF içeriği  
-  
-#### <a name="to-add-a-wpf-control-to-a-windows-form"></a>Bir WPF denetimi için Windows formu eklemek için  
-  
-1.  Açık `Form1` Windows Forms Tasarımcısı'nda.  
-  
-2.  İçinde **araç**, etiketli sekmesini bulmak **WPFUserControlLibrary WPF kullanıcı denetimi**.  
-  
-3.  Bir örneğini sürükleyin `UserControl1` forma.  
-  
-    -   Bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi WPF denetimi barındırmak için form üzerinde otomatik olarak oluşturulur.  
-  
-    -   <xref:System.Windows.Forms.Integration.ElementHost> Denetim adlandırılan `elementHost1` ve **özellikleri** penceresinde görebilirsiniz kendi <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> özelliği ayarlanmış **UserControl1**.  
-  
-    -   WPF derlemelerine başvurular projeye eklenir.  
-  
-    -   `elementHost1` Denetim kullanılabilir barındırma seçenekleri gösterilir bir akıllı etiket panel sahiptir.  
-  
-4.  İçinde **ElementHost görevleri** akıllı etiket paneli, select **Ana kapsayıcıda yerleştir**.  
-  
-5.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
- Windows Forms ve WPF farklı teknolojilerdir ancak yakından birlikte çalışmak üzere tasarlanmıştır. Daha zengin bir görünüm ve davranış uygulamalarınızda sağlamak için aşağıdakileri deneyin.  
-  
--   Windows Forms denetimini bir WPF sayfada barındırır. Daha fazla bilgi için bkz: [izlenecek yol: WPF bir Windows Forms denetimi barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
-  
--   Windows Forms görsel stiller, WPF içeriği için geçerlidir. Daha fazla bilgi için bkz: [nasıl yapılır: görsel stiller etkinleştirmek karma uygulamada](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
-  
--   WPF içeriği stilini değiştirin. Daha fazla bilgi için bkz: [izlenecek yol: WPF içeriği stil oluşturma](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+    > Genel olarak, daha karmaşık bir WPF içeriği barındırmamalısınız. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Denetimi yalnızca yalnızca tanım amaçlıdır için burada kullanılır.
+
+6. Projeyi oluşturun.
+
+## <a name="adding-a-wpf-control-to-a-windows-form"></a>Bir Windows forma bir WPF denetimi ekleme
+
+Yeni WPF denetimi form üzerinde kullanılmaya hazırdır. Windows Forms kullanan <xref:System.Windows.Forms.Integration.ElementHost> konak WPF içeriği için denetim.
+
+### <a name="to-add-a-wpf-control-to-a-windows-form"></a>Bir WPF denetiminde bir Windows forma eklemek için
+
+1. Açık `Form1` Windows Forms Tasarımcısı'nda.
+
+2. İçinde **araç kutusu**, etiketlenmiş sekmeyi bulun **WPFUserControlLibrary WPF kullanıcı denetimleri**.
+
+3. Örneği sürükleyin `UserControl1` forma.
+
+    - Bir <xref:System.Windows.Forms.Integration.ElementHost> denetimi WPF denetimini barındırmak için bir form üzerinde otomatik olarak oluşturulur.
+
+    - <xref:System.Windows.Forms.Integration.ElementHost> Denetimine `elementHost1` ve **özellikleri** penceresinde görebilirsiniz, <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> özelliği **UserControl1**.
+
+    - WPF derlemelerine başvurular projeye eklenir.
+
+    - `elementHost1` Denetim barındırma seçeneklerini gösteren bir akıllı etiket paneli sahiptir.
+
+4. İçinde **ElementHost görevleri** akıllı etiket paneli, select **üst kapsayıcıya Yerleştir**.
+
+5. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+
+## <a name="next-steps"></a>Sonraki Adımlar
+
+Windows Forms ve WPF farklı teknolojilerdir, ancak yakın çalışmak için tasarlanmıştır. Daha zengin görünümünü ve davranışını uygulamalarınızda sağlamak için aşağıdakileri deneyin:
+
+- Bir WPF sayfasındaki bir Windows Forms denetimi barındırma. Daha fazla bilgi için [izlenecek yol: WPF'de Windows Forms denetimini barındırma](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+
+- Windows Forms görsel stiller, WPF içeriği için geçerlidir. Daha fazla bilgi için [nasıl yapılır: karma uygulamada görsel stilleri etkinleştirme](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+
+- WPF İçerik stilini değiştirin. Daha fazla bilgi için [izlenecek yol: WPF içeriği stil](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Geçiş ve Birlikte Çalışabilirlik](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [WPF Denetimlerini Kullanma](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [WPF Tasarımcısı](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)

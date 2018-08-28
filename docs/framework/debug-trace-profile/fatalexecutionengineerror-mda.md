@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392544"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999141"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
-`fatalExecutionEngine``Error` Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) önemli bir hata algılandığında etkinleştirilir. İşlem sonlandırılacak.  
+`fatalExecutionEngineError` Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR) önemli bir hata algılandığında etkinleştirilir. İşlem sonlandırılacak.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Beklenmeyen işlem sonlandırma. CLR hata çeşitli nedenlerden dolayı olabileceği için diğer Belirtiler belirlenemiyor.  
+ Beklenmeyen işlem sonlandırma. CLR hata çeşitli nedenlerden dolayı ortaya çıkabileceğinden diğer belirtileri belirlenemiyor.  
   
 ## <a name="cause"></a>Sebep  
- CLR fatally bozuldu. Bu çoğunlukla gibi işlevler ve CLR geçersiz veri geçirme çağrıları hatalı biçimlendirilmiş platform çağırma olduğu sorunları sayıyla kaynaklanabilir veri bozulması kaynaklanır.  
+ CLR fatally bozulmuş. Bu çoğunlukla veri bozulması, işlevleri ve CLR ile geçersiz veri geçirme hatalı biçimlendirilmiş platform çağrıları çağırır gibi sorunları sayısına göre neden kaynaklanır.  
   
 ## <a name="resolution"></a>Çözüm  
- Ek Mda'lar etkinleştirme sorun belirlenmesine yardımcı olabilir. Aşağıdaki Mda'lar sorunu tanılamada özellikle yararlı olabilir:  
+ Ek Mda'leri etkinleştirme, sorunun belirlenmesine yardımcı olabilir. Aşağıdaki Mda'leri özellikle sorunu tanılamada yararlı olabilir:  
   
 -   [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
@@ -57,11 +57,11 @@ ms.locfileid: "33392544"
   
 -   [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı etkisi  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
  Bu MDA çalışma zamanı davranışı üzerinde etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- Önemli hata, hatanın oluştuğu iş parçacığı kimliği ve hata kodu nedeniyle CLR işlevi adresi.  
+ Önemli hata ve hatanın oluştuğu iş parçacığının kimliği hata kodu nedeniyle CLR işlevi adresi.  
   
 ## <a name="configuration"></a>Yapılandırma  
   

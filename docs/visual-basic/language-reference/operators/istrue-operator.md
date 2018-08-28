@@ -7,40 +7,40 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: fc01b074d9aba245b1c55b75b841a7f195f7ec04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003196"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue İşleci (Visual Basic)
-Bir ifade olup olmadığını belirleyen `True`.  
+Bir ifade olup olmadığını belirler `True`.  
   
- Çağıramazsınız `IsTrue` açıkça kodunuzu, ancak Visual Basic derleyici koddan oluşturmak için kullanabilmesi `OrElse` yan tümceleri. Bir sınıf veya yapı tanımlayın ve ardından bu tür bir değişken kullanırsanız bir `OrElse` yan tümcesi tanımlamalıdır `IsTrue` sınıf veya yapı.  
+ Çağıramazsınız `IsTrue` açıkça kodunuzu kullanabilirsiniz, ancak Visual Basic derleyici Bu kod oluşturmak için `OrElse` yan tümceleri. Bir sınıf veya yapı tanımlayın ve ardından bu türde bir değişken kullanmak, bir `OrElse` yan tümcesi tanımlamalıdır `IsTrue` Bu sınıf ya da yapı üzerinde.  
   
- Derleyici göz önünde bulundurur `IsTrue` ve `IsFalse` işletmenler olarak bir *çifti eşleşen*. Bu, bunlardan birini tanımlarsanız, ayrıca diğeri tanımlamanız gerektiğini anlamına gelir.  
+ Derleyici göz önünde bulundurur `IsTrue` ve `IsFalse` işleçleri bir *çifti eşleşen*. Başka bir deyişle, bir tanesi tanımlarsanız, ayrıca diğeri tanımladığınız gerekir.  
   
 ## <a name="compiler-use-of-istrue"></a>IsTrue derleyici kullanımı  
- Bir sınıf veya yapı tanımlandığında, bu tür bir değişkeni kullanabilirsiniz bir `For`, `If`, `Else``If`, veya `While` deyimi, veya bir `When` yan tümcesi. Bunu yaparsanız, derleyici, türe dönüştürür bir işleç gerektiren bir `Boolean` bir koşulu test etmek için değer. Uygun bir işleç aşağıdaki sırayla arar:  
+ Bir sınıf veya yapı tanımlandığında, bu türde bir değişken kullanabileceğiniz bir `For`, `If`, `Else If`, veya `While` deyimi veya bir `When` yan tümcesi. Bunu yaparsanız, derleyici, türüne dönüştürür bir işleç gerektiriyor. bir `Boolean` koşul sınayabilmeniz değeri. Uygun bir işleç şu sırayla arar:  
   
-1.  Sınıf veya yapı için bir genişletme dönüşüm işleci `Boolean`.  
+1.  Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean`.  
   
-2.  Sınıf veya yapı için bir genişletme dönüşüm işleci `Boolean?`.  
+2.  Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean?`.  
   
-3.  `IsTrue` Sınıf veya yapı işlecinin.  
+3.  `IsTrue` İşleci, sınıf ya da yapı üzerinde.  
   
-4.  Daraltma dönüştürmeye `Boolean?` dönüştürme kapsamaz `Boolean` için `Boolean?`.  
+4.  Bir daraltma dönüşümü için `Boolean?` , değil içeren bir dönüştürme `Boolean` için `Boolean?`.  
   
-5.  Sınıf veya yapı için daraltma bir dönüşüm işleci `Boolean`.  
+5.  Bir daraltma dönüşümü işleci sınıfı veya yapısına `Boolean`.  
   
- Herhangi bir dönüştürmeye tanımladıysanız `Boolean` veya bir `IsTrue` işleci, derleyici, bir hata bildirir.  
+ Herhangi bir dönüştürmeyi tanımlamadıysanız `Boolean` veya `IsTrue` işleci, derleyici bir hata bildirir.  
   
 > [!NOTE]
->  `IsTrue` İşleci olabilir *aşırı*, kendi işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Bu tür bir sınıf veya yapı üzerinde kodunuzu bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  `IsTrue` İşleci olabilir *aşırı*, kendi işleneninin türü, sınıfın veya yapının olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için tanımları içeren bir yapı özetini tanımlar `IsFalse` ve `IsTrue` işleçler.  
+ Aşağıdaki kod örneği için tanımları içeren bir yapının anahat tanımlar `IsFalse` ve `IsTrue` işleçleri.  
   
  [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   

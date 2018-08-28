@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960960"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003118"
 ---
 # <a name="using-statement-c-reference"></a>using Deyimi (C# Başvurusu)
 Doğru kullanımını güvence altına kullanışlı bir söz dizimi sağlar <xref:System.IDisposable> nesneleri.  
@@ -43,11 +43,12 @@ Atma hakkında daha fazla bilgi için `IDisposable` nesneleri bkz [IDisposable u
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [using Yönergesi](../../../csharp/language-reference/keywords/using-directive.md)  
- [Atık Toplama](../../../standard/garbage-collection/index.md)  
- [IDisposable uygulayan nesneler kullanma](../../../standard/garbage-collection/using-objects.md)  
- [IDisposable arabirimi](xref:System.IDisposable)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [using Yönergesi](../../../csharp/language-reference/keywords/using-directive.md)  
+- [Atık Toplama](../../../standard/garbage-collection/index.md)  
+- [IDisposable uygulayan nesneler kullanma](../../../standard/garbage-collection/using-objects.md)  
+- [IDisposable arabirimi](xref:System.IDisposable)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 29bf95a336b6f6ed5c9c310c9ea7575a91089361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604893"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998956"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
-Parametreleri ve işlev lambda ifadesi tanımlamak kod bildirir.  
+Parametreleri işlevi lambda ifadesi tanımlayan ve kodu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,49 +30,49 @@ End Function
   
 |Terim|Tanım|  
 |---|---|  
-|`parameterlist`|İsteğe bağlı. Bu yordam parametreleri temsil eden yerel değişken adları listesi. Parantez listesi boş olsa bile mevcut olması gerekir. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Gerekli. Tek bir ifade. İşlevinin dönüş türü ifade türüdür.|  
-|`statements`|Gerekli. Kullanarak bir değer döndürür deyimleri listesini `Return` deyimi. (Bkz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).) İşlevinin dönüş türü döndürülen değer türüdür.|  
+|`parameterlist`|İsteğe bağlı. Bu yordamı parametrelerini temsil eden yerel değişken adlarının listesi. Liste boş olduğunda bile parantezler bulunmalıdır. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`expression`|Gerekli. Tek bir ifade. İşlevin dönüş türü ifade türüdür.|  
+|`statements`|Gerekli. Kullanarak bir değer döndüren deyimlerin listesini `Return` deyimi. (Bkz [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).) İşlevin dönüş türünü döndürülen değer türüdür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- A *lambda ifadesi* hesaplar ve bir değer döndüren bir ad olmadan bir işlev değil. Lambda ifadesi kullanabileceğiniz her yerde bir temsilci türü dışında bağımsız değişken olarak kullanabileceğiniz `RemoveHandler`. Temsilciler ve temsilciler ile lambda ifadeleri kullanma hakkında daha fazla bilgi için bkz: [temsilci deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md) ve [gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ A *lambda ifadesi* hesaplar ve bir değer döndüren bir adı olmayan bir işlevdir. Bir lambda ifadesi kullandığınız her yerde bir temsilci türü dışında bir bağımsız değişken olarak kullanabilirsiniz `RemoveHandler`. Temsilciler ve lambda ifadeleri temsilciler ile kullanımı hakkında daha fazla bilgi için bkz. [temsilci bildirimi](../../../visual-basic/language-reference/statements/delegate-statement.md) ve [gevşek temsilci dönüşümü](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
- Lambda ifadesi sözdizimi, standart bir işlev benzer. Farkları aşağıdaki gibidir:  
+ Bir lambda ifadesi söz dizimi, standart bir işlev benzer. Farklar aşağıdaki gibidir:  
   
--   Lambda ifadesi bir adı yok.  
+-   Bir lambda ifadesi, bir adı yok.  
   
--   Lambda ifadeleri olamaz değiştiriciler, gibi `Overloads` veya `Overrides`.  
+-   Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
   
--   Lambda ifadeleri kullanma bir `As` işlevin dönüş türünü atamak için yan tümcesi. Bunun yerine, türü tek satırlı lambda ifadesi gövdesi değerlendiren değeri veya çok satırlı lambda ifadesi dönüş değerini algılanır. Örneğin, tek satırlı lambda ifadesi gövdesi ise `Where cust.City = "London"`, kendi dönüş türü `Boolean`.  
+-   Lambda ifadeleri kullanma bir `As` işlevin dönüş türünü belirlemek için yan tümcesi. Bunun yerine, tek satırlı lambda ifadesinin gövdesinin değerlendiren değer veya çok satırlı lambda ifadesinin dönüş değeri türüne algılanır. Örneğin, tek satırlı lambda ifadesinin gövdesinin ise `Where cust.City = "London"`, kendi dönüş türü `Boolean`.  
   
--   Tek satırlı lambda ifadesi gövdesi bir ifade, bir deyim olmalıdır. Gövdesi bir işlev yordam çağrısı, ancak olmayan bir alt yordam çağrısı oluşabilir.  
+-   Tek satırlı lambda ifadesinin gövdesinin deyim olmayan bir ifade olmalıdır. Gövdesi bir işlev yordam çağrısı, ancak bir alt yordam çağrısı değil oluşabilir.  
   
--   Veri türleri veya tüm olayla gerekir ya da tüm parametreleri belirledikten gerekir.  
+-   Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
   
--   İsteğe bağlı ve Paramarray parametreleri izin verilmez.  
+-   İsteğe bağlı ve Paramarray parametrelerine izin verilmez.  
   
 -   Genel Parametreler izin verilmez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler basit lambda ifadeleri oluşturmanın iki yolunu gösterir. İlk kullandığı bir `Dim` işlevi için bir ad vermek için. Bir işlevi çağırmak için parametre için bir değer gönderin.  
+ Aşağıdaki örnekler, basit bir lambda ifadeleri oluşturmanın iki yolunu gösterir. İlk kullandığı bir `Dim` işlevi için bir ad sağlamak için. İşlev çağrısı için parametre için bir değer gönderin.  
   
  [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
  [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## <a name="example"></a>Örnek  
- Alternatif olarak, bildirme ve aynı anda işlevi çalıştırın.  
+ Alternatif olarak, bildirebilir ve aynı anda işlevi çalıştırın.  
   
  [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki bağımsız değişkeni artırır ve değer döndüren bir lambda ifadesi bir örnektir. Aşağıdaki örnekte, hem tek satırlı ve çok satırlı lambda ifadesi sözdizimi işlevi için gösterilir. Daha fazla örnek için bkz: [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Bağımsız değişkeni artırır ve değer döndüren bir lambda ifadesi örneği verilmiştir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi söz dizimi işlevi için gösterir. Daha fazla örnek için bkz. [Lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## <a name="example"></a>Örnek  
- Lambda ifadeleri sorgu işleçleri çoğunu temelini oluşturan [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]ve yöntem temelli sorgular açıkça kullanılabilir. Aşağıdaki örnek gösterilmektedir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] yöntemi biçimine sorgusunun çevirisi tarafından izlenen sorgu.  
+ Lambda ifadeleri sorgu işleçlerinin çoğu temelini oluşturan [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]ve metot tabanlı sorgu açıkça kullanılabilir. Aşağıdaki örnekte gösterilmektedir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] yöntemi biçime sorgu çevirisi tarafından izlenen sorgu.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Sorgu yöntemleri hakkında daha fazla bilgi için bkz: [sorguları](../../../visual-basic/language-reference/queries/queries.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Sorgu yöntemleri hakkında daha fazla bilgi için bkz. [sorguları](../../../visual-basic/language-reference/queries/index.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
