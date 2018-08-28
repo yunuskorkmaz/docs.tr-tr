@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: cb80f4b39bee128790b311732adf1202dbbc6993
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa11c713a5ed5793b50865753f8bcdeaabf56e83
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601731"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999313"
 ---
 # <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
-İçeriği bir paragraf olarak biçimlendirilmiş olup olmadığını belirtir.  
+İçerik paragraf olarak biçimlendirileceğini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,14 +26,14 @@ ms.locfileid: "33601731"
  Paragraf metni.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<para>` Gibi olan bir etiketi kullanmak için etiket [ \<Özet >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<açıklamalar >](../../../visual-basic/language-reference/xmldoc/remarks.md), veya [ \<döndürür >](../../../visual-basic/language-reference/xmldoc/returns.md), ve yapı metne eklemenize olanak tanır.  
+ `<para>` Gibi olan bir etiketi içinde kullanmak için etiket [ \<Özet >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md), veya [ \<döndürür >](../../../visual-basic/language-reference/xmldoc/returns.md), ve metnin yapısını eklemenizi sağlar.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<para>` için Açıklamalar bölümüne bölmek için etiket `UpdateRecord` iki paragraf içine yöntemi.  
+ Bu örnekte `<para>` için Açıklamalar bölümüne ayırmak için etiket `UpdateRecord` iki paragraf yönteme.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
