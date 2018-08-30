@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: Proje bir nesne grafiğinin (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
 ms.openlocfilehash: 0a8bf33075ada306cf639006ab099115aad43348
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643789"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238470"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Nasıl yapılır: Proje bir nesne grafiğinin (Visual Basic)
-Bu konu, proje veya doldurmak, bir nesne grafiğinin XML göstermektedir.  
+Bu konuda, proje veya doldurmak, bir nesne grafiğinin XML gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu içeren bir nesne grafiğinin doldurur `Address`, `PurchaseOrder`, ve `PurchaseOrderItem` gelen sınıfları [örnek XML dosyası: tipik satın alma siparişi (LINQ-XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.  
+ Aşağıdaki kodu içeren bir nesne grafiğinin doldurur `Address`, `PurchaseOrder`, ve `PurchaseOrderItem` gelen sınıflar [örnek XML dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.  
   
 ```vb  
 Class Address  
@@ -296,9 +296,9 @@ Sub Main()
 End Sub  
 ```  
   
- Bu örnekte, sonucu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak döndürülür bir <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Öğeleri `PurchaseOrder` sınıfı türündedir <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Kod kullanan <xref:System.Linq.Enumerable.ToList%2A> oluşturmak için genişletme yöntemi bir <xref:System.Collections.Generic.List%601> sorgu sonuçlarını koleksiyonundan.  
+ Bu örnekte, sonucunu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu olarak döndürülen bir <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Öğeleri `PurchaseOrder` sınıfı, tür <xref:System.Collections.Generic.IEnumerable%601> , `PurchaseOrderItem`. Kod <xref:System.Linq.Enumerable.ToList%2A> genişletme yöntemi oluşturmak için bir <xref:System.Collections.Generic.List%601> sorgunun sonuçlarının bir koleksiyondan.  
   
- Örneğin şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 PurchaseOrderNumber: 99503  
@@ -340,4 +340,4 @@ ShipDate: 5/21/1999
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq.Enumerable.Select%2A>  
  <xref:System.Linq.Enumerable.ToList%2A>  
- [Projeksiyonlar ve dönüştürmeler (LINQ-XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+ [Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
