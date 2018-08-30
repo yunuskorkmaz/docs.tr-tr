@@ -1,17 +1,17 @@
 ---
 title: Ayrılmış Birleşimler (F#)
-description: 'F # kullanmayı öğrenin birleşimler.'
+description: "F #'ı kullanmayı öğrenin ayrılmış birleşimler."
 ms.date: 05/16/2016
-ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238530"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
-Ayrılmış birleşimler, bir dizi adlandırılmış durumlarda, büyük olasılıkla her farklı değerler ve türlerle biri olabilir değerler için destek sağlar. Ayrılmış birleşimler heterojen veriler için kullanışlı; Geçerli dahil olmak üzere özel durumlar ve hata durumları olabilir veri; bir örnek bir türden diğerine değişen verileri; ve küçük nesne Hiyerarşiler için alternatif olarak. Ayrıca, özyinelemeli ayrılmış birleşimler ağaç veri yapıları temsil etmek için kullanılır.
+Ayrılmış birleşimler, bir dizi adlandırılmış durumlarda, büyük olasılıkla her biri farklı değerde ve türde herhangi birini değerler için destek sağlar. Ayrılmış birleşimler heterojen veriler için kullanışlı; Geçerli dahil olmak üzere, özel durumlar ve hata durumları veri; bir örneği bir türden diğerine değişen verileri; ve küçük nesne hiyerarşileri için alternatif olarak. Ayrıca, özyinelemeli ayırt edici birleşimler ağaç veri yapılarını temsil etmek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -20,15 +20,17 @@ Ayrılmış birleşimler, bir dizi adlandırılmış durumlarda, büyük olasıl
 type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
-...
+
+    [ member-list ]
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Ayrılmış birleşimler diğer dillerde birleşim türlerini benzer ancak bazı farklılıklar vardır. Olarak bir birleşim türü c++ veya Visual Basic değişken türü değerinde depolanan verileri Düzeltilmemiş; Bu seçeneklerden biri veya birkaçı farklı olabilir. Bu diğer dillerdeki birleşimler, Bununla birlikte, her bir olası seçenek verilir bir *servis talebi tanımlayıcısı*. Bu tür nesneler olabilir değerleri çeşitli olası türleri için adları büyük/küçük harfe tanımlayıcılardır; değerleri isteğe bağlıdır. Değerler mevcut değilse, bir numaralandırma durumu eşdeğer bir durumdur. Değerleri varsa, her değer ya da belirtilen bir tür ya da aynı veya farklı türdeki birden çok alan toplayan bir tanımlama grubu tek bir değer olabilir. Tek bir alanı bir ad verin, ancak diğer alanlar aynı durumda adlı olsa bile isteğe bağlı adıdır.
+
+Ayrılmış birleşimler, diğer dillerdeki birleşim türleriyle benzerdir, ancak bazı farklılıklar vardır. Olarak C++ içindeki birleşim türünde veya Visual Basic içindeki değişken türünde değerde depolanan veriler sabit; ayrı ayrı birkaç seçenekten biri olabilir. Diğer bu dillerdeki birleşimlerden farklı olarak, Bununla birlikte, olası seçeneklerin her biri verilir bir *durum tanımlayıcı*. Durum tanımlayıcıları, bu tür nesneler olabilir değerleri çeşitli olası türleri adlarıdır; İsteğe bağlı değerler. Değerler mevcut değilse, böyle bir numaralandırma vakasına eşdeğerdir. Değerler varsa her değer ya da belirtilen bir türün ya da aynı ya da farklı türlerin birden çok alanını toplayan bir tanımlama grubu tek bir değer olabilir. Ayrı ayrı alanlara bir ad verebilirsiniz ancak aynı durumdaki diğer alanlar adlandırılmış olsa dahi, isteğe bağlı adıdır.
 
 Ayrılmış birleşimler için erişilebilirlik varsayılanları `public`.
 
-Örneğin, bir şekil türü aşağıdaki bildirimi göz önünde bulundurun.
+Örneğin, bir şekil türünün aşağıdaki bildirimini düşünün.
 
 ```fsharp
 type Shape =
@@ -37,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Önceki kod ayrılmış birleşim herhangi üç durumda değerlere sahip olabilir şekli bildirir: dikdörtgen, daire ve Prizma. Her durumda, farklı bir alan kümesi vardır. Durumda olması adlı iki dikdörtgen alanları, her iki tür `float`, adları genişlik ve uzunluk sahip. Yalnızca bir adlandırılmış alan daire durumda olması RADIUS. Üç alanları Prizma durumu olan alanları adlı iki hangi (genişlik ve yükseklik). Adlandırılmamış alanları anonim alanlar olarak adlandırılır.
+Yukarıdaki kod ayrılmış bir birleşim herhangi birinin üç durum değerleri olan şekil bildirir: dikdörtgen, daire ve Prizma. Her durumda, farklı bir alan kümesi vardır. Dikdörtgenin çalışması sahip iki adlı alanları, iki tür `float`, genişlik ve uzunluk adlarına sahip. Circle durumu yalnızca bir adlandırılmış alana sahiptir RADIUS. Prism durumunun üç alanı vardır alanları adlı iki hangi (genişlik ve yükseklik). Adlandırılmamış anonim alan olarak adlandırılır.
 
-Aşağıdaki örnekler göre adlandırılmış ve anonim alanların değerlerini sağlayarak nesneleri oluşturur.
+Aşağıdaki örnekler göre adlandırılmış ve anonim alanlar için değerleri sağlayarak nesneleri oluşturmak.
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -47,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-Bu kod başlatma adlandırılmış alanları ya da kullanabilirsiniz, veya sırasını bildiriminde alanlarının kullanır ve yalnızca değerleri için her bir alan sırayla belirtin gösterir. İçin oluşturucu çağrısı `rect` önceki kodda adlandırılmış alanlar, ancak Oluşturucusu çağrısı için kullandığı `circ` sıralama kullanır. Sıralı alanları karıştırabilirsiniz ve yapımı olduğu gibi alanları adlı `prism`.
+Bu kod, başlatma işlemindeki adlandırılmış alanları kullanabilirsiniz, veya bildirimdeki alanların sıralamasını üzerinde kullanır ve her alan için değerleri'yalnızca sırayla sağlayın gösterir. İçin oluşturucu çağrısı `rect` önceki kod içinde adlandırılmış alanları, ancak için oluşturucu çağrısı kullanır `circ` sıralamayı kullanır. Sıralı alanları karıştırabilirsiniz ve alanları, oluşumunu olduğu gibi adlı `prism`.
 
-`option` Basit bir ayrılmış birleşim F # core kitaplık içinde türüdür. `option` Türü gibi bildirilmedi.
+`option` Türü, F # çekirdek kitaplığında basit bir birleşimdir. `option` Türü gibi bildirilir.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -58,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-Önceki kod belirleyen türü `Option` iki durumda sahip ayrılmış bir birleşimdir `Some` ve `None`. `Some` Durumu, türü tür parametresi tarafından gösterilen bir anonim alanından oluşur ilişkili bir değere sahip `'a`. `None` Durumda olması ilişkili değer. Bu nedenle `option` ya da bazı türü veya herhangi bir değer değerine sahip genel bir tür türünü belirtir. Türü `Option` ayrıca bir küçük harf türü diğer adı olan `option`, yani daha sık kullanılan.
+Önceki kod belirten türü `Option` iki duruma sahip ayrılmış bir birleşim olduğunu `Some` ve `None`. `Some` Çalışması türü tür parametresi ile temsil edilir bir anonim alan içeren ilişkili değeri var `'a`. `None` Çalışması ilişkili değere sahip. Bu nedenle `option` türü veya tür veya değer değeri olan bir genel tür belirtir. Türü `Option` ayrıca bir küçük harf tür diğer adı olan `option`, yani daha sık kullanılan.
 
-Servis talebi tanımlayıcıları oluşturucular ayrılmış birleşim türü için kullanılabilir. Örneğin, aşağıdaki kod değerlerini oluşturmak için kullanılan `option` türü.
+Durum tanımlayıcıları, ayrılmış birleşim türü için oluşturucu kullanılabilir. Örneğin, aşağıdaki kod değerler oluşturmak için kullanılan `option` türü.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-Servis talebi tanımlayıcıları da eşleşen modelinde kullanılır. İfade ile eşleşen bir deseni tanımlayıcıları tek tek durumları ile ilişkili değerleri için sağlanır. Örneğin, aşağıdaki kodda, `x` tanımlayıcısı ile ilişkili değer verilen `Some` durumu `option` türü.
+Durum tanımlayıcıları da Desen eşleştirme ifadelerinde kullanılır. Bir desen eşleme ifadesinde tanımlayıcılar tek tek durumlarla ilişkili değerler için sağlanır. Örneğin, aşağıdaki kodda, `x` tanımlayıcısı ile ilişkili değer verilen `Some` durumu `option` türü.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-Eşleşen desende adlandırılmış alanlar ayrılmış birleşim eşleşmeleri belirtmek için kullanabilirsiniz. Alanların değerlerini ayıklamak için aşağıdaki kodda gösterildiği gibi daha önce bildirildi Şekil türü için adlandırılmış alanlar kullanabilirsiniz.
+Desen eşleştirme ifadelerinde, ayrılmış birleşim eşleşmelerini belirtmek için adlandırılmış alanları kullanabilirsiniz. Alanların değerlerini ayıklamak için aşağıdaki kodda gösterildiği gibi daha önceden bildirilen Şekil türü için adlandırılmış alanları kullanabilirsiniz.
 
 ```fsharp
 let getShapeHeight shape =
@@ -78,16 +80,17 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-Normalde, servis talebi tanımlayıcıları UNION adıyla niteleme olmadan kullanılabilir. Her zaman UNION adıyla nitelendirilmesi adı istiyorsanız uygulayabilirsiniz [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) özniteliğin birleşim türü tanımı.
+Normalde, büyük/küçük harf tanımlayıcıları, birleşim adıyla nitelemeden kullanılabilir. Her zaman için birleşim adıyla nitelendirilmesi adını isterseniz uygulayabilirsiniz [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) özniteliğini birleşim türü tanımına.
 
 ### <a name="unwrapping-discriminated-unions"></a>Açma ayrılmış birleşimler
 
-F # ayrılmış birleşimler genellikle etki alanı-modelleme tek bir türü kaydırma için kullanılır. Desen eşleştirme de aracılığıyla alttaki değerini ayıklayın kolaydır. Bir eşleşme ifadesi için tek bir kasada kullanmanız gerekmez:
+F # ayırt edici birleşimler genellikle etki alanı model içinde tek bir tür kaydırma için kullanılır. Temeldeki değeri de desen eşleştirme aracılığıyla ayıklamak kolay bir işlemdir. Bir eşleme ifadesi için tek bir kasada kullanmanız gerekmez:
+
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
 ```
 
-Aşağıdaki örnekte bu gösterir:
+Aşağıdaki örnek bunu gösterir:
 
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
@@ -98,9 +101,9 @@ let someMethodUsingShaderProgram shaderProgram =
     ..
 ```
 
-## <a name="struct-discriminated-unions"></a>Yapı birleşimler
+## <a name="struct-discriminated-unions"></a>Ayrılmış birleşimler yapısı
 
-F # 4.1 ile başlayarak, ayrılmış birleşimler yapılar da gösterebilir.  Bu gerçekleştirilir `[<Struct>]` özniteliği.
+F # 4.1 ile başlayarak, ayırt edici birleşimler yapılar da gösterebilir.  Bunun `[<Struct>]` özniteliği.
 
 ```fsharp
 [<Struct>]
@@ -113,18 +116,19 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-Bu değer türleri ve başvuru türlerini değil çünkü vardır ek başvuru ile karşılaştırıldığında konuları ayrılmış birleşimler:
+Bu değer türleri ve başvuru türleri değil çünkü vardır ek konuları başvuru ile karşılaştırıldığında ayırt edici birleşimler:
 
 1. Bunlar, değer türleri kopyalanır ve değer türü anlamları vardır.
-2. Bir özyinelemeli tür tanımı multicase yapı Discriminated birleşimi ile kullanamazsınız.
-3. Multicase yapı Discriminated birleşimi benzersiz servis talebi adlar sağlamanız gerekir.
+2. Bir özyinelemeli tür tanımı Discriminated birleşim multicase yapı ile kullanamazsınız.
+3. Multicase yapı Discriminated birleşim büyük/küçük harf benzersiz adlar sağlamanız gerekir.
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Ayrılmış birleşimler yerine nesne hiyerarşileri kullanma
-Küçük nesne hiyerarşisi daha basit bir alternatif olarak, ayrılmış bir birleşim genellikle kullanabilirsiniz. Örneğin, aşağıdaki ayrılmış birleşim yerine kullanılabilecek bir `Shape` temel daire, türlerinde türetilmiş kare, vb. sınıfı.
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Nesne hiyerarşileri yerine ayrılmış birleşimler kullanma
+
+Küçük nesne hiyerarşisi için basit bir alternatif olarak, ayrılmış bir birleşim genellikle kullanabilirsiniz. Örneğin, aşağıdaki ayrılmış bileşim yerine kullanılabilecek bir `Shape` temel türleri daire, türetilmiş kare vb. sınıfı.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-Bunun yerine bir alanı veya çevre hesaplamak için sanal yöntemi gibi nesne yönelimli uygulama kullanır, bu miktarlar işlem için uygun formüller dala eşleşen kalıbı kullanabilirsiniz. Aşağıdaki örnekte, farklı formüller şekli bağlı olarak alan hesaplamak için kullanılır.
+Bunun yerine bir alan veya çevre hesaplamak için sanal bir yöntem, nesne yönelimli bir uygulamada kullanmanız gerekir, bu miktarları hesaplamak için uygun formüllere eşleşen kalıbı kullanabilirsiniz. Aşağıdaki örnekte, şekile bağlı olarak alan hesaplamak için farklı formüller kullanılır.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
@@ -137,28 +141,30 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
 ## <a name="using-discriminated-unions-for-tree-data-structures"></a>Ayrılmış birleşimler ağaç veri yapıları için kullanma
-Ayrılmış birleşimler birleşim türünde bir veya daha fazla örneklerinin eklenebilir anlamı özyinelemeli olabilir. Özyinelemeli ayrılmış birleşimler programlama dilleri, model ifadeleri için kullanılan ağaç yapıları oluşturmak için kullanılabilir. Aşağıdaki kodda bir özyinelemeli ayrılmış birleşim bir ikili ağacı veri yapısı oluşturmak için kullanılır. İki örneklerini UNION oluşur `Node`, bir tamsayı değeri ve sol ve sağ alt ağaçta, bir düğümü olduğu ve `Tip`, ağaç sonlandırır.
+
+Ayrılmış birleşimler, yani birleşim kendi başına bir veya daha fazla türünü eklenebilir, özyinelemeli olabilir. Özyinelemeli ayrılmış birleşimler, programlama dillerindeki ifadeleri için kullanılan ağaç yapıları oluşturmak için kullanılabilir. Aşağıdaki kodda bir özyinelemeli ayrılmış birleşim bir ikili ağaç veri yapısı oluşturmak için kullanılır. Birleşim iki durumdan oluşur `Node`, bir tamsayı değeri ile sol ve sağ alt ağaçlara sahip bir düğüm ve `Tip`, ve ağacı sonlandıran.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-Önceki kod `resultSumTree` 10 değerine sahiptir. Aşağıdaki çizim için ağaç yapısını gösterir `myTree`.
+Önceki kodda, `resultSumTree` 10 değerine sahiptir. Ağaç yapısı için aşağıdaki çizimde `myTree`.
 
 ![MyTree için ağaç yapısı](../media/TreeStructureDiagram.png)
 
-Ayrılmış birleşimler ağacında düğümlerin heterojen iyi çalışır. Aşağıdaki kodda, türü `Expression` eklenmesini destekler basit bir programlama dili ifade soyut söz dizimi ağaç ve çarpma numaraları ve değişkenlerin temsil eder. Birleşim durumları bazıları özyinelemeli olmayan ve her iki sayılar temsil eder (`Number`) veya değişkenleri (`Variable`). Diğer durumlarda özyinelemeli ve işlemleri temsil eder (`Add` ve `Multiply`), işlenen ifadeler de nerede. `Evaluate` İşlevi bir eşleşme ifadesi özyinelemeli olarak işlem sözdizimi ağacı için kullanır.
+Ayrılmış birleşimler Ağaçtaki düğümler heterojen iyi çalışır. Aşağıdaki kodda, türü `Expression` toplanmasını ve çarpılmasını sayıların ve değişkenlerin destekler basit bir programlama dili, bir ifadenin soyut sözdizimi ağacını temsil eder. Bazı birleşim durumları özyinelemeli değildir ve sayıları temsil eder (`Number`) veya değişkenler (`Variable`). Diğer durumlarda özyinelemelidir ve işlemleri temsil etmekte (`Add` ve `Multiply`), işlenenlerin de ifadeleri olduğu. `Evaluate` İşlevi sözdizimi ağacını yinelemeli olarak işlemek için bir eşleme ifadesi kullanılır.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-Bu kod, ne zaman yürütülür, değeri `result` 5'tir.
+Bu kod zaman yürütülür, değerini `result` 5'tir.
 
 ## <a name="common-attributes"></a>Ortak Öznitelikler
 
-Aşağıdaki öznitelikler içinde ayrılmış birleşimler sık görülür:
+Aşağıdaki öznitelikler de ayrılmış birleşimler yaygın olarak görülür:
 
 * `[RequireQualifiedAccess]`
 * `[NoEquality]`
 * `[NoComparison]`
-* `[Struct]` (F # 4.1 ve üzeri)
+* `[Struct]`
 
 ## <a name="see-also"></a>Ayrıca Bkz.
+
 [F# Dili Başvurusu](index.md)

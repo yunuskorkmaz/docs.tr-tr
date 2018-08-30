@@ -1,5 +1,5 @@
 ---
-title: Option Strict Deyimi
+title: Option Strict deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Strict
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: de9703c43d32fba4a5f9d661546e0beb66c24602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac8f6fa2ebd2f8d846c3662184c83a83477e2311
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605361"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238556"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
-Yalnızca genişletme dönüşümleri için örtük veri türü dönüştürmelerini sınırlar, geç bağlama izin vermez ve örtük sonuçlanan yazmaya izin vermez bir `Object` türü.  
+Örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, geç bağlamaya izin vermiyor ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,11 +31,11 @@ Option Strict { On | Off }
   
 |Terim|Tanım|  
 |---|---|  
-|`On`|İsteğe bağlı. Etkinleştirir `Option Strict` denetleniyor.|  
+|`On`|İsteğe bağlı. Sağlar `Option Strict` denetleniyor.|  
 |`Off`|İsteğe bağlı. Devre dışı bırakır `Option Strict` denetleniyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Zaman `Option Strict On` veya `Option Strict` bir dosyada aşağıdaki durumlar neden bir derleme zamanı hata görünür:  
+ Zaman `Option Strict On` veya `Option Strict` görünür bir dosyada, aşağıdaki durumlar neden bir derleme zamanı hatası:  
   
 -   Örtük daraltma dönüşümleri  
   
@@ -44,26 +44,26 @@ Option Strict { On | Off }
 -   Örtük sonuçlanan yazarak bir `Object` türü  
   
 > [!NOTE]
->  Üzerinde ayarlayabilirsiniz uyarı yapılandırmalarında [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), derleme zamanı hatasına neden olan üç koşulları karşılık gelen üç seçenek vardır. Bu ayarları nasıl kullanılacağı hakkında daha fazla bilgi için bkz: [IDE içinde uyarı yapılandırmalarını ayarlamak için](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) bu konuda daha sonra.  
+>  Üzerinde ayarlanmış uyarı yapılandırmalarında [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), bir derleme zamanı hatasına neden olan üç koşulları karşılık gelen üç seçenek vardır. Bu ayarları nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [IDE'de uyarı yapılandırmaları ayarlamak için](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) bu konuda.  
   
- `Option Strict Off` Deyimi kapanmadan hata ve uyarı tüm üç koşulları denetlemeyi dahi bu hatalar veya uyarılar için ilişkili IDE ayarları belirtin. `Option Strict On` Deyimi açar hata ve uyarı tüm üç koşulları denetlemeyi dahi bu hatalar veya uyarılar devre dışı bırakmak için ilişkili IDE ayarları belirtin.  
+ `Option Strict Off` Deyimi kapatır hata ve uyarı tüm üç koşullarını denetleme bile bu hataları veya uyarıları kapatma ilişkili IDE ayarları belirtin. `Option Strict On` Deyimi kapatır hata ve uyarı tüm üç koşullarını denetleme bile bu hataları veya uyarıları kapatmak için ilişkili IDE ayarları belirtin.  
   
- Kullandıysanız, `Option Strict` deyimi, bir dosyada başka bir kod deyimleri önce görünmelidir.  
+ Kullandıysanız, `Option Strict` deyimi, bir dosyada başka bir kod deyimlerini önce görünmelidir.  
   
- Ayarladığınızda `Option Strict` için `On`, Visual Basic veri türleri için tüm programlama öğeleri belirtilir denetler. Veri türleri açıkça belirtilen veya yerel türü çıkarımı kullanılarak belirtilen. Veri türleri için tüm programlama öğeleri belirtme, aşağıdaki nedenlerle önerilir:  
+ Ayarladığınızda `Option Strict` için `On`, Visual Basic veri türleri için tüm programlama öğeleri belirtildiğinden emin denetler. Veri türleri açıkça belirtilen veya yerel tür çıkarımı kullanılarak belirtilen. Tüm programlama öğeleriniz için veri türlerini belirtme, aşağıdaki nedenlerden dolayı önerilir:  
   
--   Değişkenleri ve parametreleri için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenize olanak sağlar.  
+-   Bu değişkenler ve parametreler için IntelliSense desteği sağlar. Bu kod yazarken özelliklerini ve diğer üyeleri görmenizi sağlar.  
   
--   Tür denetleme gerçekleştirmek derleyici sağlar. Tür denetleme, çalışma zamanında tür dönüştürme hataları nedeniyle başarısız olabilir deyimleri bulmanıza yardımcı olur. Ayrıca, bu yöntemleri desteklemeyen nesneleri yöntemlere çağrıları tanımlar.  
+-   Ancak, tür denetimi gerçekleştirmek derleyiciyi etkinleştirir. Tür denetimini çalışma zamanında tür dönüştürme hataları nedeniyle başarısız olabilir deyimleri bulmanıza yardımcı olur. Ayrıca, bu yöntemleri desteği olmayan nesneler üzerinde yöntemlere yapılan çağrılar da tanımlar.  
   
--   Kod yürütmeyi hızlandırır. Bunun bir nedeni olan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic derleyici onu atayacağını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmeniz gerekebilir `Object` ve performansını düşürür diğer veri türleri.  
+-   Onu kod yürütmeyi hızlandırır. Bunun bir nedeni olduğundan bir programlama öğesi için bir veri türü belirtmezseniz, Visual Basic Derleyicisi, atamasını `Object` türü. Derlenmiş kod arasında ileri ve geri dönüştürmek sahip olabileceği `Object` ve diğer veri türleri, performansı azaltır.  
   
-## <a name="implicit-narrowing-conversion-errors"></a>Örtük daraltma dönüştürme hataları  
- Daraltma dönüştürme örtük veri türü dönüşümü olduğunda örtük daraltma dönüştürme hataları oluşur.  
+## <a name="implicit-narrowing-conversion-errors"></a>Daraltma örtük dönüştürme hataları  
+ Bir daraltma dönüştürmesi olan bir örtük veri türü dönüştürme olduğunda daraltma örtük dönüştürme hataları oluşur.  
   
- Visual Basic birçok veri türü diğer veri türlerine dönüştürebilirsiniz. Bir veri türü değeri daha az duyarlılık veya daha küçük bir kapasite sahip bir veri türüne dönüştürme sırasında veri kaybı oluşabilir. Daraltma bir dönüştürme başarısız olursa bir çalışma zamanı hatası oluşur. `Option Strict` bunları engellemek için bu daraltma dönüşümleri, derleme zamanı bildirim sağlar. Daha fazla bilgi için bkz: [dolaylı ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ve [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic birçok veri türleri, diğer veri türlerine dönüştürme yapabilirsiniz. Bir veri türünün değeri daha az duyarlılık ya da daha küçük bir kapasite olan bir veri türüne dönüştürülürken veri kaybı oluşabilir. Böyle bir daraltma dönüşümü başarısız olursa, bir çalışma zamanı hatası oluşur. `Option Strict` bunları engellemek için bu daraltma dönüştürmelerini derleme zamanında bildirim sağlar. Daha fazla bilgi için [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ve [Widening ve daraltma dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- Hatalara neden olabilir. dönüşümleri ifadelerinde ortaya örtük dönüşümler içerir. Daha fazla bilgi için aşağıdaki konulara bakın:  
+ Hatalara neden olabilir. dönüştürme ifadelerinde oluşan örtük dönüşümler içerir. Daha fazla bilgi için aşağıdaki konulara bakın:  
   
 -   [+ İşleci](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
@@ -75,77 +75,77 @@ Option Strict { On | Off }
   
 -   [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- Ne zaman, birleştirme dizeleri kullanarak [& işleci](../../../visual-basic/language-reference/operators/concatenation-operator.md), tüm dönüştürmeler dizelere genişletme olması kabul edilir. Bu dönüşümleri oluşturmaz şekilde daraltma örtük dönüştürme hatası, bile `Option Strict` açıktır.  
+ Ne zaman, birleştirme dizeleri kullanarak [& işleci](../../../visual-basic/language-reference/operators/concatenation-operator.md), dizelere tüm dönüştürmeleri genişletme olması kabul edilir. Bir daraltma örtük dönüştürme hatası, olsa bile bu dönüştürmeleri oluşturmaz şekilde `Option Strict` açıktır.  
   
- Karşılık gelen parametresinden farklı bir veri türünde bir bağımsız bir yöntemini çağırdığınızda, daraltma dönüşümü bir derleme zamanı hatası durumunda neden `Option Strict` açıktır. Derleme zamanı hata Genişletme dönüşümü veya açık dönüştürme kullanarak önleyebilirsiniz.  
+ Karşılık gelen parametresinden farklı bir veri türüne sahip bir bağımsız değişken içeren bir yöntem çağırdığınızda bir daraltma dönüşümü bir derleme zamanı hatasına neden olur `Option Strict` açıktır. Bir genişletme dönüşümü veya açık bir dönüştürme kullanarak derleme zamanı hatası önleyebilirsiniz.  
   
- Örtük daraltma dönüştürme hataları öğelerde bulunan dönüştürmeleri için derleme zamanında gizlenir bir `For Each…Next` for döngüsü denetim değişkeni koleksiyonu. Bu meydana olsa bile `Option Strict` açıktır. Daha fazla bilgi için "Daraltma dönüşümleri" bölümüne bakın [For Each... Sonraki deyim](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+ Daraltma örtük dönüştürme hataları öğeleri dönüştürmelerinde derleme zamanında gizlenir bir `For Each…Next` döngü denetim değişkeni koleksiyonu. Bu meydana bile `Option Strict` açıktır. Daha fazla bilgi için bkz: "Daraltma dönüştürmeleri" bölümünde [her biri için... Sonraki deyimi](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="late-binding-errors"></a>Geç bağlama hataları  
- Bir özellik veya yöntem türü olarak bildirilmiş bir değişkenin atandığında bir nesne geç bağlama `Object`. Daha fazla bilgi için bkz: [erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Bir özellik veya yöntem türü olarak bildirilmiş bir değişken atandığında, nesnenin geç bağlama `Object`. Daha fazla bilgi için [erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
 ## <a name="implicit-object-type-errors"></a>Örtük nesne türü hataları  
- Örtük nesne türü hatalar ortaya uygun bir tür bulunamadığında bildirilen bir değişken için bu nedenle bir tür çıkarımı yapılan `Object` algılanır. Kullandığınızda bu öncelikle oluşur. bir `Dim` kullanmadan bir değişken bildirmek için deyimi bir `As` yan tümcesi ve `Option Infer` kapalıdır. Daha fazla bilgi için bkz: [Option Infer deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Visual Basic dil belirtimi](../../../visual-basic/reference/language-specification/index.md).  
+ Örtük nesne türü hatalar ortaya uygun bir tür olamaz bildirilmiş bir değişken için bu nedenle bir tür çıkarımı yapılan `Object` algılanır. Kullandığınızda öncelikle böyle bir `Dim` kullanmadan bir değişken bildirmek için deyimi bir `As` yan tümcesi ve `Option Infer` kapalıdır. Daha fazla bilgi için [Option Infer deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Visual Basic dil belirtimi](../../../visual-basic/reference/language-specification/index.md).  
   
- Yöntem parametreleri için `As` yan tümcesi isteğe bağlı ise `Option Strict` kapalıdır. Ancak, herhangi bir parametre kullanıyorsa, bir `As` yan tümcesi, bunların tümü gerekir kullanır. Varsa `Option Strict` açıktır, `As` her parametre tanımı yan tümcesi gereklidir.  
+ Yöntem parametreleri için `As` yan tümcesi ise isteğe bağlı ise `Option Strict` kapalıdır. Ancak, herhangi bir parametre kullanıyorsa bir `As` yan tümcesi, bunların tümü gerekir kullanır. Varsa `Option Strict` açıktır, `As` yan tümcesi için her bir parametre tanımında gereklidir.  
   
- Kullanmadan bir değişken bildirirseniz bir `As` yan tümcesi ve ayarlamak `Nothing`, bir değişken türü `Object`. Bu durumda derleme zamanı hata oluşmaz zaman `Option Strict` açıktır ve `Option Infer` açıktır. Bunun bir örneği `Dim something = Nothing`.  
+ Kullanmadan bir değişken bildirirseniz bir `As` yan tümcesi ve `Nothing`, değişkeni bir tür olan `Object`. Bu durumda hiçbir derleme zamanı hatası oluşur, `Option Strict` açıktır ve `Option Infer` açıktır. Bunun bir örneği `Dim something = Nothing`.  
   
 ### <a name="default-data-types-and-values"></a>Varsayılan veri türleri ve değerleri  
- Veri türü ve Başlatıcı belirtmenin çeşitli birleşimleri sonuçları aşağıdaki tabloda açıklanmaktadır bir [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Aşağıdaki tabloda çeşitli birleşimlerini başlatıcısında ve veri türünü belirtmenin sonuçlarını açıklar bir [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 |Belirtilen veri türü?|Belirtilen başlatıcı?|Örnek|Sonuç|  
 |---|---|---|---|  
-|Hayır|Hayır|`Dim qty`|Varsa `Option Strict` olan kapalı (varsayılan), değişkenini ayarlamak `Nothing`.<br /><br /> Varsa `Option Strict` olduğundan, bir derleme zamanı hatası oluşur.|  
-|Hayır|Evet|`Dim qty = 5`|Varsa `Option Infer` Başlatıcı değişken alır veri türü (varsayılan), olduğunda. Bkz: [yerel türü çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` kapalıysa, değişken veri türü alır `Object`.<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` olduğundan, bir derleme zamanı hatası oluşur.|  
-|Evet|Hayır|`Dim qty As Integer`|Değişken veri türü için varsayılan değer için başlatılır. Daha fazla bilgi için bkz: [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcı'veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|  
+|Hayır|Hayır|`Dim qty`|Varsa `Option Strict` olan kapalı (varsayılan), değişkeni ayarlanır `Nothing`.<br /><br /> Varsa `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|  
+|Hayır|Evet|`Dim qty = 5`|Varsa `Option Infer` değişken alır veri öğesinin başlatıcısını yazın (varsayılan), olan. Bkz: [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` kapalıysa, değişken veri türünü alan `Object`.<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|  
+|Evet|Hayır|`Dim qty As Integer`|Değişken veri türü için varsayılan değer için başlatılır. Daha fazla bilgi için [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcı veri türü belirtilen veri türüne dönüştürülebilir değil, bir derleme zamanı hatası oluşur.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Ne zaman Option Strict deyimi mevcut değil  
- Kaynak kodu içermiyorsa bir `Option Strict` deyimi, **seçeneği katı** ayarı [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. **Derle sayfası** hataya neden olan koşulları üzerinde ek denetim sağlayan ayarları vardır.  
+ Kaynak kodu içermiyorsa bir `Option Strict` deyimi **katı tanımlama seçeneği** ayarını [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. **Derle sayfası** hataya neden olan koşulları üzerinde ek denetim sağlayan ayarları vardır.  
   
- Komut satırı derleyicisi kullanıyorsanız, kullanabileceğiniz [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneği için bir ayar belirtmek için `Option Strict`.  
+ Komut satırı derleyicisini kullanıyorsanız, kullanabileceğiniz [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneği için bir ayarı belirtmek `Option Strict`.  
   
-### <a name="to-set-option-strict-in-the-ide"></a>Option Strict IDE'de ayarlamak için  
+### <a name="to-set-option-strict-in-the-ide"></a>Option Strict IDE içinde ayarlamak için  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-2.  Üzerinde **derleme** sekmesinde, değer kümesinde **Option Strict** kutusu.  
+2.  Üzerinde **derleme** sekmesinde, değer kümesi'nde **Option Strict** kutusu.  
   
-###  <a name="conditions"></a> IDE içinde uyarı yapılandırmalarını ayarlamak için  
- Kullandığınızda [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları ek denetime sahiptir. **Uyarı yapılandırmaları** bölümünü **derle sayfası** derleme zamanı hatasına neden olan üç koşulları karşılık gelen ayarlara sahip olduğunda `Option Strict` açıktır. Bu ayarlar aşağıda verilmiştir:  
+###  <a name="conditions"></a> IDE'de uyarı yapılandırmaları ayarlamak için  
+ Kullanırken [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları üzerinde ek denetim vardır. **Uyarı yapılandırmaları** bölümünü **derle sayfası** karşılık gelen bir derleme zamanı hatasına neden olan üç koşulları ayarlarına sahip olduğunda `Option Strict` açıktır. Bu ayarlar şunlardır:  
   
 -   **Örtük dönüştürme**  
   
--   **Geç bağlama; Çalışma zamanında çağrısı başarısız olabilir**  
+-   **Geç bağlama; Çağrı çalışma zamanında başarısız olabilir**  
   
--   **Örtük türü; kabul nesnesi**  
+-   **Örtük tür; Nesne varsayıldı**  
   
- Ayarladığınızda **Option Strict** için **üzerinde**, bu uyarı yapılandırma ayarları üçünü kümesine **hata**. Ayarladığınızda **Option Strict** için **kapalı**, tüm üç ayarları ayarlamak **hiçbiri**.  
+ Ayarladığınızda **Option Strict** için **üzerinde**, bu uyarı yapılandırma ayarlarını üç kümesine **hata**. Ayarladığınızda **Option Strict** için **kapalı**, tüm üç ayarları kümesine **hiçbiri**.  
   
- Tek tek her uyarı yapılandırma ayarını değiştirebilirsiniz **hiçbiri**, **uyarı**, veya **hata**. Tüm üç uyarı yapılandırma ayarları ayarlandıysa **hata**, `On` görünür `Option strict` kutusu. Üç ayarlandıysa **hiçbiri**, `Off` bu kutuda görünür. Bu ayarlar, herhangi bir birleşimini için **(özel)** görüntülenir.  
+ Her uyarı yapılandırma ayarı ayrı ayrı değiştirebileceğiniz **hiçbiri**, **uyarı**, veya **hata**. Üç uyarı yapılandırma ayarlarını ayarlandıysa **hata**, `On` görünür `Option strict` kutusu. Üç ayarlandıysa **hiçbiri**, `Off` bu kutuda görünür. Bu ayarlar, diğer herhangi bir birleşimini için **(özel)** görünür.  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Option Strict varsayılan ayar yeni projeler için ayarlamak için  
- Bir proje oluşturduğunuzda **Option Strict** ayarı **derleme** sekmesini ayarlanmış **Option Strict** ayarı **seçenekleri** iletişim kutusu.  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Yeni projeler için Option Strict varsayılan ayarını ayarlamak için  
+ Bir proje oluşturduğunuzda **Option Strict** ayarını **derleme** sekmesinde ayarlanmış **Option Strict** ayarı **seçenekleri** iletişim kutusu.  
   
- Ayarlamak için `Option Strict` bu iletişim kutusunda, üzerinde **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda, genişletin **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarı **VB varsayılanları** olan `Off`.  
+ Ayarlanacak `Option Strict` bu iletişim kutusunda, üzerinde **Araçları** menüsünde tıklayın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarda **VB varsayılanları** olduğu `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Option Strict komut satırında ayarlamak için  
- Dahil [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneği **vbc** komutu.  
+ Dahil [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) derleyici seçeneğini **vbc** komutu.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler, derleme zamanı hatalardır daraltma dönüşümleri örtük tür dönüşümleri tarafından göstermektedir. Bu kategori hataların karşılık gelen **örtük dönüşüm** üzerinde koşul **derle sayfası**.  
+ Aşağıdaki örnekler, derleme zamanı hatalarına daraltma dönüşümleri örtük tür dönüştürmelerini neden gösterir. Bu hata kategorisi karşılık gelen **örtük dönüştürme** üzerinde koşul **derle sayfası**.  
   
  [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, geç bağlama tarafından neden bir derleme zamanı hata gösterir. Bu kategori hataların karşılık gelen **Late bağlama; çağrısı çalışma zamanında başarısız olabilir** üzerinde koşul **derle sayfası**.  
+ Aşağıdaki örnek, bir derleme zamanı hatası geç bağlama tarafından neden gösterir. Bu hata kategorisi karşılık gelen **Late bağlama; çağrı çalışma zamanında başarısız olabilir** üzerinde koşul **derle sayfası**.  
   
  [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler örtük bir türü ile bildirilmedi değişkenleri nedeni hataları göstermek `Object`. Bu kategori hataların karşılık gelen **örtük türü; kabul nesne** üzerinde koşul **derle sayfası**.  
+ Aşağıdaki örnek örtük bir türü ile bildirilen değişkenler kaynaklanan hatalar gösterir `Object`. Bu hata kategorisi karşılık gelen **örtük tür; nesne kabul** üzerinde koşul **derle sayfası**.  
   
  [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
   
@@ -162,4 +162,4 @@ Option Strict { On | Off }
  [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
  [Office Çözümlerinde Geç Bağlama](https://msdn.microsoft.com/library/3xxe951d)  
  [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [Visual Basic Varsayılanları, projeler, Seçenekler iletişim kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+ [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

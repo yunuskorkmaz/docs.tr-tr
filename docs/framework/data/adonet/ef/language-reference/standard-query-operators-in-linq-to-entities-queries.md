@@ -1,80 +1,80 @@
 ---
 title: LINQ to Entities sorgularında standart sorgu işleçleri
-ms.date: 03/30/2017
+ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238569"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
-Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu de nasıl bu bilgileri sıralanmış, gruplandırılmış ve, döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntemler kümesi sağlar. Bu yöntemlerin çoğu sıraları üzerinde çalışır; Bu bağlamda, türü uygulayan bir nesne sırasıdır <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevi filtreleme, yansıtma, toplama, sıralama, gruplandırma, disk belleği ve daha fazlasını içerir. Bazıları, böylece sorgu ifade sözdizimi kullanılarak çağrılabilir işleçleri anahtar sözcüğü sözdizimi ayrılmış standart sorgu sık kullanılır. Bir sorgu ifadesi, bir sorgu tabanlı yöntemini eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi yan tümceleri derleme zamanında sorgu yöntemleri çağrıları içine çevrilir. Eşdeğer sorgu ifadesi yan tümceleri sahip standart sorgu işleçleri listesi için bkz: [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntem sunmaktadır. Bu yöntemlerin çoğu dizileri üzerinde çalışır; Bu bağlamda türü uygulayan bir nesne dizisidir <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevselliği, filtreleme, projeksiyon, toplama, sıralama, gruplandırma, sayfalama ve daha fazlasını içerir. Bazıları, standart sorgu işleçleri anahtar sözcüğü sözdizimi adanmış böylece sorgu ifade sözdizimi kullanılarak çağrılabilir sık kullanılır. Bir sorgu ifadesinde, bir sorgu yöntemi tabanlı eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir. Eşdeğer sorgu ifadesi tümceleri sahip standart sorgu işleçleri bir listesi için bkz. [standart sorgu işleçlerine genel bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
- Standart sorgu işleçleri tüm desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için bkz: [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konuda özgü standart sorgu işleçleri hakkında bilgi verilmektedir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Bilinen sorunlar hakkında daha fazla bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorguları, bkz: [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Standart sorgu işleçlerinin tüm desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konuda özgü standart sorgu işleçleri hakkında bilgi sağlanır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Bilinen sorunlar hakkında daha fazla bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgularını görmek [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
-## <a name="projection-and-filtering-methods"></a>Projeksiyon ve yöntemleri filtreleme  
- *Projeksiyon* bir sonuç kümesi istenen forma öğelerini dönüştürme için başvuruyor. Örneğin, bir alt özellikler kümesini yansıtabilirsiniz sonuç her nesnesinden ayarlamanız, bir özellik proje ve matematiksel bir hesaplama gerçekleştirmek veya nesnenin tamamı sonuç kümesinden yansıtabilirsiniz. Projeksiyon yöntemleri `Select` ve `SelectMany`.  
+## <a name="projection-and-filtering-methods"></a>Öngörü ve yöntemleri filtreleme  
+ *Projeksiyon* öğelerini bir sonuç kümesi istenilen biçime dönüştürme için ifade eder. Örneğin, bir özellik alt kümesi yansıtabilirsiniz sonuçta her bir nesneden ayarlamanız gerekir, proje bir özelliği ve bir matematiksel bir hesaplama gerçekleştirmek veya sonuç kümesinin tamamını nesneden yansıtabilirsiniz. Projeksiyon yöntemler `Select` ve `SelectMany`.  
   
- *Filtreleme* belirtilen bir koşul eşleşen öğeleri içeren sonuç kısıtlama işlemi başvuruyor. Filtreleme yöntemi `Where`.  
+ *Filtreleme* sonuç kümesini, belirtilen bir koşulla eşleşen öğeleri içerecek şekilde sınırlama işlemi için ifade eder. Filtreleme yöntemidir `Where`.  
   
- Projeksiyon ve yöntemleri filtreleme çoğu aşırı desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], konumsal bir bağımsız değişken kabul olanlar dışında.  
+ Projeksiyon ve yöntemleri filtreleme çoğu aşırı yüklemeler desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], konumsal bağımsız değişken kabul eden olanlar hariç.  
   
-## <a name="join-methods"></a>Yöntemleri katılma  
- Birleştirme, birbirlerine gezinebilir hiçbir ilişki sahip veri kaynaklarına hedef sorgularda önemli bir işlemdir. İki veri kaynaklarının bir birleştirme nesnelerin bir veri kaynağı bir ortak özniteliği ya da özellik paylaşan diğer veri kaynağı nesneleri ile ilişkidir. Birleşim yöntemleri `Join` ve `GroupJoin`.  
+## <a name="join-methods"></a>Yöntemleri katılın  
+ Birleştirme, birbiriyle gezilebilir hiçbir ilişkisi olan veri kaynaklarını hedefleyen sorgularda önemli bir işlemdir. Birleşim iki veri kaynaklarının bir veri kaynağı nesneleri bir ortak özniteliği veya özelliği paylaşan diğer veri kaynağı nesneleri ile işbirliğidir. Birleşim yöntemleri `Join` ve `GroupJoin`.  
   
- Birleşim yöntemlerinin çoğu aşırı, kullananlar dışında desteklenen bir <xref:System.Collections.Generic.IEqualityComparer%601>. Veri kaynağına karşılaştırıcı çevrilemiyor nedeni budur.  
+ Birleştirme yöntemlerinin çoğu aşırı yüklemeler, kullananlar hariç desteklenen bir <xref:System.Collections.Generic.IEqualityComparer%601>. Karşılaştırıcı veri kaynağına dönüştürülemeyen olmasıdır.  
   
 ## <a name="set-methods"></a>Yöntemler Ayarlama  
- Ayarlama işlemleri LINQ varlığının veya yokluğunun içinde aynı veya başka bir koleksiyon (ya da kümesi) eşdeğer öğelerinin kendi sonuç kümeleri temel sorgu işlemleri ' dir. Set yöntemleri `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect`, ve `Union`.  
+ LINQ ayarlama işlemleri, varlığı veya yokluğu, eşdeğer öğelerin aynı veya başka bir koleksiyonu (veya kümesi), sonuç kümesi temel sorgu işlemleri ' dir. Set yöntemleri `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect`, ve `Union`.  
   
- Set yöntemlerinin çoğu aşırı desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], ancak bazı nesnelere LINQ ile karşılaştırıldığında davranış farklılıkları. Ancak, kullanan yöntemleri Ayarla bir <xref:System.Collections.Generic.IEqualityComparer%601> karşılaştırıcı veri kaynağına dönüştürülemeyen çünkü desteklenmez.  
+ Kümesi yöntemlerinin çoğu aşırı yüklemeler desteklenir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], LINQ to Objects'in karşılaştırıldığında davranışı bazı farklılıklar olsa. Ancak, kullanan yöntemleri Ayarla bir <xref:System.Collections.Generic.IEqualityComparer%601> karşılaştırıcı veri kaynağına dönüştürülemeyen için desteklenmez.  
   
 ## <a name="ordering-methods"></a>Sıralama yöntemleri  
- Sıralama ya da sıralama, bir veya daha fazla özniteliklerini temel alarak bir sonuç kümesi öğeleri sıralama için ifade eder. Birden fazla sıralama ölçütü belirterek, bir grup içindeki TIES bozulabilir.  
+ Sıralama veya sıralama, bir veya daha fazla özniteliklerine dayalı bir sonuç kümesi öğelerinin sıralama için ifade eder. Birden fazla sıralama ölçütü belirterek, bir grup içindeki TIES bozabilir.  
   
- Sıralama yöntemlerinin çoğu aşırı, kullananlar dışında desteklenen bir <xref:System.Collections.Generic.IComparer%601>. Veri kaynağına karşılaştırıcı çevrilemiyor nedeni budur. Sıralama yöntemleri `OrderBy`, `OrderByDescending`, `ThenBy`, `ThenByDescending`, ve `Reverse`.  
+ Sıralama yöntemlerinin çoğu aşırı yüklemeler, kullananlar hariç desteklenen bir <xref:System.Collections.Generic.IComparer%601>. Karşılaştırıcı veri kaynağına dönüştürülemeyen olmasıdır. Sıralama yöntemleri `OrderBy`, `OrderByDescending`, `ThenBy`, `ThenByDescending`, ve `Reverse`.  
   
- Sorgu veri kaynağı üzerinde çalıştırıldığı için sıralama davranışı CLR sorgular farklı olabilir. Sıralama, sıralama, kanji durumu gibi seçenekler sıralama ve null sıralama, veri kaynağında ayarlanabilir olmasıdır. Veri kaynağı bağlı olarak bu sıralama seçenekleri CLR daha farklı sonuçlar doğurabilir.  
+ Sorgu veri kaynağında yürütülen olduğundan, sıralama davranışını CLR içinde yürütülen sorgular farklılık gösterebilir. Sıralama, sıralama, kanji çalışması gibi seçeneklere sıralama ve null sıralama, veri kaynağında ayarlanabilir olmasıdır. Veri kaynağına bağlı olarak, bu sıralama seçenekleri CLR değerinden farklı sonuçlar üretebilir.  
   
- Birden fazla sıralama işlemi aynı anahtar Seçici belirtirseniz, yinelenen sıralama oluşturulur. Bu geçerli değildir ve bir özel durum.  
+ Birden fazla sıralama işlemi aynı anahtar Seçici'yi belirtirseniz, yinelenen sıralama oluşturulur. Bu geçerli değildir ve bir özel durum oluşturulur.  
   
 ## <a name="grouping-methods"></a>Gruplandırma yöntemleri  
- Gruplandırma, böylece her grup içindeki öğeleri ortak bir özniteliği paylaşan veri gruplar halinde yerleştirmek için ifade eder. Gruplandırma yöntemi `GroupBy`.  
+ Gruplandırma, böylece ortak bir özniteliği her gruptaki öğe paylaştırmak veri gruplar halinde yerleştirmeye ifade eder. Gruplandırma yöntemi `GroupBy`.  
   
- Gruplandırma yöntemlerinin çoğu aşırı, kullananlar dışında desteklenen bir <xref:System.Collections.Generic.IEqualityComparer%601>. Veri kaynağına karşılaştırıcı çevrilemiyor nedeni budur.  
+ Gruplandırma yöntemlerinin çoğu aşırı yüklemeler, kullananlar hariç desteklenen bir <xref:System.Collections.Generic.IEqualityComparer%601>. Karşılaştırıcı veri kaynağına dönüştürülemeyen olmasıdır.  
   
- Gruplandırma yöntemleri için anahtar Seçici ayrı bir alt sorgu kullanarak veri kaynağına eşlenir. Karşılaştırma için ilgili sorunlar da dahil olmak üzere veri kaynağını semantiği kullanarak anahtar Seçici karşılaştırma alt sorgu yürütülür `null` değerleri.  
+ Gruplandırma yöntemleri anahtar Seçici için ayrı bir alt sorgu kullanarak veri kaynağına eşlenir. Karşılaştırma için ilgili sorunlar da dahil olmak üzere, veri kaynağının semantiği kullanarak anahtar Seçici karşılaştırma alt sorgu yürütülür `null` değerleri.  
   
-## <a name="aggregate-methods"></a>Toplama yöntemleri  
- Bir toplama işlemi, tek bir değer değerler koleksiyonundan hesaplar. Örneğin, bir ayın eşitleyeceğini günlük sıcaklık değerlerin gelen ortalama günlük sıcaklık hesaplama bir toplama işlemi olur. Birleşik yöntemleri `Aggregate`, `Average`, `Count`, `LongCount`, `Max`, `Min`, ve `Sum`.  
+## <a name="aggregate-methods"></a>Toplama yöntemi  
+ Bir toplama işlemi, değerlerin bir koleksiyonunu tek bir değeri hesaplar. Örneğin, bir aya ait günlük sıcaklık değerleri değerinde gelen günlük ortalama sıcaklık hesaplama bir toplama işlemi olur. Toplama yöntemleridir `Aggregate`, `Average`, `Count`, `LongCount`, `Max`, `Min`, ve `Sum`.  
   
- Birleşik yöntemlerinin çoğu aşırı desteklenir. Null değerler için ilgili davranışı için veri kaynağı semantiğini toplama yöntemlerini kullanın. Null değerler dahil edildiğinde toplama yöntemleri davranışını hangi arka uç veri kaynağı bağlı olarak kullanılıyor, farklı olabilir. Veri kaynağının özelliklerini kullanarak toplama yöntemi davranışı CLR yöntemleri beklenenden farklı olabilir. Örneğin, varsayılan davranışı `Sum` SQL Server'da yöntemi bir özel durum atma yerine null tüm değerleri yok sayın etmektir.  
+ Toplama yöntemlerinin çoğu aşırı yüklemeler desteklenir. Null değerler için ilgili davranışı için veri kaynağı semantiğine toplama yöntemleri kullanın. Null değerler söz konusu olduğunda toplama yöntemleri davranışını hangi arka uç veri kaynağına bağlı olarak kullanılıyor, farklı olabilir. Veri kaynağı semantiği kullanarak toplama yöntemi davranışı CLR yöntemlerinden beklenenden farklı olabilir. Örneğin, varsayılan davranışı `Sum` SQL Server'da yöntemi olan bir özel durum oluşturmaktansa null değerleri yok sayılacak.  
   
- Taşma gibi toplama kaynaklanan tüm özel durumlar `Sum` işlev, sorgu sonuçları materialization sırasında veri kaynağı özel durumları veya Entity Framework özel durumlar atılır.  
+ Toplama, bir taşmasından gibi kaynaklanan özel durumları `Sum` işlev, sorgu sonuçları materialization sırasında veri kaynağı özel durumları veya Entity Framework özel durumlar olarak atılır.  
   
- Bir dizisi üzerinde bir hesaplama gibi ilgili bu yöntemleri için `Sum` veya `Average`, gerçek hesaplama sunucu üzerinde gerçekleştirilir. Sonuç olarak, türü dönüşümleri duyarlık kaybına sunucuda oluşabilir ve sonuçları CLR anlamsallarını kullanarak beklenenden farklı olabilir.  
+ Bir hesaplama gibi bir dizisi üzerinde içeren bu yöntemleri için `Sum` veya `Average`, gerçek hesaplaması, sunucu üzerinde gerçekleştirilir. Sonuç olarak, türü dönüşümleri sunucuda kesinlik kaybı oluşabilir ve sonuçları CLR semantiği kullanarak beklenenden farklı olabilir.  
   
- Varsayılan davranışı toplama yöntemleri null/null olmayan değerler için aşağıdaki tabloda gösterilmiştir:  
+ Varsayılan davranışı için null/boş olmayan değerlerinin toplama yöntemleri, aşağıdaki tabloda gösterilmiştir:  
   
-|Yöntem|Veri yok|Tüm null değerler|Bazı null değerler|Hiçbir null değerler|  
+|Yöntem|Veri yok|Tüm null değerler|Bazı null değerler|Null değer yok|  
 |------------|-------------|---------------------|----------------------|--------------------|  
-|`Average`|Null değeri döndürür.|Null değeri döndürür.|Bir dizisinde null olmayan değerlerin ortalamasını döndürür.|Sayısal değerler dizisi ortalamasını hesaplar.|  
-|`Count`|0 döndürür|Null değerlerin sayısını sırada döndürür.|Boş ve null olmayan değerlerin sayısını sırada döndürür.|Dizide öğe sayısını döndürür.|  
-|`Max`|Null değeri döndürür.|Null değeri döndürür.|En büyük değeri null olmayan bir sırada döndürür.|En büyük değer bir sırada döndürür.|  
-|`Min`|Null değeri döndürür.|Null değeri döndürür.|Minimum değeri null olmayan bir sırada döndürür.|En düşük değer bir sırada döndürür.|  
-|`Sum`|Null değeri döndürür.|Null değeri döndürür.|Null olmayan değer toplamını bir sırada döndürür.|Sayısal değerler dizisi toplamını hesaplar.|  
+|`Average`|Null değeri döndürür.|Null değeri döndürür.|Bir dizideki null olmayan değerlerin ortalamasını döndürür.|Bir dizi sayısal değerlerin ortalamasını hesaplar.|  
+|`Count`|0 döndürür|Null değerlerin sayısını, sırasını döndürür.|Dizide null ve boş olmayan değerlerin sayısını döndürür.|Dizideki öğelerin sayısını döndürür.|  
+|`Max`|Null değeri döndürür.|Null değeri döndürür.|Bir dizideki en büyük boş olmayan bir değer döndürür.|Bir dizideki en büyük değeri döndürür.|  
+|`Min`|Null değeri döndürür.|Null değeri döndürür.|Bir dizisinde en az bir null olmayan değer döndürür.|Bir dizideki en küçük değeri döndürür.|  
+|`Sum`|Null değeri döndürür.|Null değeri döndürür.|Bir dizideki null olmayan değer toplamını döndürür.|Bir dizi sayısal değerlerin toplamını hesaplar.|  
   
 ## <a name="type-methods"></a>Tür yöntemleri  
- Tür dönüştürmeleri ve test etme ile ilgili iki LINQ yöntemleri bağlamında desteklenir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu yalnızca desteklenen türler uygun eşleme türleri anlamına gelir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] türü. Bu tür bir listesi için bkz: [kavramsal Model türü (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Türü yöntemleri `Convert` ve `OfType`.  
+ Tür dönüştürme ve test ile ilgilenirken siz iki LINQ yöntemleri bağlamında desteklenir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu yalnızca desteklenen türleri uygun eşleme türleri olduğu anlamına gelir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] türü. Bu tür bir listesi için bkz. [kavramsal Model türleri (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Tür yöntemler `Convert` ve `OfType`.  
   
- `OfType` varlık türleri için desteklenir. `Convert` kavramsal model ilkel türler için desteklenir.  C# `is` ve `as` yöntemleri de desteklenir.  
+ `OfType` varlık türleri için desteklenir. `Convert` kavramsal model temel türler için desteklenir.  C# `is` ve `as` yöntemleri de desteklenir.  
   
-## <a name="paging-methods"></a>Disk belleği yöntemleri  
- Sayfalandırma işlemleri tek, belirli bir öğe bir dizisini döndürür. Öğe yöntemleri `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take`, `TakeWhile`.  
+## <a name="paging-methods"></a>Disk belleği yöntemlerinin  
+ Sayfalandırma işlemleri tek bir öğe veya birden çok öğe bir dizisini döndürür. Desteklenen disk belleği yöntemler `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, ve `Take`.  
   
- Disk belleği yöntemleri sayısı, veri kaynağına veya veri kaynağı üzerinde kümelerinin örtük sıralama olmaması işlevleri eşlemek için bağlanamama ya da son desteklenmez. Varsayılan değer döndüren yöntemler kavramsal model temel eleman türleri ve başvuru türleri null varsayılanları ile kısıtlanır. Boş bir dizi üzerinde yürütülen disk belleği yöntemleri null döndürür.  
+ Disk belleği yöntemlerinin sayısı, söz konusu veri kaynağına veya olmaması veri kaynağındaki ayarlar örtük sıralama işlevleri eşlemek için ya da son desteklenmez. Varsayılan bir değer döndüren yöntemler kavramsal model ilkel türler ve null Varsayılanları başvuru türleriyle kısıtlanır. Boş bir dizi üzerinde yürütülen disk belleği yöntemlerinin null döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  

@@ -1,41 +1,41 @@
 ---
-title: Fiziksel yapısı ve mantıksal mimarisi
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Fiziksel yapısı ve mantıksal mimarisi
+title: Mantıksal mimari ile fiziksel mimari karşılaştırması
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mantıksal mimari ile fiziksel mimari karşılaştırması
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238422"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Fiziksel yapısı ve mantıksal mimarisi
+# <a name="logical-architecture-versus-physical-architecture"></a>Mantıksal mimari ile fiziksel mimari karşılaştırması
 
-Bu noktada durdurmak ve mantıksal mimarisi ve fiziksel mimarisi ve bu mikro hizmet tabanlı uygulamalar tasarımını nasıl uygulandığı arasında ayrım tartışmak yararlıdır.
+Bu noktada durdurmak ve mantıksal mimari ile fiziksel mimari ve nasıl Bu mikro hizmet tabanlı uygulama tasarımı için geçerlidir arasında ayrım tartışmak kullanışlıdır.
 
-Başlamak için mikro hizmetler oluşturma herhangi belirli teknolojisinin kullanılmasına gerektirmez. Örneğin, Docker kapsayıcıları mikro hizmet tabanlı bir mimari oluşturmak için zorunlu değildir. Bu mikro düz işlemleri olarak da çalıştırılabilir. Mikro mantıksal bir mimaridir.
+Başlamak için mikro hizmetler oluşturma herhangi belirli bir teknoloji kullanımı gerektirmez. Örneğin, Docker kapsayıcıları, mikro hizmet tabanlı bir mimari oluşturmak için zorunlu değildir. Bu mikro hizmetler ayrıca düz işlemleri olarak çalıştırabilir. Mikro hizmetler mantıksal bir mimaridir.
 
-Ayrıca, bile bir mikro hizmet fiziksel olarak tek hizmet, işlem veya kapsayıcı olarak uygulanabilir (Basitlik'ın artırmak amacıyla için olan ilk sürümünde uygulanan yaklaşıma [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), bu eşlik arasında birçok düzinelerce veya hatta yüzlerce Hizmetleri oluşan büyük ve karmaşık bir uygulama oluşturduğunuzda iş mikro hizmet ve fiziksel hizmet veya kapsayıcı mutlaka her durumda gerekli değildir.
+Ayrıca, bile bir mikro hizmet, fiziksel bir tek hizmet, işlem veya kapsayıcı uygulanabilir (Basitlik'ın çok için olan ilk sürümünde uygulanan yaklaşıma [hizmetine](http://aka.ms/MicroservicesArchitecture)), bu arasındaki eşlik birçok düzinelerce veya hatta yüzlerce hizmeti oluşan büyük ve karmaşık bir uygulama oluşturduğunuzda iş mikro hizmet ve fiziksel hizmet veya kapsayıcı mutlaka her durumda gerekli değildir.
 
-Bu yerdir bir uygulamanın mantıksal mimarisi ve fiziksel yapısı arasında fark yoktur. Mantıksal mimarisi ve bir sistem mantıksal sınırlarının mutlaka fiziksel veya dağıtım mimarisi için bire bir eşleme değil. Olabilir, ancak genellikle yok.
+Burada bir uygulamanın mantıksal mimari ile fiziksel mimari arasında bir fark yoktur. Bir sistemin mantıksal sınırları ve mantıksal mimariyi mutlaka bire bir fiziksel veya dağıtım mimarisinin eşlemeyin. Olabilir, ancak genellikle yok.
 
-Belirli iş mikro veya sınırlanmış bağlamları belirlemiş ancak bir tek hizmet (örneğin, bir ASP.NET Web API) ya da her iş mikro hizmet için tek Docker kapsayıcısı oluşturarak bunları uygulamak için en iyi yolu her zaman olduğu gelmez. Her iş mikro hizmet belirten bir kural sahip tek bir hizmet kullanarak uygulanacak olan veya çok katı bir kapsayıcısıdır.
+Belirli iş mikro hizmetler ve sınırlanmış Bağlamlar belirlemiş ancak bir tek hizmet (örneğin, ASP.NET Web API'si) ya da her iş mikro hizmet için tek bir Docker kapsayıcısı oluşturarak bunları uygulamak için en iyi yolu her zaman olduğu gelmez. Her iş mikro hizmet söyleyen bir kural sahip tek bir hizmet kullanılarak uygulanabilir veya kapsayıcı çok katı.
 
-Bu nedenle, bir iş mikro ilişkisindeki bağlam (veya değil) çakıştığı mantıksal bir mimari mi fiziksel mimarisine sahip. Bir iş mikro hizmet veya sınırlanmış bağlam kodu ve bağımsız olarak sürümlü olması durumuna dağıtılan ve ölçeklendirilmiş vererek otonom olması gerektiğini önemli noktasıdır.
+Bu nedenle, bir iş mikro hizmet içerik sınırlanmış (veya etkinleştirmezsiniz) çakıştığı bir mantıksal mimari mi ile fiziksel mimari. Önemli olan nokta bir iş mikro hizmet veya içerik sınırlanmış kod birbirinden bağımsız sürümlere olması durumuna dağıtılan ve ölçeklendirilmiş vererek otonom olmasıdır.
 
-Şekil 4-8'de görüldüğü gibi katalog iş mikro birkaç Hizmetleri veya işlemleri oluşan. Bunlar, birden çok ASP.NET Web API Hizmetleri veya diğer her türlü HTTP veya diğer herhangi bir protokolünü kullanarak Hizmetleri olabilir. Daha da önemlisi, bu hizmetler aynı iş etki alanına göre bağlı olduğu sürece Hizmetleri aynı veri paylaşabilir.
+Şekil 4-8 gösterildiği gibi çeşitli hizmetler ve işlemlerin Kataloğu iş mikro hizmet oluşan. Bunlar, birden çok ASP.NET Web API Hizmetleri veya herhangi bir HTTP veya başka bir protokol kullanarak hizmetler türden olabilir. Daha da önemlisi, bu hizmetler aynı iş etki alanına göre birbirine bağlı olduğu sürece Hizmetleri aynı veri paylaşabilir.
 
 ![](./media/image8.png)
 
-**Şekil 4-8**. Birden fazla fiziksel hizmetleriyle iş mikro hizmet
+**Şekil 4-8**. Birden fazla fiziksel Hizmetleri ile iş mikro hizmet
 
-Web API hizmeti arama hizmeti olarak aynı veri hedeflediğinden örnek Hizmetleri'nde aynı veri modeli paylaşır. İş mikro hizmet fiziksel uygulamasında her iç hizmetlerin yukarı veya aşağı gerektiğinde ölçeklendirmek için bu işlevselliği bölme şekilde. Belki de Web API'si hizmeti genellikle ihtiyaçlarını daha arama hizmeti daha veya tersi örnekler.)
+Web API'si hizmeti arama hizmetinin aynı verilere hedeflediğinden örnekte Hizmetleri aynı veri modeli paylaşın. Bu nedenle, iş mikro hizmet fiziksel uygulamasında, bu iç hizmetlerinin her biri yukarı veya aşağı gerektiği şekilde ölçeklendirebilirsiniz şekilde işlevselliği bölüyor. Belki de Web API'si hizmeti genellikle ihtiyaçlarını daha fazla arama hizmeti veya tam tersi örnekleri.
 
-Kısacası, mikro mantıksal mimarisi fiziksel dağıtım mimarisi ile çakıştığı her zaman yok. Biz bir mikro Bahsediyor her bu kılavuzda, bir iş ya da bir veya daha fazla hizmet için eşleme mantıksal mikro hizmet demek isteriz. Çoğu durumda bu tek bir hizmeti olacaktır, ancak daha fazla olabilir.
+Kısacası, mikro hizmetler mantıksal mimarisini fiziksel dağıtım mimarisi ile çakıştığı her zaman yok. Her bir mikro hizmet bahsetmek Biz bu kılavuzda, bir işletmeyi ya da bir veya daha fazla hizmet için eşleyebilirsiniz mantıksal mikro hizmet demek isteriz. Çoğu durumda, bu tek bir hizmet olacaktır, ancak daha fazla olabilir.
 
 
 >[!div class="step-by-step"]
 [Önceki](data-sovereignty-per-microservice.md)
-[sonraki](distributed-data-management.md)
+[İleri](distributed-data-management.md)

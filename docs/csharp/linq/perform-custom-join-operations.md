@@ -3,12 +3,12 @@ title: Özel birleştirme işlemleri (C# üzerinde LINQ)
 description: C# dilinde özel LINQ birleştirme işlemleri gerçekleştirmeyi öğreneceksiniz.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238436"
 ---
 # <a name="perform-custom-join-operations"></a>Özel birleştirme işlemleri gerçekleştirme
 
@@ -43,6 +43,6 @@ Aşağıdaki örnekte sorgu iç (sağ taraf) dizisi söz konusu olduğunda join 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Dil ile Tümleşik Sorgu (LINQ)](index.md)  
-[join yan tümcesi](../language-reference/keywords/join-clause.md)  
-[Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)  
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)  
+- [join yan tümcesi](../language-reference/keywords/join-clause.md)  
+- [Join yan tümcesinin sonuçlarını sıralama](order-the-results-of-a-join-clause.md)  
