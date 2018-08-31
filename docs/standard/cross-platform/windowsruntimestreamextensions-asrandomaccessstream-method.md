@@ -12,63 +12,70 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16f878abc11589fe62f78d941b367d82d7b49e1c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a712414163446606cbc93154bc821d3b1166fe8f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768521"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254263"
 ---
-# <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a><span data-ttu-id="55f9c-102">WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi</span><span class="sxs-lookup"><span data-stu-id="55f9c-102">WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Method</span></span>
-<span data-ttu-id="55f9c-103">[.NET Framework 4.5.1 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="55f9c-103">[Supported in the .NET Framework 4.5.1 and later versions]</span></span>  
-  
- <span data-ttu-id="55f9c-104">Belirtilen akışı rasgele erişim akışına dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="55f9c-104">Converts the specified stream to a random access stream.</span></span>  
-  
- <span data-ttu-id="55f9c-105">**Namespace:** <xref:System.IO?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="55f9c-105">**Namespace:** <xref:System.IO?displayProperty=nameWithType></span></span>  
- <span data-ttu-id="55f9c-106">**Derleme:** System.Runtime.WindowsRuntime (içinde System.Runtime.WindowsRuntime.dll)</span><span class="sxs-lookup"><span data-stu-id="55f9c-106">**Assembly:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="55f9c-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55f9c-107">Syntax</span></span>  
-  
-```csharp  
-[CLSCompliantAttribute(false)]  
-public static  IRandomAccessStream AsRandomAccessStream(Stream stream)  
-```  
-  
-```vb  
-'Declaration  
-<ExtensionAttribute> _  
-<CLSCompliantAttribute(False)> _  
-Public Shared Function AsRandomAccessStream ( _  
-        stream As Stream) As IRandomAccessStream  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="55f9c-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="55f9c-108">Parameters</span></span>  
- `stream`  
-  
- <span data-ttu-id="55f9c-109">Türü: <xref:System.IO.Stream?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="55f9c-109">Type: <xref:System.IO.Stream?displayProperty=nameWithType></span></span>  
-<span data-ttu-id="55f9c-110">Dönüştürülecek akış.</span><span class="sxs-lookup"><span data-stu-id="55f9c-110">The stream to convert.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="55f9c-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="55f9c-111">Return Value</span></span>  
- <span data-ttu-id="55f9c-112">Tür: [Windows.Storage.Streams.RandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstream.aspx)</span><span class="sxs-lookup"><span data-stu-id="55f9c-112">Type: [Windows.Storage.Streams.RandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.randomaccessstream.aspx)</span></span>  
-<span data-ttu-id="55f9c-113">A [!INCLUDE[wrt](../../../includes/wrt-md.md)] dönüştürülen akışı temsil eden rasgele erişim akış.</span><span class="sxs-lookup"><span data-stu-id="55f9c-113">A [!INCLUDE[wrt](../../../includes/wrt-md.md)] random access stream, which represents the converted stream.</span></span>  
-  
-## <a name="exceptions"></a><span data-ttu-id="55f9c-114">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="55f9c-114">Exceptions</span></span>  
-  
-|<span data-ttu-id="55f9c-115">Özel Durum</span><span class="sxs-lookup"><span data-stu-id="55f9c-115">Exception</span></span>|<span data-ttu-id="55f9c-116">Koşul</span><span class="sxs-lookup"><span data-stu-id="55f9c-116">Condition</span></span>|  
-|---------------|---------------|  
-|<xref:System.NotSupportedException>|<span data-ttu-id="55f9c-117">Dönüştürülecek akış, aramayı desteklemez.</span><span class="sxs-lookup"><span data-stu-id="55f9c-117">The stream to convert does not support seeking.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="55f9c-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="55f9c-118">Remarks</span></span>  
- <span data-ttu-id="55f9c-119">Bu genişletme yöntemi yalnızca Windows Mağazası uygulamaları geliştirirken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="55f9c-119">This extension method is available only when you develop Windows Store apps.</span></span> <span data-ttu-id="55f9c-120">Bu yöntem Windows Mağazası uygulamalarında akışlarla çalışmak için uygun bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="55f9c-120">This method provides a convenient way of working with streams in Windows Store apps.</span></span> <span data-ttu-id="55f9c-121">Dönüştürmek istediğiniz .NET Framework Akış aramayı desteklemelidir.</span><span class="sxs-lookup"><span data-stu-id="55f9c-121">The .NET Framework stream you want to convert must support seeking.</span></span> <span data-ttu-id="55f9c-122">Daha fazla bilgi için bkz: <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="55f9c-122">For more information, see the <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType> method.</span></span>  
-  
+# <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a><span data-ttu-id="6d582-102">WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d582-102">WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) Method</span></span>
+
+<span data-ttu-id="6d582-103">[.NET Framework 4.5.1 ve sonraki sürümlerinde desteklenen]</span><span class="sxs-lookup"><span data-stu-id="6d582-103">[Supported in the .NET Framework 4.5.1 and later versions]</span></span>
+
+<span data-ttu-id="6d582-104">Belirtilen akışı rasgele erişim akışına dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="6d582-104">Converts the specified stream to a random access stream.</span></span>
+
+<span data-ttu-id="6d582-105">**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
+ **derleme:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)</span><span class="sxs-lookup"><span data-stu-id="6d582-105">**Namespace:** <xref:System.IO?displayProperty=nameWithType>
+**Assembly:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="6d582-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d582-106">Syntax</span></span>
+
+```csharp
+[CLSCompliantAttribute(false)]
+public static IRandomAccessStream AsRandomAccessStream(Stream stream)
+```
+
+```vb
+'Declaration
+<ExtensionAttribute> _
+<CLSCompliantAttribute(False)> _
+Public Shared Function AsRandomAccessStream ( _
+        stream As Stream) As IRandomAccessStream
+```
+
+## <a name="parameters"></a><span data-ttu-id="6d582-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d582-107">Parameters</span></span>
+
+`stream`
+
+<span data-ttu-id="6d582-108">Türü: <xref:System.IO.Stream?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="6d582-108">Type: <xref:System.IO.Stream?displayProperty=nameWithType></span></span>  
+<span data-ttu-id="6d582-109">Dönüştürülecek akış.</span><span class="sxs-lookup"><span data-stu-id="6d582-109">The stream to convert.</span></span>
+
+## <a name="return-value"></a><span data-ttu-id="6d582-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6d582-110">Return Value</span></span>
+
+<span data-ttu-id="6d582-111">Türü: <xref:Windows.Storage.Streams.RandomAccessStream></span><span class="sxs-lookup"><span data-stu-id="6d582-111">Type: <xref:Windows.Storage.Streams.RandomAccessStream></span></span>  
+<span data-ttu-id="6d582-112">A [!INCLUDE[wrt](../../../includes/wrt-md.md)] dönüştürülmüş akımı temsil rasgele erişim akışı.</span><span class="sxs-lookup"><span data-stu-id="6d582-112">A [!INCLUDE[wrt](../../../includes/wrt-md.md)] random access stream, which represents the converted stream.</span></span>
+
+## <a name="exceptions"></a><span data-ttu-id="6d582-113">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="6d582-113">Exceptions</span></span>
+
+|<span data-ttu-id="6d582-114">Özel Durum</span><span class="sxs-lookup"><span data-stu-id="6d582-114">Exception</span></span>|<span data-ttu-id="6d582-115">Koşul</span><span class="sxs-lookup"><span data-stu-id="6d582-115">Condition</span></span>|
+|---------------|---------------|
+|<xref:System.NotSupportedException>|<span data-ttu-id="6d582-116">Dönüştürülecek akış, aramayı desteklemez.</span><span class="sxs-lookup"><span data-stu-id="6d582-116">The stream to convert does not support seeking.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="6d582-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6d582-117">Remarks</span></span>
+
+<span data-ttu-id="6d582-118">Bu genişletme yöntemi yalnızca Windows Mağazası uygulamaları geliştirirken kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="6d582-118">This extension method is available only when you develop Windows Store apps.</span></span> <span data-ttu-id="6d582-119">Bu yöntem Windows Mağazası uygulamalarında akışlarla çalışmak için uygun bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="6d582-119">This method provides a convenient way of working with streams in Windows Store apps.</span></span> <span data-ttu-id="6d582-120">Dönüştürmek istediğiniz .NET Framework akışının aramayı desteklemelidir.</span><span class="sxs-lookup"><span data-stu-id="6d582-120">The .NET Framework stream you want to convert must support seeking.</span></span> <span data-ttu-id="6d582-121">Daha fazla bilgi için <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="6d582-121">For more information, see the <xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType> method.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="55f9c-123">Bu API, .NET Framework 4.5.1 ve sonraki sürümlerinde, ancak sürüm 4.5 desteklenir.</span><span class="sxs-lookup"><span data-stu-id="55f9c-123">This API is supported in the .NET Framework 4.5.1 and later versions, but not in version 4.5.</span></span>  
-  
-## <a name="version-information"></a><span data-ttu-id="55f9c-124">Sürüm Bilgileri</span><span class="sxs-lookup"><span data-stu-id="55f9c-124">Version Information</span></span>  
- <span data-ttu-id="55f9c-125">**Windows mağazası uygulamaları için .NET**</span><span class="sxs-lookup"><span data-stu-id="55f9c-125">**.NET for Windows Store apps**</span></span>  
-  
- <span data-ttu-id="55f9c-126">Desteklendiği sürüm: Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="55f9c-126">Supported in: Windows 8.1</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="55f9c-127">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="55f9c-127">See Also</span></span>  
- <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions`  
- [<span data-ttu-id="55f9c-128">Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="55f9c-128">How to: Convert Between .NET Framework Streams and Windows Runtime Streams</span></span>](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+> <span data-ttu-id="6d582-122">Bu API, .NET Framework 4.5.1 ve sonraki sürümlerde, ancak 4.5 sürümünde desteklenir.</span><span class="sxs-lookup"><span data-stu-id="6d582-122">This API is supported in the .NET Framework 4.5.1 and later versions, but not in version 4.5.</span></span>
+
+## <a name="version-information"></a><span data-ttu-id="6d582-123">Sürüm Bilgileri</span><span class="sxs-lookup"><span data-stu-id="6d582-123">Version Information</span></span>
+
+<span data-ttu-id="6d582-124">**Windows Store uygulamaları için .NET**</span><span class="sxs-lookup"><span data-stu-id="6d582-124">**.NET for Windows Store apps**</span></span>
+
+<span data-ttu-id="6d582-125">Desteklendiği sürüm: Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="6d582-125">Supported in: Windows 8.1</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6d582-126">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6d582-126">See Also</span></span>
+
+<span data-ttu-id="6d582-127">[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)</span><span class="sxs-lookup"><span data-stu-id="6d582-127">[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)</span></span>  
+[<span data-ttu-id="6d582-128">Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="6d582-128">How to: Convert Between .NET Framework Streams and Windows Runtime Streams</span></span>](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  

@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6dfb0b404413351761d269c800be19e75acfb41f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752292"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258699"
 ---
-# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="479dd-102">GetAssemblyIdentityFromFile İşlevi</span><span class="sxs-lookup"><span data-stu-id="479dd-102">GetAssemblyIdentityFromFile Function</span></span>
-<span data-ttu-id="479dd-103">Bir işaretçi alır bir `IUnknown` belirtilen nesnesiyle `IID` belirtilen dosya yolunda derlemedeki.</span><span class="sxs-lookup"><span data-stu-id="479dd-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
+# <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="4c2e0-102">GetAssemblyIdentityFromFile İşlevi</span><span class="sxs-lookup"><span data-stu-id="4c2e0-102">GetAssemblyIdentityFromFile Function</span></span>
+<span data-ttu-id="4c2e0-103">Bir işaretçi alır bir `IUnknown` belirtilen nesnesiyle `IID` belirtilen dosya yolunda derlemedeki.</span><span class="sxs-lookup"><span data-stu-id="4c2e0-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="479dd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="479dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c2e0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c2e0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyIdentityFromFile (  
@@ -38,23 +38,23 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="479dd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="479dd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4c2e0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4c2e0-105">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="479dd-106">[in] İstenen derleme için geçerli bir yol.</span><span class="sxs-lookup"><span data-stu-id="479dd-106">[in] A valid path to the requested assembly.</span></span>  
+ <span data-ttu-id="4c2e0-106">[in] İstenen derleme için geçerli bir yol.</span><span class="sxs-lookup"><span data-stu-id="4c2e0-106">[in] A valid path to the requested assembly.</span></span>  
   
  `riid`  
- <span data-ttu-id="479dd-107">[in] `IID` Döndürülecek arabirimi.</span><span class="sxs-lookup"><span data-stu-id="479dd-107">[in] The `IID` of the interface to return.</span></span>  
+ <span data-ttu-id="4c2e0-107">[in] `IID` Döndürülecek arabirimi.</span><span class="sxs-lookup"><span data-stu-id="4c2e0-107">[in] The `IID` of the interface to return.</span></span>  
   
  `ppIdentity`  
- <span data-ttu-id="479dd-108">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="479dd-108">[out] The returned interface pointer.</span></span>  
+ <span data-ttu-id="4c2e0-108">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="4c2e0-108">[out] The returned interface pointer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="479dd-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="479dd-109">Requirements</span></span>  
- <span data-ttu-id="479dd-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="479dd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c2e0-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4c2e0-109">Requirements</span></span>  
+ <span data-ttu-id="4c2e0-110">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c2e0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="479dd-111">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="479dd-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="4c2e0-111">**Başlık:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4c2e0-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="479dd-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="479dd-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4c2e0-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c2e0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="479dd-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="479dd-113">See Also</span></span>  
- [<span data-ttu-id="479dd-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="479dd-114">IUnknown</span></span>](/cpp/atl/iunknown)  
- [<span data-ttu-id="479dd-115">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="479dd-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="4c2e0-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4c2e0-113">See Also</span></span>  
+ [<span data-ttu-id="4c2e0-114">IUnknown</span><span class="sxs-lookup"><span data-stu-id="4c2e0-114">IUnknown</span></span>](/cpp/atl/iunknown)  
+ [<span data-ttu-id="4c2e0-115">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="4c2e0-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
