@@ -12,28 +12,28 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: a179b7cf5b82132db88fb5412f0ca4be207f0987
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651472"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255156"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
-Aşağıdaki koşullara uyması şartıyla farklı dizi türü için bir dizi türü dönüştürebilirsiniz:  
+Aşağıdaki koşulları karşılaması koşuluyla, bir dizi türü farklı bir dizi türüne dönüştürebilirsiniz:  
   
--   **Eşit derece.** İki dizi sıralar aynı olması gerekir, diğer bir deyişle, Boyutlar aynı sayıda olmalıdır. Ancak, uzunlukları ilgili boyutlarının aynı olması gerekmez.  
+-   **Eşit boyut.** Sıralamalara sahip iki dizinin aynı olmalıdır, yani boyut sayıları aynı olmalıdır. Ancak, ilgili boyutların uzunlukları aynı olması gerekmez.  
   
--   **Öğe veri türü.** Veri türleri iki dizi öğelerinin başvuru türleri olması gerekir. Dönüştüremezsiniz bir `Integer` için dizi bir `Long` dizi veya hatta için bir `Object` en az bir değer türü olduğundan, dizi. Daha fazla bilgi için bkz: [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Öğe veri türü.** İki dizi öğeleri veri türleri, başvuru türünde olması gerekir. Dönüştüremezsiniz bir `Integer` için dizi bir `Long` dizisi geçirin veya hatta için bir `Object` dizisi en az bir değer türü olduğundan. Daha fazla bilgi için [değer türleri ve başvuru türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Convertibility.** Genişletme veya daraltma, dönüştürme, iki dizi öğesi türleri arasında mümkün olması gerekir. Bu gereksinim başarısız arasında denenen bir dönüştürme örneğidir bir `String` dizi ve bir sınıf bir dizi türetilen <xref:System.Attribute?displayProperty=nameWithType>. Bu iki tür ortak ilgisi yoktur ve bunlar arasında herhangi bir türde bir dönüştürme yok vardır.  
+-   **Convertibility.** Genişletme veya daraltma, dönüştürme, olası iki dizi öğesi türleri arasında olmalıdır. Bu gereksinim başarısız bir örnek denenen bir dönüştürme arasında olan bir `String` dizi ve bir sınıf bir dizi türetilen <xref:System.Attribute?displayProperty=nameWithType>. Ortak hiçbir şey bu iki tür vardır ve bunlar arasında dönüştürme herhangi bir türde bulunmaktadır.  
   
- Bir dizi türü bir dönüştürme başka bir genişletme veya daraltma olup ilgili öğeleri dönüştürülmesi genişletme daraltma veya bağlı olarak. Daha fazla bilgi için bkz: [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Bir dizi türünde bir dönüştürme diğerine genişletme veya ilgili öğelerin dönüştürme genişletme daraltma mı bağlı olarak daraltma. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Bir nesne dizisine dönüştürme  
- Ne zaman bildirdiğiniz bir `Object` , alt öğe türü başlatma olmadan dizisi `Object` başlatılmamış kaldığı sürece. Belirli bir sınıfın bir diziye ayarladığınızda, o sınıfın türü alır. Ancak, temel alınan türü hala olduğunu `Object`, ve daha sonra ilişkisiz bir sınıfın başka diziye ayarlayabilirsiniz. Tüm sınıflar türetmek beri `Object`, başka bir sınıf herhangi bir sınıfın dizinin öğesi türünü değiştirebilirsiniz.  
+ Bildirdiğinizde bir `Object` dizisi bu öğe türünün başlatma olmadan `Object` başlatılmamış kaldığı sürece. Belirli bir sınıfın bir diziye ayarladığınızda, bu sınıf türüne göre alır. Ancak, temel alınan türü hala geçerli olduğunu `Object`, ve ardından ilişkisiz bir sınıfın başka bir dizi için ayarlayabilirsiniz. Tüm sınıflar türetilen beri `Object`, dizinin öğe türü herhangi bir sınıfın herhangi bir sınıf için değiştirebilirsiniz.  
   
- Aşağıdaki örnekte, türleri arasında dönüştürme var `student` ve `String`, ancak her ikisi de öğesinden türetilen `Object`, tüm atamaları geçerlidir.  
+ Aşağıdaki örnekte, türleri arasında dönüştürme var `student` ve `String`, ancak her ikisini de öğesinden türetilen `Object`, tüm atamalar geçerlidir.  
   
 ```  
 ' Assume student has already been defined as a class.  
@@ -47,9 +47,9 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>Bir dizi temel alınan türü  
- İlk olarak bir dizi belirli bir sınıf ile bildirirseniz, temel alınan öğe türü bu sınıftır. Daha sonra başka bir sınıfın bir diziye ayarlarsanız, iki sınıf arasında dönüştürme olmalıdır.  
+ İlk olarak belirli bir sınıfı olan bir dizi bildirirseniz, temel alınan öğe türünün bu sınıftır. Daha sonra başka bir sınıfın bir diziye ayarlarsanız, iki sınıf arasında bir dönüştürme olmalıdır.  
   
- Aşağıdaki örnekte, `students` olan bir `student` dizi. Arasında dönüştürme mevcut olduğundan `String` ve `student`, son deyim başarısız olur.  
+ Aşağıdaki örnekte, `students` olduğu bir `student` dizi. Arasında dönüştürme mevcut olduğundan `String` ve `student`, son deyim başarısız olur.  
   
 ```  
 Dim students() As student  
@@ -64,7 +64,7 @@ students = names
  [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Nasıl yapılır: Visual Basic'de başka bir tür nesneyi Dönüştür](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Veri Türleri](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Nasıl yapılır: bir nesneyi Visual Basic'de başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)  
  [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

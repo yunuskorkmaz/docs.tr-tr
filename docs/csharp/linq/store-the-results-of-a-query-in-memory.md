@@ -3,12 +3,12 @@ title: Bellekte sorgunun sonuçlarını Store
 description: Sonuçları depolamayı öğrenin.
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.openlocfilehash: 52d502a841c428bd90a26c803ba577e76c17197c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 98a300b2c11eb037ed4ce34caea2673a4e0f8e6b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404307"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258088"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>Bellekte sorgunun sonuçlarını Store
 
@@ -30,4 +30,4 @@ Bir sorgu temel alabilir ve verileri düzenleme hakkında yönergeler kümesidir
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Dil ile Tümleşik Sorgu (LINQ)](index.md)
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)

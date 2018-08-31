@@ -7,48 +7,48 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 3168cf620eb3aaf206afbe5bc2efc297832503ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276587"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258684"
 ---
  # <a name="when-c-reference"></a>zaman (C# Başvurusu)
 
-Kullanabileceğiniz `when` bağlamsal anahtar sözcüğü bir filtre koşulu iki bağlamlarda belirtmek için:
+Kullanabileceğiniz `when` iki bağlamlarda bir filtre koşulu belirtmek için bağlamsal anahtar sözcük:
 
-- İçinde `catch` deyiminin bir [try/catch](try-catch.md) veya [try/catch/finally](try-catch-finally.md) bloğu.
-- İçinde `case` etiketini bir [geçiş](switch.md) deyimi.
+- İçinde `catch` deyiminin bir [try/catch](try-catch.md) veya [try/catch/finally](try-catch-finally.md) blok.
+- İçinde `case` etiketi bir [geçiş](switch.md) deyimi.
 
 ## <a name="when-in-a-catch-statement"></a>`when` içinde bir `catch` deyimi
 
-C# 6 ile başlayarak `When` kullanılabilir bir `catch` deyimi yürütmek belirli bir özel durum işleyicisi için doğru bir koşulu belirtin. Sözdizimi aşağıdaki gibidir:
+C# 6 ile başlayarak `When` kullanılabilir bir `catch` deyimini yürütmek belirli bir özel durum işleyicisi için doğru bir koşulu belirtin. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
 catch ExceptionType [e] when (expr)
 ```
-Burada *expr* bir Boole değeri veren ifade. Döndürürse `true`, özel durum işleyici; varsa yürütür `false`, yok. 
+Burada *expr* bir Boole değerini döndüren bir ifadedir. Döndürürse `true`, özel durum işleyicisi; ise yürütülür `false`, yok. 
 
-Aşağıdaki örnek kullanır `when` koşullu işleyicileri yürütülecek anahtar sözcüğü bir <xref:System.Net.Http.HttpRequestException> özel durum iletisi metnin bağlı olarak.
+Aşağıdaki örnekte `when` işleyicileri için koşullu olarak yürütülecek anahtar sözcüğü bir <xref:System.Net.Http.HttpRequestException> bağlı özel durum iletisi metni görüntülenir.
 
  [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
   
 ## <a name="when-in-a-switch-statement"></a>`when` içinde bir `switch` deyimi
 
-C# 7.0 ile başlayan `case` etiketleri artık olması birbirini dışlayan ve hangi sırayla `case` etiketlerinin görünür bir `switch` deyimi, hangi anahtar bloğu belirleyebilir yürütür. `when` Anahtar sözcüğü yalnızca filtre koşulu da true ise true olarak ilişkili servis talebi etiketini neden olan bir filtre koşulu belirtmek için kullanılabilir. Sözdizimi aşağıdaki gibidir:
+C# 7.0 ile başlayan `case` etiketleri artık olması birbirini özel ve sırayı `case` etiketler görünür bir `switch` deyimi, hangi anahtar bloğu belirleyebilir yürütür. `when` Anahtar sözcüğü, yalnızca filtre koşulu da true ise true olması, ilişkili case etiketi neden olan bir filtre koşulu belirtmek için kullanılabilir. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
 case (expr) when (when-condition):
 ```
-Burada *expr* bir sabit düzeni ya da eşleşme ifadesi için karşılaştırma türü düzeni ve *olduğunda koşulu* herhangi Boole ifadesi. 
+Burada *expr* bir sabit desen veya eşleşme ifadesi için karşılaştırma türü desendir ve *olduğunda koşul* herhangi bir Boolean ifadesi. 
 
-Aşağıdaki örnek kullanır `when` sınamak için anahtar sözcüğü `Shape` çeşitli için test etmek için sıfır de alanı nesneleri `Shape` sıfırdan büyük bir alana sahip nesneleri. 
+Aşağıdaki örnekte `when` sınamak için anahtar sözcüğü `Shape` çeşitli için test etmek için sıfır de bir alan olan nesneleri `Shape` sıfırdan büyük bir alan olan nesne. 
 
  [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
 
-## <a name="see-also"></a>Ayrıca bkz. 
-  [Switch deyimi](switch.md)  
-  [try/catch deyimi](try-catch.md)  
-  [try/catch/finally ifadesi](try-catch-finally.md) 
+## <a name="see-also"></a>Ayrıca bkz.
 
+- [switch deyimi](switch.md)  
+- [try/catch deyimi](try-catch.md)  
+- [try/catch/finally deyimi](try-catch-finally.md) 

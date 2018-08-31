@@ -1,5 +1,5 @@
 ---
-title: out (C# Başvurusu)
+title: out anahtar sözcüğü (C# Başvurusu)
 ms.date: 03/01/2017
 f1_keywords:
 - out_CSharpKeyword
@@ -8,19 +8,21 @@ helpviewer_keywords:
 - out [C#]
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
-ms.openlocfilehash: 83963cd101934d27fdc496a4368b9f8803ccdc0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecdaf8e94b3b799f41d6750d6ba5fca6895f0e93
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266587"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252843"
 ---
 # <a name="out-c-reference"></a>out (C# Başvurusu)
-Kullanabileceğiniz `out` anahtar sözcüğü iki bağlamlarında:
 
-- Farklı bir [parametresi değiştiricisi](../../../csharp/language-reference/keywords/out-parameter-modifier.md), olanak sağlayan bir bağımsız değişken için bir yöntem başvuru yerine değere göre geçirdiğiniz.
+Kullanabileceğiniz `out` anahtar sözcüğü iki bağlamlarda:
 
-- İçinde [genel tür parametre bildirimleri](../../../csharp/language-reference/keywords/out-generic-modifier.md) arabirimleri ve temsilciler için belirten bir tür parametresi değişkendir.
-   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)
+- Olarak bir [parametre değiştiricisi](out-parameter-modifier.md), olanak sağlayan, bağımsız değişken bir yönteme başvuru yerine değere göre geçirin.
+
+- İçinde [genel tür parametre bildirimleri](out-generic-modifier.md) arabirimlerde ve temsilcilerde için belirten bir tür parametresi birlikte değişken olduğu.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)

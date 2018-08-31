@@ -1,84 +1,84 @@
 ---
-title: Öznitelikler - C#
-description: C# ' ta öznitelikleri nasıl çalıştığını öğrenin.
+title: Öznitelikleri - C#
+description: C# dilinde öznitelikleri nasıl çalıştığını öğrenin.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352701"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258617"
 ---
-# <a name="using-attributes-in-c"></a>Öznitelikleri C# ile kullanma #
+# <a name="using-attributes-in-c"></a>Öznitelikleri kullanarak C# #
 
-Öznitelikler bilgileri bildirim temelli bir yolla kod ile ilişkilendirmek için bir yol sağlar. Bunlar, çeşitli hedefleri için uygulanabilir yeniden kullanılabilir bir öğesi de sağlayabilirsiniz.
+Öznitelikler bilgileri, bildirim temelli bir şekilde kod ile ilişkilendirmek için bir yol sağlar. Bunlar, çeşitli hedefleri için uygulanabilir yeniden kullanılabilir bir öğe de sağlayabilirsiniz.
 
-Göz önünde bulundurun `[Obsolete]` özniteliği. Sınıflar, yapılar, yöntemleri, Oluşturucular ve daha fazla bilgi için uygulanabilir. Bu _bildirir_ öğesi kullanılmıyor. Bu öznitelik için konum ve yanıt bazı eylemi yapmak için C# Derleyici kadar sonra olur.
+Göz önünde bulundurun `[Obsolete]` özniteliği. Sınıflar, yapılar, yöntemleri, Oluşturucular ve daha fazla bilgi için uygulanabilir. Bunu _bildirir_ öğe kullanılmıyor. Bu öznitelik için bakın ve bazı yanıt eylemi yapmak için C# Derleyici kadar sonra olur.
 
-Bu öğreticide, kodunuzu öznitelikleri ekleme, oluşturma ve kendi özniteliklerini kullanın ve .NET Core içinde yerleşik olan bazı öznitelikler kullanma giriş.
+Bu öğreticide, kodunuzu öznitelikleri ekleme, oluşturma ve kendi öznitelikleri ve .NET Core ile oluşturulan bazı öznitelikleri kullanmayla izleyeceksiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
-.NET core çalışmasına, makine Kurulum gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası.
-Bu uygulama, Windows, Ubuntu Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz. Sık kullanılan Kod Düzenleyicisi'ni yüklemeniz gerekir. Kullanım aşağıda açıklamaları [Visual Studio Code](https://code.visualstudio.com/) platform Düzenleyicisi arası bir açık kaynak olduğu. Ancak, tanımanız ne olursa olsun araçları kullanabilirsiniz.
+.NET core çalıştırmak için makinenizi ayarlamak gerekir. Yükleme yönergelerini bulabilirsiniz [.NET Core](https://www.microsoft.com/net/core) sayfası.
+Bu uygulama, Windows, Ubuntu Linux, macOS veya Docker kapsayıcısı çalıştırabilirsiniz. Sık kullandığınız Kod Düzenleyicisi'ni yüklemeniz gerekir. Aşağıdaki tanımlamalar [Visual Studio Code](https://code.visualstudio.com/) açık kaynaklı, çapraz platform Düzenleyicisi olduğu. Ancak, rahat sevdiğiniz araçları kullanabilirsiniz.
 
 ## <a name="create-the-application"></a>Uygulama oluşturma
 
-Tüm Araçlar yüklediniz, yeni bir .NET Core uygulaması oluşturun. Komut satırı Oluşturucu kullanmak için sık kullanılan Kabuğu'nda aşağıdaki komutu yürütün:
+Tüm Araçlar'ı yüklediğinize göre yeni bir .NET Core uygulaması oluşturun. Komut satırı Oluşturucu kullanmak için sık kullanılan shell'de aşağıdaki komutu yürütün:
 
 `dotnet new console`
 
-Bu komut, .NET core proje dosyalarını temel oluşturur. Yürütme gerekecek `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.
+Bu komut, .NET core proje dosyaları temel oluşturur. Yürütmek ihtiyacınız olacak `dotnet restore` bu projeyi derlemek için gerekli bağımlılıkların geri yüklemek için.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Programı çalıştırmak üzere kullanmadan `dotnet run`. "Hello, World" çıkışı konsola görmeniz gerekir.
+Programı çalıştırmak üzere kullanmadan `dotnet run`. "Hello, World" konsol çıktısı için görmeniz gerekir.
 
-## <a name="how-to-add-attributes-to-code"></a>Öznitelikleri için kod ekleme
+## <a name="how-to-add-attributes-to-code"></a>Öznitelikler için kod ekleme
 
-C# ' ta sınıfından devralınan sınıflar öznitelikleridir `Attribute` temel sınıfı. Öğesinden devralınan herhangi bir sınıf `Attribute` diğer kod parçalarını "etiketi" bir tür kullanılabilir.
-Örneğin, adlı bir öznitelik yok `ObsoleteAttribute`. Bu kodu kullanımdan kalkmıştır ve artık kullanılmaması göstermek için kullanılır. Köşeli ayraçlar kullanarak bu özniteliği bir sınıf örneği için yerleştirebilirsiniz.
+C# ', devralınan sınıflar öznitelikleridir `Attribute` temel sınıfı. Devralınan herhangi bir sınıf `Attribute` kod parçalarını "etiket" bir tür kullanılabilir.
+Örneğin, adlı bir öznitelik yoktur `ObsoleteAttribute`. Bu, kodu kullanımdan kalkmıştır ve artık kullanılmamalıdır göstermek için kullanılır. Köşeli ayraçlar kullanarak, bu öznitelik bir sınıf örneği için yerleştirebilirsiniz.
 
 [!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 
-Sınıf çağırıldıktan unutmayın `ObsoleteAttribute`, yalnızca kullanmak gerekli olan `[Obsolete]` kod. Bu, C# izleyen bir kuraldır.
+Sınıf çağırıldıktan unutmayın `ObsoleteAttribute`, yalnızca kullanmak gerekli olan `[Obsolete]` kod. Bu C# izleyen bir kuraldır.
 Tam adını kullanabilirsiniz `[ObsoleteAttribute]` seçerseniz.
 
-Bir sınıf artık kullanılmıyor işaretleme, onu olarak bazı bilgiler sağlamak için iyi bir fikirdir *neden* eski olarak ve/veya *ne* kullanmayı. Bir dize parametresi için geçersiz öznitelik geçirerek bunu.
+Eski bir sınıfı işaretlemek, bu olarak bazı bilgileri sağlamak için iyi bir fikirdir *neden* eski ve/veya *ne* yerine kullanılacak. Bir dize parametresi için geçersiz öznitelik geçirerek bunu.
 
 [!code-csharp[Obsolete attribute example with parameters](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
 
-Dize bağımsız değişkeni olarak geçirilmiş bir `ObsoleteAttribute` oluşturucusu, yazma gibi yalnızca `var attr = new ObsoleteAttribute("some string")`.
+Dize bağımsız değişkeni olarak geçirilir bir `ObsoleteAttribute` oluşturucusu, sizin için yazar gibi yalnızca `var attr = new ObsoleteAttribute("some string")`.
 
-Bir öznitelik Oluşturucusu parametrelerinin basit türleri/değişmez değerleri için sınırlı: `bool, int, double, string, Type, enums, etc` ve bu türlerin dizileri.
-Bir ifade veya değişkeni kullanamazsınız. Konumsal veya adlandırılmış parametreleri kullanmakta serbestsiniz.
+Öznitelik oluşturucuda parametre basit türleri/değişmez değerleri için sınırlı: `bool, int, double, string, Type, enums, etc` ve bu türlerin dizileri.
+Bir ifade veya bir değişkeni kullanamazsınız. Konumsal veya adlandırılmış parametreleri kullanmak ücretsizdir.
 
-## <a name="how-to-create-your-own-attribute"></a>Kendi özniteliğinizi oluşturma
+## <a name="how-to-create-your-own-attribute"></a>Kendi öznitelik oluşturma
 
-Bir öznitelik oluşturma içinden devralma olarak basit `Attribute` temel sınıfı.
+Öznitelik oluşturma dan devralan olarak basit `Attribute` temel sınıfı.
 
 [!code-csharp[Create your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
 
-Yukarıdaki ile artık kullanabilirim `[MySpecial]` (veya `[MySpecialAttribute]`) kod temeli herhangi bir yerinde bir öznitelik olarak.
+Yukarıdaki ile artık kullanabilirim `[MySpecial]` (veya `[MySpecialAttribute]`) bir öznitelik kod tabanı olarak başka bir yerde.
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
 
-.NET temel sınıf kitaplığı'nda öznitelikleri ister `ObsoleteAttribute` derleyici içinde belirli davranışlarını tetikler. Ancak, oluşturduğunuz herhangi bir öznitelik yalnızca meta veri davranır ve yürütülmekte öznitelik sınıfı içinde herhangi bir kod neden değil. Bu, meta verilerin başka bir yerde, kodunuzda (daha ayrıntılı daha sonra öğreticide) hareket etmesine için hazır.
+.NET temel sınıf kitaplığı'nda öznitelikleri ister `ObsoleteAttribute` derleyici içinde belirli davranışları tetikleyin. Ancak, oluşturduğunuz herhangi bir öznitelik, yalnızca meta veri olarak davranır ve yürütülmekte olan öznitelik sınıfı içinde herhangi bir kod oluşturmaz. Kodunuzu (daha fazla bilgi, öğreticinin ilerleyen bölümlerinde) içindeki başka bir yerde meta verilerin üzerinde işlem size aittir.
 
-Yok 'sorunu' burada dikkat edilmesi gereken. Yukarıda belirtildiği gibi yalnızca belirli türleri öznitelikleri kullanırken bağımsız değişken olarak geçirilen izin verilmez. Ancak, bir öznitelik türü oluştururken, C# Derleyici bu parametreleri oluşturmak durdurmanız olmaz. İçinde aşağıdaki örnekte, t bir öznitelik, derlenen bir oluşturucu yalnızca ince oluşturuldu.
+Var. 'sorunu' burada dikkat edilmesi gereken Yukarıda belirtildiği gibi yalnızca belirli türlerini öznitelikler kullanıldığında bağımsız değişken olarak geçirilmesine izin verilmez. Ancak, bir öznitelik türü oluştururken, C# derleyicisi, bu parametreleri oluşturmaktan durdurmaz. İçinde aşağıdaki örnekte, bir öznitelik derleyen bir oluşturucuyla düzgün oluşturdum.
 
 [!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
-Ancak, bu oluşturucuyu özniteliği sözdizimiyle kullanamadı olacaktır.
+Bununla birlikte, öznitelik sözdizimi ile bu oluşturucuyu kullanarak mümkün olmayacaktır.
 
 [!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-Yukarıdaki gibi derleyici hatası neden olur `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+Yukarıdaki gibi bir derleyici hatasına neden olur `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
 ## <a name="how-to-restrict-attribute-usage"></a>Öznitelik kullanımı kısıtlama
 
-Öznitelikleri "hedefler" sayısına kullanılabilir. Yukarıdaki örneklerde sınıflarında göstermek, ancak üzerinde de kullanılabilir:
+Öznitelikler "hedef" bir dizi üzerinde kullanılabilir. Yukarıdaki örneklerde sınıflarında göstermek, ancak bunlar üzerinde de kullanılabilir:
 
 * Derleme
 * örneği
@@ -93,58 +93,58 @@ Yukarıdaki gibi derleyici hatası neden olur `Attribute constructor parameter '
 * Modül
 * Parametre
 * Özellik
-* ReturnValue
+* returnValue
 * Yapı
 
-Varsayılan olarak bir öznitelik sınıfı oluşturduğunuzda, C# bu öznitelik olası öznitelik hedefleri hiçbirinde kullanmanıza olanak sağlar. Belirli hedeflere özniteliğinizi kısıtlamak istiyorsanız, kullanarak bunu yapabilirsiniz `AttributeUsageAttribute` özniteliği sınıfınızın. Bu, özniteliğin öznitelik sağ var!
+Varsayılan olarak bir öznitelik sınıfı oluşturduğunuzda, C#, bu öznitelik tüm olası öznitelik hedefleri kullanmanıza olanak sağlar. Belirli bir hedefe özniteliğinizi kısıtlamak istiyorsanız, bunu kullanarak yapabilirsiniz `AttributeUsageAttribute` özniteliği sınıfınızın. Bu, bir özniteliğin bir öznitelik sağ var!
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-Yukarıdaki özniteliği bir sınıf veya yapı olmayan öğe üzerinde put çalışırsanız, gibi bir derleyici hatası alırsınız `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+Yukarıdaki özniteliği bir sınıf veya yapı değil şeye koymak çalışırsanız, gibi derleyici bir hata alırsınız. `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
 [!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Bir kod öğesine eklenen öznitelikler kullanma
+## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Ekli bir kod öğesi için öznitelikleri kullanma
 
-Öznitelikleri meta veri davranır. Bazı dışa doğru zorla bunların herhangi bir şey gerçekte olmaz.
+Öznitelik meta veri olarak davranır. Bazı dışa doğru zorla, bunlar gerçekten herhangi bir şey olmaz.
 
-Bulma ve özniteliklerini temel hareket [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide ayrıntılı yansıma kapak çalışmaz, ancak temel düşünce yansıma kod C diğer kod inceleyen #'ta yazmanıza olanak sağlamasıdır.
+Bul ve öznitelikleri üzerinde işlem yapma [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide ayrıntılı yansıma kapsayan olmaz, ancak temel yansıma diğer kodu inceleyen #c dilinde kod yazmanızı sağlayan uygulamadır.
 
 Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz: 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-Aşağıdakine benzer yazdırmak: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+Bu, aşağıdakine benzer çıkış yazdırır: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
-Bulduktan sonra bir `TypeInfo` nesne (veya bir `MemberInfo`, `FieldInfo`, vb.), kullanabileceğiniz `GetCustomAttributes` yöntemi. Bu bir koleksiyonunu döndürür `Attribute` nesneleri.
-Aynı zamanda `GetCustomAttribute` ve bir öznitelik türü belirtin.
+Sonra bir `TypeInfo` nesnesi (veya `MemberInfo`, `FieldInfo`, vb.), kullanabileceğiniz `GetCustomAttributes` yöntemi. Bu bir koleksiyonunu döndürür `Attribute` nesneleri.
+Ayrıca `GetCustomAttribute` ve bir öznitelik türü belirtin.
 
-Kullanma örneği `GetCustomAttributes` üzerinde bir `MemberInfo` örnek `MyClass` (daha önce gördüğümüz olan bir `[Obsolete]` Bu öznitelikte).
+Kullanımının bir örneği aşağıda verilmiştir `GetCustomAttributes` üzerinde bir `MemberInfo` örnek `MyClass` (daha önce gördüğümüz sahip bir `[Obsolete]` üzerindeki özniteliği).
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
 
-Konsola yazdırma: `Attribute on MyClass: ObsoleteAttribute`. Diğer öznitelikleri eklemeyi deneyin `MyClass`.
+Konsola yazdıracak: `Attribute on MyClass: ObsoleteAttribute`. Diğer öznitelikler için eklemeyi deneyin `MyClass`.
 
-Bu dikkate almak önemlidir bunlar `Attribute` nesnelerine ait örneklerin gevşek. Kullandığınız kadar diğer bir deyişle, bunlar oluşturulmasını olmaz `GetCustomAttribute` veya `GetCustomAttributes`.
-Bunlar, ayrıca her zaman oluşturulur. Çağırma `GetCustomAttributes` arka arkaya iki kez iki farklı örnekleri döndürülecek `ObsoleteAttribute`.
+Dikkat etmeniz önemlidir bu `Attribute` nesnelerine ait örneklerin gevşek. Kullandığınız kadar diğer bir deyişle, bunlar örneği olmaz `GetCustomAttribute` veya `GetCustomAttributes`.
+Ayrıca her zaman örneği oluşturulur. Çağırma `GetCustomAttributes` arka arkaya iki kez iki farklı örneklerini döndürür `ObsoleteAttribute`.
 
-## <a name="common-attributes-in-the-base-class-library-bcl"></a>Ortak öznitelikler (BCL) temel sınıf kitaplığı'nda
+## <a name="common-attributes-in-the-base-class-library-bcl"></a>Temel sınıf kitaplığı (BCL) ortak öznitelikleri
 
-Öznitelikler, birçok araçları ve çerçeveleri tarafından kullanılır. NUnit kullanır gibi özniteliklere `[Test]` ve `[TestFixture]` NUnit test Çalıştırıcısı tarafından kullanılır. ASP.NET MVC kullanır gibi özniteliklere `[Authorize]` ve çapraz kesme sorunları MVC eylemleri gerçekleştirmek için bir eylem filtresi çerçeve sağlar. [PostSharp](https://www.postsharp.net) en boy odaklı programlama C# izin vermek için öznitelik sözdizimini kullanır.
+Öznitelikler, birçok araç ve çerçeve tarafından kullanılır. NUnit gibi öznitelikleri kullanır `[Test]` ve `[TestFixture]` NUnit test Çalıştırıcısı tarafından kullanılır. ASP.NET MVC kullanır gibi öznitelikleri `[Authorize]` ve geniş kapsamlı kritik konular MVC eylemleri gerçekleştirmek için bir eylem filtre framework sağlar. [PostSharp](https://www.postsharp.net) açı yönelimli programlama C# ' ta izin vermek için öznitelik sözdizimini kullanır.
 
-.NET Core temel sınıf kitaplıklara yerleşik birkaç önemli öznitelikleri şunlardır:
+.NET Core temel sınıf kitaplığına yerleşik birkaç önemli öznitelikleri şunlardır:
 
-* `[Obsolete]`. Bunu Yukarıdaki örneklerde kullanılan ve yaşadığı `System` ad alanı. Değişen kod tabanını hakkında bildirim temelli belgeleri sağlamak kullanışlıdır. Bir ileti bir dize biçiminde sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
+* `[Obsolete]`. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
 
-* `[Conditional]`. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik yöntemleri (veya öznitelik sınıfları) uygulanabilir. Bir dize oluşturucuya geçmesi gerekir.
-Eşleşen dize varsa bir `#define` yönerge, ardından o yöntemi (ancak yöntem kendisi değil) yapılan her çağrı C# Derleyici tarafından kaldırılacak. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
+* `[Conditional]`. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
+Eşleşme dize, bir `#define` yönergesi, ardından bu yöntem (ancak yöntemin kendisi değil) yapılan her çağrı C# derleyicisi tarafından kaldırılacak. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
 
-* `[CallerMemberName]`. Bu öznitelik parametreleri ve yaşamlarını içinde kullanılabilir `System.Runtime.CompilerServices` ad alanı. Bu, başka bir metot çağırmadan yöntemin adını eklemesine kullanılan bir özniteliğidir. Bu genellikle 'dizeleri Sihirli' ortadan kaldırmak için bir yol olarak kullanılan INotifyPropertyChanged içinde çeşitli UI çerçeve uygularken. Örneğin:
+* `[CallerMemberName]`. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
-Yukarıdaki kod içinde bir hazır değer sahip olmak zorunda değildir `"Name"` dize. Bu yazım hatası ile ilgili hatalar önlenmesine yardımcı olabilir ve daha sorunsuz yeniden düzenleme/yeniden adlandırmak için de sağlar.
+Yukarıdaki kodda, bir sabit değer olan gerekmez `"Name"` dize. Bu, yazım hatası ile ilgili hataları önlemeye yardımcı olabilir ve daha sorunsuz yükseltmelere yeniden düzenleme/yeniden adlandırmak için de sağlar.
 
 ## <a name="summary"></a>Özet
 
-Bildirim temelli güç öznitelikleri C# getirin. Ancak meta veri olarak kod biçimidir ve tek başına hareket yok.
+Bildirim temelli güç öznitelikleri C# ' tan getirin. Ancak bir kod meta veri olarak biçimindedir ve kendileri tarafından harekete.

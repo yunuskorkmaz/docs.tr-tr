@@ -6,18 +6,18 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.assetid: c1176cea-1426-4a44-8570-3eadafa58863
-ms.openlocfilehash: 6e02675a2a895add245d3c2e40305a0417fdf429
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de59fb49ca5dbe1282cd828f7d6995dda449d31b
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325104"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257307"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Nasıl yapılır: as ve is İşleçlerini Kullanarak Güvenli Bir Şekilde Atama (C# Programlama Kılavuzu)
-Nesneler biçimli olduğundan türetilmiş bir tür tutmak için bir temel sınıf türünde bir değişken için mümkündür. Türetilen türün yöntemi erişmek için türetilmiş bir tür değerine geri dönüştürmek gereklidir. Ancak, basit bir girişiminde atma riskini bu gibi durumlarda cast oluşturur bir <xref:System.InvalidCastException>. Diğer bir deyişle neden C# sağlar [olan](../../../csharp/language-reference/keywords/is.md) ve [olarak](../../../csharp/language-reference/keywords/as.md) işleçler. Bir özel durum oluşturulmasına neden olmadan bir cast başarılı olup olmadığını sınamak için aşağıdaki işleçleri kullanabilirsiniz. Genel olarak, `as` işleci olduğundan daha verimli cast başarıyla yapılabilmesi için gerçekten cast değeri döndürür. `is` İşleci bir Boole değeri döndürür. Bu nedenle yalnızca bir nesnenin türünü belirlemek istiyorsanız ancak aslında cast gerekmez kullanılabilir.  
+Nesneler çok biçimli olduğundan türetilmiş bir tür tutmak için bir temel sınıf türünde bir değişken için mümkündür. Türetilen türün örnek yöntemleri erişmek için türetilmiş bir tür değerine geri değerine dönüştürme gereklidir. Ancak, basit bir denemeye atma riskini cast bu gibi durumlarda oluşturur bir <xref:System.InvalidCastException>. Diğer bir deyişle neden C# sağlar [olduğu](../../../csharp/language-reference/keywords/is.md) ve [olarak](../../../csharp/language-reference/keywords/as.md) işleçleri. Bu işleçler, bir özel durum oluşturulmasına neden olmadan bir tür dönüştürme başarılı olup olmadığını test etmek için kullanabilirsiniz. Genel olarak, `as` işleci olduğundan daha verimli cast başarıyla yapılabilir gerçekten atama değeri döndürür. `is` İşleci bir Boole değeri döndürür. Bu nedenle yalnızca bir nesnenin türünü belirlemek istiyorsanız ancak aslında cast gerekmez kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler nasıl kullanılacağını `is` ve `as` başka bir özel durum atma riski olmadan için bir başvuru cast işleçleri yazın. Bu örnek ayrıca nasıl kullanılacağını gösterir `as` boş değer atanabilen değer türleri olan işleci.  
+ Aşağıdaki örnekler nasıl kullanılacağını `is` ve `as` operatörlerinin bir başvurudan atama türünü başka bir özel durum riski olmadan. Örnek ayrıca nasıl kullanılacağını gösterir `as` boş değer atanabilen değer türleri ile işleci.  
   
  [!code-csharp[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   

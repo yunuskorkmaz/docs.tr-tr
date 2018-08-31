@@ -10,20 +10,20 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: ccf79c700cf852c0febb9c3f3464cbacdd39296e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605231"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258104"
 ---
 # <a name="-operator-visual-basic"></a>+ İşleci (Visual Basic)
-İki sayı ekleyen ya da pozitif sayısal ifadenin değerini döndürür. Ayrıca iki dize ifadeleri birleştirmek için kullanılabilir.  
+İki sayı ekleyen veya sayısal bir ifadenin pozitif değerini döndürür. Ayrıca iki dize ifadeleri birleştirmek için kullanılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
-      expression1 + expression2  
+```vb
+expression1 + expression2  
 - or -  
 + expression1  
 ```  
@@ -32,81 +32,81 @@ ms.locfileid: "33605231"
   
 |Terim|Tanım|  
 |---|---|  
-|`expression1`|Gerekli. Tüm sayısal veya dize ifadesi.|  
-|`expression2`|Sürece gerekli `+` işleci negatif bir değer hesaplıyor. Tüm sayısal veya dize ifadesi.|  
+|`expression1`|Gerekli. Bir sayı veya dize ifadesi.|  
+|`expression2`|Sürece gerekli `+` işleci, negatif bir değer hesaplıyor. Bir sayı veya dize ifadesi.|  
   
 ## <a name="result"></a>Sonuç  
- Varsa `expression1` ve `expression2` hem de sayısal sonucudur kendi aritmetik toplam olması.  
+ Varsa `expression1` ve `expression2` hem de sayısal sonucudur aritmetik toplamları olması.  
   
- Varsa `expression2` yoksa, `+` işlecidir *birli* değişmez değeri ifade kimlik işleci. İşaretini korur işlem bu anlamda oluşur `expression1`sonucu negatif gelir, `expression1` negatiftir.  
+ Varsa `expression2` eksik, `+` işleci *birli* kimlik işleci değişmez değerini bir ifade. Bu anlamda işlemi işaretini korur oluşur `expression1`, sonuç negatif olur, `expression1` negatiftir.  
   
- Varsa `expression1` ve `expression2` hem dizelerdir değerlerine birleşimini sonucudur.  
+ Varsa `expression1` ve `expression2` hem dizelerdir değerleri birleşimi sonucudur.  
   
- Varsa `expression1` ve `expression2` olan karma türleri, gerçekleştirilecek eylem türlerini, içeriklerini ve ayarını bağlıdır [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md). Daha fazla bilgi için bkz: "Açıklamalar" ın tabloları  
+ Varsa `expression1` ve `expression2` olan karışık türde gerçekleştirilecek eylemi türleri, içerikleri ve ayarına bağlıdır [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md). Daha fazla bilgi için "Açıklamalar" tablolarında bakın  
   
 ## <a name="supported-types"></a>Desteklenen türler  
- İmzasız ve kayan nokta türleri dahil olmak üzere tüm sayısal türler ve `Decimal`, ve `String`.  
+ İmzasız ve kayan nokta türleri dahil olmak üzere tüm sayısal türlerin ve `Decimal`, ve `String`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Genel olarak, `+` aritmetik toplama mümkün olduğunda gerçekleştirir ve yalnızca her iki ifade dizeleri olduğunda art arda ekler.  
+ Genel olarak, `+` aritmetik ek mümkün olduğunda gerçekleştirir ve yalnızca her iki ifade de dizeleri olduğunda art arda ekler.  
   
- Hiçbiri ifade ise bir `Object`, Visual Basic aşağıdaki eylemleri gerçekleştirir.  
-  
-|İfade veri türleri|Derleyici tarafından eylemi|  
-|---|---|  
-|Her iki ifadelerini sayısal veri türleri (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, veya `Double`)|Ekleyin. Sonuç veri türü sayısal bir tür veri türleri için uygun değil `expression1` ve `expression2`. "Tamsayı aritmetiğini" tablolarda bkz [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Her iki ifadelerini türü `String`|Art arda ekler.|  
-|Bir ifade sayısal veri türüne ve diğer bir dizedir|Varsa `Option Strict` olan `On`, derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olan `Off`, örtük dönüştürme `String` için `Double` ve ekleyin.<br /><br /> Varsa `String` dönüştürülemiyor `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
-|Bir ifade sayısal veri türüne ve diğer [hiçbir şey](../../../visual-basic/language-reference/nothing.md)|Ekleme, ile `Nothing` sıfır olarak değerli.|  
-|Bir ifadenin bir dize ve diğer `Nothing`|Birleştir ile `Nothing` değerli olarak "".|  
-  
- Bir ifade olması durumunda bir `Object` ifadesi, Visual Basic, aşağıdaki eylemleri gerçekleştirir.  
+ Her iki ifade ise bir `Object`, Visual Basic, aşağıdaki eylemleri gerçekleştirir.  
   
 |İfade veri türleri|Derleyici tarafından eylemi|  
 |---|---|  
-|`Object` ifade sayısal bir değer içerir ve diğeri sayısal veri türüne|Varsa `Option Strict` olan `On`, derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olan `Off`, sonra ekleyin.|  
-|`Object` sayısal bir değer ifadesi tutar ve diğer türüdür `String`|Varsa `Option Strict` olan `On`, derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olan `Off`, örtük dönüştürme `String` için `Double` ve ekleyin.<br /><br /> Varsa `String` dönüştürülemiyor `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
-|`Object` bir dize ifadesi tutar ve diğer sayısal veri türü|Varsa `Option Strict` olan `On`, derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olan `Off`, dize örtük dönüştürme `Object` için `Double` ve ekleyin.<br /><br /> Varsa dize `Object` dönüştürülemiyor `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
-|`Object` bir dize ifadesi tutar ve diğer türüdür `String`|Varsa `Option Strict` olan `On`, derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olan `Off`, örtük dönüştürme `Object` için `String` ve art arda ekler.|  
+|Her iki ifade de sayısal veri türleri: (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, veya `Double`)|Ekleyin. Sonuç veri türü olan veri türleri için uygun bir sayısal tür `expression1` ve `expression2`. "Tamsayı aritmetik" tablolarında bkz [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Her iki ifade de türüdür `String`|Art arda ekler.|  
+|Bir ifade bir sayısal veri türü ve diğer bir dizedir|Varsa `Option Strict` olduğu `On`, ardından bir derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olduğu `Off`, örtük dönüştürme `String` için `Double` ve ekleyin.<br /><br /> Varsa `String` dönüştürülemez `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
+|Bir ifade olan bir sayısal veri türü ve diğeri [hiçbir şey](../../../visual-basic/language-reference/nothing.md)|Ekleme, ile `Nothing` sıfır değerli.|  
+|Bir ifade bir dizedir ve diğeri ise `Nothing`|İle Birleştir `Nothing` değerli olarak "".|  
   
- Her iki ifadeler `Object` ifadeleri, Visual Basic, aşağıdaki eylemleri gerçekleştirir (`Option Strict Off` yalnızca).  
+ Bir ifade ise bir `Object` ifade, Visual Basic, aşağıdaki eylemleri gerçekleştirir.  
+  
+|İfade veri türleri|Derleyici tarafından eylemi|  
+|---|---|  
+|`Object` sayısal bir değeri bir ifade tutan ve diğer bir sayısal veri türü|Varsa `Option Strict` olduğu `On`, ardından bir derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olduğu `Off`, sonra ekleyin.|  
+|`Object` sayısal bir değeri bir ifade tutan ve diğer türüdür `String`|Varsa `Option Strict` olduğu `On`, ardından bir derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olduğu `Off`, örtük dönüştürme `String` için `Double` ve ekleyin.<br /><br /> Varsa `String` dönüştürülemez `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
+|`Object` bir ifade tutan bir dize ve diğer bir sayısal veri türü|Varsa `Option Strict` olduğu `On`, ardından bir derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olduğu `Off`, dizeyi örtük dönüştürme `Object` için `Double` ve ekleyin.<br /><br /> Dize `Object` dönüştürülemez `Double`, ardından throw bir <xref:System.InvalidCastException> özel durum.|  
+|`Object` bir ifade tutan bir dize ve diğer türüdür `String`|Varsa `Option Strict` olduğu `On`, ardından bir derleyici hatası oluşturur.<br /><br /> Varsa `Option Strict` olduğu `Off`, örtük dönüştürme `Object` için `String` ve birleştirin.|  
+  
+ Her iki ifade ise `Object` ifadeleri, Visual Basic, aşağıdaki eylemleri gerçekleştirir (`Option Strict Off` yalnızca).  
   
 |İfade veri türleri|Derleyici tarafından eylemi|  
 |---|---|  
 |Her ikisi de `Object` ifadeleri sayısal değerleri tutun|Ekleyin.|  
-|Her ikisi de `Object` ifadelerini türü `String`|Art arda ekler.|  
-|Bir `Object` ifade sayısal bir değer tutar ve diğer bir dize tutar|Örtük olarak dize dönüştürme `Object` için `Double` ve ekleyin.<br /><br /> Varsa dize `Object` sayısal bir değere dönüştürülemez sonra throw bir <xref:System.InvalidCastException> özel durum.|  
+|Her ikisi de `Object` ifadeleri, tür `String`|Art arda ekler.|  
+|Bir `Object` ifade tutan bir sayısal değer ve başka bir dize içerir|Dizeyi örtük dönüştürme `Object` için `Double` ve ekleyin.<br /><br /> Dize `Object` sayısal bir değere dönüştürülemez ve throw bir <xref:System.InvalidCastException> özel durum.|  
   
- Her iki `Object` ifadeyi hesaplar için [hiçbir şey](../../../visual-basic/language-reference/nothing.md) veya <xref:System.DBNull>, `+` işleci da işler bir `String` değerini "".  
+ Ya da `Object` ifadeyi hesaplar için [hiçbir şey](../../../visual-basic/language-reference/nothing.md) veya <xref:System.DBNull>, `+` işleci olarak bunu değerlendirir bir `String` değerine sahip "".  
   
 > [!NOTE]
->  Kullandığınızda `+` işleci, eklenmesi veya dize birleştirme oluşacaktır olup olmadığını belirlemek kuramıyor olabilir. Kullanım `&` belirsizliği ortadan kaldırmak ve kendi kendine belgelendirme kod sağlamak için birleştirme için işleci.  
+>  Kullanırken `+` işleci, yükleyemeyebilir eklenmesi veya dize birleştirme gerçekleşip gerçekleşmeyeceğini belirlemek. Kullanım `&` birleştirme için işleç belirsizliği ortadan kaldırmak ve kendi kendine belgelendirme kodu sağlayabilir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `+` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Bu tür bir sınıf veya yapı üzerinde kodunuzu bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz: [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `+` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `+` sayıları işleci. İşlenen her ikisi de sayısal olursa, Visual Basic Aritmetik sonuç hesaplar. Aritmetik sonuç iki işlenen toplamını temsil eder.  
+ Aşağıdaki örnekte `+` numaralarını eklemek için işleci. İşlenenler, her ikisi de sayısal olduğunda, Visual Basic aritmetik sonucu hesaplar. Aritmetik sonucu iki işlenenden toplamını temsil eder.  
   
  [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
- Aynı zamanda `+` dizeyi birleştirmek için işleci. Visual Basic bunları işlenen iki dize olursa, art arda ekler. Birleştirme sonucu art arda iki işlenen bir içeriğini oluşan tek bir dize temsil eder.  
+ Ayrıca `+` dizeyi birleştirmek için işleci. Visual Basic bunları işlenen her iki dize olursa art arda ekler. Birleştirme sonucu art arda iki işlenenden biri içeriğini oluşan tek bir dize temsil eder.  
   
- İşlenen karma türlerini olursa, sonuç olarak ayarına bağlıdır [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md). Aşağıdaki örnek sonucu gösterilmektedir, `Option Strict` olan `On`.  
+ İşlenen karma türde ise, sonuç ayarına bağlıdır [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md). Sonuç aşağıdaki örnekte, `Option Strict` olduğu `On`.  
   
  [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
- Aşağıdaki örnek sonucu gösterilmektedir, `Option Strict` olan `Off`.  
+ Sonuç aşağıdaki örnekte, `Option Strict` olduğu `Off`.  
   
  [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
- Belirsizliği ortadan kaldırmak için kullanmanız `&` operatörü yerine `+` birleştirme için.  
+ Belirsizliği ortadan kaldırmak için kullanmanız `&` yerine işleci `+` birleştirme için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [& İşleci](../../../visual-basic/language-reference/operators/concatenation-operator.md)  

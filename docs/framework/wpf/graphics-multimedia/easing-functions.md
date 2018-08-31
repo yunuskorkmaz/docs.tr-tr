@@ -15,93 +15,85 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 3ce7c1824dc53c154ba1091ea62c1b8950b757c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038d9423ddae6f16165ed0618beab8391c462ac9
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557569"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253217"
 ---
 # <a name="easing-functions"></a>Kolaylaştırıcı İşlevler
-Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak sağlar. Örneğin, bir nesnenin gerçekçi Sıçrama veya dizinindeymiş gibi yay üzerinde davranır isteyebilirsiniz. Bu etkilerle yaklaşık için anahtar çerçeve veya From/To/By bile animasyonları kullanabilirsiniz, ancak iş önemli miktarda götürecek ve animasyon matematiksel formül kullanmaktan daha az doğru olacaktır.  
+Kolaylaştırıcı işlevler özel matematik formülleri animasyonlarınızda uygulamanıza izin verir. Örneğin, bir nesnenin gerçekçi Sıçrama veya işlevmiş gibi üzerinde spring davranır isteyebilirsiniz. Bu etkilerle yaklaşık olarak belirlemenizi sağlayan anahtar-çerçeve veya bile gelen/için/göre animasyonlarına kullanabilirsiniz, ancak iş önemli miktarda götürecek ve animasyon matematiksel bir formül kullanmaktan daha az doğru olacaktır.  
   
- Devralarak kendi özel hareket hızı işlevi oluşturma yanı sıra <xref:System.Windows.Media.Animation.EasingFunctionBase>, çalışma zamanı tarafından sağlanan çeşitli hareket hızı işlevlerini birini ortak efektleri oluşturmak için kullanabilirsiniz.  
+ Kendi özel hızlandırma işlevini devralarak oluşturma yanı sıra <xref:System.Windows.Media.Animation.EasingFunctionBase>, ortak efektleri oluşturmak için çalışma zamanı tarafından sağlanan çeşitli kolaylaştırıcı işlevler birini kullanabilirsiniz.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: Bir animasyon hareketini biraz belirtilen yolda animasyon başlamadan önce geri çeker.  
+-   <xref:System.Windows.Media.Animation.BackEase>: Bir animasyonu hareket biraz belirtilen yolda animasyon uygulamak başlamadan önce geri çeker.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: Sıçrama efekti oluşturur.  
+-   <xref:System.Windows.Media.Animation.BounceEase>: Bir Sıçrama efekti oluşturur.  
   
 -   <xref:System.Windows.Media.Animation.CircleEase>: Bir döngüsel işlevi kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur.  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>3</sup>.  
+-   <xref:System.Windows.Media.Animation.CubicEase>: Formülünü kullanarak yavaşlayan hızlanan bir animasyon oluşturur *f*(*t*) = *t*<sup>3</sup>.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: Kalanına gelene kadar ve geriye salınım yapan yay benzer bir animasyon oluşturur.  
+-   <xref:System.Windows.Media.Animation.ElasticEase>: Kalanına gelene kadar ve geriye salınım yapan bir spring benzer bir animasyon oluşturur.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: Bir üstel formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur.  
+-   <xref:System.Windows.Media.Animation.ExponentialEase>: Bir üstel formülünü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>p</sup> p olduğu için eşit<xref:System.Windows.Media.Animation.PowerEase.Power%2A>özelliği.  
+-   <xref:System.Windows.Media.Animation.PowerEase>: Formülünü kullanarak yavaşlayan hızlanan bir animasyon oluşturur *f*(*t*) = *t*<sup>p</sup> p olduğu için eşit<xref:System.Windows.Media.Animation.PowerEase.Power%2A>özelliği.  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>2</sup>.  
+-   <xref:System.Windows.Media.Animation.QuadraticEase>: Formülünü kullanarak yavaşlayan hızlanan bir animasyon oluşturur *f*(*t*) = *t*<sup>2</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur *f*(*t*) = *t*<sup>4</sup>.  
+-   <xref:System.Windows.Media.Animation.QuarticEase>: Formülünü kullanarak yavaşlayan hızlanan bir animasyon oluşturur *f*(*t*) = *t*<sup>4</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: Formülü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturmak *f*(*t*) = *t*<sup>5</sup>.  
+-   <xref:System.Windows.Media.Animation.QuinticEase>: Formülünü kullanarak yavaşlayan hızlandırır animasyon oluşturmak *f*(*t*) = *t*<sup>5</sup>.  
   
--   <xref:System.Windows.Media.Animation.SineEase>: Bir sinüs formülünü kullanarak hızlandırır/yavaşlayan bir animasyon oluşturur.  
+-   <xref:System.Windows.Media.Animation.SineEase>: Sinüs formülü kullanarak yavaşlayan hızlanan bir animasyon oluşturur.  
   
- Aşağıdaki örnek ile hareket hızı bu işlevlerin davranış keşfedebilirsiniz.  
-  
- [Bu örneği çalıştırmak](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
-  
- Bir animasyon hareket hızı işlevi uygulamak için kullanmak `EasingFunction` animasyonun özellik animasyon uygulamak için hareket hızı işlevi belirtin. Aşağıdaki örnek uygular bir <xref:System.Windows.Media.Animation.BounceEase> işlevine kolaylaştırma bir <xref:System.Windows.Media.Animation.DoubleAnimation> Sıçrama efekti oluşturmak için.  
-  
- [Bu örneği çalıştırmak](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ Animasyonlara kolaylaştırıcı bir işlev uygulamak için `EasingFunction` özelliğine animasyon uygulamak üzere kolaylaştırıcı işlevi belirtin. Aşağıdaki örnek geçerli bir <xref:System.Windows.Media.Animation.BounceEase> kolaylaştırıcı işlevi bir <xref:System.Windows.Media.Animation.DoubleAnimation> Sıçrama efekti oluşturmak için.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
- Önceki örnekte, bir From/To/By için hareket hızı işlevi uygulandı animasyon. Bu gibi durumlarda, bu hareket hızı işlevler aynı zamanda anahtar çerçeve animasyonları uygulayabilirsiniz. Aşağıdaki örnek anahtar çerçeveler ilişkili işlevler kolaylaştırma ile sözleşmeleri yukarı, yavaşlatır, ardından aşağı (düşüyor gibi) genişletir ve bir Dur geri dönmeler bir dikdörtgen bir animasyon oluşturmak için nasıl kullanılacağını gösterir.  
-  
- [Bu örneği çalıştırmak](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
+ Önceki örnekte, bir From/To/By için hızlandırma işlevini uygulandığı animasyon. Anahtar-çerçeve animasyonlara kolaylaştırıcı bu işlevler de uygulayabilirsiniz. Aşağıdaki örnek anahtar çerçeveler ile ilişkili kolaylaştırıcı işlevleri sözleşmeler yukarı, yavaşlatır, ardından aşağı doğru (düşüyor gibi) genişletir ve ardından Durma noktasına geri dönmeler bir dikdörtgen bir animasyon oluşturmak için nasıl kullanılacağını gösterir.  
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- Kullanabileceğiniz <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> nasıl hareket hızı işlevi, diğer bir deyişle, davranacağını özelliğini değiştirin animasyonun nasıl ilişkilendirileceğini. Verebileceğiniz üç olası değerler <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ Kullanabileceğiniz <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> özelliğini hızlandırma işlevini, diğer bir deyişle, davranış biçimini değiştirmek için değiştirme animasyonun nasıl ilişkilendirileceğini. Verebileceğiniz üç olası değer vardır <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: İlişkilendirme hareket hızı işlev ile ilişkili matematik formülünü takip eder.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Kolaylaştırıcı bir işlev ile ilişkili matematik formülünü ilişkilendirme izler.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: İlişkilendirme % 100'ü çıkış eksi hareket hızı işlev ile ilişkili formülün izler.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: % 100'ü eksi kolaylaştırıcı bir işlev ile ilişkili formülün ilişkilendirme izler.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: İlişkilendirme kullanan <xref:System.Windows.Media.Animation.EasingMode.EaseIn> animasyonun ilk yarısı için ve <xref:System.Windows.Media.Animation.EasingMode.EaseOut> ikinci yarısı için.  
+-   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: İlişkilendirme kullanan <xref:System.Windows.Media.Animation.EasingMode.EaseIn> animasyonun ilk yarısında ve <xref:System.Windows.Media.Animation.EasingMode.EaseOut> ikinci yarısında hiç.  
   
- Grafikleri farklı değerlerini göstermek <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> nerede *f*(*x*) animasyon ilerlemesini gösterir ve *t* zamanı temsil eder.  
+ Farklı değerleri aşağıdaki grafikleri gösteren <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> burada *f*(*x*) animasyon ilerleme durumunu temsil eder ve *t* saati temsil eder.  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
- ![BackEase EasingMode grafikleri. ] (../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")  
+ ![BackEase EasingMode grafikleri. ](../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")  
   
  <xref:System.Windows.Media.Animation.BounceEase>  
   
- ![BounceEase EasingMode grafikleri. ] (../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")  
+ ![BounceEase EasingMode grafikleri. ](../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CircleEase>  
   
- ![CircleEase EasingMode grafikleri. ] (../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")  
+ ![CircleEase EasingMode grafikleri. ](../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CubicEase>  
   
- ![CubicEase EasingMode grafikleri. ] (../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")  
+ ![CubicEase EasingMode grafikleri. ](../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ElasticEase>  
   
- ![Farklı gevşeme modlarının ile ElasticEase. ] (../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")  
+ ![ElasticEase farklı gevşeme modlarının ile. ](../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ExponentialEase>  
   
- ![Farklı gevşeme modlarının ExponentialEase grafikleri. ] (../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")  
+ ![ExponentialEase grafiklerini farklı gevşeme modlarının. ](../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")  
   
  <xref:System.Windows.Media.Animation.PowerEase>  
   
- ![Farklı gevşeme modlarının ile QuarticEase. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase farklı gevşeme modlarının ile. ](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuadraticEase>  
   
@@ -109,22 +101,20 @@ Hareket hızı işlevleri, animasyonların özel matematiksel formüller olanak 
   
  <xref:System.Windows.Media.Animation.QuarticEase>  
   
- ![Farklı gevşeme modlarının ile QuarticEase. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase farklı gevşeme modlarının ile. ](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuinticEase>  
   
- ![Farklı gevşeme modlarının ile QuinticEase. ] (../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")  
+ ![QuinticEase farklı gevşeme modlarının ile. ](../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.SineEase>  
   
- ![Farklı EasingMode değerleri için SineEase](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
+ ![Farklı EasingMode değerler için SineEase](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
->  Kullanabileceğiniz <xref:System.Windows.Media.Animation.PowerEase> aynı davranışı oluşturmak için <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, ve <xref:System.Windows.Media.Animation.QuinticEase> kullanarak <xref:System.Windows.Media.Animation.PowerEase.Power%2A> özelliği. Örneğin, kullanmak istediğiniz <xref:System.Windows.Media.Animation.PowerEase> yerine için <xref:System.Windows.Media.Animation.CubicEase>, belirtin bir <xref:System.Windows.Media.Animation.PowerEase.Power%2A> değeri 3.  
+>  Kullanabileceğiniz <xref:System.Windows.Media.Animation.PowerEase> aynı davranışı oluşturmak için <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, ve <xref:System.Windows.Media.Animation.QuinticEase> kullanarak <xref:System.Windows.Media.Animation.PowerEase.Power%2A> özelliği. Örneğin, kullanmak istediğiniz <xref:System.Windows.Media.Animation.PowerEase> için yedek olarak <xref:System.Windows.Media.Animation.CubicEase>, belirtin bir <xref:System.Windows.Media.Animation.PowerEase.Power%2A> 3 değeri.  
   
- Çalışma zamanında dahil hareket hızı işlevlerini kullanmanın yanı sıra, kendi özel hareket hızı işlevler devralarak oluşturabileceğiniz <xref:System.Windows.Media.Animation.EasingFunctionBase>. Aşağıdaki örnekte nasıl basit bir özel hareket hızı işlevin oluşturulacağını gösterir. Geçersiz kılarak hareket hızı işlevi nasıl davranacağını için kendi matematiksel mantığınızı ekleyebilirsiniz <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> yöntemi.  
-  
- [Bu örneği çalıştırmak](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ Kolaylaştırıcı işlevler çalışma zamanı içinde bulunan kullanmanın yanı sıra, kendi özel kolaylaştırıcı işlevler devralarak oluşturabilirsiniz <xref:System.Windows.Media.Animation.EasingFunctionBase>. Aşağıdaki örnek, basit bir özel hızlandırma işlevini nasıl oluşturulacağını gösterir. Geçersiz kılarak hızlandırma işlevini nasıl davranacağını kendi matematiksel mantığı ekleyebileceğiniz <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> yöntemi.   
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

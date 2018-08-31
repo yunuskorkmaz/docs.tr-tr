@@ -1,55 +1,55 @@
 ---
-title: Durum ve Docker uygulamalarda verileri
-description: Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulama yaşam döngüsü
+title: Durum ve Docker uygulamalarında veri
+description: Microsoft Platformu ve araçları ile kapsayıcı Docker uygulaması yaşam
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105455"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257363"
 ---
-# <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarda verileri
+# <a name="state-and-data-in-docker-applications"></a>Durum ve Docker uygulamalarında veri
 
-Kapsayıcıların bir temel girişi olur. Bir VM'ye karşılaştırıldığında kapsayıcılar sık karşılaştıkları kayboluyor yok. VM aşırı yüklenmiş CPU veya tam ya da başarısız disk ölü işlemler çeşitli formlardan başarısız olabilir. Henüz kullanılabilir olması için VM bekliyoruz ve sürücü hataları verileri tutmak güvence altına almak için sıradan bir hale RAID sürücülerdir.
+Bir basit kapsayıcıların değiştirilemezlik ' dir. Bir VM'ye karşılaştırıldığında kapsayıcıları sık karşılaştıkları kaybolur yok. Bir VM, çeşitli biçimlerde ölü işlemleri, aşırı yüklenmiş CPU ya da tam ya da başarısız bir disk başarısız olabilir. Henüz VM kullanılabilir olmasını bekliyoruz ve RAID sürücüleri sürücü hataları korumak güvence altına almak için sıradan bir hale gelir.
 
-İşlem örneklerinin olmasını kapsayıcıları zorlayıcı ancak. Bir işlem dayanıklı durum bilgisini korumaz. Yerel depolama alanı için bir kapsayıcı yazabilirsiniz olsa bile, o örneği çevresinde süresiz olarak olacağını varsayılarak tek kopyası bellek dayanıklı olduğu varsayılarak için eşdeğer olacaktır. Sonlandırıldı, işlemleri gibi kapsayıcıları yinelenir veya bir kapsayıcı orchestrator ile yönetilen, bunlar taşınmış olabilir varsayalım.
+İşlem örneklerinin olmasını kapsayıcıları düşündüğünüz ancak. Bir işlem kalıcı durumunu korumak değil. Yerel depolama alanı için bir kapsayıcı yazabilirsiniz olsa da, bu örneği çevresinde süresiz olarak olacağı varsayılarak tek kopyası bellek kalıcı olduğu varsayılarak için eşdeğer olacaktır. Sonlandırılan, işlemler, olduğu gibi kapsayıcılar da çoğaltılır veya yönetilen bir kapsayıcı Düzenleyicisi ile bunların taşınmış olabilir varsaymanız gerekir.
 
-Docker olarak bilinen bir özelliği kullanan bir *kaplama dosya sistemi* herhangi depolar yazarken kopyalama işlemi uygulamak için temel özgün görüntüsüne karşılaştırıldığında, bir kapsayıcı kök dosya sistemi bilgiler güncelleştirilmiştir. Kapsayıcı sonradan sistemden silinirse, bu değişiklikler kaybolur. Kapsayıcı, bu nedenle, varsayılan olarak kalıcı depolama yok. Bir kapsayıcı durumunu kaydetmek mümkün olsa da, bu geçici bir sistemi tasarladığınız kapsayıcı mimarisi ilkesini çakışıyor olabilir.
+Docker kullanan bir özellik olarak bilinen bir *kaplama dosya sistemi* depolayan herhangi bir yazarken kopyalama işlemini uygulamak için bu temel özgün görüntüye kıyasla, bir kapsayıcı kök dosya sistemine bilgiler güncelleştirilmiştir. Kapsayıcı sistemden sonradan silinirse bu değişiklikler kaybolur. Bir kapsayıcı varsayılan olarak bu nedenle, bir şekilde kalıcı depolama alanı yok. Kapsayıcı durumu kaydetmek mümkün olsa da, bu geçici bir sistem tasarımı kapsayıcı mimarisi ilkesini çakışıyor olabilir.
 
-Docker uygulamaları kalıcı verileri yönetmek için yaygın çözümleri vardır:
+Docker uygulamalarında kalıcı verileri yönetmek için yaygın çözümleri vardır:
 
--   [**Veri birimleri**](https://docs.docker.com/engine/tutorials/dockervolumes/) bunlar yalnızca belirtilen ana bilgisayara bağlayın.
+-   [**Veri birimleri**](https://docs.docker.com/engine/tutorials/dockervolumes/) bu belirtilenlerle yalnızca ana bilgisayara bağlayın.
 
--   [**Veri birim kapsayıcıları**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) bunlar gezinebilirsiniz dış bir kapsayıcı kullanılarak kapsayıcıları arasında paylaşılan depolama alanı sağlar.
+-   [**Veri birim kapsayıcıları**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) bunlar arasında geçiş yapabilir, dış bir kapsayıcısını kullanan kapsayıcılar arasında paylaşılan depolama sağlar.
 
--   [**Birim eklentileri**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) bu uzun vadeli Kalıcılık sağlayan uzak konumlara birimlerini bağlayın.
+-   [**Birim eklentileri**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) bu uzun vadeli kalıcılığını sağlayan uzak konumlara birimleri bağlayın.
 
--   **Uzak Veri kaynaklarını** örnekler SQL ve Hayır SQL veritabanları dahil etmek veya önbelleğe Redis gibi hizmetler.
+-   **Uzak Veri kaynaklarını** örnekler SQL ve NO-SQL veritabanlarını dahil et veya önbellek Redis gibi hizmetler.
 
--   [**Azure depolama**](https://docs.microsoft.com/azure/storage/) bu kadar uzun vadeli Kalıcılık kapsayıcıların en iyi sağlayan bir hizmet (PaaS) depolama coğrafi dağıtılabilir platform sağlar.
+-   [**Azure depolama**](https://docs.microsoft.com/azure/storage/) bu kadar uzun süreli Kalıcılık kapsayıcıları en iyi şekilde sağlayan bir hizmet (PaaS) depolama coğrafi dağıtılabilir platform sağlar.
 
-Veri birimleri özel dizinleri atlama bir veya daha fazla kapsayıcı içinde belirtilen [birleşim dosya sistemi](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Veri birimleri, verileri, kapsayıcının yaşam döngüsünü bağımsız korumak için tasarlanmıştır. Bir kapsayıcı kaldırın ya da artık kapsayıcı tarafından başvurulan "Çöp toplama" birimleri olur, docker bu nedenle hiçbir zaman otomatik olarak birimleri siler. Konak işletim sistemi göz atın ve veri birimlerini tutumlu kullanmak için başka bir neden olduğu herhangi bir birimdeki veriler serbestçe, Düzenle.
+Veri birimleri atlama veya daha fazla kapsayıcı içindeki dizinlerin atanan özel [birleşim dosya sistemi](https://docs.docker.com/glossary/?term=Union%20file%20system). Veri birimleri, veri, kapsayıcının yaşam döngüsünü bağımsız korumak için tasarlanmıştır. Bir kapsayıcı kaldırın ya da "Çöp toplama" birimleri, bir kapsayıcı tarafından artık başvurulmayan olacak docker bu nedenle hiçbir zaman otomatik olarak birimleri siler. Konak işletim sistemi göz atabilir ve veri birimlerini tutumlu kullanmak için başka bir neden olduğu herhangi bir birim verileri özgürce düzenleyin.
 
-A [veri birim kapsayıcısı](https://docs.docker.com/v1.8/userguide/dockervolumes/) bir geliştirme normal veri birimleri üzerinde değil. İçinde oluşturulan (daha önce açıklandığı gibi) bir veya daha fazla veri birimleri sahip temelde bir etkinliği olmayan kapsayıcıdır. Veri birim kapsayıcısı, bir merkezi bağlama noktası kapsayıcılara erişim sağlar. Bu yöntem erişim avantajı veri kapsayıcısı mantıksal bağlama noktası yapma özgün verilerin konumu soyutlar ' dir. Ayrıca, "uygulama" kapsayıcıları veri kapsayıcısı birimlerinin oluşturulabilir ve verileri ayrılmış bir kapsayıcıda kalıcı tutarken yok erişim sağlar.
+A [veri birim kapsayıcısı](https://docs.docker.com/glossary/?term=volume) normal veri birimleri üzerinde bir geliştirme olduğu. İçinde oluşturulan (daha önce açıklandığı gibi) bir veya daha fazla veri hacimleri sahip aslında bir etkinliği olmayan kapsayıcıdır. Veri birim kapsayıcısı, bir merkezi takma noktasından kapsayıcılar için erişim sağlar. Bu yöntemin erişim veri kapsayıcısı mantıksal bağlama noktası yapma, özgün verilerin konumu soyutlar avantajdır. Ayrıca, "uygulama" kapsayıcıları oluşturulması ve adanmış bir kapsayıcıda kalıcı verileri korurken yok veri kapsayıcısı birimlere erişen sağlar.
 
-Şekil 4-5, normal Docker birimleri depolama kapsayıcıları kendilerini dışında ancak ana bilgisayar sunucusu/VM fiziksel sınırları içinde yerleştirilebilir gösterir. *Docker birimler bir konak sunucu/VM biriminden diğerine kullanma yeteneğini sahip değilseniz*.
+Şekil 4-5 normal Docker birimleri depolama kapsayıcıları dışında ancak ana sunucu/VM fiziksel sınırları içinde yerleştirilebilir gösterir. *Docker birimler bir konak sunucu/VM'den bir birim başka bir kullanabilme sahip değilseniz*.
 
 ![](./media/image5.png)
 
-Şekil 4-5: veri birimlerini ve kapsayıcıları apps/kapsayıcıları için dış veri kaynakları
+Şekil 4-5: veri hacimleri ve kapsayıcı uygulamalar/kapsayıcılar için dış veri kaynakları
 
-Doğrulanamadığından ayrı fiziksel ana bilgisayarda çalıştırılan kapsayıcıları arasında paylaşılan verileri yönetmek için sabit konak/VM, Docker ana bilgisayar olmadığı sürece, birimleri iş verilerini çünkü kullanmamasını önerilir Docker kapsayıcıları bir orchestrator'da kullanırken kapsayıcı, bir küme tarafından gerçekleştirilmek üzere en iyi duruma getirme bağlı olarak başka bir konağa taşınıp beklenir.
+Sabit konak/VM, Docker konağının olmadığı sürece, birimleri iş verilerini çünkü kullanmamasını önerilir doğrulanamadığından ayrı fiziksel ana bilgisayarda çalışan kapsayıcılar arasında paylaşılan verileri yönetmek için Docker kapsayıcıları bir orchestrator'da kullanırken kapsayıcılar, bir küme tarafından gerçekleştirilecek iyileştirmeleri bağlı olarak başka bir konağa taşınıp beklenir.
 
-Bu nedenle, normal veri birimleri izleme dosyaları, zamana bağlı dosyaları ya da iş veri tutarlılığını varsa veya birden çok konak genelinde kapsayıcılarınızı taşındıklarında etkilemez benzer kavram çalışmak için iyi bir mekanizma altındadır.
+Bu nedenle, normal veri hacimleri izleme dosyaları, geçici dosyaları ya da iş veri tutarlılığı, ya da birden çok konak genelinde kapsayıcılarınızı taşındığında etkilemez herhangi benzer kavramı çalışmak için iyi bir mekanizması mevcuttur.
 
-Birim eklentileri ister [Flocker](https://clusterhq.com/flocker/) bir kümedeki tüm ana bilgisayarlar arasında veri sağlar. Tüm birim eklentileri eşit olarak oluşturulur ancak birim eklentileri genellikle değişmez kapsayıcılarla externalized kalıcı güvenilir depolama sağlar.
+[Birim eklentileri](https://docs.docker.com/engine/extend/plugins_volume/) veri kümesindeki tüm konaklar arasında sağlayın. Tüm birim eklentileri eşit olarak oluşturulmuş olsa da, birim eklentileri genellikle değişmez kapsayıcılardan te dış kalıcı güvenilir depolama sağlar.
 
-Uzak Veri kaynaklarını ve SQL Database, DocumentDB veya Redis gibi uzak bir önbellek gibi önbellekleri kapsayıcıları geliştirme ile aynı olacaktır. Bu, iş uygulama verilerini depolamak için tercih edilen ve kanıtlanmış, yolları biridir.
+Uzak Veri kaynaklarını ve SQL veritabanı, DocumentDB ve Redis gibi uzak bir önbellek gibi önbellekler kapsayıcı geliştirme ile aynı olacaktır. Bu, iş uygulama verilerini depolamak için tercih edilen ve kendini kanıtlamış, yollardan biridir.
 
 
 >[!div class="step-by-step"]
 [Önceki](monolithic-applications.md)
-[sonraki](soa-applications.md)
+[İleri](soa-applications.md)

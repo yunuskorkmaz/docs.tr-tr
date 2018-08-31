@@ -12,46 +12,46 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 3d0885ac3acde6732a5c059063f992913a98b9c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7658eb11e0d9e28c93b0a4b72a248cc42bc705f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528450"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253756"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Sabitleme
-Çalışma zamanında kullanıcı genişletebilir bir form tasarlarken, form üzerinde denetimleri yeniden boyutlandırma ve düzgün bir şekilde yeniden konumlandırmak gerekir. Denetimleri form ile dinamik olarak yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.Control.Anchor%2A> Windows Forms denetimleri özelliği. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği denetimi için bir yer işareti konumunun tanımlar. Forma Denetim bağlantılı ve formu yeniden boyutlandırılabilir denetimi denetimi ve bağlantı konumlar arasındaki uzaklığı korur. Örneğin, bir <xref:System.Windows.Forms.TextBox> formun boyutlandırıldığında sol, sağ ve form alt kenarlarını bağlantılı denetim <xref:System.Windows.Forms.TextBox> denetimi yeniden boyutlandırır yatay böylece form sağ ve sol yanlarından aynı uzaklığı korur. Konumuna her zaman formun kenar aynı mesafe böylece ek olarak, Denetim kendisini dikey olarak yerleştirir. Bir denetim yok bağlantılı ve formu yeniden boyutlandırılabilir, denetimin formun kenarları göreli konumunu değiştirilir.  
+Kullanıcının çalışma zamanında boyutlandırabilirsiniz bir formu tasarlıyorsanız, form üzerindeki denetimleri yeniden boyutlandırabilir ve düzgün şekilde yeniden konumlandırmak. Form ile dinamik olarak yeniden boyutlandırmak için kullanabileceğiniz <xref:System.Windows.Forms.Control.Anchor%2A> Windows Forms denetimlerinin özelliği. <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği denetimi için bir yer işareti konumunu tanımlar. Bir denetimi forma sabitlenmiştir ve formu yeniden boyutlandırılmış, denetim bağlantı konumlar ile Denetim arasındaki uzaklığı korur. Örneğin, bir <xref:System.Windows.Forms.TextBox> formu yeniden boyutlandırıldığından, sol, sağ ve alt kenarları formun bağlantılı denetim <xref:System.Windows.Forms.TextBox> denetimi yeniden boyutlandırır yatay böylece aynı olan formun sağ ve sol tarafında uzaklığı korur. Konumu her zaman formun alt kenarı aynı mesafe olması buna ek olarak, denetimi kendi dikey konumlandırır. Bir denetimi değil bağlantılı ve formu yeniden boyutlandırılmış, formun kenarları kontrole konumunu değiştirilir.  
   
- <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği etkileşime <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği. Daha fazla bilgi için bkz: [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ <xref:System.Windows.Forms.Control.Anchor%2A> Özelliği etkileşim <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği. Daha fazla bilgi için [AutoSize özelliğine genel bakış](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-anchor-a-control-on-a-form"></a>Formdaki bir denetime bağlamak için  
+### <a name="to-anchor-a-control-on-a-form"></a>Bir formdaki bir denetime bağlamak için  
   
-1.  Bağlantı istediğiniz denetimi seçin.  
+1.  Yer işareti istediğiniz denetimi seçin.  
   
     > [!NOTE]
-    >  CTRL tuşunu basılı tutup seçmek için her denetim ve bu yordamın geri kalanını aşağıdaki aynı anda birden çok denetim sabitleyebilirsiniz.  
+    >  CTRL tuşuna basarak her denetimi seçin ve ardından bu yordamın geri kalanını aşağıdaki aynı anda birden çok denetim sabitleyebilirsiniz.  
   
-2.  İçinde **özellikleri** penceresinde sağındaki oku <xref:System.Windows.Forms.Control.Anchor%2A> özelliği.  
+2.  İçinde **özellikleri** penceresinin sağ tarafındaki oka tıklayın <xref:System.Windows.Forms.Control.Anchor%2A> özelliği.  
   
-     Bir düzenleyici bir çapraz gösteren görüntülenir.  
+     Bir düzenleyici çapraz gösteren görüntülenir.  
   
-3.  Bir bağlantı ayarlamak için sol üst, sağ veya çapraz alt kısmına tıklayın.  
+3.  Bir bağlantı ayarlamak için üst, sol, sağ veya çapraz alt kısmına tıklayın.  
   
-     Denetimleri en çok bağlantılı ve varsayılan olarak sol.  
+     Denetimleri için üst bağlantılı ve varsayılan olarak sola.  
   
-4.  Bağlantılı denetim tarafında temizlemek için bu arm arası, Ek Yardım düğmesini tıklatın.  
+4.  Bağlantılı denetim tarafında temizlemek için arm çapraz,'a tıklayın.  
   
-5.  Kapatmak için <xref:System.Windows.Forms.Control.Anchor%2A> özelliği Düzenleyicisi <xref:System.Windows.Forms.Control.Anchor%2A> yeniden özellik adı.  
+5.  Kapatmak için <xref:System.Windows.Forms.Control.Anchor%2A> özellik Düzenleyicisi'ni <xref:System.Windows.Forms.Control.Anchor%2A> yeniden özellik adı.  
   
- Formunuz çalışma zamanında görüntülendiğinde, formun kenarından aynı uzaklıkta konumlandırılmış kalmasına denetimi göre yeniden boyutlandırır. Uzaklığı denetimi Windows Forms Tasarımcısı'nda zaman konumlandırılmış tanımlanan bağlantılı kenara uzaklığı her zaman aynı kalır.  
+ Formunuza çalışma zamanında görüntülendiğinde, formun kenarından aynı uzaklıkta konumlanmış kalmasını denetimi yeniden boyutlandırır. Uzaklık denetimi Windows Form Tasarımcısı'nda ne zaman konumlandırılmış tanımlanan bağlantılı kenarı arasındaki uzaklığı her zaman aynı kalır.  
   
 > [!NOTE]
->  Gibi belirli denetimleri <xref:System.Windows.Forms.ComboBox> denetlemek, kendi yüksekliği için bir sınır vardır. Form veya kapsayıcı altındaki denetime bağlama yükseklik sınırını aşmasına denetimi zorlayamaz.  
+>  Gibi belirli denetimleri <xref:System.Windows.Forms.ComboBox> denetlemek, kendi yüksekliğe bir sınırı vardır. Denetimin form ya da kapsayıcı altına sabitleme denetimin yüksekliği sınırını aşan tutamaz.  
   
- Devralınan denetimleri olmalıdır `Protected` bağlantılı için. Bir denetim erişim düzeyini değiştirmek için ayarlayın, `Modifiers` özelliğinde **özellikleri** penceresi.  
+ Devralınan denetimler olmalıdır `Protected` bağlantılı için. Bir denetim erişim düzeyini değiştirmek için Ayarla kendi `Modifiers` özelliğinde **özellikleri** penceresi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  

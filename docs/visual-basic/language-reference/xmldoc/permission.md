@@ -1,18 +1,18 @@
 ---
-title: '&lt;izin&gt; (Visual Basic)'
+title: '&lt;izni&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 4fafebf94be350951672f01f2d17bd00d4bab69a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcec5d968f5d0c5400c28e772df151b164888a47
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602001"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257441"
 ---
-# <a name="ltpermissiongt-visual-basic"></a>&lt;izin&gt; (Visual Basic)
+# <a name="ltpermissiongt-visual-basic"></a>&lt;izni&gt; (Visual Basic)
 Üye için gerekli izni belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -23,20 +23,20 @@ ms.locfileid: "33602001"
   
 #### <a name="parameters"></a>Parametreler  
  `member`  
- Bir üye ya da geçerli derleme ortamından çağrılacak kullanılabilir alan başvuru. Verilen code öğesi var ve çevirir derleyici denetler `member` XML çıktısında kurallı öğesi adı. İçine `member` tırnak işaretleri ("").  
+ Bir üye veya geçerli derleme ortamdan çağrılacak kullanılabilir alan başvuru. Derleyici belirli kod öğesi var. çevirir olup olmadığını denetler ve `member` kurallı öğesi adı ' % s'çıkış XML dosyası. İçine `member` tırnak işaretleri ("").  
   
  `description`  
  Üye erişimi açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<permission>` üyesi erişim belge etiketi. Kullanım <xref:System.Security.PermissionSet> üyesi için erişimi belirtmek üzere sınıfı.  
+ Kullanım `<permission>` üyenin erişim belgelemek için etiket. Kullanım <xref:System.Security.PermissionSet> sınıfın üyesi erişimi belirtin.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<permission>` açıklayan etiketi <xref:System.Security.Permissions.FileIOPermission> gerekli `ReadFile` yöntemi.  
+ Bu örnekte `<permission>` açıklayan için etiket <xref:System.Security.Permissions.FileIOPermission> gerektirdiği `ReadFile` yöntemi.  
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

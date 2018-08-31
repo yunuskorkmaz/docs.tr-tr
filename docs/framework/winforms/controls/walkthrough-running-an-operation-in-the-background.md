@@ -13,50 +13,50 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541011"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254760"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
-Tamamlanması uzun zaman alacağı işleme sahip ve kullanıcı arabiriminde gecikmelere neden istemediğiniz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> işlemi başka bir iş parçacığında çalıştırmak için sınıf.  
+Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabiriminizde gecikmelere neden istiyor musunuz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> sınıfı, başka bir iş parçacığı üzerinde işlemi çalıştıramadı.  
   
- Bu örnekte kullanılan kod tam listesi için bkz: [nasıl yapılır: bir işlemi arka planda çalışan](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: arka planda işlem çalıştırma](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-run-an-operation-in-the-background"></a>Bir işlemi arka planda çalıştırmak için  
   
-1.  Windows Forms Tasarımcısı'nda etkin formun ile iki <xref:System.Windows.Forms.Button> gelen denetler **araç** form olarak ayarlayın ve ardından için `Name` ve <xref:System.Windows.Forms.Control.Text%2A> aşağıdaki tabloya göre düğmelerin özelliklerini.  
+1.  Windows Form Tasarımcısı'nda etkin, formunuzu ile iki <xref:System.Windows.Forms.Button> denetimler **araç kutusu** form ve ardından `Name` ve <xref:System.Windows.Forms.Control.Text%2A> özellikleri aşağıdaki tabloya göre düğmelerinin.  
   
     |Düğme|Ad|Metin|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**İptal Etme**|  
   
-2.  Açık **araç**, tıklatın **bileşenleri** sekmesini tıklatın ve ardından sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen.  
+2.  Açık **araç kutusu**, tıklayın **bileşenleri** sekmesine ve ardından sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen.  
   
-     `backgroundWorker1` Bileşen görünür **bileşen**.  
+     `backgroundWorker1` Bileşeni görünür **bileşeni Tepsi**.  
   
-3.  İçinde **özellikleri** penceresindeki ayarlayın <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliğine `true`.  
+3.  İçinde **özellikleri** penceresinde <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliğini `true`.  
   
-4.  İçinde **özellikleri** penceresinde tıklatın **olayları** düğmesine tıklayın ve ardından <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturma.  
+4.  İçinde **özellikleri** penceresinde tıklayarak **olayları** düğmesini ve ardından çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicilerini oluşturma.  
   
-5.  Uzun süren kodunuza eklemek <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  
+5.  Zaman kodunuza ekleyin <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  
   
-6.  İşlemi gerektirdiği herhangi bir parametre ayıklamak <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> özelliği <xref:System.ComponentModel.DoWorkEventArgs> parametresi.  
+6.  Ayıklama işlemi tarafından gereken herhangi bir parametre <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> özelliği <xref:System.ComponentModel.DoWorkEventArgs> parametresi.  
   
-7.  Hesaplama sonucu atamak <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> özelliği <xref:System.ComponentModel.DoWorkEventArgs>.  
+7.  Bir hesaplama sonucu atama <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> özelliği <xref:System.ComponentModel.DoWorkEventArgs>.  
   
-     Bu olacak olan kullanılabilir <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olay işleyicisi.  
+     Bu işlem, kullanılabilir <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olay işleyicisi.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  İşlemin sonucunu almak için kod ekleme <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olay işleyicisi.  
+8.  İçinde işlemin sonucunu almak için kod ekleme <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olay işleyicisi.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -66,39 +66,39 @@ Tamamlanması uzun zaman alacağı işleme sahip ve kullanıcı arabiriminde gec
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#4)]  
   
-10. Windows Forms Tasarımcısı'nda çift `startButton` oluşturmak için <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
+10. Windows Form Tasarımcısı'nda çift `startButton` oluşturmak için <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
   
-11. Çağrı <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yönteminde <xref:System.Windows.Forms.Control.Click> için olay işleyicisini `startButton`.  
+11. Çağrı <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yönteminde <xref:System.Windows.Forms.Control.Click> için olay işleyicisi `startButton`.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#5)]  
   
-12. Windows Forms Tasarımcısı'nda çift `cancelButton` oluşturmak için <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
+12. Windows Form Tasarımcısı'nda çift `cancelButton` oluşturmak için <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
   
-13. Çağrı <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> yönteminde <xref:System.Windows.Forms.Control.Click> için olay işleyicisini `cancelButton`.  
+13. Çağrı <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> yönteminde <xref:System.Windows.Forms.Control.Click> için olay işleyicisi `cancelButton`.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#6)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#6)]  
   
-14. Dosyanın üst kısmında, System.ComponentModel ve System.Threading ad içeri aktarın.  
+14. Dosyasının en üstüne System.ComponentModel ve System.Threading ad alanlarını içeri aktarın.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#7)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#7)]  
   
-15. Çözümü derlemek için F6 tuşuna basın ve hata ayıklayıcı dışında uygulamayı çalıştırmak için CTRL-F5 tuşuna basın.  
+15. Çözümü derlemek için F6 tuşuna basın ve uygulamayı hata ayıklayıcı dışında çalıştırmak için CTRL-F5 tuşuna basın.  
   
 > [!NOTE]
->  Hata ayıklayıcı altında uygulamayı çalıştırmak için F5 tuşuna basarsanız, özel durum oluşturuldu `TimeConsumingOperation` yöntemi yakalanan ve hata ayıklayıcı tarafından görüntülenir. Hata ayıklayıcı dışında uygulamayı çalıştırdığınızda <xref:System.ComponentModel.BackgroundWorker> özel durumu işler ve içinde önbelleğe <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
+>  Hata ayıklayıcısı altında uygulamayı çalıştırmak için F5 tuşuna basarsanız, özel durum ortaya `TimeConsumingOperation` yöntemi yakalandı ve hata ayıklayıcı tarafından görüntülenir. Uygulama, hata ayıklayıcı dışında çalıştırırken <xref:System.ComponentModel.BackgroundWorker> içinde önbelleğe alır ve özel durum işleme <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliği <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
   
-1.  Tıklatın **Başlat** zaman uyumsuz bir işlem çalıştırmak için düğmesine tıklayın ve ardından **iptal** çalışan zaman uyumsuz işlemi durdurmak için düğmesi.  
+1.  Tıklayın **Başlat** zaman uyumsuz bir işlemin çalıştırılması için düğmesine ve ardından **iptal** bir çalıştırma zaman uyumsuz işlemi durdurmak için düğmeye.  
   
      Her bir işlemin sonucunu görüntülenen bir <xref:System.Windows.Forms.MessageBox>.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
   
--   Zaman uyumsuz bir işlem devam ettikçe ilerleme raporları bir form uygulayın. Daha fazla bilgi için bkz: [nasıl yapılır: bir arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Zaman uyumsuz bir işlem devam ederken, ilerleme durumunu raporlayan bir form uygulama. Daha fazla bilgi için [nasıl yapılır: arka plan işlemi kullanan bir Form uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Bileşenleri için zaman uyumsuz deseni destekleyen bir sınıf uygulama. Daha fazla bilgi için bkz: [olay tabanlı zaman uyumsuz deseni uygulama](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+-   Bileşenler için zaman uyumsuz deseni destekleyen bir sınıf uygulamak. Daha fazla bilgi için [olay tabanlı zaman uyumsuz deseni uygulama](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.BackgroundWorker>  
