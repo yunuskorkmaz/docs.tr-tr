@@ -1,5 +1,5 @@
 ---
-title: Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
+title: Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81b33378519747060e604610ac1f3b9090332c11
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314076"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253653"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki güncelleştireceğinizi&#39;t bu C# hatasıyla ilgili ayrıntı sahip
-Üzgünüz, ancak bu hatayla ilgili belirli bir bilgi bulunmuyor. Web hakkında bilgi bulmak hata numarası ve ileti metni arayabilirsiniz. Veya bu forumları birini kullanarak diğer geliştiriciler isteyin:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Ne yazık ki ki&#39;bu C# hatasıyla ilgili ayrıntı yok
+Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
   
  [Visual C# dili](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Bir forum hakkında sorular ve Visual C# dili sözdizimi ve derleyicisi genel tartışmalara sağlar.  
+ Hakkında sorular ve Visual C# dilinin sözdizimi ve derleyicisi genel tartışmalar için bir forum sağlar.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
   
  [Visual C# genel](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Hakkında sorular için bir forum sağlar ve sorunlar ile Visual C, diğer forumlarda açıklanmamaktadır #.  
+ Hakkında sorular için bir forum sağlar ve sorunları ile Visual C, diğer forumlarda ele alınmamaktadır #.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Hakkında sorular için bir forum sağlar ve Visual C# ile yayımlar.  
+ Hakkında sorular için bir forum sağlar ve Visual C# ile verir.  
   
- Ayrıca bkz.:  
+ Ayrıca bkz:  
  [Visual C# programcıları için ek kaynaklar](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)  
- [C# başvurusu](../../csharp/language-reference/index.md)  
- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../../csharp/programming-guide/index.md)  
+- [C# başvurusu](../../csharp/language-reference/index.md)  
+- [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)  

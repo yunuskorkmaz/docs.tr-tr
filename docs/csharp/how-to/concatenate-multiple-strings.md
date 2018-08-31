@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961319"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256104"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Nasıl yapılır: (C# Kılavuzu) birden çok dizeyi birleştirme
 
@@ -23,7 +23,6 @@ ms.locfileid: "37961319"
 Aşağıdaki örnek, uzun bir dize sabit değeri daha küçük dizelere kaynak kodunda okunabilirliği artırmak için bölmek için birleştirme kullanır. Bu bölümleri tek bir dize olarak derleme zamanında bitiştirilir. İlgili dizeleri sayısından bağımsız olarak hiçbir çalışma zamanı performans maliyeti yoktur.  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 Dize değişkenleri birleştirmek için kullanabileceğiniz `+` veya `+=` işleçleri [dize ilişkilendirme](../language-reference/tokens/interpolated.md) veya <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> yöntemleri. `+` İşleci kullanımı kolay ve sezgisel kodunu sağlar. Birkaç kullanıyor olsanız bile `+` bir ifade, dize içerik işleci yalnızca bir kez kopyalanır. Aşağıdaki kod örnekleri kullanarak gösterir `+` ve `+=` dizeyi birleştirmek için işleçleri:
 
@@ -34,7 +33,7 @@ Bazı ifadeler dize ilişkilendirme, aşağıdaki kodun gösterdiği gibi kullan
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  Dize birleştirme işlemleri, C# derleyicisi boş bir dize aynı boş bir dize değerlendirir.
+> Dize birleştirme işlemleri, C# derleyicisi boş bir dize aynı boş bir dize değerlendirir.
 
 Dizeleri birleştirmek için başka bir yöntem olan <xref:System.String.Format%2A?displayProperty=nameWithType>. Bu yöntem, iyi bir dizeden çok az sayıda bileşen dizeleri oluştururken çalışır.
 
@@ -54,8 +53,9 @@ En son olarak, kullanabileceğiniz [LINQ](../programming-guide/concepts/linq/ind
 
 Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [C# Programlama Kılavuzu](../programming-guide/index.md)  
- [Dizeler](../programming-guide/strings/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [C# Programlama Kılavuzu](../programming-guide/index.md)  
+- [Dizeler](../programming-guide/strings/index.md)

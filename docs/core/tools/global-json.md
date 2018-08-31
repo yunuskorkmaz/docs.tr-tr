@@ -3,14 +3,14 @@ title: Global.JSON genel bakış
 description: .NET Core SDK'sı sürümü, .NET Core CLI komutlarını çalıştırırken ayarlanacak global.json dosyasını kullanmayı öğrenin.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/02/2018
+ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936977"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252966"
 ---
 # <a name="globaljson-overview"></a>Global.JSON genel bakış
 
@@ -103,8 +103,8 @@ Bu uyarı, projeniz .NET Core SDK'sı, bir önizleme sürümünü kullanarak aç
 > [!WARNING]
 > Başlangıç projesi '{startupProject}' hedef framework '. NETCoreApp' sürümü '{targetFrameworkVersion}'. Entity Framework Core ve .NET komut satırı araçları bu sürümü yalnızca sürüm 2.0 veya üstü destekler. Araçlar'ın eski sürümlerini kullanma hakkında daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?linkid=871254
 
-Başlayarak .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core SDK 2.1 ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. .NET Core SDK 2.0 (v. projenizi derlemek için yükleme 2.1.201) ve makinenizde önceki. Daha fazla bilgi için [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
+Başlayarak .NET Core SDK 2.1 (v. 2.1.300) `dotnet ef` komutu birlikte gelen SDK. Bu uyarı, projenizi EF Core 1.0 veya 1.1, .NET Core SDK 2.1 ve sonraki sürümler ile uyumlu değil hedefleyen olduğunu gösterir. .NET Core SDK 2.0 (v. projenizi derlemek için yükleme 2.1.201) ve makinenizde önceki ve istenen SDK sürümüyle tanımlamak *global.json* dosya. Hakkında daha fazla bilgi için `dotnet ef` komutu, bkz: [EF Core .NET komut satırı araçları](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Proje SDK'ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+* [Proje SDK'ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

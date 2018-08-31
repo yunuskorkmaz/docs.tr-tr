@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cabd39307b6928302b40931c39fc61c3898821ed
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929650"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254482"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# Diline ve.NET Framework'e Giriş
 
@@ -66,7 +66,7 @@ C#, geliştiricilerin üzerinde çalışan güvenli ve sağlam uygulamalar oluş
   
  .NET Framework hakkında daha fazla bilgi için bkz. [Microsoft .NET Framework'ün genel bakış](../../framework/get-started/overview.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
+## <a name="see-also"></a>Ayrıca bkz.
 
 - [C#](../../csharp/index.md)
 - [Visual C# ve Visual Basic'e Başlarken](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

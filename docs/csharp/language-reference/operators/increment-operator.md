@@ -7,27 +7,28 @@ helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: 0fe1150ca7267d02feeab33168eab7f79734c2a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275070"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254288"
 ---
 # <a name="-operator-c-reference"></a>++ İşleci (C# Başvurusu)
-Artış işleci (`++`), işlenen 1 arttırır. Artış işleci önce veya sonra işlenen görünebilir: `++variable` ve `variable++`.  
+Artırım işleci (`++`) işleneniyle 1 artar. Artırım işleci önce veya sonra işleneniyle görünebilir: `++variable` ve `variable++`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İlk form bir önek artırma işlemdir. Bunu artar sonra işlemin sonucunu işleneni değerdir.  
+ Önek artırma işlemi ilk biçimidir. Bunu artırıldıktan sonra işleminin sonucu işlenenin değerdir.  
   
- İkinci form bir sonek artırma işlemdir. Bunu artar önce işleminin sonucu işleneni değerdir.  
+ Bir sonek artırma işlemi ikinci biçimidir. Bunu artırıldıktan önce işleminin sonucu işlenenin değerdir.  
   
- Sayısal ve Numaralandırma türleri artırma işleçleri önceden. Kullanıcı tanımlı türler aşırı yükleme `++` işleci. Tam sayı türleri üzerinde işlemler genellikle numaralandırma üzerinde izin verilir.  
+ Sayısal ve Numaralandırma türleri artırma işleçleri önceden tanımlanmış. Kullanıcı tanımlı türler aşırı yükleme `++` işleci. Tamsayı türlerinde işlemler genellikle numaralandırma üzerinde izin verilir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

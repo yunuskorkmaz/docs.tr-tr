@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 663e816cdc31ed7854f7ebd060bffcfa5b85f475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535031"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253358"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
-Visual Studio geliştirme ortamında çalışmaya kullanılan hale olarak Windows Forms Tasarımcısı'nda tüm formlar ve projeleri ile çalışmak için tercihleri ayarlayabilirsiniz.  
+Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri formları ve projeleri ile iş için Windows Form Tasarımcısı'nda ayarlayabilirsiniz.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-global-windows-forms-options"></a>Genel Windows Formları seçeneklerini ayarlamak için  
   
-1.  Gelen **Araçları** menüsünde, select **seçenekleri**.  
+1.  Gelen **Araçları** menüsünde **seçenekleri**.  
   
-2.  Sol bölmesinde **seçenekleri** iletişim kutusu, tıklatın **Windows Form Tasarımcısı**.  
+2.  Sol bölmesinde **seçenekleri** iletişim kutusu, tıklayın **Windows Form Tasarımcısı**.  
   
-     Sağ bölmede altında **düzeni ayarları** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, olup denetimleri için ek ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **Snaptogrıd** ve **dayama çizgileri** düzeni modları. Dayama çizgileri hakkında daha fazla bilgi için bkz: [izlenecek yol: Windows Forms kullanarak dayama çizgileri düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Sağ bölmede altında **düzen ayarlarını** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, mi denetimleri için Yaslama ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **LayoutMode** ve **dayama çizgileri** Düzen modu. Dayama çizgileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Windows Forms dayama çizgileri kullanarak düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  

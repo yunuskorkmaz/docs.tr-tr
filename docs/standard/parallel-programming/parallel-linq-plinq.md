@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccd30ee987fbc4ad75008a28c030c4f44a2368dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 326fce55b13217bd08e58bf13a423fc9b6ffcbff
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581387"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254373"
 ---
 # <a name="parallel-linq-plinq"></a>Paralel LINQ (PLINQ)
-Paralel LINQ (PLINQ) nesnelere LINQ paralel bir uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçleri tam kümesi uygulayan <xref:System.Linq> ad alanı ve paralel işlemleri için ek işleçler sahiptir. PLINQ Basitlik ve LINQ sözdizimi okunabilirliğini paralel programlama güç ile birleştirir. Yalnızca kod gibi ana bilgisayar özelliklerine göre eşzamanlılık ölçüde PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  
+Paralel LINQ (PLINQ) bir paralel LINQ to Objects'in uygulamasıdır. PLINQ için genişletme yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini uygular <xref:System.Linq> ad alanı ve paralel işlemler için ek işleçler. PLINQ'nun paralel programlama gücüyle basitliği ve LINQ söz dizimi okunabilirliğini birleştirir. Kod gibi ana bilgisayar becerilerine dayalı eşzamanlılık derecesini, PLINQ sorguları hedefleyen görev paralel kitaplığı ölçeklendirin.  
   
- Birçok senaryoda PLINQ önemli ölçüde LINQ hızı nesneleri sorgular için tüm kullanılabilir çekirdekler ana bilgisayarda daha verimli bir şekilde kullanarak artırabilirsiniz. Bu performans, yüksek performanslı bilgi işlem gücü Masaüstü üzerine getirir.  
+ Birçok senaryoda PLINQ önemli ölçüde LINQ hızına Plınq sorgularının tüm mevcut çekirdekler ana bilgisayarda daha verimli bir şekilde kullanarak artırabilirsiniz. Bu performans artışı masaüstüne yüksek performanslı bilgi işlem gücü getirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [PLINQ'e Giriş](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  

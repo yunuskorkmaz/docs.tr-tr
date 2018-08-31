@@ -12,95 +12,94 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571988"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256661"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Normal İfadelerdeki Çeşitli Yapılar
-.NET normal ifadelerde üç çeşitli dil yapıları içerir. Bir etkinleştirmek veya normal ifade deseni ortasında belirli eşleştirme seçenekleri devre dışı bırakmanızı sağlar. İki kalan normal ifadede açıklamalar dahil olanak tanır.  
+.NET içinde normal ifadeler üç çeşitli dil yapıları içerir. Biri, etkinleştirme veya devre dışı ortasında bir normal ifade deseni eşleştirme belirli seçenekleri sağlar. Kalan iki normal bir ifadede açıklamalar ekleme olanak tanır.  
   
-## <a name="inline-options"></a>Satır içi seçenekleri  
- Ayarlayın veya belirli bir desene sözdizimini kullanarak eşleştirme için normal bir ifade parçası seçeneklerini devre dışı bırakma  
+## <a name="inline-options"></a>Satır içi Seçenekler  
+ Ayarlayabilir veya belirli desen eşleştirme için normal bir ifade parçası seçeneklerini sözdizimi kullanılarak devre dışı bırak  
   
 ```  
 (?imnsx-imnsx)  
 ```  
   
- Soru işareti sonra etkinleştirmek istediğiniz seçenekleri ve eksi sonra devre dışı bırakmak istediğiniz seçenekleri listeleyin. Aşağıdaki tabloda her bir seçenek açıklanmaktadır. Her bir seçenek hakkında daha fazla bilgi için bkz: [normal ifade seçenekleri](../../../docs/standard/base-types/regular-expression-options.md).  
+ Soru işaretinden sonra etkinleştirmek istediğiniz seçenekleri ve eksi işareti sonra devre dışı bırakmak istediğiniz seçenekleri listeler. Aşağıdaki tabloda her bir seçenek açıklanmaktadır. Her bir seçenek hakkında daha fazla bilgi için bkz. [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`i`|Büyük küçük harf duyarsız eşleşen.|  
+|`i`|Büyük küçük harf duyarsız eşleştirme.|  
 |`m`|Çok satırlı modu.|  
-|`n`|Yalnızca açık yakalar. (Parantez yok davranan grupları yakalama olarak.)|  
-|`s`|Tek satırlı modu.|  
-|`x`|Atlanmayan boşluk yoksay ve x modu açıklamalara izin verme.|  
+|`n`|Yalnızca açık yakalamalar. (Parantez hareket değil olarak yakalama grupları.)|  
+|`s`|Tek satır modu.|  
+|`x`|Çıkmamış boşluğu yoksay ve x modu açıklamalara izin verme.|  
   
- Normal ifade seçenekleri tarafından tanımlanan herhangi bir değişikliği `(?imnsx-imnsx)` kapsayan grubun sonuna kadar etkin kalır oluşturun.  
+ Normal ifade seçenekleri tarafından tanımlanan herhangi bir değişiklik `(?imnsx-imnsx)` kalır kapsayan grubun sonuna kadar geçerli oluşturun.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:` *Alt* `)` gruplama yapısı için bir alt aynı işlevselliği sağlar. Daha fazla bilgi için bkz: [gruplandırma yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  `(?imnsx-imnsx:` *Subexpression* `)` gruplama yapısında bir alt ifade için aynı işlevselliği sağlar. Daha fazla bilgi için [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Aşağıdaki örnek kullanır `i`, `n`, ve `x` seçenekleri büyük/küçük harfe ve açık yakalamaları etkinleştirin ve normal bir ifade ortasında normal ifade deseni boşluk yoksay.  
+ Aşağıdaki örnekte `i`, `n`, ve `x` büyük/küçük harfe ve açık yakalamalar etkinleştirmek ve normal ifade deseninde bir normal ifade ortasında beyaz boşluğu yok saymak için Seçenekler.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
- Örneğin, iki normal ifadeler tanımlar. İlk `\b(D\w+)\s(d\w+)\b`, "D" bir büyük harf ve küçük harf "d" ile başlayan iki ardışık sözcük eşleşir. İkinci normal ifade `\b(D\w+)(?ixn) \s (d\w+) \b`, aşağıdaki tabloda açıklandığı gibi bu deseni değiştirmek için satır içi seçeneklerini kullanır. Sonuçları karşılaştırması etkisini onaylar `(?ixn)` oluşturun.  
+ Örneğin, iki normal ifade tanımlar. Birincisi, `\b(D\w+)\s(d\w+)\b`, "D" bir büyük harf ve küçük harf "d" ile başlayan iki ardışık sözcüklerle eşleşir. İkinci normal ifade `\b(D\w+)(?ixn) \s (d\w+) \b`, aşağıdaki tabloda açıklandığı gibi bu düzeni değiştirmek için satıriçi seçeneklerini kullanır. Sonuçları karşılaştırması etkisini onaylar `(?ixn)` oluşturun.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`(D\w+)`|Büyük harf "bir veya daha fazla word karakterle devam etmelidir D" eşleşir. Bu ilk yakalama grubudur.|  
-|`(?ixn)`|Bu noktasında, büyük küçük harf duyarsız yapma karşılaştırmaları, yalnızca açık olun yakalar ve normal ifade deseni boşluk yoksay.|  
+|`(D\w+)`|Büyük harf "D" bir veya daha fazla sözcük karakteri ve ardından eşleştirin. Bu ilk yakalama grubudur.|  
+|`(?ixn)`|Bu noktasında, büyük küçük harf duyarsız karşılaştırmalar yapmak, yalnızca açık olun yakalar ve normal ifade deseninde beyaz boşluğu yok saymak.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
-|`(d\w+)`|Eşleşen bir büyük veya küçük harf "d" bir veya daha fazla word karakterle devam etmelidir. Bu grup, çünkü sayılmaz `n` (açık yakalama) seçeneği etkinleştirilmiş...|  
+|`(d\w+)`|Bir büyük veya küçük harf "d" bir veya daha fazla sözcük karakteri ve ardından eşleştirin. Bu grup, çünkü yakalanmaz `n` (belirtik yakalama) seçeneği etkinleştirilmiş...|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
   
-## <a name="inline-comment"></a>Satır içi açıklama  
- `(?#` *Açıklama* `)` yapı normal ifadede bir satır içi açıklama eklemek olanak sağlar. Normal ifade altyapısı tarafından döndürülen dize açıklama bulunmaktadır ancak desen eşleştirme, açıklaması, herhangi bir bölümünü kullanmaz <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> yöntemi. Açıklama ilk kapanış parantezinde sona erer.  
+## <a name="inline-comment"></a>Satır için açıklama  
+ `(?#` *Yorum* `)` yapısı normal bir ifadede bir satır içi açıklama eklemenize olanak tanır. Normal ifade altyapısı tarafından döndürülen dize içinde açıklamayı olsa desen eşleştirme, açıklaması, herhangi bir bölümünü kullanmaz <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> yöntemi. Açıklama ilk kapanış parantezinde sona erer.  
   
- Aşağıdaki örnek, önceki bölümde örneğindeki ilk normal ifade deseni tekrarlar. İki satır içi açıklamalar karşılaştırma büyük küçük harfe duyarlı olup olmadığını belirtmek için normal ifade ekler. Normal ifade deseni `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, aşağıdaki gibi tanımlanır.  
+ Aşağıdaki örnek, önceki bölümdeki örnekte birinci normal ifade deseni tekrarlar. Karşılaştırma büyük/küçük harfe olup olmadığını belirtmek için normal ifade iki satır içi açıklamalara ekler. Normal ifade deseni `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, şu şekilde tanımlanır.  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(?# case-sensitive comparison)`|Bir yorum. Desen eşleştirme davranışını etkilemez.|  
-|`(D\w+)`|Büyük harf "bir veya daha fazla word karakterle devam etmelidir D" eşleşir. Bu ilk yakalama grubudur.|  
+|`(D\w+)`|Büyük harf "D" bir veya daha fazla sözcük karakteri ve ardından eşleştirin. Bu ilk yakalama grubudur.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
-|`(?ixn)`|Bu noktasında, büyük küçük harf duyarsız yapma karşılaştırmaları, yalnızca açık olun yakalar ve normal ifade deseni boşluk yoksay.|  
+|`(?ixn)`|Bu noktasında, büyük küçük harf duyarsız karşılaştırmalar yapmak, yalnızca açık olun yakalar ve normal ifade deseninde beyaz boşluğu yok saymak.|  
 |`(?#case-insensitive comparison)`|Bir yorum. Desen eşleştirme davranışını etkilemez.|  
-|`(d\w+)`|Eşleşen bir büyük veya küçük harf "d" bir veya daha fazla word karakterle devam etmelidir. Bu ikinci bir yakalama grubudur.|  
+|`(d\w+)`|Bir büyük veya küçük harf "d" bir veya daha fazla sözcük karakteri ve ardından eşleştirin. Bu ikinci yakalama grubudur.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous2.cs#2)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
-## <a name="end-of-line-comment"></a>Satır sonu açıklama  
- Sayı işareti (`#`) normal ifade deseni sonunda atlanmayan # karakteri başlar ve satırın sonuna kadar devam x modu yorum işaretler. Bu yapıyı kullanmak için Etkinleştir'i gerekir `x` seçeneği (satır içi seçenekleri) veya kaynağı <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> değeri `option` başlatılırken parametresi <xref:System.Text.RegularExpressions.Regex> nesnesi veya bir statik çağırma <xref:System.Text.RegularExpressions.Regex> yöntemi.  
+## <a name="end-of-line-comment"></a>Satır sonu açıklaması  
+ Sayı işareti (`#`) normal ifade deseni sonunda atlanmayan # karakteri başlar ve satırın sonuna kadar devam eder, x-mode yorumu işaretler. Bu yapı kullanmak için Etkinleştir'i gerekir `x` seçeneğini (satır içi seçenekleri) veya tedarik <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> değerini `option` örneği oluşturulurken parametre <xref:System.Text.RegularExpressions.Regex> nesne veya statik bir çağırma <xref:System.Text.RegularExpressions.Regex> yöntemi.  
   
- Aşağıdaki örnek, satır sonu açıklama yapı gösterilmektedir. Bu bir dize en az bir biçim öğesi içeren bileşik biçim dizesi olup olmadığını belirler. Aşağıdaki tabloda, normal ifade deseni yapılardan açıklanmaktadır:  
+ Aşağıdaki örnekte, satır sonu yorum yapısı gösterilmektedir. Bu, bir dize en az bir biçim öğesi içeren bir bileşik biçimlendirme dizesi olup olmadığını belirler. Aşağıdaki tablo, normal ifade deseninde yapıları açıklar:  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`\{`|Açılan parantez eşleşir.|  
+|`\{`|Bir açılış ayracı eşleşmesi.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
-|`(,-*\d+)*`|Bir veya daha fazla ondalık basamak ile izlenen isteğe bağlı bir eksi işareti, arkasından virgül, sıfır veya bir örneğini Bul.|  
-|`(\:\w{1,4}?)*`|Sıfır veya bir geçişi dörde ancak olabildiğince az olabildiğince, boşluk karakterleri tarafından üste ile eşleşir.|  
-|`(?#case insensitive comparison)`|Satır içi bir yorum. Desen eşleştirme davranışı üzerinde bir etkisi yoktur.|  
-|`\}`|Kapatılan parantez eşleşir.|  
-|`(?x)`|Böylece satır sonu açıklama tanınan yoksay düzeni boşluk seçeneğini etkinleştirin.|  
-|`# Looks for a composite format item.`|Bir satır sonu açıklaması.|  
+|`(,-*\d+)*`|Bir veya daha fazla ondalık basamak gelen bir isteğe bağlı eksi işareti, ardından virgül, sıfır veya bir oluşumunu eşleştirin.|  
+|`(\:\w{1,4}?)*`|Bir ile dört ama olabildiğince az olabildiğince, boşluk karakterlerinin izlediği bir virgül, sıfır veya bir oluşumunu eşleştirin.|  
+|`\}`|Bir kapanış ayracı eşleşmesi.|  
+|`(?x)`|Satır sonu yorum tanınması yoksay deseni boşluk seçeneğini etkinleştirin.|  
+|`# Looks for a composite format item.`|Bir satır sonu açıklama.|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Sağlama yerine Not `(?x)` oluşturmak normal ifadede açıklama da çağırarak kabul edilmemiş <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi ve onu <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> numaralandırma değeri.  
+ Sağlamak yerine Not `(?x)` oluşturmak içindeki bir normal ifade, açıklama da çağırarak kabul edilmemiş <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> yöntemi ve geçirerek <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> numaralandırma değeri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

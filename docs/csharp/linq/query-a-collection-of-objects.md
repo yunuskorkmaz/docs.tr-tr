@@ -4,11 +4,11 @@ description: Bilgi koleksiyonları LINQ C# kullanarak nasıl sorgulama.
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
 ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935547"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256148"
 ---
 # <a name="query-a-collection-of-objects"></a>Nesneler koleksiyonunu sorgulama
 

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 6520aef7d04694b6fcd7f50da84a2a9cea6e7b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528596"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253230"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama
-Windows tabanlı uygulamanızın kullanıcı arabirimi (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını yerleştirebilirsiniz.  
+Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını konumlandırabilirsiniz.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-align-multiple-controls-on-a-form"></a>Bir form üzerinde birden çok denetimler hizalamak için  
+### <a name="to-align-multiple-controls-on-a-form"></a>Form üzerindeki birden çok denetimi hizalama  
   
-1.  Yerleştirin istediğiniz denetimleri içeren formunu açmak **Windows Form Tasarımcısı**.  
+1.  Getirin istediğiniz denetimleri içeren formu açın **Windows Form Tasarımcısı**.  
   
-2.  Böylece seçtiğiniz ilk denetim için diğer hizalanmalıdır birincil denetim hizalamak istediğiniz denetimleri seçin.  
+2.  Böylece seçtiğiniz ilk denetim, diğer hizalanmalıdır birincil denetim hizalamak için istediğiniz denetimleri seçin.  
   
-3.  Üzerinde **biçimi** menüsündeki **Hizala**, yedi seçenekleri birini tıklatın.  
+3.  Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  

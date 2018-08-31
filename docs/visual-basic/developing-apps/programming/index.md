@@ -5,40 +5,40 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587416"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255208"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
-Bu bölümde, Visual Basic uygulamanız oluştururken daha fazla bilgi edinmek isteyebilirsiniz programlama görevleri açıklanmaktadır.  
+Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi için isteyebilirsiniz programlama görevlerini açıklar.  
   
 ## <a name="in-this-section"></a>Bu bölümde  
- [Bilgisayar Kaynaklarına Erişme](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
- Belgeleri nasıl kullanılacağı konusunda içeren `My.Computer` bilgilere erişim bilgisayarla ilgili bir uygulama çalışır ve bilgisayarı denetlemek nasıl nesnesi.  
+ [Bilgisayar Kaynaklarına Erişme](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
+ Nasıl kullanılacağı hakkında belgeleri içerir `My.Computer` bilgisayar bilgilerine erişim uygulamanın çalıştığı ve nasıl bilgisayarı denetlemek nesne.  
   
- [Uygulamadan Günlüğe Bilgi Kaydetme](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
- Kullanarak, uygulama bilgileri günlüğe kaydetmek nasıl belgeleri içeren `My.Application.Log` ve `My.Log` nesneleri ve uygulamanın günlüğe kaydetme özellikleri genişletme.  
+ [Uygulamadan Günlüğe Bilgi Kaydetme](../../../visual-basic/developing-apps/programming/log-info/index.md)  
+ Bilgileri günlüğe kaydetmek, uygulama kullanımından eklemeye ilişkin belge içeren `My.Application.Log` ve `My.Log` nesneleri ve uygulamanın günlüğe kaydetme özellikleri genişletme.  
   
  [Kullanıcı Verilerine Erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- Kullanarak gerçekleştirebileceğiniz görevler hakkındaki belgeleri içeren `My.User` nesnesi.  
+ Kullanarak gerçekleştirebileceğiniz görevler hakkında bilgi içeren `My.User` nesne.  
   
  [Uygulama Formlarına Erişme](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- Kullanarak bir uygulama formlarına erişme üzerinde belgeleri içeren `My.Forms` ve `My.Application` nesneleri.  
+ Kullanarak bir uygulama formlarına erişme hakkında belgeleri içerir `My.Forms` ve `My.Application` nesneleri.  
   
  [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- Uygulamasını kullanarak başvurulan Web hizmetlerine erişmek nasıl belgeleri içeren `My.WebServices` nesnesi.  
+ Erişim kullanan uygulama tarafından başvurulan Web Hizmetleri hakkında belgeleri içerir `My.WebServices` nesne.  
   
- [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
- Bir uygulamanın ayarlarını kullanarak erişim belgeleri içeren `My.Settings` nesnesi.  
+ [Uygulama Ayarlarına Erişme](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ Kullanarak uygulama ayarlarına erişme hakkında belgeleri içerir `My.Settings` nesne.  
   
  [Sürücüleri, Dizinleri ve Dosyaları İşleme](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
- Dosya sistemini kullanarak erişim hakkında belgeler içerir `My.Computer.FileSystem` nesnesi.  
+ Kullanarak dosya sistemini erişim hakkında belgeleri içerir `My.Computer.FileSystem` nesne.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)  
  [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)  
  [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)  
- [Visual Basic ile uygulamaları geliştirme](../../../visual-basic/developing-apps/index.md)
+ [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)

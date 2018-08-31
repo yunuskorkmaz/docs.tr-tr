@@ -1,5 +1,5 @@
 ---
-title: -reference (C# Derleyici Seçenekleri)
+title: -başvurusu (C# Derleyici Seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /reference
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 4a96da3668a73368dd98055a9082479f162b7b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218182"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253295"
 ---
-# <a name="-reference-c-compiler-options"></a>-reference (C# Derleyici Seçenekleri)
-**-Başvuru** seçeneği neden içeri aktarmak derleyici [ortak](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosya geçerli projeye böylece belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  
+# <a name="-reference-c-compiler-options"></a>-başvurusu (C# Derleyici Seçenekleri)
+**-Başvuru** içeri aktarmak derleyici seçeneği neden [genel](../../../csharp/language-reference/keywords/public.md) tür bilgilerini belirtilen dosyada geçerli projeye bu nedenle belirtilen derleme dosyalarından meta verileri başvuru etkinleştirme.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,45 +32,45 @@ ms.locfileid: "33218182"
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Bir derleme bildirimi içeren dosyanın adı. Birden fazla dosyayı içeri aktarmak için ayrı bir dahil **-başvuru** her dosya için seçeneği.  
+ Bir derleme bildirimi içeren dosyanın adı. Birden fazla dosya aktarmak için ayrı bir dahil **-başvuru** seçeneği her dosya için.  
   
  `alias`  
  Derlemedeki tüm ad alanlarını içerecek bir kök ad alanını temsil eden geçerli bir C# tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden fazla dosyadan içeri aktarmak için içeren bir **-başvuru** her dosya için seçeneği.  
+ Birden fazla dosyadan, eklenecek bir **-başvuru** seçeneği her dosya için.  
   
- İçeri aktardığınız dosyaları bir bildirim içermelidir; çıktı dosyası biriyle derlenmiştir gerekir [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) dışında seçenekleri [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ İçeri aktardığınız dosya, bir bildirim içermesi gerekir; Çıkış dosyası biri ile derlenmiş olmalıdır [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) dışında seçenekleri [-target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- **-r** kısa biçimi olan **-başvuru**.  
+ **-r** öğesinin kısa biçimidir **-başvuru**.  
   
- Kullanım [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) bir derleme bildirimi içermeyen bir çıktı dosyasından meta verileri almak için.  
+ Kullanım [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) meta verileri, bir derleme bildirimi içermeyen bir çıkış dosyasından içeri aktarmak için.  
   
- Başka bir derlemeye (B derlemesi) başvuran bir derlemeye (a derlemesi) başvurursanız, derleme B referansı gerekir:  
+ (Derleme B) başka bir derlemeye başvuran bir derlemeye (a derlemesi) başvuruda bulunursanız, derleme B başvuru gerekir:  
   
--   Derleme A'dan kullandığınız bir tür bir türden devralır veya derleme B'deki bir arabirimi uygular.  
+-   Kullandığınız bir derlemeden bir tür bir tür tarafından devralındığında veya derleme B'deki bir arabirim uygular.  
   
--   Alan, özellik, olay veya bir dönüş türü veya parametresi türü derleme B'deki sahip yöntemi çağırma  
+-   Bir alan, özelliği, olay veya bir dönüş türü veya parametre türü derleme B'deki yöntemi çağırma  
   
- Kullanım [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) bir veya daha fazla derleme başvurularını bulunduğu dizini belirtmek için. **-Lib** konuda ayrıca derleyicinin derlemeleri aradığı dizinleri anlatılmaktadır.  
+ Kullanım [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) için bir veya daha fazla, derleme başvuruları bulunduğu dizini belirtin. **-Lib** konu ayrıca derleyicinin derlemeler için arama dizinleri anlatılmaktadır.  
   
- Derlemedeki ve bir modüldeki bir türü tanımak derleyici için sırayla türünün bir örneği tanımlayarak yapabilirsiniz türünü çözümlemek üzere zorlanması gerekir. Derleyici ilişkin bir derlemede tür adları çözümlemek için diğer yolu vardır: bir bütünleştirilmiş türünden devralan, örneğin, tür adı sonra derleyici tarafından tanınır.  
+ Derleyicinin derlemede ve bir modüldeki bir türü tanıması için bu türün bir örneğini tanımlayarak yapabilirsiniz türü çözümlemeye zorlanması gerekir. Derleyici bir derlemede bulunan tür adlarını çözmek için farklı yöntemleri vardır: bir derleme içinde bulunan bir türden devralıyorsanız, örneğin, tür adı ardından derleyici tarafından tanınır.  
   
- Bazen bir derlemenin içinde aynı bileşeninin iki farklı sürümü başvurmak gereklidir. Bunu yapmak için üstündeki takma alt seçeneği kullanmanız **-başvuru** geçiş iki dosya arasında ayrım yapmak her bir dosya için. Bu diğer ad niteleyicisi olarak bileşen adı için kullanılacak ve dosyalardan birini bileşeni çözer.  
+ Bazen bir derlemenin içinde aynı bileşenin farklı iki versiyonunu başvurmak gereklidir. Bunu yapmak için üzerinde üstündeki takma alt seçeneği kullanmak **-başvuru** geçiş iki dosya arasında ayrım yapmak her bir dosya için. Bu diğer adı, bileşen adı için bir niteleyici kullanılacak ve bileşen dosyalarından birini çözülecektir.  
   
- Yaygın olarak kullanılan .NET Framework derlemelerine hangi başvuruları, csc yanıt (.rsp) dosyası varsayılan olarak kullanılır. Kullanmak [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) Derleyicinin csc.rsp kullanmasını istemiyorsanız.  
+ Yaygın olarak kullanılan .NET Framework derlemelerine başvuran, csc yanıt (.rsp) dosyasını, varsayılan olarak kullanılır. Kullanma [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) derleyici csc.rsp kullanmak istemiyorsanız.  
   
 > [!NOTE]
-> Visual Studio'da kullanın **Başvuru Ekle** iletişim kutusu. Daha fazla bilgi için bkz: [nasıl yapılır: başvuru ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Kullanarak başvurular ekleme arasındaki eşdeğer davranışı sağlamak için `-reference` ve kullanarak başvurular ekleme **Başvuru Ekle** iletişim kutusu, kümesi **birlikte çalışma türlerini katıştır** özelliğine**Yanlış** eklediğiniz derleme için. **Doğru** özellik için varsayılan değerdir.  
+> Visual Studio'da kullanmak **Başvuru Ekle** iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: başvurular ekleme veya kaldırma başvuru Yöneticisi'ni kullanarak](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Kullanarak başvurular ekleme arasında eşdeğer davranışı sağlamak açısından `-reference` ve kullanarak başvurular ekleme **Başvuru Ekle** iletişim kutusu, kümesi **birlikte çalışma türlerini katıştır** özelliğini**False** eklemekte derleme. **Doğru** özelliği için varsayılan değerdir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nasıl kullanılacağını gösterir [extern alias](../../../csharp/language-reference/keywords/extern-alias.md) özelliği.  
+ Bu örnek nasıl kullanılacağını gösterir [extern diğer adı](../../../csharp/language-reference/keywords/extern-alias.md) özelliği.  
   
- Kaynak dosyasını derleyin ve meta verilerini içeri aktarın `grid.dll` ve `grid20.dll`, hangi önceden derlenmiş olan. İki DLLs aynı bileşenin ayrı sürümlerini içerir ve iki kullandığınız **-başvuru** kaynak dosyasını derlemek için diğer seçenekleri. Seçenekler şu şekilde görünür:  
+ Kaynak dosyasını derlemek ve meta verileri alma `grid.dll` ve `grid20.dll`, hangi önceden derlenmiş olan. Aynı bileşenin farklı sürümleri iki DLL içeren ve iki kullandığınız **-başvuru** kaynak dosyasını derlemek için diğer seçeneklere sahip. Seçenekler şöyle görünür:  
   
  -reference:GridV1=grid.dll ve - reference:GridV2=grid20.dll  
   
- Bu dış diğer adlar "GridV1" ve "extern ifade yoluyla programınıza kullandığınız GridV2," ayarlar:  
+ Bu, "GridV1" ve "yoluyla bir extern deyimi programınıza kullandığınız GridV2," dış diğer ayarlar:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,18 +78,19 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Bunu yaptıktan sonra bu gibi denetim adına GridV1 ekleyerek kılavuz denetimine grid.dll öğesinden başvurabilir:  
+ Bunu yaptıktan sonra GridV1 denetim adı bu gibi koyarak için kılavuz denetimi grid.dll öğesinden başvurabilir:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Buna ek olarak, Denetim adına GridV2 ile bu ekleyerek kılavuz denetimine grid20.dll öğesinden başvurabilir:  
+ Ayrıca, GridV2 denetim adıyla böyle koyarak grid20.dll öğesinden için kılavuz denetimi başvurabilir:  
   
 ```csharp  
 GridV2::Grid   
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

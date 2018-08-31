@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: f33a4ec32b45d8996bd39f0cc49097b5fd9252e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602465"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258049"
 ---
 # <a name="ltvaluegt-visual-basic"></a>&lt;değer&gt; (Visual Basic)
 Bir özelliğin açıklamasını belirtir.  
@@ -23,17 +23,17 @@ Bir özelliğin açıklamasını belirtir.
   
 #### <a name="parameters"></a>Parametreler  
  `property-description`  
- Özelliği için bir açıklama.  
+ Bir özellik için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<value>` bir özelliğini açıklamak için etiket. Visual Studio geliştirme ortamında kod Sihirbazı'nı kullanarak bir özelliği eklediğinizde, onu ekleyeceksiniz Not bir [ \<Özet >](../../../visual-basic/language-reference/xmldoc/summary.md) yeni özellik için etiketi. Daha sonra el ile eklemeniz bir `<value>` özelliği temsil eden bir değeri açıklamak için etiket.  
+ Kullanım `<value>` bir özelliği açıklamak için etiket. Visual Studio geliştirme ortamında kod Sihirbazı'nı kullanarak bir özelliği eklediğinizde, bu ekleyeceğini unutmayın bir [ \<Özet >](../../../visual-basic/language-reference/xmldoc/summary.md) yeni bir özellik için etiket. Daha sonra el ile eklemeniz bir `<value>` özelliği temsil eden bir değeri açıklamak için etiket.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<value>` hangi değeri açıklamak için etiket `Counter` özelliği ayrı tutma.  
+ Bu örnekte `<value>` hangi değeri açıklamak için etiket `Counter` özelliği tutar.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

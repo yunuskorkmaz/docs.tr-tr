@@ -2,32 +2,32 @@
 title: Parametreler ve Bağımsız Değişkenler (F#)
 description: 'Parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için F # dil desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 319cf0e7346d498ce34e41a9993fe0160038461a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566226"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254015"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
-Bu konuda parametreleri tanımlama ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteği açıklanmaktadır. Nasıl başvuruya göre geçirme ve tanımlayın ve değişken sayıda bağımsız değişken sürebilir yöntemleri kullanma hakkında bilgi içerir.
+Bu konuda tanımlayan parametreler ve bağımsız değişkenleri işlevleri, yöntemlere ve özelliklere geçirme için dil desteği açıklanmaktadır. Başvuruya göre nasıl ve tanımlayın ve değişken sayıda bağımsız değişken alabilir yöntemleri kullanma hakkında bilgiler içerir.
 
 
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
-Terim *parametresi* sağlanacak beklenen değerler adlarını tanımlamak için kullanılır. Terim *bağımsız değişkeni* her parametre için sağlanan değerler için kullanılır.
+Terim *parametre* sağlanacak beklenen değerleri adlarını tanımlamak için kullanılır. Terim *bağımsız değişken* her parametre için sağlanan değerler için kullanılır.
 
-Parametre tanımlama grubu ya da curried form veya bazı ikisinin birleşimini belirtilebilir. Bir açık parametre adını kullanarak bağımsız değişkenler geçirebilirsiniz. Yöntem parametreleri isteğe bağlı olarak belirtilen ve varsayılan bir değer verilir.
+Parametreleri, tanımlama grubu ya da curried form veya ikisinin birleşimi belirtilebilir. Bir açık parametre adını kullanarak, bağımsız değişkenler geçirebilirsiniz. Yöntemlerin parametreleri isteğe bağlı olarak belirtilebilir ve bir varsayılan değer verilir.
 
 
 ## <a name="parameter-patterns"></a>Parametre desenleri
-İşlevler ve yöntemleri için sağlanan parametreler genel olarak, boşluklarla ayırarak desenleri alır. Temelde desenleri hiçbirini açıklanan, yani [eşleşme ifadeleri](match-expressions.md) parametre listesinde bir işlevi veya üye için kullanılabilir.
+İşlevlere ve metotlara için sağlanan parametreler, genel olarak, boşluklarla ayırarak desenleri alır. İlkesi, herhangi bir kalıpla açıklanan, yani [eşleşme ifadeleri](match-expressions.md) bir işlevi veya üye için parametre listesinde kullanılabilir.
 
-Yöntemleri genellikle argümanları tanımlama grubu formu kullanın. Tuple formun bağımsız değişkenler .NET yöntemlerinde geçirilir şekilde eşleştiğinden bunu diğer .NET dilleri perspektifinden daha anlaşılır bir sonuç uygular.
+Yöntemler, genellikle bağımsız değişkenleri geçirme demet biçimini kullanın. Kayıt formu .NET yöntemleri bağımsız değişkenler geçirilir şekilde eşleştiği için bu diğer .NET dilleri perspektifinden NET bir sonuç elde edilir.
 
-Curried form çoğunlukla kullanılarak oluşturulan işlevleri ile kullanılır `let` bağlar.
+Formun curried işlevleri kullanılarak oluşturulan ile en sık kullanılan `let` bağlar.
 
-Aşağıdaki yarı kodu tanımlama grubu ve curried bağımsız örnekleri gösterilir.
+Aşağıdaki sözde kod tanımlama grubu ve curried bağımsız örneklerini gösterir.
 
 ```fsharp
 // Tuple form.
@@ -36,21 +36,21 @@ member this.SomeMethod(param1, param2) = ...
 let function1 param1 param2 = ...
 ```
 
-Birleşik forms bazı bağımsız değişkenler tanımlama grupları ve bazı değil mümkündür.
+Birleşik forms bazı bağımsız değişkenler de tanımlama gruplarına ve bazı değil mümkündür.
 
 ```fsharp
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-Diğer desenleri parametre listelerinde de kullanılabilir, ancak parametre düzeni tüm olası girişleri eşleşmiyorsa olabilir tamamlanmamış bir eşleşme çalışma zamanında. Özel durum `MatchFailureException` bağımsız değişken değeri parametre listesinde belirtilen desenleri eşleşmediğinde oluşturulur. Bir parametre düzeni için tam eşleşme izin veriyorsa derleyici bir uyarı verir. En az bir desen parametre listeleri için yaygın olarak yararlıdır ve joker karakter deseni olmasıdır. Yalnızca sağlanan herhangi bir bağımsız değişken yok saymak istediğinizde bir parametre listesinde joker karakter deseni kullanın. Aşağıdaki kodu bir bağımsız değişken listesinde joker karakter deseni kullanımını göstermektedir.
+Diğer desenler içinde parametre listeleri de kullanılabilir, ancak parametre düzeni tüm olası girişleri eşleşmiyorsa olabilir bir tam eşleşme çalışma zamanında. Özel durum `MatchFailureException` bir bağımsız değişkenin değeri parametre listesinde belirtilen desenleri eşleşmediğinde oluşturulur. Parametre düzeni için eksik eşleşmeler izin veriyorsa, derleyici bir uyarı verir. Diğer düzen en az bir parametre listeleri için yaygın olarak kullanışlıdır ve joker karakter deseni. Yalnızca sağlanan herhangi bir bağımsız değişken yok saymak istediğinizde bir parametre listesinde joker karakter deseni kullanın. Aşağıdaki kodu bir bağımsız değişken listesinde joker karakter deseni kullanımını gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
-Aşağıdaki kod olduğu gibi bir dize dizisi olarak normal olarak sağlanan komut satırı bağımsız değişkenleri ilginizi olmadığında Joker karakter deseni geçirilen bağımsız değişken gerekmez olduğunca yararlı, örn. bir program için ana giriş noktası olabilir.
+Aşağıdaki kodda gösterildiği gibi bir dize dizisi olarak normal olarak sağlanan komut satırı bağımsız değişkenleri ilginizi olmadığında yararlı geçirilen bağımsız değişkenlerdeki ihtiyacınız olduğunda, bir programa ana girdi noktası olduğu gibi joker karakter deseni olabilir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Bazen değişkenlerinde kullanılan diğer desenleri olan `as` düzeni ve ayrılmış birleşimler ve Etkin desenler ilişkili tanımlayıcı desenleri. Tek durumda ayrılmış birleşim deseni gibi kullanabilirsiniz.
+Bağımsız değişkenler bazen kullanılan diğer desenler `as` deseni ve ayrılmış birleşimler ve Etkin desenler ilişkili tanımlayıcı desenler. Tek örneği ayrılmış birleşim deseni şu şekilde kullanabilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -61,7 +61,7 @@ Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
 
-Etkin desenler aşağıdaki örnekteki gibi istenen bir biçime dönüştürme bağımsız değişken olarak parametreler, örneğin, kullanışlı olabilir:
+Etkin desenler, bağımsız değişken aşağıdaki örnekte olduğu gibi istediğiniz bir biçime dönüştürme, parametre olarak, örneğin, yararlı olabilir:
 
 ```fsharp
 type Point = { x : float; y : float }
@@ -73,45 +73,45 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-Kullanabileceğiniz `as` aşağıdaki kod satırını gösterildiği gibi bir yerel değer olarak eşleşen bir değeri depolamak için desen.
+Kullanabileceğiniz `as` kod aşağıdaki satırda gösterildiği gibi yerel bir değer olarak, eşleşen bir değeri depolamak için desen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
-Bazen kullanılan başka bir düzen, işlev gövdesi olarak sağlayarak adlandırılmamış son bağımsız değişken ayrıldığında bir işlev, hemen örtük bağımsız bir desen eşleştirme gerçekleştiren bir lambda ifadesi yöneliktir. Bu aşağıdaki satırlık bir kod örneğidir.
+Nadiren kullanılan başka bir desendir son bağımsız değişken, işlev gövdesi olarak sağlayarak adlandırılmamış ayrıldığında bir işlev, bir lambda ifadesi hemen örtük bağımsız değişken bir desen eşleştirmesi gerçekleştirir. Buna örnek olarak aşağıdaki kod satırını ' dir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Bu kod, genel bir liste alır ve döndüren bir işlev tanımlar `true` liste boşsa ve `false` Aksi takdirde. Bu tür teknikler kullanımını kod okumak daha zor hale getirebilir.
+Bu kod, genel bir liste alan ve döndüren bir işlev tanımlar `true` liste boşsa ve `false` Aksi takdirde. Bu tür teknikler kullanımını kod okumak daha zor hale getirebilir.
 
-Bazen, tamamlanmamış eşleşmeleri içeren desenleri faydalıdır, programınızı listelerinde yalnızca üç öğe olduğunu biliyorsanız, örneğin, aşağıdaki gibi bir desen parametre listesini kullanabilirsiniz.
+Bazen, eksik eşleşmeler içeren desenleri kullanışlıdır, programınızdaki listeleri yalnızca üç öğe olduğunu biliyorsanız, örneğin, bir desen aşağıdaki gibi bir parametre listesinde kullanabilirsiniz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
 
-Tamamlanmamış eşleşmeleri sahip desenleri kullanımını en iyi hızlı prototipi oluşturulurken ve diğer geçici kullanım için ayrılmıştır. Derleyici, bu tür kodu için bir uyarı verecek. Desenler tüm olası girdi genel durum kapak olamaz ve API bileşeni için uygun değildir.
+Tam eşleşme sahip desenleri kullanımını en iyi hızlı prototip oluşturma ve geçici diğer kullanımlar için ayrılmıştır. Derleyici bu tür kod için bir uyarı verir. Desenler, tüm olası girişleri genel durumunun kapsamamaktadır ve bileşen API'leri için uygun değildir.
 
 ## <a name="named-arguments"></a>Adlandırılmış bağımsız değişkenler
-Yöntemleri için bağımsız bir virgülle ayrılmış bağımsız değişken listesinde konuma göre belirtilebilir veya bunların bir yönteme açıkça eşittir işareti ve geçirilmesi değeri adından, sağlayarak geçirilebilir. Adı sağlayarak belirtilmişse bildiriminde kullanılan ile farklı bir sırada yer alabilir.
+Bağımsız değişkenler yöntemleri için bir virgülle ayrılmış bağımsız değişken listesindeki konumu ile belirtilebilir veya bunlar bir yönteme açıkça ardından bir eşittir işareti ve geçirilmesi değer adı sağlayarak geçirilebilir. Belirtilen ad sağlayarak, bildirimde kullanılan ile farklı bir sırada görünebilir.
 
-Adlandırılmış bağımsız değişkenler kodunu daha okunabilir ve daha uyarlanabilir belirli türde bir yöntem parametreleri, sipariş API'sindeki değişiklikleri yapabilirsiniz.
+Adlandırılmış bağımsız değişkenler kod daha okunabilir ve uyarlanabilir daha belirli türde bir yöntem parametreleri, yeniden sıralama API'sindeki değişiklikler yapabilirsiniz.
 
-Adlandırılmış bağımsız değişkenler için değil yalnızca yöntemleri için verilir `let`-bağlı İşlevler, işlevi değerleri veya lambda ifadeleri.
+Adlandırılmış bağımsız değişkenler için değil yalnızca yöntemleri için verilir `let`-bağlı İşlevler, işlev değerleri veya lambda ifadeleri.
 
-Aşağıdaki kod örneğinde adlandırılmış bağımsız değişkenler kullanımını göstermektedir.
+Aşağıdaki kod örneği, adlandırılmış bağımsız değişkenler kullanımını gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
 
-Bir sınıf oluşturucu için bir çağrı adlandırılmış bağımsız değişkenler için benzer bir söz dizimi kullanarak sınıfın özelliklerinin değerlerini ayarlayabilirsiniz. Aşağıdaki örnekte bu söz dizimini gösterir.
+Bir sınıf oluşturucusuna bir çağrı adlandırılmış bağımsız değişkenler için benzer bir sözdizimi kullanarak sınıfın özelliklerinin değerlerini ayarlayabilirsiniz. Aşağıdaki örnek bu söz dizimini gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Daha fazla bilgi için bkz: [oluşturucular (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Daha fazla bilgi için [oluşturucular (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>İsteğe Bağlı Parametreler
-İsteğe bağlı parametresi bir yöntem için parametre adı önünde soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F # seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak seçmeleri istenir, normal şekilde sorgulayabilirsiniz şekilde bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevlerde üyeleri yalnızca üzerinde verilen `let` bağlar.
+İsteğe bağlı parametresi bir yöntem için parametre adının önüne bir soru işareti kullanarak belirtebilirsiniz. İsteğe bağlı parametreler, F # seçeneği türü olarak yorumlanır, seçenek türleri, kullanarak sorgulanır, normal şekilde sorgulayabilmesi bir `match` ifadesiyle `Some` ve `None`. İsteğe bağlı parametreler kullanılarak oluşturulan işlevleri, üye üzerinde yalnızca verilen `let` bağlar.
 
-Bir işlev de kullanabilirsiniz `defaultArg`, isteğe bağlı bir bağımsız değişken varsayılan değerini ayarlar. `defaultArg` İşlev, ilk bağımsız değişken olarak isteğe bağlı bir parametre ve ikinci olarak varsayılan değerini alır.
+Bir işlev de kullanabilirsiniz `defaultArg`, isteğe bağlı varsayılan değerini ayarlar. `defaultArg` İşlevi isteğe bağlı parametre olarak ilk bağımsız değişken ve varsayılan değer olarak saniye alır.
 
-Aşağıdaki örnek, isteğe bağlı parametreler kullanımını göstermektedir.
+Aşağıdaki örnek, isteğe bağlı parametreler kullanımını gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3808.fs)]
 
@@ -124,30 +124,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Başvuruya göre geçirme
-F # destekler `byref` anahtar sözcüğü bir parametre başvuruya göre geçirilir belirtir. Bu değer herhangi bir değişiklik işlevi yürütme sonrasında korunur anlamına gelir. İçin sağlanan değerlerden bir `byref` parametresi değişebilir olmalıdır. Alternatif olarak, uygun bir tür başvuru hücreleri geçirebilirsiniz.
+Bir F # değere Başvuruya göre geçirme içerir `byref` anahtar sözcüğü parametresi başvuruya göre geçirilen değere gerçekten bir işaretçi olduğunu belirtir. Herhangi bir değer geçirildi yöntemi ile bir `byref` bağımsız değişken olarak `mutable`.
 
-Bir işlevden birden fazla değer döndürmek için bir yol olarak gelişen .NET dillerinde başvuruya göre geçirme. F #'ta yapabilir bu amaç için bir tanımlama grubu döndürür veya kesilebilir başvuru hücresi parametre olarak kullanın. `byref` Parametresi .NET kitaplıkları ile birlikte çalışabilirlik için temel olarak sağlanır.
+Parametre bir işaretçi ve değer değişebilir olduğundan, işlevi yürütme sonrasında değeri herhangi bir değişiklik korunur.
 
-Aşağıdaki örnekler kullanımını göstermek `byref` anahtar sözcüğü. Parametre olarak bir başvuru hücresi kullandığınızda, gerekir adlandırılmış değeri olarak başvuru hücresi oluşturur ve parametre olarak kullanan, yalnızca eklemek dikkat edin `ref` yapılan ilk çağrıda gösterildiği gibi işleci `Increment` aşağıdaki kodda. Bir başvuru hücre oluşturma temel alan değeri bir kopyasını oluşturduğundan ilk çağrı yalnızca geçici bir değeri artırır.
+Aynı işlemi gerçekleştirebilirsiniz [başvuru hücreleri](reference-cells.md), ancak dikkat etmeniz önemlidir **başvuru hücreleri ve `byref`s aynı şey değildir**. Bir başvuru hücresi inceleyin ve içeriğini değiştirme, ancak bu değer yığın üzerinde yaşadığı ve içerdiği değiştirilebilir bir değer ile kayıt olmakla eşdeğerdir bir değer için bir kapsayıcıdır. A `byref` farklı temel alınan semantiği ve (hangi oldukça kısıtlayıcı olabilir) kullanım kuralları, bu nedenle, gerçek bir işaretçi olduğu.
+
+Aşağıdaki örnekler, kullanımını gösterir `byref` anahtar sözcüğü. Parametre olarak bir başvuru hücresi kullanmanız, size gerekir adlandırılmış değeri olarak başvuru hücresini oluşturmak ve parametre olarak kullanan, yalnızca ekleme dikkat edin `ref` yapılan ilk çağrıda gösterildiği bir işleç `Increment` aşağıdaki kodda. Temel alınan değerinin bir kopyasıdır oluşturduğu bir başvuru hücresi oluşturmak için ilk çağrı yalnızca geçici bir değeri artırır.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
-Herhangi bir depolamak için dönüş değeri olarak bir tanımlama grubu kullanabilirsiniz `out` .NET kitaplığı yöntem parametreleri. Alternatif olarak, davranabilirsiniz `out` parametre olarak bir `byref` parametresi. Aşağıdaki kod örneği, her iki yolu gösterir.
+Tüm depolamak için bir dönüş değeri olarak bir tanımlama grubu kullanabilirsiniz `out` .NET kitaplığı yöntem parametreleri. Alternatif olarak davranabileceğiniz `out` parametre olarak bir `byref` parametresi. Aşağıdaki kod örneği iki yolunu gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parametre Dizileri
-Bazen rastgele sayıda heterojen türü parametre isteyen bir işlev tanımlamak gereklidir. Kullanılabilir tüm türleri için hesap için tüm olası aşırı yüklenmiş yöntemler oluşturmak mümkün olmayacaktır. .NET uygulamaları için parametre dizisi özelliği aracılığıyla böyle yöntemleri için destek sağlar. Bir parametre dizisi kendi İmzada gereken bir yöntem rastgele sayıda parametre ile sağlanabilir. Parametreleri bir diziye yerleştirilir. Dizi öğelerin türü işlevine geçirilen parametre türleri belirler. Parametre dizisi ile tanımlarsanız `System.Object` öğe türü olarak istemci kodu herhangi bir tür değerleri geçirebilirsiniz.
+Bazen tercihe bağlı sayıda heterojen türünde parametre alan bir işlev tanımlamak gereklidir. Kullanılabilen tüm türleri için hesap için tüm olası aşırı yüklenmiş yöntemler oluşturmak pratik olmaz. .NET uygulamaları için parametre dizisi özelliği aracılığıyla bu tür yöntemler için destek sağlar. Bir parametre dizisi içinde imzasını alan bir yöntem rastgele sayıda parametre ile sağlanabilir. Parametreler, bir dizi içine yerleştirilir. Dizi öğelerinin türü, işleve geçirilen parametre türleri belirler. Parametre dizisi ile tanımlarsanız `System.Object` öğe türü istemci kodu her türden değer geçirebilirsiniz.
 
-F #'ta parametre dizileri, yalnızca yöntemleri tanımlanabilir. Tek başına işlevlerde veya modüllerde tanımlı işlevler kullanılamaz.
+F #'ta parametre dizileri, yalnızca yöntemlerdeki tanımlanabilir. Tek başına işlevleri veya modül içinde tanımlanan işlevleri kullanılamaz.
 
-Bir parametre dizisi kullanarak tanımladığınız `ParamArray` özniteliği. `ParamArray` Özniteliği yalnızca son parametre uygulanabilir.
+Bir parametre dizisi kullanarak tanımladığınız `ParamArray` özniteliği. `ParamArray` Özniteliği yalnızca en son parametreye uygulanabilir.
 
-Aşağıdaki kod, her iki çağırma F bir parametre dizisi alan yöntemi olan #'de bir parametre dizisi ve bir tür tanımını alır .NET yöntemi gösterir.
+Aşağıdaki kod, her iki arama alan bir parametre dizisi ve bir tür tanımını içeren bir parametre dizisi alan bir yöntem içinde F # .NET yöntemi gösterir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 
-Bir proje ile çalıştırdığınızda, önceki kod çıkışı aşağıdaki gibidir:
+Bir projeyi çalıştırdığınızda, önceki kodun çıktısı aşağıdaki gibidir:
 
 ```
 a 1 10 Hello world 1 True

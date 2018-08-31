@@ -5,19 +5,19 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273321"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253862"
 ---
 # <a name="operator-keywords-c-reference"></a>İşleç Anahtar Sözcükleri (C# Başvurusu)
-Bir nesnenin bir yazı tipi boyutu alma, çalışma zamanı tür denetlemesi nesneleri oluşturma gibi çeşitli eylemleri ve diğer eylemleri gerçekleştirmek için kullanılır. Bu bölüm, aşağıdaki anahtar sözcükler sunar:  
+Bir tür boyutunu alma, bir nesnenin çalışma zamanı tür denetimi nesneleri oluşturma gibi çeşitli eylemler ve diğer işlemleri gerçekleştirmek için kullanılır. Bu bölümde, aşağıdaki anahtar sözcükler sunar:  
   
--   [olarak](../../../csharp/language-reference/keywords/as.md) bir nesne için uyumlu bir türe dönüştürür.  
+-   [olarak](../../../csharp/language-reference/keywords/as.md) nesneyi uyumlu bir türe dönüştürür.  
   
--   [await](../../../csharp/language-reference/keywords/await.md) awaited bir görevi tamamlanana kadar bir zaman uyumsuz yöntem askıya alır.  
+-   [await](../../../csharp/language-reference/keywords/await.md) bir beklenen görev tamamlanana kadar bir zaman uyumsuz yöntem askıya alır.  
   
 -   [olan](../../../csharp/language-reference/keywords/is.md) bir nesnenin çalışma zamanı türü denetler.  
   
@@ -29,34 +29,35 @@ Bir nesnenin bir yazı tipi boyutu alma, çalışma zamanı tür denetlemesi nes
   
     -   [New kısıtlaması](../../../csharp/language-reference/keywords/new-constraint.md) bir tür parametresi niteliği taşır.  
   
--   [nameof](nameof.md) değişkeni, tür veya üye basit (nitelenmemiş) dize adını alır.
+-   [nameof](nameof.md) değişken, tür veya üyenin basit (nitelenmemiş) dize adını alır.
  
--   [sizeof](../../../csharp/language-reference/keywords/sizeof.md) bir yazı tipi boyutu alır.  
+-   [sizeof](../../../csharp/language-reference/keywords/sizeof.md) bir tür boyutunu alır.  
   
--   [typeof](../../../csharp/language-reference/keywords/typeof.md) elde ediyor **System.Type** nesne türü için.  
+-   [typeof](../../../csharp/language-reference/keywords/typeof.md) elde ediyor **System.Type** nesne türü.  
   
 -   [true](../../../csharp/language-reference/keywords/true.md)  
   
-    -   [true işleci](../../../csharp/language-reference/keywords/true-operator.md) true belirtmek için boolean değeri true değerini döndürür ve aksi takdirde false döndürür.  
+    -   [true işleci](../../../csharp/language-reference/keywords/true-operator.md) doğru göstermek için boolean true değerini döndürür ve aksi takdirde false döndürür.  
   
-    -   [TRUE değişmez değeri](../../../csharp/language-reference/keywords/true-literal.md) true boolean değerini temsil eder.  
+    -   [TRUE değişmez değeri](../../../csharp/language-reference/keywords/true-literal.md) doğru boolean değerini temsil eder.  
   
 -   [false](../../../csharp/language-reference/keywords/false.md)  
   
-    -   [false işleci](../../../csharp/language-reference/keywords/false-operator.md) false değerini gösteren bir Boole değeri true değerini döndürür ve aksi takdirde false döndürür.  
+    -   [false işleci](../../../csharp/language-reference/keywords/false-operator.md) yanlış belirten Boole değeri true değerini döndürür ve aksi takdirde false döndürür.  
   
-    -   [false değişmez değeri](../../../csharp/language-reference/keywords/false-literal.md) Boole değeri false temsil eder.  
+    -   [false değişmez değeri](../../../csharp/language-reference/keywords/false-literal.md) false boolean değerini temsil eder.  
   
--   [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) yığında bir bellek bloğu ayırır.  
+-   [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) bir yığında bellek bloğu ayırır.  
   
- İşleçler ve ifadeler olarak kullanılabilir, aşağıdaki anahtar ele alınmaktadır [deyimleri](../../../csharp/language-reference/keywords/statement-keywords.md) bölümü:  
+ İşleçler ve deyimler olarak kullanılabilir, aşağıdaki anahtar sözcükler, ele alınmaktadır [deyimleri](../../../csharp/language-reference/keywords/statement-keywords.md) bölümü:  
   
--   [işaretli](../../../csharp/language-reference/keywords/checked.md) işaretli belirtir bağlamı.  
+-   [işaretli](../../../csharp/language-reference/keywords/checked.md) içerik teslim belirtir.  
   
--   [Unchecked](../../../csharp/language-reference/keywords/unchecked.md) denetlenmeyen bağlam belirtir.  
+-   [denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md) denetlenmeyen bağlam belirtir.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [C# İşleçleri](../../../csharp/language-reference/operators/index.md)

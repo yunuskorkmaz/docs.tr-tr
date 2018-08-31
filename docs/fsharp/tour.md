@@ -1,198 +1,198 @@
 ---
 title: 'F # turu'
-description: 'F # kod örnekleriyle birlikte bu tur dilde programlama önemli özelliklerinden bazıları inceleyin.'
+description: 'Bazı F # programlama dilinde kod örnekleriyle birlikte bu turda anahtar özelliklerini inceleyin.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753493"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924527"
 ---
 # <a name="tour-of-f"></a>F # turu #
 
-F # hakkında bilgi edinmek için en iyi okuma ve yazma F # kodu yoludur.  Bu makalede, F # dili önemli özelliklerinden bazıları aracılığıyla bir tur görevi görür ve makinenizde yürütebilir bazı kod parçacıkları verin.  Bir geliştirme ortamını ayarlama bilgi edinmek için kullanıma [Başlarken](tutorials/getting-started/index.md).
+F # hakkında bilgi edinmek için en iyi yolu, okuma ve F # kodu yazacak sağlamaktır.  Bu makalede tura F # dilinin temel özelliklerinden bazıları aracılığıyla görür ve makinenizde yürütebilir bazı kod parçacıklarına verin.  Bir geliştirme ortamını ayarlama bilgi edinmek için kullanıma [Başlarken](tutorials/getting-started/index.md).
 
-İki birincil kavram vardır F #'ta: İşlevler ve türleri.  Bu tur, bu iki kavrama kalan dil özellikleri vurgulamak.
+İki birincil kavram vardır F #: işlevleri ve türleri.  Bu Turun, bu iki kavrama kalan dil özelliklerini vurgulamak.
 
-## <a name="functions-and-modules"></a>İşlevler ve modülleri
+## <a name="functions-and-modules"></a>İşlevler ve modüller
 
-En temel herhangi bir F # programı parçalarıdır ***işlevleri*** halinde düzenlenmiştir ***modülleri***.  [İşlevler](language-reference/functions/index.md) çıkışları üretmek girişleri çalışma gerçekleştirme ve altında düzenlenmiştir [modülleri](language-reference/modules.md), F # şeyler grubunda birincil yol olduğu.  Kullanılarak tanımlanır [ `let` bağlama](language-reference/functions/let-bindings.md), işlevin bir ad verin ve bağımsız değişkenleri tanımlayın.
+En temel herhangi bir F # programı parçalarıdır ***işlevleri*** düzenlenir ***modülleri***.  [İşlevleri](language-reference/functions/index.md) çıktı üretmek için girişler çalışma gerçekleştirme ve altında düzenlenmiş [modülleri](language-reference/modules.md), F # içinde öğeleri gruplandırma birincil yolu olduğu.  Kullanılarak tanımlanır [ `let` bağlama](language-reference/functions/let-bindings.md), işlevin bir ad verin ve bağımsız değişkenleri tanımlayın.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let` bağlamaları de bir değer bir değişkende diğer diller için benzer bir ad için bağ nasıl değil.  `let` bağlamaları değil ***değişmez*** yerinde anlamına gelen bir değer veya işlevi için bir ad bağlandıktan sonra değiştirilemez, varsayılan olarak,.  Değişkenleri olan diğer dillerde aksine budur ***değişebilir***, değerlerine anlamı değiştirilebilir herhangi bir noktada süre.  Değişebilir bir bağlama gerektiriyorsa, kullanabileceğiniz `let mutable ...` sözdizimi.
+`let` bir değeri bir değişkene diğer dillerdeki benzer bir adla bağlama nasıl bağlamaları de olur.  `let` bağlamaları ***değişmez*** yerinde bir değer veya işlevi için bir ad bağlandıktan sonra değiştirilemez, yani varsayılan olarak,.  Bu değişkenler olan diğer dillerdeki aksine, ***değişebilir***, değerlerine anlamı değiştirilebilir herhangi bir noktada süre.  Değişebilir bir bağlama gerektiriyorsa, kullanabileceğiniz `let mutable ...` söz dizimi.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
-## <a name="numbers-booleans-and-strings"></a>Sayı, Boole değerlerini ve dizeler
+## <a name="numbers-booleans-and-strings"></a>Sayılar ve Boole değerlerini dizeleri
 
-F # aynı temel bir .NET dili olarak destekler [ilkel türler](language-reference/primitive-types.md) .NET içinde yok.
+F # aynı temel bir .NET dili olarak destekler [ilkel türler](language-reference/primitive-types.md) .NET içinde mevcut.
 
-İşte nasıl çeşitli sayısal türler F #'de gösterilir:
+Çeşitli sayısal türleri F # dilinde gösterilir aşağıda verilmiştir:
 
 [!code-fsharp[Numbers](../../samples/snippets/fsharp/tour.fs#L49-L68)]
 
-Boole değerleri işte ve temel koşullu mantık gerçekleştirme gibi görünür:
+Boole değerlerin işte ve temel koşullu mantık gerçekleştirme şu şekilde görünür:
 
 [!code-fsharp[Bools](../../samples/snippets/fsharp/tour.fs#L142-L152)]
 
-Ve hangi basic işte [dize](language-reference/strings.md) işleme gibi görünür:
+Ve hangi temel işte [dize](language-reference/strings.md) işleme şöyle:
 
 [!code-fsharp[Strings](../../samples/snippets/fsharp/tour.fs#L158-L180)]
 
 ## <a name="tuples"></a>Demetler
 
-[Diziler](language-reference/tuples.md) bir sorun teşkil F # şunlardır.  Kendilerini değerleri olarak kabul adlandırılmamış ancak sıralı değerler, gruplandırması oldukları.  Bunları, diğer değerleri toplanır değerleri olarak düşünün.  Bunlar kolayca birden fazla değer döndüren bir işleve veya bazı geçici kolaylık sağlaması için değerleri gruplandırma gibi birçok kullanımı vardır.
+[Diziler](language-reference/tuples.md) F # gerçekten önemli olan.  Bunlar, kendilerini değeri olarak davranılıp adlandırılmamış ancak sıralı değerleri gruplandırmasıdır.  Bunları, diğer değerlerinden toplanmış değerleri olarak düşünün.  Rahatça birden çok değer döndüren bir işlevden veya bazı geçici kolaylık sağlamak için değerleri gruplandırma gibi pek çok kullanımı, sahiptirler.
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F # 4.1 itibariyle, ayrıca oluşturabileceğiniz `struct` diziler.  Bu ayrıca tam olarak aynı zamanda C# 7/Visual Basic 15 başlıkları ile çalışmanız `struct` tanımlama grupları:
+F # 4.1 itibariyle, ayrıca oluşturabilirsiniz `struct` tanımlama grubu.  Bu ayrıca tam da C# 7/Visual Basic 15 demetleri ile birlikte çalışmak `struct` diziler:
 
 [!code-fsharp[Tuples](../../samples/snippets/fsharp/tour.fs#L205-L218)]
 
-Çünkü dikkate almak önemlidir `struct` diziler değer türleri, bir tanımlama grubu başvurmak için örtük olarak dönüştürülemiyor veya tam tersi.  Bir başvuru ve yapı tanımlama grubu arasında açıkça dönüştürmeniz gerekir.
+Çünkü dikkat etmeniz önemlidir `struct` diziler değer türleri, diziler, başvuru için örtük olarak dönüştürülemez ya da tam tersi.  Başvuru ve yapı tanımlama grubu arasında açıkça dönüştürmeniz gerekir.
 
-## <a name="pipelines-and-composition"></a>Ardışık Düzen ve oluşturma
+## <a name="pipelines-and-composition"></a>İşlem hatları ve oluşturma
 
-İşleçler gibi kanal `|>` F # verileri işlerken, yaygın olarak kullanılır. Bu işleçlere esnek bir şekilde işlevlerin "ardışık" kurmanızı sağlayan işlevlerdir. Aşağıdaki örnekte nasıl basit bir işlev ardışık düzen oluşturmak için bu işleçlerinin yararlanabilirsiniz aracılığıyla yardımcı olur:
+İşleçler gibi kanal `|>` F # içinde veri işleme sırasında yaygın olarak kullanılır. Bu işleçler "işlem" hatları işlevlerin esnek bir şekilde kurmanızı sağlayan işlevlerdir. Aşağıdaki örnek, basit bir işlev işlem hattını oluşturmak üzere bu işleçler avantajlarından nasıl yararlanabilirsiniz aracılığıyla anlatılmaktadır:
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-Yapılan önceki örnek F #'ın listesi işleme İşlevler, birinci sınıf işlevleri dahil olmak üzere, birçok özellik kullanımını ve [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments). Bu kavramları her derin bir anlayış Gelişmiş biraz hale karşın, bu işlevler ardışık düzen oluştururken verileri işlemek için ne kadar kolay kullanılabilir açık olmalıdır.
+Yapılan önceki örnekte F # bu kadar listesini işleme işlevleri, birinci sınıf işlevler dahil olmak üzere, birçok özelliklerinin kullanımını ve [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments). Her birinin söz konusu kavramlar derin bir anlayış biraz Gelişmiş hale olsa da, bu işlevler işlem hatları oluştururken verileri işlemek için nasıl bir kolayca kullanılabilir açık olmalıdır.
 
-## <a name="lists-arrays-and-sequences"></a>Listeleri, dizileri ve dizileri
+## <a name="lists-arrays-and-sequences"></a>Listeler, diziler ve dizileri
 
-Listeleri, dizileri ve dizileri üç birincil koleksiyonu F # core Kitaplığı'nda türleridir.
+F # çekirdek kitaplığının üç birincil koleksiyon türlerini listeler, diziler ve dizileri var.
 
-[Listeler](language-reference/lists.md) sıralı, değişmez aynı türde öğelerinin koleksiyonlarıdır.  Bunlar ayrı olarak bağlı, yani büyük varsa bunlar numaralandırması ancak rasgele erişim ve birleştirme için kötü bir seçim yöneliktir listeleridir.  Bu genellikle ayrı olarak bağlı bir liste listeleri temsil etmek için kullanmayın diğer popüler dilde listelerinde aksine.
+[Listeler](language-reference/lists.md) sıralı, değişmez koleksiyonları öğeleri aynı türde olan.  Bunlar tek bağlantılı listeler, yani büyük iseler, numaralandırma, ancak rastgele erişim ve birleştirme için kötü bir seçim için yöneliktir.  Bu listeler genelde bir listedir bağlantılı liste listeleri temsil etmek için kullanmayın diğer popüler dilde aksine.
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[Diziler](language-reference/arrays.md) sabit boyutlu, olan *değişebilir* aynı türdeki öğeleri koleksiyonu.  Bunlar öğelerinin hızlı rastgele erişimini desteklemek ve yalnızca bitişik bellek bloklarını olduklarından F # listeler daha hızlıdır.
+[Diziler](language-reference/arrays.md) sabit boyutu, *değişebilir* aynı türdeki öğelerin koleksiyonu.  Öğelerin hızlı rastgele erişim desteği ve yalnızca bitişik bellek bloklarını oldukları için F # listeleri işlevinden daha hızlıdır.
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
-[Dizileri](language-reference/sequences.md) öğeleri, aynı türdeki tüm mantıksal bir dizi.  Bunlar, listeler ve Diziler, öğeleri mantıksal bir dizi halinde, "Görünüm" yeterli'den daha genel bir tür olan.  Bunlar olabilir çünkü bunlar da göze ***yavaş***, yalnızca ihtiyaç duyulduğunda öğeleri hesaplanabilir anlamına gelir.
+[Dizileri](language-reference/sequences.md) aynı türdeki tüm öğeleri mantıksal bir dizi.  Bunlar daha genel bir tür listeler ve dizi, öğeleri mantıksal bir dizi, "Görünüm" yeterli olur.  Bunlar olabilir çünkü bunlar da göze ***yavaş***, yani yalnızca gerektiğinde öğeleri hesaplanabilir.
 
 [!code-fsharp[Sequences](../../samples/snippets/fsharp/tour.fs#L418-L452)]
 
 ## <a name="recursive-functions"></a>Özyinelemeli İşlevler
 
-Koleksiyonları veya öğelerin sıralarının işleme genellikle yapılır ile [özyineleme](language-reference/functions/index.md#recursive-functions) F #.  F # döngüler ve kesinlik temelli programlama desteği olsa da, özyineleme doğruluğu garanti etmek daha kolay bulup tercih edilir.
+Koleksiyonları veya öğelerin sıralarının işleme genellikle yapılır [özyineleme](language-reference/functions/index.md#recursive-functions) F #.  F # döngüler ve kesin programlama desteği sahip olsa da, doğruluğu garanti etmek daha kolay olduğundan, özyineleme tercih edilir.
 
 >[!NOTE]
-Aşağıdaki örnek deseni ile eşleşen birini kullanır `match` ifade.  Bu temel yapıyı bu makalenin sonraki bölümlerinde ele alınmaktadır.
+Aşağıdaki örnek deseni ile eşleşen birini kullanır `match` ifade.  Bu temel yapı, bu makalenin sonraki bölümlerinde ele alınmıştır.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F # de Tail çağrısı iyileştirmesi için tam destek, yalnızca bir döngü yapısı kadar hızlı; böylece özyinelemeli çağrılara en iyi duruma getirmek için bir yol yoktur.
+F # de Tail çağrısı iyileştirmesi için tam destek, böylece bunlar yalnızca bir döngü yapısı kadar hızlı ilerleyebilirler özyinelemeli çağrılar iyileştirmeye yönelik bir yol yoktur.
 
 ## <a name="record-and-discriminated-union-types"></a>Kayıt ve ayrılmış birleşim türleri
 
-Kayıt ve birleşim türlerini F # kodunda kullanılan iki temel veri türleri ve genellikle bir F # programında verileri temsil etmek için en iyi yoludur.  Bu sınıflar benzer diğer dillerde sağlar ancak birincil farklılıkları yapısal eşitlik semantiklerine sahip biridir.  Bunun anlamı, "yerel" karşılaştırılabilir ve eşitlik basittir - yalnızca bir diğerine eşit olup olmadığını denetleyin.
+Kayıt ve birleşim türlerini F # kodunda kullanılan iki temel veri türleri ve genellikle bir F # programında verileri temsil etmek için en iyi yoludur.  Bu sınıflar benzer diğer dillerde sağlar ancak kendi birincil farklardan biri yapısal eşitlik semantiğine sahip olduğunu belirtir.  Bunun anlamı, "yerel" benzerdir ve eşitlik oldukça basittir; yalnızca biri diğerine eşit olup olmadığını denetleyin.
 
-[Kayıtları](language-reference/records.md) toplama (örneğin, yöntemler) isteğe bağlı üyeleriyle adlandırılmış değerleri şunlardır.  C# veya Java ile sahibiyseniz, ardından bu yapısal eşitlik olduğu ve seremoni daha az POCOs veya Pojo'lar - benzer geliyor olmalıdır.
+[Kayıtları](language-reference/records.md) olan toplama (örneğin, yöntemler) isteğe bağlı üyeleriyle adlandırılmış değerler.  C# veya Java ile ilgili bilgi sahibi değilseniz, ardından bu yapısal eşitlik olduğu ve seremoni daha az POCOs veya pojo'ları - benzer gelecektir.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F # 4.1 itibariyle, kayıt olarak da gösterebilir `struct`s.  Bu gerçekleştirilir `[<Struct>]` özniteliği:
+F # 4.1 itibariyle, kayıt olarak da gösterebilir `struct`s.  Bunun `[<Struct>]` özniteliği:
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
-[Birleşimler (DUs)](language-reference/discriminated-unions.md) adlandırılmış forms veya durumları sayısı olabilen değerlerdir.  Bulunan tür depolanan verileri birkaç farklı değerlerden biri olabilir.
+[Ayrılmış birleşimler (DUs)](language-reference/discriminated-unions.md) birkaç adlandırılmış forms veya durumları olabilecek değerler.  Tür içinde depolanan verileri ayrı değerlerden biri olabilir.
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L575-L631)]
 
-DUs olarak da kullanabilirsiniz *tek durum ayrılmış birleşimler*, ilkel türler modelleme etki alanı ile yardımcı olacak.  Çoğu zaman, dizeleri ve başka ilkel türler bir şeyi temsil etmek için kullanılır ve böylece özel bir anlamı verilir.  Ancak, verileri yalnızca ilkel gösterimini kullanarak yanlışlıkla yanlış bir değer atama içinde sonuçlanabilir!  Her ayrı tek çalışması UNION olarak bilgi türünü temsil eden Bu senaryoda doğruluk uygulayabilir.
+DUs olarak da kullanabilirsiniz *tek örneği ayırt edici birleşimler*, ilkel türler üzerinde modelleme etki alanıyla yardımcı olmak için.  Çoğu zaman, dizeler ve diğer ilkel türler bir şeyi temsil etmek için kullanılır ve bu nedenle belirli bir anlamı verilir.  Ancak, veriler yalnızca ilkel gösterimini kullanarak yanlışlıkla yanlış bir değer atama içinde sebep olabilir!  Her ayrı tek örneği UNION olarak bilgi türünü temsil eden Bu senaryoda doğruluk zorunlu kılabilir.
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L633-L654)]
 
-Temel alınan değeri bir tek durumda ayrılmış birleşim içinde almak için yukarıdaki örnek gösterdiği gibi açıkça unwrap gerekir.
+Temeldeki değeri bir tek örneği ayırt edici birleşim içinde almak için yukarıdaki örnekte gösterildiği gibi açıkça unwrap gerekir.
 
-Ayrıca, DUs da özyinelemeli tanımları kolayca ağaçları ve kendiliğinden özyinelemeli verilerini temsil eden olanak tanıyan destekler.  Örneğin, işte içeren bir ikili arama ağacı nasıl gösterebilir `exists` ve `insert` işlevleri.
+Ayrıca, DUs da yinelenen tanımları kolayca ağaçları ve kendiliğinden özyinelemeli verileri temsil eden olanak tanıyan destekler.  Örneğin, işte bir ikili arama ağacını ile nasıl temsil `exists` ve `insert` işlevleri.
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L656-L683)]
 
-DUs veri türü ağacında özyinelemeli yapısını temsil eden izin olduğundan, bu yinelemeli yapısına işletim basittir ve doğruluğu garanti eder.  Ayrıca desen eşleştirme aşağıda gösterildiği gibi desteklenmiyor.
+Bu özyinelemeli yapısına işletim DUs ağacında bir veri türü özyinelemeli yapısını temsil etmek izin olduğundan, oldukça basittir ve doğruluğu garanti eder.  Ayrıca desen eşleştirme aşağıda gösterildiği gibi desteklenir.
 
-Ayrıca, DUs olarak gösterebilir `struct`s `[<Struct>]` özniteliği:
+Ayrıca, DUs olarak gösterebilir `struct`s ile `[<Struct>]` özniteliği:
 
 [!code-fsharp[Unions](../../samples/snippets/fsharp/tour.fs#L685-L696)]
 
-Ancak, bunu yaparken göz önünde bulundurmanız gereken iki önemli şey vardır:
+Ancak, bu işlem yapıldığında akılda tutulması gereken iki önemli nokta vardır:
 
-1. Yapı DU yinelemeli olarak tanımlanan olamaz.
-2. Yapı DU her kendi örneklerinin benzersiz adlara sahip olmalıdır.
+1. Yinelemeli olarak tanımlanmış bir yapı DU olamaz.
+2. Bir yapı DU her biri kendi çalışmaları için benzersiz adlara sahip olmalıdır.
 
-Yukarıdaki takip edilmemesi bir derleme hataya neden olur.
+Yukarıdaki takip edilmemesi bir derleme hatasına neden olur.
 
 ## <a name="pattern-matching"></a>Desen Eşleştirme
 
-[Desen eşleştirme](language-reference/pattern-matching.md) F # türleri üzerinde işletim doğruluk sağlayan F # dili özelliğidir.  Yukarıdaki örneklerde, büyük olasılıkla oldukça biraz fark `match x with ...` sözdizimi.  Bu yapı, veri türleri, tüm olası durumları ne bilinen aracılığıyla bir veri türü kapsamlı bir desen eşleştirme kullanırken dikkate almak için zorlamak için "Şekil" anlayabileceği derleyici sağlar.  Bu doğruluk için son derece güçlüdür ve "ne normalde bir çalışma zamanı sorun derleme zamanı içine olacağını yükseltmek için" zekice kullanılabilir.
+[Eşleşen desen](language-reference/pattern-matching.md) sağlayan doğruluk F # türleri üzerinde çalışması için F # dil özelliğidir.  Yukarıdaki örneklerde, büyük olasılıkla oldukça fark etmiş `match x with ...` söz dizimi.  Bu yapı ne bilinen aracılığıyla bir veri türü kapsamlı desen eşleştirme kullanılırken tüm olası durumları dikkate almak için zorlamak için veri türleri "şekline" anlayabilmeniz derleyici sağlar.  Bu doğruluğu inanılmaz güçlü ve zekice "ne bir çalışma zamanı sorunu derleme zamanı içine normalde olacağını kaldırmak için" kullanılabilir.
 
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L739)]
+[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
-Toplu de kullanabilirsiniz `function` oluşturan işlevler kullanımını yazarken, yararlı olan desen eşleştirme için yapı [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments):
+Toplu kullanabilirsiniz `function` yapan işlevleri kullanın yazarken, kullanışlı olan desen eşleştirme için yapı [kısmi uygulama](language-reference/functions/index.md#partial-application-of-arguments):
 
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L741-L759)]
+[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
-Bir şey fark kullanımıdır `_` düzeni.  Bu olarak bilinir [joker karakter deseni](language-reference/pattern-matching.md#wildcard-pattern), "I olmayan önemli bir şey nedir" ifadesini içeren bir yolu değil.  Güvenli olmasına karşın, kapsamlı desen eşleştirme yanlışlıkla atlamak ve artık yararlı derleme zamanı enforcements kullanarak dikkatli yoksa `_`.  Ayrıştırılmış türü belirli parçalarını hakkında önemli değil, en iyi kullanıldığında ifade ile eşleşen bir deseni tüm anlamlı durumlarda numaralandırıldığı zaman eşleştirme veya son yan tümcesi olduğunda desen.
+Bir sorun fark kullanımıdır `_` deseni.  Bu olarak bilinir [joker karakter deseni](language-reference/pattern-matching.md#wildcard-pattern), "Miyim yoksa dikkatli bir şey nedir" ifadesini içeren bir yolu olan.  Kullanışlı olsa da, kapsamlı desen eşleştirme yanlışlıkla atlamak ve artık fayda derleme zamanı enforcements kullanırken dikkatli olmazsanız `_`.  Ayrılmış bir tür hakkında belirli bilgilere İlgilenmiyor, en iyi şekilde kullanılır anlamlı bir desen eşleme ifadesinde durumlarda tüm numaralandırılan olduğunda ne zaman eşleştirme veya son yan desen.
 
-[Etkin desenler](language-reference/active-patterns.md) desen eşleştirme ile kullanmak için başka bir güçlü yapı şunlardır.  Desen eşleştirme çağrısı sitede ayırma özel formları içine giriş verisi bölüm olanak sağlar.  Bunlar ayrıca, böylece bölüm bir işlevi olarak tanımlamanızı sağlar parametreli olabilir.  Etkin desenler desteklemek için önceki örnekte genişletme şuna benzer:
+[Etkin desenler](language-reference/active-patterns.md) desen eşleştirme ile kullanmak için güçlü bir başka yapının olan.  Özel formlar, bunları desen eşleştirme çağrısı sitesinde parçalama uygulamasına giriş veri bölümü olanak sağlar.  Bunlar ayrıca, böylece bölümü bir işlev olarak tanımlamak için izin verme parametreli olabilir.  Etkin desenler desteklemek için önceki örneği genişleterek şuna benzer:
 
-[!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L761-L783)]
+[!code-fsharp[ActivePatterns](../../samples/snippets/fsharp/tour.fs#L764-L786)]
 
-## <a name="optional-types"></a>İsteğe bağlı türleri
+## <a name="optional-types"></a>İsteğe bağlı türler
 
-Ayrılmış birleşim türlerinin bir özel durum seçenek türü, F # core kitaplık parçası olan şekilde yararlıdır.
+Ayırt edici birleşim türlerinin bir özel durum seçeneği, F # çekirdek kitaplığının bir parçası olduğunu oldukça kullanışlı olduğu türüdür.
 
-[Seçenek türü](language-reference/options.md) iki durumda birini temsil eden bir tür: bir değer veya hiç bir şey.  Burada bir değer olabilir veya belirli bir işlemi sağlamayabilir herhangi bir senaryoda kullanılır.  Bu daha sonra bir çalışma zamanı sorun yerine bir derleme zamanı sorun kolaylaştırarak her iki durumda için hesap için zorlar.  Bunlar genellikle API'leri kullanılan nerede `null` böylece hakkında endişelenmeye gerek gereksinimini kullanılan bunun yerine, "hiçbir şey" temsil etmek için `NullReferenceException` birçok durumda.
+[Seçenek türü](language-reference/options.md) iki durumlarından biri temsil eden bir türdür: bir değer ya da hiç bir şey.  Burada bir değer olabilir veya belirli bir işlemden oluşturmayabilir hiçbir senaryoda kullanılır.  Bunun ardından bir çalışma zamanı sorunu yerine derleme zamanı endişe yaparak her iki durumda, hesap için zorlar.  Bunlar genellikle API'leri kullanılır nerede `null` böylece hakkında endişelenme gereksinimini ortadan kullanılan bunun yerine, "şey" temsil etmek için `NullReferenceException` birçok durumda.
 
-[!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L791-L811)]
+[!code-fsharp[Options](../../samples/snippets/fsharp/tour.fs#L789-L814)]
 
 ## <a name="units-of-measure"></a>Ölçü Birimleri
 
-Bir benzersiz F #'ın tür sistemi ölçü aracılığıyla sayısal değişmez değerleri için içerik sağlama yeteneği özelliğidir.
+F # tür sistemi benzersiz bir özellik ölçü birimleri ile sayısal değişmez değerleri için bağlam sağlamak için olanağıdır.
 
-[Ölçü birimleri](language-reference/units-of-measure.md) ölçümler gibi bir birim için sayısal bir tür ilişkilendirmenizi izin ve sahip işlevleri gerçekleştirmek iş sayısal değişmez değerler yerine birimleri.  Bu, geçirilen sayısal değişmez değerleri türlerini anlamlı bir bağlamında, böylece çalışma zamanı hataları ortadan kaldırılır, bu tür iş ile ilişkili doğrulamak derleyici sağlar.
+[Ölçü birimleri](language-reference/units-of-measure.md) gibi ölçümleri, bir birim için bir sayısal tür ilişkilendirmek izin ve sahip işlevleri gerçekleştiren iş birimleri sayısal değişmez değerler yerine.  Bu, geçirilen sayısal değişmez değerlerinin türleri mantıklı bir bağlamında, bu nedenle çalışma zamanı hatalarını ortadan kaldırarak, bu tür iş ile ilişkili doğrulamak derleyiciyi etkinleştirir.
 
-[!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L818-L839)]
+[!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
 
-F # Core kitaplık birçok SI birim türleri ve birim dönüştürmeleri tanımlar.  Daha fazla bilgi için kullanıma [Microsoft.FSharp.Data.unitsystems.sı Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
+F # çekirdek kitaplığının birçok sı birim türleri ve birim dönüştürmeleri tanımlar.  Daha fazla bilgi için kullanıma [Microsoft.FSharp.Data.unitsystems.sı Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
 
-## <a name="classes-and-interfaces"></a>Sınıflar ve arabirimler
+## <a name="classes-and-interfaces"></a>Sınıfları ve arabirimleri
 
-F # de sahip .NET sınıfları için tam destek [arabirimleri](language-reference/interfaces.md), [soyut sınıflar](language-reference/abstract-classes.md), [devralma](language-reference/inheritance.md)ve benzeri.
+F # ayrıca sahip .NET sınıfları için tam destek [arabirimleri](language-reference/interfaces.md), [soyut sınıflar](language-reference/abstract-classes.md), [devralma](language-reference/inheritance.md)ve benzeri.
 
-[Sınıfları](language-reference/classes.md) .NET nesneleri temsil türleri hangi özellikleri, yöntemleri ve olayları olarak sahip kendi [üyeleri](language-reference/members/index.md).
+[Sınıflar](language-reference/classes.md) .NET nesnelerini temsil eden türleri, özellikleri, yöntemleri ve olayları olarak sahip olabilir, [üyeleri](language-reference/members/index.md).
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L848-L877)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L845-L880)]
 
-Genel sınıfları tanımlama ayrıca çok basittir.
+Genel sınıfları tanımlama da çok kolaydır.
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L884-L905)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L883-L908)]
 
-Bir arabirim için ya da kullanabilirsiniz `interface ... with` sözdizimi veya bir [nesne ifadesi](language-reference/object-expressions.md).
+Bir arabirim uygulamak için kullanabilirsiniz `interface ... with` sözdizimi veya [nesne ifadesi](language-reference/object-expressions.md).
 
-[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L912-L931)]
+[!code-fsharp[Classes](../../samples/snippets/fsharp/tour.fs#L911-L934)]
 
-## <a name="which-types-to-use"></a>Hangi tür kullanımı
+## <a name="which-types-to-use"></a>Hangi türlerin kullanımı
 
-Sınıfları, kayıtları, ayrılmış birleşimler ve diziler varlığını önemli bir soruya müşteri adayları: hangi kullanmalısınız?  Çoğu her şeyi gibi hayatta, yanıt koşullarınıza üzerinde bağlıdır.
+Sınıflar, kayıtları, ayırt edici birleşimler ve diziler varlığını müşteri adayları için önemli bir soru: hangi kullanmalısınız?  Çoğu her şeyi gibi hayatta yanıt koşullarınıza üzerinde bağlıdır.
 
-Diziler birden fazla değer döndüren bir işlevden ve bir geçici toplama değerlerin bir değer olarak kullanmak için mükemmeldir.
+Diziler, birden çok değer döndüren bir işlevden ve geçici toplamını değerleri içeren bir değer mükemmel özellikler.
 
-Bir "adımından yukarı" etiketleri ve isteğe bağlı bir üye için destek adlı bir tanımlama grubu kayıtlarıdır.  Bunlar, bir veri aktarım sırasında program aracılığıyla düşük seremoni gösterimini için mükemmeldir.  Yapısal eşitlik sahip oldukları için karşılaştırma kullanımı kolaydır.
+Bir "adımı yukarı" etiketleri ve isteğe bağlı üyeleri için destek adlı bir tanımlama grubu kayıtlardır.  Bunlar, veri aktarım sırasında program aracılığıyla düşük seremoni gösterimi için mükemmeldir.  Sahip oldukları yapısal eşitlik için karşılaştırma kullanımı kolaydır.
 
-Ayrılmış birleşimler birçok kullanır sahip ancak bunları "veri sahip olabileceği tüm olası şekiller için" hesap için desen eşleştirme birlikte kullanan yapabilmek için çekirdek avantaj olmalıdır.  
+Ayrılmış birleşimler pek çok kullanımı vardır, ancak temel avantajı, bunları "veri sahip olabileceği tüm olası şekiller için" hesap için desen eşleştirme ile birlikte kullanabilirler sağlamaktır.  
 
-Sınıfları, bilgileri temsil eder ve ayrıca bu bilgileri işlevine tie gerektiğinde gibi nedeniyle, büyük sayıda için mükemmeldir.  Bazı verileri, kavramsal olarak bağlı işlevselliği olduğunda altın kural, sınıflar ve ilkeler Object-Oriented programlama büyük fayda kullanmaktır.  Bu diller için neredeyse her şeyi sınıfları kullandıkça da tercih edilen veri türü C# ve Visual Basic ile birlikte çalışırken sınıflarıdır.
+Sınıflar gibi bilgileri temsil eder ve işlevselliği için bu bilgileri ayrıca tie gerektiğinde nedeni, çok sayıda için mükemmeldir.  Bazı verileri, kavramsal olarak bağlı işlevselliği olduğunda bir, sınıflar ve Object-Oriented programlama ilkeleri kullanarak büyük bir avantaj udur.  Bu diller sınıfları için neredeyse her şey kullandıkça da tercih edilen veri türü C# ve Visual Basic ile birlikte çalışırken sınıflardır.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-Bazı dil birincil özellikleri gördüğünüze göre ilk, F # programları yazmak hazır olmalıdır!  Kullanıma [Başlarken](tutorials/getting-started/index.md) geliştirme ortamınızı ayarlama ve bazı kodlar yazmak öğrenin.
+Birincil dili özelliklerinin bazılarını gördüğünüze göre ilk, F # programları yazmak için hazır!  Kullanıma [Başlarken](tutorials/getting-started/index.md) geliştirme ortamınızı ayarlama ve bazı kodlar yazma hakkında bilgi edinmek için.
 
-Daha fazla bilgi almak için sonraki adımlar, ister olabilir, ancak öneririz [ilk sınıf değerleri olarak işlevler](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> işlevsel programlama kavramları ile rahat almak için.  Bunlar, F # sağlam programlar oluşturulmasında gerekli olacaktır.
+Daha fazla bilgi için sonraki adımlar dilediğiniz olabilir, ancak öneririz [ilk sınıf değerleri işlevler](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> işlevsel programlama kavramları ile daha rahat kullanmak için.  Bunlar, F # içinde sağlam programları derleme gerekli olacaktır.
 
-Ayrıca, kullanıma [F # dili başvurusu](language-reference/index.md) kavramsal içeriğin geniş kapsamlı bir koleksiyon F # görmek için.
+Ayrıca, kullanıma [F # dili başvurusu](language-reference/index.md) kavramsal içeriğe kapsamlı koleksiyonu üzerinde F # görmek için.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960016"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253080"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Nasıl yapılır: String.Split (C# Kılavuzu) kullanarak dizeleri ayrıştırma
 
@@ -32,9 +32,11 @@ Her örnek bir ayırıcı karakteri döndürülen dizideki bir değer üretir. A
 
 Bu davranış biçimlerini tablosal verileri temsil eden virgülle ayrılmış değerler (CSV) dosyaları gibi kolaylaştırır. Art arda virgüllerle boş bir sütunu temsil eder.
 
-İsteğe bağlı geçirebilirsiniz <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> döndürülen dizideki herhangi bir boş dizeler hariç tutmak için parametre. Daha karmaşık döndürülen koleksiyon işleme için kullanabileceğiniz [LINQ](../programming-guide/concepts/linq/index.md) Sonuç dizisini değiştirmek için.    
+İsteğe bağlı geçirebilirsiniz <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> döndürülen dizideki herhangi bir boş dizeler hariç tutmak için parametre. Daha karmaşık döndürülen koleksiyon işleme için kullanabileceğiniz [LINQ](../programming-guide/concepts/linq/index.md) Sonuç dizisini değiştirmek için.
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> birden fazla ayırıcı karakter kullanabilirsiniz. Aşağıdaki örnek, boşluk, virgül, nokta, iki nokta üst üste ve sekmeler, tüm bu karakterler için ayırma içeren bir dizi içinde geçirilen kullanır <xref:System.String.Split%2A>.  Döngü kodunun altındaki her bir kelimelerin döndürülen dizideki görüntüler.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> birden fazla ayırıcı karakter kullanabilirsiniz.
+Aşağıdaki örnek, boşluk, virgül, nokta, iki nokta üst üste ve sekmeler, tüm bu karakterler için ayırma içeren bir dizi içinde geçirilen kullanır <xref:System.String.Split%2A>.
+Döngü kodunun altındaki her bir kelimelerin döndürülen dizideki görüntüler.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ Tüm ayırıcı ardışık örnekleri bir çıkış dizisinde boş dize üretir:
 
 Bu örnekler kodda bakarak deneyebilirsiniz bizim [GitHub deposu](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Örnekleri indirebilirsiniz [zip dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Programlama Kılavuzu](../programming-guide/index.md)  
- [Dizeler](../programming-guide/strings/index.md)  
- [.NET normal ifadeler](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Programlama Kılavuzu](../programming-guide/index.md)  
+- [Dizeler](../programming-guide/strings/index.md)  
+- [.NET normal ifadeler](../../standard/base-types/regular-expressions.md)

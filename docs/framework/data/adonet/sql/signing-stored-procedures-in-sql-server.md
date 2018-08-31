@@ -1,49 +1,50 @@
 ---
-title: Saklı yordamlar SQL Server'daki imzalama
+title: SQL Server'da saklı yordam imzalama
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 98dfaa6d5293cb1ad85f70be3388fb333daef373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253650"
 ---
-# <a name="signing-stored-procedures-in-sql-server"></a>Saklı yordamlar SQL Server'daki imzalama
- Dijital imza imzalayan özel anahtar ile şifrelenmiş veri Özet ' dir. Özel anahtar dijital imza, taşıyıcı veya sahibi benzersiz olmasını sağlar. Saklı yordamlar, işlevleri (dışında satır içi tablo değerli işlevler), tetikleyiciler ve derlemeler oturum açabilir.  
+# <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da saklı yordam imzalama
+ İmzalayan özel anahtarla şifrelenmiş veri Özet bir dijital imzadır. Özel anahtar, dijital imza, taşıyıcı veya sahibi benzersiz olmasını sağlar. Saklı yordamları, işlevleri (satır içi tablo değerli işlevler dışında) tetikleyiciler ve derlemeleri oturum açabilirsiniz.  
   
- Saklı yordam bir sertifika veya asimetrik anahtar ile oturum açabilir. Sahiplik zincirleme aracılığıyla izinleri devralınan olamaz veya sahiplik zinciri, dinamik SQL gibi bozuk olduğunda bu senaryoları için tasarlanmıştır. Saklı yordam erişmesi nesneler üzerinde kullanıcı izinlerini sertifika verme daha sonra sertifikayı, eşlenen bir kullanıcı oluşturabilirsiniz.  
+ Bir saklı yordam bir sertifika veya asimetrik anahtar ile oturum açabilirsiniz. Sahiplik zinciri aracılığıyla izinleri devralınamaz veya sahiplik zinciri, dinamik SQL gibi ihlal edildiğinde bu senaryoları için tasarlanmıştır. Bir kullanıcı sertifikası için eşlenmiş saklı yordamı erişmesi nesnelerinde kullanıcı izinlerini sertifika verme sonra oluşturabilirsiniz.  
 
- Ayrıca aynı sertifikayla eşleştirilmiş bir oturumu oluşturmak ve ardından o oturum açmak için gereken tüm sunucu düzeyi izinleri verin veya oturumu bir veya daha fazla sabit sunucu rollerini ekleyin. Bu etkinleştirme önlemek üzere tasarlanmış `TRUSTWORTHY` veritabanı ayarı senaryolarında daha yüksek düzey izinleri gerekiyor.  
+ Ayrıca aynı sertifikayı, eşlenmiş bir oturum oluşturur ve ardından oturum açma için gerekli tüm sunucu düzeyi izinleri veya oturumu bir veya daha fazla sabit sunucu rollerini ekleyin. Bu etkinleştirme önlemek üzere tasarlanmış `TRUSTWORTHY` veritabanı ayarı senaryoları daha yüksek bir düzeyinde izinler gereklidir.  
   
- Saklı yordam çalıştırıldığında, SQL Server çağıran olanlar sertifika kullanıcı ve/veya oturum açma izinleri birleştirir. Farklı `EXECUTE AS` yan tümcesi, yordam yürütme bağlamı değiştirmez. Bu dönüş oturum açma yerleşik işlevler ve kullanıcı adları sertifika kullanıcı adı değil arayan adını döndürür.  
+ Saklı yordam yürütüldüğünde, SQL Server arayanın olanlar sertifika kullanıcı ve/veya oturum açma izinleri birleştirir. Farklı `EXECUTE AS` yan tümcesi, yordam yürütme bağlamı değiştirmez. Yerleşik işlevler dönüş oturum açma ve kullanıcı adları sertifika kullanıcı adına değil arayan adını döndürür.  
   
 ## <a name="creating-certificates"></a>Sertifikaları oluşturma  
- Bir sertifika veya asimetrik anahtar, saklı yordam kodu yürütme birlikte şifrelenmiş karmasını oluşan bir veri özeti olan bir saklı yordam kaydolduğunuzda-kullanıcı olarak, özel anahtarı kullanılarak oluşturulur. Çalışma zamanında veri Özet ortak anahtarla şifresi ve saklı yordam karma değeriyle karşılaştırılır. Execute değiştirme-kullanıcı, böylece dijital imza artık eşleşir, karma değeri geçersiz kılmaları gibi. Saklı yordam değiştirme imza tamamen saklı yordam kodunu değiştirme Access'ten özel anahtara sahip olmayan birisi önleyen bırakır. Her iki durumda da, yordam kodu veya yürütme değiştirdiğinizde yeniden oturum açmanız gerekir-kullanıcı olarak.  
+ Oturum açtığınızda bir saklı yordam bir sertifika veya asimetrik anahtar, saklı yordam kodu yürütme birlikte şifrelenmiş karması oluşan bir veri özeti-kullanıcı olarak, özel anahtarı kullanarak oluşturulur. Çalışma zamanında veri Özet ortak anahtarla şifresi ve saklı yordam karma değeriyle karşılaştırılır. Yürütme değiştirme-karma değeri, dijital imza artık eşleşmesi kullanıcı geçersiz kılmaları gibi. Saklı yordam değiştirme imza tamamen saklı yordamının kodunu değiştirmesini özel anahtarına erişimi yok birisi önleyen bırakır. Her iki durumda da, yordam kodu veya yürütme değiştirdiğiniz her durumda yeniden imzalamanız gerekir-kullanıcı olarak.  
   
- Bir modül oturum açma dahil iki gereken adımlar şunlardır:  
+ Bir modül oturum açarken kullanılan iki gereken adımlar vardır:  
   
-1.  Transact-SQL kullanarak bir sertifika oluşturmak `CREATE CERTIFICATE [certificateName]` deyimi. Bu deyim bir başlangıç ve bitiş tarihi ve bir parola ayarlamak için birkaç seçenek vardır. Varsayılan sona erme tarihi, bir yıl de.  
+1.  Transact-SQL kullanarak bir sertifika oluşturmak `CREATE CERTIFICATE [certificateName]` deyimi. Bu deyim bir başlangıç ve bitiş tarihi ve bir parola ayarlamak için birkaç seçenek vardır. Varsayılan sona erme tarihi bir yıldır.  
   
-1.  Yordam Transact-SQL kullanarak sertifika ile oturum `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` deyimi.  
+1.  Yordamı Transact-SQL kullanarak bir sertifika ile oturum `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` deyimi.  
 
-Modül oturum sonra bir veya daha fazla sorumluları sertifika ile ilişkilendirilmesi gereken ek izinler tutmak için oluşturulması gerekiyor.  
+Modül imzalandıktan sonra sertifika ile ilişkilendirilmesi gereken ek izinler tutmak için oluşturulacak bir veya daha fazla sorumluları gerekir.  
 
-Modül ek veritabanı düzeyi izinler gerekirse:  
+Ek veritabanı düzeyi izinler modülü ihtiyacı varsa:  
   
-1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir veritabanı kullanıcısı oluşturmalıdır `CREATE USER [userName] FROM CERTIFICATE [certificateName]` deyimi. Bu kullanıcı yalnızca veritabanında var ve bir oturum açma, o aynı sertifika oluşturuldu sürece bir oturum ile ilişkili değil.  
+1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir veritabanı kullanıcısı oluşturun `CREATE USER [userName] FROM CERTIFICATE [certificateName]` deyimi. Bu kullanıcı, yalnızca veritabanında var ve bir oturum açma, o aynı sertifikadan oluşturuldu sürece oturum açma kimliğiyle ilişkili değil.  
   
-1.  Sertifika kullanıcı gerekli veritabanı düzeyi izinleri verin.  
+1.  Sertifika kullanıcı gerekli veritabanı düzeyinde izinleri verin.  
   
-Modül ek sunucu düzeyi izinleri gerekirse:  
+Ek sunucu düzeyi izinleri modülü ihtiyacı varsa:  
   
-1.  Sertifikayı kopyalamak `master` veritabanı.  
+1.  Sertifikayı kopyalayın `master` veritabanı.  
  
-1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir oturumu oluşturmak `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` deyimi.  
+1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir oturum açma oluşturma `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` deyimi.  
   
-1.  Sertifika oturum açma gerekli sunucu düzeyi izinleri verin.  
+1.  Sertifika oturum açma, gerekli sunucu düzeyi izinleri verin.  
   
 > [!NOTE]  
->  Bir sertifika verme deyimi kullanarak iptal izinleri olan bir kullanıcı için izinleri olamaz. REDDETME her zaman izin ver çağıran sertifika kullanıcıya verilen izinler devralmayı engelleme önceliklidir.  
+>  Bir sertifika verme deyimi kullanarak iptal edilen izinleri olan bir kullanıcıya verilemiyor. REDDET her zaman izin ver sertifika kullanıcıya verilen izinleri devralmasını çağıran önleme önceliklidir.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
@@ -51,7 +52,7 @@ Modül ek sunucu düzeyi izinleri gerekirse:
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[İmzalama Modülü](http://go.microsoft.com/fwlink/?LinkId=98590) SQL Server Çevrimiçi Kitapları'nda|İmzalama, bir örnek senaryo ve ilgili Transact-SQL konulara bağlantılar sağlayan modülü açıklar.|  
-|[Saklı yordamlar bir sertifika ile imzalama](http://msdn.microsoft.com/library/bb283630.aspx) SQL Server Çevrimiçi Kitapları'nda|Saklı yordam bir sertifika ile imzalamak için bir öğretici sağlar.|  
+|[Saklı yordamlarla bir sertifika imzalama](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) SQL Server Çevrimiçi Kitapları'nda|Bir saklı yordam bir sertifika ile imzalamak için bir öğretici sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -61,4 +62,4 @@ Modül ek sunucu düzeyi izinleri gerekirse:
  [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Saklı Yordamlarla Verileri Değiştirme](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)

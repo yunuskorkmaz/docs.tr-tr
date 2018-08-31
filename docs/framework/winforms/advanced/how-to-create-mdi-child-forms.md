@@ -9,54 +9,54 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: d4351e88de896f366ae2c4050f0e1c32aa0188a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527505"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253727"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
-MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), bu formların kullanıcı etkileşimi merkezi olarak.  
+MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), bu formları kullanıcı etkileşimi merkezi olarak.  
   
- Aşağıdaki yordamda görüntüler MDI alt form oluşturacak bir <xref:System.Windows.Forms.RichTextBox> denetim, çoğu sözcük işlemci uygulamalarına benzer. Değiştirerek <xref:System.Windows.Forms> başka denetimlerle birlikte denetimini <xref:System.Windows.Forms.DataGridView> denetim veya denetimlerin bir karışımını MDI alt pencereleri oluşturmak etkinleştirir (ve uzantılarının, MDI uygulamaları) farklı sayıda olasılık ile.  
+ Aşağıdaki yordamda görüntüler MDI alt formu oluşturur. bir <xref:System.Windows.Forms.RichTextBox> denetimi en sözcük uygulamalarına benzer. Değiştirerek <xref:System.Windows.Forms> diğer denetimlerle denetimini <xref:System.Windows.Forms.DataGridView> denetim veya denetimlerin bir karışımını sağlar, MDI alt pencereleri oluşturmak (ve uzantısı, MDI uygulamaları) ile çeşitli olanaklar.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-create-mdi-child-forms"></a>MDI alt formları oluşturma  
+### <a name="to-create-mdi-child-forms"></a>MDI alt formları oluşturmak için  
   
-1.  Yeni bir Windows Forms projesi oluşturun. İçinde **özellikleri Windows** formun kendi <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğine `true`ve kendi `WindowsState` özelliğine `Maximized`.  
+1.  Yeni bir Windows Forms projesi oluşturun. İçinde **özellikleri Windows** formun kendi <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`ve onun `WindowsState` özelliğini `Maximized`.  
   
-     Bu, formun alt windows için bir MDI kapsayıcı olarak belirler.  
+     Bu, form alt pencereler için bir MDI kapsayıcısı olarak belirler.  
   
-2.  Gelen `Toolbox`, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> forma denetim. Ayarlama, `Text` özelliğine **dosya**.  
+2.  Gelen `Toolbox`, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> forma. Ayarlama, `Text` özelliğini **dosya**.  
   
-3.  Yanındaki üç nokta (...) tıklatın **öğeleri** özelliği ve tıklatın **Ekle** iki alt aracı Şerit menü öğelerini eklemek için. Ayarlama `Text` özelliği bu öğeler için **yeni** ve **penceresi**.  
+3.  Yanındaki üç nokta (...) tıklayın **öğeleri** özelliği seçeneğine tıklayıp **Ekle** iki alt araç şeridi menü öğesi eklemek için. Ayarlama `Text` özelliği için bu öğeler için **yeni** ve **penceresi**.  
   
 4.  İçinde **Çözüm Gezgini**, projeye sağ tıklayın, fareyle **Ekle**ve ardından **Yeni Öğe Ekle**.  
   
-5.  İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows formu** (Visual Basic veya Visual C# ' ta) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun ad **Form2**. Tıklatın **açık** projeye form ekleme düğmesi.  
+5.  İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Form** (Visual Basic veya Visual C#) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun adı **Form2**. Tıklayın **açık** projeye form ekleme düğmesi.  
   
     > [!NOTE]
-    >  Bu adımda oluşturduğunuz MDI alt standart Windows formu biçimidir. Bu nedenle, sahip bir <xref:System.Windows.Forms.Form.Opacity%2A> formun saydamlığını denetlemenize olanak sağlayan özelliği. Ancak, <xref:System.Windows.Forms.Form.Opacity%2A> özelliği, üst düzey windows için tasarlanmıştır. Boyama sorunları ortaya çıktığında MDI alt formları ile kullanmayın.  
+    >  Bu adımda oluşturduğunuz MDI alt formu, bir standart Windows biçimidir. Bu nedenle, sahip bir <xref:System.Windows.Forms.Form.Opacity%2A> form saydamlığını denetlemenize olanak sağlayan özellik. Ancak, <xref:System.Windows.Forms.Form.Opacity%2A> özelliği, üst düzey pencerelere için tasarlanmıştır. Boyama sorunlar oluşabilir gibi MDI alt formlarını ile kullanmayın.  
   
-     Bu form MDI alt formları için şablonu olacaktır.  
+     Bu form, MDI alt formlarını şablonu olacaktır.  
   
-     **Windows Form Tasarımcısı** görüntüleme açılır **Form2**.  
+     **Windows Form Tasarımcısı** görüntüleme açıldığında **Form2**.  
   
-6.  Gelen **araç**, sürükleyin bir **RichTextBox** forma denetim.  
+6.  Gelen **araç kutusu**, sürükleyin bir **RichTextBox** forma.  
   
-7.  İçinde **özellikleri** penceresindeki ayarlayın `Anchor` özelliğine **üst, sol** ve `Dock` özelliğine **doldurun**.  
+7.  İçinde **özellikleri** penceresinde `Anchor` özelliğini **üst, sol** ve `Dock` özelliğini **dolgu**.  
   
-     Bu neden <xref:System.Windows.Forms.RichTextBox> bile formu boyutlandırıldığında tamamen MDI alt formunun alanını doldurmak için denetim.  
+     Bu neden <xref:System.Windows.Forms.RichTextBox> bile formu yeniden boyutlandırıldığında alanı MDI alt formunun tamamen doldurmak için denetimi.  
   
-8.  Çift tıklayarak **yeni** menü öğesi oluşturmak için bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
+8.  Çift tıklayarak **yeni** oluşturmak için menü öğesi bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
   
-9. Aşağıdaki kullanıcı tıklattığında yeni bir MDI alt form oluşturmak için benzer bir kod ekleme **yeni** menü öğesi.  
+9. Kullanıcı tıkladığında, yeni bir MDI alt formu oluşturmak için aşağıdaki için benzer bir kod ekleme **yeni** menü öğesi.  
   
     > [!NOTE]
-    >  Aşağıdaki örnekte, olay işleyicisi işleme <xref:System.Windows.Forms.Control.Click> olayı `MenuItem2`. Unutmayın, uygulama Mimarinizi ayrıntılarını bağlı olarak, **yeni** menü öğesi olmayabilir `MenuItem2`.  
+    >  Aşağıdaki örnekte olay işleyicisi işler <xref:System.Windows.Forms.Control.Click> olayı `MenuItem2`. Unutmayın uygulama mimarinizin ayrıntılarına bağlı olarak, uygulamanızın **yeni** menü öğesi olabilir `MenuItem2`.  
   
     ```vb  
     Protected Sub MDIChildNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click  
@@ -91,20 +91,20 @@ MDI alt formları olan önemli bir öğe [Çoklu belge arabirimi (MDI) uygulamal
        }  
     ```  
   
-     İçinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], aşağıdakileri ekleyin `#include` Form1.h üstündeki yönerge:  
+     İçinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], aşağıdaki `#include` Form1.h üst kısmındaki yönergesi:  
   
     ```cpp  
     #include "Form2.h"  
     ```  
   
-10. Aşağı açılan listesinde en üstündeki **özellikleri** penceresinde, karşılık gelen menü Şerit seçin **dosya** menü Şerit ve kümesi <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> penceresine özelliği <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. En üstündeki açılan listesinde **özellikleri** penceresinde karşılık gelen menü Şerit seçin **dosya** Şerit menüsü ve kümesi <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> özellik penceresine <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-     Bu etkinleştirecek **penceresi** etkin alt pencere yanındaki onay işaretiyle açık MDI alt pencereleri listesini korumak için menüsü.  
+     Bu olanak tanıyacak **penceresi** etkin alt pencerenin yanında bir onay işareti ile açık MDI alt pencereleri listesini korumak için menü.  
   
-11. Uygulamayı çalıştırmak için F5 tuşuna basın. Seçerek **yeni** gelen **dosya** menüsünde hangi tutulan içinde izlemek yeni MDI alt formları oluşturabilirsiniz **penceresi** menü öğesi.  
+11. Uygulamayı çalıştırmak için F5 tuşuna basın. Seçerek **yeni** gelen **dosya** menüsünde, hangi tutulan içinde izlemek yeni MDI alt formlarını oluşturabilirsiniz **penceresi** menü öğesi.  
   
     > [!NOTE]
-    >  MDI alt formu olduğunda bir <xref:System.Windows.Forms.MainMenu> bileşeni (yapısıyla, genellikle, menü menü öğeleri) ve onu içeren MDI üst formu içinde açıldığında bir <xref:System.Windows.Forms.MainMenu> bileşeni (ile genellikle bir menü yapısı menü öğelerinin), öğeleri birleştirme otomatik olarak menüsü ayarlamış olmanız durumunda <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği (ve isteğe bağlı olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği). Ayarlama <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği hem <xref:System.Windows.Forms.MainMenu> bileşenleri ve tüm alt formun menü öğelerinin <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ayrıca, olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği hem menülerden menü öğelerini böylece sıralamada görünür. Ayrıca, MDI üst formu kapattığınızda, her MDI alt başlatır forms göz önünde bulundurmanız bir <xref:System.Windows.Forms.Form.Closing> önce olay <xref:System.Windows.Forms.Form.Closing> MDI üst olayı oluşturulur. Bir MDI çocuğun iptal etme <xref:System.Windows.Forms.Form.Closing> olay MDI üst öğenin engellemez <xref:System.Windows.Forms.Form.Closing> gerçekleştirilen; gelen olay ancak <xref:System.ComponentModel.CancelEventArgs> MDI üst öğenin için bağımsız değişken <xref:System.Windows.Forms.Form.Closing> olay şimdi şekilde ayarlanacak `true`. MDI ve tüm MDI alt formları ayarlayarak kapatmaya zorlamak <xref:System.ComponentModel.CancelEventArgs> bağımsız değişkeni `false`.  
+    >  MDI alt formu olduğunda bir <xref:System.Windows.Forms.MainMenu> (sahip, genellikle bir menüsü yapısı menü öğelerinin) bileşen ve onu içeren MDI üst formu içinde açılır bir <xref:System.Windows.Forms.MainMenu> (sahip, genellikle bir menüsü yapısı menü öğelerinin) bileşen, menü öğeleri otomatik olarak birleştirilir ayarladıysanız <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği (ve isteğe bağlı olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği). Ayarlama <xref:System.Windows.Forms.MenuItem.MergeType%2A> her iki özellik <xref:System.Windows.Forms.MainMenu> bileşenlerini ve tüm alt formun menü öğelerinin <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ayrıca, olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği hem menülerden menü öğelerini böylece istenen sırada görünür. Ayrıca, MDI üst formu kapatın, her bir MDI alt harekete geçirirse forms akılda tutulması bir <xref:System.Windows.Forms.Form.Closing> olayından önce <xref:System.Windows.Forms.Form.Closing> MDI üst olayı oluşturulur. Bir MDI çocuk iptal <xref:System.Windows.Forms.Form.Closing> olay MDI üst öğenin engellemez <xref:System.Windows.Forms.Form.Closing> gerçekleştirilen; gelen olay ancak <xref:System.ComponentModel.CancelEventArgs> MDI üst öğenin için bağımsız değişken <xref:System.Windows.Forms.Form.Closing> olay artık ayarlanır `true`. MDI ve tüm MDI alt formlarını ayarlayarak kapanmaya zorlayabilir <xref:System.ComponentModel.CancelEventArgs> bağımsız değişkeni `false`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çok Belgeli Arabirim (MDI) Uygulamaları](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  

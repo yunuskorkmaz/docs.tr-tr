@@ -4,58 +4,58 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457575"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254359"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
-Bu makalede, büyük miktarda veri dosyaları veya veritabanları gibi işlem uygulamaları büyük .NET Framework uygulamaları veya performansını iyileştirmek için ipuçları verilmektedir. C# ve Visual Basic derleyicileri yönetilen kod yeniden yazma bu ipuçlarını gelir ve bu makale, C# Derleyici birkaç gerçek örneklerinden içermektedir.  
+Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir.  
   
- .NET Framework uygulamaları oluşturmak için son derece verimli kümesidir.  Güçlü ve güvenli diller ve zengin bir koleksiyon kitaplıkların uygulama yapı yüksek oranda fruitful olun.  Ancak, harika verimliliğini sorumluluk gelir.  .NET Framework'ün tüm güç kullanır ancak gerektiğinde, kodun performansı ayarlamak hazırlanması gerekir.  
+ .NET Framework uygulamaları oluşturmak için son derece üretken.  Uygulama oluşturma, güçlü ve güvenli diller ve kitaplıkların zengin bir koleksiyonu yüksek oranda bankanın olun.  Ancak, sorumluluk harika üretkenlik ile birlikte gelir.  .NET Framework'ün tüm gücünü kullanın ancak gerektiğinde kodunuzun performansını ayarlamak hazırlanması gerekir.  
   
-## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Yeni derleyici performans uygulamanıza neden uygular  
- .NET derleme Platformu ("Roslyn") ekibin C# yeniden yazıldı ve Visual Basic derleyicileri yönetilen kodu modelleme ve kodunu analiz etme, araçları oluşturmaya ve çok daha zengin, kod algılayan deneyimleri Visual Studio'da etkinleştirilmesi için yeni API sağlamak için.  Derleyicileri yeniden yazma işlemi ve Visual Studio derleme yeni derleyicileri deneyimler büyük herhangi bir .NET Framework uygulama ya da çok miktarda veri işleyen herhangi bir uygulama için geçerli olan yararlı performansı öngörüleri göstermiştir.  Öngörüler ve örnekler C# Derleyici yararlanmak için derleyicileri hakkında bilmeniz gerek yoktur.  
+## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>Yeni derleyici performans uygulamanıza neden geçerlidir  
+ .NET derleyici Platformu ("Roslyn") ekibi C# yeniden yazıldı ve Visual Basic derleyicileri, yönetilen kodu modelleme ve kodunu analiz etme, derleme araçları ve çok daha zengin, kod duyarlı deneyimler Visual Studio'da etkinleştirme için yeni API'ler sağlar.  Yeniden yazma System.codeDom ve Visual Studio oluşturma yeni derleyiciler üzerinde deneyimlerin büyük herhangi bir .NET Framework uygulama veya çok miktarda veri işleyen herhangi bir uygulama için geçerli olan yararlı performans öngörüleri göstermiştir.  Görüş ve örnekler C# derleyicisi yararlanmak için derleyiciler hakkında bilmeniz gerekmez.  
   
- Visual Studio API derleyici tanımlayıcıları ve anahtar sözcükler, sözdizimi tamamlanma listeleri, renklendirme dalgalı çizgiler gibi hatalar, parametre ipuçları, kod sorunları ve kod eylemleri için kullanıcıların hayran, tüm IntelliSense özellikleri oluşturmak için kullanır.  Visual Studio, geliştiricilerin yazarak ve kendi kod değiştirme ve derleyici sürekli kodu geliştiriciler Düzenle modeller sırada Visual Studio yanıt verebilir durumda kalması gereken çalışırken bu Yardım sağlar.  
+ Visual Studio tanımlayıcıları ve anahtar sözcükler, söz dizimi tamamlanma listeleri, renklendirme dalgalı çizgiler gibi hataları, parametre ipuçları, kod sorunları ve kod eylemleri için kullanıcıların hayran, tüm IntelliSense özelliklerini oluşturmak için derleyicinin API'leri kullanır.  Visual Studio, geliştiricilerin yazarak ve kodlarını değiştirme ve derleyici geliştiriciler Düzenle kod sürekli modeller sırada Visual Studio yanıt kalması gereken bu Yardım sağlar.  
   
- Son kullanıcılarınızın uygulamanızla etkileşim kurduklarında, bunlar esnek olmasını bekler.  Yazarak veya komut işleme hiçbir zaman engellenmelidir.  Yardım, hızlı bir şekilde pop veya kullanıcı yazmaya devam ederse işlemden vazgeçerlerdi.  Uygulamanızın kullanıcı Arabirimi iş parçacığı ağır eşitleyerek uygulama olun uzun hesaplamalar ile engelleme kaçınmalısınız.  
+ Son kullanıcılarınızın uygulamanızla etkileşim kurduğunuzda, bunlar esnek olmasını bekler.  Yazarak ya da komut işleme hiçbir zaman engellenmelidir.  Yardım hızla açılır veya kullanıcı yazmaya devam ederse vazgeçmeniz gerekir.  Uygulamanızı ağır düşünüyorsanız uygulamayı uzun hesaplamalar ile UI iş parçacığı engelleme kaçınmanız gerekir.  
   
- Roslyn derleyicileri hakkında daha fazla bilgi için ziyaret [dotnet/roslyn](https://github.com/dotnet/roslyn) bağlantıların github'da.
+ Roslyn derleyicileri hakkında daha fazla bilgi için ziyaret [dotnet/roslyn](https://github.com/dotnet/roslyn) github deposu.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
-## <a name="just-the-facts"></a>Yalnızca bulguları  
- Bu bilgiler performans ayarlama yaparken göz önünde bulundurun ve yanıt veren .NET Framework uygulamaları oluşturma.  
+## <a name="just-the-facts"></a>Bulguları  
+ Performans ayarlama, bu bilgileri göz önünde bulundurun ve hızlı yanıt veren .NET Framework uygulamaları oluşturma.  
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Olgu 1: erken en iyi duruma getirme yok  
- Olması gerekenden daha karmaşıktır kod yazma hata ayıklama ve maliyetleri polishing bakım doğurur.  Deneyimli programcıları sezgisel bir kavrayın kodlama sorunlarını çözmek ve daha verimli kod yazmak nasıl olması.  Ancak, bunlar bazen erken kendi kodu en iyi duruma getirme.  Örneğin, basit bir dizi yeterli veya yalnızca değerleri recomputing yerine bellek sızıntısı görülebilir karmaşık önbelleğe kullandığınızda bir karma tablosu kullanın.  Bir deneyim Programcı olsa için performans testi ve sorunları bulduğunuzda, kodunuzun analiz edin.  
+### <a name="fact-1-dont-prematurely-optimize"></a>Olgu 1: beklenenden önce iyileştirme  
+ Olmasını ihtiyaç duyduğundan daha karmaşık kod yazma, hata ayıklama ve maliyetleri polishing bakım doğurur.  Sezgisel bir kavrayın kodlama sorunlarını çözmek ve daha verimli kod yazma, programcılar vardır.  Ancak, bunlar bazen erken kodlarını iyileştirin.  Örneğin, bir Basit dizi yeterli veya değerleri yalnızca yeniden hesaplanıyor yerine bellekte sızıntı karmaşık önbelleğe kullandığınızda bir karma tablo kullanın.  Bir deneyim Programcı olmasanız bile için performans testi ve sorunları bulmak, kodunuzu analiz gerekir.  
   
 ### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Olgu 2:, ölçüm yaptığınız değil ise, tahmin  
- Profilleri ve ölçümleri yer yok.  Profilleri CPU tam olarak yüklü olduğu ya da disk g/ç üzerinde engellenen göster.  Profilleri söyleyin, size, ne tür ve ne kadar bellek ayırma ve mi, CPU harcama çok zaman içinde [çöp toplama](../../../docs/standard/garbage-collection/index.md) (GC).  
+ Profilleri ve ölçümler yer yok.  Profilleri, CPU tam yüklü olmadığı ya da disk g/ç üzerinde engellendi gösterir.  Profilleri bahsedin, ne tür ve ne kadar bellek ayırma ve mi CPU harcama çok zaman içinde [çöp toplama](../../../docs/standard/garbage-collection/index.md) (GC).  
   
- Anahtar müşteri için performans hedeflerini deneyimleri veya senaryolar uygulamanızı ayarlama ve performansını ölçmek için testleri yazmak gerekir.  Başarısız olan testleri bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size yol, ne sorun olabilir, hypothesize ve varsayımınızın bir denemeyi ile test veya kod değişikliği.  Performans gerileme neden değişiklikleri yalıtabilirsiniz şekilde normal test ile zamanla temel performans ölçümleri oluşturun.  Sıkı bir şekilde performans iş yaklaşan tarafından gerekmeyen kod güncelleştirmeleriyle zaman kaçının.  
+ Uygulamanızda performans hedeflerini önemli müşteri deneyimleri veya senaryoları ayarlayın ve performansını ölçmek için testleri yazmak gerekir.  Başarısız olan testler bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size rehberlik, ne sorun olabilir, hipotezler varsayımınızın deneme ile test ve kod değişikliği.  Performans gerilemeleri neden değişiklikleri yalıtabilirsiniz için normal test ile zaman içinde temel performans ölçümleri kurun.  Sıkı bir şekilde performans iş yaklaşan tarafından zaman ihtiyacınız olmayan kod güncelleştirmeleriyle önlenir.  
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi araçları tüm fark kolaylaştırır.  
- Hızlı bir şekilde büyük performans sorunlarını (CPU, bellek veya disk) ve bu performans sorunu neden kodu bulun Yardım ayrıntıya iyi araçları sağlar.  Microsoft çeşitli performans araçları gibi birlikte gelen [Visual Studio profil oluşturucu](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone çözümleme aracı](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi Araçlar fark olun.  
+ Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar.  Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone analiz aracı](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
- PerfView disk g/ç gibi ayrıntılı sorunları odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve son derece güçlü bir araçtır.  Performansla ilgili yakalayabilirsiniz [Windows için olay izleme](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünüm kolayca uygulama başına, işlem başına, yığın başına ve başına iş parçacığı bilgileri.  PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınları ne kadar bellek ayırmaları katkıda ne kadar ve ne tür gösterir. Ayrıntılar için bkz: zengin Yardım konuları, gösterileri ve aracıyla dahil videoları (gibi [PerfView öğreticileri](http://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9).  
+ PerfView disk g/ç gibi ayrıntılı sorunlara odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve şaşırtıcı derecede güçlü bir araçtır.  Performansla ilgili yakalayabilirsiniz [olay izleme için Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünümü, uygulama başına bir kolayca, her işlem, yığın başına ve başına iş parçacığı bilgileri.  PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınlarını ne kadar bellek ayırmaları için katkıda bulunan ne kadar ve ne tür gösterir. Zengin Yardım konuları, tanıtımlar ve videolar aracıyla dahil Ayrıntılar için bkz. (gibi [PerfView öğreticiler](http://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9).  
   
 ### <a name="fact-4-its-all-about-allocations"></a>Olgu 4: Tüm ayırmaları hakkında olduğu  
- Bu esnek bir derleme düşünebilirsiniz .NET Framework uygulaması Kabarcık sıralama yerine Hızlı sıralama kullanarak gibi tüm algoritmalar hakkında ancak bu durumda değil.  Özellikle uygulamanız çok büyük olduğunda veya büyük miktarlarda verinin işler esnek bir uygulaması oluşturmanın en büyük faktörü bellek ayırma olduğu.  
+ Bu bir yanıt oluşturmak düşündüğünüzden .NET Framework uygulaması Kabarcık sıralama yerine Hızlı sıralama kullanma gibi tüm algoritmalar hakkında ancak bu durum geçerli değildir.  Özellikle uygulama çok büyükse veya büyük miktarlarda veri işler hızlı yanıt veren bir uygulama oluşturmanın en büyük faktör, bellek ayırma olduğu.  
   
- Neredeyse tüm iş esnek IDE oluşturmak için yeni derleyici API'leri ile karşılaştığında ayırmaları önleme ve önbelleğe alma stratejilerine yönetme dahil.  PerfView izlemeleri yeni C# ve Visual Basic derleyicileri performansını nadiren CPU'ya olmadığını gösterir.  Oluşturulan kod yayma veya derleyicileri meta verileri okuma binlerce veya kod satırı milyonlarca yüzlerce okunurken bağlı g/ç olabilir.  Kullanıcı Arabirimi iş parçacığı gecikmeler neredeyse tüm atık toplama nedeniyle ' dir.  .NET Framework GC yüksek performans için ayarlanmış ve uygulama kodu eşzamanlı olarak çalışırken çalışmasını çoğunu yapar.  Ancak, tek bir ayırma pahalı bir tetikleyebilir [gen2](../../../docs/standard/garbage-collection/fundamentals.md) koleksiyon, tüm iş parçacıklarını durdurma.  
+ Neredeyse tüm esnek IDE oluşturmak için iş API'leri yeni derleyici ile deneyimleri ayırmaları önleme ve önbelleğe alma stratejilerine yönetme dahil.  İzleme PerfView yeni C# ve Visual Basic derleyicileri performansını nadiren CPU bağımlı olduğunu gösterir.  Oluşturulan kod yayan veya derleyiciler meta verileri okuma binlerce veya milyonlarca satır kod, yüzlerce okurken g/ç olabilir.  UI iş parçacığı gecikmeleri neredeyse tüm çöp toplama nedeniyle ' dir.  .NET Framework GC yüksek performans için ayarlanmış ve aynı anda uygulama kodu yürütürken işini çoğunu yapar.  Ancak, tek bir ayırma pahalı bir tetikleyebilirsiniz [gen2](../../../docs/standard/garbage-collection/fundamentals.md) tüm iş parçacıklarını durdurma koleksiyonu.  
   
-## <a name="common-allocations-and-examples"></a>Ortak ayırma ve örnekler  
- Bu bölümdeki örnek ifadeler küçük görünür ayırmaları gizli.  Ancak, büyük uygulama yeterli kez ifadeleri yürütülürse, megabayt, hatta gigabayt cinsinden ayırmalarının yüzlerce nedenleri olabilir.  Bir geliştiricinin bellek tahsis düzenleyicisinde yazarak benzetimli ve senaryoları yazarak odaklanmak için performans takım öncülük Örneğin, bir dakikalık sınamaları.  
+## <a name="common-allocations-and-examples"></a>Ortak ayırmaları ve örnekler  
+ Bu bölümdeki örnek ifadeler küçük görünen ayırmaları gizli.  Ancak, çok sayıda uygulama, yeterli sayıda deyimleri yürütür, megabayt, hatta gigabayt ayırmaların yüzlerce nedenlerini olabilir.  Gigabayt cinsinden bellek tahsis düzenleyicide Geliştirici yazarak simulated ve performans takım senaryoları yazarken odaklanmak için yönetilen Örneğin, bir dakikalık sınar.  
   
 ### <a name="boxing"></a>Kutulama  
- [Kutulama](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) normalde değer türleri yığında Canlı veya nesneyi Sarmalanan veri yapılarını oluşur.  Diğer bir deyişle, verileri tutmak için bir nesne ayrılamadı ve ardından bir işaretçi nesnesine dönün.  .NET Framework bazen değerleri bir yöntem veya bir depolama konumu türünün imza nedeniyle kutuları.  Değer türü içinde bir nesne nedenler bellek ayırma kaydırma.  Birçok kutulama işlemleri, megabayt veya gigabayt uygulamanızı daha fazla GC'ler sebep ve uygulamanızın ayırmalarının katkıda bulunabilir. .NET Framework ve dil derleyicileri kutulama mümkün olduğunda kaçının ancak bazen az beklediğiniz olur.  
+ [Kutulama](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) normal olarak değer türleri yığında live veya veri yapılarını nesneyi sarmalanır gerçekleşir.  Diğer bir deyişle, verileri tutmak için bir nesne ayrılamadı ve ardından nesneye bir işaretçi döndürür.  .NET Framework, bazen bir yöntem veya bir depolama konumu türünün imza nedeniyle değerleri kutular.  Bir değer türü bir nesne nedenleri bellek ayırmayı kaydırma.  Birçok kutulama işlemleri, megabayt veya gigabayt uygulamanızı daha fazla GC'ler sebep uygulamanıza ayırmaların katkıda bulunabilir. .NET Framework ve dil derleyicileri kutulama mümkün olduğunda kaçının, ancak bazen az beklediğiniz olur.  
   
- PerfView kutulama görmek için bir izleme açın ve uygulamanızın işlem adı altında GC yığın ayırma yığında bakın (unutmayın, PerfView raporları tüm işlemleri).  Türleri gibi görürseniz <xref:System.Int32?displayProperty=nameWithType> ve <xref:System.Char?displayProperty=nameWithType> ayırmaları altında değer türleri kutulama.  Bu türlerinden birini seçerek Kutulu işlevler ve yığınları gösterir.  
+ Perfview'de Aç kutulama görmek için bir izleme açın ve uygulamanızın işlem adı altında GC yığın ayırma yığında bakın (unutmayın, PerfView tüm işlemlerde raporları).  Türleri gibi görürseniz <xref:System.Int32?displayProperty=nameWithType> ve <xref:System.Char?displayProperty=nameWithType> ayırmaları altında değer türleri kutulama.  Bu türlerinden birini seçerek Kutulu işlevler ve yığınlarını gösterir.  
   
- **Örnek 1: dize yöntemlerini ve değer türü bağımsız değişkenleri**  
+ **Örnek 1: dize yöntemlerini ve değer tür bağımsız değişkenleri**  
   
  Bu örnek kod, büyük olasılıkla gereksiz ve aşırı kutulama gösterilmektedir:  
   
@@ -75,29 +75,29 @@ public class BoxingExample
 }  
 ```  
   
- Bu kod bir uygulama çağırabilir günlük işlevini sağlar `Log` sık, belki de kez milyonlarca işlev.  Sorunu olan çağrısı `string.Format` çözümler <xref:System.String.Format%28System.String%2CSystem.Object%2CSystem.Object%29> aşırı yükleme.  
+ Bu kod günlüğü işlevini sağlar. böylece, bir uygulamayı çağırabilir `Log` sık, milyonlarca kez belki de işlev.  Sorunu olan çağrı `string.Format` çözümler <xref:System.String.Format%28System.String%2CSystem.Object%2CSystem.Object%29> aşırı yükleme.  
   
- .NET Framework kutusuna bu aşırı gerektirir `int` bu yöntem çağrısı geçirilecek nesneleri içine değerleri.  Kısmi bir düzeltme çağırmaktır `id.ToString()` ve `size.ToString()` ve geçişi için (hangi nesnelerin olduğunu) tüm dizeleri `string.Format` çağırın.  Çağırma `ToString()` ayırma içinde yine de gerçekleşir ancak bu bir dize tahsis `string.Format`.  
+ Bu aşırı yükü .NET Framework kutusuna gerektirir `int` bu yöntem çağrısına geçirilecek nesnelere değerleri.  Kısmi bir düzeltme çağırmaktır `id.ToString()` ve `size.ToString()` ve (hangi nesneleri) tüm dizeleri geçirmek `string.Format` çağırın.  Çağırma `ToString()` ayırma içinde yine de gerçekleşir ancak bu bir dize tahsis `string.Format`.  
   
- Bu bu temel düşünebilirsiniz çağrısı `string.Format` yalnızca dize birleştirme olduğundan, bunun yerine bu kod yazabilirsiniz:  
+ Bu temel düşünebilirsiniz çağrısı `string.Format` yalnızca dize birleştirme olduğundan, bunun yerine bu kodu yazabilirsiniz:  
   
 ```csharp  
 var s = id.ToString() + ':' + size.ToString();  
 ```  
   
- Ancak, bu kod satırı kutulama ayırma tanıtır için derler olduğundan <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework çağırmak için değişmez değer karakter kutusunda gerekir `Concat`  
+ Ancak, kodun o satırına için derleme nedeni kutulama ayırma tanıtır <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29>.  .NET Framework karakter çağrılacak sabiti kutusunda gerekir `Concat`  
   
  **Örneğin 1 Düzelt**  
   
- Tam düzeltme basit bir işlemdir.  Yalnızca karakter değişmez değeri bir dize değişmez değer dizeleri nesneler olduğundan, hiçbir kutulama doğurur değiştirin:  
+ Tüm düzeltme, basit bir işlemdir.  Yalnızca karakteri bir dize sabit değeri, değişmez değer dizeleri nesneler olduğundan, hiçbir kutulama doğurur değiştirin:  
   
 ```csharp  
 var s = id.ToString() + ":" + size.ToString();  
 ```  
   
- **Örnek 2: enum kutulama**  
+ **Örnek 2: sabit listesi kutulama**  
   
- Bu örnekte sık kullanılan nedeniyle yeni C# ve Visual Basic derleyicileri tahsisini sözlük arama işlemlerinde özellikle numaralandırma türlerinin çok büyük miktarlarda sorumlu.  
+ Bu örnekte, sık kullanılması nedeniyle yeni C# ve Visual Basic derleyicileri, bir ayırma Numaralandırma türleri, özellikle sözlük arama işlemleri sektörünüz sorumluydu.  
   
 ```csharp  
 public enum Color  
@@ -116,26 +116,26 @@ public class BoxingExample
 }  
 ```  
   
- Bu sorun çok ince oluşur.  PerfView bu olarak rapor <xref:System.Enum.GetHashCode> yöntemi uygulama nedeniyle numaralandırma türü temeldeki gösterimini kutular çünkü kutulama.  İçinde PerfView yakından bakarsanız, her çağrı için iki kutulama ayırmaları görebilirsiniz <xref:System.Enum.GetHashCode>.   Derleyici bir ekler ve .NET Framework diğer ekler.  
+ Bu sorun, çok hafif olmasıdır.  PerfView olarak rapor <xref:System.Enum.GetHashCode> yöntemi temel alınan numaralandırma türü, Uygulama nedenlerinden gösterimini kutular çünkü kutulama.  PerfView içinde yakından bakarsanız, her çağrı için iki kutulama ayırmaları görebilirsiniz <xref:System.Enum.GetHashCode>.   Derleyici bir ekler ve diğer .NET Framework ekler.  
   
- **Örneğin 2 düzeltme**  
+ **Örnek 2 düzeltme**  
   
- Temel alınan gösterimi çağırmadan önce atama tarafından her iki ayırma kolayca önleyebilirsiniz <xref:System.Enum.GetHashCode>:  
+ Atama temel alınan gösterimi çağırmadan önce tarafından her iki ayırma kolayca kaçınabilirsiniz <xref:System.Enum.GetHashCode>:  
   
 ```csharp  
 ((int)color).GetHashCode()  
 ```  
   
- Kutulama Numaralandırma türleri üzerinde başka bir ortak kaynağı <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> yöntemi.  Geçirilen bağımsız değişken <xref:System.Enum.HasFlag%28System.Enum%29> Kutulu gerekir.  Çoğu durumda, çağrıları değiştirme <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> bit düzeyinde bir test ile daha basit ve ayırma boş olur.  
+ Numaralandırma türleri kutulama, başka bir ortak kaynak <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> yöntemi.  Geçirilen bağımsız değişken <xref:System.Enum.HasFlag%28System.Enum%29> Kutulu gerekir.  Çoğu durumda, çağrıları değiştirerek <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> bir bit düzeyinde ile daha basit ve ayırma testtir.  
   
- İlk performans olgu unutmayın (diğer bir deyişle, erken İyileştir yok) ve bu şekilde tüm kodunuzu yeniden yazma işlemi başlatma.    Bu kutulama maliyetinden unutmayın, ancak yalnızca uygulama profili oluşturma ve etkin noktalar bulma sonra kodunuzu değiştirmek.  
+ İlk performans gerçeği göz önünde bulundurun (diğer bir deyişle, erken iyileştirme) ve bu şekilde tüm kodunuzu yeniden başlatma.    Bu kutulama maliyetlerini unutmayın, ancak yalnızca uygulama profili oluşturma ve etkin noktaları bulma sonra kodunuzu değiştirin.  
   
 ### <a name="strings"></a>Dizeler  
- Dize işlemeleri ayırmaları için büyük culprits bazıları ve bunlar genellikle PerfView içinde ilk beş ayırma gösterilir.  Programları dizeleri serileştirme, JSON ve REST API'lerini kullanır.  Numaralandırma türleri kullanamadığında sistemleriyle birlikte için programlı sabitleri dizelerini kullanabilirsiniz.  Çağrılar, profil dizeleri performans yüksek oranda etkileyen göstermediğinde arayın <xref:System.String> gibi yöntemler <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A>ve benzeri.  Kullanarak <xref:System.Text.StringBuilder> bir dize oluşturma çok sayıda parça yardımcı olur, ancak bile ayırma maliyetini önlemek için <xref:System.Text.StringBuilder> nesne yönetmeniz gereken bir performans sorunu hale.  
+ Dize işlemeleri ayırmalar için büyük culprits bazıları, ve bunlar genellikle PerfView ilk beş ayırmalar şeklinde gösterilir.  Program serileştirme, JSON ve REST API'leri için dizeleri kullanın.  Numaralandırma türleri kullanamadığınızda sistemleriyle birlikte çalışma için dizeleri programlı sabitleri kullanabilirsiniz.  Dizeleri yüksek oranda performansı etkilediğinden, profil oluşturma gösterilmektedir, çağrılar için konum <xref:System.String> gibi yöntemler <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A>ve benzeri.  Kullanarak <xref:System.Text.StringBuilder> bir dize oluşturma çok sayıda parça yardımcı olur, ancak bile ayırma maliyetini önlemek için <xref:System.Text.StringBuilder> nesne yönetmeniz gereken bir performans sorunu haline.  
   
  **Örnek 3: dize işlemleri**  
   
- C# Derleyici biçimlendirilmiş XML Belge açıklama metni yazar bu kodunu döndürdü:  
+ C# derleyicisi, metnin bir biçimlendirilmiş XML belge açıklamasının yazar bu kodu sahipti:  
   
 ```csharp  
 public void WriteFormattedDocComment(string text)  
@@ -162,19 +162,19 @@ public void WriteFormattedDocComment(string text)
     else { /* ... */ }  
 ```  
   
- Bu kod dize düzenlemesi çok mu görebilirsiniz.  Kod kitaplığı yöntemi satırları denetlemek için boşluk, kırpma için ayrı dizeleri, bölmek için kullanır. olup olmadığını bağımsız değişkeni `text` bir XML belge açıklaması ve satırlarından alt dizeler ayıklamak için.  
+ Bu kod dize düzenlemesi çok mu olduğunu görebilirsiniz.  Kod satırları ayrı dizelere içerecek şekilde kırpmanıza denetlemek için beyaz boşluk, bölme için kitaplık yöntemleri kullanır. olmadığını bağımsız değişken `text` bir XML belge açıklaması ve satırlarından alt dizeleri ayıklama.  
   
- İçinde ilk satırda `WriteFormattedDocComment`, `text.Split` çağrısı her çağrıldığında bu yeni üç öğeli bir dizi bağımsız değişken olarak ayırır.  Bu dizinin her zaman ayırmak için kod yaymak üzere derleyici sahiptir.  Derleyici, bilmiyor çünkü <xref:System.String.Split%2A> yere Burada dizi değiştirilmesi daha sonraki çağrıları etkileyecek diğer kodu tarafından dizi depolar `WriteFormattedDocComment`.  Çağrı <xref:System.String.Split%2A> ayrıca her satır için bir dize ayırır `text` ve işlemi gerçekleştirmek için başka bir bellek ayırır.  
+ İçinde ilk satırda `WriteFormattedDocComment`, `text.Split` çağrı her çağrıldığında bu yeni üç öğeli bir dizi bağımsız değişken olarak ayırır.  Derleyici, her zaman bu dizi ayırmak için kod yaymak vardır.  Derleyici, bilmez çünkü <xref:System.String.Split%2A> yere burada dizisi değiştirilmesine sonraki çağrılar etkileyecek diğer kod tarafından dizi depolar `WriteFormattedDocComment`.  Çağrı <xref:System.String.Split%2A> ayrıca her satır için bir dize ayırır `text` ve bu işlemi gerçekleştirmek için diğer bellek ayırır.  
   
- `WriteFormattedDocComment` üç çağrı sahip <xref:System.String.TrimStart%2A> yöntemi.  İş ve ayırmaları yinelenen iç Döngülerde ikisidir.  Önemlidir daha da kötüsü, arama yapmak için <xref:System.String.TrimStart%2A> yöntemi bağımsız değişken içermeyen boş bir dizi ayırır (için `params` parametresi) dize sonucu yanı sıra.  
+ `WriteFormattedDocComment` üç çağrı sahip <xref:System.String.TrimStart%2A> yöntemi.  İş ve ayırmaları yinelenen iç Döngülerde ikisidir.  Önemli olan konuya daha da kötüsü, arama yapmak için <xref:System.String.TrimStart%2A> yöntemi bağımsız değişken içermeyen boş bir dizi ayırır (için `params` parametresi) dize sonucu yanı sıra.  
   
- Son olarak, bir arama var. <xref:System.String.Substring%2A> genellikle yeni bir dize ayırır yöntemi.  
+ Son olarak, bir çağrı yoktur <xref:System.String.Substring%2A> yöntemi genellikle yeni bir dize ayırır.  
   
- **Örneğin 3 Düzelt**  
+ **Örneğin 3 düzeltme**  
   
- Önceki örneklerin aksine bu ayırmaları küçük düzenlemeler düzeltilemiyor.  Geri adım, sorun ve farklı şekilde yaklaşır gerekir.  Örneğin, olduğunu fark edeceksiniz bağımsız değişkeni `WriteFormattedDocComment()` kodu birçok kısmi dizeler ayırma yerine daha fazla dizin oluşturma yapabilirsiniz, böylece yöntemi gerektiren tüm bilgilere sahip bir dizedir.  
+ Önceki örneklerde, bu ayırma küçük düzenlemelerle düzeltemiyor.  Geri adım, sorun ve farklı yaklaşım gerekir.  Örneğin, olduğunu fark edeceksiniz bağımsız değişkeni `WriteFormattedDocComment()` kod birçok kısmi dizeler ayırma yerine daha fazla dizin oluşturma yapabilir, yöntemi gerektiren tüm bilgilere sahip bir dizedir.  
   
- Derleyicinin performans takım bu ayırma aşağıdakine benzer bir kod ile tackled:  
+ Derleyicinin performans takım bu ayırmaları aşağıdakine benzer bir kod ile tackled:  
   
 ```csharp  
 private int IndexOfFirstNonWhiteSpaceChar(string text, int start) {  
@@ -196,11 +196,11 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- İlk sürümü `WriteFormattedDocComment()` bir dizi, birkaç alt dizeler ve boş bir birlikte bölünen substring ayrılan `params` dizi.  Bu ayrıca kontrol `"///"`.  Düzeltilmiş kod yalnızca dizin oluşturma kullanır ve hiçbir şey ayırır.  Boşluk ve denetimleri karakter dizesi ile başlayıp başlamadığını görmek için düzeyinde değil ilk karakteri bulur `"///"`.  Yeni kod kullanır `IndexOfFirstNonWhiteSpaceChar` yerine <xref:System.String.TrimStart%2A> bir boşluk olmayan karakter oluştuğu (sonra belirtilen başlangıç dizini) ilk dizin dönün.  Düzeltme tam değilse, ancak eksiksiz bir çözüm için benzer düzeltmelerini uygulamak nasıl görebilirsiniz.  Bu yaklaşım kod genelindeki uygulayarak, tüm ayırma kaldırabilirsiniz `WriteFormattedDocComment()`.  
+ Ürününün ilk sürümünü `WriteFormattedDocComment()` dizisi ve alt dizelerin kırpılmış bir alt dizesi boş birlikte ayrılan `params` dizisi.  Bu da kontrol `"///"`.  Düzeltilen kod yalnızca dizin kullanır ve hiçbir şey ayırır.  Boşluk ve denetimleri dizesi ile başlayıp başlamadığını görmek için karakter olmayan ilk karakteri bulur `"///"`.  Yeni kod `IndexOfFirstNonWhiteSpaceChar` yerine <xref:System.String.TrimStart%2A> boşluk olmayan karakter oluştuğu (sonra belirtilen başlangıç dizini) ilk dizin dönün.  Düzeltmenin tam değil, ancak benzer düzeltmeleri için eksiksiz bir çözüm uygulamak nasıl görebilirsiniz.  Bu yaklaşım kod genelindeki uygulayarak, tüm ayırmaları kaldırabilirsiniz `WriteFormattedDocComment()`.  
   
  **Örnek 4: StringBuilder**  
   
- Bu örnekte bir <xref:System.Text.StringBuilder> nesnesi.  Genel türler için tam tür adı aşağıdaki işlevi oluşturur:  
+ Bu örnekte bir <xref:System.Text.StringBuilder> nesne.  Tam tür adı genel türler için aşağıdaki işlevi oluşturur:  
   
 ```csharp  
 public class Example  
@@ -226,11 +226,11 @@ public class Example
 }  
 ```  
   
- Yeni bir satıra odak noktasıdır <xref:System.Text.StringBuilder> örneği.  Kod için bir ayırma neden `sb.ToString()` ve iç ayırmaları içinde <xref:System.Text.StringBuilder> uygulaması, ancak denetimi bu ayırmaları dize sonucu istiyorsanız.  
+ Odağı oluşturan yeni bir satırda olduğu <xref:System.Text.StringBuilder> örneği.  Kod için bir ayırma neden `sb.ToString()` ve içinde iç Tahsisatları <xref:System.Text.StringBuilder> uygulaması, ancak denetimi bu ayırmaları dize sonucu istiyorsanız.  
   
- **Örneğin 4 Düzelt**  
+ **Örneğin, 4 Düzelt**  
   
- Düzeltmek için `StringBuilder` ayırma nesne, nesne önbellek.  Hatta atılmak tek bir örnek önbelleğe alma performansını önemli ölçüde artırabilir.  Bu yeni ilk ve son satır hariç tüm kod atlama işlevin yeni uygulama.  
+ Düzeltmek için `StringBuilder` nesne ayırma, nesne önbelleğe alma.  Atılan tek bir örnek bile önbelleğe alma performansını önemli ölçüde artırabilir.  Bu işlevin yeni uygulama, yeni ilk ve son satırlar dışında tüm kod atlama.  
   
 ```csharp  
 // Constructs a name like "MyType<T1, T2, T3>"  
@@ -242,7 +242,7 @@ public string GenerateFullTypeName(string name, int arity)
 }  
 ```  
   
- Anahtar bölümleri yenidir `AcquireBuilder()` ve `GetStringAndReleaseBuilder()` işlevleri:  
+ Yeni bazı önemli bölümleri `AcquireBuilder()` ve `GetStringAndReleaseBuilder()` İşlevler:  
   
 ```csharp  
 [ThreadStatic]  
@@ -268,20 +268,20 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 }  
 ```  
   
- Yeni derleyicileri iş parçacığı oluşturma kullandığından, bu uygulamaların bir iş parçacığı statik alanı kullanın (<xref:System.ThreadStaticAttribute> özniteliği) önbelleğe <xref:System.Text.StringBuilder>, ve büyük olasılıkla atlayabilirsiniz `ThreadStatic` bildirimi.  İş parçacığı statik alan bu kodu yürütür her iş parçacığı için benzersiz bir değere sahiptir.  
+ Yeni derleyiciler iş parçacığı kullandığından, bu uygulamaları bir iş parçacığı statik alan kullanır (<xref:System.ThreadStaticAttribute> özniteliği) önbelleğe <xref:System.Text.StringBuilder>, ve büyük olasılıkla bırakmayı `ThreadStatic` bildirimi.  İş parçacığı statik alanı bu kodu yürüten her bir iş parçacığı için benzersiz bir değer tutar.  
   
- `AcquireBuilder()` önbelleğe alınan döndürür <xref:System.Text.StringBuilder> varsa, temizlemeden ve alan veya önbellek null değerine ayarlayarak sonra örneği.  Aksi takdirde `AcquireBuilder()` yeni bir örnek oluşturur ve alan veya önbellek kümesi null bırakarak döndürür.  
+ `AcquireBuilder()` önbelleğe alınan döndürür <xref:System.Text.StringBuilder> varsa, alan veya önbellek null olarak ayarlamak ve temizlemeden sonra örnek.  Aksi takdirde, `AcquireBuilder()` yeni bir örneğini oluşturur ve alan veya önbellek kümesi null olarak bırakarak döndürür.  
   
- İle bitirdiğinizde <xref:System.Text.StringBuilder> , çağırmanız `GetStringAndReleaseBuilder()` dize sonucu elde etmek için Kaydet <xref:System.Text.StringBuilder> örnek alan veya önbellek ve sonucu döndürür.  Bu kod yeniden girin ve birden çok oluşturmak için yürütme için mümkündür <xref:System.Text.StringBuilder> (, nadiren gerçekleşir rağmen) nesneleri.  Yalnızca son yayımlanan kod kaydeder <xref:System.Text.StringBuilder> örnek daha sonra kullanmak için.  Bu basit önbelleğe alma stratejisi yeni derleyicileri ayırma önemli ölçüde azalır.  MSBuild ("MSBuild") ve .NET Framework bölümleri, performansı artırmak için benzer bir teknik kullanın.  
+ Bitirdiğinizde ile <xref:System.Text.StringBuilder> , çağırmanızı `GetStringAndReleaseBuilder()` dize sonucu elde etmek için Kaydet <xref:System.Text.StringBuilder> örnek alanı veya önbellek ve sonucu döndürür.  Bu kodu tekrar girin ve birden çok oluşturmak için yürütme için mümkündür <xref:System.Text.StringBuilder> (, nadiren gerçekleşir ancak) nesneleri.  Yalnızca en son yayımlanan kod kaydeder <xref:System.Text.StringBuilder> daha sonra kullanmak için örneği.  Bu basit bir önbelleğe alma stratejisi, yeni derleyiciler ayırmalarda önemli ölçüde azaldığından.  .NET Framework ve MSBuild ("MSBuild") bölümleri, performansı artırmak için benzer bir teknik kullanın.  
   
- Bir boyut cap içerdiğinden bu basit önbelleğe alma stratejisi iyi önbellek tasarım uyar.  Ancak, daha fazla bakım maliyetlerinin anlamı özgün, artık daha fazla kod yoktur.  Yalnızca bir performans sorununu buldunuz ve PerfView, gösterilen önbelleğe alma stratejisi benimsemeyi <xref:System.Text.StringBuilder> ayırmaları olan önemli katılımcı.  
+ Bir boyut sınırına sahip olduğundan bu basit bir önbelleğe alma stratejisi iyi önbellek tasarım uyar.  Ancak, daha fazla bakım maliyetlerini diğer bir deyişle orijinal, artık daha fazla kod yoktur.  Yalnızca bir performans sorunu buldunuz ve PerfView, gösterilen önbelleğe alma stratejisi benimseyin <xref:System.Text.StringBuilder> ayırmaları olan önemli bir katkıda bulunan.  
   
-### <a name="linq-and-lambdas"></a>LINQ ve lambdas  
- Dil ile tümleşik sorgu (LINQ) ve lambda ifadeleri kullanma kodu performansı önemli bir etkisi olursa yeniden yazmak zorunda daha sonra bulabileceğiniz üretken özellikleri kullanarak, harika bir örnektir.  
+### <a name="linq-and-lambdas"></a>LINQ ve lambda ifadeleri  
+Dil ile tümleşik sorgu (LINQ), lambda ifadeleri ile birlikte bir üretkenlik özellik örneğidir. Ancak, kullanımı zaman içerisinde performansı üzerinde önemli bir etkisi olabilir ve kodunuzu yeniden yazmak zorunda bulabilirsiniz.
   
- **Örnek 5: Lambda'lar, liste\<T > ve IEnumerable\<T >**  
+ **5. örnek: Lambda ifadeleri, liste\<T > ve IEnumerable\<T >**  
   
- Bu örnekte [LINQ ve işlevsel stili kodu](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) ad dizesini verilen bir sembol derleyicinin modelinde bulmak için:  
+ Bu örnekte [LINQ ve işlev stili kod](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) adı dizesi verilmiş bir sembol derleyicinin modelinde bulmak için:  
   
 ```csharp  
 class Symbol {  
@@ -298,14 +298,14 @@ class Compiler {
 }  
 ```  
   
- Yeni derleyici ve arama üzerinde oluşturulmuş IDE deneyimleri `FindMatchingSymbol()` bu işlevin tek satırlık bir kod birkaç gizli ayırma şunlardır: çok sık ve vardır.  Bu ayırmaları incelemek için ilk işlevin tek satırlık bir kod iki çizgiye bölün:  
+ Yeni derleyici ve çağrı bunu temel IDE deneyimleri `FindMatchingSymbol()` tek satır kod bu işlevin, birkaç gizli ayırmaları çok sık ve var olan.  Bu ayırmalar incelemek için ilk işlevin tek satır kod iki çizgiye bölün:  
   
 ```csharp  
 Func<Symbol, bool> predicate = s => s.Name == name;  
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- İlk satırdaki [lambda ifadesi](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[üzerinden kapatır](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) yerel değişken `name`.  Bu, bir nesne için ayırma yanı sıra gelir [temsilci](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` tutan kodu ayırır değerini yakalar ortamı tutmak için bir statik sınıf `name`.  Derleyici aşağıdaki gibi bir kod oluşturur:  
+ İlk satırda [lambda ifadesi](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [üzerinden kapatır](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) yerel değişken `name`.  Bunun için bir nesne ayırma ek olarak anlamı [temsilci](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` tutar, kodu değerini yakalayan bir ortam için bir statik sınıf ayırır `name`.  Derleyici, aşağıdaki gibi bir kod oluşturur:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -323,9 +323,9 @@ Lambda1Environment l = new Lambda1Environment() { capturedName = name };
 var predicate = new Func<Symbol, bool>(l.Evaluate);  
 ```  
   
- İki `new` ayırmaları (bir ortam sınıfı için) ve bir temsilci için açık şimdi.  
+ İki `new` ayırmalar (bir ortam sınıfı için) ve bir temsilci için açık şimdi.  
   
- Şimdi çağrısına bakın `FirstOrDefault`. Bu uzantı metodu <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> türü bir ayırma çok doğurur.  Çünkü `FirstOrDefault` geçen bir <xref:System.Collections.Generic.IEnumerable%601> nesnesi, ilk bağımsız değişkeni olarak (bir bit tartışma için Basitleştirilmiş) aşağıdaki kodu çağrısı genişletebilirsiniz:  
+ Artık çağrısına bakın `FirstOrDefault`. Bu genişletme yöntemini <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> türü bir ayırma çok doğurur.  Çünkü `FirstOrDefault` götüren bir <xref:System.Collections.Generic.IEnumerable%601> nesne, ilk bağımsız değişkeni olarak (hakkında ayrıntılı bilgi için biraz Basitleştirilmiş) aşağıdaki koda çağrı genişletebilirsiniz:  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -339,13 +339,13 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
      return default(Symbol);  
 ```  
   
- `symbols` Değişken türüne sahip <xref:System.Collections.Generic.List%601>.  <xref:System.Collections.Generic.List%601> Koleksiyon türü uygulayan <xref:System.Collections.Generic.IEnumerable%601> ve zekice bir numaralandırıcı tanımlar (<xref:System.Collections.Generic.IEnumerator%601> arabirimi), <xref:System.Collections.Generic.List%601> ile uygulayan bir `struct`.  Bir sınıf yerine bir yapı kullanarak hangi sırayla, atık toplama performansını etkileyebilecek herhangi yığın ayırmaları genellikle kaçının anlamına gelir.  Numaralandırmalar genelde dil kullanılan `foreach` çağrı yığınındaki döndürülen Numaralandırıcı yapısı kullanır döngüsü.  Bir nesne için yer açmak için çağrı yığını işaretçi artırma yaptığı gibi bir yığın ayırma GC etkilemez.  
+ `symbols` Değişken türüne sahip <xref:System.Collections.Generic.List%601>.  <xref:System.Collections.Generic.List%601> Koleksiyon türü uygulayan <xref:System.Collections.Generic.IEnumerable%601> ve zekice bir numaralandırıcı tanımlar (<xref:System.Collections.Generic.IEnumerator%601> arabirimi), <xref:System.Collections.Generic.List%601> ile uygulayan bir `struct`.  Bir sınıf yerine bir yapı kullanarak hangi sırayla, çöp toplama performansı etkileyebilir herhangi bir yığın ayırma genellikle kaçının anlamına gelir.  Numaralandırıcılar genellikle dil kullanılan `foreach` döngü çağrı yığınındaki döndürülür, numaralandırıcı yapısını kullanır.  Bir nesne için yer açmak için çağrı yığın işaretçisi artan yaptığı gibi bir yığın ayırma GC etkilemez.  
   
- Genişletilmiş durumunda `FirstOrDefault` çağrısı kod gereken çağırmak `GetEnumerator()` üzerinde bir <xref:System.Collections.Generic.IEnumerable%601>.  Atama `symbols` için `enumerable` değişken türü `IEnumerable<Symbol>` gerçek nesne bilgileri kaybeder bir <xref:System.Collections.Generic.List%601>.  Kod Numaralandırıcı ile getirir, yani `enumerable.GetEnumerator()`, .NET Framework atamak döndürülen yapısı kutusunda gereken `enumerator` değişkeni.  
+ Genişletilmiş durumunda `FirstOrDefault` çağrı, kod çağırmak gereken `GetEnumerator()` üzerinde bir <xref:System.Collections.Generic.IEnumerable%601>.  Atama `symbols` için `enumerable` türündeki değişken `IEnumerable<Symbol>` gerçek nesneye bilgileri kaybeder bir <xref:System.Collections.Generic.List%601>.  Kod ile Numaralandırıcı getirir olduğunda bunun anlamı `enumerable.GetEnumerator()`, geri döndürülen yapı atamak kutu içine almak .NET Framework sahip `enumerator` değişkeni.  
   
  **Örneğin 5 Düzelt**  
   
- Düzeltme yeniden yazmaktır `FindMatchingSymbol` gibi kendi tek satırlık bir kod hala kısa, kolay okuduğunuzdan ve anladığınızdan ve bakımını kolay olan altı kod satırıyla değiştirme:  
+ Düzeltme yeniden yazmaktır `FindMatchingSymbol` gibi yine de kısa, okumanız ve anlamanız kolay ve sürdürmek daha kolay olan altı kod satırıyla, tek satırlık bir kod değiştirme:  
   
 ```csharp  
 public Symbol FindMatchingSymbol(string name)  
@@ -359,14 +359,14 @@ public Symbol FindMatchingSymbol(string name)
     }  
 ```  
   
- Bu kod LINQ genişletme yöntemleri, Lambda'lar veya numaralandırıcıları kullanmayan ve hiçbir ayırmaları doğurur.  Derleyici görebilirsiniz çünkü hiçbir ayırmaları olan `symbols` koleksiyonu bir <xref:System.Collections.Generic.List%601> ve sonuçta elde edilen Numaralandırıcı (yapı) yerel bir değişkene kutulama önlemek için doğru türü ile bağlayabilirsiniz.  Bu işlev özgün sürümü gücüyle C# ve .NET Framework'ün üretkenlik harika bir örneği oluştu.  Bu yeni ve daha verimli sürümü korumak için herhangi bir karmaşık kod eklemeden bu nitelikleri korur.  
+ Bu kod, LINQ genişletme yöntemleri, lambdalar veya numaralandırıcılar kullanmaz ve edilmedi doğurur.  Derleyici, görebilirsiniz çünkü edilmedi olan `symbols` koleksiyonu bir <xref:System.Collections.Generic.List%601> ve sonuçta elde edilen Numaralandırıcı (yapı) yerel bir değişkene kutulama önlemek için doğru tür ile bağlayabilirsiniz.  Bu işlevin özgün sürümle etkileyici gücüyle C# ve .NET Framework'ün üretkenlik harika bir örneği oluştu.  Bu yeni ve daha verimli sürümü bu kalitelerini korumak için karmaşık kodlar eklemeden korur.  
   
 ### <a name="async-method-caching"></a>Zaman uyumsuz yöntem önbelleğe alma  
- Önbelleğe alınan sonuçları kullanmaya çalıştığınızda sonraki örnek ortak bir sorunu gösterir. bir [zaman uyumsuz](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) yöntemi.  
+ Sonraki örnek, ortak bir sorunu gösterir, önbelleğe alınan sonuçları kullanmaya çalıştığınızda bir [zaman uyumsuz](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) yöntemi.  
   
- **Örnek 6: zaman uyumsuz yöntemleri önbelleğe alma**  
+ **Örnek 6: zaman uyumsuz yöntemlerde önbelleğe alma**  
   
- Sözdizimi ağacı üzerinde yeni C# ve Visual Basic derleyicileri sık yerleşik olarak bulunan Visual Studio IDE özelliklerinden getirebilir ve derleyicileri Visual Studio yanıt verebilir durumda tutmak için bunu yaparken zaman uyumsuz kullanın.  Sözdizimi ağacı almak için yazabilir kod ilk sürümü şöyledir:  
+ Söz dizimi ağacı sık yeni C# ve Visual Basic derleyicileri üzerinde oluşturulmuş Visual Studio IDE özelliklerini getirmek ve derleyiciler Visual Studio yanıt saklamak için Bunun yapılması, zaman uyumsuz kullanın.  Sözdizimi ağacı almak için yazabilirsiniz kod ilk hali aşağıdadır:  
   
 ```csharp  
 class SyntaxTree { /*...*/ }  
@@ -386,9 +386,9 @@ class Compilation { /*...*/
 }  
 ```  
   
- Bu arama görebilirsiniz `GetSyntaxTreeAsync()` başlatır bir `Parser`kodu ayrıştırır ve ardından döndürür bir <xref:System.Threading.Tasks.Task> nesnesi `Task<SyntaxTree>`.  Pahalı bölümü ayırma `Parser` örneği ve kod ayrıştırma.  İşlevi döndürür bir <xref:System.Threading.Tasks.Task> böylece çağıranlar ayrıştırma iş bekler ve kullanıcı girişine yanıt vermesi kullanıcı Arabirimi iş parçacığı boş.  
+ Çağırmanın gördüğünüz `GetSyntaxTreeAsync()` örnekleyen bir `Parser`kodunu ayrıştırır ve ardından döndürür bir <xref:System.Threading.Tasks.Task> nesnesi `Task<SyntaxTree>`.  Pahalı bölümü ayırma `Parser` örneği ve kod ayrıştırma.  İşlev döndürür bir <xref:System.Threading.Tasks.Task> çağıranlar ayrıştırma işi await ve kullanıcı girişine yanıt olarak UI iş parçacığı ücretsiz.  
   
- Saat ve ayırmaları kaydetmek için ayrıştırma sonucu önbelleğe almak için aşağıdaki kodu yazabilirsiniz aynı sözdizimi ağacı almak birkaç Visual Studio özellikleri deneyebilirsiniz.  Ancak, bu kod bir ayırma oluşturur:  
+ Birçok Visual Studio özellikleri zaman ve ayırmaların Kaydet ayrıştırma sonucunu önbelleğe almak için aşağıdaki kodu yazabilirsiniz aynı söz dizimi ağacı almak deneyebilir.  Ancak, bu kod, bir ayırma doğurur:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -408,11 +408,11 @@ class Compilation { /*...*/
 }  
 ```  
   
- Önbelleğe alma ile yeni koduna sahip olduğunu gördüğünüz bir `SyntaxTree` adlı alanı `cachedResult`.  Bu alan boş olduğunda `GetSyntaxTreeAsync()` işi yapar ve sonuç önbelleğine kaydeder.  `GetSyntaxTreeAsync()` döndürür `SyntaxTree` nesnesi.  Varsa olan sorunu bir `async` türündeki işlevi `Task<SyntaxTree>`, ve türünde bir değer döndürmesi `SyntaxTree`, sonuç tutmak için bir görev ayırmak için kod derleyicisi yayar (kullanarak `Task<SyntaxTree>.FromResult()`).  Görev tamamlandı olarak işaretlenir ve sonucu hemen kullanılabilir.  Yeni derleyicileri kodunda <xref:System.Threading.Tasks.Task> zaten tamamlandığından nesneleri oluştu nedenle genellikle bu düzeltmeyle Bu ayırmaları yanıtlama hızı önemli ölçüde geliştirildi.  
+ Önbelleğe alma ile yeni kod olduğunu gördüğünüz bir `SyntaxTree` adlı alan `cachedResult`.  Bu alan boş olduğunda `GetSyntaxTreeAsync()` çalışır ve sonuçları önbelleğe kaydeder.  `GetSyntaxTreeAsync()` döndürür `SyntaxTree` nesne.  Varsa, sorunu olan bir `async` türünde işlevi `Task<SyntaxTree>`, ve türünde bir değer döndürür `SyntaxTree`, derleyici sonucu tutmak için bir görev ayırmak için kodu yayan (kullanarak `Task<SyntaxTree>.FromResult()`).  Görevin tamamlandı olarak işaretlenir ve sonuç hemen kullanılabilir.  Yeni derleyicileri için kodunda <xref:System.Threading.Tasks.Task> zaten tamamlanmış nesneler, böylece genellikle bu düzeltmeyle Bu ayırmaları yanıt hızını önemli ölçüde geliştirilmiş oluştu.  
   
  **Örneğin 6 Düzelt**  
   
- Tamamlanan kaldırmak için <xref:System.Threading.Tasks.Task> ayırma, tamamlanmış sonuç görev nesnesiyle önbelleğe alabilir:  
+ Tamamlanan kaldırmak için <xref:System.Threading.Tasks.Task> ayırma, görev nesnesi tamamlanmış sonucuyla önbelleğe alabilir:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -434,40 +434,40 @@ class Compilation { /*...*/
 }  
 ```  
   
- Bu kod türünü değiştirir `cachedResult` için `Task<SyntaxTree>` ve kullanan bir `async` özgün kod tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` Şimdi kullanan [null birleştirmesi işleci](../../csharp/language-reference/operators/null-coalescing-operator.md) dönmek için `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kodu normal olarak.  Await anlamına gelir kullanmıyor olduğunda `GetSyntaxTreeUncachedAsync()` döndürür kendi <xref:System.Threading.Tasks.Task> nesnesi, `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Şimdi, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>, bu nedenle hiçbir ayırmaları önbelleğe alınmış bir sonuç yok.  
+ Bu kod değişiklikleri türde `cachedResult` için `Task<SyntaxTree>` ve kullandığı bir `async` özgün koda göre tutan yardımcı işlevini `GetSyntaxTreeAsync()`.  `GetSyntaxTreeAsync()` artık kullanan [null birleşim işleci](../../csharp/language-reference/operators/null-coalescing-operator.md) döndürülecek `cachedResult` null değilse.  Varsa `cachedResult` null ise `GetSyntaxTreeAsync()` çağrıları `GetSyntaxTreeUncachedAsync()` ve sonucu önbelleğe alır.  Dikkat `GetSyntaxTreeAsync()` çağrısı await değil `GetSyntaxTreeUncachedAsync()` kod normalde yaptığınız gibi.  Kullanmayan await anlamına gelir olduğunda `GetSyntaxTreeUncachedAsync()` döndürür, <xref:System.Threading.Tasks.Task> nesnesi `GetSyntaxTreeAsync()` hemen döndürür <xref:System.Threading.Tasks.Task>.  Artık, önbelleğe alınan sonucu olan bir <xref:System.Threading.Tasks.Task>var. Bu nedenle önbelleğe alınan sonuçları döndürmek için edilmedi.  
   
 ### <a name="additional-considerations"></a>Ek hususlar  
- Büyük uygulamalar ya da çok miktarda veri işleyen uygulamalar olası sorunlar hakkında daha fazla birkaç noktalar şunlardır.  
+ Büyük uygulamalar veya çok miktarda veri işleyen uygulamalar olası sorunlar hakkında birkaç daha fazla noktalar şunlardır.  
   
- **Sözlük**  
+ **sözlükler**  
   
- Ancak çok kullanışlı ve kendiliğinden verimli sözlükler ve sözlükleri ubiquitously birçok programda kullanılır.  Ancak, bunlar genellikle açamayacağı kullanılır.  Visual Studio ve yeni derleyicileri, analiz sözlükler birçoğu tek bir öğe içeriyor veya boş gösterir.  Boş bir <xref:System.Collections.Generic.Dictionary%602> on alanları olan ve bir x86 üzerinde yığında 48 bayt kaplar makine.  Bir eşleme veya ilişkilendirilebilir veri yapısı sabiti zamanı arama ile gerektiğinde sözlükler mükemmeldir.  Yalnızca birkaç öğeler varsa, ancak, çok fazla alan bir sözlüğünü kullanarak boşa harcanmasına.  Bunun yerine, örneğin, yinelemeli olarak görünebilir bir `List<KeyValuePair\<K,V>>`, yalnızca hızlı.  Sıralanmış bir dizi N(log(N)) arama ile kullanarak, kullanmakta olduğunuz öğeleri sayısına bağlı olarak, hızlı olarak neredeyse yalnızca ile veri yükleme ve ondan (çok yaygın bir desen) okumak için bir sözlük kullanıyorsanız olabilir.  
+ Ancak çok kullanışlı ve verimli kendiliğinden sözlükleri ve sözlükleri ubiquitously birçok programlarda kullanılır.  Ancak, bunlar genellikle uygunsuz bir şekilde kullanılır.  Visual Studio ve yeni derleyicileri, analiz sözlükleri birçoğu bulunan tek bir öğe veya boş gösterir.  Boş bir <xref:System.Collections.Generic.Dictionary%602> on alanları olan ve 48 bayt x x86 yığın üzerinde kapladığı makine.  Sabit zamanlı arama ile eşleştirme veya ilişkili bir veri yapısı gerektiğinde sözlükleri mükemmel özellikler.  Ancak, yalnızca birkaç öğeleri varsa, bir sözlük kullanarak alanı çok fazla vakit.  Bunun yerine, örneğin, tekrarlayarak bakarak bir `List<KeyValuePair\<K,V>>`, yalnızca hızlı.  Yalnızca ile veri yükleme ve ardından, (çok yaygın bir düzen) okumak için Sözlük kullanma, bir N(log(N)) arama ile sıralanmış bir diziyi kullanılarak yaklaşık olarak kullandığınız öğeleri sayısına bağlı olarak daha hızlı olabilir.  
   
- **Sınıfları ve yapıları**  
+ **Yapılar ve sınıflar**  
   
- Bir biçimde sınıfları ve yapıları Klasik alanı/saat kolaylığını uygulamalarınızı ayarlamak için sağlar.  Sınıfları kullanan bir x86 ek yükü 12 bayt hiçbir alan sahip, ancak yalnızca bir sınıf örneğine başvuru yapmak için bir işaretçi aldığından geçici geçirmek uygun maliyetli olsa bile makine.  Yapıları hiçbir yığın ayırmaları Kutulu değil, ancak işlev bağımsız değişkenleri olarak büyük yapıları geçirmenizi ya da dönüş değerleri otomatik olarak yapıları tüm veri üyeleri kopyalamak için CPU süresi geçen doğurur.  Yinelenen çağrılar yapıları dönün ve özelliğin değeri, aşırı miktarda veri kopyalamayı önlemek için bir yerel değişkende önbellek özellikleri için dikkat edin.  
+ Bir yolla, sınıfları ve yapıları Klasik alanı/saat tradeoff uygulamalarınızı ayarlama için sağlar.  Sınıfları ücret 12 x x86 yükü baytını bile hiçbir alan sahiptirler, ancak bunlar etrafında yalnızca bir sınıf örneğine başvurmak için bir işaretçi aldığından geçirilecek ucuzdur makine.  Yapıları Kutulu değildir, ancak büyük yapılar işlevi bağımsız değişken olarak geçirin veya dönüş değerleri, tüm veri üyelerini yapıları atomik olarak kopyalamak için CPU zaman alır, hiçbir yığın ayırmaları yansıtılmaz.  Yinelenen çağrılar için iade yapıları ve özelliğin değerini aşırı miktarda veri kopyalamayı önlemek için yerel bir değişkende önbellek özellikleri dikkat edin.  
   
  **Önbellekler**  
   
- Ortak bir performans elde sonuçlarını önbelleğe alma ' dir.  Ancak, bir önbellek boyutu cap ya da elden ilkesine sahip olmayan bir bellek sızıntısı olabilir.  Çok sayıda önbellekleri bellekte tutun, büyük miktarlarda verilerin işlerken, önbelleğe alınan aramaları yararları geçersiz kılmak atık toplama neden olabilir.  
+ Genel bir performans elde sonuçlarını önbelleğe alma ' dir.  Ancak, bir önbellek boyutu büyük harf ya da elden çıkarma İlkesi olmadan bir bellek sızıntısı olabilir.  Çok miktarda bellek önbelleğinde tutun büyük miktarda veri işleme, çöp toplama, önbelleğe alınan aramaları avantajlarını geçersiz kılmak neden olabilir.  
   
- Bu makalede, nasıl özellikle büyük sistemleri veya büyük miktarda veri işleyen sistemleri için uygulama yanıt hızını etkileyebilir performans sorununu Belirtiler bilincinde olmalısınız açıklanmıştır. Ortak culprits kutulama dize işlemeleri, LINQ ve lambda, önbellek boyutu sınırı ya da elden İlkesi, sözlükler ve yapıları geçici geçirme uygunsuz kullanımını olmadan zaman uyumsuz yöntemleri önbelleğe alma yer alır.  Uygulamalarınızı ayarlama dört bulguları göz önünde bulundurun:  
+ Bu makalede, nasıl özellikle büyük sistemleri veya büyük miktarda veri işleyen sistemleri için uygulamanızın yanıt hızını etkileyebilir performans sorununun belirtileri bilincinde olmalısınız almıştık. Ortak culprits kutulama, dize işlemeleri, LINQ ve lambda, önbellek boyutu sınırı veya çıkarma ilkesini, uygunsuz kullanımdan sözlükleri ve yapıları etrafında geçirme olmadan zaman uyumsuz yöntemlerde önbelleğe almayı içerir.  Uygulamalarınızı ayarlama dört bilgiler göz önünde bulundurun:  
   
--   Yoksa erken en iyi duruma getirme – üretken ve sorunları nokta olduğunda, uygulamanızın ayarlayın.  
+-   Yoksa beklenenden önce en iyi duruma getirme – üretken ve problemleri fark, uygulamanızı ayarlama.  
   
--   Profilleri kalan yok –, değil ölçümleri gerçekleştiriyoruz, tahmin.  
+-   Profilleri şekilde yok –, olmayan ölçüm yaptığınız, tahmin.  
   
--   İyi araçları tüm fark olun – PerfView indirin ve deneyin.  
+-   İyi Araçlar fark olun – PerfView indirin ve deneyin.  
   
--   Tüm olmasından ayırmaları hakkında – başka bir deyişle derleyici platform takım yeni derleyicileri performansını iyileştirme zamanının çoğunu burada harcanan.  
+-   Tüm olduğu ayırmaları hakkında – diğer bir deyişle derleyici platformu ekibinden yeni derleyiciler performansını iyileştirme zamanlarının çoğunu burada harcanan.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bu konuda sunumu videosu](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
- [Performans profili oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [Sunu bu konunun videosu](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Performans](../../../docs/framework/performance/index.md)  
  [.NET Performans İpuçları](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone performans çözümleme aracı](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Visual Studio Profil Oluşturucu ile uygulama engelleri bulun](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Kanal 9 PerfView öğreticileri](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Windows Phone Performans analiz aracı](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Visual Studio Profiler uygulama performans sorunlarını bulun](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 PerfView öğreticiler](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [Üst düzey performans ipuçları](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [DotNet/roslyn bağlantıların github'da](https://github.com/dotnet/roslyn)
+ [github'da dotnet/roslyn depo](https://github.com/dotnet/roslyn)

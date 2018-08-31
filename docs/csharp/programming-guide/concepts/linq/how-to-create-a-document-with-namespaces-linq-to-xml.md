@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: ad alanları (C#) (LINQ-XML) ile bir belge oluşturun'
+title: 'Nasıl yapılır: ad alanları (C#) (LINQ to XML) ile belge oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330697"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256732"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: ad alanları (C#) (LINQ-XML) ile bir belge oluşturun
-Bu konuda, ad alanları ile belgeleri oluşturulacağını gösterir.  
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Nasıl yapılır: ad alanları (C#) (LINQ to XML) ile belge oluşturma
+Bu konuda, ad alanları ile belge oluşturma işlemini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bir öğenin veya bir ad alanındaki bir öznitelik oluşturmak için önce bildirme ve başlatma bir <xref:System.Xml.Linq.XNamespace> nesnesi. Toplama işleci aşırı sonra yerel adıyla bir dize olarak ifade edilen ad birleştirmek için kullanın.  
+ Bir öğe veya bir ad alanında bir öznitelik oluşturmak için önce bildirmek ve başlatmak bir <xref:System.Xml.Linq.XNamespace> nesne. Bir dize olarak ifade edilen yerel ada sahip ad alanı birleştirmek için Toplama işleci aşırı yüklemesini kullanın.  
   
- Aşağıdaki örnek bir belge içeren bir ad oluşturur. Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir varsayılan ad alanı bu belgeyle serileştirir.  
+ Aşağıdaki örnek, bir ad alanı ile bir belge oluşturulur. Varsayılan olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] varsayılan ad alanı bu belgeyle serileştirir.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -26,7 +26,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -35,7 +35,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir belge içeren bir ad oluşturur. Ayrıca, bir ad alanı öneki ad bildiren bir öznitelik oluşturur. Bir ad alanı öneki bildiren bir öznitelik oluşturmak için burada özniteliğin adını ad alanı öneki ve bu adı kullanılıyor bir öznitelik oluşturun <xref:System.Xml.Linq.XNamespace.Xmlns%2A> ad alanı. Bu öznitelik ad alanı URI değeri.  
+ Aşağıdaki örnek, bir ad alanı ile bir belge oluşturulur. Ayrıca, ad alanı bir ad alanı öneki ile bildiren bir öznitelik oluşturur. Bir ad alanı öneki bildiren bir öznitelik oluşturmak için burada özniteliğinin adı ad alanı öneki ve bu ad bulunduğu bir öznitelik oluşturun. <xref:System.Xml.Linq.XNamespace.Xmlns%2A> ad alanı. Bu özniteliğin değeri ad alanı URI ' dir.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -47,7 +47,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -56,9 +56,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, iki ad alanı içeren bir belge oluşturulmasını gösterir. Varsayılan ad alanını biridir. Başka bir ad alanı öneki ' dir.  
+ Aşağıdaki örnek, iki ad alanları içeren bir belge oluşturulmasını gösterir. Varsayılan ad alanı biridir. Başka bir ad alanı öneki ' dir.  
   
- Kök öğesinin ad alanı öznitelikleri dahil ederek, ad alanlarının serileştirilir böylece http://www.adventure-works.com varsayılan ad alanı ve www.fourthcoffee.com "fc" önekiyle seri. Bir varsayılan ad alanını tanımlayan bir öznitelik oluşturmak için bir öznitelik adı "xmlns", bir ad olmadan ile oluşturun. Varsayılan ad alanı URI'si öznitelik değeri.  
+ Kök öğesinde ad alanı öznitelikleri dahil ederek, ad alanlarını serileştirilme şeklini böylece `http://www.adventure-works.com` varsayılan ad alanı ve `www.fourthcoffee.com` "fc" öneki ile seri hale. Varsayılan ad alanı bildiren bir öznitelik oluşturmak için adı "xmlns", ad alanı olmayan bir öznitelik oluşturun. Varsayılan ad alanı URI özniteliğinin değeridir.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -76,7 +76,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -89,7 +89,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki ad alanı, ad alanı öneklerini her ikisi de içeren bir belgeyi oluşturur.  
+ Aşağıdaki örnek iki ad ad alanı öneklerini her ikisini birden içeren bir belge oluşturulur.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -106,7 +106,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -119,11 +119,11 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Genişletilmiş adları bildirme ve oluşturma yerine kullanmak için aynı sonucu gerçekleştirmenin başka bir yolu olan bir <xref:System.Xml.Linq.XNamespace> nesnesi.  
+ Genişletilmiş adlarını bildirme ve oluşturma yerine kullanılacak aynı sonuca ulaşmak için başka bir yolu olan bir <xref:System.Xml.Linq.XNamespace> nesne.  
   
- Bu yaklaşım performans etkilere sahiptir. Geçirdiğiniz bir dize, her zaman genişletilmiş bir adı olan içeren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gerekir adı ayrıştırılamıyor atomized ad alanını bulun ve atomized adı bulunamadı. Bu işlem CPU saat sürer. Performans önemliyse, bildirme ve kullanma isteyebilirsiniz bir <xref:System.Xml.Linq.XNamespace> açıkça nesne.  
+ Bu yaklaşım, performansı etkilere sahiptir. Geçirdiğiniz bir dize, her zaman genişletilmiş bir adı içeren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gerekir adı ayrıştırmak parçalara ayrılmış ad alanı bulmak ve parçalara ayrılmış adı bulun. Bu işlemin CPU saat sürer. Performans önemliyse bildirme ve kullanma isteyebileceğiniz bir <xref:System.Xml.Linq.XNamespace> açıkça nesne.  
   
- Performans önemli bir sorun olup olmadığını [öncesi Atomization XName nesnelerin (LINQ-XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) daha fazla bilgi için  
+ Performans önemli bir sorun olup olmadığını, [parçalara ayırma öncesi XName nesnelerin (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) daha fazla bilgi için  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -134,7 +134,7 @@ XElement root = new XElement("{http://www.adventure-works.com}Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  

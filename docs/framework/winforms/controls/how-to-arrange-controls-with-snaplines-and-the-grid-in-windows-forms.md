@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: f9e8335b5f3ffa56c06507708cd5c62efc51bcfd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528382"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253397"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Nasıl yapılır: Windows Formlarında Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme
-Visual Studio'nun yerleşim özellikleri kullanarak, bir form üzerinde denetimleri yerleştirildiği tam olarak yönlendirebilirsiniz. Bir form için eklenip bir form üzerinde denetimleri otomatik olarak satırları ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir veya dayama çizgileri özelliğini kullanarak denetimleri hizalama.  
+Visual Studio düzen özelliklerini kullanarak, bir form üzerinde denetimleri yerleştirildiği tam olarak yönlendirebilirsiniz. Bir forma eklendiğinde veya taşınan bir form üzerinde denetimleri otomatik olarak satır ve sütunları Windows Forms Tasarımcısı kılavuzunun hizalanabilir ya da dayama çizgileri özelliğini kullanarak denetimleri hizalayabilirsiniz.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-snap-all-controls-to-the-grid"></a>Tüm denetimleri kılavuza Daya için  
+### <a name="to-snap-all-controls-to-the-grid"></a>Tüm denetimleri kılavuza Yasla  
   
--   Seçin **Snaptogrıd** Düzen Windows Form Tasarımcısı modunda **seçenekleri** iletişim kutusu.  
+-   Seçin **LayoutMode** Düzen modu Windows Forms Tasarımcısı'nda **seçenekleri** iletişim kutusu.  
   
-     Daha fazla bilgi için bkz: [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Tüm denetimler şimdi kendilerini kılavuz noktalarında boyunca hizalar.  
+     Daha fazla bilgi için [genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Tüm denetimleri artık kendilerini noktalarında kılavuz boyunca hizalar.  
   
-     Yerinde kilitleyerek tek tek denetimleri kılavuza Daya. Kilitli olan olsa da, ancak bunlar taşınmış yeniden boyutlandırılmış veya silinemez. Kilitleme denetimleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows formlarına denetimler kilitleme](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
+     Tek denetimleri kılavuza yerinde kilitleyerek yaslayabilirsiniz. Kilitli olduğunu, ancak bununla birlikte, bunlar yeniden boyutlandırılabilir veya taşınamaz. Kilitleme denetimleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms denetimlerine kilit](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
-### <a name="to-align-controls-using-snaplines"></a>Dayama çizgileri kullanarak denetimleri hizalamak için  
+### <a name="to-align-controls-using-snaplines"></a>Dayama çizgileri kullanarak denetimleri hizalama  
   
--   Seçin **dayama çizgileri** Düzen Windows Form Tasarımcısı modunda **seçenekleri** iletişim kutusu.  
+-   Seçin **dayama çizgileri** Düzen modu Windows Forms Tasarımcısı'nda **seçenekleri** iletişim kutusu.  
   
-     Daha fazla bilgi için bkz: [izlenecek yol: Windows Forms kullanarak dayama çizgileri düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Dayama çizgileri şimdi hizalama ve form üzerinde denetimleri düzenlemek için de kullanabilirsiniz.  
+     Daha fazla bilgi için [izlenecek yol: Windows Forms dayama çizgileri kullanarak düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Dayama çizgileri, hizalama ve Formunuza denetim düzenleme için şimdi kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  

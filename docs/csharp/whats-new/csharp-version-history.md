@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753975"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254944"
 ---
 # <a name="the-history-of-c"></a>C# geçmişi #
 
@@ -34,6 +34,10 @@ C# 1.0 önemli özelliklere yer:
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)
 - [Öznitelikler](../programming-guide/concepts/attributes/index.md)
 - Sabit değerler
+
+## <a name="c-version-12"></a>C# sürüm 1.2
+
+C# sürüm 1.2 Visual Studio 2003 ile birlikte gelir. Bu dil için birkaç küçük geliştirmeler içeriyor. Bu sürümden başlayarak en dikkat çeken bir şey ise, oluşturulan kod bir `foreach` adlı döngü <xref:System.IDisposable.Dispose%2A> üzerinde bir <xref:System.Collections.IEnumerator> olduğunda, <xref:System.Collections.IEnumerator> uygulanan <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# sürüm 2.0
 
