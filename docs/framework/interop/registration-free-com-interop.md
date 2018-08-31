@@ -12,47 +12,47 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390256"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332219"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
-Kayıtsız COM birlikte çalışma derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Bir bilgisayarda bir bileşen dağıtımı sırasında kayıt yerine, Win32 stil bildirim dosyaları bağlama ve etkinleştirme hakkında bilgi içeren tasarım zamanında oluşturun. Bu bildirim dosyası yerine kayıt defteri anahtarları, bir nesne etkinleştirme doğrudan.  
+Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Dağıtım sırasında bir bilgisayarda bir bileşen kaydetmek yerine Win32 stili bildirim dosyalarını, bağlama ve etkinleştirme hakkında bilgiler içeren tasarım zamanında oluşturun. Bu bildirim dosyaları yerine kayıt defteri anahtarları, bir nesnenin etkinleştirme doğrudan.  
   
- Dağıtım sırasında kaydetme yerine derlemeleriniz için kayıtsız etkinleştirme kullanarak iki avantajları sağlar:  
+ Kayıtsız etkinleştirme için bunları dağıtım sırasında kayıt yerine derlemelerinizin kullanarak iki avantaj sağlar:  
   
--   Bir bilgisayarda birden fazla sürümü yüklü olduğunda hangi DLL sürümü etkinleştirilir kontrol edebilirsiniz.  
+-   Bir bilgisayar üzerinde birden fazla sürümü yüklendiğinde hangi DLL sürümü etkinleştirilir denetleyebilirsiniz.  
   
--   Son kullanıcılar, XCOPY veya FTP, uygulamanız kendi bilgisayarında uygun bir dizine kopyalamak için kullanabilirsiniz. Uygulama, diğer dizinden çalıştırabilirsiniz.  
+-   Son kullanıcılar, XCOPY veya FTP, uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için kullanabilirsiniz. Uygulama bu dizinden çalıştırabilirsiniz.  
   
- Bu bölüm bildirimlerin Kayıtsız COM birlikte çalışma için gereken iki tür açıklar: uygulama ve bileşen bildirimleri. Bu bildirimler XML dosyalarıdır. Bir uygulama geliştiricisi tarafından oluşturulmuş bir uygulama bildirimi derlemeler ve derleme bağımlılıkları açıklayan meta veriler içerir. Bileşen bildirimi bileşen geliştirici tarafından oluşturulan Aksi takdirde Windows kayıt defterinde bulunan bilgileri içerir.  
+ Kayıtsız COM birlikte çalışması için gereken bildirimleri iki tür Bu bölümde açıklanmaktadır: uygulama ve bileşen bildirimleri. Bu bildirimler, XML dosyalarıdır. Bir uygulama geliştiricisi tarafından oluşturulan bir uygulama bildirimi, derlemeler ve derleme bağımlılıklarını açıklayan meta veriler içerir. Bir bileşen bildirimini oluşturulan bir bileşen geliştirici tarafından aksi takdirde Windows kayıt defterinde yer alan bilgiler içerir.  
   
-### <a name="requirements-for-registration-free-com-interop"></a>Kayıtsız COM birlikte çalışma için gereksinimleri  
+### <a name="requirements-for-registration-free-com-interop"></a>Kayıtsız COM birlikte çalışma için gereksinimler  
   
-1.  Kayıtsız COM birlikte çalışma için destek Kitaplık derlemesi türüne bağlı olarak biraz değişiklik gösterir; Özellikle, olup derleme yönetilmeyen (COM yan yana) olan veya yönetilen (. NET-based). Aşağıdaki tabloda işletim sistemi ve .NET Framework sürüm gereksinimlerini her derleme türü için gösterir.  
+1.  Kayıtsız COM birlikte çalışma için destek, kitaplık derlemesine türüne bağlı olarak biraz farklılık gösterir; Özellikle, derleme yönetilmeyen (COM yan yana) olan olup yönetilen (. NET-based). Aşağıdaki tabloda, işletim sistemi ve .NET Framework sürüm gereksinimleri her derleme türünü gösterir.  
   
     |Derleme türü|İşletim sistemi|.NET Framework sürümü|  
     |-------------------|----------------------|----------------------------|  
     |COM yan yana|Microsoft Windows XP|Gerekli değildir.|  
-    |. NET tabanlı|Windows XP SP2|.NET Framework sürüm 1.1 veya üstünün.|  
+    |. AĞ tabanlı|Windows XP SP2|.NET Framework sürüm 1.1 veya üzeri.|  
   
-     Windows Server 2003 ailesinin Kayıtsız COM birlikte çalışma için de destekler. NET tabanlı derlemeler.  
+     Windows Server 2003 ailesinin Kayıtsız COM birlikte çalışması için de destekler. Ağ-bazlı derlemeleri.  
   
-     İçin bir. Kayıt defteri boş etkinleştirmeden COM, sınıf ile uyumlu olacak şekilde sınıfı NET tabanlı bir varsayılan oluşturucuya sahip olmalıdır ve ortak olmalıdır.  
+     İçin bir. Kayıtsız etkinleştirme COM, sınıf işleminden ile uyumlu olacak şekilde sınıf ağ tabanlı bir varsayılan oluşturucusu olmalıdır ve ortak olmalıdır.  
   
-### <a name="configuring-com-components-for-registration-free-activation"></a>COM bileşenlerini kayıtsız etkinleştirme için yapılandırma  
+### <a name="configuring-com-components-for-registration-free-activation"></a>Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma  
   
-1.  Bir COM bileşeni kayıtsız etkinleştirme katılmak yan yana derleme olarak dağıtılmalıdır. Yan yana derlemeler yönetilmeyen derlemeleri ' dir.  Daha fazla bilgi için bkz: [kullanarak yan yana derlemeler](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Bir COM bileşeni kayıtsız etkinleştirme ' katılmak bir yan yana derleme olarak dağıtılmalıdır. Yan yana derlemeler yönetilmeyen derlemelerdir.  Daha fazla bilgi için [USING yan yana derlemeler](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
-     COM yan yana derlemeleri kullanmak için bir. NET tabanlı uygulama geliştiricisi bağlama ve etkinleştirme bilgilerini içeren bir uygulama bildirimi sağlamanız gerekir. Yönetilmeyen yan yana derlemeler için destek Windows XP işletim sisteminde yerleşik olarak bulunur. Etkinleştirilmekte olan bileşen kayıt defterinde olmadığında işletim sistemi tarafından desteklenen COM çalışma zamanı etkinleştirme bilgileri için bir uygulama bildirimi tarar.  
+     COM yan yana derlemeler, kullanılacak bir. AĞ tabanlı uygulama geliştirme, bağlama ve etkinleştirme bilgilerini içeren bir uygulama bildirimi sağlamanız gerekir. Yönetilmeyen yan yana derlemeler için desteği Windows XP işletim sisteminde yerleşik olarak bulunur. Etkinleştirilmekte olan bileşen kayıt defterinde olmadığında COM işletim sistemi tarafından desteklenen çalışma zamanı, uygulama bildiriminde etkinleştirme bilgilerini tarar.  
   
-     Kayıtsız etkinleştirme Windows XP üzerinde yüklü COM bileşenleri için isteğe bağlıdır. Uygulamaya bir yan yana derleme ekleme hakkında ayrıntılı yönergeler için bkz: [kullanarak yan yana derlemeler](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     Kayıtsız etkinleştirme, COM bileşenleri yüklü Windows XP için isteğe bağlıdır. Yan yana derleme, uygulamaya ekleme ile ilgili ayrıntılı yönergeler için bkz [USING yan yana derlemeler](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
     > [!NOTE]
-    >  Yan yana yürütme çalışma zamanı birden fazla sürümünü ve uygulamaları ve çalışma zamanı sürümü aynı bilgisayarda aynı anda çalıştırmak için kullandığınız bileşenleri birden fazla sürümünü sağlayan bir .NET Framework özelliğidir. Yan yana yürütme ve yan yana derlemeler yan yana işlevselliği sağlamak için farklı mekanizmalardır.  
+    >  Yan yana yürütme, çalışma zamanının birden çok sürümünü ve uygulamaları ve bileşenleri aynı bilgisayarda aynı anda çalıştırmak için çalışma zamanının bir sürümünü kullanan birden çok sürümünü sağlayan bir .NET Framework özelliğidir. Yan yana yürütme ve yan yana derlemeleri yan yana işlevselliği sağlamak için farklı mekanizmasıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

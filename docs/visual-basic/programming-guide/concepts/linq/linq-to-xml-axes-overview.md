@@ -2,17 +2,17 @@
 title: LINQ to XML eksenlerine genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 9164dcff118c5fa3d15a5fe673b2174a4002e9d6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d7d881564abfdaba6cb7efa8fb92849e48c6fa4c
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000315"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332180"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>LINQ to XML eksenlerine genel bakış (Visual Basic)
 Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklenen sonra öğeler ve öznitelikler bulun ve bunların değerlerini almak için sorgulayabilirsiniz. Koleksiyonlarına almak *eksen yöntemleri*ayrıca adlı *eksenleri*. Bazı eksenleri yöntemlerdir <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XDocument> sınıfları döndüren <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları. Eksenlere başlık alanında uzantı yöntemlerini bazıları <xref:System.Xml.Linq.Extensions> sınıfı. Genişletme yöntemleri uygulanan eksenleri koleksiyonlarda çalışır ve koleksiyonları döndürür.  
   
- Bölümünde anlatıldığı gibi [XElement sınıfına genel bakış](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)e <xref:System.Xml.Linq.XElement> nesne tek öğe düğümü temsil eder. Basit bir öğesi olabilir veya bir öğenin içeriğini (yapılandırılmış içeriği olarak da adlandırılır) karmaşık olabilir. Basit bir öğe boş olabilir veya bir değer içerebilir. Düğüm yapılandırılmış içerik varsa, alt öğelerin numaralandırmalar almak için çeşitli eksen yöntemleri kullanabilirsiniz. En sık kullanılan eksen yöntemler <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Bölümünde anlatıldığı gibi [XElement sınıfına genel bakış](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)e <xref:System.Xml.Linq.XElement> nesne tek öğe düğümü temsil eder. Basit bir öğesi olabilir veya bir öğenin içeriğini (yapılandırılmış içeriği olarak da adlandırılır) karmaşık olabilir. Basit bir öğe boş olabilir veya bir değer içerebilir. Düğüm yapılandırılmış içerik varsa, alt öğelerin numaralandırmalar almak için çeşitli eksen yöntemleri kullanabilirsiniz. En sık kullanılan eksen yöntemler <xref:System.Xml.Linq.XContainer.Elements%2A> ve <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Koleksiyonları döndüren, eksen yöntemlere ek olarak, yaygın olarak kullanacağı iki daha fazla yöntem vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular. <xref:System.Xml.Linq.XContainer.Element%2A> Tek bir yöntemi döndürür <xref:System.Xml.Linq.XElement>. <xref:System.Xml.Linq.XElement.Attribute%2A> Tek bir yöntemi döndürür <xref:System.Xml.Linq.XAttribute>.  
   

@@ -10,49 +10,49 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: ca5b9c29d9138d4e17fbf187e35951dbec614aab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539857"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332571"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Sekme Sırasını Ayarlama
-Sekme sırası, kullanıcı odak bir denetimden diğerine SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırası vardır. Varsayılan olarak, sekme sırasını denetimleri oluşturulan siparişi ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
+Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırasını sahiptir. Varsayılan olarak, sekme sırasını denetimleri oluşturduğunuz sırada ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-the-tab-order-of-a-control"></a>Bir denetim sekme sırasını ayarlamak için  
+### <a name="to-set-the-tab-order-of-a-control"></a>Bir denetimin sekme sırasını ayarlama  
   
-1.  Üzerinde **Görünüm** menüsünde tıklatın **sekme sırası**.  
+1.  Üzerinde **görünümü** menüsünde tıklatın **sekme sırasını**.  
   
-     Bu formdaki sekme sırası seçim modunu etkinleştirir. Bir sayı (temsil eden <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği) her denetim sol üst köşesinde görüntülenir.  
+     Bu form üzerindeki sekme sırası seçim modunu etkinleştirir. Bir sayı (temsil eden <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği) her denetimin sol üst köşesinde görünür.  
   
-2.  Denetimleri sırayla istediğiniz sekme sırası kurmak için tıklatın.  
-  
-    > [!NOTE]
-    >  Sekme sırası içinde denetimin yer değerinden büyük veya 0 değerine eşit herhangi bir değere ayarlanabilir. Çoğaltmaları ortaya çıktığında iki denetimlerinin z sıralamasını değerlendirilir ve üst denetimi için ilk sekmeli. (Z-formun z ekseni [derinliği] boyunca bir form üzerinde denetimleri görsel katmanlarını sırasıdır. Z düzeni hangi denetimlerin önünde diğer denetimleridir belirler.) Z düzeni hakkında daha fazla bilgi için bkz: [Windows Forms katmanlama nesnelerde](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
-  
-3.  İşiniz bittiğinde tıklatın **sekme sırası** üzerinde **Görünüm** yeniden sekme sırasını modundan çıkmak için menü.  
+2.  Denetimlerin sekme sırasını istediğiniz sırayla kurmak için tıklayın.  
   
     > [!NOTE]
-    >  Odağı alamıyor denetimleri gibi devre dışı bırakılmış ve görünmez denetimler olmadığı bir <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği ve bu sekme sırası dahil değildir. Bir kullanıcı SEKME tuşuna bastığında gibi bu denetimlerin atlanır.  
+    >  Sekme sırası içinde denetimin yer, daha büyük veya 0'a eşit herhangi bir değere ayarlanabilir. Yinelenen meydana geldiğinde, z düzenini iki denetimin değerlendirilir ve üst denetimin ilk olarak sekmeli. (Z-formun z ekseni [derinliği] boyunca bir form üzerinde denetimleri visual katmanlarını sırasıdır. Z düzenini hangi denetimlerin önüne başka denetimler belirler.) Z düzeni hakkında daha fazla bilgi için bkz. [Windows Forms'da nesneleri katmanlama](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
- Alternatif olarak, sekme sırası Özellikler penceresini kullanarak içinde ayarlanabilir <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği. <xref:System.Windows.Forms.Control.TabIndex%2A> Denetimi özelliği belirler sekme sırası nereye konumlandırılır. Varsayılan olarak, çizilmiş ilk kontrolünde bir <xref:System.Windows.Forms.Control.TabIndex%2A> değer 0, ikinci olan bir <xref:System.Windows.Forms.Control.TabIndex%2A> 1 ve benzeri.  
-  
- Ayrıca, varsayılan olarak, bir <xref:System.Windows.Forms.GroupBox> denetimi sahip kendi <xref:System.Windows.Forms.Control.TabIndex%2A> bir tamsayı değeri. A <xref:System.Windows.Forms.GroupBox> denetimin kendisini çalışma zamanında odağa sahip olamaz. Bu nedenle, her denetim içinde bir <xref:System.Windows.Forms.GroupBox> kendi ondalık sahip <xref:System.Windows.Forms.Control.TabIndex%2A> .0 ile başlayan değeri. Doğal olarak <xref:System.Windows.Forms.Control.TabIndex%2A> , bir <xref:System.Windows.Forms.GroupBox> denetim artar, içerdiği denetimleri buna uygun olarak arttırılır. Değiştirdiyseniz bir <xref:System.Windows.Forms.Control.TabIndex%2A> 6 ila 5 değer <xref:System.Windows.Forms.Control.TabIndex%2A> kendi grubundaki ilk denetiminin değeri otomatik olarak değiştirir 6.0 ve böyle devam eder.  
-  
- Son olarak, herhangi bir formunuzda çok denetimi sekme sırası atlanabilir. Genellikle, sekme sırayla çalıştırma seçer her denetim sekme sırasında tuşuna basarak. Kapatma tarafından <xref:System.Windows.Forms.Control.TabStop%2A> özelliği, formun sekme sırasını geçirilen denetim yapabilir.  
-  
-#### <a name="to-remove-a-control-from-the-tab-order"></a>Sekme sırasından denetimi kaldırmak için  
-  
-1.  Denetimin ayarlamak <xref:System.Windows.Forms.Control.TabStop%2A> özelliğine `false` Özellikleri penceresinde.  
-  
-     Bir denetim <xref:System.Windows.Forms.Control.TabStop%2A> özelliği ayarlanmış `false` SEKME tuşu ile denetimleri arasında geçiş yapma denetimi atlanır olsa da yine sekme sırası içindeki konumunu korur.  
+3.  İşiniz bittiğinde tıklayın **sekme sırasını** üzerinde **görünümü** yeniden sekme sırasını modundan ayrılmak için menü.  
   
     > [!NOTE]
-    >  Radyo düğmesi grubunda çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmesi ile kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlamak `true`, diğer düğmeleri varken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimleri bkz [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Odak alamayan denetimleri yanı sıra, devre dışı bırakılmış ve görünmez denetimler olmadığı bir <xref:System.Windows.Forms.Control.TabIndex%2A> ve bu özellik sekme sırasının dahil değildir. Kullanıcı TAB tuşuna bastığında gibi bu denetimleri atlanır.  
+  
+ Alternatif olarak, sekme sırasını kullanarak Özellikler penceresi ayarlanabilir <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği. <xref:System.Windows.Forms.Control.TabIndex%2A> Denetimin bir özelliğine sekme sırasının nerede konumlandığını belirler. Çizilen ilk denetim varsayılan olarak, sahip bir <xref:System.Windows.Forms.Control.TabIndex%2A> değeri 0 olan ikinci bir <xref:System.Windows.Forms.Control.TabIndex%2A> 1 ve benzeri.  
+  
+ Ayrıca, varsayılan bir <xref:System.Windows.Forms.GroupBox> kontrolünde kendi <xref:System.Windows.Forms.Control.TabIndex%2A> bir tam sayı değeri. A <xref:System.Windows.Forms.GroupBox> denetiminin kendisinin çalışma zamanında odağa sahip olamaz. Bu nedenle, her denetimi içinde bir <xref:System.Windows.Forms.GroupBox> kendi ondalık sahip <xref:System.Windows.Forms.Control.TabIndex%2A> .0 ile başlangıç değeri. Doğal olarak <xref:System.Windows.Forms.Control.TabIndex%2A> , bir <xref:System.Windows.Forms.GroupBox> denetim artırılır, Denetim buna göre artar. Değiştirdiyseniz bir <xref:System.Windows.Forms.Control.TabIndex%2A> 6, 5 değerine <xref:System.Windows.Forms.Control.TabIndex%2A> kendi grubundaki ilk denetimi değerini otomatik olarak değiştirir 6.0 ve böyle devam eder.  
+  
+ Son olarak, herhangi bir formunuzdaki çok denetimi sekme sırasının atlanabilir. Genellikle, sekme sırayla çalıştırma seçer her bir denetimde sekme sırasını tuşuna basarak. Kapatma tarafından <xref:System.Windows.Forms.Control.TabStop%2A> özelliği, bir denetimi forma sekme sırasını geçirilen yapabilirsiniz.  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a>Bir denetimin sekme sırasından kaldırmak için  
+  
+1.  Denetimin ayarlamak <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false` Özellikler penceresinde.  
+  
+     Bir denetim <xref:System.Windows.Forms.Control.TabStop%2A> özelliği sınıflandırmalara ayarlandığı `false` denetimlerde TAB tuşuyla geçiş denetimi atlanır olsa da hala sekme sırası içindeki konumuna tutar.  
+  
+    > [!NOTE]
+    >  Bir radyo düğmesi grubunda, çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmeyi kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlayın `true`, diğer düğmeleri açıkken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimlerini, [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  

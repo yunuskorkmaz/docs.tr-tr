@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935693"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330977"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama
 Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içinde çalıştırılmalıdır Visual Studio. Bu nedenle, bir hizmette hata ayıklamak diğer Visual Studio uygulama türlerinde hata ayıklamak kadar basit değil Bir hizmette hata ayıklamak için hizmeti başlatın ve sonra içinde çalıştığı işleme bir hata ayıklayıcı eklemeniz gerekir. Ardından tüm Visual Studio standart hata ayıklama işlevselliğini kullanarak uygulamanızın hatalarını ayıklayabilirsiniz.  
@@ -33,7 +33,7 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
 >  Hata ayıklama <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 30 saniyelik bir sınır üzerinde bir hizmet başlatmaya yönelik tüm girişimleri Hizmet Denetim Yöneticisi'ni getirir çünkü yöntemi zor olabilir. Daha fazla bilgi için [sorunlarını giderme: Windows Hizmetleri hata ayıklama](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Hata ayıklama için anlamlı bilgiler almak için Visual Studio hata ayıklayıcının, hatası ayıklanan ikililer için Sembol dosyalarını bulmak gerekir. Visual Studio'da oluşturulan bir hizmet ayıklıyorsanız, sembol dosyalarını (.pdb) yürütülebilir veya kitaplık aynı klasörde olan ve hata ayıklayıcının bunları otomatik olarak yükler. Yapı gelmedi bir hizmeti hata ayıklaması yapıyorsanız, ilk hizmet için simgeleri Bul ve hata ayıklayıcı tarafından bulunabilir emin olmak gerekir. Bkz: [sembol (.pdb) belirtin ve kaynak dosyaları](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Bir sistem işlemi hata ayıklama veya sistem çağrıları için semboller hizmetlerinizde sahip olmasını isterseniz Microsoft sembol sunucuları eklemeniz gerekir. Bkz: [hata ayıklama simgeleri](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Hata ayıklama için anlamlı bilgiler almak için Visual Studio hata ayıklayıcının, hatası ayıklanan ikililer için Sembol dosyalarını bulmak gerekir. Visual Studio'da oluşturulan bir hizmet ayıklıyorsanız, sembol dosyalarını (.pdb) yürütülebilir veya kitaplık aynı klasörde olan ve hata ayıklayıcının bunları otomatik olarak yükler. Yapı gelmedi bir hizmeti hata ayıklaması yapıyorsanız, ilk hizmet için simgeleri Bul ve hata ayıklayıcı tarafından bulunabilir emin olmak gerekir. Bkz: [sembol (.pdb) belirtin ve kaynak dosyaları](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Bir sistem işlemi hata ayıklama veya sistem çağrıları için semboller hizmetlerinizde sahip olmasını isterseniz Microsoft sembol sunucuları eklemeniz gerekir. Bkz: [hata ayıklama simgeleri](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Bir hizmette hata ayıklamak için  
   
@@ -112,7 +112,7 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
   
 5.  Program bir Windows hizmeti olarak yeniden çalıştırmak için yükleyin ve bir Windows hizmeti için her zamanki şekilde başlatın. Bu değişiklikleri geri almak gerekli değildir.  
   
- Yalnızca sistem başlatma sırasında oluşan bir sorunu hata ayıklamak istediğiniz zaman gibi bazı durumlarda, Windows hata ayıklayıcı kullanmak zorunda. Yükleme [Windows için hata ayıklama araçları](http://msdn.microsoft.com/windows/hardware/hh852365) görüp [nasıl Windows hizmetlerinde hata ayıklama](http://support.microsoft.com/kb/824344).  
+ Yalnızca sistem başlatma sırasında oluşan bir sorunu hata ayıklamak istediğiniz zaman gibi bazı durumlarda, Windows hata ayıklayıcı kullanmak zorunda. Yükleme [Windows için hata ayıklama araçları](https://msdn.microsoft.com/windows/hardware/hh852365) görüp [nasıl Windows hizmetlerinde hata ayıklama](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

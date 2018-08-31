@@ -15,40 +15,40 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 6db021f2b1a29c3ef52a182c45bbc7878feebb97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6843c22fec964de92c41760f1108d1c83e1f5bf8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538718"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332487"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Denetimleri Konumlandırma
-Denetimleri getirin, Windows Form Tasarımcısı kullanın veya belirtmek için <xref:System.Windows.Forms.Control.Location%2A> özelliği.  
+Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek için <xref:System.Windows.Forms.Control.Location%2A> özelliği.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows Form Tasarımcısı tasarım yüzeyine denetim konumlandırmak için  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows Form Tasarımcısı'nın tasarım yüzeyinde bir denetimi konumlandırmak için  
   
--   Denetim fareyle uygun konuma sürükleyin.  
-  
-    > [!NOTE]
-    >  Denetimi seçin ve onu oklu daha kesin olarak konumlandırmak için anahtarları taşıyın. Ayrıca, *dayama çizgileri* tam olarak formunuza denetimler yerleştirme yardımcı. Daha fazla bilgi için bkz: [izlenecek yol: Windows Forms kullanarak dayama çizgileri düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
-### <a name="to-position-a-control-using-the-properties-window"></a>Özellikler penceresini kullanarak denetim konumlandırmak için  
-  
-1.  Yerleştirmek istediğiniz denetimi tıklatın.  
-  
-2.  İçinde **özellikleri** penceresinde, türü değerleri için <xref:System.Windows.Forms.Control.Location%2A> kontrolün kapsayıcı içindeki denetim konumuna bağlı olarak, bir virgülle ayrılmış özelliği.  
-  
-     İlk (X) kapsayıcısının sol kenarlık mesafe sayısıdır; İkinci (Y) üst kenarlığın piksel cinsinden ölçülür kapsayıcı alanının mesafe sayıdır.  
+-   Denetim fare ile uygun konuma sürükleyin.  
   
     > [!NOTE]
-    >  Genişletebilirsiniz <xref:System.Windows.Forms.Control.Location%2A> türü için özellik **X** ve **Y** ayrı ayrı değerleri.  
+    >  Denetimi seçin ve bunu bir ok ile daha hassas şekilde yerleştirmek için anahtarları taşıyın. Ayrıca, *dayama çizgileri* tam olarak, form üzerindeki denetimleri yerleştirme yardımcı. Daha fazla bilgi için [izlenecek yol: Windows Forms dayama çizgileri kullanarak düzenleme denetimlerinde](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-### <a name="to-position-a-control-programmatically"></a>Bir denetim programlı olarak konumlandırmak için  
+### <a name="to-position-a-control-using-the-properties-window"></a>Özellikler penceresini kullanarak bir denetimi konumlandırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Location%2A> denetiminin özelliği bir <xref:System.Drawing.Point>.  
+1.  Yerleştirmek istediğiniz denetim tıklayın.  
+  
+2.  İçinde **özellikleri** penceresinde, tür değerleri için <xref:System.Windows.Forms.Control.Location%2A> denetim kapsayıcısı içinden konumuna bağlı olarak, bir virgülle ayrılmış bir özellik.  
+  
+     İlk (X) kapsayıcısının sol kenarlık mesafe sayısıdır; İkinci (Y) üst kenarlığın piksel cinsinden ölçülen kapsayıcı alanının mesafe sayısıdır.  
+  
+    > [!NOTE]
+    >  İstediğiniz ölçekte çalışma yapabilirsiniz <xref:System.Windows.Forms.Control.Location%2A> türü için özellik **X** ve **Y** ayrı ayrı değerler.  
+  
+### <a name="to-position-a-control-programmatically"></a>Bir denetimin program aracılığıyla konumlandırmak için  
+  
+1.  Ayarlama <xref:System.Windows.Forms.Control.Location%2A> denetimin özellik bir <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Denetimleri getirin, Windows Form Tasarımcısı kullanın veya belirtmek için 
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Denetimin konumunun X koordinatını değiştirme kullanarak <xref:System.Windows.Forms.Control.Left%2A> alt özellik öneki.  
+2.  Denetim konumunun X koordinatını değiştirme kullanarak <xref:System.Windows.Forms.Control.Left%2A> alt özellik.  
   
     ```vb  
     Button1.Left = 300  
@@ -76,9 +76,9 @@ Denetimleri getirin, Windows Form Tasarımcısı kullanın veya belirtmek için 
     button1->Left = 300;  
     ```  
   
-### <a name="to-increment-a-controls-location-programmatically"></a>Bir denetimin konumunu programlı olarak artırmak için  
+### <a name="to-increment-a-controls-location-programmatically"></a>Bir denetimin konumu programlı olarak artırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Left%2A> denetimi X koordinatını artırmak için alt özellik öneki.  
+1.  Ayarlama <xref:System.Windows.Forms.Control.Left%2A> denetim noktasının X koordinatı artırmak için alt özellik.  
   
     ```vb  
     Button1.Left += 200  
@@ -93,7 +93,7 @@ Denetimleri getirin, Windows Form Tasarımcısı kullanın veya belirtmek için 
     ```  
   
     > [!NOTE]
-    >  Kullanım <xref:System.Windows.Forms.Control.Location%2A> bir denetimin X ve Y ayarlamak için özellik aynı anda yerleştirir. Tek tek bir konum ayarlamak için denetimin kullanın <xref:System.Windows.Forms.Control.Left%2A> (**X**) veya <xref:System.Windows.Forms.Control.Top%2A> (**Y**) alt özellik öneki. X ve Y koordinatları örtük olarak ayarlamaya çalışmayın <xref:System.Drawing.Point> bu yapı düğmenin koordinatları bir kopyasını içerdiğinden düğmenin konumu temsil eden yapısı.  
+    >  Kullanım <xref:System.Windows.Forms.Control.Location%2A> denetimin X ve Y ayarlamak için özellik aynı anda yerleştirir. Tek tek bir konum belirlemek için denetimin kullanın <xref:System.Windows.Forms.Control.Left%2A> (**X**) veya <xref:System.Windows.Forms.Control.Top%2A> (**Y**) alt özellik. X ve Y koordinatları örtük olarak ayarlamaya çalışmayın <xref:System.Drawing.Point> bu yapı düğmenin koordinatları bir kopyasını içerdiğinden düğmenin konumu temsil eden yapısı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
@@ -104,4 +104,4 @@ Denetimleri getirin, Windows Form Tasarımcısı kullanın veya belirtmek için 
  [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [İşleve Göre Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Nasıl yapılır: Windows Forms ekran konumunu ayarlama](http://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+ [Nasıl yapılır: Windows formlarının ekran konumunu ayarlama](https://msdn.microsoft.com/library/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449601"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331339"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow Metodu
-Belirtilen satır dizininde belirtilen tablo dizinindeki tablosundaki satır alır.  
+Belirtilen tablo dizini altındaki tabloda belirtilen satır dizinindeki bir satır alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,23 +39,23 @@ HRESULT GetRow (
   
 #### <a name="parameters"></a>Parametreler  
  `ixTbl`  
- [in] Tablonun satır alınır dizini.  
+ [in] Satır alınır tablosu dizini.  
   
  `rid`  
- [in] Alınacak satır dizini.  
+ [in] Alınacak satırın dizini.  
   
  `ppRow`  
- [out] Satır için bir işaretçi bir işaretçi.  
+ [out] Satır için bir işaretçi işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tutarlı sonuçlar döndürmüyor olduğundan, bu yöntemin kullanılması önermiyoruz. GUID tablosu hakkında daha fazla bilgi için özellikle "Bölüm II: meta veri tanım ve semantiği" ortak dil altyapısı (CLI) belgelerine bakın. Belge çevrimiçi kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](http://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
+ Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz. GUID tablosu hakkında daha fazla bilgi için özellikle "Bölüm II: meta veri tanımı ve semantiği" ortak dil altyapısı (CLI) belgelerine bakın. Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** Cor.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılan  
   
  **.NET framework sürümleri**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0881b3903200c023cfa2fe32bf89f62234da29c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424033"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331393"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind Numaralandırması
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
   
- Hata ayıklayıcı yerel değişkenler veya profiler ReJIT araçları eklenen kod erişmek yapılıp yapılamayacağını belirten değerleri sağlar.  
+ Hata ayıklayıcı yerel değişkenler veya ReJIT izleme profil oluşturucu, eklenen kod erişmek mümkün olup olmadığını belirten değerleri sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,11 +39,11 @@ typedef enum ILCodeKind {
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|`ILCODE_ORIGINAL_IL`|Hata ayıklayıcı erişimi ReJIT araçları bilgileri yok.|  
-|`ILCODE_REJIT_IL`|Hata ayıklayıcı ReJIT Araçları ' bilgilerine erişebilir.|  
+|`ILCODE_ORIGINAL_IL`|Hata ayıklayıcı erişimi ReJIT İzleme'den bilgileri yok.|  
+|`ILCODE_REJIT_IL`|Hata ayıklayıcı ReJIT İzleme'den bilgilerine erişebilir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye `ILCodeKind` numaralandırması için geçirilebilir [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) ve [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) hata ayıklayıcı Profil Oluşturucusu'nda eklenen değişkenleri erişebileceğini belirlemek için yöntemleri ReJIT araçları ve [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) hata ayıklayıcı erişebileceğini belirlemek amacıyla yöntemi IL işaretlenir.  
+ Üye `ILCodeKind` numaralandırma geçilebilir [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) ve [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) hata ayıklayıcı değişkenleri profil oluşturucu, eklenen erişip erişemeyeceğini belirlemek için yöntemleri ReJIT araçları ve [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) yöntemi hata ayıklayıcı erişip erişemeyeceğini belirlemek için IL işaretlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -57,4 +57,4 @@ typedef enum ILCodeKind {
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
  [ICorDebugILFrame4 Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [ReJIT: Nasıl yapılır Kılavuzu](http://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+ [ReJIT: Nasıl yapılır Kılavuzu](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

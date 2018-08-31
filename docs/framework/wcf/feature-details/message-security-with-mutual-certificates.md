@@ -7,48 +7,48 @@ dev_langs:
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad5862064966ccae4c313e7fa3d982ec9abbbcd2
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494182"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332193"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Karşılıklı Sertifikalar ile İleti Güvenliği
-Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) hizmetini ve ileti güvenlik modu kullanılarak güvenli istemci gösterir. İstemci ve hizmet sertifikalarla doğrulanır.  
+Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) hizmeti ve istemcisine ileti güvenlik modunu kullanarak güvenli gösterilmektedir. Hizmet ve istemci sertifikaları ile doğrulanır.  
   
- WS güvenliği X.509 sertifikası belirteci profiliyle kullandığından bu senaryo birlikte çalışabilir.  
+ X.509 Sertifika belirteci profiliyle WS-güvenlik kullandığından bu birlikte çalışabilen bir senaryodur.  
   
 > [!NOTE]
->  Bu senaryo, hizmet sertifikası anlaşması gerçekleştirmez. Tüm iletişimi çalıştırılmasının istemciye hizmet sertifikasının sağlanması gerekir. Sunucu sertifikasının uygulama ile dağıtılmış veya bir bant dışı iletişimi sağlanan.  
+>  Bu senaryo, hizmet sertifikasının anlaşma gerçekleştirmez. Hizmet sertifikası, öncesinde herhangi bir iletişim istemciye sağlanmalıdır. Sunucu sertifikası uygulamayla birlikte dağıtılmış veya bir bant dışı iletişimi sağlanan.  
   
- ![İleti karşılıklı sertifikalar ile güvenlik](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Karşılıklı sertifikalar ile güvenlik iletisi](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte Çalışabilirlik|Evet, WS-güvenlik ve X.509 Sertifika belirteci profili uyumlu istemcileri ve Hizmetleri ile.|  
-|Kimlik doğrulaması|Sunucu ve istemci karşılıklı olarak kimlik doğrulaması.|  
-|Bütünlük|Evet|  
+|Birlikte Çalışabilirlik|Evet, WS-Security, X.509 Sertifika belirteci profili uyumlu istemcileri ve Hizmetleri.|  
+|Kimlik doğrulaması|İstemci ve sunucu, karşılıklı kimlik doğrulaması.|  
+|Bütünlüğü|Evet|  
 |Gizliliği|Evet|  
 |Taşıma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod yapılandırma gerektirmeden kullanarak tek başına bir hizmet oluşturun.  
+-   Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
   
--   Sağlanan yapılandırma kullanarak bir hizmet oluşturun, ancak uç tanımlamıyor.  
+-   Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod gösterdiği ileti güvenliği kullanan hizmet uç noktası oluşturur. Hizmet kendi kimliğini doğrulamak için bir sertifika gerektirir.  
+ Aşağıdaki kodun gösterdiği ileti güvenliği kullanan bir hizmet uç noktası oluşturur. Hizmete kendi kimliğini doğrulamak için bir sertifika gerektirir.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma yerine kodu aynı hizmet oluşturmak için kullanılabilir.  
+ Aşağıdaki yapılandırmayı kod yerine aynı hizmet oluşturmak için kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -93,23 +93,23 @@ Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) hizmetini ve 
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod (ve istemci kodu) kullanan bir tek başına istemci oluşturun.  
+-   Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.  
   
--   Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişken olarak alan İstemci Oluşturucu kullanın. Örneğin:  
+-   Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod istemci oluşturur. İletiye güvenlik modunu ayarlama ve istemci kimlik bilgisi türü için sertifika ayarlanır.  
+ Aşağıdaki kod, istemci oluşturur. İleti güvenlik modunu ayarlanır ve istemci kimlik bilgisi türü için sertifika ayarlanır.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- İstemci yapılandırır. Bir istemci sertifikası kullanılarak belirtilmelidir [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ayrıca, hizmet sertifikası kullanılarak belirtilir [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ İstemciyi yapılandırır. Bir istemci sertifikası kullanılarak belirtilmelidir [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Ayrıca, hizmet sertifikası kullanılarak belirtilir [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -162,5 +162,5 @@ Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) hizmetini ve 
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [Nasıl yapılır: oluşturmak ve yüklemek geçici sertifikalar WCF'de taşıma güvenliği için geliştirme sırasında](http://go.microsoft.com/fwlink/?LinkId=244264)
+ [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [Nasıl yapılır: oluşturma ve yükleme geçici sertifikalar WCF'de aktarım güvenliği için geliştirme sırasında](https://go.microsoft.com/fwlink/?LinkId=244264)

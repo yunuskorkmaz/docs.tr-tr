@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 3f7f5f323006024c393cb066284712ed60836372
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330899"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# Derleyici Seçenekleri)
-**-Win32res** seçeneği bir Win32 kaynağı çıktı dosyasına ekler.  
+**-Win32res** seçeneği, çıkış dosyasında bir Win32 kaynağı ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,30 +27,31 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Çıkış dosyanızın eklemek istediğiniz kaynak dosyası.  
+ Çıkış dosyanızı eklemek istediğiniz kaynak dosyası.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Win32 kaynak dosyasını ile oluşturulan [kaynak derleyici](../../language-reference/compiler-options/resource-compiler-option.md). Kaynak Derleyicisi, bir Visual C++ programını derlerken çağrılır; .rc dosyasından bir .res dosyası oluşturulur.  
+ Bir Win32 kaynak dosyası ile oluşturulan [kaynak derleyici](../../language-reference/compiler-options/resource-compiler-option.md). Kaynak Derleyicisi, bir Visual C++ programını derlerken çağrılır; .rc dosyasından bir .res dosyası oluşturulur.  
   
- Win32 kaynak sürüm içerebilir veya yardımcı olacak bit eşlem (simgesi) bilgilerini dosya Gezgini uygulamanızda belirleyin. Belirtmezseniz, **-win32res**, derleyici derleme sürümünü temel alan sürüm bilgisini oluşturur.  
+ Bir Win32 kaynağı sürümü içerebilir veya yardımcı olan bit eşlem (simge) bilgilerini ve dosya Gezgini'ndeki uygulamanız belirleyin. Siz belirtmezseniz **-win32res**, derleyici derleme sürümünü temel alan sürüm bilgisi oluşturur.  
   
  Bkz: [- linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (için başvuru) veya [-kaynak](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (eklemek için) bir .NET Framework kaynak dosyası.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açmak **özellikleri** sayfası.  
+1.  Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklatın **uygulama** özellik sayfası.  
+2.  Tıklayın **uygulama** özellik sayfası.  
   
-3.  Tıklayın **kaynak dosyası** düğmesine tıklayın ve açılan kutuyu kullanarak bir dosya seçin.  
+3.  Tıklayarak **kaynak dosyası** düğmesine tıklayın ve açılan kutuyu kullanarak bir dosyayı seçin.  
   
 ## <a name="example"></a>Örnek  
- Derleme `in.cs` ve Win32 kaynak dosyası ekleme `rf.res` üretmek için `in.exe`:  
+ Derleme `in.cs` ve bir Win32 kaynak dosyası ekleme `rf.res` üretmek için `in.exe`:  
   
 ```console  
 csc -win32res:rf.res in.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

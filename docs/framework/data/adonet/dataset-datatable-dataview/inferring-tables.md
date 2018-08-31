@@ -1,25 +1,25 @@
 ---
-title: Tabloları çıkarımını yapma
+title: Tabloların çıkarımını yapma
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757833"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332859"
 ---
-# <a name="inferring-tables"></a>Tabloları çıkarımını yapma
-İçin bir şema çıkarımını yapma olduğunda bir <xref:System.Data.DataSet> hangi XML öğeleri tabloları temsil eden önce bir XML belgesinden ADO.NET belirler. Bir tablo için aşağıdaki XML yapıları sonucunda **DataSet** şeması:  
+# <a name="inferring-tables"></a>Tabloların çıkarımını yapma
+İçin bir şema çıkarımını yapma sırasında bir <xref:System.Data.DataSet> tablolar XML öğeleri temsil eden önce bir XML belgesinden ADO.NET belirler. Aşağıdaki XML yapıları için bir tabloyu neden **veri kümesi** şema:  
   
 -   Öznitelikleri olan öğeleri  
   
--   Alt öğelerin  
+-   Alt öğelerini  
   
 -   Yinelenen öğeleri  
   
 ## <a name="elements-with-attributes"></a>Öznitelikleri olan öğeleri  
- Bunları belirtilen öznitelikler neden olan öğenin tabloları sonuçlandı. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ İçinde belirtilen öznitelikler neden olan öğeler tabloları sonuçlandı. Örneğin, aşağıdaki XML göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -37,10 +37,10 @@ ms.locfileid: "32757833"
 |attr1|Element1_Text|  
 |-----------|--------------------|  
 |Değer1||  
-|Value2|Metin1|  
+|Value2|text1|  
   
-## <a name="elements-with-child-elements"></a>Alt öğelerin  
- Alt öğeler sonucu olan öğenin tabloları sonuçlandı. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+## <a name="elements-with-child-elements"></a>Alt öğelerini  
+ Alt öğeleri sonucu olmayan öğeler tabloları sonuçlandı. Örneğin, aşağıdaki XML göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -58,9 +58,9 @@ ms.locfileid: "32757833"
   
 |ChildElement1|  
 |-------------------|  
-|Metin1|  
+|text1|  
   
- Belge veya kök öğesi sonuç öznitelikleri ya da sütun olarak algılanır alt öğeleri varsa oluşturulursa bir tabloda. Belge öğenin özniteliklere ve sütun olarak ortaya alt öğeleri varsa öğe olarak algılanır bir **DataSet**. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ Belge veya kök öğe sonucu çıkarsanan tabloda öznitelikleri veya sütun olarak algılanır alt öğeleri varsa. Belge öğesi özniteliklere ve sütun olarak çıkarılan hiçbir alt öğeleri varsa öğe olarak algılanır bir **veri kümesi**. Örneğin, aşağıdaki XML göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -75,9 +75,9 @@ ms.locfileid: "32757833"
   
  **Tablo:** DocumentElement  
   
-|Element1|Element2|  
+|element1|element2|  
 |--------------|--------------|  
-|Metin1|Metin2|  
+|text1|Text2|  
   
  Alternatif olarak, aşağıdaki XML göz önünde bulundurun:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "32757833"
 </DocumentElement>  
 ```  
   
- Çıkarma işlemi üreten bir **DataSet** "" Element1."adlı bir tablo içeriyor DocumentElement" adlı  
+ Çıkarma işlemi ürettiği bir **veri kümesi** "" Element1."adlı bir tablo içeren DocumentElement" adlı  
   
  **Veri kümesi:** DocumentElement  
   
@@ -98,7 +98,7 @@ ms.locfileid: "32757833"
 |Değer1|Value2|  
   
 ## <a name="repeating-elements"></a>Yinelenen öğeleri  
- Tek bir oluşturulursa tablo sonucunda yineleyin öğeleri. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ Tek bir çıkarsanan tablosundaki sonuç yineleyin öğeleri. Örneğin, aşağıdaki XML göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -115,8 +115,8 @@ ms.locfileid: "32757833"
   
 |Element1_Text|  
 |--------------------|  
-|Metin1|  
-|Metin2|  
+|text1|  
+|Text2|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -124,4 +124,4 @@ ms.locfileid: "32757833"
  [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

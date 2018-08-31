@@ -5,15 +5,15 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 763e311dfb46ceeed358c3b3bebd6212d3e2489c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 153f5ddeeb7d09159049af4d466b0695f5cb6f23
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598668"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331365"
 ---
 # <a name="ltparamrefgt-visual-basic"></a>&lt;paramref&gt; (Visual Basic)
-Bir word parametre olarak biçimlendirir.  
+Bir sözcük, parametre olarak biçimlendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,12 +23,12 @@ Bir word parametre olarak biçimlendirir.
   
 #### <a name="parameters"></a>Parametreler  
  `name`  
- Başvurmak için parametresinin adı. Ad çift tırnak işaretleri içine alın ("").  
+ Başvurmak için parametrenin adı. Adı çift tırnak içine alın ("").  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<paramref>` Etiketi bir sözcük bir parametre olduğunu belirtmek için bir yol sağlar. XML dosyası, bu parametre farklı bir biçimde biçimlendirmek için işlenebilir.  
+ `<paramref>` Etiketi bir sözcüğün bir parametre olduğunu belirtmek için bir yol sağlar. XML dosyası, bu parametreyi belirgin bir şekilde biçimlendirmek için işlenebilir.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `<paramref>` başvurmak için etiket `id` parametresi.  
@@ -36,4 +36,4 @@ Bir word parametre olarak biçimlendirir.
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

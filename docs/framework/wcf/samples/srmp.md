@@ -2,50 +2,50 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 62075cccfa8ff2c6a181d633756a5f9bc8969932
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805505"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331276"
 ---
 # <a name="srmp"></a>SRMP
-Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirmek gösterilmiştir.  
+Bu örnek HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa alınan iletişim gerçekleştirme gösterir.  
   
- Kuyruğa alınan iletişim, istemci bir sıra kullanarak hizmeti ile iletişim kurar. Daha hassas bir şekilde istemci kuyruğa ileti gönderir. Hizmet kuyruktan iletileri alır. Hizmet ve istemci bu nedenle, bir sıra kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.  
+ Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.  
   
- MSMQ HTTP (HTTPS kullanımı dahil) kullanımını kuyruğa ileti göndermek için etkinleştirir. Bu örnekte, Windows Communication Foundation (WCF) kullanarak iletişim ve HTTP üzerinden ileti göndermek nasıl sıraya göstermektedir. MSMQ SRMP, HTTP üzerinden iletişim için SOAP tabanlı bir protokol olan adlı bir protokolünü kullanır.  
+ MSMQ bir kuyruğa ileti göndermek için HTTP (HTTPS kullanımı dahil) kullanılmasına olanak tanır. Bu örnekte, Windows Communication Foundation (WCF) kullanarak sıraya iletişim ve HTTP üzerinden ileti göndermek nasıl ekleyebileceğiniz gösterilmektedir. MSMQ HTTP üzerinden iletişim için SOAP tabanlı bir protokol olan SRMP, adlı bir protokolü kullanır.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Örneği çalıştırmadan önce **Windows Bileşenlerini Ekle/Kaldır**, MSMQ yüklü olduğundan emin olun HTTP desteği. HTTP desteği otomatik olarak yükleme Internet Information Services (IIS) yükler ve protokol desteği için MSMQ IIS'de ekler.  
+4.  Örneği çalıştırmadan önce **Windows Bileşenlerini Ekle/Kaldır**, MSMQ yüklü olduğundan emin olun HTTP desteği. HTTP desteği otomatik olarak yükleme, Internet Information Services (IIS) yükler ve protokol desteği için MSMQ IIS'de ekler.  
   
-5.  HTTP iletişimi için kullanılan emin olmak istiyorsanız, sağlamlaştırılmış modda çalıştırmak MSMQ etkinleştirebilirsiniz. Bu makinede barındırılan herhangi bir sıra hiçbir iletileri herhangi bir HTTP olmayan aktarım kullanarak gelmesini sağlar.  
+5.  HTTP iletişimi için kullanılan emin olmak istiyorsanız, sağlamlaştırılmış modda çalıştırmak MSMQ etkinleştirebilirsiniz. Bu makinede barındırılan herhangi bir kuyruğa ileti herhangi bir HTTP olmayan aktarım kullanarak ulaşmasını sağlar.  
   
-6.  Sağlamlaştırılmış modda çalıştırmak için MSMQ seçtikten sonra makinenin yeniden önyükleme gerektiriyorsa [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6.  Sağlamlaştırılmış modda çalıştırmak için MSMQ seçtikten sonra makine yeniden önyükleme gerektiği [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
 7.  Hizmet çalıştırın.  
   
-8.  İstemciyi çalıştırın. Makine adı işaret edecek şekilde uç noktası adresi veya IP adresi localhost yerine değiştirdiğinizden emin olun. İstemci bir ileti gönderir ve çıkar.  
+8.  İstemciyi çalıştırın. Makine adı için işaret edecek şekilde uç nokta adresini veya IP adresi localhost yerine değiştirdiğinizden emin olun. İstemci bir ileti gönderir ve çıkar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Bu örneği çalıştırmak için IIS hem hizmet hem de istemci makinelere MSMQ yanı sıra yüklenmesi gerekir.  
+ Bu örneği çalıştırmak için IIS hem hizmet hem de istemci makinelerin MSMQ yanı sıra yüklenmesi gerekir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- WCF gönderme örnek gösterir MSMQ HTTP üzerinden kullanarak sıradaki iletiler. Bu, SRMP Mesajlaşma olarak da adlandırılır. Ne zaman bir Sıraya alınan iletinin gönderildiği, MSMQ alıcı sıra yöneticisine TCP veya HTTP taşıması üzerinden gönderme makine aktarımları iletileri üzerinde. SRMP seçerek kullanıcı HTTP seçimi sıra aktarımı için bir taşıma olarak gösterir. SRMP güvenli HTTPS kullanımını etkinleştirir.  
+ Örneği, WCF gönderme gösterir. MSMQ kullanarak HTTP üzerinden ileti kuyruğa alındı. Bu, SRMP Mesajlaşma olarak da adlandırılır. Ne zaman bir kuyruğa alınmış ileti gönderilir, MSMQ alıcı Kuyruk Yöneticisi üzerinden TCP veya HTTP aktarım için gönderme makine aktarımlarında iletileri üzerinde. SRMP seçerek kullanıcı seçimi HTTP kuyruk aktarımı için aktarım olarak gösterir. SRMP güvenli HTTPS kullanımını etkinleştirir.  
   
 ## <a name="example"></a>Örnek  
- Örnek kod hizmetteki örnek üzerinde temel alır. Nasıl kuyruğa ileti gönderme ve SRMP kullanarak kuyruktan ileti alma yerel protokolünü kullanarak ileti gönderme ve alma ile aynı olur.  
+ Örnek kod, hizmetteki örnek üzerinde temel alır. Kuyruğa bir ileti göndermek ve SRMP kullanarak kuyruktan bir ileti alırsınız nasıl yerel protokolünü kullanarak ileti gönderme ve alma ile aynı olur.  
   
- Sıra Aktarım Protokolü seçimi belirtmek için istemci yapılandırmasını değiştirdi. Sıra Aktarım Protokolü yerel, SRMP ya da SrmpSecure biri olabilir. Varsayılan olarak, yerel aktarım protokolüdür. Bu örnekte SRMP kullanmak üzere yapılandırma istemci ve hizmet belirtin.  
+ İstemci yapılandırması seçeneği sırası Aktarımı Protokolü belirtmek için değiştirilir. Kuyruk Aktarım Protokolü, yerel, SRMP ya da SrmpSecure biri olabilir. Varsayılan olarak, yerel aktarımı protokolüdür. Hizmet ve istemci bu örnekte SRMP kullanmak için yapılandırmayı belirtin.  
   
- Taşıma güvenliği ile ilgili olarak SRMP sınırlamalar vardır. Varsayılan MSMQ taşıma güvenliği gönderme sırası Yöneticisi ve alıcı sırası aynı Windows etki alanında bulunan gerektirir Active Directory gerektirir. Bu iletileri HTTP sınırından gönderirken mümkün değildir. Bu nedenle, varsayılan taşıma güvenliği çalışmaz. Taşıma güvenliği isterseniz taşıma güvenliği için sertifika ayarlamanız gerekir. İleti güvenliği, ileti güvenliğini sağlamak için de kullanılabilir. Bu örnekte, taşıma ve ileti güvenliği SRMP Mesajlaşma göstermeye kapalıdır.  
+ SRMP aktarım güvenliği ile ilgili sınırlamalar vardır. Gönderme sırası Yöneticisi ve alıcı sırası aynı Windows etki alanında bulunan gerektiren Active Directory varsayılan MSMQ taşıma güvenliği gerektirir. Bu HTTP sınır ileti gönderirken mümkün değildir. Bu nedenle, varsayılan aktarım güvenliği çalışmaz. Aktarım güvenliği isterseniz aktarım güvenliği için sertifika ayarlamanız gerekir. İleti güvenliği, ileti güvenliğini sağlamak için de kullanılabilir. Bu örnekte, hem aktarım hem de ileti güvenlik SRMP Mesajlaşma göstermek için kapalıdır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -75,7 +75,7 @@ Bu örnek, HTTP üzerinden Message Queuing (MSMQ) kullanarak hizmetteki kuyruğa
 </configuration>  
 ```  
   
- Örnek çalıştıran şu çıkışı üretir.  
+ Çalışan örnek aşağıdaki çıktıyı üretir.  
   
 ```  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
@@ -88,11 +88,11 @@ OrderDetails
 ```  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
   

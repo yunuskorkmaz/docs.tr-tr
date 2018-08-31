@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754975"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331856"
 ---
 # <a name="value-types-c-reference"></a>Değer Türleri (C# Başvurusu)
 Değer türleri iki ana kategoride oluşur:  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Sayısal türlerin çıktı biçimlendirme hakkında daha fazla bilgi için bkz: [sayısal sonuçlar tablosunu biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Türler](../../../csharp/language-reference/keywords/types.md)  
- [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
- [Boş değer atanabilir türler](../../programming-guide/nullable-types/index.md)  
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Türler](../../../csharp/language-reference/keywords/types.md)  
+- [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Başvuru Türleri](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Boş değer atanabilir türler](../../programming-guide/nullable-types/index.md)  

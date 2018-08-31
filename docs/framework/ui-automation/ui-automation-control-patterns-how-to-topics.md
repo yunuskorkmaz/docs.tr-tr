@@ -10,18 +10,18 @@ ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: de41c00f4c494d15f84965e65fd5bdcdc7576268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b67340ca63637bd5ba2e59e4e5b774abbae58d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405596"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331882"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI Otomasyonu Denetim Düzenleri Nasıl Yapılır Konuları
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu bölümde denetim desenleri uygulama hakkında ayrıntılı bilgiler içerir.  
+ Bu bölümde, uygulama denetim düzenleri hakkında ayrıntılı bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  

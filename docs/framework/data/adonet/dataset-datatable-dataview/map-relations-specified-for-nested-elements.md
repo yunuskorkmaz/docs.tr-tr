@@ -1,18 +1,18 @@
 ---
-title: İç içe geçmiş öğe için belirtilen ilişkileri eşleme
+title: İç içe geçmiş öğeler için belirtilen ilişkileri eşleme
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e1fde0ef585621a6821838613a7e77dedf7042b1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756702"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332474"
 ---
-# <a name="map-relations-specified-for-nested-elements"></a>İç içe geçmiş öğe için belirtilen ilişkileri eşleme
-Bir şema dahil edebileceğiniz bir **msdata:Relationship** herhangi iki şema öğeleri arasında eşleme açıkça belirtmek için ek açıklama. Belirtilen iki öğe **msdata:Relationship** şemada iç içe olabilir, ancak olması gerekmez. Eşleme işlemini kullanan **msdata:Relationship** iki sütun arasında birincil anahtarı/yabancı anahtar ilişkisi oluşturmak için şemada.  
+# <a name="map-relations-specified-for-nested-elements"></a>İç içe geçmiş öğeler için belirtilen ilişkileri eşleme
+Bir şema içerebilir bir **msdata:Relationship** açıkça şemada herhangi iki öğe arasındaki eşlemeyi belirtmek için ek açıklama. Belirtilen iki öğe **msdata:Relationship** şemada iç içe olabilir, ancak olması gerekmez. Eşleme işlemini kullanan **msdata:Relationship** iki sütun arasında birincil anahtarı/yabancı anahtar ilişkisi oluşturmak için şema.  
   
- Aşağıdaki örnek bir XML şeması gösterir **OrderDetail** öğesi bir alt öğedir **sipariş**. **Msdata:Relationship** bu üst-alt ilişkisi tanımlar ve belirten **OrderNumber** elde edilen, sütun **sipariş** tablo ile ilgili **OrderNo** elde edilen, sütun **OrderDetail** tablo.  
+ Aşağıdaki örnek bir XML Şeması gösterilmektedir **OrderDetail** öğesi alt öğesi olan **sipariş**. **Msdata:Relationship** bu üst-alt ilişkisi tanımlar ve belirten **OrderNumber** ortaya çıkan sütun **sipariş** tablo ilgili **OrderNo** ortaya çıkan sütun **OrderDetail** tablo.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -52,16 +52,16 @@ Bir şema dahil edebileceğiniz bir **msdata:Relationship** herhangi iki şema �
 </xs:schema>  
 ```  
   
- Aşağıda, XML Şeması eşleme işlemi oluşturur <xref:System.Data.DataSet>:  
+ Aşağıdaki XML Şeması eşleme işlemi oluşturur <xref:System.Data.DataSet>:  
   
--   Bir **sipariş** ve bir **OrderDetail** tablo.  
+-   Bir **sipariş** ve **OrderDetail** tablo.  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   Arasında bir ilişki **sipariş** ve **OrderDetail** tablo. **İç içe** özelliği bu ilişki için ayarlanmış **True** çünkü **sipariş** ve **OrderDetail** şemada öğeleri iç içe .  
+-   Arasında bir ilişki **sipariş** ve **OrderDetail** tablolar. **İç içe** özelliği bu ilişki için **True** çünkü **sipariş** ve **OrderDetail** şemada öğelerini iç içe .  
   
     ```  
     ParentTable: Order  
@@ -72,9 +72,9 @@ Bir şema dahil edebileceğiniz bir **msdata:Relationship** herhangi iki şema �
     Nested: True  
     ```  
   
- Eşleme işlemini kısıtlamalar oluşturmaz.  
+ Eşleme işlemi kısıtlamalardan oluşturmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
