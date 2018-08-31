@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bir öğenin (LINQ-XML) değerini alma (Visual Basic)'
+title: 'Nasıl yapılır: bir öğe (LINQ to XML) değerini alma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
 ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643841"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254233"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="c454a-102">Nasıl yapılır: bir öğenin (LINQ-XML) değerini alma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c454a-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="c454a-103">Bu konu, öğelerin değerini alma gösterir.</span><span class="sxs-lookup"><span data-stu-id="c454a-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="c454a-104">Bunu yapmak için başlıca iki yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="c454a-104">There are two main ways to do this.</span></span> <span data-ttu-id="c454a-105">Dönüştürülecek bir yolu olan bir <xref:System.Xml.Linq.XElement> veya bir <xref:System.Xml.Linq.XAttribute> istenen türe.</span><span class="sxs-lookup"><span data-stu-id="c454a-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="c454a-106">Açık dönüşüm işleci öğe veya öznitelik içeriğini belirtilen türe dönüştürür ve sizin değişkenine atar.</span><span class="sxs-lookup"><span data-stu-id="c454a-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="c454a-107">Alternatif olarak, kullanabileceğiniz <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="c454a-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a><span data-ttu-id="2a1a1-102">Nasıl yapılır: bir öğe (LINQ to XML) değerini alma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a1a1-102">How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="2a1a1-103">Bu konuda, öğelerin değerini alma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-103">This topic shows how to get the value of elements.</span></span> <span data-ttu-id="2a1a1-104">Bunu yapmak için iki ana yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-104">There are two main ways to do this.</span></span> <span data-ttu-id="2a1a1-105">Dönüştürülecek bir yolu olan bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> istenen türe.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-105">One way is to cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="2a1a1-106">Açık dönüştürme işleci öğe veya öznitelik içeriğini belirtilen türe dönüştürür ve değişkeninize atar.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span> <span data-ttu-id="2a1a1-107">Alternatif olarak, <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-107">Alternatively, you can use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property or the <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
- <span data-ttu-id="c454a-108">Visual Basic ile en iyi yaklaşımı kullanmaktır <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="c454a-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="2a1a1-108">Visual Basic ile en iyi yaklaşımdır <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> özelliği.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-108">With Visual Basic, the best approach is to use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c454a-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="c454a-109">Example</span></span>  
- <span data-ttu-id="c454a-110">Bir öğenin değerini almak için yalnızca cast <xref:System.Xml.Linq.XElement> nesne, istenen türü.</span><span class="sxs-lookup"><span data-stu-id="c454a-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="c454a-111">Bir öğe bir dize olarak aşağıdaki gibi her zaman çevirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="c454a-111">You can always cast an element to a string, as follows:</span></span>  
+## <a name="example"></a><span data-ttu-id="2a1a1-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="2a1a1-109">Example</span></span>  
+ <span data-ttu-id="2a1a1-110">Bir öğenin değerini almak için yalnızca cast <xref:System.Xml.Linq.XElement> istenen türünüz için nesne.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-110">To retrieve the value of an element, you just cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="2a1a1-111">Her zaman bir dize için bir öğe gibi çevirebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-111">You can always cast an element to a string, as follows:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -23,15 +23,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="c454a-112">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="c454a-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="2a1a1-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-112">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c454a-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="c454a-113">Example</span></span>  
- <span data-ttu-id="c454a-114">Ayrıca, dize dışında türleri öğelerine çevirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c454a-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="c454a-115">Bir tamsayı içeren bir öğe varsa, örneğin, sizin için çevirebilirsiniz `int`aşağıdaki kodda gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="c454a-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
+## <a name="example"></a><span data-ttu-id="2a1a1-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="2a1a1-113">Example</span></span>  
+ <span data-ttu-id="2a1a1-114">Ayrıca dize dışındaki türler için öğeleri çevirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-114">You can also cast elements to types other than string.</span></span> <span data-ttu-id="2a1a1-115">Bir tamsayı içeren bir öğe varsa, örneğin, kendisine çevirebilirsiniz `int`aşağıdaki kodda gösterildiği gibi:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-115">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
   
 ```vb  
 Dim e As XElement = <Age>44</Age>  
@@ -39,19 +39,19 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & CInt(e))  
 ```  
   
- <span data-ttu-id="c454a-116">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="c454a-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="2a1a1-116">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-116">This example produces the following output:</span></span>  
   
 ```xml  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="c454a-117"> Aşağıdaki veri türleri için açık atama işleçleri sağlar: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?` , `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, ve `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="c454a-117"> provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="2a1a1-117"> Aşağıdaki veri türleri için açık tür dönüştürme işleçleri sağlar: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?` , `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, ve `GUID?`.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-117"> provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="c454a-118"> için aynı atama işleçleri sağlar <xref:System.Xml.Linq.XAttribute> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="c454a-118"> provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="2a1a1-118"> aynı atama işleçleri sağlar <xref:System.Xml.Linq.XAttribute> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-118"> provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c454a-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="c454a-119">Example</span></span>  
- <span data-ttu-id="c454a-120">Kullanabileceğiniz <xref:System.Xml.Linq.XElement.Value%2A> özelliği, bir öğenin içeriğini almak için:</span><span class="sxs-lookup"><span data-stu-id="c454a-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
+## <a name="example"></a><span data-ttu-id="2a1a1-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="2a1a1-119">Example</span></span>  
+ <span data-ttu-id="2a1a1-120">Kullanabileceğiniz <xref:System.Xml.Linq.XElement.Value%2A> özelliği, bir öğenin içeriğini almak için:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-120">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
   
 ```vb  
 Dim e As XElement = <StringElement>abcde</StringElement>  
@@ -59,15 +59,15 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- <span data-ttu-id="c454a-121">Bu örnek şu çıkışı üretir:</span><span class="sxs-lookup"><span data-stu-id="c454a-121">This example produces the following output:</span></span>  
+ <span data-ttu-id="2a1a1-121">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-121">This example produces the following output:</span></span>  
   
 ```xml  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c454a-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="c454a-122">Example</span></span>  
- <span data-ttu-id="c454a-123">Bazen varolduğundan emin değilseniz olsa bile bir öğenin değerini almaya çalışın.</span><span class="sxs-lookup"><span data-stu-id="c454a-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="c454a-124">Bu durumda, atadığınızda Integer öğesi null olabilir bir tür (ya da `string` veya boş değer atanabilir türler [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), öğe atanan yoksa değişkeni ayarlamanız yeterlidir `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="c454a-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="c454a-125">Aşağıdaki kod öğesi olabilir veya var olmayabilir, bunun kullanımı çok atama kullanmak daha kolay olduğunu gösterir <xref:System.Xml.Linq.XElement.Value%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="c454a-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="2a1a1-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="2a1a1-122">Example</span></span>  
+ <span data-ttu-id="2a1a1-123">Bazen varolduğundan emin değilseniz olsa bile, bir öğenin değeri alınmaya çalışıldı.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-123">Sometimes you try to retrieve the value of an element even though you are not sure it exists.</span></span> <span data-ttu-id="2a1a1-124">Bu durumda, atadığınızda Integer öğesi null yapılabilir bir tür (ya da `string` veya boş değer atanabilir türleri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), öğe atanmış mevcut değilse değişkeni ayarlamanız yeterlidir `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-124">In this case, when you assign the casted element to a nullable type (either `string` or one of the nullable types in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), if the element does not exist the assigned variable is just set to `Nothing`.</span></span> <span data-ttu-id="2a1a1-125">Aşağıdaki kodu öğesi olabilir ya da mevcut, atama kullanımı çok daha kolay olduğunu gösteriyor <xref:System.Xml.Linq.XElement.Value%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-125">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -133,7 +133,7 @@ End If
 Console.WriteLine("v4:{0}", IIf(Not (v4.HasValue), "element does not exist", v4))  
 ```  
   
- <span data-ttu-id="c454a-126">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="c454a-126">This code produces the following output:</span></span>  
+ <span data-ttu-id="2a1a1-126">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="2a1a1-126">This code produces the following output:</span></span>  
   
 ```  
 c1:child 1 content  
@@ -147,7 +147,7 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- <span data-ttu-id="c454a-127">Genel olarak, öğeleri ve özniteliklerinin içeriğini almak için atama kullanırken, daha basit kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c454a-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
+ <span data-ttu-id="2a1a1-127">Genel olarak, öğeleri ve özniteliklerinin içeriğini almak için atama kullanırken daha basit bir kod yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-127">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c454a-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c454a-128">See Also</span></span>  
- [<span data-ttu-id="c454a-129">LINQ-XML eksenleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c454a-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="2a1a1-128">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2a1a1-128">See Also</span></span>  
+ [<span data-ttu-id="2a1a1-129">LINQ to XML eksenleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2a1a1-129">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
