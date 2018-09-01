@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933709"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400188"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Taşınabilir Sınıf Kitaplığı ile Platformlar Arası Geliştirme
 .NET Framework taşınabilir sınıf kitaplığı proje türü Visual Studio'da platformlar arası uygulamalar ve kitaplıklar Microsoft platformları için hızlı ve kolay bir şekilde oluşturmanıza yardımcı olur.  
@@ -25,7 +25,7 @@ ms.locfileid: "42933709"
   
  Visual Studio'da bir taşınabilir sınıf kitaplığı projesi oluşturun ve bunu geliştirmeye başlayın bile sonra hedef platformlar değiştirebilirsiniz. Visual Studio, kodunuzda yapmanız gereken değişiklikleri belirlemenize yardımcı olur, yeni derlemeler kitaplığıyla derlenir.  
   
- Bu makalede, Visual Studio'da uygulama geliştirme ele alınmaktadır ancak Microsoft uygulamaları ve kitaplıkları Xamarin gibi diğer araçları ile geliştirmek için kullanabileceğiniz taşınabilir sınıf kitaplığı başvuru bütünleştirilmiş kodları da sağlar. Tüm .NET Framework tabanlı çalışma zamanı üzerinde Microsoft dışındaki platformlar üzerinde bu uygulamaları ve kitaplıkları'nı kullanabilirsiniz. Başvuru bütünleştirilmiş kodları hakkında daha fazla bilgi için blog girişine bakın [taşınabilir sınıf kitaplığı (PCL) tüm platformlarda kullanılabilir](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Derlemeleri yüklemek için bkz [Microsoft .NET taşınabilir kitaplık başvuru derlemelerini](http://www.microsoft.com/download/details.aspx?id=40727) Microsoft Download Center'daki. Xamarin ile derlemeleri kullanma hakkında daha fazla bilgi için blog girişine bakın [PCL ve Xamarin için artık etkin .NET NuGet kitaplıklarını](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ Bu makalede, Visual Studio'da uygulama geliştirme ele alınmaktadır ancak Microsoft uygulamaları ve kitaplıkları Xamarin gibi diğer araçları ile geliştirmek için kullanabileceğiniz taşınabilir sınıf kitaplığı başvuru bütünleştirilmiş kodları da sağlar. Tüm .NET Framework tabanlı çalışma zamanı üzerinde Microsoft dışındaki platformlar üzerinde bu uygulamaları ve kitaplıkları'nı kullanabilirsiniz. Başvuru bütünleştirilmiş kodları hakkında daha fazla bilgi için blog girişine bakın [taşınabilir sınıf kitaplığı (PCL) tüm platformlarda kullanılabilir](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Derlemeleri yüklemek için bkz [Microsoft .NET taşınabilir kitaplık başvuru derlemelerini](https://www.microsoft.com/download/details.aspx?id=40727) Microsoft Download Center'daki. Xamarin ile derlemeleri kullanma hakkında daha fazla bilgi için blog girişine bakın [PCL ve Xamarin için artık etkin .NET NuGet kitaplıklarını](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  Visual Studio ile taşınabilir sınıf kitaplığı geliştirmenize yardımcı olması için şablonlar sağlar. Visual Studio'nun hangi sürümünün kullanmakta olduğunuz bağlı olarak, kullanılabilir şablonlar ve menüler bu makalede açıklanan olanlardan farklı olabilir.  
   
@@ -110,7 +110,7 @@ Visual Studio 2013 güncelleştirme 2 için taşınabilir sınıf kitaplığı �
   
  Hedefleri değiştirdiğinizde, projenizin geliştirmek için kullanabileceğiniz API'ler seçiminizi eşleşecek şekilde değişir. Visual Studio değiştirme hedefleri sonucunda ortaya çıkabilecek uyarıları ve hataları bildirir.  
   
- Taşınabilirlik değerlendirmek istiyorsanız, önce derlemelerinizin Visual Studio'da değişiklik yapmak, kullanabilirsiniz [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Taşınabilirlik değerlendirmek istiyorsanız, önce derlemelerinizin Visual Studio'da değişiklik yapmak, kullanabilirsiniz [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  Menü seçeneklerini, kullanmakta olduğunuz Visual Studio sürümüne bağlı olarak değişir.  
   
@@ -224,6 +224,6 @@ Sürüm bilgileri örneği
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MVVM ile Taşınabilir Sınıf Kitaplığı Kullanma](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [Çoklu Platformları Hedefleyen Kitaplıklar için Uygulama Kaynakları](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET taşınabilirlik Çözümleyicisi](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [.NET taşınabilirlik Çözümleyicisi](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Dağıtım](../../../docs/framework/deployment/net-framework-applications.md)

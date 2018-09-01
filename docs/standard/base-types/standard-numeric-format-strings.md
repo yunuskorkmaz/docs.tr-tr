@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42752193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403195"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart Sayısal Biçim Dizeleri
 
@@ -33,8 +33,10 @@ Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için
   
 -   `xx` İsteğe bağlı bir tamsayı olarak adlandırılan *duyarlık belirtici*. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Duyarlık belirtici, sayının dize gösterimindeki basamak sayısını kontrol eder unutmayın. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için kullanın <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemi.  
   
-     Zaman *duyarlık belirtici* sayısını kontrol sonuç dizesinde kesirli basamaklar sıfırdan uzağa yuvarlanır numaraları sonuç dizeleri yansıtır (diğer bir deyişle, kullanarak <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Zaman *duyarlık belirtici* denetimleri, sonuç dizesinin, sonuç dizesinde kesirli basamakların sayısı sonsuz kesin sonucu en yakın olanında gösterilebilen bir sonuç yuvarlanır birkaç yansıtır. Varsa iki eşit yakın gösterilebilir sonuçları:
+    - **.NET Framework ve .NET Core ile .NET Core 2.0 kadar**, çalışma zamanı sonucu daha az önemli basamak ile seçer (diğer bir deyişle, kullanarak <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **.NET Core 2.1 ve üzeri**, çalışma zamanı sonucu bir daha az önemli basamak ile seçer (diğer bir deyişle, kullanarak <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  Duyarlık belirtici, sonuç dizesindeki basamak sayısını belirler. Başta veya sonda boşluk içeren bir sonuç dizesi paneli için kullanın [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md) özellik ve tanımlayan bir *hizalama bileşeni* biçim öğesindeki.  
   

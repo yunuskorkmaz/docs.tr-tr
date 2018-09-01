@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397292"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393773"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 *Dinamik dil çalışma zamanı* (DLR) olan bir çalışma zamanı ortamı Hizmetleri dinamik dilleri için bir dizi ortak dil çalışma zamanı (CLR) ekler. DLR dinamik dilleri .NET Framework üzerinde çalışan ve statik olarak yazılan diller için dinamik özellik eklemek için geliştirmeyi daha kolay hale getirir.  
@@ -52,7 +52,7 @@ ms.locfileid: "33397292"
   
 -   IronPython. Açık kaynak yazılımlardan olarak [GitHub](https://github.com/IronLanguages/ironpython2) Web sitesi.  
   
--   Ironruby. Açık kaynak yazılımlardan olarak [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) Web sitesi.  
+-   Ironruby. Açık kaynak yazılımlardan olarak [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044) Web sitesi.  
   
 ## <a name="primary-dlr-advantages"></a>Birincil DLR avantajları  
  DLR aşağıdaki avantajları sağlar.  
@@ -80,7 +80,7 @@ DLR mimarisi
   
  Bir hizmet kümesi için daha iyi CLR DLR ekler dinamik dili destekleyen. Bu hizmetler şunları içerir:  
   
--   İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   İfade ağaçları. DLR dil semantiği temsil etmek için ifade ağaçları kullanır. Bu amaç için denetim akışı, atama ve diğer dil modelleme düğümleri içerecek şekilde genişletilmiş LINQ ifade ağaçları DLR sahiptir. Daha fazla bilgi için [ifade ağaçları](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
 -   Site önbelleğe alma çağırın. A *dinamik çağrı sitesini* gerçekleştirmek olduğu gibi bir işlem kodu bir yerinde olduğundan `a + b` veya `a.b()` dinamik nesneler üzerinde. DLR özelliklerini önbelleğe `a` ve `b` (genellikle bu nesne türleri) ve işlemi hakkında bilgi. Bu tür bir işlem daha önce gerçekleştirilen varsa DLR önbellekten hızlı dağıtım için gerekli tüm bilgileri alır.  
   
@@ -95,5 +95,5 @@ DLR mimarisi
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)  
- [İfade Ağaçları](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [İfade Ağaçları](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [İzlenecek yol: Nesneler oluşturma ve dinamik kullanma](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
