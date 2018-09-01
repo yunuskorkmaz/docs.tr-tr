@@ -11,27 +11,27 @@ ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 6f26e547ba7dac824dbfdaaac01f54a40ef4ba8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dacad6b2b7c891ff8c32151f9bf02e8639375f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406415"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396370"
 ---
-# <a name="ui-automation-text-pattern"></a><span data-ttu-id="eb038-102">UI Otomasyon Metin Düzeni</span><span class="sxs-lookup"><span data-stu-id="eb038-102">UI Automation Text Pattern</span></span>
+# <a name="ui-automation-text-pattern"></a><span data-ttu-id="bb9c6-102">UI Otomasyon Metin Düzeni</span><span class="sxs-lookup"><span data-stu-id="bb9c6-102">UI Automation Text Pattern</span></span>
 > [!NOTE]
->  <span data-ttu-id="eb038-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="eb038-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="eb038-104">Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="eb038-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="bb9c6-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="bb9c6-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="bb9c6-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="bb9c6-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="eb038-105">Bu konu, genel bakışlar içerir ve yardımcı olmak üzere nasıl yapılır konuları metin öğe programlamada Başlarken [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eb038-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
+ <span data-ttu-id="bb9c6-105">Yardımcı olmak için nasıl yapılır konuları programlamada metin öğeleri için başlangıç ve bu konuda genel bakışlar içeren [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb9c6-105">This topic contains overviews and how-to topics to help you get started in programming for text elements in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="eb038-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="eb038-106">In This Section</span></span>  
- [<span data-ttu-id="eb038-107">UI Otomasyonu TextPattern Öğesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="eb038-107">UI Automation TextPattern Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [<span data-ttu-id="eb038-108">TextPattern ve Katıştırılmış Nesnelere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="eb038-108">TextPattern and Embedded Objects Overview</span></span>](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [<span data-ttu-id="eb038-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="eb038-109">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bb9c6-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="bb9c6-106">In This Section</span></span>  
+ [<span data-ttu-id="bb9c6-107">UI Otomasyonu TextPattern Öğesine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bb9c6-107">UI Automation TextPattern Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [<span data-ttu-id="bb9c6-108">TextPattern ve Katıştırılmış Nesnelere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bb9c6-108">TextPattern and Embedded Objects Overview</span></span>](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
+ [<span data-ttu-id="bb9c6-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="bb9c6-109">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="eb038-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="eb038-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bb9c6-110">Başvuru</span><span class="sxs-lookup"><span data-stu-id="bb9c6-110">Reference</span></span>  
  <xref:System.Windows.Automation.Text>  
   
-## <a name="see-also"></a><span data-ttu-id="eb038-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="eb038-111">See Also</span></span>  
- [<span data-ttu-id="eb038-112">UI Otomasyonu Denetim Desenleri</span><span class="sxs-lookup"><span data-stu-id="eb038-112">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [<span data-ttu-id="eb038-113">İstemciler İçin UI Otomasyonu Denetim Düzenleri</span><span class="sxs-lookup"><span data-stu-id="eb038-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+## <a name="see-also"></a><span data-ttu-id="bb9c6-111">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bb9c6-111">See Also</span></span>  
+ [<span data-ttu-id="bb9c6-112">UI Otomasyonu Denetim Desenleri</span><span class="sxs-lookup"><span data-stu-id="bb9c6-112">UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [<span data-ttu-id="bb9c6-113">İstemciler İçin UI Otomasyonu Denetim Düzenleri</span><span class="sxs-lookup"><span data-stu-id="bb9c6-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
