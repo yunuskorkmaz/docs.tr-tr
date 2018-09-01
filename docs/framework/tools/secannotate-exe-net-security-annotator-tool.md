@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410357"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396892"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)
-.NET güvenlik Not ekleyici Aracı (SecAnnotate.exe) tanımlayan bir komut satırı uygulamasıdır `SecurityCritical` ve `SecuritySafeCritical` bir veya daha fazla derlemeleri bölümlerini.  
+.NET güvenlik Not ekleyici Aracı (SecAnnotate.exe) tanımlayan bir komut satırı uygulamasıdır `SecurityCritical` ve `SecuritySafeCritical` bir veya daha fazla bölümleri.  
   
- Visual Studio Uzantısı [güvenlik Not ekleyici](http://go.microsoft.com/fwlink/?LinkId=198007), SecAnnotate.exe için bir grafik kullanıcı arabirimi sağlar ve aracı Visual Studio'dan çalıştırmanıza olanak sağlar.  
+ Bir Visual Studio Uzantısı [güvenlik açıklaması ekleyici](https://go.microsoft.com/fwlink/?LinkId=198007), Secannotate.exe'ye bir grafik kullanıcı arabirimi sağlar ve aracı Visual Studio'dan çalıştırmanıza olanak sağlar.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
- Komut isteminde, aşağıdakileri nerede *parametreleri* aşağıdaki bölümde açıklanan ve *derlemeleri* boşlukla ayrılmış bir veya daha fazla derleme adları oluşur:  
+ Komut isteminde aşağıdaki komutu yazın. burada *parametreleri* aşağıdaki bölümde açıklanan ve *derlemeleri* boşlukla ayrılmış bir veya daha fazla derleme adları oluşur:  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,6 +52,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Açıklamalar  
  Komut satırında belirtilen ve önüne bir at işareti (@) eklenen bir yanıt dosyasında parametreler ve derlemeler de sağlanabilir. Yanıt dosyasındaki her bir satır tek bir parametre veya derleme adı içermelidir.  
   
- Giriş .NET güvenlik Not ekleyici hakkında daha fazla bilgi için bkz: [kullanarak SecAnnotate saydamlık ihlalleri bilgisayarınızı derlemelerde çözümlemek için](http://go.microsoft.com/fwlink/?LinkId=187648) .NET güvenlik günlüğündeki.  
+ .NET güvenlik açıklaması ekleyici hakkında daha fazla bilgi için bkz: Giriş [derlemelerinizi saydamlık ihlalleri için analiz etmede Secannotate'i kullanma](https://go.microsoft.com/fwlink/?LinkId=187648) .NET güvenliği blogundaki.  
   
 ## <a name="examples"></a>Örnekler

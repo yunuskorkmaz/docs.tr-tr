@@ -1,21 +1,21 @@
 ---
-title: 'Sorgu ifade sözdizimi örnekleri: projeksiyonu'
+title: 'Sorgu ifadesi söz dizimi örnekleri: projeksiyon'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762819"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396635"
 ---
-# <a name="query-expression-syntax-examples-projection"></a>Sorgu ifade sözdizimi örnekleri: projeksiyonu
-Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve `From … From …` sorgulamak için anahtar sözcükler [AdventureWorks satış modeli](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifade sözdizimi kullanarak. `From … From …` eşdeğerdir sorgu tabanlı, `SelectMany` yöntemi. Bu örneklerde kullanılan AdventureWorks satış modeli AdventureWorks örnek veritabanını kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda oluşturulur.  
+# <a name="query-expression-syntax-examples-projection"></a>Sorgu ifadesi söz dizimi örnekleri: projeksiyon
+Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve `From … From …` sorgu anahtar sözcükleri [AdventureWorks satışları modeli](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) sorgu ifadesi söz dizimini kullanarak. `From … From …` eşdeğerdir sorgu tabanlı, `SelectMany` yöntemi. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
- Aşağıdaki örneklerde bu konudaki `using` / `Imports` deyimleri:  
+ Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -23,19 +23,19 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve 
 ## <a name="select"></a>Seçim  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır <xref:System.Linq.Enumerable.Select%2A> bulunan tüm satırlar döndürülecek yöntemi `Product` tablo ve ürün adlarını görüntüler.  
+ Aşağıdaki örnekte <xref:System.Linq.Enumerable.Select%2A> bulunan tüm satırlar döndürülecek yöntemi `Product` tablo ve ürün adlarını görüntüler.  
   
  [!code-csharp[DP L2E Examples#SelectSimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectsimple1)]
  [!code-vb[DP L2E Examples#SelectSimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır <xref:System.Linq.Enumerable.Select%2A> yalnızca ürün adlarını bir dizi dönün.  
+ Aşağıdaki örnekte <xref:System.Linq.Enumerable.Select%2A> yalnızca ürün adlarını bir dizisini döndürmek için.  
   
  [!code-csharp[DP L2E Examples#SelectSimple2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectsimple2)]
  [!code-vb[DP L2E Examples#SelectSimple2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectsimple2)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır <xref:System.Linq.Queryable.Select%2A> yöntemi projesine `Product.Name` ve `Product.ProductID` anonim türleri dizisi özelliklerini.  
+ Aşağıdaki örnekte <xref:System.Linq.Queryable.Select%2A> projesine yöntemi `Product.Name` ve `Product.ProductID` anonim türler dizisini özellikleri.  
   
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
@@ -43,19 +43,19 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren `Select` yöntemi ve 
 ## <a name="from--from--selectmany"></a>Kaynak... Kaynak... (SelectMany)  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) tümünü seçmek için nereye siparişleri `TotalDue` değerinden 500,00 değil.  
+ Aşağıdaki örnekte `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) tümünü seçmek için nereye siparişleri `TotalDue` kısa da 500,00 olduğu.  
   
  [!code-csharp[DP L2E Examples#SelectManyCompoundFrom](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanycompoundfrom)]
  [!code-vb[DP L2E Examples#SelectManyCompoundFrom](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanycompoundfrom)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) burada sırasını yapıldı 1 Ekim 2002 veya sonraki sürümlerde tüm siparişleri seçmek için.  
+ Aşağıdaki örnekte `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) burada sırasını yapıldı 1 Ekim 2002 veya daha sonra tüm siparişleri seçin.  
   
  [!code-csharp[DP L2E Examples#SelectManyCompoundFrom2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanycompoundfrom2)]
  [!code-vb[DP L2E Examples#SelectManyCompoundFrom2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanycompoundfrom2)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanan bir `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) sipariş toplam olduğu 10000.00 kullandığı'dan büyük ve tüm siparişleri seçmek için `From` toplam iki kez isteyen önlemek için atama.  
+ Aşağıdaki örnekte bir `From … From …` (denk <xref:System.Linq.Enumerable.SelectMany%2A> yöntemi) tüm siparişleri sipariş toplam olduğu 10000.00 kullanan'dan büyük ve seçmek için `From` toplam iki kez isteyen önlemek için atama.  
   
  [!code-csharp[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanyfromassignment)]
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  

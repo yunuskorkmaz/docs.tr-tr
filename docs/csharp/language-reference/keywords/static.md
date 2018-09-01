@@ -8,11 +8,11 @@ helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
 ms.openlocfilehash: db12ef80752bba913e6792ccb38f598a664efb0b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258423"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397673"
 ---
 # <a name="static-c-reference"></a>static (C# Başvurusu)
 Kullanım `static` belirli bir nesne yerine türün kendisine ait olduğu statik bir üye bildirmek için değiştiricisi. `static` Değiştiricisi sınıflar, alanları, yöntemleri, özellikleri, işleçler, olaylar ve oluşturucular ile kullanılabilir, ancak dizin oluşturucular, bir sonlandırıcı ya da sınıfları dışındaki türler ile kullanılamaz. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

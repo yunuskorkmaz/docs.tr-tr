@@ -5,36 +5,36 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eea2bb524496a3db22146586df323437d9f84242
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325415"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396737"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Arabirim Özellikleri (C# Programlama Kılavuzu)
-Özellikler bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Arabirim dizin oluşturucu erişimci örneği verilmiştir:  
+Özellikleri bildirilebilir bir [arabirimi](../../../csharp/language-reference/keywords/interface.md). Bir arabirim özellik erişimcisi örneği verilmiştir:  
   
  [!code-csharp[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
- Bir arabirim özelliği erişimcisi gövde yok. Bu nedenle, özelliğin okuma-yazma, salt okunur veya sadece yazılabilir olup olmadığını belirtmek için erişimciler amacı budur.  
+ Gövde arabirim özelliği erişimcisine sahip değil. Bu nedenle, amacı, erişimci özelliği salt okunur, salt okunur veya sadece yazılabilir olup olmadığını belirtmektir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, arabirim `IEmployee` bir okuma-yazma özelliği var. `Name`ve salt okunur bir özellik `Counter`. Sınıf `Employee` uygulayan `IEmployee` arabirim ve bu iki özellik kullanır. Programın adını yeni bir çalışan ve çalışanların geçerli sayısını okur ve çalışan adını ve hesaplanan çalışan numarasını görüntüler.  
+ Bu örnekte, arabirim `IEmployee` bir okuma-yazma özelliğine sahip `Name`ve salt okunur bir özellik `Counter`. Sınıf `Employee` uygulayan `IEmployee` arabirim ve bu iki özellik kullanır. Programın adını yeni bir çalışan ve çalışanların geçerli sayısını okur ve çalışan adını ve hesaplanan çalışan sayısını görüntüler.  
   
- Üye bildirilmedi arabirimi başvuran özelliği tam adını kullanabilirsiniz. Örneğin:  
-  
- [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
-  
- Bu adlı [açık arabirim uygulaması](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Örneğin, varsa sınıfı `Employee` iki arabirimler uygulama `ICitizen` ve `IEmployee` ve her iki arabirimde `Name` özelliği, açık arabirim üye uygulaması gerekli olacak. Diğer bir deyişle, aşağıdaki özellik bildirimi:  
+ Üyesi bildirildiği arabirimde başvuran özelliği tam adını kullanabilirsiniz. Örneğin:  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
- uygulayan `Name` özellikte `IEmployee` arabirimi, aşağıdaki bildirimi sırasında:  
+ Bu adlandırılır [açık arabirim uygulaması](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Örneğin, sınıf `Employee` iki arabirim uygulama `ICitizen` ve `IEmployee` ve her iki arabirimde `Name` özelliği açık arabirim üyesi uygulaması gerekli olacak. Diğer bir deyişle, aşağıdaki özellik bildirimi:  
+  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+  
+ uygulayan `Name` özelliği `IEmployee` arabirimi, aşağıdaki bildirim yandan:  
   
  [!code-csharp[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
- uygulayan `Name` özellikte `ICitizen` arabirimi.  
+ uygulayan `Name` özelliği `ICitizen` arabirimi.  
   
  [!code-csharp[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   

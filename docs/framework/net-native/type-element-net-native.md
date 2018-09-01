@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad20cf4528f5ca7d23f80570cc34712d33b74d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398085"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397198"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt; Öğesi (.NET Yerel)
-Bir sınıf veya yapı gibi belirli türde bir çalışma zamanı ilke uygulanır.  
+Çalışma zamanı İlkesi, bir sınıf veya yapı gibi belirli bir tür için geçerlidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,72 +37,72 @@ Bir sınıf veya yapı gibi belirli türde bir çalışma zamanı ilke uygulanı
   
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
-|`Name`|Genel|Gerekli öznitelik. Tür adını belirtir.|  
-|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi kontrol eder.|  
+|`Name`|Genel|Gerekli öznitelik. Tür adı belirtir.|  
+|`Activate`|Yansıma|İsteğe bağlı öznitelik. Oluşturucular örneklerinin etkinleştirmesi için çalışma zamanı erişimi denetler.|  
 |`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi için sorgulama kontrol eder, ancak herhangi bir çalışma zamanı erişim sağlamaz.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemleri, alanları, özellikleri ve olayları dahil tüm tür üyeleri, çalışma zamanı erişimi kontrol eder.|  
-|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve seri hale getirilmiş ve kitaplıklar gibi Newtonsoft JSON seri hale getirici tarafından seri türü örnekleri etkinleştirmek için özellikleri, çalışma zamanı erişimi denetler.|  
-|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan serileştirme için ilke <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
-|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan JSON serileştirmesi için ilke <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
-|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri kullanan XML serileştirme için ilke <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
-|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Başvuru türleri Windows çalışma zamanı ve COM hazırlama denetimlerini İlkesi|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler.|  
+|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Oluşturucular, alanları ve tür örnekleri sıralanabilir ve kitaplıkları gibi Newtonsoft JSON seri hale getirici tarafından serisi etkinleştirmek için özellikler, çalışma zamanı erişimi denetler.|  
+|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.|  
+|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> sınıfı.|  
+|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.|  
+|`MarshalObject`|Birlikte çalışma|İsteğe bağlı öznitelik. Windows çalışma zamanı ve COM başvuru türlerini hazırlama denetimleri İlkesi|  
 |`MarshalDelegate`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.|  
-|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Değer türleri yerel koda hazırlama için ilke denetler.|  
+|`MarshalStructure`|Birlikte çalışma|İsteğe bağlı öznitelik. Yerel kod için değer türlerini hazırlama için ilke denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*TYPE_NAME*|Tür adı. Bu `<Type>` ya da alt öğesi olan bir [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi veya başka bir `<Type>` öğesi, *type_name* türünün adı içerebilir, ad alanı. Aksi takdirde, *type_name* tam olarak nitelenmiş tür adını içermelidir.|  
+|*TYPE_NAME*|Tür adı. Bu `<Type>` ya da alt öğesi olan bir [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi ya da başka bir `<Type>` öğesi *type_name* olmadan tür adını içerebilir, ad alanı. Aksi takdirde, *type_name* tam olarak nitelenmiş tür adını içermelidir.|  
   
-## <a name="all-other-attributes"></a>Tüm diğer özniteliklerle  
+## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türü için geçerli ayar. Olası değerler şunlardır: `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için bkz: [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Bu ilke türü için geçerli ayar. Olası değerler `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, ve `Required All`. Daha fazla bilgi için [çalışma zamanı yönerge İlkesi ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Bir öznitelik içeren türde ise, öznitelik uygulandığı kod öğeleri için çalışma zamanı İlkesi tanımlar.|  
-|[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)|Bu türe ait bir olay yansıma ilke uygulanır.|  
-|[\<Alanı >](../../../docs/framework/net-native/field-element-net-native.md)|Bu türe ait bir alana yansıma ilke uygulanır.|  
-|[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|İlke genel bir tür parametresi türü için geçerlidir.|  
-|[\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)|İlke türü içeren tarafından gösterilir Bu ilkeyi uygulandığı bir türü için geçerlidir `<Type>` öğesi.|  
-|[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)|Bu türe ait bir yöntem yansıma ilke uygulanır.|  
-|[\<Methodınstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Bu türe ait bir oluşturulmuş genel yöntem yansıma ilke uygulanır.|  
-|[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)|Bu türe ait bir özellik yansıma ilke uygulanır.|  
-|[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|Çalışma zamanı ilkesi içeren türünden devralınan tüm sınıflar için geçerlidir.|  
-|`<Type>`|Yansıma İlkesi iç içe bir türü için geçerlidir.|  
-|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma ilke oluşturulan genel bir tür için geçerlidir.|  
+|[\<Attributeımplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Kapsayan tür bir öznitelik varsa, kod öğeleri, öznitelik uygulandığı için çalışma zamanı ilkesini tanımlar.|  
+|[\<Olay >](../../../docs/framework/net-native/event-element-net-native.md)|Bu türe ait bir olay yansıma ilkesini uygular.|  
+|[\<alan >](../../../docs/framework/net-native/field-element-net-native.md)|Bu türe ait bir alana yansıma ilke uygulanır.|  
+|[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|İlke genel tür parametre türü için geçerlidir.|  
+|[\<Impliestype >](../../../docs/framework/net-native/impliestype-element-net-native.md)|İlke içeren tarafından temsil edilen bir türün, ilkenin uygulandığı bir türe geçerlidir `<Type>` öğesi.|  
+|[\<Yöntem >](../../../docs/framework/net-native/method-element-net-native.md)|Bu türe ait bir yöntem yansıma ilkesini uygular.|  
+|[\<Methodınstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Bu türe ait oluşturulmuş bir genel yöntem yansıma ilkesini uygular.|  
+|[\<Özellik >](../../../docs/framework/net-native/property-element-net-native.md)|Bu türe ait bir özellik yansıma ilkesini uygular.|  
+|[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|Çalışma zamanı İlkesi kapsayan türden devralınan tüm sınıflar için geçerlidir.|  
+|`<Type>`|Yansıma ilke iç içe türü için geçerlidir.|  
+|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma İlkesi oluşturulmuş bir genel türü için geçerlidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|Uygulama çapında türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir için kapsayıcı görevi görür.|  
-|[\<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Belirtilen derleme içindeki tüm türler için yansıma ilke uygulanır.|  
-|[\<Kitaplık >](../../../docs/framework/net-native/library-element-net-native.md)|Türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında yüklenebilir içeren derlemenin tanımlar.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Bir ad alanındaki tüm türleri yansıma ilke uygulanır.|  
-|`<Type>`|Yansıma ilke türü ve tüm üyeleri için geçerlidir.|  
-|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma İlkesi, yapılandırılmış bir genel tür ve tüm üyeleri için geçerlidir.|  
+|[\<Uygulama >](../../../docs/framework/net-native/application-element-net-native.md)|Birçok farklı uygulama türleri ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir için kapsayıcı görevi görür.|  
+|[\<Derleme >](../../../docs/framework/net-native/assembly-element-net-native.md)|Yansıma ilkesini belirtilen bir derlemedeki tüm türleri için geçerlidir.|  
+|[\<Kitaplık >](../../../docs/framework/net-native/library-element-net-native.md)|Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir içeren derlemeyi tanımlar.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Yansıma ilke için bir ad alanındaki tüm türleri geçerlidir.|  
+|`<Type>`|Yansıma İlkesi, bir tür ve tüm üyeleri için geçerlidir.|  
+|[\<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Yansıma ilkesini, oluşturulmuş bir genel türü ve tüm üyeleri için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yansıma, seri hale getirme ve birlikte çalışma özniteliklerini tüm isteğe bağlıdır. Hiçbiri yoksa `<Type>` öğe olan alt türleri için ilke tanımlama tek tek üyeleri için bir kapsayıcı olarak hizmet verir.  
+ Yansıma, seri hale getirme ve birlikte çalışma özniteliklerini tümü isteğe bağlıdır. Hiçbiri yoksa `<Type>` eşleşen alt türleri ilkesi için tek tek üyeleri tanımlayan kapsayıcı öğe görür.  
   
- Varsa bir `<Type>` alt öğesi olan bir [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), `<Type>`, veya [ \< Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi, bu geçersiz kılar üst öğesi tarafından tanımlanan ilke ayarları.  
+ Varsa bir `<Type>` öğesi alt öğesi olan bir [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md), [ \<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md), `<Type>`, veya [ \< Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi üst öğe tarafından tanımlanan ilke ayarları geçersiz.  
   
- A `<Type>` genel bir tür öğesinin kendi ilke olmayan tüm örneklemesi kendi ilke uygulanır. Oluşturulan genel türler İlkesi tarafından tanımlanan [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi.  
+ A `<Type>` genel bir türün öğesi kendi ilkesi olmayan tüm örneklemesi için ilke uygulanır. Oluşturulan genel türler, ilke tarafından tanımlanan [ \<Typeınstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) öğesi.  
   
- Tür genel bir tür ise adını Vurgu simge ile donatılmış (\`) sayısının üst genel parametreler tarafından izlenen. Örneğin, `Name` özniteliği bir `<Type>` öğesi için <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı görünür olarak `Name="System.Collections.Generic.List`1"'.  
+ Tür, genel bir tür ise, adı bir Vurgu işareti sembolü sunulur (\`) genel parametreler, bir sayı. Örneğin, `Name` özniteliği bir `<Type>` öğesi için <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı olarak görünür `Name="System.Collections.Generic.List`1"'.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, alanlar, özellikleri ve yöntemleri hakkında bilgi görüntülemek için yansıma kullanır <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı. Değişkeni `b` örnekte bir [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetim. Örnek türü bilgileri yalnızca getireceğinden meta verilerinin kullanılabilirliği tarafından denetlenir `Browse` ilke ayarı.  
+ Aşağıdaki örnek, alanları, özellikleri ve yöntemleri hakkında bilgi görüntülemek için yansıtma kullanır. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> sınıfı. Değişken `b` örnekte bir [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetimi. Örneğin, yalnızca tür bilgilerini alır çünkü meta veri kullanılabilirliğini tarafından denetlenir `Browse` ilke ayarı.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Çünkü meta verilerini <xref:System.Collections.Generic.List%601> sınıfı değil otomatik olarak dahil [!INCLUDE[net_native](../../../includes/net-native-md.md)] örnek araç zinciri başarısız çalışma zamanında istenen üye bilgilerini görüntülemek. Gerekli meta verilerini sağlamak için aşağıdakileri ekleyin `<Type>` çalışma zamanı yönergeleri dosyaya öğesi. Bir üst sağladık çünkü Not [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi, biz tam olarak nitelenmiş tür adları sağlamak zorunda değilsiniz `<Type>` öğesi.  
+ Çünkü meta verilerini <xref:System.Collections.Generic.List%601> sınıfı değil otomatik olarak dahil [!INCLUDE[net_native](../../../includes/net-native-md.md)] örnek araç zinciri, başarısız çalışma zamanında istenen üye bilgilerini görüntülemek. Gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğesi. Bir üst sağladık, dikkat edin çünkü [< Namespace\> ](../../../docs/framework/net-native/namespace-element-net-native.md) öğesi, biz tam olarak nitelenmiş tür adları sağlamak zorunda değilsiniz `<Type>` öğesi.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -116,11 +116,11 @@ Bir sınıf veya yapı gibi belirli türde bir çalışma zamanı ilke uygulanı
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek yansıma almak için kullanılır. bir <xref:System.Reflection.PropertyInfo> temsil eden nesnesi <xref:System.String.Chars%2A?displayProperty=nameWithType> özelliği. Daha sonra kullanır <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi bir dizedeki yedinci karakter değerini almak ve tüm karakterler dizesini görüntülemek için. Değişkeni `b` örnekte bir [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetim.  
+ Aşağıdaki örnek, alınacak yansıtma kullanır. bir <xref:System.Reflection.PropertyInfo> temsil eden nesne <xref:System.String.Chars%2A?displayProperty=nameWithType> özelliği. Ardından kullanır <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yedinci karakterinden dize değerini almak için ve tüm karakterleri dizesini görüntülemek için yöntemi. Değişken `b` örnekte bir [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denetimi.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Olduğundan meta verilerini <xref:System.String> nesne kullanılamaz çağrısı <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi atar bir <xref:System.NullReferenceException> özel durum çalışma süresi ile derlendiğinde [!INCLUDE[net_native](../../../includes/net-native-md.md)] aracı zinciri. Özel durum ortadan kaldırmak ve gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosya öğesine:  
+ Çünkü meta verilerini <xref:System.String> nesne kullanılamaz çağrısı <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntem bir <xref:System.NullReferenceException> çalıştırmada özel durum ile derlendikleri zaman zaman [!INCLUDE[net_native](../../../includes/net-native-md.md)] araç zinciri. Özel durum ortadan kaldırabilir ve gerekli meta verilerini sağlamak için aşağıdaki ekleyin `<Type>` çalışma zamanı yönergeleri dosyasının öğe:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

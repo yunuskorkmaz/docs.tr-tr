@@ -9,15 +9,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409808"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396928"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
-Kod ve eşleme için SqlMetal komut satırı aracı oluşturur [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşenini [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
+SqlMetal komut satırı aracı için kod ve eşleme üretir [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] bileşeninin [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu konunun ilerisinde görünen seçenekleri uygulayarak, SqlMetal'den aşağıdakileri içeren çeşitli farklı eylemler gerçekleştirmesini isteyebilirsiniz:  
   
 -   Bir veritabanından, kaynak kodu ve eşleme öznitelikleri veya bir eşleme dosyası oluşturmak.  
   
@@ -25,12 +25,12 @@ Kod ve eşleme için SqlMetal komut satırı aracı oluşturur [!INCLUDE[vbtecdl
   
 -   Bir .dbml dosyasından, kod veya eşleme öznitelikleri veya bir eşleme dosyası üretmek.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Varsayılan olarak, dosyası şu konumdadır `drive`: \Program SDKs\Windows\v`n.nn`\bin. Visual Studio yüklemezseniz, ayrıca SQLMetal dosya yükleyerek alabilirsiniz [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Varsayılan olarak, dosya şu konumdadır `drive`: \Program SDKs\Windows\v`n.nn`\bin. Visual Studio yüklemezseniz da SQLMetal dosyasını indirerek edinebilirsiniz [Windows SDK'sı](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
->  Visual Studio kullanan geliştiriciler de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] sınıflar oluşturmak için. Komut satırı yaklaşımı, büyük veritabanları için uygun düşmektedir. SqlMetal bir komut satırı aracı olduğundan, bir oluşturma işleminde kullanabilirsiniz.  
+>  Visual Studio kullanan geliştiriciler de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] varlık sınıfları üretmek için. Komut satırı yaklaşımı, büyük veritabanları için uygun düşmektedir. SqlMetal bir komut satırı aracı olduğundan, bir oluşturma işleminde kullanabilirsiniz.  
   
- Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için bkz: [komut istemlerini](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Komut isteminde aşağıdakileri yazın:  
+ Aracı çalıştırmak için, Geliştirici Komut İstemi (veya Windows 7'de Visual Studio Komut İstemi) kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Komut isteminde aşağıdaki komutu yazın:  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>Seçenekler  
- En son geçerli seçenek listesini görüntülemek için şunu yazın `sqlmetal /?` yüklü konumdan bir komut isteminde.  
+ En yeni seçenek listesini görüntülemek için şunu yazın `sqlmetal /?` konumda bir komut isteminde.  
   
  **Bağlantı seçenekleri**  
   
@@ -49,7 +49,7 @@ sqlmetal [options] [<input file>]
 |**/ Veritabanı:**  *\<adı >*|Sunucuda veritabanı kataloğu belirtir.|  
 |**/ User:**  *\<adı >*|Oturum açma kullanıcı kimliği belirtir. Varsayılan değer: Windows kimlik doğrulaması kullan.|  
 |**/ Password:**  *\<parolası >*|Oturum açma parolasını belirtir. Varsayılan değer: Windows kimlik doğrulaması kullan.|  
-|**/ conn:**  *\<bağlantı dizesi >*|Veritabanı bağlantısı dizesi belirtir. Kullanılamaz **/Server**, **/veritabanı**, **/user**, veya **/Password** seçenekleri.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satırı "c:\northwnd.mdf" Giriş dosyası belirtir: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
+|**/ conn:**  *\<bağlantı dizesi >*|Veritabanı bağlantısı dizesi belirtir. İle birlikte kullanılamaz **/Server**, **/veritabanı**, **/user**, veya **/Password** seçenekleri.<br /><br /> Dosya adını bağlantı dizesine eklemeyin. Bunun yerine, dosya adını giriş dosyası olarak komut satırına ekleyin. Örneğin, aşağıdaki satır giriş dosyası olarak "c:\northwnd.mdf"yi"belirtir: **sqlmetal /code:"c:\northwind.cs "/language:csharp"c:\northwnd.mdf"yi"**.|  
 |**/ timeout:**  *\<saniye >*|SqlMetal veritabanına eriştiğinde, zaman aşımı değerini belirtir. Varsayılan değer: 0 (yani, zaman sınırı yok).|  
   
  **Ayıklama seçenekleri**  
@@ -64,9 +64,9 @@ sqlmetal [options] [<input file>]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/DBML** *[: dosyası]*|Çıkışı .dbml olarak gönderir. Kullanılamaz **/map** seçeneği.|  
-|**/ kod** *[: dosyası]*|Çıkışı kaynak kodu olarak gönderir. Kullanılamaz **/dbml** seçeneği.|  
-|**/ map** *[: dosyası]*|Öznitelikler yerine bir XML eşleme dosyası oluşturur. Kullanılamaz **/dbml** seçeneği.|  
+|**/DBML** *[: dosyası]*|Çıkışı .dbml olarak gönderir. İle birlikte kullanılamaz **/map** seçeneği.|  
+|**/ code** *[: dosyası]*|Çıkışı kaynak kodu olarak gönderir. İle birlikte kullanılamaz **/dbml** seçeneği.|  
+|**/ map** *[: dosyası]*|Öznitelikler yerine bir XML eşleme dosyası oluşturur. İle birlikte kullanılamaz **/dbml** seçeneği.|  
   
  **Çeşitli**  
   
@@ -76,14 +76,14 @@ sqlmetal [options] [<input file>]
 |**/ Namespace:**  *\<adı >*|Üretilen kodun ad alanını belirtir. Varsayılan değer: ad alanı yok.|  
 |**/ Context:**  *\<türü >*|Veri bağlamı sınıfının adını belirtir. Varsayılan değer: Veritabanı adından türetilir.|  
 |**/entitybase:**  *\<türü >*|Üretilen kodda varlık sınıflarının temel sınıfını belirtir. Varsayılan değer: Varlıkların temel sınıfı yoktur.|  
-|**/ Çoğul**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD'de kullanılabilir. İngilizce sürümü.|  
-|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: None, Unidirectional. Varsayılan değer: Hiçbiri.<br /><br /> Daha fazla bilgi için bkz: [seri hale getirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/ pluralize**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD bölgesinde kullanılabilir İngilizce sürümü.|  
+|**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: hiçbiri, tek yönlü. Varsayılan değer: Hiçbiri.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Giriş dosyası**  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**\<Giriş dosyası >**|Bir SQL Server Express .mdf dosyasını belirten bir [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf dosya ya da .dbml Ara dosyası.|  
+|**\<Giriş dosyası >**|Bir SQL Server Express .mdf dosyası belirtir bir [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf dosyası veya bir .dbml Ara dosyası.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  SqlMetal işlevi aslında iki adımdan oluşur:  
@@ -92,13 +92,13 @@ sqlmetal [options] [<input file>]
   
 -   Kod çıktı dosyası oluşturma.  
   
-     Uygun komut satırı seçeneklerini kullanarak, Visual Basic veya C# kaynak kodu oluşturabilir veya bir XML eşleme dosyası üretebilir.  
+     Uygun komut satırı seçeneklerini kullanarak, Visual Basic veya C# kaynak kodu oluşturabilir veya bir XML eşleme dosyası üretebilirsiniz.  
   
  Meta verileri bir .mdf dosyasından ayıklamak için, .mdf dosyası adını tüm diğer seçeneklerden sonra belirtmeniz gerekir.  
   
- Öyle değilse **/Server** belirtilirse, **localhost/sqlexpress** varsayılır.  
+ Hayır ise **/Server** belirtilen **localhost/sqlexpress** varsayılır.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] bir veya daha fazla aşağıdaki koşullar doğruysa, bir özel durum oluşturur:  
+ [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] bir veya daha fazla aşağıdaki koşullardan biri doğruysa, bir özel durum oluşturur:  
   
 -   SqlMetal, kendi kendini çağıran bir saklı yordam ayıklamaya çalışır.  
   
@@ -106,7 +106,7 @@ sqlmetal [options] [<input file>]
   
      SqlMetal, bu özel durumu yakalar ve bir uyarı olarak bildirir.  
   
- Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adı bağlantı dizesinde dahil olmak üzere (kullanarak **/conn** seçeneği) desteklenmiyor.  
+ Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adının bağlantı dizesine eklenmesi (kullanarak **/conn** seçeneği) desteklenmiyor.  
   
 ## <a name="examples"></a>Örnekler  
  Ayıklanan SQL meta verileri içeren bir .dbml dosyası oluşturun:  
@@ -130,7 +130,7 @@ sqlmetal [options] [<input file>]
  **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
->  Kullandığınızda **/ çoğul** seçeneği Northwind örnek veritabanı ile aşağıdaki davranışa dikkat edin. SqlMetal tablolar için satır türünde adlar oluşturduğunda, tablo adları tekildir. Ne zaman kolaylaştırır <xref:System.Data.Linq.DataContext> özellikleri tablolar için tablo adlarının çoğul. Tesadüfen, Northwind örnek veritabanındaki tablolar zaten çoğuldur. Bu nedenle, bu bölümün çalıştığını görmezsiniz. Veritabanı tablolarını tekil olarak adlandırmak ortak uygulama olsa da, toplulukları çoğul olarak adlandırmak da .NET'te ortak bir uygulamadır.  
+>  Kullanırken **/ pluralize** seçeneğini Northwind örnek veritabanıyla birlikte, aşağıdaki davranışa dikkat edin. SqlMetal tablolar için satır türünde adlar oluşturduğunda, tablo adları tekildir. Ne zaman kolaylaştırır <xref:System.Data.Linq.DataContext> özellikleri tablolar için tablo adları çoğuldur. Tesadüfen, Northwind örnek veritabanındaki tablolar zaten çoğuldur. Bu nedenle, bu bölümün çalıştığını görmezsiniz. Veritabanı tablolarını tekil olarak adlandırmak ortak uygulama olsa da, toplulukları çoğul olarak adlandırmak da .NET'te ortak bir uygulamadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  

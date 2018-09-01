@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935399"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396122"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Bir basit veri temelli CRUD mikro hizmeti oluşturma
 
@@ -326,7 +326,7 @@ Microsoft Flow, PowerApps ve Logic Apps Azure API'leri ve bunlara nasıl kullan�
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swagger API meta verileri oluşturma Swashbuckle NuGet paketini ile otomatikleştirme
 
-Swagger meta verilerde el ile (bir JSON veya YAML dosyası) oluşturmak zahmetli bir iş olabilir. Ancak, ASP.NET Web API Hizmetleri API bulma kullanarak otomatikleştirebileceğiniz [Swashbuckle NuGet paketini](http://aka.ms/swashbuckledotnetcore) dinamik olarak Swagger API'si meta verileri oluşturmak için.
+Swagger meta verilerde el ile (bir JSON veya YAML dosyası) oluşturmak zahmetli bir iş olabilir. Ancak, ASP.NET Web API Hizmetleri API bulma kullanarak otomatikleştirebileceğiniz [Swashbuckle NuGet paketini](https://aka.ms/swashbuckledotnetcore) dinamik olarak Swagger API'si meta verileri oluşturmak için.
 
 Swashbuckle, ASP.NET Web API projeleriniz için Swagger meta verileri otomatik olarak oluşturur. Bu, ASP.NET Core Web API projelerini ve geleneksel ASP.NET Web API ve Azure API uygulaması, Azure mobil uygulaması, ASP Azure Service Fabric mikro hizmetler gibi diğer tüm flavor destekler. Ayrıca, düz Web API'si için başvuru uygulaması olarak kapsayıcılarında, dağıtılan destekler.
 

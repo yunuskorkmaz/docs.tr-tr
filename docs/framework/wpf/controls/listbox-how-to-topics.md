@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 474057801cb1a1883282e435faa9d7a85870102c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396177"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox Nasıl Yapılır Konuları
-Bu bölümdeki konular, nasıl kullanılacağını açıklar <xref:System.Windows.Controls.ListBox> seçilebilir öğeleri listesini görüntülemek için denetim.  
+Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.ListBox> seçilebilir öğe listesini görüntülemek için denetim.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veriye ListBox Bağlama](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [ListBoxItem Alma](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [Nasıl yapılır: veri ItemsContol'e ekleme](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [Nasıl yapılır: bir ItemsControl için veri ekleme](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [ListBox'ın Kayma Performansını Artırma](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Başvuru  

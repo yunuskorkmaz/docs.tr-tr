@@ -13,11 +13,11 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255156"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396555"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
 Aşağıdaki koşulları karşılaması koşuluyla, bir dizi türü farklı bir dizi türüne dönüştürebilirsiniz:  

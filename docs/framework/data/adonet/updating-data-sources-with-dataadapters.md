@@ -1,69 +1,69 @@
 ---
-title: Veri kaynakları ile DataAdapters güncelleştiriliyor
+title: Veri kaynaklarını DataAdapters ile güncelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 9d9eeb93cf0360f321c124bb6bce6ed02a9ea253
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365507"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397355"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>Veri kaynakları ile DataAdapters güncelleştiriliyor
-`Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı bir <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapıldı, değişiklikler içeriyor ve `DataTable` değişiklikleri alınacağı tabloyu tanımlar. Öyle değilse `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
+# <a name="updating-data-sources-with-dataadapters"></a>Veri kaynaklarını DataAdapters ile güncelleştirme
+`Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri dönün. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapılmış, değişiklikleri içeren ve `DataTable` değişiklikleri alınacak tabloyu tanımlar. Hayır ise `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
   
- Çağırdığınızda `Update` yöntemi, `DataAdapter` yapmış olduğunuz değişiklikleri analiz eder ve uygun komutu (INSERT, UPDATE veya DELETE) yürütür. Zaman `DataAdapter` bir değişiklik karşılaştığı bir <xref:System.Data.DataRow>, kullanır <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, veya <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> değişiklik işleyemedi. Bu tasarım zamanında komut sözdizimi belirterek ADO.NET uygulamanızın performansını en üst düzeye çıkarmanıza olanak tanır ve mümkün olduğunda, saklı yordamlar yalıtılacaktır. Komutları çağırmadan önce açık olarak ayarlamalısınız `Update`. Varsa `Update` olarak adlandırılır ve uygun komutu için belirli bir güncelleştirme yok (örneğin, Hayır `DeleteCommand` silinen satır), bir özel durum.  
-  
-> [!NOTE]
->  Düzenlemek veya kullanarak verileri silmek için SQL Server saklı yordamları kullanıyorsanız, bir `DataAdapter`, saklı yordam tanımı'nda SET NOCOUNT ON kullanmadığınızdan emin olun. Bu sıfır olarak döndürülen etkilenen satırların sayısı neden olur, `DataAdapter` bir eşzamanlılık çakışması yorumlar. Bu olay bir <xref:System.Data.DBConcurrencyException> oluşturulur.  
-  
- Komut parametreleri, bir SQL deyimi için girdi ve çıktı değerler veya değiştirilen her satır için saklı yordam belirtmek için kullanılabilir bir `DataSet`. Daha fazla bilgi için bkz: [DataAdapter parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ Çağırdığınızda `Update` yöntemi `DataAdapter` yapmış olduğunuz değişiklikleri analiz eder ve (INSERT, UPDATE veya DELETE) uygun komutu yürütür. Zaman `DataAdapter` değişiklik karşılaştığında bir <xref:System.Data.DataRow>, kullandığı <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, veya <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> değişiklik işlemek için. Bu sayede tasarım zamanında komut sözdizimi belirtilerek ADO.NET uygulamanızın performansını en üst düzeye çıkarmak ve mümkün olduğunda, saklı yordamları kullanarak. Açıkça çağırmadan önce komutları ayarlanmalıdır `Update`. Varsa `Update` çağrılır ve uygun komutu için belirli bir güncelleştirmenin mevcut değil (örneğin, Hayır `DeleteCommand` silinen satırları), bir özel durum oluşturulur.  
   
 > [!NOTE]
->  Bir satırın silinmesi arasındaki farkı anlamak önemlidir bir <xref:System.Data.DataTable> ve satır kaldırma. Çağırdığınızda `Remove` veya `RemoveAt` yöntemi, satır hemen kaldırılır. Ardından başarılı olursa arka uç veri kaynağına karşılık gelen satırları etkilenmez `DataTable` veya `DataSet` için bir `DataAdapter` ve arama `Update`. Kullandığınızda `Delete` yöntemi, satır içinde kalır `DataTable` ve silinmek üzere işaretlenmiş. Ardından geçirirseniz `DataTable` veya `DataSet` için bir `DataAdapter` ve arama `Update`, arka uç veri kaynağına karşılık gelen satır silindi.  
+>  Düzenleme veya silme verileri kullanarak SQL Server saklı yordamları kullanıyorsanız bir `DataAdapter`, saklı yordam tanımında SET NOCOUNT ON kullanmadığınızdan emin olun. Bu, etkilenen satır sayısı sıfır olarak döndürülen neden olur, `DataAdapter` bir eşzamanlılık çakışması yorumlar. Bu olay bir <xref:System.Data.DBConcurrencyException> oluşturulur.  
   
- Varsa, `DataTable` eşlendiği veya oluşturulan tek veritabanı tablosundan özelliklerden yararlanabilirsiniz <xref:System.Data.Common.DbCommandBuilder> otomatik olarak oluşturmak için nesne `DeleteCommand`, `InsertCommand`, ve `UpdateCommand` için nesneleri `DataAdapter`. Daha fazla bilgi için bkz: [CommandBuilders oluşturma komutlarıyla](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Komut parametreleri, giriş ve çıkış değerleri için bir SQL deyimi veya saklı yordam değiştirilen her satır için belirtmek için kullanılabilir bir `DataSet`. Daha fazla bilgi için [DataAdapter parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
-## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Bir veri kümesine değerlerini eşlemek için UpdatedRowSource kullanma  
- Veri kaynağından döndürülen değerler geri nasıl eşlendiğini denetleyebilir `DataTable` güncelleştirme yöntemini çağrısından bir `DataAdapter`, kullanarak <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> özelliği bir <xref:System.Data.Common.DbCommand> nesnesi. Ayarlayarak `UpdatedRowSource` özelliğini birine <xref:System.Data.UpdateRowSource> numaralandırma değerlerinin çıkış parametreleri tarafından döndürülen olup olmadığını denetleyebilir `DataAdapter` komutlar göz ardı veya değiştirilen satırda uygulanan `DataSet`. İlk (varsa) satır değiştirilen satırda uygulanan döndürülen olup olmadığını belirtebilirsiniz `DataTable`.  
+> [!NOTE]
+>  İçinde bir satırın silinmesi arasındaki farkı anlamak önemlidir bir <xref:System.Data.DataTable> ve satır kaldırılıyor. Çağırdığınızda `Remove` veya `RemoveAt` yöntemi, satır hemen kaldırıldı. Arka uç veri kaynağına karşılık gelen tüm satırlarda, ardından geçirirseniz etkilenmez `DataTable` veya `DataSet` için bir `DataAdapter` ve çağrı `Update`. Kullanırken `Delete` yöntemi, satır içinde kalır `DataTable` ve silinmek üzere işaretlenmiş. Ardından geçirirseniz `DataTable` veya `DataSet` için bir `DataAdapter` ve çağrı `Update`, arka uç veri kaynağına karşılık gelen satır silindi.  
   
- Farklı değerleri aşağıdaki tabloda açıklanmaktadır `UpdateRowSource` numaralandırma ve ile kullanılan bir komut davranışını nasıl etkilediklerini bir `DataAdapter`.  
+ Varsa, `DataTable` eşler veya oluşturulan bir tek veritabanı tablosundan avantajlarından yararlanabilirsiniz <xref:System.Data.Common.DbCommandBuilder> otomatik olarak oluşturmak için nesne `DeleteCommand`, `InsertCommand`, ve `UpdateCommand` için nesneleri `DataAdapter`. Daha fazla bilgi için [CommandBuilders ile komut oluşturma](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Değerlerini bir veri kümesine eşlenecek UpdatedRowSource kullanma  
+ Veri kaynağından döndürülen değerlerin geri nasıl eşleneceğini denetleyebilirsiniz `DataTable` güncelleştirme yöntemi çağrıyı izleyen bir `DataAdapter`, kullanarak <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> özelliği bir <xref:System.Data.Common.DbCommand> nesne. Ayarlayarak `UpdatedRowSource` özelliğini birine <xref:System.Data.UpdateRowSource> numaralandırma değerlerinin çıkış parametreleri tarafından döndürülen olup olmadığını denetleyebilir `DataAdapter` komutları göz ardı veya değiştirilen satır içinde uygulanan `DataSet`. İlk değiştirilen satıra uygulanan (varsa) satır döndürülüp döndürülmediğini belirtebilirsiniz `DataTable`.  
+  
+ Farklı değerleri aşağıdaki tabloda açıklanmıştır `UpdateRowSource` numaralandırma ve ile kullanılan bir komut davranışını nasıl etkilediklerini bir `DataAdapter`.  
   
 |UpdatedRowSource numaralandırması|Açıklama|  
 |----------------------------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|Değiştirilen satır çıkış parametreleri ve döndürülen sonuç kümesi ilk satır eşlenebilir `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.Both>|Değiştirilen satır içinde hem çıkış parametreleri hem de döndürülen sonuç kümesi ilk satır eşlenebilir `DataSet`.|  
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Döndürülen sonuç kümesi ilk satır verileri yalnızca değiştirilen satıra eşlenebilir `DataSet`.|  
-|<xref:System.Data.UpdateRowSource.None>|Herhangi bir çıktı parametreleri veya döndürülen sonuç kümesinin satırlar yok sayılır.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|Çıkış parametreleri yalnızca değiştirilen satıra eşlenebilir `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.None>|Tüm çıkış parametreleri veya döndürülen sonuç kümesinin satırlar yoksayılır.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|Çıktı parametreleri yalnızca End'i eşlenebilir değiştirilen satıra `DataSet`.|  
   
- `Update` Metodu çözümler değişikliklerinizi geri veri kaynağına; ancak diğer istemciler değiştirilen verileri veri kaynağında doldurduğunuz son zaman `DataSet`. Yenilemek için `DataSet` geçerli verilerle kullanmak `DataAdapter` ve `Fill` yöntemi. Yeni satırlar tabloya eklenir ve güncelleştirilmiş bilgileri varolan satırlara birleştirilir. `Fill` Yöntemi yeni bir satır eklenir ya da var olan bir satır satır birincil anahtar değerlerinin inceleyerek güncelleştirileceği belirler `DataSet` ve tarafından döndürülen satır `SelectCommand`. Varsa `Fill` yöntemi karşılaştığı bir satır için bir birincil anahtar değeri `DataSet` tarafından döndürülen sonuçlar numaralı satırdaki bir birincil anahtar değeri ile eşleşen `SelectCommand`, varolan bir satır tarafındandöndürülensatırbilgileriylegüncelleştirir`SelectCommand`ve ayarlar <xref:System.Data.DataRow.RowState%2A> mevcut satırın `Unchanged`. Tarafından döndürülen bir satır varsa `SelectCommand` satırları birincil anahtar değerleriyle eşleşmeyen birincil anahtar değerine sahip `DataSet`, `Fill` yöntemi ile yeni bir satır ekler bir `RowState` , `Unchanged`.  
+ `Update` Yöntemi çözümler yaptığınız değişiklikleri veri kaynağına geri; ancak diğer istemciler değiştirilen veri kaynağını veri doldurduğunuz son daraltılmasından `DataSet`. Yenilemek için `DataSet` geçerli verilerle kullanmanız `DataAdapter` ve `Fill` yöntemi. Yeni satır tabloya eklenecek ve güncelleştirilmiş bilgileri var olan satır birleştirilir. `Fill` Yöntemi yeni bir satır eklenir ya da mevcut bir satırı birincil anahtar değerlerini satırlarda inceleyerek güncelleştirilecek belirler `DataSet` ve tarafından döndürülen satırlar `SelectCommand`. Varsa `Fill` yöntemi ile karşılaşırsa, bir satır için birincil bir anahtar değeri `DataSet` tarafından döndürülen sonuçları bir satırdaki birincil bir anahtar değeri ile eşleşen `SelectCommand`, var olan satır tarafındandöndürülensatırbilgilerlegüncelleştirir`SelectCommand`ve ayarlar <xref:System.Data.DataRow.RowState%2A> için mevcut satırın `Unchanged`. Tarafından döndürülen bir satır varsa `SelectCommand` birincil anahtar değerlerini satırlarda eşleşmeyen birincil bir anahtar değere sahip `DataSet`, `Fill` yöntemi ile yeni bir satır ekler bir `RowState` , `Unchanged`.  
   
 > [!NOTE]
->  Varsa `SelectCommand` bir dış birleşim, sonuçlarını döndürür `DataAdapter` ayarlanmamış bir `PrimaryKey` elde edilen değer `DataTable`. Tanımlamanız gerekir `PrimaryKey` kendinize yinelenen satırları düzgün olarak çözülen emin olun. Daha fazla bilgi için bkz: [tanımlama birincil anahtarlar](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+>  Varsa `SelectCommand` bir dış birleştirme, sonuçlarını döndürür `DataAdapter` değil ayarlayacak bir `PrimaryKey` elde edilen değer `DataTable`. Tanımlamanız gerekir `PrimaryKey` kendinize yinelenen satırları düzgün şekilde çözümlendiğinden emin olun. Daha fazla bilgi için [birincil anahtarlar tanımlama](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- Çağırma sırasında meydana gelebilecek özel durumları işleme `Update` yöntemini kullanabilirsiniz `RowUpdated` göründüklerinde satır güncelleştirme hataları yanıtlamasını olay (bkz [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), veya ayarlayabilirsiniz `DataAdapter.ContinueUpdateOnError` için`true` çağırmadan önce `Update`ve depolanan hata bilgilerini yanıtlar `RowError` güncelleştirme tamamlandığında, belirli bir satır özelliği (bkz [satır hata bilgilerini](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
+ Çağrılırken oluşabilecek özel durumları işlemek için `Update` kullanabileceğiniz yöntemi `RowUpdated` oluşunca, satır güncelleştirme hatalar için yanıt vermede olay (bkz [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), veya ayarlayabilirsiniz `DataAdapter.ContinueUpdateOnError` için`true` çağırmadan önce `Update`ve depolanan hata bilgilerini yanıtlar `RowError` güncelleştirme tamamlandığında belirli bir satır özelliği (bkz [satır hatası bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Not** çağırma `AcceptChanges` üzerinde `DataSet`, `DataTable`, veya `DataRow` tüm neden olacak `Original` değerleri bir `DataRow` ile üzerine yazılmasını `Current` değerleri `DataRow`. Çağrıldıktan sonra satırı benzersiz olarak tanımlayan alan değerlerini değiştirilmişse, `AcceptChanges` `Original` değerleri artık değerleri veri kaynağında eşleşmeyen. `AcceptChanges` Her satır için güncelleştirme yöntemine bir çağrı sırasında otomatik olarak çağrılır bir `DataAdapter`. İlk ayarlayarak güncelleştirme yöntemine bir çağrı sırasında orijinal değerleri koruyabilir `AcceptChangesDuringUpdate` özelliği `DataAdapter` false ya da bir olay işleyicisi oluşturarak `RowUpdated` olay ve ayarı <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. Daha fazla bilgi için bkz: [birleştirme DataSet içeriği](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) ve [olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Not** çağırma `AcceptChanges` üzerinde `DataSet`, `DataTable`, veya `DataRow` tüm neden olacak `Original` değerleri bir `DataRow` üzerine için `Current` değerleri `DataRow`. Çağırdıktan sonra satırı benzersiz olarak tanımlayan alan değerlerini değiştirilmişse, `AcceptChanges` `Original` değerleri veri kaynağı değerleri artık eşleşir. `AcceptChanges` Güncelleştirme yöntemine bir çağrı sırasında her satır için otomatik olarak adlandırılan bir `DataAdapter`. İlk ayarlayarak güncelleştirme yöntemine bir çağrı sırasında orijinal değerleri koruyabilir `AcceptChangesDuringUpdate` özelliği `DataAdapter` false veya bir olay işleyicisi için oluşturarak `RowUpdated` olay ve ayarı <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> için <xref:System.Data.UpdateStatus.SkipCurrentRow>. Daha fazla bilgi için [DataSet içeriklerini birleştirme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) ve [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler açıkça ayarlayarak değiştirilmiş satırlara güncelleştirmeleri gerçekleştirmek nasıl göstermektedir `UpdateCommand` , bir `DataAdapter` ve çağırma kendi `Update` yöntemi. Parametre güncelleştirme WHERE yan tümcesinde deyimi kullanmak üzere ayarlanmış belirtilen bildirimi `Original` değerini `SourceColumn`. Bu önemlidir çünkü `Current` değeri değiştirilmiş olabilir ve veri kaynağındaki değer eşleşmeyebilir. `Original` Değerdir doldurmak için kullanılan değer `DataTable` veri kaynağından.  
+ Aşağıdaki örnekler açıkça ayarlayarak değiştirilmiş satırları güncelleştirmeleri gerçekleştirmek nasıl göstermektedir `UpdateCommand` , bir `DataAdapter` ve çağırma kendi `Update` yöntemi. Bildirim parametresi güncelleştirme WHERE yan tümcesinde deyimi kullanmak üzere ayarlanmış belirtilen `Original` değerini `SourceColumn`. Bu önemlidir çünkü `Current` değeri değiştirilmiş olabilir ve veri kaynağı değeri eşleşmeyebilir. `Original` Değerdir doldurmak için kullanılan değer `DataTable` veri kaynağından.  
   
  [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]  
   
 ## <a name="autoincrement-columns"></a>AutoIncrement sütunları  
- Veri kaynağınızı tablolardan otomatik artırma sütunları varsa, sütunları doldurabilirsiniz, `DataSet` da otomatik artım değeri döndüren bir saklı yordam bir output parametresi olarak ve, bir tablodaki bir sütun eşlemesi, göre döndürme bir sonuç kümesi bir saklı yordam veya SQL deyimi veya kullanarak döndürülen ilk satırında otomatik artım değeri `RowUpdated` olayı `DataAdapter` ek bir SELECT deyimi yürütmek için. Daha fazla bilgi ve bir örnek için bkz: [alma kimliği veya sayı değerlerini](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ Veri kaynağınızdaki tabloları otomatik artan sütununuz varsa, sütunları doldurabilirsiniz, `DataSet` göre ya da otomatik artış değeri döndüren bir saklı yordam bir output parametresi olarak ve bu tablodaki bir sütun eşleme, döndürme otomatik artış değeri bir sonuç kümesi saklı yordam ya da SQL deyimi veya kullanarak döndürülen ilk satırında `RowUpdated` olayı `DataAdapter` ek bir SELECT deyimi yürütmek için. Daha fazla bilgi ve örnek için bkz. [alınırken kimlik veya otomatik sayı değerlerini](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
-## <a name="ordering-of-inserts-updates-and-deletes"></a>Ekler, güncelleştirmeleri ve silme sıralama  
- Birçok durumlarda aracılığıyla hangi değişikliklerinin sırayla `DataSet` gönderilen veri kaynağı önemlidir. Örneğin, bir birincil anahtar değeri olan bir satır için güncelleştirilir ve yabancı anahtar olarak yeni birincil anahtar değerine sahip yeni bir satır eklenir, güncelleştirmeden önce Ekle işlemek önemlidir.  
+## <a name="ordering-of-inserts-updates-and-deletes"></a>Ekleme, güncelleştirme ve silme sıralama  
+ Birçok durumda aracılığıyla hangi değişiklikleri sırayla `DataSet` gönderilen veri kaynağı önemlidir. Örneğin, mevcut bir satırı için birincil bir anahtar değer güncelleştirilir ve yabancı anahtar yeni birincil anahtar değerine sahip yeni bir satır eklendi, güncelleştirmeden önce INSERT işlemek önemlidir.  
   
- Kullanabileceğiniz `Select` yöntemi `DataTable` döndürmek için bir `DataRow` yalnızca belirli bir satırlarla başvuran dizi `RowState`. Ardından döndürülen geçirebilirsiniz `DataRow` için dizi `Update` yöntemi `DataAdapter` değiştirilen satırları işleyemedi. Güncelleştirilecek satırların alt kümesini belirterek ekler, güncelleştirmeleri ve silme işlenen siparişi kontrol edebilirsiniz.  
+ Kullanabileceğiniz `Select` yöntemi `DataTable` döndürülecek bir `DataRow` yalnızca belirli bir satırla başvuran bir dizi `RowState`. Ardından döndürülen geçirebilirsiniz `DataRow` için dizi `Update` yöntemi `DataAdapter` değiştirilen satırları işlenecek. Güncelleştirilecek satır kümesini belirterek, ekleme, güncelleştirme ve silme işlenme sırasını denetleyebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Örneğin, aşağıdaki kodu tablonun silinen satırları işlenen ilk sonra güncelleştirilen satırları ve eklenen satırlar olmasını sağlar.  
+ Örneğin, aşağıdaki kod, tablonun silinen satırları işlenen ilk sonra güncelleştirilen satırların ve eklenen satırları olmasını sağlar.  
   
 ```vb  
 Dim table As DataTable = dataSet.Tables("Customers")  
@@ -96,17 +96,17 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ```  
   
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>DataAdapter almak ve verileri güncelleştirmek için kullanın  
- DataAdapter alabilir ve verileri güncelleştirmek için kullanabilirsiniz.  
+ DataAdapter almak ve verileri güncelleştirmek için kullanabilirsiniz.  
   
--   Örnek DataAdapter.AcceptChangesDuringFill veritabanındaki verileri kopyalamak için kullanır. Özelliği false olarak ayarlarsanız, AcceptChanges tablo doldururken çağrılmaz ve yeni eklenen satır ekli satırlar olarak kabul edilir. Bu nedenle, örnek veritabanına yeni satır eklemek için bu satırı kullanır.  
+-   Örnek DataAdapter.AcceptChangesDuringFill veritabanındaki verileri kopyalamak için kullanır. Özelliği false ayarlarsanız, tablonun doldururken AcceptChanges çağrılmaz ve yeni eklenen satırlar eklenen satırlar olarak kabul edilir. Bu nedenle, örnek veritabanına yeni satır eklemek için bu satırlara kullanır.  
   
--   Örnekler DataAdapter.TableMappings kaynak tablosu ile DataTable arasında eşleme tanımlamak için kullanır.  
+-   Örnekleri DataAdapter.TableMappings DataTable ve kaynak tablosu arasındaki eşlemeyi tanımlamak için kullanır.  
   
--   Örnek DataAdapter.FillLoadOption nasıl bağdaştırıcısı DataTable DbDataReader nesnesinden doldurur belirlemek için kullanır. DataTable oluşturduğunuzda, yalnızca verileri veritabanından geçerli sürümü veya özgün sürümü LoadOption.Upsert veya LoadOption.PreserveChanges olarak özelliği ayarlanarak yazabilirsiniz.  
+-   Örnek DataAdapter.FillLoadOption bağdaştırıcısı DataTable nesnesinden dbdatareader öğesine dönüştürülemedi nasıl doldurduğunu belirlemek için kullanır. Bir DataTable oluşturduğunuzda, yalnızca veri veritabanından geçerli sürümü veya özgün sürümle LoadOption.Upsert veya LoadOption.PreserveChanges olarak ayarlayarak yazabilirsiniz.  
   
--   Toplu işlemleri gerçekleştirmek için DbDataAdapter.UpdateBatchSize kullanarak örnek da tabloyu güncelleştir.  
+-   Toplu işlemleri gerçekleştirmek için DbDataAdapter.UpdateBatchSize kullanarak örnek ayrıca tablo güncelleştirin.  
   
- Derleme ve örneği çalıştırmadan önce örnek veritabanı oluşturmanız gerekir:  
+ Derleme ve örneği çalıştırmadan önce örnek veritabanını oluşturmanız gerekir:  
   
 ```  
 USE [master]  
@@ -172,7 +172,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO  
 ```  
   
- Bu kod örneği ile C# ve Visual Basic projeleri bulunabilir [Geliştirici kod örnekleri](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
+ Bu kod örneği ile C# ve Visual Basic projeleri bulunabilir [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
   
 ```  
 using System;  
@@ -374,4 +374,4 @@ class Program {
  [AcceptChanges ve RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  [DataSet İçeriklerini Birleştirme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  [Kimliği veya Otomatik Sayı Değerlerini Alma](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
