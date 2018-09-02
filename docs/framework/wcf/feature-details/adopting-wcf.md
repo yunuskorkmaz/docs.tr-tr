@@ -2,18 +2,18 @@
 title: Windows Communication Foundation'ı Benimseme
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 3ca2561356fb57fa685c778e509682581e317092
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999339"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389618"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Windows Communication Foundation'ı Benimseme
 
 ASP.NET kullanılarak geliştirilen mevcut uygulamaları korumak devam ederken, yeni geliştirme projeleri için Windows Communication Foundation (WCF) kullanmayı da tercih edebilirsiniz. WCF hiçbir senaryoda .NET Framework ile oluşturulan uygulamalar ile iletişimi etkinleştirme için en uygun seçeneği olacak şekilde tasarlandığından, çok çeşitli yazılım bir şekilde iletişim sorunlarını çözmek için standart bir araç ASP.NET görebilir uygulanamaz.
 
-Yeni WCF uygulamaları mevcut ASP.NET Web Hizmetleri olarak aynı makinede dağıtılabilir. Mevcut ASP.NET Web Hizmetleri .NET Framework 2.0 sürümünden önceki bir sürümünü kullanıyorsanız, seçmeli olarak .NET Framework 2.0, barındırılması için yeni WCF uygulamaları olduğu IIS uygulama dağıtmak için ASP.NET IIS Kayıt aracını kullanabilirsiniz. Bu aracı adresinde belgelenen [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](http://go.microsoft.com/fwlink/?LinkId=94687), ve IIS 6.0 yönetim konsoluna oluşturduğu bir kullanıcı arabirimi.
+Yeni WCF uygulamaları mevcut ASP.NET Web Hizmetleri olarak aynı makinede dağıtılabilir. Mevcut ASP.NET Web Hizmetleri .NET Framework 2.0 sürümünden önceki bir sürümünü kullanıyorsanız, seçmeli olarak .NET Framework 2.0, barındırılması için yeni WCF uygulamaları olduğu IIS uygulama dağıtmak için ASP.NET IIS Kayıt aracını kullanabilirsiniz. Bu aracı adresinde belgelenen [ASP.NET IIS Kayıt Aracı (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687), ve IIS 6.0 yönetim konsoluna oluşturduğu bir kullanıcı arabirimi.
 
 WCF, IIS mevcut ASP.NET Web hizmeti uygulama için ASP.NET uyumluluk modunda çalışacak şekilde yapılandırılmış WCF hizmetlerini ekleyerek mevcut bir ASP.NET Web Hizmetleri için yeni özellikler eklemek için kullanılabilir. ASP.NET uyumluluk modunun nedeniyle yeni WCF hizmetleri için kod erişebilir ve aynı uygulama durumu bilgileri önceden mevcut olan ASP.NET kodunu kullanarak güncelleştirme <xref:System.Web.HttpContext> sınıfı. Uygulamalar Ayrıca aynı sınıf kitaplıkları paylaşabilirsiniz.
 

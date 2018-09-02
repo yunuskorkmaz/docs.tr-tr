@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 7736b8850a7b09f7212e83e05acf0e1994bce0fe
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a337ecbc614ff40eda42fc5263dbb52aa92b905f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000010"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397735"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# Derleyici Seçenekleri)
 **-Hedef** derleyici seçeneği dört biçimlerden birinde belirtilebilir:  
@@ -63,6 +63,7 @@ public class TestClass
  Bu derleyici seçeneğini programlama yoluyla ayarlama hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [-subsystemversion (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+- [-subsystemversion (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)

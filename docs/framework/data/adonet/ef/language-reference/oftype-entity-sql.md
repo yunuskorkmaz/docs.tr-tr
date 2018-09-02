@@ -2,15 +2,15 @@
 title: OFTYPE (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: e33d613f290338d63a232bf78e7ebd0826c19897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764128"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389887"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (varlık SQL)
-Belirli bir türde bir sorgu ifadesinden nesneler koleksiyonunu döndürür.  
+Belirli bir tür bir sorgu ifadesinden nesnelerinin bir koleksiyonunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,38 +20,38 @@ OFTYPE ( expression, [ONLY] test_type )
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Nesneleri topluluğunu döndürür herhangi bir geçerli sorgu ifade.  
+ Nesnelerin bir koleksiyonunu döndürür herhangi bir geçerli ifade.  
   
  `test_type`  
- Türü tarafından döndürülen her nesne test `expression` karşı. Türü bir ad alanı tarafından nitelenmiş olmalıdır.  
+ Tarafından döndürülen her nesne sınanacak tür `expression` karşı. Türü bir ad alanı tarafından nitelendirilmelidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Türündeki nesneler koleksiyonunu `test_type`, veya bir taban türü veya türetilmiş türü `test_type`. YALNIZCA belirtilen yalnızca örnekler, `test_type` ya da boş bir koleksiyon döndürülür.  
+ Türündeki nesneler koleksiyonunu `test_type`, veya bir temel tür veya türetilmiş bir tür `test_type`. YALNIZCA belirtilen yalnızca örnekler, `test_type` ya da boş bir koleksiyon döndürülür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `OFTYPE` ifadesi her bir koleksiyon öğesinin türü sınaması gerçekleştirmek için verilen bir türü ifade belirtir.  `OFTYPE` İfadesi belirtilen türde ya da olan öğeleri içeren yeni bir koleksiyon oluşturur türü veya alt türünü eşdeğerdir.  
+ Bir `OFTYPE` koleksiyonun her öğesine karşı bir tür testi gerçekleştirmek için verilen bir tür ifadesi ifade belirtir.  `OFTYPE` İfade ya da olan öğeleri içeren belirtilen türe ait yeni bir koleksiyon oluşturur, tür veya alt türünü eşdeğerdir.  
   
- Bir `OFTYPE` ifadesidir aşağıdaki sorgu ifadesi için bir kısaltma:  
+ Bir `OFTYPE` aşağıdaki sorgu ifadesinin bir kısaltma ifadesidir:  
   
 ```  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
- Alt çalışan türünün bir yönetici olması koşuluyla, aşağıdaki deyim yalnızca yöneticileri çalışanlar koleksiyonundan koleksiyonu üretir:  
+ Çalışan bir alt yöneticisidir düşünüldüğünde, aşağıdaki ifade yalnızca çalışanlar koleksiyonu yöneticileri koleksiyonu oluşturur:  
   
 ```  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
- En fazla türü filtresi kullanılarak bir koleksiyonu cast mümkündür:  
+ En fazla türü filtresi kullanarak koleksiyon türüne mümkündür:  
   
 ```  
 OfType(executives, NamespaceName.Manager)  
 ```  
   
- Tüm Yöneticiler yöneticileri olduğundan, koleksiyon şimdi yöneticileri koleksiyonu olarak belirtilmiş olsa elde edilen koleksiyon hala tüm özgün Yöneticiler içeriyor.  
+ Tüm Yöneticiler yöneticileri olduğundan, koleksiyon artık yöneticileri koleksiyonu olarak yazılmış olsa, elde edilen koleksiyon hala tüm özgün Yöneticiler içeriyor.  
   
- Aşağıdaki tabloda davranışını gösterilmektedir `OFTYPE` bazı desenleri üzerinden işleci. Sağlayıcı çağrılmadan önce tüm istemci tarafındaki özel durumlar:  
+ Aşağıdaki tabloda davranışını gösteren `OFTYPE` bazı desenleri üzerinden işleci. Sağlayıcı çağrılmadan önce tüm istemci tarafında özel durumlar:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
@@ -60,7 +60,7 @@ OfType(executives, NamespaceName.Manager)
 |OFTYPE(Collection(RowType), RowType)|Oluşturur|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu OnsiteCourse nesneler koleksiyonunu koleksiyondan Elbette nesneler döndürmeye OFTYPE işleci kullanır. Sorgu dayanır [Okul modeli](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu OnsiteCourse nesnelerden oluşan bir koleksiyon bir koleksiyondan Elbette nesneler döndürmeye OFTYPE işleci kullanır. Sorgu dayanır [Okul modeli](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   

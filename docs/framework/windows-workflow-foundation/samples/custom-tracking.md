@@ -2,40 +2,40 @@
 title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a025c23f967b0a8f2c387aa581536233ddb70a76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c986d9845bb76219ad8b0657a3a7252aaaf4c6cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518010"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392549"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
-Bu örnek, özel izleme katılımcı oluşturmak ve izleme verilerini içeriğini konsola yazma gösterilmiştir. Ayrıca, örnek yayma gösterilmiştir <xref:System.Activities.Tracking.CustomTrackingRecord> kullanıcıyla doldurulmuş nesneleri tanımlanmış veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> izleme profili kullanan iş akışı tarafından gösterilen nesneleri kodda oluşturulan nesne.  
+Bu örnek bir özel izleme Katılımcısı oluşturma ve izleme verilerini içeriğini konsola yazma gösterir. Ayrıca, örnek yayma yapmayı gösteren <xref:System.Activities.Tracking.CustomTrackingRecord> doldurulmuş olan kullanıcı nesneleri tanımlanan veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> nesneleri bir izleme profili kullanan iş akışı tarafından yayılan kod içinde oluşturulan bir nesne.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Windows Workflow Foundation (WF) iş akışı örneğini yürütmeyi izlemek üzere bir izleme altyapısı sağlar. İzleme çalışma zamanı iş akışı yaşam döngüsü olayları için iş akışı etkinlikleri ve özel izleme olaylarını ilgili olayları yaymak üzere bir iş akışı örneği uygular. Aşağıdaki tabloda birincil bileşenleri izleme altyapısının ayrıntılı olarak açıklanmaktadır.  
+ Windows Workflow Foundation (WF) iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme çalışma zamanı olaylarını, iş akışı yaşam döngüsü için iş akışı etkinlikleri ve özel izleme olaylarından ilgili olayları yaymak için bir iş akışı örneği uygular. Aşağıdaki tabloda birincil izleme altyapısının bileşenleri ayrıntıları.  
   
 |Bileşen|Açıklama|  
 |---------------|-----------------|  
-|Çalışma zamanı izleme|İzleme kayıtları yayma için altyapı sağlar.|  
-|Katılımcıların izleme|İzleme kayıtların tüketir. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] Olay izleme için Windows (ETW) olayları olarak izleme kayıtları Yazar izleme katılımcı birlikte verilir.|  
-|İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtları alt kümeleri için abone olmak izleme katılımcı sağlayan bir filtreleme mekanizması.|  
+|Çalışma zamanı izleme|İzleme kayıtları yaymak için altyapı sağlar.|  
+|İzleme katılımcıları|İzleme kayıtları kullanır. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan bir izleme katılımcı birlikte verilir.|  
+|İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtları bir alt kümesi için abone olmak izleme Katılımcısı sağlayan bir filtreleme mekanizması.|  
   
- Aşağıdaki tabloda, iş akışı çalışma zamanı yayar izleme kayıtları ayrıntıları verilmektedir.  
+ Aşağıdaki tabloda, iş akışı çalışma zamanı yayan izleme kayıtları ayrıntıları.  
   
-|İzleme kaydı|Açıklama|  
+|Kayıt izleme|Açıklama|  
 |---------------------|-----------------|  
-|İş akışı örneği izleme kaydeder.|İş akışı örneği yaşam döngüsünü açıklar. Örneğin, iş akışı başlatıldığında veya tamamlandıktan bir örnek kaydı yayınlanır.|  
-|Etkinlik durumu izleme kaydeder.|Ayrıntılar Etkinlik yürütme. Bu kayıtları bir etkinlik olduğunda zamanlanmış veya etkinlik tamamlandığında veya bir hata olduğunda atılır gibi bir iş akışı etkinlik durumunu belirtir.|  
-|Sürdürme kayıt yer işareti.|Bir iş akışı örneği yer işareti sürdürüldü her yayılan.|  
-|Özel İzleme kaydeder.|Bir iş akışı yazarı özel izleme kayıtları oluşturmak ve bunları içinde özel Etkinlik yayma.|  
+|İş akışı örneği izleme kayıtları.|İş akışı örneği yaşam döngüsünü açıklar. Örneğin, iş akışı başlatıldığında veya tamamlanan bir örnek kaydı yayınlanır.|  
+|Etkinlik durumu izleme kayıtları.|Etkinlik yürütme ayrıntıları. Bu kayıtlar, bir etkinlik olduğunda zamanlanmış etkinlik tamamlandığında veya bir hata harekete geçirildiğinde gibi bir iş akışı etkinlik durumunu gösterir.|  
+|Sürdürme kayıt yer işareti.|Her bir iş akışı örneği içinde yer sürdürüldü yayılır.|  
+|Özel izleme kayıtları.|Bir iş akışı Yazar özel izleme kayıtları oluşturabilir ve bunları özel bir etkinlik içinde gösterin.|  
   
- Bir alt kümesi verilmiş için izleme katılımcı abone <xref:System.Activities.Tracking.TrackingRecord> izleme profilleri kullanarak nesneleri. İzleme profili belirli izleme kayıt türü için abone izin izleme sorgularını içerir. Profilleri izleme kod veya yapılandırma belirtilebilir.  
+ Bir alt kümesi yayılan için izleme katılımcı abone <xref:System.Activities.Tracking.TrackingRecord> izleme profilleri kullanarak nesne. Bir izleme profili belirli izleme kayıt türü için abone izin izleme sorguları içerir. İzleme profilleri kod veya yapılandırma belirtilebilir.  
   
 ### <a name="custom-tracking-participant"></a>Özel İzleme katılımcı  
- İzleme katılımcı API izleme çalışma zamanı uzantısı işlemek için özel mantığı içeren bir kullanıcı tarafından sağlanan izleme katılımcı ile verir <xref:System.Activities.Tracking.TrackingRecord> iş akışı çalışma zamanı tarafından gösterilen nesneleri.  
+ API izleme katılımcı izleme çalışma zamanı uzantısını işlemek için özel mantığı içeren bir kullanıcı tarafından sağlanan izleme katılımcı ile sağlar <xref:System.Activities.Tracking.TrackingRecord> iş akışı çalışma zamanı tarafından yayılan nesneleri.  
   
- Bir izleme yazmak için katılımcı kullanıcı uygulamalıdır <xref:System.Activities.Tracking.TrackingParticipant>. Özellikle, <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> yöntemi özel katılımcı tarafından uygulanması gerekiyor. Bu yöntem aldığında çağrılan bir <xref:System.Activities.Tracking.TrackingRecord> iş akışı çalışma zamanı tarafından yayınlanır.  
+ Bir izleme yazmak için katılımcı kullanıcı uygulamalıdır <xref:System.Activities.Tracking.TrackingParticipant>. Özellikle, <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> özel katılımcı tarafından uygulanmak üzere yöntemi vardır. Bu yöntem aldığında çağrılan bir <xref:System.Activities.Tracking.TrackingRecord> iş akışı çalışma zamanı tarafından yayılır.  
   
 ```csharp  
 public abstract class TrackingParticipant  
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }  
 ```  
   
- Tam izleme katılımcı ConsoleTrackingParticipant.cs dosyasında uygulanır. Aşağıdaki kod örneğinde olduğu <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> özel izleme katılımcı yöntemi.  
+ Tüm izleme katılımcı ConsoleTrackingParticipant.cs dosyasında uygulanır. Aşağıdaki kod örneği olan <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> özel izleme Katılımcısı için yöntemi.  
   
 ```csharp  
 protected override void Track(TrackingRecord record, TimeSpan timeout)  
@@ -93,7 +93,7 @@ protected override void Track(TrackingRecord record, TimeSpan timeout)
 }  
 ```  
   
- Aşağıdaki kod örneğinde, iş akışı çağırıcı konsol katılımcı ekler.  
+ Aşağıdaki kod örneği, iş akışı Başlatıcısı için konsol katılımcı ekler.  
   
 ```csharp  
 ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingParticipant()  
@@ -108,13 +108,13 @@ invoker.Extensions.Add(customTrackingParticipant);
 ```  
   
 ### <a name="emitting-custom-tracking-records"></a>Özel izleme kayıtları yayma  
- Bu örnek ayrıca yayma yeteneğini gösterir <xref:System.Activities.Tracking.CustomTrackingRecord> özel iş akışı etkinlik nesnelerden:  
+ Bu örnek ayrıca yayma özelliği gösterir <xref:System.Activities.Tracking.CustomTrackingRecord> özel iş akışı etkinlik nesneleri:  
   
--   <xref:System.Activities.Tracking.CustomTrackingRecord> Nesneleri oluşturulur ve istenen kayıtla yayınlaması için kullanıcı tarafından tanımlanan verilerle doldurulur.  
+-   <xref:System.Activities.Tracking.CustomTrackingRecord> Nesnelerinin oluşturulduğu ve kayıtla derleyicisindeki istenen kullanıcı tarafından tanımlanan verilerle doldurulur.  
   
--   <xref:System.Activities.Tracking.CustomTrackingRecord> İzleme yöntemi çağrılarak gösterilen <xref:System.Activities.ActivityContext>.  
+-   <xref:System.Activities.Tracking.CustomTrackingRecord> Track yöntemi çağırarak yayılan <xref:System.Activities.ActivityContext>.  
   
- Aşağıdaki örnek yayma gösterilmiştir <xref:System.Activities.Tracking.CustomTrackingRecord> özel etkinlik içindeki nesneler.  
+ Aşağıdaki örnek yayma gösterilmektedir <xref:System.Activities.Tracking.CustomTrackingRecord> özel bir etkinlik içinde nesneler.  
   
 ```csharp  
 // Create the Custom Tracking Record  
@@ -135,18 +135,18 @@ context.Track(customRecord);
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], CustomTrackingSample.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric izleme örnekleri](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

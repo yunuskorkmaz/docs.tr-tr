@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], security
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
-ms.openlocfilehash: 730d8f692a44a06ea142bb870bbd961d5983c785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 683c6ad4cbc55a889f4a0c1d20ebe8e8a2669a13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534618"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399183"
 ---
 # <a name="webbrowser-security"></a>WebBrowser Güvenliği
-<xref:System.Windows.Forms.WebBrowser> Denetimi yalnızca tam güvende çalışacak şekilde tasarlanmıştır. Denetimde görüntülenen HTML içeriğini dış Web sunucularından gelebilir ve komut dosyaları veya Web denetimleri biçiminde yönetilmeyen kod içerebilir. Kullanırsanız <xref:System.Windows.Forms.WebBrowser> bu durumda, Denetim denetimidir Internet Explorer, yönetilen daha Hayır daha az güvenli <xref:System.Windows.Forms.WebBrowser> denetimi gibi yönetilmeyen kod çalışmasını engellemez.  
+<xref:System.Windows.Forms.WebBrowser> Denetim, yalnızca tam güven içinde çalışacak şekilde tasarlanmıştır. Denetimde görüntülenen HTML içeriğini dış Web sunucularından gelebilir ve yönetilmeyen kodda betikleri ya da Web denetimleri içerebilir. Kullanırsanız <xref:System.Windows.Forms.WebBrowser> denetimi bu durumda, Denetim, Internet Explorer, yönetilen olandan en az güvenli <xref:System.Windows.Forms.WebBrowser> denetimi gibi yönetilmeyen kod çalışmasını engellemez.  
   
- Temel alınan ActiveX ilgili güvenlik konuları hakkında daha fazla bilgi için `WebBrowser` denetlemek için bkz: [WebBrowser denetimi](http://go.microsoft.com/fwlink/?LinkId=198812).  
+ Arka plandaki ActiveX öğesine ilişkin güvenlik konuları hakkında daha fazla bilgi için `WebBrowser` denetlemek için bkz: [WebBrowser denetimi](https://go.microsoft.com/fwlink/?LinkId=198812).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.WebBrowser>  
  [WebBrowser Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [WebBrowser Denetimi](http://go.microsoft.com/fwlink/?LinkId=198812)
+ [WebBrowser Denetimi](https://go.microsoft.com/fwlink/?LinkId=198812)

@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258583"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395484"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern ve Katıştırılmış Nesnelere Genel Bakış
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Bu genel bakış açıklar nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kullanıma sunan katıştırılmış nesneler veya bir metin belgesi veya kapsayıcı içinde alt öğeleri.  
   
@@ -46,7 +46,7 @@ Katıştırılmış nesneler ve onların aralığı yayılma ile metin akışın
   
  Bir metin aralığını içeriğini geçirmek gerekli olduğunda, bir dizi adım söz konusu sırasını arka planda <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> yöntemi başarıyla yürütülemedi.  
   
-1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, "{U} RL [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılmış" nerede "{" ve "}" metin aralığı noktalarıdır.  
+1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, "{U} RL [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılmış" nerede "{" ve "}" metin aralığı noktalarıdır.  
   
 2.  Elde edilen aralığın geriye taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
@@ -71,7 +71,7 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarland�
 ### <a name="hyperlink"></a>Köprü  
  **Örnek 1 - katıştırılmış bir köprü içeren bir metin aralığı**  
   
- {URL [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılmış}.  
+ {URL [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılmış}.  
   
 |Yöntemi|Sonuç|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarland�
   
  **Örnek 3 - bir metin kapsayıcı içeriğini kısmen yayılan bir metin aralığı. Metin aralığı bir parçası olmayan bir ekli metinleri köprü metin kapsayıcı vardır.**  
   
- {URL} [ http://www.microsoft.com ](http://www.microsoft.com) metinde katıştırılır.  
+ {URL} [ http://www.microsoft.com ](https://www.microsoft.com) metinde katıştırılır.  
   
 |Yöntemi|Sonuç|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarland�
  [UI Otomasyonu Kullanarak Katıştırılmış Nesnelere Erişme](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern arama ve seçim örneği](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern arama ve seçim örneği](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

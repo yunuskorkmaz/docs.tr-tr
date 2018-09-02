@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f56445e9bdd030d591f9fc6300f9a24d330dbc20
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257376"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395457"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
   
- Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) bir sistem dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanarak elektronik bir işlemde katılan her iki taraf. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifika gibi verileri içeren bir alanlar kümesine sahiptir *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlığı) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türe ayrılır: kimlik ve sağ. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](http://go.microsoft.com/fwlink/?LinkId=209952). Beyanlar ve yetkilendirmeyi WCF hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz. [Windows Server 2008 R2 - Sertifika Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Kısaca, bir dijital sertifika bir parçası olan bir *ortak anahtar altyapısı* (PKI) bir sistem dijital sertifikalar, sertifika yetkililerini ve geçerliliğini doğrulayan ve diğer yetkililerden olduğu Ortak anahtar şifrelemesi kullanarak elektronik bir işlemde katılan her iki taraf. Bir sertifika yetkilisi sertifikaları dağıtır ve her sertifika gibi verileri içeren bir alanlar kümesine sahiptir *konu* (sertifikanın verildiği varlık) geçerlilik tarihleri, veren ((sertifikanın olduğunda geçerli) Sertifikayı veren varlığı) ve ortak anahtar. WCF'de, bu özelliklerin her biri olarak işlenir bir <xref:System.IdentityModel.Claims.Claim>, ve her talep daha iki türe ayrılır: kimlik ve sağ. X.509 hakkında daha fazla bilgi için bkz: sertifikaları [X.509 ortak anahtar sertifikaları](https://go.microsoft.com/fwlink/?LinkId=209952). Beyanlar ve yetkilendirmeyi WCF hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Bir PKI uygulama hakkında daha fazla bilgi için bkz. [Windows Server 2008 R2 - Sertifika Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Diğer sertifika sahibinin kimliğini doğrulamak için bir sertifika birincil işlevi olduğu. Bir sertifika içerir *ortak anahtar* sahibi özel anahtarı tutarken sahip. Ortak anahtar sertifika sahibine gönderilen iletileri şifrelemek için kullanılabilir. Özel anahtarına erişime sahip yalnızca bunu yalnızca sahibi bu iletilerin şifresini çözebilir.  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
 -   **Kişisel**. Bu depo, bir bilgisayarın bir kullanıcıyla ilişkili sertifikaları için kullanılır. Genellikle bu depo, sertifika yetkilisi sertifikaları Güvenilen kök sertifika yetkilileri deposunda bulunan biri tarafından verilen sertifikaların kullanılır. Alternatif olarak, burada bulunan bir sertifika kendi kendine verilmesi ve bir uygulama tarafından güvenilen.  
   
- Sertifika depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](http://go.microsoft.com/fwlink/?LinkId=88912).  
+ Sertifika depoları hakkında daha fazla bilgi için bkz. [sertifika depolarını](https://go.microsoft.com/fwlink/?LinkId=88912).  
   
 ### <a name="selecting-a-store"></a>Bir Store seçme  
  Bir sertifikanın depolanacağı yeri seçilmesi bağlıdır nasıl ve ne zaman hizmet veya istemcinin çalıştırır. Aşağıdaki genel kurallar geçerlidir:  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
 -   Hizmet veya istemcinin bir kullanıcı hesabı altında çalışan bir uygulama ise, ardından kullanın **geçerli kullanıcının** depolayın.  
   
 ### <a name="accessing-stores"></a>Depoları erişme  
- Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: kullanım sırasında geliştirme için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](http://go.microsoft.com/fwlink/?LinkId=88914).  
+ Depoları, bir bilgisayardaki klasörler gibi erişim denetim listeleri (ACL'ler) korunur. Internet Information Services (IIS) tarafından barındırılan hizmet oluşturulurken [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] işlemini çalıştıran altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hesabı. Hesabı sertifikaları içeren depoya erişimine sahip olmalıdır, bir hizmeti kullanır. Ana mağazaların her biri varsayılan erişim listesi ile korunuyor, ancak liste değiştirilebilir. Bir mağazaya erişmek için ayrı bir rol oluşturursanız, bu rolü erişim izni vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişimi listesini değiştirme konusunda bilgi almak için bkz: [nasıl yapılır: kullanım sırasında geliştirme için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). IIS ile istemci sertifikaları kullanma hakkında daha fazla bilgi için bkz. [nasıl bir ASP.NET Web uygulaması kimlik doğrulaması için bir istemci sertifikasını kullanarak bir Web hizmeti çağırmak amacıyla](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Güven zinciri ve sertifika yetkilileri  
  Sertifikalar, bir hiyerarşideki her bir sertifika sertifikayı veren CA'ya burada bağlı oluşturulur. Bu CA'ın sertifikasını bağlantıdır. CA'ın sertifika sonra özgün CA'ın sertifika veren CA için bağlantılar. Kök CA sertifikasını ulaşılana kadar bu işlem tekrarlanır. Kök CA sertifikasını kendiliğinden güveniliyor.  
@@ -146,9 +146,9 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
  Sertifikaları yapılandırmayı kullanarak da ayarlayabilirsiniz. Bir hizmeti oluşturuyorsanız, kimlik, sertifikalar dahil altında belirtilir [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Bir istemci programlama yaparken sertifikalar altında belirtilir [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Bir kullanıcı hesabına bir sertifika eşlemesi  
- IIS ve Active Directory bir Windows kullanıcı hesabına bir sertifika eşleme özelliğini özelliğidir. Bu özellik hakkında daha fazla bilgi için bkz. [sertifikaları kullanıcı hesaplarına harita](http://go.microsoft.com/fwlink/?LinkId=88917).  
+ IIS ve Active Directory bir Windows kullanıcı hesabına bir sertifika eşleme özelliğini özelliğidir. Bu özellik hakkında daha fazla bilgi için bkz. [sertifikaları kullanıcı hesaplarına harita](https://go.microsoft.com/fwlink/?LinkId=88917).  
   
- Active Directory eşlemesi kullanma hakkında daha fazla bilgi için bkz. [dizin hizmeti eşlemesi ile eşleme istemci sertifikaları](http://go.microsoft.com/fwlink/?LinkId=88918).  
+ Active Directory eşlemesi kullanma hakkında daha fazla bilgi için bkz. [dizin hizmeti eşlemesi ile eşleme istemci sertifikaları](https://go.microsoft.com/fwlink/?LinkId=88918).  
   
  Bu özellik sayesinde etkin ayarlayabilirsiniz <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> özelliği <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfının `true`. Yapılandırması'nda ayarlayabileceğiniz `mapClientCertificateToWindowsAccount` özniteliği [ \<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesine `true`aşağıdaki kodda gösterildiği gibi.  
   

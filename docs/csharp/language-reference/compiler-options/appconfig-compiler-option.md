@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 3fca0821b8665354d840783fca3ab90ece41b2cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214776"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398514"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# Derleyici Seçenekleri)
-**- Appconfig** derleyici seçeneği derleme bağlama zamanında ortak dil çalışma zamanı (CLR) için bir derlemenin uygulama yapılandırması (app.config) dosyasının konumunu belirtmek C# uygulaması sağlar.  
+**- Appconfig** derleyici seçeneği, derleme bağlama zamanında ortak dil çalışma zamanı (CLR) için bir derlemenin uygulama yapılandırma (app.config) dosyasının konumunu belirtmek bir C# uygulaması sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,22 +26,22 @@ ms.locfileid: "33214776"
   
 ## <a name="arguments"></a>Arguments  
  `file`  
- Gerekli. Derleme bağlama ayarları içeren uygulama yapılandırma dosyası.  
+ Gerekli. Derleme bağlama ayarlarını içeren uygulama yapılandırma dosyası.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir kullanımını **- appconfig** Gelişmiş senaryoları bütünleştirilmiş olduğu .NET Framework sürümünü ve aynı anda belirli referans derlemesini Silverlight sürümü için .NET Framework başvurmak. Örneğin, Windows Presentation Foundation (WPF) yazılmış bir XAML Tasarımcısı hem WPF Masaüstü için tasarımcının kullanıcı arabirimi ve Silverlight ile gelen WPF alt başvuru gerekebilir. Her iki derlemeleri erişmek aynı tasarımcı derlemesi vardır. Derleme bağlama eşdeğer olarak iki derleme gördüğünden varsayılan olarak, bir derleyici hatası ayrı başvuruları neden.  
+ Bir kullanımını **- appconfig** senaryolarında bir derleme bulunduğu hem .NET Framework sürümü hem de Silverlight sürümü aynı anda belirli bir başvuru bütünleştirilmiş kodu için .NET Framework başvurmak Gelişmiş. Örneğin, Windows Presentation Foundation (WPF) yazılı bir XAML tasarımcının hem WPF Masaüstü Tasarımcısı kullanıcı arabirimi ve Silverlight ile gelen WPF alt kümesi için başvuru gerekebilir. Tasarımcı aynı derlemenin iki derleme erişmelidir. Varsayılan olarak, derleme bağlama iki derlemeyi eşdeğer olarak gördüğünden ayrı başvurular bir derleyici hatasına neden olur.  
   
- **- Appconfig** derleyici seçeneği sağlar, kullanarak varsayılan davranışı devre dışı bırakan bir app.config dosyasının konumunu belirtmek bir `<supportPortability>` , aşağıdaki örnekte gösterildiği gibi etiketi.  
+ **- Appconfig** derleyici seçeneği kullanılarak varsayılan davranışı devre dışı bırakan bir app.config dosyasının konumunu belirtmenize imkan tanır bir `<supportPortability>` , aşağıdaki örnekte gösterildiği gibi etiketleyin.  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
- Derleyici dosyasının konumunu CLR'nin derleme bağlama mantığı geçirir.  
+ Derleyici dosyasının konumu CLR'ın derleme bağlama mantığına geçirir.  
   
 > [!NOTE]
->  Uygulamanızı yapılandırmak için Microsoft Build Engine (MSBuild) kullanıyorsanız, ayarlayabileceğiniz **- appconfig** .csproj dosyasına bir özellik etiketi ekleyerek derleyici seçeneği. Projede zaten ayarlanmış app.config dosyasını kullanmak için özellik etiketi ekleyin `<UseAppConfigForCompiler>` .csproj için dosya ve değerini ayarlama `true`. Farklı bir app.config dosyası belirtmek için özellik etiketi ekleyin `<AppConfigForCompiler>` ve dosya konumuna değerini ayarlayın.  
+>  Uygulamanızı oluşturmak üzere Microsoft Build Engine (MSBuild) kullanıyorsanız, ayarlayabileceğiniz **- appconfig** için .csproj dosyasını bir özellik etiketi ekleyerek derleyici seçeneği. Projede zaten ayarlanmış ve app.config dosyasında kullanılacak özellik etiketi ekleyin `<UseAppConfigForCompiler>` için .csproj dosyasını ve değerini ayarlamak `true`. Farklı bir app.config dosyası belirtmek için özellik etiketi ekleyin `<AppConfigForCompiler>` ve dosya konumuna değerini ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir uygulama hem .NET Framework uygulamasını hem de her iki uygulamada da bulunan herhangi bir .NET Framework derlemesinin Silverlight uygulama için .NET Framework başvuran sağlayan bir app.config dosyasını gösterir. **- Appconfig** derleyici seçeneği bu app.config dosyasının konumunu belirtir.  
+ Aşağıdaki örnek bir uygulama hem .NET Framework uygulamasına hem de her iki uygulamada da bulunan herhangi bir .NET Framework derlemesinin Silverlight için .NET Framework başvuru sağlayan bir app.config dosyasını gösterir. **- Appconfig** derleyici seçeneği bu app.config dosyasının konumunu belirtir.  
   
 ```xml  
 <configuration>  
@@ -55,5 +55,6 @@ ms.locfileid: "33214776"
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<supportPortability > öğesi](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+
+- [\<supportPortability > öğesi](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [Alfabetik Listelenmiş C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

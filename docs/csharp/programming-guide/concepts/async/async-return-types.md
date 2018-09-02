@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 5ea3ef538bd0e3d74bbdcbd41519ae5041556b7e
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753944"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387585"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleri (C#)
 Zaman uyumsuz yöntemler, aşağıdaki dönüş türlerine sahip olabilir:
@@ -55,14 +55,15 @@ Aşağıdaki kod ayırır `WaitAndApologize` yöntemin döndürdüğü görevi b
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void dönüş türü  
+##  <a name="BKMK_VoidReturnType"></a> Void dönüş türü
+
 Kullandığınız `void` dönüş türünü gerektiren zaman uyumsuz olay işleyicilerini içinde bir `void` dönüş türü. Döndürme zorunluluğu dışında bir değer döndürmez olay işleyicisi yöntemleri için bir <xref:System.Threading.Tasks.Task> bunun yerine, döndüren zaman uyumsuz bir yöntem olduğundan `void` beklenemez. Tüm bu yöntemi çağıran kişi çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlanana kadar devam edebilir ve çağıran zaman uyumsuz yöntemin oluşturduğu özel durumları veya değerlerden bağımsız olmalıdır.  
   
 Void döndüren zaman uyumsuz yöntemi çağıran kişi yöntemden atılan özel durumları yakalayamaz ve böyle işlenmeyen özel durumların, uygulamanızın başarısız olmasına neden olabilecek. Döndüren zaman uyumsuz yöntemde özel durum oluşursa bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>, özel durum getirilen görevde depolanır ve görev beklenirken yeniden atılır. Bu nedenle, bir özel durum oluşturabilecek herhangi bir zaman uyumsuz yöntem dönüş türüne sahip olduğundan emin olun <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> ve yöntemine yönelik çağrılar beklediğinden.  
   
 Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için bkz. [zaman uyumsuz yöntemlerde özel durumları](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) bölümünü [try-catch](../../../language-reference/keywords/try-catch.md) konu.  
   
-Aşağıdaki örneğin zaman uyumsuz olay işleyicisi tanımlar.  
+Aşağıdaki örnek, zaman uyumsuz olay işleyicisi davranışını gösterir. Örnek kodda unutmayın, zaman uyumsuz olay işleyicisi ana iş parçacığı bittiğinde bilmeniz bildirmeniz gerekir. Ardından ana iş parçacığı zaman uyumsuz olay işleyicisi program çıkmadan önce tamamlanmasını bekleyebilirsiniz.
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  

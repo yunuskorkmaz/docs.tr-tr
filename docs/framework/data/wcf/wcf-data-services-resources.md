@@ -4,60 +4,60 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 9efb8c54af40d135203868d93079d15dd7878cd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364452"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395571"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Veri Hizmetleri Kaynakları
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] tanıtım konularını aşağıdaki konumlarda bulunabilir. Bu konularda çoğunu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Giriş konuları aşağıdaki konumlarda bulunabilir. Bu konular birçoğu ayrıca daha ayrıntılı bilgiler içeren ilgili konulara bağlantılar içerir.  
   
  [Genel bakış](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
- Özellikleri ve işlevleri kullanılabilen genel bir bakış sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Özellikleri ve işlevleri kullanıma genel bakış sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Başlarken](../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Tasarım ve kullanarak veri hizmetine erişim açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tarafından gösterildiği gibi [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Tasarım ve kullanarak bir veri hizmetine erişim açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]tarafından gösterildiği gibi [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
  [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- Görev tabanlı bir yaklaşım oluşturmaya sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve erişim uygulamaları [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.  
+ Oluşturma için görev tabanlı bir yaklaşım sunan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve erişen uygulamalar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışları.  
   
- [Visual Studio ve .NET Framework Sözlüğü](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Visual Studio ve .NET Framework Sözlüğü](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  İçinde kullanılan terimleri içeren [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] belgeleri.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
- Oluşturmak için ek bilgi ve Destek aşağıdaki dış kaynaklar sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma ve kullanan uygulamaları [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
+ Aşağıdaki dış kaynaklar oluşturmak için ek bilgi ve destek sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanımına sunun ve tüketen uygulamalar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
- [WCF Veri Hizmetleri Forumu](http://go.microsoft.com/fwlink/?LinkId=150512)  
- Programlama veri desteklemek için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] geliştiriciler.  
+ [WCF Veri Hizmetleri Forumu](https://go.microsoft.com/fwlink/?LinkId=150512)  
+ Veri programlama Destek [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] geliştiriciler.  
   
- [WCF Veri Hizmetleri ekibi Web günlüğü](http://go.microsoft.com/fwlink/?LinkId=150511)  
- Güncelleştirmeleri ve hakkında bilgi içermektedir Blog [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] özellikleri ve işlevleri.  
+ [WCF Veri Hizmetleri ekibi blogu](https://go.microsoft.com/fwlink/?LinkId=150511)  
+ Güncelleştirmeler ve açıklamalar içeren Blog [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] özellikleri ve işlevleri.  
   
- [OData Web sitesi](http://go.microsoft.com/fwlink/?LinkID=184554)  
- Birincil hakkında bilgi kaynağı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ [OData Web sitesi](https://go.microsoft.com/fwlink/?LinkID=184554)  
+ Birincil kaynağı ile ilgili bilgi [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [OData SDK'sı](http://go.microsoft.com/fwlink/?LinkID=185248)  
- Örnek Hizmetleri, örnekler ve çalışmak etkinleştirmeniz programlama kitaplıkları içeren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
+ [OData SDK'sı](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ Örnek Hizmetleri, örnekler ve ile çalışmanıza olanak sağlayan bir programlama kitaplıkları içeren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
- [OData blogu](http://go.microsoft.com/fwlink/?LinkId=185868)  
- İlgili Tartışmalar içeren Blog [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] programlama.  
+ [OData blogu](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ Hakkındaki tartışmalarını içerir Blog [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] programlama.  
   
- [Veri erişimi ve depolama Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=91903)  
- Verilerle çalışmak için bilgi ve kaynakları bulmak için merkezi konum.  
+ [Veri erişimi ve depolama Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=91903)  
+ Verilerle çalışmak için bilgileri ve kaynakları bulmak için merkezi bir konum.  
   
- [Bir veri platformu nasıl yedeklerim? Videolar: WCF Veri Hizmetleri serisi](http://go.microsoft.com/fwlink/?LinkId=124600)  
- Yapı ve veri hizmetlerine erişmek nasıl ekleyebileceğiniz gösterilmektedir video ekran atamaları kümesini içerir.  
+ [Veri platformu nasıl yaparım? Videolar: WCF Veri Hizmetleri serisi](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ Nasıl oluşturacağınızı ve veri hizmetlerine erişim gösteren video ekranının atamaları kümesini içerir.  
   
- [Genel Bakış: WCF Veri Hizmetleri](http://go.microsoft.com/fwlink/?LinkID=131074)  
- Avantajları hakkında daha üst düzey bilgileri sağlayan incelemeyi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ [Genel Bakış: WCF Veri Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ Daha üst düzey bilgileri avantajları hakkında bilgi sağlayan bir Teknik İnceleme [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Microsoft WCF Veri Hizmetleri kullanma](http://go.microsoft.com/fwlink/?LinkID=131075)  
- Veri Hizmetleri oluşturma ve Veri Hizmetleri istemci uygulamalarında erişme hakkında ek bilgi ve örnekler sağlayan incelemeyi.  
+ [Microsoft WCF veri hizmetlerini kullanma](https://go.microsoft.com/fwlink/?LinkID=131075)  
+ Veri Hizmetleri istemci uygulamalarında erişmek ve veri hizmetleri oluşturmak için ek bilgi ve örnekler sağlayan bir teknik incelemesi.  
   
- [Varlık ilişkisi modeli: Veri birleşik bir görünümünü doğru](http://go.microsoft.com/fwlink/?LinkId=91909) Peter PIN Shan Chen, Massachusetts Institute of teknolojisi tarafından  
- Tarafından uygulanan varlık ilişkisel model için temel açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. 1976 içinde yazılmış, bu bilgisayar alanına en sık alıntı yazıları biridir.  
+ [Varlık ilişkisi modeli: Verilerinin birleştirilmiş bir görünümünü doğru](https://go.microsoft.com/fwlink/?LinkId=91909) Peter PIN Shan Chen, Massachusetts Enstitüsü Technology tarafından  
+ Tarafından uygulanan varlık ilişkisel modeli için temel açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. 1976 içinde yazılan, bu bilgisayar alanına en sık alıntı incelemeler biridir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -6,15 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289275"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395143"
 ---
 # <a name="line-c-reference"></a>#line (C# Başvurusu)
-`#line` Derleyicinin satır numarasını ve (isteğe bağlı) hataları ve uyarıları için dosya adı çıktı değiştirmenize olanak tanır. Bu örnekte, iki uyarıları satır numaralarını ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi zorlar (varsayılan #7 olmasına rağmen) 200 satır numarasını ve sonraki #line yönergesi kadar dosya adı "Özel" olarak raporlanır. #Line varsayılan yönergesi önceki yönergesi tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için numaralandırma satır döndürür.  
+`#line` Derleyicinin değiştirmenize olanak tanır satır numaraları ve (isteğe bağlı olarak) hataları ve uyarıları için dosya adı çıktı.
+
+Aşağıdaki örnek, iki uyarı satır numaraları ile ilişkili rapor gösterilmektedir. `#line 200` Yönergesi, sonraki satırın numarasını (varsayılan #6 olmasına rağmen) 200 olmasını zorlar ve sonraki #line yönergesi kadar dosya adı "Özel" raporlanır. #Line varsayılan yönergesi, önceki yönerge tarafından yeniden numaralandırılır satırları sayar kendi varsayılan numaralandırma için satır numaralandırmasını döndürür.  
   
 ```csharp
 class MainClass  
@@ -22,31 +24,41 @@ class MainClass
     static void Main()  
     {  
 #line 200 "Special"  
-        int i;    // CS0168 on line 200  
-        int j;    // CS0168 on line 201  
+        int i;
+        int j;
 #line default  
-        char c;   // CS0168 on line 9  
-        float f;  // CS0168 on line 10  
+        char c;
+        float f;
 #line hidden // numbering not affected  
         string s;   
-        double d; // CS0168 on line 13  
+        double d;
     }  
 }  
 ```  
-  
+Derleme aşağıdaki çıktıyı üretir:
+
+```console
+Special(200,13): warning CS0168: The variable 'i' is declared but never used
+Special(201,13): warning CS0168: The variable 'j' is declared but never used
+MainClass.cs(9,14): warning CS0168: The variable 'c' is declared but never used
+MainClass.cs(10,15): warning CS0168: The variable 'f' is declared but never used
+MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
+MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
+```
+
 ## <a name="remarks"></a>Açıklamalar  
- `#line` Yönergesi derleme sürecindeki otomatik, Ara bir adımda kullanılabilir. Örneğin, satırları özgün kaynak kodu dosyasından kaldırıldı, ancak hala özgün satır dosyasında numaralandırmasını göre çıktı üretmek için derleyici istedi, size satırları kaldırın ve özgün satır ile numaralandırma benzetimini `#line`.  
+ `#line` Yönergesi bir derleme işlemi otomatik, ara adım modunda kullanılabilir. Örneğin, satırları, özgün kaynak kodu dosyasından kaldırıldı, ancak derleyicinin, çıkış dosyasında numaralandırma orijinal satıra göre hala istiyordu, satırları kaldırın ve ardından özgün satır ile numaralandırma benzetimini `#line`.  
   
- `#line hidden` Yönergesi gizler hata ayıklayıcı art arda gelen satırlardan sağlayacak şekilde Geliştirici koduyla adımlar, tüm satırları arasında bir `#line hidden` ve sonraki `#line` yönergesi (varsayılarak olmayan başka bir `#line hidden` yönergesi) üzerinden adım adım. Bu seçenek, kullanıcı tanımlı ve makine oluşturulan kod arasında ayırt etmek ASP.NET izin vermek için de kullanılabilir. ASP.NET bu özelliğin birincil tüketici olsa da, daha fazla kaynak oluşturucuları yapacak bunu kullanmak olasıdır.  
+ `#line hidden` Yönergesi gizler, hata ayıklayıcı art arda gelen satırlar kod Geliştirici adımlar, tüm satırlar arasında olacak şekilde bir `#line hidden` ve sonraki `#line` yönergesi (varsayarak değil başka bir `#line hidden` yönergesi) üzerinden basamaklı. Bu seçenek, kullanıcı tanımlı ve makine tarafından üretilen kod arasında ayırt etmek ASP.NET izin vermek için de kullanılabilir. ASP.NET bu özelliği birincil kullanıcısı olsa da, daha fazla kaynak oluşturucuları hale getirecek bunu kullanmaya olasıdır.  
   
- A `#line hidden` yönergesi dosya adlarını etkilemez veya satır numaraları hata raporlama. Diğer bir deyişle, gizli bir bloğunda hatayla karşılaşılırsa, derleyici geçerli dosya adı ve satır numarası hata bildirir.  
+ A `#line hidden` yönergesi dosya adları etkilemez veya satır numaraları hatası raporlama. Diğer bir deyişle, gizli bir bloğu içinde bir hatayla karşılaşılırsa, derleyici geçerli dosya adı ve satır sayısı hata rapor eder.  
   
- `#line filename` Yönergesi derleyici çıktısında görüntülenmesini istediğiniz dosya adını belirtir. Varsayılan olarak, kaynak kodu dosyasının gerçek adı kullanılır. Dosya adı çift tırnak işaretleri içinde olmalıdır ("") ve bir satır sayısı tarafından gelmelidir.  
+ `#line filename` Yönergesi derleyici çıktısında görüntülenmesini istediğiniz dosya adını belirtir. Varsayılan olarak, kaynak kodu dosyasının gerçek adı kullanılır. Dosya adı çift tırnak içinde olmalıdır ("") ve satır numarasıyla gelmelidir.  
   
- Kaynak kodu dosyasının herhangi bir sayıda olabilir `#line` yönergeleri.  
+ Bir kaynak kodu dosyası herhangi bir sayıda olabilir `#line` yönergeleri.  
   
 ## <a name="example-1"></a>Örnek 1  
- Aşağıdaki örnek kodda gizli satırlar hata ayıklayıcı nasıl yoksayar gösterir. Örnek çalıştırdığınızda, üç satırlık metin görüntüler. Ancak, örnekte gösterildiği gibi bir kesme noktası ayarlayın ve kod üzerinden adım F10 isabet zaman hata ayıklayıcı gizli çizgi yoksayar fark edersiniz. Ayrıca gizli satırında bir kesme noktası ayarlasanız bile hata ayıklayıcı hala bunu göz ardı eder dikkat edin.  
+ Aşağıdaki örnek, hata ayıklayıcı gizli kod satırları nasıl yoksayar gösterir. Örneği çalıştırdığınızda, üç metin satırlarını görüntüler. Ancak, örnekte gösterildiği gibi bir kesme noktası ayarlayın ve kodunuz içinde adım adım F10 isabet, hata ayıklayıcı'nın gizli çizgi yok sayar göreceksiniz. Ayrıca gizli satırında bir kesme noktası ayarlasanız bile hata ayıklayıcı hala yok, dikkat edin.  
   
 ```csharp
 // preprocessor_linehidden.cs  
@@ -64,7 +76,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Ön İşlemci Yönergeleri](../../../csharp/language-reference/preprocessor-directives/index.md)

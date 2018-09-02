@@ -2,19 +2,19 @@
 title: Saniyede Akışı Yapılan İşlem
 ms.date: 03/30/2017
 ms.assetid: b9f661e1-576c-48fc-9fdf-91853e0749e8
-ms.openlocfilehash: a71095b9fdd16d7e220be8a0aeb0a746bb50527e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e77aef4cfff1e64f112e720183675dfb7aa25d27
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472924"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392942"
 ---
 # <a name="transactions-flowed-per-second"></a>Saniyede Akışı Yapılan İşlem
-Sayaç adı: Saniye başına yapılan işlemler  
+Sayaç adı: Saniye başına işlemler  
   
 ## <a name="description"></a>Açıklama  
- Bu ikinci bir işlem için işlem sayısı aktarılan. Bu sayaç, bir işlem kimliği işleme gönderilen bir ileti bulunur dilediğiniz zaman artırılır.  
+ İşlem sayısı, bu işleme bir saniye içinde aktarılan. İşlem kimliği mevcut işleme gönderilen bir iletinin dilediğiniz zaman bu sayaç artırılır.  
   
- Bu sayaç, performans sayacı türü [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), değeri, aşağıdaki formül kullanılarak hesaplanır.  
+ Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.  
   
  (1 - N 0 N) / ((D 1 - D 0) / F)

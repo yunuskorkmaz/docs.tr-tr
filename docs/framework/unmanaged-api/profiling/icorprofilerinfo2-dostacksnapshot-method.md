@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385915"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot Yöntemi
-Belirtilen iş parçacığı için yığında yönetilen çerçeveler anlatılmaktadır ve profil oluşturucu bir geri çağırma aracılığıyla bilgi gönderir.  
+Belirtilen iş parçacığı için yığın üzerinde yönetilen çerçeve size yol gösterir ve profil oluşturucu bir geri çağırma aracılığıyla bilgi gönderir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,61 +43,61 @@ HRESULT DoStackSnapshot(
  `thread`  
  [in] Hedef iş parçacığı kimliği.  
   
- Null geçirme `thread` bir anlık görüntü geçerli iş parçacığının verir. Varsa bir `ThreadID` , farklı bir iş parçacığı geçirilir, ortak dil çalışma zamanı (CLR) o iş parçacığı askıya alır, anlık görüntü gerçekleştirir ve sürdürür.  
+ Null geçirme `thread` bir anlık görüntü geçerli iş parçacığının verir. Varsa bir `ThreadID` , farklı bir iş parçacığına geçirilir, ortak dil çalışma zamanı (CLR), iş parçacığını askıya alır, anlık görüntü gerçekleştirir ve sürdürür.  
   
  `callback`  
- [in] Uygulaması için bir işaretçi [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) profil oluşturucu her yönetilen çerçeve ve yönetilmeyen çerçeve her çalıştırma hakkında bilgi sağlamak için CLR tarafından çağrılan yöntem.  
+ [in] Uygulanmasına yönelik bir işaretçi [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) profil oluşturucu yönetilen her çerçeve ve yönetilmeyen karelerin her çalıştırma hakkında bilgi sağlamak için CLR tarafından çağrılan yöntem.  
   
- `StackSnapshotCallback` Yöntemi profil oluşturucu yazıcı tarafından gerçekleştirilir.  
+ `StackSnapshotCallback` Yöntemi, profil oluşturucu yazıcı tarafından uygulanır.  
   
  `infoFlags`  
- [in] Değerini [cor_prf_snapshot_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) tarafından her çerçeve için geri geçirilmesi veri miktarını belirtir numaralandırma `StackSnapshotCallback`.  
+ [in] Değerini [cor_prf_snapshot_ınfo](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) tarafından her çerçeve için geri geçirilmesi veri miktarını belirten sabit listesi `StackSnapshotCallback`.  
   
  `clientData`  
- [in] Düz aracılığıyla geçirilir, istemci verilerini gösteren bir işaretçi `StackSnapshotCallback` geri çağırma işlevi.  
+ [in] Düz aracılığıyla geçirilen istemci verilerini bir işaretçiye `StackSnapshotCallback` geri çağırma işlevi.  
   
  `context`  
- [in] Bir işaretçi bir Win32 `CONTEXT` yığın ilerlemesi oluşturmak için kullanılan yapısı. Win32 `CONTEXT` yapısı CPU yazmaçların değerleri içeren ve zaman içinde belirli bir anda CPU durumunu temsil eder.  
+ [in] Bir Win32 işaretçisi `CONTEXT` yapısı, yığın ilerlemesi sağlamak için kullanılır. Win32 `CONTEXT` yapısı CPU yazmaçların değerleri içeren ve zaman içinde belirli bir anda CPU durumunu temsil eder.  
   
- Çekirdek yığının üst yönetilmeyen yardımcı kodu ise yığın ilerlemesi başlamak nereye belirlemek CLR yardımcı olur; Aksi takdirde, çekirdek göz ardı edilir. Çekirdek için zaman uyumsuz bir ilerlemesi sağlanmalıdır. Zaman uyumlu ilerlemesi yapıyorsanız, hiçbir çekirdek gereklidir.  
+ Çekirdek yığının üstü Yardımcısı yönetilmeyen kodu varsa, yığın ilerlemesi başlamak nereye belirleme CLR yardımcı olur; Aksi takdirde, çekirdek göz ardı edilir. Bir çekirdek için zaman uyumsuz bir Yürüme sağlanmalıdır. Zaman uyumlu Yürüme yapıyorsanız, hiçbir çekirdek gereklidir.  
   
- `context` Parametredir COR_PRF_SNAPSHOT_CONTEXT bayrağı yalnızca geçildi geçerli `infoFlags` parametresi.  
+ `context` Parametredir COR_PRF_SNAPSHOT_CONTEXT bayrağı yalnızca geçirilen geçerli `infoFlags` parametresi.  
   
  `contextSize`  
- [in] Boyutunu `CONTEXT` tarafından başvurulan yapısı `context` parametresi.  
+ [in] Boyutu `CONTEXT` tarafından başvurulan yapısını `context` parametresi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin null geçirme `thread` bir anlık görüntü geçerli iş parçacığının verir. Hedef iş parçacığı aynı anda yalnızca askıya alınırsa anlık görüntüleri diğer iş parçacıklarının alınabilir.  
+ Null geçirme `thread` bir anlık görüntü geçerli iş parçacığının verir. Yalnızca hedef iş parçacığı zaman askıya alınırsa anlık görüntüleri diğer iş parçacıklarını alınabilir.  
   
- Profil Oluşturucu yığının yol istediğinde, çağıran `DoStackSnapshot`. Bu çağrısından CLR döndürmeden önce çağrıları, `StackSnapshotCallback` birkaç kez kez her biri için çerçeve (veya yönetilmeyen çerçeveler çalışması) yığında yönetilen. Yönetilmeyen çerçeveler karşılaştığında, bunları kendiniz yol gerekir.  
+ Profil Oluşturucu yığın geçmek istediği zaman, çağırdığı `DoStackSnapshot`. CLR döndürür o çağrıdan önce çağırır, `StackSnapshotCallback` birkaç kez kez her biri için çerçeve (veya yönetilmeyen çerçeve Çalıştır) yığın üzerinde yönetilen. Yönetilmeyen çerçeveler karşılaştığında, bunları kendiniz yol gerekir.  
   
- Çerçeveler yığına nasıl iletilmesini tersi yığın gitti sırasıdır: (son gönderilir) ilk, ana (ilk gönderilir) kareler son yaprak.  
+ Çerçeve yığınına nasıl gönderildi, geriye doğru yığın öğrendiniz, sırasıdır: son (en son gönderilen) ilk, ana (ilk gönderildi) kareler yaprak.  
   
- Yönetilen yığın yürütmek için profil oluşturucu programı hakkında daha fazla bilgi için bkz: [profil oluşturucu yığınının taramasını, .NET Framework 2.0: temel kavramları ve ötesine](http://go.microsoft.com/fwlink/?LinkId=73638).  
+ Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [.NET Framework 2.0 Profiler Programlayacağınız yığın: temeller ve ötesi](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
- Yığın ilerlemesi, zaman uyumlu veya zaman uyumsuz, aşağıdaki bölümlerde açıklandığı gibi olabilir.  
+ Yığın ilerlemesi, aşağıdaki bölümlerde açıklandığı gibi zaman uyumlu veya zaman uyumsuz olabilir.  
   
 ## <a name="synchronous-stack-walk"></a>Zaman uyumlu yığın ilerlemesi  
- Zaman uyumlu yığın ilerlemesi yanıt olarak bir geri çağırma yığını geçerli iş parçacığının taramasını içerir. Dengeli veya askıya gerektirmez.  
+ Zaman uyumlu yığın ilerlemesi, geçerli iş parçacığının yığınını yanıt olarak bir geri çağırma walking içerir. Dengeli dağıtım veya askıya alma gerektirmez.  
   
- Bir zaman uyumlu yaptığınız zaman, yanıt oluşturucunuz 's birini çağırma CLR olarak çağrı [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (veya [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) yöntemlerini çağırırsınız `DoStackSnapshot` yığınını yürütmek için Geçerli iş parçacığının. Yığın nasıl bir bildirim gibi göründüğünü görmek istediğinizde yararlıdır [Icorprofilercallback::objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Yalnızca çağrısı `DoStackSnapshot` içinden, `ICorProfilerCallback` null geçirerek yöntemini `context` ve `thread` parametreleri.  
+ Eş zamanlı yaptığınız zaman, yanıt olarak CLR, profil oluşturucunun birini çağırma çağrısı [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (veya [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) yöntemleri çağırmanızı `DoStackSnapshot` yığınını görmek için Geçerli iş parçacığı. Yığın bir bildirim gibi nasıl göründüğünü görmek istediğinizde yararlıdır [Icorprofilercallback::objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Çağrı `DoStackSnapshot` içinden, `ICorProfilerCallback` null geçirerek yöntemini `context` ve `thread` parametreleri.  
   
 ## <a name="asynchronous-stack-walk"></a>Zaman uyumsuz yığın ilerlemesi  
- Zaman uyumsuz yığın ilerlemesi farklı bir iş parçacığı yığınını taramasını veya yanıt için bir geri çağırma ancak geçerli iş parçacığının yönerge işaretçisi ele geçirme tarafından değil, geçerli iş parçacığının yığınını taramasını kapsar. Zaman uyumsuz bir ilerlemesi yığının üst bir platform parçası olmayan yönetilmeyen kodu ise çekirdek çağırma (PInvoke) gerektirir veya COM çağrısı ancak CLR yardımcı kodu. Örneğin, tam zamanında (JIT) derleme veya atık toplama yapan yardımcı kodu kodudur.  
+ Bir zaman uyumsuz yığın ilerlemesi, farklı iş parçacığı yığınının walking veya yanıt için bir geri çağırma, ancak geçerli iş parçacığının yönerge işaretçisini ele geçirme tarafından değil, geçerli iş parçacığının yığınını walking kapsar. Zaman uyumsuz bir Yürüme yığının üstü bir platform parçası değil, yönetilmeyen kod ise bir çekirdek çağırma (PInvoke) gerektirir. COM çağrısı ancak veya CLR yardımcı kod. Örneğin, just-ın-time (JIT) derleme veya çöp toplama yapan kod Yardımcısını kodudur.  
   
- Doğrudan hedef iş parçacığı askıya alma çekirdek almak ve kendi yığını taramasını kendiniz, üstteki bulana kadar çerçeve yönetilir. Hedef iş parçacığı askıya sonra hedef iş parçacığının geçerli kayıt bağlamı alır. Ardından, çağırarak kayıt bağlam yönetilmeyen koda işaret edip etmediğini belirlemek [Icorprofilerınfo::getfunctionfromıp](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — döndürürse bir `FunctionID` sıfıra eşit, yönetilmeyen kod çerçevedir. Şimdi, ilk yönetilen çerçeve erişmek ve bu çerçeve kaydı bağlamının temel çekirdek bağlamı hesaplamak kadar yığın yol.  
+ Doğrudan hedef iş parçacığını askıya alma, bir çekirdek elde ve kendi yığınını walking kendiniz, üstteki bulana kadar çerçeve yönetilir. Hedef iş parçacığını askıya sonra hedef iş parçacığının geçerli kayıt bağlamını alın. Ardından, çağırarak kayıt bağlam yönetilmeyen koda işaret edip etmediğini belirleme [Icorprofilerınfo::getfunctionfromıp](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — döndürürse bir `FunctionID` sıfıra eşit, yönetilmeyen kod çerçevesidir. Şimdi ilk yönetilen çerçeve ulaşın ve daha sonra bu kare için kayıt bağlam temel çekirdek bağlam hesaplamak kadar yığın yol.  
   
- Çağrı `DoStackSnapshot` zaman uyumsuz yığın ilerlemesi başlamak için çekirdek bağlamına sahip. Bir çekirdek belirtmezseniz `DoStackSnapshot` yığının üst yönetilen çerçeveler atla ve sonuç olarak, bir eksik yığın ilerlemesi verecektir. Çekirdek sağlarsanız, JIT derleme ya da yerel Görüntü Oluşturucu'için (Ngen.exe) işaret etmelidir-oluşturulan kodda; Aksi takdirde, `DoStackSnapshot` CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX hata kodu döndürüyor.  
+ Çağrı `DoStackSnapshot` ile zaman uyumsuz yığın ilerlemesi başlamak için çekirdek bağlamı. Bir çekirdek sağlamazsanız `DoStackSnapshot` yığının üstünde bir yönetilen çerçeve atla ve sonuç olarak, bir tam bir yığın ilerlemesi verecektir. Bir çekirdek sağlarsanız, JIT olarak derlenmiş veya yerel Görüntü Oluşturucu (Ngen.exe) için işaret etmelidir-oluşturulan kod; Aksi takdirde, `DoStackSnapshot` CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX hata kodu döndürüyor.  
   
- Zaman uyumsuz yığını yetenekte kolayca kilitlenmeleri neden veya bu yönergelere uymanızı sürece ihlalleri, erişim:  
+ Zaman uyumsuz yığın Yürüyüşü kolayca kilitlenmeleri neden veya bu yönergelere uymanızı sürece ihlalleri, erişim:  
   
--   Doğrudan iş parçacıklarını askıya alma, yalnızca yönetilen kod çalıştırılmadı bir iş parçacığı başka bir iş parçacığı askıya alabilirsiniz unutmayın.  
+-   Doğrudan iş parçacıkları askıya aldığınızda, yalnızca yönetilen kod çalıştırılmadı bir iş parçacığı başka bir iş parçacığını askıya alabilirsiniz unutmayın.  
   
--   Her zaman engelleyin, [Icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) parçacığının yığın ilerlemesi tamamlanana kadar geri çağırma.  
+-   Her zaman engellenmesi, [Icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) parçacığının yığın ilerlemesi tamamlanana kadar geri çağırma.  
   
--   Çöp toplama tetikleyebilir bir CLR işlevini oluşturucunuz çağırır kilit tutarken değil. Diğer bir deyişle, sahibi olan iş parçacığı çöp toplama tetikleyen bir arama yapabilir, kilit tutmayın.  
+-   Profil Oluşturucu bir çöp toplama tetikleyen bir CLR işleve çağrı sırasında kilit tutmayın. Diğer bir deyişle, sahip olan iş parçacığı bir atık toplama işlemini tetikleyen bir çağrı yaparsanız bir kilit tutmayın.  
   
- Olup olmadığını da kilitlenme riski çağırmanız `DoStackSnapshot` oluşturucunuz oluşturdu ve böylece ayrı hedef iş parçacığı yığınını yol akıştan. İlk kez oluşturduğunuz iş parçacığı girer belirli `ICorProfilerInfo*` yöntemleri (de dahil olmak üzere `DoStackSnapshot`), CLR iş parçacığı başına, bu iş parçacığında CLR özel başlatma gerçekleştirir. Oluşturucunuz yığını yol çalıştığınız hedef iş parçacığı askıya aldı ve bu hedef iş parçacığı bir kilidi bu iş parçacığı başına başlatma gerçekleştirmek için gereken kendi oldu, kilitlenme meydana gelir. Bu kilitlenmeyi önlemek için bir başlangıç çağrısına olun `DoStackSnapshot` yürütmek için Profil Oluşturucu tarafından oluşturulan iş parçacığı ayrı bir hedef iş parçacığı, ancak hedef iş parçacığı ilk askıya değil. Bu ilk çağrı başına iş parçacığı başlatma kilitlenme tamamlayabilirsiniz sağlar. Varsa `DoStackSnapshot` başarılı ve en az bir çerçeve, raporlar bu noktadan sonra herhangi bir hedef iş parçacığı ve çağrı askıya almak bu profil oluşturucu tarafından oluşturulan iş parçacığı güvenli olacaktır `DoStackSnapshot` o hedef iş parçacığı yığınını yürütmek için.  
+ Olup olmadığını da kilitlenme riski çağırmanızı `DoStackSnapshot` , profil oluşturucu oluşturdu ve böylece ayrı hedef iş parçacığı yığınının inceleyebileceğiniz bir iş parçacığından. İlk kez oluşturduğunuz iş parçacığı girer belirli `ICorProfilerInfo*` yöntemleri (dahil olmak üzere `DoStackSnapshot`), CLR iş parçacığı başına, bu iş parçacığı üzerinde CLR özel başlatma gerçekleştirir. Profil Oluşturucu yığını yol çalıştığınız hedef diziyle askıya aldı ve bu hedef iş parçacığı bir kilide bu iş parçacığı başına başlatma gerçekleştirmek için gerekli sahip oluştuysa, karşılıklı bir kilitlenme ortaya çıkar. Bu kilitlenmeyi önlemek için bir ilk çağrı yapmak `DoStackSnapshot` yürütmek için Profil Oluşturucu tarafından oluşturulan iş parçacığından ayrı bir hedef iş parçacığı, ancak hedef iş parçacığı önce askıya değil. Bu ilk çağrı, iş parçacığı başına başlatma kilitlenme tamamlayabilirsiniz sağlar. Varsa `DoStackSnapshot` başarılı olur ve en az bir çerçeve raporları bu noktadan sonra herhangi bir hedef iş parçacığı ve çağrı askıya alma, Profil Oluşturucu tarafından oluşturulan iş parçacığı için güvenli olacaktır `DoStackSnapshot` bu hedef iş parçacığı yığınını görmek için.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

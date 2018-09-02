@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 8c7fc1aba05af731d3df80e0b10c2981b5784197
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5af03c8176672685b02a23019812f1aeded28dc8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389282"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (C# programlama Kılavuzu)
 ## <a name="syntax"></a>Sözdizimi  
@@ -23,19 +23,19 @@ ms.locfileid: "33348784"
   
 #### <a name="parameters"></a>Parametreler  
  `name`  
- Tür parametresinin adı. Ad çift tırnak işaretleri içine alın ("").  
+ Tür parametresinin adı. Adı çift tırnak içine alın ("").  
   
  `description`  
  Tür parametresi için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<typeparam>` Etiketi açıklamasında genel türü veya yöntemi bildirimi için tür parametresi açıklamak için kullanılmalıdır. Genel tür ya da yöntemi her tür parametresi için bir etiket ekleyin.  
+ `<typeparam>` Etiketi genel bir tür veya yöntem bildirimi için açıklama açıklayan bir tür parametresi için kullanılmalıdır. Genel tür veya yöntemin her tür parametresi için bir etiket ekleyin.  
   
- Daha fazla bilgi için bkz: [genel türler](../../../csharp/programming-guide/generics/index.md).  
+ Daha fazla bilgi için [genel türler](../../../csharp/programming-guide/generics/index.md).  
   
- Metni `<typeparam>` etiketi IntelliSense içinde görüntülenir [nesne tarayıcı penceresini](http://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) kod açıklama web raporu.  
+ Metni `<typeparam>` etiketi IntelliSense içinde gösterilecek [nesne tarayıcı penceresi](https://msdn.microsoft.com/library/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) kod açıklaması web rapor.  
   
- İle derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  

@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServicesObject işlevi (yönetilmeyen API Başvurusu)
-description: BlessIWbemServicesObject işlevi kullanıcı kimlik bilgilerini IWbemServices nesneyi erişime olup olmadığını gösterir
+title: Blessıwbemservicesobject işlevi (yönetilmeyen API Başvurusu)
+description: Blessıwbemservicesobject işlevi kullanıcı kimlik bilgilerini IWbemServices nesneyi erişime olup olmadığını gösterir.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457925"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394984"
 ---
-# <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject işlevi
-Kullanıcı kimlik bilgilerinin belirtilen erişime olup olmadığını gösteren [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) nesnesi.   
+# <a name="blessiwbemservicesobject-function"></a>Blessıwbemservicesobject işlevi
+Kullanıcı kimlik bilgilerini belirtilen erişim izni olup olmadığını gösteren [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesne.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,7 +44,7 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>Parametreler
 
 `pIWbemServices`  
-[in] WMI hizmeti nesnesi için bir işaretçi.
+[in] WMI hizmet nesnesine bir işaretçi.
 
 `strUser`  
 [in] Kullanıcı adı.
@@ -52,23 +52,23 @@ HRESULT BlessIWbemServicesObject (
 `strPassword`  
 [in] İlişkili parolayı `strUser`.
 
-`strAuthority` [in] Kullanıcının etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) daha fazla bilgi için işlevi.
+`strAuthority` [in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
 
 `impLevel` [in] Kimliğe bürünme düzeyi.
 
-`authnLevel` [in] Kimlik doğrulama düzeyi.
+`authnLevel` [in] Yetkilendirme düzeyi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Winerror.h'de* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *Wınerror* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Bir veya daha fazla bağımsız değişken geçersiz. |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` olan `null`. | 
-| `E_FAIL` | 0x80000008 | Belirlenemeyen bir hata oluştu. |
+| `E_FAIL` | 0x80000008 | Belirtilmeyen bir hata oluştu. |
 | `E_OUTOFMEMORY` | 0x80000002 | İşlemi gerçekleştirmek yeterli bellek yok. | 
-| `S_OK` | 0 | İşlev çağrısı başarısız oldu. | 
+| `S_OK` | 0 | İşlev çağrısı başarılı oldu. | 
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

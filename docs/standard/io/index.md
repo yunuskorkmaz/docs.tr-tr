@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254318"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394340"
 ---
 # <a name="file-and-stream-io"></a>Dosya ve Akış G/Ç
 Dosya ve akış I/O (giriş/çıkış) bir veri aktarımının depolama ortamına mı gittiğini yoksa oradan mı geldiğini belirtir. .NET Framework'teki `System.IO` ad alanlarında, okuma ve yazma, zaman uyumlu ve zaman uyumsuz olarak veri akışları ve dosyalar üzerinde sağlayan türler bulunur. Bu ad alanları aynı zamanda dosyaları sıkıştırma ve sıkıştırmayı açma işini gerçekleştiren türleri ve borular ve seri bağlantı noktaları üzerinden iletişim sağlayan türleri içerir.  
@@ -137,13 +137,13 @@ Yolu için adlandırma kuralları ve .NET Core 1.1 ve üstünde desteklenir DOS 
   
  G/ç işlemlerini kullanırken dikkat edilecek bazı önemli farklar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar:  
   
--   Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) ad [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) ve [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Özellikle alakalı türler dosya işlemleri gibi <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> ve <xref:System.IO.DirectoryInfo>, dahil edilmeyen [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Bunun yerine, içindeki türleri kullanın [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) ad [!INCLUDE[wrt](../../../includes/wrt-md.md)], gibi [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) ve [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Yalıtılmış Depolama kullanılamaz; Bunun yerine, [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Zaman uyumsuz yöntemleri kullanın <xref:System.IO.Stream.ReadAsync%2A> ve <xref:System.IO.Stream.WriteAsync%2A>UI iş parçacığı engellenmesini önlemek için.  
   
--   Yol tabanlı sıkıştırma türleri <xref:System.IO.Compression.ZipFile> ve <xref:System.IO.Compression.ZipFileExtensions> kullanılabilir değil. Bunun yerine, içindeki türleri kullanın [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) ad alanı.  
+-   Yol tabanlı sıkıştırma türleri <xref:System.IO.Compression.ZipFile> ve <xref:System.IO.Compression.ZipFileExtensions> kullanılabilir değil. Bunun yerine, içindeki türleri kullanın [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) ad alanı.  
   
  Gerekirse, .NET Framework akışları ve Windows çalışma zamanı akışları arasında dönüşüm yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: .NET Framework akışları arasında dönüştürme ve Windows çalışma zamanı akışları](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) veya [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

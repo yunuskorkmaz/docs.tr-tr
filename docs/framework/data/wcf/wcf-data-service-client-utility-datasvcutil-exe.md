@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: f79991ef7f5d88cf87d1635e8c415ffd2c8b69cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 7c9b713571cea3d2c8c5f6511f2cfab7e87b80ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253371"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387449"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF veri hizmeti istemci yardımcı programı (DataSvcUtil.exe)
 
 DataSvcUtil.exe kullanan WCF Veri Hizmetleri tarafından sağlanan bir komut satırı aracı olan bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı ve bir .NET Framework istemci uygulamadan bir veri hizmetine erişmek için gerekli olan istemci veri hizmeti sınıfları oluşturur. Bu yardımcı programı, aşağıdaki meta veri kaynaklarını kullanarak veri sınıfları oluşturabilirsiniz:
 
--   Kök veri hizmetinin URI'si. Yardımcı programı, veri hizmeti tarafından kullanıma sunulan veri modelini açıklar hizmet meta verileri belgesi ister. Daha fazla bilgi için [OData: hizmet meta verileri belgesi](http://go.microsoft.com/fwlink/?LinkId=186070).
+-   Kök veri hizmetinin URI'si. Yardımcı programı, veri hizmeti tarafından kullanıma sunulan veri modelini açıklar hizmet meta verileri belgesi ister. Daha fazla bilgi için [OData: hizmet meta verileri belgesi](https://go.microsoft.com/fwlink/?LinkId=186070).
 
--   Tanımlanan sınıfında tanımlandığı gibi kavramsal şema tanım dili (CSDL) kullanarak bir veri modeli dosyası (.csdl) [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](http://go.microsoft.com/fwlink/?LinkID=159072) belirtimi.
+-   Tanımlanan sınıfında tanımlandığı gibi kavramsal şema tanım dili (CSDL) kullanarak bir veri modeli dosyası (.csdl) [ \[MC CSDL\]: kavramsal şema tanım dosyası biçimi](https://go.microsoft.com/fwlink/?LinkID=159072) belirtimi.
 
--   Entity Framework ile sağlanan varlık veri modeli araçları kullanılarak oluşturulan bir .edmx dosyası. Daha fazla bilgi için [ \[MC EDMX\]: Varlık veri modeli için veri hizmetlerini paketleme biçimini](http://go.microsoft.com/fwlink/?LinkID=178833) belirtimi.
+-   Entity Framework ile sağlanan varlık veri modeli araçları kullanılarak oluşturulan bir .edmx dosyası. Daha fazla bilgi için [ \[MC EDMX\]: Varlık veri modeli için veri hizmetlerini paketleme biçimini](https://go.microsoft.com/fwlink/?LinkID=178833) belirtimi.
 
 Daha fazla bilgi için [nasıl yapılır: el ile oluşturmak istemci veri hizmeti sınıfları](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
 

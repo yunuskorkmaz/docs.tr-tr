@@ -4,12 +4,12 @@ description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core p
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960989"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400289"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Düzenleme ve .NET Core komut satırı ile projeleri test etme
 
@@ -162,7 +162,7 @@ public class PetTests
 İsteğe bağlı alıştırma: eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` türü.
 
 > [!NOTE]
-> Beklediğiniz ancak `expected` ve `actual` değerler eşitse, ilk onaylama ile `Assert.NotEqual` denetimleri belirtin olduklarını *eşit*. Her zaman başlangıçta testlerin mantığını denetlemek için bir kez başarısız testleri oluşturun. Bu test Odaklı Tasarım (TDD) Metodoloji önemli bir adımdır. Testler başarısız onayladıktan sonra geçmesine izin vermek üzere bir onayları ayarlayın.
+> Beklediğiniz ancak `expected` ve `actual` değerler eşit olan ilk onaylama `Assert.NotEqual` denetimini, bu değerler olduğunu belirtir *eşit değil*. Her zaman başlangıçta test mantığını denetlemek için başarısız bir test oluşturun. Testin başarısız olduğunu onayladıktan sonra onaylama test geçmesine izin verecek şekilde ayarlayın.
 
 Tam proje yapısını gösterir:
 

@@ -8,68 +8,68 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: b70387e604b0917d154fc056b904e9ee05f6fbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557244"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399227"
 ---
 # <a name="tooltip-overview"></a>ToolTip Genel Bakışı
-Bir kullanıcı bir öğe üzerinde gibi üzerinde fare işaretçisini durduğu zaman görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>. Bu konu, araç ipucu tanıtır ve nasıl oluşturulacağı ve araç ipucu içeriğini özelleştirmek açıklanır.  
+Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde durakladığında görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>. Bu konu, araç ipucu tanıtır ve oluşturmak ve araç ipucu içeriğini özelleştirmek nasıl açıklar.  
   
  
   
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>Bir araç ipucu nedir?  
- Bir kullanıcı bir araç ipucu olan bir öğeyi fare işaretçisini geçtiğinde, belirtilen bir süre için araç ipucu içeriği (bir denetim işlevini açıklayan Örneğin, metin içeriği) içeren bir pencere görüntülenir. Kullanıcı denetimi fare işaretçisini geçerse, araç ipucu içeriği odak aldıklarından pencere kaybolur.  
+ Bir kullanıcı bir araç ipucu sahip bir öğe üzerinde fare işaretçisi hareket ettirdiğinde belirtilen bir zaman miktarı için araç ipucu içeriği (bir denetimin işlevi tanımlayan Örneğin, metin içeriğini) içeren bir pencere görüntülenir. Kullanıcı, fare işaretçisini denetim taşınırsa, araç ipucu içerik odak kazandığı penceresi kaybolur.  
   
- İçeriği bir araç ipucu, bir veya birkaç satırlık metin, görüntüler, şekiller veya diğer görsel içerik içerebilir. Araç ipucu içeriği ayarlayarak bir denetim aşağıdaki özelliklerden biri için bir araç ipucu tanımlayın.  
+ İçeriği bir araç ipucu, metin, resimler, şekiller veya diğer görsel içerik bir veya daha fazla satır içerebilir. Araç ipucu içeriği ayarlayarak bir denetimin aşağıdaki özelliklerden biri için bir araç ipucu tanımlarsınız.  
   
 -   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
 -   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
- Hangi özelliği kullandığınız bağlı olup olmadığını tanımlar araç ipucu denetimi devraldığı üzerinde <xref:System.Windows.FrameworkContentElement> veya <xref:System.Windows.FrameworkElement> sınıfı.  
+ Kullandığınız hangi özelliğinin bağlı olup olmadığını tanımlar araç ipucu denetimi devraldığı üzerinde <xref:System.Windows.FrameworkContentElement> veya <xref:System.Windows.FrameworkElement> sınıfı.  
   
 <a name="create_tooltip"></a>   
 ## <a name="creating-a-tooltip"></a>Araç ipucu oluşturma  
- Aşağıdaki örnek ayarlayarak basit bir araç ipucu oluşturulacağını gösterir <xref:System.Windows.FrameworkElement.ToolTip%2A> özelliği için bir <xref:System.Windows.Controls.Button> denetlemek için bir metin dizesi.  
+ Aşağıdaki örnek, basit bir araç ipucu ayarlayarak oluşturma işlemi gösterilmektedir <xref:System.Windows.FrameworkElement.ToolTip%2A> özelliği için bir <xref:System.Windows.Controls.Button> denetimine bir metin dizesi.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
- Araç İpucu olarak da tanımlayabilirsiniz bir <xref:System.Windows.Controls.ToolTip> nesnesi. Aşağıdaki örnek kullanır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belirtmek için bir <xref:System.Windows.Controls.ToolTip> nesnesi araç ipucu olarak bir <xref:System.Windows.Controls.TextBox> öğesi. Örnek belirtir Not <xref:System.Windows.Controls.ToolTip> ayarlayarak <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> özelliği.  
+ Ayrıca, araç ipucu olarak tanımlayabilirsiniz bir <xref:System.Windows.Controls.ToolTip> nesne. Aşağıdaki örnekte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] belirtmek için bir <xref:System.Windows.Controls.ToolTip> nesnesi araç ipucu olarak bir <xref:System.Windows.Controls.TextBox> öğesi. Örnek belirten Not <xref:System.Windows.Controls.ToolTip> ayarlayarak <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> özelliği.  
   
  [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
- Aşağıdaki örnek kod oluşturmak için kullanılır. bir <xref:System.Windows.Controls.ToolTip> nesnesi. Örnekte bir <xref:System.Windows.Controls.ToolTip> (`tt`) ve ile ilişkilendirir bir <xref:System.Windows.Controls.Button>.  
+ Aşağıdaki örnek kod üretmek için kullanır. bir <xref:System.Windows.Controls.ToolTip> nesne. Örnek bir <xref:System.Windows.Controls.ToolTip> (`tt`) ve onunla ilişkilendirir bir <xref:System.Windows.Controls.Button>.  
   
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- Ayrıca olarak tanımlanmamış araç ipucu içeriği oluşturabilirsiniz bir <xref:System.Windows.Controls.ToolTip> gibi bir düzen öğesi içinde araç ipucu içeriği kapsayan nesne bir <xref:System.Windows.Controls.DockPanel>. Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.FrameworkElement.ToolTip%2A> özelliği bir <xref:System.Windows.Controls.TextBox> sınırlanan içerik için bir <xref:System.Windows.Controls.DockPanel> denetim.  
+ Tanımlanmamış araç ipucu içeriği de oluşturabileceğiniz bir <xref:System.Windows.Controls.ToolTip> araç ipucu içeriği gibi bir düzen öğesi içinde kapsayan nesne bir <xref:System.Windows.Controls.DockPanel>. Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.FrameworkElement.ToolTip%2A> özelliği bir <xref:System.Windows.Controls.TextBox> sınırlanan içerik için bir <xref:System.Windows.Controls.DockPanel> denetimi.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
 ## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Araç ipucu ve araç ipucu servisi sınıflarının özelliklerini kullanma  
- Araç ipucu içeriği görsel özelliklerini ayarlamaktan ve stiller uygulayarak özelleştirebilirsiniz. Araç İpucu olarak içeriği tanımlarsanız bir <xref:System.Windows.Controls.ToolTip> nesne görsel özelliklerini ayarlayabilirsiniz <xref:System.Windows.Controls.ToolTip> nesnesi. Aksi takdirde, eşdeğer ekli özellikler üzerinde ayarlamanız gerekir <xref:System.Windows.Controls.ToolTipService> sınıfı.  
+ Araç ipucu içeriği, görsel özelliklerini ayarlamaktan ve stilleri uygulayarak özelleştirebilirsiniz. Araç İpucu olarak içerik tanımlarsanız bir <xref:System.Windows.Controls.ToolTip> nesne görsel özelliklerini ayarlayabileceğiniz <xref:System.Windows.Controls.ToolTip> nesne. Aksi takdirde, üzerinde eşdeğer iliştirilmiş özellikler ayarlamalısınız <xref:System.Windows.Controls.ToolTipService> sınıfı.  
   
- Kullanarak araç ipucu içeriğinin konumunu belirtmek için özelliklerini ayarlamak nasıl bir örnek için <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> özellikleri, görmek [bir araç ipucu, konum](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ Kullanarak araç ipucu içeriğinin konumunu belirtmek için özellikleri ayarlama örneği için <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> özellikleri görmek [ToolTip konumlandırma](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
 ## <a name="styling-a-tooltip"></a>Bir araç ipucu stil oluşturma  
- Stil ekleyebilirsiniz bir <xref:System.Windows.Controls.ToolTip> özel tanımlayarak <xref:System.Windows.Style>. Aşağıdaki örnek tanımlayan bir <xref:System.Windows.Style> adlı `Simple` nasıl yerleşimini uzaklığı gösterir <xref:System.Windows.Controls.ToolTip> ve ayarlayarak görünümünü değiştirme <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+ Stil uygulayabilirsiniz bir <xref:System.Windows.Controls.ToolTip> özel tanımlayarak <xref:System.Windows.Style>. Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.Style> adlı `Simple` nasıl yerleşimini uzaklığı gösteren <xref:System.Windows.Controls.ToolTip> ve ayarlayarak görünümünü değiştirmek <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, ve <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
  [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
-## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Araç İpucu servisi zaman aralığı özelliklerini kullanma  
- <xref:System.Windows.Controls.ToolTipService> Sınıfı sağlar, araç ipucu ayarlamak aşağıdaki özellikleri görüntüleme zamanlarını: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
+## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Araç İpucu servisinin zaman aralığı özelliklerini kullanma  
+ <xref:System.Windows.Controls.ToolTipService> Sınıfı görüntüleme zamanlarını araç ipucu ayarlamak aşağıdaki özellikleri sağlar: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Kullanım <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> bir gecikme belirtmek için özellikleri önce genellikle kısa bir <xref:System.Windows.Controls.ToolTip> görünür ve ayrıca ne kadar süreyle belirtmek için bir <xref:System.Windows.Controls.ToolTip> görünür kalır. Daha fazla bilgi için bkz: [nasıl yapılır: araç ipucu görüntüsünü gecikme](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Kullanım <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> ve <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> bir gecikme belirtmek için özellikleri önce genellikle kısa bir <xref:System.Windows.Controls.ToolTip> görünür ve ayrıca ne kadar süreyle belirtmek için bir <xref:System.Windows.Controls.ToolTip> görünür kalır. Daha fazla bilgi için [nasıl yapılır: bir araç ipucu görüntülenmesini geciktirme](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
- <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Özelliği, fare işaretçisini hızla arasında taşıdığınızda farklı denetimler için araç ipuçları ilk gecikme olmadan görünür olmadığını belirler. Hakkında daha fazla bilgi için <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> özelliği, bkz: [BetweenShowDelay özelliğini kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Özelliği, farklı denetimler için araç ipuçları, fare işaretçisini hızlı bir şekilde bunlar arasında taşıdığınızda ilk bir gecikme olmadan görüntülenip görüntülenmediğine belirler. Hakkında daha fazla bilgi için <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> özelliğine bakın [BetweenShowDelay özelliğini kullanma](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
  Aşağıdaki örnek, bir araç ipucu için bu özelliklerin nasıl ayarlanacağını gösterir.  
   

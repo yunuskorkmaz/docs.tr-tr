@@ -10,15 +10,15 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 94a97c30179f7a8231426e31b8cacc364629ffc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee2eddf0ad0818658920aff19919c4b5fef807b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548357"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390281"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>İzlenecek yol: İlk Dokunmatik Uygulamanızı Oluşturma
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları dokunma yanıtlamak için etkinleştirir. Örneğin, birini kullanarak bir uygulama ile etkileşim kurabilir veya dokunmatik aygıtta, bu kılavuzda taşımak kullanıcı sağlayan bir uygulama oluşturur dokunmatik gibi daha fazla parmakları yeniden boyutlandırın veya touch kullanarak tek bir nesneyi döndürme.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokunmaya yanıt uygulamaları etkinleştirir. Örneğin, birini kullanarak bir uygulama ile etkileşim kurabilir veya daha fazla parmağınızı bir dokunmaya duyarlı cihazda dokunmatik ekranı sunduğumuz taşımak kullanıcı sağlayan bir uygulama oluşturur. Örneğin, yeniden boyutlandırma veya touch'ı kullanarak tek bir nesne döndürme.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  
@@ -27,61 +27,61 @@ ms.locfileid: "33548357"
   
 -   Windows 7.  
   
--   Dokunma kabul eden bir aygıtı Windows Touch destekleyen bir dokunmatik gibi girin.  
+-   Dokunma kabul eden bir cihaz Windows Dokunma destekleyen bir dokunmatik gibi girin.  
   
- Ayrıca, bir uygulama oluşturmak nasıl temel bir anlayış olmalıdır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], abone ve bir olay işlemek özellikle nasıl. Daha fazla bilgi için bkz: [gözden geçirme: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Ayrıca, uygulamayı oluşturmak nasıl temel bir anlayışa sahip olmalıdır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], özellikle abone olma ve bir olayı işlemek nasıl. Daha fazla bilgi için [izlenecek yol: ilk WPF Masaüstü Uygulamam](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="creating-the-application"></a>Uygulama oluşturma  
   
 #### <a name="to-create-the-application"></a>Uygulama oluşturmak için  
   
-1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturduğunuzda `BasicManipulation`. Daha fazla bilgi için bkz: [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma `BasicManipulation`. Daha fazla bilgi için [nasıl yapılır: yeni bir WPF uygulaması projesi oluşturma](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  MainWindow.xaml içeriğini aşağıdaki XAML ile değiştirin.  
   
-     Kırmızı içeren basit bir uygulama bu biçimlendirme oluşturur <xref:System.Windows.Shapes.Rectangle> üzerinde bir <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Özelliği <xref:System.Windows.Shapes.Rectangle> işleme olayları alacak böylece true olarak ayarlanır. Uygulama abone <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, ve <xref:System.Windows.UIElement.ManipulationInertiaStarting> olaylar. Bu olaylar taşımak için mantığı içeren <xref:System.Windows.Shapes.Rectangle> zaman kullanıcı yönetir.  
+     Bu işaretleme kırmızı içeren basit bir uygulama oluşturur <xref:System.Windows.Shapes.Rectangle> üzerinde bir <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Özelliği <xref:System.Windows.Shapes.Rectangle> olayları düzenleme alabileceklerdir true olarak ayarlanır. Uygulama abone <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, ve <xref:System.Windows.UIElement.ManipulationInertiaStarting> olayları. Bu olaylar taşımak için mantığı içeren <xref:System.Windows.Shapes.Rectangle> zaman kullanıcı yönetir.  
   
      [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Visual Basic, ilk satırındaki kullanıyorsanız yerine `x:Class="BasicManipulation.MainWindow"` ile `x:Class="MainWindow"`.  
+3.  Visual Basic kullanıyorsanız MainWindow.xaml öğesinin ilk satırı değiştirin `x:Class="BasicManipulation.MainWindow"` ile `x:Class="MainWindow"`.  
   
-4.  İçinde `MainWindow` sınıfında, aşağıdaki ekleyin <xref:System.Windows.UIElement.ManipulationStarting> olay işleyicisi.  
+4.  İçinde `MainWindow` sınıfında, aşağıdaki <xref:System.Windows.UIElement.ManipulationStarting> olay işleyicisi.  
   
-     <xref:System.Windows.UIElement.ManipulationStarting> Olaylarının zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokunma algılar bir nesneyi düzenlemek için giriş başlar. Kod düzenleme konumunu göreli olması gerektiğini belirtir <xref:System.Windows.Window> ayarlayarak <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> özelliği.  
+     <xref:System.Windows.UIElement.ManipulationStarting> Olaylarının zaman [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokunma algılar nesneyi işlemek için giriş başlar. Kod düzenleme konumu göreli olması gerektiğini belirtir. <xref:System.Windows.Window> ayarlayarak <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> özelliği.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  İçinde `MainWindow` sınıfında, aşağıdaki ekleyin <xref:System.Windows.Input.ManipulationDelta> olay işleyicisi.  
+5.  İçinde `MainWindow` sınıfında, aşağıdaki <xref:System.Windows.Input.ManipulationDelta> olay işleyicisi.  
   
-     <xref:System.Windows.Input.ManipulationDelta> Olay oluşur dokunma girişi konumu değiştirdiğinde ve birden çok kez yaptığı değişiklik sırasında ortaya çıkabilir. Olay, bir parmak kaldırıldıktan sonra da oluşabilir. Örneğin, kullanıcının bir parmak ekran boyunca sürüklediği <xref:System.Windows.Input.ManipulationDelta> olayı parmak hareket ettikçe birden çok kez oluşur. Kullanıcı bir parmak ekranından başlatır, <xref:System.Windows.Input.ManipulationDelta> olay eylemsizlik benzetimini yapmak için gerçekleşen tutar.  
+     <xref:System.Windows.Input.ManipulationDelta> Olaylarının dokunma girişi değişiklikleri konumu ve düzenleme sırasında birden çok kez gerçekleşebilir. Olay, bir parmak kaldırıldıktan sonra da meydana gelebilir. Örneğin, kullanıcı bir ekranda bir parmak sürüklediğinde <xref:System.Windows.Input.ManipulationDelta> olay parmağınızı hareket ettikçe birden çok kez gerçekleşir. Kullanıcı bir parmak ekranından çektiğinde <xref:System.Windows.Input.ManipulationDelta> tutan bir olayın gerçekleşmesi Eylemsizliği benzetimini yapmak için.  
   
-     Kod uygular <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> için <xref:System.Windows.UIElement.RenderTransform%2A> , <xref:System.Windows.Shapes.Rectangle> taşımak için kullanıcı dokunma taşınırken giriş. Ayrıca denetler olup olmadığını <xref:System.Windows.Shapes.Rectangle> sınırları dışında <xref:System.Windows.Window> olayı sırasında eylemsizlik oluştuğunda. Bu nedenle, uygulama çağırırsa <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> düzenlemeyi sonlandırmak için yöntem.  
+     Kod geçerli <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> için <xref:System.Windows.UIElement.RenderTransform%2A> , <xref:System.Windows.Shapes.Rectangle> taşımak için kullanıcı touch taşınırken giriş. Ayrıca denetler olmadığını <xref:System.Windows.Shapes.Rectangle> sınırları dışında <xref:System.Windows.Window> sırasında Eylemsizliği oluştuğunda olay. Bu nedenle, uygulama çağırırsa <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> düzenlemeyi sonlandırmak için yöntemi.  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  İçinde `MainWindow` sınıfında, aşağıdaki ekleyin <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay işleyicisi.  
+6.  İçinde `MainWindow` sınıfında, aşağıdaki <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay işleyicisi.  
   
-     <xref:System.Windows.UIElement.ManipulationInertiaStarting> Kullanıcı ekranından tüm parmakları başlatır olay oluşur. Kod ilk hız ve taşıma, genişletme ve dikdörtgen dönüşünü yavaşlama ayarlar.  
+     <xref:System.Windows.UIElement.ManipulationInertiaStarting> Olay kullanıcı ekrandan tüm parmağınızı çektiğinde gerçekleşir. Bu kod, taşıma, genişletmeyi ve döndürme için yavaşlama ve başlangıç hızı ayarlar.  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
-7.  Oluşturun ve projeyi çalıştırın.  
+7.  Derleme ve projeyi çalıştırın.  
   
-     Penceresinde görünür bir kırmızı kare görmeniz gerekir.  
+     Penceresinde görünen bir kırmızı kare görmeniz gerekir.  
   
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
  Uygulamayı test etmek için aşağıdaki düzenlemeleri deneyin. Aşağıdaki aynı anda birden çok işlemi gerçekleştirebileceğinizi unutmayın.  
   
--   Taşımak için <xref:System.Windows.Shapes.Rectangle>, bir parmak yerleştirin <xref:System.Windows.Shapes.Rectangle> ve parmak ekranda hareket ettirin.  
+-   Taşımak <xref:System.Windows.Shapes.Rectangle>, böylece parmağınızı yerleştirip <xref:System.Windows.Shapes.Rectangle> ve ekranda parmağınızı hareket ettirin.  
   
--   Yeniden boyutlandırmak için <xref:System.Windows.Shapes.Rectangle>, iki parmakları yerleştirin <xref:System.Windows.Shapes.Rectangle> ve parmakları yakın birlikte veya birbirlerinden uzağına taşıyın.  
+-   Yeniden boyutlandırmak için <xref:System.Windows.Shapes.Rectangle>, iki parmağınızı yerleştirip <xref:System.Windows.Shapes.Rectangle> parmağınızı yaklaşacak şekilde veya birbirlerinden küçüldükleri taşıyın.  
   
--   Döndürmek için <xref:System.Windows.Shapes.Rectangle>, iki parmakları yerleştirin <xref:System.Windows.Shapes.Rectangle> ve parmakları birbiri etrafında döndürün.  
+-   Döndürülecek <xref:System.Windows.Shapes.Rectangle>, iki parmağınızı yerleştirip <xref:System.Windows.Shapes.Rectangle> ve parmağınızı birbirine etrafında döndürün.  
   
- Eylemsizlik neden olmak için önceki işlemeleri gerçekleştirme gibi parmakları ekranından hızlı bir şekilde yükseltin. <xref:System.Windows.Shapes.Rectangle> Taşımak, yeniden boyutlandırmak veya durdurulmadan önce birkaç saniye boyunca devam eder.  
+ Eylemsizlik neden olmak için önceki işlemeleri gerçekleştirme gibi parmaklarınızın ekranından hızlı bir şekilde yükseltin. <xref:System.Windows.Shapes.Rectangle> Taşıma, yeniden boyutlandırmak veya durdurulmadan önce birkaç saniye boyunca devam eder.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  

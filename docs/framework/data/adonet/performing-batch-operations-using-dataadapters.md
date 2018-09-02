@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361991"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397504"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapters kullanarak toplu işlemleri gerçekleştirme
-ADO.NET toplu desteği sağlayan bir <xref:System.Data.Common.DataAdapter> INSERT, UPDATE ve DELETE işlemlerinden gruplandırmak için bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> bir defada bir işlem göndermek yerine bu sunucuya. Sunucuya gidiş dönüş sayısı azalma genellikle önemli performans artışları sonuçlanır. Toplu güncelleştirmeler, SQL Server için .NET veri sağlayıcıları için desteklenir (<xref:System.Data.SqlClient>) ve Oracle (<xref:System.Data.OracleClient>).  
+ADO.NET'te batch desteği sağlayan bir <xref:System.Data.Common.DataAdapter> INSERT, UPDATE ve DELETE işlemlerini gruplamak için bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> yerine, aynı anda tek bir işlem sunucusuna. Sunucuya gidiş dönüş sayısı azalma, genellikle önemli performans artışları sonuçlanır. Toplu güncelleştirmeler, SQL Server için .NET veri sağlayıcıları desteklenir (<xref:System.Data.SqlClient>) ve Oracle (<xref:System.Data.OracleClient>).  
   
- Bir veritabanı ile güncelleştirilirken değiştiğinde alanından bir <xref:System.Data.DataSet> ADO.NET, önceki sürümlerinde `Update` yöntemi bir `DataAdapter` veritabanı bir satır için güncelleştirmeleri aynı anda gerçekleştirilen. Belirtilen satırları aracılığıyla yinelendiğinde gibi <xref:System.Data.DataTable>, her incelenmesi <xref:System.Data.DataRow> değişiklik yapıldığını olmadığını görmek için. Satır modifiye, uygun adlı `UpdateCommand`, `InsertCommand`, veya `DeleteCommand`değerine bağlı olarak <xref:System.Data.DataRow.RowState%2A> ilgili satır özelliği. Her bir satır güncelleştirme ağ gidiş veritabanına dahil.  
+ Bir veritabanı ile güncelleştirme ne zaman değişir bir <xref:System.Data.DataSet> ADO.NET, önceki sürümlerinde `Update` yöntemi bir `DataAdapter` veritabanı bir satır için güncelleştirmeleri aynı anda gerçekleştirilen. Belirtilen satırları aracılığıyla yinelenir gibi <xref:System.Data.DataTable>, her incelenirken <xref:System.Data.DataRow> değişiklik yapıldığını olmadığını görmek için. Satır değiştiren, uygun adlı `UpdateCommand`, `InsertCommand`, veya `DeleteCommand`değerine bağlı olarak <xref:System.Data.DataRow.RowState%2A> ilgili satır için özellik. Her satır güncelleştirme veritabanını bir ağ gidiş dönüş dahil.  
   
- ADO.NET 2.0 ile başlayan <xref:System.Data.Common.DbDataAdapter> kullanıma sunan bir <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A> özelliği. Ayarı `UpdateBatchSize` pozitif bir tamsayı değeri belirtilen boyut toplu gönderilmesi gereken veritabanı güncelleştirmelerini neden olur. Örneğin, ayarlama `UpdateBatchSize` 10 10 ayrı deyim grup ve tek bir toplu gönderin. Ayarı `UpdateBatchSize` 0 olarak neden olacak <xref:System.Data.Common.DataAdapter> sunucunun işleyebileceği en büyük toplu iş boyutunu kullanması için. Satırları birer birer gönderildiğinde 1 devre dışı bırakır toplu güncelleştirmeler için ayarlama.  
+ ADO.NET 2.0 ile başlayarak <xref:System.Data.Common.DbDataAdapter> sunan bir <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A> özelliği. Ayar `UpdateBatchSize` pozitif bir tamsayı değeri, güncelleştirmeleri belirtilen boyutta toplu gönderilmesi için veritabanına neden olur. Örneğin, ayarlamak `UpdateBatchSize` 10 10 ayrı deyim grup ve bunları tek bir toplu gönderin. Ayarlama `UpdateBatchSize` 0 olarak açacak <xref:System.Data.Common.DataAdapter> sunucu işleyebileceği en büyük toplu iş boyutu kullanılacak. Satırları teker teker gönderilir gibi 1 devre dışı bırakır toplu güncelleştirmeler için ayarlar.  
   
- Son derece büyük bir toplu iş yürütülürken performansı düşürür. Bu nedenle, uygulamanızın uygulamadan önce optimum toplu iş boyutu ayarı için test etmeniz gerekir.  
+ Son derece büyük bir toplu iş yürütme performansı düşürür. Bu nedenle, uygulamanızı uygulamadan önce en yüksek toplu iş boyutu ayarı için test etmeniz gerekir.  
   
 ## <a name="using-the-updatebatchsize-property"></a>UpdateBatchSize özelliğini kullanma  
- Toplu güncelleştirmeler etkinleştirildiğinde, <xref:System.Data.IDbCommand.UpdatedRowSource%2A> DataAdapter özellik değerinin `UpdateCommand`, `InsertCommand`, ve `DeleteCommand` ayarlanmalı <xref:System.Data.UpdateRowSource.None> veya <xref:System.Data.UpdateRowSource.OutputParameters>. Ne zaman bir toplu işlem gerçekleştirme güncelleştirme komutunun <xref:System.Data.IDbCommand.UpdatedRowSource%2A> özellik değerinin <xref:System.Data.UpdateRowSource.FirstReturnedRecord> veya <xref:System.Data.UpdateRowSource.Both> geçersiz.  
+ Toplu güncelleştirmeler etkinleştirildiğinde <xref:System.Data.IDbCommand.UpdatedRowSource%2A> DataAdapter özelliği değerinin `UpdateCommand`, `InsertCommand`, ve `DeleteCommand` ayarlanmalıdır <xref:System.Data.UpdateRowSource.None> veya <xref:System.Data.UpdateRowSource.OutputParameters>. Ne zaman bir toplu güncelleştirme gerçekleştirme, komutun <xref:System.Data.IDbCommand.UpdatedRowSource%2A> özelliği değerinin <xref:System.Data.UpdateRowSource.FirstReturnedRecord> veya <xref:System.Data.UpdateRowSource.Both> geçersiz.  
   
- Aşağıdaki yordam kullanımını gösteren `UpdateBatchSize` özelliği. İki bağımsız değişken, yordamın kullandığı bir <xref:System.Data.DataSet> temsil eden sütun olan nesneyi **ProductCategoryID** ve **adı** alanlarını **Production.ProductCategory**tablo ve toplu iş boyutu (toplu satır sayısı) temsil eden bir tamsayı. Yeni bir kod oluşturur <xref:System.Data.SqlClient.SqlDataAdapter> ayarı nesne, kendi <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, ve <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> özellikleri. Kod varsayar <xref:System.Data.DataSet> nesne satır değiştirdi. Bu ayarlar `UpdateBatchSize` özelliği ve güncelleştirme yürütür.  
+ Aşağıdaki yordam kullanımını göstermektedir `UpdateBatchSize` özelliği. Yordamın kullandığı iki bağımsız değişkeni bir <xref:System.Data.DataSet> temsil eden bir sütuna sahip nesne **ProductCategoryID** ve **adı** alanlarını **Production.ProductCategory**tablo ve toplu iş boyutu (toplu satır sayısı) temsil eden bir tamsayı. Yeni bir kod oluşturur <xref:System.Data.SqlClient.SqlDataAdapter> ayarlama nesne, kendi <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, ve <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> özellikleri. Kod olduğunu varsayar <xref:System.Data.DataSet> nesne satır değiştirdi. Bu ayarlar `UpdateBatchSize` özellik ve güncelleştirme yürütür.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,23 +126,23 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Toplu güncelleştirme ile ilgili olayları ve hataları işleme  
- **DataAdapter** iki güncelleştirme ile ilgili olayları vardır: **RowUpdating** ve **RowUpdated**. Toplu işleme devre dışı bırakıldığında, ADO.NET önceki sürümlerinde, bu olayların her biri bir kez işlenen her satır için oluşturulur. **RowUpdating** güncelleştirme oluşmadan önce oluşturulan ve **RowUpdated** Veritabanı Güncelleştirme tamamlandıktan sonra oluşturulur.  
+ **DataAdapter** iki güncelleştirme ile ilgili olayları vardır: **RowUpdating** ve **RowUpdated**. Toplu işlem devre dışı bırakıldığında, ADO.NET önceki sürümlerinde, bu olayların her biri çok kez işlenen her satır için oluşturulur. **RowUpdating** güncelleştirme gerçekleşmeden önce oluşturulan ve **RowUpdated** veritabanı güncelleştirmesi tamamlandıktan sonra oluşturulur.  
   
-### <a name="event-behavior-changes-with-batch-updates"></a>Toplu Güncelleştirmeler ile olay davranışı değişiklikleri  
- Toplu işleme etkinleştirildiğinde, birden çok satır bir tek veritabanı işleminde güncelleştirilir. Bu nedenle, yalnızca bir `RowUpdated` olayı, ancak her toplu işlem için oluşur `RowUpdating` olayı işlenen her satır için oluşur. Toplu işleme devre dışı bırakıldığında, iki birebir Interleaving bir yerlerde olaylar `RowUpdating` olay ve tek `RowUpdated` bir satır ve sonra bir olay yangın `RowUpdating` ve bir `RowUpdated` olay yangın sonraki satıra kadar tüm satırlar için işlenir.  
+### <a name="event-behavior-changes-with-batch-updates"></a>Toplu Güncelleştirmeler ile olay davranış değişiklikleri  
+ Toplu işleme etkin olduğunda, bir tek veritabanı işlemi birden çok satır güncelleştirilir. Bu nedenle, yalnızca bir `RowUpdated` ise her toplu iş için bir olay oluşursa `RowUpdating` olay işlenen her satır için gerçekleşir. Toplu işlem devre dışı bırakıldığında, iki bire Interleaving bir yerlerde olaylar `RowUpdating` olay ve tek `RowUpdated` ve ardından tek bir satır için olay yangın `RowUpdating` ve bir `RowUpdated` sonraki satıra kadar tüm satırlar için olay tetikleme işlenir.  
   
-### <a name="accessing-updated-rows"></a>Güncelleştirilmiş satırları erişme  
- Toplu işleme devre dışı bırakıldığında, güncelleştirilen satır kullanılarak erişilebilir <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> özelliği <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı.  
+### <a name="accessing-updated-rows"></a>Güncelleştirilen satırların erişme  
+ Toplu işlem devre dışı bırakıldığında, güncelleştirilen satır kullanılarak erişilebilir <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> özelliği <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı.  
   
- Toplu işleme etkin olduğunda, tek bir `RowUpdated` olay birden çok satır için oluşturulur. Bu nedenle, değeri `Row` her satır için özellik NULL'dur. `RowUpdating` olayları yine her satır için oluşturulur. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Yöntemi <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı bir diziye satırlara yapılan başvurular kopyalayarak işlenen satır erişmenize olanak verir. Hiçbir satır işlenmekte olan, `CopyToRows` oluşturur bir <xref:System.ArgumentNullException>. Kullanım <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> çağırmadan önce işlenen satır sayısını döndürmek için özellik <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> yöntemi.  
+ Toplu işleme etkin olduğunda, tek bir `RowUpdated` olay birden çok satır için oluşturulur. Bu nedenle, değerini `Row` her satır için özellik NULL'dur. `RowUpdating` olayları yine de her satır için oluşturulur. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> Yöntemi <xref:System.Data.Common.RowUpdatedEventArgs> sınıfı satırları için başvurular bir dizi içine kopyalayarak işlenen satırları erişmenizi sağlar. Hiçbir satır işlenmekte olan, `CopyToRows` oluşturur bir <xref:System.ArgumentNullException>. Kullanım <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> çağırmadan önce işlenen satır sayısını döndürmek için özellik <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> yöntemi.  
   
 ### <a name="handling-data-errors"></a>Veri hataları işleme  
- Toplu iş yürütme her tek tek bir deyimi yürütme aynı etkiye sahiptir. Deyimleri deyimleri toplu eklenen sırada yürütülür. Toplu iş modunda devre dışı bırakıldığında oldukları gibi hatalar toplu iş modunda aynı şekilde ele alınır. Her satır ayrı ayrı işlenir. Veritabanında başarıyla işlenen satır ilgili güncelleştirilmeyecek <xref:System.Data.DataRow> içinde <xref:System.Data.DataTable>.  
+ Toplu işlem yürütmesi tek tek her deyimin yürütme ile aynı etkiye sahiptir. Deyimleri deyimleri toplu eklenen sırayla yürütülür. Hataları, toplu iş modu devre dışı bırakıldığında, oldukları gibi aynı şekilde toplu iş modunda işlenir. Her satır ayrı ayrı işlenir. İlgili veritabanında başarıyla işlenen satır güncelleştirilir <xref:System.Data.DataRow> içinde <xref:System.Data.DataTable>.  
   
- Veri sağlayıcı ve arka uç veritabanı sunucusunun hangi SQL yapıları toplu iş yürütme için desteklenen belirler. Desteklenmeyen bir deyimi yürütme için gönderdiyseniz bir özel durum oluşturulabilir.  
+ Veri sağlayıcısı ve arka uç veritabanı sunucusunun hangi SQL yapıları toplu iş yürütme için desteklenen belirleyin. Desteklenmeyen bir deyimi yürütme için gönderdiyseniz, bir özel durum.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [DataAdapter Olaylarını İşleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
 ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999736"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388299"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; İşleci (C# Başvurusu)
 Koşullu- ve işleci (`&&`) gerçekleştiren bir mantıksal- ve kendi `bool` işlenenler, ancak yalnızca gerekli olduğunda ikinci işleneni değerlendirir.  

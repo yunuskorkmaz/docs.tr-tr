@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 9d95dc4a9f61a9ec3a50f9d594b31d673c2d3764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602026"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393736"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While Tümcesi (Visual Basic)
-Belirtilen bir koşul olduğu sürece bir koleksiyondaki öğelerin atlar `true` ve kalan öğeleri döndürür.  
+Belirtilen bir koşulu olduğu sürece bir koleksiyondaki öğeleri atlar `true` ve kalan öğeleri döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,14 +28,14 @@ Skip While expression
   
 |Terim|Tanım|  
 |---|---|  
-|`expression`|Gerekli. Öğeleri için test etmek için bir koşul temsil eden bir ifade. İfade döndürmelidir bir `Boolean` değeri veya işlevsel bir eşdeğer gibi bir `Integer` olarak değerlendirilecek bir `Boolean`.|  
+|`expression`|Gerekli. Test etmek için öğeleri için bir koşulu temsil eden bir ifade. İfade döndürmelidir bir `Boolean` değer veya bir işlev eşdeğer gibi bir `Integer` olarak değerlendirilecek bir `Boolean`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Skip While` Yan tümcesi atlar sağlanan kadar bir sorgu sonucunun başından öğeleri `expression` döndürür `false`. Sonra `expression` döndürür `false`, kalan tüm öğeleri sorgu döndürür. `expression` İçin kalan sonuçları göz ardı edilir.  
+ `Skip While` Yan tümcesi bir sorgu sonucunun başına sağlanan kadar öğeleri atlar `expression` döndürür `false`. Sonra `expression` döndürür `false`, sorgunun kalan tüm öğeleri döndürür. `expression` Kalan sonuçları göz ardı edilir.  
   
- `Skip While` Yan tümcesini farklı olarak `Where` yan tümcesinde, `Where` yan tümcesi, belirli bir koşula karşılamayan bir sorgudan tüm öğeleri dışlamak için kullanılabilir. `Skip While` Yan tümcesi koşula uyulmadığını yalnızca ilk kez kadar öğeleri dışlar. `Skip While` Sıralı sorgu sonucu ile çalışırken yan tümcesi en kullanışlıdır.  
+ `Skip While` Yan tümcesi farklıdır `Where` yan tümcesinde, `Where` yan tümcesi, belirli bir koşulu karşılamayan bir sorgudan tüm öğeleri hariç tutmak için kullanılabilir. `Skip While` Yan tümcesi koşulu karşılanmadı yalnızca ilk kez kadar öğeleri hariç tutar. `Skip While` Bir sıralı sorgu sonucu ile çalışırken yan tümcesi en kullanışlı.  
   
- Kullanarak bir sorgu sonucunun sonuçları başlangıçtan itibaren belirli sayıda atlayabilir `Skip` yan tümcesi.  
+ Kullanarak bir sorgu sonucunun baştan sonuçları belirli sayıda atlayabilir `Skip` yan tümcesi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde `Skip While` Amerika Birleşik Devletleri ilk müşteriden bulunana kadar sonuçları atlamak için yan tümcesi.  
@@ -44,7 +44,7 @@ Skip While expression
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Sorgular](../../../visual-basic/language-reference/queries/queries.md)  
+ [Sorgular](../../../visual-basic/language-reference/queries/index.md)  
  [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Skip Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-clause.md)  

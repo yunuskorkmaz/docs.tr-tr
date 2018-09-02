@@ -8,26 +8,26 @@ helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 ms.openlocfilehash: 8e64a819e9670a29e97140a32c81f5ff9006f83e
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231521"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388558"
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>İzlenecek Yol: DataRepeater Denetimindeki Verileri Görüntüleme (Visual Studio)
-Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bitiş senaryo sağlar bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+Bu izlenecek yolda ilişkili verileri görüntülemek için temel bir başlangıç ve bitiş senaryosu sağlar. bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 ## <a name="prerequisite"></a>Önkoşul  
- Bu kılavuz, Northwind örnek veritabanı gerektirir.  
+ Bu izlenecek yol, Northwind örnek veritabanıyla kurulan gerektirir.  
   
- Bu veritabanı geliştirme bilgisayarınızda yoksa, Microsoft Download Center'dan gelen yükleyebilirsiniz. Yönergeler için bkz: [örnek veritabanları yükleme](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Geliştirme bilgisayarınızda bu veritabanı yoksa Microsoft Download Center'dan gelen indirebilirsiniz. Yönergeler için [Downloading Sample Databases](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu kılavuzun ilk bölümü dört ana görevden oluşur:  
   
--   Bir çözümü oluşturma.  
+-   Bir çözüm oluşturma.  
   
--   Ekleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+-   Ekleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 -   Veri kaynağı ekleme.  
   
@@ -36,15 +36,15 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-a-datarepeater-solution"></a>DataRepeater çözümü oluşturma  
- İlk adımda bir proje ve çözüm oluşturun.  
+ Bu adımda, bir proje ve çözüm oluşturun.  
   
 #### <a name="to-create-a-datarepeater-solution"></a>DataRepeater çözüm oluşturmak için  
   
-1.  Visual Studio üzerinde **dosya** menüsünde tıklatın **yeni proje**.  
+1.  Visual Studio **dosya** menüsünü tıklatın **yeni proje**.  
   
-2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusunda, genişletin **Visual Basic**ve ardından **Windows**.  
+2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusunda **Visual Basic**ve ardından **Windows**.  
   
-3.  İçinde **şablonları** bölmesinde tıklatın **Windows Forms uygulaması**.  
+3.  İçinde **şablonları** bölmesinde tıklayın **Windows Forms uygulaması**.  
   
 4.  İçinde **adı** kutusuna `DataRepeaterApp`.  
   
@@ -52,99 +52,99 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
   
      Windows Forms Tasarımcısı'nı açar.  
   
-6.  Windows Forms Tasarımcısı'nda formu seçin. İçinde **özellikleri** penceresindeki ayarlayın **boyutu** özelliğine `800, 700`.  
+6.  Formu Windows Form Tasarımcısı'nda seçin. İçinde **özellikleri** penceresinde **boyutu** özelliğini `800, 700`.  
   
 ## <a name="adding-a-datarepeater-control"></a>DataRepeater denetimi ekleme  
- Bu adımda eklediğiniz bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> forma denetim.  
+ Bu adımda eklediğiniz bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> forma.  
   
 #### <a name="to-add-a-datarepeater-control"></a>DataRepeater denetimi eklemek için  
   
-1.  Üzerinde **Görünüm** menüsünde tıklatın **araç**.  
+1.  Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.  
   
-     **Araç** açar.  
+     **Araç kutusu** açılır.  
   
 2.  Seçin **Visual Basic PowerPacks** sekmesi.  
   
-3.  Sürükleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> üzerine kontrol **Form1**.  
+3.  Sürükleme bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi **Form1**.  
   
-4.  Özellikler penceresinde ayarlayın **konumu** özelliğine `0, 25`.  
+4.  Özellikler penceresinde ayarlayın **konumu** özelliğini `0, 25`.  
   
-5.  Ayarlama **boyutu** özelliğine `460, 600`.  
+5.  Ayarlama **boyutu** özelliğini `460, 600`.  
   
 ## <a name="adding-a-data-source"></a>Veri kaynağı ekleme  
- Bu adımda, bir veri kaynağı için ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+ Bu adımda, bir veri kaynağı için eklediğiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 #### <a name="to-add-a-data-source"></a>Bir veri kaynağı eklemek için  
   
-1.  Üzerinde **veri** menüsünde tıklatın **veri kaynaklarını Göster**.  
+1.  Üzerinde **veri** menüsünü tıklatın **veri kaynaklarını Göster**.  
   
-2.  İçinde **veri kaynakları** penceresinde tıklatın **yeni veri kaynağı Ekle**.  
+2.  İçinde **veri kaynakları** penceresinde tıklayın **yeni veri kaynağı Ekle**.  
   
-3.  Seçin **veritabanı** üzerinde **bir veri kaynağı türü seç** sayfasında ve ardından **sonraki**.  
+3.  Seçin **veritabanı** üzerinde **bir veri kaynağı türü seçin** sayfasında ve ardından **sonraki**.  
   
-4.  Üzerinde **veri bağlantınızı** sayfasında, aşağıdaki adımlardan birini gerçekleştirin:  
+4.  Üzerinde **veri bağlantınızı seçin** sayfasında, aşağıdaki adımlardan birini gerçekleştirin:  
   
     -   Northwind örnek veritabanıyla kurulan veri bağlantısı açılan listede kullanılabilir durumdaysa bu bağlantıya tıklayın.  
   
          veya  
   
-    -   Tıklatın **yeni bağlantı** yeni bir veri bağlantısı yapılandırmak için. Daha fazla bilgi için bkz: [yeni bağlantılar eklemek](/visualstudio/data-tools/add-new-connections).  
+    -   Tıklayın **yeni bağlantı** yeni bir veri bağlantısı yapılandırmak için. Daha fazla bilgi için [yeni bağlantı ekleme](/visualstudio/data-tools/add-new-connections).  
   
-5.  Veritabanı parola gerektiriyorsa, hassas bilgileri Ekle ve ardından seçeneğini **sonraki**.  
+5.  Veritabanına parola gerekiyorsa, hassas verileri eklemek ve ardından seçeneğini **sonraki**.  
   
     > [!NOTE]
-    >  Bir iletişim kutusu görüntülenirse, tıklatın **Evet** dosyayı projenize kaydetmek için.  
+    >  Bir iletişim kutusu görüntülenirse, tıklayın **Evet** dosyayı projenize kaydetmek için.  
   
-6.  Tıklatın **sonraki** üzerinde **uygulama yapılandırma dosyasında bağlantı dizesini kaydedin** sayfası.  
+6.  Tıklayın **sonraki** üzerinde **bağlantı dizesini uygulama yapılandırma dosyasına Kaydet** sayfası.  
   
-7.  Genişletme **tabloları** düğümde **veritabanı nesnelerinizi** sayfası.  
+7.  Genişletin **tabloları** düğümde **veritabanı nesnelerinizi seçin** sayfası.  
   
-8.  Onay kutularını işaretleyin **müşteriler** ve **siparişleri** tablolar ve ardından **son**.  
+8.  Yanındaki onay kutularını işaretleyin **müşteriler** ve **siparişler** tablolar ve ardından **son**.  
   
-     **NorthwindDataSet** projenize eklenir ve **müşteriler** ve **siparişleri** tabloları görünür **veri kaynakları** penceresi.  
+     **NorthwindDataSet** projenize eklenir ve **müşteriler** ve **siparişler** tablolar görünür **veri kaynakları** penceresi.  
   
 ## <a name="adding-data-bound-controls"></a>Verilere bağlı denetimler ekleme  
  Bu adımda, verilere bağlı denetimler ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
   
 #### <a name="to-add-data-bound-controls"></a>Verilere bağlı denetimler eklemek için  
   
-1.  İçinde **veri kaynakları** penceresi, üst düzey düğümü seçin **müşteriler** tablo.  
+1.  İçinde **veri kaynakları** penceresinde için üst düzey düğümü seçmek **müşteriler** tablo.  
   
-2.  Tabloya açılan türünü değiştirme **ayrıntıları** tıklayarak **ayrıntıları** Tablo düğümü aşağı açılan listesinde.  
+2.  Tabloya bırakma türünü değiştirme **ayrıntıları** tıklayarak **ayrıntıları** Tablo düğümü aşağı açılan listesinde.  
   
-3.  Seçin **müşteriler** Tablo düğümü ve Madde şablonu bölgesini (üst bölge) sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+3.  Seçin **müşteriler** tablo düğüm ve öğe şablonu bölgesi (üst bölge) sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-     A <xref:System.Windows.Forms.BindingNavigator> denetimi forma eklenir ve **NorthwindDataSet**, **CustomersBindingSource**, **TableAdapter**,  **TableAdapterManager**, ve **CustomersBindingNavigator** bileşenleri bileşen Tepsisi eklenir.  
+     A <xref:System.Windows.Forms.BindingNavigator> denetimi forma eklenir ve **NorthwindDataSet**, **CustomersBindingSource**, **CustomersTableAdapter**,  **TableAdapterManager**, ve **CustomersBindingNavigator** bileşenler, bileşen tepsisine eklenir.  
   
-4.  Tüm alanları ve bunların ilişkili etiketleri seçin ve Madde şablonu bölgesi sol kenarı yerleştir.  
+4.  Tüm alanları ve bunların ilişkili etiketleri seçin ve bunları öğesi şablon alanının sol kenardaki konumlandırın.  
   
-5.  Son beş alanları seçin (**bölge**, **posta kodu**, **Ülke**, **telefon**, ve **faks**) ve bunların ilişkili etiketleri ve en fazla ve ilk altı alanlarının sağa taşıyın.  
+5.  Son beş alanları seçin (**bölge**, **posta kodu**, **Ülke**, **telefon**, ve **faks**) ve kendi ilişkili etiketleri ve yukarı ve sağa ilk altı alanların taşıyın.  
   
-6.  Öğe şablonu (Denetim üst bölge) seçin.  
+6.  Öğe şablonu (üst bölge denetimin) seçin.  
   
-7.  Özellikler penceresinde ayarlayın **boyutu** özelliğine `427, 170`.  
+7.  Özellikler penceresinde ayarlayın **boyutu** özelliğini `427, 170`.  
   
- Bu noktada, yinelenen müşterilerin listesini görüntüler ve çalışan bir uygulama vardır. Uygulamayı çalıştırın, verileri değiştirebilir ve eklemek veya Müşteri kayıtlarını silmek için F5 tuşuna basabilirsiniz.  
+ Bu noktada, yinelenen müşterilerin listesini görüntüleyen bir çalışan uygulamanız var. Uygulamayı çalıştırmak, verileri değiştirme ve ekleyin veya müşteri kayıtları silmek için F5 tuşuna basabilirsiniz.  
   
- İsteğe bağlı sonraki adımlarda özelleştirme hakkında bilgi edineceksiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+ İsteğe bağlı sonraki adımlarda nasıl özelleştirileceğini öğreneceksiniz <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 ## <a name="next-steps-optional"></a>Sonraki adımlar (isteğe bağlı)  
- Kılavuzun bu bölümü dört isteğe bağlı görevden oluşur:  
+ Kılavuzun bu bölümü, dört isteğe bağlı görevden oluşur:  
   
--   Görünümünü değiştirme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+-   Görünümünü değiştirme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 -   Kullanıcıların ekleme veya kayıt silme engelliyor.  
   
--   İçin arama yeteneğine ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+-   Arama özelliği ekleniyor <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
--   Ana ve ayrıntı tabloya ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+-   Bir ana ve ayrıntı tablosunu ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 ## <a name="changing-the-appearance-of-the-datarepeater-control"></a>DataRepeater denetiminin görünümünü değiştirme  
- Bu isteğe bağlı adım, değişiklik `BackColor` , <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> tasarım zamanında denetim. Ayrıca değişen renklerde satırları görüntülemek ve bir etiketin değiştirmek için kodu ekleyin `ForeColor` koşullu.  
+ İsteğe bağlı Bu adımda, değiştirdiğiniz `BackColor` , <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> tasarım zamanında denetimi. Ayrıca değişen renklerde satırları görüntülemek ve bir etiketin değiştirmek için kod ekleme `ForeColor` koşullu olarak.  
   
-#### <a name="to-change-the-appearance-of-the-control"></a>Denetimin görünümünü değiştirmek için  
+#### <a name="to-change-the-appearance-of-the-control"></a>Denetiminin görünümünü değiştirmek için  
   
-1.  Windows Forms Tasarımcısı'nda ana (alt) bölgesini seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+1.  Windows Form Tasarımcısı'nda (alt) ana bölgesi seçin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 2.  Özellikler penceresinde ayarlayın `BackColor` beyaz özelliği.  
   
@@ -157,26 +157,26 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
      [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
   
-6.  İçinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> olay işleyicisi değiştirmek için aşağıdaki kodu ekleyin `ForeColor` etiket bağlı bir koşul olarak:  
+6.  İçinde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> olay işleyicisi değiştirmek için aşağıdaki kodu ekleyin `ForeColor` bir koşula bağlı bir etiketin:  
   
      [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs)]
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
   
-7.  Uygulamayı çalıştırın ve özelleştirmeleri görmek için F5 tuşuna basın.  
+7.  Uygulamayı çalıştırmak ve istediğiniz özelleştirmeleri görmek için F5 tuşuna basın.  
   
-## <a name="preventing-users-from-adding-or-deleting-records"></a>Kullanıcıların ekleme veya kayıt silme önleme  
- İsteğe bağlı Bu adımda, kullanıcıların ekleme veya kayıt silme engeller kodu ekleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+## <a name="preventing-users-from-adding-or-deleting-records"></a>Kullanıcıların eklemek veya kayıtları silme  
+ İsteğe bağlı Bu adımda, kullanıcıların ekleme veya kayıt silme engelleyen kod ekleme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-#### <a name="to-prevent-users-from-adding-and-deleting-records"></a>Kayıtları ekleme ve silme kullanıcıların engellemek için  
+#### <a name="to-prevent-users-from-adding-and-deleting-records"></a>Ekleme ve silme kayıtlarını kullanıcıların engellemek için  
   
-1.  Windows Forms Tasarımcısı'nda formun Kod Düzenleyicisi'ni açmak için çift tıklayın.  
+1.  Windows Form Tasarımcısı'nda, formun Kod Düzenleyicisi'ni açmak için çift tıklayın.  
   
 2.  Aşağıdaki kodu ekleyin `Form_Load` olay:  
   
      [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs)]
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
   
-3.  Sınıf adı açılan listeye tıklayın **BindingNavigatorDeleteItem**. Yöntem adı açılan listeye tıklayın **EnabledChanged**.  
+3.  Sınıf adı aşağı açılan listesinde, tıklayın **BindingNavigatorDeleteItem**. Yöntem adı aşağı açılan listesinde, tıklayın **EnabledChanged**.  
   
 4.  Aşağıdaki kodu ekleyin `BindingNavigatorDeleteItem_EnabledChanged` olay işleyicisi:  
   
@@ -184,52 +184,52 @@ Bu kılavuzda ilişkili verileri görüntülemek için bir temel başlangıç-bi
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
   
     > [!NOTE]
-    >  Bu adım gereklidir çünkü <xref:System.Windows.Forms.BindingSource> etkinleştirecek **DeleteItem** düğmesini geçerli kayıt değişiklikleri her zaman.  
+    >  Bu adım gereklidir çünkü <xref:System.Windows.Forms.BindingSource> etkinleştirecek **DeleteItem** düğmesi geçerli kayıtta değişiklikleri her zaman.  
   
-5.  Uygulamayı çalıştırmak için F5 tuşuna basın. Dikkat **DeleteItem** düğmesi devre dışıdır ve DELETE tuşuna basarak öğelerini, silemezsiniz.  
+5.  Uygulamayı çalıştırmak için F5 tuşuna basın. Dikkat **DeleteItem** düğmesi devre dışıdır ve DELETE tuşuna basarak öğeleri, silemezsiniz.  
   
-## <a name="adding-search-capability-to-the-datarepeater-control"></a>DataRepeater denetimi için arama yeteneğine ekleme  
- İsteğe bağlı Bu adımda, bir değer için arama yeteneği uygulamak <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim. Arama dizesi bulunursa, denetim değeri içeren ve öğe görünüme gelene öğeyi seçer.  
+## <a name="adding-search-capability-to-the-datarepeater-control"></a>DataRepeater denetimine arama özelliği ekleniyor  
+ İsteğe bağlı Bu adımda, bir değer için arama olanağı uygulamak <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi. Arama dizesi bulunursa denetim öğesi görünüme gelene ve değeri içeren öğeyi seçer.  
   
 #### <a name="to-add-search-capability"></a>Arama özelliği eklemek için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.TextBox> gelen denetim **araç** içeren forma <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+1.  Sürükleme bir <xref:System.Windows.Forms.TextBox> denetimi **araç kutusu** içeren form üzerine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-     Bunun altına getirin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+     Altında konumlandırın <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-2.  Özellikler penceresinde değiştirin **adı** özelliğine **SearchTextBox**.  
+2.  Özellikler penceresinde değişiklik **adı** özelliğini **SearchTextBox**.  
   
-3.  Sürükleme bir <xref:System.Windows.Forms.Button> gelen denetim **araç** içeren forma <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim. Bunun altına getirin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+3.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içeren form üzerine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi. Altında konumlandırın <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-4.  Özellikler penceresinde değiştirin **adı** özelliğine **SearchButton**. Değişiklik **metin** özelliğine **arama**.  
+4.  Özellikler penceresinde değişiklik **adı** özelliğini **SearchButton**. Değişiklik **metin** özelliğini **arama**.  
   
 5.  Çift <xref:System.Windows.Forms.Button> Kod Düzenleyicisi'ni açmak için Denetim ve aşağıdaki kodu ekleyin `SearchButton_Click` olay işleyicisi.  
   
      [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
      [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
   
-6.  Uygulamayı çalıştırmak için F5 tuşuna basın. Bir müşteri kimliği yazın **SearchTextBox** tıklatıp **arama** düğmesi.  
+6.  Uygulamayı çalıştırmak için F5 tuşuna basın. Bir müşteri kimliği türü **SearchTextBox** tıklatıp **arama** düğmesi.  
   
-## <a name="adding-a-master-and-detail-table-to-the-datarepeater"></a>Ana ve ayrıntı tablosunu DataRepeater ekleme  
- İsteğe bağlı Bu adımda eklediğiniz ikinci bir <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> her müşteri için ilgili siparişleri görüntülemek için denetimi.  
+## <a name="adding-a-master-and-detail-table-to-the-datarepeater"></a>Bir ana ve ayrıntı tablosunu DataRepeater için ekleme  
+ Bu isteğe bağlı adımda eklediğiniz ikinci <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> her bir müşterinin ilgili siparişlerini görüntülemek üzere Denetim.  
   
-#### <a name="to-add-a-master-and-detail-table"></a>Ana ve ayrıntı tablo eklemek için  
+#### <a name="to-add-a-master-and-detail-table"></a>Bir ana ve ayrıntı tablosunu eklemek için  
   
-1.  İkinci bir sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> gelen denetim **Visual Basic PowerPacks** sekmesinde **araç** forma.  
+1.  İkinci sürükleyin <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi **Visual Basic PowerPacks** sekmesinde **araç kutusu** forma.  
   
-2.  Özellikler penceresinde ayarlayın **konumu** özelliğine `465, 25`.  
+2.  Özellikler penceresinde ayarlayın **konumu** özelliğini `465, 25`.  
   
-3.  Ayarlama **boyutu** özelliğine `315, 600`.  
+3.  Ayarlama **boyutu** özelliğini `315, 600`.  
   
-4.  İçinde **veri kaynakları** penceresinde genişletin **müşteriler** Tablo düğümü ve ayrıntı düğümü seçin **siparişleri** tablo.  
+4.  İçinde **veri kaynakları** penceresini genişletin **müşteriler** ayrıntı düğüm için düğüm tablosunu seçip **siparişler** tablo.  
   
-5.  Bu açılan türünü değiştirme **siparişleri** tıklatarak ayrıntıları tabloya **ayrıntıları** Tablo düğümü aşağı açılan listesinde.  
+5.  Bırakma türünü bu değiştirme **siparişler** ayrıntıları tabloya tıklayarak **ayrıntıları** Tablo düğümü aşağı açılan listesinde.  
   
-6.  Bu sürükleme **siparişleri** Tablo düğümü ikinci öğe şablonu bölgesi (üst bölge) üzerine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+6.  Bu sürükleyin **siparişler** ikinci öğe şablonu bölgesi (üst bölge) tablo düğüme <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
-     Bir **OrdersBindingSource** bileşeni ve bir **OrdersTableAdapter** bileşen için bileşen Tepsisi eklenir.  
+     Bir **OrdersBindingSource** bileşeni ve bir **OrdersTableAdapter** bileşeni bileşen tepsisine eklenir.  
   
-7.  Uygulamayı çalıştırmak için F5 tuşuna basın. Her bir müşteri ilk seçtiğinizde <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetlemek, siparişler o müşteri görüntülenir için ikinci <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetim.  
+7.  Uygulamayı çalıştırmak için F5 tuşuna basın. İlk her müşteri seçtiğinizde, <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetlemek, siparişler, müşteri görüntülenir için ikinci <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataRepeater Denetimine Giriş](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  

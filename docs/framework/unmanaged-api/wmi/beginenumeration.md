@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930636"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392363"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
 Bir numaralandırıcı geri numaralandırma başlangıç durumuna sıfırlar.  

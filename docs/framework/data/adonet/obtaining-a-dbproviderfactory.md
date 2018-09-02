@@ -1,25 +1,25 @@
 ---
-title: Bir DbProviderFactory alma
+title: DbProviderFactory alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 9e9cf91559fe164fc42d5f9532428310fa1b16ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759471"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392097"
 ---
-# <a name="obtaining-a-dbproviderfactory"></a>Bir DbProviderFactory alma
-Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıcısı hakkında bilgi geçirilmesi ile ilgilidir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adına sahip bir dize. Bir aşırı yüklemesini `GetFactory` geçen bir <xref:System.Data.DataRow>. Sağlayıcı fabrikası oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Bazı yöntemlerinden birini bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
+# <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory alma
+Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir veri sağlayıcısı hakkında bilgi içerir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adı olan bir dize. Bir aşırı yüklemesini `GetFactory` götüren bir <xref:System.Data.DataRow>. Sağlayıcı üreteci oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Yöntemlerinin bazılarını bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
   
 > [!NOTE]
 >  .NET Framework <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory>, ve <xref:System.Data.OleDb.OleDbFactory> sınıfları da benzer bir işlevsellik sağlar.  
   
-## <a name="registering-dbproviderfactories"></a>DbProviderFactories kaydetme  
- Yapılandırma bilgilerini Fabrika tabanlı sınıfı destekleyen her .NET Framework veri sağlayıcısı kaydeder **DbProviderFactories** bölümünü **machine.config** dosyasını yerel bilgisayarda. Aşağıdaki yapılandırma dosyası parça biçimini ve sözdizimini gösterir <xref:System.Data.SqlClient>.  
+## <a name="registering-dbproviderfactories"></a>DbProviderFactories kaydediliyor  
+ Fabrika tabanlı bir sınıf destekleyen her .NET Framework veri sağlayıcısı yapılandırma bilgilerini kaydeder **DbProviderFactories** bölümünü **machine.config** dosyasını yerel bilgisayarda. Aşağıdaki yapılandırma dosyası parçası söz dizimi ve biçimini gösterir <xref:System.Data.SqlClient>.  
   
 ```xml  
 <system.data>  
@@ -34,30 +34,30 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıc
 </system.data>  
 ```  
   
- **Değişmez** özniteliği temel alınan veri sağlayıcı tanımlar. Bu üç bölümlük sözdizimini, yeni bir Fabrika oluştururken ve böylece sağlayıcı adı, ilişkili bağlantı dizesi ile birlikte çalışma zamanında alınabilmesi için bir uygulama yapılandırma dosyasında sağlayıcının tanımlamak için de kullanılır.  
+ **Sabit** özniteliğini tanımlayan temel alınan veri sağlayıcısı. Bu üç bölümlük sözdizimini, ayrıca yeni fabrikası oluştururken ve sağlayıcı adı, ilişkili bağlantı dizesini, birlikte çalışma zamanında alınabilmesi için bir uygulama yapılandırma dosyasında sağlayıcının tanımlamak için kullanılır.  
   
 ## <a name="retrieving-provider-information"></a>Sağlayıcı bilgileri alınıyor  
- Tüm kullanarak yerel bilgisayarda yüklü veri sağlayıcıları hakkında bilgi alabilirsiniz <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> yöntemi. Döndürdüğü bir <xref:System.Data.DataTable> adlı **DbProviderFactories** aşağıdaki tabloda açıklanan sütunları içerir.  
+ Tüm kullanarak yerel bilgisayarda yüklü veri sağlayıcıları hakkında bilgi alabilirsiniz <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> yöntemi. Döndürür bir <xref:System.Data.DataTable> adlı **DbProviderFactories** aşağıdaki tabloda açıklanan sütunları içerir.  
   
 |Sütun sırası|Sütun adı|Örnek çıktı|Açıklama|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Ad**|SqlClient veri sağlayıcısı|Veri sağlayıcısı için okunabilir adı|  
-|1.|**Açıklama**|SqlServer için .net framework veri sağlayıcısı|Veri sağlayıcısı okunabilir açıklaması|  
-|2|**InvariantName**|System.Data.SqlClient|Program aracılığıyla veri sağlayıcısı başvurmak için kullanılabilir adı|  
-|3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, sürüm 2.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089|Nesne örneği oluşturmak için yeterli bilgiye sahip Fabrika sınıfın tam adı|  
+|0|**Ad**|SqlClient veri sağlayıcısı|Okunabilir veri sağlayıcısı adı|  
+|1.|**Açıklama**|SQL Server için .net framework veri sağlayıcısı|Veri sağlayıcısı okunabilir açıklaması|  
+|2|**Invariantname**|System.Data.SqlClient|Program aracılığıyla veri sağlayıcısına başvurmak için kullanılan ad|  
+|3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, sürüm 2.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089|Nesne örneği oluşturmak için yeterli bilgi içerdiğinden Fabrika sınıfının tam adı|  
   
- Bu `DataTable` seçmek bir kullanıcı etkinleştirmek için kullanılan bir <xref:System.Data.DataRow> çalışma zamanında. Seçili `DataRow` için geçirilebilir <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> kesin türü belirtilmiş oluşturmak için yöntemi <xref:System.Data.Common.DbProviderFactory>. Seçili <xref:System.Data.DataRow> için geçirilen `GetFactory` istenen oluşturmak için yöntemi `DbProviderFactory` nesnesi.  
+ Bu `DataTable` seçmesini etkinleştirmek için kullanılan bir <xref:System.Data.DataRow> çalışma zamanında. Seçili `DataRow` ardından geçirilebilir <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> türü kesin belirlenmiş yöntemini <xref:System.Data.Common.DbProviderFactory>. Seçili <xref:System.Data.DataRow> geçirilebilir `GetFactory` istenen yöntemini `DbProviderFactory` nesne.  
   
-## <a name="listing-the-installed-provider-factory-classes"></a>Yüklü sağlayıcı Üreteç sınıflarını listeleme  
- Bu örnek nasıl kullanılacağı ortaya <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> döndürülecek yöntemi bir <xref:System.Data.DataTable> yüklü sağlayıcıları hakkında bilgi içeren. Her satır kod dolaşır `DataTable`, bilgi yüklü her sağlayıcı için konsol penceresinde görüntüler.  
+## <a name="listing-the-installed-provider-factory-classes"></a>Yüklü sağlayıcı üreteci sınıfları listeleme  
+ Bu örnek nasıl kullanılacağını gösterir <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> döndürülecek yöntemi bir <xref:System.Data.DataTable> yüklü sağlayıcıları hakkında bilgi içeren. Her satırda kod gezinir `DataTable`, konsol penceresinde her yüklü sağlayıcısının bilgilerini görüntüleme.  
   
  [!code-csharp[DataWorks DbProviderFactories#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
-## <a name="using-application-configuration-files-to-store-factory-information"></a>Fabrika bilgilerini depolamak için uygulama yapılandırma dosyalarını kullanma  
- Oluşturucuları ile çalışmak için kullanılan tasarım deseni kapsar sağlayıcısı ve bağlantı dizesi bilgileri gibi bir uygulama yapılandırma dosyasında depolamak **app.config** bir Windows uygulaması için ve **web.config**  bir ASP.NET uygulaması için.  
+## <a name="using-application-configuration-files-to-store-factory-information"></a>Factory bilgileri Store için uygulama yapılandırma dosyaları kullanma  
+ Fabrikaları ile çalışmak için kullanılan tasarım deseni kapsar sağlayıcısı ve bağlantı dizesi bilgileri gibi bir uygulama yapılandırma dosyasında saklamak **app.config** Windows uygulaması ve **web.config**  ASP.NET uygulaması için.  
   
- Aşağıdaki yapılandırma dosyası parça iki adlandırılmış bağlantı dizeleri nasıl kaydedileceği SQL Server'da Northwind veritabanına bir bağlantı için "NorthwindSQL" ve "NorthwindAccess" erişim/Jet Northwind veritabanına bir bağlantı için gösterilmektedir. **Değişmez** adı için kullanıldığından **providerName** özniteliği.  
+ Aşağıdaki yapılandırma dosyası parçası iki adlandırılmış bağlantı dizesini kaydetmek nasıl SQL Server Northwind veritabanına bir bağlantı için "NorthwindSQL" ve "NorthwindAccess" erişim/Jet Northwind veritabanına bir bağlantı gösterir. **Sabit** adı için kullanılan **providerName** özniteliği.  
   
 ```xml  
 <configuration>  
@@ -78,19 +78,19 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıc
 </configuration>  
 ```  
   
-### <a name="retrieving-a-connection-string-by-provider-name"></a>Bir bağlantı dizesi sağlayıcı ada göre alma  
- Sağlayıcı fabrikası oluşturmak için bir bağlantı dizesi ve bunun yanı sıra sağlayıcı adı belirtmeniz gerekir. Bu örnek, sağlayıcı adı değişmez biçiminde geçirerek bir uygulama yapılandırma dosyasından bağlantı dizesini almak gösterilmiştir "*System.Data.ProviderName*". Kod dolaşır <xref:System.Configuration.ConnectionStringSettingsCollection>. Döndürdüğü <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> başarı; Aksi halde `null` (`Nothing` Visual Basic'te). Sağlayıcı için birden fazla giriş varsa, ilk döndürülür. Daha fazla bilgi ve örnekler bağlantı dizelerini yapılandırma dosyalarından alınması için bkz: [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+### <a name="retrieving-a-connection-string-by-provider-name"></a>Sağlayıcı adı ile bir bağlantı dizesini alma  
+ Bir sağlayıcı üreteci oluşturabilmek için bir bağlantı dizesi, hem de sağlayıcı adı sağlamanız gerekir. Bu örnek, sağlayıcı adı sabit bir biçimde geçirerek bir uygulama yapılandırma dosyasından bağlantı dizesini almak nasıl gösterir. "*System.Data.ProviderName*". Kod gezinir <xref:System.Configuration.ConnectionStringSettingsCollection>. Döndürür <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> başarı; Aksi takdirde `null` (`Nothing` Visual Basic'te). Sağlayıcı için birden çok girişi varsa, ilk döndürülür. Daha fazla bilgi ve örnek bağlantı dizeleri yapılandırma dosyalarından alma için bkz. [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
->  Bir başvuru `System.Configuration.dll` sırayla çalıştırmak için kod için gereklidir.  
+>  Bir başvuru `System.Configuration.dll` kodu çalıştırmak için gereklidir.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
-## <a name="creating-the-dbproviderfactory-and-dbconnection"></a>DbConnection ve DbProviderFactory oluşturma  
- Bu örnek nasıl oluşturulduğunu gösteren bir <xref:System.Data.Common.DbProviderFactory> ve <xref:System.Data.Common.DbConnection> sağlayıcı adı biçiminde geçirerek nesne "*System.Data.ProviderName*" ve bir bağlantı dizesi. A `DbConnection` nesne başarı; döndürdü `null` (`Nothing` Visual Basic'te) tüm hata.  
+## <a name="creating-the-dbproviderfactory-and-dbconnection"></a>DbProviderFactory ve DbConnection oluşturma  
+ Bu örnek nasıl oluşturulacağını gösterir. bir <xref:System.Data.Common.DbProviderFactory> ve <xref:System.Data.Common.DbConnection> geçirerek sağlayıcı adı biçiminde nesne "*System.Data.ProviderName*" ve bir bağlantı dizesi. A `DbConnection` başarı; nesne döndürülür `null` (`Nothing` Visual Basic'te) herhangi bir hata.  
   
- Kod edinir `DbProviderFactory` çağırarak <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>. Ardından <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> yöntemi oluşturur <xref:System.Data.Common.DbConnection> nesne ve <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliğini bağlantı dizesine ayarlayın.  
+ Kod alır `DbProviderFactory` çağırarak <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>. Ardından <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> yöntemi oluşturur <xref:System.Data.Common.DbConnection> nesne ve <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği bağlantı dizesine ayarlayın.  
   
  [!code-csharp[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
@@ -98,5 +98,5 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> bir veri sağlayıc
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Yapılandırma sınıflarını kullanma](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Yapılandırma sınıflarını kullanma](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

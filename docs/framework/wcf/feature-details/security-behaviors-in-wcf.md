@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81d7bc6d8d530b2cd3fc528c3f8b44ec8f98f237
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508650"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393381"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
-Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulama, yetkilendirme denetime izin vermek ve günlükleri denetleme. Programlama ile veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konuda, güvenlik işlevleri ile ilgili aşağıdaki davranışları yapılandırma üzerinde durulmaktadır:  
+Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulaması, yetkilendirme denetime izin vermek ve günlüklerini denetleme. Programlama veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konu, aşağıdaki davranışları güvenlik işlevleri için ilgili yapılandırma üzerinde durulmaktadır:  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
@@ -22,12 +22,12 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
   
 -   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), hangi Ayrıca istemciler için meta verileri erişimi güvenli bir uç nokta belirtmenize olanak sağlar.  
+-   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), hangi de istemciler için meta verileri erişimi güvenli bir uç nokta belirtmenize imkan tanır.  
   
 ## <a name="setting-credentials-with-behaviors"></a>Davranışlarla kimlik bilgilerini ayarlama  
- Kullanım [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ve [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) bir hizmet veya istemci kimlik bilgileri değerlerini ayarlamak için. Temel bağlama yapılandırması bir kimlik bilgisi ayarlanmış olup olmadığını belirler. Örneğin, güvenlik modu ayarlanmışsa `None`, istemciler ve hizmetler değil birbirinin kimliğini doğrular ve herhangi bir türde kimlik bilgisi gerektirir.  
+ Kullanım [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ve [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) hizmet veya istemci kimlik bilgileri değerlerini ayarlamak için. Temel bağlama yapılandırması, bir kimlik bilgisi ayarlamak uygun olup olmadığını belirler. Örneğin, güvenlik modunu ayarlama `None`, hem istemci hem de Hizmetleri değil doğrulaması ve herhangi bir türde herhangi bir kimlik bilgisi gerektirir.  
   
- Diğer taraftan, hizmet bağlama bir istemci kimlik bilgisi türü gerektirebilir. Bu durumda, bir davranış kullanarak bir kimlik bilgisi değeri ayarlamanız gerekebilir. (Kimlik bilgilerinin olası türleri hakkında daha fazla bilgi için bkz: [bir kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows kimlik bilgileri kimlik doğrulaması için kullanıldığında gibi bazı durumlarda, ortam gerçek kimlik bilgisi değeri otomatik olarak oluşturur ve (farklı kimlik bilgileri kümesi belirtmek istemediğiniz sürece) kimlik bilgisi değeri açıkça ayarlanmış gerekmez.  
+ Öte yandan, hizmet bağlaması, istemci kimlik bilgisi türü gerektirebilir. Bu durumda, davranış kullanarak bir kimlik bilgisi değeri ayarlamanız gerekebilir. (Kimlik bilgileri olası türleri hakkında daha fazla bilgi için bkz. [kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Windows kimlik bilgilerini doğrulamak için kullanıldığında gibi bazı durumlarda, ortam gerçek kimlik değeri otomatik olarak oluşturur ve kimlik bilgisi değeri (farklı bir kimlik bilgileri kümesi belirtmek istemediğiniz sürece) açık olarak gerekmez.  
   
  Tüm hizmet kimlik bilgilerini alt öğeleri olarak bulunan [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Aşağıdaki örnek, bir hizmeti kimlik bilgileri kullanılan bir sertifika gösterir.  
   
@@ -49,22 +49,22 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 </configuration>  
 ```  
   
-## <a name="service-credentials"></a>Hizmeti kimlik bilgileri  
+## <a name="service-credentials"></a>Hizmet kimlik bilgileri  
  [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) dört alt öğeleri içerir. Öğeleri ve kullanımlarının aşağıdaki bölümlerde ele alınmıştır.  
   
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > öğesi  
- İleti güvenlik modunu kullanarak istemcilere hizmet kimliğini doğrulamak için kullanılan bir X.509 sertifikasını belirtmek için bu öğeyi kullanın. Düzenli aralıklarla olan bir sertifikayı kullanıyorsanız, yenileme, ardından parmak izi değişikliklerin. Bu durumda konu adı olarak kullanın `X509FindType` sertifika ile aynı konu adı verilmesi için.  
+ İleti güvenlik modunu kullanarak istemcilere hizmet kimliğini doğrulamak için kullanılan bir X.509 sertifikasını belirtmek için bu öğeyi kullanırsınız. Düzenli aralıklarla bir sertifika kullanıyorsanız yenilenmesi, ardından kendi parmak izi değişiklikleri. Bu durumda, konu adı olarak kullanmak `X509FindType` sertifika ile aynı konu adı verilmesi için.  
   
- Öğe kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Öğe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<Sertifika >, \<clientCertificate > öğesi  
- Kullanım [ \<sertifika >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) öğesi hizmeti istemcisi ile önceden güvenli bir şekilde iletişim kurmak için istemci sertifikasını sahip olmalıdır. Bu, çift yönlü iletişim düzeni kullanırken oluşur. Daha tipik istek-yanıt desende istemci sertifikasını istemciye yanıt güvenliğini sağlamak için hizmeti kullanır istekte içerir. Çift yönlü iletişim düzeni, ancak hiçbir istekleri ve yanıtları vardır. Hizmet iletişim istemci sertifikasının gösterilemez ve bu nedenle hizmet önceden istemci iletileri güvenli hale getirmek için istemci sertifikasını gerektirir. İstemci sertifikasının bir bant dışı şekilde edinmeli ve bu öğe kullanarak sertifikayı belirtin. Çift yönlü hizmetler hakkında daha fazla bilgi için bkz: [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ Kullanım [ \<sertifika >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md) öğesi hizmet istemcisi ile önceden güvenli şekilde iletişim kurması için istemci sertifikasını sahip olmalıdır. Bu, çift yönlü iletişim deseni kullanırken gerçekleşir. Daha tipik istek-yanıt düzende, istemci sertifikasını istemciye yanıtına güvenliğini sağlamak için hizmeti kullanır isteğindeki içerir. Çift yönlü iletişim deseni, ancak hiçbir istek ve yanıtları sahiptir. Hizmet iletişim istemci sertifikasının çıkarsanamıyor ve bu nedenle hizmet önceden istemciye iletileri güvenli hale getirmek için istemci sertifikasını gerektirir. Bir bant dışı şekilde istemci sertifikası alın ve bu öğenin kullanarak sertifikayı belirtmeniz gerekir. Çift yönlü hizmetler hakkında daha fazla bilgi için bkz: [nasıl yapılır: çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<kimlik doğrulama >, \<clientCertificate > öğesi  
- [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) öğeleri nasıl istemcilerinin kimlik doğrulamalarının özelleştirmenize olanak sağlar. Ayarlayabileceğiniz `CertificateValidationMode` özniteliğini `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, veya `Custom`. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`, belirten her sertifika biten sertifika hiyerarşisini bulunması gereken bir *kök yetkilisi* zincirinin üstünde. Bu en güvenli bir moddur. De değer ayarlayabilirsiniz `PeerOrChainTrust`, kendi kendine verilen sertifikaların (eş güven) güvenilen zincirinde sertifikaları yanı sıra kabul edileceğini belirtir. Bu değer, geliştirme ve kendi kendine verilen sertifikaların güvenilir bir yetkiliden satın alınması değil çünkü hata ayıklama istemcileri ve Hizmetleri zaman kullanılır. Bir istemci dağıtımı sırasında kullanmak `ChainTrust` yerine değer. De değer ayarlayabilirsiniz `Custom`. Ayarlandığında `Custom` değeri de ayarlamanız gerekir `CustomCertificateValidatorType` özniteliği bir derleme ve sertifikayı doğrulamak için kullanılan türü. Kendi özel Doğrulayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
+ [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) öğesi, istemci kimliklerinin nasıl özelleştirmenize olanak sağlar. Ayarlayabileceğiniz `CertificateValidationMode` özniteliğini `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, veya `Custom`. Varsayılan olarak, düzeyini ayarlamak `ChainTrust`, belirten her sertifika sonu sertifika hiyerarşisini bulunması gereken bir *kök yetkilisi* zinciri üstünde. En güvenli mod budur. De değer ayarlayabilirsiniz `PeerOrChainTrust`, kendi kendine verilen sertifikaların (eş güven) güvenilen bir zinciri olan sertifikaları yanı sıra kabul edildiğini belirtir. Bu değer, geliştirme ve istemciler ve hizmetler kendi kendine verilen sertifikaların güvenilir yetkilisinden satın alınması değil çünkü hata ayıklama kullanılır. Bir istemci dağıtırken kullanırsınız `ChainTrust` yerine değeri. De değer ayarlayabilirsiniz `Custom`. Ayarlandığında `Custom` değeri ayarlamanız gerekir `CustomCertificateValidatorType` öznitelik bir bütünleştirilmiş kod ve sertifikayı doğrulamak için kullanılan tür. Kendi özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı.  
   
-### <a name="issuedtokenauthentication-element"></a>\<issuedTokenAuthentication > öğesi  
- Verilen belirteç senaryo üç aşamadan oluşur. İlk aşamada, bir hizmet erişmeye çalışan istemci bilinir bir *güvenli belirteç hizmeti* (STS). STS istemcinin kimliğini doğrular ve bundan sonra istemci genellikle bir güvenlik onaylar biçimlendirme dili (SAML) belirteci bir belirteç verir. İstemci ardından belirteci ile hizmetine döndürür. Hizmet belirteci ve bu nedenle istemci kimliğini doğrulamak hizmet veren veriler için belirteç inceler. Belirteç kimlik doğrulaması için güvenli belirteç hizmeti kullandığı sertifikayı hizmete bilinmesi gerekir. [ \<İssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) depo böyle herhangi bir güvenli belirteç hizmeti sertifika için bir öğedir. Sertifika eklemek için kullanın [ \<knownCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). INSERT bir [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) aşağıdaki örnekte gösterildiği gibi her sertifika için.  
+### <a name="issuedtokenauthentication-element"></a>\<ServiceCredentials > öğesi  
+ Verilen belirteç senaryo üç aşamadan oluşur. Bir istemci bir hizmeti erişmeye ilk aşamada, başvurulan bir *güvenli belirteç hizmeti* (STS). STS, istemci kimlik doğrulaması yapar ve daha sonra istemci genellikle bir güvenlik onaylama işaretleme dili (SAML) belirteci bir belirteç verir. İstemci, ardından belirteci ile hizmetine döndürür. Belirteç için belirteç ve bu nedenle istemci kimliğini doğrulamak hizmet veren bir veri hizmeti inceler. Belirteç kimlik doğrulaması için güvenli belirteç hizmeti kullandığı sertifikayı hizmete bilinmesi gerekir. [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) depo gibi herhangi bir güvenli belirteç hizmeti sertifika için bir öğedir. Sertifikaları eklemek için [ \<knownCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). INSERT bir [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) aşağıdaki örnekte gösterildiği gibi her sertifika için.  
   
 ```xml  
 <issuedTokenAuthentication>  
@@ -76,25 +76,25 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 </issuedTokenAuthentication>  
 ```  
   
- Varsayılan olarak, sertifikaları güvenli bir belirteci Hizmeti'nden alınması gerekir. Bu ", istemciler yalnızca yasal olun sertifikaları bilinen" hizmet erişebilir.  
+ Varsayılan olarak, sertifikaları güvenli bir belirteci Hizmeti'nden alınmalıdır. Bu "sertifikalar, istemciler yalnızca yasal olun bilinen" bir hizmete erişebilir.  
   
- Kullanmanız gereken [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md) yararlanan bir federasyon uygulaması koleksiyonda bir *güvenli belirteç hizmeti* (STS) sorunları `SamlSecurityToken` güvenlik belirteçleri. Güvenlik belirteci STS gönderdiğinde, kendisi için güvenlik belirteci amaçlanmıştır ekleyerek Web Hizmetleri URI'sini belirtebilirsiniz bir `SamlAudienceRestrictionCondition` için güvenlik belirteci. İzin veren `SamlSecurityTokenAuthenticator` verilen güvenlik belirteci bu Web hizmeti için bu onay aşağıdakileri yaparak olacağını belirterek hedeflenen doğrulamak alıcı Web hizmeti için:  
+ Kullanmanız gereken [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md) yararlanan bir federasyon uygulaması koleksiyonda bir *güvenli belirteç hizmeti* (STS) sorunları `SamlSecurityToken` güvenlik belirteçleri. Güvenlik belirteci STS verdiğinde, kendisi için güvenlik belirteci amaçlanmıştır ekleyerek Web Hizmetleri URI'sini belirtebilirsiniz bir `SamlAudienceRestrictionCondition` için güvenlik belirteci. Veren `SamlSecurityTokenAuthenticator` alıcı Web hizmetinin aşağıdakileri yaparak bu denetimi olacağını belirleyerek verilen güvenlik belirteci için bu Web hizmetini kullandığınızdan emin olun:  
   
--   Ayarlama `audienceUriMode` özniteliği [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) için `Always` veya `BearerKeyOnly`.  
+-   Ayarlama `audienceUriMode` özniteliği [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) için `Always` veya `BearerKeyOnly`.  
   
--   Bu koleksiyona URI'ler ekleyerek geçerli URI'ler kümesini belirtin. Bunu yapmak için INSERT bir [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) her URI  
+-   Bu koleksiyona bir URI'leri ekleyerek geçerli URI'lerin kümesini belirtin. Bunu yapmak için INSERT bir [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) her URI  
   
  Daha fazla bilgi için bkz. <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: bir Federasyon Hizmeti kimlik bilgileri yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Federasyon Hizmeti yapılandırma kimlik bilgisi](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
-#### <a name="allowing-anonymous-cardspace-users"></a>Anonim CardSpace kullanıcılar izin verme  
- Ayarı `AllowUntrustedRsaIssuers` özniteliği `<IssuedTokenAuthentication>` öğesine `true` açıkça rasgele bir RSA anahtar çifti ile imzalanmış otomatik olarak verilen bir belirteç sunmak herhangi bir istemci sağlar. Veren *güvenilmeyen* ilişkili veren veri anahtara sahip olduğundan. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kullanıcı, kendi kendine sağlanan talep kimliğini içerir kendini yayınlayan bir kart oluşturabilirsiniz. Bu özellik dikkatli kullanın. Bu özelliği kullanmak için RSA ortak anahtarı bir kullanıcı adı ile birlikte bir veritabanında depolanması daha güvenli bir parola olarak düşünün. Bir istemci erişim hizmetine izin vermeden önce istemci sunulan RSA ortak anahtar sunulan kullanıcı adı için depolanan ortak anahtar ile karşılaştırarak doğrulayın. Bu, kullanıcılar kullanıcı adlarını kaydedebilir ve kendi kendine verilen RSA ortak anahtarlarla ilişkilendirme alınabildiği bir kayıt işlemi kurulan varsayar.  
+#### <a name="allowing-anonymous-cardspace-users"></a>Anonim CardSpace kullanıcıların  
+ Ayarı `AllowUntrustedRsaIssuers` özniteliği `<IssuedTokenAuthentication>` öğesine `true` açıkça herhangi bir istemci bir rastgele RSA anahtar çifti ile imzalanmış şirket içinde verilen bir belirteç sunmasını sağlar. Veren *güvenilmeyen* anahtar ile ilişkili hiçbir veren verileri sildiğinden. A [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kullanıcı kendi kendine sağlanan talep kimliğini içeren kendi kendine verilen bir kart oluşturun. Bu özellik, dikkatli kullanın. Bu özelliği kullanmak için RSA ortak anahtarını bir veritabanında bir kullanıcı adı ile birlikte depolanmalıdır daha güvenli bir parola olarak düşünebilirsiniz. Bir istemci erişim hizmetine izin vermeden önce istemci sunulan RSA ortak anahtarı sunulan kullanıcı adı için depolanan ortak anahtarı ile karşılaştırarak doğrulayın. Bu, kayıt işleminden yapabildiği kullanıcılar kullanıcı adlarını kaydetmeleri ve bunları Self verilen RSA ortak anahtarlarla ilişkilendirme sağladıktan varsayılır.  
   
 ## <a name="client-credentials"></a>İstemci kimlik bilgileri  
- İstemci kimlik bilgileri, karşılıklı kimlik doğrulaması gerekli olduğu durumlarda Hizmetleri için istemci kimlik doğrulaması için kullanılır. Bölümü, istemci Hizmeti'ne hizmetin sertifikayla iletileri burada güvenlik altına almanız gerekir senaryolar için hizmet sertifikaları belirtmek için kullanabilirsiniz.  
+ İstemci kimlik bilgileri, hizmetleri karşılıklı kimlik doğrulaması gerekli olduğu durumlarda istemcinin kimliğini doğrulamak için kullanılır. Bölümü, istemci Hizmet sertifikası ile bir hizmeti iletileri burada güvenlik altına almanız gerekir senaryolar için hizmet sertifikaları belirtmek için kullanabilirsiniz.  
   
- Ayrıca bir istemci Federasyon senaryosunun bir parçası verilen kullanım belirteçleri güvenli belirteç hizmeti veya yerel yayımlayan belirteçlerin yapılandırabilirsiniz. Federasyon senaryoları hakkında daha fazla bilgi için bkz: [Federasyon ve verilen belirteçleri](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Tüm istemci kimlik bilgileri altında bulunan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)aşağıdaki kodda gösterildiği gibi.  
+ Ayrıca bir istemci bir Federasyon senaryonun parçası olarak kullanım verilen belirteçleri için bir güvenli belirteç hizmeti veya yerel yayımlayan belirteçlerin yapılandırabilirsiniz. Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Tüm istemci kimlik bilgileri altında bulunan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)aşağıdaki kodda gösterildiği gibi.  
   
 ```xml  
 <behaviors>  
@@ -117,19 +117,19 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > öğesi  
- Bu öğe ile istemci kimlik doğrulaması için kullanılan sertifikayı ayarlayın. Daha fazla bilgi için bkz: [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Bu öğe istemcinin kimliğini doğrulamak için kullanılan sertifika ayarlayın. Daha fazla bilgi için [nasıl yapılır: istemci kimlik bilgileri değerlerini belirtme](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="httpdigest"></a>\<httpDigest >  
- Bu özellik, Windows ve Internet Information Services (IIS) üzerinde Active Directory ile etkinleştirilmelidir. Daha fazla bilgi için bkz: [IIS 6.0 Özet kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Bu özellik, Windows ve Internet Information Services (IIS) üzerinde Active Directory ile etkinleştirilmelidir. Daha fazla bilgi için [Özet kimlik doğrulaması IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<IssuedToken > öğesi  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) belirteçleri veya güvenlik belirteci hizmeti ile kullanılan davranışlar yerel yayımlayan yapılandırma için kullanılan öğeleri içerir. Yerel yayımlayan kullanmak bir istemci yapılandırma yönergeleri için bkz: [nasıl yapılır: yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- Varsayılan bir güvenlik belirteci hizmeti adresi belirtir. Bu kullanılan zaman <xref:System.ServiceModel.WSFederationHttpBinding> bir URL veya güvenlik belirteci hizmeti için Federasyon bağlaması veren adresi olduğunda sağlamıyor http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous veya `null`. Böyle durumlarda, <xref:System.ServiceModel.Description.ClientCredentials> adresi bu veren ile iletişim kurmak için kullanılacak yerel yayımlayan ve bağlama ile yapılandırılması gerekir.  
+ Varsayılan bir güvenlik belirteci hizmeti adresi belirtir. Bu zaman <xref:System.ServiceModel.WSFederationHttpBinding> URL veya güvenlik belirteci hizmeti için bir federe bağlama veren adresini olduğunda sağlamaz http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous veya `null`. Bu gibi durumlarda <xref:System.ServiceModel.Description.ClientCredentials> yerel dağıtımcının ve bağlama bu veren ile iletişim kurmak için kullanılacak adresi ile yapılandırılmalıdır.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
- Kullanım [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) bir güvenlik belirteci hizmeti ile iletişim kurarken kullanılan WCF istemci davranışlarını eklemek için. İstemci davranışlarını tanımlamak [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) bölümü. Tanımlanan bir davranış kullanmak için ekleyin bir <`add`> öğesine `<issuerChannelBehaviors>` iki özniteliklerle öğesi. Ayarlama `issuerAddress` kümesi ve güvenlik belirteci hizmeti URL'sini `behaviorConfiguration` aşağıdaki örnekte gösterildiği gibi tanımlanmış uç noktası davranışı adına özniteliği.  
+ Kullanım [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) güvenlik belirteci hizmeti ile iletişim kurarken kullanılan WCF istemci davranışlarını eklemek için. İstemci davranışlarını tanımlayan [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) bölümü. Tanımlı bir davranışı kullanmak için ekleme bir <`add`> öğesine `<issuerChannelBehaviors>` iki öznitelik sahip öğe. Ayarlama `issuerAddress` ayarlama ve güvenlik belirteci hizmeti URL'sini `behaviorConfiguration` aşağıdaki örnekte gösterildiği gibi öznitelik için tanımlanmış uç nokta davranışı adı.  
   
 ```xml  
 <clientCredentials>  
@@ -140,20 +140,20 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 ```  
   
 #### <a name="servicecertificate-element"></a>\<serviceCertificate > öğesi  
- Hizmet sertifikaları denetim kimlik doğrulaması için bu öğeyi kullanın.  
+ Hizmet sertifikalarının kimlik doğrulamayı denetlemek için bu öğeyi kullanırsınız.  
   
- [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) öğesi hizmeti sertifika belirttiğinde kullanılan tek bir sertifika depolayabilir.  
+ [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) öğesi, tek bir sertifika kullanılması için hizmet sertifikası yok belirtir depolayabilir.  
   
- Kullanım [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) ve [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) belirli hizmetleri ile ilişkilendirilmiş hizmet sertifikaları ayarlamak için. `<add>` Öğesi içeren bir `targetUri` sertifika hizmeti ile ilişkilendirmek için kullanılan öznitelik.  
+ Kullanım [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) ve [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) belirli hizmetler ile ilişkilendirilen hizmet sertifikaları ayarlamak için. `<add>` Öğesi içeren bir `targetUri` sertifika hizmeti ile ilişkilendirmek için kullanılan öznitelik.  
   
- [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesi sertifikaların kimliğini doğrulamak için kullanılan güven düzeyini belirtir. Varsayılan olarak, "her sertifika zinciri üstündeki bir güvenilen sertifika yetkilisi biten sertifikaların bir hiyerarşideki bulunması gereken belirten ChainTrust," düzeyinde ayarlanır. Bu en güvenli bir moddur. Ayrıca, bir güvenilen zincirindeki sertifikaları yanı sıra kendi kendine verilen sertifikaların (eş güven) kabul edileceğini belirtir, "PeerOrChainTrust" değerine ayarlayabilirsiniz. Bu değer, geliştirme ve kendi kendine verilen sertifikaların güvenilir bir yetkiliden satın alınması değil çünkü hata ayıklama istemcileri ve Hizmetleri zaman kullanılır. Bir istemci dağıtımı sırasında bunun yerine "ChainTrust" değeri kullanın. "Özel" veya "None" değerine de ayarlayabilirsiniz "Özel" değerini kullanmak için de ayarlamalısınız `CustomCertificateValidatorType` özniteliği bir derleme ve sertifikayı doğrulamak için kullanılan türü. Kendi özel Doğrulayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı. Daha fazla bilgi için bkz: [nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesi sertifikaların kimliğini doğrulamak için kullanılan güven düzeyini belirtir. Varsayılan olarak, "her sertifika sertifika zincirinin üst bir güvenilen sertifika yetkilisi sonu hiyerarşisini bulunması gereken belirten ChainTrust," için düzeyi ayarlanır. En güvenli mod budur. Ayrıca güvenilen bir zinciri olan sertifikaları yanı sıra şirket içinde verilen sertifikaların (eş güven) kabul edildiğini belirtir, "PeerOrChainTrust" değerine ayarlayabilirsiniz. Bu değer, geliştirme ve istemciler ve hizmetler kendi kendine verilen sertifikaların güvenilir yetkilisinden satın alınması değil çünkü hata ayıklama kullanılır. Bir istemci dağıtımı sırasında "ChainTrust" değerini kullanın. "Özel" veya "None". değer de ayarlayabilirsiniz "Özel" değerini kullanmak için de ayarlamalısınız `CustomCertificateValidatorType` öznitelik bir bütünleştirilmiş kod ve sertifikayı doğrulamak için kullanılan tür. Kendi özel Doğrulayıcı sağlayıcısı oluşturmak için Özet devralmalıdır <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfı. Daha fazla bilgi için [nasıl yapılır: özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
- [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesi içeren bir `RevocationMode` sertifika iptali için nasıl denetlenir belirten özniteliği. Sertifikaları iptal edilmek üzere otomatik olarak denetlenir belirten "çevrimiçi" varsayılandır. Daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ [ \<Kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) öğesi içeren bir `RevocationMode` sertifika iptali için nasıl denetlenir belirten özniteliği. Sertifika iptali için otomatik olarak denetlenir gösteren "çevrimiçi" varsayılandır. Daha fazla bilgi için [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="serviceauthorization"></a>ServiceAuthorization  
- [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) öğesi yetkilendirme, özel rol sağlayıcıları ve kimliğe bürünme etkileyen öğeleri içerir.  
+ [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) öğesi kimliğe bürünme yetkilendirme ve özel rol sağlayıcıları etkileyen öğeleri içerir.  
   
- <xref:System.Security.Permissions.PrincipalPermissionAttribute> Sınıfı, bir hizmet yöntemi uygulanır. Öznitelik, korumalı bir yöntemin kullanılması yetkilendirirken kullanmak için kullanıcı gruplarını belirtir. Varsayılan değer "UseWindowsGroups" ve "Yöneticiler" veya "Kullanıcı" gibi Windows grupları için bir kaynağa erişmeye çalışırken bir kimlik aranır belirtir. Ayrıca, "UseAspNetRoles" belirtebilirsiniz altında yapılandırılmış bir özel rol sağlayıcıyı kullanacak şekilde <`system.web` > aşağıdaki kodda gösterildiği gibi öğesi.  
+ <xref:System.Security.Permissions.PrincipalPermissionAttribute> Sınıfı, bir hizmet yönteme uygulanır. Öznitelik, bir korumalı yöntem kullanımını yetkilendirirken kullanmak için kullanıcı gruplarını belirtir. Varsayılan değer "UseWindowsGroups" ve "Yöneticiler" veya "Kullanıcılar" gibi Windows gruplarını bir kaynağa erişmeye çalışırken bir kimlik için aranır belirtir. "UseAspNetRoles" de belirtebilirsiniz altında yapılandırılmış bir özel rol sağlayıcıyı kullanacak şekilde <`system.web` > öğesi, aşağıdaki kodda gösterildiği gibi.  
   
 ```xml  
 <system.web>  
@@ -190,7 +190,7 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 ```  
   
 ## <a name="configuring-security-audits"></a>Güvenlik denetimleri yapılandırma  
- Kullanım [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) yazılan günlük ve ne belirtmek için olayları günlük türleri. Daha fazla bilgi için bkz: [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Kullanım [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) yazılan günlük ve hangi belirtmek için oturum olay türleri. Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -206,7 +206,7 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 ```  
   
 ## <a name="secure-metadata-exchange"></a>Güvenli meta veri değişimi  
- İstemciler için meta verileri dışarı aktarma yüklemelerinin yapılandırma ve istemci kodunun gibi hizmet ve istemci geliştiriciler için uygundur. Kötü niyetli kullanıcılar için bir hizmet riskini azaltmak için Güvenli HTTP (HTTPS) mekanizması üzerinde SSL kullanılarak aktarım mümkündür. Bunu yapmak için önce uygun bir X.509 sertifikası hizmetini barındıran bilgisayarda belirli bir bağlantı noktası bağlamanız gerekir. (Daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) İkinci olarak, ekleme bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) hizmet yapılandırmasını ve kümesi `HttpsGetEnabled` özniteliğini `true`. Son olarak, ayarlamak `HttpsGetUrl` aşağıdaki örnekte gösterildiği gibi hizmet meta veri uç noktasının URL'sini özniteliği.  
+ İstemciler için meta verileri dışarı aktarma yapılandırması ve istemci kodunun indirmeler etkinleştirdiği geliştiriciler, hizmet ve istemci için uygundur. Kötü amaçlı kullanıcılara bir hizmet riskini azaltmak için Güvenli HTTP (HTTPS) mekanizması üzerinde SSL kullanılarak aktarım mümkündür. Bunu yapmak için önce uygun bir X.509 sertifikası hizmeti barındıran bilgisayardaki belirli bir bağlantı noktası bağlamanız gerekir. (Daha fazla bilgi için [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).) İkinci olarak, ekleme bir [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) hizmet yapılandırmasını ve kümesi `HttpsGetEnabled` özniteliğini `true`. Son olarak, ayarlama `HttpsGetUrl` aşağıdaki örnekte gösterildiği gibi hizmet meta veri uç noktası URL'sine özniteliği.  
   
 ```xml  
 <behaviors>  
@@ -221,4 +221,4 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

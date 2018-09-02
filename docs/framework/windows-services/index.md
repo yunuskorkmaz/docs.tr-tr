@@ -12,41 +12,41 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
-ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512274"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385987"
 ---
 # <a name="developing-windows-service-applications"></a>Windows Hizmet Uygulamaları Geliştirme
-Microsoft Visual Studio veya Microsoft kullanılarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, kolayca oluşturabileceğiniz Hizmetleri hizmeti olarak yüklenen bir uygulama oluşturarak. Bu tür bir uygulama bir Windows hizmeti adı verilir. Framework özelliklerle hizmetleri oluşturmak, bunları yüklemeniz ve Başlat, durdurabilir ve davranışlarını denetleyebilirsiniz.  
+Microsoft Visual Studio veya Microsoft kullanarak [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK'sı, kolayca oluşturmak için kullanabileceğiniz Hizmetleri hizmeti olarak yüklenen bir uygulama oluşturarak. Bu tür bir uygulama, bir Windows hizmeti olarak adlandırılır. Framework özellikleri ile Hizmetleri oluşturun, bunları yükleyin ve başlatın, durdurabilir ve davranışlarını denetleyebilirsiniz.  
   
 > [!WARNING]
->  Windows hizmet şablonu C++ için Visual Studio 2010'da dahil edilmedi. Bir Windows hizmeti oluşturmak için Visual C# veya Visual Basic, gerekirse mevcut C++ kodu ile birlikte çalışmak, yönetilen kodda bir hizmeti oluşturabilir veya kullanarak bir Windows hizmeti yerel C++'da oluşturabilirsiniz [ATL Proje Sihirbazı](/cpp/atl/reference/atl-project-wizard).  
+>  Visual Studio 2010'da Windows hizmet şablonunu c++ eklenmez. Bir Windows hizmeti oluşturmak için Visual C# veya gerekirse mevcut C++ kodu ile birlikte çalışmak, Visual Basic, yönetilen kodda bir hizmeti oluşturabilir veya kullanarak, yerleşik C++'da bir Windows hizmeti oluşturabilirsiniz [ATL projesi Sihirbazı](/cpp/atl/reference/atl-project-wizard).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- Bir hizmet ve hizmet uygulamalarının diğer ortak proje türlerinden farklılıklar ömrü Windows hizmet uygulamaları, genel bir bakış sağlar.  
+ Bir hizmet ve hizmet uygulamaları diğer ortak proje türlerinden farklılıklar ömrünü Windows hizmet uygulamaları, genel bir bakış sağlar.  
   
  [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Visual Basic ve Visual C# içinde hizmet oluşturmaya bir örnek sağlar.  
+ Visual Basic ve Visual C# içinde bir hizmet oluşturma örneği sağlar.  
   
  [Hizmet Uygulaması Programlama Mimarisi](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- Hizmet programlamada kullanılan dil öğeleri açıklanır.  
+ Hizmet programlamada kullanılan dil öğelerini açıklar.  
   
  [Nasıl Yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- Oluşturma ve Windows hizmeti proje şablonunu kullanarak Windows Hizmetleri yapılandırma sürecini açıklar.  
+ Oluşturma ve Windows services Windows hizmeti proje şablonunu kullanarak yapılandırma işlemi açıklanır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  <xref:System.ServiceProcess.ServiceBase>  
- En önemli özelliklerini açıklayan <xref:System.ServiceProcess.ServiceBase> hizmetleri oluşturmak için kullanılan sınıf.  
+ Önemli özelliklerini açıklar <xref:System.ServiceProcess.ServiceBase> hizmetleri oluşturmak için kullanılan sınıf.  
   
  <xref:System.ServiceProcess.ServiceProcessInstaller>  
- Özelliklerini açıklayan <xref:System.ServiceProcess.ServiceProcessInstaller> ile birlikte kullanılan sınıf <xref:System.ServiceProcess.ServiceInstaller> yüklemek ve hizmetlerinizi kaldırmak için sınıf.  
+ Özelliklerini açıklayan <xref:System.ServiceProcess.ServiceProcessInstaller> ile birlikte kullanılan sınıfı <xref:System.ServiceProcess.ServiceInstaller> yüklemek ve hizmetlerinizi kaldırmak için sınıf.  
   
  <xref:System.ServiceProcess.ServiceInstaller>  
- Özelliklerini açıklayan <xref:System.ServiceProcess.ServiceInstaller> ile birlikte kullanılan sınıf <xref:System.ServiceProcess.ServiceProcessInstaller> yükleyip hizmetinizi kaldırmak için sınıf.  
+ Özelliklerini açıklayan <xref:System.ServiceProcess.ServiceInstaller> ile birlikte kullanılan sınıfı <xref:System.ServiceProcess.ServiceProcessInstaller> yüklemek ve hizmetinizi kaldırmak için sınıf.  
   
- [Şablonlardan NIB oluşturma projeleri](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ [NIB oluşturma proje şablonları](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
  Projeleri açıklar ve bunlar arasında seçim yapma Bu bölümde kullanılan türleri.

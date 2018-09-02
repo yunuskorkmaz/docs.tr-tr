@@ -1,40 +1,44 @@
 ---
 title: while (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
 - while
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 23c5ca3bb7dc401a894a6c3918fbaec9a9306153
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390030"
 ---
 # <a name="while-c-reference"></a>while (C# Başvurusu)
-`while` Deyimi, bir deyim veya ifadeleri bir blok için belirtilen ifadeyi değerlendirir kadar yürütür `false`.  
-  
-## <a name="example"></a>Örnek  
- [!code-csharp[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
-  
-## <a name="example"></a>Örnek  
- [!code-csharp[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
-  
-## <a name="example"></a>Örnek  
- Çünkü sınamasını `while` ifade başlamaz döngünün her yürütmeden önce bir `while` sıfır veya daha fazla kez döngü yürütür. Bu farklıdır [yapmak](../../../csharp/language-reference/keywords/do.md) bir veya birden çok kez yürütür döngü.  
-  
- A `while` döngü bitmelidir ne zaman bir [sonu](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [dönmek](../../../csharp/language-reference/keywords/return.md), veya [throw](../../../csharp/language-reference/keywords/throw.md) deyimi dışında denetimi aktarır döngü. Döngü çıkmadan sonraki yinelemeye denetim geçirmek için kullanmak [devam](../../../csharp/language-reference/keywords/continue.md) deyimi. Where bağlı olarak üç önceki örnek çıktıda fark `int n` artırılır. Çıktı aşağıdaki örnekte oluşturulur.  
-  
- [!code-csharp[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [while Deyimi (C++)](/cpp/cpp/while-statement-cpp)  
- [Yineleme Deyimleri](../../../csharp/language-reference/keywords/iteration-statements.md)
+
+`while` Deyimi, bir deyimi veya bir deyimler bloğunu belirtilen bir Boole ifadesi değerlendirilir sırada yürütür `true`. Bu ifade döngünün her yürütmesinden önce değerlendirilir çünkü bir `while` sıfır veya daha fazla kez döngü yürütür. Bu farklıdır [yapmak](do.md) yürüten bir veya daha fazla kez döngü.
+
+Herhangi bir anda işaret içinde `while` deyim bloğunu kullanarak döngü dışında bozabilir [sonu](break.md) deyimi.
+
+Değerlendirme için doğrudan geçebilirsiniz `while` kullanarak ifade [devam](continue.md) deyimi. İfade değerlendirme sonucu `true`, yürütme Döngüdeki ilk deyimde devam eder. Aksi takdirde, yürütme döngüyü sonra ilk deyimde devam eder.
+
+Ayrıca çıkış bir `while` tarafından döngü [goto](goto.md), [dönüş](return.md), veya [throw](throw.md) deyimleri.
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, kullanımını gösterir. `while` deyimi. Seçin **çalıştırma** örnek kodu çalıştırmak için. Bundan sonra bu kodu Değiştir ve yeniden çalıştırın.
+
+[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+
+## <a name="c-language-specification"></a>C# dili belirtimi
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)  
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](index.md)  
+- [while Deyimi (C++)](/cpp/cpp/while-statement-cpp)  
+- [Yineleme Deyimleri](iteration-statements.md)  
+- [do deyimi](do.md)  

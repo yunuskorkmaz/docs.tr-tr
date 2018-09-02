@@ -1,21 +1,21 @@
 ---
-title: Belirtilen olay günlüğü bu makinede yok
+title: Belirtilen olay günlüğü bu makinede mevcut değil
 ms.date: 07/20/2015
 ms.assetid: 974a23e7-37ea-4de2-b282-4cf46600694f
-ms.openlocfilehash: 9e45904d4f2f07403e3ca542c4adffc5db5dd2c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 764560e45ccfe12ad6dbeb42bfdea0b11326aa20
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638710"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393516"
 ---
-# <a name="specified-event-log-does-not-exist-on-this-machine"></a>Belirtilen olay günlüğü bu makinede yok
-Bu makinede var olmayan bir olay günlüğü erişim girişiminde bulunuldu.  
+# <a name="specified-event-log-does-not-exist-on-this-machine"></a>Belirtilen olay günlüğü bu makinede mevcut değil
+Bu makinede yok. bir olay günlüğüne girişiminde bulunuldu.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
--   Doğru dosya adını ve yolunu sağlamış olursunuz denetleyin.  
+-   Onay doğru dosya adını ve yolunu sağlamış olursunuz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Olay günlüklerini yönetme](http://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)  
+ [Olay günlüklerini yönetme](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)  
  [Nasıl Yapılır: Dosya Yollarını Ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

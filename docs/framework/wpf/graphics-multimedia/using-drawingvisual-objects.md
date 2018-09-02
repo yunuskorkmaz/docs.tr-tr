@@ -8,37 +8,37 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: e76ac22d4b8205576c8ed9ab67482c143a52fbd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565320"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390960"
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual Nesnelerini Kullanma
-Bu konu nasıl kullanılacağını bir bakış sunar <xref:System.Windows.Media.DrawingVisual> nesnelerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katmanı.  
+Bu konu nasıl kullanılacağına ilişkin bir genel bakış sağlar <xref:System.Windows.Media.DrawingVisual> nesneler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman.  
   
 <a name="drawingvisual_object"></a>   
 ## <a name="drawingvisual-object"></a>DrawingVisual nesnesi  
- <xref:System.Windows.Media.DrawingVisual> Olan şekil, görüntü veya metin işlemek için kullanılan sınıf çizim basit. Bu sınıf, kendi performansını artırır, düzen veya olay işleme sağlamadığından basit olarak değerlendirilir. Bu nedenle, çizimler arka planlar ve küçük resim için idealdir.  
+ <xref:System.Windows.Media.DrawingVisual> Olan şekil, görüntü veya metin işlemek için kullanılan sınıf çizim basit. Bu sınıf, performansını artırır, düzen veya olay işleme sağlamadığı basit olarak değerlendirilir. Bu nedenle, çizimleri, arka plan ve küçük resim için idealdir.  
   
 <a name="drawingvisual_host_container"></a>   
 ## <a name="drawingvisual-host-container"></a>DrawingVisual Konak Kapsayıcısı  
- Kullanmak için <xref:System.Windows.Media.DrawingVisual> nesneleri, bir konak kapsayıcı nesneleri oluşturmanız gerekir. Konak kapsayıcı nesnesi öğesinden türetilmelidir <xref:System.Windows.FrameworkElement> düzeni ve olay işleme desteği sağlayan sınıf <xref:System.Windows.Media.DrawingVisual> oturumda sınıfı. Ana amacı alt nesneleri içerecek şekilde olduğundan konak kapsayıcı nesnesi herhangi bir görünür özelliği görüntülemez. Ancak, <xref:System.Windows.UIElement.Visibility%2A> konak kapsayıcısının özelliği ayarlanmalıdır <xref:System.Windows.Visibility.Visible>; Aksi halde, alt öğelerin hiçbiri görünür olur.  
+ Kullanmak için <xref:System.Windows.Media.DrawingVisual> nesneler, nesneler için bir konak kapsayıcısı oluşturmanız gerekir. Konak kapsayıcı nesnesi öğesinden türetilmelidir <xref:System.Windows.FrameworkElement> düzeni ve olay işleme desteği sağlar sınıfını <xref:System.Windows.Media.DrawingVisual> oturumda sınıfı. Ana amacı alt nesneleri içerecek şekilde olduğundan, konak kapsayıcı nesnesi herhangi bir görünür özelliği görüntülemez. Ancak, <xref:System.Windows.UIElement.Visibility%2A> konak kapsayıcısı özelliği ayarlanmalıdır <xref:System.Windows.Visibility.Visible>; Aksi takdirde, alt öğelerinden hiçbiri görünür olur.  
   
- Görsel nesneler için bir konak kapsayıcı nesnesi oluşturduğunuzda, görsel nesne başvurularını depolamak gereken bir <xref:System.Windows.Media.VisualCollection>. Kullanım <xref:System.Windows.Media.VisualCollection.Add%2A> konak kapsayıcısı için görsel bir nesne eklemek için yöntem. Aşağıdaki örnekte, bir konak kapsayıcı nesnesi oluşturulur ve üç görsel nesne eklenir, <xref:System.Windows.Media.VisualCollection>.  
+ Görsel nesneler için bir konak kapsayıcı nesnesi oluşturduğunuzda, görsel nesne başvurularını depolamak gereken bir <xref:System.Windows.Media.VisualCollection>. Kullanım <xref:System.Windows.Media.VisualCollection.Add%2A> konak kapsayıcıya görsel bir nesne eklemek için yöntemi. Aşağıdaki örnekte, bir konak kapsayıcı nesnesi oluşturulur ve üç görsel nesneler eklenir, <xref:System.Windows.Media.VisualCollection>.  
   
  [!code-csharp[DrawingVisualSample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#100)]
  [!code-vb[DrawingVisualSample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#100)]  
   
 > [!NOTE]
->  Önceki kod örneğinde ayıklandığı tam kod örnek için bkz [Test kullanarak isabet sınaması örneği isabet](http://go.microsoft.com/fwlink/?LinkID=159994).  
+>  Kendisinden önceki kod örneğinde çıkarılan tam kod örneği için bkz [isabet sınaması örneği kullanarak Test isabet](https://go.microsoft.com/fwlink/?LinkID=159994).  
   
 <a name="creating_drawingvisual_objects"></a>   
 ## <a name="creating-drawingvisual-objects"></a>DrawingVisual nesneleri oluşturma  
- Oluştururken bir <xref:System.Windows.Media.DrawingVisual> nesnesi çizim içerik yok. Nesnenin alarak metin, grafik veya görüntü içeriği ekleyebilirsiniz <xref:System.Windows.Media.DrawingContext> ve içine çizim. A <xref:System.Windows.Media.DrawingContext> çağrılarak döndürülür <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> yöntemi bir <xref:System.Windows.Media.DrawingVisual> nesnesi.  
+ Oluştururken bir <xref:System.Windows.Media.DrawingVisual> nesnesi çizim içerik yok. Nesnenin alarak metin, grafik veya görüntü içeriğini ekleyebilirsiniz <xref:System.Windows.Media.DrawingContext> ve içine çizim. A <xref:System.Windows.Media.DrawingContext> çağırarak döndürülen <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> yöntemi bir <xref:System.Windows.Media.DrawingVisual> nesne.  
   
- Bir dikdörtgen çizmek için <xref:System.Windows.Media.DrawingContext>, kullanın <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> yöntemi <xref:System.Windows.Media.DrawingContext> nesnesi. Diğer içerik türlerine çizim için benzer yöntemler mevcut. İşiniz bittiğinde içine içerik çizmeyi <xref:System.Windows.Media.DrawingContext>, çağrı <xref:System.Windows.Media.DrawingContext.Close%2A> kapatmak için yöntemi <xref:System.Windows.Media.DrawingContext> ve içeriği kalır.  
+ Bir dikdörtgen çizmek için <xref:System.Windows.Media.DrawingContext>, kullanın <xref:System.Windows.Media.DrawingContext.DrawRectangle%2A> yöntemi <xref:System.Windows.Media.DrawingContext> nesne. Diğer içerik türlerine çizmek için benzer yöntemler vardır. İşiniz bittiğinde çizim içeriğinize <xref:System.Windows.Media.DrawingContext>, çağrı <xref:System.Windows.Media.DrawingContext.Close%2A> kapatmak için yöntemi <xref:System.Windows.Media.DrawingContext> ve içeriği.  
   
  Aşağıdaki örnekte, bir <xref:System.Windows.Media.DrawingVisual> nesnesi oluşturulur ve bir dikdörtgen çizilir kendi <xref:System.Windows.Media.DrawingContext>.  
   
@@ -46,25 +46,25 @@ Bu konu nasıl kullanılacağını bir bakış sunar <xref:System.Windows.Media.
  [!code-vb[DrawingVisualSample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 <a name="creating_overrides"></a>   
-## <a name="creating-overrides-for-frameworkelement-members"></a>Geçersiz kılmaları FrameworkElement üyeler için oluşturma  
- Konak kapsayıcı nesnesi, kendi görsel nesneler koleksiyonunu yönetilmesinden sorumludur. Bu konak kapsayıcı üye türetilmiş için geçersiz kılmalarını uygulamasını gerektirir <xref:System.Windows.FrameworkElement> sınıfı.  
+## <a name="creating-overrides-for-frameworkelement-members"></a>FrameworkElement üyeleri için geçersiz kılmaları oluşturma  
+ Konak kapsayıcı nesnesi, görsel nesneler koleksiyonunu yönetmekten sorumludur. Bu konak kapsayıcısı için türetilen üye geçersiz kılmaları uygulamak gerektirir <xref:System.Windows.FrameworkElement> sınıfı.  
   
  Aşağıdaki listede iki üyeleri geçersiz kılmanız gerekir açıklanmaktadır:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Belirtilen dizindeki bir alt koleksiyonda alt öğelerini döndürür.  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Belirtilen dizinde bir alt alt öğelerinin koleksiyonunu döndürür.  
   
 -   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Bu öğe içindeki görsel alt öğe sayısını alır.  
   
- Aşağıdaki örnekte, iki için geçersiz kılar <xref:System.Windows.FrameworkElement> üyeleri uygulanır.  
+ Aşağıdaki örnekte, iki için geçersiz kılmalar <xref:System.Windows.FrameworkElement> üyeleri uygulanır.  
   
  [!code-csharp[DrawingVisualSample#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#102)]
  [!code-vb[DrawingVisualSample#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#102)]  
   
 <a name="providing_hit_testing_support"></a>   
 ## <a name="providing-hit-testing-support"></a>İsabet testi desteği sağlama  
- Konak kapsayıcı nesnesi görünür bir özellik görüntülemez olsa bile olay işleme sağlayabilir; ancak, kendi <xref:System.Windows.UIElement.Visibility%2A> özelliği ayarlanmalıdır <xref:System.Windows.Visibility.Visible>. Bu işleme yordamı sol fare düğmesini sürümü gibi fare olayları yakalayabilir konak kapsayıcı için bir olay oluşturmanıza olanak sağlar. Olay işleme yordamı, ardından çağırarak isabet testi uygulayabilirsiniz <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi. Yöntemin <xref:System.Windows.Media.HitTestResultCallback> parametresi isabet testi sonuç eylemini belirlemek için kullanabileceğiniz kullanıcı tanımlı bir yordam gösterir.  
+ Görünür bir özellik görüntülemez bile olay işleme konak kapsayıcı nesnesi sağlayabilir; ancak, kendi <xref:System.Windows.UIElement.Visibility%2A> özelliği ayarlanmalıdır <xref:System.Windows.Visibility.Visible>. Bu işleme yordamı farenin sol düğmesine sürümü gibi fare olayları yakalayabilir konak kapsayıcısı için bir olay oluşturmanıza olanak sağlar. İsabet sınaması çağırarak olay işleme yordamı uygulayabilirsiniz <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi. Yöntemin <xref:System.Windows.Media.HitTestResultCallback> parametresi bir isabet sınaması sonuç eylemini belirlemek için kullanabileceğiniz kullanıcı tanımlı bir yordam gösterir.  
   
- Aşağıdaki örnekte, isabet sınama desteğini konak kapsayıcı nesnesi ve alt öğelerini için uygulanır.  
+ Aşağıdaki örnekte, isabet sınaması destek konak kapsayıcı nesnesi ve alt öğeleri için uygulanır.  
   
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  

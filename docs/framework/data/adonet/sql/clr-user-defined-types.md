@@ -1,29 +1,29 @@
 ---
-title: CLR kullanıcı tanımlı türler
+title: Kullanıcı tanımlı CLR Türleri
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 344245ea7c67d7b5363c17bb42e2606ca11142bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357588"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388729"
 ---
-# <a name="clr-user-defined-types"></a>CLR kullanıcı tanımlı türler
-Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile (CLR) uygulanan kullanıcı tanımlı türler (atama) için destek sağlar. CLR SQL Server'a tümleşiktir ve bu düzenek veritabanının tür sistemi genişletmenizi sağlar. Atama kullanıcı genişletilebilirlik SQL Server veri türü sisteminin ve karmaşık yapılandırılmış türleri tanımlama yeteneği sağlar.  
+# <a name="clr-user-defined-types"></a>Kullanıcı tanımlı CLR Türleri
+Microsoft SQL Server, Microsoft .NET Framework ortak dil çalışma zamanı ile (CLR) uygulanan kullanıcı tanımlı türler(UDT) için destek sağlar. SQL Server CLR tümleşiktir ve bu tür sistemi veritabanının genişletmenizi sağlar. Udt'ler kullanıcı genişletilebilirlik SQL Server veri türü sistemi hem de karmaşık yapılandırılmış türler tanımlama yeteneği sağlar.  
   
- Atama bir uygulama mimarisi açısından iki temel fayda sağlar:  
+ Udt'ler bir uygulama mimarisi açısından iki temel fayda sağlar:  
   
--   Güçlü kapsülleme (hem de istemci ve sunucu) iç durum ve dış davranışları arasında.  
+-   Güçlü kapsülleme (hem de istemci ve sunucu) arasında iç durumu ve dış davranışlar.  
   
--   Diğer derin tümleştirme server özellikleri ilgili. Kendi UDT tanımladıktan sonra burada sütun tanımları dahil olmak üzere SQL Server'da ve değişkenleri, parametreleri, işlevi sonuçları, imleçler, tetikleyiciler ve çoğaltma olarak bir sistem türü kullanabilirsiniz tüm bağlamlarda kullanabilirsiniz.  
+-   İlgili sunucu özellikleri diğer derin tümleştirme. Kendi UDT tanımladıktan sonra bir sistem türü sütun tanımları dahil olmak üzere SQL Server ve değişkenler, parametreleri, işlevi sonuçları, işaretçiler, tetikleyiciler ve çoğaltma olarak kullanabileceğiniz tüm bağlamlarda kullanabilirsiniz.  
   
- Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü, kullanmakta olduğunuz SQL Server sürümü için bkz.  
+ Daha ayrıntılı bilgi için bkz. [SQL Server belgeleri](/sql) kullanmakta olduğunuz SQL Server sürümü için.
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server belgeleri**
   
-1.  [Kullanıcı Tanımlı CLR Türleri](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [Kullanıcı Tanımlı CLR Türleri](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen kodda SQL Server 2005'te nesneleri oluşturma](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Ayrıca bkz.  
+
+[ADO.NET’e Genel Bakış](../ado-net-overview.md)  

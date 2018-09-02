@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
 ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999714"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391708"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Sayısal Veri Türleri (Visual Basic)
 Visual Basic sağlayan birkaç *sayısal veri türleri* çeşitli gösterimlerini numaraları işlemek için. *İntegral* türleri yalnızca (pozitif, negatif ve sıfır) tamsayılar, temsil ve *nonintegral* türleri tamsayı ve kesirli bölümleri ile sayıları temsil eder.  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: acf5967c015d61a0cc148e5cb509a5a7ded2152c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91c04ba41a02c7c620c2f6c621505a19e0302c19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533204"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398121"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Nasıl yapılır: Özel ToolStripRenderer Uygulama
-Görünümünü özelleştirebilirsiniz bir <xref:System.Windows.Forms.ToolStrip> türeyen bir sınıf uygulayarak denetim <xref:System.Windows.Forms.ToolStripRenderer>. Bu size sağlanan görünümü farklı bir görünüm oluşturmak için esneklik <xref:System.Windows.Forms.ToolStripProfessionalRenderer> ve <xref:System.Windows.Forms.ToolStripSystemRenderer> sınıfları.  
+Görünümünü özelleştirebileceğiniz bir <xref:System.Windows.Forms.ToolStrip> türetildiği bir sınıf uygulama Denetim <xref:System.Windows.Forms.ToolStripRenderer>. Bu size sağlanan görünümü farklı bir görünüm oluşturmak için esneklik <xref:System.Windows.Forms.ToolStripProfessionalRenderer> ve <xref:System.Windows.Forms.ToolStripSystemRenderer> sınıfları.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde, özel bir uygulamak gösterilmiştir <xref:System.Windows.Forms.ToolStripRenderer> sınıfı. Bu örnekte, `GridStrip` denetimi bir görüntü oluşturmak için bir tablo düzeni döşeme taşımak kullanıcı izin veren bir kayan kutucuğu Bulmacanın uygular. Özel bir <xref:System.Windows.Forms.ToolStrip> denetim düzenler kendi <xref:System.Windows.Forms.ToolStripButton> bir kılavuz düzeni denetimlerinde. Düzen içine bir Sürükle ve bırak işlemi kullanarak bitişik bir kutucuğu kullanıcı kaydırabilirsiniz boş bir hücre içerir. Kullanıcı taşıyabilirsiniz döşeme vurgulanır.  
+ Aşağıdaki kod örneği, özel bir uygulama gösterilmektedir <xref:System.Windows.Forms.ToolStripRenderer> sınıfı. Bu örnekte, `GridStrip` kutucukları bir görüntü oluşturmak için bir tablo düzeni taşımak kullanıcı izin veren bir kayan kutucuk Bulmacanın denetimi uygular. Özel bir <xref:System.Windows.Forms.ToolStrip> denetim düzenler, <xref:System.Windows.Forms.ToolStripButton> bir kılavuz düzeni denetimleri. Düzen, bir Sürükle ve bırak işlemi kullanarak bitişik bir kutucuk kullanıcı kaydırabilirsiniz boş bir hücreye içerir. Kullanıcı taşıyabilirsiniz kutucukları vurgulanır.  
   
- `GridStripRenderer` Sınıfı özelleştirir üç yönlerini `GridStrip` denetiminin görünüşünü:  
+ `GridStripRenderer` Sınıfı özelleştirir üç yönlerini `GridStrip` denetimin görünümü:  
   
 -   `GridStrip` Kenarlık  
   
@@ -35,9 +35,9 @@ Görünümünü özelleştirebilirsiniz bir <xref:System.Windows.Forms.ToolStrip
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   System.Drawing ve System.Windows.Forms derlemelerine başvurular.  
+-   System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı derleme ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek Visual Studio'da yeni bir projeye kod yapıştırılarak de oluşturabilirsiniz.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.MenuStrip>  

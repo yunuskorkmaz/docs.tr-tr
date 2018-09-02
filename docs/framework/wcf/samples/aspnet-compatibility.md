@@ -2,41 +2,43 @@
 title: ASP.NET Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806227"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398241"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Uyumluluğu
-Bu örnek nasıl etkinleştirileceğini göstermektedir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modunda Windows Communication Foundation (WCF). Çalışan hizmetleri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk modu katılmak tam olarak [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama kanal ve yapabilirsiniz kullanımı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dosya/URL yetkilendirmesi, oturum durumu gibi özellikleri ve <xref:System.Web.HttpContext> sınıfı. <xref:System.Web.HttpContext> Sınıfı, tanımlama bilgileri, oturumlar ve diğer erişmesine olanak tanır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] özellikleri. Bu mod HTTP aktarımını bağlamaları kullanın ve hizmet IIS'de barındırılması gerekir gerektirir.  
+Bu örnek, ASP.NET uyumluluk modunun Windows Communication Foundation (WCF) etkinleştirme gösterir. ASP.NET özellikleri gibi dosya/URL yetkilendirme, oturum durumu ASP.NET modu tam ASP.NET uygulama ardışık düzeninizde katılır ve yapabilirsiniz uyumluluğu çalışan hizmetleri kullanımını ve <xref:System.Web.HttpContext> sınıfı. <xref:System.Web.HttpContext> Sınıfı tanımlama bilgileri, oturumları ve diğer ASP.NET özellikleri erişim sağlar. Bu mod, HTTP aktarımı bağlamaları kullanın ve hizmeti IIS'de barındırılan gerekir gerektirir.  
   
- Bu örnekte, istemci bir konsol uygulaması (bir yürütülebilir dosya) ve Internet Information Services (IIS) barındırılan hizmetindeki.  
-  
-> [!NOTE]
->  Kurulum yordam ve yapılandırma yönergeleri Bu örneği için bu konunun sonunda yer alır.  
+ Bu örnekte, istemci bir konsol uygulaması (bir yürütülebilir dosya) ve hizmet Internet Information Services (IIS) içinde barındırılır.  
   
 > [!NOTE]
->  Bu örnek gerektiren bir [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] çalıştırmak için uygulama havuzu. Yeni bir uygulama havuzu oluşturmak için veya varsayılan uygulama havuzunu değiştirmek için aşağıdaki adımları izleyin.  
->   
->  1.  Açık **Denetim Masası**.  Açık **Yönetimsel Araçlar** altında uygulaması **sistem ve güvenlik** başlığı. Açık **Internet Information Services (IIS) Yöneticisi** uygulaması.  
-> 2.  Treeview içinde genişletin **bağlantıları** bölmesi. Seçin **uygulama havuzları** düğümü.  
-> 3.  Varsayılan uygulama havuzunu kullanmak üzere ayarlamak için [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (hangi uyumsuzluk sorunlara neden olan sitelerle), sağ **DefaultAppPool** liste öğesi ve seçin **temel ayarlar...** . Ayarlama **.Net Framework sürüm** aşağı açılır **.Net Framework v4.0.30128** (veya üstü).  
-> 4.  Kullanan yeni bir uygulama havuzu oluşturmak için [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (diğer uygulamalar için uyumluluğu korumak için), sağ **uygulama havuzları** düğümü ve select **uygulama havuzu Ekle...** . Yeni uygulama havuzu adını ve ayarlayın **.Net Framework sürüm** aşağı açılır **.Net Framework v4.0.30128** (veya üstü). Kurulumu çalıştıran altındaki adımları sonra sağ **ServiceModelSamples** seçin ve uygulama **yönetmek uygulama**, **Gelişmiş ayarlar...** . Ayarlama **uygulama havuzu** yeni bir uygulama havuzu için.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
+  
+Bu örnek gerektiren bir [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] çalıştırmak için uygulama havuzu. Yeni bir uygulama havuzu oluşturmak veya varsayılan uygulama havuzunu değiştirmek için şu adımları izleyin.  
+
+1.  Açık **Denetim Masası**.  Açık **Yönetimsel Araçlar** uygulaması altında **sistem ve güvenlik** başlığı. Açık **Internet Information Services (IIS) Yöneticisi'ni** uygulaması.  
+
+2.  Ağaç görünümünde genişletin **bağlantıları** bölmesi. Seçin **uygulama havuzları** düğümü.  
+
+3.  Varsayılan uygulama havuzunu kullanmak için ayarlanacak [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (hangi uyumsuzluk sorunlara neden var olan siteler ile), sağ **DefaultAppPool** seçin ve liste öğesi **temel ayarları...** . Ayarlama **.Net Framework sürümü** aşağı açılır **.Net Framework v4.0.30128** (veya üzeri).  
+
+4.  Kullanan yeni bir uygulama havuzu oluşturmak için [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (diğer uygulamalar için uyumluluğu korumak için), sağ **uygulama havuzları** düğümünü seçip alt **uygulama havuzu Ekle...** . Yeni uygulama havuzu ad verin ve ayarlayın **.Net Framework sürümü** aşağı açılır **.Net Framework v4.0.30128** (veya üzeri). Aşağıdaki adımlar Kurulumu çalıştırmayı sonra sağ **ServiceModelSamples** seçin ve uygulama **uygulamasını Yönet**, **Gelişmiş ayarlar...** . Ayarlama **uygulama havuzu** yeni uygulama havuzu için.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
- Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesap makinesi hizmetinin uygular. `ICalculator` Sözleşme olarak değiştirildi `ICalculatorSession` çalışan bir sonuç tutarken gerçekleştirilecek işlem kümesi izin vermek sözleşme.  
+ Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesaplayıcı hizmet uygular. `ICalculator` Sözleşme olarak değiştirilmiş `ICalculatorSession` çalışan bir sonuç tutarken gerçekleştirilecek işlemleri bir dizi izin vermek sözleşme.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculatorSession  
 {  
@@ -55,16 +57,16 @@ public interface ICalculatorSession
 }  
 ```  
   
- Hizmet durumu, bir hesaplama gerçekleştirmek için birden çok hizmet işlemleri adlı gibi her bir istemci için özelliğini kullanarak korur. İstemcisi, çağırarak geçerli sonucu alabilir `Result` ve çağırarak sıfır sonucu temizleyebilirsiniz `Clear`.  
+ Hizmet durumu, bir hesaplama gerçekleştirmek için birden çok hizmet işlemleri adlandırılır gibi her istemci için özellik kullanarak korur. İstemci, çağırarak geçerli sonucu alabilirsiniz `Result` ve sonucu çağırarak sıfıra temizleyebilirsiniz `Clear`.  
   
- Hizmet kullandığı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] her istemci oturumu için sonucunu depolamak için oturumu. Bu hizmet için birden fazla çağrı boyunca her istemci için çalışan sonuç korumak hizmet sağlar.  
+ Hizmet, her bir istemci oturumu için sonucunu depolamak için ASP.NET oturum kullanır. Bu, birden çok hizmete çağrı arasında her istemci için çalışan sonucu korumak bir hizmet sağlar.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturum durumu ve WCF oturumları çok farklı noktalardır.  Bkz: [oturum](../../../../docs/framework/wcf/samples/session.md) WCF oturumları hakkındaki ayrıntılar için.  
+> ASP.NET oturum durumu ve WCF oturumları çok farklı noktalardır. Bkz: [oturumu](../../../../docs/framework/wcf/samples/session.md) WCF oturumları hakkında ayrıntılı bilgi için.
   
- Hizmet intimate bir bağımlılığı olduğundan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oturum durumu ve gerektirir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] düzgün çalışması için uyumluluk modunda. Bu gereksinimleri uygulayarak bildirimli olarak ifade edilir `AspNetCompatibilityRequirements` özniteliği.  
+ Hizmet, ASP.NET oturum durumu tutun bir bağımlılığı ve düzgün çalışması için ASP.NET uyumluluk modunun gerektirir. Bu gereksinimleri uygulayarak bildirimli olarak ifade edilir `AspNetCompatibilityRequirements` özniteliği.  
   
-```  
+```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
                        AspNetCompatibilityRequirementsMode.Required)]  
 public class CalculatorService : ICalculatorSession  
@@ -106,24 +108,24 @@ public class CalculatorService : ICalculatorSession
         return Result;  
     }  
 }  
-```  
+```
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
-```  
+```console
 0, + 100, - 50, * 17.65, / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirilen mutlaka [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirilen mutlaka [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Çözüm oluşturulduktan sonra ServiceModelSamples uygulamada ayarlamak için Setup.bat çalıştırmak [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. ServiceModelSamples dizin şimdi olarak görünmesi gereken bir [!INCLUDE[iisver](../../../../includes/iisver-md.md)] uygulama.  
+3.  Çözüm oluşturulduktan sonra ServiceModelSamples uygulamada ayarlamak için Setup.bat çalıştırma [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. ServiceModelSamples dizin artık olarak görünmesi gereken bir [!INCLUDE[iisver](../../../../includes/iisver-md.md)] uygulama.  
   
-4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric barındırma ve kalıcılığı örnekleri](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

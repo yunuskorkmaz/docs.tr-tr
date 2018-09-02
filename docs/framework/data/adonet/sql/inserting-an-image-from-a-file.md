@@ -1,24 +1,24 @@
 ---
-title: Bir dosyadan bir resim ekleme
+title: Bir dosyadan görüntü ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359321"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387470"
 ---
-# <a name="inserting-an-image-from-a-file"></a>Bir dosyadan bir resim ekleme
-İkili veya karakter veri alanına, veri kaynağı türüne bağlı olarak bir veritabanına ikili büyük nesne (BLOB) yazma. BLOB olduğu başvurduğu genel bir terim `text`, `ntext`, ve `image` genellikle belgeleri ve resimleri içeren veri türleri.  
+# <a name="inserting-an-image-from-a-file"></a>Bir dosyadan görüntü ekleme
+İkili büyük nesne (BLOB), bir veritabanına veri kaynağınızın alanına türüne bağlı olarak ikili veya karakter verileri olarak yazabilirsiniz. Blobudur başvurduğu genel bir terim `text`, `ntext`, ve `image` genellikle belgeler ve resimler içeren veri türleri.  
   
- Veritabanınız için bir BLOB değeri yazmak için uygun INSERT veya UPDATE deyimi yayımlayın ve giriş parametresi olarak BLOB değerini geçirin (bkz [yapılandırma parametreleri ve parametre veri türleri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). SQL Server gibi bir metin olarak, BLOB depolanıyorsa `text` alan, bir dize parametresi BLOB iletebilir. BLOB SQL Server gibi ikili biçimde depolanıyorsa `image` alanı türünde bir dizi iletebilir `byte` ikili bir parametre olarak.  
+ Veritabanınız için bir BLOB değeri yazmak için uygun INSERT nebo UPDATE deyimi yayımlayın ve giriş parametresi olarak BLOB değeri geçirin (bkz [yapılandırma parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). SQL Server gibi bir metin olarak BLOBUNUZA depolanıyorsa `text` alan, bir dize parametresi BLOB iletebilir. SQL Server gibi ikili biçimde BLOB depolanıyorsa `image` alan, bir dizi türü iletebilir `byte` ikili bir parametre olarak.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde çalışan bilgilerini Northwind veritabanı Çalışanlar tablosuna ekler. Çalışanın fotoğraf bir dosyadan okunan ve bir görüntü alanı tablosundaki fotoğraf alanına eklenir.  
+ Aşağıdaki kod örneği, Northwind veritabanındaki çalışanların tablosuna çalışan bilgilerini ekler. Çalışan bir fotoğraf bir dosyadan okunan ve bir görüntü alanı tablo fotoğraf alanına eklenir.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -135,4 +135,4 @@ public static byte[] GetPhoto(string filePath)
  [İkili Verileri Alma](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

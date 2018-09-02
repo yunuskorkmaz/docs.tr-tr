@@ -1,46 +1,46 @@
 ---
-title: Dinamik değişkenleri
+title: Dinamik bağımsız değişkenleri
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-ms.openlocfilehash: 5c00b9678191e4e88e9e41380d6b10be39684b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517984"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387246"
 ---
-# <a name="dynamic-arguments"></a>Dinamik değişkenleri
-Bu örnek, bağımsız değişkenler etkinlik Yazar yerine etkinlik tüketici tarafından tanımlanan bir etkinlik uygulayan gösterilmiştir. Çalışma zamanı etkinliğe ilişkin meta veri yapılarını yolu geçersiz kılarak bunu yapar.  
+# <a name="dynamic-arguments"></a>Dinamik bağımsız değişkenleri
+Bu örnek, bağımsız değişkenler etkinlik Yazar yerine etkinlik tüketici tarafından tanımlanan bir etkinlik uygulayan gösterilmiştir. Bunu etkinliğe ilişkin meta veri çalışma zamanı oluşturur yolu geçersiz kılarak yapar.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Yürütme önce çalışma zamanı etkinlik türü ortak üyelerine incelenerek ve bağımsız değişkenler, değişkenleri, alt etkinlikleri ve etkinlik temsilciler bir etkinliğin meta verilerinin bir parçası otomatik olarak bildirme tarafından bir etkinlik açıklamasını oluşturur. Çalışma zamanı ilişkileri ve yaşam süresi kurallarını yönetmek için bir iş akışı da doğru yapımı emin olmak için bunu yapar. Öğesinden türetilen etkinlik türü üzerinde Genel üyeler belirterek bir etkinlik Yazar etkinliğin bağımsız değişkenler genellikle tanımlar <xref:System.Activities.Argument>. Türetilen ortak her üye için <xref:System.Activities.Argument>, çalışma zamanı oluşturur bir <xref:System.Activities.RuntimeArgument> ve bu üyede ayarlamak kullanıcı tarafından sağlanan bağımsız değişken bağlar. Bazı durumlarda, ancak, bağımsız değişkenler kümesine belirler bazı yapılandırma etkinliğin tüketici sağlar. Bir etkinlik Yazar geçersiz kılmaları <xref:System.Activities.Activity.CacheMetadata%2A> şekilde etkinlik özelleştirmek için meta verileri, etkinliği ile ilişkili bağımsız değişkenler kümesine içeren yerleşik olarak bulunur.  
+ Yürütme önce çalışma zamanı etkinlik türü genel üyeleri inceleme ve etkinlik meta verilerini bir parçası olarak otomatik olarak bağımsız değişkenler, değişkenleri, alt etkinlikleri ve etkinlik temsilcileri bildirme açıklaması bir etkinlik oluşturur. Çalışma zamanı ilişkilerini ve lifetime kuralları yönetmek için farklı bir iş akışı de doğru yapımı emin olmak için bunu yapar. Öğesinden türetilen etkinlik türü genel üyeler belirterek bir etkinlik Yazar etkinlik bağımsız değişkenleri genellikle tanımlar <xref:System.Activities.Argument>. Öğesinden türetilen her bir ortak üye için <xref:System.Activities.Argument>, çalışma zamanı oluşturur bir <xref:System.Activities.RuntimeArgument> ve kullanıcı tarafından sağlanan bağımsız değişken bu üyede ayarlamak için bağlar. Bazı durumlarda, ancak tüketici etkinliğin bağımsız değişken kümesinin belirleyen bazı yapılandırma sağlar. Bir etkinlik Yazar geçersiz kılmalar <xref:System.Activities.Activity.CacheMetadata%2A> şekilde etkinlik özelleştirmek için meta verileri, etkinliği ile ilişkili bağımsız değişkenler kümesini içeren yerleşik olarak bulunur.  
   
- Bu örnek bir bağımsız değişken listesi dinamik olarak yöntemini çağıran bir etkinliğin nasıl oluşturulacağını gösterir. Etkinlik tüketici türü ve bu yönteme geçirilecek bağımsız değişkenler koleksiyonu birlikte çağrılacak istedikleri yöntem adını belirtir.  
+ Bu örnek nasıl dinamik olarak bir yöntemi çağıran bir etkinliğin bağımsız değişken listesi oluşturulacağını gösterir. Etkinlik tüketici türü ve bu yönteme gönderilecek bağımsız değişkenlerin koleksiyonunu birlikte çağrılacak istedikleri yöntem adını belirtir.  
   
 > [!NOTE]
->  Bu örnek amacı nasıl geçersiz kılınacağı göstermektir <xref:System.Activities.CodeActivity.CacheMetadata%2A> ve nasıl kullanılacağını <xref:System.Activities.RuntimeArgument>. Bu etkinlik çağırabileceği yöntemleri türlerini göre çeşitli uyarılar vardır. Örneğin, genel türler veya parametre dizileri ile çalışmaz. <xref:System.Activities.Statements.InvokeMethod> İn.NET Framework birlikte gelen etkinlik bu durumlar ve daha fazlasını işler.  
+>  Bu örnek amacı nasıl geçersiz kılınacağını göstermektir <xref:System.Activities.CodeActivity.CacheMetadata%2A> ve nasıl kullanılacağını <xref:System.Activities.RuntimeArgument>. Bu etkinlik çağırabilirsiniz yöntemler tür göre çeşitli uyarılar vardır. Örneğin, genel türler veya parametre dizileri ile çalışmaz. <xref:System.Activities.Statements.InvokeMethod> Framework derlemelerindeki birlikte gelen etkinlik işleme bu cases ve daha fazlası.  
   
- `MethodInvoke` Etkinliği geçersiz kılmaları <xref:System.Activities.CodeActivity.CacheMetadata%2A> ve oluşturarak başlar bir <xref:System.Activities.RuntimeArgument> yöntemi çağırma herhangi sonucundan işlemek için. Bu bağlar <xref:System.Activities.RuntimeArgument> herkese açık şekilde ayarlanabilir için <xref:System.Activities.OutArgument> adlı `Result`. Varsa `MethodInvoke.Result` olan `null`, çalışma zamanı ile otomatik olarak doldurur bir <xref:System.Activities.OutArgument> kendi türü için varsayılan ifadesi ile yapılandırılır. Bir etkinlik Yazar hiçbir zaman sahip bir bağımsız değişken özelliği olup olmadığını denetlemek Bu davranış anlamına gelir `null`.  
+ `MethodInvoke` Etkinliği geçersiz kılmaları <xref:System.Activities.CodeActivity.CacheMetadata%2A> ve oluşturarak başlıyor bir <xref:System.Activities.RuntimeArgument> herhangi yöntemi çağrısının sonucunu işlemek için. Bu bağlar <xref:System.Activities.RuntimeArgument> için herkese açık şekilde ayarlanabilir <xref:System.Activities.OutArgument> adlı `Result`. `MethodInvoke.Result` Olan `null`, çalışma zamanı ile otomatik olarak dolduran bir <xref:System.Activities.OutArgument> kendi türünün varsayılan ifadesiyle yapılandırılmış. Bir etkinlik Yazar hiçbir zaman sahip bir bağımsız değişken özelliği olup olmadığını denetlemek Bu davranış olduğu anlamına gelir `null`.  
   
- Ardından, <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılma belirler `MethodInfo` kullanıcı tarafından sağlanan çağrısından kullanacağı `MethodName` ve `TargetType`. `DetermineMethodInfo` Yöntemi alır <xref:System.Activities.CodeActivityMetadata> parametresi geçirilen <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulama hataları bildirilebilir. yapılandırma hataları böylece geçersiz kıl. Bu çağırarak yapılır `metadata.AddValidationError`.  
+ Ardından, <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılma belirler `MethodInfo` kullanıcı tarafından sağlanan çağrısından kullanacağı `MethodName` ve `TargetType`. `DetermineMethodInfo` Yöntemi <xref:System.Activities.CodeActivityMetadata> geçirilen <xref:System.Activities.CodeActivity.CacheMetadata%2A> yapılandırma hataları doğrulama hataları bildirilebilir olacak şekilde geçersiz kılın. Bu çağrılarak gerçekleştirilir `metadata.AddValidationError`.  
   
- Bir kez `MethodInfo` , örnek tekrarlanan üzerinden ayarlanmadı `MethodInfo` parametreleri. Her bir parametreyi oluşturduğu bir <xref:System.Activities.RuntimeArgument> ve kullanıcı tarafından sağlanan koleksiyondan karşılık gelen değişkeninde bağlandığı `Parameters` özelliği. Son olarak, koleksiyonunu <xref:System.Activities.RuntimeArgument>s etkinliği ile ilişkili çağırarak `metadata.SetArgumentsCollection`.  
+ Bir kez `MethodInfo` , örnek yinelenir üzerinden ayarlanmadı `MethodInfo` parametreleri. Her parametre için oluşturduğu bir <xref:System.Activities.RuntimeArgument> ve kullanıcı tarafından sağlanan koleksiyondan karşılık gelen bağımsız değişken bağlar `Parameters` özelliği. Son olarak, koleksiyonu <xref:System.Activities.RuntimeArgument>s etkinliği ile ilişkili çağırarak `metadata.SetArgumentsCollection`.  
   
- Bağımsız değişken çözümleme yapılabilir Not kullanarak bir <xref:System.Activities.RuntimeArgument>, durumunda gibi `resultArgument` veya durumunda olduğu gibi kullanıcı tarafından sağlanan bağımsız değişken `Parameters` koleksiyonu.  
+ Bağımsız değişken çözümleme yapılabilir Not kullanarak bir <xref:System.Activities.RuntimeArgument>, durumunda gibi `resultArgument` ya da olduğu gibi kullanıcı tarafından sağlanan bağımsız değişken `Parameters` koleksiyonu.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], DynamicArguments.sln dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`

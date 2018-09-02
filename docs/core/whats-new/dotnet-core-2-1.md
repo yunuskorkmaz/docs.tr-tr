@@ -4,12 +4,12 @@ description: .NET Core 2.1 içinde bulunan yeni özellikler hakkında bilgi edin
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935585"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392855"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 yenilikler nelerdir?
 
@@ -49,7 +49,7 @@ Yalnızca bir proje kullanarak mevcut Araçlar [ `DotnetCliToolReference` ](../t
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Not `--` önündeki seçeneği `--verbose` seçeneği. Doğrudan geçirilen seçenekleri sınırlandırır `dotnet watch` alt öğesine geçirilen bağımsız değişkenler komutunu `dotnet` işlem. Bu olmadan, `--verbose` seçeneği uygulandığı `dotnet watch` komutu, `dotnet build` komutu.
   
    Daha fazla bilgi için [dotnet izleme kullanarak ASP.NET Core geliştirme uygulamaları](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ Yüklendikten sonra aracı komut satırından aracı adı belirtilerek çalışt
 
 ## <a name="roll-forward"></a>İleri Sarma
 
-.NET Core 2.0 ile otomatik olarak itibaren tüm .NET Core uygulamaları en son İleri sarmanın *podverze* bir sisteme yüklenmiş. 
+.NET Core 2.0 ile otomatik olarak itibaren tüm .NET Core uygulamaları en son İleri sarmanın *podverze* bir sisteme yüklenmiş.
 
 Bir uygulamanın derlendiği .NET Core sürümü çalışma zamanında mevcut değilse, .NET Core 2.0 ile başlayarak, uygulama otomatik olarak en son yüklenen karşı çalışır *podverze* .NET core'un. Diğer bir deyişle, .NET Core 2.0 ile bir uygulama oluşturulur ve .NET Core 2.1 .NET Core 2.0, ana sistemde mevcut değil. ancak, uygulama .NET Core 2.1 ile çalışır.
 
@@ -233,6 +233,6 @@ Linux ve Macos'ta, yalnızca yapılandırabilirsiniz <xref:System.Net.Http.HttpC
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[​.NET Core'daki Yenilikler](index.md)  
-[EF Core 2.1 yeni özellikler](/ef/core/what-is-new/ef-core-2.1)  
-[ASP.NET Core 2.1 yenilikler nelerdir?](/aspnet/core/aspnetcore-2.1)
+* [​.NET Core'daki Yenilikler](index.md)  
+* [EF Core 2.1 yeni özellikler](/ef/core/what-is-new/ef-core-2.1)  
+* [ASP.NET Core 2.1 yenilikler nelerdir?](/aspnet/core/aspnetcore-2.1)

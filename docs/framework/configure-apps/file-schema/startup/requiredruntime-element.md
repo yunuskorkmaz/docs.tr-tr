@@ -12,15 +12,15 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749988"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398738"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; öğesi
-Uygulamanın yalnızca sürüm 1.0 ortak dil çalışma zamanı desteklediğini belirtir. Bu öğe kullanım dışıdır ve artık kullanılmalıdır. [ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.
+Uygulama yalnızca sürüm 1.0 ortak dil çalışma zamanının desteklediğini belirtir. Bu öğe, kullanım dışı ve artık kullanılmalıdır. [ `supportedRuntime` ](supportedruntime-element.md) Öğesi bunun yerine kullanılmalıdır.
   
  \<Yapılandırma >  
 \<Başlangıç >  
@@ -41,8 +41,8 @@ safemode="true|false"/>
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`version`|İsteğe bağlı öznitelik.<br /><br /> Bu uygulama destekleyen .NET Framework sürümünü belirten bir dize değeri. Dize değeri, .NET Framework yükleme kök altında bulunan dizin adı eşleşmelidir. Dize değeri içeriğini çözümlenmemiş.|  
-|`safemode`|İsteğe bağlı öznitelik.<br /><br /> Çalışma zamanı başlatma kodunu çalışma zamanı sürümü belirlemek üzere kayıt defterini aramayacağını belirtir.|  
+|`version`|İsteğe bağlı öznitelik.<br /><br /> Bu uygulamanın desteklediği .NET Framework sürümünü belirten bir dize değeri. Dize değeri, .NET Framework yükleme kökü altında bulunan dizin adı eşleşmelidir. Dize değeri içeriğini çözümlenmemiş.|  
+|`safemode`|İsteğe bağlı öznitelik.<br /><br /> Çalışma zamanı başlatma kodunu çalışma zamanı sürümünü belirlemek için kayıt defterini arayıp aramayacağını belirtir.|  
   
 ## <a name="safemode-attribute"></a>safemode özniteliği  
   
@@ -62,18 +62,18 @@ safemode="true|false"/>
 |`startup`|İçeren `<requiredRuntime>` öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca sürüm 1.0 çalışma zamanının desteklemek için oluşturulan uygulamaların kullanmalıdır `<requiredRuntime>` öğesi. Sürüm 1.1 veya üstünün çalışma zamanı ile oluşturulan uygulamaların kullanmalıdır `<supportedRuntime>` öğesi.  
+ Yalnızca sürüm 1.0 çalışma zamanını desteklemek için oluşturulan uygulamalar kullanmalıdır `<requiredRuntime>` öğesi. Sürüm 1.1 veya daha sonraki çalışma zamanı sürümü kullanılarak oluşturulan uygulamalar kullanmalıdır `<supportedRuntime>` öğesi.  
   
 > [!NOTE]
->  Kullanırsanız [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyası belirtmek için işlev, kullanmalısınız `<requiredRuntime>` öğesi çalışma zamanının tüm sürümler için. `<supportedRuntime>` Öğesi göz ardı edilir kullandığınızda [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
+>  Kullanırsanız [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyasını belirtmek için işlev, kullanmanız gereken `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesi. `<supportedRuntime>` Öğesi yok sayıldı kullandığınızda [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
- `version` Öznitelik dizesini belirtilen .NET Framework sürümü için yükleme klasör adı eşleşmelidir. Bu dize yorumlanmaz. Çalışma zamanı başlatma kodunu eşleşen bir klasörü bulamazsa, çalışma zamanının yüklü değil; Başlangıç kodu bir hata iletisi gösterir ve sonlandırılıyor.  
+ `version` Öznitelik dizesini belirtilen .NET Framework sürümü için yükleme klasör adıyla eşleşmelidir. Bu dize yorumlanmaz. Çalışma zamanı başlatma kodunu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmedi; Başlangıç kodu, hata iletisi gösterir ve sonlandırılır.  
   
 > [!NOTE]
->  Microsoft Internet Explorer'da barındırılan bir uygulama için başlangıç kodu yoksayar `<requiredRuntime>` öğesi.  
+>  Microsoft Internet Explorer'da barındırılan bir uygulama için başlatma kodunun yoksayar `<requiredRuntime>` öğesi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek çalışma zamanı sürümü bir yapılandırma dosyası belirtmek nasıl gösterir.  
+ Aşağıdaki örnek, bir yapılandırma dosyasında çalışma zamanı sürümü belirtmek gösterilmektedir.  
   
 ```xml  
 <configuration>  
@@ -86,4 +86,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlangıç Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver > hangi çalışma zamanı sürümünün kullanılacağını belirtme](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

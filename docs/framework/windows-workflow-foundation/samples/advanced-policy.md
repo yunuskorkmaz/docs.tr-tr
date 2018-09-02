@@ -1,24 +1,24 @@
 ---
-title: Gelişmiş İlkesi
+title: Gelişmiş ilke
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515561"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387895"
 ---
-# <a name="advanced-policy"></a>Gelişmiş İlkesi
-Bu örnekte basit ilke örnek genişletir. Konut indirim ve iş indirim kuralları basit ilke örneğindeki ek olarak, çeşitli yeni kurallar eklenmiştir.  
+# <a name="advanced-policy"></a>Gelişmiş ilke
+Bu örnek, basit ilke örneği genişletir. Konut indirim ve iş indirim basit ilke örneği kurallarından ek olarak, birçok yeni kuralı eklendi.  
   
- Yüksek değerli siparişleri büyük indirimi sağlayan bir yüksek değerli kuralı eklenir. Bir öncelik değeri verildiğinde'dan önceki iki kuralları indirim alanın üzerine ve hem konut üzerinden öncelik ve iş indirim kuralları.  
+ Yüksek değerli siparişlerini büyük indirimi sağlayan bir yüksek değerli kuralı eklenir. Öncelik değeri verilir değerinden önceki iki kuralları indirim alanın üzerine ve her iki konut üzerinde önceliği ve iş indirim kuralları alır.  
   
- Bir hesapla toplam kuralı Ayrıca, hangi indirim düzeyi temelinde toplam hesaplar eklenir. İş akışı etkinliğini tanımlanmış bir yöntem başvuru nasıl gibi başka eylemler kullanmayı gösterir. Bu kural, ayrıca, olacağından davranışı zincirleme dilediğiniz zaman indirim alan değişiklikleri hesaplanan gösterir. Ayrıca, yöntemi öznitelik atanıyor RuleWriteAttribute CalculateTotal yöntemi gösterilir. Bu, etkilenen kurallar yöntemi yürütülen her yeniden değerlendirilecek (ErrorTotalRule) neden olur.  
+ Calculate toplam kural da eklenir, indirim düzeyine dayalı toplam hesaplar. Bu, iş akışı etkinlikte tanımlanmış bir yöntem yapmayı yanı sıra başka eylemler kullanmayı gösterir. Bu kural, ayrıca olacağından, bu davranışı zincirleme dilediğiniz zaman değerlendirilen indirim alan değişiklikleri gösterir. Ayrıca, yöntemi öznitelik atanıyor RuleWriteAttribute CalculateTotal yöntemi gösterilir. Bu, etkilenen kurallar (yöntemi yürütülen her yeniden değerlendirilecek ErrorTotalRule) neden olur.  
   
- Eklenen son kural hataları (Bu durumda, toplam 0'dan) algılarsa biridir. Bu durumda, ilke yürütme işlemi durduruldu.  
+ Eklenen son kuralı (Bu durumda, toplam 0'dan) hataları tespit biridir. Bu meydana gelirse, ilke yürütme durdurulur.  
   
- Son olarak, `Console.Writeline` çağrıları, kural yürütme daha fazla görünürlük sağlamak için her bir kural eylemleri olarak eklenir, mümkün olmadığını da gösterirken statik yöntemler'na erişmek için türleri başvurulan. İzleme, yürütülen kurallara görünürlük almak için de kullanabilirsiniz.  
+ Son olarak, `Console.Writeline` çağrıları, kural yürütme daha fazla görünürlük sağlamak için her bir kural olarak eklenir, mümkün olduğunu da gösterirken statik yöntemler erişmeye türleri başvurulan. İzleme, yürütülen kurallara görünürlük elde etmek için de kullanabilirsiniz.  
   
  Bu örnekte kullanılan kurallar şunlardır:  
   
@@ -32,7 +32,7 @@ Bu örnekte basit ilke örnek genişletir. Konut indirim ve iş indirim kurallar
   
  Eğer sipariş değeri olarak > 10000 ve CustomerType iş =  
   
- ARDINDAN indirim = % 10  
+ ARDINDAN indirim % 10 =  
   
  **HighValueDiscountRule:**  
   
@@ -46,34 +46,34 @@ Bu örnekte basit ilke örnek genişletir. Konut indirim ve iş indirim kurallar
   
  ARDINDAN CalculateTotal (sipariş değeri olarak, indirim)  
   
- ELSE toplam sipariş değeri olarak =  
+ BAŞKA toplam sipariş değeri olarak =  
   
  **ErrorTotalRule:**  
   
  Eğer toplam \< 0  
   
- ARDINDAN hata = "ErrorTotalRule harekete"; Durdurma  
+ ARDINDAN, hata = "ErrorTotalRule harekete"; Durdurma  
   
  Kural değerlendirmesi ve yürütme, ayrıca izleme ve izleme görülebilir.  
   
 ### <a name="to-build-the-sample"></a>Örneği oluşturmak için  
   
-1.  Çözümde açmak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Bir çözüm açın [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  CTRL + SHIFT + B tuşlarına basarak çözümü oluşturun.  
   
-3.  CTRL + F5'e basarak hata ayıklama olmadan çözümü çalıştırın.  
+3.  CTRL + F5 tuşlarına basarak hata ayıklama olmadan çözümü çalıştırın.  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
--   Örnek için ana klasörü altında bulunan .exe dosyasını AdvancedPolicy\bin\debug klasöründe (veya örnek Visual Basic sürümü AdvancedPolicy \bin klasörünü) SDK komut istemi penceresinde çalıştırın.  
+-   SDK komut istemi penceresinde, örnek için ana klasörü altında bulunan .exe dosyasını AdvancedPolicy\bin\debug klasöre (veya Visual Basic sürümünü AdvancedPolicy \bin klasörünü) çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetle:  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin için denetleyin:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur:  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

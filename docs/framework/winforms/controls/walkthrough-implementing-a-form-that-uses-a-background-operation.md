@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 428dae2d10cd0f49a337c5b0439c5dcc72f83432
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385878"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kullanıcı arabirimi (UI) istemediğiniz veya kullanabileceğiniz "askıda," <xref:System.ComponentModel.BackgroundWorker> başka bir iş parçacığı üzerindeki işlemi yürütmek için sınıf.  
@@ -57,7 +57,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 5.  İlk Yeniden Adlandır <xref:System.Windows.Forms.Button> denetimi `startAsyncButton` ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Start Async`. İkinci <xref:System.Windows.Forms.Button> denetimi `cancelAsyncButton`, ayarlayıp <xref:System.Windows.Forms.Control.Text%2A> özelliğini `Cancel Async`. Ayarlama, <xref:System.Windows.Forms.Control.Enabled%2A> özelliğini `false`.  
   
-6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Her iki için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Button> denetimleri <xref:System.Windows.Forms.Control.Click> olayları. Ayrıntılar için bkz [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 7.  Sürükleme bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** forma ve yeniden adlandırmak `resultLabel`.  
   
@@ -75,7 +75,7 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Zaman uyumsuz olay işleyicileri uygulamak için  
   
-1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  İçinde **özellikleri** penceresinde ile <xref:System.ComponentModel.BackgroundWorker> halen seçiliyken, bileşene tıklayın **olayları** düğmesi. Çift <xref:System.ComponentModel.BackgroundWorker.DoWork> ve <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayları olay işleyicileri oluşturun. Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: olay işleyicileri kullanarak Tasarımcı](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
   
 2.  Adlı yeni bir yöntem oluşturma `ComputeFibonacci`, formunuzda. Bu yöntem asıl işi yapan ve arka planda çalışır. Bu kod, daha büyük sayılar için tamamlamak için katlanarak uzun zaman ayırdığınız özellikle verimsiz Fibonacci algoritma özyinelemeli uygulamasını gösterir. Uygulamanızdaki gecikmelere neden olabilir bir işlem göstermek için yalnızca tanım amaçlıdır için burada kullanılır.  
   
@@ -166,8 +166,8 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ComponentModel.BackgroundWorker>  
  [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [Bileşenlerinde çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [IN derleme değil: Visual Basic'te çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [Bileşenlerinde çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [IN derleme değil: Visual Basic'te çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  [İzlenecek yol: Arka Planda İşlem Çalıştırma](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  [BackgroundWorker Bileşeni](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

@@ -2,27 +2,27 @@
 title: Entity Framework için EntityClient sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: bf3bf6fe0d0013b3e5b05ec697ad4f6a57459a6f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1bafdc250c7edc009352d668e8ee7962a86fe8bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764801"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395097"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient sağlayıcısı
-EntityClient sağlayıcısı, kavramsal modelde tanımlanan verilere erişmek için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modelleri hakkında daha fazla bilgi için bkz: [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient diğer .NET Framework veri sağlayıcıları veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için bir SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcısı uygulanan <xref:System.Data.EntityClient> ad alanı.  
+EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
   
 ## <a name="managing-connections"></a>Bağlantıları yönetme  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Depolama özgü üstünde derlemeler [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayarak veri sağlayıcıları bir <xref:System.Data.EntityClient.EntityConnection> bir temel alınan veri sağlayıcı ve ilişkisel veritabanı. Oluşturmak için bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, gerekli modelleri ve eşleme ve ayrıca depolama özgü veri sağlayıcı adı ve bağlantı dizesi içeren bir meta veri kümesi başvurusu zorunda. Sonra <xref:System.Data.EntityClient.EntityConnection> olduğu yerde varlıkları kavramsal modelinden oluşturulan sınıflar aracılığıyla erişilebilir.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Üzerinde depolama özel yapılar [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayarak veri sağlayıcıları bir <xref:System.Data.EntityClient.EntityConnection> ilişkisel veritabanı ve temel alınan veri sağlayıcısı. Oluşturmak için bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, bir dizi gerekli model ve eşleme ve ayrıca depolama özgü veri sağlayıcı adı ve bağlantı dizesi içeren bir meta veri başvurusu gerekir. Sonra <xref:System.Data.EntityClient.EntityConnection> olduğu yerde varlıkları kavramsal model oluşturulan sınıfların aracılığıyla erişilebilir.  
   
  App.config dosyasında bir bağlantı dizesi belirtebilirsiniz.  
   
- <xref:System.Data.EntityClient> De içeren <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfı. Bu sınıf, program aracılığıyla sözdizimsel olarak doğru bağlantı dizelerini oluşturmak ve ayrıştırma ve özellikleri ve yöntemleri sınıfının kullanarak, varolan bağlantı dizeleri, yeniden oluşturulması geliştiricilerin sağlar. Daha fazla bilgi için bkz: [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ <xref:System.Data.EntityClient> Yöntemlerine <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfı. Bu sınıf, program aracılığıyla sözdizimsel olarak doğru bağlantı dizesi oluşturmak ve ayrıştırmak ve özellikleri ve sınıfının yöntemlerini kullanarak mevcut bağlantı dizelerini yeniden geliştiricilerin sağlar. Daha fazla bilgi için [nasıl yapılır: bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
-## <a name="creating-queries"></a>Sorgular oluşturma  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Depolama bağımsız dialect doğrudan kavramsal varlık şemalarda çalışır ve varlık veri modeli kavramları devralma ve ilişkileri gibi destekleyen SQL bir dildir. <xref:System.Data.EntityClient.EntityCommand> Sınıfı yürütmek için kullanılan bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] bir varlık modeli karşı komutu. Oluşturduğunuzda <xref:System.Data.EntityClient.EntityCommand> nesneleri, bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Çalışır genel çevirmek için depolama özgü veri sağlayıcılarıyla [!INCLUDE[esql](../../../../../includes/esql-md.md)] içine depolama özgü sorgular. Yazma hakkında daha fazla bilgi için [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorguları, bkz: [varlık SQL dil](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
+## <a name="creating-queries"></a>Sorgu oluşturma  
+ [!INCLUDE[esql](../../../../../includes/esql-md.md)] Doğrudan kavramsal varlık şemalarıyla çalışan ve devralma ve ilişkiler gibi varlık veri modeli kavramları destekleyen SQL depolamadan bağımsız SQL diyalektiği dilidir. <xref:System.Data.EntityClient.EntityCommand> Sınıfı yürütmek için kullanılan bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] varlık modeli karşı komutu. Oluşturduğunuzda <xref:System.Data.EntityClient.EntityCommand> nesneleri bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Çalışır genel çevirmek için depolama özgü veri sağlayıcılarıyla [!INCLUDE[esql](../../../../../includes/esql-md.md)] depolama özgü sorgulara. Yazma hakkında daha fazla bilgi için [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgularını görmek [Entity SQL dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
- Aşağıdaki örnekte bir <xref:System.Data.EntityClient.EntityCommand> nesne ve atar bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu metni kendi <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliği. Bu [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu kavramsal modelden fiyat listesi göre sıralanmış ürünleri ister. Aşağıdaki kod depolama modelinin olanağıyla hiç sahiptir.  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.EntityClient.EntityCommand> nesne ve atadıkları kişiler bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu metni için kendi <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> özelliği. Bu [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu kavramsal model liste fiyatından göre sıralanmış ürünleri ister. Aşağıdaki kod, depolama modelinin olanağıyla hiç sahiptir.  
   
  `EntityCommand cmd = conn.CreateCommand();`  
   
@@ -33,14 +33,14 @@ EntityClient sağlayıcısı, kavramsal modelde tanımlanan verilere erişmek i�
  `ORDER BY p.ListPrice ";`  
   
 ## <a name="executing-queries"></a>Sorgular yürütme  
- Bir sorgu çalıştırıldığında, ayrıştırılmış ve kurallı komut ağacına dönüştürülemiyor. Tüm sonraki işleme, komut ağacı üzerinde gerçekleştirilir. Komut ağacı arasındaki iletişimi araçtır <xref:System.Data.EntityClient> ve arka plandaki [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı gibi <xref:System.Data.SqlClient>.  
+ Bir sorgu yürütüldüğünde, ayrıştırılmış ve kurallı komut ağacına dönüştürülür. Tüm sonraki işleme, komut ağacı üzerinde gerçekleştirilir. Komut ağacı olduğu anlamına gelir iletişimin <xref:System.Data.EntityClient> ve arka plandaki [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı gibi <xref:System.Data.SqlClient>.  
   
- <xref:System.Data.EntityClient.EntityDataReader> Yürütme sonuçlarını gösterir bir <xref:System.Data.EntityClient.EntityCommand> kavramsal model karşı. Döndürür komutu çalıştırmak için <xref:System.Data.EntityClient.EntityDataReader>, çağrı <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>. <xref:System.Data.EntityClient.EntityDataReader> Uygulayan <xref:System.Data.IExtendedDataRecord> zengin açıklamak için sonuçları yapılandırılmış.  
+ <xref:System.Data.EntityClient.EntityDataReader> Çalıştırma sonuçlarını gösteren bir <xref:System.Data.EntityClient.EntityCommand> kavramsal modeline karşı. Döndüren komutu yürütmek için <xref:System.Data.EntityClient.EntityDataReader>, çağrı <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>. <xref:System.Data.EntityClient.EntityDataReader> Uygulayan <xref:System.Data.IExtendedDataRecord> sonuçları zengin açıklamak için yapılandırılmış.  
   
 ## <a name="managing-transactions"></a>İşlemleri yönetme  
- Entity Framework hareketleri kullanmak için iki yolu vardır: otomatik ve açık. Otomatik işlemleri kullanmak <xref:System.Transactions> ad alanı ve açık işlemleri kullanmak <xref:System.Data.EntityClient.EntityTransaction> sınıfı.  
+ Varlık Çerçevesi'nde, işlem kullanmanın iki yolu vardır: otomatik ve açık. Otomatik işlemleri kullanma <xref:System.Transactions> ad alanı ve açık işlemleri <xref:System.Data.EntityClient.EntityTransaction> sınıfı.  
   
- Kavramsal modeli aracılığıyla kullanıma sunulan verileri güncelleştirmek için; bkz: [nasıl yapılır: Entity Framework yönetme işlemlerinde](http://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
+ Kavramsal bir modeli aracılığıyla sunulan verileri güncelleştirmek için; bkz: [nasıl yapılır: Entity Framework yönetme işlemlerinde](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ EntityClient sağlayıcısı, kavramsal modelde tanımlanan verilere erişmek i�
  [Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bağlantılarını yönetme ve işlemler](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Bağlantılarını yönetme ve işlemler](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Dil Başvurusu](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

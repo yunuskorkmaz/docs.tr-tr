@@ -2,70 +2,71 @@
 title: Sağlayıcı bildirimi belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387308"
 ---
 # <a name="provider-manifest-specification"></a>Sağlayıcı bildirimi belirtimi
-Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri deposunda destekleyebilir anlatılmaktadır.  
+Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri deposunda destekleyebileceğini açıklanmaktadır.  
   
- Varlık Hizmetleri belirli veri depolama sağlayıcısı bağımsız olarak çalışır henüz hala modelleri, eşlemeleri ve sorguları bir temel alınan veri deposuyla nasıl etkileşim açıkça tanımlamak bir veri sağlayıcı sağlar. Bir Soyutlama Katmanı varlık Hizmetleri yalnızca bir özel veri deposu veya veri sağlayıcısı hedeflenen.  
+ Varlık Hizmetleri belirli veri depolama sağlayıcısının bağımsız olarak çalışır ancak hala modelleri, eşlemeler ve sorguları bir temel alınan veri deposuyla nasıl etkileşim açıkça tanımlamak bir veri sağlayıcı sağlar. Bir Soyutlama Katmanı varlık Hizmetleri yalnızca belirli bir veri deposu ya da veri sağlayıcısı hedeflenecek.  
   
- Sağlayıcının desteklediği türleri, doğrudan veya dolaylı olarak temel alınan veritabanı tarafından desteklenir. Bu tür mutlaka tam deposu türlerini ancak sağlayıcının kullandığı desteklemek için türleri olmayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Sağlayıcı/deposu türlerini varlık veri modeli (EDM) terimler açıklanmıştır.  
+ Sağlayıcının desteklediği türleri, doğrudan veya dolaylı olarak temel alınan veritabanı tarafından desteklenir. Bu tür mutlaka tam deposu türlerini ancak sağlayıcısı kullanan desteklemek için türleri olmayan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Varlık veri modeli (EDM) koşullarını sağlayıcısı depolama türleri açıklanmaktadır.  
   
  Veri deposu tarafından desteklenen işlevler için parametre ve dönüş türleri'EDM koşullarını belirtilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ve veri deposuna veri geri ve İleri içinde bilinen herhangi bir veri kaybı veya kesme olmadan türlerini geçirebilmek için gerekir.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ve bilinen türler kesilmesi veya veri kaybı olmadan sürekli içinde veri geçirebilmek için gereken veri deposu.  
   
- Sağlayıcı bildirimi tasarım zamanında veri deposunda bir bağlantı açmak zorunda kalmadan araçları tarafından yüklenebilir olması gerekir.  
+ Sağlayıcı bildirimi tasarım zamanında veri deposuna bağlantı açmak zorunda kalmadan araçlar tarafından yüklenebilir olması gerekir.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Önemli bir durumdur, ancak temel alınan veri deposu çalışmıyor olabilir. Zaman EDM yapıları (tanımlayıcıları ve örneğin tür adları) tanımlanan ve kullanılan bildiriminde kullandıkları gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] büyük-küçük harf duyarlılığı. Büyük küçük harfe duyarlı veri deposu öğeleri sağlayıcı bildiriminde görünüyorsa, bu büyük/küçük harf sağlayıcı bildiriminde tutulması gerekir.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Çalışması büyük/küçük harfe duyarlıdır, ancak temel alınan veri deposu çalışmıyor olabilir. Zaman EDM yapıtları (tanımlayıcıları ve örneğin tür adları) tanımlandığını ve kullanıldığını bildiriminde kullandıkları gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] büyük küçük harf duyarlılığı. Büyük küçük harfe duyarlı veri deposu öğeleri sağlayıcı bildiriminde görünüyorsa, bu büyük/küçük harf sağlayıcı bildiriminde tutulması gerekir.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Tüm veri sağlayıcıları için bir sağlayıcı bildirimi gerektirir. Bir sağlayıcı sahip olmayan bir sağlayıcı kullanmayı denerseniz ile bildirim [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bir hata iletisi alır.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Tüm veri sağlayıcıları için bir sağlayıcı bildirimi gerektirir. Bir sağlayıcı yok. bir sağlayıcı kullanmayı denerseniz ile bildirim [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bir hata alırsınız.  
   
- Özel durum türleri aşağıdaki tabloda açıklanmaktadır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcı etkileşiminin özel durumları ortaya zaman throw:  
+ Aşağıdaki tabloda tür özel durumlar açıklanmaktadır [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcı etkileşimi özel durumlar ortaya çıktığında throw:  
   
 |Sorun|Özel Durum|  
 |-----------|---------------|  
-|Sağlayıcı GetProviderManifest içinde DbProviderServices desteklemiyor.|ProviderIncompatibleException|  
-|Eksik sağlayıcı bildirimi: sağlayıcının döndürdüğü `null` sağlayıcı bildirimi almaya çalışırken.|ProviderIncompatibleException|  
-|Geçersiz sağlayıcı bildirimi: sağlayıcı bildirimi almaya çalışırken geçersiz XML sağlayıcı döndürür.|ProviderIncompatibleException|  
+|Sağlayıcı GetProviderManifest DbProviderServices içinde desteklemez.|ProviderIncompatibleException|  
+|Sağlayıcı bildirimi eksik: sağlayıcının döndürdüğü `null` sağlayıcı bildirimi alınmaya çalışılırken.|ProviderIncompatibleException|  
+|Geçersiz sağlayıcı bildirimi: sağlayıcı geçersiz XML sağlayıcı bildirimi alınmaya çalışılırken döndürür.|ProviderIncompatibleException|  
   
 ## <a name="scenarios"></a>Senaryolar  
  Bir sağlayıcı, aşağıdaki senaryolarda desteklemesi gerekir:  
   
-### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Simetrik türü eşlemesi sahip bir sağlayıcı yazma  
- İçin bir sağlayıcı yazma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eşleme yönü bakılmaksızın tek bir EDM türü her depo türü burada eşleştirir. Tür sistemi basit olduğundan veya EDM türleri eşleşir, karşılık gelen çok basit bir eşleşme EDM türüne sahip olan bir sağlayıcı türü için simetrik bir çözüm kullanabilirsiniz.  
+### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Simetrik tür eşlemesine sahip bir sağlayıcı yazma  
+ Sağlayıcı için yazabileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eşleme yönü bağımsız olarak tek bir EDM türü her depo türü burada eşleştirir. Karşılık gelen çok basit eşlemesi bir EDM türü için bir sağlayıcı türü, tür sisteminde basit olduğu için veya EDM türleri eşleşen simetrik bir çözüm kullanabilirsiniz.  
   
- Kendi etki alanı basitliği ve statik bildirim temelli sağlayıcı bildirimi üreten kullanabilirsiniz.  
+ Kendi etki alanı basitliği ve bir statik bildirim temelli sağlayıcı bildirimi üreten kullanabilirsiniz.  
   
- İki bölüme sahip bir XML dosyasına yazma:  
+ İki bölüme sahip bir XML dosyası yazma:  
   
--   "EDM karşılık gelen" depo türü veya işlev açısından ifade sağlayıcısı türlerinin listesi. Depolama türleri karşılık gelen EDM türleri sahip. Depo işlevleri karşılık gelen EDM işlevleri vardır. Örneğin, varchar bir SQL Server türüdür ancak karşılık gelen EDM türü dizedir.  
+-   "EDM karşılığı" deposu tür veya işlev açısından ifade sağlayıcısı türlerinin listesi. Store türlerin karşılığı EDM türleri vardır. Store işlevlerin karşılık gelen EDM işlevleri vardır. Örneğin, bir SQL Server türü varchar, ancak karşılık gelen EDM türü dize.  
   
--   Parametre ve dönüş türleri'EDM koşullarını burada belirtilmiştir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
+-   Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
   
-### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Asimetrik türü eşlemesi sahip bir sağlayıcı yazma  
- Ne zaman, bir veri deposu sağlayıcısı için yazma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bazı türleri sağlayıcısı EDM türü eşlemesinden farklı için eşleme EDM sağlayıcısı türü. EDM PrimitiveTypeKind.String(MaxLength=4000) nvarchar(4000) eşlemeleri sırada örneği için sınırsız EDM PrimitiveTypeKind.String nvarchar(4000) sağlayıcısında eşleme.  
+### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Asimetrik tür eşlemesine sahip bir sağlayıcı yazma  
+ Ne zaman, bir veri deposu sağlayıcısı için yazma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bazı türleri sağlayıcısı EDM türü eşlemesinden farklı için eşleme sağlayıcısı için EDM türü. Örneğin, nvarchar(4000) için EDM PrimitiveTypeKind.String(MaxLength=4000) eşleştirir. sırasında nvarchar(4000) sağlayıcısı için sınırsız EDM PrimitiveTypeKind.String eşlenebilir.  
   
- İki bölüme sahip bir XML dosyasına yazma:  
+ İki bölüme sahip bir XML dosyası yazma:  
   
 -   Sağlayıcı türlerinin bir listesini EDM terimleriyle ifade edilen ve her iki yön için eşleme tanımlayın: EDM sağlayıcısı ve sağlayıcı EDM.  
   
--   Parametre ve dönüş türleri'EDM koşullarını burada belirtilmiştir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
+-   Burada parametre ve dönüş türleri'EDM koşullarını ifade edilir sağlayıcısı tarafından desteklenen işlevlerin listesi.  
   
-## <a name="provider-manifest-discoverability"></a>Sağlayıcı bildirimi bulunabilirliği  
- Bildirim varlık Hizmetleri (örneğin araçları veya sorgu) birkaç bileşen türü tarafından dolaylı olarak kullanılır, ancak daha fazla meta veri kullanımı ile tarafından doğrudan işlevden meta verileri yükleyicisi depolayın.  
+## <a name="provider-manifest-discoverability"></a>Sağlayıcı bildirimi bulunabilirlik  
+ Bildirim dolaylı olarak varlık Hizmetleri (örneğin, araçları veya sorgu) birçok bileşen türleri tarafından kullanılır ancak daha fazla veri kullanımı meta verileri tarafından doğrudan kullanılabilir meta veri yükleyici depolayın.  
   
  ![dfb3d02b&#45;7a8c&#45;4d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
- Ancak, belirli bir sağlayıcı mağazaya veya aynı deponun farklı sürümlerini destekleyebilir. Bu nedenle, bir sağlayıcı her desteklenen veri deposu için farklı bir bildirim bildirilmesi gerekir.  
+ Ancak, belirli bir sağlayıcı farklı mağazalarda veya aynı deponun'ün farklı sürümlerini desteklemiyor olabilir. Bu nedenle, bir sağlayıcı her desteklenen veri deposu için farklı bir bildirim bildirilmesi gerekir.  
   
-### <a name="provider-manifest-token"></a>Sağlayıcı bildirim belirteci  
- Bir veri deposu bağlantısı açıldığında, sağlayıcı sağ bildirimi döndürmek bilgi için sorgulayabilirsiniz. Bu bağlantı bilgilerini kullanılabilir olduğu veya ne zaman mağazaya bağlanmanıza mümkün değildir çevrimdışı senaryolarda mümkün olmayabilir. Kullanarak bildirim tanımlamak `ProviderManifestToken` özniteliği `Schema` .ssdl dosyasındaki öğesi. Bu öznitelik için gerekli bir biçim yoktur; Sağlayıcı bağlantı deposuna açmadan bildirim tanımlamak için gereken en düşük bilgileri seçer.  
+### <a name="provider-manifest-token"></a>Sağlayıcı bildirimi belirteci  
+ Bir veri deposu bağlantısı açıldığında, sağlayıcı doğru bildirimi döndürmek bilgi için sorgulayabilirsiniz. Bu bağlantı bilgileri kullanılabildiği değil veya ne zaman mağazaya bağlanmanıza mümkün değildir çevrimdışı senaryolarda mümkün olmayabilir. Bildirim kullanarak tanımlamak `ProviderManifestToken` özniteliği `Schema` .ssdl dosyasındaki öğesi. Bu öznitelik için gerekli bir biçim vardır; Sağlayıcı bir bildirim mağazaya bir bağlantı açmaya gerek kalmadan tanımlamak için gereken en düşük bilgi seçer.  
   
  Örneğin:  
   
@@ -74,30 +75,30 @@ Bu bölümde, nasıl bir veri deposu sağlayıcısı türler ve İşlevler veri 
 ```  
   
 ## <a name="provider-manifest-programming-model"></a>Sağlayıcı bildirimi programlama modeli  
- Sağlayıcıları türetilen <xref:System.Data.Common.DbXmlEnabledProviderManifest>, bunları kendi bildirimleri bildirimli olarak belirtmek veren. Aşağıdaki çizimde bir sağlayıcısının sınıf hiyerarşisi gösterir:  
+ Sağlayıcıları türetilen <xref:System.Data.Common.DbXmlEnabledProviderManifest>, bunları kendi bildirimleri bildirimli olarak belirtmek sağlar. Aşağıdaki çizimde bir sağlayıcı sınıf hiyerarşisini gösterir:  
   
  ![Hiçbiri](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
-### <a name="discoverability-api"></a>Bulunabilirliği API  
- Sağlayıcı bildirimi (Storeıtemcollection) depolamak meta verileri yükleyicisi tarafından yüklenen, veri kullanarak ya da bağlantı veya sağlayıcı bildirim belirteci depolar.  
+### <a name="discoverability-api"></a>API keşfedilebilirliğini  
+ Sağlayıcı bildirimi (storeıtemcollection'ın) meta verileri Store yükleyicisi tarafından yüklenen, veri kullanılarak bağlantı veya sağlayıcı bildirimi belirteci depolama.  
   
-#### <a name="using-a-data-store-connection"></a>Bir veri deposu bağlantısı kullanarak  
- Veri depoladığınızda bağlantının kullanılabilir olması, DbProviderManifest döndüren GetProviderManifest yönteme geçirilen belirteç döndürülecek DbProvderServices.GetProviderManifestToken çağırın. Bu yöntem GetDbProviderManifestToken sağlayıcının uygulaması için atar.  
+#### <a name="using-a-data-store-connection"></a>Data Store bağlantı kullanma  
+ Verileri depolamak bağlantısı kullanılabilir, DbProvderServices.GetProviderManifestToken DbProviderManifest döndüren GetProviderManifest yöntemine geçirilen bir belirteç döndürecek şekilde çağırın. Bu yöntem, sağlayıcının uygulanmasına GetDbProviderManifestToken atar.  
   
 ```  
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
-#### <a name="using-a-provider-manifest-token"></a>Sağlayıcı bildirim belirteci kullanma  
- Çevrimdışı senaryosu için belirteç SSDL gösteriminden çekilir. SSDL bir ProviderManifestToken belirtmenizi sağlar (bkz [şema öğesi (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) daha fazla bilgi için). Örneğin, bir bağlantı açılamadı, SSDL bildirimi hakkında bilgi belirten bir sağlayıcı bildirim belirteci ' var.  
+#### <a name="using-a-provider-manifest-token"></a>Sağlayıcı bildirimi belirteciyle  
+ Çevrimdışı senaryosu, belirteç SSDL temsilinden çekilir. SSDL bir ProviderManifestToken belirtmenizi sağlar (bkz [şema öğesi (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) daha fazla bilgi için). Örneğin, bir bağlantı açılamıyor, SSDL bildirimi hakkında bilgi belirten sağlayıcısı bildirimi belirtece sahip.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
-### <a name="provider-manifest-schema"></a>Sağlayıcı bildirimi şeması  
- Her sağlayıcı için tanımlanan bilgileri şeması meta verileri tarafından kullanılması için statik bilgileri içerir:  
+### <a name="provider-manifest-schema"></a>Sağlayıcı bildirim şeması  
+ Her hizmet sağlayıcısı için tanımlanan bilgileri şemasını meta veriler tarafından tüketilen statik bilgilerini içerir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -239,35 +240,35 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 </xs:schema>  
 ```  
   
-#### <a name="types-node"></a>Türleri düğümü  
- Sağlayıcı bildiriminde türleri düğümünü veri deposu veya sağlayıcısı aracılığıyla yerel olarak desteklenen türleri hakkında bilgi içerir.  
+#### <a name="types-node"></a>Düğüm türleri  
+ Sağlayıcı bildirimi türleri düğümünde veri deposu tarafından veya sağlayıcısı aracılığıyla yerel olarak desteklenen türleri hakkında bilgi içerir.  
   
-##### <a name="type-node"></a>Türü düğümü  
- Her tür düğümünün EDM açısından bir sağlayıcı türü tanımlar. Tür düğüm adı sağlayıcı türü ve bu tür eşlemesi açıklamak için eşlendiği model türünü ve modelleri için ilgili bilgiler açıklanmaktadır.  
+##### <a name="type-node"></a>Düğüm türü  
+ Her tür düğümünün EDM açısından sağlayıcı türünü tanımlar. Türü düğüm adı sağlayıcı türü ve bu tür eşlemesi açıklamak için eşlendiği model türünü ve modelleri için ilgili bilgiler açıklanmaktadır.  
   
- Bu tür bilgiler sağlayıcı bildiriminde express için her TypeInformation bildirim her türü için birden fazla model açıklamaları tanımlamanız gerekir:  
+ Bu tür bilgisi sağlayıcı bildirimi express için her TypeInformation bildirimi her türü için birden fazla model açıklamaları tanımlamanız gerekir:  
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Ad|Dize|Evet|yok|Sağlayıcıya özel veri türü adı|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Evet|yok|EDM türü adı|  
   
-###### <a name="function-node"></a>İşlev düğümü  
- Her işlevi sağlayıcı üzerinden kullanılabilen tek bir işlevi tanımlar.  
+###### <a name="function-node"></a>Düğüm işlevi  
+ Her işlev sağlayıcısı tek bir işlevi tanımlar.  
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Ad|Dize|Evet|yok|İşlevin tanımlayıcı/adı|  
-|ReturnType|Dize|Hayır|Geçersiz kılma|İşlevin EDM dönüş türü|  
-|Toplama|Boole değeri|Hayır|False|İşlevi bir toplama işlevinde ise true|  
-|Yerleşik|Boole değeri|Hayır|Doğru|Veri deposuna işlevi oluşturulursa true|  
-|StoreFunctionName|Dize|Hayır|\<Adı >|Veri deposunda işlev adı.  Bir işlev adlarını yeniden yönlendirilmesini düzeyi için sağlar.|  
+|Ad|Dize|Evet|yok|Tanımlayıcı/işlevin adı|  
+|ReturnType|Dize|Hayır|Geçersiz kılma|EDM işlevin dönüş türü|  
+|Toplama|Boole değeri|Hayır|False|İşlev bir toplama işlevi ise true|  
+|Yerleşik|Boole değeri|Hayır|Doğru|İşlevi veri deposuna oluşturulursa true|  
+|StoreFunctionName|Dize|Hayır|\<Adı >|Veri deposundaki işlev adı.  İşlev adları yeniden yönlendirilmesi için bir düzeyi sağlar.|  
 |NiladicFunction|Boole değeri|Hayır|False|İşlev parametreleri gerektirmez ve hiçbir parametre olmadan çağrılırsa true|  
-|ParameterType<br /><br /> Semantiği|ParameterSemantics|Hayır|AllowImplicit<br /><br /> Dönüştürme|Sorgu ardışık düzen parametre türü değiştirme ile nasıl ele alması gerektiğini seçeneği:<br /><br /> -ExactMatchOnly<br />-Allowımplicitpromotion<br />-Allowımplicitconversion|  
+|ParameterType<br /><br /> Semantiği|ParameterSemantics|Hayır|AllowImplicit<br /><br /> Dönüştürme|Sorgu işlem hattı parametre türü değiştirme ile nasıl ele alması gerektiğini Seçimi:<br /><br /> -ExactMatchOnly<br />-Allowımplicitpromotion<br />-Allowımplicitconversion|  
   
  **Parametreleri düğümü**  
   
- Her işlevi bir veya daha fazla parametre düğümlerinin bir koleksiyonu vardır.  
+ Her işlev bir veya daha fazla parametre düğümleri koleksiyonu vardır.  
   
 |Öznitelik adı|Veri Türü|Gerekli|Varsayılan Değer|Açıklama|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
@@ -276,7 +277,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Mod|Parametre<br /><br /> Yön|Evet|yok|Parametre yönü:<br /><br /> -içinde<br />-out<br />-ınout|  
   
 ##### <a name="namespace-attribute"></a>Namespace özniteliği  
- Her bir veri deposu sağlayıcısı, bir ad alanı veya grup bildiriminde tanımlanan bilgileri için ad alanları tanımlamanız gerekir. Bu ad alanı varlık SQL sorgularında işlevlerini ve türlerini adlarını çözmek için kullanılabilir. Örneğin: SqlServer. Bu ad alanı varlık SQL sorguları tarafından desteklenen standart işlevleri için varlık Hizmetleri tarafından tanımlanan kurallı ad alanı, EDM, farklı olmalıdır.  
+ Her bir veri deposu sağlayıcısı ad alanı veya ad alanı bildiriminde tanımlanan bilgi grubu tanımlamanız gerekir. Bu ad alanı Entity SQL sorguları, işlevi ve türü adlarını çözümlemek için kullanılabilir. Örneğin: SqlServer. Bu ad alanı Entity SQL sorguları tarafından desteklenen standart işlev için varlık Hizmetleri tarafından tanımlanan kurallı ad alanı, EDM, farklı olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244120"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389750"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak için işlevselliği kullanıma sunma nesneyi sağlar. COM nesneleri Windows yıllardır programlama için temel kullanımda olsa, Ortak Dil Çalışma Zamanı Modülü (CLR) tasarlanmış uygulamalar birçok avantaj sunar.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamalar bu COM ile geliştirilen sonunda değiştirir O zamana kadar kullanabilir veya Visual Studio kullanarak COM nesneleri oluşturmak gerekebilir. COM birlikte çalışabilirlik veya *COM birlikte çalışma*, var olan COM nesneleri için geçişi sırasında kullanmanıza olanak tanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kendi hızınızda.  
   
- Kullanarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM bileşenleri oluşturmak için Kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, birden fazla sürümünün bir bilgisayarda yüklü ve son kullanıcılar, XCOPY veya FTP uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için burada çalıştırılabilir kullanma olanak tanır, hangi DLL sürümü etkin denetlemenize olanak tanır. Daha fazla bilgi için [Registration-Free COM birlikte çalışma](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ Kullanarak [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM bileşenleri oluşturmak için Kayıtsız COM birlikte çalışma kullanabilirsiniz. Bu, birden fazla sürümünün bir bilgisayarda yüklü ve son kullanıcılar, XCOPY veya FTP uygulamanızı bilgisayarlarında uygun bir dizine kopyalamak için burada çalıştırılabilir kullanma olanak tanır, hangi DLL sürümü etkin denetlemenize olanak tanır. Daha fazla bilgi için [Registration-Free COM birlikte çalışma](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
  Geliştirilmiş kod için [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] olarak adlandırılır *yönetilen kod*ve CLR tarafından kullanılan meta veriler içerir. Tarafından kullanılan veri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulamaları çağrılır *yönetilen verilerini* ayırma ve belleği geri kazanmak ve tür denetimi gibi verilerle ilgili görevler çalışma zamanı yönettiği için. Varsayılan olarak, Visual Basic .NET yönetilen kod ve veri kullanır ancak yönetilmeyen kod ve COM nesneleri (Bu sayfada daha sonra açıklanmıştır) birlikte çalışma derlemelerini kullanarak verileri erişebilirsiniz.  
@@ -43,7 +43,7 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
 ### <a name="importing-and-exporting-type-libraries"></a>İçeri ve dışarı aktarma tür kitaplıkları  
  Visual Studio bir tür kitaplığından bilgileri içeri aktarmanıza olanak sağlayan, Tlbimp gibi bir yardımcı içeren bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama. Tlbexp yardımcı programını kullanarak derlemelerden tür kitaplıkları oluşturabilirsiniz.  
   
- Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Tlbimp ve Tlbexp hakkında daha fazla bilgi için bkz: [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) ve [Tlbexp.exe (tür kitaplığı dışarı Aktarıcı)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Birlikte çalışma derlemeleri  
  Birlikte çalışma derlemeleri [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yönetilen ve yönetilmeyen arasında köprü derlemeleri kod, eşleme COM Nesne üyeleri eşdeğerine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yönetilen üyeler. Birlikte çalışma derlemelerini Visual Basic .NET tarafından oluşturulan çoğu, birlikte çalışabilirlik hazırlama gibi COM nesneleri ile çalışma ayrıntılarını işler.  
@@ -58,6 +58,6 @@ Bileşen Nesne Modeli (COM) diğer bileşenleri ve uygulamaları barındırmak i
  [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Derlemeler ve Genel Derleme Önbelleği](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Birlikte Çalışma için Hazırlama](../../../framework/interop/interop-marshaling.md)  
- [Kayıtsız COM Birlikte Çalışma](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [Kayıtsız COM Birlikte Çalışma](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

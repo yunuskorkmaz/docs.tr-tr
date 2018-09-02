@@ -1,5 +1,5 @@
 ---
-title: My.Computer.FileSystem Nesnesi
+title: My.Computer.FileSystem nesnesi (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,30 +12,30 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594376"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390934"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem Nesnesi
-Özellikleri ve sürücüleri, dosyaları ve dizinleri ile çalışmak için yöntemler sağlar.  
+Özellikler ve sürücüleri, dosyalar ve dizinler ile çalışmak için yöntemler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.FileSystem` nesne için bkz: <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.FileSystem` nesne, bkz: <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- Daha fazla bilgi için bkz: [Visual Basic ile dosya erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Daha fazla bilgi için [Visual Basic ile dosya erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
->  Sınıflarda de kullanabilirsiniz <xref:System.IO?displayProperty=nameWithType> sürücüsü, dosyalar ve dizinler ile çalışmak için ad alanı.  
+>  Sınıflarda kullanabilirsiniz <xref:System.IO?displayProperty=nameWithType> sürücüsü, dosyalar ve dizinler ile çalışmak için ad alanı.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Sınıfı:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (erişim sağlayan <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Sınıf:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (erişim sağlayan <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Derleme:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [My.Computer.FileSystem.SpecialDirectories Nesnesi](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  

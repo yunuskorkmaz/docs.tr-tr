@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: cf320b61a2ca1c54b22e3c3d31ae51d003366efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602658"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385716"
 ---
 # <a name="ltsummarygt-visual-basic"></a>&lt;Özet&gt; (Visual Basic)
 Üye özetini belirtir.  
@@ -23,14 +23,14 @@ ms.locfileid: "33602658"
   
 #### <a name="parameters"></a>Parametreler  
  `description`  
- Nesne özeti.  
+ Nesne bir özeti.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<summary>` bir tür veya bir tür üyesi açıklamak için etiket. Kullanım [ \<açıklamalar >](../../../visual-basic/language-reference/xmldoc/remarks.md) türü açıklaması için ek bilgiler eklemek için.  
+ Kullanım `<summary>` bir türü veya tür üyesi açıklamak için etiket. Kullanım [ \<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md) ek bilgiler bir tür tanımı eklemek için.  
   
- Metni `<summary>` etiket IntelliSense türüyle ilgili bilgiler yalnızca kaynağı ve ayrıca nesne tarayıcısında görüntülenir. Nesne Tarayıcısı hakkında daha fazla bilgi için bkz: [kodunu yapısı görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
+ Metni `<summary>` etiketi, yalnızca kaynağı olan IntelliSense içinde türü hakkında bilgi ve Nesne Tarayıcısı'nda da görüntülenir. Nesne tarayıcı hakkında daha fazla bilgi için bkz: [Structure of Code görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `<summary>` açıklamak için etiket `ResetCounter` yöntemi ve `Counter` özelliği.  
@@ -38,4 +38,4 @@ ms.locfileid: "33602658"
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

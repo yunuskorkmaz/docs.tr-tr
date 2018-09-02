@@ -12,24 +12,24 @@ ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 99f2f94d387858a657abab9ed9f762d4a7ee8f03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7353ad142bb276cde1c6fb0ff0c6dcf03b699aeb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407653"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388669"
 ---
 # <a name="traverse-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konuda nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tarafından belgenin metinsel içeriği gezinmesine <xref:System.Windows.Automation.Text.TextUnit> artırır.  
+ Bu konu nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] bir belgeyi metinsel içeriği gezeceği <xref:System.Windows.Automation.Text.TextUnit> artırır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde UI Otomasyon metin sağlayıcı içeriğini gezme gösterilmektedir. <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> Yöntemi taşır <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktalarına bir <xref:System.Windows.Automation.Text.TextPatternRange>. Bu metin aralığını genellikle metin ekleme noktasını temsil eden bir bozuk aralıktır.  
+ Aşağıdaki kod örneği UI Otomasyonu metin sağlayıcısı içeriğini gezme gösterir. <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> Yöntemi taşır <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ve <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktaları bir <xref:System.Windows.Automation.Text.TextPatternRange>. Bu metin aralığı genellikle metin ekleme noktasını temsil eden bir bozuk aralığıdır.  
   
 > [!NOTE]
->  Katıştırılmış nesneler metin tabanlı metin akış parçası olarak kabul edilen yalnızca görüntüleri etkilemez gibi beri katıştırılmış nesneler `Move` veya dönüş değeri.  
+>  Katıştırılmış nesneler metin tabanlı metin akışına bir parçası olarak kabul edilen yalnızca görüntüleri etkilemez gibi beri katıştırılmış nesneleri `Move` ya da dönüş değeri.  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -38,7 +38,7 @@ ms.locfileid: "33407653"
 [!code-csharp[FindText#Navigate](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#navigate)]
 [!code-vb[FindText#Navigate](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#navigate)]  
   
- Herhangi bir yöntemini kullanarak <xref:System.Windows.Automation.Text.TextUnit> sonraki erteler en büyük <xref:System.Windows.Automation.Text.TextUnit> desteklenen IF verilen <xref:System.Windows.Automation.Text.TextUnit> denetim tarafından desteklenmiyor.  
+ Herhangi bir yöntemi kullanarak <xref:System.Windows.Automation.Text.TextUnit> sonraki erteler en büyük <xref:System.Windows.Automation.Text.TextUnit> desteklenen if verilen <xref:System.Windows.Automation.Text.TextUnit> denetim tarafından desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  

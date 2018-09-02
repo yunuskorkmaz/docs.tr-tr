@@ -2,34 +2,34 @@
 title: 'Nasıl yapılır: Task.WhenAll (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 12d195caa11cd33b4e450e5a57699da4037ed4a2
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 650b96926cf66810a93b003b1ebc09ca16212b00
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696357"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388075"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Nasıl yapılır: Task.WhenAll (Visual Basic) kullanarak zaman uyumsuz izlenecek yolu genişletme
-Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri koleksiyonu temsil edilir birden çok zaman uyumsuz işlemleri bekler.  
+İçinde zaman uyumsuz çözümün performansını artırabilirsiniz [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) kullanarak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, zaman uyumsuz olarak görevleri topluluğu temsil edilen birden çok zaman uyumsuz işlemler bekler.  
   
- Web siteleri farklı hızlarda karşıdan kılavuzda fark. Bazen, Web siteleri, kalan tüm indirmeleri gecikmeler çok yavaş biridir. Kılavuzda oluşturacağınız zaman uyumsuz çözümleri çalıştırdığınızda, program kolayca beklemek istemiyorsanız, ancak aynı zamanda tüm indirmeleri başlatmak ve biri, beklemeden devam daha hızlı indirmeler izin vermek için daha iyi bir seçenek olacaktır sonlandırabilirsiniz 's  ertelendi.  
+ Web sitelerinin indirme hızlarının farklı izlenecek yolda etmiş olabilirsiniz. Bazen, Web siteleri, kalan tüm indirmeleri geciktirir çok yavaş biridir. Anlatımda oluşturduğunuz zaman uyumsuz çözümleri çalıştırdığınızda, program kolayca beklemek istemiyorsanız, ancak tüm indirmeleri aynı anda başlatmak ve devam etmek için beklemenize gerek kalmadan daha hızlı indirmeler izin vermek için daha iyi bir seçenek olacaktır sona erdirebilirsiniz ait  ertelendi.  
   
- Uyguladığınız `Task.WhenAll` yöntemine görevleri koleksiyonu. Uygulamayı `WhenAll` koleksiyondaki her görev tamamlanana kadar tamamlanmadıysa tek bir görev döndürür. Paralel olarak çalıştırmak için görevler görüntülenir, ancak hiçbir ek iş parçacığı oluşturulur. Herhangi bir sırada görevleri gerçekleştirebilirsiniz.  
+ Uyguladığınız `Task.WhenAll` yöntemi için bir görev koleksiyonu. Uygulamayı `WhenAll` koleksiyondaki her görev tamamlanıncaya kadar tam olmayan tek bir görev döndürür. Görevler paralel olarak çalışır gibigörünür, ancak hiçbir ek iş parçacığı oluşturulmaz. Görevler herhangi bir sırada tamamlayabilir.  
   
 > [!IMPORTANT]
->  Aşağıdaki yordamlar uzantıları da geliştirilmiş zaman uyumsuz uygulamalara açıklar [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Kılavuzu tamamladıktan veya koddan indirme uygulamaları geliştirmek [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+>  Aşağıdaki yordamlar içinde geliştirilen zaman uyumsuz uygulamaların uzantılarını açıklamaktadır [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İzlenecek yolu tamamlayarak veya kodu indiriliyor tarafından uygulamalar geliştirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
 >   
->  Örneği çalıştırmak için Visual Studio 2012 veya daha sonra bilgisayarınıza yüklenmiş olmalıdır.  
+>  Örneği çalıştırmak için Visual Studio 2012 olmalıdır veya üzeri yüklü.  
   
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>Task.WhenAll GetURLContentsAsync çözümünüze eklemek için  
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync çözümünüze Task.WhenAll eklemek için  
   
-1.  Ekleme `ProcessURLAsync` da geliştirilmiş ilk uygulamaya yöntemi [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Ekleme `ProcessURLAsync` yöntemi içinde geliştirilen ilk uygulamaya [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.vb dosyasına kayıt yapar.  
+    -   Koddan indirdiyseniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), AsyncWalkthrough projesini açın ve ardından eklemek `ProcessURLAsync` MainWindow.xaml.vb dosyasına.  
   
-    -   Kod gözden geçirme tamamlayarak geliştirdiyseniz eklemek `ProcessURLAsync` içeren uygulamaya `GetURLContentsAsync` yöntemi. İlk örnek "Tam kod örnekleri gelen izlenecek yolu" bölümünde bu uygulama için MainWindow.xaml.vb dosyasıdır.  
+    -   İzlenecek yolu tamamlayarak kodu geliştirdiyseniz, ekleme `ProcessURLAsync` içeren uygulamaya `GetURLContentsAsync` yöntemi. Bu uygulama için MainWindow.xaml.vb dosyası "Tam kod örnekleri" izlenecek yoldan"bölümündeki ilk örnektir.  
   
-     `ProcessURLAsync` Yöntemi birleştirir gövdesini Eylemler `For Each` içinde döngü `SumPageSizesAsync` özgün izlenecek adımları. Metodu zaman uyumsuz olarak bir bayt dizisi olarak belirtilen bir Web sitesi içeriğini indirir ve ardından görüntüler ve bayt dizisi uzunluğunu döndürür.  
+     `ProcessURLAsync` Yöntem gövdesindeki eylemleri birleştirir `For Each` içinde döngü `SumPageSizesAsync` özgün izlenecek yolda. Yöntemi zaman uyumsuz olarak bir bayt dizisi olarak belirtilen bir Web sitesinin içeriklerini karşıdan yükler ve ardından görüntüler ve bayt dizisinin uzunluğunu döndürür.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String) As Task(Of Integer)  
@@ -40,7 +40,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     End Function  
     ```  
   
-2.  Out yorum yapmak veya silme `For Each` içinde döngü `SumPageSizesAsync`, aşağıdaki kodda gösterildiği gibi.  
+2.  Açıklama satırı yapın veya silin `For Each` içinde döngü `SumPageSizesAsync`aşağıdaki kodda gösterildiği gibi.  
   
     ```vb  
     'Dim total = 0  
@@ -62,9 +62,9 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     'Next  
     ```  
   
-3.  Bir görev koleksiyonunu oluşturun. Aşağıdaki kodu tanımlayan bir [sorgu](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından çalıştırıldığında <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her Web sitesi içeriğini indirme görevleri koleksiyonu oluşturur. Sorgu değerlendirildiğinde görevleri başlatılır.  
+3.  Bir görev koleksiyonu oluşturun. Aşağıdaki kodu tanımlayan bir [sorgu](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
   
-     Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildirimi sonra `urlList`.  
+     Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildiriminin `urlList`.  
   
     ```vb  
     ' Create a query.   
@@ -75,9 +75,9 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  Uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll` görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
+4.  Uygulama `Task.WhenAll` görevler koleksiyonuna `downloadTasks`. `Task.WhenAll` Görevler koleksiyondaki tüm görevler tamamlandığında sona tek bir görev döndürür.  
   
-     Aşağıdaki örnekte, `Await` ifade tek tamamlanmasını bekler, görev `WhenAll` döndürür. Dizisi her tamsayı indirilen bir Web sitesi uzunluğu olduğu, için ifadeyi hesaplar. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
+     Aşağıdaki örnekte, `Await` ifade tek tamalanmasını görevin `WhenAll` döndürür. İfade bir her tamsayının indirilen bir Web sitesinin uzunluğu olduğu bir tamsayılar dizisi olarak değerlendirilir. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -88,23 +88,23 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  Son olarak, <xref:System.Linq.Enumerable.Sum%2A> tüm Web siteleri uzunlukları toplamı hesaplamak için yöntem. Aşağıdaki satırı ekleyin `SumPageSizesAsync`.  
+5.  Son olarak, <xref:System.Linq.Enumerable.Sum%2A> tüm Web sitelerinin uzunluklarının toplamını hesaplamak için yöntemi. Aşağıdaki satırı ekleyin `SumPageSizesAsync`.  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>Task.WhenAll HttpClient.GetByteArrayAsync çözüme eklemek için  
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync çözümüne Task.WhenAll eklemek için  
   
-1.  Aşağıdaki sürümü eklemek `ProcessURLAsync` da geliştirilmiş ikinci uygulamaya [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Aşağıdaki sürümü ekleme `ProcessURLAsync` içinde geliştirilen ikinci uygulamaya [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Koddan yüklediyseniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient projesini açın ve ardından ekleyin `ProcessURLAsync` MainWindow.xaml.vb dosyasına kayıt yapar.  
+    -   Koddan indirdiyseniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), AsyncWalkthrough_HttpClient projesini açın ve ardından eklemek `ProcessURLAsync` MainWindow.xaml.vb dosyasına.  
   
-    -   Kod gözden geçirme tamamlayarak geliştirdiyseniz eklemek `ProcessURLAsync` kullanan uygulama için `HttpClient.GetByteArrayAsync` yöntemi. Bu uygulama için MainWindow.xaml.vb "Tam kod örnekleri gelen izlenecek yolu" bölümündeki ikinci örneğe dosyasıdır.  
+    -   İzlenecek yolu tamamlayarak kodu geliştirdiyseniz, ekleme `ProcessURLAsync` kullanan uygulamaya `HttpClient.GetByteArrayAsync` yöntemi. Bu uygulama için MainWindow.xaml.vb dosyası "Tam kod örnekleri" izlenecek yoldan"bölümündeki ikinci örnektir.  
   
-     `ProcessURLAsync` Yöntemi birleştirir gövdesini Eylemler `For Each` içinde döngü `SumPageSizesAsync` özgün izlenecek adımları. Metodu zaman uyumsuz olarak bir bayt dizisi olarak belirtilen bir Web sitesi içeriğini indirir ve ardından görüntüler ve bayt dizisi uzunluğunu döndürür.  
+     `ProcessURLAsync` Yöntem gövdesindeki eylemleri birleştirir `For Each` içinde döngü `SumPageSizesAsync` özgün izlenecek yolda. Yöntemi zaman uyumsuz olarak bir bayt dizisi olarak belirtilen bir Web sitesinin içeriklerini karşıdan yükler ve ardından görüntüler ve bayt dizisinin uzunluğunu döndürür.  
   
-     Tek farkı `ProcessURLAsync` yöntemidir önceki yordamda kullanımını <xref:System.Net.Http.HttpClient> örneği `client`.  
+     Tek farkı `ProcessURLAsync` yöntemdir önceki yordamda kullanımını <xref:System.Net.Http.HttpClient> örneği `client`.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -115,7 +115,7 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     End Function  
     ```  
   
-2.  Out yorum yapmak veya silme `For Each` içinde döngü `SumPageSizesAsync`, aşağıdaki kodda gösterildiği gibi.  
+2.  Açıklama satırı yapın veya silin `For Each` içinde döngü `SumPageSizesAsync`aşağıdaki kodda gösterildiği gibi.  
   
     ```vb  
     'Dim total = 0   
@@ -135,9 +135,9 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     'Next  
     ```  
   
-3.  Tanımlayan bir [sorgu](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından çalıştırıldığında <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her Web sitesi içeriğini indirme görevleri koleksiyonu oluşturur. Sorgu değerlendirildiğinde görevleri başlatılır.  
+3.  Tanımlayan bir [sorgu](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) , tarafından yürütüldüğünde <xref:System.Linq.Enumerable.ToArray%2A> yöntemi, her bir Web sitesinin içeriklerini indiren bir görev koleksiyonunu oluşturur. Sorgu çalışırken görevler başlatılır.  
   
-     Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildirimi sonra `client` ve `urlList`.  
+     Yöntemine aşağıdaki kodu ekleyin `SumPageSizesAsync` bildiriminin `client` ve `urlList`.  
   
     ```vb  
     ' Create a query.  
@@ -148,9 +148,9 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  Ardından, uygulama `Task.WhenAll` görevleri koleksiyonu için `downloadTasks`. `Task.WhenAll` görevlerin koleksiyonundaki tüm görevler tamamlandığında bittikten tek bir görev döndürür.  
+4.  Ardından, uygulama `Task.WhenAll` görevler koleksiyonuna `downloadTasks`. `Task.WhenAll` Görevler koleksiyondaki tüm görevler tamamlandığında sona tek bir görev döndürür.  
   
-     Aşağıdaki örnekte, `Await` ifade tek tamamlanmasını bekler, görev `WhenAll` döndürür. Tamamlandığında, `Await` dizisi her tamsayı indirilen bir Web sitesi uzunluğu olduğu, için ifadeyi hesaplar. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
+     Aşağıdaki örnekte, `Await` ifade tek tamalanmasını görevin `WhenAll` döndürür. İşlem tamamlandığında `Await` ifade bir her tamsayının indirilen bir Web sitesinin uzunluğu olduğu bir tamsayılar dizisi olarak değerlendirilir. Aşağıdaki kodu ekleyin `SumPageSizesAsync`, yalnızca önceki adımda eklediğiniz koddan sonra.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -161,18 +161,18 @@ Zaman uyumsuz çözümde performansını artırabilir [izlenecek yol: Web kullan
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  Son olarak, <xref:System.Linq.Enumerable.Sum%2A> tüm Web siteleri uzunlukları toplamını almak için yöntemi. Aşağıdaki satırı ekleyin `SumPageSizesAsync`.  
+5.  Son olarak, <xref:System.Linq.Enumerable.Sum%2A> tüm Web sitelerinin uzunluklarının toplamını almak için yöntemi. Aşağıdaki satırı ekleyin `SumPageSizesAsync`.  
   
     ```vb  
     Dim total = lengths.Sum()  
     ```  
   
-### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll çözümleri test etmek için  
+### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll çözümlerini test etmek için  
   
--   Programı çalıştırmak için F5 tuşuna ya da çözüm için seçin ve ardından **Başlat** düğmesi. Çıkış zaman uyumsuz çözümlerinde çıktısını benzemelidir [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme (Visual Basic) tarafından erişme](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Ancak, Web sitelerinin her zaman farklı bir sırada görüntülendiğine dikkat edin.  
+-   Her çözüm için programı çalıştırmak için F5 tuşuna basın ve ardından **Başlat** düğmesi. Zaman uyumsuz çözümleri çıkışı çıktıya benzemelidir [izlenecek yol: Web kullanarak Async ve Await (Visual Basic) tarafından erişim](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Ancak, Web sitelerinin her seferinde farklı bir sırada görüntülendiğine dikkat edin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod kullanan projeye uzantıları gösterir `GetURLContentsAsync` web sunucusundan içerik indirmek için yöntem.  
+ Aşağıdaki kodu kullanan proje uzantılarını göstermektedir `GetURLContentsAsync` içeriği Web'den yüklemek için yöntemi.  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -305,7 +305,7 @@ End Class
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod bir yöntem projesine uzantıları gösterir `HttpClient.GetByteArrayAsync` web sunucusundan içerik indirmek için.  
+ Aşağıdaki kod yöntemini kullanan proje uzantılarını göstermektedir `HttpClient.GetByteArrayAsync` içeriği Web'den yüklemek için.  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -421,4 +421,4 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [İzlenecek yol: Async kullanarak Web'e erişme ve bekleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+ [İzlenecek yol: Async kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

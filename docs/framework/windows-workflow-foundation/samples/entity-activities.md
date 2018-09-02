@@ -2,38 +2,38 @@
 title: Varlık etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519142"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385810"
 ---
 # <a name="entity-activities"></a>Varlık etkinlikleri
-Bu örnek ADO.NET Entity Framework ile Windows Workflow Foundation veri erişimi basitleştirmek için nasıl kullanılacağını gösterir.  
+Bu örnek, ADO.NET Entity Framework ile Windows Workflow Foundation veri erişimini basitleştirmek için nasıl kullanılacağını gösterir.  
   
- ADO.NET Entity Framework, özellikler ve ilişkiler müşteriler, siparişler, sipariş ayrıntılarını ve bu varlıkları arasındaki ilişkileri gibi etki alanına özgü nesneleri biçiminde verilerle çalışmak geliştiricilerin sağlar. ADO.NET Entity Framework bunu doğrudan bir ilişkisel depolama şema karşı programlama yerine kavramsal uygulama modeli karşı programlama etkinleştirir özet düzeyi sağlayarak gerçekleştirir. ADO.NET Entity Framework bakın hakkında daha fazla bilgi için [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET varlık çerçevesi, geliştiricilerin etki alanına özgü nesneler, özellikler ve ilişkiler gibi müşteri, sipariş, sipariş ayrıntılarını ve bu varlıkları arasındaki ilişkileri biçiminde verilerle çalışmanıza olanak tanır. ADO.NET varlık çerçevesi yerine doğrudan bir ilişkisel depolama şemaya karşı programlama bir uygulama kavramsal modeline karşı programlama sağlar soyutlama düzeyini sağlayarak bunu yapar. ADO.NET Entity Framework bakın hakkında daha fazla bilgi için [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Bu örnekte `Northwind` veritabanı ve oluşturma ve kaldırma için komutlar içerir `Northwind` veritabanı (Setup.cmd ve Cleanup.cmd). Bu örnek projelerinde göre bir varlık veri modeli dahil `Northwind` veritabanı. Model açarak bulabileceğiniz `Northwind.edmx` projeye dahil dosyası. ADO.NET Entity Framework kullanılarak erişilebilir nesnelerin şeklini tanımlayan modeli budur.  
+ Bu örnekte `Northwind` oluşturma ve kaldırma betiklerini içerir ve veritabanı `Northwind` veritabanı (Setup.cmd ve Cleanup.cmd). Projeleri bu temel bir varlık veri modeli içeren `Northwind` veritabanı. Model açarak bulabilirsiniz `Northwind.edmx` projeye dahil dosya. Bu, ADO.NET varlık çerçevesi kullanılarak erişilebilir nesneleri şeklini tanımlayan modelidir.  
   
- Bu örnekte aşağıdaki etkinlikleri bulunmaktadır:  
+ Bu örnekte aşağıdaki etkinlikleri dahildir:  
   
--   `EntitySQLQuery``EntitySQLQuery` Etkinliği bir varlık SQL sorgu dizesine dayalı veritabanından nesneleri almanıza olanak sağlar. Varlık SQL, SQL için benzer bir mağaza bağımsız dildir ve kavramsal model ve model veya etki alanının parçası olan varlıkların temel alan sorgular belirtmenize olanak tanır. Varlık SQL dili ile ilgili daha fazla bilgi için bkz: [varlık SQL dil](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery``EntitySQLQuery` Etkinliği veritabanından bir varlık SQL sorgu dizesine göre nesneleri almanızı sağlar. Entity SQL SQL'e benzeyen bir depo bağımsız dilidir ve kavramsal model ve model veya etki alanının parçası olan varlıklar üzerinde temel alan sorguları belirtmenize olanak sağlar. Entity SQL dili hakkında daha fazla bilgi için bkz: [Entity SQL dili](https://go.microsoft.com/fwlink/?LinkId=165646).  
   
--   `EntityLinqQuery`: Bu etkinlik, bir LINQ Sorgu veya koşulu göre veritabanından nesneleri almanıza olanak tanır.  
+-   `EntityLinqQuery`: Bu etkinlik bir LINQ Sorgu veya koşulu temel veritabanından nesneleri almanıza olanak tanır.  
   
--   `EntityAdd``EntityAdd` Etkinlik, bir varlık veya bir varlıklar koleksiyonu veritabanına eklemenize olanak sağlar.  
+-   `EntityAdd``EntityAdd` Etkinlik, bir varlığı veya varlık koleksiyonunu veritabanına eklemenize olanak sağlar.  
   
--   `EntityDelete``EntityDelete` Etkinlik, bir varlık veya bir varlıklar koleksiyonu veritabanından silmek sağlar.  
+-   `EntityDelete``EntityDelete` Etkinlik veritabanından bir varlık veya varlık koleksiyonunu silmek olanak tanır.  
   
--   `ObjectContextScope`: Yukarıda açıklanan etkinlikler içeren bir içinde yalnızca kullanılabilir `ObjectContextScope` etkinliği örneği. `ObjectContextScope` Etkinlik veritabanına bağlantı kurar. (Ya da geçirilen veya bir yapılandırma dosyası ayarı kullanılarak alınıp) bir bağlantı dizesi gerektirir. `ObjectContextScope` Etkinlik grubu varlıkları ilgili işlemlerinin gerçekleştirmek kolaylaştırır. Bu kapsam etkin bir bağlantı korur, Hayır kalıcı bir kapsam demektir. Ayrıca, `ObjectContextScope` etkinlik çıkar, varlık etkinlikleri kullanarak bu kapsamı içinde otomatik olarak alınan nesnelere yapılan değişiklikleri veritabanına kalıcı ve nesneleri geri için hiçbir açık veya sonraki bir eylem gerekli Veritabanı.  
+-   `ObjectContextScope`: Daha önce bahsedilen etkinlikleri içeren içinde yalnızca kullanılabilir `ObjectContextScope` etkinlik örneği. `ObjectContextScope` Etkinlik veritabanına bir bağlantı kurar. (Ya da geçirilen veya bir yapılandırma dosyası ayarı kullanarak) bir bağlantı dizesi gerekir. `ObjectContextScope` Etkinlik bir grup varlıklardaki ilgili işlemler gerçekleştirmesini kolaylaştırır. Bu kapsam etkin bir bağlantı tutar, Hayır kalıcı bir kapsam olmasıdır. Buna ek olarak, `ObjectContextScope` etkinlik çıkar, varlık etkinliklerini kullanarak bu kapsam içinde otomatik olarak alınan nesnelere yapılan değişiklikleri veritabanına geri kalıcı ve hiçbir açık veya sonraki eylem nesnelerini yedeklemek için gereklidir Veritabanı.  
   
 ## <a name="using-the-entity-activities"></a>Varlık etkinlikleri kullanma  
  Aşağıdaki kod parçacıkları, bu örnekte sunulan varlık etkinlikleri kullanımını göstermektedir.  
   
 ### <a name="entitysql"></a>EntitySql  
- Aşağıdaki kod parçacığında adına göre sıralanmış Londra'daki tüm müşteriler sorgulama ve müşterilerin listesini yineleme gösterir.  
+ Aşağıdaki kod parçacığında, Londra'daki adına göre sıralanmış tüm müşterilerin sorgulama ve müşterilerin listesi boyunca yineleme yapmak nasıl gösterir.  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>();  
@@ -80,7 +80,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entitylinqquery"></a>EntityLinqQuery  
- Aşağıdaki kod parçacığında, Londra'daki tüm müşteriler sorgulama ve ortaya çıkan müşteriler listesi yineleme gösterir.  
+ Aşağıdaki kod parçacığında, Londra'daki tüm müşteriler sorgulama ve müşteriler sonuç listesi boyunca yineleme yapmak nasıl gösterir.  
   
 ```  
 Variable<IEnumerable<Customer>> londonCustomers = new Variable<IEnumerable<Customer>>() { Name = "LondonCustomers" };  
@@ -123,7 +123,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entityadd"></a>EntityAdd  
- Aşağıdaki kod parçacığında, bir OrderDetail kaydı için var olan bir siparişi ekleme gösterilmektedir.  
+ Aşağıdaki kod parçacığında, bir OrderDetail kaydı var olan bir siparişi ekleme işlemi gösterilmektedir.  
   
 ```  
 Variable<IEnumerable<Order>> orders = new Variable<IEnumerable<Order>>();  
@@ -172,7 +172,7 @@ return new ObjectContextScope
 ```  
   
 ### <a name="entitydelete"></a>EntityDelete  
- Aşağıdaki kod parçacığında, (varsa) bir sırada varolan OrderDetail kaydını silmek gösterilmiştir.  
+ Aşağıdaki kod parçacığında, (varsa) bir sırada varolan OrderDetail kaydını Sil işlemi gösterilmektedir.  
   
 ```  
 Variable<IEnumerable<OrderDetail>> orderDetails = new Variable<IEnumerable<OrderDetail>>();              
@@ -219,13 +219,13 @@ return new ObjectContextScope
 ```  
   
 ## <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
- Oluşturmanız gerekir `Northwind` Bu örneği çalıştırmadan önce yerel SQL server Express örneği veritabanında.  
+ Oluşturmalısınız `Northwind` veritabanında bu örneği çalıştırmadan önce yerel SQL server Express örneği.  
   
 #### <a name="to-set-up-the-northwind-database"></a>Northwind veritabanı ayarlamak için  
   
 1.  Bir komut istemi açın.  
   
-2.  Yeni bir komut istemi penceresinde EntityActivities\CS klasöre gidin.  
+2.  Yeni komut istemi penceresinde EntityActivities\CS klasöre gidin.  
   
 3.  Tür `setup.cmd` ve ENTER tuşuna basın.  
   
@@ -233,9 +233,9 @@ return new ObjectContextScope
   
 1.  Kullanarak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], EntityActivities.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
  Bu örnek çalıştırdıktan sonra kaldırmak isteyebilirsiniz `Northwind` veritabanı.  
   
@@ -243,15 +243,15 @@ return new ObjectContextScope
   
 1.  Bir komut istemi açın.  
   
-2.  Yeni bir komut istemi penceresinde EntityActivities\CS klasöre gidin.  
+2.  Yeni komut istemi penceresinde EntityActivities\CS klasöre gidin.  
   
 3.  Tür `cleanup.cmd` ve ENTER tuşuna basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

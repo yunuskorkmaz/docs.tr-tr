@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404505"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388634"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Linux veya Windows Nano sunucu konaklarına tek kapsayıcı tabanlı .NET Core Web uygulamaları dağıtma
 
@@ -41,7 +41,7 @@ Son olarak, ASP.NET'in, iş mantığı ve depolama sunucusu arasında bir ayrım
 
 Uygulama Kataloğu depolama alanı için bir SQL Server veritabanını kullanır. Kapsayıcı tabanlı dağıtımlarda, bu tek parça bir uygulamayı mikro hizmet tabanlı uygulama aynı veri deposuna erişebilirsiniz. Uygulama, bir kapsayıcıdaki tek parça bir uygulamayı yanı sıra SQL Server çalıştırmak için yapılandırılmıştır. Bir üretim ortamında, SQL Server, Docker konağının dışında bir yüksek kullanılabilirlik makinede çalıştırılır. Geliştirme veya test ortamında, kolaylık sağlamak için SQL Server kendi kapsayıcısında çalıştırılması önerilir.
 
-Yalnızca ilk özelliği, katalog taramayı etkinleştirir. Güncelleştirmeleri kapsayıcılı uygulama tüm özellik kümesini etkinleştirir. Tek parça bir web uygulaması mimarisi daha gelişmiş bir açıklanan [ASP.NET Web uygulaması mimarisi yöntemler](https://aka.ms/webappebook) e-kitap ve ilgili [eShopOnWeb örnek uygulama](http://aka.ms/WebAppArchitecture).
+Yalnızca ilk özelliği, katalog taramayı etkinleştirir. Güncelleştirmeleri kapsayıcılı uygulama tüm özellik kümesini etkinleştirir. Tek parça bir web uygulaması mimarisi daha gelişmiş bir açıklanan [ASP.NET Web uygulaması mimarisi yöntemler](https://aka.ms/webappebook) e-kitap ve ilgili [eShopOnWeb örnek uygulama](https://aka.ms/WebAppArchitecture).
 
 ## <a name="docker-support"></a>Docker desteği
 

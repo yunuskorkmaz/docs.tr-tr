@@ -9,37 +9,37 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a42fee8ad31dcc02459711fc51e8611e0e8cd012
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 081ce8d350995d5321acbb24d220bed229ff17ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547056"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393204"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Nasıl yapılır: Uygulama Kapsamı Kaynak Sözlüğü Kullanma
-Bu örnek bir uygulama kapsamlı özel kaynak sözlüğü tanımlayın ve nasıl kullanılacağını gösterir.  
+Bu örnekte, tanımlamak ve bir özel uygulama kapsamı kaynak sözlüğü kullanma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Application> Paylaşılan kaynaklar için bir uygulama kapsamı deposu gösterir: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> özelliği olan bir örneğine ilk <xref:System.Windows.ResourceDictionary> türü. Alma ve ayarlama kullanarak uygulama kapsamı özelliklerini olduğunda bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için bkz: [nasıl yapılır: almak ve bir uygulama kapsamı kaynak ayarlamak](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> Paylaşılan kaynaklar için bir uygulama kapsamı store kullanıma sunar: <xref:System.Windows.Application.Resources%2A>. Varsayılan olarak, <xref:System.Windows.Application.Resources%2A> örneği ile özelliğinin başlatıldığı <xref:System.Windows.ResourceDictionary> türü. Almanıza ve ayarlamanıza, uygulama kapsamı özelliklerini kullanarak, bu örneği kullanmak <xref:System.Windows.Application.Resources%2A>. Daha fazla bilgi için [nasıl yapılır: Get ve Set uygulama kapsamı kaynak](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
- Kullanılarak ayarlanan birden çok kaynaklarınız varsa <xref:System.Windows.Application.Resources%2A>, bunun yerine özel bir kaynak sözlüğü bu kaynakları depolamak ve ayarlamak için kullanabileceğiniz <xref:System.Windows.Application.Resources%2A> onunla yerine. XAML kullanarak özel bir kaynak sözlüğü bildirme nasıl gösterir.
+ Kullanılarak ayarlanan birden fazla kaynak varsa <xref:System.Windows.Application.Resources%2A>, bunun yerine özel bir kaynak sözlüğü bu kaynakları saklamak ve ayarlamak için kullanabileceğiniz <xref:System.Windows.Application.Resources%2A> onunla yerine. XAML kullanarak bir özel kaynak sözlüğü bildirdiğiniz nasıl gösterir.
   
  [!code-xaml[HOWTOResourceDictionaries#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MyResourceDictionary.xaml#1)]  
   
- Tüm kaynak sözlüklerindeki kullanarak takas <xref:System.Windows.Application.Resources%2A> uygulama kapsamı temalarını desteklemek, burada her tema kapsüllenmiş tek bir kaynak sözlüğü tarafından sağlar. Aşağıdaki örnekte nasıl ayarlanacağını gösterir <xref:System.Windows.ResourceDictionary>.  
+ Kullanarak tüm kaynak sözlüklerini takas <xref:System.Windows.Application.Resources%2A> uygulama kapsamı Temalar desteklemek, burada her teması saklanmış olduğu tek bir kaynak sözlüğü sağlar. Aşağıdaki örnek nasıl ayarlanacağını gösterir <xref:System.Windows.ResourceDictionary>.  
   
  [!code-xaml[HOWTOResourceDictionaries#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/App.xaml#2)]  
   
- Aşağıdaki tarafından gösterilen kaynak sözlüğünden uygulama kapsamı kaynaklarını nasıl erişebileceğini gösterir <xref:System.Windows.Application.Resources%2A> XAML'de.  
+ Kaynak sözlüğünden tarafından kullanıma sunulan uygulama kapsamı kaynak nasıl alabileceğiniz aşağıdaki gösterilir <xref:System.Windows.Application.Resources%2A> XAML içinde.  
   
  [!code-xaml[HOWTOResourceDictionaries#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml#4)]  
   
- Aşağıdaki nasıl Ayrıca kaynak kodunda alabileceğiniz gösterir.  
+ Aşağıdaki nasıl da kaynak kodu alabilirsiniz gösterir.  
   
  [!code-csharp[HOWTOResourceDictionaries#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MainWindow.xaml.cs#3)]
  [!code-vb[HOWTOResourceDictionaries#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToResourceDictionaries/VB/MainWindow.xaml.vb#3)]  
   
- Kullanırken yapmanız gereken iki noktalar vardır <xref:System.Windows.Application.Resources%2A>. İlk olarak, sözlük *anahtar* bir nesne olduğundan özellik değerini alırken ve tam olarak aynı nesne örneğini kullanmanız gerekir. (Bir dize kullanıldığında anahtarın büyük küçük harfe duyarlı olduğunu unutmayın.) İkincisi, sözlük *değeri* bir özellik değeri alırken değeri istenen türe çevirmeniz gerekir böylece bir nesnesidir.  
+ Kullanırken yapmak için iki nokta vardır <xref:System.Windows.Application.Resources%2A>. İlk olarak, sözlük *anahtar* bir nesne olduğundan, bir özellik değerini alırken ve tam olarak aynı nesne örneğini kullanmanız gerekir. (Anahtar bir dize kullanarak büyük küçük harfe duyarlı olduğunu unutmayın.) İkincisi, sözlük *değer* bir nesne olduğundan, bir özellik değeri alınırken değeri istenen türe dönüştürmek gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.ResourceDictionary>  

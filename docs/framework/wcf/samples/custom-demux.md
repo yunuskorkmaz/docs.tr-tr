@@ -2,19 +2,19 @@
 title: Özel Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395667"
 ---
 # <a name="custom-demux"></a>Özel Demux
-Böylece Windows Communication Foundation (WCF) kullanan hizmetleri nasıl MSMQ ileti üstbilgilerini farklı hizmet işlemleri eşlenebilir. Bu örneği gösterir <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> örnekte gösterildiği gibi bir hizmet işlemi kullanmaya sınırlı değildir [ Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) ve [Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnekleri.  
+Bu örnek, böylece Windows Communication Foundation (WCF) kullanan hizmetleri nasıl MSMQ İleti üstbilgileri için farklı hizmet işlemleri eşlenebilir gösterir <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> gösterildiği şekilde bir hizmet işlemi kullanarak sınırlı [ Message Queuing için Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) ve [Message Queuing Windows Communication Foundation'a](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) örnekleri.  
   
- Bu örnekte, alan hizmetini sıraya alınan iletileri gözlemleyin sağlamak için bir kendi kendini barındıran konsol uygulaması hizmetidir.  
+ Bu örnekte, alan hizmet kuyruğa alınmış iletileri gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir.  
   
- Hizmet sözleşme `IOrderProcessor`ve Kuyruklar ile kullanım için uygun bir tek yönlü hizmet tanımlar.  
+ Hizmet sözleşme `IOrderProcessor`ve Kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti tanımlar.  
 
 ```csharp
 [ServiceContract]  
@@ -30,7 +30,7 @@ public interface IOrderProcessor
 }  
 ```
 
- MSMQ iletisine bir eylem üstbilgisi yok. Farklı MSMQ iletileri işlemi sözleşmeleri için otomatik olarak eşlemeye mümkün değildir. Bu nedenle, yalnızca bir işlem sözleşmesi olabilir. Hizmet Implements bu sınırlamanın üstesinden gelmek için <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> yöntemi <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> Yöntemi, belirli bir hizmet işlemi için belirtilen bir iletinin üstbilgisi eşlemek hizmet sağlar. Bu örnekte, ileti etiketi üstbilgi Hizmet işlemlerini eşlenir. `Name` İşlemi sözleşme parametresinin belirler hangi hizmet işlemi belirli bir ileti etiketi dağıtılması gerekir. Örneğin, "SubmitPurchaseOrder" İleti etiketi üstbilgi içeriyorsa, "SubmitPurchaseOrder" hizmet işlemi çağrılır.  
+ Bir MSMQ iletisinin bir eylem üst bilgisi yok. İşlem sözleşmeleri farklı MSMQ iletileri otomatik olarak eşlemeye mümkün değildir. Bu nedenle, yalnızca bir işlem anlaşması olabilir. Hizmet uygular bu sınırlamanın üstesinden gelmek için <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> yöntemi <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi. <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> Yöntemi bir özel hizmet işlemi için belirtilen bir üst bilgi iletisinin eşlemek bir hizmet sağlar. Bu örnekte, hizmet işlemleri için ileti etiketi üstbilgi eşlenir. `Name` Da işlem anlaşması parametresinin belirler hangi hizmet işlemi için belirli bir ileti etiket dağıtılması gerekir. İleti etiketi başlığı "SubmitPurchaseOrder" içeriyorsa, örneğin, "SubmitPurchaseOrder" hizmet işlemi çağrılır.  
 
 ```csharp
 public class OperationSelector : IDispatchOperationSelector  
@@ -43,7 +43,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```
 
- Hizmet uygulamalıdır <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> yöntemi <xref:System.ServiceModel.Description.IContractBehavior> arabirimi aşağıdaki örnek kodda gösterildiği gibi. Bu özel geçerlidir `OperationSelector` hizmet framework gönderme çalışma zamanının.  
+ Hizmet uygulamalıdır <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> yöntemi <xref:System.ServiceModel.Description.IContractBehavior> arabirimi aşağıdaki örnek kodda gösterildiği gibi. Bu özel geçerlidir `OperationSelector` hizmet framework gönderme çalışma zamanı.  
 
 ```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -52,7 +52,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```
 
- Bir ileti dağıtıcısı kişinin geçmelidir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> ClientRuntime alma önce. Varsayılan olarak bir ileti reddedilir eylemi hizmeti tarafından uygulanan herhangi bir sözleşme bulunamadı. Bu onay önlemek için biz uygulayan bir <xref:System.ServiceModel.Description.IEndpointBehavior> adlı `MatchAllFilterBehavior`, herhangi bir iletisi geçişine izin veren `ContractFilter` uygulayarak <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> gibi.  
+ Bir ileti dağıtıcısı kişinin geçmelidir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> ClientRuntime için alma önce. Varsayılan olarak bir ileti reddedilir eylem hizmeti tarafından uygulanan herhangi bir sözleşme bulunamadı. Bu onay önlemek için biz uygulayan bir <xref:System.ServiceModel.Description.IEndpointBehavior> adlı `MatchAllFilterBehavior`, herhangi bir ileti geçişine izin veren `ContractFilter` uygulayarak <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> gibi.  
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -61,7 +61,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```
   
- Bir ileti hizmeti tarafından alındığında, uygun hizmet işlemi etiket üstbilgisi tarafından sağlanan bilgileri kullanarak gönderilir. İleti gövdesi içine seri durumdan bir `PurchaseOrder` , aşağıdaki örnek kodda gösterildiği gibi nesne.  
+ Hizmet tarafından bir ileti alındığında, uygun bir hizmet işlemi etiket üstbilgisi tarafından sağlanan bilgileri kullanarak gönderilir. İletisinin gövdesi seri durumdan bir `PurchaseOrder` aşağıdaki örnek kodda gösterildiği gibi nesne.  
 
 ```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -74,7 +74,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```
 
- Hizmet kendiliğinden barındırılır. MSMQ kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnek, hizmet sıranın varlığını denetlemek için kod içerir ve sıra yoksa oluşturur. Kuyruk adı yapılandırma dosyasından okunur.  
+ Hizmet kendiliğinden barındırılır. MSMQ kullanırken, kullanılan kuyruk önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmet sırası varlığını denetlemek için kod içeren ve kuyruk yoksa oluşturur. Kuyruk adı yapılandırma dosyasından okunur.  
 
 ```csharp
 public static void Main()  
@@ -106,10 +106,10 @@ public static void Main()
 }  
 ```
 
- MSMQ kuyruk adı bir yapılandırma dosyasının appSettings bölümünde belirtilmiştir.  
+ MSMQ kuyruk adı, bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 > [!NOTE]
->  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için localhost kullanır. Düzeni izleyen bir yönergeleri adresleme MSMQ biçim adı göre düzgün biçimlendirilmiş sıra adresidir.  
+>  Kuyruk adı, eğik çizgi ayırıcılar yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç nokta adresini msmq.formatname düzenini belirtir ve yerel bilgisayar için localhost kullanır. Düzen izleyen bir yönergeleri adresleme MSMQ biçim adına göre düzgün biçimlendirilmiş bir kuyruk adresidir.  
   
 ```xml  
 <appSettings>  
@@ -119,11 +119,11 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Bu örnek yüklenmesini gerektirir [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  Bu örnek yüklenmesini gerektirir [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=95143).  
   
- Hizmeti başlatmak ve istemci çalıştırın.  
+ Hizmeti başlatın ve istemci çalıştırın.  
   
- Aşağıdaki çıkış istemcide görülür.  
+ Aşağıdaki çıktı, istemcide görülür.  
   
 ```  
 Placed the order:Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6  
@@ -137,7 +137,7 @@ Canceled the Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Press <ENTER> to terminate client.  
 ```  
   
- Aşağıdaki çıkış hizmette görülen gerekir.  
+ Aşağıdaki çıktı, hizmette görülen gerekir.  
   
 ```  
 The service is ready.  
@@ -152,47 +152,47 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Hizmetin ilk olarak çalışıyorsa, sıranın var olduğundan emin olmak için kontrol eder. Hizmet sırası mevcut değilse oluşturur. İlk sırayı oluşturmak için hizmet çalıştırabilirsiniz veya bir MSMQ sıra Yöneticisi aracılığıyla oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
+2.  Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
   
     1.  Sunucu Yöneticisi'nde açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Genişletme **özellikleri** sekmesi.  
+    2.  Genişletin **özellikleri** sekmesi.  
   
     3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.  
   
     4.  Denetleme **işlem** kutusu.  
   
-    5.  Girin `ServiceModelSamplesTransacted` yeni kuyruk adından farklı.  
+    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet program dosyalarını dile özgü klasörü altındaki \service\bin\ klasöründen hizmet bilgisayara kopyalayın.  
+1.  Hizmet program dosyaları \service\bin\ klasöründen dile özgü klasörü altında hizmet bilgisayara kopyalayın.  
   
-2.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörü altında istemci bilgisayara kopyalayın.  
+2.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-3.  Hizmet bilgisayar adı yerine belirtmek için orderQueueName Client.exe.config dosyasında değiştirmek ".".  
+3.  Yerine hizmeti bilgisayarın adını belirtmek için orderQueueName Client.exe.config dosyasında değiştirme ".".  
   
-4.  Hizmet bilgisayarda bir komut isteminden Service.exe başlatın.  
+4.  Hizmet bilgisayarda bir komut istemi'nden Service.exe başlatın.  
   
-5.  İstemci bilgisayarda bir komut isteminden Client.exe başlatın.  
+5.  İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143)
+ [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=95143)

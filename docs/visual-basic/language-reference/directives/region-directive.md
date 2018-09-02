@@ -1,5 +1,5 @@
 ---
-title: '#Bölge yönergesi'
+title: '#Bölge yönergesi (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588441"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385378"
 ---
 # <a name="region-directive"></a>#Region Yönergesi
-Daraltır ve Visual Basic dosyaları kodda bölümlerini gizler.  
+Daraltır ve Visual Basic dosyalarında kod bölümlerini gizler.  
   
 ## <a name="syntax"></a>Sözdizimi  
 
@@ -31,11 +31,11 @@ Daraltır ve Visual Basic dosyaları kodda bölümlerini gizler.
   
 |Terim|Tanım|  
 |---|---|  
-|`identifier_string`|Gerekli. Daraltılmış durumda olduğunda, bir bölge başlığı olarak davranan dizesi. Bölgeleri varsayılan olarak daraltılır.|  
-|`#End Region`|Sonlandırır `#Region` bloğu.|  
+|`identifier_string`|Gerekli. Bunu daraltıldığında bir bölge başlığı olarak davranan dize. Bölgeleri varsayılan olarak daraltılır.|  
+|`#End Region`|Sonlandırır `#Region` blok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `#Region` yönergesi genişletmek veya Visual Studio Kod Düzenleyicisi'nin anahat özelliğini kullanırken daraltmak için kod bloğunu belirtin. Koyabilirsiniz, veya *iç içe*, bölge benzer bölgeler gruplamak için diğer bölge içinde.  
+ Kullanım `#Region` genişletmek veya daraltmak için anahat oluşturma özelliği Visual Studio Kod Düzenleyicisi'nin kullanırken kod bloğu belirtmek için. Yerleştirebilirsiniz veya *iç içe*, benzer bölgeleri gruplamak için başka bölgelerde bulunan bölge.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte `#Region` yönergesi.  

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8c09ab934ee7457fdff39a63c58f2546cda4d643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598556"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384237"
 ---
 # <a name="ltexamplegt-visual-basic"></a>&lt;örnek&gt; (Visual Basic)
-Bir örnek için üye belirtir.  
+Bir örnek üyesi için belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,14 +26,14 @@ Bir örnek için üye belirtir.
  Kod örneği açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<example>` Etiketi bir yöntemi veya diğer kitaplık üyesini nasıl kullanılacağını örneği belirtmenize olanak sağlar. Bu genellikle kullanılmasına [ \<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) etiketi.  
+ `<example>` Etiketi bir yöntem veya diğer kitaplık üyesini kullanmaya ilişkin bir örnek belirtmenize olanak sağlar. Bu yaygın olarak kullanılmasına [ \<kod >](../../../visual-basic/language-reference/xmldoc/code.md) etiketi.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `<example>` kullanmak için bir örnek eklemek için etiket `ID` alan.  
+ Bu örnekte `<example>` kullanmaya yönelik bir örnek eklemek için etiketi `ID` alan.  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

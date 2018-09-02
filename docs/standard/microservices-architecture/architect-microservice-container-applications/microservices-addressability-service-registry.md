@@ -1,25 +1,25 @@
 ---
-title: Mikro çözümlenebilme ve hizmet kayıt defteri
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro çözümlenebilme ve hizmet kayıt defteri
+title: Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106677"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388911"
 ---
-# <a name="microservices-addressability-and-the-service-registry"></a>Mikro çözümlenebilme ve hizmet kayıt defteri
+# <a name="microservices-addressability-and-the-service-registry"></a>Mikro hizmet adreslenebilirliği ve hizmet kayıt defteri
 
-Her mikro hizmet konumu çözümlemek için kullanılan benzersiz bir ad (URL) sahiptir. Mikro hizmet çalıştığı her yerde adreslenebilir olması gerekir. Belirli bir mikro hizmet çalıştığı hangi bilgisayar hakkında düşünmek varsa, öğeleri hızlı bir şekilde hatalı gidebilirsiniz. DNS için belirli bir bilgisayardaki bir URL çözümleyen aynı şekilde, mikro hizmet geçerli konumuna bulunabilirlik böylece benzersiz bir ad olmalıdır. Mikro bunlar çalıştıran altyapısından bağımsız duruma adreslenebilir adları olması gerekir. Bu olması gerekir çünkü hizmetinizin nasıl dağıtıldığını ve nasıl bulunduğundan, arasındaki etkileşim olduğunu gösterir bir [hizmet kayıt defteri](https://microservices.io/patterns/service-registry.html). Bir bilgisayar başarısız olduğunda, aynı damarlı içinde kayıt defteri hizmeti hizmeti şimdi çalıştığı belirtmek kurabilmesi gerekir.
+Her mikro hizmet konumu çözümlemek için kullanılan benzersiz bir adı (URL) vardır. Kendi mikro hizmet, çalıştığı her yerde adreslenebilir olması gerekiyor. Belirli bir mikro hizmet çalıştığı hangi bilgisayar hakkında düşünmek varsa, öğeleri hızlı bir şekilde hatalı gidebilirsiniz. DNS, belirli bir bilgisayar için bir URL çözümleyen aynı şekilde, mikro hizmet geçerli konumuna bulunabilir olmasını sağlama benzersiz bir ad olmalıdır. Mikro hizmetler, çalıştırıldıkları altyapının bağımsız hale adreslenebilir adları olması gerekir. Bu olması gerekir çünkü hizmetinizin nasıl dağıtıldığını ve nasıl bulunduğunda, arasında etkileşim olduğunu gelir bir [hizmet kayıt defteri](https://microservices.io/patterns/service-registry.html). Bir bilgisayar başarısız olduğunda, aynı damarlı kayıt defteri hizmeti hizmet artık çalıştığı belirtmek mümkün olması gerekir.
 
-[Hizmet kayıt defteri deseni](https://microservices.io/patterns/service-registry.html) hizmet bulmayı önemli bir parçasıdır. Kayıt defteri hizmeti örnekleri ağ konumlarını içeren bir veritabanıdır. Hizmet kayıt defteri yüksek oranda kullanılabilir ve güncel olması gerekir. İstemciler hizmet kayıt defterinden alınan ağ konumlarını önbelleğe. Ancak, bu bilgileri sonunda güncel gider ve istemciler artık hizmet örnekleri bulabilir. Sonuç olarak, bir hizmet kayıt defteri tutarlılığını korumak için bir çoğaltma protokolü kullanan sunucuları kümesini oluşur.
+[Hizmet kayıt defteri düzeni](https://microservices.io/patterns/service-registry.html) hizmet bulma işleminin önemli bir parçasıdır. Kayıt defteri hizmeti örnekleri ağ konumlarını içeren bir veritabanıdır. Bir hizmet kayıt defteri yüksek oranda kullanılabilir ve güncel olması gerekir. İstemcileri, hizmet kayıt defterinden alınan ağ konumlarını önbelleğe alınamadı. Ancak, bu bilgileri sonunda güncel gider ve istemciler artık hizmet örnekleri bulabilir. Sonuç olarak, bir hizmet kayıt defteri tutarlılık sağlamak için bir çoğaltma protokolünü kullanan sunucularının bir kümesini içerir.
 
-(Bir sonraki bölümde ele alınacak kümeleri olarak adlandırılır) bazı mikro hizmet dağıtım ortamlarda, hizmet bulma yerleşiktir. Örneğin, bir Azure kapsayıcı hizmeti ortamında Kubernetes ve DC/OS Marathon ile hizmeti örneğinin kaydını işlemek ve silinmesi yapılamadı. Bunlar, ayrıca bir proxy sunucu tarafı bulma yönlendirici rol oynar her küme ana bilgisayarda çalıştırın. Hizmet kayıt defteri, Giden kutusu adlandırma hizmeti aracılığıyla da sağlayan Azure Service Fabric başka bir örnektir.
+(Bir sonraki bölümde ele alınacak kümeleri denir) bazı mikro hizmet dağıtım ortamlarında, hizmet bulma yerleşik olarak sunulmaktadır. Örneğin, bir Azure Container Service ortamında, Kubernetes Marathon ile DC/OS hizmeti örneğinin kaydını işlemek ve kayıt kaldırma. Bunlar ayrıca bir proxy sunucu tarafı bulma yönlendirici rol oynar her küme ana bilgisayarda çalıştırın. Ayrıca, kullanıma hazır adlandırma hizmeti aracılığıyla bir hizmet kayıt defteri sağlayan Azure Service Fabric, başka bir örnektir.
 
-Hizmet kayıt defteri ve yardımcı olan de bu sorunu çözmek API ağ geçidi düzeni arasında belirli çakışma olduğuna dikkat edin. Örneğin, [Service Fabric Ters Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) bir API Fabrice adlandırma hizmeti üzerinde bağlı ve yardımcı olan adres çözümlemesi için iç hizmetlerin çözümlenmesi ağ geçidi uygulaması bir türde değil.
+Hizmet kayıt defteri ve yardımcı olan de bu sorunu çözmek API ağ geçidi düzeni arasında belirli çakışma olduğuna dikkat edin. Örneğin, [Service Fabric Reverse Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) API yardımcı olan adres çözümlemesi için dahili Hizmet çözmek ve Service Fabric adlandırma ağ geçidi üzerinde temel ağ geçidi uygulaması türüdür.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
@@ -29,10 +29,10 @@ Hizmet kayıt defteri ve yardımcı olan de bu sorunu çözmek API ağ geçidi d
 -   **Auth0. Hizmet kayıt defteri**
     [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **GABRIEL Schenker. Hizmet bulma**
+-   **Gabriel Schenker. Hizmet bulma**
     [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 
 >[!div class="step-by-step"]
 [Önceki](maintain-microservice-apis.md)
-[sonraki](microservice-based-composite-ui-shape-layout.md)
+[İleri](microservice-based-composite-ui-shape-layout.md)

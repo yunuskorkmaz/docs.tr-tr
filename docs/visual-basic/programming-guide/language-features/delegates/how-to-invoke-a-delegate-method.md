@@ -2,25 +2,25 @@
 title: 'Nasıl yapılır: Temsilci Yöntemi Çağırma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646958"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392444"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Nasıl yapılır: Temsilci Yöntemi Çağırma (Visual Basic)
-Bu örnek, bir yöntem bir temsilci ile ilişkilendirmek ve temsilci aracılığıyla bu yöntem çağırma gösterilmektedir.  
+Bu örnek, bir yöntem bir temsilci ile ilişkilendirin ve ardından o yöntemi temsilci aracılığıyla çağırmak nasıl gösterir.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Temsilci oluşturup eşleşen yordamları  
+### <a name="create-the-delegate-and-matching-procedures"></a>Temsilci ve eşleşen yordamlar oluşturma  
   
-1.  Adlı bir temsilci oluşturma `MySubDelegate`.  
+1.  Adlı bir temsilci oluşturmak `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Temsilci olarak aynı imzaya sahip bir yöntemi içeren bir sınıf bildirme.  
+2.  Temsilci olarak aynı imzaya sahip bir yöntemi içeren bir sınıfı bildirir.  
   
     ```  
     Class class1  
@@ -30,7 +30,7 @@ Bu örnek, bir yöntem bir temsilci ile ilişkilendirmek ve temsilci aracılığ
     End Class  
     ```  
   
-3.  Temsilci örneği oluşturur ve yerleşik çağırarak temsilci ile ilişkili yöntemi çağırır bir yöntemi tanımlamak `Invoke` yöntemi.  
+3.  Temsilci örneği oluşturur ve temsilci ile yerleşik çağırarak ilişkili yöntemi çağırır bir yöntemi tanımlamak `Invoke` yöntemi.  
   
     ```  
     Protected Sub DelegateTest()  
@@ -46,4 +46,4 @@ Bu örnek, bir yöntem bir temsilci ile ilişkilendirmek ve temsilci aracılığ
  [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Çok İş Parçacıklı Uygulamalar](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+ [Çok İş Parçacıklı Uygulamalar](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

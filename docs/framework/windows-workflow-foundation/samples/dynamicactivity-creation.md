@@ -2,21 +2,21 @@
 title: DynamicActivity oluşturma
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518109"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385267"
 ---
 # <a name="dynamicactivity-creation"></a>DynamicActivity oluşturma
-Bu örnek çalışma zamanı kullanarak bir etkinlik oluşturmak için iki farklı yolu gösterilmektedir <xref:System.Activities.DynamicActivity> etkinlik.  
+Bu örnek, çalışma zamanı kullanarak bir etkinlik oluşturmak için iki farklı yol gösterir. <xref:System.Activities.DynamicActivity> etkinlik.  
   
- Bu örnekte, bir etkinlik içeren bir gövde ile çalışma zamanında oluşturulan bir <xref:System.Activities.Statements.Sequence> içeren etkinlik <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.Assign%601> etkinlikler. Bir giriş listesi tamsayıların etkinliğe geçilen ve bir özellik olarak ayarlayın. <xref:System.Activities.Statements.ForEach%601> Etkinliği sonra değerler listesi üzerinde yinelenir ve bu öğelerden. İçinde <xref:System.Activities.Statements.Assign%601> etkinlik, ortalama değer listesindeki öğelerin sayısı tarafından accumulator bölünmesiyle hesaplanır ve ortalama olarak atayın.  
+ Bu örnekte, bir etkinlik içeren bir gövde ile çalışma zamanında oluşturulan bir <xref:System.Activities.Statements.Sequence> içeren etkinlik <xref:System.Activities.Statements.ForEach%601> ve <xref:System.Activities.Statements.Assign%601> etkinlikler. Giriş bir tamsayı listesi etkinliğini geçirilen ve bir özellik olarak ayarlayın. <xref:System.Activities.Statements.ForEach%601> Etkinliği ardından değerleri listesi yinelenir ve onu toplanır. İçinde <xref:System.Activities.Statements.Assign%601> etkinlik, ortalama değer listesindeki öğelerin sayısını accumulator bölünerek hesaplanır ve ortalama olarak atayın.  
   
- Örnek kullanımını gösteren bir <xref:System.Activities.DynamicActivity> giriş bağımsız değişkenleri ve değerler olarak döndüren olarak değişkenleri akar etkinlik çıkışı bağımsız değişkenler. Etkinlik adlı bir giriş bağımsız değişkenine sahip `Numbers` tamsayı olan bir listesi. <xref:System.Activities.Statements.ForEach%601> Etkinlik değerler listesi ilerler ve onu birikir. İçinde <xref:System.Activities.Statements.Assign%601> etkinlik, ortalama değer listesindeki öğelerin sayısı tarafından accumulator bölme ve ortalama olarak atayarak hesaplanır. Ortalama adlı bir çıktı bağımsız değişken olarak döndürülür `Average`.  
+ Örnek, kullanımını gösterir. bir <xref:System.Activities.DynamicActivity> çıktı bağımsız değişkenlerinde giriş bağımsız değişkenleri ve değerler olarak döndüren olarak akış etkinliği. Adlı bir giriş bağımsız değişkeni etkinliğinde `Numbers` tamsayı olan bir listesi. <xref:System.Activities.Statements.ForEach%601> Etkinliği değerleri listesi yinelenir ve onu toplanır. İçinde <xref:System.Activities.Statements.Assign%601> accumulator listedeki öğelerin sayısına göre bölme ve ortalama olarak atayarak etkinlik, ortalama değer hesaplanır. Ortalama adlı çıktı bağımsız değişken olarak döndürülen `Average`.  
   
- Dinamik etkinlik programlı olarak oluşturulduğunda, giriş ve çıkış aşağıdaki kod örneğinde gösterildiği gibi bildirilir.  
+ Zvolit dynamickou programlı bir şekilde oluşturulduğunda, giriş ve çıkış aşağıdaki kod örneğinde gösterildiği gibi bildirilir.  
   
 ```csharp  
 DynamicActivity act = new DynamicActivity()  
@@ -42,7 +42,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- Aşağıdaki kod örneğinde tam tanımını gösterir `DynamicActivity` listesindeki değerlerin ortalamasını hesaplar.  
+ Aşağıdaki kod örneği eksiksiz tanımını gösterir `DynamicActivity` , listedeki değerlerin ortalamasını hesaplar.  
   
 ```  
 DynamicActivity act = new DynamicActivity()  
@@ -96,7 +96,7 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- XAML'de oluşturduğunuzda, giriş ve çıkış aşağıdaki örnekte gösterildiği gibi bildirilir.  
+ XAML içinde oluştururken, giriş ve çıkış aşağıdaki örnekte gösterildiği gibi bildirilir.  
   
 ```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML görsel olarak kullanılarak oluşturulabilir [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Visual Studio projesi içinde yer alıyorsa, "yapı derlenmiş gelen önlemek için Eylem" "None" ayarladığınızdan emin olun. XAML sonra aşağıdaki çağrıyı kullanarak dinamik olarak yüklenebilir.  
+ XAML görsel olarak kullanılarak oluşturulabilir. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Visual Studio projesi içinde yer alıyorsa "Derleme Eylemi'ni önlemek için Eylem" için "None" ayarladığınızdan emin olun. XAML, ardından aşağıdaki çağrı kullanılarak dinamik olarak yüklenebilir.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- <xref:System.Activities.DynamicActivity> Örneği oluşturulan programlı olarak veya bir XAML yükleme aracılığıyla iş akışı aşağıdaki kod örneğinde gösterildiği gibi kullanılabilir. Lütfen "işlem" için unutmayın `WorkflowInvoker.Invoke` "işlemidir" <xref:System.Activities.Activity> ilk kod örneğinde tanımlanan.  
+ <xref:System.Activities.DynamicActivity> Örneği oluşturulan programlı olarak veya bir XAML yüklenirken aracılığıyla iş akışı aşağıdaki kod örneğinde gösterildiği gibi kullanılabilir. "İşlem" geçirilen olduğunu lütfen unutmayın `WorkflowInvoker.Invoke` "işlemidir" <xref:System.Activities.Activity> ilk kod örneğinde tanımlanan.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -130,19 +130,19 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], DynamicActivityCreation.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 ## <a name="command-line-arguments"></a>Komut satırı bağımsız değişkenleri  
- Bu örnek komut satırı bağımsız değişkenlerini kabul eder. Kullanıcılar kendi ortalamayı hesaplamak için etkinliği sayıdan oluşan bir liste sağlar. Kullanılacak sayı listesi boşlukla ayrılmış sayıdan oluşan bir liste olarak geçirilir. Örneğin, hesaplamak için 5, 10 ve 32 ortalaması çağırma aşağıdaki komut satırını kullanarak örneği.  
+ Bu örnek, komut satırı bağımsız değişkenlerini kabul eder. Kullanıcılar kendi ortalamayı hesaplamak için etkinliğin sayıdan oluşan bir liste sağlar. Kullanılacak sayı listesi boşlukla ayırarak sayıdan oluşan bir liste olarak geçirilir. Örneğin, hesaplamak için ortalama 5, 10 ve 32 çağırma şu komut satırını kullanarak örneği.  
   
  **DynamicActivityCreation 5 10 32**  
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

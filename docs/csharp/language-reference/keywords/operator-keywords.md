@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253862"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392704"
 ---
 # <a name="operator-keywords-c-reference"></a>İşleç Anahtar Sözcükleri (C# Başvurusu)
 Bir tür boyutunu alma, bir nesnenin çalışma zamanı tür denetimi nesneleri oluşturma gibi çeşitli eylemler ve diğer işlemleri gerçekleştirmek için kullanılır. Bu bölümde, aşağıdaki anahtar sözcükler sunar:  

@@ -2,21 +2,21 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806597"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389415"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
-Bu örnek, bir Message Queuing (MSMQ) uygulamasını bir Windows Communication Foundation (WCF) hizmetine bir MSMQ iletisi nasıl gönderebilir ve nasıl iletileri bir istek/yanıt senaryosunda göndereni ve alıcısı uygulamalar arasında ilişkili olabilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmetini sıraya alınan iletileri gözlemleyin olanak tanımak için bir kendi kendini barındıran konsol uygulaması hizmetidir. K  
+Bu örnek nasıl bir Message Queuing (MSMQ) uygulaması bir MSMQ iletisinin bir Windows Communication Foundation (WCF) hizmetine gönderebilir ve iletileri bir istek/yanıt senaryosunda gönderen ve alıcı uygulamalar arasında nasıl eşleştirilebilir gösterir. Bu örnek MsmqIntegrationBinding bağlama kullanır. Bu durumda, alan hizmet kuyruğa alınmış iletileri gözlemleyin olanak sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. K  
   
- Hizmet gönderenden alınan ileti işler ve gönderene bir yanıt iletisi gönderir. Gönderenin karşılık gelen yanıtı başlangıçta gönderilen isteği alındı. `MessageID` Ve `CorrelationID` ileti özelliklerini istek ve yanıt iletileri ilişkilendirmek için kullanılır.  
+ Hizmet gönderenden alınan iletiyi işleyen ve gönderene bir yanıt iletisi gönderir. Başlangıçta gönderilen isteği aldığı yanıtı gönderen ilişkilendirir. `MessageID` Ve `CorrelationID` iletinin özellikleri, istek ve yanıt iletilerinin ilişkilendirmek için kullanılır.  
   
- `IOrderProcessor` Hizmet sözleşmesini tanımlayan queuing ile kullanım için uygun bir tek yönlü hizmet işlemi. Farklı MSMQ iletileri işlemi sözleşmeleri için otomatik olarak eşlemeye mümkün değildir bir MSMQ iletisinin bir eylem üstbilgisi yok. Bu nedenle, olabilir yalnızca bir işlem sözleşmesi bu durumda. Tanımlamak istiyorsanız daha fazla işlem hizmetinde sözleşmeler, uygulamanın hangi MSMQ üstbilgisinde (örneğin, etiket veya correlationıd değeri) ileti gönderme işlemi sözleşmeyi karar vermek için kullanılabilir bilgileri sağlamanız gerekir. Bu, gösterilmiştir [özel Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ `IOrderProcessor` Hizmet sözleşmesini tanımlayan queuing ile kullanım için uygun olan bir tek yönlü hizmet işlemi. Bir MSMQ iletisinin bir eylem üst bilgisi olmadığından, işlem sözleşmeleri farklı MSMQ iletileri otomatik olarak eşlemeye mümkün değildir. Bu nedenle, olabilir yalnızca bir işlem anlaşması bu durumda. Tanımlamak istiyorsanız hizmette daha fazla işlem sözleşmeleri, uygulamanın hangi üstbilgisinde MSMQ (örneğin, etiket veya Correlationıd) ileti göndermek için hangi işlem anlaşması karar vermek için kullanılabilir bilgileri sağlamanız gerekir. Bu gösterilmiştir [özel Demux](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
- MSMQ iletisi aldığını üstbilgileri işlemi sözleşme farklı parametreler için eşlenen bilgileri de içermiyor. Bu nedenle, işlem sözleşmede yalnızca bir parametre olabilir. Parametre türünde <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` temel alınan MSMQ iletisi içerir. Türünde "T" `MsmqMessage<T>` sınıf MSMQ İleti gövdesi seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ İleti gövdesi seri.  
+ MSMQ iletisinin, ayrıca hangi üstbilgileri da işlem anlaşması farklı parametrelerle eşlenir bilgi içermiyor. Bu nedenle, işlem anlaşması içinde yalnızca bir parametresi olabilir. Parametre türüdür <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` temel alınan MSMQ iletisi içerir. ' % S'tür "T" içinde `MsmqMessage<T>` sınıf MSMQ ileti gövdesine seri verileri temsil eder. Bu örnekte `PurchaseOrder` türü MSMQ ileti gövdesine seri.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -28,7 +28,7 @@ public interface IOrderProcessor
 }  
 ```
 
- Hizmet işlemini satın alma siparişi işler ve satın alma siparişi ve durumunu içeriğini hizmet konsol penceresinde görüntüler. <xref:System.ServiceModel.OperationBehaviorAttribute> İşlemi sıranın ile bir işlemde listeleme veya işlemi döndürdüğünde işlem tamamlandı olarak işaretlemek için yapılandırır. `PurchaseOrder` Hizmeti tarafından işlenmesi gereken sipariş ayrıntılarını içerir.  
+ Hizmet işlemi, satın alma siparişi işleyen ve satın alma siparişi ve durumunu içeriğini hizmet konsol penceresinde görüntüler. <xref:System.ServiceModel.OperationBehaviorAttribute> İşlemi sıranın ile bir işlem listeleme ve işlem döndürdüğünde işlem tamamlandı olarak işaretlemek için yapılandırır. `PurchaseOrder` Hizmet tarafından işlenmesi gereken sipariş ayrıntılarını içerir.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- Özel bir istemci hizmetin kullandığı `OrderResponseClient` MSMQ ileti kuyruğuna göndermek için. Alan ve iletiyi işleyen uygulama MSMQ uygulama ve WCF uygulaması olduğundan, iki uygulama hiçbir örtük hizmet sözleşmesini yoktur. Bu senaryoda Svcutil.exe aracını kullanarak bir proxy şekilde oluşturamıyoruz.  
+ Özel bir istemci hizmetin kullandığı `OrderResponseClient` MSMQ ileti sırasına göndermek için. Alan ve iletiyi işleyen bir uygulama bir MSMQ uygulama ve WCF uygulaması olduğundan iki uygulama arasında örtük hizmet sözleşme yok. Bu nedenle bu senaryoda Svcutil.exe aracını kullanarak bir proxy oluşturamıyoruz.  
   
- Özel proxy temelde kullanan tüm WCF uygulamaları için aynıdır `msmqIntegrationBinding` iletileri göndermek için bağlama. Diğer proxy'leri, bir dizi hizmet işlemleri içermeyecek. Bir Gönder ileti yalnızca işlemdir.  
+ Özel ara sunucu temel olarak kullanan tüm WCF uygulamaları aynı olduğundan `msmqIntegrationBinding` ileti göndermek için bağlama. Diğer proxy'leri, bir dizi hizmet işlemleri içermez. Bir gönderme iletisi yalnızca işlemdir.  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -99,7 +99,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }  
 ```
 
- Kendi kendini barındırılan hizmetidir. MSMQ tümleştirme taşıma kullanırken, sıranın kullanılan önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmeti içeren <xref:System.Messaging> kod sıranın varlığını denetlemek ve gerekirse oluşturun. Kuyruk adı yapılandırma dosyasından okunur.  
+ Kendi kendine barındırılan bir hizmettir. MSMQ tümleştirme taşıma kullanırken, kullanılan kuyruk önceden oluşturulmuş olması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte, hizmeti içeren <xref:System.Messaging> kod kuyruk varlığını denetleyin ve gerekirse oluşturun. Kuyruk adı yapılandırma dosyasından okunur.  
 
 ```csharp
 public static void Main()  
@@ -125,7 +125,7 @@ public static void Main()
 }  
 ```
   
- Sipariş isteklerinin gönderilme MSMQ sırası yapılandırma dosyasının appSettings bölümünde belirtilir. İstemci ve hizmet uç noktaları yapılandırma dosyası system.serviceModel bölümünde tanımlanır. Her ikisini de belirtin `msmqIntegrationbinding` bağlama.  
+ Sipariş istekleri gönderildiği MSMQ sırası yapılandırma dosyasının appSettings bölümünde belirtilir. İstemci ve hizmet uç noktaları yapılandırma dosyasının system.serviceModel bölümünde tanımlanır. Her ikisini birden belirtin `msmqIntegrationbinding` bağlama.  
   
 ```xml  
 <appSettings>  
@@ -164,7 +164,7 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- İstemci uygulaması kullanan <xref:System.Messaging> dayanıklı ve işlemsel ileti kuyruğuna göndermek için. İleti gövdesi satın alma siparişi içerir.  
+ İstemci uygulaması kullanan <xref:System.Messaging> dayanıklı ve işlem tabanlı ileti kuyruğa göndermek için. İleti gövdesi, satın alma siparişi içerir.  
 
 ```csharp
 static void PlaceOrder()  
@@ -213,7 +213,7 @@ static void PlaceOrder()
  Sırası yanıtlarını alındığı MSMQ sırası, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyasının appSettings bölümünde belirtilir.  
   
 > [!NOTE]
->  Kuyruk adı, ters eğik çizgi ayırıcıları yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç noktası adresi msmq.formatname düzeni belirtir ve yerel bilgisayar için "localhost" kullanır. Doğru oluşturulmamış biçim adı MSMQ yönergelerine göre URI msmq.formatname izler.  
+>  Kuyruk adı, eğik çizgi ayırıcılar yolundaki ve yerel bilgisayar için bir nokta (.) kullanır. WCF uç nokta adresini msmq.formatname düzenini belirtir ve "localhost" yerel bilgisayarı kullanır. MSMQ yönergelerine göre uri'sindeki msmq.formatname düzgün biçimlendirilmiş biçim adı izler.  
   
 ```xml  
 <appSettings>  
@@ -221,7 +221,7 @@ static void PlaceOrder()
 </appSettings>  
 ```  
   
- İstemci uygulama kaydeder `messageID` sipariş istek iletisinin hizmetine gönderir ve hizmetinden bir yanıt bekler. Bir yanıt sırada geldikten sonra istemci, gönderilen kullanarak sipariş iletiyle karşılık gelen `correlationID` içeren iletinin özelliği `messageID` sırasını ileti hizmete ilk olarak gönderilen istemci.  
+ İstemci uygulama kaydeder `messageID` siparişi istek iletisinin hizmetine gönderir ve hizmetten bir yanıt bekler. Bir yanıt kuyrukta geldikten istemci, gönderilen kullanarak ileti ile ilişkilendirir `correlationID` içeren ileti özelliği `messageID` sırasını iletisi başlangıçta gönderilen istemci.  
 
 ```csharp
 static void DisplayOrderStatus()  
@@ -264,54 +264,54 @@ static void DisplayOrderStatus()
 }  
 ```
 
- Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Bir yanıt istemciye geri hizmeti alma iletileri gönderir ve istemci görebilirsiniz. İstemci hizmetinden alınan yanıtta görüntüler. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. Hizmet alma iletileri bir yanıtı istemciye geri gönderir ve istemci görebilirsiniz. Hizmetten alınan yanıtı istemciye görüntüler. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın.  
   
 > [!NOTE]
 >  Bu örnek, Message Queuing (MSMQ), yükleme gerektirir. Ayrıca Bkz bölümündeki MSMQ yükleme yönergelerine bakın.  
   
-### <a name="to-setup-build-and-run-the-sample"></a>Kurulum, yapı ve örneği çalıştırmak için  
+### <a name="to-setup-build-and-run-the-sample"></a>Kurulum, derleme ve örneği çalıştırmak için  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Hizmetin ilk olarak çalışıyorsa, sıranın var olduğundan emin olmak için kontrol eder. Hizmet sırası mevcut değilse oluşturur. İlk sırayı oluşturmak için hizmet çalıştırabilirsiniz veya bir MSMQ sıra Yöneticisi aracılığıyla oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
+2.  Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
   
     1.  Sunucu Yöneticisi'nde açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Genişletme **özellikleri** sekmesi.  
+    2.  Genişletin **özellikleri** sekmesi.  
   
     3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.  
   
     4.  Denetleme **işlem** kutusu.  
   
-    5.  Girin `ServiceModelSamplesTransacted` yeni kuyruk adından farklı.  
+    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek bilgisayarlı yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek bilgisayarlı yapılandırmada örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet program dosyalarını dile özgü klasörü altındaki \service\bin\ klasöründen hizmet bilgisayara kopyalayın.  
+1.  Hizmet program dosyaları \service\bin\ klasöründen dile özgü klasörü altında hizmet bilgisayara kopyalayın.  
   
-2.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörü altında istemci bilgisayara kopyalayın.  
+2.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-3.  Hizmet bilgisayar adı yerine belirtmek için orderQueueName Client.exe.config dosyasında değiştirmek ".".  
+3.  Yerine hizmeti bilgisayarın adını belirtmek için orderQueueName Client.exe.config dosyasında değiştirme ".".  
   
-4.  Service.exe.config dosyasında yerine istemci bilgisayarın adını belirtmek için istemci uç noktası adresi değiştirmek ".".  
+4.  Service.exe.config dosyasında yerine istemci bilgisayarın adını belirtmek için istemci uç nokta adresini Değiştir ".".  
   
-5.  Hizmet bilgisayarda bir komut isteminden Service.exe başlatın.  
+5.  Hizmet bilgisayarda bir komut istemi'nden Service.exe başlatın.  
   
-6.  İstemci bilgisayarda bir komut isteminden Client.exe başlatın.  
+6.  İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)

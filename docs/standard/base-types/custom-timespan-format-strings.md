@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911886"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390669"
 ---
 # <a name="custom-timespan-format-strings"></a>Özel TimeSpan Biçim Dizeleri
 
@@ -67,11 +67,12 @@ Dize temsillerini <xref:System.TimeSpan> değerleri aşırı yüküne yapılan �
 |"FFFFF"|Yüz binde biri ikinci bir zaman aralığı içinde. Kesirli sonundaki sıfırları dahil edilmez.<br /><br /> Daha fazla bilgi: ["FFFFF" özel Biçim belirleyicisi](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Saniyenin milyonda bir zaman aralığı içinde. Kesirli sonundaki sıfırları görüntülenmez.<br /><br /> Daha fazla bilgi: ["FFFFFF" özel Biçim belirleyicisi](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|On milyonlarca ikinci bir zaman aralığı içinde. Kesirli sıfırlar veya yedi sıfır görüntülenmez.<br /><br /> Daha fazla bilgi: ["FFFFFFF" özel Biçim belirleyicisi](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|*' dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*dize*'|Değişmez dize sınırlayıcısı.<br /><br /> Daha fazla bilgi: [diğer karakterler](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\| Kaçış karakteri.<br /><br /> Daha fazla bilgi:[diğer karakterler](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Başka bir karakter|Atlanmayan herhangi bir karakter, bir özel biçim Belirleyicisi olarak yorumlanır.<br /><br /> Daha fazla bilgi: [diğer karakterler](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>"d" Özel Biçim Belirleyicisi
 
 "D" özel Biçim belirleyicisi değerini çıkarır <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> özelliği zaman aralığındaki tam gün sayısını temsil eder. Tam gün sayısını çıkaran bir <xref:System.TimeSpan> değer birden fazla basamak olsa bile, değer. Varsa değerini <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> özelliği sıfır, "0" belirticisi çıkarır.
@@ -89,6 +90,7 @@ Aşağıdaki örnek "d" özel Biçim belirleyicisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" özel biçim belirticileri
 "Dd", "ddd", "dddd", "GGGGG", "GGGGGG", "ddddddd" ve "dddddddd" özel biçim belirticileri değerini çıkış <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> özelliği zaman aralığındaki tam gün sayısını temsil eder.
 
@@ -102,6 +104,7 @@ Aşağıdaki örnek, iki dize gösterimini görüntülemek için bu biçim tanı
 [Tabloya dön](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>"h" Özel Biçim Belirleyicisi
 "H" özel biçim belirticisi değerini çıkarır <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> özelliği, gün bileşenini bir parçası olarak sayılmaz zaman aralığındaki tüm saat sayısını temsil eder. Bir tek basamaklı string değeri döndürür değerini <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> özelliği 0-9 ve iki basamaklı dize değeri varsa döndürür değerini <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> özelliği aralıklarına 10'dan 23.
 
@@ -123,6 +126,7 @@ Aşağıdaki örnek, "h" özel biçim belirticisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>"hh" Özel Biçim Belirleyicisi
 "Hh" özel Biçim belirleyicisi değerini çıkarır <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> özelliği, gün bileşenini bir parçası olarak sayılmaz zaman aralığındaki tüm saat sayısını temsil eder. 0 ile 9 arasında değerleri için önünde sıfır çıkış dizesi içerir.
 
@@ -139,6 +143,7 @@ Aşağıdaki örnek, "hh" özel Biçim belirleyicisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>"m" Özel Biçim Belirleyicisi
 "M" özel Biçim belirleyicisi değerini çıkarır <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> özelliği, gün bileşenini bir parçası olarak sayılmaz zaman aralığındaki tam dakika sayısını temsil eder. Bir tek basamaklı string değeri döndürür değerini <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> özelliği 0-9 ve iki basamaklı dize değeri varsa döndürür değerini <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 10'dan 59 özelliği aralıkları.
 
@@ -160,6 +165,7 @@ Aşağıdaki örnek, "m" özel Biçim belirleyicisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>"mm" Özel Biçim Belirleyicisi
 "Mm" özel Biçim belirleyicisi değerini çıkarır <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> özelliği, saat veya gün bileşeninin bir parçası olarak dahil edilmez zaman aralığındaki tam dakika sayısını temsil eder. 0 ile 9 arasında değerleri için önünde sıfır çıkış dizesi içerir.
 
@@ -176,6 +182,7 @@ Aşağıdaki örnek, "mm" özel Biçim belirleyicisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>"s" Özel Biçim Belirleyicisi
 "S" özel biçim belirticisi değerini çıkarır <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> özelliğini bir parçası olarak, saat, gün veya dakika bileşenini dahil değil zaman aralığındaki tüm saniye sayısını temsil eder. Bir tek basamaklı string değeri döndürür değerini <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> özelliği 0-9 ve iki basamaklı dize değeri varsa döndürür değerini <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 10'dan 59 özelliği aralıkları.
 
@@ -197,6 +204,7 @@ Aşağıdaki örnek, "s" özel biçim belirticisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>"ss" Özel Biçim Belirleyicisi
 "Ss" özel biçim belirticisi değerini çıkarır <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> özelliğini bir parçası olarak, saat, gün veya dakika bileşenini dahil değil zaman aralığındaki tüm saniye sayısını temsil eder. 0 ile 9 arasında değerleri için önünde sıfır çıkış dizesi içerir.
 
@@ -213,6 +221,7 @@ Aşağıdaki örnek, "ss" özel biçim belirticisi kullanımını gösterir.
 [Tabloya dön](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>"F" özel biçim Belirleyicisi
 "F" özel Biçim belirleyicisi saniyenin onda biri bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak bir kesirli rakam içermelidir.
 
@@ -226,6 +235,7 @@ Aşağıdaki örnek, onda biri cinsinden görüntülemek için "f" özel Biçim 
 [Tabloya dön](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"ff" Özel Biçim Belirleyicisi
 "Ff" özel Biçim belirleyicisi saniyenin yüzde biri bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak iki kesirli bir basamak içermelidir.
 
@@ -237,6 +247,7 @@ Aşağıdaki örnek, saniyenin yüzde biri cinsinden görüntülemek için "ff" 
 [Tabloya dön](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"fff" Özel Biçim Belirleyicisi
 "Fff" özel biçim belirticisi (karakterlerle üç "f"), bir zaman aralığını milisaniye çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak üç kesirli rakam içermelidir.
 
@@ -248,6 +259,7 @@ Aşağıdaki örnek, milisaniye cinsinden görüntülemek için "fff" özel Biç
 [Tabloya dön](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"ffff" Özel Biçim Belirleyicisi
 "Ffff" özel biçim belirticisi (karakterlerle dört "f"), on binde biri ikinci bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak dört kesirli rakam içermelidir.
 
@@ -259,6 +271,7 @@ Aşağıdaki örnek, on binde biri cinsinden görüntülemek için "ffff" özel 
 [Tabloya dön](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"fffff" Özel Biçim Belirleyicisi
 Yüz binde biri ikinci bir zaman aralığında "fffff" özel biçim belirticisi (karakterlerle beş "f") çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak beş kesirli rakam içermelidir.
 
@@ -270,6 +283,7 @@ Aşağıdaki örnek, yüz binde biri cinsinden görüntülemek için "fffff" öz
 [Tabloya dön](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"ffffff" Özel Biçim Belirleyicisi
 (Karakterlerle altı "f") "ffffff" özel biçim tanımlayıcısı bir saniyenin milyonda bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak altı kesirli rakam içermelidir.
 
@@ -281,6 +295,7 @@ Aşağıdaki örnek, milyonda biri cinsinden görüntülemek için "ffffff" öze
 [Tabloya dön](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"fffffff" Özel Biçim Belirleyicisi
 "Fffffff" özel biçim belirticisi (karakterlerle yedi "f"), ikinci (veya kesir tıklarının sayısını) on milyonda bir zaman aralığında çıkarır. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, Giriş dizesinin tam olarak yedi kesirli rakam içermelidir.
 
@@ -292,6 +307,7 @@ Aşağıdaki örnek, kesirli dalgalanmasındaki sayısını görüntülemek içi
 [Tabloya dön](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>"F" Özel Biçim Belirleyicisi
 "F" özel Biçim belirleyicisi saniyenin onda biri bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Zaman aralığı onda biri bir değeri sıfır ise, sonuç dizesinde bulunmaz. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, ikinci bir basamak onda varlığını, isteğe bağlıdır.
 
@@ -305,6 +321,7 @@ Aşağıdaki örnek, onda biri cinsinden görüntülemek için "F" özel Biçim 
 [Tabloya dön](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>"FF" Özel Biçim Belirleyicisi
 "FF" özel Biçim belirleyicisi saniyenin yüzde biri bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> onda varlığını ve ikinci bir basamak yüzdesine yöntemidir isteğe bağlı.
 
@@ -316,6 +333,7 @@ Aşağıdaki örnek, saniyenin yüzde biri cinsinden görüntülemek için "FF" 
 [Tabloya dön](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>"FFF" Özel Biçim Belirleyicisi
 "FFF" özel biçim belirticisi (karakterlerle üç "F"), bir zaman aralığını milisaniye çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi onda, saniyenin yüzde ve ikinci bir basamak binde varlığı, isteğe bağlıdır.
 
@@ -327,6 +345,7 @@ Aşağıdaki örnek, binde biri cinsinden görüntülemek için "FFF" özel Biç
 [Tabloya dön](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>"FFFF" Özel Biçim Belirleyicisi
 "FFFF" özel biçim belirticisi (karakterlerle dört "F"), on binde biri ikinci bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi onda, saniyenin yüzde, binde ve ikinci bir basamak on binde varlığını, isteğe bağlıdır.
 
@@ -338,6 +357,7 @@ Aşağıdaki örnek, on binde biri cinsinden görüntülemek için "FFFF" özel 
 [Tabloya dön](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" Özel Biçim Belirleyicisi
 Yüz binde biri ikinci bir zaman aralığında "FFFFF" özel biçim belirticisi (karakterlerle beş "F") çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi onda, saniyenin yüzde, binde, on binde ve yüz binde biri ikinci basamağını varlığı, isteğe bağlıdır.
 
@@ -349,6 +369,7 @@ Aşağıdaki örnek, yüz binde biri cinsinden görüntülemek için "FFFFF" öz
 [Tabloya dön](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" Özel Biçim Belirleyicisi
 (Karakterlerle altı "F") "FFFFFF" özel biçim tanımlayıcısı bir saniyenin milyonda bir zaman aralığındaki çıkarır. Bir biçimlendirme işleminde, kalan tüm kesirli basamaklar kesilir. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi onda, saniyenin yüzde, binde, on binde, yüz binde ve ikinci bir basamak milyonda varlığını, isteğe bağlıdır.
 
@@ -360,6 +381,7 @@ Aşağıdaki örnek, milyonda biri cinsinden görüntülemek için "FFFFFF" öze
 [Tabloya dön](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" Özel Biçim Belirleyicisi
 "FFFFFFF" özel biçim belirticisi (karakterlerle yedi "F"), ikinci (veya kesir tıklarının sayısını) on milyonda bir zaman aralığında çıkarır. Kesirli sonundaki sıfırları varsa, bunlar sonuç dizesine dahil edilmez. Çağıran bir ayrıştırma işleminde <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> veya <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> yöntemi, yedi kesirli basamaklar giriş dizesinde bulunması, isteğe bağlıdır.
 
@@ -370,7 +392,8 @@ Aşağıdaki örnek, bir saniye içinde kesirli bölümleri görüntülemek içi
 
 [Tabloya dön](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>Diğer karakterler
 
 Biçim dizesindeki bir boşluk karakteri dahil olmak üzere, başka bir atlanmayan karakter, bir özel biçim Belirleyicisi olarak yorumlanır. Çoğu durumda, diğer varlığını atlanmayan karakter sonuçları bir <xref:System.FormatException>.

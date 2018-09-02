@@ -4,18 +4,18 @@ description: .NET Core nasıl bulur ve programınızın çalışma zamanı sür�
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874476"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395123"
 ---
 # <a name="net-core-version-selection"></a>.NET core sürüm seçimi
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-Bu makalede, .NET Core araçları, SDK ve çalışma zamanı sürümleri seçmek için kullanılan ilkeleri açıklanır. Bu ilkeler çalışan uygulamalar belirtilen sürümlerini kullanan ve etkinleştirme kolaylaştırır arasında bir denge sağlayan Geliştirici hem son kullanıcı makineleri yükseltme. Bu ilkeler aşağıdakileri gerçekleştirin:
+Bu makalede, .NET Core araçları, SDK ve çalışma zamanı sürümleri seçmek için kullanılan ilkeleri açıklanır. Bu ilkeler çalışan uygulamalar belirtilen sürümlerini kullanan ve etkinleştirme kolaylaştırır hem geliştirme hem de son kullanıcı makineleri yükseltme arasında bir denge sağlar. Bu ilkeler, aşağıdaki eylemleri gerçekleştirin:
 
 - .NET Core, güvenlik ve güvenilirlik güncelleştirmeleri dahil olmak üzere kolay ve verimli dağıtımı.
 - En son araçları ve hedef çalışma zamanı bağımsız komutları kullanın.
@@ -31,11 +31,11 @@ Bu belgenin geri kalan bu dört senaryo inceler.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK'sı en son yüklenen sürüm kullanır.
 
-SDK'sı seçeneğindeki `dotnet new`, `dotnet build` veya `dotnet run`. `dotnet` CLI gereken herhangi bir komutun bir SDK sürümü seçin. .NET Core CLI makinede varsayılan olarak yüklü en son SDK'sını kullanır. Yüklendiğinde, .NET Core çalışma zamanı 2.0 hedefleriyle çalıştığınız proje olsa bile, .NET Core SDK'sı v2.1.301 kullanırsınız. Bu sürümlerini yanı sıra Önizleme sürümleri için doğru olduğunu unutmayın. Önceki .NET Core çalışma zamanı sürümleri hedefleyen sırasında en son SDK'sı özellikleri ve geliştirmeleri avantajlarından alabilir. Tüm projelerde aynı SDK araçları kullanarak .NET Core farklı projelerde birden fazla çalışma zamanı sürümünü hedefleyebilirsiniz.
+SDK'sı seçeneğindeki `dotnet new`,, veya `dotnet run`. `dotnet` CLI gereken herhangi bir komutun bir SDK sürümü seçin. .NET Core CLI makinede varsayılan olarak yüklü en son SDK'sını kullanır. Yüklendiğinde, .NET Core çalışma zamanı 2.0 hedefleriyle çalıştığınız proje olsa bile, .NET Core SDK'sı v2.1.301 kullanırsınız. En son Önizleme sürümlerini kullanacaktır yanı sıra yayımlanan sürümleri. Önceki .NET Core çalışma zamanı sürümleri hedefleyen sırasında en son SDK'sı özellikleri ve geliştirmeleri avantajlarından alabilir. Tüm projelerde aynı SDK araçları kullanarak .NET Core farklı projelerde birden fazla çalışma zamanı sürümünü hedefleyebilirsiniz.
 
 Nadir durumlarda, SDK'ın önceki bir sürümünü kullanmanız gerekebilir. Bu sürümde, belirttiğiniz bir [ *global.json* dosya](../tools/global-json.md). "En günceli kullan" ilke yalnızca kullanmak anlamına gelir *global.json* en son yüklenen sürüm'den önceki bir .NET Core SDK sürümünü belirtmek için.
 
-*Global.JSON* dosya hiyerarşideki herhangi bir yerde yerleştirilebilir. CLI'yı arar yukarı ilk proje dizininden *global.json* bulduğu. Hangi projelerini denetleyecek bir verilen *global.json* tarafından onun yerine dosya sistemindeki uygulanır. .NET CLI arar bir *global.json* çalıştırmalarınızı geçerli çalışma dizini yolundan yukarı gezinme dosya. İlk *global.json* dosya bulundu kullanılan sürümünü belirtir. Bu sürüm yüklü değilse, bu sürümü kullanılır. SDK'sı belirtilmişse *global.json* bulunamadı, .NET CLI yüklü en son SDK İleri yapar. Hayır, varsayılan davranışı ile aynıdır *global.json* dosya bulundu.
+*Global.JSON* dosya hiyerarşideki herhangi bir yerde yerleştirilebilir. CLI'yı arar yukarı ilk proje dizininden *global.json* bulduğu. Hangi projelerini denetleyecek bir verilen *global.json* tarafından onun yerine dosya sistemindeki uygulanır. .NET CLI arar bir *global.json* çalıştırmalarınızı geçerli çalışma dizini yolundan yukarı gezinme dosya. İlk *global.json* dosya bulundu kullanılan sürümünü belirtir. Bu sürüm yüklü değilse, bu sürümü kullanılır. SDK'sı belirtilmişse *global.json* bulunamadı, .NET CLI yüklü en son SDK İleri yapar. Varsayılan davranış, hiçbir aynı sarma *global.json* dosya bulundu.
 
 Aşağıdaki örnekte gösterildiği *global.json* söz dizimi:
 
@@ -53,7 +53,7 @@ SDK sürümü seçmek için işlemdir:
 1. `dotnet` ilk belirtilen SDK'sı kullanır *global.json* bulunamadı.
 1. `dotnet` kullanan en son yüklü SDK yoksa *global.json* bulunur.
 
-Bir SDK sürümünde seçme hakkında daha fazla bilgi [kurallarına](../tools/global-json.md) konusu bölümünü *global.json*.
+Bir SDK sürümünde seçme hakkında daha fazla bilgi [kurallarına](../tools/global-json.md#matching-rules) makale bölümünde *global.json*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Hedef Çerçeve bilinen adlar derleme zamanı API'leri tanımlama
 

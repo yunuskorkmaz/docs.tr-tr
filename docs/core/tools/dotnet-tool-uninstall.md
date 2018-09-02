@@ -1,15 +1,15 @@
 ---
 title: DotNet Aracı kaldırma komutu - .NET Core CLI
-description: Dotnet Aracı kaldırma komutu belirtilen .NET Core genel aracı makinenizden kaldırır.
+description: Dotnet araç kaldırma komutu makinenizden belirtilen .NET Core genel aracı kaldırır.
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5cf80d1756dbf4e88bb52a8028d186d44978f440
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389844"
 ---
 # <a name="dotnet-tool-uninstall"></a>DotNet Aracı kaldırma
 
@@ -17,11 +17,11 @@ ms.locfileid: "34696948"
 
 ## <a name="name"></a>Ad
 
-`dotnet tool uninstall` -Kaldırır belirtilen [.NET Core genel aracı](global-tools.md) makinenizden.
+`dotnet tool uninstall` -Belirtilen kaldırır [.NET Core genel aracı](global-tools.md) makinenizden.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
-```
+```console
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
@@ -29,27 +29,27 @@ dotnet tool uninstall <-h|--help>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet tool uninstall` Komutu, .NET Core genel araçları, makineden kaldırmak bir yol sağlar. Komutunu kullanmak için ya da kullanıcı genelinde aracını kullanarak kaldırmak istediğinizi belirtmeniz gerekir `--global` seçeneği veya bir yol yeri belirtin aracı kullanılarak yüklenen `--tool-path` seçeneği.
+`dotnet tool uninstall` Komutu, .NET Core Araçları Genel makinenizden kaldırmak bir yol sağlar. Komutunu kullanmak için aşağıdakilerden birini kullanarak bir kullanıcı genelinde aracı kaldırmak istediğiniz belirtmeniz gerekir `--global` nerede yolunu belirtin veya seçeneği kullanılarak yüklenen aracı `--tool-path` seçeneği.
 
 ## <a name="arguments"></a>Arguments
 
 `PACKAGE_NAME`
 
-.NET Core genel kaldırmak için Aracı'nı içeren NuGet paketi adı/kimliği. Paket adı kullanarak bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.
+.NET Core genel kaldırmak için Aracı'nı içeren NuGet paket adı/kimliği. Paket adını kullanarak bulabilirsiniz [dotnet araç listesi](dotnet-tool-list.md) komutu.
 
 ## <a name="options"></a>Seçenekler
 
 `-g|--global`
 
-Kaldırılacak Aracı kullanıcı genelinde yüklemesinden olduğunu belirtir. Birleştirilemez `--tool-path` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--tool-path` seçeneği.
+Aracının kaldırılması için kullanıcı genelinde yüklemesinden olduğunu belirtir. İle birleştirilemez `--tool-path` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--tool-path` seçeneği.
 
 `-h|--help`
 
-Komutu için kısa bir Yardım yazdırır.
+Komut için kısa bir Yardım yazdırır.
 
 `--tool-path <PATH>`
 
-Konumun genel Aracı'nı kaldırmak konumu belirtir. YOL, mutlak veya göreli olabilir. Birleştirilemez `--global` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--global` seçeneği.
+Konum, genel Aracı'nı kaldırmak konumu belirtir. YOL mutlak veya göreli olabilir. İle birleştirilemez `--global` seçeneği. Bu seçeneği belirtmezseniz, belirtmeniz gerekir `--global` seçeneği.
 
 ## <a name="examples"></a>Örnekler
 
@@ -57,14 +57,14 @@ Kaldırır [dotnetsay](https://www.nuget.org/packages/dotnetsay/) genel aracı:
 
 `dotnet tool uninstall -g dotnetsay`
 
-Kaldırır [dotnetsay](https://www.nuget.org/packages/dotnetsay/) belirli bir Windows klasörü genel aracından:
+Kaldırır [dotnetsay](https://www.nuget.org/packages/dotnetsay/) belirli bir Windows klasörden genel aracı:
 
 `dotnet tool uninstall dotnetsay --tool-path c:\global-tools`
 
-Kaldırır [dotnetsay](https://www.nuget.org/packages/dotnetsay/) belirli bir Linux/macOS klasörden genel aracı:
+Kaldırır [dotnetsay](https://www.nuget.org/packages/dotnetsay/) belirli Linux/macOS klasöründe bulunan genel aracı:
 
 `dotnet tool uninstall dotnetsay --tool-path ~/bin`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[.NET core genel araçları](global-tools.md)
+* [.NET core Araçları Genel](global-tools.md)

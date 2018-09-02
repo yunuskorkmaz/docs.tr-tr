@@ -1,18 +1,18 @@
 ---
-title: Talep tabanlı kimlik modeli
+title: Beyana dayalı kimlik modeli
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169a16126df395eabecfa969f63a004b9e27cb41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398901"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385348"
 ---
-# <a name="claims-based-identity-model"></a>Talep tabanlı kimlik modeli
-Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adını olabilir, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
+# <a name="claims-based-identity-model"></a>Beyana dayalı kimlik modeli
+Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
   
  Bu modelde, çoklu oturum açma daha kolay bir şekilde gerçekleştirilir ve uygulamanız artık aşağıdakilerden sorumlu olmaz:  
   
@@ -28,19 +28,19 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
   
  Bu konuda, aşağıdaki bilgiler sağlanmaktadır:  
   
--   [Talep tabanlı kimlik giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+-   [Beyana dayalı kimliğe giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Talep tabanlı kimlik modeli için temel senaryosu](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+-   [Beyana dayalı kimlik modeli için temel senaryo](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Beyana Dayalı Kimliğe Giriş  
  Aşağıdaki terimler ve kavramlar, kimlik için bu yeni mimariyi anlamanıza yardımcı olabilir.  
   
 ### <a name="identity"></a>Kimlik  
- Windows Identity Foundation (WIF) programlama modeli açıklayan amacıyla, bir kullanıcı veya başka bir varlık korumak istediğiniz bir sistemde açıklayan öznitelikler kümesi temsil etmek için "kimlik" terimi kullanacağız.  
+ Windows Identity Foundation (WIF) programlama modelini açıklamak amacıyla, korumak istediğiniz bir sistemde bir kullanıcı veya başka bir varlığı açıklayan öznitelikler kümesi temsil etmek için "kimlik" terimini kullanacağız.  
   
 ### <a name="claim"></a>Talep  
- Talep kimlik bilgilerini adı, e-posta adresi, geçerlilik süresi, Satış rolü üyeliği gibi bir parçası olarak düşünün. Uygulamanız ne kadar çok talep alırsa, kullanıcınız hakkında o kadar çok bilginiz olur. Neden bu kurumsal dizinleri tanımlamak için sık kullanılan olarak "öznitelikleri" yerine "talepler," denir merak ediyor olabilirsiniz. Bunun dağıtım yöntemiyle bir ilgisi yoktur. Bu modelde, uygulamanız bir dizinde kullanıcı özniteliklerini aramaz. Bunun yerine, kullanıcı talepleri uygulamanıza dağıtır ve uygulamanız bunları inceler. Her talep veren kişi tarafından yapılır ve talebe veren kişiye güvendiğiniz kadar güvenirsiniz. Örneğin, şirketinizin etki alanı denetleyicisi tarafından yapılan bir talebe kullanıcının kendisi tarafından yapılan bir talebe göre daha fazla güvenirsiniz. WIF içeren talepleri temsil eden bir <xref:System.Security.Claims.Claim> olan türü, bir <xref:System.Security.Claims.Claim.Issuer%2A> kimin Talep veren çıkışı bulmak izin veren özellik.  
+ Talep adı, e-posta adresi, yaş, satış rolünde üyelik gibi kimlik bilgisi bir parçası olarak düşünün. Uygulamanız ne kadar çok talep alırsa, kullanıcınız hakkında o kadar çok bilginiz olur. Neden bunlar, Kurumsal dizinlerin açıklanmasında sık kullanılan "öznitelikler" yerine "talepler" adlandırılır merak ediyor olabilirsiniz. Bunun dağıtım yöntemiyle bir ilgisi yoktur. Bu modelde, uygulamanız bir dizinde kullanıcı özniteliklerini aramaz. Bunun yerine, kullanıcı talepleri uygulamanıza dağıtır ve uygulamanız bunları inceler. Her talep veren kişi tarafından yapılır ve talebe veren kişiye güvendiğiniz kadar güvenirsiniz. Örneğin, şirketinizin etki alanı denetleyicisi tarafından yapılan bir talebe kullanıcının kendisi tarafından yapılan bir talebe göre daha fazla güvenirsiniz. WIF talepleri ile temsil eden bir <xref:System.Security.Claims.Claim> olan türü, bir <xref:System.Security.Claims.Claim.Issuer%2A> özelliği kullanan talep verilen kullanıma bulmanıza olanak tanır.  
   
 ### <a name="security-token"></a>Güvenlik Belirteci  
  Kullanıcı uygulamanıza istekle birlikte talepler kümesi dağıtır. Web hizmetinde, bu talepler SOAP zarfının güvenlik üstbilgisinde taşınır. Tarayıcı tabanlı bir Web uygulamasında, talepler kullanıcının tarayıcısından HTTP POST ile gelir ve oturum istenirse daha sonra tanımlama bilgisinde önbelleğe alınabilir. Bu talepler, nasıl geldiklerine bakılmaksızın güvenlik belirteçlerinin geldiği yerde seri hale getirilmelidir. Bir güvenlik belirteci, veren yetkili tarafından dijital olarak imzalanan seri hale getirilmiş bir talepler kümesidir. İmza önemlidir: kullanıcının yalnızca birkaç talep oluşturup size göndermediğinden emin olmanızı sağlar. Şifrelemenin gerekli olmadığı veya istenmediği düşük güvenlik düzeyine sahip durumlarda, imzalanmamış belirteçler kullanabilirsiniz, ancak bu senaryo bu konuda açıklanmamaktadır.  
@@ -53,10 +53,10 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
  Hangi veren yetkiliyi seçerseniz seçin, kimlik çözümünüzde temel bir rol oynar. Taleplere dayanarak uygulamanızdan kimlik doğrulamayı çıkardığınızda, sorumluluğu bu yetkiliye verirsiniz ve ondan sizin adınıza kullanıcıların kimliğini doğrulamasını istersiniz.  
   
 ### <a name="security-token-service-sts"></a>Güvenlik Belirteci Hizmeti (STS)  
- Güvenlik belirteci hizmeti (STS), WS-Güven ve WS-Federasyon protokollerine göre güvenlik belirteçleri oluşturan, imzalayan ve veren hizmet bileşenidir. Bu protokollerin uygulanması için yapılan birçok iş vardır, ancak WIF bunların tümünü sizin için yaparak protokollerde uzman olmayan bir kişinin STS'yi çok az bir çabayla çalışır duruma getirmesini sağlar. Önceden oluşturulmuş bir STS gibi kullanabilir [Active Directory® Federasyon Hizmetleri (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516), bulut STS gibi bir [Microsoft Azure erişim denetimi Hizmeti'nden (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517), veya özel belirteçleri veya sağlamak istiyorsanız Özel kimlik doğrulama veya yetkilendirme, WIF kullanarak kendi özel STS oluşturabilirsiniz. WIF, kendi STS'nizi oluşturmanızı kolaylaştırır.  
+ Güvenlik belirteci hizmeti (STS), WS-Güven ve WS-Federasyon protokollerine göre güvenlik belirteçleri oluşturan, imzalayan ve veren hizmet bileşenidir. Bu protokollerin uygulanması için yapılan birçok iş vardır, ancak WIF bunların tümünü sizin için yaparak protokollerde uzman olmayan bir kişinin STS'yi çok az bir çabayla çalışır duruma getirmesini sağlar. Önceden oluşturulmuş bir STS gibi kullanabilir [Active Directory® Federasyon Hizmetleri (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516), Bulutu STS gibi bir [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517), veya özel belirteçler vermek veya sağlamak istiyorsanız Özel kimlik doğrulama veya yetkilendirme, WIF kullanarak kendi özel STS'nizi oluşturabilirsiniz. WIF, kendi STS'nizi oluşturmanızı kolaylaştırır.  
   
 ### <a name="relying-party-application"></a>Bağlı Taraf Uygulaması  
- Taleplere dayalı bir uygulama oluşturduğunuzda, bağlı taraf (RP) uygulaması oluşturursunuz. Bir RP için eş anlamlı sözcükleri "talep kullanan uygulama" ve "Talep tabanlı uygulama" içerir. Hem Web uygulamaları ve hem de Web hizmetleri RP olabilir. RP uygulaması, STS tarafından verilen belirteçleri kullanır ve talepleri kimlikle ilgili görevler için kullanmak üzere belirteçlerden ayıklar. WIF, RP uygulamaları oluşturmanıza yardımcı olacak işlevler sunar.  
+ Taleplere dayalı bir uygulama oluşturduğunuzda, bağlı taraf (RP) uygulaması oluşturursunuz. "Talep kullanan uygulama" ve "beyana dayalı uygulama", RP için eş anlamlı sözcükler içerir. Hem Web uygulamaları ve hem de Web hizmetleri RP olabilir. RP uygulaması, STS tarafından verilen belirteçleri kullanır ve talepleri kimlikle ilgili görevler için kullanmak üzere belirteçlerden ayıklar. WIF, RP uygulamaları oluşturmanıza yardımcı olacak işlevler sunar.  
   
 ### <a name="standards"></a>Standartlar  
  Bunların tümünü birlikte kullanılabilir hale getirmek için önceki senaryoda birkaç WS-* standardı kullanılır. İlke WS-MetadataExchange kullanarak alınır ve WS-Policy belirtimine göre yapılandırılır. STS, güvenlik belirteçlerinin nasıl isteneceğini ve alınacağını açıklayan WS-Güven belirtimini uygulayan uç noktalarını kullanır. Günümüzde Çoğu STS, Güvenlik Onaylama İşlemi Biçimlendirme Dili (SAML) ile biçimlendirilen belirteçler verir. SAML, talepleri birlikte çalışabilir bir şekilde temsil etmek için kullanılabilen sektörde tanınmış bir XML sözlüğüdür. Veya çok platformlu bir durumda bu, STS ile veya tamamen farklı bir platformla iletişim kurmanızı ve platform ne olursa olsun tüm uygulamalarınız arasında çoklu oturum açma gerçekleştirmenizi sağlar.  
@@ -70,7 +70,7 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
 ## <a name="basic-scenario-for-a-claims-based-identity-model"></a>Beyana Dayalı Kimlik Modeli için Temel Senaryo  
  Aşağıdaki bir beyana dayalı sistem örneğidir.  
   
- ![Bağlı olan iş ortağı kimlik doğrulaması akışı](../../../docs/framework/security/media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
+ ![Bağlı iş ortağı kimlik doğrulaması akışı](../../../docs/framework/security/media/conc-relying-partner-processc.png "conc_relying_partner_processc")  
   
  Bu diyagram, kimlik doğrulama için WIF ve bu siteyi kullanmak isteyen bir istemci olarak web tarayıcısı kullanacak şekilde yapılandırılmış bir Web sitesini (bağlı taraf uygulaması, RP) göstermektedir.  
   

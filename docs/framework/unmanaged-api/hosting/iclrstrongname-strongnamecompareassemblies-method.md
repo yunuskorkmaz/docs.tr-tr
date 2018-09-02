@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5020c31f590f527856f966ede512e98c07496ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384628"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies Yöntemi
-İki derleme yalnızca güçlü ad imzaları tarafından farklı olup olmadığını belirler.  
+İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT StrongNameCompareAssemblies (
   
 #### <a name="parameters"></a>Parametreler  
  `wszAssembly1`  
- [in] İlk derleme yolu.  
+ [in] İlk bütünleştirilmiş kod yolu.  
   
  `wszAssembly2`  
- [in] İkinci derleme yolu.  
+ [in] İkinci bütünleştirilmiş kod yolu.  
   
  `pdwResult`  
  [out] Aşağıdaki değerlerden biri:  
   
--   `SN_CMP_DIFFERENT` (0) - derlemeler farklı veri içerdiğini belirtir.  
+-   `SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.  
   
--   `SN_CMP_IDENTICAL` (1) - derlemeler tam olarak aynı, kendi imzaları ve sağlama toplamı dahil olduğunu belirtir.  
+-   `SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.  
   
--   `SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı tarafından farklı olduğunu belirtir.  
+-   `SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -66,7 +66,7 @@ HRESULT StrongNameCompareAssemblies (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir derleme tanımlayıcı ad imzası derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.  
+ Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

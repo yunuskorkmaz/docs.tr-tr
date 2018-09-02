@@ -1,171 +1,171 @@
 ---
-title: 'Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma'
-ms.date: 03/30/2017
+title: Visual Studio'da AJAX etkin bir WCF hizmeti ve bir ASP.NET istemcisi oluşturma
+ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490636"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384292"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Nasıl yapılır: AJAX Etkin Bir WCF Hizmeti ve Hizmete Erişen Bir ASP.NET İstemcisi Oluşturma
-Bu konu, Visual Studio 2008 bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetini ve hizmete erişen bir ASP.NET istemcisi oluşturmak için nasıl kullanılacağını gösterir. İstemci ve hizmet için kod bunları oluşturma adımlarını yordamları bölümünde açıklanan sonra örnek bölümünde sağlanır.  
-  
-### <a name="to-create-the-aspnet-client-application"></a>ASP.NET istemci uygulaması oluşturmak için  
-  
-1.  Açık [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
-2.  Gelen **dosya** menüsünde, select **yeni**, ardından **proje**, ardından **Web**ve ardından **ASP.NET Web uygulaması**.  
-  
-3.  Proje adı `SandwichServices` tıklatıp **Tamam**.  
-  
-### <a name="to-create-the-wcf-ajax-enabled-service"></a>WCF AJAX etkin bir hizmet oluşturmak için  
-  
-1.  Sağ `SandwichServices` proje **Çözüm Gezgini** penceresini açın ve seçin **Ekle**, ardından **yeni öğe**ve ardından **AJAX etkinleştirilmiş WCF Hizmeti** .  
-  
-2.  Ad hizmeti `CostService` içinde **adı** kutusuna ve tıklatın **Ekle**.  
-  
-3.  CostService.svc.cs dosyasını açın.  
-  
-4.  Belirtin `Namespace` için <xref:System.ServiceModel.ServiceContractAttribute> olarak `SandwichService`:  
-  
-    ```  
-    namespace SandwichServices  
-    {  
-      [ServiceContract(Namespace = "SandwichServices")]  
-      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-       public class CostService  
-       {  
-         …  
-       }  
-     }  
-    ```  
-  
-5.  İşlem hizmetinde uygulayın. Ekleme <xref:System.ServiceModel.OperationContractAttribute> her sözleşmesinin bir parçası olduğunu belirtmek için işlemlerinin. Aşağıdaki örnek sandviç belirli miktarda maliyetini döndüren bir yöntem uygular.  
-  
-    ```  
-    public class CostService  
-    {  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-    // Add more operations here and mark them with [OperationContract]  
-    }  
-    ```  
-  
-### <a name="to-configure-the-client-to-access-the-service"></a>Hizmete erişmek üzere istemciyi yapılandırmak için  
-  
-1.  Default.aspx sayfasını açın ve seçin **tasarım** görünümü.  
-  
-2.  Gelen **Görünüm** menüsünde, select **araç**.  
-  
-3.  Genişletme **AJAX uzantıları** düğümü ve sürükle ve bırak bir **ScriptManager** Default.aspx sayfasını açın.  
-  
-4.  Sağ **ScriptManager** seçip **özellikleri**.  
-  
-5.  Genişletme **Hizmetleri** koleksiyonunda **özellikleri** penceresini **ServiceReference Koleksiyonu Düzenleyicisi** penceresi.  
-  
-6.  Tıklatın **Ekle**, belirtin `CostService.svc` olarak **yolu** tıklayın ve başvurulan **Tamam**.  
-  
-7.  Genişletme **HTML** düğümünde **araç** ve sürükle ve bırak bir **giriş (düğme)** Default.aspx sayfasını açın.  
-  
-8.  Sağ **düğmesini** seçip **özellikleri**.  
-  
-9. Değişiklik **değeri** alanı `Price for 3 Sandwiches`.  
-  
-10. Çift **düğmesini** JavaScript kodu erişmek için.  
-  
-11. Şu JavaScript kodunu içinde geçirmek <`script`> öğesi.  
-  
-    ```  
-    function Button1_onclick() {  
-    var service = new SandwichServices.CostService();  
-    service.CostOfSandwiches(3, onSuccess, null, null);  
-    }  
-  
-    function onSuccess(result){  
-    alert(result);  
-    }  
-    ```  
-  
-### <a name="to-access-the-service-from-the-client"></a>İstemciden hizmete erişmek için  
-  
-1.  Hizmet ve Web istemcisi başlatmak için CTRL + F5'ı kullanın. Tıklatın **3 Grilled sandviç fiyatı** "3,75" beklenen çıktı üretmek için düğmesi.  
-  
-## <a name="example"></a>Örnek  
- Bu örnek WCFService.svc.cs dosyasında yer alan hizmet kodu ve Default.aspx dosyasında yer alan istemci kodu içerir.  
-  
-```  
-//The service code contained in the CostService.svc.cs file.  
-  
-using System;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.ServiceModel.Activation;  
-using System.ServiceModel.Web;  
-  
-namespace SandwichServices  
-{  
-    [ServiceContract(Namespace="SandwichServices")]  
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-    public class CostService  
-    {  
-        // Add [WebGet] attribute to use HTTP GET  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-        // Add more operations here and mark them with [OperationContract]  
-    }  
-}  
-//The code for hosting the service is contained in the CostService.svc file.  
-  
-<%@ ServiceHost Language="C#" Debug="true" Service="SandwichServices.CostService" CodeBehind="CostService.svc.cs" %>  
-  
-//The client code contained in the Default.aspx file.  
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SandwichServices._Default" %>  
-  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-  
-<html >  
-<head runat="server">  
-    <title>Untitled Page</title>  
-<script language="javascript" type="text/javascript">  
-// <!CDATA[  
-  
-function Button1_onclick() {  
-var service = new SandwichServices.CostService();  
-service.CostOfSandwiches(3, onSuccess, null, null);  
-}  
-  
-function onSuccess(result){  
-alert(result);  
-}  
-  
-// ]]>  
-</script>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-  
-    </div>  
-    <asp:ScriptManager ID="ScriptManager1" runat="server">  
-        <services>  
-            <asp:servicereference Path="CostService.svc" />  
-        </services>  
-    </asp:ScriptManager>  
-    </form>  
-    <p>  
-        <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
-</body>  
-</html>  
-```     
+
+Bu konuda bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmeti ve hizmete erişen bir ASP.NET istemcisi oluşturmak için Visual Studio kullanmayı gösterir.
+
+## <a name="create-an-aspnet-web-app"></a>ASP.NET web uygulaması oluşturma
+
+1. Visual Studio'yu açın.
+
+1. Gelen **dosya** menüsünde **yeni** > **proje**
+
+1. İçinde **yeni proje** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **ASP.NET Web uygulaması (.NET Framework)**.
+
+1. Projeyi adlandırın **SandwichServices** tıklatıp **Tamam**.
+
+1. İçinde **yeni ASP.NET Web uygulaması** iletişim kutusunda **boş** seçip **Tamam**.
+
+   ![Visual Studio'da ASP.NET web uygulaması türü iletişim kutusu](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+
+## <a name="add-a-web-form"></a>Bir web formu ekleyin
+
+1. SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.
+
+1. İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **Web formu** şablonu.
+
+1. Varsayılan adı kabul edin (**WebForm1**) ve ardından **Ekle**.
+
+   *WebForm1.aspx* açılır **kaynak** görünümü.
+
+1. İçinde aşağıdaki işaretlemeyi ekleyin  **\<gövdesi >** etiketler:
+
+   ```html
+   <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
+   <br />
+   <span id="additionResult"></span>
+   ```
+
+## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX etkin bir WCF hizmeti oluşturma
+
+1. SandwichServices projeye sağ **Çözüm Gezgini** seçip **Ekle** > **yeni öğe**.
+
+1. İçinde **Yeni Öğe Ekle** iletişim kutusunda Genişlet **yüklü** > **Visual C#** > **Web** kategorisi ve ardından seçin **WCF Hizmeti (AJAX etkin)** şablonu.
+
+   ![Visual Studio'da WCF Hizmeti (AJAX etkin) öğe şablonu](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+
+1. Hizmet adı **CostService** seçip **Ekle**.
+
+   *CostService.svc.cs* düzenleyicisinde açılır.
+
+1. İşlem hizmette uygulayın. Sandwiches miktarı maliyetini hesaplamak için CostService sınıfına aşağıdaki yöntemi ekleyin:
+
+    ```csharp
+    [OperationContract]
+    public double CostOfSandwiches(int quantity)
+    {
+        return 1.25 * quantity;
+    }
+    ```
+
+## <a name="configure-the-client-to-access-the-service"></a>Hizmete erişmek için istemciyi Yapılandırma
+
+1. Açık *WebForm1.aspx* seçin ve dosya **tasarım** görünümü.
+
+2. Gelen **görünümü** menüsünde **araç kutusu**.
+
+3. Genişletin **AJAX uzantıları** düğüm ve sürükle ve bırak bir **ScriptManager** forma.
+
+4. Geri **kaynak** görüntülemek için arasına aşağıdaki kodu ekleyin  **\<ScriptManager >** WCF Hizmeti yolunu belirtmek için etiketler:
+
+    ```html
+    <Services>
+       <asp:ServiceReference Path="~/CostService.svc" />
+    </Services>
+    ```
+
+1. Javascript işlevi için kod ekleme `Calculate()`. Aşağıdaki kodda yerleştirin **baş** web formu bölümünü:
+
+    ```javascript
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+    ```
+
+   Bu kod üç sandwiches fiyatı hesaplamak için CostService yöntemini çağırır ve sonucu adı verilen yayılımda görüntüler **additionResult**.
+
+## <a name="run-the-program"></a>Programı çalıştırın
+
+Emin olun *WebForm1.aspx* odaklı ve tuşuna **Başlat** web istemcisi için düğme. Düğme yeşil üçgenle sahip ve aşağıdaki gibi diyor. **IIS Express (Microsoft Edge)**. Ya da basabilirsiniz **F5**. Tıklayın **3 sandwiches fiyatı** beklenen çıktıyı "3,75" oluşturmak için düğme.
+
+## <a name="example-code"></a>Örnek kod
+
+Tam kod aşağıdadır *CostService.svc.cs* dosyası:
+
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+namespace SandwichServices
+{
+    [ServiceContract(Namespace = "")]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class CostService
+    {
+        [OperationContract]
+        public double CostOfSandwiches(int quantity)
+        {
+            return 1.25 * quantity;
+        }
+    }
+}
+```
+
+Aşağıdadır tam içeriğini *WebForm1.aspx* sayfası:
+
+```aspx-csharp
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/CostService.svc" />
+            </Services>
+        </asp:ScriptManager>
+
+        <input type="button" value="Price of 3 sandwiches" onclick="Calculate()" />
+        <br />
+        <span id="additionResult"></span>
+    </form>
+</body>
+</html>
+```

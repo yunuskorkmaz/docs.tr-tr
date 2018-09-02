@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: b22822656860b58a2f225fadcb3c68802899a505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c566e2c83a6c40acfd85c1822d28cbaa097e4449
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289431"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388172"
 ---
 # <a name="yield-c-reference"></a>yield (C# Başvurusu)
-Kullandığınızda `yield` anahtar sözcüğü bir deyimde size bildiren işleci, yöntemi veya `get` görünür olan yineleyici erişimcisi. Kullanarak `yield` yineleyici tanımlamak için bir açık ek sınıf gereksinimini ortadan kaldırır (bkz: bir numaralandırma durumu tutan sınıfı <xref:System.Collections.Generic.IEnumerator%601> bir örnek) ne zaman uygulamak <xref:System.Collections.IEnumerable> ve <xref:System.Collections.IEnumerator> özel bir koleksiyon için deseni yazın.  
+Kullanırken `yield` anahtar sözcüğü bir deyimde, belirttiğiniz yöntemin, işlecin veya `get` erişimci görünür olan bir yineleyici. Kullanarak `yield` bir yineleyici tanımlamak için açık bir ekstra sınıf gereksinimini ortadan kaldırır (bir numaralandırma için durumu tutan sınıf, bkz <xref:System.Collections.Generic.IEnumerator%601> örneği) uyguladığınızda <xref:System.Collections.IEnumerable> ve <xref:System.Collections.IEnumerator> özel bir koleksiyona deseni yazın.  
   
- Aşağıdaki örnek, iki tür gösterir `yield` deyimi.  
+ Aşağıdaki örnek, iki formunu gösterir `yield` deyimi.  
   
 ```csharp  
 yield return <expression>;  
@@ -25,9 +25,9 @@ yield break;
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullandığınız bir `yield return` her öğeye aynı anda geri dönmek için deyimi.  
+ Kullandığınız bir `yield return` her öğeyi bir defada döndürmek için deyimi.  
   
- İterator yöntemi ile kullanmasını bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimi veya LINQ sorgusu. Her yinelemesinden `foreach` döngü yineleyici yöntemini çağırır. Zaman bir `yield return` deyimi yineleyici yönteminde ulaşıldığında `expression` döndürülür ve kod geçerli konumda korunur. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
+ Kullanarak bir yineleyici yöntemini kullanan bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) deyimini veya LINQ sorgusunu. Her bir yinelemesini `foreach` döngüsü yineleyici yöntemini çağırır. Olduğunda bir `yield return` yineleyici yöntem içinde deyimine ulaşıldığında `expression` döndürülür ve kodun geçerli konumu korunur. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
   
  Kullanabileceğiniz bir `yield break` yinelemeyi sonlandırmak için deyimi.  
   
@@ -38,25 +38,25 @@ yield break;
   
 -   Dönüş türü olmalıdır <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, veya <xref:System.Collections.Generic.IEnumerator%601>.  
   
--   Bildirimi içeremez [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md) [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri.  
+-   Bildirimi içeremez [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md) [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri.  
   
- `yield` Döndürür yineleyici türünü <xref:System.Collections.IEnumerable> veya <xref:System.Collections.IEnumerator> olan `object`.  Yineleyici döndürürse <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.Generic.IEnumerator%601>, ifadesinde türü örtük bir dönüştürme olmalıdır `yield return` genel tür parametresi ifadesine.  
+ `yield` Türü döndüren bir yineleyicinin <xref:System.Collections.IEnumerable> veya <xref:System.Collections.IEnumerator> olduğu `object`.  Yineleyici döndürürse <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Collections.Generic.IEnumerator%601>, ifadesinde türü örtük bir dönüştürme olmalıdır `yield return` genel tür parametresine deyimi.  
   
- Dahil edilemiyor bir `yield return` veya `yield break` aşağıdaki özelliklere sahip yöntemleri deyiminde:  
+ Dahil edemezsiniz bir `yield return` veya `yield break` aşağıdaki özelliklere sahip yöntemlerini deyiminin:  
   
--   Anonim yöntemler. Daha fazla bilgi için bkz: [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+-   Anonim yöntemler. Daha fazla bilgi için [anonim yöntemler](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
   
--   Güvenli olmayan bloklar içeren yöntemler. Daha fazla bilgi için bkz: [güvensiz](../../../csharp/language-reference/keywords/unsafe.md).  
+-   Güvenli olmayan bloklar içeren yöntemler. Daha fazla bilgi için [güvenli](../../../csharp/language-reference/keywords/unsafe.md).  
   
 ## <a name="exception-handling"></a>Özel Durum İşleme  
- A `yield return` deyimi bir try-catch bloğu içinde bulunamıyor. A `yield return` deyimi, bir try-finally deyimi try bloğunda yer alması.  
+ A `yield return` ifadesi bir try-catch bloğu içinde bulunamaz. A `yield return` ifadesi bir try-finally ifadesinin try bloğunda bulunabilir.  
   
- A `yield break` deyimi yer alması try blok veya bir catch bloğunun dışında bir finally bloğunda.  
+ A `yield break` ifadesi bir try bloğu ya da bir catch bloğu içinde bulunabilir ama bir finally bloğunda.  
   
- Varsa `foreach` gövdesi (dışında yineleyici yöntemi) bir özel durum oluşturur bir `finally` yineleyici yöntemi bloğunda gerçekleştirilir.  
+ Varsa `foreach` gövdesi (yineleyici yöntemi dışında) bir özel durum oluşturursa bir `finally` yineleyici yöntem bloğunda yürütülür.  
   
 ## <a name="technical-implementation"></a>Teknik Uygulama  
- Aşağıdaki kod döndürür bir `IEnumerable<string>` yineleyici yönteminden ve öğeleri arasında yineler.  
+ Aşağıdaki kod döndürür bir `IEnumerable<string>` yineleyici yöntemden ve sonra öğeleri boyunca yinelenir.  
   
 ```csharp  
 IEnumerable<string> elements = MyIteratorMethod();  
@@ -66,29 +66,30 @@ foreach (string element in elements)
 }  
 ```  
   
- Çağrı `MyIteratorMethod` yönteminin gövdesi yürütmez. Bunun yerine çağrı döndürür bir `IEnumerable<string>` içine `elements` değişkeni.  
+ Çağrı `MyIteratorMethod` yöntemin gövdesini yürütmez. Bunun yerine çağrı döndürür bir `IEnumerable<string>` içine `elements` değişkeni.  
   
- Bir yineleme `foreach` döngü, <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi için çağrılır `elements`. Bu çağrı gövdesini yürütür `MyIteratorMethod` sonraki kadar `yield return` deyimi ulaşıldığında. İfadesi tarafından döndürülen `yield return` ifadesi belirler değeri yalnızca `element` döngü gövdesine tüketimi için değişken aynı zamanda <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özelliği `elements`, olduğu bir `IEnumerable<string>`.  
+ Yinelemesi üzerinde `foreach` döngü <xref:System.Collections.IEnumerator.MoveNext%2A> yöntemi için çağrılır `elements`. Bu çağrı gövdesini yürütür `MyIteratorMethod` sonraki kadar `yield return` deyimine ulaşıldığında. Tarafından döndürülen ifade `yield return` deyimi yalnızca değerini belirler `element` döngü gövdesinin tüketimi için değişken aynı zamanda <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özelliği `elements`, olduğu bir `IEnumerable<string>`.  
   
- Sonraki her yinelemesinden üzerinde `foreach` nereden yürütülmeye yineleyici gövdesinin döngü ulaştığında yeniden durdurma kapalı, solda bir `yield return` deyimi. `foreach` Döngüsü tamamlandıktan yineleyici yönteminin sonuna veya `yield break` deyimi ulaşıldığında.  
+ Her yinelemesinde `foreach` kadar yineleyici gövdenin yürütülmesi devam eder, döngü onu ulaştığında yeniden kaldığı bir `yield return` deyimi. `foreach` Tamamlandıktan döngüsü yineleyici yöntemin sonuna ya da bir `yield break` deyimine ulaşıldığında.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sahip bir `yield return` içinde deyimi bir `for` döngü. Her yinelemesinden `foreach` deyiminin gövdesinde `Main` yöntem çağrısı oluşturur `Power` yineleyici işlevi. Yineleyici işlevi her çağrısı devam eder, sonraki yürütülmesi `yield return` sonraki yinelemesini sırasında oluşur deyimi `for` döngü.  
+ Aşağıdaki örnek sahip bir `yield return` içindeki bir `for` döngü. Her bir yinelemesini `foreach` deyiminin gövdesinde `Main` yöntemine bir çağrı oluşturur `Power` yineleyici işlevi. Her yineleyici işleve çağrı için sonraki yürütme devam eder `yield return` sıradaki yinelemesi süresince gerçekleşen deyimi `for` döngü.  
   
- Yineleyici yöntemin dönüş türü <xref:System.Collections.IEnumerable>, bir yineleyici arabirimi türü değil. Yineleyici yöntem çağrıldığında, bir sayının kuvvetlerini içeren sayılabilir bir nesne döndürür.  
+ Yineleyici yöntemin dönüş türü <xref:System.Collections.IEnumerable>, bir yineleyici arabirimi türü. Yineleyici yöntem çağrıldığında, bir sayının kuvvetlerini içeren sayılabilir bir nesne döndürür.  
   
  [!code-csharp[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte gösterilmiştir bir `get` yineleyici olduğu erişimcisi. Örnekte, her `yield return` deyimi bir kullanıcı tarafından tanımlanan sınıfının bir örneğini döndürür.  
+ Aşağıdaki örnek, gösterir bir `get` bir yineleyici erişimcisi. Örnekte, her `yield return` deyimi, kullanıcı tanımlı bir sınıfın bir örneği döndürür.  
   
  [!code-csharp[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [Yineleyiciler](../../iterators.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Yineleyiciler](../../iterators.md)

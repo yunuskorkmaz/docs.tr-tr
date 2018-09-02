@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 985ba9cfefce458fac73aa4b92de0b3d438405c6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: f586b6d097a8592fd74e92df7886b519d623e478
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948348"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393011"
 ---
 # <a name="const-c-reference"></a>const (C# Başvurusu)
 
-Kullandığınız `const` sabit bir alan veya sabit bir yerel bildirmek için anahtar sözcüğü. Sabit alanları ve yerel değişkenleri değil ve değiştirilemeyebilir. Sabitler numaraları, Boole değerleri, dize veya null bir başvuru olabilir. Herhangi bir zamanda değiştirmeniz beklediğiniz bilgileri temsil eden bir sabit oluşturmayın. Örneğin, sabit bir alan, bir hizmet, bir ürün sürüm numarası veya bir şirket markası adını fiyat depolamak için kullanmayın. Zaman içinde bu değerleri değiştirebilirsiniz ve derleyicileri sabitleri yayıldığından Kitaplıklarınızı ile derlenen diğer kod değişiklikleri görmek için derlenmesi gerekir. Ayrıca bkz. [readonly](../../../csharp/language-reference/keywords/readonly.md) anahtar sözcüğü. Örneğin:
+Kullandığınız `const` bir sabit alanı ya da sabit yerel bildirmek için anahtar sözcüğü. Sabit alanlar ve yerel değişkenleri değildir ve değiştirilemeyebilir. Sabitler, sayı, Boole değerleri, dize veya null başvuru olabilir. Dilediğiniz zaman değiştirin beklediğiniz bilgileri temsil eden bir sabit oluşturmayın. Örneğin, sabit bir alan bir hizmeti, bir ürün sürüm numarası veya bir şirketin marka adı fiyatı depolamak için kullanmayın. Bu değerler, zaman içinde değişebilir ve derleyiciler sabitleri yayıldığından Kitaplıklarınızı ile derlenmiş olan diğer kod değişiklikleri görmek için yeniden derlenmesi gerekir. Ayrıca bkz: [salt okunur](../../../csharp/language-reference/keywords/readonly.md) anahtar sözcüğü. Örneğin:
 
 ```csharp
 const int x = 0;
@@ -26,11 +26,11 @@ private const string productName = "Visual C#";
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sabit bildiriminde türü bildirimi tanıtır üyeleri türünü belirtir. Yerel bir sabit Başlatıcı veya sabit bir alan için hedef türü örtük olarak dönüştürülebilir sabit bir ifade olması gerekir.
+Sabit bildirimi türü bildirimin gösterdiği üyelerin türünü belirtir. Başlatıcı bir sabit yerel öğesi veya sabit alanının hedef türe örtük olarak dönüştürülebilir bir sabit ifade olmalıdır.
 
-Bir sabit ifadesine derleme zamanında tam olarak değerlendirilecek bir ifade değil. Başvuru türleri sabitleri için bu nedenle, yalnızca olası değerler `string` ve bir null başvuru.
+Sabit bir ifade derleme zamanında tam olarak değerlendirilebilecek bir ifadedir. Başvuru türü sabitleri için bu nedenle, tek olası değerler `string` ve null bir başvuru.
 
-Sabit bildiriminde birden çok sabitleri gibi bildirebilirsiniz:
+Sabit bildiriminde aşağıdaki gibi birden fazla sabit bildirilebilir:
 
 ```csharp
 public const double x = 1.0, y = 2.0, z = 3.0;
@@ -38,7 +38,7 @@ public const double x = 1.0, y = 2.0, z = 3.0;
 
 `static` Değiştiricisi Sabit bildiriminde izin verilmez.
 
-Bir sabit bir sabit ifadesine gibi katılabilmesi için:
+Bir sabit sabit bir ifadede gibi katılabilir:
 
 ```csharp
 public const int c1 = 5;
@@ -46,7 +46,7 @@ public const int c2 = c1 + 100;
 ```
 
 > [!NOTE]
-> [Readonly](../../../csharp/language-reference/keywords/readonly.md) anahtar sözcüğü farklı olarak `const` anahtar sözcüğü. A `const` alan alan bildirimi sırasında yalnızca başlatılabilir. A `readonly` bildirimi sırasında veya bir oluşturucuya alan başlatılabilir. Bu nedenle, `readonly` alanları kullanılan Oluşturucusu bağlı olarak farklı değerlere sahip olabilir. Ayrıca, ancak bir `const` alandır derleme zamanı sabiti `readonly` alan, bu satırı olduğu gibi çalışma zamanı sabitleri için kullanılabilir: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
+> [Salt okunur](../../../csharp/language-reference/keywords/readonly.md) anahtar sözcüğünden farklıdır `const` anahtar sözcüğü. A `const` alanı alanın bildiriminde yalnızca başlatılabilir. A `readonly` alanı bildirimde veya oluşturucuda başlatılabilir. Bu nedenle, `readonly` alanları kullanılan oluşturucuya bağlı olarak farklı değerlere sahip olabilir. Ayrıca, ancak bir `const` alandır bir derleme zamanı sabiti `readonly` alan, bu satırda olduğu gibi çalışma zamanı sabitleri için kullanılabilir: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`
 
 ## <a name="example"></a>Örnek
 
@@ -54,7 +54,7 @@ public const int c2 = c1 + 100;
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, yerel değişkenleri olarak sabitleri kullanımı gösterilmiştir.
+Bu örnek, sabitlerin yerel değişkenler olarak kullanmayı gösterir.
 
 [!code-csharp[csrefKeywordsModifiers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#6)]
 
@@ -64,8 +64,8 @@ Bu örnek, yerel değişkenleri olarak sabitleri kullanımı gösterilmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[C# başvurusu](../../../csharp/language-reference/index.md)  
-[C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
-[C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
-[Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
-[readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Değiştiriciler](../../../csharp/language-reference/keywords/modifiers.md)  
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)

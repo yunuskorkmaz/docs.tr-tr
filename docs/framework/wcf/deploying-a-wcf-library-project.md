@@ -2,19 +2,19 @@
 title: Bir WCF Kitaplık Projesini Dağıtma
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-ms.openlocfilehash: fb400a4d1ebba691222ad7fc9d2c09f1051591da
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1ba26a7e68fe262dc5f4f569647af1ebb94e03a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803029"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387232"
 ---
 # <a name="deploying-a-wcf-library-project"></a>Bir WCF Kitaplık Projesini Dağıtma
-Bu konuda, bir Windows Communication Foundation (WCF) hizmetini kitaplığı projesi nasıl dağıtılacağı açıklanmaktadır.  
+Bu konuda, bir Windows Communication Foundation (WCF) hizmet kitaplığı projesi nasıl dağıtabileceğiniz açıklanmıştır.  
   
-## <a name="deploying-a-wcf-service-library"></a>Bir WCF Hizmeti kitaplığı dağıtma  
- Bir WCF hizmeti bir dinamik bağlantı kitaplığı (DLL) kitaplıktır. Bu nedenle, bu, kendi yürütülemez. Bir barındırma ortamına dağıtılması gerekir. Bu işlem hakkında daha fazla bilgi için bkz: [barındırma ve WCF hizmetlerini tüketen](http://go.microsoft.com/fwlink/?LinkId=99932).  
+## <a name="deploying-a-wcf-service-library"></a>Bir WCF hizmet kitaplığı dağıtma  
+ Bir WCF hizmet kitaplığı bir dinamik bağlantı kitaplığı (DLL) ' dir. Bu nedenle, kendi kendine yürütülemez. Bir barındırma ortamına dağıtılması gerekir. Bu işlem hakkında daha fazla bilgi için bkz. [barındırma ve WCF hizmetleri kullanma](https://go.microsoft.com/fwlink/?LinkId=99932).  
   
- Bir WCF Hizmeti kitaplığı gibi başka bir WCF Hizmeti dağıtılabilir. Ancak, farkında olması, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] yapılandırmasını DLL'ler için desteklemez. <xref:System.Configuration> uygulama etki alanı başına bir yapılandırma dosyası destekler. WCF hizmet kitaplığı projesi, geliştirme sırasında bir App.config dosyası kitaplığın sağlayarak bu sınırlamaya azaltır. Ancak, App.config dosyasını dağıtımdan sonra tanınmıyor.  
+ Bir WCF hizmet kitaplığı gibi başka bir WCF hizmeti olarak dağıtılabilir. Ancak, unutmayın, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] DLL'leri için yapılandırmayı desteklemez. <xref:System.Configuration> uygulama etki alanı başına bir yapılandırma dosyasını destekler. WCF hizmet kitaplığı projesi, geliştirme sırasında bir App.config dosyası kitaplığı sağlayarak bu sınırlama azaltır. Ancak, App.config dosyasına dağıtımdan sonra tanınmıyor.  
   
- Barındırma ortamı tarafından tanınan yapılandırma dosyasına yapılandırma kodunuzu taşıyın gerekir. Kendi kendine barındırma için barındırma yürütülebilir App.config dosyasına App.config dosyasının içeriğini kopyalamanız gerekir. Hizmetinizi barındırmak için IIS kullanıyorsanız, sanal dizin Web.config dosyasına App.config dosyasının içeriğini kopyalamanız gerekir.
+ Yapılandırma kodunuzu barındırma ortamınıza tarafından tanınan yapılandırma dosyasına taşımak zorunda. Kendi kendine barındırma için App.config dosyasının içeriğini barındırma yürütülebilir App.config dosyasına kopyalamanız gerekir. Hizmetinizi barındırmak için IIS kullanırsanız, sanal dizin Web.config dosyasına App.config dosyasının içeriğini kopyalamanız gerekir.

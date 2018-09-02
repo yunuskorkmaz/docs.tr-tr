@@ -6,66 +6,66 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 728dba65a99d71a52551b16e5f1822104ed40ea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508741"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399056"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
-Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen belirtim kümesi desteği Web Hizmetleri ile birlikte çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırmasını basitleştirmek için üç birlikte çalışabilir sistem tarafından sağlanan bağlamalar WCF sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Terfi, yapılandırılmış bilgi standartları (OASIS) standartları ile kuruluş birlikte çalışabilirlik için bir birlikte çalışabilen sistem tarafından sağlanan bir bağlamayı WCF içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için WCF iki birlikte çalışabilir sistem tarafından sağlanan bağlamaları içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamalar destek özellikleri listeler.  
+Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen özellikleri kümesi destekleyen Web Hizmetleri ile çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırması basitleştirmek için birlikte üç sistem tarafından sağlanan bağlamalar WCF sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. İlerletme, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş birlikte çalışabilirlik için birlikte çalışabilen bir sistem tarafından sağlanan bağlama WCF içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için WCF iki birlikte çalışabilen sistem tarafından sağlanan bağlamalar içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilen bağlama desteği özellikleri listeler.  
   
-## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Web Hizmetleri protokolleri desteklenen basicHttpBinding, wsHttpBinding, ws2007HttpBinding ve wsDualHttpBinding bağlamaları tarafından  
+## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Web Hizmetleri protokolleri desteklenen basicHttpBinding, wsHttpBinding, ws2007HttpBinding ve wsDualHttpBinding bağlamalar tarafından  
   
-### <a name="all-bindings"></a>Tüm bağlamaları  
- [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), ve [ \<ws2007HttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) bağlamaları desteği aşağıdaki protokollerden.  
+### <a name="all-bindings"></a>Tüm bağlamalar  
+ [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), ve [ \<ws2007HttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) bağlamaları desteği şu protokoller.  
   
 > [!NOTE]
->  Meta veri yayımlamak için kullanılan bağlamaları hakkında daha fazla bilgi için bu konunun devamındaki "System-Provided meta veri bağlamaları" bölümüne bakın.  
+>  Meta veri yayımlama için kullanılan bağlamaları hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "System-Provided meta veri bağlamaları" bölümüne bakın.  
   
-|Kategori|Protokol|Belirtimi ve kullanımı|  
+|Kategori|Protokol|Belirtimi ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding`, ve `WS2007HttpBinding` HTTP ve HTTPS aktarımları kullanın.|  
-|İleti|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding`, ve `ws2007HttpBinding` ileti iletim en iyi duruma getirme mekanizmasını (MTOM) destekler. Varsayılan olarak kullanılmaz. MTOM kullanmak üzere ayarlanmış `messageEncoding` özniteliğini `"Mtom"`.<br /><br /> Örnek:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Meta Veriler|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) hizmetleri tanımlamak için kullanır.|  
-|Meta Veriler|WS-ilke|[WS-ilke](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
-|Meta Veriler|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF etki alanına özgü onaylar birlikte WS-Policy belirtimi hizmet gereksinimlerini ve özelliklerini tanımlamak için kullanır.|  
-|Meta Veriler|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) çeşitli kapsamlar ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Taşıma|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding`, ve `WS2007HttpBinding` HTTP ve HTTPS taşımalar kullanın.|  
+|İleti|MTOM|[MTOM](https://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding`, ve `ws2007HttpBinding` ileti aktarım en iyi duruma getirme mekanizması (MTOM) destekler. Varsayılan olarak kullanılmaz. MTOM kullanmak için ayarlanmış `messageEncoding` özniteliğini `"Mtom"`.<br /><br /> Örnek:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
+|Meta Veriler|WSDL 1.1|[WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) hizmetleri tanımlamak için kullanır.|  
+|Meta Veriler|WS-Policy|[WS-Policy](https://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF hizmet gereksinimlerini ve özelliklerini açıklayan WS-Policy belirtiminin etki alanına özgü bir onayları birlikte kullanır.|  
+|Meta Veriler|WS-Policy 1.5|[WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF hizmet gereksinimlerini ve özelliklerini açıklayan WS-Policy belirtiminin etki alanına özgü bir onayları birlikte kullanır.|  
+|Meta Veriler|WS-PolicyAttachment|[WS-PolicyAttachment](https://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF Web Hizmetleri Açıklama Dili (WSDL) çeşitli kapsamları ilke ifadeleri eklemek için WS-PolicyAttachment uygular.|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
-|Kategori|Protokol|Belirtimi ve kullanımı|  
+|Kategori|Protokol|Belirtimi ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|İleti|SOAP 1.1|[SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> Temel Profil 1.1 uygun olarak `basicHttpBinding` öğesi SOAP 1.1 iletisi protokolünü uygular.|  
-|Güvenlik|WSS SOAP iletisi güvenlik 1.0|[WSS SOAP iletisi güvenlik 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Temel güvenlik profili, uygun olarak `basicHttpBinding` öğesi, kullanıcı adı/parola ve X.509 tabanlı güvenlik için Web Services Güvenlik (WSS) SOAP iletisi güvenlik 1.0 belirtimi uygular.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
-|Güvenlik|WSS SOAP iletisi güvenlik UsernameToken profili 1.0|[WSS SOAP iletisi güvenlik UsernameToken profili 1.0](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
-|Güvenlik|WSS SOAP iletisi güvenlik X.509 sertifikası belirteci profili 1.0|[WSS SOAP iletisi güvenlik X.509 sertifikası belirteci profili 1.0](http://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
+|İleti|SOAP 1.1|[SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> Temel Profil 1.1 uygun olarak `basicHttpBinding` öğesi SOAP 1.1 iletisi protokolü uygular.|  
+|Güvenlik|WSS SOAP ileti güvenliği 1.0|[WSS SOAP ileti güvenliği 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Temel güvenlik profilini uygun olarak `basicHttpBinding` öğesi, kullanıcı adı/parola ve güvenlik X.509 tabanlı Web Hizmetleri Güvenlik (WSS) SOAP ileti güvenliği 1.0 belirtimi uygular.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
+|Güvenlik|WSS SOAP ileti güvenlik UsernameToken profili 1.0|[WSS SOAP ileti güvenlik UsernameToken profili 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
+|Güvenlik|WSS SOAP ileti güvenlik X.509 Sertifika belirteci profili 1.0|[WSS SOAP ileti güvenlik X.509 Sertifika belirteci profili 1.0](https://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding ve wsDualHttpBinding  
   
-|Kategori|Protokol|Belirtimi ve kullanımı|  
+|Kategori|Protokol|Belirtimi ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|İleti|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [İleti framework](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|İleti|WS-adresleme 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding`, Ve `wsDualHttpBinding` zaman uyumsuz ileti, ileti bağıntısı ve Aktarım Tarafsız adresleme mekanizmaları etkinleştirmek için World Wide Web Konsorsiyumu (W3C) WS-adresleme öneriyi uygulamayı.<br /><br /> WS - tarafından izin verilen rağmen WCF WS adresleme üstbilgilerinin şifrelemeyi desteklemiyor * belirtimleri.|  
-|İleti|WS-adresleme 1.0 - meta verileri|[WS-adresleme 1.0 meta veri](http://www.w3.org/2007/05/addressing/metadata) bu protokolü desteği, 1.2 (varsayılan) ayarlamak policyversion ile ServiceMetadata davranışını - ilke sürümü ayarlayarak etkinleştirildiğinde, wsdl açıklamasıdır WS adresleme wsdl ile uyumlu olan 1,5 olarak ayarlama policyversion wsdl tanımını ws adresleme meta verileri ile uyumludur.<br /><br /> WS - tarafından izin verilen rağmen WCF WS adresleme üstbilgilerinin şifrelemeyi desteklemiyor * belirtimleri.|  
-|Güvenlik|WSS SOAP iletisi güvenlik 1.0|[WSS SOAP iletisi güvenlik 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Şu durumlarda kullanın `securityMode` özniteliği "wsSecurityOverHttp" (varsayılan) olarak ayarlanmış ve parametreleri kullanılarak yapılandırılmış bir `wsSecurity` alt öğesi.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
-|Güvenlik|WSS SOAP iletisi güvenlik UsernameToken Profil 1.1|[WSS SOAP iletisi güvenlik UsernameToken profili 1.0](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Şu durumlarda kullanın `wsSecurity` öğenin `authenticationMode` özniteliği "Username" olarak ayarlanmış.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
-|Güvenlik|WSS SOAP iletisi güvenlik X.509 sertifikası belirteci Profil 1.1|[WSS SOAP iletisi güvenlik X.509 sertifikası belirteci Profil 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> İleti koruma kullanılmak zaman `wsSecurity` öğenin `authenticationMode` özniteliği "Username", "Sertifika" veya "Hiçbiri" olarak ayarlanmış. Ayrıca, bu istemci kimlik doğrulaması için kullanmak, `wsSecurity` öğenin `authenticationMode` özniteliği "Sertifika" olarak ayarlanmış.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Güvenlik|WSS SOAP iletisi güvenlik Kerberos belirteci Profil 1.1|[WSS SOAP iletisi güvenlik Kerberos belirteci Profil 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Kullanım kimlik doğrulaması ve ileti koruması için zaman `wsSecurity` öğenin `authenticationMode` özniteliği "Windows" olarak ayarlanmış.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Güvenlik|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Güvenli bir oturum sağlamak için kullanın, `security/@mode` özniteliği "İletiye" olarak ayarlanmış ve `message/@establishSecurityContext` özniteliği "true" (varsayılan)'olarak ayarlayın.|  
-|Güvenlik|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> WS-SecureConversation (yukarıya bakın) tarafından kullanılır.|  
-|Güvenilir Mesajlaşma|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Bağlama kullanmak üzere yapılandırıldığında kullanın `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|İşlemler|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> İşlem yöneticileri arasındaki iletişim için kullanın. WCF istemcileri ve Hizmetleri her zaman yerel işlem yöneticileri kullanır.|  
-|İşlemler|WS-düzenleme|[WS-düzenleme](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> İşlem bağlamı akış kullanmasını zaman `flowTransactions` özniteliği "İzin verilen" veya "Gerekli" olarak ayarlanmış.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|İleti|SOAP 1.2|[Temel bilgileri](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Mesajlaşma framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|İleti|WS-Addressing 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web hizmeti](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding`, Ve `wsDualHttpBinding` zaman uyumsuz Mesajlaşma, ileti bağıntısı ve aktarma-bağımsız adresleme mekanizmaları etkinleştirmek için World Wide Web Consortium (W3C) WS-Addressing önerisini uygulama.<br /><br /> WS - tarafından izin verilen ancak WCF WS-Addressing üst bilgileri, şifrelemeyi desteklemiyor * belirtimleri.|  
+|İleti|WS-Addressing 1.0 - meta verileri|[WS-Addressing 1.0 meta verileri](http://www.w3.org/2007/05/addressing/metadata) bu protokolü için destek etkin (varsayılan) 1.2 ayarlayın policyversion ile ServiceMetadata davranışı - ilke sürümü ayarlayarak, wsdl açıklaması WS-Addressing wsdl ile uyumlu olan policyversion 1,5 olarak ayarlama, wsdl açıklaması ws-addressing meta verileri ile uyumludur.<br /><br /> WS - tarafından izin verilen ancak WCF WS-Addressing üst bilgileri, şifrelemeyi desteklemiyor * belirtimleri.|  
+|Güvenlik|WSS SOAP ileti güvenliği 1.0|[WSS SOAP ileti güvenliği 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Şu durumlarda kullanın `securityMode` özniteliği "wsSecurityOverHttp" (varsayılan) olarak ayarlanır ve bu parametreleri kullanılarak yapılandırılmış bir `wsSecurity` alt öğesi.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
+|Güvenlik|WSS SOAP ileti güvenlik UsernameToken Profil 1.1|[WSS SOAP ileti güvenlik UsernameToken profili 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Şu durumlarda kullanın `wsSecurity` öğenin `authenticationMode` özniteliği, "Username" için ayarlanır.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
+|Güvenlik|WSS SOAP ileti güvenlik X.509 sertifikası belirteci Profil 1.1|[WSS SOAP ileti güvenlik X.509 sertifikası belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> Kullanım iletisini koruma için zaman `wsSecurity` öğenin `authenticationMode` "Username", "Sertifika" veya "None" özniteliğini ayarlayın. Ayrıca, bu istemci kimlik doğrulaması için kullanmak, `wsSecurity` öğenin `authenticationMode` özniteliği, "Sertifika" ayarlanır.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|Güvenlik|WSS SOAP ileti güvenlik Kerberos belirteci Profil 1.1|[WSS SOAP ileti güvenlik Kerberos belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Kullanım kimlik doğrulaması ve ileti koruma için zaman `wsSecurity` öğenin `authenticationMode` özniteliği, "Windows" için ayarlanır.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|Güvenlik|WS-SecureConversation|[WS-SecureConversation](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Güvenli bir oturum belirtin kullanacağınız olduğunda `security/@mode` özniteliği "İleti" olarak ayarlanmışsa ve `message/@establishSecurityContext` özniteliği "true" (varsayılan) olarak ayarlayın.|  
+|Güvenlik|WS-Güven|[WS-Güven](https://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> WS-SecureConversation (yukarıya bakın) tarafından kullanılır.|  
+|Güvenilir Mesajlaşma|WS-ReliableMessaging|[WS-ReliableMessaging](https://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Bağlama kullanmak için yapılandırıldığında kullanın `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
+|İşlemler|WS-AtomicTransaction|[WS-AtomicTransaction](https://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> İşlem yöneticileri arasındaki iletişim için kullanılır. WCF istemcileri ve Hizmetleri her zaman yerel işlem yöneticileri kullanın.|  
+|İşlemler|WS-düzenleme|[WS-düzenleme](https://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> İşlem bağlamı akışının kullanın, `flowTransactions` "Verilen" veya "Required" özniteliği ayarlayın.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding ve ws2007FederationHttpBinding  
- [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ve [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğeleri üçüncü burada Federasyon senaryoları için destek sağlamak için sunulan taraf bir istemci kimlik doğrulaması için kullanılan bir belirteci verir. Tarafından kullanılan protokoller yanı sıra `wsHttpBinding`, `wsFederationHttpBinding` yararlanır:  
+ [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ve [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğeleri, üçüncü bir yerde Federasyon senaryoları için destek sağlamak için sunulmuştur şirketlerin, istemcinin kimliğini doğrulamak için kullanılan bir belirteç verir. Tarafından kullanılan protokollerin yanı sıra `wsHttpBinding`, `wsFederationHttpBinding` yararlanır:  
   
--   `WS-Trust` belirteç yayını için.  
+-   `WS-Trust` belirteç verme için.  
   
--   WSS güvenlik onaylar biçimlendirme dili (SAML) belirteci profili 1.0 ve 1.1 en yaygın olarak belirteci biçimi verdi.  
+-   WSS güvenlik onaylama işaretleme dili (SAML) belirteci Profil 1.0 ve 1.1 için en yaygın olarak belirteci biçimi çıkarılır.  
   
  Örnek:  
   
@@ -83,30 +83,30 @@ Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen belir
 </wsFederationHttpBinding>  
 ```  
   
- Daha fazla bilgi için bkz: [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ Daha fazla bilgi için [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md) .  
   
-## <a name="system-provided-metadata-bindings"></a>Sistem tarafından sağlanan meta veri bağlama  
- Aşağıdaki tablolar tarafından sunulan sistem tarafından sağlanan birlikte çalışabilir meta veri bağlamaları tarafından desteklenen protokolleri açıklamaktadır <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> sınıfı.  
+## <a name="system-provided-metadata-bindings"></a>Sistem tarafından sağlanan meta veri bağlamaları  
+ Aşağıdaki tablo tarafından kullanıma sunulan sistem tarafından sağlanan birlikte çalışabilen bir meta veri bağlamaları ile desteklenen protokolleri açıklar <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> sınıfı.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) bağlama aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) bağlama aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz. [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Kategori|Protokol|Belirtimi ve kullanımı|  
+|Kategori|Protokol|Belirtimi ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
-|İleti|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [İleti framework](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|İleti|WS-adresleme 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Taşıma|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
+|İleti|SOAP 1.2|[Temel bilgileri](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Mesajlaşma framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|İleti|WS-Addressing 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web hizmeti](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz: [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokollerini destekler. Bu bağlama işlemini kullanma hakkında daha fazla bilgi için bkz. [meta veri yayımlama](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
-|Kategori|Protokol|Belirtimi ve kullanımı|  
+|Kategori|Protokol|Belirtimi ve kullanım|  
 |--------------|--------------|-----------------------------|  
-|Taşıma|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Taşıma güvenliği etkin.|  
-|İleti|SOAP 1.2|[Primer](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [İleti framework](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|İleti|WS-adresleme 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
+|Taşıma|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Aktarım güvenliği etkinleştirilir.|  
+|İleti|SOAP 1.2|[Temel bilgileri](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Mesajlaşma framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP bağlama dahil)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|İleti|WS-Addressing 2005/08|[Adresleme 1.0 - çekirdek Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Adresleme 1.0 - SOAP Web hizmeti](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)  

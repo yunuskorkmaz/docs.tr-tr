@@ -8,18 +8,18 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: d2fbccfb3ecd7716420ca951e86f728798d25258
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8767ef0fb484d43ffad4888affebb9d6bb74cc3a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526439"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384646"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
-Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak, yönetilen arabirimi değil doğrudan kullanıma üyelere erişmek gerekecektir. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişme için iki yolla inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve bir Web sayfası içinde tanımlanan VBScript işlevleri.  
+Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak yönetilen arabirimi doğrudan kullanıma üyelere erişim ihtiyacınız olacak. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişim için iki şekilde inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve tanımlanmış bir Web sayfası VBScript işlevleri.  
   
-## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Yönetilen arabirimleri aracılığıyla gösterilmeyen üyelere erişme  
- <xref:System.Windows.Forms.HtmlDocument> ve <xref:System.Windows.Forms.HtmlElement> gösterilmeyen erişmesini dört yöntemleri sağlar. Aşağıdaki tabloda, türlerini ve bunların karşılık gelen yöntemleri gösterir.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Yönetilen arabirimleri aracılığıyla gösterilmeyen öğelere erişme  
+ <xref:System.Windows.Forms.HtmlDocument> ve <xref:System.Windows.Forms.HtmlElement> gösterilmeyen erişiminizi etkinleştirecek olan dört yöntemleri sağlar. Aşağıdaki tabloda, türleri ve bunların karşılık gelen yöntemleri gösterilmektedir.  
   
 |Üye Türü|Yöntemleri|  
 |-----------------|-----------------|  
@@ -29,7 +29,7 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
 |Olaylar (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
 |Olaylar (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- Bu yöntemleri kullandığınızda, doğru temel türünde bir öğe sahip olduğunuz varsayılır. Dinlemek istediğinizi varsayalım `Submit` olayı bir `FORM` bir HTML öğesindeki sayfası, böylece üzerinde bazı ön işleme gerçekleştirebilirsiniz `FORM`ait kullanıcı bunları sunucuya göndermeden önce değerleri. İdeal olarak, HTML üzerinde denetim varsa, tanımlayın `FORM` benzersiz olmasını `ID` özniteliği.  
+ Bu yöntemi kullandığınızda, temel alınan doğru türünde bir öğe sahip olduğunuz varsayılır. Dinlenecek istediğinizi varsayın `Submit` olayı bir `FORM` öğe üzerinde bir HTML sayfası, böylece bazı ön işleme gerçekleştirebileceğiniz `FORM`ait kullanıcı bunları server için göndermeden önce değerleri. İdeal olarak, HTML denetime varsa tanımlayın `FORM` benzersiz olmasını `ID` özniteliği.  
   
 ```  
 <HTML>  
@@ -47,15 +47,15 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
 </HTML>  
 ```  
   
- Bu sayfaya yükledikten sonra <xref:System.Windows.Forms.WebBrowser> kullanabileceğiniz denetimi <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> alma yöntemi `FORM` çalıştırma kullanarak `form1` bağımsız değişkeni olarak.  
+ Bu sayfaya yükledikten sonra <xref:System.Windows.Forms.WebBrowser> kullanabileceğiniz denetimi <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> alınacak yöntemi `FORM` kullanarak çalışma zaman `form1` bağımsız değişken olarak.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>Yönetilmeyen arabirimler erişme  
- Yönetilen HTML DOM gösterilmeyen her DOM sınıfı tarafından kullanıma sunulan yönetilmeyen Bileşen Nesne Modeli (COM) arabirimlerini kullanarak da erişebilirsiniz. Bu gösterilmeyen karşı birkaç çağrı yapmak varsa veya gösterilmeyen yönetilen HTML DOM tarafından Sarmalanan olmayan diğer yönetilmeyen arabirimler döndürürse önerilir.  
+ Yönetilen HTML DOM gösterilmeyen her DOM sınıfı tarafından kullanıma sunulan yönetilmeyen Bileşen Nesne Modeli (COM) arabirimlerini kullanarak da erişebilirsiniz. Gösterilmeyen üyelere karşı çeşitli çağrılar yapmak varsa veya gösterilmeyen yönetilen HTML DOM tarafından Sarmalanan değil diğer yönetilmeyen arabirimler döndürürse bu önerilir  
   
- Aşağıdaki tabloda tüm yönetilen HTML DOM kullanıma sunulan yönetilmeyen arabirimler gösterir Her bağlantı kullanımı ve örnek kod bir açıklama için tıklayın.  
+ Aşağıdaki tabloda tüm yönetilen HTML DOM kullanıma sunulan yönetilmeyen arabirimler gösterir Kullanım ve örnek kod açıklaması için her bağlantısına tıklayın.  
   
 |Tür|Yönetilmeyen arabirimi|  
 |----------|-------------------------|  
@@ -64,12 +64,12 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Bu desteklenmeyen olsa COM arabirimleri kullanmak için en kolay yolu, uygulamanızdan (MSHTML.dll) yönetilmeyen HTML DOM kitaplığına bir başvuru eklemektir. Daha fazla bilgi için bkz: [Bilgi Bankası makalesi 934368](http://support.microsoft.com/kb/934368).  
+ Bu desteklenmeyen olmasına rağmen COM arabirimleri kullanması için en kolay yolu (MSHTML.dll) yönetilmeyen HTML DOM kitaplığına bir başvuru, uygulamanızdan eklemektir. Daha fazla bilgi için [Bilgi Bankası makalesi 934368](https://support.microsoft.com/kb/934368).  
   
-## <a name="accessing-script-functions"></a>Komut dosyası işlevleri erişme  
- HTML sayfası gibi bir komut dosyası dili kullanarak bir veya daha fazla işlevleri tanımlayabilirsiniz [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] veya VBScript. Bu işlevler içine yerleştirilen bir `SCRIPT` sayfasında sayfasında ve isteğe bağlı veya bir olaya yanıt olarak DOM üzerinde çalıştırılabilir  
+## <a name="accessing-script-functions"></a>Betik işlevleri erişme  
+ Bir HTML sayfası gibi bir komut dosyası dili kullanarak bir veya daha fazla işlevleri tanımlayabilirsiniz [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] veya VBScript. Bu işlevlerin içine yerleştirilen bir `SCRIPT` sayfasında sayfasında ve isteğe bağlı veya bir olaya yanıt olarak yerli üzerinde çalıştırılabilir  
   
- Tanımladığınız kullanılarak bir HTML sayfasında herhangi bir komut dosyası işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi bir HTML öğesi döndürürse, bu dönüş sonucu dönüştürmek için bir cast kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntılar ve kod örneği için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ Tanımladığınız bir HTML sayfasını kullanarak içinde herhangi bir betik işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi HTML öğesi döndürürse, bu dönüş sonuç dönüştürmek için bir yayın kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntıları ve örnek kod için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetilen HTML Belgesi Nesne Modelini Kullanma](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -7,19 +7,19 @@ dev_langs:
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215d23be53fad330b6ab056af83ad907f207259e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495138"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386551"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Kullaıcı Adı İstemcisi ile İleti Güvenliği
-Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve ileti düzeyi güvenlik kullanılarak güvenli istemci gösterir. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parola kullanarak kimliğini doğrular.  
+Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve istemci ileti düzeyi güvenliği kullanılarak güvenli gösterir. Hizmet bir X.509 sertifikası ile doğrulanır. İstemci, bir kullanıcı adı ve parolasını kullanarak kimliğini doğrular.  
   
  Örnek bir uygulama için bkz: [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
- ![Kullanıcı adı kimlik doğrulaması kullanarak ileti güvenliği](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![İleti güvenliği kullanıcı adı kimlik doğrulaması kullanarak](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
@@ -27,20 +27,20 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve i
 |Birlikte Çalışabilirlik|Windows Communication Foundation (WCF) yalnızca|  
 |Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir|  
 |Kimlik doğrulaması (istemci)|Kullanıcı adı/parola|  
-|Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanarak|  
-|Gizliliği|Evet, paylaşılan güvenlik bağlamını kullanarak|  
+|Bütünlüğü|Evet, paylaşılan bir güvenlik bağlamı kullanma|  
+|Gizliliği|Evet, paylaşılan bir güvenlik bağlamı kullanma|  
 |Taşıma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod yapılandırma gerektirmeden kullanarak tek başına bir hizmet oluşturun.  
+-   Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
   
--   Sağlanan yapılandırma kullanarak bir hizmet oluşturun, ancak uç tanımlamıyor.  
+-   Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod ileti güvenliği kullanan hizmet uç noktası oluşturulacağını gösterir.  
+ Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturma gösterilmektedir.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
@@ -91,13 +91,13 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve i
 ## <a name="client"></a>İstemci  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod istemci oluşturur. Bağlama ileti mod güvenliği ve istemci kimlik bilgisi türü ayarlanır `UserName`. Kullanıcı adı ve parola yalnızca kodu (Kısım yapılandırılabilir değildir) kullanılarak belirtilebilir. Uygulama düzeyinde yapılması gerekir çünkü kullanıcı adını ve parolasını döndürmek için kod burada gösterilmez. Örneğin, kullanıcıdan veri sorgulamak için bir Windows Forms iletişim kutusunu kullanın.  
+ Aşağıdaki kod, istemci oluşturur. İleti modu güvenlik bağlamadır ve istemci kimlik bilgisi türü `UserName`. Kullanıcı adı ve parola yalnızca kod (yapılandırılabilir değildir) kullanılarak belirtilebilir. Kullanıcı adını ve parolasını döndürmek için kodu, uygulama düzeyinde yapılması gerekir çünkü burada gösterilmez. Örneğin, kullanıcıdan veri sorgulamak için bir Windows Forms iletişim kutusunu kullanın.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki kod istemci yapılandırır. Bağlama ileti mod güvenliği ve istemci kimlik bilgisi türü ayarlanır `UserName`. Kullanıcı adı ve parola yalnızca kodu (Kısım yapılandırılabilir değildir) kullanılarak belirtilebilir.  
+ Aşağıdaki kod, istemciyi yapılandırır. İleti modu güvenlik bağlamadır ve istemci kimlik bilgisi türü `UserName`. Kullanıcı adı ve parola yalnızca kod (yapılandırılabilir değildir) kullanılarak belirtilebilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -132,4 +132,4 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmetini ve i
  [İleti Güvenliği Kullanıcı Adı](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<Kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

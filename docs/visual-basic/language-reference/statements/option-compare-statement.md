@@ -1,5 +1,5 @@
 ---
-title: Option Compare Deyimi
+title: Option Compare deyimi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 675ad649650d9fbc6f2c0f1dc689aa682ca6103c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605309"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385113"
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
-Dize verilerini karşılaştırılırken kullanılacak varsayılan karşılaştırma yöntemi bildirir.  
+Dize verileri karşılaştırılırken kullanılan varsayılan karşılaştırma yöntemini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,52 +38,52 @@ Option Compare { Binary | Text }
   
 |Terim|Tanım|  
 |---|---|  
-|`Binary`|İsteğe bağlı. Dize karşılaştırmaları iç ikili gösterimlerini karakterleri türetilmiş bir sıralama düzeni göre sonuçlanır.<br /><br /> Bu tür karşılaştırma, özellikle dizeleri metin olarak yorumlanacağını olmayan karakterleri içerebilir yararlıdır. Bu durumda, büyük/küçük harfe gibi alfabetik eşitliğini eğilim karşılaştırmalar için istemezsiniz.|  
-|`Text`|İsteğe bağlı. Dize karşılaştırmaları sisteminizin bölgeye göre belirlenir büyük küçük harf duyarsız metin sıralama düzenini temel sonuçlanır.<br /><br /> Bu tür karşılaştırma dizelerinizi tüm metin karakterleri içeriyorsa ve büyük/küçük harfe ve yakından ilgili harf gibi hesap alfabetik eşitliğini alırken Karşılaştırılacak istiyorsanız yararlıdır. Örneğin, düşünmek isteyebilirsiniz `A` ve `a` eşit olması ve `Ä` ve `ä` önce gelmesini `B` ve `b`.|  
+|`Binary`|İsteğe bağlı. Dize karşılaştırmaları karakterlerin dahili ikili gösterimi türetilmiş bir sıralama düzeni göre sonuçlanır.<br /><br /> Bu karşılaştırma türünü dizeler metin olarak yorumlanacağını olmayan karakterler içeren özellikle yararlı olur. Bu durumda, eğilim karşılaştırmalar büyük/küçük harf duyarsızlığı gibi alfabetik eşitliğini için istemezsiniz.|  
+|`Text`|İsteğe bağlı. Dize karşılaştırmaları büyük/küçük harfe metin sıralama düzeni, sisteminizin yerel ayarı tarafından belirlenen göre sonuçlanır.<br /><br /> Bu tür bir karşılaştırma dizeleri, tüm metin karakterleri ve hesabı gibi büyük/küçük harfe ve yakından ilgili harf alfabetik denklikleri alırken Karşılaştırılacak istiyorsanız kullanışlıdır. Örneğin, düşünmek isteyebilirsiniz `A` ve `a` eşit olmasını ve `Ä` ve `ä` önce gelmesi `B` ve `b`.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullandıysanız, `Option Compare` ifadesi, başka bir kaynak kod deyimleri önce bir dosyada görünmelidir.  
+ Kullandıysanız, `Option Compare` deyimi, bir dosyada başka bir kaynak kod deyimlerini önce görünmelidir.  
   
- `Option Compare` Deyimi dize karşılaştırma yöntemi belirtir (`Binary` veya `Text`).  Varsayılan metin karşılaştırma yöntemi `Binary`.  
+ `Option Compare` Deyimi dize karşılaştırma yöntemini belirtir (`Binary` veya `Text`).  Varsayılan metin karşılaştırma yöntemi: `Binary`.  
   
- A `Binary` karşılaştırma her dizedeki her karakter sayısal Unicode değerini karşılaştırır. A `Text` karşılaştırma sözcük anlamlarını geçerli kültürü göre her Unicode karakter karşılaştırır.  
+ A `Binary` karşılaştırması, her dizedeki her karakterin sayısal Unicode değerini karşılaştırır. A `Text` karşılaştırma, sözcük anlamını geçerli kültüründeki göre her bir Unicode karakter karşılaştırır.  
   
- Microsoft Windows'daki sıralama düzeni kod sayfası tarafından belirlenir. Daha fazla bilgi için bkz: [kod sayfaları](/cpp/c-runtime-library/code-pages).  
+ Microsoft Windows içinde sıralama düzeni kod sayfası tarafından belirlenir. Daha fazla bilgi için [kod sayfaları](/cpp/c-runtime-library/code-pages).  
   
- Aşağıdaki örnekte, İngilizce/Avrupa kod sayfası (ANSI 1252) karakter kullanarak sıralanır `Option Compare Binary`, tipik bir ikili sıralama üretir.  
+ Aşağıdaki örnekte, İngilizce/Avrupa kod sayfası (ANSI 1252) karakterleri kullanılarak sıralanır `Option Compare Binary`, tipik ikili sıralama düzeninde üretir.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Ne zaman aynı kod sayfasını aynı karakterler sıralandığını kullanarak `Option Compare Text`, aşağıdaki metni sıralama düzeni üretilir.  
+ Ne zaman aynı aynı kod sayfasında karakter sıralanır kullanarak `Option Compare Text`, aşağıdaki metni sıralama düzeninin üretilir.  
   
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-## <a name="when-an-option-compare-statement-is-not-present"></a>Bir seçenek karşılaştırdığınızda deyimi mevcut değil  
- Kaynak kodu içermiyorsa bir `Option Compare` deyimi, **seçeneği karşılaştırmak** ayarı [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanırsanız, ayarı tarafından belirtilen [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneği kullanılır.  
+## <a name="when-an-option-compare-statement-is-not-present"></a>Bir seçenek karşılaştırırken deyimi mevcut değil  
+ Kaynak kodu içermiyorsa bir `Option Compare` deyimi **Option Compare** ayarını [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisini kullanmak, ayarı tarafından belirtilen [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneği kullanılır.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-#### <a name="to-set-option-compare-in-the-ide"></a>IDE içinde ayarlama seçeneği karşılaştırmak için  
+#### <a name="to-set-option-compare-in-the-ide"></a>Option Compare IDE içinde ayarlamak için  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünde tıklatın **özellikleri**.  
+1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-2.  Tıklatın **derleme** sekmesi.  
+2.  Tıklayın **derleme** sekmesi.  
   
-3.  Değer kümesinde **seçeneği karşılaştırmak** kutusu.  
+3.  Değer kümesindeki **Option Compare** kutusu.  
   
- Bir proje oluşturduğunuzda **seçeneği karşılaştırmak** ayarı **derleme** sekmesini ayarlanmış **seçeneği karşılaştırmak** ayarı **seçenekleri** iletişim kutusu. Bu, üzerinde ayarı değiştirmek için **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda, genişletin **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarı **VB varsayılanları** olan **ikili**.  
+ Bir proje oluşturduğunuzda **Option Compare** ayarını **derleme** sekmesinde ayarlanmış **Option Compare** ayarı **seçenekleri** iletişim kutusu. Bu, üzerinde ayarı değiştirmek için **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarda **VB varsayılanları** olduğu **ikili**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Option Compare komut satırında ayarlamak için  
   
--   Dahil [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneği **vbc** komutu.  
+-   Dahil [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) derleyici seçeneğini **vbc** komutu.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Option Compare` ikili karşılaştırma varsayılan dize karşılaştırma yöntemi olarak ayarlamak için ifade. Bu kodu kullanmak için açıklamadan çıkarın `Option Compare Binary` deyimi ve kaynak dosyasının en üstte yerleştirin.  
+ Aşağıdaki örnekte `Option Compare` ikili karşılaştırma varsayılan dize karşılaştırma yöntemini ayarlamak için ifade. Bu kodu kullanmak için açıklama durumundan çıkarın `Option Compare Binary` bildirimi ve kaynak dosyasının en üstüne yerleştir.  
   
  [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kullanır `Option Compare` büyük küçük harf duyarsız metin sıralama düzeni varsayılan dize karşılaştırma yöntemi olarak ayarlamak için ifade. Bu kodu kullanmak için açıklamadan çıkarın `Option Compare Text` deyimi ve kaynak dosyasının en üstte yerleştirin.  
+ Aşağıdaki örnekte `Option Compare` varsayılan dize karşılaştırma yöntemini büyük/küçük harfe metin sıralama düzeni ayarlamak için ifade. Bu kodu kullanmak için açıklama durumundan çıkarın `Option Compare Text` bildirimi ve kaynak dosyasının en üstüne yerleştir.  
   
  [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   

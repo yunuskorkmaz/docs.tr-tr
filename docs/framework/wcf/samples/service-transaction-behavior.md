@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391856"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
-Bu örnek, bir istemci Eşgüdümlü işlem kullanımını ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesap makinesi hizmetinin uygular, ancak bir veritabanı tablosu ve hesaplama işlemleri için toplam çalışan bir durum bilgisi olan gerçekleştirilen işlemler server günlüğünü korumak için genişletilir. Kalıcı yazma sunucu günlüğü tablosu için bağımlı istemci işlemi tamamlanmazsa Eşgüdümlü istemci işlem - sonuca Web hizmeti işlemi veritabanına güncelleştirmeleri iletilmez sağlar.  
+Bu örnek, bir istemci Eşgüdümlü işlem kullanımı ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesaplayıcı hizmet uygular, ancak gerçekleştirilen işlemlerin bir veritabanı tablosu ve hesap makinesi işlemleri için toplam çalışan bir durum bilgisi olan bir sunucu günlüğü korumak için genişletilir. Sunucu günlüğü tablosu kalıcı Yazar bağımlı istemci işlemi tamamlanmazsa, bir istemci Eşgüdümlü işlem - sonucunu Web hizmeti işlemi güncelleştirmeleri veritabanına kaydedilmiş olmamasını sağlar.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Tüm işlemlerini istekleriyle akışını bir işlem gerektiren hizmet sözleşmesini tanımlar:  
+ Tüm işlemlerin isteklerle akışını bir işlem gerektiren hizmet sözleşmesini tanımlar:  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
@@ -38,7 +39,7 @@ public interface ICalculator
 }  
 ```  
   
- Gelen işlem akışını etkinleştirmek için hizmet sistem tarafından sağlanan wsHttpBinding kümesine transactionFlow özniteliği ile yapılandırılan `true`. Bu bağlama birlikte çalışabilen WSAtomicTransactionOctober2004 protokolünü kullanır:  
+ Gelen işlem akışını etkinleştirmek için hizmeti sistem tarafından sağlanan wsHttpBinding kümesine transactionFlow özniteliğine sahip yapılandırılmış `true`. Bu bağlama birlikte çalışabilen WSAtomicTransactionOctober2004 protokolünü kullanır:  
   
 ```xml  
 <bindings>  
@@ -48,7 +49,7 @@ public interface ICalculator
 </bindings>  
 ```  
   
- Hem başlatmadan sonra hizmet ve işlem, istemci bağlantı kapsamı içinde bu işlem birkaç hizmet işlemlerini erişir ve ardından işlem tamamlandıktan ve bağlantıyı kapatır:  
+ Her iki başlatmadan sonra hizmet ve işlem, istemci bağlantısı bu işlemin kapsamı içinde birkaç hizmet işlemleri erişen hareketi tamamlar ve bağlantıyı kapatır:  
   
 ```  
 // Create a client  
@@ -89,27 +90,27 @@ Console.WriteLine("Transaction committed");
 client.Close();  
 ```  
   
- Hizmet üzerinde hizmet işlem davranışı etkileyen üç öznitelik ve bunu aşağıdaki yollarla yapın:  
+ Hizmet, hizmet işlem davranışı etkileyen üç öznitelikleri vardır ve aşağıdaki yollarla bunu:  
   
 -   Üzerinde `ServiceBehaviorAttribute`:  
   
-    -   `TransactionTimeout` Özelliği, içinde bir işlem tamamlanmalıdır zaman aralığını belirtir. Bu örnekte 30 saniye olarak ayarlanır.  
+    -   `TransactionTimeout` Özelliği, içinde bir işlem tamamlamalısınız süreyi belirtir. Bu örnekte, 30 saniye olarak ayarlanır.  
   
-    -   `TransactionIsolationLevel` Özelliği, hizmeti destekler yalıtım düzeyini belirtir. Bu, istemcinin yalıtım düzeyi eşleştirmek için gereklidir.  
+    -   `TransactionIsolationLevel` Özellik hizmetinin desteklediği yalıtım düzeyini belirtir. Bu, istemcinin yalıtım düzeyi eşleştirmek için gereklidir.  
   
-    -   `ReleaseServiceInstanceOnTransactionComplete` Özelliği, bir işlem tamamlandığında, hizmet örneği geri dönüştürüldüğünde olup olmadığını belirtir. Ayarlayarak `false`, hizmet işlemi istekler genelinde aynı hizmet örneği bulundurur. Bu, çalışan toplam korumak için gereklidir. Varsa kümesine `true`, her eylem tamamlandıktan sonra yeni bir örneği oluşturulur.  
+    -   `ReleaseServiceInstanceOnTransactionComplete` Özelliği, bir işlem tamamlandığında, hizmet örneği geri olup olmadığını belirtir. Ayarlayarak `false`, hizmetin işlemi istekler genelinde aynı hizmet örneği tutar. Değişen Toplam korumak için gereklidir. Varsa kümesine `true`, her eylem tamamlandıktan sonra yeni bir örneği oluşturulur.  
   
-    -   `TransactionAutoCompleteOnSessionClose` Özelliği, oturumu kapattığında bekleyen işlemler tamamlandıktan olup olmadığını belirtir. Ayarlayarak `false`, tek tek işlemleri ayarlayın ya da gerekli `OperationBehaviorAttribute``TransactionAutoComplete` özelliğine `true` veya açıkça bir çağrı gerektirecek şekilde `SetTransactionComplete` işlemleri tamamlamak için yöntem. Bu örnek, her iki yaklaşımın gösterir.  
+    -   `TransactionAutoCompleteOnSessionClose` Özelliği, bekleyen işlemler oturumu kapattığında tamamlanıp tamamlanmadığını belirtir. Ayarlayarak `false`, tek işlemler için ayarlayın ya da gerekli `OperationBehaviorAttribute``TransactionAutoComplete` özelliğini `true` veya açıkça bir çağrı gerektirecek şekilde `SetTransactionComplete` işlemleri tamamlamak için yöntemi. Bu örnek iki yaklaşımı gösterir.  
   
 -   Üzerinde `ServiceContractAttribute`:  
   
-    -   `SessionMode` Özelliği, hizmet uygun istekleri mantıksal bir oturuma karşılık gelen olup olmadığını belirtir. Bu hizmet için OperationBehaviorAttribute TransactionAutoComplete özelliğinin ayarlandığı işlemleri içerdiğinden `false` (çarpma ve bölme), `SessionMode.Required` belirtilmesi gerekir. Örneğin, Çarp işlemi işlemini tamamlaması değil ve bunun yerine kullanarak tamamlamak için bir sonraki çağrı bölme kullanır. `SetTransactionComplete` yöntemi; hizmeti bu işlemleri aynı oturumunda yaşanan belirlemek mümkün olması gerekir.  
+    -   `SessionMode` Özelliği, hizmet, mantıksal bir oturuma uygun istekleri ilişkilendiren olup olmadığını belirtir. Bu hizmet işlemleri için OperationBehaviorAttribute TransactionAutoComplete özelliğinin ayarlandığı içerdiğinden `false` (çarpma ve bölme), `SessionMode.Required` belirtilmesi gerekir. Örneğin, birden çok kez işlemi kendi işlem tamamlanmaz ve bunun yerine kullanarak tamamlamak için bir sonraki çağrı sırasında bölme kullanır `SetTransactionComplete` yöntemi; hizmeti bu işlemleri aynı oturumunda oluşan belirlemek mümkün olması gerekir.  
   
 -   Üzerinde `OperationBehaviorAttribute`:  
   
-    -   `TransactionScopeRequired` Özelliği, işlem Eylemler bir işlem kapsamı içinde gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Bu ayar `true` bu tüm işlemleri için örnek ve, tüm işlemleri için kendi işlem istemci akar olduğundan, Eylemler, istemci işlem kapsamı içinde gerçekleşir.  
+    -   `TransactionScopeRequired` Özelliği, işlem eylemlerini bir işlem kapsamında yürütülüp yürütülmeyeceğini belirtir. Bu ayar `true` bu tüm işlemler için örnek ve istemci için tüm işlemleri, işlem akışları çünkü bu istemci işlemi kapsamında eylemler gerçekleşir.  
   
-    -   `TransactionAutoComplete` Özelliği, İşlenmeyen özel durumlar oluşursa işlemin hangi yöntemi yürütüldükten otomatik olarak tamamlandı olup olmadığını belirtir. Daha önce açıklandığı gibi bu ayar `true` ekleme ve çıkarma işlemleri için ancak `false` Multiply ve bölme işlemleri. Ekleme ve çıkarma işlemleri eylemlerini otomatik olarak tamamlamak, bölme için açık bir çağrı aracılığıyla, işlemlerini tamamlamadan `SetTransactionComplete` yöntemi Multiply eylemlerini tamamlanmazsa, ancak bunun yerine bağlı kullanır ve bir sonraki çağrı gibi gerektirir , Eylemleri tamamlaması için bölün.  
+    -   `TransactionAutoComplete` Özelliği, İşlenmeyen özel durumlar oluşursa yöntemi yürütür işlem otomatik olarak tamamlanıp tamamlanmadığını belirtir. Daha önce açıklandığı gibi bu ayar `true` ekleme ve çıkarma işlemlerinde ancak `false` Multiply ve bölme işlemleri için. Eylemlerini otomatik olarak ekleme ve çıkarma işlemleri tamamlamak, açık bir çağrı aracılığıyla eylemlerini Böl tamamlandıktan `SetTransactionComplete` yöntemi Multiply eylemlerini tamamlamak değil ancak bunun yerine bağlı kullanır ve bir sonraki çağrı gibi gerektirir Bölme, işlemleri tamamlamak için kullanılır.  
   
  Öznitelikli hizmet uygulaması aşağıdaki gibidir:  
   
@@ -165,7 +166,7 @@ public class CalculatorService : ICalculator
 }   
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Starting transaction  
@@ -179,7 +180,7 @@ Transaction committed
 Press <ENTER> to terminate client.  
 ```  
   
- Hizmet işlemi isteklerin günlüğe yazılmasını hizmetin konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Hizmet işlemi isteklerini günlüğe hizmet konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Press <ENTER> to terminate service.  
@@ -190,77 +191,77 @@ Creating new service instance...
   Writing row 4 to database: Dividing 495 by 15  
 ```  
   
- Çalışan toplam tutma yanı sıra unutmayın hesaplamalar hizmet örnekleri (Bu örnek için bir örnek) oluşturulmasını raporları ve işlem isteklerini bir veritabanında günlüğe kaydeder. Tüm istekleri istemcinin işlem akışı nedeniyle, tüm veritabanı işlemleri geri alınıyor bu işlemi tamamlamak için herhangi bir hata oluşur. Bu gösterilen çeşitli yollarla:  
+ Değişen Toplam tutmanın yanı sıra dikkat edin, hesaplamaların hizmet örnekleri (Bu örnek için bir örnek) oluşturulmasını raporları ve işlem istekleri bir veritabanına kaydeder. Tüm isteklerin istemcinin işlem akış olduğundan, bu işlemi tamamlamak için herhangi bir hata geri alınan veritabanı işlemlerinin tümünde sonuçlanır. Bu gösterildiği çeşitli şekillerde:  
   
--   İstemcinin çağrısına çıkışı açıklama `tx.Complete`() ve yeniden çalıştırın - bu sonuçları istemci işlemini tamamlamadan işlem kapsamı çıkılıyor.  
+-   İstemcinin çağrısına yorum `tx.Complete`() ve yeniden çalıştır - bu sonuçları istemci kendi işlem tamamlamadan işlem kapsamı çıkılıyor.  
   
--   Out bölme hizmet işlemi çağrısı - bu sonuçları tarafından başlatılan eylemi engellemek yorum işlemin tamamlanmasını çarpma ve böylece istemcinin işlem sonunda de tamamlamak başarısız olur.  
+-   Açıklama çıkış bölme hizmet işlemi çağrısı - eylemi tarafından başlatılan bu sonuçları önlemek çarpma işleminin tamamlanmasını ve bu nedenle istemcinin işlem sonuçta da tamamlamak başarısız olur.  
   
--   İstemcinin işlem kapsamı içinde herhangi bir yere işlenmeyen bir özel durum - bu, bir işlem tamamlanmadan benzer şekilde istemci önler.  
+-   İstemci işlem kapsamı içindeki herhangi bir yere işlenmeyen bir özel durum - bu benzer şekilde istemci kendi işlem önler.  
   
- Bunlardan herhangi birinde bu kapsamında gerçekleştirilen işlemler hiçbiri kaydedilir ve satır sayısı veritabanına kalıcı sonucudur değil artırın.  
+ Bu kapsam içinde gerçekleştirilen işlemleri hiçbiri kararlıyız ve veritabanında satır sayısı kalıcı bunlardan herhangi birinde sonucudur değil artırın.  
   
 > [!NOTE]
->  Derleme işleminin bir parçası veritabanı dosyasını bin klasörüne kopyalanır. Visual Studio projeye dahil dosya yerine günlüğe kalıcı satırları izlemek için veritabanı dosyası bu kopyayı bakmak gerekir.  
+>  Yapı işleminin bir parçası olarak veritabanı dosyasını bin klasörüne kopyalanır. Bu Visual Studio projesinde bulunan dosya yerine günlüğe kalıcı satırları gözlemlemek için veritabanı dosyasının kopyasını gözden geçirmeniz gerekir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  SQL Server 2005 Express Edition veya SQL Server 2005'in yüklü olduğundan emin olun. Hizmetin App.config dosyasında veritabanı `connectionString` kümesi veya etkileşimleri appSettings ayarlayarak devre dışı bırakılabilir veritabanı olabilir `usingSql` değeri `false`.  
+1.  SQL Server 2005 Express Edition veya SQL Server 2005'in yüklü olduğundan emin olun. Hizmetin App.config dosyasında, veritabanı `connectionString` kümesi veya etkileşimler appSettings ayarlayarak devre dışı bırakılabilir veritabanı `usingSql` değerini `false`.  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Makine genelinde örneği çalıştırırsanız, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirmek ve Windows Communication Foundation (WCF) işlemleri ağ etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir destekler.  
+ Makineler arasında örneği çalıştırırsanız, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirme ve Windows Communication Foundation (WCF) işlemleri ağ etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir destekler.  
   
-### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örnek makinelerde çalışmasını desteklemek için yapılandırmak için  
+### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örnek makinelerde çalışan destekleyecek şekilde yapılandırmak için  
   
-1.  Hizmeti makinede MSDTC gelen ağ işlemlerine izin verecek biçimde yapılandırın.  
+1.  Hizmeti makinede MSDTC gelen ağ işlemleri izin verecek şekilde yapılandırın.  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**ve ardından **Bileşen Hizmetleri**.  
+    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
     2.  Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    3.  Üzerinde **MSDTC** sekmesini tıklatın, **Güvenlik Yapılandırması**.  
+    3.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
     4.  Denetleme **ağ DTC erişimi** ve **izin gelen**.  
   
-    5.  Tıklatın **Evet** MS DTC hizmetini yeniden başlatın ve ardından **Tamam**.  
+    5.  Tıklayın **Evet** MS DTC hizmetini yeniden başlatın ve ardından **Tamam**.  
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-2.  Hizmet makine ve istemci makine Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) dışarıda tutulan uygulamalar listesine eklemek için Windows Güvenlik Duvarı yapılandırın:  
+2.  Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hariç tutulan uygulamalar listesine eklemek için Windows Güvenlik Duvarı hizmeti makinesi ve istemci makine üzerinde yapılandırın:  
   
-    1.  Windows Güvenlik Duvarı uygulama Denetim Masası'ndan çalıştırın.  
+    1.  Windows Güvenlik Duvarı uygulaması Denetim Masası'ndan çalıştırın.  
   
-    2.  Gelen **özel durumları** sekmesini tıklatın, **Program Ekle**.  
+    2.  Gelen **özel durumları** sekmesinde **Program Ekle**.  
   
     3.  C:\WINDOWS\System32 klasöre göz atın.  
   
-    4.  MSDTC.exe tıklatıp **açık**.  
+    4.  MSDTC.exe seçip tıklayın **açık**.  
   
-    5.  Tıklatın **Tamam** kapatmak için **Program Ekle** iletişim kutusu ve tıklatın **Tamam** Windows Güvenlik Duvarı uygulamasını kapatın.  
+    5.  Tıklayın **Tamam** kapatmak için **Program Ekle** iletişim kutusu seçeneğine tıklayıp **Tamam** Windows Güvenlik Duvarı uygulamasını kapatın.  
   
-3.  İstemci makinesinde MSDTC giden ağ işlemlerine izin verecek biçimde yapılandırın:  
+3.  İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
   
-    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**ve ardından **Bileşen Hizmetleri**.  
+    1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
     2.  Sağ **Bilgisayarım** seçip **özellikleri**.  
   
-    3.  Üzerinde **MSDTC** sekmesini tıklatın, **Güvenlik Yapılandırması**.  
+    3.  Üzerinde **MSDTC** sekmesinde **Güvenlik Yapılandırması**.  
   
     4.  Denetleme **ağ DTC erişimi** ve **Gidene izin ver**.  
   
-    5.  Tıklatın **Evet** MS DTC hizmetini yeniden başlatın ve ardından **Tamam**.  
+    5.  Tıklayın **Evet** MS DTC hizmetini yeniden başlatın ve ardından **Tamam**.  
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

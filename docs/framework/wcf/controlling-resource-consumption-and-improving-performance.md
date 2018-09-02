@@ -2,50 +2,51 @@
 title: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: ee94ae7c570156d870b93311365ad52b815f12d5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1e0512ce62f5a7b25546e8824a745fdaabb5ec72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805531"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397881"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kaynak Tüketimini Denetleme ve Performansı Geliştirme
-Bu konuda iş denetim kaynak tüketimini ve performans ölçümleri etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisinin çeşitli özellikleri açıklanmaktadır.  
-  
-## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF kaynak tüketimini sınırlamak özellikleri  
- Windows Communication Foundation (WCF), belirli türde bir işlemler güvenlik veya performans amacıyla kısıtlamalar geçerlidir. Bu kısıtlamaların iki ana biçimde, kotaları ve kısıtlamaları gelir. *Kotalar* ulaştı veya aşıldı sistemde belirli bir noktada hemen bir özel durum harekete kısıtlamalardır. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz kısıtlamalardır. Bunun yerine, bir kısıtlama sınırına ulaşıldığında, işleme devam eder ancak sınırlarda tarafından kısıtlama değeri ayarlayın. Sınırlı bu işlem başka bir yerde bir özel durum harekete, ancak bu uygulamanın bağlıdır.  
-  
- Kotaları ve kısıtlamaları arasında ayrım yanı sıra kısıtlayan bazı özellikleri seri hale getirme düzeyinde, bazı aktarım düzeyinde ve bazı uygulama düzeyinde bulunur. Örneğin, kota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, tüm sistem tarafından sağlanan aktarım bağlama öğeleri tarafından uygulanan ayarlanmış 65,536 bayt varsayılan olarak hizmet reddi saldırılarına karşı bir hizmet olarak aşırı bellek neden olarak yapmasının kötü amaçlı istemcileri azaltabilir Tüketim. (Tipik olarak, performans bu değeri azaltarak artırabilirsiniz.)  
-  
- Bir seri hale getirme kota örneğidir <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> tek bir seri hale getirici serileştiren veya seri durumdan çıkarır nesneler en fazla sayısını belirtir özelliği <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> yöntem çağrısı. Uygulama düzeyi kısıtlama örneğidir <xref:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentSessions%2A?displayProperty=nameWithType> varsayılan olarak 10 eşzamanlı süre sonuyla kanalı bağlantıları sayısını kısıtlar özelliği. (Kotaları aksine bu kısıtlama değeri ulaştıysanız, uygulamanın devam ettirir, ancak yeni hiçbir süre sonuyla kanalı diğer süre sonuyla kanallarını sonlanana yeni istemciler bağlanamıyor anlamı kabul eder.)  
-  
- Bu denetimler, belirli türde bir saldırılarına karşı Giden kutusu azaltma sağlamak ya da performans ölçümleri bellek alanını, başlangıç saati vb. gibi artırmak için tasarlanmıştır. Ancak, uygulamaya bağlı olarak, bu denetimleri hizmet uygulama performansını olumsuz yönde hiç çalışma uygulamanın veya engeller. Örneğin, akış video için tasarlanmış bir uygulama varsayılan kolayca aşabilir <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> özelliği. Bu konuda çeşitli denetimleri genel bir bakış uygulamaları WCF tüm düzeylerinde uygulanan, bir ayar, uygulamanızın olup hindering hakkında daha fazla bilgi edinmek için çeşitli yolları açıklanmaktadır ve çeşitli sorunlarını düzeltmek için yolları açıklanmaktadır sağlar. Çoğu kısıtlamaları ve bazı kotalar temel özelliği seri hale getirme veya taşıma kısıtlaması olsa bile uygulama düzeyinde kullanılabilir. Örneğin, ayarlayabileceğiniz <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> özelliğini kullanarak <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> hizmet sınıfı özelliği.  
-  
+Bu konuda çeşitli özelliklerini denetimi kaynak tüketimi için çalışma ve performans ölçümlerini etkileyen farklı alanlarda Windows Communication Foundation (WCF) mimarisi açıklanmaktadır.
+
+## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Wcf'de kaynak tüketimini sınırlamak özellikleri
+ Windows Communication Foundation (WCF), güvenlik veya performans amaçlı işlemler belirli türlerdeki kısıtlamalar geçerlidir. Bu kısıtlamalar, iki ana biçimde, kotalar ve kısıtlamalar da gelir. *Kotalar* ulaşıldığında veya aşıldı sistemde belirli bir noktada hemen bir özel durum tetikleyeceğinizi limitlerdir. *Kısıtlar* hemen bir özel durum oluşturulmasına neden olmaz limitlerdir. Bunun yerine, bir azaltma sınırına ulaşıldığında, işleme devam eder ancak sınırları içinde bu kısıtlama değere göre ayarlayın. Bu sınırlı işlem başka bir yerde bir özel durum tetikleyebilir, ancak bu uygulama gereksinimlerinize bağlıdır.
+
+ Kotalar ve kısıtlamalar arasındaki ayrımı ek olarak, bazı kısıtlayan özellikleri serileştirme düzeyinde, aktarım düzeyinde bazı ve bazı uygulama düzeyinde yer alır. Örneğin, kota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, tüm sistem tarafından sağlanan aktarım bağlama öğeleri tarafından uygulanan 65.536 bayt için varsayılan olarak ayarlandığı kötü amaçlı istemcileri, hizmet reddi saldırılarına karşı bir hizmet aşırı şekilde bellek neden olarak yapmasının engellemesini Tüketim. (Genellikle, performans bu değer indirerek artırabilirsiniz.)
+
+ Bir seri hale getirme kota örneğidir <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> tek bir seri hale getirici serileştiren veya seri durumdan çıkarır nesneleri sayısı belirten özellik <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> yöntem çağrısı. Uygulama düzeyi kısıtlama örneğidir <xref:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentSessions%2A?displayProperty=nameWithType> özelliği, varsayılan olarak 10 eşzamanlı oturum kanalı bağlantı sayısını kısıtlar. (Kotalar aksine bu kısıtlama değeri ulaşılırsa uygulama işleme devam eder ancak hiçbir yeni oturumdaki kanallar kabul eden bir oturumdaki kanallar birine tamamlanıncaya kadar yeni istemciler bağlanamıyor anlamına gelir.)
+
+ Bu denetimler belirli saldırı türlerine karşı karşı bir kullanıma hazır azaltma sağlamak veya bellek Ayak izi, başlangıç saati ve benzeri gibi performans ölçümlerini iyileştirmek için tasarlanmıştır. Ancak, uygulamaya bağlı olarak, bu denetimleri hizmet uygulama performansını engelleyebildiğinden veya hiç çalışmasını engellemek. Örneğin, stream video için tasarlanmış bir uygulama varsayılan kolayca aşabilir <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> özelliği. Bu konu, çeşitli denetimleri genel bir bakış uygulamalarına tüm WCF düzeylerinde uygulanan bir ayar, uygulamanızın olup hindering hakkında daha fazla bilgi edinmek için çeşitli yolları açıklar ve çeşitli sorunları düzeltmek için yollar açıklar sağlar. Çoğu kısıtlamalar ve bazı kotalar temel özellik serileştirme veya aktarım kısıtlaması olsa bile uygulama düzeyinde kullanılabilir. Örneğin, ayarlayabilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> özelliğini kullanarak <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> hizmet sınıfı özelliği.
+
 > [!NOTE]
->  Belirli bir sorun varsa, ilk okumalısınız [WCF sorun giderme Hızlı Başlangıç](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) sorununuzu (ve bir çözüm) var. listelenmiş olup olmadığını görmek için.  
-  
- Seri hale getirme işlemlerini kısıtlamak özellikler listelenmiştir [veriler için güvenlik konuları](../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Taşımasıyla ilgili kaynaklarının kullanımını kısıtlamak özellikler listelenmiştir [taşıma kotaları](../../../docs/framework/wcf/feature-details/transport-quotas.md). Uygulama katmanı kaynaklarının kullanımını kısıtlamak özellikleri üyeleri olan <xref:System.ServiceModel.Dispatcher.ServiceThrottle> sınıfı.  
-  
-## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>Uygulama ve kota ayarlarıyla ilgili performans sorunlarını algılama  
- Yukarıdaki değerleri Varsayılanları, genel güvenlik sorunları karşı temel koruma sağlarken çok çeşitli uygulama türleri arasında temel uygulama işlevselliğini etkinleştirmek için seçildi. Ancak, aksi takdirde uygulamanın güvenli ve tasarlandığı gibi çalışır ancak farklı bir uygulama tasarımları bir veya daha fazla kısıtlama ayarlarını aşabilir. Bu durumlarda, hangi Kısıtlama değerlerinin aşıldı tanımlamanız gerekir ve ne düzey ve uygulama verimliliğini artırmak için eylem uygun seyri üzerinde karar verin.  
-  
- Genellikle, uygulama yazmak ve bu hata ayıklama, ayarladığınızda <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğine `true` yapılandırma dosyası veya program aracılığıyla. Bu hizmet özel durum Yığın izlemeleri görüntülemek için istemci uygulaması geri dönmek için WCF bildirir. Bu özellik, çoğu uygulama düzeyinde istisnalar hangi kota ayarları söz konusu, bu sorun olursa görüntülemek şekilde bildirir.  
-  
- Bazı özel durumlar uygulama katmanın görünürlüğünü aşağıda çalışma zamanında gerçekleşir ve bu mekanizmayı kullanarak döndürülmez ve bunlar özel tarafından ele alınması değil <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> uygulaması. Microsoft Visual Studio gibi geliştirme ortamında varsa, bu özel durumlar çoğunu otomatik olarak görüntülenir. Ancak, bazı özel durumlar gibi geliştirme ortamı ayarları tarafından maskelenecek [sadece kendi kodumu](http://go.microsoft.com/fwlink/?LinkId=82174) Visual Studio 2005'te ayarlar.  
-  
- Geliştirme ortamınızı yeteneklerini bağımsız olarak, tüm özel durumları hata ayıklama ve uygulamalarınızın performansını ayarlamak için WCF izleme ve iletileri günlüğe kaydetme özelliklerini kullanabilirsiniz. Daha fazla bilgi için bkz: [kullanarak izleme uygulamanız sorun giderme için](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
-  
-## <a name="performance-issues-and-xmlserializer"></a>Performans sorunlarını ve XmlSerializer  
- Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci uygulamaları <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve bu veri türleri için seri hale getirme kodu, yavaş başlatma performansının düşmesine neden olabilir çalışma zamanında derleyin.  
-  
+> Önce okumanız gereken belirli bir sorun varsa, [WCF sorun giderme hızlı başlangıcı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) sorununuzu (ve bir çözüm) vardır listelenmiş olup olmadığını görmek için.
+
+ Seri hale getirme işlemleri kısıtlayan özellikleri listelenmiştir [veriler için güvenlik konuları](../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Taşımasıyla ilgili kaynakların tüketimini kısıtlamak özellikler listelenir [taşıma kotaları](../../../docs/framework/wcf/feature-details/transport-quotas.md). Uygulama katmanındaki kaynaklarının kullanımını kısıtlayan özellikleri olan üyeleri <xref:System.ServiceModel.Dispatcher.ServiceThrottle> sınıfı.
+
+## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>Uygulama ve kota ayarları ile ilgili performans sorunlarını algılama
+ Ortak güvenlik sorunlarına karşı temel koruma sağlarken, çok çeşitli uygulama türleri arasında temel uygulama işlevselliğini etkinleştirmek için yukarıdaki değerleri varsayılan seçildi. Ancak, aksi takdirde uygulama güvenlidir ve tasarlandığı gibi çalışır ancak farklı uygulama tasarımları bir veya daha fazla kısıtlama ayarlarını aşabilir. Bu durumlarda, hangi Kısıtlama değerlerinin aşılsa belirlemeniz gerekir ve ne düzeyi ve uygulama performansını artırmak için eylem uygun kursu karar verin.
+
+ Genellikle, uygulama yazma ve hata ayıklama, ayarladığınızda <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> özelliğini `true` yapılandırma dosyası veya programlama yoluyla. Bu, istemci uygulaması izleme için hizmet özel durum yığın izlemelerini dönmek için WCF bildirir. Bu özellik, sorun ise hangi kota ayarları dahil edilmelidir, görüntüleme biçimini çoğu uygulama düzeyi özel durumları bildirir.
+
+ Bazı özel durumlar çalışma zamanında uygulama katmanına görünürlüğünü aşağıda gerçekleşir ve bu mekanizma kullanılarak döndürülmez ve bunlar tarafından özel işlenebilmesini değil <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> uygulaması. Microsoft Visual Studio gibi geliştirme ortamlarında varsa, bu özel durumların çoğu otomatik olarak görüntülenir. Ancak, bazı özel durumlar gibi geliştirme ortamı ayarları tarafından maskelenmiş olamaz [yalnızca kendi kodum](/visualstudio/debugger/just-my-code) Visual Studio.
+
+ Geliştirme ortamınızı yeteneklerini bağımsız olarak, tüm özel durumların hatalarını ayıklayabilir ve uygulamalarınızın performansını ayarlamak için WCF izleme ve iletileri günlüğe kaydetme özelliklerini kullanabilirsiniz. Daha fazla bilgi için [kullanarak uygulamanızı sorun giderme için izleme](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+
+## <a name="performance-issues-and-xmlserializer"></a>Performans sorunlarını ve XmlSerializer
+ Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci uygulamalar <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve yavaş başlatma performansı düşürebilir çalışma zamanında bu veri türleri için serileştirme kodu derleyin.
+
 > [!NOTE]
->  Önceden oluşturulmuş serileştirme kod, yalnızca istemci uygulamaları ve Hizmetleri kullanılabilir.  
-  
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) başlangıcından bu uygulamalar için uygulama için derlenmiş derlemelerden gerekli serileştirme kod oluşturarak performansı artırabilir. Daha fazla bilgi için bkz: [nasıl yapılır: Başlangıç saati, WCF istemci XmlSerializer kullanarak uygulamaları geliştirmek](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
-  
-## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF hizmetleri ASP.NET altında barındırdığında performans sorunları  
- Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, IIS ve ASP.NET yapılandırma ayarlarını WCF hizmetini işleme ve bellek ayak etkileyebilir.  ASP.NET performansı hakkında daha fazla bilgi için bkz: [ASP.NET performans geliştirme](http://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçlara olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemci sabit veya küçük bir sayısı varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 CPU kullanımı % 100 yakın olan çok işlemcili bir makinede verimliliği artırma sağlayabilir. Bu artış performans maliyeti ile gelir: de ölçeklenebilirlik azaltabilir bellek kullanımında artışa neden olur.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)  
- [Büyük Veriler ve Akış Yapma](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+> Önceden oluşturulan serileştirme kod, yalnızca istemci uygulamaları ve Hizmetleri kullanılabilir.
+
+ [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derlenmiş bütünleştirilmiş uygulama için gerekli serileştirme kod oluşturarak bu uygulamaları için başlatma performansını geliştirebilir. Daha fazla bilgi için [nasıl yapılır: başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+
+## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>WCF hizmetleri altında ASP.NET barındırırken performans sorunları
+ Bir WCF Hizmeti IIS ve ASP.NET altında barındırıldığında, aktarım hızı ve bellek Ayak izi WCF Hizmeti IIS ve ASP.NET yapılandırma ayarlarının etkileyebilir.  ASP.NET performansıyla ilgili daha fazla bilgi için bkz. [ASP.NET performans geliştirme](https://go.microsoft.com/fwlink/?LinkId=186462).  Bir ayar olabilir istenmeyen sonuçları olan <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, bir özelliği olan <xref:System.Web.Configuration.ProcessModelSection>. Uygulamanızın istemciler sabit ya da küçük bir dizi varsa, ayarı <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2'ye bir CPU kullanımı % 100 olan bir çok işlemcili bir makine üzerinde bir aktarım hızı boost sağlayabilir. Bu performans artışı bir maliyetle birlikte gelir: Ayrıca ölçeklenebilirliği de azaltabilir bellek kullanımında artışa neden olur.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)
+- [Büyük Veriler ve Akış Yapma](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

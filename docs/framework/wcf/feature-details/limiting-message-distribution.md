@@ -2,67 +2,67 @@
 title: İleti Dağıtımını Sınırlandırma
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 006cfaffe02752bb91e9f7d780477aecbaeb9c9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495821"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397933"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
-Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Bununla birlikte, birçok uygulamanın ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almak istiyorsa, örneğin, bu istek kafes her üyesine taşan olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları yakınında sınırlı olabilir. İletileri kafes tek tek bir düğümde yeniden gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçimi için genel yönergeler sağlar.  
+Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, bir sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Ancak, birçok uygulama için ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almayı isteyen, örneğin, bu isteği kafes her üyesi için yığılma olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları neredeyse sınırlı olabilir. İletileri kafes tek bir düğümde da gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, ileti yayma filtresini, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçme için genel yönergeleri sağlar.  
   
 ## <a name="hop-counts"></a>Atlama sayısı  
- Kavramı `PeerHopCount` IP protokolü kullanılan bir TTL (Time-To-Live) benzer. Değeri `PeerHopCount` bir ileti örneğine bağlanır ve bir ileti iletilen bırakılan önce kaç kez belirtir. Bir ileti eş kanalı istemci tarafından alınan her zaman istemci iletisi olup olmadığını inceler `PeerHopCount` belirtilir. Belirtilmişse, ardından istemci azaltır atlama sayısı değeri tek komşu düğümler iletiye iletilmeden önce. Bir istemci sıfır atlama sayısı değeri içeren bir ileti aldığında, istemci iletisini işler, ancak iletiyi Komşuları için iletme değil.  
+ Kavramını `PeerHopCount` IP protokolü kullanılan bir TTL (Time-To-Live) benzer. Değerini `PeerHopCount` bir ileti örneğine bağlanır ve bir ileti iletilen bırakılan önce kaç kez belirtir. Bir ileti bir eş kanalı istemci tarafından alınan her zaman istemci olmadığını görmek için ileti inceler `PeerHopCount` belirtilir. Belirtilmişse, ardından istemci atlama sayısını azaltır değeri bir komşu düğümler iletiyi iletme önce. Bir istemci, sıfır atlama sayısı değeri içeren bir ileti aldığında, istemci iletiyi işleyen, ancak iletinin Komşulardan iletmez.  
   
- Atlama sayısı eklenebilir bir iletiye ekleyerek `PeerHopCount` geçerli özellik veya alan uygulamasında ileti sınıfı için bir öznitelik olarak. Bu iletiyi kafes göndermeden önce belirli bir değere ayarlayabilirsiniz. Bu şekilde, atlama sayısı olası gereksiz ileti çoğaltma önleme gerektiğinde kafes iletileri dağıtımını sınırlamak için kullanabilirsiniz. Bu, yedek veri ya da hemen Komşuları veya Komşuları birkaç durak içinde bir ileti göndermek için yüksek bir miktar kafes içerdiği durumlarda yararlıdır.  
+ Atlama sayısı eklenebilir bir ileti ekleyerek `PeerHopCount` geçerli bir özellik veya alan uygulamasında ileti sınıfı için bir özniteliği olarak. Bu iletiyi kafesine göndermeden önce belirli bir değere ayarlayabilirsiniz. Bu şekilde, atlama sayısı büyük olasılıkla gereksiz ileti çoğaltma önleme gerektiğinde, ağı genelinde mesajların sınırlamak için kullanabilirsiniz. Bu, burada kafes yedekli veri ya da hemen Komşuları veya Komşuları birkaç durak içinde bir ileti göndermek için yüksek bir miktar içeren durumlarda kullanışlıdır.  
   
--   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](http://go.microsoft.com/fwlink/?LinkID=114531) (http://go.microsoft.com/fwlink/?LinkID=114531).  
+-   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](https://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>İleti yayma filtresi  
- `MessagePropagationFilter` özellikle ileti veya diğer belirli senaryolar içeriğini karar verirken yayma ileti, taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre düğümünden geçirir her ileti yayma kararlarını verir. Bu, başka bir yerde düğümünüz uygulamanız tarafından oluşturulan iletiler yanı sıra aldı kafes kaynaklanan iletileri için geçerlidir. Filtre ileti ve onun oluşturulma erişim sahiptir, bu nedenle iletme veya ileti siliniyor hakkında kararlar kullanılabilir tam bilgilerine dayalı.  
+ `MessagePropagationFilter` özellikle ileti ya da diğer belirli senaryolar içeriğini belirlerken yayılma iletisi, taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre düğümü geçirir her ileti için yayma kararları. Bu, uygulamanız tarafından oluşturulan iletileri yanı sıra düğümünüzü aldı ağ içinde başka bir yerde kaynaklanan iletileri için geçerlidir. Filtre ileti hem kendi kaynağına erişimi olduğundan iletme veya iletinin bırakarak hakkında kararlar kullanılabilir tam bilgileri temel alabilir.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> tek bir işlevi ile temel bir Özet sınıf <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Yöntem çağrısının ilk bağımsız değişkeni ileti tam bir kopyasını geçirir. İletiye yapılan değişiklikler gerçek ileti etkilemez. Yöntem çağrısının son bağımsız değişkeni iletinin kaynağını tanımlar (`PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote`). Bu yöntem, somut uygulamalarını içinden bir sabit döndürmelidir <xref:System.ServiceModel.PeerMessagePropagation> numaralandırma ileti yerel uygulama iletilecek olduğunu belirten (`Local`), uzak istemcilere iletilen (`Remote`), her iki (`LocalAndRemote`), veya hiçbiri (`None`). Bu filtre, karşılık gelen erişerek uygulanabilir `PeerNode` nesne ve türetilen yayma örneği belirterek filtre sınıfında `PeerNode.MessagePropagationFilter` özelliği. Eş kanal açmadan önce yayma filtre bağlı olduğundan emin olun.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> tek bir işlev ile temel bir soyut sınıf <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Yöntem çağrısının ilk bağımsız değişken ileti tam bir kopyasını geçirir. İletiye yapılan değişiklikler, gerçek ileti etkilemez. İletinin kaynağını yöntem çağrısının son bağımsız değişken tanımlar (`PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote`). Bu yöntemin somut uygulamaları, içinden bir sabit döndürmelidir <xref:System.ServiceModel.PeerMessagePropagation> numaralandırma yerel uygulamayı iletilecek iletinin olduğunu belirten (`Local`), uzak istemciler için iletilen (`Remote`), her iki (`LocalAndRemote`), ya da hiçbiri (`None`). Bu filtre, karşılık gelen erişerek uygulanabilir `PeerNode` nesne ve türetilmiş yayma örneğini belirterek filtre sınıfında `PeerNode.MessagePropagationFilter` özelliği. Eş kanal açmadan önce yayma filtre bağlı olduğundan emin olun.  
   
--   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](http://go.microsoft.com/fwlink/?LinkID=114532) (http://go.microsoft.com/fwlink/?LinkID=114532).  
+-   Kod parçacıkları ve ilgili bilgi için bkz: [eş kanalı blog](https://go.microsoft.com/fwlink/?LinkID=114532).  
   
-## <a name="contacting-an-individual-node-in-the-mesh"></a>Tek bir ağ düğümünde bağlantı kuruluyor  
- Tek bir ağ düğümünde, yerel bir filtre ayarlayarak veya doğrudan bir bağlantı kurma ulaşılabilir.  
+## <a name="contacting-an-individual-node-in-the-mesh"></a>Tek bir ağ düğümünde bağlanılıyor  
+ Tek bir ağ düğümünde bir yerel filtre ayarlayarak veya doğrudan bir bağlantı kurma ulaşılabilir.  
   
- Her bir kafes düğümlerin tek tek bir Kimliğiniz varsa, bir hedef kimliği iletinizi uygulamasında belirtilebilir. Yerel bir filtre Kimliğini, belirtilen hedef kimliği eşleşirse, yalnızca geçerli düğüme ileti görüntülenir, ileti sözleşmesi işlevi yazarak ayarlanabilir. Yeni bir bağlantı kurma yükünü ücrete tabi yok şekilde kafes ileti taşımaları. Ancak, ileti kafes defalarca göndermesinden itibaren geçen verimliliği kaybı yoktur. Bu, çok büyük veya çok sık ileti sürece iyi ileti tek bir kafes üyelerine göndermek için çalışır.  
+ Her bir ağ düğümleri tek bir kimliği varsa, iletinizi uygulamasında bir hedef kimliği belirtilebilir. Yerel bir filtre Kimliğini hedef kimliği eşleşiyorsa, yalnızca geçerli düğüm için bir ileti görüntüler, ileti anlaşması bir işlev yazarak ayarlanabilir. Yeni bir bağlantı kurma yükü tahakkuk gerekmez. Bu nedenle kafes iletiyi taşır. Ancak, iletiyi birden çok kez kafes gönderildiği verimlilik kaybı yoktur. Bu, çok büyük veya çok sık ileti olduğu sürece iyi kafes tek tek üyeleri gönderme çalışır.  
   
- Uzun süre dayanan, yüksek bant genişliği bağlantılarında doğrudan bağlantılar tercih edilir. Bağlantı bilgilerini ağ göndermek ve iletileri Gönder/Al seçme doğrudan bir bağlantı ayarlayın.  
+ Uzun süreli, yüksek bant genişlikli bağlantıları için doğrudan bağlantılar tercih edilir. Bağlantı bilgilerini ağ göndermek ve ileti gönderme ve alma seçtiğiniz doğrudan bir bağlantı ayarlayın.  
   
 ## <a name="choosing-an-approach-for-limiting-message-distribution"></a>İleti dağıtımını sınırlandırma için bir yaklaşım seçme  
- İleti dağıtımını sınırlamak gereken bir senaryo bulduğunuzda, aşağıdaki soruları kendinize sorun:  
+ İleti dağıtımını sınırlandırmak istediğiniz bir senaryo bulduğunuzda, kendiniz aşağıdaki soruları sormaya:  
   
--   **Kimin** iletisi gerekiyor? Yalnızca bir Komşu düğüm? Bir düğüm başka bir yere kafes? Yarı kafes?  
+-   **Kimin** iletisi gerekiyor? Yalnızca bir komşu düğümü? Bir düğümdeki başka bir yerde kafes? Yarı kafes?  
   
 -   **Ne sıklıkta** Bu mesajı gönderilir?  
   
 -   Ne tür, **bant genişliği** bu iletiyi kullanacaksınız?  
   
- Bu sorulara verdiğiniz yanıtlar, atlama sayısı, bir ileti yayma filtresi, yerel bir filtre veya doğrudan bir bağlantı kullanılıp kullanılmayacağını belirlemenize yardımcı olabilir. Aşağıdaki genel yönergeleri dikkate alın:  
+ Bu soruların yanıtlarını atlama sayısı, ileti yayma filtresini, yerel bir filtre veya doğrudan bir bağlantı kullanılıp kullanılmayacağını belirlemenize yardımcı olabilir. Aşağıdaki genel yönergeleri dikkate alın:  
   
--   **Kimin**  
+-   **Kullanan**  
   
-    -   *Tek düğüm*: Yerel filtre veya doğrudan bağlantı.  
+    -   *Tek tek düğüm*: yerel bir filtre veya doğrudan bağlantı.  
   
-    -   *Belirli bir yakın çevre içinde Komşuları*: PeerHopCount.  
+    -   *Belirli bir çevre içinde Komşuları*: PeerHopCount.  
   
-    -   *Mesh karmaşık alt*: MessagePropagationFilter.  
+    -   *Karmaşık alt ağı*: MessagePropagationFilter.  
   
 -   **Ne sıklıkta**  
   
     -   *Çok sık*: doğrudan bağlantı, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Zaman zaman*: Yerel filtre.  
+    -   *Bazen*: Yerel filtre.  
   
--   **Bant genişliği kullanımı**  
+-   **Bant genişliğini kullanma**  
   
-    -   *Yüksek*: doğrudan bağlantı, MessagePropagationFilter veya yerel filtre kullanmak için daha az önerilir.  
+    -   *Yüksek*: doğrudan bağlantı MessagePropagationFilter veya yerel bir filtre kullanmayı daha az önerilir.  
   
-    -   *Düşük*: büyük olasılıkla gereken herhangi biri doğrudan bağlantı.  
+    -   *Düşük*: büyük olasılıkla gerekli herhangi biri doğrudan bir bağlantı.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

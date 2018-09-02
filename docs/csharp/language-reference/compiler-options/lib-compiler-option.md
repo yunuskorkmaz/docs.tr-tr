@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 7db975909f498a0b84e7405a12a8f8ec1e2dd34b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216862"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390412"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# Derleyici Seçenekleri)
-**-Lib** seçeneği tarafından başvurulan derlemelerin konumunu belirleyen [-başvurusu (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneği.  
+**-Lib** seçeneği tarafından başvurulan derlemelerin konumunu belirten [-başvurusu (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneği.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,47 +26,48 @@ ms.locfileid: "33216862"
   
 ## <a name="arguments"></a>Arguments  
  `dir1`  
- Başvurulan bir derleme IF Bakılacak derleme için bir dizin geçerli çalışma dizininde bulunamadı (içinden, derleyiciyi çağırdığınız dizin) veya ortak dil çalışma zamanı 's sistem dizini.  
+ Geçerli çalışma dizinine sahipse Bakılacak başvurulan derlemenin derleme için bir dizin bulunamadı (içinden, derleyiciyi çağırdığınız dizin) veya ortak dil çalışma zamanının sistem dizini.  
   
  `dir2`  
- Derleme başvuruları için aranacak bir veya daha fazla ek dizinler. Ek dizin adlarını virgül ve boşluk aralarında olmadan ayırın.  
+ Derleme başvuruları için aranacak bir veya daha fazla ek dizinler. Ek dizin adları bunlar arasında boşluk olmadan ve virgül ile ayırın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki sırayla tam olarak nitelenmiş değil derleme başvurularını derleyici arar:  
+ Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:  
   
-1.  Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizindir.  
+1.  Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
   
 2.  Ortak dil çalışma zamanı sistem dizini.  
   
-3.  Tarafından belirtilen dizin **-lib**.  
+3.  Tarafından belirtilen dizinlerde **-lib**.  
   
-4.  LIB ortam değişkeni tarafından belirtilen dizin.  
+4.  LIB ortam değişkeni tarafından belirtilen dizinler.  
   
- Kullanım **-başvuru** bir derleme başvurusu belirtmek için.  
+ Kullanım **-başvuru** bir bütünleştirilmiş kod başvurusu belirtmek için.  
   
- **-lib** şu eklenebilir; belirten daha çok kez herhangi bir önceki değeri ekler.  
+ **-lib** eklenebilir; belirten olduğundan, birden çok kez önceki tüm değerlere ekler.  
   
- Kullanmaya alternatif **-lib** kopyalamaktır çalışma dizinine derlemeleri gerekli; Bu, derleme adı geçmesine izin verir **-başvuru**. Derlemeleri çalışma dizininden sonra silebilirsiniz. Bağımlı derleme yolu derleme bildiriminde belirtilmediğinden, uygulama hedef bilgisayarda başlatılabilir ve bulmak ve genel derleme önbelleğinde derleme kullanın.  
+ Kullanmaya alternatif **-lib** kopyalamaktır derlemeler çalışma dizinine gerekli; Bu, derleme adı için yalnızca geçmesine olanak tanır **-başvuru**. Derlemeleri, ardından çalışma dizininden silebilirsiniz. Derleme bildiriminde bağımlı derleme yolu belirtilmediğinden, uygulamanın hedef bilgisayarda yeniden başlatılabilir ve bulup derleme genel derleme önbelleğinde kullanın.  
   
- Derleyici derleme başvurusu yapabilir nedeniyle ortak dil çalışma zamanı bulmak ve derleme zamanında yükleyemediğini göstermez. Bkz: [nasıl çalışma zamanı bulur derlemeleri](../../../framework/deployment/how-the-runtime-locates-assemblies.md) nasıl başvurulan derlemeler için çalışma zamanı arama ile ilgili ayrıntılar için.  
+ Derleyici, derleme başvurusu çünkü ortak dil çalışma zamanı bulabilir ve derleme zamanında yükleme göstermez. Bkz: [çalışma zamanı derlemeleri nasıl konumlandırır](../../../framework/deployment/how-the-runtime-locates-assemblies.md) nasıl başvurulan derlemeler için çalışma zamanı arama ile ilgili ayrıntılar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açmak **özellik sayfaları** iletişim kutusu.  
+1.  Projenin açın **özellik sayfaları** iletişim kutusu.  
   
-2.  Tıklatın **başvuruları yolu** özellik sayfası.  
+2.  Tıklayın **başvuru yolu** özellik sayfası.  
   
-3.  Liste kutusu içeriğini değiştirin.  
+3.  Liste kutusunun içeriğini değiştirin.  
   
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
+ Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
 ## <a name="example"></a>Örnek  
- Bir .exe dosyası oluşturmak için T2.cs projesini derleyin. Derleyici derleme başvuruları için çalışma dizini ve C sürücüsünün kök dizininde arar.  
+ Bir .exe dosyası oluşturmak için T2.cs projesini derleyin. Derleyici, derleme başvuruları için çalışma dizinini ve C sürücüsünün kök dizinindeki görünecektir.  
   
 ```console  
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

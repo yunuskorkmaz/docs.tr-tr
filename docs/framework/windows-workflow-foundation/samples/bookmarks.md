@@ -2,29 +2,29 @@
 title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
-ms.openlocfilehash: 61abc1d1a5084018511975e27fa96311c168eb69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514167"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387395"
 ---
 # <a name="bookmarks"></a>Yer işaretleri
-Bu örnek, bir dış giriş almak için bir yer işareti oluşturur özel bir etkinlik yazma gösterilmiştir. Örnek bir iş akışında özel etkinlik kullanan ve bulmak ve çalışan bir iş akışı örneğiyle ilişkili yer işaretleri sürdürmek nasıl gösterir temel konsol uygulaması da içerir. Yer işaretleri hakkında daha fazla bilgi için bkz: [yer işaretleri](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
+Bu örnek, dış girdi almak için bir yer işareti oluşturur ve özel bir etkinlik yazma gösterilmiştir. Örnek ayrıca özel etkinlik bir iş akışında kullanır ve bulma ve çalışan bir iş akışı örneğiyle ilişkili yer işaretleri sürdürme gösterir bir temel bir konsol uygulaması içerir. Yer işaretleri hakkında daha fazla bilgi için bkz. [yer işaretleri](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Bookmarks.sln örnek çözümü açmak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Bookmarks.sln örnek çözümde açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Örneği çalıştırmak için CTRLl CTRL + F5 tuşuna basın.  
+3.  Örneği çalıştırmak için CTRLl + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CodeBodied\Bookmarks`

@@ -2,17 +2,17 @@
 title: Geniş Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 9ad00c1e76d14b32cb28216cfdbb1a01f82a70cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504443"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384715"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
-Zengin destek uzantısı verilerle çalışmak için dağıtım nesnesi modeli sunar — akışı bir dağıtım mevcut olan bilgiler XML gösterimi kullanıcının ancak açıkça sınıfları tarafından gibi açığa <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>. Bu örnek uzantısı verilerle çalışmak için temel teknikleri gösterilmektedir.  
+Zengin destek uzantısı verilerle çalışmak için dağıtım nesne modeli sağlar — akışı bir dağıtımda mevcut olan bilgiler XML gösterimi kullanıcının, ancak açıkça gibi sınıfları tarafından sunulan <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>. Bu örnek, uzantı verilerle çalışmak için temel teknikleri gösterir.  
   
- Örnek kullanır <xref:System.ServiceModel.Syndication.SyndicationFeed> amacıyla sınıfının örneği. Ancak, bu örnekte gösterilen desenler tüm uzantısını verileri destekleyen dağıtım sınıfları kullanılabilir:  
+ Örnek kullanır <xref:System.ServiceModel.Syndication.SyndicationFeed> amacıyla sınıfının örneği. Ancak, bu örnekte gösterilen desenleri tüm uzantı verileri destekleyen bir dağıtım sınıfları kullanılabilir:  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -52,20 +52,20 @@ w.w3.org/2001/XMLSchema" xmlns="">
 </feed>  
 ```  
   
- Bu belge uzantısını verileri aşağıdaki parçalarını içerir:  
+ Bu belge aşağıdaki uzantı veri parçasını içerir:  
   
 -   `myAttribute` Özniteliği `<feed>` öğesi.  
   
--   `<simpleString>` öğesi.  
+-   `<simpleString>` öğe.  
   
--   `<DataContractExtension>` öğesi.  
+-   `<DataContractExtension>` öğe.  
   
--   `<XmlSerializerExtension>` öğesi.  
+-   `<XmlSerializerExtension>` öğe.  
   
--   `<xElementExtension>` öğesi.  
+-   `<xElementExtension>` öğe.  
   
-## <a name="writing-extension-data"></a>Uzantı veri yazma  
- Öznitelik uzantıları girişlere ekleyerek oluşturulur <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> aşağıdaki örnek kodda gösterildiği gibi koleksiyonu.  
+## <a name="writing-extension-data"></a>Uzantı verileri yazma  
+ Öznitelik uzantıları girişlere ekleyerek oluşturulur <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> aşağıdaki örnek kodda gösterildiği gibi bir koleksiyon.  
   
 ```  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -73,7 +73,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue");  
 ```  
   
- Öğe uzantıları girişlere ekleyerek oluşturulur <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonu. Dizeleri, .NET Framework nesneleri veya el ile kodlanmış XML düğümlerini XML serializations gibi temel değerlere göre bu uzantıları olabilir.  
+ Öğesi uzantıları oluşturulduğu girişlerine ekleyerek <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> koleksiyonu. Bu uzantılar, dizeler, .NET Framework nesneleri veya el ile kodlanmış bir XML düğümüyle XML serializations gibi temel değerlere göre yapabilirsiniz.  
   
  Aşağıdaki örnek kod adlı bir uzantı öğesi oluşturur `simpleString`.  
   
@@ -81,18 +81,18 @@ feed.AttributeExtensions.Add(new XmlQualifiedName("myAttribute", ""), "someValue
 feed.ElementExtensions.Add("simpleString", "", "hello, world!");  
 ```  
   
- Bu öğe için XML ad alanı boş ad alanıdır ("") ve değerini "hello, world!" dizesini içeren bir metin düğümü.  
+ Bu öğe için XML ad alanı boş ad alanıdır ("") ve değeri "hello, world!" dizesini içeren bir metin düğümü.  
   
- İç içe öğelerin birçok oluşur karmaşık bir öğe uzantıları oluşturmak için tek yönlü olan seri hale getirme için .NET Framework API'ları kullanmak için (hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> desteklenir) aşağıdaki örneklerde gösterildiği gibi.  
+ İç içe öğelerin birçoğunu oluşan karmaşık öğesi uzantıları oluşturmak için tek yönlü olan seri hale getirme için .NET Framework API'ları kullanmak için (hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> desteklenir) aşağıdaki örneklerde gösterildiği gibi.  
   
 ```  
 feed.ElementExtensions.Add( new DataContractExtension() { Key = "X", Value = 4 } );  
 feed.ElementExtensions.Add( new XmlSerializerExtension { Key = "Y", Value = 8 }, new XmlSerializer( typeof( XmlSerializerExtension ) ) );  
 ```  
   
- Bu örnekte, `DataContractExtension` ve `XmlSerializerExtension` ile seri hale getirici kullanım için yazılan özel türü.  
+ Bu örnekte, `DataContractExtension` ve `XmlSerializerExtension` seri hale getirici ile kullanım için yazılan özel tür.  
   
- <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> Sınıfı ayrıca öğesi Uzantılar'dan oluşturmak için kullanılabilir bir <xref:System.Xml.XmlReader> örneği. API'leri gibi işleme XML ile böylece kolay tümleştirme için <xref:System.Xml.Linq.XElement> aşağıdaki örnek kodda gösterildiği gibi.  
+ <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection> Sınıfı da öğesi uzantıları oluşturmak için kullanılabilir bir <xref:System.Xml.XmlReader> örneği. Bu kolay tümleştirme için API'leri gibi işleme XML ile sağlar <xref:System.Xml.Linq.XElement> aşağıdaki örnek kodda gösterildiği gibi.  
   
 ```  
 feed.ElementExtensions.Add(new XElement("xElementExtension",  
@@ -101,14 +101,14 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
         "15")).CreateReader());  
 ```  
   
-## <a name="reading-extension-data"></a>Uzantısını verileri okuma  
- Öznitelik uzantıları için değerleri özniteliğinde bakarak elde edilebilir <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyona göre kendi <xref:System.Xml.XmlQualifiedName> aşağıdaki örnek kodda gösterildiği gibi.  
+## <a name="reading-extension-data"></a>Uzantı verileri okuma  
+ Öznitelik, bakarak özniteliği uzantıları için değerlerinin elde edilebilmesini <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> koleksiyona göre kendi <xref:System.Xml.XmlQualifiedName> aşağıdaki örnek kodda gösterildiği gibi.  
   
 ```  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
 ```  
   
- Öğe uzantıları kullanılarak erişilir `ReadElementExtensions<T>` yöntemi.  
+ Öğesi uzantıları kullanılarak erişilir `ReadElementExtensions<T>` yöntemi.  
   
 ```  
 foreach( string s in feed2.ElementExtensions.ReadElementExtensions<string>("simpleString", ""))  
@@ -128,7 +128,7 @@ foreach (XmlSerializerExtension xse in feed2.ElementExtensions.ReadElementExtens
 }  
 ```  
   
- Edinme mümkündür bir `XmlReader` kullanarak tek tek öğe uzantıları adresindeki <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> yöntemi.  
+ Elde etmek mümkündür bir `XmlReader` tek öğe uzantıları kullanarak, <xref:System.ServiceModel.Syndication.SyndicationElementExtension.GetReader> yöntemi.  
   
 ```  
 foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<SyndicationElementExtension>(x => x.OuterName == "xElementExtension"))  
@@ -138,20 +138,20 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   

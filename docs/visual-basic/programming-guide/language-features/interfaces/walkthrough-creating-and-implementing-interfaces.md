@@ -8,40 +8,40 @@ helpviewer_keywords:
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653617"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391087"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>İzlenecek yol: Arabirimleri Oluşturma ve Uygulama (Visual Basic)
 
-Arabirimleri özellikleri, yöntemleri ve olay özelliklerini açıklayan, ancak uygulama ayrıntılarını yapıları veya sınıfları kadar bırakın.  
+Arabirimler, özellikleri, yöntemleri ve olayları özelliklerini açıklayan, ancak yapıların veya sınıfların kadar uygulama ayrıntılarını bırakın.  
   
- Bu kılavuz, bildirme ve bir arabirim gösterilmiştir.  
+ Bu izlenecek yol, bildirme ve bir arabirim gösterilmektedir.  
   
 > [!NOTE]
->  Bu kılavuz, bir kullanıcı arabirimi oluşturma hakkında bilgi sağlamaz.  
+>  Bu izlenecek yol, bir kullanıcı arabirimi oluşturma hakkında bilgi sağlamaz.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-an-interface"></a>Bir arabirimi tanımlamak için
+## <a name="to-define-an-interface"></a>Arabirim tanımlamak için
   
-1.  Yeni bir Visual Basic Windows uygulama projesi açın.  
+1.  Yeni bir Visual Basic Windows uygulaması projesi açın.  
   
-2.  Yeni bir modül projeye tıklayarak ekleyin **Modül Ekle** üzerinde **proje** menüsü.  
+2.  Yeni modül tıklayarak projeye ekleyin. **Modül Ekle** üzerinde **proje** menüsü.  
   
 3.  Yeni modül adı `Module1.vb` tıklatıp **Ekle**. Yeni modül kodu görüntülenir.  
   
-4.  Adlı bir arabirim tanımlayın `TestInterface` içinde `Module1` yazarak `Interface TestInterface` arasında `Module` ve `End Module` deyimleri ve sonra ENTER tuşuna basın. **Kod düzenleyicisinde** girintileri `Interface` anahtar sözcüğü ve ekleyen bir `End Interface` kod bloğu oluşturmak için ifade.  
+4.  Adlı bir arabirim tanımla `TestInterface` içinde `Module1` yazarak `Interface TestInterface` arasında `Module` ve `End Module` deyimleri ve sonra ENTER tuşuna basın. **Kod Düzenleyicisi** girintileri `Interface` anahtar sözcüğü ve ekler bir `End Interface` deyimini bir kod bloğu oluşturur.  
   
-5.  Aşağıdaki kod arasında koyarak özelliği, yöntemi ve olay arabirimi tanımlamak `Interface` ve `End Interface` deyimleri:  
+5.  Bir özellik, yöntemi ve olay arabirimi için arasına aşağıdaki kodu yerleştirerek tanımlamak `Interface` ve `End Interface` ifadeleri:  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
 ## <a name="implementation"></a>Uygulama
 
- Arabirim üyeleri bildirmek için kullanılan sözdizimi sınıf üyesi bildirmek için kullanılan sözdiziminden, farklı olduğunu fark edebilirsiniz. Bu farkı arabirimler uygulama kodu içeremez olgu yansıtır.  
+ Arabirim üyeleri bildirmek için kullanılan sözdizimi sınıf üyeleri bildirmek için kullanılan söz dizimi farklı olduğunu fark edebilirsiniz. Bu fark, arabirimler uygulama kodu içeremez olgu yansıtır.  
   
 ### <a name="to-implement-the-interface"></a>Arabirim uygulamak için
   
@@ -49,63 +49,63 @@ Arabirimleri özellikleri, yöntemleri ve olay özelliklerini açıklayan, ancak
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     Tümleşik geliştirme ortamında çalışıyorsanız **Kod Düzenleyicisi** eşleşen bir sağlayan `End Class` deyimi ENTER tuşuna basın.  
+     Tümleşik geliştirme ortamında çalışıyorsanız **Kod Düzenleyicisi** eşleşen sağlayan `End Class` deyimi ENTER tuşuna basın.  
   
-2.  Aşağıdakileri ekleyin `Implements` ifadesine `ImplementationClass`, hangi arabirimi sınıfı adları uygular:  
+2.  Aşağıdaki `Implements` ifadesine `ImplementationClass`, sınıf, arabirim adları uygular:  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     Bir sınıf veya yapı, üstündeki diğer öğelerden ayrı olarak listelenen `Implements` deyimi gösteren sınıf veya yapı bir arabirimi uygular.  
+     Bir sınıf veya yapı, üst kısmındaki diğer öğelerden ayrı olarak listelenen `Implements` deyimi, sınıfın veya yapının bir arabirim uyguladığını belirtir.  
   
-     Tümleşik geliştirme ortamında çalışıyorsanız **Kod düzenleyicisinde** gerektirdiği sınıf üyeleri uygulayan `TestInterface` zaman ENTER tuşuna basın ve sonraki adıma atlayabilirsiniz.  
+     Tümleşik geliştirme ortamında çalışıyorsanız **Kod Düzenleyicisi** uygulayan sınıf üyelerini gerektirdiği `TestInterface` olduğunda ENTER tuşuna basın ve sonraki adıma atlayabilirsiniz.  
   
-3.  Tümleşik geliştirme ortamında çalışmıyorsanız arabirimi tüm üyeleri uygulamalıdır `MyInterface`. Aşağıdaki kodu ekleyin `ImplementationClass` uygulamak için `Event1`, `Method1`, ve `Prop1`:  
+3.  Tümleşik geliştirme ortamında çalışmıyorsanız, arabirimin tüm üyelerini uygulamalıdır `MyInterface`. Aşağıdaki kodu ekleyin `ImplementationClass` uygulamak için `Event1`, `Method1`, ve `Prop1`:  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     `Implements` Deyimi adları uygulanan arabirim üyesini ve arabirim.  
+     `Implements` Arabirimi ve uygulanan arabirim üyesi bildirimi adları.  
   
 4.  Tanımını tamamlamak `Prop1` özellik değeri depolanan sınıfı için özel bir alan ekleyerek:  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     Değeri döndürmesi `pval` özelliğinden get erişimcisi.  
+     Dönüş değeri `pval` erişimci özelliğin alın.  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     Değerini `pval` özelliğinde ayarlama erişimcisi.  
+     Değerini `pval` erişimci özelliğini ayarlayın.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5.  Tanımını tamamlamak `Method1` aşağıdaki kodu ekleyerek düzenleyin.  
+5.  Tanımını tamamlamak `Method1` aşağıdaki kodu ekleyerek.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
-### <a name="to-test-the-implementation-of-the-interface"></a>Arabirim uygulanmasını test etmek için
+### <a name="to-test-the-implementation-of-the-interface"></a>Arabirim uygulamasını test etmek için
   
-1.  Projenizde başlangıç formu sağ **Çözüm Gezgini**, tıklatıp **görünümü kodu**. Düzenleyici başlangıç formunuz için sınıf görüntüler. Varsayılan olarak, başlangıç formu adlı `Form1`.  
+1.  Başlangıç formu için projenizde sağ **Çözüm Gezgini**, tıklatıp **kodu görüntüle**. Düzenleyici, başlangıç formu için sınıf görüntüler. Varsayılan olarak, başlangıç formu çağrılır `Form1`.  
   
-2.  Aşağıdakileri ekleyin `testInstance` alanı `Form1` sınıfı:  
+2.  Aşağıdaki `testInstance` alanı `Form1` sınıfı:  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     Bildirme tarafından `testInstance` olarak `WithEvents`, `Form1` sınıfı olaylarına işleyebilir.  
+     Bildirmek `testInstance` olarak `WithEvents`, `Form1` sınıf olayları işleyebilir.  
   
-3.  Aşağıdaki olay işleyicisi ekleme `Form1` tarafından başlatılan olayları işlemek için sınıf `testInstance`:  
+3.  Eklemek için aşağıdaki olay işleyicisini `Form1` tarafından başlatılan olayları işlemek için sınıfın `testInstance`:  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4.  Adlı bir alt yordama ekleme `Test` için `Form1` sınıfı uygulama sınıfı test etmek için:  
+4.  Adlı bir alt yordam Ekle `Test` için `Form1` uygulama sınıfımızın test edilecek sınıf:  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     `Test` Yordam uygulayan sınıf örneği oluşturur `MyInterface`, bu örneğe atar `testInstance` alan, bir özelliği ayarlar ve bir yöntem arabirimi aracılığıyla çalıştırır.  
+     `Test` Yordamı uygulayan sınıfın bir örneğini oluşturur `MyInterface`, bu örneğe atar `testInstance` alan, bir özelliğini ayarlar ve bir yöntem arabirimi aracılığıyla çalıştırır.  
   
-5.  Çağırmak için kodu ekleyin `Test` yordamdan `Form1 Load` başlangıç formu yordam:  
+5.  Çağırmak için kod ekleyin `Test` yordamdan `Form1 Load` başlangıç formunuzun yordam:  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6.  Çalıştırma `Test` F5'e basarak yordamı. İleti "Prop1 9 ayarlandı" görüntülenir. "X parametresi Method1 için 5." iletisi Tamam ' ı sonra görüntülenir. Tamam'ı tıklatın ve "olay olay işleyicisi yakalanan" iletisi görüntülenir.  
+6.  Çalıştırma `Test` F5 tuşuna basarak yordamı. İleti "Prop1 9'a ayarlanmış" görüntülenir. Tamam, "X parametresi Method1 için 5'tir" iletisi tıkladıktan sonra görüntülenir. Tamam'ı tıklatın ve "olay işleyicisi, olay yakalandı" iletisi görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

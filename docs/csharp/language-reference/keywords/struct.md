@@ -7,15 +7,15 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172155"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399024"
 ---
 # <a name="struct-c-reference"></a>struct (C# Başvurusu)
-A `struct` türüdür genellikle bir dikdörtgen koordinatlarını veya öğeyi bir stok özelliklerini gibi ilgili değişkenlerin küçük gruplar kapsüllemek için kullanılan bir değer türü. Aşağıdaki örnek, bir basit yapı bildirimi gösterir:  
+A `struct` türü, genelde küçük bir dikdörtgen koordinatlarını veya bir öğe bir stok özelliklerini gibi ilişkili değişken grupları kapsüllemek için kullanılan bir değer türüdür. Aşağıdaki örnek, bir basit yapı bildirimi gösterilmektedir:  
   
 ```csharp  
 public struct Book  
@@ -27,28 +27,29 @@ public struct Book
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yapılar de içerebilir [oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md), [sabitleri](../../../csharp/programming-guide/classes-and-structs/constants.md), [alanları](../../../csharp/programming-guide/classes-and-structs/fields.md), [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md), [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md), [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md), [işleçleri](../../../csharp/programming-guide/statements-expressions-operators/operators.md), [olayları](../../../csharp/programming-guide/events/index.md), ve [türleri iç içe geçmiş](../../../csharp/programming-guide/classes-and-structs/nested-types.md), ancak bu tür üyeler, gerekirse, Bunun yerine, türü bir sınıf yapma göz önünde bulundurmalısınız.  
+ Yapılar içerebilir [oluşturucular](../../../csharp/programming-guide/classes-and-structs/constructors.md), [sabitleri](../../../csharp/programming-guide/classes-and-structs/constants.md), [alanları](../../../csharp/programming-guide/classes-and-structs/fields.md), [yöntemleri](../../../csharp/programming-guide/classes-and-structs/methods.md), [özellikleri](../../../csharp/programming-guide/classes-and-structs/properties.md), [dizin oluşturucular](../../../csharp/programming-guide/indexers/index.md), [işleçleri](../../../csharp/programming-guide/statements-expressions-operators/operators.md), [olayları](../../../csharp/programming-guide/events/index.md), ve [türlerin](../../../csharp/programming-guide/classes-and-structs/nested-types.md), ancak birçok üye gerekliyse, türünüz bunun yerine bir sınıf yapma dikkate almanız gerekir.  
   
- Örnekler için bkz: [kullanarak yapılar](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
+ Örnekler için bkz [yapılar kullanarak](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
   
- Yapılar bir arabirimi uygulayabilirsiniz, ancak başka bir yapı devralınan olamaz. Bu nedenle, Yapı üyeleri olarak bildirilemez `protected`.  
+ Yapı birimleri arabirim uygulayabilir, ancak bunlar başka bir yapı devralamaz. Bu nedenle, Yapı üyeleri olarak bildirilemez `protected`.  
   
- Daha fazla bilgi için bkz: [yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md).  
+ Daha fazla bilgi için [yapılar](../../../csharp/programming-guide/classes-and-structs/structs.md).  
   
 ## <a name="examples"></a>Örnekler  
- Örnekler ve daha fazla bilgi için bkz: [kullanarak yapılar](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
+ Örnekler ve daha fazla bilgi için bkz. [yapılar kullanarak](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
- Örnekler için bkz: [kullanarak yapılar](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
+ Örnekler için bkz [yapılar kullanarak](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Varsayılan Değerler Tablosu](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Türler](../../../csharp/language-reference/keywords/types.md)  
- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Varsayılan Değerler Tablosu](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Türler](../../../csharp/language-reference/keywords/types.md)  
+- [Değer Türleri](../../../csharp/language-reference/keywords/value-types.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)

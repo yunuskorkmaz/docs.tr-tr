@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa508963bc4920aae65b1d172e2dc15f13451bf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925122"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390763"
 ---
 # <a name="net-framework-system-requirements"></a>.NET framework sistem gereksinimleri
 
@@ -73,7 +73,7 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 - .NET Framework 4, IA64 platformu da destekler.
 
-- Tüm platformlar için en son Windows hizmet paketine yükseltin ve kullanılabilir olan kritik güncelleştirmeleri yükleyin öneririz [Windows Update Web sitesini](http://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik.
+- Tüm platformlar için en son Windows hizmet paketine yükseltin ve kullanılabilir olan kritik güncelleştirmeleri yükleyin öneririz [Windows Update Web sitesini](https://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik.
 
 - 64-bit işletim sistemlerinde .NET Framework, WOW64 (32-bit bir 64-bit makinede işleme) hem de yerel 64-bit işlemeyi destekler.
 
@@ -99,7 +99,7 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 - Windows Server 2008 SP2 Sunucu Çekirdeği rolünde .NET Framework desteklenmiyor.
 
-- Tüm platformlar için en son Windows hizmet paketine yükseltmeniz ve kritik güncelleştirmeleri öneririz [Windows Update Web sitesini](http://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik. Bazı işletim sistemlerinde en son Windows hizmet paketinin yüklenmesi gerekebilir.
+- Tüm platformlar için en son Windows hizmet paketine yükseltmeniz ve kritik güncelleştirmeleri öneririz [Windows Update Web sitesini](https://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik. Bazı işletim sistemlerinde en son Windows hizmet paketinin yüklenmesi gerekebilir.
 
 - 64-bit işletim sistemlerinde .NET Framework, WOW64 (32-bit bir 64-bit makinede işleme) hem de yerel 64-bit işlemeyi destekler.
 

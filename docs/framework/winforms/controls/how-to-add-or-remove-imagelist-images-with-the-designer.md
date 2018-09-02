@@ -6,36 +6,36 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: c85e55b6aef45eea65e6f82269375f80acf71017
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc85306c68baa4b4a0fe3418c511672d34790ae7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527680"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394734"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Nasıl yapılır: Tasarımcı ile ImageList' Görüntüleri Ekleme veya Kaldırma
-Görüntüleri ekleyebilirsiniz bir <xref:System.Windows.Forms.ImageList> bileşen birkaç farklı yolu. İle ilişkili akıllı etiket kullanarak görüntüleri çok hızlı bir şekilde ekleyebilirsiniz <xref:System.Windows.Forms.ImageList>, ya da diğer bazı özellikleri ayarlıyorsanız <xref:System.Windows.Forms.ImageList>, daha kullanışlı Özellikler penceresini görüntülerle eklemek fark edebilirsiniz. Kod kullanarak görüntüleri de ekleyebilirsiniz. Kod görüntülerle ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms ImageList bileşeni ile görüntüleri ekleme veya kaldırma](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Genellikle, doldurmak <xref:System.Windows.Forms.ImageList> denetimi ile ilişkilidir, ancak bu zorunlu değildir önce görüntülerle bileşen.  
+Görüntüleri ekleyebileceğiniz bir <xref:System.Windows.Forms.ImageList> bileşen birkaç farklı yol. Akıllı etiket ile ilişkili kullanarak, çok hızlı bir şekilde bir görüntüleri ekleyebilirsiniz <xref:System.Windows.Forms.ImageList>, ya da diğer bazı özellikleri ayarlıyorsanız <xref:System.Windows.Forms.ImageList>, Özellikler penceresinde görüntülerle eklemek daha kullanışlı bulabilirsiniz. Kod kullanarak, görüntüleri de ekleyebilirsiniz. Kod ile görüntü ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms ImageList bileşeni ile görüntüleri ekleme veya kaldırma](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Genellikle, doldurmanız <xref:System.Windows.Forms.ImageList> bileşen görüntülerle önce bir denetimle ilişkilidir, ancak bu zorunlu değildir.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>Eklemek veya Özellikler penceresini kullanarak görüntüleri kaldırmak için  
+### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>Ekleme veya Özellikler penceresini kullanarak görüntüleri kaldırma  
   
-1.  Seçin <xref:System.Windows.Forms.ImageList> bileşeni ya da form için bir tane ekleyin.  
+1.  Seçin <xref:System.Windows.Forms.ImageList> bileşeni veya forma bir tane ekleyin.  
   
 2.  Özellikler penceresinde üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki <xref:System.Windows.Forms.ImageList.Images%2A> özelliği.  
   
-3.  İçinde **görüntü Koleksiyonu Düzenleyicisi**, tıklatın **Ekle** veya **kaldırmak** eklemek veya görüntüleri listesinden kaldırmak için.  
+3.  İçinde **görüntü Koleksiyonu Düzenleyicisi**, tıklayın **Ekle** veya **Kaldır** görüntüleri eklemek veya listeden kaldırmak için.  
   
-### <a name="to-add-or-remove-images-using-the-smart-tag"></a>Eklemek veya akıllı etiket kullanarak görüntüleri kaldırmak için  
+### <a name="to-add-or-remove-images-using-the-smart-tag"></a>Akıllı etiket kullanarak görüntüleri eklemek veya kaldırmak için  
   
-1.  Seçin <xref:System.Windows.Forms.ImageList> bileşeni ya da form için bir tane ekleyin.  
+1.  Seçin <xref:System.Windows.Forms.ImageList> bileşeni veya forma bir tane ekleyin.  
   
-2.  Akıllı etiket karakteri tıklayın (![akıllı etiket karakteri](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))  
+2.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))  
   
 3.  İçinde **ImageList görevleri** iletişim kutusunda **seçin görüntüleri**.  
   
-4.  İçinde **görüntüleri Koleksiyonu Düzenleyicisi** tıklatın **Ekle** veya **kaldırmak** eklemek veya görüntüleri listesinden kaldırmak için.  
+4.  İçinde **Editor Kolekce Images** tıklayın **Ekle** veya **Kaldır** görüntüleri eklemek veya listeden kaldırmak için.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Görüntüler, Bit Eşlemler ve Meta Dosyaları](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  

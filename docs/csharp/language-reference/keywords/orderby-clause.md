@@ -8,32 +8,37 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: 1fd0036e8bd3c838fe92ca27635cd7638d59ef1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de649a7e1608e6a653f3280bfd5c4e52a3b661be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268063"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391203"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby tümcesi (C# Başvurusu)
-Bir sorgu ifadesinde `orderby` yan tümcesi döndürülen dizi veya değişkene (artan veya azalan düzende sıralanmış grup) neden olur. Birden çok anahtar, bir veya daha fazla ikincil sıralama işlemi gerçekleştirmek için belirtilebilir. Sıralama öğesi türü için varsayılan karşılaştırıcı tarafından gerçekleştirilir. Varsayılan sıralama düzeni artan. Özel bir karşılaştırıcı de belirtebilirsiniz. Ancak, yalnızca yöntemi tabanlı sözdizimini kullanarak kullanılabilir. Daha fazla bilgi için bkz: [veri sıralama](../../programming-guide/concepts/linq/sorting-data.md).  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, ilk sorgu sözcükleri A'dan başlangıç alfabetik sırada sıralar ve ikinci sorguyu aynı sözcükler azalan düzende sıralar. ( `ascending` Anahtar sözcüğü varsayılan sıralama değerdir ve atlanabilir.)  
-  
- [!code-csharp[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
-  
-## <a name="example"></a>Örnek  
- Aşağıdaki örnek ilk adlarını Öğrenciler son adları birincil sıralama ve ikincil bir sıralama gerçekleştirir.  
-  
- [!code-csharp[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
-  
-## <a name="remarks"></a>Açıklamalar  
- Derleme zamanında `orderby` yan tümcesi için bir çağrı çevrilir <xref:System.Linq.Enumerable.OrderBy%2A> yöntemi. Birden çok anahtarlar `orderby` yan tümcesi çevirmek için <xref:System.Linq.Enumerable.ThenBy%2A> yöntem çağrıları.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [Sorgu anahtar sözcükleri (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [group yan tümcesi](../../../csharp/language-reference/keywords/group-clause.md)  
- [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+
+Bir sorgu ifadesinde `orderby` yan tümcesi döndürülen dizi veya alt diziyi artan veya azalan düzende sıralanmasını (grubu) neden olur. Birden çok anahtar, bir veya daha fazla ikincil sıralama işlemlerini gerçekleştirmek için belirtilebilir. Sıralama, öğe türü için varsayılan karşılaştırıcı tarafından gerçekleştirilir. Varsayılan sıralama artan düzendedir. Özel bir karşılaştırıcı de belirtebilirsiniz. Ancak, yalnızca yöntem tabanlı sözdizimi kullanılarak kullanılabilir. Daha fazla bilgi için [veri sıralama](../../programming-guide/concepts/linq/sorting-data.md).
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnekte, A'dan başlayarak alfabetik sırada sözcükleri ilk sorgu sıralar ve ikinci sorgu aynı sözcükler azalan düzende sıralar. ( `ascending` Anahtar sözcüğü atlanabilir ve varsayılan sıralama değerdir.)
+
+[!code-csharp[cscsrefQueryKeywords#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#20)]
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki örnek, ilk adlarına öğrencilerinin adların birincil bir sıralama ve ikincil sıralama gerçekleştirir.
+
+[!code-csharp[cscsrefQueryKeywords#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Orderby.cs#22)]
+
+## <a name="remarks"></a>Açıklamalar
+
+Derleme zamanında `orderby` yan tümcesi bir çağrısına çevrilir <xref:System.Linq.Enumerable.OrderBy%2A> yöntemi. Birden çok anahtarı `orderby` yan tümcesi çevirmek için <xref:System.Linq.Enumerable.ThenBy%2A> yöntemi çağırır.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
+- [Dil ile Tümleşik Sorgu (LINQ)](../../linq/index.md)
+- [group yan tümcesi](group-clause.md)
+- [C#'de LINQ Kullanmaya Başlama](../../programming-guide/concepts/linq/getting-started-with-linq.md)

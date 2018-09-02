@@ -8,15 +8,15 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 47c13f960cb6b70205feabfa0488e584ad6a098f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216944"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389552"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
-Kullanım `async` belirtmek için değiştirici yöntemi, bir [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntemi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuz olarak çağrılır. Bir yöntem veya ifadesi bu değiştirici kullanıyorsanız, bunu olarak adlandırılır bir *async yöntemi*. Aşağıdaki örnek, adlandırılmış bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
+Kullanım `async` değiştiricisi belirtmek için bir yöntemin [lambda ifadesi](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), veya [anonim yöntem](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) zaman uyumsuzdur. Bu değiştiriciyi bir yöntem veya ifadede kullanırsanız, şeklinde adlandırılan bir *zaman uyumsuz yöntem*. Aşağıdaki örnek adlı bir zaman uyumsuz yöntem tanımlar `ExampleMethodAsync`: 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -25,22 +25,22 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-Zaman uyumsuz programlama yeni ya da bir zaman uyumsuz yöntem nasıl kullandığını anlaşılmıyor `await` arayanın iş parçacığı, engellenmeden potansiyel olarak uzun süre çalışan iş yapmak için anahtar sözcüğü okuma girişte [zaman uyumsuz programlama Async ve await](../../../csharp/programming-guide/concepts/async/index.md). Aşağıdaki kod bir zaman uyumsuz yöntem ve çağrıları içinde bulunur <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> yöntemi: 
+Zaman uyumsuz programlamada yeniyseniz veya zaman uyumsuz bir yöntem nasıl kullandığını `await` yapanın iş parçacığını engellemeden muhtemelen uzun süren iş yapmak için anahtar sözcüğü Giriş okuma [zaman uyumsuz programlama Async ve await](../../../csharp/programming-guide/concepts/async/index.md). Aşağıdaki kod, zaman uyumsuz bir yöntem ve çağrıları içinde bulunur <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> yöntemi: 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
-İlk ulaşana kadar bir zaman uyumsuz yöntem eşzamanlı olarak çalışan `await` hangi noktada yöntemi askıya awaited görevi tamamlanana kadar ifade. Bu arada, denetim, bir sonraki bölümdeki örnekte gösterildiği gibi yöntemi çağırana döner.  
+İlk ulaşana dek zaman uyumsuz bir yöntem zaman uyumlu olarak çalışır `await` ifadesi, bu noktada yöntem askıya alınır beklenen görev tamamlanana kadar. Bu arada, denetim, bir sonraki bölümdeki örnekte gösterildiği gibi yöntemi çağırana döner.  
   
-Varsa yöntemi, `async` anahtar sözcüğü değiştirir içermiyor. bir `await` ifadesi veya deyimi, yöntem yürütür zaman uyumlu olarak. Derleyici Uyarısı içermeyen herhangi bir zaman uyumsuz yöntem uyarıları `await` deyimleri, çünkü bu durumu gösteren bir hata olabilir. Bkz: [Derleyici Uyarısı (düzey 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
+Yöntem, `async` anahtar sözcüğünün değiştirdiği içermeyen bir `await` ifadesi veya deyimi yürütülür zaman uyumlu olarak. Bir derleyici uyarısı içermeyen zaman uyumsuz yöntemler konusunda uyarır `await` deyimleri, çünkü bu durumda bir hata gösterebilir. Bkz: [Derleyici Uyarısı (düzey 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
   
- `async` Yalnızca bir yöntemi, bir lambda ifadesi veya anonim bir yöntem değişiklik yaptığında bir anahtar sözcüktür, anahtar sözcüğü bağlamsal. Tüm diğer bağlamlarda bu, tanımlayıcı olarak yorumlanır.  
+ `async` Yalnızca bir yöntem, lambda ifadesi veya anonim yöntemi değiştirdiğinde anahtar sözcük olması. anahtar sözcüğü bağlamsal. Tüm diğer bağlamlarda bu, tanımlayıcı olarak yorumlanır.  
   
 ## <a name="example"></a>Örnek  
-Aşağıdaki örnek, yapı ve bir zaman uyumsuz olay işleyicisi arasındaki denetim akışını gösterir `StartButton_Click`ve bir zaman uyumsuz yöntem `ExampleMethodAsync`. Bir web sayfasının karakter sayısını zaman uyumsuz yönteminden sonucudur. Kod, bir Windows Presentation Foundation (WPF) uygulamasını veya Visual Studio'da oluşturma Windows mağazası uygulaması için uygundur; uygulamasını kurup için kod açıklamalarına bakın.  
+Aşağıdaki örnek, yapısını ve zaman uyumsuz olay işleyicisi arasında denetim akışını gösterir `StartButton_Click`, zaman uyumsuz yöntemi `ExampleMethodAsync`. Zaman uyumsuz yöntemin sonucu karakter, bir web sayfasının sayısıdır. Kod, bir Windows Presentation Foundation (WPF) veya Visual Studio'da oluşturma Windows Store uygulaması için uygundur; uygulamayı hazırlama açıklamalarına bakın.  
 
-Bir Windows Presentation Foundation (WPF) uygulaması veya bir Windows mağazası uygulaması olarak, bu kod Visual Studio'da çalıştırabilirsiniz. Adlı bir düğme denetimine gerek `StartButton` ve adlı Textbox denetimi `ResultsTextBox`. Böylece şöyle bir şey sahip adları ve işleyici ayarlamayı unutmayın:  
+Bu kodu Visual Studio'da bir Windows Presentation Foundation (WPF) veya Windows Store uygulaması çalıştırabilirsiniz. Adlı bir düğme denetimi ihtiyacınız `StartButton` ve adlı bir metin kutusu denetimi `ResultsTextBox`. Aşağıdakine benzer olması adları ve işleyici ayarlamayı unutmayın:  
 
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
@@ -49,41 +49,42 @@ Bir Windows Presentation Foundation (WPF) uygulaması veya bir Windows mağazas�
          Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
 ```
   
-Kod bir WPF uygulaması çalıştırmak için:  
+WPF uygulaması olarak kodu çalıştırmak için:  
 
-- Bu kod içine yapıştırma `MainWindow` MainWindow.xaml.cs sınıfta.  
+- Bu kodu yapıştırın `MainWindow` MainWindow.xaml.cs sınıfta.  
 - System.Net.Http bir başvuru ekleyin.  
-- Ekleme bir `using` System.Net.Http için yönerge.  
+- Ekleme bir `using` System.Net.Http yönergesi.  
   
-Kod bir Windows mağazası uygulaması çalıştırmak için:  
-- Bu kod içine yapıştırma `MainPage` MainPage.xaml.cs sınıfta.  
-- System.Net.Http ve System.Threading.Tasks için yönergeleri kullanarak ekleyin.  
+Windows Store uygulaması olarak kodu çalıştırmak için:  
+- Bu kodu yapıştırın `MainPage` MainPage.xaml.cs sınıfta.  
+- System.Net.Http ve System.Threading.Tasks yönergeleri kullanarak ekleyin.  
   
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Görevler ve bir görev için beklenirken yürütülen kodu hakkında daha fazla bilgi için bkz: [zaman uyumsuz programlama ile async ve await](../../../csharp/programming-guide/concepts/async/index.md). Benzer öğeleri kullanan bir tam WPF örnek için bkz: [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme tarafından erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+>  Görevler ve bir görevi beklerken yürütülen kod hakkında daha fazla bilgi için bkz. [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md). Benzer öğeleri kullanan bir tam WPF örneği için bkz. [izlenecek yol: Web kullanarak Async ve Await tarafından erişim](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Dönüş Türleri  
-Async yöntemi, dönüş türleri aşağıdakilere sahip olabilir:
+Zaman uyumsuz bir yöntem, aşağıdaki dönüş türlerine sahip olabilir:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md), hangi yalnızca kullanılmalıdır olay işleyicileri için.
-- C# 7.0, bir erişilebilir olan herhangi bir tür'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Bu tür bir uygulama türüdür. NuGet paketi ekleyerek kullanılabilir olur `System.Threading.Tasks.Extensions`. 
+- [void](../../../csharp/language-reference/keywords/void.md), hangi yalnızca kullanılmalıdır için olay işleyicileri.
+- C# 7.0, bir erişilebilir olan herhangi bir türü'ile başlayan `GetAwaiter` yöntemi. `System.Threading.Tasks.ValueTask<TResult>` Böyle bir uygulama türüdür. NuGet paketini ekleyerek kullanılabilir `System.Threading.Tasks.Extensions`. 
 
-Async yöntemi herhangi bildiremezsiniz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [çıkışı](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri ya da can sahip bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md), ancak yöntemleri çağırabilir Bu tür parametreler sahip.  
+Zaman uyumsuz yöntemin herhangi bildiremezsiniz [içinde](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) veya [kullanıma](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametreleri ya da can sahip bir [başvuru dönüş değeri](../../programming-guide/classes-and-structs/ref-returns.md), ancak bu yöntemleri çağırabilirsiniz parametrelere sahip.  
   
-Belirttiğiniz `Task<TResult>` bir zaman uyumsuz yönteminin dönüş türü olarak varsa [dönmek](../../../csharp/language-reference/keywords/return.md) yöntemin ifadesi işleneni türü belirtir `TResult`. Kullandığınız `Task` yöntemi tamamlandığında hiçbir anlamlı değeri döndürülür. Diğer bir deyişle, yöntemine bir çağrı döndürür bir `Task`, ancak ne zaman `Task` tamamlandığında, tüm `await` bekliyor ifade `Task` değerlendiren `void`.  
+Belirttiğiniz `Task<TResult>` zaman uyumsuz bir yöntemin dönüş türü, [dönüş](../../../csharp/language-reference/keywords/return.md) yöntemi deyiminin türünde bir işlenen belirtiyorsa `TResult`. Kullandığınız `Task` yöntem tamamlandığında anlamlı bir değer döndürülürse. Diğer bir deyişle, yönteme bir çağrı döndürür bir `Task`, ancak `Task` tamamlandığında, tüm `await` bekleyen ifade `Task` değerlendiren `void`.  
   
-Kullandığınız `void` dönüş türü, dönüş türü gerektiren olay işleyicileri öncelikle tanımlayın. Çağıran bir `void`-zaman uyumsuz yöntem döndürme await olamaz ve yöntemi atar özel durumlarını yakalama olamaz.  
+Kullandığınız `void` dönüş ilgili dönüş türünü gerektiren olay işleyicilerini tanımlamak için öncelikle türü. Çağıran bir `void`-döndüren zaman uyumsuz yöntemi Bekleyemez ve yöntemin oluşturduğu özel durumları yakalayamaz.  
 
-C# 7. 0'dan başlayarak, başka bir tür, sahip genellikle bir değer türü, dönüş bir `GetAwaiter` performans açısından kritik kod bölümlerini miminize bellek ayırma yöntemi. 
+C# 7.0 ile başlayarak, başka bir türe sahip genellikle bir değer türü, iade bir `GetAwaiter` performans açısından kritik kod bölümlerini miminize bellek ayırmaları için yöntemi. 
 
-Daha fazla bilgi ve örnekler için bkz: [zaman uyumsuz dönüş türleri](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+Daha fazla bilgi ve örnekler için bkz. [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [await](../../../csharp/language-reference/keywords/await.md)  
- [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+- [await](../../../csharp/language-reference/keywords/await.md)  
+- [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)

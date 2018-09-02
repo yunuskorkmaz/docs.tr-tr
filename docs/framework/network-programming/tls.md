@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925510"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389783"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Windows kayıt defterinde Schannel protokolleri yapılandırma
 
-Kayıt defteri, istemci ve/veya sunucu uygulamanızı görüşür protokolleri üzerinde ayrıntılı denetim için kullanabilirsiniz. Uygulamanızın ağ Schannel geçer (başka bir ad olduğu [güvenli kanal](https://msdn.microsoft.com/library/windows/desktop/aa380123). Yapılandırarak `Schannel`, uygulamanızın davranışını yapılandırabilirsiniz.
+Kayıt defteri, istemci ve/veya sunucu uygulamanızı görüşür protokolleri üzerinde ayrıntılı denetim için kullanabilirsiniz. Uygulamanızın ağ Schannel geçer (başka bir ad olduğu [güvenli kanal](/windows/desktop/SecAuthN/secure-channel). Yapılandırarak `Schannel`, uygulamanızın davranışını yapılandırabilirsiniz.
 
 İle başlayan `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` kayıt defteri anahtarı. Bu anahtarı tüm alt kümesinde oluşturabilirsiniz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1`, ve `TLS 1.2`. Her bu alt altında alt oluşturabilirsiniz `Client` ve/veya `Server`. Altında `Client` ve `Server`, DWORD değerlerini oluşturabilirsiniz `DisabledByDefault` (0 veya 1) ve `Enabled` (0 veya 0xFFFFFFFF).
 
@@ -239,8 +239,8 @@ Kayıt defteri, istemci ve/veya sunucu uygulamanızı görüşür protokolleri �
 
 Bu etkinleştirildiğinde (varsayılan olarak, tarafından bir `AppContext` geçiş, veya Windows kayıt defteri), .NET Framework kullanan `SCH_USE_STRONG_CRYPTO` TLS güvenlik protokolü, uygulamanız istediğinde, bayrak. `SCH_USE_STRONG_CRYPTO` Bayrağı ile varsayılan olarak, etkinleştirilebilir `AppContext` geçiş, veya kayıt defteri ile. İşletim sistemi bayrak geçirir `Schannel`bilinen zayıf şifreleme algoritmalarına devre dışı bırakmak için yönlendirmek için paketleri ve aksi takdirde daha iyi birlikte çalışabilirlik için etkinleştirilebilir TLS/SSL protokolü sürümlerini şifre. Daha fazla bilgi için bkz.:
 
-- [Güvenli kanal](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [SCHANNEL_CRED yapısı](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [Güvenli kanal](/windows/desktop/SecAuthN/secure-channel)
+- [SCHANNEL_CRED yapısı](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 `SCH_USE_STRONG_CRYPTO` Bayrağı için geçirilen ayrıca `Schannel` açıkça kullandığınızda `Tls` (TLS 1.0) `Tls11`, veya `Tls12` listelenmiş değerlerinden biri <xref:System.Net.SecurityProtocolType> veya <xref:System.Security.Authentication.SslProtocols>.
 

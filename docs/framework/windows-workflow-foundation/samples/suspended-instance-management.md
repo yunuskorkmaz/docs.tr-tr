@@ -2,85 +2,85 @@
 title: Askıya alınmış örnek Yönetimi
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519229"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394606"
 ---
 # <a name="suspended-instance-management"></a>Askıya alınmış örnek Yönetimi
-Bu örnek, askıya alınan iş akışı örnekleri yönetmek gösterilmiştir.  İçin varsayılan eylem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> olan `AbandonAndSuspend`. Varsayılan olarak, içinde bir iş akışı örneğinden oluşturulan işlenmeyen özel durumları barındırılan yani <xref:System.ServiceModel.WorkflowServiceHost> örneği (terk) bellekten çıkarılması ve dayanıklı ve kalıcı örneğinin sürümü, askıya alındı olarak işaretlenmesine neden olacak. Askıya alınan iş akışı örneği çalıştırabilir ve onu unsuspended kadar olmaz.  
+Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir.  İçin varsayılan eylem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> olduğu `AbandonAndSuspend`. Varsayılan olarak, bir iş akışı örneğinden oluşturulan yakalanamayan özel durum barındırılan yani <xref:System.ServiceModel.WorkflowServiceHost> örneği (terk) bellekten çıkarılması ve dayanıklı ve kalıcı örneğinin sürümü, askıya alındı olarak işaretlenmesine neden olur. Askıya alınan iş akışı örneği adlı aşana kadar çalıştırmak mümkün olmayacaktır.  
   
- Komut satırı yardımcı programını askıya alınmış örnekleri için sorgu ve kullanıcı sürdürün veya örnek sonlandırmak için seçenek sunmak amacıyla nasıl nasıl uygulanabilir örnek gösterir. Bu örnekte, bir iş akışı hizmeti bilerek, askıya duruma neden olan bir özel durum oluşturur. Komut satırı yardımcı programı daha sonra örnek için sorgu ve daha sonra sürdürün veya örnek sonlandırmak için kullanılabilir.  
+ Örnek sorgu askıya alınmış örnekleri için ve nasıl sürdürün veya örneği sonlandırma seçeneği kullanıcıya vermek için bir komut satırı yardımcı programını nasıl uygulanabileceği gösterilmektedir. Bu örnekte, bir iş akışı hizmeti kasıtlı olarak askıya için neden bir özel durum oluşturur. Komut satırı yardımcı programını, ardından örnek için sorgulama ve daha sonra sürdürün veya örneği sonlandırmak için kullanılabilir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- <xref:System.ServiceModel.WorkflowServiceHost> ile <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ve <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> Windows Workflow Foundation (WF) içinde.  
+ <xref:System.ServiceModel.WorkflowServiceHost> ile <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ve <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> içinde Windows Workflow Foundation (WF).  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnekte uygulanan komut satırı yardımcı programı içinde birlikte gelen SQL örneği mağaza uygulamasına belirli [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Özel bir örnek deposuna uygulanmasına sahip sonra değiştirerek bu yardımcı program uyarlayabilirsiniz `WorkflowInstanceCommand` örnek uygulamalarında örneği deponuza belirli uygulamaları.  
+ Bu örnekte uygulanan komut satırı yardımcı programını içinde birlikte gelen SQL örneği mağazası uygulamalarına özeldir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Örnek deposuna bir özel uygulanışı olması durumunda değiştirerek bu yardımcı program uyarlayabilirsiniz `WorkflowInstanceCommand` örnek uygulamalarında, örnek deposuna belirli uygulamaları.  
   
- Sağlanan uygulama SQL komutlarını doğrudan askıya alınmış örneklerini listelemek için SQL örneği depo çalıştırır ve kullanır. bir <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> eklenen <xref:System.ServiceModel.WorkflowServiceHost> sürdürün veya örnekleri sonlandırmak için.  
+ Sağlanan uygulama doğrudan askıya alınmış örneklerini listelemek için SQL örneği depo SQL komutlarını çalıştırır ve kullanır bir <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> eklenen <xref:System.ServiceModel.WorkflowServiceHost> sürdürün veya örnekleri sonlandırmak için.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
 1.  Bu örnek, aşağıdaki Windows bileşenleri etkin olmasını gerektirir:  
   
-    1.  Microsoft Message sıraları (MSMQ) sunucusu  
+    1.  Microsoft ileti kuyrukları (MSMQ) sunucusu  
   
     2.  SQL Server Express  
   
 2.  SQL Server veritabanı ayarlama.  
   
-    1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut istemi, aşağıdaki SuspendedInstanceManagement örnek dizinden "setup.cmd" çalıştırın:  
+    1.  Gelen bir [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] komut isteminde "Setup.cmd'yi" aşağıdaki SuspendedInstanceManagement örnek dizinden çalıştırın:  
   
-        1.  SQL Server Express kullanarak bir Kalıcılık veritabanı oluşturur. Bırakılan ve yeniden oluşturulması Kalıcılık veritabanı zaten varsa  
+        1.  SQL Server Express kullanarak bir Kalıcılık veritabanı oluşturur. Bırakılan ve yeniden oluşturulduğunda Kalıcılık veritabanı zaten varsa  
   
-        2.  Veritabanı kalıcılığı için ayarlar.  
+        2.  Kalıcılık veritabanı ayarlar.  
   
-        3.  IIS APPPOOL\DefaultAppPool ve NT AUTHORITY\Network Service kalıcılığı için veritabanı ayarlarken tanımlandı InstanceStoreUsers rolüne ekler.  
+        3.  IIS APPPOOL\DefaultAppPool ve NT AUTHORITY\NETWORK SERVICE Kalıcılık veritabanı ayarlarken tanımlandı InstanceStoreUsers rolüne ekler.  
   
 3.  Hizmet sırasını ayarlayın.  
   
-    1.  İçinde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], sağ **SampleWorkflowApp** proje ve tıklatın **başlangıç projesi olarak ayarla**.  
+    1.  İçinde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], sağ **SampleWorkflowApp** projesine **başlangıç projesi olarak ayarla**.  
   
-    2.  Derleme ve tuşlarına basarak SampleWorkflowApp çalıştırma **F5**. Bu, gerekli sıra oluşturur.  
+    2.  Derleme ve tuşlarına basarak SampleWorkflowApp çalıştırma **F5**. Bu gerekli bir kuyruk oluşturur.  
   
     3.  Tuşuna **Enter** SampleWorkflowApp durdurmak için.  
   
-    4.  Bir komut isteminden Compmgmt.msc çalıştırarak Bilgisayar Yönetimi konsolunu açın.  
+    4.  Bir komut istemi'nden Compmgmt.msc çalıştırarak Bilgisayar Yönetimi konsolunu açın.  
   
-    5.  Genişletme **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
+    5.  Genişletin **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
   
-    6.  Sağ tıklayın **ReceiveTx** sıraya ve seçin **özellikleri**.  
+    6.  Sağ tıklayın **ReceiveTx** seçin ve sıra **özellikleri**.  
   
-    7.  Seçin **güvenlik** sekmesinde ve izin **herkesin** izinlerine sahip olmasını **İleti Al**, **iletiye**, ve  **İleti gönderme**.  
+    7.  Seçin **güvenlik** sekmesini ve izin **herkes** izinlerine sahip olmasını **İleti Al**, **iletiye**, ve  **İleti gönderme**.  
   
 4.  Şimdi, örnek çalıştırın.  
   
-    1.  İçinde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], SampleWorkflowApp projeyi yeniden tuşlarına basarak hata ayıklama olmadan çalıştırma **Ctrl + F5**. İki uç nokta adresleri konsol penceresinde yazdırılan: uygulama uç noktası için bir tane ve öğesinden sonra diğer <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Bir iş akışı örneği sonra oluşturulur ve bu örnek için kayıtları izleme konsol penceresinde görünür. İş akışı örneği askıya ve iptal örneği neden olan bir özel durum oluşturur.  
+    1.  İçinde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], SampleWorkflowApp projeyi yeniden tuşuna basarak hata ayıklama olmadan çalıştırmak **Ctrl + F5**. İki uç nokta adresleri konsol penceresinde yazdırılır: uygulama uç noktası için bir tane ve gelen diğer <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Bir iş akışı örneği sonra oluşturulur ve bu örnek için kayıtları izleme konsol penceresinde görünür. İş akışı örneği askıya ve iptal örneği neden olan bir özel durum oluşturur.  
   
-    2.  Komut satırı yardımcı programı daha sonra başka bir işlem bu örnekler hiçbirinde yapmanıza için kullanılabilir. Komut satırı bağımsız değişkenleri için söz dizimi aşağıdaki gibidir:  
+    2.  Komut satırı yardımcı programını, ardından Bu örneklerin herhangi birine üzerinde daha fazla eylemi gerçekleştirmek için kullanılabilir. Komut satırı bağımsız değişkenleri için sözdizimi aşağıdaki gibidir:  
   
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`  
   
-         Desteklenen komutlar: `Query`, `Resume`, ve `Terminate`.  InstanceId anahtar yalnızca gerekli olan `Resume` ve `Terminate` işlemleri.  
+         Desteklenen komutlar: `Query`, `Resume`, ve `Terminate`.  InstanceId geçiş için yalnızca gerekli `Resume` ve `Terminate` operations.  
   
-#### <a name="to-cleanup-optional"></a>Temizleme (isteğe bağlı)  
+#### <a name="to-cleanup-optional"></a>(İsteğe bağlı) temizlemek için  
   
 1.  Gelen Compmgmt.msc çalıştırarak Bilgisayar Yönetimi konsolunu açın bir `vs2010` komut istemi.  
   
-2.  Genişletme **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
+2.  Genişletin **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.  
   
-3.  Silme **ReceiveTx** sırası.  
+3.  Silme **ReceiveTx** kuyruk.  
   
-4.  Kalıcılık veritabanını kaldırmak için cleanup.cmd çalıştırın.  
+4.  Kalıcılık veritabanı kaldırmak için cleanup.cmd çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

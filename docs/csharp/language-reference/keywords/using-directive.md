@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960046"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388149"
 ---
 # <a name="using-directive-c-reference"></a>using Yönergesi (C# Başvurusu)
 `using` Yönergesi sahip üç kullanır:  
@@ -20,7 +20,7 @@ ms.locfileid: "37960046"
     using System.Text;  
     ```  
   
--   Tür adıyla erişimini nitele zorunda kalmadan bir türün statik üyeleri erişmesine izin vermek için. 
+-   Statik üyeleri ve iç içe geçmiş türler bir türün tür adıyla erişimini nitele zorunda kalmadan erişim sağlamak için. 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kapsamı bir `using` yönergesi göründüğü dosyanın sınırlıdır.  
+ Kapsamı bir `using` yönergesi göründüğü dosyanın sınırlıdır.
+ 
+ `using` Yönergesi görünebilir:
+- Herhangi bir ad alanı veya tür tanımı önce bir kaynak kodu dosyasının başında.
+- Herhangi bir ad alanı, ancak önce tüm ad alanı veya tür bu ad alanı bildirimi.
+
+Aksi durumda, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.
   
- Oluşturma bir `using` Sınıflandır tanımlayıcı bir ad alanı veya tür için daha kolay hale getirmek için diğer ad. Kullanarak bir sağ tarafı diğer yönerge her zaman tam olarak nitelenmiş bir tür kullanarak bağımsız olarak olmalıdır önce gelen yönergeleri.  
+ Oluşturma bir `using` Sınıflandır tanımlayıcı bir ad alanı veya tür için daha kolay hale getirmek için ALIAS yönergesi. Herhangi `using` yönergesi, tam ad alanı veya tür bağımsız olarak, kullanılmalıdır `using` önce gelen yönergeleri. Hayır `using` diğer ad bildiriminde kullanıldığında bir `using` yönergesi. Örneğin, aşağıdaki bir derleyici hatası oluşturur:
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  Oluşturma bir `using` ad alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanılacak yönergesi. A `using` yönergesi verme erişim için belirttiğiniz ad alanı içinde iç içe geçmiş tüm ad alanları.  
   
- Ad alanları, iki kategoride gelir: sistem tarafından tanımlanan ve kullanıcı tanımlı. Kullanıcı tanımlı ad alanlarında, kod içinde tanımlanan ad alanları ' dir. Sistem tarafından tanımlanan ad alanları listesi için bkz. [.NET Framework sınıf kitaplığına genel bakış](../../../standard/class-library-overview.md).  
+ Ad alanları, iki kategoride gelir: sistem tarafından tanımlanan ve kullanıcı tanımlı. Kullanıcı tanımlı ad alanlarında, kod içinde tanımlanan ad alanları ' dir. Sistem tarafından tanımlanan ad alanları listesi için bkz. [.NET API Browser](https://docs.microsoft.com/en-us/dotnet/api/).  
   
  Başvuran diğer derlemelerdeki yöntemleri hakkında daha fazla örnek için bkz: [oluştur ve kullanım bütünleştirilmiş kodları kullanarak komut satırı](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Ad Alanlarını Kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Ad Alanı Anahtar Sözcükleri](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Ad Alanlarını Kullanma](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Ad Alanı Anahtar Sözcükleri](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Ad Alanları](../../../csharp/programming-guide/namespaces/index.md)  
+- [using Deyimi](../../../csharp/language-reference/keywords/using-statement.md)

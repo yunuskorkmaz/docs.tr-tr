@@ -1,31 +1,31 @@
 ---
-title: Yüksek kullanılabilirlik, olağanüstü durum kurtarma SqlClient desteği
+title: Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948530"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395861"
 ---
-# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma SqlClient desteği
-Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklenmiştir. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
+# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
+Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
   
- Kullanılabilirlik grubu dinleyicisi, artık belirtebilirsiniz bir (yüksek kullanılabilirlik, olağanüstü durum kurtarma) kullanılabilirlik grubu (ağ) veya SQL Server 2012 yük devretme kümesi örneği bağlantı özelliği. SqlClient uygulama yöneltilir bir AlwaysOn veritabanına bağlıysa, özgün bağlantı bozuluyor ve uygulama yük devretme sonrasında çalışmaya devam etmek için yeni bir bağlantı açmanız gerekir.  
+ Şimdi, kullanılabilirlik grubu dinleyicisini belirtin bir (yüksek kullanılabilirlik, olağanüstü durum kurtarma) kullanılabilirlik grubu (ağ) veya SQL Server 2012 yük devretme kümesi örneği bağlantı özelliği. Devreder bir AlwaysOn veritabanı için SqlClient uygulama bağlıysa, özgün bağlantı bozuk ve uygulamanın yük devretme sonrasında çalışmaya devam etmek için yeni bir bağlantı açmanız gerekir.  
   
- Bir kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği bağlanma değil ve bir ana bilgisayar adı ile ilişkili birden çok IP adresi, SqlClient sırayla DNS girişi ile ilişkili tüm IP adreslerini yinelemek. Bu, tüm ağ arabirim kartı (NIC) DNS sunucusu tarafından döndürülen ilk IP adresine bağlı değilse zun olabilir. Bir kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği bağlanırken SqlClient paralel olarak tüm IP adresleri bağlantı dener ve bağlantı denemesi başarılı olursa, sürücü herhangi bir bekleyen bağlantısı atar çalışır.  
+ Bir kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği bağlanmıyorsanız ve bir ana bilgisayar adı ile ilişkili birden çok IP adresi varsa, SqlClient sırayla DNS girişi ile ilişkili tüm IP adresleri üzerinden yineleme. Bu zaman DNS sunucusu tarafından döndürülen ilk IP adresini bir ağ arabirim kartı (NIC) bağlı değilse alıcı olabilir. Bir kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği bağlanırken SqlClient paralel olarak tüm IP adreslerinin bağlantı dener ve bağlantı denemesi başarılı olursa, sürücü bekleyen herhangi bir bağlantı atacak çalışır.  
   
 > [!NOTE]
->  Bağlantı zaman aşımı süresini artırmak ve bağlantı yeniden deneme mantığı uygulamak bir uygulama bir kullanılabilirlik grubuna bağlanır olasılığı artar. Ayrıca, bir bağlantı nedeniyle yük devretme başarısız olabileceğinden onu yeniden bağlandığında kadar başarısız bağlantı yeniden deneniyor bağlantı yeniden deneme mantığı, uygulamanız gerekir.  
+>  Bağlantı zaman aşımı süresini artırmak ve bağlantı yeniden deneme mantığını uygulayan bir uygulama bir kullanılabilirlik grubuna bağlanacak olasılığını artırır. Ayrıca, bir bağlantı nedeniyle bir yük devretme başarısız olabileceğinden, onu yeniden kadar başarısız bir bağlantıyı yeniden deneniyor. bağlantı yeniden deneme mantığı uygulamalıdır.  
   
- Aşağıdaki bağlantı özelliklerini SqlClient eklenme [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
+ Aşağıdaki bağlantı özelliklerini SqlClient içinde eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]:  
   
 -   `ApplicationIntent`  
   
 -   `MultiSubnetFailover`  
   
- Bu bağlantı dizesi anahtar sözcükleriyle program aracılığıyla değiştirebilirsiniz:  
+ Bu bağlantı dizesi anahtar sözcükler ile programlı bir şekilde değiştirebilirsiniz:  
   
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -35,67 +35,67 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
 >  Ayarı `MultiSubnetFailover` için `true` ile gerekli değildir [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] veya sonraki sürümler.
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover ile bağlanma  
- Her zaman belirtmeniz `MultiSubnetFailover=True` bir SQL Server 2012 kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği bağlanırken. `MultiSubnetFailover` Yük devretme kümesi örneği SQL Server 2012 ve olacaktır ve tüm kullanılabilirlik grupları tek ve birden çok alt ağ AlwaysOn Topolojileri için yük devretme süresini önemli ölçüde azaltmak için daha hızlı yük devretmeyi etkinleştirir. Birden çok alt ağ yük devretme sırasında istemci bağlantıları paralel çalışacak. Bir alt ağ yük devretme sırasında titizlikle TCP bağlantısı yeniden deneyecek.  
+ Her zaman belirtin `MultiSubnetFailover=True` bir kullanılabilirlik grubu dinleyicisi SQL Server 2012 veya SQL Server 2012 yük devretme kümesi örneği bağlanırken. `MultiSubnetFailover` Yük devretme kümesi örneği SQL Server 2012 ve edecek ve tüm kullanılabilirlik grupları tek ve birden çok alt ağ AlwaysOn topolojiler için yük devretme süreyi önemli ölçüde azaltmaya için daha hızlı yük devretmeyi etkinleştirir. Birden çok alt ağ bir yük devretme sırasında istemci bağlantıları paralel olarak çalışacaktır. Alt ağ bir yük devretme sırasında TCP bağlantısı agresif yeniden deneyecek.  
   
- `MultiSubnetFailover` Bağlantı özelliği, bir kullanılabilirlik grubu ya da SQL Server 2012 yük devretme kümesi örneği uygulamanın dağıtıldığı ve SqlClient silmeyi deneyerek birincil SQL Server örneğinde veritabanına bağlanmak deneyecek gösterir tüm IP adresine bağlanın. Zaman `MultiSubnetFailover=True` belirtilen bir bağlantı için istemci TCP bağlantı denemeleri işletim sisteminin varsayılan TCP yeniden aktarım aralıklar daha hızlı yeniden dener. Bu bir AlwaysOn Kullanılabilirlik grubu veya bir AlwaysOn yük devretme kümesi örneği yük devretme işleminden sonra daha hızlı yeniden bağlanmayı sağlar ve hem tek ve birden çok subnet kullanılabilirlik grupları ve yük devretme kümesi örnekleri için geçerlidir.  
+ `MultiSubnetFailover` Bağlantı özelliği, uygulama bir kullanılabilirlik grubu veya SQL Server 2012 yük devretme kümesi örneği dağıtıldığını ve SqlClient deneyerek, birincil SQL Server örneğinde veritabanına bağlanmaya çalışacaktır gösterir tüm IP adresine bağlanın. Zaman `MultiSubnetFailover=True` belirtilen bir bağlantı için istemci TCP bağlantı girişimleri işletim sisteminin varsayılan TCP yeniden aktarım aralığından daha hızlı yeniden dener. Bu yük devretme işleminden sonra daha hızlı yeniden bağlanma AlwaysOn Kullanılabilirlik grubu veya bir AlwaysOn yük devretme kümesi örneği sağlar ve hem tek ve çoklu subnet kullanılabilirlik grupları ve yük devretme kümesi örnekleri için geçerlidir.  
   
- SqlClient bağlantı dizesi anahtar sözcükler hakkında daha fazla bilgi için bkz: <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ Bağlantı dizesi anahtar sözcükler sqlclient'ta hakkında daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  Belirtme `MultiSubnetFailover=True` ne zaman bir kullanılabilirlik grubu dinleyicisi veya SQL Server 2012 yük devretme kümesi örneği dışında bir şey bağlanma olumsuz bir etkisi neden olabilir ve desteklenmiyor.  
   
- Bir kullanılabilirlik grubundaki bir sunucuya veya SQL Server 2012 yük devretme kümesi örneği bağlanmak için aşağıdaki kılavuzları kullanın:  
+ Bir kullanılabilirlik grubuna bir sunucu veya SQL Server 2012 yük devretme kümesi örneği bağlanmak için aşağıdaki yönergeleri kullanın:  
   
--   Kullanım `MultiSubnetFailover` bağlantı özelliği için bir tek alt ağ veya birden çok alt ağ; bağlanırken her ikisi için de performansı iyileştirir.  
+-   Kullanım `MultiSubnetFailover` bağlantı özelliği için bir tek alt ağ veya birden çok alt ağ; bağlanırken, her ikisi için de performansı iyileştirir.  
   
--   Bir kullanılabilirlik grubuna bağlanmak için kullanılabilirlik grubunun kullanılabilirlik grubu dinleyicisinin bağlantı dizenizi sunucusu olarak belirtin.  
+-   Bir kullanılabilirlik grubuna bağlanmak için bağlantı dizenizi sunucusu olarak kullanılabilirlik grubunun kullanılabilirlik grubu dinleyicisini belirtin.  
   
--   Bir SQL Server'a bağlanırken örneği 64 taneden fazla IP adresleriyle yapılandırılmış bir bağlantı hatası neden olur.  
+-   64'ten fazla IP adresi ile yapılandırılmış bir SQL Server'a bağlanırken bağlantı hatası neden olur.  
   
--   Kullanan bir uygulama davranışını `MultiSubnetFailover` bağlantı özelliği kimlik doğrulama türüne göre etkilenmez: SQL Server kimlik doğrulaması, Kerberos kimlik doğrulaması veya Windows kimlik doğrulaması.  
+-   Kullanan bir uygulamanın davranışını `MultiSubnetFailover` bağlantı özelliği, kimlik doğrulama türüne göre değil etkilenir: SQL Server kimlik doğrulaması, Kerberos kimlik doğrulaması veya Windows kimlik doğrulaması.  
   
--   Değerini artırın `Connect Timeout` uyum sağlamak için yük devretme süresi ve uygulama bağlantı denemeleri azaltmak için.  
+-   Değeri Artır `Connect Timeout` için yük devretme zamanına uyum sağlayamayacak ve uygulama bağlantı yeniden deneme girişimleri azaltmak için.  
   
--   Dağıtılmış işlemler desteklenmiyor.  
+-   Dağıtılmış işlemler desteklenmez.  
   
  Bir ikincil çoğaltma konumuna bağlanma, salt okunur yönlendirme etkin değilse, aşağıdaki durumlarda başarısız olur:  
   
-1.  İkincil çoğaltma konumun bağlantılarını kabul edecek şekilde yapılandırılmazsa.  
+1.  İkincil çoğaltma konumu bağlantılarını kabul edecek şekilde yapılandırılmamışsa.  
   
-2.  Bir uygulama kullanıyorsa, `ApplicationIntent=ReadWrite` (aşağıda açıklanmıştır) ve ikincil çoğaltma konumu salt okunur erişim için yapılandırıldı.  
+2.  Bir uygulama kullanıyorsa `ApplicationIntent=ReadWrite` (aşağıda açıklanmıştır) ve ikincil çoğaltma konumu salt okunur erişim için yapılandırılır.  
   
- <xref:System.Data.SqlClient.SqlDependency> salt okunur ikincil çoğaltmaların üzerine desteklenmiyor.  
+ <xref:System.Data.SqlClient.SqlDependency> salt okunur ikincil çoğaltmalarda desteklenmiyor.  
   
- Bir bağlantı birincil kopya salt okunur iş yükleri reddedecek şekilde yapılandırılmış ve bağlantı dizesini içeriyorsa başarısız olur `ApplicationIntent=ReadOnly`.  
+ Birincil kopya salt okunur iş yükleri reddedecek şekilde yapılandırılmışsa ve bağlantı dizesini içeren bir bağlantı başarısız olur `ApplicationIntent=ReadOnly`.  
   
-## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Birden çok alt ağ kullanmak üzere yükseltmenin kümeleri veritabanı yansıtma  
- Bağlantı hatası (<xref:System.ArgumentException>) varsa ortaya çıkar `MultiSubnetFailover` ve `Failover Partner` bağlantı sözcükler bağlantı dizesinde mevcut veya `MultiSubnetFailover=True` ve TCP dışında bir protokolü kullanılır. Hata (<xref:System.Data.SqlClient.SqlException>) de oluşacaktır `MultiSubnetFailover` kullanılır ve SQL Server veritabanı çifti yansıtma parçası olduğunu gösteren bir yük devretme ortağı yanıt verir.  
+## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Birden çok alt ağ kullanmak için yükseltme kümeleri gelen veritabanı yansıtma  
+ Bağlantı hatası (<xref:System.ArgumentException>) meydana gelir `MultiSubnetFailover` ve `Failover Partner` bağlantı sözcükler bağlantı dizesinde mevcut veya `MultiSubnetFailover=True` ve TCP dışındaki bir protokolü kullanılır. Hata (<xref:System.Data.SqlClient.SqlException>) da meydana gelir `MultiSubnetFailover` kullanılır ve SQL Server'ı bir veritabanı yansıtma çiftinin bir parçası olduğunu gösteren bir yük devretme iş ortağı yanıt verir.  
   
- Yükseltirseniz, birden çok alt senaryo için veritabanı yansıtma SqlClient uygulama şu anda kullanır, kaldırmanız gerekir `Failover Partner` bağlantı özelliği ve bunların yerine `MultiSubnetFailover` kümesine `True` ve sunucu adını değiştirin bir kullanılabilirlik grubu dinleyicisi ile bağlantı dizesi. Bir bağlantı dizesi kullanıyorsa `Failover Partner` ve `MultiSubnetFailover=True`, sürücü bir hata oluşturur. Ancak, bir bağlantı dizesi kullanıyorsa `Failover Partner` ve `MultiSubnetFailover=False` (veya `ApplicationIntent=ReadWrite`), uygulama, veritabanı yansıtma kullanacak.  
+ Yükseltirseniz SqlClient uygulama şu anda birden çok alt senaryo için veritabanı yansıtma kullanır, kaldırmalısınız `Failover Partner` bağlantı özelliği değiştirin `MultiSubnetFailover` kümesine `True` ve sunucu adını değiştirin bir kullanılabilirlik grubu dinleyicisi ile bağlantı dizesi. Bir bağlantı dizesi kullanması durumunda `Failover Partner` ve `MultiSubnetFailover=True`, sürücü bir hata oluşturur. Ancak, bir bağlantı dizesi kullanması durumunda `Failover Partner` ve `MultiSubnetFailover=False` (veya `ApplicationIntent=ReadWrite`), uygulama, veritabanı yansıtma kullanır.  
   
- Sürücü veritabanı yansıtma AG birincil veritabanında kullanılırsa ve bir hata döndürecektir `MultiSubnetFailover=True` yerine birincil veritabanı bir kullanılabilirlik grubu dinleyicisi için bağlandığı bağlantı dizesinde kullanılır.  
+ Sürücü AG, birincil veritabanında veritabanı yansıtma kullanılıyorsa ve bir hata döndürecektir `MultiSubnetFailover=True` bir kullanılabilirlik grubu dinleyicisi yerine birincil veritabanına bağlanacak bağlantı dizesini kullanılır.  
   
 ## <a name="specifying-application-intent"></a>Uygulama hedefi belirtme  
- Zaman `ApplicationIntent=ReadOnly`, istemci bir AlwaysOn etkin veritabanına bağlanırken okuma iş yükünü ister. Sunucu bağlantısı zaman ve USE veritabanı deyimi sırasında ancak yalnızca bir Always On etkin veritabanı hedefi zorlar.  
+ Zaman `ApplicationIntent=ReadOnly`, istemci bir AlwaysOn etkin veritabanına bağlanırken bir okuma iş yükü ister. Sunucu bağlantısı zaman ve USE veritabanı deyimi sırasında ancak yalnızca bir Always On etkin veritabanı amaç zorlar.  
   
- `ApplicationIntent` Anahtar sözcüğü eski, salt okunur veritabanları ile çalışmaz.  
+ `ApplicationIntent` Anahtar sözcüğü, eski, salt okunur veritabanları ile çalışmaz.  
   
- Bir veritabanı verin veya hedeflenen AlwaysOn veritabanı üzerinde okuma iş yükleri vermeyin. (Bu gerçekleştirilir `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
+ Bir veritabanı izin verebilir veya hedeflenen AlwaysOn veritabanı üzerindeki okuma iş yükleri izin vermeyin. (Bunun `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
   
- `ApplicationIntent` Anahtar sözcüğü salt okunur yönlendirmeyi etkinleştirmek için kullanılır.  
+ `ApplicationIntent` Anahtar sözcüğü, salt okunur yönlendirme etkinleştirmek için kullanılır.  
   
 ## <a name="read-only-routing"></a>Salt okunur yönlendirme  
- Yönlendirme salt okunur bir veritabanının okuma yalnızca çoğaltmasını kullanılabilirliğinden emin olabilirsiniz bir özelliktir. Salt okunur yönlendirmeyi etkinleştirmek için:  
+ Salt okunur yönlendirme okuma yalnızca bir veritabanı çoğaltmasını kullanılabilirliğini sağlayan bir özelliktir. Salt okunur yönlendirme etkinleştirmek için:  
   
-1.  Bir her zaman kullanılabilirlik grubu üzerinde kullanılabilirlik grubu dinleyicisi bağlanmanız gerekir.  
+1.  Bir Always On kullanılabilirlik grubu kullanılabilirlik grubu dinleyicisi için bağlanmanız gerekir.  
   
-2.  `ApplicationIntent` Bağlantı dizesi anahtar sözcüğü ayarlanmalıdır `ReadOnly`.  
+2.  `ApplicationIntent` Bağlantı dizesi anahtar kelimesi ayarlanmalıdır `ReadOnly`.  
   
-3.  Kullanılabilirlik grubu salt okunur yönlendirmeyi etkinleştirmek için veritabanı yöneticisi tarafından yapılandırılması gerekir.  
+3.  Kullanılabilirlik grubu salt okunur yönlendirme etkinleştirmek için veritabanı yöneticisi tarafından yapılandırılmış olması gerekir.  
   
- Salt okunur yönlendirme kullanarak birden çok bağlantı tümü aynı salt okunur kopyaya bağlanın mümkündür. Farklı salt okunur çoğaltmaları istemci bağlantıları veritabanı eşitleme değişiklikleri veya sunucunun yönlendirme yapılandırmasındaki değişiklikler neden olabilir. Tüm salt okunur istekleri aynı salt okunur kopyaya bağlandığından emin olmak için bir kullanılabilirlik grubu dinleyicisi geçmeyin `Data Source` bağlantı dizesi anahtar sözcüğü. Bunun yerine, salt okunur örneğinin adını belirtin.  
+ Salt okunur yönlendirme kullanarak birden çok bağlantı tümü aynı salt okunur çoğaltmaya bağlanmaya mümkündür. Salt okunur kopyaya farklı istemci bağlantıları veritabanı eşitleme değişiklikleri veya sunucunun yönlendirme yapılandırması değişiklikleri neden olabilir. Tüm salt okunur istekler aynı salt okunur kopyaya bağlanmalarını sağlamak için bir kullanılabilirlik grubu dinleyicisi için geçmeyin `Data Source` bağlantı dizesi anahtar sözcüğü. Bunun yerine, salt okunur örneğinin adını belirtin.  
   
- Salt okunur yönlendirme için birincil yalnızca Yönlendirme okuma ilk birincil bağlanır ve en iyi kullanılabilir okunabilir ikincil için görünür olduğundan bağlanmaktan daha uzun sürebilir. Bu nedenle, oturum açma zaman aşımı artırmanız gerekir.  
+ Salt okunur yönlendirme yalnızca Yönlendirme okuma önce birincil siteye bağlanır ve ardından en iyi kullanılabilir okunabilir ikincil için görünür olduğundan, birincil siteye bağlanan daha uzun sürebilir. Bu nedenle, oturum açma zaman aşımı artırmalısınız.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

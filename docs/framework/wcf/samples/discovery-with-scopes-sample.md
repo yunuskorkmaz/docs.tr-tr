@@ -2,38 +2,38 @@
 title: Kapsam ile Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: ee6fdb69f6417e6c43d671c7c76bda8af067d5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502206"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398141"
 ---
 # <a name="discovery-with-scopes-sample"></a>Kapsam ile Keşif Örneği
-Bu örnek kapsamları bulunabilirlik uç noktaları iyi nasıl kullanılacağını olarak kategorilere ayırmak için nasıl kullanılacağını göstermektedir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktalar için zaman uyumsuz bir arama yapmak üzere. Hizmette Bu örnek bulma her uç nokta için bir uç nokta bulma davranışını ekleme ve uç nokta için bir kapsam eklemek için kullanarak yanı sıra uç noktanın bulunabilirliği denetleme özelleştirme gösterilmektedir. İstemcilerin nasıl oluşturabileceğinizi üzerinden örnek istemcide, giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve kapsamları ekleyerek kapsamları eklenecek parametreleri arama ince ayar <xref:System.ServiceModel.Discovery.FindCriteria>. Bu örnek ayrıca bir sonlandırma ölçüt ekleyerek istemcileri yanıtları nasıl kısıtlayabilirsiniz gösterir.  
+Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sınıflandırmak için kapsamları kullanmayı gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktaları için zaman uyumsuz bir arama gerçekleştirmek için. Hizmette her uç nokta için bulma uç noktası bulma davranışını ekleme ve uç noktasına bir kapsamı ekleme işlemi kullanılarak yanı sıra tarafından bitiş noktası bulunabilirliğini denetleme özelleştirme Bu örnek gösterir. İstemcide, örnek istemcileri nasıl oluşturacağınızı üzerinden giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve ince parametreleri kapsamına ekleyerek kapsamları eklemek için arama <xref:System.ServiceModel.Discovery.FindCriteria>. Ayrıca bu örnek bir sonlandırma ölçütüne ekleyerek istemciler yanıtları nasıl kısıtlayabilirsiniz gösterir.  
   
 ## <a name="service-features"></a>Hizmet Özellikleri  
- Bu proje için eklenmekte olan iki hizmet uç noktaları gösterir bir <xref:System.ServiceModel.ServiceHost>. Her bitiş noktasının bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> kendisiyle ilişkilendirilmiş. Bu davranış, her iki uç noktaları için URI kapsamı eklemek için kullanılır. Kapsamları, böylece istemciler arama yapılandırarak ince ayar her Bu uç noktalar ayırt etmek için kullanılır. İkinci uç nokta için bulunabilirliği ayarlayarak devre dışı bırakılabilir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> özelliğine `false`. Bu, herhangi bir bulma iletisinin bir parçası olarak bu uç noktasıyla ilişkili bulma meta veri gönderilmez sağlar.  
+ Bu proje, eklenen iki hizmet uç noktalarını gösterir. bir <xref:System.ServiceModel.ServiceHost>. Her bir uç noktası olan bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> ilişkili. Bu davranış, iki uç noktalar için URI kapsamları eklemek için kullanılır. Kapsamları, böylece istemciler arama ince Bu uç noktaların her ayırt etmek için kullanılır. İkinci uç nokta için bulunabilirliği ayarlayarak devre dışı bırakılabilir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> özelliğini `false`. Bu, bu uç nokta ile ilişkilendirilmiş bulma meta veri bulma iletileriniz bir parçası olarak gönderilmez sağlar.  
   
 ## <a name="client-features"></a>İstemci özellikleri  
- `FindCalculatorServiceAddress()` Yönteminin nasıl kullanılacağını gösterir bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve geçirin bir <xref:System.ServiceModel.Discovery.FindCriteria> iki kısıtlamalarla. Bir kapsam ölçüte eklenir ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> özelliğini 1 olarak ayarlayın. Kapsam yalnızca aynı kapsamı yayımlama hizmetlerine sonuçlarını sınırlandırır. Ayarı <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 1 yanıtları sınırlar <xref:System.ServiceModel.Discovery.DiscoveryClient> için en fazla 1 uç nokta bekler. <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> Çağrıdır zaman aşımı sınıra veya bir uç nokta bulundu kadar iş parçacığı engellenir eşzamanlı bir işlem.  
+ `FindCalculatorServiceAddress()` Yöntemi nasıl kullanılacağını gösteren bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve geçirin bir <xref:System.ServiceModel.Discovery.FindCriteria> iki kısıtlama. Bir kapsam ölçüte eklenir ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> özelliği 1 olarak ayarlanır. Kapsam Sonuçları yalnızca aynı kapsamda yayımlama hizmetlerine sınırlar. Ayarı <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> yanıtları 1 sınırlar <xref:System.ServiceModel.Discovery.DiscoveryClient> en fazla 1 uç noktası için bekler. <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> Çağrıdır, bir zaman aşımı ulaşıldığında veya bir uç nokta bulundu kadar iş parçacığını engeller eşzamanlı bir işlem.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komutu yükseltilmiş ayrıcalık yürütme uygun ACL'ler eklemeniz gerekir. Komut olduğu gibi çalışmazsa, etki alanı ve kullanıcı adı şu bağımsız değişkenleri yerine isteyebilirsiniz: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Çözümü oluşturun.  
   
-3.  Hizmeti yürütülebilir dosyası derleme dizininden çalıştırın.  
+3.  Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
   
 4.  İstemci yürütülebilir çalıştırın. İstemci hizmetini bulun mümkün olduğunu unutmayın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   

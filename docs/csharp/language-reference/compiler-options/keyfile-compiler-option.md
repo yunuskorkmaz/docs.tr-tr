@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: 45ab88609c26dd26a1f8bb3d68d1f579af9d3f77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e5ef095fbb982b0d37d7f44d4d57f27c20a72c1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214019"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400089"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# Derleyici Seçenekleri)
 Şifreleme anahtarını içeren dosya adını belirtir.  
@@ -28,31 +28,32 @@ ms.locfileid: "33214019"
   
 |Terim|Tanım|  
 |----------|----------------|  
-|`file`|Güçlü ad anahtarı içeren dosyanın adı.|  
+|`file`|Tanımlayıcı ad anahtarını içeren dosyanın adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek kullanıldığında, derleyici ortak anahtarı belirtilen dosyadan derleme bildirimine ekler ve ardından son derlemeyi özel anahtarıyla imzalar. Bir anahtar dosyası oluşturmak için sn -k yazın `file` komut satırında.  
+ Bu seçenek kullanıldığında, derleyici ortak anahtarı derleme bildirimine belirtilen dosyadan ekler ve ardından son derlemeyi özel anahtarla imzalar. Bir anahtar dosyası oluşturmak için sn -k türü `file` komut satırına.  
   
- İle derleme yaparsanız **-target: module**, anahtar dosyasının adı modülde tutulur ve bir derleme derlediğinizde oluşturduğunuz derlemesini birleştirilmiş [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Derleme yaparsanız **-target: module**, anahtar dosyasının adını modülünde tutulan ve bir derleme ile derleme yaparken, oluşturulan bütünleştirilmiş dahil [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
- Derleyici ile şifreleme bilgilerinizi geçirebilirsiniz [- keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Kullanım [- delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) kısmen imzalı bir derleme istiyorsanız.  
+ Derleyici ile şifreleme bilgilerinizi de geçirebilirsiniz [- keycontaıner](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Kullanım [- delaysıgn](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) kısmen imzalı bir derleme istiyorsanız.  
   
- -Keyfile ve - keycontainer (komut satırı seçeneği veya özel özniteliği tarafından) aynı derlemede belirtilmesi durumunda, derleyici ilk anahtar kapsayıcısı deneyin. Bu başarılı olursa, derleme anahtar kapsayıcısı içindeki bilgilerle imzalanır. Derleyici anahtar kapsayıcısını bulamazsa - keyfile ile belirtilen dosyayı çalışacaktır. Bu başarılı olursa, derleme anahtar dosyası içindeki bilgilerle imzalanır ve anahtar bilgileri anahtar kapsayıcısında yüklenecek (sn benzer -i) sonraki derlemede anahtar kapsayıcısı geçerli olmayacaktır.  
+ -Keyfile hem - keycontaıner (komut satırı seçeneği veya özel öznitelik) aynı derlemede belirtilmesi durumunda, derleyici önce anahtar kapsayıcısı deneyin. Bu başarılı olursa derleme anahtar kapsayıcısındaki bilgilerle imzalanır. Derleyicinin anahtar kapsayıcısını bulamazsa, - keyfile ile belirtilen dosyayı çalışacaktır. Bu başarılı olursa derleme anahtar dosyası içindeki bilgilerle imzalanır ve anahtar bilgileri anahtar kapsayıcısının içine yüklenir (sn benzer -i) ve böylece sonraki derlemede, anahtar kapsayıcısı geçerli olacaktır.  
   
  Bir anahtar dosyası yalnızca ortak anahtar içerebileceğini unutmayın.  
   
- Daha fazla bilgi için bkz: [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) ve [Gecikmeli bir derleme imzalama](../../../framework/app-domains/delay-sign-assembly.md).  
+ Daha fazla bilgi için [bkz](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) ve [derlemeyi imzalamayı geciktirme](../../../framework/app-domains/delay-sign-assembly.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Açık **özellikleri** projesi için sayfa.  
+1.  Açık **özellikleri** proje sayfası.  
   
-2.  Tıklatın **imzalama** özellik sayfası.  
+2.  Tıklayın **imzalama** özellik sayfası.  
   
-3.  Değiştirme **güçlü ad anahtar dosyası seçin** özelliği.  
+3.  Değiştirme **bir tanımlayıcı ad anahtar dosyası seç** özelliği.  
   
- Bu derleyici seçeneği ile program aracılığıyla erişebilirsiniz <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
+ Bu derleyici seçeneği ile program aracılığıyla erişebileceğiniz <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

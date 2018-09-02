@@ -2,22 +2,22 @@
 title: Birden Fazla Sözleşme
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 8e96d1ac27eb69d8e7e4da76aa8679aa35bf8ad4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 040ab9b80e9567139ca4588e3ddf83b8f43f2d76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501743"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392458"
 ---
 # <a name="multiple-contracts"></a>Birden Fazla Sözleşme
-Birden fazla sözleşme örnek bir hizmette birden fazla sözleşme gerçekleştirme ve her uygulanan sözleşmeleri ile iletişim kurmak için bitiş noktalarını yapılandırmak nasıl gösterilir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). İki sözleşmelerini tanımlamak için hizmet değiştirilmiş `ICalculator` sözleşme ve `ICalculatorSession` sözleşme.  
+Birden çok sözleşme örnek nasıl bir hizmet birden fazla sözleşmesini uygulama ve uç noktaları her uygulanan sözleşmelerin ile iletişim kurmak için yapılandırma gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet, iki sözleşmelerini tanımlamak için değiştirilmiş `ICalculator` sözleşme ve `ICalculatorSession` sözleşme.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Hizmet sınıfı hem uygulayan `ICalculator` ve `ICalculatorSession` sözleşmeleri. Hizmet sözleşmeleri birini oturumu gerektirdiğinden, kullanır <xref:System.ServiceModel.InstanceContextMode.PerSession> oturum ömrü boyunca durumunu korumak üzere örnek modu.  
+ Hizmet sınıfı her ikisini birden uygular `ICalculator` ve `ICalculatorSession` sözleşmeler. Sözleşmeler birini oturum gerektirdiğinden, hizmetin kullandığı <xref:System.ServiceModel.InstanceContextMode.PerSession> oturumunun ömrü boyunca durumunu korumak üzere örnek modu.  
   
- Hizmet yapılandırması, her sözleşme kullanıma sunmak için iki uç noktalarını tanımlamak için değiştirildi. `ICalculator` Endpoint gösterilir taban adresi kullanarak bir `basicHttpBinding`. `ICalculatorSession` Endpoint gösterilir baseaddress/oturum kullanarak bir `wsHttpBinding` ile `bindingConfiguration` özniteliğini `BindingWithSession`, aşağıdaki örnek yapılandırmada gösterildiği gibi.  
+ Her sözleşme kullanıma sunmak için iki uç nokta tanımlamak için hizmet yapılandırması değiştirildi. `ICalculator` Uç nokta Internet'e açık taban adresi kullanarak bir `basicHttpBinding`. `ICalculatorSession` Uç nokta kullanarak baseaddress/oturum sırasında sunulan bir `wsHttpBinding` ile `bindingConfiguration` özniteliğini `BindingWithSession`aşağıdaki örnek yapılandırmada gösterildiği gibi.  
   
 ```xml  
 <service   
@@ -40,26 +40,26 @@ Birden fazla sözleşme örnek bir hizmette birden fazla sözleşme gerçekleşt
 </service>  
 ```  
   
- Oluşturulan istemci kodu artık hem özgün için bir istemci sınıfı içerir `ICalculator` sözleşme ve yeni `ICalculatorSession` sözleşme. İstemci yapılandırma ve kodun uygun hizmet uç noktada her sözleşme ile iletişim kurmak için değiştirilmiş.  
+ Oluşturulan istemci kodu artık istemci sınıfı hem özgün içerir `ICalculator` sözleşme ve yeni `ICalculatorSession` sözleşme. İstemci Yapılandırması ve kodu uygun hizmet uç noktasında her sözleşme ile iletişim kurmak için değiştirildi.  
   
- İstemci bir konsol windows (.exe) uygulamasıdır. Hizmet, Internet Information Services (IIS) tarafından barındırılır.  
+ Bir konsol windows uygulaması (.exe) istemcisidir. Hizmet, Internet Information Services (IIS) tarafından barındırılır.  
   
- İstemci konsol penceresi, her uç noktaları için önce güvenli bitiş noktası tarafından izlenen temel uç nokta gönderilen işlemleri görüntüler.  
+ İlk gönderilen her uç nokta güvenli bir uç noktası tarafından izlenen temel uç nokta işlemleri istemci konsol penceresinde görüntüler.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999487"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386349"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework'teki eski üyeler
 Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tarafından düzenlenen artık kullanılmayan tür üyelerini listeleyin. Eski üyeler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu konu, artık kullanılmayan türlerin üyeleri listelenmiyor. Eski türler bir listesi için bkz. [eski türler](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -624,8 +624,8 @@ Bu makaledeki tablolar, .NET Framework 4.5 ve sonraki sürümlerde derlemesi tar
 |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|Önerilen alternatif <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType> , System.Web.dll.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicode%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu yöntem olmayan üretir\-standartları\-uyumlu çıkış ve birlikte çalışabilirlik sorunları vardır. Tercih edilen alternatif <xref:System.Web.HttpUtility.UrlEncode%28System.String%29>.|  
 |<xref:System.Web.HttpUtility?displayProperty=nameWithType>|<xref:System.Web.HttpUtility.UrlEncodeUnicodeToBytes%2A>|İlk .NET Framework 4. 5 ' kullanım dışı.<br /><br /> Bu yöntem olmayan üretir\-standartları\-uyumlu çıkış ve birlikte çalışabilirlik sorunları vardır. Tercih edilen alternatif <xref:System.Web.HttpUtility.UrlEncodeToBytes%28System.String%29>.|  
-|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Bu alan kullanımdan kalkmıştır. Passport kimlik doğrulaması ürünü artık desteklenmez ve yerini almıştır [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413).|  
-|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Bu özellik kullanımdan kalkmıştır. Passport kimlik doğrulaması ürünü artık desteklenmez ve yerini almıştır [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationMode?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationMode.Passport>|Bu alan kullanımdan kalkmıştır. Passport kimlik doğrulaması ürünü artık desteklenmez ve yerini almıştır [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413).|  
+|<xref:System.Web.Configuration.AuthenticationSection?displayProperty=nameWithType>|<xref:System.Web.Configuration.AuthenticationSection.Passport%2A>|Bu özellik kullanımdan kalkmıştır. Passport kimlik doğrulaması ürünü artık desteklenmez ve yerini almıştır [Microsoft Account](https://go.microsoft.com/fwlink/?LinkId=733413).|  
 |<xref:System.Web.Configuration.HttpCapabilitiesBase?displayProperty=nameWithType>|<xref:System.Web.Configuration.HttpCapabilitiesBase.JavaScript%2A>|Önerilen alternatif <xref:System.Web.Configuration.HttpCapabilitiesBase.EcmaScriptVersion%2A?displayProperty=nameWithType> özelliği. A <xref:System.Version.Major%2A?displayProperty=nameWithType> sürüm 1'e eşit veya büyük değer JavaScript desteği anlamına gelir.|  
 |<xref:System.Web.Configuration.SystemWebSectionGroup?displayProperty=nameWithType>|<xref:System.Web.Configuration.SystemWebSectionGroup.MobileControls%2A>|System.Web.Mobile.dll kullanımdan kalkmıştır.|  
 |<xref:System.Web.Routing.UrlRoutingModule?displayProperty=nameWithType>|<xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A>|Bu yöntem artık kullanılmıyor. Geçersiz kılma <xref:System.Web.Routing.UrlRoutingModule.Init%2A> yönteminin kullanılacağını <xref:System.Web.Routing.UrlRoutingModule.PostMapRequestHandler%2A> olay.|  
