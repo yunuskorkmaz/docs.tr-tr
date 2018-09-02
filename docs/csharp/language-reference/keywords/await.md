@@ -7,32 +7,32 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218926"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468034"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
-`await` İşleci awaited görevi tamamlanana kadar yönteminin yürütülmesi askıya noktası eklemek için zaman uyumsuz bir yöntem göreve uygulanır. Görev devam eden iş temsil eder.  
+`await` İşleci awaited görevi tamamlanıncaya kadar yöntemin yürütülmesine askıya alma noktası eklemek için bir zaman uyumsuz yöntemdeki bir göreve uygulanır. Görev, devam eden çalışmayı temsil eder.  
   
-`await` yalnızca zaman uyumsuz bir yöntem değiştiren kullanılabilir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) anahtar sözcüğü. Kullanılarak tanımlanmış böyle bir yöntemi, `async` değiştiricisini ve genellikle bir veya daha fazla içeren `await` ifadeleri olarak adlandırılır bir *async yöntemi*.  
+`await` yalnızca zaman uyumsuz bir yöntem değiştiren kullanılabilir [zaman uyumsuz](../../../csharp/language-reference/keywords/async.md) anahtar sözcüğü. Tarafından tanımlanan tür bir yöntem, `async` değiştiricisi ve genellikle bir veya daha fazla içeren `await` ifadeleri olarak adlandırılır bir *zaman uyumsuz yöntem*.  
   
 > [!NOTE]
->  `async` Ve `await` anahtar sözcükler, C# 5'te sunulmuştu. Zaman uyumsuz programlamaya giriş için bkz: [zaman uyumsuz programlama ile async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
+>  `async` Ve `await` anahtar sözcükler C# 5'te kullanıma sunulmuştur. Zaman uyumsuz programlamaya giriş için bkz [Asynchronous Programming with async ve await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-Göreve `await` işleci uygulanır genellikle uygulayan bir yöntemine yapılan bir çağrı tarafından döndürülen [görev tabanlı zaman uyumsuz desen](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Döndüren yöntemler içerirler <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, ve `System.Threading.Tasks.ValueType<TResult>` nesneleri.  
+Görev `await` işleci uygulanır genellikle uygulayan bir yönteme bir çağrı tarafından döndürülen [görev tabanlı zaman uyumsuz desen](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Döndüren yöntemler içerirler <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, ve `System.Threading.Tasks.ValueType<TResult>` nesneleri.  
 
   
- Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> yöntemi döndürür bir `Task<byte[]>`. Görev tamamlandığında gerçek bayt dizisi oluşturmak için bir promise görevidir. `await` İşleci yürütme çalışmanın kadar bekletir <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> yöntemi tamamlanmıştır. Bu arada, Denetim çağırana döndürülen `GetPageSizeAsync`. Görev yürütme tamamlandığında `await` ifadeyi hesaplar bir bayt dizisi.  
+ Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> yöntemi döndürür bir `Task<byte[]>`. Görev, görev tamamlandığında gerçek bayt dizisini üretmek için bir vaattir. `await` İşleci çalışması kadar yürütmeyi askıya alır <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> yöntemi tamamlanmıştır. Bu sırada, Denetim çağırana döndürülmeden `GetPageSizeAsync`. Görev yürütme tamamlandığında `await` ifadesi bir bayt dizisine değerlendirir.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Tam bir örnek için bkz: [izlenecek yol: Web kullanarak zaman uyumsuz ve bekleme tarafından erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Örnekten indirebilirsiniz [Geliştirici kod örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. AsyncWalkthrough_HttpClient projesinde örnektir.  
+>  Tam bir örnek için bkz. [izlenecek yol: Web kullanarak Async ve Await tarafından erişim](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). İçinden örneği karşıdan yükleyebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) Microsoft Web sitesinde. Örnek AsyncWalkthrough_HttpClient projesindedir.  
   
-Önceki örnekte gösterildiği gibi `await` döndüren bir yöntem çağrısının sonucunu uygulanan bir `Task<TResult>`, ardından türünü `await` ifade `TResult`. Varsa `await` döndüren bir yöntem çağrısının sonucunu uygulanan bir `Task`, ardından türünü `await` ifade `void`. Aşağıdaki örnek fark gösterilmektedir.  
+Önceki örnekte gösterildiği gibi `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task<TResult>`, sonra türünü `await` ifade `TResult`. Varsa `await` getiren bir metot çağrısının sonucuna uygulanan bir `Task`, sonra türünü `await` ifade `void`. Fark aşağıdaki örnekte gösterilmiştir.  
   
 ```csharp  
 // await keyword used with a method that returns a Task<TResult>.  
@@ -45,29 +45,29 @@ await AsyncMethodThatReturnsTask();
 TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 ```  
   
-Bir `await` ifade üzerinde onu Yürütülüyor iş parçacığı engellemez. Bunun yerine, zaman uyumsuz yöntem rest awaited görev devamlılığı olarak imzalamak derleyici neden olur. Denetim ardından async yöntemi çağırana döndürür. Görev tamamlandığında, devamlılık ve kaldığı yerden zaman uyumsuz yöntem sürdürür yürütülmesi çağırır.  
+Bir `await` ifadesi, üzerinde yürütme yaptığı iş parçacığını engellemez. Bunun yerine, derleyicinin zaman uyumsuz yöntemin geri kalanını imzalamasına devamı olarak oturum neden olur. Denetim, ardından zaman uyumsuz yöntemini çağırana döner. Görev tamamlandığında, devamlılık ve yürütülmesi kaldığı zaman uyumsuz yöntem sürdürür çağırır.  
   
-Bir `await` ifade kendi kapsayan, yalnızca gövdesinde oluşabilir yöntemi, lambda ifadesi veya ile işaretlenmelidir anonim yöntemi bir `async` değiştiricisi. Terim *await* bu bağlamda yalnızca bir anahtar sözcük görevi görür. Başka bir yerde bir tanımlayıcı olarak yorumlanır. Yöntemi, lambda ifadesi veya anonim yöntemi, içinde bir `await` ifadesi, bir sorgu ifadesinde bloğunun zaman uyumlu bir işlev gövdesine gerçekleşemez bir [lock deyimi](../../../csharp/language-reference/keywords/lock-statement.md), veya bir [güvensiz](../../../csharp/language-reference/keywords/unsafe.md) bağlamı.  
+Bir `await` ifade, kapsayan, yalnızca gövdesinde oluşabilir yöntem, lambda ifadesi veya ile işaretlenmelidir anonim yöntem bir `async` değiştiricisi. Terim *await* yalnızca bu bağlamda bir anahtar sözcük görevi görür. Başka bir yerde, tanımlayıcı olarak yorumlanır. Yöntem, lambda ifadesi veya adsız yöntemle, içinde bir `await` deyim bloğunda, bir sorgu ifadesinde, zaman uyumlu bir işlevin gövdesinde gerçekleşemez bir [kilit deyimi](../../../csharp/language-reference/keywords/lock-statement.md), veya bir [güvenli](../../../csharp/language-reference/keywords/unsafe.md) bağlamı.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
-Çoğu zaman uyumsuz yöntemleri döndürür bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Döndürülen görev özelliklerini durumunu ve görevin tam olup, async yöntemi bir özel durum nedeniyle veya iptal edildi ve son sonucu gibi geçmişi hakkında bilgi taşır. `await` İşleci tarafından döndürülen nesne üzerinde yöntemlerini çağırarak bu özellikleri erişen `GetAwaiter` yöntemi.  
+Çoğu zaman uyumsuz yöntemlerin dönüş bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. Döndürülen görevin özelliklerini, durumunu ve geçmişini, görevin tam olup olmadığı, zaman uyumsuz yöntemin bir özel duruma neden oldu veya iptal edildi ve nihai sonucun ne olduğu gibi hakkında bilgi getirir. `await` İşleci tarafından döndürülen nesne üzerinde yöntemleri çağırarak bu özelliklere erişir `GetAwaiter` yöntemi.  
   
-Bir özel duruma neden olan görev döndüren bir zaman uyumsuz yöntem bekleme durumunda `await` işleci özel durumu yeniden oluşturur.  
+Bir özel durum neden olan bir görev döndüren zaman uyumsuz yöntem, `await` işleci özel durumu yeniden oluşturur.  
   
-İptal edilir, bir görev döndüren zaman uyumsuz yöntem bekleme durumunda `await` işleci bloğunu bir <xref:System.OperationCanceledException>.  
+İptal edilen bir görev döndüren zaman uyumsuz yöntem, `await` işleci beklerseniz bir <xref:System.OperationCanceledException>.  
   
-Hatalı durumda tek bir görevi birden fazla özel yansıtabilirsiniz. Örneğin, görev için bir çağrı sonucunu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Bu tür bir görev bekleme zaman bekleme işlemi yalnızca bir özel durum yeniden oluşturur. Ancak, özel durumlar hangisinin işlenemezse tahmin edilemez.  
+Hatalı bir durumda olan tek bir görev birden çok özel durumu yansıtabilir. Örneğin, görev yapılan bir çağrının sonucu olabilir <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Böyle bir görevi beklerken, bekleme işlemi özel durumlardan yalnızca birini yeniden oluşturur. Ancak, özel durumların fırlatılan tahmin edemezsiniz.  
   
-Zaman uyumsuz yöntemleri işleme hatası örnekleri için bkz: [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
+Zaman uyumsuz yöntemlerdeki hata işleme örnekleri için bkz: [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
   
 ## <a name="example"></a>Örnek  
-Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişken olarak geçirilen sayfaları toplam karakter sayısı döndürür. Örnek aramalar `GetPageLengthsAsync` ile işaretlenen yöntemi `async` anahtar sözcüğü. `GetPageLengthsAsync` Yöntemi sırayla kullanan `await` çağrıları bekleme için anahtar sözcüğü <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> yöntemi.  
+Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişkenleri geçirilir sayfalarında toplam karakter sayısı döndürür. Örnek aramalar `GetPageLengthsAsync` ile işaretlenmiş yöntemi `async` anahtar sözcüğü. `GetPageLengthsAsync` Sırayla kullanmaktadır `await` çağrıları await anahtar sözcüğünü <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType> yöntemi.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Çünkü kullanımını `async` ve `await` bir uygulama giriş noktası desteklenmiyor, uygulayamıyoruz `async` özniteliğini `Main` yöntemi ya da can biz await `GetPageLengthsAsync` yöntem çağrısı. Biz emin olabilirsiniz `Main` yöntemi bekleyeceği zaman uyumsuz işlemin değerini alarak tamamlanmasını <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliği. Bir değer döndürmeyen görevlerde çağırabilirsiniz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi. 
+Çünkü kullanımını `async` ve `await` bir uygulama girişinde noktası desteklenmiyor, uygulayamıyoruz `async` özniteliğini `Main` yöntemi ya da can biz await `GetPageLengthsAsync` yöntem çağrısı. Biz sağlayabilirsiniz `Main` yöntemi zaman uyumsuz işlemin değerini alarak bekler <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> özelliği. Bir değeri döndürmeyen görev çağırabilirsiniz <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi. 
 
 ## <a name="see-also"></a>Ayrıca bkz.  
-[Zaman uyumsuz programlama ile zaman uyumsuz ve bekleme](../../../csharp/programming-guide/concepts/async/index.md)   
-[İzlenecek yol: Async kullanarak Web'e erişme ve bekler](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[async](../../../csharp/language-reference/keywords/async.md)
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)   
+- [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [async](../../../csharp/language-reference/keywords/async.md)

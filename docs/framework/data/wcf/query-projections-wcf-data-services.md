@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255228"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461069"
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonları (WCF Data Services)
-Projeksiyon mekanizması sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akıştaki yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen veri miktarını azaltmak için. Daha fazla bilgi için [OData: Sistem sorgusu seçeneği seçin ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
+Projeksiyon mekanizması sağlar [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akıştaki yalnızca belirli özellikleri bir varlığın yanıtta döndürülen belirterek bir sorgu tarafından döndürülen veri miktarını azaltmak için. Daha fazla bilgi için [OData: Sistem sorgusu seçeneği seçin ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  Bu konu nasıl varlık için gereksinimler nelerdir sorgu projeksiyon tanımlamak için ve varlık olmayan türleri, yapmadan öngörülen türleri oluşturma tahmini sonuçlarını güncelleştirir ve bazı projeksiyon konuları listeler açıklar.  
   

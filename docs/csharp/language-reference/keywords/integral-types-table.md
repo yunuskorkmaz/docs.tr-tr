@@ -1,42 +1,49 @@
 ---
-title: Tam Sayı Türleri Tablosu (C# Başvurusu)
-ms.date: 07/20/2015
+title: Tam sayı türleri tablosu (C# Başvurusu)
+description: Yerleşik C# tamsayı türleri'ne genel bakış
+ms.date: 08/20/2018
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267915"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467198"
 ---
-# <a name="integral-types-table-c-reference"></a>Tam Sayı Türleri Tablosu (C# Başvurusu)
-Aşağıdaki tabloda boyutlar ve basit türler kümesini oluşturan tam sayı türleri aralığı gösterir.  
+# <a name="integral-types-table-c-reference"></a>Tam sayı türleri tablosu (C# Başvurusu)
+
+Aşağıdaki tabloda, boyutları ve basit türler kümesini oluşturan tam sayı türleri aralığı gösterir.  
   
 |Tür|Aralık|Boyut|  
 |----------|-----------|----------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|-128 ile 127|İşaretli 8 bit tam sayı|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|0-255|İmzasız 8 bit tam sayı|  
-|[char](../../../csharp/language-reference/keywords/char.md)|U + U + ffff 0000|Unicode 16 bit karakter|  
-|[short](../../../csharp/language-reference/keywords/short.md)|-32.768 için 32.767|İşaretli 16 bit tam sayı|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0 ile 65.535 arasındaki|İmzasız 16 bit tam sayı|  
-|[int](../../../csharp/language-reference/keywords/int.md)|-2,147,483,648 için 2.147.483.647|işaretli 32 bit tam sayı|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|0 için 4.294.967.295|İmzasız 32 bit tamsayı|  
-|[long](../../../csharp/language-reference/keywords/long.md)|-9,223,372,036,854,775,808 için 9,223,372,036,854,775,807|işaretli 64 bit tam sayı|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0 için 18,446,744,073,709,551,615|İmzasız 64 bit tam sayı|  
+|[sbyte](sbyte.md)|-128 ila 127 arasında|İşaretli 8 bit tam sayı|  
+|[byte](byte.md)|0 ile 255 arasında|İmzalanmamış 8 bit tam sayı|  
+|[char](char.md)|U + 0000'u + ffff için|Unicode 16-bit karakteri|  
+|[short](short.md)|-32.768 için 32.767|İşaretli 16 bit tam sayı|  
+|[ushort](ushort.md)|0 ile 65.535 arasındaki|16 bit işaretsiz tamsayı|  
+|[int](int.md)|-2.147.483.648 için 2.147.483.647|İşaretli 32 bit tam sayı|  
+|[uint](uint.md)|0 için 4.294.967.295'e|32-bit işaretsiz tamsayı|  
+|[long](long.md)|-9,223,372,036,854,775,808 için 9.223.372.036.854.775.807|İşaretli 64 bit tam sayı|  
+|[ulong](ulong.md)|0 için 18,446,744,073,709,551,615|64-bit işaretsiz tamsayı|  
+
+## <a name="remarks"></a>Açıklamalar
   
- Değişmez değer tamsayı tarafından temsil edilen değer aralığını aşıyorsa `ulong`, bir derleme hatası ortaya çıkar.  
+Bir tamsayı sabit değeri tarafından temsil edilen değeri aşarsa <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, bir derleyici hatası [CS1021](../../misc/cs1021.md) gerçekleşir.
+
+Kullanım <xref:System.Numerics.BigInteger?displayProperty=nameWithType> büyük bir işaretli tamsayı temsil eden sınıf.
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Kayan Nokta Türleri Tablosu](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
- [Varsayılan Değerler Tablosu](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Sayısal Sonuçlar Tablosunu Biçimlendirme](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Türler için Başvuru Tabloları](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [Türler için başvuru tabloları](reference-tables-for-types.md)
+- [Kayan nokta türleri tablosu](floating-point-types-table.md)
+- [Varsayılan değerler tablosu](default-values-table.md)
+- [Sayısal sonuçlar tablosunu biçimlendirme](formatting-numeric-results-table.md)
+- [Yerleşik türler tablosu](built-in-types-table.md)

@@ -1,63 +1,63 @@
 ---
-title: DataView (LINQ-DataSet) sıralama
+title: (LINQ to DataSet) DataView ile sıralama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365910"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465570"
 ---
-# <a name="sorting-with-dataview-linq-to-dataset"></a>DataView (LINQ-DataSet) sıralama
-Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi denetim üzerinden bir istemciye veri sunmak olanağı veri bağlama önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralama ve veri satırı sıralama ölçüte göre sıralanmış dönmek için çeşitli yöntemler sağlar. Sıralama özellikleri, kendi dize tabanlı yanı sıra <xref:System.Data.DataView> kullanmanıza olanak tanır [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] ifadeleri sıralama ölçütleri için. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri izin verir. Bu konuda kullanarak sıralama için her iki yaklaşım açıklanmaktadır <xref:System.Data.DataView>.  
+# <a name="sorting-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile sıralama
+Verileri belirli ölçütlere göre sıralayın ve ardından bir UI denetimine üzerinden bir istemciye verileri sunmak olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralama ve sıralama ölçüte göre sıralanmış veri satırları döndürmek için birçok yol sağlar. Yetenekleri, sıralama, dize tabanlı ek olarak <xref:System.Data.DataView> ayrıca kullanmanızı sağlayan [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sıralama ölçütü ifadeleri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri için izin verin. Bu konu, her iki yaklaşım kullanarak sıralama açıklar <xref:System.Data.DataView>.  
   
-## <a name="creating-dataview-from-a-query-with-sorting-information"></a>DataView bilgi sıralama ile bir sorgu oluşturma  
- A <xref:System.Data.DataView> nesnesi, gelen oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, veya <xref:System.Linq.Enumerable.ThenByDescending%2A> yan tümcesi bu yan tümceleri ifadelerinde verileri sıralamak için temel olarak kullanılır <xref:System.Data.DataView>. Sorgu içeriyorsa, örneğin, `Order By…`ve `Then By…` yan tümceleri, elde edilen <xref:System.Data.DataView> verileri belirtilen her iki sütuna göre sıralama.  
+## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Bir sorgunun sıralama bilgileri ile DataView oluşturma  
+ A <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu sorgu içeriyorsa bir <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, veya <xref:System.Linq.Enumerable.ThenByDescending%2A> yan tümcesi ifadeleri bu yan tümceleri içinde verileri sıralama için temel olarak kullanılır <xref:System.Data.DataView>. Sorgu içeriyorsa, örneğin, `Order By…`ve `Then By…` yan tümceleri, ortaya çıkan <xref:System.Data.DataView> verileri belirtilen her iki sütuna göre sıralama.  
   
- İfade tabanlı sıralama daha basit sıralama dize tabanlıdır değerinden daha güçlü ve karmaşık sıralama sunar. Dize ve ifade tabanlı sıralama birbirini dışlayan dikkat edin. Varsa dize tabanlı <xref:System.Data.DataView.Sort%2A> sonra ayarlanmış bir <xref:System.Data.DataView> oluşturulur bir sorgudan sorgudan çıkarımı yapılan ifade tabanlı filtre kaldırılır ve sıfırlanamaz.  
+ İfade tabanlı sıralama daha basit sıralama dize tabanlı değerinden daha güçlü ve karmaşık sıralama sunar. Dize tabanlı not edin ve ifade tabanlı sıralama karşılıklı olarak birbirini dışlar. Dize tabanlı <xref:System.Data.DataView.Sort%2A> sonra ayarlanmış bir <xref:System.Data.DataView> oluşturulan bir sorgunun sorgudan çıkarılan ifade tabanlı filtre kaldırılır ve sıfırlanamaz.  
   
- Dizini bir <xref:System.Data.DataView> hem olduğunda yerleşik <xref:System.Data.DataView> oluşturulur ve sıralama veya filtreleme herhangi birinde bilgi değiştirilir. Sıralama ölçütü olarak sağlayarak en iyi performansı elde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu <xref:System.Data.DataView> oluşturulur ve sıralama Bilgi, daha sonra değiştirme değil. Daha fazla bilgi için bkz: [DataView performans](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Dizin için bir <xref:System.Data.DataView> hem zaman yerleşik <xref:System.Data.DataView> oluşturulur ve herhangi bir sıralama veya filtreleme bilgileri değiştirilir. Sıralama ölçütü olarak sağlanarak en iyi performansı elde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu <xref:System.Data.DataView> oluşturulur ve sıralama Bilgi, daha sonra değiştirme değil. Daha fazla bilgi için [DataView performansı](../../../../docs/framework/data/adonet/dataview-performance.md).  
   
 > [!NOTE]
->  Çoğu durumda, sıralama için kullanılan ifadeleri yan etkileri olmamalıdır ve belirleyici olması gerekir. Ayrıca, ifadeleri herhangi içermemelidir sıralama işlemleri olabilir çünkü yürütmeleri, kümesi sayısına bağlıdır mantığı yürütülen tüm sayısı.  
+>  Çoğu durumda, sıralama için kullanılan ifadeler yan etkileri olmamalıdır ve belirleyici olmalıdır. Ayrıca, ifadeleri herhangi içermemelidir yürütülen herhangi sayıda mantıksal sıralama işlemleri olabileceğinden, yürütmeleri kümesi sayısına bağlıdır.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, SalesOrderHeader tablosunu sorgular ve sipariş tarihi tarafından döndürülen satır siparişleri; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
+ Aşağıdaki örnek, SalesOrderHeader tabloyu sorgular ve sipariş tarihi tarafından döndürülen satırlar sıralar; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, SalesOrderHeader tablosunu sorgular ve toplam miktarı tarafından döndürülen satır siparişleri; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
+ Aşağıdaki örnek, SalesOrderHeader tabloyu sorgular ve döndürülen satır tarafından toplam tutarın siparişler; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderby2)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderBy2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderby2)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, satış siparişi ayrıntısını tablosunu sorgular ve miktar ve sonra sipariş kimliği tarafından döndürülen satır siparişleri; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
+ Aşağıdaki örnek, satış siparişi ayrıntısını tabloyu sorgular ve dönen satırlar miktar ve ardından satış siparişi kodu göre sıralar; oluşturur bir <xref:System.Data.DataView> Bu sorgudan; ve bağlar <xref:System.Data.DataView> için bir <xref:System.Windows.Forms.BindingSource>.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromqueryorderbythenby)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromqueryorderbythenby)]  
   
-## <a name="using-the-string-based-sort-property"></a>Dize tabanlı sıralama özelliği kullanma  
- Dize tabanlı sıralama işlevlerini <xref:System.Data.DataView> ile çalışmaya devam ettiğinden [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Sonra bir <xref:System.Data.DataView> gelen oluşturulan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanabileceğiniz sorgu <xref:System.Data.DataView.Sort%2A> sıralama ayarlamak için özellik <xref:System.Data.DataView>.  
+## <a name="using-the-string-based-sort-property"></a>Dize tabanlı sıralama özelliğini kullanma  
+ Dize tabanlı sıralama işlevlerini <xref:System.Data.DataView> ile çalışmaya devam ettiğinden [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Sonra bir <xref:System.Data.DataView> öğesinden oluşturulan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanabileceğiniz sorgu <xref:System.Data.DataView.Sort%2A> üzerinde sıralama ayarlamak için özellik <xref:System.Data.DataView>.  
   
- Dize tabanlıdır ve ifade tabanlı işlevselliği sıralama karşılıklı olarak birbirini dışlar. Ayarı <xref:System.Data.DataView.Sort%2A> özelliği, ifade tabanlı olmadığını temizleyin sıralama devralınan sorgudan, <xref:System.Data.DataView> oluşturulduğu.  
+ Dize tabanlı ve ifade tabanlı işlevleri sıralama birbirini dışlar. Ayarı <xref:System.Data.DataView.Sort%2A> özelliği, ifade tabanlı olmadığını Temizle sıralama devralınan sorgudan, <xref:System.Data.DataView> oluşturulduğu.  
   
- Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.Sort%2A> filtreleme, bkz: [sıralama ve filtreleme verilerini](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Dize tabanlı hakkında daha fazla bilgi için <xref:System.Data.DataView.Sort%2A> filtreleme, bkz: [sıralama ve filtreleme veri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Örnek  
- İzleme örnekte bir <xref:System.Data.DataView> kişiden tablo ve satırları sipariş sonra ad artan azalan son adına göre sıralar:  
+ Aşağıdaki örnekte oluşturur bir <xref:System.Data.DataView> kişiden tablo ve sıra ve artan düzende ad azalan soyadına göre satırları sıralar:  
   
  [!code-csharp[DP DataView Samples#LDVStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvstringsort)]
  [!code-vb[DP DataView Samples#LDVStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvstringsort)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte "S" harfiyle başlayan son adlarını kişi tabloyu sorgular.  A <xref:System.Data.DataView> Bu sorgudan oluşturulur ve bağlı bir <xref:System.Windows.Forms.BindingSource> nesnesi.  
+ Aşağıdaki örnek, "S" harfi ile başlayan son adlarını kişi tabloyu sorgular.  A <xref:System.Data.DataView> Bu sorgudan oluşturulan ve bağlı bir <xref:System.Windows.Forms.BindingSource> nesne.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
@@ -65,18 +65,18 @@ Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi d
 ## <a name="clearing-the-sort"></a>Sıralama temizleme  
  Sıralama bilgileri bir <xref:System.Data.DataView> kullanarak ayarlandıktan sonra temizlenebilir <xref:System.Data.DataView.Sort%2A> özelliği. Sıralama bilgileri temizlemek için iki yolla <xref:System.Data.DataView>:  
   
--   Ayarlama <xref:System.Data.DataView.Sort%2A> özelliğine `null`.  
+-   Ayarlama <xref:System.Data.DataView.Sort%2A> özelliğini `null`.  
   
 -   Ayarlama <xref:System.Data.DataView.Sort%2A> boş bir dize özelliği.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir <xref:System.Data.DataView> sorgudan ve ayarlayarak sıralama temizler <xref:System.Data.DataView.Sort%2A> boş bir dize özelliği:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> sorgudan ve sıralama ayarlayarak temizler <xref:System.Data.DataView.Sort%2A> boş bir dize özelliğini:  
   
  [!code-csharp[DP DataView Samples#LDVClearSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort)]
  [!code-vb[DP DataView Samples#LDVClearSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir <xref:System.Data.DataView> başvurun ve ayarlar <xref:System.Data.DataView.Sort%2A> azalan düzende son ada göre sıralamak için özellik. Ayarlayarak sıralama bilgileri temizlenir <xref:System.Data.DataView.Sort%2A> özelliğine `null`:  
+ Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> başvurun ve kümeleri <xref:System.Data.DataView.Sort%2A> azalan düzende soyadına göre sıralamak için özellik. Ayarlayarak sıralama bilgileri temizlenir <xref:System.Data.DataView.Sort%2A> özelliğini `null`:  
   
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
@@ -84,4 +84,4 @@ Belirli bir ölçüte dayalı verileri sıralamak ve bir kullanıcı Arabirimi d
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Verileri Sıralama](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Verileri Sıralama](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

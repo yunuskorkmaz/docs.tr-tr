@@ -6,52 +6,50 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: a58a528cd1a2246ddfdff7997b7c7cb0d8dcc6a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531059"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466802"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Windows Formları Denetimini bir Türe Bağlama
-Verilerle etkileşimli denetimleri oluştururken, bazen bir nesne yerine bir tür bir denetimi bağlamak gerekir. Genellikle bir denetim tasarım zamanında ne zaman veri kullanılamıyor olabilir, ancak hala bir türün ortak arabirimi verileri görüntülemek için veri bağlama denetimleri istediğiniz bir türe bağlama gerekir. Aşağıdaki yordamlarda yeni bir oluşturma gösterilmektedir <xref:System.Windows.Forms.BindingSource> diğer bir deyişle bir tür için sınır ve ardından tür özelliklerinden biri nasıl bağlanacağı <xref:System.Windows.Forms.TextBox.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox>.  
+Verilerle etkileşimde bulunmak denetimleri oluştururken, bazen bir nesne yerine bir tür bir denetimine bağlamak gerekir. Genelde bir denetimi tasarım zamanında ne zaman veri kullanılamıyor olabilir, ancak yine de bir türün ortak arabirim verileri görüntülemek için verilere bağlı denetimler istediğiniz bir türe bağlama gerekir. Aşağıdaki yordamlar yeni bir oluşturma işlemini göstermektedir <xref:System.Windows.Forms.BindingSource> olan bir türü için sınır ve sonra nasıl bir türün özelliklerine bağlanacağını <xref:System.Windows.Forms.TextBox.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox>.  
   
-### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource bir türe bağlama  
+### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource bir türe bağlama için  
   
-1.  Bir Windows Forms projesi oluşturun.  
-  
-     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Bir Windows Forms projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
 2.  İçinde **tasarım** görüntülemek için sürükleyin bir <xref:System.Windows.Forms.BindingSource> forma bileşen.  
   
-3.  İçinde **özellikleri** penceresinde oka tıklayın <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği.  
+3.  İçinde **özellikleri** penceresinde için oka tıklayın <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği.  
   
-4.  İçinde **DataSource UI türü düzenleyici**, tıklatın **proje veri kaynağı Ekle**.  
+4.  İçinde **DataSource UI türü düzenleyici**, tıklayın **proje veri kaynağı Ekle**.  
   
-5.  Üzerinde **bir veri kaynağı türü seç** sayfasında, **nesne** tıklatıp **sonraki**.  
+5.  Üzerinde **bir veri kaynağı türü seçin** sayfasında **nesne** tıklatıp **sonraki**.  
   
-6.  Bağlamak üzere türünü seçin:  
+6.  Bağlanılacak türünü seçin:  
   
-    -   Bağlamak istediğiniz türü geçerli proje veya türünü içeren bütünleştirilmiş kodun bir başvuru olarak zaten eklendi istediğiniz türünü bulmak için düğümleri genişletin ve ardından seçin.  
+    -   Bağlamak istediğiniz türü geçerli projede veya türü içeren derlemeye bir başvuru olarak zaten eklendi, istediğiniz türünü bulmak için düğümleri genişletin ve ardından bu seçeneği belirleyin.  
   
-         -veya-  
+         veya  
   
-    -   Bağlamak istediğiniz türü olan başvuruları listesinde şu anda başka bir derlemede tıklatırsanız **Başvuru Ekle**ve ardından **projeleri** sekmesi. İstediğiniz iş nesnesini içeren projeyi seçin **Tamam**. Bu proje derlemeler, listede görünür türü bulmak için düğümlerini genişletin şekilde, istediğiniz ve ardından seçin.  
+    -   Bağlamak istediğiniz türü olan başvuruları listesinde şu anda başka bir derlemede tıklarsanız **Başvuru Ekle**ve ardından **projeleri** sekmesi. ' A tıklayın ve istediğiniz iş nesnesi içeren projeyi seçin **Tamam**. Bu proje, derleme, listede görünür türü bulmak için düğümleri genişletebilirsiniz. Bu nedenle, istediğiniz ve ardından bu seçeneği belirleyin.  
   
         > [!NOTE]
-        >  Bir türe framework ya da Microsoft derleme bağlamak istiyorsanız, temizleyin **Gizle Microsoft veya sistem başlayan derlemeleri** onay kutusu.  
+        >  Framework ya da Microsoft derlemesi bir tür bağlamak istiyorsanız, Temizle **Gizle Microsoft veya sistem başlayan derlemeleri** onay kutusu.  
   
 7.  **İleri**'ye ve ardından **Son**'a tıklayın.  
   
-### <a name="to-bind-the-control-to-the-bindingsource"></a>BindingSource denetimi bağlamak için  
+### <a name="to-bind-the-control-to-the-bindingsource"></a>Denetimi için BindingSource bağlamak için  
   
 1.  Ekleme bir <xref:System.Windows.Forms.TextBox> form.  
   
-2.  İçinde **özellikleri** penceresinde genişletin **(veri bağlamaları)** düğümü.  
+2.  İçinde **özellikleri** penceresini genişletin **(DataBindings)** düğümü.  
   
 3.  Yanındaki oka tıklayın <xref:System.Windows.Forms.TextBox.Text%2A> özelliği.  
   
-4.  İçinde **DataSource UI türü düzenleyici**, düğümünü genişletin <xref:System.Windows.Forms.BindingSource> daha önce eklediğiniz ve bağlamak istediğiniz ilişkili tür özelliğine seçin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği <xref:System.Windows.Forms.TextBox>.  
+4.  İçinde **DataSource UI türü düzenleyici**, düğümünü genişletin <xref:System.Windows.Forms.BindingSource> daha önce eklenmiş ve istediğiniz bağlamak için ilişkili tür özelliğine seçin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [BindingSource Bileşeni](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

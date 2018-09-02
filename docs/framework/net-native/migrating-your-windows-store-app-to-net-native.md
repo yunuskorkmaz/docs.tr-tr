@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3909855db109938794fad3e0afc99d492009b81c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874750"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461793"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
-.NET yerel uygulamaları Windows Store veya Geliştirici bilgisayara statik derlenmesini sağlar. Bu Windows Store uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derlemeden farklıdır veya [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farklar rağmen .NET Native ile uyumluluğu korumak çalışır [.NET için Windows Store apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows Store uygulamaları iş öğeleri de .NET Native ile çalışır.  Ancak, bazı durumlarda, davranış değişiklikleri karşılaşabilirsiniz. Bu belge aşağıdaki alanlarda standart .NET için Windows Store uygulamaları ve .NET Native arasındaki farklar açıklanır:  
+.NET yerel uygulamaları Windows Store veya Geliştirici bilgisayara statik derlenmesini sağlar. Bu Windows Store uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derlemeden farklıdır veya [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farklar rağmen .NET Native ile uyumluluğu korumak çalışır [.NET için Windows Store apps](https://msdn.microsoft.com/library/windows/apps/br230302.aspx). Çoğunlukla, .NET için Windows Store uygulamaları iş öğeleri de .NET Native ile çalışır.  Ancak, bazı durumlarda, davranış değişiklikleri karşılaşabilirsiniz. Bu belge aşağıdaki alanlarda standart .NET için Windows Store uygulamaları ve .NET Native arasındaki farklar açıklanır:  
   
 -   [Genel çalışma zamanı farkları](#Runtime)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "37874750"
   
 -   Ortak üyelerde <xref:System.RuntimeFieldHandle> ve <xref:System.RuntimeMethodHandle> yapıları desteklenmez. Bu tür, yalnızca LINQ ifade ağaçları ve statik dizi başlatma için desteklenir.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> ve <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> taban sınıflardaki gizli üyeleri içerir ve bu nedenle açık geçersiz kılmalar geçersiz kılınabilir. Bu ayrıca diğer true [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) yöntemleri.  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> ve <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> taban sınıflardaki gizli üyeleri içerir ve bu nedenle açık geçersiz kılmalar geçersiz kılınabilir. Bu ayrıca diğer true [RuntimeReflectionExtensions.GetRuntime*](https://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) yöntemleri.  
   
 -   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli birleşimleri (örneğin, zkratka dizisi) oluşturmaya çalıştığınızda başarısız yok.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "37874750"
   
 -   [HttpClient](#HttpClient)  
   
--   [Birlikte çalışma](#Interop)  
+-   [Interop](#Interop)  
   
 -   [Desteklenmeyen API'leri](#APIs)  
   
@@ -151,13 +151,13 @@ ms.locfileid: "37874750"
   
 -   <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> Özelliği oluşturur bir <xref:System.PlatformNotSupportedException> özel durum, bir <xref:System.Runtime.InteropServices.GuidAttribute> öznitelik türü için uygulanan değil. GUID kullanılan birincil COM desteği.  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](http://support.microsoft.com/kb/2803771) ve [KB2803755](http://support.microsoft.com/kb/2803755).  
+-   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](https://support.microsoft.com/kb/2803771) ve [KB2803755](https://support.microsoft.com/kb/2803755).  
   
 -   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` doğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient farkları  
- .NET Native içinde <xref:System.Net.Http.HttpClientHandler> sınıfı dahili olarak, WinINet kullanır (aracılığıyla [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı) yerine <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> standart .NET için Windows Store uygulamalarında kullanılan sınıflar.  WinINet tüm desteklemiyor yapılandırma seçeneklerini <xref:System.Net.Http.HttpClientHandler> sınıfı destekler.  Sonuç olarak:  
+ .NET Native içinde <xref:System.Net.Http.HttpClientHandler> sınıfı dahili olarak, WinINet kullanır (aracılığıyla [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı) yerine <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> standart .NET için Windows Store uygulamalarında kullanılan sınıflar.  WinINet tüm desteklemiyor yapılandırma seçeneklerini <xref:System.Net.Http.HttpClientHandler> sınıfı destekler.  Sonuç olarak:  
   
 -   Özellik özellikleri bazıları <xref:System.Net.Http.HttpClientHandler> dönüş `false` .NET Native üzerinde döndürmeleri ise `true` standart .NET için Windows Store uygulamalarında.  
   
@@ -167,11 +167,11 @@ ms.locfileid: "37874750"
   
  **Proxy**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı, yapılandırma veya istek başına temelinde proxy geçersiz kılmayı desteklemez.  Bu .NET Native tüm istekleri sistem yapılandırılmış bir proxy sunucusu veya değerine bağlı olarak, proxy sunucusu kullanmak anlamına gelir <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> özelliği.  .NET için Windows Store uygulamalarında proxy sunucusu tarafından tanımlanan <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> özelliği.  Ayarı .NET Native üzerinde <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> dışında bir değere `null` oluşturur bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` standart .NET Framework için Windows Store uygulamalarında.  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı, yapılandırma veya istek başına temelinde proxy geçersiz kılmayı desteklemez.  Bu .NET Native tüm istekleri sistem yapılandırılmış bir proxy sunucusu veya değerine bağlı olarak, proxy sunucusu kullanmak anlamına gelir <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> özelliği.  .NET için Windows Store uygulamalarında proxy sunucusu tarafından tanımlanan <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> özelliği.  Ayarı .NET Native üzerinde <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> dışında bir değere `null` oluşturur bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` standart .NET Framework için Windows Store uygulamalarında.  
   
  **Otomatik yeniden yönlendirme**  
   
- [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı yapılandırılması için otomatik yeniden yönlendirmeleri sayısı izin vermez.  Değerini <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> özelliği varsayılan olarak standart .NET için Windows Store apps 50'dir ve değiştirilebilir. .NET Native üzerinde bu özelliğin değeri 10 ve atar değiştirmeye çalışırken bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` .NET için Windows Store uygulamalarında.  
+ [HttpBaseProtocolFilter](https://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) sınıfı yapılandırılması için otomatik yeniden yönlendirmeleri sayısı izin vermez.  Değerini <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> özelliği varsayılan olarak standart .NET için Windows Store apps 50'dir ve değiştirilebilir. .NET Native üzerinde bu özelliğin değeri 10 ve atar değiştirmeye çalışırken bir <xref:System.PlatformNotSupportedException> özel durum.  <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> Özelliği döndürür `false` .NET Native üzerinde döndürür ancak `true` .NET için Windows Store uygulamalarında.  
   
  **Otomatik Sıkıştırma**  
   
@@ -217,9 +217,9 @@ ms.locfileid: "37874750"
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> desteklenir, ancak bir özel durum ile kullanıldığında gibi bazı senaryolarda oluşturur [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) veya türevleri byref.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> desteklenir, ancak bir özel durum ile kullanıldığında gibi bazı senaryolarda oluşturur [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) veya türevleri byref.  
   
- API'ler için kullanım dışı [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) destekler:  
+ API'ler için kullanım dışı [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) destekler:  
   
 |Tür|Üye|  
 |----------|------------|  
@@ -318,7 +318,7 @@ ms.locfileid: "37874750"
   
     -   `BStr`  
   
-    -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
+    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  Ancak, .NET Native aşağıdakileri desteklemez:  
   
@@ -326,7 +326,7 @@ ms.locfileid: "37874750"
   
 -   Uygulama <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> yönetilen tür arabirimi  
   
--   Uygulama [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) arabirimi yönetilen türe göre <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> özniteliği. Ancak, COM nesneleri aracılığıyla çağrılamıyor unutmayın `IDispatch`, ve yönetilen nesnenizin uygulayamaz `IDispatch`.  
+-   Uygulama [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimi yönetilen türe göre <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> özniteliği. Ancak, COM nesneleri aracılığıyla çağrılamıyor unutmayın `IDispatch`, ve yönetilen nesnenizin uygulayamaz `IDispatch`.  
   
  Yansıma kullanarak bir platform çağırma yöntemi çağırma desteklenmiyor. Başka bir yöntem yöntem çağrısının sarmalama ve bunun yerine sarmalayıcı çağırmak için yansıma kullanarak bu sınırlandırma çerçevesinde çalışabilirsiniz.  
   
@@ -400,7 +400,7 @@ ms.locfileid: "37874750"
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- Türlerinde [System.ServiceModel.* ad alanları](http://msdn.microsoft.com/library/gg145010.aspx) .NET Native desteklenmez. Bunlar aşağıdaki türleri içerir:  
+ Türlerinde [System.ServiceModel.* ad alanları](https://msdn.microsoft.com/library/gg145010.aspx) .NET Native desteklenmez. Bunlar aşağıdaki türleri içerir:  
   
 ||  
 |-|  
@@ -673,5 +673,5 @@ ms.locfileid: "37874750"
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET için Windows Store uygulamalarına genel bakış](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [.NET için Windows Store uygulamalarına genel bakış](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

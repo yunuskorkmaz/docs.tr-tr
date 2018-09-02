@@ -1,54 +1,54 @@
 ---
-title: Birlikte çalışma etkinliğini bir .NET Framework 4 iş akışında kullanma
+title: Birlikte çalışma etkinliği bir .NET Framework 4 akışında kullanma
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520233"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466731"
 ---
-# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Birlikte çalışma etkinliğini bir .NET Framework 4 iş akışında kullanma
+# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Birlikte çalışma etkinliği bir .NET Framework 4 akışında kullanma
 Kullanılarak oluşturulan etkinlikleri [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] veya [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] kullanılabilir bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kullanarak iş akışı <xref:System.Activities.Statements.Interop> etkinlik. Bu konuda kullanarak genel bir bakış sağlar <xref:System.Activities.Statements.Interop> etkinlik.  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> Etkinliği iş akışı Proje olmadıkça iş akışı Tasarımcısı Araç Kutusu'nda görünmez kendi **hedef Framework** ayarını **.Net Framework 4** veya sonraki bir sürümü.  
+>  <xref:System.Activities.Statements.Interop> İş akışının proje sahip olmadığı sürece etkinlik iş akışı Tasarımcısı araç kutusunda görünmüyor, **hedef Framework'ü** ayarının **.Net Framework 4** veya üzeri.  
   
-## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>.NET Framework 4.5 akışlarında birlikte çalışma etkinliğini kullanma  
- Bu konuda, bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik kitaplığı oluşturulduğu içeren bir `DiscountCalculator` etkinlik. `DiscountCalculator` Satın alma miktarına bağlı bir indirim hesaplar ve oluşan bir <xref:System.Workflow.Activities.SequenceActivity> içeren bir <xref:System.Workflow.Activities.PolicyActivity>.  
+## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>.NET Framework 4.5 iş akışlarında birlikte çalışma etkinliği kullanma  
+ Bu konuda, bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik kitaplığı içeren oluşturulur bir `DiscountCalculator` etkinlik. `DiscountCalculator` Bir satın alma tutarını temel bir hesaplar ve oluşan bir <xref:System.Workflow.Activities.SequenceActivity> içeren bir <xref:System.Workflow.Activities.PolicyActivity>.  
   
 > [!NOTE]
->  [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Bu konuda oluşturulan etkinliği kullanan bir <xref:System.Workflow.Activities.PolicyActivity> etkinliğin mantığını uygulamak için. Özel bir kullanmak için gerekli olmayan [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik veya <xref:System.Activities.Statements.Interop> kullanmak için etkinlik kuralları içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Kuralları kullanma örneği için bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kullanmadan iş akışı <xref:System.Activities.Statements.Interop> etkinliği bkz [.NET Framework 4.5 ilke etkinlik](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) örnek.  
+>  [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Bu konu başlığında oluşturduğunuz etkinliğini kullanan bir <xref:System.Workflow.Activities.PolicyActivity> etkinliğin mantığını uygulamak için. Özel bir kullanmak için gerekli olmayan [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik veya <xref:System.Activities.Statements.Interop> kullanmak için etkinlik kuralları içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Kuralları kullanma örneği için bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] kullanmadan iş akışı <xref:System.Activities.Statements.Interop> etkinliğine bakın [.NET Framework 4. 5'te ilke etkinliği](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) örnek.  
   
-#### <a name="to-create-the-net-framework-35-activity-library-project"></a>.NET Framework 3.5 etkinlik kitaplığı projesi oluşturmak için  
+#### <a name="to-create-the-net-framework-35-activity-library-project"></a>.NET Framework 3.5 etkinliği kitaplık projesi oluşturmak için  
   
-1.  Açık [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] seçip **yeni** ve ardından **proje...** gelen **dosya** menüsü.  
+1.  Açık [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] seçip **yeni** ardından **proje...** gelen **dosya** menüsü.  
   
-2.  Genişletme **diğer proje türleri** düğümünde **yüklü şablonlar** bölmesinde ve select **Visual Studio çözümleri**.  
+2.  Genişletin **diğer proje türleri** düğümünde **yüklü şablonlar** bölmesi ve select **Visual Studio çözümleri**.  
   
 3.  Seçin **boş çözüm** gelen **Visual Studio çözümleri** listesi. Tür `PolicyInteropDemo` içinde **adı** kutusuna ve tıklatın **Tamam**.  
   
-4.  Sağ **PolicyInteropDemo** içinde **Çözüm Gezgini** seçip **Ekle** ve ardından **yeni proje...** .  
+4.  Sağ **PolicyInteropDemo** içinde **Çözüm Gezgini** seçip **Ekle** ardından **yeni proje...** .  
   
     > [!TIP]
-    >  Varsa **Çözüm Gezgini** pencere görünür, select değil **Çözüm Gezgini** gelen **Görünüm** menüsü.  
+    >  Varsa **Çözüm Gezgini** pencere görünür, select değil **Çözüm Gezgini** gelen **görünümü** menüsü.  
   
-5.  İçinde **yüklü şablonlar** listesinde **Visual C#** ve ardından **iş akışı**. Seçin **.NET Framework 3.5** .NET Framework sürüm aşağı açılan listesi ve ardından **iş akışı etkinlik kütüphanesini** gelen **şablonları** listesi.  
+5.  İçinde **yüklü şablonlar** listesinden **Visual C#** ardından **iş akışı**. Seçin **.NET Framework 3.5** seçin ve .NET Framework sürümü açılır listede **iş akışı etkinlik Kitaplığı** gelen **şablonları** listesi.  
   
 6.  Tür `PolicyActivityLibrary` içinde **adı** kutusuna ve tıklatın **Tamam**.  
   
-7.  Sağ **Activity1.cs** içinde **Çözüm Gezgini** seçip **silmek**. Tıklatın **Tamam** onaylamak için.  
+7.  Sağ **Activity1.cs** içinde **Çözüm Gezgini** seçip **Sil**. Tıklayın **Tamam** onaylamak için.  
   
 #### <a name="to-create-the-discountcalculator-activity"></a>DiscountCalculator etkinlik oluşturmak için  
   
-1.  Sağ **PolicyActivityLibrary** içinde **Çözüm Gezgini** seçip **Ekle** ve ardından **etkinlik...** .  
+1.  Sağ **PolicyActivityLibrary** içinde **Çözüm Gezgini** seçip **Ekle** ardından **etkinlik...** .  
   
-2.  Seçin **etkinlikle (kod ayrımı)** gelen **Visual C# öğeleri** listesi. Tür `DiscountCalculator` içinde **adı** kutusuna ve tıklatın **Tamam**.  
+2.  Seçin **etkinlik (kod ayırma ile)** gelen **Visual C# öğeleri** listesi. Tür `DiscountCalculator` içinde **adı** kutusuna ve tıklatın **Tamam**.  
   
-3.  Sağ **DiscountCalculator.xoml** içinde **Çözüm Gezgini** seçip **görünümü kodu**.  
+3.  Sağ **DiscountCalculator.xoml** içinde **Çözüm Gezgini** seçip **kodu görüntüle**.  
   
-4.  Aşağıdaki üç özellikleri ekleyin `DiscountCalculator` sınıfı.  
+4.  Aşağıdaki üç özelliği Ekle `DiscountCalculator` sınıfı.  
   
     ```csharp  
     public partial class DiscountCalculator : SequenceActivity  
@@ -61,59 +61,59 @@ Kullanılarak oluşturulan etkinlikleri [!INCLUDE[vstecwinfx](../../../includes/
   
 5.  Sağ **DiscountCalculator.xoml** içinde **Çözüm Gezgini** seçip **Görünüm Tasarımcısı**.  
   
-6.  Sürükleme bir **İlkesi** etkinliğinden **Windows iş akışı v3.0** bölümünü **araç** sürükleyip bırakın **DiscountCalculator** etkinliği .  
+6.  Sürükleme bir **ilke** etkinliğinden **Windows iş akışı v3.0** bölümünü **araç kutusu** sürükleyip **DiscountCalculator** etkinliği .  
   
     > [!TIP]
-    >  Varsa **araç** pencere görünür, select değil **araç** gelen **Görünüm** menüsü.  
+    >  Varsa **araç kutusu** pencere görünür, select değil **araç kutusu** gelen **görünümü** menüsü.  
   
 #### <a name="to-configure-the-rules"></a>Kurallarını yapılandırmak için  
   
-1.  Yeni eklenen tıklatın **İlkesi** henüz seçili değilse seçmek için etkinlik.  
+1.  Yeni eklenen tıklayın **ilke** etkinliği zaten seçili değilse bunu seçin.  
   
-2.  Tıklatın **RuleSetReference** özelliğinde **özellikleri** penceresi seçin ve özellik sağındaki üç nokta düğmesini tıklatın.  
+2.  Tıklayın **RuleSetReference** özelliğinde **özellikleri** penceresini seçin ve özellik sağındaki elips düğmesine tıklayın.  
   
     > [!TIP]
-    >  Varsa **özellikleri** pencere görünür değil, seçin **Özellikler penceresini** gelen **Görünüm** menüsü.  
+    >  Varsa **özellikleri** penceresi görünür değilse, seçin **Özellikler penceresi** gelen **görünümü** menüsü.  
   
-3.  Seçin **yeni tıklatın...** .  
+3.  Seçin **Yeni'ye tıklayın...** .  
   
-4.  Tıklatın **Kuralı Ekle**.  
+4.  Tıklayın **Kuralı Ekle**.  
   
-5.  İçine aşağıdaki ifadeyi yazın **koşulu** kutusu.  
+5.  İçine aşağıdaki ifadeyi yazın **koşul** kutusu.  
   
     ```  
     this.Subtotal >= 50 && this.Subtotal < 100  
     ```  
   
-6.  İçine aşağıdaki ifadeyi yazın **sonra Eylemler** kutusu.  
+6.  İçine aşağıdaki ifadeyi yazın **ardından Eylemler** kutusu.  
   
     ```  
     this.DiscountPercent = 0.075  
     ```  
   
-7.  Tıklatın **Kuralı Ekle**.  
+7.  Tıklayın **Kuralı Ekle**.  
   
-8.  İçine aşağıdaki ifadeyi yazın **koşulu** kutusu.  
+8.  İçine aşağıdaki ifadeyi yazın **koşul** kutusu.  
   
     ```  
     this.Subtotal >= 100  
     ```  
   
-9. İçine aşağıdaki ifadeyi yazın **sonra Eylemler** kutusu.  
+9. İçine aşağıdaki ifadeyi yazın **ardından Eylemler** kutusu.  
   
     ```  
     this.DiscountPercent = 0.15  
     ```  
   
-10. Tıklatın **Kuralı Ekle**.  
+10. Tıklayın **Kuralı Ekle**.  
   
-11. İçine aşağıdaki ifadeyi yazın **koşulu** kutusu.  
+11. İçine aşağıdaki ifadeyi yazın **koşul** kutusu.  
   
     ```  
     this.DiscountPercent > 0  
     ```  
   
-12. İçine aşağıdaki ifadeyi yazın **sonra Eylemler** kutusu.  
+12. İçine aşağıdaki ifadeyi yazın **ardından Eylemler** kutusu.  
   
     ```  
     this.Total = this.Subtotal - this.Subtotal * this.DiscountPercent  
@@ -125,13 +125,13 @@ Kullanılarak oluşturulan etkinlikleri [!INCLUDE[vstecwinfx](../../../includes/
     this.Total = this.Subtotal  
     ```  
   
-14. Tıklatın **Tamam** kapatmak için **kural kümesi düzenleyici** iletişim kutusu.  
+14. Tıklayın **Tamam** kapatmak için **kural kümesi Düzenleyicisi** iletişim kutusu.  
   
-15. Yeni oluşturulan emin <xref:System.Workflow.Activities.Rules.RuleSet> seçildiyse **adı** liste öğesini tıklatıp **Tamam**.  
+15. Yeni oluşturulan emin <xref:System.Workflow.Activities.Rules.RuleSet> seçili **adı** listesinde ve tıklayın **Tamam**.  
   
-16. Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+16. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
- Eklenen Kurallar `DiscountCalculator` etkinlik bu yordamda, aşağıdaki kod örneğinde gösterilir.  
+ Eklenen Kurallar `DiscountCalculator` etkinlik bu yordamda aşağıdaki kod örneğinde gösterilmiştir.  
   
 ```  
 Rule1: IF this.Subtotal >= 50 && this.Subtotal < 100   
@@ -145,49 +145,49 @@ Rule3: IF this.DiscountPercent > 0
        ELSE this.Total = this.Subtotal  
 ```  
   
- Zaman <xref:System.Workflow.Activities.PolicyActivity> yürütür, bu üç kuralları değerlendirin ve değiştirme `Subtotal`, `DiscountPercent`, ve `Total` özellik değerlerini `DiscountCalculator` istenen indirim hesaplamak için etkinlik.  
+ Zaman <xref:System.Workflow.Activities.PolicyActivity> yürütür, bu üç kuralları değerlendirin ve değiştirme `Subtotal`, `DiscountPercent`, ve `Total` özellik değerlerini `DiscountCalculator` istenen indirimi hesaplamak için etkinlik.  
   
-## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a>İle birlikte çalışma etkinliğini DiscountCalculator etkinliğini kullanma  
- Kullanılacak `DiscountCalculator` etkinliği içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı, <xref:System.Activities.Statements.Interop> etkinliği kullanılır. Bu bölümdeki iki iş akışları oluşturulur ve bir kod ve bir iş akışı Tasarımcısı'nı kullanarak kullanarak hangi Göster nasıl kullanılacağını <xref:System.Activities.Statements.Interop> etkinlikle `DiscountCalculator` etkinlik. Aynı ana bilgisayar uygulamasını hem de iş akışları için kullanılır.  
+## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a>Birlikte çalışma etkinliği ile DiscountCalculator etkinliği kullanma  
+ Kullanılacak `DiscountCalculator` etkinliği içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı, <xref:System.Activities.Statements.Interop> etkinliği kullanılır. Bu bölümde iki iş akışları oluşturulur, bir kod ve iş akışı Tasarımcısı kullanarak bir tane kullanarak gösteren nasıl kullanılacağını <xref:System.Activities.Statements.Interop> etkinliğiyle `DiscountCalculator` etkinlik. Aynı ana bilgisayar uygulaması hem de iş akışları için kullanılır.  
   
 #### <a name="to-create-the-host-application"></a>Ana bilgisayar uygulaması oluşturmak için  
   
-1.  Sağ **PolicyInteropDemo** içinde **Çözüm Gezgini** seçip **Ekle**ve ardından **yeni proje...** .  
+1.  Sağ **PolicyInteropDemo** içinde **Çözüm Gezgini** seçip **Ekle**, ardından **yeni proje...** .  
   
-2.  Emin **.NET Framework 4.5** .NET Framework sürüm aşağı açılan listesinde seçilen ve seçin **iş akışı konsol uygulaması** gelen **Visual C# öğeleri** listesi.  
+2.  Emin **.NET Framework 4.5** .NET Framework sürüm aşağı açılan listesinde seçili olduğunu doğrulayıp, seçin **iş akışı konsol uygulaması** gelen **Visual C# öğeleri** listesi.  
   
 3.  Tür `PolicyInteropHost` içine **adı** kutusuna ve tıklatın **Tamam**.  
   
 4.  Sağ **PolicyInteropHost** içinde **Çözüm Gezgini** seçip **özellikleri**.  
   
-5.  İçinde **hedef framework** aşağı açılan listesinde, seçimden değiştirme **.NET Framework 4 istemci profili** için **.NET Framework 4.5**. Tıklatın **Evet** onaylamak için.  
+5.  İçinde **hedef Framework'ü** aşağı açılan listesinde, seçimi değiştirme **.NET Framework 4 istemci profili** için **.NET Framework 4.5**. Tıklayın **Evet** onaylamak için.  
   
 6.  Sağ **PolicyInteropHost** içinde **Çözüm Gezgini** seçip **Başvuru Ekle...** .  
   
-7.  Seçin **PolicyActivityLibrary** gelen **projeleri** sekmesinde **Tamam**.  
+7.  Seçin **PolicyActivityLibrary** gelen **projeleri** sekmesine **Tamam**.  
   
 8.  Sağ **PolicyInteropHost** içinde **Çözüm Gezgini** seçip **Başvuru Ekle...** .  
   
-9. Seçin **System.Workflow.Activities**, **System.Workflow.ComponentModel**ve ardından **System.Workflow.Runtime** gelen **.NET**sekmesinde **Tamam**.  
+9. Seçin **System.Workflow.Activities**, **System.Workflow.ComponentModel**, ardından **System.Workflow.Runtime** gelen **.NET**sekmesine **Tamam**.  
   
 10. Sağ **PolicyInteropHost** içinde **Çözüm Gezgini** seçip **başlangıç projesi olarak ayarla**.  
   
-11. Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+11. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-### <a name="using-the-interop-activity-in-code"></a>Birlikte çalışma etkinlik kod içinde kullanma  
- Bu örnekte, bir iş akışı tanımını içeren kodu kullanılarak oluşturulan <xref:System.Activities.Statements.Interop> etkinlik ve `DiscountCalculator` etkinlik. Bu iş akışını kullanarak çağrılan <xref:System.Activities.WorkflowInvoker> ve kural değerlendirme sonuçlarını konsolunu kullanarak yazılır bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
+### <a name="using-the-interop-activity-in-code"></a>Kod içinde birlikte çalışma etkinliği kullanma  
+ Bu örnekte, bir iş akışı tanımını içeren kod kullanılarak oluşturulan <xref:System.Activities.Statements.Interop> etkinlik ve `DiscountCalculator` etkinlik. Bu iş akışı kullanılarak çağrılan <xref:System.Activities.WorkflowInvoker> ve kuralı değerlendirme sonuçlarını konsolunu kullanarak yazılır bir <xref:System.Activities.Statements.WriteLine> etkinlik.  
   
-##### <a name="to-use-the-interop-activity-in-code"></a>Birlikte çalışma etkinlik kodda kullanmak için  
+##### <a name="to-use-the-interop-activity-in-code"></a>Birlikte çalışma etkinliği kodu kullanmak için  
   
-1.  Sağ **Program.cs** içinde **Çözüm Gezgini** seçip **görünümü kodu**.  
+1.  Sağ **Program.cs** içinde **Çözüm Gezgini** seçip **kodu görüntüle**.  
   
-2.  Aşağıdakileri ekleyin `using` deyimini dosyanın üst.  
+2.  Aşağıdaki `using` deyimini dosyanın üst.  
   
     ```csharp  
     using PolicyActivityLibrary;  
     ```  
   
-3.  İçeriği Kaldır `Main` yöntemi ve aşağıdaki kod ile değiştirin.  
+3.  İçeriği kaldırmak `Main` yöntemi ve aşağıdaki kodla değiştirin.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -196,7 +196,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-4.  İçinde yeni bir yöntem oluşturma `Program` adlı bir sınıf `CalculateDiscountUsingCodeWorkflow` aşağıdaki kodu içerir.  
+4.  İçinde yeni bir yöntem oluşturma `Program` adlı sınıf `CalculateDiscountUsingCodeWorkflow` , aşağıdaki kodu içerir.  
   
     ```csharp  
     static void CalculateDiscountUsingCodeWorkflow()  
@@ -246,9 +246,9 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >  `Subtotal`, `DiscountPercent`, Ve `Total` özelliklerini `DiscountCalculator` etkinlik bağımsız ortaya <xref:System.Activities.Statements.Interop> etkinliği ve yerel ilişkili iş akışı değişken <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityProperties%2A> koleksiyonu. `Subtotal` eklenen bir <xref:System.Activities.ArgumentDirection.In> bağımsız değişkeni çünkü `Subtotal` veri akışları içine <xref:System.Activities.Statements.Interop> etkinlik, ve `DiscountPercent` ve `Total` olarak eklenir <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler dışı kendi veri akışları için <xref:System.Activities.Statements.Interop> etkinlik. Unutmayın iki <xref:System.Activities.ArgumentDirection.Out> bağımsız değişken adlarıyla eklenen `DiscountPercentOut` ve `TotalOut` temsil ettikleri belirtmek için <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler. `DiscountCalculator` Türü olarak belirtildiğinde <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
+    >  `Subtotal`, `DiscountPercent`, Ve `Total` özelliklerini `DiscountCalculator` etkinlik bağımsız değişkenleri ortaya <xref:System.Activities.Statements.Interop> etkinliği ve yerel ilişkili iş akışı değişkenleri <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityProperties%2A> koleksiyonu. `Subtotal` olarak eklenir bir <xref:System.Activities.ArgumentDirection.In> bağımsız değişken olduğundan `Subtotal` veri akışları halinde <xref:System.Activities.Statements.Interop> etkinliği ve `DiscountPercent` ve `Total` olarak eklenir <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenleri tanesi kendi veri akışları için <xref:System.Activities.Statements.Interop> etkinlik. Unutmayın iki <xref:System.Activities.ArgumentDirection.Out> bağımsız değişken adları ile eklenen `DiscountPercentOut` ve `TotalOut` temsil ettikleri belirtmek için <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenler. `DiscountCalculator` Türü olarak belirtildiğinde <xref:System.Activities.Statements.Interop> etkinliğin <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
   
-5.  Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşuna basın. Yedek için farklı değerler `Subtotal` tarafından sağlanan farklı indirim düzeyleri çıkışı test etmek için değer `DiscountCalculator` etkinlik.  
+5.  Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın. Yedek için farklı değerler `Subtotal` farklı indirim düzeyleri tarafından sağlanan çıkış test etmek için değer `DiscountCalculator` etkinlik.  
   
     ```csharp  
     Variable<double> Subtotal = new Variable<double>  
@@ -258,65 +258,65 @@ Rule3: IF this.DiscountPercent > 0
     };  
     ```  
   
-### <a name="using-the-interop-activity-in-the-workflow-designer"></a>Birlikte çalışma etkinliğini iş akışı Tasarımcısı'nda kullanma  
- Bu örnekte, bir iş akışı, iş akışı Tasarımcısı'nı kullanarak oluşturulur. Bu iş akışı önceki örnekte, aynı işlevselliği dışında daha kullanmak yerine sahip bir <xref:System.Activities.Statements.WriteLine> indirim görüntülenecek etkinlik konak uygulama alır ve iş akışı tamamlandığında indirim bilgilerini görüntüler. Ayrıca, yerine yerel iş akışı değişkenleri verileri içerecek şekilde, bağımsız değişkenler iş akışı Tasarımcısı'nda oluşturulur ve iş akışı çağrıldığında değerler, ana bilgisayardan geçirilir.  
+### <a name="using-the-interop-activity-in-the-workflow-designer"></a>Birlikte çalışma etkinliği iş akışı Tasarımcısı'nda kullanma  
+ Bu örnekte, iş akışı Tasarımcısı'nı kullanarak bir iş akışı oluşturulur. Bu iş akışı önceki örnekle aynı işlevselliği dışında daha kullanmak yerine sahip bir <xref:System.Activities.Statements.WriteLine> indirim görüntülemek için etkinliği ana bilgisayar uygulamasını alır ve iş akışı tamamlandığında indirim bilgilerini görüntüler. Ayrıca, verileri içerecek şekilde yerel iş akışı değişkenlerini kullanarak yerine bağımsız değişkenler iş akışı Tasarımcısı'nda oluşturulan ve iş akışı çağrıldığında değerleri konaktan geçirilir.  
   
-##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>İş Akışı Tasarımcısı tarafından oluşturulan bir iş akışını kullanarak PolicyActivity barındırmak için  
+##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>Bir iş akışı tasarımcısı tarafından oluşturulan iş akışı kullanarak PolicyActivity barındırmak için  
   
-1.  Sağ **Workflow1.xaml** içinde **Çözüm Gezgini** seçip **silmek**. Tıklatın **Tamam** onaylamak için.  
+1.  Sağ **Workflow1.xaml** içinde **Çözüm Gezgini** seçip **Sil**. Tıklayın **Tamam** onaylamak için.  
   
 2.  Sağ **PolicyInteropHost** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe...** .  
   
-3.  Genişletme **Visual C# öğeleri** düğümü ve select **iş akışı**. Seçin **etkinlik** gelen **Visual C# öğeleri** listesi.  
+3.  Genişletin **Visual C# öğeleri** düğümünü seçip alt **iş akışı**. Seçin **etkinlik** gelen **Visual C# öğeleri** listesi.  
   
 4.  Tür `DiscountWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
   
-5.  Tıklatın **bağımsız değişkenleri** görüntülemek için iş akışı Tasarımcısı sol alt köşesine düğmesinde **bağımsız değişkenleri** bölmesi.  
+5.  Tıklayın **bağımsız değişkenleri** görüntülemek için iş akışı Tasarımcısı'nın bir alt sol taraftaki düğmeyi **bağımsız değişkenleri** bölmesi.  
   
-6.  Tıklatın **bağımsız değişkeni oluşturma**.  
+6.  Tıklayın **bağımsız değişken oluşturma**.  
   
-7.  Tür `Subtotal` içine **adı** kutusunda **içinde** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** aşağı açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
-  
-    > [!NOTE]
-    >  Varsa **çift** bulunmayan **bağımsız değişken türü** aşağı açılan listesinden, **türleri için Gözat...** , türü `System.Double` içinde **türü adı** ve'ı tıklatın **Tamam**.  
-  
-8.  Tıklatın **bağımsız değişkeni oluşturma**.  
-  
-9. Tür `DiscountPercent` içine **adı** kutusunda **çıkışı** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** aşağı açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
-  
-10. Tıklatın **bağımsız değişkeni oluşturma**.  
-  
-11. Tür `Total` içine **adı** kutusunda **çıkışı** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** aşağı açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
-  
-12. Tıklatın **bağımsız değişkenleri** kapatmak için iş akışı Tasarımcısı sol alt köşesine düğmesinde **bağımsız değişkenleri** bölmesi.  
-  
-13. Sürükleme bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç** ve iş akışı Tasarımcı yüzeyine bırakın.  
-  
-14. Sürükleme bir **birlikte çalışabilirliği** etkinliğinden **geçiş** bölümünü **araç** sürükleyip bırakın **dizisi** etkinlik.  
-  
-15. Tıklatın **birlikte çalışabilirliği** faaliyete **göz atmak için tıklatın...** Etiket, yazın **DiscountCalculator** içinde **türü adı** ve'ı tıklatın **Tamam**.  
+7.  Tür `Subtotal` içine **adı** kutusunda **içinde** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
     > [!NOTE]
-    >  Zaman <xref:System.Activities.Statements.Interop> etkinlik, iş akışına eklenir ve `DiscountCalculator` türü olarak belirtildiğinde kendi <xref:System.Activities.Statements.Interop.ActivityType%2A>, <xref:System.Activities.Statements.Interop> etkinlik üç gösterir <xref:System.Activities.ArgumentDirection.In> bağımsız değişkenleri ve üç <xref:System.Activities.ArgumentDirection.Out> üç genel temsil eden bağımsız değişkenler özelliklerini `DiscountCalculator` etkinlik. <xref:System.Activities.ArgumentDirection.In> Bağımsız değişkenleri üç genel özellikleri ve üç aynı ada sahip <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenleri ile aynı ada sahip **çıkışı** özellik adı eklenir. Aşağıdaki adımlarda, önceki adımlarda oluşturduğunuz iş akışı değişkenleri bağlı <xref:System.Activities.Statements.Interop> etkinliğin bağımsız değişkenler.  
+    >  Varsa **çift** kullanımda olmayan **bağımsız değişken türü** aşağı açılan listesinden **vyhledat Typy...** , türü `System.Double` içinde **tür adı** ve'ı tıklatın **Tamam**.  
   
-16. Tür `DiscountPercent` içine **bir VB ifadesi girin** kutusunun sağındaki **DiscountPercentOut** özelliği ve SEKME tuşuna basın.  
+8.  Tıklayın **bağımsız değişken oluşturma**.  
   
-17. Tür `Subtotal` içine **bir VB ifadesi girin** kutusunun sağındaki **alt toplam** özelliği ve SEKME tuşuna basın.  
+9. Tür `DiscountPercent` içine **adı** kutusunda **kullanıma** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
-18. Tür `Total` içine **bir VB ifadesi girin** kutusunun sağındaki **TotalOut** özelliği ve SEKME tuşuna basın.  
+10. Tıklayın **bağımsız değişken oluşturma**.  
   
-19. Sağ **Program.cs** içinde **Çözüm Gezgini** seçip **görünümü kodu**.  
+11. Tür `Total` içine **adı** kutusunda **kullanıma** gelen **yönü** açılan listesinde, select **çift** gelen**Bağımsız değişken türü** açılır ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
-20. Aşağıdakileri ekleyin `using` deyimini dosyanın üst.  
+12. Tıklayın **bağımsız değişkenleri** iş akışı tasarımcısını kapatmak için sol alt köşesine düğmesinde **bağımsız değişkenleri** bölmesi.  
+  
+13. Sürükleme bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç kutusu** ve iş akışı Tasarımcısı yüzeyine bırakın.  
+  
+14. Sürükleme bir **Interop** etkinliğinden **geçiş** bölümünü **araç kutusu** sürükleyip **dizisi** etkinlik.  
+  
+15. Tıklayın **Interop** faaliyete **göz atmak için tıklatın...** Etiket, tip **DiscountCalculator** içinde **tür adı** ve'ı tıklatın **Tamam**.  
+  
+    > [!NOTE]
+    >  Zaman <xref:System.Activities.Statements.Interop> etkinlik iş akışına eklenen ve `DiscountCalculator` türü olarak belirtilen kendi <xref:System.Activities.Statements.Interop.ActivityType%2A>, <xref:System.Activities.Statements.Interop> etkinliği gösteren üç <xref:System.Activities.ArgumentDirection.In> bağımsız değişkenleri ve üç <xref:System.Activities.ArgumentDirection.Out> temsil eden üç genel bağımsız değişkenleri özelliklerini `DiscountCalculator` etkinlik. <xref:System.Activities.ArgumentDirection.In> Bağımsız değişkenleri üç genel özellikleri ve üç aynı ada sahip <xref:System.Activities.ArgumentDirection.Out> bağımsız değişkenlere sahip aynı adlarla **kullanıma** özellik adına eklenir. Aşağıdaki adımlarda önceki adımlarda oluşturulan iş akışı bağımsız değişkenleri bağlı <xref:System.Activities.Statements.Interop> etkinliğin bağımsız değişkenler.  
+  
+16. Tür `DiscountPercent` içine **zadejte Výraz jazyka vb.** kutusunun sağındaki **DiscountPercentOut** özelliği ve SEKME tuşuna basın.  
+  
+17. Tür `Subtotal` içine **zadejte Výraz jazyka vb.** kutusunun sağındaki **Subtotal** özelliği ve SEKME tuşuna basın.  
+  
+18. Tür `Total` içine **zadejte Výraz jazyka vb.** kutusunun sağındaki **TotalOut** özelliği ve SEKME tuşuna basın.  
+  
+19. Sağ **Program.cs** içinde **Çözüm Gezgini** seçip **kodu görüntüle**.  
+  
+20. Aşağıdaki `using` deyimini dosyanın üst.  
   
     ```csharp  
     using System.Collections.Generic;  
     ```  
   
-21. Açıklama çağrısı çıkışı `CalculateDiscountInCode` yönteminde `Main` yöntemi ve aşağıdaki kodu ekleyin.  
+21. Çağrı yorum `CalculateDiscountInCode` yönteminde `Main` yöntemi ve aşağıdaki kodu ekleyin.  
   
     > [!NOTE]
-    >  Önceki yordamda ve varsayılan takip ettiğiniz değil, `Main` kodu varsa, Değiştir `Main` aşağıdaki kod ile.  
+    >  Önceki yordamda ve varsayılan takip ettiğiniz değil, `Main` kodu varsa, içeriği değiştirin `Main` aşağıdaki kod ile.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -326,7 +326,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-22. İçinde yeni bir yöntem oluşturma `Program` adlı bir sınıf `CalculateDiscountUsingDesignerWorkflow` aşağıdaki kodu içerir.  
+22. İçinde yeni bir yöntem oluşturma `Program` adlı sınıf `CalculateDiscountUsingDesignerWorkflow` , aşağıdaki kodu içerir.  
   
     ```csharp  
     static void CalculateDiscountUsingDesignerWorkflow()  
@@ -348,22 +348,22 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-23. Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşuna basın. Farklı bir belirtmek için `Subtotal` tutar, değerini değiştirme `SubtotalValue` aşağıdaki kodda.  
+23. Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın. Farklı bir belirtmek için `Subtotal` tutar, değiştirin `SubtotalValue` aşağıdaki kodda.  
   
     ```csharp  
     double SubtotalValue = 125.99; // Change this value.  
     ```  
   
-## <a name="rules-features-overview"></a>Kuralları özelliklere genel bakış  
- [!INCLUDE[wf1](../../../includes/wf1-md.md)] Kurallar altyapısı öncelik tabanlı bir şekilde İleri zincirleme desteğiyle kuralları işlemek için destek sağlar. Kurallar, bir koleksiyondaki öğelerin veya tek bir öğe için değerlendirilebilir. Kurallar ve belirli kurallar işlevselliği hakkında bilgi genel bakış için lütfen aşağıdaki tabloya bakın.  
+## <a name="rules-features-overview"></a>Kuralları özelliklerine genel bakış  
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)] Kurallar altyapısı kuralları İleri zincirleme desteğiyle önceliğe dayalı bir şekilde işlemek için destek sağlar. Kurallar, tek bir öğe veya bir koleksiyondaki öğelerin değerlendirilebilir. Kuralları ve belirli kurallar işlevler hakkında bilgi genel bakış için lütfen aşağıdaki tabloya bakın.  
   
 |Kuralları özelliği|Belgeler|  
 |-------------------|-------------------|  
-|Kurallarına genel bakış|[Windows Workflow Foundation kurallar altyapısı giriş](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[İş akışlarında RuleSets kullanarak](http://go.microsoft.com/fwlink/?LinkId=178516) ve <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|Kuralları değerlendirmesi|[RuleSets kuralları değerlendirmesine](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|Zincirleme kuralları|[İleri denetim zincirleme](http://go.microsoft.com/fwlink/?LinkId=178518) ve [İleri kuralları zincirleme](http://go.microsoft.com/fwlink/?LinkId=178519)|  
-|Kural koleksiyonlarında işleme|[Kural koleksiyonlarında işleme](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|PolicyActivity kullanma|[Kullanarak PolicyActivity etkinliğini](http://go.microsoft.com/fwlink/?LinkId=178521) ve <xref:System.Workflow.Activities.PolicyActivity>|  
+|Kurallarına genel bakış|[Windows Workflow Foundation kurallar altyapısı giriş](https://go.microsoft.com/fwlink/?LinkID=152836)|  
+|Kural kümesi|[İş akışlarında RuleSets kullanma](https://go.microsoft.com/fwlink/?LinkId=178516) ve <xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Değerlendirme kuralları|[RuleSets değerlendirme kuralları](https://go.microsoft.com/fwlink/?LinkId=178517)|  
+|Zincirleme kuralları|[İleri denetim zincirleme](https://go.microsoft.com/fwlink/?LinkId=178518) ve [İleri kuralları zincirleme](https://go.microsoft.com/fwlink/?LinkId=178519)|  
+|Kural koleksiyonlarında işleme|[Kural koleksiyonlarında işleme](https://go.microsoft.com/fwlink/?LinkId=178520)|  
+|PolicyActivity kullanma|[PolicyActivity etkinliğini kullanarak](https://go.microsoft.com/fwlink/?LinkId=178521) ve <xref:System.Workflow.Activities.PolicyActivity>|  
   
- Oluşturulan iş akışları [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] tarafından sağlanan tüm kuralları özelliklere kullanmayın [!INCLUDE[wf1](../../../includes/wf1-md.md)]bildirim temelli etkinlik koşullar ve gibi koşullu etkinlikler gibi <xref:System.Workflow.Activities.ConditionedActivityGroup> ve <xref:System.Workflow.Activities.ReplicatorActivity>. Gerekirse, bu işlevselliği kullanılarak oluşturulan iş akışları için kullanılabilir [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Daha fazla bilgi için bkz: [Geçiş Kılavuzu](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+ Oluşturulan iş akışları [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] tarafından sağlanan kuralları özelliklerin tümünü kullanmayan [!INCLUDE[wf1](../../../includes/wf1-md.md)]bildirim temelli etkinlik koşullar ve gibi koşullu etkinlikler gibi <xref:System.Workflow.Activities.ConditionedActivityGroup> ve <xref:System.Workflow.Activities.ReplicatorActivity>. Gerekirse, bu işlev kullanılarak oluşturulan iş akışları için kullanılabilir [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Daha fazla bilgi için [geçiş kılavuzuna](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

@@ -3,12 +3,12 @@ title: C# içinde LINQ sorguları yazma
 description: C# içinde LINQ sorguları yazma hakkında bilgi edinin.
 ms.date: 12/1/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 5003d1a5e15e17bea4204941d1c43895e3fb91f4
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403940"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463110"
 ---
 # <a name="write-linq-queries-in-c"></a>C# içinde LINQ sorguları yazma #
 
@@ -81,6 +81,6 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[İzlenecek yol: Sorgu C# dilinde yazma](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-[dil tümleşik sorgu (LINQ)](index.md)
-[burada yan tümcesi](../language-reference/keywords/where-clause.md)
+- [İzlenecek yol: Sorgu C# dilinde yazma](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Dil ile Tümleşik Sorgu (LINQ)](index.md)
+- [where yan tümcesi](../language-reference/keywords/where-clause.md)

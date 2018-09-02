@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441370"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468299"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS Numaralandırması
-Ortak dil çalışma zamanı (CLR) hakkında bilgiler döndürülmelidir belirtmek değerlerini içerir.  
+Ortak dil çalışma zamanı (CLR) hakkında bilgiler döndürülmesi gerektiğini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,17 +47,17 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgilerini eklenmeyeceğini gösterir.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Dizin bilgileri eklenmeyeceğini gösterir.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Sürüm bilgileri eklenmeyeceğini gösterir.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Bir hata iletişim kutusu hata yapması üzerine gösterilmesi gereken değil olduğunu gösterir.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Belirten arama etkilerini [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS bayrağı işlevi geçersiz. Diğer bir deyişle, bir yükleme iletişim kutusu başarısızlık gizlenen yerine gösterilmesi gerekir.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Çalışma zamanı AMD 64 uyumlu sürümü hakkında bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Çalışma zamanı IA-64-compatible sürümü hakkında bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_REQUEST_X86`|Çalışma zamanı x86 uyumlu sürümü hakkında bilgi için bir istek gösterir.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Sürüm yükseltme bilgileri ekleneceğini gösterir.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Bir hata iletişim kutusu başarısızlık durumunda gösterilecek değil olduğunu gösterir.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Bildiren arama etkilerini [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) SEM_FAILCRITICALERRORS bayrağıyla işlevi geçersiz. Diğer bir deyişle, bir yükleme iletişim kutusu yok yerine başarısızlık gösterilmesi gerekir.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Bir çalışma zamanı AMD 64 uyumlu sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Bir çalışma zamanı IA-64-compatible sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
+|`RUNTIME_INFO_REQUEST_X86`|Bir çalışma zamanı x86 uyumlu sürümü hakkında daha fazla bilgi için bir istek gösterir.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Sürüm yükseltme bilgileri dahil olması gerektiğini gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki platform mimarisi bayrakları belirtilen yalnızca birer birer olabilir ve birleştirilemez:  
+ Aşağıdaki platform mimarisi bayrakları belirtilen tek bir zaman olabilir ve birleştirilemez:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   

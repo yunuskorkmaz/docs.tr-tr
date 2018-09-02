@@ -1,102 +1,103 @@
 ---
-title: .NET Core kaynağından derleme
-description: .NET Core ve kaynak kodu .NET Core CLI oluşturmayı öğrenin.
+title: Kaynaktan .NET Core derleme
+description: .NET Core ve .NET Core CLI kaynak kodundan oluşturmayı öğrenin.
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 55a35223a4bc11156e056cceb7f86365c4906222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216035"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468804"
 ---
-# <a name="build-net-core-from-source"></a>.NET Core kaynağından derleme
+# <a name="build-net-core-from-source"></a>Kaynaktan .NET Core derleme
 
-.NET Core kendi kaynak kodundan oluşturma yeteneği birden çok yolla önemlidir: .NET Core numaralı bağlantı noktasına yeni platformlar için kolaylaştırır, katkı sağlar ve düzeltmeleri ürüne ve .NET özel sürümlerinin oluşturulmasını sağlar.
-Bu makalede oluşturmak ve kendi sürümlerini .NET Core dağıtmak isteyen geliştiriciler için yönergeler sağlar.
+.NET Core, kaynak koddan oluşturma imkanı birden çok yolla önemlidir: .NET Core numaralı bağlantı noktasına yeni platformlara kolaylaştırır, katkı sağlar ve düzeltmeleri ürüne ve .NET özel sürümlerini oluşturulmasını sağlar.
+Bu makalede, derleme ve kendi .NET Core sürümlerini dağıtmak isteyen geliştiriciler için konusunda rehberlik sağlar.
 
-## <a name="build-the-clr-from-source"></a>Kaynağından CLR derleme
+## <a name="build-the-clr-from-source"></a>CLR kaynağından alınan derleme
 
-.NET CoreCLR için kaynak kodunu bulunabilir [dotnet/coreclr](https://github.com/dotnet/coreclr/) github'daki.
+.NET CoreCLR için kaynak kodu bulunabilir [dotnet/coreclr](https://github.com/dotnet/coreclr/) github deposu.
 
-Yapı şu anda üzerinde aşağıdaki önkoşullar bağlıdır:
+Derleme şu anda üzerinde aşağıdaki ön koşullara bağlıdır:
+
 * [Git](https://git-scm.com/)
 * [CMake](https://cmake.org/)
 * [Python](https://www.python.org/)
-* C++ derleyicisi.
+* bir C++ derleyicisi.
 
-Yükledikten sonra bu Önkoşullar yüklendi, derleme betiğindeki çağırarak CLR oluşturabilirsiniz (`build.cmd` , Windows'da veya `build.sh` Linux ve macOS) temeline [dotnet/coreclr](https://github.com/dotnet/coreclr/) deposu.
+Bu Önkoşullar yükledikten sonra derleme betiğinin çağırarak CLR oluşturabilirsiniz (`build.cmd` Windows, şirket veya `build.sh` Linux ve macOS) temel [dotnet/coreclr](https://github.com/dotnet/coreclr/) depo.
 
-Bileşenlerini yükleme (OS) işletim sistemine bağlı olarak farklılık gösterir. Belirli işletim sisteminizi yapı yönergelerine bakın:
+İşletim sistemi (OS) bağlı olarak farklı bileşenler yükleniyor. Belirli işletim sisteminiz için derleme yönergelere bakın:
 
- * [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
- * [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
- * [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
- * [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md) 
- * [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
-İşletim sistemi (X64 üzerinde yerleşik yalnızca ARM için) arasında çapraz yapı yoktur.  
-Bu platform oluşturmak için belirli platformda olması gerekir.  
+İşletim sistemi (için X64 üzerinde yerleşik yalnızca ARM,) arasında çapraz derleme yok.  
+Bu platformu oluşturmak için belirli platform olması gerekir.  
 
 İki ana derleme sahip `buildTypes`:
 
- * Hata ayıklama (varsayılan) - en az en iyi duruma getirme ve ek çalışma zamanı denetimleri ile çalışma zamanı derler (onaylar). Bu en iyi duruma getirme düzeyini düşüş ve ek denetimler çalışma zamanı yürütme yavaş ancak hata ayıklama için değerlidir. Geliştirme ve test ortamları için Önerilen ayar budur.
- * Yayın - ek çalışma zamanı denetimleri olmadan tam iyileştirmeler ile çalışma zamanı derler. Bu kadar daha hızlı çalışma süresi performans sunacak ancak oluşturmak biraz uzun sürebilir ve hata ayıklama zor olabilir. Geçirmek `release` yapı bu seçmek için komut dosyası derleme türü.
+* Hata ayıklama (varsayılan) - en az iyileştirmeleri ve ek çalışma zamanı denetimleri ile çalışma zamanı derleme (bildirimler). Bu iyileştirme düzeyini düşüş ve ek denetimler çalışma zamanı yürütme yavaş ancak hata ayıklama için değerlidir. Geliştirme ve test ortamları için Önerilen ayar budur.
+* Yayın - çalışma zamanı tam iyileştirmeler ve ek çalışma zamanı denetimleri olmadan derler. Bu çok daha hızlı çalıştırma performans verir ancak oluşturmak biraz uzun sürebilir ve hata ayıklaması zor olabilir. Geçirmek `release` yapı betiği bunu seçmek için yapı türü.
 
-Ayrıca, varsayılan olarak yapı yalnızca çalışma zamanı yürütülebilir dosyaları oluşturur, ancak aynı zamanda tüm testleri oluşturur.
-Önemli miktarda yalnızca değişikliklerle denemek istiyorsanız, gerekli olmayan zaman ayırdığınız oldukça birkaç testleri vardır.
-Ekleyerek testleri derlemeleri atlayabilirsiniz `skiptests` yapı komut bağımsız değişkeni aşağıdaki örnekteki gibi (Değiştir `.\build` ile `./build.sh` UNIX makinelerde):
+Ayrıca, varsayılan yapı yalnızca çalışma zamanı yürütülebilir dosyalar oluşturur, ancak ayrıca tüm testleri oluşturur.
+Videonuz testleri, önemli miktarda değişikliklerle denemek istiyorsanız, gerekli olmayan zaman ayırdığınız vardır.
+Ekleyerek, test derlemeleri atlayabilirsiniz `skiptests` yapı komut dosyası bağımsız değişkeni aşağıdaki örnekte ister (Değiştir `.\build` ile `./build.sh` Unix makinelerinde):
 
 ```bat
-    .\build skiptests 
+    .\build skiptests
 ```
 
-Önceki örnekte gösterilen nasıl oluşturulacağını `Debug` geliştirme zamanı denetimleri sahip özellik (onaylar) etkin ve en iyi duruma getirme devre dışı. Yayın (tam hız) özellik oluşturmak için aşağıdakileri yapın:
+Önceki örnekte gösterilen nasıl oluşturulacağını `Debug` geliştirme zamanı denetimleri olan bir özellik (onaylar) etkin ve iyileştirmeleri devre dışı. Derleme sürümü (tam hız) türü için aşağıdakileri yapın:
 
-```bat 
+```bat
     .\build release skiptests
 ```
 
-Daha fazla yapı seçenekleri ile yapı kullanarak bulabilirsiniz? ya da-niteleyici yardımcı olun.   
+Daha fazla yapı seçeneklerini derleme ile kullanarak bulabilirsiniz? ya da-niteleyicisi yardımcı olun.
 
 ### <a name="using-your-build"></a>Yapınızı kullanma
 
-Yapı tüm altında oluşturulan dosyaları yerleştirir `bin` depo tabanında dizin.
-Var olan bir *bin\Log* (en yapı başarısız olduğunda yararlı) derleme sırasında oluşturulan günlük dosyalarını içeren dizini.
-Gerçek çıkış yerleştirilen bir *bin\Product\[platform]. [ CPU mimarisi]. [türü yapı]*  gibi dizin *bin\Product\Windows_NT.x64.Release*.
+Altında oluşturulan dosyalarının tüm yapı yerleştirir `bin` deponun temel dizin.
+Var olan bir *bin\Log* (en derleme başarısız olduğunda yararlıdır) derleme sırasında oluşturulan günlük dosyalarını içeren dizin.
+Gerçek çıkış yerleştirilen bir *bin\Product\[platform]. [ CPU mimarisi]. [türü build]*  gibi dizin *bin\Product\Windows_NT.x64.Release*.
 
-Derleme 'ham' çıktısı bazen yararlı olsa da, normalde yalnızca yerleştirilir NuGet paketlerini ilgilendiğiniz `.nuget\pkg` önceki çıkış dizininin alt.
+Derleme 'raw' çıkışı bazen yararlı olsa da, normalde yalnızca yerleştirilir NuGet paketlerini ilgilendiğiniz `.nuget\pkg` önceki çıktı dizininin alt.
 
-Yeni, çalışma zamanı kullanmak için iki temel teknikler şunlardır:
+Yeni, çalışma zamanı kullanmak için iki temel teknik vardır:
 
- 1. **Dotnet.exe ve kullanma NuGet bir uygulama oluşturmak için**.
-    Bkz: [kullanarak bilgisayarınızı yapı](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) kullanarak, yeni çalışma zamanı kullanan bir program oluşturma yönergeleri için NuGet, yeni oluşturduğunuz ve 'dotnet' komut satırı arabirimi (CLI) paketleri. Beklenen şekilde çalışma zamanı olmayan geliştiriciler, yeni çalışma zamanı kullanmak büyük olasılıkla bu tekniğidir.    
+ 1. **Bir uygulama oluşturmak için dotnet.exe ve NuGet kullanma**.
+    Bkz: [kullanarak yapı](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) kullanarak, yeni bir çalışma zamanı kullanan bir program oluşturma yönergeleri için NuGet oluşturdunuz ve 'dotnet' komut satırı arabirimi (CLI) paketleri. Bu, yeni bir çalışma zamanı kullanmak büyük olasılıkla beklenen şekilde çalışma zamanı olmayan geliştiriciler bir tekniktir.
 
- 2. **Corerun.exe paketlenmemiş taleplere DLL'leri kullanarak bir uygulamayı çalıştırmak için kullandığınız**.
-    Bu depo, ayrıca herhangi bir bağımlılığı NuGet üzerinde almaz corerun.exe adlı basit bir ana bilgisayar tanımlar.
-    Ana bilgisayar gerçekten gerekli DLL'leri alınacağı bildirmeniz gerekir ve el ile araya toplamak zorunda.
-    Bu teknik tüm testler tarafından kullanılan [dotnet/coreclr](https://github.com/dotnet/coreclr) depodaki ve ön birim testi gibi hızlı yerel 'düzenleme-derleme-debug' döngü için kullanışlıdır.
-    Bkz: [yürütme .NET Core uygulamalarla CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) Bu teknik kullanımıyla ilgili ayrıntılar için.
+ 2. **Corerun.exe paketlenmemiş DLL'leri kullanmanın bir uygulamayı çalıştırmak için kullanmak**.
+    Bu depo, NuGet üzerinde hiçbir bağımlılık almaz corerun.exe adlı basit bir konak da tanımlar.
+    El ile araya toplamak zorunda ve gerçekten kullandığınız gerekli DLL'lerin nereden ana bilgisayara bildirmek gerekir.
+    Bu teknik, tüm testler tarafından kullanılan [dotnet/coreclr](https://github.com/dotnet/coreclr) deponun ve ön birim testi gibi hızlı yerel 'düzenleme-derleme-hata ayıklama' döngüsü için kullanışlıdır.
+    Bkz: [CoreRun.exe ile .NET Core uygulamaları çalıştırma](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) bu yöntemi kullanma hakkında bilgi.
 
-## <a name="build-the-cli-from-source"></a>CLI kaynağından derleme
+## <a name="build-the-cli-from-source"></a>Kaynak CLI'dan oluşturun
 
-.NET Core CLI için kaynak kodunu bulunabilir [dotnet/CLI](https://github.com/dotnet/cli/) github'daki.
+.NET Core CLI için kaynak kodu bulunabilir [dotnet/CLI](https://github.com/dotnet/cli/) github deposu.
 
-.NET Core CLI oluşturmak için aşağıdaki makinenize yüklü gerekir.
+.NET Core CLI'yı oluşturmak için makinenizde aşağıdaki ihtiyacınız vardır.
 
-* Windows ve Linux:
-    - YOL üzerindeki Git
+* Windows ve Linux için:
+  * YOL üzerindeki Git
 * macOS:
-    - YOL üzerindeki Git
-    - Xcode
-    - Openssl
+  * YOL üzerindeki Git
+  * Xcode
+  * Openssl
 
-Derleme için çalıştırın `build.cmd` , Windows'da veya `build.sh` Linux ve kök macOS. Testler yürütmek istemiyorsanız, çalıştırmak `build.cmd /t:Compile` veya `./build.sh /t:Compile`. MacOS Sierra CLI oluşturmak için DOTNET_RUNTIME_ID ortam değişkeni çalıştırarak ayarlamanız gerektiğini `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
+Derleme için çalıştırmanız `build.cmd` Windows, şirket veya `build.sh` Linux ve Macos'ta kök. Testleri yürütmek istemiyorsanız çalıştırma `build.cmd /t:Compile` veya `./build.sh /t:Compile`. MacOS Sierra CLI'daki oluşturmak için çalıştırarak DOTNET_RUNTIME_ID ortam değişkenini ayarlamanız gerekir `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
 ### <a name="using-your-build"></a>Yapınızı kullanma
 
-Kullanım `dotnet` gelen yürütülebilir *yapıları / {os}-{arch} / stage2* yeni oluşturulan CLI denemek için. Çağrılırken, çıktı yapı kullanmak istiyorsanız, `dotnet` geçerli konsolundan de ekleyebilirsiniz *yapıları / {os}-{arch} / stage2* yolu.
+Kullanım `dotnet` gelen yürütülebilir *yapıtları / {os}-{arch} / stage2* yeni oluşturulan CLI'yı denemek için. Derleme çağrılırken çıktısını kullanmak istiyorsanız `dotnet` de ekleyebilirsiniz geçerli konsolundan *yapıtları / {os}-{arch} / stage2* yolu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

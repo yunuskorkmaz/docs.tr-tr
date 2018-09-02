@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: a1759434d259cdffe1dac6b19a6582bfb83784bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492491"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466177"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti Barındırma
-Bu konu, Internet Information Services (IIS) barındırılan bir Windows Communication Foundation (WCF) hizmetini oluşturmak için gereken temel adımlarda özetler. Bu konu, IIS ile bilgi sahibiyseniz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenme varsayar. IIS hakkında daha fazla bilgi için bkz: [Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449). IIS ortamı çalıştırmalarında IIS özellikleri, işlem geri dönüştürme gibi tüm avantajlarından yararlanır bir WCF Hizmeti kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme boş. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak herhangi bir barındırma kod uygulamanın bir parçası yazılması gerektirmez. IIS ile yalnızca bir HTTP aktarma barındırma kullanabilirsiniz.  
+Bu konuda, Internet Information Services (IIS) barındırılan Windows Communication Foundation (WCF) hizmet oluşturmak için gerekli temel adımlar açıklanmaktadır. Bu konuda, IIS ile ilgili bilgi sahibi olduğunuz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenmenize varsayılır. IIS hakkında daha fazla bilgi için bkz. [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Bir WCF Hizmeti IIS ortamında çalışır gibi işlem geri dönüştürme, IIS özellikleri tüm avantajlarından yararlanır, kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme boş. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası herhangi bir barındırma kod yazılmasını gerektirmez. Yalnızca bir HTTP aktarımı ile IIS barındırma kullanabilirsiniz.  
   
- Hakkında daha fazla bilgi için WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] etkileşim kurmak için bkz: [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Güvenlik yapılandırma hakkında daha fazla bilgi için bkz: [güvenlik](../../../../docs/framework/wcf/feature-details/security.md).  
+ Hakkında daha fazla bilgi için WCF ve [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] etkileşim kurmak için bkz: [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Güvenlik yapılandırma hakkında daha fazla bilgi için bkz. [güvenlik](../../../../docs/framework/wcf/feature-details/security.md).  
   
- Bu örnekte kaynak kopyası için bkz: [IIS barındırma kullanarak satır içi kod](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
+ Bu örnekte kaynak kopyası için bkz: [IIS kullanarak satır içi kod barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md).  
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>IIS tarafından barındırılan bir hizmet oluşturmak için  
   
-1.  IIS yüklü ve bilgisayarınızda çalışır durumda olduğunu doğrulayın. Yükleme ve IIS yapılandırma hakkında daha fazla bilgi için bkz: [yükleme ve IIS 7.0 yapılandırma](http://go.microsoft.com/fwlink/?LinkID=132128)  
+1.  IIS yüklü ve bilgisayarınızda çalışmakta olduğunu doğrulayın. Yükleme ve IIS yapılandırma hakkında daha fazla bilgi için bkz: [yükleme ve IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Uygulama dosyalarınızın "IISHostedCalcService" adlı yeni bir klasör oluşturun, emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] klasörünün içeriğini erişimi vardır ve bu uygulamada fiziksel olarak bulunan yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın Dizin. Uygulama dizini kullanımı "IISHostedCalc" için bir diğer ad oluştururken.  
+2.  "IISHostedCalcService" adlı uygulama dosyalarınızı için yeni bir klasör oluşturun, emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] klasörünün içeriğini erişimi vardır ve bu uygulamada bulunan fiziksel olarak yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın Dizin. Uygulamanın directory kullan "IISHostedCalc" için bir diğer ad oluştururken.  
   
-3.  Uygulama dizinindeki "service.svc" adlı yeni bir dosya oluşturun. Aşağıdakileri ekleyerek bu dosyayı düzenlemek @ServiceHost öğesi.  
+3.  Uygulama dizininde, "service.svc" adlı yeni bir dosya oluşturun. Aşağıdakileri ekleyerek bu dosyayı Düzenle @ServiceHost öğesi.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
@@ -33,9 +33,9 @@ Bu konu, Internet Information Services (IIS) barındırılan bir Windows Communi
   
 4.  Uygulama dizininin içinde bir App_Code dizin oluşturun.  
   
-5.  App_Code alt dizinindeki adını da adlı bir kod dosyası oluşturun.  
+5.  App_Code alt dizinde adını da adlı bir kod dosyası oluşturun.  
   
-6.  Aşağıdaki using deyimlerini adını da dosyanın en üstüne ekleyin.  
+6.  Aşağıdaki using deyimlerini adını da dosyasının en üstüne.  
   
     ```csharp  
     using System;  
@@ -50,7 +50,7 @@ Bu konu, Internet Information Services (IIS) barındırılan bir Windows Communi
     }  
     ```  
   
-8.  Aşağıdaki kodda gösterildiği gibi ad alanı bildiriminin içinde hizmet sözleşmesini tanımlama.  
+8.  Aşağıdaki kodda gösterildiği gibi ad alanı bildirimi içinde hizmet sözleşmesini tanımlamaktır.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  
@@ -60,16 +60,16 @@ Bu konu, Internet Information Services (IIS) barındırılan bir Windows Communi
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. Uygulama dizininde "Web.config" adlı bir dosya oluşturun ve aşağıdaki yapılandırma kodunu dosyasına ekleyin. Çalışma zamanında WCF altyapı bilgileri istemci uygulamaları ile iletişim kurabilen bir uç nokta oluşturmak için kullanır.  
+10. Uygulama dizininde "Web.config" adlı bir dosya oluşturun ve aşağıdaki kodu yapılandırma dosyasına ekleyin. Çalışma zamanında, WCF altyapısı, istemci uygulamaları ile iletişim kurabilen bir uç nokta oluşturmak için bilgileri kullanır.  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   
-     Bu örnek, yapılandırma dosyasında uç noktalar açıkça belirtir. Hizmeti için uç nokta eklemezseniz çalışma zamanı varsayılan uç noktaları ekler. Varsayılan uç noktalar, bağlamaları ve davranışları bakın hakkında daha fazla bilgi için [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Bu örnek, uç noktaları yapılandırma dosyasında açıkça belirtir. Hizmet için uç nokta eklemezseniz, çalışma zamanı varsayılan uç noktalar ekler. Varsayılan uç noktaları, bağlamalar ve davranışları bakın hakkında daha fazla bilgi için [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Hizmet doğru şekilde barındırılan emin olmak için Internet Explorer ve hizmetin URL'ye örneği açın: `http://localhost/IISHostedCalc/Service.svc`  
+11. Hizmet doğru şekilde barındırılan emin olmak için Internet Explorer ve hizmetin URL'ye Gözat örneğini açın: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Örnek  
- Barındırılan hesaplayıcı hizmetin IIS kodunu tam listesi verilmiştir.  
+ Barındırılan hesaplayıcı hizmeti IIS için kod tam listesi verilmiştir.  
   
  [!code-csharp[C_HowTo_HostInIIS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#1)] 
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
@@ -80,4 +80,4 @@ Bu konu, Internet Information Services (IIS) barındırılan bir Windows Communi
  [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)  
  [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

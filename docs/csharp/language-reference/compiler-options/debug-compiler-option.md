@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: ab9b299579f9ab4a854ce7ab220edc87e0c66745
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218851"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470963"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# Derleyici Seçenekleri)
-**-Debug** seçeneği hata ayıklama bilgileri oluşturmak ve çıktı dosyası veya dosyaları yerleştirmek derleyicinin neden olur.  
+**-Hata ayıklama** seçeneği hata ayıklama bilgileri üret ve çıktı dosyasını veya dosyalarını yerleştirmek derleyicinin neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,42 +27,43 @@ ms.locfileid: "33218851"
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Belirtme `+`, veya yalnızca **-debug**, hata ayıklama bilgileri oluşturmak ve bir program veritabanında (.pdb dosyası) yerleştirmek derleyici neden olur. Belirtme `-`, hangi değil belirtirseniz yürürlükte olan **-debug**, hiçbir hata ayıklama bilgisi oluşturulmasına neden olur.  
+ Belirtme `+`, veya yalnızca **-hata ayıklama**, derleyicinin hata ayıklama bilgileri üret ve bir program veritabanı (.pdb dosyası) yerleştirin. Belirtme `-`, hangi belirtmezseniz, geçerli olduğu **-hata ayıklama**, oluşturulacak hata ayıklama bilgisi yok neden olur.  
   
  `full` &#124; `pdbonly`  
- Derleyici tarafından üretilen hata ayıklama bilgi türünü belirtir. Aslında, belirtmezseniz olan tam bağımsız **-debug: pdbonly**, bir hata ayıklayıcısı çalışan programa eklemeyi mümkün kılar. Kaynak kodu program hata ayıklayıcısı'ndaki başladı, ancak çalışan program hata ayıklayıcıya eklendiğinde yalnızca assembler görüntülenir, hata ayıklama pdbonly belirtebilirsiniz.  
+ Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Belirtmezseniz, geçerli tam bağımsız **-debug: pdbonly**, çalışan programa hata ayıklayıcı ekleme etkinleştirir. Kaynak kodu programın hata ayıklayıcıda başlatıldı ancak çalışan programa hata ayıklayıcıya bağlı olduğu assembler yalnızca görüntüler, hata ayıklama pdbonly belirtebilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklama yapıları oluşturmak için bu seçeneği kullanın. Varsa **-debug**, **-debug +**, veya **-debug: tam** belirtilmezse, edemeyecek programınızın çıktı dosyasında hata ayıklama.  
+ Hata ayıklama yapıları oluşturmak için bu seçeneği kullanın. Varsa **-hata ayıklama**, **-hata ayıklama +**, veya **-debug: full** belirtilmezse, olmayacak çıkış dosyası, programınızın hata ayıklamanız mümkün.  
   
- Kullanırsanız **-debug: tam**, bazı etki hızlı ve en iyi duruma getirilmiş JIT kod boyutunu ve kod kalitesinde küçük bir etkisi açık olduğunu unutmayın **-debug: tam**. Öneririz **-debug: pdbonly** veya yayım kodunu oluşturmak için PDB.  
+ Kullanırsanız **-debug: full**, hız ve en iyi duruma getirilmiş JIT kodunun boyutu üzerinde bazı etkiler ve kod kalitesini ile küçük bir etkisi açık olduğunu unutmayın **-debug: full**. Öneririz **-debug: pdbonly** veya kod sürüm oluşturma için hiçbir PDB.  
   
 > [!NOTE]
->  Arasındaki tek fark **-debug: pdbonly** ve **-debug: tam** ile olan **-debug: tam** derleyicisi yayar bir <xref:System.Diagnostics.DebuggableAttribute>, JIT Derleyici bildirmek için kullanılır Bu hata ayıklama bilgisi yok. Bu nedenle, kodunuzu içeriyorsa bir hata iletisiyle karşılaşırsınız <xref:System.Diagnostics.DebuggableAttribute> kullanırsanız false olarak ayarlanmış **-debug: tam**.  
+>  Arasındaki tek fark **-debug: pdbonly** ve **-debug: full** ile olan **-debug: full** derleyici yayan bir <xref:System.Diagnostics.DebuggableAttribute>, JIT derleyicisi bildirmek için kullanılır hata ayıklama bilgilerinin kullanılabilir olduğunu. Bu nedenle, kodunuzu içeriyorsa bir hata alırsınız <xref:System.Diagnostics.DebuggableAttribute> kullanırsanız false olarak ayarlanmış **-debug: full**.  
   
- Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz: [bir görüntü Debug kolaylaştırma](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
+ Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntü için hata ayıklama kolaylaştıracak](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- .Pdb dosyasının konumunu değiştirmek için bkz: [- pdb (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
+ .Pdb dosyasının konumunu değiştirmek için bkz [- pdb (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açmak **özellikleri** sayfası.  
+1.  Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklatın **yapı** özellik sayfası.  
+2.  Tıklayın **derleme** özellik sayfası.  
   
-3.  Tıklatın **Gelişmiş** düğmesi.  
+3.  Tıklayın **Gelişmiş** düğmesi.  
   
 4.  Değiştirme **hata ayıklama bilgisi** özelliği.  
   
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
+ Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
 ## <a name="example"></a>Örnek  
- Hata ayıklama bilgilerini çıktı dosyasına yerleştirin `app.pdb`:  
+ Hata ayıklama bilgilerini çıktı dosyasına yerleştirmeniz `app.pdb`:  
   
 ```console  
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

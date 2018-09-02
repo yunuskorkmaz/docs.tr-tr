@@ -8,40 +8,40 @@ helpviewer_keywords:
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
 ms.openlocfilehash: f74b762532f0fb2795625185e59360cdfb76b124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335529"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474057"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
-A *sorgu* bir veri kaynağından veri alır bir ifadedir. Sorguları genellikle bir özel sorgu dili ifade edilir. Farklı diller, zaman içinde çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XQuery XML için geliştirilmiştir. Bu nedenle, geliştiricilerin her veri kaynağı veya desteklemesi gerekir veri biçimi türü için yeni bir sorgu dili öğrenin gerekirdi. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu nesneler her zaman çalıştığınız. XML belgeleri, SQL veritabanları, verileri sorgulamak veya dönüştürme aynı temel kodlama modelleri kullanmanıza [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonları ve başka bir biçime kendisi için bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
+A *sorgu* , verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle bir özel sorgu dilinde ifade edilir. Farklı diller zamanla çeşitli veri kaynakları, örneğin ilişkisel veritabanları için SQL ve XML için XQuery geliştirilmiştir. Bu nedenle, geliştiriciler, her veri kaynağı veya desteklemeleri gereken veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Bu durum, çeşitli veri kaynakları ve biçimler arasında veri ile çalışma için tutarlı bir model sunarak basitleştirir. İçinde bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu, her zaman nesnelerle. XML belgelerinde, SQL veritabanları, veri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız [!INCLUDE[vstecado](~/includes/vstecado-md.md)] veri kümeleri, .NET koleksiyonlarında ve başka bir biçimi olan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı kullanılabilir.  
   
 ## <a name="three-parts-of-a-query-operation"></a>Bir Sorgu İşleminin Üç Bölümü  
- Tüm [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlemleri üç ayrı eylemi oluşur:  
+ Tüm [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu işlemleri üç farlı eylemden oluşur oluşur:  
   
-1.  Veri kaynağı edinin.  
+1.  Veri kaynağını edinin.  
   
-2.  Sorgu oluşturun.  
+2.  Bir sorgu oluşturun.  
   
-3.  Sorgu yürütün.  
+3.  Sorguyu yürütün.  
   
- Aşağıdaki örnek, bir sorgu işlemi üç bölümden kaynak kodunda nasıl belirtilmiştir gösterir. Örnek bir tamsayı dizisi kolaylık sağlamak için bir veri kaynağı olarak kullanır; Ancak, aynı kavramlar diğer veri kaynakları için de geçerlidir. Bu örnek için bu konunun geri kalanında geçer.  
+ Aşağıdaki örnek, bir sorgu işleminin üç bölümü kaynak kodunda nasıl ifade edildiğini gösterir. Örnek bir tamsayı dizisi kolaylık sağlamak için veri kaynağı olarak kullanır; Ancak, aynı kavramlar diğer veri kaynakları için de geçerlidir. Bu örnekte, bu konunun geri kalan aşamalarında adlandırılır.  
   
  [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
- Aşağıdaki resimde, tam bir sorgu işlemi gösterilmektedir. İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgunun yürütülmesi, sorgudan farklıdır; diğer bir deyişle, herhangi bir veri yalnızca bir sorgu değişkeni oluşturarak alınan değil.  
+ Aşağıda tam bir sorgu işlemi gösterilmektedir. İçinde [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgunun yürütülmesi sorgunun kendisinden farklıdır, diğer bir deyişle, veriler yalnızca bir sorgu değişkeni oluşturarak almış olmazsınız.  
   
- ![LINQ Sorgu işlemini tamamlama](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
+ ![LINQ Sorgu işlemi](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>Veri Kaynağı  
- Veri kaynağı bir dizi olduğundan önceki örnekte örtük olarak genel destekliyorsa <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Bunu sorgulanan ile bu olgu anlamına gelir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Bir sorgu yürütülür bir `foreach` deyimi, ve `foreach` gerektirir <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. Türlerini destekleyen <xref:System.Collections.Generic.IEnumerable%601> veya türetilmiş bir arabirim genel gibi <xref:System.Linq.IQueryable%601> denir *sorgulanabilir türleri*.  
+ Veri kaynağı bir dizi olduğundan önceki örnekte, örtük olarak genel destekliyorsa <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Bu, ile sorgulanabileceği anlamına gelir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Bir sorgu içinde yürütülen bir `foreach` deyimi ve `foreach` gerektirir <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601>. Destekleyen türler <xref:System.Collections.Generic.IEnumerable%601> veya türetilmiş bir arabirim gibi genel <xref:System.Linq.IQueryable%601> adlandırılır *sorgulanabilir türler*.  
   
- Sorgulanabilir bir tür hiçbir değişiklik ya da olarak hizmet verecek özel işleme gerektiren bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Veri kaynağını sorgulanabilir bir tür olarak bellekte değilse [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcı temsil etmesi gerekir, bu nedenle. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML belgesi sorgulanabilir yükler <xref:System.Xml.Linq.XElement> türü:  
+ Sorgulanabilir tür herhangi bir değişiklik veya olarak hizmet vermek için özel olarak değerlendirilmesi gerekir. bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Kaynak verileri bellekte bir sorgulanabilir tür olarak yoksa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcısı temsil etmesi gerekir, bu nedenle. Örneğin, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir XML belgesini sorgulanabilir bir yükleyen <xref:System.Xml.Linq.XElement> türü:  
   
  [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- İle [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], bir nesne ilişkisel tasarım zamanında el ile veya kullanarak eşleme oluşturduğunuz ilk [LINQ-SQL Visual Studio Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) Visual Studio. Sorgularınızın nesneleri karşı ve çalışma zamanında yazma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı ile iletişim işler. Aşağıdaki örnekte, `Customers` veritabanı ve sorgunun sonuç türü belirli bir tabloda temsil eden <xref:System.Linq.IQueryable%601>, türetilen <xref:System.Collections.Generic.IEnumerable%601>.  
+ İle [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], önce bir nesne-ilişkisel tasarım zamanında el ile ya da kullanarak eşleme oluşturma [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) Visual Studio'da. Sorgularınızın karşı nesneleri ve çalışma zamanında yazma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veritabanı ile iletişimi gerçekleştirir. Aşağıdaki örnekte, `Customers` belirli bir tablo veritabanının yanı sıra, sorgu sonuç türünü temsil eden <xref:System.Linq.IQueryable%601>, türetilen <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -53,45 +53,45 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Belirli veri kaynağı türleri oluşturma hakkında daha fazla bilgi için çeşitli belgelerine bakın [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları. Ancak, temel kural çok basittir: bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağıdır genel destekleyen herhangi bir nesne <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya devralan bir arabirim.  
+ Belirli türde veri kaynaklarını oluşturma hakkında daha fazla bilgi için çeşitli belgelerine bakın [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sağlayıcıları. Ancak, temel kural çok basittir: bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] genel destekleyen herhangi bir nesne veri kaynağı, <xref:System.Collections.Generic.IEnumerable%601> arabirimi ya da bundan devralan bir arabirim.  
   
 > [!NOTE]
->  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Daha fazla bilgi için bkz: [nasıl yapılır: LINQ (C#) ile ArrayList sorgulama](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Gibi türleri <xref:System.Collections.ArrayList> genel olmayan destekleyen <xref:System.Collections.IEnumerable> arabirimi de kullanılabilir olarak bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] veri kaynağı. Daha fazla bilgi için [nasıl yapılır: LINQ (C#) ile ArrayList sorgulama](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Sorgu  
- Sorgu veri kaynağı veya kaynakları almak için hangi bilgilerin belirtir. İsteğe bağlı olarak, bir sorgu nasıl bu bilgileri sıralanmış, gruplandırılmış ve, döndürülmeden önce şeklinde belirtir. Bir sorgu bir sorgu değişkende depolanır ve bir sorgu ifadesi ile başlatıldı. Sorguları yazmayı kolaylaştırmak için C# yeni sorgu söz dizimi anlatılmıştır.  
+ Sorgu, hangi bilgilerin veri kaynağından veya kaynaklarından alınacağını belirtir. İsteğe bağlı olarak, bir sorgunun nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtir. Bir sorguyu sorgu değişkeninde depolanır ve sorgu ifadesiyle başlatılır. Sorguları yazmayı kolaylaştırmak için C# yeni sorgu sözdizimi tanıttı.  
   
- Önceki örnekte sorgu, tamsayı dizisinden tüm çift sayıları döndürür. Sorgu ifadesi üç yan tümcesi içeren: `from`, `where` ve `select`. (SQL ile bilginiz varsa, yan tümcelerini sıralama SQL sipariş tersine olduğunu fark etmiş.) `from` Yan tümcesi veri kaynağını belirtir `where` yan tümcesi filtre uygular ve `select` yan tümcesi döndürülen öğeler türünü belirtir. Bunlar ve diğer sorgu yan tümceleri içinde ayrıntılı olarak ele alınmıştır [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md) bölümü. Şimdilik, önemli giriş noktasıdır [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], sorgu değişkeni hiçbir eylemde bulunmaz ve hiçbir veri döndürür. Yalnızca, daha sonraki bir noktada sorgu çalıştırıldığında sonuçları üretmek için gerekli olan bilgileri depolar. Sorguları arka planda nasıl oluşturulur hakkında daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Önceki örnekte sorgu tamsayı dizisinden tüm çift sayıları döndürür. Sorgu ifadesi üç yan tümce içeriyor: `from`, `where` ve `select`. (SQL ile bilginiz varsa, yan tümcelerini sıralama sırasının SQL'deki gelen ters olduğunu fark etmiş.) `from` Yan tümcesi veri kaynağını belirtir `where` yan tümcesi filtreyi uygular ve `select` yan tümcesi ise döndürülen öğelerin türünü belirtir. Bunlar ve diğer sorgu yan tümceleri içinde ayrıntılı olarak ele alınmıştır [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md) bölümü. Şimdilik önemli nokta, olan [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], sorgu değişkeninin kendisinin hiç eylem almaması ve veri döndürmemesidir. Yalnızca, sonraki noktada sorgu çalıştırıldığında sonuçları üretmek için gerekli olan bilgileri depolar. Sorguları Sahne arkasında nasıl oluşturulduğu hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 > [!NOTE]
->  Sorguları yöntem sözdizimi kullanılarak da belirtilebilir. Daha fazla bilgi için bkz: [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+>  Sorgular ayrıca yöntem sözdizimini kullanarak ifade edilebilir. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="query-execution"></a>Sorgu Yürütme  
   
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
- Daha önce belirtildiği gibi sorgu değişkeni sorgu komutları yalnızca depolar. Gerçek sorgunun yürütülmesi, sorgu değişkeninde üzerinden yineleme kadar ertelenir bir `foreach` deyimi. Bu kavram olarak adlandırılır *yürütme ertelenmiş* ve aşağıdaki örnekte gösterilmiştir:  
+ Daha önce bahsedildiği gibi sorgu değişkeni sorgu komutlarını yalnızca depolar. Sorgunun gerçek yürütmesi içindeki sorgu değişkeni üzerinde yineleme kadar ertelenmiştir bir `foreach` deyimi. Bu kavram olarak adlandırılır *ertelenmiş yürütme* ve aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
- `foreach` Açıklamadır de sorgu sonuçları burada alınır. Örneğin, sorguda önceki yineleme değişkeni `num` döndürülen dizideki her değeri (birer birer) tutar.  
+ `foreach` Burada sorgu sonuçlarının alındığı deyimi aynı zamanda. Örneğin, önceki sorguya, yineleme değişkeni de `num` her değeri (teker teker) döndürülen sırada tutar.  
   
- Sorgu değişkeni hiçbir zaman sorgu sonuçlarını tutan çünkü istediğiniz sıklıkta yürütebilir. Örneğin, ayrı bir uygulama tarafından sürekli güncelleştirilen bir veritabanı olabilir. Uygulamanızın, en son verileri alan bir sorgu oluşturabilirsiniz ve her zaman farklı sonuçlar almak için bazı aralıkla art arda yürütebilir.  
+ Sorgu değişkeninin kendisi asla sorgu sonuçlarını tutmadığından istediğiniz sıklıkta yürütebilirsiniz. Örneğin, ayrı bir uygulama tarafından sürekli olarak güncelleştirilmekte olan bir veritabanı olabilir. Uygulamanızın en son verileri alan bir sorgu oluşturabilir ve her seferinde farklı sonuçlar almak için bazı aralıklarla sürekli olarak yürütebilirsiniz.  
   
 ### <a name="forcing-immediate-execution"></a>Hemen Yürütmeyi Zorlama  
- Kaynak öğelerin aralığında toplama işlevleri gerçekleştiren sorguları önce bu öğeleri yineleme gerekir. Bu tür sorgular örnekleri `Count`, `Max`, `Average`, ve `First`. Bunlar açık bir yürütün `foreach` deyimi sorgu kullanmanız gerekir çünkü `foreach` bir sonuç dönebilmek için. Ayrıca bu sorgu türleri tek bir değer döndürme değil olduğunu unutmayın bir `IEnumerable` koleksiyonu. Aşağıdaki sorguyu kaynak dizisinde çift sayıları sayımını döndürür:  
+ Çeşitli kaynak öğeler üzerinde toplama işlevleri gerçekleştiren sorgular önce bu öğeler üzerinde yinelenmelidir. Gibi sorguların örnekleri `Count`, `Max`, `Average`, ve `First`. Bunlar açık bir yürütme `foreach` deyimi sorgu kullanması gerektiğinden `foreach` bir sonuç döndürmek için. Ayrıca sorguların bu türlerinin tek bir değer döndürmediğine dikkat edin bir `IEnumerable` koleksiyonu. Aşağıdaki sorgu kaynak dizideki çift sayıların sayısını döndürür:  
   
  [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- Herhangi bir sorgu hemen yürütülmesi zorlamak ve sonuçlarını önbelleğe almasını çağırabilirsiniz <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> yöntemleri.  
+ Herhangi bir sorgunun hemen yürütülmesini zorlamak ve sonuçlarını önbelleğe kaydetmek için çağırabilirsiniz <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> yöntemleri.  
   
  [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
- Ayrıca, koyarak yürütme zorlayabilirsiniz `foreach` döngü sorgu ifadesi hemen sonra. Ancak, çağıran tarafından `ToList` veya `ToArray` ayrıca bir tek koleksiyon nesnesinde tüm verileri önbelleğe alma.  
+ Koyarak da yürütmeyi zorlayabilirsiniz `foreach` sorgu ifadesinin hemen sonra döngü. Çağırarak ancak `ToList` veya `ToArray` ayrıca tüm veriyi tek koleksiyon nesnesindeki önbelleğe alın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [İzlenecek yol: Sorguları C# ile yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [İzlenecek yol: Sorguları C# ile yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [İzlenecek yol: Sorgu C# dilinde yazma](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
  [Sorgu anahtar sözcükleri (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

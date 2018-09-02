@@ -1,44 +1,46 @@
 ---
 title: Explicit anahtar sözcüğü (C# Başvurusu)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027947"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463149"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# Başvurusu)
 
-`explicit` Anahtar sözcüğü ile bir cast çağrılan bir kullanıcı tanımlı tür dönüştürme işleci bildirir. Örneğin, bu işleç Fahrenhayt derece adlı bir sınıf olarak adlandırılan bir sınıftan dönüştürür:
+`explicit` Anahtar sözcüğü, bir yayın ile çağrılan bir kullanıcı tanımlı tür dönüştürme işleci bildirir.
+
+Aşağıdaki örnek, dönüştürür işleci tanımlar. bir `Fahrenheit` sınıfının bir `Celsius` sınıfı. İşleç olmalıdır ya da iç tanımlanan bir `Fahrenheit` sınıfı veya `Celsius` sınıfı:
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-Bu dönüşüm işleci çağrılan şöyle:
+Aşağıdaki örnekte gösterildiği gibi bir tür dönüştürme ile tanımlı dönüştürme işleci çağırmayı:
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
-Dönüşüm işleci kaynak türünden bir hedef türe dönüştürür. Kaynak türü dönüşüm işleci sağlar. Örtük dönüştürme, açık dönüşüm işleçleri atama yoluyla çağrılması gerekir. Dönüştürme işlemi özel durumlara neden bilgileri kaybeder veya işaretlemeniz gerekir `explicit`. Bu, büyük olasılıkla öngörülemeyen sonuçlara dönüştürme işlemi sessizce çağırma derleyici önler.
+Dönüştürme işleci bir kaynak türden hedef türe dönüştürür. Kaynak türü dönüştürme işleci sağlar. Örtük dönüştürme, bir atama yoluyla açık dönüştürme işleçleri çağrılması gerekir. Bir dönüştürme işlemini özel durumlarına neden veya bilgi kaybı işaretlemelisiniz `explicit`. Bu, derleyici sessiz bir şekilde dönüştürme işlemi muhtemelen öngörülemeyen sonuçlara yürütmesini engeller.
 
-Derleme zamanı hatası CS0266 cast sonuçlarında atlama.
+Derleme zamanı hatası CS0266 atama sonuçlarında atlama.
 
-Daha fazla bilgi için bkz: [dönüşüm işleçleri kullanma](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).
+Daha fazla bilgi için [dönüştürme işleçleri kullanarak](../../programming-guide/statements-expressions-operators/using-conversion-operators.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek sağlayan bir `Fahrenheit` ve `Celsius` sınıfı, her biri bir açık dönüşüm işleci için başka bir sınıf sağlar.
+Aşağıdaki örnek sağlayan bir `Fahrenheit` ve `Celsius` sınıfı, her biri için başka bir sınıfın açık bir dönüştürme operatörü sağlar.
 
 [!code-csharp[csrefKeywordsConversion#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#1)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir yapının tanımlar `Digit`, tek bir ondalık basamak temsil eden. Bir işleç dönüştürmeleri için tanımlanan `byte` için `Digit`, ancak tüm bayt dönüştürülebilir bir `Digit`, dönüştürme açık değildir.
+Aşağıdaki örnek, bir yapı tanımlar `Digit`, temsil eden tek bir ondalık basamak. Bir işleç dönüştürmelerinde tanımlanan `byte` için `Digit`, ancak tüm baytlar dönüştürülebilir bir `Digit`, dönüştürme açıktır.
 
 [!code-csharp[csrefKeywordsConversion#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#4)]
 
@@ -48,10 +50,10 @@ Aşağıdaki örnek, bir yapının tanımlar `Digit`, tek bir ondalık basamak t
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[C# başvurusu](../index.md)  
-[C# Programlama Kılavuzu](../../programming-guide/index.md)  
-[C# Anahtar Sözcükleri](index.md)  
-[implicit](implicit.md)  
-[işleci (C# Başvurusu)](operator.md)  
-[Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Kullanıcı tanımlı zincirleme açık dönüşümler C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [C# başvurusu](../index.md)  
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](index.md)  
+- [implicit](implicit.md)  
+- [İşleci (C# Başvurusu)](operator.md)  
+- [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Kullanıcı tanımlı C# ' de açık dönüştürmeler zincirleme](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
