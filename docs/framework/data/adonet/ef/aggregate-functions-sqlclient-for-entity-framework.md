@@ -1,50 +1,231 @@
 ---
-title: Toplama işlevleri (SqlClient Entity Framework)
+title: Toplama işlevleri (Entity Framework için SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763403"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452905"
 ---
-# <a name="aggregate-functions-sqlclient-for-entity-framework"></a><span data-ttu-id="d3965-102">Toplama işlevleri (SqlClient Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="d3965-102">Aggregate Functions (SqlClient for Entity Framework)</span></span>
-<span data-ttu-id="d3965-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="d3965-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides aggregate functions.</span></span> <span data-ttu-id="d3965-104">Toplama işlevleri giriş değerleri kümesine göre hesaplamalar ve bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-104">Aggregate functions perform calculations on a set of input values and return a value.</span></span> <span data-ttu-id="d3965-105">Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir.</span><span class="sxs-lookup"><span data-stu-id="d3965-105">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="d3965-106">Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.</span><span class="sxs-lookup"><span data-stu-id="d3965-106">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  
+# <a name="aggregate-functions-sqlclient-for-entity-framework"></a><span data-ttu-id="4d61f-102">Toplama işlevleri (Entity Framework için SqlClient)</span><span class="sxs-lookup"><span data-stu-id="4d61f-102">Aggregate Functions (SqlClient for Entity Framework)</span></span>
+<span data-ttu-id="4d61f-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı toplama işlevleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="4d61f-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides aggregate functions.</span></span> <span data-ttu-id="4d61f-104">Toplama işlevleri, bir giriş değerleri kümesi üzerinde hesaplamalar ve bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-104">Aggregate functions perform calculations on a set of input values and return a value.</span></span> <span data-ttu-id="4d61f-105">Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır.</span><span class="sxs-lookup"><span data-stu-id="4d61f-105">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="4d61f-106">Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar.</span><span class="sxs-lookup"><span data-stu-id="4d61f-106">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  
   
- <span data-ttu-id="d3965-107">Aşağıdaki tabloda SqlClient toplama işlevleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="d3965-107">The following table shows the SqlClient aggregate functions.</span></span>  
+ <span data-ttu-id="4d61f-107">SqlClient toplama işlevleri aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="4d61f-107">The following are the SqlClient aggregate functions.</span></span>  
+
+## <a name="avgexpression"></a><span data-ttu-id="4d61f-108">AVG(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-108">AVG(expression)</span></span>
+
+<span data-ttu-id="4d61f-109">Bir koleksiyondaki değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-109">Returns the average of the values in a collection.</span></span> <span data-ttu-id="4d61f-110">Null değerler yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="4d61f-110">Null values are ignored.</span></span>
+
+<span data-ttu-id="4d61f-111">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-111">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-112">Bir `Int32`, `Int64`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-112">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="4d61f-113">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-113">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-114">Türünü `expression`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-114">The type of `expression`.</span></span>
+
+<span data-ttu-id="4d61f-115">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-115">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
+
+## <a name="checksumaggcollection"></a><span data-ttu-id="4d61f-116">CHECKSUM_AGG(Collection)</span><span class="sxs-lookup"><span data-stu-id="4d61f-116">CHECKSUM_AGG(collection)</span></span>
+ 
+ <span data-ttu-id="4d61f-117">Sağlama toplamı değerleri, bir koleksiyon döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-117">Returns the checksum of the values in a collection.</span></span> <span data-ttu-id="4d61f-118">Null değerler yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="4d61f-118">Null values are ignored.</span></span>
+ 
+ <span data-ttu-id="4d61f-119">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-119">**Arguments**</span></span>
+ 
+ <span data-ttu-id="4d61f-120">Bir koleksiyon (`Int32`).</span><span class="sxs-lookup"><span data-stu-id="4d61f-120">A Collection(`Int32`).</span></span>
+ 
+ <span data-ttu-id="4d61f-121">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-121">**Return Value**</span></span>
+ 
+ <span data-ttu-id="4d61f-122">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-122">An `Int32`.</span></span>
+ 
+ <span data-ttu-id="4d61f-123">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-123">**Example**</span></span>
+ 
+ [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
+   
+## <a name="countexpression"></a><span data-ttu-id="4d61f-124">Count (deyim)</span><span class="sxs-lookup"><span data-stu-id="4d61f-124">COUNT(expression)</span></span>
+
+<span data-ttu-id="4d61f-125">Bir koleksiyondaki öğe sayısını döndürür. bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-125">Returns the number of items in a collection as an `Int32`.</span></span>
+
+<span data-ttu-id="4d61f-126">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-126">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-127">Bir koleksiyon\<T >, burada T aşağıdaki türlerden biridir:</span><span class="sxs-lookup"><span data-stu-id="4d61f-127">A Collection\<T>, where T is one of the following types:</span></span>
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|<span data-ttu-id="4d61f-128">`Guid` (SQL Server 2000'de döndürülmez)</span><span class="sxs-lookup"><span data-stu-id="4d61f-128">`Guid` (not returned in SQL Server 2000)</span></span>|
+
+<span data-ttu-id="4d61f-129">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-129">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-130">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-130">An `Int32`.</span></span>
+
+<span data-ttu-id="4d61f-131">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-131">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+<span data-ttu-id="4d61f-132">[! kod sql[#SQLSERVER_COUNT DP EntityServices kavramları](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)</span><span class="sxs-lookup"><span data-stu-id="4d61f-132">[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)</span></span>
+ 
+## <a name="countbigexpression"></a><span data-ttu-id="4d61f-133">COUNT_BIG(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-133">COUNT_BIG(expression)</span></span>
+ 
+ <span data-ttu-id="4d61f-134">Bir koleksiyondaki öğe sayısını döndürür. bir `bigint`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-134">Returns the number of items in a collection as a `bigint`.</span></span>
+ 
+ <span data-ttu-id="4d61f-135">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-135">**Arguments**</span></span>
+ 
+ <span data-ttu-id="4d61f-136">Burada T aşağıdaki türlerden biri, bir Collection(T):</span><span class="sxs-lookup"><span data-stu-id="4d61f-136">A Collection(T), where T is one of the following types:</span></span>
+ 
+ |   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|<span data-ttu-id="4d61f-137">`Guid` (SQL Server 2000'de döndürülmez)</span><span class="sxs-lookup"><span data-stu-id="4d61f-137">`Guid` (not returned in SQL Server 2000)</span></span>|
+
+<span data-ttu-id="4d61f-138">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-138">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-139">Bir `Int64`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-139">An `Int64`.</span></span>
+
+<span data-ttu-id="4d61f-140">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-140">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
+
+## <a name="maxexpression"></a><span data-ttu-id="4d61f-141">MAX(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-141">MAX(expression)</span></span>
+
+<span data-ttu-id="4d61f-142">En yüksek değer koleksiyonunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-142">Returns the maximum value the collection.</span></span>
+
+<span data-ttu-id="4d61f-143">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-143">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-144">Burada T aşağıdaki türlerden biri, bir Collection(T):</span><span class="sxs-lookup"><span data-stu-id="4d61f-144">A Collection(T), where T is one of the following types:</span></span> 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+<span data-ttu-id="4d61f-145">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-145">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-146">Türünü `expression`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-146">The type of `expression`.</span></span>
+
+<span data-ttu-id="4d61f-147">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-147">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
+
+## <a name="minexpression"></a><span data-ttu-id="4d61f-148">MIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-148">MIN(expression)</span></span>
+
+<span data-ttu-id="4d61f-149">En düşük değer, bir koleksiyon döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-149">Returns the minimum value in a collection.</span></span>
+
+<span data-ttu-id="4d61f-150">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-150">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-151">Burada T aşağıdaki türlerden biri, bir Collection(T):</span><span class="sxs-lookup"><span data-stu-id="4d61f-151">A Collection(T), where T is one of the following types:</span></span> 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+<span data-ttu-id="4d61f-152">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-152">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-153">Türünü `expression`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-153">The type of `expression`.</span></span>
+
+<span data-ttu-id="4d61f-154">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-154">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
+
+## <a name="stdevexpression"></a><span data-ttu-id="4d61f-155">STDEV(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-155">STDEV(expression)</span></span>
+
+<span data-ttu-id="4d61f-156">Belirtilen ifadedeki istatistiksel tüm değerlerin standart sapmasını verir.</span><span class="sxs-lookup"><span data-stu-id="4d61f-156">Returns the statistical standard deviation of all values in the specified expression.</span></span>
+
+<span data-ttu-id="4d61f-157">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-157">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-158">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="4d61f-158">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="4d61f-159">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-159">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-160">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-160">A `Double`.</span></span>
+
+<span data-ttu-id="4d61f-161">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-161">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
+
+## <a name="stdevpexpression"></a><span data-ttu-id="4d61f-162">StDevP(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-162">STDEVP(expression)</span></span>
+
+<span data-ttu-id="4d61f-163">Belirtilen ifadedeki tüm değerlerin popülasyon için istatistiksel standart sapma döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-163">Returns the statistical standard deviation for the population for all values in the specified expression.</span></span>
+
+<span data-ttu-id="4d61f-164">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-164">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-165">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="4d61f-165">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="4d61f-166">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-166">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-167">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-167">A `Double`.</span></span>
+
+<span data-ttu-id="4d61f-168">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-168">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
+
+## <a name="sumexpression"></a><span data-ttu-id="4d61f-169">SUM(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-169">SUM(expression)</span></span>
+
+<span data-ttu-id="4d61f-170">Koleksiyondaki tüm değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-170">Returns the sum of all the values in the collection.</span></span>
+
+<span data-ttu-id="4d61f-171">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-171">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-172">Burada T, şu türlerden birinde bir Collection(T): `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-172">A Collection(T) where T is one of the following types: `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="4d61f-173">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-173">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-174">Türünü `expression`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-174">The type of `expression`.</span></span>
+
+<span data-ttu-id="4d61f-175">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-175">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
+
+## <a name="varexpression"></a><span data-ttu-id="4d61f-176">VAR(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-176">VAR(expression)</span></span>
+
+<span data-ttu-id="4d61f-177">Belirtilen ifadedeki istatistiksel tüm değerlerin varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="4d61f-177">Returns the statistical variance of all values in the specified expression.</span></span>
+
+<span data-ttu-id="4d61f-178">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-178">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-179">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="4d61f-179">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="4d61f-180">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-180">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-181">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-181">A `Double`.</span></span>
+
+<span data-ttu-id="4d61f-182">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-182">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
+
+## <a name="varpexpression"></a><span data-ttu-id="4d61f-183">VarP(Expression)</span><span class="sxs-lookup"><span data-stu-id="4d61f-183">VARP(expression)</span></span>
+
+<span data-ttu-id="4d61f-184">Belirtilen ifadedeki istatistiksel tüm değerlerin popülasyon varyansını verir.</span><span class="sxs-lookup"><span data-stu-id="4d61f-184">Returns the statistical variance for the population for all values in the specified expression.</span></span>
+
+<span data-ttu-id="4d61f-185">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="4d61f-185">**Arguments**</span></span>
+
+<span data-ttu-id="4d61f-186">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="4d61f-186">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="4d61f-187">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="4d61f-187">**Return Value**</span></span>
+
+<span data-ttu-id="4d61f-188">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="4d61f-188">A `Double`.</span></span>
+
+<span data-ttu-id="4d61f-189">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="4d61f-189">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-|<span data-ttu-id="d3965-108">İşlev</span><span class="sxs-lookup"><span data-stu-id="d3965-108">Function</span></span>|<span data-ttu-id="d3965-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d3965-109">Description</span></span>|  
-|--------------|-----------------|  
-|<span data-ttu-id="d3965-110">`AVG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-110">`AVG(` `expression` `)`</span></span>|<span data-ttu-id="d3965-111">Bir koleksiyondaki değerlerin ortalamasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-111">Returns the average of the values in a collection.</span></span><br /><br /> <span data-ttu-id="d3965-112">Null değerler göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="d3965-112">Null values are ignored.</span></span><br /><br /> <span data-ttu-id="d3965-113">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-113">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-114">Bir `Int32`, `Int64`, `Double`, ve `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d3965-114">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="d3965-115">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-115">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-116">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="d3965-116">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="d3965-117">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-117">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
-|<span data-ttu-id="d3965-118">`CHECKSUM_AGG(` `collection` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-118">`CHECKSUM_AGG(` `collection` `)`</span></span>|<span data-ttu-id="d3965-119">Bir koleksiyonda bulunan değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-119">Returns the checksum of the values in a collection.</span></span><br /><br /> <span data-ttu-id="d3965-120">Null değerler göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="d3965-120">Null values are ignored.</span></span><br /><br /> <span data-ttu-id="d3965-121">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-121">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-122">Bir koleksiyon (`Int32`).</span><span class="sxs-lookup"><span data-stu-id="d3965-122">A Collection (`Int32`).</span></span><br /><br /> <span data-ttu-id="d3965-123">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-123">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-124">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="d3965-124">An `Int32`.</span></span><br /><br /> <span data-ttu-id="d3965-125">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-125">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|<span data-ttu-id="d3965-126">`COUNT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-126">`COUNT(` `expression` `)`</span></span>|<span data-ttu-id="d3965-127">Bir koleksiyon olarak öğe sayısını döndürür bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="d3965-127">Returns the number of items in a collection as an `Int32`.</span></span><br /><br /> <span data-ttu-id="d3965-128">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-128">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-129">Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):</span><span class="sxs-lookup"><span data-stu-id="d3965-129">A Collection (T) where T is one of the following types:</span></span><br /><br /> <span data-ttu-id="d3965-130">`Guid` (SQL Server 2000'de döndürülen değil),</span><span class="sxs-lookup"><span data-stu-id="d3965-130">`Guid` (not returned in SQL Server 2000),</span></span><br /><br /> <span data-ttu-id="d3965-131">`Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.</span><span class="sxs-lookup"><span data-stu-id="d3965-131">`Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, or `Binary`.</span></span><br /><br /> <span data-ttu-id="d3965-132">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-132">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-133">Bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="d3965-133">An `Int32`.</span></span><br /><br /> <span data-ttu-id="d3965-134">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-134">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|<span data-ttu-id="d3965-135">`COUNT_BIG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-135">`COUNT_BIG(` `expression` `)`</span></span>|<span data-ttu-id="d3965-136">Bir koleksiyon olarak öğe sayısını döndürür bir `bigint`.</span><span class="sxs-lookup"><span data-stu-id="d3965-136">Returns the number of items in a collection as a `bigint`.</span></span><br /><br /> <span data-ttu-id="d3965-137">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-137">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-138">Bir koleksiyon (T aşağıdaki türlerden biri olduğu T):</span><span class="sxs-lookup"><span data-stu-id="d3965-138">A Collection (T) where T is one of the following types:</span></span><br /><br /> <span data-ttu-id="d3965-139">`Guid` (SQL Server 2000'de döndürülen değil), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, veya `Binary`.</span><span class="sxs-lookup"><span data-stu-id="d3965-139">`Guid` (not returned in SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, or `Binary`.</span></span><br /><br /> <span data-ttu-id="d3965-140">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-141">Bir `Int64`.</span><span class="sxs-lookup"><span data-stu-id="d3965-141">An `Int64`.</span></span><br /><br /> <span data-ttu-id="d3965-142">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-142">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
-|<span data-ttu-id="d3965-143">`MAX(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-143">`MAX(` `expression` `)`</span></span>|<span data-ttu-id="d3965-144">En büyük değer koleksiyonunu döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-144">Returns the maximum value the collection.</span></span><br /><br /> <span data-ttu-id="d3965-145">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-146">Bir koleksiyon (T olduğu aşağıdaki türlerden biri T): `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="d3965-146">A Collection (T) where T is one of the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br /><br /> <span data-ttu-id="d3965-147">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-147">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-148">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="d3965-148">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="d3965-149">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-149">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  
-|<span data-ttu-id="d3965-150">`MIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-150">`MIN(` `expression` `)`</span></span>|<span data-ttu-id="d3965-151">Bir koleksiyondaki en küçük değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-151">Returns the minimum value in a collection.</span></span><br /><br /> <span data-ttu-id="d3965-152">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-152">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-153">Bir koleksiyon (T olduğu aşağıdaki türlerden biri T): `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time` , `String`,</span><span class="sxs-lookup"><span data-stu-id="d3965-153">A Collection (T) where T is one of the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,</span></span><br /><br /> <span data-ttu-id="d3965-154">`Binary`.</span><span class="sxs-lookup"><span data-stu-id="d3965-154">`Binary`.</span></span><br /><br /> <span data-ttu-id="d3965-155">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-155">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-156">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="d3965-156">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="d3965-157">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-157">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]|  
-|<span data-ttu-id="d3965-158">`STDEV(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-158">`STDEV(` `expression` `)`</span></span>|<span data-ttu-id="d3965-159">Belirtilen ifade istatistiksel tüm değerlerin standart sapmasını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-159">Returns the statistical standard deviation of all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="d3965-160">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-160">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-161">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="d3965-161">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="d3965-162">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-162">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-163">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="d3965-163">A `Double`.</span></span><br /><br /> <span data-ttu-id="d3965-164">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-164">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]|  
-|<span data-ttu-id="d3965-165">`STDEVP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-165">`STDEVP(` `expression` `)`</span></span>|<span data-ttu-id="d3965-166">Belirtilen ifadedeki tüm değerlerin popülasyon için istatistiksel standart sapma döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-166">Returns the statistical standard deviation for the population for all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="d3965-167">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-167">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-168">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="d3965-168">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="d3965-169">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-169">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-170">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="d3965-170">A `Double`.</span></span><br /><br /> <span data-ttu-id="d3965-171">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-171">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]|  
-|<span data-ttu-id="d3965-172">`SUM(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-172">`SUM(` `expression` `)`</span></span>|<span data-ttu-id="d3965-173">Koleksiyondaki tüm değerlerin toplamını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-173">Returns the sum of all the values in the collection.</span></span><br /><br /> <span data-ttu-id="d3965-174">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-174">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-175">Bir koleksiyon (T olduğu aşağıdaki türlerden biri T): `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="d3965-175">A Collection (T) where T is one of the following types: `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br /><br /> <span data-ttu-id="d3965-176">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-176">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-177">Türü `expression`.</span><span class="sxs-lookup"><span data-stu-id="d3965-177">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="d3965-178">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-178">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]|  
-|<span data-ttu-id="d3965-179">`VAR(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-179">`VAR(` `expression` `)`</span></span>|<span data-ttu-id="d3965-180">Belirtilen ifade istatistiksel tüm değerlerin varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-180">Returns the statistical variance of all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="d3965-181">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-181">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-182">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="d3965-182">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="d3965-183">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-183">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-184">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="d3965-184">A `Double`.</span></span><br /><br /> <span data-ttu-id="d3965-185">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-185">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]|  
-|<span data-ttu-id="d3965-186">`VARP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="d3965-186">`VARP(` `expression` `)`</span></span>|<span data-ttu-id="d3965-187">Belirtilen ifade istatistiksel tüm değerlerin popülasyon varyansını döndürür.</span><span class="sxs-lookup"><span data-stu-id="d3965-187">Returns the statistical variance for the population for all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="d3965-188">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="d3965-188">**Arguments**</span></span><br /><br /> <span data-ttu-id="d3965-189">Bir koleksiyon (`Double`).</span><span class="sxs-lookup"><span data-stu-id="d3965-189">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="d3965-190">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="d3965-190">**Return Value**</span></span><br /><br /> <span data-ttu-id="d3965-191">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="d3965-191">A `Double`.</span></span><br /><br /> <span data-ttu-id="d3965-192">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="d3965-192">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]|  
+## <a name="see-also"></a><span data-ttu-id="4d61f-190">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d61f-190">See also</span></span>
+
+<span data-ttu-id="4d61f-191">SqlClient destekleyen toplama işlevleri hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:</span><span class="sxs-lookup"><span data-stu-id="4d61f-191">For more information about the aggregate functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
   
- <span data-ttu-id="d3965-193">SqlClient destekleyen toplama işlevleri hakkında daha fazla bilgi için SqlClient sağlayıcısı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:</span><span class="sxs-lookup"><span data-stu-id="d3965-193">For more information about the aggregate functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
-  
-|<span data-ttu-id="d3965-194">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="d3965-194">SQL Server 2000</span></span>|<span data-ttu-id="d3965-195">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="d3965-195">SQL Server 2005</span></span>|<span data-ttu-id="d3965-196">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="d3965-196">SQL Server 2008</span></span>|  
-|---------------------|---------------------|---------------------|  
-|[<span data-ttu-id="d3965-197">Toplama işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="d3965-197">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115906)|[<span data-ttu-id="d3965-198">Toplama işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="d3965-198">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkID=115903)|[<span data-ttu-id="d3965-199">Toplama işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="d3965-199">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115907)|  
-  
-## <a name="see-also"></a><span data-ttu-id="d3965-200">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d3965-200">See Also</span></span>  
- [<span data-ttu-id="d3965-201">Entity SQL Dili</span><span class="sxs-lookup"><span data-stu-id="d3965-201">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [<span data-ttu-id="d3965-202">Toplu Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="d3965-202">Aggregate Canonical Functions</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+<span data-ttu-id="4d61f-192">**SQL Server 2005'te**: [toplama işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="4d61f-192">**SQL Server 2005**: [Aggregate Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))</span></span>  
+<span data-ttu-id="4d61f-193">**SQL Server 2008 ve üzeri**: [toplama işlevleri (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)</span><span class="sxs-lookup"><span data-stu-id="4d61f-193">**SQL Server 2008 and later**:  [Aggregate Functions (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)</span></span>  
+[<span data-ttu-id="4d61f-194">Entity SQL Dili</span><span class="sxs-lookup"><span data-stu-id="4d61f-194">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+[<span data-ttu-id="4d61f-195">Toplu Kurallı İşlevler</span><span class="sxs-lookup"><span data-stu-id="4d61f-195">Aggregate Canonical Functions</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

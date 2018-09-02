@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 2f498c68d0aa8b980b0a0628231c6f03d94a85c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0826e007576dc0e97ef953e698f5f8d115742e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555188"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421702"
 ---
-# <a name="textbox"></a><span data-ttu-id="2e9bd-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="2e9bd-102">TextBox</span></span>
-<span data-ttu-id="2e9bd-103"><xref:System.Windows.Controls.TextBox> Denetimi WPF uygulamalarında temel metin girişi için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="2e9bd-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="f6982-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="f6982-102">TextBox</span></span>
+<span data-ttu-id="f6982-103"><xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="f6982-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2e9bd-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="2e9bd-104">In This Section</span></span>  
- [<span data-ttu-id="2e9bd-105">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="2e9bd-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [<span data-ttu-id="2e9bd-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="2e9bd-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f6982-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f6982-104">In This Section</span></span>  
+ [<span data-ttu-id="f6982-105">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f6982-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="f6982-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f6982-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2e9bd-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="2e9bd-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f6982-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f6982-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,6 +30,6 @@ ms.locfileid: "33555188"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="2e9bd-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="2e9bd-108">See Also</span></span>  
- [<span data-ttu-id="2e9bd-109">WPF denetimleri galeri örneği</span><span class="sxs-lookup"><span data-stu-id="2e9bd-109">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [<span data-ttu-id="2e9bd-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="2e9bd-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="f6982-108">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="f6982-108">See Also</span></span>  
+ [<span data-ttu-id="f6982-109">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="f6982-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
+ [<span data-ttu-id="f6982-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="f6982-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
