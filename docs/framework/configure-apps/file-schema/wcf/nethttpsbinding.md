@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: fb279321cccc325700ac18697d484da20c685c9d
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 2dbcdbe7fff758bab0e932817feddab398ed9ed1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32751314"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466562"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Bir Windows Communication Foundation (WCF) hizmeti yapılandırmak ve HTTPS üzerinden iletişim kurabilen bitiş noktaları ortaya çıkarmak için kullanabileceğiniz bir bağlama temsil eder. Çift yönlü sözleşme ile kullanıldığında, Web yuvaları kullanılır, aksi takdirde HTTPS kullanılır.  
@@ -85,7 +85,7 @@ Sonraki öğeye
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.BasicHttpsSecurityElement>. |  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -181,5 +181,5 @@ Sonraki öğeye
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)
