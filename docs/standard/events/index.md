@@ -13,11 +13,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752141"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452748"
 ---
 # <a name="handling-and-raising-events"></a>Olaylar Oluşturma ve İşleme
 .NET Framework olayları temsilci modeline dayanır. Temsilci modeli kaydedin ve bir sağlayıcıdan bildirimleri almak abone sağlayan gözlemci tasarım deseni izler. Olay gönderen olayın olduğuna ve olay alıcısı bu bildirimi alır ve bir yanıt tanımlar bir bildirim iter. Bu makalede temsilci modelinin ana bileşenleri, uygulamalarda olayların kullanma ve kodunuzda olayların nasıl açıklar.  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 9f8158ec0d8de2b9249c4f69830c37480c34b390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217434"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418471"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (C# Derleyici Seçenekleri)
-**- Pdb** derleyici seçeneği, hata ayıklama simgeleri dosyasının konumunu ve adını belirtir.  
+**- Pdb** derleyici seçeneği, hata ayıklama sembol dosyasının konumunu ve adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,14 +26,14 @@ ms.locfileid: "33217434"
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Hata ayıklama simgeleri dosyasının konumunu ve adını.  
+ Hata ayıklama sembol dosyasının konumunu ve adını.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirttiğinizde [-debug (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), derleyici çıkış dosyasının adı ile aynı olan bir dosya adıyla derleyici çıktı dosyası (.exe veya .dll) oluşturur, bir .pdb dosyası ile aynı dizinde oluşturulur.  
+ Belirttiğinizde [-hata ayıklama (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), derleyici, çıkış dosyasının adı ile aynı olan bir dosya adıyla derleyici çıktı dosyası (.exe veya .dll) oluşturur burada bir .pdb dosyası ile aynı dizinde oluşturur.  
   
- **-pdb** varsayılan olmayan dosya adı ve .pdb dosyası için konum belirtmenize olanak tanır.  
+ **-pdb** varsayılan olmayan dosya adı ve .pdb dosyasının konumunu belirtmenize olanak tanır.  
   
- Visual Studio geliştirme ortamında bu derleyici seçeneği ayarlanamaz ya da programlı olarak değiştirilebilir.  
+ Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlanamaz ya da programlı olarak değiştirilebilir.  
   
 ## <a name="example"></a>Örnek  
  Derleme `t.cs` ve tt.pdb adlı bir .pdb dosyası oluşturun:  
@@ -43,5 +43,6 @@ csc -debug -pdb:tt t.cs
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

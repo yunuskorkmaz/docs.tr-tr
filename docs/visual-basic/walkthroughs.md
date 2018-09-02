@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792379"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452800"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic Dili İzlenecek Yolu
 İzlenecek yollar, bunları ürün veya belirli bir özellik alanı hakkında öğrenmeye başlayın için iyi bir yer sağlar ortak senaryolar için adım adım yönergeler sağlar.  
@@ -47,7 +47,7 @@ ms.locfileid: "42792379"
  [COM nesnelerinde kalıtım uygulama](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Visual Basic 6.0 bir sınıf içeren bir COM nesnesi oluşturun ve Visual Basic'te bir temel sınıf olarak kullanmak nasıl gösterir.  
   
- [Çoklu iş parçacığı kullanımı](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [Çoklu iş parçacığı kullanımı](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Bir sözcük örnekleri için bir metin dosyası arar birden çok iş parçacıklı bir uygulamanın nasıl oluşturulacağını gösterir.  
   
  [My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "42792379"
  [Özel günlük dinleyicileri oluşturma](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek şekilde yapılandırma gösterilmiştir `My.Application.Log` nesne.  
   
- [Yönetilen derlemelerden türler katıştırma](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Yönetilen derlemelerden türler katıştırma](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  Bir derlemeyi ve bu türlerden katıştıran bir istemci programını nasıl oluşturulacağını açıklar.  
   
  [Parolaların karmaşık olduğunu doğrulama (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,8 +77,8 @@ ms.locfileid: "42792379"
  [.NET Framework yöntemlerini kullanarak dosyaları düzenleme](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Nasıl kullanılacağını gösteren [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yöntemleri bir dosya ile ilgili bilgileri belirlemek için bir dize bir dosyada arayın ve dosyaya yazma.  
   
- [Visual Basic'te bir nesneyi kalıcı kılma](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Visual Basic'te bir nesneyi kalıcı kılma](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  Basit bir nesne oluşturmak ve verileri bir dosyaya kalıcı hale getirmek nasıl gösterir.  
   
- [Önce test desteği kullanımdan üret özelliği](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Önce test desteği kullanımdan üret özelliği](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  Önce test geliştirme, burada ilk birim testleri yazma ve ardından başarılı testler yapmak için kaynak kodunu yazma işlemi gösterilmektedir.

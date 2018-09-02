@@ -2,12 +2,12 @@
 title: x:Property Yönergesi
 ms.date: 03/30/2017
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-ms.openlocfilehash: 0d554d8ba4d69b4c2d4cc01f3965ade7e508bb0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f982c30a345f95c7a1c7e70de8c5cc4de62cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563705"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419779"
 ---
 # <a name="xproperty-directive"></a>x:Property Yönergesi
 Biçimlendirme XAML özelliğinde bildirir.  
@@ -27,16 +27,16 @@ Biçimlendirme XAML özelliğinde bildirir.
   
 |||  
 |-|-|  
-|`className`|XAML üretim için yedekleme sınıfı ya da parçalı sınıf adıdır.|  
-|`propertyName`|Tanımlanan özelliğinin üye adı.|  
-|`propertyType`|Tür adı (veya diğer dize form çerçeveye özel), bu özelliğin türünü belirtir.|  
+|`className`|XAML üretim için yedekleme sınıf veya kısmi sınıf adıdır.|  
+|`propertyName`|Tanımlanan özellik üyesinin adı.|  
+|`propertyType`|Tür adı (veya çerçeveye özgü diğer dize biçiminde), bu özelliğin türünü belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework XAML hizmetlerinde uygulamasında. `x:Property` Yedekleme doğrudan türüne sahip değil, ancak tarafından desteklenen <xref:System.Windows.Markup.PropertyDefinition> sınıfı. XAML düğümü akışı içinde bir `x:Property` öğesi adlı bir üye temsil edilir `Property`, XAML dili XAML ad. Üye `Property` biçimlendirme tarafından bildirilen şekilde öznitelikleri tutun.  
+ .NET Framework XAML hizmetlerinde uygulamasında. `x:Property` Yedekleme doğrudan bir türün yok, ancak tarafından desteklenen <xref:System.Windows.Markup.PropertyDefinition> sınıfı. XAML düğüm akış bir `x:Property` öğesi adlı bir üyesi olarak temsil edilir `Property`, XAML dili XAML ad uzayındaki. Üye `Property` biçimlendirme tarafından bildirilen gibi öznitelikleri tutun.  
   
- Anlamını `Name` ve `Type` .NET Framework XAML hizmetlerinde düzeyinde atanmaz. Bunlar daha sonra belirli çerçeveleri tarafından uygulanan kuralları altında yorumlanan dize değerleri, ilk XAML düğüm akış içinde depolanır. Anlamı bir XAML ad ve XAML türü anlamı Hizala veya yalnızca uygulama bağlı olarak bir yedekleme türü sistemindeki geçerli olabilir.  
+ Anlamını `Name` ve `Type` .NET Framework XAML hizmetlerinde düzeyinde atanmaz. Daha sonra belirli çerçeveleri tarafından uygulanan kuralları altında yorumlanacağını dize değerleri olarak ilk XAML düğümü akışı depolanırlar. Anlamı bir XAML adı ve anlamı XAML türü hizalama veya yalnızca geçerli uygulama bağlı olarak bir yedekleme türü sistemde olabilir.  
   
- Pratik kullanımını desteklemek için `x:Members` üye tanımları biçimlendirmede belirtmek için bir yol üyeleri değiştirilebilir bir sınıf ile ilişkili olmalıdır. Hedeflenen modeli olan `x:Members` belirten bir türü bir üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üyenin tanımları oluşturan mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu üye tanımları XAML destek uygulama modelleri sahip tek tek çerçeveler bırakılır. Genellikle, isteğe bağlı olarak işaretleme-XAML ve ya da derleme MSBUILD yapı eylemleri arka plan kodu ile tümleştirmek veya üretim XAML gelen saf derlemeler bu özelliği desteklemek için gereklidir.  
+ Pratik kullanımını desteklemek üzere `x:Members` üyeleri üye tanımları işaretlemede belirtmek için bir yol değiştirilebilir bir sınıf ile ilişkili olması gerekir. Hedeflenen modeli olan `x:Members` belirten bir tür üyesi olarak mevcut bir `x:Class`. Ancak, türleri ve üyeleri ilişkilendirme veya dinamik üye tanımları oluşturmayı mekanizması .NET Framework XAML hizmetlerinde düzeyinde desteklenmiyor. Bu, XAML üyesi tanımları desteği uygulama modellerini sahip tek çerçeveleri için bırakılır. Genellikle, isteğe bağlı olarak, XAML ve aşağıdakilerden birini işaretleme-derleme MSBUILD yapı eylemleri arka plan kod ile tümleştirin veya üretim saf gelen XAML derlemeleri, bu özelliği desteklemek için gereklidir.  
   
-## <a name="xproperty-for-windows-workflow-foundation"></a>x: özellik Windows Workflow Foundation için  
- Windows Workflow Foundation için `x:Property` tamamen XAML veya XAML oluşan özel bir aktivite üyelerini tanımlayan – dinamik üyeler arka plan kodu ile bir etkinlik Tasarımcısı için tanımlanmış. `x:Class` XAML üretim kök öğesinin de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde zorunlu değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklenen bir gereksinim haline gelir. Windows Workflow Foundation kullanmaz saf XAML tür adı için hedeflenen değeri olarak `x:Property` `Type` özniteliği ve bunun yerine belgelenmemiştir bir kuralı burada kullanır. Daha fazla bilgi için bkz: [dinamik etkinlik oluşturma](http://msdn.microsoft.com/library/dd807392.aspx).
+## <a name="xproperty-for-windows-workflow-foundation"></a>x: Property Windows Workflow Foundation için  
+ Windows Workflow Foundation için `x:Property` tamamen XAML veya XAML oluşan özel bir etkinlik üyelerini tanımlayan – dinamik üyeler bir etkinlik Tasarımcısı ile arka plan kod için tanımlanır. `x:Class` XAML üretim kök öğe üzerinde de belirtilmelidir. Bu, .NET Framework XAML hizmetlerinde düzeyinde bir gereksinim değildir, ancak XAML üretim özel etkinlikler ve Windows Workflow Foundation XAML genel destek MSBUILD yapı eylemleri tarafından yüklendiğinde bir gereksinim haline gelir. Windows Workflow Foundation kullanmayan saf XAML tür adı için hedeflenen değeri olarak `x:Property` `Type` özniteliği ve bunun yerine burada belgelenmemiş bir kuralı kullanır. Daha fazla bilgi için [dinamik etkinliği oluşturma](https://msdn.microsoft.com/library/dd807392.aspx).

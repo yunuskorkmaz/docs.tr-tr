@@ -1,18 +1,18 @@
 ---
-title: İptal işleyicisi Compensable etkinlik
+title: Compensable etkinliğinde iptal işleyicisi
 ms.date: 03/30/2017
 ms.assetid: afd98bee-eccf-47e9-99c9-27cea84ce5ce
-ms.openlocfilehash: ce4d67b26a2b4c6a9b507715b48e75e328c5b100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f32d10e22be7fdd1e84229a214409df06efa918
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515007"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442713"
 ---
-# <a name="cancellation-handler-on-compensable-activity"></a>İptal işleyicisi Compensable etkinlik
-Bu örnek üzerinde iptal işleyicisi kullanımını gösteren bir <xref:System.Activities.Statements.CompensableActivity>.  
+# <a name="cancellation-handler-on-compensable-activity"></a>Compensable etkinliğinde iptal işleyicisi
+Bu örnek, üzerinde bir iptal işleyicisi kullanımını gösterir. bir <xref:System.Activities.Statements.CompensableActivity>.  
   
- Bu örnek kullanımını gösteren iki senaryo içerir <xref:System.Activities.Statements.CompensableActivity> iptali. İlk senaryoda üç alt compensable etkinlikler içeren bir kök compensable etkinlik içerir. İki alt etkinlik kendi etkinlik gövdeleri başarıyla çalıştırmadan tamamlayın. Üçüncü alt etkinlik gövde çalıştığında, daha sonra Kök etkinlik iptaline tetiklenir üçüncü etkinlik işleme iptal ederek işlenmiş bir özel durum karşılaşır. Bu örnekte kök etkinlik mantık önceden tamamlanmış bir iki alt etkinlikler dengelemek sağlamaktır.  
+ Bu örnek kullanımını gösteren iki senaryo içerir <xref:System.Activities.Statements.CompensableActivity> iptali. İlk senaryoda üç alt compensable etkinlikler içeren bir kök compensable etkinliği içeriyor. İki alt etkinlik, etkinlik gövdeleri başarıyla çalıştığını tamamlayın. Üçüncü bir alt etkinlik gövdesi çalıştığında, sonra Kök etkinlik iptal tetiklenir üçüncü etkinlik işleme iptal tarafından işlenen özel durum karşılaşır. Bu örnekte kök etkinlik mantığı, daha önce tamamlanan bir iki alt etkinlikleri dengelemek sağlamaktır.  
   
 ```  
 Try  
@@ -39,7 +39,7 @@ Catches {
 }  
 ```  
   
- İkinci senaryo yürütme gösterir bir <xref:System.Activities.Statements.TryCatch> ile paralel bir <xref:System.Activities.Statements.Delay>, hangi bitmeden önce <xref:System.Activities.Statements.TryCatch> dal. Tamamlanma durumu kümesine `true` ilk şube tamamlandıktan sonra iptal başka bir şube neden.  
+ İkinci senaryoda yürütme gösterir bir <xref:System.Activities.Statements.TryCatch> ile paralel bir <xref:System.Activities.Statements.Delay>, önce tamamlanır <xref:System.Activities.Statements.TryCatch> dal. Tamamlama koşul kümesine `true` ilk dal tamamlandıktan sonra diğer dal iptal edilmesine neden.  
   
 ```  
 Parallel   
@@ -70,19 +70,19 @@ Parallel
 }  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], CompensationCancellation.sln açın.  
   
-2.  CTRL + SHIFT + B tuşuna basarak örneği oluşturmak veya "Yapı çözümü" yapı menüsünden seçin...  
+2.  CTRL + SHIFT + B tuşlarına basarak örneği oluşturmak veya derleme menüsünden "Çözümü Derle" seçin...  
   
-3.  F5 tuşuna basarak örneği çalıştırmak veya hata ayıklama menüsünden "Hata ayıklamayı Başlat" ı seçin. Alternatif olarak Ctrl + F5 tuşuna basın veya "Hata ayıklama olmadan Başlat" hata ayıklama menüsünden seçin.  
+3.  F5 tuşuna basarak örneği çalıştırın veya hata ayıklama menüsünden "Hata ayıklamaya Başla"'i seçin. Alternatif olarak, Ctrl + F5 tuşlarına basın veya hata ayıklama menüsünden "Hata ayıklama olmadan Başlat"'i seçin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CompensationCancellation`

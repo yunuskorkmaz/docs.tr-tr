@@ -8,15 +8,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 39f6ad5839f7ca12b023502a3fc1ccde52e70899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215355"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452667"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target: library (C# Derleyici Seçenekleri)
-**-Target: library** seçeneği yürütülebilir bir dosyanın (EXE) yerine bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyicinin neden olur.  
+**-Target: library** seçeneği bir yürütülebilir dosya (EXE) yerine bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyicinin neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,23 +25,23 @@ ms.locfileid: "33215355"
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- DLL .dll uzantısı ile oluşturulur.  
+ DLL, .dll uzantısıyla oluşturulur.  
   
- İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıktı dosyası adı ilk giriş dosyasının adını alır.  
+ İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıkış dosyası adı ilk giriş dosyasının adını alır.  
   
- Tüm komut satırında belirtildiğinde kadar sonraki dosyaları **-out** veya **-target: module** seçeneği .dll dosyasını oluşturmak için kullanılır.  
+ Tüm komut satırında belirtildiğinde kadar sonraki dosyalar **-out** veya **-target: module** seçeneği .dll dosyası oluşturmak için kullanılır.  
   
- Bir .dll dosyasını oluştururken bir [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.  
+ Bir .dll dosyası oluştururken bir [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açmak **özellikleri** sayfası.  
+1.  Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklatın **uygulama** özellik sayfası.  
+2.  Tıklayın **uygulama** özellik sayfası.  
   
-3.  Değiştirme **çıktı türü** özelliği.  
+3.  Değiştirme **çıkış türü** özelliği.  
   
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Örnek  
  Derleme `in.cs`, oluşturma `in.dll`:  
@@ -51,5 +51,6 @@ csc -target:library in.cs
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [-target (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)

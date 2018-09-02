@@ -1,47 +1,47 @@
 ---
-title: Mikro hizmet etki alanı modeli .NET Core ile uygulama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet etki alanı modeli .NET Core ile uygulama
+title: .NET Core ile mikro hizmet etki alanı modeli uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | .NET Core ile mikro hizmet etki alanı modeli uygulama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e836eda7fdc7b55ca7d1fe2ef5bf48a2d4ecb5a3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106271"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420933"
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Mikro hizmet etki alanı modeli .NET Core ile uygulama 
+# <a name="implementing-a-microservice-domain-model-with-net-core"></a>.NET Core ile mikro hizmet etki alanı modeli uygulama 
 
-Önceki bölümde temel tasarım ilkeleri ve etki alanı modeli tasarlama modeller açıklandığı. .NET Core kullanarak etki alanı modeli uygulamak için olası yollarını keşfetmek şimdi (düz C\# kodu) ve EF çekirdek. Etki alanı modeli yalnızca kodunuzu oluşan unutmayın. EF üzerinde yalnızca EF çekirdek modeli gereksinimleri ancak değil gerçek bağımlılıkları gerekir. Etki alanı modelinizde sabit bağımlılıklar veya EF çekirdek veya diğer ORM başvuruları olmamalıdır.
+Önceki bölümde açıklanan temel tasarım ilkeleri ve etki alanı modeli tasarlamaya yönelik Desenler. .NET Core kullanarak etki alanı modeli uygulamak için kullanılabilecek yöntemler keşfedin artık (düz C\# kod) ve EF Core. Etki alanı modeliniz basitçe kodunuzu oluşan unutmayın. EF üzerinde yalnızca EF Core model gereksinimleri ancak değil gerçek bağımlılıkları olacaktır. Etki alanı modelinizdeki sabit bağımlılıkları veya EF Core veya diğer bir ORM olmamalıdır.
 
-## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Özel bir .NET standart Kitaplığı'nda etki alanı modeli yapısı
+## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Özel bir .NET Standard Kitaplığı'nda etki alanı modeli yapısı
 
-EShopOnContainers başvuru uygulaması için kullanılan klasör kuruluş uygulama DDD modeli gösterilmektedir. Farklı bir klasör kuruluş uygulamanız için yapılan tasarım seçenekleri daha net bir şekilde iletişim kurar bulabilirsiniz. Şekil 9-10'gördüğünüz sıralama etki alanı modelinde var. iki toplamalar, sipariş toplama ve alıcı toplama Bir tek etki alanı varlığı (Birleşik kök veya kök varlık) de oluşan bir toplama olabilir ancak her toplama etki alanı varlıkları ve değer nesnelerin grubudur.
+Hizmetine başvuru uygulaması için kullanılan klasör kuruluş uygulama DDD modelini gösterir. Farklı bir klasöre kuruluş uygulamanız için tasarım seçimlerinizi daha net bir şekilde iletişim kuran bulabilirsiniz. Şekil 9-10'da görüldüğü gibi sıralama etki alanı modeli içinde var. iki toplamlar, sipariş toplama ve alıcı toplama Bir tek etki alanı varlığı (toplama kök veya kök varlık) de oluşan bir toplama sahip, ancak her toplam değer nesneleri ile etki alanı varlıklarının ve grubudur.
 
 ![](./media/image11.png)
 
-**Şekil 9-10**. EShopOnContainers içinde sıralama mikro hizmet için etki alanı modeli yapısı
+**Şekil 9-10**. Sıralama mikro hizmetine için etki alanı modeli yapısı
 
-Ayrıca, etki alanı modeli katmanı, etki alanı modelinin altyapı gereksinimleri olan depo sözleşmeleri (arabirimler) içerir. Diğer bir deyişle, bu arabirimleri altyapısı katmanından uygulanmalı hangi depoları express ve nasıl. Etki alanı modeli katmanı "API veya Entity Framework gibi altyapısı teknolojileri sınıflardan contaminated olmayan şekilde" depoları uygulama etki alanı modeli katmanı altyapı Katmanı kitaplığı dışında yerleştirilen önemlidir.
+Ayrıca, etki alanı model katmanında, etki alanı modelinin altyapı gereksinimleri olan depo anlaşmalar (arabirimler) içerir. Bu arabirimler altyapı katmanını uygulanmalı hangi depoları başka bir deyişle, express ve nasıl. Etki alanı model katmanında "API veya Entity Framework gibi altyapı teknolojilerine sınıflardan contaminated değil için" depoları uygulamasını etki alanı model katmanında altyapı katman kitaplığı dışında yerleştirilmiş önemlidir.
 
-Ayrıca bkz bir [SeedWork](https://martinfowler.com/bliki/Seedwork.html) etki alanı varlıkları ve değeri için temel olarak kullanabileceğiniz özel temel sınıflar içeren klasörü nesneleri, her etki alanının nesne sınıfında yedekli kodu içermeyen şekilde.
+Ayrıca bkz bir [SeedWork](https://martinfowler.com/bliki/Seedwork.html) etki alanı varlıklarının ve değer için bir temel olarak kullanan özel temel sınıflar içeren klasörü nesneler, her etki alanının nesne sınıfında gereksiz kod zorunda kalmazsınız.
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Özel bir .NET standart kitaplığında toplamalar yapılandırma
+## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Özel bir .NET Standard kitaplığı toplamalar yapılandırma
 
-Bir toplama etki alanı nesnelerini işlemsel tutarlılık eşleştirmek için bir arada gruplandırılmış bir kümeye başvuruyor. Bu nesneler (biri toplama kök veya kök varlık olan) varlıkları herhangi bir ek değer nesne olabilir.
+Toplama işlem tutarlılığı eşleştirilecek gruplanmış etki alanı nesnelerini bir kümeye başvuruyor. Bu nesneler (biri toplama kök veya kök varlık olan) varlıklar örneklerini herhangi bir ek değer nesnesi olabilir.
 
-İşlemsel tutarlılık toplama tutarlı ve bir iş eylemi sonunda güncel olması sağlanır anlamına gelir. Örneğin, Şekil 9-11'de gösterildiği gibi sipariş toplama mikro hizmet etki alanı modeli sıralama eShopOnContainers öğesinden oluşur.
+İşlemsel tutarlılık, bir toplama tutarlı ve bir iş eylemi sonunda güncel olması sağlanır anlamına gelir. Örneğin, mikro hizmet etki alanı modeli sıralama hizmetine sipariş toplam Şekil 9-11'de gösterildiği gibi oluşur.
 
 ![](./media/image12.png)
 
-**Şekil 9-11**. Visual Studio çözümünde toplama sırası
+**Şekil 9-11**. Visual Studio çözümü içinde toplama sırası
 
-Birleşik bir klasörde bulunan dosyalardan herhangi birinin açarsanız, nasıl özel bir temel sınıf ya da varlık veya değer nesnesi gibi arabirimi olarak işaretlenmiş uygulanan gibi gördüğünüz [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) klasör.
+Birleşik bir klasörde bulunan dosyalardan herhangi biri açarsanız, nasıl özel bir temel sınıf veya arabirim, varlık veya değer nesnesi olarak işaretlenmiş içinde uygulandığı şekilde gördüğünüz [Seedwork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork) klasör.
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>Etki alanı varlıklar POCO sınıflarını uygulama
+## <a name="implementing-domain-entities-as-poco-classes"></a>Uygulama etki alanı varlıklarının POCO sınıflar olarak
 
-Etki alanı varlıklarınızı uygulamak POCO sınıfları oluşturarak .NET içinde bir etki alanı modeli uygular. Aşağıdaki örnekte, sipariş sınıfı bir varlık ve ayrıca bir toplama kök olarak tanımlanır. Sipariş sınıfı varlık temel sınıfından türetilen çünkü varlıklarla ilgili ortak kodun yeniden kullanabilirsiniz. Bu nedenle kodu, olmayan bir ORM EF gibi altyapı kod bu temel sınıflar ve arabirimler sizin tarafınızdan etki alanı modeli projesi tanımlandığından emin aklınızda size aittir.
+. NET'te, etki alanı varlıklarınızı uygulayan POCO sınıflar oluşturarak bir etki alanı modeli uygular. Aşağıdaki örnekte sipariş sınıfı bir varlık olarak ve ayrıca bir toplama kök olarak tanımlanır. Sipariş sınıfı varlık temel sınıftan türetildiğinden, varlıkla ilgili ortak kodun yeniden kullanabilirsiniz. Unutmayın, bu nedenle, kod, olmayan bir ORM EF gibi altyapı kodunu bu sınıflar ve arabirimler sizin tarafınızdan etki alanı model projesinde tanımlandığından emin size aittir.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
@@ -93,21 +93,21 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Bu bir POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğunu dikkate almak önemlidir. Entity Framework Çekirdek doğrudan bağımlılıkları veya başka bir altyapı framework yok. GGG, yalnızca C olması gerektiği kadar bu uygulamasıdır\# etki alanı modeli uygulama kodu.
+POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğuna dikkat edin önemlidir. Entity Framework Core doğrudan bağımlılıkları veya herhangi bir altyapı çerçeveyi yok. DDD, yalnızca C olması gerektiği gibi bu uygulamasıdır\# bir etki alanı modeli uygulama kodu.
 
-Ayrıca, sınıf IAggregateRoot adlı bir arabirim ile donatılmış. Bu arabirim bazen adlı boş bir arabirim olduğundan bir *işaret arabirimi*, yani yalnızca bu varlık sınıfı ayrıca bir toplama kök olduğunu göstermek için kullanılır.
+Ayrıca, sınıf IAggregateRoot adlı bir arabirim ile sunulur. Bu arabirim bazen adlı boş bir arabirim olduğundan bir *işaret arabirimi*, yani yalnızca bu varlık sınıfı bir toplama kök olduğunu belirtmek için kullanılır.
 
-Bir işaretçi arabirimi bazen koruma deseni olarak değerlendirilir. Ancak, bu da bu arabirimi özellikle gelişen sonra bir sınıf olarak işaretlemek için bir temiz yoludur. Bir öznitelik işaret için diğer seçim olabilir, ancak bir toplama özniteliği işaretleyici sınıfı yukarıda koyma yerine IAggregate arabirimi yanındaki taban sınıfı (varlık) görmek hızlıdır. Metter Tercihler, herhangi bir durumda değil.
+Bir işaretleyici arabirimi bazen önleyici bir deseni olarak kabul edilir; Ancak, bu da özellikle arabirimin gelişen, bir sınıfı işaretlemek için bir temiz yoludur. Bir öznitelik işaretçisi için diğer bir seçenek olabilir, ancak temel sınıfı (varlık) yerine sınıf üzerinde bir toplama özniteliği işaret IAggregate arabirimi yanındaki bkz daha hızlıdır. Tercihleri sağlasa da her durumda olur.
 
-Bu kod çoğunu tutarlılık için ilgili iş kuralları toplama 's varlıkların sipariş toplama kök sınıfı (toplama ÖgeSipariş nesneyi eklerken, örneğin, AddOrderItem) yöntemleri olarak uygulanmalıdır bir toplama kök anlamına sahip . Oluşturma veya gerekir OrderItems nesneleri bağımsız olarak veya doğrudan güncelleştirme; AggregateRoot sınıfı, Denetim ve onun alt varlıkları karşı herhangi bir güncelleştirme işlemi tutarlılığını tutmanız gerekir.
+Tutarlılık için kodun en ilgili ve toplama'nın varlık iş kuralları sipariş toplama kök sınıfı (Orderıtem nesnesi için toplama eklerken gibi AddOrderItem) yöntemleri olarak uygulanması gereken bir toplama kök yol sahip . Size oluşturamadı veya güncelleştiremedi OrderItems nesneleri bağımsız olarak veya doğrudan; AggregateRoot sınıfı, Denetim ve onun alt varlıklar karşı herhangi bir güncelleştirme işlem tutarlılığını tutmanız gerekir.
 
-## <a name="encapsulating-data-in-the-domain-entities"></a>Etki alanı varlıklardaki veri şifreleme
+## <a name="encapsulating-data-in-the-domain-entities"></a>Etki alanı varlıklarda veri şifreleme
 
-Bir ortak varlık modelleri koleksiyon Gezinti özellikleri genel olarak erişilebilir liste türleri olarak kullanıma sorunudur. Bu, büyük olasılıkla nesnesi geçersiz bir durumda bırakarak, koleksiyonla ilgili önemli iş kurallarını atlamak, bu koleksiyon türleri, içeriğini işlemek herhangi bir ortak çalışanı Geliştirici sağlar. Bu çözüme olduğu ilgili koleksiyonlar salt okunur erişimi kullanıma ve açıkça istemcileri işleyebileceğiniz bunları yolları tanımlayan yöntemleri sağlar.
+Koleksiyon Gezinti özellikleri genel olarak erişilebilir liste türleri olarak ortaya varlık modelleri yaygın görülen bir sorun var. Bu, büyük olasılıkla Nesne geçersiz bir durumda bırakarak koleksiyona ilgili önemli iş kuralları kullanmayan, bu koleksiyon türleri, içeriğini işlemek herhangi bir ortak çalışanı Geliştirici sağlar. Bu salt okunur erişim için ilgili koleksiyonları ve açıkça istemcileri işleyebileceğiniz bunları yolları tanımlayan yöntemleri sağlar çözümüdür.
 
-Önceki kodda birçok öznitelikleri salt okunur veya özel bağlıdır ve yalnızca bu nedenle her güncelleştirme hesap iş etki alanı invariants ve sınıf yöntemlerini içinde belirtilen mantığı alır sınıfı yöntemleri tarafından güncelleştirilebilir unutmayın.
+Önceki kodda, birçok öznitelikleri salt okunur veya özel ve yalnızca bu nedenle her hesap iş etki alanı okuduğunuzda ve mantıksal sınıfı yöntemler içinde belirtilen güncelleştirme alan sınıfı yöntemleri tarafından güncelleştirilebilir unutmayın.
 
-Örneğin, DDD düzenleri, aşağıdakileri yapmalısınız *değil* herhangi bir sınıftan komut işleyici yöntemi veya uygulama katmanı aşağıdakileri yapın:
+Örneğin, DDD deseni, aşağıdakileri yapmalısınız *değil* herhangi bir sınıftan komut işleyicisi yöntemi veya uygulama katmanı aşağıdakileri yapın:
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -122,17 +122,17 @@ myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
 
-Bu durumda, ekleme yöntemi OrderItems koleksiyona doğrudan erişimi olan veri eklemek için yalnızca bir işlemidir. Bu nedenle, etki alanı mantığı, kurallar veya doğrulamaları en alt varlıkları işlemiyle uygulama katmanı (komut işleyicileri ve Web API denetleyicilerinin) yayılan ilgili.
+Bu durumda, Add yöntemi OrderItems koleksiyona doğrudan erişimi olan bir veri eklemek için yalnızca bir işlemidir. Bu nedenle, etki alanı mantığı, kurallar veya doğrulamaları çoğu işlemi alt varlıklar ile uygulama katmanı arasında (komut işleyicileri ve Web APİ'si denetleyicilerinin) yayılacak ilgili.
 
-Toplama kök giderseniz, toplama kök kendi invariants, kendi geçerlilik ya da kendi tutarlılığı garanti edemez. Sonunda spaghetti kod veya işlem bir kod sahip olur.
+Toplama kök giderseniz, toplama kök kendi okuduğunuzda, geçerliliğini veya kendi tutarlılığı garanti edemez. Sonunda spaghetti kodu veya işlem bir kod olacaktır.
 
-DDD desenleri izlemek için varlıkları ortak ayarlayıcılar herhangi bir varlık özellik olmaması gerekir. Bir varlık değişiklikleri varlıkta performans gösterdiğini değişikliği açık bulunabilen dil açık yöntemleriyle yönlendirilir.
+DDD desenlerini izlemek için varlıklar genel ayarlayıcılar içinde herhangi bir varlık özelliği olmaması gerekir. Bir varlıktaki değişiklikleri varlıkta gerçekleştirdiği değişikliği hakkında açık bulunabilen diliyle açık yöntemlerle dikkate alınmalıdır.
 
-Ayrıca, varlık (örneğin, sipariş öğeleri) içindeki koleksiyonlar salt okunur özellikler olmalıdır (daha sonra AsReadOnly yöntemi açıklanmıştır). Birleşik kök sınıf yöntemlerini ya da alt varlık yöntemleri içinde yalnızca güncelleştirmeniz.
+Ayrıca, (örneğin sırada öğeleri) varlık koleksiyon salt okunur özellikler olmalıdır (daha sonra AsReadOnly yöntemi açıklanmıştır). Alt varlık yöntemlerini veya toplama kök sınıfı yöntemleri içinde yalnızca güncelleştirmeniz.
 
-Sipariş toplama kök kodunda görebileceğiniz gibi varlık sınıfı yöntemleri aracılığıyla gerçekleştirilmek üzere varlığın veri ya da kendi alt varlıkları karşı herhangi bir işlem sahip olması tüm ayarlayıcılar harici olarak özel veya salt okunur en az olmalıdır. Bu işlem komut dosyası kod uygulama yerine denetimli ve nesne yönelimli bir yolla tutarlılık tutar.
+Sipariş toplama kök kodunda gördüğünüz gibi varlık sınıfı yöntemleri aracılığıyla gerçekleştirilmek üzere herhangi bir işlem varlığın verilerine ya da kendi alt varlıklar karşı sahip olacak şekilde tüm ayarlayıcılar dışarıdan, özel veya en azından salt okunur olmalıdır. Bu işlem kod uygulamak yerine denetimli ve nesne yönelimli bir şekilde tutarlılığı korur.
 
-Aşağıdaki kod parçacığını sipariş toplama ÖgeSipariş nesne ekleme görevini kod için uygun şekilde gösterir.
+Aşağıdaki kod parçacığı, Orderıtem nesne için sipariş toplama ekleme görevini kod en uygun yolu gösterir.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -146,39 +146,39 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-Bu parçacığında, sipariş toplama kök denetiminde doğrulamaları ya da bir ÖgeSipariş nesnesinin oluşturulmasını ilişkili mantığını çoğu olacaktır — AddOrderItem yönteminde — özellikle doğrulamaları ve mantığı ilgili diğer öğelere toplama. Örneğin, AddOrderItem için birden fazla çağrı sonucunu ile aynı ürün alabilirsiniz. Bu yöntemde, ürün öğeleri inceleyin ve birkaç birimleri ile tek bir ÖgeSipariş nesne aynı ürün öğeleri birleştirir. Ayrıca, farklı iskonto tutarlarının vardır, ancak ürün kimliği aynı olduğundan, büyük olasılıkla daha yüksek indirim uygular. Bu ilkeyi ÖgeSipariş nesne için başka bir etki alanı mantığı uygular.
+Bu kod parçacığında, çoğu doğrulamaları veya Orderıtem nesneyi oluşturulmasını ilgili mantıksal sırası toplama kök denetimi altında olacaktır — AddOrderItem yönteminde — özellikle doğrulamaları ve mantıksal ilgili diğer öğelere toplama. Örneğin, birden çok çağrı AddOrderItem sonucu ile aynı ürün alabilirsiniz. Bu yöntemde, ürün öğeleri inceleyin ve aynı ürün öğeleri birkaç birimleri ile tek bir Orderıtem nesne birleştirir. Ek olarak, farklı indirim miktarları vardır, ancak ürün kimliği aynı olan, büyük olasılıkla daha yüksek indirim uygulanacak. Bu ilke, Orderıtem nesne için başka bir etki alanı mantığı uygular.
 
-Ayrıca, yeni OrderItem(params) işlemi de denetimli ve olması sipariş toplama kök AddOrderItem yöntemi tarafından gerçekleştirilen. Bu nedenle, mantığı ya da doğrulamaları çoğunu işlemi (özellikle her şey, diğer alt varlıklar arasında tutarlılığı etkiler) toplama kök içinde tek bir yerde olacağını ilgili. Birleşik kök düzeni nihai amacı olmasıdır.
+Ayrıca, yeni OrderItem(params) işlemi ayrıca denetlenen ve sipariş toplama kökünden AddOrderItem yöntemi tarafından gerçekleştirilen. Bu nedenle, çoğu mantığı veya doğrulama işlemi (özellikle her şey, diğer alt varlıklar arasında tutarlılık etkiler), toplama kök içinde tek bir yerde olacaktır ilgili. Ultimate amacı, toplama kök desen olmasıdır.
 
-Entity Framework Çekirdek 1.1 veya kullandığınızda, izin verdiğinden daha sonra bir DDD varlık daha iyi ifade edilebilir [alanlarına eşleme](https://docs.microsoft.com/ef/core/modeling/backing-field) özellikleri yanı sıra. Bu, alt varlıkları veya değer nesnelerini koleksiyonları korurken faydalı olur. Bu geliştirme ile özellikleri yerine basit özel alanlar kullanabilirsiniz ve herhangi bir güncelleştirme alan koleksiyonuna ortak yöntemleri uygulamak ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlar.
+Entity Framework Core 1.1 veya kullandığınızda bu izin verdiğinden daha sonra bir DDD varlık daha iyi ifade edilebilir [alanlarına eşleme](https://docs.microsoft.com/ef/core/modeling/backing-field) ek özellikler. Bu, alt varlıklar değer nesneleri ve koleksiyonları korurken kullanışlıdır. Bu geliştirme ile basit özel alanları yerine özellikleri kullanın ve alan koleksiyonu için herhangi bir güncelleştirme genel yöntemleri uygulayan ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlar.
 
-Yöntemleri herhangi değişmeyen ve veri tutarlılığını denetlemek için varlık (veya oluşturucusu) aracılığıyla yalnızca varlık güncelleştirmek istediğiniz GGG böylece yalnızca bir get erişimcisine özellikleri tanımlanır. Özellikler özel alanları tarafından desteklenir. Özel üyelerin yalnızca sınıf içinde erişilebilir. Ancak, burada bir özel durum: EF çekirdek de bu alanları ayarlayın gerekiyor.
+Herhangi bir değişmez değer ve veri tutarlılığını denetlemek için varlık (veya Oluşturucu) yöntemleri aracılığıyla yalnızca varlık güncelleştirmek istediğiniz DDD içinde bu nedenle özellikleri yalnızca bir alma erişimcisi ile tanımlanır. Özel alanlarla özellikleri desteklenir. Özel üyeler yalnızca sınıfın içinden erişilebilir. Bununla birlikte, burada bir özel durum: EF Core de bu alanları ayarlayın gerekir.
 
 
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Eşleme özellikleri yalnızca alanları veritabanı tablosunda get erişimcileri
+### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Eşleme özellikleri yalnızca alanları veritabanı tablosu, get erişimcileri
 
-Veritabanı tablo sütunları eşleme özellikleri bir etki alanı sorumluluğu ancak altyapı ve kalıcılığı katmanının bir parçası değil. Biz bu burada EF çekirdek 1.1'nda yeni özelliklerden haberdar; bu nedenle yalnızca ya da daha sonra ilgili varlıklar nasıl modellemek için Bahsediyor. Bu konu hakkında daha fazla ayrıntı altyapı ve kalıcılığı bölümünde açıklanmıştır.
+Veritabanı tablo sütunları özellikleri eşleme bir etki alanı sorumluluğu ancak altyapı ve Kalıcılık katmanının bir parçası değil. Biz, bunu buradan EF Core 1.1 yeni özelliklerin farkında olduklarından yalnızca veya varlıkların nasıl model daha sonra ilgili bahsedebilirsiniz. Bu konu hakkında daha fazla ayrıntı altyapı ve Kalıcılık bölümünde açıklanmıştır.
 
-DbContext içinde EF çekirdek 1.0 kullandığınızda, yalnızca veritabanı tablosunun gerçek alanlarla alıcıları ile tanımlanmış özellikleri eşlemek gerekir. Bu DataGrid'i sınıfı HasField yöntemi ile gerçekleştirilir.
+DbContext içinde EF Core 1.0 kullandığınızda, yalnızca veritabanı tablosundaki gerçek alanlara alıcıları ile tanımlanmış özellikler eşleşmesi gerekir. Bu DataGrid'i sınıfının HasField yöntemi ile gerçekleştirilir.
 
 ### <a name="mapping-fields-without-properties"></a>Özellikleri olmayan alanlarını eşleme
 
-Sütunları alanlarına eşlemek için özellikle EF çekirdek 1.1 veya sonraki sürümlerde, ayrıca özellikleri kullanmamayı mümkündür. Bunun yerine, yalnızca bir tablodaki sütunların alanlara eşleyebilirsiniz. Bu genel bir kullanım örneği özel alanlar için varlık erişilecek gerekmez bir iç durum modudur.
+Alanlarına sütunları eşlemek için özelliğiyle EF Core 1.1 veya daha sonra da özelliklerini kullanmayı mümkündür. Bunun yerine, yalnızca bir tablodaki sütunların alanlarına eşleyebilirsiniz. Bu yaygın bir kullanım durumu dışında varlık erişilmesi gerekmeyen bir iç durum için özel alanlar var.
 
-Örneğin, önceki OrderAggregate kod örneğinde, birkaç özel alanlar vardır, gibi `_paymentMethodId` ayarlayıcı veya alıcı için ilgili bir özellik olan alan. Bu alan de sipariş iş mantığı içinde hesaplanan ve sipariş yöntemleri kullanılır, ancak veritabanında kalıcı hale getirmek gerekiyor. Bu nedenle EF çekirdek (itibaren v1.1) içinde ilişkili bir özellik olmayan bir alan veritabanında bir sütunun eşlemek için bir yolu yoktur. Bu ayrıca içinde açıklanan [altyapısı katmanından](#the-infrastructure-layer) başlığına bakın.
+Örneğin, önceki OrderAggregate kod örneğinde, birkaç özel alanlar vardır, gibi `_paymentMethodId` ilgili özellik alıcı veya ayarlayıcı için olan alan. Bu alan ayrıca sipariş iş mantığı içinde hesaplanan ve sipariş yöntemleri kullanılır, ancak veritabanında kalıcı hale getirmek gerekir. Bu nedenle EF Core (itibaren v1.1) içinde bir veritabanı sütununa ilgili özelliği olmayan bir alan eşlemek için bir yolu yoktur. Bu da açıklanan [altyapı katmanını](#the-infrastructure-layer) başlığına.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **Vaughn Vernon. Toplamalar DDD ve Entity Framework ile modelleme.** Bu Not *değil* Entity Framework Çekirdek.
+-   **Vaughn Vernon. Toplamlar DDD ve Entity Framework ile model.** Bu Not *değil* Entity Framework Core.
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Etki alanı Odaklı Tasarım kodlama: Veri odaklı Devs için ipuçları**
+-   **Julie Lerman. Etki alanı odaklı tasarım için kodlama: Veri odaklı geliştiriciler için ipuçları**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **UDI Dahan. Etki alanı modelleri tam oluşturma kapsüllenmiş**
+-   **UDI Dahan. Etki alanı modellerini oluşturma tam olarak kapsüllenmiş**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 
 >[!div class="step-by-step"]
 [Önceki](microservice-domain-model.md)
-[sonraki](seedwork-domain-model-base-classes-interfaces.md)
+[İleri](seedwork-domain-model-base-classes-interfaces.md)

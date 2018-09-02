@@ -1,6 +1,6 @@
 ---
 title: DeleteMethod işlevi (yönetilmeyen API Başvurusu)
-description: DeleteMethod işlevi belirtilen yöntem bir CIM sınıfı tanımından siler.
+description: DeleteMethod işlevi, belirtilen yöntem bir CIM sınıfı tanımını siler.
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457814"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421795"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod işlevi
-Belirtilen yöntem bir CIM sınıfı tanımından siler.
+Belirtilen yöntemde bir CIM sınıfı tanımını siler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,29 +41,29 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `wszName`  
 [in] Sınıf tablodan kaldırmak için yöntemin adı. `wszName` Geçerli bir işaretçi olmalıdır `LPCWSTR`.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem yok. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
-| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::DeleteMethod](https://msdn.microsoft.com/library/aa391439(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) yöntemi.
 
-Yöntem silme işlemi için desteklenmez [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) CIM örneklerine noktası işaretçileri.
+Yöntem silme için desteklenmediğinden [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) CIM örneklerine işaret eden işaretçilerin.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484575"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420838"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
-Bu konuda, hem de WebHost kullanırken yararlı ipuçları açıklanmasını hassas bilgileri nasıl koruyabilirim açıklanmaktadır.  
+Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasını hassas bilgileri nasıl Koruyabileceğiniz açıklanmaktadır.  
   
-## <a name="using-a-custom-trace-listener-with-webhost"></a>Özel İzleme dinleyicisi WebHost ile kullanma  
- Kendi İzleme dinleyicisi yazıyorsanız, izlemeleri Web barındırılan hizmet durumunda kaybolabilir olasılığı haberdar olmanız gerekir. WebHost dönüştürüldüğünde yinelenen devreye girer ederken dinamik işlemi kapatır. Ancak, iki işlem dinleyicisi türüne bağlıdır süre için hala aynı kaynağa erişim izni olmalıdır. Bu durumda, `XmlWriterTraceListener` Windows olay izleme aynı oturumunda birden çok işlem yönetir ve aynı dosyaya erişim verir ancak ikinci işlem için; yeni bir izleme dosyası oluşturur. Kendi dinleyicisi benzer işlevler sağlamıyorsa, dosyanın iki işlem tarafından kilitli olduğunda izlemeleri kaybolabilir.  
+## <a name="using-a-custom-trace-listener-with-webhost"></a>WebHost ile Özel İzleme dinleyicisi kullanma  
+ Kendi İzleme dinleyicisi yazıyorsanız, bir Web servisinin söz konusu olduğunda izlemeleri kaybolabilir geliştiriciyi olmalıdır. WebHost geri dönüştürüldüğünde, yinelenen devralıyor ancak Canlı işlemi kapatır. Ancak, iki işlem dinleyici türde bağımlı bir süre için hala aynı kaynağa erişimi olmalıdır. Bu durumda, `XmlWriterTraceListener` Windows olay izleme aynı oturumunda birden çok işlem yönetir ve aynı dosyaya erişim sunar; ikinci işlem için yeni bir izleme dosyası oluşturur. Kendi dinleyici benzer işlevleri sağlamıyorsa, dosyanın iki işlem tarafından kilitli değilken izlemeleri kaybolabilir.  
   
- Özel İzleme dinleyicisi izlemeleri ve iletileri hattaki, örneğin, uzak bir veritabanına gönderebildiğini farkında olmalıdır. Bir uygulama dağıtıcı uygun erişim denetimi ile özel dinleyicileri yapılandırmanız gerekir. Ayrıca, uzak konumda verilebilen herhangi bir kişisel bilgi güvenlik denetimi uygulamalısınız.  
+ Özel İzleme dinleyicisi izlemeleri ve iletileri kablo, örneğin, bir uzak veritabanına gönderebildiğini farkında olmalıdır. Bir uygulama dağıtıcı uygun erişim denetimi ile özel dinleyicileri yapılandırmanız gerekir. Ayrıca, uzak konumu gösterilen herhangi bir kişisel bilgi denetimde güvenlik uygulamanız gerekir.  
   
-## <a name="logging-sensitive-information"></a>Hassas bilgileri günlüğe kaydetme  
- Bir ileti kapsamda olduğunda izlemeleri ileti üstbilgilerini içerir. İzleme etkinleştirildiğinde, uygulamaya özgü üstbilgiler, sorgu dize gibi kişisel bilgilerinizi; ve kredi kartı numarası gibi bilgileri gövde, günlüklerde görünür hale gelebilir. Erişim denetimini yapılandırma ve izleme dosyaları uygulama için uygulama dağıtıcı sorumludur. Bu tür bilgilerin görünür olmasını istemiyorsanız, izlemeyi devre dışı bırakmak veya izleme günlüklerini paylaşmak istiyorsanız verilerin bir kısmını filtre gerekir.  
+## <a name="logging-sensitive-information"></a>Hassas bilgi günlük kaydı  
+ Kapsam içinde bir ileti olduğunda ileti üstbilgileri izlemelerini içerir. İzleme etkin olduğunda, uygulamaya özgü üstbilgiler, sorgu dizesi gibi kişisel bilgileri; ve kredi kartı numarası gibi bilgileri gövde, günlüklerde görünür hale gelebilir. Uygulama dağıtıcısı, yapılandırma ve izleme dosyaları üzerinde erişim denetimi uygulamaktan sorumludur. Bu tür bilgilerin görünür olmasını istemiyorsanız, izlemeyi devre dışı bırakmak veya verilerin bir kısmını izleme günlükleri paylaşmak istiyorsanız filtre gerekir.  
   
- Aşağıdaki ipuçları bir izleme dosyası içeriğini istenmeden açıklanmasını önlemeye yardımcı olabilir:  
+ Aşağıdaki ipuçları bir izleme dosyası içeriğini istenmeden açıklanmasını önlemenize yardımcı olabilir:  
   
--   Tarafından erişim denetim listeleri (ACL) hem de WebHost ve kendi kendini barındıran senaryoları korunan dosyaları günlük emin olun.  
+-   Günlük dosyaları tarafından erişim denetim listeleri (ACL) WebHost ve barındırma senaryolarında korunan emin olun.  
   
--   Web isteği kullanarak kolayca sunulamıyor bir dosya uzantısı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için IIS Yönetim kılavuzuna bakabilirsiniz.  
+-   Bir Web isteği sunularak kolayca sunulamayan bir dosya uzantısı'nı seçin. Örneğin, .xml dosya uzantısı güvenli bir seçenek değil. Sunulabilecek uzantıların listesini görmek için IIS Yönetim kılavuzuna bakabilirsiniz.  
   
 -   Bir Web tarayıcısı kullanılarak harici bir tarafça erişilmesini önlemek için WebHost vroot genel dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
   
- Varsayılan olarak, anahtarları ve kullanıcı adı ve parola gibi kişisel bilgileri (PII) içindeki oturum açmadığı ve iletileri günlüğe. Bir Makine Yöneticisi, ancak kullanabilirsiniz `enableLoggingKnownPII` özniteliğini `machineSettings` makinede çalışan uygulamaların bilinen kişisel bilgileri (PII) gibi oturum izin vermek için Machine.config dosyasının öğesi:  
+ Varsayılan olarak, anahtarları ve kullanıcı adı ve parola gibi kişisel bilgileri (PII) izlemeleri günlüğe kaydedilmez ve iletileri günlüğe. Bir makine yöneticisinin ancak kullanabilirsiniz `enableLoggingKnownPII` özniteliğini `machineSettings` makine üzerinde çalışan uygulamalar, bilinen kişisel bilgileri (PII) aşağıdaki gibi oturum izin vermek için Machine.config dosyasının öğesi:  
   
 ```xml  
 <configuration>  
@@ -40,7 +40,7 @@ Bu konuda, hem de WebHost kullanırken yararlı ipuçları açıklanmasını has
 </configuration>   
 ```  
   
- Bir uygulama dağıtıcı sonra kullanabileceğiniz `logKnownPii` özniteliği PII gibi günlüğe kaydetmeyi etkinleştirmek için App.config veya Web.config dosyasında:  
+ Bir uygulama dağıtıcı ardından kullanabilirsiniz `logKnownPii` PII gibi günlüğe kaydetmeyi etkinleştirmek için App.config veya Web.config dosyasında özniteliği:  
   
 ```xml  
 <system.diagnostics>  
@@ -57,9 +57,9 @@ Bu konuda, hem de WebHost kullanırken yararlı ipuçları açıklanmasını has
 </system.diagnostics>  
 ```  
   
- Yalnızca her iki ayarın olduğunda `true` PII günlük kaydı etkin. İki anahtar birleşimi her uygulama için bilinen PII oturum esnekliği sağlar.  
+ Yalnızca her iki ayarın olduğunda `true` PII ünlüğe kaydetme etkin olduğunu. İki anahtar bileşimi, her uygulama için bilinen PII oturum esnekliği sağlar.  
   
- İki veya daha fazla özel kaynağı bir yapılandırma dosyası belirtirseniz, yalnızca ilk kaynak özniteliklerini okuma bilmeniz gerekir. Diğerleri yoksayılır. Bu, PII günlüğü açıkça ikinci kaynağı için etkin olsa bile aşağıdaki App.config için dosya, PII hem kaynakları için günlüğe kaydedilmez, anlamına gelir.  
+ Bir yapılandırma dosyasında iki veya daha fazla özel kaynağı belirtirseniz, yalnızca ilk kaynak özniteliklerini okunduğu bilmeniz gerekir. Diğerlerine göz ardı edilir. Bu, PII günlük açıkça ikinci kaynağı için etkinleştirilmiş olsa da aşağıdaki App.config için dosya, PII hem kaynakları için günlüğe kaydedilmez, anlamına gelir.  
   
 ```xml  
 <system.diagnostics>  
@@ -82,15 +82,15 @@ Bu konuda, hem de WebHost kullanırken yararlı ipuçları açıklanmasını has
 </system.diagnostics>  
 ```  
   
- Varsa `<machineSettings enableLoggingKnownPii="Boolean"/>` öğesi dışında Machine.config dosyasının var, sistem oluşturur bir <xref:System.Configuration.ConfigurationErrorsException>.  
+ Varsa `<machineSettings enableLoggingKnownPii="Boolean"/>` öğesi Machine.config dosyasının dışında var, sistem oluşturur bir <xref:System.Configuration.ConfigurationErrorsException>.  
   
- Uygulama başlatıldığında veya yeniden başlatır değişiklikler etkili olur. Her iki öznitelik ayarlandığında bir olay başlangıçta kaydedilir `true`. Bir olay, ayrıca kaydedilir `logKnownPii` ayarlanır `true` ancak `enableLoggingKnownPii` olan `false`.  
+ Uygulama başlatıldığında veya yeniden değişiklikleri etkili olur. Her iki öznitelik ayarlandığında başlangıçta bir olay kaydedilir `true`. Bir olay, ayrıca kaydedilir `logKnownPii` ayarlanır `true` ancak `enableLoggingKnownPii` olduğu `false`.  
   
- PII günlüğe kaydetme hakkında daha fazla bilgi için bkz: [PII güvenlik kilidi](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) örnek.  
+ PII günlüğe kaydetme hakkında daha fazla bilgi için bkz. [PII güvenlik kilidi](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) örnek.  
   
- Makine Yöneticisi ve bu iki anahtar kullanıldığında, uygulama dağıtıcı son derece dikkatli olun çalışma. PII günlüğe kaydetme işlemi etkinleştirilmişse, güvenlik anahtarlarını ve PII günlüğe kaydedilir. Devre dışı ise, hala ileti üstbilgilerini ve gövdeleri hassas ve uygulamaya özgü veriler günlüğe kaydedilir. Gizlilik ve maruz kalma PII koruma daha kapsamlı bir açıklama için bkz: [kullanıcı gizliliği](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ Makine Yöneticisi ve uygulama dağıtıcı aşırı bu iki anahtar kullanırken dikkatli. PII günlüğe kaydetme etkinleştirilmişse, güvenlik anahtarları ve PII günlüğe kaydedilir. Etkinleştirilirse, hala ileti üstbilgileri ve gövdeleri hassas ve uygulamaya özgü veriler günlüğe kaydedilir. Gizlilik ve açıklanmasını PII koruma hakkında daha kapsamlı bir açıklama için bkz: [kullanıcı gizliliğini](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
- Ayrıca, IP adresi iletiyi gönderenin kez bağlantı yönelimli taşıma için bağlantısı ve başına bir kez aksi gönderilen ileti günlüğe kaydedilir. Bu gönderen izniniz olmadan gerçekleştirilir. Ancak, bu günlük yalnızca, varsayılan olmayan ya da izleme düzeylerini üretim, önerilen dışında hata ayıklama Canlı bilgi veya ayrıntılı izleme düzeyde oluşur.  
+ Ayrıca, iletiyi gönderenin IP adresi, bir kez bağlantı tabanlı aktarımlar için bağlantı başına ve bir kez aksi gönderilen ileti başına kaydedilir. Bu gönderen rızası gerçekleştirilir. Ancak, bu günlük yalnızca, varsayılan olmayan ya da önerilen izlemenin düzeylerin, üretimde dışında hata ayıklama Canlı bilgi veya ayrıntılı izleme düzeyleri gerçekleşir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

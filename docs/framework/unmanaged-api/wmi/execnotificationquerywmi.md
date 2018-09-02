@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932805"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43453057"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
 Olayları almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağırana döndürülen Numaralandırıcı olaylar için yoklama. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.  

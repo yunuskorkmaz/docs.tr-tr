@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 769827d10139a659971890a452227b650e89ba20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b556cb7a0ac518957f449dd266cab6968b07e357
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508455"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421331"
 ---
 # <a name="message-security-certificate"></a>İleti Güvenliği Sertifikası
-Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS güvenliği kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulama uygulamak gösterilmiştir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir, bu örnek varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
+Bu örnek, istemci için X.509 v3 sertifikası kimlik doğrulaması ile WS-güvenlik kullanan ve sunucunun X.509 v3 sertifikası kullanılarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Bu örnek, tüm uygulama iletileri istemci ve sunucu arasındaki imzalanacak ve şifrelenecek şekilde varsayılan ayarları kullanır. Bu örnek dayanır [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ve bir istemci konsol programı ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Örnek, yapılandırma ve güvenlik bağlamından çağıranının kimliğini edinme aşağıdaki örnek kodda gösterildiği gibi kullanarak denetleme kimlik doğrulaması gösterir.  
+ Örnek denetleme kimlik doğrulaması yapılandırması ve güvenlik bağlamından çağıranının kimliğini edinme aşağıdaki örnek kodda gösterildiği gibi kullanarak gösterir.  
 
 ```csharp
 public class CalculatorService : ICalculator  
@@ -35,7 +35,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Hizmetin hizmet ve yapılandırma dosyasında (Web.config) kullanılarak tanımlanmış WS-MetadataExchange protokolünü kullanarak hizmetin WSDL belgesi gösterme için bir uç noktası ile iletişim için bir uç noktasını kullanıma sunar. Uç nokta bir adresi, bağlama ve bir sözleşme oluşur. Bağlama ile standart bir yapılandırılmış [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ileti güvenliği için kullanılacak varsayılan olarak öğesi. Bu örnek ayarlar `clientCredentialType` özniteliği için istemci kimlik doğrulaması istemek için sertifika.  
+ Hizmet, hizmet ve hizmetin WSDL belgesinde tanımlanan yapılandırma dosyasında (Web.config) kullanarak WS-MetadataExchange protokolünü kullanarak kullanıma sunmak için bir uç nokta ile iletişim kurmak için bir uç nokta kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) ileti güvenliği varsayılan öğe. Bu örnek ayarlar `clientCredentialType` özniteliği sertifika istemci kimlik doğrulaması isteme.  
   
 ```xml  
 <system.serviceModel>  
@@ -86,7 +86,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- Davranış istemci hizmeti doğruladığında kullanılan hizmetin kimlik bilgilerini belirtir. Sunucu sertifikası konu adı belirtilen `findValue` özniteliğini [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) öğesi.  
+ Davranış hizmeti istemci kimlik doğrulaması kullanılan hizmetin kimlik bilgilerini belirtir. Sunucu sertifikası konu adı belirtilen `findValue` özniteliğini [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) öğesi.  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -119,7 +119,7 @@ public class CalculatorService : ICalculator
     </behaviors>  
 ```  
   
- Hizmet uç noktası, bağlama ve sözleşme için mutlak bir adres, istemci uç nokta yapılandırması oluşur. Bağlama istemci kimlik doğrulama modu ve uygun güvenlik modu ile yapılandırılır. Bilgisayarlar arası senaryoda çalıştırırken, hizmet uç noktası adresi buna göre değişir emin olun.  
+ İstemci uç nokta yapılandırması mutlak bir adres için hizmet uç noktası, bağlama ve sözleşmenin oluşur. Bağlama istemci kimlik doğrulama modu ve uygun güvenlik modu ile yapılandırılır. Bilgisayarlar arası senaryoda çalıştırırken, hizmet uç noktası adresinin uygun şekilde değiştirilir emin olun.  
   
 ```xml  
 <system.serviceModel>  
@@ -145,7 +145,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- İstemci uygulaması, yapılandırma dosyası veya kod aracılığıyla kullanmak üzere sertifika ayarlayabilirsiniz. Aşağıdaki örnek yapılandırma dosyasında kullanmak üzere sertifikayı nasıl kurulur gösterir.  
+ İstemci uygulaması yapılandırma dosyası veya kod yoluyla kullanmak için sertifika ayarlayabilirsiniz. Aşağıdaki örnek, yapılandırma dosyasında kullanmak üzere sertifikayı ayarlama işlemi gösterilmektedir.  
   
 ```xml  
 <system.serviceModel>  
@@ -180,7 +180,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Aşağıdaki örnek, programınıza hizmeti çağırmak nasıl gösterir.  
+ Aşağıdaki örnek, programınızda hizmeti çağırmak amacıyla gösterilmiştir.  
 
 ```csharp
 // Create a client.  
@@ -193,7 +193,7 @@ Console.WriteLine(client.GetCallerIdentity());
 client.Close();  
 ```
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 CN=client.com  
@@ -204,11 +204,11 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- İleti güvenliği örnekleriyle dahil Setup.bat toplu iş dosyası, istemci ve sunucu ile ilgili sertifikalar sertifika tabanlı güvenlik gerektiren barındırılan bir uygulamayı çalıştırmak için yapılandırmanıza olanak verir. Toplu iş dosyası üç modda çalıştırabilirsiniz. Tek bilgisayar modu türü çalıştırmak için **setup.bat** hizmet modu türü için bir Visual Studio komut istemi içinde; **setup.bat hizmet**; ve istemci modu türü için **setup.bat istemci** . İstemci ve sunucu modu örnek bilgisayarlar arasında çalıştırırken kullanın. Ayrıntılar için bu konunun sonundaki Kurulum yordamına bakın. Aşağıdakiler, böylece uygun yapılandırmada çalışacak biçimde değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:  
+ İle ileti güvenliği örnekleri dahil Setup.bat toplu iş dosyası istemci ve sunucu sertifika tabanlı güvenlik gerektiren barındırılan bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmanızı sağlar. Toplu iş dosyası üç modda çalıştırabilirsiniz. Tek bilgisayarlı modu türü çalıştırılacak **setup.bat** içinde bir Visual Studio komut istemi; hizmet modu türünün **setup.bat hizmet**; istemci modu türü **setup.bat istemci** . Örnek bilgisayarlarınızda çalışan istemci ve sunucu modu kullanın. Ayrıntılar için bu konunun sonunda Kurulum yordamına bakın. Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:  
   
--   İstemci sertifikası oluşturma.  
+-   İstemci sertifikası oluşturuluyor.  
   
-     Toplu iş dosyasında aşağıdaki satırı istemci sertifikası oluşturur. Belirtilen istemci adı oluşturulan sertifika konu adı kullanılır. Sertifika depolandığı `My` adresindeki depolamak `CurrentUser` depolama konumu.  
+     Toplu iş dosyasında aşağıdaki satırı, istemci sertifikası oluşturur. Belirtilen istemci adı, oluşturulan sertifikanın konu adı kullanılır. Sertifika depolandığı `My` konumunda depolamak `CurrentUser` depolama konumu.  
   
     ```bat
     echo ************  
@@ -217,9 +217,9 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   İstemci sertifikası, sunucu güvenilen sertifika deposuna yükleme.  
+-   İstemci sertifikası sunucu güvenilen sertifika depolama alanına yükleme.  
   
-     Toplu dosya kopyalarını aşağıdaki satırda sunucunun TrustedPeople içine istemci sertifikası sunucu ilgili güven veya no güven kararları yapabilmek depolar. Bir Windows Communication Foundation (WCF) hizmeti tarafından güvenilmesi için sırayla TrustedPeople deposunda yüklü bir sertifika için istemci sertifikası doğrulama modu ayarlamak `PeerOrChainTrust` veya `PeerTrust`. Önceki hizmet yapılandırma örneği nasıl bu yapılandırma dosyası kullanarak yapılabilir bilgi edinmek için bkz.  
+     Toplu dosya kopyalarını aşağıdaki satırda sunucunun TrustedPeople istemci sertifikayı sunucu ilgili güveni veya no güven kararları yapabilmeleri için depolar. Bir Windows Communication Foundation (WCF) hizmeti tarafından güvenilmesi için sırayla TrustedPeople depoda yüklü bir sertifika için istemci sertifikası doğrulama modu ayarlamak `PeerOrChainTrust` veya `PeerTrust`. Nasıl bu yapılandırma dosyası kullanılarak yapılabilir bilgi edinmek için önceki hizmet yapılandırma örneğine bakın.  
   
     ```bat
     echo ************  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate client.
   
 -   Sunucu sertifikası oluşturuluyor.  
   
-     Aşağıdaki satırları Setup.bat toplu iş dosyasından kullanılacak sunucu sertifikası oluşturun.  
+     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun.  
   
     ```bat
     echo ************  
@@ -242,11 +242,11 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     % Sunucu_adı % değişkeni sunucusunun adını belirtir. Sertifika saklanır LocalMachine deposundaki. Bir hizmet bağımsız değişkeniyle Setup.bat toplu iş dosyası çalıştırırsanız (gibi **setup.bat hizmet**) sunucu_adı % bilgisayarın tam etki alanı adını içerir. Aksi takdirde localhost için varsayılan olarak.  
+     % Sunucu_adı % değişkeni, sunucu adını belirtir. Depolanmış bir sertifikayla LocalMachine depolama. Setup.bat toplu iş dosyasını hizmet bağımsız değişkenlerle çalıştırırsanız (gibi **setup.bat hizmet**) sunucu_adı % bilgisayarın tam etki alanı adını içerir. Aksi takdirde localhost için varsayılan olarak.  
   
--   Sunucu sertifikası istemcinin güvenilen sertifika deposuna yükleme.  
+-   Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.  
   
-     Aşağıdaki satırı sunucu sertifikası istemcinin güvenilir Kişiler deposuna kopyalar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değil çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikasını kökü belirtilmiş bir sertifikanız zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasına sahip istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
+     Aşağıdaki satırı sunucu sertifikası istemcinin güvenilir Kişiler deposuna kopyalar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
@@ -254,7 +254,7 @@ Press <ENTER> to terminate client.
   
 -   Sertifikanın özel anahtarı izin verme.  
   
-     Erişilebilir LocalMachine deposundaki depolanan sunucu sertifikası Setup.bat dosyası aşağıdaki satırları olun [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] çalışan işlem hesabı.  
+     Aşağıdaki satırları Setup.bat dosyasının erişilebilir LocalMachine deposunda depolanır sunucu sertifikayı [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] çalışan işlem hesabı.  
   
     ```bat
     echo ************  
@@ -268,72 +268,72 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  ABD dışındaki kullanıyorsanız Windows İngilizce sürümünü, Setup.bat düzenlemeniz gerekir dosya ve "NT AUTHORITY\NETWORK SERVICE" hesap adı, bölgesel eşdeğerleriyle değiştirin.  
+    >  ABD dışı kullanıyorsanız Windows İngilizce sürümünü, Setup.bat düzenlemeniz gerekir dosya ve "NT AUTHORITY\NETWORK SERVICE" hesap adı, bölgesel eşdeğerleriyle değiştirin.  
   
 > [!NOTE]
->  Bu toplu iş dosyasında kullanılan araçlar, C:\Program Files\Microsoft Visual Studio 8\Common7\tools veya C:\Program Files\Microsoft SDKs\Windows\v6.0\bin bulunur. Bu dizinleri, sistem yolunda biri olmalıdır. Visual Studio yüklüyse, Visual Studio komut istemi açmak için bu dizin yolunuzda almak için en kolay yolu olan. Tıklatın **Başlat**ve ardından **tüm programlar**, **Visual Studio 2012**, **Araçları**. Bu komut istemi zaten yapılandırılmış uygun yolları vardır. Aksi takdirde, uygun dizin yolunu el ile eklemeniz gerekir.  
+>  Bu toplu iş dosyasında kullanılan araçlar, C:\Program Files\Microsoft Visual Studio 8\Common7\tools veya C:\Program Files\Microsoft SDKs\Windows\v6.0\bin yer alır. Bu dizinlerin uygulamasının sistem yolunuzda olmalıdır. Visual Studio yüklü değilse Visual Studio komut istemi açmak için bu dizin yolunuzda almak için en kolay yolu olan. Tıklayın **Başlat**ve ardından **tüm programlar**, **Visual Studio 2012**, **Araçları**. Bu komut istemi zaten yapılandırılmış uygun yolları vardır. Aksi takdirde, uygun dizin yolunuza el ile eklemeniz gerekir.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetle:  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin için denetleyin:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur:  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-### <a name="to-run-the-sample-on-the-same-computer"></a>Aynı bilgisayara örneği çalıştırmak için  
+### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli tüm sertifikalar yükler.  
+1.  Yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, Visual Studio komut isteminden çalıştırılması için tasarlanmıştır. Path ortam değişkeni SDK yüklendiği dizinine işaret etmesini gerektirir. Bu ortam değişkenine bir Visual Studio komut istemi içinde (2010) otomatik olarak ayarlanır.  
+    >  Setup.bat toplu iş dosyası, bir Visual Studio komut isteminden çalıştırılması için tasarlanmıştır. Bu, path ortam değişkenine'nın SDK'ın yüklendiği dizini gösterecek gerektirir. Bu ortam değişkeni, bir Visual Studio komut istemi içinde (2010) otomatik olarak ayarlanır.  
   
-2.  Hizmeti adresini girerek bir tarayıcı kullanarak erişimi doğrulamak `http://localhost/servicemodelsamples/service.svc`.  
+2.  Adresini girerek bir tarayıcı kullanarak hizmetine erişiminizi doğrulayın `http://localhost/servicemodelsamples/service.svc`.  
   
-3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet bilgisayarda bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı bir sanal uygulama oluşturun.  
+1.  Hizmet bilgisayarda bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı sanal bir uygulama oluşturun.  
   
-2.  Hizmet program dosyalarını \inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında sanal dizinine kopyalayın. \Bin alt dizinindeki dosyaları kopyalayın emin olun. Ayrıca Setup.bat, Cleanup.bat ve ImportClientCert.bat dosyaları hizmet bilgisayara kopyalayın.  
+2.  Hizmet program dosyaları \inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında sanal dizinine kopyalayın. Dosyaları \bin alt dizinde kopyalama emin olun. Ayrıca hizmet bilgisayara Setup.bat Cleanup.bat ve ImportClientCert.bat dosyaları kopyalayın.  
   
-3.  İstemci ikili dosyalarının için istemci bilgisayarda bir dizin oluşturun.  
+3.  İstemci ikili dosyaları için istemci bilgisayarda bir dizin oluşturun.  
   
-4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Ayrıca istemciye Setup.bat, Cleanup.bat ve ImportServiceCert.bat dosyalarını kopyalayın.  
+4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucu üzerinde çalışan **setup.bat hizmet** yönetici ayrıcalıklarına sahip bir Visual Studio komut istemindeki. Çalışan **setup.bat** ile **hizmet** bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya aktarır.  
+5.  Sunucu üzerinde çalışan **setup.bat hizmet** yönetici ayrıcalıklarına sahip bir Visual Studio komut isteminde. Çalışan **setup.bat** ile **hizmet** bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
-6.  Web.config dosyasını yeni sertifika yansıtacak şekilde düzenleyin (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) bilgisayarın tam etki alanı adı ile aynı olduğu.  
+6.  Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) bilgisayarın tam etki alanı adıyla aynı olduğu.  
   
-7.  Service.cer dosya hizmeti dizininden istemci bilgisayarda istemci dizinine kopyalayın.  
+7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-8.  İstemci üzerinde çalışan **setup.bat istemci** yönetici ayrıcalıklarına sahip bir Visual Studio komut istemindeki. Çalışan **setup.bat** ile **istemci** bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya aktarır.  
+8.  Bir istemcide çalışmasına **setup.bat istemci** yönetici ayrıcalıklarına sahip bir Visual Studio komut isteminde. Çalışan **setup.bat** ile **istemci** bağımsız değişkeni client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client.cer adlı bir dosyaya dışarı aktarır.  
   
-9. İstemci bilgisayardaki Client.exe.config dosyasında yeni adresi hizmetinizin eşleştirmek için uç nokta adresi değerini değiştirin. Sunucunun tam etki alanı adı ile localhost değiştirerek bunu.  
+9. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Localhost sunucunun tam etki alanı adıyla değiştirerek bunu.  
   
-10. Client.cer dosyasını istemci dizininden sunucusunda hizmet dizinine kopyalayın.  
+10. Client.cer dosyayı istemci dizin sunucusundaki hizmet dizinine kopyalayın.  
   
-11. İstemcide ImportServiceCert.bat Visual Studio komut istemini yönetici ayrıcalıklarıyla çalıştırın. Bu hizmet sertifikası Service.cer dosyadan Currentuser'a - TrustedPeople deposunu alır.  
+11. İstemcide ImportServiceCert.bat bir Visual Studio komut istemini yönetici ayrıcalıklarıyla çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-12. Sunucu üzerinde ImportClientCert.bat Visual Studio komut istemini yönetici ayrıcalıklarıyla çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposunda Client.cer dosyadan alır.  
+12. Sunucu üzerinde yönetici ayrıcalıklarına sahip bir Visual Studio komut istemi ImportClientCert.bat çalıştırın. Bu istemci sertifikası LocalMachine - TrustedPeople deposu Client.cer dosyasından alır.  
   
-13. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Örnek çalıştıran bitirdikten sonra Cleanup.bat samples klasöründen çalıştırın.  
+-   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

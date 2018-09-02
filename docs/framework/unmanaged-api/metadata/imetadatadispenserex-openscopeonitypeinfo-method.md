@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446029"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456538"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo Yöntemi
-Bu yöntem uygulanmadı. Adlı E_NOTIMPL döndürür.  
+Bu yöntem uygulanmadı. Çağrılırsa E_NOTIMPL döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,23 +40,23 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>Parametreler  
  `pITI`  
- [in] İşaretçi bir [ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680) kapsamı açmak hangi tür bilgileri sağlayan arabirimi.  
+ [in] İşaretçi bir [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) kapsamı açmak tür bilgileri sağlayan arabirimi.  
   
  `dwOpenFlags`  
  [in] Açık mod bayrakları.  
   
  `riid`  
- [in] İstenen arabirimi.  
+ [in] İstenen arabirim.  
   
  `ppIUnk`  
- [out] Döndürülen arayüzü için bir işaretçi işaretçi.  
+ [out] Döndürülen arabirim işaretçisi için işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platform:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Başlık:** Cor.h  
   
- **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılır  
+ **Kitaplığı:** MsCorEE.dll kaynak olarak kullanılan  
   
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

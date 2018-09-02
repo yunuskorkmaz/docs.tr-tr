@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 76c2c27d4575918bb2ed4209a7ff7d2b0517b6f1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: c9fb03560e30bab3cc71a6171c731d887e859f6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960504"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423588"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 `out` Anahtar sözcüğü, başvuruya göre geçirilecek bağımsız değişkenleri neden olur. Nasıl olduğunu [ref](ref.md) hariç anahtar sözcüğü `ref` kendisine geçirilen önce değişkenin başlatılması gerekir. Aynı zamanda gibi olan [içinde](in-parameter-modifier.md) hariç anahtar sözcüğü `in` çağrılan yöntem bağımsız değişken değerini değiştirmek izin vermez. Kullanılacak bir `out` parametresi, yöntem tanımının hem yöntemi çağrılırken açıkça kullanmalıdır `out` anahtar sözcüğü. Örneğin:  
@@ -55,7 +55,7 @@ Derleyici, yöntem çağrısında kullanılan parametre değiştiriciler çağr�
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [Deneyin deseni](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) döndüren içerir bir `bool` bir işlem başarılı ve başarısız oldu ve değer döndürüyor üretilen işlemde tarafından olup olmadığını belirtmek için bir `out` bağımsız değişken. Bir sayı gibi yöntemleri ayrıştırma [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) yöntemi, bu düzeni kullanın.
+ [Deneyin deseni](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) döndüren içerir bir `bool` bir işlemi başarılı veya başarısız, hem değer döndürüyor üretilen işlemde tarafından belirtmenize olanak bir `out` bağımsız değişken. Bir sayı gibi yöntemleri ayrıştırma [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) yöntemi, bu düzeni kullanın.
    
 ## <a name="calling-a-method-with-an-out-argument"></a>Bir yöntemi çağırmak bir `out` bağımsız değişken
 
@@ -74,8 +74,9 @@ C# 7.0 ile başlayarak, bildirebilirsiniz `out` değişkeni yöntem çağrısın
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
- [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)  
+- [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)

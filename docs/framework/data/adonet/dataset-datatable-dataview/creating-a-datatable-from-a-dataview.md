@@ -1,26 +1,26 @@
 ---
-title: DataView nesnesinden DataTable oluşturma
+title: Dataview'den DataTable oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757066"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418758"
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a>DataView nesnesinden DataTable oluşturma
-Verileri veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> veriler, sıralama, filtre ya da aksi takdirde döndürülen verileri yeniden alma olmadan sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bu olanaklı kılar. Ayrıca, yeni bir oluşturmanız gerekiyorsa <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları ya da bir veri alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı sağlar:  
+# <a name="creating-a-datatable-from-a-dataview"></a>Dataview'den DataTable oluşturma
+Verileri bir veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> verilerle, sıralama, filtreleme veya aksi halde tekrar almadan döndürülen verileri sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün kılar. Ayrıca, yeni bir oluşturmanız gerekir, <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları veya verilerin bir alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yüklemeler sağlar:  
   
--   Oluşturma bir <xref:System.Data.DataTable> içeren bir sütun alt kümesi olan sütunları <xref:System.Data.DataView>.  
+-   Oluşturma bir <xref:System.Data.DataTable> sütunların bir alt kümesi olan sütunlar içeren <xref:System.Data.DataView>.  
   
--   Oluşturma bir <xref:System.Data.DataTable> yalnızca farklı satırları içeren <xref:System.Data.DataView>, Transact-SQL DISTINCT anahtar sözcüğü analogously için.  
+-   Oluşturma bir <xref:System.Data.DataTable> yalnızca ayrı satırları içeren <xref:System.Data.DataView>, Transact-SQL'de DISTINCT anahtar sözcüğüne öğesine için.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması örnekte bir <xref:System.Data.DataTable> verileri içeren **Person.Contact** tablosundaki **AdventureWorks** örnek veritabanı. Ardından, örnek bir sıralanmış oluşturur ve filtrelenmiş <xref:System.Data.DataView> göre <xref:System.Data.DataTable>. İçeriğini görüntüleme sonra <xref:System.Data.DataTable> ve <xref:System.Data.DataView>, yeni bir örnek oluşturur <xref:System.Data.DataTable> gelen <xref:System.Data.DataView> çağırarak <xref:System.Data.DataView.ToTable%2A> yöntemi, yalnızca bir sütun alt kümesi kullanılabilir seçme. Son olarak, örneğin yeni içeriğini görüntüler <xref:System.Data.DataTable>.  
+ Aşağıdaki konsol uygulama örneği oluşturur bir <xref:System.Data.DataTable> verileri içeren **Person.Contact** tablosundaki **AdventureWorks** örnek veritabanı. Ardından, örnek bir sıralanmış oluşturur ve filtrelenmiş <xref:System.Data.DataView> göre <xref:System.Data.DataTable>. İçeriğini görüntüleme sonra <xref:System.Data.DataTable> ve <xref:System.Data.DataView>, yeni bir örnek oluşturur <xref:System.Data.DataTable> gelen <xref:System.Data.DataView> çağırarak <xref:System.Data.DataView.ToTable%2A> kullanılabilir sütunların yalnızca bir alt seçme yöntemi. Son olarak, örnek yeni içeriğini görüntüler <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Data.DataView.ToTable%2A>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

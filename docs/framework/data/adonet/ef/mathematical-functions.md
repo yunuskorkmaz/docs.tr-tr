@@ -2,49 +2,390 @@
 title: Matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766978"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456457"
 ---
 # <a name="mathematical-functions"></a>Matematik işlevleri
-SQL Server (SqlClient) için .NET Framework veri sağlayıcısı bağımsız değişken olarak sağlanır ve bir sayısal değer sonuç giriş değerleri hesaplamalar matematik işlevleri sağlar. Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir. Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient matematik işlevleri açıklanmaktadır.  
+
+SQL Server (SqlClient) için .NET Framework veri sağlayıcısı, bağımsız değişken olarak sağlanır ve bir sayısal değer sonuç giriş değerleri üzerinde hesaplamalar matematik işlevleri sağlar. Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır. Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient matematik işlevleri açıklanmaktadır.  
   
-|İşlev|Açıklama|  
-|--------------|-----------------|  
-|`ABS(` `expression` `)`|Mutlak değerini işlevi gerçekleştirir.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen ifade mutlak değeri.<br /><br /> **Örnek**<br /><br /> `SqlServer.ABS(-2)`|  
-|`ACOS(` `expression` `)`|Belirtilen ifade arkkosinüsünü değerini döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.ACOS(.9)`|  
-|`ASIN(` `expression` `)`|Belirtilen ifade arksinüsünü değerini döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.ASIN(.9)`|  
-|`ATAN(` `expression` `)`|Belirtilen sayısal ifade arktanjantını değerini döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.ATAN(9)`|  
-|`ATN2(` `expression`, `expression``)`|Tanjantı arasında iki belirtilen sayısal ifadeye olduğu radyan cinsinden açı döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.ATN2(9, 8)`|  
-|`CEILING(` `expression` `)`|Belirtilen ifade büyük veya ona eşit en küçük tamsayı dönüştürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]|  
-|`COS(` `expression` `)`|Trigonometrik radyan cinsinden belirtilen açının kosinüsünü hesaplar.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.COS(45)`|  
-|`COT(` `expression` `)`|Trigonometrik kotanjantını radyan cinsinden belirtilen açının hesaplar.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.COT(60)`|  
-|`DEGREES(` `radians` `)`|Karşılık gelen açıyı derece cinsinden döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Örnek**<br /><br /> `SqlServer.DEGREES(3.1)`|  
-|`EXP(` `expression` `)`|Belirtilen bir sayısal ifade üstel değerini hesaplar.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.EXP(1)`|  
-|`FLOOR(` `expression` `)`|Belirtilen ifadenin en büyük tamsayı daha az eşit veya onu dönüştürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]|  
-|`LOG(` `expression` `)`|Belirtilen doğal logaritmasını hesaplar `float` ifade.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.LOG(100)`|  
-|`LOG10(` `expression` `)`|Belirtilen 10 tabanında logaritmasını döndürür `Double` ifade.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.LOG10(100)`|  
-|`PI()`|Sabit değer pi'nin döndürür bir `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.PI()`|  
-|`POWER(` `numeric_expression, power_expression` `)`|Belirtilen güç için belirtilen bir ifadenin değerini hesaplar.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `numeric_expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> `power_expression`: Bir `Double` yükseltmek için gücünü temsil eden `numeric_expression`.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen değeri `numeric_expression` belirtilen `power_expression`.<br /><br /> **Örnek**<br /><br /> `SqlServer.POWER(2,7)`|  
-|`RADIANS(` `expression` `)`|Derece radyan için dönüştürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`, `Int64`,<br /><br /> `Double`, veya<br /><br /> `Decimal`.<br /><br /> **Örnek**<br /><br /> `SqlServer.RADIANS(360.0)`|  
-|`RAND(`[Temel]`)`|0 ile 1 arasında rastgele bir değeri döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> Retruns Çekirdek değer olarak bir `Int32`. Çekirdek değer belirtilmezse, SQL Server veritabanı altyapısı bir çekirdek değer rastgele atar. İçin belirtilen çekirdek değer, döndürülen sonuç her zaman aynıdır.<br /><br /> **Dönüş değeri**<br /><br /> Bir rastgele `Double` 0 ile 1 arasında bir değer.<br /><br /> **Örnek**<br /><br /> `SqlServer.RAND()`|  
-|`ROUND(` `numeric_expression, length` [ ,`function` ]`)`|Belirtilen uzunluk veya duyarlık yuvarlanmasını sayısal bir ifade döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `numeric_expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> `length`: Bir `Int32` duyarlık olduğu temsil eden `numeric_expression` yuvarlanmasını sağlamaktır. Zaman `length` pozitif bir sayı olan `numeric_expression` tarafından belirtilen ondalık konumlar sayısına yuvarlanır `length`. Zaman `length` negatif bir sayı `numeric_expression` tarafından belirtilen Ondalık ayırıcının sol tarafındaki yuvarlanır `length`.<br /><br /> `function`: (isteğe bağlı) bir `Int32` işlemi gerçekleştirmek için türünü temsil eder. İşlevi atlanmış veya 0 (varsayılan) değerine sahip olduğunda `numeric_expression` yuvarlanır. 0 dışında bir değer belirtilirse, `numeric_expression` kesilir.<br /><br /> **Dönüş değeri**<br /><br /> Belirtilen değeri `numeric_expression` belirtilen `power_expression`.<br /><br /> **Örnek**<br /><br /> `SqlServer.ROUND(748.58, -3)`|  
-|`SIGN(` `expression` `)`|Artı (+ 1), sıfır (0) veya belirtilen ifadenin eksi (-1) işareti döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: `Int32`, `Int64`, `Double`, veya `Decimal`<br /><br /> **Dönüş değeri**<br /><br /> Bir `Int32`, `Int64`, `Double`, veya `Decimal`.<br /><br /> **Örnek**<br /><br /> `SqlServer.SIGN(-10)`|  
-|`SIN(` `expression` `)`|Trigonometrik radyan cinsinden belirtilen açının sinüsünü hesaplar ve döndüren bir `Double` ifade.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.SIN(20)`|  
-|`SQRT(` `expression` `)`|Belirtilen ifade'nin kare kökünü döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.SQRT(3600)`|  
-|`SQUARE(` `expression` `)`|Belirtilen ifadenin kare döndürür.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: BİR `Double`.<br /><br /> **Dönüş değeri**<br /><br /> A `Double`.<br /><br /> **Örnek**<br /><br /> `SqlServer.SQUARE(25)`|  
-|`TAN(` `expression` `)`|Belirtilen ifadeye tanjantını hesaplar.<br /><br /> **Bağımsız Değişkenler**<br /><br /> `expression`: `Double`<br /><br /> **Dönüş değeri**<br /><br /> `Double`<br /><br /> **Örnek**<br /><br /> `SqlServer.TAN(45.0)`|  
+## <a name="absexpression"></a>Abs(Expression)
+
+Mutlak değeri işlevi görür.
+
+**Bağımsız Değişkenler**
+
+`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.
+
+**Dönüş değeri**
+
+Belirtilen ifadenin mutlak değeri.
+
+**Örnek**
+
+`SqlServer.ABS(-2)`
+
+## <a name="acosexpression"></a>ACOS(Expression)
+
+Belirtilen ifade arkkosinüsünü değerini döndürür.
+
+**Bağımsız Değişkenler**
+
+`expression`: BİR `Double`.
+
+**Dönüş değeri**
+
+A `Double`.
+
+**Örnek**
+
+`SqlServer.ACOS(.9)`
+
+## <a name="asinexpression"></a>ASIN(Expression)
+
+Belirtilen ifade arksinüsünü değerini döndürür.
+
+**Bağımsız Değişkenler**
+
+`expression`: BİR `Double`.
+
+**Dönüş değeri**
+
+A `Double`.
+
+**Örnek**
+
+`SqlServer.ASIN(.9)`
+
+## <a name="atanexpression"></a>ATAN(Expression)
+
+Belirtilen sayısal ifade arktanjantını değerini döndürür.
+
+**Bağımsız Değişkenler**
+
+`expression`: BİR `Double`.
+
+**Dönüş değeri**
+
+A `Double`.
+
+**Örnek**
+
+`SqlServer.ATAN(9)`
+
+## <a name="atn2expression-expression"></a>ATN2(Expression, Expression)
+
+Radyan cinsinden tanjantı iki belirli sayısal ifade olan açıyı döndürür.
+
+**Bağımsız Değişkenler**
+
+`expression`: BİR `Double`.
+
+**Dönüş değeri**
+
+A `Double`.
+
+**Örnek**
+
+`SqlServer.ATN2(9, 8)`
+ 
+## <a name="ceilingexpression"></a>CEILING(Expression)
+
+Belirtilen ifade değerinden büyük veya ona eşit olan en küçük tamsayı dönüştürür.
+
+**Bağımsız Değişkenler**
+
+`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.
+
+**Dönüş değeri**
+
+Bir `Int32`, `Int64`, `Double`, veya `Decimal`.
+
+**Örnek** 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
+
+## <a name="cosexpression"></a>COS(Expression)
+
+Trigonometrik radyan cinsinden belirtilen bir açının kosinüsünü hesaplar. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.COS(45)`
+
+## <a name="cotexpression"></a>COT(Expression)
+
+Trigonometrik radyan cinsinden belirtilen bir açının kotanjantını hesaplar. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.COT(60)`
   
- SqlClient destekleyen matematik işlevleri hakkında daha fazla bilgi için SqlClient sağlayıcısı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:  
+## <a name="degreesradians"></a>DEGREES(radians)
+
+Karşılık gelen açıyı derece cinsinden döndürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+
+**Dönüş değeri** 
+
+Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+
+**Örnek** 
+
+`SqlServer.DEGREES(3.1)`
+
+## <a name="expexpression"></a>EXP(Expression)
+
+Belirtilen bir sayısal ifade üs değerini hesaplar. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** `SqlServer.EXP(1)`
+
+## <a name="floorexpression"></a>FLOOR(Expression)
+
+Belirtilen ifadedeki en büyük tamsayı daha az veya eşit ona dönüştürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
+
+## <a name="logexpression"></a>LOG(Expression)
+
+Belirtilen doğal logaritmasını hesaplar `float` ifade. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.LOG(100)`
+
+## <a name="log10expression"></a>Log10(Expression)
+
+Belirtilen 10 tabanında logaritmasını döndürür `Double` ifade. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.LOG10(100)`
+
+## <a name="pi"></a>PI()
+
+Sabit değer pi'nin döndürür bir `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.PI()`
+
+## <a name="powernumericexpression-powerexpression"></a>GÜÇ (numeric_expression, power_expression)
+
+Belirtilen bir ifadenin belirtilen bir kuvvete değerini hesaplar.
+
+**Bağımsız Değişkenler** 
+
+|  |  |
+|--|--|
+|`numeric_expression`| Bir `Int32`, `Int64`, `Double`, veya `Decimal`.|
+|`power_expression`| A `Double` yükseltmek istediğiniz gücünü temsil eden `numeric_expression`.| 
+
+**Dönüş değeri** 
+
+Belirtilen değeri `numeric_expression` belirtilen `power_expression`. 
+
+**Örnek** 
+
+`SqlServer.POWER(2,7)`
+
+## <a name="radiansexpression"></a>RADIANS(Expression)
+
+Dereceyi radyana dönüştürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+
+**Dönüş değeri** 
+
+Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+
+**Örnek** 
+
+`SqlServer.RADIANS(360.0)`
+
+## <a name="randseed"></a>RAND([seed])
+
+0 ile 1 arasında rastgele bir değer döndürür. 
+
+**Bağımsız Değişkenler** 
+
+Çekirdek değeri olarak bir `Int32`. Çekirdek değer belirtilmemişse, SQL Server veritabanı altyapısı rastgele bir tohum değeri atar. Belirtilen çekirdek değeri için döndürülen sonuç her zaman aynıdır.
+
+**Dönüş değeri** 
+
+Rastgele bir sıra `Double` 0 ile 1 arasında bir değer. 
+
+**Örnek** 
+
+`SqlServer.RAND()`
   
-|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
-|---------------------|---------------------|---------------------|  
-|[Matematik işlevleri (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115913)|[Matematik işlevleri (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115911)|[Matematik işlevleri (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115912)|  
+## <a name="roundnumericexpression-lengthfunction"></a>ROUND(numeric_expression, length[,Function])
+
+Belirtilen uzunluk veya duyarlık yuvarlak bir sayısal ifade döndürür. 
+
+**Bağımsız Değişkenler** 
+
+|  |  |
+|--|--|
+|`numeric_expression`| Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+|`length`| Bir `Int32` duyarlık olduğu temsil eden `numeric_expression` yuvarlanmasını sağlamaktır. Zaman `length` pozitif bir sayı `numeric_expression` tarafından belirtilen ondalık basamak sayısına yuvarlanır `length`. Zaman `length` negatif bir sayı `numeric_expression` belirtildiği gibi Ondalık ayırıcının sol tarafındaki yuvarlanır `length`.|
+|`function` | İsteğe bağlı. Bir `Int32` gerçekleştirilecek işlem türünü temsil eder. İşlev atlanırsa veya 0 (varsayılan), değeri `numeric_expression` yuvarlanır. 0 dışında bir değer belirtilirse, `numeric_expression` kesilir. |
+
+**Dönüş değeri** 
+
+Belirtilen değeri `numeric_expression` belirtilen `power_expression`.
+
+**Örnek** 
+
+`SqlServer.ROUND(748.58, -3)`
+
+## <a name="signexpression"></a>SIGN(Expression) 
+
+(+ 1) pozitif, sıfır (0) veya eksi (-1) belirtilen ifade döndürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: `Int32`, `Int64`, `Double`, veya `Decimal` 
+
+**Dönüş değeri** 
+
+Bir `Int32`, `Int64`, `Double`, veya `Decimal`. 
+
+**Örnek** 
+
+`SqlServer.SIGN(-10)`
+
+## <a name="sinexpression"></a>SIN(Expression)
+
+Trigonometrik radyan cinsinden belirtilen bir açının sinüsünü hesaplar ve döndürür bir `Double` ifade. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** `SqlServer.SIN(20)`
+
+## <a name="sqrtexpression"></a>Sqrt(Expression)
+
+Belirtilen ifadenin kare kökünü döndürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** `SqlServer.SQRT(3600)`
+
+## <a name="squareexpression"></a>SQUARE(Expression)
+
+Belirtilen ifade karesini döndürür. 
+
+**Bağımsız Değişkenler** 
+
+`expression`: BİR `Double`. 
+
+**Dönüş değeri** 
+
+A `Double`. 
+
+**Örnek** 
+
+`SqlServer.SQUARE(25)`
+
+## <a name="tanexpression"></a>TAN(Expression)
+
+Belirtilen bir ifade tanjantını hesaplar.
+
+**Bağımsız Değişkenler** 
+
+`expression`: `Double` 
+
+**Dönüş değeri** 
+
+`Double` 
+
+**Örnek** 
+
+`SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Entity Framework için SqlClient İşlevleri](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>Ayrıca bkz.
+
+SqlClient destekleyen matematiksel işlevler hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:  
+  
+**SQL Server 2005:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 ve sonraki sürümler:** [matematik işlevleri (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+
+ [Entity Framework için SqlClient İşlevleri](sqlclient-for-ef-functions.md)

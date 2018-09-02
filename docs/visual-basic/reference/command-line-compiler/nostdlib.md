@@ -9,14 +9,14 @@ ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3764409f13a00f6d8a050bfbdd0f59e537a5ded3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652724"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456298"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-Otomatik olarak standart kitaplıkları değil, başvuru için derleyici neden olur.  
+Standart kitaplıkları otomatik olarak başvuruda bulunmamaya derleyici neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -25,16 +25,16 @@ Otomatik olarak standart kitaplıkları değil, başvuru için derleyici neden o
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nostdlib` Seçeneği otomatik System.dll derleme başvurusu kaldırır ve derleyici Vbc.rsp dosyayı okumasını önler. Vbc.exe dosya ile aynı dizinde bulunan Vbc.rsp dosyasını yaygın olarak kullanılan başvuran [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler ve içeri aktarmalar `System` ve `Microsoft.VisualBasic` ad alanları.  
+ `-nostdlib` Seçeneği System.dll derleme otomatik başvuruyu kaldırır ve derleyici nezahrnovat dosyayı okumasını önler. Yaygın olarak kullanılan Vbc.exe dosyasıyla aynı dizinde bulunan nezahrnovat dosyasını başvuran [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] derlemeler ve içeri aktarmalar `System` ve `Microsoft.VisualBasic` ad alanları.  
   
 > [!NOTE]
->  Her zaman başvurulan Mscorlib.dll ve Microsoft.VisualBasic.dll içinde derlemeler.  
+>  Mscorlib.dll'nin ve Microsoft.VisualBasic.dll'nin derlemeler her zaman başvurulur.  
   
 > [!NOTE]
->  `-nostdlib` Seçeneği Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derlerken kullanılabilir.  
+>  `-nostdlib` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `T2.vb` standart kitaplıkları başvuran olmadan. Ayarlamalısınız `_MYTYPE` koşullu derleme sabiti kaldırmak için "boş" dizeye `My` nesnesi.  
+ Aşağıdaki kod derlenir `T2.vb` standart kitaplıklarına başvuruda bulunan olmadan. Ayarlamalısınız `_MYTYPE` koşullu derleme sabiti'kaldırmak için "boş" dizeye `My` nesne.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

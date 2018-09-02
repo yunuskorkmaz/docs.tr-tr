@@ -8,52 +8,52 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 3df8f6eaee72ebdd6cbd03d0bdfde5a7d2270129
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526536"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419208"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
-Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Windows Forms özel denetimlerinde Yardım dosyası içindeki Yardım konuları iliştirmek için bileşen. Yardım dosyası HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
+Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları için bir Yardım dosyası içinde Windows Forms özel denetimlerinde eklemeye bileşeni. Yardım dosyasında, HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-provide-help"></a>Yardım almak için  
   
-1.  Gelen **araç**, sürükleyin bir <xref:System.Windows.Forms.HelpProvider> formunuza bileşen.  
+1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.HelpProvider> formunuza bileşen.  
   
-     Bileşen Windows Form Tasarımcısı sonundaki tepsisinde yer alacaktır.  
+     Bileşen Tepsisi Windows Form Tasarımcısı'nın altındaki yer alacaktır.  
   
-2.  İçinde **özellikleri** penceresindeki ayarlayın <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> .chm, .col veya .htm Yardım dosyasına özelliği.  
+2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliğini .chm, .col veya .htm Yardım dosya.  
   
-3.  Başka bir denetim formunuzda vardır ve buna seçin **özellikleri** penceresindeki ayarlayın <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> özelliği.  
+3.  Formunuzda kullandığınız ve buna başka bir denetim seçin **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> özelliği.  
   
-     Bu geçtiğini dizedir <xref:System.Windows.Forms.HelpProvider> uygun Yardım konusunu Göndereceğim için Yardım dosyasına bileşen.  
+     Geçirilen dize budur <xref:System.Windows.Forms.HelpProvider> Yardım dosyanıza uygun bir Yardım konusuna Göndereceğim bileşen.  
   
-4.  İçinde **özellikleri** penceresindeki ayarlayın <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> değerini özelliğine <xref:System.Windows.Forms.HelpNavigator> numaralandırması.  
+4.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> bir değere <xref:System.Windows.Forms.HelpNavigator> sabit listesi.  
   
-     Bu şekilde belirler **HelpKeyword** özelliği Yardım sistemine geçirilir. Aşağıdaki tabloda olası ayarlar ve açıklamaları gösterilmektedir.  
+     Bu yolla belirler **HelpKeyword** özelliği Yardım sistemine geçirilir. Aşağıdaki tabloda, olası ayarlar ve açıklamalarının gösterir.  
   
     |Üye Adı|Açıklama|  
     |-----------------|-----------------|  
-    |AssociateIndex|Belirtilen bir konu için dizin belirtilen URL'de gerçekleştirildiğini belirtir.|  
-    |Bul|Belirtilen URL'ın arama sayfası görüntüleneceğini belirtir.|  
+    |AssociateIndex|Belirtilen bir konu için bir dizin belirtilen URL'de yapılacağını belirtir.|  
+    |Bul|Belirtilen URL'nin arama sayfası görüntüleneceğini belirtir.|  
     |Dizin|Belirtilen URL dizinini görüntüleneceğini belirtir.|  
-    |KeywordIndex|Aranacak anahtar sözcüğü ve belirtilen URL'de gerçekleştirilecek eylemi belirtir.|  
-    |TableOfContents|HTML 1.0 Yardım dosyasının içindekileri görüntüleneceğini belirtir.|  
+    |KeywordIndex|Aramak için bir anahtar sözcüğü ve belirtilen URL'de gerçekleştirilecek eylemi belirtir.|  
+    |TableOfContents|1.0 HTML Yardım dosyasının İçindekiler görüntüleneceğini belirtir.|  
     |Konu|Belirtilen URL tarafından başvurulan konu görüntüleneceğini belirtir.|  
   
- Çalışma zamanında F1 tuşuna basarak olduğunda denetim —, ayarladığınız için **HelpKeyword** ve **HelpNavigator** özellikleri — sahip odak ile ilgili Yardım dosyası açılır <xref:System.Windows.Forms.HelpProvider> bileşeni.  
+ F1 tuşuna basarak çalışma zamanında olduğunda denetimi — hangi ayarladığınız için **HelpKeyword** ve **HelpNavigator** özellikleri — sahip odak ile ilişkili Yardım dosyasını açtığınızda <xref:System.Windows.Forms.HelpProvider> bileşeni.  
   
- Şu anda **HelpNamespace** özelliği Yardım dosyaları üç aşağıdaki biçimlerde destekler: HTMLHelp 1.x, HTMLHelp 2.0 ve HTML. Bu nedenle, ayarlayabileceğiniz **HelpNamespace** bir Web sayfası gibi bir http:// adresi özelliğine. Bu yapıldığında, içinde belirtilen dize içeren Web sayfasına varsayılan tarayıcı açılır **HelpKeyword** bağlantı kullanılan özellik. Bağlantı, bir HTML sayfasında belirli bir kısmını atlamak için kullanılır.  
+ Şu anda **HelpNamespace** özelliği Yardım dosyalarını aşağıdaki üç formatta destekler: HTMLHelp 1.x HTMLHelp 2.0 ve HTML. Bu nedenle, ayarlayabileceğiniz **HelpNamespace** özelliği için bir Web sayfası gibi bir http:// adresi. Bu yapıldığında, içinde belirtilen dize ile Web sayfası için varsayılan tarayıcı açılır **HelpKeyword** yer işareti kullanılan özellik. Bağlantı, belirli bir parçası için bir HTML sayfasına atlamak için kullanılır.  
   
 > [!IMPORTANT]
->  Uygulamanızda kullanmadan önce bir istemciden gönderilen herhangi bir bilgi denetlemek dikkatli olun. Kötü niyetli kullanıcılar veya yürütülebilir komut dosyası, SQL deyimlerini veya başka bir kod ekleme göndermeye. Bir kullanıcının giriş görüntülemek, bir veritabanında saklamak veya çalışma önce olmayabilecek bilgi içermiyor denetleyin. Bir normal şekilde anahtar sözcükler "Komut dosyası" gibi bir kullanıcıdan giriş aldığınızda aramak için normal bir ifade kullanmaktır.  
+>  Uygulamanızda kullanmadan önce bir istemciden gönderilen herhangi bir bilgi denetlemek dikkatli olun. Kötü amaçlı kullanıcılara veya yürütülebilir komut dosyası, SQL deyimleri ya da diğer kod ekleme göndermeye. Bir kullanıcının giriş görüntülemek, bir veritabanında saklamak veya onunla çalışan önce olmayabilecek bilgi içermiyor denetleyin. Bir normal bir şekilde denetlemek için anahtar sözcükler "BETİK" gibi bir kullanıcıdan giriş aldığınızda aramak için normal bir ifade kullanmaktır.  
   
- Aynı zamanda <xref:System.Windows.Forms.HelpProvider> , onu Windows Forms denetimleri için Yardım dosyalarını görüntülemek için yapılandırılmış olsa bile açılır Yardım göstermek için bileşeni. Daha fazla bilgi için bkz: [nasıl yapılır: Görüntü açılır Yardım](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Ayrıca <xref:System.Windows.Forms.HelpProvider> açılır Yardım, Yardım dosyaları, Windows Forms'da denetimleri için görüntüleyecek şekilde yapılandırılmış olsa bile göstermek için bileşeni. Daha fazla bilgi için [nasıl yapılır: Görüntü açılır Yardım](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Açılır Yardımı Görüntüleme](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  

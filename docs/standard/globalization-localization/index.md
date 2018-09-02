@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251005"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419153"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamaları Genelleştirme ve yerelleştirme
-Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dillere yerelleştirilmiş bir uygulama da dahil olmak üzere, üç adımdan oluşur: yerelleştirilebilirlik gözden geçirin Genelleştirme ve Yerelleştirme.  
+Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](https://msdn.microsoft.com/goglobal/bb978433.aspx), bir veya daha fazla dile yerelleştirilebilen bir uygulama da dahil olmak üzere, üç adımdan oluşur: genelleştirme, yerelleştirme gözden geçirme ve Yerelleştirme.  
   
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Bu adım kültür ve dil açısından nötr olan ve tüm kullanıcılar için yerelleştirilmiş kullanıcı arabirimleri ve bölgesel verileri destekleyen bir uygulamanın tasarlanması ve kodlanmasını içerir. Tasarım yapma ve kültüre özgü varsayımlara dayalı olmayan kararları programlama ile ilgilidir. Global uygulamalar yerelleştirilmez, ancak daha sonra bir veya birden çok dile görece kolay yerelleştirilebilecek şekilde tasarlanır ve yazılırlar.  
   
- [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik gözden geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
  Bu adım, bir uygulamanın kod ve tasarımının, kolayca yerelleştirilebilir olmasını sağlamak ve yerelleştirme için olası engelleri tanımlamak üzere gözden geçirilmesi ve uygulamanın yürütülebilir kodunun kaynaklarından ayrı olduğunun doğrulanması ile ilgilidir. Genelleştirme aşaması etkili olduysa, yerelleştirme incelemesi, genelleştirme sırasında yapılan tasarım ve kodlama seçimlerini onaylar. Yerelleştirilebilirlik aşaması, bir uygulamanın kaynak kodunu yerelleştirme aşamasında değiştirmek zorunda kalmamanızı sağlayacak şekilde geri kalan sorunları tanımlayabilir.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
@@ -34,28 +34,28 @@ Geliştirme bir [dünya çapında kullanılmaya hazır uygulama](http://msdn.mic
   
  Aşağıdaki üç adımı izlemenin iki avantajı vardır:  
   
--   ABD gibi tek bir kültür desteklemek üzere tasarlanmış bir uygulama yükseltmek zorunda kalmaktan serbest bırakma İngilizce, ek kültürler desteklemek için kullanılır.  
+-   Bu, ABD gibi tek bir kültürü desteklemek için tasarlanan bir uygulama yükseltmek zorunda kalmanızı İngilizce, ek kültürleri desteklemek üzere kullanılır.  
   
 -   Daha kararlı ve daha az hatası olan yerelleştirilmiş uygulamalar olarak sonuçlanır.  
   
- .NET dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamaları geliştirme için kapsamlı destek sağlar. Özellikle, birçok üyeleri .NET sınıf kitaplığı Yardım Genelleştirme kuralları geçerli kullanıcının kültür ya da belirtilen kültür yansıtacak değerleri döndürerek yazın. Ayrıca, .NET uygulama yerelleştirme sürecini kolaylaştırmak uydu derlemelerini destekler.  
+ .NET, dünya çapında kullanılmaya hazır ve yerelleştirilmiş uygulamalar geliştirme için kapsamlı destek sağlar. Özellikle, birçok üyeleri .NET sınıf kitaplığı genelleştirmeye yardım eder geçerli kullanıcının kültür veya belirtilen bir kültürün kurallarını yansıtan değerlerini döndürerek yazın. Ayrıca, .NET, bir uygulamayı yerelleştirme işlemini kolaylaştıran uydu derlemelerini destekler.  
   
- Ek bilgi için bkz: [Genelleştirme belgelerine](/globalization/).  
+ Ek bilgi için bkz: [Genelleştirme belgeleri](/globalization/).  
   
 ## <a name="in-this-section"></a>Bu bölümde  
  [Genelleştirme](../../../docs/standard/globalization-localization/globalization.md)  
  Nötr kültüre ve nötr dile sahip bir uygulama tasarlamayı ve kodlamayı da içeren, dünya çapında kullanılmaya hazır uygulama bir oluşturmanın ilk aşamasını açıklar.  
   
- [Yerelleştirilebilirlik gözden geçirme](../../../docs/standard/globalization-localization/localizability-review.md)  
+ [Yerelleştirilebilirlik gözden geçirmesi](../../../docs/standard/globalization-localization/localizability-review.md)  
  Yerelleştirmede potansiyel bariyerler tanımlamayı da içeren yerelleştirilmiş uygulama oluşturmanın ikinci aşamasını açıklar.  
   
  [Yerelleştirme](../../../docs/standard/globalization-localization/localization.md)  
  Özel bölgeler ve kültürler için bir uygulamanın kullanıcı arabirimini özelleştirmeyi içeren yerelleştirilmiş bir uygulama oluşturmanın son adımını açıklar.  
   
  [Kültüre duyarsız dize işlemleri](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- .NET yöntemleri ve kültüre duyarlı sınıfları kullanmayı açıklar kültüre duyarsız sonuçları elde etmek için varsayılan olarak.  
+ .NET yöntemleri ve kültüre duyarlı sınıfları kullanmayı açıklar varsayılan olarak kültüre duyarlı olmayan sonuçlar elde edilir.  
   
- [Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi uygulamalar](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi yöntemler](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET uygulamaları geliştirmek için izlenebilecek en iyi uygulamaları açıklar.  
   
 ## <a name="reference"></a>Başvuru  

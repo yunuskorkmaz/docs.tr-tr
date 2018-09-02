@@ -6,27 +6,27 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: c164a77314f7127056e2367e7e9c4fac331d723d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524406"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418058"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel Denetimi (Windows Forms)
-`FlowLayoutPanel` Denetimi içeriğini yatay veya dikey akış yönü düzenler. İçeriği, bir sonraki satıra veya sonraki bir sütuna sarmalamak. Alternatif olarak, içeriği yerine kırpılmış gibi sarılır.  
+`FlowLayoutPanel` Denetim akışı yatay veya dikey yönde içeriği düzenler. İçeriği sonraki bir satır veya sonraki bir sütun sarmalanabilir. Alternatif olarak, içeriğinin yerine kırpılmış DC'de sona erdi.  
   
- Bu bölümdeki konular, oluşturabilmenizi sağlar teknikleri ve kavramları açıklamak `FlowLayoutPanel` , uygulamalara özellikleri.  
+ Bu bölümdeki konular, kavramlar ve oluşturmanıza imkan tanıyan teknikleri açıklar `FlowLayoutPanel` uygulamalarınızla özellikleri.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [FlowLayoutPanel Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
- Genel kavramlarını tanıtır `FlowLayoutPanel` yatay veya dikey akar bir düzen oluşturmanıza olanak tanıyan denetim.  
+ Genel konseptlerini tanıtan `FlowLayoutPanel` denetimi, bir düzeni yatay veya dikey olarak akışları oluşturmanıza olanak sağlar.  
   
  [Nasıl yapılır: FlowLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- Nasıl kullanılacağı açıklanmaktadır <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> sabitleme ve yerleştirme alt denetimleri için özellikler bir <xref:System.Windows.Forms.FlowLayoutPanel> denetim.  
+ Nasıl kullanılacağını açıklar <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> sabitleme ve yerleştirme alt denetimlerindeki özellikler bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
- Ayrıca bkz. [izlenecek yol: Windows Forms FlowLayoutPanel kullanarak düzenleme denetimleri](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Ayrıca bkz: [izlenecek yol: Windows Forms kullanarak FlowLayoutPanel düzenleme denetimleri](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- Başvuru belgelerine sağlar <xref:System.Windows.Forms.FlowLayoutPanel> denetim.
+ İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.

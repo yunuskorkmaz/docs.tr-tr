@@ -6,97 +6,95 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: d446ab84cfe135e56483b8b309b696f7f15044fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540052"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442804"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
-Bileşenlerinizi açık çözümdeki bir proje ile tanımlanır, bunlar otomatik olarak görünür **araç**, hiçbir eylem yapmanız gerekmez. El ile de doldurabilirsiniz **araç** kullanarak, özel bileşenlerle [seçin araç kutusu öğelerini iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç** hesap alır çözümünüzün öğelerinin aşağıdaki özelliklere sahip çıkışları oluşturun:  
+Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
   
 -   Implements <xref:System.ComponentModel.IComponent>;  
   
--   Sahip olmayan <xref:System.ComponentModel.ToolboxItemAttribute> kümesine `false`;  
+-   Olmayan <xref:System.ComponentModel.ToolboxItemAttribute> kümesine `false`;  
   
--   Sahip olmayan <xref:System.ComponentModel.DesignTimeVisibleAttribute> kümesine `false`.  
-  
-> [!NOTE]
->  **Araç** çözümünüzü projede tarafından oluşturulmuş olmayan öğeler görüntülenmez şekilde başvuru zincirleri izlemez.  
-  
- Bu yönergeler, nasıl özel bir bileşen otomatik olarak görünür gösterir **araç** bileşen oluşturulduktan sonra. Bu örneklerde gösterilen görevler aşağıdakileri içerir:  
-  
--   Windows Forms projesi oluşturma.  
-  
--   Özel bir bileşen oluşturuluyor.  
-  
--   Özel bir bileşen örneği oluşturma.  
-  
--   Yüklemeyi kaldırma ve özel bir bileşen yeniden yükleniyor.  
-  
- İşiniz bittiğinde, görürsünüz **araç** oluşturduğunuz bir bileşen ile doldurulur.  
+-   Olmayan <xref:System.ComponentModel.DesignTimeVisibleAttribute> kümesine `false`.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  **Araç kutusu** , çözümde bir proje tarafından oluşturulmamış öğeleri görüntülenmez için başvuru zincirleri izlemez.  
+  
+ Bu izlenecek yol, nasıl özel bir bileşeni otomatik olarak görünür gösterir **araç kutusu** bileşeni derlendikten sonra. Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
+  
+-   Bir Windows Forms projesi oluşturma.  
+  
+-   Bir özel bileşene oluşturuluyor.  
+  
+-   Özel bir bileşeninin örneği oluşturuluyor.  
+  
+-   Kaldırma ve bir özel bileşene yeniden yükleniyor.  
+  
+ İşlemi tamamladığınızda, göreceksiniz **araç kutusu** oluşturmuş olduğunuz bir bileşeni ile doldurulur.  
+  
+> [!NOTE]
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Projeyi Oluşturma  
- İlk adım, projeyi oluşturmak ve formu ayarlamak için ' dir.  
+ İlk adım projeyi oluşturmak ve formu ayarlamak için ' dir.  
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Adlı bir Windows tabanlı bir uygulama projesi oluşturun `ToolboxExample`.  
-  
-     Daha fazla bilgi için bkz: [nasıl yapılır: bir Windows uygulaması projesi oluşturduğunuzda](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Adlı bir Windows tabanlı uygulama projesi oluşturma `ToolboxExample` (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
 2.  Yeni bir bileşen projeye ekleyin. Bu çağrı `DemoComponent`.  
   
-     Daha fazla bilgi için bkz: [NIB: nasıl yapılır: Yeni proje öğeleri Ekle](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Daha fazla bilgi için [NIB: nasıl yapılır: Yeni proje öğeleri ekleme](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
   
 3.  Projeyi oluşturun.  
   
-4.  Gelen **Araçları** menüsünde tıklatın **seçenekleri** öğesi. Tıklatın **genel** altında **Windows Form Tasarımcısı** öğesi ve emin **AutoToolboxPopulate** seçeneği **True**.  
+4.  Gelen **Araçları** menüsünde tıklatın **seçenekleri** öğesi. Tıklayın **genel** altında **Windows Form Tasarımcısı** emin olun ve öğe **AutoToolboxPopulate** seçeneği **True**.  
   
-## <a name="creating-an-instance-of-a-custom-component"></a>Özel bir bileşen örneği oluşturma  
- Sonraki adım, formdaki özel bileşen örneği oluşturmaktır. Çünkü **araç** otomatik olarak yeni bileşen hesaplarını, bunun herhangi bir bileşen veya denetim oluşturma olarak kadar kolaydır.  
+## <a name="creating-an-instance-of-a-custom-component"></a>Özel bileşen örneği oluşturma  
+ Sonraki adım, formda özel bileşen örneği oluşturmaktır. Çünkü **araç kutusu** otomatik olarak hesapları yeni bileşeni için bu olarak herhangi bir bileşeni veya denetimi oluşturmak oldukça kolaydır.  
   
-#### <a name="to-create-an-instance-of-a-custom-component"></a>Özel bir bileşen örneği oluşturmak için  
+#### <a name="to-create-an-instance-of-a-custom-component"></a>Bir özel bileşene bir örneğini oluşturmak için  
   
-1.  Projenin formunda açmak **Forms Tasarımcısı**.  
+1.  Projenin formda açın **Form Tasarımcısı**.  
   
-2.  İçinde **araç**, olarak adlandırılan yeni sekmesini **ToolboxExample bileşenleri**.  
+2.  İçinde **araç kutusu**, adlı yeni sekmesini **ToolboxExample bileşenleri**.  
   
-     Sekmesine tıkladığınızda göreceğiniz **DemoComponent**.  
+     Sekmesine tıklayın, sonra göreceğiniz **DemoComponent**.  
   
     > [!NOTE]
-    >  Performans nedenleriyle bileşenleri otomatik olarak doldurulmuş alanı **araç** özel bit eşlemler, görüntüleme ve <xref:System.Drawing.ToolboxBitmapAttribute> desteklenmiyor. Özel bir bileşen için bir simge görüntülemek için **araç**, kullanın **araç kutusu öğelerini Seç** , bileşeni yüklemek için iletişim kutusu.  
+    >  Performans nedenleriyle bileşenleri otomatik olarak doldurulan alanında **araç kutusu** özel bit eşlemler, görüntüleme ve <xref:System.Drawing.ToolboxBitmapAttribute> desteklenmiyor. Özel bir bileşeni için bir simge görüntülemek için **araç kutusu**, kullanın **araç kutusu öğelerini Seç** iletişim kutusu, bileşeni yüklenemiyor.  
   
 3.  Bileşeniniz formunuza sürükleyin.  
   
-     Bileşen örneği oluşturulur ve eklenen **bileşen**.  
+     Bileşen örneği oluşturulur ve eklenen **bileşeni Tepsi**.  
   
-## <a name="unloading-and-reloading-a-custom-component"></a>Yüklemeyi kaldırma ve özel bir bileşen yeniden yükleniyor  
- **Araç** alır hesap her bileşenlerinin yüklü proje ve proje kaldırıldığında, projenin bileşenleri başvuruları kaldırır.  
+## <a name="unloading-and-reloading-a-custom-component"></a>Bir özel bileşene yeniden yükleme ve kaldırma  
+ **Araç kutusu** alır hesabı bileşenlerin her proje yüklendi ve bir proje kaldırıldığında, projenin bileşenleri başvurular kaldırır.  
   
-#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Yüklemeyi kaldırma ve bileşenleri yeniden yükleme araç etkisi deneme  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Bileşenleri yeniden yükleme ve kaldırma araç kutusu üzerindeki etkisini denemek için  
   
-1.  Çözüm projeden kaldırın.  
+1.  Çözümden proje Kaldır.  
   
-     Yüklemeyi kaldırma projeler hakkında daha fazla bilgi için bkz: [NIB: nasıl yapılır: Unload ve yeniden projeleri](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmek için istenirse, seçin **Evet**.  
+     Projeleri kaldırma hakkında daha fazla bilgi için bkz. [NIB: nasıl yapılır: kaldırma ve yeniden projeleri](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Kaydetmeniz istenirse seçin **Evet**.  
   
-2.  Yeni bir ekleme **Windows uygulaması** çözüme proje. Formunda açmak **Tasarımcısı**.  
+2.  Yeni bir **Windows uygulama** çözüme bir proje. Formda açın **Tasarımcısı**.  
   
-     **ToolboxExample bileşenleri** önceki Proje sekmesinden olduğu artık kaldırılmıştır.  
+     **ToolboxExample bileşenleri** , artık önceki projeyi sekmesinden kaybolur.  
   
-3.  Yeniden yükleme `ToolboxExample` projesi.  
+3.  Reload `ToolboxExample` proje.  
   
-     **ToolboxExample bileşenleri** sekmesinde şimdi görüntülenir.  
+     **ToolboxExample bileşenleri** sekmesinde artık yeniden görüntülenir.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu anlatımda gösterilir **araç kutusu** hesap bir projenin bileşenlerinin alır ancak **araç** ayrıca alır denetimleri hesabıdır. Ekleyerek ve denetim projeleri çözümünüzden kaldırılması, kendi özel denetimler ile deneyin.  
+ Bu izlenecek yol gösteren **araç kutusu** projenin bileşenlerinin alır ancak **araç kutusu** ayrıca alır denetimleri hesabıdır. İle kendi özel denetimler ekleyerek ve çözümünüze ait denetim projeleri kaldırma denemeler yapın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Nasıl yapılır: araç kutusu sekmeleri işlemek](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Nasıl yapılır: araç kutusu sekmeleri düzenleme](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [Araç kutusu öğelerini Seç iletişim kutusu (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

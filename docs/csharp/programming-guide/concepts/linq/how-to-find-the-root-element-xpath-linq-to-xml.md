@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: kök öğe (XPath-LINQ-XML) Bul (C#)'
+title: 'Nasıl yapılır: bulma (XPath-LINQ to XML) kök öğe (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
 ms.openlocfilehash: a7c15c8eb688f70b2d1633fc5c094b02cc97031c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321928"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421028"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: kök öğe (XPath-LINQ-XML) Bul (C#)
-Bu konu XPath Kök öğeyle alma gösterir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: bulma (XPath-LINQ to XML) kök öğe (C#)
+Bu konu XPath kök öğesiyle almak nasıl gösterir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
- XPath ifadesi şöyledir:  
+ XPath ifadesidir:  
   
  `/PurchaseOrders`  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, kök öğe bulur.  
+ Bu örnekte, kök öğesi bulur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [örnek XML dosyası: birden çok satınalma siparişi (LINQ-XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnekte aşağıdaki XML belgesi: [örnek XML dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +37,7 @@ else
 Console.WriteLine(el1.Name);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```  
 Results are identical  
@@ -45,4 +45,4 @@ PurchaseOrders
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [LINQ-XML XPath kullanıcıların (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ [LINQ to XML için XPath kullanıcıları (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

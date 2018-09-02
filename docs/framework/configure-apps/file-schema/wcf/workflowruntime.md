@@ -2,18 +2,18 @@
 title: '&lt;İş akışı WorkflowRuntime&gt;'
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 7c2bd4e2a8c1ddbdb98878d1d97c7acc41856310
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 849b09936f303c21fe55a6a46d561590c6a4c808
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755854"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455763"
 ---
 # <a name="ltworkflowruntimegt"></a>&lt;İş akışı WorkflowRuntime&gt;
-Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için.  
+Örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için.  
   
  \<system.ServiceModel>  
-\<davranışları >  
+\<davranışlar >  
 \<serviceBehaviors>  
 \<davranışı >  
 \<İş akışı workflowRuntime >  
@@ -41,17 +41,17 @@ ms.locfileid: "32755854"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|cachedInstanceExpiration|İsteğe bağlı bir <xref:System.TimeSpan> bir iş akışı örneği bellek içi kalarak en uzun süreyi belirten değer zorla yüklenmemiş veya iptal önce boşta durumda. Workflowruntime varsa `PersistenceService` unloadOnIdle gerçekleştirir, bu öznitelik dikkate alınmaz.|  
-|enablePerformanceCounters|Performans sayaçları etkinleştirilip etkinleştirilmediğini belirten isteğe bağlı bir Boole değeri. Performans sayaçları bilgisi çeşitli iş akışı ile ilgili istatistikler sağlar. ancak iş akışı çalışma zamanı altyapısı başladığında ve iş akışı örnekleri çalışırken performans cezası neden olurlar. Varsayılan değer `true` şeklindedir.|  
-|name|İş akışı çalışma zamanı altyapısı adını içeren dize. Çıktıda sistemde, örneğin, performans sayaçları çalışan diğer çalışma zamanları ile bu çalışma zamanı birbirinden ayırmak için kullanılan adı.<br /><br /> Varsayılan boş bir dizedir.|  
-|validateOnCreate|WorkflowServiceHost açık olduğunda doğrulama iş akışı tanımının oluşup oluşmadığına belirten isteğe bağlı bir Boole değeri.  Bu öznitelik ayarlandığında `true`, iş akışı doğrulama her zaman yürütülür `WorkflowServiceHost.Open` olarak adlandırılır. Doğrulama hataları bulunursa, bir <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> hata oluşur.<br /><br /> Bu özellik ayarlandığında `false`, bir iş akışı tanımı doğrulama gerçekleşecek.<br /><br /> Bu özellik için varsayılan değer `true`.|  
+|cachedInstanceExpiration|İsteğe bağlı <xref:System.TimeSpan> bir iş akışı örneği bellek içi kalarak en uzun süreyi belirten bir değer zorla kaldırıldı veya sona erdirildi önce boşta durumda. İş akışı workflowruntime varsa `PersistenceService` unloadOnIdle gerçekleştirir, bu öznitelik yoksayılır.|  
+|enablePerformanceCounters|Performans sayaçlarının etkin olup olmadığını belirten isteğe bağlı bir Boolean değeri. Performans sayaçları, çeşitli iş akışı ile ilgili istatistikleri bilgi sağlar, ancak bunlar iş akışı çalışma zamanı altyapısı başladığında ve iş akışı örnekleri çalıştırırken bir performans sorununa neden. Varsayılan değer `true` şeklindedir.|  
+|name|İş akışı çalışma zamanı altyapısı adını içeren bir dize. Çıktıda çalışma zamanı bu sistem, örneğin, performans sayaçları çalışan diğer çalışma zamanları ayırmak için kullanılan adı.<br /><br /> Varsayılan değer boş bir dizedir.|  
+|validateOnCreate|WorkflowServiceHost açıldığında iş akışı tanımı doğrulamasını gerçekleşip gerçekleşmeyeceğini belirten isteğe bağlı bir Boolean değeri.  Bu öznitelik ayarlandığında `true`, iş akışı doğrulama her zaman yürütülür `WorkflowServiceHost.Open` çağrılır. Doğrulama hatası bulunursa, bir <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> hata oluşur.<br /><br /> Bu özelliği ayarlandığında `false`, herhangi bir iş akışı tanımı doğrulaması gerçekleşir.<br /><br /> Bu özellik için varsayılan değer `true`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|commonParameters|Hizmetler tarafından kullanılan ortak parametreleri topluluğu. Bu koleksiyon genellikle sürekli hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.|  
-|hizmetler|Eklenecek hizmetler koleksiyonu <xref:System.Workflow.Runtime.WorkflowRuntime> altyapısı. Tür öğeleridir <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Koleksiyonda belirtilen hizmetler iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucusu çağrılır. Bu nedenle, koleksiyonda belirtilen hizmetlerden kendi oluşturucular imzalarını hakkında belirli kurallara uymalıdır. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
+|commonParameters|Hizmetler tarafından kullanılan ortak parametreleri koleksiyonu. Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.|  
+|hizmetler|Eklenecek hizmetler koleksiyonu <xref:System.Workflow.Runtime.WorkflowRuntime> altyapısı. Öğeleri türlerinin <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Koleksiyonda belirtilen Hizmetleri iş akışı çalışma zamanı altyapısı tarafından başlatılan ve hizmetlerinin için eklenen zaman uygun <xref:System.Workflow.Runtime.WorkflowRuntime> Oluşturucu çağrılır. Bu nedenle, koleksiyonda belirtilen hizmetlerden, oluşturucuları imzalarını hakkında belirli kurallara uymanız gerekir. Daha fazla bilgi edinmek için bkz. <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -60,7 +60,7 @@ ms.locfileid: "32755854"
 |[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesne bir Windows Workflow Foundation ana bilgisayar uygulaması bakın [iş akışı yapılandırma dosyalarını](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Örnek  
   
@@ -86,4 +86,4 @@ ms.locfileid: "32755854"
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [İş akışı yapılandırma dosyaları](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+ [İş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

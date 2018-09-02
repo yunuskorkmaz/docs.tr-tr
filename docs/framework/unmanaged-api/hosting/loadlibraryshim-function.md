@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445318"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418661"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim İşlevi
-.NET Framework yeniden dağıtılabilir paketinde bulunan bir DLL belirtilen sürümünü yükler.  
+Belirtilen .NET Framework yeniden dağıtılabilir pakette bulunan bir DLL sürümünü yükler.  
   
- Bu işlev kaldırılmamıştır [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Kullanım [Iclrruntimeınfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) yöntemi yerine.  
+ Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Kullanım [Iclrruntimeınfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) yöntemi yerine.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,19 +42,19 @@ HRESULT LoadLibraryShim (
   
 #### <a name="parameters"></a>Parametreler  
  `szDllName`  
- [in] .NET Framework Kitaplığı'ndan yüklenecek DLL adını temsil eden bir sıfır ile sonlandırılan bir dize.  
+ [in] .NET Framework Kitaplığı'ndan yüklenecek DLL adını temsil eden sıfır ile sonlandırılmış dize.  
   
  `szVersion`  
- [in] Yüklenecek DLL sürümü temsil eden bir sıfır ile sonlandırılan bir dize. Varsa `szVersion` null, yükleme sürüm 4'dan küçük belirtilen DLL Dosyasının en son sürümü için seçtiğiniz sürüm değil. Diğer bir deyişle, tüm sürümleri eşit veya bundan büyük sürüm 4 sayılır `szVersion` null, ve sürüm 4 değerinden küçük bir sürümü yüklüyse, DLL yüklemek başarısız olur. Bu yüklemesini sağlamaktır [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] önceden var olan uygulamaları veya bileşenleri etkilemez. Girişine bakın [işlem dışı SxS ve geçiş Hızlı Başlangıç](http://go.microsoft.com/fwlink/?LinkId=200329) CLR ekip blogu içinde.  
+ [in] Yüklenecek DLL sürümünü temsil eden sıfır ile sonlandırılmış dize. Varsa `szVersion` null, 4 sürümünden küçük belirtilen DLL'yi en son sürümünü yükleme için seçilen sürüm olduğu. Diğer bir deyişle, tüm sürümler sürüm 4'değerinden büyük veya eşit sayılır `szVersion` null ise, sürüm 4 değerinden hiçbir sürüm yüklüyse, DLL yüklenecek başarısız olur. Bu yüklemesi sağlamaktır [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] önceden mevcut olan uygulamaları veya bileşenleri etkilemez. Girdisine bakın [In-Proc SxS ve geçiş Hızlı Başlangıç](https://go.microsoft.com/fwlink/?LinkId=200329) CLR Ekibi blogunda.  
   
  `pvReserved`  
  Daha sonraki kullanımlar için ayrılmıştır.  
   
  `phModDll`  
- [out] Modül işleyicisi için bir işaretçi.  
+ [out] Modül tanıtıcısını işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Winerror.h'de içinde tanımlandığı şekilde döndürür.  
+ Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
@@ -62,10 +62,10 @@ HRESULT LoadLibraryShim (
 |CLR_E_SHIM_RUNTIMELOAD|Yükleme `szDllName` ortak dil çalışma zamanı (CLR) ve CLR'nin gereken sürümü yüklenemiyor yüklenmesini gerektirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev, .NET Framework yeniden dağıtılabilir paketinin içerdiği DLL'leri yüklemek için kullanılır. Kullanıcı tarafından oluşturulan DLL'leri yüklemez.  
+ Bu işlev, .NET Framework yeniden dağıtılabilir paketine dahil edilen DLL'lerini yüklemek için kullanılır. Kullanıcı tarafından oluşturulan DLL'leri yüklenmez.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 ile başlayarak, Fusion.dll yüklenirken yüklenecek CLR neden olur. Bunun nedeni, Fusion.dll işlevlerde şimdi uygulamaları çalışma zamanı tarafından sağlanan sarmalayıcıları olmasıdır.  
+>  .NET Framework sürüm 2.0 ile başlayarak, Fusion.dll yüklenirken yüklenecek CLR neden olur. Fusion.dll işlevler çalışma zamanı tarafından sağlanan uygulamaları sarmalayıcıları sunulmuştur olmasıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

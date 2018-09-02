@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ac78e6a2952761632edb95bc3d73d75a7675711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390142"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420952"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
-.NET istemci profili ile birlikte sağlanan .NET Framework'ün bir alt kümesidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleri ve istemci uygulamalar için iyileştirilmiştir. .NET Framework geliştirme platformu Windows, Windows Phone ve Microsoft Azure için ve bir yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerinde sağlanan iki dağıtım seçenekleri: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
+Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleriyle ve istemci uygulamaları için hale getirilmiş. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerde iki dağıtım seçeneği sağlanıyordu: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
   
- İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], istemci profili yarıda kesildi ve yalnızca tam yeniden dağıtılabilir paketi kullanılabilir. Tarafından sağlanan iyileştirmeler [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]küçük indirme boyutu ve daha hızlı dağıtım ortadan ayrı dağıtım paketi gereksinimini gibi. Tek yeniden dağıtılabilir yükleme işlemini kolaylaştırır ve uygulamaya dağıtım seçeneklerinizi daha da basitleştirir.  
+ İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], istemci profil dağıtımı durduruldu ve yalnızca tam yeniden dağıtılabilir paketi kullanıma sunuldu. İyileştirmeleri sağlandığından [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], daha küçük indirme boyutu ve hızlı dağıtım kalmadı ayrı bir dağıtım paketine gerek. Tek yeniden dağıtılabilir yükleme işlemini kolaylaştırır ve uygulamaya dağıtım seçeneklerinizi daha da basitleştirir.  
   
- Ancak, .NET Framework 4 veya 3.5 hedefleme ve istemci profili ve ne zaman kullanılacağı hakkında daha fazla bilgi edinmek istiyorsanız bkz [.NET Framework istemci profili](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) .NET Framework 4 belgelerinde.  
+ Ancak, .NET Framework 4 veya 3.5 hedefleniyorsa ve istemci profili ve ne zaman kullanacağınız hakkında daha fazla bilgi edinmek istiyorsanız bkz [.NET Framework istemci profili](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) .NET Framework 4 belgelerindeki.  
   
- Yüklediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 istemci profili .NET Framework'ün tam sürüme güncelleştirilir. Yükleme hakkında bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [geliştiriciler için .NET Framework'ü yüklemek](../../../docs/framework/install/guide-for-developers.md).  
+ Yüklediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 istemci profili .NET Framework'ün tam sürümüne güncellenir. Yükleme hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [.NET framework istemci profili (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Visual Studio Çoklu Sürüm Desteğine Genel Bakış](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
+ [.NET framework istemci profili (.NET Framework 4)](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
+ [Visual Studio Çoklu Sürüm Desteğine Genel Bakış](https://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](https://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
  [Nasıl Yapılır: .NET Framework Sürümü Hedefleme](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

@@ -7,47 +7,47 @@ dev_langs:
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3acea654cc84ede4b264c2db3ae6e9d042f4f5cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418389"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Anonim İstemci ile Taşıma Güvenliği
-Bu Windows Communication Foundation (WCF) senaryosu, gizliliği ve bütünlük sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu ile Güvenli Yuva Katmanı (SSL) sertifikası kimlik doğrulaması gerekir ve istemcilerin sunucu sertifikasına güvenmesi gerekir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonim bir işlemdir.  
+Windows Communication Foundation (WCF) Bu senaryo, gizliliği ve bütünlüğü sağlamak için Aktarım güvenliği (HTTPS) kullanır. Sunucu bir Güvenli Yuva Katmanı (SSL) sertifikası ile doğrulanması gerekir ve istemcilerin sunucu sertifikasına güvenmelidir. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve, bu nedenle, anonimdir.  
   
- Örnek bir uygulama için bkz: [WS taşıma güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md). Taşıma güvenliği hakkında daha fazla bilgi için bkz: [taşıma güvenliği genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ Örnek bir uygulama için bkz: [WS aktarım güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md). Aktarım güvenliği hakkında daha fazla bilgi için bkz: [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
- Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz: [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırın](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Bir sertifika bir hizmetle kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
- ![Anonim istemci ile taşıma güvenliği kullanarak](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
+ ![Anonim istemci ile Aktarım güvenliği kullanarak](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|Taşıma|  
 |Birlikte Çalışabilirlik|Mevcut Web Hizmetleri ve istemcileri ile|  
-|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet<br /><br /> Uygulama düzeyinde (WCF desteği yok)|  
-|Bütünlük|Evet|  
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet<br /><br /> Uygulama düzeyinde (WCF desteği)|  
+|Bütünlüğü|Evet|  
 |Gizliliği|Evet|  
 |Taşıma|HTTPS|  
 |Bağlama|<<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod yapılandırma gerektirmeden kullanarak tek başına bir hizmet oluşturun.  
+-   Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
   
--   Sağlanan yapılandırma kullanarak bir hizmet oluşturun, ancak uç tanımlamıyor.  
+-   Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod taşıma güveliği kullanarak bir uç nokta oluşturulacağını gösterir:  
+ Aşağıdaki kod, aktarım güvenliği kullanarak bir uç nokta oluşturma işlemi gösterilmektedir:  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki kod Yapılandırması'nı kullanarak aynı uç nokta ayarlamayı ayarlar. İstemci tarafından herhangi bir mekanizma doğrulanmaz ve bu nedenle anonimdir.  
+ Aşağıdaki kod, yapılandırma kullanarak aynı uç noktasını ayarlar. İstemci, herhangi bir mekanizma tarafından doğrulanmaz ve bu nedenle anonimdir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -77,11 +77,11 @@ Bu Windows Communication Foundation (WCF) senaryosu, gizliliği ve bütünlük s
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
   
--   Kod (ve istemci kodu) kullanan bir tek başına istemci oluşturun.  
+-   Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.  
   
--   Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişken olarak alan İstemci Oluşturucu kullanın. Örneğin:  
+-   Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -91,7 +91,7 @@ Bu Windows Communication Foundation (WCF) senaryosu, gizliliği ve bütünlük s
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma hizmeti kurmak için kod yerine kullanılabilir.  
+ Aşağıdaki yapılandırmayı kod yerine barındırılan hizmeti kurmak için kullanılabilir.  
   
 ```xml  
 <configuration>  
@@ -120,4 +120,4 @@ Bu Windows Communication Foundation (WCF) senaryosu, gizliliği ve bütünlük s
  [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [WS Aktarım Güvenliği](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

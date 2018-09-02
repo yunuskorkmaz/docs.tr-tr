@@ -2,27 +2,27 @@
 title: Adres Üstbilgileri
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803796"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420563"
 ---
 # <a name="address-headers"></a>Adres Üstbilgileri
 Adres üstbilgileri örnek istemciler Windows Communication Foundation (WCF) kullanarak bir hizmet için başvuru parametreleri nasıl geçirebilirsiniz gösterir.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- WS-adresleme belirtimi bir uç nokta başvuru kavramı belirli bir Web Hizmeti uç noktası adresi için bir yol olarak tanımlar. Kullanarak uç nokta başvuruları Modellenen WCF içinde `EndpointAddress` sınıfı - `EndpointAddress` adres alanının türü `ServiceEndpoint` sınıfı.  
+ WS-Addressing belirtimi bir şekilde belirli bir Web Hizmeti uç noktası adresi için bir uç nokta başvurusu kavramını tanımlar. WCF'de, uç nokta başvuruları kullanılarak modellendiği durumda `EndpointAddress` sınıfı - `EndpointAddress` adres alanının türü `ServiceEndpoint` sınıfı.  
   
- Uç nokta başvuru modeli her başvuru fazladan tanımlama bilgilerini eklemek bazı başvuru parametreleri taşıyabilir parçasıdır. Örnekleri olarak Modellenen WCF, bu başvuru parametreleri `AddressHeader` sınıfı.  
+ Uç nokta başvuru modelini her başvuru ek tanımlayıcı bilgiler ekleyin bazı başvuru parametreleri devam edebileceğinizden parçasıdır. WCF'de, bu başvuru parametreleri örnekleri olarak modellenir `AddressHeader` sınıfı.  
   
- Bu örnekte, istemci başvuru parametresi ekler `EndpointAddress` istemci uç noktası. Hizmet için bu başvuru parametresi arar ve onun "Hello" hizmet işlemi mantığında değerini kullanır.  
+ Bu örnekte, bir başvuru parametresi için bir istemci ekler `EndpointAddress` istemcisi bitiş noktası. Hizmet için bu başvuru parametresi arar ve değeri, "Hello" hizmet işlemi mantığı kullanır.  
   
 ## <a name="client"></a>İstemci  
- İstemcinin bir başvuru parametre göndermek, onu eklemelisiniz bir `AddressHeader` için `EndpointAddress` , `ServiceEndpoint`. Çünkü `EndpointAddress` sınıfı değişmez, bir uç nokta adresi değiştirilmesini yapılmalıdır kullanarak `EndpointAddressBuilder` sınıfı. Aşağıdaki kod, ileti bir parçası olarak bir başvuru parametre göndermek için istemci başlatır.  
+ İstemcinin bir başvuru parametresi göndermesini eklemeniz gerekir bir `AddressHeader` için `EndpointAddress` , `ServiceEndpoint`. Çünkü `EndpointAddress` sınıfı sabit, değiştirilmesini bir uç nokta adresi yapılmalıdır kullanarak `EndpointAddressBuilder` sınıfı. Aşağıdaki kod, bir başvuru parametresi kendi iletisinin bir parçası göndermek için istemci başlatır.  
   
 ```csharp   
 HelloClient client = new HelloClient();  
@@ -34,14 +34,14 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();  
 ```  
   
- Kod oluşturur bir `EndpointAddressBuilder` özgün kullanarak `EndpointAddress` başlangıç değeri olarak. Ardından, yeni oluşturulan adres üstbilgisi ekler; çağrı `CreateAddressHeadercreates` belirli ad, ad ve değere sahip bir üstbilgi. Burada "John" değeridir. Üstbilgi oluşturucuya eklendikten sonra `ToEndpointAddress()` yöntemi (değişebilir) oluşturucu geri istemci uç noktanın bir adres alanına atanan geri bir (değişmez) uç noktası adresi dönüştürür.  
+ Kod oluşturur bir `EndpointAddressBuilder` özgün kullanarak `EndpointAddress` olarak başlangıç değeri. Ardından, yeni oluşturulan adres üstbilgisi ekler; çağrı `CreateAddressHeadercreates` belirli ad, ad alanı ve değere sahip bir üstbilgi. Burada "John" değeridir. Oluşturucuya, üst bilgi eklendikten sonra `ToEndpointAddress()` yöntemi (değişebilir) oluşturucu geri istemcisi bitiş noktasının adresini alana atanan geri bir (sabit) uç noktası adresi dönüştürür.  
   
- Şimdi istemci çağırdığında `Console.WriteLine(client.Hello());`, istemci elde edilen çıktıda görüldüğü şekilde hizmet bu adresi parametresinin değerini alabilir.  
+ Artık istemciyi çağırdığında `Console.WriteLine(client.Hello());`, istemcinin elde edilen çıktıda görüldüğü şekilde hizmet bu adresi parametresinin değeri alınamadı.  
   
  `Hello, John`  
   
 ## <a name="server"></a>Sunucu  
- Hizmet işlemi uygulama `Hello()` geçerli kullanan `OperationContext` gelen ileti üstbilgilerinde değerlerini incelemek için.  
+ Hizmet işlemi uygulama `Hello()` geçerli kullanan `OperationContext` gelen ileti üst bilgilere değerlerini incelemek için.  
   
 ```csharp   
 string id = null;  
@@ -64,22 +64,22 @@ for (int i = 0;
 return "Hello, " + id;  
 ```  
   
- Başvuru parametreleri belirli adla üstbilgileri arayan gelen ileti üzerinde tüm üstbilgileri üzerinden kodu tekrarlanan ve. Parametresi bulunduğunda parametresinin değeri okur ve "id" değişkeninde depolar.  
+ Kod, başvuru parametreleri belirli bir ada sahip olan üst aranıyor gelen ileti, tüm üst bilgilere üzerinden yinelenir ve. Parametre bulunduğunda, parametre değerini okur ve "id" değişkeninde depolar.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   

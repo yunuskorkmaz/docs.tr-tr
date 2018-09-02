@@ -2,44 +2,45 @@
 title: Desteklenen Dağıtım Senaryoları
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: d0afd12b1c17f9356146aa13c90f8db65ed9ec0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421079"
 ---
 # <a name="supported-deployment-scenarios"></a>Desteklenen Dağıtım Senaryoları
-Kısmen güvenilir uygulamalar kullanmak için desteklenen Windows Communication Foundation (WCF) özellikleri alt WCF kullanma, ancak bazı değil tüm senaryoları gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF karşılıyor Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları çalıştırmak barındırma hizmeti sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Orta güven izni güvenlik nedenleriyle ayarlandı. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak üzere tasarlanmış [ClickOnce dağıtımı](http://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s sorunsuz ve güvenli izin XAML tarayıcısı uygulaması teknolojisi Masaüstü uygulamaları güvenilmeyen sitelerden dağıtımı.  
+Kısmen güvenilir uygulamaların kullanım için desteklenen Windows Communication Foundation (WCF) özellikleri alt kümesi için WCF kullanan bazı, tümü değil, senaryolar gereksinimlerini karşılamak üzere tasarlanmıştır. Sunucuda, WCF karşıladığını Internet ölçeğinde gereksinimlerini paylaşılan üçüncü taraf uygulamaları barındırma sağlayıcıları, [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izni güvenlik nedenleriyle ayarlayın. İstemcide, WCF kısmi güven desteği gibi dağıtım teknolojileri gereksinimlerini karşılamak için tasarlanan [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) veya [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]'s XAML tarayıcı uygulaması teknolojisi, sorunsuz ve güvenli izin ver güvenilmeyen siteleri'ndan Masaüstü uygulamaların dağıtımı.  
   
-## <a name="minimum-permission-requirements"></a>Minimum izin gereksinimleri  
- WCF özelliklerinin bir kısmı ya da aşağıdaki standart adlandırılmış izin kümeleri altında çalışan uygulamaları destekler:  
+## <a name="minimum-permission-requirements"></a>En düşük izin gereksinimleri  
+ WCF ya da aşağıdaki standart adlandırılmış izin kümelerinin altında çalışan uygulamalar, özelliklerin bir alt kümesini destekler:  
   
 -   Orta güven izinleri  
   
 -   Internet bölgesi izinleri  
   
- Kısmen güvenilir uygulamalar daha kısıtlayıcı izinlerle WCF kullanmayı denemeden güvenlik özel durumları çalışma zamanında neden olabilir.  
+ Kısmen güvenilir uygulamaların daha kısıtlayıcı izinlerle WCF kullanma girişimi çalışma zamanında güvenlik özel durumları neden olabilir.  
   
- Bu izin kümeleri desteklenen özellikler hakkında daha fazla bilgi için bkz: [kısmi güven özelliği uyumluluğu](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
+ Bu izin kümeleri, desteklenen özellikler hakkında daha fazla bilgi için bkz: [kısmi güven özelliği uyumluluğu](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="partial-trust-on-the-server"></a>Sunucu üzerindeki kısmi güven  
- Birçok ticari sağlayıcılarından [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama Web barındırma hizmetleri sunucularında çalışan uygulamaların Çalıştır zorunluluğuna [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Orta güven izin kümesi. WCF hizmetleri, bu ortamlarda çalıştırabilir, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, ya da <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> ile aktarım düzeyinde güvenlik.  
+## <a name="partial-trust-on-the-server"></a>Sunucu üzerinde kısmi güven  
+ Birçok ticari sağlayıcılardan biri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulama barındırma hizmetleri, sunucuları üzerinde çalışan uygulamaları çalıştırmak olan uyumluluğunu doğrulamıştır [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust izin kümesi. WCF hizmetleri, bu ortamlarda çalıştırabilirsiniz, kullandıkları sağlanan <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, ya da <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> aktarım düzeyi güvenlik ile.  
   
- Barındırma ortamları Medium Trust çalışan WCF hizmetleri, ayrıca diğer sunuculara istemci isteklerine yanıt iletileri göndererek orta katman hizmet olarak davranamaz. Barındırma ortamı uygulama uygun verildi, sunucuda orta katman senaryoları desteklenir <xref:System.Net.WebPermission> istenen sunucuya giden istekleri yapma.  
+ WCF hizmetlerini barındırma ortamları Medium Trust ile çalışan istemci isteklerine yanıt diğer sunuculara yönelik iletiler göndererek orta katman hizmet olarak da işlev görebilir. Uygulama barındırma ortamı uygun izni vermiştir, orta katman senaryoları sunucuda desteklenir <xref:System.Net.WebPermission> istedikleri sunucuya giden isteklerde.  
   
- Desteklenen SOAP bağlamaları birini kullanarak SOAP Mesajlaşma ek olarak, WCF destekleyen <xref:System.ServiceModel.WebHttpBinding> Web stili Hizmetleri'nde kısmen güvenilir uygulamalar oluşturmak için. [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md), [WCF dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md), ve [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md) özellikleri WCF tüm desteklenmektedir kısmi güven.  
+ Desteklenen SOAP bağlamaları birini kullanarak SOAP ileti ek olarak, WCF destekler <xref:System.ServiceModel.WebHttpBinding> kısmen güvenilir uygulamaların stili Web hizmetleri oluşturmak için. [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md), [WCF dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md), ve [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md) WCF özelliklerinin tümü desteklenir kısmi güven.  
   
- İş akışı hizmetleri tam güven izinleri gerektirir ve kısmen güvenilir uygulamalar içinde kullanılamaz.  
+ İş akışı Hizmetleri, tam güven izinleri gerektirir ve kısmen güvenilen uygulamalarda kullanılamaz.  
   
- Daha fazla bilgi için bkz: [nasıl yapılır: ASP.NET 2.0 kullanım Medium Trust](http://go.microsoft.com/fwlink/?LinkId=84603).  
+ Daha fazla bilgi için [nasıl yapılır: ASP.NET 2.0 kullanım Orta güven](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>İstemci üzerinde kısmi güven  
- Belirli güvenlik önlemleri indiriliyor ve güvenilmeyen Internet siteleriyle kod çalıştırırken alınması gerekir. Her ikisi de [ClickOnce dağıtımı](http://go.microsoft.com/fwlink/?LinkId=83712) ve [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]kullanıcının XAML tarayıcısı uygulaması (XBAP) teknolojisi olun kısmi güven sınırlı (Internet bölgesi) güvenilmeyen kod izinleri için kullanın.  
+ Belirli güvenlik önlemleri indiriliyor ve güvenilmeyen Internet siteleriyle kod çalıştırırken alınması gerekir. Her ikisi de [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) ve [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]kullanıcının teknoloji olun XAML tarayıcı uygulaması (XBAP) kullanın kısmi güven güvenilmeyen kod (Internet bölgesi) sınırlı izinler vermek için.  
   
- WCF tarafından dağıtılan kısmen güvenilir uygulamalar içinde uzak sunuculardan ile iletişim kurmak için kullanılabilir [ClickOnce dağıtımı](http://go.microsoft.com/fwlink/?LinkId=83712) veya XBAP. Internet bölgesi izin kümesi içerir <xref:System.Net.WebPermission> kaynak ana bilgisayar için sağlayan açıklanan desteklenen WCF bağlamaları birini kullanarak kendi kaynak sunucu ile iletişim kurmak bu uygulamaları [kısmi güven özelliği uyumluluğu ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
+ WCF tarafından dağıtılan kısmen güvenilir uygulamaların içinde uzak sunuculardan ile iletişim kurmak için kullanılabilir [ClickOnce dağıtımı](https://go.microsoft.com/fwlink/?LinkId=83712) veya XBAP. Internet bölgesi izin kümesi içeren <xref:System.Net.WebPermission> kaynak konağını sağlayan açıklanan desteklenen WCF bağlamaları birini kullanarak, kaynak sunucu ile iletişim kurmak bu uygulamaları [kısmi güven özelliği uyumluluğu ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kod erişimi güvenliği](http://go.microsoft.com/fwlink/?LinkId=83717)  
- [Windows Presentation Foundation tarayıcıda barındırılan uygulamalar genel bakış](http://go.microsoft.com/fwlink/?LinkId=98397)  
+ [Kod erişimi güvenliği](https://go.microsoft.com/fwlink/?LinkId=83717)  
+ [Windows Presentation Foundation tarayıcıda tutulan uygulamalar genel bakış](https://go.microsoft.com/fwlink/?LinkId=98397)  
  [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [ASP.Net Orta güven](http://go.microsoft.com/fwlink/?LinkId=69328)
+ [ASP.Net Orta güven](https://go.microsoft.com/fwlink/?LinkId=69328)

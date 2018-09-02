@@ -2,12 +2,12 @@
 title: Örnek XML belgeleri (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-ms.openlocfilehash: ce653f5067869a3ac568cd9c25e47a92b3148dbe
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 1d9e45e3d7e3131cf37b3373156a6a136d0a5cfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754927"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420229"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Örnek XML belgeleri (LINQ to XML)
 Aşağıdaki örnek dosyaları kod örnekleri ve kod parçacıkları genelinde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri.  
@@ -26,7 +26,7 @@ Aşağıdaki örnek dosyaları kod örnekleri ve kod parçacıkları genelinde k
 |[Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Bazı sahte test yapılandırma verilerini içeren bir XML belgesi.|  
 |[Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|Bazı sahte test yapılandırma verilerini içeren bir ad alanında bir XML belgesi.|  
 |[Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|Müşteriler ve siparişler içeren bir XML belgesi.|  
-|[Örnek XSD Dosyası: Müşteriler ve Siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Doğrulama bir Xml şema tanımı (XSD) [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Örnek XSD Dosyası: Müşteriler ve Siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Doğrulama bir Xml şema tanımı (XSD) [örnek XML dosyası: müşteriler ve siparişler (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Müşteriler ve siparişler içeren bir ad alanında bir XML belgesi.|  
 |[Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Veri toplama ve Gruplama için uygun içeren bir XML belgesi.|  
 |[Örnek XML Dosyası: Bir Ad Alanında Sayısal Veriler](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Veri toplama ve Gruplama için uygun içeren bir ad alanında bir XML belgesi.|  

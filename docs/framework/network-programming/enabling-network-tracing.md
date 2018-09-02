@@ -14,29 +14,29 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56a24f93e92fbfbd2dbb1156a1c3ef786f59034e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390467"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421496"
 ---
 # <a name="enabling-network-tracing"></a>Ağ izlemeyi etkinleştirme
-Ağ izleme yöntem çağrılarını ve yönetilen bir uygulama tarafından oluşturulan tüm ağ trafiği hakkındaki bilgilere erişim sağlar. Uygulamanızdaki ağ izlemeyi etkinleştirmek için aşağıdaki görevleri tamamlamanız gerekir:  
+Ağ izleme yöntem çağrıları ve yönetilen bir uygulama tarafından oluşturulan ağ trafiğiyle ilgili bilgilere erişim sağlar. Uygulamanızda ağ izlemeyi etkinleştirmek için aşağıdaki görevleri tamamlamanız gerekir:  
   
--   İzlemenin etkin kodunuzu derleyin. Bkz: [nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) izlemeyi etkinleştirmek için gereken derleyici anahtarları hakkında daha fazla bilgi için.  
+-   Kodunuzu izleme etkin derleyin. Bkz: [nasıl yapılır: izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) izlemeyi etkinleştirmek için gerekli derleyici anahtarları hakkında daha fazla bilgi.  
   
--   İzleme çıktısı için bir hedef belirtin.  
+-   İzleme çıkışı için bir hedef belirtin.  
   
--   Ağ izleme davranışını yapılandırın. Bkz: [nasıl yapılır: yapılandırma ağ izleme](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) ayrıntılı bilgi için.  
+-   Ağ izleme davranışını yapılandırın. Bkz: [nasıl yapılır: ağ izlemeyi yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) ayrıntılı bilgi için.  
   
- İzleme dinleyicileri da adlandırılan en yaygın izleme hedefleri varsayılan dinleyici ve günlük dosyası ' dir.  
+ İzleme dinleyicileri da adlandırılan en yaygın izleme hedefleri şunlardır: varsayılan dinleyici ve günlük dosyası.  
   
- İzleme dinleyicisi belirtmezseniz, izleme varsayılan dinleyicisi kullanır. CLR hata ayıklayıcısı .NET Framework SDK ile birlikte gelen veya DBwin32.exe Windows SDK ile birlikte gelen gibi yönetilen bir kod etkin hata ayıklayıcı'kodunuzu yürüterek varsayılan dinleyicisi gönderilen iletileri görüntüleyebilirsiniz. CLR hata ayıklayıcısı kullanarak, izleme iletilerini görünür **çıkış** penceresi.  
+ İzleme, İzleme dinleyicisi belirtmezseniz varsayılan dinleyicisi kullanır. CLR hata ayıklayıcısı .NET Framework SDK ile birlikte gelen veya DBwin32.exe Windows SDK'sı ile birlikte gelen gibi bir yönetilen kod etkin hata ayıklayıcıda kodunuzu yürüterek varsayılan dinleyiciye gönderilen iletileri görüntüleyebilirsiniz. CLR hata ayıklayıcıyı kullanarak izleme iletilerini görünür **çıkış** penceresi.  
   
- İzlemelerini almak için bir dosya kullanmayı tercih ederseniz, bir günlük dosyası yapılandırma ayarlarını kullanarak aşağıdaki örnekte gösterildiği gibi belirtebilirsiniz. (Yapılandırma dosyaları hakkında genel bilgiler için bkz: [yapılandırma dosyalarını](../../../docs/framework/configure-apps/index.md).)  
+ İzlemeleri almak için bir dosya kullanmayı tercih ederseniz, günlük dosyası, yapılandırma ayarlarını kullanarak aşağıdaki örnekte gösterildiği gibi belirtebilirsiniz. (Yapılandırma dosyaları hakkında genel bilgiler için bkz: [yapılandırma dosyalarını](../../../docs/framework/configure-apps/index.md).)  
   
- Bir günlük dosyasına izlemeleri göndermek için aşağıdaki düğüm eklemek `<system.diagnostics>` düğümü uygun yapılandırma dosyasının (uygulama veya makine). Gereksinimlerinize uygun olarak dosyanın (trace.log) adını değiştirebilirsiniz.  
+ Bir günlük dosyasına izlemeleri göndermek için aşağıdaki düğüm için ekleme `<system.diagnostics>` düğümü uygun yapılandırma dosyasının (uygulama veya makine). İhtiyaçlarınıza uygun şekilde (trace.log) dosyasının adını değiştirebilirsiniz.  
   
 ```xml  
 <system.diagnostics>  
@@ -51,4 +51,4 @@ Ağ izleme yöntem çağrılarını ve yönetilen bir uygulama tarafından oluş
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)  
- [İzleme ve izleme giriş](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [İzlemeye giriş](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

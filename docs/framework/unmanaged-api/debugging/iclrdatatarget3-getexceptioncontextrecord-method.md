@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b07318406268023e2d66259b2cb68750d64613e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408170"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425230"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord Metodu
-Hedef işlemle ilişkili bağlam kaydı almak için ortak dil çalışma zamanı (CLR) veri erişim hizmeti tarafından çağrılır. Örneğin, bir döküm hedef için bu aracılığıyla geçilen bağlamı kayda eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360\(v=vs.85\).aspx) işlevi Windows Kitaplığı'nda hata ayıklama yardımcı (DbgHelp).  
+Hedef işlemle ilişkilendirilmiş bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır. Örneğin, bir döküm hedef için bu aracılığıyla iletilen bağlam kaydı eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlev kitaplığında Windows hata ayıklama yardımcı (DbgHelp).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,32 +36,32 @@ HRESULT GetExceptionContextRecord(
   
 #### <a name="parameters"></a>Parametreler  
  `bufferSize`  
- [in] Giriş arabelleği bayt cinsinden boyutu. Bu içerik kaydı uyabilecek kadar büyük olmalıdır.  
+ [in] Giriş arabelleği bayt cinsinden boyutu. Bu bağlam kaydı tutabilecek kadar büyük olmalıdır.  
   
  `bufferUsed`  
- [out] Bir işaretçi bir `ULONG32` gerçekten arabelleğe yazılan bayt sayısı alan türü.  
+ [out] Bir işaretçi bir `ULONG32` gerçekte arabelleğe yazılan bayt sayısı alan türü.  
   
  `buffer`  
- [out] İçerik kaydı kopyasını alan bir bellek arabelleği için bir işaretçi. Özel durum kaydı olarak döndürülür bir [BAĞLAMI](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx) türü.  
+ [out] Bağlam kaydını bir kopyasını alır bir ara belleğe yönelik işaretçi. Özel durum kaydını olarak döndürülen bir [bağlam](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) türü.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Dönüş değeri `S_OK` başarı veya hata `HRESULT` hata kodu. `HRESULT` Kodları içerebilir ancak aşağıdaki sınırlı değildir:  
+ Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu. `HRESULT` Kodları içerebilir ancak şu şekilde sınırlı değildir:  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|`S_OK`|Yöntem başarılı oldu. İçerik kaydı çıktı arabelleğine kopyalandı.|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Hedefle ilişkili hiç içerik kayıttır.|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|Giriş arabelleği boyutu içerik kaydı uyabilecek kadar büyük değil.|  
+|`S_OK`|Yöntem başarılı oldu. Bağlam kaydı için çıkış arabelleği kopyalandı.|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|Hedefle ilişkili hiçbir bağlam kaydıdır.|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|Giriş arabelleği boyutu, bağlam kaydı tutabilecek kadar büyük değil.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [BAĞLAM](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx) olan Windows SDK'sı tarafından sağlanan üstbilgileri tanımlanan bir platforma özgü yapısı.  
+ [BAĞLAM](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) olan Windows SDK'sı tarafından sağlanan üstbilgileri içinde tanımlanan bir platforma özgü yapısı.  
   
- Bu yöntem, hata ayıklama uygulama yazıcı tarafından uygulanır.  
+ Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Başlık:** ClrData.idl, ClrData.h  
+ **Başlık:** } ClrData.idl, ClrData.h  
   
  **Kitaplığı:** CorGuids.lib  
   

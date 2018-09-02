@@ -2,38 +2,38 @@
 title: 'Özel İleti Kodlayıcı: Özel Metin Kodlayıcı'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808071"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418832"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Özel İleti Kodlayıcı: Özel Metin Kodlayıcı
-Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti Kodlayıcı uygulamak gösterilmiştir.  
+Bu örnek, Windows Communication Foundation (WCF) kullanarak bir özel metin ileti Kodlayıcı uygulamak nasıl gösterir.  
   
 > [!WARNING]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Yalnızca UTF-8, UTF-16 ve büyük Endean Unicode Kodlamalar WCF destekler. Özel metin ileti Kodlayıcı bu örnekte, tüm platform tarafından desteklenen karakter kodlaması birlikte çalışabilirlik için gerekli olabilecek destekler. Örnek bir istemci konsol program (.exe), Internet Information Services (IIS) ve bir metin ileti Kodlayıcı kitaplığı (.dll) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemleri kullanıma sunan arabirim (eklemek, çıkarma, çarpma ve bölme). İstemci eş zamanlı istekleri verilen matematik işlemi ve sonuç ile hizmet yanıtları yapar. Hem istemci hem de hizmet kullanır `CustomTextMessageEncoder` varsayılan yerine <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF yalnızca UTF-8, UTF-16 ve büyük Endean Unicode kodlamaları destekler. Bu örnekte metin özel ileti Kodlayıcı, tüm platform tarafından desteklenen karakter kodlaması birlikte çalışabilirlik için gerekli olabilecek destekler. Örnek, bir istemci konsol programı (.exe), Internet Information Services (IIS) ve bir metin iletisi Kodlayıcı kitaplığı (.dll) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). İstemci verilen matematik işlemi ve hizmet yanıt sonucu zaman uyumlu istekleri yapar. Hem istemci hem de hizmet kullanan `CustomTextMessageEncoder` varsayılan yerine <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
- Özel Kodlayıcı uygulama ileti Kodlayıcı Fabrika, ileti Kodlayıcı, bağlama öğesi ve yapılandırma işleyicisi kodlama bir ileti oluşur ve aşağıda gösterilmektedir:  
+ Özel bir kodlayıcı uygulama, ileti Kodlayıcı Fabrika, ileti Kodlayıcı, bir ileti bağlama öğesi ve yapılandırma işleyicisi kodlama oluşur ve aşağıda gösterilmiştir:  
   
--   Özel Kodlayıcı ve Kodlayıcı Fabrika oluşturma.  
+-   Özel bir kodlayıcı ve Kodlayıcı fabrikası oluşturma.  
   
 -   Bir bağlama öğesi için özel bir kodlayıcı oluşturuluyor.  
   
 -   Özel bağlama yapılandırma özel bağlama öğeleri tümleştirmek için kullanma.  
   
--   Özel bağlama öğesi dosya yapılandırılmasına olanak verecek özel yapılandırma işleyicisi geliştirme.  
+-   Özel bağlama öğesinin dosya yapılandırması izin vermek için özel yapılandırma işleyicisi geliştirme.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
 1.  Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
   
@@ -41,16 +41,16 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak özel metin ileti K
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="message-encoder-factory-and-the-message-encoder"></a>İleti Kodlayıcı Fabrika ve ileti kodlayıcı  
- Zaman <xref:System.ServiceModel.ServiceHost> veya istemci kanal açıldığında, tasarım zamanı bileşeni `CustomTextMessageBindingElement` oluşturur `CustomTextMessageEncoderFactory`. Üreteç oluşturur `CustomTextMessageEncoder`. İleti Kodlayıcı hem akış modunda ve arabellekli modu çalışır. Kullandığı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> okumak ve iletileri sırasıyla yazmak için. En iyi duruma getirilmiş XML okuyucuları ve yalnızca UTF-8, UTF-16 ve büyük Endean Unicode desteği yazıcıları WCF aksine bu okuyucuları ve yazıcıları tüm desteklenen platform kodlamayı destekler.  
+## <a name="message-encoder-factory-and-the-message-encoder"></a>İleti Kodlayıcı fabrikası ve ileti kodlayıcı  
+ Zaman <xref:System.ServiceModel.ServiceHost> veya istemci kanal açıldığında, tasarım zamanı bileşeni `CustomTextMessageBindingElement` oluşturur `CustomTextMessageEncoderFactory`. Üreteç oluşturur `CustomTextMessageEncoder`. İleti Kodlayıcı hem akış hem arabellekli modu çalışır. Kullandığı <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> sırasıyla iletileri yazma ve okuma için. En iyi duruma getirilmiş XML okuyucular ve yalnızca UTF-8, UTF-16 ve BIG-Endean Unicode destekleyen yazıcılar WCF aksine bu okuyucular ve yazıcılar tüm desteklenen platform kodlamayı destekler.  
   
- Aşağıdaki kod örneğinde CustomTextMessageEncoder gösterir.  
+ Aşağıdaki kod örneği CustomTextMessageEncoder gösterir.  
   
 ```csharp  
 public class CustomTextMessageEncoder : MessageEncoder  
@@ -137,7 +137,7 @@ public class CustomTextMessageEncoder : MessageEncoder
 }  
 ```  
   
- Aşağıdaki kod örneğinde ileti Kodlayıcı Fabrika nasıl oluşturulacağını gösterir.  
+ Aşağıdaki kod örneği, ileti Kodlayıcı fabrikası oluşturma gösterilmektedir.  
   
 ```csharp  
 public class CustomTextMessageEncoderFactory : MessageEncoderFactory  
@@ -191,13 +191,13 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>İleti kodlama bağlama öğesi  
- Bağlama öğeleri WCF çalışma zamanı yığınının yapılandırılmasına olanak sağlar. Bir WCF uygulamaya özel ileti Kodlayıcı kullanmak için bir bağlama öğesi gereklidir, çalışma zamanı yığınında uygun düzeyde uygun ayarlarla ileti Kodlayıcı üreteci oluşturur.  
+ Bağlama öğeleri WCF çalışma zamanı yığını yapılandırmasını sağlar. Özel ileti Kodlayıcı WCF kullanmak için bir bağlama öğesi gereklidir, çalışma zamanı yığını uygun düzeyde uygun ayarlarla ileti Kodlayıcı fabrikası oluşturur.  
   
- `CustomTextMessageBindingElement` Türetilen <xref:System.ServiceModel.Channels.BindingElement> temel sınıfı ve devraldığı <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> sınıfı. Bu ileti kodlama bağlama öğesi olduğu bu bağlama öğesi tanımak WCF bileşenlerle sağlar. Uygulaması <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> uygun ayarlarla eşleşen ileti Kodlayıcı Fabrika örneğini döndürür.  
+ `CustomTextMessageBindingElement` Türetildiği <xref:System.ServiceModel.Channels.BindingElement> devralan ve temel sınıf <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> sınıfı. Bu, diğer WCF bileşenleri bu bağlama öğesi bir ileti kodlama bağlama öğesi olarak tanımasını sağlar. Uygulamasını <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> uygun ayarlarla eşleşen ileti Kodlayıcı üretecin bir örneğini döndürür.  
   
- `CustomTextMessageBindingElement` Ayarlarını gösteren `MessageVersion`, `ContentType`, ve `Encoding` özellikleri aracılığıyla. Kodlayıcı Soap11Addressing ve Soap12Addressing1 sürümlerini destekler. Soap11Addressing1 varsayılandır. Varsayılan değer olan `ContentType` "text/xml". `Encoding` Özelliği istenen karakter kodlamasını değerini ayarlamanıza olanak sağlar. Örnek istemci hem de hizmet kullanan ISO 8859-1 (Latin1) karakter kodlamasını, tarafından desteklenmeyen <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF.  
+ `CustomTextMessageBindingElement` Ayarlarını sunan `MessageVersion`, `ContentType`, ve `Encoding` özellikleri aracılığıyla. Kodlayıcı Soap11Addressing hem Soap12Addressing1 sürümlerini destekler. Soap11Addressing1 varsayılandır. Varsayılan değer olan `ContentType` "metin/XML". `Encoding` Özellik istenen karakter kodlama değeri ayarlamanıza olanak tanır. Örnek istemci ve hizmet kullanan ISO-8859-1 (Latin1) karakter kodlaması, tarafından desteklenmeyen <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF.  
   
- Aşağıdaki kod özel metin ileti Kodlayıcısı kullanarak bağlama programlı olarak oluşturulacağını gösterir.  
+ Aşağıdaki kod, program aracılığıyla metin özel ileti Kodlayıcı kullanarak bağlama nasıl oluşturulacağını gösterir.  
   
 ```  
 ICollection<BindingElement> bindingElements = new List<BindingElement>();  
@@ -208,25 +208,25 @@ bindingElements.Add(httpBindingElement);
 CustomBinding binding = new CustomBinding(bindingElements);  
 ```  
   
-## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Bağlama öğesi kodlama ileti meta verileri desteği ekleme  
- Türetilen herhangi bir türü <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> hizmeti için oluşturulan WSDL belgesinde SOAP bağlama sürümünü güncelleştirmek için sorumludur. Bu uygulama tarafından yapılır `ExportEndpoint` yöntemi <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi ve oluşturulan WSDL değiştirme. Bu örnekte `CustomTextMessageBindingElement` WSDL dışa aktarma mantığından kullanan `TextMessageEncodingBinidngElement`.  
+## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>İleti kodlama bağlama öğesi meta veri desteği ekleme  
+ Öğesinden türetilen herhangi bir türü <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> SOAP bağlama hizmeti için oluşturulan WSDL belgesinde sürümünü güncelleştirmek için sorumludur. Bu uygulama tarafından gerçekleştirilir `ExportEndpoint` metodunda <xref:System.ServiceModel.Description.IWsdlExportExtension> arabirimi ve sonra oluşturulan WSDL değiştirme. Bu örnekte `CustomTextMessageBindingElement` WSDL dışarı aktarma mantığından kullanan `TextMessageEncodingBinidngElement`.  
   
- Bu örnek için elle yapılandırılmış istemci yapılandırmadır. İstemci yapılandırması oluşturulamıyor Svcutil.exe kullanamazsınız `CustomTextMessageBindingElement` davranışını açıklamak için bir ilke onaylama vermez. Genellikle uygulamalıdır <xref:System.ServiceModel.Description.IPolicyExportExtension> davranış veya bağlama öğesi tarafından uygulanan özelliği tanımlayan bir özel ilke onaylama dışarı aktarmak için bir özel bağlama öğesi üzerindeki arabirimi. Özel bağlama öğesi için bir ilke onaylama dışarı aktarma örneği için bkz: [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.  
+ Bu örnek için elle yapılandırılmış istemci yapılandırmadır. İstemci yapılandırması nedeniyle üretmek için Svcutil.exe kullanamazsınız `CustomTextMessageBindingElement` davranışını açıklamak için bir ilke onaylama vermez. Genellikle uygulamalıdır <xref:System.ServiceModel.Description.IPolicyExportExtension> arabirimi davranış veya bağlama öğesi tarafından uygulanan özellik açıklayan bir özel ilke onaylama dışarı aktarmak için bir özel bağlama öğesinin. Özel bağlama öğesi için bir ilke onaylama dışarı aktarmak nasıl bir örnek için bkz [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.  
   
-## <a name="message-encoding-binding-configuration-handler"></a>Kodlama bağlama yapılandırma işleyicisi iletisi  
- Önceki bölümde özel metin ileti Kodlayıcı programlı olarak kullanmayı gösterir. `CustomTextMessageEncodingBindingSection` Yapılandırma dosyasının içinde özel metin ileti kodlayıcı kullanımını belirtmenize olanak tanır yapılandırma işleyicisini uygular. `CustomTextMessageEncodingBindingSection` Sınıfı türer <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfı. `BindingElementType` Özelliği için bu bölümü oluşturmak için bağlama öğesi türünün yapılandırma sistemi bildirir.  
+## <a name="message-encoding-binding-configuration-handler"></a>İleti kodlama bağlama yapılandırma işleyicisi  
+ Önceki bölümde, özel metin ileti Kodlayıcı programsal olarak nasıl kullanılacağını gösterir. `CustomTextMessageEncodingBindingSection` Bir yapılandırma dosyası içinde bir özel metin ileti Kodlayıcı kullanılmasını belirtmenizi sağlar bir yapılandırma işleyicisi uygular. `CustomTextMessageEncodingBindingSection` Sınıf türetilir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> sınıfı. `BindingElementType` Özelliği bağlama öğesi bu bölüm için oluşturulacak tür yapılandırma sistemi bildirir.  
   
- Tarafından tanımlanan tüm ayarlar `CustomTextMessageBindingElement` özellikleri olarak sunulan `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> Öznitelik ayarlanmamışsa, varsayılan değerleri ayarlama ve yapılandırma öğesi özniteliklerini eşleme için özellikleri de yardımcı olur. Yapılandırma değerleri yüklendikten ve türü özelliklerine uygulanan sonra <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> yöntemi çağrıldığında, hangi özellikler somut bir bağlama öğesi örneğine dönüştürür.  
+ Tüm tarafından tanımlanan ayarlara `CustomTextMessageBindingElement` özellikleri olarak gösterilen `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> Öznitelik ayarlanmamışsa, varsayılan değerleri ayarlama ve yapılandırma öğesi özniteliklerini eşleme özellikleri için de yardımcı olur. Yapılandırma değerleri yüklenir ve türünün özelliklerine uygulanan sonra <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> yöntemi çağrıldığında, hangi özellikler bir bağlama öğesi somut bir örneğine dönüştürür.  
   
- Bu yapılandırma işleyicisi hizmet veya istemci için App.config veya Web.config içinde aşağıdaki gösterimi eşler.  
+ Bu yapılandırma işleyicisi, hizmet veya istemci için App.config veya Web.config aşağıdaki gösterimi eşler.  
   
 ```xml  
 <customTextMessageEncoding encoding="utf-8" contentType="text/xml" messageVersion="Soap11Addressing1" />  
 ```  
   
- ISO 8859 1 kodlama örnek kullanır.  
+ Örnek, ISO-8859-1 kodlamayı kullanır.  
   
- Aşağıdaki yapılandırma öğesini kullanarak kaydedilmelidir bu yapılandırma işleyicisi kullanmak için.  
+ Bu yapılandırma işleyicisi aşağıdaki yapılandırma öğesini kullanarak kaydedilmelidir kullanılacak.  
   
 ```xml  
 <extensions>  

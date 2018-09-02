@@ -6,21 +6,21 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58a9c0d02f4a24acc0df4d4a36d65e02f8bb7603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396217"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418991"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izleme (ETW) kullanabilirsiniz. Aşağıdaki araçları kullanarak izlemeleri oluşturabilir ve görüntüleyebilirsiniz:  
   
--   [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) ve [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) Windows işletim sistemine dahil komut satırı araçları.  
+-   [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) ve [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) komut satırı araçları, Windows işletim sistemiyle dahil edilir.  
   
--   [XPerf'in](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) araçlarla [Windows Performans Araç Seti](http://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). XPerf'in hakkında daha fazla bilgi için bkz: [Windows Performans blog](http://go.microsoft.com/fwlink/?LinkId=179509).  
+-   [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) Araçları [Windows Performans Araç Seti](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Xperf hakkında daha fazla bilgi için bkz: [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
- CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcı yüklendiğini doğrulamak için şunu yazın `logman query providers` komut isteminde. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.  
+ CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcı'nın yüklü olduğunu doğrulamak için şunu yazın `logman query providers` komut isteminde. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.  
   
 ```  
 Provider                                 GUID  
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- CLR sağlayıcı listede yoksa, Windows Vista ve sonraki işletim sistemlerinde Windows kullanarak yükleyebileceğiniz [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) komut satırı aracı. Komut istemi penceresini yönetici olarak açın. Komut istemi dizine geçin [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] klasörünü (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET sürüm>\ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:  
+ CLR sağlayıcı listede yoksa, Windows Vista ve sonraki işletim sistemlerinde Windows kullanarak yükleyebilirsiniz [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) komut satırı aracı. Komut istemi penceresini yönetici olarak açın. Komut istemi dizine geçin [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] klasörünü (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET sürüm>\ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>CLR ETW olaylarını yakalama  
- Kullanabileceğiniz [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) ve [XPerf'in](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ETW olaylarını yakalamak için komut satırı araçları ve [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) ve [XPerf'in](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) kodunu çözmek için Araçlar izleme olayları.  
+ Kullanabileceğiniz [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) ve [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) ETW olaylarını yakalamak için komut satırı araçları ve [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) ve [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) kodunu çözmek için Araçlar izleme olayları.  
   
  Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi gerekir:  
   
@@ -51,13 +51,13 @@ Provider                                 GUID
   
      burada:  
   
-    -   `-p` Parametre GUID sağlayıcı tanımlar.  
+    -   `-p` Parametresi GUID sağlayıcısı tanımlar.  
   
-    -   `0x1CCBD` gerçekleştirilecektir olayların kategorilerini belirtir.  
+    -   `0x1CCBD` Görüntülenecek olayların kategorilerini belirler.  
   
-    -   `0x5` (Bu durumda, ayrıntılı (5)) günlük kaydı düzeyini ayarlar.  
+    -   `0x5` (Bu durumda, ayrıntılı (5)) günlüğe kaydetme düzeyini ayarlar.  
   
-    -   `-ets` Parametresi için olay izleme oturumları komutları göndermesini Logman bildirir.  
+    -   `-ets` Parametresi, olay izleme oturumları için komutları göndermek için Logman'ı talimatı verir.  
   
     -   `-ct perf` Parametresi belirtir `QueryPerformanceCounter` işlevi, her olay için zaman damgasını oturum için kullanılacak.  
   
@@ -73,7 +73,7 @@ Provider                                 GUID
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
-     GUID CLR ETW sağlayıcı GUID, burada ve `0x1CCBD:5` her şeyi adresindeki ve Düzey 5 (ayrıntılı) aşağıda izler.  
+     GUID, CLR ETW sağlayıcısı GUID olduğunda ve `0x1CCBD:5` adresindeki ve Düzey 5 (ayrıntılı) altındaki her şeyi izler.  
   
 2.  İzlemeyi durdurmak için aşağıdakileri yazın:  
   
@@ -82,7 +82,7 @@ Provider                                 GUID
      Bu komut, clrevents.etl adlı bir izleme dosyası oluşturur.  
   
 ## <a name="viewing-clr-etw-events"></a>CLR ETW olaylarını görüntüleme  
- CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. Olayları bir açıklaması için bkz: [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md).  
+ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kullanın. Olay açıklaması için bkz [CLR ETW olaylarını](../../../docs/framework/performance/clr-etw-events.md).  
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt kullanarak CLR ETW olaylarını görüntülemek için  
   
@@ -98,7 +98,7 @@ Provider                                 GUID
   
      `xperf clrevents.etl`  
   
-     Bu komut Xperf ETL dosya görüntüleyicisini açar. Bu Görüntüleyicisi'nde, CLR olayları gösterilmiyor **genel olayları** görünümü. Veri Kılavuzu türüne göre kategorize olayların görüntülemek için bu görünümde, bir bölge süre seçin ve ardından sağ tıklayın ve seçin **Özet**.  
+     Bu komut Xperf ETL dosya görüntüleyicisini açar. Bu görüntüleyicide, CLR olayları görünür **genel olaylar** görünümü. Türüne göre kategorilere ayrılmış olayların veri kılavuzunu görüntülemek için bu görünümde bir zaman bölgesi seçin ve ardından sağ tıklayıp **özeti**.  
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl dosyasını, virgülle ayrılmış değerler dosyasına dönüştürmek için  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      Bu komut, olayları görüntüleyebileceğiniz bir virgülle ayrılmış değer (CSV) dosyası olarak dökeceğiniz XPerf'e neden olur. Çünkü farklı olaylar farklı alanlara sahiptir, bu CSV dosyası veriden önce birden fazla üstbilgi satırını içerir. Her satırın ilk alanı, hangi üstbilginin geri kalan alanları belirlemek için kullanılması gerektiğini gösteren olay türüdür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows Performans Araç Seti](http://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows Performans Araç Seti](https://go.microsoft.com/fwlink/?LinkID=161141)  
  [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: f29b8e01239f46b0d56319ba3da1a8fe179a17e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601159"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420060"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;özel durum&gt; (Visual Basic)
-Hangi özel durum belirtir.  
+Hangi özel durumlar atılabilir belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,20 +23,20 @@ Hangi özel durum belirtir.
   
 #### <a name="parameters"></a>Parametreler  
  `member`  
- Geçerli derleme ortamından kullanılabilir bir özel durum referansı. Belirtilen özel durum var ve çevirir derleyici denetler `member` XML çıktısında kurallı öğesi adı. `member` çift tırnak işaretleri içinde görünmesi gerekir ("").  
+ Geçerli derleme ortamdan kullanılabilir bir özel durum başvuru. Belirtilen özel var ve çevirir derleyici denetler `member` kurallı öğesi adı ' % s'çıkış XML dosyası. `member` çift tırnak içinde yer almalıdır ("").  
   
  `description`  
  Bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım `<exception>` etiketi hangi özel durum belirtin. Bu etiket için bir yöntem tanımını uygulanır.  
+ Kullanım `<exception>` hangi özel durumlar atılabilir belirtmek için etiket. Bu etiket, bir yöntem tanımına uygulanır.  
   
- İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.  
+ Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek kullanır `<exception>` bir özel durum açıklamak için etiket, `IntDivide` işlevi throw.  
+ Bu örnekte `<exception>` açıklayan bir özel durum etiketi, `IntDivide` işlevi oluşturur.  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

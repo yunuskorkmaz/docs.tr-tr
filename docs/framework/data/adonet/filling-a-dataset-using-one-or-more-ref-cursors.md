@@ -1,18 +1,18 @@
 ---
-title: Kullanarak bir veri kümesi doldurma ya da daha fazla REF imleçler
+title: Kullanarak DataSet doldurma veya daha fazla REF CURSOR
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 66dc61a3eb71fcc6657a455f13aa1d67cca554ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 78e1a2ce73be1e83284a1d8caa657ff645262e09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761616"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420678"
 ---
-# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Kullanarak bir veri kümesi doldurma ya da daha fazla REF imleçler
-Bu Microsoft Visual Basic örnek doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.  
+# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Kullanarak DataSet doldurma veya daha fazla REF CURSOR
+Bu Microsoft Visual Basic örnek iki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,4 +48,4 @@ Private Sub Button1_Click(ByVal sender As Object, _
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

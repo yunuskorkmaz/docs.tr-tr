@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 2ffc8c88f01ba10bceb4f768f38ae9b1dcc4148e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298168"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422181"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Nasıl yapılır: Dosyadan Metin Okuma
-Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin dosyasındaki metnin nasıl zaman uyumlu ve zaman uyumsuz olarak okunacağını gösterir. Örneğini oluştururken hem örneklerde <xref:System.IO.StreamReader> sınıfı, dosya için göreli veya mutlak yol sağlayın. Aşağıdaki örnek, uygulamayla aynı klasörde TestFile.txt adında bir dosya bulunduğunu kabul eder.  
+Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin dosyasındaki metnin nasıl zaman uyumlu ve zaman uyumsuz olarak okunacağını gösterir. Her iki örnek örneğini oluşturduğunuzda <xref:System.IO.StreamReader> sınıfı, dosyanın göreli veya mutlak yolunu sağlayın. Aşağıdaki örnek, uygulamayla aynı klasörde TestFile.txt adında bir dosya bulunduğunu kabul eder.  
   
- Bu kod örnekleri Windows çalışma zamanı dosyaları için okuma ve yazma için farklı akış türleri sağladığından için Windows mağazası uygulamaları geliştirmek için geçerli değildir. Bir Windows mağazası uygulamasında bir dosyadan metin okuma gösteren örnek için bkz: [hızlı başlangıç: Okuma ve dosyalara yazma](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). .NET Framework akışları ile Windows çalışma zamanı akışları arasında dönüştürme Göster örnekler için bkz: [nasıl yapılır: .NET Framework akışları arasında dönüştürme ve Windows çalışma zamanı akışları](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Bu kod örnekleri Windows çalışma zamanı için dosyaları okuma ve yazma için farklı akış türleri sağladığından, Windows Store uygulamaları için geliştirme için geçerli değildir. Nasıl bir Windows Store uygulaması bir dosyaya metin okunacağını gösteren bir örnek için bkz: [hızlı başlangıç: dosya okuma ve yazma](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). .NET Framework akışları ile Windows çalışma zamanı akışları arasında dönüştürme yapılacağını gösteren örnekler için bkz [nasıl yapılır: .NET Framework akışları arasında dönüştürme ve Windows çalışma zamanı akışları](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir konsol uygulaması içinde eşzamanlı okuma işlemi gösterir. Bu örnekte, metin dosyası kullanarak bir akış okuyucusunu açıldığında, içeriği bir dizeye kopyalanır ve konsola çıktı dizedir.  
+ Aşağıdaki örnek bir konsol uygulaması bir zaman uyumlu okuma işlemini gösterir. Bu örnekte, bir akış okuyucusunu kullanarak metin dosyası açıldığında, içeriğini bir dizeye kopyalanır ve konsol çıktısı için bir dizedir.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir Windows Presentation Foundation (WPF) uygulamasında zaman uyumsuz okuma işlemi gösterilmektedir.  
+ Aşağıdaki örnek, bir Windows Presentation Foundation (WPF) uygulamasında zaman uyumsuz bir okuma işlemini gösterir.  
   
  [!code-csharp[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source6.cs#6)]
  [!code-vb[Conceptual.BasicIO.TextFiles#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source6.vb#6)]  
@@ -43,8 +43,8 @@ Aşağıdaki örnek, masaüstü uygulamaları için .NET kullanılarak bir metin
  <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [Zaman Uyumsuz Dosya G/Ç](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Nasıl yapılır: bir dizin listesi oluşturma](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Hızlı Başlangıç: Okuma ve dosyalara yazma](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
+ [NIB: Nasıl yapılır: Create a Directory Listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [Hızlı Başlangıç: Okuma ve yazma](https://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
