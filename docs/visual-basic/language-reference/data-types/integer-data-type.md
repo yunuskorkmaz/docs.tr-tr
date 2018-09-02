@@ -23,37 +23,37 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1846153375b19b773fedaf056a009f28ab94a4d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591735"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415991"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bitlik (4 bayt) tamsayıları tutar.  
   
 ## <a name="remarks"></a>Açıklamalar
- `Integer` Veri türü bir 32-bit işlemci en iyi performans sağlar. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
+ `Integer` Veri türü 32-bit işlemci üzerinde en iyi performansı sağlar. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
   
  Varsayılan değer olan `Integer` 0'dır.  
 
 ## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bildirme ve başlatma bir `Integer` değişken bir ondalık değişmez değeri, onaltılık değişmez değeri bir sekizlik değişmez değeri atama veya (Visual Basic 2017 ile ikili bir hazır değer başlayarak). Değişmez değer tamsayı aralığı dışında ise `Integer` (diğer bir deyişle, bu ise değerinden <xref:System.Int32.MinValue?displayProperty=nameWithType> veya daha büyük <xref:System.Int32.MaxValue?displayProperty=nameWithType>, derleme hatası oluşur.
+Bildirmek ve başlatmak bir `Integer` değişkenini, bir ondalık sabit değeri, onaltılık bir sabit değer, sekizlik bir sabit değer atama ya da (ikili değişmez değer Visual Basic 2017'den itibaren). Tamsayı sabit değeri aralığının dışında ise `Integer` (diğer bir deyişle, bu ise kısa <xref:System.Int32.MinValue?displayProperty=nameWithType> veya ondan <xref:System.Int32.MaxValue?displayProperty=nameWithType>, bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık sayı olarak, onaltılık temsil 16,342 tamsayılar eşit ve ikili değişmez değerler atanır `Integer` değerleri.
+Aşağıdaki örnekte, tamsayılar ondalık, onaltılık, gösterilen 16,342 eşit ve ikili sabit değerler atanır `Integer` değerleri.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> Önek kullanması `&h` veya `&H` bir onaltılık değişmez değeri, öneki belirtmek için `&b` veya `&B` ikili bir hazır değer ve öneki belirtmek için `&o` veya `&O` sekizlik değişmez değeri belirtmek için. Ondalık değişmez değerler, önek vardır.
+> Önek kullanın `&h` veya `&H` önek onaltılık bir sabit belirtmek için `&b` veya `&B` ikili sabit ve öneki belirtmek için `&o` veya `&O` sekizlik bir sabit belirtmek için. Ondalık değişmez değerler, önek vardır.
 
-Visual Basic 2017 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliğini artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
+Visual Basic 2017'den itibaren alt çizgi karakteri de kullanabilirsiniz `_`, okunabilirliği artırmak için bir basamak ayırıcı olarak, aşağıdaki örnekte görüldüğü gibi.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Visual Basic 15,5 ile başlayarak, alt çizgi karakterini de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizli basamak arasında başında ayırıcı olarak. Örneğin:
+Visual Basic 15.5 ile başlayarak, alt çizgi karakteri de kullanabilirsiniz (`_`) öneki ve onaltılık, ikili veya sekizlik basamak arasında önde gelen bir ayırıcı olarak. Örneğin:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
--   **Birlikte çalışma hakkında dikkat edilecek noktalar** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmaz bileşenleriyle arabirim olmadığını unutmayın `Integer` diğer ortamlarda farklı veri genişliği (16 bit) vardır. Bir 16 bit bağımsız değişkeni tür bileşen geçirilirse, olarak bildirme `Short` yerine `Integer` yeni Visual Basic kodunuzda.  
+-   **Birlikte çalışabilirlik değerlendirmeleri.** Otomasyon ve COM nesneleri gibi .NET Framework için yazılmaz bileşenleriyle arabirim olmadığını unutmayın `Integer` diğer ortamlarda farklı veri genişliği (16 bit) sahiptir. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `Short` yerine `Integer` yeni Visual Basic kod.  
   
--   **Genişletme.** `Integer` Veri türü widens için `Long`, `Decimal`, `Single`, veya `Double`. Bu dönüştürebilirsiniz anlamına gelir `Integer` karşılaşmadan olmadan bu türlerinden herhangi biri için bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
+-   **Genişletme.** `Integer` Widens veri türü için `Long`, `Decimal`, `Single`, veya `Double`. Yani dönüştürebilirsiniz `Integer` karşılaşmadan bu türlerden herhangi birine bir <xref:System.OverflowException?displayProperty=nameWithType> hata.  
   
--   **Karakterleri yazın.** Değişmez değer türü karakteri ekleme `I` bir hazır değer zorlar `Integer` veri türü. Tanımlayıcı türü karakteri ekleme `%` herhangi bir tanımlayıcı zorlar `Integer`.  
+-   **Tür karakterleri.** Değişmez değer türü karakterinin `I` sabit değerine zorlar `Integer` veri türü. Tanımlayıcı türü karakteri ekleme `%` herhangi bir tanımlayıcı zorlar `Integer`.  
   
--   **Framework türü.** .NET Framework'teki karşılık gelen tür <xref:System.Int32?displayProperty=nameWithType> yapısı.  
+-   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Int32?displayProperty=nameWithType> yapısı.  
   
 ## <a name="range"></a>Aralık
 
@@ -98,7 +98,7 @@ k = 5.5
 ## <a name="see-also"></a>Ayrıca bkz.
 
 <xref:System.Int32?displayProperty=nameWithType>   
- [Veri Türleri](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)  
  [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)  
  [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

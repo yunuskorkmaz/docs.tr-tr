@@ -2,49 +2,49 @@
 title: Kısıtlama türleri
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
-ms.openlocfilehash: 53e5975017c3a27ede8ad07cd93f78f71df2d3e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517514"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401538"
 ---
 # <a name="constraint-types"></a>Kısıtlama türleri
-Bu örnek bir iş akışına kısıtlamaları uygulamak için iki farklı yollar gösterir, bir gelen (yapı) etkinliği içinde ve bir gelen dışında (ilke) olur. Bu senaryoda, iki bağımsız değişkenler arasındaki ilişkiyi doğrulamak bir etkinlik yazar (3rth taraf yazılım şirketten) ister. Bu durumda, maliyet fiyatına eşit veya daha küçük olmalıdır. Genel doğrulama yapı kısıtlaması budur.  
+Bu örnek, bir iş akışı kısıtlamaları uygulamak için iki farklı yol gösterir, bir etkinlik içinde (derleme) arasındadır ve bir gelen dışında (ilke) olur. Bu senaryoda, bir etkinlik yazar (şirketten 3rth taraf yazılım) iki bağımsız değişken arasındaki ilişkiyi doğrulamak istiyor. Bu durumda, maliyet fiyatına eşit veya değerinden küçük olmalıdır. Genel bir doğrulama yapı kısıtlaması budur.  
   
- Ardından bir alışveriş sahibi bazı doğrulama Bu genel etkinlik eklemek istiyor. Bu durumda, çoğu $9.99 olmasını ürünlerinde veya daha az istediği. Bu nedenle, kendisinin üstünde olan bir ilke kısıtlaması kullanan `CreateProduct` etkinlik.  
+ Ardından bu genel etkinlik bazı doğrulama eklemek bir Atölye sahibi istiyor. Bu durumda, çoğu ürünlerinden $9.99 olması veya daha az istediği. Bu nedenle, üstünde olan bir ilke kısıtlaması kullandığı `CreateProduct` etkinlik.  
   
  Örnek:  
   
- Etkinlik yazar (yapı) gerekir:  
+ Etkinlik yazar (derleme) gerekir:  
   
--   Kısıtlama oluşturma (`PriceGreaterThanCost`). Tüm doğrulama mantığını bulunduğu budur.  
+-   Kısıtlama oluşturma (`PriceGreaterThanCost`). Doğrulama mantığını bulunduğu budur.  
   
--   Geçersiz kılma `System.Activities.CodeActivity.OnGetConstraints()` ve kısıtlama eklemek (`PriceGreaterThanCost`) kısıtlamaları için <xref:System.Collections.IList>.  
+-   Geçersiz kılma `System.Activities.CodeActivity.OnGetConstraints()` ve kısıtlama ekleyin (`PriceGreaterThanCost`) kısıtlamaları için <xref:System.Collections.IList>.  
   
- İş akışı yazarı (ilke) gerekir:  
+ İş akışı yazar (ilke) gerekir:  
   
 -   Bir iş akışı etkinlik doğrulamak için bir örneğini oluşturun (`CreateProduct`).  
   
 -   Kısıtlama oluşturma (`MaxPrice`).  
   
--   Oluşturma bir <xref:System.Activities.Validation.ValidationSettings> örneği (`validationSettings`) ve kısıtlama eklemek (`MaxPrice`) koleksiyonuna `AdditionalConstraints`. Burada iş akışı yazarı ilke kısıtlamaları dizisi veya paralel gibi herhangi bir etkinlik ekleyebilirsiniz.  
+-   Oluşturma bir <xref:System.Activities.Validation.ValidationSettings> örneği (`validationSettings`) ve kısıtlama ekleyin (`MaxPrice`) koleksiyonuna `AdditionalConstraints`. Burada iş akışı Yazar ilke kısıtlamaları sıralı veya paralel gibi herhangi bir etkinlik ekleyebilirsiniz.  
   
--   Çağrı <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, döndüren bir <xref:System.Activities.Validation.ValidationResults> koleksiyonu <xref:System.Activities.Validation.ValidationError> nesneleri.  
+-   Çağrı <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, döndüren bir <xref:System.Activities.Validation.ValidationResults> koleksiyonunu <xref:System.Activities.Validation.ValidationError> nesneleri.  
   
 -   (İsteğe bağlı) Yazdırma <xref:System.Activities.Validation.ValidationError> nesneleri.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  ConstraintTypes.sln örnek çözümü açmak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  ConstraintTypes.sln örnek çözümde açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Derleme ve çözümü çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Validation\ConstraintLibrary`

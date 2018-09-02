@@ -1,53 +1,50 @@
 ---
 title: 'Nasıl yapılır: WPF Uygulamasına Giriş Ekranı Ekleme'
-ms.date: 03/30/2017
+ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
 - startup window [WPF]
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 06d6cb7c5a5081d3b6c4979ab50e1caaa726acbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46efa041736870c5c0f08baa321ef0dc53cacc0d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547007"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402932"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Nasıl yapılır: WPF Uygulamasına Giriş Ekranı Ekleme
-Bu konuda bir başlangıç penceresi eklemeyi gösterir veya *ekranı*, bir Windows Presentation Foundation (WPF) uygulaması için.  
-  
-### <a name="to-add-an-existing-image-as-a-splash-screen"></a>Varolan bir görüntü giriş ekranı eklemek için  
-  
-1.  Oluşturun veya ekranı için kullanmak istediğiniz görüntü bulun. Windows görüntüleme bileşeni (WIC) tarafından desteklenen herhangi bir resim biçimi kullanabilirsiniz. Örneğin, BMP, GIF, JPEG, PNG veya TIFF biçimini kullanabilirsiniz.  
-  
-2.  Görüntü dosyası WPF uygulaması projesine ekleyin. Daha fazla bilgi için bkz: [NIB: nasıl yapılır: varolan bir proje öğeleri Ekle](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
-  
-3.  Çözüm Gezgini'nde, görüntüyü seçin.  
-  
-4.  Aşağı açılan okunu Özellikler penceresinde **yapı eylemi** özelliği.  
-  
-5.  Seçin **KarşılamaEkranı** aşağı açılan listeden.  
-  
-    > [!NOTE]
-    >  Görmüyorsanız, **KarşılamaEkranı** seçeneği, kullanmakta olduğunuz kontrol ettiğinizden emin olun [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 veya sonraki bir sürümü.  
-  
-6.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
-  
-     Giriş ekranı görüntüsü ekran ortasında görünür ve ana uygulama penceresi göründüğünde kaybolur.  
-  
-### <a name="to-remove-the-splash-screen-from-an-application"></a>Giriş ekranı uygulamayı kaldırmak için  
-  
-1.  Çözüm Gezgini'nde giriş ekranı görüntüsü seçin.  
-  
-2.  Özellikler penceresinde ayarlayın **yapı eylemi** için **hiçbiri**.  
-  
-### <a name="to-remove-the-splash-screen-from-an-application"></a>Giriş ekranı uygulamayı kaldırmak için  
-  
--   Çözüm Gezgini'nde giriş ekranı görüntüsü silin.  
-  
--   Karşılama ekranı resmini projeden çıkarın.  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:System.Windows.SplashScreen>  
- [NIB: nasıl yapılır: Varolan öğeleri için bir proje ekleyin](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+
+Bu konuda, bir başlangıç penceresi ekleme işlemi açıklanır veya *giriş ekranı*, bir Windows Presentation Foundation (WPF) uygulaması için.
+
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a>Giriş ekranı varolan bir görüntü eklemek için
+
+1.  Oluşturun veya Karşılama ekranı olarak kullanmak istediğiniz görüntüyü bulun. Windows görüntüleme bileşeni (WIC) tarafından desteklenen herhangi bir resim biçimi kullanabilirsiniz. Örneğin, BMP, GIF, JPEG, PNG ve TIFF biçimini kullanabilirsiniz.
+
+2.  Görüntü dosyası WPF uygulaması projesine ekleyin.
+
+3.  İçinde **Çözüm Gezgini**, görüntüyü seçin.
+
+4.  Özellikler penceresinde, aşağı açılan oka tıklayın **derleme eylemi** özelliği.
+
+5.  Seçin **SplashScreen** aşağı açılan listeden.
+
+6.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+
+     Karşılama ekranı görüntüsü ekranın ortasında görünür ve ana uygulama penceresini göründüğünde kaybolur.
+
+## <a name="to-exclude-the-splash-screen-from-build"></a>Karşılama ekranında derlemeden hariç tutmak için
+
+1.  İçinde **Çözüm Gezgini**, Karşılama ekran görüntüsünü seçin.
+
+2.  İçinde **özellikleri** penceresinde **derleme eylemi** için **hiçbiri**.
+
+## <a name="to-remove-the-splash-screen-from-an-application"></a>Bir uygulamaya ait karşılama ekranında kaldırmak için
+
+İçinde **Çözüm Gezgini**, Karşılama ekranı görüntüyü silin.
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- <xref:System.Windows.SplashScreen>
+- [Nasıl yapılır: bir projeye var olan öğeleri Ekle](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

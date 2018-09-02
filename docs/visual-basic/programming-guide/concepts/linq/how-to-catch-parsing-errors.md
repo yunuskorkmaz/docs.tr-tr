@@ -1,22 +1,23 @@
 ---
-title: 'Nasıl yapılır: hatalar (Visual Basic) ayrıştırma Catch'
+title: 'Nasıl yapılır: ayrıştırma (Visual Basic) hatalarını yakalama'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406554"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>Nasıl yapılır: hatalar (Visual Basic) ayrıştırma Catch
-Bu konu, hatalı biçimlendirilmiş veya geçersiz XML algılamak gösterilmektedir.  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Nasıl yapılır: ayrıştırma (Visual Basic) hatalarını yakalama
+Bu konu, hatalı biçimlendirilmiş veya geçersiz XML nasıl gösterir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanılarak uygulanan <xref:System.Xml.XmlReader>. İçin hatalı biçimlendirilmiş veya geçersiz XML aktarılırsa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], arka plandaki <xref:System.Xml.XmlReader> sınıfı bir özel durum oluşturur. XML ayrıştırma gibi çeşitli yöntemler <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, özel durum catch değil; özel durum sonra uygulamanız tarafından yakalanan.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanılarak uygulanan <xref:System.Xml.XmlReader>. Hatalı biçimlendirilmiş veya geçersiz XML iletilmezse [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], arka plandaki <xref:System.Xml.XmlReader> sınıfı bir özel durum oluşturur. XML gibi ayrıştırma çeşitli yöntemleri <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, özel durum yakalamayın; özel durumun daha sonra uygulamanız tarafından yakalanabilir.  
   
- XML değişmez değerleri kullanıyorsanız elde edilemiyor Not ayrıştırma hataları. Visual Basic derleyici hataları hatalı biçimlendirilmiş veya geçersiz XML yakalar.  
+ XML değişmez değerleri kullanırsanız elde edilemiyor Not ayrıştırma hataları. Visual Basic Derleyicisi, hatalı biçimlendirilmiş veya geçersiz XML hataları yakalar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, geçersiz XML Ayrıştırma dener:  
+ Aşağıdaki kod, geçersiz XML ayrıştırmak çalışır:  
   
 ```vb  
 Try  
@@ -32,13 +33,13 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- Bu kodu çalıştırdığınızda, aşağıdaki özel durum oluşturur:  
+ Bu kodu çalıştırdığınızda, şu özel durum oluşturur:  
   
 ```  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Bekleyebileceğiniz özel durumlar hakkında bilgi için <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, ve <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> atmak için bkz <xref:System.Xml.XmlReader> belgeleri.  
+ Bekleyebileceğiniz özel durumları hakkında bilgi <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, ve <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> oluşturmak için bkz <xref:System.Xml.XmlReader> belgeleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

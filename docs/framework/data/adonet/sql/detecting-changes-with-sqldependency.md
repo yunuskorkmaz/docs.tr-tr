@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: a25afbe0124f7870df886a1e26e0df2a0716b205
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360196"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405440"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency ile değişiklikleri algılama
-A <xref:System.Data.SqlClient.SqlDependency> nesne ilişkilendirilebilir bir <xref:System.Data.SqlClient.SqlCommand> sorgu sonuçları ilk başta farklı algılamak için. Ayrıca bir temsilci atayabilirsiniz `OnChange` sonuçları için ilişkili bir komut değiştirdiğinizde, ateşlenir olay. İlişkilendirmeniz gerekir <xref:System.Data.SqlClient.SqlDependency> komutu yürütmeden önce komutu. `HasChanges` Özelliği <xref:System.Data.SqlClient.SqlDependency> verileri ilk alındığından beri sorgu sonuçlarını değişip değişmediğini için de kullanılabilir.  
+A <xref:System.Data.SqlClient.SqlDependency> nesne ilişkili bir <xref:System.Data.SqlClient.SqlCommand> sorgu sonuçları başlangıçta alınan farklı algılamak için. Bir temsilciye de atayabilirsiniz `OnChange` olay sonuçları için ilişkili bir komut değiştirdiğinizde, ateşlenir. İlişkilendirmeniz gerekir <xref:System.Data.SqlClient.SqlDependency> komutu yürütmeden önce komutu. `HasChanges` Özelliği <xref:System.Data.SqlClient.SqlDependency> veri ilk alındıktan sonra sorgu sonuçları değiştirdiyseniz belirlemek için de kullanılabilir.  
   
 ## <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- Bağımlılık altyapı dayanan bir <xref:System.Data.SqlClient.SqlConnection> , ne zaman açıldığında <xref:System.Data.SqlClient.SqlDependency.Start%2A> temel alınan veriler için verilen komut değişti bildirimleri almak için çağrılır. Çağrısı başlatmak bir istemci özelliğini `SqlDependency.Start` kullanılarak denetlenir <xref:System.Data.SqlClient.SqlClientPermission> ve kod erişim güvenliği öznitelikleri. Daha fazla bilgi için bkz: [etkinleştirme sorgu bildirimleri](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) ve [kod erişim güvenliği ve ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Bağımlılık altyapı dayanan bir <xref:System.Data.SqlClient.SqlConnection> ne zaman açıldığı <xref:System.Data.SqlClient.SqlDependency.Start%2A> belirli bir komut için temel alınan veriler değişmiştir bildirimleri almak için çağrılır. Çağrı başlatmak bir istemci `SqlDependency.Start` kullanımının denetlenir <xref:System.Data.SqlClient.SqlClientPermission> ve kod erişimi güvenlik öznitelikleri. Daha fazla bilgi için [sorgu bildirimleri etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) ve [kod erişimi güvenliği ve ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki adımları bir bağımlılık bildirmek için komut yürütme nasıl çalışılacağını ve değişiklikleri sonuç kümesi, bir bildirim alırsınız:  
+ Aşağıdaki adımlar, bir bağımlılık bildirin, komut yürütme işlemini göstermektedir ve değişiklikleri sonuç kümesi bir bildirim alırsınız:  
   
-1.  Başlatma bir `SqlDependency` sunucu bağlantısı.  
+1.  Başlatan bir `SqlDependency` sunucu bağlantısı.  
   
-2.  Oluşturma <xref:System.Data.SqlClient.SqlConnection> ve <xref:System.Data.SqlClient.SqlCommand> sunucuya bağlanın ve bir Transact-SQL deyimi tanımlamak için nesneleri.  
+2.  Oluşturma <xref:System.Data.SqlClient.SqlConnection> ve <xref:System.Data.SqlClient.SqlCommand> nesneleri sunucuya bağlanın ve Transact-SQL deyimini tanımlayın.  
   
-3.  Yeni bir `SqlDependency` nesnesi veya mevcut bir kullanın ve onu bağladıktan `SqlCommand` nesnesi. Dahili olarak, bu oluşturur bir <xref:System.Data.Sql.SqlNotificationRequest> nesne ve gerektiği gibi komut nesnesine bağlar. Bu bildirim isteği bu benzersiz olarak tanımlayan bir iç tanımlayıcı içeren `SqlDependency` nesnesi. Zaten etkin değilse, aynı zamanda istemci dinleyicisini başlatır.  
+3.  Yeni bir `SqlDependency` nesnesi veya var olanı kullanın ve öğeyi `SqlCommand` nesne. Dahili olarak, bu oluşturur bir <xref:System.Data.Sql.SqlNotificationRequest> nesne ve gerektiğinde komut nesnesine bağlar. Bu bildirim isteği bu benzersiz olarak tanımlayan bir iç tanımlayıcı içeren `SqlDependency` nesne. Zaten etkin değilse, ayrıca istemci dinleyicisini başlatır.  
   
-4.  Bir olay işleyicisi abone `OnChange` olayı `SqlDependency` nesnesi.  
+4.  Bir olay işleyicisi abone `OnChange` olayı `SqlDependency` nesne.  
   
-5.  Herhangi birini kullanarak komutu yürütün `Execute` yöntemlerinin `SqlCommand` nesnesi. Komut bildirim nesnesine bağlı olduğundan, sunucunun bir bildirim oluşturmalısınız ve sırası bilgilerini bağımlılıkları kuyruğuna işaret edecek tanır.  
+5.  Herhangi bir komutu yürütme `Execute` yöntemlerinin `SqlCommand` nesne. Komut bildirim nesneye bağlı olduğundan, sunucunun bir bildirim oluşturmalısınız ve kuyruk bilgileri bağımlılıkları kuyruğa işaret edecek tanır.  
   
 6.  Durdur `SqlDependency` sunucu bağlantısı.  
   
- Herhangi bir kullanıcı daha sonra temel alınan veriler değişirse, Microsoft SQL Server, bu tür bir değişiklik için bekleyen bir bildirim arka plandaki aracılığıyla istemciye işlenen ve iletilen bir bildirim gönderir algılar ve `SqlConnection` oluşturulmuş çağırarak `SqlDependency.Start`. İstemci dinleyicisi geçersiz kılma iletisini alır. İstemci dinleyicisi ardından ilişkili bulur `SqlDependency` nesne ve ateşlenir `OnChange` olay.  
+ Microsoft SQL Server herhangi bir kullanıcı daha sonra temel alınan verileri değişirse, bu tür bir değişiklik için bekleyen bir bildirim ve arka plandaki aracılığıyla istemciye işlenen ve iletilen bir bildirim gönderir algılar `SqlConnection` oluşturulmuş çağırarak `SqlDependency.Start`. İstemci dinleyici geçersiz kılma iletiyi alır. İstemci dinleyici ardından ilişkili bulur `SqlDependency` nesne ve ateşlenir `OnChange` olay.  
   
- Aşağıdaki kod parçası, örnek bir uygulama oluşturmak için kullanacağınız tasarım deseni gösterir.  
+ Aşağıdaki kod parçası, örnek bir uygulama oluşturmak için kullanacağınız tasarım desenini gösterir.  
   
 ```vb  
 Sub Initialization()  
@@ -94,7 +94,7 @@ void SomeMethod()
   
         // Create a dependency and associate it with the SqlCommand.  
         SqlDependency dependency=new SqlDependency(command);  
-        // Maintain the refence in a class member.  
+        // Maintain the reference in a class member.  
   
         // Subscribe to the SqlDependency event.  
         dependency.OnChange+=new  
@@ -124,4 +124,4 @@ void Termination()
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Nasıl Yapılır Konuları programlama ağ
+title: Ağ programlama nasıl yapılır konuları
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -10,17 +10,17 @@ ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ed8de7c4271483a878ee422aac188adbf4700985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 703d3c2260f46f46e85831f809386d5a3af647a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395362"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406540"
 ---
-# <a name="network-programming-how-to-topics"></a>Nasıl Yapılır Konuları programlama ağ
-Aşağıdaki liste, ağ programlama için kavramsal belgelerinde bulunan nasıl yapılır konuları bağlantılarını içerir.  
+# <a name="network-programming-how-to-topics"></a>Ağ programlama nasıl yapılır konuları
+Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konulara bağlantılar içerir.  
   
- **İstekte bulunan verileri:**  
+ **İstekte bulunan veriler:**  
   
 -   [Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
@@ -30,7 +30,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerinde bulunan nasıl 
   
 -   [Nasıl yapılır: WebRequest ile Eşleşen Protokole Özgü WebResponse Alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Eklenebilir ve uygulama protokolleri:**  
+ **Takılabilir ve uygulama protokolleri:**  
   
 -   [Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -56,7 +56,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerinde bulunan nasıl 
   
 -   [Nasıl yapılır: Ağ İzlemeyi Yapılandırma](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
   
- **Önbelleğe alma yapılandırma:**  
+ **Önbelleğe almayı yapılandırma:**  
   
 -   [Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
@@ -72,7 +72,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerinde bulunan nasıl 
   
 -   [Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
- **Ağ Bilgi:**  
+ **Ağ bilgileri:**  
   
 -   [Nasıl yapılır: Ağ Kullanılabilirliğini Algılama ve Adres Değişiklikleri](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
@@ -83,4 +83,4 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerinde bulunan nasıl 
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)  
  [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN kod Galerisi'nden .NET ağ örnekleri](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

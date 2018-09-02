@@ -1,27 +1,27 @@
 ---
-title: Veri kümesi içeriği kopyalama
+title: DataSet içeriklerini kopyalama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: bee91a6406fd48894580ce6223a5682dbadab380
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757300"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401950"
 ---
-# <a name="copying-dataset-contents"></a>Veri kümesi içeriği kopyalama
-Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece iş verilerle özgün veriler etkilenmeden veya iş verilerini bir kümeyle bir **DataSet**. Kopyalama işlemi sırasında bir **DataSet**, şunları yapabilirsiniz:  
+# <a name="copying-dataset-contents"></a>DataSet içeriklerini kopyalama
+Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece özgün veriler etkilenmeden verileri ile çalışma veya iş verilerin bir alt kümesi ile bir **veri kümesi**. Kopyalama işlemi sırasında bir **veri kümesi**, şunları yapabilirsiniz:  
   
--   Tam bir kopyasını oluşturmak **DataSet**şema, verileri, satır durumu bilgileri ve satır sürümleri dahil olmak üzere.  
+-   Tam bir kopyasını oluşturma **veri kümesi**şema, veri, satır durum bilgilerini ve satır sürümleri dahil olmak üzere.  
   
--   Oluşturma bir **DataSet** varolan şema içeren **DataSet**, ancak yalnızca değiştirilmiş satırları. Değiştirilmiş tüm satırları döndürür veya belirli bir belirtin **DataRowState**. Satır durumları hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+-   Oluşturma bir **veri kümesi** varolan şema içeren **veri kümesi**, ancak yalnızca değiştirilen satırları. Değiştirilmiş tüm satırları döndürür veya belirli bir belirtin **DataRowState**. Satır durumları hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Şema veya ilişkisel yapısı kopyası **DataSet** herhangi bir satır kopyalama olmadan yalnızca,. Satırlar, var olan içine alınabilir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.ImportRow%2A>.  
+-   Şema veya ilişkisel yapısını kopyası **veri kümesi** yalnızca, tüm satırları kopyalama olmadan. Satırları, varolan içine aktarılabilir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.ImportRow%2A>.  
   
- Tam bir kopyasını oluşturmak için **DataSet** hem şema hem de veri içeren, kullanın <xref:System.Data.DataSet.Copy%2A> yöntemi **DataSet**. Aşağıdaki kod örneğinde, tam bir kopyasını oluşturmak gösterilmiştir **DataSet**.  
+ Tam bir kopyasını oluşturmak için **veri kümesi** hem şema hem de veri içeren, kullanın <xref:System.Data.DataSet.Copy%2A> yöntemi **veri kümesi**. Aşağıdaki kod örneği, tam bir kopyasını oluşturma işlemi gösterilmektedir **veri kümesi**.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Bir kopyasını oluşturmak için bir **DataSet** şema ve yalnızca verileri temsil eden içeren **eklenen**, **değiştirilen**, veya **silinmiş** satır kullanın <xref:System.Data.DataSet.GetChanges%2A> yöntemi **DataSet**. Aynı zamanda **GetChanges** geçirerek yalnızca satırları belirtilen satır durumuna döndürmek için bir **DataRowState** değer çağrılırken **GetChanges**. Aşağıdaki kod örneğinde nasıl iletileceğini gösterir bir **DataRowState** çağrılırken **GetChanges**.  
+ Bir kopyasını oluşturmak için bir **veri kümesi** içeren şema ve yalnızca verileri temsil eden **eklenen**, **değiştirilen**, veya **silinmiş** satır kullanın <xref:System.Data.DataSet.GetChanges%2A> yöntemi **veri kümesi**. Ayrıca **GetChanges** geçirerek yalnızca belirtilen satır durumuna sahip satır döndürülecek bir **DataRowState** değer çağrılırken **GetChanges**. Aşağıdaki kod örneğinde nasıl geçirileceğini gösterir. bir **DataRowState** çağırırken **GetChanges**.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Bir kopyasını oluşturmak için bir **DataSet** yalnızca şema içeren, kullanın <xref:System.Data.DataSet.Clone%2A> yöntemi **DataSet**. Ayrıca var olan satırları kopyalanan ekleyebilirsiniz **DataSet** kullanarak **ImportRow** yöntemi **DataTable**. **ImportRow** verileri, satır durumu ve satır sürüm bilgilerini belirtilen tabloya ekler. Sütun değerleri eklenir yalnızca sütun adı eşleştiği ve veri türü uyumludur.  
+ Bir kopyasını oluşturmak için bir **veri kümesi** kullanmak, yalnızca şema içeren <xref:System.Data.DataSet.Clone%2A> yöntemi **veri kümesi**. Ayrıca var olan satır kopyalanan ekleyebilirsiniz **veri kümesi** kullanarak **ImportRow** yöntemi **DataTable**. **ImportRow** veri satırı durumu ve satır sürüm bilgilerini belirtilen tabloya ekler. Sütun değerleri eklenir yalnızca sütun adı eşleştiği ve veri türü uyumludur.  
   
- Aşağıdaki kod örneğinde bir kopyasını oluşturur bir **DataSet** ve sonra özgün satırları ekler **DataSet** için **müşteriler** tablosundaki **veri kümesi**  kopya müşteriler için burada **CountryRegion alanı** sütun "Almanya" değerine sahip.  
+ Aşağıdaki kod örneği bir kopyasını oluşturur. bir **veri kümesi** ve ardından özgün satırları ekler **veri kümesi** için **müşteriler** tablosundaki **veri kümesi**  kopya müşteriler için burada **CountryRegion alanı** sütununun değeri "Germany".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -98,4 +98,4 @@ foreach (DataRow copyRow in copyRows)
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

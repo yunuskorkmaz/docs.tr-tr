@@ -4,18 +4,18 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875173"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403533"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre kesici desenini uygulama
 
-Daha önce belirtildiği gibi bir uzak hizmete veya kaynağa bağlanmaya çalıştığınızda oluşabilir gibi bir değişken, kurtarılır süre miktarını gereken değişiklik gösterebileceği hataları işlemelidir. Bu tür bir hata işleme kararlılığını ve dayanıklılığını uygulamanın artırabilir.
+Daha önce belirtildiği gibi bir uzak hizmete veya kaynağa bağlanmaya çalıştığınızda oluşabilir gibi kurtarmak için değişken bir süre gereken değişiklik gösterebileceği hataları işlemelidir. Bu tür bir hata işleme kararlılığını ve dayanıklılığını uygulamanın artırabilir.
 
-Dağıtılmış bir ortamda uzak kaynak ve hizmetlere çağrılar yavaş ağ bağlantıları ve zaman aşımları, gibi geçici hatalardan dolayı başarısız veya değiştirilebilir kaynakları eşitlenmediğini yavaş veya geçici olarak kullanılamıyor. Kısa bir süre sonra kendilerini genellikle bu hataları düzeltin ve sağlam bir bulut uygulaması "yeniden deneme düzenini" gibi bir strateji kullanarak işlemek için hazırlıklı olmalıdır. 
+Dağıtılmış bir ortamda uzak kaynak ve hizmetlere çağrılar yavaş ağ bağlantıları ve zaman aşımları, gibi geçici hatalardan dolayı başarısız olabilir veya kaynaklar yavaş yanıt vermiyor veya geçici olarak kullanılamıyor. Kısa bir süre sonra kendilerini genellikle bu hataları düzeltin ve sağlam bir bulut uygulaması "yeniden deneme düzenini" gibi bir strateji kullanarak işlemek için hazırlıklı olmalıdır. 
 
 Ancak, olabilir hataları düzeltmek çok daha uzun sürebilir, beklenmedik olaylardan kaynaklanır olduğu durumlar. Bu hataların önem derecesi kısmi bağlantı kaybı gelen bir hizmetin tamamen çökmesi arasında değişebilir. Bu durumda, bir uygulama başarılı olma ihtimali düşük bir işlemi sürekli yeniden denemesi anlamsız olabilir. 
 
@@ -23,7 +23,7 @@ Bunun yerine uygulama işlemin başarısız olduğunu kabul edin ve hatayı uygu
 
 HTTP yeniden carelessly kullanarak neden olabilir bir hizmet reddi oluşturmak ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) saldırı kendi yazılımınızı içinde. Bir mikro hizmet başarısız olursa veya yavaş çalışıyor gibi birden çok istemci art arda başarısız istekleri yeniden deneme. Başarısız olan hizmetine yönelik trafiği katlanarak artan tehlikeli riski oluşturur.
 
-Bu nedenle, gereken denemeye devam olmadığında yeniden deneme isteklerini durdurmak için savunma engel bir tür olması gerekir. Kesin olarak devre kesici, savunma engel olur.
+Bu nedenle, çalışırken değer tutma olmadığında aşırı isteklerini durdurmak için savunma engel tür gerekir. Kesin olarak devre kesici, savunma engel olur.
 
 Devre kesici düzeni, "yeniden deneme düzenini" farklı bir amaca sahip. "Yeniden deneme düzenini" bir işlem sonunda başarılı beklentisi işleminde yeniden denemek bir uygulama sağlar. Devre kesici düzeni uygulamanın başarısız olma olasılığı yüksek bir işlemi gerçekleştirilirken engeller. Bir uygulama, bu iki Düzen birleştirebilirsiniz. Ancak, yeniden deneme mantığının devre kesici tarafından döndürülen herhangi bir özel durum duyarlı olması gerekir ve devre kesici bir hataya geçici olmadığını gösteriyorsa, yeniden denemeyi bırakması.
 
@@ -43,7 +43,7 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()`Yöntemdir hangi ilkeleri kullanacağınız HttpClient nesneleri ekler. Bu durumda, devre kesici Polly'nın İlkesi eklemektir.
+`AddPolicyHandler()`Yöntemdir hangi ilkeleri kullanacağınız HttpClient nesneleri ekler. Bu durumda, devre kesici Polly ilke eklemektir.
 
 Daha modüler bir yaklaşım sahip olmak için aşağıdaki kod olarak GetCircuitBreakerPolicy() adlı ayrı bir yöntem devre kesici İlkesi tanımlanmıştır.
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Yukarıdaki kod örneğinde, keser veya olduğunda beş özel durumları Http isteklerini kurulmaya çalışılırken bağlantı hattını açılır devre kesici İlkesi yapılandırılır. Ardından, 30 saniye süre veya kesme olacaktır.
+Yukarıdaki kod örneğinde, keser veya olduğunda beş art arda hatalar Http isteklerini kurulmaya çalışılırken bağlantı hattını açılır devre kesici İlkesi yapılandırılır. Bu durum oluştuğunda, bağlantı hattı için 30 saniye çalışmamasına neden olur: Bu dönemde çağrıları devre kesici tarafından hemen başarısız yerine gerçekten yerleştirilmesi.  İlke otomatik olarak yorumlar [ilgili özel durumları ve HTTP durum kodları](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) hataları olarak.  
 
 Devre Kesiciler, istekleri, bir istemci uygulamadan daha farklı bir ortamda dağıtılan belirli bir kaynağa veya HTTP çağrısı gerçekleştiriyor hizmet sorunları varsa, bir geri dönüş altyapısını yeniden yönlendirmek için de kullanılmalıdır. Bu şekilde, yalnızca arka uç mikro hizmetlerin ancak, istemci uygulamaları etkileyen veri merkezinde bir kesinti oluşursa istemci uygulamaları için geri dönüş Hizmetleri yönlendirebilirsiniz. Polly bu otomatik hale getirmek için yeni bir ilke planlama [yük devretme İlkesi](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) senaryo. 
 
@@ -65,7 +65,6 @@ Tüm durumlarda nereye yük aksine, sizin için konum saydamlığı olan Azure t
 Bir kullanım HttpClient kullanırken açısından, önceki bölümlerde gösterildiği gibi kod HttpClient HttpClientFactory ile kullanırken daha aynı olduğu için yeni bir şey burada eklemenize gerek yoktur. 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Test Http yeniden ve hizmetine devre Kesiciler
-
 
 Bir Docker konağı hizmetine çözüm başlattığınızda, birden çok kapsayıcı başlatmak gerekir. Bazı kapsayıcıları başlatmak ve, gibi SQL sunucu kapsayıcısı başlatmak daha yavaş. Görüntüleri ve veritabanını ayarlamak gerektiğinden bu Docker'ı hizmetine uygulamasına dağıtmak ilk kez özellikle doğrudur. Bazı kapsayıcıları kapsayıcılar arasındaki bağımlılıkları ayarlasanız bile diğerleri rest Hizmetleri HTTP özel durumlar, başlangıçta throw çıkabilir daha yavaş Başlat olgu önceki bölümlerde açıklandığı gibi düzeyi docker-compose. Bu docker kapsayıcılar arasındaki bağımlılıkları compose olan işlem düzeyinde yeterlidir. Kapsayıcının giriş noktası işlemi başlatıldı, ancak SQL Server sorguları için hazır olmayabilir. Sonucu bir art arda hatalar olabilir ve uygulamanın, bu belirli bir kapsayıcıda tüketmeye çalışırken bir özel durum elde edebilirsiniz. 
 

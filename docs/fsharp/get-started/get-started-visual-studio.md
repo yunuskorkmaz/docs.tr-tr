@@ -2,12 +2,12 @@
 title: "Visual Studio'da F # ile çalışmaya başlama"
 description: 'F # ile Visual Studio kullanmayı öğrenin.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874721"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415740"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio'da F # ile çalışmaya başlama
 
@@ -47,7 +47,7 @@ Dediğimiz Bu işlevde harcanan olan `square` işlevi bağımsız `12`.  F # der
 
 ## <a name="running-your-code"></a>Kodunuzu çalıştıran
 
-Kodu çalıştırmak ve sonuçları tuşlarına basarak görmek **ctrl-f5**.  Bu, hata ayıklama olmadan programı çalıştırır ve sonuçları görmenizi sağlar.  Alternatif olarak, seçebileceğiniz **hata ayıklama** üst düzey menü öğesi Visual Studio'da ve seçin **hata ayıklama olmadan Başlat**.
+Kodu çalıştırmak ve sonuçları tuşlarına basarak görmek **Ctrl**+**F5**.  Bu, hata ayıklama olmadan programı çalıştırır ve sonuçları görmenizi sağlar.  Alternatif olarak, seçebileceğiniz **hata ayıklama** üst düzey menü öğesi Visual Studio'da ve seçin **hata ayıklama olmadan Başlat**.
 
 Şimdi Visual Studio açıldığını konsol penceresine yazdırılan aşağıdaki görmeniz gerekir:
 
@@ -62,4 +62,8 @@ Tebrikler!  İlk F # projenizi Visual Studio'da oluşturulan, F # işlevi, işle
 Henüz yapmadıysanız, kullanıma [turu, F #](../tour.md), F # dilinin temel özelliklerinden bazıları kapsayan.  Bazı F # özelliklerine genel bir bakış sunar ve Visual Studio'ya kopyalayıp çalıştırabilirsiniz bol miktarda kod örnekleri sağlamak.  Ayrıca kullanabileceğiniz bazı harika dış kaynaklar verilmiştir büyütmüş içinde [F # Kılavuzu](../index.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [F # Turu](../tour.md) [F # dili başvurusu](../language-reference/index.md) [anlam çıkarma](../language-reference/type-inference.md) [simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)
+
+- [F# Turu](../tour.md)
+- [F # dili başvurusu](../language-reference/index.md)
+- [Tür çıkarımı](../language-reference/type-inference.md)
+- [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)

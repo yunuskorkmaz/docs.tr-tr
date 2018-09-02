@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 886f4063fa8c793fdce93431a29219cf86078593
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562030"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399669"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML'de xml:lang İşleme
-`xml:lang` Özniteliği bir [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-XML'deki bir öğenin dil ve kültür bilgilerini bildiren tanımlı öznitelik. Bu öznitelik ile aynı anlamı XAML'de devam ederse; Ancak, bazı ek hususlar geçerlidir.  
+`xml:lang` Özniteliği bir [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-XML'deki bir öğenin dil ve kültür bilgilerini bildiren tanımlı öznitelik. Bu öznitelik aynı anlamı devam ederse XAML; Ancak, bazı ek hususlar geçerlidir.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -27,21 +27,21 @@ ms.locfileid: "33562030"
   
 |||  
 |-|-|  
-|*rfc3066lang*|Türetilen bir dize [RFC 3066](http://go.microsoft.com/fwlink/?LinkId=132454) standart ve bir dil veya dil bölge tanımlar. İkincisi, bölge ve dil tek bir çizgi ile ayrılır. Bkz: <xref:System.Windows.Markup.XmlLanguage> değerler ve biçimi hakkında daha fazla bilgi için.|  
+|*rfc3066lang*|Türetilen bir dize [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) standart bir dili veya dil bölge tanımlar. İkincisi, dil ve bölge tek bir çizgi ile ayrılır. Bkz: <xref:System.Windows.Markup.XmlLanguage> değerleri ve biçimi hakkında daha fazla bilgi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımı `xml:lang` özniteliğini [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] türetildiği `xml:lang` "özel özniteliği" tarafından tanımlanan [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] için [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Dil ve kültür bilgilerini potansiyel olarak kendi uygulamalarını bağlı olarak öğeler tarafından farklı şekillerde işlenir; Ancak, varsayılan yok [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlenmesi `xml:lang` özniteliği.  
+ Tanımı `xml:lang` özniteliğini [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] türetilir `xml:lang` "özel özniteliği" tarafından tanımlanan [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] için [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Dil ve kültür bilgilerini, potansiyel olarak kendi uygulamalarını bağlı olarak, öğeleri tarafından farklı şekillerde işlenir; Bununla birlikte, varsayılan yok [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlenmesi `xml:lang` özniteliği.  
   
- Varsayılan değer olan `xml:lang` boş bir dize özniteliği düzeyinde bir özniteliktir.  
+ Varsayılan değer olan `xml:lang` özniteliktir özniteliği düzeyinde boş bir dize.  
   
- `xml:lang` Özniteliği etkiler ve öznitelik değeri genellikle perpetuated alt öğelerine hareket sistemler tarafından yorumlanan zaman `xml:lang` değerleri.  
+ `xml:lang` Özniteliği etkiler ve öznitelik değeri genellikle perpetuated alt öğeler üzerinde işlem sistemleri tarafından yorumlandığında `xml:lang` değerleri.  
   
- .NET Framework XAML hizmetlerinde XAML yazarlar tarafından yorumlanan olduğunda bir `xml:lang` değeri oluşturabilir <xref:System.Windows.Markup.XmlLanguage> veya <xref:System.Globalization.CultureInfo> temel nesneleri nesne gösterimi; ancak, bu davranışı bağlıdır içinbelirtilendeğer`xml:lang`bu sınıfların geçerli bir yapıdır.  
+ .NET Framework XAML hizmetlerinde, XAML yazarlar tarafından yorumlandığında bir `xml:lang` değer oluşturabilir <xref:System.Windows.Markup.XmlLanguage> veya <xref:System.Globalization.CultureInfo> nesneleri temel nesne gösterimi; ancak, bu davranışı bağlıdır içinbelirtilendeğer`xml:lang`sınıflar için geçerli bir yapıdır.  
   
- Çerçeveler framework tarafından tanımlanan özellikler ve anlamını arasındaki ilişkilendirmeleri oluşturma `xml:lang` uygulayarak XML <xref:System.Windows.Markup.XmlLangPropertyAttribute> özelliğine.  
+ Çerçeveler, çerçeve tarafından tanımlanmış özellikler ve anlamını arasındaki ilişkileri oluşturabilir `xml:lang` uygulayarak XML <xref:System.Windows.Markup.XmlLangPropertyAttribute> özelliğine.  
   
-## <a name="wpf-usage-nodes"></a>WPF kullanım düğümler  
- Türetilmiş sınıflar, öğeleri için <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>, eşdeğer kullanabilirsiniz <xref:System.Windows.FrameworkElement.Language%2A> yerine bağımlılık özelliği `xml:lang` özniteliği. Varsayılan olarak, <xref:System.Windows.FrameworkElement.Language%2A> özelliği "en-US" kullanır, aksi takdirde, özellik veya işlem aracılığıyla ayarlanmamışsa `xml:lang` özniteliği.  
+## <a name="wpf-usage-nodes"></a>WPF kullanım düğümleri  
+ Öğeleri türetilmiş sınıfları için <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>, eşdeğer kullanabileceğiniz <xref:System.Windows.FrameworkElement.Language%2A> bağımlılık özelliği yerine `xml:lang` özniteliği. Varsayılan olarak, <xref:System.Windows.FrameworkElement.Language%2A> özelliğini "en-US" kullanır, aksi takdirde, özelliği veya işleme yoluyla ayarlanmazsa `xml:lang` özniteliği.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WPF için Genelleştirme](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

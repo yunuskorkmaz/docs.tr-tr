@@ -1,25 +1,25 @@
 ---
-title: System.Transactions ASP.NET kullanma
+title: ASP.NET'te System.Transactions kullanma
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 142f5e18682b02dfb659959a19b79c10fb3110c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364758"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417626"
 ---
-# <a name="using-systemtransactions-in-aspnet"></a>System.Transactions ASP.NET kullanma
+# <a name="using-systemtransactions-in-aspnet"></a>ASP.NET'te System.Transactions kullanma
 Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.  
   
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>ASP.NET DistributedTransactionPermission etkinleştir  
- <xref:System.Transactions> kısmen güvenilen arayanlara destekler ve ile işaretli **AllowPartiallyTrustedCallers** özniteliği (APTCA). Güven düzeyleri için <xref:System.Transactions> (örnek, sistem belleği, paylaşılan işlem genelinde kaynakları, sistem genelinde kaynakları ve diğer kaynaklara ilişkin), kaynak türleri göre tanımlanır, <xref:System.Transactions> çıkarır ve gerekip gerekmeyeceğini güven düzeyi Bu kaynaklara erişmek için. Kısmi güven ortamında, bir tam olmayan güven derleme yalnızca işlemleri uygulama etki alanı içinde kullanabilirsiniz (Bu durumda, sistem belleği korunan yalnızca kaynak değil), onu verilmemişse <xref:System.Transactions.DistributedTransactionPermission>.  
+ <xref:System.Transactions> kısmen güvenilen arayanlar destekler ve ile işaretlenen **AllowPartiallyTrustedCallers** özniteliği (APTCA). Güven düzeyleri için <xref:System.Transactions> (için örnek, sistem belleği, paylaşılan işlem genelinde kaynakları, sistem genelinde kaynakları ve diğer kaynakları), bir kaynak türleri göre tanımlanan, <xref:System.Transactions> kullanıma sunan ve gerekli güven düzeyi Bu kaynakları erişmek için. Kısmi güven ortamında, bir tam olmayan güven derleme yalnızca işlemler uygulama etki alanı içinde kullanabilirsiniz (Bu durumda, sistem belleği korumalı yalnızca kaynak olan), verilen sürece <xref:System.Transactions.DistributedTransactionPermission>.  
   
- <xref:System.Transactions.DistributedTransactionPermission> işlem yönetimi Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) tarafından yönetilecek ilerletilen her talep. Bu tür bir senaryo işlemi genelinde kaynakları ve MSDTC günlüğünde ayrılmış alandır özellikle bir genel kaynağı kullanır. Bir Web ön uç bir veritabanı veya veritabanı sağladığı hizmetler bir parçası olarak kullanan bir uygulama için bu kullanım örneğidir.  
+ <xref:System.Transactions.DistributedTransactionPermission> Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) tarafından yönetilmek üzere işlem yönetim ilerletilmiş her talep. Bu tür bir senaryo işlemi genelinde kaynakları ve MSDTC günlüğünde ayrılmış alandır özellikle bir genel kaynağı kullanır. Bir Web ön uç bir veritabanı veya veritabanı sağladığı hizmetler bir parçası olarak kullanan bir uygulama için bu kullanım örneğidir.  
   
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] güven düzeyleri kendi kümesi vardır ve belirli bir izin kümesi ile bu güven düzeyi ilke dosyalar ile ilişkilendirir. Daha fazla bilgi için bkz: [ASP.NET güven düzeyleri ve ilke dosyaları](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1). İlk yüklediğinizde, Windows SDK, varsayılan hiçbiri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ile ilişkili ilke dosyaları <xref:System.Transactions.DistributedTransactionPermission>. Bu nedenle, işlem içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] MSDTC tarafından yönetilmek üzere uygulama ilerletilen, yükseltme başarısız olur bir <xref:System.Security.SecurityException> yoğun üzerine <xref:System.Transactions.DistributedTransactionPermission>. İşlem yükseltme etkinleştirmek için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kısmi güven ortamında vermek <xref:System.Transactions.DistributedTransactionPermission> içeriğiyle olarak aynı varsayılan güven düzeylerinde <xref:System.Data.SqlClient.SqlClientPermission>. Bunu desteklemek için kendi özel güven düzeyi ve ilke dosyası ya da yapılandırabilirsiniz ya da olan varsayılan ilke dosyaları değiştirebileceğiniz **Web_hightrust.config** ve **Web_mediumtrust.config**.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kendi güven düzeyleri kümesi vardır ve belirli bir izin kümesi ilke dosyaları aracılığıyla bu güven düzeyleri ile ilişkilendirir. Daha fazla bilgi için [ASP.NET güven düzeylerini ve ilke dosyaları](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1). İlk yüklediğinizde, Windows SDK, varsayılan hiçbiri [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ile ilişkili ilke dosyaları <xref:System.Transactions.DistributedTransactionPermission>. Bu nedenle, zaman, işlemde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama ilerletilmiş MSDTC tarafından yönetilmek üzere, yükseltme başarısız olur bir <xref:System.Security.SecurityException> yoğun üzerine <xref:System.Transactions.DistributedTransactionPermission>. İşlem yükseltme içinde etkinleştirmek için bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kısmi güven ortam vermek <xref:System.Transactions.DistributedTransactionPermission> aynı varsayılan güven düzeyleri içinde <xref:System.Data.SqlClient.SqlClientPermission>. Bunu desteklemek için kendi özel güven düzeyini ve ilke dosya ya da yapılandırabilirsiniz veya varsayılan ilkesi dosyaları değiştirebilirsiniz **Web_hightrust.config** ve **Web_mediumtrust.config**.  
   
- İlke dosyaları değiştirmek için add bir **SecurityClass** öğesi için **DistributedTransactionPermission** için **SecurityClasses** öğesinin altında  **PolicyLevel** öğesi ve karşılık gelen ekleyin **IPermission** öğesinin altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** System.Transactions için. Aşağıdaki yapılandırma dosyası bu gösterir.  
+ İlke dosyaları değiştirmek için ekleme bir **SecurityClass** öğesi için **DistributedTransactionPermission** için **SecurityClasses** öğesi altında  **PolicyLevel** öğesi ve karşılık gelen ekleme **IPermission** öğesi altında [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] **NamedPermissionSet** System.Transactions için. Aşağıdaki yapılandırma dosyası bu gösterir.  
   
 ```xml  
 <SecurityClasses>  
@@ -40,10 +40,10 @@ Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:Sy
 </PermissionSet>  
 ```  
   
- Hakkında daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] güvenlik ilkesine bakın [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
+ Hakkında daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] güvenlik ilkesi bakın [securityPolicy öğesi (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
   
 ## <a name="dynamic-compilation"></a>Dinamik derleme  
- İçeri aktarma ve kullanmak istiyorsanız, <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] erişimi dinamik olarak derlenmiş olan uygulamayı bir başvuru yerleştirin <xref:System.Transactions> derleme yapılandırma dosyası. Özellikle, başvuru altında eklenmesi gereken **derleme**/**derlemeleri** varsayılan kök bölümünü **Web.config** yapılandırma dosyası veya bir Belirli Web uygulamasının yapılandırma dosyası. Aşağıdaki örnekte bu gösterir.  
+ İçeri aktarma ve kullanmak istiyorsanız, <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] erişimi dinamik olarak derlenmiş olan uygulamayı bir başvuru yerleştirin <xref:System.Transactions> derleme yapılandırma dosyası. Özellikle, başvuru altında eklenmesi gerekip **derleme**/**derlemeleri** varsayılan kök bölümünü **Web.config** yapılandırma dosyası veya Belirli Web uygulamanın yapılandırma dosyası. Aşağıdaki örnekte bu gösterir.  
   
 ```xml  
 <configuration>  
@@ -57,9 +57,9 @@ Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:Sy
 </configuration>  
 ```  
   
- Daha fazla bilgi için bkz: [öğesi (ASP.NET Ayarlar Şeması) için derlemeleri add](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
+ Daha fazla bilgi için [derlemeler için derleme (ASP.NET Settings Schema) öğesi ekleme](https://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET güven düzeyleri ve ilke dosyaları](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy öğesi (ASP.NET Ayarlar Şeması)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [ASP.NET güven düzeylerini ve ilke dosyaları](https://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
+ [securityPolicy öğesi (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [İşlem Yönetimi Yükseltme](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

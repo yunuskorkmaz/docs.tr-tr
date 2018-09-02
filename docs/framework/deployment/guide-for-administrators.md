@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925063"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408252"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve Microsoft System Center Configuration Manager'ı kullanarak bir ağ üzerindeki sistem gereksinimlerini. Bu makalede tüm istemci bilgisayarların .NET Framework için gerekli olan minimum sistem gereksinimlerini karşıladığı varsayılmıştır. Yüklemeye yönelik yazılım ve donanım gereksinimleri listesi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [sistem gereksinimleri](../../../docs/framework/get-started/system-requirements.md).  
@@ -20,7 +20,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 > [!NOTE]
 >  Ancak bunlarla sınırlı olmaksızın bu dokümanda bahsedilen yazılımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager ve Active Directory olduğunuz her lisans ve koşullarına tabidir. Bu yönergeler, bu tür lisans koşullarını ve koşulları gözden geçirilmiş yazılımların sahipleri tarafından kabul edildiği varsaymaktadır. Bu yönergeler, bu tür lisans anlaşmalarının koşullarından feragat etmiş sayılmaz.  
 >   
->  .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework desteği yaşam döngüsü ilkesi](http://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesi.  
+>  .NET Framework desteği hakkında daha fazla bilgi için bkz: [Microsoft .NET Framework desteği yaşam döngüsü ilkesi](https://go.microsoft.com/fwlink/?LinkId=196607) Microsoft Support Web sitesi.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -37,16 +37,16 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 ## <a name="the-deployment-process"></a>Dağıtım işlemi  
  Yerinde destek altyapısı varsa, ağ üzerinden .NET Framework dağıtılabilir paketini bilgisayarlara dağıtmak için Sistem Merkezi 2012 Yapılandırma Yöneticisi'ni kullanın. Altyapının oluşturulması, beş birincil alanın oluşturulmasını ve tanımlanmasını gerektirir: koleksiyonlar, yazılım için bir paket ve program, dağıtım noktaları ve dağıtımlar.  
   
--   **Koleksiyonları** kullanıcılar, kullanıcı grupları veya bilgisayarlar, .NET Framework dağıtıldığı gibi Configuration Manager kaynaklarına gruplarıdır. Daha fazla bilgi için [Configuration Manager'da koleksiyonlara](http://technet.microsoft.com/library/gg682169.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+-   **Koleksiyonları** kullanıcılar, kullanıcı grupları veya bilgisayarlar, .NET Framework dağıtıldığı gibi Configuration Manager kaynaklarına gruplarıdır. Daha fazla bilgi için [Configuration Manager'da koleksiyonlara](https://technet.microsoft.com/library/gg682169.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
--   **Paketler ve programlar** genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını gösterir, ancak bunlar tek tek dosyaları, güncelleştirmeleri veya hatta ayrı ayrı komutları da içerebilir. Daha fazla bilgi için [paketleri ve programları Configuration Manager'da](http://technet.microsoft.com/library/gg699369.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+-   **Paketler ve programlar** genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını gösterir, ancak bunlar tek tek dosyaları, güncelleştirmeleri veya hatta ayrı ayrı komutları da içerebilir. Daha fazla bilgi için [paketleri ve programları Configuration Manager'da](https://technet.microsoft.com/library/gg699369.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
--   **Dağıtım noktaları** Configuration Manager sitesi, yazılımın istemci bilgisayarlarda çalışması gereken dosyaları depolayan sistem rolleridir. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için [Configuration Manager'da içerik yönetimine giriş](http://technet.microsoft.com/library/gg682083.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+-   **Dağıtım noktaları** Configuration Manager sitesi, yazılımın istemci bilgisayarlarda çalışması gereken dosyaları depolayan sistem rolleridir. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için [Configuration Manager'da içerik yönetimine giriş](https://technet.microsoft.com/library/gg682083.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
--   **Dağıtımları** belirtilen hedef koleksiyonun ilgili üyelerinden yazılım paketini yüklemek için isteyin. Daha fazla bilgi için [Configuration Manager'da uygulamaları dağıtma](http://technet.microsoft.com/library/gg682082.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+-   **Dağıtımları** belirtilen hedef koleksiyonun ilgili üyelerinden yazılım paketini yüklemek için isteyin. Daha fazla bilgi için [Configuration Manager'da uygulamaları dağıtma](https://technet.microsoft.com/library/gg682082.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
 > [!IMPORTANT]
->  Bu konudaki yordamlar, bir paket ve program oluşturmak ve dağıtmak için normal ayarları içerir ve tüm olası ayarları kapsamayabilir. Diğer Configuration Manager dağıtım seçenekleri için bkz. [Yapılandırma Yöneticisi belge kitaplığı](http://technet.microsoft.com/library/gg682041.aspx).  
+>  Bu konudaki yordamlar, bir paket ve program oluşturmak ve dağıtmak için normal ayarları içerir ve tüm olası ayarları kapsamayabilir. Diğer Configuration Manager dağıtım seçenekleri için bkz. [Yapılandırma Yöneticisi belge kitaplığı](https://technet.microsoft.com/library/gg682041.aspx).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma  
@@ -62,7 +62,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Koleksiyon oluşturma  
- Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil, üyelik kuralları hakkında daha fazla bilgi için bkz. [Configuration Manager'da koleksiyonlara giriş](http://technet.microsoft.com/library/gg682177.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+ Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil, üyelik kuralları hakkında daha fazla bilgi için bkz. [Configuration Manager'da koleksiyonlara giriş](https://technet.microsoft.com/library/gg682177.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
  Bir koleksiyon oluşturmak için:  
   
@@ -84,7 +84,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 9. Üzerinde **Üyelik kuralları** sayfasının **cihaz koleksiyonu Oluşturma Sihirbazı**, seçin **sonraki**ve ardından Sihirbazı tamamlayın.  
   
- Koleksiyonlar hakkında daha fazla bilgi için bkz. [Configuration Manager'da koleksiyonlara](http://technet.microsoft.com/library/bb693730.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
+ Koleksiyonlar hakkında daha fazla bilgi için bkz. [Configuration Manager'da koleksiyonlara](https://technet.microsoft.com/library/bb693730.aspx) Yapılandırma Yöneticisi belge kitaplığı.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>.NET Framework yeniden dağıtılabilir paketi için paket ve program oluşturma  
@@ -128,9 +128,9 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 |------------|-----------------|  
 |**/q**|Sessiz modu ayarlar. Hiçbir kullanıcı girişine gerek yoktur ve hiçbir çıktı gösterilmez.|  
 |**/ norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|  
-|**/chainingpackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler kaydolup kişilerin diğer yükleme oturum bilgileriyle birlikte raporlanır [Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Chaining Product"**.|  
+|**/chainingpackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler kaydolup kişilerin diğer yükleme oturum bilgileriyle birlikte raporlanır [Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Paket adı boşluk içeriyorsa, sınırlayıcı olarak çift tırnak işareti kullanın. Örneğin: **/chainingpackage "Chaining Product"**.|  
   
- Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşimde bulunmazlar ve zincirleme uygulama döndürülen kodu yakalamak ve yeniden işlemek zorundadır; bkz: [yükleme paketinden ilerleme bilgisi alma](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşimde bulunmazlar ve zincirleme uygulama döndürülen kodu yakalamak ve yeniden işlemek zorundadır; bkz: [yükleme paketinden ilerleme bilgisi alma](https://go.microsoft.com/fwlink/?LinkId=179606).  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Dağıtım noktası seçme  
@@ -154,7 +154,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 8.  Sihirbazı tamamlayın.  
   
- Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paket ve programı dağıtmadan önce dağıtım noktasında yüklendiğini doğrulayın; "İçeriği izleme" bölümüne bakın [Configuration Manager'da içerik yönetimine yönelik işlemler ve Bakım](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) Yapılandırma Yöneticisi belge kitaplığı.  
+ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paket ve programı dağıtmadan önce dağıtım noktasında yüklendiğini doğrulayın; "İçeriği izleme" bölümüne bakın [Configuration Manager'da içerik yönetimine yönelik işlemler ve Bakım](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) Yapılandırma Yöneticisi belge kitaplığı.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Paketi dağıtma  
@@ -179,7 +179,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 9. Üzerinde **kullanıcı deneyimi** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   
     > [!WARNING]
-    >  Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: zamanlama sekmesi](http://technet.microsoft.com/library/bb694016.aspx) TechNet Kitaplığı'nda.  
+    >  Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz: [reklam adı özellikleri: zamanlama sekmesi](https://technet.microsoft.com/library/bb694016.aspx) TechNet Kitaplığı'nda.  
   
 10. Üzerinde **dağıtım noktaları** sayfasında, varsayılan değerleri seçin kullanın ve **sonraki**.  
   
@@ -193,27 +193,27 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
  **Active Directory, DNS, DHCP:**  
   
--   [Windows Server 2008 için Active Directory etki alanı Hizmetleri](http://technet.microsoft.com/library/dd378891.aspx)  
+-   [Windows Server 2008 için Active Directory etki alanı Hizmetleri](https://technet.microsoft.com/library/dd378891.aspx)  
   
--   [DNS sunucusu](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [DNS sunucusu](https://technet.microsoft.com/library/cc732997.aspx)  
   
--   [DHCP sunucusu](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [DHCP sunucusu](https://technet.microsoft.com/library/cc896553.aspx)  
   
  **SQL Server 2008:**  
   
--   [SQL Server 2008 (SQL Server Video) yükleme](http://technet.microsoft.com/library/dd299415.aspx)  
+-   [SQL Server 2008 (SQL Server Video) yükleme](https://technet.microsoft.com/library/dd299415.aspx)  
   
--   [Veritabanı yöneticileri için SQL Server 2008 Güvenliğe genel bakış](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [Veritabanı yöneticileri için SQL Server 2008 Güvenliğe genel bakış](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (yönetim noktası, dağıtım noktası):**  
   
--   [System Center 2012 Configuration Manager için Site Yönetimi](http://technet.microsoft.com/library/gg681983.aspx)  
+-   [System Center 2012 Configuration Manager için Site Yönetimi](https://technet.microsoft.com/library/gg681983.aspx)  
   
--   [Yapılandırma Yöneticisi tek Site planlama ve dağıtım](http://technet.microsoft.com/library/bb680961.aspx)  
+-   [Yapılandırma Yöneticisi tek Site planlama ve dağıtım](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Windows bilgisayarlar için System Center 2012 Configuration Manager istemcisi:**  
   
--   [System Center 2012 Configuration Manager için istemci dağıtma](http://technet.microsoft.com/library/gg699391.aspx)  
+-   [System Center 2012 Configuration Manager için istemci dağıtma](https://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Sorun giderme  
@@ -248,17 +248,17 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>İndirme hatası kodları  
   
--   [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](http://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](https://msdn.microsoft.com/library/aa362823.aspx)  
   
--   [URL adı hata kodları](http://msdn.microsoft.com/library/ms775145.aspx)  
+-   [URL adı hata kodları](https://msdn.microsoft.com/library/ms775145.aspx)  
   
 -   [WinHttp hata kodları](/windows/desktop/WinHttp/error-messages)  
   
  Diğer hata kodları:  
   
--   [Windows Installer hata kodları](http://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Windows Installer hata kodları](https://msdn.microsoft.com/library/aa368542.aspx)  
   
--   [Windows Update Aracısı sonuç kodları](http://technet.microsoft.com/library/cc720442.aspx)  
+-   [Windows Update Aracısı sonuç kodları](https://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

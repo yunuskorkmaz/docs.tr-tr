@@ -2,15 +2,15 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e5f34dca83c8d3d08d27fb72bee5af2a89ac6b9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754843"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416434"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
-Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
+Web yuvası ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
   
 \<system.ServiceModel>  
 \<bağlamaları >  
@@ -40,22 +40,22 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|createNotificationOnConnection|Bağlantıda bir bildirim gönderilip gönderilmeyeceğini belirtir.|  
-|disablePayloadMasking|Web yuvasını maskeleme etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
-|KeepAliveInterval|Canlı tutma aralığını belirtir.|  
-|maxPendingConnections|Gönderme hizmeti üzerinde bekleyen bağlantı sayısını belirtir.|  
+|createNotificationOnConnection|Bağlantı kurulduğunda bildirim gönderilip gönderilmeyeceğini belirtir.|  
+|disablePayloadMasking|Web yuvası maskeleme devre dışı bırakılıp bırakılmadığını belirtir.|  
+|KeepAliveInterval|Canlı tutma aralığı belirtir.|  
+|maxPendingConnections|Gönderme hizmeti bekleyen bağlantılar maksimum sayısını belirtir.|  
 |receiveBufferSize|Alış arabelleğinin boyutunu belirtir.|  
 |sendBufferSize|Gönderme arabellek boyutunu belirtir.|  
-|subProtocol|Web yuvasını subprotocol belirtir.|  
-|transportUsage|Ne zaman Web yuvalarını kullanılacağını belirtir.|  
+|geçersizdir|Web yuvası subprotocol'üne belirtir.|  
+|transportUsage|Web yuvaları kullanma zamanı belirtir.|  
   
 ## <a name="transportusage-attribute"></a>transportUsage özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|WhenDuplex|Sözleşme çift yönlü olduğunda Web yuvasını protokolünü kullanır.|  
-|Her zaman|Her zaman sözleşme bağımsız olarak Web yuvasını protokolünü kullanır.|  
-|Hiçbir zaman|Hiçbir zaman Web yuvasını protokolünü kullanır.|  
+|WhenDuplex|Web yuvası Protokolü anlaşması çift yönlü olduğunda kullanın.|  
+|Her zaman|Web yuvası Protokolü anlaşması bağımsız olarak her zaman kullanın.|  
+|hiçbir zaman|Hiçbir zaman Web yuvası protokolünü kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -67,7 +67,7 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
 |\<netHttpBinding>|NetHttpBinding belirtir|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.  
   
 ```xml  
 <netHttpBinding>  
@@ -92,5 +92,5 @@ Web yuvasını ayarlarını belirtmek için kullanılan bir yapılandırma öğe
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Windows Communication Foundation Hizmetleri ve istemcileri yapılandırmak için bağlamaları kullanma](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<bağlama >](../../../../../docs/framework/misc/binding.md)

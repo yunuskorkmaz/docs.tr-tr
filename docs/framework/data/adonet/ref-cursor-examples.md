@@ -1,30 +1,30 @@
 ---
-title: REF İMLEÇ örnekleri
+title: REF CURSOR örnekleri
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 9593a30524b7d8161903b840e1bdb0ee007027a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353553"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406065"
 ---
-# <a name="ref-cursor-examples"></a>REF İMLEÇ örnekleri
-REF CURSOR örnekler REF imleçler kullanarak gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  
+# <a name="ref-cursor-examples"></a>REF CURSOR örnekleri
+REF CURSOR örnekleri REF CURSOR kullanımını gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.  
   
 |Örnek|Açıklama|  
 |------------|-----------------|  
-|[OracleDataReader’da REF CURSOR Parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|Bu örnek değeri olarak okur ve REF CURSOR parametresiyle döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.|  
-|[OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Bu örnek kullanılarak değerleri okur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürüten bir **OracleDataReader**.|  
-|[Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|Bu örnek doldurur ve iki REF İMLEÇ parametreleri döndüren bir PL/SQL saklı yordamı yürütür bir <xref:System.Data.DataSet> satırlarla döndürülür.|  
+|[OracleDataReader’da REF CURSOR Parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|Bu örnekte REF CURSOR parametresiyle döndürür ve değeri olarak okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.|  
+|[OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Bu örnek iki REF CURSOR parametreleri döndürür ve kullanarak değerlerini okur PL/SQL saklı yordamı yürüten bir **OracleDataReader**.|  
+|[Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|Bu örnek iki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.|  
   
- Bu örnekleri kullanmak için Oracle tablolar oluşturmak gerekebilir ve PL/SQL paket ve paket gövdesi oluşturmanız gerekir.  
+ PL/SQL paketi ve paket gövdesi oluşturmanız gerekir ve bu örnekleri kullanmak için Oracle tablolar oluşturmak gerekebilir.  
   
-## <a name="creating-the-oracle-tables"></a>Oracle tabloları oluşturma  
- Bu örnekler Oracle Scott/Tiger şemada tanımlanan tabloları kullanın. Oracle Scott/Tiger şema çoğu Oracle yüklemeleriyle dahil edilir. Bu şemayı mevcut değilse, {tabloları ve bu örnekleri tarafından kullanılan dizinlerin OracleHome}\rdbms\admin\scott.sql. SQL komutlarını dosyasında kullanabilirsiniz  
+## <a name="creating-the-oracle-tables"></a>Oracle tablo oluşturma  
+ Bu örnekler, Oracle Scott/Tiger şemasında tanımlanan tabloları kullanın. Oracle Scott/Tiger şema çoğu Oracle yüklemeleri ile birlikte gelir. Bu şema mevcut değilse SQL komutları dosyasında {OracleHome}\rdbms\admin\scott.sql. Bu örnek tarafından kullanılan dizinlerin ve tabloları oluşturmak için kullanabilirsiniz.  
   
 ## <a name="creating-the-oracle-package-and-package-body"></a>Paket gövdesi ve Oracle paket oluşturma  
- Bu örnekler, aşağıdaki PL/SQL paketi ve paket gövdesi sunucunuzda gerektirir. Aşağıdaki Oracle paket Oracle sunucuda oluşturun.  
+ Bu örnekler, aşağıdaki PL/SQL paketi ve paket gövdesi sunucunuzdaki gerektirir. Oracle sunucu üzerinde aşağıdaki Oracle paketini oluşturun.  
   
 ```  
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -37,7 +37,7 @@ END CURSPKG;
 /   
 ```  
   
- Aşağıdaki Oracle paket gövdesi Oracle sunucusunda oluşturun.  
+ Aşağıdaki Oracle paket gövdesi, Oracle sunucusunda oluşturun.  
   
 ```  
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
@@ -81,4 +81,4 @@ END CURSPKG;
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

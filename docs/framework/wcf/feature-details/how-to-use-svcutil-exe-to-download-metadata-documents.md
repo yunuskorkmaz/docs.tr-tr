@@ -2,45 +2,45 @@
 title: 'Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: a8872bbf04e688906fb0229e3d8215fb92cdbc3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492404"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403565"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma
-Meta Veri Hizmetleri çalıştıran indirmek ve meta veriler için yerel dosyaları kaydetmek için Svcutil.exe kullanabilirsiniz. WS-MetadataExchange kullanarak meta verilerini almak HTTP ve HTTPS URL'si şemaları için Svcutil.exe çalışır ve [XML Web hizmeti bulma](http://go.microsoft.com/fwlink/?LinkId=94950). Diğer tüm URL şemalarını için Svcutil.exe yalnızca WS-MetadataExchange kullanır.  
+Svcutil.exe Hizmetleri çalışmasını meta verileri indirmek ve yerel dosyalar için meta verileri kaydetmek için kullanabilirsiniz. HTTP ve HTTPS URL'si düzenleri için Svcutil.exe WS-MetadataExchange kullanarak meta verilerini almayı dener ve [XML Web hizmeti bulma](https://go.microsoft.com/fwlink/?LinkId=94950). Diğer tüm URL şemalarını için Svcutil.exe yalnızca WS-MetadataExchange kullanır.  
   
- Varsayılan olarak tanımlanan bağlamaları Svcutil.exe kullanır <xref:System.ServiceModel.Description.MetadataExchangeBindings> sınıfı. WS-MetadataExchange için kullanılan bağlama yapılandırmak için istemci uç nokta yapılandırma dosyasında kullanan Svcutil.exe için (svcutil.exe.config) tanımlamanız gerekir `IMetadataExchange` sözleşme ve, Tekdüzen Kaynak Tanımlayıcısı (URI) olarak aynı ada sahip meta veri uç noktası adresi düzeni.  
+ Varsayılan olarak, içinde tanımlanan bağlamalardan Svcutil.exe kullanır <xref:System.ServiceModel.Description.MetadataExchangeBindings> sınıfı. WS-MetadataExchange için kullanılan bağlama yapılandırmak için istemci uç nokta yapılandırma dosyasında kullanan Svcutil.exe için (svcutil.exe.config) tanımlamalısınız `IMetadataExchange` sözleşme ve, Tekdüzen Kaynak Tanımlayıcısı (URI) olarak aynı ada sahip meta veri uç noktası adresi düzeni.  
   
 > [!CAUTION]
->  İki farklı hizmet sunan bir hizmet için meta verilerini almak için Svcutil.exe çalıştıran her içeren, aynı ada sahip bir işlem sözleşmeler, Svcutil.exe "Meta verileri elde edemiyor..." belirten, bir hata görüntüler Örneğin, adlı bir hizmet sözleşmesini kullanıma sunan bir hizmetiniz varsa bir işlem var ICarService alın (Car c) ve bir işlemin Get (defteri b) olan IBookService adlı bir hizmet sözleşmesini aynı hizmeti sunar. Bu sorunu çözmek için şunlardan birini yapın:  
+>  İki farklı hizmet sunan bir hizmet için meta verileri almak için Svcutil.exe çalıştıran her içerir, aynı ada sahip bir işlem sözleşmeleri, Svcutil.exe "Meta verileri alınamıyor..." ifadesini içeren bir hata görüntüler. Örneğin, adlı bir hizmet sözleşmesini gösteren bir hizmetiniz varsa bir işlem var ICarService alın (araba c) ve bir işlemin Get (kitap b) olan IBookService adlı bir hizmet sözleşmesini aynı hizmet sunar. Bu sorunu geçici olarak çözmek için şunlardan birini yapın:  
 >   
 >  -   İşlemlerden birini yeniden adlandırın  
 > -   Ayarlama <xref:System.ServiceModel.OperationContractAttribute.Name%2A> için farklı bir ad.  
-> -   İşlemler ad alanlarından birini kullanılarak farklı bir ad alanı olarak ayarlanan <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> özelliği.  
+> -   İşlemleri ad alanlarından birini kullanarak farklı bir ad alanı için ayarlanmış <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> özelliği.  
   
-### <a name="to-download-metadata-using-svcutilexe"></a>Meta veri svcutil.exe kullanarak yüklemek için  
+### <a name="to-download-metadata-using-svcutilexe"></a>Svcutil.exe kullanarak meta verileri indirilemedi  
   
-1.  Svcutil.exe aracı şu konumda bulun:  
+1.  Şu konumda Svcutil.exe aracını bulun:  
   
      C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  Komut isteminde, aşağıdaki biçimi kullanarak aracı başlatın.  
+2.  Komut isteminde, aşağıdaki biçimi kullanarak aracını başlatın.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
     ```  
   
-     Belirtmeniz gerekir `/t:metadata` seçeneği meta verilerini indirebilirsiniz. Aksi durumda, istemci kodu ve yapılandırma oluşturulur.  
+     Belirtmelisiniz `/t:metadata` seçeneği meta verileri indirilemedi. Aksi takdirde, istemci kodu ve yapılandırma oluşturulur.  
   
-3.  <`url`> Bağımsız değişkeni meta verisi sağlayan bir hizmet uç noktası veya çevrimiçi barındırılan bir meta veri belgesi için URL'yi belirtir. <`epr`> Bağımsız değişkeni bir WS-adresleme içeren bir XML dosyası yolunu belirtir `EndpointAddress` WS-MetadataExchange destekleyen bir hizmet uç noktası için.  
+3.  <`url`> Bağımsız değişkeni, meta veri sağlayan bir hizmet uç noktası ya da çevrimiçi barındırılan bir meta veri belgesinin URL'sini belirtir. <`epr`> Bağımsız değişkeni, WS-Addressing içeren bir XML dosyasının yolunu belirtir `EndpointAddress` WS-MetadataExchange destekleyen bir hizmet uç noktası için.  
   
- Bu aracı için meta veriler indirme kullanma hakkında daha fazla seçenek için bkz: [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Meta verileri indirme için bu aracı kullanma hakkında daha fazla seçenek için bkz: [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut çalışan bir hizmetten meta veri belgelerini indirir.  
+ Aşağıdaki komut, meta veri belgelerini çalışan bir hizmetten indirir.  
   
 ```  
 svcutil /t:metadata http://service/metadataEndpoint  

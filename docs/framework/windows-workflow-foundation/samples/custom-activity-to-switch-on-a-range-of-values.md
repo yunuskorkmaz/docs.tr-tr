@@ -1,21 +1,21 @@
 ---
-title: Özel Etkinlik bir aralık değerleri anahtara
+title: Üzerinde bir değer aralığına geçmek için özel etkinlik
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
-ms.openlocfilehash: 785db08ffaf4ca6fe27d6418878c0bbf4ada44fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517075"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417983"
 ---
-# <a name="custom-activity-to-switch-on-a-range-of-values"></a>Özel Etkinlik bir aralık değerleri anahtara
-Bu örnek kullanımını genişleten bir özel etkinlik oluşturmak nasıl gösteren bir <xref:System.Activities.Statements.Switch%601>. Geleneksel <xref:System.Activities.Statements.Switch%601> deyimi sağlar geçiş dayalı tek bir değer. Ancak, bir etkinlik burada geçmelidir senaryolarını değerleri aralığı alarak iş vardır. Örneğin, bir etkinlik bağlı anahtarlı değeri 1 ile 5 arasında olduğunda bir eylem, değer 6 ile 10 arasında olduğunda başka bir eylem ve diğer tüm değerler için varsayılan eylem yürütebilir. Bu özel etkinlik tam olarak bu senaryo sağlar.  
+# <a name="custom-activity-to-switch-on-a-range-of-values"></a>Üzerinde bir değer aralığına geçmek için özel etkinlik
+Bu örnek, kullanımını genişleten özel etkinlik oluşturma işlemini gösterir. bir <xref:System.Activities.Statements.Switch%601>. Geleneksel <xref:System.Activities.Statements.Switch%601> deyimi geçişi sırasında tek bir değer temel sağlar. Ancak, bir etkinlik burada geçmelidir senaryolarını değer aralığını alarak iş vardır. Örneğin, bir etkinlik, geçiş sırasında değeri 1 ile 5 arasında olduğunda bir eylem, değer 6 ile 10 arasında olduğunda başka bir eylem ve diğer tüm değerler için bir varsayılan eylem paralellikle çalışabilir. Bu özel etkinlik tam olarak bir senaryo sağlar.  
   
 ## <a name="the-switchrange-activity"></a>SwitchRange etkinliği  
- `SwitchRange` Etkinlik zamanlar alt etkinlik, ifadesinin sonucu değer bir aralık içinde dahil edildiğinde, `Cases`.  
+ `SwitchRange` Etkinliği, birinin aralığında, ifadenin sonucu değerini eklendiğinde bir alt etkinlik zamanlar kendi `Cases`.  
   
- Aşağıdaki kod örneğinde anahtarları değerleri aralığı dayalı özel bir etkinliktir.  
+ Aşağıdaki kod örneği, anahtarları değerleri aralığı alan özel bir etkinliktir.  
   
 ```csharp  
 public sealed class SwitchRange<T> : NativeActivity where T : IComparable  
@@ -33,14 +33,14 @@ public sealed class SwitchRange<T> : NativeActivity where T : IComparable
   
 |Özellik|Açıklama|  
 |-|-|  
-|İfade|Bu hesaplanan ve durumları listesinde aralıkları karşı karşılaştırıldığında ifadesidir. T türünde ifade sonucu|  
-|Durumları|Her durumda, bir aralığı (başlangıç ve bitiş) ve bir etkinlik (gövde) oluşur. İfade değerlendirilir ve karşı aralıkları karşılaştırılır. İfadenin sonucu örneklerinin bir aralık içinde ise, karşılık gelen etkinlik yürütülür.|  
-|Varsayılan|Hiçbir durumda eşleştiğinde çalıştırılan etkinliği. Ayarlandığında `null`, hiçbir işlem yapılmadı.|  
+|İfade|İfade değerlendirilir ve çalışmaları listesinde aralıkları karşı karşılaştırıldığında budur. İfadenin sonucu t türüdür|  
+|Durumları|Her durumda, bir aralığı (başlangıç ve bitiş) ve bir etkinlik (gövde) oluşur. İfade değerlendirilir ve aralıkları karşı karşılaştırılır. İfadenin sonucu aralığı durumlarından biri içinde ise, karşılık gelen etkinlik yürütülür.|  
+|Varsayılan|Hiçbir durum eşleştiğinde çalıştırılan etkinlik. Ayarlandığında `null`, hiçbir işlem yapılmaz.|  
   
 ## <a name="caserange-class"></a>CaseRange sınıfı  
- `CaseRange` Sınıfı temsil eden bir aralıkta bir `SwitchRange` etkinlik. Her örneğinin `CaseRange` bir aralık içerdiği (oluşan bir `From` ve `To`) ve bir `Body` , zamanlanan etkinlik ifade `SwitchRange` aralık içinde değerlendirilir.  
+ `CaseRange` Sınıfı temsil eder bir aralıkta bir `SwitchRange` etkinlik. Her örneğini `CaseRange` bir aralık içerdiği (oluşan bir `From` ve `To`) ve bir `Body` , zamanlanmış etkinlik ifadesinde `SwitchRange` aralığında değerlendirilir.  
   
- Aşağıdaki kod örneği için tanım `CaseRange` sınıfı.  
+ Aşağıdaki kod örneği için tanımıdır `CaseRange` sınıfı.  
   
 ```  
 public class CaseRange<T> where T : IComparable  
@@ -54,10 +54,10 @@ public class CaseRange<T> where T : IComparable
 ```  
   
 > [!NOTE]
->  Hem `SwitchRange` ve `CaseRange` örnekte tanımlanan sınıflar sınıflardır uygulayan herhangi bir türü ile çalışabilirsiniz genel `IComparable`gibi <xref:System.Activities.Statements.Switch%601> sınıfı.  
+>  Hem `SwitchRange` ve `CaseRange` örnekte tanımlanan sınıflar olan uygulayan herhangi bir tür ile çalışabilir Genel sınıflar `IComparable`gibi <xref:System.Activities.Statements.Switch%601> sınıfı.  
   
-## <a name="sample-usage"></a>Örnek Kullanım  
- Aşağıdaki kod örneğinde nasıl kullanılacağı ortaya `SwitchRange` etkinlik.  
+## <a name="sample-usage"></a>Örnek kullanımı  
+ Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir `SwitchRange` etkinlik.  
   
 ```csharp  
 Activity SwitchRange = new SwitchRange<int>  
@@ -92,15 +92,15 @@ Activity SwitchRange = new SwitchRange<int>
   
 1.  Kullanarak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], SwitchRange.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`

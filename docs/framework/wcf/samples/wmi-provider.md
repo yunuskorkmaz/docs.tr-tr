@@ -2,21 +2,21 @@
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807312"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416518"
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
-Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) Hizmetleri'nden veri toplamak üzere gösterilmiştir. Ayrıca, bu örnek bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek gösterilmiştir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` çalışma zamanında hizmet.  
+Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) hizmetlerden veri toplamak nasıl gösterir. Ayrıca, bu örnek, bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek nasıl gösterir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` zamanında hizmet.  
   
- WMI, Web tabanlı Kuruluş Yönetimi'nin (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz: [Windows Yönetim Araçları](https://msdn.microsoft.com/library/aa394582.aspx). WBEM nasıl uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı kullanıma sunmak için bir endüstri standardıdır.  
+ WMI Web tabanlı kuruluş yönetimi (WBEM) standart Microsoft uygulamasıdır. WMI SDK'sı hakkında daha fazla bilgi için bkz. [Windows Yönetim Araçları'nı](/windows/desktop/WmiSdk/wmi-start-page). WBEM, uygulamaları dış Yönetim Araçları için Yönetim Araçları'nı nasıl kullanıma için standart bir endüstri standardıdır.  
   
- WCF WMI sağlayıcısı, izleme çalışma zamanında bir WBEM uyumlu arabirimi aracılığıyla kullanıma sunan bir bileşen uygular. Yönetim Araçları, çalışma zamanında arabirimi üzerinden hizmetlere bağlanabilir. WCF hizmetleri adresler, bağlamalar, davranışları ve dinleyicileri gibi özniteliklerini kullanır.  
+ WCF izleme çalışma zamanında bir WBEM uyumlu arabirimi üzerinden kullanıma sunan bir bileşen bir WMI sağlayıcısını uygular. Yönetim Araçları hizmetler zamanında arabirimi aracılığıyla bağlanabilirsiniz. WCF hizmetleri adresler, bağlamalar, davranışları ve dinleyicileri gibi öznitelikleri gösterir.  
   
- Yerleşik WMI sağlayıcısı, uygulama yapılandırma dosyasında etkinleştirilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma:  
+ Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilir. Bu yoluyla yapılır `wmiProviderEnabled` özniteliği [ \<Tanılama >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) içinde [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümünde, aşağıdaki örnekte gösterildiği gibi yapılandırma:  
   
 ```xml  
 <system.serviceModel>  
@@ -26,23 +26,23 @@ Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını ku
 </system.serviceModel>  
 ```  
   
- Bu yapılandırma girdisi WMI arabirimini kullanıma sunar. Yönetim uygulamaları artık bu arabirimi üzerinden bağlanır ve Yönetim Araçları'nı uygulamanın erişir.  
+ Bu yapılandırma girişi WMI arabirimini kullanıma sunar. Yönetim uygulamaları artık bu arabirimi üzerinden bağlanabilir ve Yönetim Araçları uygulamanın erişim.  
   
 ## <a name="custom-wmi-object"></a>Özel WMI nesnesi  
- Bir hizmet için WMI Nesne ekleme, kullanıcı tarafından tanımlanan bilgileri yerleşik WMI sağlayıcısı bilgilerle birlikte ortaya mümkün kılar. Bu, Installutil.exe uygulamasını kullanarak WMI hizmetinin şema yayımlama tarafından gerçekleştirilir. Bunun yanı sıra daha fazla ayrıntı için yönergeler konunun sonunda kurulum yönergelerini bulunabilir.  
+ WMI nesnelerini bir hizmete ekleme yerleşik WMI sağlayıcısı bilgileriyle birlikte kullanıcı tarafından tanımlanan bilgileri açığa çıkarmak mümkün kılar. Bu, Installutil.exe uygulamayı kullanarak hizmet şeması için WMI yayımlayarak gerçekleştirilir. Bunun yanı sıra daha fazla ayrıntı için yönergeler konunun sonunda kurulum yönergelerini bulunabilir.  
   
 ## <a name="accessing-wmi-information"></a>WMI bilgilerine erişme  
- WMI veri birçok farklı yolu erişilebilir. Microsoft, komut dosyaları, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ WMI verilerini birçok farklı yolu erişilebilir. Microsoft, betikleri, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
- Bu örnek iki Java betiklerini kullanır: biri özellikleri ve kullanıcı tanımlı WMI verilerini görüntülemek için ikinci bazılarını yanı sıra bilgisayar üzerinde çalışan hizmetleri numaralandırılacak. Betik WMI sağlayıcısına bir bağlantı açar, verileri ayrıştırır ve toplanan verileri görüntüler.  
+ Bu örnek iki Java betiklerini kullanır: biri yanı sıra bazı kendi özellikleri ve kullanıcı tanımlı WMI verilerini görüntülemek için ikinci bir bilgisayar üzerinde çalışan hizmetleri listeleme. Betik, WMI sağlayıcısı bir bağlantı açar, verilerini ayrıştırır ve toplanan verileri görüntüler.  
   
- Bir WCF hizmeti çalışan bir örneğini oluşturmak için örnek başlatın. Hizmet çalışırken, komut istemine aşağıdaki komutu kullanarak her Java betiği çalıştırın:  
+ Bir WCF hizmeti çalışan bir örneğini oluşturmak için örneği başlatır. Hizmet çalışırken, komut isteminde aşağıdaki komutu kullanarak her Java betiği çalıştırın:  
   
 ```  
 cscript EnumerateServices.js  
 ```  
   
- Komut dosyası hizmetinde bulunan araçları erişir ve şu çıkışı üretir:  
+ Betik, hizmette bulunan izleme erişir ve aşağıdaki çıktıyı üretir:  
   
 ```  
 Microsoft (R) Windows Script Host Version 5.6  
@@ -106,7 +106,7 @@ Copyright © Microsoft Corporation 1996-2001. All rights reserved.
 cscript EnumerateCustomObjects.js  
 ```  
   
- Komut dosyası, kullanıcı tanımlı araçları hizmetlerinde bulunan erişir ve şu çıkışı üretir:  
+ Betik ve hizmetlerde yer alan kullanıcı tanımlı araçları erişir ve aşağıdaki çıktıyı üretir:  
   
 ```  
 1 WMIObject(s) found.  
@@ -115,33 +115,33 @@ cscript EnumerateCustomObjects.js
 |-WMIInfo:       User Defined WMI Information.  
 ```  
   
- Çıkış bilgisayar üzerinde çalışan tek bir hizmet olduğunu gösterir. Hizmet uygulayan bir uç noktasını kullanıma sunar `ICalculator` sözleşme. Bitiş noktası tarafından uygulanan davranış ayarları ve bağlama Mesajlaşma yığınının ayrı ayrı öğeler toplamı olarak listelenir.  
+ Çıktı bilgisayar üzerinde çalışan tek bir hizmet olduğunu gösterir. Hizmet uygulayan bir uç noktasını kullanıma sunar. `ICalculator` sözleşme. Bitiş noktası tarafından uygulanan ayarları davranış ve bağlama Mesajlaşma yığını tek tek öğelerine toplamı olarak listelenir.  
   
- WMI WCF altyapısının Yönetim Araçları'nı gösterme için sınırlı değildir. Uygulamanın kendi etki alanına özgü veri öğeleri aynı mekanizma getirebilir. WMI, denetleme ve bir Web hizmeti denetimi için birleşik bir mekanizmadır.  
+ WMI WCF altyapısının Yönetim Araçları'nı kullanıma sunmak için sınırlı değildir. Uygulama kendi etki alanına özgü veri öğelerini aynı bir mekanizma aracılığıyla kullanıma sunabilirsiniz. WMI, inceleme ve Denetim Web hizmetinin birleşik bir mekanizmadır.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirilen olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğiniz olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  WMI hizmetleri şeması (InstallUtil.exe için varsayılan konumları olan "% WINDIR%\Microsoft.NET\Framework\v4.0.30319") InstallUtil.exe çalıştırarak barındırma dizinindeki service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyaya yapılan değişiklikler olduğunda yürütülmesi gerekiyor. Sağlama yönetim bilgilerini düzenleme uygulamaları tarafından daha fazla bilgi için bkz: http://msdn2.microsoft.com/library/ms186147.aspx "Nasıl için: yayımlama düzeni için WMI için bir izleme eklenmiş uygulamayı" bölümünde.  
+3.  WMI hizmetleri şeması (InstallUtil.exe varsayılan konumları, "% WINDIR%\Microsoft.NET\Framework\v4.0.30319" dır) InstallUtil.exe çalıştırarak barındırma dizininde service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyasına değişiklikler yapıldığında yürütülmesi gerekiyor. Sağlama yönetim bilgilerini izleme uygulamaları tarafından daha fazla bilgi için bkz: http://msdn2.microsoft.com/library/ms186147.aspx "Nasıl için: yayımlama düzeni için WMI için bir izleme eklenmiş uygulama" bölümünde.  
   
-4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  WCF ASP.NET yükledikten sonra yüklerseniz, "%WINDIR%\ çalıştırmanız gerekebilir Microsoft.Net\Framework\v3.0\Windows iletişim Foundation\servicemodelreg.exe "- r - WMI nesnelerini yayınlamak için ASPNET hesabı izin vermek için x.  
+    >  WCF ASP.NET'ı yükledikten sonra yüklerseniz, "%WINDIR%\ çalıştırmanız gerekebilir Microsoft.Net\Framework\v3.0\Windows iletişimi Foundation\servicemodelreg.exe "- r - WMI Nesne yayımlamak için ASP.NET hesabı izin vermek için x.  
   
-5.  WMI aracılığıyla komutları kullanarak ortaya örnek verileri görüntüleyin: `cscript EnumerateServices.js` veya `cscript EnumerateCustomObjects.js`.  
+5.  WMI aracılığıyla komutları kullanarak ortaya örnekten verileri görüntüleme: `cscript EnumerateServices.js` veya `cscript EnumerateCustomObjects.js`.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [AppFabric izleme örnekleri](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

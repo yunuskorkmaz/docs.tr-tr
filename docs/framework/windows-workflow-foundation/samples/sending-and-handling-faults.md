@@ -1,46 +1,46 @@
 ---
-title: Gönderme ve hata işleme
+title: Hata gönderme ve işleme
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
-ms.openlocfilehash: 6796b4daccd88adc3bd006f454ce96ca155fbcb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516132"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406664"
 ---
-# <a name="sending-and-handling-faults"></a>Gönderme ve hata işleme
-Bu örnek nasıl kullanılacağı ortaya <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply> Mesajlaşma etkinlikleri beklenen ve beklenmeyen hataları alıp göndermek için. Bu senaryoda, ilk istemci isteği içinde bulunan bir beklenen hatasına sonuçlarında kendi <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> koleksiyonu. Son istekten başarılı olmadan önce beklenmeyen hataları alma sonraki birkaç istemci istekleri neden olur.  
+# <a name="sending-and-handling-faults"></a>Hata gönderme ve işleme
+Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Activities.SendReply> ve <xref:System.ServiceModel.Activities.ReceiveReply> beklenen ve beklenmedik hataları gönderip etkinlikler ileti. Bu senaryoda, ilk istemci isteği içinde bulunan bir beklenen hata sonuçlarında kendi <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> koleksiyonu. Sonraki birkaç istemci istekleri son istek başarılı olmadan önce beklenmeyen hataları alma neden olur.  
   
 ## <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklanarak yükseltilmiş izinleri olan [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] simgesini ve seçerek **yönetici olarak çalıştır**.  
+1.  Açık [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklanarak yükseltilmiş izinlerle [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] simgesini seçip **yönetici olarak çalıştır**.  
   
 2.  Faults.sln çözüm dosyasını açın.  
   
-3.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+3.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-4.  Hizmet projesini çalıştırın.  
+4.  Hizmet projeyi çalıştırın.  
   
-    1.  İçinde **Çözüm Gezgini**, sağ `FaultService` proje ve seçin **başlangıç projesi olarak ayarla**.  
+    1.  İçinde **Çözüm Gezgini**, sağ `FaultService` seçin ve proje **başlangıç projesi olarak ayarla**.  
   
-    2.  CTRL + F5 tuşuna basın.  
+    2.  CTRL + F5 tuşlarına basın.  
   
-5.  Başka bir kopyasını açmak [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklanarak yükseltilmiş izinleri olan [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] simgesini ve seçerek **yönetici olarak çalıştır**.  
+5.  Başka bir kopyasını açın [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] sağ tıklanarak yükseltilmiş izinlerle [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] simgesini seçip **yönetici olarak çalıştır**.  
   
 6.  Faults.sln çözüm dosyasını açın.  
   
 7.  İstemci projesini çalıştırın.  
   
-    1.  İçinde **Çözüm Gezgini**, sağ `FaultClient` proje ve seçin **başlangıç projesi olarak ayarla**.  
+    1.  İçinde **Çözüm Gezgini**, sağ `FaultClient` seçin ve proje **başlangıç projesi olarak ayarla**.  
   
-    2.  CTRL + F5 tuşuna basın.  
+    2.  CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Faults`

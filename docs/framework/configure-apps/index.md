@@ -27,27 +27,27 @@ ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 709f5c021a0e923641c01632bc2da2bc3e285ee9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759731"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402407"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
-.NET Framework Yapılandırma dosyalarınızda geliştiricilerinin ve yöneticilerinin denetim sağlar ve esneklik şekilde uygulamalar üzerinde çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Yönetici, bir uygulama korumalı hangi kaynaklara erişebilir, derlemeler hangi sürümlerinin bir uygulama kullanacak ve uzak uygulamalar ve nesneleri bulunduğu kontrol edebilirsiniz. Geliştiriciler, bir ayarı her değiştirildiğinde bir uygulamayı yeniden derlemenize gereğini ortadan ayarları yapılandırma dosyalarında koyabilirsiniz. Bu bölümde ne yapılandırılabilir ve neden bir uygulama yapılandırma yararlı olabilecek açıklanmaktadır.  
+.NET Framework, yapılandırma dosyaları geliştiricilerin ve yöneticilerin denetim verir ve esnekliğe göre uygulamaların çalıştırın. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Bir yönetici, bir uygulamanın hangi korunan kaynaklara erişebilir, bir uygulamanın derlemelerin hangi sürümlerini kullanır ve uzak uygulamaların ve nesnelerin bulunduğu yere kontrol edebilirsiniz. Geliştiriciler ayarları yapılandırma dosyalarına koyarak, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gerekliliğini ortadan kaldırır. Bu bölümde nelerin yapılandırılabileceği ve neden bir uygulama yapılandırma yararlı olabileceği anlatılmaktadır.  
   
 > [!NOTE]
->  Yönetilen kod sınıflarda kullanabileceğiniz <xref:System.Configuration> ad alanı ayarlarını yapılandırma dosyalarını okumak üzere, ancak ayarları bu dosyalara yazma değil.  
+>  Yönetilen kod içindeki sınıfları kullanabilirsiniz <xref:System.Configuration> ad alanı yapılandırma dosyalarından ayarları okumak için ancak ayarları, bu dosyalara yazamazlar.  
   
  Bu konu yapılandırma dosyalarının söz dizimini açıklar ve üç tür yapılandırma dosyası hakkında bilgi sağlar: makine, uygulama ve güvenlik.  
   
 ## <a name="configuration-file-format"></a>Yapılandırma Dosyası Biçimi  
- Yapılandırma dosyaları, yapılandırma bilgisini ayarlayan mantıksal veri yapıları olan öğeleri içerir. Bir yapılandırma dosyası içine, bir öğenin başlangıç ve bitişini işaretlemek için etiketleri kullanırsınız. Örneğin, `<runtime>` öğesi oluşur `<runtime>` *alt öğelerini*`</runtime>`. Boş bir öğe olarak yazılacak `<runtime/>` veya `<runtime></runtime>`.  
+ Yapılandırma dosyaları, yapılandırma bilgisini ayarlayan mantıksal veri yapıları olan öğeleri içerir. Bir yapılandırma dosyası içine, bir öğenin başlangıç ve bitişini işaretlemek için etiketleri kullanırsınız. Örneğin, `<runtime>` öğesi oluşur `<runtime>` *alt öğeleri*`</runtime>`. Boş bir öğe olarak yazılması `<runtime/>` veya `<runtime></runtime>`.  
   
  Tüm XML dosyalarında olduğu gibi, yapılandırma dosyalarındaki söz dizimi büyük küçük harfe duyarlıdır.  
   
- Yapılandırma ayarlarını, bir öğenin başlangıç etiketinin içindeki ad/değer çiftleri olan önceden tanımlı öznitelikleri kullanarak belirlersiniz. Aşağıdaki örnekte iki özniteliklerini belirtir (`version` ve `href`) için `<codeBase>` çalışma zamanı bütünleştirilmiş burada bulabilirsiniz belirtir öğesi (daha fazla bilgi için bkz: [birderlemeninkonumunubelirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
+ Yapılandırma ayarlarını, bir öğenin başlangıç etiketinin içindeki ad/değer çiftleri olan önceden tanımlı öznitelikleri kullanarak belirlersiniz. Aşağıdaki örnek iki öznitelikleri belirtir (`version` ve `href`) için `<codeBase>` öğesi, çalışma zamanının bir derlemeyi nerede bulacağını belirler (daha fazla bilgi için [birderlemeninkonumunubelirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -55,14 +55,14 @@ ms.locfileid: "32759731"
 ```  
   
 ## <a name="machine-configuration-files"></a>Makine Yapılandırma Dosyaları  
- Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizini. Machine.config makine genelinde derleme için yapılandırma ayarlarını içeren bağlama, yerleşik [uzaktan iletişim kanalları](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)ve ASP.NET.  
+ Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya % bulunur*çalışma zamanı yükleme yolu*%\Config dizininde. Machine.config makine düzeyinde derleme için yapılandırma ayarlarını içeren bağlama, yerleşik [uzaktan iletişim kanalları](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)ve ASP.NET.  
   
- Yapılandırma sistemi ilk makine yapılandırma dosyası arar [  **\<appSettings >** öğesi](~/docs/framework/configure-apps/file-schema/appsettings/index.md) ve geliştirici tanımlayabilir diğer yapılandırma bölümlerinin. Ardından uygulama yapılandırma dosyasına bakar. Makine yapılandırma dosyasını yönetilebilir tutmak için, bu ayarları uygulama yapılandırma dosyasında tutmak en iyisidir. Ancak, ayarları makine yapılandırma dosyasına koymak sisteminizi daha sürdürülebilir yapabilir. Örneğin, eğer hem istemci hem de sunucu uygulamanızın kullandığı bir üçüncü parti bileşeniniz varsa, o bileşen için ayarları tek bir yere koymak daha kolaydır. Bu durumda, aynı ayarları iki farklı dosyada tutmak yerine makine yapılandırma dosyasında tutmak daha uygundur.  
+ Yapılandırma sistemi makine yapılandırma dosyasında önce arar [  **\<appSettings >** öğesi](~/docs/framework/configure-apps/file-schema/appsettings/index.md) ve bir geliştiricinin tanımlayabileceği diğer yapılandırma bölümlerine. Ardından uygulama yapılandırma dosyasına bakar. Makine yapılandırma dosyasını yönetilebilir tutmak için, bu ayarları uygulama yapılandırma dosyasında tutmak en iyisidir. Ancak, ayarları makine yapılandırma dosyasına koymak sisteminizi daha sürdürülebilir yapabilir. Örneğin, eğer hem istemci hem de sunucu uygulamanızın kullandığı bir üçüncü parti bileşeniniz varsa, o bileşen için ayarları tek bir yere koymak daha kolaydır. Bu durumda, aynı ayarları iki farklı dosyada tutmak yerine makine yapılandırma dosyasında tutmak daha uygundur.  
   
 > [!NOTE]
 >  Bir uygulamayı XCOPY kullanarak dağıtmak, makine yapılandırma dosyasındaki ayarları kopyalamaz.  
   
- Ortak dil çalışma zamanı makine yapılandırma dosyası için derleme bağlama nasıl kullandığı hakkında daha fazla bilgi için bkz: [nasıl çalışma zamanı bulur derlemeleri](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Ortak dil çalışma zamanının derleme bağlama için makine yapılandırma dosyası kullanma hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Uygulama Yapılandırma Dosyaları  
  Bir uygulama yapılandırma dosyası belirli bir uygulamaya özel ayarları içerir. Bu dosya ortak dil çalışma zamanının okuduğu yapılandırma ayarlarını (derleme bağlama ilkesi, uzaktan iletişim nesneleri vs.) ve uygulamanın okuyabileceği ayarları içerir.  
@@ -73,27 +73,27 @@ ms.locfileid: "32759731"
   
      Bu uygulamaların iki yapılandırma dosyası vardır: geliştirme sırasında geliştirici tarafından değiştirilirken kaynak yapılandırma dosyası ve uygulama ile birlikte dağıtılan bir çıktı dosyası.  
   
-     Visual Studio'da geliştirirken, uygulamanız için kaynak yapılandırma dosyası proje dizininde yerleştirin ve ayarlama kendi **kopyalama için çıktı dizini** özelliğine **her zaman Kopyala** veya **yeniyse Kopyala** . Yapılandırma dosyasının adı uygulama adının .config uzantılı halidir. Örneğin, myApp.exe adlı bir uygulamanın myApp.exe.config adlı bir kaynak yapılandırma dosyası olması gerekir.  
+     Visual Studio'da geliştirirken, uygulamanızın kaynak yapılandırma dosyasını proje dizinine yerleştirin ve ayarlayın, **çıktı dizinine Kopyala** özelliğini **her zaman Kopyala** veya **yeniyse Kopyala** . Yapılandırma dosyasının adı uygulama adının .config uzantılı halidir. Örneğin, myApp.exe adlı bir uygulamanın myApp.exe.config adlı bir kaynak yapılandırma dosyası olması gerekir.  
   
-     Visual Studio, kaynak yapılandırma dosyasını, uygulama ile birlikte dağıtılan çıktı yapılandırma dosyasını oluşturmak için derlenmiş bütünleştirilmiş kodun yerleştirildiği dizine otomatik olarak kopyalar. Bazı durumlarda, Visual Studio çıkış yapılandırma dosyasını değiştirme; Daha fazla bilgi için bkz: [uygulama düzeyinde derleme sürümlerini yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) bölümünü [derleme sürümlerini yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md) makalesi.  
+     Visual Studio, kaynak yapılandırma dosyasını, uygulama ile birlikte dağıtılan çıktı yapılandırma dosyasını oluşturmak için derlenmiş bütünleştirilmiş kodun yerleştirildiği dizine otomatik olarak kopyalar. Bazı durumlarda, Visual Studio çıktı yapılandırma dosyasını değiştirebilir; Daha fazla bilgi için [uygulama düzeyinde derleme sürümlerini yeniden yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) bölümünü [derleme sürümlerini yeniden yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md) makalesi.  
   
 -   ASP.NET tarafından barındırılan uygulama  
   
-     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz: [ASP.NET yapılandırma ayarları](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))  
+     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [ASP.NET yapılandırma ayarları](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))  
   
 -   Internet Explorer tarafından barındırılan uygulama  
   
-     Internet Explorer'da barındırılan bir uygulamanın bir yapılandırma dosyası varsa, bu dosyanın konumunu belirtilen bir `<link>` aşağıdaki söz dizimini etiketi:  
+     Internet Explorer'da barındırılan bir uygulamanın yapılandırma dosyası varsa, bu dosyanın konumu belirtilen bir `<link>` aşağıdaki söz dizimini etiketle:  
   
-     \<İlişki bağlantı = "*ConfigurationFileName*" href = "*konumu*" >  
+     \<link rel = "*ConfigurationFileName*" href = "*konumu*" >  
   
-     Bu etiketinde `location` yapılandırma dosyası için bir URL. Bu, uygulama temel dizinini ayarlar. Yapılandırma dosyası uygulamayla aynı web sitesinde yer almalıdır.  
+     Bu etikette `location` yapılandırma dosyasına bir URL. Bu, uygulama temel dizinini ayarlar. Yapılandırma dosyası uygulamayla aynı web sitesinde yer almalıdır.  
   
 ## <a name="security-configuration-files"></a>Güvenlik Yapılandırma Dosyaları  
- Güvenlik yapılandırma dosyaları bir ilke düzeyiyle ilişkili kod grubu hiyerarşisi ve izin kümeleri hakkında bilgi içerir. Kullanmanız önerilir [kod erişimi güvenlik ilkesi aracını (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) Bu ilkeyi emin olmak için güvenlik ilkesini değiştirmek için değişiklikleri güvenlik yapılandırma dosyalarını bozuk değil.  
+ Güvenlik yapılandırma dosyaları bir ilke düzeyiyle ilişkili kod grubu hiyerarşisi ve izin kümeleri hakkında bilgi içerir. Kullanmanızı öneririz [kod erişimi güvenlik ilkesi aracını (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) ilkeyi emin olmak için güvenlik ilkesini değiştirmek için değişiklikleri güvenlik yapılandırma dosyalarını bozmadığından.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], güvenlik yapılandırma dosyaları yalnızca güvenlik ilkesi değiştirildiyse mevcut.  
+>  İle başlayarak [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], güvenlik yapılandırma dosyaları yalnızca güvenlik ilkesi değiştirilmişse, yok.  
   
  Güvenlik yapılandırma dosyaları aşağıdaki konumlarda bulunur:  
   
@@ -101,34 +101,34 @@ ms.locfileid: "32759731"
   
 -   Makine ilkesi yapılandırma dosyası: %*çalışma zamanı yükleme yolu*%\Config\Security.config  
   
--   Kullanıcı İlkesi yapılandırma dosyası: %USERPROFILE%\Application data\Microsoft\CLR güvenlik config\v*xx.xx*\Security.config  
+-   Kullanıcı İlkesi yapılandırma dosyası: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: DEVPATH Kullanarak Bütünleştirilmiş Kodların Konumunu Bulma](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
- Derlemeler için arama yaparken DEVPATH ortam değişkeni kullanmak için çalışma zamanı doğrudan açıklar.  
+ Derlemeler ararken DEVPATH ortam değişkenini kullanmak için çalışma zamanının açıklar.  
   
  [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- Derlemenin konumunu belirtme ve hangi sürümü kullanmak için bir derlemeyi açıklar.  
+ Bir derlemenin konumunu belirtme ve kullanmak için bir derleme sürümünü açıklar.  
   
  [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- Çalışma zamanı için derlemeyi araması gereken yeri belirtmek açıklar.  
+ Çalışma zamanının bir derlemeyi araması gereken yeri belirtmek açıklar.  
   
  [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- Şifreleme sınıfı ve bir nesne tanımlayıcı bir şifreleme algoritması için algoritma adını eşleştirmek açıklar.  
+ Bir şifreleme sınıfına ve bir nesne tanımlayıcısının bir şifreleme algoritması için algoritma adı eşlemeyle ilgili bilgi açıklar.  
   
  [Nasıl yapılır: Yayımcı İlkesi Oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
- Ne zaman ve nasıl derleme yeniden yönlendirme ve kod temel ayarlarını belirtmek için bir yayımcı ilkesi dosyası eklemelisiniz açıklar.  
+ Derleme yeniden yönlendirmesini ve kod tabanlı ayarları belirtmek için bir yayımcı ilkesi dosyası ne zaman ve nasıl eklemeniz gerektiğini açıklar.  
   
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
- Başlangıç, çalışma zamanı, ağ ve diğer yapılandırma ayarlarını türleri için şema hiyerarşisini açıklar.  
+ Başlangıç, çalışma zamanı, ağ ve diğer türde yapılandırma ayarları için şema hiyerarşisini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Yapılandırma dosyalarını kullanarak uzak nesneleri kaydetme](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [ASP.NET Web sitesi yönetimi](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: Güvenlik İlkesi Yönetimi](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [Yapılandırma dosyalarını kullanarak uzak nesneleri kaydetme](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
+ [ASP.NET Web sitesi yönetimi](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [NIB: Güvenlik İlkesi Yönetimi](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Uzak nesneleri](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+ [Uzak nesneleri](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

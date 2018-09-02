@@ -2,24 +2,24 @@
 title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 83df5ffb790ee69ab290ad703c46b421cd6a02e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506260"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399910"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
-Bu örnek, hata işleme ve hata raporlama kullanarak bir Windows Communication Foundation (WCF) hizmetini üzerinde denetim genişletmek gösterilmiştir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci birkaç hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyasına kaydeder.  
+Bu örnek nasıl hata işleme ve hata raporlama kullanarak bir Windows Communication Foundation (WCF) hizmet üzerinde denetim genişletileceğini gösterir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci, birden çok hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyaya kaydeder.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Hizmetleri müdahale hatalar, işlem gerçekleştirmek ve nasıl hataları bildirilen etkileyen kullanarak <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Arabirimin uygulanabilir iki yöntemi vardır: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> ve <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> Yöntemi ekleme, değiştirme ve yanıt bir özel durum olarak oluşturulan bir hata iletisi bastırmak olanak tanır. <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Yöntemi ek hata işleme çalıştırıp çalıştıramayacağını bir hata ve denetimleri durumunda gerçekleşmesi işlenirken hata verir.  
+ Hizmetleri ıntercept hataları, işleme gerçekleştirmek ve hataları nasıl bildirildiğini etkileyen kullanarak <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Arabirimin uygulanabilir iki yöntemi vardır: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> ve <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> Yöntemi ekleme, değiştirme veya yanıt olarak bir özel durum oluşturan bir hata iletisi gösterme olanak tanır. <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Yöntemi ek hata işleme çalıştırıp çalıştıramayacağını hata ve denetimleri olması durumunda gerçekleşmesi hata işleme sağlar.  
   
- Bu örnekte `CalculatorErrorHandler` yazın uygulayan <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. İçinde  
+ Bu örnekte `CalculatorErrorHandler` yazın uygular <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. İçinde  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> yöntemi, `CalculatorErrorHandler` c:\logs Error.txt metin dosyasında hata günlüğünü yazar. Örnek Hata günlüklerini ve, istemciye geri bildirilmesini izin veren engelleme unutmayın.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> yöntemi, `CalculatorErrorHandler` hata günlüğünü c:\logs Error.txt bir metin dosyasına yazar. Örnek Hata günlüklerini ve, istemciye yeniden bildirilmesine izin veren engellemez unutmayın.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -49,7 +49,7 @@ public class CalculatorErrorHandler : IErrorHandler
     }  
 ```  
   
- `ErrorBehaviorAttribute` Hata işleyicisine bir hizmete kaydolmak için bir mekanizma olarak bulunmaktadır. Bu öznitelik, bir tek tür parametresi alır. Türü uygulamalıdır <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirim ve genel, boş bir oluşturucuya sahip olması. Öznitelik, ardından bu olay işleyicisi türü bir örneğini başlatır ve hizmete yükler. Bunu uygulayarak yapar <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi ve ardından kullanarak <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> hizmete hata işleyicisine örneklerini ekleme yöntemi.  
+ `ErrorBehaviorAttribute` Hizmeti ile bir hata işleyicisini kaydetmek için bir mekanizma olarak bulunmaktadır. Bu öznitelik, bir tek tür parametresi alır. Tür uygulamalıdır <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi ve ortak, boş bir oluşturucusu olmalıdır. Özniteliği, hata işleyicisi türü bir örneğini başlatır ve hizmete yüklenir. Bunu uygulayarak yapar <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi ve ardından kullanarak <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> hizmetine hata işleyicisini örneklerini eklemek için yöntemi.  
   
 ```  
 // This attribute can be used to install a custom error handler for a service.  
@@ -96,7 +96,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
 }  
 ```  
   
- Örnek hesaplayıcı hizmeti uygular. İstemci kasıtlı olarak iki hatalar geçersiz değerlerle parametreleri sağlayarak hizmette oluşmasına neden olur. `CalculatorErrorHandler` Kullanan <xref:System.ServiceModel.Dispatcher.IErrorHandler> yerel bir dosyaya hataları günlüğe kaydetmek için arabirim ve bunları istemciye geri bildirilmesini sağlar. İstemci bir sıfıra bölünme sıfır ve aralığın bağımsız değişkeni çıkış koşulu zorlar.  
+ Örnek hesaplayıcı hizmet uygular. İstemci, kasıtlı olarak geçersiz değerlerle parametreleri sağlayarak hizmeti üzerinde gerçekleşmesi iki hatalarına neden olur. `CalculatorErrorHandler` Kullanan <xref:System.ServiceModel.Dispatcher.IErrorHandler> yerel bir dosyaya hataları günlüğe kaydetmek için arabirim ve bunları istemciye geri bildirilmesini sağlar. İstemci, sıfır hem de aralık, bağımsız değişkeni çıkış koşulu ile bir bölme zorlar.  
   
 ```  
 try  
@@ -118,7 +118,7 @@ catch (Exception e)
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Sıfır ve hataları rapor edilen aralığın bağımsız değişkeni çıkış koşulları bölme bakın. İstemcisi penceresinde istemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Sıfır ve hataları bildirilen aralığı, bağımsız değişkeni çıkış koşulları bölme görürsünüz. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(15,3) = 18  
@@ -132,29 +132,29 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Dosya c:\logs\errors.txt hataları hakkında hizmeti tarafından günlüğe kaydedilen bilgi içerir. Hizmetin emin olmanız gerekir dizine yazma için hizmet çalıştırıldığı işlemin (genellikle ASP.NET veya ağ hizmeti), dizine yazma izni etkilemez.  
+ Dosya c:\logs\errors.txt hizmet tarafından günlüğüne hatalar hakkında bilgileri içerir. Hizmet emin olmanız gerekir dizine yazmak hizmetin çalıştırıldığı işlemin (genellikle ASP.NET veya ağ hizmeti) dizine yazma izni etkide bulunur.  
   
 ```  
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Error.txt dosyası için c:\logs dizin oluşturdunuz. emin olun. Ya da kullanılan dosya adı değiştirmek `CalculatorErrorHandler.HandleError`.  
+3.  Error.txt dosyanın c:\logs dizinini oluşturduğunuz emin olun. Veya kullanılan dosya adı değiştirme `CalculatorErrorHandler.HandleError`.  
   
-4.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   

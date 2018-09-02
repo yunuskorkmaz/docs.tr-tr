@@ -1,5 +1,5 @@
 ---
-title: foreach, in (C# Başvurusu)
+title: C# foreach deyimi
 ms.date: 06/29/2018
 f1_keywords:
 - foreach
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874968"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405856"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
+# <a name="foreach-in-c-reference"></a>foreach, (C# Başvurusu)
 
 `foreach` Deyimi uygulayan türü örneğinde bir deyimi veya bir her öğe için bir deyimler bloğunu yürütür <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi. `foreach` Deyimi bu türleri için sınırlı değildir ve aşağıdaki koşulları karşılayan herhangi bir türde bir örneğine uygulanabilir:
 
@@ -47,10 +47,10 @@ C# 7.3, ile başlayarak Numaralandırıcı `Current` özelliği döndürür bir 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Foreach deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
-[Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)  
-[for](for.md)  
-[Yineleme Deyimleri](iteration-statements.md)  
-[C# Anahtar Sözcükleri](index.md)  
-[C# başvurusu](../index.md)  
-[C# Programlama Kılavuzu](../../programming-guide/index.md)  
+- [Foreach deyimi (C# dil belirtimi)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for](for.md)
+- [Yineleme Deyimleri](iteration-statements.md)
+- [C# Anahtar Sözcükleri](index.md)
+- [C# başvurusu](../index.md)
+- [C# Programlama Kılavuzu](../../programming-guide/index.md)

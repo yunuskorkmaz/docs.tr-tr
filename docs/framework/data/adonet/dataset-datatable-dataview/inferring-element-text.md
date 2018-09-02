@@ -2,15 +2,15 @@
 title: Öğe metni çıkarımını yapma
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b32d8f3f89a16166ffc0e903ef1f63c3b97a249c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762721"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405794"
 ---
 # <a name="inferring-element-text"></a>Öğe metni çıkarımını yapma
-Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğeleri gibi yeni bir sütun adıyla tabloları gibi olayla için alt öğe varsa **TableName_Text** öğe için olayla tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satırı eklenir ve yeni bir sütun depolanır. **ColumnMapping** yeni bir sütun özelliği, ayarlanacak **MappingType.SimpleContent**.  
+Bir öğenin metni içeren ve yeni bir sütun adıyla (öznitelikleri olan öğe) veya yinelenen öğeler gibi tablolar olarak çıkarılan için alt öğe yok **TableName_Text** öğe için ortaya çıkan tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satıra eklenir ve yeni bir sütun depolanır. **Columnmapping'in** yeni sütunun özellik ayarlanacak **MappingType.SimpleContent**.  
   
  Örneğin, aşağıdaki XML göz önünde bulundurun.  
   
@@ -20,7 +20,7 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
 </DocumentElement>  
 ```  
   
- Çıkarma işlemi adlı bir tablo oluşturur **Element1** iki sütunlarla: **attr1** ve **Element1_Text**. **ColumnMapping** özelliği **attr1** sütun ayarlanacak **MappingType.Attribute**. **ColumnMapping** özelliği **Element1_Text** sütun ayarlanacak **MappingType.SimpleContent**.  
+ Çıkarma işlemi adlı bir tablo oluşturur **Element1** iki sütunlu: **attr1** ve **Element1_Text**. **Columnmapping'in** özelliği **attr1** sütun ayarlanacak **MappingType.Attribute**. **Columnmapping'in** özelliği **Element1_Text** sütun ayarlanacak **MappingType.SimpleContent**.  
   
  **Veri kümesi:** DocumentElement  
   
@@ -28,9 +28,9 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
-|Değer1|Metin1|  
+|Değer1|text1|  
   
- Bir öğenin metni içeren, ancak Ayrıca metin içeren alt öğeleri varsa, bir sütun öğesinde yer metin depolamak için tabloya eklenmez. Alt öğeler metinde tablosunda bir satırı dahil ederken öğesinde yer metin yoksayılacak. Örneğin, aşağıdaki XML göz önünde bulundurun.  
+ Bir öğenin metin içeriyor, ancak metin içeren alt öğeler de vardır, bir sütun öğesinde bulunan metin depolamaya yönelik tablo eklenmeyecek. Alt öğeleri metinde tablosunda bir satıra dahil ederken öğesinde bulunan metin yoksayılır. Örneğin, aşağıdaki XML göz önünde bulundurun.  
   
 ```xml  
 <Element1>  
@@ -40,7 +40,7 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
 </Element1>  
 ```  
   
- Çıkarma işlemi adlı bir tablo oluşturur **Element1** adlı bir sütunu ile **ChildElement1**. Metni **ChildElement1** öğesi dahil edilir tabloda satırda. Başka bir metin göz ardı edilir. **ColumnMapping** özelliği **ChildElement1** sütun ayarlanacak **MappingType.Element**.  
+ Çıkarma işlemi adlı bir tablo oluşturur **Element1** adlı tek bir sütunu **ChildElement1**. Metni **ChildElement1** öğesi dahil edilecek tablosundaki bir satır. Diğer metin göz ardı edilir. **Columnmapping'in** özelliği **ChildElement1** sütun ayarlanacak **MappingType.Element**.  
   
  **Veri kümesi:** DocumentElement  
   
@@ -48,7 +48,7 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
   
 |ChildElement1|  
 |-------------------|  
-|Metin2|  
+|Text2|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -56,4 +56,4 @@ Bir öğenin metni içeren ve (öznitelikleri öğeleriyle) veya yinelenen öğe
  [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

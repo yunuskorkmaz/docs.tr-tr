@@ -2,51 +2,51 @@
 title: İşlem Yapılan Toplu İşlem
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-ms.openlocfilehash: 7df65b8f3f149deac841010e392f3919b24506b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508884"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416654"
 ---
 # <a name="transacted-batching"></a>İşlem Yapılan Toplu İşlem
-Bu örnek, işlenen okuma Message Queuing (MSMQ) kullanarak toplu olarak gösterilmiştir. İşlenen Batching kuyruğa alınan iletişim hizmetteki okuma performansı en iyi duruma getirme özelliğini içindir.  
+Bu örnek, hizmetteki okuma Message Queuing (MSMQ) kullanarak toplu olarak gösterilmiştir. İşlenen toplu işleme kuyruğa alınan iletişim hizmetteki okumalar performans iyileştirme özelliği içindir.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Kuyruğa alınan iletişim, istemci bir sıra kullanarak hizmeti ile iletişim kurar. Daha hassas bir şekilde istemci kuyruğa ileti gönderir. Hizmet kuyruktan iletileri alır. Hizmet ve istemci bu nedenle, bir sıra kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.  
+ Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.  
   
- Bu örnek, işlenen toplu işleme gösterir. İşlenen toplu işleme sırası ve işlemeden birçok iletileri okunurken tek bir işlem kullanılmasına olanak veren bir davranıştır.  
+ Bu örnek, toplu işleme gösterir. İşlenen toplu işleme, kuyruk ve bunları işlemeye çok iletileri okunurken tek bir işlem kullanımı sağlayan bir davranıştır.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Hizmetin ilk olarak çalışıyorsa, sıranın var olduğundan emin olmak için kontrol eder. Hizmet sırası mevcut değilse oluşturur. İlk sırayı oluşturmak için hizmet çalıştırabilirsiniz veya bir MSMQ sıra Yöneticisi aracılığıyla oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
+2.  Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.  
   
     1.  Sunucu Yöneticisi'nde açın [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Genişletme **özellikleri** sekmesi.  
+    2.  Genişletin **özellikleri** sekmesi.  
   
     3.  Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.  
   
     4.  Denetleme **işlem** kutusu.  
   
-    5.  Girin `ServiceModelSamplesTransacted` yeni kuyruk adından farklı.  
+    5.  Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.  
   
     > [!NOTE]
-    >  Bu örnekte istemci iletileri yüzlerce toplu bir parçası olarak gönderir. Bu işlem biraz zaman hizmet uygulaması için normal bir durumdur.  
+    >  Bu örnekte istemci iletileri yüzlerce toplu bir parçası olarak gönderir. Bu işlem biraz zaman ayırın hizmet uygulaması için normal bir durumdur.  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örnek bir çalışma grubu ya da active directory tümleştirmesi olmadan alanına katılmış bir bilgisayarda çalıştırmak için  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Örnek, bir çalışma grubuna veya active directory tümleştirmesi olmadan alanına katılmış bir bilgisayarda çalıştırmak için  
   
-1.  Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, taşıma güvenliği etkindir. MSMQ taşıma güvenliği için iki ilgili özellikler yok <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. Bir etki alanının parçası olması gerekir ve kimlik doğrulaması ve imzalama özelliği, MSMQ için MSMQ active directory tümleştirme seçeneğini yüklü olması gerekir. Bu ölçütleri karşılayan olmayan bir bilgisayarda bu örnek çalıştırırsanız, bir hata alırsınız.  
+1.  Varsayılan olarak <xref:System.ServiceModel.NetMsmqBinding>, aktarım güvenliği etkin. MSMQ taşıma güvenlik için iki ilgili özellik <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. MSMQ imzalama özelliği ve kimlik doğrulaması sağlamak için bir etki alanının parçası olması gerekir ve MSMQ active directory tümleştirme seçeneği yüklenmelidir. Bu ölçütleri karşılamayan bir bilgisayarda bu örneği çalıştırmak, bir hata alırsınız.  
   
-2.  Bilgisayarınız bir etki alanının parçası değil veya yüklü active directory tümleştirmesi yok gerekirse kimlik doğrulama modu ve koruma düzeyini ayarlayarak taşıma güvenliği devre dışı bırakmak `None` aşağıdaki örnek yapılandırmada gösterildiği gibi:  
+2.  Bilgisayarınız bir etki alanının parçası değil veya yüklü active directory tümleştirmesi yok, aktarım güvenliği devre dışı kimlik doğrulama modu ve koruma düzeyi ayarlayarak kapatma `None` aşağıdaki örnek yapılandırmada gösterildiği gibi:  
   
     ```xml  
     <system.serviceModel>  
@@ -96,41 +96,41 @@ Bu örnek, işlenen okuma Message Queuing (MSMQ) kullanarak toplu olarak göster
     </system.serviceModel>  
     ```  
   
-3.  Örneği çalıştırmadan önce hem sunucu hem de istemci yapılandırmasına değiştirdiğinizden emin olun.  
+3.  Örneği çalıştırmadan önce yapılandırma hem sunucu hem de istemci değiştirdiğinizden emin olun.  
   
     > [!NOTE]
-    >  Ayarı `security``mode` için `None` ayarına eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.  
+    >  Ayarı `security``mode` için `None` ayarlamakla eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.  
   
-4.  Veritabanı uzak bir bilgisayarda çalıştırmak için veritabanının bulunduğu bilgisayara işaret eden bağlantı dizesini değiştirin.  
+4.  Veritabanı uzak bir bilgisayarda çalıştırmak için bağlantı dizesi, veritabanının bulunduğu bilgisayara işaret edecek şekilde değiştirin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Bu örneği çalıştırmak için MSMQ yüklenmelidir ve SQL veya SQL Express gereklidir.  
+ Bu örneği çalıştırmak için MSMQ yüklü olması ve SQL veya SQL Express gereklidir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- Örnek uygulaması yapılan toplu davranış gösterir. Uygulaması yapılan toplu işleme MSMQ ile sağlanan bir performans en iyi duruma getirme özelliği aktarım sıraya olur.  
+ İşlenen toplu işleme davranışını örnek gösterir. İşlenen toplu işleme aktarım MSMQ ile sağlanan bir performans iyileştirme özelliği kuyruğa olur.  
   
- Gerçekte hareketler vardır ileti gönderme ve alma için kullanıldığında 2 işlemleri ayırın. İstemci bir işlem kapsamı içinde iletileri gönderdiğinde, istemci ve istemci sıra yöneticisi yerel bir işlemdir. Hizmet işlem kapsamı içinde ileti aldığında, hizmet ve alıcı sıra yöneticisi yerel bir işlemdir. İstemci ve hizmet aynı işlemde yer almayan olduğunu unutmamak önemlidir; Bunun yerine farklı işlemler işlemlerini (örneğin gönderme ve alma gibi) sıra ile gerçekleştirirken kullanıyordur.  
+ Gerçekten işlemler vardır ileti göndermek ve almak için kullanıldığında 2 hareketlerin ayırın. İstemci bir işlem kapsamı iletileri gönderdiğinde istemcinin ve istemci Kuyruk yöneticisi yerel bir işlemdir. Hizmet işlem kapsamı içindeki iletileri aldığında, hizmet ve alıcı Kuyruk yöneticisi yerel bir işlemdir. İstemciyi ve hizmeti aynı işlemde katılan değil olduğunu unutmamak çok önemlidir; Bunun yerine farklı işlemler işlemlerini (örneğin göndermek ve almak gibi) ile birlikte kuyruğa gerçekleştirirken kullandıkları.  
   
- Aşağıdaki örnekte birden çok hizmet işlemleri yürütme için tek bir işlem kullanırız. Bu yalnızca bir performans en iyi duruma getirme özelliği kullanılır ve uygulama semantiği etkilemez. Örnek dayanır [işlem yapılan işlem MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Aşağıdaki örnekte birden çok hizmet işlemleri yürütülmesi için tek bir işlem kullanırız. Bu, yalnızca Performans İyileştirme özelliği kullanılır ve uygulama semantiği etkilemez. Örnek dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
 ## <a name="comments"></a>Açıklamalar  
- Bu örnekte, istemci bir işlem kapsamı içinde hizmetinden toplu iletiler gönderir. Performansı en iyi duruma getirme göstermek için size bir sayıda ileti göndereceğiz; Bu durumda, 2500 iletileri kadar.  
+ Bu örnekte, istemci bir işlem kapsamında hizmetten toplu iletiler gönderir. Performans iyileştirmesi göstermek için çok sayıda ileti göndereceğiz; Bu durumda, 2500 iletileri kadar.  
   
- Bu sıraya gönderilen iletileri sonra hizmet hizmet tarafından tanımlanan işlem kapsamı içinde tarafından alınır. Toplu işlem olmadan, bu hizmet işlemi her çalıştırılışı için 2500 hareketleri sonuçlanır. Bu, sistemin performansını etkiler. İki kaynak yöneticileri söz konusu - olduğu için MSMQ sırası ve `Orders` veritabanı-her tür işlemdir DTC işlem. Biz iletileri ve hizmet işlem çağrıları toplu gerçekleşen tek bir işlemde çok daha az sayıda sağlayarak işlemleri kullanarak iyileştirin.  
+ Kuyruğa gönderilen iletiler, ardından hizmeti tarafından tanımlanan işlem kapsamında hizmeti tarafından alınır. Toplu işleme olmadan, bu hizmet işlemi her çalıştırılışı için 2500 işlemlerde sonuçlanır. Bu, sistemin performansını etkiler. İki kaynak yöneticileri ilgili - olduğu için MSMQ sırası ve `Orders` veritabanı-her tür işlem DTC işlem olduğu. Biz tek bir işlemde toplu iletiler ve hizmet işlemi çağrılarını gerçekleşen çok daha az sayıda sağlayarak işlemleri kullanarak iyileştirin.  
   
- Toplu özellik tarafından kullanırız:  
+ Toplu işlem özelliğiyle kullanırız:  
   
--   Uygulaması yapılan toplu davranışını yapılandırmasında belirtme.  
+-   İşlenen toplu işleme davranışını yapılandırmasında belirtme.  
   
 -   Bir toplu iş boyutu tek bir işlem kullanılarak okumak için ileti sayısı bakımından belirtme.  
   
--   Çalıştırmak için eş zamanlı yığın sayısı üst sınırını belirtme.  
+-   Eş zamanlı toplu çalıştırmak için en fazla sayısını belirleme.  
   
- Bu örnekte, performans artışı 100 hizmet işlemleri işlem gerçekleştirmeden önce tek bir işlemde çağrılan sağlayarak işlemleri sayısını azaltarak gösteriyoruz.  
+ Bu örnekte, performans kazancı elde edildi işlem sayısı 100 hizmet işlemleri tek bir işlemde bir işlem gerçekleştirmeden önce çağrılır sağlayarak azaltarak göstereceğiz.  
   
- Bir işlemi davranışı ile hizmet davranışını tanımlayan `TransactionScopeRequired` kümesine `true`. Bu yöntem tarafından erişilen tüm kaynak yöneticileri kuyruktan ileti almak için kullanılan aynı işlem kapsamı kullandığı sağlar. Bu örnekte, iletideki satın alma siparişi bilgileri depolamak için bir temel veritabanı kullanın. İşlem kapsamı yöntemi bir özel durum oluşturursa ileti kuyruğuna döndürülür garanti eder. Bu işlemi davranışı ayarı olmadan sıraya alınmış bir kanal iletiyi sıradan okumak için bir işlem oluşturur ve böylece işlemi başarısız olursa, ileti kaybolur dağıtılmasından önce otomatik olarak kaydeder. Aşağıdaki kodda gösterildiği gibi kuyruktan ileti okumak için kullanılan işlem listeleme hizmet işlemleri için en yaygın senaryodur bakın.  
+ Hizmet davranışı ile bir işlem davranışını tanımlar `TransactionScopeRequired` kümesine `true`. Bu, kuyruktan ileti almak için kullanılan aynı işlem kapsamı yöntemi tarafından erişilen tüm kaynak yöneticileri tarafından kullanılmasını sağlar. Bu örnekte, iletideki satın alma siparişi bilgileri depolamak için bir temel veritabanı kullanın. İşlem kapsamı yöntemi bir özel durum oluşturursa, kuyruğa ileti döndürülür garanti eder. Bu işlemi davranışı ayar olmadan sıraya alınan bir kanal iletiyi kuyruktan okumak için bir işlem oluşturur ve böylece işlem başarısız olursa, ileti kaybolur dağıtılmasından önce otomatik olarak tamamlar. Aşağıdaki kodda gösterildiği gibi bir kuyruktan ileti okumak için kullanılan işlem listeleme hizmet işlemleri için en yaygın senaryodur bakın.  
   
- Unutmayın `ReleaseServiceInstanceOnTransactionComplete` ayarlanır `false`. Bu, toplu işleme için önemli bir gereksinimdir. Özellik `ReleaseServiceInstanceOnTransactionComplete` üzerinde `ServiceBehaviorAttribute` hizmet örneği işlem tamamlandıktan sonra yapmanız gerekenler gösterir. Varsayılan olarak, hizmet örneği işlem tamamlandıktan sonra yayımlanır. Toplu işleme için çekirdek en boy okumak ve sıradaki birçok ileti gönderme için tek bir işlem kullanılır. Bu nedenle hizmet örneği serbest erken toplu işleme çok kullanımına negating işlem tamamlanmadan yukarı sona erer. Bu özellik ayarlanmışsa `true` ve işlenen toplu işleme davranışını eklenen uç noktasına toplu doğrulama davranışını bir özel durum oluşturur.  
+ Unutmayın `ReleaseServiceInstanceOnTransactionComplete` ayarlanır `false`. Bu, toplu işleme için önemli bir gereksinimdir. Özellik `ReleaseServiceInstanceOnTransactionComplete` üzerinde `ServiceBehaviorAttribute` hizmet örneği ile işlem tamamlandıktan sonra yapmanız gerekenler gösterir. Varsayılan olarak, hizmet örneği, işlem tamamlandıktan sonra serbest bırakılır. Toplu işleme için çekirdek gönderme sırasındaki ileti sayısını ve okuma için tek bir işlem kullanımı yönüdür. Bu nedenle hizmet örneği serbest çok kullanımını toplu beklenenden önce negating işlem Tamamlanıyor yukarı sona erer. Bu özellik ayarlanırsa `true` ve toplu işlem doğrulama davranışını bir özel durum oluşturursa işlenen toplu işleme davranışını uç noktasına eklenir.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -151,7 +151,7 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- `Orders` Sınıfı, sipariş işleme yalıtır. Aşağıdaki örnekte veritabanını satın alma siparişi bilgilerle güncelleştirir.  
+ `Orders` Sınıfı sırayla işlenmesini kapsüller. Bu örnekte veritabanı ile satın alma siparişi bilgileri güncelleştirir.  
 
 ```csharp
 // Order Processing Logic  
@@ -225,7 +225,7 @@ public class Orders
 }  
 ```
 
- Toplu işleme davranışı ve yapılandırmasını hizmet uygulama yapılandırmasında belirtilir.  
+ Toplu işleme davranışını ve yapılandırmasını, hizmet uygulama yapılandırmasında belirtilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -272,15 +272,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  Toplu iş boyutu sistem bir ipucu olur. Örneğin, bir toplu iş boyutu 20 belirtirseniz, ardından 20 ileti okuma ve tek bir işlem kullanılarak gönderilen ve işlem taahhüt eder. Ancak toplu iş boyutu ulaşılmadan önce burada Toplu hareketi durumlar vardır.  
+>  Toplu iş boyutu, sistem bir ipucu verir. Örneğin, 20 bir toplu iş boyutu belirtirseniz, ardından 20 ileti okunacağı ve tek bir işlem kullanılarak gönderilen ve işlem taahhüt eder. Ancak, toplu iş boyutu ulaşılmadan önce burada batch hareketi durumlar vardır.  
 >   
->  Her işlemle ilişkili hareket oluşturulduktan sonra ticking başlayan zaman aşımı olur. Bu zaman aşımı süresi dolduğunda işlem iptal edilir. Toplu iş boyutu bile ulaşılmadan önce süresi dolacak şekilde bu zaman aşımı için mümkündür. Toplu işlem nedeniyle durdurma, yeniden çalışma önlemek için `TransactedBatchingBehavior` ne kadar süre işlem sol olup olmadığını kontrol eder. İşlem zaman aşımı % 80 kullanılırsa, işlem taahhüt eder.  
+>  Her bir işlemle ilişkili hareket oluşturulduktan sonra yolunda başlatan bir zaman aşımı olur. Bu zaman aşımı süresi dolduğunda işlem iptal edildi. Toplu iş boyutu bile ulaşılmadan önce süresi dolacak şekilde bu zaman aşımı için mümkündür. Toplu işlem nedeniyle durdurma, yeniden çalışma önlemek için `TransactedBatchingBehavior` işlem üzerinde ne kadar süre kaldığını olup olmadığını kontrol eder. İşlem zaman aşımı değerini %80 kullanılması durumunda işlem taahhüt eder.  
 >   
->  Daha fazla ileti sırasındaki sonra toplu iş boyutu yerine getirme için beklemek yerine varsa <xref:System.ServiceModel.Description.TransactedBatchingBehavior> hareketi tamamlar.  
+>  Daha fazla ileti kuyruğu sonra toplu iş boyutu yerine getirilmesi için beklemek yerine varsa <xref:System.ServiceModel.Description.TransactedBatchingBehavior> hareketi tamamlar.  
 >   
->  Toplu iş boyutu, uygulamanızda bağımlı seçimdir. Yığın boyutu çok küçükse, istenen performans alamayabilirsiniz. Öte yandan yığın boyutu çok büyük ise, performans düşebilir. Örneğin, işleminiz artık canlı ve veritabanınızda kilitleri tutun veya işleminiz kullanılmayan, geri ve iş Yinele için toplu neden olabilecek kilitlenen.  
+>  Toplu iş boyutu seçimi, uygulamaya bağlıdır. Toplu iş boyutu çok küçükse, istediğiniz performans alamayabilir. Diğer taraftan toplu iş boyutu çok büyük ise, performans düşebilir. Örneğin, işlem artık canlı ve veritabanınızda kilitler barındırmıyorsa veya işlem kullanılmayan, geri ve iş Yinele olanak batch neden olabilecek kilitlenen.  
   
- İstemci bir işlem kapsamı oluşturur. Sıra ile iletişim, bu sıraya gönderilen tüm iletileri veya hiçbiri iletileri kuyruğa gönderilen olduğu atomik bir birim olarak kabul edilmesi neden işlem kapsamı içinde gerçekleşir. İşlem çağırarak gerçekleştirilir <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamında.  
+ İstemci işlem kapsamı oluşturur. Kuyruk ile iletişimi, burada tüm iletileri kuyruğa gönderilir ya da hiçbiri iletilerin kuyruğa gönderilen bir atomik birim olarak kabul edilmesi bu neden işlemin kapsamı içinde gerçekleşir. İşlem çağırarak kararlıdır <xref:System.Transactions.TransactionScope.Complete%2A> işlem kapsamı üzerinde.  
 
 ```csharp
 //Client implementation code.  
@@ -331,7 +331,7 @@ class Client
 }  
 ```
 
- Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. İstemci hizmeti alma iletileri görebilirsiniz. Her konsol penceresinde hizmet ve istemci kapatmak için ENTER tuşuna basın. Queuing kullanımda olduğundan, istemci ve hizmet aynı anda açık ve çalışıyor olması sahip olmadığını unutmayın. İstemcisini çalıştıran, kapatmak ve hizmeti başlatın ve hala kendi iletilerini alır. İletileri bir toplu işlemde okuma ve işlenen olarak çalışırken çıkış görebilirsiniz.  
+ Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın. Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez, unutmayın. İstemcisini çalıştıran da kapatın ve ardından hizmeti başlatın ve hala iletilerini alır. İletilerin bir toplu işte okuyun ve işlenen olarak sıralı bir çıkış görebilirsiniz.  
   
 ```  
 The service is ready.  
@@ -366,11 +366,11 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   

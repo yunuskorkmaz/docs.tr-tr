@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2379c009cacf4cd2adac0aeebbade437e8483af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497405"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402495"
 ---
 # <a name="security-concepts"></a>Güvenlik Kavramları
-Bu bölümde, Windows Communication Foundation (WCF) güvenlikle ilişkili kavramlar kısaca açıklanmaktadır.  
+Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WCF'de Kullanılan Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
- Bir üst düzey genel bakış kavramları güvenlik uygulamalarında kullanılır.  
+ Güvenlik uygulamalarında kullanılan kavramları üst düzey bir bakış.  
   
  [Dağıtılan Uygulama Güvenliği](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- WCF güvenlik dağıtılmış uygulama topografi nasıl sağladığını bir genel bakış.  
+ WCF güvenlik dağıtılmış uygulama topografi nasıl sağladığını genel bakış.  
   
  [Güvenlik Terimleri](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- WCF güvenlik ele alırken kullanılan terimleri içeren sözlük.  
+ WCF güvenliğini ele alınırken kullanılan terimler sözlüğü.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -41,4 +41,4 @@ Bu bölümde, Windows Communication Foundation (WCF) güvenlikle ilişkili kavra
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
  [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric için güvenlik modeli](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,15 +2,15 @@
 title: '&lt;Kimlik&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 1fc47b9595f409cf375dc75f2bf43e83f58491df
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: c77f60badd80973f0eeb36f6195b1d4b7617c386
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071298"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404276"
 ---
 # <a name="ltidentitygt"></a>&lt;Kimlik&gt;
-Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir istemci Geliştirici sağlar. Anlaşma işlemi istemci ve hizmet arasındaki Windows Communication Foundation (WCF) altyapısı, beklenen hizmet eşleşen değerleri bu öğenin kimliği ilişkilendirilmesini sağlar ve böylece doğrulanabilir. Daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+Kimlik öğesi, bir istemci geliştiricisinin beklenen hizmet kimliğini tasarım zamanında belirtmenizi sağlar. Anlaşma işlemi istemci ve hizmet arasındaki Windows Communication Foundation (WCF) altyapı beklenen hizmet eşleşme değerleri bu öğenin kimliğini emin olur ve bu nedenle doğrulanabilir. Daha fazla bilgi için [kimlik doğrulama ile hizmet kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  
 \<İstemci >  
@@ -43,22 +43,22 @@ Kimlik öğesi tasarım zamanında hizmet beklenen kimliğini belirtmek bir iste
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|sertifika|Bir X.509 sertifikası ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.CertificateElement>. Bir öznitelik içeriyor `encodedValue` diğer bir deyişle bu sertifika tarafından kodlanmış değeri belirten bir dize,.|  
+|sertifika|X.509 sertifikası ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.CertificateElement>. Özniteliğin içerdiği `encodedValue` Bu sertifika tarafından kodlanmış bir değer belirtir yani bir dizesi.|  
 |certificateReference|X.509 Sertifika doğrulama ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
-|dns|Bir hizmetin kimliğini doğrulamak için kullanılan bir X.509 sertifikası DNS belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek kimliğini içerir.|  
-|rsa|Bir hizmet için bir istemci kimlik doğrulaması için kullanılan bir X.509 sertifikası RSA alanının değerini belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek kimliğini içerir|  
-|servicePrincipalName|Bir hizmet örneğini benzersiz şekilde tanımlamak için bir istemci tarafından kullanılan asıl ad sunucu asıl adı (SPN) kimliğini belirtir. Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
-|userPrincipalName|Bir kullanıcı ağda oturum açma adı türünde bir kullanıcı asıl adı (UPN) kimliğini belirtir. Ardından, Active Directory içinde kullanılan kullanıcı nesne adı, kullanıcı asıl adı oluşur simgesini (\@) ve ardından, genellikle, etki alanı adı sistemi üst etki alanı. Örneğin, kullanıcı asıl adı Jeff Fabrikam.com etki alanı ağacındaki olabilir [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Bu öğe bir öznitelik içeriyor `value` , bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
+|dns|Bir hizmetin kimliğini doğrulamak için kullanılan bir X.509 sertifikasının DNS belirtir. Bu öğeyi içeren bir öznitelik `value` bir dizedir ve gerçek kimlik içeriyor.|  
+|rsa|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertifikasının RSA alanın değerini belirtir. Bu öğeyi içeren bir öznitelik `value` bir dizedir ve gerçek kimlik içeriyor|  
+|servicePrincipalName|Bir hizmet örneğini benzersiz şekilde tanımlamak için bir istemci tarafından kullanılan asıl adı bir sunucu asıl adı (SPN) kimliğini belirtir. Bu öğeyi içeren bir öznitelik `value` bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.ServicePrincipalNameElement>.|  
+|userPrincipalName|Bir kullanıcı ağda oturum açma adı türü bir kullanıcı asıl adı (UPN) kimliğini belirtir. Ardından Active Directory'de kullanılan kullanıcı nesne adı, kullanıcı asıl adı oluşur simgesini (\@) ve ardından, genellikle, etki alanı adı sistemi üst etki alanı. Örneğin, Jeff Fabrikam.com etki alanı ağacındaki kullanıcı asıl adı olabilir [ jeff@fabrikam.com ](mailto:jeffsmith@fabrikam.com).  Bu öğeyi içeren bir öznitelik `value` bir dizedir ve gerçek asıl adını içerir. Bu öğe türünde <xref:System.ServiceModel.Configuration.UserPrincipalNameElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Özel >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Bir netPeerTcpBinding için özel eş çözümleyici belirtir.|  
-|[\<uç noktası >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Farklı türde uç noktalar yapılandırır.|  
+|[\<Özel >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Özel eş Çözücü için bir netPeerTcpBinding belirtir.|  
+|[\<uç noktası >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Farklı uç noktalar için yapılandırır.|  
 |[\<veren >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Güvenlik belirteci hizmeti (STS) Federasyon Hizmeti için belirtir.|  
-|[\<İssuedtokenparameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Güvenlik belirteci hizmeti (STS için) Federasyon Hizmeti meta veri uç noktasının belirtir.|  
-|[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|İçinde özel bağlama verilen bir belirteç parametrelerini tanımlar.|  
+|[\<İssuedtokenparameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Güvenlik belirteci hizmeti (STS için) Federasyon Hizmeti meta veri uç noktası belirtir.|  
+|[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Verilen bir belirteç parametrelerini özel bir bağlama tanımlar.|  
 |[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Bir yerel güvenlik belirteci hizmeti (STS) belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

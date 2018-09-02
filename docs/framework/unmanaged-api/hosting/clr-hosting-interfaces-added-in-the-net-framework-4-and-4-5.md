@@ -8,58 +8,58 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 982f5780a40dd8cbce02ec33f7e6f77589cd3717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435802"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407409"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri
-Bu bölümde yönetilmeyen arabirimler açıklanmaktadır konakları ortak dil çalışma zamanı (CLR) içinde tümleştirmek için kullanabilir [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]ve sonraki sürümlerinde uygulamalarına. Bu arabirimleri yapılandırmak ve süreç içine çalışma zamanı yükleme bir konak için yöntemleri sağlar.  
+Bu bölümde, yönetilmeyen arabirimler açıklanmaktadır. konaklar, ortak dil çalışma zamanı (CLR) tümleştirmek için kullanabileceğiniz [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]ve sonraki sürümlerinde uygulamalarına. Bu arabirimler, yapılandırmak ve çalışma zamanını bir işleme yüklemek bir konak için yöntemler sağlar.  
   
  İle başlayarak [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], tüm barındırma arabirimleri aşağıdaki özelliklere sahiptir:  
   
--   Ömür yönetimini kullanın (`AddRef` ve `Release`), kapsülleme (örtük bağlamı) ve `QueryInterface` com gelen  
+-   Ömür Yönetimi kullandıkları (`AddRef` ve `Release`), kapsülleme (örtük context) ve `QueryInterface` com gelen  
   
 -   COM türleri gibi var. kullanmayın `BSTR`, `SAFEARRAY`, veya `VARIANT`.  
   
--   Hiçbir grup modelleri, toplama veya kayıt defteri etkinleştirme kullanan vardır [CoCreateInstance işlevi](http://go.microsoft.com/fwlink/?LinkId=142894).  
+-   Apartman modeli, toplama, veya kayıt defteri etkinleştirme kullanan [CoCreateInstance işlevi](https://go.microsoft.com/fwlink/?LinkId=142894).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ICLRAppDomainResourceMonitor Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- Bir uygulama etki alanının bellek ve CPU kullanımını denetleme yöntemleri sağlar.  
+ Bir uygulama etki alanının bellek ve CPU kullanımını denetlemek için yöntemler sağlar.  
   
  [ICLRDomainManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)  
- Varsayılan uygulama etki alanı başlatın ve başlatma özelliklerini belirtmek için kullanılan uygulama etki alanı yöneticisi belirtmek ana bilgisayarı sağlar.  
+ Varsayılan uygulama etki alanı başlatmak ve başlatma özelliklerini belirtmek için kullanılan uygulama etki alanı yöneticisi belirtmek konak sağlar.  
   
  [ICLRGCManager2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)  
- Sağlar [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) atık toplama kesim boyutunu ve en büyük boyutu 0 atık toplama sistemin nesil değerlere büyük ayarlamak bir konak etkinleştirir yöntemi `DWORD`.  
+ Sağlar [SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) çöp toplama kesim boyutunu ve en büyük boyutu çöp toplama sistemin nesil 0 değerine büyük ayarlamak bir konak sağlayan yöntemi `DWORD`.  
   
  [ICLRMetaHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- CLR belirli bir sürümünü döndürür, tüm yüklü CLRs listesinde, tüm işlem çalışma zamanları listesinde, etkinleştirme arabirimini döndürür ve bir derlemeyi derlemek için kullanılan CLR sürümünü bulma yöntemleri sağlar.  
+ CLR'nin belirli bir sürümünü döndürmek, tüm yüklü CLRs listesinde, tüm işlem çalışma zamanları listesinde, etkinleştirme arabirimini döndürür ve bir derlemeyi derlemek için kullanılan CLR sürümü bulmak için yöntemler sağlar.  
   
  [ICLRMetaHostPolicy Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- Sağlar [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) bir CLR arabirim sağlayan yöntemine temel İlkesi ölçütlerini, yönetilen derleme, sürüm ve yapılandırma dosyası.  
+ Sağlar [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) CLR arabirimi sağlayan yöntemi temel İlkesi ölçütlerini, yönetilen bir derleme, sürüm ve yapılandırma dosyası.  
   
  [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- Sürüm, dizin ve yük durumu da dahil olmak üzere belirli bir çalışma zamanı hakkında bilgi döndürmek yöntemleri sağlar.  
+ Sürüm, dizin ve yükleme durumu gibi belirli bir çalışma zamanı hakkında bilgi almak için yöntemler sağlar.  
   
  [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- Derlemeleri tanımlayıcı adlar ile imzalama için temel genel statik işlevleri sağlar. Tüm [Iclrstrongname](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) yöntemleri standart COM HRESULTs döndürür.  
+ Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevleri sağlar. Tüm [Iclrstrongname](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) yöntemleri standart COM HRESULTs döndürür.  
   
  [ICLRStrongName2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname2-interface.md)  
- Tanımlayıcı adlar SHA-2 grubunu güvenli karma algoritması (SHA-256, SHA-384 ve SHA-512) kullanarak oluşturmanıza olanak sağlar.  
+ SHA-2 karma algoritma (SHA-256, SHA-384 ve SHA-512) güvenli kullanarak güçlü adlar oluşturma olanağı sağlar.  
   
  [ICLRTask2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
- Tüm işlevselliğini sağlar [Iclrtask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); Ayrıca, iş parçacığı iptalleri geçerli iş parçacığı üzerinde Gecikmeli için izin yöntemleri sağlar.  
+ Tüm işlevlerini sağlar [Iclrtask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); Ayrıca, iş parçacığı iptalleri geçerli iş parçacığında geciktirileceği izin vermek için yöntemler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kullanım Dışı CLR Barındırma Arabirimleri ve Coclass’ları](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
- .NET Framework sürüm 1.0 ve 1.1 ile sağlanan barındırma arabirimleri açıklar.  
+ .NET Framework sürümleri 1.0 ve 1.1 ile sağlanan barındırma arabirimleri açıklar.  
   
  [CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  .NET Framework sürüm 2.0, 3.0 ve 3.5 ile sağlanan barındırma arabirimleri açıklar.  
   
  [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- .NET Framework'te barındırma tanıtır.
+ .NET Framework barındırma tanıtır.

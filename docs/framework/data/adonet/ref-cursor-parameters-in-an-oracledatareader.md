@@ -1,18 +1,18 @@
 ---
-title: Bir OracleDataReader REF İMLEÇ parametreleri
+title: Oracledatareader'da REF CURSOR parametreleri
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: c01b2b7f17f497d192d4db1ccd63b0a6bad26bf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a2c8949537c749ba30b116a0dc8131336de6092
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359199"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399975"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Bir OracleDataReader REF İMLEÇ parametreleri
-Bu Microsoft Visual Basic örnek değeri olarak okur ve REF CURSOR parametresiyle döndüren bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Oracledatareader'da REF CURSOR parametreleri
+Bu Microsoft Visual Basic örnek REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -45,4 +45,4 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

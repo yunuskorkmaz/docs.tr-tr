@@ -1,31 +1,31 @@
 ---
-title: 'Nasıl yapılır: denetim Namespace önekleri (C#) (LINQ-XML)'
+title: 'Nasıl yapılır: denetim Namespace önekleri (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: af864139d56bd3ebb22cca6369b82539b9d007da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327759"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417377"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: denetim Namespace önekleri (C#) (LINQ-XML)
-Bu konuda, bir XML ağacı serileştirilirken ad alanı öneklerini nasıl denetleyebilirsiniz açıklanmaktadır.  
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Nasıl yapılır: denetim Namespace önekleri (C#) (LINQ to XML)
+Bu konuda bir XML ağacı serileştirilirken ad alanı öneklerini nasıl denetleyebileceğinizi açıklar.  
   
- Çoğu durumda, ad alanı öneklerini denetlemek gerekli değildir.  
+ Çoğu durumda, ad alanı ön ekleri denetlemek gerekli değildir.  
   
- Ancak, belirli XML programlamaya ad alanı önekleri belirli denetim gerektirir. Örneğin, bir XSLT stil sayfası veya belirli bir ad alanı önekleri başvuran katıştırılmış XPath ifadeleri içeren bir XAML belgeyi düzenleme; Bu durumda, belge bu belirli öneklerle serileştirilmesi önemlidir.  
+ Ancak, belirli bir XML programlama araçları, ad alanı öneklerini belirli denetim gerektirir. Örneğin, bir XSLT stil sayfası veya özel ad alanı öneklerini başvuran katıştırılmış XPath ifadeleri içeren bir XAML belgesi işliyor; Bu durumda, belge bu belirli ön ekler ile seri hale getirilmesi önemlidir.  
   
- Ad alanı öneklerini denetlemek için kullanılan en yaygın nedeni budur.  
+ Ad alanı ön ekleri denetlemek için en yaygın nedeni budur.  
   
- Ad alanı öneklerini denetlemek için başka bir ortak XML belgesi el ile düzenlemek istediğiniz ve yazmak kullanıcı için kolay ad alanı öneklerini oluşturmak istediğiniz nedeni. Örneğin, bir XSD belge oluşturuyor. Şemaları için kuralları önermek ya da kullanmak `xs` veya `xsd` Şema ad alanı öneki olarak.  
+ Ad alanı ön ekleri denetlemek için başka bir yaygın nedeni, XML belgesi el ile düzenlemek için kullanıcıların istediğiniz ve kullanıcıdan için kullanışlı bir ad alanı öneklerini oluşturmak istediğiniz ' dir. Örneğin, bir XSD belgesi oluşturulurken. Şemaları için kuralları önerisi, ya da kullandığınız `xs` veya `xsd` Şema ad alanı ön eki olarak.  
   
- Ad alanı öneklerini denetlemek için ad alanlarını bildirme öznitelikleri ekleyin. Ad alanları belirli öneklerle bildirirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serileştirilirken ad alanı önekleri kabul dener.  
+ Ad alanı ön ekleri denetlemek için ad alanları belirtmesi öznitelikleri ekleyin. Belirli ön ekler ad alanları bildirirseniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ad alanı öneklerini serileştirilirken dikkate dener.  
   
- Özniteliğin öznitelik adını ad oluşturduğunuz ad alanı öneki bildiren bir öznitelik oluşturmak için <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, ve ad alanı öneki öznitelik adıdır. Ad alanı URI'si öznitelik değeri.  
+ Bir ad alanı öneki bildiren bir öznitelik oluşturmak için öznitelik adı ad alanı olduğu bir öznitelik oluşturun. <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, ve öznitelik adı ad alanı öneki. Öznitelik ad alanı URI değeridir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek iki ad alanı bildirir. Gerektiğini belirtir `http://www.adventure-works.com` ad alanı öneki var. `aw`ve `www.fourthcoffee.com` ad alanı öneki var. `fc`.  
+ Bu örnek iki ad alanları bildirir. Belirtir `http://www.adventure-works.com` ad alanı öneki olan `aw`ve `www.fourthcoffee.com` ad alanı öneki olan `fc`.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -42,7 +42,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Bu örnek şu çıkışı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  

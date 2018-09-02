@@ -16,72 +16,72 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 96e1acb4629e4a9c0c4b3eb368f19147c9ce2b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539896"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405550"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
-Görmemeleri ile Windows Forms veri bağlama çalışırken, verileri ne üst/alt adında veya ana/Ayrıntılar görünümü görüntülenir. Bu aynı kaynaktan veri iki denetimlerinde görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçim değiştirme değiştirmek için ikinci denetiminde gösterilen veriler neden olur. Örneğin, ilk denetim müşteriler ve ilk denetimindeki seçili müşteri siparişleri listesini ilgili ikinci bir listesini içerebilir.  
+Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, verilerin ne üst/alt adlı veya ana/Ayrıntılar görünümü görüntülenir. Bu iki denetimlerinde aynı kaynaktan verilerin görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçimini değiştirmeden değiştirmek için ikinci denetimde görüntülenen veri neden olur. Örneğin, ilk denetim müşteriler ve siparişler listesi ilk denetiminde ise seçili müşterilerle ilgili ikinci bir listesini içerebilir.  
   
- Alt tabloda seçilen olan satır tablonun ilk satırını sıfırlanmaz emin olmak için ek adımlar gerekebilir bir üst/alt görünüm verileri görüntülerken .NET Framework sürüm 2.0 ile başlatılıyor. Bunu yapmak için alt tablo konum önbelleğe ve üst tablo değişikliklerinden sonra sıfırlamak alması gerekir. Genellikle alt sıfırlama üst tablosu değişiklikleri satırının alanında ilk kez oluşur.  
+ Alt tabloda seçilen olan satır tablonun ilk satırına sıfırlanmaz emin olmak için ek adımlar gerekebilir üst/alt görünüm verileri görüntülerken .NET Framework sürüm 2.0 ile başlatılıyor. Bunu yapmak için önbelleğe alma alt tablo konum ve üst tablo değiştikten sonra sıfırlamak alması gerekir. Genellikle alt sıfırlama bir alanda bir üst tablosu değişiklikleri satırının ilk kez gerçekleşir.  
   
 ### <a name="to-cache-the-current-child-position"></a>Geçerli alt konum önbelleğe almak için  
   
-1.  Alt listesi konum depolamak için bir tamsayı değişken ve alt konum önbelleğe verilip depolamak için bir Boole değişken bildirin.  
+1.  Bağımlı liste konumu depolamak için bir tam sayı değişkeni ve alt konum önbelleğe verilip verilmeyeceğini depolamak için bir Boolean değişkeni bildirir.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  İşleme <xref:System.Windows.Forms.CurrencyManager.ListChanged> bağlamanın için olay <xref:System.Windows.Forms.CurrencyManager> ve denetleme bir <xref:System.ComponentModel.ListChangedType> , <xref:System.ComponentModel.ListChangedType.Reset>.  
+2.  Tanıtıcı <xref:System.Windows.Forms.CurrencyManager.ListChanged> bağlama için olay <xref:System.Windows.Forms.CurrencyManager> ve denetlemek için bir <xref:System.ComponentModel.ListChangedType> , <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Geçerli konumunu denetleyin <xref:System.Windows.Forms.CurrencyManager>. Listedeki ilk giriş büyük olup (genellikle 0), bir değişkene kaydedin.  
+3.  Geçerli konumunu denetleyin <xref:System.Windows.Forms.CurrencyManager>. Listedeki ilk girdi'dan büyük olup olmadığı (genellikle 0), bir değişkene kaydedin.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Üst listenin işlemek <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> üst para birimi Yöneticisi için olay. İşleyicisinde önbelleğe alma bir senaryo değildir belirtmek için Boolean değeri ayarlayın. Varsa <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> üst değişikliktir listesi konumu değiştirme ve madde değer değişikliği oluşur.  
+4.  Üst listenin işlemek <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> ana para birimi Yöneticisi için olay. İşleyicisinde bir önbelleğe alma bir senaryo değildir belirtmek için Boolean değeri ayarlayın. Varsa <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> üst değişikliktir liste konumu değiştirme ve öğe değeri değişikliği oluşur.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Alt konumu sıfırlama  
   
-1.  İşleme <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> alt olay bağlamanın <xref:System.Windows.Forms.CurrencyManager>.  
+1.  Tanıtıcı <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> alt için olay bağlamanın <xref:System.Windows.Forms.CurrencyManager>.  
   
-2.  Önceki yordamda kaydedilmiş önbelleğe alınan konuma alt tablo konum sıfırlayın.  
+2.  Önceki yordamda kaydedilen önbelleğe alınmış konumuna alt tablo konum sıfırlayın.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, geçerli konuma kaydetmek gösterilmiştir <xref:System.Windows.Forms.CurrencyManager>kullanımına bir alt tablo ve sıfırlama bir düzen üst tablo üzerinde tamamlandıktan sonra konumu. Bu örnek iki içeren <xref:System.Windows.Forms.DataGridView> denetimleri bağlı iki tablo için bir <xref:System.Data.DataSet> kullanarak bir <xref:System.Windows.Forms.BindingSource> bileşeni. İki tablo arasında bir ilişki kurulur ve ilişki eklenir <xref:System.Data.DataSet>. Alt tablo konumda başlangıçta tanıtım amacıyla üçüncü satır ayarlanır.  
+ Aşağıdaki örnek, geçerli konum kaydetmek gösterilmiştir <xref:System.Windows.Forms.CurrencyManager>sunulabilen bir alt tabloda ve sıfırlama üst tablosunda bir düzenleme tamamlandıktan sonra konumu. Bu örnek iki tane <xref:System.Windows.Forms.DataGridView> iki tablo ilişkili bir <xref:System.Data.DataSet> kullanarak bir <xref:System.Windows.Forms.BindingSource> bileşeni. İki tablo arasında bir ilişki kurulur ve ilişki eklendiğinden <xref:System.Data.DataSet>. Tanıtım amacıyla üçüncü satır alt tablo konumu başlangıçta ayarlanır.  
   
  [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
   
- Kod örneği test etmek için aşağıdaki adımları gerçekleştirin:  
+ Örnek kodu test etmek için aşağıdaki adımları gerçekleştirin:  
   
 1.  Örneği çalıştırın.  
   
-2.  Emin olun **önbellek ve konumlandırmak sıfırlama** onay kutusu seçilidir.  
+2.  Emin **önbellek ve konumlandırma sıfırlama** onay kutusu seçilidir.  
   
-3.  Tıklatın **Temizle üst alan** üst tablo alanına bir değişikliğe neden düğmesi. Alt tabloda seçilen satırın değişmeyen dikkat edin.  
+3.  Tıklayın **Temizle üst alan** üst tablo bir alanda bir değişiklik neden düğme. Alt tabloda seçilen satırın değişmez dikkat edin.  
   
-4.  Kapatın ve örnek yeniden çalıştırın. Sıfırlama davranışı yalnızca üst sıradaki ilk değişiklik meydana gelme çünkü bunu yapmanız gerekir.  
+4.  Kapatın ve örneği tekrar çalıştırın. Yalnızca üst satırdaki ilk değişiklik üzerinde sıfırlama davranışı oluştuğu için bunu yapmak gerekir.  
   
-5.  Clear **önbellek ve konumlandırmak sıfırlama** onay kutusu.  
+5.  NET **önbellek ve konumlandırma sıfırlama** onay kutusu.  
   
-6.  Tıklatın **Temizle üst alan** düğmesi. Alt tabloda seçilen satırın ilk satırın değiştiğine dikkat edin.  
+6.  Tıklayın **Temizle üst alan** düğmesi. Alt tabloda seçilen satırın ilk satırın değiştiğine dikkat edin.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek gerektirir:  
   
--   Sistem, System.Data, System.Drawing, System.Windows.Forms ve System.XML derlemelerine başvurular.  
+-   Sistem, System.Data System.Drawing, System.Windows.Forms ve System.XML derlemesine ilişkin başvurular.  
   
- Visual Basic veya Visual C# için bu örnek komut satırından oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [komut satırı yapı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örnek Visual Studio'da yeni bir projeye kod yapıştırılarak de oluşturabilirsiniz.  Ayrıca bkz. [nasıl yapılır: derleme ve çalıştırma bir tam Windows Forms kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Bu örnek komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [yapı komut satırı ile csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  Ayrıca bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  

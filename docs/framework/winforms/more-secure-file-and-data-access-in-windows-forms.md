@@ -13,31 +13,31 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 5db6fc886fe53fb60d38471bd463868ce2f37fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541904"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404076"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] İzinlerini kaynakları ve veri korumaya yardımcı olmak için kullanır. Burada, uygulamanızın Okuma veya yazma veri uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek zorunda kalabilirsiniz.  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
   
- Bir güvenlik kısıtlama karşılaştığınızda, iki seçeneğiniz vardır: (Bu verildiğini uygulamanıza varsayılarak) izni assert veya kısmi güvende çalışması için yazılmış özelliği sürümünü kullanın. Aşağıdaki bölümlerde dosya, veritabanı ve kayıt defteri erişimi bir kısmi güven ortamında çalışan uygulamalardan ile çalışma konusunda açıklanmaktadır.  
+ Bir güvenlik kısıtlaması karşılaştığınızda, iki seçeneğiniz vardır: (Bu verilmiş uygulamanıza varsayılarak) izin onay veya kısmi güvende çalışması için yazılmış özelliğinin bir sürümü kullanın. Aşağıdaki bölümlerde, dosya, veritabanı ve kayıt defteri erişimini, kısmi güven ortamında çalışan uygulamalar ile nasıl çalışılacağı açıklanmaktadır.  
   
 > [!NOTE]
->  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımlar isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalıştırma ek güvenlik avantajları istemediğinize karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmelisiniz [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Araçları (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyini belirleme hakkında daha fazla bilgi için bkz: [Windows Forms'a genel bakış güvenlik](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Varsayılan olarak, oluşturma araçları [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dağıtımları varsayılan bu dağıtımları isteyen tam güven için çalıştıkları bilgisayarlardan. Kısmi güvende çalışan ek güvenlik avantajları istediğiniz karar verirseniz, bu varsayılan olarak Visual Studio veya birini değiştirmeli [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] araçlarını (Mage.exe veya MageUI.exe). Windows Forms güvenliği hakkında ve uygulamanız için uygun güven düzeyinin nasıl belirleneceği hakkında daha fazla bilgi için bkz: [Windows Forms'ta Güvenliğe genel bakış](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dosya erişimi  
- <xref:System.Security.Permissions.FileIOPermission> Sınıf denetimleri dosya ve klasör erişim [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Varsayılan olarak, güvenlik sistemi değil vermez <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgeleri gibi. Ancak, uygulamanızın tasarımını ya da dosyalara erişim için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulama bu ortamlarda hala çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve aynı dizin erişimi, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için sahip hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir kendi başlangıç sitesine geri bağlanma hakkı.  
+ <xref:System.Security.Permissions.FileIOPermission> Sınıf içindeki dosya ve klasör erişimi denetler [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Varsayılan olarak, güvenlik sistemi yok yetkisi <xref:System.Security.Permissions.FileIOPermission> kısmi güven ortamlara yerel intranet ve Internet bölgelerinden gibi. Ancak, uygulamanızın tasarımını değiştirmek ya da dosyalara erişmek için farklı yöntemler kullanın dosya erişimi gerektiren bir uygulamayı hala bu ortamlarda çalışabilir. Varsayılan olarak, yerel intranet bölgesine aynı site erişimi ve, geri, kaynak siteye bağlanmak ve kendi yükleme dizininden okumak için aynı dizin erişim hakkı verilir. Varsayılan olarak, Internet bölgesi yalnızca verilir, kaynak siteye geri hakkı.  
   
 ### <a name="user-specified-files"></a>Kullanıcı tarafından belirtilen dosyaları  
- Dağıtılacak bir yolu dosya erişimi olmaması ile izin kullanarak belirli dosya bilgilerini sağlamak için kullanıcıdan istemek için şu <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog> sınıfı. Bu kullanıcı etkileşimi uygulama kötü amaçlı olarak özel dosyaları yükleyemedi veya önemli dosyaların üzerine yazıp, bazı güvence sağlar, yardımcı olur. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Ve <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> okuma ve yazma dosya erişimi kullanıcı tarafından belirtilen dosya için dosya akışı açarak yöntemleri sağlar. Yöntemleri'de dosyanın yolu anlaşılması güç kullanıcının dosyayı koruyun.  
+ Tek yönlü dağıtılacak dosya erişimi olmaması ile kullanarak belirli dosya bilgileri sağlamak için kullanıcıdan istemek için izindir <xref:System.Windows.Forms.OpenFileDialog> veya <xref:System.Windows.Forms.SaveFileDialog> sınıfı. Bu kullanıcı etkileşimi uygulama erişemeyeceği özel dosyalarını yüklemek veya önemli dosyaların üzerine yazıp, bazı güvence sağlar. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Ve <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> okuma ve yazma dosya erişimi için kullanıcı tarafından belirtilen dosyanın dosya akışı açarak yöntemleri sağlar. Ayrıca yöntemler dosyanın yolu anlaşılması güç tarafından kullanıcının dosyayı koruma yardımcı olur.  
   
 > [!NOTE]
->  Bu izinleri uygulamanızı Internet bölgesi ya da Intranet bölgesi olmasına bağlı olarak değişir. Internet bölgesi uygulamalarına yalnızca kullanabilir <xref:System.Windows.Forms.OpenFileDialog>, Intranet uygulamalarını dosya iletişim izni sınırsız vardır ancak.  
+>  Bu izinleri uygulamanız Internet bölgesi veya Intranet bölgesi olmasına bağlı olarak değişir. Internet bölgesi uygulamalarına yalnızca kullanma <xref:System.Windows.Forms.OpenFileDialog>bilgileriyse Intranet uygulamalarını dosya iletişim izni sınırsız vardır.  
   
- <xref:System.Security.Permissions.FileDialogPermission> Sınıfını belirtir ne tür bir dosya iletişim kutusu, uygulamanızın kullanabilirsiniz. Aşağıdaki tabloda, her kullanılacak olmalıdır değeri gösterilmektedir <xref:System.Windows.Forms.FileDialog> sınıfı.  
+ <xref:System.Security.Permissions.FileDialogPermission> Sınıfını belirtir ne tür bir dosya iletişim kutusu, uygulamanızı kullanabilirsiniz. Aşağıdaki tabloda, her kullanmak için değeri gösterilmektedir <xref:System.Windows.Forms.FileDialog> sınıfı.  
   
 |örneği|Gerekli erişim değeri|  
 |-----------|---------------------------|  
@@ -45,14 +45,14 @@ ms.locfileid: "33541904"
 |<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
->  Belirli bir izin kadar istenen değil <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi gerçekte çağrılır.  
+>  Belirli bir izin kadar istenen değil <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi gerçekten çağrılır.  
   
- Dosya iletişim kutusu görüntülemek için izni tüm üyeleri için uygulama tam erişim vermez <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları. Her yöntemini çağırmak için gerekli izinleri tam görmek için bu yöntem için başvuru konusunun [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sınıf kitaplığı belgeleri.  
+ Dosya iletişim kutusu görüntülemek için izni tüm üyeleri için uygulama tam erişim vermez <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog>, ve <xref:System.Windows.Forms.SaveFileDialog> sınıfları. Her bir yöntemi çağırmak için gereken tam izinler görmek için bu yönteme yönelik referans konusuna [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sınıf kitaplığı belgeleri.  
   
- Aşağıdaki kod örneğinde <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi bir kullanıcı tarafından belirtilen dosyaya açmak için bir <xref:System.Windows.Forms.RichTextBox> denetim. Örnek gerektirir <xref:System.Security.Permissions.FileDialogPermission> ve ilişkili <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> numaralandırma değeri. Bu örnek nasıl işleneceğini gösterir <xref:System.Security.SecurityException> belirlemek için olup olmadığını kaydetme özelliğini devre dışı bırakılmalıdır. Bu örnek gerektiren, <xref:System.Windows.Forms.Form> sahip bir <xref:System.Windows.Forms.Button> adlı Denetim `ButtonOpen`ve bir <xref:System.Windows.Forms.RichTextBox> adlı Denetim `RtfBoxMain`.  
+ Aşağıdaki kod örneğinde <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> yöntemi, bir kullanıcı tarafından belirtilen dosyaya açmak için bir <xref:System.Windows.Forms.RichTextBox> denetimi. Örnek gerektirir <xref:System.Security.Permissions.FileDialogPermission> ve ilişkili <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> numaralandırma değeri. Örnek üstesinden nasıl gelineceğini gösterir <xref:System.Security.SecurityException> belirlemek için olup olmadığını kaydetme özelliğini devre dışı bırakılmalıdır. Bu örnekte gerektiren, <xref:System.Windows.Forms.Form> sahip bir <xref:System.Windows.Forms.Button> adlı Denetim `ButtonOpen`ve <xref:System.Windows.Forms.RichTextBox> adlı Denetim `RtfBoxMain`.  
   
 > [!NOTE]
->  Programlama mantığı için Kaydet özelliği örnekte gösterilmez.  
+>  Programlama mantığı kaydetme örnekte özellik gösterilmez.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -133,12 +133,12 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C# ' olay işleyicisi olanak sağlamak için kod ekleme emin olun. Aşağıdaki kod, önceki örnek kodu kullanarak, olay işleyicisi etkinleştirme gösterir.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Visual C# içinde olay işleyicisi olanak sağlamak için kod ekleme emin olun. Aşağıdaki kod, önceki örnekte kodunu kullanarak, olay işleyicisi etkinleştirme gösterir.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### <a name="other-files"></a>Diğer dosyaları  
- Bazen okumak veya kullanıcı, uygulama ayarları ne zaman sürdürülmesi gereken gibi belirtmediğinden emin dosyaları yazmak gerekir. Yerel intranet ve Internet bölgeleri uygulamanızı yerel bir dosyaya veri depolamak için izne sahip değil. Ancak, uygulamanızın yalıtılmış depolamada verileri depolamak mümkün olacaktır. Yalıtılmış Depolama verilerinin depolandığı gerçek dizin konumları içeren depoları olarak adlandırılan bir veya daha fazla yalıtılmış depolama dosyaları içeren bir soyut veri bölme (belirli bir depolama konumu değil) olur. Dosya erişim izinleri gibi <xref:System.Security.Permissions.FileIOPermission> gerekli değildir; bunun yerine, <xref:System.Security.Permissions.IsolatedStoragePermission> sınıfı yalıtılmış depolama için izinleri denetler. Varsayılan olarak, yerel intranet ve Internet bölgeleri çalışmakta olan uygulamalar yalıtılmış depolama kullanarak veri depolayabilir; Ancak, disk kotası gibi ayarları farklılık gösterebilir. Yalıtılmış depolama hakkında daha fazla bilgi için bkz: [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md).  
+### <a name="other-files"></a>Diğer dosyalar  
+ Bazen bir kullanıcı, uygulama ayarları ne zaman kalıcı tutmalıdır gibi belirtmediğinden emin dosyaları okunamıyor veya yazılamıyor gerekir. Yerel intranet ve Internet bölgelerinden, uygulamanızı bir yerel dosya verilerini depolamak için izni yoktur. Ancak, uygulamanız verileri yalıtılmış depolamada depolamak mümkün olacaktır. Yalıtılmış Depolama verilerinin nerede depolanacağını gerçek dizin konumlarını içeren denen bir veya daha fazla yalıtılmış depolama dosyalarını içeren bir soyut bir veri bölmesine (belirli bir depolama konumu değil) var. Dosya erişim izinlerini gibi <xref:System.Security.Permissions.FileIOPermission> gerekli değildir; bunun yerine, <xref:System.Security.Permissions.IsolatedStoragePermission> sınıfı yalıtılmış depolama izinlerini denetler. Varsayılan olarak, yerel intranet ve Internet bölgelerinden çalışan uygulamalar, yalıtılmış depolama kullanarak veri depolayabilir; Ancak, disk kotası gibi ayarları farklılık gösterebilir. Yalıtılmış depolama hakkında daha fazla bilgi için bkz. [yalıtılmış depolama](../../../docs/standard/io/isolated-storage.md).  
   
- Aşağıdaki örnek, bir depolama alanında bulunan bir dosyaya veri yazmak için yalıtılmış depolama kullanır. Örnek gerektirir <xref:System.Security.Permissions.IsolatedStorageFilePermission> ve <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> numaralandırma değeri. Örnek okuma ve yazma belirli özellik değerlerini gösterir <xref:System.Windows.Forms.Button> yalıtılmış depolama dosyasında denetimine. `Read` Uygulama başladıktan sonra işlev'in çağrılabilir ve `Write` işlevi uygulama sona ermeden önce çağrılabilir. Örnek gerektiren `Read` ve `Write` işlevleri üye olarak mevcut bir <xref:System.Windows.Forms.Form> içeren bir <xref:System.Windows.Forms.Button> adlı Denetim `MainButton`.  
+ Aşağıdaki örnek, bir depolama alanında bulunan bir dosyaya veri yazmak için yalıtılmış depolama kullanır. Örnek gerektirir <xref:System.Security.Permissions.IsolatedStorageFilePermission> ve <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> numaralandırma değeri. Örnek okuma ve yazma belirli özellik değerlerini gösterir <xref:System.Windows.Forms.Button> yalıtılmış depolamadaki dosyaya denetimi. `Read` Uygulama başladıktan sonra işlev'in çağrılabilir ve `Write` işlevi uygulama sona ermeden önce çağrılabilir. Örnek gerektiren `Read` ve `Write` işlevleri, üye olarak mevcut bir <xref:System.Windows.Forms.Form> içeren bir <xref:System.Windows.Forms.Button> adlı Denetim `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -349,14 +349,14 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Veritabanı erişimi  
- Bir veritabanına erişmek için gerekli izinleri veritabanı sağlayıcısı bağlı olarak farklılık; Ancak, uygun izinlerle çalışmakta olan uygulamalar bir veritabanı bir veri bağlantısı üzerinden erişebilirsiniz. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişim güvenliği ve ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ Bir veritabanına erişmek için gerekli izinlere veritabanı sağlayıcısı'na bağlı olarak değişiklik gösterir; Ancak, uygun izinlerle çalışmakta olan uygulamalar, veri bağlantısı aracılığıyla bir veritabanına erişebilir. Bir veritabanına erişmek için gereken izinler hakkında daha fazla bilgi için bkz: [kod erişimi güvenliği ve ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Kısmi güvende çalıştırmak için uygulamanızın istediğinden doğrudan bir veritabanı erişemiyorsanız, verilerinize erişmek bir alternatif anlamına gelir gibi bir Web hizmetini kullanabilirsiniz. Bir Web hizmeti, bir ağ üzerinden programlı olarak erişilebilir yazılım parçasıdır. Web Hizmetleri ile uygulamaları kodu Grup dilimlerinde veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgeleri uygulamalarda sitelerinin bunları aynı sunucu üzerinde barındırılan bir Web hizmetini çağırmak etkinleştirir kaynak erişim hakkı verilir. Daha fazla bilgi için bkz: [ASP.NET AJAX Web hizmetlerinde](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Kısmi güvende çalıştırmak için uygulamanızın istediğinden bir veritabanına doğrudan erişemez, verilerinize erişmek bir alternatif anlamına gelir, bir Web hizmetini kullanabilirsiniz. Program aracılığıyla bir ağ üzerinden erişilebilen bir yazılım parçasıdır bir Web hizmetidir. Web hizmetleri sayesinde, uygulamalar, kod grubu bölgeler arasında veri paylaşabilir. Varsayılan olarak, yerel intranet ve Internet bölgelerinden uygulamalar aynı sunucuda barındırılan bir Web hizmeti çağırmak amacıyla sağlayan, kaynak sitelerini erişim hakkı verilir. Daha fazla bilgi için [ASP.NET AJAX Web hizmetlerini](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) veya [Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Kayıt defteri erişimi  
- <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sisteminin kayıt defterine erişim denetler. Varsayılan olarak, yerel olarak çalışan yalnızca uygulamaları kayıt erişebilir.  <xref:System.Security.Permissions.RegistryPermission> yalnızca bir uygulama kayıt defteri erişimi deneyin hakkı verir; işletim sistemi hala kayıt defterindeki güvenlik zorladığından, erişim başarılı olur, garanti etmez.  
+ <xref:System.Security.Permissions.RegistryPermission> Sınıfı işletim sistem kayıt defteri erişimi denetler. Varsayılan olarak, yerel olarak çalıştırıyorsanız, yalnızca uygulamalar kayıt defterine erişebilir.  <xref:System.Security.Permissions.RegistryPermission> yalnızca bir uygulama kayıt defteri erişimini deneyin verme hakkı tanımaz; işletim sistemi güvenlik kayıt defterindeki hala zorladığından erişim başarılı olur, garantilemez.  
   
- Kısmi güven altında kayıt defterine erişemediği için diğer yöntemleri, veri depolamanın bulmak gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama kayıt defteri yerine kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyalarını depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya siteyle kaynak, genel uygulama bilgilerini de depolayabilirsiniz.  
+ Kısmi güven altında kayıt defteri erişemediği için diğer yöntemleri, verilerinizi depolamaya gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama yerine kayıt defterini kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyaları depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya site kaynak, genel uygulama bilgilerini da depolayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Forms'ta Daha Güvenli Yazdırma](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  

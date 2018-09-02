@@ -1,21 +1,21 @@
 ---
-title: Bir veri kümesine bir XSLT dönüşümü uygulanarak
+title: DataSet'e XSLT dönüşümü uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405754"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a>Bir veri kümesine bir XSLT dönüşümü uygulanarak
-**WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **DataSet** XML verileri olarak. Bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime Dönüştür ortak bir görevdir. Ancak, eşitleme bir **DataSet** ile bir <xref:System.Xml.XmlDataDocument> XSLT stil sayfası içeriği için uygulamanızı sağlar bir **DataSet** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** XML verileri kullanarak olarak **WriteXml**.  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet'e XSLT dönüşümü uygulama
+**WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **veri kümesi** XML verileri olarak. Ardından bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmek için genel bir görevdir. Bununla birlikte, eşitleme bir **veri kümesi** ile bir <xref:System.Xml.XmlDataDocument> bir XSLT stil sayfası içeriğini sağlayan bir **veri kümesi** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** kullanarak XML verilerini olarak **WriteXml**.  
   
- Aşağıdaki örnek dolduran bir **DataSet** tabloları ve ilişkileri ile eşitler **DataSet** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML olarak dosya XSLT stil kullanarak. XSLT stil içeriğini aşağıda verilmiştir.  
+ Aşağıdaki örnek dolduran bir **veri kümesi** tablolar ve ilişkiler ile eşitler **veri kümesi** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML dosyası kullanarak bir XSLT stil sayfası. XSLT stil sayfası içeriğini aşağıda verilmiştir.  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +56,10 @@ ms.locfileid: "32756559"
 </xsl:stylesheet>  
 ```  
   
- Aşağıdaki kod dolgular **DataSet** ve XSLT stil sayfası uygular.  
+ Aşağıdaki kod dolgular **veri kümesi** ve XSLT stil sayfasını uygular.  
   
 > [!NOTE]
->  XSLT stil sayfası uyguluyorsanız bir **DataSet** ilişkileri içeren, ayarladığınız varsa, en iyi performansı elde **iç içe** özelliği <xref:System.Data.DataRelation> için **true**her biri için ilişkisi iç içe geçmiş. Bu hiyerarşi gidin ve performansı yoğun XPath konumu eksen (örneğin, önceki eşdüzey ve aşağıdaki eşdüzey stilde kullanılarak verileri dönüştürmek bu uygulama doğal yukarıdan aşağı işleme, XSLT stil sayfaları kullanmanıza olanak sağlar Bunu gitmek için sayfa düğüm test ifadeleri). İç içe geçmiş ilişkileri hakkında daha fazla bilgi için bkz: [iç içe geçme DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  İçin bir XSLT stil sayfası uyguluyorsanız bir **veri kümesi** ilişkileri içeren, ayarlarsanız en iyi performansı elde etmek **iç içe** özelliği <xref:System.Data.DataRelation> için **true**her biri için ilişki iç içe geçmiş. Bu XSLT stil sayfalarını kullanmanızı hiyerarşi gidin ve yoğun performans XPath konumu eksenler (örneğin, önceki eşdüzey ve aşağıdaki eşdüzey stil kullanarak verileri dönüştürmek bu uygulama doğal yukarıdan aşağıya işlemesine olanak gezinebilirsiniz sayfası düğüm test ifadeleri). İç içe ilişkiler hakkında daha fazla bilgi için bkz. [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,4 +125,4 @@ writer.Close();
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

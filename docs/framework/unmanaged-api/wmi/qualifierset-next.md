@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Next işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_Next işlevi numaralandırma sonraki niteleyicisinde alır.
+description: Bir listedeki sonraki niteleyicisi QualifierSet_Next işlevi alır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460233"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405533"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next işlevi
-Sonraki çağrı kullanmaya bir numaralandırma niteleyicisinde alır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.   
+Bir çağrı ile başlatılan bir listedeki sonraki niteleyicisi alır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,42 +44,42 @@ HRESULT QualifierSet_Next (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`   
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
 `lFlags`   
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `pstrName`   
-[out] Niteleyici adı. Varsa `null`, bu parametre, yoksayılan Aksi takdirde `pstrName` geçerli bir işaret etmelidir değil `BSTR` veya bellek sızıntısı oluşur. Null, işlevi her zaman yeni bir ayırır, `BSTR` zaman döndürür `WBEM_S_NO_ERROR`.
+[out] Niteleyicisi adı. Varsa `null`, bu parametre yoksayıldı; Aksi takdirde `pstrName` geçerli bir işaret etmelidir değil `BSTR` veya bir bellek sızıntısı olur. Null, işlev her zaman yeni bir ayırır, `BSTR` döndüğünde, `WBEM_S_NO_ERROR`.
 
 `pVal`   
-[out] Başarılı olduğunda, Niteleyici değeri. İşlev başarısız olursa, `VARIANT` gösterdiği `pVal` değiştirilmez. Bu parametre ise `null`, parametre yoksayılır.
+[out] Başarılı olduğunda, Niteleyici değeri. İşlev başarısız olursa `VARIANT` işaret ettiği `pVal` değiştirilmez. Bu parametre `null`, parametre yoksayılır.
 
 `plFlavor`   
-[out] Niteleyici türü alan uzun bir işaretçi. Özellik bilgileri değil istenirse, bu parametre olabilir `null`. 
+[out] Niteleyici özelliği alan uzun bir işaretçi. Flavor bilgi istenildiği gibi değilse, bu parametre olabilir `null`. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Arayan çağrılmayan [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Çağıranın çağrılmayan [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Yeni bir numaralandırma başlatmak yeterli bellek yok. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Daha fazla hiçbir niteleyicileri numaralandırmada bırakılır. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Hiçbir daha fazla niteleyici numaralandırmada bırakılır. |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemQualifierSet::Next](https://msdn.microsoft.com/library/aa391870(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) yöntemi.
 
-Çağırmanız `QualifierSet_Next` dönüş işlevi kadar tüm niteleyicileri art arda Numaralandırılacak işlevi `WBEM_S_NO_MORE_DATA`. Numaralandırma erken sonlandırmak için çağrı [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevi.
+Çağırmanızı `QualifierSet_Next` işlevi dönüş işlevi kadar tüm niteleyicileri art arda Numaralandırılacak `WBEM_S_NO_MORE_DATA`. Numaralandırma erken sonlandırmak için çağrı [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) işlevi.
 
-Numaralandırma sırasında döndürülen niteleyicileri sırası tanımlanmamıştır.
+Numaralandırma sırasında döndürülen niteleyici sırası tanımlanmamıştır.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

@@ -11,97 +11,97 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539497"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400386"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: komut satırından bir Windows Forms uygulaması oluşturma
-Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlar açıklanmıştır. Visual Studio'da bu yordamları için kapsamlı destek yoktur.  Ayrıca bkz. [izlenecek yol: basit bir Windows formu oluşturma](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar. Visual Studio'da bu yordamları için kapsamlı desteği yoktur.  Ayrıca bkz: [izlenecek yol: basit bir Windows formu oluşturma](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-create-the-form"></a>Form oluşturmak için  
+#### <a name="to-create-the-form"></a>Form oluşturma  
   
-1.  Bir boş kod dosyasında aşağıdaki içeri aktarma veya using deyimleri yazın:  
+1.  Bir boş bir kod dosyasında, aşağıdaki içeri aktarma veya using deyimlerini yazın:  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2.  Adlı bir sınıf bildirme `Form1` Form sınıfından devralıyor.  
+2.  Adlı bir sınıf bildirme `Form1` Form sınıfından devralır.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  İçin varsayılan bir Oluşturucu Oluşturma `Form1`.  
+3.  İçin varsayılan oluşturucu oluşturma `Form1`.  
   
-     Bir sonraki yordamı oluşturucuda daha fazla kod ekleyeceksiniz.  
+     Bir sonraki yordamda Oluşturucusu daha fazla kod ekleyeceksiniz.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4.  Ekleme bir `Main` sınıfına yöntemi.  
+4.  Ekleme bir `Main` sınıfı için yöntemi.  
   
-    1.  Uygulama <xref:System.STAThreadAttribute> C# `Main` Windows Forms uygulaması belirtmek için yöntemdir tek iş parçacıklı bölme. (Windows forms uygulamaları ile Visual Basic kullanmak üzere bir tek iş parçacıklı model varsayılan olarak geliştirilen beri öznitelik Visual Basic'te gerekli değildir.)  
+    1.  Uygulama <xref:System.STAThreadAttribute> C# `Main` yöntemi, Windows Forms uygulamasının adını belirtin tek kullanımlık apartman. (Windows forms uygulamaları Visual Basic ile kullanılacak tek kullanımlık apartman modeli varsayılan olarak geliştirilen beri öznitelik Visual Basic'te, gerekli değildir.)  
   
-    2.  Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanız için işletim sistemi stilleri için.  
+    2.  Çağrı <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> uygulamanıza işletim sistemi stilleri uygulamak için.  
   
     3.  Form örneği oluşturun ve çalıştırın.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### <a name="to-compile-and-run-the-application"></a>Uygulamasını derlemek ve çalıştırmak için  
+#### <a name="to-compile-and-run-the-application"></a>Derlemek ve uygulamayı çalıştırmak için  
   
 1.  .NET Framework komut isteminde, oluşturduğunuz dizine gidin `Form1` sınıfı.  
   
-2.  Formun derleyin.  
+2.  Form derleyin.  
   
     -   C# kullanıyorsanız yazın: `csc form1.cs`  
   
          `-or-`  
   
-    -   Visual Basic kullanıyorsanız, yazın: `vbc form1.vb`  
+    -   Visual Basic kullanıyorsanız yazın: `vbc form1.vb`  
   
-3.  Komut istemine yazın: `Form1.exe`  
+3.  Komut isteminde aşağıdakini yazın: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Denetim ekleme ve bir olay işleme  
- Önceki yordamdaki adımları yalnızca derler ve çalışan temel bir Windows formu oluşturma gösterilmektedir. Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olay işlemek nasıl yapacağınızı gösterir. Windows Forms'a ekleme yapabilir denetimler hakkında daha fazla bilgi için bkz: [Windows Forms denetimleri](../../../docs/framework/winforms/controls/index.md).  
+ Önceki yordamdaki adımları yalnızca derleyen ve çalışan temel bir Windows Form oluşturma gösterilmektedir. Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olayı işlemek nasıl gösterir. Windows Forms ekleyebileceğiniz denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](../../../docs/framework/winforms/controls/index.md).  
   
- Windows Forms uygulamaları oluşturmak nasıl anlamanın yanı sıra, olay tabanlı programlama ve kullanıcı girişi nasıl ele alınacağını anlamanız gerekir. Daha fazla bilgi için bkz: [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), ve [kullanıcı girişini işleme](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ Windows Forms uygulamalarının nasıl oluşturulacağını anlamanın yanı sıra, olay tabanlı programlama ve kullanıcı girişini işlemek nasıl anlamanız gerekir. Daha fazla bilgi için [Windows Forms'ta olay işleyicileri oluşturma](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), ve [kullanıcı girişini işleme](../../../docs/framework/winforms/controls/handling-user-input.md)  
   
-#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Düğme denetimi bildirme ve click olayını işlemek için  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Bir düğme denetimi bildirmek ve bunun tıklama olayı işlemek için  
   
 1.  Adlı bir düğme denetimi bildirin `button1`.  
   
-2.  Oluşturucu, düğme oluşturma ve ayarlama kendi <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Text%2A> özellikleri.  
+2.  Oluşturucu, düğmeyi oluşturmak ve ayarlamak kendi <xref:System.Windows.Forms.Control.Size%2A>, <xref:System.Windows.Forms.Control.Location%2A> ve <xref:System.Windows.Forms.Control.Text%2A> özellikleri.  
   
-3.  Düğme forma ekleyin.  
+3.  Forma düğme ekleyin.  
   
-     Aşağıdaki kod örneğinde, düğme denetimi bildirin gösterilmiştir.  
+     Aşağıdaki kod örneği, düğme denetimini nasıl gösterir.  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4.  İşlemek için bir yöntem oluşturma <xref:System.Windows.Forms.Control.Click> düğme için olay.  
+4.  İşlemek için bir yöntem oluşturma <xref:System.Windows.Forms.Control.Click> düğmesi için olay.  
   
-5.  Click olay işleyicisi görüntülemek bir <xref:System.Windows.Forms.MessageBox> "Hello World" iletisi.  
+5.  Click olay işleyicisi, görüntüleme bir <xref:System.Windows.Forms.MessageBox> "Hello World" iletisini ile.  
   
-     Aşağıdaki kod örneğinde düğmesi nasıl ele alınacağını gösteren denetimin, olay'ı tıklatın.  
+     Aşağıdaki kod örneği, düğmeyi işlemek gösterilmiştir denetimin olay'ı tıklatın.  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
 6.  İlişkilendirme <xref:System.Windows.Forms.Control.Click> oluşturduğunuz yöntemiyle olay.  
   
-     Aşağıdaki kod örneği, olay yöntemi ile ilişkilendirmek gösterilmiştir.  
+     Aşağıdaki kod örneği, olay yöntemi ile ilişkilendirilecek gösterilmiştir.  
   
      [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
-7.  Derleme ve önceki yordamda açıklandığı şekilde uygulamayı çalıştırın.  
+7.  Derleme ve önceki yordamda açıklanan şekilde uygulamayı çalıştırın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğine, önceki yordamlarda gelen tam örnektir.  
@@ -111,7 +111,7 @@ Aşağıdaki yordamlarda oluşturmak ve komut satırından bir Windows Forms uyg
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Kodu derlemek için devam etmeden yordamdaki uygulamasını derlemek ve çalıştırmak açıklar yönergeleri izleyin.  
+-   Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.Form>  

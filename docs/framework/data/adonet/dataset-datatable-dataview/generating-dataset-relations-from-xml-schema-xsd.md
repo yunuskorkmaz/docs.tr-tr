@@ -1,25 +1,25 @@
 ---
-title: DataSet ilişkileri XML Schema (XSD) oluşturma
+title: XML şemasından (XSD) DataSet ilişkileri oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758444"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416358"
 ---
-# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>DataSet ilişkileri XML Schema (XSD) oluşturma
-İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütun arasında bir ilişki oluşturur. Göstermek için üç yolu bir **DataSet** ilişkisi bir XML Şeması Tanım Dili (XSD) şeması içinde:  
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML şemasından (XSD) DataSet ilişkileri oluşturma
+İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütunu arasında bir ilişki oluşturur. Göstermek için üç yol vardır bir **veri kümesi** ilişkisi içinde bir XML Şeması Tanım Dili (XSD) şeması:  
   
--   İç içe geçmiş karmaşık türler belirtin.  
+-   Karmaşık iç içe geçmiş türler belirtin.  
   
 -   Kullanım **msdata:Relationship** ek açıklama.  
   
 -   Belirtin bir **xs:keyref** olmadan **msdata:ConstraintOnly** ek açıklama.  
   
-## <a name="nested-complex-types"></a>İç içe geçmiş karmaşık türler  
- Bir şemadaki iç içe geçmiş karmaşık tür tanımları öğelerin üst-alt ilişkisi belirtin. Aşağıdaki XML Şeması parça gösterir **OrderDetail** bir alt öğesi olan **sipariş** öğesi.  
+## <a name="nested-complex-types"></a>Karmaşık iç içe geçmiş türler  
+ İç içe geçmiş bir karmaşık tür tanımlarını bir şemadaki öğelerin üst-alt ilişkileri gösterir. Aşağıdaki XML Şeması parçası gösteren **OrderDetail** bir alt öğesidir **sipariş** öğesi.  
   
 ```xml  
 <xs:element name="Order">  
@@ -33,10 +33,10 @@ ms.locfileid: "32758444"
 </xs:element>  
 ```  
   
- XML şema eşleme işlemi tablolarda oluşturur **DataSet** , karşılık gelen şema iç içe geçmiş karmaşık türler için. Ayrıca üst öğe olarak kullanılan ek sütunlar oluşturur**-** alt sütunları oluşturulan tablolar için. Bu üst Not**-** alt sütunları birincil anahtarı/yabancı anahtar kısıtlamaları belirtme aynı olmayan ilişkiler belirtin.  
+ XML Şeması eşleme işlemi tablolarında oluşturur **veri kümesi** karşılık gelen şema karmaşık iç içe geçmiş türleri için. Üst öğe olarak kullanılan ek sütunlar da oluşturur**-** oluşturulan tablolar için alt sütunlar. Bu üst Not**-** alt sütunlar, birincil anahtar/yabancı anahtar kısıtlamalarını belirtmekle aynı değil ilişkileri belirtin.  
   
 ## <a name="msdatarelationship-annotation"></a>MSDATA:Relationship ek açıklaması  
- **Msdata:Relationship** ek açıklama açıkça şemadaki değil iç içe öğeler arasındaki üst-alt ilişkileri belirtmenize olanak verir. Aşağıdaki örnek, yapısını gösterir **ilişki** öğesi.  
+ **Msdata:Relationship** ek açıklama, iç içe yerleştirilmiş şema öğeleri arasında üst-alt ilişkileri açıkça belirtmenize olanak sağlar. Aşağıdaki örnek, yapısını gösterir. **ilişki** öğesi.  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- Özniteliklerini **msdata:Relationship** ek açıklama ilgili olarak üst-alt ilişkisinde, de öğeleri tanımlamak **parentkey** ve **childkey** öğeleri ve özniteliklerinin ilişkide bulunan. Eşleme işlemini, tablolar oluşturmak için bu bilgileri kullanır. **DataSet** ve bu tablolar arasındaki birincil anahtarı/yabancı anahtar ilişkisi oluşturun.  
+ Özniteliklerini **msdata:Relationship** ek açıklamayı tanımlamak ilgili olarak üst-alt ilişkisinde, de öğeleri **parentkey** ve **childkey** öğeler ve öznitelikler ilişkide bulunan. Eşleme işlemi içinde tablolar oluşturmak için bu bilgileri kullanır. **veri kümesi** ve bu tablolar arasındaki birincil anahtarı/yabancı anahtar ilişkisi oluşturmak için.  
   
- Örneğin, aşağıdaki şema parça belirtir **sipariş** ve **OrderDetail** öğeleri aynı düzeyde (iç içe değil). Şema belirten bir **msdata:Relationship** ek açıklama bu iki öğenin üst-alt ilişkisi belirtir. Bu durumda, açık bir ilişkisi kullanılarak belirtilmelidir **msdata:Relationship** ek açıklama.  
+ Örneğin, aşağıdaki şema parçası belirtir **sipariş** ve **OrderDetail** öğeleri aynı düzeyde (iç içe olmayan). Şemayı belirtir bir **msdata:Relationship** bu iki öğe arasındaki üst-alt ilişkisi belirten açıklama. Bu durumda, açık bir ilişkisi kullanılarak belirtilmelidir **msdata:Relationship** ek açıklama.  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,24 +78,24 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- Eşleme işlemini kullanan **ilişki** öğesi bir üst-alt ilişkisi oluşturmak için **OrderNumber** sütununda **sipariş** tablo ve **OrderNo** sütununda **OrderDetail** tablosundaki **DataSet**. Eşleme işlemini yalnızca ilişki belirtir; birincil anahtar/yabancı anahtar kısıtlamaları ilişkisel veritabanları gibi otomatik olarak değerlerinde kısıtlamalar bu sütunlarda belirtmiyor.  
+ Eşleme işlemi kullanır **ilişki** arasında üst-alt ilişkisi oluşturmak için öğe **OrderNumber** sütununda **sipariş** tablo ve **OrderNo** sütununda **OrderDetail** tablosundaki **veri kümesi**. Eşleme işlemi yalnızca ilişkiyi belirtir. birincil anahtarı/yabancı anahtar kısıtlamalarını ilişkisel veritabanları gibi otomatik olarak kısıtlamalardan değerleri bu sütunlarda belirtmiyor.  
   
 ### <a name="in-this-section"></a>Bu Bölümde  
  [İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- Kısıtlamalar ve örtük olarak oluşturulmuş ilişkileri açıklar bir **DataSet** zaman iç içe öğelerin karşılaştı XML şeması.  
+ Örtük olarak oluşturulan ilişkileri ve kısıtlamaları açıklar bir **veri kümesi** , iç içe öğelerin karşılaştı içinde XML şeması.  
   
  [İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Açıkça ilişkileri nasıl ayarlanacağını açıklar bir **DataSet** XML Şeması iç içe geçmiş öğe.  
+ Açıkça ilişkileri kümesinde açıklar bir **veri kümesi** XML Şeması iç içe geçmiş öğe.  
   
  [İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- İlişkilerine oluşturmayı açıklar bir **DataSet** değil iç içe XML şema öğeleri arasında.  
+ İlişkiler oluşturmayı açıklar bir **veri kümesi** iç içe yerleştirilmiş bir XML Şeması öğeleri arasında.  
   
 ### <a name="related-sections"></a>İlgili Bölümler  
  [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- İlişkisel yapısı veya şema açıklayan bir **veri kümesi** XML Şeması Tanım Dili (XSD) şemadan oluşturulur.  
+ İlişkisel yapısını veya şema biri açıklar bir **veri kümesi** XML Şeması Tanım Dili (XSD) şemaya oluşturulur.  
   
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Benzersiz ve yabancı anahtar kısıtlamalarını oluşturmak için kullanılan XML şema öğeleri açıklayan bir **DataSet**.  
+ Benzersiz ve yabancı anahtar kısıtlamalarını oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

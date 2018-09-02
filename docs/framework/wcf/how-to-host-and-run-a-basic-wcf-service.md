@@ -8,21 +8,21 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753506"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404677"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Nasıl yapılır: Temel Bir Windows Communication Foundation Hizmeti Barındırma ve Çalıştırma
-Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken altı görevleri üçüncü budur. Tüm altı görevlerinin genel bakış için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
+Üçüncü altı görev bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken budur. Tüm altı görevleri genel bakış için bkz. [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md) konu.  
   
- Bu konu, Windows Communication Foundation (WCF) hizmetini bir konsol uygulamasında barındırır açıklar. Bu yordam, aşağıdaki adımlardan oluşur:  
+ Bu konu, bir Windows Communication Foundation (WCF) hizmeti bir konsol uygulamasında barındırma açıklar. Bu yordam, aşağıdaki adımlardan oluşur:  
   
--   Hizmet barındırmak için bir konsol uygulama projesi oluşturun.  
+-   Hizmeti barındırmak için bir konsol uygulama projesi oluşturun.  
   
--   Hizmeti için hizmet ana bilgisayarını oluşturun.  
+-   Hizmet konak hizmeti oluşturun.  
   
 -   Meta veri değişimi etkinleştirin.  
   
@@ -30,17 +30,17 @@ Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken
   
  Bu görevde yazılan kodların tam listesi yordamdan örnekte sağlanır.  
   
-## <a name="to-create-a-new-console-application-to-host-the-service"></a>Hizmet ana bilgisayar için yeni bir konsol uygulaması oluşturmak için  
+## <a name="to-create-a-new-console-application-to-host-the-service"></a>Hizmeti barındırmak için yeni bir konsol uygulaması oluşturmak için  
   
-1.  Başlarken çözüm seçerek, üzerinde sağ tıklayarak yeni bir konsol uygulama projesi oluşturma **Ekle**, **yeni proje**. İçinde **Yeni Proje Ekle** iletişim seçin sol tarafındaki iletişim **Windows** altında **C#** veya **VB**. İletişim kutusunun Orta kısım seçin **konsol uygulaması**. Projeyi GettingStartedHost olarak adlandırın.  
+1.  Başlarken çözümü seçerken üzerinde sağ tıklayarak yeni bir konsol uygulaması projesi oluşturma **Ekle**, **yeni proje**. İçinde **Yeni Proje Ekle** sol tarafındaki iletişim Seç iletişim **Windows** altında **C#** veya **VB**. İletişim kutusunun orta kısmını seçin **konsol uygulaması**. GettingStartedHost projesini adlandırın.  
   
-2.  Sağ tıklayarak GettingStartedHost projenin hedef çerçevesini .NET Framework 4.5 ayarlamak **GettingStartedHost** Çözüm Gezgini'nde seçerek **özellikleri**. Aşağı açılan kutusunda etiketli **hedef Framework** seçin **.NET Framework 4.5**. Hedef Framework'ü GettingStartedHost Proje Özellikleri iletişim kutusunda, biraz farklı VB projedir ayarı, tıklatın **derleme** sekmesinde ekranın sol tarafında ve ardından **Gelişmiş derleme Seçenekler** iletişim kutusunun sol alt köşesindeki düğmesi. Ardından **.NET Framework 4.5** açılır kutusunda etiketli **hedef Framework**.  
+2.  GettingStartedHost projenin hedef çerçevesi sağ tıklanarak .NET Framework 4.5 olarak ayarlayın. **GettingStartedHost** Çözüm Gezgini'nde seçerek **özellikleri**. Açılan kutuda yer etiketli **hedef Framework'ü** seçin **.NET Framework 4.5**. Hedef Framework'ü ayarı GettingStartedHost Proje Özellikleri iletişim kutusunda bir VB projesi biraz farklıdır, tıklayın **derleme** sekmesinde ekranın sol tarafındaki ve ardından **Gelişmiş derleme Seçenekleri** iletişim kutusunun sol alt köşesindeki düğme. Ardından **.NET Framework 4.5** kutuda etiketli **hedef Framework'ü**.  
   
-     Hedef Framework'ü neden olacak ayarı [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] çözümü yeniden yüklemek için basın **Tamam** istendiğinde.  
+     Hedef Framework'ü neden ayarı [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] çözümü yeniden yüklemek için basın **Tamam** istendiğinde.  
   
-3.  Sağ tıklayarak GettingStartedHost projeye GettingStartedLib projesine bir başvuru ekleyin **başvuruları** klasörü seçin ve Çözüm Gezgini GettingStartedHost projesinde altında **Başvuru Ekle** . İçinde **Başvuru Ekle** iletişim kutusunda **çözüm** tıklayın ve iletişim merkezi bölümünde select GettingStartedLib ve iletişim sol taraftaki **Ekle**. Bu GettingStartedLib GettingStartedHost projesi için kullanılabilir tanımlanan türler sağlar.  
+3.  Sağ tıklanarak GettingStartedHost projeye GettingStartedLib projeye bir başvuru eklemek **başvuruları** klasörü altında Çözüm Gezgini seçip GettingStartedHost proje **Başvuru Ekle** . İçinde **Başvuru Ekle** iletişim kutusunda **çözüm** iletişim ve select GettingStartedLib tıklayın ve iletişim merkezi bölümünde sol tarafta **Ekle**. Bu, GettingStartedLib GettingStartedHost projesi için tanımlanan türleri sağlar.  
   
-4.  System.ServiceModel başvuru GettingStartedHost projeye sağ tıklayarak ekleyin **başvuru** klasörü altında Çözüm Gezgini'nde ve select GettingStartedHost proje **Ekle** Başvuru. İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki. Arama derlemeleri metin kutusuna yazın `System.ServiceModel`. İletişim kutusunun Orta kısım seçin **System.ServiceModel**, tıklatın **Ekle** düğmesine tıklayın ve **Kapat** düğmesi. Ana menü aşağıdaki Tümünü Kaydet düğmesine tıklayarak çözümü kaydedin.  
+4.  System.ServiceModel başvuru GettingStartedHost projeye sağ tıklayarak ekleyin **başvuru** klasörü altında Çözüm Gezgini seçip GettingStartedHost proje **Ekle** Başvuru. İçinde **Başvuru Ekle** iletişim kutusunda **Framework** iletişim kutusunun sol taraftaki. Derlemeleri arama metin kutusuna yazın `System.ServiceModel`. İletişim kutusunun orta kısmını seçin **System.ServiceModel**, tıklayın **Ekle** düğmesini **Kapat** düğmesi. Ana menü altında Tümünü Kaydet düğmesine tıklayarak çözüm kaydedin.  
   
 ### <a name="to-host-the-service"></a>Ana bilgisayar hizmeti  
   
@@ -147,29 +147,35 @@ Bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken
     End Module  
     ```  
   
-    1.  1. adım - hizmetin taban adresi tutmak için URI sınıfının bir örneğini oluşturur. Hizmetleri, bir taban adresi içeren bir URL ve isteğe bağlı bir URI tarafından tanımlanır. Temel adres şekilde biçimlendirilmiş: [aktarım] :// [makine adı veya etki alanı] [: isteğe bağlı bağlantı noktası #] / [isteğe bağlı URI segmenti] localhost, bağlantı noktası 8000 ve URI segmentlere "GettingStarted", hesap makinesi hizmetinin temel adres HTTP aktarımı kullanır.  
+    1.  1. adım - hizmet temel adresini tutacak URI sınıfının bir örneğini oluşturur. Hizmetleri, bir taban adresi içeren bir URL ve isteğe bağlı bir URI tarafından tanımlanır. Temel adres gibi biçimlendirilir: [aktarım] :// [makine adı veya etki alanı] [: isteğe bağlı bağlantı noktası #] / [isteğe bağlı URI segmenti] HTTP aktarımı hesaplayıcı hizmeti temel adresi kullanır, segment "GettingStarted" localhost, 8000 numaralı bağlantı noktasını ve URI  
   
-    2.  Adım 2 – bir örnek oluşturur / <xref:System.ServiceModel.ServiceHost> hizmet barındırmak için sınıf. Oluşturucusu iki parametre, hizmet sözleşmesi uygulayan sınıf türü ve hizmetin taban adresi alır.  
+    2.  Adım 2 – bir örneğini oluşturur / <xref:System.ServiceModel.ServiceHost> Hizmeti'ni barındıracak şekilde sınıfı. Oluşturucu, iki parametre, hizmet sözleşmesi uygulayan sınıf türünü ve hizmetin taban adresi alır.  
   
-    3.  Adım 3 – oluşturur bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesini oluşur. <xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bir bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlı ve hizmet türü uygulayın. Bu örnekte kullanılan bağlama <xref:System.ServiceModel.WSHttpBinding> WS - için uygun Uç noktalara bağlanmak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../docs/framework/wcf/bindings-overview.md). Adres uç noktayı tanımlamak için taban adresi eklenir. Uç nokta için tam adresi "CalculatorService" Bu kodda belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"` .NET Framework 4.0 kullanırken, isteğe bağlı ya da daha yeni bir hizmet uç noktası ekleniyor. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Adım 3 – oluşturur bir <xref:System.ServiceModel.Description.ServiceEndpoint> örneği. Hizmet uç noktası bir adresi, bağlama ve hizmet sözleşmesi oluşur. <xref:System.ServiceModel.Description.ServiceEndpoint> Oluşturucusu bu nedenle hizmet sözleşme arabirimi türü, bağlama ve bir adresi alır. Hizmet sözleşme `ICalculator`, tanımlanan ve hizmet türüne uygulayın. Bu örnekte kullanılan bağlamanın <xref:System.ServiceModel.WSHttpBinding> WS - için uygun uç noktalarına bağlamak için kullanılan yerleşik bir bağlama olduğu * belirtimleri. WCF bağlamaları hakkında daha fazla bilgi için bkz: [WCF bağlamaları genel bakış](../../../docs/framework/wcf/bindings-overview.md). Adres, uç noktayı tanımlamak için taban adresi olarak eklenir. Tam uç nokta adresi "CalculatorService" Bu kodu belirtilen adresi olduğundan `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
-        >  Hizmet uç noktası ekleme, .NET Framework 4 kullanırken, isteğe bağlı veya üzeri. Uç nokta yok, kod veya yapılandırma, eklenirse, bu sürümlerde WCF her taban adresi ve hizmet tarafından uygulanan anlaşmanın bileşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç noktası adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Varsayılan uç noktalar, bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  .NET Framework 4 kullanırken, isteğe bağlı veya üzeri bir hizmet uç noktası ekleniyor. Kod veya yapılandırma, uç nokta eklenirse bu sürümlerde WCF taban adresini ve sözleşme hizmeti tarafından uygulanan her bir birleşimi için bir varsayılan uç nokta ekler. Uç noktaları varsayılan hakkında daha fazla bilgi için bkz: [bir uç nokta adresi belirtme](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-    4.  4. adım – etkinleştir meta veri değişimi. İstemciler, hizmet işlemlerini çağırma için kullanılacak proxy oluşturmak için meta veri değişimi kullanır. Etkinleştirmek için meta verileri exchange oluşturması bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örneği, ayarlayın 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğine `true`ve davranış eklemek <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` koleksiyonu <xref:System.ServiceModel.ServiceHost> örneği.  
+    4.  4. adım – etkin meta veri değişimi. İstemciler, meta veri değişimi, hizmet işlemlerini aramak için kullanılacak proxy üretmek için kullanır. Etkinleştirmek için meta veri değişimi oluşturma bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın, örnek 's <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`ve davranışların eklenmesi <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` koleksiyonunu <xref:System.ServiceModel.ServiceHost> örneği.  
   
-    5.  5. adım – açık <xref:System.ServiceModel.ServiceHost> gelen iletiler için dinleme için. İsabet kullanıcının kodu bekler bildirimi girin. Bunu yaparsanız, uygulama hemen kapatılacak ve hizmet kapanacak. Try/catch bloğu kullanılan de dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> bırakıldı örneği, diğer tüm kod bir try/catch bloğu içinde yerleştirilir. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+    5.  Adım 5-açık <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için. Uyarı kodunu kullanıcının isabet bekler girin. Bunu yaparsanız, uygulamayı hemen kapatmak ve hizmet kapanır. Bir try/catch bloğu kullanılan dikkat edin. Sonra <xref:System.ServiceModel.ServiceHost> olmuştur örneği, diğer tüm kod bir try/catch bloğu içinde yer alır. Güvenli bir şekilde tarafından oluşturulan özel durumları yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost>, bkz: [Using deyimi sorunlarını önleme](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
+> [!IMPORTANT]
+> App.config dosyasında GettingStartedLib kodunda yaptığınız değişiklikleri yansıtacak şekilde düzenleyin: 
+> 1. 14. satır için değiştirin `<service name="GettingStartedLib.CalculatorService">`
+> 2. 17 satırına değiştirme `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Satır 22 için değiştirin `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Hizmetin çalıştığını doğrulamak için  
   
-1.  İçinde gelen GettingStartedHost konsol uygulamasını çalıştırın [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Çalışırken [!INCLUDE[wv](../../../includes/wv-md.md)] ve sonraki işletim sistemleri, hizmet yönetici ayrıcalıklarıyla çalıştırılmalıdır. Visual Studio'nun yönetici ayrıcalıklarıyla çalıştığından, GettingStartedHost da yönetici ayrıcalıklarıyla çalıştırın. Ayrıca, yönetici ayrıcalıklarıyla çalıştıran yeni bir komut istemi başlatın ve içerdiği service.exe çalıştırın.  
+1.  GettingStartedHost konsol üzerinden içinde çalışan [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Çalışırken [!INCLUDE[wv](../../../includes/wv-md.md)] ve sonraki işletim sistemleri, hizmet yönetici ayrıcalıklarıyla çalıştırılmalıdır. Visual Studio'yu yönetici ayrıcalıklarıyla çalıştığından, GettingStartedHost da yönetici ayrıcalıklarıyla çalıştırın. Ayrıca, yönetici ayrıcalıklarıyla çalışan yeni bir komut istemi başlatın ve içerdiği service.exe çalıştırın.  
   
-2.  Açık Internet Explorer ve hizmetin hata ayıklama sayfası adresindeki `http://localhost:8000/GettingStarted/CalculatorService`.  
+2.  Açık Internet Explorer ve göz atma hizmetin hata ayıklama sayfasında `http://localhost:8000/GettingStarted/CalculatorService`.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek hizmet sözleşmesini ve önceki kısımlarında öğreticide içerir ve hizmeti bir konsol uygulamasında barındırır.  
+ Aşağıdaki örnek, hizmet sözleşmesini ve önceki adımdan öğreticide içerir ve hizmeti bir konsol uygulamasında barındırır.  
   
- Bu komut satırı derleyicisi ile derlemek için IService1.cs ve service1.cs dosyasını bir sınıf kitaplığı başvuran içine derleme `System.ServiceModel.dll`. Ve Program.cs bir konsol uygulaması derleyin.  
+ Bu komut satırı derleyicisi ile derlemek için Iservice1.cs ve Service1.cs bir sınıf kitaplığı başvuran içine derleme `System.ServiceModel.dll`. Ve Program.cs için bir konsol uygulaması derleme.  
   
 ```csharp
 // IService1.cs  
@@ -416,9 +422,9 @@ End Module
 ```  
   
 > [!NOTE]
->  Bunun gibi hizmetleri HTTP adreslerini dinleme için makinede Kaydet izni gerektirir. Yönetici hesapları, bu izne sahip, ancak yönetici olmayan bir hesap HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz: [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
+>  Bu gibi hizmetlere HTTP adresleri dinlemek makinede kaydetme izni gerektirir. Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Visual Studio altında çalışırken, service.exe yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
   
- Şimdi hizmeti çalışıyor. İle devam [nasıl yapılır: bir istemci oluşturmak](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ Artık hizmeti çalışıyor. Devam [nasıl yapılır: istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Sorun giderme bilgileri için bkz: [Başlarken Öğreticisi sorun giderme](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../docs/framework/wcf/samples/getting-started-sample.md)  

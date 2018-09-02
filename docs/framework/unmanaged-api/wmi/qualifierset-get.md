@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Get işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_Get işlevi bir adlandırılmış niteleyici alır.
+description: Adlandırılmış bir niteleyici QualifierSet_Get işlevi alır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Get
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458653"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415400"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get işlevi
-Belirtilen adlandırılmış niteleyici alır.  
+Belirtilen adlandırılmış niteleyicisi alır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,36 +44,36 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`   
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) örneği.
+[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
 
 `wszName`   
-[in] Değeri istenen Niteleyici adı.
+[in] Değeri istenen niteleyicisi adı.
 
 `lFlags`   
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `pVal`   
-[out] Başarılı olduğunda, doğru türü ve değerine Niteleyici için. İşlev başarısız olursa, `VARIANT` gösterdiği `pVal` değiştirilmez. Bu parametre ise `null`, parametre yoksayılır.
+[out] Başarılı olduğunda, Niteleyici değeri ve doğru türde. İşlev başarısız olursa `VARIANT` işaret ettiği `pVal` değiştirilmez. Bu parametre `null`, parametre yoksayılır.
 
 `plFlavor`   
-[out] İstenen niteleyici niteleyici türü BITS alan uzun bir işaretçi. Özellik bilgileri değil istenirse, bu parametre olabilir `null`. 
+[out] İstenen niteleyicisi niteleyicisi flavor parçaları alan uzun bir işaretçi. Flavor bilgi istenildiği gibi değilse, bu parametre olabilir `null`. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen niteleyicisi yok. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu.  |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

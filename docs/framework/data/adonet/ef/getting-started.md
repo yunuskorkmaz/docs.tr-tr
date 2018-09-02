@@ -1,18 +1,18 @@
 ---
-title: Başlarken (Entity Framework)
+title: Başlarken (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
-ms.openlocfilehash: e7b6906e2e08ef812e67f745d65415ccf16c3e50
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 310dcc4f84096bd47760c3b8cbead346aad5eedf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417226"
 ---
-# <a name="getting-started-entity-framework"></a>Başlarken (Entity Framework)
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri merkezli uygulamaları ve Hizmetleri destekler ve kavramsal düzeyine mantıksal ilişkisel düzeyinden soyutlama düzeyinde yükseltir veri karşı programlama için bir platform sağlar. Özet, daha yüksek bir düzeyde verilerle çalışmak geliştiricilere etkinleştirerek [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] herhangi belirli veri depolama altyapısı veya ilişkisel şema bağımsız olan kod destekler. Daha fazla bilgi için bkz: [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md).  
+# <a name="getting-started-entity-framework"></a>Başlarken (varlık çerçevesi)
+[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri odaklı uygulamaları ve Hizmetleri destekler ve kavramsal düzeyine mantıksal ilişkisel düzeyinden soyutlama düzeyinde yükseltir verilere karşı programlama için bir platform sunar. Geliştiriciler, büyük bir soyutlama düzeyinde verilerle çalışmak bu özelliği etkinleştirerek [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] herhangi belirli veri depolama motorunda veya ilişkisel şema bağımsız kod destekler. Daha fazla bilgi için [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md).  
   
- Entity Framework'ün en son sürümünü kullanarak hızlı bir şekilde başlatmak için bkz: [Başlarken](http://go.microsoft.com/fwlink/?LinkId=235280)  
+ Entity Framework'ün en son sürümünü kullanarak hızlı bir şekilde başlatmak için bkz: [çalışmaya başlama](https://go.microsoft.com/fwlink/?LinkId=235280)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Varlık Çerçevesi](http://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)
+ [Varlık Çerçevesi](https://go.microsoft.com/fwlink/?LinkID=234900&clcid=0x409)

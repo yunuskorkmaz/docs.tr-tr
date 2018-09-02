@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254359"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418971"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktarda verileri dosyalar veya veritabanları gibi uygulama performansını iyileştirmek için ipuçları sağlar. C# ve Visual Basic derleyicileri, yönetilen kodda yeniden yazma bu ipuçlarını gelir ve bu makale, çeşitli gerçek örnekler C# derleyicisi içerir.  
@@ -38,7 +38,7 @@ Bu makalede, büyük bir .NET Framework uygulamaları veya işlem büyük miktar
  Uygulamanızda performans hedeflerini önemli müşteri deneyimleri veya senaryoları ayarlayın ve performansını ölçmek için testleri yazmak gerekir.  Başarısız olan testler bilimsel yöntemi uygulayarak araştırın: profillerini kullanmak için size rehberlik, ne sorun olabilir, hipotezler varsayımınızın deneme ile test ve kod değişikliği.  Performans gerilemeleri neden değişiklikleri yalıtabilirsiniz için normal test ile zaman içinde temel performans ölçümleri kurun.  Sıkı bir şekilde performans iş yaklaşan tarafından zaman ihtiyacınız olmayan kod güncelleştirmeleriyle önlenir.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Olgu 3: İyi Araçlar fark olun.  
- Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar.  Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone analiz aracı](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Hızlı bir şekilde büyük performans sorunları (CPU, bellek veya disk) ve bu sorunları neden kodu bulun Yardım ayrıntılarına girmek iyi araçları sağlar.  Microsoft gelen çeşitli performans araçları gibi [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone analiz aracı](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), ve [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView disk g/ç gibi ayrıntılı sorunlara odaklanmak, GC olayları ve bellek yardımcı olan ücretsiz ve şaşırtıcı derecede güçlü bir araçtır.  Performansla ilgili yakalayabilirsiniz [olay izleme için Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) olayları ve görünümü, uygulama başına bir kolayca, her işlem, yığın başına ve başına iş parçacığı bilgileri.  PerfView uygulamanızı ayırır, bellek ve hangi işlevleri veya çağrı yığınlarını ne kadar bellek ayırmaları için katkıda bulunan ne kadar ve ne tür gösterir. Zengin Yardım konuları, tanıtımlar ve videolar aracıyla dahil Ayrıntılar için bkz. (gibi [PerfView öğreticiler](http://channel9.msdn.com/Series/PerfView-Tutorial) Channel 9).  
   
@@ -281,7 +281,7 @@ Dil ile tümleşik sorgu (LINQ), lambda ifadeleri ile birlikte bir üretkenlik �
   
  **5. örnek: Lambda ifadeleri, liste\<T > ve IEnumerable\<T >**  
   
- Bu örnekte [LINQ ve işlev stili kod](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) adı dizesi verilmiş bir sembol derleyicinin modelinde bulmak için:  
+ Bu örnekte [LINQ ve işlev stili kod](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) adı dizesi verilmiş bir sembol derleyicinin modelinde bulmak için:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- İlk satırda [lambda ifadesi](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [üzerinden kapatır](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) yerel değişken `name`.  Bunun için bir nesne ayırma ek olarak anlamı [temsilci](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` tutar, kodu değerini yakalayan bir ortam için bir statik sınıf ayırır `name`.  Derleyici, aşağıdaki gibi bir kod oluşturur:  
+ İlk satırda [lambda ifadesi](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [üzerinden kapatır](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) yerel değişken `name`.  Bunun için bir nesne ayırma ek olarak anlamı [temsilci](~/docs/csharp/language-reference/keywords/delegate.md) , `predicate` tutar, kodu değerini yakalayan bir ortam için bir statik sınıf ayırır `name`.  Derleyici, aşağıdaki gibi bir kod oluşturur:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  Bu kod, LINQ genişletme yöntemleri, lambdalar veya numaralandırıcılar kullanmaz ve edilmedi doğurur.  Derleyici, görebilirsiniz çünkü edilmedi olan `symbols` koleksiyonu bir <xref:System.Collections.Generic.List%601> ve sonuçta elde edilen Numaralandırıcı (yapı) yerel bir değişkene kutulama önlemek için doğru tür ile bağlayabilirsiniz.  Bu işlevin özgün sürümle etkileyici gücüyle C# ve .NET Framework'ün üretkenlik harika bir örneği oluştu.  Bu yeni ve daha verimli sürümü bu kalitelerini korumak için karmaşık kodlar eklemeden korur.  
   
 ### <a name="async-method-caching"></a>Zaman uyumsuz yöntem önbelleğe alma  
- Sonraki örnek, ortak bir sorunu gösterir, önbelleğe alınan sonuçları kullanmaya çalıştığınızda bir [zaman uyumsuz](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) yöntemi.  
+ Sonraki örnek, ortak bir sorunu gösterir, önbelleğe alınan sonuçları kullanmaya çalıştığınızda bir [zaman uyumsuz](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) yöntemi.  
   
  **Örnek 6: zaman uyumsuz yöntemlerde önbelleğe alma**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Sunu bu konunun videosu](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Performans Profili Oluşturma Başlangıç Kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Performans](../../../docs/framework/performance/index.md)  
- [.NET Performans İpuçları](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone Performans analiz aracı](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Visual Studio Profiler uygulama performans sorunlarını bulun](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [.NET Performans İpuçları](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone Performans analiz aracı](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Visual Studio Profiler uygulama performans sorunlarını bulun](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 PerfView öğreticiler](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Üst düzey performans ipuçları](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Üst düzey performans ipuçları](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [github'da dotnet/roslyn depo](https://github.com/dotnet/roslyn)

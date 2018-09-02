@@ -5,68 +5,68 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652018"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402621"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic Dil Özellikleri
-Aşağıdaki konular getirir ve Visual Basic, nesne yönelimli bir programlama dili temel bileşenlerinin tartışın. Formlar ve denetimler kullanarak uygulamanız için kullanıcı arabirimi oluşturduktan sonra uygulamanın davranışını tanımlayan kod yazmanız gerekir. Tüm modern programlama dili gibi Visual Basic bir dizi ortak programlama yapıları ve dil öğeleri destekler.  
+Aşağıdaki konuları tanıtır ve Visual Basic, nesne yönelimli programlama dilini temel bileşenlerini tartışın. Formlar ve denetimler kullanarak uygulamanız için kullanıcı arabirimi oluşturduktan sonra uygulama davranışını tanımlayan kodu yazmanız gerekir. Tüm modern programlama dili olarak Visual Basic bir dizi ortak programlama yapıları ve Dil öğelerini destekler.  
   
- Diğer dillerde programlanmış, bu bölümde yer alan malzeme çoğunu tanıdık görünebilir. Visual Basic olay denetimli yapısını yapıları çoğunu diğer dillerde benzer olmakla birlikte, bazı farklar tanıtır.  
+ Diğer dillerde programlanmış, bu bölümde yer alan malzeme çoğunu tanıdık görünebilir. Visual Basic olay temelli doğasını yapıları çoğunu diğer dillerdeki benzer olsa da, bazı farklar ortaya çıkarır.  
   
- İçin programlama yeniyseniz, bu bölümdeki malzeme kod yazma için temel yapı taşlarının giriş olarak görev yapar. Temel kavramları anladığınızda, Visual Basic kullanarak güçlü uygulamalar oluşturabilirsiniz.  
+ Programlama konusunda yeniyseniz, bu bölümdeki malzeme temel yapı taşlarını kodu yazmak için bir giriş işlevi görür. Temel kavramları anladığınızda, Visual Basic kullanarak güçlü uygulamalar oluşturabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- Bildirme ve birden fazla ilgili değerleri tutun dizileri kullanarak kodunuzu daha compact ve güçlü hale açıklanır.  
+ Kodunuzu daha kompakt ve güçlü bildirme ve birden çok ilişkili değerler tutan dizileri kullanma hale açıklanır.  
   
  [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- Bir koleksiyon oluşturun ve başlangıç değerleri kümesi ile doldurmak etkinleştirmeniz koleksiyon başlatıcıları açıklar.  
+ Bir koleksiyon oluşturun ve başlangıç değer kümesi ile doldurmak etkinleştiren koleksiyon başlatıcıları açıklar.  
   
  [Sabitler ve Sabit Listeleri](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- İlgili sabit değerleri kümesi de dahil olmak üzere yinelenen kullanılmak değişmeyen değerlerini depolama açıklanır.  
+ İlgili sabit değerleri kümesi dahil olmak üzere, yinelenen kullanmak için değişmeyen değerleri depolamak açıklanır.  
   
  [Denetim Akışı](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- Program yürütme akışını gösterilmektedir.  
+ Akışını programınızın yürütme işlemi gösterilmektedir.  
   
  [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Veri ne tür bir programlama öğesi tutabilir ve bu verilerin depolanma şeklini açıklar.  
+ Hangi tür verileri bir programlama öğesi içerebilir ve bu verileri nasıl depolandığını açıklar.  
   
  [Bildirilen Öğeler](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- Programlama öğeleri bildirebilirsiniz, adları ve özellikleri kapsar ve derleyici başvuruları onlara nasıl çözümler.  
+ Programlama öğeleri bildirebilirsiniz, adları ve özelliklerini kapsar ve derleyicinin bunları başvuruları nasıl çözümler.  
   
  [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- Temsilciler ve Visual Basic'te nasıl kullanıldıkları tanıtılmaktadır.  
+ Temsilciler ve Visual Basic'te nasıl kullanıldığı bir giriş sağlar.  
   
  [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- Bir nesne bir nesne değişkeni ve ilişkili erken ve geç bağlama nesneleri arasındaki farklar atandığında, derleyici tarafından gerçekleştirilen bağlama açıklar.  
+ Bir nesne bir nesne değişkeni ve ilişkili erken ve geç bağlama nesneleri arasındaki farklar atandığında, derleyici tarafından gerçekleştirilen bir bağlama tanımlar.  
   
  [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)  
- Sözdizimi hataları, çalışma zamanı hataları ve mantık hataları genel bakış sağlar.  
+ Söz dizimi hatalarını, çalışma zamanı hataları ve mantık hatalarını genel bir bakış sağlar.  
   
  [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)  
- Olayları bildirme ve nasıl kullanılacağını gösterir.  
+ Bildirme ve olayları kullanma işlemi gösterilmektedir.  
   
  [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- Arabirimleri nedir ve nasıl uygulamalarınızda kullanabilmek için açıklar.  
+ Arabirimleri nedir ve nasıl bunları uygulamalarınızda kullanabileceğiniz anlatılmaktadır.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Tanıtmak konulara bağlantılar sağlanır [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] özellikleri ve programlama.  
+ Tanıtan konulara bağlantılar sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] özellikleri ve programlama.  
   
  [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- Nesneler ve sınıflar, nasıl kullanıldıkları, ilişkilerini birbirlerine ve özellikleri, yöntemleri ve ortaya olayları genel bir bakış sağlar.  
+ Nesneler ve sınıflar, nasıl kullanıldığı, ilişkilerini, birbiriyle ve özellikleri, yöntemleri ve olayları ortaya genel bir bakış sağlar.  
   
  [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- Değeri tutan öğeleri, bunları verimli bir şekilde nasıl kullanacağınızı ve yeni değerleri elde etmek üzere bunları birleştirmek nasıl işlemek kod öğeleri açıklanır.  
+ Değeri tutan öğeleri, verimli bir şekilde kullanma ve bunları yeni değerler elde etmek üzere bir araya getirilebileceğini öğrenin işleyen kod öğelerini açıklar.  
   
  [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- Açıklar `Sub`, `Function`, `Property`, ve `Operator` özyinelemeli ve aşırı yüklenmiş yordamları gibi gelişmiş konular yanı sıra yordamlar.  
+ Açıklar `Sub`, `Function`, `Property`, ve `Operator` özyinelemeli ve aşırı yüklenmiş yordamlar gibi gelişmiş konular yanı sıra, yordamlar.  
   
  [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)  
- Bildirim ve yürütülebilir ifadeler açıklanmaktadır.  
+ Bildirim ve yürütülebilir deyimleri açıklar.  
   
  [Dizeler](../../../visual-basic/programming-guide/language-features/strings/index.md)  
  Visual Basic'de dizeleri kullanma hakkında temel kavramları açıklayan konulara bağlantılar sağlar.  
@@ -75,11 +75,11 @@ Aşağıdaki konular getirir ve Visual Basic, nesne yönelimli bir programlama d
  Değişkenleri tanıtır ve Visual Basic'te kullanmayı açıklar.  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Visual Basic'te XML kullanmayı açıklayan konulara bağlantılar sağlar.  
+ Visual Basic'de XML kullanmayı açıklayan konulara bağlantılar sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Koleksiyonlar](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- .NET Framework tarafından sağlanan koleksiyonları türlerini bazıları açıklanmaktadır. Basit koleksiyonlar ve anahtar/değer çiftlerinin koleksiyonu nasıl kullanılacağını gösterir.  
+ [Koleksiyonlar](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ .NET Framework tarafından sağlanan koleksiyon türlerinin bazılarını açıklar. Basit koleksiyonların ve anahtar/değer çiftleri nasıl yapılacağı açıklanır.  
   
- [Visual Basic Dil Başvurusu](../../../visual-basic/language-reference/index.md)  
- Visual Basic programlama çeşitli yönlerini başvuru bilgileri sağlar.
+ [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  
+ Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgileri sağlar.

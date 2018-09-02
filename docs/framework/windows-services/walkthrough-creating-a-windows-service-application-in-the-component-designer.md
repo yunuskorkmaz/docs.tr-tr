@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925808"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417867"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmet Uygulaması Oluşturma
 Bu makalede, Visual Studio'da bir olay günlüğüne iletiler yazan basit bir Windows hizmeti uygulaması oluşturma işlemini gösterir. Oluşturmak ve hizmetinizi kullanmak için gerçekleştirdiğiniz temel adımlar şunlardır:  
@@ -477,7 +477,7 @@ Bu kodu değiştirir **ImagePath** varsayılan parametre değerlerini ekleyerek 
      Hizmet başarıyla kaldırırsa, installutil.exe hizmetinizin başarıyla kaldırıldığını size bildirir. Daha fazla bilgi için [nasıl yapılır: yükleme ve kaldırma Hizmetleri](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Diğerleri, Windows hizmetini yüklemek için kullanabileceğiniz bir tek başına Kurulum programı oluşturabilirsiniz, ancak ek adımlar gerektirir. ClickOnce Windows hizmetlerini desteklemediğinden, Yayımlama Sihirbazı'nı kullanamazsınız. Microsoft'u sağlamadığı InstallShield'ın tam sürümünü kullanabilirsiniz. InstallShield hakkında daha fazla bilgi için bkz: [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Ayrıca [Windows Installer XML araç takımı](http://go.microsoft.com/fwlink/?LinkId=249067) bir Windows hizmeti için bir yükleyici oluşturmak üzere.  
+ Diğerleri, Windows hizmetini yüklemek için kullanabileceğiniz bir tek başına Kurulum programı oluşturabilirsiniz, ancak ek adımlar gerektirir. ClickOnce Windows hizmetlerini desteklemediğinden, Yayımlama Sihirbazı'nı kullanamazsınız. Microsoft'u sağlamadığı InstallShield'ın tam sürümünü kullanabilirsiniz. InstallShield hakkında daha fazla bilgi için bkz: [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Ayrıca [Windows Installer XML araç takımı](https://go.microsoft.com/fwlink/?LinkId=249067) bir Windows hizmeti için bir yükleyici oluşturmak üzere.  
   
  Kullanımını keşfedebilirsiniz bir <xref:System.ServiceProcess.ServiceController> bileşenin yüklediğiniz hizmete komutlar göndermenizi sağlar.  
   
@@ -487,4 +487,4 @@ Bu kodu değiştirir **ImagePath** varsayılan parametre değerlerini ekleyerek 
  [Windows Hizmeti Uygulamaları](../../../docs/framework/windows-services/index.md)  
  [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Hizmetleri (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [Hizmetleri (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

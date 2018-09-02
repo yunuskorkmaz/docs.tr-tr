@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934957"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416966"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 <a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) Profil Oluşturucu, ileti almak ve CLR Profil oluşturma API'ı kullanarak göndermek işlevlerini içeren bir dinamik bağlantı kitaplığı (DLL) ' dir. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
@@ -209,7 +209,7 @@ Profil oluşturma mimarisi
 ### <a name="stack-snapshot"></a>Yığın anlık görüntüsü  
  Yığın anlık görüntüsü bir iş parçacığı yığınının bir izleme anlık saattir. Profil oluşturma API yığın üzerinde yönetilen işlevlerin izlenmesini destekler ancak Yönetilmeyen işlevlerin izlenmesini profil oluşturucunun kendi yığın değişkenine bırakır.  
   
- Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi bu belge kümesindeki ve [.NET Framework 2.0 Profiler Programlayacağınız yığını: Temeller ve ötesi](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Profil oluşturucuyu yönetilen yığınları ilerletmek hakkında daha fazla bilgi için bkz. [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yöntemi bu belge kümesindeki ve [.NET Framework 2.0 Profiler Programlayacağınız yığını: Temeller ve ötesi](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Gölge yığını  
  Anlık görüntü yönteminin çok sık kullanılması, hızlı bir performans sorunu oluşturabilir. Yığın izlemelerini sık sık almak istiyorsanız, profil oluşturucu, bunun yerine bir gölge yığını kullanarak Sysprep.inf'in [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) özel durum geri aramalarını. Gölge yığını her zaman günceldir ve bir yığın anlık görüntüsü gerektiğinde hızla depoya kopyalanabilir.  

@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 197db0b81565b93c753ad3ecfb716e4d07ea1d0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493783"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416033"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
-WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılır <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma sözleşme belirler. Bu konu, bir WCF hizmeti ve kullanan istemci uygulamak açıklar <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  
+WCF hizmetleri ve istemcilerin <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlama.  WebSockets olacaktır kullanılabilir <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesini tanımlayan bir geri çağırma anlaşması belirler. Bu konu açıklar nasıl uygulanacağı bir WCF hizmeti ve kullanan istemci <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için.  
   
-### <a name="define-the-service"></a>Hizmeti tanımlayın  
+### <a name="define-the-service"></a>Hizmet tanımlama  
   
-1.  Bir geri çağırma sözleşmesini tanımlama  
+1.  Bir geri çağırma anlaşması tanımlama  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
         }  
     ```  
   
-     Bu sözleşme, istemciye iletileri göndermeye izin verecek şekilde istemci uygulaması tarafından uygulanacaktır.  
+     Bu sözleşme istemciye geri göndermek izin verecek şekilde istemci uygulaması tarafından uygulanacaktır.  
   
-2.  Hizmet sözleşmesini tanımlama ve belirtme `IStockQuoteCallback` geri çağırma sözleşme arabirimi.  
+2.  Hizmet sözleşmesini tanımlama ve belirtme `IStockQuoteCallback` arabirimi olarak geri çağırma anlaşması.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -59,9 +59,9 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
         }  
     ```  
   
-     Hizmet işlemini `StartSendingQuotes` bir zaman uyumsuz çağrı uygulanır. Geri çağırma kanalı kullanılarak alıyoruz `OperationContext` ve kanal açıksa, zaman uyumsuz geri çağırma kanalda çağrı vermiyoruz.  
+     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı uygulanır. Geri çağırma kanal kullanılarak alıyoruz `OperationContext` ve kanal açıksa, bir zaman uyumsuz geri çağırma kanalda çağrı vermiyoruz.  
   
-4.  Hizmetini yapılandırma  
+4.  Hizmet yapılandırma  
   
     ```xml  
     <configuration>  
@@ -90,11 +90,11 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
     </configuration>  
     ```  
   
-     WCF'ın varsayılan uç noktalarda hizmetin yapılandırma dosyasını kullanır. `<protocolMapping>` Belirtmek için kullanılan bölüm `NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılmalıdır.  
+     Hizmetin yapılandırma dosyası WCF'ın varsayılan bitiş noktası kullanır. `<protocolMapping>` Belirtmek için kullanılan bölüm `NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılmalıdır.  
   
 ### <a name="define-the-client"></a>İstemci tanımlayın  
   
-1.  Geri arama sözleşmesi uygulayın.  
+1.  Geri çağırma anlaşması uygulayın.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,7 +106,7 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
             }  
     ```  
   
-     Geri çağırma sözleşme işlem zaman uyumsuz bir yöntem uygulanır.  
+     Geri çağırma anlaşması işlemi zaman uyumsuz bir yöntem uygulanır.  
   
     1.  İstemci kodu uygulayın.  
   
@@ -131,7 +131,7 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
         }  
         ```  
   
-         CallbackHandler burada daha anlaşılır olması için tekrarlanır. İstemci uygulamasının yeni InstanceContext oluşturur ve uygulama geri çağırma arabirimi belirtir. Sonraki yeni oluşturulan InstanceContext başvuru gönderme proxy sınıfının bir örneğini oluşturur. İstemci hizmet çağırdığında hizmet belirtilen geri çağırma sözleşme kullanarak istemciyi çağırır.  
+         CallbackHandler açıklık için buraya yinelenir. İstemci uygulaması, yeni bir InstanceContext oluşturur ve uygulamasını geri çağırma arabirimi belirtir. Ardından yeni oluşturulan InstanceContext başvuru gönderme proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırıp, belirtilen geri çağırma anlaşması kullanarak istemci hizmeti çağırır.  
   
     2.  İstemciyi yapılandırma  
   
@@ -158,10 +158,10 @@ WCF hizmetleri ve istemcileri kullanabilir <xref:System.ServiceModel.NetHttpBind
         </configuration>  
         ```  
   
-         Gereken istemci yapılandırmasında yapmak için yalnızca istemci tarafında kullanan uç noktasını belirtmek özel bir şey yok `NetHttpBinding`.  
+         Özel istemci yapılandırmasında yapmak için yalnızca istemci tarafında kullanan uç noktasını belirtin. gereken şey `NetHttpBinding`.  
   
 ## <a name="example"></a>Örnek  
- Bu konuda kullanılan tam kod aşağıda verilmiştir.  
+ Bu konuda kullanılan tüm kod verilmiştir.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -228,7 +228,7 @@ namespace Server
   
 <!--  
   For more information on how to configure your ASP.NET application, please visit  
-  http://go.microsoft.com/fwlink/?LinkId=169433  
+  https://go.microsoft.com/fwlink/?LinkId=169433  
   -->  
   
 <configuration>  

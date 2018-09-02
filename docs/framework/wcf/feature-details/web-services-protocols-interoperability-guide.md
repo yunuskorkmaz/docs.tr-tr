@@ -2,103 +2,103 @@
 title: Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506613"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403650"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri Protokolleri Birlikte Çalışabilirlik Kılavuzu
-Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve uygulayan kendi takdirine bağlı sol genişletilebilirlik noktaları içerir. Bu konu, WCF uygulayan Web Hizmetleri protokollerin bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
+Windows Communication Foundation (WCF) Web Hizmetleri protokolleri sayısı uygular. Çoğu bu protokolleri, bir dizi seçenekleri ve genişletilebilirlik noktaları uygulayan takdirine bağlı olarak sol içerir. Bu konuda, Web Hizmetleri protokolleri WCF uygulayan bir listesini sağlar. Bu bölüm içindeki diğer konular, desteklenen her protokol için uygulama ayrıntıları sağlar.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF tarafından uygulanan protokoller Web Hizmetleri  
- WCF Web Hizmetleri (WS) altyapısı protokolleri kanallar aracılığıyla destek sağlar ve Web hizmeti uygulama protokolleri sözleşmeleri özelliği aracılığıyla. Birlikte çalışabilirlik uygulama protokolleri için XML Şeması Tanımlama Dili (XSD) 1.0 ve Web Hizmetleri Açıklama Dili (WSDL) 1.1 aracılığıyla gerçekleştirilir.  
+ WCF kanalları üzerinden Web Hizmetleri (WS) altyapı protokolleri için destek sağlar ve Web hizmeti uygulama protokolleri sözleşmeleri özelliği aracılığıyla. Birlikte çalışabilirlik uygulama protokolleri için XML Şeması Tanım Dili (XSD) 1.0 ve Web Hizmetleri Açıklama Dili (WSDL) 1.1 gerçekleştirilir.  
   
- Altyapı protokolleri birlikte çalışabilirlik sağlanır WS - tarafından * belirtimleri. WCF kanalları WS - sayısı için destek sağlar\* altyapı protokoller. WCF kanalları bağlama öğeleri kullanılarak yapılandırılır. Aşağıdaki tablolarda tam WS - listesini içeren\* çeşitli WCF bağlama öğeleri tarafından uygulanan altyapı protokoller.  
+ Altyapı protokolleri birlikte çalışabilirlik sağlanır WS - tarafından * belirtimleri. WCF kanalları WS - sayısı için destek sağlar\* altyapı protokoller. WCF kanalları bağlama öğeleri kullanılarak yapılandırılır. Aşağıdaki tablolarda, WS - tam liste içeren\* çeşitli WCF bağlama öğeleri tarafından uygulanan altyapı protokoller.  
   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement> Aşağıdaki tabloda özelliklerini destekler.  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement> Aşağıdaki tabloda özellikleri destekler.  
   
-|Belirtim/belgesi|Bağlantı|  
+|Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)|  
-|SOAP 1.1 HTTP bağlama|[Basit Nesne Erişim Protokolü (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), Bölüm 7|  
-|SOAP 1.2 HTTP bağlama|[SOAP sürüm 1.2 Bölüm 2: Adjuncts (ikinci Edition)](http://go.microsoft.com/fwlink/?LinkId=95329), Bölüm 7|  
+|HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
+|SOAP 1.1 HTTP bağlama|[Basit Nesne Erişim Protokolü (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520), Bölüm 7|  
+|SOAP 1.2 HTTP bağlama|[SOAP sürüm 1.2 Bölüm 2: Adjuncts (ikinci sürüm)](https://go.microsoft.com/fwlink/?LinkId=95329), Bölüm 7|  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> aşağıdaki tabloda özelliklerini destekler.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> belirtimleri aşağıdaki tabloda destekler.  
   
-|Belirtim/belgesi|Bağlantı|  
+|Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|XML|[Genişletilebilir İşaretleme Dili (XML) 1.0 (Dördüncü Edition)](http://go.microsoft.com/fwlink/?LinkId=15139)|  
-|SOAP 1.1|[Basit Nesne Erişim Protokolü (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=96687)|  
-|SOAP 1.2 Çekirdek|[SOAP sürüm 1.2 Bölüm 1: Framework Mesajlaşma (ikinci Edition)](http://go.microsoft.com/fwlink/?LinkId=94664)|  
-|WS-adresleme 2004/08|[Adresleme (WS-adresleme) Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=81239)|  
-|Adresleme 1.0 - çekirdek W3C Web Hizmetleri|[Adresleme 1.0 - çekirdek Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=96688)|  
-|Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri|[Adresleme 1.0 - SOAP bağlama Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=96689)|  
-|W3C Web adresleme 1.0 - WSDL bağlama * Hizmetleri|[Adresleme 1.0 - WSDL bağlama Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=96690)|  
+|XML|[Genişletilebilir Biçimlendirme Dili (XML) 1.0 (Dördüncü sürümüdür)](https://go.microsoft.com/fwlink/?LinkId=15139)|  
+|SOAP 1.1|[Basit Nesne Erişim Protokolü (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=96687)|  
+|SOAP 1.2 Çekirdek|[SOAP sürüm 1.2 Bölüm 1: Framework Mesajlaşma (ikinci sürüm)](https://go.microsoft.com/fwlink/?LinkId=94664)|  
+|WS-Addressing 2004/08|[Adresleme (WS-Addressing) Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=81239)|  
+|Adresleme 1.0 - çekirdek W3C Web Hizmetleri|[Adresleme 1.0 - çekirdek Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=96688)|  
+|Adresleme 1.0 - SOAP bağlama W3C Web Hizmetleri|[Web Hizmetleri adresleme 1.0 - SOAP bağlama](https://go.microsoft.com/fwlink/?LinkId=96689)|  
+|W3C Web adresleme 1.0 - WSDL bağlama * Hizmetleri|[Web Hizmetleri adresleme 1.0 - WSDL bağlama](https://go.microsoft.com/fwlink/?LinkId=96690)|  
 |1.0 meta verileri adresleme W3C Web Hizmetleri|[Adresleme 1.0 - meta veri Web Hizmetleri](http://www.w3.org/TR/ws-addr-metadata/)|  
-|WSDL SOAP1.1 bağlama|[Web Hizmetleri Açıklama Dili (WSDL) 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)|  
-|WSDL SOAP1.2 bağlama|[WSDL 1.1 bağlama uzantısı SOAP 1.2](http://go.microsoft.com/fwlink/?LinkId=96691)|  
+|WSDL SOAP1.1 bağlama|[Web Hizmetleri Açıklama Dili (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
+|WSDL SOAP1.2 bağlama|[WSDL 1.1 bağlama uzantısı için SOAP 1.2](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> Aşağıdaki tabloda özelliklerini destekler.  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> Aşağıdaki tabloda özellikleri destekler.  
   
-|Belirtim/belgesi|Bağlantı|  
+|Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|XOP|[XML ikili paketleme en iyi duruma getirilmiş](http://go.microsoft.com/fwlink/?LinkId=96714)|  
-|MTOM + SOAP1.2 bağlama|[SOAP iletisi iletim iyileştirme mekanizması](http://go.microsoft.com/fwlink/?LinkId=96713)|  
-|MTOM SOAP 1.1 bağlama|[SOAP 1.1 bağlama MTOM 1.0 için](http://go.microsoft.com/fwlink/?LinkId=96712)|  
+|XOP|[XML ikili paketleme en iyi duruma getirilmiş](https://go.microsoft.com/fwlink/?LinkId=96714)|  
+|MTOM + SOAP1.2 bağlama|[SOAP ileti aktarım en iyi duruma getirme mekanizması](https://go.microsoft.com/fwlink/?LinkId=96713)|  
+|MTOM SOAP 1.1 bağlama|[SOAP 1.1 bağını MTOM 1.0](https://go.microsoft.com/fwlink/?LinkId=96712)|  
 |MTOM WS-PolicyAssertions|Yayımlanacak.|  
   
- <xref:System.ServiceModel.Channels.SecurityBindingElement> Aşağıdaki tabloda özelliklerini destekler.  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement> Aşağıdaki tabloda özellikleri destekler.  
   
-|Belirtim/belgesi|Bağlantı|  
+|Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|WSS: SOAP iletisi güvenlik 1.0|[Web Hizmetleri güvenliği: SOAP iletisi güvenlik 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS: Kullanıcı belirteci profili 1.0|[Güvenlik UsernameToken profili 1.0 Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> gerektiren Password/@TypePasswordText (varsayılan) =|  
-|WSS: X.509 belirteci profili 1.0|[Web Hizmetleri Güvenlik X.509 sertifikası belirteci profili](http://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 belirteci profili 1.0|[Web Hizmetleri güvenlik: SAML belirteci profili](http://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS: SOAP iletisi güvenlik 1.1|[Web Hizmetleri güvenliği: SOAP iletisi güvenlik 1.1](http://go.microsoft.com/fwlink/?LinkId=91240)|  
-|WSS kullanıcıadı belirteci Profil 1.1|[Güvenlik UsernameToken Profil 1.1 Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> parola tabanlı anahtar türetme kullanılmaz;<br /><br /> gerektiren Password/@TypePasswordText (varsayılan) =|  
-|WSS: X509 Profil 1.1 belirteci.|[Web Hizmetleri Güvenlik X.509 sertifikası belirteci Profil 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS: Kerberos belirteci Profil 1.1|[Güvenlik Kerberos belirteci Profil 1.1 Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95333)|  
-|WSS: SAML 1.1 belirteci Profil 1.1|[Web Hizmetleri Güvenlik SAML belirteci Profil 1.1](http://go.microsoft.com/fwlink/?LinkId=96694)|  
-|WS-güvenli konuşma|[Konuşma dilini güvenli Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95317)|  
-|WS-Trust 1.4|[Web Hizmetleri dil güven](http://go.microsoft.com/fwlink/?LinkId=169514)|  
-|WS-SecurityPolicy 2005/07|[Konuşma dilini güvenli Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> OASIS WS-SX teknik komitesi gönderilen ayrıntıyla açıklayan hata bilgilerini tarafından dayanıklıdır gibi.<br /><br /> [ws-sx iletisi](http://go.microsoft.com/fwlink/?LinkId=96700)|  
+|WSS: SOAP ileti güvenliği 1.0|[Web Hizmetleri güvenliği: SOAP ileti güvenliği 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: Kullanıcı adı belirteci profili 1.0|[Güvenlik UsernameToken profili 1.0 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> gerekli Password/@TypePasswordText (varsayılan) =|  
+|WSS: X.509 belirteci profili 1.0|[Web Hizmetleri Güvenlik X.509 Sertifika belirteci profili](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS: SAML 1.1 belirteç profili 1.0|[Web Hizmetleri güvenliği: SAML belirteci profili](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: SOAP ileti güvenliği 1.1|[Web Hizmetleri güvenliği: SOAP ileti güvenliği 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS kullanıcı adı belirteci Profil 1.1|[Güvenlik UsernameToken Profil 1.1 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> parola tabanlı anahtar türetme uygulamaz;<br /><br /> gerekli Password/@TypePasswordText (varsayılan) =|  
+|WSS: X509 Profil 1.1 belirteç.|[Web Hizmetleri Güvenlik X.509 sertifikası belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: Kerberos belirteci Profil 1.1|[Güvenlik Kerberos belirteci Profil 1.1 Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS: SAML 1.1 belirteç Profil 1.1|[Web Hizmetleri Güvenlik SAML belirteci Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
+|WS-Secure Conversation|[Web Hizmetleri güvenli konuşma dili](https://go.microsoft.com/fwlink/?LinkId=95317)|  
+|WS-Trust 1.4|[Web Hizmetleri dil güven](https://go.microsoft.com/fwlink/?LinkId=169514)|  
+|WS-SecurityPolicy 2005/07|[Web Hizmetleri güvenli konuşma dili](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> OASIS WS-SX teknik komitesi gönderilen errata tarafından düzeltilir gibi.<br /><br /> [ws-sx iletisi](https://go.microsoft.com/fwlink/?LinkId=96700)|  
 |WS-ReliableMessaging 1.1|[Güvenilir Mesajlaşma Protokolü sürüm 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> Aşağıdaki tabloda özelliklerini destekler.  
+ <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> Aşağıdaki tabloda özellikleri destekler.  
   
-|Belirtim/belgesi|Bağlantı|  
+|Belirtimi/belge|Bağlantı|  
 |-----------------------------|----------|  
-|WS-düzenleme|[Web Hizmetleri düzenleme](http://go.microsoft.com/fwlink/?LinkId=95324)|  
-|WS-AtomicTransaction|[Atomik işlem Web Hizmetleri](http://go.microsoft.com/fwlink/?LinkId=95323)|  
+|WS-düzenleme|[Web Hizmetleri düzenleme](https://go.microsoft.com/fwlink/?LinkId=95324)|  
+|WS-AtomicTransaction|[Atomik işlem Web Hizmetleri](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, Ve <xref:System.ServiceModel.Description.MetadataResolver> sınıfları aşağıdaki meta verileri özellikleri için destek sağlar:  
+ <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, Ve <xref:System.ServiceModel.Description.MetadataResolver> sınıfları aşağıdaki meta verileri belirtimler için destek sağlar:  
   
--   [XML şema bölüm 1: Yapıları ikinci sürüm](http://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML Şeması Kısım 1: Yapıları ikinci sürüm](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML şema bölüm 2: Veri türleri ikinci sürüm](http://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML şema bölümü 2: Veri türleri ikinci sürüm](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
+-   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-ilke 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [WS-aktarımı almak için meta veri alma](http://go.microsoft.com/fwlink/?LinkId=96708)  
+-   [WS aktarım almak için meta verileri alma](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  Ayrıca, aşağıdaki birlikte çalışabilirlik profilleri arasında WCF uygulanır:  
   
--   [Temel Profil 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
+-   [Temel Profil 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [Basit SOAP 1.0 bağlama](http://go.microsoft.com/fwlink/?LinkId=96710)  
+-   [Basit SOAP 1.0 bağlama](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Temel güvenlik profili 1.0 çalışma taslak](http://go.microsoft.com/fwlink/?LinkId=96711)  
+-   [Temel güvenlik profili 1.0 çalışma taslak](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  

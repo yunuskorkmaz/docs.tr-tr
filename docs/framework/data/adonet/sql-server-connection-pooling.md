@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874601"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406502"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Connection Pooling (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Uygulama rolleri ve bağlantı havuzu  
- Sonra bir SQL Server uygulama rolü çağırarak etkinleştirildi `sp_setapprole` sistem saklı yordam, bu bağlantının güvenlik bağlamı olarak ayarlanamaz. Ancak, havuzu etkinse, bağlantı havuzuna döndürülür ve havuza alınmış bağlantı yeniden denediğinizde hata oluşur. Daha fazla bilgi için bkz. Bilgi Bankası makalesi, "[SQL OLE DB kaynak havuzu ile uygulama rolü hataları](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Sonra bir SQL Server uygulama rolü çağırarak etkinleştirildi `sp_setapprole` sistem saklı yordam, bu bağlantının güvenlik bağlamı olarak ayarlanamaz. Ancak, havuzu etkinse, bağlantı havuzuna döndürülür ve havuza alınmış bağlantı yeniden denediğinizde hata oluşur. Daha fazla bilgi için bkz. Bilgi Bankası makalesi, "[SQL OLE DB kaynak havuzu ile uygulama rolü hataları](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Uygulama rolü alternatifleri  
  Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmaları avantajlarından almanızı öneririz. Daha fazla bilgi için [SQL Server'da uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
@@ -133,4 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

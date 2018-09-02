@@ -1,16 +1,16 @@
 ---
-title: 'Örnek XML dosyası: Bir Namespace1 tipik satınalma siparişi'
+title: 'Örnek XML dosyası: Tipik satın alma siparişi bir Namespace1 içinde'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337567"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404236"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Örnek XML dosyası: Tipik satınalma siparişi bir Namespace
-Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Tipik satın alma siparişi dosyasıdır. XML ad alanında ' dir.  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Örnek XML dosyası: Bir Namespace, tipik satın alma siparişi
+Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Tipik satın alma siparişi dosyasıdır. Bir ad alanında XML'dir.  
   
 ## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
   

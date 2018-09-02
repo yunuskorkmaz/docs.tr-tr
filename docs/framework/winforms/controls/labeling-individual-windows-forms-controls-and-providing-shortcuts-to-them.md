@@ -7,30 +7,31 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409026"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma
-Windows Forms'a eklenen denetimler özelliklere sahip ve kullanıcı daha fazla özelleştirmek için kullanılan yöntemleri karşılaşırsınız. Kullanıcı gereksinimlerine uyacak şekilde, kullanıcı arabirimi özelleştirme, iyi tasarlanmış Windows uygulamaları için son derece önemlidir.  
+Windows Forms için eklenen denetimler özelliklere sahip ve daha fazla kullanıcı özelleştirmek üzere kullanılan yöntemleri karşılaşırsınız. Kullanıcı gereksinimlerine uyacak şekilde, kullanıcı arabirimini özelleştirme, iyi tasarlanmış Windows uygulamaları için son derece önemlidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Bir metin etiketi denetime atama açıklar.  
+ Bir denetime metin etiketi atamak açıklar.  
   
  [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- Görüntüleri göstermek için bir denetiminin nasıl yapılandırılacağını açıklar.  
+ Resimleri görüntülemek için bir denetimi yapılandırma açıklanmaktadır.  
   
  [Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- Önceden tanımlanmış klavye kısayolları oluşturma hakkında bilgi sağlar.  
+ Önceden tanımlı klavye kısayolları oluşturma hakkında bilgi sağlar.  
   
  [Bir Windows Formundaki Denetimler için Erişilebilirlik Bilgileri Sağlama](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Erişilebilirlik yardımları ile çalışmak denetimleri etkinleştirme hakkında bilgi sağlar.  
+ Denetimlerinizi erişilebilirlik Yardımcıları ile çalışacak şekilde etkinleştirme hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- Diğer temel işlemleri için bağlantılar denetimleriyle yapabilirsiniz.  
+ Temel başka şeyler için bağlantı denetimleri ile yapabilirsiniz.  
   
- Ayrıca bkz. [nasıl yapılır: oluşturmak erişim anahtarları için Windows Forms denetimleri kullanarak Tasarımcı](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [nasıl yapılır: Tasarımcı kullanarak bir Windows Forms denetimi görüntülenen metin ayarlamak](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [nasıl: resmi ayarlama Tarafından görüntülenen Tasarımcı kullanarak bir Windows Formları denetimi](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).
+ Ayrıca bkz: [nasıl yapılır: erişim anahtarları için Windows Forms denetimleri kullanarak Tasarımcı](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [nasıl yapılır: Tasarımcı bir Windows Forms denetimini kullanarak tarafından görüntülenen metni ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [nasıl yapılır: resmi ayarlama Tarafından görüntülenen bir Windows Forms Tasarımcısı'nı kullanarak denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

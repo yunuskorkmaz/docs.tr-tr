@@ -4,16 +4,16 @@ description: .NET Framework özetler yönetilmeyen API için WMI ve performans s
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462032"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407883"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Yönetim Araçları (WMI) ve performans sayaçları (yönetilmeyen API Başvurusu)
 
-.NET Framework WMI ve performans sayaçları yönetilmeyen API çağrıları sarmalamak işlevler kümesi oluşur [yerel Windows Yönetim Araçları'nı API](https://msdn.microsoft.com/library/aa389276(v=vs.85).aspx). Araçlar ve yönetmek ve uzak bilgisayar sistemleri izlemek kitaplıklar geliştirme sağlar.
+.NET Framework WMI ve performans sayaçları yönetilmeyen API çağrılar sarmalama işlevler kümesi oluşur [yerel Windows Yönetim Araçları'nı API](/windows/desktop/WmiSdk/com-api-for-wmi). Araçları ve kitaplıklarını yönetme ve izleme uzak bilgisayar sistemleri geliştirmenizi sağlar.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -21,57 +21,57 @@ API aşağıdaki işlevleri içerir:
 
 | İşlev | Açıklama |
 |---------|---------|
-| [BeginEnumeration işlevi](beginenumeration.md) | Numaralayıcı WMI nesne özellikleri bir numaralandırmanın başlangıç durumuna sıfırlar. |
+| [BeginEnumeration işlevi](beginenumeration.md) | Numaralandırıcı nesne özellikleri WMI numaralandırması başlangıcına sıfırlar. |
 | [BeginMethodEnumeration işlevi](beginmethodenumeration.md) |  Bir nesne için kullanılabilen yöntemler numaralandırması başlar. |
-| [BlessIWbemServices işlevi](blessiwbemservices.md) | Kullanıcı kimlik bilgilerini belirli bir IWbemServices sınıf erişime olup olmadığını gösterir. |
-| [BlessIWbemServicesObject işlevi](blessiwbemservicesobject.md) | Kullanıcı kimlik bilgilerinin belirtilen IWbem servis nesnesi erişime olup olmadığını gösterir. |
+| [BlessIWbemServices işlevi](blessiwbemservices.md) | Kullanıcı kimlik bilgilerini belirtilen bir IWbemServices sınıfı erişime olup olmadığını gösterir. |
+| [BlessIWbemServicesObject işlevi](blessiwbemservicesobject.md) | Kullanıcı kimlik bilgilerini belirtilen IWbem servis nesnesi erişime olup olmadığını gösterir. |
 | [Clone işlevi](clone.md) | Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür. |
-| [CloneEnumWbemClassObject işlevi](cloneenumwbemclassobject.md) | Numaralandırma içindeki geçerli konumunu koruyarak bir numaralandırıcı mantıksal bir kopyasını oluşturur. |
-| [CompareTo işlevi](compareto.md) | Nesneyi başka bir Windows Yönetim nesnesi için karşılaştırır. |
-| [ConnectServerWmi işlevi](connectserverwmi.md) | Belirtilen bir bilgisayardaki bir WMI ad alanı için DCOM aracılığıyla yapılan bağlantı oluşturur. |
-| [CreateClassEnumWmi işlevi](createclassenumwmi.md) | Belirtilen seçim ölçütü karşılayan tüm sınıflar için bir numaralandırıcı döndürür. |
-| [CreateInstanceEnumWmi işlevi](createinstanceenumwmi.md) | Belirtilen bir sınıfın belirtilen seçim ölçütlerine intances döndüren bir numaralandırıcı döndürür. |
-| [Delete işlevi](delete.md) | Belirtilen bir özelliği bir sınıf tanımı ve tüm alt niteleyicileri siler. |
-| [DeleteMethod işlevi](deletemethod.md) | Belirtilen yöntem bir CIM sınıfı tanımından siler. |
-| [EndEnumeration işlevi](endenumeration.md) | Bir numaralandırma sırasını sonlandırır. | 
-| [EndMethodEnumeration işlevi](endmethodenumeration.md) | Çağrılarak başlatılan bir numaralandırma sırasını sonlandırır [BeginMethodEnumeration işlevi](beginmethodenumeration.md). |
-| [ExecNotificationQueryWmi işlevi](execnotificationquerywmi.md) | Olaylarını almak için bir sorgu yürütür. |
+| [CloneEnumWbemClassObject işlevi](cloneenumwbemclassobject.md) | Numaralandırma içindeki geçerli konumu koruma Numaralandırıcı mantıksal bir kopyasını oluşturur. |
+| [CompareTo işlevi](compareto.md) | Başka bir Windows Yönetim nesnesi için bir nesne ile karşılaştırır. |
+| [ConnectServerWmi işlevi](connectserverwmi.md) | Belirtilen bir bilgisayardaki bir WMI ad alanına DCOM aracılığıyla yapılan bağlantı oluşturur. |
+| [CreateClassEnumWmi işlevi](createclassenumwmi.md) | Belirtilen seçim kriterleri karşılayan tüm sınıflar için bir numaralandırıcı döndürür. |
+| [CreateInstanceEnumWmi işlevi](createinstanceenumwmi.md) | Belirtilen seçim ölçütlerine uygulamalara belirtilen sınıfın döndüren bir numaralandırıcı döndürür. |
+| [Delete işlevi](delete.md) | Belirtilen özellik, bir sınıf tanımı ve tüm alt niteleyicileri siler. |
+| [DeleteMethod işlevi](deletemethod.md) | Belirtilen bir yöntemdeki bir CIM sınıfı tanımını siler. |
+| [EndEnumeration işlevi](endenumeration.md) | Bir numaralandırma sıralı sonlandırır. | 
+| [EndMethodEnumeration işlevi](endmethodenumeration.md) | Çağırarak başlatılan bir numaralandırma sırasını sonlandırıyor [BeginMethodEnumeration işlevi](beginmethodenumeration.md). |
+| [ExecNotificationQueryWmi işlevi](execnotificationquerywmi.md) | Olayları almak için bir sorgu yürütür. |
 | [ExecQueryWmi işlevi](execquerywmi.md) | Nesneleri almak için bir sorgu yürütür. |
-| [FormatFromRawValue işlevi](formatfromrawvalue.md) | Biçim dönüştürmeyi zamana dayalı ise belirtilen biçime bir ham performans veri değeri veya iki ham performans veri değerleri dönüştürür. | 
+| [FormatFromRawValue işlevi](formatfromrawvalue.md) | Biçim dönüştürme, zamana bağlı ise belirtilen biçimde bir ham performans veri değerine ya da iki ham performans veri değerleri dönüştürür. | 
 | [Get işlevi](get.md) | Varsa belirtilen özellik değerini alır. |
-| [GetCurrentApartmentType işlevi](getcurrentapartmenttype.md) | Arayan yürütülmekte olduğu Grup türünü alır. |
-| [GetDemultiplexedStub işlevi](getdemultiplexedstub.md) | Windows Yönetimi'nden zaman uyumsuz çağrılar alırken bir istemci yardımcı olması için bir nesne iletici havuz oluşturur. |
+| [GetCurrentApartmentType işlevi](getcurrentapartmenttype.md) | Arayan içinde yürütüyor Grup türünü alır. |
+| [GetDemultiplexedStub işlevi](getdemultiplexedstub.md) | Bir istemcinin Windows Yönetimi'nden zaman uyumsuz bir çağrı alma yardımcı olmak için nesne ileticisi havuzu oluşturur. |
 | [Geterrorınfo işlevi](geterrorinfo.md) | Önceki işlev çağrısında hata bilgilerini alır. | 
-| [GetMethod işlevi](getmethod.md) | Belirtilen yöntem bilgilerini alır. | 
-| [GetMethodOrigin işlevi](getmethodorigin.md) | Bir yöntem olarak bildirilen sınıfı belirler. |
+| [GetMethod işlevi](getmethod.md) | Belirtilen yöntem hakkındaki bilgileri alır. | 
+| [GetMethodOrigin işlevi](getmethodorigin.md) | Bir yöntem içinde bildirildiği sınıf belirler. |
 | [GetMethodQualifierSet işlevi](getmethodqualifierset.md) | Belirli bir yöntem için ayarlanmış niteleyicisi alır. |
 | [GetNames işlevi](getnames.md) | Bir alt veya tümünü bir nesnenin özellik adlarını alır. |
-| [GetObjectText işlevi](getobjecttext.md) | Bir nesnenin bir metinsel oluşturma MOF sözdiziminde döndürür. | 
+| [GetObjectText işlevi](getobjecttext.md) | Bir nesnenin değerinin metinsel bir işleme MOF sözdiziminde döndürür. | 
 | [GetPropertyHandle işlevi](getpropertyhandle.md) | Bir özelliği tanımlayan benzersiz bir tanıtıcı döndürür. |
-| [GetPropertyOrigin işlevi](getpropertyorigin.md) | Bir özellik bildirilmedi sınıfı belirler. |
-| [GetPropertyQualifierSet işlevi](getpropertyqualifierset.md) | Belirli bir özelliği için belirlenen niteleyicisi alır.  |
-| [GetQualifierSet işlevi](getqualifierset.md) | Sınıf örneği veya bir sınıf tanımı için ayarlamak niteleyicisi alır. |
+| [GetPropertyOrigin işlevi](getpropertyorigin.md) | Bir özellik içinde bildirildiği sınıf belirler. |
+| [GetPropertyQualifierSet işlevi](getpropertyqualifierset.md) | Belirli bir özellik için ayarlanmış niteleyicisi alır.  |
+| [GetQualifierSet işlevi](getqualifierset.md) | Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır. |
 | [InheritsFrom işlevi](inheritsfrom.md) | Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler. |
 | [Initialize işlevi](initialize.md) | WMI başlatma gerçekleştirir. |
 | [Next işlevi](next.md) | Bir listedeki sonraki özelliği alır. | 
-| [NextMethod işlevi](nextmethod.md) | Numaralandırma sonraki yöntem alır. |
-| [PUT işlevi](put.md) | Adlandırılmış bir özelliği için yeni bir değer ayarlar. |
-| [PutClassWmi işlevi](putclasswmi.md) | Yeni bir sınıf oluşturur veya mevcut bir güncelleştirir. |
-| [PutInstanceWmi işlevi](putinstancewmi.md) | Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örnek için WMI deposunun yazılır. |
-| [PutMethod işlevi](putmethod.md) | Bir yöntem oluşturur. |
-| [QualifierSet_BeginEnumeration işlevi](qualifierset-beginenumeration.md) | Bir nesnenin niteleyicileri numaralandırması sabit başlangıç durumuna sıfırlar. |
+| [NextMethod işlevi](nextmethod.md) | Sonraki yöntem bir sabit listesi alır. |
+| [Put işlevi](put.md) | Adlandırılmış bir özelliği, yeni değere ayarlar. |
+| [PutClassWmi işlevi](putclasswmi.md) | Yeni bir sınıf oluşturur veya mevcut olanı güncelleştirir. |
+| [PutInstanceWmi işlevi](putinstancewmi.md) | Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır. |
+| [PutMethod işlevi](putmethod.md) | Bir metot oluşturur. |
+| [QualifierSet_BeginEnumeration işlevi](qualifierset-beginenumeration.md) | Bir nesnenin niteleyicileri numaralandırması sabit başlangıcına sıfırlar. |
 | [QualifierSet_Delete işlevi](qualifierset-delete.md) | Belirtilen bir niteleyici adıyla siler.  |
-| [QualifierSet_EndEnumeration işlevi](qualifierset-endenumeration.md) | Çağrısıyla başlamış numaralandırması sonlandırır `QualifierSet_BeginEnumeration` işlevi. |
-| [QualifierSet_Get işlevi](qualifierset-get.md) | Belirtilen adlandırılmış niteleyici alır.  |
+| [QualifierSet_EndEnumeration işlevi](qualifierset-endenumeration.md) | Bir çağrı ile başlamış numaralandırma sonlandırır `QualifierSet_BeginEnumeration` işlevi. |
+| [QualifierSet_Get işlevi](qualifierset-get.md) | Belirtilen adlandırılmış niteleyicisi alır.  |
 | [QualifierSet_GetNames işlevi](qualifierset-getnames.md) | Tüm niteleyicileri veya geçerli nesne ya da özellik kullanılabilir belirtilen niteleyicileri adlarını alır. |
-| [QualifierSet_Next işlevi](qualifierset-next.md) | Sonraki çağrı kullanmaya bir numaralandırma niteleyicisinde alır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi. |
-| [QualifierSet_Put işlevi](qualifierset-put.md) | Değeri ve adlandırılmış niteleyicisi yazar. |
-| [ResetSecurity işlevi](resetsecurity.md) | Sağlanan kimliğe bürünme belirteci geçerli iş parçacığına atar. |
-| [SetSecurity işlevi](setsecurity.md) | Geçerli iş parçacığı ile ilişkili kimliğe bürünme belirtecini alır. |
+| [QualifierSet_Next işlevi](qualifierset-next.md) | Bir çağrı ile başlatılan bir listedeki sonraki niteleyicisi alır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi. |
+| [QualifierSet_Put işlevi](qualifierset-put.md) | Değer ve adlandırılmış niteleyicisi yazar. |
+| [ResetSecurity işlevi](resetsecurity.md) | Sağlanan kimliğe bürünme belirteci için geçerli iş parçacığı atar. |
+| [SetSecurity işlevi](setsecurity.md) | Geçerli iş parçacığıyla ilişkilendirilmiş kimliğe bürünme belirtecini alır. |
 | [SpawnDerivedClass işlevi](spawnderivedclass.md) | Belirtilen bir nesneden bir yeni türetilmiş bir sınıf oluşturur. | 
 | [SpawnInstance işlevi](spawninstance.md) | Bir sınıfın yeni bir örneğini oluşturur. |   
-| [VerifyClient işlevi](verifyclientkey.md) | İstemci anahtar doğru güvenlik sahip olmasını sağlar. |
-| [WritePropertyValue işlevi](writepropertyvalue.md) | Bir özellik tanımlayıcısı tarafından tanımlanan bir özellik için belirtilen sayıda baytı yazar. |
+| [VerifyClient işlevi](verifyclientkey.md) | İstemci anahtarı doğru güvenlik sahip olmasını sağlar. |
+| [WritePropertyValue işlevi](writepropertyvalue.md) | Belirtilen sayıda baytı bir özellik tanımlayıcısı tarafından tanımlanan bir özellik yazar. |
 
  ## <a name="see-also"></a>Ayrıca bkz.
 [Yönetilmeyen API Başvurusu](../index.md) 

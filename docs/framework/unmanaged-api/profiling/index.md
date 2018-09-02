@@ -8,41 +8,31 @@ helpviewer_keywords:
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75df075cd39375084a7d5a4489694ec937e15d99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455578"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404468"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profil Oluşturma (Yönetilmeyen API Başvurusu)
-Profil oluşturma API'si bir programın yürütme ortak dil çalışma zamanı tarafından (CLR) izlemek bir profil oluşturucu sağlar.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
- Profil oluşturma .NET Framework ortamında desteklemek için CLR sağlar arabirimleri ve Hizmetleri açıklar.  
-  
- [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- Profil oluşturma API'si kullanan yönetilmeyen arabirimler açıklanmaktadır.  
-  
- [Profil Oluşturma Ortamını Ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
- .NET Framework uygulama profili için uygulamanız gereken adımlar açıklanır.  
-  
- [CLR Profil Oluşturucular ve Windows Mağazası Uygulamaları](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
- Windows mağazası uygulamaları ile başarılı olarak çalışması için CLR Profil oluşturma API tüketen tanılama araçları bağlantı noktası açıklanmaktadır.  
-  
- [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
- Yöntem çağrısı altında döndüğü koşullar belgeleri `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
-  
- [Profil Oluşturma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
- Profil oluşturma API'si kullanan yönetilmeyen genel statik işlevleri açıklanmaktadır.  
-  
- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- Profil oluşturma API'si kullanan yönetilmeyen numaralandırmalar açıklar.  
-  
- [Profil Oluşturma Yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
- Profil oluşturma API'si kullanan yönetilmeyen yapılar açıklar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [İzlenecek yol: Performans sorunları tanımlama](/visualstudio/profiling/walkthrough-identifying-performance-problems)  
- Microsoft Visual Studio 2005 Team System'da yerleşik profil oluşturma araçlarını kullanmayı açıklar. Profil oluşturma API'si kullanılarak için alternatif bir yaklaşım Bu araçlar sağlar.
+
+Bir profil oluşturucunun bir programın yürütülmesi izlenemedi ortak dil çalışma zamanı tarafından (CLR) profil oluşturma API sağlar.
+
+## <a name="in-this-section"></a>Bu Bölümde
+
+ [Profil oluşturmaya genel bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) Hizmetleri ve CLR Profil oluşturma desteği .NET Framework ortamında sağlayan arabirimler açıklanmaktadır.
+
+ [Profil oluşturma arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) profil oluşturma API'SİNİN kullandığı yönetilmeyen arabirimleri açıklar.
+
+ [Yedekleme bir profil oluşturma ortam ayarlama](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) bir .NET Framework uygulamasına profil için gerçekleştirmeniz gereken adımlar açıklanmaktadır.
+
+ [CLR Profil oluşturucular ve Windows Store Apps](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md) bağlantı noktası ile Windows Store apps başarıyla çalışmak için CLR Profil oluşturma API'sini kullanmanın tanılama araçları anlatılmaktadır.
+
+ [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) yöntem çağrısından dönen koşullar belgeler `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.
+
+ [Profil oluşturma genel statik işlevleri](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md) profil oluşturma API'SİNİN kullandığı yönetilmeyen genel statik işlevleri açıklar.
+
+ [Profil oluşturma numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md) profil oluşturma API'SİNİN kullandığı yönetilmeyen numaralandırmaları açıklar.
+
+ [Profil oluşturma yapıları](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md) profil oluşturma API'SİNİN kullandığı yönetilmeyen yapıları açıklar.

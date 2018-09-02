@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-ms.openlocfilehash: 2f705df810e7f3653589ca776a69bbe592458833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405809"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Bir SqlNotificationRequest ile SqlCommand yürütme
-A <xref:System.Data.SqlClient.SqlCommand> veri sunucudan alınan sonra sonuç kümesi sorguyu yeniden yürütüldü farklı olacaktır değiştiğinde bildirim oluşturmak için yapılandırılabilir. Bu özel bildirim sırası sunucuda veya dinamik nesneler korumak istemediğiniz zaman kullanmak istediğiniz senaryolar için kullanışlıdır.  
+A <xref:System.Data.SqlClient.SqlCommand> sunucudan alınan sonra sonuç kümesi sorguyu tekrar yürütüldü, farklı veri değişikliği olduğunda bir bildirim oluşturmak için yapılandırılabilir. Bu, özel bir bildirim sırası sunucusunda veya canlı tutmak istemediğiniz kullanmak istediğiniz senaryolar için kullanışlıdır.  
   
 ## <a name="creating-the-notification-request"></a>Bildirim isteği oluşturma  
- Kullanabileceğiniz bir <xref:System.Data.Sql.SqlNotificationRequest> bağlama tarafından bildirim isteği oluşturmak için nesnesi bir `SqlCommand` nesnesi. İstek oluşturulduktan sonra artık ihtiyaç duymadığınız `SqlNotificationRequest` nesnesi. Sıra herhangi bir bildirim için sorgu ve uygun şekilde yanıt. Uygulama kapatılır ve daha sonra yeniden olsa bile bildirimleri ortaya çıkabilir.  
+ Kullanabileceğiniz bir <xref:System.Data.Sql.SqlNotificationRequest> bildirim isteği için bağlama oluşturmak için nesne bir `SqlCommand` nesne. İstek oluşturulduktan sonra artık ihtiyacınız `SqlNotificationRequest` nesne. Sıra herhangi bir bildirim için sorgu ve uygun şekilde yanıt verin. Uygulamayı kapatın ve daha sonra yeniden bile bildirimleri oluşabilir.  
   
- İlişkili bildirim komutuyla yürütüldüğünde, özgün sonucu herhangi bir değişiklik bildirim istekte yapılandırılan SQL Server kuyruğa ileti gönderme tetikleyici ayarlayın.  
+ İlişkili bildirim komutu yürütüldüğünde, özgün sonucu herhangi bir değişiklik bildirimi istekte yapılandırılmış SQL Server kuyruğa ileti gönderme tetikleyiciyi ayarlayın.  
   
- SQL Server sıranın yoklamak ve iletiyi yorumlayamadı nasıl uygulamanıza özeldir. Uygulama sıra yoklama için sorumludur ve tepki ileti içeriğine bağlı.  
+ SQL Server sıra yoklamak ve iletinin nasıl uygulamanıza özeldir. Uygulama sıra yoklamak üzere sorumludur ve tepki iletinin içeriğine göre.  
   
 > [!NOTE]
->  SQL Server bildirim istekleriyle kullanırken <xref:System.Data.SqlClient.SqlDependency>, varsayılan hizmet adı kullanmak yerine, kendi sıra adı oluşturun.  
+>  SQL Server bildirim istekleriyle kullanırken <xref:System.Data.SqlClient.SqlDependency>, varsayılan hizmet adını kullanmak yerine kendi kuyruk adı oluşturun.  
   
- Yeni istemci-tarafı güvenlik öğe için <xref:System.Data.Sql.SqlNotificationRequest>. Bu birincil bir sunucu özelliğidir ve sunucunun kullanıcıları bir bildirim istemek zorunda özel ayrıcalıklar oluşturdu.  
+ İçin yeni bir istemci tarafı güvenlik öğesi yok <xref:System.Data.Sql.SqlNotificationRequest>. Bu birincil bir sunucu özelliğidir ve sunucunun kullanıcı bir bildirim isteği için gereken özel ayrıcalıklar oluşturdu.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki kod parçası nasıl oluşturulduğunu gösteren bir <xref:System.Data.Sql.SqlNotificationRequest> ve bu ilişkilendirmeyi bir <xref:System.Data.SqlClient.SqlCommand>.  
+ Aşağıdaki kod parçası nasıl oluşturulacağını gösterir. bir <xref:System.Data.Sql.SqlNotificationRequest> ve bunu bir <xref:System.Data.SqlClient.SqlCommand>.  
   
 ```vb  
 ' Assume connection is an open SqlConnection.  
@@ -72,4 +72,4 @@ command.ExecuteReader();
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

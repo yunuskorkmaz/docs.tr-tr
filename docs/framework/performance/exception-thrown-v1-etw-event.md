@@ -7,38 +7,38 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393861"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400828"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Özel Durum Thrown_V1 ETW Olayı
-Bu olay, oluşturulan özel durumlar hakkında bilgi yakalar.  
+Bu olay attığı özel durumları hakkında bilgileri yakalar.  
   
- Aşağıdaki tabloda, altında olay tetiklenir anahtar sözcüğü ve olay düzeyini gösterir. (Daha fazla bilgi için bkz: [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Aşağıdaki tabloda, anahtar sözcüğü altında olay tetiklenir ve olay düzeyini gösterir. (Daha fazla bilgi için [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|Olay oluşturma için anahtar sözcüğü|Düzey|  
+|Olayı için anahtar sözcüğü|Düzey|  
 |-----------------------------------|-----------|  
 |`ExceptionKeyword` (0x8000)|Uyarı (2)|  
   
- Aşağıdaki tabloda olay bilgilerini gösterir.  
+ Aşağıdaki tablo, olay bilgilerini gösterir.  
   
-|Olay|Olay Kimliği|Ne zaman oluşturulur|  
+|Olay|Olay Kimliği|Ne zaman gerçekleşti|  
 |-----------|--------------|-----------------|  
-|`ExceptionThrown_V1`|80|Yönetilen bir özel durum oluşur.|  
+|`ExceptionThrown_V1`|80|Yönetilen bir özel durum oluşturulur.|  
   
- Aşağıdaki tabloda olay verilerini gösterir.  
+ Aşağıdaki tabloda, olay verilerini gösterir.  
   
 |Alan adı|Veri türü|Açıklama|  
 |----------------|---------------|-----------------|  
-|Özel durum türü|Win: UnicodeString|Özel durum türünü; Örneğin, `System.NullReferenceException`.|  
-|Özel durum iletisi|Win: UnicodeString|Gerçek özel durum iletisi.|  
-|EIPCodeThrow|Win: işaretçi|Yönerge işaretçisi burada özel durum oluştu.|  
-|ExceptionHR|Win: UInt32|Özel durum [HRESULT](http://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|Win: UInt16|0x01: HasInnerException (bkz [CLR ETW olayları](../../../docs/framework/performance/clr-etw-events.md) Visual Basic belgelerinde).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (işlem durumu bozuk olduğunu gösteriyor; bkz [işleme bozuk durumu özel durumları](http://go.microsoft.com/fwlink/?LinkId=179681) MSDN'de).<br /><br /> 0x10: IsCLSCompliant (türeyen bir özel durum <xref:System.Exception> CLS uyumlu; Aksi takdirde, CLS uyumlu değil).|  
-|ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
+|Özel durum türü|Kazanma: UnicodeString|Özel durumun türünü; Örneğin, `System.NullReferenceException`.|  
+|Özel durum iletisi|Kazanma: UnicodeString|Gerçek özel durum iletisi.|  
+|EIPCodeThrow|Kazanma: işaretçi|Özel durum oluştuğu yönerge işaretçisi.|  
+|ExceptionHR|Kazanma: UInt32|Özel durum [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
+|ExceptionFlags|Kazanma: UInt16|0x01: HasInnerException (bkz [CLR ETW olaylarını](../../../docs/framework/performance/clr-etw-events.md) Visual Basic belgelerinde).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (işlem durumu bozuk olduğunu belirtir; bkz [işleme bozuk durum özel durumları](https://go.microsoft.com/fwlink/?LinkId=179681) MSDN'de).<br /><br /> 0x10: IsCLSCompliant (türeyen bir özel durum <xref:System.Exception> CLS uyumlu; Aksi takdirde, CLS uyumlu değil).|  
+|ClrInstanceID|Kazanma: UInt16|CLR veya CoreCLR örneği için benzersiz kimlik.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

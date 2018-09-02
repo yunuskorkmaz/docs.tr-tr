@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908152"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406926"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
  Bu yapılandırma girişi WMI arabirimini kullanıma sunar. Yönetim uygulamaları artık bu arabirimi üzerinden bağlanabilir ve Yönetim Araçları uygulamanın erişim.  
   
 ## <a name="accessing-wmi-data"></a>WMI verilerine erişme  
- WMI verilerini birçok farklı şekilde erişilebilir. Microsoft, betikleri, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Daha fazla bilgi için [WMI kullanarak](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ WMI verilerini birçok farklı şekilde erişilebilir. Microsoft, betikleri, Visual Basic uygulamaları, C++ uygulamaları için WMI API'lerini sağlar ve [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Daha fazla bilgi için [WMI kullanarak](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  WMI veri programlı olarak erişmek için sağlanan yöntemleri .NET Framework kullanırsanız, tür yöntemler bağlantı kurulduğunda özel durumlar oluşturabilecek farkında olmalıdır. Oluşumu sırasında bağlantı kurulmaz <xref:System.Management.ManagementObject> örneği, ancak ilk istek gerçek veri değişimi ilgili. Bu nedenle, kullanması gereken bir `try..catch` olası özel durumları yakalama bloğu.  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
 Whoami /user  
 ```  
   
- Bu, geçerli kullanıcının SID'si sağlar, ancak bu yöntem, üzerinde herhangi bir kullanıcı SID almak için kullanılamaz. SID almak için başka bir yöntem [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) gelen aracı [Windows 2000 Kaynak Seti Araçları yönetim görevleri için](http://go.microsoft.com/fwlink/?LinkId=178660). SID (yerel veya etki alanı) iki kullanıcı bu aracı karşılaştırır ve bir yan etkisi komut satırına iki SID yazdırır. Daha fazla bilgi için [iyi bilinen SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Bu, geçerli kullanıcının SID'si sağlar, ancak bu yöntem, üzerinde herhangi bir kullanıcı SID almak için kullanılamaz. SID almak için başka bir yöntem [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467) gelen aracı [Windows 2000 Kaynak Seti Araçları yönetim görevleri için](https://go.microsoft.com/fwlink/?LinkId=178660). SID (yerel veya etki alanı) iki kullanıcı bu aracı karşılaştırır ve bir yan etkisi komut satırına iki SID yazdırır. Daha fazla bilgi için [iyi bilinen SID](https://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI nesne örneklerini erişme  
  Uzak makinede WCF WMI örnekleri erişmeniz gerekiyorsa, paket gizlilik erişmek için kullandığınız araçları etkinleştirmeniz gerekir. Aşağıdaki bölümde, WMI CIM Studio, Windows Yönetim Araçları Sınayıcısı, hem de .NET SDK 2. 0'ı kullanarak bu elde etmek nasıl açıklar.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- Yüklediyseniz [WMI Yönetimsel Araçlar](http://go.microsoft.com/fwlink/?LinkId=95185), erişim WMI örnekleri için WMI CIM Studio kullanabilirsiniz. Araçlar, aşağıdaki klasörde yer  
+ Yüklediyseniz [WMI Yönetimsel Araçlar](https://go.microsoft.com/fwlink/?LinkId=95185), erişim WMI örnekleri için WMI CIM Studio kullanabilirsiniz. Araçlar, aşağıdaki klasörde yer  
   
  **%windir%\Program Files\WMI araçları\\**  
   

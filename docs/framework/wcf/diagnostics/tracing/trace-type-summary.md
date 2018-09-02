@@ -2,56 +2,56 @@
 title: İzleme Türü Özeti
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: e3bc66753dd44e1dc4c7417caf593820300f69a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486048"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403849"
 ---
 # <a name="trace-type-summary"></a>İzleme Türü Özeti
-[Kaynak düzeyleri](http://go.microsoft.com/fwlink/?LinkID=94943) çeşitli izleme düzeyleri tanımlar: Kritik hata, uyarı, bilgi ve ayrıntılı, sağlar açıklaması `ActivityTracing` çıktısını değiştirir bayrağı sınır ve etkinlik aktarım olayları izleme.  
+[Kaynak düzeylerini](https://go.microsoft.com/fwlink/?LinkID=94943) çeşitli izleme düzeylerini tanımlar: Kritik hata, uyarı, bilgi ve ayrıntı, sağlar açıklamasını `ActivityTracing` çıktısını değiştirir bayrak sınır ve etkinlik aktarım olayları izleme.  
   
- Ayrıca gözden geçirebilirsiniz [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169) gelen yayılan izlerini türleri için <xref:System.Diagnostics>.  
+ Ayrıca inceleyebilirsiniz [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) , gelen yayılan izlemeleri türde <xref:System.Diagnostics>.  
   
- Aşağıdaki tabloda en önemlileri listeler.  
+ Aşağıdaki tabloda, en önemli olanları listeler.  
   
 |İzleme türü|Açıklama|  
 |----------------|-----------------|  
 |Kritik|Önemli hata veya uygulama kilitlenme.|  
-|Hata|Kurtarılamaz bir hata.|  
+|Hata|Kurtarılabilir bir hata oluştu.|  
 |Uyarı|Bilgi iletisi.|  
-|Bilgiler|Kritik olmayan sorun.|  
-|Ayrıntılı|Hata ayıklama izleme.|  
-|Başlat|İşlem bir mantıksal birim başlatılıyor.|  
-|Askıya alma|İşleme bir mantıksal birim ertelenmesi.|  
+|Bilgiler|Kritik olmayan sorun oluştu.|  
+|Ayrıntılı|İzleme hata ayıklama.|  
+|Başlat|Mantıksal birimi işleme başlatılıyor.|  
+|Askıya alma|İşleme bir mantıksal birimin askıya alma.|  
 |Devam etme|İşleme bir mantıksal birim sürdürme.|  
 |Durdur|İşleme bir mantıksal birim durduruluyor.|  
-|Aktarma|Bağıntı kimliğini değiştirme.|  
+|Aktarma|Bağıntı kimliği değiştiriliyor.|  
   
- Bir etkinlik izleme türleri yukarıdaki bileşimi tanımlanır.  
+ Bir etkinlik, yukarıdaki izleme türleri bir birleşimi olarak tanımlanır.  
   
- Yerel (izleme kaynak) kapsamda ideal bir etkinlik tanımlayan normal bir ifade değil,  
+ Bir yerel (izleme kaynak) kapsamındaki ideal aktiviteye tanımlayan bir normal ifade verilmiştir,  
   
  `R = Start (Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop`  
   
- Başka bir deyişle, bir etkinlik aşağıdaki koşulları karşılaması gerekir.  
+ Başka bir deyişle, etkinlik aşağıdaki koşulları karşılaması gerekir.  
   
--   Başlamalı ve sırasıyla Başlat ve Durdur izlemeler tarafından Durdur  
+-   Başlamalı ve bir başlatma ve durdurma izlemeleri tarafından durdurur  
   
--   Askıya alma veya sürdürme izleme hemen önceki bir aktarım izleme olmalıdır  
+-   Hemen bir askıya alma veya sürdürme izleme önceki bir aktarım izleme olmalıdır  
   
--   Böyle izlemeleri varsa askıya alma ve sürdürme izlemeleri arasındaki tüm izlemeleri olmamalıdır  
+-   Bu tür izleme varsa askıya alma ve sürdürme izlemeler arasında tüm izlemeleri olmamalıdır  
   
--   Önceki koşullar gözlenen sürece herhangi ve birçok Kritik/hata/uyarı/bilgi/Verbose/aktarım izlemeleri olarak olabilir  
+-   Önceki koşullar gözlemlenen sürece her ve Kritik/hata/uyarı/bilgi/Verbose/aktarım izleme sayıda olabilir  
   
- Genel kapsamda ideal bir etkinlik tanımlayan normal bir ifade değil,  
+ Aşağıdaki genel kapsamda ideal aktiviteye tanımlayan bir düzenli ifadedir,  
   
 ```  
 R+   
 ```  
   
- yerel kapsam içinde bir etkinlik için normal ifade edilen R ile. Bu şekilde çevirir,  
+ R ile yerel kapsama bir etkinlik için normal ifade edilen. Bu şekilde dönüşür,  
   
 ```  
 [R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  

@@ -2,20 +2,20 @@
 title: Tek Yönlü
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 5cb3619d56720333f23d933a8f356e8b0268c4d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25720285e29641c3c040444cb643af2790f10d3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505713"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407777"
 ---
 # <a name="one-way"></a>Tek Yönlü
-Bu örnek bir tek yönlü hizmet işlemleri hizmet kişiyle gösterir. İstemci, hizmet işlemlerinin çift yönlü hizmet işlemleri ile olduğu gibi tamamlamak beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet izlemek etkinleştirmek için bir kendi kendini barındıran konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  
+Bu örnek, bir hizmet sözleşmesi ile tek yönlü hizmet işlemleri gösterir. İstemci, hizmet işlemlerini çift yönlü hizmet işlemleri ile olduğu gibi tamamlanması için beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Tek yönlü hizmet sözleşmesi oluşturmak için hizmet sözleşmesini tanımlama, uygulama <xref:System.ServiceModel.OperationContractAttribute> sınıf her işleme ve ayarlayın <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> için `true` aşağıdaki örnek kodda gösterildiği gibi:  
+ Tek yönlü hizmet sözleşmesi oluşturmak için hizmet sözleşmesini tanımlama, Uygula <xref:System.ServiceModel.OperationContractAttribute> sınıfı her işleme ve ayarlama <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> için `true` aşağıdaki örnek kodda gösterildiği gibi:  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -32,7 +32,7 @@ public interface IOneWayCalculator
 }  
 ```  
   
- İstemci hizmet işlemleri tamamlamak beklemez göstermek için aşağıdaki örnek kodda gösterildiği gibi beş saniyelik gecikme, bu örnek hizmet kodunda uygular:  
+ İstemci hizmet işlemleri tamamlamak beklemez göstermek için aşağıdaki örnek kodda gösterildiği gibi bu örnek hizmeti kodunda bir 5 saniyelik gecikme uygular:  
   
 ```  
 / This service class implements the service contract.  
@@ -52,11 +52,11 @@ public class CalculatorService : IOneWayCalculator
 }  
 ```  
   
- İstemci hizmet aradığında, çağrı hizmet işlemin tamamlanmasını beklemeden döndürür.  
+ İstemci hizmeti çağırıp, çağrı, hizmeti işlemin tamamlanmasını beklemenize gerek kalmadan döndürür.  
   
- Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hem hizmet hem de istemci konsol pencerelerinde görüntülenir. İstemci hizmeti alma iletileri görebilirsiniz. Her konsol penceresinde hem hizmet hem de istemci kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, istemci ve hizmet etkinlikleri hizmet ve istemci konsol pencerelerinde görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi hizmet ve istemci aşağı kapatmak için ENTER tuşuna basın.  
   
- İstemci, bir istemci tek yönlü hizmet işlemleri için beklemez gösteren hizmet öncesinde tamamlanır. İstemci çıktı aşağıdaki gibidir:  
+ İstemci hizmeti önceden tek yönlü hizmet işlemleri için bir istemci beklemez gösteren tamamlanır. İstemci çıktısı aşağıdaki gibidir:  
   
 ```  
 Add(100,15.99)  
@@ -67,7 +67,7 @@ Divide(22,7)
 Press <ENTER> to terminate client.  
 ```  
   
- Aşağıdaki hizmet çıkış gösterilir:  
+ Aşağıdaki hizmet çıktı gösterilmektedir:  
   
 ```  
 The service is ready.  
@@ -84,25 +84,25 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP, tanım olarak, bir istek/yanıt protokoldür; bir istek yapıldığında, bir yanıt döndürdü. Bu, hatta HTTP üzerinden kullanıma sunulan bir tek yönlü hizmet işlemi için geçerlidir. İşlemi çağrıldığında, hizmet işlemi yürütüldü önce hizmet 202 bir HTTP durum kodunu döndürür. Bu durum kodu istek işleme için kabul edildi ancak işlem henüz tamamlanmadı anlamına gelir. İşlemi blokları kadar adlı istemci hizmetinden 202 yanıtı alır. Oturumları kullanmak üzere yapılandırılmış bir bağlamayı kullanarak birden fazla tek yönlü ileti gönderildiğinde bu bazı beklenmeyen davranışlara neden olabilir. `wsHttpBinding` Bu örnekte kullanılan bağlama oturumları kullanmak için bir güvenlik bağlamı oluşturmak için varsayılan olarak yapılandırılır. Varsayılan olarak, bir oturumdaki iletilerin gönderilmiş sıraya ulaşması garanti. Bir oturumda ikinci bir ileti gönderildiğinde, ilk iletiyi işleyene kadar bu nedenle, onu işlenmedi. Bu önceki iletisinin işlem tamamlanana kadar istemci 202 yanıt iletisi için almaz sonucudur. İstemci bu nedenle görünüyor her sonraki işlem çağrısı blok. Bu davranışı önlemek için bu örnek çalışma zamanının eşzamanlı olarak işlemek için ayrı örneklerini iletileri gönderme yapılandırır. Örnek kümeleri <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> için `PerCall` böylece her ileti başka bir örneği tarafından işlenebilir. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ayarlanmış `Multiple` iletileri gönderme aynı anda birden çok iş parçacığı izin vermek için.  
+>  HTTP, tanımı gereği, bir istek/yanıt protokoldür; bir istekte bulunulduğunda bir yanıt döndürülür. Bu, hatta HTTP üzerinden sunulan bir tek yönlü hizmet işlemi için geçerlidir. İşlem çağrıldığında, hizmet işlemi yürütüldü önce hizmet 202 bir HTTP durum kodu döndürür. Bu durum kodu istek işleme için kabul edildi, ancak işleme henüz tamamlanmamış anlamına gelir. Hizmetten 202 yanıtının alıncaya kadar blokları işlemi çağıran istemci. Oturumları kullanacak şekilde yapılandırılmış bir bağlama kullanarak birden çok yönlü ileti gönderildiğinde bu bazı beklenmeyen davranışlara neden olabilir. `wsHttpBinding` Bu örnekte kullanılan bağlama oturumları kullanmak için bir güvenlik bağlamı'kurmak için varsayılan olarak yapılandırılır. Varsayılan olarak, bir oturumda ileti bunlar gönderildiği sırada ulşamasını garanti edilir. Bir oturumda ikinci bir ileti gönderildiğinde, ilk iletiyi işleyene kadar bu nedenle, bu işlenmedi. Bunun sonucu olarak, önceki iletinin işlenmesi tamamlanıncaya kadar istemci 202 yanıtının bir ileti almadığında ' dir. İstemci için bu nedenle görünür her bir sonraki işlemi çağrısının blok. Bu davranışı önlemek için bu örnek, çalışma zamanının eşzamanlı olarak işlemek için ayrı örnekleri iletiler gönderme yapılandırır. Örnek kümelerini <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> için `PerCall` böylece her ileti farklı bir örneği tarafından işlenebilir. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ayarlanır `Multiple` teker teker iletilerini dağıtmak birden fazla iş parçacığı izin vermek için.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  İstemciyi çalıştırın ve hizmeti kapatılıyor önce istemciyi aşağı kapatmak önce hizmeti çalıştırın. Hizmet kaldırılmıştır olduğundan istemci güvenlik oturumu düzgün bir şekilde kapatılamıyor olduğunda bu istemci özel durumu önler.  
+>  İstemcisini çalıştıran ve istemci hizmeti kapatılıyor önce bilgisayarı önce hizmeti çalıştırın. Hizmet gitmiş olduğundan güvenlik oturumu düzgün bir şekilde istemci kapattığınızda olamaz, bu istemci özel durumu önler.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   

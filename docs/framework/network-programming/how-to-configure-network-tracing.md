@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ağ İzlemeyi Yapılandır'
+title: 'Nasıl yapılır: ağ izlemeyi yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -14,17 +14,17 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395966"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404333"
 ---
-# <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ İzlemeyi Yapılandır
-Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [etkinleştirme ağ izleme](../../../docs/framework/network-programming/enabling-network-tracing.md).  
+# <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: ağ izlemeyi yapılandırma
+Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Bilgisayar yapılandırma dosyası machine.config, Windows'un yüklü olduğu dizinde %Windir%\Microsoft.NET\Framework klasöründe depolanır. Her (örneğin, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config veya C:\Windows\ bilgisayarınızda yüklü .NET Framework sürümü için %Windir%\Microsoft.NET\Framework altında klasörlerde ayrı machine.config dosyasının yok Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
+ Bilgisayar yapılandırma dosyası machine.config, Windows'un yüklü olduğu dizinde %Windir%\Microsoft.NET\Framework klasöründe depolanır. (Örneğin, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config veya C:\Windows\ bilgisayarda yüklü .NET Framework'ün her sürümü için %Windir%\Microsoft.NET\Framework altındaki klasörlerde ayrı bir machine.config dosyası yok Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
   
  Bu ayarlar, bilgisayarın yapılandırma dosyasında öncelikli olan uygulamanın bilgisayar yapılandırma dosyasında da yapılabilir.  
   
@@ -80,27 +80,27 @@ Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve
     </configuration>  
     ```  
   
- Bir ad eklediğinizde `<switches>` bloğu, izleme çıktısı bazı yöntemler adına ilgili bilgileri içerir. Aşağıdaki tabloda çıkış açıklanmaktadır.  
+ İçin bir ad eklediğinizde `<switches>` blok, izleme çıkışı adla ilgili bazı yöntemlerden alınan bilgiler içerir. Aşağıdaki tabloda çıkış açıklanmaktadır.  
   
 |Ad|Çıkış kaynağı|  
 |----------|-----------------|  
-|`System.Net.Sockets`|Bazı genel yöntemini <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>, ve <xref:System.Net.Dns> sınıfları|  
-|`System.Net`|Bazı genel yöntemini <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, ve <xref:System.Net.FtpWebResponse> sınıfları ve SSL hata ayıklama bilgileri (geçersiz sertifikalar, eksik verenler listesi ve istemci sertifika hataları.)|  
-|`System.Net.HttpListener`|Bazı genel yöntemini <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>, ve <xref:System.Net.HttpListenerResponse> sınıfları.|  
+|`System.Net.Sockets`|Bazı genel yöntemleri <xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient>, ve <xref:System.Net.Dns> sınıfları|  
+|`System.Net`|Bazı genel yöntemleri <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest>, ve <xref:System.Net.FtpWebResponse> sınıflar ve SSL hata ayıklama bilgileri (geçersiz sertifikaları, eksik sertifika verenler listesi ve istemci sertifikası hataları.)|  
+|`System.Net.HttpListener`|Bazı genel yöntemleri <xref:System.Net.HttpListener>, <xref:System.Net.HttpListenerRequest>, ve <xref:System.Net.HttpListenerResponse> sınıfları.|  
 |`System.Net.Cache`|Bazı özel ve iç yöntemler `System.Net.Cache`.|  
-|`System.Net.Http`|Bazı genel yöntemini <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler>, ve <xref:System.Net.Http.WebRequestHandler> sınıfları.|  
-|`System.Net.WebSockets.WebSocket`|Bazı genel yöntemini <xref:System.Net.WebSockets.ClientWebSocket> ve <xref:System.Net.WebSockets.WebSocket> sınıfları.|  
+|`System.Net.Http`|Bazı genel yöntemleri <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.DelegatingHandler>, <xref:System.Net.Http.HttpClientHandler>, <xref:System.Net.Http.HttpMessageHandler>, <xref:System.Net.Http.MessageProcessingHandler>, ve <xref:System.Net.Http.WebRequestHandler> sınıfları.|  
+|`System.Net.WebSockets.WebSocket`|Bazı genel yöntemleri <xref:System.Net.WebSockets.ClientWebSocket> ve <xref:System.Net.WebSockets.WebSocket> sınıfları.|  
   
  Aşağıdaki tabloda listelenen öznitelikler, izleme çıkışını yapılandırır.  
   
 |Öznitelik adı|Öznitelik değeri|  
 |--------------------|---------------------|  
-|`Value`|Gerekli <xref:System.String> özniteliği. Çıkışın ayrıntı düzeyini ayarlar. Yasal değerler `Critical`, `Error`, `Verbose`, `Warning`, ve `Information`.<br /><br /> Bu özniteliği üzerinde ayarlanmalıdır \<ad ekleyin > öğesinin \<anahtarları > örnekte gösterildiği gibi öğesi. Üzerinde bu öznitelik ayarlanırsa bir özel durum \<kaynak > öğesi.|  
-|`maxdatasize`|İsteğe bağlı <xref:System.Int32> özniteliği. Her satır izlemesinde yer alan ağ verilerinin en fazla bayt sayısını ayarlar. Varsayılan değer 1024'tür.<br /><br /> Bu öznitelik üzerinde ayarlamalısınız \<kaynak > örnekte gösterildiği gibi öğesi. Bu öznitelik altında bir öğede ayarlanırsa bir özel durum \<anahtarları > öğesi.|  
-|`Tracemode`|İsteğe bağlı <xref:System.String> özniteliği. Kümesine `includehex` Protokolü izlemeleri onaltılık ve metin biçiminde göstermek için. Kümesine `protocolonly` yalnızca metin göstermek için. Varsayılan değer `includehex` şeklindedir.<br /><br /> Bu öznitelik üzerinde ayarlamalısınız \<anahtarları > örnekte gösterildiği gibi öğesi. Bu öznitelik altında bir öğede ayarlanırsa bir özel durum \<kaynak > öğesi.|  
+|`Value`|Gerekli <xref:System.String> özniteliği. Çıkışın ayrıntı düzeyini ayarlar. Meşru değerler `Critical`, `Error`, `Verbose`, `Warning`, ve `Information`.<br /><br /> Bu özniteliği ayarlanmalıdır \<adı Ekle > öğesinin \<anahtarlar > örnekte gösterildiği gibi bir öğe. Şirket bu öznitelik ayarlanırsa bir özel durum \<kaynak > öğesi.|  
+|`maxdatasize`|İsteğe bağlı <xref:System.Int32> özniteliği. Her satır izlemesinde yer alan ağ verilerinin en fazla bayt sayısını ayarlar. Varsayılan değer 1024'tür.<br /><br /> Bu öznitelik ayarlanmalıdır \<kaynak > örnekte gösterilen şekilde öğesi. Altındaki bir öğede bu öznitelik ayarlanırsa bir özel durum \<anahtarlar > öğesi.|  
+|`Tracemode`|İsteğe bağlı <xref:System.String> özniteliği. Kümesine `includehex` protokol izlemelerini onaltılık ve metin biçiminde göstermek için. Kümesine `protocolonly` yalnızca metin göstermek için. Varsayılan değer `includehex` şeklindedir.<br /><br /> Bu öznitelik ayarlanmalıdır \<anahtarlar > örnekte gösterilen şekilde öğesi. Altındaki bir öğede bu öznitelik ayarlanırsa bir özel durum \<kaynak > öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)  
  [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [İzleme ve izleme giriş](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [İzlemeye giriş](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

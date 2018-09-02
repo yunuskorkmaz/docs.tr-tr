@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: veri hizmeti için bir istek (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin'
+title: 'Nasıl yapılır: bir veri hizmeti isteği (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,31 +7,31 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: cf3ba2a13d56aae56ed7a1444169056b9905a145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363972"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402527"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: veri hizmeti için bir istek (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin
-Varsayılan olarak, kimlik bilgileri istemci kitaplığı için bir istek gönderirken sağlamıyor bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmet. Bununla birlikte, kimlik bilgileri sağlayarak veri hizmeti isteklerine kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için bkz: [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere gösterilmiştir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veri hizmetinden veri isterken, istemci.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: bir veri hizmeti isteği (WCF Veri Hizmetleri) istemci kimlik bilgilerini belirtin
+Varsayılan olarak, kimlik bilgilerini istemci kitaplığı için bir isteği gönderirken sağlamaz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmeti. Ancak, kimlik bilgilerini sağlayarak istekleri veri hizmeti kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere nasıl gösterir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veriler veri hizmetinden isterken istemci.  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulur istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturduğunuz [WCF Veri Hizmetleri quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Aynı zamanda [Northwind örnek veri hizmeti](http://go.microsoft.com/fwlink/?LinkId=187426) üzerinde yayımlanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web sitesi; bu örnek veri hizmetidir salt okunur ve değişikliklerinizi kaydetmeye çalışırken bir hata döndürür. Örnek Veri Hizmetleri üzerinde [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web sitesinin anonim kimlik doğrulaması izin.  
+ Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Ayrıca [Northwind örnek veri hizmeti](https://go.microsoft.com/fwlink/?LinkId=187426) üzerinde yayımlanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web sitesi; bu örnek verileri hizmeti salt okunur ve değişiklikleri farklı kaydedilmeye çalışılırken bir hata döndürür. Örnek verileri hizmetlerine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web sitesine izin ver, anonim kimlik doğrulaması.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Windows Presentation Framework uygulaması'nın ana sayfasında bir Genişletilebilir uygulama biçimlendirme dili (XAML) dosya için arka plan kod sayfası arasındadır. Bu örnek görüntüler bir `LoginWindow` kimlik doğrulaması toplamak için örnek kullanıcıdan kimlik bilgileri ve ardından veri hizmetine bir istek yaparken, bu kimlik bilgilerini kullanır.  
+ Aşağıdaki örnek, Windows Presentation Framework uygulaması'nın ana sayfasında Extensible Application Markup Language (XAML) dosyası için arka plan kod sayfası arasındadır. Bu örnek görüntüler bir `LoginWindow` örnek kimlik doğrulama toplamak için kullanıcıdan kimlik bilgileri ve daha sonra veri hizmetine istek yaparken, bu kimlik bilgilerini kullanır.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XAML WPF Uygulaması'nın ana sayfasında tanımlar.  
+ WPF Uygulaması'nın ana sayfasında aşağıdaki XAML tanımlar.  
   
  [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir istek veri hizmeti yapmadan önce kullanıcıdan kimlik doğrulaması bilgilerini toplamak için kullanılan pencere için arka plan kodu sayfanın arasındadır.  
+ Aşağıdaki örnek, veri hizmetine bir istek yapmadan önce kullanıcıdan kimlik doğrulama bilgilerini toplamak için kullanılan pencere için arka plan kod sayfası arasındadır.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
  [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
@@ -44,13 +44,13 @@ Varsayılan olarak, kimlik bilgileri istemci kitaplığı için bir istek gönde
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu konudaki örnek için aşağıdaki güvenlik değerlendirmeleri geçerlidir:  
   
--   Bu örnekte sağlanan kimlik bilgileri çalıştığını doğrulamak için Northwind veri hizmeti anonim erişim dışında bir kimlik doğrulama düzeni kullanmanız gerekir. Aksi takdirde, veri hizmeti barındıran Web sitesinin kimlik bilgileri istenmez.  
+-   Bu örnekte verilen kimlik bilgilerinin çalıştığını doğrulamak için Northwind verileri hizmeti anonim erişim dışında bir kimlik doğrulama şeması kullanması gerekir. Aksi halde, veri hizmetini barındıran Web sitesinin kimlik bilgileri istenmez.  
   
--   Kullanıcı kimlik bilgileri yürütme sırasında yalnızca istenen ve önbelleğe. Kimlik bilgileri her zaman güvenli bir şekilde depolanması gerekir.  
+-   Kullanıcı kimlik bilgileri, yürütme sırasında yalnızca istenen ve önbelleğe. Kimlik bilgileri her zaman güvenli bir şekilde depolanması gerekir.  
   
--   Verileri bir saldırganın tarafından görülebilir için temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez. Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) temiz metin olarak gönderilir ve geçirilebilir.  
+-   Temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez, bu şekilde verileri bir saldırgan tarafından görülebilir. Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) düz metin olarak gönderilir ve kesilebilir.  
   
- Daha fazla bilgi için bkz: [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
+ Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WCF Veri Hizmetlerinin Güvenliğini Sağlama](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  

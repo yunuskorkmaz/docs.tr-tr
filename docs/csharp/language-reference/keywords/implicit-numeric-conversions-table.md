@@ -7,14 +7,15 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 2d417a2020656f300de0517526742679388f262e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417602"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Örtük Sayısal Dönüşümler Tablosu (C# Başvurusu)
-Aşağıdaki tabloda önceden tanımlanmış örtük sayısal dönüşümler gösterir. Örtük dönüşümler yöntemi çağırma ve atama deyimleri dahil olmak üzere birçok durumda oluşabilir.  
+Aşağıdaki tablo, önceden tanımlanmış örtük sayısal dönüşümler gösterir. Örtük dönüştürmeleri yöntemi çağırma ve atama deyimleri dahil olmak üzere birçok durumda oluşabilir.  
   
 |Başlangıç|Bitiş|  
 |----------|--------|  
@@ -31,21 +32,22 @@ Aşağıdaki tabloda önceden tanımlanmış örtük sayısal dönüşümler gö
   
 ## <a name="remarks"></a>Açıklamalar  
   
--   Dönüşümleri içinde duyarlık ancak değil büyüklük kaybedilebilir `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
+-   Duyarlık ancak değil büyüklük kayıp dönüşümlerse içinde `int`, `uint`, `long`, veya `ulong` için `float` ve `long` veya `ulong` için `double`.  
   
--   Hiçbir örtük dönüşümler vardır `char` türü.  
+-   Herhangi bir örtük dönüştürme vardır `char` türü.  
   
--   Kayan nokta türleri arasında örtük hiçbir dönüştürme vardır ve `decimal` türü.  
+-   Kayan nokta türleri arasında örtük dönüştürme işlemi yok ve `decimal` türü.  
   
--   Sabit bir ifade türü `int` dönüştürülebilir `sbyte`, `byte`, `short`, `ushort`, `uint`, veya `ulong`, sağlanan Hedef aralık içinde sabit ifade değeri yazın.  
+-   Sabit bir ifade türü `int` dönüştürülebilir `sbyte`, `byte`, `short`, `ushort`, `uint`, veya `ulong`, sağlanan hedef aralığı içinde sabit ifade değeri yazın.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
- [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Tür Değiştirme ve Tür Dönüştürmeler](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
