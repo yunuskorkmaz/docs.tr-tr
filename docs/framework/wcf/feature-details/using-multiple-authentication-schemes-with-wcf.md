@@ -2,18 +2,18 @@
 title: WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498452"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408979"
 ---
-# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="c9003-102">WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma</span><span class="sxs-lookup"><span data-stu-id="c9003-102">Using Multiple Authentication Schemes with WCF</span></span>
-<span data-ttu-id="c9003-103">WCF artık tek bir noktadaki birden çok kimlik doğrulama şemasını belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="c9003-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="c9003-104">Ayrıca barındırılan web hizmetleri doğrudan IIS kimlik doğrulaması ayarlarını devralabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9003-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="c9003-105">Kendini barındıran Hizmetleri düzenleri kullanılabilmesi için hangi kimlik doğrulama belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9003-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="c9003-106">IIS'de kimlik doğrulama ayarlarını ayarlama hakkında daha fazla bilgi için bkz: [IIS kimlik doğrulaması](http://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="c9003-106">For more information about setting authentication settings in IIS, see [IIS Authentication](http://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
+# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="02ad1-102">WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma</span><span class="sxs-lookup"><span data-stu-id="02ad1-102">Using Multiple Authentication Schemes with WCF</span></span>
+<span data-ttu-id="02ad1-103">WCF artık tek bir uç noktada birden çok kimlik doğrulama düzenleri belirtmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="02ad1-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="02ad1-104">Ayrıca barındırılan web hizmetleri doğrudan IIS kimlik doğrulaması ayarlarını devralabilir.</span><span class="sxs-lookup"><span data-stu-id="02ad1-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="02ad1-105">Şirket içinde barındırılan hizmetler, hangi kimlik doğrulama düzenleri kullanılabilir belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02ad1-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="02ad1-106">IIS kimlik doğrulaması ayarlarını ayarlama hakkında daha fazla bilgi için bkz. [IIS kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="02ad1-106">For more information about setting authentication settings in IIS, see [IIS Authentication](https://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
   
-## <a name="iis-hosted-services"></a><span data-ttu-id="c9003-107">IIS barındırılan hizmetleri</span><span class="sxs-lookup"><span data-stu-id="c9003-107">IIS-Hosted Services</span></span>  
- <span data-ttu-id="c9003-108">IIS barındırılan hizmetler için IIS içinde kullanmak istediğiniz kimlik doğrulama şemasını ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c9003-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="c9003-109">Ardından hizmetinizin web.config dosyasına bağlama yapılandırmanızda clientCredential türü "InheritedFromHost" olarak aşağıdaki XML parçacığında gösterildiği gibi belirtin:</span><span class="sxs-lookup"><span data-stu-id="c9003-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
+## <a name="iis-hosted-services"></a><span data-ttu-id="02ad1-107">IIS barındırılan hizmetler</span><span class="sxs-lookup"><span data-stu-id="02ad1-107">IIS-Hosted Services</span></span>  
+ <span data-ttu-id="02ad1-108">IIS barındırılan hizmetler için IIS içinde kullanmak istediğiniz kimlik doğrulama şeması ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="02ad1-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="02ad1-109">Ardından hizmetinizin web.config dosyasında bağlama Yapılandırması'nda clientCredential türü "InheritedFromHost" olarak aşağıdaki XML kod parçacığında gösterildiği gibi belirtin:</span><span class="sxs-lookup"><span data-stu-id="02ad1-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ ms.locfileid: "33498452"
     </bindings>  
 ```  
   
- <span data-ttu-id="c9003-110">Yalnızca bir alt kümesini ServiceAuthenticationBehavior kullanarak, hizmetiniz ile kullanılacak kimlik doğrulama şemasını istediğinizi belirtin veya \<serviceAuthenticationManager > öğesi.</span><span class="sxs-lookup"><span data-stu-id="c9003-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="c9003-111">Bu kodda yapılandırırken ServiceAuthenticationBehavior aşağıdaki kod parçacığında gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="c9003-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
+ <span data-ttu-id="02ad1-110">Yalnızca bir alt kümesini ServiceAuthenticationBehavior kullanarak hizmetinize kullanılacak kimlik doğrulama düzenleri istediğinizi belirtin veya \<serviceAuthenticationManager > öğesi.</span><span class="sxs-lookup"><span data-stu-id="02ad1-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="02ad1-111">Bu kodda yapılandırırken ServiceAuthenticationBehavior aşağıdaki kod parçacığında gösterildiği gibi kullanın.</span><span class="sxs-lookup"><span data-stu-id="02ad1-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="c9003-112">Bu yapılandırma dosyasında yapılandırırken kullandığınız \<serviceAuthenticationManager > aşağıdaki XML parçacığında gösterildiği gibi öğesi.</span><span class="sxs-lookup"><span data-stu-id="c9003-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="02ad1-112">Bu yapılandırma dosyasında yapılandırırken, kullandığınız \<serviceAuthenticationManager > aşağıdaki XML kod parçacığında gösterildiği gibi bir öğe.</span><span class="sxs-lookup"><span data-stu-id="02ad1-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="c9003-113">Bu, yalnızca bir alt kümesini burada listelenen kimlik doğrulama şemasını IIS'de belirlemiş bağlı olarak hizmet uç noktası üzerinde uygulamak için değerlendirilir güvence altına alır.</span><span class="sxs-lookup"><span data-stu-id="c9003-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="c9003-114">Bir geliştirici dışlayabilirsiniz Bunun anlamı deyin listeden temel kimlik doğrulama serviceAuthenticationManager listeden kaldırarak ve IIS etkinleştirilmiş olsa dahi, üzerinde hizmet uç noktası uygulanmaz</span><span class="sxs-lookup"><span data-stu-id="c9003-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
+ <span data-ttu-id="02ad1-113">Bu, yalnızca bir alt kümesini burada listelenen kimlik doğrulama düzenleri IIS'de ne seçili olursa bağlı olarak, hizmet uç noktasında uygulamak için kabul edilir garanti eder.</span><span class="sxs-lookup"><span data-stu-id="02ad1-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="02ad1-114">Bir geliştirici hariç tutabilirsiniz Bunun anlamı serviceAuthenticationManager listeden gt;(yok) listeden temel kimlik doğrulaması deyin ve IIS'de etkin olsa bile, bu hizmet uç noktasında uygulanmaz</span><span class="sxs-lookup"><span data-stu-id="02ad1-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
   
-## <a name="self-hosted-services"></a><span data-ttu-id="c9003-115">Kendini barındıran Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="c9003-115">Self-Hosted Services</span></span>  
- <span data-ttu-id="c9003-116">Ayarları devralmak için hiçbir IIS olduğundan kendini barındıran Hizmetleri biraz farklı bir şekilde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="c9003-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="c9003-117">Burada kullandığınız \<serviceAuthenticationManager > öğesi veya ServiceAuthenticationBehavior devralınır kimlik doğrulama ayarlarını belirtin.</span><span class="sxs-lookup"><span data-stu-id="c9003-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="c9003-118">Kodda şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="c9003-118">In code it looks like this:</span></span>  
+## <a name="self-hosted-services"></a><span data-ttu-id="02ad1-115">Şirket içinde barındırılan hizmetleri</span><span class="sxs-lookup"><span data-stu-id="02ad1-115">Self-Hosted Services</span></span>  
+ <span data-ttu-id="02ad1-116">Ayarları devralmak için hiçbir IIS olduğundan şirket içinde barındırılan hizmetler biraz farklı bir şekilde yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="02ad1-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="02ad1-117">Burada kullandığınız \<serviceAuthenticationManager > öğesi veya ServiceAuthenticationBehavior devralınır kimlik doğrulama ayarlarını belirtmek için.</span><span class="sxs-lookup"><span data-stu-id="02ad1-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="02ad1-118">Kod şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="02ad1-118">In code it looks like this:</span></span>  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="c9003-119">Yapılandırma dosyasında şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="c9003-119">In config, it looks like this:</span></span>  
+ <span data-ttu-id="02ad1-119">Yapılandırmada şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="02ad1-119">In config, it looks like this:</span></span>  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="c9003-120">Ve ardından aşağıdaki XML parçacığında gösterildiği gibi bağlama ayarlarında InheritFromHost belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c9003-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="02ad1-120">' İ tıklatın ve sonra aşağıdaki XML kod parçacığında gösterildiği gibi bağlama ayarlarında InheritFromHost belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02ad1-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- <span data-ttu-id="c9003-121">Alternatif olarak, kimlik doğrulama şemasını özel bir bağlama belirtin, ayarlayarak HTTP kimlik doğrulama şemasını bağlama öğesi, aşağıdaki yapılandırma parçacığında gösterildiği gibi taşıma.</span><span class="sxs-lookup"><span data-stu-id="c9003-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
+ <span data-ttu-id="02ad1-121">Alternatif olarak, özel bir bağlama kimlik doğrulama düzeni belirtebilirsiniz, ayarlayarak kimlik doğrulama düzeni HTTP bağlama öğesi aşağıdaki yapılandırma kod parçacığında gösterildiği gibi taşıma.</span><span class="sxs-lookup"><span data-stu-id="02ad1-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c9003-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c9003-122">See Also</span></span>  
- [<span data-ttu-id="c9003-123">Bağlamalar ve Güvenlik</span><span class="sxs-lookup"><span data-stu-id="c9003-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [<span data-ttu-id="c9003-124">Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar</span><span class="sxs-lookup"><span data-stu-id="c9003-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [<span data-ttu-id="c9003-125">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="c9003-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="c9003-126">Özel Bağlamalarla Güvenlik Özellikleri</span><span class="sxs-lookup"><span data-stu-id="c9003-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="c9003-127">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="c9003-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="c9003-128">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="c9003-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [<span data-ttu-id="c9003-129">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="c9003-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="02ad1-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="02ad1-122">See Also</span></span>  
+ [<span data-ttu-id="02ad1-123">Bağlamalar ve Güvenlik</span><span class="sxs-lookup"><span data-stu-id="02ad1-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="02ad1-124">Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar</span><span class="sxs-lookup"><span data-stu-id="02ad1-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [<span data-ttu-id="02ad1-125">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="02ad1-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="02ad1-126">Özel Bağlamalarla Güvenlik Özellikleri</span><span class="sxs-lookup"><span data-stu-id="02ad1-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="02ad1-127">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="02ad1-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="02ad1-128">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="02ad1-128">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="02ad1-129">Özel Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="02ad1-129">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)

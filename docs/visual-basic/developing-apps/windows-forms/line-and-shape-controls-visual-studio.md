@@ -7,30 +7,30 @@ helpviewer_keywords:
 - Shape control [Visual Basic]
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
-ms.openlocfilehash: 6baffe826fa20e17a763b3a5e6fa8476dcb6c220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585560"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404205"
 ---
-# <a name="line-and-shape-controls-visual-studio"></a><span data-ttu-id="c001e-102">Çizgi ve Şekil Denetimleri (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="c001e-102">Line and Shape Controls (Visual Studio)</span></span>
-<span data-ttu-id="c001e-103">Visual Basic Power Packs çizgi ve Şekil denetimleri etkinleştirmeniz yatay, dikey ve çapraz çizgiler, dikdörtgenler, kareler, Oval, daire ve üçgen ve kareler bir form veya kapsayıcı yuvarlak köşeli çizmek grafik denetimleri bulunur.</span><span class="sxs-lookup"><span data-stu-id="c001e-103">The Visual Basic Power Packs Line and Shape controls are graphical controls that enable you to draw horizontal, vertical, and diagonal lines, rectangles, squares, ovals, circles, and rectangles and squares with rounded corners on a form or container.</span></span>  
+# <a name="line-and-shape-controls-visual-studio"></a><span data-ttu-id="13714-102">Çizgi ve Şekil Denetimleri (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="13714-102">Line and Shape Controls (Visual Studio)</span></span>
+<span data-ttu-id="13714-103">Visual Basic Power Packs çizgi ve Şekil denetimleri yatay, dikey ve çapraz satırları, dikdörtgenler, kare, elips, daire ve dikdörtgenler ve kareler yuvarlatılmış köşeler bir form veya kapsayıcı ile çizme olanak tanıyan Grafik denetimlerdir.</span><span class="sxs-lookup"><span data-stu-id="13714-103">The Visual Basic Power Packs Line and Shape controls are graphical controls that enable you to draw horizontal, vertical, and diagonal lines, rectangles, squares, ovals, circles, and rectangles and squares with rounded corners on a form or container.</span></span>  
   
- <span data-ttu-id="c001e-104">PowerPack denetimleri artık Visual Studio'ya dahil olan, ancak bunları indirebilirsiniz [Yükleme Merkezi'nden](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span><span class="sxs-lookup"><span data-stu-id="c001e-104">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
+ <span data-ttu-id="13714-104">PowerPack denetimleri artık Visual Studio'ya dahil, ancak bunları indirebilirsiniz [İndirme Merkezi](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span><span class="sxs-lookup"><span data-stu-id="13714-104">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c001e-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="c001e-105">In This Section</span></span>  
- [<span data-ttu-id="c001e-106">Çizgi ve Şekil Denetimlerine Giriş</span><span class="sxs-lookup"><span data-stu-id="c001e-106">Introduction to the Line and Shape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- <span data-ttu-id="c001e-107">Çizgi ve Şekil denetimleri açıklar ve ve nesne modeli açıklar.</span><span class="sxs-lookup"><span data-stu-id="c001e-107">Introduces and discusses the Line and Shape controls and describes the object model.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="13714-105">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="13714-105">In This Section</span></span>  
+ [<span data-ttu-id="13714-106">Çizgi ve Şekil Denetimlerine Giriş</span><span class="sxs-lookup"><span data-stu-id="13714-106">Introduction to the Line and Shape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
+ <span data-ttu-id="13714-107">Tanıtır ve çizgi ve Şekil denetimleri açıklar ve nesne modelini açıklar.</span><span class="sxs-lookup"><span data-stu-id="13714-107">Introduces and discusses the Line and Shape controls and describes the object model.</span></span>  
   
- [<span data-ttu-id="c001e-108">Nasıl Yapılır: LineShape Denetimiyle Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="c001e-108">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
- <span data-ttu-id="c001e-109">Nasıl kullanılacağı ortaya <xref:Microsoft.VisualBasic.PowerPacks.LineShape> tasarım zamanında ve çalışma zamanında çizgi çizmek için denetim.</span><span class="sxs-lookup"><span data-stu-id="c001e-109">Demonstrates how to use the <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control to draw lines at design time and at run time.</span></span>  
+ [<span data-ttu-id="13714-108">Nasıl Yapılır: LineShape Denetimiyle Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="13714-108">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ <span data-ttu-id="13714-109">Nasıl kullanılacağını gösteren <xref:Microsoft.VisualBasic.PowerPacks.LineShape> denetimi tasarım zamanında ve çalışma zamanında çizgi çizmek için.</span><span class="sxs-lookup"><span data-stu-id="13714-109">Demonstrates how to use the <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control to draw lines at design time and at run time.</span></span>  
   
- [<span data-ttu-id="c001e-110">Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme</span><span class="sxs-lookup"><span data-stu-id="c001e-110">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
- <span data-ttu-id="c001e-111">Nasıl kullanılacağı ortaya <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> ve <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> tasarım zamanında ve çalışma zamanında şekiller çizmek için kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="c001e-111">Demonstrates how to use the <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controls to draw shapes at design time and at run time.</span></span>  
+ [<span data-ttu-id="13714-110">Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme</span><span class="sxs-lookup"><span data-stu-id="13714-110">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ <span data-ttu-id="13714-111">Nasıl kullanılacağını gösteren <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> ve <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> denetimleri tasarım zamanında ve çalışma zamanında şekiller çizmek için.</span><span class="sxs-lookup"><span data-stu-id="13714-111">Demonstrates how to use the <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controls to draw shapes at design time and at run time.</span></span>  
   
- [<span data-ttu-id="c001e-112">Nasıl Yapılır: Şekiller Arasında Sekmeyle Gitmeyi Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="c001e-112">How to: Enable Tabbing Between Shapes</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)  
- <span data-ttu-id="c001e-113">Klavyeyi kullanarak şekiller arasında hareket etmek kullanıcıların gösterilmiştir.</span><span class="sxs-lookup"><span data-stu-id="c001e-113">Demonstrates how to enable users to move between shapes by using the keyboard.</span></span>  
+ [<span data-ttu-id="13714-112">Nasıl Yapılır: Şekiller Arasında Sekmeyle Gitmeyi Etkinleştirme</span><span class="sxs-lookup"><span data-stu-id="13714-112">How to: Enable Tabbing Between Shapes</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)  
+ <span data-ttu-id="13714-113">Klavyeyi kullanarak şekiller arasında taşımak kullanıcıları etkinleştirmek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="13714-113">Demonstrates how to enable users to move between shapes by using the keyboard.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="c001e-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c001e-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="13714-114">Başvuru</span><span class="sxs-lookup"><span data-stu-id="13714-114">Reference</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks>

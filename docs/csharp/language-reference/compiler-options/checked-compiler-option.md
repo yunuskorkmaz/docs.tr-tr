@@ -8,48 +8,51 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4ed8467b0e1923aedf38edfd4a25414cbcb88b7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218318"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401712"
 ---
-# <a name="-checked-c-compiler-options"></a><span data-ttu-id="cb766-102">-checked (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="cb766-102">-checked (C# Compiler Options)</span></span>
-<span data-ttu-id="cb766-103">**-İşaretli** seçeneği belirtir ve veri türü, aralığın dışında bir değer sonuçlanan bir tamsayı aritmetiği deyimi kapsamında değil olup bir [işaretli](../../../csharp/language-reference/keywords/checked.md) veya [ Unchecked](../../../csharp/language-reference/keywords/unchecked.md) anahtar sözcük, bir çalışma zamanı özel neden olur.</span><span class="sxs-lookup"><span data-stu-id="cb766-103">The **-checked** option specifies whether an integer arithmetic statement that results in a value that is outside the range of the data type, and that is not in the scope of a [checked](../../../csharp/language-reference/keywords/checked.md) or [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword, causes a run-time exception.</span></span>  
+# <a name="-checked-c-compiler-options"></a><span data-ttu-id="d79f7-102">-checked (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="d79f7-102">-checked (C# Compiler Options)</span></span>
+<span data-ttu-id="d79f7-103">**-Kullanıma** seçeneği veri türü ve aralığı dışında bir değer sonuçlanır bir tamsayı aritmetik deyiminin kapsamı içinde olup olmadığını belirten bir [kullanıma](../../../csharp/language-reference/keywords/checked.md) veya [ denetlenmeyen](../../../csharp/language-reference/keywords/unchecked.md) anahtar sözcüğü, bir çalışma zamanı özel durumuna neden olur.</span><span class="sxs-lookup"><span data-stu-id="d79f7-103">The **-checked** option specifies whether an integer arithmetic statement that results in a value that is outside the range of the data type, and that is not in the scope of a [checked](../../../csharp/language-reference/keywords/checked.md) or [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword, causes a run-time exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb766-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cb766-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d79f7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d79f7-104">Syntax</span></span>  
   
 ```console  
 -checked[+ | -]  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="cb766-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cb766-105">Remarks</span></span>  
- <span data-ttu-id="cb766-106">Kapsamında bir tamsayı aritmetiği deyimi bir `checked` veya `unchecked` anahtar sözcüğü etkisini tabi değil **-işaretli** seçeneği.</span><span class="sxs-lookup"><span data-stu-id="cb766-106">An integer arithmetic statement that is in the scope of a `checked` or `unchecked` keyword is not subject to the effect of the **-checked** option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d79f7-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d79f7-105">Remarks</span></span>  
+ <span data-ttu-id="d79f7-106">Kapsamında olan bir tamsayı aritmetik deyimi bir `checked` veya `unchecked` anahtar sözcüğü etkisini tabi olmayan **-kullanıma** seçeneği.</span><span class="sxs-lookup"><span data-stu-id="d79f7-106">An integer arithmetic statement that is in the scope of a `checked` or `unchecked` keyword is not subject to the effect of the **-checked** option.</span></span>  
   
- <span data-ttu-id="cb766-107">Kapsamında olmayan bir tamsayı aritmetik deyim, bir `checked` veya `unchecked` anahtar sözcüğü sonuçları veri türü aralık dışında bir değer ve **-checked +** (**-işaretli**) kullanılır derleme, bu deyim bir özel durum çalışma zamanında neden olur.</span><span class="sxs-lookup"><span data-stu-id="cb766-107">If an integer arithmetic statement that is not in the scope of a `checked` or `unchecked` keyword results in a value outside the range of the data type, and **-checked+** (**-checked**) is used in the compilation, that statement causes an exception at run time.</span></span> <span data-ttu-id="cb766-108">Varsa **- işaretli -** kullanılan derlemede deyimi çalışma zamanında bir özel durum neden olmaz.</span><span class="sxs-lookup"><span data-stu-id="cb766-108">If **-checked-** is used in the compilation, that statement does not cause an exception at run time.</span></span>  
+ <span data-ttu-id="d79f7-107">Kapsamında olmayan bir tamsayı aritmetik deyimi, bir `checked` veya `unchecked` veri türünün aralığı dışında bir değer anahtar sözcükleri ve **-checked +** (veya **-kullanıma**) kullanılır deyimi bir özel durum çalışma zamanında neden derlemeyi.</span><span class="sxs-lookup"><span data-stu-id="d79f7-107">If an integer arithmetic statement that is not in the scope of a `checked` or `unchecked` keyword results in a value outside the range of the data type, and **-checked+** (or **-checked**) is used in the compilation, that statement causes an exception at run time.</span></span> <span data-ttu-id="d79f7-108">Varsa **- checked -** kullanılan derlemede deyimi çalışma zamanında bir özel durum neden olmaz.</span><span class="sxs-lookup"><span data-stu-id="d79f7-108">If **-checked-** is used in the compilation, that statement does not cause an exception at run time.</span></span>  
   
- <span data-ttu-id="cb766-109">Bu seçenek için varsayılan değer **- işaretli -**.</span><span class="sxs-lookup"><span data-stu-id="cb766-109">The default value for this option is **-checked-**.</span></span> <span data-ttu-id="cb766-110">Kullanmak için bir senaryo **- işaretli -** büyük uygulamalar oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="cb766-110">One scenario for using **-checked-** is in building large applications.</span></span> <span data-ttu-id="cb766-111">Bazen otomatikleştirilmiş Araçlar, bu tür uygulamalar oluşturmak için kullanılır ve böyle bir araç otomatik olarak ayarlayabilir **-işaretli** için +.</span><span class="sxs-lookup"><span data-stu-id="cb766-111">Sometimes automated tools are used to build such applications, and such a tool might automatically set **-checked** to +.</span></span> <span data-ttu-id="cb766-112">Belirterek aracın genel Varsayılanı geçersiz kılabilirsiniz **- işaretli -**.</span><span class="sxs-lookup"><span data-stu-id="cb766-112">You can override the tool's global default by specifying **-checked-**.</span></span>  
+ <span data-ttu-id="d79f7-109">Bu seçenek için varsayılan değerdir **- checked -**; taşma denetimini devre dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="d79f7-109">The default value for this option is **-checked-**; overflow checking is disabled.</span></span>
+ 
+ <span data-ttu-id="d79f7-110">Büyük uygulamalar oluşturmak için kullanılan araçları bazı durumlarda, otomatik ayarlama - teslim +.</span><span class="sxs-lookup"><span data-stu-id="d79f7-110">Sometimes, automated tools that are used to build large applications set -checked to +.</span></span> <span data-ttu-id="d79f7-111">-Checked - belirterek Aracı'nın genel varsayılan geçersiz kılmak için - checked - kullanmaya yönelik bir senaryodur.</span><span class="sxs-lookup"><span data-stu-id="d79f7-111">One scenario for using -checked- is to override the tool's global default by specifying -checked-.</span></span>
+ 
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d79f7-112">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d79f7-112">To set this compiler option in the Visual Studio development environment</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="cb766-113">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="cb766-113">To set this compiler option in the Visual Studio development environment</span></span>  
+1.  <span data-ttu-id="d79f7-113">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="d79f7-113">Open the project's **Properties** page.</span></span> <span data-ttu-id="d79f7-114">Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="d79f7-114">For more information, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-1.  <span data-ttu-id="cb766-114">Projenin açmak **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="cb766-114">Open the project's **Properties** page.</span></span> <span data-ttu-id="cb766-115">Daha fazla bilgi için bkz: [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="cb766-115">For more information, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+2.  <span data-ttu-id="d79f7-115">Tıklayın **derleme** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="d79f7-115">Click the **Build** property page.</span></span>  
   
-2.  <span data-ttu-id="cb766-116">Tıklatın **yapı** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="cb766-116">Click the **Build** property page.</span></span>  
+3.  <span data-ttu-id="d79f7-116">Tıklayın **Gelişmiş** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="d79f7-116">Click the **Advanced** button.</span></span>  
   
-3.  <span data-ttu-id="cb766-117">Tıklatın **Gelişmiş** düğmesi.</span><span class="sxs-lookup"><span data-stu-id="cb766-117">Click the **Advanced** button.</span></span>  
+4.  <span data-ttu-id="d79f7-117">Değiştirme **aritmetik taşma ve alttaşmayı denetle** özelliği.</span><span class="sxs-lookup"><span data-stu-id="d79f7-117">Modify the **Check for arithmetic overflow/underflow** property.</span></span>  
   
-4.  <span data-ttu-id="cb766-118">Değiştirme **denetlemek için aritmetik taşma/underflow** özelliği.</span><span class="sxs-lookup"><span data-stu-id="cb766-118">Modify the **Check for arithmetic overflow/underflow** property.</span></span>  
+ <span data-ttu-id="d79f7-118">Bu derleyici seçeneğini program aracılığıyla erişmek için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span><span class="sxs-lookup"><span data-stu-id="d79f7-118">To access this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span></span>  
   
- <span data-ttu-id="cb766-119">Bu derleyici seçeneği programlı olarak erişmek için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span><span class="sxs-lookup"><span data-stu-id="cb766-119">To access this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="cb766-120">Örnek</span><span class="sxs-lookup"><span data-stu-id="cb766-120">Example</span></span>  
- <span data-ttu-id="cb766-121">Aşağıdaki komut derlerken `t2.cs`.</span><span class="sxs-lookup"><span data-stu-id="cb766-121">The following command compiles `t2.cs`.</span></span> <span data-ttu-id="cb766-122">Kullanımını `-checked` komutunu herhangi bir tamsayı aritmetik deyimle dosyasında, kapsamında olduğunu belirten bir `checked` veya `unchecked` anahtar sözcüğü ve bu veri türü aralık dışında bir değer sonuçlarında neden olan bir özel durum çalışma süre.</span><span class="sxs-lookup"><span data-stu-id="cb766-122">The use of `-checked` in the command specifies that any integer arithmetic statement in the file that is not in the scope of a `checked` or `unchecked` keyword, and that results in a value that is outside the range of the data type, causes an exception at run time.</span></span>  
+## <a name="example"></a><span data-ttu-id="d79f7-119">Örnek</span><span class="sxs-lookup"><span data-stu-id="d79f7-119">Example</span></span>  
+ <span data-ttu-id="d79f7-120">Aşağıdaki komut `t2.cs`.</span><span class="sxs-lookup"><span data-stu-id="d79f7-120">The following command compiles `t2.cs`.</span></span> <span data-ttu-id="d79f7-121">Kullanımını `-checked` komutunu dosyasındaki tüm tamsayı aritmetik ifadesi, kapsamı içinde olmadığını belirten bir `checked` veya `unchecked` anahtar sözcüğü ve bu veri türünün aralığı dışında bir değer sonuçlarında neden olan bir özel durum çalışma saat.</span><span class="sxs-lookup"><span data-stu-id="d79f7-121">The use of `-checked` in the command specifies that any integer arithmetic statement in the file that is not in the scope of a `checked` or `unchecked` keyword, and that results in a value that is outside the range of the data type, causes an exception at run time.</span></span>  
   
 ```console  
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb766-123">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="cb766-123">See Also</span></span>  
- [<span data-ttu-id="cb766-124">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="cb766-124">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
- [<span data-ttu-id="cb766-125">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="cb766-125">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+## <a name="see-also"></a><span data-ttu-id="d79f7-122">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="d79f7-122">See Also</span></span>  
+
+- [<span data-ttu-id="d79f7-123">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="d79f7-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="d79f7-124">Proje ve Çözüm Özelliklerini Yönetme</span><span class="sxs-lookup"><span data-stu-id="d79f7-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
