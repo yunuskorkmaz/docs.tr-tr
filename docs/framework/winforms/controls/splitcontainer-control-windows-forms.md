@@ -5,43 +5,43 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539207"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463700"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer Denetimi (Windows Forms)
-Windows Forms `SplitContainer` kontrol zorlayıcı bileşik olarak; iki bölme taşınabilir bir çubukla ayrılan değer. Fare işaretçisini çubuğu üzerine olduğunda çubuğu taşınabilir olduğunu göstermek için Şekil işaretçi.  
+Windows Forms `SplitContainer` denetim düşünülebilir bileşik; taşınabilir bir çubukla ayırarak iki bölme. Çubuğu üzerine fare işaretçisi olduğunda, işaretçi şekli çubuğu taşınabilir olduğunu göstermek için değiştirir.  
   
 > [!NOTE]
->  İçinde **araç**, bu denetim değiştirir <xref:System.Windows.Forms.Splitter> Visual Studio'nun önceki sürümünde olduğu denetim. `SplitContainer` Denetimidir üzerinden çok tercih edilen <xref:System.Windows.Forms.Splitter> denetim. <xref:System.Windows.Forms.Splitter> Sınıf halen varolan uygulamalarla uyumluluk için .NET Framework dahil, ancak kullanmak için kesinlikle öneririz `SplitContainer` yeni projeler için denetim.  
+>  İçinde **araç kutusu**, bu denetim değiştirir <xref:System.Windows.Forms.Splitter> Visual Studio'nun önceki sürümünde var olan denetim. `SplitContainer` Denetimidir üzerinden çok tercih edilen <xref:System.Windows.Forms.Splitter> denetimi. <xref:System.Windows.Forms.Splitter> Sınıfı hala var olan uygulamalarla uyumluluk için .NET Framework dahil, ancak kullanmanızı önemle öneririz `SplitContainer` denetimi yeni projeler için.  
   
- `SplitContainer` Denetim karmaşık kullanıcı arabirimleri oluşturmanıza olanak tanır; bu genellikle, bir panelinde seçimi hangi nesneleri diğer panelinde gösterileceğini belirler. Bu düzenlemenin görüntüleme ve bilgi gözatma için çok etkili olur. İki bölme sahip alanlarda toplama bilgilere izin, ve çubuğu ya da "bölme," paneller yeniden boyutlandırmak kullanıcılar için kolaylaştırır.  
+ `SplitContainer` Denetim karmaşık kullanıcı arabirimleri oluşturmanıza olanak sağlar; genellikle, hangi nesneler diğer panelinde gösterilir bir bölmede bir seçim belirler. Bu düzenleme, görüntüleme ve gözatma bilgilerinin oldukça etkilidir. İki panel sahip alanlarda toplam bilgileri sağlar ve çubuğuna ya da "ayırıcı," paneller yeniden boyutlandırmak kullanıcıların kolaylaştırır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SplitContainer Denetimine Genel Bakış](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Tanıtır `SplitContainer` denetlemek ve yaygın olarak kullanılan özellikleri, yöntemleri ve olayları açıklar.  
   
  [Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
- Bölümlendirici içinde denetlemek açıklar `SplitContainer` denetim.  
+ Ayırıcının denetlemek nasıl açıklar `SplitContainer` denetimi.  
   
  [Nasıl yapılır: Pencereyi Yatay Bölme](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
- İçinde Bölümlendirici yönlendirmesini denetlemek açıklar `SplitContainer` denetim.  
+ İçinde Bölümlendirici yönlendirmesini denetlemek nasıl açıklar `SplitContainer` denetimi.  
   
  [Nasıl yapılır: Windows Forms ile Çok Bölmeli Kullanıcı Arabirimi Oluşturma](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Microsoft Outlook içinde kullanılan benzer bir çok bölmesi kullanıcı arabirimi oluşturur.  
   
- Ayrıca bkz. [nasıl yapılır: pencereyi yatay olarak kullanarak bir tasarımcı bölme](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [nasıl yapılır: bir Windows formunda Windows Gezgini stilinde bir arabirim oluşturma](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [nasıl yapılır: ile çok bölmeli kullanıcı arabirimi oluşturma Tasarımcı kullanarak Windows Formları](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Ayrıca bkz: [nasıl yapılır: pencereyi yatay olarak kullanarak bir tasarımcı bölünmüş](how-to-split-a-window-horizontally-using-the-designer.md), [nasıl yapılır: bir Windows formunda Windows Gezgini stilinde bir arabirim oluşturma](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [nasıl yapılır: Multipane kullanıcı arabirimi ile oluşturma Tasarımcı kullanarak Windows Forms](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.SplitContainer> sınıfı  
- Bu sınıf tanımlar ve tüm üyeleri bağlantılar içerir.  
+ <xref:System.Windows.Forms.SplitContainer> Sınıfı  
+ Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)  
- Özellikle Windows Forms ile çalışmak üzere tasarlanmış denetimleriyle ilgili konulara bağlantılar sağlar.  
+ Özellikle Windows Forms ile çalışmak üzere tasarlanmış denetimleri hakkındaki konulara bağlantılar sağlar.  
   
  [Windows Forms'da Kullanılacak Denetimler](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms denetimleri, tam bir listesi ile bunların kullanılması hakkında bilgi için bağlantılar sağlar.
+ Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.

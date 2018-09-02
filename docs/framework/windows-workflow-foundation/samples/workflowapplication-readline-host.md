@@ -1,25 +1,25 @@
 ---
-title: WorkflowApplication ReadLine ana bilgisayar
+title: WorkflowApplication ReadLine konağı
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518544"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470859"
 ---
-# <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine ana bilgisayar
-Bu örnek bir genel ReadLine ana bilgisayardır. Yük ve birlikte kullanarak tüm iş akışını çalıştırma `ReadLine` etkinlik (veya bu gibi veri yer işaretleri dizelerle sürdürüldü almanız diğer etkinlikler). Çıktı `WriteLine` etkinlik veya herhangi bir şeyi yazma <xref:System.Activities.Statements.WriteLine.TextWriter%2A> uzantısı konak penceresine yönlendirilir. Bir örnek boşta olduğunda, bu örnek için kullanılabilir yer işaretleri açılan kutuda görünür. Yer işareti seçerek, bazı metinleri giriş yapma ve sürdürme yer işareti düğmesine basarak iş akışının yürütülmesini devam eder. İptal etmek, iptal etmek veya seçili bir iş akışı sonlandırılmak. Kalıcılık varsayılan olarak açık – konak kapatın ve geri getirmek ve örnek listesi veritabanında depolanan örnekleri ile doldurulur. İzleme kullanılır çıktıya <xref:System.Activities.WorkflowApplication>-düzeyinde etkinlik düzeyinde ayrıntılı izleme ekleme seçeneğine sahip bir konağa olayları.  
+# <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine konağı
+Bu örnek, bir genel ReadLine ana bilgisayardır. Yük ve dahil edilen kullanarak herhangi bir iş akışı çalıştırma `ReadLine` etkinlik (veya dizelerle sürdürüldü yer işaretleri veri alma diğer etkinlikler, gibi). Çıktı `WriteLine` etkinlik veya herhangi bir şey yazma <xref:System.Activities.Statements.WriteLine.TextWriter%2A> uzantısı, ana pencereyi yönlendirilir. Örneği boşta olduğunda, bu örnek için mevcut yer işaretlerini bir birleşik giriş kutusunda görünür. Bir yer işaretini seçerek, metin giriş yapma ve sürdürme yer işareti düğmesine basarak iş akışlarının yürütülmesini devam eder. İptal etme, iptal etmek veya seçili bir iş akışı sonlandırılmak. Kalıcılık varsayılan olarak açık – konağı kapatın ve yeniden getirmek ve örnek listesi veritabanında depolanan örnekleri ile doldurulur. Kullanılan izleme çıktısına <xref:System.Activities.WorkflowApplication>-düzeyindeki olayları etkinlik düzeyinde ayrıntılı izleme ekleme seçeneğine sahip bir konağa.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntıları  
- Bu konak iki katmanı vardır: Görünüm ve örnek Yöneticisi. Görünüm oluşan `HostView` ve `WorkflowApplicationInfo` sınıfları. Bu konak için genel deseni içindir `HostView` kullanılabilir seçenekler kullanıcıya görüntülenecek sınıf temel alarak `WorkflowApplicationInfo` temsil ettikleri örnekleri ile eşitleme makul tutulan nesneleri. Örnek Yöneticisi katman oluşan `WorkflowApplicationManager` tüm konak iletişimler çekirdek olan sınıf ve `WorkflowDefinitionExtension` örneği ile başlatıldı program tanımı arasındaki ilişki devam ederse sınıfı ve diğer birkaç sınıfları. `HostView` Çağrıları üzerinde işlemlerini kontrol `WorkflowApplicationManager`. Bu çağrı bir Esnek kullanıcı arabirimi korumak için genellikle uyumsuzdur. Zaman uyumsuz tam, çağırdığında `WorkflowApplicationManager` iyi tanımlanmış bir arabirimi aracılığıyla görünüm katmana geri çağrılar (`IHostView`). `HostView` Sınıfı çoğunlukla bu çağrılarından gönderir `WorkflowApplicationManager` kullanıcı arabirimi iş parçacığı sınıfı. Metin yazma, iş parçacığı açısından güvenli yapılır <xref:System.Activities.Statements.WriteLine.TextWriter%2A> tarafından sağlanan nesnelerini `HostView` sınıfı. Kullanıcı arabirimi olayları oluşturma tek şey değil. <xref:System.Activities.WorkflowApplication> Nesneler de sinyal `WorkflowApplicationManager` zaman Git `Idle`, `Complete`, veya `Aborted`, örneğin. `WorkflowApplicationManager` Sınıfı temizleme gönderme veya iş konağa güncelleştirme olay iş parçacığı alır.  
+ Bu konak için iki katmanı vardır: Görünüm ve örnek Yöneticisi. Görünüm oluşan `HostView` ve `WorkflowApplicationInfo` sınıfları. Bu konak için genel düzen içindir `HostView` kullanıcıya kullanılabilir seçenekleri görüntülemek için sınıf temel alarak `WorkflowApplicationInfo` makul temsil ettikleri örnekleri ile eşitlemede tutulduğu nesneleri. Örnek Yöneticisi katman oluşan `WorkflowApplicationManager` tüm konak iletişim çekirdeği olan bir sınıfı ve `WorkflowDefinitionExtension` örneği ve ile başlatıldı program tanımı arasındaki ilişkiyi devam ederse sınıfı ve diğer birkaç sınıfları. `HostView` Çağrıları üzerinde işlemler denetim `WorkflowApplicationManager`. Bu çağrılar duyarlı kullanıcı arabirimi korumak için genellikle zaman uyumsuz olması. Zaman uyumsuz tam çağırdığında `WorkflowApplicationManager` iyi tanımlanmış bir arabirim görünümü katmana geri çağrılar (`IHostView`). `HostView` Sınıfı çoğunlukla bu çağrılarından gönderir `WorkflowApplicationManager` kullanıcı arabirimi iş parçacığına sınıfı. Metin yazı, iş parçacığı açısından güvenli yapılır <xref:System.Activities.Statements.WriteLine.TextWriter%2A> tarafından sağlanan nesneler `HostView` sınıfı. Kullanıcı arabirimi olayları gereken tek şey değildir. <xref:System.Activities.WorkflowApplication> Nesneleri ayrıca sinyal `WorkflowApplicationManager` zaman gitmeleri `Idle`, `Complete`, veya `Aborted`, örneğin. `WorkflowApplicationManager` Sınıf temizleme gönderme veya konağa iş güncelleştirme olay iş parçacığından alır.  
   
- Kaydı başlatmak için kullanılan dosya, bir <xref:System.Activities.WorkflowApplication> da sayesinde kolaylaşır `WorkflowDefinitionExtension` sınıfı. Bunu uygulayan <xref:System.Activities.Persistence.PersistenceIOParticipant> içinde Kalıcılık katılmak ve iş akışı tanımı yoluna kalıcı hale getirmek için arabirim.  
+ Kaydı başlatmak için kullanılan dosyanın bir <xref:System.Activities.WorkflowApplication> tarafından kolaylaştırılan `WorkflowDefinitionExtension` sınıfı. Bunu uygulayan <xref:System.Activities.Persistence.PersistenceIOParticipant> kalıcı katılır ve iş akışı tanımı yolu kalıcı hale getirmek için arabirim.  
   
- `WorkflowApplicationManager.Load` Yöntemi yüklenmesi tamamlanmamış gerekli iş akışı programları örneği oluşturmak için depolanmış yolunu kullanır <xref:System.Activities.WorkflowApplication> nesneleri.  
+ `WorkflowApplicationManager.Load` Yöntemi tamamlanmamış yükleme için gerekli iş akışı programları örneklemek için saklı yolunu kullanır <xref:System.Activities.WorkflowApplication> nesneleri.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
 1.  Bu örnek, yüklenecek SQL Express gerektirir. SQL Express ile birlikte gelen [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
@@ -27,35 +27,35 @@ Bu örnek bir genel ReadLine ana bilgisayardır. Yük ve birlikte kullanarak tü
   
 3.  Örnek dizine (\WF\Basic\Execution\ControllingWorkflowApplications) gidin ve CreateInstanceStore.cmd çalıştırın.  
   
-4.  CreateInstanceStore.cmd komut dosyası, SQL Server 2008 Express varsayılan örneğinde veritabanı oluşturma dener. Veritabanını farklı bir örneğinde yüklemek istiyorsanız, bunu yapmak için komut dosyasını değiştirin.  
+4.  SQL Server 2008 Express varsayılan örneğinde veritabanı oluşturma CreateInstanceStore.cmd betik çalışır. Veritabanını farklı bir örneğinde yüklemek istiyorsanız, bunu yapmak için komut dosyasını değiştirin.  
   
 5.  WorkflowApplicationReadLineHost projeyi derleyin ve komut satırından çalıştırın.  
   
-6.  Çalışan sonra kapatma veya isteğe bağlı olarak Kalıcılık kapatabilirsiniz. Ayrıca, isteğe bağlı olarak ayrıntılı etkinlik açmak veya kapatmak izlemeyi açabilirsiniz.  
+6.  Kalıcılık isteğe bağlı olarak çalışmaya sonra açıp kapatabilirsiniz. Ayrıca, isteğe bağlı olarak ayrıntılı etkinlik açıp izleme kapatabilirsiniz.  
   
-7.  Yanındaki üç nokta düğmesine basın **çalıştırmak** XAML dosyasında tanımlanan iş akışı gözatmak için düğmeyi  
+7.  Yanındaki üç nokta düğmesine basın **çalıştırma** bir XAML dosyasında tanımlanan bir iş akışı için Gözat düğmesine  
   
      İki örnek SampleWorkflows klasörü altında bulunabilir. Parallel1.xaml örnek boşta gider.  
   
-8.  Bir örnek seçildikten sonra basın **çalıştırmak** düğmesi.  
+8.  Bir örnek seçtikten sonra basın **çalıştırma** düğmesi.  
   
-9. Varsa veya iş akışının boşta gittiğinde **yer işaretleri** birleşik giriş kutusu kullanılabilir yer işaretleri ile doldurulur.  
+9. Varsa veya iş akışı boş olduğunda **yer işaretleri** birleşik giriş kutusu kullanılabilir yer işaretleri ile doldurulur.  
   
-10. Bu noktada yer işareti sürdürmek, iptal, durdurmak veya iş akışının sonlandırmak için seçeneklerdir. Ana bilgisayar kapatın ve yeniden başlatın. Kalıcılık üzerinde bırakılırsa örnekleri kapanışında kaldırıldı ve yukarı başlangıç yeniden.  
+10. Bu noktada yer imi sürdürme iptal etme, iptal etmek veya iş akışı sonlandırma seçenekleridir. Ayrıca, konak kapatın ve yeniden başlatın. Kalıcılık üzerinde bırakılırsa örnekleri kapanışında kaldırıldı ve Başlat'kurmak yeniden.  
   
-     Yer işareti sürdürmek için istenen yer işaretini seçin, birleşik giriş kutusu ve tuşuna yanındaki metin kutusuna bir değer yazın **sürdürme yer işareti**.  
+     Bir yer işareti sürdürmek için istenen yer işareti Seç, birleşik giriş kutusu ve ENTER tuşuna yanındaki metin kutusuna bir değer yazın **sürdürme yer işareti**.  
   
-#### <a name="to-remove-the-instance-store-database"></a>Örnek deposu veritabanı kaldırmak için  
+#### <a name="to-remove-the-instance-store-database"></a>Örnek deposu veritabanını kaldırmak için  
   
 1.  Visual Studio 2010 Komut istemi açın.  
   
 2.  Örnek dizine (\WF\Basic\Execution\ControllingWorkflowApplications) gidin ve RemoveInstanceStore.cmd çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

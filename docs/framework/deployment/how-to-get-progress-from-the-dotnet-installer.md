@@ -9,61 +9,61 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393315"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472052"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir çalışma zamanı. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleştirilmiş kurulum deneyimi sunmak için sessizce başlatma isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken ilerleme durumunu izleyebilirsiniz. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (hangi izlenebilir) ayarı kurulumunuzu (İzleyici veya bağlayıcı) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokol ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçları almak, iletileri yanıtlayın ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir bir çalışma zamanıdır. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun bir önkoşulu olarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumunu dahil edebilirsiniz (bağlayabilirsiniz). Özelleştirilmiş veya birleşik kurulum deneyimi sunmak için sessizce başlatmak isteyebilirsiniz [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve uygulamanızın Kurulum ilerleme gösterirken, ilerleme durumunu izleyin. Sessiz izlemeyi etkinleştirmek için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (izlenebilir) Kurulumu kurulumunuzu (İzleyici veya chainer) ile iletişim kurmak için bir bellek eşlemeli g/ç (olması) kesimini kullanarak bir protokol tanımlar. Bu protokolün ilerleme durumu bilgileri elde etmek için ayrıntılı sonuçlar elde edin, iletilere yanıt verir ve iptal etmek bir bağlayıcı için bir yol tanımlar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] kurulumu.  
   
--   **Çağırma** .  Çağrılacak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve ilerleme durumu bilgileri olması bölümünden alırsınız, Kurulum programı aşağıdakileri yapmanız gerekir:  
+-   **Çağırma** .  Çağrılacak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ve olması bölümünden ilerleme bilgilerini alma, Kurulum programınız için aşağıdakileri yapmanız gerekir:  
   
-    1.  Çağrı [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]yeniden dağıtılabilir programı:  
+    1.  Çağrı [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]yeniden dağıtılabilir program:  
   
         ```  
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name  
         ```  
   
-         Burada *bölüm adı* uygulamanızı tanımlamak için kullanmak istediğiniz herhangi bir addır. .NET framework kurulumunu okur ve olayları ve iletileri bu süre içinde kullanmak kullanışlı bulabileceğiniz şekilde olması bölümüne zaman uyumsuz olarak yazar. Örnekte, her ikisi de ayırdığını olması bölüm .NET Framework Kurulum işlemi oluşturucusu tarafından oluşturulan (`TheSectionName`) ve bir olay tanımlar (`TheEventName`):  
+         Burada *bölüm adı* uygulamanızı tanımlamak için kullanmak istediğiniz herhangi bir ad olduğu. .NET framework kurulumunu okur ve olayları ve iletileri bu süre boyunca kullanmak kullanışlı bulabileceğiniz şekilde olması bölümüne zaman uyumsuz olarak yazar. Örnekte, her ikisi de ayırma olması bölüm .NET Framework Kurulum sürecini Oluşturucu tarafından oluşturulan (`TheSectionName`) ve bir olayı tanımlar (`TheEventName`):  
   
         ```  
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")  
         ```  
   
-         Lütfen bu adlar, Kurulum programına benzersiz adlara sahip değiştirin.  
+         Lütfen bu adları, Kurulum programınız için benzersiz bir ada değiştirin.  
   
-    2.  OLMASI bölümünden okuyun. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]'de, indirme ve yükleme işlemleri eşzamanlıdır: .NET Framework'ün bir bölümü indirilirken diğeri yüklenebilir. Sonuç olarak, ilerleme gönderilen (yani yazılan) olması bölüm iki sayı olarak geri (`m_downloadSoFar` ve `m_installSoFar`) 255 0'dan artırın. .NET Framework çıkar 255 olduğunda yazılır ve yükleme tamamlanmış demektir.  
+    2.  OLMASI bölümünden okuyun. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]'de, indirme ve yükleme işlemleri eşzamanlıdır: .NET Framework'ün bir bölümü indirilirken diğeri yüklenebilir. Sonuç olarak, devam eden gönderilir (yani yazılmış) geri olması bölümüne iki sayı olarak (`m_downloadSoFar` ve `m_installSoFar`) 255 0'dan artırın. 255 zaman yazılmıştır ve .NET Framework çıkar yükleme tamamlanır.  
   
--   **Çıkış kodları**. Çağırmak için komutu aşağıdaki çıkış kodları [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir program Kurulumu başarılı veya başarısız olana belirtin:  
+-   **Çıkış kodlarını**. Çağırmak için komutu aşağıdaki çıkış kodlarını [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir program kurulum başarılı veya başarısız olduğu gösterir:  
   
     -   0 - Kurulum başarıyla tamamlandı.  
   
-    -   3010 – Kurulum başarıyla tamamlandı; Sistem yeniden başlatma gereklidir.  
+    -   3010 – Kurulum başarıyla tamamlandı; sistemin yeniden başlatılması gerekiyor.  
   
-    -   1602 – Kurulumu iptal edildi.  
+    -   1602 – kurulum iptal edildi.  
   
-    -   Diğer tüm kodlar - Kurulum hatalarla karşılaştı; Ayrıntılar için % temp % içinde oluşturulan günlük dosyalarını inceleyin.  
+    -   Tüm diğer kodları - Kurulum hatalarla karşılaştı; Ayrıntılar için % temp % içinde oluşturulan günlük dosyalarını inceleyin.  
   
--   **Kurulumu iptal etmek**. Kurulumu kullanarak dilediğiniz zaman iptal edebilirsiniz `Abort` ayarlamak için yöntemin `m_downloadAbort` ve `m_ installAbort` bayrakları olması bölümünde.  
+-   **Kurulum İptal**. Kurulum kullanarak dilediğiniz zaman iptal edebilirsiniz `Abort` ayarlanacak yöntemi `m_downloadAbort` ve `m_ installAbort` olması bölümünde bayrakları.  
   
 ## <a name="chainer-sample"></a>Bağlayıcı örneği  
- Bağlayıcı örneği sessizce başlatır ve izleyen [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ilerleme durumunu gösteren sırasında Kurulum. Bu örnek, .NET Framework 4 için sağlanan bağlayıcı örnek benzerdir. Ancak, ek olarak, bu sistem yeniden başlatmalarını .NET Framework 4 uygulamaları kapatma ileti kutusu işleyerek önleyebilirsiniz. Bu ileti kutusu hakkında daha fazla bilgi için bkz: [azaltma sistemi yeniden sırasında .NET Framework 4.5 yüklemeleri](../../../docs/framework/deployment/reducing-system-restarts.md). Bu örnek ile .NET Framework 4 yükleyici kullanabilirsiniz; Bu senaryoda, yalnızca ileti gönderilmez.  
+ Bağlayıcı örneği sessizce başlatır ve izleyen [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Kurulum ilerleme durumunu gösteren oluştu. Bu örnek, .NET Framework 4 için sağlanan bağlayıcı örneği benzerdir. Ancak, ayrıca, bu sistem yeniden başlatmalarını .NET Framework 4 uygulamaları kapatmak için ileti kutusu işleyerek önleyebilirsiniz. Bu ileti kutusu hakkında daha fazla bilgi için bkz. [azaltma sistemi yeniden sırasında .NET Framework 4.5 yüklemeleri](../../../docs/framework/deployment/reducing-system-restarts.md). Bu örnek ile .NET Framework 4 yükleyici kullanabilirsiniz; Bu senaryoda, yalnızca ileti gönderilmez.  
   
 > [!WARNING]
->  Örnek bir yönetici olarak çalıştırmanız gerekir.  
+>  Örneğin, bir yönetici olarak çalıştırmanız gerekir.  
   
- İçin eksiksiz bir Visual Studio çözüm indirebilirsiniz [.NET Framework 4.5 bağlayıcı örnek](http://go.microsoft.com/fwlink/?LinkId=231345) MSDN örnekleri galerisinden.  
+ İçin tam Visual Studio çözümünü indirebilir [.NET Framework 4.5 bağlayıcı örneği](https://go.microsoft.com/fwlink/?LinkId=231345) MSDN Örnekler Galerisi.  
   
- Aşağıdaki bölümlerde bu örnek önemli dosyalarında: MMIOChainer.h, ChainingdotNet4.cpp ve IProgressObserver.h.  
+ Aşağıdaki bölümlerde bu önemli dosyaları: Mmıochainer.h ChainingdotNet4.cpp ve Iprogressobserver.h.  
   
-#### <a name="mmiochainerh"></a>MMIOChainer.h  
+#### <a name="mmiochainerh"></a>Mmıochainer.h  
   
--   MMIOChainer.h dosyasını (bkz [tamamlamak kodu](http://go.microsoft.com/fwlink/?LinkId=231369)) veri yapısı tanımı ve kendisinden bağlayıcı türetilmiş sınıf temel sınıf içerir. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Verileri işlemek için olması veri yapısı genişletir, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yükleyici gerekiyor. Bir .NET Framework 4 bağlayıcı yeniden derlenmek gerek kalmadan .NET Framework 4.5 kurulum ile çalışabilmek için değişiklikleri olması yapısına yönelik işaretçinin geriye dönük uyumludur. Ancak, bu senaryo sistem yeniden başlatmalarını azaltmak için özelliğini desteklemiyor.  
+-   Mmıochainer.h dosyası (bkz [tamamlamak kod](https://go.microsoft.com/fwlink/?LinkId=231369)) veri yapısı tanımını ve kendisinden bağlayıcı sınıfın türetilmesi temel sınıfı içerir. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Olması veri yapısı, verilerin işlenmesini genişletir, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yükleyici gerekir. OLMASI yapısı değişiklikler geriye dönük olarak uyumlu, olduğundan bir .NET Framework 4 bağlayıcı kurulumu .NET Framework 4.5 yeniden derleme gerek kalmadan çalışabilirsiniz. Ancak, bu senaryo, özellik sistem yeniden başlatmalarını azaltmak için desteklemez.  
   
-     Sürüm alanı yapısı, ileti biçimi yapılan tanımlamanın bir yol sağlar.  .NET Framework kurulumunu çağırarak bağlayıcı arabirimi sürümünü belirler `VirtualQuery` dosya eşleme boyutunu belirlemek için işlev.  Boyutu sürüm alanı uyabilecek kadar büyük ise, .NET Framework kurulumunu belirtilen değeri kullanır. Dosya eşleme .NET Framework 4 ile söz konusu olduğu sürüm alanı içermesi için çok küçük ise Kurulum işlemi sürümü 0 (4) varsayar. Bağlayıcı göndermek için .NET Framework kurulumunu istediği ileti sürümü desteklemiyorsa, .NET Framework kurulumunu yoksay yanıt varsayar.  
+     Sürümü alanı yapısı, ileti biçimi düzeltmeleri tanımlayan bir yol sağlar.  .NET Framework kurulumunu çağırarak chainer arabirimi sürümünü belirler `VirtualQuery` dosya eşleme boyutunu belirlemek için işlevi.  Sürüm alanı tutabilecek kadar büyük boyutudur, .NET Framework kurulumunu belirtilen değeri kullanır. Dosya eşlemesi ile .NET Framework 4 Bu durum bir sürümü alanı içeren çok küçükse, Kurulum işlemi sürümü 0 (4) varsayar. Bağlayıcı göndermek için .NET Framework kurulumunu isteyen ileti sürümü desteklemiyorsa, .NET Framework kurulumunu yoksay yanıt varsayar.  
   
      OLMASI veri yapısı şu şekilde tanımlanır:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "33393315"
         };  
     ```  
   
--   `MmioDataStructure` Veri yapısı doğrudan kullanılmamalıdır; kullanın `MmioChainer` bunun yerine, bağlayıcı uygulamak için sınıf. Öğesinden türetilen `MmioChainer` zinciri sınıfına [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir.  
+-   `MmioDataStructure` Veri yapısına doğrudan kullanılmamalıdır; kullanan `MmioChainer` bunun yerine, bağlayıcı uygulamak için sınıf. Öğesinden türetilen `MmioChainer` zinciri sınıfına [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yeniden dağıtılabilir.  
   
-#### <a name="iprogressobserverh"></a>IProgressObserver.h  
+#### <a name="iprogressobserverh"></a>Iprogressobserver.h  
   
--   Bir ilerleme gözlemci IProgressObserver.h dosya uygular ([tam kod bkz](http://go.microsoft.com/fwlink/?LinkId=231370)). Bu gözlemci indirme ve yükleme ilerleme durumunu bildirimde (imzasız belirtilen `char`, 0-255, % 1-% 100 tam gösteren). Gözlemci chainee ileti gönderir ve gözlemci yanıt göndermesi gerektiğini de bildirilir.  
+-   Iprogressobserver.h dosyası bir ilerleme gözlemcisi uygular ([tam kod bkz](https://go.microsoft.com/fwlink/?LinkId=231370)). Bu gözlemci indirme ve yükleme ilerlemesini bildirim (imzasız belirtilen `char`, 0-255 gösteren 1-%100 tamamlandı). Gözlemci ayrıca chainee bir ileti gönderir ve gözlemci yanıt göndermesi gerektiğini bildirilir.  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ ms.locfileid: "33393315"
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) dosya uygulayan `Server` türeyen sınıf `MmioChainer` sınıfı ve ilerleme durumu bilgileri görüntülemek için uygun yöntemlerini geçersiz kılar. MmioChainer belirtilen bölüm adı taşıyan bir bölüm oluşturur ve belirtilen olay adıyla bağlayıcı başlatır. Olay adı eşlenen veri yapısı kaydedilir. Bölüm ve olay adları benzersiz olması. `Server` Sınıfı aşağıdaki kodda belirtilen Kurulum programını başlatır, ilerleme durumunu izler ve bir çıkış kodu döndürür.  
+-   [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) dosya uygular `Server` türetilen sınıf `MmioChainer` sınıfı ve ilerleme bilgisini görüntülemek için uygun yöntemleri geçersiz kılar. MmioChainer belirtilen bölüm adı ile bir bölüm oluşturur ve belirtilen olay adıyla chainer başlatır. Olay adı, eşlenmiş veri yapısı olarak kaydedilir. Bölümü ve olay adları benzersiz olmanız gerekir. `Server` Aşağıdaki kodda sınıfı belirtilen Kurulum programı başlatan, ilerleme durumunu izler ve bir çıkış kodu döndürür.  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  
@@ -123,7 +123,7 @@ ms.locfileid: "33393315"
         {}  
     ```  
   
-     Main yöntemi yükleme başlatıldı.  
+     Yüklemesi Main yöntemine başlatılır.  
   
     ```cpp  
     // Main entry point for program  
@@ -202,7 +202,7 @@ ms.locfileid: "33393315"
     }  
     ```  
   
--   İçinde çalıştırılabilir dosyanın (örnekte Setup.exe) yolu değiştirebilirsiniz `Launch` doğru konuma yönlendirmek veya konumunu belirlemek için kod özelleştirmek için bir yöntem. `MmioChainer` Temel sınıf sağlar bir engelleme `Run()` türetilmiş sınıf çağıran yöntemi.  
+-   Yürütülebilir dosya (örnekte Setup.exe) yolunu değiştirebileceğiniz `Launch` , doğru konuma işaret veya konumunu belirlemek için kod özelleştirmek için yöntemi. `MmioChainer` Taban sınıfı sağlar bir engelleme `Run()` türetilmiş sınıf çağıran yöntemi.  
   
     ```cpp  
     bool Launch(const CString& args)  
@@ -230,7 +230,7 @@ ms.locfileid: "33393315"
     }  
     ```  
   
--   `Send` Yöntemi durdurur ve iletileri işler.  .NET Framework'ün bu sürümünde yalnızca desteklenen iletisi Kapat uygulama iletidir.  
+-   `Send` Yöntemi durdurur ve iletileri işler.  .NET Framework'ün bu sürümünde, yalnızca desteklenen uygulama kapatma iletisi iletisidir.  
   
     ```cpp  
             // SendMessage  
@@ -305,9 +305,9 @@ ms.locfileid: "33393315"
     ```  
   
     > [!IMPORTANT]
-    >  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir genellikle birçok ilerleme durumu iletileri ve tamamlanma (Bağlayıcı taraftaki) belirten tek bir ileti yazar. Bu da zaman uyumsuz olarak aramakta okur `Abort` kaydeder. Bunu alırsa bir `Abort` kayıt, yüklemeyi iptal eder ve yükleme durduruldu ve kurulum işlemlerini alındı geri sonra E_ABORT tamamlanmış bir kayıtla verilerini yazar.  
+    >  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yeniden dağıtılabilir genellikle birçok ilerleme iletilerini ve tamamlama (Bağlayıcı tarafında) gösteren tek bir ileti yazar. Ayrıca zaman uyumsuz olarak aranırken okuduğu `Abort` kaydeder. Bunu alırsa bir `Abort` kayıt, yükleme işlemini iptal ve sonra yükleme iptal edildi ve Kurulum işlem geri alındı E_ABORT tamamlanmış bir kayıtla verilerini yazar.  
   
- Tipik bir sunucu bir rastgele olması dosya adı oluşturur, bir dosya oluşturur (önceki kod örneğinde gösterildiği gibi `Server::CreateSection`) ve yeniden dağıtılabilir kullanarak başlatan `CreateProcess` yöntemi ve kanal geçirme adı ile `-pipe someFileSectionName` seçeneği. Sunucu uygulamalıdır `OnProgress`, `Send`, ve `Finished` uygulama kullanıcı Arabirimi özgü kodu yöntemleriyle.  
+ Tipik bir sunucu bir rastgele olması dosya adı oluşturur, dosyayı oluşturur (önceki kod örneğinde gösterildiği gibi `Server::CreateSection`) ve yeniden dağıtılabilir kullanarak başlatır `CreateProcess` adı yöntemi ve kanal geçirme ile `-pipe someFileSectionName` seçeneği. Sunucu uygulamalıdır `OnProgress`, `Send`, ve `Finished` uygulama UI özgü kodla yöntemleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

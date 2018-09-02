@@ -2,22 +2,22 @@
 title: Sorgu örnekleri
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362633"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464360"
 ---
 # <a name="query-examples"></a>Sorgu örnekleri
-Bu bölümde Visual Basic ve C# örnekleri tipik [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgular. Geliştiriciler Visual Studio kullanarak, pek çok daha fazla örnek örnek bir çözüm içinde kullanılabilir örnekleri bölümünde bulabilirsiniz. Daha fazla bilgi için bkz: [örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Bu bölümde Visual Basic ve C# örnekleri tipik [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgular. Visual Studio kullanan geliştiricilerin çok daha fazla örnek, bir örnek çözüm kullanılabilir örnekleri bölümünde bulabilirsiniz. Daha fazla bilgi için [örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *DB* kod örneklerinde sık kullanılan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri. *DB* örneği varsayılır bir *Northwind* devraldığı sınıfı <xref:System.Data.Linq.DataContext>.  
+>  *DB* kod örneklerinde sık kullanılan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri. *DB* örneği varsayılır bir *Northwind* öğesinden devralan sınıf <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Toplu Sorgular](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- Nasıl kullanılacağını açıklar <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, vb.  
+ Nasıl kullanılacağını açıklar <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>ve böyle devam eder.  
   
  [Dizideki İlk Öğeyi Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
  Kullanım örnekleri sağlar <xref:System.Linq.Enumerable.First%2A>.  
@@ -59,17 +59,17 @@ Bu bölümde Visual Basic ve C# örnekleri tipik [!INCLUDE[vbtecdlinq](../../../
  Kullanım örnekleri sağlar <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
  [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
- Yabancı anahtar Gezinti bölmesinde kullanma örnekleri sağlar `from`, `where`, ve `select` yan tümceleri.  
+ Yabancı anahtar Gezinti kullanma örnekleri sağlar `from`, `where`, ve `select` yan tümceleri.  
   
  [Projeksiyonlar Düzenleme](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- Birleştirme örnekleri sağlar `select` diğer özelliklerle (örneğin, *anonim türler*) form sorgu tahminleri için.  
+ Birleştirme örnekleri sağlar `select` diğer özelliklerle (örneğin, *anonim türler*) form sorgu projeksiyonları için.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Standart Sorgu İşleçlerine Genel Bakış](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Standart Sorgu İşleçlerine Genel Bakış](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  Standart sorgu işleçleri kavramını açıklar.  
   
  [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Açıklar nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları için geçerlidir kavramları kullanır.  
+ Açıklayan nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları için geçerlidir kavramları kullanır.  
   
  [Programlama Kılavuzu](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Programlama Kavramları ilgili açıklayan konulara bir portal sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+ İlgili programlama kavramları açıklayan konulara bir portal sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

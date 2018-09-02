@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 23c5ef0afb11b259c207746c1e0943cbe7c2caba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359497"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468903"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Veri Hizmetleri ile çalışmaya başlama
-Bu bölümdeki konular, hızlı bir şekilde anlamanıza yardımcı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ve nasıl kullanılacağını [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma ve kullanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları temel teknolojileri açıklayarak. Bu bölüm hem kavramsal içerik içerir ve bir [Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Öğreticisi.  
+Bu bölümdeki konular, kısa süre içinde anlamanıza yardımcı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ve nasıl kullanılacağını [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanıma tüketileceğini [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları temel teknolojiyi açıklayarak. Bu bölüm hem kavramsal içeriğe içerir ve bir [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) öğretici.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Aşağıdaki konular kullanarak veri hizmetleri oluşturmak nasıl açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Aşağıdaki konular veri hizmetlerini kullanarak oluşturmayı anlatan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Kullanarak bir veri hizmeti oluşturmak için gereken adımları açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -24,21 +24,21 @@ Bu bölümdeki konular, hızlı bir şekilde anlamanıza yardımcı [!INCLUDE[ss
  İle nasıl çalışılacağını açıklar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
   
  [İstemci Uygulamasında Veri Hizmeti Kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
- İle nasıl çalışılacağını açıklar bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir .NET Framework istemci uygulamasında akış.  
+ İle nasıl çalışılacağını açıklayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir .NET Framework istemci uygulaması olarak akış.  
   
  [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- Oluşturma ve basit bir erişim gösterilmektedir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Northwind örnek veritabanını temel alan bir akış sunar hizmet tabanlı.  
+ Oluşturma ve basit bir erişim gösterilmektedir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-tabanlı, Northwind örnek veritabanını temel alan bir akış hizmetidir.  
   
  [Uygulama Senaryoları](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- Bir dizi vurgular [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] tarafından desteklenen senaryoları [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ Bir dizi temel vurgular [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] tarafından desteklenen senaryoları [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
  Bağlantılar sağlar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kaynakları.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WCF Veri Hizmetleri (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+ [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
   
  [Başlarken](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [OData SDK'sı](http://go.microsoft.com/fwlink/?LinkID=185248)
+ [OData SDK'sı](https://go.microsoft.com/fwlink/?LinkID=185248)

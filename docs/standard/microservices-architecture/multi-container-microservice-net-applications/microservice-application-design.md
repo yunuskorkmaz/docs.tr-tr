@@ -1,199 +1,199 @@
 ---
 title: Mikro hizmet odaklı bir uygulama tasarlama
-description: Kapsayıcılı .NET uygulamaları için .NET mikro mimarisi | Mikro hizmet odaklı bir uygulama tasarlama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Mikro hizmet odaklı bir uygulama tasarlama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105965"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470122"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
-Bu bölümde, kuramsal sunucu tarafı kuruluş uygulaması geliştirme odaklanır.
+Bu bölüm, bir kuramsal sunucu tarafı Kurumsal uygulama geliştirmeye odaklanır.
 
 ## <a name="application-specifications"></a>Uygulama özellikleri
 
-Kuramsal uygulama iş mantığını yürütme veritabanlarına erişme ve HTML, JSON ve XML yanıtları döndürme isteklerini işler. Uygulama istemciler, tek sayfa uygulamaları (SPAs), geleneksel web uygulamaları, mobil web uygulamaları ve yerel mobil uygulamalar çalıştıran masaüstü tarayıcıları dahil olmak üzere çeşitli desteklemelidir dediğimiz. Uygulamanın, ayrıca bir API kullanmak için üçüncü taraf için doğurabilir. Böylece yaklaşım kısmi hatası durumunda mikro esnekliğini yardımcı olur, ayrıca kendi mikro veya dış uygulamalar zaman uyumsuz olarak tümleştirebilir olmalıdır.
+Kuramsal bir uygulamanın iş mantığı yürütme veritabanlarına erişme ve ardından HTML, JSON veya XML yanıtlar döndüren isteklerini işler. Uygulama istemciler, tek sayfa uygulamaları (Spa'lar), geleneksel web uygulamaları, mobil web uygulamaları ve yerel mobil uygulamalar çalıştıran masaüstü tarayıcıları dahil olmak üzere çeşitli desteklemelidir dediğimiz. Uygulama, üçüncü tarafların kullanmak için bir API de doğurabilir. Böylece yaklaşım dayanıklılığı kısmi hatası durumunda mikro yardımcı olur, ayrıca, mikro hizmetler veya dış uygulama, zaman uyumsuz olarak tümleştirebilir olmalıdır.
 
 Uygulama bileşenlerinin bu tür oluşur:
 
--   Sunu bileşenleri. Bu UI işleme ve uzak Hizmetleri kullanma sorumludur.
+-   Sunu bileşenleri. Bu, UI işleme ve uzak Hizmetleri tüketen sorumludur.
 
 -   Etki alanı veya iş mantığı. Uygulama etki alanı mantığı budur.
 
--   Veritabanı erişim mantığı. Bu, veri erişimi bileşenleri veritabanları (SQL veya NoSQL) erişmek için sorumlu oluşur.
+-   Veritabanı erişim mantığı. Bu, veri erişim bileşenleri (SQL veya NoSQL) veritabanları erişmekten sorumlu oluşur.
 
--   Uygulama Tümleştirme mantığı. Bu, çoğunlukla ileti aracıları dayalı bir Mesajlaşma kanalı içerir.
+-   Uygulama Tümleştirme mantığı. Bu, çoğunlukla ileti aracıları üzerinde tabanlı bir Mesajlaşma kanalı içerir.
 
-Uygulama yüksek ölçeklenebilirlik, belirli alt sistemleri diğerlerinden daha fazla ölçeklenebilirlik gerektireceğinden sınırlarına, genişletilecek dikey onun alt sistemleri verirken gerektirir.
+Uygulamanın yüksek ölçeklenebilirlik, otonom olarak, ölçeği genişletme, dikey alt sistemlerin belirli alt sistemlerin diğerlerinden daha fazla ölçeklenebilirlik gerekir çünkü verirken gerektirir.
 
-Uygulama birden çok alt yapısı (birden çok genel Bulutlar ve şirket içi) ortamlarında kullanılabilir kurabilmesi gerekir ve ideal olmalıdır platformlar arası, Windows (veya tersi) Linux kolayca taşımak kullanabilirsiniz.
+Uygulama birden çok altyapı ortamlarda (birden çok genel bulutlarda ve şirket içi) dağıtılması gereken ve ideal olmalıdır platformlar arası ve Linux'taki Windows (veya tersi) bir kolayca geçiş yapabilirsiniz.
 
 ## <a name="development-team-context"></a>Geliştirme ekibi bağlamı
 
-Ayrıca uygulama geliştirme süreci hakkında aşağıdakileri varsayıyoruz:
+Ayrıca uygulama geliştirme süreci hakkında aşağıdakileri varsayılır:
 
--   Uygulama farklı iş alanlarının odaklanan birden çok geliştirme ekipleri sahip.
+-   Birden çok geliştirme ekipleri uygulamanın farklı işletme alanlarına odaklanan var.
 
--   Yeni ekip üyelerinin hızla üretken gerekir ve uygulama anlamak ve değiştirilmesi kolay olmalıdır.
+-   Yeni takım üyelerine hızlı şekilde üretken olmaya gerekir ve uygulama anlamak ve değiştirilmesi kolay olmalıdır.
 
--   Uygulama, uzun vadeli bir evrimi ve sürekli değişen iş kurallarını sahip olur.
+-   Uygulamanın, uzun vadeli gelişimi ve durmaksızın değişen iş kuralları gerekir.
 
--   Gelecekte yeni değişiklikler diğer alt sistemleri üzerinde en az etki ile birden çok alt sistemleri güncelleştirmek kullanabilmeye devam ederken uygularken çeviklik sahip olmak anlamına gelir iyi uzun süreli bakım gerekir.
+-   Çeviklik, diğer alt sistemler üzerinde minimum etkiyle birden çok alt sistemin güncelleştiremezsiniz olmanın yanı sıra gelecekte yeni değişiklikler uygulanırken olması anlamına gelir iyi uzun süreli bakım ihtiyacınız vardır.
 
--   Alıştırma sürekli tümleştirme ve uygulamanın sürekli dağıtımını istediğiniz.
+-   Uygulama sürekli tümleştirme ve sürekli dağıtım uygulamanın istediğiniz.
 
--   Ortaya çıkan teknolojilerden (çerçeveler programlama dilleri, vb.) uygulama gelişen sırasında istediğiniz. Uygulamanın tam geçişler yüksek maliyetlerinin azalmasına neden ve öngörülebilirlik ve uygulama kararlılığını etkisi olduğundan yeni teknolojileri için taşırken hale getirmek istiyor musunuz.
+-   Yeni çıkan teknolojiler (çerçeveleri, programlama dilleri, vb.) yararlanmak uygulama hızla gelişirken diğer yandan istediğiniz. İçinde yüksek maliyetlere neden ve uygulamanın kararlılığını ve tahmin edilebilirliğini etkiler çünkü yeni teknolojileri için taşırken uygulamanın tam geçiş yapmak istiyor musunuz.
 
 ## <a name="choosing-an-architecture"></a>Bir mimari seçme
 
-Uygulama dağıtım mimarisi ne olmalı? Bu iş mikro ve kapsayıcıları, biçiminde otonom alt sistemleri içine bir mikro hizmet burada ayırma tarafından uygulama mimari geliştirme bağlam birlikte uygulama özelliklerini kesinlikle önerir bir kapsayıcıdır.
+Hangi uygulama dağıtım mimarisi olması gerekiyor mu? Geliştirme bağlam yanı sıra uygulama belirtimleri kesin, birlikte çalışan mikro hizmetler ve kapsayıcılar, biçiminde otonom alt sistemleri içine bir mikro hizmet burada parçalama tarafından uygulamanın mimari önerin bir kapsayıcıdır.
 
-Bu yaklaşımda, her hizmetin (kapsayıcı) bağlı ve dar ilgili işlevler kümesi uygular. Örneğin, bir uygulama, hizmet, sepet hizmeti, kullanıcı profili hizmeti, vb. sıralama katalog hizmeti gibi hizmetlerin oluşabilir.
+Bu yaklaşımda, her bir hizmet (kapsayıcı) bağlı ve sayısı azalacağından ilgili işlevler bir dizi uygular. Örneğin, bir uygulama Kataloğu hizmeti sıralama hizmeti, sepet hizmeti, kullanıcı profili hizmeti, vb. gibi hizmetleri oluşabilir.
 
-Mikro iletişim protokolleri tür olarak HTTP (REST), ancak ayrıca zaman uyumsuz olarak kullanarak (örneğin, AMQP kullanarak) mümkün olduğunda, özellikle zaman yayılıyor güncelleştirmeleri tümleştirme olaylarla.
+Mikro hizmet iletişim protokolleri tür olarak HTTP (REST), ancak ayrıca zaman uyumsuz olarak kullanarak (örneğin, AMQP kullanarak) mümkün olduğunda, özellikle zaman yayma güncelleştirmeleri ile tümleştirme olayları.
 
-Mikro geliştirilen ve kapsayıcı birbirinden bağımsız olarak dağıtılabilir. Bu geliştirme ekibi kullanılabilir geliştirme ve diğer alt sistemleri etkilemeden bir belirli mikro hizmet dağıtma olduğunu anlamına gelir.
+Mikro hizmetler geliştirilen ve birbirinden kapsayıcıları olarak dağıtılabilir. Bu, bir geliştirme ekibi kullanılabilir geliştirmeye ve diğer alt sistemlerin etkilemeden belirli bir mikro hizmet dağıtımı, anlamına gelir.
 
-Her mikro hizmet tam olarak diğer mikro ayrılmış izin veren kendi veritabanı vardır. Gerektiğinde, farklı mikro veritabanlarından arasında tutarlılığı (aracılığıyla bir mantıksal olay bus), uygulama düzeyinde tümleştirme olaylarını kullanarak komut ve sorgu sorumluluk ayrımı (CQRS) işlenmiş olarak sağlanır. İş kısıtlamalarını birden çok mikro arasında nihai tutarlılık, nedeniyle çekirdeğin gerekir ve ilgili veritabanları.
+Her mikro hizmet, diğer mikro Hizmetleri tam olarak ölçeklendirilebilmeleri izin veren, kendi veritabanı vardır. Gerektiğinde, veritabanlarından farklı mikro hizmetler arasında tutarlılık (aracılığıyla bir mantıksal olay veri yolu), uygulama düzeyinde tümleştirme olayları kullanılarak komut ve sorgu sorumluluğu ayrımı (CQRS) işlenmiş olarak sağlanır. Bu nedenle iş kısıtlamalarını nihai tutarlılık arasında birden fazla mikro hizmetin yaklaşımını benimseyin gerekir ve ilgili veritabanları.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: .NET Core ve kapsayıcılar kullanılarak dağıtılan mikro hizmetler için bir başvuru uygulaması
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>Hizmetine: .NET Core ve kapsayıcılar kullanılarak dağıtılmış mikro hizmetler için bir başvuru uygulaması
 
-Mimari ve teknolojileri göz önünde bulundurulması değil bilirsiniz hypothetic iş etki alanı yerine odaklanabilirsiniz böylece, bilinen iş etki alanı seçmiş olduğunuz — yani, kataloğunu sunan bir Basitleştirilmiş e-ticaret (e-Atölye) uygulama ürünler, siparişler müşterilerden alır, Envanter doğrular ve diğer iş işlevleri gerçekleştirir. Bu kapsayıcı tabanlı uygulama kaynak koduna kullanılabilir [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) GitHub depo.
+Böylece bilmiyor bir hypothetic iş etki alanı düşünmek yerine teknolojileri ve mimari odaklanabilirsiniz iyi bilinen iş etki alanı seçmiş olduğunuz — yani, bir katalog sunar bir Basitleştirilmiş e-ticaret (e-Atölye) uygulama ürünler, işle ilgili diğer işlevleri gerçekleştiren müşterilerden siparişleri alır ve envanter doğrular. Bu kapsayıcı tabanlı uygulama kaynak kodunu kullanılabilir [hizmetine](https://aka.ms/MicroservicesArchitecture) GitHub deposu.
 
-Uygulamayı birkaç deposu UI ön uçlar (bir Web uygulaması ve yerel bir mobil uygulama), tüm gereken sunucu tarafı işlemleri için kapsayıcılar ve arka uç mikro birlikte dahil olmak üzere birden çok alt sistemleri oluşur. Şekil 8-1 başvuru uygulaması mimarisini gösterir.
+Uygulamayı birkaç depolama UI ön uçlar (bir Web uygulaması ve yerel bir mobil uygulama) yanı sıra arka uç mikro hizmetler ve kapsayıcılar için gerekli tüm sunucu tarafı işlemleri dahil olmak üzere birden çok alt sistemin oluşur. Şekil 8-1, başvuru uygulaması mimarisi gösterilmektedir.
 
 ![](./media/image1.png)
 
-**Şekil 8-1**. Uygulama, doğrudan bir istemci mikro hizmet iletişim ve olay bus gösteren eShopOnContainers başvurusu
+**Şekil 8-1**. Bir doğrudan istemci-mikro hizmet iletişimi ve olay veri yolu gösteren uygulama hizmetine başvuru
 
-**Barındırma ortamı**. Şekil 8-1'de çok kapsayıcı içindeki tek bir Docker ana bilgisayara dağıtılan bakın. Olacaktır durum docker ile tek bir Docker ana bilgisayara dağıtırken-komutu oluşturun. Ancak, kullanıyorsanız bir orchestrator veya kapsayıcı küme, her kapsayıcı kullanarak farklı bir konak (düğüm) içinde çalışıyor olabilecek ve biz mimarisi bölümünde daha önce açıklandığı gibi herhangi bir düğümün kapsayıcıları, herhangi bir sayıda çalışıyor.
+**Barındırma ortamı**. Şekil 8-1'de, tek bir Docker konağı içinde dağıtılan birden fazla kapsayıcı görürsünüz. Bu olacak durum docker ile tek bir Docker konağı için dağıtırken-compose komutu. Ancak, eğer kullanarak bir orchestrator veya kapsayıcı kümesi, her kapsayıcı farklı bir konağa (node) çalışıyor olabilir ve biz mimarisi bölümünde daha önce açıklandığı gibi herhangi bir düğümü kapsayıcılar, herhangi bir sayıda çalışıyor olabilir.
 
-**İletişim mimarisi**. EShopOnContainers uygulama (sorgular güncelleştirmeler ve işlemleri karşı) işlevsel eylem türünü bağlı olarak iki iletişim türlerini kullanır:
+**İletişim mimarisi**. Hizmetine uygulama (güncelleştirmeler ve işlemleri karşı sorgular) işlevsel eylem türünü bağlı olarak iki iletişim türlerini kullanır:
 
--   Doğrudan istemci mikro hizmet iletişim. Bu sorguları ve güncelleştirme veya istemci uygulamalardan işlem komutları kabul ederken kullanılır.
+-   Doğrudan istemci-mikro hizmet iletişimi. Bu sorguları ve güncelleştirme veya istemci uygulamalarından işlem komutları kabul ederken kullanılır.
 
--   Zaman uyumsuz olay tabanlı iletişim. Mikro arasında güncelleştirmeleri yayılmasına veya dış uygulamalarla tümleştirmek için bir olay veri yolu üzerinden gerçekleşir. Olay veri yolu RabbitMQ veya Azure Service Bus, NServiceBus, MassTransit veya Brighter gibi daha üst düzey hizmet yollarına kullanarak gibi tüm Mesajlaşma Aracısı altyapı teknolojilerde uygulanabilir.
+-   Zaman uyumsuz olay tabanlı iletişim. Mikro hizmetler güncelleştirmeler yayılması veya dış uygulamalarla tümleştirmek için bir olay veri yolu üzerinden gerçekleşir. Olay veri yolu, RabbitMQ veya Azure Service Bus, NServiceBus, MassTransit veya Brighter gibi daha üst düzey hizmet yolları kullanarak gibi herhangi bir Mesajlaşma Aracısı altyapı teknolojisi ile uygulanabilir.
 
-Uygulama kapsayıcıları biçiminde mikro kümesi olarak dağıtılır. İstemci uygulamaları Bu kapsayıcılar ile iletişim yanı sıra mikro iletişim. Bu ilk mimarisi belirtildiği gibi bir istemci uygulaması istekleri her mikro doğrudan yapabileceğini anlamına gelir bir doğrudan istemci mikro hizmet iletişim mimarisi kullanıyor. Genel bir uç nokta gibi her mikro hizmet sahip https://servicename.applicationname.companyname. Gerekirse, her mikro hizmet farklı bir TCP bağlantı noktası kullanabilirsiniz. URL mikro yük dengeleyici ile eşleyin üretim, hangi isteklerini kullanılabilir mikro hizmet örnekleri arasında dağıtır.
+Uygulama kapsayıcıları biçiminde mikro hizmetler kümesi olarak dağıtılır. İstemci uygulamaları bu kapsayıcılarla iletişim yapabilir mikro Hizmetler iletişim. Belirtildiği gibi bu ilk mimari bir istemci uygulamanın istekleri her mikro Hizmetleri doğrudan yapabileceğini anlamına gelir. bir doğrudan istemci-mikro hizmet iletişimi mimarisi kullanır. Her mikro hizmet gibi genel bir uç nokta sahip https://servicename.applicationname.companyname. Gerekirse, her bir mikro hizmetin farklı bir TCP bağlantı noktası kullanabilirsiniz. URL mikro Hizmetleri yük dengeleyici ile eşleyin üretim, hangi istekleri kullanılabilir mikro hizmet örnekleri arasında dağıtır.
 
-**Önemli Not API ağ geçidi vs üzerinde. EShopOnContainers doğrudan iletişime.** Büyük ve karmaşık mikro hizmet tabanlı bir uygulama oluştururken bu kılavuzu mimarisi bölümünde açıklandığı gibi doğrudan istemci mikro hizmet iletişim mimarisi dezavantajları olabilir. Ancak eShopOnContainers olduğu hedef bir basit odaklanın uygulama, Docker kapsayıcısı tabanlı uygulama başlatıldı ve bir tek tek yapılı API etkileyebilir ağ geçidi oluşturmak istemediğinize gibi küçük bir uygulama için yeterince iyi olabilir mikro geliştirme otonomisi.
+**Önemli Not API ağ geçidi vs üzerinde. Doğrudan iletişim hizmetine.** Büyük ve karmaşık mikro hizmet tabanlı bir uygulama oluştururken bu kılavuzun mimarisi bölümünde açıklandığı gibi doğrudan istemci-mikro hizmet iletişimi mimarisi dezavantajları olabilir. Ancak hizmetine uygulama olduğu hedef bir basit sağlamaya odaklanın, Docker kapsayıcı tabanlı uygulama çalışmaya ve tek tek parça API etkileyebilecek ağ geçidi oluşturmak istemedik gibi küçük bir uygulama için yeterince iyi olabilir mikro hizmetler geliştirme bağımsız çalışma sınırı.
 
-Ancak, mikro düzinelerce bulunan büyük mikro hizmet tabanlı uygulamaları tasarlamak için kullanacaksanız, biz mimarisi bölümünde açıklandığı gibi API ağ geçidi düzeni dikkate almanız önerilir.
-Bu mimari karar üretime hazır uygulamalar ve özel olarak yapılan cepheleri hakkında uzak istemciler için düşünüyorum sonra bulunanad. İstemci uygulamaları form faktörü bağlı olarak özel birden çok API ağ geçidi sahip istemci uygulaması başına farklı veri toplama in regard to faydaları sağlayabilir artı iç mikro veya API için istemci uygulamaları gizleme ve bu tek katmanında yetkilendirin. 
+Ancak mikro hizmetler onlarca ile büyük bir mikro hizmet tabanlı uygulama tasarlamak için kullanacaksanız, biz mimarisi bölümünde açıklandığı gibi API ağ geçidi desenini düşünün öneririz.
+Bu mimari kararı uzak istemciler için üretime hazır uygulamalar ve özel olarak yapılan cepheleri hakkında düşünmek sonra düzenlenmeye. İstemci uygulamaları form faktörü bağlı olarak özel birden çok API ağ geçitleri olan istemci uygulaması başına farklı veri toplama in regard to avantajları sağlayabilir Ayrıca iç mikro hizmetler veya API'leri için istemci uygulamaları Gizle ve bu tek katmanda yetkilendirin. 
 
-Ancak ve sözü edilen, olarak büyük ve tek yapılı API, mikro geliştirme otonomisi KILL ağ geçitleri karşı dikkatli olun.
+Ancak ve bahsedildiği gibi büyük ve tek parça API, mikro hizmetler geliştirme otonomi KILL, ağ geçitleri karşı dikkatli olun.
 
-### <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri egemenliği
+### <a name="data-sovereignty-per-microservice"></a>Mikro hizmet başına veri hakimiyeti
 
-Örnek uygulamadaki her mikro hizmet kendi veritabanı veya veri kaynağı ile her veritabanı sahibi veya veri kaynağı başka bir kapsayıcı olarak dağıtılır. Bu tasarım kararına yalnızca kodu Github'dan alma, kopyalayın ve Visual Studio veya Visual Studio Code açmak bir geliştirici kolaylaştırmak üzere yapılmıştır. Veya alternatif olarak, .NET Core CLI ve Docker CLI kullanarak özel Docker görüntülerinizi derleyin ve ardından dağıtmak ve Docker geliştirme ortamında çalıştırmak kolaylaştırır. Her iki durumda da kapsayıcıları için verileri kullanarak, geliştiriciler oluşturun ve birkaç dakika içinde dış veritabanı veya başka bir veri kaynağını altyapısı (Bulut veya şirket içi) sabit bağımlılıkları olan sağlamak zorunda kalmadan dağıtmanıza olanak tanır kaynakları.
+Örnek uygulamada, her bir mikro hizmet kendi veritabanını veya veri kaynağı ve her veritabanı sahibi veya veri kaynağı başka bir kapsayıcı olarak dağıtılır. Bu tasarım kararına, yalnızca bir geliştiricinin kodunu Github'dan alma, kopyalayın ve Visual Studio veya Visual Studio Code içinde açmak kolaylaştıran yapıldı. Veya alternatif olarak, .NET Core CLI ve Docker CLI'yı kullanarak özel Docker görüntülerini derleme ve dağıtma ve bunları bir Docker geliştirme ortamında çalıştırmak kolaylaştırır. Her iki durumda da geliştiriciler oluşturun ve harici bir veritabanına veya (Bulut veya şirket içi) altyapı sabit bağımlılıkları olan başka bir veri kaynağı sağlamak zorunda kalmadan birkaç dakika içinde dağıtma sağlar kapsayıcıları için verileri kullanarak kaynakları.
 
-Gerçek üretim ortamında, yüksek kullanılabilirlik ve ölçeklenebilirlik için veritabanlarını veritabanı sunucularında bulutta veya şirket içi, ancak kapsayıcıları bağlı olmalıdır.
+Gerçek bir üretim ortamında, ölçeklenebilirlik ve yüksek kullanılabilirlik için veritabanları veritabanı sunucularında bulutta veya şirket içi, ancak kapsayıcıları bağlı olmalıdır.
 
-Bu nedenle, Docker kapsayıcıları birimleridir mikro hizmetler için (ve bu uygulamada veritabanları için bile) dağıtım ve başvuru uygulaması mikro ilkeleri kapsayan bir çok kapsayıcı uygulamasıdır.
+Bu nedenle, mikro hizmetler için (ve bu uygulamada veritabanları için bile) dağıtım birimlerinin Docker kapsayıcıları ve mikro hizmetler ilkeleri benimsediğini çok kapsayıcılı bir uygulama başvuru uygulaması olduğundan.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
--   **GitHub depo eShopOnContainers. Başvuru uygulaması için kaynak kodu**
+-   **GitHub deposunu hizmetine. Başvuru uygulaması için kaynak kodu**
     *https://aka.ms/eShopOnContainers/*
 
-## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözüme yararları
+## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözüm avantajları
 
-Mikro hizmet tabanlı çözüm bu gibi birçok avantaj vardır:
+Bir mikro hizmet tabanlı çözümü bu gibi birçok avantaj vardır:
 
-**Her mikro hizmet görece küçük — gelişmesi ve yönetmek kolay**. Özellikle:
+**Her mikro hizmet göreceli olarak küçüktür — yönetmek ve geliştirmek kolay**. Özellikle:
 
--   Anlamak ve iyi verimliliğini hızlıca başlamak bir geliştirici kolaydır.
+-   Anlama ve iyi üretkenliği hızlı bir şekilde kullanmaya başlamak bir geliştirici kolaydır.
 
--   Kapsayıcıları, geliştiricilerin daha verimli hale getirir Hızlı Başlat.
+-   Kapsayıcıları, geliştiricilerin daha üretken yapar Hızlı Başlat.
 
--   Visual Studio gibi bir IDE küçük projeleri hızlı, geliştiricilerin üretken yapmadan yükleyebilir.
+-   Visual Studio gibi bir IDE, geliştiricilerin daha üretken hale getirme hızlı, daha küçük projeleri yükleyebilirsiniz.
 
--   Her mikro hizmet tasarlanmış, geliştirilmiş ve çeviklik mikro yeni sürümlerini sık dağıtmak daha kolay olduğundan sağlayan diğer mikro bağımsız olarak dağıtılabilir.
+-   Her mikro hizmet, geliştirilen ve çeviklik, mikro hizmetler, yeni sürümler sık dağıtmak daha kolay olduğundan sağlayan diğer mikro hizmetler bağımsız olarak, dağıtılan tasarlanmıştır.
 
-**Uygulamanın tek tek alanlarda genişletme mümkündür**. Örneği için katalog hizmeti veya Sepeti hizmeti çıkışı, sipariş sürecini değil ölçeklendirilmesi gerekebilir. Mikro altyapı tek yapılı bir mimari daha ölçeğini genişletme sırasında kullanılan kaynaklara göre çok daha etkili olacaktır.
+**Bireysel alanları uygulamanın ölçeğini filtrelenebilir**. Örneğin, katalog hizmeti veya sepet hizmeti, ancak sıralama sürecin ölçeği gerekebilir. Bir mikro hizmet altyapısı dışarı monolitik bir mimari olandan ölçeklendirme kullanılan kaynakları ile ilgili çok daha verimli olacaktır.
 
-**Birden çok ekibin arasındaki geliştirme iş bölebilirsiniz**. Her hizmet tek geliştirme ekibi tarafından ait olabilir. Her takım yönetmek, geliştirmek, dağıtmak ve takımlar kalan bağımsız olarak kendi hizmet ölçeklendirin.
+**Birden çok ekipler arasında geliştirme iş bölebilirsiniz**. Her hizmet tek bir geliştirme ekibi tarafından ait olabilir. Her takım yönetmek, geliştirin, dağıtın ve takımlar geri kalanı bağımsız olarak, hizmet ölçeklendirin.
 
-**Sorunları daha yalıtılmış**. Bir hizmetinde bir sorun varsa, yalnızca bu hizmet, başlangıçta (yanlış tasarım, mikro arasında doğrudan bağımlılıkları ile kullanıldığında dışında) etkilenir ve diğer hizmetleri istekleri işlemeye devam edebilirsiniz. Buna karşılık, özellikle bir bellek sızıntısı gibi kaynaklar gerektirdiğinde tek yapılı dağıtım mimarisi düzgün çalışmayan bir bileşenin tüm sistemin kullanıma sunabilirsiniz. Ayrıca, bir mikro hizmet bir sorun çözüldüğünde, uygulamanın geri kalanına etkilemeden yalnızca etkilenen mikro dağıtabilirsiniz.
+**Sorunları daha yalıtılmış**. Bir hizmette bir sorun varsa, yalnızca bu hizmet, başlangıçta (yanlış tasarımı, mikro hizmetler arasında doğrudan bağımlılıklarla kullanılmadığı sürece) etkilenir ve diğer hizmetleri istekleri işlemeye devam edebilir. Buna karşılık, özellikle bir bellek sızıntısı gibi kaynakları gerektirdiğinde monolitik dağıtım mimarisi düzgün çalışmayan bir bileşeni tüm sistemin çökmesine getirebilirsiniz. Ayrıca, bir mikro hizmet içinde bir sorun çözüldüğünde, yalnızca etkilenen mikro hizmet uygulama geri kalanı etkilemeden dağıtabilirsiniz.
 
-**En yeni teknolojileri kullanabilirsiniz**. Hizmetleri bağımsız olarak geliştirmeye başlayın ve yan yana (kapsayıcılar ve .NET Core sayesinde) çalıştırmak için en yeni teknolojileri ve çerçeveleri expediently çerçevesi için tam veya eski bir yığın sıkışan yerine kullanmaya başlayabilmeniz için uygulama.
+**En son teknolojileri kullanabilirsiniz**. Hizmetler bağımsız olarak geliştirmeye başlayın ve yan yana (kapsayıcılar ve .NET Core sayesinde) çalıştırmak için en son teknolojileri ve çerçeveleri expediently daha eski bir yığın veya tüm framework takılması yerine kullanmaya başlayabilirsiniz uygulama.
 
-## <a name="downsides-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözüme downsides
+## <a name="downsides-of-a-microservice-based-solution"></a>Bir mikro hizmet tabanlı çözümün downsides
 
-Bu gibi bir temel mikro hizmet çözümü, ayrıca bazı sakıncaları vardır:
+Böyle bir mikro hizmet tabanlı çözümü, ayrıca bazı dezavantajları vardır:
 
-**Dağıtılmış uygulama**. Tasarlarken ve hizmetler oluşturma uygulaması dağıtma karmaşıklığını geliştiriciler için ekler. Örneğin, geliştiricilerin HTTP ya da test ve özel durum işleme için karmaşıklık ekler AMPQ gibi protokolleri kullanılarak interservice iletişim uygulamalıdır. Aynı zamanda gecikme sisteme ekler.
+**Dağıtılmış bir uygulama**. Tasarlama ve oluşturma hizmetleri uygulaması dağıtma geliştiriciler için karmaşıklık ekler. Örneğin, geliştiriciler, HTTP veya test etmek ve özel durum işleme için karmaşıklık ekleyen AMPQ gibi protokolleri kullanılarak hizmetin iletişim uygulamalıdır. Ayrıca sisteme gecikme süresi ekler.
 
-**Dağıtım karmaşıklığını**. Mikro türleri düzinelerce sahiptir ve yüksek ölçeklenebilirlik (Bu hizmeti başına çok sayıda örnekleri oluşturmak ve bu hizmetleri pek çok konak genelinde dengelemek gerekir) gerekiyor bir uygulama dağıtım karmaşıklığını yüksek derecede BT işlemleri ve yönetimi için anlamına gelir. Mikro hizmet odaklı bir altyapı (örneğin, bir orchestrator ve Zamanlayıcı) kullanmıyorsanız, bu ek karmaşıklık iş uygulaması daha çok daha fazla geliştirme çaba gerektirebilir.
+**Dağıtım karmaşıklığı**. Mikro hizmetler türleri onlarca ve (Bu hizmet başına çok sayıda örnekleri oluşturmak ve bu hizmetlerin çok konak genelinde dengelemek gerekir), yüksek ölçeklenebilirlik gereken bir uygulama, BT operasyon ve yönetimi için yüksek derecede dağıtım karmaşıklık anlamına gelir. Bir mikro hizmet odaklı altyapısı (orchestrator ve Zamanlayıcı gibi) kullanmıyorsanız, bu karmaşıklık iş uygulaması daha çok daha fazla geliştirme çalışmalarını gerektirebilir.
 
-**Atomik işlemleri**. Genellikle birden çok mikro arasındaki atomik işlemleri mümkün değildir. Birden çok mikro arasında nihai tutarlılık kapsayacak şekilde iş gereksinimleri vardır.
+**Atomik işlemler**. Atomik işlemler genellikle birden çok mikro hizmetler arasında mümkün değildir. İş gereksinimlerini birden fazla mikro hizmetler arasında nihai tutarlılık yaklaşımını benimseyin gerekir.
 
-**Genel kaynak gereksinimlerini artan** (toplam bellek, sürücüler ve ağ kaynakları tüm sunucuları veya ana bilgisayarlar için). Mikro yaklaşımda, tek yapılı bir uygulamayı değiştirdiğinizde çoğu durumda, yeni mikro hizmet tabanlı uygulama tarafından gerek duyulan Genel kaynaklar miktarı özgün tek yapılı uygulama Altyapı gereksinimlerini büyük olacaktır. Ayrıntı düzeyi ve Dağıtılmış hizmetler yüksek ölçüde daha genel kaynaklar gerektirdiğinden budur. Ancak, düşük maliyetli genel ve yalnızca belirli alanları tek yapılı uygulamaları gelişen, uzun vadeli maliyetleri karşılaştırıldığında uygulamanın ölçeğini yapamamasına yararı kaynakların verildiğinde, artan kaynaklar için genellikle iyi bir kolaylığını kullanımıdır büyük uzun vadeli uygulamalar.
+**Genel kaynak gereksinimlerini artırılmış** (toplam bellek, sürücüler ve sunucular veya ana bilgisayar için ağ kaynaklarına). Bir mikro hizmetler yaklaşımı ile tek parça bir uygulamayı değiştirdiğinizde çoğu durumda, yeni mikro hizmet tabanlı uygulama için gerekli olan genel kaynaklar miktarını özgün tek parça uygulamanın Altyapı gereksinimlerini büyük olacaktır. Daha ileri düzeyde ayrıntı düzeyi ve dağıtılmış hizmetlerin daha genel kaynaklar gerektirdiğinden budur. Ancak, düşük maliyetli genel ve yalnızca belirli alanları tek parçalı uygulamalarla gelişen, uzun vadeli maliyet karşılaştırıldığında uygulamanın ölçeğini genişletmek işaretleyebilmesine avantajı kaynakları göz önünde bulundurulduğunda, artan kaynaklar için genellikle iyi bir denge kullanımıdır büyük uzun vadeli uygulamalar.
 
-**Doğrudan client‑to‑microservice iletişimle ilgili sorunlar**. Uygulama mikro düzinelerce ile büyük olduğunda olup olmadığını zorluklar ve sınırlamalar doğrudan istemci mikro hizmet iletişimleri uygulama gerektiriyor. İstemci gereksinimlerini ve her mikro tarafından sunulan API'lerde olası eşleşmiyorsa bir sorundur. Bazı durumlarda, istemci uygulaması Internet üzerinden verimsiz olabilir ve bir mobil ağ üzerinden pratik kullanıcı Arabirimi oluşturmak için birçok ayrı istekleri yapmanız gerekebilir. Bu nedenle, arka uç sistem istemci uygulamaya gelen istekleri en aza.
+**Doğrudan client‑to‑microservice iletişimle ilgili sorunlar**. Uygulama, mikro hizmetler onlarca ile büyük olduğunda, zorlukları ve sınırlamalar vardır uygulama doğrudan istemci-mikro hizmet iletişimi gerekiyorsa. İstemci gereksinimlerini ve her bir mikro hizmetler tarafından sunulan API'lerde arasında olası uyuşmazlık bir sorundur. Bazı durumlarda, istemci uygulaması, birçok ayrı istekler Internet üzerinden verimsiz olabilir ve bir mobil ağ üzerinden pratik kullanıcı Arabirimi oluşturmak için yapmanız gerekebilir. Bu nedenle, istemci uygulaması arka uç sistemine gelen istekleri en aza.
 
-Başka bir doğrudan istemci mikro hizmet iletişimi bazı mikro Web dostu olmayan protokolleri kullanarak sorunudur. AMQP ileti başka bir hizmet kullanırken bir hizmet ikili bir protokol kullanıyor olabilir. Bu protokoller firewall‑friendly değildir ve en iyi dahili olarak kullanılır. Genellikle, bir uygulama güvenlik duvarı dışında iletişim için HTTP ve WebSockets gibi protokoller kullanmanız gerekir.
+Doğrudan istemci-mikro hizmet iletişimi ile başka bir sorun, bazı mikro hizmetler Web dostu olmayan protokolleri kullanabilecek olmasıdır. AMQP ileti başka bir hizmet kullanırken bir hizmeti bir ikili protokolünü kullanıyor olabilir. Bu protokoller firewall‑friendly değildir ve en iyi dahili olarak kullanılır. Genellikle, bir uygulama güvenlik duvarı dışında iletişim için HTTP ve WebSockets gibi protokoller kullanmanız gerekir.
 
-Henüz bu doğrudan client‑to‑service yaklaşım ile başka bir dezavantajı, onu bu mikro sözleşmeleri yeniden düzenlemeniz zor yapmasıdır. Zaman içinde geliştiriciler Sistem Hizmetleri içine nasıl bölümlenmiş değiştirmek isteyebilirsiniz. Örneğin, bunlar iki hizmet birleştirme veya iki veya daha fazla hizmetlerine bir hizmet bölme. İstemciler doğrudan hizmetlerle iletişim kurar, ancak bu tür yeniden düzenleme gerçekleştirme İstemci uygulamalarıyla uyumluluk bozulabilir.
+Henüz bu doğrudan client‑to‑service yaklaşım ile başka bir dezavantajı, bu anlaşmalar Bu mikro hizmetlere yönelik yeniden düzenlenmesi zor yapmasıdır. Zaman içinde geliştiricilere, Sistem Hizmetleri içine nasıl bölümlenmiş değiştirmek isteyebilirsiniz. Örneğin, bunlar iki hizmet birleştirme veya bir hizmeti iki veya daha fazla hizmetlerine bölün. İstemciler Hizmetleri ile doğrudan iletişim kurar, ancak bu tür yeniden düzenleme gerçekleştirme istemci uygulamaları ile uyumluluğu bozabilir.
 
-Tasarlarken ve mikro üzerinde temel karmaşık bir uygulama oluşturma mimarisi bölümünde belirtildiği gibi basit bir doğrudan client‑to‑microservice iletişimi yaklaşım yerine hassas birden çok API ağ geçidi kullanımını düşünebilirsiniz.
+Tasarlama ve üzerinde mikro hizmet tabanlı karmaşık bir uygulama oluştururken mimari bölümünde bahsedildiği gibi basit bir doğrudan client‑to‑microservice iletişim yaklaşım yerine ayrıntılı birden çok API ağ geçitleri kullanımını göz önünde bulundurabilirsiniz.
 
-**Mikro bölümleme**. Son olarak, mikro hizmet mimarisi için atmanız hangi yaklaşımın olsun, başka bir sınama birden çok mikro uçtan uca uygulamasına bölümlemek nasıl karar vermektir. Kılavuzu mimarisi bölümünde belirtildiği gibi çeşitli teknikleri ve uygulayabileceğiniz bir yaklaşım vardır. Temel olarak, uygulamanın diğer alanlarından ayrılmış ve az sayıda sabit bağımlılıkları olan alanlarında tanımlamanız gerekir. Çoğu durumda, bu hizmetleri bölümleme için kullanım örneği tarafından hizalanır. Örneğin, e-Atölye uygulamamız sırası işlemi ile ilgili tüm iş mantığı sorumlu olduğu bir sıralama hizmeti sunuyoruz. Biz de katalog hizmeti ve diğer özellikleri uygulamak Sepeti hizmetine sahip. İdeal olarak, her hizmetin sorumlulukları küçük bir kümesini olmalıdır. Bu, bir sınıf değiştirmek için bir sebep yalnızca olması gerektiğini bildiren sınıfa uygulanan tek sorumluluk ilkeye (SRP) benzer. Ancak bu durumda, kapsamı tek bir sınıf büyük olacak şekilde mikro hakkında değil. En önemlisi, bir mikro hizmet tamamen otonom, uçtan uca, kendi veri kaynakları için sorumluluk dahil olmak zorundadır.
+**Mikro hizmet bölümleme**. Son olarak, göz önüne almanız, mikro hizmet mimarisi için hangi yaklaşımın ne olursa olsun, bir diğer zorluk nasıl ayıracağınız birden fazla mikro hizmetlerin uçtan uca uygulamaya karar vermektir. Kılavuzu mimarisi bölümünde belirtildiği gibi çeşitli teknikler ve uygulayabileceğiniz bir yaklaşım vardır. Temel olarak, uygulamanın diğer bölümler birbirinden ayrılmıştır ve sabit bağımlılıkları az sayıda olan alanları belirlemek gerekir. Çoğu durumda, bu hizmetleri bölümleme için kullanım örneği tarafından hizalanır. Örneğin, e-Atölye uygulamamız sipariş işleme ilgili tüm iş mantığı sorumlu olan bir sıralama hizmeti sahibiz. Ayrıca katalog hizmeti ve diğer özellikleri uygulayan sepet hizmeti sahibiz. İdeal olarak, her hizmetin sorumlulukları küçük bir dizi olmalıdır. Bu, bir sınıf yalnızca değiştirmek için bir neden olması gerektiğini bildiren sınıfa uygulanan tek sorumluluk ilkeye (SRP) benzer. Ancak bu durumda, kapsamı tek bir sınıf büyük olacak şekilde mikro hizmetler hakkında değildir. En önemlisi, bir mikro hizmet tamamen otonom, uçtan uca sorumluluk kendi veri kaynakları için de dahil olmak üzere olmak zorundadır.
 
-## <a name="external-versus-internal-architecture-and-design-patterns"></a>Dış iç mimarisi ve tasarım desenleri karşılaştırması
+## <a name="external-versus-internal-architecture-and-design-patterns"></a>Dış ve iç mimari ve tasarım desenleri
 
-Bu kılavuz mimarisi bölümünde açıklanan ilkeler aşağıdaki birden fazla hizmet tarafından oluşan mikro hizmet mimarisi dış mimarisidir. Ancak, yapısı her mikro hizmet ve üst düzey mikro hizmet mimarisi seçtiğiniz bağımsız olarak, bağlı olarak ortak ve bazen önerilir farklı iç mimari sağlamak için, her için farklı düzenlerini esas alarak farklı mikro. Mikro bile farklı teknolojiler ve programlama dilleri kullanabilirsiniz. Şekil 8-2 Bu seviyelerine gösterilmektedir.
+Bu kılavuz mimarisi kısmında tanımlanan ilkeler uygulayarak birden çok hizmet tarafından oluşan mikro hizmet mimarisi dış mimaridir. Ancak, her mikro hizmet ve üst düzey bir mikro hizmet mimarisi seçtiğiniz bağımsız olarak yapısı, bağlı olarak ortak ve farklı iç mimarileri için bazen önerilir, her için farklı eğilimlere bağlı farklı mikro hizmetler. Mikro hizmetler, hatta farklı teknolojiler ve programlama dilini kullanabilirsiniz. Şekil 8-2 Bu seviyelerine gösterilir.
 
 ![](./media/image2.png)
 
-**Şekil 8-2**. Dış iç mimarisi ve tasarım karşılaştırması
+**Şekil 8-2**. Dış ve iç mimari ve tasarım
 
-Örneğin, bizim *eShopOnContainers* örnek, kataloğu, sepet ve kullanıcı profil mikro basit (temel olarak, CRUD alt sistemleri). Bu nedenle, kendi iç mimari ve tasarım kolay. Ancak, daha karmaşık ve etki alanı karmaşıklık yüksek derecede ile sürekli değişen iş kurallarını gösteren sıralama mikro gibi diğer mikro olabilir. Bu gibi durumlarda, biz yaptıklarını olarak etki alanı Odaklı Tasarım (DDD) yaklaşımlar ile tanımlanan olanlar gibi belirli bir mikro hizmet içinde daha gelişmiş desen uygulamak isteyebilirsiniz *eShopOnContainers* sıralama mikro hizmet. (Bu DDD desenleri uygulanması açıklayan bölümünde daha sonra gözden geçireceğiz *eShopOnContainers* mikro hizmet sıralama.)
+Örneğin, bizim *hizmetine* basit örnek, katalog, sepet ve kullanıcı profili mikro hizmetler (temel, alt sistemlerin CRUD). Bu nedenle, kendi iç mimari ve tasarım basit. Ancak, diğer mikro hizmetler gibi daha karmaşıktır ve durmaksızın değişen iş kuralları ile etki alanı karmaşıklık yüksek derecede temsil eder. sıralama mikro olabilir. Bu gibi durumlarda, biz yapıyor olarak etki alanı Odaklı Tasarım (DDD) yaklaşımı ile tanımlanmış olanlar gibi belirli bir mikro hizmet içinde daha gelişmiş desenler uygulamak isteyebilirsiniz *hizmetine* sıralama mikro hizmet. (Şimdi bu DDD deseni uygulaması açıklayan bölümde daha sonra gözden *hizmetine* mikro hizmet sıralama.)
 
-Mikro hizmet başına farklı bir teknoloji başka bir nedenle her mikro hizmet yapısını olabilir. Örneğin, F gibi işlevsel bir programlama dili kullanmak daha iyi olabilir\#, hatta R gibi bir dili AI ve machine learning C gibi daha fazla nesne odaklı programlama dili yerine etki alanları hedefliyorsanız\#.
+Mikro hizmet başına farklı bir teknoloji başka bir nedenle, her bir mikro hizmetin niteliği olabilir. Örneğin, F gibi işlevsel bir programlama dili kullanmak daha iyi olabilir\#, hatta bir dil R gibi yapay ZEKA ve makine öğrenimi C gibi daha fazla nesne yönelimli programlama dili yerine etki alanları hedefliyorsanız\#.
 
-Alt çizgi, farklı tasarım desenleri esas alarak farklı bir iç mimari her mikro hizmet sahip olabilmesidir. Bunları aşırı mühendislik çünkü tüm mikro Gelişmiş DDD desenler kullanılarak uygulanmalıdır. Benzer şekilde, sürekli değişen iş mantığı ile karmaşık mikro CRUD bileşenleri olarak uygulanmamalıdır veya düşük kaliteli koduyla düşebilir.
+Alt çizgi, her bir mikro hizmetin farklı tasarım düzenlerini esas alarak farklı bir iç mimari sahip olabilmeleridir. Bunları aşırı mühendislik çünkü tüm mikro Hizmetleri, Gelişmiş DDD deseni kullanılarak uygulanmalıdır. Benzer şekilde, karmaşık mikro hizmetler durmaksızın değişen iş mantığına sahip CRUD bileşenleri uygulanmamalıdır veya düşük kaliteli kodlar kalabilirsiniz.
 
 
 
-## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Yeni bir dünya: birden fazla mimari desenleri ve polyglot mikro hizmetler
+## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Yeni Dünya: birden çok mimari desenleri ve çok yönlü mikro hizmetler
 
-Yazılım mimarları ve geliştiricileri tarafından kullanılan birçok mimari desenleri vardır. Birkaç verilmiştir (mimarisi stilleri ve mimari desenleri karıştırma):
+Yazılım mimarları ve geliştiricileri tarafından kullanılan birçok mimari desenleri vardır. Birkaçı verilmiştir (Mimari stilleri ile mimarisi desenleri karıştırma):
 
 -   Basit CRUD, tek katmanlı tek katmanlı.
 
 -   [Geleneksel N katmanlı](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
 
--   [Etki alanı tasarım N katmanlı temelli](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
+-   [Etki alanı tasarım N katmanlı odaklı](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
--   [Mimari temiz](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (ile kullanılmak üzere [eShopOnWeb](http://aka.ms/WebAppArchitecture))
+-   [Mimari Temizleme](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (ile kullanılan [eShopOnWeb](https://aka.ms/WebAppArchitecture))
 
--   [Komut ve sorgu sorumluluk ayrımı](https://martinfowler.com/bliki/CQRS.html) (CQRS).
+-   [Komut ve sorgu sorumluluğu ayrımı](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 
--   [Olay kaynaklı mimarisi](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
+-   [Olay denetimli mimari](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
-Ayrıca, pek çok teknolojileri ve ASP.NET Core Web API'leri, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile de kullanılabilir), F gibi dilleri mikro oluşturabilirsiniz\#, Node.js, Python, Java, C++, GoLang ve daha fazlası.
+Ayrıca, birçok teknolojiler ve ASP.NET Core Web API, NancyFx, ASP.NET Core SignalR (.NET Core 2 ile kullanılabilir), F gibi dilleri ile mikro hizmetler oluşturabilirsiniz\#, Node.js, Python, Java, C++, GoLang ve daha fazlası.
 
-En önemli nokta belirli mimarisi düzeni veya stili ya da belirli bir teknoloji tüm durumlarda doğru olmasıdır. Şekil 8-3 bazı yaklaşımlar ve gösterir teknolojileri (değil, belirli bir sıraya rağmen) farklı mikro kullanılabilirdi.
+Herhangi bir belirli mimari desen veya stil ya da belirli bir teknoloji tüm durumlar için doğru olduğunu önemli noktasıdır. (Değil herhangi bir sırada belirli rağmen) Şekil 8-3 gösteren bazı yaklaşımları ve teknolojileri farklı mikro Hizmetleri kullanılabilir.
 
 ![](./media/image3.png)
 
-**Şekil 8-3**. Birden çok mimari desenleri ve polyglot mikro world
+**Şekil 8-3**. Birden çok mimari desenleri ve çok yönlü mikro hizmetler world
 
-Gösterildiği gibi Şekil 8-3, uygulamalarda birçok mikro (ilişkisindeki her mikro hizmet farklı bir şekilde uygulayabilir bağlamlarda etki alanı Odaklı Tasarım terminolojisi ya da yalnızca "alt" otonom mikro olarak) oluşur. Her farklı mimari düzeni sahip ve farklı diller ve veritabanları uygulamanın yapısı, iş gereksinimlerini ve öncelikler bağlı olarak kullanabilirsiniz. Bazı durumlarda, mikro benzer olabilir. Ancak, her alt sisteminin bağlam sınır ve gereksinimleri genellikle farklı olduğundan, genellikle, geçerli değildir.
+Gösterildiği gibi Şekil 8-3, uygulamaların birçok mikro hizmetler (sınırlanmış her bir mikro hizmetin farklı bir şekilde uygulayabilir kapsamları etki alanı Odaklı Tasarım terminolojisi ya da sadece "alt" otonom mikro hizmetler olarak) oluşur. Her farklı mimari deseni sahip olabileceğiniz ve farklı dilleri ve veritabanlarını uygulama yapısı, iş gereksinimlerini ve öncelikler bağlı olarak kullanın. Bazı durumlarda, mikro hizmetler benzer olabilir. Ancak, her alt sisteminin içerik sınırı ve gereksinimleri genellikle farklı olduğundan, genellikle, geçerli değildir.
 
-Örneği için bir basit CRUD bakım uygulama için bunu DDD desenleri tasarlayıp için anlamlı olmayabilir. Ancak çekirdek etki alanı veya çekirdek iş için iş karmaşıklık sürekli değişen iş kuralları ile üstesinden gelmek için daha gelişmiş desenleri uygulamanız gerekebilir.
+Örneğin, için basit bir CRUD bakım uygulama, bu tasarlamak ve DDD desenlerini uygulama için anlamlı olmayabilir. Ancak temel etki alanı veya çekirdek iş için durmaksızın değişen iş kuralları ile iş karmaşıklığını gidermek için daha gelişmiş desenleri uygulamak gerekebilir.
 
-Özellikle, birden çok alt sistemleri tarafından oluşan büyük uygulamalar ile dağıttığınızda, bir tek mimarisi deseni temel alınarak tek bir üst düzey mimari geçerli. Örneğin, CQRS tüm uygulama için bir en üst düzey mimari olarak uygulanmamalıdır, ancak belirli bir hizmetler kümesini için yararlı olabilir.
+Özellikle, birden çok alt sistemi tarafından oluşturulan büyük uygulamalar ile dağıttığınızda, bir tek mimari deseni temel alınarak tek bir üst düzey mimari geçerli. Örneğin, CQRS tüm uygulama için üst düzey bir mimari olarak uygulanmamalıdır, ancak belirli bir hizmetler kümesi için yararlı olabilir.
 
-Gümüş madde işareti yok veya verilen her durum için doğru mimari desen yoktur. "Tümünü kural için bir mimari desen." sahip olamaz Her mikro Hizmet öncelikleri bağlı olarak, farklı bir yaklaşım her biri için aşağıdaki bölümlerde açıklandığı gibi seçmeniz gerekir.
+Gümüş madde işareti yok veya verilen her durum için doğru mimari desen yoktur. "Hepsini yönetmek için bir mimari deseni." sahip olamaz Her mikro hizmet öncelikler bağlı olarak, farklı bir yaklaşım her biri için aşağıdaki bölümlerde açıklandığı gibi seçmeniz gerekir.
 
 
 >[!div class="step-by-step"]
 [Önceki](index.md)
-[sonraki](data-driven-crud-microservice.md)
+[İleri](data-driven-crud-microservice.md)

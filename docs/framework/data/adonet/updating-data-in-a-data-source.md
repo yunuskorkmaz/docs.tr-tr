@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357799"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463916"
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir veri kaynağındaki verileri güncelleştirme
-Verileri (örneğin, INSERT, UPDATE veya DELETE) değiştirme SQL deyimlerini satırları döndürmeyin. Benzer şekilde, birçok saklı yordamlar bir eylem gerçekleştirmek ancak satırları döndürmüyor. Satır döndürmeyen komutları yürütmek için Oluştur bir **komutu** uygun SQL komutu nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**. Komutu yürütmek **ExecuteNonQuery** yöntemi **komutu** nesnesi.  
+(Örneğin, INSERT, UPDATE veya DELETE) verileri değiştirme SQL deyimleri, satır döndürmeyen. Benzer şekilde, birçok saklı yordamlar, bir eylem gerçekleştirin ancak satır döndürmeyen. Satır döndürmeyen komutları yürütmek için oluşturun bir **komut** uygun SQL komut nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**. Komutu ile yürütme **ExecuteNonQuery** yöntemi **komut** nesne.  
   
- **ExecuteNonQuery** yöntemi deyimi veya yürütüldü saklı yordam tarafından etkilenen satırların sayısını temsil eden bir tamsayı döndürür. Birden çok deyime yürütülürse, döndürülen değer tüm yürütülen deyimleri tarafından etkilenen kayıtların toplamıdır.  
+ **ExecuteNonQuery** yöntemi deyimi veya yürütülmesi saklı yordam tarafından etkilenen satır sayısını temsil eden bir tamsayı döndürür. Birden çok deyim yürütülür, döndürülen değer tüm yürütülen deyimleri tarafından etkilenen kayıtların toplamıdır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde bir veritabanı kullanarak bir kayıt eklemek için INSERT deyimi yürütür **ExecuteNonQuery**.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Aşağıdaki kod örneği örnek kodda tarafından oluşturulan saklı yordam yürütür [katalog işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Hiçbir satır saklı yordamı tarafından döndürülen böylece **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordamı bir giriş parametresi alır ve bir output parametresi ve dönüş değeri döndürür.  
+ Aşağıdaki kod örneği örnek koda oluşturan saklı yordamı yürütür [katalog işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Hiçbir satır saklı yordam tarafından döndürülen şekilde **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordam giriş parametresi alır ve bir output parametresi ve dönüş değeri döndürür.  
   
- İçin <xref:System.Data.OleDb.OleDbCommand> nesnesi **ReturnValue** parametre eklenmelidir **parametreleri** koleksiyonu ilk.  
+ İçin <xref:System.Data.OleDb.OleDbCommand> nesnesi **ReturnValue** parametre eklenmelidir **parametreleri** koleksiyon ilk.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,4 +95,4 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
  [Verileri Değiştirmek için Komutları Kullanma](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

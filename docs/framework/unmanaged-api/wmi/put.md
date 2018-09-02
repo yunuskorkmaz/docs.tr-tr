@@ -1,6 +1,6 @@
 ---
-title: PUT işlevi (yönetilmeyen API Başvurusu)
-description: Put işlevi adlı bir özellik için yeni bir değer atar.
+title: Put işlevi (yönetilmeyen API Başvurusu)
+description: Put işlevi, adlandırılmış bir özelliği için yeni bir değer atar.
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460385"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43460991"
 ---
-# <a name="put-function"></a>PUT işlevi
-Adlandırılmış bir özelliği için yeni bir değer ayarlar.
+# <a name="put-function"></a>Put işlevi
+Adlandırılmış bir özelliği, yeni değere ayarlar.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,10 +44,10 @@ HRESULT Put (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmıyor.
+[in] Bu parametre kullanılmaz.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) örneği.
+[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `wszName`  
 [in] Özelliğin adı. Bu parametre olamaz `null`.
@@ -56,42 +56,42 @@ HRESULT Put (
 [in] Ayrılmış. Bu parametre 0 olmalıdır.
 
 `pVal`   
-[in] Geçerli bir işaretçi `VARIANT` yeni özellik değeri olur. Varsa `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`, özellik kümesine `null`. 
+[in] Geçerli bir işaretçi `VARIANT` , yeni özellik değeri olur. Varsa `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`, özelliği `null`. 
 
 `vtType`  
-[in] Türü `VARIANT` gösterdiği `pVal`. Bkz: [açıklamalar](#remarks) daha fazla bilgi için bölüm.
+[in] Türünü `VARIANT` işaret ettiği `pVal`. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
  
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üstbilgi dosyası, veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Özellik türü tanınmıyor. Bu değer, sınıf zaten varsa sınıf örnekleri oluşturulurken döndürülür. |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Özellik türü tanınmıyor. Bu değer, sınıf zaten varsa, sınıf örnekleri oluşturulurken döndürülür. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | İçin örnekleri: belirten `pVal` işaret eden bir `VARIANT` özelliği için yanlış bir türde. <br/> Sınıf tanımları için: üst sınıfta bir özellik zaten var ve yeni COM türü eski COM türünden farklıdır. |
-|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarısız oldu. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | İçin örnek: gösterir `pVal` işaret eden bir `VARIANT` özelliği için yanlış türde. <br/> Sınıf tanımları için: özellik üst sınıfta zaten mevcut ve yeni bir COM tür eski bir COM türünden farklıdır. |
+|`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu. |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev çağrısı sarmalar [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) yöntemi.
+Bu işlev bir çağrı sarılır [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) yöntemi.
 
-Bu işlev her zaman geçerli özellik değeri ile yeni bir tane üzerine yazar. Varsa [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) işaret eden bir sınıf tanımına `Put` oluşturur veya özellik değeri güncelleştirir. Zaman [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) işaret eden bir CIM örneğine `Put` özellik değeri yalnızca; güncelleştirir `Put` bir özellik değeri oluşturulamıyor.
+Bu işlev her zaman geçerli özellik değeri ile yeni bir üzerine yazar. Varsa [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaret eden bir sınıf tanımı için `Put` oluşturur veya özellik değerini güncelleştirir. Zaman [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaret eden bir CIM örneğine `Put` özellik değeri yalnızca; güncelleştirir `Put` bir özellik değeri oluşturulamıyor.
 
-`__CLASS` Sistem özelliği olduğunda yalnızca yazılabilir sınıfı oluşturma sırasında bunu boş bırakılamaz. Diğer tüm sistem özellikleri salt okunurdur.
+`__CLASS` Sistem özelliği olduğunda yalnızca yazılabilir sınıfı oluşturma sırasında boş bırakılamaz. Diğer tüm sistem özellikleri salt okunurdur.
 
-Kullanıcı özellikleri başlayamaz veya bitemez bir alt çizgi ("_") adlarla oluşturulamıyor. Bu, sistem sınıfları ve özellikleri için ayrılmıştır.
+Kullanıcı özellikleri ile başlayamaz veya bitemez bir alt çizgi ("_") adları oluşturulamıyor. Bu, sistem sınıfları ve özellikleri için ayrılmıştır.
 
-Özelliği ayarlarsanız `Put` üst sınıfında exists işlevi, özellik türü üst sınıf türü eşleşmiyor sürece özelliğinin varsayılan değeri değiştirilir. Özelliği yok ve tür uyuşmazlığı değilse ceated özelliğidir.
+Özelliği ayarlarsanız `Put` üst sınıfta exists işlevi, özelliğinin varsayılan değeri üst sınıfı türü Özellik türüyle eşleşmiyor sürece değiştirilir. Özelliği yok ve tür uyuşmazlığı değil, ceated özelliğidir.
 
-Kullanım `vtType` yalnızca yeni özellikleri bir CIM sınıfı tanımında oluşturulurken parametre ve `pVal` olan `null` veya işaret eden bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi özelliği CIM türünü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType` temel alınan nesnede bir örneğiyse 0 olmalıdır (olsa bile `Val` olan `null`) çünkü özelliğinin türü sabittir ve değiştirilemez.   
+Kullanım `vtType` yalnızca bir CIM sınıf tanımına yeni özellikler oluştururken, parametre ve `pVal` olduğu `null` veya işaret bir `VARIANT` türü `VT_NULL`. Bu durumda, `vType` parametresi, özelliğin CIM türü belirtir. Diğer her durumda `vtType` 0 olmalıdır. `vtType` temel alınan nesne örneği ise 0 olmalıdır (bile `Val` olan `null`) özelliğinin türü sabittir ve değiştirilemez.   
 
 ## <a name="example"></a>Örnek
 
-Bir örnek için bkz: [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) yöntemi.
+Bir örnek için bkz. [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) yöntemi.
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

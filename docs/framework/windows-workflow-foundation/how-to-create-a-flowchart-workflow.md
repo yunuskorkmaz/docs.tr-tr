@@ -1,75 +1,75 @@
 ---
-title: 'Nasıl yapılır: bir akış iş akışı oluşturma'
+title: 'Nasıl yapılır: akış çizelgesi iş akışı oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: c483a79a234d175fca63f27b4303b3f087c84e59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519348"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474031"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Nasıl yapılır: bir akış iş akışı oluşturma
-İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konudaki adımları hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma aracılığıyla <xref:System.Activities.Statements.Flowchart> etkinliği ve önceki özel etkinlikler [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. Sayı tahmin eden oyun iş akışını modeller.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Nasıl yapılır: akış çizelgesi iş akışı oluşturma
+İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Flowchart> etkinliği ve özel etkinlikler önceki [nasıl yapılır: bir etkinliği oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
   
 > [!NOTE]
->  Başlarken Öğreticisi her bir konuda önceki konularda bağlıdır. Bu konuda tamamlamak için önce tamamlamanız gereken [nasıl yapılır: bir etkinlik oluşturmak](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Önceki konularıyla ilgili her konuda Başlarken Öğreticisi bağlıdır. Bu konuyu tamamlamak için önce tamamlamanız gereken [nasıl yapılır: bir etkinliği oluşturma](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Öğreticinin tamamlanmış bir sürümünü indirmek için bkz: [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Öğreticinin tamamlanmış bir sürümünü indirmek için bkz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow"></a>İş akışını oluşturmak için  
   
 1.  Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
   
-2.  İçinde **yüklü**, **ortak öğeler** düğümü, select **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
+2.  İçinde **yüklü**, **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
   
 3.  Tür `FlowchartNumberGuessWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
   
-4.  Sürükleme bir **akış çizelgesi** etkinliğinden **akış çizelgesi** bölümünü **araç** ve üzerine bırakın **etkinliğini Drop burada** üzerindeki etiket İş akışı tasarım yüzeyi.  
+4.  Sürükle bir **akış** etkinliğinden **akış** bölümünü **araç kutusu** üzerine bırakın **bırak etkinliği Buraya** üzerindeki etiket İş akışı tasarım yüzeyi.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>İş akışı değişkenleri ve bağımsız değişkenler oluşturmak için  
+### <a name="to-create-the-workflow-variables-and-arguments"></a>Bağımsız değişkenler ve iş akışı değişkenlerini oluşturmak için  
   
-1.  Çift **FlowchartNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülemek için.  
+1.  Çift **FlowchartNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
   
-2.  Tıklatın **bağımsız değişkenleri** görüntülemek için iş akışı Tasarımcısı sol tarafındaki **bağımsız değişkenleri** bölmesi.  
+2.  Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **bağımsız değişkenleri** bölmesi.  
   
-3.  Tıklatın **bağımsız değişkeni oluşturma**.  
+3.  Tıklayın **bağımsız değişken oluşturma**.  
   
-4.  Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden, **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
+4.  Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
-5.  Tıklatın **bağımsız değişkeni oluşturma**.  
+5.  Tıklayın **bağımsız değişken oluşturma**.  
   
-6.  Tür `Turns` içine **adı** altında yeni eklenen kutusuna `MaxNumber` bağımsız değişkeni, select **çıkışı** gelen **yönü** aşağı açılan listesinden,  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna BASIN.  
+6.  Tür `Turns` içine **adı** altında yeni eklenen kutusunu `MaxNumber` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinden  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna basın.  
   
-7.  Tıklatın **bağımsız değişkenleri** kapatmak için etkinlik Tasarımcısı sol tarafındaki **bağımsız değişkenleri** bölmesi.  
+7.  Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.  
   
-8.  Tıklatın **değişkenleri** görüntülemek için iş akışı Tasarımcısı sol tarafındaki **değişkenleri** bölmesi.  
+8.  Tıklayın **değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **değişkenleri** bölmesi.  
   
-9. Tıklatın **değişken oluşturma**.  
+9. Tıklayın **değişken oluşturma**.  
   
     > [!TIP]
-    >  Yoksa **oluşturma değişken** kutusu görüntülenir, tıklatın <xref:System.Activities.Statements.Flowchart> seçmek için iş akışı Tasarımcısı yüzey üzerinde etkinlik.  
+    >  Hayır ise **oluşturma değişken** kutusu görüntülenir, tıklayın <xref:System.Activities.Statements.Flowchart> seçmek için iş akışı Tasarımcı yüzeyine etkinliği.  
   
 10. Tür `Guess` içine **adı** kutusunda **Int32** gelen **değişken türü** aşağı açılan liste ve değişkeni kaydetmek için ENTER tuşuna basın.  
   
-11. Tıklatın **değişken oluşturma**.  
+11. Tıklayın **değişken oluşturma**.  
   
 12. Tür `Target` içine **adı** kutusunda **Int32** gelen **değişken türü** aşağı açılan liste ve değişkeni kaydetmek için ENTER tuşuna basın.  
   
-13. Tıklatın **değişkenleri** kapatmak için etkinlik Tasarımcısı sol tarafındaki **değişkenleri** bölmesi.  
+13. Tıklayın **değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **değişkenleri** bölmesi.  
   
 ### <a name="to-add-the-workflow-activities"></a>İş akışı etkinlikleri eklemek için  
   
-1.  Sürükle bir **atamak** etkinliğinden **Temelleri** bölümünü **araç** ve üzerine gelin, üzerinden **Başlat** en üstünde olduğu düğümü Akış Çizelgesi. Zaman **atamak** etkinliktir üzerinden **Başlat** düğümü, üç üçgenler etrafında görünür **Başlat** düğümü. Bırakma **atamak** doğrudan aşağıdaki üçgen faaliyete **Başlat** düğümü. Bu iki öğeyi birbirine bağlamak ve atar **atamak** etkinlik akış ilk etkinlik olarak.  
+1.  Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve onu kutucuğunun üzerine gelin **Başlat** üstünde olan düğüm Akış Çizelgesi. Zaman **atama** etkinliktir üzerinden **Başlat** düğüm, üç üçgenler geçici olarak görünür **Başlat** düğümü. DROP **atama** doğrudan aşağıdaki üçgen faaliyete **Başlat** düğümü. Bu iki öğeyi birbirine bağlamak ve atar **atama** akış ilk etkinlik olarak etkinlik.  
   
     > [!NOTE]
-    >  Etkinlikler de başlangıç etkinliği iş akışı olarak el ile etkinlik başlangıç düğümü bağlayarak belirtilebilir. Bunu yapmak için fareyi üzerine gelerek **Başlat** düğümü, fare üzerinden olduğunda görüntülenen dikdörtgenler birini tıklatın **Başlat** düğümü ve bağlanma satır istenen etkinlik aşağı kaydırın ve aşağıdakilerden birini bırakma sürükleyin görünen dikdörtgenler. Ayrıca belirleyebilirsiniz ve BT sağ tıklayarak ve seçme başlangıç etkinliği gibi etkinlik **Başlat düğüm kümesi**.  
+    >  Etkinlikler de başlangıç etkinliği iş akışı olarak el ile etkinlik başlangıç düğümüne bağlayarak belirtilebilir. Bunu yapmak için fareyi üzerine **Başlat** düğümü, fareyi üzerine geldiğinde görünen dikdörtgen birine tıklayın **Başlat** düğümü ile bağlanma ve satır aşağı istenen etkinlik birinde bırakın sürükleyin görünen dikdörtgen. Ayrıca belirleyebilirsiniz ve BT sağ tıklayıp seçme başlangıç etkinliği gibi etkinlik **başlangıç düğümü olarak ayarlamak**.  
   
-2.  Tür `Target` içine **için** kutusu ve aşağıdaki ifadesine **bir C# ifadesi girin** veya **bir VB ifadesi girin** kutusu.  
+2.  Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -80,11 +80,11 @@ ms.locfileid: "33519348"
     ```  
   
     > [!TIP]
-    >  Varsa **araç** penceresi görüntülenmez, seçin **araç** gelen **Görünüm** menüsü.  
+    >  Varsa **araç kutusu** penceresi görüntülenmiyorsa, seçin **araç kutusu** gelen **görünümü** menüsü.  
   
-3.  Sürükleme bir **komut istemi** etkinliğinden **NumberGuessWorkflowActivities** bölümünü **araç**, aşağıdaki bırakma **atamak** etkinliği Önceki adım ve bağlanın **komut istemi** etkinliğe **atamak** etkinlik. İki etkinlik bağlanmak için üç yolu vardır. Bıraktığınız gibi bunları bağlamak için ilk yoludur **komut istemi** iş akışı etkinliği. Sürüklediğiniz gibi **komut istemi** iş akışına aktivite üzerine gelin, üzerinden **atamak** etkinliği ve ne zaman görünür dört üçgenler birini üzerine bırakın **komut istemi** etkinliktir üzerinden **atamak** etkinlik. Bırakmak için ikinci yoludur **komut istemi** etkinliği iş akışı istenen konuma üzerine. Fare ardından üzerine gelerek **atamak** etkinliği ve sürükleme aşağı görünüyor dikdörtgenler birini **komut istemi** etkinlik. Böylece bağlanma satır fareyi sürükleyin **atamak** etkinlik dikdörtgen birine bağlayan **komut istemi** etkinliği ve ardından yayın fare düğmesini. Üçüncü yolu çok hariç sürükleyerek yerine ilk yol benzer **komut istemi** etkinliğinden **araç**, konumundan iş akışı tasarım yüzeyine sürükleyin, getirin **Ata** etkinliği ve görünür üçgenler birini üzerine bırakın.  
+3.  Sürükle bir **istemi** etkinliğinden **NumberGuessWorkflowActivities** bölümünü **araç kutusu**, aşağıdaki açılan **atama** etkinliği Önceki adım ve connect **komut istemi** etkinliğini **atama** etkinlik. İki etkinliği bağlanmak için üç yolu vardır. Bıraktığınız gibi bunları bağlamak için ilk yoludur **istemi** iş akışı etkinliği. Sürüklediğiniz gibi **komut istemi** etkinlik iş akışı için bunu kutucuğunun üzerine gelin **atama** etkinlik görünür dört üçgenler birini üzerine bırakın **istemi** Etkinlik bittikten **atama** etkinlik. Bırakmak ikinci yoludur **istemi** etkinlik iş akışı istenen konuma sürükleyin. Fareyi üzerine ardından **atama** etkinliği ve dikdörtgenlerden görünen aşağı sürükleyin **istemi** etkinlik. Fareyi sürükleyin, böylece bağlanma satır gelen **atama** etkinlik bağlayan bir dikdörtgen **istemi** etkinliği ve ardından sürüm fare düğmesini. Üçüncü yolu çok hariç sürükleyerek yerine ilk yol benzer **istemi** etkinliğinden **araç kutusu**, iş akışı tasarım yüzeyinde konumundan sürükleyin, gelin **Ata** etkinliği ve görüntülenen üçgenler birini üzerine bırakın.  
   
-4.  İçinde **Özellikler penceresini** için **komut istemi** etkinliği, türü `"EnterGuess"` tırnak işaretleri içine dahil **YerİşaretiAdı** özellik değeri kutusu. Tür `Guess` içine **sonuç** özelliği değeri kutusunu ve içine aşağıdaki ifadeyi yazın **metin** özellik kutusu.  
+4.  İçinde **Özellikler penceresi** için **istemi** etkinliği, türü `"EnterGuess"` tırnak işaretleri içine dahil **YerİşaretiAdı** özellik değer kutusu. Tür `Guess` içine **sonucu** özellik değer kutusu ve içine aşağıdaki ifadeyi yazın **metin** özellik kutusu.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -95,13 +95,13 @@ ms.locfileid: "33519348"
     ```  
   
     > [!TIP]
-    >  Varsa **Özellikler penceresini** görüntülenen, select değil **Özellikler penceresini** gelen **Görünüm** menüsü.  
+    >  Varsa **Özellikler penceresi** görüntülenen, select değil **Özellikler penceresi** gelen **görünümü** menüsü.  
   
-5.  Sürükleme bir **atamak** etkinliğinden **Temelleri** bölümünü **araç** ve olmasınısağlamaköncekiadımdaaçıklananyöntemlerdenbirinikullanarakbağlanın **Komut İstemi** etkinlik.  
+5.  Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** ve olmasıöncekiadımdaaçıklananyöntemlerdenbirinikullanarakbağlanma **Komut İstemi** etkinlik.  
   
-6.  Tür `Turns` içine **için** kutusu ve `Turns + 1` içine **bir C# ifadesi girin** veya **bir VB ifadesi girin** kutusu.  
+6.  Tür `Turns` içine **için** kutusu ve `Turns + 1` içine **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
-7.  Sürükleme bir **FlowDecision** gelen **akış çizelgesi** bölümünü **araç** ve aşağıdaki bağlanmak **atamak** etkinlik. İçinde **Özellikler penceresini**, içine aşağıdaki ifadeyi yazın **koşulu** özellik değeri kutusu.  
+7.  Sürükleme bir **FlowDecision** gelen **akış** bölümünü **araç kutusu** ve aşağıdaki bağlantı **atama** etkinlik. İçinde **Özellikler penceresi**, içine aşağıdaki ifadeyi yazın **koşul** özellik değer kutusu.  
   
     ```vb  
     Guess = Target  
@@ -111,44 +111,44 @@ ms.locfileid: "33519348"
     Guess == Target  
     ```  
   
-8.  Başka bir sürükleyin **FlowDecision** etkinliğinden **araç** ve birinci bırakın. Etiketli dikdörtgen sürükleyerek iki etkinlik bağlanmak **False** üstte **FlowDecision** dikdörtgen etkinliğe ikinci üstündeki **FlowDecision**etkinlik.  
+8.  Başka bir sürükleyin **FlowDecision** etkinliğinden **araç kutusu** ilki bırakın. Etiketli dikdörtgenden sürükleyerek iki etkinliklerini bağlama **False** üst **FlowDecision** dikdörtgen etkinliğe ikinci üst kısmındaki **FlowDecision**etkinlik.  
   
     > [!TIP]
-    >  Görmüyorsanız, **True** ve **False** üzerinde etiketler **FlowDecision**, fare üzerine gelerek **FlowDecision**.  
+    >  Görmüyorsanız, **True** ve **False** üzerinde etiketler **FlowDecision**, fareyi üzerine **FlowDecision**.  
   
-9. İkinci tıklatın **FlowDecision** etkinliği seçin. İçinde **Özellikler penceresini**, içine aşağıdaki ifadeyi yazın **koşulu** özellik değeri kutusu.  
+9. İkinci tıklama **FlowDecision** etkinliği seçin. İçinde **Özellikler penceresi**, içine aşağıdaki ifadeyi yazın **koşul** özellik değer kutusu.  
   
     ```
     Guess < Target  
     ```  
   
-10. İki **WriteLine** etkinliklerden **Temelleri** bölümünü **araç** ve böylece yan yana iki oldukları bırakın **FlowDecision**  etkinlikler. Bağlanma **True** alt eylem **FlowDecision** etkinliğe soldaki **WriteLine** etkinliği ve **False** eyleme en sağdaki **WriteLine** etkinlik.  
+10. İki **WriteLine** etkinlikten **Temelleri** bölümünü **araç kutusu** ve bunlar yan yana iki altında olacak şekilde bırakın **FlowDecision**  etkinlikler. Bağlanmak **True** alt eylem **FlowDecision** etkinliğini en soldaki **WriteLine** etkinliği ve **False** eylemi en sağdaki **WriteLine** etkinlik.  
   
-11. Soldaki tıklatın **WriteLine** seçin ve içine aşağıdaki ifadeyi yazın etkinlik **metin** özellik değeri kutusunda **Özellikler penceresini**.  
+11. En soldaki tıklayın **WriteLine** etkinliği seçin ve içine aşağıdaki ifadeyi yazın **metin** özellik değeri kutusunda **Özellikler penceresi**.  
   
     ```
     "Your guess is too low."  
     ```  
   
-12. Bağlantı **WriteLine** sol tarafına **komut istemi** üstüne etkinliğini.  
+12. Connect **WriteLine** sol tarafına **istemi** üzerinde etkinlik.  
   
-13. En sağdaki tıklatın **WriteLine** seçin ve içine aşağıdaki ifadeyi yazın etkinlik **metin** özellik değeri kutusunda **Özellikler penceresini**.  
+13. En sağdaki tıklayın **WriteLine** etkinliği seçin ve içine aşağıdaki ifadeyi yazın **metin** özellik değeri kutusunda **Özellikler penceresi**.  
   
     ```
     "Your guess is too high."  
     ```  
   
-14. Bağlantı **WriteLine** etkinliğinin sağ tarafına **komut istemi** üstündeki etkinlik.  
+14. Bağlama **WriteLine** etkinliğinin sağındaki **istemi** üstündeki etkinlik.  
   
-     Aşağıdaki örnek, tamamlanan iş akışı gösterilmektedir.  
+     Aşağıdaki örnekte, tamamlanmış bir iş akışı gösterilmektedir.  
   
      ![Windows Workflow Foundation tamamlandı](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
   
 ### <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
   
-1.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+1.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-     İş akışını çalıştırmak yönergeler Lütfen görmek için sonraki konuyu [nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) adım farklı bir iş akışı stil ile ve çalıştırmak bu adımı akış iş akışını kullanarak istediğiniz, için İleri atlayabilirsiniz [oluşturmak veuygulamayıçalıştırmakiçin](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)bölümünü [nasıl yapılır: bir iş akışını çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Lütfen iş akışının nasıl çalıştırılacağını yönergeleri görmek için bir sonraki konu [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) adım iş akışı farklı bir stil ve çalıştırmak bu adımdaki akış çizelgesi iş akışı kullanarak istediğiniz, atlayın [uygulamasıderlemeveçalıştırmaiçin](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)bölümünü [nasıl yapılır: bir iş akışı çalıştırma](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Activities.Statements.Flowchart>  

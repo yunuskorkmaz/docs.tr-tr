@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 57d7342ab88bcafbb8bcd1d288254b5e81846975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363120"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466303"
 ---
 # <a name="manipulating-data"></a>Verileri düzenleme
-Giriş, birden fazla etkin sonuç kümesi (MARS) önce geliştiricilerin belirli senaryolar çözmek için birden çok bağlantıları veya sunucu tarafı imleçler kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda kullanılan, ayrıca, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekirdi. Aşağıdaki senaryolarda nasıl yerine birden çok bağlantı MARS etkin bir bağlantı kullanılacağını gösterir.  
+Giriş önce birden çok etkin sonuç kümesi (MARS), geliştiricilerin belirli senaryoları çözmek için birden çok bağlantı veya sunucu tarafı İmleçler'nı kullanmanız gerekiyordu. Birden çok bağlantı bir işlem durumda karşılaştıklarını ek olarak, bağlı bağlantılar (ile **sp_getbindtoken** ve **sp_bindsession**) gerekiyordu. Aşağıdaki senaryolarda, birden çok bağlantı yerine MARS özellikli bir bağlantı kullanmayı göstermektedir.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Birden fazla komut MARS ile kullanma  
- Aşağıdaki konsol uygulaması iki kullanımı gösterilmiştir <xref:System.Data.SqlClient.SqlDataReader> iki nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin olan nesne.  
+ Aşağıdaki konsol uygulamasında nasıl kullanacağınızı gösterir <xref:System.Data.SqlClient.SqlDataReader> iki nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin nesne.  
   
 ### <a name="example"></a>Örnek  
- Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesne, bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci olarak <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
+ Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesnesi bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** veritabanını SQL Server'a dahildir. Örnek kodda sağlanan bağlantı dizesi, veritabanı yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  
@@ -164,13 +164,13 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Okuma ve MARS ile verileri güncelleştirme  
- MARS kullanılacak bağlantı sağlayan her ikisi de işlemleri ve veri işleme dili (DML) birden çok bekleyen işlemi okuma işlemleri için. Bu özellik, bir uygulamanın bağlantısı meşgul hatalarla ilgilenir gereksinimini ortadan kaldırır. Ayrıca, MARS genellikle daha fazla kaynak tüketmesine sunucu tarafı imleçler, kullanıcı değiştirebilirsiniz. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabilir çünkü bunlar kullanma gereksinimini ortadan aynı işlem bağlamı paylaşabilirsiniz **sp_getbindtoken** ve **sp_bindsession** sistem saklı yordamlar.  
+ MARS kullanılmak üzere bir bağlantı sağlar hem de işlemleri ve veri işleme dili (DML) ile birden fazla bekleyen işlemi okuma işlemleri için. Bu özellik, bir uygulamanın bağlantı meşgul hatalarla uğraşmak ihtiyacını ortadan kaldırır. Ayrıca, MARS genellikle daha fazla kaynak tüketmesine sunucu tarafı imleçler, kullanıcı değiştirebilirsiniz. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabilir olduğundan, bunlar kullanma gereksinimini ortadan aynı işlem bağlamını paylaşabilir **sp_getbindtoken** ve **sp_bindsession** sistem saklı yordamları.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulaması iki kullanımı gösterilmiştir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin olan nesne. İlk komut nesnesi, kredi derecelendirme 5'tir satıcılarının listesini alır. İkinci komut nesnesi kimliği sağlanan satıcının kullandığı bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm özel satıcı için ürünlerin. Her ürün kaydı ikinciye ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için bir hesaplama gerçekleştirilen **OnOrderQty** olmalıdır. Üçüncü komut nesnesi sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Tüm işlem sona erdiğinde geri tek bir işlem içinde yer alır.  
+ Aşağıdaki konsol uygulamasında nasıl kullanacağınızı gösterir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin nesne. İlk komut nesnesi 5 ayarlanmış kredi derecelendirme ise olan satıcıların listesini alır. İkinci komut nesnesi sağlanan kimliği bir tedarikçi kullanan bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm belirli satıcı için ürünlerin ile. Her bir ürün kaydı ikinci tarafından ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için hesaplama gerçekleştirilir **OnOrderQty** olmalıdır. Üçüncü komut nesnesi daha sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Bu işlemi sonunda geri tek bir işlem içinde gerçekleşir.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** veritabanını SQL Server'a dahildir. Örnek kodda sağlanan bağlantı dizesi, veritabanı yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```vb  
 Option Strict On  
@@ -404,4 +404,4 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

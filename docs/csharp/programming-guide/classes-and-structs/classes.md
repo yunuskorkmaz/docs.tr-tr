@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
 ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256059"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467048"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 A *sınıfı* diğer türleri, yöntemleri ve olayları değişkenleri birlikte gruplandırarak kendi özel türlerinizde oluşturmanızı sağlayan bir yapıdır. Gibi bir sınıf plandır. Bu, veri ve türü davranışını tanımlar. Sınıfın statik olarak bildirilmedi, istemci kodu oluşturabilirsiniz *örnekleri* bunu. Bu örnekleri *nesneleri* bir değişkene atanır. Bir sınıf örneği, tüm başvuruları kapsam dışına çıkmadan kadar bellekte kalır. Bu sırada, CLR, çöp toplama işlemi için uygun olarak işaretler. Sınıf olarak bildirilirse [statik](../../../csharp/language-reference/keywords/static.md)örnekleri oluşturulamaz ve istemci kodu yalnızca erişebilirsiniz sınıfı aracılığıyla. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

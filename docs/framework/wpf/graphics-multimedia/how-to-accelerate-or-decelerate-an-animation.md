@@ -7,17 +7,17 @@ helpviewer_keywords:
 - animation [WPF], accelerating
 - animation [WPF], decelerating
 ms.assetid: 4f383b2c-f94d-4a4e-9a06-f56f5dae95f9
-ms.openlocfilehash: b4bea64dbc88ce32c908289b9465b058c558a932
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1649f27fc8ff850516eef2086dbce732915406b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555681"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471945"
 ---
 # <a name="how-to-accelerate-or-decelerate-an-animation"></a>Nasıl yapılır: Bir Animasyonu Hızlandırma veya Yavaşlatma
-Bu örnek, animasyonun hızlandırmak ve zaman içinde hızını düşürün sağlamak gösterilmiştir. Aşağıdaki örnekte, birçok dikdörtgen farklı olan bir animasyon tarafından animasyonlu <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> ve <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ayarlar.  
+Bu örnek, animasyonun hızlandırın ve zaman içinde yavaşlatma sağlamak nasıl gösterir. Aşağıdaki örnekte, birkaç dikdörtgenler farklı ile animasyonlar animasyonlu <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> ve <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> ayarları.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[timingbehaviors_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AccelDecelExample.xaml#1)]  
   
- Kod bu örnekten çıkarılmıştır. Tam kod için bkz: [animasyon zamanlama davranışı örneği](http://go.microsoft.com/fwlink/?LinkID=159970).
+ Bu örnekte, kod çıkarıldı. Tüm kod için bkz: [animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970).

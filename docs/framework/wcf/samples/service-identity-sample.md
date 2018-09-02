@@ -2,31 +2,31 @@
 title: Hizmet Kimliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: d7eee6070956fb3b9a87a79d79040f94740ad2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd6688802628a484cc9fe1fc1dffa82ddecd12a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507598"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466655"
 ---
 # <a name="service-identity-sample"></a>Hizmet Kimliği Örneği
-Bu hizmet kimliği örneği, bir hizmetin kimliğini ayarlamak gösterilmiştir. Tasarım zamanında bir istemci hizmetin meta verileri kullanarak kimlik alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci gelen kimliği doğrulanmamış çağrıları koruma işlemlerinden birini çağırmadan önce bir hizmetin kimliğini doğrulamak bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet ayrıca bir istemcinin kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.  
+Bu hizmet kimliği örneği bir hizmet için kimlik gösterilmektedir. Tasarım zamanında istemci hizmet meta verileri kullanarak kimliğini alabilir ve ardından çalışma zamanında istemci hizmetin kimliğini doğrulayabilir. Hizmet kimliği kavramı, böylece istemci kimliği doğrulanmamış çağrılarından koruma işlemlerinden birini çağırmadan önce bir hizmet kimlik doğrulaması bir istemci izin vermektir. Güvenli bir bağlantı üzerinden hizmet de istemci kimlik bilgileri erişime izin vermeden önce kimliğini doğrular, ancak bu odak noktası, bu örnek değil. Örnekleri görmek [istemci](../../../../docs/framework/wcf/samples/client.md) sunucu kimlik doğrulaması göster.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Bu örneği aşağıdaki özellikleri gösterir:  
+ Bu örnek aşağıdaki özellikleri gösterilmektedir:  
   
--   Kimlik farklı türde bir hizmet için farklı uç noktalar ayarlamak nasıl. Kimlik türlerinin farklı özellikleri vardır. Kullanılacak kimlik türü, uç noktanın bağlama üzerinde kullanılan güvenlik kimlik bilgileri türünü bağımlıdır.  
+-   Nasıl bir hizmet için farklı uç noktalar şirket farklı türde kimlik ayarlanır. Kimlik türlerinin farklı özelliklere sahiptir. Uç noktanın bağlamada kullanılan güvenlik kimlik bilgileri türünü kullanmak için kimlik türü bağlıdır.  
   
--   Kimlik, ya da yapılandırma veya imperatively kodu bildirimli olarak ayarlanmış olabilir. Genellikle hem istemci hem de hizmet için yapılandırma kimliğini ayarlamak için kullanmanız gerekir.  
+-   Kimlik, ya da yapılandırma veya kesin kod bildirimli olarak ayarlanabilir. Genellikle hem istemci hem de hizmet için kimlik yapılandırma kullanmalısınız.  
   
--   Nasıl özel bir kimlik istemci üzerinde ayarlanır. Özel bir kimlik mevcut bir türle hizmet çağırmadan önce yetkilendirme kararları için hizmetin kimlik bilgileri bölümünde sağlanan diğer talep bilgilerini inceleyin olanak tanır kimlik, genellikle bir özelleştirmedir.  
+-   Nasıl özel bir kimlik istemci üzerinde ayarlanır. Özel kimlik hizmeti çağırmadan önce yetkilendirme kararları vermek için hizmetin kimlik bilgileri sağlanan başka talep bilgileri incelemek istemci sağlayan kimlik var olan bir tür genellikle bir özelleştirmedir.  
   
     > [!NOTE]
-    >  Bu örnek identity.com ve bu sertifikadaki RSA anahtarı olarak adlandırılan belirli bir sertifika kimliğini denetler. Sertifika ve RSA kimlik türlerinin istemcide yapılandırmasında, bu değerleri almak için kolay bir yol hizmeti WSDL incelemek için bu değerleri nerede serileştirilir kullanıldığında.  
+    >  Bu örnek identity.com ve bu sertifikadaki RSA anahtarı adlı belirli bir sertifika kimliği denetler. İstemci yapılandırması sertifika ve RSA kimlik türlerini kullanarak, bu değerleri almak için kolay bir yol hizmeti için WSDL incelemek için bu değerleri nerede serileştirilir andır.  
   
- Aşağıdaki örnek kod, etki alanı ad sunucusu (DNS) ile bir WSHttpBinding kullanarak bir sertifika, hizmet uç noktası kimliğini yapılandırmak gösterilmiştir.  
+ Aşağıdaki örnek kod, bir hizmet uç noktası kimliği etki alanı adı sunucusu (DNS) ile bir WSHttpBinding kullanarak bir sertifika yapılandırmak gösterilmektedir.  
   
 ```  
 //Create a service endpoint and set its identity to the certificate's DNS                 
@@ -38,7 +38,7 @@ EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.Cr
 ep.Address = epa;  
 ```  
   
- Kimlik, App.config dosyasında yapılandırmasında de belirtilebilir. Aşağıdaki örnek, bir hizmet uç noktası için UPN (kullanıcı asıl adı) kimliğini ayarlamak gösterilmiştir.  
+ Kimlik, App.config dosyasında yapılandırmasında de belirtilebilir. Aşağıdaki örnek, bir hizmet uç noktası için UPN (kullanıcı asıl adı) kimliğini ayarlamak gösterilmektedir.  
   
 ```xml  
 <endpoint address="upnidentity"  
@@ -54,7 +54,7 @@ ep.Address = epa;
 </endpoint>  
 ```  
   
- Özel bir kimlik türetme tarafından istemcide ayarlanabilir <xref:System.ServiceModel.EndpointIdentity> ve <xref:System.ServiceModel.Security.IdentityVerifier> sınıfları. Kavramsal olarak <xref:System.ServiceModel.Security.IdentityVerifier> sınıfı, istemci sayılabileceğini hizmetin karşılığıdır `AuthorizationManager` sınıfı. Aşağıdaki kod örneğinde uygulaması gösterir `OrgEndpointIdentity`, sunucu sertifikasının konu adı ile eşleşmesi için bir kuruluş adı depolar. Kuruluş adı yetkilendirme denetle oluşuyor `CheckAccess` yöntemi `CustomIdentityVerifier` sınıfı.  
+ Özel kimlik türeterek istemcide ayarlanabilir <xref:System.ServiceModel.EndpointIdentity> ve <xref:System.ServiceModel.Security.IdentityVerifier> sınıfları. Kavramsal olarak <xref:System.ServiceModel.Security.IdentityVerifier> sınıfı kabul istemci olarak denk olan hizmetin `AuthorizationManager` sınıfı. Aşağıdaki kod örneği uygulanışı gösterilmektedir `OrgEndpointIdentity`, sunucu sertifikasının konu adını eşleştirmek için bir kuruluş adı depolar. Kuruluş adı yetkilendirme denetle oluşuyor `CheckAccess` metodunda `CustomIdentityVerifier` sınıfı.  
   
 ```  
 // This custom EndpointIdentity stores an organization name   
@@ -103,60 +103,60 @@ class CustomIdentityVerifier : IdentityVerifier
 }  
 ```  
   
- Bu örnek dile özgü kimlik çözüm klasöründe olan identity.com adlı bir sertifika kullanıyor.  
+ Bu örnek için dile özgü kimlik Çözüm klasörü içinde olan identity.com adı verilen bir sertifika kullanır.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz bilgisayar yapılandırmasında örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### <a name="to-run-the-sample-on-the-same-computer"></a>Aynı bilgisayara örneği çalıştırmak için  
+### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya [!INCLUDE[wv](../../../../includes/wv-md.md)], kimlik çözümü klasöründeki Identity.pfx sertifika dosyasını MMC ek bileşen aracını kullanarak LocalMachine/My (Kişisel) sertifika deposuna aktarın. Parola korumalı dosyasıdır. İçeri aktarma sırasında için bir parola sorulur. Tür `xyz` parola kutusuna. Daha fazla bilgi için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konu. Bunu yaptıktan sonra Setup.bat bir Visual Studio komut istemindeki Currentuser'a/güvenilir Kişiler deposuna istemcide kullanmak için bu sertifikayı kopyaladığı yönetici ayrıcalıklarıyla çalıştırın.  
+1.  Üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)] veya [!INCLUDE[wv](../../../../includes/wv-md.md)], kimlik Çözüm klasörü'ndeki Identity.pfx sertifika dosyası MMC ek bileşenini aracını kullanarak LocalMachine/My (Kişisel) sertifika deposuna aktarın. Parola korumalı dosyasıdır. İçeri aktarma sırasında parola istenir. Tür `xyz` parola kutusu içine. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) konu. Bunu yaptıktan sonra Setup.bat bir Visual Studio komut, istemcide kullanılmak CurrentUser/güvenilir Kişiler deposuna kopyalar. Bu sertifika istemini yönetici ayrıcalıklarıyla çalıştırın.  
   
-2.  Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], içinde örnek yükleme klasöründen Setup.bat çalıştırmak bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemini yönetici ayrıcalıklarına sahip. Bu örneği çalıştırmak için gerekli tüm sertifikalar yükler.  
+2.  Üzerinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Setup.bat örnek yükleme klasörü içinde çalıştırılan bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] yönetici ayrıcalıklarıyla bir komut istemi. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkeni ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat komut dosyası için gereken yürütülebilir dosyalar içeren dizine işaret eder. Örnekle tamamladığınızda Cleanup.bat çalıştırarak sertifikaları kaldırdığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikaları kullanır.  
+    >  Setup.bat toplu iş dosyası çalıştırılmak üzere tasarlanmış bir [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi. İçinde PATH ortam değişkenini ayarlamak [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] komut istemi Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine işaret eder. Örnek ile tamamladığınızda Cleanup.bat çalıştırarak, sertifikaları kaldırdığınızdan emin olun. Diğer güvenlik örnekleri aynı sertifikalarını kullanın.  
   
-3.  Service.exe \service\bin dizininden başlatın. Hizmet hazır olduğunu bildirir ve tuşuna bir istem görüntüler gösterir sağlamak \<Enter > Hizmet sonlandırılacak.  
+3.  Service.exe \service\bin dizinden başlatın. Hizmet hazır olduğunda ve bir istem görüntüler tuşuna gösterdiğini olun \<Enter > hizmeti sonlandırmak için.  
   
-4.  Client.exe \client\bin dizinden veya derlemek ve çalıştırmak için Visual Studio'da F5'e basarak başlatın. İstemci etkinliği istemci konsol uygulaması görüntülenir.  
+4.  Client.exe \client\bin dizinden veya derlemek ve çalıştırmak için Visual Studio'da F5 tuşuna basarak başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-5.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Örnek istemci parçası oluşturmadan önce hizmet uç noktası adresi Client.cs dosyasında değeri değiştirdiğinizden emin olun `CallServiceCustomClientIdentity` yöntemi. Ardından örnek oluşturun.  
+1.  İstemci parçası oluşturmadan önce Client.cs dosyasında hizmetin uç nokta adresi değerini değiştirmek mutlaka `CallServiceCustomClientIdentity` yöntemi. Ardından örnek oluşturun.  
   
 2.  Hizmet bilgisayarda bir dizin oluşturun.  
   
-3.  Hizmet program dosyalarını service\bin hizmeti bilgisayarında dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyalarını hizmet bilgisayara kopyalayın.  
+3.  Hizmet program dosyaları service\bin hizmeti bilgisayarında dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-4.  İstemci ikili dosyalarının için istemci bilgisayarda bir dizin oluşturun.  
+4.  İstemci ikili dosyaları için istemci bilgisayarda bir dizin oluşturun.  
   
-5.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Ayrıca istemciye Setup.bat, Cleanup.bat ve ImportServiceCert.bat dosyalarını kopyalayın.  
+5.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-6.  Hizmeti, Çalıştır `setup.bat service` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya aktarır.  
+6.  Hizmette çalıştıracak `setup.bat service` yönetici ayrıcalıklarına sahip bir Visual Studio Komut İstemi'nde açılır. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
-7.  Service.cer dosya hizmeti dizininden istemci bilgisayarda istemci dizinine kopyalayın.  
+7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-8.  İstemci bilgisayardaki Client.exe.config dosyasında yeni adresi hizmetinizin eşleştirmek için uç nokta adresi değerini değiştirin. Değiştirilmelidir birden çok örneği vardır.  
+8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin. Değiştirilmesi gereken birden çok örneği vardır.  
   
-9. İstemci üzerinde yönetici ayrıcalıklarına sahip açılan bir Visual Studio komut istemi ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyadan Currentuser'a - TrustedPeople deposunu alır.  
+9. İstemcide ImportServiceCert.bat yönetici ayrıcalıklarıyla açılan bir Visual Studio komut isteminde çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   
-10. Hizmet bilgisayarda komut isteminden Service.exe başlatın.  
+10. Hizmet bilgisayarda Service.exe komut istemini başlatın.  
   
-11. İstemci bilgisayarda bir komut isteminden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. İstemci bilgisayarda bir komut istemi'nden Client.exe başlatın. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründen çalıştırın.  
+-   Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
     > [!NOTE]
-    >  Bu komut, bu örnek bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, Currentuser'a - TrustedPeople deposu yüklü hizmet sertifikalarını temizlemek emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Bu betik, bu örnek, bilgisayarlar arasında çalıştırırken bir istemcide hizmet sertifikaları kaldırmaz. Bilgisayarlar arasında sertifikaları kullanan bir Windows Communication Foundation (WCF) örnekleri çalıştırırsanız, CurrentUser - TrustedPeople deposu yüklü hizmet sertifikalarını Temizle emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.

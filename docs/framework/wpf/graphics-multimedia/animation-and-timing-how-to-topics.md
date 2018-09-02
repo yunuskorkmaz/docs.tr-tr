@@ -7,15 +7,15 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557647"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468673"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyon ve zamanlama sistemi uygulamalarınızda.  
+Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyon ve zamanlama sistemine uygulamalarınızda.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bir Animasyonu Hızlandırma veya Yavaşlatma](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
@@ -31,7 +31,6 @@ Aşağıdaki konular nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winc
  [Bir Animasyonu Gelen, İçin ve Göre Kullanarak Denetleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Ad Kapsamı Tanımlama](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [Saatin Durumu Değiştiğinde Bildirim Alma](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Nasıl yapılır: bir film şeridi Kaldır](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Animasyonu Yineleme](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Görsel Taslak Arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [Görsel Taslağı Zaman Uyumlu Olarak Arama](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

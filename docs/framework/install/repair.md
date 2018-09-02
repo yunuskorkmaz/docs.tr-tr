@@ -1,20 +1,20 @@
 ---
-title: .NET Framework onarın
-description: .NET Framework onarın öğrenin
+title: .NET Framework'ü onarma
+description: .NET Framework'ü onarma hakkında bilgi edinin
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: f22ab8b551c5f6a91cba92d76b38c998ccc09882
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74c2fdc3443741790549845eae3dabe83b46278c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386970"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465963"
 ---
-# <a name="repair-the-net-framework"></a>.NET Framework onarın
+# <a name="repair-the-net-framework"></a>.NET Framework'ü onarma
 
-Bazı durumlarda, .NET Framework yüklemesi bozulmuş ve onarım gerektirir. Uygulamanızı başlatmayı denerseniz hemen sonra ya da daha yeni .NET Framework sürümleri yükleyemiyorsanız çökerse bu durumda olabilir.
+Bazı durumlarda, .NET Framework yüklemenizi bozulabilir ve onarım gerekebilir. Uygulamanızı başlatmak hemen deneyin veya daha yeni bir .NET Framework sürümlerini yükleyemiyorsanız kilitlenmesi durumunda bu durum olabilir.
 
-.NET Framework kullanılarak yükleme onarabilir [.NET Framework Onarma aracı](http://download.microsoft.com/download/2/B/D/2BDE5459-2225-48B8-830C-AE19CAF038F1/NetFxRepairTool.exe).
+.NET Framework kullanarak yükleme onarabilir [.NET Framework Onarım Aracı](https://download.microsoft.com/download/2/B/D/2BDE5459-2225-48B8-830C-AE19CAF038F1/NetFxRepairTool.exe).
 
-Uygulamanız .NET Framework onarma sonra hala başlatılıyor değil, uygulama bir sorun olabilir. Bu durumda, uygulama yayımcısı başvurmanız gerekir.
+Daha sonra uygulamanızı .NET Framework'ü onarma sonra hala başlatılıyor değil, uygulama bir sorun olabilir. Bu durumda, uygulama yayımcısını başvurmanız gerekir.

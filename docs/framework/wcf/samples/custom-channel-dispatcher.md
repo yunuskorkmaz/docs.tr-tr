@@ -2,37 +2,37 @@
 title: Özel Kanal Dağıtıcı
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809985"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462385"
 ---
 # <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı
-Bu örnek kanal yığını özel bir şekilde uygulayarak nasıl oluşturulacağını gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web ana bilgisayar ortamında özel kanal dağıtıcı oluşturma. Kanal dağıtıcı etkileşimde <xref:System.ServiceModel.Channels.IChannelListener> kanal yığından Kanallar ve alır iletileri kabul etmesini. Bu örnek ayrıca kullanarak bir Web ana bilgisayar ortamının kanal yığınında yapı göstermek için temel bir örnek sağlar <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
+Bu örnek nasıl uygulayarak özel bir yöntemle kanal yığını oluşturulacağını gösterir <xref:System.ServiceModel.ServiceHostBase> doğrudan ve Web konak ortamında özel kanal dağıtıcı oluşturma. Kanal dağıtıcı etkileşimde <xref:System.ServiceModel.Channels.IChannelListener> kanal yığından Kanallar ve alır ileti kabul etmek için. Bu örnek ayrıca kullanarak bir Web ana bilgisayar ortamının kanal yığınında oluşturma işlemini göstermek için temel bir örnek sağlar <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
   
 ## <a name="custom-servicehostbase"></a>Özel ServiceHostBase  
- Bu örnek temel türü uygulayan <xref:System.ServiceModel.ServiceHostBase> yerine <xref:System.ServiceModel.ServiceHost> kanal yığının en üstünde katman işleme özel bir ileti ile Windows Communication Foundation (WCF) yığın uygulama değiştirme göstermek için. Sanal yöntemi geçersiz kılma <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> kanal dinleyicileri ve kanal dağıtıcı oluşturmak için.  
+ Bu örnek, temel türün uyguladığı <xref:System.ServiceModel.ServiceHostBase> yerine <xref:System.ServiceModel.ServiceHost> kanal yığın üzerinde katman işleme özel bir ileti ile Windows Communication Foundation (WCF) yığını uygulama değiştirme işlemini göstermek için. Sanal yöntemini geçersiz kılma <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> kanal dinleyicileri ve kanal dağıtıcı oluşturun.  
   
- Web barındırılan bir hizmete uygulamak için hizmeti uzantı alınmaya <xref:System.ServiceModel.Activation.VirtualPathExtension> gelen <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> koleksiyonu ve ekleyin <xref:System.ServiceModel.Channels.BindingParameterCollection> böylece aktarım katmanı barındırma ortamı ayarlarına dayanarak kanal dinleyicisi yapılandırmak nasıl bilir, İş, Internet Information Services (IIS) / Windows İşlem Etkinleştirme Hizmeti (WAS) ayarlar.  
+ Bir Web barındırılan hizmeti uygulamak için hizmet uzantısı alma <xref:System.ServiceModel.Activation.VirtualPathExtension> gelen <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> koleksiyonu ve ekleyin <xref:System.ServiceModel.Channels.BindingParameterCollection> Aktarım katmanı barındırma ortamı ayarları temel alarak kanal dinleyicisi yapılandırma bilebilmesi, Internet Information Services (IIS) olan / Windows İşlem Etkinleştirme Hizmeti (WAS) ayarlar.  
   
 ## <a name="custom-channel-dispatcher"></a>Özel Kanal Dağıtıcı  
- Özel kanal dağıtıcı türünü genişleten <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>. Bu tür kanal düzeyi programlama mantığı uygular. Bu örnekte, yalnızca <xref:System.ServiceModel.Channels.IReplyChannel> istek-yanıt ileti değişim deseni, ancak özel kanal dağıtıcı diğer kanal türleri için kolayca genişletilebilir için desteklenir.  
+ Özel kanal dağıtıcı türü genişleten <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>. Bu tür kanal düzeyi programlama mantığını uygular. Bu örnekte, yalnızca <xref:System.ServiceModel.Channels.IReplyChannel> diğer kanal türleri için istek-yanıt ileti değişim deseni, ancak özel kanal dağıtıcı kolayca genişletilebilir için desteklenir.  
   
- Dağıtıcı ilk kanal dinleyicisi açar ve bir singleton yanıt kanalına kabul eder. Kanal ile sonsuz bir döngüde iletileri (istek) göndermek başlar. Her istek için bir yanıt iletisi oluşturur ve istemciye geri gönderir.  
+ Dağıtıcı ilk kanal dinleyicisi açar ve ardından tek bir yanıt kanalına kabul eder. Kanalıyla sonsuz bir döngüde (istek) iletileri göndermeye başlar. Her istek için bir yanıt iletisi oluşturur ve bunu istemciye geri gönderir.  
   
 ## <a name="creating-a-response-message"></a>Bir yanıt iletisi oluşturma  
- İleti işleme türünü uygulanır `MyServiceManager`. İçinde `HandleRequest` yöntemi, `Action` iletinin üstbilgisi isteği desteklenip desteklenmediğini görmek için önce denetlenir. Bir SOAP eylemi önceden tanımlanmış "http://tempuri.org/HelloWorld/Hello" ileti filtreleme sağlamak için tanımlanmış. Bu WCF uygulamasında hizmet sözleşmesi kavram benzer <xref:System.ServiceModel.ServiceHost>.  
+ İleti işleme türü uygulanan `MyServiceManager`. İçinde `HandleRequest` yöntemi `Action` iletisinin üst bilgi isteği desteklenip desteklenmediğini görmek için öncelikle denetlenir. Bir önceden tanımlanmış SOAP eylemi "http://tempuri.org/HelloWorld/Hello" İleti Filtresi sağlamak için tanımlanır. Bu WCF uygulamasında hizmet sözleşme kavramına benzer <xref:System.ServiceModel.ServiceHost>.  
   
- Doğru SOAP eylemi çalışması için örnek istenen ileti verileri alır ve ne de görülen için benzer isteğine karşılık gelen bir yanıt oluşturur <xref:System.ServiceModel.ServiceHost> durumda.  
+ Doğru SOAP eylemi çalışması için örnek istenen ileti verileri alır ve ne de görülür için benzer isteğine karşılık gelen bir yanıt oluşturur <xref:System.ServiceModel.ServiceHost> çalışması.  
   
- HTTP GET fiili özel olarak doğru derlenmiş görmek için bir tarayıcı hizmetinden gözatması özel bir HTML ileti bu konuda, servis talebi döndürerek işlenir. SOAP eylemi eşleşmiyorsa, bir hata gönderme isteği desteklenmiyor göstermek için ileti geri.  
+ Özel HTTP GET fiili hizmet düzgün derlenir görmek için bir tarayıcıdan göz atabilmenizi sağlayacak şekilde özel bir HTML ileti bu, servis talebi döndürerek işlenir. SOAP eylemi eşleşmiyorsa, bir hata gönderme isteği desteklenmediğini belirtmek için ileti geri.  
   
- Bu örnek hizmetinden gelen herhangi bir şey varsaymaz normal bir WCF istemcisi istemcidir. Bu nedenle, hizmeti özel normal bir WCF alma eşleşecek şekilde tasarlanmıştır<xref:System.ServiceModel.ServiceHost> uygulaması. Sonuç olarak, yalnızca bir hizmet sözleşmesini istemcide gereklidir.  
+ Bu örnek hizmetinden gelen herhangi bir şey varsaymaz normal bir WCF istemcisi istemcisidir. Bu nedenle, hizmeti özel normal bir WCF alma eşleştirme için tasarlanmıştır<xref:System.ServiceModel.ServiceHost> uygulaması. Sonuç olarak, yalnızca bir hizmet sözleşmesini istemcide gereklidir.  
   
 ## <a name="using-the-sample"></a>Örnek kullanma  
- İstemci uygulaması doğrudan çalıştırmak, şu çıkışı üretir.  
+ Doğrudan istemci uygulamasının çalışıp aşağıdaki çıktıyı üretir.  
   
 ```Output  
 Client is talking to a request/reply WCF service.   
@@ -44,13 +44,13 @@ Server replied: You said: Howdy. Message id: 4
 Server replied: You said: Howdy. Message id: 5  
 ```  
   
- Böylece bir HTTP GET iletisi sunucuda işlenen bir tarayıcı hizmetinden göz atabilirsiniz. Bu, iyi biçimlendirilmiş HTML metin geri alır.  
+ Bir HTTP GET iletisi sunucuda işlenir böylece hizmet tarayıcısından de göz atabilirsiniz. Bu, iyi biçimlendirilmiş HTML metni geri alır.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

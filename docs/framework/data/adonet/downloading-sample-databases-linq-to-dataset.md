@@ -1,34 +1,34 @@
 ---
-title: Örnek Veritabanları (LINQ-DataSet) yükleniyor
+title: Örnek Veritabanları (LINQ to DataSet) indirme
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f2488b0e1bfc578679a2a2802c332439f374a341
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763059"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469862"
 ---
-# <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ-DataSet) yükleniyor
-Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz Microsoft sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri SQL Server veri deposu olarak kullanın. SQL Server Express ücretsiz kullanılabilir olan Edition yerine SQL Server veri deposu olarak da kullanılabilir.  
+# <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ to DataSet) indirme
+Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri, SQL Server veri deposu olarak kullanın. SQL Server Express ücret kullanılabilir Edition, SQL Server yerine veri deposu olarak da kullanılabilir.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>İndirme ve AdventureWorks veritabanını yükleme  
   
-#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>İndirmek ve SQL Server için AdventureWorks örnek veritabanını yüklemek için  
+#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>İndirmek ve AdventureWorks örnek veritabanı için SQL Server yüklemek için  
   
 1.  Internet Explorer’ı açın.  
   
-2.  Git [SQL Server 2005 örnekler ve örnek veritabanları](http://go.microsoft.com/fwlink/?linkid=31046) Web sitesi.  
+2.  Git [SQL Server 2005 örnekleri ve örnek veritabanları](https://go.microsoft.com/fwlink/?linkid=31046) Web sitesi.  
   
-3.  AdventureWorks örnek veritabanı, işlemci türü (örneğin, AdventureWorksDB.msi) için karşıdan yüklemek için yönergeleri izleyin ve kaydedin. MSI dosyası yerel bilgisayarınızda.  
+3.  AdventureWorks örnek veritabanını (örneğin, AdventureWorksDB.msi) işlemci türünüz için yükleme yönergelerini izleyin ve kaydedin. MSI dosyası yerel bilgisayarınıza.  
   
-4.  Karşıdan yükleme veya SQL Server Kurulumu sırasında yüklenen AdventureWorks önceki bir sürümü varsa, AdventureWorks.msi çalıştırmadan önce kaldırmanız gerekir.  
+4.  Karşıdan yükleme ya da SQL Server Kurulumu sırasında yüklenen AdventureWorks önceki bir sürümü varsa, AdventureWorks.msi çalıştırmadan önce kaldırmanız gerekir.  
   
-#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>Önceki bir yükleme AdventureWorks örnek veritabanını kaldırmak için  
+#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>AdventureWorks örnek veritabanı önceki bir yükleme kaldırmak için  
   
 1.  AdventureWorks veya AdventureWorksDW veritabanını bırakın.  
   
-2.  Gelen **Program Ekle veya Kaldır**seçin **AdventureWorksDB** veya **AdventureWorksBI** tıklatıp **kaldırmak**.  
+2.  Gelen **Program Ekle veya Kaldır**seçin **AdventureWorksDB** veya **AdventureWorksBI** tıklatıp **Kaldır**.  
   
 #### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a>Kurulum'u kullanarak daha önce yüklenmiş bir AdventureWorks örnek veritabanını kaldırmak için  
   
@@ -38,40 +38,40 @@ ms.locfileid: "32763059"
   
 3.  Gelen **Bileşen Seçimi**seçin **iş istasyonu bileşenleri** ve ardından **sonraki**.  
   
-4.  Gelen **SQL Server yükleme Sihirbazına Hoş Geldiniz**, tıklatın **sonraki**.  
+4.  Gelen **SQL Server yükleme Sihirbazına Hoş Geldiniz**, tıklayın **sonraki**.  
   
-5.  Gelen **sistem yapılandırma denetimi**, tıklatın **sonraki**.  
+5.  Gelen **sistem yapılandırma denetimi**, tıklayın **sonraki**.  
   
-6.  Gelen **Değiştir veya Kaldır örnek**, tıklatın **değişiklik bileşenlerinin yüklü**.  
+6.  Gelen **değiştirme veya kaldırma örneği**, tıklayın **değişiklik bileşenlerin yüklü**.  
   
-7.  Gelen **özellik seçimi**, genişletin **belgeler, örnekler ve örnek veritabanları** düğümü.  
+7.  Gelen **özellik seçimi**, genişletme **belgeler, örnekler ve örnek veritabanları** düğümü.  
   
-8.  Seçin **örnek kod ve uygulamaları**. Genişletme **örnek veritabanları**, kaldırılması ve seçmek için örnek veritabanını seçin **tüm özelliği kullanılamaz**. **İleri**'ye tıklayın.  
+8.  Seçin **örnek kod ve uygulamaları**. Genişletin **örnek veritabanları**, kaldırılacak ve örnek veritabanını seçmeniz **tüm özellik kullanılamaz**. **İleri**'ye tıklayın.  
   
-9. Tıklatın **yükleme** ve Yükleme Sihirbazı'nı tamamlayın.  
+9. Tıklayın **yükleme** ve Yükleme Sihirbazı'nı tamamlayın.  
   
 #### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a>SQL Server örneğine AdventureWorks örnek veritabanı dosyalarını eklemek için  
   
-1.  Örnek veritabanı yükleyici dosyası indirilmeden sonra çift tıklayarak **AdventureWorksDB.msi** dosyası (veya indirdiğiniz dosyası) veritabanını yüklemek için. Varsayılan olarak, veritabanı c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data sırasında yüklenir.  
+1.  Örnek veritabanı yükleyici dosyası indirilmeden sonra çift **AdventureWorksDB.msi** dosya (veya indirdiğiniz dosyanın) veritabanını yüklemek için. Varsayılan olarak, c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data veritabanı yüklenir.  
   
-2.  AdventureWorks veritabanı dosyaları, aşağıdaki komut dosyası SQLCMD veya SQL Server Management Studio yürüterek SQL Server örneğine ekleyin:  
+2.  AdventureWorks veritabanı dosyaları, SQL Server örneğine SQLCMD veya SQL Server Management Studio aşağıdaki betiği çalıştırarak ekleyin:  
   
     ```  
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
     ```  
   
-     Bu dosyalar farklı bir sürücü veya dizin yüklediyseniz, çalıştırmadan önce yolları uygun şekilde düzeltmeniz gerekir `sp_attach_db` saklı yordamı.  
+     Bu dosyalar farklı bir sürücü veya dizin yüklediyseniz, yürütmeden önce yolların uygun şekilde düzeltmeniz gerekir `sp_attach_db` saklı yordamı.  
   
-## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indirme  
- Örnekler ve izlenecek yollarda [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölüm veri deposu olarak SQL Server 2005 kullanır ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamalarla yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve sonraki sürümlerinde bulunur.  
+## <a name="downloading-sql-server-express-edition"></a>SQL Server Express sürümü indiriliyor  
+ Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölümü SQL Server 2005 veri deposu olarak kullanabilirsiniz, ancak SQL Server Express Edition kullanmayı değiştirilebilir. SQL Server Express Edition ücretsiz kullanılabilir ve uygulamaları yeniden dağıtabilirsiniz. Visual Studio kullanıyorsanız, SQL Server Express Edition Pro ve üzeri sürümlerinde bulunur.  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express sürümünü karşıdan yükleyip  
+#### <a name="to-download-and-install-sql-server-express-edition"></a>SQL Server Express Edition'ı indirip  
   
 1.  Internet Explorer'ı başlatın.  
   
-2.  Git [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) sayfa indirin.  
+2.  Git [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) indirme sayfası.  
   
-3.  Web sitesindeki yükleme yönergeleri izleyin.  
+3.  Web sitesi yükleme yönergelerini izleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

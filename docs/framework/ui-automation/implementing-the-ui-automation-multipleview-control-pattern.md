@@ -9,34 +9,34 @@ ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 777f529b3b925a965b24cf1a4b38b9d3b9adae7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 292a1c0a57c992e847dd72a24508482cb6783121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408385"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471919"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI Otomasyon MultipleView Denetim Düzeni Uygulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu kılavuzları ve uygulamak için kuralları tanıtır <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, olayları ve özellikleri hakkındaki bilgileri de dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.  
+ Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, olayları ve özellikleri hakkında bilgi dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.  
   
- <xref:System.Windows.Automation.MultipleViewPattern> Denetim düzeni sağlayan ve birden çok bilgi veya alt denetimleri aynı kümesini gösterimlerini, arasında geçiş yapabilir denetimleri desteklemek için kullanılır.  
+ <xref:System.Windows.Automation.MultipleViewPattern> Denetim düzeni sağlayın ve birden çok bilgi veya alt denetim aynı dizi temsillerini, arasında geçiş yapabilirsiniz denetimleri desteklemek için kullanılır.  
   
- Örnekler birden çok görünüm sunabilirsiniz denetimlerinizin (hangi içeriğinin küçük resimleri, kutucukları, simgeler veya ayrıntılar gösterebilir) liste görünümü [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafikleri (pasta, satır, çubuğu, hücre değerini bir formülü olan), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] belgeleri (normal, Web düzeni yazdırma düzeni, okuma düzeni, anahat), [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] Takvim (yıl, ay, hafta, gün), ve [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] kaplamaları. Desteklenen görünümler denetim geliştirici tarafından belirlenir ve her denetim için özeldir.  
+ Birden çok görünüm sunabilir denetimleri örnekler (da içeriğini küçük resimleri, kutucukları, simgeler veya ayrıntılar gösterebilir) liste görünümü [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] grafikleri (pasta, çizgi, çubuk, hücre değerini bir formül ile), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] belgeleri (normal, Web düzeni yazdırma düzeni, okuma düzeni, anahat) [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] (yıl, ay, hafta, gün), Takvim ve [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] css'li dış görünümler. Desteklenen görünümler denetim geliştiricisi tarafından belirlenir ve her bir denetimin özgüdür.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama rehberi ve kuralları  
- Birden çok görünüm denetim düzenini uygulama, aşağıdaki yönergeleri ve kuralları dikkat edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
+ Birden çok görünüm denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> Ayrıca geçerli görünümü sağlayan denetimden farklıysa, geçerli görünümü yöneten bir kapsayıcısı üzerinde uygulanmalıdır. Örneğin, denetimin görünümünü Windows Explorer uygulamasından yönetilen sırasında Windows Explorer geçerli klasör içerik için bir liste denetimini içerir.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> Ayrıca, geçerli görünüm sağlayan bir denetimi farklıysa, geçerli görünüm yöneten bir kapsayıcıda uygulanmalıdır. Örneğin, görünüm denetimi için Windows Gezgini uygulamadan yönetilen Windows Explorer geçerli klasör içeriği için bir liste denetimini içerir.  
   
--   İçeriğini sıralama yapabiliyor bir denetim, birden çok görünüm desteklemek için dikkate alınmaz.  
+-   İçeriği sıralama mümkün olan denetimi birden çok görünüm desteklemek için dikkate alınmaz.  
   
 -   Görünümler koleksiyonu örneklerinde aynı olmalıdır.  
   
--   Görünüm adları metin okuma, Braille ve diğer okunabilir uygulamaları kullanmak için uygun olması gerekir.  
+-   Görünüm adları metin okuma, Braille ve okunabilir diğer uygulamalar için uygun olması gerekir.  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>Gerekli üyeleri IMultipleViewProvider için  
@@ -53,11 +53,11 @@ ms.locfileid: "33408385"
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcı, aşağıdaki özel durumlar oluşturma gerekir.  
+ Sağlayıcı, aşağıdaki özel durumlar gerekir.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|Zaman da <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> veya <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> desteklenen görünümler koleksiyonunun bir üyesi olmayan bir parametre olarak adlandırılır.|  
+|<xref:System.ArgumentException>|Zaman ya da <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> veya <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> desteklenen görünümler koleksiyonunun bir üyesi olmayan bir parametre ile adlandırılır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  

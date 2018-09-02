@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335331"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464343"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
-Bağımsız değişkenleri gönderebilirsiniz `Main` yöntemi aşağıdaki yollardan biriyle tanımlayarak yöntemi:  
+Bağımsız değişken gönderebilirsiniz `Main` yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak yöntemi:  
   
  [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
  [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Komut satırı bağımsız değişkenleri olarak etkinleştirmek için `Main` yöntemi bir Windows Forms uygulamasında el ile değiştirmeniz gerekir imzası `Main` program.cs içinde. Windows Forms Tasarımcısı tarafından oluşturulan kodu oluşturur bir `Main` bir giriş parametresi olmadan. Aynı zamanda <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> veya <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> konsolu veya Windows uygulama herhangi bir noktasından komut satırı bağımsız değişkenleri erişmek için.  
+>  Komut satırı bağımsız değişkenlerini etkinleştirmek için `Main` yöntemi bir Windows Forms uygulamasındaki el ile değiştirmeniz gerekir imzası `Main` program.CS'de webhostbuilder'a. Windows Forms Tasarımcısı tarafından oluşturulan kod oluşturur bir `Main` girdi parametresi olmadan. Ayrıca <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> veya <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> konsolda veya Windows uygulama herhangi bir noktasından komut satırı bağımsız değişkenleri erişmek için.  
   
- Parametresi, `Main` yöntemi bir <xref:System.String> komut satırı değişkenlerini temsil eden bir dizi. Genellikle, bağımsız değişkenler test ederek olup olmadığını belirleme `Length` özelliği, örneğin:  
+ Parametresi `Main` yöntemi bir <xref:System.String> komut satırı bağımsız değişkenlerini temsil eden bir dizi. Genellikle, test ederek bağımsız değişkenleri var olup olmadığını belirlemeniz `Length` özelliği, örneğin:  
   
  [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
- Kullanarak sayısal türler dize bağımsız değişkenleri dönüştürebilirsiniz <xref:System.Convert> sınıfı veya `Parse` yöntemi. Örneğin aşağıdaki deyim dönüştürür `string` için bir `long` kullanarak sayı <xref:System.Int64.Parse%2A> yöntemi:  
+ Kullanarak dize bağımsız değişkenlerini sayısal türlere de dönüştürebilirsiniz <xref:System.Convert> sınıfı veya `Parse` yöntemi. Örneğin, aşağıdaki deyim dönüştürür `string` için bir `long` numarası kullanarak <xref:System.Int64.Parse%2A> yöntemi:  
   
 ```  
 long num = Int64.Parse(args[0]);  
@@ -37,7 +37,7 @@ long num = Int64.Parse(args[0]);
 long num = long.Parse(args[0]);  
 ```  
   
- Aynı zamanda `Convert` sınıf yöntemi `ToInt64` aynı şeyi yapmak için:  
+ Ayrıca `Convert` sınıfı yöntemi `ToInt64` aynı şeyi yapmak için:  
   
 ```  
 long num = Convert.ToInt64(s);  
@@ -46,32 +46,32 @@ long num = Convert.ToInt64(s);
  Daha fazla bilgi için bkz. <xref:System.Int64.Parse%2A> ve <xref:System.Convert>.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir konsol uygulamasında komut satırı bağımsız değişkenleri kullanmayı gösterir. Uygulama çalışma zamanında bir bağımsız değişkeni alır, bağımsız değişkeni bir tamsayıya dönüştürür ve sayının faktöriyelini hesaplar. Bağımsız değişkenler sağlandıysa, uygulama programı'nın doğru kullanımını açıklayan bir ileti yayımlar.  
+ Aşağıdaki örnek, bir konsol uygulamasında komut satırı bağımsız değişkenleri kullanmayı gösterir. Uygulama çalışma zamanında bir bağımsız değişken alır, bağımsız değişkeni bir tamsayıya dönüştürür ve sayının faktöriyelini hesaplar. Bağımsız değişken sağlanmadıysa uygulama programın doğru kullanımını açıklayan bir ileti verir.  
   
- Derleme ve uygulamayı bir komut isteminden çalıştırmak için aşağıdaki adımları izleyin:  
+ Derleme ve uygulamayı bir komut istemi'nden çalıştırmak için bu adımları izleyin:  
   
-1.  Aşağıdaki kod bir metin düzenleyicisine yapıştırın ve dosyayı ada sahip bir metin dosyası olarak kaydedin `Factorial.cs`.  
+1.  Aşağıdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı ada sahip bir metin dosyası olarak kaydedin `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
-2.  Gelen **Başlat** ekran veya **Başlat** menüsünde, Visual Studio'yu açın **Geliştirici komut istemi** penceresinde ve ardından yeni dosyasını içeren klasöre gidin oluşturulur.  
+2.  Gelen **Başlat** ekran veya **Başlat** menüsünde, Visual Studio'yu açın **Geliştirici komut istemi** penceresini ve ardından yeni dosyasını içeren klasöre gidin oluşturuldu.  
   
-3.  Uygulamayı derlemek için aşağıdaki komutu girin.  
+3.  Uygulamayı derlemek üzere aşağıdaki komutu girin.  
   
      `csc Factorial.cs`  
   
-     Adlı bir yürütülebilir dosya hiç derleme hatası uygulamanız varsa, `Factorial.exe` oluşturulur.  
+     Uygulamanızın adında bir yürütülebilir dosya hiç derleme hatası varsa `Factorial.exe` oluşturulur.  
   
-4.  3 çarpımını hesaplamak için aşağıdaki komutu girin:  
+4.  3'ün faktoriyelini hesaplamak için aşağıdaki komutu girin:  
   
      `Factorial 3`  
   
-5.  Komutu, bu çıktı üretir: `The factorial of 3 is 6.`  
+5.  Komut şu çıktıyı üretir: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Bir uygulamayı Visual Studio'da çalıştırırken, komut satırı bağımsız değişkenleri belirtebilirsiniz [hata ayıklama sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer).  
+>  Visual Studio'da bir uygulama çalıştırırken, komut satırı bağımsız değişkenlerinde belirtebilirsiniz [hata ayıklama sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Komut satırı bağımsız değişkenleri kullanma hakkında daha fazla örnek için bkz: [nasıl yapılır: oluşturma ve kullanma derlemeler kullanma komut satırı](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla örnek için bkz. [nasıl yapılır: komut satırı kullanan derlemeler kullanma ve oluşturma](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Environment?displayProperty=nameWithType>  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f7b53f800bc8c5c23f49a0781287a38bf8c959
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 342739f6c71e9c576e557433dc6abd0adbf38c8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421522"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468358"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi
-Dinamik bir modül için bir hata ayıklama simgesi okuyucu oluşturur.  
+Dinamik modül için hata ayıklama simge okuyucu oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,31 +36,31 @@ HRESULT CreateReaderForInMemorySymbols (
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- nRIID  
- [in] Döndürülecek COM arabirimi IID. Genel olarak, bir [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
+ riid  
+ [in] Döndürülecek COM arabirimi Laboratuvardaki. Bu genellikle bir [Isymunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).  
   
  ppObj  
- [out] Döndürülen arayüzü için bir işaretçi işaretçi.  
+ [out] Döndürülen arabirim işaretçisi için işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
  Okuyucu başarıyla oluşturuldu.  
   
  CORDBG_E_MODULE_LOADED_FROM_DISK  
- Modül bir bellek içi ya da dinamik modül değil.  
+ Modül, bellek veya dinamik bir modül değil.  
   
  CORDBG_E_SYMBOLS_NOT_AVAILABLE  
- Simge uygulama tarafından sağlanan yok veya henüz kullanılabilir değil.  
+ Simgeleri uygulama tarafından sağlanan değil veya henüz kullanıma sunulmamıştır.  
   
  E_FAIL (veya diğer E_ dönüş kodları)  
- Okuyucu oluşturulamadı.  
+ Okuyucusu oluşturulamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Simgeler ilk kullanılabilir olduktan sonra bu yöntem de bellek içi (dinamik olmayan) modülleri için bir simge Okuyucu nesnesi oluşturmak için kullanılan, ancak yalnızca olabilir (belirttiği [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırma).  
+ Simgeleri ilk kullanılabilir olduktan sonra bu yöntem aynı zamanda bir bellek içi (dinamik olmayan) modüller için Sembol Okuyucu nesnesi oluşturmak için kullanılan, ancak yalnızca olabilir (belirttiği [UpdateModuleSymbols yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) geri çağırma).  
   
- Bu yöntem her çağrıldığında yeni bir okuyucu örneği döndürür (gibi [CComPtrBase::CoCreateInstance](http://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)). Bu nedenle, hata ayıklayıcı sonucu önbelleğe alınması ve temel alınan veri yalnızca değişmiş olabilir zaman yeni bir örneğini iste (diğer bir deyişle, bir [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri alındığında).  
+ Her çağrıldığında bu yöntem, yeni bir okuyucu örneği döndürür. (gibi [CComPtrBase::CoCreateInstance](https://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)). Hata ayıklayıcı bu nedenle, ve sonuç önbellek ister yeni bir örneği temel alınan verileri yalnızca değişmiş olabilir (diğer bir deyişle, bir [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri alındığında).  
   
- İlk tür yüklenen kadar dinamik modüllerdeki semboller kullanılabilir gerekmez (belirtildiği gibi [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırma).  
+ Dinamik modüller kadar ilk türü yüklenmiş olan simgeleri kullanılabilir gerekmez (gösterildiği gibi [LoadClass yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) geri çağırma).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

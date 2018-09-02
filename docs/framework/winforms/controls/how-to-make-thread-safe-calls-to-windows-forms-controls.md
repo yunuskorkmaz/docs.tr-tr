@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: d4e5b4353b53c382dad2b390db1b8fc224e7f261
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911750"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468636"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetimlerine İş Parçacığı Güvenli Aramalar Yapma
 
@@ -406,7 +406,7 @@ private:
  Aşağıdaki kod örneği bir formla üç düğme ve bir metin kutusu içeren tam bir Windows Forms uygulamasıdır. İlk düğmeyi güvenli olmayan iş parçacıkları arası erişimi gösterir, İkinci düğmeye güvenli erişim kullanarak gösterir <xref:System.Windows.Forms.Control.Invoke%2A>, alan üçüncü düğmeye güvenli erişim kullanarak gösterir <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Örneği çalıştırmak yönergeler için bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Bu örnek System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular gerektirir.
+> Örneği çalıştırmak yönergeler için bkz: [nasıl yapılır: derleme ve çalıştırma bir tam Windows Formları kod örneği kullanarak Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Bu örnek System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular gerektirir.
 
 ```csharp
 using System;

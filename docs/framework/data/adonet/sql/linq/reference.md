@@ -2,46 +2,46 @@
 title: Başvuru
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 144b41a5847bee997253f1b39a27dbadc6429338
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3edfbe7d650fead507946610de8e76d27e94136f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360123"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470768"
 ---
 # <a name="reference"></a>Başvuru
-Başvuru bilgileri için bu bölümde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] geliştiriciler.  
+Bu bölümde yönelik başvuru bilgileri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] geliştiriciler.  
   
- Ayrıca belirli sorunları Microsoft Docs aramak ve özellikle katılmayı kullanmaları [LINQ Forumu](http://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konular burada ele. Ayrıca, ayrıntılı teknik incelemesini araştırmak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için bkz: [LINQ-SQL: ilişkisel veri .NET Language-Integrated sorgusu](http://go.microsoft.com/fwlink/?LinkId=93205).  
+ Ayrıca Microsoft Docs belirli sorunları aramak ve özellikle katılmak için kullanmaları [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz. Ayrıca, gerçekleşen incelemeyi incelemek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için [LINQ to SQL: ilişkisel verileri için sorgu .NET Language-Integrated](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- Nasıl ortak dil açıklar çalışma zamanı (CLR) yapıları SQL'de karşılık gelen ifadeleri sahip yalnızca where [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çeviri altyapısı bir dönüştürme açıkça sağlamıştır.  
+ Açıklar nasıl ortak dil çalışma zamanı (CLR) yapıları SQL'de karşılık gelen ifadeler sahip yalnızca nerede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] açıkça bir dönüştürme çeviri altyapısında sağlamıştır.  
   
  [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşleme yaklaşımı öznitelik tabanlı bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli SQL Server veritabanı.  
+ Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yaklaşım öznitelik tabanlı eşleme için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli SQL Server veritabanı.  
   
  [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- Açıklar nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanından meta bilgiler alır ve kod dosyaları oluşturur.  
+ Açıklayan nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanından meta bilgileri alır ve ardından kod dosyaları oluşturur.  
   
  [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşleme dış eşleme yaklaşımı bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli SQL Server veritabanı. Dosyaları eşleme için XSD şema tanımı sağlar.  
+ Açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşleme için dış eşleme yaklaşım bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli SQL Server veritabanı. XSD şema tanımı dosyaları eşleme sağlar.  
   
  [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
  Sık sorulan soruların yanıtlarını sağlar ilgili [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact ve LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Açıklar nasıl [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] SQL Server'da farklıdır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar.  
+ Açıklayan nasıl [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] SQL Server'da farklıdır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar.  
   
  [Standart Sorgu İşleci Çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
- Açıklar nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] standart sorgu işleçleri için SQL komutlarını çevirir.  
+ Açıklayan nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] standart sorgu işleçleri SQL komutlara çevirir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- İçin bir portal sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Konular.  
+ İçin bir portal sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] konuları.  
   
- [LINQ (dil ile tümleşik sorgu)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- İçin bir portal sağlar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Konular.  
+ [LINQ (dil ile tümleşik sorgu)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ İçin bir portal sağlar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] konuları.  
   
- [LinqDataSource teknoloji genel bakış](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
- Açıklar nasıl <xref:System.Web.UI.WebControls.LinqDataSource> kontrol çıkarır [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] aracılığıyla Web geliştiricileri için [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] veri kaynağı denetim mimarisi.
+ [Pokud teknoloji genel bakış](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ Açıklayan nasıl <xref:System.Web.UI.WebControls.LinqDataSource> denetiminin [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] aracılığıyla Web geliştiricileri için [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] veri kaynağı denetimi mimarisi.

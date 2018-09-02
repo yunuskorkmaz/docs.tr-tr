@@ -2,35 +2,35 @@
 title: İşlem Modelleri
 ms.date: 03/30/2017
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-ms.openlocfilehash: 9efe8c6994cc80957b707bbae0885a3c5896f70a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8731b72d0657aa420dbb020e216c3af059916ce9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499030"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474232"
 ---
 # <a name="transaction-models"></a>İşlem Modelleri
-Bu konu, işlem programlama modelleri ve Microsoft'un sağladığı altyapı bileşenleri arasındaki ilişkiyi açıklar.  
+Bu konuda, işlem programlama modelleri ve Microsoft'un sağladığı altyapı bileşenleri arasındaki ilişkiyi açıklar.  
   
- İşlemleri Windows Communication Foundation (WCF) kullanırken, farklı işlem modelleri arasında seçmezseniz, ancak bunun yerine tümleşik ve tutarlı bir modeli farklı katmanlar işletim olduğunu anlamak önemlidir.  
+ İşlemleri Windows Communication Foundation (WCF) kullanırken, farklı işlem modelleri arasında belirlenmemesi, ancak bunun yerine, tümleşik ve tutarlı bir modeli farklı katmanına işletim olduğunu anlamak önemlidir.  
   
- Aşağıdaki bölümlerde üç birincil hareket bileşenlerini açıklar.  
+ Aşağıdaki bölümlerde, üç birincil işlem bileşeni açıklanmaktadır.  
   
 ## <a name="windows-communication-foundation-transactions"></a>Windows Communication Foundation işlemleri  
- İşlem desteği, WCF işlem Hizmetleri yazma sağlar. Ayrıca, WS-AtomicTransaction (WS-AT) protokolü için kendi desteği ile uygulamaları WCF veya üçüncü taraf teknolojisi kullanılarak oluşturulmuş Web hizmetlerine işlemleri akabilir.  
+ İşlem desteği, WCF işlem hizmetlerinizi yazmanızı sağlar. Ayrıca, WS-AtomicTransaction (WS-AT) protokolü için kendi destek ile uygulamaların WCF ya da üçüncü taraf teknolojisi kullanılarak oluşturulan Web Hizmetleri için işlem akabilir.  
   
- Bir WCF hizmeti veya uygulamayı WCF işlem özellikleri öznitelikleri ve bildirimli olarak nasıl ve ne zaman altyapı oluşturmak, akış ve işlemleri eşitlemek belirtmek için yapılandırmasını sağlar.  
+ Bir WCF hizmeti veya uygulaması, WCF işlem özellikleri öznitelikleri ve bildirimli olarak nasıl ve ne zaman altyapı oluşturmak, akış ve eşitleme işlemleri belirtmek için yapılandırma sağlar.  
   
-## <a name="systemtransactions-transactions"></a>System.Transactions işlemleri  
- <xref:System.Transactions> Ad alanı, temel alan hem bir açık programlama modeli sağlar <xref:System.Transactions.Transaction> sınıfı yanı sıra örtük bir programlama modeli kullanarak <xref:System.Transactions.TransactionScope> içinde altyapı otomatik olarak yönetir işlemleri sınıfı.  
+## <a name="systemtransactions-transactions"></a>System.Transactions işlem  
+ <xref:System.Transactions> Ad alanı, temel hem bir açık bir programlama modeli sağlar <xref:System.Transactions.Transaction> sınıfı, aynı zamanda örtük bir programlama modeli kullanarak <xref:System.Transactions.TransactionScope> , altyapı otomatik olarak yönetir işlemleri sınıfı.  
   
- Bu iki modeli kullanarak bir işlem uygulaması oluşturma hakkında daha fazla bilgi için bkz: [işlem uygulaması yazma](http://go.microsoft.com/fwlink/?LinkId=94947).  
+ Bu iki modeli kullanarak bir işlem uygulama oluşturma hakkında daha fazla bilgi için bkz. [bir işlem uygulama yazma](https://go.microsoft.com/fwlink/?LinkId=94947).  
   
- Bir WCF hizmeti veya uygulamayı <xref:System.Transactions> hareketleri içinde bir istemci uygulaması oluşturmak ve gerektiğinde, hizmet içinde açıkça bir işlem ile etkileşmek için programlama modeli sağlar.  
+ Bir WCF hizmeti veya uygulamayı <xref:System.Transactions> hareketleri içinde bir istemci uygulaması oluşturma ve gerektiğinde, hizmet içinde bir işlem ile açıkça etkileşim kurmak için kullanabileceğiniz bir programlama modeli sağlar.  
   
-## <a name="msdtc-transactions"></a>MSDTC işlemleri  
+## <a name="msdtc-transactions"></a>MSDTC işlem  
  Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) dağıtılmış işlemler için destek sağlayan bir işlem yöneticisidir.  
   
- Daha fazla bilgi için bkz: [DTC Programcının Başvurusu](http://go.microsoft.com/fwlink/?LinkId=94948).  
+ Daha fazla bilgi için [DTC Programcının Başvurusu](https://go.microsoft.com/fwlink/?LinkId=94948).  
   
- Bir WCF hizmeti veya uygulamayı MSDTC bir istemci veya hizmet içinde oluşturulan işlem koordinasyonu için altyapı sağlar.
+ Bir WCF hizmeti veya uygulamayı MSDTC koordinasyonu bir istemci veya hizmet içinde oluşturulan işlem için altyapı sağlar.

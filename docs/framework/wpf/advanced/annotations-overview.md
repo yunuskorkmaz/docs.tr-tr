@@ -9,60 +9,60 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540849"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463973"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
-Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik değil. Bu notlar veya yorumlar "açıklamalardır" bilgilere bayrak ya da daha sonra başvurmak için ilgi vurgulamak için bir belgeye ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgelere kişisel açıklamalar ekleme yeteneği genellikle hiç varsa çok sınırlıdır.  
+Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik olduğundan. Bu Notlar ya da yorumlarınız "ek açıklamalar", bir belgeye bilgi bayrağı veya daha sonra başvurmak için ilgi öğelerini vurgulamak için ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgeleri kişisel açıklamalar ekleme yeteneği genellikle kullanılabilir olsa çok sınırlıdır.  
   
- Bu konu ortak çeşitli ek açıklamalarını, özellikle Yapışkan Notlar ve vurgular, gözden geçirir ve gösterilmektedir nasıl [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] bu tür uygulamalar Windows Presentation Foundation (WPF) belge aracılığıyla ek açıklamalar kolaylaştırır denetimleri görüntüleme.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ek açıklamaları destekleyen belge görüntüleme denetimleri dahil <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>, yanı sıra denetimleri türetilmiş <xref:System.Windows.Controls.Primitives.DocumentViewerBase> gibi <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ Bu konu, ek açıklamalarını, özellikle Yapışkan Notlar ve vurgular, çeşitli genel türleri inceler ve gösterir nasıl [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] bu uygulamalar Windows Presentation Foundation (WPF) belgenin aracılığıyla ek açıklamalarda tür kolaylaştırır görüntüleme denetimleri.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ek açıklamaları destekleyen belge görüntüleme denetimleri dahil <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>, yanı sıra denetimleri türetilen <xref:System.Windows.Controls.Primitives.DocumentViewerBase> gibi <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Yapışkan Notlar  
- Tipik bir Yapışkan Not küçük bir sonra "belgeye takıldı" renkli kağıt üzerine yazılan bilgileri içerir. Dijital Yapışkan Not sağlamak benzer işlevselliği elektronik belgeleri, ancak birçok içerik türleri gibi eklemek için eklenen esnekliği yazılı metni, el yazısı notlar (örneğin, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "mürekkep" vuruşları), Web bağlantıları veya.  
+ Tipik bir Yapışkan Not, bir küçük kağıda ardından "belgeye takılmış" renkli yazılan bilgileri içerir. Dijital Yapışkan Notlar benzer bir işlevsellik elektronik belgeleri, ancak diğer birçok içerik türleri gibi eklemek için eklenen esnekliğiyle yazılı metni, el yazısı notları sağlayın (örneğin, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "mürekkep" strokes), veya Web bağlantıları.  
   
- Aşağıda bazı örnekler vurgulama, metin yapışkan not ve mürekkep yapışkan not ek açıklamaları gösterilmiştir.  
+ Aşağıdaki çizimde, Yapışkan Not Vurgu, metin yapışkan not ve mürekkep bazı örnekler gösterilmektedir.  
   
- ![Vurgu, metin ve mürekkep yapışkan ek açıklamaları unutmayın. ] (../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Ek açıklamalar, Vurgu, metin ve mürekkep yapışkan unutmayın. ](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
   
- Aşağıdaki örnek, uygulamanızdaki ek açıklama desteğini etkinleştirmek için kullanabileceğiniz yöntemi gösterilir.  
+ Aşağıdaki örnek, uygulamanızda ek açıklama desteğini etkinleştirmek için kullanabileceğiniz yöntemi gösterir.  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Öne çıkan özellikleri  
- Kişiler, alt çizgi, vurgulama, tümcedeki sözcüklerin daire içine veya boşlukta çizim işaretleri veya gösterimler gibi bir kağıt belgeyi işaretlediğinizde ilgi öğelere dikkat çekmek için yaratıcı yöntemlerini kullanın.  Ek açıklamalar vurgulayın [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] benzer bir özellik olarak görüntülenen bilgiler işaretleme sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belge görüntüleme denetimleri.  
+ Kişiler, alt çizgi, vurgulama, daire içine bir cümle sözcükleri veya işaretleri veya gösterimler çizim gibi bir inceleme belgeyi işaretlediğinizde ilgi öğelere dikkat çekmek yaratıcı yöntemler kullanır.  Ek açıklamalarda vurgulayın [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] görüntülenen bilgileri işaretlemek için benzer bir özellik sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] belge görüntüleme denetimleri.  
   
- Aşağıdaki çizimde vurgulama ek açıklama örneği gösterir.  
+ Aşağıdaki çizimde örnek olarak bir Vurgu ek açıklama gösterir.  
   
  ![Ek açıklama vurgulayın](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- Kullanıcılar ilk bazı metin veya ilgi öğeyi seçerek ve görüntülemek için sağ tıklatıp ek açıklamaları genellikle oluşturma bir <xref:System.Windows.Controls.ContextMenu> ek açıklama seçenekleri.  Aşağıdaki örnekte gösterildiği [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bildirmek için kullanabileceğiniz bir <xref:System.Windows.Controls.ContextMenu> yönlendirilmiş komutlarla oluşturmak ve ek açıklamaları yönetmek için kullanıcılar erişebilir.  
+ Kullanıcıların ilk metin ya da bir öğe bulduğunuzda seçip ardından görüntülemek için sağ tıklayarak ek açıklamalar genellikle oluşturma bir <xref:System.Windows.Controls.ContextMenu> ek açıklama seçenekleri.  Aşağıdaki örnekte gösterildiği [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bildirmek için kullanabileceğiniz bir <xref:System.Windows.Controls.ContextMenu> yönlendirilmiş komutlarla oluşturmak ve ek açıklamalar yönetmek için kullanıcılar erişebilir.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Veri bağlama  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Ek açıklamaları, kullanıcının seçtiği verileri, yalnızca görüntü görünümü konumuna bağlar. Bu nedenle, zaman kullanıcı kaydırdığında veya görüntü boyutlandırır gibi belge görünümü değişirse ek açıklama, bağlı olduğu veri seçimi ile kalır. Örneğin, aşağıdaki grafikte kullanıcının metin seçiminde yaptığı bir ek açıklamanın gösterilmektedir. Belgeyi görünümü değiştiğinde (kayarken, yeniden boyutlandırır, ölçekler veya başka bir hareket), özgün veri seçimiyle Vurgu ek açıklama taşır.  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Ek açıklamaları, kullanıcının seçtiği verileri, yalnızca bir görüntü görünümü konumuna bağlar. Bu nedenle kullanıcı kayan veya görüntü boyutlandırır gibi belge görünümü değişirse, bağlı olduğu veri seçimi ile ek açıklama kalır. Örneğin, aşağıdaki grafikte üzerinde metin seçimi kullanıcı tarafından yapılan bir ek açıklama gösterilmektedir. Belge (kayarken, yeniden boyutlandırır, Ölçek veya başka bir hareket) değişiklikleri görüntülediğinizde vurgulama ek açıklaması ile özgün veri seçimi taşır.  
   
- ![Ek açıklama veri bağlama](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Veri ek açıklama sabitleme](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
-## <a name="matching-annotations-with-annotated-objects"></a>Açıklanmış nesnelerle eşleşen ek açıklamaları  
- Ek açıklamaları karşılık gelen açıklanmış nesnelerle eşleştirebilirsiniz. Örneğin, açıklamalar bölmesi olan basit bir belge okuyucu uygulamasını göz önünde bulundurun. Açıklamalar bölmesi belgeye bağlantılı ek açıklamaları listesinden metni görüntüleyen bir liste kutusu olabilir. Kullanıcı liste kutusunda bir öğe seçerse, uygulama karşılık gelen ek açıklama nesnesinin sabitlenmiş olduğu belgedeki paragrafı görünüme getirir.  
+## <a name="matching-annotations-with-annotated-objects"></a>Ek açıklamalı nesnelerle eşleşen ek açıklamaları  
+ Ek açıklamalar açıklanmış karşılık gelen nesnelerle eşleşebilir. Örneğin, bir açıklama bölmesi olan basit bir belge bir okuyucu uygulama göz önünde bulundurun. Açıklamalar bölmesinde, bir belgeye metni sabitlenmiş bir ek açıklamaların listesini görüntüleyen bir liste kutusu olabilir. Kullanıcı bir öğeyi liste kutusunda seçerse uygulama ilgili ek açıklama nesnesinin sabitlendiği belge paragrafta görünümde gösterir.  
   
- Aşağıdaki örnek, açıklamalar bölmesi olarak hizmet böyle bir liste kutusu olay işleyicisinin uygulanacak gösterilmiştir.  
+ Aşağıdaki örnekte olay işleyicisi yorumlar bölmesinin hizmet böyle bir liste kutusu uygulamak nasıl gösterir.  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Başka bir örnek senaryo ek açıklamalar ve e-posta yoluyla belge okuyucular arasındaki Yapışkan Notlar alışverişini etkinleştirmek uygulamaları içerir. Bu özellik, okuyucu değiştirilen ek açıklamayı içeren sayfaya gitmek bu uygulamaları sağlar.  
+ Başka bir örnek senaryo, exchange e-posta ile belge okuyucular arasında Yapışkan Notlar ve ek açıklamalar sağlayan uygulamaları içerir. Bu özellik okuyucu ek açıklama, değiştirilen içeren sayfasına gitmek bu uygulamalar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
  [ContextMenu Genel Bakış](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [Komut Vermeye Genel Bakış](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Akış Belgesine Genel Bakış](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Nasıl yapılır: bir MenuItem komut ekleme](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [Nasıl yapılır: bir MenuItem'a komut ekleme](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

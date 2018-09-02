@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253204"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462485"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43253204"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Yeni bir XAML tarayıcı uygulaması (XBAP) oluşturma  
- Microsoft Visual Studio ile yeni bir XBAP projesi oluşturmak için en basit yoludur. Yeni bir proje oluştururken **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için [nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Microsoft Visual Studio ile yeni bir XBAP projesi oluşturmak için en basit yoludur. Yeni bir proje oluştururken **WPF tarayıcı uygulaması** şablonları listesinden. Daha fazla bilgi için [nasıl yapılır: yeni bir WPF tarayıcı uygulaması projesi oluşturma](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  XBAP projesinin çalıştırdığınızda, tek başına bir pencereyi yerine bir tarayıcı penceresinde açılır. XBAP Visual Studio'dan hata ayıklaması yaparken uygulama Internet bölgesi izinle çalışır ve bu nedenle bu izinleri aşılırsa güvenlik özel durum oluşturur. Daha fazla bilgi için [güvenlik](../../../../docs/framework/wpf/security-wpf.md) ve [WPF kısmi güven güvenliği](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43253204"
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Konak Web sayfası ile iletişim kurma  
- Uygulama bir HTML çerçeve içinde barındırıldığında, XBAP içeren Web sayfasını ile iletişim kurabilir. Alarak bunu <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliği <xref:System.Windows.Interop.BrowserInteropHelper>. Bu özellik için HTML pencereyi temsil eden bir komut dosyası nesnesi döndürür. Üzerinde özelliklerini, yöntemlerini ve olaylarını daha sonra erişebilirsiniz [pencere nesnesi](http://go.microsoft.com/fwlink/?LinkId=160274) normal nokta sözdizimini kullanarak. Betik yöntemleri ve genel değişkenler de erişebilirsiniz. Aşağıdaki örnek komut dosyası nesnesi alma ve tarayıcıyı kapatın gösterir.  
+ Uygulama bir HTML çerçeve içinde barındırıldığında, XBAP içeren Web sayfasını ile iletişim kurabilir. Alarak bunu <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliği <xref:System.Windows.Interop.BrowserInteropHelper>. Bu özellik için HTML pencereyi temsil eden bir komut dosyası nesnesi döndürür. Üzerinde özelliklerini, yöntemlerini ve olaylarını daha sonra erişebilirsiniz [pencere nesnesi](https://go.microsoft.com/fwlink/?LinkId=160274) normal nokta sözdizimini kullanarak. Betik yöntemleri ve genel değişkenler de erişebilirsiniz. Aşağıdaki örnek komut dosyası nesnesi alma ve tarayıcıyı kapatın gösterir.  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
@@ -176,7 +176,7 @@ ms.locfileid: "43253204"
 > [!NOTE]
 >  Önceki tabloda açıklanan güvenilen ClickOnce dağıtım modeline izlemeyin tam güven XBAP'ler için bir davranıştır.  
   
- Tam güven XBAP dağıtmak için ClickOnce güvenilir dağıtım modelini kullanmanız önerilir. Kullanıcıdan istenmemesi için bu model, tam güven güvenlik bölgesi ne olursa olsun, otomatik olarak verilmesi, bir XBAP sağlar. Bu modelin bir parçası olarak, uygulamanızı bir sertifika ile güvenilir bir yayımcı oturum açmanız gerekir. Daha fazla bilgi için [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) ve [kod imzalama giriş](http://go.microsoft.com/fwlink/?LinkId=166327).  
+ Tam güven XBAP dağıtmak için ClickOnce güvenilir dağıtım modelini kullanmanız önerilir. Kullanıcıdan istenmemesi için bu model, tam güven güvenlik bölgesi ne olursa olsun, otomatik olarak verilmesi, bir XBAP sağlar. Bu modelin bir parçası olarak, uygulamanızı bir sertifika ile güvenilir bir yayımcı oturum açmanız gerekir. Daha fazla bilgi için [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) ve [kod imzalama giriş](https://go.microsoft.com/fwlink/?LinkId=166327).  
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP başlangıç zamanı performans konuları  

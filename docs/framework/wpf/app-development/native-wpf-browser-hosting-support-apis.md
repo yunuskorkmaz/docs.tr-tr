@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550026"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464953"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Destek API'leri Barındıran Yerel WPF Tarayıcısı
-Barındırma [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] uygulamalarının Web tarayıcılarında barındırılması WPF konağı dışında kayıtlı bir etkin belge sunucusu (DocObject olarak da bilinir). [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] etkinleştirebilir doğrudan ve etkin bir belge ile tümleştirin. XBAP'ler ve gevşek XAML belgelerini Mozilla tarayıcılarda barındırmak için [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] benzer bir barındırma ortamı sağlayan NPAPI eklentisi sağlar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] etkin belgeyi sunucusu olarak [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] yapar. Ancak, diğer tarayıcılarda XBAP'ler ve XAML barındırmak için pratik en kolay yolu belgeler ve tek başına uygulamaları Internet Explorer Web tarayıcısı denetimi. Web tarayıcısı denetimi karmaşık etkin belge sunucu barındırma ortamı sağlar, ancak özelleştirmek ve bu ortamda genişletmek ve doğrudan geçerli etkin belge nesnesi ile iletişim kurmak kendi ana bilgisayarı sağlar.  
+Barındırılmasını [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] uygulamalarının Web tarayıcılarında dışında WPF konağı kayıtlı olan etkin belge sunucusu (DocObject olarak da bilinir) barındırılması. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] etkinleştirebilir doğrudan ve etkin bir belge ile tümleştirin. XBAP ve gevşek XAML belgeleri Mozilla tarayıcılarda barındırmak için [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] benzer bir barındırma ortamı sağlayan NPAPI eklentisi sağlar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] etkin belge sunucusu olarak [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] yapar. Ancak, diğer tarayıcılarda XBAP'ler ve XAML barındırmak için pratik en kolay yolu belgeleri ve tek başına uygulamalar Internet Explorer Web tarayıcı denetimi. Web tarayıcı denetimi karmaşık etkin belge sunucusu barındırma ortamı sağlar, ancak özelleştirmek ve bu ortamda genişletmek ve geçerli etkin belgeyi nesne ile doğrudan iletişim kurmak kendi konak sağlar.  
   
- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Etkin belge sunucusu dahil olmak üzere birkaç ortak barındırma arabirimi uygulayan [IOLE nesnesini](http://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047). Web tarayıcısı denetiminde barındırıldığında, bu arabirimleri tarafından döndürülen nesne sorgularından olabilir [Iwebbrowser2::belge](http://go.microsoft.com/fwlink/?LinkId=162048) özelliği.  
+ [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Etkin belge sunucusu da dahil olmak üzere birkaç ortak barındırma arabirimleri uygulayan [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Web tarayıcı denetimi barındırıldığında, bu arabirimleri tarafından döndürülen nesne sorgularından olabilir [Iwebbrowser2::belge](https://go.microsoft.com/fwlink/?LinkId=162048) özelliği.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF Etkin belge sunucunun uyarlamasını [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047) standart OLE komut grubunun (boş komut grubu GUID ile) çok sayıda Gezinti ilgili ve tarayıcıya özgü komutları destekler. Ayrıca, CGID_PresentationHost adlı özel bir komut grubunu tanır. Şu anda, bu grup içinde tanımlanmış tek bir komutu yok.  
+ Etkin belge WPF sunucusunun [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) standart OLE komut grubuyla (null komut grubu GUID) çok sayıda Gezinti ilgili ve tarayıcı özel komutları destekler. Ayrıca, CGID_PresentationHost adlı özel bir komut grubunu algılar. Şu anda, bu grup içinde tanımlanmış tek bir komut yoktur.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO SHIFT tuşunu durumunu bağlı olarak, içeriği ilk veya son odaklanabilir öğe odak geçmek bildirir.  
+ PHCMDID_TABINTO SHIFT tuşunun durumunu bağlı olarak, içeriği ilk veya son odaklanabilir öğesine odak geçiş bildirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
