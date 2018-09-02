@@ -2,15 +2,15 @@
 title: Geliştirme ve dağıtım konuları
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: b8966ebc3608b1a784985fc707ed55e8750d0036
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d516877d1fc3a064f5275e226379b7e5011fbcdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760352"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425864"
 ---
 # <a name="development-and-deployment-considerations"></a>Geliştirme ve dağıtım konuları
-Geliştirme ve ADO.NET Entity Framework temel alınarak bir uygulama dağıtımı yaparken dikkate alınması gereken bu bölümü sorunlarını gidermek konularında.  
+Geliştirme ve ADO.NET Entity Framework'ü temel alan bir uygulama dağıtımı yaparken dikkate alınması gereken bu bölümde sorunlara konularındaki.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Güvenlik Konuları](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
@@ -25,4 +25,4 @@ Geliştirme ve ADO.NET Entity Framework temel alınarak bir uygulama dağıtım�
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Entity Framework’e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [ADO.NET varlık veri modeli araçları](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET varlık veri modeli araçları](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

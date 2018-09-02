@@ -8,15 +8,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 1c5e8bc7ad065c4662cd489930b2226e8a4b8962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215491"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421934"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# Derleyici Seçenekleri)
-**- Nowarn** seçeneği bir veya daha fazla uyarı görüntülenmesini derleyici bastırmak olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  
+**- Nowarn** seçeneği derleyici, bir veya daha fazla uyarı görüntülenmesini bastır olanak sağlar. Birden çok uyarı numaralarını virgülle ayırın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,14 +26,14 @@ ms.locfileid: "33215491"
   
 ## <a name="arguments"></a>Arguments  
  `number1`, `number2`  
- Derleyicinin gizlemek için istediğiniz uyarı numaraları.  
+ Derleyicinin bastırmak için istediğiniz uyarı numaraları.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca uyarı tanımlayıcı sayısal parçası belirtmeniz gerekir. Örneğin, CS0028 gizlemek istiyorsanız, belirttiğiniz `-nowarn:28`.  
+ Yalnızca sayısal parçası uyarı tanımlayıcısının belirtmeniz gerekir. CS0028 gizlemek istiyorsanız, örneğin, belirtebilirsiniz `-nowarn:28`.  
   
- Derleyici öğesine iletilen uyarı numaralarını sessizce yoksayacak `-nowarn` , önceki sürümlerde geçerli ancak derleyiciden kaldırılmış. Örneğin, CS0679 Visual Studio .NET 2002 derleyicide geçerli ancak sonradan kaldırıldı.  
+ Derleyici uyarı numaralarını geçirilen sessizce yoksayar `-nowarn` , önceki sürümlerde geçerli, ancak derleyicisinden kaldırıldı. Örneğin, CS0679 geçerli Visual Studio .NET 2002 ancak daha sonra kaldırıldı.  
   
- Aşağıdaki uyarılarla tarafından gizlenen olamaz `-nowarn` seçeneği:  
+ Aşağıdaki uyarılar tarafından gizlenen olamaz `-nowarn` seçeneği:  
   
 -   Derleyici Uyarısı (düzey 1) CS2002  
   
@@ -43,15 +43,16 @@ ms.locfileid: "33215491"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Açık **özellikleri** projesi için sayfa. Ayrıntılar için bkz [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Açık **özellikleri** proje sayfası. Ayrıntılar için bkz [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Tıklatın **yapı** özellik sayfası.  
+2.  Tıklayın **derleme** özellik sayfası.  
   
 3.  Değiştirme **uyarıları gösterme** özelliği.  
   
- Bu derleyici seçeneği programlı olarak nasıl ayarlanacağı hakkında daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
+ Bu derleyici seçeneğini program üzerinden ayarlamak hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
- [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)
+
+- [C# Derleyici Seçenekleri](../../../csharp/language-reference/compiler-options/index.md)  
+- [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# Derleyici Hataları](../../../csharp/language-reference/compiler-messages/index.md)

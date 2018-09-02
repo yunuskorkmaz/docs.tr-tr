@@ -1,20 +1,20 @@
 ---
-title: Özel türler anahtar etkinlikle kullanımı
+title: Özel türler ile Switch etkinliği kullanımı
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517887"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423571"
 ---
-# <a name="usage-of-the-switch-activity-with-custom-types"></a>Özel türler anahtar etkinlikle kullanımı
-Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik. Çoğu geleneksel yordam programlama dillerinde, bir [geçiş](http://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir değişkene koşullu değerlendirmeye dayanarak bir yürütme mantığını seçer. Geleneksel olarak, bir `switch` deyimi statik olarak değerlendirilen bir ifade üzerinde çalışır. Örneğin, C# gibi yalnızca basit türler yani <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve Numaralandırma türleri desteklenir.  
+# <a name="usage-of-the-switch-activity-with-custom-types"></a>Özel türler ile Switch etkinliği kullanımı
+Bu örnek nasıl etkinleştireceğiniz anlatılmaktadır bir <xref:System.Activities.Statements.Switch%601> çalışma zamanında kullanıcı tarafından tanımlanan karmaşık tür değerlendirmek için etkinlik. Çoğu geleneksel yordamsal programlama dillerinde, bir [geçiş](https://go.microsoft.com/fwlink/?LinkId=180521) deyimi bir yürütme mantığı bir değişkenin koşullu değerlendirmeye göre seçer. Geleneksel olarak, bir `switch` deyimi, statik olarak değerlendirilen bir ifade üzerinde çalışır. Örneğin, C# ' de, yalnızca temel türler, gibi başka bir deyişle <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, ve sabit listesi türleri desteklenir.  
   
- Özel bir sınıf değiştirmeyi etkinleştirmek için mantığı çalışma zamanında özel karmaşık türün değerlerini değerlendirmek için uygulanmalıdır. Bu örnek adlı bir özel karmaşık tür üzerinde değiştirmeyi etkinleştirmek gösterilmiştir `Person`.  
+ Özel bir sınıf geçişi etkinleştirmek için mantıksal çalışma zamanında özel karmaşık türün değerlerini değerlendirmek için uygulanmalıdır. Bu örnek adlı bir özel karmaşık türde değiştirme olanağı tanıma gösterir `Person`.  
   
--   Özel bir sınıf içinde `Person`, <xref:System.ComponentModel.TypeConverter> özniteliği özel adıyla bildirilen <xref:System.ComponentModel.TypeConverter>.  
+-   Özel bir sınıf içinde `Person`, <xref:System.ComponentModel.TypeConverter> özniteliği özel adı ile bildirilen <xref:System.ComponentModel.TypeConverter>.  
   
     ```  
     [TypeConverter(typeof(PersonConverter))]  
@@ -51,7 +51,7 @@ Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.St
     }  
     ```  
   
--   Özel bir <xref:System.ComponentModel.TypeConverter> sınıfı bir dize ve özel bir sınıf örneği dizeye özel sınıfının bir örneği dönüştürülmesi gerçekleştiren uygulanır.  
+-   Özel bir <xref:System.ComponentModel.TypeConverter> sınıfı bir dize ve özel bir sınıf örneği için bir dize özel bir sınıf örneği dönüştürme gerçekleştiren uygulanır.  
   
     ```  
     public class PersonConverter : TypeConverter  
@@ -103,30 +103,30 @@ Bu örnek nasıl etkinleştirileceğini açıklar bir <xref:System.Activities.St
     }  
     ```  
   
- Bu örnekte aşağıdaki dosyaları bulunmaktadır:  
+ Bu örnekte aşağıdaki dosyalar dahildir:  
   
 -   **Person.cs**: tanımlar `Person` sınıfı.  
   
--   **PersonConverter.cs**: için tür dönüştürücüsünü `Person` sınıfı.  
+-   **PersonConverter.cs**: tür dönüştürücü `Person` sınıfı.  
   
 -   **Sequence.XAML**: geçer üzerinden bir iş akışı `Person` türü.  
   
--   **Program.cs**: iş akışı çalıştıran ana işlevi.  
+-   **Program.cs**: iş akışını çalıştıran ana işlevi.  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
 1.  İçinde Switch.sln yük [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Örneği çalıştırmak için CTRL + F5 tuşuna basın.  
+3.  Örneği çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

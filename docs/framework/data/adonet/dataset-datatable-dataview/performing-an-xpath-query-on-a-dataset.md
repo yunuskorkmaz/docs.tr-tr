@@ -1,21 +1,21 @@
 ---
-title: Bir veri kümesine XPath sorgusunu gerçekleştirme
+title: Bir veri kümesi üzerinde bir XPath sorgusu gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762416"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423709"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>Bir veri kümesine XPath sorgusunu gerçekleştirme
-Bir eşitlenmiş arasındaki ilişkiyi <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> XML'sini kullanmak yapmanızı sağlar erişen gibi hizmetleri XML Path dili (XPath) sorgusu **XmlDataDocument** ve bazı işlevleri gerçekleştirebilir erişme değerinden daha rahat **DataSet** doğrudan. Örneğin, kullanarak yerine **seçin** yöntemi bir <xref:System.Data.DataTable> diğer tablolarla ilişkileri gitmek için bir **veri kümesi**, bir XPath sorgusu gerçekleştirebileceğiniz bir **XmlDataDocument**  ile eşitlenen **DataSet**biçiminde XML öğeleri listesini almak için bir <xref:System.Xml.XmlNodeList>. Düğümlerin **XmlNodeList**, noktaya yayın olarak <xref:System.Xml.XmlElement> düğümleri, ardından geçirilebilir için **GetRowFromElement** yöntemi **XmlDataDocument**, eşleşen döndürmek için <xref:System.Data.DataRow> Eşitlenmiş Tablo satırlara yapılan başvurular **DataSet**.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Bir veri kümesi üzerinde bir XPath sorgusu gerçekleştirme
+Eşitlenen bir alana arasındaki ilişkiyi <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> XML'sini yararlanması sağlar erişen gibi hizmetleri XML Path Language (XPath) sorgusu, **XmlDataDocument** ve bazı işlevleri gerçekleştirebilirsiniz erişim değerinden daha rahat **veri kümesi** doğrudan. Örneğin kullanmak yerine **seçin** yöntemi bir <xref:System.Data.DataTable> diğer tablolarla ilişki gitmek için bir **veri kümesi**, bir XPath sorgusu gerçekleştirebileceğiniz bir **XmlDataDocument**  ile eşitlenmiş **veri kümesi**biçiminde XML öğelerinin bir listesini almak için bir <xref:System.Xml.XmlNodeList>. Düğümlerin **XmlNodeList**, noktaya yayın olarak <xref:System.Xml.XmlElement> düğümler, ardından geçilebilir **GetRowFromElement** yöntemi **XmlDataDocument**, eşleşen döndürmek için <xref:System.Data.DataRow> eşitlenmiş tablodaki satırları için başvurular **veri kümesi**.  
   
- Örneğin, aşağıdaki kod örneği, bir "en alt" XPath sorgusu gerçekleştirir. **DataSet** üç tablolarla girilir: **müşteriler**, **siparişleri**, ve **sipariş ayrıntıları**. Örnekte, bir üst-alt ilişkisi ilk arasında oluşturulur **müşteriler** ve **siparişleri** tablolar arasındaki **siparişleri** ve **SiparişAyrıntıları** tablo. Bir XPath sorgusu sonra dönmek için gerçekleştirilen bir **XmlNodeList** , **müşteriler** düğümleri bir en alt burada **sipariş ayrıntıları** düğüm bir **ProductID**düğüm 43 değerine sahip. Esas olarak, örnek XPath sorgusu hangi müşterilerin sahip ürün sipariş belirlemek için kullandığı **ProductID** / 43.  
+ Örneğin, aşağıdaki kod örneği, bir "en alt" XPath sorgusu gerçekleştirir. **Veri kümesi** üç tablo ile doldurulur: **müşteriler**, **siparişler**, ve **OrderDetails**. Aşağıdaki örnekte, bir üst-alt ilişkisi ilk arasında oluşturulan **müşteriler** ve **siparişler** tablolar ve arasında **siparişler** ve **OrderDetails** tablolar. Bir XPath sorgusu döndürülecek gerçekleştirilir bir **XmlNodeList** , **müşteriler** düğümleri bir en alt burada **OrderDetails** düğüme sahip bir **ProductID**43 değerini düğümle. Esas olarak, örnek XPath sorgusu sahip ürün hangi müşteriler sipariş belirlemek için kullandığı **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

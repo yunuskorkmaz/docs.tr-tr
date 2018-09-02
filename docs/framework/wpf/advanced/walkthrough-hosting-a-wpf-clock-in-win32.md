@@ -6,69 +6,69 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 58e4b1dd311ccd6e1bbab79f4c4dda2207f96eaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457282"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>İzlenecek yol: Win32'de WPF Saati Barındırma
-Yerleştirilecek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları, <xref:System.Windows.Interop.HwndSource>, içeren HWND sağlayan, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Oluşturduğunuz ilk <xref:System.Windows.Interop.HwndSource>, CreateWindow'unkine benzer parametreler vererek.  Size sonra <xref:System.Windows.Interop.HwndSource> hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde içerik istiyor.  Son olarak, dışı HWND almak <xref:System.Windows.Interop.HwndSource>. Bu kılavuz karma oluşturma gösterilmektedir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işletim sistemi in uygulama **tarih ve saat özellikleri** iletişim.  
+Yerleştirmenin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları kullanın <xref:System.Windows.Interop.HwndSource>, içeren HWND sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Oluşturduğunuz ilk <xref:System.Windows.Interop.HwndSource>, parametreler için CreateWindow benzer vererek.  Size daha sonra <xref:System.Windows.Interop.HwndSource> hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik içinde olmasını istediğiniz.  Son olarak, / HWND elde <xref:System.Windows.Interop.HwndSource>. Bu izlenecek yol karma oluşturma işlemini gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işletim sistemi in uygulama **tarih ve saat özellikleri** iletişim.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bkz: [WPF ve Win32 birlikte çalışabilirlik](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ Bkz: [WPF ve Win32 birlikte çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
-## <a name="how-to-use-this-tutorial"></a>Bu öğretici nasıl kullanılır?  
- Bu öğretici, birlikte çalışabilirlik uygulama oluşturmanın önemli adımlar yoğunlaşır. Öğretici bir örneği tarafından desteklenen [Win32 saati birlikte çalışabilirlik örneği](http://go.microsoft.com/fwlink/?LinkID=160051), ancak bu örnek son ürünün yansıtıcı. Varolan ile başlayan gibi Bu öğreticide adımları belgeler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kendi projesi, belki de önceden var olan bir proje ve ekleme barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanıza. Son ürününüzü karşılaştırabilirsiniz [Win32 saati birlikte çalışabilirlik örneği](http://go.microsoft.com/fwlink/?LinkID=160051).  
+## <a name="how-to-use-this-tutorial"></a>Bu öğreticide kullanma  
+ Bu öğreticide, birlikte çalışabilirlik uygulama oluşturmanın önemli adımlar yoğunlaşır. Öğretici, bir örnek tarafından yedeklenen [Win32 saati birlikte çalışma örneği](https://go.microsoft.com/fwlink/?LinkID=160051), ancak bu örnek son ürünün yansıtıcı. Varolan ile başlayan gibi Bu öğreticide adımları belgeler [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kendi proje, belki de önceden mevcut olan bir proje ve, ekleme barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanıza. Son ürününüzü ile karşılaştırabileceğiniz [Win32 saati birlikte çalışma örneği](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
-## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>İzlenecek yol Win32 içinde Windows Presentation Framework'ün (HwndSource)  
- Aşağıdaki grafikte Bu öğreticinin hedeflediği son ürünü gösterir:  
+## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Bir kılavuz içinde Win32 Windows Presentation Framework (HwndSource)  
+ Aşağıdaki grafikte, bu öğreticinin hedeflenen son ürün gösterilmektedir:  
   
  ![Tarih ve Saat Özellikleri iletişim kutusu](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
   
- C++ oluşturarak bu iletişim kutusunu yeniden oluşturabilirsiniz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] proje [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]ve aşağıdaki oluşturmak için iletişim kutusu düzenleyicisini kullanma:  
+ C++ oluşturarak bu iletişim kutusunu yeniden oluşturabileceğinizi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projesi [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]ve aşağıdaki oluşturmak için iletişim kutusu düzenleyicisini kullanma:  
   
  ![Tarih ve Saat Özellikleri iletişim kutusu](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
   
- (Kullanmak gerekmez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] kullanmak için <xref:System.Windows.Interop.HwndSource>, ve yazmak için C++ kullanma gerekmez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programları, ancak bunu yapmak için oldukça tipik bir yoludur ve kendisi de bir adım öğretici açıklaması için uygundur).  
+ (Kullanın gerekmez [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] kullanılacak <xref:System.Windows.Interop.HwndSource>, ve yazmak için C++ kullanın gerekmez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar, ancak bunu yapmak için oldukça tipik bir yoludur ve kendisi de adım öğretici açıklaması için uygundur).  
   
  Beş belirli yerleştirmek için gerçekleştirmeniz gereken bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iletişim saati:  
   
-1.  Etkinleştirme, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] yönetilen kod projesi (**/CLR**) içinde proje ayarlarını değiştirerek [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+1.  Etkinleştirme, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] yönetilen kodu çağırmak için proje (**/CLR**) proje ayarlarını değiştirerek [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   
 2.  Oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> ayrı bir DLL içinde.  
   
-3.  Put [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> içinde bir <xref:System.Windows.Interop.HwndSource>.  
+3.  Yerleştirme [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> içinde bir <xref:System.Windows.Interop.HwndSource>.  
   
-4.  Bunun için bir HWND alın <xref:System.Windows.Controls.Page> kullanarak <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği.  
+4.  HWND için alma <xref:System.Windows.Controls.Page> kullanarak <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği.  
   
-5.  Kullanım [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND büyük içinde nereye yerleştireceğinizi karar vermek için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulama  
+5.  Kullanım [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND büyük içinde yerleştirileceği yeri karar [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulama  
   
 ## <a name="clr"></a>/ CLR  
- Etkinleştirmek için bunu yönetilmeyen ilk adımdır [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] çağırana projeye yönetilen kod.  Kullanın ve Main yöntemi ile kullanmak için ayarlamak istediğiniz gerekli DLL'leri bağlayacak/CLR derleyici seçeneği kullandığınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ İlk adım, bu yönetilmeyen olarak [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] çağırana projeye yönetilen kod.  Gerekli DLL'leri kullanma ve ile kullanmak için ana yöntemi ayarlamak istediğiniz bağlanacağı/CLR derleyici seçeneği kullanmanız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- C++ projesi içinde yönetilen kod kullanımını etkinleştirmek için: win32clock projeye sağ tıklayın ve seçin **özellikleri**.  Üzerinde **genel** özellik sayfası (varsayılan) değiştirmek için ortak dil çalışma zamanı desteğini `/clr`.  
+ Yönetilen kod C++ projesi içinde kullanımını etkinleştirmek için: win32clock proje üzerinde sağ tıklayıp **özellikleri**.  Üzerinde **genel** özellik sayfası (varsayılan) değiştirmek için ortak dil çalışma zamanı desteği `/clr`.  
   
- Ardından, DLL'ler için gerekli başvurular ekleyin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll ve UIAutomationTypes.dll. (Yönergeleri izleyerek C: sürücüsüne işletim sisteminin yüklü olduğu varsayılır.)  
+ Ardından, DLL'ler için gerekli başvuruları eklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll ve UIAutomationTypes.dll. (Yönergeleri izleyerek, C: sürücüsünde işletim sisteminin yüklü varsayılır.)  
   
-1.  Win32clock projesine sağ tıklatın ve **başvuruları...** ve o iletişim içinde:  
+1.  Win32clock projesine sağ tıklayıp **başvuruları...** , söz konusu iletişim içindeydi ve:  
   
-2.  Win32clock projesine sağ tıklatın ve **başvuruları...** .  
+2.  Win32clock projesine sağ tıklayıp **başvuruları...** .  
   
-3.  Tıklatın **Yeni Başvuru Ekle**Gözat sekmesini tıklatın, C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll'e girin ve Tamam'ı tıklatın.  
+3.  Tıklayın **Yeni Başvuru Ekle**Gözat sekmesini tıklatın, C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll'e girin ve Tamam'a tıklayın.  
   
-4.  PresentationFramework.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
+4.  PresentationFramework.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
   
-5.  WindowsBase.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll.  
+5.  WindowsBase.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\WindowsBase.dll.  
   
-6.  UIAutomationTypes.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
+6.  UIAutomationTypes.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationTypes.dll.  
   
-7.  UIAutomationProvider.dll için yineleyin: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
+7.  UIAutomationProvider.dll için işlemi tekrarlayın: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\UIAutomationProvider.dll.  
   
-8.  Tıklatın **Yeni Başvuru Ekle**System.dll seçin ve tıklatın **Tamam**.  
+8.  Tıklayın **Yeni Başvuru Ekle**System.dll seçin ve tıklayın **Tamam**.  
   
-9. Tıklatın **Tamam** başvuruları ekleme win32clock özellik sayfalarından çıkmak için.  
+9. Tıklayın **Tamam** başvuruları eklemek için win32clock özellik sayfaları'ndan çıkmak için.  
   
  Son olarak, ekleme `STAThreadAttribute` için `_tWinMain` ile kullanmak için yöntemi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
@@ -80,25 +80,25 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- Bu öznitelik söyler [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] , ne zaman başlatır [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], için gerekli olan tek iş parçacıklı model (STA) kullanması gereken [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).  
+ Bu öznitelik söyler [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] , ne zaman başlatır [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], için gerekli olan bir tek iş parçacıklı model (STA) kullanması gereken [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).  
   
-## <a name="create-a-windows-presentation-framework-page"></a>Bir Windows Presentation Framework sayfası oluşturun  
- Tanımlayan bir DLL ardından, oluşturduğunuz bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>. Genellikle oluşturmak en kolay yoludur [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> tek başına uygulama ve yazma ve hata ayıklama olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu şekilde bölümü.  Bunu yaptıktan sonra bu proje bir DLL'e tıklayarak projeyi sağ tıklatarak açılabilir **özellikleri**, uygulamaya giderek ve çıktı türü Windows Sınıf Kitaplığı'na değiştirme.  
+## <a name="create-a-windows-presentation-framework-page"></a>Windows Presentation Framework sayfası oluşturma  
+ Tanımlayan bir DLL ardından, oluşturduğunuz bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>. Genellikle oluşturmak en kolay yöntemdir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> bir tek başına uygulama yazma ve hata ayıklama olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] böylece kısmını.  Bunu yaptıktan sonra bu proje bir DLL içine tıklayarak projeyi sağ tıklatarak kapatılabilir **özellikleri**, uygulamaya gidip ve Windows sınıf kitaplığı için çıktı türünü değiştirme.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll projesi birleştirilebilir ile [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projesi (iki proje içeren bir çözüm) – çözüm üzerinde select **sağa proje**.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll projesi ardından ile birleştirilebilir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projesi (iki proje içeren bir çözüm) – sağ tıklayın, çözümü, select **sağa proje**.  
   
- Bunu kullanmayı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] DLL'den [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] proje, gereken bir başvuru ekleyin:  
+ Bunu kullanmayı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] DLL'den [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] projesi, bir başvuru eklemeniz gerekir:  
   
-1.  Win32clock projesine sağ tıklatın ve **başvuruları...** .  
+1.  Win32clock projesine sağ tıklayıp **başvuruları...** .  
   
-2.  Tıklatın **Yeni Başvuru Ekle**.  
+2.  Tıklayın **Yeni Başvuru Ekle**.  
   
-3.  Tıklatın **projeleri** sekmesi.  WPFClock'ı seçin, Tamam'ı tıklatın.  
+3.  Tıklayın **projeleri** sekmesi.  WPFClock'ı seçin, Tamam'a tıklayın.  
   
-4.  Tıklatın **Tamam** başvuruları ekleme win32clock özellik sayfalarından çıkmak için.  
+4.  Tıklayın **Tamam** başvuruları eklemek için win32clock özellik sayfaları'ndan çıkmak için.  
   
 ## <a name="hwndsource"></a>HwndSource  
- Ardından, kullandığınız <xref:System.Windows.Interop.HwndSource> yapmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> HWND gibi arayın.  Bu kod bloğu bir C++ dosyasına ekleyin:  
+ Ardından, kullandığınız <xref:System.Windows.Interop.HwndSource> yapmak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> HWND gibi arayın.  Bu kod bloğu bir C++ dosyaya ekleyin:  
   
 ```  
 namespace ManagedCode  
@@ -126,7 +126,7 @@ namespace ManagedCode
 }  
 ```  
   
- Bu, bazı açıklamalar kullanan kodu uzun bir parçasıdır.  İlk bölümü çeşitli yan tümceleri, böylelikle tüm çağrıları tam olarak nitelemek gerekmez:  
+ Bu bazı açıklamalar kullanan kod uzun bir parçasıdır.  İlk bölümü çeşitli yan tümceleri olduğundan tüm çağrıları tam olarak nitelemek gerekmez:  
   
 ```  
 namespace ManagedCode  
@@ -137,13 +137,13 @@ namespace ManagedCode
     using namespace System::Windows::Media;  
 ```  
   
- Oluşturan bir işlev tanımlayın sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik, yerleştiren bir <xref:System.Windows.Interop.HwndSource> ve HWND döndürür:  
+ Oluşturan bir işlev tanımlayın ardından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik, yerleştiren bir <xref:System.Windows.Interop.HwndSource> ve HWND döndürür:  
   
 ```  
 HWND GetHwnd(HWND parent, int x, int y, int width, int height) {  
 ```  
   
- Önce oluşturduğunuz bir <xref:System.Windows.Interop.HwndSource>, parametreleri CreateWindow'unkine benzer:  
+ İlk olarak, oluşturun bir <xref:System.Windows.Interop.HwndSource>, parametreleri için CreateWindow benzerdir:  
   
 ```  
 HwndSource^ source = gcnew HwndSource(  
@@ -156,34 +156,34 @@ HwndSource^ source = gcnew HwndSource(
     );  
 ```  
   
- Oluşturduğunuz sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfını onun oluşturucusunu çağırarak:  
+ Oluşturduğunuz sonra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıf oluşturucusuna çağrı yaparak içerik:  
   
 ```  
 UIElement^ page = gcnew WPFClock::Clock();  
 ```  
   
- Ardından sayfasına bağlanmak <xref:System.Windows.Interop.HwndSource>:  
+ Sayfaya bağlandıktan sonra <xref:System.Windows.Interop.HwndSource>:  
   
 ```  
 source->RootVisual = page;  
 ```  
   
- Ve son satırında için HWND döndürün <xref:System.Windows.Interop.HwndSource>:  
+ Ve son satırında HWND döndürür <xref:System.Windows.Interop.HwndSource>:  
   
 ```  
 return (HWND) source->Handle.ToPointer();  
 ```  
   
 ## <a name="positioning-the-hwnd"></a>Hwnd konumlandırma  
- İçeren bir HWND sahip olduğunuza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati, gereken o HWND içine yerleştirilecek [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletişim.  HWND yalnızca nereye koyacağınızı biliyorsanız, yalnızca o boyutunu ve konumunu geçip geçmeyeceğini `GetHwnd` daha önce tanımlanan işlevi.  Ancak, bir kaynak dosyası Cwnd'lerden hiçbirini nereye konumlandırılır kesinlikle emin; bu nedenle iletişim tanımlamak için kullanılır.  Kullanabileceğiniz [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] koymak için iletişim kutusu Düzenleyicisi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] statik kontrol gitmek için saatin istediğiniz yere ("saati Buraya Ekle") ve konumlandırmak için kullanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saat.  
+ İçeren bir HWND sahip olduğunuza göre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzende, getirmeniz gerekir bu HWND içinde [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] iletişim.  HWND yalnızca nereye koyacağınızı ise, yalnızca o boyutunu ve konumunu geçip geçmeyeceğini `GetHwnd` önceden tanımladığınız işlevi.  Ancak, bir kaynak dosyası iletişim Cwnd'lerden hiçbirini nerede konumlandırılacağını tam olarak emin olacak şekilde tanımlamak için kullanılan.  Kullanabileceğiniz [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] koymak için iletişim kutusu Düzenleyicisi bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] statik denetim, Git saati istediğiniz ("Ekle düzende burada") ve konumlandırmak için kullanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati.  
   
- WM_INITDIALOG işlediğiniz yerde, kullandığınız `GetDlgItem` HWND STATIC yer tutucusu için:  
+ WM_INITDIALOG işlediğiniz burada kullandığınız `GetDlgItem` HWND yer tutucusu için almak için:  
   
 ```  
 HWND placeholder = GetDlgItem(hDlg, IDC_CLOCK);  
 ```  
   
- Koyabilirsiniz şekilde, daha sonra bu yer tutucu statik, konumunu ve boyutunu hesaplayabilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu yerinde saat:  
+ Böylece, ardından bu yer tutucu statik konumunu ve boyutunu hesaplayabilirsiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , yerinde saati:  
   
  RECT dikdörtgeni;  
   
@@ -197,35 +197,35 @@ point.y = rectangle.top;
 result = MapWindowPoints(NULL, hDlg, &point, 1);  
 ```  
   
- STATİK tutucu Gizle sonra:  
+ Ardından statik yer tutucu Gizle:  
   
 ```  
 ShowWindow(placeholder, SW_HIDE);  
 ```  
   
- Ve oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o konumda HWND saat:  
+ Oluşturup [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] HWND o konumda saati:  
   
 ```  
 HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);  
 ```  
   
- Öğreticiyi ilginç hale getirmek ve gerçek üretmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati, gerekir oluşturmak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati denetimi bu noktada. Arka plan kodu birkaç olay işleyicileri ile çoğunlukla biçimlendirme içinde yapabilirsiniz. Bu öğretici denetim tasarımı ile ilgili değildir ve birlikte çalışma hakkında olduğundan için tam kod [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati sağlanır burada için ayrı yönergeler onu oluşturmak veya her bölümü anlamı olmadan bir kod bloğu olarak. Görünüm veya denetim işlevselliğini değiştirmek için bu kodla denemeler çekinmeyin.  
+ Öğreticiyi ilginç hale getirmek ve gerçek üretmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzende, oluşturmanız gerekir bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saati denetimi bu noktada. Arka plan kod yalnızca birkaç olay işleyicileri ile çoğunlukla biçimlendirme içinde yapabilirsiniz. Bu öğreticide, birlikte çalışabilirlik ve denetimi tasarım hakkında değil olduğundan, için kod tamamlama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] saat sağlanır için ayrı yönergeler onu oluşturmak veya her bir parçası olarak ne anlama geldiğini olmadan bir kod bloğu olarak burada. Görünüm veya denetimi işlevlerini değiştirmek için bu kodla denemeler çekinmeyin.  
   
- Biçimlendirme aşağıdaki gibidir:  
+ Biçimlendirme şöyledir:  
   
  [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
- Ve eşlik eden arka plan kod şöyledir:  
+ Ve eşlik eden arka plan kod şu şekildedir:  
   
  [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
- Nihai sonucu şuna benzer:  
+ Nihai sonucu şu şekilde görünür:  
   
  ![Tarih ve Saat Özellikleri iletişim kutusu](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
   
- Bu ekran görüntüsünde üretilen kod için sonuç karşılaştırmak için bkz: [Win32 saati birlikte çalışabilirlik örneği](http://go.microsoft.com/fwlink/?LinkID=160051).  
+ Sonuç şu ekran üretilen kod için karşılaştırmak için bkz [Win32 saati birlikte çalışma örneği](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Interop.HwndSource>  
  [WPF ve Win32 Birlikte Çalışması](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Win32 saati birlikte çalışabilirlik örneği](http://go.microsoft.com/fwlink/?LinkID=160051)
+ [Win32 saati birlikte çalışabilirlik örneği](https://go.microsoft.com/fwlink/?LinkID=160051)

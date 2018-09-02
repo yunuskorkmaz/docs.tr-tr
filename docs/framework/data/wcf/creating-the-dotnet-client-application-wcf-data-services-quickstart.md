@@ -5,81 +5,88 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 09981a7aee2db24d8464bbc7412b82a57ec8115b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365361"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423650"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
-Bu, son görevdir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. Bu görevde, bir konsol uygulaması çözüme eklemek için bir başvuru ekleyin [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış bu yeni istemci uygulaması ve erişim [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] oluşturulan istemci veri hizmeti sınıfları ve istemci kullanarak istemci uygulamasından akışı kitaplıkları.  
-  
+
+Bu, WCF Veri Hizmetleri Hızlı Başlangıç Son görevdir. Bu görevde, bir konsol uygulaması çözüme ekleyin, bir başvuru ekleyin [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bu yeni istemci uygulamasına akışı ve OData istemci kitaplıkları ve oluşturulan istemci veri hizmeti sınıfları kullanarak istemci uygulamasından akışına erişim .
+
 > [!NOTE]
->  Bir .NET Framework tabanlı bir istemci uygulaması veri akışına erişmek için gerekli değildir. Veri Hizmeti tüketen uygulama bileşeni tarafından erişilebilen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için bkz: [veri hizmeti istemci uygulamasında kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
-  
-### <a name="to-create-the-client-application-by-using-visual-studio"></a>Visual Studio kullanarak istemci uygulaması oluşturmak için  
-  
-1.  İçinde **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle**ve ardından **yeni proje**.  
-  
-2.  İçinde **proje türleri**, tıklatın **Windows**ve ardından **WPF uygulaması** içinde **şablonları** bölmesi.  
-  
-3.  Girin `NorthwindClient` proje adı ve ardından **Tamam**.  
-  
-4.  MainWindow.xaml dosyasını açın ve XAML kodu aşağıdaki kodla değiştirin:  
-  
-     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]  
-  
-### <a name="to-add-a-data-service-reference-to-the-project"></a>Veri hizmeti başvurusu projeye eklemek için  
-  
-1.  NorthwindClient projesine sağ tıklayın, **hizmet Başvurusu Ekle**ve ardından **bulma**.  
-  
-     Bu ilk görevde oluşturduğunuz Northwind veri hizmeti görüntüler.  
-  
-2.  İçinde **Namespace** metin kutusunda, `Northwind`ve ardından **Tamam**.  
-  
-     Bu, yeni bir kod dosyası erişmek ve nesneler olarak veri hizmeti kaynakları ile etkileşim kurmak için kullanılan veri sınıfları içeren projeye ekler. Veri sınıflarını ad alanında oluşturulan `NorthwindClient.Northwind`.  
-  
-### <a name="to-access-data-service-data-in-the-wpf-application"></a>WPF uygulamasında veri hizmeti verilere erişmek için  
-  
-1.  İçinde **Çözüm Gezgini** altında **NorthwindClient**, projeyi sağ tıklatın ve **Başvuru Ekle**.  
-  
-2.  Başvuru Ekle iletişim kutusunda tıklatın **.NET** sekmesinde, System.Data.Services.Client.dll derlemesi seçin ve ardından **Tamam**. İçinde **Çözüm Gezgini** altında **NorthwindClient**MainWindow.xaml dosyası için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimi (`Imports` Visual Basic'te).  
-  
+> .NET Framework tabanlı bir istemci uygulama bir veri akışına erişmek için gerekli değildir. Veri Hizmeti, bir OData akışına kullanan herhangi bir uygulama bileşeni tarafından erişilebilir. Daha fazla bilgi için [bir istemci uygulamasında veri hizmeti kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).
+
+## <a name="to-create-the-client-application-by-using-visual-studio"></a>Visual Studio kullanarak istemci uygulamasını oluşturmak için
+
+1.  İçinde **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle**ve ardından **yeni proje**.
+
+2.  Sol bölmede seçin **yüklü** > [**Visual C#** veya **Visual Basic**] > **Windows Masaüstü**seçip **WPF uygulaması** şablonu.
+
+3.  Girin `NorthwindClient` proje adı ve ardından **Tamam**.
+
+4.  MainWindow.xaml dosyasını açın ve XAML kodu aşağıdaki kodla değiştirin:
+
+     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]
+
+## <a name="to-add-a-data-service-reference-to-the-project"></a>Projeye veri hizmeti başvurusu eklemek için
+
+1.  İçinde **Çözüm Gezgini**, northwindclient & lt projeye sağ tıklayın, **Ekle** > **hizmet başvurusu**ve ardından **Bul** .
+
+     Bu ilk görevde oluşturduğunuz Northwind verileri hizmeti görüntüler.
+
+2.  İçinde **Namespace** metin kutusunda, `Northwind`ve ardından **Tamam**.
+
+     Bu, yeni bir kod dosyası erişmek ve veri hizmeti kaynaklarına nesneler olarak etkileşim için kullanılan veri sınıfları içeren projeyi ekler. Veri sınıfları ad alanında oluşturulan `NorthwindClient.Northwind`.
+
+## <a name="to-access-data-service-data-in-the-wpf-application"></a>WPF uygulamasında veri hizmeti verilere erişmek için
+
+1.  İçinde **Çözüm Gezgini** altında **; northwindclient & lt**, projeye sağ tıklayın ve tıklayın **Başvuru Ekle**.
+
+2.  İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET** sekmesinde System.Data.Services.Client.dll derlemeyi seçin ve ardından **Tamam**.
+
+3. İçinde **Çözüm Gezgini** altında **; northwindclient & lt**MainWindow.xaml dosyanın kod sayfasını açın ve aşağıdakini ekleyin `using` deyimi (`Imports` Visual Basic'te).
+
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
-     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]  
-  
-3.  Bu veri hizmeti sorgular ve sonucu bağlar aşağıdaki kodu ekleyin bir <xref:System.Data.Services.Client.DataServiceCollection%601> içine `MainWindow` sınıfı:  
-  
+     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]
+
+3.  Bu veri hizmetini sorgular ve sonuca bağlar aşağıdaki kodu bir <xref:System.Data.Services.Client.DataServiceCollection%601> içine `MainWindow` sınıfı:
+
     > [!NOTE]
-    >  Ana bilgisayar adını değiştirmeniz gerekir `localhost:12345` Northwind veri hizmeti örneğiniz barındırma bağlantı noktası ve sunucu.  
-  
+    > Ana bilgisayar adını değiştirmelisiniz `localhost:12345` Northwind verileri hizmeti örneğinizi barındırma bağlantı noktası ve sunucu.
+
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
-     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]  
-  
-4.  Değişiklikleri kaydeder aşağıdaki kodu ekleyin `MainWindow` sınıfı:  
-  
+     [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]
+
+4.  Değişiklikleri kaydeder aşağıdaki kodu ekleyin `MainWindow` sınıfı:
+
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
-     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]  
-  
-### <a name="to-build-and-run-the-northwindclient-application"></a>Derleme ve NorthwindClient uygulamayı çalıştırmak için  
-  
-1.  İçinde **Çözüm Gezgini**, NorthwindClient projesine sağ tıklatın ve **başlangıç projesi olarak ayarla**.  
-  
-2.  Uygulamayı başlatmak için F5 tuşuna basın.  
-  
-     Bu çözüm oluşturur ve istemci uygulaması başlatır. Veri hizmetinden istenen ve konsolda görüntülenir.  
-  
-3.  Bir değeri **miktar** veri kılavuzu ve ardından sütunu **kaydetmek**.  
-  
-     Değişiklikler veri hizmetine kaydedilir.  
-  
+     [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]
+
+## <a name="to-build-and-run-the-northwindclient-application"></a>Northwindclient & lt uygulaması derleme ve çalıştırma için
+
+1.  İçinde **Çözüm Gezgini**; northwindclient & lt projeye sağ tıklayın ve seçin **başlangıç projesi olarak ayarla**.
+
+2.  Tuşuna **F5** uygulamayı başlatmak için.
+
+     Bu çözüm derlenir ve istemci uygulamayı başlatır. Veriler hizmetten istenen ve konsolda görüntülenir.
+
+3.  Bir değeri de düzenlemeniz **miktar** veri kılavuzu ve ardından sütunun **Kaydet**.
+
+     Veri hizmetine değişiklikler kaydedildi.
+
     > [!NOTE]
-    >  NorthwindClient uygulamasının bu sürümü, ekleme ve silme varlıklarının desteklemez.  
-  
-## <a name="next-steps"></a>Sonraki Adımlar  
- Northwind örnek erişen istemci uygulaması başarıyla oluşturdunuz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Ayrıca tamamladınız [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] hızlı başlangıç. Erişme hakkında daha fazla bilgi için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] besleme yeri bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama, bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+    > Ekleme ve silme varlıklarının; northwindclient & lt uygulamanın bu sürümü desteklemiyor.
+
+## <a name="next-steps"></a>Sonraki Adımlar
+
+Bulunan örnek Northwind OData akışındaki erişen istemci uygulaması başarıyla oluşturdunuz. WCF Veri Hizmetleri hızlı başlangıç ayrıca tamamladınız!
+
+Gelen OData erişme hakkında daha fazla bilgi akışına bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulaması, bakın [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Kaynaklar](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

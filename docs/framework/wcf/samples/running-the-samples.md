@@ -2,84 +2,84 @@
 title: Windows Communication Foundation Örneklerini Çalıştırma
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807260"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425781"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örneklerini Çalıştırma
-Windows Communication Foundation (WCF) örnekleri tek makineli veya makine bazındaki yapılandırmasında çalıştırabilirsiniz. Sağlanan gibi örnekleri tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek ait yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda bir örneği aynı makineye ve çapraz makine yapılandırmalarını çalıştırma açıklanmaktadır. Internet Information Services (IIS) ve kendi kendini barındıran örnekleri barındırılan hizmetler için adımları Çeşitlemeler olduğuna dikkat edin. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
+Windows Communication Foundation (WCF) örnekleri, tek bir makine veya çapraz makine yapılandırmada çalıştırabilirsiniz. Sağlanan olarak örnekler tek bir makinede çalıştırmak için hazır olursunuz. Çapraz makine yapılandırması, bir örnek 's yapılandırma dosyası ayarları değiştirmek gereklidir. Aşağıdaki yordamlarda, aynı makineye ve çapraz makine yapılandırmaları bir örnek çalıştırmak açıklanmaktadır. Internet Information Services (IIS) ve şirket içinde barındırılan örnekleri barındırılan hizmetler için adımları farklılığı olduğunu unutmayın. Çoğu örnekleri IIS'de barındırılan; nasıl barındırılan belirlemek için örnek Benioku bilgilere bakın.  
   
- Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], IIS'de barındırılan değil örnekleri bir dinleyici Http.sys ile kaydetmek için yükseltilmiş ayrıcalıklar gerektirir. Httpcfg.exe hizmetinin altında çalıştığı hesabın ile hizmetin dinleme adreslerini kaydetmek için kullanın ya da yönetici ayrıcalıklarıyla çalışan bir komut isteminden hizmeti başlatın.  
+ Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], IIS'de barındırılmamaktadır örnekleri bir dinleyici Http.sys ile kaydolmak için yükseltilmiş ayrıcalıklar gerektirir. Hizmetin altında çalıştığı hesabın hizmet dinleme adreslerini kaydetmek için httpcfg.exe kullanın veya yönetici ayrıcalıklarıyla çalışan bir komut isteminden service'ı başlatın.  
   
 > [!NOTE]
->  Derleme veya herhangi bir WCF örnekleri çalıştırmadan önce gerçekleştirilen mutlaka [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  Oluşturma veya WCF örnekleri birini çalıştırmadan önce gerçekleştirilen mutlaka [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-### <a name="to-run-the-sample-on-the-same-machine"></a>Aynı makinede örneği çalıştırmak için  
+### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  IIS tarafından barındırılan hizmetindeki, hizmeti aşağıdaki adresini girerek bir tarayıcı kullanarak erişebildiğinden emin olun: http://localhost/servicemodelsamples/service.svc. Bir onay sayfasına yanıtta görüntülenmesi gerekir. Onay sayfasında görüntülenmiyorsa bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Hizmeti, IIS tarafından barındırılıyorsa, hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebildiğinden emin olun: http://localhost/servicemodelsamples/service.svc. Yanıtta bir onay sayfası gösterilmelidir. Onay sayfasında görüntülenmiyorsa bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-2.  Hizmet kendi kendine barındırılıyorsa Service.exe dile özgü klasörü altında \service\bin çalıştırın. Hizmet etkinliğinin hizmet konsol penceresinde görüntülenir.  
+2.  Hizmet şirket içinde barındırılıyorsa Service.exe \service\bin, dile özgü klasörü altında çalıştırın. Hizmet etkinliğinin hizmet konsol penceresinde görüntülenir.  
   
-3.  \Client\bin Client.exe çalıştırmak\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresi görüntülenir.  
+3.  \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğinden değilseniz bkz [sorun giderme ipuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [sorun giderme ipuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### <a name="to-run-the-sample-across-machines"></a>Makine genelinde örneği çalıştırmak için  
+### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   
-1.  IIS'de barındırılan hizmetindeki ise:  
+1.  Hizmet IIS'de barındırılıyorsa:  
   
-    1.  Hizmeti makinede ServiceModelSamples adlı bir sanal dizin oluşturun. Setupvroot.bat bulunan toplu iş dosyası [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) disk dizini ve sanal dizini oluşturmak için kullanılabilir.  
+    1.  Hizmeti makinede ServiceModelSamples adlı sanal bir dizin oluşturun. Toplu iş dosyasını Setupvroot.bat bulunan [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) disk dizini ve sanal dizin oluşturmak için kullanılabilir.  
   
-    2.  Hizmet program dosyalarını %SystemDrive%\Inetpub\wwwroot\servicemodelsamples hizmeti makinede ServiceModelSamples sanal dizine kopyalayın. \Bin dizindeki dosyaları eklediğinizden emin olun.  
+    2.  Hizmet program dosyaları %SystemDrive%\Inetpub\wwwroot\servicemodelsamples hizmeti makinede ServiceModelSamples sanal dizinine kopyalayın. \Bin dizinine dosyaları eklediğinizden emin olun.  
   
-    3.  Test, hizmet bir tarayıcı kullanarak istemci makineden erişebilirsiniz.  
+    3.  Test bir tarayıcı kullanarak istemci makine hizmete erişebilir.  
   
-     Hizmet kendiliğinden barındırılır ise:  
+     Hizmet, şirket içinde barındırılan ise:  
   
-    1.  Hizmeti makinede hizmet dosyalarını barındıracak bir dizin oluşturun.  
+    1.  Hizmeti makinede hizmet dosyalarını tutmak için bir dizin oluşturun.  
   
-    2.  Hizmet program dosyalarını \service\bin\ klasöründen dile özgü klasörü altında hizmet makineye kopyalayın.  
+    2.  Hizmet program dosyaları \service\bin\ klasöründen, dile özgü klasörü altında hizmet makineye kopyalayın.  
   
-    3.  Hizmet yapılandırma dosyasında hizmetinizin yeni adresi ile eşleşmesi için uç nokta tanımındaki adresi değerini değiştirin. Tüm başvuruları "localhost" adresi bir tam etki alanı adıyla değiştirin.  
+    3.  Hizmet yapılandırma dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-    4.  Bir komut isteminden Service.exe başlatın.  
+    4.  Service.exe, bir komut istemi'nden başlatın.  
   
-2.  İstemci makine dile özgü klasörü altındaki \client\bin\ klasöründen istemci program dosyaları kopyalayın.  
+2.  İstemci program dosyaları \client\bin\ klasöründen, dile özgü klasörünün altındaki istemci makineye kopyalayın.  
   
-3.  Uç nokta adresi ayarlayın.  
+3.  Uç nokta adresini ayarlayın.  
   
-    1.  Hizmeti bir etki alanı hesabı altında çalışır değilse, istemci yapılandırma dosyasını açın ve yeni adresi hizmetinizin eşleştirmek için uç nokta tanımı adresi değerini değiştirin. Tüm başvuruları "localhost" adresi bir tam etki alanı adıyla değiştirin.  
+    1.  Bir etki alanı hesabı altında hizmet çalışmıyorsa, istemci yapılandırma dosyasını açın ve adres uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-    2.  Hizmeti bir etki alanı hesabı altında çalışıyorsa, istemci yapılandırması karşı hizmet Svcutil.exe çalıştırarak yeniden oluşturun. Svcutil.exe çalıştırma hakkında daha fazla bilgi için bkz: [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Örnek yapılandırma dosyasında yerine oluşturulan dosyasını kullanın. Oluşturulan yapılandırma dosyası, ek kimlik bilgileri olan ve varsayılan ayarları olsa bile hizmet uç noktasına bağlanmak gerekli tüm ayarları içerir. Kimlik bilgileri hakkında daha fazla bilgi için bkz: [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), ve [ \<kimliği >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  İstemci Yapılandırma hizmeti bir etki alanı hesabı altında çalışıyorsa, hizmete yönelik Svcutil.exe çalıştırarak yeniden oluşturun. Svcutil.exe çalıştırma hakkında daha fazla bilgi için bkz. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Örnek yapılandırma dosyasında yerine üretilen dosyayı kullanın. Oluşturulan yapılandırma dosyası, ek kimlik bilgileri ve varsayılan ayarları olsa bile hizmet uç noktaya bağlanmak için gereken tüm ayarları içerir. Kimlik bilgileri hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), ve [ \<kimlik >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
-4.  İstemci makinesinde, bir komut isteminden Client.exe başlatın.  
+4.  İstemci makinesinde bir komut istemi'nden Client.exe başlatın.  
   
 ### <a name="to-debug-a-service"></a>Bir hizmette hata ayıklamak için  
   
-1.  Yapı Çözümü (istemci ve hizmet) kullanarak **yapı** menüsü veya CTRL + SHIFT + B.  
+1.  Çözüm (hem istemci hem de hizmet) kullanarak derleme **derleme** menüsünden veya CTRL + SHIFT + B.  
   
-2.  IIS'de barındırılan hizmetindeki ise:  
+2.  Hizmet IIS'de barındırılıyorsa:  
   
-    1.  Adresini girerek bir tarayıcı kullanarak hizmetini etkinleştirme http://localhost/servicemodelsamples/service.svc.  
+    1.  Adresini girerek bir tarayıcı kullanarak hizmeti etkinleştirin http://localhost/servicemodelsamples/service.svc.  
   
-    2.  Çözümde seçin **hata ayıklama** menü ve **ekleme işlemi için** menü öğesi.  
+    2.  Çözümde seçin **hata ayıklama** menü ve **iliştirme** menü öğesi.  
   
-    3.  Seçin **işlemleri tüm kullanıcıları göster** onay kutusu.  
+    3.  Seçin **tüm kullanıcıların işlemlerini göster** onay kutusu.  
   
-    4.  Ana çalışan işlem hatalarını ayıklamak için W3wp.exe seçin (Windows XP ASPNet_wp.exe seçin).  
+    4.  Konak çalışan işlem hatalarını ayıklamak için W3wp.exe seçin (Windows XP ASPNet_wp.exe seçin).  
   
-3.  Şimdi hizmet kodunda kesme noktalarını ayarlayın ve özel durumları üzerinde kesme noktaları etkinleştirin.  
+3.  Şimdi, hizmet kodda kesme noktaları ayarlayın ve özel durumlar üzerinde kesme noktalarını etkinleştir.  
   
-4.  İstemci proje öğesi sağ tıklatın ve seçin **hata ayıklama**, **başlangıç yeni örnek**.  
+4.  İstemci projesine sağ tıklayın ve seçin **hata ayıklama**, **yeni örnek Başlat**.  
   
-### <a name="to-clean-up-after-the-sample"></a>Örnek sonra temizlemek için  
+### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
--   Hizmet güvenlik nedenleriyle IIS'de barındırılıyorsa, sanal dizin tanımı ve örnekleri ile işiniz bittiğinde Kurulum adımlarında'ı izinler kaldırın.  
+-   Hizmet, güvenlik nedenleriyle IIS'de barındırılıyorsa, sanal dizin tanımını ve örneklerle tamamladığınızda Kurulumu adımları verilen izinler kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Windows Communication Foundation Örnekleri Derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Bir çalışma grubunda ve makinelerde örneklerini çalıştırma](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [Sorun Giderme İpuçları](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Bir çalışma grubunda ve makinelerdeki örneklerini çalıştırma](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [Sorun Giderme İpuçları](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

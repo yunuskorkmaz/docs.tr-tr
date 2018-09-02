@@ -2,28 +2,28 @@
 title: Beklenen Özel Durumlar
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ea2043826291e77a59d61077d92b59baf129af90
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805830"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425879"
 ---
 # <a name="expected-exceptions"></a>Beklenen Özel Durumlar
-Bu örnek, bir türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak gösterilmiştir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesap makinesi hizmetinin uygular. Bu örnekte, istemci bir konsol uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan hizmetindeki.  
+Bu örnek, türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak nasıl gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Kurulum yordamı ve yapı yönergeleri Bu örnek için bu konunun sonunda yer alır.  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
   
- Bu örnek yakalama gösterir ve programları düzeltmek iki beklenen özel durum türleri işleme gerekir işlemek: `TimeoutException` ve `CommunicationException`.  
+ Bu örnek, yakalama gösterir ve programlar düzeltmek iki beklenen özel durum türlerini işleme gerekir işlemek: `TimeoutException` ve `CommunicationException`.  
   
- Windows Communication Foundation (WCF) istemci iletişimi yöntemlerden oluşturulan beklenen veya beklenmeyen özel durumlardır. Beklenmeyen özel durumları içerecek yıkıcı hataları gibi `OutOfMemoryException` ve programlama hataları `ArgumentNullException` veya `InvalidOperationException`. Genellikle beklenmeyen hataları, bu nedenle genellikle, bunları bir WCF istemci iletişim yönteminin çağrılırken catch değil işlemek için kullanışlı bir yolu yoktur.  
+ Bir Windows Communication Foundation (WCF) istemcisi üzerinde iletişim yöntemlerinden oluşan özel durumlar, beklenen ya da beklenmeyen. Beklenmeyen özel durumları içerecek gibi yıkıcı hataları `OutOfMemoryException` ve programlama hatalarını `ArgumentNullException` veya `InvalidOperationException`. Genellikle beklenmeyen hatalar, bu nedenle genellikle, bunları bir WCF istemci iletişim yöntemini çağırırken yakalamalısınız değil işlemek için kullanışlı bir yolu yoktur.  
   
- Bir WCF istemcisi iletişimi yöntemlere özel durumlar dahil beklenen `TimeoutException`, `CommunicationException`, ve herhangi bir türetilmiş sınıf `CommunicationException`. Bunlar, WCF istemcisini durduruluyor ve bir iletişim hatası raporlama güvenli bir şekilde işlenebilir iletişimi sırasında bir sorun gösterir. Herhangi bir uygulamada dış etkenler bu hataların neden olabileceğinden, doğru uygulamaları bu özel durumları yakalamak ve bunlar ortaya çıktığında kurtarın.  
+ Bir WCF istemcisi üzerinde iletişim yöntemlerinden özel durumları içerecek beklenen `TimeoutException`, `CommunicationException`, ve herhangi bir türetilmiş sınıf `CommunicationException`. Bunlar, WCF istemcisini iptal ediliyor ve bir iletişim hatası raporlama güvenli bir şekilde işlenebilir iletişimi sırasında bir sorun gösterir. Herhangi bir uygulamada dış etkenler bu hataların neden olabileceğinden, doğru uygulamaları bu özel durumları yakalama ve ortaya çıkan kurtarma gerekir.  
   
- Birkaç türetilmiş sınıfları vardır `CommunicationException` , bir istemci atabilirsiniz. Bazı durumlarda, uygulamaların da özel işleme yapın, ancak diğer kişilerin olarak işlenmesine izin vermek için bunlardan bazıları catch bir `CommunicationException`. Bu ayrıntılı özel durum türü ilk yakalama ve ardından Yakalama gerçekleştirilebilir `CommunicationException` bir sonraki catch yan tümcesinde.  
+ Türetilmiş sınıfları yok `CommunicationException` istemci oluşturabilecek. Bazı durumlarda, uygulamaların da bazı özel işlem yapın, ancak diğerleri olarak işleneceğini izin için catch bir `CommunicationException`. Bu ayrıntılı özel durum türü ilk yakalama ve ardından yakalamak gerçekleştirilebilir `CommunicationException` daha sonraki bir catch yan tümcesinde.  
   
- İstemci iletişim yöntemini çağıran kodu gerekir catch `TimeoutException` ve `CommunicationException`. Bu tür hataları işlemek için bir istemci iptal etmek ve iletişim hatası rapor yoludur.  
+ İstemci iletişim yöntemini çağıran kod gerekir catch `TimeoutException` ve `CommunicationException`. Bu tür hataları işlemek için bir yol, istemci durdurmak ve iletişim hatası göstermektir.  
   
 ```csharp   
 try  
@@ -45,14 +45,14 @@ catch (CommunicationException exception)
 }  
 ```  
   
- Beklenen bir özel durum oluşursa, istemci olabilir veya daha sonra kullanılamayabilir. İstemci hala kullanılabilir olup olmadığını belirlemek için kontrol `State` özelliği `CommunicationState`. Açılır. Sonra hala açılırsa, hala kullanılabilir durumda değil. Aksi takdirde istemci iptal etmek ve tüm başvurularını serbest bırakın.  
+ Beklenen bir özel durum oluşursa, istemci olabilir veya daha sonra kullanılamayabilir. İstemci hala kullanılabilir olup olmadığını belirlemek için kontrol `State` özelliği `CommunicationState`. Açılır. Ardından hala açık değilse, yine de kullanılabilir. Aksi takdirde istemci iptal etmek ve tüm başvuruları bırakın.  
   
 > [!CAUTION]
->  Bir oturum sahip istemciler genellikle artık özel durumdan sonra kullanılabilir ve bir oturum olmayan istemciler hala genellikle özel durumdan sonra kullanılabilir gözlemleyebilirsiniz. Ancak, hiçbirini garanti, bunu istemci uygulamanız denetlemelidir özel durumdan sonra kullanmaya devam etmek denemek istiyorsanız `State` bir istemci özelliğini hala açık.  
+>  Bir oturuma sahip istemciler artık genellikle bir özel durumdan sonra kullanılabilir ve bir oturuma sahip olmayan istemciler hala özel durumdan sonra kullanılabilir mümkün. Ancak, bunlar garanti edilir, bunu istemci uygulamanızı denetlemelidir özel durumdan sonra kullanmaya devam etmek denemek istiyorsanız `State` özelliği istemci doğrulamak için yine de açılır.  
   
- Örneği çalıştırdığınızda, özel durumlar ve işlem yanıtları istemci konsol penceresinde görüntülenir.  
+ Örneği çalıştırdığınızda, işlem yanıtları ve özel durumlar istemci konsol penceresinde görüntülenir.  
   
- İki senaryo, istemci işlemini çalıştıran her hangi aranır `Add` arkasından `Divide`. İlk senaryoda, istemci iptal etme çağrısı yapmadan önce bir ağ sorunu taklit eder `Divide`. İkinci senaryo, zaman aşımı tamamlanması için çok yöntemi ayarlayarak bir zaman aşımı koşulu neden olur. İstemci işlemi beklenen çıktısı şöyledir:  
+ İki senaryo, istemci işlemini çalıştıran her çağırmak için hangi girişimleri `Add` ardından `Divide`. İlk senaryoda, istemci tarafından iptal ediliyor çağrı yapmadan önce bir ağ sorunu benzetimini yapar `Divide`. İkinci senaryo, bir zaman aşımı koşul tamamlanması için çok fazla yöntem zaman aşımı ayarlayarak neden olur. İstemci işlemi beklenen çıktısı bulunmaktadır:  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -63,20 +63,20 @@ Set timeout too short for method to complete...
 Got System.TimeoutException  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirmiş emin olun [kerelik Kurulum prosedürü Windows Communication Foundation örnekleri için](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

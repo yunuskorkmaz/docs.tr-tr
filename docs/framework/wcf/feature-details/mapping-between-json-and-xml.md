@@ -2,12 +2,12 @@
 title: JSON ve XML Arasında Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931475"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421729"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON ve XML Arasında Eşleme
 Okuyucular ve yazıcılar tarafından üretilen <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> üzerinde JavaScript nesne gösterimi (JSON) içerik bir XML API sağlar. JSON, JavaScript nesne değişmez değerler kümesini kullanarak veri kodlar. JSON içeriği yüklenirken okuyucular ve yazıcılar bu üretici tarafından üretilen de kullanılan gönderilen veya alınan kullanarak Windows Communication Foundation (WCF) uygulamaları tarafından <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> veya <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Okuyucular ve yazıcılar tarafından üretilen <xref:System.Runtime.Serializati
  Ayrıca, örnek JSON iletisinde WCF tarafından alınan ve günlüğe, XML parçası önceki günlüğüne bakın.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON ve XML bilgi kümesi arasında eşleme  
- İzlerse, eşleme açıklandığı JSON arasında bir [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (belirli kısıtlamalar gevşek ve belirli eklenen diğer kısıtlamaları hariç) ve XML bilgi kümesi (ve metinsel olmayan XML) olarak açıklanan [XML bilgi Ayarlama](http://go.microsoft.com/fwlink/?LinkId=98809) . Tanımları için şu konuya bakın *bilgi öğeleri* ve alanlar [köşeli ayraç].  
+ İzlerse, eşleme açıklandığı JSON arasında bir [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (belirli kısıtlamalar gevşek ve belirli eklenen diğer kısıtlamaları hariç) ve XML bilgi kümesi (ve metinsel olmayan XML) olarak açıklanan [XML bilgi Ayarlama](https://go.microsoft.com/fwlink/?LinkId=98809) . Tanımları için şu konuya bakın *bilgi öğeleri* ve alanlar [köşeli ayraç].  
   
  Boş bir XML belgesi için boş bir JSON belgesi eşler ve boş bir XML belgesi için boş bir JSON belgesi eşler. JSON eşleme XML boşluk harfinden önce ve sonra belgeyi sondaki boşlukları izin verilmez.  
   

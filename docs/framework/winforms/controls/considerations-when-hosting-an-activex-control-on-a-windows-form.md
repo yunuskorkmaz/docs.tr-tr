@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 52977ea11745056f7e022d545705d989d2e1bbc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebf856078d24ef44ca0e04955e0a971de68bb3ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526243"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421443"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
-Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir rağmen ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimleri kullanan bir uygulamayı planlarken aşağıdaki noktaları göz önünde bulundurun:  
+Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimlerini kullanan bir uygulamayı planlarken, aşağıdaki konuları göz önünde bulundurun:  
   
--   **Güvenlik** ortak dil çalışma zamanı kod erişim güvenliği açısından geliştirilmiştir. Windows Forms özelliklerine sahip uygulamaları işlevselliğinin büyük kısmını erişilebilir ile sorun olmadan tam güvenilen bir ortamda ve yarı güvenilir bir ortamda çalıştırılabilir. Windows Forms denetimleri hiçbir zorluklar sahip tarayıcıda barındırılabilir. Ancak, Windows Forms ActiveX denetimlerinde bu güvenlik geliştirmeleri yararlanamaz. Bir ActiveX denetimini çalıştırmak ile ayarlamak yönetilmeyen kod izni gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> özelliği. Güvenlik ve yönetilmeyen kod izin hakkında daha fazla bilgi için bkz: <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
+-   **Güvenlik** ortak dil çalışma zamanı kod erişim güvenliği ile ilgili olarak geliştirilmiştir. Windows Forms özelliklerine sahip uygulamalar ile erişilebilir işlevselliğinin büyük sorun olmadan tam olarak güvenilen bir ortamda ve yarı güvenilir bir ortamda çalıştırabilirsiniz. Windows Forms denetimleri, hiçbir zorluklar ile bir tarayıcıda barındırılabilir. Ancak, Windows Forms ActiveX denetimlerinde bu güvenlik geliştirmeleri yararlanamaz. Bir ActiveX denetimi çalışıyor ile ayarlanan yönetilmeyen kod iznini gerektirir <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> özelliği. Güvenlik ve yönetilmeyen kod iznini hakkında daha fazla bilgi için bkz: <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
   
--   **Toplam sahip olma maliyetini** ActiveX denetimleri için Windows formu eklenen oluşturulan dosya boyutunu önemli ölçüde ekleyebilirsiniz bağlandığında bu Windows Form ile dağıtılır. Ayrıca, Windows formlarına ActiveX denetimlerini kullanarak kayıt defterine yazılıyor gerektirir. Bu gerektirmeyen Windows Forms denetimleri, bir kullanıcının bilgisayarına daha bozucu budur.  
-  
-    > [!NOTE]
-    >  ActiveX ile çalışma denetimi COM birlikte çalışma sarmalayıcısı kullanılmasını gerektirir. Daha fazla bilgi için bkz: [COM birlikte çalışabilirliği Visual Basic ve Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+-   **Toplam sahip olma maliyetini** bir Windows forma eklenen ActiveX denetimleri, oluşturulan dosyaların boyutunu önemli ölçüde ekleyebilirsiniz bağlandığında, Windows Form dağıtılır. Ayrıca, Windows Forms ActiveX denetimleri kullanarak, kayıt defterine yazma gerektirir. Bu gerektirmeyen Windows Forms denetimleri, bir kullanıcının bilgisayarına daha bozucu budur.  
   
     > [!NOTE]
-    >  ActiveX denetiminin üyenin adını tanımlanan bir ad eşleşirse [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX denetim içeri Aktarıcı ile üye adı ön eki sonra **Ctl** oluşturduğunda, <xref:System.Windows.Forms.AxHost> türetilmiş sınıf. ActiveX denetimi adlı bir üye varsa, örneğin, **düzeni**, yeniden adlandırılır **CtlLayout** AxHost türetilmiş sınıfında çünkü **düzeni** olay içinde tanımlanmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+    >  ActiveX çalışma denetimi bir COM birlikte çalışma sarmalayıcısı kullanımı gerektirir. Daha fazla bilgi için [Visual Basic ve Visual C# COM birlikte çalışabilirlik](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+  
+    > [!NOTE]
+    >  ActiveX denetiminin bir üyesinin adı içinde tanımlanan bir adla eşleşirse [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX denetim içeri Aktarıcı üye adı ile ön ek sonra **Ctl** oluşturduğunda, <xref:System.Windows.Forms.AxHost> türetilmiş sınıf. Örneğin, ActiveX denetiminizin adlı bir üyesi varsa **Düzen**, yeniden adlandırıldığında **CtlLayout** AxHost türetilen sınıfında çünkü **Düzen** olay içinde tanımlanmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)  
- [Denetimleri ve çeşitli diller ve kitaplıkları karşılaştırıldığında programlanabilir nesneleri](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  [Windows Forms’a Denetimler Yerleştirme](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
  [Windows Forms Denetimleri](../../../../docs/framework/winforms/controls/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6641490908b1f384bf8192fd46b7dadb4ff5e23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5a40a0e26f116ce1700973a5000e8d6bbbd890
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423837"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize Yöntemi
-Tanımlayıcı ad imzası boyutu döndürür. Bu yöntem, genellikle bir gecikmeli imzalanmış derleme oluştururken dosyasında ayırmak için ne kadar alan belirlemek için derleyicileri tarafından kullanılır.  
+Tanımlayıcı ad imzası boyutunu döndürür. Bu yöntem, genellikle dosyasında gecikmeli imzalanmış bir derlemeyi oluştururken ayırmak için ne kadar alan olmadığının derleyiciler tarafından kullanılır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,16 +39,16 @@ HRESULT StrongNameSignatureSize (
   
 #### <a name="parameters"></a>Parametreler  
  `pbPublicKeyBlob`  
- [in] Türü yapısını [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) sağlam ad imzası oluşturmak için kullanılan anahtar çifti ortak kısmını içerir.  
+ [in] Türünden bir yapıyı [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) tanımlayıcı ad imzası oluşturmak için kullanılan anahtar çiftinden ortak kısmını içerir.  
   
  `cbPublicKeyBlob`  
- [in] Bayt olarak boyutu, `pbPublicKeyBlob`.  
+ [in] Bayt cinsinden boyutu, `pbPublicKeyBlob`.  
   
  `pcbSize`  
  [in] Tanımlayıcı ad imzası depolamak için gereken bayt sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

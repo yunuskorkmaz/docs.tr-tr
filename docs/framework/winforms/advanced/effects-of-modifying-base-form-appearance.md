@@ -1,5 +1,5 @@
 ---
-title: Bir taban formunu değiştirmenin etkileri&#39;s görünümü
+title: Bir taban formunu değiştirmenin etkileri&#39;görünümünü
 ms.date: 03/30/2017
 helpviewer_keywords:
 - parent forms [Windows Forms]
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: 7ba4a78395bb93caa1d1d86dc135825ca2a58845
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520558"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423789"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Bir taban formunu değiştirmenin etkileri&#39;s görünümü
-Uygulama geliştirme sırasında genellikle başka biçimlerde proje (veya diğer projeler) devralma taban form görünümü değiştirmeniz gerekebilir.  
+# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Bir taban formunu değiştirmenin etkileri&#39;görünümünü
+Uygulama geliştirme sırasında genellikle diğer forms projesinde (veya diğer projelerde) devraldığını taban formun görünüşünü değiştirmeniz gerekebilir.  
   
- Tasarım zamanında için taban formun görünüşünü değiştirir (ayarı özellikleri veya toplama ve çıkarma denetimlerinin olması) temel formu içeren proje yapılandırıldığında devralınan formlarında yansıtılır. Yalnızca temel formun değişiklikleri kaydetmek yeterli değil. Bir proje oluşturmak için seçin **yapı** gelen **yapı** menüsü.  
+ Taban formun görünüşünü için tasarım zamanında değiştirir (ayar ve özellikleri ekleme ve denetimleri çıkarılmasının olması) temel formu içeren bir proje derlenirken devralınan formlar üzerinde yansıtılır. Yalnızca temel forma değişiklikleri kaydetmek yeterli değil. Bir proje oluşturmak için Seç **derleme** gelen **derleme** menüsü.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tercih **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz: [Visual Studio'da geliştirme ayarlarını özelleştirme](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
- Çalışma zamanında temel formda yapılan değişiklikler zaten örneği devralınan formlar üzerinde hiçbir etkisi vardır.  
+ Çalışma zamanında temel formda yapılan değişiklikleri zaten örneği devralınan formlar üzerinde hiçbir etkisi vardır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [base](~/docs/csharp/language-reference/keywords/base.md)  

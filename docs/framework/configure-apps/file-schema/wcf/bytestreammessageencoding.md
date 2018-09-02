@@ -2,15 +2,15 @@
 title: '&lt;byteStreamMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 3493588d4613131ad9526a8d26912ecdb601ea25
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4b031bfb0d0979dc99df13c104a712d6dd771e8a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753280"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422980"
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
-Bayt karakter kodlamasını belirtme seçeneği ile bir akış olarak kodlama iletiyi belirtir.  
+Bir karakter kodlamasını belirtmek için seçeneği ile bayt akışı olarak kodlamasını belirtir.  
   
  \<system.serviceModel>  
 \<bağlamaları >  
@@ -31,19 +31,19 @@ Bayt karakter kodlamasını belirtme seçeneği ile bir akış olarak kodlama il
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|messageVersion|Bağlama kullanılarak gönderilen iletileri SOAP sürümünü belirtir. Bu özellik yalnızca ileti sürümü değerine ayarlanabilir <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Bayt akışı ileti Kodlayıcı diğer ileti sürümleri desteklemez.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|messageVersion|Bağlama kullanılarak gönderilen iletilerin SOAP sürümünü belirtir. Bu özellik yalnızca ileti sürümü değeri için ayarlanabilir <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Bayt akışı ileti Kodlayıcı herhangi bir ileti sürümlerini desteklemez.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.Channels.MessageVersion>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan uç noktaları tarafından işlenen SOAP iletilerine karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama özelliklerini tanımlar.|  
+|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  

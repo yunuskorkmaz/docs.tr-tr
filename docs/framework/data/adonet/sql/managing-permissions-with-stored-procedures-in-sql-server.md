@@ -2,12 +2,12 @@
 title: SQL Server'da saklı yordam izinlerini yönetme
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912071"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425204"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da saklı yordam izinlerini yönetme
 Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, saklı yordamları ve kullanıcı tanımlı işlevleri kullanarak tüm veri erişim uygulamaktır. Tablolar gibi temel nesneler için tüm izinleri reddetme ve saklı yordamları yürütme izinlerini iptal etme. Bu, geçici verileri ve veritabanı nesnelerinizi bir güvenlik çevresi etkili bir şekilde oluşturur.  
@@ -54,7 +54,7 @@ Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, 
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Saklı yordamları](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](http://go.microsoft.com/fwlink/?LinkId=98234) SQL Server Çevrimiçi Kitapları'nda|Konular, saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığını açıklar.|  
+|[Saklı yordamları](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](https://go.microsoft.com/fwlink/?LinkId=98234) SQL Server Çevrimiçi Kitapları'nda|Konular, saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, 
  [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Saklı Yordamlarla Verileri Değiştirme](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

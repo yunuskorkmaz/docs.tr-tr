@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388914"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424083"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleyici kullanan [yeniden başlatma Yöneticisi](http://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programı .NET Framework yüklerse, yeniden başlatma bu özelliğin avantajlarından yararlanmak için Yöneticisi ile arabirim oluşturabilirler. Daha fazla bilgi için bkz: [nasıl yapılır: .NET Framework 4.5 yükleyici ilerlemesini almak](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleyicisi [yeniden başlatma Yöneticisi](https://go.microsoft.com/fwlink/?LinkId=231425) sistem önlemek için mümkün olduğunca yükleme sırasında yeniden başlatır. Uygulama kurulum programınıza .NET Framework yüklerse, yeniden başlatma bu özellikten yararlanmak için Yöneticisi ile arabirim oluşturmasını. Daha fazla bilgi için [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
-## <a name="reasons-for-a-restart"></a>Nedenlerden dolayı yeniden başlatma  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleme .NET Framework 4 uygulama yükleme sırasında kullanılmıyorsa, sistemin yeniden başlatılmasını gerektirir. Bunun nedeni, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4 dosyalarının yerini alır ve bu dosyalar yükleme sırasında kullanılabilir olmasını gerektirir. Çoğu durumda, kullanımda olmayan erken önlem algılama ve closing.NET Framework 4 uygulamalar tarafından yeniden başlatılması engellenebilir. Ancak, bazı sistem uygulamalar kapatılmalıdır değil. Bu durumda, yeniden başlatma kaçınılmaz.  
+## <a name="reasons-for-a-restart"></a>Yeniden başlatma nedeniyle  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Yükleme yüklenmesi sırasında bir .NET Framework 4 uygulama seçeneği kullanılıyorsa sistemin yeniden başlatılmasını gerektirir. Bunun nedeni, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] .NET Framework 4 dosyalarının yerini alır ve bu dosyalar yükleme sırasında kullanılabilir olmasını gerektirir. Çoğu durumda, yeniden başlatma, kullanımda olan sıd'lerde algılama ve closing.NET Framework 4 uygulamaları tarafından engellenebilir. Ancak, bazı sistem uygulamalar kapatılmalıdır değil. Bu durumlarda, yeniden başlatma kaçınılmaz.  
   
 ## <a name="end-user-experience"></a>Son kullanıcı deneyimi  
- Tam yüklemesi yapan bir son kullanıcı, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yükleyici .NET Framework 4 uygulamaları kullanımda algılarsa, sistemin yeniden başlatılmasını önlemek için Fırsat verilir. Bir ileti tüm çalışan .NET Framework 4 uygulamaları listeler ve yüklemeden önce bu uygulamaları kapatın seçeneği sunar. Kullanıcı onaylarsa, bu uygulamalar yükleyici tarafından kapatılır ve bir sistem yeniden başlatma önlenmiş olur. Kullanıcının belirli bir miktar süre içinde iletisine yanıt vermiyorsa uygulamalardan kapatmadan yükleme devam eder.  
+ Tam yüklemesi yapan bir son kullanıcı, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] yükleyici kullanımda .NET Framework 4 uygulamaları algılarsa sistemin yeniden başlatılmasını önlemek için fırsatı verilir. Bir ileti, tüm çalışan .NET Framework 4 uygulamalarını listeler ve yüklemeden önce bu uygulamaları kapatın seçeneği sunar. Kullanıcıyı onaylarsa, bu uygulamalar yükleyici tarafından kapatılır ve sistemin yeniden başlatılması önlenmiş olur. Kullanıcı iletiye bir belirli bir süre içinde yanıt vermezse, herhangi bir uygulamayı kapatmadan yüklemesi devam eder.  
   
- Yeniden başlatma Yöneticisi sistem yeniden başlatılması çalışan uygulamalar olsa bile bir durum kapalı algılarsa, ileti görüntülenmez.  
+ Yeniden başlatma Yöneticisi çalışan uygulamalar olsa bile bir sistem yeniden başlatma gerektiren bir durumu kapalı algılarsa, bu ileti görüntülenmez.  
   
  ![Uygulama iletişim kapatmak](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-Kullanımda olan .NET Framework uygulamaları kapatma istemi  
+Kullanımda olan .NET Framework uygulamaları kapatmak için istemi  
   
-## <a name="using-a-chained-installer"></a>Zincirleme Yükleyicisi'ni kullanarak  
- .NET Framework ile uygulamanızı yeniden dağıtmak istediğiniz, ancak kendi kurulum programı ve kullanıcı Arabirimi kullanmak istediğiniz (zincir) .NET Framework Kurulum işlemi, Kurulum işlemi ekleyebilirsiniz. Zincirleme yüklemeler hakkında daha fazla bilgi için bkz: [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md). Zincirleme içinde sistem yeniden başlatmalarını azaltmak için .NET Framework yükleyici, Kurulum programı kapatmak için uygulamalar listesini sağlar. Kurulum programı kullanıcının bir ileti kutusu gibi bir kullanıcı arabirimi üzerinden bu bilgileri sağlayın gerekir, kullanıcının yanıtını alma ve yanıtı .NET Framework yükleyici geçirin. Zincirleme yükleyici örneği için bkz: [nasıl yapılır: .NET Framework 4.5 yükleyici ilerlemesini almak](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+## <a name="using-a-chained-installer"></a>Zincirleme bir yükleyici kullanarak  
+ Uygulamanızla birlikte .NET Framework yeniden dağıtmak istediğiniz, ancak kendi kurulum programı ve UI kullanmak istediğiniz, (bağlayabilirsiniz) .NET Framework Kurulum işlemi, Kurulum işlemine dahil edebilirsiniz. Zincirleme hakkında daha fazla bilgi için bkz: [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md). Zincirleme içinde sistem yeniden başlatmalarını azaltmak için Kurulum programınızı kapatmak için uygulamalar listesinde ile .NET Framework yükleyicisi sağlar. Kurulum programınıza gerekir, kullanıcıya bir ileti kutusu gibi bir kullanıcı arabirimi aracılığıyla bu bilgileri sağlayın, kullanıcının yanıt alın ve ardından yanıt .NET Framework yükleyicisi geçirin. Zincirleme bir yükleyici örneği için bkz [nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
- Zincirleme yükleyici kullanmakta olduğunuz ancak uygulamaları kapatma için kendi ileti kutusu sağlamak ister misiniz, kullanabileceğiniz `/showrmui` ve `/passive` .NET Framework zincir oluşturduğunuzda komut satırında seçenekleri Kurulum işlemi. Bu seçenekler birlikte kullanıldığında, yükleyici sistemin yeniden başlatılmasını önlemek için kapatılabilir, uygulamaları kapatmak için ileti kutusu gösterir. Tam kullanıcı arabirimi altında yaptığı gibi bu ileti kutusu edilgen modda aynı şekilde davranır. Bkz: [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md) tamamını .NET Framework yeniden dağıtılabilir için komut satırı seçenekleri için.  
+ Zincirleme bir yükleyici kullanıyorsanız ancak uygulamaları kapatmak için kendi ileti kutusunu sağlamayı istemediğiniz, kullanabileceğiniz `/showrmui` ve `/passive` Kurulum Seçenekleri .NET Framework bağladığınızda komut satırında işlemi. Bu seçenekler birlikte kullandığınızda, yükleyici sistemin yeniden başlatılmasını önlemek için kapatılabilir, uygulamaları kapatmak için ileti kutusu gösterir. Tam kullanıcı arabiriminin çalıştığı gibi bu ileti kutusu pasif modda aynı şekilde davranır. Bkz: [geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md) için .NET Framework yeniden dağıtılabilir için komut satırı seçeneklerinin tam bir set.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Dağıtım](../../../docs/framework/deployment/index.md)  

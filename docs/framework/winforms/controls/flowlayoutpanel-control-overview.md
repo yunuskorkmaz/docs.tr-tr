@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 58d95c2238687b4822155916177172a34c3abb87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526731"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425510"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel Denetimine Genel Bakış
-<xref:System.Windows.Forms.FlowLayoutPanel> Denetimi içeriğini yatay veya dikey akış yönü düzenler. Denetimin içeriği sonraki bir satır veya sonraki bir sütuna kayabilir. Alternatif olarak, içeriği kaydırma yerine bölebilirsiniz.  
+<xref:System.Windows.Forms.FlowLayoutPanel> Denetim akışı yatay veya dikey yönde içeriği düzenler. Denetimin içeriği sonraki bir satır veya sonraki bir sütun sarabilirsiniz. Alternatif olarak, içeriği kaydırmayı yerine bölebilirsiniz.  
   
- Akış yönü değeri ayarlayarak belirleyebilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliği. <xref:System.Windows.Forms.FlowLayoutPanel> Denetim doğru sağdan sola (RTL) düzenleri akış yönünü tersine çevirir. Ayrıca belirtebilirsiniz olup olmadığını <xref:System.Windows.Forms.FlowLayoutPanel> denetimin içeriği Sarmalanan veya değerini ayarlayarak kırpılmış <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliği.  
+ Akış yönü değerini ayarlayarak belirtebilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> özelliği. <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi doğru şekilde akış yönünü sağdan sola (RTL) düzeni tersine çevirir. Belirtebilirsiniz olmadığını <xref:System.Windows.Forms.FlowLayoutPanel> denetimin içeriği sarmalanmış veya değerini ayarlayarak kırpılarak <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> özelliği.  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> Ayarladığınızda boyutları içeriğine otomatik olarak kontrol <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğine `true`. Ayrıca sağlayan bir **FlowBreak** alt denetimlerinden özelliğine. FlowBreak özelliğinin değerini ayarlama `true` neden <xref:System.Windows.Forms.FlowLayoutPanel> denetim geçerli akış yönü ve bir sonraki satır veya sütun kaydırılır denetimlerinde düzenlemeyi durdur.  
+ <xref:System.Windows.Forms.FlowLayoutPanel> Ayarladığınızda boyutları için içeriği otomatik olarak Denetim <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`. Ayrıca sağlar bir **FlowBreak** özelliğini, alt denetimlerini. FlowBreak özelliğin değerini ayarlamak `true` neden <xref:System.Windows.Forms.FlowLayoutPanel> sonraki satır veya sütun kaydırılır ve geçerli akış yönü denetimlerinde düzenlemeyi durdurmak için denetimi.  
   
- Herhangi bir Windows Forms denetimini bir alt olabilir <xref:System.Windows.Forms.FlowLayoutPanel> diğer örnekleri dahil olmak üzere Denetim <xref:System.Windows.Forms.FlowLayoutPanel>. Bu özellik ile çalışma zamanında, formun boyutlarını uyum Gelişmiş düzenleri oluşturabilirsiniz.  
+ Herhangi bir Windows Forms denetimini bir alt öğesi olabilir <xref:System.Windows.Forms.FlowLayoutPanel> denetim, diğer örnekleri dahil <xref:System.Windows.Forms.FlowLayoutPanel>. Bu özellik sayesinde, çalışma zamanında formunuzun boyutlarına uyum karmaşık düzenler oluşturabilirsiniz.  
   
- Ayrıca bkz. [izlenecek yol: Windows Forms FlowLayoutPanel kullanarak düzenleme denetimleri](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Ayrıca bkz: [izlenecek yol: Windows Forms kullanarak FlowLayoutPanel düzenleme denetimleri](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  

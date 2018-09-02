@@ -2,44 +2,45 @@
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457166"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
-Bu konuda maddeler halinde listelemektedir ve Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) bileşenlerinin açıklanır.  
+Bu konuda maddeler halinde listeler ve Windows İşlem Etkinleştirme Hizmeti (WAS olarak da bilinir) bileşenlerinin açıklar.  
   
 ## <a name="activation-components"></a>Etkinleştirme bileşenleri  
  OLAN birkaç mimari bileşenden oluşur:  
   
--   Dinleyici Bağdaştırıcısı yok. Belirli ağ protokollerine iletileri almak ve doğru çalışan işlemi için gelen iletileri yönlendirmek için WAS ile iletişim kuran Windows Hizmetleri.  
+-   Dinleyici bağdaştırıcıları. Belirli ağ protokollerine iletileri almak ve doğru alt işleme gelen iletileri yönlendirmek için WAS ile iletişim kuran Windows Hizmetleri.  
   
--   OLUŞTU. Oluşturulmasını ve yaşam çalışan işlemleri yöneten Windows hizmeti.  
+-   OLUŞTU. Oluşturulmasını ve alt işlemlerin yaşam süresini yöneten Windows hizmet.  
   
--   Genel çalışan işlem yürütülebilir dosyası (w3wp.exe).  
+-   Genel çalışan işlemi (w3wp.exe) çalıştırılabilir.  
   
--   Uygulama Yöneticisi. Oluşturulmasını ve yaşam süresini konak uygulamaların içinde çalışan işlem uygulama etki alanları yönetir.  
+-   Uygulama Yöneticisi. Oluşturulmasını ve ana çalışan uygulamalardan işleyen bir uygulama etki alanları yaşam süresini yönetir.  
   
--   Protokol işleyici. Çalışan işlemde çalıştırın ve çalışan işlemin ve tek tek dinleyici bağdaştırıcısı arasındaki iletişimi yöneten protokole özgü bileşenleri. Protokol işleyici iki tür var: işlem protokol işleyici ve AppDomain protokol işleyici.  
+-   Protokol işleyiciler. Çalışan işlem içinde çalıştırın ve bir dinleyici bağdaştırıcıları ile çalışan işlemi arasındaki iletişimi yöneten protokole özgü bileşenler. Protokol işleyiciler iki tür vardır: işlem protokol işleyiciler ve AppDomain protokol işleyiciler.  
   
- Olduğunda WAS bir çalışan işlem örneği etkinleştirir çalışan işlemine gerekli işlem protokol işleyici yükler ve uygulama barındırmak için uygulama etki alanı oluşturmak için uygulama Yöneticisi'ni kullanır. Uygulama etki alanı, uygulama kodunun yanı sıra uygulama iste tarafından kullanılan ağ protokolleri AppDomain protokol işleyici yükler.  
+ Zaman WAS bir çalışan işlem örneği etkinleştirir, çalışan işlemin gerekli işlem protokol işleyiciler yükler ve uygulama Yöneticisi uygulamasını barındırmak için bir uygulama etki alanı oluşturmak için kullanır. Uygulama etki alanı, uygulama kodunun yanı sıra ağ protokolleri uygulama iste tarafından kullanılan AppDomain protokol işleyiciler yükler.  
   
  ![MİMARİSİDİR](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
-### <a name="listener-adapters"></a>Dinleyici Bağdaştırıcısı  
- Dinleyici Bağdaştırıcısı üzerinde dinleme ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişimi mantığını uygulayan ayrı Windows hizmetleridir. Aşağıdaki tabloda, Windows Communication Foundation (WCF) protokoller için Dinleyici Bağdaştırıcısı listeler.  
+### <a name="listener-adapters"></a>Dinleyici bağdaştırıcıları  
+ Dinleyici, üzerinde dinleme ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişimi mantığını uygulayan Windows Hizmetleri tek tek bağdaştırıcıdır. Aşağıdaki tabloda, Windows Communication Foundation (WCF) protokolleri için dinleyici bağdaştırıcıları listelenmektedir.  
   
-|Dinleyici Bağdaştırıcısı hizmet adı|Protokol|Notlar|  
+|Dinleyici bağdaştırıcı hizmeti adı|Protokol|Notlar|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|IIS 7.0 ve WCF HTTP etkinleştirmesi sağlayan ortak bileşeni.|  
-|NetTcpActivator|net.tcp|NetTcpPortSharing hizmete bağlı.|  
+|W3SVC|http|IIS 7.0 hem de WCF için HTTP etkinleştirme sağlayan ortak bileşeni.|  
+|NetTcpActivator|net.tcp|NetTcpPortSharing hizmete bağlıdır.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET.MSMQ|Message Queuing WCF tabanlı uygulamaları ile kullanım için.|  
-|NetMsmqActivator|MSMQ.FormatName|Geriye dönük uyumluluk varolan Message Queuing uygulamaları ile sağlar.|  
+|NetMsmqActivator|NET.MSMQ|Message Queuing WCF tabanlı uygulamaları ile kullanmak için.|  
+|NetMsmqActivator|MSMQ.FormatName|Geriye dönük uyumluluk Message Queuing var olan uygulamalarla birlikte sağlar.|  
   
- Dinleyici Bağdaştırıcısı belirli protokoller için aşağıdaki XML örnekte gösterildiği gibi applicationHost.config dosyasında, yükleme sırasında kaydedilir.  
+ Dinleyici bağdaştırıcıları belirli protokoller için XML aşağıda gösterildiği gibi applicationHost.config dosyasında, yükleme sırasında kaydedilir.  
   
 ```xml  
 <system.applicationHost>  
@@ -57,8 +58,8 @@ Bu konuda maddeler halinde listelemektedir ve Windows İşlem Etkinleştirme Hiz
 </system.applicationHost>  
 ```  
   
-### <a name="protocol-handlers"></a>Protokol işleyici  
- İşlem ve AppDomain protokol işleyici belirli protokoller için makine düzeyinde Web.config dosyasına kaydedilir.  
+### <a name="protocol-handlers"></a>Protokol işleyiciler  
+ İşlem ve AppDomain protokol işleyiciler belirli protokoller için makine düzeyinde Web.config dosyasına kaydedilir.  
   
 ```xml  
 <system.web>  
@@ -86,4 +87,4 @@ Bu konuda maddeler halinde listelemektedir ve Windows İşlem Etkinleştirme Hiz
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server App Fabric barındırma özellikleri](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

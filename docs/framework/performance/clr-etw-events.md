@@ -8,62 +8,62 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7d1f7ba1a0384ed93932733f12aa3306e16b790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393925"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423491"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
-Bu bölümdeki konular Windows (ETW) olayları için olay izleme açıklar. Her olay bir ilişkili anahtar sözcüğü ve düzeyi, hangi açıklanan [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) konu. CLR olayları için iki sağlayıcı sahiptir:  
+Bu bölümdeki konularda, Windows (ETW) olayları için olay izleme açıklanmaktadır. İlişkili bir anahtar sözcüğü her olayda ve düzeyi, açıklanan olduğu [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) konu. CLR olayları için iki sağlayıcıları vardır:  
   
--   Çalışma zamanı sağlayıcı bağlı olarak anahtar sözcükler (olayların kategorilerini) etkinleştirildiği olayları başlatır. CLR çalışma zamanı GUID e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 sağlayıcıdır.  
+-   Çalışma zamanı sağlayıcısı olayları etkin anahtar sözcüklere (olayların kategorilerini) bağlı olarak oluşturur. CLR çalışma zamanı sağlayıcısı GUID e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 ' dir.  
   
--   Özel amaçlı sahip özeti sağlayıcısını kullanır. CLR özeti GUID a669021c-c450-4609-a035-5af59af4df18 sağlayıcıdır.  
+-   Özel amaçlı olan Özet sağlayıcısı kullanır. CLR özeti sağlayıcısının GUID a669021c-c450-4609-a035-5af59af4df18.  
   
- Sağlayıcılar hakkında daha fazla bilgi için bkz: [CLR ETW sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md).  
+ Sağlayıcılar hakkında daha fazla bilgi için bkz. [CLR ETW sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Çalışma Zamanı Bilgileri Olayları](../../../docs/framework/performance/runtime-information-etw-events.md)  
- SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde de dahil olmak üzere çalışma zamanı, GUID ile (varsa), başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri yakalar.  
+ SKU, sürüm numarası, hangi çalışma zamanı etkinleştirildi, şekilde dahil olmak üzere çalışma zamanı, GUID, (varsa), ile başlatıldığından komut satırı parametreleri hakkında bilgi ve diğer ilgili bilgileri yakalar.  
   
  [Özel Durum Thrown_V1 Olayı](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
- Oluşturulan özel durumlar hakkında bilgi yakalar.  
+ Oluşturulan özel durumları hakkında bilgileri yakalar.  
   
  [Çekişme Olayları](../../../docs/framework/performance/contention-etw-events.md)  
- Çalışma zamanı kullanır İzleyici kilitleri veya yerel kilit çakışması hakkındaki bilgileri yakalar.  
+ Çalışma zamanı kullanan İzleyici kilitler veya yerel kilit çakışması bilgilerini yakalar.  
   
  [İş Parçacığı Havuzu Olayları](../../../docs/framework/performance/thread-pool-etw-events.md)  
- Çalışan iş parçacığı havuzları ve g/ç iş parçacığı havuzları hakkında bilgi yakalar.  
+ Çalışan iş parçacığı havuzları ve g/ç iş parçacığı havuzları hakkındaki bilgileri yakalar.  
   
  [Yükleyici Olayları](../../../docs/framework/performance/loader-etw-events.md)  
- Yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller hakkında bilgi yakalar.  
+ Modülleri yükleme ve kaldırma uygulama etki alanları ve derlemeler hakkındaki bilgileri yakalar.  
   
  [Yöntem Olayları](../../../docs/framework/performance/method-etw-events.md)  
- Simge çözünürlüğü için CLR yöntemleri hakkında bilgi yakalar.  
+ Sembol çözümlemesi için CLR yöntemleri hakkında bilgi yakalar.  
   
  [Atık Toplama Olayları](../../../docs/framework/performance/garbage-collection-etw-events.md)  
- Çöp toplama, tanılama ve hata ayıklama yardımcı olmak için ilgili bilgiler yakalar.  
+ Çöp toplama, tanılama ve hata ayıklama amacıyla ilgili bilgileri yakalar.  
   
  [Olayları Tam Zamanında İzleme](../../../docs/framework/performance/jit-tracing-etw-events.md)  
- Tam zamanında (JIT) satır içi kullanım ve kuyruk çağrıları hakkında bilgi yakalar.  
+ Just-in-time (JIT) satır içi kullanım ve kuyruk çağrıları hakkındaki bilgileri yakalar.  
   
  [Birlikte Çalışma Olayları](../../../docs/framework/performance/interop-etw-events.md)  
  Microsoft Ara dili (MSIL) saplama oluşturma ve önbelleğe alma hakkında bilgi yakalar.  
   
  [ARM Olayları](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
- Uygulama etki alanı durumu hakkında ayrıntılı tanılama bilgisi yakalar.  
+ Uygulama etki alanı durumu hakkında ayrıntılı tanılama bilgileri çalışın.  
   
  [Güvenlik Olayları](../../../docs/framework/performance/security-etw-events.md)  
- Güçlü ad ve Authenticode doğrulama bilgilerini yakalar.  
+ Tanımlayıcı ad hem de Authenticode doğrulama hakkındaki bilgileri yakalar.  
   
  [Yığın Olayı](../../../docs/framework/performance/stack-etw-event.md)  
- Bir olay tetiklenir sonra Yığın izlemeleri oluşturmak için kullanılan diğer olaylarla bilgilerini yakalar.  
+ Bir olay tetiklenir sonra yığın izlemelerini oluşturmak için kullanılan diğer olaylarla bilgileri yakalar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama geliştirmek ve performans ile ETW ayarlama](http://go.microsoft.com/fwlink/?LinkId=179696)  
- [Windows Performans blogu](http://go.microsoft.com/fwlink/?LinkId=179509)  
+ [Hata ayıklama artırmak ve ETW ile performans ayarlama](https://go.microsoft.com/fwlink/?LinkId=179696)  
+ [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509)  
  [.NET Framework Günlük Kaydını Denetleme](../../../docs/framework/performance/controlling-logging.md)  
  [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)  
  [CLR ETW Anahtar Sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  

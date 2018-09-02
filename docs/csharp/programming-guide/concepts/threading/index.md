@@ -2,12 +2,12 @@
 title: İş parçacığı (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: ca5b2b2d38e72d3511a570c22a153e792a27a04a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456921"
 ---
 # <a name="threading-c"></a>İş parçacığı (C#)
 İş parçacığı aynı anda birden fazla işlemi yapabilir, böylece eş zamanlı işlem yapmak C# programınızı sağlar. Örneğin, kullanıcıdan girdi izleme, arka plan görevlerini gerçekleştirmek ve eşzamanlı giriş akışları işlemek için iş parçacığı kullanabilirsiniz.  
@@ -31,7 +31,7 @@ ms.locfileid: "42934707"
  Birden çok iş parçacığı etkinliklerini eşitlemek için bu sınıfların bazılarını veya tümünü kullanabilirsiniz, ancak bazı iş parçacığı oluşturma desteği C# dili tarafından desteklenir. Örneğin, [Lock deyiminin](../../../../csharp/language-reference/keywords/lock-statement.md) eşitleme özellikleri aracılığıyla örtük sağlar <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../../../../../docs/standard/parallel-programming/index.md).  
+>  İle başlayarak [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], çok iş parçacıklı programlama ile Basitleştirilmiş büyük ölçüde <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfları [paralel LINQ (PLINQ)](../../../../standard/parallel-programming/parallel-linq-plinq.md), yeni eşzamanlı koleksiyon sınıflarını içinde <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanı ve iş parçacıkları yerine görevleri kavramını temel alarak yeni bir programlama modeli. Daha fazla bilgi için [paralel programlama](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>İlgili Konular  
   

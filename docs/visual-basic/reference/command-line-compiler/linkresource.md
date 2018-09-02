@@ -9,15 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 38740ed7ab7904feb2ca95eb70c916fbdbaef71e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654349"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425524"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
-Yönetilen kaynak bağlantısını oluşturur.  
+Yönetilen kaynağa bağlantı oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,27 +29,27 @@ Yönetilen kaynak bağlantısını oluşturur.
   
 ## <a name="arguments"></a>Arguments  
  `filename`  
- Gerekli. Derlemeye bağlamak için kaynak dosyası. Dosya adı boşluk içeriyorsa adı tırnak işaretleri içine alın ("").  
+ Gerekli. Derlemeye bağlamak için kaynak dosyası. Dosya adı boşluk içeriyorsa adı tırnak içine alın. ("").  
   
  `identifier`  
- İsteğe bağlı. Kaynak için mantıksal adı. Kaynak yüklemek için kullanılan ad. Varsayılan dosya adıdır. İsteğe bağlı olarak, dosya gibi ortak veya özel derleme bildiriminde olup olmadığını belirtebilirsiniz: `-linkres:filename.res,myname.res,public`. Varsayılan olarak, `filename` bütünleştirilmiş kodunda geneldir.  
+ İsteğe bağlı. Kaynağın mantıksal adı. Kaynak yüklemek için kullanılan ad. Varsayılan dosya adıdır. İsteğe bağlı olarak, dosyayı örneğin genel veya özel derleme bildiriminde olup olmadığını belirtebilirsiniz: `-linkres:filename.res,myname.res,public`. Varsayılan olarak, `filename` derleme içinde geneldir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-linkresource` Seçeneği değil katıştırmak kaynak dosyasını çıktı dosyasına; kullanın `-resource` Bunu yapmak için seçeneği.  
+ `-linkresource` Kullanın; seçeneği değil ekleme kaynak dosyası çıkış dosyasına `-resource` Bunu yapmak için seçeneği.  
   
  `-linkresource` Seçeneği birini gerektirir `-target` dışında seçenekleri `-target:module`.  
   
- Varsa `filename` olan bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , örneğin, tarafından oluşturulan kaynak dosyasını [Resgen.exe (kaynak dosya oluşturucu)](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) veya geliştirme ortamında üyelerle erişilebileceğini <xref:System.Resources> ad alanı. (Daha fazla bilgi için bkz: <xref:System.Resources.ResourceManager>.) Çalışma zamanında tüm diğer kaynaklarına erişmek için ile başlayan yöntemleri kullanan `GetManifestResource` içinde <xref:System.Reflection.Assembly> sınıfı.  
+ Varsa `filename` olduğu bir [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] , örneğin, göre oluşturulmuş kaynak dosyası [Resgen.exe (kaynak dosya oluşturucu)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) veya geliştirme ortamında üyelerle erişilebileceğini <xref:System.Resources> ad alanı. (Daha fazla bilgi için <xref:System.Resources.ResourceManager>.) Çalışma zamanında diğer kaynaklara erişmek için Şununla yöntemleri kullanan `GetManifestResource` içinde <xref:System.Reflection.Assembly> sınıfı.  
   
- Dosya adı herhangi bir dosya biçiminde olabilir. Örneğin, böylece genel derleme önbelleğine yüklü ve yönetilen kod derlemesindeki erişilen derleme yerel bir DLL parçası haline getirmek isteyebilirsiniz.  
+ Dosya adı, herhangi bir dosya biçiminde olabilir. Örneğin, böylece genel derleme önbelleğine yüklenebilir ve derlemedeki yönetilen koddan erişilebilir bütünleştirilmiş kodun yerel bir DLL parçası haline getirmek isteyebilirsiniz.  
   
- Kısa formunu `-linkresource` olan `-linkres`.  
+ Kısa formunu da `-linkresource` olduğu `-linkres`.  
   
 > [!NOTE]
->  `-linkresource` Seçeneği Visual Studio geliştirme ortamından kullanılabilir değil; komut satırından derleme zaman yalnızca kullanılabilir.  
+>  `-linkresource` Seçeneği Visual Studio geliştirme ortamından kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlerken `in.vb` ve kaynak dosyası bağlantılar `rf.resource`.  
+ Aşağıdaki kod derlenir `in.vb` ve kaynak dosyası bağlantılar `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
@@ -58,5 +58,5 @@ vbc -linkresource:rf.resource in.vb
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+ [-Kaynak (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
  [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -9,118 +9,118 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365884"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425762"
 ---
 # <a name="code-contracts"></a>Kod Sözleşmeleri
-Kod sözleşmeleri önkoşulları, Sonkoşullar ve nesne invariants kodunuzda belirtmek için bir yol sağlar. Önkoşulları yöntemi veya özelliği girerken karşılanması gereken gereksinimleri verilmiştir. Sonkoşullar beklentilerini yöntemi veya özelliği kod çıkar aynı anda açıklanmaktadır. Nesne invariants iyi bir durumda bir sınıfı için beklenen durumu açıklanmaktadır.  
+Kod sözleşmeleri, önkoşulları ve koşul sonralarına nesne okuduğunuzda kodunuzda belirtmek için bir yol sağlar. Önkoşulları, bir metot veya özellik girerken karşılanması gereken gereksinimleri verilmiştir. Koşul sonralarına beklentileri metot veya özellik kod çıkar zaman açıklanmaktadır. Beklenen durum iyi durumda olan bir sınıf için nesne okuduğunuzda açıklanmaktadır.  
   
- Kod sözleşmeleri kodunuzu, derleme zamanı çözümleme için statik bir Çözümleyicisi ve bir çalışma zamanı Çözümleyicisi işaretlemek için sınıflar içerir. Kod sözleşmeleri sınıflarını bulunabilir <xref:System.Diagnostics.Contracts> ad alanı.  
+ Kod sözleşmeleri kodunuzu, derleme zamanı analiz için statik bir Çözümleyicisi ve çalışma zamanı Çözümleyicisi işaretlemek için sınıflar içerir. Kod sözleşmeleri sınıflarını bulunabilir <xref:System.Diagnostics.Contracts> ad alanı.  
   
- Kod sözleşmeleri avantajları şunlardır:  
+ Kod sözleşmeleri avantajları şunları içerir:  
   
--   Sınama geliştirilmiş: kod sözleşmeleri statik sözleşme doğrulama, çalışma zamanı denetleniyor ve belgeleri oluşturma sağlar.  
+-   Testi: kod sözleşmeleri statik sözleşme doğrulama, çalışma zamanı denetimi ve belgeleri oluşturma sağlar.  
   
--   Otomatik test araçları: kod sözleşmeleri önkoşulları karşılamadığı anlamsız test bağımsız değişkenleri filtreleyerek daha anlamlı birim testleri oluşturmak için kullanabilirsiniz.  
+-   Otomatik test araçları: kod sözleşmeleri önkoşulları karşılayan değil anlamsız test değişkenlerinin filtreleyerek daha anlamlı birim testleri oluşturmak için kullanabilirsiniz.  
   
--   Statik doğrulama: statik denetleyicisi programı çalıştırmadan herhangi bir sözleşme ihlal olup olmadığına karar verebilirsiniz. Null gibi örtük sözleşmeleri denetler dereferences ve dizi sınırları ve açık sözleşmeleri.  
+-   Statik doğrulama: statik denetleyicisi programı çalıştırmadan herhangi bir sözleşme ihlali olup olmadığına karar verebilirsiniz. Null gibi örtük sözleşmeleri denetler başvurusunu kaldırır ve dizi sınırları ve açık anlaşmaları.  
   
--   Başvuru belgelerini: Sözleşme bilgilerle varolan XML belge dosyalarını belgelerine Oluşturucu artırmaktadır. Ayrıca ile kullanılan stil sayfaları vardır [Sandcastle](https://github.com/EWSoftware/SHFB) böylece oluşturulan belge sayfalarının sözleşme bölümler.  
+-   Başvuru belgeleri: Sözleşme bilgileriniz ile varolan bir XML belgesi dosyalarının belgeleri Oluşturucu artırmaktadır. Kullanılabilir stil sayfaları da vardır [Sandcastle](https://github.com/EWSoftware/SHFB) oluşturulan belge sayfalarına sözleşme bölümleri edinecek olmanızdır.  
   
- Tüm .NET Framework diller hemen sözleşmeleri yararlanabilir; bir özel ayrıştırıcı veya derleyici yazmak zorunda değildir. Visual Studio eklentisi gerçekleştirilecek kod sözleşme çözümleme düzeyini belirtmenize olanak sağlar. Çözümleyiciler sözleşmeleri doğru biçimlendirilmiş olduğunu doğrulayın (tür denetimini gerçekleştireceğini ve ad çözümlemesi) ve Microsoft Ara dili (MSIL) biçiminde sözleşmelerin derlenmiş bir formu üretebilir. Sözleşmeleri Visual Studio geliştirme, IntelliSense aracı tarafından sağlanan standart yararlanmanızı sağlar.  
+ Tüm .NET Framework dillerinde sözleşmeleri hemen yararlanabilirsiniz; Özel ayrıştırıcı veya derleyici yazmanız gerekmez. Bir Visual Studio eklentisi gerçekleştirilecek kod sözleşme analizi düzeyini belirtmenize olanak tanır. Çözümleyicileri anlaşmalar doğru oluşturulduğunu onaylayın (tür denetimini ve ad çözümlemesi) ve Microsoft Ara dili (MSIL) biçimde sözleşmelerinin derlenmiş form üretebilir. Visual Studio'da sözleşmeleri yazma IntelliSense araç tarafından sağlanan standart avantajlarından yararlanmanıza imkan sağlar.  
   
- Sözleşme sınıfı çoğu yöntemleri koşullu derlenen; diğer bir deyişle, yalnızca CONTRACTS_FULL, özel bir simge kullanarak tanımlarken bu yöntemlere çağrılar derleyici yayar `#define` yönergesi. CONTRACTS_FULL kullanmadan kodunuzda sözleşmeleri yazmanıza olanak tanır `#ifdef` yönergeleri; farklı derlemeleri, bazı Sözleşmelerle ve bazı olmadan üretebilir.  
+ Çoğu sözleşme sınıfı yöntemleri koşullu olarak derlenir; diğer bir deyişle, yalnızca CONTRACTS_FULL, özel bir simge kullanarak tanımlarken bu yöntemlere yapılan çağrılar derleyici yayar `#define` yönergesi. CONTRACTS_FULL sözleşmeleri olmadan kodunuzu yazmanıza olanak tanır `#ifdef` yönergeleri; farklı yapılar, bazı sözleşmeler ve bazı olmadan üretebilir.  
   
- Araçlar ve kod sözleşmeleri kullanmaya yönelik ayrıntılı yönergeler için bkz: [kod sözleşmeleri](http://go.microsoft.com/fwlink/?LinkId=152461) MSDN DevLabs Web sitesinde.  
+ Araçlar ve kod sözleşmeleri kullanmaya yönelik ayrıntılı yönergeler için bkz. [kod sözleşmeleri](https://go.microsoft.com/fwlink/?LinkId=152461) MSDN DevLabs Web sitesinde.  
   
 ## <a name="preconditions"></a>Önkoşulları  
- Kullanarak önkoşulları açıklayabilir <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> yöntemi. Bir yöntem çağrıldığında önkoşulları durumunu belirtin. Bunlar genellikle geçerli parametre değerleri belirtmek için kullanılır. Önkoşulları içinde açıklanan tüm üyeleri en az yöntemi olarak olarak erişilebilir olmalıdır; Aksi takdirde önkoşulu tüm bir yöntemini arayanlar tarafından anlaşılmayan. Koşul hiçbir yan etkisi olması gerekir. Başarısız önkoşulları çalışma zamanı davranışını çalışma zamanı Çözümleyicisi tarafından belirlenir.  
+ Kullanarak önkoşulları ifade edebilirsiniz <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> yöntemi. Bir yöntem çağrıldığında önkoşulları durumunu belirtin. Bunlar, genellikle geçerli parametre değerleri belirtmek için kullanılır. Önkoşullarda belirtildiği tüm üyeleri en az yöntemi olarak olarak erişilebilir olması gerekir; Aksi takdirde, önkoşuluna tüm bir yöntemi çağıranlar tarafından anlaşılabilir değil. Koşul herhangi bir yan etkisi olması gerekir. Başarısız önkoşulları çalışma zamanı davranışını çalışma zamanı çözümleyici tarafından belirlenir.  
   
- Örneğin, bu parametre aşağıdaki önkoşulu ifade `x` null olmayan olması gerekir.  
+ Örneğin, bu parametre aşağıdaki önkoşul ifade `x` null olmayan olmalıdır.  
   
  `Contract.Requires( x != null );`  
   
- Kodunuzu belirli bir özel durum, bir önkoşul hatası durumunda throw gerekir, genel aşırı yüklemesini kullanabilirsiniz <xref:System.Diagnostics.Contracts.Contract.Requires%2A> gibi.  
+ Kodunuz, bir önkoşul hatası belirli bir özel durum throw gerekir, genel aşırı yüklemesini kullanabilirsiniz <xref:System.Diagnostics.Contracts.Contract.Requires%2A> gibi.  
   
  `Contract.Requires<ArgumentNullException>( x != null, "x" );`  
   
-### <a name="legacy-requires-statements"></a>Eski deyimleri gerektirir  
- Bazı parametre doğrulaması biçiminde çoğu kod içeren `if` - `then` - `throw` kodu. Sözleşme araçları bu deyimleri önkoşulları aşağıdaki durumlarda olarak algılar:  
+### <a name="legacy-requires-statements"></a>Eski #requires  
+ Bazı parametre doğrulaması biçiminde çoğu kod içeren `if` - `then` - `throw` kod. Sözleşme araçları bu deyimler önkoşulları aşağıdaki durumlarda olarak tanır:  
   
--   Diğer herhangi bir yöntem deyimlerinde önce deyimleri görünür.  
+-   Önce bir yöntem içinde herhangi bir deyim deyimlerinizin.  
   
--   Bu tür ifadeleri kümesinin tamamını açık bir tarafından izlenir <xref:System.Diagnostics.Contracts.Contract> yapılan bir çağrı gibi yöntem çağrısı <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>, veya <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> yöntemi.  
+-   Bu tür ifadeleri kümesinin tamamını açık bir tarafından izlenir <xref:System.Diagnostics.Contracts.Contract> gibi bir çağrı, yöntem çağrısının <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>, veya <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> yöntemi.  
   
- Zaman `if` - `then` - `throw` deyimleri araçları tanıması bunları eski bu formda görünen `requires` deyimleri. Diğer bir sözleşmeleri izlerseniz `if` - `then` - `throw` serisi, kodla end <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> yöntemi.  
+ Zaman `if` - `then` - `throw` deyimleri araçları tanıması bunları bilinen bu formda görünen `requires` deyimleri. Diğer bir sözleşme izlerseniz `if` - `then` - `throw` sıra, kod ile bitiş <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> yöntemi.  
   
 ```  
 if ( x == null ) throw new ...  
 Contract.EndContractBlock(); // All previous "if" checks are preconditions  
 ```  
   
- Önceki test koşulunda çevrilerek önkoşulu olduğuna dikkat edin. (Gerçek önkoşulu olacaktır `x != null`.) Çevrilerek önkoşulu ileri derecede kısıtlı: önceki örnekte; gösterildiği gibi yazılmalıdır diğer bir deyişle, Hayır içermelidir `else` yan tümceleri ve gövdesini `then` yan tümcesi, tek bir olmalıdır `throw` deyimi. `if` Test olmak üzere ve görünürlük kuralları tabi olur (bkz [kullanım yönergeleri](#usage_guidelines)), ancak `throw` ifadesidir yalnızca olmak üzere kuralları konu. Ancak, özel durum türünü sözleşme oluştuğu yöntemi olarak olarak görünür olması gerekir.  
+ Önceki test koşulu çevrilerek önkoşul olduğunu unutmayın. (Gerçek önkoşuluna olacaktır `x != null`.) Çevrilerek önkoşulu ileri derecede kısıtlı:; önceki örnekte de gösterildiği gibi yazılmalıdır diğer bir deyişle, Hayır içermelidir `else` yan tümceleri ve gövdesini `then` yan tümcesi olmalıdır tek bir `throw` deyimi. `if` Sınamadır tabi olmak üzere hem görünürlük kuralları (bkz [kullanım yönergeleri](#usage_guidelines)), ancak `throw` ifadesidir yalnızca saflığa kurallarına tabidir. Ancak, oluşturulan özel durum türü olarak sözleşme oluştuğu yöntemi olarak görünür olması gerekir.  
   
-## <a name="postconditions"></a>Sonkoşullar  
- Sonkoşullar durumuna yönelik bir yöntem sözleşmeleri alındığında sonlandırır. Sonkoşul bir yöntem çıkmadan önce denetlenir. Başarısız Sonkoşullar çalışma zamanı davranışını çalışma zamanı Çözümleyicisi tarafından belirlenir.  
+## <a name="postconditions"></a>Koşul sonralarına  
+ Koşul sonralarına sonlandırmasına sözleşmeler için bir yöntem durumunu olur. Bir yöntem çıkmadan önce Sonkoşul denetlenir. Başarısız bir koşul sonralarına çalışma zamanı davranışını çalışma zamanı çözümleyici tarafından belirlenir.  
   
- Önkoşulları, daha az görünürlük üyeleriyle Sonkoşullar başvurabilir. Bir istemci anlamak veya yapmak mümkün olmayabilir bazı özel durumu kullanarak Sonkoşul ifade edilen bilgileri kullanır, ancak bu istemcinin yöntemi doğru bir şekilde kullanma yeteneğini etkilemez.  
+ Önkoşulları, daha az görünürlük üyeleriyle koşul sonralarına başvurabilir. Bir istemci anlamak veya mümkün olmayabilir, bazı özel durumu kullanarak Sonkoşul tarafından gösterilen bilgiler kullanır, ancak bu istemcinin yöntemi doğru şekilde kullanma yeteneğini etkilemez.  
   
-### <a name="standard-postconditions"></a>Standart Sonkoşullar  
- Kullanarak standart Sonkoşullar açıklayabilir <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> yöntemi. Sonkoşullar express olmalıdır bir koşul `true` yönteminin normal sonlandırmada.  
+### <a name="standard-postconditions"></a>Standart koşul Sonralarına  
+ Kullanarak standart koşul sonralarına ifade edebilirsiniz <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> yöntemi. Koşul sonralarına express olması gereken bir koşul `true` normal sonlandırmada yöntemi.  
   
  `Contract.Ensures( this.F > 0 );`  
   
-### <a name="exceptional-postconditions"></a>Olağanüstü Sonkoşullar  
- Olağanüstü Sonkoşullar olan olmalıdır Sonkoşullar `true` belirli bir özel durum bir yöntemle oluşur zaman. Kullanarak bu Sonkoşullar belirtebilirsiniz <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> aşağıdaki örnekte gösterildiği gibi yöntemi.  
+### <a name="exceptional-postconditions"></a>Olağanüstü bir koşul Sonralarına  
+ Olağanüstü bir koşul sonralarına olan olmalıdır koşul sonralarına `true` belirli bir özel durumun yöntemi tarafından harekete geçirildiğinde. Bu koşul sonralarına kullanarak belirtebilirsiniz <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> yöntemi, aşağıdaki örnekte gösterildiği gibi.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
- Bağımsız değişken olmalıdır durumdur `true` alt türü olan bir özel durum her `T` atılır.  
+ Bağımsız değişken olmalıdır durumdur `true` bir alt türünde bir özel durum olduğunda `T` oluşturulur.  
   
- Bir olağanüstü Sonkoşul içinde kullanmak zordur bazı özel durum türü vardır. Örneğin, türü kullanılarak <xref:System.Exception> için `T` bir yığın taşması veya diğer denetim imkansız özel durum olsa bile, koşul oluşturulur, özel durum türü ne olursa olsun güvence altına almak için bir yöntem gerektirir. Olağanüstü Sonkoşullar üyesi, örneğin, ne zaman çağrıldığında oluşturulan yalnızca belirli durumlar için kullanması gereken bir <xref:System.InvalidTimeZoneException> için oluşturulan bir <xref:System.TimeZoneInfo> yöntem çağrısı.  
+ Olağanüstü bir Sonkoşul içinde kullanılacak zor olan bazı özel durum türü vardır. Örneğin, türü kullanılarak <xref:System.Exception> için `T` bir yığın taşması veya diğer denetim imkansız özel durumu olsa bile oluşturulan, özel durum türü ne olursa olsun koşul güvence altına almak için bir yöntem gerektirir. Olağanüstü bir koşul sonralarına üyesi, örneğin, ne zaman çağrıldığında oluşturulabilecek özel durum için kullanması gereken bir <xref:System.InvalidTimeZoneException> için oluşturulan bir <xref:System.TimeZoneInfo> yöntem çağrısı.  
   
-### <a name="special-postconditions"></a>Özel Sonkoşullar  
- Aşağıdaki yöntemlerden yalnızca Sonkoşullar içinde kullanılabilir:  
+### <a name="special-postconditions"></a>Özel koşul Sonralarına  
+ Aşağıdaki yöntemlerden yalnızca koşul sonralarına içinde kullanılabilir:  
   
--   Dönüş değerleri Sonkoşullar yöntemi ifade kullanarak başvurabilirsiniz `Contract.Result<T>()`, burada `T` yönteminin dönüş türü tarafından değiştirilir. Derleyici türü Infer başlatılamadığında açıkça sağlamanız gerekir. Örneğin, C# Derleyici türleri aşağıdaki Sonkoşul gerekir, böylece tüm bağımsız değişkenler almayan yöntemleri için Infer alamıyor: `Contract.Ensures(0 <Contract.Result<int>())` dönüş türüne sahip yöntemleri `void` başvuramıyor `Contract.Result<T>()` kendi Sonkoşullar içinde.  
+-   İfade kullanarak koşul sonralarına yöntem dönüş değerlerine başvurabilir `Contract.Result<T>()`burada `T` yöntemin dönüş türü tarafından değiştirilir. Derleyicinin türü çıkarımı işlenemediğinde açıkça sağlamanız gerekir. Örneğin, C# derleyici aşağıdaki Sonkoşul gerektirir böylece herhangi bir bağımsız değişken almayan yöntemleri için türlerini çıkarması oluşturulamıyor: `Contract.Ensures(0 <Contract.Result<int>())` dönüş türüne sahip yöntemleri `void` başvurulamaz `Contract.Result<T>()` kendi koşul sonralarına içinde.  
   
--   Sonkoşul prestate değerinde bir ifadenin başlangıcında bir yöntemi veya özelliği değerini gösterir. Deyim kullanan `Contract.OldValue<T>(e)`, burada `T` türü `e`. Derleyici türünü Infer mümkün olduğunda genel tür bağımsız değişkeni atlayabilirsiniz. (Bir bağımsız değişken aldığından Örneğin, C# Derleyici her zaman türü oluşturur.) Ne de oluşabilir bazı kısıtlamalar vardır `e` ve eski deyim görünebilir bağlamı. Eski deyim başka bir eski ifade içeremez. En önemlisi, eski deyim yöntemin önkoşulu durumunda var olan bir değer başvurmalıdır. Diğer bir deyişle, bu yöntemin önkoşulu olduğu sürece sonucu verebilen bir ifade olmalıdır `true`. Bu kural için birkaç örneği aşağıda verilmiştir.  
+-   Sonkoşul prestate değeri bir ifade başlatma sırasında bir yöntem veya özellik değerini ifade eder. İfade kullanır `Contract.OldValue<T>(e)`burada `T` türü `e`. Derleyici, türü çıkarımı mümkün olduğunda genel tür bağımsız değişkeni atlayabilirsiniz. (Bağımsız değişken aldığından Örneğin, C# Derleyici her zaman türü çıkarır.) Ne ortaya çıkabilir bazı kısıtlamalar vardır `e` ve eski deyim görünebilir bağlamı. Eski bir ifade başka bir eski ifadesi içeremez. En önemlisi, eski bir ifade yöntemin önkoşulu durumunda var olan bir değer başvurmalıdır. Diğer bir deyişle, yöntemin önkoşulu olduğu sürece değerlendirilebilen bir ifade olmalıdır `true`. Bu kural için birkaç örneği aşağıda verilmiştir.  
   
-    -   Değer yöntemin önkoşulu durumda olması gerekir. Bir nesne üzerinde bir alana başvuru için önkoşulları söz konusu nesne her zaman null olmayan olduğunu güvence altına almalıdır.  
+    -   Değer yöntemin önkoşulu durumda mevcut olması gerekir. Bir alan bir nesne üzerinde başvurmak için önkoşulları söz konusu nesne her zaman null olmayan olduğunu garanti gerekir.  
   
-    -   Eski bir ifadede yöntemin dönüş değerine başvuruda bulunamaz:  
+    -   Eski bir ifade yöntemin dönüş değeri başvuruda bulunamaz:  
   
         ```  
         Contract.OldValue(Contract.Result<int>() + x) // ERROR  
         ```  
   
-    -   İçin başvuramaz `out` eski deyimde parametreleri.  
+    -   Başvuruda bulunamaz `out` eski bir ifadede parametreleri.  
   
-    -   Niceleyici aralığını yöntemin dönüş değeri temel alıyorsa eski deyim bir niceleyici ilişkili değişkenine bağlı olamaz:  
+    -   Nicelik aralığı yöntemin dönüş değerini temel bağlıysa, eski bir ifade bağlı bir miktar belirleyiciyi değişkenin üzerine bağımlı olamaz:  
   
         ```  
         Contract. ForAll (0,Contract. Result<int>(),  
         i => Contract.OldValue(xs[i]) > 3); // ERROR  
         ```  
   
-    -   Eski deyim anonim temsilci parametresinin başvuramıyor bir <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> veya <xref:System.Diagnostics.Contracts.Contract.Exists%2A> bir dizin oluşturucu veya yöntem çağrısı için bağımsız değişken olarak kullanılmadıkça çağırın:  
+    -   Eski bir ifade anonim temsilci parametresine başvuramaz bir <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> veya <xref:System.Diagnostics.Contracts.Contract.Exists%2A> bir dizin oluşturucu veya yöntem çağrısı için bağımsız değişkeni olarak kullanılmadığı sürece çağırın:  
   
         ```  
         Contract. ForAll (0, xs .Length, i => Contract.OldValue(xs[i]) > 3); // OK  
         Contract. ForAll (0, xs .Length, i => Contract.OldValue(i) > 3); // ERROR  
         ```  
   
-    -   Eski ifadesinin değerini anonim temsilci parametrelerinin hiçbirinde bağımlıysa anonim temsilci bağımsız değişken olmadıkça eski deyim anonim bir temsilci gövdesinde gerçekleşemez <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> veya <xref:System.Diagnostics.Contracts.Contract.Exists%2A> yöntemi:  
+    -   Eski ifadenin değerini herhangi bir anonim metot temsilcisinin parametre bağlıysa anonim temsilci bağımsız değişken olmadığı sürece eski bir ifade anonim bir temsilci gövdesinde gerçekleşemez <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> veya <xref:System.Diagnostics.Contracts.Contract.Exists%2A> yöntemi:  
   
         ```  
         Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
         ```  
   
-    -   `Out` parametreleri mevcut bir sorun sözleşmeleri yönteminin gövdesi önce görünür ve çoğu derleyicileri başvurular izin verme çünkü `out` Sonkoşullar parametreleri. Bu sorunu çözmek için <xref:System.Diagnostics.Contracts.Contract> SAX <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> göre Sonkoşul sağlayan yöntemi bir `out` parametresi.  
+    -   `Out` parametreleri mevcut bir sorun sözleşmeleri Yöntemin gövdesi önce görünür ve derleyicilerin çoğu başvuruları izin vermez çünkü `out` koşul sonralarına parametreleri. Bu sorunu çözmek için <xref:System.Diagnostics.Contracts.Contract> sağlar sınıfını <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> göre Sonkoşul sağlayan yöntemi bir `out` parametresi.  
   
         ```  
         public void OutParam(out int x) f  
@@ -128,15 +128,15 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
         x = 3;  
         ```  
   
-         İle <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> yöntemi kullanmayabilir genel tür parametresi derleyici türünü Infer mümkün olduğunda. Sözleşme yeniden yazan yöntem çağrısının değeri ile değiştirir. `out` parametresi. <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> Yöntemi yalnızca Sonkoşullar içinde görünebilir. Yöntemin bağımsız değişkeni olmalıdır bir `out` parametresi ya da alan bir yapısının `out` parametresi. İkincisi de yapısı Oluşturucusu Sonkoşul alanlara söz konusu olduğunda yararlıdır.  
+         Olduğu gibi <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> yöntemi çıkarabilirsiniz genel tür parametresi derleyici türünü çıkarsamak mümkün olduğunda. Sözleşme rewriter yöntem çağrısında değeri ile değiştirir. `out` parametresi. <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> Yöntemi yalnızca koşul sonralarına görünebilir. Yöntem bağımsız değişkeni olmalıdır bir `out` parametresi veya bir yapının bir alan `out` parametresi. İkincisi de yapısı oluşturucunun Sonkoşul alanları söz konusu olduğunda yararlıdır.  
   
         > [!NOTE]
-        >  Şu anda, kod sözleşme çözümleme araçları denetleme olup olmadığını `out` parametreleri düzgün şekilde başlatılmadı ve bunların Bahsetme Sonkoşul içinde göz ardı. Sözleşme satırdan değeri kullanılırsa bu nedenle, önceki örnekte, `x` tamsayı kendisine atamak yerine, bir derleyici doğru hatası sorunu değil. Ancak, üzerinde CONTRACTS_FULL önişlemci sembolü olduğu bir yapı (böyle asa yayın derlemesi) tanımlı değil, derleyici hata verecek.  
+        >  Şu anda, kod sözleşme çözümleme araçları işaretlemeyin olmadığını `out` parametreleri düzgün başlatılmadı ve bunların Bahsetme Sonkoşul içinde göz ardı. Sözleşme satırdan değerini kullanmışsınız bu nedenle, önceki örnekte, `x` tamsayı kendisine atamak yerine, derleyici doğru hatası sorunu değil. Ancak, CONTRACTS_FULL önişlemci sembolü olduğu bir derleme (Bu tür asa yayın derleme) tanımlı değil, derleyici bir hata verir.  
   
-## <a name="invariants"></a>İnvariants  
- Nesne invariants bu nesne için bir istemci görünür olduğunda, bir sınıfın her örneği için doğru olması gereken koşullardır. Bunlar, altında nesne doğru olarak değerlendirilir koşullar express.  
+## <a name="invariants"></a>Okuduğunuzda  
+ Nesne okuduğunuzda o nesnenin bir istemci tarafından görünür olduğunda, bir sınıfın her örneği için true olması gereken koşullardır. Bunlar, nesnenin altında doğru olarak kabul edilir koşullar express.  
   
- Değişmez yöntemleri ile işaretlenen tarafından tanımlanan <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> özniteliği. Değişmez yöntemleri yapılan çağrıların bir sıra dışında hiçbir kod içermelidir <xref:System.Diagnostics.Contracts.Contract.Invariant%2A> yöntemi, her biri belirtir tek tek bir değişmez değer aşağıdaki örnekte gösterildiği gibi.  
+ Sabit yöntemleri ile işaretlenen tarafından tanımlanan <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> özniteliği. Sabit yöntem çağrıları bir dizi dışında hiçbir kod içermelidir <xref:System.Diagnostics.Contracts.Contract.Invariant%2A> yöntemi, her biri belirten tek bir değişmez değer aşağıdaki örnekte gösterildiği gibi.  
   
 ```  
 [ContractInvariantMethod]  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- İnvariants koşullu CONTRACTS_FULL önişlemci sembolü tarafından tanımlanır. Çalışma zamanı denetimi sırasında invariants her genel yöntem sonunda denetlenir. Genel yöntem aynı sınıfta bir değişmez değer değinmektedir, normal olarak bu genel yöntem sonunda olacağını değişmez denetimi devre dışı bırakılır. Bunun yerine, yalnızca o sınıfın en dıştaki yöntemi çağrısı sonunda onay oluşur. Bu durum, aynı zamanda sınıfın başka bir sınıf bir yöntem çağrısı nedeniyle yeniden girilirse gerçekleşir. Nesne sonlandırıcılar veya uygulayan herhangi bir yöntem, invariants işaretli değil <xref:System.IDisposable.Dispose%2A> yöntemi.  
+ Okuduğunuzda koşullu CONTRACTS_FULL önişlemci sembolü tarafından tanımlanır. Çalışma zamanı denetimi sırasında her bir genel yöntem sonunda okuduğunuzda denetlenir. Değişmez değer aynı sınıftaki bir genel yöntem bahsetmeleri normalde, genel yönteminin sonunda olacağını sabit denetimi devre dışı bırakılır. Bunun yerine, yalnızca o sınıfın en dıştaki yöntem çağrısına sonunda onay gerçekleşir. Bu durum, aynı zamanda sınıfın başka bir sınıftaki bir yönteme bir çağrı nedeniyle yeniden girilirse gerçekleşir. Okuduğunuzda değil uygulayan herhangi bir yöntem veya nesnenin Sonlandırıcısı için iade <xref:System.IDisposable.Dispose%2A> yöntemi.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Kullanım yönergeleri  
@@ -156,39 +156,39 @@ Contract.Invariant(this.x > this.y);
 ### <a name="contract-ordering"></a>Sözleşme sıralama  
  Aşağıdaki tabloda yöntemi sözleşmeleri yazdığınızda kullanması gereken öğelerin sırasını gösterir.  
   
-|`If-then-throw statements`|Geriye dönük olarak uyumlu ortak önkoşulları|  
+|`If-then-throw statements`|Geriye dönük olarak uyumlu genel Önkoşullar|  
 |-|-|  
-|<xref:System.Diagnostics.Contracts.Contract.Requires%2A>|Tüm ortak önkoşulları.|  
-|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Tüm ortak (normal) Sonkoşullar.|  
-|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Tüm genel olağanüstü Sonkoşullar.|  
-|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Tüm özel/iç (normal) Sonkoşullar.|  
-|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Tüm özel/iç olağanüstü Sonkoşullar.|  
-|<xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>|Kullanıyorsanız `if` - `then` - `throw` stil önkoşulları diğer sözleşmeleri olmadan, bir çağrı için <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> göstermek için denetimleri önkoşulları varsa tüm önceki.|  
+|<xref:System.Diagnostics.Contracts.Contract.Requires%2A>|Tüm genel önkoşulları.|  
+|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Tüm genel (normal) koşul sonralarına.|  
+|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Tüm genel olağanüstü koşul sonralarına.|  
+|<xref:System.Diagnostics.Contracts.Contract.Ensures%2A>|Tüm özel/iç (normal) koşul sonralarına.|  
+|<xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A>|Tüm özel/iç olağanüstü koşul sonralarına.|  
+|<xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>|Kullanıyorsanız `if` - `then` - `throw` stil önkoşulları diğer tüm sözleşmeleri olmadan, bir çağrı yapmak <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> göstermek için önceki tüm denetimleri önkoşulları varsa.|  
   
 <a name="purity"></a>   
-### <a name="purity"></a>Olmak üzere  
- İçinde bir sözleşme adında tüm yöntemleri saf olmalıdır; diğer bir deyişle, bunlar önceden var olan herhangi bir durum güncelleştirmelisiniz değil. Saf yönteminde, saf yöntemi giriş sonra oluşturulan nesneleri değiştirmek için izin verilir.  
+### <a name="purity"></a>Saflığa  
+ Bir sözleşme içinde çağrılan tüm yöntemlere saf olmalıdır; diğer bir deyişle, bunlar önceden var olan herhangi bir durum güncelleştirmeyi gerekir. Saf yönteminin saf yönteminin girişine sonra oluşturulan nesneleri değiştirme izin verilmez.  
   
- Aşağıdaki kod öğeleri saf kod sözleşme araçları şu anda varsayın:  
+ Kod sözleşme araçları, şu anda aşağıdaki kod öğelerinden saf olduğunu varsayar:  
   
--   İle işaretlenen yöntemleri <xref:System.Diagnostics.Contracts.PureAttribute>.  
+-   İle işaretlenmiş yöntemler <xref:System.Diagnostics.Contracts.PureAttribute>.  
   
--   İle işaretlenen türleri <xref:System.Diagnostics.Contracts.PureAttribute> (öznitelik tipinin tüm yöntemleri için geçerlidir).  
+-   İle işaretlenmiş türler <xref:System.Diagnostics.Contracts.PureAttribute> (öznitelik türün tüm yöntemleri için geçerlidir).  
   
--   Özellik get erişimcisi.  
+-   Özellik get erişimcileri.  
   
--   İşleçler (bir veya iki parametreleri ve void olmayan dönüş türüne sahip statik yöntemler adları "Aç" ve, ile başlayan).  
+-   İşleçler (bir veya iki parametre ve void olmayan dönüş türüne sahip adları "op" ve, ile başlayan statik yöntemleri).  
   
 -   Tam adı "System.Diagnostics.Contracts.Contract", "System.String", "System.IO.Path" veya "System.Type" ile başlayan herhangi bir yöntem.  
   
--   Temsilci türü ile öznitelikli koşuluyla herhangi bir temsilci çağrılır <xref:System.Diagnostics.Contracts.PureAttribute>. Temsilci türleri <xref:System.Predicate%601?displayProperty=nameWithType> ve <xref:System.Comparison%601?displayProperty=nameWithType> saf olarak kabul edilir.  
+-   Temsilci türü ile öznitelendirilen şartıyla tüm temsilci çağrılır <xref:System.Diagnostics.Contracts.PureAttribute>. Temsilci türleriyle <xref:System.Predicate%601?displayProperty=nameWithType> ve <xref:System.Comparison%601?displayProperty=nameWithType> saf olarak kabul edilir.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>Görünürlük  
- Bir sözleşmede belirtilen tüm üyeleri en az göründükleri yöntemi olarak olarak görünür olması gerekir. Örneğin, özel bir alan bir public yöntemi için bir önkoşulu bölümünde belirtildiği olamaz; Bunlar yöntemi çağırmadan önce istemcileri böyle bir sözleşme doğrulanamıyor. Ancak, alanın işaretlenmişse <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, bu kurallardan tutulur.  
+ Tüm üyeleri bir sözleşmede belirtilen en az göründükleri yöntemi olarak olarak görünür olmalıdır. Örneğin, özel bir alan genel bir yöntem için bir önkoşul olarak belirtilen olamaz; Bunlar yöntemi çağırmadan önce istemcileri böyle bir sözleşme doğrulanamıyor. Ancak, alan ile işaretlenmişse <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>, bu kurallardan muaf.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kod sözleşmeleri kullanımını göstermektedir.  
+ Aşağıdaki örnek, kod sözleşmeleri kullanımını gösterir.  
   
  [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
  [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

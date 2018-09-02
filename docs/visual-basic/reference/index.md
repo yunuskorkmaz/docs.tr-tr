@@ -5,18 +5,18 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961027"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455685"
 ---
 # <a name="reference-visual-basic"></a>Başvuru (Visual Basic)
 Bu bölüm, Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgileri için bağlantılar sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic Dil Başvurusu](../../visual-basic/language-reference/index.md)  
+ [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
  Visual Basic dilinin çeşitli yönlerine başvuru bilgileri sağlar.  
   
  [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
@@ -36,11 +36,11 @@ Bu bölüm, Visual Basic programlamanın çeşitli yönleri hakkında başvuru b
  Bu ad alanı göründüğü gibi bir faks formun ekranda yazdırmanızı sağlayan bir bileşen sunar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Genel kullanıcı arabirimi öğeleri (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [Genel Kullanıcı Arabirimi Öğeleri (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  İletişim kutuları ve Visual Studio'da kullanılan pencereler için konuları içerir.  
   
  [Visual Studio'daki XML Araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Visual Studio'da kullanılabilen çeşitli XML araçları hakkında konulara bağlantılar sağlar.  
   
- [Otomasyon ve genişletilebilirlik başvurusu](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ [Otomasyon ve genişletilebilirlik başvurusu](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  Otomasyon ve paylaşılan ve dile özgü bileşenler için Visual Studio genişletilebilirliği kapsayan konulara bağlantılar sağlar.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d5e90d7cab0763dcc1635f8c383c434240498766
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254834"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456444"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir mevcut BT'nizi genişletin daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ile uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Sık karşılaşılan bir senaryodur birini eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , Windows Forms uygulaması içinde. WPF denetimleri özelleştirme hakkında daha fazla bilgi için bkz. [denetimi özelleştirme](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "43254834"
   
 -   Windows Forms ana bilgisayar uygulaması oluşturma.  
   
- Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WPF bileşik denetimini Windows Forms örneğinde barındırma](http://go.microsoft.com/fwlink/?LinkID=159996).  
+ Bu izlenecek yolda gösterilen görevler tam kod listesi için bkz. [WPF bileşik denetimini Windows Forms örneğinde barındırma](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:  

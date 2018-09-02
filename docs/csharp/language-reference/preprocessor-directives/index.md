@@ -7,15 +7,15 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 63a7bdb6d36794e0380ca84443926338fe926e4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279925"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422007"
 ---
 # <a name="c-preprocessor-directives"></a>C# önişlemci yönergeleri
-Bu bölümde aşağıdaki C# önişlemci yönergeleri hakkında bilgi içerir:
+Bu bölüm, aşağıdaki C# önişlemci yönergeleri hakkında bilgi içerir:
 
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
 - [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
@@ -32,12 +32,13 @@ Bu bölümde aşağıdaki C# önişlemci yönergeleri hakkında bilgi içerir:
 - [#pragma uyarısı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
 - [#pragma sağlama toplamı](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
 
-Daha fazla bilgi ve örnekler için tek tek konularına bakın.
+Daha fazla bilgi ve örnekler tek tek ilgili konulara bakın.
 
-Derleyici ayrı önişlemci olması gerekmese de, bu bölümde açıklanan yönergeleri gibi varsa bir işlenir. Koşullu derleme yardımcı olmak için kullanılır. C ve C++ yönergeleri makroları oluşturmak için bu yönergeleri kullanamazsınız.
+Derleyicinin ayrı bir önişlemci olması gerekmese de, bu bölümde açıklanan yönergeleri yokmuş gibi bir işlenir. Koşullu derlemede kullanılan yardımcı olmak için kullanılır. C ve C++ yönergeleri, makrolara oluşturmak için bu yönergeleri kullanamazsınız.
 
 Önişlemci yönergesi yalnızca yönerge bir satırda olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

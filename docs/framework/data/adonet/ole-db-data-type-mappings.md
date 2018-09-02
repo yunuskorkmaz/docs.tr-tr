@@ -2,24 +2,24 @@
 title: OLE DB veri türü eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758938"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457111"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB veri türü eşlemeleri
-Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ADO ve OLE DB için .NET Framework Veri Sağlayıcısı'ndan veri türleri için türü (<xref:System.Data.OleDb>). Yazılı erişimci yöntemleri <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
+Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü için .NET Framework veri sağlayıcısı ADO ve OLE DB veri türlerinden (<xref:System.Data.OleDb>). Türü belirlenmiş erişimci yöntemlerini <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
   
-|ADO türü|OLE DB türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yazılı erişimcisi|  
+|ADO türü|OLE DB türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
-|adBinary|DBTYPE_BYTES|Byte]|GetBytes()|  
+|adBinary|DBTYPE_BYTES|Bayt]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boole değeri|GetBoolean()|  
-|adBSTR|DBTYPE_BSTR|Dize|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|Üzerinden desteklenen `DataReader`. Bkz: [DataReader kullanarak veri alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
-|adChar|DBTYPE_STR|Dize|GetString()|  
+|adBSTR|DBTYPE_BSTR|Dize|GetString() yöntemini kullanarak|  
+|adChapter|DBTYPE_HCHAPTER|Aracılığıyla desteklenen `DataReader`. Bkz: [DataReader kullanarak veri alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
+|adChar|DBTYPE_STR|Dize|GetString() yöntemini kullanarak|  
 |adCurrency|DBTYPE_CY|Ondalık|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
 |adDBDate|DBTYPE_DBDATE|DateTime|GetDateTime()|  
@@ -43,7 +43,7 @@ Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../
 |adUnsignedSmallInt|DBTYPE_UI2|UInt16|GetValue()|  
 |adUnsignedTinyInt|DBTYPE_UI1|Bayt|GetByte()|  
 |adVariant|DBTYPE_VARIANT|Nesne|GetValue()|  
-|adWChar|DBTYPE_WSTR|Dize|GetString()|  
+|adWChar|DBTYPE_WSTR|Dize|GetString() yöntemini kullanarak|  
 |adUserDefined|DBTYPE_UDT|Desteklenmiyor||  
 |adVarNumeric|DBTYPE_VARNUMERIC|Desteklenmiyor||  
   
@@ -51,4 +51,4 @@ Aşağıdaki tabloda oluşturulursa gösterilmektedir [!INCLUDE[dnprdnshort](../
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

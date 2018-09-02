@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0dadf11888e55a96b15e09d5f4b326e8c5e18a02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb0d4fdebf07dacfa7f33d8645332348270128e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474824"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422510"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Hizmet: Saniyede Güvenlik Doğrulaması ve Kimlik Doğrulaması Hatası
-Sayaç adı: güvenlik doğrulaması ve kimlik doğrulama hataları saniyede.  
+Sayaç adı: güvenlik doğrulaması ve kimlik doğrulama hataları saniye başına.  
   
 ## <a name="description"></a>Açıklama  
- Bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilen olduğunda bu sayaç artırılır. Bu tür sorunlar içerir:  
+ Her bir ileti "Güvenlik çağrıları yetkilendirilmedi" sayacı tarafından kapsanmayan bir güvenlik sorunu nedeniyle reddedilmesi Bu sayaç artırılır. Bu tür sorunlar şunlardır:  
   
 -   İstemci belirteci iletiden okunamıyor.  
   
--   İstemci belirteci kimlik doğrulaması (örneğin, hatalı parola) başarısız oldu.  
+-   İstemci belirteci (örneğin, hatalı parola) kimlik doğrulaması başarısız oldu.  
   
--   İmza doğrulaması başarısız oldu (örneğin, ileti değiştirilmiş).  
+-   İmza doğrulaması başarısız oldu (örneğin, iletiyi oynanmadığını).  
   
--   İleti yeniden yürütme saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
+-   İleti yeniden yürütme bir saldırı sırasında gerçekleşebilir bir önceki bir yineleniyor.  
   
 -   Bir şifre çözme hatası oluştu.  
   
--   Gereken bazı iletiden öğeleri (örneğin, eksik zaman damgası veya engelleme şifrelenmiş veriler) eksik.  
+-   Gereken bazı öğeleri (örneğin, eksik bir zaman damgası veya şifrelenmiş veriler engelle) gelen iletiyi yok.  
   
--   TLSNEGO/SPNEGO anlaşması sırasında hata oluştu.  
+-   TLSNEGO/SPNEGO anlaşması sırasında hatalar oluştu.  
   
- Bu sayaç, performans sayacı türü [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır  
+ Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır  
   
  (1 - N 0 N) / ((D 1 - D 0) / F)

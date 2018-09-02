@@ -1,36 +1,36 @@
 ---
-title: ADO.NET veri türü eşlemeleri
+title: ADO.NET'te veri türü eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1064f3be7f2548337b5dd6653c76b70a04fad980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aba1eb4fdaaf43d66337ca764fe01b7d3f4624bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757677"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423669"
 ---
-# <a name="data-type-mappings-in-adonet"></a>ADO.NET veri türü eşlemeleri
-.NET Framework nasıl türleri bildirilen kullanılan ve çalışma zamanı'nda yönetilen tanımlar ortak tür sistemi dayanır. Değer türleri ve türetilen tüm hangi başvuru türleri oluşur <xref:System.Object> temel türü. Açıkça belirtilmezse, bir veri kaynağı ile çalışırken, veri türü veri sağlayıcısı'ndan algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnesidir herhangi belirli veri kaynağından bağımsız. Verileri bir `DataSet` bir veri kaynağından alınan ve değişiklikleri kullanarak veri kaynağına geri kaldı bir `DataAdapter`. Yani bir `DataAdapter` doldurur bir <xref:System.Data.DataTable> içinde bir `DataSet` sütunları sonuç veri türleri bir veri kaynağından alınan değerlerle `DataTable` olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri için belirli yerine türleri [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri veri kaynağına bağlanmak için kullanılan sağlayıcı.  
+# <a name="data-type-mappings-in-adonet"></a>ADO.NET'te veri türü eşlemeleri
+.NET Framework nasıl türleri bildirilen kullanılan ve çalışma zamanı'nda yönetilen tanımlar ortak tür sisteminin temel alır. Hem değer türleri ve türetilen tüm, başvuru türleri oluşur <xref:System.Object> temel türü. Bir veri kaynağı ile çalışırken, veri türü, açıkça belirtilmezse, veri sağlayıcısı'ndan algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnedir herhangi belirli bir veri kaynağından bağımsız. Verileri bir `DataSet` bir veri kaynağından alınan ve değişiklikleri veri kaynağına geri kullanarak kaldı bir `DataAdapter`. Yani bir `DataAdapter` dolduran bir <xref:System.Data.DataTable> içinde bir `DataSet` sütunların sonuçta elde edilen veri türleri gibi veri kaynağından alınan değerlerle `DataTable` olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, özel türler yerine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri veri kaynağına bağlanmak için kullanılan sağlayıcı.  
   
- Benzer şekilde, bir `DataReader` bir veri kaynağı, sonuçlanan değer arasında bir değer olan yerel bir değişkende depolanan döndürür bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] döndürülen değerin türü olayla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı.  
+ Benzer şekilde, bir `DataReader` döndürür, sonuç değerini bir veri kaynağından bir değer olan bir yerel değişkende depolanan bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] döndürülen değerin türü çıkarılan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı.  
   
- Çıkarsanan veri türüne bağlı olan yerine yazılan erişimci yöntemlerini kullanabilirsiniz `DataReader` belirli türde bir döndürülen değer bildiğinizde. Yazılı erişimci yöntemleri size daha iyi performans belirli bir olarak bir değer döndürerek [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ek tür dönüştürme ihtiyacını ortadan kaldıran türü.  
+ Çıkarsanan veri türüne işlemine güvenmek yerine, türü belirlenmiş erişimci yöntemlerini kullanabilirsiniz `DataReader` belirli döndürülen değerin türü bildiğinizde. Türü belirtilmiş erişimci metotlarını size daha iyi performans olarak belirli bir değer döndürerek [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü, ek bir tür dönüştürme ihtiyacını ortadan kaldırır.  
   
 > [!NOTE]
->  Null değerler için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcı veri türlerini temsil ettiği `DBNull.Value`.  
+>  Null değerler için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı veri türleri tarafından temsil edilir `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarımı yapılan <xref:System.Data.SqlClient>.  
+ Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarılan <xref:System.Data.SqlClient>.  
   
  [OLE DB Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
- Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarımı yapılan <xref:System.Data.OleDb>.  
+ Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarılan <xref:System.Data.OleDb>.  
   
  [ODBC Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
- Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarımı yapılan <xref:System.Data.Odbc>.  
+ Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarılan <xref:System.Data.Odbc>.  
   
  [Oracle Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
- Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarımı yapılan <xref:System.Data.OracleClient>.  
+ Veri türü eşlemeleri ve veri erişimci yöntemlerini listeler çıkarılan <xref:System.Data.OracleClient>.  
   
  [Kayan Noktalı Sayılar](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
  Geliştiriciler kayan nokta sayıları ile çalışırken sık karşılaştığınız sorunları açıklar.  
@@ -40,5 +40,5 @@ ms.locfileid: "32757677"
  [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Ortak Tür Sistemi](../../../../docs/standard/base-types/common-type-system.md)  
- [Türleri dönüştürme](http://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
- [ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Türleri dönüştürme](https://msdn.microsoft.com/library/6038316e-bdaf-4f55-8006-407f591ce156)  
+ [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

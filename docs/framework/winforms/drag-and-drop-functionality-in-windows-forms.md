@@ -5,43 +5,43 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539406"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452992"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms'ta Sürükle ve Bırak İşlevi
-Windows Forms bir yöntem, olayları ve sürükle ve bırak davranışı uygulayan sınıflar içerir. Bu konu Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz. [sürükle ve bırak işlemleri ve Pano desteği](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms, bir dizi yöntem, olayları ve sürükle-bırak davranışı uygulayan sınıflar içerir. Bu konu, Windows Forms'ta sürükle ve bırak desteği'ne genel bakış sağlar.  Ayrıca bkz: [sürükle ve bırak işlemleri ve Pano desteği](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Sürükle ve bırak işlemleri gerçekleştirme  
- Sürükle ve bırak işlemi gerçekleştirmek için <xref:System.Windows.Forms.Control.DoDragDrop%2A> yöntemi <xref:System.Windows.Forms.Control> sınıfı. Sürükle ve bırak işlemi nasıl gerçekleştirildiğini hakkında daha fazla bilgi için bkz: <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Sürükle ve bırak işlemi başlamadan önce fare işaretçisini üzerine sürüklediğiniz gerekir dikdörtgen almak için <xref:System.Windows.Forms.SystemInformation.DragSize%2A> özelliği <xref:System.Windows.Forms.SystemInformation> sınıfı.  
+ Bir Sürükle ve bırak işlemi gerçekleştirmek için <xref:System.Windows.Forms.Control.DoDragDrop%2A> yöntemi <xref:System.Windows.Forms.Control> sınıfı. Bir Sürükle ve bırak işlemi nasıl gerçekleştirilir hakkında daha fazla bilgi için bkz. <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Bir Sürükle ve bırak işlemi başlamadan önce üzerinde fare işaretçisi sürüklenmelidir dikdörtgen almak için kullanın <xref:System.Windows.Forms.SystemInformation.DragSize%2A> özelliği <xref:System.Windows.Forms.SystemInformation> sınıfı.  
   
-## <a name="events-related-to-drag-and-drop-operations"></a>Sürükleme ve bırakma işlemleri için ilgili olayları  
- Sürükle ve bırak işlemi olayları iki kategorisi vardır: sürükle ve bırak işlemi geçerli hedefinde meydana gelen olayları ve sürükle ve bırak işlemi kaynak üzerinde meydana gelen olayları.  
+## <a name="events-related-to-drag-and-drop-operations"></a>Sürükle ve bırak işlemlerle ilgili olayları  
+ Bir Sürükle ve bırak işlemi olayları iki kategorisi vardır: sürükle ve bırak işleminin geçerli hedef meydana gelen olayları ve sürükle ve bırak işlemi kaynağında meydana gelen olayları.  
   
 ### <a name="events-on-the-current-target"></a>Geçerli hedef olayları  
- Aşağıdaki tabloda bir Sürükle ve bırak işlemi geçerli hedefinde meydana gelen olayları gösterir.  
+ Aşağıdaki tablo, bir Sürükle ve bırak işleminin geçerli hedef meydana gelen olayları gösterir.  
   
 |Fare olayı|Açıklama|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.DragEnter>|Bu olay, bir nesne denetimin sınırları sürüklendiğinde gerçekleşir. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragOver>|Bu olay, fare işaretçisini denetimin sınırları içinde olsa bir nesnesi sürüklenebilir oluşur. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragDrop>|Sürükle ve bırak işlemi tamamlandığında, bu olay oluşur. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
-|<xref:System.Windows.Forms.Control.DragLeave>|Bu olay, bir nesne denetimin sınırların dışında sürüklendiğinde gerçekleşir. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.EventArgs>.|  
+|<xref:System.Windows.Forms.Control.DragEnter>|Bu olay, bir nesne denetimin sınırları içine sürüklendiğinde oluşur. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.DragOver>|Bu olay, bir nesne fare işaretçisi denetimin sınırları içinde olsa da sürüklendiğinde oluşur. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.DragDrop>|Bu olay, bir Sürükle ve bırak işlemi tamamlandığında gerçekleşir. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.DragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.DragLeave>|Bu olay, bir nesne denetimin sınırları dışında sürüklendiğinde oluşur. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.EventArgs>.|  
   
- <xref:System.Windows.Forms.DragEventArgs> Sınıfı, fare işaretçisini, fare düğmeleri geçerli durumunu ve değiştirici tuşlar, klavye, sürüklenen, veri konumunu sağlar ve <xref:System.Windows.Forms.DragDropEffects> sürükleme olay kaynağı tarafından izin verilen işlemler belirten değerleri ve işlem için hedef açılan etkisi.  
+ <xref:System.Windows.Forms.DragEventArgs> SAX fare düğmesi geçerli durumu ve değiştirici tuşlar sürüklenen, veri klavye, fare işaretçisi, konumunu ve <xref:System.Windows.Forms.DragDropEffects> Sürükle olayının kaynağı tarafından izin verilen işlemleri belirten değerleri ve işlemi için hedef bırakma efekti.  
   
-### <a name="events-on-the-source"></a>Olay kaynağı  
- Aşağıdaki tabloda sürükle ve bırak işlemi kaynak üzerinde meydana gelen olayları gösterir.  
+### <a name="events-on-the-source"></a>Kaynak olayları  
+ Aşağıdaki tabloda kaynak sürükle ve bırak işleminin meydana gelen olayları gösterir.  
   
 |Fare olayı|Açıklama|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|Bu olay bir sürükleme işlemi sırasında oluşur. Fare işaretçisini değiştirmek gibi sürükle ve bırak işlemi gerçekleştirildiği kullanıcı görsel bir ipucu vermek için bir fırsat sunar. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|Bu olay bir Sürükle ve bırak işlemi sırasında oluşturulur ve sürükle ve bırak işlemi iptal olup olmadığını belirlemek sürükleme kaynağı sağlar. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|Bu olay bir sürükleme işlemi sırasında oluşur. Bu, sürükle ve bırak işlemi oluştuğunu, fare işaretçisini değiştirme gibi kullanıcı görsel bir ipucu vermek için bir fırsat sağlar. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|Bu olay, bir Sürükle ve bırak işlemi sırasında oluşturulur ve sürükle ve bırak işleminin iptal edilip edilmeyeceğini belirlemek sürükleme kaynağı sağlar. Bu olay işleyicisi türünde bir bağımsız değişken alan <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
   
- <xref:System.Windows.Forms.QueryContinueDragEventArgs> Sınıfı, düğmeler ve değiştirici tuşlar, klavye, ESC tuşuna basılı olup olmadığını belirten bir değeri fare geçerli durumunu sağlar ve bir <xref:System.Windows.Forms.DragAction> sürükle ve bırak işlemi devam etmesinin gerekip gerekmediğini belirlemek için ayarlanan değeri.  
+ <xref:System.Windows.Forms.QueryContinueDragEventArgs> Sınıfı, düğmeler ve klavye, ESC tuşuna basılan tuşun olup olmadığını belirten bir değer değiştirici tuşları fare geçerli durumunu sağlar ve bir <xref:System.Windows.Forms.DragAction> sürükle ve bırak işlemi devam olup olmadığını belirlemek için ayarlanan değer.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Bir Windows Forms Uygulamasında Fare Girdisi](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

@@ -5,46 +5,46 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: f3a00d78f6406e3f507ce91651efe5c29a5dd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546285"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421716"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, yazdırma kullanmayı göstermek ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
+Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yazdır İletişim Kutusu Çağırma](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- XAML biçimlendirme bildirmek için yönergeler bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulamasında çağırmak için kodu kullanarak.  
+ Yönergeler için XAML biçimlendirmesi bildirmek bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulaması içinde çağırmak için kod kullanarak.  
   
  [Yazıcı Kopyalama](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
- Var olan olarak tam olarak aynı özelliklere sahip ikinci bir yazdırma sırası yükleme hakkında yönergeler yazdırma sırası.  
+ Kuyruk varolan tam olarak aynı özelliklere sahip ikinci bir yazdırma sırasını yüklemek yönergeleri yazdırın.  
   
  [Sorunlu Yazdırma İşini Tanımlama](../../../../docs/framework/wpf/advanced/how-to-diagnose-problematic-print-job.md)  
- Yazdırma bir yazdırma işi tanılamak için yazdırma sıralarını ve yazdırma işlerini özelliklerini kullanma yönergeleri.  
+ Yazdırma bir yazdırma işini tanımlama için yazdırma sıraları yazdırma işlerini ve özelliklerini kullanma yönergeleri.  
   
  [Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- İşin yazdırılabilir yazdırma sıralarını ve yazdırma işlerini özelliklerini programlı olarak ne zaman günün karar vermek için kullanma yönergeleri.  
+ İşin yazdırılabilir özelliklerini yazdırma sıraları yazdırma işlerini ve günün hangi saatlerinde programlı olarak karar vermek için kullanma yönergeleri.  
   
  [Yazdırma Kuyruklarının Alt Kümesini Numaralandırma](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.  
   
- [NOTINBUILD: Nasıl yapılır: yazdırma şemasını genişletme ve yeni yazdırma sistem sınıfları oluşturma](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Yönetilen kod programcıları genişletilmiş bir tartışma özel yazdırma aygıtlarına veya yeni ya da seyrek özelliklerle yazıcılar yazdırma şemasını genişletebilirsiniz.  
+ [NOTINBUILD: Nasıl yapılır: yazdırma şemasını ve yeni yazdırma sistemi sınıfları oluşturma](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ Yönetilen kod programcılar genişletilmiş bir tartışma özel yazdırma cihazları veya yeni veya genel olmayan özellikler yazıcılarla yazdırma şemasını genişletebilirsiniz.  
   
  [Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
- Sistemi nesnenin özelliklerini ve bunların türlerine çalışma zamanında bulma için yönergeleri yazdırın.  
+ Sistem nesnesinin özelliklerini ve bunların türlerini çalışma zamanında bulma için yönergeleri yazdırın.  
   
  [Program Aracılığıyla XPS Dosyalarını Yazdırma](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)  
- Hızlı yazdırma için yönergeler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları gerek kalmadan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Yönergeler için hızlı yazdırma [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları gerek kalmadan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
  [Uzaktan Yazıcıların Durumunu Araştırma](../../../../docs/framework/wpf/advanced/how-to-remotely-survey-the-status-of-printers.md)  
- Bu kağıt sıkıştı veya başka bir sorun yaşıyor bulmak için Yazıcılar anket bir yardımcı programı oluşturmak için yönergeler.  
+ Bir hizmet oluşturma için yönergeler bu kağıt sıkıştı veya başka bir sorunla karşılaşmış bulmak için yazıcıları anket.  
   
  [PrintTickets'i Doğrulama ve Birleştirme](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
- Yazdırma biletinin geçerli olduğundan ve onu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetleme yönergeler.  
+ Bir yazdırma bileti geçerli olduğunu ve bunu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetimi yönelik yönergeler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Printing>  
@@ -52,4 +52,4 @@ Bu bölümdeki konular, yazdırma kullanmayı göstermek ve yazdırma sistemi y�
  <xref:System.Printing.Interop>  
  [Yazdırmaya Genel Bakış](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [WPF'deki Belgeler](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](http://www.microsoft.com/xps)
+ [XPS](https://www.microsoft.com/xps)

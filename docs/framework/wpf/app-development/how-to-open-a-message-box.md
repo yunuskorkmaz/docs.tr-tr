@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir ileti kutusu açın'
+title: 'Nasıl yapılır: bir ileti kutusu açma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - message boxes [WPF], opening
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
-ms.openlocfilehash: dd79d69c9b1b54c5158b58ee2f1675e7d11a386a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f05190030ed6324917348fa1926abd5385e30f7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545642"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425818"
 ---
-# <a name="how-to-open-a-message-box"></a>Nasıl yapılır: bir ileti kutusu açın
-Bu örnek bir ileti kutusu açmak nasıl gösterir.  
+# <a name="how-to-open-a-message-box"></a>Nasıl yapılır: bir ileti kutusu açma
+Bu örnek, bir ileti kutusu açma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Bir ileti kutusu kullanıcılara bilgilerini görüntüleme görüntülemeleri modal iletişim kutusudur. Bir ileti kutusu statik çağırarak açıldığında <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. Zaman <xref:System.Windows.MessageBox.Show%2A> olduğu olarak adlandırılan, ileti bir dize parametresi kullanılarak gönderilir. Birkaç aşırı <xref:System.Windows.MessageBox.Show%2A> bir ileti kutusu nasıl görüneceğini yapılandırmanıza izin verir (bkz: <xref:System.Windows.MessageBox>).  
+ Bir ileti kutusu, kullanıcıların bilgilerini görüntülemek için bir görüntülemeleri kalıcı bir iletişim kutusudur. Statik çağırarak bir ileti kutusu açıldığında <xref:System.Windows.MessageBox.Show%2A> yöntemi <xref:System.Windows.MessageBox> sınıfı. Zaman <xref:System.Windows.MessageBox.Show%2A> olan çağrılır, iletinin dize parametresi kullanılarak geçirilir. İlişkin çeşitli aşırı yükler <xref:System.Windows.MessageBox.Show%2A> ileti kutusunun nasıl görüneceğini yapılandırmanıza olanak sağlar (bkz <xref:System.Windows.MessageBox>).  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [MessageBox örnek](http://go.microsoft.com/fwlink/?LinkID=160023)
+ [MessageBox örnek](https://go.microsoft.com/fwlink/?LinkID=160023)

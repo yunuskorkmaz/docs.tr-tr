@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755083"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422194"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan kaldırır.  
@@ -39,7 +39,7 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan k
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Kaldırılacak belirteç işleyici CLR türü adı. Nasıl belirleneceği hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvuruları](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Gerekli.|  
+|türü|Kaldırılacak belirteç işleyicisinin CLR tür adı. Belirtme hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvurularını](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,10 +48,10 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyondan k
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML kullanımı gösterilmiştir `<add>` ve `<remove>` öğeleri varsayılan oturum belirteci işleyicisi özel oturum belirteci işleyicisi ile değiştirin. XML alınırlar `ClaimsAwareWebFarm` örnek.  
+ Aşağıdaki XML kullanımını gösterir `<add>` ve `<remove>` öğeleri varsayılan oturum belirteci işleyicisi bir özel oturum belirteci işleyicisi ile değiştirilecek. XML alınır `ClaimsAwareWebFarm` örnek.  
   
 ```xml  
 <securityTokenHandlers>  

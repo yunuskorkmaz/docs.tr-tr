@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999569"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421203"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -21,7 +21,7 @@ Bazı ipuçları ve ortak C# Geliştirici Practices püf noktaları vardır.
 - [Bir yapı ile bir sınıf için bir yöntem geçirme arasındaki farkları öğrenin](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Lambda ifadeleri kullanma](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Tür adı genel ad alanı diğer adlarını kullanarak çakışmaları](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Kullanım İşleç aşırı yüklemesi](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).
+- [Kullanım İşleç aşırı yüklemesi](../language-reference/keywords/operator.md).
 - [Özel bir genişletme yöntemi uygulama ve arama](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Hatta C# programcıları isteyebilirsiniz [kullanın `My` ad alanından VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [İçin yeni bir yöntem oluşturma bir `enum` genişletme yöntemleri kullanarak yazın](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

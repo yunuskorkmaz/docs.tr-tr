@@ -2,36 +2,36 @@
 title: Birleştirme işlemleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645609"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425380"
 ---
 # <a name="join-operations-visual-basic"></a>Birleştirme işlemleri (Visual Basic)
-A *birleştirme* iki veri kaynağının bir veri kaynağındaki nesneleri başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerle ilişkidir.  
+A *birleştirme* iki veri kaynaklarının bir veri kaynağı nesneleri başka bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerle işbirliğidir.  
   
- Birleştirme ilişkilerini birbirleriyle doğrudan izlenemiyor veri kaynakları hedef sorgularda önemli bir işlemdir. Nesne odaklı programlama, bu, aşağıdaki gibi modellenir olmayan nesneler arasında bir ilişki anlamına gelebilir geriye doğru tek yönlü bir ilişkinin yönü. Tek yönlü bir ilişkinin Şehir türünde bir özellik olan bir müşteri sınıfı örneğidir ancak Şehir sınıfı müşteri nesneler koleksiyonunun bir özellik içermiyor. Şehir nesnelerin bir listesini varsa ve her şehirde tüm müşteriler bulmak istediğiniz, bunları bulmak için bir birleştirme işlemi'ni kullanabilirsiniz.  
+ Birleştirme, veri kaynakları birbirleriyle ilişkilerini doğrudan izlenemiyor hedef sorgularda önemli bir işlemdir. Bu, aşağıdakiler gibi modellenmiştir olmayan nesneler arasında bir bağıntı gelebilir nesne yönelimli programlama, geriye doğru tek yönlü bir ilişkinin yönü. Tek yönlü bir ilişkinin bir özellik türü şehri olan bir müşteri sınıf örneğidir ancak Şehir sınıfı müşteri nesnesi koleksiyonu bir özelliğe sahip değildir. Şehir nesnelerin bir listesini varsa ve tüm müşteriler, her şehirde bulmak istediğiniz bulmak için bir birleştirme işlemi'ni kullanabilirsiniz.  
   
- LINQ Framework'te sağlanan birleşim yöntemleri <xref:System.Linq.Enumerable.Join%2A> ve <xref:System.Linq.Enumerable.GroupJoin%2A>. Bu yöntemler equijoins veya eşleşen iki veri kaynağı kendi anahtarları eşitlik bakımından tabanlı birleşimler gerçekleştirin. (Transact-SQL destekler karşılaştırma için örneğin 'değerinden' işleci 'eşittir' dışındaki operatörlere katılın.) İlişkisel veritabanı terimleriyle <xref:System.Linq.Enumerable.Join%2A> birleşim türü bir iç birleştirme uygular, diğer veri kümesindeki bir eşleşme olan nesneler döndürülür içinde. <xref:System.Linq.Enumerable.GroupJoin%2A> Yöntemi doğrudan bir eşdeğer ilişkisel veritabanı bağlamında olsa da, bir üst İç birleşimler sol dış birleştirmeler ve uygular. Diğer veri kaynağında ilişkili öğe sahip olsa bile bir sol dış birleşim ilk (soldaki) veri kaynağının her öğe döndüren bir birleşim ' dir.  
+ LINQ framework içinde sağlanan birleşim yöntemleri <xref:System.Linq.Enumerable.Join%2A> ve <xref:System.Linq.Enumerable.GroupJoin%2A>. Bu yöntemler equijoins ya da bunların anahtarların eşitlik bakımından göre iki veri kaynağı ile eşleşen birleştirmeler gerçekleştirin. (Transact-SQL destekler karşılaştırması için örneğin 'küçüktür' işleci 'equals' dışındaki operatörlere katılın.) İlişkisel veritabanı koşullarında <xref:System.Linq.Enumerable.Join%2A> uygulayan bir iç birleştirme, birleşim türü içinde yalnızca diğer veri kümesinde bir eşleşmeye sahip nesneler döndürülür. <xref:System.Linq.Enumerable.GroupJoin%2A> Yöntemi eşdeğeri yoktur doğrudan ilişkisel veritabanı bağlamında, ancak İç birleşimler sol dış birleştirmeler ve bir üst kümesi uygular. Diğer veri kaynağında ilişkili hiçbir öğe olsa bile bir sol dış birleşim ilk (soldaki) veri kaynağının her öğe döndüren bir birleştirme ' dir.  
   
- Aşağıdaki çizimde iki kümesi ve bir iç birleştirme veya sol dış birleşim dahil bu kümeleri içinde öğelerin kavramsal görünümünü gösterir.  
+ Aşağıdaki çizimde, iki ve öğeleri bir iç birleştirme veya bir sol dış birleşim dahil edilen bu kümeleri içinde kavramsal bir görünümü gösterir.  
   
- ![İç gösteren iki çakışan daireye&#47;dış. ] (../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![İç gösteren iki örtüşen daireler&#47;dış. ](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Birleştirme|Anahtar Seçici işlevlerini tabanlı iki sıraları birleştirir ve değer çiftlerini ayıklar.|`From x In …, y In … Where x.a = y.a`<br /><br /> -veya-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
-|GroupJoin|İki sıraları anahtar Seçici işlevleri ve grupları her öğe için sonuçta elde edilen eşleşen temelinde birleştirir.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
+|Birleştirme|Anahtar Seçici işlevlerine göre iki diziyi birleştirir ve değer çiftlerini ayıklar.|`From x In …, y In … Where x.a = y.a`<br /><br /> veya<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|GroupJoin|İki sıranın anahtar Seçici işlevleri ve grupları her öğe için sonuçlar temelinde birleştirir.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Linq>  
  [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Birleşimler ve Çapraz Ürün Sorguları Düzenleme](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Nasıl yapılır: (LINQ) (Visual Basic) farklı dosyalardan içerik birleştirme](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [Nasıl yapılır: birleştirme dosyalardan içerik (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
  [Nasıl yapılır: (LINQ) (Visual Basic) birden fazla kaynaktan nesne koleksiyonları doldurma](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

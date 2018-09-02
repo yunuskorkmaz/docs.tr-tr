@@ -1,48 +1,48 @@
 ---
-title: 'Nasıl yapılır: özel Kalıcılık katılımcı oluşturma'
+title: 'Nasıl yapılır: özel Kalıcılık Katılımcısı oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517247"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422083"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: özel Kalıcılık katılımcı oluşturma
-Aşağıdaki yordam Kalıcılık katılımcı oluşturmak için adım vardır. Bkz: [kalıcı katılan](http://go.microsoft.com/fwlink/?LinkID=177735) örnek ve [deposu genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) konu Kalıcılık katılımcılarının örnek uygulamaları için.  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Nasıl yapılır: özel Kalıcılık Katılımcısı oluşturma
+Aşağıdaki yordam bir Kalıcılık Katılımcısı oluşturma adımları vardır. Bkz: [kalıcı katılan](https://go.microsoft.com/fwlink/?LinkID=177735) örnek ve [Store genişletilebilirlik](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) konu Kalıcılık katılımcıları örnek uygulamaları için.  
   
-1.  Öğesinden türetilen bir sınıf oluşturun <xref:System.Activities.Persistence.PersistenceParticipant> veya <xref:System.Activities.Persistence.PersistenceIOParticipant> sınıfı. PersistenceIOParticipant sınıfı g/ç işlemlerinde katılmak için ek olarak PersistenceParticipant sınıf olarak aynı genişletilebilirlik noktaları sağlar. Bir veya daha fazla aşağıdaki adımları izleyin.  
+1.  Türetilen bir sınıf oluşturmanız <xref:System.Activities.Persistence.PersistenceParticipant> veya <xref:System.Activities.Persistence.PersistenceIOParticipant> sınıfı. PersistenceIOParticipant sınıfı g/ç işlemlerinde katılmak için ek olarak PersistenceParticipant sınıf olarak aynı genişletilebilirlik noktaları sağlar. Bir veya daha fazla aşağıdaki adımları izleyin.  
   
-2.  Uygulama <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> yöntemi. **CollectValues** yöntemi iki sözlük parametreleri, okuma/yazma değerlerini depolamak için bir tane ve diğeri (daha sonra sorgularda kullanılan) salt yazılır değerlerini depolamak için sahiptir. Bu yöntemde, bu sözlükler Kalıcılık Katılımcısı özgü verilerle doldurmanız gerekir. Anahtar ve değer her sözlük değeri adını içeren olarak bir <xref:System.Runtime.DurableInstancing.InstanceValue> nesnesi.  
+2.  Uygulama <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> yöntemi. **CollectValues** iki sözlük parametreleri, okuma/yazma değerlerini depolamak için bir tane ve diğeri (daha sonra sorgularında kullanılan) salt yazılır değerleri depolamak için yöntemi vardır. Bu yöntemde özel Kalıcılık Katılımcısı veriler ile bu sözlük doldurmanız gerekir. Anahtar ve değer her sözlük değerin adını içeren olarak bir <xref:System.Runtime.DurableInstancing.InstanceValue> nesne.  
   
-     ReadWriteValues sözlüğündeki değerleri olarak paketlenir **InstanceValue** nesneleri. Salt yazılır sözlüğündeki değerleri olarak paketlenir **InstanceValue** InstanceValueOptions.Optional ve InstanceValueOption.WriteOnly kümesiyle nesneleri. Her **InstanceValue** tarafından sağlanan **CollectValues** uygulamaları tüm Kalıcılık katılımcılar arasında benzersiz bir adı olması gerekir.  
+     ReadWriteValues sözlüğündeki değerleri olarak paketlenir **InstanceValue** nesneleri. Salt yazılır sözlüğündeki değerleri olarak paketlenir **InstanceValue** InstanceValueOptions.Optional ve InstanceValueOption.WriteOnly kümesiyle nesneleri. Her **InstanceValue** tarafından sağlanan **CollectValues** uygulamaları tüm Kalıcılık katılımcıları genelinde benzersiz adlara sahip olmalıdır.  
   
     ```  
     protected virtual void CollectValues (out IDictionary<XName,Object> readWriteValues, out IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-3.  Uygulama <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> yöntemi. **MapValues** yöntem parametreleri benzer iki parametre alır, **CollectValues** yöntemi alır. İçindeki tüm değerleri toplanan **CollectValues** aşaması, bu sözlük parametreleri gözden geçirilir. Tarafından eklenen yeni değerleri **MapValues** aşama salt yazılır değerlere eklenir.  Salt yazılır sözlük doğrudan örnek değerleri ile ilişkili bir dış kaynaktan veri sağlamak için kullanılır. Uygulamaları tarafından sağlanan her bir değeri **MapValues** yönteminin tüm Kalıcılık katılımcılar genelinde benzersiz bir ad olmalıdır.  
+3.  Uygulama <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> yöntemi. **MapValues** yöntem parametreleri benzer iki parametre alır, **CollectValues** yöntemi alır. Toplanan tüm değerler **CollectValues** aşama Bu sözlük parametreleri gözden geçirilir. Tarafından eklenen yeni değerleri **MapValues** aşama salt yazılır değerlere eklenir.  Salt yazılır sözlük doğrudan örnek değerleri ile ilişkili bir dış kaynaktan veri sağlamak için kullanılır. Uygulamaları tarafından sağlanan her bir değeri **MapValues** yöntemi tüm Kalıcılık katılımcıları genelinde benzersiz adlara sahip olmalıdır.  
   
     ```  
     protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> Yöntemi işlevselliği sağlar, <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> başka bir değer tarafından işlenen kurmadı başka bir Kalıcılık katılımcılar tarafından sağlanan bir bağımlılığı sağlar, desteklemez, <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> henüz.  
+     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> Yöntem işlevselliği sağlar, <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> için bir bağımlılık tarafından işlenen edilmemiş başka bir Kalıcılık Katılımcısı tarafından sağlanan başka bir değer sağlar, daha önceden, <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> henüz.  
   
-4.  Uygulama **PublishValues** yöntemi. **PublishValues** yöntemi Kalıcılık Mağazası'ndan yüklenen tüm değerleri içeren bir sözlük alır.  
+4.  Uygulama **PublishValues** yöntemi. **PublishValues** yöntem sürdürme deposundan yüklenen tüm değerleri içeren bir sözlük alır.  
   
     ```  
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Uygulama **BeginOnSave** katılımcı Kalıcılık g/ç katılımcı ise yöntemi. Bu yöntem bir kaydetme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri (kaydetme) sürdürmek için g/ç sunduğunuz gerçekleştirmeniz gerekir.  Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır.  Ayrıca, PersistenceIOParticipants bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
+5.  Uygulama **BeginOnSave** katılımcı bir g/ç Kalıcılık Katılımcısı varsa yöntemi. Bu yöntem, bir kayıt işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri (kaydetme) kalıcı hale getirmeniz için g/ç sunduğunuz gerçekleştirmeniz gerekir.  Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır.  Ayrıca, PersistenceIOParticipants biri değil Aksi takdirde kullanılacak içinde çalışması konak Kalıcılık bölüm için bir işlem oluşturur, bir işlem tutarlılığı gereksinim tanıtma.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Uygulama **BeginOnLoad** katılımcı Kalıcılık g/ç katılımcı ise yöntemi. Bu yöntem, bir yükleme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri yüklenmesini g/ç sunduğunuz gerçekleştirmeniz gerekir. Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır. Ek olarak, Kalıcılık g/ç katılımcıları bir Aksi durumda kullanılmıyorsa, çalışması konak Kalıcılık bölüm için bir işlem oluşturur. bir işlemsel tutarlılık gereksinim tanıtırsınız.  
+6.  Uygulama **BeginOnLoad** katılımcı bir g/ç Kalıcılık Katılımcısı varsa yöntemi. Bu yöntem, bir yükleme işlemi sırasında çağrılır. Bu yöntemde, iş akışı örnekleri yüklenmesini g/ç sunduğunuz gerçekleştirmeniz gerekir. Konak bir işlem için karşılık gelen Kalıcılık komutu kullanıyorsanız, aynı işlem içinde Transaction.Current sağlanır. Ayrıca, Kalıcılık g/ç katılımcıları biri değil Aksi takdirde kullanılacak içinde çalışması konak Kalıcılık bölüm için bir işlem oluşturur, bir işlem tutarlılığı gereksinim tanıtma.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

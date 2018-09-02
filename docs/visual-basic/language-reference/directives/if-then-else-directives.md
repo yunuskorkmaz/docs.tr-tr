@@ -1,5 +1,5 @@
 ---
-title: '#If... Then... #Else yönergeleri'
+title: '#If... Then... #Else yönergeleri (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69ce56d770de5f004f204b1764fd51d948ba92c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05aac9109e49897d1c4dbbad60d807eb3e47798d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591087"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423209"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
-Visual Basic kodu seçili bloklarını koşullu olarak derler.  
+Seçili Visual Basic kod bloklarını koşullu biçimde derler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,25 +47,25 @@ Visual Basic kodu seçili bloklarını koşullu olarak derler.
   
 ## <a name="parts"></a>Bölümler  
  `expression`  
- İçin gerekli `#If` ve `#ElseIf` deyimleri, isteğe bağlı başka bir yerde. Özel olarak bir veya daha fazla koşullu derleyici sabitleri, değişmez değerleri ve değerlendiren işleçleri oluşan herhangi bir ifade `True` veya `False`.  
+ Gerekli `#If` ve `#ElseIf` deyimleri, isteğe bağlı başka bir yerde. Bir veya daha fazla koşullu derleyici sabitleri, sabit değerleri ve değerlendiren işleçler, özel olarak oluşan herhangi bir ifade `True` veya `False`.  
   
  `statements`  
- İçin gerekli `#If` deyimi engellemek, isteğe bağlı başka bir yerde. Visual Basic programı çizgi veya ilişkili ifade değerlendirilirse derlenen derleyici yönergeleri `True`.  
+ Gerekli `#If` deyim bloğu isteğe bağlı başka bir yerde. Visual Basic program satırları veya ilişkili ifadenin değerlendirdiği, derlenmiş derleyici yönergeleri `True`.  
   
  `#End If`  
- Sonlandırır `#If` deyimi bloğu.  
+ Sonlandırır `#If` deyim bloğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yüzeyinde davranışını `#If...Then...#Else` yönergeleri görünür aynı aynı `If...Then...Else` deyimleri. Ancak, `#If...Then...#Else` yönergeleri değerlendirmek derleyicisi tarafından derlenen ancak `If...Then...Else` deyimleri çalışma zamanında koşulları değerlendirin.  
+ Yüzeysel olarak, davranışını `#If...Then...#Else` yönergeleri görünür aynı şekilde `If...Then...Else` deyimleri. Ancak, `#If...Then...#Else` yönergeleri değerlendirmek derleyici tarafından derlenmiş ise `If...Then...Else` deyimleri, çalışma zamanında koşulları değerlendirin.  
   
- Koşullu derleme genellikle farklı platformlar için aynı programı derlemek için kullanılır. Önlemek için de kullanılan yürütülebilir bir dosya olarak görünmesini kodda hata ayıklama. Boyutu veya performans üzerinde hiçbir etkisi olmaz şekilde koşullu derleme sırasında dışlanan kod tamamen son yürütülebilir dosyasından atlandı.  
+ Koşullu derleme, genellikle aynı programın farklı platformlar için derlemek için kullanılır. Önlemek için de kullanılan bir yürütülebilir dosya olarak görüntülenmesini kodda hata ayıklama. Boyutu veya performans üzerinde hiçbir etkisi olmaz şekilde koşullu derleme sırasında dışlanan kod tamamen son yürütülebilir dosyadan atlandı.  
   
- Tüm değerlendirme sonucunu bağımsız olarak tüm ifadeler kullanarak değerlendirilir `Option Compare Binary`. `Option Compare` Deyimi ifadelerinde etkilemez `#If` ve `#ElseIf` deyimleri.  
+ Tüm değerlendirme sonucunu bağımsız olarak kullanarak tüm ifadeler değerlendirilir `Option Compare Binary`. `Option Compare` Deyimi ifadelerinde etkilemez `#If` ve `#ElseIf` deyimleri.  
   
 > [!NOTE]
->  Hiçbir tek satırlı biçiminde `#If`, `#Else`, `#ElseIf`, ve `#End If` yönergeleri bulunmaktadır. Başka bir kod herhangi yönergesi olarak aynı satırda görünebilir. 
+>  Hiçbir tek satır biçiminde `#If`, `#Else`, `#ElseIf`, ve `#End If` yönergeler bulunmaktadır. Başka bir kod tüm yönergeleri ile aynı satırda görünebilir. 
 
-Koşullu derleme bloğundaki ifadeleri tam mantıksal deyimler olmalıdır. Örneğin, yalnızca bir işlev özniteliklerini koşullu derlenemiyor, ancak koşullu özniteliklerini birlikte işlevi bildirebilir:
+Koşullu derleme bloğundaki ifadeleri tam mantıksal ifadeler olmalıdır. Örneğin, yalnızca bir işlev özniteliklerini koşullu olarak derlenemez, ancak işlev özniteliklerini birlikte koşullu olarak bildirebilirsiniz:
 
 ```vb
    #If DEBUG Then
@@ -78,7 +78,7 @@ Koşullu derleme bloğundaki ifadeleri tam mantıksal deyimler olmalıdır. Örn
 ```
 
 ## <a name="example"></a>Örnek
- Bu örnekte `#If...Then...#Else` yapı belirli deyimleri derlenip derlenmeyeceğini belirler.  
+ Bu örnekte `#If...Then...#Else` belirli deyimleri derleme belirlemek için yapı.  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   

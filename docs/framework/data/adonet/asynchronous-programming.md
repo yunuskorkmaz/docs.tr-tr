@@ -2,19 +2,19 @@
 title: Zaman uyumsuz programlama
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425731"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
-Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server (SqlClient) veri sunulmuştur zaman uyumsuz programlama işlevleri desteklemek için yapılan geliştirmeler dahil olmak üzere sağlayıcı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+Bu konu içinde zaman uyumsuz programlama için desteği açıklamaktadır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] için SQL Server (SqlClient) veri sunulan zaman uyumsuz programlama işlevselliği desteklemek için yapılan geliştirmeleri dahil olmak üzere sağlayıcı [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Eski zaman uyumsuz programlama  
- Öncesinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], SqlClient ile zaman uyumsuz programlama aşağıdaki yöntemlerle yapıldı ve `Asynchronous Processing=true` bağlantı özelliği:  
+ Öncesinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], SqlClient ile zaman uyumsuz programlama, aşağıdaki yöntemlerle yapıldı ve `Asynchronous Processing=true` bağlantı özelliği:  
   
 1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
@@ -22,14 +22,14 @@ Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[d
   
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
- Bu işlev SqlClient kalan [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+ Bu işlev SqlClient kalır [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
- ' Den başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bu yöntemleri artık gerek `Asynchronous Processing=true` bağlantı dizesinde.  
+ Başlayarak [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bu yöntemler artık gereksinim `Asynchronous Processing=true` bağlantı dizesindeki.  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Eklenen zaman uyumsuz programlama Özellikler [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
- Yeni zaman uyumsuz programlama özelliği Kodu'nu zaman uyumsuz için basit bir yöntem sağlar.  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Eklenen zaman uyumsuz programlama özellikleri [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+ Yeni zaman uyumsuz programlama özelliği kod zaman uyumsuz hale getirmek için basit bir yöntem sağlar.  
   
- Sürümünde sunulan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bkz:  
+ Sunulan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], bkz:  
   
 - [C# zaman uyumsuz programlama](../../../csharp/async.md)
 
@@ -39,18 +39,18 @@ Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[d
 
 - [.Net 4.5 (Bölüm 2) SqlDataReader'ın yeni zaman uyumsuz yöntemler kullanma](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
- Kullanıcı arabirimi yanıt vermiyor veya sunucunuzun ölçekli değildir, kodunuzu daha zaman uyumsuz olması gerektiğini olasıdır.  Zaman uyumsuz kod yazma geleneksel olarak zaman uyumsuz işlemi tamamlandıktan sonra oluşan mantığı ifade etmek için (devamlılık olarak da bilinir) bir geri yükleme dahil. Zaman uyumlu bir kod karşılaştırıldığında zaman uyumsuz kod yapısını, karmaşık hale getirir.  
+ Kullanıcı arabiriminizi yanıt vermiyor veya sunucunuza ölçekli değildir, kodunuzu daha zaman uyumsuz olması gerektiğini olasıdır.  Zaman uyumsuz kod yazma geleneksel zaman uyumsuz işlem tamamlandıktan sonra gerçekleşen mantığı ifade etmek (devamlılık olarak da bilinir) bir geri yükleme dahil. Eş zamanlı kod değiştirmeyen zaman uyumsuz kod yapısını, karmaşık hale getirir.  
   
- Geri aramalar kullanarak ve birden çok yöntem veya lambda ifadeleri kodunuzu bölme olmadan zaman uyumsuz yöntemleri çağırabilirsiniz.  
+ Geri çağırmaları kullanarak kodunuzun birden çok yöntemlerde veya lambda ifadelerinde bölme olmadan ve zaman uyumsuz yöntemleri çağırabilirsiniz.  
   
- `async` Değiştirici yöntemi zaman uyumsuz olduğunu belirtir. Çağrılırken bir `async` yöntemi, bir görev döndürülür. Zaman `await` işleci göreve uygulandığında, geçerli yöntemi hemen çıkar. Görev tamamlandığında yürütme aynı yönteminde sürdürür.
+ `async` Değiştiricisi, bir yöntemin zaman uyumsuz olduğunu belirtir. Çağrılırken bir `async` yöntemi, bir görev döndürülür. Zaman `await` işleci, bir göreve uygulanır, hemen geçerli yöntemi çıkar. Görev tamamlandığında aynı yöntemi yürütmeye devam eder.
   
 > [!WARNING]
->  Bir uygulama da kullanıyorsa, zaman uyumsuz çağrıları desteklenmez `Context Connection` bağlantı dizesi anahtar sözcüğü.  
+>  Ayrıca bir uygulama kullanıyorsa, zaman uyumsuz çağrıları desteklenmez `Context Connection` bağlantı dizesi anahtar sözcüğü.  
   
- Çağıran bir `async` yöntemi her ek iş parçacığı ayrılamadı. Bu varolan g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanabilirsiniz.  
+ Çağırma bir `async` yöntemi herhangi bir ek iş parçacığı ayrılamadı. Bunu mevcut g/ç Tamamlama iş parçacığı kısa bir süre sonunda kullanabilirsiniz.  
   
- Aşağıdaki yöntemlerden eklenmiştir [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] zaman uyumsuz programlama desteklemek için:  
+ Aşağıdaki yöntemlerden eklenmiştir [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Zamanuyumsuz programlamayı desteklemek için:  
   
 -   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
@@ -86,10 +86,10 @@ Bu konu içinde zaman uyumsuz programlama desteği anlatılmaktadır [!INCLUDE[d
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- Diğer zaman uyumsuz üyeleri desteklemek için eklenen [akış SqlClient Destek](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+ Diğer zaman uyumsuz üyeler desteklemek için eklenen [SqlClient akış desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Zaman uyumsuz bağlantı açık zaman uyumlu  
- Yeni zaman uyumsuz özelliğini kullanmak için var olan bir uygulama yükseltebilirsiniz. Örneğin, bir uygulama eşzamanlı bağlantı algoritmaya sahiptir ve veritabanına bağlanır ve bağlandıktan sonra uygulama diğer kullanıcıların yalnızca oturum açan biri sinyalleri bir saklı yordam çağırır ve her zaman, kullanıcı Arabirimi iş parçacığı engeller varsayın.  
+ Yeni zaman uyumsuz özelliğini kullanmak için mevcut bir uygulama yükseltebilirsiniz. Örneğin, bir uygulamanın eşzamanlı bağlantı algoritmaya sahiptir ve veritabanına bağlanır ve bağlandıktan sonra uygulama diğer kullanıcılar için yalnızca oturum açan bir sinyalleri bir saklı yordam çağrıları her seferinde, UI iş parçacığını engeller varsayalım.  
   
 ```csharp
 using SqlConnection conn = new SqlConnection("…");  
@@ -102,7 +102,7 @@ using SqlConnection conn = new SqlConnection("…");
 }  
 ```  
   
- Zaman uyumsuz yeni işlevselliği kullanmak için dönüştürüldüğünde program gibi görünür:  
+ Yeni zaman uyumsuz işlevleri kullanmak için dönüştürüldüğünde, program gibi görünür:  
   
 ```csharp
 using System;  
@@ -131,8 +131,8 @@ class A {
 }  
 ```  
   
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>Yeni zaman uyumsuz özelliği (eski ve yeni desenleri karıştırma) var olan bir uygulamada ekleme  
- Var olan zaman uyumsuz mantığı değiştirmeden yeni zaman uyumsuz özelliği (SqlConnection::OpenAsync) eklemek mümkündür. Örneğin, bir uygulama şu anda kullanıyorsa:  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a>Yeni zaman uyumsuz özelliği (eski ve yeni desenleri karıştırma) var olan bir uygulamaya ekleme  
+ Mevcut zaman uyumsuz mantık değiştirmeden yeni zaman uyumsuz özelliği (SqlConnection::OpenAsync) eklemek mümkündür. Örneğin, şu anda bir uygulama kullanıyorsa:  
   
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
@@ -142,7 +142,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
 ```  
   
- Önemli ölçüde varolan algoritması değiştirmeden yeni zaman uyumsuz desen kullanmaya başlayabilirsiniz.  
+ Mevcut algoritması önemli ölçüde değişiklik yapmadan yeni zaman uyumsuz desen kullanmaya başlayabilirsiniz.  
   
 ```csharp
 using System;  
@@ -169,10 +169,10 @@ class A {
 }  
 ```  
   
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Temel sağlayıcı modeline ve yeni zaman uyumsuz özelliğini kullanma  
- Farklı veritabanlarına bağlanmak ve sorguları yürütmek için bir aracı oluşturmanız gerekebilir. Temel sağlayıcı modeline ve yeni zaman uyumsuz özelliğini kullanabilirsiniz.  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Temel sağlayıcı modeli ve yeni zaman uyumsuz özelliğini kullanma  
+ Farklı veritabanlarına bağlanmak ve sorgu yürütmek için bir aracı oluşturmanız gerekebilir. Temel sağlayıcı modeli ve yeni zaman uyumsuz özelliğini kullanabilirsiniz.  
   
- Dağıtılmış işlemler kullanmak için Microsoft Dağıtılmış işlem denetleyici (MSDTC) sunucuda etkinleştirilmesi gerekir. MSDTC etkinleştirme hakkında daha fazla bilgi için bkz: [bir Web sunucusundaki MSDTC etkinleştirmek için nasıl](http://msdn.microsoft.com/library/dd327979.aspx).  
+ Microsoft Dağıtılmış işlem denetleyici (MSDTC) dağıtılmış işlemler kullanılacak sunucuda etkinleştirilmelidir. MSDTC etkinleştirme hakkında daha fazla bilgi için bkz: [nasıl bir Web sunucusundaki MSDTC etkinleştirmek için](https://msdn.microsoft.com/library/dd327979.aspx).  
   
 ```csharp
 using System;  
@@ -284,7 +284,7 @@ class Program {
 ```  
   
 ### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a>SQL işlemleri ve yeni zaman uyumsuz özelliğini kullanma  
- Bir kuruluş uygulamasında dağıtılmış işlemler birden fazla veritabanı sunucuları arasındaki işlemleri etkinleştirmek için bazı senaryolarda eklemeniz gerekebilir. System.Transactions ad alanı ve bir dağıtılmış işlem gibi listeleme kullanabilirsiniz:  
+ Bir kuruluş uygulamasında, dağıtılmış işlemler birden çok veritabanı sunucuları arasındaki işlemleri etkinleştirmek için bazı senaryolarda eklemeniz gerekebilir. System.Transactions ad alanı ve dağıtılmış bir işlem şu şekilde listeleme kullanabilirsiniz:  
   
 ```csharp
 using System;  
@@ -385,7 +385,7 @@ namespace Samples {
 ```  
   
 ### <a name="asynchronous-operations-with-sqlbulkcopy"></a>SqlBulkCopy ile zaman uyumsuz işlemler  
- Zaman uyumsuz özellikler için aynı zamanda eklendi <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> ile <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.  
+ Zaman uyumsuz özellikler için de eklendi <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> ile <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.  
   
 ```csharp
 using System;  
@@ -627,10 +627,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 ```  
   
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>Zaman uyumsuz olarak birden fazla komut MARS ile kullanma  
- Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesne, bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci olarak <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
+ Örnek tek bir bağlantı açar **AdventureWorks** veritabanı. Kullanarak bir <xref:System.Data.SqlClient.SqlCommand> nesnesi bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanılır, ikinci <xref:System.Data.SqlClient.SqlDataReader> , ilk verilerini kullanarak açıldığında <xref:System.Data.SqlClient.SqlDataReader> ikinci okuyucu WHERE yan tümcesi için giriş olarak.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** veritabanını SQL Server'a dahildir. Örnek kodda sağlanan bağlantı dizesi, veritabanı yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```csharp
 using System;  
@@ -696,13 +696,13 @@ class Class1 {
 }  
 ```  
   
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Zaman uyumsuz olarak okumak ve MARS ile verileri güncelleştirme  
- MARS kullanılacak bağlantı sağlayan her ikisi de işlemleri ve veri işleme dili (DML) birden çok bekleyen işlemi okuma işlemleri için. Bu özellik, bir uygulamanın bağlantısı meşgul hatalarla ilgilenir gereksinimini ortadan kaldırır. Ayrıca, MARS genellikle daha fazla kaynak tüketmesine sunucu tarafı imleçler, kullanıcı değiştirebilirsiniz. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabilir çünkü bunlar kullanma gereksinimini ortadan aynı işlem bağlamı paylaşabilirsiniz **sp_getbindtoken** ve **sp_bindsession** sistem saklı yordamlar.  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Zaman uyumsuz olarak okuma ve MARS ile verileri güncelleştirme  
+ MARS kullanılmak üzere bir bağlantı sağlar hem de işlemleri ve veri işleme dili (DML) ile birden fazla bekleyen işlemi okuma işlemleri için. Bu özellik, bir uygulamanın bağlantı meşgul hatalarla uğraşmak ihtiyacını ortadan kaldırır. Ayrıca, MARS genellikle daha fazla kaynak tüketmesine sunucu tarafı imleçler, kullanıcı değiştirebilirsiniz. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabilir olduğundan, bunlar kullanma gereksinimini ortadan aynı işlem bağlamını paylaşabilir **sp_getbindtoken** ve **sp_bindsession** sistem saklı yordamları.  
   
- Aşağıdaki konsol uygulaması iki kullanımı gösterilmiştir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin olan nesne. İlk komut nesnesi, kredi derecelendirme 5'tir satıcılarının listesini alır. İkinci komut nesnesi kimliği sağlanan satıcının kullandığı bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm özel satıcı için ürünlerin. Her ürün kaydı ikinciye ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için bir hesaplama gerçekleştirilen **OnOrderQty** olmalıdır. Üçüncü komut nesnesi sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Tüm işlem sona erdiğinde geri tek bir işlem içinde yer alır.  
+ Aşağıdaki konsol uygulamasında nasıl kullanacağınızı gösterir <xref:System.Data.SqlClient.SqlDataReader> üç nesneleriyle <xref:System.Data.SqlClient.SqlCommand> nesneleri ve tek bir <xref:System.Data.SqlClient.SqlConnection> MARS etkin nesne. İlk komut nesnesi 5 ayarlanmış kredi derecelendirme ise olan satıcıların listesini alır. İkinci komut nesnesi sağlanan kimliği bir tedarikçi kullanan bir <xref:System.Data.SqlClient.SqlDataReader> ikinci yüklemek için <xref:System.Data.SqlClient.SqlDataReader> tüm belirli satıcı için ürünlerin ile. Her bir ürün kaydı ikinci tarafından ziyaret edilen <xref:System.Data.SqlClient.SqlDataReader>. Hangi yeni belirlemek için hesaplama gerçekleştirilir **OnOrderQty** olmalıdır. Üçüncü komut nesnesi daha sonra güncelleştirmek için kullanılan **ProductVendor** yeni değeri içeren tablo. Bu işlemi sonunda geri tek bir işlem içinde gerçekleşir.  
   
 > [!NOTE]
->  Aşağıdaki örnek, örnek kullanır **AdventureWorks** SQL Server'da bulunan veritabanı. Örnek kodda sağlanan bağlantı dizesi veritabanına yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
+>  Aşağıdaki örnek, örnek kullanır **AdventureWorks** veritabanını SQL Server'a dahildir. Örnek kodda sağlanan bağlantı dizesi, veritabanı yüklenir ve yerel bilgisayarda kullanılabilir olduğunu varsayar. Bağlantı dizesi, ortamınız için gerektiği gibi değiştirin.  
   
 ```csharp
 using System;  

@@ -9,26 +9,26 @@ ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: abf1c1851e10036ecf46b04662d41a4d9f2667e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 410fe76fe6e3ddba143622c1bc4d0270d906d854
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408664"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423155"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI Otomasyon SelectionItem Denetim Düzeni Uygulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. Hakkında en yeni bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Otomasyon API: UI Otomasyonu](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu kılavuzları ve uygulamak için kuralları tanıtır <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, özellikleri, yöntemleri ve etkinlikleri hakkında bilgiler dahil olmak üzere. Ek başvurular bağlantılar genel bakış sonunda listelenmiştir.  
+ Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, özellikler, yöntemler ve olaylar hakkında bilgiler dahil olmak üzere. Ek başvurular bağlantılar genel bakış sonunda listelenmiştir.  
   
- <xref:System.Windows.Automation.SelectionItemPattern> Denetim düzeni uygulama kapsayıcı denetimleri tek tek, seçilebilir alt öğeleri olarak hareket denetimleri desteklemek için kullanılan <xref:System.Windows.Automation.Provider.ISelectionProvider>. SelectionItem denetim düzeni uygulama denetimleri örnekleri için bkz: [denetim düzeni eşleştirmesi UI Otomasyon istemcileri için](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ <xref:System.Windows.Automation.SelectionItemPattern> Denetim düzeni uygulama kapsayıcı denetimleri tek tek, seçilebilir alt öğeleri olarak davranan denetimleri desteklemek için kullanılan <xref:System.Windows.Automation.Provider.ISelectionProvider>. SelectionItem denetim desenini uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyon istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama rehberi ve kuralları  
- Seçim öğesi denetim düzeni uygulama, aşağıdaki yönergeleri ve kuralları dikkat edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
+ Seçim öğesi denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
   
--   Uygulama alt denetimleri yönetmek tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** uygulamasındaki kaydırıcı **görüntü özellikleri** iletişim kutusu, uygulamalıdır<xref:System.Windows.Automation.Provider.ISelectionProvider>ve bunların alt öğeleri hem uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+-   Uygulama alt denetimler yönetme tek seçim denetimleri <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, gibi **ekran çözünürlüğü** kaydırıcı **görüntü özellikleri** iletişim kutusu, uygulamalıdır<xref:System.Windows.Automation.Provider.ISelectionProvider>ve bunların alt öğeleri hem de uygulamalıdır <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> ve <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>Gerekli üyeleri ISelectionItemProvider için  
@@ -39,17 +39,17 @@ ms.locfileid: "33408664"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Bir kapsayıcıda seçimi önemli ölçüde değişti ve daha fazla gönderme gerektirdiğinde yükseltilmiş <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ve <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> daha olayları <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabiti izin verir.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Olay|Bir kapsayıcı seçim önemli ölçüde değişti ve daha fazla gönderilmesi gerekir harekete geçirilen <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ve <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> olayı <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> sabiti izin verir.|  
   
--   Varsa sonucunu bir <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, bir <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, veya bir <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> tek seçilen öğe bir <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> oluşmalıdır; Aksi takdirde Gönder <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> uygun şekilde.  
+-   Sonucu bir <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>e <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, veya bir <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> tek bir seçili öğe bir <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> oluşmalıdır; Aksi takdirde Gönder <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> uygun şekilde.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcıları aşağıdaki özel durumlar oluşturma gerekir.  
+ Sağlayıcıları, aşağıdaki özel durumlar gerekir.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Ne zaman aşağıdakilerden herhangi birini denenme:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> bir tek seçim kapsayıcıda adlı nerede <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` ve bir öğe zaten seçilidir.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> bir çoklu seçim kapsayıcıda adlı nerede <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` ve yalnızca tek bir öğe seçilidir.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> bir tek seçim kapsayıcıda adlı nerede <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>  =  `false` ve başka bir öğe zaten seçilidir.|  
+|<xref:System.InvalidOperationException>|Aşağıdakilerden herhangi birini ne zaman denenmez:<br /><br /> -   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> tek seçimli bir kapsayıcı olarak adlandırılan burada <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` ve bir öğe zaten seçilir.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> Çoklu seçim bir kapsayıcı olarak adlandırılır burada <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` ve yalnızca bir öğe seçilidir.<br />-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> tek seçimli bir kapsayıcı olarak adlandırılan burada <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>  =  `false` ve başka bir öğe zaten seçilir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
@@ -58,4 +58,4 @@ ms.locfileid: "33408664"
  [UI Otomasyonu Selection Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
  [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Parça sağlayıcı örneği](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [Parça sağlayıcı örneği](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

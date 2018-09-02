@@ -1,51 +1,51 @@
 ---
-title: SendMail özel etkinlik
+title: SendMail özel etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4ad250b42ca06867d307148f93e11c59846a61f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519710"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423406"
 ---
-# <a name="sendmail-custom-activity"></a>SendMail özel etkinlik
-Bu örnek, türetilen özel bir etkinlik oluşturmak gösterilmiştir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulama içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta göndermek için ve kimlik doğrulaması ile posta göndermek için. Bırakma yolu test ve test modu, belirteç değiştirme, dosya şablonları gibi bazı son kullanıcı özellikler de sağlar.  
+# <a name="sendmail-custom-activity"></a>SendMail özel etkinliği
+Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  
   
- Aşağıdaki tabloda bağımsız değişkenleri ayrıntıları `SendMail` etkinlik.  
+ Aşağıdaki tabloda bağımsız değişkenleri için ayrıntıları `SendMail` etkinlik.  
   
 |Ad|Tür|Açıklama|  
 |-|-|-|  
-|Ana bilgisayar|Dize|SMTP sunucusunun ana bilgisayar adresi.|  
-|Bağlantı Noktası|Dize|Ana bilgisayar SMTP hizmetinin bağlantı noktası.|  
+|Ana bilgisayar|Dize|Hostitel SMTP sunucu adresi.|  
+|Bağlantı Noktası|Dize|Konak SMTP hizmetinin bağlantı noktası.|  
 |enableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
-|UserName|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlamak için kullanıcı adı <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
-|Parola|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlamak için parola <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
-|Konu|<xref:System.Activities.InArgument%601>\<dize >|İleti konusu.|  
-|Gövde|<xref:System.Activities.InArgument%601>\<dize >|İleti gövdesi.|  
-|Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine verileri depolamak için kullanılan ek koleksiyonu.|  
-|Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi adresinden.|  
-|Bitiş|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisinin alıcılarını içeren koleksiyon adres.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres (CC) alıcıları bu e-posta iletisi içeren koleksiyon.|  
-|GİZLİ|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisi için gizli kopya (gizli) alıcıları içeren koleksiyon adres.|  
-|Belirteçler|<xref:System.Activities.InArgument%601>< IDictionary\<dize, dize >>|Gövdesinde değiştirmek için belirteç. Bu özellik, kullanıcıların bu özelliği kullanan sağlanan belirteçleri tarafından daha sonra değiştirilebilir daha bazı değerler gövdesinde belirtmesine izin verir.|  
-|BodyTemplateFilePath|Dize|Gövdesi için bir şablon yolu. `SendMail` Etkinlik kendi gövde özelliğine bu dosyanın içeriğini kopyalar.<br /><br /> Şablon belirteçleri özelliği içeriğine göre değiştirilir belirteçleri içerebilir.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Bu özellik ayarlandığında, tüm e-postaları içinde belirtilen adresine gönderilir.<br /><br /> Bu özellik, iş akışları test edilirken kullanılmak üzere tasarlanmıştır. Örneğin, emin olmak istediğinizde tüm e-postaları gerçek alıcılara göndermeden gönderilir.|  
-|TestDropPath|Dize|Bu özellik ayarlandığında, tüm e-postaları da belirtilen dosyasında kaydedilir.<br /><br /> Bu özellik biçimi ve giden e-posta içeriği uygun olmasını sağlamak için iş akışlarını, test veya geldiğinde kullanılmak üzere tasarlanmıştır.|  
+|UserName|Dize|Kullanıcı adı, gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
+|Parola|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın parola <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
+|Konu|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
+|Gövde|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
+|Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine ekli veri depolamak için kullanılan ek koleksiyonu.|  
+|Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi için adres.|  
+|Bitiş|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisinin alıcıları içeren adres koleksiyonu.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bilgi (CC) alıcılarını bu eposta iletisi için içeren koleksiyon adresi.|  
+|GİZLİ|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Bu e-posta iletisi için gizli kopya (gizli) alıcıları içeren adres koleksiyonu.|  
+|Belirteçler|<xref:System.Activities.InArgument%601>< IDictionary\<dize, dize >>|Belirteçleri gövdesinde değiştirin. Bu özellik, kullanıcıların daha sonra bu özelliği kullanarak verilen belirteçleri ile değiştirilebilir daha gövdesinde bazı değerleri belirtmesine izin verir.|  
+|BodyTemplateFilePath|Dize|Gövdesi için bir şablon yolu. `SendMail` Etkinliği, bu dosyanın içeriğini kendi gövdesi özelliğine kopyalar.<br /><br /> Şablon belirteçleri özelliğinin içeriğine göre değiştirilir belirteçlerini içerebilir.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Bu özelliği ayarlandığında, tüm e-postaları içinde belirtilen adrese gönderilir.<br /><br /> Bu özellik, iş akışları test ederken kullanılması amaçlanmıştır. Örneğin, emin olmak istediğinizde tüm e-postaları gerçek alıcıya gönderim olmadan gönderilir.|  
+|TestDropPath|Dize|Bu özelliği ayarlandığında, tüm e-postaları da belirtilen dosyasında kaydedilir.<br /><br /> Bu özellik, test veya giden e-posta içeriğini ve biçimini uygun olduğunu emin olmak için iş akışlarında hata ayıklama yaparken kullanılmak için tasarlanmıştır.|  
   
 ## <a name="solution-contents"></a>Çözüm içeriği  
  Çözüm iki proje içerir.  
   
-|Proje|Açıklama|Önemli dosyaları|  
+|Proje|Açıklama|Önemli dosya|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail etkinliği|1.  SendMail.cs: ana etkinlik uygulama<br />2.  SendMailDesigner.xaml ve SendMailDesigner.xaml.cs: SendMail etkinliğinin Tasarımcısı<br />3.  MailTemplateBody.htm: gönderilecek e-posta şablonu.|  
-|SendMailTestClient|Test SendMail etkinliği istemci.  Bu proje SendMail etkinlik çağırma iki yolla gösterir: bildirimli olarak ve program aracılığıyla.|1.  Sequence1.XAML: SendMail etkinlik çağıran iş akışı.<br />2.  Program.cs: Sıra1 çağırır ve program aracılığıyla SendMail kullanan bir iş akışı da oluşturur.|  
+|SendMailTestClient|SendMail etkinlik test etmek için istemci.  Bu proje SendMail etkinlik çağrılırken, iki yolunu gösterir: bildirimli ve programlı olarak.|1.  Sequence1.XAML: SendMail etkinlik çağıran iş akışı.<br />2.  Program.cs: Sıra1 çağırır ve aynı zamanda program aracılığıyla SendMail kullanan bir iş akışı oluşturur.|  
   
-## <a name="further-configuration-of-the-sendmail-activity"></a>Başka bir yapılandırma SendMail etkinliği  
- Aşağıdaki örnekte gösterilmese kullanıcılar SendMail etkinliğin ek yapılandırma gerçekleştirebilir. Sonraki üç bölümde bunun nasıl yapılacağı gösterilmektedir.  
+## <a name="further-configuration-of-the-sendmail-activity"></a>SendMail etkinlik başka bir yapılandırma  
+ Örnekte gösterilmese, kullanıcılar ayrıca yapılandırma SendMail etkinliğin gerçekleştirebilir. Sonraki üç bölümde nasıl yapıldığını gösterir.  
   
-### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Gövdede belirtilen belirteçleri kullanarak bir e-posta gönderme  
- Bu kod parçacığını nasıl gövdesinde belirteçleri içeren e-posta gönderebilirsiniz gösterir. Belirteçleri gövde özelliğinde nasıl sağlanır dikkat edin. Bu belirteçler için değerler belirteçleri özelliğine sağlanır.  
+### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Gövdesinde belirtilen belirteçleri kullanarak bir e-posta gönderme  
+ Bu kod parçacığı, nasıl gövdesinde e-posta belirteçleri ile gönderebileceğiniz gösterilir. Gövde özelliğinde belirteçlerin nasıl sağlanan dikkat edin. Bu belirteçler için değerler belirteçleri özelliğine sağlanır.  
   
 ```html  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
@@ -66,8 +66,8 @@ new SendMail
 };  
 ```  
   
-### <a name="sending-an-email-using-a-template"></a>Bir şablonu kullanarak bir e-posta gönderme  
- Bu kod parçacığında gövdesinde bir şablon belirteçleri kullanarak bir e-posta göndermek nasıl gösterir. Ayarlarken dikkat `BodyTemplateFilePath` özelliği biz gerekmez (şablon dosyası içeriğini gövdesine kopyalanacak) gövde özelliği için değer sağlayın.  
+### <a name="sending-an-email-using-a-template"></a>Şablon kullanarak bir e-posta gönderme  
+ Bu kod parçacığı gövdesinde bir şablon belirteçleri kullanarak bir e-posta gönderme işlemini gösterir. Ayarlarken dikkat `BodyTemplateFilePath` özelliği biz (şablon dosyasının içeriğini gövdesine kopyalanır) gövde özelliği için değer sağlamanız gerekmez.  
   
 ```  
 new SendMail  
@@ -83,8 +83,8 @@ new SendMail
 };  
 ```  
   
-### <a name="sending-mails-in-testing-mode"></a>Mod testinde postalar gönderme  
- Bu kod parçacığını iki sınama özelliklerin nasıl ayarlanacağını gösterir: ayarlayarak `TestMailTo` tüm iletileri gönderilir john.doe@contoso.con (bakmadan değerlerinin Kime, bilgi, gizli). TestDropPath ayarlayarak tüm giden e-postalar, aynı zamanda sağlanan yolunda kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (bunlar birbiriyle ilgili olmayan).  
+### <a name="sending-mails-in-testing-mode"></a>Modu test e-postalar gönderme  
+ Bu kod parçacığı, iki test özelliklerini ayarlama işlemi gösterilmektedir: ayarlayarak `TestMailTo` tüm iletileri gönderilir john.doe@contoso.con (bakmadan değerlerinin Kime, bilgi, gizli). TestDropPath ayarlayarak tüm giden e-postaları da sağlanan yolda kaydedilir. Bu özellikler bağımsız olarak ayarlanabilir (bunlar birbiriyle ilgili olmayan).  
   
 ```  
 new SendMail  
@@ -105,17 +105,17 @@ new SendMail
 ## <a name="set-up-instructions"></a>Kurulum Yönergeleri  
  Bu örnek için bir SMTP sunucusuna erişim gereklidir.  
   
- SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  
+ Bir SMTP sunucusu kurma hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın.  
   
--   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP Hizmeti (IIS 6.0) yapılandırma](http://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [SMTP Hizmeti (IIS 6.0) yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: SMTP e-posta yapılandırma](http://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0: SMTP e-posta yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP hizmeti nasıl yüklenir?](http://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [SMTP hizmeti nasıl yüklenir?](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
- Üçüncü taraflar tarafından sağlanan SMTP Öykünücüler indirme için kullanılabilir.  
+ Üçüncü taraflarca sağlanan SMTP öykünücüsünü indirme için kullanılabilir.  
   
 ##### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
@@ -123,19 +123,19 @@ new SendMail
   
 2.  Geçerli bir SMTP sunucusuna erişimi olduğundan emin olun. Kurulum yönergelerine bakın.  
   
-3.  Program, sunucu adresi ve Kimden ve Kime e-posta adreslerini yapılandırın.  
+3.  Programı, sunucu adresi ve Kimden ve Kime e-posta adreslerini yapılandırın.  
   
-     Bu örnek düzgün çalışması için ilk ve son e-posta adresi ve SMTP sunucusunun adresini değerini Program.cs ve Sequence.xaml yapılandırmanız gerekebilir. Program iki farklı şekilde posta gönderir olduğundan her iki konumda adresi değiştirmeniz gerekir  
+     Doğru Bu örneği çalıştırmak için ilk ve son e-posta adresi ve SMTP sunucusunun adresini değerini program.CS'de Webhostbuilder'a ve Sequence.xaml yapılandırmanız gerekebilir. Program iki farklı şekilde posta gönderen adresi konumlarının her ikisinde de değiştirmek gerekir  
   
-4.  Çözümü derlemek için CTRL + SHIFT + B tuşuna basın.  
+4.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-5.  Çözümü çalıştırmak için CTRL + F5 tuşuna basın.  
+5.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

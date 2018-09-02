@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5b4ef7777c9d45c2d255cc2915f8c4ccdeef4a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432616"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421547"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage Yöntemi
-Belirtilen bellek adresinde derleme görüntü ikili bir gösterimini alır.  
+Belirtilen bellek adresinde derleme yansıma ikili gösterimini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,16 +43,16 @@ HRESULT StrongNameGetBlobFromImage (
  [in] Eşlenen derleme bildirimi bellek adresi.  
   
  `dwLength`  
- [in] Yansımayı bayt cinsinden boyutu `pbBase`.  
+ [in] Bayt cinsinden görüntü boyutu `pbBase`.  
   
  `pbBlob`  
- [in] Görüntü ikili gösterimini içeren bir arabellek.  
+ [in] Görüntü ikili gösterimini içeren arabellek.  
   
  `pcbBlob`  
- [içinde out] Bayt cinsinden en büyük boyutu, istenen `pbBlob`. Return, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.  
+ [out içinde] Bayt cinsinden en büyük boyutu, istenen `pbBlob`. İade, bayt cinsinden gerçek boyutu bağlı, `pbBlob`.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
+ `S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
