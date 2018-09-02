@@ -5,37 +5,37 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: cf320b61a2ca1c54b22e3c3d31ae51d003366efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602658"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385716"
 ---
-# <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="0a58f-102">&lt;Özet&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a58f-102">&lt;summary&gt; (Visual Basic)</span></span>
-<span data-ttu-id="0a58f-103">Üye özetini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0a58f-103">Specifies the summary of the member.</span></span>  
+# <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="4d3d4-102">&lt;Özet&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d3d4-102">&lt;summary&gt; (Visual Basic)</span></span>
+<span data-ttu-id="4d3d4-103">Üye özetini belirtir.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-103">Specifies the summary of the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a58f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0a58f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d3d4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4d3d4-104">Syntax</span></span>  
   
 ```xml  
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0a58f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0a58f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4d3d4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4d3d4-105">Parameters</span></span>  
  `description`  
- <span data-ttu-id="0a58f-106">Nesne özeti.</span><span class="sxs-lookup"><span data-stu-id="0a58f-106">A summary of the object.</span></span>  
+ <span data-ttu-id="4d3d4-106">Nesne bir özeti.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-106">A summary of the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0a58f-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0a58f-107">Remarks</span></span>  
- <span data-ttu-id="0a58f-108">Kullanım `<summary>` bir tür veya bir tür üyesi açıklamak için etiket.</span><span class="sxs-lookup"><span data-stu-id="0a58f-108">Use the `<summary>` tag to describe a type or a type member.</span></span> <span data-ttu-id="0a58f-109">Kullanım [ \<açıklamalar >](../../../visual-basic/language-reference/xmldoc/remarks.md) türü açıklaması için ek bilgiler eklemek için.</span><span class="sxs-lookup"><span data-stu-id="0a58f-109">Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) to add supplemental information to a type description.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d3d4-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d3d4-107">Remarks</span></span>  
+ <span data-ttu-id="4d3d4-108">Kullanım `<summary>` bir türü veya tür üyesi açıklamak için etiket.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-108">Use the `<summary>` tag to describe a type or a type member.</span></span> <span data-ttu-id="4d3d4-109">Kullanım [ \<remarks >](../../../visual-basic/language-reference/xmldoc/remarks.md) ek bilgiler bir tür tanımı eklemek için.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-109">Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) to add supplemental information to a type description.</span></span>  
   
- <span data-ttu-id="0a58f-110">Metni `<summary>` etiket IntelliSense türüyle ilgili bilgiler yalnızca kaynağı ve ayrıca nesne tarayıcısında görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="0a58f-110">The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser.</span></span> <span data-ttu-id="0a58f-111">Nesne Tarayıcısı hakkında daha fazla bilgi için bkz: [kodunu yapısı görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="0a58f-111">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
+ <span data-ttu-id="4d3d4-110">Metni `<summary>` etiketi, yalnızca kaynağı olan IntelliSense içinde türü hakkında bilgi ve Nesne Tarayıcısı'nda da görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-110">The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser.</span></span> <span data-ttu-id="4d3d4-111">Nesne tarayıcı hakkında daha fazla bilgi için bkz: [Structure of Code görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="4d3d4-111">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- <span data-ttu-id="0a58f-112">İle derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) bir dosyaya işlem belgesi açıklamaları için.</span><span class="sxs-lookup"><span data-stu-id="0a58f-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="4d3d4-112">Derleme [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) işlem belgeleri açıklamaları için bir dosya için.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a58f-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="0a58f-113">Example</span></span>  
- <span data-ttu-id="0a58f-114">Bu örnekte `<summary>` açıklamak için etiket `ResetCounter` yöntemi ve `Counter` özelliği.</span><span class="sxs-lookup"><span data-stu-id="0a58f-114">This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d3d4-113">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d3d4-113">Example</span></span>  
+ <span data-ttu-id="4d3d4-114">Bu örnekte `<summary>` açıklamak için etiket `ResetCounter` yöntemi ve `Counter` özelliği.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-114">This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="0a58f-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0a58f-115">See Also</span></span>  
- [<span data-ttu-id="0a58f-116">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="0a58f-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="4d3d4-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="4d3d4-115">See Also</span></span>  
+ [<span data-ttu-id="4d3d4-116">XML Açıklama Etiketleri</span><span class="sxs-lookup"><span data-stu-id="4d3d4-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

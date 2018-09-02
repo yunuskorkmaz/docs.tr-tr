@@ -1,25 +1,25 @@
 ---
-title: '&lt;CommonParameters&gt;'
+title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 881a7d0890991aa4f542ff92c2a721b9d9cb7b29
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749445"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391726"
 ---
-# <a name="ltcommonparametersgt"></a><span data-ttu-id="55f38-102">&lt;CommonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="55f38-102">&lt;commonParameters&gt;</span></span>
-<span data-ttu-id="55f38-103">Birden fazla hizmet genel olarak kullanılan parametreleri koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="55f38-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="55f38-104">Bu koleksiyon genellikle sürekli hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.</span><span class="sxs-lookup"><span data-stu-id="55f38-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
+# <a name="ltcommonparametersgt"></a><span data-ttu-id="3a1c5-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="3a1c5-102">&lt;commonParameters&gt;</span></span>
+<span data-ttu-id="3a1c5-103">Dünya çapında bir çok hizmette kullanılan parametrelerin bir koleksiyonunu temsil eder.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="3a1c5-104">Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
   
- <span data-ttu-id="55f38-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="55f38-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="55f38-106">\<davranışları ></span><span class="sxs-lookup"><span data-stu-id="55f38-106">\<behaviors></span></span>  
-<span data-ttu-id="55f38-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="55f38-107">\<serviceBehaviors></span></span>  
-<span data-ttu-id="55f38-108">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="55f38-108">\<behavior></span></span>  
-<span data-ttu-id="55f38-109">\<İş akışı workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="55f38-109">\<workflowRuntime></span></span>  
-<span data-ttu-id="55f38-110">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="55f38-110">\<commonParameters></span></span>  
+ <span data-ttu-id="3a1c5-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="3a1c5-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="3a1c5-106">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-106">\<behaviors></span></span>  
+<span data-ttu-id="3a1c5-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="3a1c5-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="3a1c5-108">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-108">\<behavior></span></span>  
+<span data-ttu-id="3a1c5-109">\<İş akışı workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="3a1c5-110">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-110">\<commonParameters></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55f38-111">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55f38-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a1c5-111">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3a1c5-111">Syntax</span></span>  
   
 ```xml  
 <workflowRuntime>  
@@ -29,29 +29,29 @@ ms.locfileid: "32749445"
 </workflowRuntime>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="55f38-112">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="55f38-112">Attributes and Elements</span></span>  
- <span data-ttu-id="55f38-113">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="55f38-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3a1c5-112">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a1c5-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="3a1c5-113">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="55f38-114">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="55f38-114">Attributes</span></span>  
- <span data-ttu-id="55f38-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="55f38-115">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3a1c5-114">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3a1c5-114">Attributes</span></span>  
+ <span data-ttu-id="3a1c5-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-115">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="55f38-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="55f38-116">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3a1c5-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a1c5-116">Child Elements</span></span>  
   
-|<span data-ttu-id="55f38-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="55f38-117">Element</span></span>|<span data-ttu-id="55f38-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="55f38-118">Description</span></span>|  
+|<span data-ttu-id="3a1c5-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="3a1c5-117">Element</span></span>|<span data-ttu-id="3a1c5-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a1c5-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="55f38-119">\<ekleme ></span><span class="sxs-lookup"><span data-stu-id="55f38-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="55f38-120">Bir ad-değer çifti koleksiyonuna Hizmetleri tarafından kullanılan ortak parametreler ekler.</span><span class="sxs-lookup"><span data-stu-id="55f38-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
+|[<span data-ttu-id="3a1c5-119">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="3a1c5-120">Bir ad-değer çifti koleksiyonu için hizmetleri tarafından kullanılan ortak parametrelerinin ekler.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="55f38-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="55f38-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3a1c5-121">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3a1c5-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="55f38-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="55f38-122">Element</span></span>|<span data-ttu-id="55f38-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="55f38-123">Description</span></span>|  
+|<span data-ttu-id="3a1c5-122">Öğe</span><span class="sxs-lookup"><span data-stu-id="3a1c5-122">Element</span></span>|<span data-ttu-id="3a1c5-123">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a1c5-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="55f38-124">\<İş akışı workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="55f38-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="55f38-125">Öğesinin bir örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için.</span><span class="sxs-lookup"><span data-stu-id="55f38-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>|  
+|[<span data-ttu-id="3a1c5-124">\<İş akışı workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="3a1c5-125">Örneği için ayarları belirtir <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındıran için.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="55f38-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="55f38-126">Remarks</span></span>  
- <span data-ttu-id="55f38-127">`<commonParameters>` Öğesi genel olarak birden fazla hizmet, örneğin kullanılan parametreleri tanımlar `ConnectionString` kullanırken <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="55f38-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a1c5-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3a1c5-126">Remarks</span></span>  
+ <span data-ttu-id="3a1c5-127">`<commonParameters>` Öğesi, dünya çapında Örneğin çok hizmette kullanılan parametreleri tanımlar `ConnectionString` kullanırken <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="55f38-128">SQL izleme hizmeti sürekli olarak kullanmaz `ConnectionString` içinde belirtilen değeri `<commonParameters>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="55f38-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="55f38-129">Bazı alma gibi işlemlerinin `StateMachineWorkflowInstance.StateHistory` özelliği başarısız olabilir.</span><span class="sxs-lookup"><span data-stu-id="55f38-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="55f38-130">Geçici çözüm için bunu belirtin `ConnectionString` özniteliği izleme sağlayıcısı için yapılandırma bölümünde aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="55f38-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
+>  <span data-ttu-id="3a1c5-128">SQL izleme hizmeti sürekli olarak kullanmaz `ConnectionString` içinde belirtilen değeri `<commonParameters>` bölümü.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="3a1c5-129">Alma gibi alt işlemlerin `StateMachineWorkflowInstance.StateHistory` özelliği başarısız olabilir.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="3a1c5-130">Geçici çözüm için bunu belirtin `ConnectionString` özniteliği izleme sağlayıcısı için yapılandırma bölümünde aşağıdaki örnekte gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
   
  `<add`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "32749445"
   
  `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
   
- <span data-ttu-id="55f38-131">İş yürütme Hizmetleri için Kalıcılık depolarına gibi toplu iş <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> ve <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, kendi işlem kullanarak yeniden etkinleştirebilirsiniz `EnableRetries` aşağıdaki örnekte gösterildiği gibi parametre:</span><span class="sxs-lookup"><span data-stu-id="55f38-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
+ <span data-ttu-id="3a1c5-131">İş işleme Hizmetleri için kalıcılığı mağazalarının gibi toplu işlemleri <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> ve <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, bunları kendi işlemi kullanarak yeniden etkinleştirebilirsiniz `EnableRetries` aşağıdaki örnekte gösterildiği gibi parametre:</span><span class="sxs-lookup"><span data-stu-id="3a1c5-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
 ```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
@@ -73,9 +73,9 @@ ms.locfileid: "32749445"
 </WorkflowRuntime>  
 ```  
   
- <span data-ttu-id="55f38-132">Dikkat `EnableRetries` parametresi ya da genel düzeyinde ayarlanabilir (gösterildiği gibi *CommonParameters* bölüm) veya bireysel destekleyen Hizmetler `EnableRetries` (gösterildiği gibi *Hizmetleri*bölümü).</span><span class="sxs-lookup"><span data-stu-id="55f38-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
+ <span data-ttu-id="3a1c5-132">Dikkat `EnableRetries` parametresi ya da genel düzeyde ayarlanabilir (gösterildiği gibi *CommonParameters* bölümü) veya kişiye ait hizmetleri destekleyen `EnableRetries` (gösterildiği gibi *Hizmetleri*bölümü).</span><span class="sxs-lookup"><span data-stu-id="3a1c5-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- <span data-ttu-id="55f38-133">Aşağıdaki örnek kod, ortak parametreler programlı olarak nasıl değiştirildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="55f38-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
+ <span data-ttu-id="3a1c5-133">Aşağıdaki örnek kod, ortak parametreleri program aracılığıyla değiştirme gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
   
 ```  
 Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
@@ -85,9 +85,9 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- <span data-ttu-id="55f38-134">Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesnesi bir Windows Workflow Foundation ana bilgisayar uygulamasının bkz [iş akışı yapılandırma dosyalarını](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span><span class="sxs-lookup"><span data-stu-id="55f38-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
+ <span data-ttu-id="3a1c5-134">Davranışını denetlemek için bir yapılandırma dosyası kullanma hakkında daha fazla bilgi için bir <xref:System.Workflow.Runtime.WorkflowRuntime> nesne bir Windows Workflow Foundation ana bilgisayar uygulaması bakın [iş akışı yapılandırma dosyalarını](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span><span class="sxs-lookup"><span data-stu-id="3a1c5-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="55f38-135">Örnek</span><span class="sxs-lookup"><span data-stu-id="55f38-135">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3a1c5-135">Örnek</span><span class="sxs-lookup"><span data-stu-id="3a1c5-135">Example</span></span>  
   
 ```xml  
 <commonParameters>  
@@ -96,11 +96,11 @@ config.Save();
 </commonParameters>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="55f38-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="55f38-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a1c5-136">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="3a1c5-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [<span data-ttu-id="55f38-137">İş akışı yapılandırma dosyaları</span><span class="sxs-lookup"><span data-stu-id="55f38-137">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [<span data-ttu-id="55f38-138">\<ekleme ></span><span class="sxs-lookup"><span data-stu-id="55f38-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+ <span data-ttu-id="3a1c5-137">[İş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="3a1c5-137">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>  
+ [<span data-ttu-id="3a1c5-138">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="3a1c5-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

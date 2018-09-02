@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93377f82992b8d7d55b21b53abfd7d7c2e9e620b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436192"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394901"
 ---
-# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="6d15c-102">ICLRStrongName::StrongNameKeyGenEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d15c-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
-<span data-ttu-id="6d15c-103">Güçlü ad kullanım için belirtilen anahtar boyutu ile yeni bir ortak/özel anahtar çifti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="6d15c-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
+# <a name="iclrstrongnamestrongnamekeygenex-method"></a><span data-ttu-id="bb77f-102">ICLRStrongName::StrongNameKeyGenEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bb77f-102">ICLRStrongName::StrongNameKeyGenEx Method</span></span>
+<span data-ttu-id="bb77f-103">Tanımlayıcı ad kullanmak için belirtilen anahtar boyutu ile yeni bir ortak/özel anahtar çifti oluşturur.</span><span class="sxs-lookup"><span data-stu-id="bb77f-103">Generates a new public/private key pair with the specified key size, for strong name use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d15c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6d15c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb77f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bb77f-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyGenEx (  
@@ -39,43 +39,43 @@ HRESULT StrongNameKeyGenEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6d15c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6d15c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bb77f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bb77f-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="6d15c-106">[in] İstenen anahtar kapsayıcısı adı.</span><span class="sxs-lookup"><span data-stu-id="6d15c-106">[in] The requested key container name.</span></span> <span data-ttu-id="6d15c-107">`wszKeyContainer` ya da boş dize veya geçici bir ad oluşturmak için null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6d15c-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
+ <span data-ttu-id="bb77f-106">[in] İstenen anahtar kapsayıcısı adı.</span><span class="sxs-lookup"><span data-stu-id="bb77f-106">[in] The requested key container name.</span></span> <span data-ttu-id="bb77f-107">`wszKeyContainer` ya da boş dize veya geçici bir ad oluşturmak için null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bb77f-107">`wszKeyContainer` must either be a non-empty string or null to generate a temporary name.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="6d15c-108">[in] Kayıtlı anahtarı bırakın belirtir bir değer.</span><span class="sxs-lookup"><span data-stu-id="6d15c-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="6d15c-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="6d15c-109">The following values are supported:</span></span>  
+ <span data-ttu-id="bb77f-108">[in] Kaydedilen anahtar bırakın belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="bb77f-108">[in] A value that specifies whether to leave the key registered.</span></span> <span data-ttu-id="bb77f-109">Aşağıdaki değerleri desteklenir:</span><span class="sxs-lookup"><span data-stu-id="bb77f-109">The following values are supported:</span></span>  
   
--   <span data-ttu-id="6d15c-110">kullanılan 0x00000000 - `wszKeyContainer` bir geçici anahtar kapsayıcı adı oluşturmak için null.</span><span class="sxs-lookup"><span data-stu-id="6d15c-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
+-   <span data-ttu-id="bb77f-110">kullanılan 0x00000000 - `wszKeyContainer` geçici bir anahtar kapsayıcısı adını oluşturmak için null.</span><span class="sxs-lookup"><span data-stu-id="bb77f-110">0x00000000 - Used when `wszKeyContainer` is null to generate a temporary key container name.</span></span>  
   
--   <span data-ttu-id="6d15c-111">0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6d15c-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
+-   <span data-ttu-id="bb77f-111">0x00000001 (`SN_LEAVE_KEY`)-anahtar sol kaydedilmesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="bb77f-111">0x00000001 (`SN_LEAVE_KEY`) - Specifies that the key should be left registered.</span></span>  
   
  `dwKeySize`  
- <span data-ttu-id="6d15c-112">[in] Bit cinsinden anahtar istenen boyutu.</span><span class="sxs-lookup"><span data-stu-id="6d15c-112">[in] The requested size of the key, in bits.</span></span>  
+ <span data-ttu-id="bb77f-112">[in] İstenen bit cinsinden anahtar boyutunu.</span><span class="sxs-lookup"><span data-stu-id="bb77f-112">[in] The requested size of the key, in bits.</span></span>  
   
  `ppbKeyBlob`  
- <span data-ttu-id="6d15c-113">[out] Döndürülen ortak/özel anahtar çifti.</span><span class="sxs-lookup"><span data-stu-id="6d15c-113">[out] The returned public/private key pair.</span></span>  
+ <span data-ttu-id="bb77f-113">[out] Döndürülen ortak/özel anahtar çifti.</span><span class="sxs-lookup"><span data-stu-id="bb77f-113">[out] The returned public/private key pair.</span></span>  
   
  `pcbKeyBlob`  
- <span data-ttu-id="6d15c-114">[out] Bayt olarak boyutu, `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="6d15c-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
+ <span data-ttu-id="bb77f-114">[out] Bayt cinsinden boyutu, `ppbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="bb77f-114">[out] The size, in bytes, of `ppbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6d15c-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6d15c-115">Return Value</span></span>  
- <span data-ttu-id="6d15c-116">`S_OK` Yöntem başarıyla tamamlandı Aksi takdirde hata belirten bir HRESULT değeri (bkz [ortak HRESULT değerleri](http://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="6d15c-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bb77f-115">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="bb77f-115">Return Value</span></span>  
+ <span data-ttu-id="bb77f-116">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="bb77f-116">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6d15c-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6d15c-117">Remarks</span></span>  
- <span data-ttu-id="6d15c-118">.NET Framework sürüm 1.0 ve 1.1 gerektiren bir `dwKeySize` derlemeyi tanımlayıcı adla; imzalamak için 1024 bit 2048 bit anahtar için desteklenen sürüm 2.0 ekler.</span><span class="sxs-lookup"><span data-stu-id="6d15c-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb77f-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bb77f-117">Remarks</span></span>  
+ <span data-ttu-id="bb77f-118">.NET Framework sürümleri 1.0 ve 1.1 gerektiren bir `dwKeySize` derlemeyi bir katı adla imzalamak için 1024 bit 2048 bit anahtar için desteklenen sürüm 2.0 ekler.</span><span class="sxs-lookup"><span data-stu-id="bb77f-118">The .NET Framework versions 1.0 and 1.1 require a `dwKeySize` of 1024 bits to sign an assembly with a strong name; version 2.0 adds supports for 2048-bit keys.</span></span>  
   
- <span data-ttu-id="6d15c-119">Anahtarı aldıktan sonra çağırmalıdır [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılmış bellek yayımlamayı yöntemi.</span><span class="sxs-lookup"><span data-stu-id="6d15c-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="bb77f-119">Anahtarı aldıktan sonra çağırmalıdır [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılan belleği serbest bırakmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="bb77f-119">After the key is retrieved, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d15c-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6d15c-120">Requirements</span></span>  
- <span data-ttu-id="6d15c-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d15c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb77f-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bb77f-120">Requirements</span></span>  
+ <span data-ttu-id="bb77f-121">**Platformlar:** bkz [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb77f-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d15c-122">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6d15c-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="bb77f-122">**Başlık:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="bb77f-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="6d15c-123">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="6d15c-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bb77f-123">**Kitaplığı:** bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="bb77f-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6d15c-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d15c-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bb77f-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb77f-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d15c-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="6d15c-125">See Also</span></span>  
- [<span data-ttu-id="6d15c-126">StrongNameKeyGen Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6d15c-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
- [<span data-ttu-id="6d15c-127">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6d15c-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bb77f-125">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="bb77f-125">See Also</span></span>  
+ [<span data-ttu-id="bb77f-126">StrongNameKeyGen Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bb77f-126">StrongNameKeyGen Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
+ [<span data-ttu-id="bb77f-127">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bb77f-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355304"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399862"
 ---
-# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="becfa-102">Parametre olarak XML değerleri belirtme</span><span class="sxs-lookup"><span data-stu-id="becfa-102">Specifying XML Values as Parameters</span></span>
-<span data-ttu-id="becfa-103">Bir sorgu, değeri olan bir XML dizesi parametre gerektiriyorsa, geliştiricilerin bir örneği kullanılarak bu değeri sağlayabilir **SqlXml** veri türü.</span><span class="sxs-lookup"><span data-stu-id="becfa-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="becfa-104">Gerçekten hiçbir püf noktaları; yok SQL Server'da XML sütunları parametre değerlerini diğer veri türleri ile aynı şekilde kabul edin.</span><span class="sxs-lookup"><span data-stu-id="becfa-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="c5331-102">Parametre olarak XML değerleri belirtme</span><span class="sxs-lookup"><span data-stu-id="c5331-102">Specifying XML Values as Parameters</span></span>
+<span data-ttu-id="c5331-103">Sorgu değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiricilerin bir örneğini kullanarak bu değeri sağlayabilir **SqlXml** veri türü.</span><span class="sxs-lookup"><span data-stu-id="c5331-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="c5331-104">Gerçekten vardır hiçbir püf noktaları; SQL Server'da XML sütunları, diğer veri türleri ile aynı şekilde parametre değerleri kabul edin.</span><span class="sxs-lookup"><span data-stu-id="c5331-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="becfa-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="becfa-105">Example</span></span>  
- <span data-ttu-id="becfa-106">Yeni bir tabloda aşağıdaki konsol uygulaması oluşturur **AdventureWorks** veritabanı.</span><span class="sxs-lookup"><span data-stu-id="becfa-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="becfa-107">Yeni Tablo adlı bir sütun içeren **SalesId** ve adlı bir XML sütunu **SalesInfo**.</span><span class="sxs-lookup"><span data-stu-id="becfa-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
+## <a name="example"></a><span data-ttu-id="c5331-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="c5331-105">Example</span></span>  
+ <span data-ttu-id="c5331-106">Aşağıdaki konsol uygulamasında yeni bir tablo oluşturur **AdventureWorks** veritabanı.</span><span class="sxs-lookup"><span data-stu-id="c5331-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="c5331-107">Yeni Tablo adlı bir sütun içeren **SalesId** ve adlı bir XML sütunu **SalesInfo**.</span><span class="sxs-lookup"><span data-stu-id="c5331-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="becfa-108">**AdventureWorks** örnek veritabanını SQL Server'ı yüklediğinizde varsayılan olarak yüklenmedi.</span><span class="sxs-lookup"><span data-stu-id="becfa-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="becfa-109">SQL Server Kurulumu çalıştırarak yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="becfa-109">You can install it by running SQL Server Setup.</span></span>  
+>  <span data-ttu-id="c5331-108">**AdventureWorks** örnek veritabanı, SQL Server'ı yüklediğinizde varsayılan olarak yüklenmedi.</span><span class="sxs-lookup"><span data-stu-id="c5331-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="c5331-109">SQL Server Kurulumu çalıştırarak yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c5331-109">You can install it by running SQL Server Setup.</span></span>  
   
- <span data-ttu-id="becfa-110">Örnek hazırlayan bir <xref:System.Data.SqlClient.SqlCommand> yeni tabloya satır eklemek için nesne.</span><span class="sxs-lookup"><span data-stu-id="becfa-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="becfa-111">Kaydedilen bir dosya için gereken XML verileri sağlayan **SalesInfo** sütun.</span><span class="sxs-lookup"><span data-stu-id="becfa-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
+ <span data-ttu-id="c5331-110">Örnek hazırlayan bir <xref:System.Data.SqlClient.SqlCommand> nesne yeni tabloda bir satır ekleyin.</span><span class="sxs-lookup"><span data-stu-id="c5331-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="c5331-111">Kaydedilen bir dosya için gerekli olan XML verileri sağlayan **SalesInfo** sütun.</span><span class="sxs-lookup"><span data-stu-id="c5331-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- <span data-ttu-id="becfa-112">Örneğin çalıştırmak için gereken dosya oluşturmak için projenizin ile aynı klasörde yeni bir metin dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="becfa-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="becfa-113">MyTestStoreData.xml dosya adı.</span><span class="sxs-lookup"><span data-stu-id="becfa-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="becfa-114">Not Defteri ve kopyalama dosyasını açın ve aşağıdaki metni yapıştırın:</span><span class="sxs-lookup"><span data-stu-id="becfa-114">Open the file in Notepad and copy and paste the following text:</span></span>  
+ <span data-ttu-id="c5331-112">Örneğin çalıştırmak için gereken dosya oluşturmak için projeniz gibi aynı klasörde yeni bir metin dosyası oluşturun.</span><span class="sxs-lookup"><span data-stu-id="c5331-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="c5331-113">' % S'dosyası MyTestStoreData.xml adı.</span><span class="sxs-lookup"><span data-stu-id="c5331-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="c5331-114">Not Defteri'ni ve kopya dosyasını açın ve aşağıdaki metni yapıştırın:</span><span class="sxs-lookup"><span data-stu-id="c5331-114">Open the file in Notepad and copy and paste the following text:</span></span>  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -159,7 +159,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="becfa-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="becfa-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c5331-115">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c5331-115">See Also</span></span>  
  <xref:System.Data.SqlTypes.SqlXml>  
- [<span data-ttu-id="becfa-116">SQL Server'da XML Verileri</span><span class="sxs-lookup"><span data-stu-id="becfa-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [<span data-ttu-id="becfa-117">ADO.NET yönetilen sağlayıcıları ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="becfa-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="c5331-116">SQL Server'da XML Verileri</span><span class="sxs-lookup"><span data-stu-id="c5331-116">XML Data in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [<span data-ttu-id="c5331-117">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="c5331-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
