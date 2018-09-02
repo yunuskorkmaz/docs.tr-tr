@@ -13,7 +13,6 @@
 ### [Dönüştürme İşleçleri Kullanma](using-conversion-operators.md)
 ### [Nasıl yapılır: Yapılar Arasında Kullanıcı Tanımlı Dönüştürmeler Uygulama](how-to-implement-user-defined-conversions-between-structs.md)
 ## [varsayılan değer ifadeleri](default-value-expressions.md)
-## [Nasıl yapılır: Karmaşık Sayı Sınıfı Oluşturmak için Operatör Aşırı Yüklemesi Kullanma](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Eşitlik Karşılaştırmaları](equality-comparisons.md)
 ### [Nasıl yapılır: Tür için Değer Eşitliği Tanımlama](how-to-define-value-equality-for-a-type.md)
 ### [Nasıl yapılır: Başvuru Eşitliği Testi (Kimlik)](how-to-test-for-reference-equality-identity.md)
