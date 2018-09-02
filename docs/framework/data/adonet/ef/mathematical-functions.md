@@ -2,49 +2,390 @@
 title: Matematik işlevleri
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766978"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456457"
 ---
-# <a name="mathematical-functions"></a><span data-ttu-id="c803c-102">Matematik işlevleri</span><span class="sxs-lookup"><span data-stu-id="c803c-102">Mathematical Functions</span></span>
-<span data-ttu-id="c803c-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı bağımsız değişken olarak sağlanır ve bir sayısal değer sonuç giriş değerleri hesaplamalar matematik işlevleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="c803c-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="c803c-104">Bu SqlServer ad alanında SqlClient kullandığınızda kullanılabilir olduğu işlevlerdir.</span><span class="sxs-lookup"><span data-stu-id="c803c-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="c803c-105">Bir sağlayıcının ad özelliği, hangi önekin türler ve işlevler gibi belirli yapıları için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient matematik işlevleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c803c-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
+# <a name="mathematical-functions"></a><span data-ttu-id="ebe87-102">Matematik işlevleri</span><span class="sxs-lookup"><span data-stu-id="ebe87-102">Mathematical Functions</span></span>
+
+<span data-ttu-id="ebe87-103">SQL Server (SqlClient) için .NET Framework veri sağlayıcısı, bağımsız değişken olarak sağlanır ve bir sayısal değer sonuç giriş değerleri üzerinde hesaplamalar matematik işlevleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="ebe87-104">Bu işlevler SqlServer ad alanında SqlClient kullanırken, kullanılabilir bağımlıdır.</span><span class="sxs-lookup"><span data-stu-id="ebe87-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="ebe87-105">Bir sağlayıcının ad özelliği, hangi önekin türleri ve işlevleri gibi belirli yapılar için bu sağlayıcı tarafından kullanılan bulmak Entity Framework sağlar. Aşağıdaki tabloda SqlClient matematik işlevleri açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ebe87-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
   
-|<span data-ttu-id="c803c-106">İşlev</span><span class="sxs-lookup"><span data-stu-id="c803c-106">Function</span></span>|<span data-ttu-id="c803c-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c803c-107">Description</span></span>|  
-|--------------|-----------------|  
-|<span data-ttu-id="c803c-108">`ABS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-108">`ABS(` `expression` `)`</span></span>|<span data-ttu-id="c803c-109">Mutlak değerini işlevi gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="c803c-109">Performs the absolute value function.</span></span><br /><br /> <span data-ttu-id="c803c-110">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-110">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-111">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-111">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-112">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-112">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-113">Belirtilen ifade mutlak değeri.</span><span class="sxs-lookup"><span data-stu-id="c803c-113">The absolute value of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-114">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-114">**Example**</span></span><br /><br /> `SqlServer.ABS(-2)`|  
-|<span data-ttu-id="c803c-115">`ACOS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-115">`ACOS(` `expression` `)`</span></span>|<span data-ttu-id="c803c-116">Belirtilen ifade arkkosinüsünü değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-116">Returns the arccosine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-117">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-117">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-118">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-118">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-119">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-119">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-120">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-120">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-121">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-121">**Example**</span></span><br /><br /> `SqlServer.ACOS(.9)`|  
-|<span data-ttu-id="c803c-122">`ASIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-122">`ASIN(` `expression` `)`</span></span>|<span data-ttu-id="c803c-123">Belirtilen ifade arksinüsünü değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-123">Returns the arcsine value of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-124">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-124">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-125">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-125">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-126">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-126">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-127">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-127">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-128">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-128">**Example**</span></span><br /><br /> `SqlServer.ASIN(.9)`|  
-|<span data-ttu-id="c803c-129">`ATAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-129">`ATAN(` `expression` `)`</span></span>|<span data-ttu-id="c803c-130">Belirtilen sayısal ifade arktanjantını değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-130">Returns the arctangent value of the specified numeric expression.</span></span><br /><br /> <span data-ttu-id="c803c-131">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-131">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-132">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-132">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-133">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-134">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-134">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-135">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-135">**Example**</span></span><br /><br /> `SqlServer.ATAN(9)`|  
-|<span data-ttu-id="c803c-136">`ATN2(` `expression`, `expression``)`</span><span class="sxs-lookup"><span data-stu-id="c803c-136">`ATN2(` `expression`, `expression``)`</span></span>|<span data-ttu-id="c803c-137">Tanjantı arasında iki belirtilen sayısal ifadeye olduğu radyan cinsinden açı döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-137">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span><br /><br /> <span data-ttu-id="c803c-138">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-139">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-139">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-140">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-141">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-141">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-142">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-142">**Example**</span></span><br /><br /> `SqlServer.ATN2(9, 8)`|  
-|<span data-ttu-id="c803c-143">`CEILING(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-143">`CEILING(` `expression` `)`</span></span>|<span data-ttu-id="c803c-144">Belirtilen ifade büyük veya ona eşit en küçük tamsayı dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-144">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span><br /><br /> <span data-ttu-id="c803c-145">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-146">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-146">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-147">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-147">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-148">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-148">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-149">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-149">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]|  
-|<span data-ttu-id="c803c-150">`COS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-150">`COS(` `expression` `)`</span></span>|<span data-ttu-id="c803c-151">Trigonometrik radyan cinsinden belirtilen açının kosinüsünü hesaplar.</span><span class="sxs-lookup"><span data-stu-id="c803c-151">Calculates the trigonometric cosine of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="c803c-152">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-152">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-153">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-153">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-154">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-154">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-155">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-155">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-156">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-156">**Example**</span></span><br /><br /> `SqlServer.COS(45)`|  
-|<span data-ttu-id="c803c-157">`COT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-157">`COT(` `expression` `)`</span></span>|<span data-ttu-id="c803c-158">Trigonometrik kotanjantını radyan cinsinden belirtilen açının hesaplar.</span><span class="sxs-lookup"><span data-stu-id="c803c-158">Calculates the trigonometric cotangent of the specified angle in radians.</span></span><br /><br /> <span data-ttu-id="c803c-159">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-159">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-160">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-160">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-161">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-161">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-162">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-162">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-163">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-163">**Example**</span></span><br /><br /> `SqlServer.COT(60)`|  
-|<span data-ttu-id="c803c-164">`DEGREES(` `radians` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-164">`DEGREES(` `radians` `)`</span></span>|<span data-ttu-id="c803c-165">Karşılık gelen açıyı derece cinsinden döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-165">Returns the corresponding angle in degrees.</span></span><br /><br /> <span data-ttu-id="c803c-166">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-166">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-167">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-167">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-168">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-168">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-169">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-169">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-170">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-170">**Example**</span></span><br /><br /> `SqlServer.DEGREES(3.1)`|  
-|<span data-ttu-id="c803c-171">`EXP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-171">`EXP(` `expression` `)`</span></span>|<span data-ttu-id="c803c-172">Belirtilen bir sayısal ifade üstel değerini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="c803c-172">Calculates the exponential value of a specified numeric expression.</span></span><br /><br /> <span data-ttu-id="c803c-173">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-173">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-174">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-174">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-175">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-175">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-176">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-176">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-177">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-177">**Example**</span></span><br /><br /> `SqlServer.EXP(1)`|  
-|<span data-ttu-id="c803c-178">`FLOOR(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-178">`FLOOR(` `expression` `)`</span></span>|<span data-ttu-id="c803c-179">Belirtilen ifadenin en büyük tamsayı daha az eşit veya onu dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-179">Converts the specified expression to the largest integer less than or equal to it.</span></span><br /><br /> <span data-ttu-id="c803c-180">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-180">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-181">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-181">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-182">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-182">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-183">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-183">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-184">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-184">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]|  
-|<span data-ttu-id="c803c-185">`LOG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-185">`LOG(` `expression` `)`</span></span>|<span data-ttu-id="c803c-186">Belirtilen doğal logaritmasını hesaplar `float` ifade.</span><span class="sxs-lookup"><span data-stu-id="c803c-186">Calculates the natural logarithm of the specified `float` expression.</span></span><br /><br /> <span data-ttu-id="c803c-187">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-187">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-188">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-188">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-189">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-189">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-190">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-190">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-191">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-191">**Example**</span></span><br /><br /> `SqlServer.LOG(100)`|  
-|<span data-ttu-id="c803c-192">`LOG10(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-192">`LOG10(` `expression` `)`</span></span>|<span data-ttu-id="c803c-193">Belirtilen 10 tabanında logaritmasını döndürür `Double` ifade.</span><span class="sxs-lookup"><span data-stu-id="c803c-193">Returns the base-10 logarithm of the specified `Double` expression.</span></span><br /><br /> <span data-ttu-id="c803c-194">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-194">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-195">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-195">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-196">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-196">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-197">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-197">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-198">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-198">**Example**</span></span><br /><br /> `SqlServer.LOG10(100)`|  
-|`PI()`|<span data-ttu-id="c803c-199">Sabit değer pi'nin döndürür bir `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-199">Returns the constant value of pi as a `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-200">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-200">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-201">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-201">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-202">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-202">**Example**</span></span><br /><br /> `SqlServer.PI()`|  
-|<span data-ttu-id="c803c-203">`POWER(` `numeric_expression, power_expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-203">`POWER(` `numeric_expression, power_expression` `)`</span></span>|<span data-ttu-id="c803c-204">Belirtilen güç için belirtilen bir ifadenin değerini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="c803c-204">Calculates the value of a specified expression to a specified power.</span></span><br /><br /> <span data-ttu-id="c803c-205">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-205">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-206">`numeric_expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-206">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-207">`power_expression`: Bir `Double` yükseltmek için gücünü temsil eden `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="c803c-207">`power_expression`: A `Double` that represents the power to which to raise the `numeric_expression`.</span></span><br /><br /> <span data-ttu-id="c803c-208">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-208">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-209">Belirtilen değeri `numeric_expression` belirtilen `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="c803c-209">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="c803c-210">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-210">**Example**</span></span><br /><br /> `SqlServer.POWER(2,7)`|  
-|<span data-ttu-id="c803c-211">`RADIANS(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-211">`RADIANS(` `expression` `)`</span></span>|<span data-ttu-id="c803c-212">Derece radyan için dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-212">Converts degrees to radians.</span></span><br /><br /> <span data-ttu-id="c803c-213">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-213">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-214">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-214">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-215">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-215">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-216">Bir `Int32`, `Int64`,</span><span class="sxs-lookup"><span data-stu-id="c803c-216">An `Int32`, `Int64`,</span></span><br /><br /> <span data-ttu-id="c803c-217">`Double`, veya</span><span class="sxs-lookup"><span data-stu-id="c803c-217">`Double`, or</span></span><br /><br /> <span data-ttu-id="c803c-218">`Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-218">`Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-219">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-219">**Example**</span></span><br /><br /> `SqlServer.RADIANS(360.0)`|  
-|<span data-ttu-id="c803c-220">`RAND(`[Temel]`)`</span><span class="sxs-lookup"><span data-stu-id="c803c-220">`RAND(`[seed]`)`</span></span>|<span data-ttu-id="c803c-221">0 ile 1 arasında rastgele bir değeri döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-221">Returns a random value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="c803c-222">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-222">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-223">Retruns Çekirdek değer olarak bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="c803c-223">Retruns the seed value as an `Int32`.</span></span> <span data-ttu-id="c803c-224">Çekirdek değer belirtilmezse, SQL Server veritabanı altyapısı bir çekirdek değer rastgele atar.</span><span class="sxs-lookup"><span data-stu-id="c803c-224">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="c803c-225">İçin belirtilen çekirdek değer, döndürülen sonuç her zaman aynıdır.</span><span class="sxs-lookup"><span data-stu-id="c803c-225">For a specified seed value, the result returned is always the same.</span></span><br /><br /> <span data-ttu-id="c803c-226">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-226">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-227">Bir rastgele `Double` 0 ile 1 arasında bir değer.</span><span class="sxs-lookup"><span data-stu-id="c803c-227">A random `Double` value from 0 through 1.</span></span><br /><br /> <span data-ttu-id="c803c-228">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-228">**Example**</span></span><br /><br /> `SqlServer.RAND()`|  
-|<span data-ttu-id="c803c-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span><span class="sxs-lookup"><span data-stu-id="c803c-229">`ROUND(` `numeric_expression, length` [ ,`function` ]`)`</span></span>|<span data-ttu-id="c803c-230">Belirtilen uzunluk veya duyarlık yuvarlanmasını sayısal bir ifade döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-230">Returns a numeric expression, rounded to the specified length or precision.</span></span><br /><br /> <span data-ttu-id="c803c-231">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-231">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-232">`numeric_expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-232">`numeric_expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-233">`length`: Bir `Int32` duyarlık olduğu temsil eden `numeric_expression` yuvarlanmasını sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="c803c-233">`length`: An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="c803c-234">Zaman `length` pozitif bir sayı olan `numeric_expression` tarafından belirtilen ondalık konumlar sayısına yuvarlanır `length`.</span><span class="sxs-lookup"><span data-stu-id="c803c-234">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="c803c-235">Zaman `length` negatif bir sayı `numeric_expression` tarafından belirtilen Ondalık ayırıcının sol tarafındaki yuvarlanır `length`.</span><span class="sxs-lookup"><span data-stu-id="c803c-235">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span><br /><br /> <span data-ttu-id="c803c-236">`function`: (isteğe bağlı) bir `Int32` işlemi gerçekleştirmek için türünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c803c-236">`function`:(optional) An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="c803c-237">İşlevi atlanmış veya 0 (varsayılan) değerine sahip olduğunda `numeric_expression` yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="c803c-237">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="c803c-238">0 dışında bir değer belirtilirse, `numeric_expression` kesilir.</span><span class="sxs-lookup"><span data-stu-id="c803c-238">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span><br /><br /> <span data-ttu-id="c803c-239">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-239">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-240">Belirtilen değeri `numeric_expression` belirtilen `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="c803c-240">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span><br /><br /> <span data-ttu-id="c803c-241">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-241">**Example**</span></span><br /><br /> `SqlServer.ROUND(748.58, -3)`|  
-|<span data-ttu-id="c803c-242">`SIGN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-242">`SIGN(` `expression` `)`</span></span>|<span data-ttu-id="c803c-243">Artı (+ 1), sıfır (0) veya belirtilen ifadenin eksi (-1) işareti döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-243">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-244">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-244">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-245">`expression`: `Int32`, `Int64`, `Double`, veya `Decimal`</span><span class="sxs-lookup"><span data-stu-id="c803c-245">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span><br /><br /> <span data-ttu-id="c803c-246">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-246">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-247">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="c803c-247">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="c803c-248">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-248">**Example**</span></span><br /><br /> `SqlServer.SIGN(-10)`|  
-|<span data-ttu-id="c803c-249">`SIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-249">`SIN(` `expression` `)`</span></span>|<span data-ttu-id="c803c-250">Trigonometrik radyan cinsinden belirtilen açının sinüsünü hesaplar ve döndüren bir `Double` ifade.</span><span class="sxs-lookup"><span data-stu-id="c803c-250">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span><br /><br /> <span data-ttu-id="c803c-251">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-251">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-252">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-252">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-253">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-253">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-254">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-254">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-255">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-255">**Example**</span></span><br /><br /> `SqlServer.SIN(20)`|  
-|<span data-ttu-id="c803c-256">`SQRT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-256">`SQRT(` `expression` `)`</span></span>|<span data-ttu-id="c803c-257">Belirtilen ifade'nin kare kökünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-257">Returns the square root of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-258">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-258">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-259">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-259">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-260">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-260">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-261">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-261">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-262">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-262">**Example**</span></span><br /><br /> `SqlServer.SQRT(3600)`|  
-|<span data-ttu-id="c803c-263">`SQUARE(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-263">`SQUARE(` `expression` `)`</span></span>|<span data-ttu-id="c803c-264">Belirtilen ifadenin kare döndürür.</span><span class="sxs-lookup"><span data-stu-id="c803c-264">Returns the square of the specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-265">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-265">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-266">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-266">`expression`: A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-267">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-267">**Return Value**</span></span><br /><br /> <span data-ttu-id="c803c-268">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="c803c-268">A `Double`.</span></span><br /><br /> <span data-ttu-id="c803c-269">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-269">**Example**</span></span><br /><br /> `SqlServer.SQUARE(25)`|  
-|<span data-ttu-id="c803c-270">`TAN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="c803c-270">`TAN(` `expression` `)`</span></span>|<span data-ttu-id="c803c-271">Belirtilen ifadeye tanjantını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="c803c-271">Calculates the tangent of a specified expression.</span></span><br /><br /> <span data-ttu-id="c803c-272">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="c803c-272">**Arguments**</span></span><br /><br /> <span data-ttu-id="c803c-273">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="c803c-273">`expression`: `Double`</span></span><br /><br /> <span data-ttu-id="c803c-274">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="c803c-274">**Return Value**</span></span><br /><br /> `Double`<br /><br /> <span data-ttu-id="c803c-275">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="c803c-275">**Example**</span></span><br /><br /> `SqlServer.TAN(45.0)`|  
+## <a name="absexpression"></a><span data-ttu-id="ebe87-106">Abs(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-106">ABS(expression)</span></span>
+
+<span data-ttu-id="ebe87-107">Mutlak değeri işlevi görür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-107">Performs the absolute value function.</span></span>
+
+<span data-ttu-id="ebe87-108">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-108">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-109">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="ebe87-110">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-110">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-111">Belirtilen ifadenin mutlak değeri.</span><span class="sxs-lookup"><span data-stu-id="ebe87-111">The absolute value of the specified expression.</span></span>
+
+<span data-ttu-id="ebe87-112">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-112">**Example**</span></span>
+
+`SqlServer.ABS(-2)`
+
+## <a name="acosexpression"></a><span data-ttu-id="ebe87-113">ACOS(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-113">ACOS(expression)</span></span>
+
+<span data-ttu-id="ebe87-114">Belirtilen ifade arkkosinüsünü değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-114">Returns the arccosine value of the specified expression.</span></span>
+
+<span data-ttu-id="ebe87-115">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-115">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-116">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-116">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-117">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-117">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-118">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-118">A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-119">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-119">**Example**</span></span>
+
+`SqlServer.ACOS(.9)`
+
+## <a name="asinexpression"></a><span data-ttu-id="ebe87-120">ASIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-120">ASIN(expression)</span></span>
+
+<span data-ttu-id="ebe87-121">Belirtilen ifade arksinüsünü değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-121">Returns the arcsine value of the specified expression.</span></span>
+
+<span data-ttu-id="ebe87-122">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-122">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-123">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-123">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-124">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-124">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-125">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-125">A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-126">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-126">**Example**</span></span>
+
+`SqlServer.ASIN(.9)`
+
+## <a name="atanexpression"></a><span data-ttu-id="ebe87-127">ATAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-127">ATAN(expression)</span></span>
+
+<span data-ttu-id="ebe87-128">Belirtilen sayısal ifade arktanjantını değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-128">Returns the arctangent value of the specified numeric expression.</span></span>
+
+<span data-ttu-id="ebe87-129">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-129">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-130">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-130">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-131">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-131">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-132">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-132">A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-133">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-133">**Example**</span></span>
+
+`SqlServer.ATAN(9)`
+
+## <a name="atn2expression-expression"></a><span data-ttu-id="ebe87-134">ATN2(Expression, Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-134">ATN2(expression, expression)</span></span>
+
+<span data-ttu-id="ebe87-135">Radyan cinsinden tanjantı iki belirli sayısal ifade olan açıyı döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
+
+<span data-ttu-id="ebe87-136">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-136">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-137">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-137">`expression`: A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-138">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-138">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-139">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-139">A `Double`.</span></span>
+
+<span data-ttu-id="ebe87-140">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-140">**Example**</span></span>
+
+`SqlServer.ATN2(9, 8)`
+ 
+## <a name="ceilingexpression"></a><span data-ttu-id="ebe87-141">CEILING(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-141">CEILING(expression)</span></span>
+
+<span data-ttu-id="ebe87-142">Belirtilen ifade değerinden büyük veya ona eşit olan en küçük tamsayı dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
+
+<span data-ttu-id="ebe87-143">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-143">**Arguments**</span></span>
+
+<span data-ttu-id="ebe87-144">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="ebe87-145">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-145">**Return Value**</span></span>
+
+<span data-ttu-id="ebe87-146">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+
+<span data-ttu-id="ebe87-147">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-147">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
+
+## <a name="cosexpression"></a><span data-ttu-id="ebe87-148">COS(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-148">COS(expression)</span></span>
+
+<span data-ttu-id="ebe87-149">Trigonometrik radyan cinsinden belirtilen bir açının kosinüsünü hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="ebe87-150">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-150">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-151">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-151">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-152">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-152">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-153">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-153">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-154">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-154">**Example**</span></span> 
+
+`SqlServer.COS(45)`
+
+## <a name="cotexpression"></a><span data-ttu-id="ebe87-155">COT(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-155">COT(expression)</span></span>
+
+<span data-ttu-id="ebe87-156">Trigonometrik radyan cinsinden belirtilen bir açının kotanjantını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
+
+<span data-ttu-id="ebe87-157">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-157">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-158">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-158">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-159">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-159">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-160">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-160">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-161">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-161">**Example**</span></span> 
+
+`SqlServer.COT(60)`
   
- <span data-ttu-id="c803c-276">SqlClient destekleyen matematik işlevleri hakkında daha fazla bilgi için SqlClient sağlayıcısı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:</span><span class="sxs-lookup"><span data-stu-id="c803c-276">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+## <a name="degreesradians"></a><span data-ttu-id="ebe87-162">DEGREES(radians)</span><span class="sxs-lookup"><span data-stu-id="ebe87-162">DEGREES(radians)</span></span>
+
+<span data-ttu-id="ebe87-163">Karşılık gelen açıyı derece cinsinden döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-163">Returns the corresponding angle in degrees.</span></span> 
+
+<span data-ttu-id="ebe87-164">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-164">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-165">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="ebe87-166">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-166">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-167">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="ebe87-168">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-168">**Example**</span></span> 
+
+`SqlServer.DEGREES(3.1)`
+
+## <a name="expexpression"></a><span data-ttu-id="ebe87-169">EXP(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-169">EXP(expression)</span></span>
+
+<span data-ttu-id="ebe87-170">Belirtilen bir sayısal ifade üs değerini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-170">Calculates the exponential value of a specified numeric expression.</span></span> 
+
+<span data-ttu-id="ebe87-171">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-171">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-172">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-172">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-173">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-173">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-174">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-174">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-175">**Örnek** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="ebe87-175">**Example** `SqlServer.EXP(1)`</span></span>
+
+## <a name="floorexpression"></a><span data-ttu-id="ebe87-176">FLOOR(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-176">FLOOR(expression)</span></span>
+
+<span data-ttu-id="ebe87-177">Belirtilen ifadedeki en büyük tamsayı daha az veya eşit ona dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
+
+<span data-ttu-id="ebe87-178">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-178">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-179">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-179">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-180">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-180">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-181">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-181">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-182">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-182">**Example**</span></span> 
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
+[!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
+
+## <a name="logexpression"></a><span data-ttu-id="ebe87-183">LOG(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-183">LOG(expression)</span></span>
+
+<span data-ttu-id="ebe87-184">Belirtilen doğal logaritmasını hesaplar `float` ifade.</span><span class="sxs-lookup"><span data-stu-id="ebe87-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
+
+<span data-ttu-id="ebe87-185">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-185">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-186">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-186">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-187">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-187">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-188">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-188">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-189">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-189">**Example**</span></span> 
+
+`SqlServer.LOG(100)`
+
+## <a name="log10expression"></a><span data-ttu-id="ebe87-190">Log10(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-190">LOG10(expression)</span></span>
+
+<span data-ttu-id="ebe87-191">Belirtilen 10 tabanında logaritmasını döndürür `Double` ifade.</span><span class="sxs-lookup"><span data-stu-id="ebe87-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
+
+<span data-ttu-id="ebe87-192">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-192">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-193">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-193">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-194">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-194">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-195">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-195">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-196">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-196">**Example**</span></span> 
+
+`SqlServer.LOG10(100)`
+
+## <a name="pi"></a><span data-ttu-id="ebe87-197">PI()</span><span class="sxs-lookup"><span data-stu-id="ebe87-197">PI()</span></span>
+
+<span data-ttu-id="ebe87-198">Sabit değer pi'nin döndürür bir `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-198">Returns the constant value of pi as a `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-199">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-199">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-200">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-200">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-201">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-201">**Example**</span></span> 
+
+`SqlServer.PI()`
+
+## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="ebe87-202">GÜÇ (numeric_expression, power_expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-202">POWER(numeric_expression, power_expression)</span></span>
+
+<span data-ttu-id="ebe87-203">Belirtilen bir ifadenin belirtilen bir kuvvete değerini hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-203">Calculates the value of a specified expression to a specified power.</span></span>
+
+<span data-ttu-id="ebe87-204">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-204">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="ebe87-205">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
+|`power_expression`| <span data-ttu-id="ebe87-206">A `Double` yükseltmek istediğiniz gücünü temsil eden `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
+
+<span data-ttu-id="ebe87-207">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-207">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-208">Belirtilen değeri `numeric_expression` belirtilen `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
+
+<span data-ttu-id="ebe87-209">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-209">**Example**</span></span> 
+
+`SqlServer.POWER(2,7)`
+
+## <a name="radiansexpression"></a><span data-ttu-id="ebe87-210">RADIANS(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-210">RADIANS(expression)</span></span>
+
+<span data-ttu-id="ebe87-211">Dereceyi radyana dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-211">Converts degrees to radians.</span></span> 
+
+<span data-ttu-id="ebe87-212">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-212">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-213">`expression`: Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="ebe87-214">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-214">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-215">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="ebe87-216">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-216">**Example**</span></span> 
+
+`SqlServer.RADIANS(360.0)`
+
+## <a name="randseed"></a><span data-ttu-id="ebe87-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="ebe87-217">RAND([seed])</span></span>
+
+<span data-ttu-id="ebe87-218">0 ile 1 arasında rastgele bir değer döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-218">Returns a random value from 0 through 1.</span></span> 
+
+<span data-ttu-id="ebe87-219">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-219">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-220">Çekirdek değeri olarak bir `Int32`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="ebe87-221">Çekirdek değer belirtilmemişse, SQL Server veritabanı altyapısı rastgele bir tohum değeri atar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="ebe87-222">Belirtilen çekirdek değeri için döndürülen sonuç her zaman aynıdır.</span><span class="sxs-lookup"><span data-stu-id="ebe87-222">For a specified seed value, the result returned is always the same.</span></span>
+
+<span data-ttu-id="ebe87-223">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-223">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-224">Rastgele bir sıra `Double` 0 ile 1 arasında bir değer.</span><span class="sxs-lookup"><span data-stu-id="ebe87-224">A random `Double` value from 0 through 1.</span></span> 
+
+<span data-ttu-id="ebe87-225">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-225">**Example**</span></span> 
+
+`SqlServer.RAND()`
   
-|<span data-ttu-id="c803c-277">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="c803c-277">SQL Server 2000</span></span>|<span data-ttu-id="c803c-278">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="c803c-278">SQL Server 2005</span></span>|<span data-ttu-id="c803c-279">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="c803c-279">SQL Server 2008</span></span>|  
-|---------------------|---------------------|---------------------|  
-|[<span data-ttu-id="c803c-280">Matematik işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="c803c-280">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115913)|[<span data-ttu-id="c803c-281">Matematik işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="c803c-281">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115911)|[<span data-ttu-id="c803c-282">Matematik işlevleri (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="c803c-282">Mathematical Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115912)|  
+## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="ebe87-226">ROUND(numeric_expression, length[,Function])</span><span class="sxs-lookup"><span data-stu-id="ebe87-226">ROUND(numeric_expression, length[,function])</span></span>
+
+<span data-ttu-id="ebe87-227">Belirtilen uzunluk veya duyarlık yuvarlak bir sayısal ifade döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
+
+<span data-ttu-id="ebe87-228">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-228">**Arguments**</span></span> 
+
+|  |  |
+|--|--|
+|`numeric_expression`| <span data-ttu-id="ebe87-229">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+|`length`| <span data-ttu-id="ebe87-230">Bir `Int32` duyarlık olduğu temsil eden `numeric_expression` yuvarlanmasını sağlamaktır.</span><span class="sxs-lookup"><span data-stu-id="ebe87-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="ebe87-231">Zaman `length` pozitif bir sayı `numeric_expression` tarafından belirtilen ondalık basamak sayısına yuvarlanır `length`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="ebe87-232">Zaman `length` negatif bir sayı `numeric_expression` belirtildiği gibi Ondalık ayırıcının sol tarafındaki yuvarlanır `length`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
+|`function` | <span data-ttu-id="ebe87-233">İsteğe bağlı.</span><span class="sxs-lookup"><span data-stu-id="ebe87-233">Optional.</span></span> <span data-ttu-id="ebe87-234">Bir `Int32` gerçekleştirilecek işlem türünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="ebe87-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="ebe87-235">İşlev atlanırsa veya 0 (varsayılan), değeri `numeric_expression` yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="ebe87-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="ebe87-236">0 dışında bir değer belirtilirse, `numeric_expression` kesilir.</span><span class="sxs-lookup"><span data-stu-id="ebe87-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
+
+<span data-ttu-id="ebe87-237">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-237">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-238">Belirtilen değeri `numeric_expression` belirtilen `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
+
+<span data-ttu-id="ebe87-239">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-239">**Example**</span></span> 
+
+`SqlServer.ROUND(748.58, -3)`
+
+## <a name="signexpression"></a><span data-ttu-id="ebe87-240">SIGN(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-240">SIGN(expression)</span></span> 
+
+<span data-ttu-id="ebe87-241">(+ 1) pozitif, sıfır (0) veya eksi (-1) belirtilen ifade döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
+
+<span data-ttu-id="ebe87-242">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-242">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-243">`expression`: `Int32`, `Int64`, `Double`, veya `Decimal`</span><span class="sxs-lookup"><span data-stu-id="ebe87-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
+
+<span data-ttu-id="ebe87-244">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-244">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-245">Bir `Int32`, `Int64`, `Double`, veya `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+
+<span data-ttu-id="ebe87-246">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-246">**Example**</span></span> 
+
+`SqlServer.SIGN(-10)`
+
+## <a name="sinexpression"></a><span data-ttu-id="ebe87-247">SIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-247">SIN(expression)</span></span>
+
+<span data-ttu-id="ebe87-248">Trigonometrik radyan cinsinden belirtilen bir açının sinüsünü hesaplar ve döndürür bir `Double` ifade.</span><span class="sxs-lookup"><span data-stu-id="ebe87-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
+
+<span data-ttu-id="ebe87-249">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-249">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-250">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-250">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-251">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-251">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-252">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-252">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-253">**Örnek** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="ebe87-253">**Example** `SqlServer.SIN(20)`</span></span>
+
+## <a name="sqrtexpression"></a><span data-ttu-id="ebe87-254">Sqrt(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-254">SQRT(expression)</span></span>
+
+<span data-ttu-id="ebe87-255">Belirtilen ifadenin kare kökünü döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-255">Returns the square root of the specified expression.</span></span> 
+
+<span data-ttu-id="ebe87-256">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-256">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-257">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-257">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-258">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-258">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-259">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-259">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-260">**Örnek** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="ebe87-260">**Example** `SqlServer.SQRT(3600)`</span></span>
+
+## <a name="squareexpression"></a><span data-ttu-id="ebe87-261">SQUARE(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-261">SQUARE(expression)</span></span>
+
+<span data-ttu-id="ebe87-262">Belirtilen ifade karesini döndürür.</span><span class="sxs-lookup"><span data-stu-id="ebe87-262">Returns the square of the specified expression.</span></span> 
+
+<span data-ttu-id="ebe87-263">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-263">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-264">`expression`: BİR `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-264">`expression`: A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-265">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-265">**Return Value**</span></span> 
+
+<span data-ttu-id="ebe87-266">A `Double`.</span><span class="sxs-lookup"><span data-stu-id="ebe87-266">A `Double`.</span></span> 
+
+<span data-ttu-id="ebe87-267">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-267">**Example**</span></span> 
+
+`SqlServer.SQUARE(25)`
+
+## <a name="tanexpression"></a><span data-ttu-id="ebe87-268">TAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="ebe87-268">TAN(expression)</span></span>
+
+<span data-ttu-id="ebe87-269">Belirtilen bir ifade tanjantını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="ebe87-269">Calculates the tangent of a specified expression.</span></span>
+
+<span data-ttu-id="ebe87-270">**Bağımsız Değişkenler**</span><span class="sxs-lookup"><span data-stu-id="ebe87-270">**Arguments**</span></span> 
+
+<span data-ttu-id="ebe87-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="ebe87-271">`expression`: `Double`</span></span> 
+
+<span data-ttu-id="ebe87-272">**Dönüş değeri**</span><span class="sxs-lookup"><span data-stu-id="ebe87-272">**Return Value**</span></span> 
+
+`Double` 
+
+<span data-ttu-id="ebe87-273">**Örnek**</span><span class="sxs-lookup"><span data-stu-id="ebe87-273">**Example**</span></span> 
+
+`SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a><span data-ttu-id="c803c-283">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c803c-283">See Also</span></span>  
- [<span data-ttu-id="c803c-284">Entity Framework için SqlClient İşlevleri</span><span class="sxs-lookup"><span data-stu-id="c803c-284">SqlClient for Entity Framework Functions</span></span>](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ebe87-274">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebe87-274">See also</span></span>
+
+<span data-ttu-id="ebe87-275">SqlClient destekleyen matematiksel işlevler hakkında daha fazla bilgi için SqlClient sağlayıcı bildiriminde belirtilen SQL Server sürümü için belgelere bakın:</span><span class="sxs-lookup"><span data-stu-id="ebe87-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+  
+<span data-ttu-id="ebe87-276">**SQL Server 2005:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="ebe87-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
+<span data-ttu-id="ebe87-277">**SQL Server 2008:** [matematik işlevleri (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="ebe87-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
+<span data-ttu-id="ebe87-278">**SQL Server 2012 ve sonraki sürümler:** [matematik işlevleri (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="ebe87-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
+
+ [<span data-ttu-id="ebe87-279">Entity Framework için SqlClient İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ebe87-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)

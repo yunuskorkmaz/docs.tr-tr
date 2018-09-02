@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: c6d797b68ad03023d6101b20cacae6d828abe0c1
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 423cedfb947964172a6e06d54a6dd3c76d91e9f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753966"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418209"
 ---
-# <a name="elif-c-reference"></a><span data-ttu-id="0a0f5-102">#elif (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="0a0f5-102">#elif (C# Reference)</span></span>
-<span data-ttu-id="0a0f5-103">`#elif` bir bileşik koşullu yönergesi oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="0a0f5-104">`#elif` Kullanılmazsa, ifade değerlendirilir önceki [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya hiçbir, isteğe bağlı, önceki `#elif` yönerge nevyhodnocovat için `true`.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="0a0f5-105">Varsa bir `#elif` ifadeyi hesaplar için `true`, derleyicinin kod arasında değerlendirir `#elif` ve sonraki koşullu yönergesi.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="0a0f5-106">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="0a0f5-106">For example:</span></span>  
+# <a name="elif-c-reference"></a><span data-ttu-id="c6951-102">#elif (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="c6951-102">#elif (C# Reference)</span></span>
+<span data-ttu-id="c6951-103">`#elif` bir bileşik koşullu yönergesi oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="c6951-103">`#elif` lets you create a compound conditional directive.</span></span> <span data-ttu-id="c6951-104">`#elif` Kullanılmazsa, ifade değerlendirilir önceki [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) veya hiçbir, isteğe bağlı, önceki `#elif` yönerge nevyhodnocovat için `true`.</span><span class="sxs-lookup"><span data-stu-id="c6951-104">The `#elif` expression will be evaluated if neither the preceding [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nor any preceding, optional, `#elif` directive expressions evaluate to `true`.</span></span> <span data-ttu-id="c6951-105">Varsa bir `#elif` ifadeyi hesaplar için `true`, derleyicinin kod arasında değerlendirir `#elif` ve sonraki koşullu yönergesi.</span><span class="sxs-lookup"><span data-stu-id="c6951-105">If a `#elif` expression evaluates to `true`, the compiler evaluates all the code between the `#elif` and the next conditional directive.</span></span> <span data-ttu-id="c6951-106">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="c6951-106">For example:</span></span>  
   
 ```csharp
 #define VC7  
@@ -26,21 +26,22 @@ ms.locfileid: "42753966"
 #endif  
 ```  
   
- <span data-ttu-id="0a0f5-107">İşleçleri `==` (eşitlik) `!=` (eşitsizlik) `&&` (ve) ve `||` (veya) birden çok sembolleri değerlendirilecek.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="0a0f5-108">Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-108">You can also group symbols and operators with parentheses.</span></span>  
+ <span data-ttu-id="c6951-107">İşleçleri `==` (eşitlik) `!=` (eşitsizlik) `&&` (ve) ve `||` (veya) birden çok sembolleri değerlendirilecek.</span><span class="sxs-lookup"><span data-stu-id="c6951-107">You can use the operators `==` (equality), `!=` (inequality), `&&` (and), and `||` (or), to evaluate multiple symbols.</span></span> <span data-ttu-id="c6951-108">Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c6951-108">You can also group symbols and operators with parentheses.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0a0f5-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0a0f5-109">Remarks</span></span>  
- <span data-ttu-id="0a0f5-110">`#elif` kullanmakla eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="0a0f5-110">`#elif` is equivalent to using:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6951-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c6951-109">Remarks</span></span>  
+ <span data-ttu-id="c6951-110">`#elif` kullanmakla eşdeğerdir:</span><span class="sxs-lookup"><span data-stu-id="c6951-110">`#elif` is equivalent to using:</span></span>  
   
 ```csharp
 #else  
 #if  
 ```  
   
- <span data-ttu-id="0a0f5-111">Kullanarak `#elif` basittir çünkü her `#if` gerektiren bir [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)bilgileriyse bir `#elif` eşleşmeyen kullanılabilir `#endif`.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
+ <span data-ttu-id="c6951-111">Kullanarak `#elif` basittir çünkü her `#if` gerektiren bir [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)bilgileriyse bir `#elif` eşleşmeyen kullanılabilir `#endif`.</span><span class="sxs-lookup"><span data-stu-id="c6951-111">Using `#elif` is simpler, because each `#if` requires a [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), whereas a `#elif` can be used without a matching `#endif`.</span></span>  
   
- <span data-ttu-id="0a0f5-112">Bkz: [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nasıl kullanılacağına ilişkin bir örnek `#elif`.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
+ <span data-ttu-id="c6951-112">Bkz: [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) nasıl kullanılacağına ilişkin bir örnek `#elif`.</span><span class="sxs-lookup"><span data-stu-id="c6951-112">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#elif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a0f5-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="0a0f5-113">See Also</span></span>  
- [<span data-ttu-id="0a0f5-114">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="0a0f5-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="0a0f5-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="0a0f5-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="0a0f5-116">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="0a0f5-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="c6951-113">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c6951-113">See Also</span></span>
+
+- [<span data-ttu-id="c6951-114">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="c6951-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="c6951-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="c6951-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="c6951-116">C# Ön İşlemci Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="c6951-116">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
