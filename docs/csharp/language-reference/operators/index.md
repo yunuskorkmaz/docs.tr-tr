@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34457615"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461082"
 ---
 # <a name="c-operators"></a>C# İşleçleri
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirilecek işlemleri belirten simgelerdir birçok işleçleri sağlar. Yapabilecekleriniz [aşırı](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) işleçlerinin çoğu kullanıcı tanımlı bir türe başvurulduğunda anlamının değiştirin.  
@@ -207,10 +207,11 @@ C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekle�
 -   Kayan nokta aritmetik taşma ya da sıfıra bölme hiçbir zaman bir özel durum oluşturur, kayan nokta türleri IEEE 754 ve bunu temel aldığından, sonsuzluk ve NaN (sayı değil) temsil eden hükümlerine vardır.  
   
 -   [Ondalık](../../../csharp/language-reference/keywords/decimal.md) aritmetik taşma her zaman oluşturur bir <xref:System.OverflowException>. Sıfır ile ondalık bölme her zaman oluşturur bir <xref:System.DivideByZeroException>.  
-  
-  
-## <a name="see-also"></a>Ayrıca Bkz.  
- [C# başvurusu](../../../csharp/language-reference/index.md)  
- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md) [fazla yüklenebilir işleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
+
+## <a name="see-also"></a>Ayrıca Bkz.
+
+- [C# başvurusu](../../../csharp/language-reference/index.md)  
+- [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)  
+- [C#](../../../csharp/index.md)
+- [Aşırı Yüklenebilir İşleçler](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+- [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
