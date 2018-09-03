@@ -9,50 +9,50 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254123"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468845"
 ---
-# <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="c3d41-102">-target: winexe (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="c3d41-102">-target:winexe (C# Compiler Options)</span></span>
-<span data-ttu-id="c3d41-103">**-Target: winexe** seçeneği bir yürütülebilir (EXE), Windows programı oluşturmak derleyicinin neden olur.</span><span class="sxs-lookup"><span data-stu-id="c3d41-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  
+# <a name="-targetwinexe-c-compiler-options"></a><span data-ttu-id="403f2-102">-target: winexe (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="403f2-102">-target:winexe (C# Compiler Options)</span></span>
+<span data-ttu-id="403f2-103">**-Target: winexe** seçeneği bir yürütülebilir (EXE), Windows programı oluşturmak derleyicinin neden olur.</span><span class="sxs-lookup"><span data-stu-id="403f2-103">The **-target:winexe** option causes the compiler to create an executable (EXE), Windows program.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3d41-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c3d41-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="403f2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="403f2-104">Syntax</span></span>  
   
 ```console  
 -target:winexe  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c3d41-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c3d41-105">Remarks</span></span>  
- <span data-ttu-id="c3d41-106">Yürütülebilir dosyanın .exe uzantısı ile oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="c3d41-106">The executable file will be created with the .exe extension.</span></span> <span data-ttu-id="c3d41-107">Bir Windows ya da .NET Framework Kitaplığı'ndan veya Win32 API'ları ile bir kullanıcı arabirimi sağlayan bir programdır.</span><span class="sxs-lookup"><span data-stu-id="c3d41-107">A Windows program is one that provides a user interface from either the .NET Framework library or with the Win32 APIs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="403f2-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="403f2-105">Remarks</span></span>  
+ <span data-ttu-id="403f2-106">Yürütülebilir dosyanın .exe uzantısı ile oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="403f2-106">The executable file will be created with the .exe extension.</span></span> <span data-ttu-id="403f2-107">Bir Windows ya da .NET Framework Kitaplığı'ndan veya Win32 API'ları ile bir kullanıcı arabirimi sağlayan bir programdır.</span><span class="sxs-lookup"><span data-stu-id="403f2-107">A Windows program is one that provides a user interface from either the .NET Framework library or with the Win32 APIs.</span></span>  
   
- <span data-ttu-id="c3d41-108">Kullanım [-target: exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) bir konsol uygulaması oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="c3d41-108">Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) to create a console application.</span></span>  
+ <span data-ttu-id="403f2-108">Kullanım [-target: exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) bir konsol uygulaması oluşturmak için.</span><span class="sxs-lookup"><span data-stu-id="403f2-108">Use [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) to create a console application.</span></span>  
   
- <span data-ttu-id="c3d41-109">İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıkış dosyası adını içeren giriş dosyasının adını alır [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c3d41-109">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
+ <span data-ttu-id="403f2-109">İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıkış dosyası adını içeren giriş dosyasının adını alır [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="403f2-109">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
   
- <span data-ttu-id="c3d41-110">Tüm komut satırında belirtildiğinde kadar sonraki dosyalar **-out** veya [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) seçeneği, Windows programı oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c3d41-110">When specified at the command line, all files until the next **-out** or [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) option are used to create the Windows program.</span></span>  
+ <span data-ttu-id="403f2-110">Tüm komut satırında belirtildiğinde kadar sonraki dosyalar **-out** veya [-hedef](../../../csharp/language-reference/compiler-options/target-compiler-option.md) seçeneği, Windows programı oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="403f2-110">When specified at the command line, all files until the next **-out** or [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) option are used to create the Windows program.</span></span>  
   
- <span data-ttu-id="c3d41-111">Bir ve yalnızca bir **ana** yöntemi bir .exe dosyasına derlenir kaynak kodu dosyalarında gereklidir.</span><span class="sxs-lookup"><span data-stu-id="c3d41-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="c3d41-112">[-Ana](../../../csharp/language-reference/compiler-options/main-compiler-option.md) seçeneği hangi sınıfı içeren belirtmenize olanak tanır **ana** yöntemi ile birden fazla sınıf kodunuzu sahip olduğu durumlarda bir **ana** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c3d41-112">The [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
+ <span data-ttu-id="403f2-111">Bir ve yalnızca bir **ana** yöntemi bir .exe dosyasına derlenir kaynak kodu dosyalarında gereklidir.</span><span class="sxs-lookup"><span data-stu-id="403f2-111">One and only one **Main** method is required in the source code files that are compiled into an .exe file.</span></span> <span data-ttu-id="403f2-112">[-Ana](../../../csharp/language-reference/compiler-options/main-compiler-option.md) seçeneği hangi sınıfı içeren belirtmenize olanak tanır **ana** yöntemi ile birden fazla sınıf kodunuzu sahip olduğu durumlarda bir **ana** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="403f2-112">The [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) option lets you specify which class contains the **Main** method, in cases where your code has more than one class with a **Main** method.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="c3d41-113">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="c3d41-113">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="403f2-113">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="403f2-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="c3d41-114">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="c3d41-114">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="403f2-114">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="403f2-114">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="c3d41-115">Tıklayın **uygulama** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="c3d41-115">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="403f2-115">Tıklayın **uygulama** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="403f2-115">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="c3d41-116">Değiştirme **çıkış türü** özelliği.</span><span class="sxs-lookup"><span data-stu-id="c3d41-116">Modify the **Output type** property.</span></span>  
+3.  <span data-ttu-id="403f2-116">Değiştirme **çıkış türü** özelliği.</span><span class="sxs-lookup"><span data-stu-id="403f2-116">Modify the **Output type** property.</span></span>  
   
- <span data-ttu-id="c3d41-117">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="c3d41-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="403f2-117">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="403f2-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c3d41-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="c3d41-118">Example</span></span>  
- <span data-ttu-id="c3d41-119">Derleme `in.cs` Windows programı:</span><span class="sxs-lookup"><span data-stu-id="c3d41-119">Compile `in.cs` into a Windows program:</span></span>  
+## <a name="example"></a><span data-ttu-id="403f2-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="403f2-118">Example</span></span>  
+ <span data-ttu-id="403f2-119">Derleme `in.cs` Windows programı:</span><span class="sxs-lookup"><span data-stu-id="403f2-119">Compile `in.cs` into a Windows program:</span></span>  
   
 ```console  
 csc -target:winexe in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c3d41-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="c3d41-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="403f2-120">Ayrıca Bkz.</span><span class="sxs-lookup"><span data-stu-id="403f2-120">See Also</span></span>  
 
-- [<span data-ttu-id="c3d41-121">-target (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="c3d41-121">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
-- [<span data-ttu-id="c3d41-122">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="c3d41-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="403f2-121">-target (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="403f2-121">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [<span data-ttu-id="403f2-122">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="403f2-122">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
