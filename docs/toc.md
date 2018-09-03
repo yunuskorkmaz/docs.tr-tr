@@ -63,6 +63,7 @@
 
 <!-- .NET Core Content -->
 # [.NET Core Kılavuzu](core/index.md)
+## [.NET Core hakkında](core/about.md)
 ## [Kullanmaya başlama](core/get-started.md)
 ### [C# ve Visual Studio Code kullanmaya başlama](core/tutorials/with-visual-studio-code.md)
 ### [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](core/tutorials/with-visual-studio.md)
@@ -108,6 +109,7 @@
 ### [.NET Core Uygulamaları için Docker Görüntülerinizi Derleme](core/docker/building-net-docker-images.md)
 ### [Docker için Visual Studio Araçları](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Birim Testi](core/testing/index.md)
+### [Birim testi en iyi deneyimler](core/testing/unit-testing-best-practices.md)
 ### [xUnit ile C# birim testi](core/testing/unit-testing-with-dotnet-test.md)
 ### [NUnit ile C# birim testi](core/testing/unit-testing-with-nunit.md)
 ### [MSTest ile C# birim testi](core/testing/unit-testing-with-mstest.md)
@@ -118,10 +120,13 @@
 ### [NUnit ile VB birim testi](core/testing/unit-testing-visual-basic-with-nunit.md)
 ### [MSTest ile VB birim testi](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Seçmeli birim testleri çalıştırma](core/testing/selective-unit-tests.md)
-### [Birim Test Yayımlanmış Çıktısı](core/testing/unit-testing-published-output.md)
+### [Birim testi yayımlanmış çıktısı](core/testing/unit-testing-published-output.md)
 ### [Visual Studio ile .NET Core projelerinde canlı birim testi](/visualstudio/test/live-unit-testing-start)
 ## [Sürüm Oluşturma](core/versions/index.md)
+### [.NET Core sürüm geçmişi](core/versions/version-history.md)
 ### [.NET Core sürüm seçimi](core/versions/selection.md)
+### [.NET Core yükleme yönetimi](core/versions/install-management.md)
+### [Eski çalışma zamanlarını ve SDK’ları kaldırma](core/versions/remove-runtime-sdk-versions.md)
 ## [Çalışma Zamanı Tanımlayıcı kataloğu](core/rid-catalog.md)
 ## [.NET Core SDK’sına Genel Bakış](core/sdk.md)
 ## [.NET Core CLI Araçları](core/tools/index.md)
@@ -293,7 +298,6 @@
 <!-- F# Content -->
 # [F# Kılavuzu](fsharp/index.md)
 
-## [F# Turu](fsharp/tour.md)
 ## [Başlarken](fsharp/get-started/index.md)
 ### [F# yükleme](fsharp/get-started/install-fsharp.md)
 ### [Visual Studio Kullanmaya Başlayın](fsharp/get-started/get-started-visual-studio.md)
@@ -301,38 +305,19 @@
 ### [Visual Studio Code ve Ionide Kullanmaya Başlayın](fsharp/get-started/get-started-vscode.md)
 ### [.NET Core CLI Kullanmaya Başlayın](fsharp/get-started/get-started-command-line.md)
 
-## [F# stil kılavuzu](fsharp/style-guide/index.md)
-### [F# kod Biçimlendirme Yönergeleri](fsharp/style-guide/formatting.md)
-### [F# kodlama kuralları](fsharp/style-guide/conventions.md)
-### [F# bileşen tasarımı yönergeleri](fsharp/style-guide/component-design-guidelines.md)
+## [F# nedir?](fsharp/what-is-fsharp.md)
+## [F# Turu](fsharp/tour.md)
 
 ## Öğreticiler
-### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
+### İşlevsel Programlamaya Giriş
+#### [İlk Sınıf Değerleri Olarak İşlevler](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+### Zaman Uyumsuz ve Eş Zamanlı Programlama
+#### [Zaman uyumsuz programlama](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 ### [Tür Sağlayıcıları](fsharp/tutorials/type-providers/index.md)
 #### [Tür Sağlayıcısı Oluşturma](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Tür Sağlayıcısı Güvenliği](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Tür Sağlayıcıları Sorunlarını Giderme](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## İşlevsel Programlamaya Giriş
-### [İlk Sınıf Değerleri Olarak İşlevler](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
-### Zaman Uyumsuz ve Eş Zamanlı Programlama
-#### [Zaman uyumsuz programlama](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-
-<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
-### [Visual F# Geliştirme Ortamı Özellikleri](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
-### [Projeleri Yapılandırma](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
-### [Eski .NET Sürümlerini Hedefleme](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
-
-## [Azure’da F# Kullanma](fsharp/using-fsharp-on-azure/index.md)
-### [F# kullanarak Azure Blob depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/blob-storage.md)
-### [F# kullanarak Azure Dosya depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/file-storage.md)
-### [F# kullanarak Azure Kuyruk depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/queue-storage.md)
-### [F# kullanarak Azure Tablo depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/table-storage.md)
-<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
-### [F# Azure Bağımlılıkları için Paket Yönetimi](fsharp/using-fsharp-on-azure/package-management.md)
+### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 
 ## [F# Dili Başvurusu](fsharp/language-reference/index.md)
 ### [Klavye Başvurusu](fsharp/language-reference/keyword-reference.md)
@@ -361,6 +346,7 @@
 ### [F# Koleksiyon Türleri](fsharp/language-reference/fsharp-collection-types.md)
 ### [Listeler](fsharp/language-reference/lists.md)
 ### [Seçenekler](fsharp/language-reference/options.md)
+### [Değer Seçenekleri](fsharp/language-reference/value-options.md)
 ### [Sonuçlar](fsharp/language-reference/results.md)
 ### [Diziler](fsharp/language-reference/sequences.md)
 ### [Diziler](fsharp/language-reference/arrays.md)
@@ -431,26 +417,37 @@
 ### [Kaynak Satırı, Dosya ve Yol Tanımlayıcıları](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Çağıran Bilgileri](fsharp/language-reference/caller-information.md)
 ### [Ayrıntılı Söz Dizimi](fsharp/language-reference/verbose-syntax.md)
-### [Kod Biçimlendirme Yönergeleri](fsharp/language-reference/code-formatting-guidelines.md)
+
+## [F# stil kılavuzu](fsharp/style-guide/index.md)
+### [F# kod Biçimlendirme Yönergeleri](fsharp/style-guide/formatting.md)
+### [F# kodlama kuralları](fsharp/style-guide/conventions.md)
+### [F# bileşen tasarımı yönergeleri](fsharp/style-guide/component-design-guidelines.md)
+
+## [Azure’da F# Kullanma](fsharp/using-fsharp-on-azure/index.md)
+### [F# kullanarak Azure Blob depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/blob-storage.md)
+### [F# kullanarak Azure Dosya depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/file-storage.md)
+### [F# kullanarak Azure Kuyruk depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/queue-storage.md)
+### [F# kullanarak Azure Tablo depolama kullanmaya başlama](fsharp/using-fsharp-on-azure/table-storage.md)
+### [F# Azure Bağımlılıkları için Paket Yönetimi](fsharp/using-fsharp-on-azure/package-management.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
 # [Visual Basic Kılavuzu](visual-basic/index.md)
+## [Visual Basic’teki Yenilikler](visual-basic/getting-started/whats-new.md)
 ## [Başlarken](visual-basic/getting-started/index.md)
-### [Visual Basic’teki Yenilikler](visual-basic/getting-started/whats-new.md)
 ### [Visual Studio'daki Önemli Visual Basic Değişiklikleri](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic Programcıları için Ek Kaynaklar](visual-basic/getting-started/additional-resources.md)
 
 ## [Uygulama Geliştirme](visual-basic/developing-apps/index.md)
 
 ### [Visual Basic'te Programlama](visual-basic/developing-apps/programming/index.md)
-#### [Bilgisayar Kaynaklarına Erişme](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
-#### [Uygulamadan Günlüğe Bilgi Kaydetme](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+#### [Bilgisayar Kaynaklarına Erişme](visual-basic/developing-apps/programming/computer-resources/index.md)
+#### [Uygulamadan Günlüğe Bilgi Kaydetme](visual-basic/developing-apps/programming/log-info/index.md)
 #### [Kullanıcı Verilerine Erişme](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [Uygulama Formlarına Erişme](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [Uygulama Web Hizmetlerine Erişme](visual-basic/developing-apps/programming/accessing-application-web-services.md)
 ##### [Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
-#### [Uygulama Ayarlarına Erişme](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+#### [Uygulama Ayarlarına Erişme](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [Sürücüleri, Dizinleri ve Dosyaları İşleme](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
 ### [My Özelliğiyle Geliştirme](visual-basic/developing-apps/development-with-my/index.md)
@@ -463,7 +460,7 @@
 ### [Verilere Erişme](visual-basic/developing-apps/accessing-data.md)
 ### [Bileşen Oluşturma ve Kullanma](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Yazdırma ve Raporlama](visual-basic/developing-apps/printing/printing-and-reporting.md)
+### [Yazdırma ve Raporlama](visual-basic/developing-apps/printing/index.md)
 #### [PrintForm Bileşeni](visual-basic/developing-apps/printing/printform-component.md)
 #### [Nasıl Yapılır: Kaydırılabilir Form Yazdırma](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
 #### [Nasıl Yapılır: Formun İstemci Alanlarını ve Diğerlerini Yazdırma](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
@@ -472,29 +469,9 @@
 #### [PrintForm Denetimlerine Başvuruda Bulunan Uygulamaları Dağıtma](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [Visual Studio Uygulamalarına Yazdırılabilir Raporlar Ekleme](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
-### [Windows Forms Uygulaması Temelleri](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
-### [Power Packs Denetimleri](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
-### [DataRepeater Denetimi](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
-#### [DataRepeater Denetimine Giriş](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
-#### [DataRepeater Denetiminde Sanal Mod](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetiminde Bağlı Verileri Görüntüleme](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetimindeki İlişkisiz Denetimleri Görüntüleme](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetimi Düzenini Değiştirme](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetiminin Görünümünü Değiştirme](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetiminde Öğe Üst Bilgilerini Görüntüleme](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Öğelerini Eklemeyi ve Silmeyi Devre Dışı Bırakma](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
-#### [Nasıl Yapılır: DataRepeater Denetiminde Veri Arama](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
-#### [Nasıl Yapılır: İki DataRepeater Denetimi Kullanarak Ana Öğe/Ayrıntı Formu Oluşturma](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
-#### [İzlenecek Yol: DataRepeater Denetimindeki Verileri Görüntüleme](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
-#### [DataRepeater Denetiminde Sorun Giderme](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
-### [Çizgi ve Şekil Denetimleri](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
-#### [Çizgi ve Şekil Denetimlerine Giriş](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
-#### [Nasıl Yapılır: LineShape Denetimiyle Çizgi Çizme](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
-#### [Nasıl Yapılır: OvalShape ve RectangleShape Denetimleriyle Şekil Çizme](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
-#### [Nasıl Yapılır: Şekiller Arasında Sekmeyle Gitmeyi Etkinleştirme](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
-#### [Power Packs Denetimlerine Başvuruda Bulunan Uygulamaları Dağıtma](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
+### [Windows Forms Uygulaması Temelleri](visual-basic/developing-apps/windows-forms/index.md)
 
-### [Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+### [Visual Basic ile Projeleri Özelleştirme ve My Özelliklerini Genişletme](visual-basic/developing-apps/customizing-extending-my/index.md)
 #### [Visual Basic'te My Ad Alanını Genişletme](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 #### [My Uzantılarını Paketleme ve Dağıtma](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 #### [Visual Basic Uygulama Modelini Genişletme](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
@@ -588,7 +565,7 @@
 #### [Dize Düzenleme Özeti](visual-basic/language-reference/keywords/string-manipulation-summary.md)
 ### [Öznitelikler](visual-basic/language-reference/attributes.md)
 ### [Sabitler ve Sabit Listeleri](visual-basic/language-reference/constants-and-enumerations.md)
-### [Veri Türü Özeti](visual-basic/language-reference/data-types/data-type-summary.md)
+### [Veri Türü Özeti](visual-basic/language-reference/data-types/index.md)
 #### [Boolean Veri Türü](visual-basic/language-reference/data-types/boolean-data-type.md)
 #### [Byte Veri Türü](visual-basic/language-reference/data-types/byte-data-type.md)
 #### [Char Veri Türü](visual-basic/language-reference/data-types/char-data-type.md)
@@ -606,7 +583,7 @@
 #### [ULong Veri Türü](visual-basic/language-reference/data-types/ulong-data-type.md)
 #### [User-Defined Veri Türü](visual-basic/language-reference/data-types/user-defined-data-type.md)
 #### [UShort Veri Türü](visual-basic/language-reference/data-types/ushort-data-type.md)
-### [Yönergeler](visual-basic/language-reference/directives/directives.md)
+### [Yönergeler](visual-basic/language-reference/directives/index.md)
 #### [#Const Yönergesi](visual-basic/language-reference/directives/const-directive.md)
 #### [#ExternalSource Yönergesi](visual-basic/language-reference/directives/externalsource-directive.md)
 #### [#If...Then...#Else Yönergesi](visual-basic/language-reference/directives/if-then-else-directives.md)
@@ -737,7 +714,7 @@
 #### [Mantıksal Bit Düzeyinde İşleçler](visual-basic/language-reference/operators/logical-bitwise-operators.md)
 #### [Çeşitli İşleçler](visual-basic/language-reference/operators/miscellaneous-operators.md)
 ### [Özellikler](visual-basic/language-reference/properties.md)
-### [Sorgular](visual-basic/language-reference/queries/queries.md)
+### [Sorgular](visual-basic/language-reference/queries/index.md)
 #### [Aggregate Yan Tümcesi](visual-basic/language-reference/queries/aggregate-clause.md)
 #### [Distinct Yan Tümcesi](visual-basic/language-reference/queries/distinct-clause.md)
 #### [Equals Yan Tümcesi](visual-basic/language-reference/queries/equals-clause.md)
@@ -827,7 +804,7 @@
 #### [Öznitelik Listesi](visual-basic/language-reference/statements/attribute-list.md)
 #### [Parametre Listesi](visual-basic/language-reference/statements/parameter-list.md)
 #### [Tür Listesi](visual-basic/language-reference/statements/type-list.md)
-### [XML Açıklama Etiketleri](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+### [XML Açıklama Etiketleri](visual-basic/language-reference/xmldoc/index.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
 #### [<example>](visual-basic/language-reference/xmldoc/example.md)
@@ -845,7 +822,7 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
-### [XML Eksen Özellikleri](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+### [XML Eksen Özellikleri](visual-basic/language-reference/xml-axis/index.md)
 #### [XML Özniteliği Axis Özelliği](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 #### [XML Alt Axis Özelliği](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 #### [XML Descendant Axis Özelliği](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
@@ -1140,6 +1117,7 @@
 ### [Makine öğrenimi sözlüğü](machine-learning/resources/glossary.md)
 ### [Makine öğrenimi hakkında temel bilgiler](machine-learning/resources/basics.md)
 ### [Makine öğrenimi görevleri](machine-learning/resources/tasks.md)
+### [Veri dönüşümleri](machine-learning/resources/transforms.md)
 
 <!-- End ML.NET Content -->
 
