@@ -2,129 +2,129 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106044"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485946"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
-UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) taşıma olarak gösterir. Örnek kanal Çerçevesi'ni kullanıp WCF en iyi uygulamaları izleyerek içinde WCF özel taşıma oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmaya yönelik adımlar aşağıdaki gibidir:  
+UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  
   
-1.  Kanal karar [ileti Exchange desenleri](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel) ChannelFactory ve ChannelListener destekleyecektir. Daha sonra bu arabirimleri süre sonuyla varyasyonları destekleyecek olup olmadığını karar verin.  
+1.  Kanal karar [ileti Exchange desenleri](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel) ChannelFactory ve ChannelListener destekleyecektir. Ardından bu arabirimlerin kapatamaması çeşitlemeleri destekleyip desteklemeyeceğini karar verin.  
   
-2.  Bir kanal fabrikası ve ileti değişim deseni destekleyen dinleyici oluşturun.  
+2.  Kanal fabrikası ve, ileti değişim deseni destekleyen bir dinleyici oluşturun.  
   
-3.  Ağa özgü özel durumlar için uygun olan türetilmiş sınıf normalleştirilmiş emin olun <xref:System.ServiceModel.CommunicationException>.  
+3.  Ağ özgü özel durumların uygun türetilmiş sınıfa normalleştirilir olun <xref:System.ServiceModel.CommunicationException>.  
   
-4.  Ekleme bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) bir kanal yığınına özel taşıma ekler öğesi. Daha fazla bilgi için bkz: [bir bağlama öğesi ekleme](#AddingABindingElement).  
+4.  Ekleme bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) özel taşıma için bir kanal yığını ekler öğesi. Daha fazla bilgi için [bir bağlama öğesi ekleme](#AddingABindingElement).  
   
-5.  Yapılandırma sistemi için yeni bir bağlama öğesi kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
+5.  Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
   
-6.  Diğer uç noktalara Özellikleri iletişim kurmak için meta verileri uzantıları ekleyin.  
+6.  Diğer uç nokta Özellikleri iletişim kurmak için meta verileri uzantılar ekleyin.  
   
-7.  Bağlama öğeleri iyi tanımlanmış bir profili göre yığınını önceden yapılandırır bir bağlaması ekleyin. Daha fazla bilgi için bkz: [standart bağlama ekleme](#AddingAStandardBinding).  
+7.  İyi tanımlanmış bir profili göre bağlama öğeleri yığınını önceden yapılandırır bir bağlaması ekleyin. Daha fazla bilgi için [standart bir bağlama ekleme](#AddingAStandardBinding).  
   
-8.  Bir bağlama bölümü ve yapılandırma sistemi bağlamayı kullanıma sunmak için bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için bkz: [yapılandırma desteği ekleme](#AddingConfigurationSupport).  
+8.  Bir bağlama bölümü ve bağlama yapılandırma sistemi kullanıma sunmak için bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için [yapılandırma desteği ekleme](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>İleti Exchange desenleri  
- İlk adım karar vermek için özel bir taşıma yazılırken hangi ileti Exchange desenleri (MEPs) taşıma için gereklidir. Aralarından seçim yapabileceğiniz üç MEPs vardır:  
+ İlk adım karar vermek için özel bir taşıma yazıyor hangi ileti Exchange desenleri (MEPs) taşıma için gereklidir. Aralarından seçim yapabileceğiniz üç MEPs vardır:  
   
 -   Veri birimi (IInputChannel/IOutputChannel)  
   
-     Veri birimi MEP kullanırken, bir istemci "yangın ve unut" exchange kullanarak bir ileti gönderir. A yangın ve exchange başarılı teslimat bant dışı onay gerektiren bir tane olduğunu unutmayın. İleti, geçiş sırasında kaybolur ve hiçbir zaman hizmete erişmek. Gönderme işlemi istemci sonunda başarıyla tamamlarsa, uzak uç noktada bir ileti aldı garanti etmez. Veri birimi üzerine kurallarınızı oluşturabilirsiniz Mesajlaşma için temel yapı bloğu aynıdır — güvenilir protokolleri ve güvenli iletişim kuralları da dahil olmak üzere. İstemci veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IOutputChannel> arabirimi ve hizmet veri birimi kanallar uygulamak <xref:System.ServiceModel.Channels.IInputChannel> arabirimi.  
+     Bir veri birimi MEP kullanırken, bir istemci bir "Başlat ve unut" exchange kullanarak bir ileti gönderir. Bir Başlat ve unut değişimi, başarılı bir teslimat bant dışı onay gerektiren bir. İleti, geçiş sırasında kaybolur ve hiçbir zaman hizmet ulaşın. İstemci sonunda gönderme işlemi başarıyla tamamlarsa, uzak uç noktada bir ileti aldı garanti etmez. Bunun üstünde kurallarınızı oluştururken veri birimi Mesajlaşma için temel yapı taşı olan — güvenilir protokolleri ve güvenli protokolleri dahil. İstemci veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IOutputChannel> arabirimi ve hizmet veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IInputChannel> arabirimi.  
   
--   İstek-yanıt (IRequestChannel/IReplyChannel)  
+-   İstek-yanıt (IRequestChannel/IReplyChannel'ı)  
   
-     Bu MEP bir ileti gönderilir ve bir yanıt aldı. Desen istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrıları örnekler uzaktan yordam çağrısı (RPC) ve tarayıcı alır. Bu desen yarı çift yönlü da bilinir. Bu MEP, istemci kanalları uygulamak <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygulamak <xref:System.ServiceModel.Channels.IReplyChannel>.  
+     Bu MEP bir ileti gönderilir ve bir yanıt aldı. Desen, istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrıları örnekleri: uzaktan yordam çağrısı (RPC) ve tarayıcı alır. Bu düzen, yarı çift yönlü da bilinir. Bu MEP içinde istemci kanalları uygulamak <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygulamak <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
 -   Çift yönlü (IDuplexChannel)  
   
-     Çift yönlü MEP bir rastgele bir istemci tarafından gönderilen ve herhangi bir sırada alınan ileti sayısı için sağlar. Çift yönlü MEP bir telefon konuşması gibi konuşulan her sözcüğün bir ileti olduğu. Her iki tarafında da gönderebilir ve bu MEP alabilir, istemci ve hizmet kanalları tarafından uygulanan arabirimi çünkü <xref:System.ServiceModel.Channels.IDuplexChannel>.  
+     Çift yönlü MEP tercihe bağlı sayıda istemci tarafından gönderilen ve alınan herhangi bir sırada iletileri sağlar. Çift yönlü MEP bir telefon konuşması gibi burada konuşulan her bir sözcüğün bir ileti numarasıdır. Her iki tarafında da gönderebilir ve alabilir bu MEP, istemci ve hizmet kanalları tarafından uygulanan arabirimi çünkü <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- Her bu MEPs oturumları da destekleyebilir. Oturum durumunu algılayan bir kanal tarafından sağlanan eklenen bir kanalda alınıp gönderilen tüm iletiler karşılık gelen bir işlevdir. İstek-yanıt düzeni istek ve yanıt bağıntısı tek başına iki ileti oturum aynıdır. Buna karşılık, oturumlar destekleyen istek-yanıt düzeni bu kanalda tüm istek/yanıt çiftleri birbiriyle ilişkili anlamına gelir. Bu altı MEPs toplam verir — veri birimi, istek-yanıt, çift yönlü, oturumu, istek-yanıt oturumu, veri birimi ve oturumları ile çift yönlü — aralarından seçim yapabileceğiniz.  
+ Ayrıca, her biri bu MEPs oturumları destekleyebilir. Oturum durumunu algılayan bir kanal tarafından sağlanan ek işlevsellik kanalı üzerinden alınan ve gönderilen tüm iletilerin karşılık gelen ' dir. İstek-yanıt desen istek ve yanıt bağıntılı olan bir tek başına iki ileti oturumu aynıdır. Buna karşılık, bu kanal üzerindeki tüm istek/yanıt çifti birbiriyle ilişkilendirilir oturumları destekleyen istek-yanıt deseni gösterir. Bu toplam altı MEPs sağlar — veri birimi, istek-yanıt, çift yönlü, veri birimi oturumla istek-yanıt oturumları içeren ve oturumları ile çift yönlü — seçilecek.  
   
 > [!NOTE]
->  UDP kendiliğinden "yangın ve unut" protokol UDP taşıma için desteklenen tek MEP Datagram, olduğundan.  
+>  UDP kendiliğinden "Başlat ve unut" protokol UDP taşıma için desteklenen tek MEP veri birimi, olduğundan.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject ve WCF nesne yaşam döngüsü  
- WCF sahip nesneleri gibi yaşam döngüsü yönetimi için kullanılan yaygın bir durum makinesinin <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişimi için kullanılır. Bu iletişimi nesneleri var olabilir beş durumlar vardır. Bu durumu tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
+ WCF sahip gibi nesnelerin ömrünü yönetmek için kullanılan ortak bir Durum makinesi <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, ve <xref:System.ServiceModel.Channels.IChannelListener> iletişim için kullanılır. Bu iletişim nesneleri mevcut beş durum vardır. Bu durumlar tarafından temsil edilen <xref:System.ServiceModel.CommunicationState> numaralandırma ve aşağıdaki gibi şunlardır:  
   
--   Oluşturulan: Bu durumda bir <xref:System.ServiceModel.ICommunicationObject> olduğunda, ilk örneği. Bu durumda hiçbir giriş/çıkış (g/ç) oluşur.  
+-   Oluşturulan: Bu durumu olan bir <xref:System.ServiceModel.ICommunicationObject> , ilk oluşturulduğunda. Bu durumda hiçbir giriş/çıkış (g/ç) gerçekleşir.  
   
--   Açılış: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Open%2A> olarak adlandırılır. Bu noktada özellikleri değişmez yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş oluşturulan durumundan yalnızca geçerli değil.  
+-   Açılış: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Open%2A> çağrılır. Bu noktada, özellikler sabit yapılır ve giriş/çıkış başlayabilirsiniz. Bu geçiş, yalnızca oluşturulan durumu geçerli değil.  
   
--   Açılmış: Nesneleri geçiş açma işlemi tamamlandığında bu durumu. Bu geçiş yalnızca açılış durumundan geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
+-   Açıldı: Açık işlem tamamlandığında bu duruma nesneleri geçişi. Bu geçiş, yalnızca açılış durumu geçerli değil. Bu noktada, nesne aktarımı için tam olarak kullanılabilir.  
   
--   Kapatma: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal olarak kapatmak için çağrılır. Bu geçiş yalnızca açık durumundan geçerli değil.  
+-   Kapatma: Bu nesneler geçiş durumu ne zaman <xref:System.ServiceModel.ICommunicationObject.Close%2A> normal şekilde kapatılmasını için çağrılır. Bu geçiş, yalnızca açık durumu geçerli değil.  
   
--   Kapalı: kapalı durum nesneleri artık kullanılabilir. Genel olarak, çoğu yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişimi ortaya çıkabilir. Bu durum, atıldı için eşdeğerdir.  
+-   Kapalı: kapanış durum nesneleri artık kullanılabilir değildir. Genel olarak, en fazla yapılandırma İnceleme için hala erişilebilir, ancak hiçbir iletişim ortaya çıkabilir. Bu durum atıldı için eşdeğerdir.  
   
--   Faulted: Faulted, nesneleri incelemesi için erişilebilir ancak artık kullanılamaz durumda. Nesne bir kurtarılamaz bir hata oluştuğunda, bu duruma geçer. Bu durum yalnızca geçerli geçiş halinde olan `Closed` durumu.  
+-   Hatalı: Faulted durumunda nesneleri incelemesi erişebilir, ancak artık kullanılamaz. Nesnesi, bir kurtarılamaz bir hata oluştuğunda, bu duruma geçer. Bu durum yalnızca geçerli geçiş halinde olan `Closed` durumu.  
   
- Her durum geçişi için yangın olay vardır. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Yöntemi herhangi bir zamanda çağrılabilir ve nesne geçişi hemen geçerli durumunu kapalı duruma neden olur. Çağırma <xref:System.ServiceModel.ICommunicationObject.Abort%2A> tamamlanmamış işlerinizi sonlandırır.  
+ Her bir durum geçişi için harekete olaylar vardır. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Yöntemi herhangi bir zamanda çağrılabilir ve nesne geçiş hemen geçerli durumunu kapalı duruma neden olur. Çağırma <xref:System.ServiceModel.ICommunicationObject.Abort%2A> herhangi bir bitmemiş iş sonlandırır.  
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Kanal fabrikası ve kanal dinleyicisi  
- Özel bir taşıma yazma sonraki adım uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları. Kanal katmanını kanallar oluşturmak için bir Fabrika desen kullanır. WCF bu işlem için temel sınıfı Yardımcıları sağlar.  
+ Sonraki adım özel bir taşıma yazma uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları için. Kanal katmanını kanallar oluşturmak için bir Fabrika deseni kullanır. WCF bu işlem için temel sınıfı Yardımcıları sağlar.  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> Uygulayan sınıf <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda daha önce açıklanan durum makinesinin uygular. 
+-   <xref:System.ServiceModel.Channels.CommunicationObject> Sınıfının Implements <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda daha önce açıklanan Durum makinesi uygular. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Uygulayan sınıf <xref:System.ServiceModel.Channels.CommunicationObject> ve birleştirilmiş bir temel sınıf sağlar <xref:System.ServiceModel.Channels.ChannelFactoryBase> ve <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı çalışır birlikte <xref:System.ServiceModel.Channels.ChannelBase>, uygulayan bir temel sınıfı olan <xref:System.ServiceModel.Channels.IChannel>.  
+-   <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.CommunicationObject> ve birleşik bir temel sınıf için <xref:System.ServiceModel.Channels.ChannelFactoryBase> ve <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı çalışır birlikte <xref:System.ServiceModel.Channels.ChannelBase>, uygulayan bir temel sınıf olan <xref:System.ServiceModel.Channels.IChannel>.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Uygulayan sınıf <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> ve birleştirir `CreateChannel` overloads birine `OnCreateChannel` soyut yöntemi.  
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Sınıfının Implements <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> ve birleştirir `CreateChannel` aşırı birine `OnCreateChannel` soyut yöntemi.  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> Uygulayan sınıf <xref:System.ServiceModel.Channels.IChannelListener>. Bu temel durum yönetimini mvc'deki.  
+-   <xref:System.ServiceModel.Channels.ChannelListenerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.IChannelListener>. Bu temel durum yönetimini üstlenir.  
   
- Bu örnekte Üreteç uygulaması UdpChannelFactory.cs içinde yer alır ve dinleyici uygulama UdpChannelListener.cs içinde yer alır. <xref:System.ServiceModel.Channels.IChannel> Uygulamalarıdır UdpOutputChannel.cs ve UdpInputChannel.cs.  
+ Bu örnekte Üreteç uygulaması UdpChannelFactory.cs içinde yer alır ve dinleyici uygulamasına UdpChannelListener.cs içinde yer alır. <xref:System.ServiceModel.Channels.IChannel> Uygulamalarıdır UdpOutputChannel.cs ve UdpInputChannel.cs.  
   
 ### <a name="the-udp-channel-factory"></a>UDP kanal fabrikası  
- `UdpChannelFactory` Türetilen <xref:System.ServiceModel.Channels.ChannelFactoryBase>. Örnek geçersiz kılmaları <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> ileti Kodlayıcı ileti sürümü erişim sağlamak için. Örnek ayrıca geçersiz kılar <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> böylece biz bizim örneğini kesmeden <xref:System.ServiceModel.Channels.BufferManager> zaman durum makinesinin geçer.  
+ `UdpChannelFactory` Türetildiği <xref:System.ServiceModel.Channels.ChannelFactoryBase>. Örnek geçersiz kılmalar <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> ileti Kodlayıcı ileti sürümüne erişim sağlamak için. Örnek ayrıca geçersiz kılar <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> böylece biz bizim örneğini yıkılıp <xref:System.ServiceModel.Channels.BufferManager> durum makinesinin zaman geçer.  
   
-#### <a name="the-udp-output-channel"></a>UDP çıktı kanalı  
- `UdpOutputChannel` Uygulayan <xref:System.ServiceModel.Channels.IOutputChannel>. Oluşturucu bağımsız değişkenleri doğrular ve bir hedef oluşturur <xref:System.Net.EndPoint> nesne temel alarak <xref:System.ServiceModel.EndpointAddress> olarak geçirilir.  
+#### <a name="the-udp-output-channel"></a>UDP Çıkış kanalı  
+ `UdpOutputChannel` Uygulayan <xref:System.ServiceModel.Channels.IOutputChannel>. Oluşturucu bağımsız değişkenlerini doğrular ve bir hedef oluşturur <xref:System.Net.EndPoint> nesnesini temel alan <xref:System.ServiceModel.EndpointAddress> olarak geçirilir.  
   
 ```csharp
 this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
- Kanal düzgün biçimde veya ungracefully kapatılabilir. Kanal düzgün biçimde kapalıysa yuva kapatılır ve taban sınıfı için bir çağrı yapılır `OnClose` yöntemi. Bu bir özel durum oluşturursa, altyapı çağırır `Abort` kanal emin olmak için temizlendi.  
+ Kanal ungracefully ya da düzgün biçimde kapatılabilir. Kanal düzgün bir şekilde kapanırsa yuva kapatıldı ve temel sınıf için bir çağrı yapılır `OnClose` yöntemi. Bu bir özel durum oluşturursa, altyapı çağırır `Abort` kanal emin olmak için temizlenir.  
   
 ```csharp
 this.socket.Close(0);  
 ```  
   
- Ardından uygulamak `Send()` ve `BeginSend()` / `EndSend()`. Bu iki ana bölüme parçalara ayırır. İlk biz ileti bir bayt dizisine serileştirir.  
+ Ardından uygulama `Send()` ve `BeginSend()` / `EndSend()`. Bu iki ana bölüme ayırır. İlk biz iletinin Bayt dizisine serileştirir.  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
 ```  
   
- Ardından size sonuç verileri kablo göndereceğiz.  
+ Daha sonra elde edilen veriler kablo göndereceğiz.  
   
 ```csharp
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
- `UdpChannelListener` Türetilen örnek uyguladığını <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngü UDP yuvaya kullanarak verileri alır. Veri kodlaması ileti Framework kullanarak iletilere sonra dönüştürülür.  
+ `UdpChannelListener` Örnek uyguladığını türetildiği <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngüde UDP yuvayı kullanan veri alır. Verileri daha sonra ileti kodlama çerçevesini kullanarak iletilere dönüştürülür.  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Bir dizi kaynaktan, gelen iletileri aynı veri birimi kanal olabilmesinden dolayı `UdpChannelListener` bir singleton dinleyicisi. Yoktur, çoğu, bir etkin <xref:System.ServiceModel.Channels.IChannel> aynı anda bu dinleyicisi ile ilişkilendirilmiş. Tarafından döndürülen bir kanal, başka bir örnek oluşturur `AcceptChannel` yöntemi sonradan atıldı. Bir ileti alındığında, sıraya alınan bu singleton kanal içine var.  
+ Birçok kaynaktan gelen iletileri aynı veri birimi kanalı temsil ettiğinden `UdpChannelListener` tekil dinleyici. Yoktur, çoğu, bir tane aktif <xref:System.ServiceModel.Channels.IChannel> aynı anda bu dinleyici ile ilişkili. Tarafından döndürülen bir kanal, başka bir örnek oluşturur `AcceptChannel` yöntemi daha sonra atıldı. Bir ileti alındığında bu singleton kanal içine sıraya olur.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
- `UdpInputChannel` Uygulayan sınıf `IInputChannel`. Tarafından doldurulur gelen iletileri kuyruğunu oluşan `UdpChannelListener`kullanıcının yuva. Tarafından bu iletilerin kuyruktan çıkarıldı `IInputChannel.Receive` yöntemi.  
+ `UdpInputChannel` Sınıfının Implements `IInputChannel`. Bir kuyruk tarafından doldurulur gelen iletilerin oluşan `UdpChannelListener`kullanıcının yuva. Bu iletiler tarafından çıkarıldığını `IInputChannel.Receive` yöntemi.  
   
 <a name="AddingABindingElement"></a>   
-## <a name="adding-a-binding-element"></a>Bir bağlama öğesi ekleme  
- Fabrikaları ve kanallar yerleşik, biz bunları ServiceModel çalışma zamanı için bir bağlama aracılığıyla kullanıma gerekir. Bir bağlama hizmeti adresi ile ilişkili iletişim yığını temsil eden bağlama öğelerinin bir koleksiyondur. Yığındaki her öğe tarafından temsil edilen bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi.  
+## <a name="adding-a-binding-element"></a>Bir bağlama öğesi ekleniyor  
+ Fabrikaları ve kanallar oluşturulur, bunları ServiceModel çalışma zamanı için bir bağlama aracılığıyla kullanıma sunuyoruz gerekir. Bir bağlama temsil eden bir hizmet adresle ilişkilendirilen iletişim yığını bağlama öğelerinin bir koleksiyondur. Yığındaki her bir öğe tarafından temsil edilen bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi.  
   
- Örnekte, bağlama öğedir `UdpTransportBindingElement`, den türetilen <xref:System.ServiceModel.Channels.TransportBindingElement>. Bu bizim bağlama ile ilişkili oluşturucuları oluşturmak için aşağıdaki yöntemleri geçersiz kılar.  
+ Bu örnekte bağlama öğedir `UdpTransportBindingElement`, öğesinden türetildiğini <xref:System.ServiceModel.Channels.TransportBindingElement>. Bu, bizim bağlamayla ilişkili fabrikaları oluşturmak için aşağıdaki yöntemleri geçersiz kılar.  
   
 ```csharp
 public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)  
@@ -138,16 +138,16 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 }  
 ```  
   
- Kopyalama için de üyeleri içeren `BindingElement` ve bizim düzenini (soap.udp) döndürüyor.  
+ Kopyalama için de üyeleri içeren `BindingElement` ve bizim (soap.udp) şeması döndürüyor.  
   
-## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Bağlama öğesi bir taşıma için meta verileri desteği ekleme  
- Bizim aktarım meta verileri sistemle tümleştirmek için biz içeri ve dışarı aktarma İlkesi desteklemesi gerekir. Bu bizim bağlama aracılığıyla istemcileri oluşturmak için bize sağlar [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Bir aktarım bağlama öğesi meta veri desteği eklendi  
+ Bizim aktarım meta verileri sisteme tümleştirmek için biz içeri aktarma ve dışarı aktarma İlkesi desteklemesi gerekir. Bu bizim bağlama aracılığıyla istemcileri oluşturulacak sağlıyor [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>WSDL desteği ekleme  
- Bir bağlama aktarım bağlama öğe meta verileri adresleme bilgilerini alma ve verme sorumludur. SOAP bağlama kullanırken, aktarım bağlama öğesi de meta verilerde doğru taşıma URI dışarı aktarmanız gerekir.  
+ Bir bağlamadaki aktarım bağlama öğesinin dışarı ve içeri aktarma adres bilgilerini meta verilerinde sorumludur. SOAP bağlama kullanırken, aktarım bağlama öğesinin de meta verilerde doğru aktarım URI dışarı aktarmanız gerekir.  
   
 #### <a name="wsdl-export"></a>WSDL dışarı aktarma  
- Adresleme bilgilerini dışarı aktarmak için `UdpTransportBindingElement` uygulayan `IWsdlExportExtension` arabirimi. `ExportEndpoint` Yöntemi WSDL bağlantı noktasına doğru adresleme bilgilerini ekler.  
+ Adresleme bilgilerini dışarı aktarmak için `UdpTransportBindingElement` uygulayan `IWsdlExportExtension` arabirimi. `ExportEndpoint` Yöntemi WSDL bağlantı noktasına doğru adres bilgisi ekler.  
   
 ```csharp
 if (context.WsdlPort != null)  
@@ -156,7 +156,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- `UdpTransportBindingElement` Uyarlamasını `ExportEndpoint` yöntemi uç nokta bir SOAP bağlama kullandığında taşıma URI ayrıca verir.  
+ `UdpTransportBindingElement` Uygulaması `ExportEndpoint` yöntemi uç nokta bir SOAP bağlama kullandığında bir aktarım URI ayrıca verir.  
   
 ```csharp
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -166,8 +166,8 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>WSDL içe aktarma  
- Adres alma işlemek için WSDL içe aktarma sistemini genişletmek için size aşağıdaki yapılandırma yapılandırma dosyasına için Svcutil.exe Svcutil.exe.config dosyasında gösterildiği gibi eklemeniz gerekir.  
+#### <a name="wsdl-import"></a>WSDL içeri aktarma  
+ Adresleri içeri aktarma işlemek için WSDL içeri aktarma sistemini genişletmek için biz aşağıdaki yapılandırma için yapılandırma dosyası için Svcutil.exe Svcutil.exe.config dosyasında gösterildiği eklemeniz gerekir.  
   
 ```xml
 <configuration>  
@@ -183,13 +183,13 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- Svcutil.exe çalıştırırken WSDL içe aktarma Uzantıları'nı yüklemek için Svcutil.exe alma için iki seçeneğiniz vardır:  
+ Svcutil.exe çalıştırırken, WSDL içeri aktarma uzantıları yüklemek için Svcutil.exe alma iki seçenek vardır:  
   
-1.  /SvcutilConfig kullanarak bizim yapılandırma dosyasına noktası Svcutil.exe:\<Dosya >.  
+1.  Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
   
-2.  Yapılandırma bölümü için Svcutil.exe.config Svcutil.exe ile aynı dizinde ekleyin.  
+2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
- `UdpBindingElementImporter` Yazın uygulayan `IWsdlImportExtension` arabirimi. `ImportEndpoint` Yöntemi WSDL bağlantı noktasından adresi alır.  
+ `UdpBindingElementImporter` Yazın uygular `IWsdlImportExtension` arabirimi. `ImportEndpoint` Yöntemi WSDL bağlantı noktasından adresi alır.  
   
 ```csharp
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -201,12 +201,12 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>İlke desteği ekleme  
- Özel bağlama öğesi bu bağlama öğesi özelliklerini ifade etmek için bir hizmet uç noktası için WSDL bağlama ilke onaylamalarını dışa aktarabilirsiniz.  
+ Özel bağlama öğesi bağlamasında, bağlama öğesi yeteneklerini ifade etmek için WSDL hizmet uç noktası ilke onaylamalarını dışa aktarabilirsiniz.  
   
-#### <a name="policy-export"></a>İlke verme  
- `UdpTransportBindingElement` Yazın uygulayan `IPolicyExportExtension` İlkesi dışarı aktarma desteği eklemek için. Sonuç olarak, `System.ServiceModel.MetadataExporter` içeren `UdpTransportBindingElement` içerdiği bağlama için ilke oluşturma.  
+#### <a name="policy-export"></a>İlkeyi dışarı aktarma  
+ `UdpTransportBindingElement` Yazın uygular `IPolicyExportExtension` ilke dışarı aktarma için destek eklemek için. Sonuç olarak, `System.ServiceModel.MetadataExporter` içerir `UdpTransportBindingElement` içerdiği herhangi bir bağlama için ilke oluşturma.  
   
- İçinde `IPolicyExportExtension.ExportPolicy`, biz çok noktaya yayın modunda olduğunda bir onaylama UDP ve başka bir onaylama için ekleriz. Çok noktaya yayın modu etkilediğinden nasıl iletişim yığını oluşturulur ve böylece her iki yüz arasındaki Eşgüdümlü olmalıdır budur.  
+ İçinde `IPolicyExportExtension.ExportPolicy`, biz çok noktaya yayın modunda olduğunda onaylama UDP ve başka bir onaylama için ekleriz. Çok noktaya yayın modu etkilediğinden nasıl iletişim yığını oluşturulur ve bu nedenle her iki tarafın arasında koordine edilmelidir budur.  
   
 ```csharp
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
@@ -222,14 +222,14 @@ if (Multicast)
 }  
 ```  
   
- Özel Aktarım bağlama öğeleriyle adresleme, işleme için sorumlu olduğu için `IPolicyExportExtension` mantığınız `UdpTransportBindingElement` WS adresleme sürümünü belirtmek için uygun WS adresleme ilke onaylamalarını dışa aktarma işlemesi gerekir kullanılan.  
+ Özel Aktarım bağlama öğeleriyle adresleme, işleme için sorumlu olduğundan `IPolicyExportExtension` mantığınız `UdpTransportBindingElement` WS-Addressing sürümü belirtmek için uygun WS-Addressing ilke onaylamalarını dışa aktarma işlemesi gerekir kullanılan.  
   
 ```csharp
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
 #### <a name="policy-import"></a>İlke içeri aktarma  
- İlke içeri aktarma sistemini genişletmek için size aşağıdaki yapılandırma yapılandırma dosyasına Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe için eklemeniz gerekir.  
+ İlke alma sistemini genişletmek için biz aşağıdaki yapılandırma yapılandırma dosyasına Svcutil.exe.config dosyasında gösterildiği Svcutil.exe için eklemeniz gerekir.  
   
 ```xml
 <configuration>  
@@ -245,21 +245,21 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Biz uygulamak sonra `IPolicyImporterExtension` bizim kayıtlı sınıfından (`UdpBindingElementImporter`). İçinde `ImportPolicy()`, biz onaylar bizim ad alanında arayın ve taşıma oluşturmak için olanları işlemek ve çok noktaya yayın olup olmadığını denetleyin. İşleme onaylar de onaylar bağlama listeden kaldırmalısınız. Yeniden Svcutil.exe çalıştırırken, tümleştirme için iki seçenek vardır:  
+ Biz uygulamak sonra `IPolicyImporterExtension` bizim kayıtlı sınıfından (`UdpBindingElementImporter`). İçinde `ImportPolicy()`, biz bizim ad alanında bir onayları arayın ve olanları taşıma oluşturmak için işlem ve çok noktaya yayın olup olmadığını denetleyin. İşleri biz hallederiz Onaylamalar da onaylar bağlama listeden kaldırmalısınız. Yeniden Svcutil.exe çalıştırırken tümleştirme için iki seçenek vardır:  
   
-1.  /SvcutilConfig kullanarak bizim yapılandırma dosyasına noktası Svcutil.exe:\<Dosya >.  
+1.  Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
   
-2.  Yapılandırma bölümü için Svcutil.exe.config Svcutil.exe ile aynı dizinde ekleyin.  
+2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
 <a name="AddingAStandardBinding"></a>   
-## <a name="adding-a-standard-binding"></a>Standart bir bağlama ekleme  
- Bizim bağlama öğesi aşağıdaki iki yolla kullanılabilir:  
+## <a name="adding-a-standard-binding"></a>Standart bir bağlaması ekleniyor  
+ Bizim bağlama öğesi, aşağıdaki iki şekilde kullanılabilir:  
   
--   Özel bağlama üzerinden: özel bağlama bağlama öğelerinin bir rastgele kümesini temel alan kendi bağlama oluşturmasına olanak tanır.  
+-   Özel bağlama üzerinden: özel bir bağlama bağlama öğeleri bir rastgele kümesi temel alınarak kendi bağlama oluşturmasına olanak tanır.  
   
--   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. WCF sağlar bu sistem tarafından tanımlanan bağlama sayısı gibi `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Bu bağlamaların her iyi tanımlanmış bir profili ile ilişkilendirilmiş.  
+-   Sistem tarafından sağlanan bir bağlamayı kullanarak, bizim bağlama öğesi içerir. Bu sistem tanımlı bağlamalar sayısı gibi sağlar WCF `BasicHttpBinding`, `NetTcpBinding`, ve `WsHttpBinding`. Her biri bu bağlamaları, iyi tanımlanmış bir profili ile ilişkilidir.  
   
- Örnek profil bağlamasında uygulayan `SampleProfileUdpBinding`, den türetilen <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğeleri içerir: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
+ Örnek profili bağlamasında uygulayan `SampleProfileUdpBinding`, öğesinden türetildiğini <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` İçindeki en fazla dört bağlama öğelerini içeren: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement`, ve `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -276,10 +276,10 @@ public override BindingElementCollection CreateBindingElements()
 }  
 ```  
   
-### <a name="adding-a-custom-standard-binding-importer"></a>İçeri Aktarıcı bağlama özel bir standart ekleme  
- Svcutil.exe ve `WsdlImporter` türü, varsayılan olarak, tanır ve sistem tanımlı bağlamalar alır. Aksi takdirde, bağlama içeri alır bir `CustomBinding` örneği. Svcutil.exe etkinleştirmek için ve `WsdlImporter` almak için `SampleProfileUdpBinding` `UdpBindingElementImporter` da özel standart bağlama alıcısı davranır.  
+### <a name="adding-a-custom-standard-binding-importer"></a>Özel standart içeri Aktarıcı bağlama ekleme  
+ Svcutil.exe ve `WsdlImporter` türü, varsayılan olarak tanır ve sistem tarafından tanımlanan bağlamaları alır. Aksi takdirde, bağlama olarak içeri aktarılan alır bir `CustomBinding` örneği. Svcutil.exe sağlamak ve `WsdlImporter` içeri aktarmak için `SampleProfileUdpBinding` `UdpBindingElementImporter` da bir standart özel bağlama alıcısı davranır.  
   
- Özel standart bağlama alma uygulayan `ImportEndpoint` yöntemi `IWsdlImportExtension` incelemek için arabirimi `CustomBinding` , belirli bir standart bağlama tarafından oluşturulmuş olup olmadığını görmek için meta verileri içe örneği.  
+ Standart özel bağlama içeri Aktarıcı uygulayan `ImportEndpoint` yöntemi `IWsdlImportExtension` incelemek için arabirimi `CustomBinding` , belirli bir standart bağlama tarafından oluşturulmuş olup olmadığını görmek için meta verileri içeri aktarılan örnek.  
   
 ```csharp
 if (context.Endpoint.Binding is CustomBinding)  
@@ -299,14 +299,14 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Genellikle, özel standart bağlama alma uygulama standart bağlama tarafından ayarlayabilirsiniz yalnızca özellikleri değişti ve diğer tüm özellikleri varsayılanlarına olduğunu doğrulamak için içe aktarılan bağlama öğeleri özelliklerini denetleme içerir. Standart bağlama alma uygulamak için bir temel stratejidir standart bağlama örneği oluşturmak için bağlama öğeleri özelliklerinden standart bağlama destekler standart bağlama örneği ve karşılaştırmak için bağlama yayma içeri aktarılan bağlama öğeleri ile standart bağlama öğeleri.  
+ Genellikle, bir özel standart bağlama içeri Aktarıcı uygulama standart bağlama tarafından ayarlanmış olabilir yalnızca özellikleri değiştirildi ve diğer tüm özellikler varsayılan olduğunu doğrulamak için içeri aktarılan bağlama öğeleri özelliklerini denetleme içerir. Standart bağlama içeri Aktarıcı uygulamak için temel bir strateji olan standart bağlama öğesinin bir örneğini oluşturur, standart bağlamayı destekleyen standart bağlama örneği ve karşılaştırma bağlama öğeleri özelliklerinden bağlama yayma içeri aktarılan bağlama öğeleri standart bağlama öğeleri.  
   
 <a name="AddingConfigurationSupport"></a>   
 ## <a name="adding-configuration-support"></a>Yapılandırma desteği ekleme  
- Bizim aktarım yapılandırma yoluyla kullanıma sunmak için iki yapılandırma bölümlerinin uygulamalıdır. İlki bir `BindingElementExtensionElement` için `UdpTransportBindingElement`. Bu şekilde `CustomBinding` uygulamaları bizim bağlama öğesi başvurusu. İkinci bir `Configuration` için bizim `SampleProfileUdpBinding`.  
+ Bizim aktarım yapılandırma aracılığıyla kullanıma sunmak için iki yapılandırma bölümlerini uygulamalıdır. İlki bir `BindingElementExtensionElement` için `UdpTransportBindingElement`. Bu şekilde `CustomBinding` uygulamaları, bizim bağlama öğesi başvurabilir. İkinci bir `Configuration` için sunduğumuz `SampleProfileUdpBinding`.  
   
-### <a name="binding-element-extension-element"></a>Bağlama öğesi uzantısı öğesi  
- Bölüm `UdpTransportElement` olan bir `BindingElementExtensionElement` kullanıma sunan `UdpTransportBindingElement` yapılandırma sistemi. Birkaç temel geçersiz kılmalar, bizim yapılandırma bölümü adı, bizim bağlama öğesi türü ve bizim bağlama öğesi oluşturmak nasıl tanımlayın. Aşağıdaki kodda gösterildiği gibi bir yapılandırma dosyasına biz bizim uzantısı bölümüne sonra kaydedebilirsiniz.  
+### <a name="binding-element-extension-element"></a>Bağlama öğesi uzantı öğesi  
+ Bölüm `UdpTransportElement` olduğu bir `BindingElementExtensionElement` kullanıma sunan `UdpTransportBindingElement` yapılandırma sistemi için. Birkaç temel geçersiz kılma ile bizim yapılandırma bölümü adı, bizim bağlama öğesi türü ve bizim bağlama öğesi oluşturulacağını tanımlar. Aşağıdaki kodda gösterildiği gibi bir yapılandırma dosyasında şu uzantı bölümümüzde sonra kaydedebilirsiniz.  
   
 ```xml
 <configuration>  
@@ -320,7 +320,7 @@ if (context.Endpoint.Binding is CustomBinding)
 </configuration>  
 ```  
   
- Uzantı UDP taşıma olarak kullanmak için özel bağlamalar başvurulabilir.  
+ Uzantı UDP taşıma kullanmak için özel bağlamalar başvurulabilir.  
   
 ```xml
 <configuration>  
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>Bölüm bağlama  
- Bölüm `SampleProfileUdpBindingCollectionElement` olan bir `StandardBindingCollectionElement` kullanıma sunan `SampleProfileUdpBinding` yapılandırma sistemi. Uygulama toplu temsilci için `SampleProfileUdpBindingConfigurationElement`, den türetilen `StandardBindingElement`. `SampleProfileUdpBindingConfigurationElement` Özellikler üzerinde karşılık gelen özelliklere sahip `SampleProfileUdpBinding`ve eşlenecek işlevleri `ConfigurationElement` bağlama. Son olarak, geçersiz kılma `OnApplyConfiguration` yönteminde bizim `SampleProfileUdpBinding`, aşağıdaki örnek kodda gösterildiği gibi.  
+ Bölüm `SampleProfileUdpBindingCollectionElement` olduğu bir `StandardBindingCollectionElement` kullanıma sunan `SampleProfileUdpBinding` yapılandırma sistemi için. Toplu uygulama için temsilci `SampleProfileUdpBindingConfigurationElement`, öğesinden türetildiğini `StandardBindingElement`. `SampleProfileUdpBindingConfigurationElement` Üzerinde özelliklerine karşılık gelen özelliklerle sahip `SampleProfileUdpBinding`ve eşlenecek işlevleri `ConfigurationElement` bağlama. Son olarak, geçersiz kılma `OnApplyConfiguration` yönteminde bizim `SampleProfileUdpBinding`aşağıdaki örnek kodda gösterildiği gibi.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -362,7 +362,7 @@ protected override void OnApplyConfiguration(string configurationName)
 }
 ```  
   
- Bu işleyici yapılandırma sistemi ile kaydetmek için aşağıdaki bölümde ilgili yapılandırma dosyasına ekleriz.  
+ Bu işleyici yapılandırma sistemi ile kaydetmek için biz aşağıdaki bölümde ilgili yapılandırma dosyasına ekleyin.  
   
 ```xml
 <configuration>  
@@ -376,7 +376,7 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- ServiceModel yapılandırması bölümünden sonra başvuruda bulunulabilir.  
+ ServiceModel Yapılandırma bölümünden sonra başvurulabilir.  
   
 ```xml
 <configuration>  
@@ -393,10 +393,10 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
-## <a name="the-udp-test-service-and-client"></a>İstemci ve UDP Test hizmeti  
- Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. Hizmet koduna iki sınamaları oluşur — bir test koddan bağlamalar ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla yapar. Her iki testleri iki uç nokta kullanın. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `true`. Diğer uç nokta ile özel bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `false`. Her iki testleri bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve sonra kullanıcıya hizmet kapatmadan önce ENTER tuşuna basın bekler.  
+## <a name="the-udp-test-service-and-client"></a>UDP Test hizmet ve istemci  
+ Bu örnek aktarım kullanmak için test kodu UdpTestService ve UdpTestClient dizinler kullanılabilir. İki testleri hizmet kodu içerir — bir test koddan bağlamaları ve uç noktaları ayarlar ve diğer yapılandırma aracılığıyla bunu yapar. Her iki testleri iki uç nokta kullanır. Bir uç nokta kullanan `SampleUdpProfileBinding` ile [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `true`. Başka bir uç noktası ile özel bir bağlama kullanan `UdpTransportBindingElement`. Bu kullanmaya eşdeğerdir `SampleUdpProfileBinding` ile [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) kümesine `false`. İki test de bir hizmet oluşturmak, her bağlama için bir uç nokta ekleyin, hizmeti açın ve ardından kullanıcının hizmet kapatmadan önce ENTER tuşuna basın bekleyin.  
   
- Hizmet test uygulaması başlattığınızda aşağıdaki çıktı görmeniz gerekir.  
+ Hizmeti test uygulamayı başlattığınızda aşağıdaki çıktıyı görmeniz gerekir.  
   
 ```console
 Testing Udp From Code.  
@@ -404,7 +404,7 @@ Service is started from code...
 Press <ENTER> to terminate the service and start service from config...  
 ```  
   
- Bu gibi durumlarda, sınama istemci uygulaması sonra yayımlanan uç noktalarına karşı çalıştırabilirsiniz. İstemci test uygulaması her uç nokta için bir istemci oluşturur ve beş iletileri her uç noktasına gönderir. Aşağıdaki çıkış istemcide ' dir.  
+ Bu gibi durumlarda, test istemci uygulaması daha sonra yayımlanan uç noktalarına karşı çalıştırabilirsiniz. İstemci test uygulaması her uç nokta için bir istemci oluşturur ve her bir uç nokta için beş iletileri gönderir. İstemcide aşağıdaki çıkış alınır.  
   
 ```console
 Testing Udp From Imported Files Generated By SvcUtil.  
@@ -416,7 +416,7 @@ Testing Udp From Imported Files Generated By SvcUtil.
 Press <ENTER> to complete test.  
 ```  
   
- Hizmet tam çıktı verilmiştir.  
+ Hizmetin tam çıktı verilmiştir.  
   
 ```console
 Service is started from code...  
@@ -433,7 +433,7 @@ Hello, world!
    adding 4 + 8  
 ```  
   
- İstemci uygulaması yapılandırması'nı kullanarak yayımlanan uç noktalarına karşı çalıştırmak için hizmeti üzerinde ENTER tuşuna basın ve test istemcisi yeniden çalıştırın. Hizmette şu çıktı görmeniz gerekir.  
+ İstemci uygulama uç noktalarına karşı yapılandırmayla yayımlanan çalıştırmak için hizmette ENTER tuşuna basın ve ardından test istemcisinin yeniden çalıştırın. Hizmette aşağıdaki çıktıyı görmeniz gerekir.  
   
 ```console
 Testing Udp From Config.  
@@ -441,15 +441,15 @@ Service is started from config...
 Press <ENTER> to terminate the service and exit...  
 ```  
   
- İstemci yeniden çalışan aynı önceki sonuçları verir.  
+ İstemci yeniden çalıştırmayı aynı önceki sonuçları verir.  
   
- İstemci kodu ve Svcutil.exe kullanarak yapılandırmayı yeniden oluşturmak için hizmet uygulamasını başlatın ve sonra aşağıdaki Svcutil.exe örnek kök dizininden çalıştırın.  
+ İstemci kodu ve Svcutil.exe kullanarak yapılandırmayı yeniden oluşturmak için hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil.exe'ı çalıştırın.  
   
 ```console
 svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
- Svcutil.exe bağlama uzantısı yapılandırması oluşturmaz Not `SampleProfileUdpBinding`, el ile eklemeniz gerekir.  
+ Bağlama uzantı yapılandırması için svcutil.exe oluşturmaz Not `SampleProfileUdpBinding`, el ile eklemeniz gerekir.  
   
 ```xml
 <configuration>  
@@ -464,19 +464,19 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 </configuration>  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örnek çalıştırın  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözümü derlemek için'ndaki yönergeleri izleyin [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Tek veya çapraz makine yapılandırmada örneği çalıştırmak için'ndaki yönergeleri izleyin [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 3.  Yukarıdaki "UDP Test hizmet ve istemci" bölümüne bakın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizin denetleyin.  
+>  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse, Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnek](http://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek aşağıdaki dizinde bulunur.  
+>  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`
